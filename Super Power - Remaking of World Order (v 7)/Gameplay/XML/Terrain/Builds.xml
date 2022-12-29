@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 12/16/2014 10:51:30 AM -->
+<GameData>
+	<!-- ************************New Builds ********************************-->
+	<Builds>
+
+		<Row>
+			<Type>BUILD_REMOVE_ICE</Type>
+			<PrereqTech>TECH_ADV_ENGINEERING</PrereqTech>
+			<Description>TXT_KEY_BUILD_REMOVE_ICE</Description>
+			<Help>TXT_KEY_BUILD_REMOVE_ICE_HELP</Help>
+			<EntityEvent>ENTITY_EVENT_CHOP</EntityEvent>
+			<HotKey>KB_C</HotKey>
+			<OrderPriority>50</OrderPriority>
+			<AltDown>1</AltDown>
+			<IconIndex>8</IconIndex>
+			<IconAtlas>SP_UNIT_ACTION_ATLAS</IconAtlas>
+			<CanBeEmbarked>true</CanBeEmbarked>
+		</Row>
+
+
+
+		
+		<!--**********************************Citadel******************************-->
+		<Update>
+			<Set PrereqTech="TECH_GUNPOWDER" Time="1300"/>
+			<Where Type="BUILD_CITADEL" />
+		</Update>
+		
+		<Update>
+			<Set PrereqTech="TECH_OPTICS" IconIndex="2" IconAtlas="UNIT_ACTION_ATLAS_EXP2"/>
+			<Where Type="BUILD_FORT"/>
+		</Update>
+
+
+		<Update>
+			<Set PrereqTech="TECH_COMPASS"  Time="500" />
+			<Where Type="BUILD_MOAI"/>
+		</Update>
+		<!--**********************************Tweaks for Old Builds******************************-->
+		
+		
+		
+
+		<Update>
+			<Set PrereqTech="TECH_BIOLOGY" CanBeEmbarked="true" Kill="false" Time="900" Help="TXT_KEY_BUILD_SP_NOT_CONSUMED_HELP"/>
+			<Where Type="BUILD_OFFSHORE_PLATFORM" />
+		</Update>
+		<Update>
+			<Set PrereqTech="TECH_CURRENCY" Time="500" OrderPriority="85"/>
+			<Where Type="BUILD_TRADING_POST"/>
+		</Update>
+		
+		<Update>
+			<Set PrereqTech="TECH_ART_THEORY"/>
+			<Where Type="BUILD_CHATEAU"/>
+		</Update>
+		
+		<Update>
+			<Set PrereqTech="TECH_HUNTING" OrderPriority="140"/>
+			<Where Type="BUILD_CAMP"/>
+		</Update>
+		<Update>
+			<Set PrereqTech="TECH_BRONZE_WORKING"/>
+			<Where Type="BUILD_MINE"/>
+		</Update>
+		<Update>
+			<Set PrereqTech="NULL"/>
+			<Where Type="BUILD_REMOVE_FOREST"/>
+		</Update>
+		<Update>
+			<Set PrereqTech="NULL"/>
+			<Where Type="BUILD_REMOVE_JUNGLE"/>
+		</Update>
+		<Update>
+			<Set PrereqTech="TECH_BRONZE_WORKING"/>
+			<Where Type="BUILD_REMOVE_MARSH"/>
+		</Update>
+
+		<Update>
+			<Set Time="500" OrderPriority="150" PrereqTech="TECH_BRONZE_WORKING"/>
+			<Where Type="BUILD_QUARRY"/>
+		</Update>
+
+		<Update>
+			<Set Kill="false" Time="600" PrereqTech="TECH_FISHERY" IconIndex="24" IconAtlas="SP_UNIT_ACTION_ATLAS" CanBeEmbarked="true" Help="TXT_KEY_BUILD_SP_NOT_CONSUMED_HELP"/>
+			<Where Type="BUILD_FISHING_BOATS"/>
+		</Update>
+		<Update>
+			<Set Kill="false" Time="600" PrereqTech="TECH_FISHERY" IconIndex="23" IconAtlas="SP_UNIT_ACTION_ATLAS"/>
+			<Where Type="BUILD_FISHING_BOATS_NO_KILL"/>
+		</Update>
+	
+
+		<!--**********************************Workers' builds Tweak******************************-->
+	
+		
+		<Update>
+			<Set Time="50"/>
+			<Where Type="BUILD_ROAD"/>
+		</Update>
+		<Update>
+			<Set Time="100" OrderPriority="200"/>
+			<Where Type="BUILD_RAILROAD" />
+		</Update>
+		<Update>
+			<Set Time="500" OrderPriority="140"/>
+			<Where Type="BUILD_FARM"/>
+		</Update>
+		<Update>
+			<Set Time="400" OrderPriority="80"/>
+			<Where Type="BUILD_LUMBERMILL"/>
+		</Update>
+
+		<Update>
+			<Set Time="500" PrereqTech="TECH_HUNTING" OrderPriority="140"/>
+			<Where Type="BUILD_PASTURE"/>
+		</Update>
+		<Update>
+			<Set Time="500" OrderPriority="140"/>
+			<Where Type="BUILD_PLANTATION"/>
+		</Update>
+		<Update>
+			<Set OrderPriority="0" />
+			<Where Type="BUILD_REMOVE_JUNGLE"/>
+		</Update>
+		<Update>
+			<Set OrderPriority="15"/>
+			<Where Type="BUILD_REMOVE_FOREST"/>
+		</Update>
+		<Update>
+			<Set OrderPriority="5"/>
+			<Where Type="BUILD_REMOVE_MARSH"/>
+		</Update>
+		<Update>
+			<Set OrderPriority="500"/>
+			<Where Type="BUILD_SCRUB_FALLOUT"/>
+		</Update>
+		<Update>
+			<Set Time="600" OrderPriority="999"/>
+			<Where Type="BUILD_REPAIR"/>
+		</Update>
+		<Update>
+			<Set Time="50"/>
+			<Where Type="BUILD_REMOVE_ROUTE"/>
+		</Update>
+		<Update>
+			<Set OrderPriority="96"/>
+			<Where Type="BUILD_CITADEL"/>
+		</Update>
+		<Update>
+			<Set OrderPriority="999"/>
+			<Where Type="BUILD_ARCHAEOLOGY_DIG"/>
+		</Update>
+		<Update>
+			<Set Time="500" OrderPriority="550" PrereqTech="TECH_CONSTRUCTION"/>
+			<Where Type="BUILD_BRAZILWOOD_CAMP" />
+		</Update>
+		<!--<Update>
+			<Set PrereqTech="TECH_OPTICS"/>
+			<Where Type="BUILD_FEITORIA"/>
+		</Update>-->
+		<Update>
+			<Set PrereqTech="TECH_MASONRY" OrderPriority="600" />
+			<Where Type="BUILD_POLDER"/>
+		</Update>
+
+
+		<Update>
+			<Set PrereqTech="TECH_POTTERY" OrderPriority="600" />
+			<Where Type="BUILD_KASBAH"/>
+		</Update>
+
+
+	</Builds>
+
+
+	<!-- ************************Unit Builds Change********************************************-->
+	<Unit_Builds>
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_ROAD</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_RAILROAD</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_FARM</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_MINE</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_TRADING_POST</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_LUMBERMILL</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_PASTURE</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_CAMP</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_PLANTATION</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_QUARRY</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_WELL</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_FORT</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_REMOVE_JUNGLE</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_REMOVE_MARSH</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_REMOVE_FOREST</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_SCRUB_FALLOUT</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_REPAIR</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_REMOVE_ROUTE</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_FISHING_BOATS</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_OFFSHORE_PLATFORM</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_REMOVE_ICE</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_TUNNEL</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_FISHERY_MOD</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_FISHFARM_MOD</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_GAS_RIG_MOD</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_PONTOON_BRIDGE_MOD</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_CREATE_FOREST</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_CREATE_JUNGLE</BuildType>
+		</Row>
+		<!--<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_COASTAL_FORT</BuildType>
+		</Row>-->
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_TERRACE_FARM</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_MOAI</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_POLDER</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_BRAZILWOOD_CAMP</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_KASBAH</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_CHATEAU</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_MAYA_ALTAR</BuildType>
+		</Row>
+		<!--<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_ASSYRIA_FORT</BuildType>
+		</Row>-->
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_BYZANTIUM_ANGELOKASTRO</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_ETHIOPIA_COFFEE</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_SHOSHONE_TIPI</BuildType>
+		</Row>
+		<!--<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_IROQUOIAN_FOREST_FARM</BuildType>
+		</Row>-->
+		
+		
+		<Row>
+			<UnitType>UNIT_ARCHAEOLOGIST</UnitType>
+			<BuildType>BUILD_ARCHAEOLOGY_DIG</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_ARCHAEOLOGIST</UnitType>
+			<BuildType>BUILD_LANDMARK</BuildType>
+		</Row>
+		
+		
+		<Row>
+			<UnitType>UNIT_SCIENTIST</UnitType>
+			<BuildType>BUILD_ACADEMY</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_MERCHANT</UnitType>
+			<BuildType>BUILD_CUSTOMS_HOUSE</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_ENGINEER</UnitType>
+			<BuildType>BUILD_MANUFACTORY</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_PROPHET</UnitType>
+			<BuildType>BUILD_HOLY_SITE</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_GREAT_GENERAL</UnitType>
+			<BuildType>BUILD_CITADEL</BuildType>
+		</Row>
+		
+		
+		<Row>
+			<UnitType>UNIT_MILITIA_ANCIENT</UnitType>
+			<BuildType>BUILD_CITADEL</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_AMERICAN_MINUTEMAN</UnitType>
+			<BuildType>BUILD_CITADEL</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_CONSCRIPTMAN</UnitType>
+			<BuildType>BUILD_CITADEL</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_MILITIA_MODERN</UnitType>
+			<BuildType>BUILD_CITADEL</BuildType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_MILITIA_ANCIENT</UnitType>
+			<BuildType>BUILD_FORT</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_AMERICAN_MINUTEMAN</UnitType>
+			<BuildType>BUILD_FORT</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_CONSCRIPTMAN</UnitType>
+			<BuildType>BUILD_FORT</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_MILITIA_MODERN</UnitType>
+			<BuildType>BUILD_FORT</BuildType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_NAVAL_MILITIA</UnitType>
+			<BuildType>BUILD_COASTAL_FORT</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_MONITOR_SHIP</UnitType>
+			<BuildType>BUILD_COASTAL_FORT</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_CORVETTE</UnitType>
+			<BuildType>BUILD_COASTAL_FORT</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_LITTORAL_COMBAT_SHIP</UnitType>
+			<BuildType>BUILD_COASTAL_FORT</BuildType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_NAVAL_MILITIA</UnitType>
+			<BuildType>BUILD_PONTOON_BRIDGE_MOD</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_MONITOR_SHIP</UnitType>
+			<BuildType>BUILD_PONTOON_BRIDGE_MOD</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_CORVETTE</UnitType>
+			<BuildType>BUILD_PONTOON_BRIDGE_MOD</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_LITTORAL_COMBAT_SHIP</UnitType>
+			<BuildType>BUILD_PONTOON_BRIDGE_MOD</BuildType>
+		</Row>
+		
+		
+		<Row>
+			<UnitType>UNIT_ROMAN_LEGION</UnitType>
+			<BuildType>BUILD_ROAD</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_ROMAN_LEGION</UnitType>
+			<BuildType>BUILD_FORT</BuildType>
+		</Row>
+	</Unit_Builds>
+	
+	
+	
+	<BuildFeatures>
+		<Delete BuildType="BUILD_MOAI"/>
+		<Delete BuildType="BUILD_FEITORIA"/>
+		
+		<Row>
+			<BuildType>BUILD_REMOVE_ICE</BuildType>
+			<FeatureType>FEATURE_ICE</FeatureType>
+			<PrereqTech>TECH_ADV_ENGINEERING</PrereqTech>
+			<Time>200</Time>
+			<Remove>true</Remove>
+		</Row>
+		
+		<Update>
+			<Set Remove="false"/>
+			<Where BuildType="BUILD_FARM" FeatureType="FEATURE_FOREST"/>
+		</Update>
+
+		<Update>
+			<Set PrereqTech="TECH_MINING"/>
+			<Where BuildType="BUILD_REMOVE_MARSH"/>
+		</Update>
+		<Update>
+			<Set Time="5000"/>
+			<Where BuildType="BUILD_SCRUB_FALLOUT"/>
+		</Update>
+		<Update>
+			<Set Time="50" Production="30"/>
+			<Where BuildType="BUILD_REMOVE_FOREST"/>
+		</Update>
+		<Update>
+			<Set Time="400" Production="20"/>
+			<Where BuildType="BUILD_REMOVE_JUNGLE"/>
+		</Update>
+
+		<Update>
+			<Set PrereqTech="NULL" />
+			<Where PrereqTech="TECH_MINING"/>
+		</Update>
+		<Update>
+			<Set PrereqTech="TECH_BRONZE_WORKING" />
+			<Where PrereqTech="TECH_MASONRY"/>
+		</Update>
+
+
+		<Row>
+			<BuildType>BUILD_BYZANTIUM_ANGELOKASTRO</BuildType>
+			<FeatureType>FEATURE_FOREST</FeatureType>
+			<Production>30</Production>
+			<Remove>true</Remove>
+		</Row>
+		<Row>
+			<BuildType>BUILD_BYZANTIUM_ANGELOKASTRO</BuildType>
+			<FeatureType>FEATURE_JUNGLE</FeatureType>
+			<Production>20</Production>
+			<Time>400</Time>
+			<Remove>true</Remove>
+		</Row>
+		<Row>
+			<BuildType>BUILD_BYZANTIUM_ANGELOKASTRO</BuildType>
+			<FeatureType>FEATURE_MARSH</FeatureType>
+			<Time>600</Time>
+			<Remove>true</Remove>
+		</Row>
+	</BuildFeatures>
+</GameData>

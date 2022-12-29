@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 6/9/2014 9:44:54 AM -->
+<GameData>
+	<Concepts>
+		<!--************************************New Civilopedia Concepts********************************-->
+
+		<!--************************************Cities********************************-->	
+		
+		<Row>
+			<Type>CONCEPT_SETTLER_JOIN_CITIES</Type>
+			<Topic>TXT_KEY_CONCEPT_SETTLER_JOIN_CITIES_TOPIC</Topic>
+			<Description>TXT_KEY_CONCEPT_SETTLER_JOIN_CITIES_DESCRIPTION</Description>
+			<Summary>TXT_KEY_CONCEPT_SETTLER_JOIN_CITIES_SUMMARY</Summary>
+			<AdvisorQuestion>TXT_KEY_CONCEPT_SETTLER_JOIN_CITIES_ADVISOR_QUESTION</AdvisorQuestion>
+			<Advisor>ECONOMIC</Advisor>
+			<CivilopediaHeaderType>HEADER_CITIES</CivilopediaHeaderType>
+		</Row>
+		<Row>
+			<Type>CONCEPT_BUILDING_OBSOLETE_IN_LATEGAME</Type>
+			<Topic>TXT_KEY_CONCEPT_BUILDING_OBSOLETE_IN_LATEGAME_TOPIC</Topic>
+			<Description>TXT_KEY_CONCEPT_BUILDING_OBSOLETE_IN_LATEGAME_DESCRIPTION</Description>
+			<Summary>TXT_KEY_CONCEPT_BUILDING_OBSOLETE_IN_LATEGAME_SUMMARY</Summary>
+			<AdvisorQuestion>TXT_KEY_CONCEPT_BUILDING_OBSOLETE_IN_LATEGAME_ADVISOR_QUESTION</AdvisorQuestion>
+			<Advisor>ECONOMIC</Advisor>
+			<CivilopediaHeaderType>HEADER_CITIES</CivilopediaHeaderType>
+		</Row>
+		<Row>
+			<Type>CONCEPT_BUILDING_EXTRA_POPCOST</Type>
+			<Topic>TXT_KEY_CONCEPT_BUILDING_EXTRA_POPCOST_TOPIC</Topic>
+			<Description>TXT_KEY_CONCEPT_BUILDING_EXTRA_POPCOST_DESCRIPTION</Description>
+			<Summary>TXT_KEY_CONCEPT_BUILDING_EXTRA_POPCOST_SUMMARY</Summary>
+			<AdvisorQuestion>TXT_KEY_CONCEPT_BUILDING_EXTRA_POPCOST_ADVISOR_QUESTION</AdvisorQuestion>
+			<Advisor>ECONOMIC</Advisor>
+			<CivilopediaHeaderType>HEADER_CITIES</CivilopediaHeaderType>
+		</Row>
+		<Row>
+			<Type>CONCEPT_CITY_GOVERNMENT</Type>
+			<Topic>TXT_KEY_CONCEPT_CITY_GOVERNMENT_TOPIC</Topic>
+			<Description>TXT_KEY_CONCEPT_CITY_GOVERNMENT_DESCRIPTION</Description>
+			<Summary>TXT_KEY_CONCEPT_CITY_GOVERNMENT_SUMMARY</Summary>
+			<AdvisorQuestion>TXT_KEY_CONCEPT_CITY_GOVERNMENT_ADVISOR_QUESTION</AdvisorQuestion>
+			<Advisor>ECONOMIC</Advisor>
+			<CivilopediaHeaderType>HEADER_CITIES</CivilopediaHeaderType>
+		</Row>	
+		<Row>
+			<Type>CONCEPT_CITIES_CORRUPTION</Type>
+			<Topic>TXT_KEY_CONCEPT_CITIES_CORRUPTION_TOPIC</Topic>
+			<Description>TXT_KEY_CONCEPT_CITIES_CORRUPTION_DESCRIPTION</Description>
+			<Summary>TXT_KEY_CONCEPT_CITIES_CORRUPTION_SUMMARY</Summary>
+			<AdvisorQuestion>TXT_KEY_CONCEPT_CITIES_CORRUPTION_ADVISOR_QUESTION</AdvisorQuestion>
+			<Advisor>ECONOMIC</Advisor>
+			<CivilopediaHeaderType>HEADER_CITIES</CivilopediaHeaderType>
+		</Row>
+		<Row>
+			<Type>CONCEPT_ANTI_CORRUPTION</Type>
+			<Topic>TXT_KEY_CONCEPT_ANTI_CORRUPTION_TOPIC</Topic>
+			<Description>TXT_KEY_CONCEPT_ANTI_CORRUPTION_DESCRIPTION</Description>
+			<Summary>TXT_KEY_CONCEPT_ANTI_CORRUPTION_SUMMARY</Summary>
+			<AdvisorQuestion>TXT_KEY_CONCEPT_ANTI_CORRUPTION_ADVISOR_QUESTION</AdvisorQuestion>
+			<Advisor>ECONOMIC</Advisor>
+			<CivilopediaHeaderType>HEADER_CITIES</CivilopediaHeaderType>
+		</Row>
+		
+		<Row>
+			<Type>CONCEPT_WAR_DAMAGE</Type>
+			<Topic>TXT_KEY_CONCEPT_WAR_DAMAGE_TOPIC</Topic>
+			<Description>TXT_KEY_CONCEPT_WAR_DAMAGE_DESCRIPTION</Description>
+			<Summary>TXT_KEY_CONCEPT_WAR_DAMAGE_SUMMARY</Summary>
+			<AdvisorQuestion>TXT_KEY_CONCEPT_WAR_DAMAGE_ADVISOR_QUESTION</AdvisorQuestion>
+			<Advisor>ECONOMIC</Advisor>
+			<CivilopediaHeaderType>HEADER_CITIES</CivilopediaHeaderType>
+		</Row>
+		<Row>
+			<Type>CONCEPT_WAR_DAMAGE_REDUCE</Type>
+			<Topic>TXT_KEY_CONCEPT_WAR_DAMAGE_REDUCE_TOPIC</Topic>
+			<Description>TXT_KEY_CONCEPT_WAR_DAMAGE_REDUCE_DESCRIPTION</Description>
+			<Summary>TXT_KEY_CONCEPT_WAR_DAMAGE_REDUCE_SUMMARY</Summary>
+			<AdvisorQuestion>TXT_KEY_CONCEPT_WAR_DAMAGE_REDUCE_ADVISOR_QUESTION</AdvisorQuestion>
+			<Advisor>ECONOMIC</Advisor>
+			<CivilopediaHeaderType>HEADER_CITIES</CivilopediaHeaderType>
+		</Row>
+		<Row>
+			<Type>CONCEPT_IMMIGRATION</Type>
+			<Topic>TXT_KEY_CONCEPT_IMMIGRATION_TOPIC</Topic>
+			<Description>TXT_KEY_CONCEPT_IMMIGRATION_DESCRIPTION</Description>
+			<Summary>TXT_KEY_CONCEPT_IMMIGRATION_SUMMARY</Summary>
+			<AdvisorQuestion>TXT_KEY_CONCEPT_IMMIGRATION_ADVISOR_QUESTION</AdvisorQuestion>
+			<Advisor>ECONOMIC</Advisor>
+			<CivilopediaHeaderType>HEADER_CITIES</CivilopediaHeaderType>
+		</Row>
+
+
+		<!--************************************Research********************************-->
+		<Row>
+			<Type>CONCEPT_NEW_SCIENCE_RULE</Type>
+			<Topic>TXT_KEY_CONCEPT_NEW_SCIENCE_RULE_TOPIC</Topic>
+			<Description>TXT_KEY_CONCEPT_NEW_SCIENCE_RULE_DESCRIPTION</Description>
+			<Summary>TXT_KEY_CONCEPT_NEW_SCIENCE_RULE_SUMMARY</Summary>
+			<AdvisorQuestion>TXT_KEY_CONCEPT_NEW_SCIENCE_RULE_ADVISOR_QUESTION</AdvisorQuestion>
+			<Advisor>ECONOMIC</Advisor>		
+			<CivilopediaHeaderType>HEADER_TECHNOLOGY</CivilopediaHeaderType>
+		</Row>
+
+		<Row>
+			<Type>CONCEPT_SP_NEW_SPECIALISTS_RULE</Type>
+			<Topic>TXT_KEY_CONCEPT_SP_NEW_SPECIALISTS_RULE_TOPIC</Topic>
+			<Description>TXT_KEY_CONCEPT_SP_NEW_SPECIALISTS_RULE_DESCRIPTION</Description>
+			<Summary>TXT_KEY_CONCEPT_SP_NEW_SPECIALISTS_RULE_SUMMARY</Summary>
+			<AdvisorQuestion>TXT_KEY_CONCEPT_SP_NEW_SPECIALISTS_RULE_ADVISOR_QUESTION</AdvisorQuestion>
+			<Advisor>ECONOMIC</Advisor>
+			<CivilopediaHeaderType>HEADER_PEOPLE</CivilopediaHeaderType>
+		</Row>
+
+		<!--************************************Culture********************************-->
+		<Row>
+			<Type>CONCEPT_NEW_CULTURE_RULE</Type>
+			<Topic>TXT_KEY_CONCEPT_NEW_CULTURE_RULE_TOPIC</Topic>
+			<Description>TXT_KEY_CONCEPT_NEW_CULTURE_RULE_DESCRIPTION</Description>
+			<Summary>TXT_KEY_CONCEPT_NEW_CULTURE_RULE_SUMMARY</Summary>
+			<AdvisorQuestion>TXT_KEY_CONCEPT_NEW_CULTURE_RULE_ADVISOR_QUESTION</AdvisorQuestion>
+			<Advisor>ECONOMIC</Advisor>
+			<CivilopediaHeaderType>HEADER_CULTURE</CivilopediaHeaderType>
+		</Row>
+	
+		<Row>
+			<Type>CONCEPT_SP_NEW_CHOOSEYOURWAY</Type>
+			<Topic>TXT_KEY_CONCEPT_SP_NEW_CHOOSEYOURWAY_TOPIC</Topic>
+			<Description>TXT_KEY_CONCEPT_SP_NEW_CHOOSEYOURWAY_DESCRIPTION</Description>
+			<Summary>TXT_KEY_CONCEPT_SP_NEW_CHOOSEYOURWAY_SUMMARY</Summary>
+			<AdvisorQuestion>TXT_KEY_CONCEPT_SP_NEW_CHOOSEYOURWAY_ADVISOR_QUESTION</AdvisorQuestion>
+			<Advisor>ECONOMIC</Advisor>
+			<CivilopediaHeaderType>HEADER_POLICIES</CivilopediaHeaderType>
+		</Row>
+				
+
+		<!--************************************Combats********************************-->
+
+		<Row>
+			<Type>CONCEPT_NEW_ATTACK_RULES</Type>
+			<Topic>TXT_KEY_CONCEPT_NEW_ATTACK_RULES_TOPIC</Topic>
+			<Description>TXT_KEY_CONCEPT_NEW_ATTACK_RULES_DESCRIPTION</Description>
+			<Summary>TXT_KEY_CONCEPT_NEW_ATTACK_RULES_SUMMARY</Summary>
+			<AdvisorQuestion>TXT_KEY_CONCEPT_NEW_ATTACK_RULES_ADVISOR_QUESTION</AdvisorQuestion>
+			<Advisor>MILITARY</Advisor>
+			<CivilopediaHeaderType>HEADER_COMBAT</CivilopediaHeaderType>
+		</Row>
+		<Row>
+			<Type>CONCEPT_STACKING_COMBAT</Type>
+			<Topic>TXT_KEY_CONCEPT_STACKING_COMBAT_TOPIC</Topic>
+			<Description>TXT_KEY_CONCEPT_STACKING_COMBAT_DESCRIPTION</Description>
+			<Summary>TXT_KEY_CONCEPT_STACKING_COMBAT_SUMMARY</Summary>
+			<AdvisorQuestion>TXT_KEY_CONCEPT_STACKING_COMBAT_ADVISOR_QUESTION</AdvisorQuestion>
+			<Advisor>MILITARY</Advisor>
+			<CivilopediaHeaderType>HEADER_COMBAT</CivilopediaHeaderType>
+		</Row>
+		<Row>
+			<Type>CONCEPT_RANGED_COUNTER</Type>
+			<Topic>TXT_KEY_CONCEPT_RANGED_COUNTER_TOPIC</Topic>
+			<Description>TXT_KEY_CONCEPT_RANGED_COUNTER_DESCRIPTION</Description>
+			<Summary>TXT_KEY_CONCEPT_RANGED_COUNTER_SUMMARY</Summary>
+			<AdvisorQuestion>TXT_KEY_CONCEPT_RANGED_COUNTER_ADVISOR_QUESTION</AdvisorQuestion>
+			<Advisor>MILITARY</Advisor>
+			<CivilopediaHeaderType>HEADER_COMBAT</CivilopediaHeaderType>
+		</Row>
+		<Row>
+			<Type>CONCEPT_HEALING</Type>
+			<Topic>TXT_KEY_CONCEPT_HEALING_TOPIC</Topic>
+			<Description>TXT_KEY_CONCEPT_HEALING_DESCRIPTION</Description>
+			<Summary>TXT_KEY_CONCEPT_HEALING_SUMMARY</Summary>
+			<AdvisorQuestion>TXT_KEY_CONCEPT_HEALING_ADVISOR_QUESTION</AdvisorQuestion>
+			<Advisor>MILITARY</Advisor>
+			<CivilopediaHeaderType>HEADER_COMBAT</CivilopediaHeaderType>
+		</Row>
+		<Row>
+			<Type>CONCEPT_COMBAT_AOE_EFFECT</Type>
+			<Topic>TXT_KEY_CONCEPT_COMBAT_AOE_EFFECT_TOPIC</Topic>
+			<Description>TXT_KEY_CONCEPT_COMBAT_AOE_EFFECT_DESCRIPTION</Description>
+			<Summary>TXT_KEY_CONCEPT_COMBAT_AOE_EFFECT_SUMMARY</Summary>
+			<AdvisorQuestion>TXT_KEY_CONCEPT_COMBAT_AOE_EFFECT_ADVISOR_QUESTION</AdvisorQuestion>
+			<Advisor>MILITARY</Advisor>
+			<CivilopediaHeaderType>HEADER_COMBAT</CivilopediaHeaderType>
+		</Row>
+		<Row>
+			<Type>CONCEPT_COMBAT_COLLDMG_EFFECT</Type>
+			<Topic>TXT_KEY_CONCEPT_COMBAT_COLLDMG_EFFECT_TOPIC</Topic>
+			<Description>TXT_KEY_CONCEPT_COMBAT_COLLDMG_EFFECT_DESCRIPTION</Description>
+			<Summary>TXT_KEY_CONCEPT_COMBAT_COLLDMG_EFFECT_SUMMARY</Summary>
+			<AdvisorQuestion>TXT_KEY_CONCEPT_COMBAT_COLLDMG_EFFECT_ADVISOR_QUESTION</AdvisorQuestion>
+			<Advisor>MILITARY</Advisor>
+			<CivilopediaHeaderType>HEADER_COMBAT</CivilopediaHeaderType>
+		</Row>
+		<Row>
+			<Type>CONCEPT_COMBAT_CHARGEDMG_EFFECT</Type>
+			<Topic>TXT_KEY_CONCEPT_COMBAT_CHARGEDMG_EFFECT_TOPIC</Topic>
+			<Description>TXT_KEY_CONCEPT_COMBAT_CHARGEDMG_EFFECT_DESCRIPTION</Description>
+			<Summary>TXT_KEY_CONCEPT_COMBAT_CHARGEDMG_EFFECT_SUMMARY</Summary>
+			<AdvisorQuestion>TXT_KEY_CONCEPT_COMBAT_CHARGEDMG_EFFECT_ADVISOR_QUESTION</AdvisorQuestion>
+			<Advisor>MILITARY</Advisor>
+			<CivilopediaHeaderType>HEADER_COMBAT</CivilopediaHeaderType>
+		</Row>
+		<Row>
+			<Type>CONCEPT_COMBAT_SUNDER_EFFECT</Type>
+			<Topic>TXT_KEY_CONCEPT_COMBAT_SUNDER_EFFECT_TOPIC</Topic>
+			<Description>TXT_KEY_CONCEPT_COMBAT_SUNDER_EFFECT_DESCRIPTION</Description>
+			<Summary>TXT_KEY_CONCEPT_COMBAT_SUNDER_EFFECT_SUMMARY</Summary>
+			<AdvisorQuestion>TXT_KEY_CONCEPT_COMBAT_SUNDER_EFFECT_ADVISOR_QUESTION</AdvisorQuestion>
+			<Advisor>MILITARY</Advisor>
+			<CivilopediaHeaderType>HEADER_COMBAT</CivilopediaHeaderType>
+		</Row>
+
+
+
+		<!--************************************Units********************************-->
+		<Row>
+			<Type>CONCEPT_SP_UNIT_SUMMARY</Type>
+			<Topic>TXT_KEY_CONCEPT_SP_UNIT_SUMMARY_TOPIC</Topic>
+			<Description>TXT_KEY_CONCEPT_SP_UNIT_SUMMARY_DESCRIPTION</Description>
+			<Summary>TXT_KEY_CONCEPT_SP_UNIT_SUMMARY_SUMMARY</Summary>
+			<AdvisorQuestion>TXT_KEY_CONCEPT_SP_UNIT_SUMMARY_ADVISOR_QUESTION</AdvisorQuestion>
+			<Advisor>MILITARY</Advisor>
+			<CivilopediaHeaderType>HEADER_UNITS</CivilopediaHeaderType>
+		</Row>
+		
+		<Row>
+			<Type>CONCEPT_SP_UNIT_INFANTRY</Type>
+			<Topic>TXT_KEY_CONCEPT_SP_UNIT_INFANTRY_TOPIC</Topic>
+			<Description>TXT_KEY_CONCEPT_SP_UNIT_INFANTRY_DESCRIPTION</Description>
+			<Summary>TXT_KEY_CONCEPT_SP_UNIT_INFANTRY_SUMMARY</Summary>
+			<AdvisorQuestion>TXT_KEY_CONCEPT_SP_UNIT_INFANTRY_ADVISOR_QUESTION</AdvisorQuestion>
+			<Advisor>MILITARY</Advisor>
+			<CivilopediaHeaderType>HEADER_UNITS</CivilopediaHeaderType>
+		</Row>
+
+		<Row>
+			<Type>CONCEPT_SP_UNIT_MOBILE</Type>
+			<Topic>TXT_KEY_CONCEPT_SP_UNIT_MOBILE_TOPIC</Topic>
+			<Description>TXT_KEY_CONCEPT_SP_UNIT_MOBILE_DESCRIPTION</Description>
+			<Summary>TXT_KEY_CONCEPT_SP_UNIT_MOBILE_SUMMARY</Summary>
+			<AdvisorQuestion>TXT_KEY_CONCEPT_SP_UNIT_MOBILE_ADVISOR_QUESTION</AdvisorQuestion>
+			<Advisor>MILITARY</Advisor>
+			<CivilopediaHeaderType>HEADER_UNITS</CivilopediaHeaderType>
+		</Row>
+
+		<Row>
+			<Type>CONCEPT_SP_UNIT_MOUNTED_RANGED</Type>
+			<Topic>TXT_KEY_CONCEPT_SP_UNIT_MOUNTED_RANGED_TOPIC</Topic>
+			<Description>TXT_KEY_CONCEPT_SP_UNIT_MOUNTED_RANGED_DESCRIPTION</Description>
+			<Summary>TXT_KEY_CONCEPT_SP_UNIT_MOUNTED_RANGED_SUMMARY</Summary>
+			<AdvisorQuestion>TXT_KEY_CONCEPT_SP_UNIT_MOUNTED_RANGED_ADVISOR_QUESTION</AdvisorQuestion>
+			<Advisor>MILITARY</Advisor>
+			<CivilopediaHeaderType>HEADER_UNITS</CivilopediaHeaderType>
+		</Row>
+
+		<Row>
+			<Type>CONCEPT_SP_UNIT_HELICOPTER_CLASS</Type>
+			<Topic>TXT_KEY_CONCEPT_SP_UNIT_HELICOPTER_CLASS_TOPIC</Topic>
+			<Description>TXT_KEY_CONCEPT_SP_UNIT_HELICOPTER_CLASS_DESCRIPTION</Description>
+			<Summary>TXT_KEY_CONCEPT_SP_UNIT_HELICOPTER_CLASS_SUMMARY</Summary>
+			<AdvisorQuestion>TXT_KEY_CONCEPT_SP_UNIT_HELICOPTER_CLASS_ADVISOR_QUESTION</AdvisorQuestion>
+			<Advisor>MILITARY</Advisor>
+			<CivilopediaHeaderType>HEADER_UNITS</CivilopediaHeaderType>
+		</Row>
+
+		<Row>
+			<Type>CONCEPT_SP_UNIT_COUNTER_UNITS</Type>
+			<Topic>TXT_KEY_CONCEPT_SP_UNIT_COUNTER_UNITS_TOPIC</Topic>
+			<Description>TXT_KEY_CONCEPT_SP_UNIT_COUNTER_UNITS_DESCRIPTION</Description>
+			<Summary>TXT_KEY_CONCEPT_SP_UNIT_COUNTER_UNITS_SUMMARY</Summary>
+			<AdvisorQuestion>TXT_KEY_CONCEPT_SP_UNIT_COUNTER_UNITS_ADVISOR_QUESTION</AdvisorQuestion>
+			<Advisor>MILITARY</Advisor>
+			<CivilopediaHeaderType>HEADER_UNITS</CivilopediaHeaderType>
+		</Row>
+
+		<Row>
+			<Type>CONCEPT_SP_UNIT_LAND_ARCHERY_UNITS</Type>
+			<Topic>TXT_KEY_CONCEPT_SP_UNIT_LAND_ARCHERY_UNITS_TOPIC</Topic>
+			<Description>TXT_KEY_CONCEPT_SP_UNIT_LAND_ARCHERY_UNITS_DESCRIPTION</Description>
+			<Summary>TXT_KEY_CONCEPT_SP_UNIT_LAND_ARCHERY_UNITS_SUMMARY</Summary>
+			<AdvisorQuestion>TXT_KEY_CONCEPT_SP_UNIT_LAND_ARCHERY_UNITS_ADVISOR_QUESTION</AdvisorQuestion>
+			<Advisor>MILITARY</Advisor>
+			<CivilopediaHeaderType>HEADER_UNITS</CivilopediaHeaderType>
+		</Row>
+
+		<Row>
+			<Type>CONCEPT_SP_UNIT_LAND_SIEGE_WEAPONS</Type>
+			<Topic>TXT_KEY_CONCEPT_SP_UNIT_LAND_SIEGE_WEAPONS_TOPIC</Topic>
+			<Description>TXT_KEY_CONCEPT_SP_UNIT_LAND_SIEGE_WEAPONS_DESCRIPTION</Description>
+			<Summary>TXT_KEY_CONCEPT_SP_UNIT_LAND_SIEGE_WEAPONS_SUMMARY</Summary>
+			<AdvisorQuestion>TXT_KEY_CONCEPT_SP_UNIT_LAND_SIEGE_WEAPONS_ADVISOR_QUESTION</AdvisorQuestion>
+			<Advisor>MILITARY</Advisor>
+			<CivilopediaHeaderType>HEADER_UNITS</CivilopediaHeaderType>
+		</Row>
+
+		<Row>
+			<Type>CONCEPT_SP_UNIT_LAND_HEAVY_ARTILLERY</Type>
+			<Topic>TXT_KEY_CONCEPT_SP_UNIT_LAND_HEAVY_ARTILLERY_TOPIC</Topic>
+			<Description>TXT_KEY_CONCEPT_SP_UNIT_LAND_HEAVY_ARTILLERY_DESCRIPTION</Description>
+			<Summary>TXT_KEY_CONCEPT_SP_UNIT_LAND_HEAVY_ARTILLERY_SUMMARY</Summary>
+			<AdvisorQuestion>TXT_KEY_CONCEPT_SP_UNIT_LAND_HEAVY_ARTILLERY_ADVISOR_QUESTION</AdvisorQuestion>
+			<Advisor>MILITARY</Advisor>
+			<CivilopediaHeaderType>HEADER_UNITS</CivilopediaHeaderType>
+		</Row>
+
+
+		<Row>
+			<Type>CONCEPT_SP_UNIT_LAND_RECON_UNITS</Type>
+			<Topic>TXT_KEY_CONCEPT_SP_UNIT_LAND_RECON_UNITS_TOPIC</Topic>
+			<Description>TXT_KEY_CONCEPT_SP_UNIT_LAND_RECON_UNITS_DESCRIPTION</Description>
+			<Summary>TXT_KEY_CONCEPT_SP_UNIT_LAND_RECON_UNITS_SUMMARY</Summary>
+			<AdvisorQuestion>TXT_KEY_CONCEPT_SP_UNIT_LAND_RECON_UNITS_ADVISOR_QUESTION</AdvisorQuestion>
+			<Advisor>MILITARY</Advisor>
+			<CivilopediaHeaderType>HEADER_UNITS</CivilopediaHeaderType>
+		</Row>
+
+		<Row>
+			<Type>CONCEPT_SP_UNIT_NAVAL_MELEE</Type>
+			<Topic>TXT_KEY_CONCEPT_SP_UNIT_NAVAL_MELEE_TOPIC</Topic>
+			<Description>TXT_KEY_CONCEPT_SP_UNIT_NAVAL_MELEE_DESCRIPTION</Description>
+			<Summary>TXT_KEY_CONCEPT_SP_UNIT_NAVAL_MELEE_SUMMARY</Summary>
+			<AdvisorQuestion>TXT_KEY_CONCEPT_SP_UNIT_NAVAL_MELEE_ADVISOR_QUESTION</AdvisorQuestion>
+			<Advisor>MILITARY</Advisor>
+			<CivilopediaHeaderType>HEADER_UNITS</CivilopediaHeaderType>
+		</Row>
+
+		<Row>
+			<Type>CONCEPT_SP_UNIT_NAVAL_RANGED</Type>
+			<Topic>TXT_KEY_CONCEPT_SP_UNIT_NAVAL_RANGED_TOPIC</Topic>
+			<Description>TXT_KEY_CONCEPT_SP_UNIT_NAVAL_RANGED_DESCRIPTION</Description>
+			<Summary>TXT_KEY_CONCEPT_SP_UNIT_NAVAL_RANGED_SUMMARY</Summary>
+			<AdvisorQuestion>TXT_KEY_CONCEPT_SP_UNIT_NAVAL_RANGED_ADVISOR_QUESTION</AdvisorQuestion>
+			<Advisor>MILITARY</Advisor>
+			<CivilopediaHeaderType>HEADER_UNITS</CivilopediaHeaderType>
+		</Row>
+
+		<Row>
+			<Type>CONCEPT_SP_UNIT_NAVAL_SUBMARINE</Type>
+			<Topic>TXT_KEY_CONCEPT_SP_UNIT_NAVAL_SUBMARINE_TOPIC</Topic>
+			<Description>TXT_KEY_CONCEPT_SP_UNIT_NAVAL_SUBMARINE_DESCRIPTION</Description>
+			<Summary>TXT_KEY_CONCEPT_SP_UNIT_NAVAL_SUBMARINE_SUMMARY</Summary>
+			<AdvisorQuestion>TXT_KEY_CONCEPT_SP_UNIT_NAVAL_SUBMARINE_ADVISOR_QUESTION</AdvisorQuestion>
+			<Advisor>MILITARY</Advisor>
+			<CivilopediaHeaderType>HEADER_UNITS</CivilopediaHeaderType>
+		</Row>
+
+		<Row>
+			<Type>CONCEPT_SP_UNIT_NAVAL_CARRIERS</Type>
+			<Topic>TXT_KEY_CONCEPT_SP_UNIT_NAVAL_CARRIERS_TOPIC</Topic>
+			<Description>TXT_KEY_CONCEPT_SP_UNIT_NAVAL_CARRIERS_DESCRIPTION</Description>
+			<Summary>TXT_KEY_CONCEPT_SP_UNIT_NAVAL_CARRIERS_SUMMARY</Summary>
+			<AdvisorQuestion>TXT_KEY_CONCEPT_SP_UNIT_NAVAL_CARRIERS_ADVISOR_QUESTION</AdvisorQuestion>
+			<Advisor>MILITARY</Advisor>
+			<CivilopediaHeaderType>HEADER_UNITS</CivilopediaHeaderType>
+		</Row>
+
+		<Row>
+			<Type>CONCEPT_SP_UNIT_ATTACK_AIRCRAFT</Type>
+			<Topic>TXT_KEY_CONCEPT_SP_UNIT_ATTACK_AIRCRAFT_TOPIC</Topic>
+			<Description>TXT_KEY_CONCEPT_SP_UNIT_ATTACK_AIRCRAFT_DESCRIPTION</Description>
+			<Summary>TXT_KEY_CONCEPT_SP_UNIT_ATTACK_AIRCRAFT_SUMMARY</Summary>
+			<AdvisorQuestion>TXT_KEY_CONCEPT_SP_UNIT_ATTACK_AIRCRAFT_ADVISOR_QUESTION</AdvisorQuestion>
+			<Advisor>MILITARY</Advisor>
+			<CivilopediaHeaderType>HEADER_UNITS</CivilopediaHeaderType>
+		</Row>
+
+		<Row>
+			<Type>CONCEPT_SP_UNIT_STRATEGIC_BOMBER</Type>
+			<Topic>TXT_KEY_CONCEPT_SP_UNIT_STRATEGIC_BOMBER_TOPIC</Topic>
+			<Description>TXT_KEY_CONCEPT_SP_UNIT_STRATEGIC_BOMBER_DESCRIPTION</Description>
+			<Summary>TXT_KEY_CONCEPT_SP_UNIT_STRATEGIC_BOMBER_SUMMARY</Summary>
+			<AdvisorQuestion>TXT_KEY_CONCEPT_SP_UNIT_STRATEGIC_BOMBER_ADVISOR_QUESTION</AdvisorQuestion>
+			<Advisor>MILITARY</Advisor>
+			<CivilopediaHeaderType>HEADER_UNITS</CivilopediaHeaderType>
+		</Row>
+
+		<Row>
+			<Type>CONCEPT_SP_UNIT_AIR_FIGHTERS</Type>
+			<Topic>TXT_KEY_CONCEPT_SP_UNIT_AIR_FIGHTERS_TOPIC</Topic>
+			<Description>TXT_KEY_CONCEPT_SP_UNIT_AIR_FIGHTERS_DESCRIPTION</Description>
+			<Summary>TXT_KEY_CONCEPT_SP_UNIT_AIR_FIGHTERS_SUMMARY</Summary>
+			<AdvisorQuestion>TXT_KEY_CONCEPT_SP_UNIT_AIR_FIGHTERS_ADVISOR_QUESTION</AdvisorQuestion>
+			<Advisor>MILITARY</Advisor>
+			<CivilopediaHeaderType>HEADER_UNITS</CivilopediaHeaderType>
+		</Row>
+
+
+		<Row>
+			<Type>CONCEPT_SP_UNIT_ELITEUNITS</Type>
+			<Topic>TXT_KEY_CONCEPT_SP_UNIT_ELITEUNITS_TOPIC</Topic>
+			<Description>TXT_KEY_CONCEPT_SP_UNIT_ELITEUNITS_DESCRIPTION</Description>
+			<Summary>TXT_KEY_CONCEPT_SP_UNIT_ELITEUNITS_SUMMARY</Summary>
+			<AdvisorQuestion>TXT_KEY_CONCEPT_SP_UNIT_ELITEUNITS_ADVISOR_QUESTION</AdvisorQuestion>
+			<Advisor>MILITARY</Advisor>
+			<CivilopediaHeaderType>HEADER_UNITS</CivilopediaHeaderType>
+		</Row>
+
+	</Concepts>
+		<!--************************************Victory********************************-->
+	<Concepts>
+	
+		<Row>
+			<Type>CONCEPT_SP_NUCLEAR_WINTER</Type>
+			<Topic>TXT_KEY_CONCEPT_SP_NUCLEAR_WINTER_TOPIC</Topic>
+			<Description>TXT_KEY_CONCEPT_SP_NUCLEAR_WINTER_DESCRIPTION</Description>
+			<Summary>TXT_KEY_CONCEPT_SP_NUCLEAR_WINTER_SUMMARY</Summary>
+			<AdvisorQuestion>TXT_KEY_CONCEPT_SP_NUCLEAR_WINTER_ADVISOR_QUESTION</AdvisorQuestion>
+			<Advisor>MILITARY</Advisor>
+			<CivilopediaHeaderType>HEADER_VICTORY</CivilopediaHeaderType>
+		</Row>
+
+		<Row>
+			<Type>CONCEPT_SP_NUCLEAR_WINTER_DETAILS</Type>
+			<Topic>TXT_KEY_CONCEPT_SP_NUCLEAR_WINTER_DETAILS_TOPIC</Topic>
+			<Description>TXT_KEY_CONCEPT_SP_NUCLEAR_WINTER_DETAILS_DESCRIPTION</Description>
+			<Summary>TXT_KEY_CONCEPT_SP_NUCLEAR_WINTER_DETAILS_SUMMARY</Summary>
+			<AdvisorQuestion>TXT_KEY_CONCEPT_SP_NUCLEAR_WINTER_DETAILS_ADVISOR_QUESTION</AdvisorQuestion>
+			<Advisor>MILITARY</Advisor>
+			<CivilopediaHeaderType>HEADER_VICTORY</CivilopediaHeaderType>
+		</Row>
+
+		<Row>
+			<Type>CONCEPT_SP_NUCLEAR_WINTER_RESULT</Type>
+			<Topic>TXT_KEY_CONCEPT_SP_NUCLEAR_WINTER_RESULT_TOPIC</Topic>
+			<Description>TXT_KEY_CONCEPT_SP_NUCLEAR_WINTER_RESULT_DESCRIPTION</Description>
+			<Summary>TXT_KEY_CONCEPT_SP_NUCLEAR_WINTER_RESULT_SUMMARY</Summary>
+			<AdvisorQuestion>TXT_KEY_CONCEPT_SP_NUCLEAR_WINTER_RESULT_ADVISOR_QUESTION</AdvisorQuestion>
+			<Advisor>MILITARY</Advisor>
+			<CivilopediaHeaderType>HEADER_VICTORY</CivilopediaHeaderType>
+		</Row>
+
+	</Concepts>
+
+	<!--************************************Misc********************************-->
+	<Concepts>
+		<Row>
+			<Type>CONCEPT_SP_NEW_CITY_STATE_RULE</Type>
+			<Topic>TXT_KEY_SP_NEW_CITY_STATE_RULE_TOPIC</Topic>
+			<Description>TXT_KEY_CONCEPT_SP_NEW_CITY_STATE_RULE_DESCRIPTION</Description>
+			<Summary>TXT_KEY_CONCEPT_SP_NEW_CITY_STATE_RULE_SUMMARY</Summary>
+			<AdvisorQuestion>TXT_KEY_CONCEPT_SP_NEW_CITY_STATE_RULE_ADVISOR_QUESTION</AdvisorQuestion>
+			<Advisor>FOREIGN</Advisor>
+			<CivilopediaHeaderType>HEADER_CITYSTATE</CivilopediaHeaderType>
+		</Row>
+	</Concepts>
+</GameData>

@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 12/15/2014 9:46:17 PM -->
+<GameData>
+	
+	
+	
+	
+	
+	
+	
+	<!-- ***********************DLL Options*************************************************-->
+	<!--<CustomModDbUpdates>
+		<Row Name="PROMOTIONS_VARIABLE_RECON_XML" Value="1"/>
+	</CustomModDbUpdates>-->
+	
+	
+	<CustomModOptions>
+
+
+	
+		
+		<Update>
+			<Where Name="GLOBAL_CITY_FOREST_BONUS"/>
+			<Set Value="1"/>
+		</Update>
+
+		<Update>
+			<Where Name="GLOBAL_STACKING_RULES"/>
+			<Set Value="1"/>
+		</Update>
+
+		<Update>
+			<Where Name="GLOBAL_ALPINE_PASSES"/>
+			<Set Value="1"/>
+		</Update>
+		
+		<Update>
+			<Where Name="GLOBAL_NO_LOST_GREATWORKS"/>
+			<Set Value="1"/>
+		</Update>
+		
+		<Update>
+			<Where Name="GLOBAL_TRULY_FREE_GP"/>
+			<Set Value="1"/>
+		</Update>
+		
+		<Update>
+			<Where Name="GLOBAL_SEPARATE_GREAT_ADMIRAL"/>
+			<Set Value="1"/>
+		</Update>
+
+		<!--<Update>
+			<Where Name="GLOBAL_LOCAL_GENERALS"/>
+			<Set Value="1"/>
+		</Update>-->
+
+		<!--<Update>
+			<Where Name="PROMOTIONS_VARIABLE_RECON"/>
+			<Set Value="1"/>
+		</Update>-->
+		
+		
+		<Update>
+			<Where Name="BUGFIX_CITY_STACKING"/>
+			<Set Value="1"/>
+		</Update>
+		<Update>
+			<Where Name="BUGFIX_INTERCEPTOR_STRENGTH"/>
+			<Set Value="1"/>
+		</Update>
+		<Update>
+			<Where Name="BUGFIX_UNIT_POWER_CALC"/>
+			<Set Value="1"/>
+		</Update>
+		<Update>
+			<Where Name="BUGFIX_RESEARCH_OVERFLOW"/>
+			<Set Value="1"/>
+		</Update>
+
+
+		<Update>
+			<Where Name="PROMOTIONS_UNIT_NAMING"/>
+			<Set Value="1"/>
+		</Update>
+		
+		
+		<Update>
+			<Where Name="EVENTS_UNIT_DATA"/>
+			<Set Value="1"/>
+		</Update>
+		
+		
+		<Update>
+			<Where Name="EVENTS_BATTLES"/>
+			<Set Value="1"/>
+		</Update>
+		<!-- Invalid in DLL-VMC v.94
+		<Update>
+			<Where Name="EVENTS_RED_TURN"/>
+			<Set Value="1"/>
+		</Update>
+		<Update>
+			<Where Name="EVENTS_RED_COMBAT"/>
+			<Set Value="1"/>
+		</Update>
+		<Update>
+			<Where Name="EVENTS_RED_COMBAT_MISSION"/>
+			<Set Value="1"/>
+		</Update>
+		<Update>
+			<Where Name="EVENTS_RED_COMBAT_ABORT"/>
+			<Set Value="1"/>
+		</Update>
+		<Update>
+			<Where Name="EVENTS_RED_COMBAT_RESULT"/>
+			<Set Value="1"/>
+		</Update>
+		<Update>
+			<Where Name="EVENTS_RED_COMBAT_ENDED"/>
+			<Set Value="1"/>
+		</Update>
+		-->
+		
+		
+		<Update>
+			<Where Name="EVENTS_TILE_IMPROVEMENTS"/>
+			<Set Value="1"/>
+		</Update>
+		
+		<Update>
+			<Where Name="EVENTS_CITY"/>
+			<Set Value="1"/>
+		</Update>
+		<Update>
+			<Where Name="EVENTS_NUCLEAR_DETONATION"/>
+			<Set Value="1"/>
+		</Update>
+		
+		
+		<Update>
+			<Where Name="EVENTS_PLOT"/>
+			<Set Value="1"/>
+		</Update>
+		
+		<Update>
+			<Where Name="EVENTS_FOUND_RELIGION"/>
+			<Set Value="1"/>
+		</Update>
+
+		<!--<Update>
+			<Where Name="DIPLOMACY_CIV4_FEATURES"/>
+			<Set Value="1"/>
+		</Update>-->
+
+
+		<Update>
+			<Where Name="PROMOTIONS_CROSS_MOUNTAINS"/>
+			<Set Value="1"/>
+		</Update>
+
+
+		<Update>
+			<Where Name="GLOBAL_CS_RAZE_RARELY"/>
+			<Set Value="1"/>
+		</Update>
+		<Update>
+			<Where Name="GLOBAL_CS_LIBERATE_AFTER_BUYOUT"/>
+			<Set Value="1"/>
+		</Update>
+		<Update>
+			<Where Name="GLOBAL_CS_NO_ALLIED_SKIRMISHES"/>
+			<Set Value="1"/>
+		</Update>
+		<Update>
+			<Where Name="GLOBAL_VENICE_KEEPS_RESOURCES"/>
+			<Set Value="1"/>
+		</Update>
+		<Update>
+			<Where Name="GLOBAL_CS_MARRIAGE_KEEPS_RESOURCES"/>
+			<Set Value="1"/>
+		</Update>
+		
+		<Update>
+			<Where Name="UNITS_MAX_HP"/>
+			<Set Value="1"/>
+		</Update>
+		
+		<!--<Update>
+			<Where Name="GLOBAL_PARATROOPS_AA_DAMAGE"/>
+			<Set Value="1"/>
+		</Update>-->
+	</CustomModOptions>
+
+
+	<Defines>
+		<Update>
+			<Where Name="CITY_UNIT_LIMIT"/>
+			<Set Value="2"/>
+		</Update>
+	</Defines>
+
+
+	<CustomModOptions>
+	<!--********************************* Smart AI ***********************************-->
+		<Update>
+			<Where Name="AI_SMART_V3"/>
+			<Set Value="1"/>
+		</Update>
+		
+	<!--********************************* Passable Forts *****************************-->
+		<Update>
+			<Where Name="GLOBAL_PASSABLE_FORTS"/>
+			<Set Value="1"/>
+		</Update>
+		<Update>
+			<Where Name="GLOBAL_PASSABLE_FORTS_ANY"/>
+			<Set Value="0"/>
+			<!-- Default is OFF -->
+		</Update>
+	</CustomModOptions>
+
+	<Improvements>
+		<Update>
+			<Where Type="IMPROVEMENT_FORT"/>
+			<Set MakesPassable="1"/>
+		</Update>
+		<!--<Update>
+			<Where Type="IMPROVEMENT_CITADEL"/>
+			<Set MakesPassable="1"/>
+		</Update>-->
+	</Improvements>
+
+	<!--*********************City Working Range ********************* -->
+	<CustomModOptions>
+		<Update>
+			<Where Name="GLOBAL_CITY_WORKING"/>
+			<Set Value="1"/>
+		</Update>
+		<!--
+		<Update>
+			<Where Name="TRAITS_CITY_WORKING"/>
+			<Set Value="1"/>
+		</Update>
+		<Update>
+			<Where Name="POLICIES_CITY_WORKING"/>
+			<Set Value="1"/>
+		</Update>
+		<Update>
+			<Where Name="TECHS_CITY_WORKING"/>
+			<Set Value="1"/>
+		</Update>>
+		-->
+		<Update>
+			<Where Name="BUILDINGS_CITY_WORKING"/>
+			<Set Value="1"/>
+		</Update>
+	</CustomModOptions>
+
+
+
+	<!--*********************Trade Route Scaling ********************* -->
+	<CustomModOptions>
+		<Update>
+			<Where Name="TRADE_ROUTE_SCALING"/>
+			<Set Value="1"/>
+		</Update>
+	</CustomModOptions>
+	
+	<!-- SP New Game Options -->
+	<GameOptions>
+		<Row>
+			<Type>GAMEOPTION_SP_CORRUPTION_OFF</Type>
+			<Description>TXT_KEY_GAME_OPTION_SP_CORRUPTION</Description>
+			<Help>TXT_KEY_GAME_OPTION_SP_CORRUPTION_HELP</Help>
+		</Row>
+		<Row>
+			<Type>GAMEOPTION_SP_IMMIGRATION_OFF</Type>
+			<Description>TXT_KEY_GAME_OPTION_SP_IMMIGRATION</Description>
+			<Help>TXT_KEY_GAME_OPTION_SP_IMMIGRATION_HELP</Help>
+		</Row>
+		<Row>
+			<Type>GAMEOPTION_SP_NEWATTACK_OFF</Type>
+			<Description>TXT_KEY_GAME_OPTION_SP_NEWATTACK</Description>
+			<Help>TXT_KEY_GAME_OPTION_SP_NEWATTACK_HELP</Help>
+		</Row>
+		<Row>
+			<Type>GAMEOPTION_SP_NUCLEARWINTER_OFF</Type>
+			<Description>TXT_KEY_GAME_OPTION_SP_NUCLEARWINTER</Description>
+			<Help>TXT_KEY_GAME_OPTION_SP_NUCLEARWINTER_HELP</Help>
+		</Row>
+		<Row>
+			<Type>GAMEOPTION_SP_RECORD_MODE</Type>
+			<Description>TXT_KEY_GAME_OPTION_SP_RECORD_MODE</Description>
+			<Help>TXT_KEY_GAME_OPTION_SP_RECORD_MODE_HELP</Help>
+			<SupportsMultiplayer>false</SupportsMultiplayer>
+		</Row>
+		<Row>
+			<Type>GAMEOPTION_SP_CORPS_MODE_HIGH</Type>
+			<Description>TXT_KEY_GAME_OPTION_SP_CORPS_MODE_HIGH</Description>
+			<Help>TXT_KEY_GAME_OPTION_SP_CORPS_MODE_HIGH_HELP</Help>
+		</Row>
+		<Row>
+			<Type>GAMEOPTION_SP_CORPS_MODE_MEDIUM</Type>
+			<Description>TXT_KEY_GAME_OPTION_SP_CORPS_MODE_MEDIUM</Description>
+			<Help>TXT_KEY_GAME_OPTION_SP_CORPS_MODE_MEDIUM_HELP</Help>
+		</Row>
+		<Row>
+			<Type>GAMEOPTION_SP_CORPS_MODE_LOW</Type>
+			<Description>TXT_KEY_GAME_OPTION_SP_CORPS_MODE_LOW</Description>
+			<Help>TXT_KEY_GAME_OPTION_SP_CORPS_MODE_LOW_HELP</Help>
+		</Row>
+	</GameOptions>
+</GameData>

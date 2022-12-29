@@ -1,0 +1,1301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 1/14/2014 2:15:53 PM -->
+<GameData>
+	<Leaders>
+		<Update>
+			<Set VictoryCompetitiveness="12" WonderCompetitiveness="5" Boldness="8" DiploBalance="10" WarmongerHate="1" DenounceWillingness="7" DoFWillingness="5" Loyalty="2" Forgiveness="9" Meanness="9"/>
+			<Where Type="LEADER_WU_ZETIAN"/>
+		</Update>
+		<Update>
+			<Set VictoryCompetitiveness="12" WonderCompetitiveness="5" Boldness="8" DiploBalance="12" WarmongerHate="1" DenounceWillingness="7" DoFWillingness="5" Loyalty="6" Forgiveness="5" Meanness="9"/>
+			<Where Type="LEADER_DARIUS"/>
+		</Update>
+		<Update>
+			<Set VictoryCompetitiveness="12" WonderCompetitiveness="2" Boldness="10" DiploBalance="12" WarmongerHate="1" DenounceWillingness="7" DoFWillingness="5" Loyalty="4" Forgiveness="5" Meanness="9"/>
+			<Where Type="LEADER_AUGUSTUS"/>
+		</Update>
+		<Update>
+			<Set VictoryCompetitiveness="12" WonderCompetitiveness="2" Boldness="8" DiploBalance="12" WarmongerHate="1" DenounceWillingness="2" DoFWillingness="6" Loyalty="6" Forgiveness="9" Meanness="2"/>
+			<Where Type="LEADER_WASHINGTON"/>
+		</Update>
+		<Update>
+			<Set VictoryCompetitiveness="12" WonderCompetitiveness="2" Boldness="10" DiploBalance="6" WarmongerHate="1" DenounceWillingness="6" DoFWillingness="7" Loyalty="3" Forgiveness="4" Meanness="5"/>
+			<Where Type="LEADER_CATHERINE"/>
+		</Update>
+		<Update>
+			<Set VictoryCompetitiveness="12" WonderCompetitiveness="4" Boldness="12" DiploBalance="5" WarmongerHate="0" DenounceWillingness="1" DoFWillingness="7" Loyalty="7" Forgiveness="9" Meanness="1"/>
+			<Where Type="LEADER_NAPOLEON"/>
+		</Update>
+		<Update>
+			<Set VictoryCompetitiveness="12" WonderCompetitiveness="3" Boldness="8" DiploBalance="11" WarmongerHate="8" DenounceWillingness="8" DoFWillingness="8" Loyalty="4" Forgiveness="5" Meanness="4"/>
+			<Where Type="LEADER_ELIZABETH"/>
+		</Update>
+		<Update>
+			<Set VictoryCompetitiveness="8" WonderCompetitiveness="5" Boldness="0" DiploBalance="11" WarmongerHate="12" DenounceWillingness="2" DoFWillingness="12" Loyalty="10" Forgiveness="10" Meanness="0"/>
+			<Where Type="LEADER_GANDHI"/>
+		</Update>
+		<Update>
+			<Set VictoryCompetitiveness="12" WonderCompetitiveness="6" Boldness="9" DiploBalance="6" WarmongerHate="0" DenounceWillingness="2" DoFWillingness="7" Loyalty="1" Forgiveness="8" Meanness="6"/>
+			<Where Type="LEADER_ODA_NOBUNAGA"/>
+		</Update>
+		<Update>
+			<Set VictoryCompetitiveness="4" WonderCompetitiveness="4" Boldness="0" DiploBalance="12" WarmongerHate="9" DenounceWillingness="4" DoFWillingness="9" Loyalty="10" Forgiveness="8" Meanness="3"/>
+			<Where Type="LEADER_RAMKHAMHAENG"/>
+		</Update>
+		<Update>
+			<Set VictoryCompetitiveness="12" WonderCompetitiveness="0" Boldness="12" DiploBalance="0" WarmongerHate="0" DenounceWillingness="6" DoFWillingness="10" Loyalty="12" Forgiveness="0" Meanness="0"/>
+			<Where Type="LEADER_GENGHIS_KHAN"/>
+		</Update>
+		<Update>
+			<Set VictoryCompetitiveness="12" WonderCompetitiveness="0" Boldness="12" DiploBalance="0" WarmongerHate="0" DenounceWillingness="9" DoFWillingness="0" Loyalty="0" Forgiveness="1" Meanness="12"/>
+			<Where Type="LEADER_ATTILA"/>
+		</Update>
+		<Update>
+			<Set VictoryCompetitiveness="8" WonderCompetitiveness="6" Boldness="2" DiploBalance="1" WarmongerHate="8" DenounceWillingness="2" DoFWillingness="9" Loyalty="10" Forgiveness="2" Meanness="1"/>
+			<Where Type="LEADER_ISABELLA"/>
+		</Update>
+		<Update>
+			<Set VictoryCompetitiveness="12" WonderCompetitiveness="0" Boldness="12" DiploBalance="6" WarmongerHate="8" DenounceWillingness="8" DoFWillingness="4" Loyalty="8" Forgiveness="2" Meanness="3"/>
+			<Where Type="LEADER_SHAKA"/>
+		</Update>
+	</Leaders>
+
+
+	<Leader_MajorCivApproachBiases>
+		<Update>
+			<Set Bias="12"/>
+			<Where LeaderType="LEADER_WU_ZETIAN" MajorCivApproachType="MAJOR_CIV_APPROACH_DECEPTIVE"/>
+		</Update>
+		<Update>
+			<Set Bias="4"/>
+			<Where LeaderType="LEADER_WU_ZETIAN" MajorCivApproachType="MAJOR_CIV_APPROACH_WAR"/>
+		</Update>
+		<Update>
+			<Set Bias="9"/>
+			<Where LeaderType="LEADER_AUGUSTUS" MajorCivApproachType="MAJOR_CIV_APPROACH_DECEPTIVE"/>
+		</Update>
+		<Update>
+			<Set Bias="12"/>
+			<Where LeaderType="LEADER_WASHINGTON" MajorCivApproachType="MAJOR_CIV_APPROACH_NEUTRAL"/>
+		</Update>
+		<Update>
+			<Set Bias="0"/>
+			<Where LeaderType="LEADER_GANDHI" MajorCivApproachType="MAJOR_CIV_APPROACH_WAR"/>
+		</Update>
+		<Update>
+			<Set Bias="0"/>
+			<Where LeaderType="LEADER_RAMKHAMHAENG" MajorCivApproachType="MAJOR_CIV_APPROACH_WAR"/>
+		</Update>
+		<Update>
+			<Set Bias="11"/>
+			<Where LeaderType="LEADER_GENGHIS_KHAN" MajorCivApproachType="MAJOR_CIV_APPROACH_WAR"/>
+		</Update>
+		<Update>
+			<Set Bias="12"/>
+			<Where LeaderType="LEADER_ATTILA" MajorCivApproachType="MAJOR_CIV_APPROACH_WAR"/>
+		</Update>
+		<Update>
+			<Set Bias="12"/>
+			<Where LeaderType="LEADER_SHAKA" MajorCivApproachType="MAJOR_CIV_APPROACH_WAR"/>
+		</Update>
+		
+	</Leader_MajorCivApproachBiases>
+
+	<Leader_Flavors>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_WU_ZETIAN" FlavorType="FLAVOR_EXPANSION"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_WU_ZETIAN" FlavorType="FLAVOR_OFFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_WU_ZETIAN" FlavorType="FLAVOR_DEFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="10"/>
+			<Where LeaderType="LEADER_WU_ZETIAN" FlavorType="FLAVOR_MOBILE"/>
+		</Update>
+		<Update>
+			<Set Flavor="6"/>
+			<Where LeaderType="LEADER_WU_ZETIAN" FlavorType="FLAVOR_RANGED"/>
+		</Update>
+		<Update>
+			<Set Flavor="9"/>
+			<Where LeaderType="LEADER_WU_ZETIAN" FlavorType="FLAVOR_CULTURE"/>
+		</Update>
+		<Update>
+			<Set Flavor="6"/>
+			<Where LeaderType="LEADER_WU_ZETIAN" FlavorType="FLAVOR_RELIGION"/>
+		</Update>
+		<Update>
+			<Set Flavor="9"/>
+			<Where LeaderType="LEADER_WU_ZETIAN" FlavorType="FLAVOR_DIPLOMACY"/>
+		</Update>
+		<Update>
+			<Set Flavor="8"/>
+			<Where LeaderType="LEADER_WU_ZETIAN" FlavorType="FLAVOR_NUKE"/>
+		</Update>
+		<Update>
+			<Set Flavor="9"/>
+			<Where LeaderType="LEADER_WU_ZETIAN" FlavorType="FLAVOR_AIR"/>
+		</Update>
+		<Update>
+			<Set Flavor="11"/>
+			<Where LeaderType="LEADER_WU_ZETIAN" FlavorType="FLAVOR_NAVAL"/>
+		</Update>
+		<Update>
+			<Set Flavor="9"/>
+			<Where LeaderType="LEADER_WU_ZETIAN" FlavorType="FLAVOR_GROWTH"/>
+		</Update>
+		<Update>
+			<Set Flavor="7"/>
+			<Where LeaderType="LEADER_WU_ZETIAN" FlavorType="FLAVOR_MILITARY_TRAINING"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_WU_ZETIAN" FlavorType="FLAVOR_CITY_DEFENCE"/>
+		</Update>
+		
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_AUGUSTUS" FlavorType="FLAVOR_EXPANSION"/>
+		</Update>
+		<Update>
+			<Set Flavor="3"/>
+			<Where LeaderType="LEADER_AUGUSTUS" FlavorType="FLAVOR_RELIGION"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_AUGUSTUS" FlavorType="FLAVOR_OFFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_AUGUSTUS" FlavorType="FLAVOR_DEFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_AUGUSTUS" FlavorType="FLAVOR_AIR"/>
+		</Update>
+		<Update>
+			<Set Flavor="8"/>
+			<Where LeaderType="LEADER_AUGUSTUS" FlavorType="FLAVOR_ANTIAIR"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_AUGUSTUS" FlavorType="FLAVOR_MOBILE"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_AUGUSTUS" FlavorType="FLAVOR_NAVAL"/>
+		</Update>
+		<Update>
+			<Set Flavor="2"/>
+			<Where LeaderType="LEADER_AUGUSTUS" FlavorType="FLAVOR_WONDER"/>
+		</Update>
+		<Update>
+			<Set Flavor="8"/>
+			<Where LeaderType="LEADER_AUGUSTUS" FlavorType="FLAVOR_GROWTH"/>
+		</Update>
+		<Update>
+			<Set Flavor="7"/>
+			<Where LeaderType="LEADER_AUGUSTUS" FlavorType="FLAVOR_MILITARY_TRAINING"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_AUGUSTUS" FlavorType="FLAVOR_CITY_DEFENCE"/>
+		</Update>
+		
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_DARIUS" FlavorType="FLAVOR_EXPANSION"/>
+		</Update>
+		<Update>
+			<Set Flavor="6"/>
+			<Where LeaderType="LEADER_DARIUS" FlavorType="FLAVOR_RELIGION"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_DARIUS" FlavorType="FLAVOR_OFFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_DARIUS" FlavorType="FLAVOR_DEFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_DARIUS" FlavorType="FLAVOR_AIR"/>
+		</Update>
+		<Update>
+			<Set Flavor="8"/>
+			<Where LeaderType="LEADER_DARIUS" FlavorType="FLAVOR_ANTIAIR"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_DARIUS" FlavorType="FLAVOR_MOBILE"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_DARIUS" FlavorType="FLAVOR_NAVAL"/>
+		</Update>
+		<Update>
+			<Set Flavor="7"/>
+			<Where LeaderType="LEADER_DARIUS" FlavorType="FLAVOR_WONDER"/>
+		</Update>
+		<Update>
+			<Set Flavor="8"/>
+			<Where LeaderType="LEADER_DARIUS" FlavorType="FLAVOR_GROWTH"/>
+		</Update>
+		<Update>
+			<Set Flavor="7"/>
+			<Where LeaderType="LEADER_DARIUS" FlavorType="FLAVOR_MILITARY_TRAINING"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_DARIUS" FlavorType="FLAVOR_CITY_DEFENCE"/>
+		</Update>
+
+		
+
+		<Update>
+			<Set Flavor="11"/>
+			<Where LeaderType="LEADER_WASHINGTON" FlavorType="FLAVOR_EXPANSION"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_WASHINGTON" FlavorType="FLAVOR_DEFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="10"/>
+			<Where LeaderType="LEADER_WASHINGTON" FlavorType="FLAVOR_MOBILE"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_WASHINGTON" FlavorType="FLAVOR_OFFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_WASHINGTON" FlavorType="FLAVOR_SCIENCE"/>
+		</Update>
+		<Update>
+			<Set Flavor="7"/>
+			<Where LeaderType="LEADER_WASHINGTON" FlavorType="FLAVOR_CULTURE"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_WASHINGTON" FlavorType="FLAVOR_AIR"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_WASHINGTON" FlavorType="FLAVOR_NAVAL"/>
+		</Update>
+		<Update>
+			<Set Flavor="11"/>
+			<Where LeaderType="LEADER_WASHINGTON" FlavorType="FLAVOR_AIR_CARRIER"/>
+		</Update>
+		<Update>
+			<Set Flavor="10"/>
+			<Where LeaderType="LEADER_WASHINGTON" FlavorType="FLAVOR_NAVAL_GROWTH"/>
+		</Update>
+		<Update>
+			<Set Flavor="0"/>
+			<Where LeaderType="LEADER_WASHINGTON" FlavorType="FLAVOR_RELIGION"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_WASHINGTON" FlavorType="FLAVOR_ANTIAIR"/>
+		</Update>
+		<Update>
+			<Set Flavor="10"/>
+			<Where LeaderType="LEADER_WASHINGTON" FlavorType="FLAVOR_NUKE"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_WASHINGTON" FlavorType="FLAVOR_GREAT_PEOPLE"/>
+		</Update>
+		<Update>
+			<Set Flavor="3"/>
+			<Where LeaderType="LEADER_WASHINGTON" FlavorType="FLAVOR_WONDER"/>
+		</Update>
+		<Update>
+			<Set Flavor="10"/>
+			<Where LeaderType="LEADER_WASHINGTON" FlavorType="FLAVOR_GROWTH"/>
+		</Update>
+		<Update>
+			<Set Flavor="7"/>
+			<Where LeaderType="LEADER_WASHINGTON" FlavorType="FLAVOR_MILITARY_TRAINING"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_WASHINGTON" FlavorType="FLAVOR_CITY_DEFENCE"/>
+		</Update>
+
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_CATHERINE" FlavorType="FLAVOR_EXPANSION"/>
+		</Update>
+		<Update>
+			<Set Flavor="3"/>
+			<Where LeaderType="LEADER_CATHERINE" FlavorType="FLAVOR_RELIGION"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_CATHERINE" FlavorType="FLAVOR_OFFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_CATHERINE" FlavorType="FLAVOR_DEFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_CATHERINE" FlavorType="FLAVOR_AIR"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_CATHERINE" FlavorType="FLAVOR_ANTIAIR"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_CATHERINE" FlavorType="FLAVOR_MOBILE"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_CATHERINE" FlavorType="FLAVOR_NAVAL"/>
+		</Update>
+		<Update>
+			<Set Flavor="1"/>
+			<Where LeaderType="LEADER_CATHERINE" FlavorType="FLAVOR_WONDER"/>
+		</Update>
+		<Update>
+			<Set Flavor="6"/>
+			<Where LeaderType="LEADER_CATHERINE" FlavorType="FLAVOR_GROWTH"/>
+		</Update>
+		<Update>
+			<Set Flavor="7"/>
+			<Where LeaderType="LEADER_CATHERINE" FlavorType="FLAVOR_MILITARY_TRAINING"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_CATHERINE" FlavorType="FLAVOR_CITY_DEFENCE"/>
+		</Update>
+
+		
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_NAPOLEON" FlavorType="FLAVOR_EXPANSION"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_NAPOLEON" FlavorType="FLAVOR_OFFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_NAPOLEON" FlavorType="FLAVOR_DEFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_NAPOLEON" FlavorType="FLAVOR_RANGED"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_NAPOLEON" FlavorType="FLAVOR_MOBILE"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_NAPOLEON" FlavorType="FLAVOR_NAVAL"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_NAPOLEON" FlavorType="FLAVOR_AIR"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_NAPOLEON" FlavorType="FLAVOR_ANTIAIR"/>
+		</Update>
+		<Update>
+			<Set Flavor="4"/>
+			<Where LeaderType="LEADER_NAPOLEON" FlavorType="FLAVOR_WONDER"/>
+		</Update>
+		<Update>
+			<Set Flavor="0"/>
+			<Where LeaderType="LEADER_NAPOLEON" FlavorType="FLAVOR_RELIGION"/>
+		</Update>
+		<Update>
+			<Set Flavor="8"/>
+			<Where LeaderType="LEADER_NAPOLEON" FlavorType="FLAVOR_MILITARY_TRAINING"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_NAPOLEON" FlavorType="FLAVOR_CITY_DEFENCE"/>
+		</Update>
+
+		
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_ELIZABETH" FlavorType="FLAVOR_EXPANSION"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_ELIZABETH" FlavorType="FLAVOR_AIR"/>
+		</Update>
+		<Update>
+			<Set Flavor="10"/>
+			<Where LeaderType="LEADER_ELIZABETH" FlavorType="FLAVOR_ANTIAIR"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_ELIZABETH" FlavorType="FLAVOR_MOBILE"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_ELIZABETH" FlavorType="FLAVOR_OFFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_ELIZABETH" FlavorType="FLAVOR_DEFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_ELIZABETH" FlavorType="FLAVOR_NAVAL"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_ELIZABETH" FlavorType="FLAVOR_AIR_CARRIER"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_ELIZABETH" FlavorType="FLAVOR_NAVAL_GROWTH"/>
+		</Update>
+		<Update>
+			<Set Flavor="7"/>
+			<Where LeaderType="LEADER_ELIZABETH" FlavorType="FLAVOR_GROWTH"/>
+		</Update>
+		<Update>
+			<Set Flavor="3"/>
+			<Where LeaderType="LEADER_ELIZABETH" FlavorType="FLAVOR_WONDER"/>
+		</Update>
+		<Update>
+			<Set Flavor="1"/>
+			<Where LeaderType="LEADER_ELIZABETH" FlavorType="FLAVOR_RELIGION"/>
+		</Update>
+		<Update>
+			<Set Flavor="7"/>
+			<Where LeaderType="LEADER_ELIZABETH" FlavorType="FLAVOR_MILITARY_TRAINING"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_ELIZABETH" FlavorType="FLAVOR_CITY_DEFENCE"/>
+		</Update>
+
+
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_BISMARCK" FlavorType="FLAVOR_NAVAL"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_BISMARCK" FlavorType="FLAVOR_AIR"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_BISMARCK" FlavorType="FLAVOR_ANTIAIR"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_BISMARCK" FlavorType="FLAVOR_OFFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_BISMARCK" FlavorType="FLAVOR_DEFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_BISMARCK" FlavorType="FLAVOR_MOBILE"/>
+		</Update>
+		<Update>
+			<Set Flavor="5"/>
+			<Where LeaderType="LEADER_BISMARCK" FlavorType="FLAVOR_WONDER"/>
+		</Update>
+		<Update>
+			<Set Flavor="0"/>
+			<Where LeaderType="LEADER_BISMARCK" FlavorType="FLAVOR_RELIGION"/>
+		</Update>
+		<Update>
+			<Set Flavor="11"/>
+			<Where LeaderType="LEADER_BISMARCK" FlavorType="FLAVOR_EXPANSION"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_BISMARCK" FlavorType="FLAVOR_GROWTH"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_BISMARCK" FlavorType="FLAVOR_PRODUCTION"/>
+		</Update>
+		<Update>
+			<Set Flavor="7"/>
+			<Where LeaderType="LEADER_BISMARCK" FlavorType="FLAVOR_MILITARY_TRAINING"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_BISMARCK" FlavorType="FLAVOR_CITY_DEFENCE"/>
+		</Update>
+
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_SHAKA" FlavorType="FLAVOR_EXPANSION"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_SHAKA" FlavorType="FLAVOR_NAVAL"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_SHAKA" FlavorType="FLAVOR_AIR"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_SHAKA" FlavorType="FLAVOR_ANTIAIR"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_SHAKA" FlavorType="FLAVOR_OFFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_SHAKA" FlavorType="FLAVOR_DEFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_SHAKA" FlavorType="FLAVOR_MOBILE"/>
+		</Update>
+		<Update>
+			<Set Flavor="1"/>
+			<Where LeaderType="LEADER_SHAKA" FlavorType="FLAVOR_ESPIONAGE"/>
+		</Update>
+		<Update>
+			<Set Flavor="5"/>
+			<Where LeaderType="LEADER_SHAKA" FlavorType="FLAVOR_NUKE"/>
+		</Update>
+		<Update>
+			<Set Flavor="9"/>
+			<Where LeaderType="LEADER_SHAKA" FlavorType="FLAVOR_USE_NUKE"/>
+		</Update>
+		<Update>
+			<Set Flavor="3"/>
+			<Where LeaderType="LEADER_SHAKA" FlavorType="FLAVOR_SPACESHIP"/>
+		</Update>
+		<Update>
+			<Set Flavor="0"/>
+			<Where LeaderType="LEADER_SHAKA" FlavorType="FLAVOR_HAPPINESS"/>
+		</Update>
+		<Update>
+			<Set Flavor="0"/>
+			<Where LeaderType="LEADER_SHAKA" FlavorType="FLAVOR_WONDER"/>
+		</Update>
+		<Update>
+			<Set Flavor="0"/>
+			<Where LeaderType="LEADER_SHAKA" FlavorType="FLAVOR_RELIGION"/>
+		</Update>
+		<Update>
+			<Set Flavor="9"/>
+			<Where LeaderType="LEADER_SHAKA" FlavorType="FLAVOR_MILITARY_TRAINING"/>
+		</Update>
+		
+		
+		
+		<Update>
+			<Set Flavor="0"/>
+			<Where LeaderType="LEADER_GANDHI" FlavorType="FLAVOR_EXPANSION"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_GANDHI" FlavorType="FLAVOR_GROWTH"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_GANDHI" FlavorType="FLAVOR_FLAVOR_RELIGION"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_GANDHI" FlavorType="FLAVOR_WONDER"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_GANDHI" FlavorType="FLAVOR_CULTURE"/>
+		</Update>
+		<Update>
+			<Set Flavor="0"/>
+			<Where LeaderType="LEADER_GANDHI" FlavorType="FLAVOR_OFFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="1"/>
+			<Where LeaderType="LEADER_GANDHI" FlavorType="FLAVOR_DEFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="1"/>
+			<Where LeaderType="LEADER_GANDHI" FlavorType="FLAVOR_MOBILE"/>
+		</Update>
+		<Update>
+			<Set Flavor="1"/>
+			<Where LeaderType="LEADER_GANDHI" FlavorType="FLAVOR_NAVAL"/>
+		</Update>
+		<Update>
+			<Set Flavor="1"/>
+			<Where LeaderType="LEADER_GANDHI" FlavorType="FLAVOR_RANGED"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_GANDHI" FlavorType="FLAVOR_USE_NUKE"/>
+		</Update>
+		
+		
+		
+		<Update>
+			<Set Flavor="3"/>
+			<Where LeaderType="LEADER_RAMKHAMHAENG" FlavorType="FLAVOR_MILITARY_TRAINING"/>
+		</Update>
+		<Update>
+			<Set Flavor="1"/>
+			<Where LeaderType="LEADER_RAMKHAMHAENG" FlavorType="FLAVOR_EXPANSION"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_RAMKHAMHAENG" FlavorType="FLAVOR_GROWTH"/>
+		</Update>
+		
+		<Update>
+			<Set Flavor="1"/>
+			<Where LeaderType="LEADER_PEDRO" FlavorType="FLAVOR_MILITARY_TRAINING"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_PEDRO" FlavorType="FLAVOR_INFRASTRUCTURE"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_PEDRO" FlavorType="FLAVOR_TILE_IMPROVEMENT"/>
+		</Update>
+		<Update>
+			<Set Flavor="11"/>
+			<Where LeaderType="LEADER_PEDRO" FlavorType="FLAVOR_NAVAL"/>
+		</Update>
+		<Update>
+			<Set Flavor="11"/>
+			<Where LeaderType="LEADER_PEDRO" FlavorType="FLAVOR_NAVAL_GROWTH"/>
+		</Update>
+		<Update>
+			<Set Flavor="9"/>
+			<Where LeaderType="LEADER_PEDRO" FlavorType="FLAVOR_DEFENSE"/>
+		</Update>
+		
+		
+		<Update>
+			<Set Flavor="10"/>
+			<Where LeaderType="LEADER_POCATELLO" FlavorType="FLAVOR_GROWTH"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_POCATELLO" FlavorType="FLAVOR_TILE_IMPROVEMENT"/>
+		</Update>
+		<Update>
+			<Set Flavor="1"/>
+			<Where LeaderType="LEADER_POCATELLO" FlavorType="FLAVOR_OFFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="1"/>
+			<Where LeaderType="LEADER_POCATELLO" FlavorType="FLAVOR_DEFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="1"/>
+			<Where LeaderType="LEADER_POCATELLO" FlavorType="FLAVOR_NAVAL"/>
+		</Update>
+		<Update>
+			<Set Flavor="1"/>
+			<Where LeaderType="LEADER_POCATELLO" FlavorType="FLAVOR_RANGED"/>
+		</Update>
+		<Update>
+			<Set Flavor="4"/>
+			<Where LeaderType="LEADER_POCATELLO" FlavorType="FLAVOR_EXPANSION"/>
+		</Update>
+		<Update>
+			<Set Flavor="1"/>
+			<Where LeaderType="LEADER_POCATELLO" FlavorType="FLAVOR_AIR"/>
+		</Update>
+
+		<Update>
+			<Set Flavor="1"/>
+			<Where LeaderType="LEADER_RAMESSES" FlavorType="FLAVOR_EXPANSION"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_RAMESSES" FlavorType="FLAVOR_GROWTH"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_RAMESSES" FlavorType="FLAVOR_PRODUCTION"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_RAMESSES" FlavorType="FLAVOR_WONDER"/>
+		</Update>
+		<Update>
+			<Set Flavor="1"/>
+			<Where LeaderType="LEADER_RAMESSES" FlavorType="FLAVOR_DEFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="1"/>
+			<Where LeaderType="LEADER_RAMESSES" FlavorType="FLAVOR_OFFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="1"/>
+			<Where LeaderType="LEADER_RAMESSES" FlavorType="FLAVOR_NAVAL"/>
+		</Update>
+		<Update>
+			<Set Flavor="1"/>
+			<Where LeaderType="LEADER_RAMESSES" FlavorType="FLAVOR_AIR"/>
+		</Update>
+
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_ATTILA" FlavorType="FLAVOR_OFFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="0"/>
+			<Where LeaderType="LEADER_ATTILA" FlavorType="FLAVOR_NAVAL"/>
+		</Update>
+		<Update>
+			<Set Flavor="0"/>
+			<Where LeaderType="LEADER_ATTILA" FlavorType="FLAVOR_AIR"/>
+		</Update>
+		<Update>
+			<Set Flavor="1"/>
+			<Where LeaderType="LEADER_ATTILA" FlavorType="FLAVOR_TILE_IMPROVEMENT"/>
+		</Update>
+		<Update>
+			<Set Flavor="0"/>
+			<Where LeaderType="LEADER_ATTILA" FlavorType="FLAVOR_SCIENCE"/>
+		</Update>
+		<Update>
+			<Set Flavor="0"/>
+			<Where LeaderType="LEADER_ATTILA" FlavorType="FLAVOR_CULTURE"/>
+		</Update>
+		<Update>
+			<Set Flavor="0"/>
+			<Where LeaderType="LEADER_ATTILA" FlavorType="FLAVOR_HAPPINESS"/>
+		</Update>
+		<Update>
+			<Set Flavor="0"/>
+			<Where LeaderType="LEADER_ATTILA" FlavorType="FLAVOR_WONDER"/>
+		</Update>
+		<Update>
+			<Set Flavor="0"/>
+			<Where LeaderType="LEADER_ATTILA" FlavorType="FLAVOR_DIPLOMACY"/>
+		</Update>
+
+
+
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_ISABELLA" FlavorType="FLAVOR_NAVAL"/>
+		</Update>
+		<Update>
+			<Set Flavor="9"/>
+			<Where LeaderType="LEADER_ISABELLA" FlavorType="FLAVOR_EXPANSION"/>
+		</Update>
+		<Update>
+			<Set Flavor="11"/>
+			<Where LeaderType="LEADER_ISABELLA" FlavorType="FLAVOR_NAVAL_GROWTH"/>
+		</Update>
+		<Update>
+			<Set Flavor="11"/>
+			<Where LeaderType="LEADER_ISABELLA" FlavorType="FLAVOR_RELIGION"/>
+		</Update>
+
+
+
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_GUSTAVUS_ADOLPHU" FlavorType="FLAVOR_GROWTH"/>
+		</Update>
+		<Update>
+			<Set Flavor="10"/>
+			<Where LeaderType="LEADER_GUSTAVUS_ADOLPHU" FlavorType="FLAVOR_AIR"/>
+		</Update>
+		<Update>
+			<Set Flavor="11"/>
+			<Where LeaderType="LEADER_GUSTAVUS_ADOLPHU" FlavorType="FLAVOR_SCIENCE"/>
+		</Update>
+
+		
+		
+		<Update>
+			<Set Flavor="8"/>
+			<Where LeaderType="LEADER_ODA_NOBUNAGA" FlavorType="FLAVOR_MILITARY_TRAINING"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_ODA_NOBUNAGA" FlavorType="FLAVOR_CITY_DEFENCE"/>
+		</Update>
+		<Update>
+			<Set Flavor="10"/>
+			<Where LeaderType="LEADER_ODA_NOBUNAGA" FlavorType="FLAVOR_AIR_CARRIER"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_ODA_NOBUNAGA" FlavorType="FLAVOR_PRODUCTION"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_ODA_NOBUNAGA" FlavorType="FLAVOR_NAVAL_GROWTH"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_ODA_NOBUNAGA" FlavorType="FLAVOR_OFFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_ODA_NOBUNAGA" FlavorType="FLAVOR_DEFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_ODA_NOBUNAGA" FlavorType="FLAVOR_NAVAL"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_ODA_NOBUNAGA" FlavorType="FLAVOR_AIR"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_ODA_NOBUNAGA" FlavorType="FLAVOR_MOBILE"/>
+		</Update>
+		<Update>
+			<Set Flavor="3"/>
+			<Where LeaderType="LEADER_ODA_NOBUNAGA" FlavorType="FLAVOR_CULTURE"/>
+		</Update>
+		<Update>
+			<Set Flavor="1"/>
+			<Where LeaderType="LEADER_ODA_NOBUNAGA" FlavorType="FLAVOR_ESPIONAGE"/>
+		</Update>
+		<Update>
+			<Set Flavor="3"/>
+			<Where LeaderType="LEADER_ODA_NOBUNAGA" FlavorType="FLAVOR_WONDER"/>
+		</Update>
+		<Update>
+			<Set Flavor="10"/>
+			<Where LeaderType="LEADER_ODA_NOBUNAGA" FlavorType="FLAVOR_GROWTH"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_ODA_NOBUNAGA" FlavorType="FLAVOR_EXPANSION"/>
+		</Update>
+
+		<Update>
+			<Set Flavor="0"/>
+			<Where LeaderType="LEADER_PACAL" FlavorType="FLAVOR_OFFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="1"/>
+			<Where LeaderType="LEADER_PACAL" FlavorType="FLAVOR_DEFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="1"/>
+			<Where LeaderType="LEADER_PACAL" FlavorType="FLAVOR_MOBILE"/>
+		</Update>
+		<Update>
+			<Set Flavor="2"/>
+			<Where LeaderType="LEADER_PACAL" FlavorType="FLAVOR_RANGED"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_PACAL" FlavorType="FLAVOR_INFRASTRUCTURE"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_PACAL" FlavorType="FLAVOR_TILE_IMPROVEMENT"/>
+		</Update>
+
+
+		<Update>
+			<Set Flavor="2"/>
+			<Where LeaderType="LEADER_HARUN_AL_RASHID" FlavorType="FLAVOR_NAVAL"/>
+		</Update>
+		<Update>
+			<Set Flavor="2"/>
+			<Where LeaderType="LEADER_HARUN_AL_RASHID" FlavorType="FLAVOR_AIR"/>
+		</Update>
+		<Update>
+			<Set Flavor="0"/>
+			<Where LeaderType="LEADER_HARUN_AL_RASHID" FlavorType="FLAVOR_OFFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="1"/>
+			<Where LeaderType="LEADER_HARUN_AL_RASHID" FlavorType="FLAVOR_DEFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="1"/>
+			<Where LeaderType="LEADER_HARUN_AL_RASHID" FlavorType="FLAVOR_MOBILE"/>
+		</Update>
+		<Update>
+			<Set Flavor="2"/>
+			<Where LeaderType="LEADER_HARUN_AL_RASHID" FlavorType="FLAVOR_RANGED"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_HARUN_AL_RASHID" FlavorType="FLAVOR_RELIGION"/>
+		</Update>
+		<Update>
+			<Set Flavor="10"/>
+			<Where LeaderType="LEADER_HARUN_AL_RASHID" FlavorType="FLAVOR_WONDER"/>
+		</Update>
+
+
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_HIAWATHA" FlavorType="FLAVOR_TILE_IMPROVEMENT"/>
+		</Update>
+		<Update>
+			<Set Flavor="9"/>
+			<Where LeaderType="LEADER_HIAWATHA" FlavorType="FLAVOR_WONDER"/>
+		</Update>
+		<Update>
+			<Set Flavor="1"/>
+			<Where LeaderType="LEADER_HIAWATHA" FlavorType="FLAVOR_OFFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="1"/>
+			<Where LeaderType="LEADER_HIAWATHA" FlavorType="FLAVOR_DEFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="1"/>
+			<Where LeaderType="LEADER_HIAWATHA" FlavorType="FLAVOR_MOBILE"/>
+		</Update>
+
+
+		<Update>
+			<Set Flavor="0"/>
+			<Where LeaderType="LEADER_KAMEHAMEHA" FlavorType="FLAVOR_MOBILE"/>
+		</Update>
+		<Update>
+			<Set Flavor="0"/>
+			<Where LeaderType="LEADER_KAMEHAMEHA" FlavorType="FLAVOR_OFFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="1"/>
+			<Where LeaderType="LEADER_KAMEHAMEHA" FlavorType="FLAVOR_DEFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_KAMEHAMEHA" FlavorType="FLAVOR_TILE_IMPROVEMENT"/>
+		</Update>
+		<Update>
+			<Set Flavor="11"/>
+			<Where LeaderType="LEADER_KAMEHAMEHA" FlavorType="FLAVOR_NAVAL_GROWTH"/>
+		</Update>
+		<Update>
+			<Set Flavor="11"/>
+			<Where LeaderType="LEADER_KAMEHAMEHA" FlavorType="FLAVOR_CULTURE"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_KAMEHAMEHA" FlavorType="FLAVOR_NAVAL_RECON"/>
+		</Update>
+
+
+		<Update>
+			<Set Flavor="1"/>
+			<Where LeaderType="LEADER_THEODORA" FlavorType="FLAVOR_EXPANSION"/>
+		</Update>
+		<Update>
+			<Set Flavor="0"/>
+			<Where LeaderType="LEADER_THEODORA" FlavorType="FLAVOR_OFFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="1"/>
+			<Where LeaderType="LEADER_THEODORA" FlavorType="FLAVOR_DEFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_THEODORA" FlavorType="FLAVOR_TILE_IMPROVEMENT"/>
+		</Update>
+		<Update>
+			<Set Flavor="11"/>
+			<Where LeaderType="LEADER_THEODORA" FlavorType="FLAVOR_NAVAL_GROWTH"/>
+		</Update>
+		<Update>
+			<Set Flavor="11"/>
+			<Where LeaderType="LEADER_THEODORA" FlavorType="FLAVOR_CULTURE"/>
+		</Update>
+
+
+
+		<Update>
+			<Set Flavor="0"/>
+			<Where LeaderType="LEADER_PACHACUTI" FlavorType="FLAVOR_OFFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="1"/>
+			<Where LeaderType="LEADER_PACHACUTI" FlavorType="FLAVOR_DEFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="0"/>
+			<Where LeaderType="LEADER_PACHACUTI" FlavorType="FLAVOR_MOBILE"/>
+		</Update>
+		<Update>
+			<Set Flavor="9"/>
+			<Where LeaderType="LEADER_PACHACUTI" FlavorType="FLAVOR_WONDER"/>
+		</Update>
+		<Update>
+			<Set Flavor="10"/>
+			<Where LeaderType="LEADER_PACHACUTI" FlavorType="FLAVOR_SCIENCE"/>
+		</Update>
+
+		
+		<Update>
+			<Set Flavor="1"/>
+			<Where LeaderType="LEADER_WILLIAM" FlavorType="FLAVOR_OFFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="2"/>
+			<Where LeaderType="LEADER_WILLIAM" FlavorType="FLAVOR_DEFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="0"/>
+			<Where LeaderType="LEADER_WILLIAM" FlavorType="FLAVOR_MOBILE"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_WILLIAM" FlavorType="FLAVOR_TILE_IMPROVEMENT"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_WILLIAM" FlavorType="FLAVOR_GROWTH"/>
+		</Update>
+		<Update>
+			<Set Flavor="10"/>
+			<Where LeaderType="LEADER_WILLIAM" FlavorType="FLAVOR_NAVAL_GROWTH"/>
+		</Update>
+
+
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_MARIA_I" FlavorType="FLAVOR_TILE_IMPROVEMENT"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_MARIA_I" FlavorType="FLAVOR_NAVAL_RECON"/>
+		</Update>
+		<Update>
+			<Set Flavor="1"/>
+			<Where LeaderType="LEADER_MARIA_I" FlavorType="FLAVOR_OFFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="2"/>
+			<Where LeaderType="LEADER_MARIA_I" FlavorType="FLAVOR_DEFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="1"/>
+			<Where LeaderType="LEADER_MARIA_I" FlavorType="FLAVOR_MOBILE"/>
+		</Update>
+
+
+
+		<Update>
+			<Set Flavor="0"/>
+			<Where LeaderType="LEADER_DIDO" FlavorType="FLAVOR_EXPANSION"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_DIDO" FlavorType="FLAVOR_NAVAL_GROWTH"/>
+		</Update>
+		<Update>
+			<Set Flavor="9"/>
+			<Where LeaderType="LEADER_DIDO" FlavorType="FLAVOR_WONDER"/>
+		</Update>
+		<Update>
+			<Set Flavor="11"/>
+			<Where LeaderType="LEADER_DIDO" FlavorType="FLAVOR_GREAT_PEOPLE"/>
+		</Update>
+
+		<Update>
+			<Set Flavor="0"/>
+			<Where LeaderType="LEADER_NEBUCHADNEZZAR" FlavorType="FLAVOR_EXPANSION"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_NEBUCHADNEZZAR" FlavorType="FLAVOR_SCIENCE"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_NEBUCHADNEZZAR" FlavorType="FLAVOR_GREAT_PEOPLE"/>
+		</Update>
+		<Update>
+			<Set Flavor="11"/>
+			<Where LeaderType="LEADER_NEBUCHADNEZZAR" FlavorType="FLAVOR_WONDER"/>
+		</Update>
+
+
+		<Update>
+			<Set Flavor="0"/>
+			<Where LeaderType="LEADER_SELASSIE" FlavorType="FLAVOR_EXPANSION"/>
+		</Update>
+		<Update>
+			<Set Flavor="1"/>
+			<Where LeaderType="LEADER_SELASSIE" FlavorType="FLAVOR_AIR"/>
+		</Update>
+		<Update>
+			<Set Flavor="1"/>
+			<Where LeaderType="LEADER_SELASSIE" FlavorType="FLAVOR_ANTIAIR"/>
+		</Update>
+		<Update>
+			<Set Flavor="10"/>
+			<Where LeaderType="LEADER_SELASSIE" FlavorType="FLAVOR_CULTURE"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_SELASSIE" FlavorType="FLAVOR_RELIGION"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_SELASSIE" FlavorType="FLAVOR_GREAT_PEOPLE"/>
+		</Update>
+		<Update>
+			<Set Flavor="11"/>
+			<Where LeaderType="LEADER_SELASSIE" FlavorType="FLAVOR_TILE_IMPROVEMENT"/>
+		</Update>
+
+
+
+		<Update>
+			<Set Flavor="0"/>
+			<Where LeaderType="LEADER_AHMAD_ALMANSUR" FlavorType="FLAVOR_EXPANSION"/>
+		</Update>
+		<Update>
+			<Set Flavor="0"/>
+			<Where LeaderType="LEADER_AHMAD_ALMANSUR" FlavorType="FLAVOR_OFFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="1"/>
+			<Where LeaderType="LEADER_AHMAD_ALMANSUR" FlavorType="FLAVOR_DEFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="3"/>
+			<Where LeaderType="LEADER_AHMAD_ALMANSUR" FlavorType="FLAVOR_MOBILE"/>
+		</Update>
+		<Update>
+			<Set Flavor="1"/>
+			<Where LeaderType="LEADER_AHMAD_ALMANSUR" FlavorType="FLAVOR_NAVAL"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_AHMAD_ALMANSUR" FlavorType="FLAVOR_I_LAND_TRADE_ROUTE"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_AHMAD_ALMANSUR" FlavorType="FLAVOR_I_SEA_TRADE_ROUTE"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_AHMAD_ALMANSUR" FlavorType="FLAVOR_I_TRADE_DESTINATION"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_AHMAD_ALMANSUR" FlavorType="FLAVOR_WONDER"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_AHMAD_ALMANSUR" FlavorType="FLAVOR_TILE_IMPROVEMENT"/>
+		</Update>
+		
+
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_SULEIMAN" FlavorType="FLAVOR_NAVAL"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_SULEIMAN" FlavorType="FLAVOR_ANTIAIR"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_SULEIMAN" FlavorType="FLAVOR_PRODUCTION"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_SULEIMAN" FlavorType="FLAVOR_OFFENSE"/>
+		</Update>
+
+
+
+		<Update>
+			<Set Flavor="10"/>
+			<Where LeaderType="LEADER_GAJAH_MADA" FlavorType="FLAVOR_EXPANSION"/>
+		</Update>
+		<Update>
+			<Set Flavor="1"/>
+			<Where LeaderType="LEADER_GAJAH_MADA" FlavorType="FLAVOR_OFFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="1"/>
+			<Where LeaderType="LEADER_GAJAH_MADA" FlavorType="FLAVOR_DEFENSE"/>
+		</Update>
+		<Update>
+			<Set Flavor="1"/>
+			<Where LeaderType="LEADER_GAJAH_MADA" FlavorType="FLAVOR_MOBILE"/>
+		</Update>
+		<Update>
+			<Set Flavor="1"/>
+			<Where LeaderType="LEADER_GAJAH_MADA" FlavorType="FLAVOR_AIR"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_GAJAH_MADA" FlavorType="FLAVOR_NAVAL_GROWTH"/>
+		</Update>
+		<Update>
+			<Set Flavor="12"/>
+			<Where LeaderType="LEADER_GAJAH_MADA" FlavorType="FLAVOR_WATER_CONNECTION"/>
+		</Update>
+		
+		
+		
+		<Update>
+			<Set Flavor="2"/>
+			<Where FlavorType="FLAVOR_GOLD"/>
+		</Update>
+		<Update>
+			<Set Flavor="11"/>
+			<Where FlavorType="FLAVOR_AIRLIFT"/>
+		</Update>
+		
+	</Leader_Flavors>
+
+
+
+
+	<Leader_Flavors>
+		<Row>
+			<LeaderType>LEADER_POCATELLO</LeaderType>
+			<FlavorType>FLAVOR_ANTIAIR</FlavorType>
+			<Flavor>3</Flavor>
+		</Row>
+		<Row>
+			<LeaderType>LEADER_POCATELLO</LeaderType>
+			<FlavorType>FLAVOR_AIR_CARRIER</FlavorType>
+			<Flavor>1</Flavor>
+		</Row>
+		<Row>
+			<LeaderType>LEADER_POCATELLO</LeaderType>
+			<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
+			<Flavor>8</Flavor>
+		</Row>
+		<Row>
+			<LeaderType>LEADER_POCATELLO</LeaderType>
+			<FlavorType>FLAVOR_USE_NUKE</FlavorType>
+			<Flavor>1</Flavor>
+		</Row>
+	</Leader_Flavors>
+	
+	
+</GameData>

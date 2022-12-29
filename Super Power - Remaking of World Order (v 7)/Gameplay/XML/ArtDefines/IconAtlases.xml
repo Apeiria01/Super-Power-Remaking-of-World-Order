@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 2/3/2014 4:22:45 PM -->
+<GameData>
+	<IconTextureAtlases>
+		<Update>
+			<Set Filename="UnitActionsGold.dds"/>
+			<Where Atlas="UNIT_ACTION_GOLD_ATLAS" Filename="UnitActions.dds"/>
+		</Update>
+		<Update>
+			<Set Filename="UnitActionsGold360.dds"/>
+			<Where Atlas="UNIT_ACTION_GOLD_ATLAS" Filename="UnitActions360.dds"/>
+		</Update>
+		<Row>
+			<Atlas>PONTOON_ACTION_MOD_ATLAS</Atlas>
+			<IconSize>45</IconSize>
+			<Filename>UnitAction45_Expansion_Civil_War.dds</Filename>
+			<IconsPerRow>1</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>PONTOON_ACTION_MOD_ATLAS</Atlas>
+			<IconSize>64</IconSize>
+			<Filename>UnitAction64_Expansion_Civil_War.dds</Filename>
+			<IconsPerRow>1</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SMAN_ESCORT_CARRIER_ATLAS</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>EscortCarrierAtlas032.dds</Filename>
+			<IconsPerRow>2</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SMAN_ESCORT_CARRIER_ATLAS</Atlas>
+			<IconSize>45</IconSize>
+			<Filename>EscortCarrierAtlas045.dds</Filename>
+			<IconsPerRow>2</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SMAN_ESCORT_CARRIER_ATLAS</Atlas>
+			<IconSize>64</IconSize>
+			<Filename>EscortCarrierAtlas064.dds</Filename>
+			<IconsPerRow>2</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SMAN_ESCORT_CARRIER_ATLAS</Atlas>
+			<IconSize>80</IconSize>
+			<Filename>EscortCarrierAtlas080.dds</Filename>
+			<IconsPerRow>2</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SMAN_ESCORT_CARRIER_ATLAS</Atlas>
+			<IconSize>128</IconSize>
+			<Filename>EscortCarrierAtlas128.dds</Filename>
+			<IconsPerRow>2</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SMAN_ESCORT_CARRIER_ATLAS</Atlas>
+			<IconSize>256</IconSize>
+			<Filename>EscortCarrierAtlas256.dds</Filename>
+			<IconsPerRow>2</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SPBalance_ATLAS</Atlas>
+			<IconSize>256</IconSize>
+			<Filename>SPBalanceAtlas256.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SPBalance_ATLAS</Atlas>
+			<IconSize>214</IconSize>
+			<Filename>SPBalanceAtlas214.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SPBalance_ATLAS</Atlas>
+			<IconSize>128</IconSize>
+			<Filename>SPBalanceAtlas128.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SPBalance_ATLAS</Atlas>
+			<IconSize>80</IconSize>
+			<Filename>SPBalanceAtlas80.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SPBalance_ATLAS</Atlas>
+			<IconSize>64</IconSize>
+			<Filename>SPBalanceAtlas64.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SPBalance_ATLAS</Atlas>
+			<IconSize>45</IconSize>
+			<Filename>SPBalanceAtlas45.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SPBalance_ATLAS</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>SPBalanceAtlas32.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+
+		<Row>
+			<Atlas>SP_UNIT_ACTION_ATLAS</Atlas>
+			<IconSize>64</IconSize>
+			<Filename>SPUnitActions.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SP_UNIT_ACTION_ATLAS</Atlas>
+			<IconSize>45</IconSize>
+			<Filename>SPUnitActions360.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+
+		
+		
+		
+		<Row>
+			<Atlas>SPUNITS01_ATLAS</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>SPUnits01Atlas32.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SPUNITS01_ATLAS</Atlas>
+			<IconSize>45</IconSize>
+			<Filename>SPUnits01Atlas45.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SPUNITS01_ATLAS</Atlas>
+			<IconSize>64</IconSize>
+			<Filename>SPUnits01Atlas64.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SPUNITS01_ATLAS</Atlas>
+			<IconSize>80</IconSize>
+			<Filename>SPUnits01Atlas80.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SPUNITS01_ATLAS</Atlas>
+			<IconSize>128</IconSize>
+			<Filename>SPUnits01Atlas128.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SPUNITS01_ATLAS</Atlas>
+			<IconSize>256</IconSize>
+			<Filename>SPUnits01Atlas256.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+
+		
+		
+		<Row>
+			<Atlas>SPUNITS02_ATLAS</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>SPUnits02Atlas32.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SPUNITS02_ATLAS</Atlas>
+			<IconSize>45</IconSize>
+			<Filename>SPUnits02Atlas45.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SPUNITS02_ATLAS</Atlas>
+			<IconSize>64</IconSize>
+			<Filename>SPUnits02Atlas64.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SPUNITS02_ATLAS</Atlas>
+			<IconSize>80</IconSize>
+			<Filename>SPUnits02Atlas80.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SPUNITS02_ATLAS</Atlas>
+			<IconSize>128</IconSize>
+			<Filename>SPUnits02Atlas128.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SPUNITS02_ATLAS</Atlas>
+			<IconSize>256</IconSize>
+			<Filename>SPUnits02Atlas256.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+
+
+
+
+		<Row>
+			<Atlas>SP_PROMOTION_ATLAS</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>SP_Promotion_Atlas32.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SP_PROMOTION_ATLAS</Atlas>
+			<IconSize>45</IconSize>
+			<Filename>SP_Promotion_Atlas45.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SP_PROMOTION_ATLAS</Atlas>
+			<IconSize>64</IconSize>
+			<Filename>SP_Promotion_Atlas64.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SP_PROMOTION_ATLAS</Atlas>
+			<IconSize>256</IconSize>
+			<Filename>SP_Promotion_Atlas256.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SP_PROMOTION_OLD_ATLAS</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>SPPromotion_Atlas32.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SP_PROMOTION_OLD_ATLAS</Atlas>
+			<IconSize>45</IconSize>
+			<Filename>SPPromotion_Atlas45.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SP_PROMOTION_OLD_ATLAS</Atlas>
+			<IconSize>64</IconSize>
+			<Filename>SPPromotion_Atlas64.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SP_PROMOTION_OLD_ATLAS</Atlas>
+			<IconSize>256</IconSize>
+			<Filename>SPPromotion_Atlas256.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		
+		
+		<Row>
+			<Atlas>EXPANSION2PATCH_BUILDING_ATLAS</Atlas>
+			<IconSize>80</IconSize>
+			<Filename>BuildingPortraits3_80_Exp2Patch.dds</Filename>
+			<IconsPerRow>1</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SPBuildings_ATLAS</Atlas>
+			<IconSize>256</IconSize>
+			<Filename>SPBuildings_Atlas256.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SPBuildings_ATLAS</Atlas>
+			<IconSize>128</IconSize>
+			<Filename>SPBuildings_Atlas128.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SPBuildings_ATLAS</Atlas>
+			<IconSize>64</IconSize>
+			<Filename>SPBuildings_Atlas64.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SPBuildings_ATLAS</Atlas>
+			<IconSize>80</IconSize>
+			<Filename>SPBuildings_Atlas80.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SPBuildings_ATLAS</Atlas>
+			<IconSize>45</IconSize>
+			<Filename>SPBuildings_Atlas45.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SP_BUILDING_ATLAS_DLC_07</Atlas>
+			<IconSize>256</IconSize>
+			<Filename>TechnologyAtlas256_DLC_07.dds</Filename>
+			<IconsPerRow>3</IconsPerRow>
+			<IconsPerColumn>3</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SP_BUILDING_ATLAS_DLC_07</Atlas>
+			<IconSize>128</IconSize>
+			<Filename>TechnologyAtlas128_DLC_07.dds</Filename>
+			<IconsPerRow>3</IconsPerRow>
+			<IconsPerColumn>3</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SP_BUILDING_ATLAS_DLC_07</Atlas>
+			<IconSize>80</IconSize>
+			<Filename>TechnologyAtlas80_DLC_07.dds</Filename>
+			<IconsPerRow>3</IconsPerRow>
+			<IconsPerColumn>3</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SP_BUILDING_ATLAS_DLC_07</Atlas>
+			<IconSize>64</IconSize>
+			<Filename>TechnologyAtlas64_DLC_07.dds</Filename>
+			<IconsPerRow>3</IconsPerRow>
+			<IconsPerColumn>3</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SP_BUILDING_ATLAS_DLC_07</Atlas>
+			<IconSize>45</IconSize>
+			<Filename>TechnologyAtlas45_DLC_07.dds</Filename>
+			<IconsPerRow>3</IconsPerRow>
+			<IconsPerColumn>3</IconsPerColumn>
+		</Row>
+
+
+
+		<Row>
+			<Atlas>SPWondersUB_ATLAS</Atlas>
+			<IconSize>256</IconSize>
+			<Filename>SPWondersUB_Atlas256.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SPWondersUB_ATLAS</Atlas>
+			<IconSize>128</IconSize>
+			<Filename>SPWondersUB_Atlas128.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SPWondersUB_ATLAS</Atlas>
+			<IconSize>64</IconSize>
+			<Filename>SPWondersUB_Atlas64.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SPWondersUB_ATLAS</Atlas>
+			<IconSize>80</IconSize>
+			<Filename>SPWondersUB_Atlas80.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SPWondersUB_ATLAS</Atlas>
+			<IconSize>45</IconSize>
+			<Filename>SPWondersUB_Atlas45.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		
+		
+		
+
+		<Row>
+			<Atlas>NEWLUXURIES_RESOURCE_ATLAS</Atlas>
+			<IconSize>256</IconSize>
+			<Filename>NewLuxuries_ResourceAtlas256.dds</Filename>
+			<IconsPerRow>4</IconsPerRow>
+			<IconsPerColumn>4</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>NEWLUXURIES_RESOURCE_ATLAS</Atlas>
+			<IconSize>128</IconSize>
+			<Filename>NewLuxuries_ResourceAtlas128.dds</Filename>
+			<IconsPerRow>4</IconsPerRow>
+			<IconsPerColumn>4</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>NEWLUXURIES_RESOURCE_ATLAS</Atlas>
+			<IconSize>80</IconSize>
+			<Filename>NewLuxuries_ResourceAtlas80.dds</Filename>
+			<IconsPerRow>4</IconsPerRow>
+			<IconsPerColumn>4</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>NEWLUXURIES_RESOURCE_ATLAS</Atlas>
+			<IconSize>64</IconSize>
+			<Filename>NewLuxuries_ResourceAtlas64.dds</Filename>
+			<IconsPerRow>4</IconsPerRow>
+			<IconsPerColumn>4</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>NEWLUXURIES_RESOURCE_ATLAS</Atlas>
+			<IconSize>45</IconSize>
+			<Filename>NewLuxuries_ResourceAtlas45.dds</Filename>
+			<IconsPerRow>4</IconsPerRow>
+			<IconsPerColumn>4</IconsPerColumn>
+		</Row>
+
+		
+		
+		
+
+		<Row>
+			<Atlas>SP_IMPROVEMENTS_ATLAS</Atlas>
+			<IconSize>256</IconSize>
+			<Filename>SPImprovements_Atlas256.dds</Filename>
+			<IconsPerRow>6</IconsPerRow>
+			<IconsPerColumn>6</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SP_IMPROVEMENTS_ATLAS</Atlas>
+			<IconSize>128</IconSize>
+			<Filename>SPImprovements_Atlas128.dds</Filename>
+			<IconsPerRow>6</IconsPerRow>
+			<IconsPerColumn>6</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SP_IMPROVEMENTS_ATLAS</Atlas>
+			<IconSize>80</IconSize>
+			<Filename>SPImprovements_Atlas80.dds</Filename>
+			<IconsPerRow>6</IconsPerRow>
+			<IconsPerColumn>6</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SP_IMPROVEMENTS_ATLAS</Atlas>
+			<IconSize>64</IconSize>
+			<Filename>SPImprovements_Atlas64.dds</Filename>
+			<IconsPerRow>6</IconsPerRow>
+			<IconsPerColumn>6</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SP_IMPROVEMENTS_ATLAS</Atlas>
+			<IconSize>45</IconSize>
+			<Filename>SPImprovements_Atlas45.dds</Filename>
+			<IconsPerRow>6</IconsPerRow>
+			<IconsPerColumn>6</IconsPerColumn>
+		</Row>
+
+
+
+
+
+
+	</IconTextureAtlases>
+	
+	
+	
+	
+	<!--*********************************Unit Flags**********************-->
+
+	<IconTextureAtlases>
+
+		<Row>
+			<Atlas>SPUnitFlags_FLAG</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>SPUnitFlags.dds</Filename>
+			<IconsPerRow>16</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>WONDER_UNIT_FLAG_ATLAS</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>UnitFlagAtlas32_DLC_WonderPack.dds</Filename>
+			<IconsPerRow>2</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>UNITS_PROTOTYPE_AIRSHIP_FLAG_ATLAS</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>SV_Zeppelin.dds</Filename>
+			<IconsPerRow>1</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>UNITS_ENTERPRISE_FLAG_ATLAS</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>SV_Enterprise.dds</Filename>
+			<IconsPerRow>1</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+
+	</IconTextureAtlases>
+	
+	
+
+
+	<IconFontTextures>
+		<Row>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEWLUXURIES</IconFontTexture>
+			<IconFontTextureFile>fonticons_newluxuries</IconFontTextureFile>
+		</Row>
+
+		<Row>
+			<IconFontTexture>ICON_FONT_TEXTURE_SPCITYBANNERS</IconFontTexture>
+			<IconFontTextureFile>FontIcons_SPCityBanners</IconFontTextureFile>
+		</Row>
+		
+		
+	</IconFontTextures>
+
+
+	<IconFontMapping>
+		<!-- Delete any luxury font icons with the same name so there's no conflict. -->
+		<!-- <Delete IconName="ICON_RES_COCOA"/> -->
+		<Delete IconName="ICON_RES_COFFEE"/>
+		<Delete IconName="ICON_RES_TEA"/>
+		<Delete IconName="ICON_RES_TOBACCO"/>
+		<Delete IconName="ICON_RES_AMBER"/>
+		<Delete IconName="ICON_RES_JADE"/>
+		<Delete IconName="ICON_RES_OLIVE"/>
+		<Delete IconName="ICON_RES_PERFUME"/>
+		<Delete IconName="ICON_RES_CORAL"/>
+		<Delete IconName="ICON_RES_LAPIS"/>
+		<Delete IconName="ICON_RES_GLASS"/>
+		<!--
+		<Row>
+			<IconName>ICON_RES_COCOA</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEWLUXURIES</IconFontTexture>
+			<IconMapping>1</IconMapping>
+		</Row>
+		-->
+		<Row>
+			<IconName>ICON_RES_COFFEE</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEWLUXURIES</IconFontTexture>
+			<IconMapping>2</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_RES_TEA</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEWLUXURIES</IconFontTexture>
+			<IconMapping>3</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_RES_TOBACCO</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEWLUXURIES</IconFontTexture>
+			<IconMapping>4</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_RES_AMBER</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEWLUXURIES</IconFontTexture>
+			<IconMapping>5</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_RES_JADE</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEWLUXURIES</IconFontTexture>
+			<IconMapping>6</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_RES_OLIVE</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEWLUXURIES</IconFontTexture>
+			<IconMapping>7</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_RES_PERFUME</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEWLUXURIES</IconFontTexture>
+			<IconMapping>8</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_RES_CORAL</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEWLUXURIES</IconFontTexture>
+			<IconMapping>9</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_RES_LAPIS</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEWLUXURIES</IconFontTexture>
+			<IconMapping>10</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_RES_GLASS</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEWLUXURIES</IconFontTexture>
+			<IconMapping>11</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_RES_ELECTRICITY</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEWLUXURIES</IconFontTexture>
+			<IconMapping>12</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_RES_CONSUMER</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEWLUXURIES</IconFontTexture>
+			<IconMapping>13</IconMapping>
+		</Row>
+		<Update>
+			<Where IconName="ICON_RES_MANPOWER"/>
+			<Set IconName="ICON_RES_TROOPS"/>
+		</Update>
+		<Row>
+			<IconName>ICON_RES_MANPOWER</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEWLUXURIES</IconFontTexture>
+			<IconMapping>14</IconMapping>
+		</Row>
+
+
+		<Row>
+			<IconName>ICON_CITYBANNER_CITY_LV1</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_SPCITYBANNERS</IconFontTexture>
+			<IconMapping>1</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_CITYBANNER_CITY_LV2</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_SPCITYBANNERS</IconFontTexture>
+			<IconMapping>2</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_CITYBANNER_CITY_LV3</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_SPCITYBANNERS</IconFontTexture>
+			<IconMapping>3</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_CITYBANNER_CITY_LV4</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_SPCITYBANNERS</IconFontTexture>
+			<IconMapping>4</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_CITYBANNER_CITY_LV5</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_SPCITYBANNERS</IconFontTexture>
+			<IconMapping>5</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_CITYBANNER_CITY_NOAC</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_SPCITYBANNERS</IconFontTexture>
+			<IconMapping>6</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_CITYBANNER_CITY_NOUTILITY</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_SPCITYBANNERS</IconFontTexture>
+			<IconMapping>7</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_CITYBANNER_CITY_UNEMPLOYED</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_SPCITYBANNERS</IconFontTexture>
+			<IconMapping>8</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_CITYBANNER_CANCEL</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_SPCITYBANNERS</IconFontTexture>
+			<IconMapping>9</IconMapping>
+		</Row>
+		
+		<Row>
+			<IconName>ICON_CITYBANNER_CITY_TOWN</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_SPCITYBANNERS</IconFontTexture>
+			<IconMapping>12</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_CITYBANNER_CITY_SMALL</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_SPCITYBANNERS</IconFontTexture>
+			<IconMapping>13</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_CITYBANNER_CITY_MEDIUM</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_SPCITYBANNERS</IconFontTexture>
+			<IconMapping>14</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_CITYBANNER_CITY_LARGE</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_SPCITYBANNERS</IconFontTexture>
+			<IconMapping>15</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_CITYBANNER_CITY_XL</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_SPCITYBANNERS</IconFontTexture>
+			<IconMapping>16</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_CITYBANNER_CITY_XXL</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_SPCITYBANNERS</IconFontTexture>
+			<IconMapping>17</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_CITYBANNER_CITY_GLOBAL</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_SPCITYBANNERS</IconFontTexture>
+			<IconMapping>18</IconMapping>
+		</Row>
+		
+		
+		
+	</IconFontMapping>
+
+</GameData>
