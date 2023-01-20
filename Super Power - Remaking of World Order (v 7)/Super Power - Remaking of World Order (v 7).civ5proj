@@ -4,7 +4,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Default</Configuration>
     <ProjectGuid>{ef76ff1b-0497-463c-a616-d02546312750}</ProjectGuid>
     <Name>Super Power - Remaking of World Order</Name>
-    <Guid>e4173437-15d8-48bc-b22a-5a40d688a8e7</Guid>
+    <Guid>f9b9c8aa-b6d1-4188-9239-c1de2207ab7c</Guid>
     <ModVersion>7</ModVersion>
     <Stability>Alpha</Stability>
     <Teaser>[COLOR_YELLOW]A Total Conversion Mod for a better late game experience and realistic modern warfare[/COLOR]</Teaser>
@@ -480,6 +480,11 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
         <FileName>Gameplay/SQL/UnitPromotions_PromotionModifiers.sql</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>Gameplay/SQL/APIUnitCannotBeRangedAttacked.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
@@ -1149,6 +1154,10 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="Gameplay/XML/Units/Units_Naval.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="Gameplay\SQL\APIUnitCannotBeRangedAttacked.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
@@ -5431,6 +5440,10 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
     <Content Include="VMC/UI/InGame/YieldIconManager.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="VMC\DLL\CvGameCoreDLL_Expansion2Win32Release.pdb">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Firaxis\ModBuddy\Civ5Mod.targets" />
