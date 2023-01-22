@@ -1082,7 +1082,9 @@
 				<Text>Specialist Maintenance</Text>
 			</Row>
 			
-			
+			<Row Tag="TXT_KEY_BUILDING_POLICY_COST_MODIFIER">
+				<Text>Policy Cost Modifier: </Text>
+			</Row>
 			
 			
 			

@@ -898,6 +898,7 @@ local function getHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader,
 	local hitPointChange = tonumber(building.ExtraCityHitPoints) or 0
 	local cultureChange = not gk_mode and tonumber(building.Culture) or 0
 	local cultureModifier = tonumber(building.CultureRateModifier) or 0
+	local policyCostModifier = tonumber(building.PolicyCostModifier) or 0
 
 	local enhancedYieldTech = building.EnhancedYieldTech and GameInfo.Technologies[ building.EnhancedYieldTech ]
 	local enhancedYieldTechName = enhancedYieldTech and TechColor( L(enhancedYieldTech.Description) ) or ""
@@ -1018,6 +1019,10 @@ local function getHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader,
 	end
 	if cultureModifier ~=0 then
 		tip = S("%s %+i%%[ICON_CULTURE]", tip, cultureModifier )
+	end
+	if policyCostModifier ~= 0 then
+		tips:insertIf( policyCostModifier ~= 0 and	S( "%s %+i%%[ICON_CULTURE]", 
+		L"TXT_KEY_BUILDING_POLICY_COST_MODIFIER", policyCostModifier) )
 	end
 	if tips and tip~="" then
 		tips:insert( L"TXT_KEY_PEDIA_CULTURE_LABEL" .. tip )

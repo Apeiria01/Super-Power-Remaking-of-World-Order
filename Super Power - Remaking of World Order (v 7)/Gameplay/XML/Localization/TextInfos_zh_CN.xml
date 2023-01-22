@@ -133,6 +133,10 @@
 		<Row Tag="TXT_KEY_REPLAY_DATA_SPECIALISTMAINTENANCE">
 			<Text>专家维护费</Text>
 		</Row>
+
+		<Row Tag="TXT_KEY_BUILDING_POLICY_COST_MODIFIER">
+			<Text>政策阈值上升: </Text>
+		</Row>
 		
 		
 	<!--******************************Specialists Building Titles for Sorting********************************-->
