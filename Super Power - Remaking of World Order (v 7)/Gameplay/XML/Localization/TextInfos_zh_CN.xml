@@ -5465,7 +5465,7 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_PHOENICIAN_HERITAGE">
-			<Text>每位专家+1[ICON_PRODUCTION]产能。每条海上商路+4[ICON_GOLD]金钱并且+25%商路距离。</Text>
+			<Text>每位专家+2[ICON_PRODUCTION]产能。每条海上商路+4[ICON_GOLD]金钱并且+25%商路距离。</Text>
 		</Replace>	
 
 		<Replace Tag="TXT_KEY_TRAIT_EXTRA_TRADE">

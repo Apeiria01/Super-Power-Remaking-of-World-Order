@@ -5464,7 +5464,7 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_PHOENICIAN_HERITAGE">
-			<Text>每位專家+1[ICON_PRODUCTION]生產力。每條海上商路+4[ICON_GOLD]金幣並且+25%商路距離。</Text>
+			<Text>每位專家+2[ICON_PRODUCTION]生產力。每條海上商路+4[ICON_GOLD]金幣並且+25%商路距離。</Text>
 		</Replace>	
 
 		<Replace Tag="TXT_KEY_TRAIT_EXTRA_TRADE">
