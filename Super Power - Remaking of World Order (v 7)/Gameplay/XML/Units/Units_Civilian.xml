@@ -322,7 +322,7 @@
 			<Strategy>TXT_KEY_UNIT_GREAT_SCIENTIST_STRATEGY</Strategy>
 			<AdvancedStartCost>-1</AdvancedStartCost>
 			<WorkRate>1</WorkRate>
-			<BaseBeakersTurnsToCount>4</BaseBeakersTurnsToCount>
+			<BaseBeakersTurnsToCount>2</BaseBeakersTurnsToCount>
 			<CombatLimit>0</CombatLimit>
 			<UnitArtInfo>ART_DEF_UNIT_SCIENTIST</UnitArtInfo>
 			<UnitArtInfoEraVariation>true</UnitArtInfoEraVariation>
