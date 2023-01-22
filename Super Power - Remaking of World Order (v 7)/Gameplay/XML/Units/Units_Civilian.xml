@@ -307,7 +307,7 @@
 		</Row>
 		
 		
-		
+		<!--Update: 2023/1/22 Coefficient "BaseBeakersTurnsToCount" of executing research task (MISSION_DISCOVER) is 2 now -->
 		<Row>
 			<Class>UNITCLASS_SCIENTIST</Class>
 			<Type>UNIT_SCIENTIST</Type>

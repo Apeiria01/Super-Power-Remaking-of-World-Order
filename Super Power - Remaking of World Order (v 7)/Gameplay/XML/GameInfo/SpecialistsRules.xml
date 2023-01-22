@@ -6,8 +6,10 @@
 	<SpecialistYields>
 		<Update>
 			<Where SpecialistType="SPECIALIST_SCIENTIST" YieldType="YIELD_SCIENCE"/>
-			<Set Yield="4"/>
+			<Set Yield="3"/>
 		</Update>
+		<!--Update: 2023/1/22 Scientist yield changed to 3-->
+
 		<!--<Update>
 			<Where SpecialistType="SPECIALIST_ENGINEER" YieldType="YIELD_PRODUCTION"/>
 			<Set Yield="3"/>
