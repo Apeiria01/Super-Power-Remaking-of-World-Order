@@ -5,7 +5,7 @@
     <ProjectGuid>{ef76ff1b-0497-463c-a616-d02546312750}</ProjectGuid>
     <Name>Super Power - Remaking of World Order</Name>
     <Guid>f9b9c8aa-b6d1-4188-9239-c1de2207ab7c</Guid>
-    <ModVersion>7</ModVersion>
+    <ModVersion>8</ModVersion>
     <Stability>Alpha</Stability>
     <Teaser>[COLOR_YELLOW]A Total Conversion Mod for a better late game experience and realistic modern warfare[/COLOR]</Teaser>
     <Description>A Total Conversion Mod of Sid Meier's Civilization V for a better late game experience and realistic modern warfare.  
@@ -26,10 +26,10 @@
 [ICON_BULLET]Chinese Language: MarbleGargoyle, LI&amp; Seven [NEWLINE]
 [ICON_BULLET]Promotion: BlackFeather_, GanJunWuDi, ggx2
 [NEWLINE]
-[ICON_BULLET]Test: Tokata, Ben, Dante,  BlackFeather_, GanJunWuDi, 38AA, HJQ, xiaofeng, seraph, Li &amp; Seven, Xingen, Tianshu, SkyWalker, Arno, bot, ryst, Alice Cartelet
+[ICON_BULLET]Test: Tokata, Ben, Dante,  BlackFeather_, GanJunWuDi, 38AA, HJQ, xiaofeng, seraph, Li &amp; Seven, Xingen, Tianshu, SkyWalker, Arno, bot, ryst
 [NEWLINE]
 [ICON_BULLET]Civilopedia Texts: Wikipedia, www.azquotes.com, www.brainyquote.com, baike.baidu.com
-[NEWLINE][ICON_BULLET]Proofreading, Document Editing &amp; Balance: 爱玲的安逸人生, Seven, Alice Cartelet
+[NEWLINE][ICON_BULLET]Proofreading, Document Editing &amp; Balance: 爱玲的安逸人生, Seven
 [NEWLINE][ICON_BULLET]
 Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namco Bandai Games and produced by Project Aces), Call of Duty: Modern Warfare (published and owned by Activision),World of Warships and World of Tanks(Wargaming) .  Command &amp; Conquer: Red Alert 3 (Electronic Arts).Cities XL 2012 (Focus Home Interactive)  Others from Google Search.
 
@@ -410,6 +410,21 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
         <FileName>VMC/DB/_TEXT/AllText_zh_Hant_HK.xml</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>VMC/DB/BUILDINGS/DLL_Buildings.sql</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>VMC/DB/POLICIES/DDL_Policies.sql</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>VMC/DB/TRAITS/DDL_Traits.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
@@ -835,6 +850,8 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
     <Folder Include="VMC\DB\DIPLOMACY" />
     <Folder Include="VMC\DB\EVENTS" />
     <Folder Include="VMC\DB\GLOBAL" />
+    <Folder Include="VMC\DB\BUILDINGS" />
+    <Folder Include="VMC\DB\POLICIES" />
     <Folder Include="VMC\DB\UNITS" />
     <Folder Include="VMC\DB\UI" />
     <Folder Include="VMC\DB\TRAITS" />
@@ -5125,6 +5142,14 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
+    <Content Include="UI\InGame\Popups\CityStateDiploPopup.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\InGame\Popups\CityStateDiploPopup.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
     <Content Include="VMC/ART/YieldAtlas_128_GoldenAge.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
@@ -5440,6 +5465,18 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
     <Content Include="VMC/UI/InGame/YieldIconManager.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="VMC\DB\BUILDINGS\DLL_Buildings.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="VMC\DB\POLICIES\DDL_Policies.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="VMC\DB\TRAITS\DDL_Traits.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="VMC\DLL\CvGameCoreDLL_Expansion2Win32Release.pdb">
       <SubType>Lua</SubType>
