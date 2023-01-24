@@ -1184,10 +1184,20 @@
 		</Row>
 	</Improvement_TechFreshWaterYieldChanges>-->
 
+	<Features>
+		<Update>
+			<Where Type="FEATURE_OASIS"/>
+			<Set NoImprovement="0"/>
+		</Update>
+	</Features>
 	<Improvement_ValidFeatures>
 		<Row>
 			<ImprovementType>IMPROVEMENT_LUMBERMILL</ImprovementType>
 			<FeatureType>FEATURE_JUNGLE</FeatureType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_TRADING_POST</ImprovementType>
+			<FeatureType>FEATURE_OASIS</FeatureType>
 		</Row>
 	</Improvement_ValidFeatures>
 
