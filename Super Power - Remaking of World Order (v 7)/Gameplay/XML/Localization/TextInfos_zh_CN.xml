@@ -3140,6 +3140,14 @@
 			<Text>
 				本城市建造军事单位时+15%[ICON_PRODUCTION]产能。
 				[NEWLINE]新建军事单位+15经验。
+				[NEWLINE]每一个奥林匹克竞技场能使对城邦的基准影响力上升1，最大为20。
+			</Text>
+		</Row>
+
+		<Row>
+			<Tag>TXT_KEY_BUILDING_GREEK_OLYMPICS_DUMMY_HELP</Tag>
+			<Text>
+				对城邦的基准影响力上升1
 			</Text>
 		</Row>
 

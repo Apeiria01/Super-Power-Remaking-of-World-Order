@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <GameData>
 	<Language_zh_Hant_HK>
 <!--Civilopedias-->
@@ -3060,8 +3060,15 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_GREEK_OLYMPICS_HELP</Tag>
 			<Text>
-				本城市建造軍事單位時+15%[ICON_PRODUCTION]生產力，
+				本城市建造軍事單位時+15%[ICON_PRODUCTION]產能。
 				[NEWLINE]新建軍事單位+15經驗。
+				[NEWLINE]每一個奧林匹克競技場能使對城邦的基準影響力上升1，最大為20。
+			</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_BUILDING_GREEK_OLYMPICS_DUMMY_HELP</Tag>
+			<Text>
+				對城邦的基準影響力上升1。
 			</Text>
 		</Row>
 		
