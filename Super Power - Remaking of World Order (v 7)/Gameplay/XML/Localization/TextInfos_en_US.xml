@@ -16177,5 +16177,17 @@
 			SP- [COLOR_YELLOW] Can't gift militia units [ENDCOLOR]
 			</Text>
 		</Row>
+
+		<Row Tag="TXT_KEY_SP_MISSION_SUPPLY_EXOTIC_GOODS_TOOLTIP">
+			<Text>
+				When the unit's movement is full, goods can be replenished in cities with Feitoria.
+			</Text>
+			</Row>
+			
+		<Row Tag="TXT_KEY_SP_MISSION_SUPPLY_EXOTIC_GOODS_TITLE">
+			<Text>
+				Replenish Exotic Goods
+			</Text>
+		</Row>
 	</Language_en_US>
 </GameData>

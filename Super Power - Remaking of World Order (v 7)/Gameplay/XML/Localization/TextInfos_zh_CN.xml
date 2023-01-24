@@ -13889,5 +13889,18 @@
 				SP- [COLOR_YELLOW]禁止 赠送民兵单位[ENDCOLOR]
 			</Text>
 		</Row>
+
+		<Row Tag="TXT_KEY_SP_MISSION_SUPPLY_EXOTIC_GOODS_TOOLTIP">
+			<Text>
+				满移动力时，可在拥有商站的城市中补充商品。
+			</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_SP_MISSION_SUPPLY_EXOTIC_GOODS_TITLE">
+			<Text>
+				补充异国商品
+			</Text>
+		</Row>
+
 	</Language_zh_CN>
 </GameData>

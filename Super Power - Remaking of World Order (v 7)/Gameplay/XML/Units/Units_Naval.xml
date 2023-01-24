@@ -1942,7 +1942,7 @@
 			<BaseSightRange>4</BaseSightRange>
 			<Combat>40</Combat>
 			<Cost>90</Cost>
-			<Moves>9</Moves>
+			<Moves>11</Moves>
 			<CombatClass>UNITCOMBAT_RECON</CombatClass>
 			<Domain>DOMAIN_SEA</Domain>
 			<DefaultUnitAI>UNITAI_EXPLORE_SEA</DefaultUnitAI>
