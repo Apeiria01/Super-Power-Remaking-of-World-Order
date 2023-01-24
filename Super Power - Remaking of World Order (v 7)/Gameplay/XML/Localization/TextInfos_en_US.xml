@@ -3036,7 +3036,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_PORTUGAL_PORT_HELP">
 			<Text>
-				+1 [ICON_GOLD] Gold for every [COLOR_POSITIVE_TEXT]Luxury Resource[ENDCOLOR] on water tiles worked by this City.
+				+1 [ICON_GOLD] Gold and +1 [ICON_PRODUCTION] for every [COLOR_POSITIVE_TEXT]Luxury Resource[ENDCOLOR] on water tiles worked by this City.
 				[NEWLINE]+3 [ICON_CONSUMER] Consumer.
 			</Text>
 		</Row>

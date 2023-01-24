@@ -1,7 +1,8 @@
 -- NewBuildingEffects
 
 --------------------------------------------------------------
-
+include("FLuaVector.lua");
+include("UtilityFunctions.lua");
 
 -----------New building effects when it is built
 function NewBuildingEffects(iPlayer, iCity, iBuilding, bGold, bFaith)
@@ -655,6 +656,47 @@ function GreekOlympicsBuildingsEffectSold(iPlayer, iCity, iBuilding)
 end
 GameEvents.CitySoldBuilding.Add(GreekOlympicsBuildingsEffectSold);
 ------------------ Greek UB END ------------------
+
+------------------ Portugal UB BEGIN ------------------
+GameEvents.TradeRouteMove.Add(function(iX, iY, iUnit, iOwner, iOriginalPlayer, iOriginalCity, iDestPlayer, iDestCity)
+	local pOnwer = Players[iOwner];
+	if pOnwer == nil or not pOnwer:IsAlive() then
+		return;
+	end
+
+	local plot = Map.GetPlot(iX, iY);
+	if plot == nil then
+		return;
+	end
+
+	if not plot:IsWater() and not plot:IsCity() then
+		return;
+	end
+
+	local pCity = plot:GetWorkingCity();
+	if pCity == nil then
+		print("TradeRouteMove-Portugal-UB: pCity == nil");
+		return;
+	end
+
+	if not pCity:IsHasBuilding(GameInfoTypes["BUILDING_PORTUGAL_PORT"]) then
+		print("TradeRouteMove-Portugal-UB: do not have BUILDING_PORTUGAL_PORT");
+		return;
+	end
+
+	local pCityOwner = Players[pCity:GetOwner()];
+	local iGold = 5 * (2 + pCityOwner:GetCurrentEra());
+	pCityOwner:ChangeGold(iGold);
+
+	if pCityOwner:IsHuman() then
+		local hex = ToHexFromGrid(Vector2(iX, iY));
+		Events.AddPopupTextEvent(HexToWorld(hex), Locale.ConvertTextKey("+{1_Num}[ICON_GOLD]", iGold));
+	end
+	print("TradeRouteMove-Portugal-UB: gain ", iGold);
+end
+)
+------------------ Portugal UB END   ------------------
+
 
 print("New Building Effects Check Pass!")
 

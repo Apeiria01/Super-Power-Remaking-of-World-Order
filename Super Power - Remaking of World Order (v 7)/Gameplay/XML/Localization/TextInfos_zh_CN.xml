@@ -841,7 +841,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_PORTUGAL_PORT_HELP">
 			<Text>
-				本城拥有的海上[COLOR_POSITIVE_TEXT]奢侈资源[ENDCOLOR]+1[ICON_GOLD]金钱产出。[NEWLINE][NEWLINE]城市必须沿海。.
+				本城拥有的海上[COLOR_POSITIVE_TEXT]奢侈资源[ENDCOLOR]+1[ICON_GOLD]金钱产出和+1[ICON_PRODUCTION]产能产出。[NEWLINE][NEWLINE]城市必须沿海。.
 			</Text>
 		</Row>
 		<Row>
