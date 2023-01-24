@@ -1120,7 +1120,6 @@
 			<Type>BUILDING_CHINESE_GARDEN</Type>
 			<BuildingClass>BUILDINGCLASS_GARDEN</BuildingClass>
 			<Cost>50</Cost>
-			<GoldMaintenance>3</GoldMaintenance>
 			<UnmoddedHappiness>2</UnmoddedHappiness>
 			<PrereqTech>TECH_ART_THEORY</PrereqTech>
 			<Description>TXT_KEY_BUILDING_CHINESE_GARDEN</Description>
