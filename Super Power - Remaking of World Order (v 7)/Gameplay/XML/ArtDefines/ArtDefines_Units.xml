@@ -120,6 +120,132 @@
 		</Row>
 	</ArtDefine_StrategicView>
 	-->
+
+	<!--German Longswordsman-->
+	<ArtDefine_UnitInfos>
+		<Row>
+			<Type>ART_DEF_UNIT_GERMAN_LONGSWORDSMAN</Type>
+			<DamageStates>1</DamageStates>
+			<Formation>Phalanx</Formation>
+		</Row>
+	</ArtDefine_UnitInfos>
+	<ArtDefine_UnitInfoMemberInfos>
+		<Row>
+			<UnitInfoType>ART_DEF_UNIT_GERMAN_LONGSWORDSMAN</UnitInfoType>
+			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_GERMAN_LONGSWORDSMAN_V1</UnitMemberInfoType>
+			<NumMembers>1</NumMembers>
+		</Row>
+		<Row>
+			<UnitInfoType>ART_DEF_UNIT_GERMAN_LONGSWORDSMAN</UnitInfoType>
+			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_GERMAN_LONGSWORDSMAN_V2</UnitMemberInfoType>
+			<NumMembers>2</NumMembers>
+		</Row>
+		<Row>
+			<UnitInfoType>ART_DEF_UNIT_GERMAN_LONGSWORDSMAN</UnitInfoType>
+			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_GERMAN_LONGSWORDSMAN_V1</UnitMemberInfoType>
+			<NumMembers>3</NumMembers>
+		</Row>
+		<Row>
+			<UnitInfoType>ART_DEF_UNIT_GERMAN_LONGSWORDSMAN</UnitInfoType>
+			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_GERMAN_LONGSWORDSMAN_V2</UnitMemberInfoType>
+			<NumMembers>3</NumMembers>
+		</Row>
+		<Row>
+			<UnitInfoType>ART_DEF_UNIT_GERMAN_LONGSWORDSMAN</UnitInfoType>
+			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_GERMAN_LONGSWORDSMAN_V1</UnitMemberInfoType>
+			<NumMembers>2</NumMembers>
+		</Row>
+		<Row>
+			<UnitInfoType>ART_DEF_UNIT_GERMAN_LONGSWORDSMAN</UnitInfoType>
+			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_GERMAN_LONGSWORDSMAN_V2</UnitMemberInfoType>
+			<NumMembers>1</NumMembers>
+		</Row>
+	</ArtDefine_UnitInfoMemberInfos>
+
+	<ArtDefine_UnitMemberInfos>
+		<Row>
+			<Type>ART_DEF_UNIT_MEMBER_GERMAN_LONGSWORDSMAN_V1</Type>
+			<Scale>0.140000000596046</Scale>
+			<Model>dopp_a.fxsxml</Model>
+			<MaterialTypeTag>ARMOR</MaterialTypeTag>
+			<MaterialTypeSoundOverrideTag>ARMOR</MaterialTypeSoundOverrideTag>
+		</Row>
+	</ArtDefine_UnitMemberInfos>
+	<ArtDefine_UnitMemberCombats>
+		<Row>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_GERMAN_LONGSWORDSMAN_V1</UnitMemberType>
+			<EnableActions>Idle Attack RunCharge AttackCity Bombard Death BombardDefend Run Fortify CombatReady Walk AttackCharge</EnableActions>
+			<ShortMoveRadius>12.0</ShortMoveRadius>
+			<ShortMoveRate>0.349999994039536</ShortMoveRate>
+			<TargetHeight>8.0</TargetHeight>
+			<HasRefaceAfterCombat>1</HasRefaceAfterCombat>
+		</Row>
+	</ArtDefine_UnitMemberCombats>
+	<ArtDefine_UnitMemberCombatWeapons>
+		<Row>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_GERMAN_LONGSWORDSMAN_V1</UnitMemberType>
+			<Index>0</Index>
+			<SubIndex>0</SubIndex>
+			<WeaponTypeTag>METAL</WeaponTypeTag>
+			<WeaponTypeSoundOverrideTag>SWORD</WeaponTypeSoundOverrideTag>
+		</Row>
+		<Row>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_GERMAN_LONGSWORDSMAN_V1</UnitMemberType>
+			<Index>1</Index>
+			<SubIndex>0</SubIndex>
+			<VisKillStrengthMin>10.0</VisKillStrengthMin>
+			<VisKillStrengthMax>20.0</VisKillStrengthMax>
+			<WeaponTypeTag>FLAMING_ARROW</WeaponTypeTag>
+			<MissTargetSlopRadius>10.0</MissTargetSlopRadius>
+		</Row>
+	</ArtDefine_UnitMemberCombatWeapons>
+
+	<ArtDefine_UnitMemberInfos>
+		<Row>
+			<Type>ART_DEF_UNIT_MEMBER_GERMAN_LONGSWORDSMAN_V2</Type>
+			<Scale>0.140000000596046</Scale>
+			<Model>dopp_b.fxsxml</Model>
+			<MaterialTypeTag>ARMOR</MaterialTypeTag>
+			<MaterialTypeSoundOverrideTag>ARMOR</MaterialTypeSoundOverrideTag>
+		</Row>
+	</ArtDefine_UnitMemberInfos>
+	<ArtDefine_UnitMemberCombats>
+		<Row>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_GERMAN_LONGSWORDSMAN_V2</UnitMemberType>
+			<EnableActions>Idle Attack RunCharge AttackCity Bombard Death BombardDefend Run Fortify CombatReady Walk AttackCharge</EnableActions>
+			<ShortMoveRadius>12.0</ShortMoveRadius>
+			<ShortMoveRate>0.349999994039536</ShortMoveRate>
+			<TargetHeight>8.0</TargetHeight>
+			<HasRefaceAfterCombat>1</HasRefaceAfterCombat>
+		</Row>
+	</ArtDefine_UnitMemberCombats>
+	<ArtDefine_UnitMemberCombatWeapons>
+		<Row>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_GERMAN_LONGSWORDSMAN_V2</UnitMemberType>
+			<Index>0</Index>
+			<SubIndex>0</SubIndex>
+			<WeaponTypeTag>METAL</WeaponTypeTag>
+			<WeaponTypeSoundOverrideTag>SWORD</WeaponTypeSoundOverrideTag>
+		</Row>
+		<Row>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_GERMAN_LONGSWORDSMAN_V2</UnitMemberType>
+			<Index>1</Index>
+			<SubIndex>0</SubIndex>
+			<VisKillStrengthMin>10.0</VisKillStrengthMin>
+			<VisKillStrengthMax>20.0</VisKillStrengthMax>
+			<WeaponTypeTag>FLAMING_ARROW</WeaponTypeTag>
+			<MissTargetSlopRadius>10.0</MissTargetSlopRadius>
+		</Row>
+	</ArtDefine_UnitMemberCombatWeapons>
+
+	<ArtDefine_StrategicView>
+		<Row>
+			<StrategicViewType>ART_DEF_UNIT_GERMAN_LONGSWORDSMAN</StrategicViewType>
+			<TileType>Unit</TileType>
+			<Asset>SV_AncientMilitia.dds</Asset>
+		</Row>
+	</ArtDefine_StrategicView>
+	
 	
 	
 
