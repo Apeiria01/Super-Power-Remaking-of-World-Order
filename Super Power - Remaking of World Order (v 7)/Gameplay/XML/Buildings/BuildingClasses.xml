@@ -1298,7 +1298,11 @@
 			<Description>TXT_KEY_BELIEF_TO_GLORY_OF_GOD_SHORT</Description>
 		</Row>
 		<!--New Build-->
-	
+		<Row>
+			<Type>BUILDINGCLASS_GREEK_OLYMPICS_DUMMY</Type>
+			<DefaultBuilding>BUILDING_GREEK_OLYMPICS_DUMMY</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_GREEK_OLYMPICS</Description>
+		</Row>
 
 	</BuildingClasses>
 	

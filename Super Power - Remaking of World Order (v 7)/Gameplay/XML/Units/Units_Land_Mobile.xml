@@ -2410,6 +2410,14 @@
 			<UnitType>UNIT_AZTEC_EAGLE</UnitType>
 			<PromotionType>PROMOTION_SP_FORCE_3</PromotionType>
 		</Row>
+		<Row>
+			<UnitType>UNIT_AZTEC_EAGLE</UnitType>
+			<PromotionType>PROMOTION_HUNTDOWN_1</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_AZTEC_EAGLE</UnitType>
+			<PromotionType>PROMOTION_HUNTDOWN_2</PromotionType>
+		</Row>
 		
 		<Row>
 			<UnitType>UNIT_CAVALRY</UnitType>

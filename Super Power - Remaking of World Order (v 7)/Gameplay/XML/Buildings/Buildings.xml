@@ -2505,6 +2505,17 @@
 			<Description>TXT_KEY_BELIEF_TO_GLORY_OF_GOD_SHORT</Description>
 		</Row>
 		<!--New build-->
+
+		<Row>
+			<Type>BUILDING_GREEK_OLYMPICS_DUMMY</Type>
+			<BuildingClass>BUILDINGCLASS_GREEK_OLYMPICS_DUMMY</BuildingClass>
+			<Cost>-1</Cost>
+			<FaithCost>-1</FaithCost>
+			<NukeImmune>true</NukeImmune>
+			<Help>TXT_KEY_BUILDING_GREEK_OLYMPICS_DUMMY_HELP</Help>
+			<Description>TXT_KEY_BUILDING_GREEK_OLYMPICS</Description>
+			<MinorFriendshipAnchorChange>1</MinorFriendshipAnchorChange>
+		</Row>
 		
 	</Buildings>
 </GameData>

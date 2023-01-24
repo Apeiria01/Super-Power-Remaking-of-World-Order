@@ -304,7 +304,10 @@ SettlerMissionButton = {
 
 
     city:ChangePopulation(count,true);
-    city:SetFood( 0 )
+    if not (player:HasPolicy(GameInfo.Policies["POLICY_COLLECTIVE_RULE_FREE"].ID)) then
+      city:SetFood(0);
+  	end
+
     unit:Kill();
 
     local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_SETTLER_INTO_CITY", unit:GetName(), city:GetName())
