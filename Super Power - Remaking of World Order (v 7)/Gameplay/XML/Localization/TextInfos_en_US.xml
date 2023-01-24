@@ -16152,5 +16152,11 @@
 				With the advanced dynamite, {1_city} was destroyed in one turn!
 			</Text>
 		</Row>
+
+		<Row Tag="TXT_KEY_GAME_OPTION_DISABLE_GIFT_MILITIA">
+			<Text>
+			SP- [COLOR_YELLOW] Can't gift militia units [ENDCOLOR]
+			</Text>
+		</Row>
 	</Language_en_US>
 </GameData>

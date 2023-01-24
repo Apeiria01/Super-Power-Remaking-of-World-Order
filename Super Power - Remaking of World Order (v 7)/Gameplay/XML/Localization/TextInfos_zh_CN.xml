@@ -13866,5 +13866,11 @@
 				由于已研发炸药，{1_city}在一回合内被摧毁了！
 			</Text>
 		</Row>
+
+		<Row Tag="TXT_KEY_GAME_OPTION_DISABLE_GIFT_MILITIA">
+			<Text>
+				SP- [COLOR_YELLOW]禁止 赠送民兵单位[ENDCOLOR]
+			</Text>
+		</Row>
 	</Language_zh_CN>
 </GameData>

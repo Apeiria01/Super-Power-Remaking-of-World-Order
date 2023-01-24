@@ -309,5 +309,9 @@
 			<Description>TXT_KEY_GAME_OPTION_SP_CORPS_MODE_LOW</Description>
 			<Help>TXT_KEY_GAME_OPTION_SP_CORPS_MODE_LOW_HELP</Help>
 		</Row>
+		<Row>
+			<Type>GAMEOPTION_DISABLE_GIFT_MILITIA</Type>
+			<Description>TXT_KEY_GAME_OPTION_DISABLE_GIFT_MILITIA</Description>
+		</Row>
 	</GameOptions>
 </GameData>

@@ -814,6 +814,7 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
     <Folder Include="Gameplay\Lua\Maps" />
     <Folder Include="Gameplay\Lua\Misc" />
     <Folder Include="Gameplay\Lua\ArtDefines" />
+    <Folder Include="Gameplay\Lua\CSD" />
     <Folder Include="Gameplay\Lua\Utility" />
     <Folder Include="Gameplay\SQL\ArtDefines\" />
     <Folder Include="Gameplay\SQL\Units" />
@@ -1234,6 +1235,10 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
     <Content Include="Gameplay/SQL/PoliciesEffect.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="Gameplay\Lua\CSD\NewCityStateDiplomaticRule.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="Gameplay\SQL\ArtDefines\ArtDefines_Improvements.sql">
       <SubType>Lua</SubType>
