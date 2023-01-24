@@ -133,6 +133,9 @@
 		<Row Tag="TXT_KEY_REPLAY_DATA_SPECIALISTMAINTENANCE">
 			<Text>專家維護費</Text>
 		</Row>
+		<Row Tag="TXT_KEY_BUILDING_POLICY_COST_MODIFIER">
+			<Text>政策閾值上升: </Text>
+		</Row>
 		
 		
 	<!--******************************Specialists Building Titles for Sorting********************************-->
@@ -5461,7 +5464,7 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_PHOENICIAN_HERITAGE">
-			<Text>每位專家+1[ICON_PRODUCTION]生產力。每條海上商路+4[ICON_GOLD]金幣並且+25%商路距離。</Text>
+			<Text>每位專家+2[ICON_PRODUCTION]生產力。每條海上商路+4[ICON_GOLD]金幣並且+25%商路距離。</Text>
 		</Replace>	
 
 		<Replace Tag="TXT_KEY_TRAIT_EXTRA_TRADE">

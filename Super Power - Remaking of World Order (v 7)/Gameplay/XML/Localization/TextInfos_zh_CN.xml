@@ -135,8 +135,17 @@
 			<Text>专家维护费</Text>
 		</Row>
 
+<<<<<<< HEAD
 
 		<!--******************************Specialists Building Titles for Sorting********************************-->
+=======
+		<Row Tag="TXT_KEY_BUILDING_POLICY_COST_MODIFIER">
+			<Text>政策阈值上升: </Text>
+		</Row>
+		
+		
+	<!--******************************Specialists Building Titles for Sorting********************************-->
+>>>>>>> public/dev-8
 
 		<Replace Tag="TXT_KEY_BUILDING_GRANARY">
 			<Text>[ICON_FOOD]粮仓</Text>
@@ -5570,8 +5579,8 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_PHOENICIAN_HERITAGE">
-			<Text>每位专家+1[ICON_PRODUCTION]产能。每条海上商路+4[ICON_GOLD]金钱并且+25%商路距离。</Text>
-		</Replace>
+			<Text>每位专家+2[ICON_PRODUCTION]产能。每条海上商路+4[ICON_GOLD]金钱并且+25%商路距离。</Text>
+		</Replace>	
 
 		<Replace Tag="TXT_KEY_TRAIT_EXTRA_TRADE">
 			<Text>资源多样性使国际商路带给葡萄牙的[ICON_GOLD]金钱加倍。所有海滨城市免费获得港口。</Text>

@@ -1082,7 +1082,9 @@
 				<Text>Specialist Maintenance</Text>
 			</Row>
 			
-			
+			<Row Tag="TXT_KEY_BUILDING_POLICY_COST_MODIFIER">
+				<Text>Policy Cost Modifier: </Text>
+			</Row>
 			
 			
 			
@@ -9994,7 +9996,7 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_PHOENICIAN_HERITAGE">
-			<Text>+1 [ICON_PRODUCTION] Production for every Specialists. +4 [ICON_GOLD] Base Gold for every Sea International Trade Route and +25% Range for Cargoships.</Text>
+			<Text>+2 [ICON_PRODUCTION] Production for every Specialists. +4 [ICON_GOLD] Base Gold for every Sea International Trade Route and +25% Range for Cargoships.</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_EXTRA_TRADE">
