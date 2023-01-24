@@ -166,6 +166,8 @@
 			<CityStateFriendshipModifier>100</CityStateFriendshipModifier>
 			<AfraidMinorPerTurnInfluence>500</AfraidMinorPerTurnInfluence>
 			<AngerFreeIntrusionOfCityStates>true</AngerFreeIntrusionOfCityStates>
+			<AllyCityStateCombatModifier>3</AllyCityStateCombatModifier>
+			<AllyCityStateCombatModifierMax>30</AllyCityStateCombatModifierMax>
 		</Row>
 		<Row>
 			<Type>TRAIT_SLAYER_OF_TIAMAT</Type>
