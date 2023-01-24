@@ -709,6 +709,20 @@
 			<Name>GREEK_UB_DUMMY_MAX</Name>
 			<Value>20</Value>
 		</Row>
+
+		<Row>
+			<Name>AZTEC_UB_CULTURE_RATE</Name>
+			<Value>300</Value>
+		</Row>
+
+		<Row>
+			<Name>AZTEC_UB_FAITH_RATE</Name>
+			<Value>300</Value>
+		</Row>
+		<Row>
+			<Name>AZTEC_UB_PROMOTION_PROBABILITY</Name>
+			<Value>20</Value>
+		</Row>
 	</Defines>
 	
 	

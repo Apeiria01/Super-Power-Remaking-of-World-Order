@@ -13820,5 +13820,46 @@
 		<Replace Tag="TXT_KEY_PEDIA_LEADER_FLAVOR_AIRLIFT">
 			<Text>[ICON_BULLET]空运部队:</Text>
 		</Replace>
+
+		<Row Tag="TXT_KEY_BUILDING_AZTEC_HUEY_TEOCALLI_SP">
+			<Text>[COLOR_SELECTED_TEXT]休伊神庙[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_AZTEC_HUEY_TEOCALLI_SP_HELP">
+			<Text>
+				[ICON_BULLET]获得两个传教士，所有城市获得免费神庙。
+				[NEWLINE][ICON_BULLET]本城新建陆军单位+15经验。
+				[NEWLINE][ICON_BULLET]允许使用信仰购买美洲狮战士和雄鹰战士。
+				[NEWLINE][ICON_BULLET]可将陆军军事单位移至本城进行活人献祭，获得相当于军事单位战斗力300%的[ICON_CULTURE]文化和[ICON_PEACE]信仰。
+				该单位有20%的概率存活，并且获得晋升【战神齐洛波奇特利之力】，+50生命值上限，战斗力+10%。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_AZTEC_HUEY_TEOCALLI_SP_TEXT">
+			<Text>
+				位于阿兹特克帝国的神庙是梯田状的金字塔，顶端树立着一座寺庙，这也是该区域所有重要宗教仪式的举办地。休伊神庙（或，按照西班牙语的说法，被称为大神庙）是最宏伟的神庙，它矗立在特诺奇蒂特兰中心，专为两位神灵而修建：战神维齐洛波奇特利和农业神塔多克（这也说明了阿兹特克文化中什么东西比较重要）。每位神灵都有一座独立庙宇，通过单独的楼梯可到达。美索美洲金字塔常被重建，人们使用原结构为新塔做基座，将其不断扩大。因此，休伊神庙在1325年建成后，又经历了六次重建。在第七次，也是最后一次修建中，它被科尔特斯和其征服者洗劫并摧毁了。只留下了一些残檐断壁，但人们依然沉湎于对它的古怪庆祝活动中…比如，庆祝战神维齐洛波奇特利的第十五月庆典，在该庆典上，会敬奉用苋属植物种子、骨头、蜂蜜和人血组成的神灵像，随后将其留给平民食用。
+			</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_SP_MISSION_SACRIFICE_TITLE">
+			<Text>
+				活人献祭
+			</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_SP_MISSION_SACRIFICE_TOOL_TIP">
+			<Text>
+				获得相当于该单位战斗力{1_faithRate}%的[ICON_PEACE]信仰和{2_cultureRate}%的[ICON_CULTURE]文化。
+			</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_AZTEC_HUEY_TEOCALLI">
+			<Text>
+				战神齐洛波奇特利之力
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_AZTEC_HUEY_TEOCALLI_HELP">
+			<Text>
+				生命值上限+50，战斗力+10%。
+			</Text>
+		</Row>
 	</Language_zh_CN>
 </GameData>

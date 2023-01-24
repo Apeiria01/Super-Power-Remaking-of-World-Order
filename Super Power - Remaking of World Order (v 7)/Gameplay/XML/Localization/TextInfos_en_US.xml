@@ -16105,5 +16105,46 @@
 		<Replace Tag="TXT_KEY_PEDIA_LEADER_FLAVOR_AIRLIFT">
 			<Text>[ICON_BULLET]Airlift:</Text>
 		</Replace>
+
+		<Row Tag="TXT_KEY_BUILDING_AZTEC_HUEY_TEOCALLI_SP">
+			<Text>[COLOR_SELECTED_TEXT]Huey Teocalli[ENDCOLOR]</Text>
+			</Row>
+		<Row Tag="TXT_KEY_BUILDING_AZTEC_HUEY_TEOCALLI_SP_HELP">
+			<Text>
+			[ICON_BULLET] Get two missionaries and all cities get free temples.
+			[NEWLINE][ICON_BULLET] New land army units in this city have +15 experience.
+			[NEWLINE][ICON_BULLET] Allow Faith to buy Cougar and Eagle Warriors.
+			[NEWLINE][ICON_BULLET] can move the army military unit to this city for human sacrifice, and get [ICON_CULTURE] culture and [ICON_PEACE] belief equivalent to 300% of the combat power of the military unit.
+			The unit has a 20% chance of surviving, and it will be promoted to [The Power of the God of War Zilopochtli], +50 maximum HP, and +10% combat power.
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_AZTEC_HUEY_TEOCALLI_SP_TEXT">
+			<Text>
+			The temples in the Aztec Empire were terraced pyramids topped by a temple, which was the site of all the important religious ceremonies in the region. The Temple of Huey (or, as it is called in Spanish, the Great Temple), the grandest temple, stands in the center of Tenochtitlan and is dedicated to two gods: Vezilo, the god of war Pochitelli and Tadoc, the god of agriculture (this also shows what was important in Aztec culture). Each deity has a separate temple, reached by a separate staircase. Mesoamerican pyramids were often rebuilt, using the original structures as bases for new towers that were continually enlarged. Thus, after its completion in 1325, the Temple of Huey was rebuilt six times. During its seventh and final construction, it was sacked and destroyed by Cortes and his conquerors. Only a few ruins remain, but people still indulge in eccentric celebrations of it...such as the fifteenth month celebration of the god of war, Vitzilopochtli, where amaranth is enshrined Deities made of plant seeds, bones, honey and human blood, which were then left for the common people to eat.
+			</Text>
+		</Row>
+			
+		<Row Tag="TXT_KEY_SP_MISSION_SACRIFICE_TITLE">
+			<Text>
+			Human Sacrifice
+			</Text>
+		</Row>
+			
+		<Row Tag="TXT_KEY_SP_MISSION_SACRIFICE_TOOL_TIP">
+			<Text>
+			Gain [ICON_PEACE] Faith equal to {1_faithRate}% of the unit's Combat Strength and [ICON_CULTURE] Culture equal to {2_cultureRate}%.
+			</Text>
+		</Row>
+			
+		<Row Tag="TXT_KEY_PROMOTION_AZTEC_HUEY_TEOCALLI">
+			<Text>
+			The Power of Zilopochtli
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_AZTEC_HUEY_TEOCALLI_HELP">
+			<Text>
+			HP upper limit +50, combat power +10%.
+			</Text>
+		</Row>
 	</Language_en_US>
 </GameData>

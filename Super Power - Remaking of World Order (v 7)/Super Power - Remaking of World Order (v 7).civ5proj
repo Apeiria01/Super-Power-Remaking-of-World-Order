@@ -808,8 +808,9 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
     <Folder Include="Gameplay\Lua\Economy" />
     <Folder Include="Gameplay\Lua\Maps" />
     <Folder Include="Gameplay\Lua\Misc" />
+    <Folder Include="Gameplay\Lua\ArtDefines" />
     <Folder Include="Gameplay\Lua\Utility" />
-    <Folder Include="Gameplay\SQL\ArtDefines" />
+    <Folder Include="Gameplay\SQL\ArtDefines\" />
     <Folder Include="Gameplay\SQL\Units" />
     <Folder Include="Gameplay\XML" />
     <Folder Include="Gameplay\SQL" />
@@ -832,6 +833,7 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
     <Folder Include="UI\Art\IconAtlases" />
     <Folder Include="UI\Art\IconAtlases\Buildings" />
     <Folder Include="UI\Art\IconAtlases\Extra" />
+    <Folder Include="UI\Art\IconAtlases\Buildings\Aztecs" />
     <Folder Include="UI\Art\IconAtlases\Units" />
     <Folder Include="UI\Art\IconAtlases\Technologies" />
     <Folder Include="UI\Art\IconAtlases\Resources" />
@@ -1231,6 +1233,10 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
     <Content Include="Gameplay\SQL\ArtDefines\IconAtlases.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="Gameplay\Lua\Misc\UnitSpecialButtons_SP8.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="Gameplay\SQL\Units\Units_Land_Infantry.sql">
       <SubType>Lua</SubType>
@@ -5525,6 +5531,22 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="UI\Art\Models\Units Infantry\Doppelsoldner\hat_b_sref.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\IconAtlases\Buildings\Aztecs\HueyTeocalliPicture_045.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\IconAtlases\Buildings\Aztecs\HueyTeocalliPicture_064.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\IconAtlases\Buildings\Aztecs\HueyTeocalliPicture_128.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\IconAtlases\Buildings\Aztecs\HueyTeocalliPicture_256.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>

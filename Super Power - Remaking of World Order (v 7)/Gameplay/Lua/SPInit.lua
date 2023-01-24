@@ -25,6 +25,7 @@ include("NuclearWinter");
 -- Misc
 include("TerrainTransform");
 include("UnitSpecialButtons");
+include("UnitSpecialButtons_SP8");
 -- Utility
 include("Policy_FreeBuildingClass");
 ContextPtr:LoadNewContext("ModOptions");
