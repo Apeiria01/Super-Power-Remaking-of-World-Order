@@ -209,6 +209,8 @@
 			<UniqueLuxuryCities>3</UniqueLuxuryCities>
 			<UniqueLuxuryQuantity>2</UniqueLuxuryQuantity>
 			<UniqueLuxuryRequiresNewArea>true</UniqueLuxuryRequiresNewArea>
+			<AdequateLuxuryCompleteQuestInfluenceModifier>5</AdequateLuxuryCompleteQuestInfluenceModifier>
+			<AdequateLuxuryCompleteQuestInfluenceModifierMax>40</AdequateLuxuryCompleteQuestInfluenceModifierMax>
 		</Row>
 		<Row>
 			<Type>TRAIT_FAITH_FROM_NATURE</Type>
