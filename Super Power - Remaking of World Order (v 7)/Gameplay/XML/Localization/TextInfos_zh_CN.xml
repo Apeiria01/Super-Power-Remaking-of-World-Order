@@ -135,17 +135,14 @@
 			<Text>专家维护费</Text>
 		</Row>
 
-<<<<<<< HEAD
 
 		<!--******************************Specialists Building Titles for Sorting********************************-->
-=======
 		<Row Tag="TXT_KEY_BUILDING_POLICY_COST_MODIFIER">
 			<Text>政策阈值上升: </Text>
 		</Row>
 		
 		
 	<!--******************************Specialists Building Titles for Sorting********************************-->
->>>>>>> public/dev-8
 
 		<Replace Tag="TXT_KEY_BUILDING_GRANARY">
 			<Text>[ICON_FOOD]粮仓</Text>
@@ -2522,7 +2519,7 @@
 			<Tag>TXT_KEY_BUILDING_CONSUMER_BONUS</Tag>
 			<Text>提供额外[ICON_RES_CONSUMER]商品</Text>
 		</Row>
-
+		
 		<Row Tag="TXT_KEY_BUILDING_CIV_S_P_MAN_RESOURCES">
 			<Text>1[ICON_RES_MANPOWER]人力</Text>
 		</Row>
@@ -7794,7 +7791,8 @@
 
 		<Row>
 			<Tag>TXT_KEY_BUILDING_SPECIALISTS_ARTISTIC_HELP</Tag>
-			<Text>文学家，美术家和音乐家：+1[ICON_CULTURE]文化产出，+1[ICON_GOLD]维护费。[NEWLINE][NEWLINE]文明的城市数量越多建造成本越高。</Text>
+			<Text>文学家，美术家和音乐家：+2[ICON_CULTURE]文化产出，+2[ICON_GOLD]维护费。
+			[NEWLINE][NEWLINE]文明的城市数量越多建造成本越高。</Text>
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_SPECIALISTS_ARTISTIC_LV1</Tag>
@@ -9614,8 +9612,8 @@
 			<Text>虎式坦克</Text>
 			<Plurality>2</Plurality>
 		</Replace>
-
-		<!--<Row Tag="TXT_KEY_UNIT_CHINESE_052D">
+		
+		<!---<Row Tag="TXT_KEY_UNIT_CHINESE_052D">
 			<Text>99A2坦克</Text>
 			<Plurality>2</Plurality>
 		</Row>
@@ -9629,8 +9627,8 @@
 			<Text>这种官方编号为99A（99A2为早期误传）的主战坦克由中国北方车辆研究所即201所研制，是99式坦克的大改型号，最终更接近一辆崭新的坦克。是中国顶尖坦克工业的集大成者，仅有美国M1A2SEPV3可与之匹敌，即所谓的“三代半”主战坦克。这种坦克在研制成功之后，按照解放军惯例率先少量装备在有“万岁军”之称的38军112机械化步兵师，现已投入大批量生产，是未来中国机械化步兵和装甲兵的主力之一。
 					[NEWLINE]一台12150L型1500马力发动机和先进的传动系统为这种58吨的庞然大物提供了充沛的动力，其最厚处物理厚度超过一米的前装甲则为它和使用它的坦克兵提供了可靠的防护，堪称“叹息之墙”，它的125毫米主炮配合自动装弹机可以快速发射中国的最新型穿甲弹。而它配备的车内系统也非常高端，猎-歼火控、车长独立周视仪、高度集成并接入三军数据链的车际信息总线和先进的红外热成像仪等尖端设备。还配备一具大功率激光对抗装置，是99坦克上的激光装置的改进型，更加紧凑先进，甚至在主炮上方还配备有一台小型毫米波雷达。先进的性能带来了昂贵的造价，一辆99A的单价估计约为2000-3000万人民币。
 			</Text>
-		</Row>-->
-
+		</Row>--->
+		
 		<!--<Row Tag="TXT_KEY_UNIT_PERSIAN_ZULFIQAR">
 			<Text>佐勒菲卡尔坦克</Text>
 			<Plurality>2</Plurality>
