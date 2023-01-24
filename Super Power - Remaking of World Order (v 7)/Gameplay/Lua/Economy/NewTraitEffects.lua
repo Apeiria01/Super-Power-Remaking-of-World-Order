@@ -79,7 +79,7 @@ function JapanCultureUnit(iPlayer, iCity, iUnit, bGold, bFaith)	-- Japan can gai
 	end
 	
 	-- Get Culture from Policy - Coastal Adminstration
-	if pPlayer:HasPolicy(GameInfoTypes["POLICY_COASTAL_ADMINISTRATION"]) and pUnit:GetDomainType() == DomainTypes.DOMAIN_SEA and not pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_OCEAN_IMPASSABLE"]) then
+	if pPlayer:HasPolicy(GameInfoTypes["POLICY_NAVIGATION_SCHOOL"]) and pUnit:GetDomainType() == DomainTypes.DOMAIN_SEA and not pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_OCEAN_IMPASSABLE"]) then
 		local currentCulture = pPlayer:GetJONSCulture();
 		local BaseCulture = math.max(pUnit:GetBaseCombatStrength(), pUnit:GetBaseRangedCombatStrength());
 		local bonusCulture = math.ceil(BaseCulture * 1);

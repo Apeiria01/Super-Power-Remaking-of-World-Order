@@ -182,7 +182,7 @@
 			<Where Type="POLICY_PROFESSIONAL_ARMY"/>
 		</Update>
 		<Update>
-			<Set CultureFromKills="50" GoldFromKills="0"GreatGeneralRateModifier="50"/>
+			<Set CultureFromKills="50" GoldFromKills="0" GreatGeneralRateModifier="50"/>
 			<Where Type="POLICY_HONOR_FINISHER"/>
 		</Update>
 		<Update>

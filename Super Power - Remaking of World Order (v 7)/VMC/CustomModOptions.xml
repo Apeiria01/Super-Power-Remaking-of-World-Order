@@ -511,6 +511,7 @@
     <Row Class="3" Name="EVENTS_MINORS_GIFTS" Value="0"/>
 
 	<Row Class="3" Name="EVENTS_BATTLES_CUSTOM_DAMAGE" Value="1"/>
+    <Row Class="3" Name="MOD_EVENTS_BATTLES" Value="1"/>
 
     <!-- Events sent on interaction with City States (v68) -->
 	<!--   GameEvents.PlayerCanProtect.Add(function(iMajor, iMinor) return true end) -->

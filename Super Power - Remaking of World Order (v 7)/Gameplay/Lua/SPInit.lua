@@ -18,6 +18,7 @@ include("NewUnitsRules");
 include("NewBuildingEffects");
 include("NewCityRule");
 include("NewPolicyEffects");
+include("SP8PolicyEffects");
 include("NewPopulationRule");
 include("NewTraitEffects");
 include("NuclearWinter");
