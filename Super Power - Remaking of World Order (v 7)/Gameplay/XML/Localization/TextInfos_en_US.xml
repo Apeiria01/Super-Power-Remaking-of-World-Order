@@ -16146,5 +16146,11 @@
 			HP upper limit +50, combat power +10%.
 			</Text>
 		</Row>
+
+		<Row Tag="TXT_KEY_RAZE_WITH_DYNAMITE">
+			<Text>
+				With the advanced dynamite, {1_city} was destroyed in one turn!
+			</Text>
+		</Row>
 	</Language_en_US>
 </GameData>

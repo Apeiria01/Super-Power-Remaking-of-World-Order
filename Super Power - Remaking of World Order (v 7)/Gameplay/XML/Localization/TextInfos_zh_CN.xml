@@ -13859,5 +13859,12 @@
 				生命值上限+50，战斗力+10%。
 			</Text>
 		</Row>
+
+		
+		<Row Tag="TXT_KEY_RAZE_WITH_DYNAMITE">
+			<Text>
+				由于已研发炸药，{1_city}在一回合内被摧毁了！
+			</Text>
+		</Row>
 	</Language_zh_CN>
 </GameData>
