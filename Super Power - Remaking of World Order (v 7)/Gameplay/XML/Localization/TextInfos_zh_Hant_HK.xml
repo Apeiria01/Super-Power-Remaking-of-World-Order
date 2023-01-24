@@ -5478,7 +5478,10 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_SPICE">
-			<Text>在非出生地大陸建造的前三座城市可以提供2份獨有奢侈資源，這三座城市無法被摧毀且沒有額外的管理成本。</Text>
+			<Text>
+				[ICON_BULLET]在非出生地大陸建造的前三座城市可以提供2份獨有奢侈資源，這三座城市無法被摧毀且沒有額外的管理成本。
+				[NEWLINE][ICON_BULLET]每擁有一種數量大於1的奢侈資源，完成城邦任務獲得的[ICON_INFLUENCE]影響力+5%，上限為40%
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_GREAT_EXPANSE">
