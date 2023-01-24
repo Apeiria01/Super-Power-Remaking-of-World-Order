@@ -5555,7 +5555,11 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_CITY_STATE_FRIENDSHIP">
-			<Text>对城邦[ICON_INFLUENCE]影响力衰减速度减半，恢复速度加倍。对于能够勒索的城邦每回合额外获得5点[ICON_INFLUENCE]影响力（标准速度下）,军队在城邦境内停留时不会影响关系。</Text>
+			<Text>
+				[ICON_BULLET]对城邦[ICON_INFLUENCE]影响力衰减速度减半，恢复速度加倍。
+				[NEWLINE][ICON_BULLET]军队在城邦境内停留时不会影响关系。对于能够勒索的城邦每回合额外获得5点[ICON_INFLUENCE]影响力（标准速度下）。
+				[NEWLINE][ICON_BULLET]每个同盟城邦为军事单位+3%战斗力，上限为30%。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_RAZE_AND_HORSES">

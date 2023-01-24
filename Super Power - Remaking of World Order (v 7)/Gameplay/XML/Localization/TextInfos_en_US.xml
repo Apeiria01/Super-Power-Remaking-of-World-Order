@@ -9970,7 +9970,11 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_CITY_STATE_FRIENDSHIP">
-			<Text>City-State [ICON_INFLUENCE] Influence degrades at half and recovers at twice the normal rate. City-States do not become upset by intruding units and + 5 [ICON_INFLUENCE] Influence (at Standard speed) per turn with City-States you could demand tribute from.</Text>
+			<Text>
+				[ICON_BULLET]City-State [ICON_INFLUENCE] Influence degrades at half and recovers at twice the normal rate.
+				[NEWLINE][ICON_BULLET]City-States do not become upset by intruding units and + 5 [ICON_INFLUENCE] Influence (at Standard speed) per turn with City-States you could demand tribute from.
+				[NEWLINE][ICON_BULLET] Each allied city-state gives military units +3% combat power, up to 30%.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_RAZE_AND_HORSES">
