@@ -7171,7 +7171,7 @@
 				[COLOR_POSITIVE_TEXT]Prefeture[ENDCOLOR]
 				[NEWLINE][ICON_CAPITAL]Capital Plot +4 [CION_CULTURE] Culture.
 				[NEWLINE][ICON_BULLET]Gain additional [ICON_CULTURE] Culture in cities reached certain Population Size:
-				[NEWLINE][ICON_BULLET]Small City: +4 [CION_CULTURE] Culture.
+				[NEWLINE][ICON_BULLET]Small City: +4 [ICON_CULTURE] Culture.
 				[NEWLINE][ICON_BULLET]Medium City: +8 [ICON_CULTURE] Culture.
 				[NEWLINE][ICON_BULLET]Large City: +12 [ICON_CULTURE] Culture.
 				[NEWLINE][ICON_BULLET]XL City: +16 [ICON_CULTURE] Culture.
