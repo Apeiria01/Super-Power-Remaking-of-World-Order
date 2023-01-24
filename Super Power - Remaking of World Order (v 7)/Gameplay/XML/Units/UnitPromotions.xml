@@ -4996,6 +4996,32 @@
 
 	<!--*****************************Civlization Unique Unit Promotions*******************************************-->
 	<UnitPromotions>
+		<!-- Hatamoto -->
+		<Row>
+			<Type>PROMOTION_JAPANESE_SAMURAI</Type>
+			<Description>TXT_KEY_PROMOTION_JAPANESE_SAMURAI</Description>
+			<Help>TXT_KEY_PROMOTION_JAPANESE_SAMURAI_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<FlankAttackModifier>5</FlankAttackModifier>
+			<PediaEntry>TXT_KEY_PROMOTION_JAPANESE_SAMURAI</PediaEntry>
+			<CannotBeChosen>true</CannotBeChosen>
+		</Row>
+		<Row>
+			<Type>PROMOTION_JAPANESE_SAMURAI_CULTURE</Type>
+			<Description>TXT_KEY_PROMOTION_JAPANESE_SAMURAI_CULTURE</Description>
+			<Help>TXT_KEY_PROMOTION_JAPANESE_SAMURAI_CULTURE_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<LostWithUpgrade>true</LostWithUpgrade>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_JAPANESE_SAMURAI_CULTURE</PediaEntry>
+			<CannotBeChosen>true</CannotBeChosen>
+		</Row>
+
 		<Row>
 			<Type>PROMOTION_EXTRA_SIGHT_I</Type>
 			<Description>TXT_KEY_PROMOTION_XTRA_SIGHT_I</Description>
@@ -6953,5 +6979,13 @@
 			<Modifier>100</Modifier>
 		</Row>
 	</UnitPromotions_Domains>
+
+	<UnitPromotions_YieldFromKills>
+		<Row>
+			<PromotionType>PROMOTION_JAPANESE_SAMURAI_CULTURE</PromotionType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>50</Yield>
+		</Row>
+	</UnitPromotions_YieldFromKills>
 	
 </GameData>
