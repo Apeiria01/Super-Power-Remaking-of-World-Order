@@ -18,12 +18,14 @@ include("NewUnitsRules");
 include("NewBuildingEffects");
 include("NewCityRule");
 include("NewPolicyEffects");
+include("SP8PolicyEffects");
 include("NewPopulationRule");
 include("NewTraitEffects");
 include("NuclearWinter");
 -- Misc
 include("TerrainTransform");
 include("UnitSpecialButtons");
+include("UnitSpecialButtons_SP8");
 -- Utility
 include("Policy_FreeBuildingClass");
 ContextPtr:LoadNewContext("ModOptions");

@@ -166,6 +166,8 @@
 			<CityStateFriendshipModifier>100</CityStateFriendshipModifier>
 			<AfraidMinorPerTurnInfluence>500</AfraidMinorPerTurnInfluence>
 			<AngerFreeIntrusionOfCityStates>true</AngerFreeIntrusionOfCityStates>
+			<AllyCityStateCombatModifier>3</AllyCityStateCombatModifier>
+			<AllyCityStateCombatModifierMax>30</AllyCityStateCombatModifierMax>
 		</Row>
 		<Row>
 			<Type>TRAIT_SLAYER_OF_TIAMAT</Type>
@@ -209,6 +211,8 @@
 			<UniqueLuxuryCities>3</UniqueLuxuryCities>
 			<UniqueLuxuryQuantity>2</UniqueLuxuryQuantity>
 			<UniqueLuxuryRequiresNewArea>true</UniqueLuxuryRequiresNewArea>
+			<AdequateLuxuryCompleteQuestInfluenceModifier>5</AdequateLuxuryCompleteQuestInfluenceModifier>
+			<AdequateLuxuryCompleteQuestInfluenceModifierMax>40</AdequateLuxuryCompleteQuestInfluenceModifierMax>
 		</Row>
 		<Row>
 			<Type>TRAIT_FAITH_FROM_NATURE</Type>
@@ -1255,37 +1259,37 @@
 			<TraitType>TRAIT_PHOENICIAN_HERITAGE</TraitType>
 			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>1</Yield>
+			<Yield>2</Yield>
 		</Row>
 		<Row>
 			<TraitType>TRAIT_PHOENICIAN_HERITAGE</TraitType>
 			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>1</Yield>
+			<Yield>2</Yield>
 		</Row>
 		<Row>
 			<TraitType>TRAIT_PHOENICIAN_HERITAGE</TraitType>
 			<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>1</Yield>
+			<Yield>2</Yield>
 		</Row>
 		<Row>
 			<TraitType>TRAIT_PHOENICIAN_HERITAGE</TraitType>
 			<SpecialistType>SPECIALIST_WRITER</SpecialistType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>1</Yield>
+			<Yield>2</Yield>
 		</Row>
 		<Row>
 			<TraitType>TRAIT_PHOENICIAN_HERITAGE</TraitType>
 			<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>1</Yield>
+			<Yield>2</Yield>
 		</Row>
 		<Row>
 			<TraitType>TRAIT_PHOENICIAN_HERITAGE</TraitType>
 			<SpecialistType>SPECIALIST_MUSICIAN</SpecialistType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>1</Yield>
+			<Yield>2</Yield>
 		</Row>
 
 

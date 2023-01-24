@@ -600,6 +600,61 @@ end
 GameEvents.PlayerDoTurn.Add(MinorProvideRes)
 
 
+------------------ Greek UB ------------------
+local GreekOlympicsDummyMax = GameDefines["GREEK_UB_DUMMY_MAX"];
+
+function GreekOlympicsBuildingsEffectConstruct(iPlayer, iCity, iBuilding, bGold, bFaith)
+	if iBuilding ~= GameInfoTypes["BUILDING_GREEK_OLYMPICS"] then
+		return
+	end
+
+	local pPlayer = Players[iPlayer];
+	if pPlayer == nil then
+		return
+	end
+
+	local pCity = pPlayer:GetCityByID(iCity);
+	if pCity == nil then
+		return
+	end
+
+	print("GreekOlympicsBuildingsEffectConstruct");
+	pCity:SetNumRealBuilding(GameInfoTypes["BUILDING_GREEK_OLYMPICS_DUMMY"], 0);
+	if pPlayer:CountNumBuildings(GameInfoTypes["BUILDING_GREEK_OLYMPICS_DUMMY"]) < GreekOlympicsDummyMax then
+		pCity:SetNumRealBuilding(GameInfoTypes["BUILDING_GREEK_OLYMPICS_DUMMY"], 1);
+	end
+end
+GameEvents.CityConstructed.Add(GreekOlympicsBuildingsEffectConstruct);
+
+function GreekOlympicsBuildingsEffectSold(iPlayer, iCity, iBuilding)
+	if iBuilding ~= GameInfoTypes["BUILDING_GREEK_OLYMPICS"] then
+		return;
+	end
+
+	local pPlayer = Players[iPlayer];
+	if pPlayer == nil then
+		return;
+	end
+
+	print("GreekOlympicsBuildingsEffectSold");
+
+	local count = 0;
+	for pCity in pPlayer:Cities() do
+		pCity:SetNumRealBuilding(GameInfoTypes["BUILDING_GREEK_OLYMPICS_DUMMY"], 0);
+		if pCity:GetNumBuilding(GameInfoTypes["BUILDING_GREEK_OLYMPICS"]) > 0 and count < GreekOlympicsDummyMax then
+			count = count + 1;
+			pCity:SetNumRealBuilding(GameInfoTypes["BUILDING_GREEK_OLYMPICS_DUMMY"], 1);
+		end
+
+		if count >= 20 then
+			break;
+		end
+	end
+
+	print("GreekOlympicsBuildingsEffectSold: reset - ", count);
+end
+GameEvents.CitySoldBuilding.Add(GreekOlympicsBuildingsEffectSold);
+------------------ Greek UB END ------------------
 
 print("New Building Effects Check Pass!")
 

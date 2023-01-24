@@ -3060,8 +3060,15 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_GREEK_OLYMPICS_HELP</Tag>
 			<Text>
-				本城市建造軍事單位時+15%[ICON_PRODUCTION]生產力，
+				本城市建造軍事單位時+15%[ICON_PRODUCTION]產能。
 				[NEWLINE]新建軍事單位+15經驗。
+				[NEWLINE]每一個奧林匹克競技場能使對城邦的基準影響力上升1，最大為20。
+			</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_BUILDING_GREEK_OLYMPICS_DUMMY_HELP</Tag>
+			<Text>
+				對城邦的基準影響力上升1。
 			</Text>
 		</Row>
 		
@@ -5440,7 +5447,11 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_CITY_STATE_FRIENDSHIP">
-			<Text>對城邦[ICON_INFLUENCE]影響力衰減速度減半，恢復速度加倍。對於能夠勒索的城邦每回合額外獲得5點[ICON_INFLUENCE]影響力（標準速度下）,軍隊在城邦境內停留時不會影響關係。</Text>
+			<Text>
+				[ICON_BULLET]對城邦[ICON_INFLUENCE]影響力衰減速度減半，恢復速度加倍。對於能夠勒索的城邦每回合額外獲得5點[ICON_INFLUENCE]影響力（標準速度下）
+				[NEWLINE][ICON_BULLET]軍隊在城邦境內停留時不會影響關係。
+				[NEWLINE][ICON_BULLET]每個同盟城邦為軍事單位+3%戰鬥力，上限為30%。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_RAZE_AND_HORSES">
@@ -5464,7 +5475,7 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_PHOENICIAN_HERITAGE">
-			<Text>每位專家+1[ICON_PRODUCTION]生產力。每條海上商路+4[ICON_GOLD]金幣並且+25%商路距離。</Text>
+			<Text>每位專家+2[ICON_PRODUCTION]生產力。每條海上商路+4[ICON_GOLD]金幣並且+25%商路距離。</Text>
 		</Replace>	
 
 		<Replace Tag="TXT_KEY_TRAIT_EXTRA_TRADE">
@@ -5476,7 +5487,10 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_SPICE">
-			<Text>在非出生地大陸建造的前三座城市可以提供2份獨有奢侈資源，這三座城市無法被摧毀且沒有額外的管理成本。</Text>
+			<Text>
+				[ICON_BULLET]在非出生地大陸建造的前三座城市可以提供2份獨有奢侈資源，這三座城市無法被摧毀且沒有額外的管理成本。
+				[NEWLINE][ICON_BULLET]每擁有一種數量大於1的奢侈資源，完成城邦任務獲得的[ICON_INFLUENCE]影響力+5%，上限為40%
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_GREAT_EXPANSE">
@@ -13514,5 +13528,46 @@
 		<Replace Tag="TXT_KEY_PEDIA_LEADER_FLAVOR_AIRLIFT">
 			<Text>[ICON_BULLET]空運部隊:</Text>
 		</Replace>
+
+		<Row Tag="TXT_KEY_BUILDING_AZTEC_HUEY_TEOCALLI_SP">
+			<Text>[COLOR_SELECTED_TEXT]休伊神廟[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_AZTEC_HUEY_TEOCALLI_SP_HELP">
+			<Text>
+				[ICON_BULLET]獲得兩個傳教士，所有城市獲得免費神廟。
+				[NEWLINE][ICON_BULLET]本城新建陸軍單位+15經驗。
+				[NEWLINE][ICON_BULLET]允許使用信仰購買美洲獅戰士和雄鷹戰士。
+				[NEWLINE][ICON_BULLET]可將陸軍軍事單位移至本城進行活人獻祭，獲得相當於軍事單位戰鬥力300%的[ICON_CULTURE]文化和[ICON_PEACE]信仰。
+				該單位有20%的概率存活，並且獲得晉升【戰神齊洛波奇特利之力】，+50生命值上限，戰鬥力+10%。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_AZTEC_HUEY_TEOCALLI_SP_TEXT">
+			<Text>
+				位於阿茲特克帝國的神廟是梯田狀的金字塔，頂端樹立著一座寺廟，這也是該區域所有重要宗教儀式的舉辦地。休伊神廟（或，按照西班牙語的說法，被稱為大神廟）是最宏偉的神廟，它矗立在特諾奇蒂特蘭中心，專為兩位神靈而修建：戰神維齊洛波奇特利和農業神塔多克（這也說明了阿茲特克文化中什麼東西比較重要）。每位神靈都有一座獨立廟宇，通過單獨的樓梯可到達。美索美洲金字塔常被重建，人們使用原結構為新塔做基座，將其不斷擴大。因此，休伊神廟在1325年建成後，又經歷了六次重建。在第七次，也是最後一次修建中，它被科爾特斯和其征服者洗劫並摧毀了。只留下了一些殘簷斷壁，但人們依然沉湎於對它的古怪慶祝活動中…比如，慶祝戰神維齊洛波奇特利的第十五月慶典，在該慶典上，會敬奉用莧屬植物種子、骨頭、蜂蜜和人血組成的神靈像，隨後將其留給平民食用。
+			</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_SP_MISSION_SACRIFICE_TITLE">
+			<Text>
+				活人獻祭
+			</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_SP_MISSION_SACRIFICE_TOOL_TIP">
+			<Text>
+				獲得相當於該單位戰鬥力{1_faithRate}%的[ICON_PEACE]信仰和{2_cultureRate}%的[ICON_CULTURE]文化。
+			</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_AZTEC_HUEY_TEOCALLI">
+			<Text>
+				戰神齊洛波奇特利之力
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_AZTEC_HUEY_TEOCALLI_HELP">
+			<Text>
+				生命值上限+50，戰鬥力+10%。
+			</Text>
+		</Row>
 	</Language_zh_Hant_HK>
 </GameData>

@@ -5843,6 +5843,14 @@
 			<Text>
 				+15% [ICON_PRODUCTION] Production when building Military Units in this City.
 				[NEWLINE]+15 Experience for Military Unit trained in this city.
+				[NEWLINE]Each Olympic arena can increase the base influence on city-states by 1, up to a maximum of 20.
+			</Text>
+		</Row>
+
+		<Row>
+			<Tag>TXT_KEY_BUILDING_GREEK_OLYMPICS_DUMMY_HELP</Tag>
+			<Text>
+				Increase the base influence on city-states by 1.
 			</Text>
 		</Row>
 		
@@ -9970,7 +9978,11 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_CITY_STATE_FRIENDSHIP">
-			<Text>City-State [ICON_INFLUENCE] Influence degrades at half and recovers at twice the normal rate. City-States do not become upset by intruding units and + 5 [ICON_INFLUENCE] Influence (at Standard speed) per turn with City-States you could demand tribute from.</Text>
+			<Text>
+				[ICON_BULLET]City-State [ICON_INFLUENCE] Influence degrades at half and recovers at twice the normal rate.
+				[NEWLINE][ICON_BULLET]City-States do not become upset by intruding units and + 5 [ICON_INFLUENCE] Influence (at Standard speed) per turn with City-States you could demand tribute from.
+				[NEWLINE][ICON_BULLET] Each allied city-state gives military units +3% combat power, up to 30%.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_RAZE_AND_HORSES">
@@ -9996,7 +10008,7 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_PHOENICIAN_HERITAGE">
-			<Text>+1 [ICON_PRODUCTION] Production for every Specialists. +4 [ICON_GOLD] Base Gold for every Sea International Trade Route and +25% Range for Cargoships.</Text>
+			<Text>+2 [ICON_PRODUCTION] Production for every Specialists. +4 [ICON_GOLD] Base Gold for every Sea International Trade Route and +25% Range for Cargoships.</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_EXTRA_TRADE">
@@ -10010,7 +10022,10 @@
 
 
 		<Replace Tag="TXT_KEY_TRAIT_SPICE">
-			<Text>The first 3 cities founded on continents other than where Indonesia started each provide 2 unique Luxury Resources. These 3 cities are free from Corruption and Public Security problems, cost No [ICON_GOLD] Gold maintance and can never be razed.</Text>
+			<Text>
+				[ICON_BULLET]The first 3 cities founded on continents other than where Indonesia started each provide 2 unique Luxury Resources. These 3 cities are free from Corruption and Public Security problems, cost No [ICON_GOLD] Gold maintance and can never be razed.
+				[NEWLINE][ICON_BULLET] For each luxury resource with a quantity greater than 1, the influence of [ICON_INFLUENCE] obtained by completing the city-state task +5%, the upper limit is 40%.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_GREAT_EXPANSE">
@@ -16090,5 +16105,46 @@
 		<Replace Tag="TXT_KEY_PEDIA_LEADER_FLAVOR_AIRLIFT">
 			<Text>[ICON_BULLET]Airlift:</Text>
 		</Replace>
+
+		<Row Tag="TXT_KEY_BUILDING_AZTEC_HUEY_TEOCALLI_SP">
+			<Text>[COLOR_SELECTED_TEXT]Huey Teocalli[ENDCOLOR]</Text>
+			</Row>
+		<Row Tag="TXT_KEY_BUILDING_AZTEC_HUEY_TEOCALLI_SP_HELP">
+			<Text>
+			[ICON_BULLET] Get two missionaries and all cities get free temples.
+			[NEWLINE][ICON_BULLET] New land army units in this city have +15 experience.
+			[NEWLINE][ICON_BULLET] Allow Faith to buy Cougar and Eagle Warriors.
+			[NEWLINE][ICON_BULLET] can move the army military unit to this city for human sacrifice, and get [ICON_CULTURE] culture and [ICON_PEACE] belief equivalent to 300% of the combat power of the military unit.
+			The unit has a 20% chance of surviving, and it will be promoted to [The Power of the God of War Zilopochtli], +50 maximum HP, and +10% combat power.
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_AZTEC_HUEY_TEOCALLI_SP_TEXT">
+			<Text>
+			The temples in the Aztec Empire were terraced pyramids topped by a temple, which was the site of all the important religious ceremonies in the region. The Temple of Huey (or, as it is called in Spanish, the Great Temple), the grandest temple, stands in the center of Tenochtitlan and is dedicated to two gods: Vezilo, the god of war Pochitelli and Tadoc, the god of agriculture (this also shows what was important in Aztec culture). Each deity has a separate temple, reached by a separate staircase. Mesoamerican pyramids were often rebuilt, using the original structures as bases for new towers that were continually enlarged. Thus, after its completion in 1325, the Temple of Huey was rebuilt six times. During its seventh and final construction, it was sacked and destroyed by Cortes and his conquerors. Only a few ruins remain, but people still indulge in eccentric celebrations of it...such as the fifteenth month celebration of the god of war, Vitzilopochtli, where amaranth is enshrined Deities made of plant seeds, bones, honey and human blood, which were then left for the common people to eat.
+			</Text>
+		</Row>
+			
+		<Row Tag="TXT_KEY_SP_MISSION_SACRIFICE_TITLE">
+			<Text>
+			Human Sacrifice
+			</Text>
+		</Row>
+			
+		<Row Tag="TXT_KEY_SP_MISSION_SACRIFICE_TOOL_TIP">
+			<Text>
+			Gain [ICON_PEACE] Faith equal to {1_faithRate}% of the unit's Combat Strength and [ICON_CULTURE] Culture equal to {2_cultureRate}%.
+			</Text>
+		</Row>
+			
+		<Row Tag="TXT_KEY_PROMOTION_AZTEC_HUEY_TEOCALLI">
+			<Text>
+			The Power of Zilopochtli
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_AZTEC_HUEY_TEOCALLI_HELP">
+			<Text>
+			HP upper limit +50, combat power +10%.
+			</Text>
+		</Row>
 	</Language_en_US>
 </GameData>

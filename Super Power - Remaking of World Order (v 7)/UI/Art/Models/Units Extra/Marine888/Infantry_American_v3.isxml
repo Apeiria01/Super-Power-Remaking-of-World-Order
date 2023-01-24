@@ -1,0 +1,74 @@
+<ISXMLData>
+  <Context>Unit</Context>
+  <Granny>
+    <Materials>
+      <Material>
+        <Name>Minuteman.001</Name>
+        <Shader>UnitShader_Skinned</Shader>
+        <BaseTextureMap>infantry_128.dds</BaseTextureMap>
+        <SREFMap>rifleman_sref.dds</SREFMap>
+        <IrradianceCubeMap>
+        </IrradianceCubeMap>
+        <DullEnvironmentCubeMap>
+        </DullEnvironmentCubeMap>
+        <EnvironmentCubeMap>
+        </EnvironmentCubeMap>
+        <DistanceFogRamp>
+        </DistanceFogRamp>
+      </Material>
+    </Materials>
+    <MeshMaterialBindings>
+      <MeshMaterialBinding>
+        <Mesh>Minuteman.001</Mesh>
+        <Material>Minuteman.001</Material>
+      </MeshMaterialBinding>
+    </MeshMaterialBindings>
+  </Granny>
+  <UnitFXSXML>
+    <AnimDefs />
+    <Template>Combat Land</Template>
+    <ActionMap />
+  </UnitFXSXML>
+  <UnitDetails>
+    <Unit>
+      <Class>UNITCLASS_INFANTRY_AMERICAN_V3</Class>
+      <Type>UNIT_INFANTRY_AMERICAN_V3</Type>
+      <Combat>6</Combat>
+      <Cost>1</Cost>
+      <Moves>2</Moves>
+      <CombatClass>UNITCOMBAT_MELEE</CombatClass>
+      <Domain>DOMAIN_LAND</Domain>
+      <DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
+      <MilitarySupport>True</MilitarySupport>
+      <Pillage>True</Pillage>
+      <XPValueAttack>3</XPValueAttack>
+      <XPValueDefence>3</XPValueDefence>
+      <Conscription>1</Conscription>
+      <UnitFlagIconOffset>3</UnitFlagIconOffset>
+      <IconAtlas>UNIT_ATLAS_1</IconAtlas>
+      <PortraitIndex>3</PortraitIndex>
+      <DescriptionKey>TXT_KEY_UNIT_INFANTRY_AMERICAN_V3</DescriptionKey>
+      <DescriptionText>Infantry_american_v3</DescriptionText>
+      <CivilopediaKey>TXT_KEY_CIVIL_UNIT_INFANTRY_AMERICAN_V3</CivilopediaKey>
+      <CivilopediaText>Created By Indiestone Nexus Buddy.</CivilopediaText>
+      <StrategyKey>TXT_KEY_STRATEGY_UNIT_INFANTRY_AMERICAN_V3</StrategyKey>
+      <StrategyText>Created By Indiestone Nexus Buddy.</StrategyText>
+      <HelpKey>TXT_KEY_HELP_UNIT_INFANTRY_AMERICAN_V3</HelpKey>
+      <HelpText>Created By Indiestone Nexus Buddy.</HelpText>
+    </Unit>
+    <Art>
+      <MemberType>ART_DEF_UNIT_MEMBER_INFANTRY_AMERICAN_V3</MemberType>
+      <fScale>0.14</fScale>
+      <CombatTemplate>ART_DEF_TEMPLATE_WARRIOR</CombatTemplate>
+      <MaterialTypeTag>CLOTH</MaterialTypeTag>
+      <MaterialTypeSoundOverrideTag>FLESH</MaterialTypeSoundOverrideTag>
+      <UnitType>ART_DEF_UNIT_INFANTRY_AMERICAN_V3</UnitType>
+      <Formation>Warrior</Formation>
+      <MemberCount>12</MemberCount>
+    </Art>
+  </UnitDetails>
+  <ModBuddy>
+    <Project>
+    </Project>
+  </ModBuddy>
+</ISXMLData>
