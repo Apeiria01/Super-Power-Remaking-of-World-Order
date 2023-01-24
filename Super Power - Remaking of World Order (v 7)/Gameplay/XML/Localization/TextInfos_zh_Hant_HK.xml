@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <GameData>
 	<Language_zh_Hant_HK>
 <!--Civilopedias-->
@@ -5439,11 +5439,13 @@
 			<Text>佔領一座城市時免費獲得其所屬文明擁有的一項科技。通過交易獲得城市除外，每座城市僅在首次佔領時有效。如果城市攻佔後不少於5人口，你的[ICON_CAPITAL]首都[ICON_CITIZEN]人口+1。</Text>
 		</Replace>
 
-		<Text>
-			[ICON_BULLET]對城邦[ICON_INFLUENCE]影響力衰減速度減半，恢復速度加倍。對於能夠勒索的城邦每回合額外獲得5點[ICON_INFLUENCE]影響力（標準速度下）
-			[NEWLINE][ICON_BULLET]軍隊在城邦境內停留時不會影響關係。
-			[NEWLINE][ICON_BULLET]每個同盟城邦為軍事單位+3%戰鬥力，上限為30%。
-		</Text>
+		<Replace Tag="TXT_KEY_TRAIT_CITY_STATE_FRIENDSHIP">
+			<Text>
+				[ICON_BULLET]對城邦[ICON_INFLUENCE]影響力衰減速度減半，恢復速度加倍。對於能夠勒索的城邦每回合額外獲得5點[ICON_INFLUENCE]影響力（標準速度下）
+				[NEWLINE][ICON_BULLET]軍隊在城邦境內停留時不會影響關係。
+				[NEWLINE][ICON_BULLET]每個同盟城邦為軍事單位+3%戰鬥力，上限為30%。
+			</Text>
+		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_RAZE_AND_HORSES">
 			<Text>擊敗蠻族營寨中的單位會加入匈人軍隊。每夷平一座城市都會獲得當前回合數*10的[ICON_GOLD]金幣、[ICON_RESEARCH]科技值、[ICON_CULTURE]文化值、[ICON_PEACE]信仰值（最多1000）。城市名從其他文明借用。</Text>
