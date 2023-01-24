@@ -2292,6 +2292,14 @@
 			<UnitType>UNIT_JAPANESE_SAMURAI</UnitType>
 			<PromotionType>PROMOTION_IGNORE_TERRAIN_COST</PromotionType>
 		</Row>
+		<Row>
+			<UnitType>UNIT_JAPANESE_SAMURAI</UnitType>
+			<PromotionType>PROMOTION_JAPANESE_SAMURAI</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_JAPANESE_SAMURAI</UnitType>
+			<PromotionType>PROMOTION_JAPANESE_SAMURAI_CULTURE</PromotionType>
+		</Row>
 
 		<Row>
 			<UnitType>UNIT_DANISH_BERSERKER</UnitType>

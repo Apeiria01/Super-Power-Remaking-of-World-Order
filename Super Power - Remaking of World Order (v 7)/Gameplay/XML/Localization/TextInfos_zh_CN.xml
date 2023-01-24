@@ -10978,7 +10978,7 @@
 
 		<Replace Tag="TXT_KEY_UNIT_HELP_LANCER">
 			<Text>以骑枪作为武器的重装骑兵，拥有进攻加成，可以轻松突破对方的步兵防线。</Text>
-		</Replace>
+		</Replace>ION_EXTRA_SIGHT_
 
 		<Replace Tag="TXT_KEY_UNIT_HELP_ANTI_AIRCRAFT_GUN">
 			<Text>能够拦截试图轰炸3格内单位的敌方飞机。同时可以平向攻击2格内的地面单位。但是其除了攻击直升机单位外会受到战斗力减成。</Text>
@@ -11007,6 +11007,19 @@
 		<Replace Tag="TXT_KEY_UNIT_HELP_SAMURAI">
 			<Text>中古时代强大的步兵单位。日本特色单位，替代近卫军。该单位能在城市中建立“道场”。</Text>
 		</Replace>
+		<Row Tag = "TXT_KEY_PROMOTION_JAPANESE_SAMURAI">
+			<Text>刀</Text>
+		</Row>
+		<Row Tag = "TXT_KEY_PROMOTION_JAPANESE_SAMURAI_HELP">
+			<Text>夹击加成+5%。</Text>
+		</Row>
+		<Row Tag = "TXT_KEY_PROMOTION_JAPANESE_SAMURAI_CULTURE">
+			<Text>菊</Text>
+		</Row>
+		<Row Tag = "TXT_KEY_PROMOTION_JAPANESE_SAMURAI_CULTURE_HELP">
+			<Text>消灭敌人时获得相当于单位[ICON_STRENGTH]战斗力50%的[ICON_CULTURE]文化。</Text>
+		</Row>
+
 
 		<Replace Tag="TXT_KEY_UNIT_JAPANESE_ZERO_STRATEGY">
 			<Text>零式战斗机是日本文明的特色单位，取代俯冲轰炸机。零式拥有对抗其他战斗机的加成，因此其攻击时即使遭遇拦截也能够完成任务。由于其适于大规模生产，请一次性部署大量零式战斗机进行作战。</Text>

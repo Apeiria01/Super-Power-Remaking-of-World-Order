@@ -12926,6 +12926,20 @@
 		<Text>A mutil-purpose Attacking Aircraft. Only the Japanese may build it. This Unit can not only attack land or naval units but also can perform an air sweep to take down enemy intercepting fighters. </Text>
 	</Replace>
 
+	<Row Tag = "TXT_KEY_PROMOTION_JAPANESE_SAMURAI">
+		<Text>The Sword</Text>
+	</Row>
+	<Row Tag = "TXT_KEY_PROMOTION_JAPANESE_SAMURAI_HELP">
+		<Text>Flank Attack bonus +5%.</Text>
+	</Row>
+	<Row Tag = "TXT_KEY_PROMOTION_JAPANESE_SAMURAI_CULTURE">
+		<Text>The Chrysanthemum</Text>
+	</Row>
+	<Row Tag = "TXT_KEY_PROMOTION_JAPANESE_SAMURAI_CULTURE_HELP">
+		<Text>Can earn culture [ICON_CULTURE] points for each enemy killed (50% of its [ICON_STRENGTH] Combat Strength).</Text>
+	</Row>
+
+
 
 
 		<Replace Tag="TXT_KEY_UNIT_BERBER_CAVALRY">

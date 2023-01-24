@@ -10757,6 +10757,19 @@
 		<Replace Tag="TXT_KEY_UNIT_HELP_SAMURAI">
 			<Text>中古時代強大的步兵單位。日本特色單位，替代近衛軍。該單位能夠更快壓制城市抵抗，並能在城市中建立“道場”。</Text>
 		</Replace>
+		<Row Tag = "TXT_KEY_PROMOTION_JAPANESE_SAMURAI">
+			<Text>刀</Text>
+		</Row>
+		<Row Tag = "TXT_KEY_PROMOTION_JAPANESE_SAMURAI_HELP">
+			<Text>夹击加成+5%。</Text>
+		</Row>
+		<Row Tag = "TXT_KEY_PROMOTION_JAPANESE_SAMURAI_CULTURE">
+			<Text>菊</Text>
+		</Row>
+		<Row Tag = "TXT_KEY_PROMOTION_JAPANESE_SAMURAI_CULTURE_HELP">
+			<Text>消滅敵人時獲得相當於單位[ICON_STRENGTH]戰鬥力50%的[ICON_CULTURE]文化。</Text>
+		</Row>
+
 		
 		<Replace Tag="TXT_KEY_UNIT_JAPANESE_ZERO_STRATEGY">
 			<Text>零式戰鬥機是日本文明的特色單位，取代俯衝轟炸機。零式擁有對抗其他戰鬥機的加成，因此其攻擊時即使遭遇攔截也能夠完成任務。由於其適於大規模生產，請一次性部署大量零式戰鬥機進行作戰。</Text>
