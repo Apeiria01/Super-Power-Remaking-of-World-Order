@@ -186,7 +186,7 @@
 		</Row>
 		<Row>
 			<CivilizationType>CIVILIZATION_JAPAN</CivilizationType>
-			<UnitClassType>UNITCLASS_NATIONAL_GUARD</UnitClassType>
+			<UnitClassType>UNITCLASS_LONGSWORDSMAN</UnitClassType>
 			<UnitType>UNIT_JAPANESE_SAMURAI</UnitType>
 		</Row>
 

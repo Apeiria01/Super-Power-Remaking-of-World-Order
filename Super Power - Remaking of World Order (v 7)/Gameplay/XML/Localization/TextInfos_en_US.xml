@@ -11385,7 +11385,7 @@
 		</Row>
 
 		<Replace Tag="TXT_KEY_UNIT_JAPANESE_SAMURAI">
-			<Text>[COLOR_SELECTED_TEXT]Samurai[ENDCOLOR]</Text>
+			<Text>[COLOR_SELECTED_TEXT]Hatamoto[ENDCOLOR]</Text>
 			<Plurality>2</Plurality>
 		</Replace>
 
@@ -12909,7 +12909,12 @@
 
 	<!-- *************************Unique Units Texts****************************-->
 	<Replace Tag="TXT_KEY_UNIT_JAPANESE_SAMURAI_STRATEGY">
-		<Text>The Samurai is the Japanese unique unit, replacing the Longswordsman. As powerful as the Swordsman, the Samurai is built with "Volley I" Promotion so it is powerful attacking enemy cities and fortified units. Success in combat with a Samurai has an increased chance of generating Great Generals. </Text>
+		<Text>
+			The Hatamoto is the Japanese unique unit, replacing the Longswordsman. 
+			[NEWLINE][ICON_BULLET]Flank Attack bonus +5%, +1 [ICON_MOVES] Movement;
+			[NEWLINE][ICON_BULLET]Can earn culture [ICON_CULTURE] points for each enemy killed (50% of its [ICON_STRENGTH] Combat Strength).
+			[NEWLINE][ICON_BULLET]Can build Dojo in city.
+		</Text>
 	</Replace>
 	<Replace Tag="TXT_KEY_UNIT_HELP_SAMURAI">
 		<Text>Unique unit of the Japanese civilization. Strong vs Cities and fortified units. Replaces the Longswordsman. </Text>

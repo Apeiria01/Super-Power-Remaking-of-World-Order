@@ -337,37 +337,7 @@
 			<PortraitIndex>51</PortraitIndex>
 			<ExtraMaintenanceCost>5</ExtraMaintenanceCost>
 		</Row>
-		<Row>
-			<Class>UNITCLASS_NATIONAL_GUARD</Class>
-			<Type>UNIT_JAPANESE_SAMURAI</Type>
-			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<BaseSightRange>4</BaseSightRange>
-			<Combat>18</Combat>
-			<Cost>100</Cost>
-			<Moves>3</Moves>
-			<CombatClass>UNITCOMBAT_GUN</CombatClass>
-			<Domain>DOMAIN_LAND</Domain>
-			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_JAPANESE_SAMURAI</Description>
-			<Civilopedia>TXT_KEY_CIVILOPEDIA_UNITS_MEDIEVAL_SAMURAI_TEXT</Civilopedia>
-			<Strategy>TXT_KEY_SP_UNITS_SPECIAL_FORCES_STRATEGY</Strategy>
-			<Help>TXT_KEY_PROMOTION_SPECIAL_FORCES_COMBAT_HELP</Help>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
-			<Pillage>true</Pillage>
-			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
-			<ObsoleteTech>TECH_FLIGHT</ObsoleteTech>
-			<XPValueAttack>6</XPValueAttack>
-			<XPValueDefense>6</XPValueDefense>
-			<Conscription>3</Conscription>
-			<UnitArtInfo>ART_DEF_UNIT_U_JAPANESE_SAMURAI</UnitArtInfo>
-			<UnitFlagIconOffset>36</UnitFlagIconOffset>
-			<IconAtlas>UNIT_ATLAS_1</IconAtlas>
-			<PortraitIndex>37</PortraitIndex>
-			<ExtraMaintenanceCost>5</ExtraMaintenanceCost>
-		</Row>
-	
+
 		<Row>
 			<Class>UNITCLASS_GUN_GUARD</Class>
 			<Type>UNIT_FRENCH_MUSKETEER</Type>
@@ -752,6 +722,38 @@
 			<PortraitIndex>36</PortraitIndex>
 			<ExtraMaintenanceCost>4</ExtraMaintenanceCost>
 		</Row>
+
+		<Row>
+			<Class>UNITCLASS_LONGSWORDSMAN</Class>
+			<Type>UNIT_JAPANESE_SAMURAI</Type>
+			<PrereqTech>TECH_STEEL</PrereqTech>
+			<BaseSightRange>2</BaseSightRange>
+			<Combat>30</Combat>
+			<Cost>90</Cost>
+			<Moves>3</Moves>
+			<CombatClass>UNITCOMBAT_MELEE</CombatClass>
+			<Domain>DOMAIN_LAND</Domain>
+			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_JAPANESE_SAMURAI</Description>
+			<Civilopedia>TXT_KEY_CIVILOPEDIA_UNITS_MEDIEVAL_SAMURAI_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_SP_UNITS_LAND_INFANTRY_STRATEGY</Strategy>
+			<Help>TXT_KEY_PROMOTION_INFANTRY_COMBAT_HELP</Help>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<Pillage>true</Pillage>
+			<ObsoleteTech>TECH_FLIGHT</ObsoleteTech>
+			<GoodyHutUpgradeUnitClass>UNITCLASS_MUSKETMAN</GoodyHutUpgradeUnitClass>
+			<AdvancedStartCost>20</AdvancedStartCost>
+			<XPValueAttack>3</XPValueAttack>
+			<XPValueDefense>3</XPValueDefense>
+			<Conscription>3</Conscription>
+			<UnitArtInfo>ART_DEF_UNIT_U_JAPANESE_SAMURAI</UnitArtInfo>
+			<UnitFlagIconOffset>36</UnitFlagIconOffset>
+			<IconAtlas>UNIT_ATLAS_1</IconAtlas>
+			<PortraitIndex>37</PortraitIndex>
+			<ExtraMaintenanceCost>4</ExtraMaintenanceCost>
+		</Row>
+
 		<Row>
 			<Class>UNITCLASS_LONGSWORDSMAN</Class>
 			<Type>UNIT_KRIS_SWORDSMAN</Type>
@@ -1789,11 +1791,6 @@
 			<UnitType>UNIT_NATIONAL_GUARD</UnitType>
 			<UnitClassType>UNITCLASS_GUN_GUARD</UnitClassType>
 		</Row>
-		<Row>
-			<UnitType>UNIT_JAPANESE_SAMURAI</UnitType>
-			<UnitClassType>UNITCLASS_GUN_GUARD</UnitClassType>
-		</Row>
-
 		
 		<Row>
 			<UnitType>UNIT_FRENCH_MUSKETEER</UnitType>
@@ -1840,6 +1837,10 @@
 
 		<Row>
 			<UnitType>UNIT_LONGSWORDSMAN</UnitType>
+			<UnitClassType>UNITCLASS_MUSKETMAN</UnitClassType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_JAPANESE_SAMURAI</UnitType>
 			<UnitClassType>UNITCLASS_MUSKETMAN</UnitClassType>
 		</Row>
 		<Row>
@@ -2078,14 +2079,6 @@
 			<UnitType>UNIT_NATIONAL_GUARD</UnitType>
 			<PromotionType>PROMOTION_IGNORE_TERRAIN_COST</PromotionType>
 		</Row>
-		<Row>
-			<UnitType>UNIT_JAPANESE_SAMURAI</UnitType>
-			<PromotionType>PROMOTION_SPECIAL_FORCES_COMBAT</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_JAPANESE_SAMURAI</UnitType>
-			<PromotionType>PROMOTION_IGNORE_TERRAIN_COST</PromotionType>
-		</Row>
 		
 		
 		<Row>
@@ -2290,6 +2283,16 @@
 			<UnitType>UNIT_LONGSWORDSMAN</UnitType>
 			<PromotionType>PROMOTION_INFANTRY_COMBAT</PromotionType>
 		</Row>
+
+		<Row>
+			<UnitType>UNIT_JAPANESE_SAMURAI</UnitType>
+			<PromotionType>PROMOTION_INFANTRY_COMBAT</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_JAPANESE_SAMURAI</UnitType>
+			<PromotionType>PROMOTION_IGNORE_TERRAIN_COST</PromotionType>
+		</Row>
+
 		<Row>
 			<UnitType>UNIT_DANISH_BERSERKER</UnitType>
 			<PromotionType>PROMOTION_INFANTRY_COMBAT</PromotionType>
@@ -2730,6 +2733,10 @@
 			<ResourceType>RESOURCE_IRON</ResourceType>
 		</Row>
 		<Row>
+			<UnitType>UNIT_JAPANESE_SAMURAI</UnitType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+		</Row>
+		<Row>
 			<UnitType>UNIT_DANISH_BERSERKER</UnitType>
 			<ResourceType>RESOURCE_IRON</ResourceType>
 		</Row>
@@ -3011,14 +3018,7 @@
 			<UnitType>UNIT_NATIONAL_GUARD</UnitType>
 			<UnitAIType>UNITAI_EXPLORE</UnitAIType>
 		</Row>
-		<Row>
-			<UnitType>UNIT_JAPANESE_SAMURAI</UnitType>
-			<UnitAIType>UNITAI_ATTACK</UnitAIType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_JAPANESE_SAMURAI</UnitType>
-			<UnitAIType>UNITAI_EXPLORE</UnitAIType>
-		</Row>
+
 		
 		<Row>
 			<UnitType>UNIT_FRENCH_MUSKETEER</UnitType>
@@ -3189,6 +3189,16 @@
 			<UnitType>UNIT_LONGSWORDSMAN</UnitType>
 			<UnitAIType>UNITAI_DEFENSE</UnitAIType>
 		</Row>
+
+		<Row>
+			<UnitType>UNIT_JAPANESE_SAMURAI</UnitType>
+			<UnitAIType>UNITAI_ATTACK</UnitAIType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_JAPANESE_SAMURAI</UnitType>
+			<UnitAIType>UNITAI_DEFENSE</UnitAIType>
+		</Row>
+
 		<Row>
 			<UnitType>UNIT_DANISH_BERSERKER</UnitType>
 			<UnitAIType>UNITAI_ATTACK</UnitAIType>
@@ -3497,17 +3507,6 @@
 			<FlavorType>FLAVOR_RECON</FlavorType>
 			<Flavor>6</Flavor>
 		</Row>
-
-		<Row>
-			<UnitType>UNIT_JAPANESE_SAMURAI</UnitType>
-			<FlavorType>FLAVOR_OFFENSE</FlavorType>
-			<Flavor>1</Flavor>
-		</Row>
-		<Row>
-			<UnitType>UNIT_JAPANESE_SAMURAI</UnitType>
-			<FlavorType>FLAVOR_RECON</FlavorType>
-			<Flavor>1</Flavor>
-		</Row>
 		
 
 		<Row>
@@ -3727,6 +3726,18 @@
 			<FlavorType>FLAVOR_DEFENSE</FlavorType>
 			<Flavor>35</Flavor>
 		</Row>
+
+		<Row>
+			<UnitType>UNIT_JAPANESE_SAMURAI</UnitType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_JAPANESE_SAMURAI</UnitType>
+			<FlavorType>FLAVOR_RECON</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+
 		<Row>
 			<UnitType>UNIT_DANISH_BERSERKER</UnitType>
 			<FlavorType>FLAVOR_OFFENSE</FlavorType>
