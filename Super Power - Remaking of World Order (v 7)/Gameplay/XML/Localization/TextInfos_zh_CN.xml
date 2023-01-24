@@ -3140,6 +3140,14 @@
 			<Text>
 				本城市建造军事单位时+15%[ICON_PRODUCTION]产能。
 				[NEWLINE]新建军事单位+15经验。
+				[NEWLINE]每一个奥林匹克竞技场能使对城邦的基准影响力上升1，最大为20。
+			</Text>
+		</Row>
+
+		<Row>
+			<Tag>TXT_KEY_BUILDING_GREEK_OLYMPICS_DUMMY_HELP</Tag>
+			<Text>
+				对城邦的基准影响力上升1
 			</Text>
 		</Row>
 
@@ -5555,7 +5563,11 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_CITY_STATE_FRIENDSHIP">
-			<Text>对城邦[ICON_INFLUENCE]影响力衰减速度减半，恢复速度加倍。对于能够勒索的城邦每回合额外获得5点[ICON_INFLUENCE]影响力（标准速度下）,军队在城邦境内停留时不会影响关系。</Text>
+			<Text>
+				[ICON_BULLET]对城邦[ICON_INFLUENCE]影响力衰减速度减半，恢复速度加倍。
+				[NEWLINE][ICON_BULLET]军队在城邦境内停留时不会影响关系。对于能够勒索的城邦每回合额外获得5点[ICON_INFLUENCE]影响力（标准速度下）。
+				[NEWLINE][ICON_BULLET]每个同盟城邦为军事单位+3%战斗力，上限为30%。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_RAZE_AND_HORSES">
@@ -5591,7 +5603,10 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_SPICE">
-			<Text>在非出生地大陆建造的前三座城市可以提供2份独有奢侈资源，这三座城市无法被摧毁且没有额外的管理成本。</Text>
+			<Text>
+				[ICON_BULLET]在非出生地大陆建造的前三座城市可以提供2份独有奢侈资源，这三座城市无法被摧毁且没有额外的管理成本。
+				[NEWLINE][ICON_BULLET]每拥有一种数量大于1的奢侈资源，完成城邦任务获得的[ICON_INFLUENCE]影响力+5%，上限为40%
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_GREAT_EXPANSE">

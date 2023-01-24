@@ -704,6 +704,11 @@
 			<Set Value="4"/>
 			<Where Name="BASE_CULTURE_PER_GREAT_WORK" />
 		</Update>
+
+		<Row>
+			<Name>GREEK_UB_DUMMY_MAX</Name>
+			<Value>20</Value>
+		</Row>
 	</Defines>
 	
 	

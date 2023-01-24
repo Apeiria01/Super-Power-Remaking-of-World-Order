@@ -5843,6 +5843,14 @@
 			<Text>
 				+15% [ICON_PRODUCTION] Production when building Military Units in this City.
 				[NEWLINE]+15 Experience for Military Unit trained in this city.
+				[NEWLINE]Each Olympic arena can increase the base influence on city-states by 1, up to a maximum of 20.
+			</Text>
+		</Row>
+
+		<Row>
+			<Tag>TXT_KEY_BUILDING_GREEK_OLYMPICS_DUMMY_HELP</Tag>
+			<Text>
+				Increase the base influence on city-states by 1.
 			</Text>
 		</Row>
 		
@@ -9970,7 +9978,11 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_CITY_STATE_FRIENDSHIP">
-			<Text>City-State [ICON_INFLUENCE] Influence degrades at half and recovers at twice the normal rate. City-States do not become upset by intruding units and + 5 [ICON_INFLUENCE] Influence (at Standard speed) per turn with City-States you could demand tribute from.</Text>
+			<Text>
+				[ICON_BULLET]City-State [ICON_INFLUENCE] Influence degrades at half and recovers at twice the normal rate.
+				[NEWLINE][ICON_BULLET]City-States do not become upset by intruding units and + 5 [ICON_INFLUENCE] Influence (at Standard speed) per turn with City-States you could demand tribute from.
+				[NEWLINE][ICON_BULLET] Each allied city-state gives military units +3% combat power, up to 30%.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_RAZE_AND_HORSES">
@@ -10010,7 +10022,10 @@
 
 
 		<Replace Tag="TXT_KEY_TRAIT_SPICE">
-			<Text>The first 3 cities founded on continents other than where Indonesia started each provide 2 unique Luxury Resources. These 3 cities are free from Corruption and Public Security problems, cost No [ICON_GOLD] Gold maintance and can never be razed.</Text>
+			<Text>
+				[ICON_BULLET]The first 3 cities founded on continents other than where Indonesia started each provide 2 unique Luxury Resources. These 3 cities are free from Corruption and Public Security problems, cost No [ICON_GOLD] Gold maintance and can never be razed.
+				[NEWLINE][ICON_BULLET] For each luxury resource with a quantity greater than 1, the influence of [ICON_INFLUENCE] obtained by completing the city-state task +5%, the upper limit is 40%.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_GREAT_EXPANSE">

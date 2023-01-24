@@ -3060,8 +3060,15 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_GREEK_OLYMPICS_HELP</Tag>
 			<Text>
-				本城市建造軍事單位時+15%[ICON_PRODUCTION]生產力，
+				本城市建造軍事單位時+15%[ICON_PRODUCTION]產能。
 				[NEWLINE]新建軍事單位+15經驗。
+				[NEWLINE]每一個奧林匹克競技場能使對城邦的基準影響力上升1，最大為20。
+			</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_BUILDING_GREEK_OLYMPICS_DUMMY_HELP</Tag>
+			<Text>
+				對城邦的基準影響力上升1。
 			</Text>
 		</Row>
 		
@@ -5440,7 +5447,11 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_CITY_STATE_FRIENDSHIP">
-			<Text>對城邦[ICON_INFLUENCE]影響力衰減速度減半，恢復速度加倍。對於能夠勒索的城邦每回合額外獲得5點[ICON_INFLUENCE]影響力（標準速度下）,軍隊在城邦境內停留時不會影響關係。</Text>
+			<Text>
+				[ICON_BULLET]對城邦[ICON_INFLUENCE]影響力衰減速度減半，恢復速度加倍。對於能夠勒索的城邦每回合額外獲得5點[ICON_INFLUENCE]影響力（標準速度下）
+				[NEWLINE][ICON_BULLET]軍隊在城邦境內停留時不會影響關係。
+				[NEWLINE][ICON_BULLET]每個同盟城邦為軍事單位+3%戰鬥力，上限為30%。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_RAZE_AND_HORSES">
@@ -5476,7 +5487,10 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_SPICE">
-			<Text>在非出生地大陸建造的前三座城市可以提供2份獨有奢侈資源，這三座城市無法被摧毀且沒有額外的管理成本。</Text>
+			<Text>
+				[ICON_BULLET]在非出生地大陸建造的前三座城市可以提供2份獨有奢侈資源，這三座城市無法被摧毀且沒有額外的管理成本。
+				[NEWLINE][ICON_BULLET]每擁有一種數量大於1的奢侈資源，完成城邦任務獲得的[ICON_INFLUENCE]影響力+5%，上限為40%
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_GREAT_EXPANSE">
