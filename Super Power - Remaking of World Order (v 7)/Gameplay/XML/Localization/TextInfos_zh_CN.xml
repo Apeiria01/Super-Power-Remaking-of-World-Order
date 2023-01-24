@@ -2520,6 +2520,11 @@
 			<Text>提供额外[ICON_RES_CONSUMER]商品</Text>
 		</Row>
 		
+		<Row>
+			<Tag>TXT_KEY_BUILDING_ELECTRICITY_BONUS</Tag>
+			<Text>提供额外[ICON_RES_ELECTRICITY]电力</Text>
+		</Row>
+	
 		<Row Tag="TXT_KEY_BUILDING_CIV_S_P_MAN_RESOURCES">
 			<Text>1[ICON_RES_MANPOWER]人力</Text>
 		</Row>
@@ -6529,33 +6534,40 @@
 		<Replace Tag="TXT_KEY_POLICY_BRANCH_EXPLORATION_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]海事政策[ENDCOLOR]提高帝国沿海城市的产出以及向海外扩张的能力。
-				[NEWLINE][NEWLINE]启用海事政策可以使你的移民在境外不会损耗，工人、移民、考古学家、传教士以及大先知+1[ICON_MOVES]移动，所有的海运单位+1[ICON_MOVES]移动，海军统帅+3[ICON_MOVES]移动、所有海军单位可以进入大洋。解锁奇观鹿特丹港和大铁厂。
-				[NEWLINE][NEWLINE]启用了所有的探索政策树下的政策后，立即获得一个海军统帅，海军统帅的产生速率+50%。并允许在工业时代以后使用[ICON_PEACE]信仰购买海军统帅。此后海军统帅可以无消耗建造军事学院。
+				[NEWLINE][NEWLINE]启用海事政策:
+				[NEWLINE][ICON_BULLET]你的移民在境外不会损耗，工人、移民、考古学家、传教士以及大先知+1[ICON_MOVES]移动。
+				[NEWLINE][ICON_BULLET]所有的海运单位+1[ICON_MOVES]移动，海军统帅+3[ICON_MOVES]移动，所有海军单位可以进入大洋。
+				[NEWLINE][ICON_BULLET]解锁奇观鹿特丹港和大铁厂。
+				[NEWLINE][NEWLINE]启用了所有的探索政策树下的政策后：
+				[NEWLINE][ICON_BULLET]立即获得一个海军统帅，海军统帅的产生速率+50%。
+				[NEWLINE][ICON_BULLET]允许在工业时代以后使用[ICON_PEACE]信仰购买海军统帅。此后海军统帅可以无消耗建造军事学院。
 			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_MARITIME_INFRASTRUCTURE_HELP" >
 			<Text>
-				[COLOR_POSITIVE_TEXT]海上设施[ENDCOLOR][NEWLINE]沿海城市+3[ICON_PRODUCTION]产能。
-				[NEWLINE]所有渔船、捕捞船和海上石油平台+1[ICON_PRODUCTION]产能。
-				[NEWLINE]工人修建海上设施的速度+50%。
+				[COLOR_POSITIVE_TEXT]海上设施[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]沿海城市+3[ICON_PRODUCTION]产能。
+				[NEWLINE][ICON_BULLET]所有渔船、捕捞船和海上石油平台+1[ICON_PRODUCTION]产能。
+				[NEWLINE][ICON_BULLET]工人修建海上设施的速度+50%。
 			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_MERCHANT_NAVY_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]商船舰队[ENDCOLOR]
-				[NEWLINE]获得一条额外的商路。[NEWLINE]所有海上商路+6[ICON_GOLD]金钱。
-				[NEWLINE]所有沿海城市+3[ICON_RES_CONSUMER]商品。
-				[NEWLINE]可以使用[ICON_PEACE]信仰购买商船。
+				[NEWLINE][ICON_BULLET]获得一条额外的商路。
+				[NEWLINE][ICON_BULLET]所有海上商路+6[ICON_GOLD]金钱。
+				[NEWLINE][ICON_BULLET]所有沿海城市+3[ICON_RES_CONSUMER]商品。
+				[NEWLINE][ICON_BULLET]可以使用[ICON_PEACE]信仰购买商船。
 			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_NAVAL_TRADITION_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]海军传统[ENDCOLOR]
-				[NEWLINE]所有沿海城市+3[ICON_CULTURE]文化。
-				[NEWLINE]每处灯塔、港口和海运码头+2[ICON_CULTURE]文化。
+				[NEWLINE][ICON_BULLET]所有沿海城市+3[ICON_CULTURE]文化。
+				[NEWLINE][ICON_BULLET]每处灯塔、港口和海运码头+2[ICON_CULTURE]文化。
 			</Text>
 		</Replace>
 
@@ -6565,9 +6577,9 @@
 		<Row Tag="TXT_KEY_POLICY_COASTAL_ADMINISTRATION_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]海事管理[ENDCOLOR]
-				[NEWLINE]灯塔、港口、码头使所在城市的[ICON_PRODUCTION]产能和[ICON_RESEARCH]科研产出提高3%。
-				[NEWLINE]海运码头、船坞使所在城市的[ICON_PRODUCTION]产能和[ICON_RESEARCH]科研产出提高5%。
-				[NEWLINE]灯塔、港口、码头、海运码头、船坞+4[ICON_GOLD]金钱。
+				[NEWLINE][ICON_BULLET]灯塔、港口、码头使所在城市的[ICON_PRODUCTION]产能和[ICON_RESEARCH]科研产出提高3%。
+				[NEWLINE][ICON_BULLET]海运码头、船坞使所在城市的[ICON_PRODUCTION]产能和[ICON_RESEARCH]科研产出提高5%。
+				[NEWLINE][ICON_BULLET]灯塔、港口、码头、海运码头、船坞+4[ICON_GOLD]金钱。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_COASTAL_ADMINISTRATION_TEXT">
@@ -6577,8 +6589,9 @@
 		<Replace Tag="TXT_KEY_POLICY_NAVIGATION_SCHOOL_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]航海学校[ENDCOLOR]
-				[NEWLINE]每处灯塔、港口、海运码头和船坞+1本地[ICON_HAPPINESS_1]快乐。建造海上单位时+15%[ICON_PRODUCTION]产能积累。新训练的海军单位+15点经验。
-				[NEWLINE]当你训练或购买了一个远洋海军单位时，获得一次性的[ICON_CULTURE]文化加成(其数值相当于单位的100%[ICON_STRENGTH]战斗力)。
+				[NEWLINE][ICON_BULLET]每处灯塔、港口、海运码头和船坞+1本地[ICON_HAPPINESS_1]快乐。建造海上单位时+15%[ICON_PRODUCTION]产能积累。
+				[NEWLINE][ICON_BULLET]新训练的海军单位+15点经验。
+				[NEWLINE][ICON_BULLET]当你训练或购买了一个远洋海军单位时，获得一次性的[ICON_CULTURE]文化加成(其数值相当于单位的100%[ICON_STRENGTH]战斗力)。
 			</Text>
 		</Replace>
 
@@ -6586,7 +6599,10 @@
 			<Text>制海权</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_TREASURE_FLEETS_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]制海权[ENDCOLOR][NEWLINE]所有海军单位+1[ICON_MOVES]移动，+1视野并+15%[ICON_STRENGTH]战斗力。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]制海权[ENDCOLOR]
+				[NEWLINE]所有海军单位+1[ICON_MOVES]移动，+1视野并+15%[ICON_STRENGTH]战斗力。
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_TREASURE_FLEETS_TEXT">
 			<Text>制海权（英语：Thalassocracy），是一种军事理论，指海军兵力在一定时间、一定海域内所掌握的控制权。制海权在马汉的《海权论》中认为，是国家遂行海权运作的一部分。古典海军的军事理论，在战术层面部分，多属帆船时代至地理大发现间的海战经验分析。在如今军事科技的快速发展下，于实战上已经过时；然而，其核心概念的制海权，是最重要也最基本的概念，所以至今仍是海军战略研究的课题。</Text>
@@ -9627,7 +9643,7 @@
 			<Text>这种官方编号为99A（99A2为早期误传）的主战坦克由中国北方车辆研究所即201所研制，是99式坦克的大改型号，最终更接近一辆崭新的坦克。是中国顶尖坦克工业的集大成者，仅有美国M1A2SEPV3可与之匹敌，即所谓的“三代半”主战坦克。这种坦克在研制成功之后，按照解放军惯例率先少量装备在有“万岁军”之称的38军112机械化步兵师，现已投入大批量生产，是未来中国机械化步兵和装甲兵的主力之一。
 					[NEWLINE]一台12150L型1500马力发动机和先进的传动系统为这种58吨的庞然大物提供了充沛的动力，其最厚处物理厚度超过一米的前装甲则为它和使用它的坦克兵提供了可靠的防护，堪称“叹息之墙”，它的125毫米主炮配合自动装弹机可以快速发射中国的最新型穿甲弹。而它配备的车内系统也非常高端，猎-歼火控、车长独立周视仪、高度集成并接入三军数据链的车际信息总线和先进的红外热成像仪等尖端设备。还配备一具大功率激光对抗装置，是99坦克上的激光装置的改进型，更加紧凑先进，甚至在主炮上方还配备有一台小型毫米波雷达。先进的性能带来了昂贵的造价，一辆99A的单价估计约为2000-3000万人民币。
 			</Text>
-		</Row>--->
+		</Row>-->
 		
 		<!--<Row Tag="TXT_KEY_UNIT_PERSIAN_ZULFIQAR">
 			<Text>佐勒菲卡尔坦克</Text>
