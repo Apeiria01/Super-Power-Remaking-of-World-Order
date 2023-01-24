@@ -2143,10 +2143,6 @@
 			<UnitType>UNIT_BRAZILIAN_PRACINHA</UnitType>
 			<PromotionType>PROMOTION_SP_FORCE_X_1</PromotionType>
 		</Row>
-		<Row>
-			<UnitType>UNIT_BRAZILIAN_PRACINHA</UnitType>
-			<PromotionType>PROMOTION_ANTI_RIOT_BONUS</PromotionType>
-		</Row>
 		
 
 		<!--<Row>

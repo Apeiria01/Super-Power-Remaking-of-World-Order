@@ -478,13 +478,6 @@
 			<UnitClassType>UNITCLASS_BOMBARD</UnitClassType>
 			<UnitType>UNIT_AZTEC_EAGLE</UnitType>
 		</Row>
-		<Row>
-			<CivilizationType>CIVILIZATION_AZTEC</CivilizationType>
-			<UnitClassType>UNITCLASS_MARINE</UnitClassType>
-			<UnitType>UNIT_BRAZILIAN_PRACINHA</UnitType>
-		</Row>
-
-
 
 		<Row>
 			<CivilizationType>CIVILIZATION_SONGHAI</CivilizationType>
