@@ -7126,6 +7126,7 @@
 		<Replace Tag="TXT_KEY_POLICY_LANDED_ELITE_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]Landed Elite[ENDCOLOR]
+				[NEWLINE][ICON_CAPITAL]Capital Plot +4 [ICON_FOOD] Food.
 				[NEWLINE][ICON_BULLET]+1 [ICON_FOOD] Food for every Farm and Fishing Net.
 			</Text>
 		</Replace>
@@ -7138,6 +7139,7 @@
 		<Replace Tag="TXT_KEY_POLICY_OLIGARCHY_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]Oligarchy[ENDCOLOR]
+				[NEWLINE][ICON_CAPITAL]Capital Plot +4 [ICON_PRODUCTION] Production.
 				[NEWLINE][ICON_BULLET]Gain additional [ICON_PRODUCTION] Production in cities reached certain Population Size:
 				[NEWLINE][ICON_BULLET]Small City: +4 [ICON_PRODUCTION] Production.
 				[NEWLINE][ICON_BULLET]Medium City: +8 [ICON_PRODUCTION] Production.
@@ -7167,8 +7169,9 @@
 		<Row Tag="TXT_KEY_POLICY_PREFECTURE_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]Prefeture[ENDCOLOR]
+				[NEWLINE][ICON_CAPITAL]Capital Plot +4 [CION_CULTURE] Culture.
 				[NEWLINE][ICON_BULLET]Gain additional [ICON_CULTURE] Culture in cities reached certain Population Size:
-				[NEWLINE][ICON_BULLET]Small City: +4 [ICON_CULTURE] Culture.
+				[NEWLINE][ICON_BULLET]Small City: +4 [CION_CULTURE] Culture.
 				[NEWLINE][ICON_BULLET]Medium City: +8 [ICON_CULTURE] Culture.
 				[NEWLINE][ICON_BULLET]Large City: +12 [ICON_CULTURE] Culture.
 				[NEWLINE][ICON_BULLET]XL City: +16 [ICON_CULTURE] Culture.
@@ -7236,7 +7239,9 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]Collective Rule[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]+50% [ICON_PRODUCTION] Production for training [COLOR_POSITIVE_TEXT]Settlers[ENDCOLOR].
-				[NEWLINE][ICON_BULLET]One free Settler appears near the [ICON_CAPITAL] Capital. (Venice receives a Merchant of Venice instead of a Settler.)</Text>
+				[NEWLINE][ICON_BULLET]One free Settler appears near the [ICON_CAPITAL] Capital. (Venice receives a Merchant of Venice instead of a Settler.)
+				[NEWLINE][ICON_BULLET]When enter Renaissance Era , +50% [ICON_PRODUCTION] Production for training [COLOR_POSITIVE_TEXT]Settlers[ENDCOLOR] again ,Settlers Into City will not emptying the city food any more.
+				</Text>
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_POLICY_REPUBLIC_HELP" >
@@ -7244,6 +7249,7 @@
 				[COLOR_POSITIVE_TEXT]Republic[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]+2 [ICON_FOOD] Food and +4 [ICON_GOLD] Gold in every city.
 				[NEWLINE][ICON_BULLET]+2 [ICON_RES_CONSUMER] Consumer Goods per city.
+				[NEWLINE][ICON_BULLET]+1%[ICON_FOOD] Global Food and [ICON_PRODUCTION] Global Production from each City.
 			</Text>
 		</Replace>
 		
@@ -7252,7 +7258,9 @@
 				[COLOR_POSITIVE_TEXT]Citizenship[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]One Worker appears near the [ICON_CAPITAL] Capital.
 				[NEWLINE][ICON_BULLET]When you found a [COLOR_POSITIVE_TEXT]New City[ENDCOLOR], one Worker will appear outside the city.
-				[NEWLINE][ICON_BULLET]+2 [ICON_RES_MANPOWER] Manpower per city.</Text>
+				[NEWLINE][ICON_BULLET]+2 [ICON_RES_MANPOWER] Manpower per city.
+				[NEWLINE][ICON_BULLET]get 25 free [ICON_PRODUCTION] Production for new founded city。
+				</Text>
 		</Replace>
 		
 		
@@ -7261,6 +7269,7 @@
 				[COLOR_POSITIVE_TEXT]Meritocracy[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]+2 [ICON_PRODUCTION] Production in every city.
 				[NEWLINE][ICON_BULLET]+10% [ICON_PRODUCTION] Production in cities when constructing Buildings.
+				[NEWLINE][ICON_BULLET]When building constructed , get free [ICON_RESEARCH]science and [ICON_CULTURE] culture (10% of its cost)。
 			</Text>
 		</Replace>
 
@@ -7270,10 +7279,7 @@
 		<Row Tag="TXT_KEY_POLICY_BILL_OF_RIGHTS_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]Bill of Rights[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]+1 [ICON_RESEARCH] Science for each Library, Academy, University, Public School, Laboratory and Observatory.
-				[NEWLINE][ICON_BULLET]+1 [ICON_CULTURE] Culture for each Amphitheater, Art Gallery, Opera House, Museum, Brocast Tower and Cinema.
-				[NEWLINE][ICON_BULLET]+1 [ICON_PRODUCTION] Production for each Factory, Inland Canal, Furniture Factory, Textile Factory, Metal Processing Plant and Future Factory.
-				[NEWLINE][ICON_BULLET]+1 [ICON_GOLD] Gold for each Market, Bank, Stock Exchange, Financial Company, Country Club and Bar.
+				[NEWLINE][ICON_BULLET]Each Specialist slot in the building provides 1 point corresponding base output (According to default building).
 				[NEWLINE][ICON_BULLET]-50% [ICON_GOLD] Maintenance Cost for All City Halls.
 			</Text>
 		</Row>
@@ -7349,7 +7355,7 @@
 		<Row Tag="TXT_KEY_POLICY_HORSEMAN_TRAINING_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]Maneuver Warfare[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]All Heavy Mounted Units and Tank Units +1 [ICON_MOVES] Movement and ignore enemy ZOC.
+				[NEWLINE][ICON_BULLET]All Heavy Mounted Units and Tank Units +1 [ICON_MOVES] Movement , ignore enemy ZOC and final damage +5.
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_HORSEMAN_TRAINING_TEXT">
@@ -7362,13 +7368,15 @@
 				[NEWLINE][ICON_BULLET]+1 [ICON_PRODUCTION] Production for every Barracks, Armory, Arsenal and Military Base. +6 [ICON_GOLD] Gold in [ICON_PUPPET] Puppet cities. 
 				[NEWLINE][ICON_BULLET]+2 [ICON_CULTURE] Culture for every Stable, Steal Mill, Walls and Castle. 
 				[NEWLINE][ICON_BULLET]+15% [ICON_PRODUCTION] Production when building Military Units. 
+				[NEWLINE][ICON_BULLET]get free count when you capture an enemy city (need mathematics).
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_DISCIPLINE_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]Discipline[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]+25% [ICON_STRENGTH] Combat Strength for Land and Naval Melee Units when have another military Unit in an adjacent tile. 
-				[NEWLINE][ICON_BULLET]Flank Attack bonus +50%.</Text>
+				[NEWLINE][ICON_BULLET]Flank Attack bonus +50%.
+				</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_MILITARY_CASTE">
 			<Text>Military Training</Text>
@@ -7378,6 +7386,8 @@
 				[COLOR_POSITIVE_TEXT]Military Training[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]A [ICON_GREAT_GENERAL] Great General appears outside the [ICON_CAPITAL] Capital. [ICON_GREAT_GENERAL] Great Generals are earned 50% faster. 
 				[NEWLINE][ICON_BULLET]Land Hit-and-Run Units, Land Ranged Units, Anti-air Units and Siege Units +15% [ICON_RANGE_STRENGTH] Strength when performing Ranged Attack and being Ranged Striked.
+				[NEWLINE][ICON_BULLET]Land Hit-and-Run Units and Land Ranged Units' final damage +5 .
+				[NEWLINE][ICON_BULLET]Anti-air Units and Siege Units +10% extra damage from city max hit point.
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_MILITARYCASTE_TEXT" >
@@ -7697,7 +7707,7 @@
 
 				[NEWLINE][NEWLINE]Opening Effect:
 				[NEWLINE][ICON_BULLET]Settlers will no longer lose HP if ends turns outside friendly territory.
-				[NEWLINE][ICON_BULLET]+1 [ICON_MOVES] Movement for Embarked Units, Workers, Settlers, Archaeologists, Great Prophet and Missionaries.
+				[NEWLINE][ICON_BULLET]+1 [ICON_MOVES] Movement for Embarked Units, Workers, Settlers, Archaeologists, Great Prophet and Missionaries,all of your navies can enter ocean.
 				[NEWLINE][ICON_BULLET]+3 [ICON_MOVES] Movement for Great Admirals.
 				[NEWLINE][ICON_BULLET]World Wonder Unlocked: Port of Rotterdam.
 				[NEWLINE][ICON_BULLET]National Wonder Unlocked: Ironworks.
@@ -7719,6 +7729,8 @@
 				[COLOR_POSITIVE_TEXT]Maritime Infrastructure[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]+3 [ICON_PRODUCTION] Production in all coastal Cities.
 				[NEWLINE][ICON_BULLET]+1 [ICON_PRODUCTION] Production for every Fishing Net, Workboats and Offshore Platform.
+				[NEWLINE]Then rate your workers building the maritime improvement +50%。
+
 			</Text>
 		</Replace>
 		
@@ -7728,6 +7740,7 @@
 				[NEWLINE][ICON_BULLET]+1 additional Trade Route slot.
 				[NEWLINE][ICON_BULLET]+6 [ICON_GOLD] Gold from all your sea trade routes.
 				[NEWLINE][ICON_BULLET]+3 [ICON_RES_CONSUMER] Consumer in all coastal Cities.
+				[NEWLINE][ICON_BULLET]You can use [ICON_PEACE] faith to buy merchant ships。
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_NAVAL_TRADITION_HELP" >
@@ -7745,8 +7758,9 @@
 		<Row Tag="TXT_KEY_POLICY_COASTAL_ADMINISTRATION_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]Maritime Administration[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]+15% [ICON_RESEARCH] Science and +15% [ICON_PRODUCTION] Production output from every Shipyard.
-				[NEWLINE][ICON_BULLET]Gain [ICON_CULTURE] Culture when build a Ocean-going Naval Unit (100% of its [ICON_STRENGTH] Combat Strength).
+				[NEWLINE][ICON_BULLET]+5% [ICON_RESEARCH] Science and +5% [ICON_PRODUCTION] Production output from every Shipyard and Seaport.
+				[NEWLINE][ICON_BULLET]+3% [ICON_RESEARCH] Science and +3% [ICON_PRODUCTION] Production output from every Lighthouse , harbor and Wood Dock.
+				[NEWLINE][ICON_BULLET]Lighthouse , harbor , Wood Dock , Shipyard and Seaport +4 [ICON_GOLD] Gold.
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_COASTAL_ADMINISTRATION_TEXT">
@@ -7758,6 +7772,7 @@
 				[NEWLINE][ICON_BULLET]+1 [ICON_HAPPINESS_1] Happiness for every Lighthouse, Harbor, Seaport and Shipyard.
 				[NEWLINE][ICON_BULLET]+15% [ICON_PRODUCTION] Production when building Naval Units.
 				[NEWLINE][ICON_BULLET]New trained Naval Units receive +15 XP.
+				[NEWLINE][ICON_BULLET]Gain [ICON_CULTURE] Culture when build a Ocean-going Naval Unit (100% of its [ICON_STRENGTH] Combat Strength).
 			</Text>
 		</Replace>
 
@@ -8976,7 +8991,8 @@
 
 		<Row>
 			<Tag>TXT_KEY_BUILDING_SPECIALISTS_ARTISTIC_HELP</Tag>
-			<Text>Writers, Artists and Musicians: +1 [ICON_CULTURE] Culture, -1 [ICON_GOLD] Gold for sponsor funds. [NEWLINE][NEWLINE]The cost goes up the more cities there are in the empire.</Text>
+			<Text>Writers, Artists and Musicians: +2 [ICON_CULTURE] Culture, -2 [ICON_GOLD] Gold for sponsor funds. 
+			[NEWLINE][NEWLINE]The cost goes up the more cities there are in the empire.</Text>
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_SPECIALISTS_ARTISTIC_LV1</Tag>

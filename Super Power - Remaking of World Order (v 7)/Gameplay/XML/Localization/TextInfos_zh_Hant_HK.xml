@@ -2456,6 +2456,11 @@
 			<Tag>TXT_KEY_BUILDING_CONSUMER_BONUS</Tag>
 			<Text>提供額外[ICON_RES_CONSUMER]商品</Text>
 		</Row>
+
+		<Row>
+			<Tag>TXT_KEY_BUILDING_ELECTRICITY_BONUS</Tag>
+			<Text>提供額外[ICON_RES_ELECTRICITY]電力</Text>
+		</Row>
 		
 		<Row Tag="TXT_KEY_BUILDING_CIV_S_P_MAN_RESOURCES">
 			<Text>1[ICON_RES_MANPOWER]人力</Text>
@@ -5980,7 +5985,9 @@
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_POLICY_LANDED_ELITE_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]紳縉階層[ENDCOLOR][NEWLINE]所有農田和漁船+1[ICON_FOOD]食物產出。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]紳縉階層[ENDCOLOR]
+			[NEWLINE][ICON_CAPITAL]首都地塊+4[ICON_FOOD]食物產出。
+			[NEWLINE]所有農田和漁船+1[ICON_FOOD]食物產出。</Text>
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_POLICY_LEGALISM_HELP" >
@@ -5990,6 +5997,7 @@
 		<Replace Tag="TXT_KEY_POLICY_OLIGARCHY_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]寡頭政體[ENDCOLOR]
+				[NEWLINE][ICON_CAPITAL]首都地塊+4[ICON_PRODUCTION]產能。
 				[NEWLINE][ICON_BULLET]各個不同規模的城市獲得相應的額外產能：
 				[NEWLINE][ICON_BULLET]小型城市（6）：+4 [ICON_PRODUCTION]生產力。
 				[NEWLINE][ICON_BULLET]中型城市（15）：+8 [ICON_PRODUCTION]生產力。
@@ -6009,6 +6017,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_PREFECTURE_HELP" >
 			<Text>[COLOR_POSITIVE_TEXT]郡縣制度[ENDCOLOR]
+			[NEWLINE][ICON_CAPITAL]首都地塊+4[ICON_CULTURE]文化產出。
 			[NEWLINE]各個不同規模的城市獲得相應的額外文化產出：
 			[NEWLINE][ICON_BULLET]小型城市（6）：+4[ICON_CULTURE]文化值。
 			[NEWLINE][ICON_BULLET]中型城市（15）：+8[ICON_CULTURE]文化值。
@@ -6048,26 +6057,39 @@
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_POLICY_COLLECTIVE_RULE_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]集體統治[ENDCOLOR][NEWLINE]所有城市訓練[COLOR_POSITIVE_TEXT]移民[ENDCOLOR]的速度+50%。[ICON_CAPITAL]首都附近免費獲得一個移民單位。（威尼斯則是獲得一個威尼斯商人）</Text>
+			<Text>[COLOR_POSITIVE_TEXT]集體統治[ENDCOLOR]
+			[NEWLINE]所有城市訓練[COLOR_POSITIVE_TEXT]移民[ENDCOLOR]的速度+50%。[ICON_CAPITAL]首都附近免費獲得一個移民單位。（威尼斯則是獲得一個威尼斯商人）
+			[NEWLINE]進入啟蒙時代後，訓練移民的速度額外增加+50%，國內移民進入城市不會清空糧食積累。
+			</Text>
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_POLICY_REPUBLIC_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]共和政體[ENDCOLOR][NEWLINE]每座城市+4[ICON_GOLD]金幣，+2[ICON_FOOD]食物，+2[ICON_RES_CONSUMER]商品。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]共和政体[ENDCOLOR]
+			[NEWLINE]每座城市+4[ICON_GOLD]金钱，+2[ICON_FOOD]食物，+2[ICON_RES_CONSUMER]商品。
+			[NEWLINE]每座城市提供+1%[ICON_FOOD]全局粮食和[ICON_PRODUCTION]产能加成。
+			</Text>
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_POLICY_CITIZENSHIP_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]公民制度[ENDCOLOR][NEWLINE]每座新建立的城市免費獲得一名工人，[ICON_CAPITAL]首都立刻獲得一名工人，每座城市+2[ICON_RES_MANPOWER]人力。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]公民製度[ENDCOLOR]
+			[NEWLINE]每座新建立的城市免費獲得一名工人，[ICON_CAPITAL]首都立刻獲得一名工人，每座城市+2[ICON_RES_MANPOWER]人力。
+			[NEWLINE]新建城市獲得一次性的25點[ICON_PRODUCTION]產能（標準速度下）。
+			</Text>
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_POLICY_MERITOCRACY_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]精英政治[ENDCOLOR]每座城市+2[ICON_PRODUCTION]生產力，城市建造建築時+10%[ICON_PRODUCTION]生產力。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]精英政治[ENDCOLOR]
+			[NEWLINE]每座城市+2[ICON_PRODUCTION]产能，城市建造建筑时+10%[ICON_PRODUCTION]产能。
+			[NEWLINE]城市建造完成基础建筑后，获得数值相当于建筑产能的10%的一次性[ICON_RESEARCH]科研、[ICON_CULTURE]文化产出。
+			</Text>
 		</Replace>
 		
 		<Row Tag="TXT_KEY_POLICY_BILL_OF_RIGHTS">
 			<Text>權利法案</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_BILL_OF_RIGHTS_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]權利法案[ENDCOLOR][NEWLINE]所有專家建築+1點對應產出，市政廳[ICON_GOLD]維護費減半。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]權利法案[ENDCOLOR]
+			[NEWLINE]專家建築的每個專家槽提供1點對應的基礎產出（按默認建築計算），市政廳維護費減半。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_BILL_OF_RIGHTS_TEXT">
 			<Text>《權利法案》，全稱《國民權利與自由和王位繼承宣言》，是奠定了英國君主立憲政體的理論和法律基礎的重要法律文件，確立了議會所擁有的權力高於王權的原則，具有憲法的性質，標誌著君主立憲制開始在英國建立。其內容並不多，只有短短的十三條：[NEWLINE][NEWLINE]1、凡未經議會同意，以國王權威停止法律或停止法律實施之僭越權力，為非法權力。[NEWLINE]2、近來以國王權威擅自廢除法律或法律實施之僭越權力，為非法權力。[NEWLINE]3、設立審理宗教事務之欽差法庭之指令，以及一切其他同類指令與法庭，皆為非法而有害。[NEWLINE]4、凡未經國會准許，藉口國王特權，為國王而徵收，或供國王使用而徵收金幣，超出國會准許之時限或方式者，皆為非法。[NEWLINE]5、向國王請願，乃臣民之權利，一切對此項請願之判罪或控告，皆為非法。[NEWLINE]6、除經國會同意外，平時在本王國內徵募或維持常備軍，皆屬違法。[NEWLINE]7、凡臣民系新教徒者，為防衛起見，得酌量情形，並在法律許可範圍內，置備武器。[NEWLINE]8、議會之選舉應是自由的。[NEWLINE]9、國會內之演說自由、辯論或議事之自由，不應在國會以外之任何法院或任何地方，受到彈核或訊問。[NEWLINE]10、不應要求過多的保釋金，亦不應強課過分之罰款，更不應濫施殘酷非常之刑罰。[NEWLINE]11、陪審官應予正式記名列表並陳報之，凡審理叛國犯案件之陪審官應為自由世襲地領有人。[NEWLINE]12、定罪前，特定人的一切讓與及對罰金與沒收財產所做的一切承諾，皆屬非法而無效。[NEWLINE]13、為申雪一切訴冤，並為修正、加強與維護法律起見，國會應時常集會。</Text>
@@ -6110,7 +6132,8 @@
 			<Text>胡服騎射</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_HORSEMAN_TRAINING_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]胡服騎射[ENDCOLOR][NEWLINE]所有重騎和裝甲單位+1[ICON_MOVES]移動且無視敵方控制區域（ZOC）。 </Text>
+			<Text>[COLOR_POSITIVE_TEXT]胡服騎射[ENDCOLOR]
+			[NEWLINE]所有重騎和裝甲單位+1[ICON_MOVES]移動、無視敵方控製區域（ZOC），且攻擊時造成的傷害固定+5。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_HORSEMAN_TRAINING_TEXT">
 			<Text>趙武靈王是中國戰國時期一位奮發有為的諸侯國君，他為了抵禦北方胡人的侵略，實行了“胡服騎射”的軍事改革。改革的中心內容是穿胡人的服裝，學習胡人騎馬射箭的作戰方法。其服上褶下絝，有貂、蟬為飾的武冠，金鉤為飾的具帶，足上穿靴，便於騎射。為此，他力排眾議，帶頭穿胡服，習騎馬，練射箭，親自訓練士兵，使趙國軍事力量日益強大，而能西退胡人，北滅中山國，成為“戰國七雄”之一。[NEWLINE][NEWLINE]騎術雖然很早在世界各地就已經出現，但在很多地區卻遲遲沒有發展成為騎兵部隊。農耕文明發展初期不具備培養大規模騎兵的物質條件，古典時代“結日定地”的貴族決鬥式戰爭也使得騎兵的機動性無處發揮。隨著人類戰爭日益專業化規模化，以及鞍韉、馬鐙等重要騎兵裝備的發明，各民族開始向遊牧部落學習先進的騎兵作戰技術，將其提升為一種重要的戰爭手段。</Text>
@@ -6118,11 +6141,13 @@
 		
 		<Replace Tag="TXT_KEY_POLICY_WARRIOR_CODE_HELP" >
 			<Text>[COLOR_POSITIVE_TEXT]尚武精神[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]軍營，軍械所，兵工廠，軍事基地+1[ICON_PRODUCTION]生產力。[ICON_PUPPET]傀儡城市+6[ICON_GOLD]金幣。
-				[NEWLINE][ICON_BULLET]馬厩，冶鐵坊，城牆，城堡+2[ICON_CULTURE]文化值。
-				[NEWLINE][ICON_BULLET]生產軍事單位時[ICON_PRODUCTION]生產力+15%。
+			[NEWLINE]軍營，軍械所，兵工廠，軍事基地+1[ICON_PRODUCTION]產能。[ICON_PUPPET]傀儡城市+6[ICON_GOLD]金錢。
+			[NEWLINE]馬廄，冶鐵坊，城墻，城堡+2[ICON_CULTURE]文化。
+			[NEWLINE]建造軍事單位時+15%[ICON_PRODUCTION]產能。
+			[NEWLINE]研發數學後，攻占敵方城市贈送法院
 			</Text>
 		</Replace>
+
 		
 		<Replace Tag="TXT_KEY_POLICY_DISCIPLINE_HELP" >
 			<Text>[COLOR_POSITIVE_TEXT]軍事紀律[ENDCOLOR][NEWLINE]每個與本戰場相鄰的己方單位獲得+25%[ICON_STRENGTH]戰鬥力加成，夾擊加成由10%增加至15%。</Text>
@@ -6133,8 +6158,11 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_MILITARY_CASTE_HELP" >
 			<Text>[COLOR_POSITIVE_TEXT]軍事操練[ENDCOLOR]
-			[NEWLINE]在[ICON_CAPITAL]首都附近獲得一位[ICON_GREAT_GENERAL]大將軍。[ICON_GREAT_GENERAL]大將軍的誕生速度加快50%。
-			[NEWLINE]陸軍遠程單位（投射單位、攻城武器、遊獵單位）遠程攻擊以及遭到遠程攻擊時+15%戰鬥力。</Text>
+			[NEWLINE]在[ICON_CAPITAL]首都附近出現一位[ICON_GREAT_GENERAL]陸軍統帥。獲得[ICON_GREAT_GENERAL]陸軍統帥的速度+50%。
+			[NEWLINE]陸軍遠程單位（投射單位、攻城武器、遊獵單位）遠程攻擊以及遭到遠程攻擊時+15%戰鬥力。
+			[NEWLINE]投射單位與遊獵單位對攻擊造成傷害固定+5。
+			[NEWLINE]攻城單位和空軍單位對城市額外造成相當於10%城市最大生命值的傷害。
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_MILITARYCASTE_TEXT" >
 			<Text>操練，是軍隊平日的活動之一，除了列隊、體能訓練與軍事知識學習之外，也要進行射擊、實戰訓練等。</Text>
@@ -6340,17 +6368,29 @@
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_POLICY_BRANCH_EXPLORATION_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]海事政策[ENDCOLOR]提高帝國沿海城市的產出以及向海外擴張的能力。
-			[NEWLINE][NEWLINE]啟用海事政策可以使你的移民在境外不會損耗，工人、移民、考古學家、傳教士以及預言家+1[ICON_MOVES]移動，所有的海運單位+1[ICON_MOVES]移動，海軍統帥+3[ICON_MOVES]移動。解鎖奇跡鹿特丹港和大鐵廠。
-			[NEWLINE][NEWLINE]啟用了所有的探索政策樹下的政策後，立即獲得一個海軍統帥，海軍統帥的產生速率+50%。並允許在工業時代以後使用[ICON_PEACE]信仰值購買海軍統帥。此后海軍統帥可以無消耗建造軍事學院。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]海事政策[ENDCOLOR]提高帝国沿海城市的产出以及向海外扩张的能力。
+			[NEWLINE][NEWLINE]启用海事政策:
+			[NEWLINE][ICON_BULLET]你的移民在境外不会损耗，工人、移民、考古学家、传教士以及大先知+1[ICON_MOVES]移动。
+			[NEWLINE][ICON_BULLET]所有的海运单位+1[ICON_MOVES]移动，海军统帅+3[ICON_MOVES]移动，所有海军单位可以进入大洋。
+			[NEWLINE][ICON_BULLET]解锁奇观鹿特丹港和大铁厂。
+			[NEWLINE][NEWLINE]启用了所有的探索政策树下的政策后：
+			[NEWLINE][ICON_BULLET]立即获得一个海军统帅，海军统帅的产生速率+50%。
+			[NEWLINE][ICON_BULLET]允许在工业时代以后使用[ICON_PEACE]信仰购买海军统帅。此后海军统帅可以无消耗建造军事学院。</Text>
 		</Replace>
 				
 		<Replace Tag="TXT_KEY_POLICY_MARITIME_INFRASTRUCTURE_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]海上設施[ENDCOLOR][NEWLINE]沿海城市+3[ICON_PRODUCTION]生產力。[NEWLINE]所有漁船、捕撈船和海上石油平臺+1[ICON_PRODUCTION]生產力。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]海上設施[ENDCOLOR][NEWLINE]沿海城市+3[ICON_PRODUCTION]產能。
+			[NEWLINE]所有漁船、捕撈船和海上石油平臺+1[ICON_PRODUCTION]產能。
+			[NEWLINE]工人修建海上設施的速度+50%。
+			</Text>
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_POLICY_MERCHANT_NAVY_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]商船艦隊[ENDCOLOR][NEWLINE]獲得一條額外的商路。[NEWLINE]所有海上商路+6[ICON_GOLD]金幣。[NEWLINE]所有沿海城市+3[ICON_RES_CONSUMER]商品。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]商船艦隊[ENDCOLOR]
+			[NEWLINE]獲得一條額外的商路。[NEWLINE]所有海上商路+6[ICON_GOLD]金錢。
+			[NEWLINE]所有沿海城市+3[ICON_RES_CONSUMER]商品。
+			[NEWLINE]可以使用信仰購買商船。
+			</Text>
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_POLICY_NAVAL_TRADITION_HELP" >
@@ -6361,14 +6401,21 @@
 			<Text>海事管理</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_COASTAL_ADMINISTRATION_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]海事管理[ENDCOLOR][NEWLINE]船塢使所在城市的[ICON_PRODUCTION]生產力和[ICON_RESEARCH]科技值產出提高15%。[NEWLINE]當你訓練或購買了一個遠洋海軍單位時，獲得一次性的[ICON_CULTURE]文化值加成(其數值相當於單位的100%[ICON_STRENGTH]戰鬥力)。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]海事管理[ENDCOLOR]
+			[NEWLINE]燈塔、港口、碼頭使所在城市的[ICON_PRODUCTION]產能和[ICON_RESEARCH]科研產出提高3%。
+			[NEWLINE]海運碼頭、船塢使所在城市的[ICON_PRODUCTION]產能和[ICON_RESEARCH]科研產出提高5%。
+			[NEWLINE]燈塔、港口、碼頭、海運碼頭、船塢+4[ICON_GOLD]金錢。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_COASTAL_ADMINISTRATION_TEXT">
 			<Text>海事管理是研究轄區海事監管特點，貫徹落實海事法規的專業管理部門。對海事業務進行專業研究、指導、監督和管理，具體承擔船舶監督、危險品和防污染管理、船員管理、通航管理、航運公司安全管理體系審核管理等海事監管業務的專業管理職能和口岸有關管理職能。海事管理處原則上不直接實施海事具體行政行為。</Text>
 		</Row>
 		
 		<Replace Tag="TXT_KEY_POLICY_NAVIGATION_SCHOOL_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]航海學校[ENDCOLOR][NEWLINE]每處燈塔、港口、海運碼頭和船塢+1本地[ICON_HAPPINESS_1]幸福度。建造海上單位時+15%[ICON_PRODUCTION]生產力積累。新訓練的海軍單位+15點經驗。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]航海學校[ENDCOLOR]
+			[NEWLINE]每處燈塔、港口、海運碼頭和船塢+1本地[ICON_HAPPINESS_1]快樂。建造海上單位時+15%[ICON_PRODUCTION]產能積累。新訓練的海軍單位+15點經驗。
+			[NEWLINE]當你訓練或購買了一個遠洋海軍單位時，獲得一次性的[ICON_CULTURE]文化加成(其數值相當於單位的100%[ICON_STRENGTH]戰鬥力)。
+			</Text>
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_POLICY_TREASURE_FLEETS">
@@ -7571,7 +7618,8 @@
 
 		<Row>
 			<Tag>TXT_KEY_BUILDING_SPECIALISTS_ARTISTIC_HELP</Tag>
-			<Text>文學家，美術家和音樂家：+1[ICON_CULTURE]文化值產出，+1[ICON_GOLD]維護費。[NEWLINE][NEWLINE]文明的城市數量越多建造成本越高。</Text>
+			<Text>文學家，美術家和音樂家：+2[ICON_CULTURE]文化值產出，+2[ICON_GOLD]維護費。
+			[NEWLINE][NEWLINE]文明的城市數量越多建造成本越高。</Text>
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_SPECIALISTS_ARTISTIC_LV1</Tag>

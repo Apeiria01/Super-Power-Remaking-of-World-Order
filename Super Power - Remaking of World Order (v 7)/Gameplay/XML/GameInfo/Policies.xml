@@ -78,6 +78,7 @@
 			<IconAtlas>POLICY_ATLAS</IconAtlas>
 			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
 		</Row>
+		
 	</Policies>
 	
 	<!--******************Liberty******************** -->
@@ -155,7 +156,6 @@
 			<IconAtlas>POLICY_ATLAS</IconAtlas>
 			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
 		</Row>
-
 	</Policies>
 
 	<!--*******************Honor********************* -->

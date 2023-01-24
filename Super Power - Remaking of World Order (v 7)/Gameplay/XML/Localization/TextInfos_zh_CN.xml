@@ -5975,27 +5975,35 @@
 		<!--*************** Tradition******************** -->
 		
 		<Replace Tag="TXT_KEY_POLICY_BRANCH_TRADITION_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]传统政策[ENDCOLOR]适宜于繁荣精干的帝国。[NEWLINE][NEWLINE]启用传统政策将使[ICON_CAPITAL]首都+3[ICON_CULTURE]文化，+3[ICON_RESEARCH]科研，城市地块扩张所需文化成本-25%。允许建造空中花园。[NEWLINE][NEWLINE]推行所有传统政策后将使所有城市+15%[ICON_RESEARCH]科研、[ICON_CULTURE]文化和[ICON_PRODUCTION]产能产出，开启[ICON_GOLDEN_AGE]黄金时代所需的[ICON_HAPPINESS_1]快乐减少25%，并且在工业时代后可以用[ICON_PEACE]信仰购买大工程师。[NEWLINE][NEWLINE][COLOR_WARNING_TEXT]不能与自主政策同时开启。[ENDCOLOR]</Text>
+			<Text>[COLOR_POSITIVE_TEXT]传统政策[ENDCOLOR]适宜于繁荣精干的帝国。
+			[NEWLINE][NEWLINE]启用传统政策将使[ICON_CAPITAL]首都+3[ICON_CULTURE]文化，+3[ICON_RESEARCH]科研，城市地块扩张所需文化成本-25%。允许建造空中花园。
+			[NEWLINE][NEWLINE]推行所有传统政策后将使所有城市+15%[ICON_RESEARCH]科研、[ICON_CULTURE]文化和[ICON_PRODUCTION]产能产出，开启[ICON_GOLDEN_AGE]黄金时代所需的[ICON_HAPPINESS_1]快乐减少25%，并且在工业时代后可以用[ICON_PEACE]信仰购买大工程师。
+			[NEWLINE][NEWLINE][COLOR_WARNING_TEXT]不能与自主政策同时开启。[ENDCOLOR]</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_ARISTOCRACY_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]贵族政治[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]新建城市+1[ICON_CITIZEN]人口(但是每1个移民仍等于1人口)。[NEWLINE][ICON_BULLET]小镇（即6人口以下的城市）新增人口时会保留100%的余粮（在增长下一个人口后生效）。
+				[NEWLINE][ICON_BULLET]新建城市+1[ICON_CITIZEN]人口(但是每1个移民仍等于1人口)。
+				[NEWLINE][ICON_BULLET]小镇（即6人口以下的城市）新增人口时会保留100%的余粮（在增长下一个人口后生效）。
 			</Text>
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_POLICY_LANDED_ELITE_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]绅缙阶层[ENDCOLOR][NEWLINE]所有农田和渔船+1[ICON_FOOD]食物产出。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]绅缙阶层[ENDCOLOR]
+			[NEWLINE][ICON_CAPITAL]首都地块+4[ICON_FOOD]食物产出。
+			[NEWLINE]所有农田和渔船+1[ICON_FOOD]食物产出。</Text>
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_POLICY_LEGALISM_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]律法统治[ENDCOLOR][NEWLINE]所有城市中每5[ICON_CITIZEN]人口+1[ICON_HAPPINESS_1]快乐。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]律法统治[ENDCOLOR]
+			[NEWLINE]所有城市中每5[ICON_CITIZEN]人口+1[ICON_HAPPINESS_1]快乐。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_OLIGARCHY_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]寡头政体[ENDCOLOR]
+				[NEWLINE][ICON_CAPITAL]首都地块+4[ICON_PRODUCTION]产能。
 				[NEWLINE]各个不同规模的城市获得相应的额外产能：
 				[NEWLINE][ICON_BULLET]小型城市（6）：+4 [ICON_PRODUCTION]产能。
 				[NEWLINE][ICON_BULLET]中型城市（15）：+8 [ICON_PRODUCTION]产能。
@@ -6015,6 +6023,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_PREFECTURE_HELP" >
 			<Text>[COLOR_POSITIVE_TEXT]郡县制度[ENDCOLOR]
+			[NEWLINE][ICON_CAPITAL]首都地块+4[ICON_CULTURE]文化产出。
 			[NEWLINE]各个不同规模的城市获得相应的额外文化产出：
 			[NEWLINE][ICON_BULLET]小型城市（6）：+4[ICON_CULTURE]文化。
 			[NEWLINE][ICON_BULLET]中型城市（15）：+8[ICON_CULTURE]文化。
@@ -6050,30 +6059,46 @@
 		<!--*******************Liberty********************* -->
 		
 		<Replace Tag="TXT_KEY_POLICY_BRANCH_LIBERTY_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]自主政策[ENDCOLOR]适合渴求快速扩张的文明。[NEWLINE][NEWLINE]启用自主政策能使每座城市+1[ICON_CULTURE]文化，+1[ICON_RESEARCH]科研。工人修建地块设施速度+25%。允许建造大金字塔。[NEWLINE][NEWLINE]推行所有自主政策后将在首都[ICON_CAPITAL]附近免费获得一位大工程师并开启一个黄金时代。[NEWLINE][NEWLINE][COLOR_WARNING_TEXT]不能与传统政策同时开启。[ENDCOLOR]</Text>
+			<Text>[COLOR_POSITIVE_TEXT]自主政策[ENDCOLOR]适合渴求快速扩张的文明。
+			[NEWLINE][NEWLINE]启用自主政策能使每座城市+1[ICON_CULTURE]文化，+1[ICON_RESEARCH]科研。工人修建地块设施速度+25%。允许建造大金字塔。
+			[NEWLINE][NEWLINE]推行所有自主政策后将在首都[ICON_CAPITAL]附近免费获得一位大工程师并开启一个黄金时代。
+			[NEWLINE][NEWLINE][COLOR_WARNING_TEXT]不能与传统政策同时开启。[ENDCOLOR]</Text>
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_POLICY_COLLECTIVE_RULE_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]集体统治[ENDCOLOR][NEWLINE]所有城市训练[COLOR_POSITIVE_TEXT]移民[ENDCOLOR]的速度+50%。[ICON_CAPITAL]首都附近免费获得一个移民单位。（威尼斯则是获得一个威尼斯商人）</Text>
+			<Text>[COLOR_POSITIVE_TEXT]集体统治[ENDCOLOR]
+			[NEWLINE]所有城市训练[COLOR_POSITIVE_TEXT]移民[ENDCOLOR]的速度+50%。[ICON_CAPITAL]首都附近免费获得一个移民单位。（威尼斯则是获得一个威尼斯商人）
+			[NEWLINE]进入启蒙时代后，训练移民的速度额外增加+50%，国内移民进入城市不会清空粮食积累。
+			</Text>
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_POLICY_REPUBLIC_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]共和政体[ENDCOLOR][NEWLINE]每座城市+4[ICON_GOLD]金钱，+2[ICON_FOOD]食物，+2[ICON_RES_CONSUMER]商品。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]共和政体[ENDCOLOR]
+			[NEWLINE]每座城市+4[ICON_GOLD]金钱，+2[ICON_FOOD]食物，+2[ICON_RES_CONSUMER]商品。
+			[NEWLINE]每座城市提供+1%[ICON_FOOD]全局粮食和[ICON_PRODUCTION]产能加成。
+			</Text>
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_POLICY_CITIZENSHIP_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]公民制度[ENDCOLOR][NEWLINE]每座新建立的城市免费获得一名工人，[ICON_CAPITAL]首都立刻获得一名工人，每座城市+2[ICON_RES_MANPOWER]人力。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]公民制度[ENDCOLOR]
+			[NEWLINE]每座新建立的城市免费获得一名工人，[ICON_CAPITAL]首都立刻获得一名工人，每座城市+2[ICON_RES_MANPOWER]人力。
+			[NEWLINE]新建城市获得一次性的25点[ICON_PRODUCTION]产能（标准速度下）。
+			</Text>
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_POLICY_MERITOCRACY_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]精英政治[ENDCOLOR]每座城市+2[ICON_PRODUCTION]产能，城市建造建筑时+10%[ICON_PRODUCTION]产能。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]精英政治[ENDCOLOR]
+			[NEWLINE]每座城市+2[ICON_PRODUCTION]产能，城市建造建筑时+10%[ICON_PRODUCTION]产能。
+			[NEWLINE]城市建造完成基础建筑后，获得数值相当于建筑产能的10%的一次性[ICON_RESEARCH]科研、[ICON_CULTURE]文化产出。
+			</Text>
 		</Replace>
 		
 		<Row Tag="TXT_KEY_POLICY_BILL_OF_RIGHTS">
 			<Text>权利法案</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_BILL_OF_RIGHTS_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]权利法案[ENDCOLOR][NEWLINE]所有专家建筑+1点对应产出，市政厅[ICON_GOLD]维护费减半。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]权利法案[ENDCOLOR]
+			[NEWLINE]专家建筑的每个专家槽提供1点对应的基础产出（按默认建筑计算），市政厅维护费减半。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_BILL_OF_RIGHTS_TEXT">
 			<Text>《权利法案》，全称《国民权利与自由和王位继承宣言》，是奠定了英国君主立宪政体的理论和法律基础的重要法律文件，确立了议会所拥有的权力高于王权的原则，具有宪法的性质，标志著君主立宪制开始在英国建立。其内容并不多，只有短短的十三条：[NEWLINE][NEWLINE]1、凡未经议会同意，以国王权威停止法律或停止法律实施之僭越权力，为非法权力。[NEWLINE]2、近来以国王权威擅自废除法律或法律实施之僭越权力，为非法权力。[NEWLINE]3、设立审理宗教事务之钦差法庭之指令，以及一切其他同类指令与法庭，皆为非法而有害。[NEWLINE]4、凡未经国会准许，借口国王特权，为国王而征收，或供国王使用而征收金钱，超出国会准许之时限或方式者，皆为非法。[NEWLINE]5、向国王请愿，乃臣民之权利，一切对此项请愿之判罪或控告，皆为非法。[NEWLINE]6、除经国会同意外，平时在本王国内征募或维持常备军，皆属违法。[NEWLINE]7、凡臣民系新教徒者，为防卫起见，得酌量情形，并在法律许可范围内，置备武器。[NEWLINE]8、议会之选举应是自由的。[NEWLINE]9、国会内之演说自由、辩论或议事之自由，不应在国会以外之任何法院或任何地方，受到弹核或讯问。[NEWLINE]10、不应要求过多的保释金，亦不应强课过分之罚款，更不应滥施残酷非常之刑罚。[NEWLINE]11、陪审官应予正式记名列表并陈报之，凡审理叛国犯案件之陪审官应为自由世袭地领有人。[NEWLINE]12、定罪前，特定人的一切让与及对罚金与没收财产所做的一切承诺，皆属非法而无效。[NEWLINE]13、为申雪一切诉冤，并为修正、加强与维护法律起见，国会应时常集会。</Text>
@@ -6083,7 +6108,9 @@
 			<Text>行省制度</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_PROVINCE_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]行省制度[ENDCOLOR][NEWLINE][NEWLINE]每座与自己[ICON_CAPITAL]首都[ICON_CONNECTED]相连的城市+1[ICON_HAPPINESS_1]快乐。[NEWLINE]非首都直辖城市的额外不满-50%。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]行省制度[ENDCOLOR]
+			[NEWLINE]每座与自己[ICON_CAPITAL]首都[ICON_CONNECTED]相连的城市+1[ICON_HAPPINESS_1]快乐。
+			[NEWLINE]非首都直辖城市的额外不满-50%。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_PROVINCE_TEXT">
 			<Text>罗马在发展成为地中海霸国的过程中，采取不同于以前对意大利被征服者的统治方法，在海外征服地相继建立了行省制度。“行省”(provincia)一词初指元老院为拥有军事指挥权的罗马行政官员划定的行使职权的领域，有的在意大利境内，也有的在其境外。后来则专指意大利境外那些必须向罗马纳贡的属地。第一次布匿战争后，罗马占领了西西里、撒丁和科西嘉。公元前227年，罗马增选两名大法官，正式确立各以一名大法官为总督治理西西里行省和撒丁及科西嘉行省的建制。经过长期侵略和扩张，罗马在共和时期陆续建立了近西班牙（公元前197）、远西班牙（公元前197）、马其顿（公元前148）、阿非利加（公元前146）、亚细亚（公元前133）等十几个行省。[NEWLINE][NEWLINE]行省的建立过程，大体是以一名得胜的将军为首，加上元老院指定协助他的一个十人委员会，共同拟定一部行省法规，其中规定新建行省内的行政、司法、税收等方面的准则。总督原则上任期一年，必要时可延长，任内可根据需要颁布谕令。在行省法规规定的职权范围内，总督可以决定一切。对于他的渎职行为，只能在他卸任后在罗马审理。由于行省数目不断增加，除了专门选出担任行省总督的大法官外，已经卸任的执政官和大法官相继出任行省总督。总督配备一名财务官，还有一批幕僚。[NEWLINE][NEWLINE]行省居民遭受几乎毫无限制的掠夺和剥削。除征服时的纵兵抢掠外，罗马当局还没收相当部分土地以及各种资源，强迫居民交出金银，把大批居民卖为奴隶，或者随意拘押居民索取赎金。总督可将没收的土地出租给罗马公民或分配给罗马殖民者。行省居民要向罗马交纳直接税和间接税。捐税往往由包税人承包。总督和包税人的横征暴敛，不断激起行省人民的反抗。[NEWLINE][NEWLINE]由于行省的大量财富流入罗马，促进了奴隶占有制经济的发展，对于罗马社会生活各个方面都产生了巨大影响。同时，罗马帝国建立后开创的相对稳定的政治局面，以及实施改善行省地位和管理制度的政策，使帝国前期多数行省的经济得到不同程度的发展。随著整个帝国内部奴隶主阶级的不同部分逐渐融为一体，行省的奴隶主在帝国中央政权机构中的地位不断加强，甚至有些出身于行省的贵族成为帝国的皇帝，意大利的罗马公民相对于行省居民的优越地位日渐丧失，作为行政区划的意大利和行省之间的差别也归于消失。</Text>
@@ -6093,7 +6120,8 @@
 			<Text>地方分权</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_DECENTRALIZATION_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]地方分权[ENDCOLOR][NEWLINE]每名驻军为所在城市+2[ICON_CULTURE]文化，拥有驻军的城市+1[ICON_HAPPINESS_1]快乐，镇守城市的单位无需维护费。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]地方分权[ENDCOLOR]
+			[NEWLINE]每名驻军为所在城市+2[ICON_CULTURE]文化，拥有驻军的城市+1[ICON_HAPPINESS_1]快乐，镇守城市的单位无需维护费。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_DECENTRALIZATION_TEXT">
 			<Text>地方分权，也叫非中央分权，单一制国家的一种类型。在中央政权统一领导下，按照全国统一的法律，地方居民自主地组织地方公共机关，自主地处理本地区事务。以英国为典型。国家权力依法由中央政府和地方政府分别行使的制度。[NEWLINE][NEWLINE]中央政府和地方政府的职权范围一般规定在宪法和法律中。除军事、外交等全国性重要事项由中央政府统一掌管外，凡地方可以处理的事项，如工农业、商业等，均由地方政府负责。有的如交通、财政等项，则由中央与地方分管。地方政府除依法行使其职权外，还须执行中央政府交办的全国性政务。实行地方自治的国家，多采用地方分权。</Text>
@@ -6101,7 +6129,13 @@
 
 		<Replace Tag="TXT_KEY_POLICY_REPRESENTATION_HELP">
 			<Text>
-				[COLOR_POSITIVE_TEXT]代议制度[ENDCOLOR][NEWLINE]减缓一到五级城市造成的政策[ICON_CULTURE]文化阈值增长（能够与强化管理设施效果叠加）：[NEWLINE][ICON_BULLET]一级城市：没有额外的[ICON_CULTURE]文化阈值增长。[NEWLINE][ICON_BULLET]二级城市：[ICON_CULTURE]文化阈值增长由10%降低到5%。[NEWLINE][ICON_BULLET]三级城市：[ICON_CULTURE]文化阈值增长由20%降低到15%。[NEWLINE][ICON_BULLET]四五级城市：[ICON_CULTURE]文化阈值增长由33%降低到28%。[NEWLINE][ICON_BULLET]每座城市+1%[ICON_CULTURE]全局文化。
+				[COLOR_POSITIVE_TEXT]代议制度[ENDCOLOR]
+				[NEWLINE]减缓一到五级城市造成的政策[ICON_CULTURE]文化阈值增长（能够与强化管理设施效果叠加）：
+				[NEWLINE][ICON_BULLET]一级城市：没有额外的[ICON_CULTURE]文化阈值增长。
+				[NEWLINE][ICON_BULLET]二级城市：[ICON_CULTURE]文化阈值增长由10%降低到5%。
+				[NEWLINE][ICON_BULLET]三级城市：[ICON_CULTURE]文化阈值增长由20%降低到15%。
+				[NEWLINE][ICON_BULLET]四五级城市：[ICON_CULTURE]文化阈值增长由33%降低到28%。
+				[NEWLINE][ICON_BULLET]每座城市+1%[ICON_CULTURE]全局文化。
 			</Text>
 		</Replace>
 
@@ -6116,7 +6150,8 @@
 			<Text>胡服骑射</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_HORSEMAN_TRAINING_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]胡服骑射[ENDCOLOR][NEWLINE]所有重骑和装甲单位+1[ICON_MOVES]移动且无视敌方控制区域（ZOC）。 </Text>
+			<Text>[COLOR_POSITIVE_TEXT]胡服骑射[ENDCOLOR]
+			[NEWLINE]所有重骑和装甲单位+1[ICON_MOVES]移动、无视敌方控制区域（ZOC），且攻击时造成的伤害固定+5。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_HORSEMAN_TRAINING_TEXT">
 			<Text>赵武灵王是中国战国时期一位奋发有为的诸侯国君，他为了抵御北方胡人的侵略，实行了“胡服骑射”的军事改革。改革的中心内容是穿胡人的服装，学习胡人骑马射箭的作战方法。其服上褶下绔，有貂、蝉为饰的武冠，金钩为饰的具带，足上穿靴，便于骑射。为此，他力排众议，带头穿胡服，习骑马，练射箭，亲自训练士兵，使赵国军事力量日益强大，而能西退胡人，北灭中山国，成为“战国七雄”之一。[NEWLINE][NEWLINE]骑术虽然很早在世界各地就已经出现，但在很多地区却迟迟没有发展成为骑兵部队。农耕文明发展初期不具备培养大规模骑兵的物质条件，古典时代“结日定地”的贵族决斗式战争也使得骑兵的机动性无处发挥。随著人类战争日益专业化规模化，以及鞍鞯、马镫等重要骑兵装备的发明，各民族开始向游牧部落学习先进的骑兵作战技术，将其提升为一种重要的战争手段。</Text>
@@ -6124,11 +6159,13 @@
 		
 		<Replace Tag="TXT_KEY_POLICY_WARRIOR_CODE_HELP" >
 			<Text>[COLOR_POSITIVE_TEXT]尚武精神[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]军营，军械所，兵工厂，军事基地+1[ICON_PRODUCTION]产能。[ICON_PUPPET]傀儡城市+6[ICON_GOLD]金钱。
-				[NEWLINE][ICON_BULLET]马厩，冶铁坊，城墙，城堡+2[ICON_CULTURE]文化。
-				[NEWLINE][ICON_BULLET]建造军事单位时+15%[ICON_PRODUCTION]产能。
+			[NEWLINE]军营，军械所，兵工厂，军事基地+1[ICON_PRODUCTION]产能。[ICON_PUPPET]傀儡城市+6[ICON_GOLD]金钱。
+			[NEWLINE]马厩，冶铁坊，城墙，城堡+2[ICON_CULTURE]文化。
+			[NEWLINE]建造军事单位时+15%[ICON_PRODUCTION]产能。
+			[NEWLINE]研发数学后，攻占敌方城市赠送法院
 			</Text>
 		</Replace>
+
 		
 		<Replace Tag="TXT_KEY_POLICY_DISCIPLINE_HELP" >
 			<Text>[COLOR_POSITIVE_TEXT]军事纪律[ENDCOLOR][NEWLINE]每个与本战场相邻的己方单位获得+25%[ICON_STRENGTH]战斗力加成，夹击加成由10%增加至15%。</Text>
@@ -6140,7 +6177,10 @@
 		<Replace Tag="TXT_KEY_POLICY_MILITARY_CASTE_HELP" >
 			<Text>[COLOR_POSITIVE_TEXT]军事操练[ENDCOLOR]
 			[NEWLINE]在[ICON_CAPITAL]首都附近出现一位[ICON_GREAT_GENERAL]陆军统帅。获得[ICON_GREAT_GENERAL]陆军统帅的速度+50%。
-			[NEWLINE]陆军远程单位（投射单位、攻城武器、游猎单位）远程攻击以及遭到远程攻击时+15%战斗力。</Text>
+			[NEWLINE]陆军远程单位（投射单位、攻城武器、游猎单位）远程攻击以及遭到远程攻击时+15%战斗力。
+			[NEWLINE]投射单位与游猎单位对攻击造成伤害固定+5。
+			[NEWLINE]攻城单位和空军单位对城市额外造成相当于10%城市最大生命值的伤害。
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_MILITARYCASTE_TEXT" >
 			<Text>操练，是军队平日的活动之一，除了列队、体能训练与军事知识学习之外，也要进行射击、实战训练等。</Text>
@@ -6347,41 +6387,66 @@
 		
 		<Replace Tag="TXT_KEY_POLICY_BRANCH_EXPLORATION_HELP" >
 			<Text>[COLOR_POSITIVE_TEXT]海事政策[ENDCOLOR]提高帝国沿海城市的产出以及向海外扩张的能力。
-			[NEWLINE][NEWLINE]启用海事政策可以使你的移民在境外不会损耗，工人、移民、考古学家、传教士以及大先知+1[ICON_MOVES]移动，所有的海运单位+1[ICON_MOVES]移动，海军统帅+3[ICON_MOVES]移动。解锁奇观鹿特丹港和大铁厂。
-			[NEWLINE][NEWLINE]启用了所有的探索政策树下的政策后，立即获得一个海军统帅，海军统帅的产生速率+50%。并允许在工业时代以后使用[ICON_PEACE]信仰购买海军统帅。此后海军统帅可以无消耗建造军事学院。</Text>
+			[NEWLINE][NEWLINE]启用海事政策:
+			[NEWLINE][ICON_BULLET]你的移民在境外不会损耗，工人、移民、考古学家、传教士以及大先知+1[ICON_MOVES]移动。
+			[NEWLINE][ICON_BULLET]所有的海运单位+1[ICON_MOVES]移动，海军统帅+3[ICON_MOVES]移动，所有海军单位可以进入大洋。
+			[NEWLINE][ICON_BULLET]解锁奇观鹿特丹港和大铁厂。
+			[NEWLINE][NEWLINE]启用了所有的探索政策树下的政策后：
+			[NEWLINE][ICON_BULLET]立即获得一个海军统帅，海军统帅的产生速率+50%。
+			[NEWLINE][ICON_BULLET]允许在工业时代以后使用[ICON_PEACE]信仰购买海军统帅。此后海军统帅可以无消耗建造军事学院。</Text>
 		</Replace>
 				
 		<Replace Tag="TXT_KEY_POLICY_MARITIME_INFRASTRUCTURE_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]海上设施[ENDCOLOR][NEWLINE]沿海城市+3[ICON_PRODUCTION]产能。[NEWLINE]所有渔船、捕捞船和海上石油平台+1[ICON_PRODUCTION]产能。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]海上设施[ENDCOLOR]
+			[NEWLINE][ICON_BULLET]沿海城市+3[ICON_PRODUCTION]产能。
+			[NEWLINE][ICON_BULLET]所有渔船、捕捞船和海上石油平台+1[ICON_PRODUCTION]产能。
+			[NEWLINE][ICON_BULLET]工人修建海上设施的速度+50%。
+			</Text>
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_POLICY_MERCHANT_NAVY_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]商船舰队[ENDCOLOR][NEWLINE]获得一条额外的商路。[NEWLINE]所有海上商路+6[ICON_GOLD]金钱。[NEWLINE]所有沿海城市+3[ICON_RES_CONSUMER]商品。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]商船舰队[ENDCOLOR]
+			[NEWLINE][ICON_BULLET]获得一条额外的商路。
+			[NEWLINE][ICON_BULLET]所有海上商路+6[ICON_GOLD]金钱。
+			[NEWLINE][ICON_BULLET]所有沿海城市+3[ICON_RES_CONSUMER]商品。
+			[NEWLINE][ICON_BULLET]可以使用[ICON_PEACE]信仰购买商船。
+			</Text>
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_POLICY_NAVAL_TRADITION_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]海军传统[ENDCOLOR][NEWLINE]所有沿海城市+3[ICON_CULTURE]文化。[NEWLINE][ICON_BULLET]每处灯塔、港口和海运码头+2[ICON_CULTURE]文化。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]海军传统[ENDCOLOR]
+			[NEWLINE][ICON_BULLET]所有沿海城市+3[ICON_CULTURE]文化。
+			[NEWLINE][ICON_BULLET]每处灯塔、港口和海运码头+2[ICON_CULTURE]文化。</Text>
 		</Replace>
 		
 		<Row Tag="TXT_KEY_POLICY_COASTAL_ADMINISTRATION">
 			<Text>海事管理</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_COASTAL_ADMINISTRATION_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]海事管理[ENDCOLOR][NEWLINE]船坞使所在城市的[ICON_PRODUCTION]产能和[ICON_RESEARCH]科研产出提高15%。当你训练或购买了一个远洋海军单位时，获得一次性的[ICON_CULTURE]文化加成(其数值相当于单位的100%[ICON_STRENGTH]战斗力)。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]海事管理[ENDCOLOR]
+			[NEWLINE][ICON_BULLET]灯塔、港口、码头使所在城市的[ICON_PRODUCTION]产能和[ICON_RESEARCH]科研产出提高3%。
+			[NEWLINE][ICON_BULLET]海运码头、船坞使所在城市的[ICON_PRODUCTION]产能和[ICON_RESEARCH]科研产出提高5%。
+			[NEWLINE][ICON_BULLET]灯塔、港口、码头、海运码头、船坞+4[ICON_GOLD]金钱。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_COASTAL_ADMINISTRATION_TEXT">
 			<Text>海事管理是研究辖区海事监管特点，贯彻落实海事法规的专业管理部门。对海事业务进行专业研究、指导、监督和管理，具体承担船舶监督、危险品和防污染管理、船员管理、通航管理、航运公司安全管理体系审核管理等海事监管业务的专业管理职能和口岸有关管理职能。海事管理处原则上不直接实施海事具体行政行为。</Text>
 		</Row>
 		
 		<Replace Tag="TXT_KEY_POLICY_NAVIGATION_SCHOOL_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]航海学校[ENDCOLOR][NEWLINE]每处灯塔、港口、海运码头和船坞+1本地[ICON_HAPPINESS_1]快乐。建造海上单位时+15%[ICON_PRODUCTION]产能积累。新训练的海军单位+15点经验。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]航海学校[ENDCOLOR]
+			[NEWLINE][ICON_BULLET]每处灯塔、港口、海运码头和船坞+1本地[ICON_HAPPINESS_1]快乐。建造海上单位时+15%[ICON_PRODUCTION]产能积累。
+			[NEWLINE][ICON_BULLET]新训练的海军单位+15点经验。
+			[NEWLINE][ICON_BULLET]当你训练或购买了一个远洋海军单位时，获得一次性的[ICON_CULTURE]文化加成(其数值相当于单位的100%[ICON_STRENGTH]战斗力)。
+			</Text>
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_POLICY_TREASURE_FLEETS">
 			<Text>制海权</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_TREASURE_FLEETS_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]制海权[ENDCOLOR][NEWLINE]所有海军单位+1[ICON_MOVES]移动，+1视野并+15%[ICON_STRENGTH]战斗力。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]制海权[ENDCOLOR]
+			[NEWLINE]所有海军单位+1[ICON_MOVES]移动，+1视野并+15%[ICON_STRENGTH]战斗力。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_TREASURE_FLEETS_TEXT">
 			<Text>制海权（英语：Thalassocracy），是一种军事理论，指海军兵力在一定时间、一定海域内所掌握的控制权。制海权在马汉的《海权论》中认为，是国家遂行海权运作的一部分。古典海军的军事理论，在战术层面部分，多属帆船时代至地理大发现间的海战经验分析。在如今军事科技的快速发展下，于实战上已经过时；然而，其核心概念的制海权，是最重要也最基本的概念，所以至今仍是海军战略研究的课题。</Text>

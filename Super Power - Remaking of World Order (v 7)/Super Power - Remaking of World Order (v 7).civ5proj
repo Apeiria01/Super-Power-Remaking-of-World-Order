@@ -26,7 +26,7 @@
 [ICON_BULLET]Chinese Language: MarbleGargoyle, LI&amp; Seven [NEWLINE]
 [ICON_BULLET]Promotion: BlackFeather_, GanJunWuDi, ggx2
 [NEWLINE]
-[ICON_BULLET]Test: Tokata, Ben, Dante,  BlackFeather_, GanJunWuDi, 38AA, HJQ, xiaofeng, seraph, Li &amp; Seven, Xingen, Tianshu, SkyWalker, Arno, bot, ryst, Alice Cartelet
+[ICON_BULLET]Test: Tokata, Ben, Dante,  BlackFeather_, GanJunWuDi, 38AA, HJQ, xiaofeng, seraph, Li &amp; Seven, Xingen, Tianshu, SkyWalker, Arno, bot, ryst
 [NEWLINE]
 [ICON_BULLET]Civilopedia Texts: Wikipedia, www.azquotes.com, www.brainyquote.com, baike.baidu.com
 [NEWLINE][ICON_BULLET]Proofreading, Document Editing &amp; Balance: 爱玲的安逸人生, Seven
@@ -699,6 +699,11 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
+        <FileName>Gameplay/SQL/NewPolicyEffect.sql</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
         <FileName>Gameplay/XML/Localization/TextInfos_en_US.xml</FileName>
       </Action>
       <Action>
@@ -931,6 +936,10 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="Gameplay/SQL/NewSpecialistRule.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="Gameplay/SQL/NewPolicyEffect.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
