@@ -7267,7 +7267,7 @@
 				[NEWLINE][ICON_BULLET]One Worker appears near the [ICON_CAPITAL] Capital.
 				[NEWLINE][ICON_BULLET]When you found a [COLOR_POSITIVE_TEXT]New City[ENDCOLOR], one Worker will appear outside the city.
 				[NEWLINE][ICON_BULLET]+2 [ICON_RES_MANPOWER] Manpower per city.
-				[NEWLINE][ICON_BULLET]Gain 25 point free [ICON_PRODUCTION] Production for new founded city。
+				[NEWLINE][ICON_BULLET]Gain 25 point free [ICON_PRODUCTION] Production for new founded city.
 				</Text>
 		</Replace>
 		
@@ -7277,7 +7277,7 @@
 				[COLOR_POSITIVE_TEXT]Meritocracy[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]+2 [ICON_PRODUCTION] Production in every city.
 				[NEWLINE][ICON_BULLET]+10% [ICON_PRODUCTION] Production in cities when constructing Buildings.
-				[NEWLINE][ICON_BULLET]When building constructed , get free [ICON_RESEARCH]science and [ICON_CULTURE] culture (10% of its cost)。
+				[NEWLINE][ICON_BULLET]When building constructed , get free [ICON_RESEARCH]science and [ICON_CULTURE] culture (10% of its cost).
 			</Text>
 		</Replace>
 
@@ -7737,7 +7737,7 @@
 				[COLOR_POSITIVE_TEXT]Maritime Infrastructure[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]+3 [ICON_PRODUCTION] Production in all coastal Cities.
 				[NEWLINE][ICON_BULLET]+1 [ICON_PRODUCTION] Production for every Fishing Net, Workboats and Offshore Platform.
-				[NEWLINE]Then rate your workers building the maritime improvement +50%。
+				[NEWLINE]Then rate your workers building the maritime improvement +50%.
 
 			</Text>
 		</Replace>
@@ -7748,7 +7748,7 @@
 				[NEWLINE][ICON_BULLET]+1 additional Trade Route slot.
 				[NEWLINE][ICON_BULLET]+6 [ICON_GOLD] Gold from all your sea trade routes.
 				[NEWLINE][ICON_BULLET]+3 [ICON_RES_CONSUMER] Consumer in all coastal Cities.
-				[NEWLINE][ICON_BULLET]You can use [ICON_PEACE] faith to buy merchant ships。
+				[NEWLINE][ICON_BULLET]You can use [ICON_PEACE] faith to buy cargo ships.
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_NAVAL_TRADITION_HELP" >
