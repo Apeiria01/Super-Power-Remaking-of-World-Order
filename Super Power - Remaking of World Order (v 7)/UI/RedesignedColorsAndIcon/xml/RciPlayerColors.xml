@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 8/9/2015 3:55:27 PM -->
+<GameData>
+	<PlayerColors>
+		<Update>
+			<Set PrimaryColor="NEW_COLOR_PLAYER_AMERICA_ICON"/>
+			<Where Type="PLAYERCOLOR_AMERICA"/>
+		</Update>
+		<Update>
+			<Set SecondaryColor="NEW_COLOR_PLAYER_AMERICA_BACKGROUND"/>
+			<Where Type="PLAYERCOLOR_AMERICA"/>
+		</Update>
+		<Update>
+			<Set PrimaryColor="NEW_COLOR_PLAYER_ARABIA_ICON"/>
+			<Where Type="PLAYERCOLOR_ARABIA"/>
+		</Update>
+		<Update>
+			<Set SecondaryColor="NEW_COLOR_PLAYER_ARABIA_BACKGROUND"/>
+			<Where Type="PLAYERCOLOR_ARABIA"/>
+		</Update>
+		<Update>
+			<Set PrimaryColor="NEW_COLOR_PLAYER_AZTEC_ICON"/>
+			<Where Type="PLAYERCOLOR_AZTEC"/>
+		</Update>
+		<Update>
+			<Set SecondaryColor="NEW_COLOR_PLAYER_AZTEC_BACKGROUND"/>
+			<Where Type="PLAYERCOLOR_AZTEC"/>
+		</Update>
+		<Update>
+			<Set PrimaryColor="NEW_COLOR_PLAYER_CHINA_ICON"/>
+			<Where Type="PLAYERCOLOR_CHINA"/>
+		</Update>
+		<Update>
+			<Set SecondaryColor="NEW_COLOR_PLAYER_CHINA_BACKGROUND"/>
+			<Where Type="PLAYERCOLOR_CHINA"/>
+		</Update>
+		<Update>
+			<Set PrimaryColor="NEW_COLOR_PLAYER_EGYPT_ICON"/>
+			<Where Type="PLAYERCOLOR_EGYPT"/>
+		</Update>
+		<Update>
+			<Set SecondaryColor="NEW_COLOR_PLAYER_EGYPT_BACKGROUND"/>
+			<Where Type="PLAYERCOLOR_EGYPT"/>
+		</Update>
+		<Update>
+			<Set PrimaryColor="NEW_COLOR_PLAYER_ENGLAND_ICON"/>
+			<Where Type="PLAYERCOLOR_ENGLAND"/>
+		</Update>
+		<Update>
+			<Set SecondaryColor="NEW_COLOR_PLAYER_ENGLAND_BACKGROUND"/>
+			<Where Type="PLAYERCOLOR_ENGLAND"/>
+		</Update>
+		<Update>
+			<Set PrimaryColor="NEW_COLOR_PLAYER_FRANCE_ICON"/>
+			<Where Type="PLAYERCOLOR_FRANCE"/>
+		</Update>
+		<Update>
+			<Set SecondaryColor="NEW_COLOR_PLAYER_FRANCE_BACKGROUND"/>
+			<Where Type="PLAYERCOLOR_FRANCE"/>
+		</Update>
+		<Update>
+			<Set PrimaryColor="NEW_COLOR_PLAYER_GERMANY_ICON"/>
+			<Where Type="PLAYERCOLOR_GERMANY"/>
+		</Update>
+		<Update>
+			<Set SecondaryColor="NEW_COLOR_PLAYER_GERMANY_BACKGROUND"/>
+			<Where Type="PLAYERCOLOR_GERMANY"/>
+		</Update>
+		<Update>
+			<Set PrimaryColor="NEW_COLOR_PLAYER_GREECE_ICON"/>
+			<Where Type="PLAYERCOLOR_GREECE"/>
+		</Update>
+		<Update>
+			<Set SecondaryColor="NEW_COLOR_PLAYER_GREECE_BACKGROUND"/>
+			<Where Type="PLAYERCOLOR_GREECE"/>
+		</Update>
+		<Update>
+			<Set PrimaryColor="NEW_COLOR_PLAYER_INDIA_ICON"/>
+			<Where Type="PLAYERCOLOR_INDIA"/>
+		</Update>
+		<Update>
+			<Set SecondaryColor="NEW_COLOR_PLAYER_INDIA_BACKGROUND"/>
+			<Where Type="PLAYERCOLOR_INDIA"/>
+		</Update>
+		<Update>
+			<Set PrimaryColor="NEW_COLOR_PLAYER_IROQUOIS_ICON"/>
+			<Where Type="PLAYERCOLOR_IROQUOIS"/>
+		</Update>
+		<Update>
+			<Set SecondaryColor="NEW_COLOR_PLAYER_IROQUOIS_BACKGROUND"/>
+			<Where Type="PLAYERCOLOR_IROQUOIS"/>
+		</Update>
+		<Update>
+			<Set PrimaryColor="NEW_COLOR_PLAYER_JAPAN_ICON"/>
+			<Where Type="PLAYERCOLOR_JAPAN"/>
+		</Update>
+		<Update>
+			<Set SecondaryColor="NEW_COLOR_PLAYER_JAPAN_BACKGROUND"/>
+			<Where Type="PLAYERCOLOR_JAPAN"/>
+		</Update>
+		<Update>
+			<Set PrimaryColor="NEW_COLOR_PLAYER_OTTOMAN_ICON"/>
+			<Where Type="PLAYERCOLOR_OTTOMAN"/>
+		</Update>
+		<Update>
+			<Set SecondaryColor="NEW_COLOR_PLAYER_OTTOMAN_BACKGROUND"/>
+			<Where Type="PLAYERCOLOR_OTTOMAN"/>
+		</Update>
+		<Update>
+			<Set PrimaryColor="NEW_COLOR_PLAYER_PERSIA_ICON"/>
+			<Where Type="PLAYERCOLOR_PERSIA"/>
+		</Update>
+		<Update>
+			<Set SecondaryColor="NEW_COLOR_PLAYER_PERSIA_BACKGROUND"/>
+			<Where Type="PLAYERCOLOR_PERSIA"/>
+		</Update>
+		<Update>
+			<Set PrimaryColor="NEW_COLOR_PLAYER_ROME_ICON"/>
+			<Where Type="PLAYERCOLOR_ROME"/>
+		</Update>
+		<Update>
+			<Set SecondaryColor="NEW_COLOR_PLAYER_ROME_BACKGROUND"/>
+			<Where Type="PLAYERCOLOR_ROME"/>
+		</Update>
+		<Update>
+			<Set PrimaryColor="NEW_COLOR_PLAYER_RUSSIA_ICON"/>
+			<Where Type="PLAYERCOLOR_RUSSIA"/>
+		</Update>
+		<Update>
+			<Set SecondaryColor="NEW_COLOR_PLAYER_RUSSIA_BACKGROUND"/>
+			<Where Type="PLAYERCOLOR_RUSSIA"/>
+		</Update>
+		<Update>
+			<Set PrimaryColor="NEW_COLOR_PLAYER_SIAM_ICON"/>
+			<Where Type="PLAYERCOLOR_SIAM"/>
+		</Update>
+		<Update>
+			<Set SecondaryColor="NEW_COLOR_PLAYER_SIAM_BACKGROUND"/>
+			<Where Type="PLAYERCOLOR_SIAM"/>
+		</Update>
+		<Update>
+			<Set PrimaryColor="NEW_COLOR_PLAYER_SONGHAI_ICON"/>
+			<Where Type="PLAYERCOLOR_SONGHAI"/>
+		</Update>
+		<Update>
+			<Set SecondaryColor="NEW_COLOR_PLAYER_SONGHAI_BACKGROUND"/>
+			<Where Type="PLAYERCOLOR_SONGHAI"/>
+		</Update>
+		<!--DLC-->
+		<Update>
+			<Set PrimaryColor="NEW_COLOR_PLAYER_MONGOL_ICON"/>
+			<Where Type="PLAYERCOLOR_MONGOL"/>
+		</Update>
+		<Update>
+			<Set SecondaryColor="NEW_COLOR_PLAYER_MONGOL_BACKGROUND"/>
+			<Where Type="PLAYERCOLOR_MONGOL"/>
+		</Update>
+		<Update>
+			<Set PrimaryColor="NEW_COLOR_PLAYER_INCA_ICON"/>
+			<Where Type="PLAYERCOLOR_INCA"/>
+		</Update>
+		<Update>
+			<Set SecondaryColor="NEW_COLOR_PLAYER_INCA_BACKGROUND"/>
+			<Where Type="PLAYERCOLOR_INCA"/>
+		</Update>
+		<Update>
+			<Set PrimaryColor="NEW_COLOR_PLAYER_SPAIN_ICON"/>
+			<Where Type="PLAYERCOLOR_SPAIN"/>
+		</Update>
+		<Update>
+			<Set SecondaryColor="NEW_COLOR_PLAYER_SPAIN_BACKGROUND"/>
+			<Where Type="PLAYERCOLOR_SPAIN"/>
+		</Update>
+		<Update>
+			<Set PrimaryColor="NEW_COLOR_PLAYER_POLYNESIA_ICON"/>
+			<Where Type="PLAYERCOLOR_POLYNESIA"/>
+		</Update>
+		<Update>
+			<Set SecondaryColor="NEW_COLOR_PLAYER_POLYNESIA_BACKGROUND"/>
+			<Where Type="PLAYERCOLOR_POLYNESIA"/>
+		</Update>
+		<Update>
+			<Set PrimaryColor="NEW_COLOR_PLAYER_DENMARK_ICON"/>
+			<Where Type="PLAYERCOLOR_DENMARK"/>
+		</Update>
+		<Update>
+			<Set SecondaryColor="NEW_COLOR_PLAYER_DENMARK_BACKGROUND"/>
+			<Where Type="PLAYERCOLOR_DENMARK"/>
+		</Update>
+		<Update>
+			<Set PrimaryColor="NEW_COLOR_PLAYER_KOREA_ICON"/>
+			<Where Type="PLAYERCOLOR_KOREA"/>
+		</Update>
+		<Update>
+			<Set SecondaryColor="NEW_COLOR_PLAYER_KOREA_BACKGROUND"/>
+			<Where Type="PLAYERCOLOR_KOREA"/>
+		</Update>
+		<Update>
+			<Set PrimaryColor="NEW_COLOR_PLAYER_BABYLON_ICON"/>
+			<Where Type="PLAYERCOLOR_BABYLON"/>
+		</Update>
+		<Update>
+			<Set SecondaryColor="NEW_COLOR_PLAYER_BABYLON_BACKGROUND"/>
+			<Where Type="PLAYERCOLOR_BABYLON"/>
+		</Update>
+		<!--Expansion1-->
+		<Update>
+			<Set PrimaryColor="NEW_COLOR_PLAYER_AUSTRIA_ICON"/>
+			<Where Type="PLAYERCOLOR_AUSTRIA"/>
+		</Update>
+		<Update>
+			<Set SecondaryColor="NEW_COLOR_PLAYER_AUSTRIA_BACKGROUND"/>
+			<Where Type="PLAYERCOLOR_AUSTRIA"/>
+		</Update>
+		<Update>
+			<Set PrimaryColor="NEW_COLOR_PLAYER_BYZANTIUM_ICON"/>
+			<Where Type="PLAYERCOLOR_BYZANTIUM"/>
+		</Update>
+		<Update>
+			<Set SecondaryColor="NEW_COLOR_PLAYER_BYZANTIUM_BACKGROUND"/>
+			<Where Type="PLAYERCOLOR_BYZANTIUM"/>
+		</Update>
+		<Update>
+			<Set PrimaryColor="NEW_COLOR_PLAYER_CARTHAGE_ICON"/>
+			<Where Type="PLAYERCOLOR_CARTHAGE"/>
+		</Update>
+		<Update>
+			<Set SecondaryColor="NEW_COLOR_PLAYER_CARTHAGE_BACKGROUND"/>
+			<Where Type="PLAYERCOLOR_CARTHAGE"/>
+		</Update>
+		<Update>
+			<Set PrimaryColor="NEW_COLOR_PLAYER_CELTS_ICON"/>
+			<Where Type="PLAYERCOLOR_CELTS"/>
+		</Update>
+		<Update>
+			<Set SecondaryColor="NEW_COLOR_PLAYER_CELTS_BACKGROUND"/>
+			<Where Type="PLAYERCOLOR_CELTS"/>
+		</Update>
+		<Update>
+			<Set PrimaryColor="NEW_COLOR_PLAYER_ETHIOPIA_ICON"/>
+			<Where Type="PLAYERCOLOR_ETHIOPIA"/>
+		</Update>
+		<Update>
+			<Set SecondaryColor="NEW_COLOR_PLAYER_ETHIOPIA_BACKGROUND"/>
+			<Where Type="PLAYERCOLOR_ETHIOPIA"/>
+		</Update>
+		<Update>
+			<Set PrimaryColor="NEW_COLOR_PLAYER_HUNS_ICON"/>
+			<Where Type="PLAYERCOLOR_HUNS"/>
+		</Update>
+		<Update>
+			<Set SecondaryColor="NEW_COLOR_PLAYER_HUNS_BACKGROUND"/>
+			<Where Type="PLAYERCOLOR_HUNS"/>
+		</Update>
+		<Update>
+			<Set PrimaryColor="NEW_COLOR_PLAYER_MAYA_ICON"/>
+			<Where Type="PLAYERCOLOR_MAYA"/>
+		</Update>
+		<Update>
+			<Set SecondaryColor="NEW_COLOR_PLAYER_MAYA_BACKGROUND"/>
+			<Where Type="PLAYERCOLOR_MAYA"/>
+		</Update>
+		<Update>
+			<Set PrimaryColor="NEW_COLOR_PLAYER_NETHERLANDS_ICON"/>
+			<Where Type="PLAYERCOLOR_NETHERLANDS"/>
+		</Update>
+		<Update>
+			<Set SecondaryColor="NEW_COLOR_PLAYER_NETHERLANDS_BACKGROUND"/>
+			<Where Type="PLAYERCOLOR_NETHERLANDS"/>
+		</Update>
+		<Update>
+			<Set PrimaryColor="NEW_COLOR_PLAYER_SWEDEN_ICON"/>
+			<Where Type="PLAYERCOLOR_SWEDEN"/>
+		</Update>
+
+		<Update>
+			<Set SecondaryColor="NEW_COLOR_PLAYER_SWEDEN_BACKGROUND"/>
+			<Where Type="PLAYERCOLOR_SWEDEN"/>
+		</Update>
+		<!--Expansion2-->
+		<Update>
+			<Set PrimaryColor="NEW_COLOR_PLAYER_ASSYRIA_ICON"/>
+			<Where Type="PLAYERCOLOR_ASSYRIA"/>
+		</Update>
+		<Update>
+			<Set SecondaryColor="NEW_COLOR_PLAYER_ASSYRIA_BACKGROUND"/>
+			<Where Type="PLAYERCOLOR_ASSYRIA"/>
+		</Update>
+		<Update>
+			<Set PrimaryColor="NEW_COLOR_PLAYER_BRAZIL_ICON"/>
+			<Where Type="PLAYERCOLOR_BRAZIL"/>
+		</Update>
+		<Update>
+			<Set SecondaryColor="NEW_COLOR_PLAYER_BRAZIL_BACKGROUND"/>
+			<Where Type="PLAYERCOLOR_BRAZIL"/>
+		</Update>
+		<Update>
+			<Set PrimaryColor="NEW_COLOR_PLAYER_INDONESIA_ICON"/>
+			<Where Type="PLAYERCOLOR_INDONESIA"/>
+		</Update>
+		<Update>
+			<Set SecondaryColor="NEW_COLOR_PLAYER_INDONESIA_BACKGROUND"/>
+			<Where Type="PLAYERCOLOR_INDONESIA"/>
+		</Update>
+		<Update>
+			<Set PrimaryColor="NEW_COLOR_PLAYER_MOROCCO_ICON"/>
+			<Where Type="PLAYERCOLOR_MOROCCO"/>
+		</Update>
+		<Update>
+			<Set SecondaryColor="NEW_COLOR_PLAYER_MOROCCO_BACKGROUND"/>
+			<Where Type="PLAYERCOLOR_MOROCCO"/>
+		</Update>
+		<Update>
+			<Set PrimaryColor="NEW_COLOR_PLAYER_POLAND_ICON"/>
+			<Where Type="PLAYERCOLOR_POLAND"/>
+		</Update>
+		<Update>
+			<Set SecondaryColor="NEW_COLOR_PLAYER_POLAND_BACKGROUND"/>
+			<Where Type="PLAYERCOLOR_POLAND"/>
+		</Update>
+		<Update>
+			<Set PrimaryColor="NEW_COLOR_PLAYER_PORTUGAL_ICON"/>
+			<Where Type="PLAYERCOLOR_PORTUGAL"/>
+		</Update>
+		<Update>
+			<Set SecondaryColor="NEW_COLOR_PLAYER_PORTUGAL_BACKGROUND"/>
+			<Where Type="PLAYERCOLOR_PORTUGAL"/>
+		</Update>
+		<Update>
+			<Set PrimaryColor="NEW_COLOR_PLAYER_SHOSHONE_ICON"/>
+			<Where Type="PLAYERCOLOR_SHOSHONE"/>
+		</Update>
+		<Update>
+			<Set SecondaryColor="NEW_COLOR_PLAYER_SHOSHONE_BACKGROUND"/>
+			<Where Type="PLAYERCOLOR_SHOSHONE"/>
+		</Update>
+		<Update>
+			<Set PrimaryColor="NEW_COLOR_PLAYER_VENICE_ICON"/>
+			<Where Type="PLAYERCOLOR_VENICE"/>
+		</Update>
+		<Update>
+			<Set SecondaryColor="NEW_COLOR_PLAYER_VENICE_BACKGROUND"/>
+			<Where Type="PLAYERCOLOR_VENICE"/>
+		</Update>
+		<Update>
+			<Set PrimaryColor="NEW_COLOR_PLAYER_ZULU_ICON"/>
+			<Where Type="PLAYERCOLOR_ZULU"/>
+		</Update>
+		<Update>
+			<Set SecondaryColor="NEW_COLOR_PLAYER_ZULU_BACKGROUND"/>
+			<Where Type="PLAYERCOLOR_ZULU"/>
+		</Update>
+		--
+	</PlayerColors>
+</GameData>

@@ -21,7 +21,7 @@
 [NEWLINE]
 [ICON_BULLET]Models: Wolfdog, Snafusmith, Danrell, Ekmek, asioasioasio, KnelRivendare, Jinzor, bernie14,  Barathor, Snafusmith(Smitty), JTitan,Deliverator, Walter Hawkwood, Refar, Patum333, hangman, Deliverator,  BouncyMischa, Smitty, Civitar  
 [NEWLINE]
-[ICON_BULLET]Icons &amp; Images: Barathor, JanBoruta, Jamie Meyer, Moriboe, sukritact, Pouakai, Sukritact, Envoy (@fourfourhero), Pouakai,  zsofiadome, BlackFeather_, Empoh, Tokata, Institute of Swedish Safety &amp; Security,  freepik.com, iranaware.com, photobucket.com, Brainbug's Egyptian Army (Retextured) von Brainbug (v1.0), calxibe.com, Chrisz3D, 3d_molier, Janboruta, Panaristi, CaptainCWB, wallpoper.com, others from Goolgle Search
+[ICON_BULLET]Icons &amp; Images: Barathor, JanBoruta, Jamie Meyer, Moriboe, sukritact, Pouakai, Sukritact, Envoy (@fourfourhero), Pouakai,  zsofiadome, BlackFeather_, Empoh, Tokata, Institute of Swedish Safety &amp; Security,  freepik.com, iranaware.com, photobucket.com, Brainbug's Egyptian Army (Retextured) von Brainbug (v1.0), dylansan's Redesigned Colors and Icons (RCI) 2-7-2019: v. 3.0, calxibe.com, Chrisz3D, 3d_molier, Janboruta, Panaristi, CaptainCWB, wallpoper.com, others from Goolgle Search
 [NEWLINE]
 [ICON_BULLET]Chinese Language: MarbleGargoyle, LI&amp; Seven [NEWLINE]
 [ICON_BULLET]Promotion: BlackFeather_, GanJunWuDi, ggx2
@@ -751,6 +751,26 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
         <Type>UpdateDatabase</Type>
         <FileName>Gameplay/SQL/Buildings/NewBuildingsEffect.sql</FileName>
       </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateUserData</Type>
+        <FileName>UI/RedesignedColorsAndIcon/xml/RciColors.xml</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>UI/RedesignedColorsAndIcon/xml/RciPlayerColors.xml</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>UI/RedesignedColorsAndIcon/xml/RciAtlas.xml</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>UI/RedesignedColorsAndIcon/xml/RciPlayerIcons.xml</FileName>
+      </Action>
     </ModActions>
     <ModProperties />
     <ModContent>
@@ -893,6 +913,9 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
     <Folder Include="UI\InGame\WorldView" />
     <Folder Include="UI\InGame\PopupsGeneric" />
     <Folder Include="UI\InGame\Popups" />
+    <Folder Include="UI\RedesignedColorsAndIcon" />
+    <Folder Include="UI\RedesignedColorsAndIcon\Icons" />
+    <Folder Include="UI\RedesignedColorsAndIcon\xml" />
     <Folder Include="VMC" />
     <Folder Include="VMC\ART\" />
     <Folder Include="VMC\DB" />
@@ -5581,6 +5604,70 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
     <Content Include="UI\InGame\Popups\CityStateDiploPopup.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\RedesignedColorsAndIcon\Icons\RciIconAtlas128.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\RedesignedColorsAndIcon\Icons\RciIconAtlas256.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\RedesignedColorsAndIcon\Icons\RciIconAtlas32.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\RedesignedColorsAndIcon\Icons\RciIconAtlas45.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\RedesignedColorsAndIcon\Icons\RciIconAtlas64.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\RedesignedColorsAndIcon\Icons\RciIconAtlas80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\RedesignedColorsAndIcon\Icons\RciIconAtlasAlpha128.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\RedesignedColorsAndIcon\Icons\RciIconAtlasAlpha16.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\RedesignedColorsAndIcon\Icons\RciIconAtlasAlpha24.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\RedesignedColorsAndIcon\Icons\RciIconAtlasAlpha32.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\RedesignedColorsAndIcon\Icons\RciIconAtlasAlpha48.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\RedesignedColorsAndIcon\Icons\RciIconAtlasAlpha64.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\RedesignedColorsAndIcon\xml\RciAtlas.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\RedesignedColorsAndIcon\xml\RciColors.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\RedesignedColorsAndIcon\xml\RciPlayerColors.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\RedesignedColorsAndIcon\xml\RciPlayerIcons.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="VMC/ART/YieldAtlas_128_GoldenAge.dds">
       <SubType>Lua</SubType>

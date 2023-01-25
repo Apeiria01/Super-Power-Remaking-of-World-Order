@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 8/9/2015 5:38:55 PM -->
+<GameData>
+	<Civilizations>
+		<Update>
+			<Set PortraitIndex="0"/>
+			<Where Type="CIVILIZATION_AMERICA"/>
+		</Update>
+		<Update>
+			<Set IconAtlas="ATLAS_REDESIGNED"/>
+			<Where Type="CIVILIZATION_AMERICA"/>
+		</Update>
+		<Update>
+			<Set AlphaIconAtlas="ATLAS_REDESIGNED_ALPHA"/>
+			<Where Type="CIVILIZATION_AMERICA"/>
+		</Update>
+		<Update>
+			<Set PortraitIndex="1"/>
+			<Where Type="CIVILIZATION_ARABIA"/>
+		</Update>
+		<Update>
+			<Set IconAtlas="ATLAS_REDESIGNED"/>
+			<Where Type="CIVILIZATION_ARABIA"/>
+		</Update>
+		<Update>
+			<Set AlphaIconAtlas="ATLAS_REDESIGNED_ALPHA"/>
+			<Where Type="CIVILIZATION_ARABIA"/>
+		</Update>
+		<Update>
+			<Set PortraitIndex="2"/>
+			<Where Type="CIVILIZATION_AZTEC"/>
+		</Update>
+		<Update>
+			<Set IconAtlas="ATLAS_REDESIGNED"/>
+			<Where Type="CIVILIZATION_AZTEC"/>
+		</Update>
+		<Update>
+			<Set AlphaIconAtlas="ATLAS_REDESIGNED_ALPHA"/>
+			<Where Type="CIVILIZATION_AZTEC"/>
+		</Update>
+		<Update>
+			<Set PortraitIndex="3"/>
+			<Where Type="CIVILIZATION_CHINA"/>
+		</Update>
+		<Update>
+			<Set IconAtlas="ATLAS_REDESIGNED"/>
+			<Where Type="CIVILIZATION_CHINA"/>
+		</Update>
+		<Update>
+			<Set AlphaIconAtlas="ATLAS_REDESIGNED_ALPHA"/>
+			<Where Type="CIVILIZATION_CHINA"/>
+		</Update>
+		<Update>
+			<Set PortraitIndex="4"/>
+			<Where Type="CIVILIZATION_EGYPT"/>
+		</Update>
+		<Update>
+			<Set IconAtlas="ATLAS_REDESIGNED"/>
+			<Where Type="CIVILIZATION_EGYPT"/>
+		</Update>
+		<Update>
+			<Set AlphaIconAtlas="ATLAS_REDESIGNED_ALPHA"/>
+			<Where Type="CIVILIZATION_EGYPT"/>
+		</Update>
+		<Update>
+			<Set PortraitIndex="5"/>
+			<Where Type="CIVILIZATION_ENGLAND"/>
+		</Update>
+		<Update>
+			<Set IconAtlas="ATLAS_REDESIGNED"/>
+			<Where Type="CIVILIZATION_ENGLAND"/>
+		</Update>
+		<Update>
+			<Set AlphaIconAtlas="ATLAS_REDESIGNED_ALPHA"/>
+			<Where Type="CIVILIZATION_ENGLAND"/>
+		</Update>
+		<Update>
+			<Set PortraitIndex="6"/>
+			<Where Type="CIVILIZATION_FRANCE"/>
+		</Update>
+		<Update>
+			<Set IconAtlas="ATLAS_REDESIGNED"/>
+			<Where Type="CIVILIZATION_FRANCE"/>
+		</Update>
+		<Update>
+			<Set AlphaIconAtlas="ATLAS_REDESIGNED_ALPHA"/>
+			<Where Type="CIVILIZATION_FRANCE"/>
+		</Update>
+		<Update>
+			<Set PortraitIndex="7"/>
+			<Where Type="CIVILIZATION_GERMANY"/>
+		</Update>
+		<Update>
+			<Set IconAtlas="ATLAS_REDESIGNED"/>
+			<Where Type="CIVILIZATION_GERMANY"/>
+		</Update>
+		<Update>
+			<Set AlphaIconAtlas="ATLAS_REDESIGNED_ALPHA"/>
+			<Where Type="CIVILIZATION_GERMANY"/>
+		</Update>
+		<Update>
+			<Set PortraitIndex="8"/>
+			<Where Type="CIVILIZATION_GREECE"/>
+		</Update>
+		<Update>
+			<Set IconAtlas="ATLAS_REDESIGNED"/>
+			<Where Type="CIVILIZATION_GREECE"/>
+		</Update>
+		<Update>
+			<Set AlphaIconAtlas="ATLAS_REDESIGNED_ALPHA"/>
+			<Where Type="CIVILIZATION_GREECE"/>
+		</Update>
+		<Update>
+			<Set PortraitIndex="9"/>
+			<Where Type="CIVILIZATION_INDIA"/>
+		</Update>
+		<Update>
+			<Set IconAtlas="ATLAS_REDESIGNED"/>
+			<Where Type="CIVILIZATION_INDIA"/>
+		</Update>
+		<Update>
+			<Set AlphaIconAtlas="ATLAS_REDESIGNED_ALPHA"/>
+			<Where Type="CIVILIZATION_INDIA"/>
+		</Update>
+		<Update>
+			<Set PortraitIndex="10"/>
+			<Where Type="CIVILIZATION_IROQUOIS"/>
+		</Update>
+		<Update>
+			<Set IconAtlas="ATLAS_REDESIGNED"/>
+			<Where Type="CIVILIZATION_IROQUOIS"/>
+		</Update>
+		<Update>
+			<Set AlphaIconAtlas="ATLAS_REDESIGNED_ALPHA"/>
+			<Where Type="CIVILIZATION_IROQUOIS"/>
+		</Update>
+		<Update>
+			<Set PortraitIndex="11"/>
+			<Where Type="CIVILIZATION_JAPAN"/>
+		</Update>
+		<Update>
+			<Set IconAtlas="ATLAS_REDESIGNED"/>
+			<Where Type="CIVILIZATION_JAPAN"/>
+		</Update>
+		<Update>
+			<Set AlphaIconAtlas="ATLAS_REDESIGNED_ALPHA"/>
+			<Where Type="CIVILIZATION_JAPAN"/>
+		</Update>
+		<Update>
+			<Set PortraitIndex="12"/>
+			<Where Type="CIVILIZATION_OTTOMAN"/>
+		</Update>
+		<Update>
+			<Set IconAtlas="ATLAS_REDESIGNED"/>
+			<Where Type="CIVILIZATION_OTTOMAN"/>
+		</Update>
+		<Update>
+			<Set AlphaIconAtlas="ATLAS_REDESIGNED_ALPHA"/>
+			<Where Type="CIVILIZATION_OTTOMAN"/>
+		</Update>
+		<Update>
+			<Set PortraitIndex="13"/>
+			<Where Type="CIVILIZATION_PERSIA"/>
+		</Update>
+		<Update>
+			<Set IconAtlas="ATLAS_REDESIGNED"/>
+			<Where Type="CIVILIZATION_PERSIA"/>
+		</Update>
+		<Update>
+			<Set AlphaIconAtlas="ATLAS_REDESIGNED_ALPHA"/>
+			<Where Type="CIVILIZATION_PERSIA"/>
+		</Update>
+		<Update>
+			<Set PortraitIndex="14"/>
+			<Where Type="CIVILIZATION_ROME"/>
+		</Update>
+		<Update>
+			<Set IconAtlas="ATLAS_REDESIGNED"/>
+			<Where Type="CIVILIZATION_ROME"/>
+		</Update>
+		<Update>
+			<Set AlphaIconAtlas="ATLAS_REDESIGNED_ALPHA"/>
+			<Where Type="CIVILIZATION_ROME"/>
+		</Update>
+		<Update>
+			<Set PortraitIndex="15"/>
+			<Where Type="CIVILIZATION_RUSSIA"/>
+		</Update>
+		<Update>
+			<Set IconAtlas="ATLAS_REDESIGNED"/>
+			<Where Type="CIVILIZATION_RUSSIA"/>
+		</Update>
+		<Update>
+			<Set AlphaIconAtlas="ATLAS_REDESIGNED_ALPHA"/>
+			<Where Type="CIVILIZATION_RUSSIA"/>
+		</Update>
+		<Update>
+			<Set PortraitIndex="16"/>
+			<Where Type="CIVILIZATION_SIAM"/>
+		</Update>
+		<Update>
+			<Set IconAtlas="ATLAS_REDESIGNED"/>
+			<Where Type="CIVILIZATION_SIAM"/>
+		</Update>
+		<Update>
+			<Set AlphaIconAtlas="ATLAS_REDESIGNED_ALPHA"/>
+			<Where Type="CIVILIZATION_SIAM"/>
+		</Update>
+		<Update>
+			<Set PortraitIndex="17"/>
+			<Where Type="CIVILIZATION_SONGHAI"/>
+		</Update>
+		<Update>
+			<Set IconAtlas="ATLAS_REDESIGNED"/>
+			<Where Type="CIVILIZATION_SONGHAI"/>
+		</Update>
+		<Update>
+			<Set AlphaIconAtlas="ATLAS_REDESIGNED_ALPHA"/>
+			<Where Type="CIVILIZATION_SONGHAI"/>
+		</Update>
+		<Update>
+			<Set PortraitIndex="18"/>
+			<Where Type="CIVILIZATION_MONGOL"/>
+		</Update>
+		<Update>
+			<Set IconAtlas="ATLAS_REDESIGNED"/>
+			<Where Type="CIVILIZATION_MONGOL"/>
+		</Update>
+		<Update>
+			<Set AlphaIconAtlas="ATLAS_REDESIGNED_ALPHA"/>
+			<Where Type="CIVILIZATION_MONGOL"/>
+		</Update>
+		<Update>
+			<Set PortraitIndex="19"/>
+			<Where Type="CIVILIZATION_INCA"/>
+		</Update>
+		<Update>
+			<Set IconAtlas="ATLAS_REDESIGNED"/>
+			<Where Type="CIVILIZATION_INCA"/>
+		</Update>
+		<Update>
+			<Set AlphaIconAtlas="ATLAS_REDESIGNED_ALPHA"/>
+			<Where Type="CIVILIZATION_INCA"/>
+		</Update>
+		<Update>
+			<Set PortraitIndex="20"/>
+			<Where Type="CIVILIZATION_SPAIN"/>
+		</Update>
+		<Update>
+			<Set IconAtlas="ATLAS_REDESIGNED"/>
+			<Where Type="CIVILIZATION_SPAIN"/>
+		</Update>
+		<Update>
+			<Set AlphaIconAtlas="ATLAS_REDESIGNED_ALPHA"/>
+			<Where Type="CIVILIZATION_SPAIN"/>
+		</Update>
+		<Update>
+			<Set PortraitIndex="21"/>
+			<Where Type="CIVILIZATION_POLYNESIA"/>
+		</Update>
+		<Update>
+			<Set IconAtlas="ATLAS_REDESIGNED"/>
+			<Where Type="CIVILIZATION_POLYNESIA"/>
+		</Update>
+		<Update>
+			<Set AlphaIconAtlas="ATLAS_REDESIGNED_ALPHA"/>
+			<Where Type="CIVILIZATION_POLYNESIA"/>
+		</Update>
+		<Update>
+			<Set PortraitIndex="22"/>
+			<Where Type="CIVILIZATION_DENMARK"/>
+		</Update>
+		<Update>
+			<Set IconAtlas="ATLAS_REDESIGNED"/>
+			<Where Type="CIVILIZATION_DENMARK"/>
+		</Update>
+		<Update>
+			<Set AlphaIconAtlas="ATLAS_REDESIGNED_ALPHA"/>
+			<Where Type="CIVILIZATION_DENMARK"/>
+		</Update>
+		<Update>
+			<Set PortraitIndex="23"/>
+			<Where Type="CIVILIZATION_KOREA"/>
+		</Update>
+		<Update>
+			<Set IconAtlas="ATLAS_REDESIGNED"/>
+			<Where Type="CIVILIZATION_KOREA"/>
+		</Update>
+		<Update>
+			<Set AlphaIconAtlas="ATLAS_REDESIGNED_ALPHA"/>
+			<Where Type="CIVILIZATION_KOREA"/>
+		</Update>
+		<Update>
+			<Set PortraitIndex="24"/>
+			<Where Type="CIVILIZATION_BABYLON"/>
+		</Update>
+		<Update>
+			<Set IconAtlas="ATLAS_REDESIGNED"/>
+			<Where Type="CIVILIZATION_BABYLON"/>
+		</Update>
+		<Update>
+			<Set AlphaIconAtlas="ATLAS_REDESIGNED_ALPHA"/>
+			<Where Type="CIVILIZATION_BABYLON"/>
+		</Update>
+		<Update>
+			<Set PortraitIndex="25"/>
+			<Where Type="CIVILIZATION_AUSTRIA"/>
+		</Update>
+		<Update>
+			<Set IconAtlas="ATLAS_REDESIGNED"/>
+			<Where Type="CIVILIZATION_AUSTRIA"/>
+		</Update>
+		<Update>
+			<Set AlphaIconAtlas="ATLAS_REDESIGNED_ALPHA"/>
+			<Where Type="CIVILIZATION_AUSTRIA"/>
+		</Update>
+		<Update>
+			<Set PortraitIndex="26"/>
+			<Where Type="CIVILIZATION_BYZANTIUM"/>
+		</Update>
+		<Update>
+			<Set IconAtlas="ATLAS_REDESIGNED"/>
+			<Where Type="CIVILIZATION_BYZANTIUM"/>
+		</Update>
+		<Update>
+			<Set AlphaIconAtlas="ATLAS_REDESIGNED_ALPHA"/>
+			<Where Type="CIVILIZATION_BYZANTIUM"/>
+		</Update>
+		<Update>
+			<Set PortraitIndex="27"/>
+			<Where Type="CIVILIZATION_CARTHAGE"/>
+		</Update>
+		<Update>
+			<Set IconAtlas="ATLAS_REDESIGNED"/>
+			<Where Type="CIVILIZATION_CARTHAGE"/>
+		</Update>
+		<Update>
+			<Set AlphaIconAtlas="ATLAS_REDESIGNED_ALPHA"/>
+			<Where Type="CIVILIZATION_CARTHAGE"/>
+		</Update>
+		<Update>
+			<Set PortraitIndex="28"/>
+			<Where Type="CIVILIZATION_CELTS"/>
+		</Update>
+		<Update>
+			<Set IconAtlas="ATLAS_REDESIGNED"/>
+			<Where Type="CIVILIZATION_CELTS"/>
+		</Update>
+		<Update>
+			<Set AlphaIconAtlas="ATLAS_REDESIGNED_ALPHA"/>
+			<Where Type="CIVILIZATION_CELTS"/>
+		</Update>
+		<Update>
+			<Set PortraitIndex="29"/>
+			<Where Type="CIVILIZATION_ETHIOPIA"/>
+		</Update>
+		<Update>
+			<Set IconAtlas="ATLAS_REDESIGNED"/>
+			<Where Type="CIVILIZATION_ETHIOPIA"/>
+		</Update>
+		<Update>
+			<Set AlphaIconAtlas="ATLAS_REDESIGNED_ALPHA"/>
+			<Where Type="CIVILIZATION_ETHIOPIA"/>
+		</Update>
+		<Update>
+			<Set PortraitIndex="30"/>
+			<Where Type="CIVILIZATION_HUNS"/>
+		</Update>
+		<Update>
+			<Set IconAtlas="ATLAS_REDESIGNED"/>
+			<Where Type="CIVILIZATION_HUNS"/>
+		</Update>
+		<Update>
+			<Set AlphaIconAtlas="ATLAS_REDESIGNED_ALPHA"/>
+			<Where Type="CIVILIZATION_HUNS"/>
+		</Update>
+		<Update>
+			<Set PortraitIndex="31"/>
+			<Where Type="CIVILIZATION_MAYA"/>
+		</Update>
+		<Update>
+			<Set IconAtlas="ATLAS_REDESIGNED"/>
+			<Where Type="CIVILIZATION_MAYA"/>
+		</Update>
+		<Update>
+			<Set AlphaIconAtlas="ATLAS_REDESIGNED_ALPHA"/>
+			<Where Type="CIVILIZATION_MAYA"/>
+		</Update>
+		<Update>
+			<Set PortraitIndex="32"/>
+			<Where Type="CIVILIZATION_NETHERLANDS"/>
+		</Update>
+		<Update>
+			<Set IconAtlas="ATLAS_REDESIGNED"/>
+			<Where Type="CIVILIZATION_NETHERLANDS"/>
+		</Update>
+		<Update>
+			<Set AlphaIconAtlas="ATLAS_REDESIGNED_ALPHA"/>
+			<Where Type="CIVILIZATION_NETHERLANDS"/>
+		</Update>
+		<Update>
+			<Set PortraitIndex="33"/>
+			<Where Type="CIVILIZATION_SWEDEN"/>
+		</Update>
+		<Update>
+			<Set IconAtlas="ATLAS_REDESIGNED"/>
+			<Where Type="CIVILIZATION_SWEDEN"/>
+		</Update>
+		<Update>
+			<Set AlphaIconAtlas="ATLAS_REDESIGNED_ALPHA"/>
+			<Where Type="CIVILIZATION_SWEDEN"/>
+		</Update>
+		<Update>
+			<Set PortraitIndex="34"/>
+			<Where Type="CIVILIZATION_ASSYRIA"/>
+		</Update>
+		<Update>
+			<Set IconAtlas="ATLAS_REDESIGNED"/>
+			<Where Type="CIVILIZATION_ASSYRIA"/>
+		</Update>
+		<Update>
+			<Set AlphaIconAtlas="ATLAS_REDESIGNED_ALPHA"/>
+			<Where Type="CIVILIZATION_ASSYRIA"/>
+		</Update>
+		<Update>
+			<Set PortraitIndex="35"/>
+			<Where Type="CIVILIZATION_BRAZIL"/>
+		</Update>
+		<Update>
+			<Set IconAtlas="ATLAS_REDESIGNED"/>
+			<Where Type="CIVILIZATION_BRAZIL"/>
+		</Update>
+		<Update>
+			<Set AlphaIconAtlas="ATLAS_REDESIGNED_ALPHA"/>
+			<Where Type="CIVILIZATION_BRAZIL"/>
+		</Update>
+		<Update>
+			<Set PortraitIndex="36"/>
+			<Where Type="CIVILIZATION_INDONESIA"/>
+		</Update>
+		<Update>
+			<Set IconAtlas="ATLAS_REDESIGNED"/>
+			<Where Type="CIVILIZATION_INDONESIA"/>
+		</Update>
+		<Update>
+			<Set AlphaIconAtlas="ATLAS_REDESIGNED_ALPHA"/>
+			<Where Type="CIVILIZATION_INDONESIA"/>
+		</Update>
+		<Update>
+			<Set PortraitIndex="37"/>
+			<Where Type="CIVILIZATION_MOROCCO"/>
+		</Update>
+		<Update>
+			<Set IconAtlas="ATLAS_REDESIGNED"/>
+			<Where Type="CIVILIZATION_MOROCCO"/>
+		</Update>
+		<Update>
+			<Set AlphaIconAtlas="ATLAS_REDESIGNED_ALPHA"/>
+			<Where Type="CIVILIZATION_MOROCCO"/>
+		</Update>
+		<Update>
+			<Set PortraitIndex="38"/>
+			<Where Type="CIVILIZATION_POLAND"/>
+		</Update>
+		<Update>
+			<Set IconAtlas="ATLAS_REDESIGNED"/>
+			<Where Type="CIVILIZATION_POLAND"/>
+		</Update>
+		<Update>
+			<Set AlphaIconAtlas="ATLAS_REDESIGNED_ALPHA"/>
+			<Where Type="CIVILIZATION_POLAND"/>
+		</Update>
+		<Update>
+			<Set PortraitIndex="39"/>
+			<Where Type="CIVILIZATION_PORTUGAL"/>
+		</Update>
+		<Update>
+			<Set IconAtlas="ATLAS_REDESIGNED"/>
+			<Where Type="CIVILIZATION_PORTUGAL"/>
+		</Update>
+		<Update>
+			<Set AlphaIconAtlas="ATLAS_REDESIGNED_ALPHA"/>
+			<Where Type="CIVILIZATION_PORTUGAL"/>
+		</Update>
+		<Update>
+			<Set PortraitIndex="40"/>
+			<Where Type="CIVILIZATION_SHOSHONE"/>
+		</Update>
+		<Update>
+			<Set IconAtlas="ATLAS_REDESIGNED"/>
+			<Where Type="CIVILIZATION_SHOSHONE"/>
+		</Update>
+		<Update>
+			<Set AlphaIconAtlas="ATLAS_REDESIGNED_ALPHA"/>
+			<Where Type="CIVILIZATION_SHOSHONE"/>
+		</Update>
+		<Update>
+			<Set PortraitIndex="41"/>
+			<Where Type="CIVILIZATION_VENICE"/>
+		</Update>
+		<Update>
+			<Set IconAtlas="ATLAS_REDESIGNED"/>
+			<Where Type="CIVILIZATION_VENICE"/>
+		</Update>
+		<Update>
+			<Set AlphaIconAtlas="ATLAS_REDESIGNED_ALPHA"/>
+			<Where Type="CIVILIZATION_VENICE"/>
+		</Update>
+		<Update>
+			<Set PortraitIndex="42"/>
+			<Where Type="CIVILIZATION_ZULU"/>
+		</Update>
+		<Update>
+			<Set IconAtlas="ATLAS_REDESIGNED"/>
+			<Where Type="CIVILIZATION_ZULU"/>
+		</Update>
+		<Update>
+			<Set AlphaIconAtlas="ATLAS_REDESIGNED_ALPHA"/>
+			<Where Type="CIVILIZATION_ZULU"/>
+		</Update>
+	</Civilizations>
+</GameData>
