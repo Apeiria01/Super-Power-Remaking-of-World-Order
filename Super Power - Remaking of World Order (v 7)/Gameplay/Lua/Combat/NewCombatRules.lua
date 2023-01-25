@@ -1598,7 +1598,7 @@ function NewAttackEffect()
 				end
 			end
 
-			if attPlayer:IsHuman() or defPlayer:IsHuman() then
+			if text and (attPlayer:IsHuman() or defPlayer:IsHuman()) then
 				Events.GameplayAlertMessage(text)
 			end
 
