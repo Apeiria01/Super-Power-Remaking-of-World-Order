@@ -213,6 +213,9 @@ function SPEPlayerCityFounded(iPlayer,cityX, cityY)
 		local bonus=GameInfo.GameSpeeds[Game.GetGameSpeedType()].ConstructPercent/100
 		bonus = math.floor(bonus * 25)
 		pCity:SetOverflowProduction(pCity:GetOverflowProduction() + bonus)
+		if pPlayer:IsHuman() then
+			Events.GameplayAlertMessage(Locale.ConvertTextKey("TXT_KEY_MESSAGE_POLICY_CITIZENSHIP_ALERT", pCity:GetName(), bonus) )
+		end
 		print("SPEPlayerCityFounded:",bonus)	
 	end
 end
@@ -241,5 +244,68 @@ function SPECityBuildingCompleted(iPlayer, iCity, iBuilding, bGold, bFaithOrCult
 	end
 end
 GameEvents.CityConstructed.Add(SPECityBuildingCompleted)
+
+-- ********************************************************
+--Patronage
+-- ******************************************************** 
+--POLICY_CULTURAL_DIPLOMACY
+function SPEPlayerBulliedMinorCiv(iCS, iPlayer, iGold, iUnitType, iPlotX, iPlotY) 
+	local pPlayer = Players[iCS]
+	local civPlayer = Players[iPlayer]
+	if pPlayer == nil or civPlayer == nil or pPlayer:IsMinorCiv() or pPlayer:IsBarbarian() then
+	 	return
+	end
+	if( iGold == -1 ) and ( iUnitType == -1 ) then return end
+
+	if pPlayer:HasPolicy(GameInfo.Policies["POLICY_CULTURAL_DIPLOMACY"].ID) then
+		local minorCity = civPlayer:GetCapitalCity()
+		if minorCity == nil then return end
+		--get nearest city from wp
+		local iDistance = nil
+		local pTargetCity = nil
+		for city in pPlayer:Cities() do
+			if not(iDistance) or iDistance > Map.PlotDistance(minorCity:GetX(), minorCity:GetY(), city:GetX(), city:GetY()) then
+				pTargetCity = city
+				iDistance = Map.PlotDistance(minorCity:GetX(), minorCity:GetY(), city:GetX(), city:GetY())
+			end
+		end
+
+		if pTargetCity ~= nil then
+			local iMinorFood = math.max(0,minorCity:GetYieldRateTimes100(YieldTypes.YIELD_FOOD) / 100)
+			local iMinorProduction = math.max(0,minorCity:GetYieldRateTimes100(YieldTypes.YIELD_PRODUCTION) / 100)
+			local iMinorCulture = math.max(0,minorCity:GetYieldRateTimes100(YieldTypes.YIELD_CULTURE) / 100)
+			local iMinorScience = math.max(0,minorCity:GetYieldRateTimes100(YieldTypes.YIELD_SCIENCE) / 100)
+			print("Evil MajorCiv gains output from bullying MinorCiv:",iMinorFood,iMinorProduction,iMinorCulture,iMinorScience)
+			pTargetCity:ChangeFood(iMinorFood)
+			pTargetCity:SetOverflowProduction(pTargetCity:GetOverflowProduction() + iMinorProduction)
+			pPlayer:ChangeJONSCulture(iMinorCulture)
+			pPlayer:ChangeOverflowResearch(iMinorScience)
+			if pPlayer:IsHuman() then
+				Events.GameplayAlertMessage(Locale.ConvertTextKey("TXT_KEY_MESSAGE_POLICY_CULTURAL_DIPLOMACY_ALERT", minorCity:GetName(), pTargetCity:GetName() ) )
+			end
+		end
+	end
+
+end
+GameEvents.PlayerBullied.Add(SPEPlayerBulliedMinorCiv)
+
+--POLICY_CONSULATES
+function SPEPlayerCompletedMinorCivQuest(iMajor, iMinor, iQuestType, iStartTurn, iOldInfluence, iNewInfluence) 
+	local pPlayer = Players[iMajor]
+	local civPlayer = Players[iMinor]
+	if pPlayer == nil or civPlayer == nil or pPlayer:IsMinorCiv() or pPlayer:IsBarbarian() then
+	 	return
+	end
+	if pPlayer:HasPolicy(GameInfo.Policies["POLICY_CONSULATES"].ID) then
+		local eEra = pPlayer:GetCurrentEra()
+		local bonus =( (iNewInfluence - iOldInfluence) * (2 + eEra) /200 )
+		pPlayer:ChangeJONSCulture(bonus)
+		print("MajorCiv gains Culture from completed MinorCiv quest:",bonus)
+		if pPlayer:IsHuman() then
+			Events.GameplayAlertMessage(Locale.ConvertTextKey("TXT_KEY_MESSAGE_POLICY_CONSULATES_ALERT", civPlayer:GetName(), bonus ) )
+		end
+	end
+end
+GameEvents.PlayerCompletedQuest.Add(SPEPlayerCompletedMinorCivQuest) 
 
 print('SP8PolicyEffects: Check Pass')

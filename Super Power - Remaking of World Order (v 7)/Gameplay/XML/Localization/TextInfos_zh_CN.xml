@@ -6400,30 +6400,56 @@
 		<!--*******************Patronage********************* -->
 
 		<Replace Tag="TXT_KEY_POLICY_BRANCH_PATRONAGE_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]赞助政策[ENDCOLOR]增强城邦关系带来的好处。[NEWLINE][NEWLINE]启用赞助政策能使你对所有城邦[ICON_INFLUENCE]影响力的基准值提高20。允许建造汉萨同盟和国家情报局。[NEWLINE][NEWLINE]推行所有赞助政策后将使结盟城邦不定期地赠送[ICON_GREAT_PEOPLE]伟人。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]赞助政策[ENDCOLOR]增强城邦关系带来的好处。
+				[NEWLINE][NEWLINE]启用赞助政策：
+				[NEWLINE][ICON_BULLET]使你对所有城邦[ICON_INFLUENCE]影响力的基准值提高20。
+				[NEWLINE][ICON_BULLET]允许建造汉萨同盟和国家情报局。
+				[NEWLINE][NEWLINE]推行所有赞助政策：
+				[NEWLINE][ICON_BULLET]使结盟城邦不定期地赠送[ICON_GREAT_PEOPLE]伟人。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_PHILANTHROPY_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]慈善事业[ENDCOLOR][NEWLINE]赠送城邦[ICON_GOLD]金钱提升的[ICON_INFLUENCE]影响力加100%。[NEWLINE]所有与城邦的商路+4[ICON_GOLD]金钱。[NEWLINE]城邦提供的资源翻倍。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]慈善事业[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]赠送城邦[ICON_GOLD]金钱提升的[ICON_INFLUENCE]影响力加100%。
+				[NEWLINE][ICON_BULLET]所有与城邦的商路+4[ICON_GOLD]金钱。[NEWLINE]城邦提供的资源翻倍。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_MERCHANT_CONFEDERACY_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]商人公会[ENDCOLOR][NEWLINE]与每条有商路相连的城邦每回合+4[ICON_INFLUENCE]影响力（标准速度下）。[NEWLINE]获得一条额外的商路。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]商人公会[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]与每条有商路相连的城邦每回合+4[ICON_INFLUENCE]影响力（标准速度下）。
+				[NEWLINE][ICON_BULLET]获得一条额外的商路。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_CONSULATES_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]领事制度[ENDCOLOR][NEWLINE]对所有城邦[ICON_INFLUENCE]影响力的下降速率减慢25%。[NEWLINE]完成城邦任务时得到的[ICON_INFLUENCE]影响力提高25%。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]领事制度[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]对所有城邦[ICON_INFLUENCE]影响力的下降速率减慢25%。
+				[NEWLINE][ICON_BULLET]完成城邦任务时得到的[ICON_INFLUENCE]影响力提高25%。
+				[NEWLINE][ICON_BULLET]完成城邦任务时获得一次性的[ICON_CULTURE]文化奖励。
+			</Text>
 		</Replace>
 
-		<!--<Replace Tag="TXT_KEY_POLICY_SCHOLASTICISM_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]经院哲学[ENDCOLOR][NEWLINE]所有同盟城邦为你提供其自身的[ICON_RESEARCH]科研值（100%）。[NEWLINE]每个同盟城邦为你的所有城市+1%[ICON_CULTURE]文化和[ICON_PEACE]信仰产出。</Text>
-		</Replace>-->
+		<Replace Tag="TXT_KEY_POLICY_SCHOLASTICISM_HELP">
+			<Text>
+				[COLOR_POSITIVE_TEXT]经院哲学[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]所有[COLOR_POSITIVE_TEXT]同盟城邦[ENDCOLOR]提供其自身[ICON_RESEARCH]科研的25%。。
+			</Text>
+		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_CULTURAL_DIPLOMACY">
 			<Text>炮舰外交</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_CULTURAL_DIPLOMACY_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]炮舰外交[ENDCOLOR][NEWLINE]对于能够勒索的城邦每回合获得5[ICON_INFLUENCE]影响力（标准速度）。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]炮舰外交[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]对于能够勒索的城邦每回合获得5[ICON_INFLUENCE]影响力（标准速度）。
+				[NEWLINE][ICON_BULLET]勒索城邦的军事分数影响翻倍，勒索城邦消耗的影响力下降到1/4。
+				[NEWLINE][ICON_BULLET]勒索城邦可为最近的城市提供城邦一回合的粮食、产能、文化和科研。
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_CULTURALDIPLOMACY_TEXT">
 			<Text>在国际事务中，“炮舰外交”是指大国通过有意炫耀其军事实力并公开表达动武意向来达成对外政策目标。这个术语在欧洲帝国主义时期被广泛使用，当时各殖民强权通过派遣战舰来迫使国家屈服。这项政策被证明非常有效，特别受到军事独裁者的亲睐……除非落后国家设法获得现代化武器来保护自己。</Text>
@@ -6433,7 +6459,12 @@
 			<Text>军事援助</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_MILITARY_AID_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]军事援助[ENDCOLOR][NEWLINE]当共同对敌作战时军事城邦提供单位的频率加倍。[NEWLINE]送给城邦的军事单位+10[ICON_INFLUENCE]影响力。[NEWLINE]城邦提供电力。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]军事援助[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]当共同对敌作战时军事城邦提供单位的频率加倍。
+				[NEWLINE][ICON_BULLET]送给城邦的军事单位+10[ICON_INFLUENCE]影响力。
+				[NEWLINE][ICON_BULLET]城邦提供电力。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_MILITARY_AID_TEXT">
 			<Text>国家或政治集团之间根据受援方的要求而提供的军事上的支援活动。包括提供军事贷款、修建军事工程、供应武器装备、训练军事人员、派出部队或人员参战等。在很多动荡地区，叛乱者与戡乱者同时都接受著外部大国的军事援助，甚至是来自于同一个国家的援助。</Text>
@@ -6548,7 +6579,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]海上设施[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]沿海城市+3[ICON_PRODUCTION]产能。
-				[NEWLINE][ICON_BULLET]所有渔船、捕捞船和海上石油平台+1[ICON_PRODUCTION]产能。
+				[NEWLINE][ICON_BULLET]所有渔船、捕捞船和海上平台+1[ICON_PRODUCTION]产能。
 				[NEWLINE][ICON_BULLET]工人修建海上设施的速度+50%。
 			</Text>
 		</Replace>
@@ -6601,7 +6632,7 @@
 		<Replace Tag="TXT_KEY_POLICY_TREASURE_FLEETS_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]制海权[ENDCOLOR]
-				[NEWLINE]所有海军单位+1[ICON_MOVES]移动，+1视野并+15%[ICON_STRENGTH]战斗力。
+				[NEWLINE][ICON_BULLET]所有海军单位+1[ICON_MOVES]移动，+1视野并+15%[ICON_STRENGTH]战斗力。
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_TREASURE_FLEETS_TEXT">
@@ -13915,6 +13946,22 @@
 		<Row Tag="TXT_KEY_SP_MISSION_SUPPLY_EXOTIC_GOODS_TITLE">
 			<Text>
 				补充异国商品
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MESSAGE_POLICY_CITIZENSHIP_ALERT">
+			<Text>
+				由于你采用了政策公民制度，你的新城市[COLOR_POSITIVE_TEXT]{1_name}[ENDCOLOR]获得了{2_name}点[ICON_PRODUCTION]产能。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MESSAGE_POLICY_CULTURAL_DIPLOMACY_ALERT">
+			<Text>
+				[COLOR_POSITIVE_TEXT]{1_name}[ENDCOLOR]屈服于[COLOR_NEGATIVE_TEXT]我方强大的军事威慑[ENDCOLOR]，
+				[NEWLINE]被迫向[COLOR_POSITIVE_TEXT]{2_name}[ENDCOLOR]上供了他们最近获得的一切。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MESSAGE_POLICY_CONSULATES_ALERT">
+			<Text>
+				[COLOR_POSITIVE_TEXT]{1_name}[ENDCOLOR]的人们感激你回应了他们的请求，获得{2_name}点[ICON_CULTURE]文化。
 			</Text>
 		</Row>
 
