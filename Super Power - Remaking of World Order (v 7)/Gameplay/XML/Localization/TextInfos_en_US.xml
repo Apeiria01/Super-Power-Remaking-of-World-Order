@@ -3036,7 +3036,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_PORTUGAL_PORT_HELP">
 			<Text>
-				+1 [ICON_GOLD] Gold for every [COLOR_POSITIVE_TEXT]Luxury Resource[ENDCOLOR] on water tiles worked by this City.
+				+1 [ICON_GOLD] Gold and +1 [ICON_PRODUCTION] for every [COLOR_POSITIVE_TEXT]Luxury Resource[ENDCOLOR] on water tiles worked by this City.
 				[NEWLINE]+3 [ICON_CONSUMER] Consumer.
 			</Text>
 		</Row>
@@ -11401,7 +11401,7 @@
 		</Row>
 
 		<Replace Tag="TXT_KEY_UNIT_JAPANESE_SAMURAI">
-			<Text>[COLOR_SELECTED_TEXT]Samurai[ENDCOLOR]</Text>
+			<Text>[COLOR_SELECTED_TEXT]Hatamoto[ENDCOLOR]</Text>
 			<Plurality>2</Plurality>
 		</Replace>
 
@@ -12925,7 +12925,12 @@
 
 	<!-- *************************Unique Units Texts****************************-->
 	<Replace Tag="TXT_KEY_UNIT_JAPANESE_SAMURAI_STRATEGY">
-		<Text>The Samurai is the Japanese unique unit, replacing the Longswordsman. As powerful as the Swordsman, the Samurai is built with "Volley I" Promotion so it is powerful attacking enemy cities and fortified units. Success in combat with a Samurai has an increased chance of generating Great Generals. </Text>
+		<Text>
+			The Hatamoto is the Japanese unique unit, replacing the Longswordsman. 
+			[NEWLINE][ICON_BULLET]Flank Attack bonus +5%, +1 [ICON_MOVES] Movement;
+			[NEWLINE][ICON_BULLET]Can earn culture [ICON_CULTURE] points for each enemy killed (50% of its [ICON_STRENGTH] Combat Strength).
+			[NEWLINE][ICON_BULLET]Can build Dojo in city.
+		</Text>
 	</Replace>
 	<Replace Tag="TXT_KEY_UNIT_HELP_SAMURAI">
 		<Text>Unique unit of the Japanese civilization. Strong vs Cities and fortified units. Replaces the Longswordsman. </Text>
@@ -12936,6 +12941,20 @@
 	<Replace Tag="TXT_KEY_UNIT_HELP_ZERO">
 		<Text>A mutil-purpose Attacking Aircraft. Only the Japanese may build it. This Unit can not only attack land or naval units but also can perform an air sweep to take down enemy intercepting fighters. </Text>
 	</Replace>
+
+	<Row Tag = "TXT_KEY_PROMOTION_JAPANESE_SAMURAI">
+		<Text>The Sword</Text>
+	</Row>
+	<Row Tag = "TXT_KEY_PROMOTION_JAPANESE_SAMURAI_HELP">
+		<Text>Flank Attack bonus +5%.</Text>
+	</Row>
+	<Row Tag = "TXT_KEY_PROMOTION_JAPANESE_SAMURAI_CULTURE">
+		<Text>The Chrysanthemum</Text>
+	</Row>
+	<Row Tag = "TXT_KEY_PROMOTION_JAPANESE_SAMURAI_CULTURE_HELP">
+		<Text>Can earn culture [ICON_CULTURE] points for each enemy killed (50% of its [ICON_STRENGTH] Combat Strength).</Text>
+	</Row>
+
 
 
 
@@ -16172,6 +16191,18 @@
 		<Row Tag="TXT_KEY_GAME_OPTION_DISABLE_GIFT_MILITIA">
 			<Text>
 			SP- [COLOR_YELLOW] Can't gift militia units [ENDCOLOR]
+			</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_SP_MISSION_SUPPLY_EXOTIC_GOODS_TOOLTIP">
+			<Text>
+				When the unit's movement is full, goods can be replenished in cities with Feitoria.
+			</Text>
+			</Row>
+			
+		<Row Tag="TXT_KEY_SP_MISSION_SUPPLY_EXOTIC_GOODS_TITLE">
+			<Text>
+				Replenish Exotic Goods
 			</Text>
 		</Row>
 	</Language_en_US>

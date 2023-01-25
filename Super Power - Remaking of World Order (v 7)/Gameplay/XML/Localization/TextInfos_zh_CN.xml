@@ -841,7 +841,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_PORTUGAL_PORT_HELP">
 			<Text>
-				本城拥有的海上[COLOR_POSITIVE_TEXT]奢侈资源[ENDCOLOR]+1[ICON_GOLD]金钱产出。[NEWLINE][NEWLINE]城市必须沿海。.
+				本城拥有的海上[COLOR_POSITIVE_TEXT]奢侈资源[ENDCOLOR]+1[ICON_GOLD]金钱产出和+1[ICON_PRODUCTION]产能产出。[NEWLINE][NEWLINE]城市必须沿海。.
 			</Text>
 		</Row>
 		<Row>
@@ -9448,7 +9448,7 @@
 		</Row>
 
 		<Replace Tag="TXT_KEY_UNIT_JAPANESE_SAMURAI">
-			<Text>[COLOR_SELECTED_TEXT]日本武士[ENDCOLOR]</Text>
+			<Text>[COLOR_SELECTED_TEXT]旗本武士[ENDCOLOR]</Text>
 			<Plurality>2</Plurality>
 		</Replace>
 
@@ -10994,7 +10994,7 @@
 
 		<Replace Tag="TXT_KEY_UNIT_HELP_LANCER">
 			<Text>以骑枪作为武器的重装骑兵，拥有进攻加成，可以轻松突破对方的步兵防线。</Text>
-		</Replace>
+		</Replace>ION_EXTRA_SIGHT_
 
 		<Replace Tag="TXT_KEY_UNIT_HELP_ANTI_AIRCRAFT_GUN">
 			<Text>能够拦截试图轰炸3格内单位的敌方飞机。同时可以平向攻击2格内的地面单位。但是其除了攻击直升机单位外会受到战斗力减成。</Text>
@@ -11014,11 +11014,28 @@
 
 		<!-- *************************Unique Units Changes****************************-->
 		<Replace Tag="TXT_KEY_UNIT_JAPANESE_SAMURAI_STRATEGY">
-			<Text>日本武士是日本文明的特色单位，取代近卫军。日本武士的战斗力与近卫军一样，能够在城市中建立“道场”。</Text>
+			<Text>
+				旗本武士是日本文明的特色单位，取代长剑士。
+				[NEWLINE][ICON_BULLET]自带可继承的夹击加成，拥有更高的[ICON_MOVES]移动力;
+				[NEWLINE][ICON_BULLET]消灭敌人时获得相当于单位[ICON_STRENGTH]战斗力50%的[ICON_CULTURE]文化;
+				[NEWLINE][ICON_BULLET]能够在城市中建立“道场”。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_UNIT_HELP_SAMURAI">
 			<Text>中古时代强大的步兵单位。日本特色单位，替代近卫军。该单位能在城市中建立“道场”。</Text>
 		</Replace>
+		<Row Tag = "TXT_KEY_PROMOTION_JAPANESE_SAMURAI">
+			<Text>刀</Text>
+		</Row>
+		<Row Tag = "TXT_KEY_PROMOTION_JAPANESE_SAMURAI_HELP">
+			<Text>夹击加成+5%。</Text>
+		</Row>
+		<Row Tag = "TXT_KEY_PROMOTION_JAPANESE_SAMURAI_CULTURE">
+			<Text>菊</Text>
+		</Row>
+		<Row Tag = "TXT_KEY_PROMOTION_JAPANESE_SAMURAI_CULTURE_HELP">
+			<Text>消灭敌人时获得相当于单位[ICON_STRENGTH]战斗力50%的[ICON_CULTURE]文化。</Text>
+		</Row>
+
 
 		<Replace Tag="TXT_KEY_UNIT_JAPANESE_ZERO_STRATEGY">
 			<Text>零式战斗机是日本文明的特色单位，取代俯冲轰炸机。零式拥有对抗其他战斗机的加成，因此其攻击时即使遭遇拦截也能够完成任务。由于其适于大规模生产，请一次性部署大量零式战斗机进行作战。</Text>
@@ -13888,5 +13905,18 @@
 				SP- [COLOR_YELLOW]禁止 赠送民兵单位[ENDCOLOR]
 			</Text>
 		</Row>
+
+		<Row Tag="TXT_KEY_SP_MISSION_SUPPLY_EXOTIC_GOODS_TOOLTIP">
+			<Text>
+				满移动力时，可在拥有商站的城市中补充商品。
+			</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_SP_MISSION_SUPPLY_EXOTIC_GOODS_TITLE">
+			<Text>
+				补充异国商品
+			</Text>
+		</Row>
+
 	</Language_zh_CN>
 </GameData>

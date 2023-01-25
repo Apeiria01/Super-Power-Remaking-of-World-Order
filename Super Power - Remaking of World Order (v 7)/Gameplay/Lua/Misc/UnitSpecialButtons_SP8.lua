@@ -46,4 +46,30 @@ SacrificeMissionButton = {
 };
 LuaEvents.UnitPanelActionAddin(SacrificeMissionButton);
 
+SupplyExoticGoodsMissionButton = {
+    Name = "SupplyExoticGoods",
+    Title = "TXT_KEY_SP_MISSION_SUPPLY_EXOTIC_GOODS_TITLE", -- or a TXT_KEY
+    OrderPriority = 300, -- default is 200
+    IconAtlas = "EXPANSION2_UNIT_ATLAS", -- 45 and 64 variations required
+    PortraitIndex = 13,
+    ToolTip = "TXT_KEY_SP_MISSION_SUPPLY_EXOTIC_GOODS_TOOLTIP", -- or a TXT_KEY_ or a function
+
+    Condition = function(action, unit)
+        return (unit:GetUnitType() == GameInfoTypes["UNIT_PORTUGUESE_NAU"]
+            and unit:CanMove()
+            and unit:GetPlot():IsCity()
+            and unit:GetPlot():GetPlotCity():IsHasBuilding(GameInfoTypes["BUILDING_PORTUGAL_PORT"]));
+    end, -- or nil or a boolean, default is true
+
+    Disabled = function(action, unit)
+        return unit:MovesLeft() < unit:MaxMoves() or unit:GetNumExoticGoodsMax() <= unit:GetNumExoticGoods();
+    end, -- or nil or a boolean, default is false
+
+    Action = function(action, unit, eClick)
+        unit:ChangeNumExoticGoods(1);
+        unit:SetMoves(0);
+    end,
+};
+LuaEvents.UnitPanelActionAddin(SupplyExoticGoodsMissionButton);
+
 print("UnitSpecialButtons_SP8: Check Pass!");

@@ -1183,7 +1183,7 @@
 			<Combat>140</Combat>
 			<RangedCombat>80</RangedCombat>
 			<Cost>450</Cost>
-			<Moves>6</Moves>
+			<Moves>8</Moves>
 			<Range>3</Range>
 			<HurryCostModifier>50</HurryCostModifier>
 			<CombatClass>UNITCOMBAT_NAVALRANGED</CombatClass>
@@ -1942,7 +1942,7 @@
 			<BaseSightRange>4</BaseSightRange>
 			<Combat>40</Combat>
 			<Cost>90</Cost>
-			<Moves>9</Moves>
+			<Moves>11</Moves>
 			<CombatClass>UNITCOMBAT_RECON</CombatClass>
 			<Domain>DOMAIN_SEA</Domain>
 			<DefaultUnitAI>UNITAI_EXPLORE_SEA</DefaultUnitAI>
@@ -2638,6 +2638,10 @@
 		<Row>
 			<UnitType>UNIT_SONGHAI_EXPEDITION_FLEET</UnitType>
 			<PromotionType>PROMOTION_CARRIER_SUPPLY_1</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_SONGHAI_EXPEDITION_FLEET</UnitType>
+			<PromotionType>PROMOTION_CARRIER_SUPPLY_2</PromotionType>
 		</Row>
 		
 		

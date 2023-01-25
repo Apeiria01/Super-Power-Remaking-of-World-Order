@@ -809,7 +809,7 @@
 			<Text>[ICON_PRODUCTION][ICON_GOLD]商站</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_PORTUGAL_PORT_HELP">
-			<Text>本城擁有的海上[COLOR_POSITIVE_TEXT]奢侈資源[ENDCOLOR]+1[ICON_GOLD]金幣產出。[NEWLINE][NEWLINE]城市必須沿海。.
+			<Text>本城擁有的海上[COLOR_POSITIVE_TEXT]奢侈資源[ENDCOLOR]+1[ICON_GOLD]金幣產出和+1[ICON_PRODUCTION]產能產出。[NEWLINE][NEWLINE]城市必須沿海。.
 			</Text>
 		</Row>
 		<Row>
@@ -9257,7 +9257,7 @@
 		</Row>
 
 		<Replace Tag="TXT_KEY_UNIT_JAPANESE_SAMURAI">
-			<Text>[COLOR_SELECTED_TEXT]日本武士[ENDCOLOR]</Text>
+			<Text>[COLOR_SELECTED_TEXT]旗本武士[ENDCOLOR]</Text>
 			<Plurality>2</Plurality>
 		</Replace>
 
@@ -10795,11 +10795,29 @@
 
 	<!-- *************************Unique Units Changes****************************-->
 		<Replace Tag="TXT_KEY_UNIT_JAPANESE_SAMURAI_STRATEGY">
-			<Text>日本武士是日本文明的特色單位，取代近衛軍。日本武士的戰鬥力與近衛軍一樣，但是會自動獲得“鎮暴”晉升。日本武士能夠在城市中建立“道場”。</Text>
+			<Text>
+				旗本武士是日本文明的特色單位，取代長劍士。
+				[NEWLINE][ICON_BULLET]自帶可繼承的夾擊加成，擁有更高的[ICON_MOVES]移動力;
+				[NEWLINE][ICON_BULLET]消滅敵人時獲得相當於單位[ICON_STRENGTH]戰鬥力50%的[ICON_CULTURE]文化;
+				[NEWLINE][ICON_BULLET]能夠在城市中建立「道場」。</Text>
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_UNIT_HELP_SAMURAI">
 			<Text>中古時代強大的步兵單位。日本特色單位，替代近衛軍。該單位能夠更快壓制城市抵抗，並能在城市中建立“道場”。</Text>
 		</Replace>
+		<Row Tag = "TXT_KEY_PROMOTION_JAPANESE_SAMURAI">
+			<Text>刀</Text>
+		</Row>
+		<Row Tag = "TXT_KEY_PROMOTION_JAPANESE_SAMURAI_HELP">
+			<Text>夹击加成+5%。</Text>
+		</Row>
+		<Row Tag = "TXT_KEY_PROMOTION_JAPANESE_SAMURAI_CULTURE">
+			<Text>菊</Text>
+		</Row>
+		<Row Tag = "TXT_KEY_PROMOTION_JAPANESE_SAMURAI_CULTURE_HELP">
+			<Text>消滅敵人時獲得相當於單位[ICON_STRENGTH]戰鬥力50%的[ICON_CULTURE]文化。</Text>
+		</Row>
+
 		
 		<Replace Tag="TXT_KEY_UNIT_JAPANESE_ZERO_STRATEGY">
 			<Text>零式戰鬥機是日本文明的特色單位，取代俯衝轟炸機。零式擁有對抗其他戰鬥機的加成，因此其攻擊時即使遭遇攔截也能夠完成任務。由於其適於大規模生產，請一次性部署大量零式戰鬥機進行作戰。</Text>
@@ -13627,6 +13645,18 @@
 		<Row Tag="TXT_KEY_GAME_OPTION_DISABLE_GIFT_MILITIA">
 			<Text>
 				SP- [COLOR_YELLOW]禁止 贈送民兵單位[ENDCOLOR]
+			</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_SP_MISSION_SUPPLY_EXOTIC_GOODS_TOOLTIP">
+			<Text>
+				滿移動力時，可在擁有商站的城市中補充商品。
+			</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_SP_MISSION_SUPPLY_EXOTIC_GOODS_TITLE">
+			<Text>
+				補充異國商品
 			</Text>
 		</Row>
 	</Language_zh_Hant_HK>
