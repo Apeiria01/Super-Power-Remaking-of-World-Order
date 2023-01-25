@@ -7514,7 +7514,9 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]Consulates[ENDCOLOR]
 				[NEWLINE][ICON_BULLET][ICON_INFLUENCE]Influence with all City-States degrade 25% slower than normal.
-				[NEWLINE][ICON_BULLET]Gain 25% more [ICON_INFLUENCE] Influence than usual when you achieve any Quests from City-States.</Text>
+				[NEWLINE][ICON_BULLET]Gain 25% more [ICON_INFLUENCE] Influence than usual when you achieve any Quests from City-States.
+				[NEWLINE][ICON_BULLET]Gain [ICON_CULTURE] Culture bonus when you achieve any Quests from City-States.
+			</Text>
 		</Replace>
 		<!--<Replace Tag="TXT_KEY_POLICY_SCHOLASTICISM_HELP">
 			<Text>
@@ -7528,7 +7530,10 @@
 		<Replace Tag="TXT_KEY_POLICY_CULTURAL_DIPLOMACY_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]Gunboat Diplomacy[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]Gain 5 more [ICON_INFLUENCE] Influence (at Standard speed) per turn with City-States you could demand tribute from.</Text>
+				[NEWLINE][ICON_BULLET]Gain 5 more [ICON_INFLUENCE] Influence (at Standard speed) per turn with City-States you could demand tribute from.
+				[NEWLINE][ICON_BULLET]+100% military score when you demand tribute from City-States, and cost of influence is reduced to 1/4.
+				[NEWLINE][ICON_BULLET]Gain Food, Production, Culture and Science bonus when you demand tribute from City-States.
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_CULTURAL_DIPLOMACY_TEXT">
 			<Text>In international politics, gunboat diplomacy (or "big stick diplomacy" in U.S. history) refers to the pursuit of foreign policy objectives with the aid of conspicuous displays of naval power—implying or constituting a direct threat of warfare, should terms not be agreeable to the superior force.</Text>
@@ -9366,7 +9371,7 @@
 		</Row>
 
 		<Row Tag="TXT_KEY_TECH_IOT_NETWORK_QUOTE">
-			<Text>"Without going outside his door，one understands all that takes place under the sky；without looking out from his window，one sees rules of the universe. The farther that one goes out from himself，the less he knows." [NEWLINE] - Lao-Tzu</Text>
+			<Text>"Without going outside his door, one understands all that takes place under the sky；without looking out from his window , one sees rules of the universe. The farther that one goes out from himself, the less he knows." [NEWLINE] - Lao-Tzu</Text>
 		</Row>
 		
 		
@@ -16203,6 +16208,22 @@
 		<Row Tag="TXT_KEY_SP_MISSION_SUPPLY_EXOTIC_GOODS_TITLE">
 			<Text>
 				Replenish Exotic Goods
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MESSAGE_POLICY_CITIZENSHIP_ALERT">
+			<Text>
+				Because you adopted the policy CitizenShip，your new city [COLOR_POSITIVE_TEXT]{1_name}[ENDCOLOR] gain {2_name} point [ICON_PRODUCTION] Production.
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MESSAGE_POLICY_CULTURAL_DIPLOMACY_ALERT">
+			<Text>
+				[COLOR_POSITIVE_TEXT]{1_name}[ENDCOLOR] submitted to [COLOR_NEGATIVE_TEXT] our strong military deterrent [ENDCOLOR],
+				[NEWLINE]and forced to confess everything they had recently to [COLOR_POSITIVE_TEXT]{2_name}[ENDCOLOR].
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MESSAGE_POLICY_CONSULATES_ALERT">
+			<Text>
+				People in [COLOR_POSITIVE_TEXT]{1_name}[ENDCOLOR] appreciated you responding to their request,gain {2_name} point [ICON_CULTURE] culture.
 			</Text>
 		</Row>
 	</Language_en_US>
