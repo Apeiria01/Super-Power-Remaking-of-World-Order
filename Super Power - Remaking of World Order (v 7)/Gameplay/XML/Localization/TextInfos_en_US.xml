@@ -6252,6 +6252,7 @@
 			<Text>
 				+25% [ICON_GREAT_PEOPLE] Great People generation rate in the city.
 				[NEWLINE]-3% [ICON_HAPPINESS_4] Unhappiness nationwide for every Chinese Garden.
+				[NEWLINE][NEWLINE]Each Chinese Garden provides +1 to all kinds of yields except tourism yields per city size for all cities.
 				[NEWLINE][NEWLINE]Must be built in large Cities.
 				[NEWLINE][NEWLINE]+1 [ICON_HAPPINESS_1] local happiness.</Text>
 		</Row>

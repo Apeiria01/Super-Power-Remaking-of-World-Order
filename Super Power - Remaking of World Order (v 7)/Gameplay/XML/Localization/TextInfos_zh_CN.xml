@@ -3467,7 +3467,12 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_CHINESE_GARDEN_HELP</Tag>
-			<Text>本城市+25%[ICON_GREAT_PEOPLE]伟人点数积累，本城市+1[ICON_HAPPINESS_1]快乐。[NEWLINE][NEWLINE]每座园林-3%[ICON_HAPPINESS_4]全局不满。[NEWLINE][NEWLINE]只能在大型城市（26人口）建造。</Text>
+			<Text>
+				本城市+25%[ICON_GREAT_PEOPLE]伟人点数积累，本城市+1[ICON_HAPPINESS_1]快乐。
+				[NEWLINE][NEWLINE]每座园林-3%[ICON_HAPPINESS_4]全局不满。
+				[NEWLINE][NEWLINE]每座中国园林为每个城市规模提供+1除魅力外的所有产出。
+				[NEWLINE][NEWLINE]只能在大型城市（26人口）建造。
+			</Text>
 		</Row>
 
 		<Row>
