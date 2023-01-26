@@ -2559,7 +2559,7 @@
 				[NEWLINE][NEWLINE]+15% [ICON_FOOD] Food output for the city.
 				[NEWLINE][NEWLINE]+1 [ICON_FOOD] Food from Lake Tiles.
 				[NEWLINE][NEWLINE]+1 [ICON_FOOD] Food, +2 [ICON_PRODUCTION] Production and +1[ICON_GOLD] Gold for each [ICON_RES_COW] Cattle, [ICON_RES_SHEEP] Sheep and [ICON_RES_HORSE] Horse worked for the city.
-				[NEWLINE][NEWLINE]+1 [ICON_PRODUCTION] Production and +1 [ICON_GOLD] Gold for each [ICON_RES_TRUFFLES] Truffles, [ICON_RES_FUR] Fur,[ICON_RES_BISON] Bison,[ICON_RES_DEER] Deer and [ICON_RES_IVORY] Ivory worked for the city.
+				[NEWLINE][NEWLINE]+1 [ICON_FOOD] Food, +2 [ICON_PRODUCTION] Production and +1[ICON_GOLD] Gold for each [ICON_RES_TRUFFLES] Truffles, [ICON_RES_FUR] Fur,[ICON_RES_BISON] Bison,[ICON_RES_DEER] Deer and [ICON_RES_IVORY] Ivory worked for the city.
 			</Text>
 		</Row>
 
@@ -3099,7 +3099,6 @@
 				[NEWLINE][NEWLINE]+15 XP for Naval Units built in this city.
 				[NEWLINE][NEWLINE]Forms a [ICON_CONNECTED] City Connection with the [ICON_CAPITAL] Capital over water.
 				[NEWLINE][NEWLINE]Sea International Trade Route from this city produces +10 [ICON_GOLD] Base Gold.
-				[NEWLINE][NEWLINE]City must have a Lighthouse.
 			</Text>
 		</Row>
 		<Row>

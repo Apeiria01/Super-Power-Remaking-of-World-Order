@@ -1,5 +1,5 @@
 
--- Traditional Policies: CapitalYieldChanges +4
+--Traditional Policies: CapitalYieldChanges +4
 INSERT INTO Policy_CapitalYieldChanges (PolicyType,YieldType,Yield)
 SELECT 'POLICY_LANDED_ELITE','YIELD_FOOD',4 UNION ALL
 SELECT 'POLICY_PREFECTURE','YIELD_CULTURE',4 UNION ALL
