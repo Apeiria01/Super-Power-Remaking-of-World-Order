@@ -221,7 +221,7 @@ function SPEPlayerCityFounded(iPlayer,cityX, cityY)
 end
 GameEvents.PlayerCityFounded.Add(SPEPlayerCityFounded)
 
--- POLICY_MERITOCRACY: gain culture and research when finishing a building
+--POLICY_MERITOCRACY: gain culture and research when finishing a building
 function SPECityBuildingCompleted(iPlayer, iCity, iBuilding, bGold, bFaithOrCulture)
 	local pPlayer = Players[iPlayer]
 	if pPlayer == nil or pPlayer:IsMinorCiv() or pPlayer:IsBarbarian() then
@@ -240,7 +240,13 @@ function SPECityBuildingCompleted(iPlayer, iCity, iBuilding, bGold, bFaithOrCult
 		bonus = math.floor(bonus * pCost * 0.1)
 		pPlayer:ChangeJONSCulture(bonus)
 		pPlayer:ChangeOverflowResearch(bonus)
-		print("SPECityBuildingCompleted:",bonus)	
+		if pPlayer:IsHuman() then
+			local pCity = pPlayer:GetCityByID(iCity)
+			local hex = ToHexFromGrid(Vector2(pCity:GetX(),pCity:GetY()))
+			Events.AddPopupTextEvent(HexToWorld(hex), Locale.ConvertTextKey("+{1_Num}[ICON_RESEARCH],+{1_Num}[ICON_CULTURE]", bonus, bonus))
+			Events.GameplayFX(hex.x, hex.y, -1)
+		end
+		print("SPECityBuildingCompleted:",bonus)
 	end
 end
 GameEvents.CityConstructed.Add(SPECityBuildingCompleted)

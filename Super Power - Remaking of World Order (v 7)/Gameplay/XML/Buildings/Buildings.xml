@@ -1453,10 +1453,6 @@
 			<BuildingClassType>BUILDINGCLASS_LIGHTHOUSE</BuildingClassType>
 		</Row>
 		<Row>
-			<BuildingType>BUILDING_CARTHAGINIAN_COTHON</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_LIGHTHOUSE</BuildingClassType>
-		</Row>
-		<Row>
 			<BuildingType>BUILDING_INDONESIA_SPICE_HARBOR</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_LIGHTHOUSE</BuildingClassType>
 		</Row>

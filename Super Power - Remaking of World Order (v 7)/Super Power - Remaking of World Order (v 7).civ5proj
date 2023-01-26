@@ -729,7 +729,12 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>Gameplay/SQL/PoliciesEffect.sql</FileName>
+        <FileName>Gameplay/SQL/Policies/PoliciesEffect.sql</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>Gameplay/SQL/Buildings/BuildingEffect.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
@@ -1238,7 +1243,11 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Gameplay/SQL/PoliciesEffect.sql">
+    <Content Include="Gameplay/SQL/Policies/PoliciesEffect.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="Gameplay/SQL/Buildings/BuildingEffect.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
