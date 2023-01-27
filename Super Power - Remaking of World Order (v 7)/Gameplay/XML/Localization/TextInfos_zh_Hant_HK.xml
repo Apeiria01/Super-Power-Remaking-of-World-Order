@@ -9314,6 +9314,33 @@
 			<Plurality>2</Plurality>
 		</Replace>
 
+		<Row Tag="TXT_KEY_UNIT_GERMAN_LONGSWORDSMAN">
+			<Text>双薪剑士</Text>
+			<Plurality>2</Plurality>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_GERMAN_LONGSWORDSMAN_HELP">
+			<Text>
+				双薪剑士是德意志文明的特色单位，取代长剑士。
+				[NEWLINE][ICON_BULLET]攻击时对同格敌方单位造成100%溅射伤害;
+				[NEWLINE][ICON_BULLET]消灭敌人时获得相当于单位[ICON_STRENGTH]战斗力50%的[ICON_GOLD]金钱。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_GERMAN_LONGSWORDSMAN_TEXT">
+			<Text>1503年，普法尔茨选侯鲁佩特（Pfalz Ruprecht，即巴拉丁Palatinate）会同波希米亚国王弗拉迪斯拉夫（Vladislav），与巴伐利亚-慕尼黑公爵阿尔布雷希特（Albrecht）、马克西米利安一世（Maximilian I ）、施瓦本联盟、蒂罗尔公爵西格蒙德（Sigmund）和符腾堡公爵埃伯哈德（Eberhard）等在雷根斯堡（Regensburg）附近的文岑斯巴赫（Wenzensbach）遭遇，“凄惨无望队”在看到敌人骑兵发起攻击以后便立刻后撤至小山坡后的长矛手阵地，敌方骑兵冲至山坡后发现面对的是长矛手已经停不下来，在冲进长矛手阵地后被迫停下来后，双薪剑士在长矛兵的掩护下，挥剑横斩马腿以阻击骑兵，用剑攻击骑士铠甲的缝隙处，并且在近身搏杀时利用对方长矛过长、运转不变的机会加以攻击。最终以帝国军歼灭敌人骑兵1600人而大获全胜。这场战役是著名的以步兵歼灭骑兵战例之一，双薪剑士作为直接杀伤骑兵的主力部队功不可没，以纯步兵的雇佣兵在对抗正规骑兵，可以完全显示出双薪剑士的战斗力并不逊色于任何正规军。</Text>
+		</Row>
+		<Row Tag = "TXT_KEY_PROMOTION_GERMAN_LONGSWORDSMAN">
+			<Text>德意志双手重剑</Text>
+		</Row>
+		<Row Tag = "TXT_KEY_PROMOTION_GERMAN_LONGSWORDSMAN_HELP">
+			<Text>攻击时对同格敌方单位造成100%溅射伤害。</Text>
+		</Row>
+		<Row Tag = "TXT_KEY_PROMOTION_GERMAN_LONGSWORDSMAN_GOLD">
+			<Text>神圣罗马雇佣兵</Text>
+		</Row>
+		<Row Tag = "TXT_KEY_PROMOTION_GERMAN_LONGSWORDSMAN_GOLD_HELP">
+			<Text>消灭敌人时获得相当于单位[ICON_STRENGTH]战斗力50%的[ICON_GOLD]金钱。</Text>
+		</Row>
+
 		<Row Tag="TXT_KEY_UNIT_INCAN_CHASQUI">
 			<Text>海螺信使</Text>
 			<Plurality>2</Plurality>
@@ -10847,12 +10874,12 @@
 		</Replace>
 
 	<!-- *************************Unique Units Changes****************************-->
-		<Replace Tag="TXT_KEY_UNIT_JAPANESE_SAMURAI_STRATEGY">
+		<Replace Tag="TXT_KEY_UNIT_JAPANESE_SAMURAI_HELP">
 			<Text>
 				旗本武士是日本文明的特色單位，取代長劍士。
 				[NEWLINE][ICON_BULLET]自帶可繼承的夾擊加成，擁有更高的[ICON_MOVES]移動力;
 				[NEWLINE][ICON_BULLET]消滅敵人時獲得相當於單位[ICON_STRENGTH]戰鬥力50%的[ICON_CULTURE]文化;
-				[NEWLINE][ICON_BULLET]能夠在城市中建立「道場」。</Text>
+				[NEWLINE][ICON_BULLET]能夠在城市中建立「道場」。
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_UNIT_HELP_SAMURAI">

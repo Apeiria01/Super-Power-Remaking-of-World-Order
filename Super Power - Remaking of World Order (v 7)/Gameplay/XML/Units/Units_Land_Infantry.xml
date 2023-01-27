@@ -737,7 +737,7 @@
 			<Description>TXT_KEY_UNIT_JAPANESE_SAMURAI</Description>
 			<Civilopedia>TXT_KEY_CIVILOPEDIA_UNITS_MEDIEVAL_SAMURAI_TEXT</Civilopedia>
 			<Strategy>TXT_KEY_SP_UNITS_LAND_INFANTRY_STRATEGY</Strategy>
-			<Help>TXT_KEY_PROMOTION_INFANTRY_COMBAT_HELP</Help>
+			<Help>TXT_KEY_UNIT_JAPANESE_SAMURAI_HELP</Help>
 			<MilitarySupport>true</MilitarySupport>
 			<MilitaryProduction>true</MilitaryProduction>
 			<Pillage>true</Pillage>
@@ -751,6 +751,38 @@
 			<UnitFlagIconOffset>36</UnitFlagIconOffset>
 			<IconAtlas>UNIT_ATLAS_1</IconAtlas>
 			<PortraitIndex>37</PortraitIndex>
+			<ExtraMaintenanceCost>4</ExtraMaintenanceCost>
+		</Row>
+
+		<Row>
+			<Class>UNITCLASS_LONGSWORDSMAN</Class>
+			<Type>UNIT_GERMAN_LONGSWORDSMAN</Type>
+			<PrereqTech>TECH_STEEL</PrereqTech>
+			<BaseSightRange>2</BaseSightRange>	
+			<Combat>30</Combat>
+			<Cost>90</Cost>
+			<Moves>2</Moves>
+			<CombatClass>UNITCOMBAT_MELEE</CombatClass>
+			<Domain>DOMAIN_LAND</Domain>
+			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_GERMAN_LONGSWORDSMAN</Description>
+			<Civilopedia>TXT_KEY_CIV5_UNIT_GERMAN_LONGSWORDSMAN_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_SP_UNITS_LAND_INFANTRY_STRATEGY</Strategy>
+			<Help>TXT_KEY_UNIT_GERMAN_LONGSWORDSMAN_HELP</Help>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<Pillage>true</Pillage>
+			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
+			<GoodyHutUpgradeUnitClass>UNITCLASS_MUSKETMAN</GoodyHutUpgradeUnitClass>
+			<AdvancedStartCost>20</AdvancedStartCost>
+			<XPValueAttack>3</XPValueAttack>
+			<XPValueDefense>3</XPValueDefense>
+			<Conscription>3</Conscription>
+			<UnitArtInfo>ART_DEF_UNIT_GERMAN_LONGSWORDSMAN</UnitArtInfo>
+			<UnitFlagAtlas>UNITS_GERMAN_DOPPE_FLAG_ATLAS</UnitFlagAtlas>
+			<UnitFlagIconOffset>0</UnitFlagIconOffset>
+			<IconAtlas>SP8_EXTRA_ATLAS</IconAtlas>
+			<PortraitIndex>0</PortraitIndex>
 			<ExtraMaintenanceCost>4</ExtraMaintenanceCost>
 		</Row>
 
@@ -1844,6 +1876,10 @@
 			<UnitClassType>UNITCLASS_MUSKETMAN</UnitClassType>
 		</Row>
 		<Row>
+			<UnitType>UNIT_GERMAN_LONGSWORDSMAN</UnitType>
+			<UnitClassType>UNITCLASS_MUSKETMAN</UnitClassType>
+		</Row>
+		<Row>
 			<UnitType>UNIT_KRIS_SWORDSMAN</UnitType>
 			<UnitClassType>UNITCLASS_MUSKETMAN</UnitClassType>
 		</Row>
@@ -2300,7 +2336,21 @@
 			<UnitType>UNIT_JAPANESE_SAMURAI</UnitType>
 			<PromotionType>PROMOTION_JAPANESE_SAMURAI_CULTURE</PromotionType>
 		</Row>
+		<Row>
+			<UnitType>UNIT_GERMAN_LONGSWORDSMAN</UnitType>
+			<PromotionType>PROMOTION_INFANTRY_COMBAT</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_GERMAN_LONGSWORDSMAN</UnitType>
+			<PromotionType>PROMOTION_GERMAN_LONGSWORDSMAN</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_GERMAN_LONGSWORDSMAN</UnitType>
+			<PromotionType>PROMOTION_GERMAN_LONGSWORDSMAN_GOLD</PromotionType>
+		</Row>
 
+
+		
 		<Row>
 			<UnitType>UNIT_DANISH_BERSERKER</UnitType>
 			<PromotionType>PROMOTION_INFANTRY_COMBAT</PromotionType>
@@ -2684,10 +2734,6 @@
 			<UnitType>UNIT_NATIONAL_GUARD</UnitType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 		</Row>
-		<Row>
-			<UnitType>UNIT_JAPANESE_SAMURAI</UnitType>
-			<ResourceType>RESOURCE_MANPOWER</ResourceType>
-		</Row>
 
 		<Row>
 			<UnitType>UNIT_FRENCH_MUSKETEER</UnitType>
@@ -2742,6 +2788,10 @@
 		</Row>
 		<Row>
 			<UnitType>UNIT_JAPANESE_SAMURAI</UnitType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_GERMAN_LONGSWORDSMAN</UnitType>
 			<ResourceType>RESOURCE_IRON</ResourceType>
 		</Row>
 		<Row>
@@ -2850,6 +2900,14 @@
 		</Row>
 		<Row>
 			<UnitType>UNIT_LONGSWORDSMAN</UnitType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_JAPANESE_SAMURAI</UnitType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_GERMAN_LONGSWORDSMAN</UnitType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 		</Row>
 		<Row>
@@ -3204,6 +3262,15 @@
 		</Row>
 		<Row>
 			<UnitType>UNIT_JAPANESE_SAMURAI</UnitType>
+			<UnitAIType>UNITAI_DEFENSE</UnitAIType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_GERMAN_LONGSWORDSMAN</UnitType>
+			<UnitAIType>UNITAI_ATTACK</UnitAIType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_GERMAN_LONGSWORDSMAN</UnitType>
 			<UnitAIType>UNITAI_DEFENSE</UnitAIType>
 		</Row>
 
@@ -3738,12 +3805,23 @@
 		<Row>
 			<UnitType>UNIT_JAPANESE_SAMURAI</UnitType>
 			<FlavorType>FLAVOR_OFFENSE</FlavorType>
-			<Flavor>25</Flavor>
+			<Flavor>45</Flavor>
 		</Row>
 		<Row>
 			<UnitType>UNIT_JAPANESE_SAMURAI</UnitType>
 			<FlavorType>FLAVOR_RECON</FlavorType>
-			<Flavor>25</Flavor>
+			<Flavor>45</Flavor>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_GERMAN_LONGSWORDSMAN</UnitType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>45</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_GERMAN_LONGSWORDSMAN</UnitType>
+			<FlavorType>FLAVOR_RECON</FlavorType>
+			<Flavor>45</Flavor>
 		</Row>
 
 		<Row>

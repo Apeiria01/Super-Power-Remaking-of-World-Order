@@ -1630,7 +1630,7 @@
 			<MoveRate>WHEELED</MoveRate>
 			<ExtraMaintenanceCost>25</ExtraMaintenanceCost>
 		</Row>
-		<Row>
+		<!-- <Row>
 			<Class>UNITCLASS_ATTACK_HELICOPTER</Class>
 			<Type>UNIT_GERMAN_EUROCOPTER_TIGER</Type>
 			<PrereqTech>TECH_MOBILE_TACTICS</PrereqTech>
@@ -1662,7 +1662,7 @@
 			<IconAtlas>SPUNITS01_ATLAS</IconAtlas>
 			<MoveRate>WHEELED</MoveRate>
 			<ExtraMaintenanceCost>25</ExtraMaintenanceCost>
-		</Row>
+		</Row> -->
 
 	</Units>
 
@@ -2537,7 +2537,7 @@
 		</Row>
 
 
-		<Row>
+		<!-- <Row>
 			<UnitType>UNIT_GERMAN_EUROCOPTER_TIGER</UnitType>
 			<PromotionType>PROMOTION_HELI_ATTACK</PromotionType>
 		</Row>
@@ -2552,15 +2552,15 @@
 		<Row>
 			<UnitType>UNIT_GERMAN_EUROCOPTER_TIGER</UnitType>
 			<PromotionType>PROMOTION_ANTI_HELICOPTER</PromotionType>
-		</Row>
+		</Row> -->
 		<!--<Row>
 			<UnitType>UNIT_GERMAN_EUROCOPTER_TIGER</UnitType>
 			<PromotionType>PROMOTION_MARCH</PromotionType>
 		</Row>-->
-		<Row>
+		<!-- <Row>
 			<UnitType>UNIT_GERMAN_EUROCOPTER_TIGER</UnitType>
 			<PromotionType>PROMOTION_SECOND_ATTACK</PromotionType>
-		</Row>
+		</Row> -->
 		
 		
 		
@@ -3006,14 +3006,14 @@
 		</Row>
 		
 
-		<Row>
+		<!-- <Row>
 			<UnitType>UNIT_GERMAN_EUROCOPTER_TIGER</UnitType>
 			<UnitAIType>UNITAI_FAST_ATTACK</UnitAIType>
 		</Row>
 		<Row>
 			<UnitType>UNIT_GERMAN_EUROCOPTER_TIGER</UnitType>
 			<UnitAIType>UNITAI_RANGED</UnitAIType>
-		</Row>
+		</Row> -->
 		
 		
 		<Row>
@@ -3403,10 +3403,10 @@
 			<UnitType>UNIT_ATTACK_HELICOPTER</UnitType>
 			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
 		</Row>
-		<Row>
+		<!-- <Row>
 			<UnitType>UNIT_GERMAN_EUROCOPTER_TIGER</UnitType>
 			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
-		</Row>
+		</Row> -->
 		<Row>
 			<UnitType>UNIT_AMERICAN_APACHE</UnitType>
 			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
@@ -3528,11 +3528,11 @@
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 			<Cost>3</Cost>
 		</Row>
-		<Row>
+		<!-- <Row>
 			<UnitType>UNIT_GERMAN_EUROCOPTER_TIGER</UnitType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 			<Cost>3</Cost>
-		</Row>
+		</Row> -->
 		<Row>
 			<UnitType>UNIT_AMERICAN_APACHE</UnitType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
@@ -4165,12 +4165,12 @@
 			<FlavorType>FLAVOR_RANGED</FlavorType>
 			<Flavor>50</Flavor>
 		</Row>
-		<Row>
+		<!-- <Row>
 			<UnitType>UNIT_GERMAN_EUROCOPTER_TIGER</UnitType>
 			<FlavorType>FLAVOR_MOBILE</FlavorType>
 			<Flavor>190</Flavor>
-		</Row>
-		<Row>
+		</Row> -->
+		<!-- <Row>
 			<UnitType>UNIT_GERMAN_EUROCOPTER_TIGER</UnitType>
 			<FlavorType>FLAVOR_OFFENSE</FlavorType>
 			<Flavor>90</Flavor>
@@ -4184,7 +4184,7 @@
 			<UnitType>UNIT_GERMAN_EUROCOPTER_TIGER</UnitType>
 			<FlavorType>FLAVOR_RANGED</FlavorType>
 			<Flavor>50</Flavor>
-		</Row>
+		</Row> -->
 		<Row>
 			<UnitType>UNIT_AMERICAN_APACHE</UnitType>
 			<FlavorType>FLAVOR_MOBILE</FlavorType>

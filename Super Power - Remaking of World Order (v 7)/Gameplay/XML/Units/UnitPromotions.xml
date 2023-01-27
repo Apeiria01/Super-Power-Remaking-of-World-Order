@@ -5021,6 +5021,31 @@
 			<PediaEntry>TXT_KEY_PROMOTION_JAPANESE_SAMURAI_CULTURE</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
 		</Row>
+		<!-- Doppelsoldner -->
+		<Row>
+			<Type>PROMOTION_GERMAN_LONGSWORDSMAN</Type>
+			<Description>TXT_KEY_PROMOTION_GERMAN_LONGSWORDSMAN</Description>
+			<Help>TXT_KEY_PROMOTION_GERMAN_LONGSWORDSMAN_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_GERMAN_LONGSWORDSMAN</PediaEntry>
+			<CannotBeChosen>true</CannotBeChosen>
+		</Row>
+		<Row>
+			<Type>PROMOTION_GERMAN_LONGSWORDSMAN_GOLD</Type>
+			<Description>TXT_KEY_PROMOTION_GERMAN_LONGSWORDSMAN_GOLD</Description>
+			<Help>TXT_KEY_PROMOTION_GERMAN_LONGSWORDSMAN_GOLD_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<LostWithUpgrade>true</LostWithUpgrade>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_GERMAN_LONGSWORDSMAN_GOLD</PediaEntry>
+			<CannotBeChosen>true</CannotBeChosen>
+		</Row>
+		
 
 		<Row>
 			<Type>PROMOTION_EXTRA_SIGHT_I</Type>
@@ -6986,6 +7011,12 @@
 			<YieldType>YIELD_CULTURE</YieldType>
 			<Yield>50</Yield>
 		</Row>
+		<Row>
+			<PromotionType>PROMOTION_GERMAN_LONGSWORDSMAN_GOLD</PromotionType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>50</Yield>
+		</Row>
+		
 	</UnitPromotions_YieldFromKills>
 	
 </GameData>

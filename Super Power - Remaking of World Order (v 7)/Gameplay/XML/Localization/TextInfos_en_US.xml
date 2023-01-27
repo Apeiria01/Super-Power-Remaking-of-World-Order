@@ -11417,10 +11417,36 @@
 			<Text>[COLOR_SELECTED_TEXT]Hatamoto[ENDCOLOR]</Text>
 			<Plurality>2</Plurality>
 		</Replace>
+		<Row Tag="TXT_KEY_UNIT_GERMAN_LONGSWORDSMAN">
+			<Text>Doppelsoldner</Text>
+			<Plurality>2</Plurality>
+		</Row>
+
+		<Row Tag="TXT_KEY_UNIT_GERMAN_LONGSWORDSMAN_HELP">
+			<Text>
+				The Doppelsoldner is the Germany unique unit, replacing the Longswordsman. 
+				[NEWLINE][ICON_BULLET]Cause 100% splash damage to the enemy unit on the same tile when attacking;
+				[NEWLINE][ICON_BULLET]Can earn [ICON_GOLD] gold for each enemy killed (50% of its [ICON_STRENGTH] Combat Strength).
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_GERMAN_LONGSWORDSMAN_TEXT">
+			<Text>WIP</Text>
+		</Row>
+		<Row Tag = "TXT_KEY_PROMOTION_GERMAN_LONGSWORDSMAN">
+			<Text>Zweihänder</Text>
+		</Row>
+		<Row Tag = "TXT_KEY_PROMOTION_GERMAN_LONGSWORDSMAN_HELP">
+			<Text>Cause 100% splash damage to the enemy unit on the same tile when attacking.</Text>
+		</Row>
+		<Row Tag = "TXT_KEY_PROMOTION_GERMAN_LONGSWORDSMAN_GOLD">
+			<Text>Landsknechts</Text>
+		</Row>
+		<Row Tag = "TXT_KEY_PROMOTION_GERMAN_LONGSWORDSMAN_GOLD_HELP">
+			<Text>Can earn [ICON_GOLD] gold for each enemy killed (50% of its [ICON_STRENGTH] Combat Strength).</Text>
+		</Row>
 
 
-
-
+		
 		<Row Tag="TXT_KEY_UNIT_INCAN_CHASQUI">
 			<Text>Chasqui</Text>
 			<Plurality>2</Plurality>
@@ -12937,7 +12963,7 @@
 
 
 	<!-- *************************Unique Units Texts****************************-->
-	<Replace Tag="TXT_KEY_UNIT_JAPANESE_SAMURAI_STRATEGY">
+	<Replace Tag="TXT_KEY_UNIT_JAPANESE_SAMURAI_HELP">
 		<Text>
 			The Hatamoto is the Japanese unique unit, replacing the Longswordsman. 
 			[NEWLINE][ICON_BULLET]Flank Attack bonus +5%, +1 [ICON_MOVES] Movement;
