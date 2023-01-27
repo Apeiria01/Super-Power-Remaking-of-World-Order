@@ -2704,9 +2704,9 @@
 			<Description>TXT_KEY_POLICY_ARTISTIC_GENIUS</Description>
 		</Row>
 		<Row>
-			<Type>BUILDINGCLASS_PROTECTIONISM</Type>
-			<DefaultBuilding>BUILDING_PROTECTIONISM</DefaultBuilding>
-			<Description>TXT_KEY_POLICY_PROTECTIONISM</Description>
+			<Type>BUILDINGCLASS_MARKET_ECONOMY</Type>
+			<DefaultBuilding>BUILDING_MARKET_ECONOMY</DefaultBuilding>
+			<Description>TXT_KEY_POLICY_MARKET_ECONOMY</Description>
 		</Row>
 		<Row>
 			<Type>BUILDINGCLASS_ENTREPRENEURSHIP</Type>
@@ -3048,16 +3048,16 @@
 			<GreatWorkCount>-1</GreatWorkCount>
 		</Row>
 		<Row>
-			<Type>BUILDING_PROTECTIONISM</Type>
-			<BuildingClass>BUILDINGCLASS_PROTECTIONISM</BuildingClass>
+			<Type>BUILDING_MARKET_ECONOMY</Type>
+			<BuildingClass>BUILDINGCLASS_MARKET_ECONOMY</BuildingClass>
 			<Cost>-1</Cost>
 			<NeverCapture>true</NeverCapture>
 			<NukeImmune>true</NukeImmune>
 			<HurryCostModifier>-1</HurryCostModifier>
 			<PortraitIndex>11</PortraitIndex>
 			<IconAtlas>POLICY_ATLAS</IconAtlas>
-			<Description>TXT_KEY_POLICY_PROTECTIONISM</Description>
-			<Help>TXT_KEY_POLICY_PROTECTIONISM_HELP</Help>
+			<Description>TXT_KEY_POLICY_MARKET_ECONOMY</Description>
+			<Help>TXT_KEY_POLICY_MARKET_ECONOMY_HELP</Help>
 			<Happiness>3</Happiness>
 			<GreatWorkCount>-1</GreatWorkCount>
 		</Row>

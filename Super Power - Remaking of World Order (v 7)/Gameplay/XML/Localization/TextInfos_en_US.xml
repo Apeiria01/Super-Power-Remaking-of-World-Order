@@ -1185,6 +1185,11 @@
 			<Row Tag="TXT_KEY_SP_UI_HAPPINESS_CONSUMERGOODS_BONUS">
 				<Text>[NEWLINE]Abundant [ICON_RES_CONSUMER] Consumer Goods! [ICON_HAPPINESS_4] Unhappiness [COLOR_POSITIVE_TEXT]Reduced[ENDCOLOR] by</Text>
 			</Row>
+			<Row Tag="TXT_KEY_POLICY_MERCANTILISM_CONSUMERGOODS_BONUS">
+				<Text>
+					Because you adopted Policy Mercantilism, Abundant [ICON_RES_CONSUMER] Consumer bonus and upper limit increased by 20%.
+				</Text>
+			</Row>
 			<Row Tag="TXT_KEY_SP_UI_HAPPINESS_CONSUMERGOODS_PENALTY">
 				<Text>[NEWLINE]Insufficient [ICON_RES_CONSUMER] Consumer Goods! [ICON_HAPPINESS_4] Unhappiness [COLOR_NEGATIVE_TEXT]Increased[ENDCOLOR] by</Text>
 			</Row>
@@ -7657,7 +7662,9 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]Wagon Trains[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]+4 [ICON_GOLD] Gold from all your land trade routes.
-				[NEWLINE][ICON_BULLET]+25% [ICON_GOLD] Gold from [ICON_CONNECTED] City Connections.</Text>
+				[NEWLINE][ICON_BULLET]+25% [ICON_GOLD] Gold from [ICON_CONNECTED] City Connections.
+				[NEWLINE][ICON_BULLET]-50% [ICON_GOLD] Maintenance Cost for Roads and Railroads .
+			</Text>
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_POLICY_TRADE_UNIONS" >
@@ -7666,7 +7673,7 @@
 		<Replace Tag="TXT_KEY_POLICY_TRADE_UNIONS_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]Trade Unions[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]+2 [ICON_CULTURE] Culture from every Caravansary, Market, Bank, Stock Exchange and Financial Company.
+				[NEWLINE][ICON_BULLET]+2 [ICON_CULTURE] Culture and [ICON_RES_CONSUMER] Consumer from every Caravansary, Market, Bank, Stock Exchange and Financial Company.
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_TRADEUNIONS_TEXT" >
@@ -7678,6 +7685,8 @@
 				[COLOR_POSITIVE_TEXT]Mercantilism[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]-15%[ICON_GOLD] Gold cost of purchasing units and buildings.
 				[NEWLINE][ICON_BULLET]+3 extra [ICON_RES_CONSUMER] Consumer Goods produced by Merchants.
+				[NEWLINE][ICON_BULLET]Abundant [ICON_RES_CONSUMER] Consumer bonus and upper limit increased by 20%.
+				
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_ENTREPRENEURSHIP_HELP" >
@@ -7692,9 +7701,8 @@
 		<Replace Tag="TXT_KEY_POLICY_PROTECTIONISM_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]Protectionism[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]-50% [ICON_GOLD] Maintenance Cost for Roads and Railroads .
 				[NEWLINE][ICON_BULLET]+50% [ICON_FOOD] Food and [ICON_PRODUCTION] Production provided by Internal trade routes.
-				[NEWLINE][ICON_BULLET]+3 [ICON_HAPPINESS_1] Local Happiness in the city with "We Love The King Day!"
+				[NEWLINE][ICON_BULLET]Internal trade routes can provide [ICON_RESEARCH] Science and [ICON_CULTURE] Culture to destination cities (This is equal to 5% of the original city's output). 
 			</Text>
 		</Replace>
 		
@@ -7705,7 +7713,9 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]Consumerism[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]+1 [ICON_HAPPINESS_1] Happiness from each Luxury resource.
-				[NEWLINE][ICON_BULLET]+1 [ICON_HAPPINESS_1] Happiness from each Supermarket, Country Club, Bar, Wildlife Preserve and Jeweler.</Text>
+				[NEWLINE][ICON_BULLET]+1 [ICON_HAPPINESS_1] Happiness from each Supermarket, Country Club, Bar, Wildlife Preserve and Jeweler.
+				[NEWLINE][ICON_BULLET]+3 [ICON_HAPPINESS_1] Local Happiness in the city with "We Love The King Day!"
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_MARKET_ECONOMY_TEXT">
 			<Text>Consumerism is a social and economic order and ideology that encourages the acquisition of goods and services in ever-greater amounts. Early criticisms of consumerism are present in the works of Thorstein Veblen (1899). Veblen's subject of examination, the newly emergent middle class arising at the turn of the twentieth century,comes to fruition by the end of the twentieth century through the process of globalization. In this sense, consumerism is usually considered a part of media culture.</Text>
