@@ -809,17 +809,17 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 
 			end
 			local iMyDie = false; --Modified
-			local iTheydie = false;
+			local iTheyDie = false;
 			-- Don't give numbers greater than a Unit's max HP
 			local myMaxUnitHitPoints = pMyUnit:GetMaxHitPoints();
 			local theirMaxUnitHitPoints = pTheirUnit:GetMaxHitPoints();
-			if (iMyDamageInflicted > myMaxUnitHitPoints) then
-				iMyDamageInflicted = myMaxUnitHitPoints;
-				iMyDie = true;
+			if (iMyDamageInflicted > theirMaxUnitHitPoints) then
+				iMyDamageInflicted = theirMaxUnitHitPoints;
+				iTheyDie = true;
 			end
-			if (iTheirDamageInflicted > theirMaxUnitHitPoints) then
-				iTheirDamageInflicted = theirMaxUnitHitPoints;
-				iTheydie = true;
+			if (iTheirDamageInflicted > myMaxUnitHitPoints) then
+				iTheirDamageInflicted = myMaxUnitHitPoints;
+				iMyDie = true;
 			end
 
 			-- now do the health bars

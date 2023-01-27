@@ -1,7 +1,8 @@
 -- NewBuildingEffects
 
 --------------------------------------------------------------
-
+include("FLuaVector.lua");
+include("UtilityFunctions.lua");
 
 -----------New building effects when it is built
 function NewBuildingEffects(iPlayer, iCity, iBuilding, bGold, bFaith)
@@ -599,6 +600,102 @@ function MinorProvideRes(iPlayerID)
 end
 GameEvents.PlayerDoTurn.Add(MinorProvideRes)
 
+
+------------------ Greek UB ------------------
+local GreekOlympicsDummyMax = GameDefines["GREEK_UB_DUMMY_MAX"];
+
+function GreekOlympicsBuildingsEffectConstruct(iPlayer, iCity, iBuilding, bGold, bFaith)
+	if iBuilding ~= GameInfoTypes["BUILDING_GREEK_OLYMPICS"] then
+		return
+	end
+
+	local pPlayer = Players[iPlayer];
+	if pPlayer == nil then
+		return
+	end
+
+	local pCity = pPlayer:GetCityByID(iCity);
+	if pCity == nil then
+		return
+	end
+
+	print("GreekOlympicsBuildingsEffectConstruct");
+	pCity:SetNumRealBuilding(GameInfoTypes["BUILDING_GREEK_OLYMPICS_DUMMY"], 0);
+	if pPlayer:CountNumBuildings(GameInfoTypes["BUILDING_GREEK_OLYMPICS_DUMMY"]) < GreekOlympicsDummyMax then
+		pCity:SetNumRealBuilding(GameInfoTypes["BUILDING_GREEK_OLYMPICS_DUMMY"], 1);
+	end
+end
+GameEvents.CityConstructed.Add(GreekOlympicsBuildingsEffectConstruct);
+
+function GreekOlympicsBuildingsEffectSold(iPlayer, iCity, iBuilding)
+	if iBuilding ~= GameInfoTypes["BUILDING_GREEK_OLYMPICS"] then
+		return;
+	end
+
+	local pPlayer = Players[iPlayer];
+	if pPlayer == nil then
+		return;
+	end
+
+	print("GreekOlympicsBuildingsEffectSold");
+
+	local count = 0;
+	for pCity in pPlayer:Cities() do
+		pCity:SetNumRealBuilding(GameInfoTypes["BUILDING_GREEK_OLYMPICS_DUMMY"], 0);
+		if pCity:GetNumBuilding(GameInfoTypes["BUILDING_GREEK_OLYMPICS"]) > 0 and count < GreekOlympicsDummyMax then
+			count = count + 1;
+			pCity:SetNumRealBuilding(GameInfoTypes["BUILDING_GREEK_OLYMPICS_DUMMY"], 1);
+		end
+
+		if count >= 20 then
+			break;
+		end
+	end
+
+	print("GreekOlympicsBuildingsEffectSold: reset - ", count);
+end
+GameEvents.CitySoldBuilding.Add(GreekOlympicsBuildingsEffectSold);
+------------------ Greek UB END ------------------
+
+------------------ Portugal UB BEGIN ------------------
+GameEvents.TradeRouteMove.Add(function(iX, iY, iUnit, iOwner, iOriginalPlayer, iOriginalCity, iDestPlayer, iDestCity)
+	local pOnwer = Players[iOwner];
+	if pOnwer == nil or not pOnwer:IsAlive() then
+		return;
+	end
+
+	local plot = Map.GetPlot(iX, iY);
+	if plot == nil then
+		return;
+	end
+
+	if not plot:IsWater() and not plot:IsCity() then
+		return;
+	end
+
+	local pCity = plot:GetWorkingCity();
+	if pCity == nil then
+		print("TradeRouteMove-Portugal-UB: pCity == nil");
+		return;
+	end
+
+	if not pCity:IsHasBuilding(GameInfoTypes["BUILDING_PORTUGAL_PORT"]) then
+		print("TradeRouteMove-Portugal-UB: do not have BUILDING_PORTUGAL_PORT");
+		return;
+	end
+
+	local pCityOwner = Players[pCity:GetOwner()];
+	local iGold = 5 * (2 + pCityOwner:GetCurrentEra());
+	pCityOwner:ChangeGold(iGold);
+
+	if pCityOwner:IsHuman() then
+		local hex = ToHexFromGrid(Vector2(iX, iY));
+		Events.AddPopupTextEvent(HexToWorld(hex), Locale.ConvertTextKey("+{1_Num}[ICON_GOLD]", iGold));
+	end
+	print("TradeRouteMove-Portugal-UB: gain ", iGold);
+end
+)
+------------------ Portugal UB END   ------------------
 
 
 print("New Building Effects Check Pass!")

@@ -234,48 +234,6 @@
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_GLOBAL</BuildingClassType>
 			<CultureChange>4</CultureChange>
 		</Row>
-		
-		<!--<Row>
-			<PolicyType>POLICY_BILL_OF_RIGHTS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_MONUMENT</BuildingClassType>
-			<CultureChange>1</CultureChange>
-		</Row>-->
-		<Row>
-			<PolicyType>POLICY_BILL_OF_RIGHTS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_AMPHITHEATER</BuildingClassType>
-			<CultureChange>1</CultureChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_BILL_OF_RIGHTS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_ART_GALLERY</BuildingClassType>
-			<CultureChange>1</CultureChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_BILL_OF_RIGHTS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_OPERA_HOUSE</BuildingClassType>
-			<CultureChange>1</CultureChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_BILL_OF_RIGHTS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_MUSEUM</BuildingClassType>
-			<CultureChange>1</CultureChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_BILL_OF_RIGHTS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_BROADCAST_TOWER</BuildingClassType>
-			<CultureChange>1</CultureChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_BILL_OF_RIGHTS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_CINEMA</BuildingClassType>
-			<CultureChange>1</CultureChange>
-		</Row>
-		<!--<Row>
-			<PolicyType>POLICY_BILL_OF_RIGHTS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_TV_STATION</BuildingClassType>
-			<CultureChange>1</CultureChange>
-		</Row>-->
-
 
 		<Row>
 			<PolicyType>POLICY_TRADE_UNIONS</PolicyType>
@@ -377,129 +335,6 @@
 	</Policy_BuildingClassCultureChanges>
 
 	<Policy_BuildingClassYieldChanges>
-		<!--<Row>
-			<PolicyType>POLICY_PIETY</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_SHRINE</BuildingClassType>
-			<YieldType>YIELD_FAITH</YieldType>
-			<YieldChange>1</YieldChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_PIETY</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_TEMPLE</BuildingClassType>
-			<YieldType>YIELD_FAITH</YieldType>
-			<YieldChange>2</YieldChange>
-		</Row>-->
-
-		
-		<Row>
-			<PolicyType>POLICY_BILL_OF_RIGHTS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_LIBRARY</BuildingClassType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<YieldChange>1</YieldChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_BILL_OF_RIGHTS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_ACADEMY</BuildingClassType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<YieldChange>1</YieldChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_BILL_OF_RIGHTS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_UNIVERSITY</BuildingClassType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<YieldChange>1</YieldChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_BILL_OF_RIGHTS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_PUBLIC_SCHOOL</BuildingClassType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<YieldChange>1</YieldChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_BILL_OF_RIGHTS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_LABORATORY</BuildingClassType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<YieldChange>1</YieldChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_BILL_OF_RIGHTS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_OBSERVATORY</BuildingClassType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<YieldChange>1</YieldChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_BILL_OF_RIGHTS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_FACTORY</BuildingClassType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<YieldChange>1</YieldChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_BILL_OF_RIGHTS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_INLAND_CANAL</BuildingClassType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<YieldChange>1</YieldChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_BILL_OF_RIGHTS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_MINGING_FACTORY</BuildingClassType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<YieldChange>1</YieldChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_BILL_OF_RIGHTS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_GARMENT_WORKSHOP</BuildingClassType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<YieldChange>1</YieldChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_BILL_OF_RIGHTS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_METAL_FACTORY</BuildingClassType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<YieldChange>1</YieldChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_BILL_OF_RIGHTS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_FUTURE_FACTORY</BuildingClassType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<YieldChange>1</YieldChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_BILL_OF_RIGHTS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_MARKET</BuildingClassType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<YieldChange>1</YieldChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_BILL_OF_RIGHTS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_BANK</BuildingClassType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<YieldChange>1</YieldChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_BILL_OF_RIGHTS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_STOCK_EXCHANGE</BuildingClassType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<YieldChange>1</YieldChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_BILL_OF_RIGHTS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_FINANCE_COMPANY</BuildingClassType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<YieldChange>1</YieldChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_BILL_OF_RIGHTS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_COUNTRY_CLUB</BuildingClassType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<YieldChange>1</YieldChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_BILL_OF_RIGHTS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_BEVERAGE_FACTORY</BuildingClassType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<YieldChange>1</YieldChange>
-		</Row>
-		
 <!--***********************BILL OF RIGHTS reduce the maintainance of City Halls-->
 		<Row>
 			<PolicyType>POLICY_BILL_OF_RIGHTS</PolicyType>
@@ -855,19 +690,6 @@
 			<BuildingClassType>BUILDINGCLASS_WONDER_YIELD_FAITH_MOD</BuildingClassType>
 			<YieldType>YIELD_FAITH</YieldType>
 			<YieldMod>25</YieldMod>
-		</Row>
-
-		<Row>
-			<PolicyType>POLICY_COASTAL_ADMINISTRATION</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_SHIPYARD</BuildingClassType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<YieldMod>15</YieldMod>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_COASTAL_ADMINISTRATION</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_SHIPYARD</BuildingClassType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<YieldMod>15</YieldMod>
 		</Row>
 
 		<Row>
@@ -3423,4 +3245,95 @@
 			<Yield>2</Yield>
 		</Row>
 	</Building_SpecialistYieldChanges>
+
+	<Policies>
+		<!--集体统治假政策-->
+		<Row>
+			<Type>POLICY_COLLECTIVE_RULE_FREE</Type>
+			<Description>POLICY_COLLECTIVE_RULE</Description>
+			<SettlerProductionModifier>50</SettlerProductionModifier>
+		</Row>
+	</Policies>
+
+	<BuildingClasses>
+		<!--商船舰队假建筑-->
+		<Row>
+			<Type>BUILDINGCLASS_POLICY_MERCHANT_NAVY_FREE</Type>
+			<DefaultBuilding>BUILDING_POLICY_MERCHANT_NAVY_FREE</DefaultBuilding>
+			<Description>TXT_KEY_POLICY_MERCHANT_NAVY</Description>
+		</Row>
+		<!--共和政体假建筑-->
+		<Row>
+			<Type>BUILDINGCLASS_POLICY_REPUBLIC_FREE</Type>
+			<DefaultBuilding>BUILDING_POLICY_REPUBLIC_FREE</DefaultBuilding>
+			<Description>TXT_KEY_POLICY_REPUBLIC</Description>
+		</Row>
+	</BuildingClasses>
+
+	<Buildings>
+		<!--商船舰队假建筑-->
+		<Row>
+			<Type>BUILDING_POLICY_MERCHANT_NAVY_FREE</Type>
+			<BuildingClass>BUILDINGCLASS_POLICY_MERCHANT_NAVY_FREE</BuildingClass>
+			<Cost>-1</Cost>
+			<NeverCapture>true</NeverCapture>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<PortraitIndex>21</PortraitIndex>
+			<IconAtlas>TECH_ATLAS_1</IconAtlas>
+			<GreatWorkCount>-1</GreatWorkCount>
+			<Description>TXT_KEY_POLICY_MERCHANT_NAVY</Description>
+		</Row>
+		<!--共和政体假建筑-->
+		<Row>
+			<Type>BUILDING_POLICY_REPUBLIC_FREE</Type>
+			<BuildingClass>BUILDINGCLASS_POLICY_REPUBLIC_FREE</BuildingClass>
+			<Cost>-1</Cost>
+			<NeverCapture>true</NeverCapture>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<PortraitIndex>21</PortraitIndex>
+			<IconAtlas>TECH_ATLAS_1</IconAtlas>
+			<GreatWorkCount>-1</GreatWorkCount>
+			<Description>TXT_KEY_POLICY_REPUBLIC</Description>
+		</Row>
+	</Buildings>
+	<Building_GlobalYieldModifiers>
+		<!--共和政体假建筑每城全局+1%粮食产能-->
+		<Row>
+			<BuildingType>BUILDING_POLICY_REPUBLIC_FREE</BuildingType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_POLICY_REPUBLIC_FREE</BuildingType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	</Building_GlobalYieldModifiers>
+
+	<Policy_FreeBuildingClass>
+		<!--商船舰队假建筑赠送-->
+		<Row>
+			<PolicyType>POLICY_MERCHANT_NAVY</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_POLICY_MERCHANT_NAVY_FREE</BuildingClassType>
+			<Count>1</Count>
+		</Row>
+		<!--共和政体假建筑赠送-->
+		<Row>
+			<PolicyType>POLICY_POLICY_REPUBLIC</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_POLICY_REPUBLIC_FREE</BuildingClassType>
+			<Count>1</Count>
+		</Row>
+	</Policy_FreeBuildingClass>
+
+	<Building_EnableUnitPurchase>
+		<!--商船舰队假建筑解锁信仰购买商船-->
+		<Row>
+			<BuildingType>BUILDING_POLICY_MERCHANT_NAVY_FREE</BuildingType>
+			<UnitClassType>UNITCLASS_CARGO_SHIP</UnitClassType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<CostModifier>500</CostModifier>
+		</Row>
+	</Building_EnableUnitPurchase>
 </GameData>

@@ -182,7 +182,7 @@
 			<Where Type="POLICY_PROFESSIONAL_ARMY"/>
 		</Update>
 		<Update>
-			<Set CultureFromKills="50" GoldFromKills="0"GreatGeneralRateModifier="50"/>
+			<Set CultureFromKills="50" GoldFromKills="0" GreatGeneralRateModifier="50"/>
 			<Where Type="POLICY_HONOR_FINISHER"/>
 		</Update>
 		<Update>
@@ -269,7 +269,7 @@
 			<Where Type="POLICY_SCHOLASTICISM"/>
 		</Update>
 		<Update>
-			<Set MinorResourceBonus="false" AfraidMinorPerTurnInfluence="500" GridX="1" GridY="1" PortraitIndex="1"/>
+			<Set  MinorBullyInfluenceLossModifier="-75" MinorBullyScoreModifier="100" MinorResourceBonus="false" AfraidMinorPerTurnInfluence="500" GridX="1" GridY="1" PortraitIndex="1"/>
 			<Where Type="POLICY_CULTURAL_DIPLOMACY"/>
 		</Update>
 		<Update>

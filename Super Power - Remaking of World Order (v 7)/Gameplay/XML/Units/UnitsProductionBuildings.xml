@@ -53,6 +53,14 @@
 			<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
 		</Row>
 		<Row>
+			<UnitType>UNIT_JAPANESE_SAMURAI</UnitType>
+			<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_GERMAN_LONGSWORDSMAN</UnitType>
+			<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
+		</Row>
+		<Row>
 			<UnitType>UNIT_DANISH_BERSERKER</UnitType>
 			<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
 		</Row>
@@ -241,12 +249,6 @@
 		</Row>
 		<Row>
 			<UnitType>UNIT_BAZOOKA</UnitType>
-			<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
-		</Row>
-
-
-		<Row>
-			<UnitType>UNIT_JAPANESE_SAMURAI</UnitType>
 			<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
 		</Row>
 
@@ -567,10 +569,10 @@
 			<UnitType>UNIT_ATTACK_HELICOPTER</UnitType>
 			<BuildingClassType>BUILDINGCLASS_MILITARY_BASE</BuildingClassType>
 		</Row>
-		<Row>
+		<!-- <Row>
 			<UnitType>UNIT_GERMAN_EUROCOPTER_TIGER</UnitType>
 			<BuildingClassType>BUILDINGCLASS_MILITARY_BASE</BuildingClassType>
-		</Row>
+		</Row> -->
 		<Row>
 			<UnitType>UNIT_AMERICAN_APACHE</UnitType>
 			<BuildingClassType>BUILDINGCLASS_MILITARY_BASE</BuildingClassType>

@@ -57,6 +57,21 @@
 			<PediaEntry>TXT_KEY_PROMOTION_CORPS_2</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
 		</Row>
+
+		<Row>
+			<Type>PROMOTION_AZTEC_HUEY_TEOCALLI</Type>
+			<Description>TXT_KEY_PROMOTION_AZTEC_HUEY_TEOCALLI</Description>
+			<Help>TXT_KEY_PROMOTION_AZTEC_HUEY_TEOCALLI_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<OrderPriority>11</OrderPriority>
+			<CombatPercent>10</CombatPercent>
+			<MaxHitPointsModifier>50</MaxHitPointsModifier>
+			<PortraitIndex>18</PortraitIndex>
+			<IconAtlas>SP_PROMOTION_OLD_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_AZTEC_HUEY_TEOCALLI</PediaEntry>
+			<CannotBeChosen>true</CannotBeChosen>
+		</Row>
 		
 		<!--*****************************Heroic Carrier*******************************************-->
 		<Row>
@@ -1570,97 +1585,34 @@
 		</Row>
 		</UnitPromotions>
 
-
-	<UnitPromotions_UnitClasses>
+	<!--********************Infantry Defense Bonus**************-->
+	<UnitPromotions_PromotionModifiers>
 		<Row>
 			<PromotionType>PROMOTION_INFANTRY_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_SPEARMAN</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_INFANTRY_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_PIKEMAN</UnitClassType>
+			<OtherPromotionType>PROMOTION_ANTI_MOUNTED</OtherPromotionType>
 			<Defense>50</Defense>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_INFANTRY_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_LANDSKNECHT</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_INFANTRY_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_TERCIO</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_INFANTRY_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_WARRIOR</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_INFANTRY_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_MILITIA_ANCIENT</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-
-		<Row>
-			<PromotionType>PROMOTION_GUNPOWDER_INFANTRY_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_SPEARMAN</UnitClassType>
+			<OtherPromotionType>PROMOTION_MILITIA_COMBAT</OtherPromotionType>
 			<Defense>50</Defense>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_GUNPOWDER_INFANTRY_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_PIKEMAN</UnitClassType>
+			<OtherPromotionType>PROMOTION_ANTI_MOUNTED</OtherPromotionType>
 			<Defense>50</Defense>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_GUNPOWDER_INFANTRY_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_LANDSKNECHT</UnitClassType>
+			<OtherPromotionType>PROMOTION_ANTI_TANK</OtherPromotionType>
 			<Defense>50</Defense>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_GUNPOWDER_INFANTRY_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_TERCIO</UnitClassType>
+			<OtherPromotionType>PROMOTION_MILITIA_COMBAT</OtherPromotionType>
 			<Defense>50</Defense>
 		</Row>
-		<Row>
-			<PromotionType>PROMOTION_GUNPOWDER_INFANTRY_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_ANTI_TANK_GUN</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_GUNPOWDER_INFANTRY_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_TANK_DESTROYER</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_GUNPOWDER_INFANTRY_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_ATGM_VEHICLE</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_GUNPOWDER_INFANTRY_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_MILITIA_ANCIENT</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_GUNPOWDER_INFANTRY_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_MINUTEMAN</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_GUNPOWDER_INFANTRY_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_CONSCRIPTMAN</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_GUNPOWDER_INFANTRY_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_MILITIA_MODERN</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		
-	</UnitPromotions_UnitClasses>
-	
+	</UnitPromotions_PromotionModifiers>
 
 
 	<UnitPromotions_UnitCombats>
@@ -2444,223 +2396,58 @@
 		</Row>-->
 	</UnitPromotions_UnitCombatMods>
 
-	
-	<UnitPromotions_UnitClasses>
+	<UnitPromotions_PromotionModifiers>
+		<!--********************Archery Attack Bonus**************-->
 		<Row>
 			<PromotionType>PROMOTION_ARCHERY_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_SPEARMAN</UnitClassType>
+			<OtherPromotionType>PROMOTION_ANTI_MOUNTED</OtherPromotionType>
 			<Attack>200</Attack>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_ARCHERY_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_PIKEMAN</UnitClassType>
+			<OtherPromotionType>PROMOTION_ANTI_TANK</OtherPromotionType>
 			<Attack>200</Attack>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_ARCHERY_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_LANDSKNECHT</UnitClassType>
-			<Attack>200</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_ARCHERY_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_TERCIO</UnitClassType>
-			<Attack>200</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_ARCHERY_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_ANTI_TANK_GUN</UnitClassType>
-			<Attack>250</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_ARCHERY_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_TANK_DESTROYER</UnitClassType>
-			<Attack>250</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_ARCHERY_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_ATGM_VEHICLE</UnitClassType>
-			<Attack>250</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_ARCHERY_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_CHARIOT_ARCHER</UnitClassType>
-			<Attack>150</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_ARCHERY_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_NUMIDIAN</UnitClassType>
-			<Attack>150</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_ARCHERY_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_MEDIEVAL_CHARIOT</UnitClassType>
-			<Attack>150</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_ARCHERY_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_BOMBARD</UnitClassType>
-			<Attack>150</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_ARCHERY_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_CAVALRY</UnitClassType>
-			<Attack>150</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_ARCHERY_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_CRUISER_TANK</UnitClassType>
+			<OtherPromotionType>PROMOTION_HITANDRUN</OtherPromotionType>
 			<Attack>150</Attack>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_ANTI_AIR</PromotionType>
-			<UnitClassType>UNITCLASS_PROTOTYPE_AIRSHIP</UnitClassType>
+			<OtherPromotionType>PROMOTION_HELI_ATTACK</OtherPromotionType>
 			<Attack>250</Attack>
 		</Row>
-		<Row>
-			<PromotionType>PROMOTION_ANTI_AIR</PromotionType>
-			<UnitClassType>UNITCLASS_STEALTH_HELICOPTER</UnitClassType>
-			<Attack>250</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_ANTI_AIR</PromotionType>
-			<UnitClassType>UNITCLASS_HELICOPTER_GUNSHIP</UnitClassType>
-			<Attack>250</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_ANTI_AIR</PromotionType>
-			<UnitClassType>UNITCLASS_ATTACK_HELICOPTER</UnitClassType>
-			<Attack>250</Attack>
-		</Row>
-		
+
 		<Row>
 			<PromotionType>PROMOTION_ACCURACY_1</PromotionType>
-			<UnitClassType>UNITCLASS_SPEARMAN</UnitClassType>
+			<OtherPromotionType>PROMOTION_ANTI_MOUNTED</OtherPromotionType>
 			<Attack>90</Attack>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_ACCURACY_1</PromotionType>
-			<UnitClassType>UNITCLASS_PIKEMAN</UnitClassType>
+			<OtherPromotionType>PROMOTION_ANTI_TANK</OtherPromotionType>
 			<Attack>90</Attack>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_ACCURACY_1</PromotionType>
-			<UnitClassType>UNITCLASS_LANDSKNECHT</UnitClassType>
+			<OtherPromotionType>PROMOTION_HITANDRUN</OtherPromotionType>
 			<Attack>90</Attack>
 		</Row>
-		<Row>
-			<PromotionType>PROMOTION_ACCURACY_1</PromotionType>
-			<UnitClassType>UNITCLASS_TERCIO</UnitClassType>
-			<Attack>90</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_ACCURACY_1</PromotionType>
-			<UnitClassType>UNITCLASS_ANTI_TANK_GUN</UnitClassType>
-			<Attack>90</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_ACCURACY_1</PromotionType>
-			<UnitClassType>UNITCLASS_TANK_DESTROYER</UnitClassType>
-			<Attack>90</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_ACCURACY_1</PromotionType>
-			<UnitClassType>UNITCLASS_ATGM_VEHICLE</UnitClassType>
-			<Attack>90</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_ACCURACY_1</PromotionType>
-			<UnitClassType>UNITCLASS_CHARIOT_ARCHER</UnitClassType>
-			<Attack>90</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_ACCURACY_1</PromotionType>
-			<UnitClassType>UNITCLASS_NUMIDIAN</UnitClassType>
-			<Attack>90</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_ACCURACY_1</PromotionType>
-			<UnitClassType>UNITCLASS_MEDIEVAL_CHARIOT</UnitClassType>
-			<Attack>90</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_ACCURACY_1</PromotionType>
-			<UnitClassType>UNITCLASS_BOMBARD</UnitClassType>
-			<Attack>90</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_ACCURACY_1</PromotionType>
-			<UnitClassType>UNITCLASS_CAVALRY</UnitClassType>
-			<Attack>90</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_ACCURACY_1</PromotionType>
-			<UnitClassType>UNITCLASS_CRUISER_TANK</UnitClassType>
-			<Attack>90</Attack>
-		</Row>
-		
+
 		<Row>
 			<PromotionType>PROMOTION_ACCURACY_2</PromotionType>
-			<UnitClassType>UNITCLASS_SPEARMAN</UnitClassType>
+			<OtherPromotionType>PROMOTION_ANTI_MOUNTED</OtherPromotionType>
 			<Attack>90</Attack>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_ACCURACY_2</PromotionType>
-			<UnitClassType>UNITCLASS_PIKEMAN</UnitClassType>
+			<OtherPromotionType>PROMOTION_ANTI_TANK</OtherPromotionType>
 			<Attack>90</Attack>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_ACCURACY_2</PromotionType>
-			<UnitClassType>UNITCLASS_LANDSKNECHT</UnitClassType>
-			<Attack>90</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_ACCURACY_2</PromotionType>
-			<UnitClassType>UNITCLASS_TERCIO</UnitClassType>
-			<Attack>90</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_ACCURACY_2</PromotionType>
-			<UnitClassType>UNITCLASS_ANTI_TANK_GUN</UnitClassType>
-			<Attack>90</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_ACCURACY_2</PromotionType>
-			<UnitClassType>UNITCLASS_TANK_DESTROYER</UnitClassType>
-			<Attack>90</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_ACCURACY_2</PromotionType>
-			<UnitClassType>UNITCLASS_ATGM_VEHICLE</UnitClassType>
-			<Attack>90</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_ACCURACY_2</PromotionType>
-			<UnitClassType>UNITCLASS_CHARIOT_ARCHER</UnitClassType>
-			<Attack>90</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_ACCURACY_2</PromotionType>
-			<UnitClassType>UNITCLASS_NUMIDIAN</UnitClassType>
-			<Attack>90</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_ACCURACY_2</PromotionType>
-			<UnitClassType>UNITCLASS_MEDIEVAL_CHARIOT</UnitClassType>
-			<Attack>90</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_ACCURACY_2</PromotionType>
-			<UnitClassType>UNITCLASS_BOMBARD</UnitClassType>
-			<Attack>90</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_ACCURACY_2</PromotionType>
-			<UnitClassType>UNITCLASS_CAVALRY</UnitClassType>
-			<Attack>90</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_ACCURACY_2</PromotionType>
-			<UnitClassType>UNITCLASS_CRUISER_TANK</UnitClassType>
+			<OtherPromotionType>PROMOTION_HITANDRUN</OtherPromotionType>
 			<Attack>90</Attack>
 		</Row>
 		<!--Land based fighter intercept carrier fighter-->
@@ -2668,145 +2455,25 @@
 		<!--full moon strike-->
 		<Row>
 			<PromotionType>PROMOTION_SP_FULL_MOON_STRIKE</PromotionType>
-			<UnitClassType>UNITCLASS_ARCHER</UnitClassType>
+			<OtherPromotionType>PROMOTION_ARCHERY_COMBAT</OtherPromotionType>
 			<Attack>100</Attack>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_SP_FULL_MOON_STRIKE</PromotionType>
-			<UnitClassType>UNITCLASS_LONGBOWMAN</UnitClassType>
+			<OtherPromotionType>PROMOTION_CITY_SIEGE</OtherPromotionType>
 			<Attack>100</Attack>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_SP_FULL_MOON_STRIKE</PromotionType>
-			<UnitClassType>UNITCLASS_COMPOSITE_BOWMAN</UnitClassType>
+			<OtherPromotionType>PROMOTION_SPLASH_DAMAGE</OtherPromotionType>
 			<Attack>100</Attack>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_SP_FULL_MOON_STRIKE</PromotionType>
-			<UnitClassType>UNITCLASS_CROSSBOWMAN</UnitClassType>
+			<OtherPromotionType>PROMOTION_NUCLEAR_ARTILLERY</OtherPromotionType>
 			<Attack>100</Attack>
 		</Row>
-		<Row>
-			<PromotionType>PROMOTION_SP_FULL_MOON_STRIKE</PromotionType>
-			<UnitClassType>UNITCLASS_VOLLEY_GUN</UnitClassType>
-			<Attack>100</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_SP_FULL_MOON_STRIKE</PromotionType>
-			<UnitClassType>UNITCLASS_GATLINGGUN</UnitClassType>
-			<Attack>100</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_SP_FULL_MOON_STRIKE</PromotionType>
-			<UnitClassType>UNITCLASS_MACHINE_GUN</UnitClassType>
-			<Attack>100</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_SP_FULL_MOON_STRIKE</PromotionType>
-			<UnitClassType>UNITCLASS_ANTI_AIRCRAFT_GUN</UnitClassType>
-			<Attack>100</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_SP_FULL_MOON_STRIKE</PromotionType>
-			<UnitClassType>UNITCLASS_MOBILE_AA_GUN</UnitClassType>
-			<Attack>100</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_SP_FULL_MOON_STRIKE</PromotionType>
-			<UnitClassType>UNITCLASS_SAM_INFANTRY</UnitClassType>
-			<Attack>100</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_SP_FULL_MOON_STRIKE</PromotionType>
-			<UnitClassType>UNITCLASS_CATAPULT</UnitClassType>
-			<Attack>100</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_SP_FULL_MOON_STRIKE</PromotionType>
-			<UnitClassType>UNITCLASS_TREBUCHET</UnitClassType>
-			<Attack>100</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_SP_FULL_MOON_STRIKE</PromotionType>
-			<UnitClassType>UNITCLASS_CULVERIN</UnitClassType>
-			<Attack>100</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_SP_FULL_MOON_STRIKE</PromotionType>
-			<UnitClassType>UNITCLASS_CANNON</UnitClassType>
-			<Attack>100</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_SP_FULL_MOON_STRIKE</PromotionType>
-			<UnitClassType>UNITCLASS_HOWITZER</UnitClassType>
-			<Attack>100</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_SP_FULL_MOON_STRIKE</PromotionType>
-			<UnitClassType>UNITCLASS_ARTILLERY</UnitClassType>
-			<Attack>100</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_SP_FULL_MOON_STRIKE</PromotionType>
-			<UnitClassType>UNITCLASS_SELF_PROPELLED_ARTILLERY</UnitClassType>
-			<Attack>100</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_SP_FULL_MOON_STRIKE</PromotionType>
-			<UnitClassType>UNITCLASS_SUPER_HOWITZER</UnitClassType>
-			<Attack>100</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_SP_FULL_MOON_STRIKE</PromotionType>
-			<UnitClassType>UNITCLASS_RAILROAD_GUN</UnitClassType>
-			<Attack>100</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_SP_FULL_MOON_STRIKE</PromotionType>
-			<UnitClassType>UNITCLASS_KATYUSHA</UnitClassType>
-			<Attack>100</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_SP_FULL_MOON_STRIKE</PromotionType>
-			<UnitClassType>UNITCLASS_ROCKET_ARTILLERY</UnitClassType>
-			<Attack>100</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_SP_FULL_MOON_STRIKE</PromotionType>
-			<UnitClassType>UNITCLASS_NUCLEAR_ARTILLERY</UnitClassType>
-			<Attack>100</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_SP_FULL_MOON_STRIKE</PromotionType>
-			<UnitClassType>UNITCLASS_ELITE_SNIPER</UnitClassType>
-			<Attack>100</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_SP_FULL_MOON_STRIKE</PromotionType>
-			<UnitClassType>UNITCLASS_CRUSADER_ARTILLERY</UnitClassType>
-			<Attack>100</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_SP_FULL_MOON_STRIKE</PromotionType>
-			<UnitClassType>UNITCLASS_CHINESE_WEISHI</UnitClassType>
-			<Attack>100</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_SP_FULL_MOON_STRIKE</PromotionType>
-			<UnitClassType>UNITCLASS_PROTOTYPE_HWACHA</UnitClassType>
-			<Attack>100</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_SP_FULL_MOON_STRIKE</PromotionType>
-			<UnitClassType>UNITCLASS_BAZOOKA</UnitClassType>
-			<Attack>100</Attack>
-		</Row>
-		<!--full moon strike-->
-		</UnitPromotions_UnitClasses>
-	
-
-
-
+	</UnitPromotions_PromotionModifiers>
 
 
 	<!--**************************Promotions for Siege Units*****************************************-->
@@ -2897,105 +2564,30 @@
 		</Row>
 	</UnitPromotions_UnitCombatMods>
 
-
-		
-	<UnitPromotions_UnitClasses>
+	<UnitPromotions_PromotionModifiers>
+		<!--********************Siege Attack Bonus**************-->
 		<Row>
 			<PromotionType>PROMOTION_CITY_SIEGE</PromotionType>
-			<UnitClassType>UNITCLASS_ARCHER</UnitClassType>
+			<OtherPromotionType>PROMOTION_ARCHERY_COMBAT</OtherPromotionType>
 			<Attack>100</Attack>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_CITY_SIEGE</PromotionType>
-			<UnitClassType>UNITCLASS_COMPOSITE_BOWMAN</UnitClassType>
-			<Attack>100</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_CITY_SIEGE</PromotionType>
-			<UnitClassType>UNITCLASS_CROSSBOWMAN</UnitClassType>
-			<Attack>100</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_CITY_SIEGE</PromotionType>
-			<UnitClassType>UNITCLASS_VOLLEY_GUN</UnitClassType>
-			<Attack>100</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_CITY_SIEGE</PromotionType>
-			<UnitClassType>UNITCLASS_GATLINGGUN</UnitClassType>
-			<Attack>100</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_CITY_SIEGE</PromotionType>
-			<UnitClassType>UNITCLASS_MACHINE_GUN</UnitClassType>
-			<Attack>100</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_CITY_SIEGE</PromotionType>
-			<UnitClassType>UNITCLASS_ANTI_AIRCRAFT_GUN</UnitClassType>
-			<Attack>100</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_CITY_SIEGE</PromotionType>
-			<UnitClassType>UNITCLASS_MOBILE_AA_GUN</UnitClassType>
-			<Attack>100</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_CITY_SIEGE</PromotionType>
-			<UnitClassType>UNITCLASS_SAM_INFANTRY</UnitClassType>
-			<Attack>100</Attack>
-		</Row>
-
-		<Row>
-			<PromotionType>PROMOTION_CITY_SIEGE</PromotionType>
-			<UnitClassType>UNITCLASS_CITADEL_EARLY</UnitClassType>
-			<Attack>400</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_CITY_SIEGE</PromotionType>
-			<UnitClassType>UNITCLASS_CITADEL_MID</UnitClassType>
-			<Attack>400</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_CITY_SIEGE</PromotionType>
-			<UnitClassType>UNITCLASS_CITADEL_LATE</UnitClassType>
+			<OtherPromotionType>PROMOTION_CITADEL_DEFENSE</OtherPromotionType>
 			<Attack>400</Attack>
 		</Row>
 
-
 		<Row>
 			<PromotionType>PROMOTION_VOLLEY_1</PromotionType>
-			<UnitClassType>UNITCLASS_CITADEL_EARLY</UnitClassType>
-			<Attack>100</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_VOLLEY_1</PromotionType>
-			<UnitClassType>UNITCLASS_CITADEL_MID</UnitClassType>
-			<Attack>100</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_VOLLEY_1</PromotionType>
-			<UnitClassType>UNITCLASS_CITADEL_LATE</UnitClassType>
+			<OtherPromotionType>PROMOTION_CITADEL_DEFENSE</OtherPromotionType>
 			<Attack>100</Attack>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_VOLLEY_2</PromotionType>
-			<UnitClassType>UNITCLASS_CITADEL_EARLY</UnitClassType>
+			<OtherPromotionType>PROMOTION_CITADEL_DEFENSE</OtherPromotionType>
 			<Attack>100</Attack>
 		</Row>
-		<Row>
-			<PromotionType>PROMOTION_VOLLEY_2</PromotionType>
-			<UnitClassType>UNITCLASS_CITADEL_MID</UnitClassType>
-			<Attack>100</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_VOLLEY_2</PromotionType>
-			<UnitClassType>UNITCLASS_CITADEL_LATE</UnitClassType>
-			<Attack>100</Attack>
-		</Row>
-		
-	</UnitPromotions_UnitClasses>
-	
+	</UnitPromotions_PromotionModifiers>
 
 	<UnitPromotions_UnitCombats>
 		<Row>
@@ -3299,253 +2891,60 @@
 	</UnitPromotions_UnitCombatMods>
 
 
-	<UnitPromotions_UnitClasses>
+	<UnitPromotions_PromotionModifiers>
+		<!--********************Naval Defense Bonus**************-->
 		<Row>
 			<PromotionType>PROMOTION_NAVALMELEE_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_NAVAL_MILITIA</UnitClassType>
+			<OtherPromotionType>PROMOTION_MILITIA_COMBAT</OtherPromotionType>
 			<Defense>50</Defense>
 		</Row>
 		<Row>
-			<PromotionType>PROMOTION_NAVALMELEE_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_MONITOR_SHIP</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_NAVALMELEE_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_CORVETTE</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_NAVALMELEE_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_LITTORAL_COMBAT_SHIP</UnitClassType>
+			<PromotionType>PROMOTION_DESTROYER_COMBAT</PromotionType>
+			<OtherPromotionType>PROMOTION_MILITIA_COMBAT</OtherPromotionType>
 			<Defense>50</Defense>
 		</Row>
 
 		<Row>
-			<PromotionType>PROMOTION_DESTROYER_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_NAVAL_MILITIA</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_DESTROYER_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_MONITOR_SHIP</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_DESTROYER_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_CORVETTE</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_DESTROYER_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_LITTORAL_COMBAT_SHIP</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		
-		
-		<Row>
 			<PromotionType>PROMOTION_NAVALMELEE_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_CHARIOT_ARCHER</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_NAVALMELEE_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_MEDIEVAL_CHARIOT</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_NAVALMELEE_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_BOMBARD</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_NAVALMELEE_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_CAVALRY</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_NAVALMELEE_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_CRUISER_TANK</UnitClassType>
+			<OtherPromotionType>PROMOTION_HITANDRUN</OtherPromotionType>
 			<Defense>50</Defense>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_DESTROYER_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_CHARIOT_ARCHER</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_DESTROYER_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_MEDIEVAL_CHARIOT</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_DESTROYER_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_BOMBARD</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_DESTROYER_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_CAVALRY</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_DESTROYER_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_CRUISER_TANK</UnitClassType>
+			<OtherPromotionType>PROMOTION_HITANDRUN</OtherPromotionType>
 			<Defense>50</Defense>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_NAVAL_HIT_AND_RUN</PromotionType>
-			<UnitClassType>UNITCLASS_CHARIOT_ARCHER</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_NAVAL_HIT_AND_RUN</PromotionType>
-			<UnitClassType>UNITCLASS_MEDIEVAL_CHARIOT</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_NAVAL_HIT_AND_RUN</PromotionType>
-			<UnitClassType>UNITCLASS_BOMBARD</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_NAVAL_HIT_AND_RUN</PromotionType>
-			<UnitClassType>UNITCLASS_CAVALRY</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_NAVAL_HIT_AND_RUN</PromotionType>
-			<UnitClassType>UNITCLASS_CRUISER_TANK</UnitClassType>
+			<OtherPromotionType>PROMOTION_HITANDRUN</OtherPromotionType>
 			<Defense>50</Defense>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_SUBMARINE_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_CHARIOT_ARCHER</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_SUBMARINE_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_MEDIEVAL_CHARIOT</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_SUBMARINE_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_BOMBARD</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_SUBMARINE_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_CAVALRY</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_SUBMARINE_COMBAT</PromotionType>
-			<UnitClassType>UNITCLASS_CRUISER_TANK</UnitClassType>
+			<OtherPromotionType>PROMOTION_HITANDRUN</OtherPromotionType>
 			<Defense>50</Defense>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_NAVAL_RANGED_SHIP</PromotionType>
-			<UnitClassType>UNITCLASS_CHARIOT_ARCHER</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_NAVAL_RANGED_SHIP</PromotionType>
-			<UnitClassType>UNITCLASS_MEDIEVAL_CHARIOT</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_NAVAL_RANGED_SHIP</PromotionType>
-			<UnitClassType>UNITCLASS_BOMBARD</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_NAVAL_RANGED_SHIP</PromotionType>
-			<UnitClassType>UNITCLASS_CAVALRY</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_NAVAL_RANGED_SHIP</PromotionType>
-			<UnitClassType>UNITCLASS_CRUISER_TANK</UnitClassType>
+			<OtherPromotionType>PROMOTION_HITANDRUN</OtherPromotionType>
 			<Defense>50</Defense>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_NAVAL_RANGED_CRUISER</PromotionType>
-			<UnitClassType>UNITCLASS_CHARIOT_ARCHER</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_NAVAL_RANGED_CRUISER</PromotionType>
-			<UnitClassType>UNITCLASS_MEDIEVAL_CHARIOT</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_NAVAL_RANGED_CRUISER</PromotionType>
-			<UnitClassType>UNITCLASS_BOMBARD</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_NAVAL_RANGED_CRUISER</PromotionType>
-			<UnitClassType>UNITCLASS_CAVALRY</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_NAVAL_RANGED_CRUISER</PromotionType>
-			<UnitClassType>UNITCLASS_CRUISER_TANK</UnitClassType>
+			<OtherPromotionType>PROMOTION_HITANDRUN</OtherPromotionType>
 			<Defense>50</Defense>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_NAVAL_CAPITAL_SHIP</PromotionType>
-			<UnitClassType>UNITCLASS_CHARIOT_ARCHER</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_NAVAL_CAPITAL_SHIP</PromotionType>
-			<UnitClassType>UNITCLASS_MEDIEVAL_CHARIOT</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_NAVAL_CAPITAL_SHIP</PromotionType>
-			<UnitClassType>UNITCLASS_BOMBARD</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_NAVAL_CAPITAL_SHIP</PromotionType>
-			<UnitClassType>UNITCLASS_CAVALRY</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_NAVAL_CAPITAL_SHIP</PromotionType>
-			<UnitClassType>UNITCLASS_CRUISER_TANK</UnitClassType>
+			<OtherPromotionType>PROMOTION_HITANDRUN</OtherPromotionType>
 			<Defense>50</Defense>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_CARRIER_UNIT</PromotionType>
-			<UnitClassType>UNITCLASS_CHARIOT_ARCHER</UnitClassType>
+			<OtherPromotionType>PROMOTION_HITANDRUN</OtherPromotionType>
 			<Defense>50</Defense>
 		</Row>
-		<Row>
-			<PromotionType>PROMOTION_CARRIER_UNIT</PromotionType>
-			<UnitClassType>UNITCLASS_MEDIEVAL_CHARIOT</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_CARRIER_UNIT</PromotionType>
-			<UnitClassType>UNITCLASS_BOMBARD</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_CARRIER_UNIT</PromotionType>
-			<UnitClassType>UNITCLASS_CAVALRY</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_CARRIER_UNIT</PromotionType>
-			<UnitClassType>UNITCLASS_CRUISER_TANK</UnitClassType>
-			<Defense>50</Defense>
-		</Row>
-	</UnitPromotions_UnitClasses>
-	
-	
+	</UnitPromotions_PromotionModifiers>
 
 	<!--*****************************Promotions for Light Boats*****************************-->
 
@@ -4055,6 +3454,15 @@
 		</Row>
 	</UnitPromotions_UnitCombatMods>-->
 
+	<!--********************Naval Cruiser Anti-Heli Bonus**************-->
+	<!-- <UnitPromotions_PromotionModifiers>
+		<Row>
+			<PromotionType>PROMOTION_NAVAL_RANGED_CRUISER</PromotionType>
+			<OtherPromotionType>PROMOTION_HELI_ATTACK</OtherPromotionType>
+			<Modifier>100</Modifier>
+		</Row>
+	</UnitPromotions_PromotionModifiers> -->
+
 	<UnitPromotions_UnitClasses>
 		<Row>
 			<PromotionType>PROMOTION_NAVAL_RANGED_CRUISER</PromotionType>
@@ -4269,58 +3677,27 @@
 			<Modifier>-33</Modifier>
 		</Row>-->
 	</UnitPromotions_UnitCombatMods>
+
+	<UnitPromotions_PromotionModifiers>
+		<!--******naval capital&ranged ships attack bonus-->
+		<Row>
+			<PromotionType>PROMOTION_NAVAL_CAPITAL_SHIP</PromotionType>
+			<OtherPromotionType>PROMOTION_CITADEL_DEFENSE</OtherPromotionType>
+			<Attack>350</Attack>
+		</Row>
+
+		<Row>
+			<PromotionType>PROMOTION_NAVAL_RANGED_SHIP</PromotionType>
+			<OtherPromotionType>PROMOTION_CITADEL_DEFENSE</OtherPromotionType>
+			<Attack>150</Attack>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_NAVAL_RANGED_CRUISER</PromotionType>
+			<OtherPromotionType>PROMOTION_CITADEL_DEFENSE</OtherPromotionType>
+			<Attack>150</Attack>
+		</Row>
+	</UnitPromotions_PromotionModifiers>
 	
-	<UnitPromotions_UnitClasses>
-		<Row>
-			<PromotionType>PROMOTION_NAVAL_CAPITAL_SHIP</PromotionType>
-			<UnitClassType>UNITCLASS_CITADEL_EARLY</UnitClassType>
-			<Attack>350</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_NAVAL_CAPITAL_SHIP</PromotionType>
-			<UnitClassType>UNITCLASS_CITADEL_MID</UnitClassType>
-			<Attack>350</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_NAVAL_CAPITAL_SHIP</PromotionType>
-			<UnitClassType>UNITCLASS_CITADEL_LATE</UnitClassType>
-			<Attack>350</Attack>
-		</Row>
-
-		<Row>
-			<PromotionType>PROMOTION_NAVAL_RANGED_SHIP</PromotionType>
-			<UnitClassType>UNITCLASS_CITADEL_EARLY</UnitClassType>
-			<Attack>150</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_NAVAL_RANGED_SHIP</PromotionType>
-			<UnitClassType>UNITCLASS_CITADEL_MID</UnitClassType>
-			<Attack>150</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_NAVAL_RANGED_SHIP</PromotionType>
-			<UnitClassType>UNITCLASS_CITADEL_LATE</UnitClassType>
-			<Attack>150</Attack>
-		</Row>
-
-		<Row>
-			<PromotionType>PROMOTION_NAVAL_RANGED_CRUISER</PromotionType>
-			<UnitClassType>UNITCLASS_CITADEL_EARLY</UnitClassType>
-			<Attack>150</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_NAVAL_RANGED_CRUISER</PromotionType>
-			<UnitClassType>UNITCLASS_CITADEL_MID</UnitClassType>
-			<Attack>150</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_NAVAL_RANGED_CRUISER</PromotionType>
-			<UnitClassType>UNITCLASS_CITADEL_LATE</UnitClassType>
-			<Attack>150</Attack>
-		</Row>
-		
-		
-	</UnitPromotions_UnitClasses>
 
 	<!--*****************************Promotions for Carriers and Carrier Based Aircrafts*****************************-->
 
@@ -5619,6 +4996,57 @@
 
 	<!--*****************************Civlization Unique Unit Promotions*******************************************-->
 	<UnitPromotions>
+		<!-- Hatamoto -->
+		<Row>
+			<Type>PROMOTION_JAPANESE_SAMURAI</Type>
+			<Description>TXT_KEY_PROMOTION_JAPANESE_SAMURAI</Description>
+			<Help>TXT_KEY_PROMOTION_JAPANESE_SAMURAI_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<FlankAttackModifier>5</FlankAttackModifier>
+			<PediaEntry>TXT_KEY_PROMOTION_JAPANESE_SAMURAI</PediaEntry>
+			<CannotBeChosen>true</CannotBeChosen>
+		</Row>
+		<Row>
+			<Type>PROMOTION_JAPANESE_SAMURAI_CULTURE</Type>
+			<Description>TXT_KEY_PROMOTION_JAPANESE_SAMURAI_CULTURE</Description>
+			<Help>TXT_KEY_PROMOTION_JAPANESE_SAMURAI_CULTURE_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<LostWithUpgrade>true</LostWithUpgrade>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_JAPANESE_SAMURAI_CULTURE</PediaEntry>
+			<CannotBeChosen>true</CannotBeChosen>
+		</Row>
+		<!-- Doppelsoldner -->
+		<Row>
+			<Type>PROMOTION_GERMAN_LONGSWORDSMAN</Type>
+			<Description>TXT_KEY_PROMOTION_GERMAN_LONGSWORDSMAN</Description>
+			<Help>TXT_KEY_PROMOTION_GERMAN_LONGSWORDSMAN_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_GERMAN_LONGSWORDSMAN</PediaEntry>
+			<CannotBeChosen>true</CannotBeChosen>
+		</Row>
+		<Row>
+			<Type>PROMOTION_GERMAN_LONGSWORDSMAN_GOLD</Type>
+			<Description>TXT_KEY_PROMOTION_GERMAN_LONGSWORDSMAN_GOLD</Description>
+			<Help>TXT_KEY_PROMOTION_GERMAN_LONGSWORDSMAN_GOLD_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<LostWithUpgrade>true</LostWithUpgrade>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_GERMAN_LONGSWORDSMAN_GOLD</PediaEntry>
+			<CannotBeChosen>true</CannotBeChosen>
+		</Row>
+		
+
 		<Row>
 			<Type>PROMOTION_EXTRA_SIGHT_I</Type>
 			<Description>TXT_KEY_PROMOTION_XTRA_SIGHT_I</Description>
@@ -6511,7 +5939,7 @@
 			<UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType>
 		</Row>
 
-<!----------only 2 extra sight for those who can see the stealth unit------------>
+<!--*******only 2 extra sight for those who can see the stealth unit******-->
 		<Row>
 			<PromotionType>PROMOTION_EXTRA_SIGHT_II</PromotionType>
 			<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
@@ -7440,7 +6868,7 @@
 		</Row>
 	</UnitPromotions>
 	
-		<!--For Aircrafts*****************************---->
+		<!--For Aircrafts*****************************-->
 	<UnitPromotions_UnitCombatMods>
 		<Row>
 			<PromotionType>PROMOTION_ANTI_AIR_II</PromotionType>
@@ -7476,85 +6904,36 @@
 		
 	</UnitPromotions_UnitCombatMods>
 	
-	
-	<UnitPromotions_UnitClasses>
+	<UnitPromotions_PromotionModifiers>
+		<!--******aircraft attack citadel bonus-->
 		<Row>
 			<PromotionType>PROMOTION_STRATEGIC_BOMBER</PromotionType>
-			<UnitClassType>UNITCLASS_CITADEL_EARLY</UnitClassType>
-			<Attack>100</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_STRATEGIC_BOMBER</PromotionType>
-			<UnitClassType>UNITCLASS_CITADEL_MID</UnitClassType>
-			<Attack>100</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_STRATEGIC_BOMBER</PromotionType>
-			<UnitClassType>UNITCLASS_CITADEL_LATE</UnitClassType>
+			<OtherPromotionType>PROMOTION_CITADEL_DEFENSE</OtherPromotionType>
 			<Attack>100</Attack>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_ANTI_AIR_II</PromotionType>
-			<UnitClassType>UNITCLASS_CITADEL_EARLY</UnitClassType>
+			<OtherPromotionType>PROMOTION_CITADEL_DEFENSE</OtherPromotionType>
 			<Attack>100</Attack>
 		</Row>
-		<Row>
-			<PromotionType>PROMOTION_ANTI_AIR_II</PromotionType>
-			<UnitClassType>UNITCLASS_CITADEL_MID</UnitClassType>
-			<Attack>100</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_ANTI_AIR_II</PromotionType>
-			<UnitClassType>UNITCLASS_CITADEL_LATE</UnitClassType>
-			<Attack>100</Attack>
-		</Row>
+
 		<Row>
 			<PromotionType>PROMOTION_AIR_SIEGE_1</PromotionType>
-			<UnitClassType>UNITCLASS_CITADEL_EARLY</UnitClassType>
-			<Attack>100</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_AIR_SIEGE_1</PromotionType>
-			<UnitClassType>UNITCLASS_CITADEL_MID</UnitClassType>
-			<Attack>100</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_AIR_SIEGE_1</PromotionType>
-			<UnitClassType>UNITCLASS_CITADEL_LATE</UnitClassType>
+			<OtherPromotionType>PROMOTION_CITADEL_DEFENSE</OtherPromotionType>
 			<Attack>100</Attack>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_AIR_SIEGE_2</PromotionType>
-			<UnitClassType>UNITCLASS_CITADEL_EARLY</UnitClassType>
-			<Attack>100</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_AIR_SIEGE_2</PromotionType>
-			<UnitClassType>UNITCLASS_CITADEL_MID</UnitClassType>
-			<Attack>100</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_AIR_SIEGE_2</PromotionType>
-			<UnitClassType>UNITCLASS_CITADEL_LATE</UnitClassType>
+			<OtherPromotionType>PROMOTION_CITADEL_DEFENSE</OtherPromotionType>
 			<Attack>100</Attack>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_AIR_SIEGE_3</PromotionType>
-			<UnitClassType>UNITCLASS_CITADEL_EARLY</UnitClassType>
+			<OtherPromotionType>PROMOTION_CITADEL_DEFENSE</OtherPromotionType>
 			<Attack>100</Attack>
 		</Row>
-		<Row>
-			<PromotionType>PROMOTION_AIR_SIEGE_3</PromotionType>
-			<UnitClassType>UNITCLASS_CITADEL_MID</UnitClassType>
-			<Attack>100</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_AIR_SIEGE_3</PromotionType>
-			<UnitClassType>UNITCLASS_CITADEL_LATE</UnitClassType>
-			<Attack>100</Attack>
-		</Row>
-	</UnitPromotions_UnitClasses>
-	
+	</UnitPromotions_PromotionModifiers>
+		
 	<UnitPromotions_Domains>
 		<Row>
 			<PromotionType>PROMOTION_ANTI_AIR_II</PromotionType>
@@ -7625,5 +7004,19 @@
 			<Modifier>100</Modifier>
 		</Row>
 	</UnitPromotions_Domains>
+
+	<UnitPromotions_YieldFromKills>
+		<Row>
+			<PromotionType>PROMOTION_JAPANESE_SAMURAI_CULTURE</PromotionType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>50</Yield>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_GERMAN_LONGSWORDSMAN_GOLD</PromotionType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>50</Yield>
+		</Row>
+		
+	</UnitPromotions_YieldFromKills>
 	
 </GameData>

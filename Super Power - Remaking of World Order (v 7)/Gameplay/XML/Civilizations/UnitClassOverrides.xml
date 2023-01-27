@@ -98,9 +98,14 @@
 		</Row>
 		<Row>
 			<CivilizationType>CIVILIZATION_GERMANY</CivilizationType>
+			<UnitClassType>UNITCLASS_LONGSWORDSMAN</UnitClassType>
+			<UnitType>UNIT_GERMAN_LONGSWORDSMAN</UnitType>
+		</Row>
+		<!-- <Row>
+			<CivilizationType>CIVILIZATION_GERMANY</CivilizationType>
 			<UnitClassType>UNITCLASS_ATTACK_HELICOPTER</UnitClassType>
 			<UnitType>UNIT_GERMAN_EUROCOPTER_TIGER</UnitType>
-		</Row>
+		</Row> -->
 		<Row>
 			<CivilizationType>CIVILIZATION_GERMANY</CivilizationType>
 			<UnitClassType>UNITCLASS_SUBMARINE</UnitClassType>
@@ -186,7 +191,7 @@
 		</Row>
 		<Row>
 			<CivilizationType>CIVILIZATION_JAPAN</CivilizationType>
-			<UnitClassType>UNITCLASS_NATIONAL_GUARD</UnitClassType>
+			<UnitClassType>UNITCLASS_LONGSWORDSMAN</UnitClassType>
 			<UnitType>UNIT_JAPANESE_SAMURAI</UnitType>
 		</Row>
 
@@ -478,13 +483,6 @@
 			<UnitClassType>UNITCLASS_BOMBARD</UnitClassType>
 			<UnitType>UNIT_AZTEC_EAGLE</UnitType>
 		</Row>
-		<Row>
-			<CivilizationType>CIVILIZATION_AZTEC</CivilizationType>
-			<UnitClassType>UNITCLASS_MARINE</UnitClassType>
-			<UnitType>UNIT_BRAZILIAN_PRACINHA</UnitType>
-		</Row>
-
-
 
 		<Row>
 			<CivilizationType>CIVILIZATION_SONGHAI</CivilizationType>
