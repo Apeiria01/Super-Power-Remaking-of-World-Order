@@ -761,6 +761,11 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
         <Type>UpdateDatabase</Type>
         <FileName>Gameplay/SQL/Buildings/NewBuildingsEffect.sql</FileName>
       </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>Gameplay/SQL/Terrian/Improvements.sql</FileName>
+      </Action>
     </ModActions>
     <ModProperties />
     <ModContent>

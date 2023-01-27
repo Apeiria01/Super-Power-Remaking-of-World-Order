@@ -9721,8 +9721,6 @@
 				[NEWLINE][COLOR_WARNING_TEXT]Warning:[ENDCOLOR] Any previous features or improvements will be removed.
 			</Text>
 		</Row>
-	
-		
 
 
 		<Row Tag="TXT_KEY_IMPROVEMENT_CREATE_JUNGLE_MOD">
@@ -9763,6 +9761,35 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILD_SHOSHONE_TIPI">
 			<Text>Construct a [LINK=IMPROVEMENT_SHOSHONE_TIPI]Tipi[\LINK]</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_IMPROVEMENT_SHOSHONE_WILDDOME">
+			<Text>Wild Domestication</Text>
+		</Row>
+		<Row Tag="TXT_KEY_IMPROVEMENT_SHOSHONE_WILDDOME_HELP">
+			<Text>
+				Domesticate wild animals on this tile to create a [ICON_RES_TRUFFLES][ICON_RES_FUR][ICON_RES_BISON][ICON_RES_DEER][ICON_RES_IVORY]. 
+				[NEWLINE]This action can only be performed on Plains, Grassland or Tundra tiles without resources.
+				[NEWLINE][NEWLINE]May not be constructed adjacent to another tile is currently domesticating wild animals.
+				[NEWLINE][COLOR_WARNING_TEXT]Warning:[ENDCOLOR] Any previous improvements will be removed.
+			</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_BUILD_SHOSHONE_WILDDOME">
+			<Text>Domesticate wild animals to offer[LINK=IMPROVEMENT_SHOSHONE_WILDDOME][ICON_RES_TRUFFLES][ICON_RES_FUR][ICON_RES_BISON][ICON_RES_DEER][ICON_RES_IVORY][\LINK]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILD_SHOSHONE_WILDDOME_REC">
+			<Text>
+				Domesticate wild animals on this tile to create a [ICON_RES_TRUFFLES][ICON_RES_FUR][ICON_RES_BISON][ICON_RES_DEER][ICON_RES_IVORY]. 
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILD_SHOSHONE_WILDDOME_HELP">
+			<Text>
+				Domesticate wild animals on this tile to create a [ICON_RES_TRUFFLES][ICON_RES_FUR][ICON_RES_BISON][ICON_RES_DEER][ICON_RES_IVORY]. 
+				[NEWLINE]This action can only be performed on Plains, Grassland or Tundra tiles without resources.
+				[NEWLINE][NEWLINE]May not be constructed adjacent to another tile is currently domesticating wild animals.
+				[NEWLINE][COLOR_WARNING_TEXT]Warning:[ENDCOLOR] Any previous improvements will be removed.
+			</Text>
 		</Row>
 
 
@@ -11446,7 +11473,7 @@
 		</Row>
 
 
-		
+
 		<Row Tag="TXT_KEY_UNIT_INCAN_CHASQUI">
 			<Text>Chasqui</Text>
 			<Plurality>2</Plurality>
