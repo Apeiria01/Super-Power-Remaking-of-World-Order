@@ -8546,6 +8546,31 @@
 			<Text>建造[LINK=IMPROVEMENT_SHOSHONE_TIPI]蹄皮帐篷[\LINK]</Text>
 		</Row>
 
+		<Row Tag="TXT_KEY_IMPROVEMENT_SHOSHONE_WILDDOME">
+			<Text>野兽驯养</Text>
+		</Row>
+		<Row Tag="TXT_KEY_IMPROVEMENT_SHOSHONE_WILDDOME_HELP">
+			<Text>
+				在该地块驯养野兽以创造[ICON_RES_TRUFFLES]松露、[ICON_RES_FUR]毛皮、[ICON_RES_BISON]野牛、[ICON_RES_DEER]野鹿和[ICON_RES_IVORY]象牙资源中的一种。只能在无资源的平原、草原、沼泽地块执行该指令。
+				[NEWLINE][COLOR_WARNING_TEXT]警告：[ENDCOLOR]该地块的原有设施会被移除。
+			</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_BUILD_SHOSHONE_WILDDOME">
+			<Text>驯养野兽以创造[LINK=IMPROVEMENT_SHOSHONE_WILDDOME][ICON_RES_TRUFFLES][ICON_RES_FUR][ICON_RES_BISON][ICON_RES_DEER][ICON_RES_IVORY][\LINK]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILD_SHOSHONE_WILDDOME_HELP">
+			<Text>
+				在该地块驯养野兽可以以创造[ICON_RES_TRUFFLES]松露、[ICON_RES_FUR]毛皮、[ICON_RES_BISON]野牛、[ICON_RES_DEER]野鹿和[ICON_RES_IVORY]象牙资源中的一种。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILD_SHOSHONE_WILDDOME_HELP">
+			<Text>
+				在该地块驯养野兽以创造[ICON_RES_TRUFFLES]松露、[ICON_RES_FUR]毛皮、[ICON_RES_BISON]野牛、[ICON_RES_DEER]野鹿和[ICON_RES_IVORY]象牙资源中的一种。只能在无资源的平原、草原、沼泽地块执行该指令。
+				[NEWLINE][COLOR_WARNING_TEXT]警告：[ENDCOLOR]该地块的原有设施会被移除。
+			</Text>
+		</Row>
+
 		<Row Tag="TXT_KEY_IMPROVEMENT_ETHIOPIA_COFFEE">
 			<Text>咖啡种植</Text>
 		</Row>
