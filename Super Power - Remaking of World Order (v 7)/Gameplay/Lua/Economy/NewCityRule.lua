@@ -198,7 +198,7 @@ function NewCitySystem(playerID)
         player:HasPolicy(GameInfoTypes["POLICY_MERCHANT_NAVY"]) or
         (player:HasPolicy(GameInfoTypes["POLICY_ARTISTIC_GENIUS"]) and
             player:GetCurrentEra() > 5) or
-        player:HasPolicy(GameInfoTypes["POLICY_PROTECTIONISM"]) or
+        player:HasPolicy(GameInfoTypes["POLICY_MARKET_ECONOMY"]) or
         player:HasPolicy(GameInfoTypes["POLICY_TOTAL_WAR"])) -- German UA
     or (GameInfo.Leader_Traits {
         LeaderType = GameInfo.Leaders[player:GetLeaderType()].Type,
@@ -362,14 +362,12 @@ function NewCitySystem(playerID)
                         GameInfoTypes["BUILDING_CIV_S_P_ELE_RESOURCES"], iNumEle);
                 end
                 -- Get Extra Happiness
-                if player:HasPolicy(GameInfoTypes["POLICY_PROTECTIONISM"]) and
-                    pCity:GetWeLoveTheKingDayCounter() > 0 then
-                    pCity:SetNumRealBuilding(
-                        GameInfoTypes["BUILDING_PROTECTIONISM"], 1);
-                elseif pCity:IsHasBuilding(
-                    GameInfoTypes["BUILDING_PROTECTIONISM"]) then
-                    pCity:SetNumRealBuilding(
-                        GameInfoTypes["BUILDING_PROTECTIONISM"], 0);
+                if player:HasPolicy(GameInfoTypes["POLICY_MARKET_ECONOMY"]) 
+                and pCity:GetWeLoveTheKingDayCounter() > 0 then
+                    pCity:SetNumRealBuilding(GameInfoTypes["BUILDING_MARKET_ECONOMY"], 1);
+                    
+                elseif pCity:IsHasBuilding(GameInfoTypes["BUILDING_MARKET_ECONOMY"]) then
+                    pCity:SetNumRealBuilding(GameInfoTypes["BUILDING_MARKET_ECONOMY"], 0);
                 end
 
                 -- Civs' UAs
@@ -963,7 +961,12 @@ function SetCityResEffects(playerID, ManpowerRes, ConsumerRes, ElectricRes)
     ----------------------Consumer Effects
     if ConsumerRes >= 25 then
         local ConsumerRate = math.floor(ConsumerRes / CityTotal)
-        if ConsumerRate >= 50 then ConsumerRate = 50 end
+        if player:HasPolicy(GameInfo.Policies["POLICY_MERCANTILISM"].ID) then
+            ConsumerRate = math.floor( ConsumerRate * 1.2 )
+            if ConsumerRate >= 60 then ConsumerRate = 60 end
+        else 
+            if ConsumerRate >= 50 then ConsumerRate = 50 end
+        end
         print("Consumer Rate:" .. ConsumerRate)
 
         if ConsumerRate >= 1 then

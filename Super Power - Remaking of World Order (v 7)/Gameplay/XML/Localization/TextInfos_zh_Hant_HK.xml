@@ -4576,6 +4576,11 @@
 			<Row Tag="TXT_KEY_SP_UI_HAPPINESS_CONSUMERGOODS_BONUS">
 				<Text>[NEWLINE][ICON_RES_CONSUMER]商品供應充足！[ICON_HAPPINESS_4]不滿度[COLOR_POSITIVE_TEXT]減少[ENDCOLOR]了</Text>
 			</Row>
+			<Row Tag="TXT_KEY_POLICY_MERCANTILISM_CONSUMERGOODS_BONUS">
+				<Text>
+					由於你采用了[COLOR_POSITIVE_TEXT]重商主義[ENDCOLOR]，充足[ICON_RES_CONSUMER]商品帶來的增益效果和上限+20%。
+				</Text>
+			</Row>
 			<Row Tag="TXT_KEY_SP_UI_HAPPINESS_CONSUMERGOODS_PENALTY">
 				<Text>[NEWLINE][ICON_RES_CONSUMER]商品供應不足！[COLOR_NEGATIVE_TEXT]不滿度[COLOR_POSITIVE_TEXT]增加[ENDCOLOR]了</Text>
 			</Row>
@@ -6276,7 +6281,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]贊助政策[ENDCOLOR]增強城邦關系帶來的好處。
 				[NEWLINE][NEWLINE]啟用贊助政策：
-				[NEWLINE][ICON_BULLET]使你對所有城邦[ICON_INFLUENCE]影響力的基準值提高20。
+				[NEWLINE][ICON_BULLET]使你對所有城邦[ICON_INFLUENCE]影響力基準值提高20。
 				[NEWLINE][ICON_BULLET]允許建造漢薩同盟和國家情報局。
 				[NEWLINE][NEWLINE]推行所有贊助政策：
 				[NEWLINE][ICON_BULLET]使結盟城邦不定期地贈送[ICON_GREAT_PEOPLE]偉人。
@@ -6386,43 +6391,79 @@
 		<!--*******************Commerce********************* -->
 
 		<Replace Tag="TXT_KEY_POLICY_BRANCH_COMMERCE_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]商業政策[ENDCOLOR]給予國家[ICON_GOLD]金幣方面的獎勵。[NEWLINE][NEWLINE]啟用商業政策能使所有的貿易站產出+1[ICON_GOLD]金幣，並獲得一條額外商路。允許建造大本鐘和西印度公司。[NEWLINE][NEWLINE]推行所有商業政策後可以使單位維護費和建築維護費減少15%，並且在工業時代以後可以用[ICON_PEACE]信仰值購買大商業家。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]商業政策[ENDCOLOR]給予國家[ICON_GOLD]金錢方面的獎勵。
+				[NEWLINE][NEWLINE]啟用商業政策：
+				[NEWLINE][ICON_BULLET]使所有的貿易站產出+1[ICON_GOLD]金錢。
+				[NEWLINE][ICON_BULLET]獲得一條額外商路。
+				[NEWLINE][ICON_BULLET]允許建造大本鐘和西印度公司。
+				[NEWLINE][NEWLINE]推行所有商業政策後：
+				[NEWLINE][ICON_BULLET]使單位維護費和建築維護費減少15%。
+				[NEWLINE][ICON_BULLET]並且在工業時代以後可以用[ICON_PEACE]信仰購買大商業家。
+			</Text>
 		</Replace>
-		
+
 		<Replace Tag="TXT_KEY_POLICY_CARAVANS_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]大篷車隊[ENDCOLOR][NEWLINE]所有陸地商路+4[ICON_GOLD]金幣。[NEWLINE][ICON_CONNECTED]城市連接+25%[ICON_GOLD]金幣。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]大篷車隊[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]所有陸地商路+4[ICON_GOLD]金錢。
+				[NEWLINE][ICON_BULLET][ICON_CONNECTED]城市連接+25%[ICON_GOLD]金錢。
+				[NEWLINE][ICON_BULLET]道路和鐵路的[ICON_GOLD]維護費減少50%。
+			</Text>
 		</Replace>
-		
+
 		<Replace Tag="TXT_KEY_POLICY_TRADE_UNIONS" >
 			<Text>聯合工會</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_TRADE_UNIONS_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]聯合工會[NEWLINE][ENDCOLOR]每處客棧、市場、銀行、證券交易所、金融公司+2[ICON_CULTURE]文化值。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]聯合工會
+				[NEWLINE][ICON_BULLET][ENDCOLOR]每處客棧、市場、銀行、證券交易所、金融公司+2[ICON_CULTURE]文化並且+2[ICON_RES_CONSUMER]商品。
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_TRADEUNIONS_TEXT" >
-			<Text>“聯合工會”是將工人團結起來，為工人群體爭取更好的工作條件、更多的薪水、更充分醫療保健的組織。聯合工會同雇主協商談判，比起單個雇員的努力而言有希望獲得更大收益。如果談判不成功，聯合工會可能會組織罷工，限制或縮減雇主的收入。許多公司極度抵制他們員工的工會化，甚至造成流血事件。美國的工會有時會與公司的打手甚至當地執法部門強烈對立，在某些情況甚至會導致軍隊介入。在20世紀中期有35%的美國工人隸屬於工會，但目前這個數字則下降到了12%。</Text>
+			<Text>「聯合工會」是將工人團結起來，為工人群體爭取更好的工作條件、更多的薪水、更充分醫療保健的組織。聯合工會同雇主協商談判，比起單個雇員的努力而言有希望獲得更大收益。如果談判不成功，聯合工會可能會組織罷工，限製或縮減雇主的收入。許多公司極度抵製他們員工的工會化，甚至造成流血事件。美國的工會有時會與公司的打手甚至當地執法部門強烈對立，在某些情況甚至會導致軍隊介入。在20世紀中期有35%的美國工人隸屬於工會，但目前這個數字則下降到了12%。</Text>
 		</Replace>
-		
+
 		<Replace Tag="TXT_KEY_POLICY_MERCANTILISM_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]重商主義[ENDCOLOR][NEWLINE]購買建築和單位所需[ICON_GOLD]金幣減少15%。[NEWLINE]商業家產出的[ICON_RES_CONSUMER]商品數量額外+3。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]重商主義[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]購買建築和單位所需[ICON_GOLD]金錢減少15%。
+				[NEWLINE][ICON_BULLET]商業家產出的[ICON_RES_CONSUMER]商品數量額外+3。
+				[NEWLINE][ICON_BULLET]充足商品的帶來的增益效果和上限20%。
+			</Text>
 		</Replace>
-		
+
 		<Replace Tag="TXT_KEY_POLICY_ENTREPRENEURSHIP_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]創業精神[ENDCOLOR][NEWLINE]商業家+1[ICON_RESEARCH]科技值。大商業家拓展貿易事業獲得雙倍[ICON_GOLD]金幣，並且立即獲得一個大商業家。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]創業精神[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]商業家+1[ICON_RESEARCH]科研。
+				[NEWLINE][ICON_BULLET]大商業家拓展貿易事業獲得雙倍[ICON_GOLD]金錢。
+				[NEWLINE][ICON_BULLET]並且立即獲得一個大商業家。
+			</Text>
 		</Replace>
-		
+
 		<Replace Tag="TXT_KEY_POLICY_PROTECTIONISM_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]貿易保護[ENDCOLOR][NEWLINE]道路和鐵路的[ICON_GOLD]維護費減少50%。[NEWLINE]國內商路額外+50%[ICON_FOOD]食物或[ICON_PRODUCTION]生產力。[NEWLINE]舉行“我們愛領袖日！”的城市+3[ICON_HAPPINESS_1]本地快樂。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]貿易保護[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]國內商路額外+50%[ICON_FOOD]食物或[ICON_PRODUCTION]產能。
+				[NEWLINE][ICON_BULLET]國內商路可為目的地城市提供科研和文化，數值相當於5%起始城市的產出。
+			</Text>
 		</Replace>
-		
+
 		<Row Tag="TXT_KEY_POLICY_MARKET_ECONOMY">
 			<Text>消費主義</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_MARKET_ECONOMY_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]消費主義[ENDCOLOR][NEWLINE]每種奢侈資源+1[ICON_HAPPINESS_1]幸福度。[NEWLINE]每處超市、俱樂部、酒吧、野生動物園、珠寶市場+1[ICON_HAPPINESS_1]本地幸福度。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]消費主義[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]每種奢侈資源+1[ICON_HAPPINESS_1]快樂。
+				[NEWLINE][ICON_BULLET]每處超市、俱樂部、酒吧、野生動物園、珠寶市場+1[ICON_HAPPINESS_1]本地快樂。
+				[NEWLINE][ICON_BULLET]舉行「我們愛領袖日！」的城市+3[ICON_HAPPINESS_1]本地快樂。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_MARKET_ECONOMY_TEXT">
-			<Text>從文化研究觀點，消費主義被視為是一種獲得愉悅的活動形式。消費（Consume）一詞可追溯至14世紀，意同揮霍、用盡；而在16世紀出現的“消費者”（consumer）一詞，也有相似的負面意思。然而，到了19世紀中期，伴隨“消費者”一詞替代原來的個體化的“顧客”（customer），“消費者”已轉化成中性詞，用來指涉相對於“生產者”（producer）的抽象實體。而到了20世紀，這種抽象的用法進入日常的生活領域，成為大眾的代稱，且具有支配性的意涵，大眾的需求是由滿足他們需求的一方所創造的。因此，消費主義在後現代語境中，不再指涉過度購買行為。</Text>
+			<Text>從文化研究觀點，消費主義被視為是一種獲得愉悅的活動形式。消費（Consume）一詞可追溯至14世紀，意同揮霍、用盡；而在16世紀出現的「消費者」（consumer）一詞，也有相似的負面意思。然而，到了19世紀中期，伴隨「消費者」一詞替代原來的個體化的「顧客」（customer），「消費者」已轉化成中性詞，用來指涉相對於「生產者」（producer）的抽象實體。而到了20世紀，這種抽象的用法進入日常的生活領域，成為大眾的代稱，且具有支配性的意涵，大眾的需求是由滿足他們需求的一方所創造的。因此，消費主義在後現代語境中，不再指涉過度購買行為。</Text>
 		</Row>
 
 		<!--*******************Exploration********************* -->
