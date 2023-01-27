@@ -264,7 +264,7 @@ function NewAttackEffect()
 
 	local AntiDebuffID = GameInfo.UnitPromotions["PROMOTION_ANTI_DEBUFF"].ID
 
-
+	local DoppelsoldnerID = GameInfo.UnitPromotions["PROMOTION_GERMAN_LONGSWORDSMAN"].ID
 	-- Ranged Unit Logistics can only move to the adjusted plot
 	if attUnit:IsDead() then
 	elseif attUnit:GetMoves() > 0 and not attUnit:IsImmobile() and not attUnit:IsRangedSupportFire()
@@ -903,6 +903,63 @@ function NewAttackEffect()
 				end
 			end
 		end
+
+		----Doppelsoldner Splash！
+		if attUnit:IsHasPromotion(DoppelsoldnerID)
+		and batPlot:GetNumUnits() > 1 then
+			-- print("Melee or Ranged attack and Available for Collateral Damage!")
+			local unitCount = batPlot:GetNumUnits()
+			for i = 0, unitCount - 1, 1 do
+				local pFoundUnit = batPlot:GetUnit(i)
+				if (pFoundUnit and pFoundUnit ~= defUnit and pFoundUnit:GetDomainType() ~= DomainTypes.DOMAIN_AIR) then
+					local pPlayer = Players[pFoundUnit:GetOwner()]
+					if PlayersAtWar(attPlayer, pPlayer) then
+						local CollDamageOri = 0;
+						if batType == GameInfoTypes["BATTLETYPE_MELEE"] then
+							local attUnitStrength = attUnit:GetMaxAttackStrength(attPlot, defPlot, defUnit);
+							local pFoundUnitStrength = pFoundUnit:GetMaxDefenseStrength(batPlot, attUnit);
+							CollDamageOri = attUnit:GetCombatDamage(attUnitStrength, pFoundUnitStrength, attFinalUnitDamage, false, false,
+								false);
+						else
+							CollDamageOri = attUnit:GetRangeCombatDamage(pFoundUnit, nil, false);
+						end
+	
+						local text = nil;
+						local attUnitName = attUnit:GetName();
+						local defUnitName = pFoundUnit:GetName();
+	
+						local CollDamageFinal = math.floor(CollDamageOri);
+						if CollDamageFinal >= pFoundUnit:GetCurrHitPoints() then
+							CollDamageFinal = pFoundUnit:GetCurrHitPoints();
+							local eUnitType = pFoundUnit:GetUnitType();
+							UnitDeathCounter(attPlayerID, pFoundUnit:GetOwner(), eUnitType);
+	
+							-- Notification
+							if defPlayerID == Game.GetActivePlayer() then
+								-- local heading = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_UNIT_DESTROYED_SHORT")
+								text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_COLL_DAMAGE_DEATH", attUnitName, defUnitName);
+								-- defPlayer:AddNotification(NotificationTypes.NOTIFICATION_GENERIC , text, heading, plotX, plotY)
+							elseif attPlayerID == Game.GetActivePlayer() then
+								text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_COLL_DAMAGE_ENEMY_DEATH", attUnitName, defUnitName);
+							end
+						elseif CollDamageFinal > 0 then
+							-- Notification
+							if defPlayerID == Game.GetActivePlayer() then
+								text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_COLL_DAMAGE", attUnitName, defUnitName, CollDamageFinal);
+							elseif attPlayerID == Game.GetActivePlayer() then
+								text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_COLL_DAMAGE_ENEMY", attUnitName, defUnitName,
+									CollDamageFinal);
+							end
+						end
+						if text then
+							Events.GameplayAlertMessage(text);
+						end
+						pFoundUnit:ChangeDamage(CollDamageFinal, attPlayer)
+					end
+				end
+			end
+		end
+	
 
 		--------Splash Damage (AOE)
 		if (attUnit:IsHasPromotion(SplashDamageID) or attUnit:IsHasPromotion(NavalCapitalShipID)) then

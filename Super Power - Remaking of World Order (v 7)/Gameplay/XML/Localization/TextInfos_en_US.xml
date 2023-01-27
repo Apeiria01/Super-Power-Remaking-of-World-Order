@@ -9721,8 +9721,6 @@
 				[NEWLINE][COLOR_WARNING_TEXT]Warning:[ENDCOLOR] Any previous features or improvements will be removed.
 			</Text>
 		</Row>
-	
-		
 
 
 		<Row Tag="TXT_KEY_IMPROVEMENT_CREATE_JUNGLE_MOD">
@@ -9763,6 +9761,35 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILD_SHOSHONE_TIPI">
 			<Text>Construct a [LINK=IMPROVEMENT_SHOSHONE_TIPI]Tipi[\LINK]</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_IMPROVEMENT_SHOSHONE_WILDDOME">
+			<Text>Wild Domestication</Text>
+		</Row>
+		<Row Tag="TXT_KEY_IMPROVEMENT_SHOSHONE_WILDDOME_HELP">
+			<Text>
+				Domesticate wild animals on this tile to create a [ICON_RES_TRUFFLES][ICON_RES_FUR][ICON_RES_BISON][ICON_RES_DEER][ICON_RES_IVORY]. 
+				[NEWLINE]This action can only be performed on Plains, Grassland or Tundra tiles without resources.
+				[NEWLINE][NEWLINE]May not be constructed adjacent to another tile is currently domesticating wild animals.
+				[NEWLINE][COLOR_WARNING_TEXT]Warning:[ENDCOLOR] Any previous improvements will be removed.
+			</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_BUILD_SHOSHONE_WILDDOME">
+			<Text>Domesticate wild animals to offer[LINK=IMPROVEMENT_SHOSHONE_WILDDOME][ICON_RES_TRUFFLES][ICON_RES_FUR][ICON_RES_BISON][ICON_RES_DEER][ICON_RES_IVORY][\LINK]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILD_SHOSHONE_WILDDOME_REC">
+			<Text>
+				Domesticate wild animals on this tile to create a [ICON_RES_TRUFFLES][ICON_RES_FUR][ICON_RES_BISON][ICON_RES_DEER][ICON_RES_IVORY]. 
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILD_SHOSHONE_WILDDOME_HELP">
+			<Text>
+				Domesticate wild animals on this tile to create a [ICON_RES_TRUFFLES][ICON_RES_FUR][ICON_RES_BISON][ICON_RES_DEER][ICON_RES_IVORY]. 
+				[NEWLINE]This action can only be performed on Plains, Grassland or Tundra tiles without resources.
+				[NEWLINE][NEWLINE]May not be constructed adjacent to another tile is currently domesticating wild animals.
+				[NEWLINE][COLOR_WARNING_TEXT]Warning:[ENDCOLOR] Any previous improvements will be removed.
+			</Text>
 		</Row>
 
 
@@ -11417,7 +11444,33 @@
 			<Text>[COLOR_SELECTED_TEXT]Hatamoto[ENDCOLOR]</Text>
 			<Plurality>2</Plurality>
 		</Replace>
+		<Row Tag="TXT_KEY_UNIT_GERMAN_LONGSWORDSMAN">
+			<Text>Doppelsoldner</Text>
+			<Plurality>2</Plurality>
+		</Row>
 
+		<Row Tag="TXT_KEY_UNIT_GERMAN_LONGSWORDSMAN_HELP">
+			<Text>
+				The Doppelsoldner is the Germany unique unit, replacing the Longswordsman. 
+				[NEWLINE][ICON_BULLET]Cause 100% splash damage to the enemy unit on the same tile when attacking;
+				[NEWLINE][ICON_BULLET]Can earn [ICON_GOLD] gold for each enemy killed (50% of its [ICON_STRENGTH] Combat Strength).
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_GERMAN_LONGSWORDSMAN_TEXT">
+			<Text>WIP</Text>
+		</Row>
+		<Row Tag = "TXT_KEY_PROMOTION_GERMAN_LONGSWORDSMAN">
+			<Text>Zweihänder</Text>
+		</Row>
+		<Row Tag = "TXT_KEY_PROMOTION_GERMAN_LONGSWORDSMAN_HELP">
+			<Text>Cause 100% splash damage to the enemy unit on the same tile when attacking.</Text>
+		</Row>
+		<Row Tag = "TXT_KEY_PROMOTION_GERMAN_LONGSWORDSMAN_GOLD">
+			<Text>Landsknechts</Text>
+		</Row>
+		<Row Tag = "TXT_KEY_PROMOTION_GERMAN_LONGSWORDSMAN_GOLD_HELP">
+			<Text>Can earn [ICON_GOLD] gold for each enemy killed (50% of its [ICON_STRENGTH] Combat Strength).</Text>
+		</Row>
 
 
 
@@ -12937,7 +12990,7 @@
 
 
 	<!-- *************************Unique Units Texts****************************-->
-	<Replace Tag="TXT_KEY_UNIT_JAPANESE_SAMURAI_STRATEGY">
+	<Replace Tag="TXT_KEY_UNIT_JAPANESE_SAMURAI_HELP">
 		<Text>
 			The Hatamoto is the Japanese unique unit, replacing the Longswordsman. 
 			[NEWLINE][ICON_BULLET]Flank Attack bonus +5%, +1 [ICON_MOVES] Movement;
