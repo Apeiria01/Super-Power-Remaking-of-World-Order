@@ -946,6 +946,45 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			Controls.MyStrengthValue:SetText(Locale.ToNumber(iMyStrength / 100, "#.##"));
 
 			----------------------------------------------------------------------------
+			-- BONUSES FROM UnitPromotions_PromotionModifiers
+			----------------------------------------------------------------------------
+			for row in GameInfo.UnitPromotions() do
+				if pTheirUnit:IsHasPromotion(row.ID) then
+					local mod = pMyUnit:OtherPromotionModifier(row.ID);
+					local attackMod = pMyUnit:OtherPromotionAttackModifier(row.ID);
+
+					if (mod ~= 0) then
+						controlTable = g_MyCombatDataIM:GetInstance();
+						controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_PROMOTION_PROMOTION_GENERIC", Locale.ConvertTextKey(row.Description));
+						controlTable.Value:SetText(GetFormattedText(strText, mod, true, true));
+					end
+
+					if (attackMod ~= 0) then
+						controlTable = g_MyCombatDataIM:GetInstance();
+						controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_PROMOTION_PROMOTION_ATTACK", Locale.ConvertTextKey(row.Description));
+						controlTable.Value:SetText(GetFormattedText(strText, attackMod, true, true));
+					end
+				end
+
+				if pMyUnit:IsHasPromotion(row.ID) then
+					local mod = pTheirUnit:OtherPromotionModifier(row.ID);
+					local defenseMod = pTheirUnit:OtherPromotionDefenseModifier(row.ID);
+
+					if (mod ~= 0) then
+						controlTable = g_TheirCombatDataIM:GetInstance();
+						controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_PROMOTION_PROMOTION_GENERIC", Locale.ConvertTextKey(row.Description));
+						controlTable.Value:SetText(GetFormattedText(strText, mod, true, true));
+					end
+
+					if (defenseMod ~= 0) then
+						controlTable = g_TheirCombatDataIM:GetInstance();
+						controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_PROMOTION_PROMOTION_DEFENSE", Locale.ConvertTextKey(row.Description));
+						controlTable.Value:SetText(GetFormattedText(strText, defenseMod, true, true));
+					end
+				end
+			end
+
+			----------------------------------------------------------------------------
 			-- BONUSES MY UNIT GETS
 			----------------------------------------------------------------------------
 

@@ -14084,5 +14084,14 @@
 			</Text>
 		</Row>
 
+		<Row Tag="TXT_KEY_EUPANEL_BONUS_PROMOTION_PROMOTION_GENERIC">
+			<Text>对抗{1_PromotionType}</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_BONUS_PROMOTION_PROMOTION_ATTACK">
+			<Text>攻击{1_PromotionType}</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_BONUS_PROMOTION_PROMOTION_DEFENSE">
+			<Text>防御{1_PromotionType}</Text>
+		</Row>
 	</Language_zh_CN>
 </GameData>

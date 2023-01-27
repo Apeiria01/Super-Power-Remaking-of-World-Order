@@ -13826,5 +13826,15 @@
 				[COLOR_POSITIVE_TEXT]{1_name}[ENDCOLOR]的人們感激你回應了他們的請求，獲得{2_name}點[ICON_CULTURE]文化。
 			</Text>
 		</Row>
+
+		<Row Tag="TXT_KEY_EUPANEL_BONUS_PROMOTION_PROMOTION_GENERIC">
+			<Text>對抗{1_PromotionType}</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_BONUS_PROMOTION_PROMOTION_ATTACK">
+			<Text>攻擊{1_PromotionType}</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_BONUS_PROMOTION_PROMOTION_DEFENSE">
+			<Text>防禦{1_PromotionType}</Text>
+		</Row>
 	</Language_zh_Hant_HK>
 </GameData>

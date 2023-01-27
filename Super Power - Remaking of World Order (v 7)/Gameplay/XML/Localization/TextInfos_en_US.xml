@@ -16298,5 +16298,15 @@
 				People in [COLOR_POSITIVE_TEXT]{1_name}[ENDCOLOR] appreciated you responding to their request,gain {2_name} point [ICON_CULTURE] culture.
 			</Text>
 		</Row>
+
+		<Row Tag="TXT_KEY_EUPANEL_BONUS_PROMOTION_PROMOTION_GENERIC">
+			<Text>Bonus VS {1_PromotionType}</Text>
+			</Row>
+		<Row Tag="TXT_KEY_EUPANEL_BONUS_PROMOTION_PROMOTION_ATTACK">
+			<Text>Attack Bonus VS {1_PromotionType}</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_BONUS_PROMOTION_PROMOTION_DEFENSE">
+			<Text>Defense Bonus VS {1_PromotionType}</Text>
+		</Row>
 	</Language_en_US>
 </GameData>
