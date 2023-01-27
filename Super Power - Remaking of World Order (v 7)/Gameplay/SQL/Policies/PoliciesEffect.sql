@@ -48,3 +48,13 @@ ON t2.Type = t1.BuildingClass
 WHERE t1.Type =  t2.DefaultBuilding AND t1.SpecialistCount > 0 
 AND (t1.SpecialistType = 'SPECIALIST_ENGINEER' OR t1.SpecialistType='SPECIALIST_SCIENTIST' OR t1.SpecialistType='SPECIALIST_MERCHANT'
 or t1.SpecialistType='SPECIALIST_WRITER' OR t1.SpecialistType='SPECIALIST_MUSICIAN' OR t1.SpecialistType='SPECIALIST_ARTIST');
+
+-- POLICY_MERCHANT_CONFEDERACY
+insert into Policy_MinorsTradeRouteYieldRate (PolicyType, YieldType, Rate) values
+('POLICY_MERCHANT_CONFEDERACY', 'YIELD_SCIENCE', 10),
+('POLICY_MERCHANT_CONFEDERACY', 'YIELD_CULTURE', 10);
+
+-- POLICY_PROTECTIONISM
+insert into Policy_InternalTradeRouteDestYieldRate (PolicyType, YieldType, Rate) values
+('POLICY_PROTECTIONISM', 'YIELD_SCIENCE', 5),
+('POLICY_PROTECTIONISM', 'YIELD_CULTURE', 5);

@@ -7521,6 +7521,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]Merchant Confederacy[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]Gain 4 [ICON_INFLUENCE] Influence (at Standard speed) per turn  with City-States you have a trade route with.
+				[NEWLINE][ICON_BULLET]Each trade route connected to the city-state provides [ICON_CULTURE]cultural and [ICON_RESEARCH]scientific research output, which is equivalent to 10% of the output of the city-state.
 				[NEWLINE][ICON_BULLET]Gain an additional Trade Route slot.</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_CONSULATES_HELP">
@@ -7673,7 +7674,7 @@
 		<Replace Tag="TXT_KEY_POLICY_TRADE_UNIONS_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]Trade Unions[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]+2 [ICON_CULTURE] Culture and [ICON_RES_CONSUMER] Consumer from every Caravansary, Market, Bank, Stock Exchange and Financial Company.
+				[NEWLINE][ICON_BULLET]+2 [ICON_CULTURE] Culture from every Caravansary, Market, Bank, Stock Exchange and Financial Company.
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_TRADEUNIONS_TEXT" >

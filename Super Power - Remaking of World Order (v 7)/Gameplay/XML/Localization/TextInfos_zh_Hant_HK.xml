@@ -6298,6 +6298,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]商人公會[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]與每條有商路相連的城邦每回合+4[ICON_INFLUENCE]影響力（標準速度下）。
+				[NEWLINE][ICON_BULLET]每條與城邦相連的商路提供[ICON_CULTURE]文化和[ICON_RESEARCH]科研產出，數值相當於城邦產出的10%。
 				[NEWLINE][ICON_BULLET]獲得一條額外的商路。
 			</Text>
 		</Replace>
@@ -6418,7 +6419,7 @@
 		<Replace Tag="TXT_KEY_POLICY_TRADE_UNIONS_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]聯合工會
-				[NEWLINE][ICON_BULLET][ENDCOLOR]每處客棧、市場、銀行、證券交易所、金融公司+2[ICON_CULTURE]文化並且+2[ICON_RES_CONSUMER]商品。
+				[NEWLINE][ICON_BULLET][ENDCOLOR]每處客棧、市場、銀行、證券交易所、金融公司+2[ICON_CULTURE]文化。
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_TRADEUNIONS_TEXT" >
@@ -6447,7 +6448,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]貿易保護[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]國內商路額外+50%[ICON_FOOD]食物或[ICON_PRODUCTION]產能。
-				[NEWLINE][ICON_BULLET]國內商路可為目的地城市提供科研和文化，數值相當於5%起始城市的產出。
+				[NEWLINE][ICON_BULLET]國內商路可為目的地城市提供[ICON_RESEARCH]科研和[ICON_CULTURE]文化，數值相當於5%起始城市的產出。
 			</Text>
 		</Replace>
 
