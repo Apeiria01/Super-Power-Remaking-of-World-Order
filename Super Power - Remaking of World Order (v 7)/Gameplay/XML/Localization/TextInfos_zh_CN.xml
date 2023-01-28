@@ -1867,7 +1867,7 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_CARTHAGINIAN_AGORA_HELP</Tag>
 			<Text>
-				全国城市内购买单位或建筑-15%[ICON_GOLD]金钱。[NEWLINE][NEWLINE]必须先在所有城市建造马戏团。建造成本随城市数量增加。
+				全国城市内购买单位或建筑-15%[ICON_GOLD]金钱。[NEWLINE][NEWLINE]本城拥有马戏团后即可建造。建造成本随城市数量增加。
 			</Text>
 		</Row>
 

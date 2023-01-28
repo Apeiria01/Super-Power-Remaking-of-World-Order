@@ -4229,7 +4229,7 @@
 			<Tag>TXT_KEY_BUILDING_CARTHAGINIAN_AGORA_HELP</Tag>
 			<Text>
 				-15% [ICON_GOLD] Gold cost for purchasing units or buildings in all cities.
-				[NEWLINE][NEWLINE]Must have built a Circus in all Cities. The cost goes up the more cities there are in the empire.
+				[NEWLINE][NEWLINE]This city must have built a circus. The cost goes up the more cities there are in the empire.
 			</Text>
 		</Row>
 

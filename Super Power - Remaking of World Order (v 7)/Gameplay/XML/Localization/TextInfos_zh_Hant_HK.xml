@@ -1814,7 +1814,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_CARTHAGINIAN_AGORA_HELP</Tag>
-			<Text>全國城市內購買單位或建築-15%[ICON_GOLD]金幣。[NEWLINE][NEWLINE]必須先在所有城市建造馬戲團。建造成本隨城市數量增加。
+			<Text>全國城市內購買單位或建築-15%[ICON_GOLD]金幣。[NEWLINE][NEWLINE]本城市必须已建造馬戲團。建造成本隨城市數量增加。
 			</Text>
 		</Row>
 		

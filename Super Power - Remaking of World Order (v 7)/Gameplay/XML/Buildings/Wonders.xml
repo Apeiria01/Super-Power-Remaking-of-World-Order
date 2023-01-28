@@ -191,7 +191,7 @@
 		<Row>
 			<Type>BUILDING_CARTHAGINIAN_AGORA</Type>
 			<BuildingClass>BUILDINGCLASS_NATIONAL_CIRCUS</BuildingClass>
-			<Cost>100</Cost>
+			<Cost>60</Cost>
 			<PrereqTech>TECH_PHYSICS</PrereqTech>
 			<Help>TXT_KEY_BUILDING_CARTHAGINIAN_AGORA_HELP</Help>
 			<Description>TXT_KEY_BUILDING_CARTHAGINIAN_AGORA</Description>
@@ -932,11 +932,6 @@
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_NATIONAL_CIRCUS</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_CIRCUS</BuildingClassType>
-			<NumBuildingNeeded>-1</NumBuildingNeeded>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_CARTHAGINIAN_AGORA</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_CIRCUS</BuildingClassType>
 			<NumBuildingNeeded>-1</NumBuildingNeeded>
 		</Row>
