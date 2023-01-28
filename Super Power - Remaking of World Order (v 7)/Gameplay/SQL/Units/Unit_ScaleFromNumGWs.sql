@@ -1,0 +1,1 @@
+UPDATE Units SET ScaleFromNumGWs = '10' WHERE Type = 'UNIT_WRITER';
