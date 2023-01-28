@@ -1442,6 +1442,10 @@ EstablishCorpsButton = {
   PortraitIndex = 1,
   ToolTip = "TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS", -- or a TXT_KEY_ or a function
   Condition = function(action, unit)
+    if unit:GetDomainType() ~= DomainTypes.DOMAIN_LAND then
+      return false;
+    end
+  
     local bIsCondition = false;
     local playerID = unit:GetOwner();
     local player = Players[playerID];
