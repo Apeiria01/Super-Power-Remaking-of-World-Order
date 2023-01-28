@@ -638,7 +638,7 @@
 		<Row>
 			<Type>BUILDING_SONGHAI_ISLAM_MINT</Type>
 			<BuildingClass>BUILDINGCLASS_OIL_REFINERY</BuildingClass>
-			<Cost>450</Cost>
+			<Cost>300</Cost>
 			<GoldMaintenance>5</GoldMaintenance>
 			<PrereqTech>TECH_REPLACEABLE_PARTS</PrereqTech>
 			<Description>TXT_KEY_BUILDING_SONGHAI_ISLAM_MINT</Description>
