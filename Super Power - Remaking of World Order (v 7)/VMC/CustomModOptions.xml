@@ -228,7 +228,7 @@
 
     <!-- Separates the Engineer, Scientist and Merchant GP counters (v52) -->
     <!-- See also: "Global - Separate GP Counters" -->
-    <Row Class="6" Name="GLOBAL_SEPARATE_GP_COUNTERS" Value="0"/>
+    <Row Class="6" Name="GLOBAL_SEPARATE_GP_COUNTERS" Value="1"/>
 
     <!-- Removes free GP (from buildings, policies, traits, etc) from the GP counters (v61) -->
     <!-- See also: "Global - Truly Free Great People" -->
