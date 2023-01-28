@@ -308,7 +308,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_FORGE</ArtDefineTag>
 			<MinAreaSize>-1</MinAreaSize>
 			<ConquestProb>66</ConquestProb>
-			<ProhibitedCityTerrain>TERRAIN_PLAINS</ProhibitedCityTerrain>
 			<HurryCostModifier>0</HurryCostModifier>
 			<IconAtlas>NEW_BLDG_ATLAS2_DLC</IconAtlas>
 			<PortraitIndex>1</PortraitIndex>
