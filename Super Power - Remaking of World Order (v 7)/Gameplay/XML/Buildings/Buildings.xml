@@ -640,7 +640,7 @@
 			<BuildingClass>BUILDINGCLASS_OIL_REFINERY</BuildingClass>
 			<Cost>300</Cost>
 			<GoldMaintenance>5</GoldMaintenance>
-			<PrereqTech>TECH_REPLACEABLE_PARTS</PrereqTech>
+			<PrereqTech>TECH_INDUSTRIALIZATION</PrereqTech>
 			<Description>TXT_KEY_BUILDING_SONGHAI_ISLAM_MINT</Description>
 			<Civilopedia>TXT_KEY_CIV5_BUILDINGS_SONGHAI_ISLAM_MINT_TEXT</Civilopedia>
 			<Strategy>TXT_KEY_SP_CITYSIZE_BUILDINGS_STRATEGY</Strategy>
