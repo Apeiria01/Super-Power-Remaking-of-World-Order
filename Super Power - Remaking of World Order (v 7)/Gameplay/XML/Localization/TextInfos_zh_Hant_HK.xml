@@ -6015,196 +6015,278 @@
 		<!--*************** Tradition******************** -->
 		
 		<Replace Tag="TXT_KEY_POLICY_BRANCH_TRADITION_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]傳統政策[ENDCOLOR]適宜於繁榮精幹的帝國。[NEWLINE][NEWLINE]啟用傳統政策將使[ICON_CAPITAL]首都+3[ICON_CULTURE]文化值，+3[ICON_RESEARCH]科技值，城市地塊擴張所需文化成本-25%。允許建造空中花園。[NEWLINE][NEWLINE]推行所有傳統政策後將使所有城市+15%[ICON_RESEARCH]科技值、[ICON_CULTURE]文化值和[ICON_PRODUCTION]生產力產出，開啟[ICON_GOLDEN_AGE]黃金時代所需要的[ICON_HAPPINESS_1]幸福度降低25%，並且在工業時代後可以用[ICON_PEACE]信仰值購買大工程師。[NEWLINE][NEWLINE][COLOR_WARNING_TEXT]不能與自主政策同時開啟。[ENDCOLOR]</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]傳統政策[ENDCOLOR]適宜於繁榮精幹的帝國。
+				[NEWLINE][NEWLINE]啟用傳統政策：
+				[NEWLINE][ICON_BULLET]使[ICON_CAPITAL]首都+3[ICON_CULTURE]文化，+3[ICON_RESEARCH]科研。
+				[NEWLINE][ICON_BULLET]城市地塊擴張所需文化成本-25%。
+				[NEWLINE][ICON_BULLET]允許建造空中花園。
+				[NEWLINE][NEWLINE]推行所有傳統政策：
+				[NEWLINE][ICON_BULLET]使所有城市+15%[ICON_RESEARCH]科研、[ICON_CULTURE]文化和[ICON_PRODUCTION]產能產出。
+				[NEWLINE][ICON_BULLET]開啟[ICON_GOLDEN_AGE]黃金時代所需要的[ICON_GOLDEN_AGE]黃金時代點數減少25%。
+				[NEWLINE][ICON_BULLET]在工業時代後可以用[ICON_PEACE]信仰購買大工程師。
+				[NEWLINE][NEWLINE][COLOR_WARNING_TEXT]不能與自主政策同時開啟。[ENDCOLOR]
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_ARISTOCRACY_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]貴族政治[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]新建城市+1[ICON_CITIZEN]人口(但是每1個移民仍等於1人口)。[NEWLINE][ICON_BULLET]小鎮（即6人口以下的城市）新增人口時會保留100%的餘糧（在增長下一個人口後生效）。
+				[NEWLINE][ICON_BULLET]新建城市+1[ICON_CITIZEN]人口(但是每1個移民仍等於1人口)。
+				[NEWLINE][ICON_BULLET]小鎮（即6人口以下的城市）新增人口時會保留100%的余糧（在增長下一個人口後生效）。
 			</Text>
 		</Replace>
-		
+
 		<Replace Tag="TXT_KEY_POLICY_LANDED_ELITE_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]紳縉階層[ENDCOLOR]
-			[NEWLINE][ICON_CAPITAL]首都地塊+4[ICON_FOOD]食物產出。
-			[NEWLINE]所有農田和漁船+1[ICON_FOOD]食物產出。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]紳縉階層[ENDCOLOR]
+				[NEWLINE][ICON_BULLET][ICON_CAPITAL]首都地塊+4[ICON_FOOD]食物產出。
+				[NEWLINE][ICON_BULLET]每處農田、漁船、梯田、圩田、卡斯巴哈、蹄皮帳篷設施+1[ICON_FOOD]食物產出。
+			</Text>
 		</Replace>
-		
+
 		<Replace Tag="TXT_KEY_POLICY_LEGALISM_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]律法統治[ENDCOLOR][NEWLINE]所有城市中每5[ICON_CITIZEN]人口+1[ICON_HAPPINESS_1]幸福度。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]律法統治[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]所有城市中每5[ICON_CITIZEN]人口+1[ICON_HAPPINESS_1]快樂。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_OLIGARCHY_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]寡頭政體[ENDCOLOR]
 				[NEWLINE][ICON_CAPITAL]首都地塊+4[ICON_PRODUCTION]產能。
-				[NEWLINE][ICON_BULLET]各個不同規模的城市獲得相應的額外產能：
-				[NEWLINE][ICON_BULLET]小型城市（6）：+4 [ICON_PRODUCTION]生產力。
-				[NEWLINE][ICON_BULLET]中型城市（15）：+8 [ICON_PRODUCTION]生產力。
-				[NEWLINE][ICON_BULLET]大型城市（26）：+12 [ICON_PRODUCTION]生產力。
-				[NEWLINE][ICON_BULLET]特大城市（40）：+16 [ICON_PRODUCTION]生產力。
-				[NEWLINE][ICON_BULLET]巨型城市（60）：+20 [ICON_PRODUCTION]生產力。
-				[NEWLINE][ICON_BULLET]大都會（80）：+24[ICON_PRODUCTION]生產力。
+				[NEWLINE]各個不同規模的城市獲得相應的額外產能：
+				[NEWLINE][ICON_BULLET][ICON_CITYBANNER_CITY_SMALL]小型城市（6[ICON_CITIZEN]人口）：+4[ICON_PRODUCTION]產能。
+				[NEWLINE][ICON_BULLET][ICON_CITYBANNER_CITY_MEDIUM]中型城市（15[ICON_CITIZEN]人口）：+8[ICON_PRODUCTION]產能。
+				[NEWLINE][ICON_BULLET][ICON_CITYBANNER_CITY_LARGE]大型城市（26[ICON_CITIZEN]人口）：+12[ICON_PRODUCTION]產能。
+				[NEWLINE][ICON_BULLET][ICON_CITYBANNER_CITY_XL]特大城市（40[ICON_CITIZEN]人口）：+16[ICON_PRODUCTION]產能。
+				[NEWLINE][ICON_BULLET][ICON_CITYBANNER_CITY_XXL]巨型城市（60[ICON_CITIZEN]人口）：+20[ICON_PRODUCTION]產能。
+				[NEWLINE][ICON_BULLET][ICON_CITYBANNER_CITY_GLOBAL]大都會（80[ICON_CITIZEN]人口）：+24[ICON_PRODUCTION]產能。
 			</Text>
 		</Replace>
-		
+
 		<Replace Tag="TXT_KEY_POLICY_MONARCHY_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]君主政體[ENDCOLOR][NEWLINE]城市規模導致的[ICON_HAPPINESS_4]不滿減半。[NEWLINE][ICON_CAPITAL]首都每個[ICON_CITIZEN]市民+1[ICON_GOLD]金幣。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]君主政體[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]城市規模導致的[ICON_HAPPINESS_4]不滿減半。
+				[NEWLINE][ICON_BULLET][ICON_CAPITAL]首都每個[ICON_CITIZEN]市民+1[ICON_GOLD]金錢。
+			</Text>
 		</Replace>
 
 		<Row Tag="TXT_KEY_POLICY_PREFECTURE">
-			<Text>郡縣制度</Text>
+			<Text>郡縣製度</Text>
 		</Row>
-		<Row Tag="TXT_KEY_POLICY_PREFECTURE_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]郡縣制度[ENDCOLOR]
-			[NEWLINE][ICON_CAPITAL]首都地塊+4[ICON_CULTURE]文化產出。
-			[NEWLINE]各個不同規模的城市獲得相應的額外文化產出：
-			[NEWLINE][ICON_BULLET]小型城市（6）：+4[ICON_CULTURE]文化值。
-			[NEWLINE][ICON_BULLET]中型城市（15）：+8[ICON_CULTURE]文化值。
-			[NEWLINE][ICON_BULLET]大型城市（26）：+12[ICON_CULTURE]文化值。
-			[NEWLINE][ICON_BULLET]特大城市（40）：+16[ICON_CULTURE]文化值。
-			[NEWLINE][ICON_BULLET]巨型城市（60）：+20[ICON_CULTURE]文化值。
-			[NEWLINE][ICON_BULLET]大都會（80）：+24[ICON_CULTURE]文化值。</Text>
-		</Row>
+		<Replace Tag="TXT_KEY_POLICY_PREFECTURE_HELP" >
+			<Text>
+				[COLOR_POSITIVE_TEXT]郡縣製度[ENDCOLOR]
+				[NEWLINE][ICON_CAPITAL]首都地塊+4[ICON_CULTURE]文化產出。
+				[NEWLINE]各個不同規模的城市獲得相應的額外文化產出：
+				[NEWLINE][ICON_BULLET][ICON_CITYBANNER_CITY_SMALL]小型城市（6[ICON_CITIZEN]人口）：+4[ICON_CULTURE]文化。
+				[NEWLINE][ICON_BULLET][ICON_CITYBANNER_CITY_MEDIUM]中型城市（15[ICON_CITIZEN]人口）：+8[ICON_CULTURE]文化。
+				[NEWLINE][ICON_BULLET][ICON_CITYBANNER_CITY_LARGE]大型城市（26[ICON_CITIZEN]人口）：+12[ICON_CULTURE]文化。
+				[NEWLINE][ICON_BULLET][ICON_CITYBANNER_CITY_XL]特大城市（40[ICON_CITIZEN]人口）：+16[ICON_CULTURE]文化。
+				[NEWLINE][ICON_BULLET][ICON_CITYBANNER_CITY_XXL]巨型城市（60[ICON_CITIZEN]人口）：+20[ICON_CULTURE]文化。
+				[NEWLINE][ICON_BULLET][ICON_CITYBANNER_CITY_GLOBAL]大都會（80[ICON_CITIZEN]人口）：+24[ICON_CULTURE]文化。
+			</Text>
+		</Replace>
 		<Row Tag="TXT_KEY_POLICY_PREFECTURE_TEXT">
-			<Text>縣制起源於楚國，而秦代為中國歷史上最早在全境推行“郡縣制”的朝代。秦始皇統一天下後，曾出現過應否置郡的爭論。當時不少大臣，特別是李斯的上司王綰，認為原楚國、燕國、齊國等地的領土都遠離秦國，主張實行分封，授各地貴族予世襲的諸侯名份，惟身為廷尉的李斯認為分封制是周朝諸侯混戰的根源，他大膽地反駁道，周制訂的這個政策已經證明是一個政治災難。周王室的親戚一旦取得了他們的土地，立刻互相疏遠和進行戰爭，而天子則無力阻止他們，所以結論是“置諸侯不便”。他力排眾議建議實行郡縣制，並得到秦始皇的採納。在郡縣制底下，共設三十六郡，每郡有守（相當於省長）、尉（相當於防區司令）和監（相當於監察專員）各一。郡下轄縣；郡（守）與縣（令），由皇帝直接任命。至漢代仍承襲這個制度，形成州郡縣三級行政管理，自此成為日後各朝地方政制的基礎，直到唐朝，才被道路制所取代。</Text>
+			<Text>縣製起源於楚國，而秦代為中國歷史上最早在全境推行「郡縣製」的朝代。秦始皇統一天下後，曾出現過應否置郡的爭論。當時不少大臣，特別是李斯的上司王綰，認為原楚國、燕國、齊國等地的領土都遠離秦國，主張實行分封，授各地貴族予世襲的諸侯名份，惟身為廷尉的李斯認為分封製是周朝諸侯混戰的根源，他大膽地反駁道，周製訂的這個政策已經證明是一個政治災難。周王室的親戚一旦取得了他們的土地，立刻互相疏遠和進行戰爭，而天子則無力阻止他們，所以結論是「置諸侯不便」。他力排眾議建議實行郡縣製，並得到秦始皇的采納。在郡縣製底下，共設三十六郡，每郡有守（相當於省長）、尉（相當於防區司令）和監（相當於監察專員）各一。郡下轄縣；郡（守）與縣（令），由皇帝直接任命。至漢代仍承襲這個製度，形成州郡縣三級行政管理，自此成為日後各朝地方政製的基礎，直到唐朝，才被道路製所取代。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_POLICY_FAMILY_REGISTER">
 			<Text>科舉考試</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_FAMILY_REGISTER_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]科舉考試[ENDCOLOR][NEWLINE]每5[ICON_CITIZEN]人口+1[ICON_RESEARCH]科技值。[NEWLINE]每個城市中獲得一個科學家席位。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]科舉考試[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]每5[ICON_CITIZEN]人口+1[ICON_RESEARCH]科研。
+				[NEWLINE][ICON_BULLET]每個城市中獲得一個科學家席位。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_FAMILY_REGISTER_TEXT">
-			<Text>科舉是歷代封建王朝通過考試選拔官吏的一種制度。由於採用分科取士的辦法，所以叫做科舉。科舉制從隋朝大業元年（605年）開始實行，到清朝光緒三十一年（1905年）舉行最後一科進士考試為止，經歷了1300年。[NEWLINE][NEWLINE]科舉不僅是一種中國文化，從整個人類社會管理變遷過程來看，科舉制度是一種社會智商、能力的培養、挑選、使用的社會性管理程序（方法步驟），他不變的操作步驟是："逐級培養篩選、一一對比淘汰"。他為社會智商能力的挑選提供了可見、可比、可控、可重複、可驗證的過程及依據，提高了社會成員能力智慧培養、挑選、使用的“專業性、系統性、精確度及效率”。[NEWLINE][NEWLINE]科舉制度對社會成員“逐級培養篩選、一一對比淘汰”的程序性步驟，得到全世界各種文化的認可接受，成為現代公務員制度、中高考制度、技能職稱評定制度、體育競賽、科研程序中的實驗組/對照組的核心程序，是全世界普及度最高，使用度最廣，支撐著整個人類社會存在、發展的“社會智商能力挑選”核心制度，也成為了全世界都複製拷貝執行的世界性文化。</Text>
+			<Text>科舉是歷代封建王朝通過考試選拔官吏的一種製度。由於采用分科取士的辦法，所以叫做科舉。科舉製從隋朝大業元年（605年）開始實行，到清朝光緒三十一年（1905年）舉行最後一科進士考試為止，經歷了1300年。[NEWLINE][NEWLINE]科舉不僅是一種中國文化，從整個人類社會管理變遷過程來看，科舉製度是一種社會智商、能力的培養、挑選、使用的社會性管理程序（方法步驟），他不變的操作步驟是："逐級培養篩選、一一對比淘汰"。他為社會智商能力的挑選提供了可見、可比、可控、可重復、可驗證的過程及依據，提高了社會成員能力智慧培養、挑選、使用的「專業性、系統性、精確度及效率」。[NEWLINE][NEWLINE]科舉製度對社會成員「逐級培養篩選、一一對比淘汰」的程序性步驟，得到全世界各種文化的認可接受，成為現代公務員製度、中高考製度、技能職稱評定製度、體育競賽、科研程序中的實驗組/對照組的核心程序，是全世界普及度最高，使用度最廣，支撐著整個人類社會存在、發展的「社會智商能力挑選」核心製度，也成為了全世界都復製拷貝執行的世界性文化。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_POLICY_CENTRALISATION">
 			<Text>中央集權</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_CENTRALISATION_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]中央集權[ENDCOLOR][NEWLINE]所有新單位+15點經驗，戰爭傷亡導致的[ICON_PIRATE]人口損失減少33%.</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]中央集權[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]所有新單位+15點經驗。
+				[NEWLINE][ICON_BULLET]戰爭傷亡導致的[ICON_PIRATE]人口損失減少33%.
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_CENTRALISATION_TEXT">
-			<Text>中央集權制是一種決策方式，地方政府在政治、經濟、軍事等方面沒有獨立性，必須嚴格服從中央政府的命令，一切受控於中央。君主專制的國家往往是中央集權的，皇帝個人專斷獨裁，集國家最高權力於一身，從決策到行使軍、政、財大權都具有獨斷性和隨意性。但反之，中央集權的國家不一定是君主制。</Text>
+			<Text>中央集權製是一種決策方式，地方政府在政治、經濟、軍事等方面沒有獨立性，必須嚴格服從中央政府的命令，一切受控於中央。君主專製的國家往往是中央集權的，皇帝個人專斷獨裁，集國家最高權力於一身，從決策到行使軍、政、財大權都具有獨斷性和隨意性。但反之，中央集權的國家不一定是君主製。</Text>
 		</Row>
 
 		<!--*******************Liberty********************* -->
 		
 		<Replace Tag="TXT_KEY_POLICY_BRANCH_LIBERTY_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]自主政策[ENDCOLOR]適合渴求快速擴張的文明。[NEWLINE][NEWLINE]啟用自主政策能使每座城市+1[ICON_CULTURE]文化值，+1[ICON_RESEARCH]科技值。工人修建地塊設施速度+25%。允許建造大金字塔。[NEWLINE][NEWLINE]推行所有自主政策後將在首都[ICON_CAPITAL]附近免費獲得一位大工程師並開啟一個黃金時代。[NEWLINE][NEWLINE][COLOR_WARNING_TEXT]不能與傳統政策同時開啟。[ENDCOLOR]</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]自主政策[ENDCOLOR]適合渴求快速擴張的文明。
+				[NEWLINE][NEWLINE]啟用自主政策：
+				[NEWLINE][ICON_BULLET]使每座城市+1[ICON_CULTURE]文化，+1[ICON_RESEARCH]科研。
+				[NEWLINE][ICON_BULLET]工人修建地塊設施速度+25%。
+				[NEWLINE][ICON_BULLET]允許建造大金字塔。
+				[NEWLINE][NEWLINE]推行所有自主政策：
+				[NEWLINE][ICON_BULLET]在首都[ICON_CAPITAL]附近免費獲得一位大工程師。
+				[NEWLINE][ICON_BULLET]立即開啟一次黃金時代。
+				[NEWLINE][NEWLINE][COLOR_WARNING_TEXT]不能與傳統政策同時開啟。[ENDCOLOR]
+			</Text>
 		</Replace>
-		
+
 		<Replace Tag="TXT_KEY_POLICY_COLLECTIVE_RULE_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]集體統治[ENDCOLOR]
-			[NEWLINE]所有城市訓練[COLOR_POSITIVE_TEXT]移民[ENDCOLOR]的速度+50%。[ICON_CAPITAL]首都附近免費獲得一個移民單位。（威尼斯則是獲得一個威尼斯商人）
-			[NEWLINE]進入啟蒙時代後，訓練移民的速度額外增加+50%，國內移民進入城市不會清空糧食積累。
+			<Text>
+				[COLOR_POSITIVE_TEXT]集體統治[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]所有城市訓練[COLOR_POSITIVE_TEXT]移民[ENDCOLOR]的速度+50%。
+				[NEWLINE][ICON_BULLET][ICON_CAPITAL]首都附近免費獲得一個移民單位。（威尼斯則是獲得一個威尼斯商人）
+				[NEWLINE][ICON_BULLET]進入啟蒙時代後，訓練移民的速度額外增加+50%，國內移民進入城市不會清空糧食積累。
 			</Text>
 		</Replace>
-		
+
 		<Replace Tag="TXT_KEY_POLICY_REPUBLIC_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]共和政体[ENDCOLOR]
-			[NEWLINE]每座城市+4[ICON_GOLD]金钱，+2[ICON_FOOD]食物，+2[ICON_RES_CONSUMER]商品。
-			[NEWLINE]每座城市提供+1%[ICON_FOOD]全局粮食和[ICON_PRODUCTION]产能加成。
+			<Text>
+				[COLOR_POSITIVE_TEXT]共和政體[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]每座城市+4[ICON_GOLD]金錢，+2[ICON_FOOD]食物，+2[ICON_RES_CONSUMER]商品。
+				[NEWLINE][ICON_BULLET]每座城市提供+1%[ICON_FOOD]全局糧食和[ICON_PRODUCTION]產能加成。
 			</Text>
 		</Replace>
-		
+
 		<Replace Tag="TXT_KEY_POLICY_CITIZENSHIP_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]公民製度[ENDCOLOR]
-			[NEWLINE]每座新建立的城市免費獲得一名工人，[ICON_CAPITAL]首都立刻獲得一名工人，每座城市+2[ICON_RES_MANPOWER]人力。
-			[NEWLINE]新建城市獲得一次性的25點[ICON_PRODUCTION]產能（標準速度下）。
+			<Text>
+				[COLOR_POSITIVE_TEXT]公民製度[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]每座新建立的城市免費獲得一名工人，[ICON_CAPITAL]首都立刻獲得一名工人。
+				[NEWLINE][ICON_BULLET]每座城市+2[ICON_RES_MANPOWER]人力。
+				[NEWLINE][ICON_BULLET]新建城市獲得一次性的25點[ICON_PRODUCTION]產能（標準速度下）。
 			</Text>
 		</Replace>
-		
+
 		<Replace Tag="TXT_KEY_POLICY_MERITOCRACY_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]精英政治[ENDCOLOR]
-			[NEWLINE]每座城市+2[ICON_PRODUCTION]产能，城市建造建筑时+10%[ICON_PRODUCTION]产能。
-			[NEWLINE]城市建造完成基础建筑后，获得数值相当于建筑产能的10%的一次性[ICON_RESEARCH]科研、[ICON_CULTURE]文化产出。
+			<Text>
+				[COLOR_POSITIVE_TEXT]精英政治[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]每座城市+2[ICON_PRODUCTION]產能，城市建造建築時+10%[ICON_PRODUCTION]產能。
+				[NEWLINE][ICON_BULLET]城市建造完成基礎建築後，獲得數值相當於建築產能的10%的一次性[ICON_RESEARCH]科研、[ICON_CULTURE]文化產出。
 			</Text>
 		</Replace>
-		
+
 		<Row Tag="TXT_KEY_POLICY_BILL_OF_RIGHTS">
 			<Text>權利法案</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_BILL_OF_RIGHTS_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]權利法案[ENDCOLOR]
-			[NEWLINE]專家建築的每個專家槽提供1點對應的基礎產出（按默認建築計算），市政廳維護費減半。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]權利法案[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]專家建築的每個專家槽提供1點對應的基礎產出（按默認建築計算）。
+				[NEWLINE][ICON_BULLET]市政廳維護費減半。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_BILL_OF_RIGHTS_TEXT">
-			<Text>《權利法案》，全稱《國民權利與自由和王位繼承宣言》，是奠定了英國君主立憲政體的理論和法律基礎的重要法律文件，確立了議會所擁有的權力高於王權的原則，具有憲法的性質，標誌著君主立憲制開始在英國建立。其內容並不多，只有短短的十三條：[NEWLINE][NEWLINE]1、凡未經議會同意，以國王權威停止法律或停止法律實施之僭越權力，為非法權力。[NEWLINE]2、近來以國王權威擅自廢除法律或法律實施之僭越權力，為非法權力。[NEWLINE]3、設立審理宗教事務之欽差法庭之指令，以及一切其他同類指令與法庭，皆為非法而有害。[NEWLINE]4、凡未經國會准許，藉口國王特權，為國王而徵收，或供國王使用而徵收金幣，超出國會准許之時限或方式者，皆為非法。[NEWLINE]5、向國王請願，乃臣民之權利，一切對此項請願之判罪或控告，皆為非法。[NEWLINE]6、除經國會同意外，平時在本王國內徵募或維持常備軍，皆屬違法。[NEWLINE]7、凡臣民系新教徒者，為防衛起見，得酌量情形，並在法律許可範圍內，置備武器。[NEWLINE]8、議會之選舉應是自由的。[NEWLINE]9、國會內之演說自由、辯論或議事之自由，不應在國會以外之任何法院或任何地方，受到彈核或訊問。[NEWLINE]10、不應要求過多的保釋金，亦不應強課過分之罰款，更不應濫施殘酷非常之刑罰。[NEWLINE]11、陪審官應予正式記名列表並陳報之，凡審理叛國犯案件之陪審官應為自由世襲地領有人。[NEWLINE]12、定罪前，特定人的一切讓與及對罰金與沒收財產所做的一切承諾，皆屬非法而無效。[NEWLINE]13、為申雪一切訴冤，並為修正、加強與維護法律起見，國會應時常集會。</Text>
+			<Text>《權利法案》，全稱《國民權利與自由和王位繼承宣言》，是奠定了英國君主立憲政體的理論和法律基礎的重要法律文件，確立了議會所擁有的權力高於王權的原則，具有憲法的性質，標誌著君主立憲製開始在英國建立。其內容並不多，只有短短的十三條：[NEWLINE][NEWLINE]1、凡未經議會同意，以國王權威停止法律或停止法律實施之僭越權力，為非法權力。[NEWLINE]2、近來以國王權威擅自廢除法律或法律實施之僭越權力，為非法權力。[NEWLINE]3、設立審理宗教事務之欽差法庭之指令，以及一切其他同類指令與法庭，皆為非法而有害。[NEWLINE]4、凡未經國會準許，借口國王特權，為國王而征收，或供國王使用而征收金錢，超出國會準許之時限或方式者，皆為非法。[NEWLINE]5、向國王請願，乃臣民之權利，一切對此項請願之判罪或控告，皆為非法。[NEWLINE]6、除經國會同意外，平時在本王國內征募或維持常備軍，皆屬違法。[NEWLINE]7、凡臣民系新教徒者，為防衛起見，得酌量情形，並在法律許可範圍內，置備武器。[NEWLINE]8、議會之選舉應是自由的。[NEWLINE]9、國會內之演說自由、辯論或議事之自由，不應在國會以外之任何法院或任何地方，受到彈核或訊問。[NEWLINE]10、不應要求過多的保釋金，亦不應強課過分之罰款，更不應濫施殘酷非常之刑罰。[NEWLINE]11、陪審官應予正式記名列表並陳報之，凡審理叛國犯案件之陪審官應為自由世襲地領有人。[NEWLINE]12、定罪前，特定人的一切讓與及對罰金與沒收財產所做的一切承諾，皆屬非法而無效。[NEWLINE]13、為申雪一切訴冤，並為修正、加強與維護法律起見，國會應時常集會。</Text>
 		</Row>
-		
+
 		<Row Tag="TXT_KEY_POLICY_PROVINCE">
-			<Text>行省制度</Text>
+			<Text>行省製度</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_PROVINCE_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]行省制度[ENDCOLOR][NEWLINE][NEWLINE]每座與自己[ICON_CAPITAL]首都[ICON_CONNECTED]相連的城市+1[ICON_HAPPINESS_1]幸福度。[NEWLINE]非首都直轄城市的額外不滿-50%。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]行省製度[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]每座與自己[ICON_CAPITAL]首都[ICON_CONNECTED]相連的城市+1[ICON_HAPPINESS_1]快樂。
+				[NEWLINE][ICON_BULLET]非首都直轄城市的額外不滿-50%。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_PROVINCE_TEXT">
-			<Text>羅馬在發展成為地中海霸國的過程中，採取不同於以前對意大利被征服者的統治方法，在海外征服地相繼建立了行省制度。“行省”(provincia)一詞初指元老院為擁有軍事指揮權的羅馬行政官員劃定的行使職權的領域，有的在意大利境內，也有的在其境外。後來則專指意大利境外那些必須向羅馬納貢的屬地。第一次布匿戰爭後，羅馬佔領了西西里、撒丁和科西嘉。公元前227年，羅馬增選兩名大法官，正式確立各以一名大法官為總督治理西西里行省和撒丁及科西嘉行省的建制。經過長期侵略和擴張，羅馬在共和時期陸續建立了近西班牙（公元前197）、遠西班牙（公元前197）、馬其頓（公元前148）、阿非利加（公元前146）、亞細亞（公元前133）等十幾個行省。[NEWLINE][NEWLINE]行省的建立過程，大體是以一名得勝的將軍為首，加上元老院指定協助他的一個十人委員會，共同擬定一部行省法規，其中規定新建行省內的行政、司法、稅收等方面的準則。總督原則上任期一年，必要時可延長，任內可根據需要頒佈諭令。在行省法規規定的職權範圍內，總督可以決定一切。對於他的瀆職行為，只能在他卸任後在羅馬審理。由於行省數目不斷增加，除了專門選出擔任行省總督的大法官外，已經卸任的執政官和大法官相繼出任行省總督。總督配備一名財務官，還有一批幕僚。[NEWLINE][NEWLINE]行省居民遭受幾乎毫無限制的掠奪和剝削。除征服時的縱兵搶掠外，羅馬當局還沒收相當部分土地以及各種資源，強迫居民交出金銀，把大批居民賣為奴隸，或者隨意拘押居民索取贖金。總督可將沒收的土地出租給羅馬公民或分配給羅馬殖民者。行省居民要向羅馬交納直接稅和間接稅。捐稅往往由包稅人承包。總督和包稅人的橫徵暴斂，不斷激起行省人民的反抗。[NEWLINE][NEWLINE]由於行省的大量財富流入羅馬，促進了奴隸佔有制經濟的發展，對於羅馬社會生活各個方面都產生了巨大影響。同時，羅馬帝國建立後開創的相對穩定的政治局面，以及實施改善行省地位和管理制度的政策，使帝國前期多數行省的經濟得到不同程度的發展。隨著整個帝國內部奴隸主階級的不同部分逐漸融為一體，行省的奴隸主在帝國中央政權機構中的地位不斷加強，甚至有些出身於行省的貴族成為帝國的皇帝，意大利的羅馬公民相對於行省居民的優越地位日漸喪失，作為行政區劃的意大利和行省之間的差別也歸於消失。</Text>
+			<Text>羅馬在發展成為地中海霸國的過程中，采取不同於以前對意大利被征服者的統治方法，在海外征服地相繼建立了行省製度。「行省」(provincia)一詞初指元老院為擁有軍事指揮權的羅馬行政官員劃定的行使職權的領域，有的在意大利境內，也有的在其境外。後來則專指意大利境外那些必須向羅馬納貢的屬地。第一次布匿戰爭後，羅馬占領了西西裏、撒丁和科西嘉。公元前227年，羅馬增選兩名大法官，正式確立各以一名大法官為總督治理西西裏行省和撒丁及科西嘉行省的建製。經過長期侵略和擴張，羅馬在共和時期陸續建立了近西班牙（公元前197）、遠西班牙（公元前197）、馬其頓（公元前148）、阿非利加（公元前146）、亞細亞（公元前133）等十幾個行省。[NEWLINE][NEWLINE]行省的建立過程，大體是以一名得勝的將軍為首，加上元老院指定協助他的一個十人委員會，共同擬定一部行省法規，其中規定新建行省內的行政、司法、稅收等方面的準則。總督原則上任期一年，必要時可延長，任內可根據需要頒布諭令。在行省法規規定的職權範圍內，總督可以決定一切。對於他的瀆職行為，只能在他卸任後在羅馬審理。由於行省數目不斷增加，除了專門選出擔任行省總督的大法官外，已經卸任的執政官和大法官相繼出任行省總督。總督配備一名財務官，還有一批幕僚。[NEWLINE][NEWLINE]行省居民遭受幾乎毫無限製的掠奪和剝削。除征服時的縱兵搶掠外，羅馬當局還沒收相當部分土地以及各種資源，強迫居民交出金銀，把大批居民賣為奴隸，或者隨意拘押居民索取贖金。總督可將沒收的土地出租給羅馬公民或分配給羅馬殖民者。行省居民要向羅馬交納直接稅和間接稅。捐稅往往由包稅人承包。總督和包稅人的橫征暴斂，不斷激起行省人民的反抗。[NEWLINE][NEWLINE]由於行省的大量財富流入羅馬，促進了奴隸占有製經濟的發展，對於羅馬社會生活各個方面都產生了巨大影響。同時，羅馬帝國建立後開創的相對穩定的政治局面，以及實施改善行省地位和管理製度的政策，使帝國前期多數行省的經濟得到不同程度的發展。隨著整個帝國內部奴隸主階級的不同部分逐漸融為一體，行省的奴隸主在帝國中央政權機構中的地位不斷加強，甚至有些出身於行省的貴族成為帝國的皇帝，意大利的羅馬公民相對於行省居民的優越地位日漸喪失，作為行政區劃的意大利和行省之間的差別也歸於消失。</Text>
 		</Row>
-		
+
 		<Row Tag="TXT_KEY_POLICY_DECENTRALIZATION">
 			<Text>地方分權</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_DECENTRALIZATION_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]地方分權[ENDCOLOR][NEWLINE]每名駐軍為所在城市+2[ICON_CULTURE]文化值，擁有駐軍的城市+1[ICON_HAPPINESS_1]幸福度，駐軍單位無需維護費。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]地方分權[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]每名駐軍為所在城市+2[ICON_CULTURE]文化。
+				[NEWLINE][ICON_BULLET]擁有駐軍的城市+1[ICON_HAPPINESS_1]快樂。
+				[NEWLINE][ICON_BULLET]鎮守城市的單位無需維護費。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_DECENTRALIZATION_TEXT">
-			<Text>地方分權，也叫非中央分權，單一制國家的一種類型。在中央政權統一領導下，按照全國統一的法律，地方居民自主地組織地方公共機關，自主地處理本地區事務。以英國為典型。國家權力依法由中央政府和地方政府分別行使的制度。[NEWLINE][NEWLINE]中央政府和地方政府的職權範圍一般規定在憲法和法律中。除軍事、外交等全國性重要事項由中央政府統一掌管外，凡地方可以處理的事項，如工農業、商業等，均由地方政府負責。有的如交通、財政等項，則由中央與地方分管。地方政府除依法行使其職權外，還須執行中央政府交辦的全國性政務。實行地方自治的國家，多採用地方分權。</Text>
+			<Text>地方分權，也叫非中央分權，單一製國家的一種類型。在中央政權統一領導下，按照全國統一的法律，地方居民自主地組織地方公共機關，自主地處理本地區事務。以英國為典型。國家權力依法由中央政府和地方政府分別行使的製度。[NEWLINE][NEWLINE]中央政府和地方政府的職權範圍一般規定在憲法和法律中。除軍事、外交等全國性重要事項由中央政府統一掌管外，凡地方可以處理的事項，如工農業、商業等，均由地方政府負責。有的如交通、財政等項，則由中央與地方分管。地方政府除依法行使其職權外，還須執行中央政府交辦的全國性政務。實行地方自治的國家，多采用地方分權。</Text>
 		</Row>
 
 		<Replace Tag="TXT_KEY_POLICY_REPRESENTATION_HELP">
 			<Text>
-				[COLOR_POSITIVE_TEXT]代議制度[ENDCOLOR][NEWLINE]減緩一到五級城市造成的政策[ICON_CULTURE]文化值閾值增長（能夠與強化管理設施效果疊加）：[NEWLINE][ICON_BULLET]一級城市：沒有額外的[ICON_CULTURE]文化值閾值增長。[NEWLINE][ICON_BULLET]二級城市：[ICON_CULTURE]文化值閾值增長由10%降低到5%。[NEWLINE][ICON_BULLET]三級城市：[ICON_CULTURE]文化值閾值增長由20%降低到15%。[NEWLINE][ICON_BULLET]四五級城市：[ICON_CULTURE]文化值閾值增長由33%降低到28%。[NEWLINE][ICON_BULLET]每座城市+1%[ICON_CULTURE]全局文化值。
+				[COLOR_POSITIVE_TEXT]代議製度[ENDCOLOR]
+				[NEWLINE]減緩一到五級城市造成的政策[ICON_CULTURE]文化閾值增長（能夠與強化管理設施效果疊加）：
+				[NEWLINE][ICON_BULLET]一級城市：沒有額外的[ICON_CULTURE]文化閾值增長。
+				[NEWLINE][ICON_BULLET]二級城市：[ICON_CULTURE]文化閾值增長由10%降低到5%。
+				[NEWLINE][ICON_BULLET]三級城市：[ICON_CULTURE]文化閾值增長由20%降低到15%。
+				[NEWLINE][ICON_BULLET]四五級城市：[ICON_CULTURE]文化閾值增長由33%降低到28%。
+				[NEWLINE][ICON_BULLET]每座城市+1%[ICON_CULTURE]全局文化。
 			</Text>
 		</Replace>
 
 		<!--*******************Honor********************* -->
 		
 		<Replace Tag="TXT_KEY_POLICY_BRANCH_HONOR_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]榮譽政策[ENDCOLOR]能增強國家的[ICON_WAR]軍事實力。[NEWLINE][NEWLINE]啟用該政策後消滅敵方單位時可獲得[ICON_GOLD]金幣獎勵（相當於敵方50%的戰鬥力），且在已探明地圖區域出現新蠻族營地時得到通知。允許建造宙斯神像和英雄史詩。
-			[NEWLINE][NEWLINE]推行所有榮譽政策後消滅敵方單位時可獲得[ICON_CULTURE]文化值獎勵（相當於敵方50%的戰鬥力）。獲得[ICON_GREAT_GENERAL]陸軍統帥的速度+50%。並且在工業時代後可以用[ICON_PEACE]信仰值購買陸軍統帥。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]榮譽政策[ENDCOLOR]能增強國家的[ICON_WAR]軍事實力。
+				[NEWLINE][NEWLINE]啟用榮譽政策：
+				[NEWLINE][ICON_BULLET]消滅敵方單位時可獲得[ICON_GOLD]金錢獎勵（相當於敵方50%的戰鬥力）
+				[NEWLINE][ICON_BULLET]已探索區域內產生新的蠻族營地時會出現提示消息。允許建造宙斯神像和英雄史詩。
+				[NEWLINE][NEWLINE]推行所有榮譽政策：
+				[NEWLINE][ICON_BULLET]消滅敵方單位時可獲得[ICON_CULTURE]文化獎勵（相當於敵方50%的戰鬥力）。
+				[NEWLINE][ICON_BULLET]獲得[ICON_GREAT_GENERAL]陸軍統帥的速度+50%。
+				[NEWLINE][ICON_BULLET]在工業時代後可以用[ICON_PEACE]信仰購買陸軍統帥。
+			</Text>
 		</Replace>
-		
+
 		<Row Tag="TXT_KEY_POLICY_HORSEMAN_TRAINING">
 			<Text>胡服騎射</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_HORSEMAN_TRAINING_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]胡服騎射[ENDCOLOR]
-			[NEWLINE]所有重騎和裝甲單位+1[ICON_MOVES]移動、無視敵方控製區域（ZOC），且攻擊時造成的傷害固定+5。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]胡服騎射[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]所有重騎和裝甲單位+1[ICON_MOVES]移動、無視敵方控製區域（ZOC），且攻擊時造成的傷害固定+5。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_HORSEMAN_TRAINING_TEXT">
-			<Text>趙武靈王是中國戰國時期一位奮發有為的諸侯國君，他為了抵禦北方胡人的侵略，實行了“胡服騎射”的軍事改革。改革的中心內容是穿胡人的服裝，學習胡人騎馬射箭的作戰方法。其服上褶下絝，有貂、蟬為飾的武冠，金鉤為飾的具帶，足上穿靴，便於騎射。為此，他力排眾議，帶頭穿胡服，習騎馬，練射箭，親自訓練士兵，使趙國軍事力量日益強大，而能西退胡人，北滅中山國，成為“戰國七雄”之一。[NEWLINE][NEWLINE]騎術雖然很早在世界各地就已經出現，但在很多地區卻遲遲沒有發展成為騎兵部隊。農耕文明發展初期不具備培養大規模騎兵的物質條件，古典時代“結日定地”的貴族決鬥式戰爭也使得騎兵的機動性無處發揮。隨著人類戰爭日益專業化規模化，以及鞍韉、馬鐙等重要騎兵裝備的發明，各民族開始向遊牧部落學習先進的騎兵作戰技術，將其提升為一種重要的戰爭手段。</Text>
-		</Row>	
-		
+			<Text>趙武靈王是中國戰國時期一位奮發有為的諸侯國君，他為了抵禦北方胡人的侵略，實行了「胡服騎射」的軍事改革。改革的中心內容是穿胡人的服裝，學習胡人騎馬射箭的作戰方法。其服上褶下絝，有貂、蟬為飾的武冠，金鉤為飾的具帶，足上穿靴，便於騎射。為此，他力排眾議，帶頭穿胡服，習騎馬，練射箭，親自訓練士兵，使趙國軍事力量日益強大，而能西退胡人，北滅中山國，成為「戰國七雄」之一。[NEWLINE][NEWLINE]騎術雖然很早在世界各地就已經出現，但在很多地區卻遲遲沒有發展成為騎兵部隊。農耕文明發展初期不具備培養大規模騎兵的物質條件，古典時代「結日定地」的貴族決鬥式戰爭也使得騎兵的機動性無處發揮。隨著人類戰爭日益專業化規模化，以及鞍韉、馬鐙等重要騎兵裝備的發明，各民族開始向遊牧部落學習先進的騎兵作戰技術，將其提升為一種重要的戰爭手段。</Text>
+		</Row>
+
 		<Replace Tag="TXT_KEY_POLICY_WARRIOR_CODE_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]尚武精神[ENDCOLOR]
-			[NEWLINE]軍營，軍械所，兵工廠，軍事基地+1[ICON_PRODUCTION]產能。[ICON_PUPPET]傀儡城市+6[ICON_GOLD]金錢。
-			[NEWLINE]馬廄，冶鐵坊，城墻，城堡+2[ICON_CULTURE]文化。
-			[NEWLINE]建造軍事單位時+15%[ICON_PRODUCTION]產能。
-			[NEWLINE]研發數學後，攻占敵方城市贈送法院
+			<Text>
+				[COLOR_POSITIVE_TEXT]尚武精神[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]軍營，軍械所，兵工廠，軍事基地+1[ICON_PRODUCTION]產能。[ICON_PUPPET]傀儡城市+6[ICON_GOLD]金錢。
+				[NEWLINE][ICON_BULLET]馬廄，冶鐵坊，城墻，城堡+2[ICON_CULTURE]文化。
+				[NEWLINE][ICON_BULLET]建造軍事單位時+15%[ICON_PRODUCTION]產能。
+				[NEWLINE][ICON_BULLET]攻占敵方城市贈送法院
 			</Text>
 		</Replace>
 
-		
 		<Replace Tag="TXT_KEY_POLICY_DISCIPLINE_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]軍事紀律[ENDCOLOR][NEWLINE]每個與本戰場相鄰的己方單位獲得+25%[ICON_STRENGTH]戰鬥力加成，夾擊加成由10%增加至15%。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]軍事紀律[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]每個與本戰場相鄰的己方單位獲得+25%[ICON_STRENGTH]戰鬥力加成。
+				[NEWLINE][ICON_BULLET]夾擊加成由10%增加至15%。
+			</Text>
 		</Replace>
-		
+
 		<Replace Tag="TXT_KEY_POLICY_MILITARY_CASTE">
 			<Text>軍事操練</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_MILITARY_CASTE_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]軍事操練[ENDCOLOR]
-			[NEWLINE]在[ICON_CAPITAL]首都附近出現一位[ICON_GREAT_GENERAL]陸軍統帥。獲得[ICON_GREAT_GENERAL]陸軍統帥的速度+50%。
-			[NEWLINE]陸軍遠程單位（投射單位、攻城武器、遊獵單位）遠程攻擊以及遭到遠程攻擊時+15%戰鬥力。
-			[NEWLINE]投射單位與遊獵單位對攻擊造成傷害固定+5。
-			[NEWLINE]攻城單位和空軍單位對城市額外造成相當於10%城市最大生命值的傷害。
+			<Text>
+				[COLOR_POSITIVE_TEXT]軍事操練[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]在[ICON_CAPITAL]首都附近出現一位[ICON_GREAT_GENERAL]陸軍統帥。
+				[NEWLINE][ICON_BULLET]獲得[ICON_GREAT_GENERAL]陸軍統帥的速度+50%。
+				[NEWLINE][ICON_BULLET]陸軍遠程單位（投射單位、攻城武器、遊獵單位）遠程攻擊以及遭到遠程攻擊時+15%戰鬥力。
+				[NEWLINE][ICON_BULLET]投射單位與遊獵單位對攻擊造成傷害固定+5。
+				[NEWLINE][ICON_BULLET]攻城單位和空軍單位對城市額外造成相當於10%城市最大生命值的傷害。
 			</Text>
 		</Replace>
+
 		<Replace Tag="TXT_KEY_POLICY_MILITARYCASTE_TEXT" >
 			<Text>操練，是軍隊平日的活動之一，除了列隊、體能訓練與軍事知識學習之外，也要進行射擊、實戰訓練等。</Text>
 		</Replace>
@@ -6220,56 +6302,84 @@
 
 
 
-
-
-
-
 		<Replace Tag="TXT_KEY_POLICY_MILITARY_TRADITION_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]軍事傳統[ENDCOLOR][NEWLINE]軍事單位通過戰鬥獲得經驗+50%。
-			[NEWLINE]升級單位所需的[ICON_GOLD]金幣減少60%。
-			[NEWLINE]軍營，軍械所，城牆，城堡,馬厩和軍事學院+1[ICON_HAPPINESS_1]快乐.</Text>
-		</Replace>		
-		
+			<Text>
+				[COLOR_POSITIVE_TEXT]軍事傳統[ENDCOLOR][NEWLINE]軍事單位通過戰鬥獲得經驗+50%。
+				[NEWLINE][ICON_BULLET]升級單位所需的[ICON_GOLD]金錢減少60%。
+				[NEWLINE][ICON_BULLET]軍營，軍械所，城墻，城堡,馬廄和軍事學院+1[ICON_HAPPINESS_1]快樂.
+			</Text>
+		</Replace>
+
 		<Replace Tag="TXT_KEY_POLICY_PROFESSIONAL_ARMY">
 			<Text>職業軍隊</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_PROFESSIONAL_ARMY_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]職業軍隊[ENDCOLOR][NEWLINE]新單位+15點經驗。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]職業軍隊[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]新單位+15點經驗。
+			</Text>
 		</Replace>
 		
 		<!--*******************Piety********************* -->
 
 		<Replace Tag="TXT_KEY_POLICY_BRANCH_PIETY_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]虔信政策[ENDCOLOR]能增強國家的[ICON_PEACE]宗教。[NEWLINE][NEWLINE]啟用虔信政策可使擁有主流宗教的城市也獲得流行度居第二位的宗教的神系信條所提供的獎勵。所有建造了世界奇跡的城市+25%[ICON_PEACE]信仰值。允許建造婆羅浮屠和民族史詩。[NEWLINE][NEWLINE]推行所有虔信政策後[ICON_GREAT_PEOPLE]偉人的誕生速度提升25%，並且獲得一個[COLOR_POSITIVE_TEXT]免費政策[ENDCOLOR]。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]虔信政策[ENDCOLOR]能增強國家的[ICON_PEACE]宗教。
+				[NEWLINE][NEWLINE]啟用虔信政策：
+				[NEWLINE][ICON_BULLET]使擁有主流宗教的城市也獲得流行度居第二位的宗教的神系信條所提供的獎勵。
+				[NEWLINE][ICON_BULLET]所有建造了世界奇觀的城市+25%[ICON_PEACE]信仰。
+				[NEWLINE][ICON_BULLET]允許建造婆羅浮屠和民族史詩。
+				[NEWLINE][NEWLINE]推行所有虔信政策：
+				[NEWLINE][ICON_BULLET][ICON_GREAT_PEOPLE]偉人誕生速度+25%
+				[NEWLINE][ICON_BULLET]獲得一個[COLOR_POSITIVE_TEXT]免費政策[ENDCOLOR]。
+			</Text>
 		</Replace>
-		
+
 		<Replace Tag="TXT_KEY_POLICY_MANDATE_OF_HEAVEN_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]天命觀念[ENDCOLOR][NEWLINE]購買宗教單位以及宗教建築所需的[ICON_PEACE]信仰值減少33%。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]天命觀念[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]購買宗教單位以及宗教建築所需的[ICON_PEACE]信仰減少33%。
+			</Text>
 		</Replace>
-		
+
 		<Replace Tag="TXT_KEY_POLICY_ORGANIZED_RELIGION">
 			<Text>道德經</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_ORGANIZED_RELIGION_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]道德經[ENDCOLOR][NEWLINE]所有神祠、神廟和[ICON_PEACE]信仰值購買建築+1[ICON_CULTURE]文化值產出。[NEWLINE]所有宗教奇跡+4[ICON_CULTURE]文化值產出。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]道德經[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]所有神祠、神廟和[ICON_PEACE]信仰購買建築+1[ICON_CULTURE]文化產出。
+				[NEWLINE][ICON_BULLET]所有宗教奇觀+4[ICON_CULTURE]文化產出。
+			</Text>
 		</Replace>
-		
+
 		<Replace Tag="TXT_KEY_POLICY_THEOCRACY_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]神權政治[ENDCOLOR][NEWLINE]全國+10%[ICON_CULTURE]文化值。[NEWLINE]所有城市獲得一個額外的文學家席位。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]神權政治[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]全國+10%[ICON_CULTURE]文化。
+				[NEWLINE][ICON_BULLET]所有城市獲得一個額外的文學家席位。
+			</Text>
 		</Replace>
-		
+
 		<Replace Tag="TXT_KEY_POLICY_FREE_RELIGION">
 			<Text>宗教寬容</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_FREE_RELIGION_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]宗教寬容[ENDCOLOR][NEWLINE]所有神祠和神廟+1[ICON_HAPPINESS_1]本地幸福度。[NEWLINE]立刻開啟一次黃金時代。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]宗教寬容[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]所有神祠和神廟+1[ICON_HAPPINESS_1]本地快樂。
+				[NEWLINE][ICON_BULLET]立刻開啟一次黃金時代。
+			</Text>
 		</Replace>
-		
+
 		<Row Tag="TXT_KEY_POLICY_RELIGIOUS_POLITICS">
 			<Text>教法社會</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_RELIGIOUS_POLITICS_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]教法社會[ENDCOLOR][NEWLINE]將[ICON_PEACE]信仰值產出的20%轉化為全域[ICON_HAPPINESS_1]幸福度。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]教法社會[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]將[ICON_PEACE]信仰產出的20%轉化為全局[ICON_HAPPINESS_1]快樂度。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_RELIGIOUS_POLITICS_TEXT">
 			<Text>伊斯蘭教法根據《古蘭經》和可靠聖訓的相關內容，對人民日常生活和行為作出法律規定，因此又稱為伊斯蘭法律。在伊斯蘭國家，受到伊斯蘭教法規範的不只穆斯林，齊米亦包括在內。伊斯蘭教法涵蓋人民日常生活的許多方面，包括政治、經濟、文化、商業、金融、合同、性別、婚姻、財產和社會問題，但大體分為兩大部分：伊巴達提，有關宗教功修的法律；麥阿麥拉提，有關人與人交往的法律。</Text>
@@ -6281,7 +6391,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]贊助政策[ENDCOLOR]增強城邦關系帶來的好處。
 				[NEWLINE][NEWLINE]啟用贊助政策：
-				[NEWLINE][ICON_BULLET]使你對所有城邦[ICON_INFLUENCE]影響力基準值提高20。
+				[NEWLINE][ICON_BULLET]對所有城邦[ICON_INFLUENCE]影響力基準值提高20。
 				[NEWLINE][ICON_BULLET]允許建造漢薩同盟和國家情報局。
 				[NEWLINE][NEWLINE]推行所有贊助政策：
 				[NEWLINE][ICON_BULLET]使結盟城邦不定期地贈送[ICON_GREAT_PEOPLE]偉人。
@@ -6289,9 +6399,11 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_PHILANTHROPY_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]慈善事業[ENDCOLOR]
+			<Text>
+				[COLOR_POSITIVE_TEXT]慈善事業[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]贈送城邦[ICON_GOLD]金錢提升的[ICON_INFLUENCE]影響力加100%。
-				[NEWLINE][ICON_BULLET]所有與城邦的商路+4[ICON_GOLD]金錢。[NEWLINE]城邦提供的資源翻倍。</Text>
+				[NEWLINE][ICON_BULLET]所有與城邦的商路+4[ICON_GOLD]金錢。[NEWLINE]城邦提供的資源翻倍。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_MERCHANT_CONFEDERACY_HELP" >
@@ -6352,38 +6464,69 @@
 		<!--*******************Aesthetics********************* -->
 
 		<Replace Tag="TXT_KEY_POLICY_BRANCH_AESTHETICS_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]美學政策[ENDCOLOR]能增加國家的[ICON_CULTURE]文化值和[ICON_TOURISM]旅遊業績產出。[NEWLINE][NEWLINE]啟用美學政策能每回合增加相當於50%的額外[ICON_HAPPINESS_1]幸福度的[ICON_CULTURE]文化值以加快推行社會政策。[NEWLINE]擁有世界奇跡的城市[ICON_CULTURE]文化值產出+25%。[NEWLINE]允許建造盧浮宮和國家圖書館。[NEWLINE][NEWLINE]推行所有美學政策後可使你看到隱藏的歷史遺跡。工業時代後可以用[ICON_PEACE]信仰值購買大音樂家、大藝術家和大文學家。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]美學政策[ENDCOLOR]能增加國家的[ICON_CULTURE]文化和[ICON_TOURISM]魅力產出。
+				[NEWLINE][NEWLINE]啟用美學政策：
+				[NEWLINE][ICON_BULLET]每回合增加相當於50%的額外[ICON_HAPPINESS_1]快樂度的[ICON_CULTURE]文化以加快推行社會政策。
+				[NEWLINE][ICON_BULLET]擁有世界奇觀的城市[ICON_CULTURE]文化產出+25%。
+				[NEWLINE][ICON_BULLET]允許建造盧浮宮和國家圖書館。
+				[NEWLINE][NEWLINE]推行所有美學政策：
+				[NEWLINE][ICON_BULLET]使你能看到隱藏的歷史遺跡。
+				[NEWLINE][ICON_BULLET]工業時代後可以用[ICON_PEACE]信仰購買大音樂家、大藝術家和大文學家。
+			</Text>
 		</Replace>
-		
+
 		<Replace Tag="TXT_KEY_POLICY_FINE_ARTS_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]美學理論[ENDCOLOR][NEWLINE]博物館和奇跡中傑作主題展示的獎勵效果翻倍，所有傑作+2[ICON_CULTURE]文化值。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]美學理論[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]博物館和奇觀中傑作主題展示的獎勵效果翻倍。
+				[NEWLINE][ICON_BULLET]所有傑作+2[ICON_CULTURE]文化。
+			</Text>
 		</Replace>
-		
+
 		<Replace Tag="TXT_KEY_POLICY_CULTURAL_CENTERS_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]文化中心[ENDCOLOR][NEWLINE]文化建築（露天劇場、畫廊、歌劇院、博物館、廣播塔）+1[ICON_HAPPINESS_1]幸福度。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]文化中心[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]文化建築（露天劇場、畫廊、歌劇院、博物館、廣播塔）+1[ICON_HAPPINESS_1]快樂。
+			</Text>
 		</Replace>
-		
+
 		<Replace Tag="TXT_KEY_POLICY_ARTISTIC_GENIUS_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]藝術天才[ENDCOLOR][NEWLINE]立刻獲得一位大藝術家，大音樂家、大藝術家和大文學家的獲得速度+25%。[NEWLINE]進入全戰時代前，建造奇跡時+25%[ICON_PRODUCTION]生產力積累速率。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]藝術天才[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]立刻獲得一位大藝術家。
+				[NEWLINE][ICON_BULLET]大音樂家、大藝術家和大文學家的獲得速度+25%。
+				[NEWLINE][ICON_BULLET]進入全戰時代前，建造奇觀時+25%[ICON_PRODUCTION]產能積累速率。
+			</Text>
 		</Replace>
-		
+
 		<Replace Tag="TXT_KEY_POLICY_FLOURISHING_OF_ARTS" >
 			<Text>藝術倫理</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_FLOURISHING_OF_ARTS_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]藝術倫理[ENDCOLOR][NEWLINE][ICON_CULTURE]新政策的成本-15%。[NEWLINE]每2項已采用的政策+1[ICON_HAPPINESS_1]幸福度。</Text>
-		</Replace>
-		
-		<Replace Tag="TXT_KEY_POLICY_ETHICS_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]文化交流[ENDCOLOR][NEWLINE]相同宗教、連接商路和開放邊境所帶來的[ICON_TOURISM]旅遊業績輸出加成各提升15%。[NEWLINE]立刻開啟一次[ICON_GOLDEN_AGE]黃金時代。
+			<Text>
+				[COLOR_POSITIVE_TEXT]藝術倫理[ENDCOLOR]
+				[NEWLINE][ICON_BULLET][ICON_CULTURE]新政策的成本-15%。
+				[NEWLINE][ICON_BULLET]每2項已采用的政策+1[ICON_HAPPINESS_1]快樂。
 			</Text>
 		</Replace>
-		
+
+		<Replace Tag="TXT_KEY_POLICY_ETHICS_HELP" >
+			<Text>
+				[COLOR_POSITIVE_TEXT]文化交流[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]相同宗教、連接商路和開放邊境所帶來的[ICON_TOURISM]魅力輸出加成各提升15%。
+				[NEWLINE][ICON_BULLET]立刻開啟一次[ICON_GOLDEN_AGE]黃金時代。
+			</Text>
+		</Replace>
+
 		<Row Tag="TXT_KEY_POLICY_CULTURAL_INFILTRATION">
 			<Text>文化滲透</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_CULTURAL_INFILTRATION_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]文化滲透[ENDCOLOR][NEWLINE]對所有[ICON_HAPPINESS_1]幸福度低於我方的文明+33%[ICON_TOURISM]旅遊業績。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]文化滲透[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]對所有[ICON_HAPPINESS_1]快樂度低於我方的文明+33%[ICON_TOURISM]魅力。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_CULTURAL_INFILTRATION_TEXT">
 			<Text>文化侵略指的是一個國家、一個民族試圖用自己的核心價值觀念去取代其他國家或民族的核心價值觀念，改變其價值觀，淡化其民族認同感，從而使其對於外族文化產生一種依賴感，最終讓其拋棄自己的民族。</Text>
@@ -6540,37 +6683,67 @@
 		<!--*******************Rationalism********************* -->
 
 		<Replace Tag="TXT_KEY_POLICY_BRANCH_RATIONALISM_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]理性政策[ENDCOLOR]能提升國家的[ICON_RESEARCH]科技值能力。[NEWLINE][NEWLINE]啟用理性政策可在文明保持[ICON_HAPPINESS_1]幸福度狀態時，每25點[ICON_HAPPINESS_1]滿意度+5%[ICON_RESEARCH]科技值（上限50%）。科研協定+50%產出。允許建造大報恩寺塔和國家實驗室。[NEWLINE][NEWLINE]推行所有理性政策後可免費獲得一項科技，並且在工業時代後可以用[ICON_PEACE]信仰值購買大科學家。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]理性政策[ENDCOLOR]能提升國家的[ICON_RESEARCH]科研能力。
+				[NEWLINE][NEWLINE]啟用理性政策：
+				[NEWLINE][ICON_BULLET]在文明保持[ICON_HAPPINESS_1]快樂狀態時，每25點[ICON_HAPPINESS_1]滿意度+5%[ICON_RESEARCH]科研（上限50%）。
+				[NEWLINE][ICON_BULLET]科研協定+50%產出。
+				[NEWLINE][ICON_BULLET]允許建造大報恩寺塔和國家實驗室。
+				[NEWLINE][NEWLINE]推行所有理性政策：
+				[NEWLINE][ICON_BULLET]免費獲得一項科技，
+				[NEWLINE][ICON_BULLET]在工業時代後可以用[ICON_PEACE]信仰購買大科學家。
+			</Text>
 		</Replace>
-		
+
 		<Row Tag="TXT_KEY_POLICY_STATECRAFT">
 			<Text>經世致用</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_STATECRAFT_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]經世致用[ENDCOLOR][NEWLINE]所有圖書館、學院、大學、公立學校和研發實驗室+2[ICON_CULTURE]文化值。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]經世致用[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]所有圖書館、學院、大學、公立學校和研發實驗室+2[ICON_CULTURE]文化。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_STATECRAFT_TEXT">
-			<Text>“經世致用”指學問必須有益於國事。由明清之際思想家王夫之、黃宗羲、顧炎武等提出。他們認為學習、徵引古人的文章和行事，應以治事、救世為急務，反對理學家不切實際的空虛之學。[NEWLINE][NEWLINE]諷刺的是，他們所批判的“理學”一開始其實是由程朱等儒家學者所提出的“改變世風，挽救國家”的務實之學。歷史上，這種扭曲的幽默屢屢發生，“經世致用”最終也沒能逃過一劫。</Text>
+			<Text>「經世致用」指學問必須有益於國事。由明清之際思想家王夫之、黃宗羲、顧炎武等提出。他們認為學習、征引古人的文章和行事，應以治事、救世為急務，反對理學家不切實際的空虛之學。[NEWLINE][NEWLINE]諷刺的是，他們所批判的「理學」一開始其實是由程朱等儒家學者所提出的「改變世風，挽救國家」的務實之學。歷史上，這種扭曲的幽默屢屢發生，「經世致用」最終也沒能逃過一劫。</Text>
 		</Row>
-		
+
 		<Replace Tag="TXT_KEY_POLICY_FREE_THOUGHT_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]思想自由[ENDCOLOR][NEWLINE]每處貿易站+1[ICON_RESEARCH]科技值。[NEWLINE]每處學園+6[ICON_RESEARCH]科技值。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]思想自由[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]每處貿易站+1[ICON_RESEARCH]科研。
+				[NEWLINE][ICON_BULLET]每處學園+6[ICON_RESEARCH]科研。
+			</Text>
 		</Replace>
-		
+
 		<Replace Tag="TXT_KEY_POLICY_HUMANISM_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]人文主義[ENDCOLOR][NEWLINE]立刻獲得一個大科學家。大科學家[ICON_GREAT_PEOPLE]誕生速度+25%。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]人文主義[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]立刻獲得一個大科學家。
+				[NEWLINE][ICON_BULLET]大科學家[ICON_GREAT_PEOPLE]誕生速度+25%。
+			</Text>
 		</Replace>
-		
+
 		<Replace Tag="TXT_KEY_POLICY_SECULARISM_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]世俗主義[ENDCOLOR][NEWLINE]每位專業人員+1[ICON_RESEARCH]科技值。[NEWLINE]學院、大學、天文臺、研發實驗室和極地科考站-50%[ICON_GOLD]維護費。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]世俗主義[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]每位專業人員+1[ICON_RESEARCH]科研。
+				[NEWLINE][ICON_BULLET]學院、大學、天文臺、研發實驗室和極地科考站-50%[ICON_GOLD]維護費。
+			</Text>
 		</Replace>
-		
+
 		<Replace Tag="TXT_KEY_POLICY_SOVEREIGNTY_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]主權在民[ENDCOLOR][NEWLINE]學院、大學、公立學校、天文臺、研發實驗室和極地科考站+1[ICON_HAPPINESS_1]本地幸福度。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]主權在民[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]學院、大學、公立學校、天文臺、研發實驗室和極地科考站+1[ICON_HAPPINESS_1]本地快樂。
+			</Text>
 		</Replace>
-		
+
 		<Replace Tag="TXT_KEY_POLICY_SCIENTIFIC_REVOLUTION_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]科學革命[ENDCOLOR][NEWLINE]研發實驗室增加所在城市15%的[ICON_PRODUCTION]生產力和[ICON_RESEARCH]科技值產出。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]科學革命[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]研發實驗室增加所在城市15%的[ICON_PRODUCTION]產能和[ICON_RESEARCH]科研產出。
+			</Text>
 		</Replace>
 		
 		<!--*******************Freedom********************* -->

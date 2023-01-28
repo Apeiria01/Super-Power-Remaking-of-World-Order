@@ -6131,8 +6131,15 @@
 		<Replace Tag="TXT_KEY_POLICY_BRANCH_TRADITION_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]传统政策[ENDCOLOR]适宜于繁荣精干的帝国。
-				[NEWLINE][NEWLINE]启用传统政策将使[ICON_CAPITAL]首都+3[ICON_CULTURE]文化，+3[ICON_RESEARCH]科研，城市地块扩张所需文化成本-25%。允许建造空中花园。
-				[NEWLINE][NEWLINE]推行所有传统政策后将使所有城市+15%[ICON_RESEARCH]科研、[ICON_CULTURE]文化和[ICON_PRODUCTION]产能产出，开启[ICON_GOLDEN_AGE]黄金时代所需的[ICON_HAPPINESS_1]快乐减少25%，并且在工业时代后可以用[ICON_PEACE]信仰购买大工程师。[NEWLINE][NEWLINE][COLOR_WARNING_TEXT]不能与自主政策同时开启。[ENDCOLOR]
+				[NEWLINE][NEWLINE]启用传统政策：
+				[NEWLINE][ICON_BULLET]使[ICON_CAPITAL]首都+3[ICON_CULTURE]文化，+3[ICON_RESEARCH]科研。
+				[NEWLINE][ICON_BULLET]城市地块扩张所需文化成本-25%。
+				[NEWLINE][ICON_BULLET]允许建造空中花园。
+				[NEWLINE][NEWLINE]推行所有传统政策：
+				[NEWLINE][ICON_BULLET]使所有城市+15%[ICON_RESEARCH]科研、[ICON_CULTURE]文化和[ICON_PRODUCTION]产能产出。
+				[NEWLINE][ICON_BULLET]开启[ICON_GOLDEN_AGE]黄金时代所需要的[ICON_GOLDEN_AGE]黄金时代点数减少25%。
+				[NEWLINE][ICON_BULLET]在工业时代后可以用[ICON_PEACE]信仰购买大工程师。
+				[NEWLINE][NEWLINE][COLOR_WARNING_TEXT]不能与自主政策同时开启。[ENDCOLOR]
 			</Text>
 		</Replace>
 
@@ -6147,15 +6154,15 @@
 		<Replace Tag="TXT_KEY_POLICY_LANDED_ELITE_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]绅缙阶层[ENDCOLOR]
-				[NEWLINE][ICON_CAPITAL]首都地块+4[ICON_FOOD]食物产出。
-				[NEWLINE]每处农田、渔船、梯田、圩田、卡斯巴哈、蹄皮帐篷设施+1[ICON_FOOD]食物产出。
+				[NEWLINE][ICON_BULLET][ICON_CAPITAL]首都地块+4[ICON_FOOD]食物产出。
+				[NEWLINE][ICON_BULLET]每处农田、渔船、梯田、圩田、卡斯巴哈、蹄皮帐篷设施+1[ICON_FOOD]食物产出。
 			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_LEGALISM_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]律法统治[ENDCOLOR]
-				[NEWLINE]所有城市中每5[ICON_CITIZEN]人口+1[ICON_HAPPINESS_1]快乐。
+				[NEWLINE][ICON_BULLET]所有城市中每5[ICON_CITIZEN]人口+1[ICON_HAPPINESS_1]快乐。
 			</Text>
 		</Replace>
 
@@ -6175,8 +6182,9 @@
 
 		<Replace Tag="TXT_KEY_POLICY_MONARCHY_HELP" >
 			<Text>
-				[COLOR_POSITIVE_TEXT]君主政体[ENDCOLOR][NEWLINE]城市规模导致的[ICON_HAPPINESS_4]不满减半。
-				[NEWLINE][ICON_CAPITAL]首都每个[ICON_CITIZEN]市民+1[ICON_GOLD]金钱。
+				[COLOR_POSITIVE_TEXT]君主政体[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]城市规模导致的[ICON_HAPPINESS_4]不满减半。
+				[NEWLINE][ICON_BULLET][ICON_CAPITAL]首都每个[ICON_CITIZEN]市民+1[ICON_GOLD]金钱。
 			</Text>
 		</Replace>
 
@@ -6204,7 +6212,11 @@
 			<Text>科举考试</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_FAMILY_REGISTER_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]科举考试[ENDCOLOR][NEWLINE]每5[ICON_CITIZEN]人口+1[ICON_RESEARCH]科研。[NEWLINE]每个城市中获得一个科学家席位。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]科举考试[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]每5[ICON_CITIZEN]人口+1[ICON_RESEARCH]科研。
+				[NEWLINE][ICON_BULLET]每个城市中获得一个科学家席位。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_FAMILY_REGISTER_TEXT">
 			<Text>科举是历代封建王朝通过考试选拔官吏的一种制度。由于采用分科取士的办法，所以叫做科举。科举制从隋朝大业元年（605年）开始实行，到清朝光绪三十一年（1905年）举行最后一科进士考试为止，经历了1300年。[NEWLINE][NEWLINE]科举不仅是一种中国文化，从整个人类社会管理变迁过程来看，科举制度是一种社会智商、能力的培养、挑选、使用的社会性管理程序（方法步骤），他不变的操作步骤是："逐级培养筛选、一一对比淘汰"。他为社会智商能力的挑选提供了可见、可比、可控、可重复、可验证的过程及依据，提高了社会成员能力智慧培养、挑选、使用的“专业性、系统性、精确度及效率”。[NEWLINE][NEWLINE]科举制度对社会成员“逐级培养筛选、一一对比淘汰”的程序性步骤，得到全世界各种文化的认可接受，成为现代公务员制度、中高考制度、技能职称评定制度、体育竞赛、科研程序中的实验组/对照组的核心程序，是全世界普及度最高，使用度最广，支撑著整个人类社会存在、发展的“社会智商能力挑选”核心制度，也成为了全世界都复制拷贝执行的世界性文化。</Text>
@@ -6214,7 +6226,11 @@
 			<Text>中央集权</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_CENTRALISATION_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]中央集权[ENDCOLOR][NEWLINE]所有新单位+15点经验，战争伤亡导致的[ICON_PIRATE]人口损失减少33%.</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]中央集权[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]所有新单位+15点经验。
+				[NEWLINE][ICON_BULLET]战争伤亡导致的[ICON_PIRATE]人口损失减少33%.
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_CENTRALISATION_TEXT">
 			<Text>中央集权制是一种决策方式，地方政府在政治、经济、军事等方面没有独立性，必须严格服从中央政府的命令，一切受控于中央。君主专制的国家往往是中央集权的，皇帝个人专断独裁，集国家最高权力于一身，从决策到行使军、政、财大权都具有独断性和随意性。但反之，中央集权的国家不一定是君主制。</Text>
@@ -6225,8 +6241,13 @@
 		<Replace Tag="TXT_KEY_POLICY_BRANCH_LIBERTY_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]自主政策[ENDCOLOR]适合渴求快速扩张的文明。
-				[NEWLINE][NEWLINE]启用自主政策能使每座城市+1[ICON_CULTURE]文化，+1[ICON_RESEARCH]科研。工人修建地块设施速度+25%。允许建造大金字塔。
-				[NEWLINE][NEWLINE]推行所有自主政策后将在首都[ICON_CAPITAL]附近免费获得一位大工程师并开启一个黄金时代。
+				[NEWLINE][NEWLINE]启用自主政策：
+				[NEWLINE][ICON_BULLET]使每座城市+1[ICON_CULTURE]文化，+1[ICON_RESEARCH]科研。
+				[NEWLINE][ICON_BULLET]工人修建地块设施速度+25%。
+				[NEWLINE][ICON_BULLET]允许建造大金字塔。
+				[NEWLINE][NEWLINE]推行所有自主政策：
+				[NEWLINE][ICON_BULLET]在首都[ICON_CAPITAL]附近出现一位大工程师。
+				[NEWLINE][ICON_BULLET]立即开启一次黄金时代。
 				[NEWLINE][NEWLINE][COLOR_WARNING_TEXT]不能与传统政策同时开启。[ENDCOLOR]
 			</Text>
 		</Replace>
@@ -6234,32 +6255,34 @@
 		<Replace Tag="TXT_KEY_POLICY_COLLECTIVE_RULE_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]集体统治[ENDCOLOR]
-				[NEWLINE]所有城市训练[COLOR_POSITIVE_TEXT]移民[ENDCOLOR]的速度+50%。[ICON_CAPITAL]首都附近免费获得一个移民单位。（威尼斯则是获得一个威尼斯商人）
-				[NEWLINE]进入启蒙时代后，训练移民的速度额外增加+50%，国内移民进入城市不会清空粮食积累。
+				[NEWLINE][ICON_BULLET]所有城市训练[COLOR_POSITIVE_TEXT]移民[ENDCOLOR]的速度+50%。
+				[NEWLINE][ICON_BULLET][ICON_CAPITAL]首都附近免费获得一个移民单位。（威尼斯则是获得一个威尼斯商人）
+				[NEWLINE][ICON_BULLET]进入启蒙时代后，训练移民的速度额外增加+50%，国内移民进入城市不会清空粮食积累。
 			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_REPUBLIC_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]共和政体[ENDCOLOR]
-				[NEWLINE]每座城市+4[ICON_GOLD]金钱，+2[ICON_FOOD]食物，+2[ICON_RES_CONSUMER]商品。
-				[NEWLINE]每座城市提供+1%[ICON_FOOD]全局粮食和[ICON_PRODUCTION]产能加成。
+				[NEWLINE][ICON_BULLET]每座城市+4[ICON_GOLD]金钱，+2[ICON_FOOD]食物，+2[ICON_RES_CONSUMER]商品。
+				[NEWLINE][ICON_BULLET]每座城市提供+1%[ICON_FOOD]全局粮食和[ICON_PRODUCTION]产能加成。
 			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_CITIZENSHIP_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]公民制度[ENDCOLOR]
-				[NEWLINE]每座新建立的城市免费获得一名工人，[ICON_CAPITAL]首都立刻获得一名工人，每座城市+2[ICON_RES_MANPOWER]人力。
-				[NEWLINE]新建城市获得一次性的25点[ICON_PRODUCTION]产能（标准速度下）。
+				[NEWLINE][ICON_BULLET]每座新建立的城市免费获得一名工人，[ICON_CAPITAL]首都立刻获得一名工人。
+				[NEWLINE][ICON_BULLET]每座城市+2[ICON_RES_MANPOWER]人力。
+				[NEWLINE][ICON_BULLET]新建城市获得一次性的25点[ICON_PRODUCTION]产能（标准速度下）。
 			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_MERITOCRACY_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]精英政治[ENDCOLOR]
-				[NEWLINE]每座城市+2[ICON_PRODUCTION]产能，城市建造建筑时+10%[ICON_PRODUCTION]产能。
-				[NEWLINE]城市建造完成基础建筑后，获得数值相当于建筑产能的10%的一次性[ICON_RESEARCH]科研、[ICON_CULTURE]文化产出。
+				[NEWLINE][ICON_BULLET]每座城市+2[ICON_PRODUCTION]产能，城市建造建筑时+10%[ICON_PRODUCTION]产能。
+				[NEWLINE][ICON_BULLET]城市完成基础建筑后，获得数值相当于建筑产能的10%的一次性[ICON_RESEARCH]科研、[ICON_CULTURE]文化产出。
 			</Text>
 		</Replace>
 
@@ -6269,7 +6292,8 @@
 		<Row Tag="TXT_KEY_POLICY_BILL_OF_RIGHTS_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]权利法案[ENDCOLOR]
-				[NEWLINE]专家建筑的每个专家槽提供1点对应的基础产出（按默认建筑计算），市政厅维护费减半。
+				[NEWLINE][ICON_BULLET]专家建筑的每个专家槽提供1点对应的基础产出（按默认建筑计算）。
+				[NEWLINE][ICON_BULLET]市政厅维护费减半。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_BILL_OF_RIGHTS_TEXT">
@@ -6280,7 +6304,11 @@
 			<Text>行省制度</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_PROVINCE_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]行省制度[ENDCOLOR][NEWLINE][NEWLINE]每座与自己[ICON_CAPITAL]首都[ICON_CONNECTED]相连的城市+1[ICON_HAPPINESS_1]快乐。[NEWLINE]非首都直辖城市的额外不满-50%。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]行省制度[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]每座与自己[ICON_CAPITAL]首都[ICON_CONNECTED]相连的城市+1[ICON_HAPPINESS_1]快乐。
+				[NEWLINE][ICON_BULLET]非首都直辖城市的额外不满-50%。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_PROVINCE_TEXT">
 			<Text>罗马在发展成为地中海霸国的过程中，采取不同于以前对意大利被征服者的统治方法，在海外征服地相继建立了行省制度。“行省”(provincia)一词初指元老院为拥有军事指挥权的罗马行政官员划定的行使职权的领域，有的在意大利境内，也有的在其境外。后来则专指意大利境外那些必须向罗马纳贡的属地。第一次布匿战争后，罗马占领了西西里、撒丁和科西嘉。公元前227年，罗马增选两名大法官，正式确立各以一名大法官为总督治理西西里行省和撒丁及科西嘉行省的建制。经过长期侵略和扩张，罗马在共和时期陆续建立了近西班牙（公元前197）、远西班牙（公元前197）、马其顿（公元前148）、阿非利加（公元前146）、亚细亚（公元前133）等十几个行省。[NEWLINE][NEWLINE]行省的建立过程，大体是以一名得胜的将军为首，加上元老院指定协助他的一个十人委员会，共同拟定一部行省法规，其中规定新建行省内的行政、司法、税收等方面的准则。总督原则上任期一年，必要时可延长，任内可根据需要颁布谕令。在行省法规规定的职权范围内，总督可以决定一切。对于他的渎职行为，只能在他卸任后在罗马审理。由于行省数目不断增加，除了专门选出担任行省总督的大法官外，已经卸任的执政官和大法官相继出任行省总督。总督配备一名财务官，还有一批幕僚。[NEWLINE][NEWLINE]行省居民遭受几乎毫无限制的掠夺和剥削。除征服时的纵兵抢掠外，罗马当局还没收相当部分土地以及各种资源，强迫居民交出金银，把大批居民卖为奴隶，或者随意拘押居民索取赎金。总督可将没收的土地出租给罗马公民或分配给罗马殖民者。行省居民要向罗马交纳直接税和间接税。捐税往往由包税人承包。总督和包税人的横征暴敛，不断激起行省人民的反抗。[NEWLINE][NEWLINE]由于行省的大量财富流入罗马，促进了奴隶占有制经济的发展，对于罗马社会生活各个方面都产生了巨大影响。同时，罗马帝国建立后开创的相对稳定的政治局面，以及实施改善行省地位和管理制度的政策，使帝国前期多数行省的经济得到不同程度的发展。随著整个帝国内部奴隶主阶级的不同部分逐渐融为一体，行省的奴隶主在帝国中央政权机构中的地位不断加强，甚至有些出身于行省的贵族成为帝国的皇帝，意大利的罗马公民相对于行省居民的优越地位日渐丧失，作为行政区划的意大利和行省之间的差别也归于消失。</Text>
@@ -6290,7 +6318,12 @@
 			<Text>地方分权</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_DECENTRALIZATION_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]地方分权[ENDCOLOR][NEWLINE]每名驻军为所在城市+2[ICON_CULTURE]文化，拥有驻军的城市+1[ICON_HAPPINESS_1]快乐，镇守城市的单位无需维护费。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]地方分权[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]每名驻军为所在城市+2[ICON_CULTURE]文化。
+				[NEWLINE][ICON_BULLET]拥有驻军的城市+1[ICON_HAPPINESS_1]快乐。
+				[NEWLINE][ICON_BULLET]镇守城市的单位无需维护费。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_DECENTRALIZATION_TEXT">
 			<Text>地方分权，也叫非中央分权，单一制国家的一种类型。在中央政权统一领导下，按照全国统一的法律，地方居民自主地组织地方公共机关，自主地处理本地区事务。以英国为典型。国家权力依法由中央政府和地方政府分别行使的制度。[NEWLINE][NEWLINE]中央政府和地方政府的职权范围一般规定在宪法和法律中。除军事、外交等全国性重要事项由中央政府统一掌管外，凡地方可以处理的事项，如工农业、商业等，均由地方政府负责。有的如交通、财政等项，则由中央与地方分管。地方政府除依法行使其职权外，还须执行中央政府交办的全国性政务。实行地方自治的国家，多采用地方分权。</Text>
@@ -6298,7 +6331,13 @@
 
 		<Replace Tag="TXT_KEY_POLICY_REPRESENTATION_HELP">
 			<Text>
-				[COLOR_POSITIVE_TEXT]代议制度[ENDCOLOR][NEWLINE]减缓一到五级城市造成的政策[ICON_CULTURE]文化阈值增长（能够与强化管理设施效果叠加）：[NEWLINE][ICON_BULLET]一级城市：没有额外的[ICON_CULTURE]文化阈值增长。[NEWLINE][ICON_BULLET]二级城市：[ICON_CULTURE]文化阈值增长由10%降低到5%。[NEWLINE][ICON_BULLET]三级城市：[ICON_CULTURE]文化阈值增长由20%降低到15%。[NEWLINE][ICON_BULLET]四五级城市：[ICON_CULTURE]文化阈值增长由33%降低到28%。[NEWLINE][ICON_BULLET]每座城市+1%[ICON_CULTURE]全局文化。
+				[COLOR_POSITIVE_TEXT]代议制度[ENDCOLOR]
+				[NEWLINE]减缓一到五级城市造成的政策[ICON_CULTURE]文化阈值增长（能够与强化管理设施效果叠加）：
+				[NEWLINE][ICON_BULLET]一级城市：没有额外的[ICON_CULTURE]文化阈值增长。
+				[NEWLINE][ICON_BULLET]二级城市：[ICON_CULTURE]文化阈值增长由10%降低到5%。
+				[NEWLINE][ICON_BULLET]三级城市：[ICON_CULTURE]文化阈值增长由20%降低到15%。
+				[NEWLINE][ICON_BULLET]四五级城市：[ICON_CULTURE]文化阈值增长由33%降低到28%。
+				[NEWLINE][ICON_BULLET]每座城市+1%[ICON_CULTURE]全局文化。
 			</Text>
 		</Replace>
 
@@ -6306,8 +6345,14 @@
 
 		<Replace Tag="TXT_KEY_POLICY_BRANCH_HONOR_HELP" >
 			<Text>
-				[COLOR_POSITIVE_TEXT]荣誉政策[ENDCOLOR]能增强国家的[ICON_WAR]军事实力。[NEWLINE][NEWLINE]启用该政策后消灭敌方单位时可获得[ICON_GOLD]金钱奖励（相当于敌方50%的战斗力），同时已探索区域内产生新的蛮族营地时会出现提示消息。允许建造宙斯神像和英雄史诗。
-				[NEWLINE][NEWLINE]推行所有荣誉政策后消灭敌方单位时可获得[ICON_CULTURE]文化奖励（相当于敌方50%的战斗力）。获得[ICON_GREAT_GENERAL]陆军统帅的速度+50%。并且在工业时代后可以用[ICON_PEACE]信仰购买陆军统帅。
+				[COLOR_POSITIVE_TEXT]荣誉政策[ENDCOLOR]能增强国家的[ICON_WAR]军事实力。
+				[NEWLINE][NEWLINE]启用荣誉政策：
+				[NEWLINE][ICON_BULLET]消灭敌方单位时可获得[ICON_GOLD]金钱奖励（相当于敌方50%的战斗力）。
+				[NEWLINE][ICON_BULLET]已探索区域内产生新的蛮族营地时会出现提示消息。允许建造宙斯神像和英雄史诗。
+				[NEWLINE][NEWLINE]推行所有荣誉政策：
+				[NEWLINE][ICON_BULLET]消灭敌方单位时可获得[ICON_CULTURE]文化奖励（相当于敌方50%的战斗力）。
+				[NEWLINE][ICON_BULLET]获得[ICON_GREAT_GENERAL]陆军统帅的速度+50%。
+				[NEWLINE][ICON_BULLET]在工业时代后可以用[ICON_PEACE]信仰购买陆军统帅。
 			</Text>
 		</Replace>
 
@@ -6317,7 +6362,7 @@
 		<Row Tag="TXT_KEY_POLICY_HORSEMAN_TRAINING_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]胡服骑射[ENDCOLOR]
-				[NEWLINE]所有重骑和装甲单位+1[ICON_MOVES]移动、无视敌方控制区域（ZOC），且攻击时造成的伤害固定+5。
+				[NEWLINE][ICON_BULLET]所有重骑和装甲单位+1[ICON_MOVES]移动、无视敌方控制区域（ZOC），且攻击时造成的伤害固定+5。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_HORSEMAN_TRAINING_TEXT">
@@ -6327,15 +6372,19 @@
 		<Replace Tag="TXT_KEY_POLICY_WARRIOR_CODE_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]尚武精神[ENDCOLOR]
-				[NEWLINE]军营，军械所，兵工厂，军事基地+1[ICON_PRODUCTION]产能。[ICON_PUPPET]傀儡城市+6[ICON_GOLD]金钱。
-				[NEWLINE]马厩，冶铁坊，城墙，城堡+2[ICON_CULTURE]文化。
-				[NEWLINE]建造军事单位时+15%[ICON_PRODUCTION]产能。
-				[NEWLINE]攻占敌方城市赠送法院
+				[NEWLINE][ICON_BULLET]军营，军械所，兵工厂，军事基地+1[ICON_PRODUCTION]产能。[ICON_PUPPET]傀儡城市+6[ICON_GOLD]金钱。
+				[NEWLINE][ICON_BULLET]马厩，冶铁坊，城墙，城堡+2[ICON_CULTURE]文化。
+				[NEWLINE][ICON_BULLET]建造军事单位时+15%[ICON_PRODUCTION]产能。
+				[NEWLINE][ICON_BULLET]攻占敌方城市赠送法院
 			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_DISCIPLINE_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]军事纪律[ENDCOLOR][NEWLINE]每个与本战场相邻的己方单位获得+25%[ICON_STRENGTH]战斗力加成，夹击加成由10%增加至15%。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]军事纪律[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]每个与本战场相邻的己方单位获得+25%[ICON_STRENGTH]战斗力加成。
+				[NEWLINE][ICON_BULLET]夹击加成由10%增加至15%。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_MILITARY_CASTE">
@@ -6344,10 +6393,11 @@
 		<Replace Tag="TXT_KEY_POLICY_MILITARY_CASTE_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]军事操练[ENDCOLOR]
-				[NEWLINE]在[ICON_CAPITAL]首都附近出现一位[ICON_GREAT_GENERAL]陆军统帅。获得[ICON_GREAT_GENERAL]陆军统帅的速度+50%。
-				[NEWLINE]陆军远程单位（投射单位、攻城武器、游猎单位）远程攻击以及遭到远程攻击时+15%战斗力。
-				[NEWLINE]投射单位与游猎单位对攻击造成伤害固定+5。
-				[NEWLINE]攻城单位和空军单位对城市额外造成相当于10%城市最大生命值的伤害。
+				[NEWLINE][ICON_BULLET]在[ICON_CAPITAL]首都附近出现一位[ICON_GREAT_GENERAL]陆军统帅。
+				[NEWLINE][ICON_BULLET]获得[ICON_GREAT_GENERAL]陆军统帅的速度+50%。
+				[NEWLINE][ICON_BULLET]陆军远程单位(投射单位、攻城武器、游猎单位)远程攻击以及遭到远程攻击时+15%战斗力。
+				[NEWLINE][ICON_BULLET]投射单位与游猎单位攻击造成伤害固定+5。
+				[NEWLINE][ICON_BULLET]攻城单位和空军单位对城市额外造成相当于10%城市最大生命值的伤害。
 			</Text>
 		</Replace>
 
@@ -6366,15 +6416,11 @@
 
 
 
-
-
-
-
 		<Replace Tag="TXT_KEY_POLICY_MILITARY_TRADITION_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]军事传统[ENDCOLOR][NEWLINE]军事单位通过战斗获得经验+50%。
-				[NEWLINE]升级单位所需的[ICON_GOLD]金钱减少60%。
-				[NEWLINE]军营，军械所，城墙，城堡,马厩和军事学院+1[ICON_HAPPINESS_1]快乐.
+				[NEWLINE][ICON_BULLET]升级单位所需的[ICON_GOLD]金钱减少60%。
+				[NEWLINE][ICON_BULLET]军营，军械所，城墙，城堡,马厩和军事学院+1[ICON_HAPPINESS_1]快乐.
 			</Text>
 		</Replace>
 
@@ -6382,42 +6428,72 @@
 			<Text>职业军队</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_PROFESSIONAL_ARMY_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]职业军队[ENDCOLOR][NEWLINE]新单位+15点经验。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]职业军队[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]新单位+15点经验。
+			</Text>
 		</Replace>
 
 		<!--*******************Piety********************* -->
 
 		<Replace Tag="TXT_KEY_POLICY_BRANCH_PIETY_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]虔信政策[ENDCOLOR]能增强国家的[ICON_PEACE]宗教。[NEWLINE][NEWLINE]启用虔信政策可使拥有主流宗教的城市也获得流行度居第二位的宗教的神系信条所提供的奖励。所有建造了世界奇观的城市+25%[ICON_PEACE]信仰。允许建造婆罗浮屠和民族史诗。[NEWLINE][NEWLINE]推行所有虔信政策后[ICON_GREAT_PEOPLE]伟人诞生速度+25%，并且获得一个[COLOR_POSITIVE_TEXT]免费政策[ENDCOLOR]。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]虔信政策[ENDCOLOR]能增强国家的[ICON_PEACE]宗教。
+				[NEWLINE][NEWLINE]启用虔信政策：
+				[NEWLINE][ICON_BULLET]使拥有主流宗教的城市也获得流行度居第二位的宗教的神系信条所提供的奖励。
+				[NEWLINE][ICON_BULLET]拥有世界奇观的城市+25%[ICON_PEACE]信仰。
+				[NEWLINE][ICON_BULLET]允许建造婆罗浮屠和民族史诗。
+				[NEWLINE][NEWLINE]推行所有虔信政策：
+				[NEWLINE][ICON_BULLET][ICON_GREAT_PEOPLE]伟人诞生速度+25%
+				[NEWLINE][ICON_BULLET]获得一个[COLOR_POSITIVE_TEXT]免费政策[ENDCOLOR]。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_MANDATE_OF_HEAVEN_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]天命观念[ENDCOLOR][NEWLINE]购买宗教单位以及宗教建筑所需的[ICON_PEACE]信仰减少33%。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]天命观念[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]购买宗教单位以及宗教建筑所需的[ICON_PEACE]信仰减少33%。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_ORGANIZED_RELIGION">
 			<Text>道德经</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_ORGANIZED_RELIGION_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]道德经[ENDCOLOR][NEWLINE]所有神祠、神庙和[ICON_PEACE]信仰购买建筑+1[ICON_CULTURE]文化产出。[NEWLINE]所有宗教奇观+4[ICON_CULTURE]文化产出。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]道德经[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]所有神祠、神庙和[ICON_PEACE]信仰购买建筑+1[ICON_CULTURE]文化产出。
+				[NEWLINE][ICON_BULLET]所有宗教奇观+4[ICON_CULTURE]文化产出。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_THEOCRACY_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]神权政治[ENDCOLOR][NEWLINE]全国+10%[ICON_CULTURE]文化。[NEWLINE]所有城市获得一个额外的文学家席位。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]神权政治[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]全国+10%[ICON_CULTURE]文化。
+				[NEWLINE][ICON_BULLET]所有城市获得一个额外的文学家席位。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_FREE_RELIGION">
 			<Text>宗教宽容</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_FREE_RELIGION_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]宗教宽容[ENDCOLOR][NEWLINE]所有神祠和神庙+1[ICON_HAPPINESS_1]本地快乐。[NEWLINE]立刻开启一次黄金时代。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]宗教宽容[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]所有神祠和神庙+1[ICON_HAPPINESS_1]本地快乐。
+				[NEWLINE][ICON_BULLET]立刻开启一次黄金时代。
+			</Text>
 		</Replace>
 
 		<Row Tag="TXT_KEY_POLICY_RELIGIOUS_POLITICS">
 			<Text>教法社会</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_RELIGIOUS_POLITICS_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]教法社会[ENDCOLOR][NEWLINE]将[ICON_PEACE]信仰产出的20%转化为全局[ICON_HAPPINESS_1]快乐度。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]教法社会[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]将[ICON_PEACE]信仰产出的20%转化为全局[ICON_HAPPINESS_1]快乐度。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_RELIGIOUS_POLITICS_TEXT">
 			<Text>伊斯兰教法根据《古兰经》和可靠圣训的相关内容，对人民日常生活和行为作出法律规定，因此又称为伊斯兰法律。在伊斯兰国家，受到伊斯兰教法规范的不只穆斯林，齐米亦包括在内。伊斯兰教法涵盖人民日常生活的许多方面，包括政治、经济、文化、商业、金融、合同、性别、婚姻、财产和社会问题，但大体分为两大部分：伊巴达提，有关宗教功修的法律；麦阿麦拉提，有关人与人交往的法律。</Text>
@@ -6426,10 +6502,10 @@
 		<!--*******************Patronage********************* -->
 
 		<Replace Tag="TXT_KEY_POLICY_BRANCH_PATRONAGE_HELP" >
-			<Text>
-				[COLOR_POSITIVE_TEXT]赞助政策[ENDCOLOR]增强城邦关系带来的好处。
+			<Text>	
+				[COLOR_POSITIVE_TEXT]赞助政策[ENDCOLOR]增强城邦关系带来的好处。		
 				[NEWLINE][NEWLINE]启用赞助政策：
-				[NEWLINE][ICON_BULLET]使你对所有城邦[ICON_INFLUENCE]影响力基准值提高20。
+				[NEWLINE][ICON_BULLET]对所有城邦[ICON_INFLUENCE]影响力基准值提高20。
 				[NEWLINE][ICON_BULLET]允许建造汉萨同盟和国家情报局。
 				[NEWLINE][NEWLINE]推行所有赞助政策：
 				[NEWLINE][ICON_BULLET]使结盟城邦不定期地赠送[ICON_GREAT_PEOPLE]伟人。
@@ -6437,9 +6513,11 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_PHILANTHROPY_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]慈善事业[ENDCOLOR]
+			<Text>
+				[COLOR_POSITIVE_TEXT]慈善事业[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]赠送城邦[ICON_GOLD]金钱提升的[ICON_INFLUENCE]影响力加100%。
-				[NEWLINE][ICON_BULLET]所有与城邦的商路+4[ICON_GOLD]金钱。[NEWLINE]城邦提供的资源翻倍。</Text>
+				[NEWLINE][ICON_BULLET]所有与城邦的商路+4[ICON_GOLD]金钱。[NEWLINE]城邦提供的资源翻倍。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_MERCHANT_CONFEDERACY_HELP" >
@@ -6500,31 +6578,58 @@
 		<!--*******************Aesthetics********************* -->
 
 		<Replace Tag="TXT_KEY_POLICY_BRANCH_AESTHETICS_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]美学政策[ENDCOLOR]能增加国家的[ICON_CULTURE]文化和[ICON_TOURISM]魅力产出。[NEWLINE][NEWLINE]启用美学政策能每回合增加相当于50%的额外[ICON_HAPPINESS_1]快乐度的[ICON_CULTURE]文化以加快推行社会政策。[NEWLINE]拥有世界奇观的城市[ICON_CULTURE]文化产出+25%。[NEWLINE]允许建造卢浮宫和国家图书馆。[NEWLINE][NEWLINE]推行所有美学政策后可使你看到隐藏的历史遗迹。工业时代后可以用[ICON_PEACE]信仰购买大音乐家、大艺术家和大文学家。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]美学政策[ENDCOLOR]能增加国家的[ICON_CULTURE]文化和[ICON_TOURISM]魅力产出。
+				[NEWLINE][NEWLINE]启用美学政策：
+				[NEWLINE][ICON_BULLET]每回合增加相当于50%的额外[ICON_HAPPINESS_1]快乐度的[ICON_CULTURE]文化以加快推行社会政策。
+				[NEWLINE][ICON_BULLET]拥有世界奇观的城市+25%[ICON_CULTURE]文化。
+				[NEWLINE][ICON_BULLET]允许建造卢浮宫和国家图书馆。
+				[NEWLINE][NEWLINE]推行所有美学政策：
+				[NEWLINE][ICON_BULLET]使你能看到隐藏的历史遗迹。
+				[NEWLINE][ICON_BULLET]工业时代后可以用[ICON_PEACE]信仰购买大音乐家、大艺术家和大文学家。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_FINE_ARTS_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]美学理论[ENDCOLOR][NEWLINE]博物馆和奇观中杰作主题展示的奖励效果翻倍，所有杰作+2[ICON_CULTURE]文化。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]美学理论[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]博物馆和奇观中杰作主题展示的奖励效果翻倍。
+				[NEWLINE][ICON_BULLET]所有杰作+2[ICON_CULTURE]文化。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_CULTURAL_CENTERS_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]文化中心[ENDCOLOR][NEWLINE]文化建筑（露天剧场、画廊、歌剧院、博物馆、广播塔）+1[ICON_HAPPINESS_1]快乐。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]文化中心[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]文化建筑（露天剧场、画廊、歌剧院、博物馆、广播塔）+1[ICON_HAPPINESS_1]快乐。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_ARTISTIC_GENIUS_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]艺术天才[ENDCOLOR][NEWLINE]立刻获得一位大艺术家，大音乐家、大艺术家和大文学家的获得速度+25%。[NEWLINE]进入全战时代前，建造奇观时+25%[ICON_PRODUCTION]产能积累速率。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]艺术天才[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]立刻获得一位大艺术家。
+				[NEWLINE][ICON_BULLET]大音乐家、大艺术家和大文学家的获得速度+25%。
+				[NEWLINE][ICON_BULLET]进入全战时代前，建造奇观时+25%[ICON_PRODUCTION]产能积累速率。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_FLOURISHING_OF_ARTS" >
 			<Text>艺术伦理</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_FLOURISHING_OF_ARTS_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]艺术伦理[ENDCOLOR][NEWLINE][ICON_CULTURE]新政策的成本-15%。[NEWLINE]每2项已采用的政策+1[ICON_HAPPINESS_1]快乐。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]艺术伦理[ENDCOLOR]
+				[NEWLINE][ICON_BULLET][ICON_CULTURE]新政策的成本-15%。
+				[NEWLINE][ICON_BULLET]每2项已采用的政策+1[ICON_HAPPINESS_1]快乐。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_ETHICS_HELP" >
 			<Text>
-				[COLOR_POSITIVE_TEXT]文化交流[ENDCOLOR][NEWLINE]相同宗教、连接商路和开放边境所带来的[ICON_TOURISM]魅力输出加成各提升15%。[NEWLINE]立刻开启一次[ICON_GOLDEN_AGE]黄金时代。
+				[COLOR_POSITIVE_TEXT]文化交流[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]相同宗教、连接商路和开放边境所带来的[ICON_TOURISM]魅力输出加成各提升15%。
+				[NEWLINE][ICON_BULLET]立刻开启一次[ICON_GOLDEN_AGE]黄金时代。
 			</Text>
 		</Replace>
 
@@ -6532,7 +6637,10 @@
 			<Text>文化渗透</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_CULTURAL_INFILTRATION_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]文化渗透[ENDCOLOR][NEWLINE]对所有[ICON_HAPPINESS_1]快乐度低于我方的文明+33%[ICON_TOURISM]魅力。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]文化渗透[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]对所有[ICON_HAPPINESS_1]快乐度低于我方的文明+33%[ICON_TOURISM]魅力。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_CULTURAL_INFILTRATION_TEXT">
 			<Text>文化侵略指的是一个国家、一个民族试图用自己的核心价值观念去取代其他国家或民族的核心价值观念，改变其价值观，淡化其民族认同感，从而使其对于外族文化产生一种依赖感，最终让其抛弃自己的民族。</Text>
@@ -6705,37 +6813,67 @@
 		<!--*******************Rationalism********************* -->
 
 		<Replace Tag="TXT_KEY_POLICY_BRANCH_RATIONALISM_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]理性政策[ENDCOLOR]能提升国家的[ICON_RESEARCH]科研能力。[NEWLINE][NEWLINE]启用理性政策可在文明保持[ICON_HAPPINESS_1]快乐状态时，每25点[ICON_HAPPINESS_1]满意度+5%[ICON_RESEARCH]科研（上限50%）。科研协定+50%产出。允许建造大报恩寺塔和国家实验室。[NEWLINE][NEWLINE]推行所有理性政策后可免费获得一项科技，并且在工业时代后可以用[ICON_PEACE]信仰购买大科学家。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]理性政策[ENDCOLOR]能提升国家的[ICON_RESEARCH]科研能力。
+				[NEWLINE][NEWLINE]启用理性政策：
+				[NEWLINE][ICON_BULLET]在文明保持[ICON_HAPPINESS_1]快乐状态时，每25点[ICON_HAPPINESS_1]满意度+5%[ICON_RESEARCH]科研（上限50%）。
+				[NEWLINE][ICON_BULLET]科研协定+50%产出。
+				[NEWLINE][ICON_BULLET]允许建造大报恩寺塔和国家实验室。
+				[NEWLINE][NEWLINE]推行所有理性政策：
+				[NEWLINE][ICON_BULLET]免费获得一项科技，
+				[NEWLINE][ICON_BULLET]在工业时代后可以用[ICON_PEACE]信仰购买大科学家。
+			</Text>
 		</Replace>
 
 		<Row Tag="TXT_KEY_POLICY_STATECRAFT">
 			<Text>经世致用</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_STATECRAFT_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]经世致用[ENDCOLOR][NEWLINE]所有图书馆、学院、大学、公立学校和研发实验室+2[ICON_CULTURE]文化。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]经世致用[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]所有图书馆、学院、大学、公立学校和研发实验室+2[ICON_CULTURE]文化。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_STATECRAFT_TEXT">
 			<Text>“经世致用”指学问必须有益于国事。由明清之际思想家王夫之、黄宗羲、顾炎武等提出。他们认为学习、征引古人的文章和行事，应以治事、救世为急务，反对理学家不切实际的空虚之学。[NEWLINE][NEWLINE]讽刺的是，他们所批判的“理学”一开始其实是由程朱等儒家学者所提出的“改变世风，挽救国家”的务实之学。历史上，这种扭曲的幽默屡屡发生，“经世致用”最终也没能逃过一劫。</Text>
 		</Row>
 
 		<Replace Tag="TXT_KEY_POLICY_FREE_THOUGHT_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]思想自由[ENDCOLOR][NEWLINE]每处贸易站+1[ICON_RESEARCH]科研。[NEWLINE]每处学园+6[ICON_RESEARCH]科研。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]思想自由[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]每处贸易站+1[ICON_RESEARCH]科研。
+				[NEWLINE][ICON_BULLET]每处学园+6[ICON_RESEARCH]科研。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_HUMANISM_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]人文主义[ENDCOLOR][NEWLINE]立刻获得一个大科学家。大科学家[ICON_GREAT_PEOPLE]诞生速度+25%。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]人文主义[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]立刻获得一个大科学家。
+				[NEWLINE][ICON_BULLET]大科学家[ICON_GREAT_PEOPLE]诞生速度+25%。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_SECULARISM_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]世俗主义[ENDCOLOR][NEWLINE]每位专业人员+1[ICON_RESEARCH]科研。[NEWLINE]学院、大学、天文台、研发实验室和极地科考站-50%[ICON_GOLD]维护费。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]世俗主义[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]每位专业人员+1[ICON_RESEARCH]科研。
+				[NEWLINE][ICON_BULLET]学院、大学、天文台、研发实验室和极地科考站-50%[ICON_GOLD]维护费。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_SOVEREIGNTY_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]主权在民[ENDCOLOR][NEWLINE]学院、大学、公立学校、天文台、研发实验室和极地科考站+1[ICON_HAPPINESS_1]本地快乐。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]主权在民[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]学院、大学、公立学校、天文台、研发实验室和极地科考站+1[ICON_HAPPINESS_1]本地快乐。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_SCIENTIFIC_REVOLUTION_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]科学革命[ENDCOLOR][NEWLINE]研发实验室增加所在城市15%的[ICON_PRODUCTION]产能和[ICON_RESEARCH]科研产出。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]科学革命[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]研发实验室增加所在城市15%的[ICON_PRODUCTION]产能和[ICON_RESEARCH]科研产出。
+			</Text>
 		</Replace>
 
 		<!--*******************Freedom********************* -->
