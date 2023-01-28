@@ -697,6 +697,41 @@ end
 )
 ------------------ Portugal UB END   ------------------
 
+------------------ CARTHAGINIAN_AGORA BEGIN   ------------------
+local CarthaginianAgoraDummyPolicyCommerce = GameInfoTypes["POLICY_BUILDING_CARTHAGINIAN_AGORA_COMMERCE"];
+local CarthaginianAgoraDummyPolicyExploration = GameInfoTypes["POLICY_BUILDING_CARTHAGINIAN_AGORA_EXPLORATION"];
+local CarthaginianAgoraBuildingID = GameInfoTypes["BUILDING_CARTHAGINIAN_AGORA"];
+function UpdateCarthaginanUWEffect(iPlayerID)
+	local pPlayer = Players[iPlayerID];
+	if pPlayer == nil or not pPlayer:IsMajorCiv() then
+		return;
+	end
+
+	local bHaveUW = pPlayer:CountNumBuildings(CarthaginianAgoraBuildingID) > 0;
+
+	local bAdoptCommerce = pPlayer:HasPolicyBranch(GameInfoTypes["POLICY_BRANCH_COMMERCE"]);
+	local bHaveDummyCommerce = pPlayer:HasPolicy(CarthaginianAgoraDummyPolicyCommerce) and not pPlayer:IsPolicyBlocked(CarthaginianAgoraDummyPolicyCommerce);
+	local bShouldHaveDummyCommerce = bAdoptCommerce and bHaveUW;
+	-- print("CARTHAGINIAN_AGORA: @1", bHaveUW, bAdoptCommerce, bHaveDummyCommerce, bShouldHaveDummyCommerce);
+	if bShouldHaveDummyCommerce ~= bHaveDummyCommerce then
+		print("CARTHAGINIAN_AGORA: commerce: ", bShouldHaveDummyCommerce);
+		pPlayer:SetHasPolicy(CarthaginianAgoraDummyPolicyCommerce, bShouldHaveDummyCommerce, true);
+	end
+
+		
+	local bAdoptExploration = pPlayer:HasPolicyBranch(GameInfoTypes["POLICY_BRANCH_EXPLORATION"]);
+	local bHaveDummyExploration = pPlayer:HasPolicy(CarthaginianAgoraDummyPolicyExploration) and not pPlayer:IsPolicyBlocked(CarthaginianAgoraDummyPolicyExploration);
+	local bShouldHaveDummyExploration = bAdoptExploration and bHaveUW;
+	-- print("CARTHAGINIAN_AGORA: @2", bHaveUW, bAdoptExploration, bHaveDummyExploration, bShouldHaveDummyExploration);
+	if bShouldHaveDummyExploration ~= bHaveDummyExploration then
+		print("CARTHAGINIAN_AGORA: exploration: ", bShouldHaveDummyExploration);
+		pPlayer:SetHasPolicy(CarthaginianAgoraDummyPolicyExploration, bShouldHaveDummyExploration, true);
+	end
+end
+
+GameEvents.PlayerDoTurn.Add(UpdateCarthaginanUWEffect);
+GameEvents.PlayerAdoptPolicy.Add(function(iPlayerID, iPolicyID) UpdateCarthaginanUWEffect(iPlayerID); end);
+------------------ CARTHAGINIAN_AGORA END   ------------------
 
 print("New Building Effects Check Pass!")
 

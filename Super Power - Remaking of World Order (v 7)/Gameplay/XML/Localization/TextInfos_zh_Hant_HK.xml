@@ -1814,7 +1814,12 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_CARTHAGINIAN_AGORA_HELP</Tag>
-			<Text>全國城市內購買單位或建築-15%[ICON_GOLD]金幣。[NEWLINE][NEWLINE]本城市必须已建造馬戲團。建造成本隨城市數量增加。
+			<Text>
+				全國城市內購買單位或建築-15%[ICON_GOLD]金幣。
+				全國城市內購買單位或建築-15%[ICON_GOLD]金錢。
+				[NEWLINE][ICON_BULLET]本城擁有馬戲團後即可建造。建造成本隨城市數量增加。
+				[NEWLINE][ICON_BULLET]若開啟商業政策，全國城市內購買單位或建築額外-15%[ICON_GOLD]金錢。
+				[NEWLINE][ICON_BULLET]若開啟海事政策，海軍單位+10%戰鬥力。
 			</Text>
 		</Row>
 		
@@ -14008,6 +14013,19 @@
 		</Row>
 		<Row Tag="TXT_KEY_EUPANEL_BONUS_PROMOTION_PROMOTION_DEFENSE">
 			<Text>防禦{1_PromotionType}</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_BUILDING_CARTHAGINIAN_AGORA_COMMERCE_DESCRIPTION">
+			<Text>迦太基大集市-商業</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_CARTHAGINIAN_AGORA_COMMERCE_HELP">
+			<Text>購買花費-5%</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_CARTHAGINIAN_AGORA_EXPLORATION_DESCRIPTION">
+			<Text>迦太基大集市-海事</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_CARTHAGINIAN_AGORA_EXPLORATION_HELP">
+			<Text>海軍單位+10%戰鬥力</Text>
 		</Row>
 	</Language_zh_Hant_HK>
 </GameData>
