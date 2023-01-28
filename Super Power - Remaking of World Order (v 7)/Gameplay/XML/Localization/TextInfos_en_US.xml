@@ -13812,7 +13812,7 @@
 				[NEWLINE][NEWLINE][ICON_BULLET]Strong attacking [COLOR_POSITIVE_TEXT]Cities[ENDCOLOR].
 				[NEWLINE][ICON_BULLET]+25% [ICON_STRENGTH]Combat Strength when fighting in [COLOR_POSITIVE_TEXT]Rough Terrains[ENDCOLOR].
 				[NEWLINE][ICON_BULLET]Strong when defending attacks from [COLOR_POSITIVE_TEXT]Anti-Mounted Units[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Militia Units[ENDCOLOR].
-				[NEWLINE][ICON_BULLET]Weak when attacked by [COLOR_NEGATIVE_TEXT]Heavy Mounted Units[ENDCOLOR].</Text>
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_GUNPOWDER_INFANTRY_COMBAT">
@@ -13824,7 +13824,7 @@
 				[NEWLINE][NEWLINE][ICON_BULLET]Perform a [COLOR_POSITIVE_TEXT]Ranged Attack[ENDCOLOR] before melee attacking. [NEWLINE][ICON_BULLET]Strong attacking [COLOR_POSITIVE_TEXT]Cities[ENDCOLOR].
 				[NEWLINE][ICON_BULLET]+25% [ICON_STRENGTH]Combat Strength when fighting in [COLOR_POSITIVE_TEXT]Rough Terrains[ENDCOLOR].
 				[NEWLINE][ICON_BULLET]Strong when defending attacks from [COLOR_POSITIVE_TEXT]Anti-Tank Units[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Militia Units[ENDCOLOR].
-				[NEWLINE][ICON_BULLET]Weak when attacked by [COLOR_NEGATIVE_TEXT]Tanks[ENDCOLOR].</Text>
+			</Text>
 		</Row>
 
 		<Replace Tag="TXT_KEY_PROMOTION_SHOCK_1_HELP" >

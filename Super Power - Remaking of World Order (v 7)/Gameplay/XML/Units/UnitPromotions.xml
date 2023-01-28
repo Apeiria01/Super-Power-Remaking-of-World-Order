@@ -1590,27 +1590,27 @@
 		<Row>
 			<PromotionType>PROMOTION_INFANTRY_COMBAT</PromotionType>
 			<OtherPromotionType>PROMOTION_ANTI_MOUNTED</OtherPromotionType>
-			<Defense>50</Defense>
+			<Defense>25</Defense>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_INFANTRY_COMBAT</PromotionType>
 			<OtherPromotionType>PROMOTION_MILITIA_COMBAT</OtherPromotionType>
-			<Defense>50</Defense>
+			<Defense>25</Defense>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_GUNPOWDER_INFANTRY_COMBAT</PromotionType>
 			<OtherPromotionType>PROMOTION_ANTI_MOUNTED</OtherPromotionType>
-			<Defense>50</Defense>
+			<Defense>25</Defense>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_GUNPOWDER_INFANTRY_COMBAT</PromotionType>
 			<OtherPromotionType>PROMOTION_ANTI_TANK</OtherPromotionType>
-			<Defense>50</Defense>
+			<Defense>25</Defense>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_GUNPOWDER_INFANTRY_COMBAT</PromotionType>
 			<OtherPromotionType>PROMOTION_MILITIA_COMBAT</OtherPromotionType>
-			<Defense>50</Defense>
+			<Defense>25</Defense>
 		</Row>
 	</UnitPromotions_PromotionModifiers>
 
@@ -1783,23 +1783,23 @@
 		<Row>
 			<PromotionType>PROMOTION_HITANDRUN</PromotionType>
 			<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
-			<Modifier>100</Modifier>
+			<Modifier>50</Modifier>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_HELI_ATTACK</PromotionType>
 			<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
-			<Modifier>100</Modifier>
+			<Modifier>50</Modifier>
 		</Row>
 
 		<Row>
 			<PromotionType>PROMOTION_HITANDRUN</PromotionType>
 			<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
-			<Modifier>100</Modifier>
+			<Modifier>50</Modifier>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_HELI_ATTACK</PromotionType>
 			<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
-			<Modifier>100</Modifier>
+			<Modifier>50</Modifier>
 		</Row>
 	</UnitPromotions_UnitCombatMods>
 	
@@ -1972,17 +1972,17 @@
 		<Row>
 			<PromotionType>PROMOTION_ANTI_MOUNTED</PromotionType>
 			<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
-			<Modifier>200</Modifier>
+			<Modifier>100</Modifier>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_FORMATION_1</PromotionType>
 			<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
-			<Modifier>50</Modifier>
+			<Modifier>25</Modifier>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_FORMATION_2</PromotionType>
 			<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
-			<Modifier>50</Modifier>
+			<Modifier>25</Modifier>
 		</Row>
 
 	
@@ -1990,7 +1990,7 @@
 		<Row>
 			<PromotionType>PROMOTION_ANTI_TANK</PromotionType>
 			<UnitCombatType>UNITCOMBAT_ARMOR</UnitCombatType>
-			<Modifier>200</Modifier>
+			<Modifier>100</Modifier>
 		</Row>
 		<!--<Row>
 			<PromotionType>PROMOTION_HELI_ATTACK</PromotionType>
@@ -2000,12 +2000,12 @@
 		<Row>
 			<PromotionType>PROMOTION_AMBUSH_1</PromotionType>
 			<UnitCombatType>UNITCOMBAT_ARMOR</UnitCombatType>
-			<Modifier>50</Modifier>
+			<Modifier>25</Modifier>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_AMBUSH_2</PromotionType>
 			<UnitCombatType>UNITCOMBAT_ARMOR</UnitCombatType>
-			<Modifier>50</Modifier>
+			<Modifier>25</Modifier>
 		</Row>
 
 
@@ -2401,54 +2401,54 @@
 		<Row>
 			<PromotionType>PROMOTION_ARCHERY_COMBAT</PromotionType>
 			<OtherPromotionType>PROMOTION_ANTI_MOUNTED</OtherPromotionType>
-			<Attack>200</Attack>
+			<Attack>100</Attack>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_ARCHERY_COMBAT</PromotionType>
 			<OtherPromotionType>PROMOTION_ANTI_TANK</OtherPromotionType>
-			<Attack>200</Attack>
+			<Attack>100</Attack>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_ARCHERY_COMBAT</PromotionType>
 			<OtherPromotionType>PROMOTION_HITANDRUN</OtherPromotionType>
-			<Attack>150</Attack>
+			<Attack>75</Attack>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_ANTI_AIR</PromotionType>
 			<OtherPromotionType>PROMOTION_HELI_ATTACK</OtherPromotionType>
-			<Attack>250</Attack>
+			<Attack>125</Attack>
 		</Row>
 
 		<Row>
 			<PromotionType>PROMOTION_ACCURACY_1</PromotionType>
 			<OtherPromotionType>PROMOTION_ANTI_MOUNTED</OtherPromotionType>
-			<Attack>90</Attack>
+			<Attack>45</Attack>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_ACCURACY_1</PromotionType>
 			<OtherPromotionType>PROMOTION_ANTI_TANK</OtherPromotionType>
-			<Attack>90</Attack>
+			<Attack>45</Attack>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_ACCURACY_1</PromotionType>
 			<OtherPromotionType>PROMOTION_HITANDRUN</OtherPromotionType>
-			<Attack>90</Attack>
+			<Attack>45</Attack>
 		</Row>
 
 		<Row>
 			<PromotionType>PROMOTION_ACCURACY_2</PromotionType>
 			<OtherPromotionType>PROMOTION_ANTI_MOUNTED</OtherPromotionType>
-			<Attack>90</Attack>
+			<Attack>45</Attack>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_ACCURACY_2</PromotionType>
 			<OtherPromotionType>PROMOTION_ANTI_TANK</OtherPromotionType>
-			<Attack>90</Attack>
+			<Attack>45</Attack>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_ACCURACY_2</PromotionType>
 			<OtherPromotionType>PROMOTION_HITANDRUN</OtherPromotionType>
-			<Attack>90</Attack>
+			<Attack>45</Attack>
 		</Row>
 		<!--Land based fighter intercept carrier fighter-->
 		
@@ -2456,22 +2456,22 @@
 		<Row>
 			<PromotionType>PROMOTION_SP_FULL_MOON_STRIKE</PromotionType>
 			<OtherPromotionType>PROMOTION_ARCHERY_COMBAT</OtherPromotionType>
-			<Attack>100</Attack>
+			<Attack>50</Attack>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_SP_FULL_MOON_STRIKE</PromotionType>
 			<OtherPromotionType>PROMOTION_CITY_SIEGE</OtherPromotionType>
-			<Attack>100</Attack>
+			<Attack>50</Attack>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_SP_FULL_MOON_STRIKE</PromotionType>
 			<OtherPromotionType>PROMOTION_SPLASH_DAMAGE</OtherPromotionType>
-			<Attack>100</Attack>
+			<Attack>50</Attack>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_SP_FULL_MOON_STRIKE</PromotionType>
 			<OtherPromotionType>PROMOTION_NUCLEAR_ARTILLERY</OtherPromotionType>
-			<Attack>100</Attack>
+			<Attack>50</Attack>
 		</Row>
 	</UnitPromotions_PromotionModifiers>
 
@@ -2486,7 +2486,7 @@
 			<Help>TXT_KEY_PROMOTION_CITY_SIEGE_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<CityAttack>200</CityAttack>
-			<AttackFortifiedMod>100</AttackFortifiedMod>
+			<AttackFortifiedMod>50</AttackFortifiedMod>
 			<OnlyDefensive>true</OnlyDefensive>
 			<NoDefensiveBonus>true</NoDefensiveBonus>
 			<OrderPriority>11</OrderPriority>
@@ -2560,7 +2560,7 @@
 		<Row>
 			<PromotionType>PROMOTION_CITY_SIEGE</PromotionType>
 			<UnitCombatType>UNITCOMBAT_HELICOPTER</UnitCombatType>
-			<Modifier>-50</Modifier>
+			<Modifier>-25</Modifier>
 		</Row>
 	</UnitPromotions_UnitCombatMods>
 
@@ -2569,23 +2569,23 @@
 		<Row>
 			<PromotionType>PROMOTION_CITY_SIEGE</PromotionType>
 			<OtherPromotionType>PROMOTION_ARCHERY_COMBAT</OtherPromotionType>
-			<Attack>100</Attack>
+			<Attack>50</Attack>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_CITY_SIEGE</PromotionType>
 			<OtherPromotionType>PROMOTION_CITADEL_DEFENSE</OtherPromotionType>
-			<Attack>400</Attack>
+			<Attack>200</Attack>
 		</Row>
 
 		<Row>
 			<PromotionType>PROMOTION_VOLLEY_1</PromotionType>
 			<OtherPromotionType>PROMOTION_CITADEL_DEFENSE</OtherPromotionType>
-			<Attack>100</Attack>
+			<Attack>50</Attack>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_VOLLEY_2</PromotionType>
 			<OtherPromotionType>PROMOTION_CITADEL_DEFENSE</OtherPromotionType>
-			<Attack>100</Attack>
+			<Attack>50</Attack>
 		</Row>
 	</UnitPromotions_PromotionModifiers>
 
@@ -2861,27 +2861,27 @@
 		<Row>
 			<PromotionType>PROMOTION_NAVALMELEE_COMBAT</PromotionType>
 			<UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
-			<Modifier>150</Modifier>
+			<Modifier>75</Modifier>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_DESTROYER_COMBAT</PromotionType>
 			<UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
-			<Modifier>150</Modifier>
+			<Modifier>75</Modifier>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_NAVALMELEE_COMBAT</PromotionType>
 			<UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType>
-			<Modifier>-50</Modifier>
+			<Modifier>-25</Modifier>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_NAVALMELEE_COMBAT</PromotionType>
 			<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-			<Modifier>-50</Modifier>
+			<Modifier>-25</Modifier>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_DESTROYER_COMBAT</PromotionType>
 			<UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType>
-			<Modifier>-50</Modifier>
+			<Modifier>-25</Modifier>
 		</Row>
 		<!--<Row>
 			<PromotionType>PROMOTION_DESTROYER_COMBAT</PromotionType>
@@ -2896,53 +2896,53 @@
 		<Row>
 			<PromotionType>PROMOTION_NAVALMELEE_COMBAT</PromotionType>
 			<OtherPromotionType>PROMOTION_MILITIA_COMBAT</OtherPromotionType>
-			<Defense>50</Defense>
+			<Defense>25</Defense>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_DESTROYER_COMBAT</PromotionType>
 			<OtherPromotionType>PROMOTION_MILITIA_COMBAT</OtherPromotionType>
-			<Defense>50</Defense>
+			<Defense>25</Defense>
 		</Row>
 
 		<Row>
 			<PromotionType>PROMOTION_NAVALMELEE_COMBAT</PromotionType>
 			<OtherPromotionType>PROMOTION_HITANDRUN</OtherPromotionType>
-			<Defense>50</Defense>
+			<Defense>25</Defense>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_DESTROYER_COMBAT</PromotionType>
 			<OtherPromotionType>PROMOTION_HITANDRUN</OtherPromotionType>
-			<Defense>50</Defense>
+			<Defense>25</Defense>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_NAVAL_HIT_AND_RUN</PromotionType>
 			<OtherPromotionType>PROMOTION_HITANDRUN</OtherPromotionType>
-			<Defense>50</Defense>
+			<Defense>25</Defense>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_SUBMARINE_COMBAT</PromotionType>
 			<OtherPromotionType>PROMOTION_HITANDRUN</OtherPromotionType>
-			<Defense>50</Defense>
+			<Defense>25</Defense>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_NAVAL_RANGED_SHIP</PromotionType>
 			<OtherPromotionType>PROMOTION_HITANDRUN</OtherPromotionType>
-			<Defense>50</Defense>
+			<Defense>25</Defense>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_NAVAL_RANGED_CRUISER</PromotionType>
 			<OtherPromotionType>PROMOTION_HITANDRUN</OtherPromotionType>
-			<Defense>50</Defense>
+			<Defense>25</Defense>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_NAVAL_CAPITAL_SHIP</PromotionType>
 			<OtherPromotionType>PROMOTION_HITANDRUN</OtherPromotionType>
-			<Defense>50</Defense>
+			<Defense>25</Defense>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_CARRIER_UNIT</PromotionType>
 			<OtherPromotionType>PROMOTION_HITANDRUN</OtherPromotionType>
-			<Defense>50</Defense>
+			<Defense>25</Defense>
 		</Row>
 	</UnitPromotions_PromotionModifiers>
 
@@ -3183,17 +3183,17 @@
 		<Row>
 			<PromotionType>PROMOTION_NAVAL_HIT_AND_RUN</PromotionType>
 			<UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType>
-			<Modifier>150</Modifier>
+			<Modifier>75</Modifier>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_SUBMARINE_COMBAT</PromotionType>
 			<UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType>
-			<Modifier>200</Modifier>
+			<Modifier>100</Modifier>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_SUBMARINE_COMBAT</PromotionType>
 			<UnitCombatType>UNITCOMBAT_CARRIER</UnitCombatType>
-			<Modifier>200</Modifier>
+			<Modifier>100</Modifier>
 		</Row>
 
 
@@ -3376,17 +3376,17 @@
 		<Row>
 			<PromotionType>PROMOTION_NAVAL_RANGED_SHIP</PromotionType>
 			<UnitCombatType>UNITCOMBAT_NAVALMELEE</UnitCombatType>
-			<Modifier>150</Modifier>
+			<Modifier>75</Modifier>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_NAVAL_RANGED_CRUISER</PromotionType>
 			<UnitCombatType>UNITCOMBAT_NAVALMELEE</UnitCombatType>
-			<Modifier>150</Modifier>
+			<Modifier>75</Modifier>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_NAVAL_RANGED_CRUISER</PromotionType>
 			<UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType>
-			<Modifier>100</Modifier>
+			<Modifier>50</Modifier>
 		</Row>
 		<!--<Row>
 			<PromotionType>PROMOTION_NAVAL_RANGED_CRUISER</PromotionType>
@@ -3467,17 +3467,17 @@
 		<Row>
 			<PromotionType>PROMOTION_NAVAL_RANGED_CRUISER</PromotionType>
 			<UnitClassType>UNITCLASS_GUIDED_MISSILE</UnitClassType>
-			<Modifier>150</Modifier>
+			<Modifier>75</Modifier>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_NAVAL_RANGED_CRUISER</PromotionType>
 			<UnitClassType>UNITCLASS_HELICOPTER_GUNSHIP</UnitClassType>
-			<Modifier>100</Modifier>
+			<Modifier>50</Modifier>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_NAVAL_RANGED_CRUISER</PromotionType>
 			<UnitClassType>UNITCLASS_ATTACK_HELICOPTER</UnitClassType>
-			<Modifier>100</Modifier>
+			<Modifier>50</Modifier>
 		</Row>
 		<!--<Row>
 			<PromotionType>PROMOTION_NAVAL_RANGED_CRUISER</PromotionType>
@@ -3683,18 +3683,18 @@
 		<Row>
 			<PromotionType>PROMOTION_NAVAL_CAPITAL_SHIP</PromotionType>
 			<OtherPromotionType>PROMOTION_CITADEL_DEFENSE</OtherPromotionType>
-			<Attack>350</Attack>
+			<Attack>175</Attack>
 		</Row>
 
 		<Row>
 			<PromotionType>PROMOTION_NAVAL_RANGED_SHIP</PromotionType>
 			<OtherPromotionType>PROMOTION_CITADEL_DEFENSE</OtherPromotionType>
-			<Attack>150</Attack>
+			<Attack>75</Attack>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_NAVAL_RANGED_CRUISER</PromotionType>
 			<OtherPromotionType>PROMOTION_CITADEL_DEFENSE</OtherPromotionType>
-			<Attack>150</Attack>
+			<Attack>75</Attack>
 		</Row>
 	</UnitPromotions_PromotionModifiers>
 	
