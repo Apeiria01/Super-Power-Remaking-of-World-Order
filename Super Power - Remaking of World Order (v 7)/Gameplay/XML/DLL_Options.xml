@@ -25,6 +25,11 @@
 		</Update>
 
 		<Update>
+			<Where Name="GLOBAL_CITY_JUNGLE_BONUS"/>
+			<Set Value="1"/>
+		</Update>
+
+		<Update>
 			<Where Name="GLOBAL_STACKING_RULES"/>
 			<Set Value="1"/>
 		</Update>
@@ -308,6 +313,10 @@
 			<Type>GAMEOPTION_SP_CORPS_MODE_LOW</Type>
 			<Description>TXT_KEY_GAME_OPTION_SP_CORPS_MODE_LOW</Description>
 			<Help>TXT_KEY_GAME_OPTION_SP_CORPS_MODE_LOW_HELP</Help>
+		</Row>
+		<Row>
+			<Type>GAMEOPTION_DISABLE_GIFT_MILITIA</Type>
+			<Description>TXT_KEY_GAME_OPTION_DISABLE_GIFT_MILITIA</Description>
 		</Row>
 	</GameOptions>
 </GameData>

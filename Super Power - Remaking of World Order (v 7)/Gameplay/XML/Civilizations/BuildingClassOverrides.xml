@@ -292,11 +292,11 @@
 
 
 
-		<!--<Row>
+		<Row>
 			<CivilizationType>CIVILIZATION_AZTEC</CivilizationType>
-			<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
-			<BuildingType>BUILDING_AZTEC_ANCIENT_BARRACKS</BuildingType>
-		</Row>-->
+			<BuildingClassType>BUILDINGCLASS_GRAND_TEMPLE</BuildingClassType>
+			<BuildingType>BUILDING_AZTEC_HUEY_TEOCALLI_SP</BuildingType>
+		</Row>
 		<Row>
 			<CivilizationType>CIVILIZATION_AZTEC</CivilizationType>
 			<BuildingClassType>BUILDINGCLASS_WATERMILL</BuildingClassType>
