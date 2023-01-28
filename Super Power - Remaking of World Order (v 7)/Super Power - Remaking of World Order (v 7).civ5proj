@@ -786,6 +786,16 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
         <Type>UpdateDatabase</Type>
         <FileName>Gameplay/SQL/Units/Unit_ScaleFromNumGWs.sql</FileName>
       </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>VMC/DB/YIELDS/NewYields_DDL.sql</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>Gameplay/SQL/Yields/SP_Yields.sql</FileName>
+      </Action>
     </ModActions>
     <ModProperties />
     <ModContent>
@@ -858,6 +868,7 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
     <Folder Include="Gameplay\Lua\Utility" />
     <Folder Include="Gameplay\SQL\ArtDefines\" />
     <Folder Include="Gameplay\SQL\Buildings" />
+    <Folder Include="Gameplay\SQL\Yields" />
     <Folder Include="Gameplay\SQL\Terrian" />
     <Folder Include="Gameplay\SQL\Policies\" />
     <Folder Include="Gameplay\SQL\Units" />
@@ -940,6 +951,7 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
     <Folder Include="VMC\DB\EVENTS" />
     <Folder Include="VMC\DB\GLOBAL" />
     <Folder Include="VMC\DB\BUILDINGS" />
+    <Folder Include="VMC\DB\YIELDS" />
     <Folder Include="VMC\DB\POLICIES" />
     <Folder Include="VMC\DB\UNITS" />
     <Folder Include="VMC\DB\UI" />
@@ -1324,6 +1336,10 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="Gameplay\SQL\Units\UpdateLandHitAndRunCost.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="Gameplay\SQL\Yields\SP_Yields.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
@@ -5976,6 +5992,10 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="VMC\DB\UNITS\Unit_ScalingFromOwnedImprovements.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="VMC\DB\YIELDS\NewYields_DDL.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
