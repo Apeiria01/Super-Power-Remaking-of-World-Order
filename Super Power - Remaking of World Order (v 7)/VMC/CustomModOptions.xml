@@ -943,6 +943,8 @@
 	<Row Class="2" Name="EVENTS_TRADE_ROUTE_MOVE" Value="1"/>
 
 	<Row Class="2" Name="API_TRADE_ROUTE_YIELD_RATE" Value="1" DbUpdates="1"/>
+
+	<Row Class="6" Name="BALANCE_CORE" Value="1" DbUpdates="1"/>
   </CustomModOptions>
 
   <CustomModPostDefines>

@@ -7,3 +7,5 @@ ALTER TABLE Improvements
 INSERT INTO CustomModDbUpdates(Name, Value) VALUES('GLOBAL_STACKING_RULES', 1);
 
 INSERT INTO CustomModDbUpdates(Name, Value) VALUES('API_TRADE_ROUTE_YIELD_RATE', 1);
+
+INSERT INTO CustomModDbUpdates(Name, Value) VALUES('BALANCE_CORE', 1);
