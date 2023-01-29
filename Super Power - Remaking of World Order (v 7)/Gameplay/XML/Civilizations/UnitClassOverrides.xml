@@ -436,13 +436,13 @@
 			<UnitType>UNIT_POLISH_PZLW3_HELICOPTER</UnitType>
 		</Row>
 
-
-
-		<Row>
+		
+		<!--<Row>
 			<CivilizationType>CIVILIZATION_SHOSHONE</CivilizationType>
 			<UnitClassType>UNITCLASS_SCOUT</UnitClassType>
 			<UnitType>UNIT_SHOSHONE_PATHFINDER</UnitType>
-		</Row>
+		</Row>-->
+
 		<Row>
 			<CivilizationType>CIVILIZATION_SHOSHONE</CivilizationType>
 			<UnitClassType>UNITCLASS_CAVALRY</UnitClassType>

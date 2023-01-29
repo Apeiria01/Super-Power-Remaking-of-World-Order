@@ -68,7 +68,7 @@
 			<PortraitIndex>5</PortraitIndex>
 			<ExtraMaintenanceCost>1</ExtraMaintenanceCost>
 		</Row>
-		<Row>
+		<!--<Row>
 			<Class>UNITCLASS_SCOUT</Class>
 			<Type>UNIT_SHOSHONE_PATHFINDER</Type>
 			<BaseSightRange>3</BaseSightRange>
@@ -87,7 +87,6 @@
 			<Pillage>false</Pillage>
 			<NoBadGoodies>true</NoBadGoodies>
 			<ObsoleteTech>TECH_ASTRONOMY</ObsoleteTech>
-			<!--<GoodyHutUpgradeUnitClass>UNITCLASS_COMPOSITE_BOWMAN</GoodyHutUpgradeUnitClass>-->
 			<AdvancedStartCost>10</AdvancedStartCost>
 			<XPValueAttack>1</XPValueAttack>
 			<XPValueDefense>1</XPValueDefense>
@@ -97,7 +96,7 @@
 			<IconAtlas>EXPANSION2_UNIT_ATLAS</IconAtlas>
 			<PortraitIndex>14</PortraitIndex>
 			<ExtraMaintenanceCost>1</ExtraMaintenanceCost>
-		</Row>
+		</Row>-->
 		<Row>
 			<Class>UNITCLASS_SCOUT</Class>
 			<Type>UNIT_INCAN_CHASQUI</Type>
@@ -1675,10 +1674,12 @@
 			<UnitType>UNIT_SCOUT</UnitType>
 			<UnitClassType>UNITCLASS_EXPLORERX</UnitClassType>
 		</Row>
-		<Row>
+
+		<!--<Row>
 			<UnitType>UNIT_SHOSHONE_PATHFINDER</UnitType>
 			<UnitClassType>UNITCLASS_EXPLORERX</UnitClassType>
-		</Row>
+		</Row>-->
+		
 		<Row>
 			<UnitType>UNIT_INCAN_CHASQUI</UnitType>
 			<UnitClassType>UNITCLASS_EXPLORERX</UnitClassType>
@@ -1898,7 +1899,8 @@
 			<UnitType>UNIT_SCOUT</UnitType>
 			<PromotionType>PROMOTION_IGNORE_TERRAIN_COST</PromotionType>
 		</Row>
-		<Row>
+
+		<!--<Row>
 			<UnitType>UNIT_SHOSHONE_PATHFINDER</UnitType>
 			<PromotionType>PROMOTION_RECON_UNIT</PromotionType>
 		</Row>
@@ -1909,7 +1911,8 @@
 		<Row>
 			<UnitType>UNIT_SHOSHONE_PATHFINDER</UnitType>
 			<PromotionType>PROMOTION_GOODY_HUT_PICKER</PromotionType>
-		</Row>
+		</Row>-->
+
 		<Row>
 			<UnitType>UNIT_INCAN_CHASQUI</UnitType>
 			<PromotionType>PROMOTION_RECON_UNIT</PromotionType>
@@ -2603,10 +2606,12 @@
 			<UnitType>UNIT_SCOUT</UnitType>
 			<UnitAIType>UNITAI_EXPLORE</UnitAIType>
 		</Row>
-		<Row>
+
+		<!--<Row>
 			<UnitType>UNIT_SHOSHONE_PATHFINDER</UnitType>
 			<UnitAIType>UNITAI_EXPLORE</UnitAIType>
-		</Row>
+		</Row>-->
+
 		<Row>
 			<UnitType>UNIT_INCAN_CHASQUI</UnitType>
 			<UnitAIType>UNITAI_EXPLORE</UnitAIType>
@@ -3420,11 +3425,13 @@
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 			<Cost>1</Cost>
 		</Row>
-		<Row>
+
+		<!-- <Row>
 			<UnitType>UNIT_SHOSHONE_PATHFINDER</UnitType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 			<Cost>1</Cost>
-		</Row>
+		</Row>-->
+
 		<Row>
 			<UnitType>UNIT_INCAN_CHASQUI</UnitType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
@@ -3570,17 +3577,18 @@
 			<FlavorType>FLAVOR_RECON</FlavorType>
 			<Flavor>2</Flavor>
 		</Row>
-		<Row>
+		
+		<!--<Row>
 			<UnitType>UNIT_SHOSHONE_PATHFINDER</UnitType>
 			<FlavorType>FLAVOR_RECON</FlavorType>
 			<Flavor>2</Flavor>
 		</Row>
-		<!--<Row>
+		<Row>
 			<UnitType>UNIT_OTTOMAN_SIPAHI</UnitType>
 			<FlavorType>FLAVOR_RECON</FlavorType>
 			<Flavor>2</Flavor>
-		</Row>-->
-		<!--<Row>
+		</Row>
+		<Row>
 			<UnitType>UNIT_RECON_CAVALRY</UnitType>
 			<FlavorType>FLAVOR_RECON</FlavorType>
 			<Flavor>5</Flavor>
