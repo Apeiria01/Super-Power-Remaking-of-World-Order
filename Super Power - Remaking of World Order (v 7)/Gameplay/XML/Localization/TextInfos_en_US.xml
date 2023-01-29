@@ -16267,9 +16267,9 @@
 			</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_GAME_OPTION_DISABLE_GIFT_MILITIA">
+		<Row Tag="TXT_KEY_GAME_OPTION_ABLE_GIFT_MILITIA">
 			<Text>
-			SP- [COLOR_YELLOW] Can't gift militia units [ENDCOLOR]
+				SP - [COLOR_YELLOW]Can gift militia units [ENDCOLOR]
 			</Text>
 		</Row>
 

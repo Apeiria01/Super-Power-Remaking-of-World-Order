@@ -6267,8 +6267,8 @@
 		<Replace Tag="TXT_KEY_POLICY_REPUBLIC_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]共和政体[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]每座城市+4[ICON_GOLD]金钱，+2[ICON_FOOD]食物，+2[ICON_RES_CONSUMER]商品。
-				[NEWLINE][ICON_BULLET]每座城市提供+1%[ICON_FOOD]全局粮食和[ICON_PRODUCTION]产能加成。
+				[NEWLINE][ICON_BULLET]每座城市+4[ICON_GOLD]金钱，+2[ICON_FOOD]食物、[ICON_RES_CONSUMER]商品。
+				[NEWLINE][ICON_BULLET]每座城市+1%[ICON_FOOD]全局粮食和[ICON_PRODUCTION]产能加成。
 			</Text>
 		</Replace>
 
@@ -6337,9 +6337,9 @@
 				[COLOR_POSITIVE_TEXT]代议制度[ENDCOLOR]
 				[NEWLINE]减缓一到五级城市造成的政策[ICON_CULTURE]文化阈值增长（能够与强化管理设施效果叠加）：
 				[NEWLINE][ICON_BULLET]一级城市：没有额外的[ICON_CULTURE]文化阈值增长。
-				[NEWLINE][ICON_BULLET]二级城市：[ICON_CULTURE]文化阈值增长由10%降低到5%。
-				[NEWLINE][ICON_BULLET]三级城市：[ICON_CULTURE]文化阈值增长由20%降低到15%。
-				[NEWLINE][ICON_BULLET]四五级城市：[ICON_CULTURE]文化阈值增长由33%降低到28%。
+				[NEWLINE][ICON_BULLET]二级城市：[ICON_CULTURE]文化阈值增长降至5%。
+				[NEWLINE][ICON_BULLET]三级城市：[ICON_CULTURE]文化阈值增长降至15%。
+				[NEWLINE][ICON_BULLET]四五级城市：[ICON_CULTURE]文化阈值增长降至28%。
 				[NEWLINE][ICON_BULLET]每座城市+1%[ICON_CULTURE]全局文化。
 			</Text>
 		</Replace>
@@ -6501,6 +6501,13 @@
 		<Row Tag="TXT_KEY_POLICY_RELIGIOUS_POLITICS_TEXT">
 			<Text>伊斯兰教法根据《古兰经》和可靠圣训的相关内容，对人民日常生活和行为作出法律规定，因此又称为伊斯兰法律。在伊斯兰国家，受到伊斯兰教法规范的不只穆斯林，齐米亦包括在内。伊斯兰教法涵盖人民日常生活的许多方面，包括政治、经济、文化、商业、金融、合同、性别、婚姻、财产和社会问题，但大体分为两大部分：伊巴达提，有关宗教功修的法律；麦阿麦拉提，有关人与人交往的法律。</Text>
 		</Row>
+
+		<Replace Tag="TXT_KEY_POLICY_REFORMATION_HELP">
+			<Text>
+				[COLOR_POSITIVE_TEXT]宗教改革[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]如果你已经创立了宗教，立刻获得一项改革信条。
+			</Text>
+		</Replace>
 
 		<!--*******************Patronage********************* -->
 
@@ -14191,9 +14198,9 @@
 			</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_GAME_OPTION_DISABLE_GIFT_MILITIA">
+		<Row Tag="TXT_KEY_GAME_OPTION_ABLE_GIFT_MILITIA">
 			<Text>
-				SP- [COLOR_YELLOW]禁止 赠送民兵单位[ENDCOLOR]
+				SP-开启 [COLOR_YELLOW]赠送民兵单位[ENDCOLOR]
 			</Text>
 		</Row>
 

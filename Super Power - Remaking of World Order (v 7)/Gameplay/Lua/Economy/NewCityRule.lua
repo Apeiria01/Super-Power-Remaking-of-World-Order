@@ -332,9 +332,6 @@ function NewCitySystem(playerID)
                 -- Get Extra Consumers & Electricities
                 local iNumCon = 0;
                 local iNumEle = 0;
-                if player:HasPolicy(GameInfoTypes["POLICY_REPUBLIC"]) then
-                    iNumCon = 2; -- Has been given by XML, but need to be counted
-                end
                 if player:HasPolicy(GameInfoTypes["POLICY_MERCHANT_NAVY"]) and
                     pCity:IsCoastal(GameDefines["MIN_WATER_SIZE_FOR_OCEAN"]) then
                     iNumCon = iNumCon + 3;

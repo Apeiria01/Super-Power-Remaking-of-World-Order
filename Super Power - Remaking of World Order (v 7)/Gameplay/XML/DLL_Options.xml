@@ -315,8 +315,8 @@
 			<Help>TXT_KEY_GAME_OPTION_SP_CORPS_MODE_LOW_HELP</Help>
 		</Row>
 		<Row>
-			<Type>GAMEOPTION_DISABLE_GIFT_MILITIA</Type>
-			<Description>TXT_KEY_GAME_OPTION_DISABLE_GIFT_MILITIA</Description>
+			<Type>GAMEOPTION_ABLE_GIFT_MILITIA</Type>
+			<Description>TXT_KEY_GAME_OPTION_ABLE_GIFT_MILITIA</Description>
 		</Row>
 	</GameOptions>
 </GameData>

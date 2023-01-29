@@ -1,6 +1,6 @@
-function DisableGiftMilitia(iMajor, iMinor, iUnit)
-    local disableMilitia = PreGame.GetGameOption("GAMEOPTION_DISABLE_GIFT_MILITIA") == 1;
-    if not disableMilitia then
+function AbleGiftMilitia(iMajor, iMinor, iUnit)
+    local ableMilitia = PreGame.GetGameOption("GAMEOPTION_ABLE_GIFT_MILITIA") == 0;
+    if not ableMilitia then
         return true;
     end
 
@@ -14,6 +14,6 @@ function DisableGiftMilitia(iMajor, iMinor, iUnit)
 
     return not pUnit:IsHasPromotion(GameInfoTypes.PROMOTION_MILITIA_COMBAT);
 end
-GameEvents.PlayerCanGiftUnit.Add(DisableGiftMilitia);
+GameEvents.PlayerCanGiftUnit.Add(AbleGiftMilitia);
 
 print("NewCityStateDiplomaticRule: Check Pass!");

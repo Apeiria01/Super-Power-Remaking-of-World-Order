@@ -6389,6 +6389,13 @@
 		<Row Tag="TXT_KEY_POLICY_RELIGIOUS_POLITICS_TEXT">
 			<Text>伊斯蘭教法根據《古蘭經》和可靠聖訓的相關內容，對人民日常生活和行為作出法律規定，因此又稱為伊斯蘭法律。在伊斯蘭國家，受到伊斯蘭教法規範的不只穆斯林，齊米亦包括在內。伊斯蘭教法涵蓋人民日常生活的許多方面，包括政治、經濟、文化、商業、金融、合同、性別、婚姻、財產和社會問題，但大體分為兩大部分：伊巴達提，有關宗教功修的法律；麥阿麥拉提，有關人與人交往的法律。</Text>
 		</Row>
+
+		<Replace Tag="TXT_KEY_POLICY_REFORMATION_HELP">
+			<Text>
+				[COLOR_POSITIVE_TEXT]宗教改革[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]如果你已經創立了宗教，立刻獲得一項改革信條。
+			</Text>
+		</Replace>
 		
 		<!--*******************Patronage********************* -->
 
@@ -13971,9 +13978,9 @@
 			</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_GAME_OPTION_DISABLE_GIFT_MILITIA">
+		<Row Tag="TXT_KEY_GAME_OPTION_ABLE_GIFT_MILITIA">
 			<Text>
-				SP- [COLOR_YELLOW]禁止 贈送民兵單位[ENDCOLOR]
+				SP-開啟 [COLOR_YELLOW]贈送民兵單位[ENDCOLOR]
 			</Text>
 		</Row>
 
