@@ -228,7 +228,7 @@
 
     <!-- Separates the Engineer, Scientist and Merchant GP counters (v52) -->
     <!-- See also: "Global - Separate GP Counters" -->
-    <Row Class="6" Name="GLOBAL_SEPARATE_GP_COUNTERS" Value="0"/>
+    <Row Class="6" Name="GLOBAL_SEPARATE_GP_COUNTERS" Value="1"/>
 
     <!-- Removes free GP (from buildings, policies, traits, etc) from the GP counters (v61) -->
     <!-- See also: "Global - Truly Free Great People" -->
@@ -510,36 +510,40 @@
     <!--   GameEvents.MinorGift.Add(function(iMinor, iMajor, iData2, iData3, iFlags, bOpt1, bOpt2, sType) end) -->
     <Row Class="3" Name="EVENTS_MINORS_GIFTS" Value="0"/>
 
+	<Row Class="3" Name="EVENTS_BATTLES_CUSTOM_DAMAGE" Value="1"/>
+    <Row Class="3" Name="MOD_EVENTS_BATTLES" Value="1"/>
+
     <!-- Events sent on interaction with City States (v68) -->
-    <!--   GameEvents.PlayerCanProtect.Add(function(iPlayer, iCS) return true end) -->
-    <!--   GameEvents.PlayerProtected.Add(function(iPlayer, iCS) end) -->
-    <!--   GameEvents.PlayerCanRevoke.Add(function(iPlayer, iCS) return true end) -->
-    <!--   GameEvents.PlayerRevoked.Add(function(iPlayer, iCS, bPledgeNowBroken) end) -->
-    <!--   GameEvents.PlayerCanBuyOut.Add(function(iPlayer, iCS) return true end) -->
-    <!--   GameEvents.PlayerBoughtOut.Add(function(iPlayer, iCS) end) -->
-    <!--   GameEvents.PlayerCanBullyGold.Add(function(iPlayer, iCS) return true end) -->
-    <!--   GameEvents.PlayerCanBullyUnit.Add(function(iPlayer, iCS) return true end) -->
-    <!--   GameEvents.PlayerBullied.Add(function(iPlayer, iCS, iGold, iUnitType, iPlotX, iPlotY) end) -->
-    <!--   GameEvents.PlayerCanGiftGold.Add(function(iPlayer, iCS) return true end) -->
-    <!--   GameEvents.PlayerCanGiftUnit.Add(function(iPlayer, iCS, iUnit) return true end) -->
-    <!--   GameEvents.PlayerCanGiftImprovement.Add(function(iPlayer, iCS) return true end) -->
-    <!--   GameEvents.PlayerGifted.Add(function(iPlayer, iCS, iGold, iUnitType, iPlotX, iPlotY) end) -->
-    <!--   GameEvents.PlayerCanTransitMinorCity.Add(function(iPlayer, iCS, iCity, iPlotX, iPlotY) return true end) (v74) -->
-    <!--   GameEvents.UnitCanTransitMinorCity.Add(function(iPlayer, iUnit, iCS, iCity, iPlotX, iPlotY) return true end) (v74) -->
-    <Row Class="3" Name="EVENTS_MINORS_INTERACTION" Value="0"/>
+	<!--   GameEvents.PlayerCanProtect.Add(function(iMajor, iMinor) return true end) -->
+	<!--   GameEvents.PlayerProtected.Add(function(iMajor, iMinor) end) -->
+	<!--   GameEvents.PlayerCanRevoke.Add(function(iMajor, iMinor) return true end) -->
+	<!--   GameEvents.PlayerRevoked.Add(function(iMajor, iMinor, bPledgeNowBroken) end) -->
+	<!--   GameEvents.PlayerCanBuyOut.Add(function(iMajor, iMinor) return true end) -->
+	<!--   GameEvents.PlayerBoughtOut.Add(function(iMajor, iMinor) end) -->
+	<!--   GameEvents.PlayerCanBullyGold.Add(function(iMajor, iMinor) return true end) -->
+	<!--   GameEvents.PlayerCanBullyUnit.Add(function(iMajor, iMinor) return true end) -->
+	<!--   GameEvents.PlayerBullied.Add(function(iMajor, iMinor, iGold, iUnitType, iPlotX, iPlotY) end) -->
+	<!--   GameEvents.PlayerCanGiftGold.Add(function(iMajor, iMinor) return true end) -->
+	<!--   GameEvents.PlayerCanGiftUnit.Add(function(iMajor, iMinor, iUnit) return true end) -->
+	<!--   GameEvents.PlayerCanGiftImprovement.Add(function(iMajor, iMinor) return true end) -->
+	<!--   GameEvents.PlayerGifted.Add(function(iMajor, iMinor, iGold, iUnitType, iPlotX, iPlotY) end) -->
+	<!--   GameEvents.PlayerCanTransitMinorCity.Add(function(iMajor, iMinor, iCity, iPlotX, iPlotY) return true end) (v74) -->
+	<!--   GameEvents.UnitCanTransitMinorCity.Add(function(iPlayer, iUnit, iCS, iCity, iPlotX, iPlotY) return true end) (v74) -->
+	<!--   GameEvents.PlayerCompletedQuest.Add(function(iPlayer, iCS, iQuestType, iStartTurn, iOldInfluence, iNewInfluence) end) (CIV5MPDLL) -->
+	<Row Class="3" Name="EVENTS_MINORS_INTERACTION" Value="1"/>
 
     <!-- Events sent by City State quests (v81) -->
-	<!--   ASSUMPTION: There is only one active quest of any given MinorCivQuestTypes per major, that is, (iPlayer, iCS, iQuest) is unique -->
-    <!--   GameEvents.QuestIsAvailable.Add(function(iPlayer, iCS, iQuest, bNewQuest, iData1, iData2) return false end) -->
-    <!--   GameEvents.QuestIsCompleted.Add(function(iPlayer, iCS, iQuest, bLastTurn) return false end) -->
-    <!--   GameEvents.QuestIsRevoked.Add(function(iPlayer, iCS, iQuest) return false end) -->
-    <!--   GameEvents.QuestIsExpired.Add(function(iPlayer, iCS, iQuest) return false end) -->
-    <!--   GameEvents.QuestStart.Add(function(iPlayer, iCS, iQuest, bNewQuest, iStartTurn, iData1, iData2) end) -->
-    <!--   GameEvents.QuestGetData.Add(function(iPlayer, iCS, iQuest, bData1) return 0 end) -->
-    <!--   GameEvents.QuestSendNotification.Add(function(iPlayer, iCS, iQuest, iStartTurn, iEndTurn, iData1, iData2, bStarted, bFinished, sNames) end) -->
-    <!--   GameEvents.QuestContestValue.Add(function(iPlayer, iCS, iQuest) return 0 end) -->
+	<!--   ASSUMPTION: There is only one active quest of any given MinorCivQuestTypes per major, that is, (iMajor, iMinor, iQuest) is unique -->
+	<!--   GameEvents.QuestIsAvailable.Add(function(iMajor, iMinor, iQuest, bNewQuest, iData1, iData2) return false end) -->
+	<!--   GameEvents.QuestIsCompleted.Add(function(iMajor, iMinor, iQuest, bLastTurn) return false end) -->
+	<!--   GameEvents.QuestIsRevoked.Add(function(iMajor, iMinor, iQuest) return false end) -->
+	<!--   GameEvents.QuestIsExpired.Add(function(iMajor, iMinor, iQuest) return false end) -->
+	<!--   GameEvents.QuestStart.Add(function(iMajor, iMinor, iQuest, bNewQuest, iStartTurn, iData1, iData2) end) -->
+	<!--   GameEvents.QuestGetData.Add(function(iMajor, iMinor, iQuest, bData1) return 0 end) -->
+	<!--   GameEvents.QuestSendNotification.Add(function(iMajor, iMinor, iQuest, iStartTurn, iEndTurn, iData1, iData2, bStarted, bFinished, sNames) end) -->
+	<!--   GameEvents.QuestContestValue.Add(function(iMajor, iMinor, iQuest) return 0 end) -->
 	<!--   pMajor:AddQuestNotification(iCS, sMessage, sSummary, iPlotX=-1, iPlotY=-1, bNewQuest=false) -->
-    <Row Class="3" Name="EVENTS_QUESTS" Value="0" DbUpdates="1"/>
+	<Row Class="3" Name="EVENTS_QUESTS" Value="0" DbUpdates="1"/>
 
     <!-- Events sent by Barbarians (v68) -->
     <!--   GameEvents.BarbariansCanFoundCamp.Add(function(iPlotX, iPlotY) return true end) -->
@@ -932,8 +936,15 @@
     <Row Class="1" Name="BUGFIX_HOVERING_PATHFINDER" Value="1"/>
 
     <Row Class="2" Name="API_BUILDING_ENABLE_PURCHASE_UNITS" Value="1"/>
-    
-    <Row Class="2" Name="API_VP_ADJACENT_YIELD_BOOST" Value="1"/>
+
+	<Row Class="2" Name="API_VP_ADJACENT_YIELD_BOOST" Value="1"/>
+
+    <!-- GameEvents.TradeRouteMove.Add(function(iX, iY, iUnit, iOwner, iOriginalPlayer, iOriginalCity, iDestPlayer, iDestCity) end) -->
+	<Row Class="2" Name="EVENTS_TRADE_ROUTE_MOVE" Value="1"/>
+
+	<Row Class="2" Name="API_TRADE_ROUTE_YIELD_RATE" Value="1" DbUpdates="1"/>
+
+	<Row Class="6" Name="BALANCE_CORE" Value="1" DbUpdates="1"/>
   </CustomModOptions>
 
   <CustomModPostDefines>

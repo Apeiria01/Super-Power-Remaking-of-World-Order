@@ -2009,10 +2009,10 @@ function RemoveErrorPromotion(iPlayerID, iUnitID)
 	
 	-- MOD Begin by CaptainCWB
 	-- Remove Corps Promotions in Record Mode without Corps Mode
-	if  PreGame.GetGameOption("GAMEOPTION_SP_RECORD_MODE") == 1
+	if  (PreGame.GetGameOption("GAMEOPTION_SP_RECORD_MODE") == 1
 	and PreGame.GetGameOption("GAMEOPTION_SP_CORPS_MODE_HIGH") == 0
 	and PreGame.GetGameOption("GAMEOPTION_SP_CORPS_MODE_MEDIUM") == 0
-	and PreGame.GetGameOption("GAMEOPTION_SP_CORPS_MODE_LOW") == 0
+	and PreGame.GetGameOption("GAMEOPTION_SP_CORPS_MODE_LOW") == 0) or unit:GetDomainType() ~= DomainTypes.DOMAIN_LAND
 	then
 		if unit:IsHasPromotion(CorpsID) then
 			unit:SetHasPromotion(CorpsID, false);
