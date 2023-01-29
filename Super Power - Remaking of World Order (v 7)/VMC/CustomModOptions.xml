@@ -772,8 +772,8 @@
     <Row Class="3" Name="EVENTS_NUCLEAR_DETONATION" Value="0"/>
 
     <!-- Event sent to see if a command is valid (v46) -->
-    <!--   GameEvents.PlayerCanDoCommand.Add(function(iPlayer, iUnit, iCommand, iData1, iData2, iPlotX, iPlotY, bTestVisible) return true end) -->
-    <Row Class="3" Name="EVENTS_COMMAND" Value="0"/>
+    <!--   GameEvents.CanDoCommand.Add(function(iPlayer, iUnit, iCommand, iData1, iData2, iPlotX, iPlotY, bTestVisible) return true end) -->
+    <Row Class="3" Name="EVENTS_COMMAND" Value="1"/>
 
     <!-- Events sent for custom missions (v46) -->
     <!--   CUSTOM_MISSION_NO_ACTION       = 0 -->

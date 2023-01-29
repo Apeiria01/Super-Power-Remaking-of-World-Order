@@ -13987,6 +13987,12 @@
 			</Text>
 		</Row>
 
+		<Row Tag="TXT_KEY_GAME_OPTION_ABLE_GIFT_MILITIA_HELP">
+			<Text>
+				開啟後允許向城邦贈送民兵單位以獲取影響力。
+			</Text>
+		</Row>
+
 		<Row Tag="TXT_KEY_SP_MISSION_SUPPLY_EXOTIC_GOODS_TOOLTIP">
 			<Text>
 				滿移動力時，可在擁有商站的城市中補充商品。

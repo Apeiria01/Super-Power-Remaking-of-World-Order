@@ -317,6 +317,7 @@
 		<Row>
 			<Type>GAMEOPTION_ABLE_GIFT_MILITIA</Type>
 			<Description>TXT_KEY_GAME_OPTION_ABLE_GIFT_MILITIA</Description>
+			<Help>TXT_KEY_GAME_OPTION_ABLE_GIFT_MILITIA_HELP</Help>
 		</Row>
 	</GameOptions>
 </GameData>

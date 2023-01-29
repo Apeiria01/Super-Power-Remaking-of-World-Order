@@ -16273,7 +16273,13 @@
 
 		<Row Tag="TXT_KEY_GAME_OPTION_ABLE_GIFT_MILITIA">
 			<Text>
-				SP - [COLOR_YELLOW]Can gift militia units [ENDCOLOR]
+				SP - [COLOR_YELLOW]Enable giving militia units [ENDCOLOR]
+			</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_GAME_OPTION_ABLE_GIFT_MILITIA_HELP">
+			<Text>
+				Check to allow giving militia units to city states to gain influence.
 			</Text>
 		</Row>
 

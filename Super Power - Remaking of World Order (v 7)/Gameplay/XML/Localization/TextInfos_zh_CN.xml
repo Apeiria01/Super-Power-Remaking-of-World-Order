@@ -14207,6 +14207,12 @@
 			</Text>
 		</Row>
 
+		<Row Tag="TXT_KEY_GAME_OPTION_ABLE_GIFT_MILITIA_HELP">
+			<Text>
+				开启后允许向城邦赠送民兵单位以获取影响力。
+			</Text>
+		</Row>
+
 		<Row Tag="TXT_KEY_SP_MISSION_SUPPLY_EXOTIC_GOODS_TOOLTIP">
 			<Text>
 				满移动力时，可在拥有商站的城市中补充商品。
