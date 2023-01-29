@@ -5531,7 +5531,10 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_GREAT_EXPANSE">
-			<Text>新建城市獲得額外的初始地塊（6格），所有城市免費贈送一個糧倉。</Text>
+			<Text>
+				[ICON_BULLET]新建城市獲得額外的初始地塊（6格），所有城市免費贈送一個糧倉。
+				[NEWLINE][ICON_BULLET]所有偵察兵單位可以選擇遺跡結果。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_WAYFINDING">

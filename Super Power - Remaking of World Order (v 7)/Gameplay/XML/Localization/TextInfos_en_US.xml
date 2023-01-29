@@ -10098,7 +10098,11 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_GREAT_EXPANSE">
-			<Text>Founded cities start with additional territory (6 tiles). All cities receive free Granaries.</Text>
+			<Text>
+				[ICON_BULLET]Founded cities start with additional territory (6 tiles). 
+				[NEWLINE][ICON_BULLET]All cities receive free Granaries.
+				[NEWLINE][ICON_BULLET]All of your Scouts can choose the result of Goody Hut.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_WAYFINDING">

@@ -9,6 +9,14 @@ function SpecialUnitType(iPlayerID, iUnitID)
 	if pUnit == nil then return end
 --	local ChineseGeneralID = GameInfoTypes.UNIT_CHINESE_GREAT_GENERAL
 --	local NoOceanID = GameInfo.UnitPromotions["PROMOTION_OCEAN_IMPASSABLE"].ID
+
+	--Shoshone new UA effect
+	if GameInfo.Leader_Traits{ LeaderType = GameInfo.Leaders[pPlayer:GetLeaderType()].Type, TraitType = "TRAIT_GREAT_EXPANSE" }()
+	and pUnit:GetUnitType()== GameInfoTypes.UNIT_SCOUT
+	and ( not pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_GOODY_HUT_PICKER"].ID) )
+	then
+		pUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_GOODY_HUT_PICKER"].ID, true)
+	end
 	
 	local GameSpeed = Game.GetGameSpeedType()
 	local QuickGameSpeedID = GameInfo.UnitPromotions["PROMOTION_GAME_QUICKSPEED"].ID 
