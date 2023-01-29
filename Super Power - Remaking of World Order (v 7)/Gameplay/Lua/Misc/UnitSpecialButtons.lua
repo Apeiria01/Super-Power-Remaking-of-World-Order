@@ -1910,7 +1910,8 @@ LuckyEButton = {
    	local unitCount = plot:GetNumUnits()
    	for i = 0, unitCount-1, 1 do   	
    		local pFoundUnit = plot:GetUnit(i)
-		local LuckyERoll = math.random(1, 100)
+		--local LuckyERoll = math.random(1, 100)
+    local LuckyERoll = Game.Rand(100, "At UnitSpecialButtons.lua LuckyEButton") + 1
 		print("LuckyERoll:" .. LuckyERoll)
 		if LuckyERoll>=70 and pFoundUnit:GetDomainType() == DomainTypes.DOMAIN_AIR and Players[unit:GetOwner()] == Players[pFoundUnit:GetOwner()] then			
 		   pFoundUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_LUCKYE"].ID, true)

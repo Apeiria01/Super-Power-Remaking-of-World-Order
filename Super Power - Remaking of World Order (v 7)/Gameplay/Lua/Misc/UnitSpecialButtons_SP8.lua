@@ -34,7 +34,8 @@ SacrificeMissionButton = {
         player:ChangeJONSCulture(strength * SacrificeMissionCultureRate / 100);
         player:ChangeFaith(strength * SacrificeMissionFaithRate / 100);
 
-        local iRand = math.random(1, 100);
+        --local iRand = math.random(1, 100);
+        local iRand = Game.Rand(100, "At UnitSpecialButtons_SP8.lua SacrificeMissionButton, result for sacrifice") + 1
         if iRand <= SacrificeMissionPromotionProbability then
             unit:SetHasPromotion(GameInfoTypes["PROMOTION_AZTEC_HUEY_TEOCALLI"], true);
             unit:SetMoves(0);

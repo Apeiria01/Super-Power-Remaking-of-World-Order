@@ -1390,6 +1390,7 @@ function NewAttackEffect()
 
 			local tdebuff = nil;
 			local tlostHP = nil;
+			local combatRoll = Game.Rand(10, "At NewCombatRules.lua NewAttackEffect()") + 1
 			if (
 				attUnit:IsHasPromotion(DestroySupply1ID) or attUnit:IsHasPromotion(SPForce1ID) or
 					attUnit:IsHasPromotion(DestroySupply_CarrierID))
@@ -1401,12 +1402,12 @@ function NewAttackEffect()
 				Message = 5
 			elseif attUnit:IsHasPromotion(CitySiegeUnitID) and defUnit:IsCombatUnit() and
 				defUnit:GetDomainType() == DomainTypes.DOMAIN_SEA and GameInfo.Units[defUnit:GetUnitType()].MoveRate == "WOODEN_BOAT" then
-				if not defUnit:IsHasPromotion(Damage1ID) and math.random(1, 10) <= 5 then
+				if not defUnit:IsHasPromotion(Damage1ID) and combatRoll <= 5 then
 					defUnit:SetHasPromotion(Damage1ID, true);
 					tdebuff = Locale.ConvertTextKey("TXT_KEY_PROMOTION_DAMAGE_1");
 					tlostHP = "[COLOR_NEGATIVE_TEXT]" .. -10 .. "[ENDCOLOR]";
 					Message = 5;
-				elseif defUnit:IsHasPromotion(Damage1ID) and not defUnit:IsHasPromotion(Damage2ID) and math.random(1, 10) <= 8 then
+				elseif defUnit:IsHasPromotion(Damage1ID) and not defUnit:IsHasPromotion(Damage2ID) and combatRoll <= 8 then
 					defUnit:SetHasPromotion(Damage2ID, true);
 					tdebuff = Locale.ConvertTextKey("TXT_KEY_PROMOTION_DAMAGE_2");
 					tlostHP = "[COLOR_NEGATIVE_TEXT]" .. -20 .. "[ENDCOLOR]";
@@ -1755,11 +1756,13 @@ function CaptureSPDKP(iPlayerID, iUnitID)
 			local pMoves = pUnit:MaxMoves();
 			print("MaxMoves of captured unit is " .. pMoves);
 			local qMoves = tCaptureSPUnits[8];
-			local rMoves = (pMoves * 0.2 + qMoves * 0.4) * (math.random(1, 100) * 0.002 + 0.9);
+			local captureMoveRoll = Game.Rand(100, "At NewCombatRules.lua CaptureSPDKP(), roll for moves remain") + 1
+			local rMoves = (pMoves * 0.2 + qMoves * 0.4) * (captureMoveRoll * 0.002 + 0.9);
 			print("newly captured unit remains movements:" .. rMoves);
 			pUnit:SetMoves(rMoves);
 			pUnit:SetHasPromotion(NewlyCapturedID, true);
-			local pDamage = math.random(1, 30) + 69 - qMoves / GameDefines["MOVE_DENOMINATOR"] * 4;
+			local captureDamageRoll = Game.Rand(30, "At NewCombatRules.lua CaptureSPDKP(), roll for damage") + 1
+			local pDamage = captureDamageRoll + 69 - qMoves / GameDefines["MOVE_DENOMINATOR"] * 4;
 			print("newly captured unit remains hit points:" .. pDamage);
 			pUnit:SetDamage(pDamage);
 			tCaptureSPUnits = {};

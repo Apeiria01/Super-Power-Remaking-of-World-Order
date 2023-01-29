@@ -245,6 +245,7 @@ function NewUnitCreationRules()   ------------------------Human Player's units r
 					-- Carriers & Cargos Setting System
 					local sSpecialCargo = GameInfo.Units[unit:GetUnitType()].SpecialCargo;
 					local sSpecial      = GameInfo.Units[unit:GetUnitType()].Special;
+					local creationRandNum = Game.Rand(100, "At NewUnitCreationRules.lua NewUnitCreationRules(), percentage") + 1
 					if     unit:GetPlot() == nil or not unit:CanMove() then
 					-- Cargos Add for AI (Human use Button) & Missile for all
 					elseif unit:CargoSpace() > 0 and not unit:IsFull()
@@ -274,7 +275,7 @@ function NewUnitCreationRules()   ------------------------Human Player's units r
 					elseif unit:IsCargo() and unit:GetTransportUnit()
 					and GameInfo.Units[unit:GetUpgradeUnitType()] and GameInfo.Units[unit:GetUpgradeUnitType()].PrereqTech
 					and Teams[player:GetTeam()]:IsHasTech(GameInfoTypes[GameInfo.Units[unit:GetUpgradeUnitType()].PrereqTech])
-					and ( (unit:GetTransportUnit():GetUnitType() == GameInfoTypes["UNIT_HORNET"] and math.random(1, 100) < 34)
+					and ( (unit:GetTransportUnit():GetUnitType() == GameInfoTypes["UNIT_HORNET"] and creationRandNum < 34)
 					or sSpecial == "SPECIALUNIT_FIGHTER" or sSpecial == "SPECIALUNIT_MISSILE" )
 					and (  unit:GetPlot():IsFriendlyTerritory(playerID) or unit:GetTransportUnit():IsHasPromotion(CarrierSupply3ID) )
 					    -- not for AI
@@ -470,7 +471,8 @@ function OnCorpsArmeeSP(iPlayerID, iUnitID)
 			end
 		end
 		if #eUnitList > 0 then
-			pCUnit = eUnitList[math.random( 1, #eUnitList )];
+			local corpsSelectRandNum = Game.Rand(#eUnitList, "At NewUnitCreationRules.lua OnCorpsArmeeSP(), select unit") + 1
+			pCUnit = eUnitList[corpsSelectRandNum];
 		end
 		if     pCUnit == nil then
 		elseif pCUnit:IsHasPromotion(CorpsID) then
@@ -508,13 +510,14 @@ function OnCorpsArmeeSP(iPlayerID, iUnitID)
 	local Heal1Unit = nil;
 	local Heal2Unit = nil;
 	local Heal3Unit = nil;
+	local corpsRandNum = Game.Rand(10, "At NewUnitsRule.lua OnCorpsArmeeSP(), AI spawning corps & armee") + 1
 	if (Game:GetHandicapType() == 7)
-	or (Game:GetHandicapType() == 6 and math.random(1, 10) > 1)
-	or (Game:GetHandicapType() == 5 and math.random(1, 10) > 2)
-	or (Game:GetHandicapType() == 4 and math.random(1, 10) > 3)
-	or (Game:GetHandicapType() == 3 and math.random(1, 10) > 5)
-	or (Game:GetHandicapType() == 2 and math.random(1, 10) > 7)
-	or (Game:GetHandicapType() == 1 and math.random(1, 10) > 9)
+	or (Game:GetHandicapType() == 6 and corpsRandNum > 1)
+	or (Game:GetHandicapType() == 5 and corpsRandNum > 2)
+	or (Game:GetHandicapType() == 4 and corpsRandNum > 3)
+	or (Game:GetHandicapType() == 3 and corpsRandNum > 5)
+	or (Game:GetHandicapType() == 2 and corpsRandNum > 7)
+	or (Game:GetHandicapType() == 1 and corpsRandNum > 9)
 	then
 		DoCombine = true;
 	end
@@ -913,7 +916,8 @@ function HeroicCarrierGenerate(playerID)
 		print("HeroicRoll Starts at the capital:"..CapitalCity:GetName())
 		for pUnit in pPlayer:Units() do
 			if pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_CARRIER_UNIT"])then
-				local HeroicRoll = math.random(1, 100)
+				local heroicRoll = Game.Rand(100, "At NewUnitCreationRules.lua HeroicCarrierGenerate(), spawn heroic") + 1
+				--local HeroicRoll = math.random(1, 100)
 				print("HeroicRoll:" .. HeroicRoll)
 				if HeroicRoll >= 75  then
 					local unitType = GameInfoTypes["UNIT_ENTERPRISE"]
