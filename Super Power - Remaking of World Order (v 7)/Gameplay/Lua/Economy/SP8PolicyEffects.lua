@@ -251,6 +251,62 @@ function SPECityBuildingCompleted(iPlayer, iCity, iBuilding, bGold, bFaithOrCult
 end
 GameEvents.CityConstructed.Add(SPECityBuildingCompleted)
 
+--When block Liberty,recycle free building and policy
+function SPEPlayerBlockPolicyBranch(iPlayer,iPolicyBranch,isBlock)
+	local pPlayer = Players[iPlayer]
+	if pPlayer == nil or pPlayer:IsMinorCiv() or pPlayer:IsBarbarian() then
+	 	return
+	end
+	if iPolicyBranch == GameInfo.PolicyBranchTypes["POLICY_BRANCH_LIBERTY"].ID
+	or iPolicyBranch == GameInfo.PolicyBranchTypes["POLICY_BRANCH_TRADITION"].ID
+	then
+		if iPolicyBranch == GameInfo.PolicyBranchTypes["POLICY_BRANCH_LIBERTY"].ID and isBlock then
+			print("Player Block Liberty and adopt Tradition!!!")
+			pPlayer:SetHasPolicy(PolicyCollectiveRuleFreeID,false)
+			for iCity in pPlayer:Cities() do
+				iCity:SetNumRealBuilding(GameInfoTypes.BUILDING_POLICY_REPUBLIC_FREE,0)
+				iCity:SetNumRealBuilding(GameInfoTypes.BUILDING_REPRESENTATION_CULTURE,0)
+				iCity:SetNumRealBuilding(GameInfoTypes.BUILDING_REPRESENTATION_CULTURE_COST,0)
+				--Liberty manpower 
+				iCity:SetNumRealBuilding(GameInfoTypes.BUILDING_CIV_S_P_MAN_RESOURCES,0)
+
+				if(pPlayer:HasPolicy(GameInfo.Policies["POLICY_ARISTOCRACY"].ID)) then
+					iCity:SetNumRealBuilding(GameInfoTypes.BUILDING_TRADITION_FOOD_GROWTH,1)
+				end
+				if(pPlayer:HasPolicy(GameInfo.Policies["POLICY_FAMILY_REGISTER"].ID)) then
+					iCity:SetNumRealBuilding(GameInfoTypes.BUILDING_FAMILY_PRODUCTION,1)
+				end
+				
+			end
+
+		elseif iPolicyBranch == GameInfo.PolicyBranchTypes["POLICY_BRANCH_TRADITION"].ID and isBlock then
+			print("Player Block Tradition and adopt Liberty!!!")
+			if pPlayer:HasPolicy(PolicyCollectiveRuleID) then
+				pPlayer:SetHasPolicy(PolicyCollectiveRuleFreeID,true,true)
+			end
+			for iCity in pPlayer:Cities() do
+				iCity:SetNumRealBuilding(GameInfoTypes.BUILDING_TRADITION_FOOD_GROWTH,0)
+				iCity:SetNumRealBuilding(GameInfoTypes.BUILDING_FAMILY_PRODUCTION,0)
+
+				if(pPlayer:HasPolicy(GameInfo.Policies["POLICY_REPUBLIC"].ID)) then
+					iCity:SetNumRealBuilding(GameInfoTypes.BUILDING_POLICY_REPUBLIC_FREE,1)
+				end
+				if(pPlayer:HasPolicy(GameInfo.Policies["POLICY_REPRESENTATION"].ID)) then
+					iCity:SetNumRealBuilding(GameInfoTypes.BUILDING_REPRESENTATION_CULTURE,1)
+					iCity:SetNumRealBuilding(GameInfoTypes.BUILDING_REPRESENTATION_CULTURE_COST,1)
+				end
+				if(pPlayer:HasPolicy(GameInfo.Policies["POLICY_CITIZENSHIP"].ID)) then
+					iCity:SetNumRealBuilding(GameInfoTypes.BUILDING_CIV_S_P_MAN_RESOURCES,2)
+				end
+			end
+		end
+
+	end
+end
+GameEvents.PlayerBlockPolicyBranch.Add(SPEPlayerBlockPolicyBranch)
+
+
+
 -- ********************************************************
 --Patronage
 -- ******************************************************** 

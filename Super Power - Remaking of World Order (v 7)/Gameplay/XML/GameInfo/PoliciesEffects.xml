@@ -2513,11 +2513,6 @@
 
 	<Policy_FreeBuildingClass>
 		<Row>
-			<PolicyType>POLICY_REPUBLIC</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_CIV_S_P_CON_RESOURCES</BuildingClassType>
-			<Count>2</Count>
-		</Row>
-		<Row>
 			<PolicyType>POLICY_CITIZENSHIP</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CIV_S_P_MAN_RESOURCES</BuildingClassType>
 			<Count>2</Count>
@@ -3336,4 +3331,12 @@
 			<CostModifier>500</CostModifier>
 		</Row>
 	</Building_EnableUnitPurchase>
+	<Building_ResourceQuantity>
+		<!--共和政体假建筑增加商品-->
+		<Row>
+			<BuildingType>BUILDING_POLICY_REPUBLIC_FREE</BuildingType>
+			<ResourceType>RESOURCE_CONSUMER</ResourceType>
+			<Quantity>2</Quantity>
+		</Row>
+	</Building_ResourceQuantity>
 </GameData>
