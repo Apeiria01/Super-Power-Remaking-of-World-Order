@@ -367,46 +367,6 @@ function NewCitySystem(playerID)
                     pCity:SetNumRealBuilding(GameInfoTypes["BUILDING_MARKET_ECONOMY"], 0);
                 end
 
-                -- Civs' UAs
-                -- German UA
-                if GameInfo.Leader_Traits {
-                    LeaderType = GameInfo.Leaders[player:GetLeaderType()].Type,
-                    TraitType = "TRAIT_CONVERTS_LAND_BARBARIANS"
-                }() and
-                    (GameInfo.Traits["TRAIT_CONVERTS_LAND_BARBARIANS"]
-                        .PrereqPolicy == nil or
-                        (GameInfo.Traits["TRAIT_CONVERTS_LAND_BARBARIANS"]
-                            .PrereqPolicy and
-                            player:HasPolicy(
-                                GameInfoTypes[GameInfo.Traits["TRAIT_CONVERTS_LAND_BARBARIANS"]
-                                    .PrereqPolicy]))) then
-                    local Cityname = pCity:GetName()
-                    local CityProduction = pCity:GetYieldRate(
-                                               YieldTypes.YIELD_PRODUCTION)
-                    local ProductionRate = 0
-                    pCity:SetNumRealBuilding(
-                        GameInfoTypes["BUILDING_TB_CONVERTS_LAND_BARBARIANS"], 0)
-                    print("German City:" .. Cityname .. "Production:" ..
-                              CityProduction)
-                    if CityProduction < 50 then
-                        print("Production Too Low!")
-                    else
-                        ProductionRate = math.floor(CityProduction / 50)
-                        --	if ProductionRate > 20 then
-                        --		ProductionRate = 20
-                        --	end
-                        print(
-                            "Production to Culture and Science for Germany! Rate:" ..
-                                ProductionRate)
-                    end
-
-                    if ProductionRate >= 1 then
-                        pCity:SetNumRealBuilding(
-                            GameInfoTypes["BUILDING_TB_CONVERTS_LAND_BARBARIANS"],
-                            ProductionRate)
-                    end
-                    print("German UA!")
-                end
                 --[[
 				-- Hunnic UA
 				if GameInfo.Leader_Traits{ LeaderType = GameInfo.Leaders[player:GetLeaderType()].Type, TraitType = "TRAIT_RAZE_AND_HORSES" }()

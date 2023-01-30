@@ -74,8 +74,7 @@
 			<Type>TRAIT_CONVERTS_LAND_BARBARIANS</Type>
 			<Description>TXT_KEY_TRAIT_CONVERTS_LAND_BARBARIANS</Description>
 			<ShortDescription>TXT_KEY_TRAIT_CONVERTS_LAND_BARBARIANS_SHORT</ShortDescription>
-			<!--<FreeSocialPoliciesPerEra>1</FreeSocialPoliciesPerEra>-->
-			<!--<PrereqTech>TECH_EDUCATION</PrereqTech>-->
+			<FreeBuilding>BUILDING_TB_CONVERTS_LAND_BARBARIANS</FreeBuilding>
 		</Row>
 		<Row>
 			<Type>TRAIT_CAPITAL_BUILDINGS_CHEAPER</Type>
@@ -1542,7 +1541,6 @@
 			<NukeImmune>true</NukeImmune>
 			<PortraitIndex>8</PortraitIndex>
 			<IconAtlas>CIV_COLOR_ATLAS</IconAtlas>
-			<!--<CultureRateModifier>5</CultureRateModifier>-->
 			<GreatWorkCount>-2</GreatWorkCount>
 		</Row>
 		<Row>
@@ -1648,18 +1646,6 @@
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>4</Yield>
 		</Row>
-
-		<Row>
-			<BuildingType>BUILDING_TB_CONVERTS_LAND_BARBARIANS</BuildingType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>10</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_TB_CONVERTS_LAND_BARBARIANS</BuildingType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>10</Yield>
-		</Row>
-
 	</Building_YieldChanges>
 
 
@@ -1717,15 +1703,6 @@
 		</Row>
 	</Building_FeatureYieldChanges>
 	
-	
-	<!--<Building_YieldModifiers>
-		<Row>
-			<BuildingType>BUILDING_TB_CONVERTS_LAND_BARBARIANS</BuildingType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>5</Yield>
-		</Row>
-	</Building_YieldModifiers>-->
-
 	<Building_GlobalYieldModifiers>
 		<Row>
 			<BuildingType>BUILDING_TB_ART_OF_WAR</BuildingType>
@@ -1903,6 +1880,21 @@
 	</Policy_BuildingClassTourismModifiers>-->
 
 
-
+	<Building_YieldFromOtherYield>
+		<Row>
+			<BuildingType>BUILDING_TB_CONVERTS_LAND_BARBARIANS</BuildingType>
+			<InYieldType>YIELD_PRODUCTION</InYieldType>
+			<InYieldValue>50</InYieldValue>
+			<OutYieldType>YIELD_CULTURE</OutYieldType>
+			<OutYieldValue>10</OutYieldValue>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_TB_CONVERTS_LAND_BARBARIANS</BuildingType>
+			<InYieldType>YIELD_PRODUCTION</InYieldType>
+			<InYieldValue>50</InYieldValue>
+			<OutYieldType>YIELD_SCIENCE</OutYieldType>
+			<OutYieldValue>10</OutYieldValue>
+		</Row>
+	</Building_YieldFromOtherYield>
 
 </GameData>
