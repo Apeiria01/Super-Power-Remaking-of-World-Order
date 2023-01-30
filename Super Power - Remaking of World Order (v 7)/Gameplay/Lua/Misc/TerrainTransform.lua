@@ -198,6 +198,16 @@ function ImprovementBuilt(iPlayer, x, y, eImprovement)
 --		    end
 --		    print("Mountain digged!")
 --		end
+
+	elseif (eImprovement == GameInfo.Improvements["IMPROVEMENT_SHOSHONE_WILDDOME"].ID) then
+		-- Shoshone Wild Domesticate
+		pPlot:SetImprovementType(-1)
+		--local numRandom = math.random(1, 5)
+		local numRandom = Game.Rand(5, "At TerrainTransform.lua ImprovementBuilt(), choose resource for SHOSHONE WILDDOME") + 1
+		local g_ResourcesWild = {GameInfoTypes.RESOURCE_TRUFFLES, GameInfoTypes.RESOURCE_FUR, GameInfoTypes.RESOURCE_BISON,
+								 GameInfoTypes.RESOURCE_DEER, GameInfoTypes.RESOURCE_IVORY}
+		pPlot:SetResourceType(g_ResourcesWild[numRandom], 1)
+		print ("Shoshone Wild Domesticate!")
 	end
 
 end

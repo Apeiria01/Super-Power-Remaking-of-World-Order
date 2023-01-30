@@ -1185,6 +1185,11 @@
 			<Row Tag="TXT_KEY_SP_UI_HAPPINESS_CONSUMERGOODS_BONUS">
 				<Text>[NEWLINE]Abundant [ICON_RES_CONSUMER] Consumer Goods! [ICON_HAPPINESS_4] Unhappiness [COLOR_POSITIVE_TEXT]Reduced[ENDCOLOR] by</Text>
 			</Row>
+			<Row Tag="TXT_KEY_POLICY_MERCANTILISM_CONSUMERGOODS_BONUS">
+				<Text>
+					Because you adopted Policy Mercantilism, Abundant [ICON_RES_CONSUMER] Consumer bonus and upper limit increased by 20%.
+				</Text>
+			</Row>
 			<Row Tag="TXT_KEY_SP_UI_HAPPINESS_CONSUMERGOODS_PENALTY">
 				<Text>[NEWLINE]Insufficient [ICON_RES_CONSUMER] Consumer Goods! [ICON_HAPPINESS_4] Unhappiness [COLOR_NEGATIVE_TEXT]Increased[ENDCOLOR] by</Text>
 			</Row>
@@ -2559,7 +2564,7 @@
 				[NEWLINE][NEWLINE]+15% [ICON_FOOD] Food output for the city.
 				[NEWLINE][NEWLINE]+1 [ICON_FOOD] Food from Lake Tiles.
 				[NEWLINE][NEWLINE]+1 [ICON_FOOD] Food, +2 [ICON_PRODUCTION] Production and +1[ICON_GOLD] Gold for each [ICON_RES_COW] Cattle, [ICON_RES_SHEEP] Sheep and [ICON_RES_HORSE] Horse worked for the city.
-				[NEWLINE][NEWLINE]+1 [ICON_PRODUCTION] Production and +1 [ICON_GOLD] Gold for each [ICON_RES_TRUFFLES] Truffles, [ICON_RES_FUR] Fur,[ICON_RES_BISON] Bison,[ICON_RES_DEER] Deer and [ICON_RES_IVORY] Ivory worked for the city.
+				[NEWLINE][NEWLINE]+1 [ICON_FOOD] Food, +2 [ICON_PRODUCTION] Production and +1[ICON_GOLD] Gold for each [ICON_RES_TRUFFLES] Truffles, [ICON_RES_FUR] Fur,[ICON_RES_BISON] Bison,[ICON_RES_DEER] Deer and [ICON_RES_IVORY] Ivory worked for the city.
 			</Text>
 		</Row>
 
@@ -3036,7 +3041,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_PORTUGAL_PORT_HELP">
 			<Text>
-				+1 [ICON_GOLD] Gold for every [COLOR_POSITIVE_TEXT]Luxury Resource[ENDCOLOR] on water tiles worked by this City.
+				+1 [ICON_GOLD] Gold and +1 [ICON_PRODUCTION] for every [COLOR_POSITIVE_TEXT]Luxury Resource[ENDCOLOR] on water tiles worked by this City.
 				[NEWLINE]+3 [ICON_CONSUMER] Consumer.
 			</Text>
 		</Row>
@@ -3099,7 +3104,6 @@
 				[NEWLINE][NEWLINE]+15 XP for Naval Units built in this city.
 				[NEWLINE][NEWLINE]Forms a [ICON_CONNECTED] City Connection with the [ICON_CAPITAL] Capital over water.
 				[NEWLINE][NEWLINE]Sea International Trade Route from this city produces +10 [ICON_GOLD] Base Gold.
-				[NEWLINE][NEWLINE]City must have a Lighthouse.
 			</Text>
 		</Row>
 		<Row>
@@ -4225,7 +4229,9 @@
 			<Tag>TXT_KEY_BUILDING_CARTHAGINIAN_AGORA_HELP</Tag>
 			<Text>
 				-15% [ICON_GOLD] Gold cost for purchasing units or buildings in all cities.
-				[NEWLINE][NEWLINE]Must have built a Circus in all Cities. The cost goes up the more cities there are in the empire.
+				[NEWLINE][NEWLINE]This city must have built a circus. The cost goes up the more cities there are in the empire.
+				[NEWLINE][ICON_BULLET]If commercial policy branch is adopted, -5% [ICON_GOLD] Gold cost for purchasing units or buildings in all cities..
+				[NEWLINE][ICON_BULLET]If maritime policy branch is adopted, +10% combat strength for naval units.
 			</Text>
 		</Row>
 
@@ -5843,6 +5849,14 @@
 			<Text>
 				+15% [ICON_PRODUCTION] Production when building Military Units in this City.
 				[NEWLINE]+15 Experience for Military Unit trained in this city.
+				[NEWLINE]Each Olympic arena can increase the base influence on city-states by 1, up to a maximum of 20.
+			</Text>
+		</Row>
+
+		<Row>
+			<Tag>TXT_KEY_BUILDING_GREEK_OLYMPICS_DUMMY_HELP</Tag>
+			<Text>
+				Increase the base influence on city-states by 1.
 			</Text>
 		</Row>
 		
@@ -6242,10 +6256,19 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_CHINESE_GARDEN_HELP</Tag>
 			<Text>
-				+25% [ICON_GREAT_PEOPLE] Great People generation rate in the city.
-				[NEWLINE]-3% [ICON_HAPPINESS_4] Unhappiness nationwide for every Chinese Garden.
-				[NEWLINE][NEWLINE]Must be built in large Cities.
-				[NEWLINE][NEWLINE]+1 [ICON_HAPPINESS_1] local happiness.</Text>
+				[NEWLINE][NEWLINE]Can only be built in large cities (population 26).
+				This city +25% [ICON_GREAT_PEOPLE] accumulation of great man points, this city +1 [ICON_HAPPINESS_1] happiness.
+				[NEWLINE][NEWLINE]-3%[ICON_HAPPINESS_4] global dissatisfaction per garden.
+				[NEWLINE][NEWLINE]Each Chinese Garden provides a base output for each city size:
+				[NEWLINE][ICON_BULLET] Town: +1[ICON_FOOD] food, +1[ICON_PRODUCTION] production, +1[ICON_GOLDEN_AGE] golden age points.
+				[NEWLINE][ICON_BULLET] Small Cities: +2[ICON_FOOD] Food, +2[ICON_PRODUCTION] Production, +2[ICON_GOLDEN_AGE] Golden Age Points.
+				[NEWLINE][ICON_BULLET] Medium City: +3[ICON_FOOD] Food, +3[ICON_PRODUCTION] Production, +3[ICON_GOLDEN_AGE] Golden Age Points.
+				
+				[NEWLINE][ICON_BULLET] Large Cities: +3[ICON_FOOD] Food, +3[ICON_PRODUCTION]Production, +3[ICON_GOLDEN_AGE]Golden Age Points.
+				[NEWLINE][ICON_BULLET] XL: +3[ICON_FOOD]food, +3[ICON_PRODUCTION]production, +3[ICON_GOLDEN_AGE]golden age points; +1[ICON_CULTURE]culture, +1[ICON_REASEARCH]research.
+				[NEWLINE][ICON_BULLET] XXL: +3 [ICON_FOOD] food, +3 [ICON_PRODUCTION] production, +3 [ICON_GOLDEN_AGE] golden age points. +2 [ICON_CULTURE] culture, +2 [ICON_REASEARCH] research.
+				[NEWLINE][ICON_BULLET] Global Cities: +3 [ICON_FOOD] food, +3 [ICON_PRODUCTION] production, +3 [ICON_GOLDEN_AGE] golden age points. +3 [ICON_CULTURE] culture, +3 [ICON_REASEARCH] research.
+			</Text>
 		</Row>
 
 
@@ -7126,6 +7149,7 @@
 		<Replace Tag="TXT_KEY_POLICY_LANDED_ELITE_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]Landed Elite[ENDCOLOR]
+				[NEWLINE][ICON_CAPITAL]Capital Plot +4 [ICON_FOOD] Food.
 				[NEWLINE][ICON_BULLET]+1 [ICON_FOOD] Food for every Farm and Fishing Net.
 			</Text>
 		</Replace>
@@ -7138,6 +7162,7 @@
 		<Replace Tag="TXT_KEY_POLICY_OLIGARCHY_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]Oligarchy[ENDCOLOR]
+				[NEWLINE][ICON_CAPITAL]Capital Plot +4 [ICON_PRODUCTION] Production.
 				[NEWLINE][ICON_BULLET]Gain additional [ICON_PRODUCTION] Production in cities reached certain Population Size:
 				[NEWLINE][ICON_BULLET]Small City: +4 [ICON_PRODUCTION] Production.
 				[NEWLINE][ICON_BULLET]Medium City: +8 [ICON_PRODUCTION] Production.
@@ -7167,6 +7192,7 @@
 		<Row Tag="TXT_KEY_POLICY_PREFECTURE_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]Prefeture[ENDCOLOR]
+				[NEWLINE][ICON_CAPITAL]Capital Plot +4 [ICON_CULTURE] Culture.
 				[NEWLINE][ICON_BULLET]Gain additional [ICON_CULTURE] Culture in cities reached certain Population Size:
 				[NEWLINE][ICON_BULLET]Small City: +4 [ICON_CULTURE] Culture.
 				[NEWLINE][ICON_BULLET]Medium City: +8 [ICON_CULTURE] Culture.
@@ -7236,7 +7262,9 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]Collective Rule[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]+50% [ICON_PRODUCTION] Production for training [COLOR_POSITIVE_TEXT]Settlers[ENDCOLOR].
-				[NEWLINE][ICON_BULLET]One free Settler appears near the [ICON_CAPITAL] Capital. (Venice receives a Merchant of Venice instead of a Settler.)</Text>
+				[NEWLINE][ICON_BULLET]One free Settler appears near the [ICON_CAPITAL] Capital. (Venice receives a Merchant of Venice instead of a Settler.)
+				[NEWLINE][ICON_BULLET]When enter Renaissance Era , +50% [ICON_PRODUCTION] Production for training [COLOR_POSITIVE_TEXT]Settlers[ENDCOLOR] again ,Settlers Into City will not emptying the city food any more.
+				</Text>
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_POLICY_REPUBLIC_HELP" >
@@ -7244,6 +7272,7 @@
 				[COLOR_POSITIVE_TEXT]Republic[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]+2 [ICON_FOOD] Food and +4 [ICON_GOLD] Gold in every city.
 				[NEWLINE][ICON_BULLET]+2 [ICON_RES_CONSUMER] Consumer Goods per city.
+				[NEWLINE][ICON_BULLET]+1%[ICON_FOOD] Global Food and [ICON_PRODUCTION] Global Production from each City.
 			</Text>
 		</Replace>
 		
@@ -7252,7 +7281,9 @@
 				[COLOR_POSITIVE_TEXT]Citizenship[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]One Worker appears near the [ICON_CAPITAL] Capital.
 				[NEWLINE][ICON_BULLET]When you found a [COLOR_POSITIVE_TEXT]New City[ENDCOLOR], one Worker will appear outside the city.
-				[NEWLINE][ICON_BULLET]+2 [ICON_RES_MANPOWER] Manpower per city.</Text>
+				[NEWLINE][ICON_BULLET]+2 [ICON_RES_MANPOWER] Manpower per city.
+				[NEWLINE][ICON_BULLET]Gain 25 point free [ICON_PRODUCTION] Production for new founded city.
+				</Text>
 		</Replace>
 		
 		
@@ -7261,6 +7292,7 @@
 				[COLOR_POSITIVE_TEXT]Meritocracy[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]+2 [ICON_PRODUCTION] Production in every city.
 				[NEWLINE][ICON_BULLET]+10% [ICON_PRODUCTION] Production in cities when constructing Buildings.
+				[NEWLINE][ICON_BULLET]When building constructed , get free [ICON_RESEARCH]science and [ICON_CULTURE] culture (10% of its cost).
 			</Text>
 		</Replace>
 
@@ -7270,10 +7302,7 @@
 		<Row Tag="TXT_KEY_POLICY_BILL_OF_RIGHTS_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]Bill of Rights[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]+1 [ICON_RESEARCH] Science for each Library, Academy, University, Public School, Laboratory and Observatory.
-				[NEWLINE][ICON_BULLET]+1 [ICON_CULTURE] Culture for each Amphitheater, Art Gallery, Opera House, Museum, Brocast Tower and Cinema.
-				[NEWLINE][ICON_BULLET]+1 [ICON_PRODUCTION] Production for each Factory, Inland Canal, Furniture Factory, Textile Factory, Metal Processing Plant and Future Factory.
-				[NEWLINE][ICON_BULLET]+1 [ICON_GOLD] Gold for each Market, Bank, Stock Exchange, Financial Company, Country Club and Bar.
+				[NEWLINE][ICON_BULLET]Each Specialist slot in the building provides 1 point corresponding base output (According to default building).
 				[NEWLINE][ICON_BULLET]-50% [ICON_GOLD] Maintenance Cost for All City Halls.
 			</Text>
 		</Row>
@@ -7349,7 +7378,7 @@
 		<Row Tag="TXT_KEY_POLICY_HORSEMAN_TRAINING_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]Maneuver Warfare[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]All Heavy Mounted Units and Tank Units +1 [ICON_MOVES] Movement and ignore enemy ZOC.
+				[NEWLINE][ICON_BULLET]All Heavy Mounted Units and Tank Units +1 [ICON_MOVES] Movement , ignore enemy ZOC and final damage +5.
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_HORSEMAN_TRAINING_TEXT">
@@ -7362,13 +7391,15 @@
 				[NEWLINE][ICON_BULLET]+1 [ICON_PRODUCTION] Production for every Barracks, Armory, Arsenal and Military Base. +6 [ICON_GOLD] Gold in [ICON_PUPPET] Puppet cities. 
 				[NEWLINE][ICON_BULLET]+2 [ICON_CULTURE] Culture for every Stable, Steal Mill, Walls and Castle. 
 				[NEWLINE][ICON_BULLET]+15% [ICON_PRODUCTION] Production when building Military Units. 
+				[NEWLINE][ICON_BULLET]get free Counthouse when you capture an enemy city (need mathematics).
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_DISCIPLINE_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]Discipline[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]+25% [ICON_STRENGTH] Combat Strength for Land and Naval Melee Units when have another military Unit in an adjacent tile. 
-				[NEWLINE][ICON_BULLET]Flank Attack bonus +50%.</Text>
+				[NEWLINE][ICON_BULLET]Flank Attack bonus +50%.
+				</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_MILITARY_CASTE">
 			<Text>Military Training</Text>
@@ -7378,6 +7409,8 @@
 				[COLOR_POSITIVE_TEXT]Military Training[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]A [ICON_GREAT_GENERAL] Great General appears outside the [ICON_CAPITAL] Capital. [ICON_GREAT_GENERAL] Great Generals are earned 50% faster. 
 				[NEWLINE][ICON_BULLET]Land Hit-and-Run Units, Land Ranged Units, Anti-air Units and Siege Units +15% [ICON_RANGE_STRENGTH] Strength when performing Ranged Attack and being Ranged Striked.
+				[NEWLINE][ICON_BULLET]Land Hit-and-Run Units and Land Ranged Units' final damage +5 .
+				[NEWLINE][ICON_BULLET]Anti-air Units and Siege Units +10% extra damage from city max hit point.
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_MILITARYCASTE_TEXT" >
@@ -7490,13 +7523,16 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]Merchant Confederacy[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]Gain 4 [ICON_INFLUENCE] Influence (at Standard speed) per turn  with City-States you have a trade route with.
+				[NEWLINE][ICON_BULLET]Each trade route connected to the city-state provides [ICON_CULTURE]cultural and [ICON_RESEARCH]scientific research output, which is equivalent to 10% of the output of the city-state.
 				[NEWLINE][ICON_BULLET]Gain an additional Trade Route slot.</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_CONSULATES_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]Consulates[ENDCOLOR]
 				[NEWLINE][ICON_BULLET][ICON_INFLUENCE]Influence with all City-States degrade 25% slower than normal.
-				[NEWLINE][ICON_BULLET]Gain 25% more [ICON_INFLUENCE] Influence than usual when you achieve any Quests from City-States.</Text>
+				[NEWLINE][ICON_BULLET]Gain 25% more [ICON_INFLUENCE] Influence than usual when you achieve any Quests from City-States.
+				[NEWLINE][ICON_BULLET]Gain [ICON_CULTURE] Culture bonus when you achieve any Quests from City-States.
+			</Text>
 		</Replace>
 		<!--<Replace Tag="TXT_KEY_POLICY_SCHOLASTICISM_HELP">
 			<Text>
@@ -7510,7 +7546,10 @@
 		<Replace Tag="TXT_KEY_POLICY_CULTURAL_DIPLOMACY_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]Gunboat Diplomacy[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]Gain 5 more [ICON_INFLUENCE] Influence (at Standard speed) per turn with City-States you could demand tribute from.</Text>
+				[NEWLINE][ICON_BULLET]Gain 5 more [ICON_INFLUENCE] Influence (at Standard speed) per turn with City-States you could demand tribute from.
+				[NEWLINE][ICON_BULLET]+100% military score when you demand tribute from City-States, and cost of influence is reduced to 1/4.
+				[NEWLINE][ICON_BULLET]Gain Food, Production, Culture and Science bonus when you demand tribute from City-States.
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_CULTURAL_DIPLOMACY_TEXT">
 			<Text>In international politics, gunboat diplomacy (or "big stick diplomacy" in U.S. history) refers to the pursuit of foreign policy objectives with the aid of conspicuous displays of naval power—implying or constituting a direct threat of warfare, should terms not be agreeable to the superior force.</Text>
@@ -7626,7 +7665,9 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]Wagon Trains[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]+4 [ICON_GOLD] Gold from all your land trade routes.
-				[NEWLINE][ICON_BULLET]+25% [ICON_GOLD] Gold from [ICON_CONNECTED] City Connections.</Text>
+				[NEWLINE][ICON_BULLET]+25% [ICON_GOLD] Gold from [ICON_CONNECTED] City Connections.
+				[NEWLINE][ICON_BULLET]-50% [ICON_GOLD] Maintenance Cost for Roads and Railroads .
+			</Text>
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_POLICY_TRADE_UNIONS" >
@@ -7647,6 +7688,8 @@
 				[COLOR_POSITIVE_TEXT]Mercantilism[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]-15%[ICON_GOLD] Gold cost of purchasing units and buildings.
 				[NEWLINE][ICON_BULLET]+3 extra [ICON_RES_CONSUMER] Consumer Goods produced by Merchants.
+				[NEWLINE][ICON_BULLET]Abundant [ICON_RES_CONSUMER] Consumer bonus and upper limit increased by 20%.
+				
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_ENTREPRENEURSHIP_HELP" >
@@ -7661,9 +7704,8 @@
 		<Replace Tag="TXT_KEY_POLICY_PROTECTIONISM_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]Protectionism[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]-50% [ICON_GOLD] Maintenance Cost for Roads and Railroads .
 				[NEWLINE][ICON_BULLET]+50% [ICON_FOOD] Food and [ICON_PRODUCTION] Production provided by Internal trade routes.
-				[NEWLINE][ICON_BULLET]+3 [ICON_HAPPINESS_1] Local Happiness in the city with "We Love The King Day!"
+				[NEWLINE][ICON_BULLET]Internal trade routes can provide [ICON_RESEARCH] Science and [ICON_CULTURE] Culture to destination cities (This is equal to 5% of the original city's output). 
 			</Text>
 		</Replace>
 		
@@ -7674,7 +7716,9 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]Consumerism[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]+1 [ICON_HAPPINESS_1] Happiness from each Luxury resource.
-				[NEWLINE][ICON_BULLET]+1 [ICON_HAPPINESS_1] Happiness from each Supermarket, Country Club, Bar, Wildlife Preserve and Jeweler.</Text>
+				[NEWLINE][ICON_BULLET]+1 [ICON_HAPPINESS_1] Happiness from each Supermarket, Country Club, Bar, Wildlife Preserve and Jeweler.
+				[NEWLINE][ICON_BULLET]+3 [ICON_HAPPINESS_1] Local Happiness in the city with "We Love The King Day!"
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_MARKET_ECONOMY_TEXT">
 			<Text>Consumerism is a social and economic order and ideology that encourages the acquisition of goods and services in ever-greater amounts. Early criticisms of consumerism are present in the works of Thorstein Veblen (1899). Veblen's subject of examination, the newly emergent middle class arising at the turn of the twentieth century,comes to fruition by the end of the twentieth century through the process of globalization. In this sense, consumerism is usually considered a part of media culture.</Text>
@@ -7697,7 +7741,7 @@
 
 				[NEWLINE][NEWLINE]Opening Effect:
 				[NEWLINE][ICON_BULLET]Settlers will no longer lose HP if ends turns outside friendly territory.
-				[NEWLINE][ICON_BULLET]+1 [ICON_MOVES] Movement for Embarked Units, Workers, Settlers, Archaeologists, Great Prophet and Missionaries.
+				[NEWLINE][ICON_BULLET]+1 [ICON_MOVES] Movement for Embarked Units, Workers, Settlers, Archaeologists, Great Prophet and Missionaries,all of your navies can enter ocean.
 				[NEWLINE][ICON_BULLET]+3 [ICON_MOVES] Movement for Great Admirals.
 				[NEWLINE][ICON_BULLET]World Wonder Unlocked: Port of Rotterdam.
 				[NEWLINE][ICON_BULLET]National Wonder Unlocked: Ironworks.
@@ -7719,6 +7763,8 @@
 				[COLOR_POSITIVE_TEXT]Maritime Infrastructure[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]+3 [ICON_PRODUCTION] Production in all coastal Cities.
 				[NEWLINE][ICON_BULLET]+1 [ICON_PRODUCTION] Production for every Fishing Net, Workboats and Offshore Platform.
+				[NEWLINE]Then rate your workers building the maritime improvement +50%.
+
 			</Text>
 		</Replace>
 		
@@ -7728,6 +7774,7 @@
 				[NEWLINE][ICON_BULLET]+1 additional Trade Route slot.
 				[NEWLINE][ICON_BULLET]+6 [ICON_GOLD] Gold from all your sea trade routes.
 				[NEWLINE][ICON_BULLET]+3 [ICON_RES_CONSUMER] Consumer in all coastal Cities.
+				[NEWLINE][ICON_BULLET]You can use [ICON_PEACE] faith to buy cargo ships.
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_NAVAL_TRADITION_HELP" >
@@ -7745,8 +7792,9 @@
 		<Row Tag="TXT_KEY_POLICY_COASTAL_ADMINISTRATION_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]Maritime Administration[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]+15% [ICON_RESEARCH] Science and +15% [ICON_PRODUCTION] Production output from every Shipyard.
-				[NEWLINE][ICON_BULLET]Gain [ICON_CULTURE] Culture when build a Ocean-going Naval Unit (100% of its [ICON_STRENGTH] Combat Strength).
+				[NEWLINE][ICON_BULLET]+5% [ICON_RESEARCH] Science and +5% [ICON_PRODUCTION] Production output from every Shipyard and Seaport.
+				[NEWLINE][ICON_BULLET]+3% [ICON_RESEARCH] Science and +3% [ICON_PRODUCTION] Production output from every Lighthouse , harbor and Wood Dock.
+				[NEWLINE][ICON_BULLET]Lighthouse , harbor , Wood Dock , Shipyard and Seaport +4 [ICON_GOLD] Gold.
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_COASTAL_ADMINISTRATION_TEXT">
@@ -7758,6 +7806,7 @@
 				[NEWLINE][ICON_BULLET]+1 [ICON_HAPPINESS_1] Happiness for every Lighthouse, Harbor, Seaport and Shipyard.
 				[NEWLINE][ICON_BULLET]+15% [ICON_PRODUCTION] Production when building Naval Units.
 				[NEWLINE][ICON_BULLET]New trained Naval Units receive +15 XP.
+				[NEWLINE][ICON_BULLET]Gain [ICON_CULTURE] Culture when build a Ocean-going Naval Unit (100% of its [ICON_STRENGTH] Combat Strength).
 			</Text>
 		</Replace>
 
@@ -8976,7 +9025,8 @@
 
 		<Row>
 			<Tag>TXT_KEY_BUILDING_SPECIALISTS_ARTISTIC_HELP</Tag>
-			<Text>Writers, Artists and Musicians: +1 [ICON_CULTURE] Culture, -1 [ICON_GOLD] Gold for sponsor funds. [NEWLINE][NEWLINE]The cost goes up the more cities there are in the empire.</Text>
+			<Text>Writers, Artists and Musicians: +2 [ICON_CULTURE] Culture, -2 [ICON_GOLD] Gold for sponsor funds. 
+			[NEWLINE][NEWLINE]The cost goes up the more cities there are in the empire.</Text>
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_SPECIALISTS_ARTISTIC_LV1</Tag>
@@ -9342,7 +9392,7 @@
 		</Row>
 
 		<Row Tag="TXT_KEY_TECH_IOT_NETWORK_QUOTE">
-			<Text>"Without going outside his door，one understands all that takes place under the sky；without looking out from his window，one sees rules of the universe. The farther that one goes out from himself，the less he knows." [NEWLINE] - Lao-Tzu</Text>
+			<Text>"Without going outside his door, one understands all that takes place under the sky；without looking out from his window , one sees rules of the universe. The farther that one goes out from himself, the less he knows." [NEWLINE] - Lao-Tzu</Text>
 		</Row>
 		
 		
@@ -9684,8 +9734,6 @@
 				[NEWLINE][COLOR_WARNING_TEXT]Warning:[ENDCOLOR] Any previous features or improvements will be removed.
 			</Text>
 		</Row>
-	
-		
 
 
 		<Row Tag="TXT_KEY_IMPROVEMENT_CREATE_JUNGLE_MOD">
@@ -9726,6 +9774,35 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILD_SHOSHONE_TIPI">
 			<Text>Construct a [LINK=IMPROVEMENT_SHOSHONE_TIPI]Tipi[\LINK]</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_IMPROVEMENT_SHOSHONE_WILDDOME">
+			<Text>Wild Domestication</Text>
+		</Row>
+		<Row Tag="TXT_KEY_IMPROVEMENT_SHOSHONE_WILDDOME_HELP">
+			<Text>
+				Domesticate wild animals on this tile to create a [ICON_RES_TRUFFLES][ICON_RES_FUR][ICON_RES_BISON][ICON_RES_DEER][ICON_RES_IVORY]. 
+				[NEWLINE]This action can only be performed on Plains, Grassland or Tundra tiles without resources.
+				[NEWLINE][NEWLINE]May not be constructed adjacent to another tile is currently domesticating wild animals.
+				[NEWLINE][COLOR_WARNING_TEXT]Warning:[ENDCOLOR] Any previous improvements will be removed.
+			</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_BUILD_SHOSHONE_WILDDOME">
+			<Text>Domesticate wild animals to offer[LINK=IMPROVEMENT_SHOSHONE_WILDDOME][ICON_RES_TRUFFLES][ICON_RES_FUR][ICON_RES_BISON][ICON_RES_DEER][ICON_RES_IVORY][\LINK]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILD_SHOSHONE_WILDDOME_REC">
+			<Text>
+				Domesticate wild animals on this tile to create a [ICON_RES_TRUFFLES][ICON_RES_FUR][ICON_RES_BISON][ICON_RES_DEER][ICON_RES_IVORY]. 
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILD_SHOSHONE_WILDDOME_HELP">
+			<Text>
+				Domesticate wild animals on this tile to create a [ICON_RES_TRUFFLES][ICON_RES_FUR][ICON_RES_BISON][ICON_RES_DEER][ICON_RES_IVORY]. 
+				[NEWLINE]This action can only be performed on Plains, Grassland or Tundra tiles without resources.
+				[NEWLINE][NEWLINE]May not be constructed adjacent to another tile is currently domesticating wild animals.
+				[NEWLINE][COLOR_WARNING_TEXT]Warning:[ENDCOLOR] Any previous improvements will be removed.
+			</Text>
 		</Row>
 
 
@@ -9970,7 +10047,11 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_CITY_STATE_FRIENDSHIP">
-			<Text>City-State [ICON_INFLUENCE] Influence degrades at half and recovers at twice the normal rate. City-States do not become upset by intruding units and + 5 [ICON_INFLUENCE] Influence (at Standard speed) per turn with City-States you could demand tribute from.</Text>
+			<Text>
+				[ICON_BULLET]City-State [ICON_INFLUENCE] Influence degrades at half and recovers at twice the normal rate.
+				[NEWLINE][ICON_BULLET]City-States do not become upset by intruding units and + 5 [ICON_INFLUENCE] Influence (at Standard speed) per turn with City-States you could demand tribute from.
+				[NEWLINE][ICON_BULLET] Each allied city-state gives military units +3% combat power, up to 30%.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_RAZE_AND_HORSES">
@@ -9996,7 +10077,7 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_PHOENICIAN_HERITAGE">
-			<Text>+1 [ICON_PRODUCTION] Production for every Specialists. +4 [ICON_GOLD] Base Gold for every Sea International Trade Route and +25% Range for Cargoships.</Text>
+			<Text>+2 [ICON_PRODUCTION] Production for every Specialists. +4 [ICON_GOLD] Base Gold for every Sea International Trade Route and +25% Range for Cargoships.</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_EXTRA_TRADE">
@@ -10010,11 +10091,18 @@
 
 
 		<Replace Tag="TXT_KEY_TRAIT_SPICE">
-			<Text>The first 3 cities founded on continents other than where Indonesia started each provide 2 unique Luxury Resources. These 3 cities are free from Corruption and Public Security problems, cost No [ICON_GOLD] Gold maintance and can never be razed.</Text>
+			<Text>
+				[ICON_BULLET]The first 3 cities founded on continents other than where Indonesia started each provide 2 unique Luxury Resources. These 3 cities are free from Corruption and Public Security problems, cost No [ICON_GOLD] Gold maintance and can never be razed.
+				[NEWLINE][ICON_BULLET] For each luxury resource with a quantity greater than 1, the influence of [ICON_INFLUENCE] obtained by completing the city-state task +5%, the upper limit is 40%.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_GREAT_EXPANSE">
-			<Text>Founded cities start with additional territory (6 tiles). All cities receive free Granaries.</Text>
+			<Text>
+				[ICON_BULLET]Founded cities start with additional territory (6 tiles). 
+				[NEWLINE][ICON_BULLET]All cities receive free Granaries.
+				[NEWLINE][ICON_BULLET]All of your Scouts can choose the result of Goody Hut.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_WAYFINDING">
@@ -11370,10 +11458,36 @@
 		</Row>
 
 		<Replace Tag="TXT_KEY_UNIT_JAPANESE_SAMURAI">
-			<Text>[COLOR_SELECTED_TEXT]Samurai[ENDCOLOR]</Text>
+			<Text>[COLOR_SELECTED_TEXT]Hatamoto[ENDCOLOR]</Text>
 			<Plurality>2</Plurality>
 		</Replace>
+		<Row Tag="TXT_KEY_UNIT_GERMAN_LONGSWORDSMAN">
+			<Text>Doppelsoldner</Text>
+			<Plurality>2</Plurality>
+		</Row>
 
+		<Row Tag="TXT_KEY_UNIT_GERMAN_LONGSWORDSMAN_HELP">
+			<Text>
+				The Doppelsoldner is the Germany unique unit, replacing the Longswordsman. 
+				[NEWLINE][ICON_BULLET]Cause 100% splash damage to the enemy unit on the same tile when attacking;
+				[NEWLINE][ICON_BULLET]Can earn [ICON_GOLD] gold for each enemy killed (50% of its [ICON_STRENGTH] Combat Strength).
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_GERMAN_LONGSWORDSMAN_TEXT">
+			<Text>WIP</Text>
+		</Row>
+		<Row Tag = "TXT_KEY_PROMOTION_GERMAN_LONGSWORDSMAN">
+			<Text>Zweihänder</Text>
+		</Row>
+		<Row Tag = "TXT_KEY_PROMOTION_GERMAN_LONGSWORDSMAN_HELP">
+			<Text>Cause 100% splash damage to the enemy unit on the same tile when attacking.</Text>
+		</Row>
+		<Row Tag = "TXT_KEY_PROMOTION_GERMAN_LONGSWORDSMAN_GOLD">
+			<Text>Landsknechts</Text>
+		</Row>
+		<Row Tag = "TXT_KEY_PROMOTION_GERMAN_LONGSWORDSMAN_GOLD_HELP">
+			<Text>Can earn [ICON_GOLD] gold for each enemy killed (50% of its [ICON_STRENGTH] Combat Strength).</Text>
+		</Row>
 
 
 
@@ -12893,8 +13007,13 @@
 
 
 	<!-- *************************Unique Units Texts****************************-->
-	<Replace Tag="TXT_KEY_UNIT_JAPANESE_SAMURAI_STRATEGY">
-		<Text>The Samurai is the Japanese unique unit, replacing the Longswordsman. As powerful as the Swordsman, the Samurai is built with "Volley I" Promotion so it is powerful attacking enemy cities and fortified units. Success in combat with a Samurai has an increased chance of generating Great Generals. </Text>
+	<Replace Tag="TXT_KEY_UNIT_JAPANESE_SAMURAI_HELP">
+		<Text>
+			The Hatamoto is the Japanese unique unit, replacing the Longswordsman. 
+			[NEWLINE][ICON_BULLET]Flank Attack bonus +5%, +1 [ICON_MOVES] Movement;
+			[NEWLINE][ICON_BULLET]Can earn culture [ICON_CULTURE] points for each enemy killed (50% of its [ICON_STRENGTH] Combat Strength).
+			[NEWLINE][ICON_BULLET]Can build Dojo in city.
+		</Text>
 	</Replace>
 	<Replace Tag="TXT_KEY_UNIT_HELP_SAMURAI">
 		<Text>Unique unit of the Japanese civilization. Strong vs Cities and fortified units. Replaces the Longswordsman. </Text>
@@ -12905,6 +13024,20 @@
 	<Replace Tag="TXT_KEY_UNIT_HELP_ZERO">
 		<Text>A mutil-purpose Attacking Aircraft. Only the Japanese may build it. This Unit can not only attack land or naval units but also can perform an air sweep to take down enemy intercepting fighters. </Text>
 	</Replace>
+
+	<Row Tag = "TXT_KEY_PROMOTION_JAPANESE_SAMURAI">
+		<Text>The Sword</Text>
+	</Row>
+	<Row Tag = "TXT_KEY_PROMOTION_JAPANESE_SAMURAI_HELP">
+		<Text>Flank Attack bonus +5%.</Text>
+	</Row>
+	<Row Tag = "TXT_KEY_PROMOTION_JAPANESE_SAMURAI_CULTURE">
+		<Text>The Chrysanthemum</Text>
+	</Row>
+	<Row Tag = "TXT_KEY_PROMOTION_JAPANESE_SAMURAI_CULTURE_HELP">
+		<Text>Can earn culture [ICON_CULTURE] points for each enemy killed (50% of its [ICON_STRENGTH] Combat Strength).</Text>
+	</Row>
+
 
 
 
@@ -13685,7 +13818,7 @@
 				[NEWLINE][NEWLINE][ICON_BULLET]Strong attacking [COLOR_POSITIVE_TEXT]Cities[ENDCOLOR].
 				[NEWLINE][ICON_BULLET]+25% [ICON_STRENGTH]Combat Strength when fighting in [COLOR_POSITIVE_TEXT]Rough Terrains[ENDCOLOR].
 				[NEWLINE][ICON_BULLET]Strong when defending attacks from [COLOR_POSITIVE_TEXT]Anti-Mounted Units[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Militia Units[ENDCOLOR].
-				[NEWLINE][ICON_BULLET]Weak when attacked by [COLOR_NEGATIVE_TEXT]Heavy Mounted Units[ENDCOLOR].</Text>
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_GUNPOWDER_INFANTRY_COMBAT">
@@ -13697,7 +13830,7 @@
 				[NEWLINE][NEWLINE][ICON_BULLET]Perform a [COLOR_POSITIVE_TEXT]Ranged Attack[ENDCOLOR] before melee attacking. [NEWLINE][ICON_BULLET]Strong attacking [COLOR_POSITIVE_TEXT]Cities[ENDCOLOR].
 				[NEWLINE][ICON_BULLET]+25% [ICON_STRENGTH]Combat Strength when fighting in [COLOR_POSITIVE_TEXT]Rough Terrains[ENDCOLOR].
 				[NEWLINE][ICON_BULLET]Strong when defending attacks from [COLOR_POSITIVE_TEXT]Anti-Tank Units[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Militia Units[ENDCOLOR].
-				[NEWLINE][ICON_BULLET]Weak when attacked by [COLOR_NEGATIVE_TEXT]Tanks[ENDCOLOR].</Text>
+			</Text>
 		</Row>
 
 		<Replace Tag="TXT_KEY_PROMOTION_SHOCK_1_HELP" >
@@ -16090,5 +16223,115 @@
 		<Replace Tag="TXT_KEY_PEDIA_LEADER_FLAVOR_AIRLIFT">
 			<Text>[ICON_BULLET]Airlift:</Text>
 		</Replace>
+
+		<Row Tag="TXT_KEY_BUILDING_AZTEC_HUEY_TEOCALLI_SP">
+			<Text>[COLOR_SELECTED_TEXT]Huey Teocalli[ENDCOLOR]</Text>
+			</Row>
+		<Row Tag="TXT_KEY_BUILDING_AZTEC_HUEY_TEOCALLI_SP_HELP">
+			<Text>
+			[ICON_BULLET] Get two missionaries and all cities get free temples.
+			[NEWLINE][ICON_BULLET] New land army units in this city have +15 experience.
+			[NEWLINE][ICON_BULLET] Allow Faith to buy Cougar and Eagle Warriors.
+			[NEWLINE][ICON_BULLET] can move the army military unit to this city for human sacrifice, and get [ICON_CULTURE] culture and [ICON_PEACE] belief equivalent to 300% of the combat power of the military unit.
+			The unit has a 20% chance of surviving, and it will be promoted to [The Power of the God of War Zilopochtli], +50 maximum HP, and +10% combat power.
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_AZTEC_HUEY_TEOCALLI_SP_TEXT">
+			<Text>
+			The temples in the Aztec Empire were terraced pyramids topped by a temple, which was the site of all the important religious ceremonies in the region. The Temple of Huey (or, as it is called in Spanish, the Great Temple), the grandest temple, stands in the center of Tenochtitlan and is dedicated to two gods: Vezilo, the god of war Pochitelli and Tadoc, the god of agriculture (this also shows what was important in Aztec culture). Each deity has a separate temple, reached by a separate staircase. Mesoamerican pyramids were often rebuilt, using the original structures as bases for new towers that were continually enlarged. Thus, after its completion in 1325, the Temple of Huey was rebuilt six times. During its seventh and final construction, it was sacked and destroyed by Cortes and his conquerors. Only a few ruins remain, but people still indulge in eccentric celebrations of it...such as the fifteenth month celebration of the god of war, Vitzilopochtli, where amaranth is enshrined Deities made of plant seeds, bones, honey and human blood, which were then left for the common people to eat.
+			</Text>
+		</Row>
+			
+		<Row Tag="TXT_KEY_SP_MISSION_SACRIFICE_TITLE">
+			<Text>
+			Human Sacrifice
+			</Text>
+		</Row>
+			
+		<Row Tag="TXT_KEY_SP_MISSION_SACRIFICE_TOOL_TIP">
+			<Text>
+			Gain [ICON_PEACE] Faith equal to {1_faithRate}% of the unit's Combat Strength and [ICON_CULTURE] Culture equal to {2_cultureRate}%.
+			</Text>
+		</Row>
+			
+		<Row Tag="TXT_KEY_PROMOTION_AZTEC_HUEY_TEOCALLI">
+			<Text>
+			The Power of Zilopochtli
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_AZTEC_HUEY_TEOCALLI_HELP">
+			<Text>
+			HP upper limit +50, combat power +10%.
+			</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_RAZE_WITH_DYNAMITE">
+			<Text>
+				With the advanced dynamite, {1_city} was destroyed in one turn!
+			</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_GAME_OPTION_ABLE_GIFT_MILITIA">
+			<Text>
+				SP - [COLOR_YELLOW]Enable giving militia units [ENDCOLOR]
+			</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_GAME_OPTION_ABLE_GIFT_MILITIA_HELP">
+			<Text>
+				Check to allow giving militia units to city states to gain influence.
+			</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_SP_MISSION_SUPPLY_EXOTIC_GOODS_TOOLTIP">
+			<Text>
+				When the unit's movement is full, goods can be replenished in cities with Feitoria.
+			</Text>
+			</Row>
+			
+		<Row Tag="TXT_KEY_SP_MISSION_SUPPLY_EXOTIC_GOODS_TITLE">
+			<Text>
+				Replenish Exotic Goods
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MESSAGE_POLICY_CITIZENSHIP_ALERT">
+			<Text>
+				Because you adopted the policy CitizenShip，your new city [COLOR_POSITIVE_TEXT]{1_name}[ENDCOLOR] gain {2_name} point [ICON_PRODUCTION] Production.
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MESSAGE_POLICY_CULTURAL_DIPLOMACY_ALERT">
+			<Text>
+				[COLOR_POSITIVE_TEXT]{1_name}[ENDCOLOR] submitted to [COLOR_NEGATIVE_TEXT] our strong military deterrent [ENDCOLOR],
+				[NEWLINE]and forced to confess everything they had recently to [COLOR_POSITIVE_TEXT]{2_name}[ENDCOLOR].
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MESSAGE_POLICY_CONSULATES_ALERT">
+			<Text>
+				People in [COLOR_POSITIVE_TEXT]{1_name}[ENDCOLOR] appreciated you responding to their request,gain {2_name} point [ICON_CULTURE] culture.
+			</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_EUPANEL_BONUS_PROMOTION_PROMOTION_GENERIC">
+			<Text>Bonus VS {1_PromotionType}</Text>
+			</Row>
+		<Row Tag="TXT_KEY_EUPANEL_BONUS_PROMOTION_PROMOTION_ATTACK">
+			<Text>Attack Bonus VS {1_PromotionType}</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_BONUS_PROMOTION_PROMOTION_DEFENSE">
+			<Text>Defense Bonus VS {1_PromotionType}</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_BUILDING_CARTHAGINIAN_AGORA_COMMERCE_DESCRIPTION">
+			<Text>Carthaginian Agora - Business</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_CARTHAGINIAN_AGORA_COMMERCE_HELP">
+			<Text>Purchase cost -5%</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_CARTHAGINIAN_AGORA_EXPLORATION_DESCRIPTION">
+			<Text>Carthaginian Agora - Maritime</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_CARTHAGINIAN_AGORA_EXPLORATION_HELP">
+			<Text>Navy unit +10% combat strength</Text>
+		</Row>
 	</Language_en_US>
 </GameData>
