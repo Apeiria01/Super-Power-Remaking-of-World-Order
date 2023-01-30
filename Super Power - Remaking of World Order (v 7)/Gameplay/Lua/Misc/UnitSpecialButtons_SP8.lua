@@ -31,16 +31,23 @@ SacrificeMissionButton = {
         if not city then return end
 
         local strength = unit:GetBaseCombatStrength();
-        player:ChangeJONSCulture(strength * SacrificeMissionCultureRate / 100);
-        player:ChangeFaith(strength * SacrificeMissionFaithRate / 100);
-
+        local cultureBonus = strength * SacrificeMissionCultureRate / 100
+        local faithBonus = strength * SacrificeMissionFaithRate / 100
+        player:ChangeJONSCulture(cultureBonus);
+        player:ChangeFaith(faithBonus);
         --local iRand = math.random(1, 100);
         local iRand = Game.Rand(100, "At UnitSpecialButtons_SP8.lua SacrificeMissionButton, result for sacrifice") + 1
         if iRand <= SacrificeMissionPromotionProbability then
             unit:SetHasPromotion(GameInfoTypes["PROMOTION_AZTEC_HUEY_TEOCALLI"], true);
             unit:SetMoves(0);
+            if player:IsHuman() then
+                Events.GameplayAlertMessage(Locale.ConvertTextKey("TXT_KEY_MESSAGE_AZTEC_HUEY_ALERT_2", unit:GetName(),cultureBonus,faithBonus) )
+            end
         else
             unit:Kill();
+            if player:IsHuman() then
+                Events.GameplayAlertMessage(Locale.ConvertTextKey("TXT_KEY_MESSAGE_AZTEC_HUEY_ALERT_1", unit:GetName(),cultureBonus,faithBonus) )
+            end
         end
 
     end,

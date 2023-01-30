@@ -1869,7 +1869,7 @@
 			<Text>
 				全国城市内购买单位或建筑-15%[ICON_GOLD]金钱。
 				[NEWLINE][ICON_BULLET]本城拥有马戏团后即可建造。建造成本随城市数量增加。
-				[NEWLINE][ICON_BULLET]若开启商业政策，全国城市内购买单位或建筑额外-15%[ICON_GOLD]金钱。
+				[NEWLINE][ICON_BULLET]若开启商业政策，全国城市内购买单位或建筑额外-5%[ICON_GOLD]金钱。
 				[NEWLINE][ICON_BULLET]若开启海事政策，海军单位+10%战斗力。
 			</Text>
 		</Row>
@@ -3479,8 +3479,8 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_CHINESE_GARDEN_HELP</Tag>
 			<Text>
-				[NEWLINE][NEWLINE]只能在大型城市（26人口）建造。
-				本城市+25%[ICON_GREAT_PEOPLE]伟人点数积累，本城市+1[ICON_HAPPINESS_1]快乐。
+				只能在大型城市（26人口）建造。
+				[NEWLINE]本城市+25%[ICON_GREAT_PEOPLE]伟人点数积累、+2[ICON_HAPPINESS_1]全局快乐。
 				[NEWLINE][NEWLINE]每座园林-3%[ICON_HAPPINESS_4]全局不满。
 				[NEWLINE][NEWLINE]每座中国园林为每个城市规模提供基础产出：
 				[NEWLINE][ICON_BULLET]小镇：+1[ICON_FOOD]食物，+1[ICON_PRODUCTION]产能，+1[ICON_GOLDEN_AGE]黄金时代点数。
@@ -6381,7 +6381,7 @@
 				[NEWLINE][ICON_BULLET]军营，军械所，兵工厂，军事基地+1[ICON_PRODUCTION]产能。[ICON_PUPPET]傀儡城市+6[ICON_GOLD]金钱。
 				[NEWLINE][ICON_BULLET]马厩，冶铁坊，城墙，城堡+2[ICON_CULTURE]文化。
 				[NEWLINE][ICON_BULLET]建造军事单位时+15%[ICON_PRODUCTION]产能。
-				[NEWLINE][ICON_BULLET]攻占敌方城市赠送法院
+				[NEWLINE][ICON_BULLET]研发数学后，攻占敌方城市赠送法院
 			</Text>
 		</Replace>
 
@@ -6668,7 +6668,7 @@
 				[NEWLINE][ICON_BULLET]使所有的贸易站产出+1[ICON_GOLD]金钱。
 				[NEWLINE][ICON_BULLET]获得一条额外商路。
 				[NEWLINE][ICON_BULLET]允许建造大本钟和西印度公司。
-				[NEWLINE][NEWLINE]推行所有商业政策后：
+				[NEWLINE][NEWLINE]推行所有商业政策：
 				[NEWLINE][ICON_BULLET]使单位维护费和建筑维护费减少15%。
 				[NEWLINE][ICON_BULLET]并且在工业时代以后可以用[ICON_PEACE]信仰购买大商业家。
 			</Text>
@@ -6753,7 +6753,7 @@
 				[NEWLINE][ICON_BULLET]你的移民在境外不会损耗，工人、移民、考古学家、传教士以及大先知+1[ICON_MOVES]移动。
 				[NEWLINE][ICON_BULLET]所有的海运单位+1[ICON_MOVES]移动，海军统帅+3[ICON_MOVES]移动，所有海军单位可以进入大洋。
 				[NEWLINE][ICON_BULLET]解锁奇观鹿特丹港和大铁厂。
-				[NEWLINE][NEWLINE]启用了所有的探索政策树下的政策后：
+				[NEWLINE][NEWLINE]推行所有海事政策：
 				[NEWLINE][ICON_BULLET]立即获得一个海军统帅，海军统帅的产生速率+50%。
 				[NEWLINE][ICON_BULLET]允许在工业时代以后使用[ICON_PEACE]信仰购买海军统帅。此后海军统帅可以无消耗建造军事学院。
 			</Text>
@@ -14174,6 +14174,17 @@
 		<Row Tag="TXT_KEY_SP_MISSION_SACRIFICE_TITLE">
 			<Text>
 				活人献祭
+			</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_MESSAGE_AZTEC_HUEY_ALERT_1">
+			<Text>
+				你的[COLOR_POSITIVE_TEXT]{1_name}[ENDCOLOR]将自己的生命奉献给了神灵，你获得{2_name}点[ICON_PEACE]信仰和{3_name}点[ICON_CULTURE]文化。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MESSAGE_AZTEC_HUEY_ALERT_2">
+			<Text>
+				神灵庇佑! 你的[COLOR_POSITIVE_TEXT]{1_name}[ENDCOLOR]在献祭仪式中存活了下来并获得了[COLOR_NEGATIVE_TEXT]战神的祝福[ENDCOLOR]，你获得{2_name}点[ICON_PEACE]信仰和{3_name}点[ICON_CULTURE]文化。
 			</Text>
 		</Row>
 

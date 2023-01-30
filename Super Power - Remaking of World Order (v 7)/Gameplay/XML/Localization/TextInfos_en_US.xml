@@ -6256,8 +6256,8 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_CHINESE_GARDEN_HELP</Tag>
 			<Text>
-				[NEWLINE][NEWLINE]Can only be built in large cities (population 26).
-				This city +25% [ICON_GREAT_PEOPLE] accumulation of great man points, this city +1 [ICON_HAPPINESS_1] happiness.
+				Can only be built in large cities (population 26).
+				[NEWLINE]This city +25% [ICON_GREAT_PEOPLE] accumulation of great man points, +2 global [ICON_HAPPINESS_1] Happiness.
 				[NEWLINE][NEWLINE]-3%[ICON_HAPPINESS_4] global dissatisfaction per garden.
 				[NEWLINE][NEWLINE]Each Chinese Garden provides a base output for each city size:
 				[NEWLINE][ICON_BULLET] Town: +1[ICON_FOOD] food, +1[ICON_PRODUCTION] production, +1[ICON_GOLDEN_AGE] golden age points.
@@ -7391,7 +7391,7 @@
 				[NEWLINE][ICON_BULLET]+1 [ICON_PRODUCTION] Production for every Barracks, Armory, Arsenal and Military Base. +6 [ICON_GOLD] Gold in [ICON_PUPPET] Puppet cities. 
 				[NEWLINE][ICON_BULLET]+2 [ICON_CULTURE] Culture for every Stable, Steal Mill, Walls and Castle. 
 				[NEWLINE][ICON_BULLET]+15% [ICON_PRODUCTION] Production when building Military Units. 
-				[NEWLINE][ICON_BULLET]get free Counthouse when you capture an enemy city (need mathematics).
+				[NEWLINE][ICON_BULLET]get free Counthouse when you capture an enemy city (need Mathematics).
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_DISCIPLINE_HELP" >
@@ -16245,6 +16245,17 @@
 		<Row Tag="TXT_KEY_SP_MISSION_SACRIFICE_TITLE">
 			<Text>
 			Human Sacrifice
+			</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_MESSAGE_AZTEC_HUEY_ALERT_1">
+			<Text>
+				Your [COLOR_POSITIVE_TEXT]{1_name}[ENDCOLOR] gave his life to the gods, Gain {2_name} point [ICON_PEACE] Faith and {3_name} point [ICON_CULTURE]Culture.
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MESSAGE_AZTEC_HUEY_ALERT_2">
+			<Text>
+				Divine blessing ! Your [COLOR_POSITIVE_TEXT]{1_name}[ENDCOLOR] Survived from the sacrifice ceremony and blessed by [COLOR_NEGATIVE_TEXT]Zilopochtli[ENDCOLOR], Gain {2_name} point [ICON_PEACE] Faith and {3_name} point [ICON_CULTURE]Culture.
 			</Text>
 		</Row>
 			
