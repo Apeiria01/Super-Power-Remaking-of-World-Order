@@ -100,7 +100,9 @@
 		</Replace>
 		-->
 
-
+		<Row Tag="TXT_KEY_YIELD_FROM_OTHER_TIELDS">
+			<Text>{1_Num}{2_IconString} 来自其他产出的加成</Text>
+		</Row>
 		<!--Buildings-->
 
 

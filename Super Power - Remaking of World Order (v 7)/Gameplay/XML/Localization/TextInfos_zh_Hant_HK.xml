@@ -98,6 +98,10 @@
 			<Text>OVER_RESOURCE</Text>
 		</Replace>
 		-->
+
+		<Row Tag="TXT_KEY_YIELD_FROM_OTHER_TIELDS">
+			<Text>{1_Num}{2_IconString} 來自於其他產出的加成</Text>
+		</Row>
 		
 		
 <!--Buildings-->

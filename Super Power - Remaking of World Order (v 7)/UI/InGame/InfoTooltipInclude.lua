@@ -1894,6 +1894,8 @@ local function getYieldTooltip( city, yieldID, baseYield, totalYield, yieldIconS
 	-- Base Yield from Buildings
 	tips:insertLocalizedBulletIfNonZero( "TXT_KEY_YIELD_FROM_BUILDINGS", city:GetBaseYieldRateFromBuildings( yieldID ), yieldIconString )
 
+	tips:insertLocalizedBulletIfNonZero( "TXT_KEY_YIELD_FROM_OTHER_TIELDS", city:GetBaseYieldRateFromOtherYield( yieldID ), yieldIconString )
+
 	-- Base Yield from Specialists
 	tips:insertLocalizedBulletIfNonZero( "TXT_KEY_YIELD_FROM_SPECIALISTS", city:GetBaseYieldRateFromSpecialists( yieldID ), yieldIconString )
 
