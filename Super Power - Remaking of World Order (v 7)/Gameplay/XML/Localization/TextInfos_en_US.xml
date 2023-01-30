@@ -6257,7 +6257,7 @@
 			<Tag>TXT_KEY_BUILDING_CHINESE_GARDEN_HELP</Tag>
 			<Text>
 				Can only be built in large cities (population 26).
-				[NEWLINE]This city +25% [ICON_GREAT_PEOPLE] accumulation of great man points, this city +2 [ICON_HAPPINESS_1] happiness.
+				[NEWLINE]This city +25% [ICON_GREAT_PEOPLE] accumulation of great man points, +2 global [ICON_HAPPINESS_1] Happiness.
 				[NEWLINE][NEWLINE]-3%[ICON_HAPPINESS_4] global dissatisfaction per garden.
 				[NEWLINE][NEWLINE]Each Chinese Garden provides a base output for each city size:
 				[NEWLINE][ICON_BULLET] Town: +1[ICON_FOOD] food, +1[ICON_PRODUCTION] production, +1[ICON_GOLDEN_AGE] golden age points.

@@ -3394,7 +3394,7 @@
 			<Tag>TXT_KEY_BUILDING_CHINESE_GARDEN_HELP</Tag>
 			<Text>
 				只能在大型城市（26人口）建造。
-				[NEWLINE]本城市+25%[ICON_GREAT_PEOPLE]偉人點數積累、+2[ICON_HAPPINESS_1]本地快樂。
+				[NEWLINE]本城市+25%[ICON_GREAT_PEOPLE]偉人點數積累、+2[ICON_HAPPINESS_1]全局快樂。
 				[NEWLINE][NEWLINE]每座園林-3%[ICON_HAPPINESS_4]全局不滿。
 				[NEWLINE][NEWLINE]每座中國園林為每個城市規模提供基礎產出：
 				[NEWLINE][ICON_BULLET]小鎮：+1[ICON_FOOD]食物，+1[ICON_PRODUCTION]產能，+1[ICON_GOLDEN_AGE]黃金時代點數。
