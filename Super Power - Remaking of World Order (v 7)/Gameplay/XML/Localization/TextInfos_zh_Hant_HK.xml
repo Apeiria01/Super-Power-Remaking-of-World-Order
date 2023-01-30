@@ -850,10 +850,11 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_CARTHAGINIAN_COTHON_HELP">
 			<Text>
-				本城市每4[ICON_CITIZEN]人口+1[ICON_GOLD]金幣產出。
-				[NEWLINE][NEWLINE]本城建造海軍單位+15經驗。
-				[NEWLINE][NEWLINE]通過水域建立[ICON_CONNECTED]連接到[ICON_CAPITAL]首都的城市連接。
-				[NEWLINE][NEWLINE]從此城市出發的海上國際商路增加+10[ICON_GOLD]基礎金幣產出。
+				替代碼頭，造價更低。
+				[NEWLINE][ICON_BULLET]本城市每4[ICON_CITIZEN]人口+1[ICON_GOLD]金錢產出。
+				[NEWLINE][ICON_BULLET]本城建造海軍單位+15經驗。
+				[NEWLINE][ICON_BULLET]通過水域建立[ICON_CONNECTED]連接到[ICON_CAPITAL]首都的城市連接。
+				[NEWLINE][ICON_BULLET]提供一個[ICON_PRODUCTION]工程師槽。
 			</Text>
 		</Row>
 		<Row>

@@ -3100,10 +3100,11 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_CARTHAGINIAN_COTHON_HELP">
 			<Text>
-				+1 [ICON_GOLD] Gold for every 4 [ICON_CITIZEN] Citizens in the city.
-				[NEWLINE][NEWLINE]+15 XP for Naval Units built in this city.
-				[NEWLINE][NEWLINE]Forms a [ICON_CONNECTED] City Connection with the [ICON_CAPITAL] Capital over water.
-				[NEWLINE][NEWLINE]Sea International Trade Route from this city produces +10 [ICON_GOLD] Base Gold.
+				Replace wood dock with lower building cose.
+				[NEWLINE][ICON_BULLET]+1 [ICON_GOLD] Gold for every 4 [ICON_CITIZEN] Citizens in the city.
+				[NEWLINE][ICON_BULLET]+15 XP for Naval Units built in this city.
+				[NEWLINE][ICON_BULLET]Forms a [ICON_CONNECTED] City Connection with the [ICON_CAPITAL] Capital over water.
+				[NEWLINE][ICON_BULLET]Contain a [ICON_PRODUCTION] engineer work slot.
 			</Text>
 		</Row>
 		<Row>

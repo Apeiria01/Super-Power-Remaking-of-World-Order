@@ -141,7 +141,7 @@
 
 		<Row>
 			<CivilizationType>CIVILIZATION_CARTHAGE</CivilizationType>
-			<BuildingClassType>BUILDINGCLASS_HARBOR</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_WOOD_DOCK</BuildingClassType>
 			<BuildingType>BUILDING_CARTHAGINIAN_COTHON</BuildingType>
 		</Row>
 		<Row>

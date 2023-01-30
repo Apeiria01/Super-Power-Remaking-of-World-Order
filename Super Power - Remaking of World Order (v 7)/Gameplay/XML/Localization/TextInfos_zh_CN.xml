@@ -884,10 +884,11 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_CARTHAGINIAN_COTHON_HELP">
 			<Text>
-				本城市每4[ICON_CITIZEN]人口+1[ICON_GOLD]金钱产出。
-				[NEWLINE][NEWLINE]本城建造海军单位+15经验。
-				[NEWLINE][NEWLINE]通过水域建立[ICON_CONNECTED]连接到[ICON_CAPITAL]首都的城市连接。
-				[NEWLINE][NEWLINE]从此城市出发的海上国际商路增加+10[ICON_GOLD]基础金钱产出。
+				替代码头，造价更低。
+				[NEWLINE][ICON_BULLET]本城市每4[ICON_CITIZEN]人口+1[ICON_GOLD]金钱产出。
+				[NEWLINE][ICON_BULLET]本城建造海军单位+15经验。
+				[NEWLINE][ICON_BULLET]通过水域建立[ICON_CONNECTED]连接到[ICON_CAPITAL]首都的城市连接。
+				[NEWLINE][ICON_BULLET]提供一个[ICON_PRODUCTION]工程师槽。
 			</Text>
 		</Row>
 		<Row>

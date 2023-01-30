@@ -588,6 +588,11 @@
 			<Cost>1</Cost>
 		</Row>
 		<Row>
+			<BuildingType>BUILDING_CARTHAGINIAN_COTHON</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>1</Cost>
+		</Row>
+		<Row>
 			<BuildingType>BUILDING_SHIPYARD</BuildingType>
 			<ResourceType>RESOURCE_COAL</ResourceType>
 			<Cost>2</Cost>

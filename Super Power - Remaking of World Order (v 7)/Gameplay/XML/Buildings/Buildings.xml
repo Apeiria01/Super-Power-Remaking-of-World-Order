@@ -1214,23 +1214,19 @@
 		</Row>
 		<Row>
 			<Type>BUILDING_CARTHAGINIAN_COTHON</Type>
-			<BuildingClass>BUILDINGCLASS_HARBOR</BuildingClass>
-			<Cost>45</Cost>
-			<!--<GoldMaintenance>2</GoldMaintenance>-->
-			<PrereqTech>TECH_COMPASS</PrereqTech>
+			<BuildingClass>BUILDINGCLASS_WOOD_DOCK</BuildingClass>
+			<Cost>27</Cost>
+			<GoldMaintenance>3</GoldMaintenance>
+			<PrereqTech>TECH_SAILING</PrereqTech>
 			<Help>TXT_KEY_BUILDING_CARTHAGINIAN_COTHON_HELP</Help>
 			<Description>TXT_KEY_BUILDING_CARTHAGINIAN_COTHON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CARTHAGINIAN_COTHON_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
 			<ArtDefineTag>HARBOR</ArtDefineTag>
-			<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
-			<SpecialistCount>2</SpecialistCount>
-			<TradeRouteSeaGoldBonus>1000</TradeRouteSeaGoldBonus>
-			<TradeRouteRecipientBonus>10</TradeRouteRecipientBonus>
-			<TradeRouteTargetBonus>10</TradeRouteTargetBonus>
+			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+			<SpecialistCount>1</SpecialistCount>
 			<Water>true</Water>
 			<MinAreaSize>20</MinAreaSize>
-			<ConquestProb>100</ConquestProb>
 			<HurryCostModifier>25</HurryCostModifier>
 			<ArtInfoEraVariation>true</ArtInfoEraVariation>
 			<DisplayPosition>16</DisplayPosition>
