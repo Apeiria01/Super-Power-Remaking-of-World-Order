@@ -1818,7 +1818,7 @@
 				全國城市內購買單位或建築-15%[ICON_GOLD]金幣。
 				全國城市內購買單位或建築-15%[ICON_GOLD]金錢。
 				[NEWLINE][ICON_BULLET]本城擁有馬戲團後即可建造。建造成本隨城市數量增加。
-				[NEWLINE][ICON_BULLET]若開啟商業政策，全國城市內購買單位或建築額外-15%[ICON_GOLD]金錢。
+				[NEWLINE][ICON_BULLET]若開啟商業政策，全國城市內購買單位或建築額外-5%[ICON_GOLD]金錢。
 				[NEWLINE][ICON_BULLET]若開啟海事政策，海軍單位+10%戰鬥力。
 			</Text>
 		</Row>
@@ -3393,8 +3393,8 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_CHINESE_GARDEN_HELP</Tag>
 			<Text>
-				[NEWLINE][NEWLINE]只能在大型城市（26人口）建造。
-				本城市+25%[ICON_GREAT_PEOPLE]偉人點數積累，本城市+1[ICON_HAPPINESS_1]快樂。
+				只能在大型城市（26人口）建造。
+				[NEWLINE]本城市+25%[ICON_GREAT_PEOPLE]偉人點數積累、+2[ICON_HAPPINESS_1]本地快樂。
 				[NEWLINE][NEWLINE]每座園林-3%[ICON_HAPPINESS_4]全局不滿。
 				[NEWLINE][NEWLINE]每座中國園林為每個城市規模提供基礎產出：
 				[NEWLINE][ICON_BULLET]小鎮：+1[ICON_FOOD]食物，+1[ICON_PRODUCTION]產能，+1[ICON_GOLDEN_AGE]黃金時代點數。
@@ -3403,8 +3403,8 @@
 
 				[NEWLINE][ICON_BULLET]大型城市：+3[ICON_FOOD]食物，+3[ICON_PRODUCTION]產能，+3[ICON_GOLDEN_AGE]黃金時代點數。
 				[NEWLINE][ICON_BULLET]特大城市：+3[ICON_FOOD]食物，+3[ICON_PRODUCTION]產能，+3[ICON_GOLDEN_AGE]黃金時代點數；+1[ICON_CULTURE]文化，+1[ICON_REASEARCH]科研。
-				[NEWLINE][ICON_BULLET]巨型城市：+3[ICON_FOOD]食物，+3[ICON_PRODUCTION]產能，+3[ICON_GOLDEN_AGE]黃金時代點數。 +2[ICON_CULTURE]文化，+2[ICON_REASEARCH]科研。
-				[NEWLINE][ICON_BULLET]大都會：+3[ICON_FOOD]食物，+3[ICON_PRODUCTION]產能，+3[ICON_GOLDEN_AGE]黃金時代點數。 +3[ICON_CULTURE]文化，+3[ICON_REASEARCH]科研。
+				[NEWLINE][ICON_BULLET]巨型城市：+3[ICON_FOOD]食物，+3[ICON_PRODUCTION]產能，+3[ICON_GOLDEN_AGE]黃金時代點數。+2[ICON_CULTURE]文化，+2[ICON_REASEARCH]科研。
+				[NEWLINE][ICON_BULLET]大都會：+3[ICON_FOOD]食物，+3[ICON_PRODUCTION]產能，+3[ICON_GOLDEN_AGE]黃金時代點數。+3[ICON_CULTURE]文化，+3[ICON_REASEARCH]科研。
 			</Text>
 		</Row>
 		
@@ -6269,7 +6269,7 @@
 				[NEWLINE][ICON_BULLET]軍營，軍械所，兵工廠，軍事基地+1[ICON_PRODUCTION]產能。[ICON_PUPPET]傀儡城市+6[ICON_GOLD]金錢。
 				[NEWLINE][ICON_BULLET]馬廄，冶鐵坊，城墻，城堡+2[ICON_CULTURE]文化。
 				[NEWLINE][ICON_BULLET]建造軍事單位時+15%[ICON_PRODUCTION]產能。
-				[NEWLINE][ICON_BULLET]攻占敵方城市贈送法院
+				[NEWLINE][ICON_BULLET]研發數學後，攻占敵方城市贈送法院
 			</Text>
 		</Replace>
 
@@ -6633,66 +6633,82 @@
 		<Replace Tag="TXT_KEY_POLICY_BRANCH_EXPLORATION_CAP">
 			<Text>海事</Text>
 		</Replace>
-		
+
 		<Replace Tag="TXT_KEY_POLICY_BRANCH_EXPLORATION_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]海事政策[ENDCOLOR]提高帝国沿海城市的产出以及向海外扩张的能力。
-			[NEWLINE][NEWLINE]启用海事政策:
-			[NEWLINE][ICON_BULLET]你的移民在境外不会损耗，工人、移民、考古学家、传教士以及大先知+1[ICON_MOVES]移动。
-			[NEWLINE][ICON_BULLET]所有的海运单位+1[ICON_MOVES]移动，海军统帅+3[ICON_MOVES]移动，所有海军单位可以进入大洋。
-			[NEWLINE][ICON_BULLET]解锁奇观鹿特丹港和大铁厂。
-			[NEWLINE][NEWLINE]启用了所有的探索政策树下的政策后：
-			[NEWLINE][ICON_BULLET]立即获得一个海军统帅，海军统帅的产生速率+50%。
-			[NEWLINE][ICON_BULLET]允许在工业时代以后使用[ICON_PEACE]信仰购买海军统帅。此后海军统帅可以无消耗建造军事学院。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]海事政策[ENDCOLOR]提高帝國沿海城市的產出以及向海外擴張的能力。
+				[NEWLINE][NEWLINE]啟用海事政策:
+				[NEWLINE][ICON_BULLET]你的移民在境外不會損耗，工人、移民、考古學家、傳教士以及大先知+1[ICON_MOVES]移動。
+				[NEWLINE][ICON_BULLET]所有的海運單位+1[ICON_MOVES]移動，海軍統帥+3[ICON_MOVES]移動，所有海軍單位可以進入大洋。
+				[NEWLINE][ICON_BULLET]解鎖奇觀鹿特丹港和大鐵廠。
+				[NEWLINE][NEWLINE]推行所有海事政策：
+				[NEWLINE][ICON_BULLET]立即獲得一個海軍統帥，海軍統帥的產生速率+50%。
+				[NEWLINE][ICON_BULLET]允許在工業時代以後使用[ICON_PEACE]信仰購買海軍統帥。此後海軍統帥可以無消耗建造軍事學院。
+			</Text>
 		</Replace>
-				
+
 		<Replace Tag="TXT_KEY_POLICY_MARITIME_INFRASTRUCTURE_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]海上設施[ENDCOLOR][NEWLINE]沿海城市+3[ICON_PRODUCTION]產能。
-			[NEWLINE]所有漁船、捕撈船和海上石油平臺+1[ICON_PRODUCTION]產能。
-			[NEWLINE]工人修建海上設施的速度+50%。
+			<Text>
+				[COLOR_POSITIVE_TEXT]海上設施[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]沿海城市+3[ICON_PRODUCTION]產能。
+				[NEWLINE][ICON_BULLET]所有漁船、捕撈船和海上平臺+1[ICON_PRODUCTION]產能。
+				[NEWLINE][ICON_BULLET]工人修建海上設施的速度+50%。
 			</Text>
 		</Replace>
-		
+
 		<Replace Tag="TXT_KEY_POLICY_MERCHANT_NAVY_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]商船艦隊[ENDCOLOR]
-			[NEWLINE]獲得一條額外的商路。[NEWLINE]所有海上商路+6[ICON_GOLD]金錢。
-			[NEWLINE]所有沿海城市+3[ICON_RES_CONSUMER]商品。
-			[NEWLINE]可以使用信仰購買商船。
+			<Text>
+				[COLOR_POSITIVE_TEXT]商船艦隊[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]獲得一條額外的商路。
+				[NEWLINE][ICON_BULLET]所有海上商路+6[ICON_GOLD]金錢。
+				[NEWLINE][ICON_BULLET]所有沿海城市+3[ICON_RES_CONSUMER]商品。
+				[NEWLINE][ICON_BULLET]可以使用[ICON_PEACE]信仰購買商船。
 			</Text>
 		</Replace>
-		
+
 		<Replace Tag="TXT_KEY_POLICY_NAVAL_TRADITION_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]海軍傳統[ENDCOLOR][NEWLINE]所有沿海城市+3[ICON_CULTURE]文化值。[NEWLINE][ICON_BULLET]每處燈塔、港口和海運碼頭+2[ICON_CULTURE]文化值。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]海軍傳統[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]所有沿海城市+3[ICON_CULTURE]文化。
+				[NEWLINE][ICON_BULLET]每處燈塔、港口和海運碼頭+2[ICON_CULTURE]文化。
+			</Text>
 		</Replace>
-		
+
 		<Row Tag="TXT_KEY_POLICY_COASTAL_ADMINISTRATION">
 			<Text>海事管理</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_COASTAL_ADMINISTRATION_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]海事管理[ENDCOLOR]
-			[NEWLINE]燈塔、港口、碼頭使所在城市的[ICON_PRODUCTION]產能和[ICON_RESEARCH]科研產出提高3%。
-			[NEWLINE]海運碼頭、船塢使所在城市的[ICON_PRODUCTION]產能和[ICON_RESEARCH]科研產出提高5%。
-			[NEWLINE]燈塔、港口、碼頭、海運碼頭、船塢+4[ICON_GOLD]金錢。
+			<Text>
+				[COLOR_POSITIVE_TEXT]海事管理[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]燈塔、港口、碼頭使所在城市的[ICON_PRODUCTION]產能和[ICON_RESEARCH]科研產出提高3%。
+				[NEWLINE][ICON_BULLET]海運碼頭、船塢使所在城市的[ICON_PRODUCTION]產能和[ICON_RESEARCH]科研產出提高5%。
+				[NEWLINE][ICON_BULLET]燈塔、港口、碼頭、海運碼頭、船塢+4[ICON_GOLD]金錢。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_COASTAL_ADMINISTRATION_TEXT">
-			<Text>海事管理是研究轄區海事監管特點，貫徹落實海事法規的專業管理部門。對海事業務進行專業研究、指導、監督和管理，具體承擔船舶監督、危險品和防污染管理、船員管理、通航管理、航運公司安全管理體系審核管理等海事監管業務的專業管理職能和口岸有關管理職能。海事管理處原則上不直接實施海事具體行政行為。</Text>
+			<Text>海事管理是研究轄區海事監管特點，貫徹落實海事法規的專業管理部門。對海事業務進行專業研究、指導、監督和管理，具體承擔船舶監督、危險品和防汙染管理、船員管理、通航管理、航運公司安全管理體系審核管理等海事監管業務的專業管理職能和口岸有關管理職能。海事管理處原則上不直接實施海事具體行政行為。</Text>
 		</Row>
-		
+
 		<Replace Tag="TXT_KEY_POLICY_NAVIGATION_SCHOOL_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]航海學校[ENDCOLOR]
-			[NEWLINE]每處燈塔、港口、海運碼頭和船塢+1本地[ICON_HAPPINESS_1]快樂。建造海上單位時+15%[ICON_PRODUCTION]產能積累。新訓練的海軍單位+15點經驗。
-			[NEWLINE]當你訓練或購買了一個遠洋海軍單位時，獲得一次性的[ICON_CULTURE]文化加成(其數值相當於單位的100%[ICON_STRENGTH]戰鬥力)。
+			<Text>
+				[COLOR_POSITIVE_TEXT]航海學校[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]每處燈塔、港口、海運碼頭和船塢+1本地[ICON_HAPPINESS_1]快樂。建造海上單位時+15%[ICON_PRODUCTION]產能積累。
+				[NEWLINE][ICON_BULLET]新訓練的海軍單位+15點經驗。
+				[NEWLINE][ICON_BULLET]當你訓練或購買了一個遠洋海軍單位時，獲得一次性的[ICON_CULTURE]文化加成(其數值相當於單位的100%[ICON_STRENGTH]戰鬥力)。
 			</Text>
 		</Replace>
-		
+
 		<Replace Tag="TXT_KEY_POLICY_TREASURE_FLEETS">
-			<Text>制海權</Text>
+			<Text>製海權</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_TREASURE_FLEETS_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]制海權[ENDCOLOR][NEWLINE]所有海軍單位+1[ICON_MOVES]移動，+1視野並+15%[ICON_STRENGTH]戰鬥力。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]製海權[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]所有海軍單位+1[ICON_MOVES]移動，+1視野並+15%[ICON_STRENGTH]戰鬥力。
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_TREASURE_FLEETS_TEXT">
-			<Text>制海權（英語：Thalassocracy），是一種軍事理論，指海軍兵力在一定時間、一定海域內所掌握的控制權。制海權在馬漢的《海權論》中認為，是國家遂行海權運作的一部分。古典海軍的軍事理論，在戰術層面部分，多屬帆船時代至地理大發現間的海戰經驗分析。在如今軍事科技的快速發展下，於實戰上已經過時；然而，其核心概念的制海權，是最重要也最基本的概念，所以至今仍是海軍戰略研究的課題。</Text>
+			<Text>製海權（英語：Thalassocracy），是一種軍事理論，指海軍兵力在一定時間、一定海域內所掌握的控製權。製海權在馬漢的《海權論》中認為，是國家遂行海權運作的一部分。古典海軍的軍事理論，在戰術層面部分，多屬帆船時代至地理大發現間的海戰經驗分析。在如今軍事科技的快速發展下，於實戰上已經過時；然而，其核心概念的製海權，是最重要也最基本的概念，所以至今仍是海軍戰略研究的課題。</Text>
 		</Replace>
 		
 		<!--*******************Rationalism********************* -->
@@ -13955,6 +13971,17 @@
 		<Row Tag="TXT_KEY_SP_MISSION_SACRIFICE_TITLE">
 			<Text>
 				活人獻祭
+			</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_MESSAGE_AZTEC_HUEY_ALERT_1">
+			<Text>
+				你的[COLOR_POSITIVE_TEXT]{1_name}[ENDCOLOR]將自己的生命奉獻給了神靈，你獲得{2_name}點[ICON_PEACE]信仰和{3_name}點[ICON_CULTURE]文化。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MESSAGE_AZTEC_HUEY_ALERT_2">
+			<Text>
+				神靈庇佑! 你的[COLOR_POSITIVE_TEXT]{1_name}[ENDCOLOR]在獻祭儀式中存活了下來並獲得了[COLOR_NEGATIVE_TEXT]戰神的祝福[ENDCOLOR]，你獲得{2_name}點[ICON_PEACE]信仰和{3_name}點[ICON_CULTURE]文化。
 			</Text>
 		</Row>
 
