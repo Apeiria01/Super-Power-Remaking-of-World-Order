@@ -98,7 +98,7 @@
 			<Text>OVER_RESOURCE</Text>
 		</Replace>
 		-->
-		<Row Tag="TXT_KEY_YIELD_FROM_OTHER_TIELDS">
+		<Row Tag="TXT_KEY_YIELD_FROM_OTHER_YIELDS">
 			<Text>{1_Num}{2_IconString} From other types of yields.</Text>
 		</Row>
 	

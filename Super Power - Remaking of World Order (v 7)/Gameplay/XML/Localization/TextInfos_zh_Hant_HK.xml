@@ -99,7 +99,7 @@
 		</Replace>
 		-->
 
-		<Row Tag="TXT_KEY_YIELD_FROM_OTHER_TIELDS">
+		<Row Tag="TXT_KEY_YIELD_FROM_OTHER_YIELDS">
 			<Text>{1_Num}{2_IconString} 來自於其他產出的加成</Text>
 		</Row>
 		

@@ -1894,7 +1894,7 @@ local function getYieldTooltip( city, yieldID, baseYield, totalYield, yieldIconS
 	-- Base Yield from Buildings
 	tips:insertLocalizedBulletIfNonZero( "TXT_KEY_YIELD_FROM_BUILDINGS", city:GetBaseYieldRateFromBuildings( yieldID ), yieldIconString )
 
-	tips:insertLocalizedBulletIfNonZero( "TXT_KEY_YIELD_FROM_OTHER_TIELDS", city:GetBaseYieldRateFromOtherYield( yieldID ), yieldIconString )
+	tips:insertLocalizedBulletIfNonZero( "TXT_KEY_YIELD_FROM_OTHER_YIELDS", city:GetBaseYieldRateFromOtherYield( yieldID ), yieldIconString )
 
 	-- Base Yield from Specialists
 	tips:insertLocalizedBulletIfNonZero( "TXT_KEY_YIELD_FROM_SPECIALISTS", city:GetBaseYieldRateFromSpecialists( yieldID ), yieldIconString )
@@ -2186,6 +2186,9 @@ local function getCultureTooltip( city )
 
 	-- Culture from Buildings
 	tips:insertLocalizedBulletIfNonZero( "TXT_KEY_CULTURE_FROM_BUILDINGS", cultureFromBuildings )
+
+	--Culture from other yields
+	tips:insertLocalizedBulletIfNonZero( "TXT_KEY_YIELD_FROM_OTHER_YIELDS", city:GetBaseYieldRateFromOtherYield( YieldTypes.YIELD_CULTURE ), "[ICON_CULTURE]" )
 
 	-- Culture from Policies
 	tips:insertLocalizedBulletIfNonZero( "TXT_KEY_CULTURE_FROM_POLICIES", cultureFromPolicies )
