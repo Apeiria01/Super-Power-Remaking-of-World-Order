@@ -169,4 +169,11 @@
 			<Text>他們希望您能爲城邦做點兒什麽。</Text>
 		</Row>
 	</Language_zh_Hant_HK>
+
+	<!-- New Yield Modifier -->
+	<Language_zh_Hant_HK>
+		<Row Tag="TXT_KEY_PRODMOD_YIELD_NUM_GREAT_WORK">
+			<Text>[NEWLINE][ICON_BULLET]杰作修正: {1_Num}%</Text>
+		</Row>
+	</Language_zh_Hant_HK>
 </GameData>

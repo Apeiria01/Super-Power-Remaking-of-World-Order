@@ -230,7 +230,7 @@
 			<Help>TXT_KEY_SP_TECH_WORKERSPEED_HELP</Help>
 			<Era>ERA_ANCIENT</Era>
 			<Trade>true</Trade>
-			<!--<WorkerSpeedModifier>25</WorkerSpeedModifier>-->
+			<WorkerSpeedModifier>25</WorkerSpeedModifier>
 			<GridX>2</GridX>
 			<GridY>8</GridY>
 			<Quote>TXT_KEY_TECH_IRON_WORKING_QUOTE</Quote>
