@@ -846,7 +846,10 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_PORTUGAL_PORT_HELP">
 			<Text>
-				本城拥有的海上[COLOR_POSITIVE_TEXT]奢侈资源[ENDCOLOR]+1[ICON_GOLD]金钱产出和+1[ICON_PRODUCTION]产能产出。[NEWLINE][NEWLINE]城市必须沿海。.
+				本城拥有的海上[COLOR_POSITIVE_TEXT]奢侈资源[ENDCOLOR]+1[ICON_GOLD]金钱。
+				[NEWLINE][ICON_BULLET]本城拥有的海上[COLOR_POSITIVE_TEXT]奢侈资源[ENDCOLOR]和[COLOR_POSITIVE_TEXT]环礁[ENDCOLOR]+1[ICON_PRODUCTION]产能。
+				[NEWLINE][ICON_BULLET]商船经过拥有商站的城市地块时，获得[ICON_GOLD]金钱。
+				[NEWLINE][NEWLINE]城市必须沿海。
 			</Text>
 		</Row>
 		<Row>
@@ -857,7 +860,11 @@
 		</Row>
 
 		<Replace Tag="TXT_KEY_BUILDING_HARBOR_HELP">
-			<Text>[NEWLINE][NEWLINE]通过水域建立[ICON_CONNECTED]连接到[ICON_CAPITAL]首都的[ICON_CONNECTED]城市连接（如果尚未建立陆路[ICON_CONNECTED]连接）。[NEWLINE][NEWLINE]从本城起始通向其他文明的海上商路额外+10基础[ICON_GOLD]金钱。[NEWLINE][NEWLINE]城市必须拥有灯塔。</Text>
+			<Text>
+				通过水域建立到[ICON_CAPITAL]首都的[ICON_CONNECTED]城市连接（如果尚未建立陆路[ICON_CONNECTED]连接）。
+				[NEWLINE][NEWLINE]从本城起始通向其他文明的海上商路额外+10基础[ICON_GOLD]金钱。
+				[NEWLINE][NEWLINE]城市必须拥有灯塔。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_BUILDING_SEAPORT_HELP">
@@ -870,7 +877,10 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_INDONESIA_SPICE_HARBOR_HELP">
 			<Text>
-				通过水域建立[ICON_CONNECTED]连接到[ICON_CAPITAL]首都的[ICON_CONNECTED]城市连接（如果尚未建立陆路[ICON_CONNECTED]连接）。[NEWLINE][NEWLINE]所在城市每处已开发的奢侈资源额外+1份。[NEWLINE][NEWLINE]从本城起始通向其他文明的海上商路额外+10基础[ICON_GOLD]金钱。[NEWLINE][NEWLINE]城市必须拥有灯塔。
+				通过水域建立到[ICON_CAPITAL]首都的[ICON_CONNECTED]城市连接（如果尚未建立陆路[ICON_CONNECTED]连接）。
+				[NEWLINE][NEWLINE]所在城市每处已开发的奢侈资源额外+1份。
+				[NEWLINE][NEWLINE]从本城起始通向其他文明的海上商路额外+10基础[ICON_GOLD]金钱。
+				[NEWLINE][NEWLINE]城市必须拥有灯塔。
 			</Text>
 		</Row>
 		<Row>
@@ -889,7 +899,7 @@
 				替代码头，造价更低。
 				[NEWLINE][ICON_BULLET]本城市每4[ICON_CITIZEN]人口+1[ICON_GOLD]金钱产出。
 				[NEWLINE][ICON_BULLET]本城建造海军单位+15经验。
-				[NEWLINE][ICON_BULLET]通过水域建立[ICON_CONNECTED]连接到[ICON_CAPITAL]首都的城市连接。
+				[NEWLINE][ICON_BULLET]通过水域建立到[ICON_CAPITAL]首都的[ICON_CONNECTED]城市连接。
 				[NEWLINE][ICON_BULLET]提供一个[ICON_PRODUCTION]工程师槽。
 			</Text>
 		</Row>
@@ -989,7 +999,10 @@
 		</Row>
 
 		<Row Tag="TXT_KEY_CULTURAL_BUILDING_OBSOLETE_HELP">
-			<Text>[NEWLINE][NEWLINE]研发考古学之后，该建筑[COLOR_NEGATIVE_TEXT]过期[ENDCOLOR]（不再提供产出且不能建造）了。[NEWLINE][NEWLINE]但其+1[ICON_TOURISM]魅力。</Text>
+			<Text>
+				研发考古学之后，该建筑[COLOR_NEGATIVE_TEXT]过期[ENDCOLOR]（不再提供产出且不能建造）了。
+				[NEWLINE][NEWLINE]但其+1[ICON_TOURISM]魅力。
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_BUILDING_STELE_HELP">
@@ -3655,7 +3668,11 @@
 			<Text>[ICON_FOOD]医学实验室</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_MEDICAL_LAB_HELP">
-			<Text>[NEWLINE][NEWLINE]减少25%因污染导致的[ICON_FOOD]食物累积损失。[NEWLINE][NEWLINE]巨型城市需要有医学实验室才能继续增长人口。[NEWLINE][NEWLINE]每4[ICON_CITIZEN]市民+1[ICON_GOLD]维护费。</Text>
+			<Text>
+				减少25%因污染导致的[ICON_FOOD]食物累积损失。
+				[NEWLINE][NEWLINE]巨型城市需要有医学实验室才能继续增长人口。
+				[NEWLINE][NEWLINE]每4[ICON_CITIZEN]市民+1[ICON_GOLD]维护费。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_BUILDING_STADIUM_DESC">
@@ -3828,7 +3845,10 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_CITY_CBD_HELP</Tag>
-			<Text>[NEWLINE][NEWLINE]本城市+34%[ICON_RESEARCH]科研、[ICON_CULTURE]文化和[ICON_GOLD]金钱产出。[NEWLINE][NEWLINE]只能在大都会（80人口）建造。</Text>
+			<Text>
+				本城市+34%[ICON_RESEARCH]科研、[ICON_CULTURE]文化和[ICON_GOLD]金钱产出。
+				[NEWLINE][NEWLINE]只能在大都会（80人口）建造。
+			</Text>
 		</Row>
 
 		<Replace Tag="TXT_KEY_BUILDING_LIBRARY_HELP">

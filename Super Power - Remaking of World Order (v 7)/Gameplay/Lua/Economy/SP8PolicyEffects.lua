@@ -228,12 +228,12 @@ function SPECityBuildingCompleted(iPlayer, iCity, iBuilding, bGold, bFaithOrCult
 	 	return
 	end
 	local iBuildingClass = GameInfo.Buildings[iBuilding].BuildingClass
-	local isWonder = GameInfo.BuildingClasses[iBuildingClass].MaxGlobalInstances
+	local isWonder = GameInfo.BuildingClasses[iBuildingClass].MaxGlobalInstances + GameInfo.BuildingClasses[iBuildingClass].MaxPlayerInstances
 	if pPlayer:HasPolicy(GameInfo.Policies["POLICY_MERITOCRACY"].ID) 
 	and not pPlayer:IsPolicyBlocked(GameInfo.Policies["POLICY_MERITOCRACY"].ID)
 	and bGold == false
 	and bFaithOrCulture == false
-	and isWonder  == -1
+	and isWonder  == -2
 	then 
 		local bonus = GameInfo.GameSpeeds[Game.GetGameSpeedType()].ConstructPercent/100
 		local pCost = GameInfo.Buildings[iBuilding].Cost
@@ -343,7 +343,6 @@ function SPEPlayerBulliedMinorCiv(iCS, iPlayer, iGold, iUnitType, iPlotX, iPlotY
 			pPlayer:ChangeJONSCulture(iMinorCulture)
 			pPlayer:ChangeOverflowResearch(iMinorScience)
 			if pPlayer:IsHuman() then
-				--local pCity = pPlayer:GetCityByID(pTargetCity)
 				local hex = ToHexFromGrid(Vector2(pTargetCity:GetX(),pTargetCity:GetY()))
 				Events.AddPopupTextEvent(HexToWorld(hex), Locale.ConvertTextKey("+{1_Num}[ICON_RESEARCH],+{2_Num}[ICON_CULTURE],+{3_Num}[ICON_PRODUCTION],+{4_Num}[ICON_FOOD]",iMinorScience, iMinorCulture,iMinorProduction,iMinorFood))
 				Events.GameplayFX(hex.x, hex.y, -1)
