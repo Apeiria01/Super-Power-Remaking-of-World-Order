@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Default</Configuration>
     <ProjectGuid>{ef76ff1b-0497-463c-a616-d02546312750}</ProjectGuid>
-    <Name>Super Power - Remaking of World Order</Name>
+    <Name>Super Power - Rise of Hegemony</Name>
     <Guid>f9b9c8aa-b6d1-4188-9239-c1de2207ab7c</Guid>
     <ModVersion>8</ModVersion>
     <Stability>Alpha</Stability>
@@ -31,11 +31,7 @@
 [ICON_BULLET]Civilopedia Texts: Wikipedia, www.azquotes.com, www.brainyquote.com, baike.baidu.com
 [NEWLINE][ICON_BULLET]Proofreading, Document Editing &amp; Balance: 爱玲的安逸人生, Seven
 [NEWLINE][ICON_BULLET]
-Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namco Bandai Games and produced by Project Aces), Call of Duty: Modern Warfare (published and owned by Activision),World of Warships and World of Tanks(Wargaming) .  Command &amp; Conquer: Red Alert 3 (Electronic Arts).Cities XL 2012 (Focus Home Interactive)  Others from Google Search.
-
-[NEWLINE][ICON_BULLET]“Remaking of World Order” is inspired by political scientist Samuel P. Huntington’s The Clash of Civilizations and the Remaking of World Order, published in 1996
-[NEWLINE][ICON_BULLET]The names of unique national wonders “Ministry of Truth”, “Ministry of Plenty” and “Ministry of Peace” are inspired by English author George Orwell’s Nineteen Eighty-Four, published in 1949.
-[NEWLINE][NEWLINE]All works cited in this mod is NOT used for any commercial purposes. If I forget to give the credit to the certain author(s) or the author(s) think the work should not be used in this mod. Please contact me.</Description>
+Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namco Bandai Games and produced by Project Aces), Call of Duty: Modern Warfare (published and owned by Activision),World of Warships and World of Tanks(Wargaming) .  Command &amp; Conquer: Red Alert 3 (Electronic Arts).Cities XL 2012 (Focus Home Interactive)  Others from Google Search.</Description>
     <Authors>Super Power Team</Authors>
     <SpecialThanks>Lincoln_lyf (I8), whoward69, Gedemon, bc1, Barathor, Tokata, MarbleGargoyle, BlackFeather_, Maximus, CaptainCWB...</SpecialThanks>
     <AffectsSavedGames>true</AffectsSavedGames>
