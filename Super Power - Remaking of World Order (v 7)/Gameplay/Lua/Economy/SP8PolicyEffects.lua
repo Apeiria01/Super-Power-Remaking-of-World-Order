@@ -343,8 +343,8 @@ function SPEPlayerBulliedMinorCiv(iCS, iPlayer, iGold, iUnitType, iPlotX, iPlotY
 			pPlayer:ChangeJONSCulture(iMinorCulture)
 			pPlayer:ChangeOverflowResearch(iMinorScience)
 			if pPlayer:IsHuman() then
-				local pCity = pPlayer:GetCityByID(pTargetCity)
-				local hex = ToHexFromGrid(Vector2(pCity:GetX(),pCity:GetY()))
+				--local pCity = pPlayer:GetCityByID(pTargetCity)
+				local hex = ToHexFromGrid(Vector2(pTargetCity:GetX(),pTargetCity:GetY()))
 				Events.AddPopupTextEvent(HexToWorld(hex), Locale.ConvertTextKey("+{1_Num}[ICON_RESEARCH],+{2_Num}[ICON_CULTURE],+{3_Num}[ICON_PRODUCTION],+{4_Num}[ICON_FOOD]",iMinorScience, iMinorCulture,iMinorProduction,iMinorFood))
 				Events.GameplayFX(hex.x, hex.y, -1)
 				Events.GameplayAlertMessage(Locale.ConvertTextKey("TXT_KEY_MESSAGE_POLICY_CULTURAL_DIPLOMACY_ALERT", minorCity:GetName(), pTargetCity:GetName() ) )
