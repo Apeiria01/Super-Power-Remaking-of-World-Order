@@ -862,7 +862,7 @@
 		
 		<Row>
 			<Tag>TXT_KEY_BUILDING_CARTHAGINIAN_COTHON</Tag>
-			<Text>[ICON_GOLD]內港</Text>
+			<Text>[ICON_GOLD][ICON_WAR]內港</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_CARTHAGINIAN_COTHON_HELP">
 			<Text>

@@ -3101,7 +3101,7 @@
 		
 		<Row>
 			<Tag>TXT_KEY_BUILDING_CARTHAGINIAN_COTHON</Tag>
-			<Text>[ICON_GOLD] Cothon</Text>
+			<Text>[ICON_GOLD][ICON_WAR] Cothon</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_CARTHAGINIAN_COTHON_HELP">
 			<Text>
