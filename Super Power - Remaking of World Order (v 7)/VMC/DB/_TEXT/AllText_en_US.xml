@@ -169,4 +169,11 @@
 			<Text>They want you to do something for them.</Text>
 		</Row>
 	</Language_en_US>
+
+	<!-- New Yield Modifier -->
+	<Language_en_US>
+		<Row Tag="TXT_KEY_PRODMOD_YIELD_NUM_GREAT_WORK">
+			<Text>[NEWLINE][ICON_BULLET]Great Work Modifiers: {1_Num}%</Text>
+		</Row>
+	</Language_en_US>
 </GameData>

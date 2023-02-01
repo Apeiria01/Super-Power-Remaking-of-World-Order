@@ -141,7 +141,7 @@
 
 		<Row>
 			<CivilizationType>CIVILIZATION_CARTHAGE</CivilizationType>
-			<BuildingClassType>BUILDINGCLASS_HARBOR</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_WOOD_DOCK</BuildingClassType>
 			<BuildingType>BUILDING_CARTHAGINIAN_COTHON</BuildingType>
 		</Row>
 		<Row>
@@ -292,11 +292,11 @@
 
 
 
-		<!--<Row>
+		<Row>
 			<CivilizationType>CIVILIZATION_AZTEC</CivilizationType>
-			<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
-			<BuildingType>BUILDING_AZTEC_ANCIENT_BARRACKS</BuildingType>
-		</Row>-->
+			<BuildingClassType>BUILDINGCLASS_GRAND_TEMPLE</BuildingClassType>
+			<BuildingType>BUILDING_AZTEC_HUEY_TEOCALLI_SP</BuildingType>
+		</Row>
 		<Row>
 			<CivilizationType>CIVILIZATION_AZTEC</CivilizationType>
 			<BuildingClassType>BUILDINGCLASS_WATERMILL</BuildingClassType>
