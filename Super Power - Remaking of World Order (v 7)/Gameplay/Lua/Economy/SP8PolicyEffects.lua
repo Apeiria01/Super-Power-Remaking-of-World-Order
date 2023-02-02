@@ -137,11 +137,11 @@ end
 Events.SerialEventUnitCreated.Add(SPEPolicyUnitCreated)
 
 --POLICY_MARITIME_INFRASTRUCTURE: +50% build speed on water tiles
-function SPEBuildSpeedIncrease(iPlayer, iUnit, iX, iY, iBuild, bStarting)
+function SPEBuildSpeedIncrease(iPlayer, iUnit, iX, iY, iBuild, bStarting, bFinished)
 	local pPlayer = Players[iPlayer]
 	local unit = pPlayer:GetUnitByID(iUnit)
  
-	if pPlayer == nil or pPlayer:IsMinorCiv() or pPlayer:IsBarbarian() then
+	if pPlayer == nil or pPlayer:IsMinorCiv() or pPlayer:IsBarbarian() or bFinished then
 		return
 	end
  

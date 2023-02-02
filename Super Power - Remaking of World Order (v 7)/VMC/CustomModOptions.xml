@@ -603,7 +603,7 @@
     <!-- Events sent by plots (v30) -->
     <!--   GameEvents.PlayerCanBuild.Add(function(iPlayer, iUnit, iX, iY, iBuild) return true end) -->
     <!--   GameEvents.PlotCanImprove.Add(function(iX, iY, iImprovement) return true end) -->
-    <!--   GameEvents.PlayerBuilding.Add(function(iPlayer, iUnit, iX, iY, iBuild, bStarting) end) (v46) -->
+    <!--   GameEvents.PlayerBuilding.Add(function(iPlayer, iUnit, iX, iY, iBuild, bStarting, bFinished) end) -->
     <!--   GameEvents.PlayerBuilt.Add(function(iPlayer, iUnit, iX, iY, iBuild) end) (v46) -->
     <!-- See also: "Improvement - Pontoon Bridge" -->
     <Row Class="3" Name="EVENTS_PLOT" Value="0"/>
