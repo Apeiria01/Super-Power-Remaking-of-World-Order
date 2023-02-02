@@ -7297,7 +7297,7 @@
 				[COLOR_POSITIVE_TEXT]Meritocracy[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]+2 [ICON_PRODUCTION] Production in every city.
 				[NEWLINE][ICON_BULLET]+10% [ICON_PRODUCTION] Production in cities when constructing Buildings.
-				[NEWLINE][ICON_BULLET]When building constructed , get free [ICON_RESEARCH]science and [ICON_CULTURE] culture (10% of its cost).
+				[NEWLINE][ICON_BULLET]When building or national wonder constructed, gain free [ICON_RESEARCH]science and [ICON_CULTURE] culture (10% of its cost).
 			</Text>
 		</Replace>
 

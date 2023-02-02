@@ -228,12 +228,12 @@ function SPECityBuildingCompleted(iPlayer, iCity, iBuilding, bGold, bFaithOrCult
 	 	return
 	end
 	local iBuildingClass = GameInfo.Buildings[iBuilding].BuildingClass
-	local isWonder = GameInfo.BuildingClasses[iBuildingClass].MaxGlobalInstances + GameInfo.BuildingClasses[iBuildingClass].MaxPlayerInstances
+	local isWonder = GameInfo.BuildingClasses[iBuildingClass].MaxGlobalInstances
 	if pPlayer:HasPolicy(GameInfo.Policies["POLICY_MERITOCRACY"].ID) 
 	and not pPlayer:IsPolicyBlocked(GameInfo.Policies["POLICY_MERITOCRACY"].ID)
 	and bGold == false
 	and bFaithOrCulture == false
-	and isWonder  == -2
+	and isWonder  == -1
 	then 
 		local bonus = GameInfo.GameSpeeds[Game.GetGameSpeedType()].ConstructPercent/100
 		local pCost = GameInfo.Buildings[iBuilding].Cost

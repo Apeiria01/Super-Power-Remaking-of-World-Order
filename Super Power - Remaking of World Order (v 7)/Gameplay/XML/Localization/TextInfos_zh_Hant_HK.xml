@@ -6203,7 +6203,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]精英政治[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]每座城市+2[ICON_PRODUCTION]產能，城市建造建築時+10%[ICON_PRODUCTION]產能。
-				[NEWLINE][ICON_BULLET]城市建造完成基礎建築後，獲得數值相當於建築產能的10%的一次性[ICON_RESEARCH]科研、[ICON_CULTURE]文化產出。
+				[NEWLINE][ICON_BULLET]城市完成建築或國家奇觀後，獲得數值相當於其產能的10%的一次性[ICON_RESEARCH]科研、[ICON_CULTURE]文化產出（購買建築無效）。
 			</Text>
 		</Replace>
 
