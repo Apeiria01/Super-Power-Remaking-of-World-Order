@@ -3316,7 +3316,7 @@
 		</Row>
 		<!--共和政体假建筑赠送-->
 		<Row>
-			<PolicyType>POLICY_POLICY_REPUBLIC</PolicyType>
+			<PolicyType>POLICY_REPUBLIC</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_POLICY_REPUBLIC_FREE</BuildingClassType>
 			<Count>1</Count>
 		</Row>

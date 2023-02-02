@@ -817,7 +817,11 @@
 			<Text>[ICON_PRODUCTION][ICON_GOLD]商站</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_PORTUGAL_PORT_HELP">
-			<Text>本城擁有的海上[COLOR_POSITIVE_TEXT]奢侈資源[ENDCOLOR]+1[ICON_GOLD]金幣產出和+1[ICON_PRODUCTION]產能產出。[NEWLINE][NEWLINE]城市必須沿海。.
+			<Text>
+				[ICON_BULLET]本城擁有的海上[COLOR_POSITIVE_TEXT]奢侈資源[ENDCOLOR]+1[ICON_GOLD]金錢。
+				[NEWLINE][ICON_BULLET]本城擁有的海上[COLOR_POSITIVE_TEXT]奢侈資源[ENDCOLOR]和[COLOR_POSITIVE_TEXT]環礁[ENDCOLOR]+1[ICON_PRODUCTION]產能。
+				[NEWLINE][ICON_BULLET]商船經過擁有商站的城市地塊時，獲得[ICON_GOLD]金錢。
+				[NEWLINE][NEWLINE]城市必須沿海。
 			</Text>
 		</Row>
 		<Row>
@@ -827,7 +831,11 @@
 		</Row>
 		
 		<Replace Tag="TXT_KEY_BUILDING_HARBOR_HELP">
-			<Text>[NEWLINE][NEWLINE]通過水域建立[ICON_CONNECTED]連接到[ICON_CAPITAL]首都的[ICON_CONNECTED]城市連接（如果尚未建立陸路[ICON_CONNECTED]連接）。[NEWLINE][NEWLINE]從本城起始通向其他文明的海上商路額外+10基礎[ICON_GOLD]金幣。[NEWLINE][NEWLINE]城市必須擁有燈塔。</Text>
+			<Text>
+				通過水域建立到[ICON_CAPITAL]首都的[ICON_CONNECTED]城市連接（如果尚未建立陸路[ICON_CONNECTED]連接）。
+				[NEWLINE][NEWLINE]從本城起始通向其他文明的海上商路額外+10基礎[ICON_GOLD]金幣。
+				[NEWLINE][NEWLINE]城市必須擁有燈塔。
+			</Text>
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_BUILDING_SEAPORT_HELP">
@@ -839,7 +847,11 @@
 			<Text>[ICON_GOLD]香料海市</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_INDONESIA_SPICE_HARBOR_HELP">
-			<Text>通過水域建立[ICON_CONNECTED]連接到[ICON_CAPITAL]首都的[ICON_CONNECTED]城市連接（如果尚未建立陸路[ICON_CONNECTED]連接）。[NEWLINE][NEWLINE]所在城市每處已開發的奢侈資源額外+1份。[NEWLINE][NEWLINE]從本城起始通向其他文明的海上商路額外+10基礎[ICON_GOLD]金幣。[NEWLINE][NEWLINE]城市必須擁有燈塔。
+			<Text>
+				通過水域建立到[ICON_CAPITAL]首都的[ICON_CONNECTED]城市連接（如果尚未建立陸路[ICON_CONNECTED]連接）。
+				[NEWLINE][NEWLINE]所在城市每處已開發的奢侈資源額外+1份。
+				[NEWLINE][NEWLINE]從本城起始通向其他文明的海上商路額外+10基礎[ICON_GOLD]金幣。
+				[NEWLINE][NEWLINE]城市必須擁有燈塔。
 			</Text>
 		</Row>
 		<Row>
@@ -850,14 +862,14 @@
 		
 		<Row>
 			<Tag>TXT_KEY_BUILDING_CARTHAGINIAN_COTHON</Tag>
-			<Text>[ICON_GOLD]內港</Text>
+			<Text>[ICON_GOLD][ICON_WAR]內港</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_CARTHAGINIAN_COTHON_HELP">
 			<Text>
 				替代碼頭，造價更低。
 				[NEWLINE][ICON_BULLET]本城市每4[ICON_CITIZEN]人口+1[ICON_GOLD]金錢產出。
 				[NEWLINE][ICON_BULLET]本城建造海軍單位+15經驗。
-				[NEWLINE][ICON_BULLET]通過水域建立[ICON_CONNECTED]連接到[ICON_CAPITAL]首都的城市連接。
+				[NEWLINE][ICON_BULLET]通過水域建立到[ICON_CAPITAL]首都的[ICON_CONNECTED]城市連接。
 				[NEWLINE][ICON_BULLET]提供一個[ICON_PRODUCTION]工程師槽。
 			</Text>
 		</Row>
@@ -952,7 +964,10 @@
 		</Row>
 		
 		<Row Tag="TXT_KEY_CULTURAL_BUILDING_OBSOLETE_HELP">
-			<Text>[NEWLINE][NEWLINE]研發考古學之後，該建築[COLOR_NEGATIVE_TEXT]過期[ENDCOLOR]（不再提供產出且不能建造）了。[NEWLINE][NEWLINE]但其+1[ICON_TOURISM]旅遊業績。</Text>
+			<Text>
+				研發考古學之後，該建築[COLOR_NEGATIVE_TEXT]過期[ENDCOLOR]（不再提供產出且不能建造）了。
+				[NEWLINE][NEWLINE]但其+1[ICON_TOURISM]旅遊業績。
+			</Text>
 		</Row>
 	
 		<Row Tag="TXT_KEY_BUILDING_STELE_HELP">
@@ -3566,7 +3581,11 @@
 			<Text>[ICON_FOOD]醫學實驗室</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_MEDICAL_LAB_HELP">
-			<Text>[NEWLINE][NEWLINE]減少25%因污染導致的[ICON_FOOD]食物累積損失。[NEWLINE][NEWLINE]巨型城市需要有醫學實驗室才能繼續增長人口。[NEWLINE][NEWLINE]每4[ICON_CITIZEN]市民+1[ICON_GOLD]維護費。</Text>
+			<Text>
+				減少25%因污染導致的[ICON_FOOD]食物累積損失。
+				[NEWLINE][NEWLINE]巨型城市需要有醫學實驗室才能繼續增長人口。
+				[NEWLINE][NEWLINE]每4[ICON_CITIZEN]市民+1[ICON_GOLD]維護費。
+			</Text>
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_BUILDING_STADIUM_DESC">
@@ -3734,7 +3753,10 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_CITY_CBD_HELP</Tag>
-			<Text>[NEWLINE][NEWLINE]本城市+34%[ICON_RESEARCH]科技值、[ICON_CULTURE]文化值和[ICON_GOLD]金幣產出。[NEWLINE][NEWLINE]只能在大都會（80人口）建造。</Text>
+			<Text>
+				本城市+34%[ICON_RESEARCH]科技值、[ICON_CULTURE]文化值和[ICON_GOLD]金幣產出。
+				[NEWLINE][NEWLINE]只能在大都會（80人口）建造。
+			</Text>
 		</Row>
 		
 		<Replace Tag="TXT_KEY_BUILDING_LIBRARY_HELP">
