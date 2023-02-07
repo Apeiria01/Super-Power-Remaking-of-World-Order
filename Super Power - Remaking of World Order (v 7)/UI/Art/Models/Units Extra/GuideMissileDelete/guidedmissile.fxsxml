@@ -1,0 +1,19 @@
+<Asset>
+	<Mesh file="GuidedMissile.gr2"/>
+	<Texture file="GuidedMissile_DIFF.dds"/>
+	<Texture file="GuidedMissile_SREF.dds"/>
+	<AnimGraph file="START_RUN_LAUNCH.dge"/>
+	<AnimGraph file="DEATH_A_GRAPH.dge"/>
+	<StateMachine file="MISSLE_STATE_01.fsmxml"/>
+	<AnimGraph file="IDLE_A_GRAPH.dge"/>
+	<AnimGraph file="RUNNING_LOOP_GRAPH.dge"/>
+	<AnimGraph file="DEATH_FINAL_A_GRAPH.dge"/>
+	<AnimGraph file="ATTACK_A_GRAPH.dge"/>
+	<TimedTrigger file="FX_Triggers_GuidedMissile.ftsxml"/>
+	<BoneUsage>
+		<Bone name="bone_BODY"/>
+		<Bone name="WORLD_center"/>
+		<Bone name="GuidedMissile"/>
+	</BoneUsage>
+</Asset>
+

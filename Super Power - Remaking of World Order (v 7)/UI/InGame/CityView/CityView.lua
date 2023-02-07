@@ -528,6 +528,10 @@ function AddBuildingButton( pCity, building )
 			
 			if building.SpecialistType == "SPECIALIST_ENGINEER"  then
 				ToolTipString = ToolTipString .. " +2" .. "[ICON_RES_MANPOWER]";
+				local player = Players[pCity:GetOwner()];
+				if Teams[player:GetTeam()]:IsHasTech(GameInfo.Technologies["TECH_ELECTRICITY"].ID) then
+					ToolTipString = ToolTipString .. " +2" .. "[ICON_RES_ELECTRICITY]";
+				end
 				
 			elseif building.SpecialistType == "SPECIALIST_MERCHANT" then
 				local player = Players[pCity:GetOwner()]
@@ -3101,7 +3105,8 @@ function OnCityAutomation(bIsChecked)
 		end
 	end	
 end
-Controls.BTNCityAuto:RegisterCheckHandler(OnCityAutomation)
+Controls.BTNCityAuto:RegisterCheckHandler(OnCityAutomation)
+
 
 
 
