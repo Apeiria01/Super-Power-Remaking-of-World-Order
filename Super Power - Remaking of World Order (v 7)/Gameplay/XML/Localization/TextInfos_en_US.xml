@@ -5986,7 +5986,7 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_COUNTRY_CLUB_HELP</Tag>
 			<Text>
-				+1 [ICON_CULTURE] Culture and +2 [ICON_GOLD] Gold for each source of [ICON_RES_TRUFFLES] Truffles, [ICON_RES_TOBACCO] Tobacco, [ICON_RES_PERFUME] Perfume, [ICON_RES_WINE] Wine, [ICON_RES_INCENSE] Incense，[ICON_RES_SPICES] Spices [ICON_RES_MARBLE] Marble and [ICON_RES_HORSE] Horses worked by this city.
+				+1 [ICON_CULTURE] Culture and +2 [ICON_GOLD] Gold for each source of [ICON_RES_TRUFFLES] Truffles, [ICON_RES_TOBACCO] Tobacco, [ICON_RES_PERFUME] Perfume, [ICON_RES_WINE] Wine, [ICON_RES_INCENSE] Incense, [ICON_RES_SPICES] Spices [ICON_RES_MARBLE] Marble and [ICON_RES_HORSE] Horses worked by this city.
 				[NEWLINE][NEWLINE]Must be built in Large Cities.</Text>
 		</Row>
 
@@ -6004,7 +6004,7 @@
 			<Text>
 				Each Resort you built will provide 250 [ICON_GOLD] Gold each time a Great Person is expended.
 				[NEWLINE][NEWLINE]50% from [ICON_CULTURE] Culture of Wonders and improvements in the city added to its [ICON_TOURISM] Tourism output.
-				[NEWLINE][NEWLINE]+1 [ICON_CULTURE] Culture and +2 [ICON_GOLD] Gold for each source of [ICON_RES_TRUFFLES] Truffles, [ICON_RES_TOBACCO] Tobacco, [ICON_RES_PERFUME] Perfume, [ICON_RES_WINE] Wine, [ICON_RES_INCENSE] Incense，[ICON_RES_SPICES] Spices [ICON_RES_MARBLE] Marble and [ICON_RES_HORSE] Horses worked by this city.
+				[NEWLINE][NEWLINE]+1 [ICON_CULTURE] Culture and +2 [ICON_GOLD] Gold for each source of [ICON_RES_TRUFFLES] Truffles, [ICON_RES_TOBACCO] Tobacco, [ICON_RES_PERFUME] Perfume, [ICON_RES_WINE] Wine, [ICON_RES_INCENSE] Incense, [ICON_RES_SPICES] Spices [ICON_RES_MARBLE] Marble and [ICON_RES_HORSE] Horses worked by this city.
 				[NEWLINE][NEWLINE]Must be built in Large Cities.
 			</Text>
 		</Row>
@@ -6081,7 +6081,7 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_WILDLIFE_PRESERVE_HELP</Tag>
 			<Text>
-				+2 [ICON_CULTURE] Culture and +2 [ICON_GOLD] Gold for each source of [ICON_RES_DEER] Deer, [ICON_RES_BISON] Bison, [ICON_RES_FUR] Foxes, [ICON_RES_IVORY] Elephants，[ICON_RES_WHALE] Whales and [ICON_RES_HORSE] Horses worked by this city.
+				+2 [ICON_CULTURE] Culture and +2 [ICON_GOLD] Gold for each source of [ICON_RES_DEER] Deer, [ICON_RES_BISON] Bison, [ICON_RES_FUR] Foxes, [ICON_RES_IVORY] Elephants, [ICON_RES_WHALE] Whales and [ICON_RES_HORSE] Horses worked by this city.
 				[NEWLINE][NEWLINE]Must be built in Large Cities.</Text>
 		</Row>
 
@@ -8697,32 +8697,63 @@
 
 <!-- Religions -->
 	<!--**************************************************Belief Texts Tweak*************************************-->
+
+		<Replace Tag="TXT_KEY_BELIEF_GODDESS_LOVE_SHORT">
+			<Text>Goddress of Creation</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_GODDESS_LOVE">
+			<Text>+1 [ICON_HAPPINESS_1] Happiness in cities</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_OPEN_SKY">
+			<Text>+1 [ICON_CULTURE] Culture from Pasture, [ICON_RES_COW] +1 [ICON_PEACE], [ICON_RES_SHEEP] +1 [ICON_CULTURE], [ICON_RES_HORSE] +1 [ICON_RESEARCH]</Text>
+		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_ANCESTOR_WORSHIP">
-			<Text>+1 [ICON_PEACE] Faith and +1 [ICON_CULTURE] Culture from every Shrine</Text>
+			<Text>+1 [ICON_PEACE] Faith and +1 [ICON_CULTURE] Culture from every Shrine, +10% [ICON_PRODUCTION] Production for pre-industrial wonders</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_DANCE_AURORA_SHORT">
+			<Text>Prometheus</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_DANCE_AURORA">
-			<Text>+2 [ICON_PEACE] Faith from Tundra tiles without Forest (Resource tiles on Tundra without Forest also qualify)</Text>
+			<Text>+2 [ICON_PRODUCTION] Produciton in cities</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_DESERT_FOLKLORE">
+			<Text>+1 [ICON_PEACE] Faith from Desert tiles, +2 [ICON_CULTURE] Culture and +1 [ICON_PEACE] Faith from Oasis</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_SACRED_PATH">
+			<Text>+1 [ICON_CULTURE] Culture and +1 [ICON_PEACE] Faith from Jungle tiles</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_ORAL_TRADITION">
+			<Text>+1 [ICON_CULTURE] Culture from Plantations, +1 [ICON_GOLD] Gold from [ICON_RES_SILK], +1 [ICON_CULTURE] Culture from [ICON_RES_TEA]</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_MESSENGER_GODS">
-			<Text>+1 [ICON_RESEARCH] Science, [ICON_CULTURE] Culture and [ICON_GOLD] Gold in cities with a City Connection</Text>
+			<Text>+2 [ICON_RESEARCH] Science and +2 [ICON_PEACE] Faith in cities with a City Connection</Text>
 		</Replace>
+		<Row Tag="TXT_KEY_BELIEF_GODDESS_OF_PURITY_SHORT">
+			<Text>Goddess of purity</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_GODDESS_OF_PURITY">
+			<Text>
+				+4 [ICON_FOOD] Food, +4[ICON_PEACE] Faith, +2[ICON_PRODUCTION] Production and +2[ICON_RESEARCH] Science from Fountain of Youth , 
+				+4 [ICON_CULTURE] Culrure, +4[ICON_PEACE] Faith, +2[ICON_PRODUCTION] Production and +2[ICON_RESEARCH] Science from Lake Victoria
+			</Text>
+		</Row>
 		<Replace Tag="TXT_KEY_BELIEF_GOD_CRAFTSMEN">
-			<Text>+1 [ICON_PEACE] Faith and +1 [ICON_CULTURE] Culture for each Amber, Jade, Coral and Lapis Lazuli resource</Text>
+			<Text>+1 [ICON_PEACE] Faith and +1[ICON_PRODUCTION] Production for each Amber, Jade, Coral and Lapis Lazuli resource</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_SUN_GOD">
-			<Text>+1 [ICON_PEACE] Faith and +1 [ICON_CULTURE] Culture for each Olive, Sugar, Perfume and Tobacco resource</Text>
+			<Text>+1 [ICON_PEACE] Faith and +1 [ICON_RESEARCH] Science for each Olive, Sugar, Perfume and Tobacco resource</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_EARTH_MOTHER">
-			<Text>+1 [ICON_PEACE] Faith for each Spices, Citrus, Banana and Cotton resource</Text>
+			<Text>+1 [ICON_PEACE] Faith and +1 [ICON_FOOD] Food for each Spices, Citrus, Banana and Cotton resource</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GODDESS_HUNT">
-			<Text>+1 [ICON_FOOD] Food and +1 [ICON_PEACE] Faith from Camps</Text>
+			<Text>+1 [ICON_FOOD] Food and +1 [ICON_PEACE] Faith from Camps, +1 [ICON_FOOD] Food from [ICON_RES_BISON], +1 [ICON_PRODUCTION] Production from [ICON_RES_DEER]</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GURUSHIP">
 			<Text>+2 [ICON_PEACE] Faith if city has a Specialist</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_SETTLEMENTS">
-			<Text>+50% faster border growth</Text>
+			<Text>+2 [ICON_CULTURE] Culture in cities, +50% faster border growth</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_PILGRIMAGE">
 			<Text>+4 [ICON_PEACE] Faith for each foreign city following this religion</Text>
@@ -8746,7 +8777,7 @@
 			<Text>+1 [ICON_GOLD] Gold for every 3 followers of this religion</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GOD_WAR">
-			<Text>Gain [ICON_PEACE] Faith if you win a battle within 6 tiles if your city</Text>
+			<Text>Gain [ICON_PEACE] Faith if you win a battle within 6 tiles if your city, Barracks and Armony provides +2 [ICON_PEACE] Faith in city</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_MONASTERIES">
 			<Text>Use [ICON_PEACE] Faith to purchase Monasteries (+2 [ICON_PEACE] Faith, +2 [ICON_CULTURE] Culture, +1 [ICON_HAPPINESS_1] Local Happiness, +25% [ICON_GREAT_PEOPLE] Great People generation in this City)</Text>
@@ -8754,7 +8785,7 @@
 
 
 		<Replace Tag="TXT_KEY_BELIEF_GODDESS_STRATEGY">
-			<Text>+2 [ICON_PEACE] Faith for every Walls and Castles</Text>
+			<Text>+2 [ICON_PEACE] Faith for every Walls, +2 [ICON_CULTURE] Culture for every Castles</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_ART">
 			<Text>+2 [ICON_TOURISM] Tourism from Hagia Sophia, Great Mosque of Djenne, Angkor Wat, Borobudur, Sistine Chapel and Notre Dame</Text>
@@ -8763,7 +8794,7 @@
 			<Text>+2 [ICON_FOOD] Food for every Shrine and Temple</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_FERTILITY_RITES">
-			<Text>+2 [ICON_PEACE] Faith for every Granary</Text>
+			<Text>+2 [ICON_PEACE] Faith for every Granary, +1 [ICON_PEACE] Faith from [ICON_RES_WHEAT]</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_MONUMENT_GODS">
 			<Text>+2 [ICON_PEACE] Faith for every Monument</Text>
@@ -8793,13 +8824,13 @@
 			<Text>+25% [ICON_FOOD] Food Growth rate for city if not at war</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GOD_SEA">
-			<Text>+1 [ICON_CULTURE] Culture for every Fishing Net</Text>
+			<Text>+1 [ICON_CULTURE] Culture for every Fishing Net, +1 [ICON_PEACE] Faith and +1 [ICON_CULTURE] Culture for every Fishing Boat</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_TEARS_OF_GODS">
 			<Text>+2 [ICON_PEACE] Faith and +2 [ICON_CULTURE] Culture for every Gem and Pearl</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GOD_KING">
-			<Text>Palace provides +4 [ICON_PEACE] Faith</Text>
+			<Text>Palace provides +3 [ICON_PEACE] Faith, +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production and +1 [ICON_CULTURE] Culture form each City Hall [COLOR_NEGATIVE_TEXT](Lv1)[ENDCOLOR]</Text>
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_BELIEF_PAPAL_PRIMACY">
@@ -10608,7 +10639,7 @@
 				[NEWLINE][ICON_BULLET]Don't think you can be free from invasion only by building servel Citadels. They cannot move so the enemy can easily take a detour.
 
 				[NEWLINE][NEWLINE][COLOR_CYAN]Tactics:[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]Use its sight and firepower to keep an eye on your territory while your troops are on the frontline，especially for areas with important resources or choke points in case of possible enemy harassment.
+				[NEWLINE][ICON_BULLET]Use its sight and firepower to keep an eye on your territory while your troops are on the frontline, especially for areas with important resources or choke points in case of possible enemy harassment.
 				[NEWLINE][ICON_BULLET]It is a relatively cheap way to deploy Land-based Aircrafts outside your cities. Build them on safe areas to allow your aircrafts to extend their flight range.
 
 				[NEWLINE][NEWLINE][COLOR_MAGENTA]Counter Tactics:[ENDCOLOR]
@@ -16312,7 +16343,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_MESSAGE_POLICY_CITIZENSHIP_ALERT">
 			<Text>
-				Because you adopted the policy CitizenShip，your new city [COLOR_POSITIVE_TEXT]{1_name}[ENDCOLOR] gain {2_name} point [ICON_PRODUCTION] Production.
+				Because you adopted the policy CitizenShip, your new city [COLOR_POSITIVE_TEXT]{1_name}[ENDCOLOR] gain {2_name} point [ICON_PRODUCTION] Production.
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_MESSAGE_POLICY_CULTURAL_DIPLOMACY_ALERT">
