@@ -72,19 +72,19 @@
 			<Text>SP-軍團模式（高）</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_HIGH_HELP">
-			<Text>軍團模式-高允許建立軍團和集團軍，兵力規模等級高。</Text>
+			<Text>允許建立軍團和集團軍，兵力規模等級高。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_MEDIUM">
-			<Text>SP-軍團模式（中）</Text>
+			<Text>SP-關閉 [COLOR_YELLOW]軍團模式[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_MEDIUM_HELP">
-			<Text>軍團模式-高允許建立軍團和集團軍，兵力規模等級中。</Text>
+			<Text>軍團模式：允許建立軍團和集團軍</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_LOW">
 			<Text>SP-軍團模式（低）</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_LOW_HELP">
-			<Text>軍團模式-高允許建立軍團和集團軍，兵力規模等級低。</Text>
+			<Text>允許建立軍團和集團軍，兵力規模等級低。</Text>
 		</Row>
 
 

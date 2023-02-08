@@ -75,10 +75,10 @@
 			<Text>Corps Mode - High:   Allow to establish Corps and Armee. The Troops Level is High. Please refer to wiki page of troops.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_MEDIUM">
-			<Text>SP - Corps Mode (Medium)</Text>
+			<Text>SP - [COLOR_YELLOW]Corps Mode[ENDCOLOR] - OFF</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_MEDIUM_HELP">
-			<Text>Corps Mode - Medium: Allow to establish Corps and Armee. The Troops Level is Medium. Please refer to wiki page of troops.</Text>
+			<Text>Corps Mode: Allow to establish Corps and Armee.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_LOW">
 			<Text>SP - Corps Mode (Low)</Text>

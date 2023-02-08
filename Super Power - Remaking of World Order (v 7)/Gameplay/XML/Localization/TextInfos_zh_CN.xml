@@ -73,19 +73,19 @@
 			<Text>SP-军团模式（高）</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_HIGH_HELP">
-			<Text>军团模式-高允许建立军团和集团军，兵力规模等级高。</Text>
+			<Text>允许建立军团和集团军，兵力规模等级高。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_MEDIUM">
-			<Text>SP-军团模式（中）</Text>
+			<Text>SP-关闭 [COLOR_YELLOW]军团模式[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_MEDIUM_HELP">
-			<Text>军团模式-高允许建立军团和集团军，兵力规模等级中。</Text>
+			<Text>军团模式：允许建立军团和集团军</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_LOW">
 			<Text>SP-军团模式（低）</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_LOW_HELP">
-			<Text>军团模式-高允许建立军团和集团军，兵力规模等级低。</Text>
+			<Text>允许建立军团和集团军，兵力规模等级低。</Text>
 		</Row>
 
 
@@ -7970,7 +7970,7 @@
 				人类玩家也可以组建军团和集团军，不过只能在有兵工厂和军事基地的城市范围内通过消耗大军（陆军）或提督（海军）实现；[NEWLINE][NEWLINE]
 				引入“兵力”设定，兵力决定你总共能拥有的军事单位数量，兵力点满后获取军事单位将变得非常困难，新建的军事单位也会被清除，AI兵力点满后也将停止刷出单位，分三个游戏选项档：[NEWLINE]
 				高：除小镇以外的每个城市规模等级提供4兵力点，玩家初始24点，AI初始32点 —— 适合高配置玩家；[NEWLINE]
-				中：除小镇以外的每个城市规模等级提供2兵力点，玩家初始12点，AI初始16点 —— 适合中配置玩家；[NEWLINE]
+				中：除小镇以外的每个城市规模等级提供2兵力点，玩家初始12点，AI初始16点 —— 适合中配置玩家（默认情况）；[NEWLINE]
 				低：除小镇以外的每个城市规模等级提供1兵力点，玩家初始 6点，AI初始 8点 —— 适合低配置玩家或和平主义者；[NEWLINE]
 				（平民、要塞及空军单位不计入，也不进行单位合并操作，不过舰载机会跟随载具获得相应“提升”）
 			</Text>
