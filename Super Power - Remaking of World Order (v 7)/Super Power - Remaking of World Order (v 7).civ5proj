@@ -5995,7 +5995,7 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="VMC\DLL\CvGameCoreDLL_Expansion2Win32Debug.pdb">
+    <Content Include="VMC\DLL\CvGameCoreDLL_Expansion2Win32Release.pdb">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
