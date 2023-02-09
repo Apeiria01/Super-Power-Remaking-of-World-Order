@@ -847,6 +847,13 @@
     <!-- * Enables the Extensions API (v19) -->
     <!-- See also: "Unique Building - Cistern" -->
     <Row Class="2" Name="API_EXTENSIONS" Value="1"/>
+    <!-- function City:GetMajorReligionPantheonBelief() return BeliefType -->
+    <!-- function City:IsHasMajorBelief(eBelief) true/false -->
+    <!-- function City:IsHasSecondaryBelief(eBelief) true/false -->
+    <!-- function City:IsSecondaryReligionActive() true/false -->
+    <!-- function Player:IsSecondaryReligionActive() true/false -->
+    <Row Class="2" Name="API_RELIGION_EXTENSIONS" Value="1"/>
+
     <!-- * Push various hard-coded values controlling the game out into XML - see DB/CONFIG/GameInXml.sql for specific values (v53) -->
     <Row Class="2" Name="CONFIG_GAME_IN_XML" Value="1"/>
     <!-- * Push various hard-coded values controlling the AI out into XML - see DB/CONFIG/AiInXml.sql for specific values (v19) -->
