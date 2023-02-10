@@ -2590,7 +2590,7 @@ function TipHandler(Button)
 			if item then
 				toolTipString = toolTipString ..
 					"[NEWLINE]" ..
-					Locale.ConvertTextKey("TXT_KEY_FLAG_UNIT_TYPE") ..
+					Locale.ConvertTextKey("TXT_KEY_FLAG_UNIT_TYPE_SP") ..
 					"[COLOR_CYAN]" .. Locale.ConvertTextKey(item.Description) .. "[ENDCOLOR]" .. " ";
 			end
 		end
@@ -2599,7 +2599,7 @@ function TipHandler(Button)
 		if unit:GetDropRange() > 0 then
 			toolTipString = toolTipString ..
 				"[NEWLINE]" ..
-				Locale.ConvertTextKey("TXT_KEY_FLAG_UNIT_DROP_RANGE") ..
+				Locale.ConvertTextKey("TXT_KEY_FLAG_UNIT_DROP_RANGE_SP") ..
 				"[COLOR_CYAN]" .. unit:GetDropRange() .. "[ENDCOLOR]" .. " "
 		end
 
@@ -2610,7 +2610,7 @@ function TipHandler(Button)
 			local item = GameInfo.Units[iUnitType].Description
 			toolTipString = toolTipString ..
 				"[NEWLINE]" ..
-				Locale.ConvertTextKey("TXT_KEY_FLAG_UNIT_UPGRADE") ..
+				Locale.ConvertTextKey("TXT_KEY_FLAG_UNIT_UPGRADE_SP") ..
 				"[COLOR_YELLOW]" .. Locale.ConvertTextKey(item) .. "[ENDCOLOR]" .. " "
 		end
 
@@ -2618,7 +2618,7 @@ function TipHandler(Button)
 		if unit then
 			if iPlayer == activePlayerID then
 				toolTipString = toolTipString ..
-					"[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_UPANEL_CLICK_TO_SELECT2") .. " "
+					"[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_UPANEL_CLICK_TO_SELECT_SP") .. " "
 			end
 		end
 
@@ -2677,7 +2677,7 @@ function TipHandler(Button)
 		if #resourceText > 0 then
 			toolTipString = toolTipString ..
 				"[NEWLINE]" ..
-				Locale.ConvertTextKey("TXT_KEY_PEDIA_RESOURCES_NEED") .. table.concat(resourceText, "  ") .. " "
+				Locale.ConvertTextKey("TXT_KEY_PEDIA_RESOURCES_NEED_SP") .. table.concat(resourceText, "  ") .. " "
 		end
 
 
@@ -2717,16 +2717,16 @@ function TipHandler(Button)
 			else
 				if player:GetUnitClassCount(unitClassID) > 0 then
 					unitClassText = "[ICON_BULLET]" ..
-						Locale.ConvertTextKey("TXT_KEY_ACTION_CLASS_BUILT_COUNT", player:GetUnitClassCount(unitClassID));
+						Locale.ConvertTextKey("TXT_KEY_ACTION_CLASS_BUILT_COUNT_SP", player:GetUnitClassCount(unitClassID));
 					if player:GetUnitClassMaking(unitClassID) > 0 then
 						unitClassText = unitClassText ..
 							" <> " ..
-							Locale.ConvertTextKey("TXT_KEY_ACTION_CLASS_BUILDING_COUNT",
+							Locale.ConvertTextKey("TXT_KEY_ACTION_CLASS_BUILDING_COUNT_SP",
 								player:GetUnitClassMaking(unitClassID));
 					end
 				else
 					unitClassText = "[ICON_BULLET]" ..
-						Locale.ConvertTextKey("TXT_KEY_ACTION_CLASS_BUILDING_COUNT",
+						Locale.ConvertTextKey("TXT_KEY_ACTION_CLASS_BUILDING_COUNT_SP",
 							player:GetUnitClassMaking(unitClassID));
 				end
 			end
@@ -2754,7 +2754,7 @@ function TipHandler(Button)
 		controls.PortraitFrame:SetAnchor(UIManager.GetMousePos() > 300 and "L,T" or "R,T");
 		controls.UnitClassText:SetText(unitClassText or "");
 		controls.UnitClassText:SetHide(unitClassText == nil);
-		controls.PromotionText:SetText(Locale.ConvertTextKey("TXT_KEY_FREEPROMOTIONS2") ..
+		controls.PromotionText:SetText(Locale.ConvertTextKey("TXT_KEY_FREEPROMOTIONS_SP") ..
 		"" .. "[NEWLINE]" .. table.concat(promotionText, "[NEWLINE]"));
 		controls.PromotionText:SetHide(#promotionText == 0);
 		controls.Grid:ReprocessAnchoring();

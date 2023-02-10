@@ -932,6 +932,7 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
     <Folder Include="UI\Art\Models\Units Air" />
     <Folder Include="UI\Art\Models\Unit Elite" />
     <Folder Include="UI\Art\Models\Resources" />
+    <Folder Include="UI\Art\Units" />
     <Folder Include="UI\Art\_Edited_Animations" />
     <Folder Include="UI\Atlas" />
     <Folder Include="UI\Civlopedia" />
@@ -5657,6 +5658,22 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="UI\Art\IconAtlases\Buildings\Aztecs\HueyTeocalliPicture_256.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Units\FontIcons_Promotions.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Units\FontIcons_Promotions.ggxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Units\FontIcons_Promotions_New.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Units\FontIcons_Promotions_New.ggxml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
