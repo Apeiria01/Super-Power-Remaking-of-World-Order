@@ -12,7 +12,7 @@
 			<Text>[COLOR_YELLOW]Important Notes:[ENDCOLOR][NEWLINE]1. Check the saved file size. [NEWLINE]2. Check the Civilopedia before play (Hotkey [COLOR_POSITIVE_TEXT]F1[ENDCOLOR]). [NEWLINE]3. If always crash or saved files damaged, try Dx9.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_VERSION">
-			<Text>[COLOR_YELLOW]Version 7.0f[ENDCOLOR]</Text>
+			<Text>[COLOR_YELLOW]Version 8.0[ENDCOLOR]</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_SP_MOD_SETUP">
@@ -7260,6 +7260,7 @@
 				[NEWLINE][NEWLINE]Opening Effect:
 				[NEWLINE][ICON_BULLET]+1 [ICON_CULTURE] Culture and +1 [ICON_RESEARCH] Science in every city.
 				[NEWLINE][ICON_BULLET]+25% Tile Improvement construction rate.
+				[NEWLINE][ICON_BULLET] Increase the judgment distance of the city hall level (the maximum distance of the x-level city + x blocks).
 				[NEWLINE][ICON_BULLET]Wonder Unlocked: The Pyramids.
 				[NEWLINE][NEWLINE]Finishing Bonus:
 				[NEWLINE][ICON_BULLET]One free Great Engineer.
@@ -16389,5 +16390,34 @@
 		<Row Tag="TXT_KEY_BUILDING_CARTHAGINIAN_AGORA_EXPLORATION_HELP">
 			<Text>Navy unit +10% combat strength</Text>
 		</Row>
+
+		<Row Tag="TXT_KEY_FLAG_UNIT_TYPE_SP">
+			<Text>Battle Type:</Text>
+		</Row>
+		<Row Tag="TXT_KEY_FLAG_UNIT_UPGRADE_SP">
+			<Text>Upgrade Unit:</Text>
+		</Row>
+		<Row Tag="TXT_KEY_FLAG_UNIT_DROP_RANGE_SP">
+			<Text>Maximum airdrop distance:</Text>
+		</Row>
+			
+		<Row Tag="TXT_KEY_UPANEL_CLICK_TO_SELECT_SP">
+			<Text>Click to select the unit</Text>
+		</Row>
+			
+		<Row Tag="TXT_KEY_PEDIA_RESOURCES_NEED_SP">
+			<Text>Resource:</Text>
+		</Row>
+			
+		<Row Tag="TXT_KEY_FREE PROMOTIONS_SP">
+			<Text>[COLOR_CYAN] Unit Promotions: [ENDCOLOR]</Text>
+		</Row>
+			
+		<Replace Tag="TXT_KEY_ACTION_CLASS_BUILT_COUNT_SP">
+			<Text>This class already has [COLOR_YELLOW]{1_HaveCount}[ENDCOLOR]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_ACTION_CLASS_BUILDING_COUNT_SP">
+			<Text>This class is building [COLOR_POSITIVE_TEXT]{1_BuildingCount}[ENDCOLOR]</Text>
+		</Replace>
 	</Language_en_US>
 </GameData>

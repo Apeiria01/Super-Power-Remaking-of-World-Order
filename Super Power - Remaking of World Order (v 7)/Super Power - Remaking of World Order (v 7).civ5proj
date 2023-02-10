@@ -797,6 +797,11 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
         <Type>UpdateDatabase</Type>
         <FileName>Gameplay/SQL/Yields/SP_Yields.sql</FileName>
       </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>UI/InGame/UnitPromotions_IconString_SP.sql</FileName>
+      </Action>
     </ModActions>
     <ModProperties />
     <ModContent>
@@ -933,6 +938,7 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
     <Folder Include="UI\Art\Models\Units Air" />
     <Folder Include="UI\Art\Models\Unit Elite" />
     <Folder Include="UI\Art\Models\Resources" />
+    <Folder Include="UI\Art\Units" />
     <Folder Include="UI\Art\_Edited_Animations" />
     <Folder Include="UI\Atlas" />
     <Folder Include="UI\Civlopedia" />
@@ -5321,6 +5327,14 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
+    <Content Include="UI\Art\Flags\UnitFlagRecon.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Flags\UnitFlagReconMask.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
     <Content Include="UI\Art\IconAtlases\Extra\SP8Units&amp;BuildingsAtlas016.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
@@ -5661,6 +5675,22 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
+    <Content Include="UI\Art\Units\FontIcons_Promotions.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Units\FontIcons_Promotions.ggxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Units\FontIcons_Promotions_New.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Units\FontIcons_Promotions_New.ggxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
     <Content Include="UI\InGame\Popups\CityStateDiploPopup.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
@@ -5668,6 +5698,10 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
     <Content Include="UI\InGame\Popups\CityStateDiploPopup.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\InGame\UnitPromotions_IconString_SP.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="VMC/ART/YieldAtlas_128_GoldenAge.dds">
       <SubType>Lua</SubType>
@@ -6009,7 +6043,7 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="VMC\DLL\CvGameCoreDLL_Expansion2Win32Debug.pdb">
+    <Content Include="VMC\DLL\CvGameCoreDLL_Expansion2Win32Release.pdb">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>

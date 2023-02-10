@@ -6279,6 +6279,7 @@
 				[NEWLINE][NEWLINE]启用自主政策：
 				[NEWLINE][ICON_BULLET]使每座城市+1[ICON_CULTURE]文化，+1[ICON_RESEARCH]科研。
 				[NEWLINE][ICON_BULLET]工人修建地块设施速度+25%。
+				[NEWLINE][ICON_BULLET]提升市政厅等级的判定距离（x级城的最大距离+x格）。
 				[NEWLINE][ICON_BULLET]允许建造大金字塔。
 				[NEWLINE][NEWLINE]推行所有自主政策：
 				[NEWLINE][ICON_BULLET]在首都[ICON_CAPITAL]附近出现一位大工程师。
@@ -14336,5 +14337,34 @@
 		<Row Tag="TXT_KEY_BUILDING_CARTHAGINIAN_AGORA_EXPLORATION_HELP">
 			<Text>海军单位+10%战斗力</Text>
 		</Row>
+
+		<Row Tag="TXT_KEY_FLAG_UNIT_TYPE_SP">
+			<Text>战斗类型:</Text>
+		</Row>
+		<Row Tag="TXT_KEY_FLAG_UNIT_UPGRADE_SP">
+			<Text>升级单位:</Text>
+		</Row>
+		<Row Tag="TXT_KEY_FLAG_UNIT_DROP_RANGE_SP">
+			<Text>空投距离上限：</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_UPANEL_CLICK_TO_SELECT_SP">
+			<Text>点击选取该单位</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PEDIA_RESOURCES_NEED_SP">
+			<Text>资源：</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_FREEPROMOTIONS_SP">
+			<Text>[COLOR_CYAN]单位属性:[ENDCOLOR]</Text>
+		</Row>
+
+		<Replace Tag="TXT_KEY_ACTION_CLASS_BUILT_COUNT_SP">
+			<Text>该类已拥有[COLOR_YELLOW]{1_HaveCount}[ENDCOLOR]个</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_ACTION_CLASS_BUILDING_COUNT_SP">
+			<Text>该类在建[COLOR_POSITIVE_TEXT]{1_BuildingCount}[ENDCOLOR]个</Text>
+		</Replace>
 	</Language_zh_CN>
 </GameData>
