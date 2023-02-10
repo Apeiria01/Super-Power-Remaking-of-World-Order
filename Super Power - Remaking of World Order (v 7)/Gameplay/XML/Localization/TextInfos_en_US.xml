@@ -12,7 +12,7 @@
 			<Text>[COLOR_YELLOW]Important Notes:[ENDCOLOR][NEWLINE]1. Check the saved file size. [NEWLINE]2. Check the Civilopedia before play (Hotkey [COLOR_POSITIVE_TEXT]F1[ENDCOLOR]). [NEWLINE]3. If always crash or saved files damaged, try Dx9.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_VERSION">
-			<Text>[COLOR_YELLOW]Version 9.0[ENDCOLOR]</Text>
+			<Text>[COLOR_YELLOW]Version 8.0[ENDCOLOR]</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_SP_MOD_SETUP">
