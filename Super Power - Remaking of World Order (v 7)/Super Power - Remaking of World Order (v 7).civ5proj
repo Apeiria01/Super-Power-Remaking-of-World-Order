@@ -869,6 +869,7 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
     <Folder Include="Gameplay\Lua\Utility" />
     <Folder Include="Gameplay\SQL\ArtDefines\" />
     <Folder Include="Gameplay\SQL\Buildings" />
+    <Folder Include="Gameplay\SQL\Religion\" />
     <Folder Include="Gameplay\SQL\Yields" />
     <Folder Include="Gameplay\SQL\Terrian" />
     <Folder Include="Gameplay\SQL\Policies\" />
