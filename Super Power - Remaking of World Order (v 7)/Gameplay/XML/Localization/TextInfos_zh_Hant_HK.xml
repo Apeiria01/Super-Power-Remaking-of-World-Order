@@ -4949,11 +4949,17 @@
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS">
 			<Text>將該地格上兩個相同的單位合並為軍團：最大生命值+100%，[ICON_STRENGTH]戰鬥力+10%。</Text>
 		</Row>
+		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_EXTRA">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]當前可組建軍團數:{1_name}[ENDCOLOR]</Text>
+		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMEE_SHORT">
 			<Text>[COLOR_POSITIVE_TEXT]建立集團軍[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMEE">
 			<Text>將該地格上一個相同的單位合入軍團以建立集團軍：最大生命值+100%，[ICON_STRENGTH]戰鬥力+15%。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMEE_EXTRA">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]當前可組建集團軍數:{1_name}[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_FLEET_SHORT">
 			<Text>[COLOR_POSITIVE_TEXT]建立艦隊[ENDCOLOR]</Text>
@@ -7529,7 +7535,7 @@
 			<Text>創世母神</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GODDESS_LOVE">
-			<Text>城市+1[ICON_HAPPINESS_1]快樂</Text>
+			<Text>城市+1[ICON_HAPPINESS_1]快樂，城市[ICON_CITIZEN]人口增長時獲得6點[ICON_PEACE]信仰（標準速度下）</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_OPEN_SKY">
 			<Text>牧場+1[ICON_CULTURE]文化,[ICON_RES_COW]牛+1[ICON_PEACE]信仰、[ICON_RES_SHEEP]羊+1[ICON_CULTURE]文化、[ICON_RES_HORSE]馬+1[ICON_RESEARCH]科研</Text>
@@ -7553,7 +7559,7 @@
 			<Text>神祠+1[ICON_PEACE]信仰、+1[ICON_CULTURE]文化，建造工業時代之前的奇觀+10%[ICON_PRODUCTION]產能</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GODDESS_STRATEGY">
-			<Text>城墻+2[ICON_PEACE]信仰，城堡+4[ICON_CULTURE]文化</Text>
+			<Text>城市[ICON_RANGE_STRENGTH]遠程攻擊額外造成10點傷害，城墻+2[ICON_PEACE]信仰，城堡+4[ICON_CULTURE]文化</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_DESERT_FOLKLORE">
 			<Text>荒漠+1[ICON_PEACE]信仰，綠洲額外+2[ICON_CULTURE]文化、+1[ICON_PEACE]信仰</Text>
@@ -7594,7 +7600,15 @@
 				維多利亞湖+4[ICON_CULTURE]文化、+4[ICON_PEACE]信仰、+2[ICON_PRODUCTION]產能、+2[ICON_RESEARCH]科研
 			</Text>
 		</Row>
-		
+		<Replace Tag="TXT_KEY_BELIEF_SACRED_WATERS">
+			<Text>沿河城市+1[ICON_HAPPINESS_1]快樂，湖泊、海濱+1[ICON_PEACE]信仰</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_BELIEF_SNOW_BELIEF_SHORT">
+			<Text>風暴之神</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_SNOW_BELIEF">
+			<Text>無森林的凍土地塊+2[ICON_PEACE]信仰,雪地+1[ICON_FOOD]食物、+2[ICON_PEACE]信仰</Text>
+		</Row>
 
 		<Replace Tag="TXT_KEY_BELIEF_GURUSHIP">
 			<Text>城市有專業人員時+2[ICON_PEACE]信仰</Text>
@@ -7705,12 +7719,6 @@
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_MARSH_BELIEF">
 			<Text>沼澤+3[ICON_PEACE]信仰值。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BELIEF_SNOW_BELIEF_SHORT">
-			<Text>風暴之神</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BELIEF_SNOW_BELIEF">
-			<Text>雪地+2[ICON_PEACE]信仰值並+1[ICON_FOOD]食物。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_RIVER_CRAFTSMAN_SHORT">
 			<Text>河圖洛書</Text>

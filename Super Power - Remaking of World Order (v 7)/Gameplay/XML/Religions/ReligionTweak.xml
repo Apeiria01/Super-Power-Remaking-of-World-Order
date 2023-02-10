@@ -385,22 +385,6 @@
 			<EraType>ERA_RENAISSANCE</EraType>
 		</Row>
 	</Belief_EraFaithUnitPurchase>
-
-	<Belief_TerrainYieldChanges>
-		<Row>
-			<BeliefType>BELIEF_SNOW_BELIEF</BeliefType>
-			<TerrainType>TERRAIN_SNOW</TerrainType>
-			<YieldType>YIELD_FOOD</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BeliefType>BELIEF_SNOW_BELIEF</BeliefType>
-			<TerrainType>TERRAIN_SNOW</TerrainType>
-			<YieldType>YIELD_FAITH</YieldType>
-			<Yield>2</Yield>
-		</Row>
-	
-	</Belief_TerrainYieldChanges>	
 	
 	<Belief_BuildingClassYieldChanges>
 		<Delete BeliefType="BELIEF_FEED_WORLD" />

@@ -1462,6 +1462,7 @@ EstablishCorpsButton = {
     end
     if plot and plot:GetNumUnits() > 1 and not unit:IsEmbarked() and not unit:IsImmobile() and not unit:IsHasPromotion(GameInfoTypes["PROMOTION_CORPS_2"])
     and ((unit:GetDomainType() == DomainTypes.DOMAIN_LAND and not plot:IsWater()) or (unit:GetDomainType() == DomainTypes.DOMAIN_SEA and plot:IsWater()))
+    and (unit:GetUnitClassType() == GameInfo.UnitClasses.UNITCLASS_GREAT_GENERAL.ID or unit:IsCombatUnit())
     and player:CountNumBuildings(GameInfoTypes["BUILDING_TROOPS"]) > 0
     then
       if g_CorpsCount[playerID] == nil then
@@ -1535,7 +1536,9 @@ EstablishCorpsButton = {
         if bIsCorps then
           if unit:GetDomainType() == DomainTypes.DOMAIN_LAND then
             EstablishCorpsButton.Title = "TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMEE_SHORT";
-            EstablishCorpsButton.ToolTip = "TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMEE";
+            local AvailableArmeeNum = player:GetBuildingClassCount(GameInfoTypes["BUILDINGCLASS_MILITARY_BASE"])*ifac - g_CorpsCount[playerID][2];
+            local ArmeeButtonText = Locale.ConvertTextKey("TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMEE")..Locale.ConvertTextKey("TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMEE_EXTRA", AvailableArmeeNum);
+            EstablishCorpsButton.ToolTip = ArmeeButtonText;
           else
             EstablishCorpsButton.Title = "TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMADA_SHORT";
             EstablishCorpsButton.ToolTip = "TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMADA";
@@ -1544,7 +1547,9 @@ EstablishCorpsButton = {
         else
           if unit:GetDomainType() == DomainTypes.DOMAIN_LAND then
             EstablishCorpsButton.Title = "TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_SHORT";
-            EstablishCorpsButton.ToolTip = "TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS";
+            local AvailableCropsNum = player:GetBuildingClassCount(GameInfoTypes["BUILDINGCLASS_ARSENAL"])*ifac - g_CorpsCount[playerID][1];
+            local CorpsButtonText = Locale.ConvertTextKey("TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS")..Locale.ConvertTextKey("TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_EXTRA", AvailableCropsNum);
+            EstablishCorpsButton.ToolTip = CorpsButtonText;
           else
             EstablishCorpsButton.Title = "TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_FLEET_SHORT";
             EstablishCorpsButton.ToolTip = "TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_FLEET";

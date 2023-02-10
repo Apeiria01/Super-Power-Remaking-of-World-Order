@@ -1603,11 +1603,17 @@
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS">
 			<Text>Combine two same type of Units in this tile into Corps: +100% Max. HP, +10% [ICON_STRENGTH] Combat Strength.</Text>
 		</Row>
+		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_EXTRA">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]The number of remaining Corps you can Establish : {1_name}[ENDCOLOR]</Text>
+		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMEE_SHORT">
 			<Text>[COLOR_POSITIVE_TEXT]Establish Armee[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMEE">
 			<Text>Add one same type Unit in this tile into Corps to become an Armee: +100% Max. HP, +15% [ICON_STRENGTH] Combat Strength.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMEE_EXTRA">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]The number of remaining Armee you can Establish : {1_name}[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_FLEET_SHORT">
 			<Text>[COLOR_POSITIVE_TEXT]Establish Fleet[ENDCOLOR]</Text>
@@ -8702,7 +8708,7 @@
 			<Text>Goddress of Creation</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GODDESS_LOVE">
-			<Text>+1 [ICON_HAPPINESS_1] Happiness in cities</Text>
+			<Text>+1 [ICON_HAPPINESS_1] Happiness in cities, gain 6 point [ICON_PEACE] Faith when a new [ICON_CITIZEN] Citizen is born (At Normal Game Speed)</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_OPEN_SKY">
 			<Text>+1 [ICON_CULTURE] Culture from Pasture, [ICON_RES_COW] +1 [ICON_PEACE], [ICON_RES_SHEEP] +1 [ICON_CULTURE], [ICON_RES_HORSE] +1 [ICON_RESEARCH]</Text>
@@ -8737,6 +8743,9 @@
 				+4 [ICON_CULTURE] Culrure, +4[ICON_PEACE] Faith, +2[ICON_PRODUCTION] Production and +2[ICON_RESEARCH] Science from Lake Victoria
 			</Text>
 		</Row>
+		<Replace Tag="TXT_KEY_BELIEF_SACRED_WATERS">
+			<Text>+1 [ICON_HAPPINESS_1] Happiness from cities onrivers, +1 [ICON_PEACE] Faith from Lake and Coast</Text>
+		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GOD_CRAFTSMEN">
 			<Text>+1 [ICON_PEACE] Faith and +1[ICON_PRODUCTION] Production for each Amber, Jade, Coral and Lapis Lazuli resource</Text>
 		</Replace>
@@ -8785,7 +8794,7 @@
 
 
 		<Replace Tag="TXT_KEY_BELIEF_GODDESS_STRATEGY">
-			<Text>+2 [ICON_PEACE] Faith for every Walls, +2 [ICON_CULTURE] Culture for every Castles</Text>
+			<Text>+10 extra Damage output of the City's [ICON_RANGE_STRENGTH] ranged attacks, +2 [ICON_PEACE] Faith for every Walls, +2 [ICON_CULTURE] Culture for every Castles</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_ART">
 			<Text>+2 [ICON_TOURISM] Tourism from Hagia Sophia, Great Mosque of Djenne, Angkor Wat, Borobudur, Sistine Chapel and Notre Dame</Text>
@@ -8883,7 +8892,7 @@
 			<Text>Snow Spirit</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SNOW_BELIEF">
-			<Text>+2 [ICON_PEACE] Faith and +1 [ICON_FOOD] Food from tiles covered with Snow.</Text>
+			<Text>+1 [ICON_PEACE] Faith from Tundra tiles without Forest, +2 [ICON_PEACE] Faith and +1 [ICON_FOOD] Food from tiles covered with Snow.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_RIVER_CRAFTSMAN_SHORT">
 			<Text>Sudoku</Text>
