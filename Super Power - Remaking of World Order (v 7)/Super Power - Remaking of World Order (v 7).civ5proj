@@ -435,6 +435,11 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
+        <FileName>VMC/DB/ERAS/DDL_NEW_ERAS_EFFECTS.sql</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
         <FileName>Gameplay/SQL/Deletor.sql</FileName>
       </Action>
       <Action>
@@ -802,6 +807,16 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
         <Type>UpdateDatabase</Type>
         <FileName>UI/InGame/UnitPromotions_IconString_SP.sql</FileName>
       </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>Gameplay/SQL/Eras/NewSPErasEffects.sql</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>Gameplay/SQL/Units/NewUnitPromotionsEffectsSP.sql</FileName>
+      </Action>
     </ModActions>
     <ModProperties />
     <ModContent>
@@ -874,6 +889,7 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
     <Folder Include="Gameplay\Lua\Utility" />
     <Folder Include="Gameplay\SQL\ArtDefines\" />
     <Folder Include="Gameplay\SQL\Buildings" />
+    <Folder Include="Gameplay\SQL\Eras" />
     <Folder Include="Gameplay\SQL\Religion\" />
     <Folder Include="Gameplay\SQL\Yields" />
     <Folder Include="Gameplay\SQL\Terrian" />
@@ -959,6 +975,7 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
     <Folder Include="VMC\DB\EVENTS" />
     <Folder Include="VMC\DB\GLOBAL" />
     <Folder Include="VMC\DB\BUILDINGS" />
+    <Folder Include="VMC\DB\ERAS" />
     <Folder Include="VMC\DB\YIELDS" />
     <Folder Include="VMC\DB\POLICIES" />
     <Folder Include="VMC\DB\UNITS" />
@@ -1335,7 +1352,15 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
+    <Content Include="Gameplay\SQL\Eras\NewSPErasEffects.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
     <Content Include="Gameplay\SQL\Terrian\Improvements.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="Gameplay\SQL\Units\NewUnitPromotionsEffectsSP.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
@@ -6020,6 +6045,10 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="VMC\DB\BUILDINGS\DLL_Buildings.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="VMC\DB\ERAS\DDL_NEW_ERAS_EFFECTS.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>

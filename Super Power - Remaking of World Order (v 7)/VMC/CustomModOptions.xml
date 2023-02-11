@@ -286,6 +286,8 @@
     <!-- Enables additional unit supply from traits (v78) -->
     <!-- See also: "Traits - Extra Supply" -->
     <Row Class="6" Name="TRAITS_EXTRA_SUPPLY" Value="0" DbUpdates="1"/>
+
+    <Row Class="6" Name="TRAITS_CAN_FOUND_MOUNTAIN_CITY" Value="1" DbUpdates="1"/>
 	
     <!-- Permits cities to work more rings (v19) -->
     <!-- See also: "Global - City Working Distance" -->
@@ -954,6 +956,8 @@
 	<Row Class="6" Name="BALANCE_CORE" Value="1" DbUpdates="1"/>
 	  
 	<Row Class="6" Name="BUILDINGS_YIELD_FROM_OTHER_YIELD" Value="1" DbUpdates="1"/>
+
+	<Row Class="6" Name="ERA_EFFECTS_EXTENSIONS" Value="1" DbUpdates="1"/>
   </CustomModOptions>
 
   <CustomModPostDefines>
