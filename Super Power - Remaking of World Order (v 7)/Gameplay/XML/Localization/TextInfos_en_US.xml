@@ -10221,10 +10221,14 @@
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_TRAIT_GREAT_ANDEAN_ROAD">
-			<Text>Units ignore terrain costs when moving into any tile with Hills. No maintenance costs for improvements in Hills; half cost elsewhere. Workers can remove [ICON_RES_SHEEP] Sheep on the tiles with Hills.</Text>
+			<Text>
+				[ICON_BULLET]Units ignore terrain costs when moving into any tile with Hills.
+				[NEWLINE][ICON_BULLET]No maintenance costs for improvements in Hills; half cost elsewhere
+				[NEWLINE][ICON_BULLET]Workers can remove [ICON_RES_SHEEP] Sheep on the tiles with Hills.
+				[NEWLINE][ICON_BULLET]Civilian units can enter mountain tiles.
+				[NEWLINE][ICON_BULLET]Settlers can build cities on mountain tiles. Mountain cities gain additional [ICON_RESEARCH]science and [ICON_FOOD]food, which increases over eras.
+			</Text>
 		</Replace>
-
-	
 	
 		<Row Tag="TXT_KEY_ENGLISH_HMS_VICTORY">
 			<Text>Victory</Text>

@@ -5631,7 +5631,13 @@
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_TRAIT_GREAT_ANDEAN_ROAD">
-			<Text>進入丘陵地格時單位忽略地形對移動力的影響。改良設施位於丘陵時無需維護費用；位於其他地形則費用減半。工人可以鏟除丘陵地塊上的[ICON_RES_SHEEP]羊。</Text>
+			<Text>
+				[ICON_BULLET]單位進入丘陵地塊不消耗額外移動力。
+				[NEWLINE][ICON_BULLET]丘陵上的設施不需要維護費，其他地形上的設施維護費減半。
+				[NEWLINE][ICON_BULLET]工人可以剷除丘陵地塊上的[ICON_RES_SHEEP]羊。
+				[NEWLINE][ICON_BULLET]平民單位可以進入山脈地塊。
+				[NEWLINE][ICON_BULLET]移民可以在山脈地塊上建立城市。山脈城市獲得額外的[ICON_RESEARCH]科研和[ICON_FOOD]食物產出，隨時代加成。
+			</Text>
 		</Replace>
 		
 	<!--*******************Unique Units' Names*****************-->
