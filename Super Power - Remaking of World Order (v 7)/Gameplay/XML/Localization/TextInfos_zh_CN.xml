@@ -5717,7 +5717,10 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_DIPLOMACY_GREAT_PEOPLE">
-			<Text>所有达到小型城市（6人口）规模的城市中每2人口+1科研。当宣友时，瑞典和他的盟友得到+10%的[ICON_GREAT_PEOPLE]伟人点数。</Text>
+			<Text>
+				[ICON_BULLET]所有达到小型城市（6[ICON_CITIZEN]人口）规模的城市中每2[ICON_CITIZEN]人口+1[ICON_RESEARCH]科研。
+				[NEWLINE][ICON_BULLET]当宣友时，瑞典和他的盟友得到+10%的[ICON_GREAT_PEOPLE]伟人点数。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_SCHOLARS_JADE_HALL">

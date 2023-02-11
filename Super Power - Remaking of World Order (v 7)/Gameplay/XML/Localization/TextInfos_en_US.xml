@@ -10164,8 +10164,8 @@
 
 		<Replace Tag="TXT_KEY_TRAIT_DIPLOMACY_GREAT_PEOPLE">
 			<Text>
-				When declaring friendship, Sweden and their friend gain a +10% boost to [ICON_GREAT_PEOPLE] Great Person generation.
-				Every 2 [ICON_CITIZEN] Citizens in Small Cities (6+ Population) provide +1 [ICON_RESEARCH] Science Output. 
+				[ICON_BULLET]When declaring friendship, Sweden and their friend gain a +10% boost to [ICON_GREAT_PEOPLE] Great Person generation.
+				[NEWLINE][ICON_BULLET]Every 2 [ICON_CITIZEN] Citizens in Small Cities (6+ Population) provide +1 [ICON_RESEARCH] Science Output. 
 			</Text>
 		</Replace>
 		
