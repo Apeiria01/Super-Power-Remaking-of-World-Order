@@ -7,24 +7,34 @@ function SpecialUnitType(iPlayerID, iUnitID)
 	if pPlayer == nil then return end
 	local pUnit = pPlayer:GetUnitByID(iUnitID)
 	if pUnit == nil then return end
---	local ChineseGeneralID = GameInfoTypes.UNIT_CHINESE_GREAT_GENERAL
---	local NoOceanID = GameInfo.UnitPromotions["PROMOTION_OCEAN_IMPASSABLE"].ID
+	--	local ChineseGeneralID = GameInfoTypes.UNIT_CHINESE_GREAT_GENERAL
+	--	local NoOceanID = GameInfo.UnitPromotions["PROMOTION_OCEAN_IMPASSABLE"].ID
 
 	--Shoshone new UA effect
-	if GameInfo.Leader_Traits{ LeaderType = GameInfo.Leaders[pPlayer:GetLeaderType()].Type, TraitType = "TRAIT_GREAT_EXPANSE" }()
-	and pUnit:GetUnitType()== GameInfoTypes.UNIT_SCOUT
-	and ( not pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_GOODY_HUT_PICKER"].ID) )
+	if GameInfo.Leader_Traits { LeaderType = GameInfo.Leaders[pPlayer:GetLeaderType()].Type, TraitType = "TRAIT_GREAT_EXPANSE" }()
+		and pUnit:GetUnitType() == GameInfoTypes.UNIT_SCOUT
+		and (not pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_GOODY_HUT_PICKER"].ID))
 	then
 		pUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_GOODY_HUT_PICKER"].ID, true)
 	end
-	
+
+	if GameInfo.Leader_Traits { LeaderType = GameInfo.Leaders[pPlayer:GetLeaderType()].Type, TraitType = "TRAIT_GREAT_ANDEAN_ROAD" }()
+		and (GameInfo.Traits["TRAIT_GREAT_ANDEAN_ROAD"].PrereqPolicy == nil or (GameInfo.Traits["TRAIT_GREAT_ANDEAN_ROAD"].PrereqPolicy
+		and pPlayer:HasPolicy(GameInfoTypes[GameInfo.Traits["TRAIT_GREAT_ANDEAN_ROAD"].PrereqPolicy]))) then
+		if not pUnit:IsCombatUnit() then
+			pUnit:SetHasPromotion(GameInfoTypes["PROMOTION_INCA_CAN_CROSS_MOUNTAINS"], true);
+			print("Inca UA: Set Unit Can Cross Mountains", iPlayerID, iUnitID);
+		end
+	end
+
 	local GameSpeed = Game.GetGameSpeedType()
-	local QuickGameSpeedID = GameInfo.UnitPromotions["PROMOTION_GAME_QUICKSPEED"].ID 
-	
+	local QuickGameSpeedID = GameInfo.UnitPromotions["PROMOTION_GAME_QUICKSPEED"].ID
+
 	if GameSpeed == 3 then
 		pUnit:SetHasPromotion(QuickGameSpeedID, true)
 	end
 end
+
 Events.SerialEventUnitCreated.Add(SpecialUnitType)
 
 
@@ -354,61 +364,4 @@ function SPTraitsTech(iTeam, eTech, bAdopted)
 end
 GameEvents.TeamSetHasTech.Add(SPTraitsTech)
 
-
-
--- Double CS's Friendship if USA change the Ally from another Major Civ -- by CaptainCWB
---[[
-function OnUSADoubleCSFriendship (iMinor, iOldAlly, iNewAlly)
-	if Players[ iMinor ] == nil or not Players[ iMinor ]:IsAlive() or not Players[ iMinor ]:IsMinorCiv()
-	or Players[ iOldAlly ] == nil or Players[ iNewAlly ] == nil or iOldAlly == iNewAlly
-	then
-		return;
-	end
-	
-	local NewAlly = Players[iNewAlly];
-	if GameInfo.Leader_Traits{ LeaderType = GameInfo.Leaders[NewAlly:GetLeaderType()].Type, TraitType = "TRAIT_RIVER_EXPANSION" }()
-	and(GameInfo.Traits["TRAIT_RIVER_EXPANSION"].PrereqPolicy == nil or (GameInfo.Traits["TRAIT_RIVER_EXPANSION"].PrereqPolicy 
-	and NewAlly:HasPolicy(GameInfoTypes[GameInfo.Traits["TRAIT_RIVER_EXPANSION"].PrereqPolicy])))
-	then
-		local iFriendship = Players[iMinor]:GetMinorCivFriendshipWithMajor(iNewAlly);
-		Players[iMinor]:ChangeMinorCivFriendshipWithMajor( iNewAlly, iFriendship );
-	end
-end
-GameEvents.SetAlly.Add(OnUSADoubleCSFriendship)
-]]
-
-
-
--- Change AdjacentLand Fishing Boats to Polder for Dutch 
---[["
-function DutchFtPUA( iHexX, iHexY )
-	local pPlot = Map.GetPlot(ToGridFromHex(iHexX, iHexY));
-	if pPlot == nil or not plot:IsCoastalLand() or pPlot:GetOwner() == -1
-	or pPlot:GetFeatureType() ~= -1
-	or  pPlot:GetResourceType(-1) ~= -1
-	or( 
-	pPlot:GetImprovementType() ~= GameInfoTypes["IMPROVEMENT_FARM"]
-	and pPlot:GetImprovementType() ~= GameInfoTypes["IMPROVEMENT_TRADING_POST"]
-	and pPlot:GetTerrainType() ~= TerrainTypes.TERRAIN_SNOW
-	)
-	or pPlot:IsHills()
-	then
-		return;
-	end
-	local pPlayer = Players[ pPlot:GetOwner() ];
-	if     GameInfo.Leader_Traits{ LeaderType = GameInfo.Leaders[pPlayer:GetLeaderType()].Type, TraitType = "TRAIT_LUXURY_RETENTION" }()
-	and(GameInfo.Traits["TRAIT_LUXURY_RETENTION"].PrereqPolicy == nil or (GameInfo.Traits["TRAIT_LUXURY_RETENTION"].PrereqPolicy 
-	and pPlayer:HasPolicy(GameInfoTypes[GameInfo.Traits["TRAIT_LUXURY_RETENTION"].PrereqPolicy])))
-	and Teams[pPlayer:GetTeam()]:IsHasTech(GameInfoTypes[GameInfo.Builds["BUILD_POLDER"].PrereqTech])
-	and	Teams[pPlayer:GetTeam()]:IsHasTech(GameInfoTypes["TECH_ENGINEERING"])
-	then
-		pPlot:SetImprovementType(GameInfoTypes["IMPROVEMENT_POLDER"]);
-		--pPlot:SetResourceType(GameInfoTypes.RESOURCE_FISH, -1)
-	end
-end
-Events.SerialEventImprovementCreated.Add(DutchFtPUA)
-"]]
-
-
-   
   print ("New Trait Effect Check Pass!")  
