@@ -4949,11 +4949,17 @@
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS">
 			<Text>將該地格上兩個相同的單位合並為軍團：最大生命值+100%，[ICON_STRENGTH]戰鬥力+10%。</Text>
 		</Row>
+		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_EXTRA">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]當前可組建軍團數:{1_name}[ENDCOLOR]</Text>
+		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMEE_SHORT">
 			<Text>[COLOR_POSITIVE_TEXT]建立集團軍[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMEE">
 			<Text>將該地格上一個相同的單位合入軍團以建立集團軍：最大生命值+100%，[ICON_STRENGTH]戰鬥力+15%。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMEE_EXTRA">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]當前可組建集團軍數:{1_name}[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_FLEET_SHORT">
 			<Text>[COLOR_POSITIVE_TEXT]建立艦隊[ENDCOLOR]</Text>
@@ -5605,7 +5611,10 @@
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_TRAIT_DIPLOMACY_GREAT_PEOPLE">
-			<Text>所有達到小型城市（6人口）規模的城市中每2人口+1科研。當宣友時，瑞典和他的盟友得到+10%的[ICON_GREAT_PEOPLE]偉人點數。</Text>
+			<Text>
+				[ICON_BULLET]所有達到小型城市（6[ICON_CITIZEN]人口）規模的城市中每2[ICON_CITIZEN]人口+1[ICON_RESEARCH]科研。
+				[NEWLINE][ICON_BULLET]當宣友時，瑞典和他的盟友得到+10%的[ICON_GREAT_PEOPLE]偉人點數。
+			</Text>
 		</Replace>
 	
 		<Replace Tag="TXT_KEY_TRAIT_SCHOLARS_JADE_HALL">
