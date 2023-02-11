@@ -2971,7 +2971,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_INCA_QURIKANCHA_HELP</Tag>
-			<Text>City must be built within 2 tiles of a Mountain that is inside your territory.</Text>
+			<Text>Qurikancha can be built without nearby mountains.</Text>
 		</Row>
 		
 

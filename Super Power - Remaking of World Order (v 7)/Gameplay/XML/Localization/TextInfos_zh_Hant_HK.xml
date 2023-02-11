@@ -753,7 +753,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_INCA_QURIKANCHA_HELP</Tag>
-			<Text>城市2格內的本國領土上必須有山脈。</Text>
+			<Text>無須臨近山脈，即可建造。</Text>
 		</Row>
 		
 		<Row>

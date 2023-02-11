@@ -779,7 +779,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_INCA_QURIKANCHA_HELP</Tag>
-			<Text>城市2格内的本国领土上必须有山脉。</Text>
+			<Text>无须临近山脉，即可建造。</Text>
 		</Row>
 
 		<Row>
