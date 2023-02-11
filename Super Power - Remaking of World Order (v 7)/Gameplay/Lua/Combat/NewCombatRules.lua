@@ -264,7 +264,7 @@ function NewAttackEffect()
 
 	local AntiDebuffID = GameInfo.UnitPromotions["PROMOTION_ANTI_DEBUFF"].ID
 
-
+	local DoppelsoldnerID = GameInfo.UnitPromotions["PROMOTION_GERMAN_LONGSWORDSMAN"].ID
 	-- Ranged Unit Logistics can only move to the adjusted plot
 	if attUnit:IsDead() then
 	elseif attUnit:GetMoves() > 0 and not attUnit:IsImmobile() and not attUnit:IsRangedSupportFire()
@@ -904,6 +904,63 @@ function NewAttackEffect()
 			end
 		end
 
+		----Doppelsoldner Splash！
+		if attUnit:IsHasPromotion(DoppelsoldnerID)
+		and batPlot:GetNumUnits() > 1 then
+			-- print("Melee or Ranged attack and Available for Collateral Damage!")
+			local unitCount = batPlot:GetNumUnits()
+			for i = 0, unitCount - 1, 1 do
+				local pFoundUnit = batPlot:GetUnit(i)
+				if (pFoundUnit and pFoundUnit ~= defUnit and pFoundUnit:GetDomainType() ~= DomainTypes.DOMAIN_AIR) then
+					local pPlayer = Players[pFoundUnit:GetOwner()]
+					if PlayersAtWar(attPlayer, pPlayer) then
+						local CollDamageOri = 0;
+						if batType == GameInfoTypes["BATTLETYPE_MELEE"] then
+							local attUnitStrength = attUnit:GetMaxAttackStrength(attPlot, defPlot, defUnit);
+							local pFoundUnitStrength = pFoundUnit:GetMaxDefenseStrength(batPlot, attUnit);
+							CollDamageOri = attUnit:GetCombatDamage(attUnitStrength, pFoundUnitStrength, attFinalUnitDamage, false, false,
+								false);
+						else
+							CollDamageOri = attUnit:GetRangeCombatDamage(pFoundUnit, nil, false);
+						end
+	
+						local text = nil;
+						local attUnitName = attUnit:GetName();
+						local defUnitName = pFoundUnit:GetName();
+	
+						local CollDamageFinal = math.floor(CollDamageOri);
+						if CollDamageFinal >= pFoundUnit:GetCurrHitPoints() then
+							CollDamageFinal = pFoundUnit:GetCurrHitPoints();
+							local eUnitType = pFoundUnit:GetUnitType();
+							UnitDeathCounter(attPlayerID, pFoundUnit:GetOwner(), eUnitType);
+	
+							-- Notification
+							if defPlayerID == Game.GetActivePlayer() then
+								-- local heading = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_UNIT_DESTROYED_SHORT")
+								text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_COLL_DAMAGE_DEATH", attUnitName, defUnitName);
+								-- defPlayer:AddNotification(NotificationTypes.NOTIFICATION_GENERIC , text, heading, plotX, plotY)
+							elseif attPlayerID == Game.GetActivePlayer() then
+								text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_COLL_DAMAGE_ENEMY_DEATH", attUnitName, defUnitName);
+							end
+						elseif CollDamageFinal > 0 then
+							-- Notification
+							if defPlayerID == Game.GetActivePlayer() then
+								text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_COLL_DAMAGE", attUnitName, defUnitName, CollDamageFinal);
+							elseif attPlayerID == Game.GetActivePlayer() then
+								text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_COLL_DAMAGE_ENEMY", attUnitName, defUnitName,
+									CollDamageFinal);
+							end
+						end
+						if text then
+							Events.GameplayAlertMessage(text);
+						end
+						pFoundUnit:ChangeDamage(CollDamageFinal, attPlayer)
+					end
+				end
+			end
+		end
+	
+
 		--------Splash Damage (AOE)
 		if (attUnit:IsHasPromotion(SplashDamageID) or attUnit:IsHasPromotion(NavalCapitalShipID)) then
 
@@ -1333,6 +1390,7 @@ function NewAttackEffect()
 
 			local tdebuff = nil;
 			local tlostHP = nil;
+			local combatRoll = Game.Rand(10, "At NewCombatRules.lua NewAttackEffect()") + 1
 			if (
 				attUnit:IsHasPromotion(DestroySupply1ID) or attUnit:IsHasPromotion(SPForce1ID) or
 					attUnit:IsHasPromotion(DestroySupply_CarrierID))
@@ -1344,12 +1402,12 @@ function NewAttackEffect()
 				Message = 5
 			elseif attUnit:IsHasPromotion(CitySiegeUnitID) and defUnit:IsCombatUnit() and
 				defUnit:GetDomainType() == DomainTypes.DOMAIN_SEA and GameInfo.Units[defUnit:GetUnitType()].MoveRate == "WOODEN_BOAT" then
-				if not defUnit:IsHasPromotion(Damage1ID) and math.random(1, 10) <= 5 then
+				if not defUnit:IsHasPromotion(Damage1ID) and combatRoll <= 5 then
 					defUnit:SetHasPromotion(Damage1ID, true);
 					tdebuff = Locale.ConvertTextKey("TXT_KEY_PROMOTION_DAMAGE_1");
 					tlostHP = "[COLOR_NEGATIVE_TEXT]" .. -10 .. "[ENDCOLOR]";
 					Message = 5;
-				elseif defUnit:IsHasPromotion(Damage1ID) and not defUnit:IsHasPromotion(Damage2ID) and math.random(1, 10) <= 8 then
+				elseif defUnit:IsHasPromotion(Damage1ID) and not defUnit:IsHasPromotion(Damage2ID) and combatRoll <= 8 then
 					defUnit:SetHasPromotion(Damage2ID, true);
 					tdebuff = Locale.ConvertTextKey("TXT_KEY_PROMOTION_DAMAGE_2");
 					tlostHP = "[COLOR_NEGATIVE_TEXT]" .. -20 .. "[ENDCOLOR]";
@@ -1598,7 +1656,7 @@ function NewAttackEffect()
 				end
 			end
 
-			if attPlayer:IsHuman() or defPlayer:IsHuman() then
+			if text and (attPlayer:IsHuman() or defPlayer:IsHuman()) then
 				Events.GameplayAlertMessage(text)
 			end
 
@@ -1698,11 +1756,13 @@ function CaptureSPDKP(iPlayerID, iUnitID)
 			local pMoves = pUnit:MaxMoves();
 			print("MaxMoves of captured unit is " .. pMoves);
 			local qMoves = tCaptureSPUnits[8];
-			local rMoves = (pMoves * 0.2 + qMoves * 0.4) * (math.random(1, 100) * 0.002 + 0.9);
+			local captureMoveRoll = Game.Rand(100, "At NewCombatRules.lua CaptureSPDKP(), roll for moves remain") + 1
+			local rMoves = (pMoves * 0.2 + qMoves * 0.4) * (captureMoveRoll * 0.002 + 0.9);
 			print("newly captured unit remains movements:" .. rMoves);
 			pUnit:SetMoves(rMoves);
 			pUnit:SetHasPromotion(NewlyCapturedID, true);
-			local pDamage = math.random(1, 30) + 69 - qMoves / GameDefines["MOVE_DENOMINATOR"] * 4;
+			local captureDamageRoll = Game.Rand(30, "At NewCombatRules.lua CaptureSPDKP(), roll for damage") + 1
+			local pDamage = captureDamageRoll + 69 - qMoves / GameDefines["MOVE_DENOMINATOR"] * 4;
 			print("newly captured unit remains hit points:" .. pDamage);
 			pUnit:SetDamage(pDamage);
 			tCaptureSPUnits = {};

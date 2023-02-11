@@ -104,6 +104,25 @@
 			<PortraitIndex>0</PortraitIndex>
 			<FreeBuilding>BUILDINGCLASS_TEMPLE</FreeBuilding>
 		</Row>
+		<Row>
+			<Type>BUILDING_AZTEC_HUEY_TEOCALLI_SP</Type>
+			<BuildingClass>BUILDINGCLASS_GRAND_TEMPLE</BuildingClass>
+			<Cost>25</Cost>
+			<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
+			<Help>TXT_KEY_BUILDING_AZTEC_HUEY_TEOCALLI_SP_HELP</Help>
+			<Description>TXT_KEY_BUILDING_AZTEC_HUEY_TEOCALLI_SP</Description>
+			<Civilopedia>TXT_KEY_BUILDING_AZTEC_HUEY_TEOCALLI_SP_TEXT</Civilopedia>
+			<ArtDefineTag>TEMPLE</ArtDefineTag>
+			<NukeImmune>true</NukeImmune>
+			<NumCityCostMod>20</NumCityCostMod>
+			<HolyCity>true</HolyCity>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<NeverCapture>true</NeverCapture>
+			<IconAtlas>BUILDING_AZTEC_ATLAS</IconAtlas>
+			<PortraitIndex>0</PortraitIndex>
+			<FreeBuilding>BUILDINGCLASS_TEMPLE</FreeBuilding>
+		</Row>
 
 		<Row>
 			<Type>BUILDING_NATIONAL_CARAVANSARY</Type>
@@ -172,7 +191,7 @@
 		<Row>
 			<Type>BUILDING_CARTHAGINIAN_AGORA</Type>
 			<BuildingClass>BUILDINGCLASS_NATIONAL_CIRCUS</BuildingClass>
-			<Cost>100</Cost>
+			<Cost>60</Cost>
 			<PrereqTech>TECH_PHYSICS</PrereqTech>
 			<Help>TXT_KEY_BUILDING_CARTHAGINIAN_AGORA_HELP</Help>
 			<Description>TXT_KEY_BUILDING_CARTHAGINIAN_AGORA</Description>
@@ -913,11 +932,6 @@
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_NATIONAL_CIRCUS</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_CIRCUS</BuildingClassType>
-			<NumBuildingNeeded>-1</NumBuildingNeeded>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_CARTHAGINIAN_AGORA</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_CIRCUS</BuildingClassType>
 			<NumBuildingNeeded>-1</NumBuildingNeeded>
 		</Row>

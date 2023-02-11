@@ -304,7 +304,10 @@ SettlerMissionButton = {
 
 
     city:ChangePopulation(count,true);
-    city:SetFood( 0 )
+    if not (player:HasPolicy(GameInfo.Policies["POLICY_COLLECTIVE_RULE_FREE"].ID)) then
+      city:SetFood(0);
+  	end
+
     unit:Kill();
 
     local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_SETTLER_INTO_CITY", unit:GetName(), city:GetName())
@@ -1279,155 +1282,6 @@ HackingMissionButton = {
 
 LuaEvents.UnitPanelActionAddin(HackingMissionButton);
 
-
-
---[[
------------------------------------------------------Units Group Moving-----------------------------------------------------------------------
-
-
-----Legion Group Movement (Same Plot)
-LegionSamePlotButton = {
-  Name = "Same Plot Movement",
-  Title = "TXT_KEY_SP_BTNNOTE_SAME_PLOT_MOVEMEMT_SHORT", -- or a TXT_KEY
-  OrderPriority = 10000, -- default is 200
-  IconAtlas = "SP_UNIT_ACTION_ATLAS", -- 45 and 64 variations required
-  PortraitIndex = 40,
-  ToolTip = "TXT_KEY_SP_BTNNOTE_SAME_PLOT_MOVEMEMT", -- or a TXT_KEY_ or a function
-  Condition = function(action, unit)
-    return unit:CanMove() and unit:IsCombatUnit() and not unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_LEGION_GROUP"].ID);
-  end, -- or nil or a boolean, default is true
-  
-  Disabled = function(action, unit) 
-    
-    return unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_LEGION_GROUP"].ID)
-  end, -- or nil or a boolean, default is false
-  
-  Action = function(action, unit, eClick)
-    
-    if not unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_LEGION_GROUP"].ID) then
-    	unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_LEGION_GROUP"].ID, true)
-    end
-    
-	local unitX = unit:GetX()
-	local unitY = unit:GetY()
-	local pPlot = Map.GetPlot(unitX, unitY)
-	local unitCount = pPlot:GetNumUnits()
-	for i = 0, unitCount-1, 1 do
-		local pFoundUnit = pPlot:GetUnit(i)	
-		if pFoundUnit ~= nil and pFoundUnit:GetID() and pFoundUnit:IsCombatUnit()and pFoundUnit:GetDomainType()== unit:GetDomainType() then
-			pFoundUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_LEGION_GROUP"].ID, true)	
-			print ("Unit In group - same tile!")			
-		end
-	end	
-  	 
-  end,
-};
-LuaEvents.UnitPanelActionAddin(LegionSamePlotButton);
-
-
-
-----Legion Group Movement (All Units around)
-LegionGroupButton = {
-  Name = "Legion Group Movement",
-  Title = "TXT_KEY_SP_BTNNOTE_LEGION_GROUP_MOVEMEMT_SHORT", -- or a TXT_KEY
-  OrderPriority = 10000, -- default is 200
-  IconAtlas = "SP_UNIT_ACTION_ATLAS", -- 45 and 64 variations required
-  PortraitIndex = 25,
-  ToolTip = "TXT_KEY_SP_BTNNOTE_LEGION_GROUP_MOVEMEMT", -- or a TXT_KEY_ or a function
-  Condition = function(action, unit)
-    return unit:CanMove() and unit:IsCombatUnit() and not unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_LEGION_GROUP"].ID);
-  end, -- or nil or a boolean, default is true
-  
-  Disabled = function(action, unit) 
-    
-    return unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_LEGION_GROUP"].ID)
-  end, -- or nil or a boolean, default is false
-  
-  Action = function(action, unit, eClick) 
-    
-    if not unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_LEGION_GROUP"].ID) then
-    	unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_LEGION_GROUP"].ID, true)	
-    end
-    
-	local unitX = unit:GetX()
-	local unitY = unit:GetY()
-	local pPlot = Map.GetPlot(unitX, unitY)
-	local unitCount = pPlot:GetNumUnits()
-	for i = 0, unitCount-1, 1 do
-		local pFoundUnit = pPlot:GetUnit(i)	
-		if pFoundUnit ~= nil and pFoundUnit:GetID() and pFoundUnit:IsCombatUnit()and pFoundUnit:GetDomainType()== unit:GetDomainType() then	
-			pFoundUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_LEGION_GROUP"].ID, true)	
-			print ("Unit In group - same tile!")			
-		end
-	end	
-   	for i = 0, 5 do
-		local adjPlot = Map.PlotDirection(unitX, unitY, i)
-		if (adjPlot ~= nil) then
-			
-			local pUnit = adjPlot:GetUnit(0)
-			local unitCountAdj = adjPlot:GetNumUnits()	
-			if pUnit ~= nil and pUnit:IsCombatUnit() and pUnit:CanMove() and pUnit:GetDomainType()== unit:GetDomainType() then
-				if not pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_CITADEL_DEFENSE"].ID) then
-					pUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_LEGION_GROUP"].ID, true)
-				end	
-				print ("Unit In group-around!")
-			
-				for i = 0, unitCount-1, 1 do
-					local pFoundUnit = adjPlot:GetUnit(i)					
-					if pFoundUnit ~= nil and pFoundUnit:IsCombatUnit() and pFoundUnit:CanMove() and pFoundUnit:GetDomainType()== unit:GetDomainType() then
-						if not pFoundUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_CITADEL_DEFENSE"].ID) then
-							pFoundUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_LEGION_GROUP"].ID, true)	
-						end
-						print ("Unit In group-around same tile!")					
-					end
-				end
-			end    
-		end		    
-	end
-
-
-  end,
-};
-LuaEvents.UnitPanelActionAddin(LegionGroupButton);
-
-----Remove from Legion
-LegionLeaveButton = {
-  Name = "Remove from Legion",
-  Title = "TXT_KEY_SP_BTNNOTE_REMOVE_FROM_LEGION_SHORT", -- or a TXT_KEY
-  OrderPriority = 10000, -- default is 200
-  IconAtlas = "SP_UNIT_ACTION_ATLAS", -- 45 and 64 variations required
-  PortraitIndex = 41,
-  ToolTip = "TXT_KEY_SP_BTNNOTE_REMOVE_FROM_LEGION", -- or a TXT_KEY_ or a function
-  Condition = function(action, unit)
-    return unit:CanMove() and unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_LEGION_GROUP"].ID);
-  end, -- or nil or a boolean, default is true
-  
-  Disabled = function(action, unit) 
-    return 
-    false
-  end, -- or nil or a boolean, default is false
-  
-  Action = function(action, unit, eClick) 
-    
-    local player = Players[unit:GetOwner()]
-    
-    for unit in player:Units() do	
-	    if unit ~= nil and unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_LEGION_GROUP"].ID) then
-	    	unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_LEGION_GROUP"].ID, false)	
-	    end
-    end
-    print ("Unit left group!")		
-
-  	 
-  end,
-};
-LuaEvents.UnitPanelActionAddin(LegionLeaveButton);
-
-]]
-
-
-
-
 -----------------------------------------------------Great People-----------------------------------------------------------------------
 
 -- Establish Corps & Armee
@@ -1439,6 +1293,10 @@ EstablishCorpsButton = {
   PortraitIndex = 1,
   ToolTip = "TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS", -- or a TXT_KEY_ or a function
   Condition = function(action, unit)
+    if unit:GetDomainType() ~= DomainTypes.DOMAIN_LAND then
+      return false;
+    end
+  
     local bIsCondition = false;
     local playerID = unit:GetOwner();
     local player = Players[playerID];
@@ -1903,7 +1761,8 @@ LuckyEButton = {
    	local unitCount = plot:GetNumUnits()
    	for i = 0, unitCount-1, 1 do   	
    		local pFoundUnit = plot:GetUnit(i)
-		local LuckyERoll = math.random(1, 100)
+		--local LuckyERoll = math.random(1, 100)
+    local LuckyERoll = Game.Rand(100, "At UnitSpecialButtons.lua LuckyEButton") + 1
 		print("LuckyERoll:" .. LuckyERoll)
 		if LuckyERoll>=70 and pFoundUnit:GetDomainType() == DomainTypes.DOMAIN_AIR and Players[unit:GetOwner()] == Players[pFoundUnit:GetOwner()] then			
 		   pFoundUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_LUCKYE"].ID, true)

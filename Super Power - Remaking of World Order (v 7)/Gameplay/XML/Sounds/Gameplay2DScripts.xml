@@ -85,6 +85,11 @@
 			<FirstSelectionSound>AS2D_BIRTH_LONGSWORDSMAN</FirstSelectionSound>
 		</Row>
 		<Row>
+			<UnitType>UNIT_GERMAN_LONGSWORDSMAN</UnitType>
+			<SelectionSound>AS2D_SELECT_LONGSWORDSMAN</SelectionSound>
+			<FirstSelectionSound>AS2D_BIRTH_LONGSWORDSMAN</FirstSelectionSound>
+		</Row>	
+		<Row>
 			<UnitType>UNIT_CELT_BLACKWATCH</UnitType>
 			<SelectionSound>AS2D_SELECT_MUSKETMAN</SelectionSound>
 			<FirstSelectionSound>AS2D_BIRTH_MUSKETMAN</FirstSelectionSound>
@@ -510,11 +515,11 @@
 			<SelectionSound>AS2D_SELECT_HELICOPTER_GUNSHIP</SelectionSound>
 			<FirstSelectionSound>AS2D_BIRTH_HELICOPTER_GUNSHIP</FirstSelectionSound>
 		</Row>
-		<Row>
+		<!-- <Row>
 			<UnitType>UNIT_GERMAN_EUROCOPTER_TIGER</UnitType>
 			<SelectionSound>AS2D_SELECT_HELICOPTER_GUNSHIP</SelectionSound>
 			<FirstSelectionSound>AS2D_BIRTH_HELICOPTER_GUNSHIP</FirstSelectionSound>
-		</Row>
+		</Row> -->
 		<Row>
 			<UnitType>UNIT_POLISH_PZLW3_HELICOPTER</UnitType>
 			<SelectionSound>AS2D_SELECT_HELICOPTER_GUNSHIP</SelectionSound>
