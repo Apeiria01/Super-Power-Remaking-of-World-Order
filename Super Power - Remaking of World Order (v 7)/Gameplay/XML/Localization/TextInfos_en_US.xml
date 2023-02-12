@@ -6271,15 +6271,7 @@
 				Can only be built in large cities (population 26).
 				[NEWLINE]This city +25% [ICON_GREAT_PEOPLE] accumulation of great man points, +2 global [ICON_HAPPINESS_1] Happiness.
 				[NEWLINE][NEWLINE]-3%[ICON_HAPPINESS_4] global dissatisfaction per garden.
-				[NEWLINE][NEWLINE]Each Chinese Garden provides a base output for each city size:
-				[NEWLINE][ICON_BULLET] Town: +1[ICON_FOOD] food, +1[ICON_PRODUCTION] production, +1[ICON_GOLDEN_AGE] golden age points.
-				[NEWLINE][ICON_BULLET] Small Cities: +2[ICON_FOOD] Food, +2[ICON_PRODUCTION] Production, +2[ICON_GOLDEN_AGE] Golden Age Points.
-				[NEWLINE][ICON_BULLET] Medium City: +3[ICON_FOOD] Food, +3[ICON_PRODUCTION] Production, +3[ICON_GOLDEN_AGE] Golden Age Points.
-				
-				[NEWLINE][ICON_BULLET] Large Cities: +3[ICON_FOOD] Food, +3[ICON_PRODUCTION]Production, +3[ICON_GOLDEN_AGE]Golden Age Points.
-				[NEWLINE][ICON_BULLET] XL: +3[ICON_FOOD]food, +3[ICON_PRODUCTION]production, +3[ICON_GOLDEN_AGE]golden age points; +1[ICON_CULTURE]culture, +1[ICON_REASEARCH]research.
-				[NEWLINE][ICON_BULLET] XXL: +3 [ICON_FOOD] food, +3 [ICON_PRODUCTION] production, +3 [ICON_GOLDEN_AGE] golden age points. +2 [ICON_CULTURE] culture, +2 [ICON_REASEARCH] research.
-				[NEWLINE][ICON_BULLET] Global Cities: +3 [ICON_FOOD] food, +3 [ICON_PRODUCTION] production, +3 [ICON_GOLDEN_AGE] golden age points. +3 [ICON_CULTURE] culture, +3 [ICON_REASEARCH] research.
+				[NEWLINE][NEWLINE]Each Chinese garden provides [ICON_FOOD] food, [ICON_RESEARCH] scientific research and [ICON_GOLDEN_AGE] golden age points output for each city size of large cities and above, and the value increases with the city size.
 			</Text>
 		</Row>
 
