@@ -251,6 +251,36 @@ function SPECityBuildingCompleted(iPlayer, iCity, iBuilding, bGold, bFaithOrCult
 end
 GameEvents.CityConstructed.Add(SPECityBuildingCompleted)
 
+function SPECityTrainCompleted(iPlayer, iCity, iUnit, bGold, bFaithOrCulture)
+	local pPlayer = Players[iPlayer]
+	if pPlayer == nil or not pPlayer:IsMajorCiv() or iUnit < 0 then
+	 	return
+	end
+	local pUnit = pPlayer:GetUnitByID(iUnit)
+
+	if not pUnit or not (pUnit:GetUnitClassType() == GameInfo.UnitClasses.UNITCLASS_SETTLER.ID) then
+		return
+	end
+	if pPlayer:HasPolicy(GameInfo.Policies["POLICY_MERITOCRACY"].ID) 
+	and not pPlayer:IsPolicyBlocked(GameInfo.Policies["POLICY_MERITOCRACY"].ID)
+	and bGold == false
+	and bFaithOrCulture == false
+	then 
+		--local bonus = GameInfo.GameSpeeds[Game.GetGameSpeedType()].ConstructPercent/100
+		local iCost = pPlayer:GetUnitProductionNeeded(pUnit:GetUnitType())
+		local bonus = math.floor(iCost * 0.1)
+		pPlayer:ChangeJONSCulture(bonus)
+		pPlayer:ChangeOverflowResearch(bonus)
+		if pPlayer:IsHuman() then
+			local pCity = pPlayer:GetCityByID(iCity)
+			local hex = ToHexFromGrid(Vector2(pCity:GetX(),pCity:GetY()))
+			Events.AddPopupTextEvent(HexToWorld(hex), Locale.ConvertTextKey("+{1_Num}[ICON_RESEARCH],+{1_Num}[ICON_CULTURE]", bonus))
+			Events.GameplayFX(hex.x, hex.y, -1)
+		end
+	end
+end
+GameEvents.CityTrained.Add(SPECityTrainCompleted)
+
 --When block Liberty,recycle free building and policy
 function SPEPlayerBlockPolicyBranch(iPlayer,iPolicyBranch,isBlock)
 	local pPlayer = Players[iPlayer]

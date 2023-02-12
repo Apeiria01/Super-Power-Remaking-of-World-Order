@@ -6321,7 +6321,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]精英政治[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]每座城市+2[ICON_PRODUCTION]产能，城市建造建筑时+10%[ICON_PRODUCTION]产能。
-				[NEWLINE][ICON_BULLET]城市完成建筑或国家奇观后，获得数值相当于其产能的10%的一次性[ICON_RESEARCH]科研、[ICON_CULTURE]文化产出（购买建筑无效）。
+				[NEWLINE][ICON_BULLET]城市完成移民、建筑或国家奇观后，获得数值相当于其产能的10%的一次性[ICON_RESEARCH]科研、[ICON_CULTURE]文化产出（购买建筑无效）。
 			</Text>
 		</Replace>
 
