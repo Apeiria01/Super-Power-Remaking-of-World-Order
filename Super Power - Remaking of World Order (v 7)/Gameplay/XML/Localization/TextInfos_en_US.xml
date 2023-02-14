@@ -5992,7 +5992,7 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_COUNTRY_CLUB_HELP</Tag>
 			<Text>
-				+1 [ICON_CULTURE] Culture and +2 [ICON_GOLD] Gold for each source of [ICON_RES_TRUFFLES] Truffles, [ICON_RES_TOBACCO] Tobacco, [ICON_RES_PERFUME] Perfume, [ICON_RES_WINE] Wine, [ICON_RES_INCENSE] Incense，[ICON_RES_SPICES] Spices [ICON_RES_MARBLE] Marble and [ICON_RES_HORSE] Horses worked by this city.
+				+1 [ICON_CULTURE] Culture and +2 [ICON_GOLD] Gold for each source of [ICON_RES_TRUFFLES] Truffles, [ICON_RES_TOBACCO] Tobacco, [ICON_RES_PERFUME] Perfume, [ICON_RES_WINE] Wine, [ICON_RES_INCENSE] Incense, [ICON_RES_SPICES] Spices [ICON_RES_MARBLE] Marble and [ICON_RES_HORSE] Horses worked by this city.
 				[NEWLINE][NEWLINE]Must be built in Large Cities.</Text>
 		</Row>
 
@@ -6010,7 +6010,7 @@
 			<Text>
 				Each Resort you built will provide 250 [ICON_GOLD] Gold each time a Great Person is expended.
 				[NEWLINE][NEWLINE]50% from [ICON_CULTURE] Culture of Wonders and improvements in the city added to its [ICON_TOURISM] Tourism output.
-				[NEWLINE][NEWLINE]+1 [ICON_CULTURE] Culture and +2 [ICON_GOLD] Gold for each source of [ICON_RES_TRUFFLES] Truffles, [ICON_RES_TOBACCO] Tobacco, [ICON_RES_PERFUME] Perfume, [ICON_RES_WINE] Wine, [ICON_RES_INCENSE] Incense，[ICON_RES_SPICES] Spices [ICON_RES_MARBLE] Marble and [ICON_RES_HORSE] Horses worked by this city.
+				[NEWLINE][NEWLINE]+1 [ICON_CULTURE] Culture and +2 [ICON_GOLD] Gold for each source of [ICON_RES_TRUFFLES] Truffles, [ICON_RES_TOBACCO] Tobacco, [ICON_RES_PERFUME] Perfume, [ICON_RES_WINE] Wine, [ICON_RES_INCENSE] Incense, [ICON_RES_SPICES] Spices [ICON_RES_MARBLE] Marble and [ICON_RES_HORSE] Horses worked by this city.
 				[NEWLINE][NEWLINE]Must be built in Large Cities.
 			</Text>
 		</Row>
@@ -6087,7 +6087,7 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_WILDLIFE_PRESERVE_HELP</Tag>
 			<Text>
-				+2 [ICON_CULTURE] Culture and +2 [ICON_GOLD] Gold for each source of [ICON_RES_DEER] Deer, [ICON_RES_BISON] Bison, [ICON_RES_FUR] Foxes, [ICON_RES_IVORY] Elephants，[ICON_RES_WHALE] Whales and [ICON_RES_HORSE] Horses worked by this city.
+				+2 [ICON_CULTURE] Culture and +2 [ICON_GOLD] Gold for each source of [ICON_RES_DEER] Deer, [ICON_RES_BISON] Bison, [ICON_RES_FUR] Foxes, [ICON_RES_IVORY] Elephants, [ICON_RES_WHALE] Whales and [ICON_RES_HORSE] Horses worked by this city.
 				[NEWLINE][NEWLINE]Must be built in Large Cities.</Text>
 		</Row>
 
@@ -8261,6 +8261,22 @@
 		<Row Tag="TXT_KEY_BUILDING_BLD_TRADEROUTE_PLUS" >
 			<Text>+1 Trade Route</Text>
 		</Row>
+
+		<Row Tag="TXT_KEY_TRO_COL_FROM_CULTURE">
+      		<Text>[ICON_ARROW_LEFT][ICON_CULTURE]</Text>
+    	</Row>
+
+		<Row Tag="TXT_KEY_TRO_COL_FROM_CULTURE_TT">
+      		<Text>Click to sort by the amount of [ICON_CULTURE] Culture that the civilization that established the trade route generates from this trade route.</Text>
+    	</Row>
+
+		<Row Tag="TXT_KEY_TRO_COL_TO_CULTURE">
+      		<Text>[ICON_ARROW_RIGHT][ICON_CULTURE]</Text>
+    	</Row>
+
+		<Row Tag="TXT_KEY_TRO_COL_TO_CULTURE_TT">
+      		<Text>Click to sort by the amount of [ICON_CULTURE] Culture that the destination civilization would receive from this trade route.</Text>
+    	</Row>
 
 		<Row Tag="TXT_KEY_BUILDING_AUTOCRACY_FIREWALL" >
 			<Text>Authoritarianism</Text>
@@ -10615,7 +10631,7 @@
 				[NEWLINE][ICON_BULLET]Don't think you can be free from invasion only by building servel Citadels. They cannot move so the enemy can easily take a detour.
 
 				[NEWLINE][NEWLINE][COLOR_CYAN]Tactics:[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]Use its sight and firepower to keep an eye on your territory while your troops are on the frontline，especially for areas with important resources or choke points in case of possible enemy harassment.
+				[NEWLINE][ICON_BULLET]Use its sight and firepower to keep an eye on your territory while your troops are on the frontline, especially for areas with important resources or choke points in case of possible enemy harassment.
 				[NEWLINE][ICON_BULLET]It is a relatively cheap way to deploy Land-based Aircrafts outside your cities. Build them on safe areas to allow your aircrafts to extend their flight range.
 
 				[NEWLINE][NEWLINE][COLOR_MAGENTA]Counter Tactics:[ENDCOLOR]
@@ -16319,7 +16335,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_MESSAGE_POLICY_CITIZENSHIP_ALERT">
 			<Text>
-				Because you adopted the policy CitizenShip，your new city [COLOR_POSITIVE_TEXT]{1_name}[ENDCOLOR] gain {2_name} point [ICON_PRODUCTION] Production.
+				Because you adopted the policy CitizenShip, your new city [COLOR_POSITIVE_TEXT]{1_name}[ENDCOLOR] gain {2_name} point [ICON_PRODUCTION] Production.
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_MESSAGE_POLICY_CULTURAL_DIPLOMACY_ALERT">

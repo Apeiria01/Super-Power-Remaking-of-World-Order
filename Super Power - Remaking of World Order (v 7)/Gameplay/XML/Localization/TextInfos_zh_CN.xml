@@ -7248,6 +7248,24 @@
 			<Text>商路+1</Text>
 		</Row>
 
+
+		<Row Tag="TXT_KEY_TRO_COL_FROM_CULTURE">
+      		<Text>[ICON_ARROW_LEFT][ICON_CULTURE]</Text>
+    	</Row>
+
+		<Row Tag="TXT_KEY_TRO_COL_FROM_CULTURE_TT">
+      		<Text>点击按建立商路的文明通过商路产生的[ICON_CULTURE]文化值数量排序。</Text>
+    	</Row>
+
+		<Row Tag="TXT_KEY_TRO_COL_TO_CULTURE">
+      		<Text>[ICON_ARROW_RIGHT][ICON_CULTURE]</Text>
+    	</Row>
+
+		<Row Tag="TXT_KEY_TRO_COL_TO_CULTURE_TT">
+      		<Text>点击按商路目的地的文明通过商路获得的[ICON_CULTURE]文化数量排序。</Text>
+    	</Row>
+
+
 		<Row Tag="TXT_KEY_BUILDING_AUTOCRACY_FIREWALL" >
 			<Text>威权主义</Text>
 		</Row>

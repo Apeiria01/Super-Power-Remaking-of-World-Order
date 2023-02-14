@@ -7133,6 +7133,22 @@
 		<Row Tag="TXT_KEY_BUILDING_BLD_TRADEROUTE_PLUS" >
 			<Text>商路+1</Text>
 		</Row>
+
+		<Row Tag="TXT_KEY_TRO_COL_FROM_CULTURE">
+      		<Text>[ICON_ARROW_LEFT][ICON_CULTURE]</Text>
+    	</Row>
+
+		<Row Tag="TXT_KEY_TRO_COL_FROM_CULTURE_TT">
+      		<Text>點擊以建立商路的文明從該商路獲得的[ICON_CULTURE]文化值數量排序。</Text>
+    	</Row>
+
+		<Row Tag="TXT_KEY_TRO_COL_TO_CULTURE">
+      		<Text>[ICON_ARROW_RIGHT][ICON_CULTURE]</Text>
+    	</Row>
+
+		<Row Tag="TXT_KEY_TRO_COL_TO_CULTURE_TT">
+      		<Text>點擊以終點文明從此商路獲得的[ICON_CULTURE]文化值數量排序。</Text>
+    	</Row>
 		
 		<Row Tag="TXT_KEY_BUILDING_AUTOCRACY_FIREWALL" >
 			<Text>威權主義</Text>
