@@ -9,6 +9,14 @@ function SpecialUnitType(iPlayerID, iUnitID)
 	if pUnit == nil then return end
 --	local ChineseGeneralID = GameInfoTypes.UNIT_CHINESE_GREAT_GENERAL
 --	local NoOceanID = GameInfo.UnitPromotions["PROMOTION_OCEAN_IMPASSABLE"].ID
+
+	--Shoshone new UA effect
+	if GameInfo.Leader_Traits{ LeaderType = GameInfo.Leaders[pPlayer:GetLeaderType()].Type, TraitType = "TRAIT_GREAT_EXPANSE" }()
+	and pUnit:GetUnitType()== GameInfoTypes.UNIT_SCOUT
+	and ( not pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_GOODY_HUT_PICKER"].ID) )
+	then
+		pUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_GOODY_HUT_PICKER"].ID, true)
+	end
 	
 	local GameSpeed = Game.GetGameSpeedType()
 	local QuickGameSpeedID = GameInfo.UnitPromotions["PROMOTION_GAME_QUICKSPEED"].ID 
@@ -79,7 +87,7 @@ function JapanCultureUnit(iPlayer, iCity, iUnit, bGold, bFaith)	-- Japan can gai
 	end
 	
 	-- Get Culture from Policy - Coastal Adminstration
-	if pPlayer:HasPolicy(GameInfoTypes["POLICY_COASTAL_ADMINISTRATION"]) and pUnit:GetDomainType() == DomainTypes.DOMAIN_SEA and not pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_OCEAN_IMPASSABLE"]) then
+	if pPlayer:HasPolicy(GameInfoTypes["POLICY_NAVIGATION_SCHOOL"]) and pUnit:GetDomainType() == DomainTypes.DOMAIN_SEA and not pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_OCEAN_IMPASSABLE"]) then
 		local currentCulture = pPlayer:GetJONSCulture();
 		local BaseCulture = math.max(pUnit:GetBaseCombatStrength(), pUnit:GetBaseRangedCombatStrength());
 		local bonusCulture = math.ceil(BaseCulture * 1);
@@ -133,7 +141,8 @@ function JapanReligionEnhancedUA(iPlayer, eReligion, iBelief1, iBelief2)
 		
 		print("Nums of available Pantheon Beliefs: " .. #availableBeliefs);
 		if #availableBeliefs > 0 then
-			Game.EnhanceReligion(iPlayer, eReligion, availableBeliefs[math.random(1,#availableBeliefs)], -1);
+			local chooseBeliefRandNum = Game.Rand(#availableBeliefs, "At NewTraitEffects.lua JapanReligionEnhancedUA(), choose belief") + 1
+			Game.EnhanceReligion(iPlayer, eReligion, availableBeliefs[chooseBeliefRandNum], -1);
 		end
 	end
 end

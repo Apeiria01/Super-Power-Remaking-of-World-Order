@@ -132,6 +132,21 @@ g_SortOptions = {
 		CurrentDirection = nil,
 		SortType = "numeric",
 	},
+
+	{
+		Button = Controls.FromCulture,
+		Column = "FromCulture",
+		DefaultDirection = "desc",
+		CurrentDirection = nil,
+		SortType = "numeric",
+	},
+	{
+		Button = Controls.ToCulture,
+		Column = "ToCulture",
+		DefaultDirection = "desc",
+		CurrentDirection = nil,
+		SortType = "numeric",
+	},
 	
 	
 	---------SP cancel Trade route
@@ -545,20 +560,35 @@ function DisplayData()
 		local fromScience = "";
 		local toScience = "";
 		
-		if (v.FromID ~= v.ToID) then
-		
-			if(v.FromScience ~= 0) then
-				fromScience = v.FromScience / 100;
+		if(v.FromScience ~= 0) then
+			fromScience = v.FromScience / 100;
+			if (v.FromID ~= v.ToID) then
 				instance.FromScience:SetToolTipString(strTT);	
 			end
-			
-			if(v.ToScience ~= 0) then
-				toScience = v.ToScience / 100;
+		end
+		
+		if(v.ToScience ~= 0) then
+			toScience = v.ToScience / 100;
+			if (v.FromID ~= v.ToID) then
 				instance.ToScience:SetToolTipString(strTT);	
 			end
 		end
 		instance.FromScience:SetText(fromScience);
 		instance.ToScience:SetText(toScience);
+
+		local fromCulture = "";
+		local toCulture = "";
+		if(v.FromCulture ~= 0) then
+			fromCulture = v.FromCulture / 100;
+		end
+		
+		if(v.ToCulture ~= 0) then
+			toCulture = v.ToCulture / 100;
+		end
+		instance.FromCulture:SetText(fromCulture);
+		instance.ToCulture:SetText(toCulture);
+		
+
 		
 		
 	--------------SP cancel Trade	

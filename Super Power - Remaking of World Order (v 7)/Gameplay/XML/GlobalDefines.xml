@@ -704,6 +704,42 @@
 			<Set Value="4"/>
 			<Where Name="BASE_CULTURE_PER_GREAT_WORK" />
 		</Update>
+
+		<Row>
+			<Name>GREEK_UB_DUMMY_MAX</Name>
+			<Value>20</Value>
+		</Row>
+
+		<Row>
+			<Name>AZTEC_UB_CULTURE_RATE</Name>
+			<Value>300</Value>
+		</Row>
+
+		<Row>
+			<Name>AZTEC_UB_FAITH_RATE</Name>
+			<Value>300</Value>
+		</Row>
+		<Row>
+			<Name>AZTEC_UB_PROMOTION_PROBABILITY</Name>
+			<Value>20</Value>
+		</Row>
+
+		<Row>
+			<Name>POLICY_BRANCH_LIBERTY_CITY_LEVEL_DISTANCE_LV1</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<Name>POLICY_BRANCH_LIBERTY_CITY_LEVEL_DISTANCE_LV2</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<Name>POLICY_BRANCH_LIBERTY_CITY_LEVEL_DISTANCE_LV3</Name>
+			<Value>3</Value>
+		</Row>
+		<Row>
+			<Name>POLICY_BRANCH_LIBERTY_CITY_LEVEL_DISTANCE_LV4</Name>
+			<Value>4</Value>
+		</Row>
 	</Defines>
 	
 	

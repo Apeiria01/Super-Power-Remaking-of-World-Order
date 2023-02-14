@@ -647,6 +647,10 @@ end
 
 
 ------------Set City Level by Distance (used in city founding or else)
+local libertyPolicyDistanceChangeLV1 = GameDefines["POLICY_BRANCH_LIBERTY_CITY_LEVEL_DISTANCE_LV1"];
+local libertyPolicyDistanceChangeLV2 = GameDefines["POLICY_BRANCH_LIBERTY_CITY_LEVEL_DISTANCE_LV2"];
+local libertyPolicyDistanceChangeLV3 = GameDefines["POLICY_BRANCH_LIBERTY_CITY_LEVEL_DISTANCE_LV3"];
+local libertyPolicyDistanceChangeLV4 = GameDefines["POLICY_BRANCH_LIBERTY_CITY_LEVEL_DISTANCE_LV4"];
 
 function SetCityLevelbyDistance(city)
 	if (PreGame.GetGameOption("GAMEOPTION_SP_CORRUPTION_OFF") == 1) then
@@ -673,7 +677,6 @@ function SetCityLevelbyDistance(city)
 	local policyBonusID = GameInfo.Policies["POLICY_POLICE_STATE"].ID
 	
 	local DistanceLV1 = 7
-	print ("DistanceLV1:"..DistanceLV1)
 	
 	local DistanceLV2 = WorldSizeLength / 8	
 	if DistanceLV2 > 18 then
@@ -681,8 +684,6 @@ function SetCityLevelbyDistance(city)
 	elseif DistanceLV2 < 14 then
 	   DistanceLV2 = 14
 	end
-	print ("DistanceLV2:"..DistanceLV2)
-	
 	
 	local DistanceLV3 = WorldSizeLength / 5
 	if DistanceLV3 > 30 then
@@ -690,7 +691,6 @@ function SetCityLevelbyDistance(city)
 	elseif DistanceLV3 < 26 then
 	   DistanceLV3 = 26
 	end
-	print ("DistanceLV3:"..DistanceLV3)
 	       
 	local DistanceLV4 = WorldSizeLength / 3
 	if DistanceLV4 > 44 then
@@ -698,7 +698,19 @@ function SetCityLevelbyDistance(city)
 	elseif DistanceLV4 < 36 then
 	   DistanceLV4 = 36
 	end
-	print ("DistanceLV4:"..DistanceLV4)
+
+	local bAdoptLiberty = pPlayer:HasPolicyBranch(GameInfoTypes["POLICY_BRANCH_LIBERTY"]) and not pPlayer:IsPolicyBranchBlocked(GameInfoTypes["POLICY_BRANCH_LIBERTY"]);
+	if bAdoptLiberty then
+		DistanceLV1 = DistanceLV1 + libertyPolicyDistanceChangeLV1;
+		DistanceLV2 = DistanceLV2 + libertyPolicyDistanceChangeLV2;
+		DistanceLV3 = DistanceLV3 + libertyPolicyDistanceChangeLV3;
+		DistanceLV4 = DistanceLV4 + libertyPolicyDistanceChangeLV4;
+		print ("CityLevel is affected by POLICY_BRANCH_LIBERTY.", libertyPolicyDistanceChangeLV1, libertyPolicyDistanceChangeLV2, libertyPolicyDistanceChangeLV3, libertyPolicyDistanceChangeLV4);
+	end
+	print ("DistanceLV1:"..DistanceLV1);
+	print ("DistanceLV2:"..DistanceLV2);
+	print ("DistanceLV3:"..DistanceLV3);
+	print ("DistanceLV4:"..DistanceLV4);
 	
 	local bHasSpy = false;
 	local bHasSAgent = false;
@@ -2009,10 +2021,10 @@ function RemoveErrorPromotion(iPlayerID, iUnitID)
 	
 	-- MOD Begin by CaptainCWB
 	-- Remove Corps Promotions in Record Mode without Corps Mode
-	if  PreGame.GetGameOption("GAMEOPTION_SP_RECORD_MODE") == 1
+	if  (PreGame.GetGameOption("GAMEOPTION_SP_RECORD_MODE") == 1
 	and PreGame.GetGameOption("GAMEOPTION_SP_CORPS_MODE_HIGH") == 0
 	and PreGame.GetGameOption("GAMEOPTION_SP_CORPS_MODE_MEDIUM") == 0
-	and PreGame.GetGameOption("GAMEOPTION_SP_CORPS_MODE_LOW") == 0
+	and PreGame.GetGameOption("GAMEOPTION_SP_CORPS_MODE_LOW") == 0) or unit:GetDomainType() ~= DomainTypes.DOMAIN_LAND
 	then
 		if unit:IsHasPromotion(CorpsID) then
 			unit:SetHasPromotion(CorpsID, false);

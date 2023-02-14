@@ -1198,17 +1198,21 @@ function HappinessTipHandler( control )
 	
     	local strSPConsumerHappiness = Locale.ConvertTextKey("TXT_KEY_SP_UI_HAPPINESS_CONSUMERGOODS_BONUS")
 		local strSPConsumerPenalty = Locale.ConvertTextKey("TXT_KEY_SP_UI_HAPPINESS_CONSUMERGOODS_PENALTY")
-		
+		local SPPolicyConsumerBonus = Locale.ConvertTextKey("TXT_KEY_POLICY_MERCANTILISM_CONSUMERGOODS_BONUS")
 		
 		local CaptialCity = pPlayer:GetCapitalCity()
 		local ConsumerBonusCount = CaptialCity:GetNumBuilding(GameInfoTypes["BUILDING_CONSUMER_BONUS"])
 		local ConsumerPenaltyCount = CaptialCity:GetNumBuilding(GameInfoTypes["BUILDING_CONSUMER_PENALTY"])
 		
-		
 
     	if ConsumerBonusCount >= 1 then
-			strText = strText .. "[NEWLINE][NEWLINE]";
-			strText = strText .. strSPConsumerHappiness .." " ..ConsumerBonusCount.."%";
+			if pPlayer:HasPolicy(GameInfo.Policies["POLICY_MERCANTILISM"].ID) then
+				strText = strText .. "[NEWLINE][NEWLINE]";
+				strText = strText .. strSPConsumerHappiness .." " ..ConsumerBonusCount.."%".."[NEWLINE]"..SPPolicyConsumerBonus;
+			else 
+				strText = strText .. "[NEWLINE][NEWLINE]";
+				strText = strText .. strSPConsumerHappiness .." " ..ConsumerBonusCount.."%";
+			end
 			
 		elseif ConsumerPenaltyCount >= 1 then	
 			strText = strText .. "[NEWLINE][NEWLINE]";
