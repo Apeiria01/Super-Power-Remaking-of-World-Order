@@ -5677,7 +5677,12 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_WAYFINDING">
-			<Text>单位初始时即能以海运模式进入大洋。市政厅最高等级为3级（无4和5级城市）。在摩艾石像群周边2格内单位+10%[ICON_STRENGTH]战斗力。</Text>
+			<Text>
+				[ICON_BULLET]单位初始时即能以海运模式进入大洋。
+				[NEWLINE][ICON_BULLET]移民可以在海滨地块建城，海滨城市获得额外的[ICON_PRODUCTION]产能和[ICON_CULTURE]文化，随时代增加。
+				[NEWLINE][ICON_BULLET]市政厅最高等级为3级（无4和5级城市）。
+				[NEWLINE][ICON_BULLET]在摩艾石像群周边2格内单位+10%[ICON_STRENGTH]战斗力。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_CULTURE_FROM_KILLS">

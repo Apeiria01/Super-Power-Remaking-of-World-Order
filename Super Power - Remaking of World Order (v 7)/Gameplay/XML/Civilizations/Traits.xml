@@ -388,6 +388,7 @@
 			<NearbyImprovementBonusRange>2</NearbyImprovementBonusRange>
 			<CombatBonusImprovement>IMPROVEMENT_MOAI</CombatBonusImprovement>
 			<FreeBuilding>BUILDING_TB_WAYFINDING</FreeBuilding>
+			<CanFoundCoastCity>true</CanFoundCoastCity>
 		</Row>
 		<Row>
 			<Type>TRAIT_GREAT_EXPANSE</Type>

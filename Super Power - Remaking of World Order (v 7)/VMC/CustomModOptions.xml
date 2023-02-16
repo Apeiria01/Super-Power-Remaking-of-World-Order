@@ -288,8 +288,10 @@
     <Row Class="6" Name="TRAITS_EXTRA_SUPPLY" Value="0" DbUpdates="1"/>
 
     <Row Class="6" Name="TRAITS_CAN_FOUND_MOUNTAIN_CITY" Value="1" DbUpdates="1"/>
-	
-    <!-- Permits cities to work more rings (v19) -->
+
+	<Row Class="6" Name="TRAITS_CAN_FOUND_COAST_CITY" Value="1" DbUpdates="1"/>
+
+	<!-- Permits cities to work more rings (v19) -->
     <!-- See also: "Global - City Working Distance" -->
     <Row Class="2" Name="POLICIES_CITY_WORKING" Value="0"/>
 
