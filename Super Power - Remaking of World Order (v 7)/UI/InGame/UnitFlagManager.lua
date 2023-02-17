@@ -3989,6 +3989,40 @@ Events.GameplaySetActivePlayer.Add(OnActivePlayerChanged);
 
 ------------------------------------------------------------
 ------------------------------------------------------------
+local function GetCivBuilding( civilizationType, buildingClassType )
+	if buildingClassType then
+		if civilizationType and GameInfo.Civilization_BuildingClassOverrides{ CivilizationType = civilizationType, BuildingClassType = buildingClassType }() then
+			local building = GameInfo.Civilization_BuildingClassOverrides{ CivilizationType = civilizationType, BuildingClassType = buildingClassType }()
+			return building and GameInfo.Buildings[ building.BuildingType ]
+		end
+		local buildingClass = GameInfo.BuildingClasses[ buildingClassType ]
+		return buildingClass and GameInfo.Buildings[ buildingClass.DefaultBuilding ]
+	end
+end
+
+local function TextColor( c, s )
+	return c..s.."[ENDCOLOR]"
+end
+
+local function UnitColor( s )
+	return TextColor("[COLOR_UNIT_TEXT]", s)
+end
+
+local function BuildingColor( s )
+	return TextColor("[COLOR_YIELD_FOOD]", s)
+end
+
+local function PolicyColor( s )
+	return TextColor("[COLOR_MAGENTA]", s)
+end
+
+local function TechColor( s )
+	return TextColor("[COLOR_CYAN]", s)
+end
+
+local function BeliefColor( s )
+	return TextColor("[COLOR_WHITE]", s)
+end
 
 local tipControlTable = {};
 TTManager:GetTypeControlTable("UnitTooltip", tipControlTable);
