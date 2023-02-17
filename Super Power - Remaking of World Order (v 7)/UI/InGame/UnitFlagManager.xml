@@ -1,56 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- MOD by CaptainCWB -->
-<Context ColorSet="Beige_Black_Alpha" >
+<Context ColorSet="Beige_Black_Alpha">
 
-    <!--AlphaAnim AlphaStart="1" AlphaEnd="0" Speed="2" Cycle="Once" ID="FlagFader" Stopped="1" -->
-        <Container ID="AirCraftFlags" Hidden="1" />
-        <Container ID="CivilianFlags" />
-        <Container ID="MilitaryFlags" />
-        <Container ID="ReconUniFlags" /> <!-- SP -->
-        <Container ID="GarrisonFlags" />
-        <Container ID="CityContainer" />
+    <!--AlphaAnim
+    AlphaStart="1" AlphaEnd="0" Speed="2" Cycle="Once" ID="FlagFader" Stopped="1" -->
+    <Container ID="AirCraftFlags" Hidden="1" />
+    <Container ID="CivilianFlags" />
+    <Container ID="MilitaryFlags" />
+    <Container ID="ReconUniFlags" /> <!-- SP -->
+    <Container ID="GarrisonFlags" />
+    <Container ID="CityContainer" />
     <!--/AlphaAnim-->
 
 
-    <Instance Name="CityFlag" >
-        <WorldAnchor ID="Anchor" >
-            <Button ID="AirButton" Anchor="C,C" Offset="0,-48" AnchorSide="o,i" Size="60,22"  >
-                <Grid     BranchAlpha="1.2" Anchor="C,C" Size="60,22" Offset="0,0" Padding="0,0" Style="Grid9FrameTurns" />
+    <Instance Name="CityFlag">
+        <WorldAnchor ID="Anchor">
+            <Button ID="AirButton" Anchor="C,C" Offset="0,-48" AnchorSide="o,i" Size="60,22">
+                <Grid BranchAlpha="1.2" Anchor="C,C" Size="60,22" Offset="0,0" Padding="0,0"
+                    Style="Grid9FrameTurns" />
                 <ShowOnMouseOver>
-                    <Grid BranchAlpha="1.2" Anchor="C,C" Size="60,22" Offset="0,0" Padding="0,0" Style="Grid9FrameTurnsHL" />
+                    <Grid BranchAlpha="1.2" Anchor="C,C" Size="60,22" Offset="0,0" Padding="0,0"
+                        Style="Grid9FrameTurnsHL" />
                 </ShowOnMouseOver>
-                <Label Anchor="c,c" Font="TwCenMT14" ColorSet="Beige_Black_Alpha" FontStyle="Stroke" ID="Count" />
+                <Label Anchor="c,c" Font="TwCenMT14" ColorSet="Beige_Black_Alpha" FontStyle="Stroke"
+                    ID="Count" />
             </Button>
         </WorldAnchor>
     </Instance>
 
 
-
-    <Instance Name="GroupButtons" >
+    <Instance Name="GroupButtons">
         <Box Size="40,88" Anchor="C,C" Color="White.0" ID="GroupBox">
-            <Button ID="AirButton" Anchor="C,C" Offset="0,0" AnchorSide="o,i" Size="40,22" Hidden="1">
-                <Grid   Anchor="C,C" Size="40,22" Offset="0,0" Padding="0,0" Style="Grid9FrameTurns" />
+            <Button ID="AirButton" Anchor="C,C" Offset="0,0" AnchorSide="o,i" Size="40,22"
+                Hidden="1">
+                <Grid Anchor="C,C" Size="40,22" Offset="0,0" Padding="0,0" Style="Grid9FrameTurns" />
                 <ShowOnMouseOver>
-                    <AlphaAnim Anchor="C,C" Size="40,22" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="2" AlphaEnd="1">
-                        <Grid  Anchor="C,C" Size="40,22" Offset="0,0" Padding="0,0" Style="Grid9FrameTurnsHL" />
+                    <AlphaAnim Anchor="C,C" Size="40,22" Pause="0" Cycle="Bounce" Speed="1"
+                        AlphaStart="2" AlphaEnd="1">
+                        <Grid Anchor="C,C" Size="40,22" Offset="0,0" Padding="0,0"
+                            Style="Grid9FrameTurnsHL" />
                     </AlphaAnim>
                 </ShowOnMouseOver>
-                <Label Anchor="c,c" Font="TwCenMT14" ColorSet="Beige_Black_Alpha" FontStyle="Stroke" ID="Count" />
+                <Label Anchor="c,c" Font="TwCenMT14" ColorSet="Beige_Black_Alpha" FontStyle="Stroke"
+                    ID="Count" />
             </Button>
-            <Button ID="UISTButton" Anchor="C,C" Offset="0,22" AnchorSide="o,i" Size="22,22" Hidden="1">
+            <Button ID="UISTButton" Anchor="C,C" Offset="0,22" AnchorSide="o,i" Size="22,22"
+                Hidden="1">
                 <ShowOnMouseOver>
-                    <AlphaAnim  Anchor="C,C"  AnchorSide="O.O" Size="32,32" Texture="checkbox.dds" TextureOffset="0.32" Pause="0" Cycle="Bounce" Speed="1" AlphaStart=".99" AlphaEnd=".25" Hidden="0"/>
+                    <AlphaAnim Anchor="C,C" AnchorSide="O.O" Size="32,32" Texture="checkbox.dds"
+                        TextureOffset="0.32" Pause="0" Cycle="Bounce" Speed="1" AlphaStart=".99"
+                        AlphaEnd=".25" Hidden="0" />
                 </ShowOnMouseOver>
             </Button>
             <Box Size="22,44" Anchor="C,C" Color="White.0" ID="GGBox" Hidden="1">
                 <Button ID="GACTButton" Anchor="C,C" Offset="0,44" AnchorSide="o,i" Size="22,22">
                     <ShowOnMouseOver>
-                        <AlphaAnim  Anchor="C,C"  AnchorSide="O.O" Size="32,32" Texture="checkbox.dds" TextureOffset="0.32" Pause="0" Cycle="Bounce" Speed="1" AlphaStart=".99" AlphaEnd=".25" Hidden="0"/>
+                        <AlphaAnim Anchor="C,C" AnchorSide="O.O" Size="32,32" Texture="checkbox.dds"
+                            TextureOffset="0.32" Pause="0" Cycle="Bounce" Speed="1" AlphaStart=".99"
+                            AlphaEnd=".25" Hidden="0" />
                     </ShowOnMouseOver>
                 </Button>
                 <Button ID="GALLButton" Anchor="C,C" Offset="0,66" AnchorSide="o,i" Size="22,22">
                     <ShowOnMouseOver>
-                        <AlphaAnim  Anchor="C,C"  AnchorSide="O.O" Size="32,32" Texture="checkbox.dds" TextureOffset="0.32" Pause="0" Cycle="Bounce" Speed="1" AlphaStart=".99" AlphaEnd=".25" Hidden="0"/>
+                        <AlphaAnim Anchor="C,C" AnchorSide="O.O" Size="32,32" Texture="checkbox.dds"
+                            TextureOffset="0.32" Pause="0" Cycle="Bounce" Speed="1" AlphaStart=".99"
+                            AlphaEnd=".25" Hidden="0" />
                     </ShowOnMouseOver>
                 </Button>
             </Box>
@@ -59,56 +73,72 @@
 
     <Instance Name="UnitList">
         <WorldAnchor ID="LisAnchor" Hidden="1">
-            <Grid Anchor="R,T" Offset="44,-22" Size="180,320" AnchorSide="O,i" Padding="0,0" Style="Grid9DetailSix140" ID="ListGrid">
-                <Grid Anchor="L,T" Size="160,24" Color="White.0" Offset="0,44" Style="GridSquare8" ConsumeMouse="1" ID="Title">
-                    <Box Anchor="R,C" Offset="-10,-1" Size="54,32" Color="White.0" ID="T1Box" Hidden="1">
+            <Grid Anchor="R,T" Offset="44,-22" Size="180,320" AnchorSide="O,i" Padding="0,0"
+                Style="Grid9DetailSix140" ID="ListGrid">
+                <Grid Anchor="L,T" Size="160,24" Color="White.0" Offset="0,44" Style="GridSquare8"
+                    ConsumeMouse="1" ID="Title">
+                    <Box Anchor="R,C" Offset="-10,-1" Size="54,32" Color="White.0" ID="T1Box"
+                        Hidden="1">
                         <Button Anchor="R,C" ID="T1Check" Size="32,32">
-                            <Image Anchor="C,C" ID="T1Off" Offset="0,0" Texture="Assets/UI/Art/Controls/checkbox2thebox.dds" Size="32,32"/>
-                            <Image Anchor="C,C" ID="T1On"  Offset="0,0" Texture="Assets/UI/Art/Controls/checkmark.dds" Size="32,32"/>
+                            <Image Anchor="C,C" ID="T1Off" Offset="0,0"
+                                Texture="Assets/UI/Art/Controls/checkbox2thebox.dds" Size="32,32" />
+                            <Image Anchor="C,C" ID="T1On" Offset="0,0"
+                                Texture="Assets/UI/Art/Controls/checkmark.dds" Size="32,32" />
                         </Button>
-                        <Label Anchor="L,C" Offset="0,0" Font="TwCenMT16" FontStyle="Stroke" ID="T1Label"/>
+                        <Label Anchor="L,C" Offset="0,0" Font="TwCenMT16" FontStyle="Stroke"
+                            ID="T1Label" />
                     </Box>
-                    <Box Anchor="R,C" Offset=" 64,-1" Size="54,32" Color="White.0" ID="T2Box" Hidden="1">
+                    <Box Anchor="R,C" Offset=" 64,-1" Size="54,32" Color="White.0" ID="T2Box"
+                        Hidden="1">
                         <Button Anchor="R,C" ID="T2Check" Size="32,32">
-                            <Image Anchor="C,C" ID="T2Off" Offset="0,0" Texture="Assets/UI/Art/Controls/checkbox2thebox.dds" Size="32,32"/>
-                            <Image Anchor="C,C" ID="T2On"  Offset="0,0" Texture="Assets/UI/Art/Controls/checkmark.dds" Size="32,32"/>
+                            <Image Anchor="C,C" ID="T2Off" Offset="0,0"
+                                Texture="Assets/UI/Art/Controls/checkbox2thebox.dds" Size="32,32" />
+                            <Image Anchor="C,C" ID="T2On" Offset="0,0"
+                                Texture="Assets/UI/Art/Controls/checkmark.dds" Size="32,32" />
                         </Button>
-                        <Label Anchor="L,C" Offset="0,0" Font="TwCenMT16" FontStyle="Stroke" ID="T2Label"/>
+                        <Label Anchor="L,C" Offset="0,0" Font="TwCenMT16" FontStyle="Stroke"
+                            ID="T2Label" />
                     </Box>
-                    <Image Anchor="C,B" Offset="0,0" Texture="bar300x2.dds" Size="170,1"/>
+                    <Image Anchor="C,B" Offset="0,0" Texture="bar300x2.dds" Size="170,1" />
                 </Grid>
                 <ScrollPanel Anchor="R,T" Offset="0,68" Size="180,208" Vertical="1" ID="ScrollPanel">
                     <!-- Scroll Controls -->
-                    <ScrollBar  Style="VertSlider" Length="198" Anchor="R,C" Offset="-6,-11" AnchorSide="O,I"/>
-                    <UpButton   Style="ScrollBarUp"             Anchor="R,T" Offset="-6,-24" AnchorSide="O,I"/>
-                    <DownButton Style="ScrollBarDown"           Anchor="R,B" Offset="-6, -2" AnchorSide="O,I"/>
-                    <Stack StackGrowth="Bottom" Padding="0" Anchor="C,T" ID="ListStack"/>
+                    <ScrollBar Style="VertSlider" Length="198" Anchor="R,C" Offset="-6,-11"
+                        AnchorSide="O,I" />
+                    <UpButton Style="ScrollBarUp" Anchor="R,T" Offset="-6,-24" AnchorSide="O,I" />
+                    <DownButton Style="ScrollBarDown" Anchor="R,B" Offset="-6, -2" AnchorSide="O,I" />
+                    <Stack StackGrowth="Bottom" Padding="0" Anchor="C,T" ID="ListStack" />
                 </ScrollPanel>
             </Grid>
         </WorldAnchor>
     </Instance>
 
-    <Instance Name="UnitInstance" >
+    <Instance Name="UnitInstance">
         <Box Size="150,26" Anchor="C,C" Color="255,255,255,0">
-            <Button Anchor="R,C" Size="24,24" Offset="-5,2" ID="GroupMark"/>
-            <Button Size="125,26" Anchor="L,C" ID="Button"  >
+            <Button Anchor="R,C" Size="24,24" Offset="-5,2" ID="GroupMark" />
+            <Button Size="125,26" Anchor="L,C" ID="Button">
                 <ShowOnMouseOver>
-                    <AlphaAnim ID="SelectAnim" Anchor="C,C" Offset="0,0" Size="120,24" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="2" AlphaEnd="1">
-                        <Grid  ID="SelectHL" Size="120,24" Offset="0,0" Padding="0,0" Style="Grid9FrameTurnsHL" />
+                    <AlphaAnim ID="SelectAnim" Anchor="C,C" Offset="0,0" Size="120,24" Pause="0"
+                        Cycle="Bounce" Speed="1" AlphaStart="2" AlphaEnd="1">
+                        <Grid ID="SelectHL" Size="120,24" Offset="0,0" Padding="0,0"
+                            Style="Grid9FrameTurnsHL" />
                     </AlphaAnim>
                 </ShowOnMouseOver>
                 <!-- Selected State  -->
-                <Grid Anchor="C,C" Size="130,26" Style="Grid9FrameTurns" Hidden="1" ID="SelectHighlight" />
-                <Label Anchor="L,C" Offset="-5,0" Font="TwCenMT14" ColorSet="Beige_Black_Alpha" FontStyle="Stroke" ID="CarriName" />
-                <Label Anchor="C,C" Offset=" 5,0" Font="TwCenMT14" ColorSet="Beige_Black_Alpha" FontStyle="Stroke" ID="CargoName" />
+                <Grid Anchor="C,C" Size="130,26" Style="Grid9FrameTurns" Hidden="1"
+                    ID="SelectHighlight" />
+                <Label Anchor="L,C" Offset="-5,0" Font="TwCenMT14" ColorSet="Beige_Black_Alpha"
+                    FontStyle="Stroke" ID="CarriName" />
+                <Label Anchor="C,C" Offset=" 5,0" Font="TwCenMT14" ColorSet="Beige_Black_Alpha"
+                    FontStyle="Stroke" ID="CargoName" />
             </Button>
         </Box>
     </Instance>
 
 
-    <Instance Name="NewUnitFlag" >
-        <WorldAnchor ID="Anchor" >
-            
+    <Instance Name="NewUnitFlag">
+        <WorldAnchor ID="Anchor">
+
             <!--   Status controls:
                    NormalSelect     NormalAlphaAnim 
                    HealthBarSelect  HealthBarAlphaAnim
@@ -127,51 +157,78 @@
                    Mask Texture Update:
                    ScrollAnim 
             -->
-            
+
             <!-- Flag Shadow -->
-            <Image TextureOffset="192,64" Anchor="c,c" Texture="assets\UI\Art\Icons\Units\UnitFlagBase.dds" Size="64.64" ID="FlagShadow" >
-                
+            <Image TextureOffset="192,64" Anchor="c,c"
+                Texture="assets\UI\Art\Icons\Units\UnitFlagBase.dds" Size="64.64" ID="FlagShadow">
+
                 <!-- Non-Health Selection Indicator NEEDS TO BE REMOVED -->
-                <Image TextureOffset="0,128" Texture="assets\UI\Art\Icons\Units\UnitFlagBase.dds" Color="255,255,200,180" Size="64.64" Hidden="1" ID="NormalSelect" />
+                <Image TextureOffset="0,128" Texture="assets\UI\Art\Icons\Units\UnitFlagBase.dds"
+                    Color="255,255,200,180" Size="64.64" Hidden="1" ID="NormalSelect" />
 
                 <!-- Health Bar and backing -->
-                <Image TextureOffset="64,0" Texture="assets\UI\Art\Icons\Units\UnitFlagBase.dds" Size="64.64" ID="HealthBarBG" Hidden="1" />
-                <Bar Offset="52,16" Size="2,32" Direction="Up" FGColor="0,255,255,255" BGColor="0,0,0,255" ID="HealthBar" Hidden="1" />
+                <Image TextureOffset="64,0" Texture="assets\UI\Art\Icons\Units\UnitFlagBase.dds"
+                    Size="64.64" ID="HealthBarBG" Hidden="1" />
+                <Bar Offset="52,16" Size="2,32" Direction="Up" FGColor="0,255,255,255"
+                    BGColor="0,0,0,255" ID="HealthBar" Hidden="1" />
 
                 <!-- Health Bar style Selection Indicator NEEDS TO BE REMOVED -->
-                <Image TextureOffset="64,128" Texture="assets\UI\Art\Icons\Units\UnitFlagBase.dds" Color="255,255,200,180" Size="64.64" Hidden="1" ID="HealthBarSelect" />
+                <Image TextureOffset="64,128" Texture="assets\UI\Art\Icons\Units\UnitFlagBase.dds"
+                    Color="255,255,200,180" Size="64.64" Hidden="1" ID="HealthBarSelect" />
 
                 <!-- Black Border & Actual flag -->
-                <Image TextureOffset="0,0" Texture="assets\UI\Art\Icons\Units\UnitFlagBase.dds" Size="64.64" ID="FlagBaseOutline" />
-                <Image TextureOffset="192,0" Texture="assets\UI\Art\Icons\Units\UnitFlagBase.dds" Color="255,255,255,255" Size="64.64" ID="FlagBase" />
+                <Image TextureOffset="0,0" Texture="assets\UI\Art\Icons\Units\UnitFlagBase.dds"
+                    Size="64.64" ID="FlagBaseOutline" />
+                <Image TextureOffset="192,0" Texture="assets\UI\Art\Icons\Units\UnitFlagBase.dds"
+                    Color="255,255,255,255" Size="64.64" ID="FlagBase" />
 
-                <Button Offset="0,0" Size="52.52" ID="NormalButton" ConsumeMouseOver="1" NoDefaultSound="1" ToolTipType="UnitTooltip">
+                <Button Offset="0,0" Size="52.52" ID="NormalButton" ConsumeMouseOver="1"
+                    NoDefaultSound="1" ToolTipType="UnitTooltip">
                     <ShowOnMouseOver>
                         <!-- Normal Alpha Bounce -->
-                        <AlphaAnim Size="64,64"  TextureOffset="0,64"  Texture="assets\UI\Art\Icons\Units\UnitFlagBase.dds"   Pause="0" Cycle="Bounce" Speed="1" AlphaStart=".99" AlphaEnd=".01" ID="NormalAlphaAnim" />
-                        <ScrollAnim Size="64,64" Speed=".5" Texture="assets\UI\Art\Icons\Units\UnitFlagShine.dds"  MaskTexture="assets\UI\Art\Icons\Units\UnitFlagMask.dds" ID="NormalScrollAnim" />
+                        <AlphaAnim Size="64,64" TextureOffset="0,64"
+                            Texture="assets\UI\Art\Icons\Units\UnitFlagBase.dds" Pause="0"
+                            Cycle="Bounce" Speed="1" AlphaStart=".99" AlphaEnd=".01"
+                            ID="NormalAlphaAnim" />
+                        <ScrollAnim Size="64,64" Speed=".5"
+                            Texture="assets\UI\Art\Icons\Units\UnitFlagShine.dds"
+                            MaskTexture="assets\UI\Art\Icons\Units\UnitFlagMask.dds"
+                            ID="NormalScrollAnim" />
                     </ShowOnMouseOver>
                 </Button>
 
-                <Button Offset="0,0" Size="52.52" ID="HealthBarButton" ConsumeMouseOver="1" NoDefaultSound="1"  ToolTipType="UnitTooltip">
+                <Button Offset="0,0" Size="52.52" ID="HealthBarButton" ConsumeMouseOver="1"
+                    NoDefaultSound="1" ToolTipType="UnitTooltip">
                     <ShowOnMouseOver>
                         <!-- Health bar Alpha Bounce -->
-                        <AlphaAnim Size="64,64"  TextureOffset="64,64"  Texture="assets\UI\Art\Icons\Units\UnitFlagBase.dds"  Pause="0" Cycle="Bounce" Speed="1" AlphaStart=".99" AlphaEnd=".01" ID="HealthBarAlphaAnim" />
-                        <ScrollAnim Size="64,64" Speed="-.50" Texture="assets\UI\Art\Icons\Units\UnitFlagShine.dds"  MaskTexture="assets\UI\Art\Icons\Units\UnitFlagMask.dds" ID="HealthBarScrollAnim" />
+                        <AlphaAnim Size="64,64" TextureOffset="64,64"
+                            Texture="assets\UI\Art\Icons\Units\UnitFlagBase.dds" Pause="0"
+                            Cycle="Bounce" Speed="1" AlphaStart=".99" AlphaEnd=".01"
+                            ID="HealthBarAlphaAnim" />
+                        <ScrollAnim Size="64,64" Speed="-.50"
+                            Texture="assets\UI\Art\Icons\Units\UnitFlagShine.dds"
+                            MaskTexture="assets\UI\Art\Icons\Units\UnitFlagMask.dds"
+                            ID="HealthBarScrollAnim" />
                     </ShowOnMouseOver>
                 </Button>
-                
+
                 <!-- Lighting Effect -->
-                <Image TextureOffset="128,0" Texture="assets\UI\Art\sIcons\Units\UnitFlagBase.dds" Size="64.64" Hidden="0" ID="LightEffect" />
+                <Image TextureOffset="128,0" Texture="assets\UI\Art\sIcons\Units\UnitFlagBase.dds"
+                    Size="64.64" Hidden="0" ID="LightEffect" />
 
                 <!-- Unit Icon -->
-                <AlphaAnim Anchor="C,C" Size="32.32" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="0.95" AlphaEnd="0.25" ID="UnitIconAnim" Stopped="1" >
-                    <Image Anchor="C,C" Size="32,32" Offset="0,0" Texture="Assets/UI/Art/Icons/Units/UnitFlagAtlasWhite.dds" Color="0,0,0,128" ID="UnitIconShadow" >
-                        <Image Anchor="C,C" Size="32,32" Offset="1,-1"  Texture="Assets/UI/Art/Icons/Units/UnitFlagAtlasWhite.dds" Color="240,199,0,255" ID="UnitIcon" />
+                <AlphaAnim Anchor="C,C" Size="32.32" Pause="0" Cycle="Bounce" Speed="1"
+                    AlphaStart="0.95" AlphaEnd="0.25" ID="UnitIconAnim" Stopped="1">
+                    <Image Anchor="C,C" Size="32,32" Offset="0,0"
+                        Texture="Assets/UI/Art/Icons/Units/UnitFlagAtlasWhite.dds" Color="0,0,0,128"
+                        ID="UnitIconShadow">
+                        <Image Anchor="C,C" Size="32,32" Offset="1,-1"
+                            Texture="Assets/UI/Art/Icons/Units/UnitFlagAtlasWhite.dds"
+                            Color="240,199,0,255" ID="UnitIcon" />
                     </Image>
                 </AlphaAnim>
             </Image>
-            
+
             <!-- Cargo & Unit Group -->
             <Container Anchor="C,C" Offset="36,0" ID="UnitGroupAnchor" />
         </WorldAnchor>
@@ -179,19 +236,24 @@
 
     <!-- Unit Tooltip -->
     <AlphaAnim ID="UnitTooltipTimer" Speed="1000" Pause="0" Cycle="Once" Stopped="1" />
-    <ToolTipType Name="UnitTooltip" >
-        <Grid ID="Grid" Size="300,50" Padding="5,5" Style="GridBlack8" NoClip="1" >
+    <ToolTipType Name="UnitTooltip">
+        <Grid ID="Grid" Size="300,50" Padding="5,5" Style="GridBlack8" NoClip="1">
             <Stack Offset="12,12" StackGrowth="Down" Padding="8">
-                <Label ID="Text" WrapWidth="500" ColorSet="Beige_Black_Alpha" Font="TwCenMT16"/>
-                <Label ID="UnitClassText" Offset="-5,5" ColorSet="Beige_Black_Alpha" Font="TwCenMT14" FontStyle="Shadow" />
-                <Label ID="PromotionText" Offset="0,10" ColorSet="Beige_Black_Alpha" Font="TwCenMT16" LeadingOffset="5" />
+                <Label ID="Text" WrapWidth="500" ColorSet="Beige_Black_Alpha" Font="TwCenMT16" />
+                <Label ID="UnitClassText" Offset="-5,5" ColorSet="Beige_Black_Alpha"
+                    Font="TwCenMT14" FontStyle="Shadow" />
+                <Label ID="PromotionText" Offset="0,10" ColorSet="Beige_Black_Alpha"
+                    Font="TwCenMT16" LeadingOffset="5" />
             </Stack>
-            <Image ID="PortraitFrame" Offset="-36,-36" AnchorSide="O.i" Texture="256x256Frame.dds" Size="256,256" >
+            <Image ID="PortraitFrame" Offset="-36,-36" AnchorSide="O.i" Texture="256x256Frame.dds"
+                Size="256,256">
                 <Image ID="UnitPortrait" Size="256,256" />
-                <Image ID="CivIconFrame" Anchor="L,B" Offset="20,20" Texture="IconFrame64.dds" Size="64.64" >
-                    <Image ID="CivIconBG" Size="64.64" Anchor="C,C" Texture="CivIconBGSizes.dds"/>
-                    <Image ID="CivIconShadow" Size="48.48" Anchor="C,C" Texture="CivSymbolAtlas48.dds" Color="Black.128"/>
-                    <Image ID="CivIcon" Size="48,48" Anchor="C,C" Texture="CivSymbolsColor512.dds"/>
+                <Image ID="CivIconFrame" Anchor="L,B" Offset="20,20" Texture="IconFrame64.dds"
+                    Size="64.64">
+                    <Image ID="CivIconBG" Size="64.64" Anchor="C,C" Texture="CivIconBGSizes.dds" />
+                    <Image ID="CivIconShadow" Size="48.48" Anchor="C,C"
+                        Texture="CivSymbolAtlas48.dds" Color="Black.128" />
+                    <Image ID="CivIcon" Size="48,48" Anchor="C,C" Texture="CivSymbolsColor512.dds" />
                 </Image>
             </Image>
         </Grid>
