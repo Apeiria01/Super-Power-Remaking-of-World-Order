@@ -14509,5 +14509,24 @@
 		<Replace Tag="TXT_KEY_ACTION_CLASS_BUILDING_COUNT">
 			<Text>该类在建[COLOR_POSITIVE_TEXT]{1_BuildingCount}[ENDCOLOR]个</Text>
 		</Replace>
+
+		<Replace Tag="TXT_KEY_FLAG_UNIT_TYPE">
+			<Text>战斗类型:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FLAG_UNIT_UPGRADE">
+			<Text>升级单位:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FLAG_UNIT_DROP_RANGE">
+			<Text>空投距离上限：</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UPANEL_CLICK_TO_SELECT">
+			<Text>点击选取该单位</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PEDIA_RESOURCES_NEED">
+			<Text>资源：</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FREEPROMOTIONS">
+			<Text>[COLOR_CYAN]单位属性:[ENDCOLOR]</Text>
+		</Replace>
 	</Language_zh_CN>
 </GameData>

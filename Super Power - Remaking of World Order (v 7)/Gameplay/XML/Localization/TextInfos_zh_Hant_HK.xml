@@ -14306,5 +14306,24 @@
 		<Replace Tag="TXT_KEY_ACTION_CLASS_BUILDING_COUNT">
 			<Text>該類在建[COLOR_POSITIVE_TEXT]{1_BuildingCount}[ENDCOLOR]個</Text>
 		</Replace>
+
+		<Replace Tag="TXT_KEY_FLAG_UNIT_TYPE">
+			<Text>戰鬥類型:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FLAG_UNIT_UPGRADE">
+			<Text>升級單位:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FLAG_UNIT_DROP_RANGE">
+			<Text>空投距離上限：</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UPANEL_CLICK_TO_SELECT">
+			<Text>點擊選取該單位</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PEDIA_RESOURCES_NEED">
+			<Text>資源：</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FREEPROMOTIONS">
+			<Text>[COLOR_CYAN]單位屬性:[ENDCOLOR]</Text>
+		</Replace>
 	</Language_zh_Hant_HK>
 </GameData>

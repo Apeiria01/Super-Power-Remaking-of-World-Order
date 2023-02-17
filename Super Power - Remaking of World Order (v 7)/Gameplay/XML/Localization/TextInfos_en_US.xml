@@ -16555,5 +16555,24 @@
 		<Replace Tag="TXT_KEY_ACTION_CLASS_BUILDING_COUNT">
 			<Text>[COLOR_POSITIVE_TEXT]{1_BuildingCount}[ENDCOLOR] in Building</Text>
 		</Replace>
+
+		<Replace Tag="TXT_KEY_FLAG_UNIT_TYPE">
+			<Text>Combat Type:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FLAG_UNIT_UPGRADE">
+			<Text>Upgrade unit:</Text>
+		</Replace>
+			<Replace Tag="TXT_KEY_FLAG_UNIT_DROP_RANGE">
+			<Text>Maximum airdrop distance:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UPANEL_CLICK_TO_SELECT">
+			<Text>Click to select the unit</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PEDIA_RESOURCES_NEED">
+			<Text>Resource:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FREE PROMOTIONS">
+			<Text>[COLOR_CYAN]unit promotions: [ENDCOLOR]</Text>
+		</Replace>
 	</Language_en_US>
 </GameData>

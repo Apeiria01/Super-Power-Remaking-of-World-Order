@@ -3992,6 +3992,7 @@ Events.GameplaySetActivePlayer.Add(OnActivePlayerChanged);
 
 ------------------------------------------------------------
 ------------------------------------------------------------
+
 local tipControlTable = {};
 TTManager:GetTypeControlTable( "UnitTooltip", tipControlTable );
 function TipHandler( Button )
@@ -4047,7 +4048,10 @@ function TipHandler( Button )
 		local unitStrength = unit:GetBaseCombatStrength() or unit:GetCombatStrength()
 		-- todo unit:GetMaxDefenseStrength()
 		local rangedStrength = unit:GetBaseRangedCombatStrength() or unit:GetRangedCombatStrength()
+
+
 		local hp = unit:GetMaxHitPoints();
+		
 		
 		if unit:GetDomainType() == DomainTypes.DOMAIN_AIR then
 			unitStrength = rangedStrength;
@@ -4067,15 +4071,16 @@ function TipHandler( Button )
 				toolTipString = string.format("%s %.3g[ICON_MOVES]", toolTipString, unitMoves )
 			end
 			
-			-- Strength
+	---------------- Strength----------------
 			if unitStrength > 0 then
 				local adjustedUnitStrength = (math.max(100 + unit:GetStrategicResourceCombatPenalty(), 10) * unitStrength) / 100
 				--todo other modifiers eg unhappy...
 				if adjustedUnitStrength < unitStrength then
-					adjustedUnitStrength = string.format(" [COLOR_NEGATIVE_TEXT]%.3g[ENDCOLOR]", adjustedUnitStrength )
+					adjustedUnitStrength = " [COLOR_NEGATIVE_TEXT]" .. adjustedUnitStrength .. "[ENDCOLOR]" 
 				end
 				toolTipString = toolTipString .. " " .. adjustedUnitStrength .. "[ICON_STRENGTH]"
 			end
+
 			
 			-- Ranged Strength
 			if rangedStrength > 0 then
@@ -4096,10 +4101,11 @@ function TipHandler( Button )
 			end
 		
 			-- Hit Points
-			if unit:GetDamage() > 0 then
+			---if unit:GetDamage() > 0 then
+			if  not unit:IsTrade() then
 				hp = unit:GetCurrHitPoints() .. "/" .. hp
 			end
-			toolTipString = toolTipString .. " " .. hp .. "[ICON_SILVER_FIST]"
+			toolTipString = toolTipString .. " " .. hp .. "[ICON_HP]"
 		end
 		
 		-- Embarked?
@@ -4112,7 +4118,106 @@ function TipHandler( Button )
 			toolTipString = toolTipString .."[NEWLINE]".. Locale.ConvertTextKey( "TXT_KEY_UNIT_EXPERIENCE_INFO", unit:GetLevel(), unit:GetExperience(), unit:ExperienceNeeded() ):gsub("%[NEWLINE]"," ")
 		end
 		
-		controls.Text:SetText( toolTipString );
+		
+
+
+
+
+	-- UnitCombatType?
+		if unit:IsCombatUnit() then
+	local item =GameInfo.UnitCombatInfos[unit:GetUnitCombatType()]
+	     if item  then
+	toolTipString = toolTipString .."[NEWLINE]".. Locale.ConvertTextKey("TXT_KEY_FLAG_UNIT_TYPE") .."[COLOR_CYAN]" .. Locale.ConvertTextKey(item.Description).."[ENDCOLOR]".." ";
+
+		end           
+       end 
+
+			-- Drop:
+	if unit:GetDropRange()>0 then
+			toolTipString = toolTipString .."[NEWLINE]".. Locale.ConvertTextKey("TXT_KEY_FLAG_UNIT_DROP_RANGE") .. "[COLOR_CYAN]"..unit:GetDropRange().."[ENDCOLOR]".." "
+		end
+
+
+		--Upgrade:
+	if unit:GetUpgradeUnitType()~=-1 then
+	local iUnitType = unit:GetUpgradeUnitType();
+	local item = GameInfo.Units[iUnitType].Description
+	toolTipString = toolTipString .."[NEWLINE]".. Locale.ConvertTextKey("TXT_KEY_FLAG_UNIT_UPGRADE") .."[COLOR_YELLOW]"..Locale.ConvertTextKey(item).."[ENDCOLOR]" .." "
+	         end	
+
+	 local unit2 = GameInfo.Units[unit:GetUnitType()]
+	 local productionCost = unit2.Cost	 
+	 local city, item, resource
+     local activePlayer = Players[activePlayerID ]
+	 local item
+     local activeCivilization = activePlayer and GameInfo.Civilizations[ activePlayer:GetCivilizationType() ]
+     local activeCivilizationType = activeCivilization and activeCivilization.Type
+
+	local unitClassText;
+
+	 toolTipString = toolTipString .."[NEWLINE]".."------------------------".."[NEWLINE]" --ÐÞ¸Ä
+
+		if activePlayer then
+
+		productionCost = activePlayer:GetUnitProductionNeeded(unit:GetUnitType())
+     end
+	 
+		-- Cost:
+	local costTip
+	if productionCost > 1 then -- Production cost
+		if not unit2.PurchaseOnly then
+			costTip = productionCost .. "[ICON_PRODUCTION]"
+		end
+		
+	end -- production cost
+		if costTip then
+		 toolTipString = toolTipString ..Locale.ConvertTextKey("TXT_KEY_PEDIA_COST_LABEL") .. " " .. ( costTip or Locale.ConvertTextKey("TXT_KEY_FREE") )
+	end
+
+	if unit2.ExtraMaintenanceCost > 0 then -- ExtraMaintenanceCost cost
+	   ExtraMaintenanceCost=unit2.ExtraMaintenanceCost
+		 toolTipString = toolTipString .. " " ..Locale.ConvertTextKey("TXT_KEY_PEDIA_MAINT_LABEL") .. -ExtraMaintenanceCost .."[ICON_GOLD]"
+	end
+	 
+	 	-- Resources required:
+	
+	local OtherResources = {};
+		for resource in GameInfo.Resources() do
+			item = Game.GetNumResourceRequiredForUnit( unit2.ID, resource.ID )
+			if resource and item ~= 0 then
+			table.insert( OtherResources, -item ..resource.IconString);
+			end
+		end
+	
+			local resourceText = {};
+		for _, resource in pairs(OtherResources) do
+			table.insert(resourceText,resource);
+		end
+
+		 if #resourceText > 0 then
+		 toolTipString = toolTipString .."[NEWLINE]"..Locale.ConvertTextKey("TXT_KEY_PEDIA_RESOURCES_NEED") ..table.concat( resourceText, "  " )  .." "
+	 end
+
+
+
+-- Required Buildings:
+	local buildings = {}
+	for row in GameInfo.Unit_BuildingClassRequireds( { UnitType = unit2.Type }) do
+		item = GetCivBuilding( activeCivilizationType, row.BuildingClassType )
+		if item then
+			table.insert( buildings, BuildingColor( Locale.ConvertTextKey(item.Description) ) )
+		end
+	end
+	item = unit2.ProjectPrereq and GameInfo.Projects[ unit2.ProjectPrereq ]
+	if unit2.ProjectPrereq then
+		table.insert( buildings, BuildingColor( Locale.ConvertTextKey(item.Description) ) )
+	end
+	if #buildings > 0 then
+		toolTipString = toolTipString .."[NEWLINE]" ..Locale.ConvertTextKey("TXT_KEY_PEDIA_REQ_BLDG_LABEL") .. " " .. table.concat( buildings, ", ")  -- UNIT_REQUIRES_BUILDING
+	end
+
+
+	controls.Text:SetText( toolTipString ); 
 		
 		-- Icons
 		local iconIndex, iconAtlas = UI.GetUnitPortraitIcon( unit )
@@ -4136,54 +4241,28 @@ function TipHandler( Button )
 			end
 		end
 		
-		-- Promotions
-		local propertyPromotions = {};
-		local rankedPromotions = {};
+	-- Promotions
 		local otherPromotions = {};
 		if not unit:IsTrade() then
 			for unitPromotion in GameInfo.UnitPromotions() do
 				if unit:IsHasPromotion(unitPromotion.ID) then
-					local type = unitPromotion.Type;
-					local rank = type:match("_%d");
-					if (rank ~= nil) then
-						local base = type:sub(1, type:len()-rank:len());
-						local promotion = rankedPromotions[base];
-						if     promotion == nil then
-							rankedPromotions[base] = {unitPromotion.IconString .. Locale.ConvertTextKey( unitPromotion.Description ), tonumber(rank:sub(2)), tonumber(rank:sub(2)), false};
-						elseif promotion[3] < tonumber(rank:sub(2)) then
-							rankedPromotions[base] = {unitPromotion.IconString .. Locale.ConvertTextKey( unitPromotion.Description ), promotion[2] .. "," .. tonumber(rank:sub(2)), tonumber(rank:sub(2)), true};
-						else
-							rankedPromotions[base][2] = promotion[2] .. "," .. tonumber(rank:sub(2));
-							rankedPromotions[base][4] = true;
-						end
-					elseif unitPromotion.OrderPriority == 11 then
-						table.insert( propertyPromotions, unitPromotion.IconString .. Locale.ConvertTextKey( unitPromotion.Description ) );
-					else
+					if unitPromotion~= nil then
 						table.insert( otherPromotions, unitPromotion.IconString .. Locale.ConvertTextKey( unitPromotion.Description ) );
 					end
 				end
 			end
 		end
-		
 		local promotionText = {};
-		for _,promotion in pairs(propertyPromotions) do
-			table.insert(promotionText, promotion);
-		end
-		for _,promotion in pairs(rankedPromotions) do
-		    if promotion[4] then
-			table.insert(promotionText, promotion[1] .. " (" .. promotion[2] .. ")");
-		    else
-			table.insert(promotionText, promotion[1]);
-		    end
-		end
 		for _,promotion in pairs(otherPromotions) do
 			table.insert(promotionText, promotion);
 		end
 		
+
+		
 		controls.PortraitFrame:SetAnchor( UIManager.GetMousePos() > 300 and "L,T" or "R,T" );
 		controls.UnitClassText:SetText( unitClassText or "" );
 		controls.UnitClassText:SetHide( unitClassText == nil );
-		controls.PromotionText:SetText( table.concat( promotionText, "[NEWLINE]" ) );
+		controls.PromotionText:SetText( Locale.ConvertTextKey("TXT_KEY_FREEPROMOTIONS").."".."[NEWLINE]" ..table.concat( promotionText, "[NEWLINE]" ) );
 		controls.PromotionText:SetHide( #promotionText == 0 );
 		controls.Grid:ReprocessAnchoring();
 		controls.Grid:DoAutoSize();
