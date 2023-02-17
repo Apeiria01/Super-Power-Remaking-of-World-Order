@@ -16364,5 +16364,196 @@
 		<Row Tag="TXT_KEY_BUILDING_CARTHAGINIAN_AGORA_EXPLORATION_HELP">
 			<Text>Navy unit +10% combat strength</Text>
 		</Row>
+
+		<!-- Promotion - Super Group Manager -->
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP">
+			<Text>[COLOR_YELLOW]Group Mode[ENDCOLOR]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_AIR">
+			<Text>[COLOR_YELLOW]Formation Flying[ENDCOLOR]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_HELP">
+			<Text>Unit with this Promotion can do the same Commands or Missions.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_I">
+			<Text>Group Move Mark 1</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_I_HELP">
+			<Text>Unit with this Promotion will -1 [ICON_MOVES] Movement for Group Move!</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_II">
+			<Text>Group Move Mark 2</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_II_HELP">
+			<Text>Unit with this Promotion will -2 [ICON_MOVES] Movement for Group Move!</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_III">
+			<Text>Group Move Mark 3</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_III_HELP">
+			<Text>Unit with this Promotion will -3 [ICON_MOVES] Movement for Group Move!</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_IV">
+			<Text>Group Move Mark 4</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_IV_HELP">
+			<Text>Unit with this Promotion will -4 [ICON_MOVES] Movement for Group Move!</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_V">
+			<Text>Group Move Mark 5</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_V_HELP">
+			<Text>Unit with this Promotion will -5 [ICON_MOVES] Movement for Group Move!</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X">
+			<Text>Group Move Mark !</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_HELP">
+			<Text>Unit with this Promotion [COLOR_YELLOW]"May Not Melee Attack"[ENDCOLOR] for Group Move !</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_I">
+			<Text>Group Move Mark I</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_I_HELP">
+			<Text>Unit with this Promotion will lose the [COLOR_YELLOW]"Ignores Terrain Cost"[ENDCOLOR] Promotion for Group Move!</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_II">
+			<Text>Group Move Mark II</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_II_HELP">
+			<Text>Unit with this Promotion will lose the [COLOR_YELLOW]"Altitude Training"[ENDCOLOR] Promotion for Group Move!</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_III">
+			<Text>Group Move Mark III</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_III_HELP">
+			<Text>Unit with this Promotion will lose the [COLOR_YELLOW]"Woodsman"[ENDCOLOR] Promotion for Group Move!</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_IV">
+			<Text>Group Move Mark IV</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_IV_HELP">
+			<Text>Unit with this Promotion will lose the [COLOR_YELLOW]"Double movement in Coast"[ENDCOLOR] Promotion for Group Move!</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_V">
+			<Text>Group Move Mark V</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_V_HELP">
+			<Text>Unit with this Promotion will lose the [COLOR_YELLOW]"Bonuses in Snow, Tundra, and Hills"[ENDCOLOR] Promotion for Group Move!</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_VI">
+			<Text>Group Move Mark VI</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_VI_HELP">
+			<Text>Unit with this Promotion will lose the [COLOR_YELLOW]"Hovering Unit"[ENDCOLOR] Promotion for Group Move!</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_VII">
+			<Text>Group Move Mark VII</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_VII_HELP">
+			<Text>Unit with this Promotion will lose the [COLOR_YELLOW]"Lightning Warfare"[ENDCOLOR] Promotion for Group Move!</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_VIII">
+			<Text>Group Move Mark VIII</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_VIII_HELP">
+			<Text>Unit with this Promotion will get the [COLOR_YELLOW]"Rough Terrain Penalty"[ENDCOLOR] Promotion for Group Move!</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_IX">
+			<Text>Group Move Mark IX</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_IX_HELP">
+			<Text>Unit with this Promotion will get the [COLOR_YELLOW]"Cannot Enter Deep Ocean"[ENDCOLOR] Promotion for Group Move!</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_X">
+			<Text>Group Move Mark X</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_X_HELP">
+			<Text>Unit with this Promotion will get the [COLOR_YELLOW]"Astronomy Needed"[ENDCOLOR] Promotion for Group Move!</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_MOVELIFT_I">
+			<Text>Move Lift Mark I</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_MOVELIFT_I_HELP">
+			<Text>Unit with this Promotion will -1 [ICON_MOVES] Move Lift!</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_MOVELIFT_II">
+			<Text>Move Lift Mark II</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_MOVELIFT_II_HELP">
+			<Text>Unit with this Promotion will -2 [ICON_MOVES] Move Lift!</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_MOVELIFT_III">
+			<Text>Move Lift Mark III</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_MOVELIFT_III_HELP">
+			<Text>Unit with this Promotion will -3 [ICON_MOVES] Move Lift!</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_MOVELIFT_IV">
+			<Text>Move Lift Mark IV</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_MOVELIFT_IV_HELP">
+			<Text>Unit with this Promotion will -4 [ICON_MOVES] Move Lift!</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_MOVELIFT_V">
+			<Text>Move Lift Mark V</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_MOVELIFT_V_HELP">
+			<Text>Unit with this Promotion will -5 [ICON_MOVES] Move Lift!</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_BUILD">
+			<Text>Group Build Mark</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_BUILD_HELP">
+			<Text>Unit with this Promotion is building Improvement in Group!</Text>
+		</Replace>
+		<!-- UI - Super Group Manager -->
+		<Replace Tag="TXT_KEY_AIRCRAFT_ON_TT">
+			<Text>Add this Unit into formation.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_AIRCRAFT_OFF_TT">
+			<Text>Remove this Unit from formation.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CARRIER_ON_TT">
+			<Text>Establish a CVW in this Plot.[NEWLINE]AirCrafts in a CVW will do the [COLOR_YELLOW]"Unified"[ENDCOLOR] Command or Mission!</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CARRIER_OFF_TT">
+			<Text>Disband a CVW in this Plot.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_GROUPAF_ON_TT">
+			<Text>Establish CVWs with all Aeroplanes in this Plot.[NEWLINE]AirCrafts in a CVW will do the [COLOR_YELLOW]"Unified"[ENDCOLOR] Command or Mission!</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_GROUPAF_OFF_TT">
+			<Text>Disband all Aeroplane CVWs in this Plot.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_GROUPGM_ON_TT">
+			<Text>Establish CVWs with all Missiles in this Plot.[NEWLINE]AirCrafts in a CVW will do the [COLOR_YELLOW]"Unified"[ENDCOLOR] Command or Mission!</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_GROUPGM_OFF_TT">
+			<Text>Disband all Missile CVWs in this Plot.</Text>
+		</Replace>
+		
+		<Replace Tag="TXT_KEY_SGM_GROUP_OFF_TT">
+			<Text>Establish a Group with all Units in this Plot.[NEWLINE]Units in Group will do the [COLOR_YELLOW]"Unified"[ENDCOLOR] Command or Mission!</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_SGM_GROUP_ON_TT">
+			<Text>Disband the Group in this Plot.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_SGM_GROUP_ACT_OFF_TT">
+			<Text>Click to [COLOR_POSITIVE_TEXT]Active[ENDCOLOR] the [COLOR_YELLOW]"Great"[ENDCOLOR] Group Mode: [NEWLINE][NEWLINE]Establish a [COLOR_YELLOW]"Great"[ENDCOLOR] Group with all Units of [COLOR_YELLOW]Same CombatType[ENDCOLOR] in this Plot and Adjacency Plots.[NEWLINE](Units in the [COLOR_YELLOW]"Great"[ENDCOLOR] Group will do the [COLOR_YELLOW]"Unified"[ENDCOLOR] Command or Mission!)</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_SGM_GROUP_ALL_OFF_TT">
+			<Text>Click to [COLOR_POSITIVE_TEXT]Active[ENDCOLOR] the [COLOR_YELLOW]"Great"[ENDCOLOR] Group Mode: [NEWLINE][NEWLINE]Establish a [COLOR_YELLOW]"Great"[ENDCOLOR] Group with all Units in this Plot and Adjacency Plots.[NEWLINE](Units in the [COLOR_YELLOW]"Great"[ENDCOLOR] Group will do the [COLOR_YELLOW]"Unified"[ENDCOLOR] Command or Mission!)</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_SGM_GROUP_ALL_ON_TT">
+			<Text>Click to [COLOR_POSITIVE_TEXT]Deactive[ENDCOLOR] the [COLOR_YELLOW]"Great"[ENDCOLOR] Group Mode: [NEWLINE][NEWLINE]Disband the [COLOR_YELLOW]"Great"[ENDCOLOR] Group in this Plot and Adjacency Plots.</Text>
+		</Replace>
+		<!-- New ToolTips for Units or Buildings with Built or Building -->
+		<Replace Tag="TXT_KEY_ACTION_CLASS_BUILT_COUNT">
+			<Text>Already have [COLOR_YELLOW]{1_HaveCount}[ENDCOLOR]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_ACTION_CLASS_BUILDING_COUNT">
+			<Text>[COLOR_POSITIVE_TEXT]{1_BuildingCount}[ENDCOLOR] in Building</Text>
+		</Replace>
 	</Language_en_US>
 </GameData>
