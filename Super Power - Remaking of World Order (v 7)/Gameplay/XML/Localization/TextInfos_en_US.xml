@@ -16364,34 +16364,5 @@
 		<Row Tag="TXT_KEY_BUILDING_CARTHAGINIAN_AGORA_EXPLORATION_HELP">
 			<Text>Navy unit +10% combat strength</Text>
 		</Row>
-
-		<Row Tag="TXT_KEY_FLAG_UNIT_TYPE_SP">
-			<Text>Battle Type:</Text>
-		</Row>
-		<Row Tag="TXT_KEY_FLAG_UNIT_UPGRADE_SP">
-			<Text>Upgrade Unit:</Text>
-		</Row>
-		<Row Tag="TXT_KEY_FLAG_UNIT_DROP_RANGE_SP">
-			<Text>Maximum airdrop distance:</Text>
-		</Row>
-			
-		<Row Tag="TXT_KEY_UPANEL_CLICK_TO_SELECT_SP">
-			<Text>Click to select the unit</Text>
-		</Row>
-			
-		<Row Tag="TXT_KEY_PEDIA_RESOURCES_NEED_SP">
-			<Text>Resource:</Text>
-		</Row>
-			
-		<Row Tag="TXT_KEY_FREE PROMOTIONS_SP">
-			<Text>[COLOR_CYAN] Unit Promotions: [ENDCOLOR]</Text>
-		</Row>
-			
-		<Replace Tag="TXT_KEY_ACTION_CLASS_BUILT_COUNT_SP">
-			<Text>This class already has [COLOR_YELLOW]{1_HaveCount}[ENDCOLOR]</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_ACTION_CLASS_BUILDING_COUNT_SP">
-			<Text>This class is building [COLOR_POSITIVE_TEXT]{1_BuildingCount}[ENDCOLOR]</Text>
-		</Replace>
 	</Language_en_US>
 </GameData>

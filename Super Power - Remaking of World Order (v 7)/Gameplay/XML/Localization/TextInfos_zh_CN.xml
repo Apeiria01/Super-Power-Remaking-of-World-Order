@@ -14318,32 +14318,44 @@
 			<Text>海军单位+10%战斗力</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_FLAG_UNIT_TYPE_SP">
-			<Text>战斗类型:</Text>
-		</Row>
-		<Row Tag="TXT_KEY_FLAG_UNIT_UPGRADE_SP">
-			<Text>升级单位:</Text>
-		</Row>
-		<Row Tag="TXT_KEY_FLAG_UNIT_DROP_RANGE_SP">
-			<Text>空投距离上限：</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_UPANEL_CLICK_TO_SELECT_SP">
-			<Text>点击选取该单位</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_PEDIA_RESOURCES_NEED_SP">
-			<Text>资源：</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_FREEPROMOTIONS_SP">
+		<Row Tag="TXT_KEY_SP_UI_FREEPROMOTIONS">
 			<Text>[COLOR_CYAN]单位属性:[ENDCOLOR]</Text>
 		</Row>
 
-		<Replace Tag="TXT_KEY_ACTION_CLASS_BUILT_COUNT_SP">
+		<Row Tag="TXT_KEY_SP_UI_TECH_HELP_UNITS_UNLOCKED">
+			<Text>[NEWLINE][COLOR_ENDURANCE]解锁单位：[ENDCOLOR][NEWLINE]</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_SP_UI_TECH_HELP_BUILDINGS_UNLOCKED">
+			<Text>[NEWLINE][COLOR_ENDURANCE]解锁建筑：[ENDCOLOR][NEWLINE]</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_SP_UI_TECH_HELP_WONDERS_UNLOCKED">
+			<Text>[NEWLINE][COLOR_ENDURANCE]解锁奇观：[ENDCOLOR][NEWLINE]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_UI_TECH_HELP_PROJECTS_UNLOCKED">
+			<Text>[NEWLINE][COLOR_ENDURANCE]解锁计划：[ENDCOLOR][NEWLINE]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_UI_TECH_HELP_PROCESSES_UNLOCKED">
+			<Text>[NEWLINE][COLOR_ENDURANCE]解锁项目：[ENDCOLOR][NEWLINE]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_UI_TECH_HELP_BUILDS_UNLOCKED">
+			<Text>[NEWLINE][COLOR_ENDURANCE]解锁建造：[ENDCOLOR][NEWLINE]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_UI_TECH_HELP_RESOURCES_UNLOCKED">
+			<Text>[NEWLINE][COLOR_ENDURANCE]解锁资源：[ENDCOLOR][NEWLINE]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_UI_TECH_HELP_YIELDS_UNLOCKED">
+			<Text>[NEWLINE][COLOR_ENDURANCE]解锁产出：[ENDCOLOR][NEWLINE]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_UI_TECH_HELP_ACTIONS_UNLOCKED">
+			<Text>[NEWLINE][COLOR_ENDURANCE]解锁能力：[ENDCOLOR][NEWLINE]</Text>
+		</Row>
+
+		<Replace Tag="TXT_KEY_ACTION_CLASS_BUILT_COUNT">
 			<Text>该类已拥有[COLOR_YELLOW]{1_HaveCount}[ENDCOLOR]个</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_ACTION_CLASS_BUILDING_COUNT_SP">
+		<Replace Tag="TXT_KEY_ACTION_CLASS_BUILDING_COUNT">
 			<Text>该类在建[COLOR_POSITIVE_TEXT]{1_BuildingCount}[ENDCOLOR]个</Text>
 		</Replace>
 	</Language_zh_CN>

@@ -14115,34 +14115,5 @@
 		<Row Tag="TXT_KEY_BUILDING_CARTHAGINIAN_AGORA_EXPLORATION_HELP">
 			<Text>海軍單位+10%戰鬥力</Text>
 		</Row>
-
-		<Row Tag="TXT_KEY_FLAG_UNIT_TYPE_SP">
-			<Text>戰鬥類型:</Text>
-		</Row>
-		<Row Tag="TXT_KEY_FLAG_UNIT_UPGRADE_SP">
-			<Text>升級單位:</Text>
-		</Row>
-		<Row Tag="TXT_KEY_FLAG_UNIT_DROP_RANGE_SP">
-			<Text>空投距離上限：</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_UPANEL_CLICK_TO_SELECT_SP">
-			<Text>點擊選取該單位</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_PEDIA_RESOURCES_NEED_SP">
-			<Text>資源：</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_FREEPROMOTIONS_SP">
-			<Text>[COLOR_CYAN]單位屬性:[ENDCOLOR]</Text>
-		</Row>
-
-		<Replace Tag="TXT_KEY_ACTION_CLASS_BUILT_COUNT_SP">
-			<Text>該類已擁有[COLOR_YELLOW]{1_HaveCount}[ENDCOLOR]個</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_ACTION_CLASS_BUILDING_COUNT_SP">
-			<Text>該類在建[COLOR_POSITIVE_TEXT]{1_BuildingCount}[ENDCOLOR]個</Text>
-		</Replace>
 	</Language_zh_Hant_HK>
 </GameData>
