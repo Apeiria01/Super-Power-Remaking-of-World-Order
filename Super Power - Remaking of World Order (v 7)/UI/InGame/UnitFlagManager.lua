@@ -4129,7 +4129,7 @@ function TipHandler(Button)
                         toolTipString = toolTipString .. spreadsLeft
                     end
                     toolTipString = toolTipString ..
-                        ((GameInfo.Religions[religionID] or {}).IconStringSP or "?") ..
+                        ((GameInfo.Religions[religionID] or {}).IconString or "?") ..
                         Locale.ConvertTextKey(Game.GetReligionName(religionID))
                 end
             end
@@ -4231,7 +4231,7 @@ function TipHandler(Button)
         for resource in GameInfo.Resources() do
             item = Game.GetNumResourceRequiredForUnit(unit2.ID, resource.ID)
             if resource and item ~= 0 then
-                table.insert(OtherResources, -item .. resource.IconStringSP);
+                table.insert(OtherResources, -item .. resource.IconString);
             end
         end
 
