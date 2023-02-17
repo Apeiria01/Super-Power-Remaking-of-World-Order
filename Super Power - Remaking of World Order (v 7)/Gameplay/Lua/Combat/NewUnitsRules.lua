@@ -2,7 +2,7 @@
 
 --------------------------------------------------------------
 
---include( "UtilityFunctions.lua" )
+include( "UtilityFunctions" )
 
 
 g_CorpsCount = {};
