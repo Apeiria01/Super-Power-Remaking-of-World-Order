@@ -62,6 +62,10 @@
 					<Container Size="32,32" Hidden="0" ID="ReligiousIconContainer">
 						<Image Anchor="L,C" ID="ReligiousIconShadow" Offset="1,1" Color="0,0,0,255" Size="32,32" Texture="assets\DLC\Expansion\UI\Art\Icons\ReligiousSymbolsWhite32_Expansion.dds"/>
 						<Image Anchor="L,C" ID="ReligiousIcon" Offset="0,0" Color="255,255,255,255" Size="32,32" Texture="assets\DLC\Expansion\UI\Art\Icons\ReligiousSymbolsWhite32_Expansion.dds"/>
+						<Box Anchor="R,T" ID="HolyCityIcon" Offset="0,-2" Size="16,16" Color="0.0.0.0" Hidden="1">
+							<Image Anchor="C,C" Offset="1,1" Color="0,0,0,255" Size="16,16" Texture="civsymbolswhite_civilwar16_expansion.dds"/>
+							<Image Anchor="C,C" Offset="0,0" Color="255,215,0,255" Size="16,16" Texture="civsymbolswhite_civilwar16_expansion.dds"/>
+						</Box>
 					</Container>
 				</Stack>
 			</Box>
@@ -77,7 +81,7 @@
 					<Box Anchor="C,B" Offset="0,0" Size="98,2" Color="0,0,0,64" Hidden="0"/>
 				</Box>
 				<!-- GarrisonFrame -->
-				<Image Anchor="C,C" Offset="-42,-8" Size="0,0" Texture="Assets/UI/Art/Icons/GarrisonFrame.dds" Hidden="0" ID="GarrisonFrame"/>
+				<Image Anchor="C,C" Offset="-42,-8" Size="64,64" Texture="Assets/UI/Art/Icons/GarrisonFrame.dds" Hidden="0" ID="GarrisonFrame"/>
 				<!-- CityBannerStrengthFrame  -->
 				<Image Anchor="C,C" Offset="0,0" Size="128,48" Texture="Assets/UI/Art/Icons/CityBannerStrengthFrame.dds" Hidden="0" ID="CityBannerStrengthFrame" ConsumeMouse="0"/>
 				<Box Anchor="C,C" Offset="0,6" Size="64,24" Color="0,0,0,0" Hidden="0" ConsumeMouse="0" ToolTip="TXT_KEY_CITYVIEW_CITY_COMB_STRENGTH_TT"/>
@@ -101,37 +105,11 @@
 				<Label ID="PuppetIcon" Anchor="C,C" Offset="0,0" String="[ICON_PUPPET]" Hidden="1"/>
 				<Label ID="OccupiedIcon" Anchor="C,C" Offset="0,0" String="[ICON_OCCUPIED]" Hidden="1"/>
 				<Label ID="SpyIcon" Anchor="C,C" Offset="0,0" String="[ICON_SPY]" Hidden="0" />
-				
-				
-				
-				
-				<!--SP City Levels & Size Icon-->
-				<Label ID="CityIcon_Lv1" Anchor="C,C" Offset="0,0" String="[ICON_CITYBANNER_CITY_LV1]" Hidden="1" />
-				<Label ID="CityIcon_Lv2" Anchor="C,C" Offset="0,0" String="[ICON_CITYBANNER_CITY_LV2]" Hidden="1" />
-				<Label ID="CityIcon_Lv3" Anchor="C,C" Offset="0,0" String="[ICON_CITYBANNER_CITY_LV3]" Hidden="1" />
-				<Label ID="CityIcon_Lv4" Anchor="C,C" Offset="0,0" String="[ICON_CITYBANNER_CITY_LV4]" Hidden="1" />
-				<Label ID="CityIcon_Lv5" Anchor="C,C" Offset="0,0" String="[ICON_CITYBANNER_CITY_LV5]" Hidden="1" />
-				<Label ID="CityIcon_NOAC" Anchor="C,C" Offset="0,0" String="[ICON_HAPPINESS_3]" Hidden="1" />
-				
-				<Label ID="CityIcon_NOUTILITY" Anchor="C,C" Offset="0,0" String="[ICON_CITYBANNER_CITY_NOAC]" Hidden="1" />
-				<Label ID="CityIcon_TOWN" Anchor="C,C" Offset="0,0" String="[ICON_CITYBANNER_CITY_TOWN]" Hidden="1" />
-				<Label ID="CityIcon_SMALL" Anchor="C,C" Offset="0,0" String="[ICON_CITYBANNER_CITY_SMALL]" Hidden="1" />
-				<Label ID="CityIcon_MEDIUM" Anchor="C,C" Offset="0,0" String="[ICON_CITYBANNER_CITY_MEDIUM]" Hidden="1" />
-				<Label ID="CityIcon_LARGE" Anchor="C,C" Offset="0,0" String="[ICON_CITYBANNER_CITY_LARGE]" Hidden="1" />
-				<Label ID="CityIcon_XL" Anchor="C,C" Offset="0,0" String="[ICON_CITYBANNER_CITY_XL]" Hidden="1" />
-				<Label ID="CityIcon_XXL" Anchor="C,C" Offset="0,0" String="[ICON_CITYBANNER_CITY_XXL]" Hidden="1" />
-				<Label ID="CityIcon_GLOBAL" Anchor="C,C" Offset="0,0" String="[ICON_CITYBANNER_CITY_GLOBAL]" Hidden="1" />
-				<!--SP City Levels & Size Icon End-->
-
-
-				<TextButton ID="CityIcon_ResurceDemand" Anchor="C,C" Offset="0,0" String="" Hidden="1" />
-				
-				<!--<Label ID="QuestIcons" Anchor="C,C" Offset="0,0"  String=" " Hidden="1"/>
-				<TextButton ID="FocusIcon" Anchor="C,C" Offset="0,0"  String=" " Hidden="1"/>-->
-				
-				
-				
-        <Label ID="DiplomatIcon" Anchor="C,C" Offset="0,0" String="[ICON_DIPLOMAT]" Hidden="0" />
+				<Label ID="DiplomatIcon" Anchor="C,C" Offset="0,0" String="[ICON_DIPLOMAT]" Hidden="0" />
+				<Label ID="CityLevelIcon" Anchor="C,C" Offset="0,0" String="" Hidden="1" />
+				<Label ID="CityScaleIcon" Anchor="C,C" Offset="0,0" String="" Hidden="1" />
+				<Label ID="CityFocusIcon" Anchor="C,C" Offset="0,0" String="" Hidden="1" />
+				<Label ID="QuestIcon" Anchor="C,C" Offset="0,0" String="" Hidden="1" />
 			</Stack>
 		</WorldAnchor>
 	</Instance>
@@ -169,12 +147,16 @@
 					<Image ID="StatusMeterMarker" Anchor="C,C" Offset="0,1" AnchorSide="O.I" Texture="Assets/UI/Art/Notification/CityStateMeterFrameIcon16.dds" Size="16,16" Hidden="0"/>
 				</Image>
 				<Stack ID="NameStack" Anchor="C,C" Offset="0,1" StackGrowth="Right" Padding="2">
-          <Image Anchor="L,C" Offset="0,0" Size="32,32" Texture="Assets/UI/Art/Icons/CivSymbolAtlas32.dds" Color="201,248,255,255" ID="MinorIndicator"/>
-          <Label Anchor="L,C" Offset="0,-1" Font="TwCenMT18" FontStyle="Shadow" ID="CityName" Hidden="0"/>
-          <Container Anchor="L,C" Size="32,32" Hidden="0" ID="ReligiousIconContainer">
-            <Image Anchor="L,C" ID="ReligiousIconShadow" Offset="1,1" Color="0,0,0,255" Size="32,32" Texture="assets\DLC\Expansion\UI\Art\Icons\ReligiousSymbolsWhite32_Expansion.dds"/>
-            <Image Anchor="L,C" ID="ReligiousIcon" Offset="0,0" Color="255,255,255,255" Size="32,32" Texture="assets\DLC\Expansion\UI\Art\Icons\ReligiousSymbolsWhite32_Expansion.dds"/>
-          </Container>
+					<Image Anchor="L,C" Offset="0,0" Size="32,32" Texture="Assets/UI/Art/Icons/CivSymbolAtlas32.dds" Color="201,248,255,255" ID="MinorIndicator"/>
+					<Label Anchor="L,C" Offset="0,-1" Font="TwCenMT18" FontStyle="Shadow" ID="CityName" Hidden="0"/>
+					<Container Anchor="L,C" Size="32,32" Hidden="0" ID="ReligiousIconContainer">
+						<Image Anchor="L,C" ID="ReligiousIconShadow" Offset="1,1" Color="0,0,0,255" Size="32,32" Texture="assets\DLC\Expansion\UI\Art\Icons\ReligiousSymbolsWhite32_Expansion.dds"/>
+						<Image Anchor="L,C" ID="ReligiousIcon" Offset="0,0" Color="255,255,255,255" Size="32,32" Texture="assets\DLC\Expansion\UI\Art\Icons\ReligiousSymbolsWhite32_Expansion.dds"/>
+						<Box Anchor="R,T" ID="HolyCityIcon" Offset="0,-2" Size="16,16" Color="0.0.0.0" Hidden="1">
+							<Image Anchor="C,C" Offset="1,1" Color="0,0,0,255" Size="16,16" Texture="civsymbolswhite_civilwar16_expansion.dds"/>
+							<Image Anchor="C,C" Offset="0,0" Color="255,215,0,255" Size="16,16" Texture="civsymbolswhite_civilwar16_expansion.dds"/>
+						</Box>
+					</Container>
 				</Stack>
 				<!-- OtherCityBanner CityBannerHealthBar -->
 				<Box Anchor="C,C" Offset="0,-12" Size="100,5" Color="0,0,0,255" ID="CityBannerHealthBarBase" Hidden="1">
@@ -198,37 +180,12 @@
 				<Label ID="BlockadedIcon" Anchor="C,C" Offset="0,0" String="[ICON_BLOCKADED]" Font="TwCenMT18" FontStyle="Shadow" Hidden="1"/>
 				<Label ID="PuppetIcon" Anchor="C,C" Offset="0,0" String="[ICON_PUPPET]" Font="TwCenMT18" FontStyle="Shadow" Hidden="1"/>
 				<Label ID="OccupiedIcon" Anchor="C,C" Offset="0,0" String="[ICON_OCCUPIED]" Font="TwCenMT18" FontStyle="Shadow" Hidden="1"/>
-
-
-
-
-				<!--SP City Levels & Size Icon  No need for this! This is not the tooltip!-->
-				<!--<Label ID="CityIcon_Lv1" Anchor="C,C" Offset="0,0" String="[ICON_CITYBANNER_CITY_LV1]" Font="TwCenMT18" FontStyle="Shadow" Hidden="1"/>
-				<Label ID="CityIcon_Lv2" Anchor="C,C" Offset="0,0" String="[ICON_CITYBANNER_CITY_LV2]" Font="TwCenMT18" FontStyle="Shadow" Hidden="1"/>
-				<Label ID="CityIcon_Lv3" Anchor="C,C" Offset="0,0" String="[ICON_CITYBANNER_CITY_LV3]" Font="TwCenMT18" FontStyle="Shadow" Hidden="1"/>
-				<Label ID="CityIcon_Lv4" Anchor="C,C" Offset="0,0" String="[ICON_CITYBANNER_CITY_LV4]" Font="TwCenMT18" FontStyle="Shadow" Hidden="1"/>
-				<Label ID="CityIcon_Lv5" Anchor="C,C" Offset="0,0" String="[ICON_CITYBANNER_CITY_LV5]" Font="TwCenMT18" FontStyle="Shadow" Hidden="1"/>
-				<Label ID="CityIcon_NOAC" Anchor="C,C" Offset="0,0" String="[ICON_CITYBANNER_CITY_NOAC]" Font="TwCenMT18" FontStyle="Shadow" Hidden="1"/>
-
-
-				<Label ID="CityIcon_TOWN" Anchor="C,C" Offset="0,0" String="[ICON_CITYBANNER_CITY_TOWN]" Font="TwCenMT18" FontStyle="Shadow" Hidden="1"/>
-				<Label ID="CityIcon_SMALL" Anchor="C,C" Offset="0,0" String="[ICON_CITYBANNER_CITY_SMALL]" Font="TwCenMT18" FontStyle="Shadow" Hidden="1"/>
-				<Label ID="CityIcon_MEDIUM" Anchor="C,C" Offset="0,0" String="[ICON_CITYBANNER_CITY_MEDIUM]" Font="TwCenMT18" FontStyle="Shadow" Hidden="1"/>
-				<Label ID="CityIcon_LARGE" Anchor="C,C" Offset="0,0" String="[ICON_CITYBANNER_CITY_LARGE]" Font="TwCenMT18" FontStyle="Shadow" Hidden="1"/>
-				<Label ID="CityIcon_XL" Anchor="C,C" Offset="0,0" String="[ICON_CITYBANNER_CITY_XL]" Font="TwCenMT18" FontStyle="Shadow" Hidden="1"/>
-				<Label ID="CityIcon_CITY_XXL" Anchor="C,C" Offset="0,0" String="[ICON_CITYBANNER_CITY_XXL]" Font="TwCenMT18" FontStyle="Shadow" Hidden="1"/>
-				<Label ID="CityIcon_CITY_GLOBAL" Anchor="C,C" Offset="0,0" String="[ICON_CITYBANNER_CITY_GLOBAL]" Font="TwCenMT18" FontStyle="Shadow" Hidden="1"/>-->
-				
-				<!--SP City Levels & Size Icon End-->
-				
-				
-				
-				
-				
-				
-				
 				<Label ID="SpyIcon" Anchor="C,C" Offset="0,0" String="[ICON_SPY]" Font="TwCenMT18" FontStyle="Shadow" Hidden="0"/>
-        <Label ID="DiplomatIcon" Anchor="C,C" Offset="0,0" String="[ICON_DIPLOMAT]" Font="TwCenMT18" FontStyle="Shadow" Hidden="0"/>
+				<Label ID="DiplomatIcon" Anchor="C,C" Offset="0,0" String="[ICON_DIPLOMAT]" Font="TwCenMT18" FontStyle="Shadow" Hidden="0"/>
+				<Label ID="CityLevelIcon" Anchor="C,C" Offset="0,0" String="" Hidden="1" />
+				<Label ID="CityScaleIcon" Anchor="C,C" Offset="0,0" String="" Hidden="1" />
+				<Label ID="CityFocusIcon" Anchor="C,C" Offset="0,0" String="" Hidden="1" />
+				<Label ID="QuestIcon" Anchor="C,C" Offset="0,0" String="" Hidden="1" />
 			</Stack>
 		</WorldAnchor>
 	</Instance>
