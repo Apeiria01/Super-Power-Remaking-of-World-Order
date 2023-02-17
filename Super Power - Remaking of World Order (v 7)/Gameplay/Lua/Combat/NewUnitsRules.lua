@@ -395,7 +395,7 @@ function NewUnitCreationRules()   ------------------------Human Player's units r
 			end-------for units END
 			
 			-- Troops count - Set
-			if PreGame.GetGameOption("GAMEOPTION_SP_CORPS_MODE_MEDIUM") == 0 then
+			if PreGame.GetGameOption("GAMEOPTION_SP_CORPS_MODE_DISABLE") == 0 then
 				if PreGame.GetGameOption("GAMEOPTION_SP_CORPS_MODE_HIGH") == 1 then
 					iTotalTroops = iTotalTroops * 4;
 				elseif PreGame.GetGameOption("GAMEOPTION_SP_CORPS_MODE_LOW") == 1 then
