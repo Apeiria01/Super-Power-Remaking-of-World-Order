@@ -42,13 +42,13 @@ end
 -------------------------------------------------
 function UpdateRangeStrikeIcon(cityBanner)
 
-	local player = Players[cityBanner.playerID];		
+	local player = Players[cityBanner.playerID];
 	if (player ~= nil) then
 		
 		local city = player:GetCityByID(cityBanner.cityID);
 		local controls = cityBanner.SubControls;
 	
-		local svStrikeButton = nil;	
+		local svStrikeButton = nil;
 		if (SVInstances[cityBanner.playerID] ~= nil) then
 			svStrikeButton = SVInstances[cityBanner.playerID][cityBanner.cityID];
 		end
@@ -180,86 +180,20 @@ function RefreshCityBanner(cityBanner, iActiveTeam, iActivePlayer)
 		local localizedCityName = Locale.ConvertTextKey(cityName);
 		local convertedKey = Locale.ToUpper(localizedCityName);
 		
-		
-	
-		
 		-- Update capital icon
 		local isCapital = city:IsCapital() or Players[city:GetOriginalOwner()]:IsMinorCiv();
+		
 		if (city:IsCapital() and not player:IsMinorCiv()) then
 			convertedKey = "[ICON_CAPITAL]" .. convertedKey;
 		end
 		
-			--------------------------------------------SP City Show City Focus--------------------------
-		if isActivePlayerCity then
-			if city:IsForcedAvoidGrowth() then
-			   convertedKey = convertedKey .. " [ICON_LOCKED]";
-			else
-			   convertedKey = convertedKey
-			end
-			
-			local CityFocus = city:GetFocusType()
-			if CityFocus == CityAIFocusTypes.CITY_AI_FOCUS_TYPE_FOOD then
-				convertedKey = convertedKey .. " [ICON_FOOD]";
-			elseif CityFocus == CityAIFocusTypes.CITY_AI_FOCUS_TYPE_PRODUCTION then
-				convertedKey = convertedKey .. " [ICON_PRODUCTION]";
-			elseif CityFocus == CityAIFocusTypes.CITY_AI_FOCUS_TYPE_GOLD then
-				convertedKey = convertedKey .. " [ICON_GOLD]";
-			elseif CityFocus == CityAIFocusTypes.CITY_AI_FOCUS_TYPE_SCIENCE then
-				convertedKey = convertedKey .. " [ICON_RESEARCH]";
-			elseif CityFocus == CityAIFocusTypes.CITY_AI_FOCUS_TYPE_CULTURE then
-				convertedKey = convertedKey .. " [ICON_CULTURE]";
-			elseif CityFocus == CityAIFocusTypes.CITY_AI_FOCUS_TYPE_GREAT_PEOPLE then
-				convertedKey = convertedKey .. " [ICON_GREAT_PEOPLE]";
-			elseif CityFocus == CityAIFocusTypes.CITY_AI_FOCUS_TYPE_FAITH then
-				convertedKey = convertedKey .. " [ICON_PEACE]";
-			else
-				convertedKey = convertedKey
-			end
-			
-			if city:IsNoAutoAssignSpecialists() then
-			   convertedKey = convertedKey .. " [ICON_CHECKBOX]";
-			else
-			   convertedKey = convertedKey
-			end
-			
-			
-			--------------Indicate Unemployed Citizens
-			local slackerType = GameDefines.DEFAULT_SPECIALIST;
-			local numSlackersInThisCity = city:GetSpecialistCount( slackerType );
-			
-			if numSlackersInThisCity > 0 then
-			   convertedKey = convertedKey .. " [ICON_CITYBANNER_CITY_UNEMPLOYED]";
-			else
-			   convertedKey = convertedKey
-			end
-			
-			
-			
-		end
-	
-	
-	
-	--------------------------------------------SP City Show City Focus END--------------------------
-		
-	
-		
-	
-		
-		
-		
 		controls.CityName:SetText(convertedKey);
 		
 		if (isActivePlayerCity) then
-		
-		
-		
-
-		
-		
 			if (city:IsPuppet() and not player:MayNotAnnex()) then
 				strToolTip = Locale.ConvertTextKey("TXT_KEY_CITY_ANNEX_TT");
 			else
-				strToolTip = Locale.ConvertTextKey("TXT_KEY_CITY_ENTER_CITY_SCREEN");		
+				strToolTip = Locale.ConvertTextKey("TXT_KEY_CITY_ENTER_CITY_SCREEN");
 			end
 		elseif (isActiveTeamCity) then
 			strToolTip = Locale.ConvertTextKey("TXT_KEY_CITY_TEAMMATE");
@@ -291,12 +225,12 @@ function RefreshCityBanner(cityBanner, iActiveTeam, iActivePlayer)
 			local religion = GameInfo.Religions[eReligion];
 			IconHookup( religion.PortraitIndex, 32, religion.IconAtlas, controls.ReligiousIcon );
 			IconHookup( religion.PortraitIndex, 32, religion.IconAtlas, controls.ReligiousIconShadow );
-		end	
+		end
 		
 		local religionToolTip = "";
 		if(GetReligionTooltip) then
 			religionToolTip = GetReligionTooltip(city);
-		end	
+		end
 		
 		if (religionToolTip ~= "") then
 			strToolTip = strToolTip .. "[NEWLINE]----------------[NEWLINE]" .. religionToolTip;
@@ -305,11 +239,14 @@ function RefreshCityBanner(cityBanner, iActiveTeam, iActivePlayer)
 	
 		if (controls.ReligiousIcon ~= nil) then
 			controls.ReligiousIcon:SetToolTipString(religionToolTip);
-		end		
-			
+		end
+		
 		local bHasReligion = (eReligion >= 0);
 		if (controls.ReligiousIcon ~= nil) then
 			controls.ReligiousIconContainer:SetHide(not bHasReligion);
+			if (controls.HolyCityIcon ~= nil) then
+				controls.HolyCityIcon:SetHide(not city:IsHolyCityForReligion(eReligion));
+			end
 		end
 		
 		DoResizeBanner(controls);
@@ -353,7 +290,7 @@ function RefreshCityBanner(cityBanner, iActiveTeam, iActivePlayer)
 			controls.PuppetIcon:SetHide(false);
 			
 			if(isActivePlayerCity) then
-				controls.PuppetIcon:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_BUILDING_PUPPET_GOVERNEMENT"));
+				controls.PuppetIcon:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_CITY_PUPPET"));
 			else
 				controls.PuppetIcon:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_CITY_PUPPET_OTHER"));
 			end
@@ -369,177 +306,12 @@ function RefreshCityBanner(cityBanner, iActiveTeam, iActivePlayer)
 			controls.OccupiedIcon:SetHide(true);
 		end
 		
-		
-		
-		
-		
-			-------------------------------------------- SP City Levels & Sizes & Resource Demend Icon-----------------------------------------
-		if isActivePlayerCity and city:GetPopulation() > 0 and controls.CityIcon_NOUTILITY ~= nil then
-		
-			if city:IsHasBuilding(GameInfoTypes["BUILDING_NO_UTILITY_WARNING"])then
-				controls.CityIcon_NOUTILITY:SetHide(false);
-				controls.CityIcon_NOUTILITY:SetToolTipString(Locale.ConvertTextKey( "TXT_KEY_CITY_NO_UTILITY_HELP"));
-			else
-				controls.CityIcon_NOUTILITY:SetHide(true);
-			end
-		
-			if city:IsHasBuilding(GameInfoTypes["BUILDING_CITY_SIZE_GLOBAL"])then
-				controls.CityIcon_TOWN:SetHide(true);
-				controls.CityIcon_SMALL:SetHide(true);
-				controls.CityIcon_MEDIUM:SetHide(true);
-				controls.CityIcon_LARGE:SetHide(true);
-				controls.CityIcon_XL:SetHide(true);
-				controls.CityIcon_XXL:SetHide(true);
-				controls.CityIcon_GLOBAL:SetHide(false);
-				controls.CityIcon_GLOBAL:SetToolTipString(Locale.ConvertTextKey( "TXT_KEY_BUILDING_CITY_SIZE_GLOBAL_HELP"));
-				
-			elseif city:IsHasBuilding(GameInfoTypes["BUILDING_CITY_SIZE_XXL"])then
-				controls.CityIcon_TOWN:SetHide(true);
-				controls.CityIcon_SMALL:SetHide(true);
-				controls.CityIcon_MEDIUM:SetHide(true);
-				controls.CityIcon_LARGE:SetHide(true);
-				controls.CityIcon_XL:SetHide(true);
-				controls.CityIcon_XXL:SetHide(false);
-				controls.CityIcon_GLOBAL:SetHide(true);
-				controls.CityIcon_XXL:SetToolTipString(Locale.ConvertTextKey( "TXT_KEY_BUILDING_CITY_SIZE_XXL_HELP"));
-				
-			elseif city:IsHasBuilding(GameInfoTypes["BUILDING_CITY_SIZE_XL"])then
-				controls.CityIcon_TOWN:SetHide(true);
-				controls.CityIcon_SMALL:SetHide(true);
-				controls.CityIcon_MEDIUM:SetHide(true);
-				controls.CityIcon_LARGE:SetHide(true);
-				controls.CityIcon_XL:SetHide(false);
-				controls.CityIcon_XXL:SetHide(true);
-				controls.CityIcon_GLOBAL:SetHide(true);
-				controls.CityIcon_XL:SetToolTipString(Locale.ConvertTextKey( "TXT_KEY_BUILDING_CITY_SIZE_XL_HELP"));
-				
-			elseif city:IsHasBuilding(GameInfoTypes["BUILDING_CITY_SIZE_LARGE"])then
-				controls.CityIcon_TOWN:SetHide(true);
-				controls.CityIcon_SMALL:SetHide(true);
-				controls.CityIcon_MEDIUM:SetHide(true);
-				controls.CityIcon_LARGE:SetHide(false);
-				controls.CityIcon_XL:SetHide(true);
-				controls.CityIcon_XXL:SetHide(true);
-				controls.CityIcon_GLOBAL:SetHide(true);
-				controls.CityIcon_LARGE:SetToolTipString(Locale.ConvertTextKey( "TXT_KEY_BUILDING_CITY_SIZE_LARGE_HELP"));
-				
-			elseif city:IsHasBuilding(GameInfoTypes["BUILDING_CITY_SIZE_MEDIUM"])then
-				controls.CityIcon_TOWN:SetHide(true);
-				controls.CityIcon_SMALL:SetHide(true);
-				controls.CityIcon_MEDIUM:SetHide(false);
-				controls.CityIcon_LARGE:SetHide(true);
-				controls.CityIcon_XL:SetHide(true);
-				controls.CityIcon_XXL:SetHide(true);
-				controls.CityIcon_GLOBAL:SetHide(true);
-				controls.CityIcon_MEDIUM:SetToolTipString(Locale.ConvertTextKey( "TXT_KEY_BUILDING_CITY_SIZE_MEDIUM_HELP"));
-				
-			elseif city:IsHasBuilding(GameInfoTypes["BUILDING_CITY_SIZE_SMALL"])then
-				controls.CityIcon_TOWN:SetHide(true);
-				controls.CityIcon_SMALL:SetHide(false);
-				controls.CityIcon_MEDIUM:SetHide(true);
-				controls.CityIcon_LARGE:SetHide(true);
-				controls.CityIcon_XL:SetHide(true);
-				controls.CityIcon_XXL:SetHide(true);
-				controls.CityIcon_GLOBAL:SetHide(true);
-				controls.CityIcon_SMALL:SetToolTipString(Locale.ConvertTextKey( "TXT_KEY_BUILDING_CITY_SIZE_SMALL_HELP"));
-				
-			elseif city:IsHasBuilding(GameInfoTypes["BUILDING_CITY_SIZE_TOWN"])then
-				controls.CityIcon_TOWN:SetHide(false);
-				controls.CityIcon_SMALL:SetHide(true);
-				controls.CityIcon_MEDIUM:SetHide(true);
-				controls.CityIcon_LARGE:SetHide(true);
-				controls.CityIcon_XL:SetHide(true);
-				controls.CityIcon_XXL:SetHide(true);
-				controls.CityIcon_GLOBAL:SetHide(true);
-				controls.CityIcon_TOWN:SetToolTipString(Locale.ConvertTextKey( "TXT_KEY_BUILDING_CITY_SIZE_TOWN_HELP"));
-				
-			end
-		end
-		
-		
-		
-
-
-	
-	
-		if isActivePlayerCity and controls.CityIcon_Lv1 ~= nil then
-			
-			controls.CityIcon_Lv1:SetHide(true);
-			controls.CityIcon_Lv2:SetHide(true);
-			controls.CityIcon_Lv3:SetHide(true);
-			controls.CityIcon_Lv4:SetHide(true);
-			controls.CityIcon_Lv5:SetHide(true);
-			controls.CityIcon_NOAC:SetHide(true);
-			
-			if     city:IsHasBuilding(GameInfoTypes["BUILDING_CITY_HALL_LV1"]) or city:IsHasBuilding(GameInfoTypes["BUILDING_SATRAPS_COURT"]) then
-				controls.CityIcon_Lv1:SetHide(false);
-				controls.CityIcon_Lv1:SetToolTipString(Locale.ConvertTextKey( "TXT_KEY_BUILDING_CITY_HALL_LV1_HELP"));
-				
-			elseif city:IsHasBuilding(GameInfoTypes["BUILDING_CITY_HALL_LV2"]) then
-				controls.CityIcon_Lv2:SetHide(false);
-				controls.CityIcon_Lv2:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_HALL_LV2_HELP"));
-				
-				if not city:IsHasBuilding(GameInfoTypes["BUILDING_CONSTABLE"]) and not city:IsHasBuilding(GameInfoTypes["BUILDING_ROMAN_SENATE"]) then
-					controls.CityIcon_NOAC:SetHide(false);
-					controls.CityIcon_NOAC:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_HALL_NOAC_LV2"));
-				end
-				
-			elseif city:IsHasBuilding(GameInfoTypes["BUILDING_CITY_HALL_LV3"]) then
-				controls.CityIcon_Lv3:SetHide(false);
-				controls.CityIcon_Lv3:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_HALL_LV3_HELP"));
-				
-				if not city:IsHasBuilding(GameInfoTypes["BUILDING_SHERIFF_OFFICE"])then
-					controls.CityIcon_NOAC:SetHide(false);
-					controls.CityIcon_NOAC:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_HALL_NOAC_LV3"));
-				end
-				
-			elseif city:IsHasBuilding(GameInfoTypes["BUILDING_CITY_HALL_LV4"]) then
-				controls.CityIcon_Lv4:SetHide(false);
-				controls.CityIcon_Lv4:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_HALL_LV4_HELP"));
-				
-				if not city:IsHasBuilding(GameInfoTypes["BUILDING_POLICE_STATION"])then
-					controls.CityIcon_NOAC:SetHide(false);
-					controls.CityIcon_NOAC:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_HALL_NOAC_LV4"));
-				end
-				
-				
-			elseif city:IsHasBuilding(GameInfoTypes["BUILDING_CITY_HALL_LV5"]) then
-				controls.CityIcon_Lv5:SetHide(false);
-				controls.CityIcon_Lv5:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_HALL_LV5_HELP"));
-				
-				if not city:IsHasBuilding(GameInfoTypes["BUILDING_PROCURATORATE"])then
-					controls.CityIcon_NOAC:SetHide(false);
-					controls.CityIcon_NOAC:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_HALL_NOAC_LV5"));
-				end
-			end
-			
-			
-			if city:GetResourceDemanded(true) ~= -1 and city:GetWeLoveTheKingDayCounter() <= 0 then
---				local ResourceDemand = city:GetResourceDemanded()
-				local pResourceInfo = GameInfo.Resources[city:GetResourceDemanded()];
-				
-				controls.CityIcon_ResurceDemand:SetText( pResourceInfo.IconString )
-				controls.CityIcon_ResurceDemand:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_CITYVIEW_RESOURCE_DEMANDED_TT"));
-				controls.CityIcon_ResurceDemand:SetHide(false);
-			else
-				controls.CityIcon_ResurceDemand:SetHide(true);
-			end
-			
-		end
-		
-		
-		
-			-------------------------------------------- SP City Levels & Sizes & Resource Demend Icon END-----------------------------------------	
-		
-		
-	
-		
-		if(bHasSpy) then
+		if (bHasSpy) then
 			controls.SpyIcon:SetHide(false);
 			if (isActivePlayerCity) then
 				controls.SpyIcon:LocalizeAndSetToolTip("TXT_KEY_CITY_SPY_YOUR_CITY_TT", strSpyRank, strSpyName, city:GetName(), strSpyRank, strSpyName);
 			elseif (player:IsMinorCiv()) then
-				controls.SpyIcon:LocalizeAndSetToolTip("TXT_KEY_CITY_SPY_CITY_STATE_TT", strSpyRank, strSpyName, city:GetName(), strSpyRank, strSpyName);			
+				controls.SpyIcon:LocalizeAndSetToolTip("TXT_KEY_CITY_SPY_CITY_STATE_TT", strSpyRank, strSpyName, city:GetName(), strSpyRank, strSpyName);
 			else
 				controls.SpyIcon:LocalizeAndSetToolTip("TXT_KEY_CITY_SPY_OTHER_CIV_TT", strSpyRank, strSpyName, city:GetName(), strSpyRank, strSpyName, strSpyRank, strSpyName);
 			end
@@ -547,11 +319,237 @@ function RefreshCityBanner(cityBanner, iActiveTeam, iActivePlayer)
 			controls.SpyIcon:SetHide(true);
 		end
 
-		if(bHasDiplomat) then
+		if (bHasDiplomat) then
 			controls.DiplomatIcon:SetHide(false);
 			controls.DiplomatIcon:LocalizeAndSetToolTip("TXT_KEY_CITY_DIPLOMAT_OTHER_CIV_TT", strSpyRank, strSpyName, city:GetName(), strSpyRank, strSpyName, strSpyRank, strSpyName);
 		else
 			controls.DiplomatIcon:SetHide(true);
+		end
+		
+		-- SP CityIcons
+		if GameInfoTypes["BUILDING_CITY_SIZE_TOWN"] ~= nil then
+			local iCitySc1 = GameInfoTypes["BUILDING_CITY_SIZE_TOWN"];
+			local iCitySc2 = GameInfoTypes["BUILDING_CITY_SIZE_SMALL"];
+			local iCitySc3 = GameInfoTypes["BUILDING_CITY_SIZE_MEDIUM"];
+			local iCitySc4 = GameInfoTypes["BUILDING_CITY_SIZE_LARGE"];
+			local iCitySc5 = GameInfoTypes["BUILDING_CITY_SIZE_XL"];
+			local iCitySc6 = GameInfoTypes["BUILDING_CITY_SIZE_XXL"];
+			local iCitySc7 = GameInfoTypes["BUILDING_CITY_SIZE_GLOBAL"];
+			-- Set Override
+			local overrideBuilding = nil;
+			overrideBuilding = GameInfo.Civilization_BuildingClassOverrides{ BuildingClassType = "BUILDINGCLASS_CITY_SIZE_TOWN", CivilizationType = GameInfo.Civilizations[player:GetCivilizationType()].Type }();
+			if overrideBuilding ~= nil then
+				iCitySc1 = GameInfo.Buildings[overrideBuilding.BuildingType].ID;
+			end
+			overrideBuilding = GameInfo.Civilization_BuildingClassOverrides{ BuildingClassType = "BUILDINGCLASS_CITY_SIZE_SMALL", CivilizationType = GameInfo.Civilizations[player:GetCivilizationType()].Type }();
+			if overrideBuilding ~= nil then
+				iCitySc2 = GameInfo.Buildings[overrideBuilding.BuildingType].ID;
+			end
+			overrideBuilding = GameInfo.Civilization_BuildingClassOverrides{ BuildingClassType = "BUILDINGCLASS_CITY_SIZE_MEDIUM", CivilizationType = GameInfo.Civilizations[player:GetCivilizationType()].Type }();
+			if overrideBuilding ~= nil then
+				iCitySc3 = GameInfo.Buildings[overrideBuilding.BuildingType].ID;
+			end
+			overrideBuilding = GameInfo.Civilization_BuildingClassOverrides{ BuildingClassType = "BUILDINGCLASS_CITY_SIZE_LARGE", CivilizationType = GameInfo.Civilizations[player:GetCivilizationType()].Type }();
+			if overrideBuilding ~= nil then
+				iCitySc4 = GameInfo.Buildings[overrideBuilding.BuildingType].ID;
+			end
+			overrideBuilding = GameInfo.Civilization_BuildingClassOverrides{ BuildingClassType = "BUILDINGCLASS_CITY_SIZE_XL", CivilizationType = GameInfo.Civilizations[player:GetCivilizationType()].Type }();
+			if overrideBuilding ~= nil then
+				iCitySc5 = GameInfo.Buildings[overrideBuilding.BuildingType].ID;
+			end
+			overrideBuilding = GameInfo.Civilization_BuildingClassOverrides{ BuildingClassType = "BUILDINGCLASS_CITY_SIZE_XXL", CivilizationType = GameInfo.Civilizations[player:GetCivilizationType()].Type }();
+			if overrideBuilding ~= nil then
+				iCitySc6 = GameInfo.Buildings[overrideBuilding.BuildingType].ID;
+			end
+			overrideBuilding = GameInfo.Civilization_BuildingClassOverrides{ BuildingClassType = "BUILDINGCLASS_CITY_SIZE_GLOBAL", CivilizationType = GameInfo.Civilizations[player:GetCivilizationType()].Type }();
+			if overrideBuilding ~= nil then
+				iCitySc7 = GameInfo.Buildings[overrideBuilding.BuildingType].ID;
+			end
+		    -- Fix No City Scale BUG!
+			if  not city:IsHasBuilding(iCitySc1) and not city:IsHasBuilding(iCitySc2) and not city:IsHasBuilding(iCitySc3) and not city:IsHasBuilding(iCitySc4)
+			and not city:IsHasBuilding(iCitySc5) and not city:IsHasBuilding(iCitySc6) and not city:IsHasBuilding(iCitySc7)
+			then
+				city:SetNumRealBuilding(iCitySc1,1);
+			end
+			controls.CityLevelIcon:SetHide(true);
+			controls.CityScaleIcon:SetHide(true);
+			controls.CityFocusIcon:SetHide(true);
+			if (isActivePlayerCity) then
+			    -- City Level for SP6
+				local sCityLevelIcon  = nil;
+				local sCityLevelIconTT = nil;
+				local iCityLv1 = GameInfoTypes["BUILDING_CITY_HALL_LV1"];
+				local iCityLv2 = GameInfoTypes["BUILDING_CITY_HALL_LV2"];
+				local iCityLv3 = GameInfoTypes["BUILDING_CITY_HALL_LV3"];
+				local iCityLv4 = GameInfoTypes["BUILDING_CITY_HALL_LV4"];
+				local iCityLv5 = GameInfoTypes["BUILDING_CITY_HALL_LV5"];
+				local iConstable     = GameInfoTypes["BUILDING_CONSTABLE"];
+				local iSheriffOffice = GameInfoTypes["BUILDING_SHERIFF_OFFICE"];
+				local iPoliceStation = GameInfoTypes["BUILDING_POLICE_STATION"];
+				local iProcuratorate = GameInfoTypes["BUILDING_PROCURATORATE"];
+				-- Set Override
+				local overrideBuilding = nil;
+				overrideBuilding = GameInfo.Civilization_BuildingClassOverrides{ BuildingClassType = "BUILDINGCLASS_CITY_HALL_LV1", CivilizationType = GameInfo.Civilizations[player:GetCivilizationType()].Type }();
+				if overrideBuilding ~= nil then
+					iCityLv1 = GameInfo.Buildings[overrideBuilding.BuildingType].ID;
+				end
+				overrideBuilding = GameInfo.Civilization_BuildingClassOverrides{ BuildingClassType = "BUILDINGCLASS_CITY_HALL_LV2", CivilizationType = GameInfo.Civilizations[player:GetCivilizationType()].Type }();
+				if overrideBuilding ~= nil then
+					iCityLv2 = GameInfo.Buildings[overrideBuilding.BuildingType].ID;
+				end
+				overrideBuilding = GameInfo.Civilization_BuildingClassOverrides{ BuildingClassType = "BUILDINGCLASS_CITY_HALL_LV3", CivilizationType = GameInfo.Civilizations[player:GetCivilizationType()].Type }();
+				if overrideBuilding ~= nil then
+					iCityLv3 = GameInfo.Buildings[overrideBuilding.BuildingType].ID;
+				end
+				overrideBuilding = GameInfo.Civilization_BuildingClassOverrides{ BuildingClassType = "BUILDINGCLASS_CITY_HALL_LV4", CivilizationType = GameInfo.Civilizations[player:GetCivilizationType()].Type }();
+				if overrideBuilding ~= nil then
+					iCityLv4 = GameInfo.Buildings[overrideBuilding.BuildingType].ID;
+				end
+				overrideBuilding = GameInfo.Civilization_BuildingClassOverrides{ BuildingClassType = "BUILDINGCLASS_CITY_HALL_LV5", CivilizationType = GameInfo.Civilizations[player:GetCivilizationType()].Type }();
+				if overrideBuilding ~= nil then
+					iCityLv5 = GameInfo.Buildings[overrideBuilding.BuildingType].ID;
+				end
+				overrideBuilding = GameInfo.Civilization_BuildingClassOverrides{ BuildingClassType = "BUILDINGCLASS_CONSTABLE", CivilizationType = GameInfo.Civilizations[Players[Game.GetActivePlayer()]:GetCivilizationType()].Type }();
+				if overrideBuilding ~= nil then
+					iConstable     = GameInfo.Buildings[overrideBuilding.BuildingType].ID;
+				end
+				overrideBuilding = GameInfo.Civilization_BuildingClassOverrides{ BuildingClassType = "BUILDINGCLASS_SHERIFF_OFFICE", CivilizationType = GameInfo.Civilizations[Players[Game.GetActivePlayer()]:GetCivilizationType()].Type }();
+				if overrideBuilding ~= nil then
+					iSheriffOffice = GameInfo.Buildings[overrideBuilding.BuildingType].ID;
+				end
+				overrideBuilding = GameInfo.Civilization_BuildingClassOverrides{ BuildingClassType = "BUILDINGCLASS_POLICE_STATION", CivilizationType = GameInfo.Civilizations[Players[Game.GetActivePlayer()]:GetCivilizationType()].Type }();
+				if overrideBuilding ~= nil then
+					iPoliceStation = GameInfo.Buildings[overrideBuilding.BuildingType].ID;
+				end
+				overrideBuilding = GameInfo.Civilization_BuildingClassOverrides{ BuildingClassType = "BUILDINGCLASS_PROCURATORATE", CivilizationType = GameInfo.Civilizations[Players[Game.GetActivePlayer()]:GetCivilizationType()].Type }();
+				if overrideBuilding ~= nil then
+					iProcuratorate = GameInfo.Buildings[overrideBuilding.BuildingType].ID;
+				end
+				if     city:IsCapital() or city:IsPuppet() then
+				elseif city:IsHasBuilding(iCityLv1) then
+					sCityLevelIcon = "[ICON_CITYBANNER_CITY_LV1]";
+					sCityLevelIconTT = Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_HALL_LV1_HELP");
+				elseif city:IsHasBuilding(iCityLv2) then
+					sCityLevelIcon = "[ICON_CITYBANNER_CITY_LV2]";
+					sCityLevelIconTT = Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_HALL_LV2_HELP");
+					if not city:IsHasBuilding(iConstable) then
+						sCityLevelIcon = sCityLevelIcon .. "[ICON_HAPPINESS_3] ";
+						sCityLevelIconTT = Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_HALL_NOAC_LV2");
+					end
+				elseif city:IsHasBuilding(iCityLv3) then
+					sCityLevelIcon = "[ICON_CITYBANNER_CITY_LV3]";
+					sCityLevelIconTT = Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_HALL_LV3_HELP");
+					if not city:IsHasBuilding(iSheriffOffice) then
+						sCityLevelIcon = sCityLevelIcon .. "[ICON_HAPPINESS_3] ";
+						sCityLevelIconTT = Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_HALL_NOAC_LV3");
+					end
+				elseif city:IsHasBuilding(iCityLv4) then
+					sCityLevelIcon = "[ICON_CITYBANNER_CITY_LV4]";
+					sCityLevelIconTT = Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_HALL_LV4_HELP");
+					if not city:IsHasBuilding(iPoliceStation) then
+						sCityLevelIcon = sCityLevelIcon .. "[ICON_HAPPINESS_3] ";
+						sCityLevelIconTT = Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_HALL_NOAC_LV4");
+					end
+				elseif city:IsHasBuilding(iCityLv5) then
+					sCityLevelIcon = "[ICON_CITYBANNER_CITY_LV5]";
+					sCityLevelIconTT = Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_HALL_LV5_HELP");
+					if not city:IsHasBuilding(iProcuratorate) then
+						sCityLevelIcon = sCityLevelIcon .. "[ICON_HAPPINESS_3] ";
+						sCityLevelIconTT = Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_HALL_NOAC_LV5");
+					end
+				end
+				if sCityLevelIconTT ~= nil then
+					controls.CityLevelIcon:SetHide(false);
+					controls.CityLevelIcon:SetText(sCityLevelIcon);
+					controls.CityLevelIcon:SetToolTipString(sCityLevelIconTT);
+				end
+			    -- City Scale for SP6
+				local sCityScaleIcon  = nil;
+				local sCityScaleIconTT = nil;
+				if     city:IsHasBuilding(iCitySc7)then
+					sCityScaleIcon = "[ICON_CITYBANNER_CITY_GLOBAL]";
+					sCityScaleIconTT = Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_SIZE_GLOBAL_HELP");
+				elseif city:IsHasBuilding(iCitySc6)then
+					sCityScaleIcon = "[ICON_CITYBANNER_CITY_XXL]";
+					sCityScaleIconTT = Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_SIZE_XXL_HELP");
+				elseif city:IsHasBuilding(iCitySc5)then
+					sCityScaleIcon = "[ICON_CITYBANNER_CITY_XL]";
+					sCityScaleIconTT = Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_SIZE_XL_HELP");
+				elseif city:IsHasBuilding(iCitySc4)then
+					sCityScaleIcon = "[ICON_CITYBANNER_CITY_LARGE]";
+					sCityScaleIconTT = Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_SIZE_LARGE_HELP");
+				elseif city:IsHasBuilding(iCitySc3)then
+					sCityScaleIcon = "[ICON_CITYBANNER_CITY_MEDIUM]";
+					sCityScaleIconTT = Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_SIZE_MEDIUM_HELP");
+				elseif city:IsHasBuilding(iCitySc2)then
+					sCityScaleIcon = "[ICON_CITYBANNER_CITY_SMALL]";
+					sCityScaleIconTT = Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_SIZE_SMALL_HELP");
+				elseif city:IsHasBuilding(iCitySc1)then
+					sCityScaleIcon = "[ICON_CITYBANNER_CITY_TOWN]";
+					sCityScaleIconTT = Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_SIZE_TOWN_HELP");
+				end
+				if     city:IsHasBuilding(GameInfoTypes["BUILDING_NO_UTILITY_WARNING"])then
+					if sCityScaleIcon == nil then
+						sCityScaleIcon = "";
+					end
+					sCityScaleIcon = sCityScaleIcon .. "[ICON_CITYBANNER_CITY_NOUTILITY]";
+					sCityScaleIconTT = sCityScaleIconTT .. "[NEWLINE][NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_CITY_NO_UTILITY_HELP");
+				end
+				if sCityScaleIconTT ~= nil then
+					controls.CityScaleIcon:SetHide(false);
+					controls.CityScaleIcon:SetText(sCityScaleIcon);
+					controls.CityScaleIcon:SetToolTipString(sCityScaleIconTT);
+				end
+			    -- City Focus for SP6
+				local sCityFocusIcon  = nil;
+				if     city:IsPuppet() then
+				elseif city:GetFocusType() == CityAIFocusTypes.CITY_AI_FOCUS_TYPE_FOOD then
+					sCityFocusIcon = "[ICON_FOOD]";
+				elseif city:GetFocusType() == CityAIFocusTypes.CITY_AI_FOCUS_TYPE_PRODUCTION then
+					sCityFocusIcon = "[ICON_PRODUCTION]";
+				elseif city:GetFocusType() == CityAIFocusTypes.CITY_AI_FOCUS_TYPE_GOLD then
+					sCityFocusIcon = "[ICON_GOLD]";
+				elseif city:GetFocusType() == CityAIFocusTypes.CITY_AI_FOCUS_TYPE_SCIENCE then
+					sCityFocusIcon = "[ICON_RESEARCH]";
+				elseif city:GetFocusType() == CityAIFocusTypes.CITY_AI_FOCUS_TYPE_CULTURE then
+					sCityFocusIcon = "[ICON_CULTURE]";
+				elseif city:GetFocusType() == CityAIFocusTypes.CITY_AI_FOCUS_TYPE_GREAT_PEOPLE then
+					sCityFocusIcon = "[ICON_GREAT_PEOPLE]";
+				elseif city:GetFocusType() == CityAIFocusTypes.CITY_AI_FOCUS_TYPE_FAITH then
+					sCityFocusIcon = "[ICON_PEACE]";
+				end
+				if city:IsForcedAvoidGrowth() then
+					if sCityFocusIcon == nil then
+						sCityFocusIcon = "";
+					end
+					sCityFocusIcon = sCityFocusIcon .. "[ICON_LOCKED] ";
+				end
+				if city:IsNoAutoAssignSpecialists() then
+					if sCityFocusIcon == nil then
+						sCityFocusIcon = "";
+					end
+					sCityFocusIcon = sCityFocusIcon .. "[ICON_CHECKBOX]";
+				end
+				if sCityFocusIcon ~= nil then
+					controls.CityFocusIcon:SetHide(false);
+					controls.CityFocusIcon:SetText(sCityFocusIcon.." ");
+				end
+			end
+		end
+		
+		-- Quest Icon - MOD
+		if (isActivePlayerCity and city:GetResourceDemanded(true) ~= -1 and city:GetWeLoveTheKingDayCounter() <= 0) then
+			controls.QuestIcon:SetHide(false);
+			controls.QuestIcon:SetText( " " .. GameInfo.Resources[city:GetResourceDemanded()].IconString )
+			controls.QuestIcon:SetToolTipString( "[ICON_BULLET]" .. Locale.ConvertTextKey("TXT_KEY_CITYVIEW_RESOURCE_DEMANDED", GameInfo.Resources[city:GetResourceDemanded()].IconString .. " " .. Locale.ConvertTextKey(GameInfo.Resources[city:GetResourceDemanded()].Description)) .. "[NEWLINE][NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_CITYVIEW_RESOURCE_DEMANDED_TT") );
+		elseif (player:IsMinorCiv() and not Teams[team]:IsAtWar(iActiveTeam) and (player:GetMinorCivNumDisplayedQuestsForPlayer(iActivePlayer) > 0
+		or player:IsThreateningBarbariansEventActiveForPlayer(iActivePlayer) or player:IsProxyWarActiveForMajor(iActivePlayer) ))
+		then
+			controls.QuestIcon:SetHide(false);
+			controls.QuestIcon:SetText( "[ICON_CITY_STATE]: " .. GetActiveQuestText(iActivePlayer, cityBanner.playerID) );
+			controls.QuestIcon:SetToolTipString( GetActiveQuestToolTip(iActivePlayer, cityBanner.playerID) );
+		else
+			controls.QuestIcon:SetHide(true);
 		end
 		
 		controls.IconsStack:ReprocessAnchoring();
@@ -560,15 +558,13 @@ function RefreshCityBanner(cityBanner, iActiveTeam, iActivePlayer)
 		local cityStrengthStr = math.floor(city:GetStrengthValue() / 100);
 		
 		local garrisonedUnit = city:GetGarrisonedUnit();
-		if garrisonedUnit == nil then
-			if isActiveTeamCity then
-				controls.GarrisonFrame:SetHide(true);
-			end	
+		if isActiveTeamCity and controls.GarrisonFrame and garrisonedUnit == nil then
+			controls.GarrisonFrame:SetHide(true);
 		end
 		
 		controls.CityStrength:SetText(cityStrengthStr);
 		
-    	if isActiveTeamCity then
+		if isActiveTeamCity and controls.EjectGarrison then
 			controls.EjectGarrison:SetHide(true);
 		end
 
@@ -932,7 +928,7 @@ function CheckCityBannerRebuild( instance, iActiveTeam, iActivePlayer )
 			controlTable = g_OtherIM:GetInstance();
 			controlTable.BannerButton:RegisterCallback( Mouse.eLClick, OnBannerClick );
 			controlTable.BannerButton:SetVoid1( gridPosX );
-			controlTable.BannerButton:SetVoid2( gridPosY );			
+			controlTable.BannerButton:SetVoid2( gridPosY );
 		else
 			-- Release the old one
 			if (instance.SubControls ~= nil) then
@@ -942,10 +938,10 @@ function CheckCityBannerRebuild( instance, iActiveTeam, iActivePlayer )
 			-- Create the new active banner
 			controlTable = g_TeamIM:GetInstance();
 			controlTable.BannerButton:RegisterCallback( Mouse.eLClick, OnBannerClick );
-	    
-		    controlTable.BannerButton:SetVoid1( gridPosX );
-		    controlTable.BannerButton:SetVoid2( gridPosY );
-	    
+			
+			controlTable.BannerButton:SetVoid1( gridPosX );
+			controlTable.BannerButton:SetVoid2( gridPosY );
+			
 			controlTable.EjectGarrison:RegisterCallback( Mouse.eLClick, OnEjectGarrisonClick );		
 			controlTable.EjectGarrison:SetVoid1(instance.playerID);
 			controlTable.EjectGarrison:SetVoid2(instance.cityID);
@@ -1049,20 +1045,19 @@ function OnCityDestroyed(hexPos, playerID, cityID, newPlayerID)
 	local active_team = Players[Game.GetActivePlayer()]:GetTeam();
 	local team = Players[playerID]:GetTeam();
 	
-	if(active_team ~= team) 
-	then
-	    g_OtherIM:ReleaseInstance( banner.SubControls );
-    else
-	    g_TeamIM:ReleaseInstance( banner.SubControls );
-	    
-	    if (SVInstances[playerID] ~= nil) then
+	if(active_team ~= team) then
+		g_OtherIM:ReleaseInstance( banner.SubControls );
+	else
+		g_TeamIM:ReleaseInstance( banner.SubControls );
+		
+		if (SVInstances[playerID] ~= nil) then
 			local svInstance = SVInstances[playerID][cityID];
 			if svInstance ~= nil then
 				g_SVStrikeIM:ReleaseInstance( svInstance );
 				SVInstances[playerID][cityID] = nil;
 			end
 		end
-    end
+	end
 	
 	playerTable[cityID] = nil;
 	
@@ -1592,7 +1587,7 @@ function OnActivePlayerTurnStart()
     			end
             end
         end
-    end		
+    end	
 	
 end
 Events.ActivePlayerTurnStart.Add( OnActivePlayerTurnStart );

@@ -3498,15 +3498,7 @@
 				只能在大型城市（26人口）建造。
 				[NEWLINE]本城市+25%[ICON_GREAT_PEOPLE]伟人点数积累、+2[ICON_HAPPINESS_1]全局快乐。
 				[NEWLINE][NEWLINE]每座园林-3%[ICON_HAPPINESS_4]全局不满。
-				[NEWLINE][NEWLINE]每座中国园林为每个城市规模提供基础产出：
-				[NEWLINE][ICON_BULLET]小镇：+1[ICON_FOOD]食物，+1[ICON_PRODUCTION]产能，+1[ICON_GOLDEN_AGE]黄金时代点数。
-				[NEWLINE][ICON_BULLET]小型城市：+2[ICON_FOOD]食物，+2[ICON_PRODUCTION]产能，+2[ICON_GOLDEN_AGE]黄金时代点数。
-				[NEWLINE][ICON_BULLET]中型城市：+3[ICON_FOOD]食物，+3[ICON_PRODUCTION]产能，+3[ICON_GOLDEN_AGE]黄金时代点数。
-
-				[NEWLINE][ICON_BULLET]大型城市：+3[ICON_FOOD]食物，+3[ICON_PRODUCTION]产能，+3[ICON_GOLDEN_AGE]黄金时代点数。
-				[NEWLINE][ICON_BULLET]特大城市：+3[ICON_FOOD]食物，+3[ICON_PRODUCTION]产能，+3[ICON_GOLDEN_AGE]黄金时代点数；+1[ICON_CULTURE]文化，+1[ICON_REASEARCH]科研。
-				[NEWLINE][ICON_BULLET]巨型城市：+3[ICON_FOOD]食物，+3[ICON_PRODUCTION]产能，+3[ICON_GOLDEN_AGE]黄金时代点数。+2[ICON_CULTURE]文化，+2[ICON_REASEARCH]科研。
-				[NEWLINE][ICON_BULLET]大都会：+3[ICON_FOOD]食物，+3[ICON_PRODUCTION]产能，+3[ICON_GOLDEN_AGE]黄金时代点数。+3[ICON_CULTURE]文化，+3[ICON_REASEARCH]科研。
+				[NEWLINE][NEWLINE]每座中国园林为大型城市及以上的每个城市规模提供[ICON_FOOD]食物、[ICON_RESEARCH]科研和[ICON_GOLDEN_AGE]黄金时代点数产出，数值随城市规模增加。
 			</Text>
 		</Row>
 
@@ -5722,7 +5714,10 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_DIPLOMACY_GREAT_PEOPLE">
-			<Text>所有达到小型城市（6[ICON_CITIZEN]人口）规模的城市中每2[ICON_CITIZEN]人口+1[ICON_RESEARCH]科研。当宣友时，瑞典和他的盟友得到+10%的[ICON_GREAT_PEOPLE]伟人点数。</Text>
+			<Text>
+				[ICON_BULLET]所有达到小型城市（6[ICON_CITIZEN]人口）规模的城市中每2[ICON_CITIZEN]人口+1[ICON_RESEARCH]科研。
+				[NEWLINE][ICON_BULLET]当宣友时，瑞典和他的盟友得到+10%的[ICON_GREAT_PEOPLE]伟人点数。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_SCHOLARS_JADE_HALL">
@@ -6329,7 +6324,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]精英政治[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]每座城市+2[ICON_PRODUCTION]产能，城市建造建筑时+10%[ICON_PRODUCTION]产能。
-				[NEWLINE][ICON_BULLET]城市完成建筑或国家奇观后，获得数值相当于其产能的10%的一次性[ICON_RESEARCH]科研、[ICON_CULTURE]文化产出（购买建筑无效）。
+				[NEWLINE][ICON_BULLET]城市完成移民、建筑或国家奇观后，获得数值相当于其产能的10%的一次性[ICON_RESEARCH]科研、[ICON_CULTURE]文化产出（购买建筑无效）。
 			</Text>
 		</Replace>
 
@@ -7256,6 +7251,24 @@
 			<Text>商路+1</Text>
 		</Row>
 
+
+		<Row Tag="TXT_KEY_TRO_COL_FROM_CULTURE">
+      		<Text>[ICON_ARROW_LEFT][ICON_CULTURE]</Text>
+    	</Row>
+
+		<Row Tag="TXT_KEY_TRO_COL_FROM_CULTURE_TT">
+      		<Text>点击按建立商路的文明通过商路产生的[ICON_CULTURE]文化值数量排序。</Text>
+    	</Row>
+
+		<Row Tag="TXT_KEY_TRO_COL_TO_CULTURE">
+      		<Text>[ICON_ARROW_RIGHT][ICON_CULTURE]</Text>
+    	</Row>
+
+		<Row Tag="TXT_KEY_TRO_COL_TO_CULTURE_TT">
+      		<Text>点击按商路目的地的文明通过商路获得的[ICON_CULTURE]文化数量排序。</Text>
+    	</Row>
+
+
 		<Row Tag="TXT_KEY_BUILDING_AUTOCRACY_FIREWALL" >
 			<Text>威权主义</Text>
 		</Row>
@@ -7662,6 +7675,9 @@
 		<Replace Tag="TXT_KEY_BELIEF_GODDESS_LOVE_SHORT">
 			<Text>创世母神</Text>
 		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_ANCESTOR_WORSHIP">
+			<Text>神祠+1[ICON_PEACE]信仰、+1[ICON_CULTURE]文化</Text>
+		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GODDESS_LOVE">
 			<Text>城市+1[ICON_HAPPINESS_1]快乐，城市[ICON_CITIZEN]人口增长时获得6点[ICON_PEACE]信仰（标准速度下）</Text>
 		</Replace>
@@ -7764,6 +7780,9 @@
 		<Replace Tag="TXT_KEY_BELIEF_MONASTERIES">
 			<Text>允许使用[ICON_PEACE]信仰购买修道院（+2[ICON_PEACE]信仰、+1[ICON_CULTURE]文化，城市[ICON_GREAT_PEOPLE]伟人诞生速度+25%）</Text>
 		</Replace>	
+		<Replace Tag="TXT_KEY_BELIEF_GODDESS_STRATEGY">
+			<Text>城墙和城堡+2[ICON_PEACE]信仰</Text>
+		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_ART">
 			<Text>圣索菲亚、杰内大清真寺、吴哥窟、婆罗浮屠、西斯廷教堂、圣母院+2[ICON_TOURISM]魅力</Text>
 		</Replace>
@@ -7801,6 +7820,9 @@
 			<Text>每一处钻石和珍珠+2[ICON_PEACE]信仰、+2[ICON_CULTURE]文化</Text>
 		</Replace>
 		
+		<Replace Tag="TXT_KEY_BELIEF_GOD_KING">
+			<Text>宫殿+4[ICON_PEACE]信仰</Text>
+		</Replace>
 
 		<Replace Tag="TXT_KEY_BELIEF_PAPAL_PRIMACY">
 			<Text>对信仰此宗教的城邦的[ICON_INFLUENCE]影响力下限值+35</Text>
@@ -14349,33 +14371,215 @@
 			<Text>海军单位+10%战斗力</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_FLAG_UNIT_TYPE_SP">
-			<Text>战斗类型:</Text>
-		</Row>
-		<Row Tag="TXT_KEY_FLAG_UNIT_UPGRADE_SP">
-			<Text>升级单位:</Text>
-		</Row>
-		<Row Tag="TXT_KEY_FLAG_UNIT_DROP_RANGE_SP">
-			<Text>空投距离上限：</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_UPANEL_CLICK_TO_SELECT_SP">
-			<Text>点击选取该单位</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_PEDIA_RESOURCES_NEED_SP">
-			<Text>资源：</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_FREEPROMOTIONS_SP">
-			<Text>[COLOR_CYAN]单位属性:[ENDCOLOR]</Text>
-		</Row>
-
-		<Replace Tag="TXT_KEY_ACTION_CLASS_BUILT_COUNT_SP">
+		
+		<!-- Promotion - Super Group Manager -->
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP">
+			<Text>[COLOR_YELLOW]集群模式[ENDCOLOR]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_AIR">
+			<Text>[COLOR_YELLOW]编队飞行[ENDCOLOR]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_HELP">
+			<Text>具有该晋升的单位可执行同一命令或任务。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_I">
+			<Text>集群移动标记 1</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_I_HELP">
+			<Text>具有该晋升的单位为执行集群移动任务-1[ICON_MOVES]移动力！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_II">
+			<Text>集群移动标记 2</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_II_HELP">
+			<Text>具有该晋升的单位为执行集群移动任务-2[ICON_MOVES]移动力！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_III">
+			<Text>集群移动标记 3</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_III_HELP">
+			<Text>具有该晋升的单位为执行集群移动任务-3[ICON_MOVES]移动力！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_IV">
+			<Text>集群移动标记 4</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_IV_HELP">
+			<Text>具有该晋升的单位为执行集群移动任务-4[ICON_MOVES]移动力！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_V">
+			<Text>集群移动标记 5</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_V_HELP">
+			<Text>具有该晋升的单位为执行集群移动任务-5[ICON_MOVES]移动力！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X">
+			<Text>集群移动标记！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_HELP">
+			<Text>具有该晋升的单位为执行集群移动任务而[COLOR_YELLOW]“不能进行近战攻击”[ENDCOLOR]！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_I">
+			<Text>集群移动标记 I</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_I_HELP">
+			<Text>具有该晋升的单位为执行集群移动任务而失去[COLOR_YELLOW]“无视地形”[ENDCOLOR]晋升！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_II">
+			<Text>集群移动标记 II</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_II_HELP">
+			<Text>具有该晋升的单位为执行集群移动任务而失去[COLOR_YELLOW]“高山训练”[ENDCOLOR]晋升！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_III">
+			<Text>集群移动标记 III</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_III_HELP">
+			<Text>具有该晋升的单位为执行集群移动任务而失去[COLOR_YELLOW]“林地作战”[ENDCOLOR]晋升！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_IV">
+			<Text>集群移动标记 IV</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_IV_HELP">
+			<Text>具有该晋升的单位为执行集群移动任务而失去[COLOR_YELLOW]“海滨双倍移动”[ENDCOLOR]晋升！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_V">
+			<Text>集群移动标记 V</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_V_HELP">
+			<Text>具有该晋升的单位为执行集群移动任务而失去[COLOR_YELLOW]“极地先锋”[ENDCOLOR]晋升！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_VI">
+			<Text>集群移动标记 VI</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_VI_HELP">
+			<Text>具有该晋升的单位为执行集群移动任务而失去[COLOR_YELLOW]“悬停单位”[ENDCOLOR]晋升！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_VII">
+			<Text>集群移动标记 VII</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_VII_HELP">
+			<Text>具有该晋升的单位为执行集群移动任务而失去[COLOR_YELLOW]“闪电急袭”[ENDCOLOR]晋升！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_VIII">
+			<Text>集群移动标记 VIII</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_VIII_HELP">
+			<Text>具有该晋升的单位为执行集群移动任务而获得[COLOR_YELLOW]“复杂地形惩罚”[ENDCOLOR]晋升！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_IX">
+			<Text>集群移动标记 IX</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_IX_HELP">
+			<Text>具有该晋升的单位为执行集群移动任务而获得[COLOR_YELLOW]“不能进入大洋”[ENDCOLOR]晋升！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_X">
+			<Text>集群移动标记 X</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_X_HELP">
+			<Text>具有该晋升的单位为执行集群移动任务而获得[COLOR_YELLOW]“需要天文学才能进入大洋”[ENDCOLOR]晋升！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_MOVELIFT_I">
+			<Text>移动力剩余标记 I</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_MOVELIFT_I_HELP">
+			<Text>具有该晋升的单位-1[ICON_MOVES]移动力剩余！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_MOVELIFT_II">
+			<Text>移动力剩余标记 II</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_MOVELIFT_II_HELP">
+			<Text>具有该晋升的单位-2[ICON_MOVES]移动力剩余！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_MOVELIFT_III">
+			<Text>移动力剩余标记 III</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_MOVELIFT_III_HELP">
+			<Text>具有该晋升的单位-3[ICON_MOVES]移动力剩余！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_MOVELIFT_IV">
+			<Text>移动力剩余标记 IV</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_MOVELIFT_IV_HELP">
+			<Text>具有该晋升的单位-4[ICON_MOVES]移动力剩余！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_MOVELIFT_V">
+			<Text>移动力剩余标记 V</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_MOVELIFT_V_HELP">
+			<Text>具有该晋升的单位-5[ICON_MOVES]移动力剩余！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_BUILD">
+			<Text>集群建造标记</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_BUILD_HELP">
+			<Text>该单位正在集群建造设施！</Text>
+		</Replace>
+			
+		<!-- UI - Super Group Manager -->
+		<Replace Tag="TXT_KEY_AIRCRAFT_ON_TT">
+			<Text>将该单位加入编队。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_AIRCRAFT_OFF_TT">
+			<Text>将该单位移除编队。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CARRIER_ON_TT">
+			<Text>在该格组建一个航空联队。[NEWLINE]航空联队中的飞行器将执行“统一”的指令或任务！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CARRIER_OFF_TT">
+			<Text>解散该格的一个航空联队。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_GROUPAF_ON_TT">
+			<Text>以该格所有的飞机组建航空联队。[NEWLINE]航空联队中的飞行器将执行“统一”的指令或任务！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_GROUPAF_OFF_TT">
+			<Text>解散该格由飞机组建的航空联队。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_GROUPGM_ON_TT">
+			<Text>以该格所有的导弹组建航空联队。[NEWLINE]航空联队中的飞行器将执行“统一”的指令或任务！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_GROUPGM_OFF_TT">
+			<Text>解散该格由导弹组建的航空联队。</Text>
+		</Replace>
+		
+		<Replace Tag="TXT_KEY_SGM_GROUP_OFF_TT">
+			<Text>以该格所有单位组建集群。[NEWLINE]集群中的单位将执行 [COLOR_YELLOW]“统一”[ENDCOLOR] 的指令或任务！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_SGM_GROUP_ON_TT">
+			<Text>解散该格的集群。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_SGM_GROUP_ACT_OFF_TT">
+			<Text>点击[COLOR_WARNING_TEXT]激活[ENDCOLOR][COLOR_YELLOW]“大”[ENDCOLOR]集群模式：[NEWLINE][NEWLINE]以该格及周围地格、[COLOR_YELLOW]相同战斗类型[ENDCOLOR]单位组建[COLOR_YELLOW]“大”[ENDCOLOR]集群。[NEWLINE]“大”[ENDCOLOR]集群中的单位将执行 [COLOR_YELLOW]“统一”[ENDCOLOR] 的指令或任务！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_SGM_GROUP_ALL_OFF_TT">
+			<Text>点击[COLOR_WARNING_TEXT]激活[ENDCOLOR][COLOR_YELLOW]“大”[ENDCOLOR]集群模式：[NEWLINE][NEWLINE]以该格及周围地格单位组建[COLOR_YELLOW]“大”[ENDCOLOR]集群。[NEWLINE][COLOR_YELLOW]“大”[ENDCOLOR]集群中的单位将执行 [COLOR_YELLOW]“统一”[ENDCOLOR] 的指令或任务！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_SGM_GROUP_ALL_ON_TT">
+			<Text>点击[COLOR_WARNING_TEXT]关闭[ENDCOLOR][COLOR_YELLOW]“大”[ENDCOLOR]集群模式：[NEWLINE][NEWLINE]解散该格及周围地格的集群。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_ACTION_CLASS_BUILT_COUNT">
 			<Text>该类已拥有[COLOR_YELLOW]{1_HaveCount}[ENDCOLOR]个</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_ACTION_CLASS_BUILDING_COUNT_SP">
+		<Replace Tag="TXT_KEY_ACTION_CLASS_BUILDING_COUNT">
 			<Text>该类在建[COLOR_POSITIVE_TEXT]{1_BuildingCount}[ENDCOLOR]个</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_FLAG_UNIT_TYPE">
+			<Text>战斗类型:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FLAG_UNIT_UPGRADE">
+			<Text>升级单位:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FLAG_UNIT_DROP_RANGE">
+			<Text>空投距离上限：</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UPANEL_CLICK_TO_SELECT">
+			<Text>点击选取该单位</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PEDIA_RESOURCES_NEED">
+			<Text>资源：</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FREEPROMOTIONS">
+			<Text>[COLOR_CYAN]单位属性:[ENDCOLOR]</Text>
 		</Replace>
 	</Language_zh_CN>
 </GameData>

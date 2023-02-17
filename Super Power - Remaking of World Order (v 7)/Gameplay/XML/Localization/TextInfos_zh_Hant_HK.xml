@@ -3416,15 +3416,7 @@
 				只能在大型城市（26人口）建造。
 				[NEWLINE]本城市+25%[ICON_GREAT_PEOPLE]偉人點數積累、+2[ICON_HAPPINESS_1]全局快樂。
 				[NEWLINE][NEWLINE]每座園林-3%[ICON_HAPPINESS_4]全局不滿。
-				[NEWLINE][NEWLINE]每座中國園林為每個城市規模提供基礎產出：
-				[NEWLINE][ICON_BULLET]小鎮：+1[ICON_FOOD]食物，+1[ICON_PRODUCTION]產能，+1[ICON_GOLDEN_AGE]黃金時代點數。
-				[NEWLINE][ICON_BULLET]小型城市：+2[ICON_FOOD]食物，+2[ICON_PRODUCTION]產能，+2[ICON_GOLDEN_AGE]黃金時代點數。
-				[NEWLINE][ICON_BULLET]中型城市：+3[ICON_FOOD]食物，+3[ICON_PRODUCTION]產能，+3[ICON_GOLDEN_AGE]黃金時代點數。
-
-				[NEWLINE][ICON_BULLET]大型城市：+3[ICON_FOOD]食物，+3[ICON_PRODUCTION]產能，+3[ICON_GOLDEN_AGE]黃金時代點數。
-				[NEWLINE][ICON_BULLET]特大城市：+3[ICON_FOOD]食物，+3[ICON_PRODUCTION]產能，+3[ICON_GOLDEN_AGE]黃金時代點數；+1[ICON_CULTURE]文化，+1[ICON_REASEARCH]科研。
-				[NEWLINE][ICON_BULLET]巨型城市：+3[ICON_FOOD]食物，+3[ICON_PRODUCTION]產能，+3[ICON_GOLDEN_AGE]黃金時代點數。+2[ICON_CULTURE]文化，+2[ICON_REASEARCH]科研。
-				[NEWLINE][ICON_BULLET]大都會：+3[ICON_FOOD]食物，+3[ICON_PRODUCTION]產能，+3[ICON_GOLDEN_AGE]黃金時代點數。+3[ICON_CULTURE]文化，+3[ICON_REASEARCH]科研。
+				[NEWLINE][NEWLINE]每座中國園林為大型城市及以上的每個城市規模提供[ICON_FOOD]食物、[ICON_RESEARCH]科研和[ICON_GOLDEN_AGE]黃金時代點數產出，數值隨城市規模增加。
 			</Text>
 		</Row>
 		
@@ -5616,7 +5608,10 @@
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_TRAIT_DIPLOMACY_GREAT_PEOPLE">
-			<Text>所有達到小型城市（6[ICON_CITIZEN]人口）規模的城市中每2[ICON_CITIZEN]人口+1[ICON_RESEARCH]科研。當宣友時，瑞典和他的盟友得到+10%的[ICON_GREAT_PEOPLE]偉人點數。</Text>
+			<Text>
+				[ICON_BULLET]所有達到小型城市（6[ICON_CITIZEN]人口）規模的城市中每2[ICON_CITIZEN]人口+1[ICON_RESEARCH]科研。
+				[NEWLINE][ICON_BULLET]當宣友時，瑞典和他的盟友得到+10%的[ICON_GREAT_PEOPLE]偉人點數。
+			</Text>
 		</Replace>
 	
 		<Replace Tag="TXT_KEY_TRAIT_SCHOLARS_JADE_HALL">
@@ -6221,7 +6216,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]精英政治[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]每座城市+2[ICON_PRODUCTION]產能，城市建造建築時+10%[ICON_PRODUCTION]產能。
-				[NEWLINE][ICON_BULLET]城市完成建築或國家奇觀後，獲得數值相當於其產能的10%的一次性[ICON_RESEARCH]科研、[ICON_CULTURE]文化產出（購買建築無效）。
+				[NEWLINE][ICON_BULLET]城市完成移民、建築或國家奇觀後，獲得數值相當於其產能的10%的一次性[ICON_RESEARCH]科研、[ICON_CULTURE]文化產出（購買無效）。
 			</Text>
 		</Replace>
 
@@ -7141,6 +7136,22 @@
 		<Row Tag="TXT_KEY_BUILDING_BLD_TRADEROUTE_PLUS" >
 			<Text>商路+1</Text>
 		</Row>
+
+		<Row Tag="TXT_KEY_TRO_COL_FROM_CULTURE">
+      		<Text>[ICON_ARROW_LEFT][ICON_CULTURE]</Text>
+    	</Row>
+
+		<Row Tag="TXT_KEY_TRO_COL_FROM_CULTURE_TT">
+      		<Text>點擊以建立商路的文明從該商路獲得的[ICON_CULTURE]文化值數量排序。</Text>
+    	</Row>
+
+		<Row Tag="TXT_KEY_TRO_COL_TO_CULTURE">
+      		<Text>[ICON_ARROW_RIGHT][ICON_CULTURE]</Text>
+    	</Row>
+
+		<Row Tag="TXT_KEY_TRO_COL_TO_CULTURE_TT">
+      		<Text>點擊以終點文明從此商路獲得的[ICON_CULTURE]文化值數量排序。</Text>
+    	</Row>
 		
 		<Row Tag="TXT_KEY_BUILDING_AUTOCRACY_FIREWALL" >
 			<Text>威權主義</Text>
@@ -14150,33 +14161,214 @@
 			<Text>海軍單位+10%戰鬥力</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_FLAG_UNIT_TYPE_SP">
-			<Text>戰鬥類型:</Text>
-		</Row>
-		<Row Tag="TXT_KEY_FLAG_UNIT_UPGRADE_SP">
-			<Text>升級單位:</Text>
-		</Row>
-		<Row Tag="TXT_KEY_FLAG_UNIT_DROP_RANGE_SP">
-			<Text>空投距離上限：</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_UPANEL_CLICK_TO_SELECT_SP">
-			<Text>點擊選取該單位</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_PEDIA_RESOURCES_NEED_SP">
-			<Text>資源：</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_FREEPROMOTIONS_SP">
-			<Text>[COLOR_CYAN]單位屬性:[ENDCOLOR]</Text>
-		</Row>
-
-		<Replace Tag="TXT_KEY_ACTION_CLASS_BUILT_COUNT_SP">
+		<!-- Promotion - Super Group Manager -->
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP">
+			<Text>[COLOR_YELLOW]集群模式[ENDCOLOR]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_AIR">
+			<Text>[COLOR_YELLOW]編隊飛行[ENDCOLOR]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_HELP">
+			<Text>具有該晉升的單位可執行同一命令或任務。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_I">
+			<Text>集群移動標記 1</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_I_HELP">
+			<Text>具有該晉升的單位為執行集群移動任務-1[ICON_MOVES]移動力！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_II">
+			<Text>集群移動標記 2</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_II_HELP">
+			<Text>具有該晉升的單位為執行集群移動任務-2[ICON_MOVES]移動力！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_III">
+			<Text>集群移動標記 3</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_III_HELP">
+			<Text>具有該晉升的單位為執行集群移動任務-3[ICON_MOVES]移動力！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_IV">
+			<Text>集群移動標記 4</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_IV_HELP">
+			<Text>具有該晉升的單位為執行集群移動任務-4[ICON_MOVES]移動力！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_V">
+			<Text>集群移動標記 5</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_V_HELP">
+			<Text>具有該晉升的單位為執行集群移動任務-5[ICON_MOVES]移動力！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X">
+			<Text>集群移動標記！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_HELP">
+			<Text>具有該晉升的單位為執行集群移動任務而[COLOR_YELLOW]「不能進行近戰攻擊」[ENDCOLOR]！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_I">
+			<Text>集群移動標記 I</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_I_HELP">
+			<Text>具有該晉升的單位為執行集群移動任務而失去[COLOR_YELLOW]「無視地形」[ENDCOLOR]晉升！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_II">
+			<Text>集群移動標記 II</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_II_HELP">
+			<Text>具有該晉升的單位為執行集群移動任務而失去[COLOR_YELLOW]「高山訓練」[ENDCOLOR]晉升！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_III">
+			<Text>集群移動標記 III</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_III_HELP">
+			<Text>具有該晉升的單位為執行集群移動任務而失去[COLOR_YELLOW]「林地作戰」[ENDCOLOR]晉升！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_IV">
+			<Text>集群移動標記 IV</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_IV_HELP">
+			<Text>具有該晉升的單位為執行集群移動任務而失去[COLOR_YELLOW]「海濱雙倍移動」[ENDCOLOR]晉升！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_V">
+			<Text>集群移動標記 V</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_V_HELP">
+			<Text>具有該晉升的單位為執行集群移動任務而失去[COLOR_YELLOW]「極地先鋒」[ENDCOLOR]晉升！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_VI">
+			<Text>集群移動標記 VI</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_VI_HELP">
+			<Text>具有該晉升的單位為執行集群移動任務而失去[COLOR_YELLOW]「懸停單位」[ENDCOLOR]晉升！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_VII">
+			<Text>集群移動標記 VII</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_VII_HELP">
+			<Text>具有該晉升的單位為執行集群移動任務而失去[COLOR_YELLOW]「閃電急襲」[ENDCOLOR]晉升！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_VIII">
+			<Text>集群移動標記 VIII</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_VIII_HELP">
+			<Text>具有該晉升的單位為執行集群移動任務而獲得[COLOR_YELLOW]「復雜地形懲罰」[ENDCOLOR]晉升！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_IX">
+			<Text>集群移動標記 IX</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_IX_HELP">
+			<Text>具有該晉升的單位為執行集群移動任務而獲得[COLOR_YELLOW]「不能進入大洋」[ENDCOLOR]晉升！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_X">
+			<Text>集群移動標記 X</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_MOVE_X_X_HELP">
+			<Text>具有該晉升的單位為執行集群移動任務而獲得[COLOR_YELLOW]「需要天文學才能進入大洋」[ENDCOLOR]晉升！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_MOVELIFT_I">
+			<Text>移動力剩余標記 I</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_MOVELIFT_I_HELP">
+			<Text>具有該晉升的單位-1[ICON_MOVES]移動力剩余！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_MOVELIFT_II">
+			<Text>移動力剩余標記 II</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_MOVELIFT_II_HELP">
+			<Text>具有該晉升的單位-2[ICON_MOVES]移動力剩余！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_MOVELIFT_III">
+			<Text>移動力剩余標記 III</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_MOVELIFT_III_HELP">
+			<Text>具有該晉升的單位-3[ICON_MOVES]移動力剩余！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_MOVELIFT_IV">
+			<Text>移動力剩余標記 IV</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_MOVELIFT_IV_HELP">
+			<Text>具有該晉升的單位-4[ICON_MOVES]移動力剩余！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_MOVELIFT_V">
+			<Text>移動力剩余標記 V</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_MOVELIFT_V_HELP">
+			<Text>具有該晉升的單位-5[ICON_MOVES]移動力剩余！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_BUILD">
+			<Text>集群建造標記</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_BUILD_HELP">
+			<Text>該單位正在集群建造設施！</Text>
+		</Replace>
+		
+		<!-- UI - Super Group Manager -->
+		<Replace Tag="TXT_KEY_AIRCRAFT_ON_TT">
+			<Text>將該單位加入編隊。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_AIRCRAFT_OFF_TT">
+			<Text>將該單位移除編隊。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CARRIER_ON_TT">
+			<Text>在該格組建一個航空聯隊。[NEWLINE]航空聯隊中的飛行器將執行「統一」的指令或任務！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CARRIER_OFF_TT">
+			<Text>解散該格的一個航空聯隊。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_GROUPAF_ON_TT">
+			<Text>以該格所有的飛機組建航空聯隊。[NEWLINE]航空聯隊中的飛行器將執行「統一」的指令或任務！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_GROUPAF_OFF_TT">
+			<Text>解散該格由飛機組建的航空聯隊。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_GROUPGM_ON_TT">
+			<Text>以該格所有的導彈組建航空聯隊。[NEWLINE]航空聯隊中的飛行器將執行「統一」的指令或任務！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_GROUPGM_OFF_TT">
+			<Text>解散該格由導彈組建的航空聯隊。</Text>
+		</Replace>
+		
+		<Replace Tag="TXT_KEY_SGM_GROUP_OFF_TT">
+			<Text>以該格所有單位組建集群。[NEWLINE]集群中的單位將執行 [COLOR_YELLOW]「統一」[ENDCOLOR] 的指令或任務！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_SGM_GROUP_ON_TT">
+			<Text>解散該格的集群。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_SGM_GROUP_ACT_OFF_TT">
+			<Text>點擊[COLOR_WARNING_TEXT]激活[ENDCOLOR][COLOR_YELLOW]「大」[ENDCOLOR]集群模式：[NEWLINE][NEWLINE]以該格及周圍地格、[COLOR_YELLOW]相同戰鬥類型[ENDCOLOR]單位組建[COLOR_YELLOW]「大」[ENDCOLOR]集群。[NEWLINE]「大」[ENDCOLOR]集群中的單位將執行 [COLOR_YELLOW]「統一」[ENDCOLOR] 的指令或任務！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_SGM_GROUP_ALL_OFF_TT">
+			<Text>點擊[COLOR_WARNING_TEXT]激活[ENDCOLOR][COLOR_YELLOW]「大」[ENDCOLOR]集群模式：[NEWLINE][NEWLINE]以該格及周圍地格單位組建[COLOR_YELLOW]「大」[ENDCOLOR]集群。[NEWLINE][COLOR_YELLOW]「大」[ENDCOLOR]集群中的單位將執行 [COLOR_YELLOW]「統一」[ENDCOLOR] 的指令或任務！</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_SGM_GROUP_ALL_ON_TT">
+			<Text>點擊[COLOR_WARNING_TEXT]關閉[ENDCOLOR][COLOR_YELLOW]「大」[ENDCOLOR]集群模式：[NEWLINE][NEWLINE]解散該格及周圍地格的集群。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_ACTION_CLASS_BUILT_COUNT">
 			<Text>該類已擁有[COLOR_YELLOW]{1_HaveCount}[ENDCOLOR]個</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_ACTION_CLASS_BUILDING_COUNT_SP">
+		<Replace Tag="TXT_KEY_ACTION_CLASS_BUILDING_COUNT">
 			<Text>該類在建[COLOR_POSITIVE_TEXT]{1_BuildingCount}[ENDCOLOR]個</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_FLAG_UNIT_TYPE">
+			<Text>戰鬥類型:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FLAG_UNIT_UPGRADE">
+			<Text>升級單位:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FLAG_UNIT_DROP_RANGE">
+			<Text>空投距離上限：</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UPANEL_CLICK_TO_SELECT">
+			<Text>點擊選取該單位</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PEDIA_RESOURCES_NEED">
+			<Text>資源：</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FREEPROMOTIONS">
+			<Text>[COLOR_CYAN]單位屬性:[ENDCOLOR]</Text>
 		</Replace>
 	</Language_zh_Hant_HK>
 </GameData>
