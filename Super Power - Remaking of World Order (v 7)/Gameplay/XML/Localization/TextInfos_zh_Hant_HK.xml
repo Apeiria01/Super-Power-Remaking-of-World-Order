@@ -12,7 +12,7 @@
 			<Text>[COLOR_YELLOW]注意事項：[ENDCOLOR][NEWLINE]1、檢查存檔文件大小。[NEWLINE]2、查閱文明百科（快捷鍵[COLOR_POSITIVE_TEXT]F1[ENDCOLOR]）[NEWLINE]3、如果始終發生遊戲崩潰或存檔損壞，嘗試Dx9。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_VERSION">
-			<Text>[COLOR_YELLOW]版本號 8.0[ENDCOLOR]</Text>
+			<Text>[COLOR_YELLOW]版本號 9.0[ENDCOLOR]</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_SP_MOD_SETUP">
@@ -72,19 +72,19 @@
 			<Text>SP-軍團模式（高）</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_HIGH_HELP">
-			<Text>軍團模式-高允許建立軍團和集團軍，兵力規模等級高。</Text>
+			<Text>允許建立軍團和集團軍，兵力規模等級高。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_MEDIUM">
-			<Text>SP-軍團模式（中）</Text>
+		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_CLOSE">
+			<Text>SP-關閉 [COLOR_YELLOW]軍團模式[ENDCOLOR]</Text>
 		</Row>
-		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_MEDIUM_HELP">
-			<Text>軍團模式-高允許建立軍團和集團軍，兵力規模等級中。</Text>
+		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_CLOSE_HELP">
+			<Text>軍團模式：允許建立軍團和集團軍</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_LOW">
 			<Text>SP-軍團模式（低）</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_LOW_HELP">
-			<Text>軍團模式-高允許建立軍團和集團軍，兵力規模等級低。</Text>
+			<Text>允許建立軍團和集團軍，兵力規模等級低。</Text>
 		</Row>
 
 
@@ -753,7 +753,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_INCA_QURIKANCHA_HELP</Tag>
-			<Text>城市2格內的本國領土上必須有山脈。</Text>
+			<Text>無須臨近山脈，即可建造。</Text>
 		</Row>
 		
 		<Row>
@@ -5563,7 +5563,12 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_WAYFINDING">
-			<Text>單位初始時即能以海運模式進入大洋。市政廳最高等級為3級（無4和5級城市）。在摩艾石像群周邊2格內單位+10%[ICON_STRENGTH]戰鬥力。</Text>
+			<Text>
+				[ICON_BULLET]單位初始時即能以海運模式進入大洋。
+				[NEWLINE][ICON_BULLET]移民可以在海濱地塊建城，海濱城市獲得額外的[ICON_PRODUCTION]產能和[ICON_CULTURE]文化，隨時代增加。
+				[NEWLINE][ICON_BULLET]市政廳最高等級為3級（無4和5級城市）。
+				[NEWLINE][ICON_BULLET]在摩艾石像群周邊2格內單位+10%[ICON_STRENGTH]戰鬥力。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_CULTURE_FROM_KILLS">
@@ -5626,7 +5631,13 @@
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_TRAIT_GREAT_ANDEAN_ROAD">
-			<Text>進入丘陵地格時單位忽略地形對移動力的影響。改良設施位於丘陵時無需維護費用；位於其他地形則費用減半。工人可以鏟除丘陵地塊上的[ICON_RES_SHEEP]羊。</Text>
+			<Text>
+				[ICON_BULLET]單位進入丘陵地塊不消耗額外移動力。
+				[NEWLINE][ICON_BULLET]丘陵上的設施不需要維護費，其他地形上的設施維護費減半。
+				[NEWLINE][ICON_BULLET]工人可以剷除丘陵地塊上的[ICON_RES_SHEEP]羊。
+				[NEWLINE][ICON_BULLET]平民單位可以進入山脈地塊。
+				[NEWLINE][ICON_BULLET]移民可以在山脈地塊上建立城市。山脈城市獲得額外的[ICON_RESEARCH]科研和[ICON_FOOD]食物產出，隨時代加成。
+			</Text>
 		</Replace>
 		
 	<!--*******************Unique Units' Names*****************-->
@@ -7542,140 +7553,180 @@
 
 <!--Religions-->
 	<!--**************************************************Belief Texts Tweak*************************************-->
-		
-		<Replace Tag="TXT_KEY_BELIEF_ANCESTOR_WORSHIP">
-			<Text>神祠+1[ICON_PEACE]信仰值、+1[ICON_CULTURE]文化值</Text>
+	<!--Pantheon-->
+		<Replace Tag="TXT_KEY_BELIEF_GODDESS_LOVE_SHORT">
+			<Text>創世母神</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_DANCE_AURORA">
-			<Text>無森林的凍土地塊+2[ICON_PEACE]信仰值</Text>
+		<Replace Tag="TXT_KEY_BELIEF_GODDESS_LOVE">
+			<Text>城市+1[ICON_HAPPINESS_1]快樂，城市[ICON_CITIZEN]人口增長時獲得6點[ICON_PEACE]信仰（標準速度下）</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_MESSENGER_GODS">
-			<Text>有[ICON_CONNECTED]城市連接的城市+1[ICON_RESEARCH]科技值、+1[ICON_CULTURE]文化值、+1[ICON_GOLD]金幣</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_GOD_CRAFTSMEN">
-			<Text>玉石、琥珀、珊瑚和天青石+1[ICON_PEACE]信仰值、+1[ICON_CULTURE]文化值</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_SUN_GOD">
-			<Text>橄欖、蔗糖、香水和煙草+1[ICON_PEACE]信仰值、+1[ICON_CULTURE]文化值</Text>
+		<Replace Tag="TXT_KEY_BELIEF_OPEN_SKY">
+			<Text>牧場+1[ICON_CULTURE]文化,[ICON_RES_COW]牛+1[ICON_PEACE]信仰、[ICON_RES_SHEEP]羊+1[ICON_CULTURE]文化、[ICON_RES_HORSE]馬+1[ICON_RESEARCH]科研</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_EARTH_MOTHER">
-			<Text>香料、柑橘、香蕉和棉花+1[ICON_PEACE]信仰值</Text>
+			<Text>香料、柑橘、香蕉和棉花+1[ICON_PEACE]信仰、+1[ICON_FOOD]食物</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_FERTILITY_RITES">
+			<Text>糧倉+2[ICON_PEACE]信仰，[ICON_RES_WHEAT]小麥+1[ICON_PEACE]信仰</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_GOD_CRAFTSMEN">
+			<Text>玉石、琥珀、珊瑚和天青石+1[ICON_PEACE]信仰、+1[ICON_PRODUCTION]產能</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_DANCE_AURORA_SHORT">
+			<Text>盜火之神</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_DANCE_AURORA">
+			<Text>城市+2[ICON_PRODUCTION]產能</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_ANCESTOR_WORSHIP">
+			<Text>神祠+1[ICON_PEACE]信仰、+1[ICON_CULTURE]文化，建造工業時代之前的奇觀+10%[ICON_PRODUCTION]產能</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_GODDESS_STRATEGY">
+			<Text>城市[ICON_RANGE_STRENGTH]遠程攻擊額外造成10點傷害，城墻+2[ICON_PEACE]信仰，城堡+4[ICON_CULTURE]文化</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_DESERT_FOLKLORE">
+			<Text>荒漠+1[ICON_PEACE]信仰，綠洲額外+2[ICON_CULTURE]文化、+1[ICON_PEACE]信仰</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_GOD_KING">
+			<Text>宮殿+3[ICON_PEACE]信仰、1級城市+1[ICON_FOOD]食物、[ICON_PRODUCTION]產能、[ICON_CULTURE]文化</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GODDESS_HUNT">
-			<Text>獵場+1[ICON_FOOD]食物、+1[ICON_PEACE]信仰值</Text>
+			<Text>獵場+1[ICON_FOOD]食物、+1[ICON_PEACE]信仰，[ICON_RES_BISON]野牛+1[ICON_FOOD]食物，[ICON_RES_DEER]野鹿+1[ICON_PRODUCTION]產能</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_GURUSHIP">
-			<Text>城市有專業人員時+2[ICON_PEACE]信仰值</Text>
+		<Replace Tag="TXT_KEY_BELIEF_SACRED_PATH">
+			<Text>叢林+1[ICON_CULTURE]文化、+1[ICON_PEACE]信仰</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_SETTLEMENTS">
-			<Text>城市邊界擴張速度+50%</Text>
+		<Replace Tag="TXT_KEY_BELIEF_GOD_SEA">
+			<Text>漁船+1[ICON_CULTURE]文化，捕撈船+1[ICON_PEACE]信仰、+1[ICON_CULTURE]文化</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_PILGRIMAGE">
-			<Text>其他文明每個信仰該宗教的城市為此宗教+4[ICON_PEACE]信仰值</Text>
+		<Replace Tag="TXT_KEY_BELIEF_ORAL_TRADITION">
+			<Text>種植園+1[ICON_CULTURE]文化、+1[ICON_GOLD]金錢，[ICON_RES_SILK]絲綢、[ICON_RES_TEA]茶葉+1[ICON_CULTURE]文化</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_HOLY_WARRIORS">
-			<Text>消耗[ICON_PEACE]信仰值以購買[COLOR_POSITIVE_TEXT]聖殿騎士[ENDCOLOR]，該單位能夠通過擊殺單位獲得信仰</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_DIVINE_INSPIRATION">
-			<Text>每个世界奇观+2[ICON_PEACE]信仰值、+2[ICON_CULTURE]文化值</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_CEREMONIAL_BURIAL">
-			<Text>全國每座信仰該宗教的城市貢獻1[ICON_HAPPINESS_1]幸福度</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_INITIATION_RITES">
-			<Text>每座城市首次皈依該宗教時貢獻金幣（標速255[ICON_GOLD]金幣，史詩345[ICON_GOLD]金幣）</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_CHURCH_PROPERTY">
-			<Text>每座信仰該宗教的城市貢獻6[ICON_GOLD]金幣</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_TITHE">
-			<Text>每3位該宗教的信徒提供+1[ICON_GOLD]金幣</Text>
+		<Replace Tag="TXT_KEY_BELIEF_SUN_GOD">
+			<Text>橄欖、蔗糖、香水和煙草+1[ICON_PEACE]信仰、+1[ICON_RESEARCH]科研</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GOD_WAR">
-			<Text>在你的城市6格以內戰鬥勝利時獲得[ICON_PEACE]信仰值</Text>
+			<Text>在你的城市6格以內戰鬥勝利時獲得[ICON_PEACE]信仰，兵營、軍械所+2[ICON_PEACE]信仰</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_MESSENGER_GODS">
+			<Text>有[ICON_CONNECTED]城市連接的城市+2[ICON_PEACE]信仰、+2[ICON_RESEARCH]科研</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_SETTLEMENTS">
+			<Text>城市+2[ICON_CULTURE]文化，邊界擴張速度+50%</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_BELIEF_GODDESS_OF_PURITY_SHORT">
+			<Text>純潔女神</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_GODDESS_OF_PURITY">
+			<Text>
+				青春泉+4[ICON_FOOD]食物、+4[ICON_PEACE]信仰、+2[ICON_PRODUCTION]產能、+2[ICON_RESEARCH]科研，
+				維多利亞湖+4[ICON_CULTURE]文化、+4[ICON_PEACE]信仰、+2[ICON_PRODUCTION]產能、+2[ICON_RESEARCH]科研
+			</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_BELIEF_SACRED_WATERS">
+			<Text>沿河城市+1[ICON_HAPPINESS_1]快樂，湖泊、海濱+1[ICON_PEACE]信仰</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_BELIEF_SNOW_BELIEF_SHORT">
+			<Text>風暴之神</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_SNOW_BELIEF">
+			<Text>無森林的凍土地塊+2[ICON_PEACE]信仰,雪地+1[ICON_FOOD]食物、+2[ICON_PEACE]信仰</Text>
+		</Row>
+
+		<Replace Tag="TXT_KEY_BELIEF_GURUSHIP">
+			<Text>城市有專業人員時+2[ICON_PEACE]信仰</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_PILGRIMAGE">
+			<Text>其他文明每個信仰該宗教的城市為此宗教+4[ICON_PEACE]信仰</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_HOLY_WARRIORS">
+			<Text>允許使用[ICON_PEACE]信仰購買[COLOR_POSITIVE_TEXT]聖殿騎士[ENDCOLOR]，該單位能夠通過擊殺單位獲得信仰</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_DIVINE_INSPIRATION">
+			<Text>每個世界奇觀+2[ICON_PEACE]信仰、+2[ICON_CULTURE]文化</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_CEREMONIAL_BURIAL">
+			<Text>全國每座信仰該宗教的城市貢獻1[ICON_HAPPINESS_1]快樂</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_INITIATION_RITES">
+			<Text>每座城市首次皈依該宗教時貢獻金錢（標速255[ICON_GOLD]金錢，史詩345[ICON_GOLD]金錢）</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_CHURCH_PROPERTY">
+			<Text>每座信仰該宗教的城市貢獻6[ICON_GOLD]金錢</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_TITHE">
+			<Text>每3個該宗教的信徒貢獻1[ICON_GOLD]金錢</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_MONASTERIES">
-			<Text>允許使用[ICON_PEACE]信仰值購買修道院（+2[ICON_PEACE]信仰值、+1[ICON_CULTURE]文化值，城市[ICON_GREAT_PEOPLE]偉人誕生速度+25%）</Text>
-		</Replace>
-		
-		<Replace Tag="TXT_KEY_BELIEF_GODDESS_STRATEGY">
-			<Text>城牆和城堡+2[ICON_PEACE]信仰值</Text>
-		</Replace>
+			<Text>允許使用[ICON_PEACE]信仰購買修道院（+2[ICON_PEACE]信仰、+1[ICON_CULTURE]文化，城市[ICON_GREAT_PEOPLE]偉人誕生速度+25%）</Text>
+		</Replace>	
 		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_ART">
-			<Text>聖索菲亞、傑內大清真寺、吳哥窟、婆羅浮屠、西斯廷教堂、聖母院+2[ICON_TOURISM]旅遊業績</Text>
+			<Text>聖索菲亞、傑內大清真寺、吳哥窟、婆羅浮屠、西斯廷教堂、聖母院+2[ICON_TOURISM]魅力</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_FEED_WORLD">
 			<Text>神祠和神廟+2[ICON_FOOD]食物</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_FERTILITY_RITES">
-			<Text>糧倉+2[ICON_PEACE]信仰值</Text>
-		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_MONUMENT_GODS">
-			<Text>紀念碑+2[ICON_PEACE]信仰值</Text>
+			<Text>紀念碑+2[ICON_PEACE]信仰</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_STONE_CIRCLES">
-			<Text>採石場和石工坊+2[ICON_PEACE]信仰值</Text>
+			<Text>采石場和石工坊+2[ICON_PEACE]信仰</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_RELIQUARY">
-			<Text>風景地標、學園、海關、制造中心、宗教聖地+5[ICON_PEACE]信仰值</Text>
+			<Text>風景地標、學園、海關、製造中心、宗教聖地+5[ICON_PEACE]信仰</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_FORMAL_LITURGY">
-			<Text>每一處黃金、白銀、赤銅、鐵礦、鹽資源+1[ICON_PEACE]信仰值、+1[ICON_CULTURE]文化值</Text>
+			<Text>每一處黃金、白銀、赤銅、鐵礦、鹽資源+1[ICON_PEACE]信仰、+1[ICON_CULTURE]文化</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GOD_FESTIVALS">
-			<Text>每一處紅酒和熏香+2[ICON_PEACE]信仰值、+2[ICON_CULTURE]文化值</Text>
+			<Text>每一處紅酒和熏香+2[ICON_PEACE]信仰、+2[ICON_CULTURE]文化</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_ONE_WITH_NATURE">
-			<Text>自然奇跡+8[ICON_PEACE]信仰值</Text>
+			<Text>自然奇觀+8[ICON_PEACE]信仰</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_PEACE_GARDENS">
-			<Text>公園提供城市+4[ICON_HAPPINESS_1]幸福度</Text>
+			<Text>城市中的公園+4[ICON_HAPPINESS_1]快樂</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_LITURGICAL_DRAMA">
-			<Text>露天劇場有3位信徒的城市提供+1[ICON_PEACE]信仰值、+1[ICON_HAPPINESS_1]幸福度</Text>
+			<Text>信眾規模達到3的城市中露天劇場+1[ICON_PEACE]信仰、+1[ICON_HAPPINESS_1]快樂</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_SWORD_PLOWSHARES">
 			<Text>和平時期[ICON_FOOD]食物積累速率提高25%</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_GOD_SEA">
-			<Text>漁船+1[ICON_CULTURE]文化值</Text>
-		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_TEARS_OF_GODS">
-			<Text>每一處鑽石和珍珠+2[ICON_PEACE]信仰值、+2[ICON_CULTURE]文化值</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_GOD_KING">
-			<Text>宮殿+4[ICON_PEACE]信仰值</Text>
+			<Text>每一處鉆石和珍珠+2[ICON_PEACE]信仰、+2[ICON_CULTURE]文化</Text>
 		</Replace>
 		
+
 		<Replace Tag="TXT_KEY_BELIEF_PAPAL_PRIMACY">
-			<Text>對信奉此宗教的城邦+35[ICON_INFLUENCE]剩餘影響力</Text>
+			<Text>對信仰此宗教的城邦的[ICON_INFLUENCE]影響力下限值+35</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_CHARITABLE_MISSIONS">
-			<Text>贈送[ICON_GOLD]金幣對城邦的影響力增加50%。對信奉此宗教的城邦+20[ICON_INFLUENCE]剩餘影響力</Text>
+			<Text>向城邦贈送[ICON_GOLD]金錢增加影響力的效果提升50%。對信仰此宗教的城邦的[ICON_INFLUENCE]影響力下限值+20</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_JESUIT_EDUCATION">
-			<Text>可以使用[ICON_PEACE]信仰值購買大學、公立學校和研發實驗室。大學、公立學校和研發實驗室+2[ICON_PEACE]信仰值</Text>
+			<Text>可以使用[ICON_PEACE]信仰購買大學、公立學校和研發實驗室。大學、公立學校和研發實驗室+2[ICON_PEACE]信仰</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_SACRED_SITES">
-			<Text>所有用[ICON_PEACE]信仰值購買的建築物可分別提供2點[ICON_TOURISM]旅遊收入。學園、海關、制造中心、宗教聖地+5[ICON_CULTURE]文化值</Text>
+			<Text>每座使用[ICON_PEACE]信仰購買的建築+2[ICON_TOURISM]魅力。學園、海關、製造中心、宗教聖地+5[ICON_CULTURE]文化</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_FERVOR_SHORT">
 			<Text>教會藝匠</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_FERVOR">
-			<Text>消耗[ICON_PEACE]信仰值以購買[COLOR_POSITIVE_TEXT]宗教藝術師[ENDCOLOR]，該單位能夠開啟黃金時代。露天劇場、畫廊和歌劇院+2[ICON_PEACE]信仰值。建造非未來時代奇跡時+25%[ICON_PRODUCTION]生產力積累</Text>
+			<Text>允許使用[ICON_PEACE]信仰購買[COLOR_POSITIVE_TEXT]宗教藝術師[ENDCOLOR]，該單位能夠開啟黃金時代。露天劇場、畫廊和歌劇院+2[ICON_PEACE]信仰。建造非未來時代奇觀時+25%[ICON_PRODUCTION]產能積累</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_UNITY_OF_PROPHETS">
-			<Text>異端審問官和預言家降低一半該宗教的影響力（不將其廢除）。聖城中誕生一位[ICON_PROPHET]預言家</Text>
+			<Text>宗教裁判官和先知只能將此宗教的信眾減少一半（而非全部清除）。聖城中誕生一位[ICON_PROPHET]大先知</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_TO_GLORY_OF_GOD">
-			<Text>進入工業時代之後可以使用[ICON_PEACE]信仰值購買任意類型的[ICON_GREAT_PEOPLE]偉人。每個城市的專家所產出的[ICON_PEACE]信仰值+1</Text>
+			<Text>進入工業時代之後可以使用[ICON_PEACE]信仰購買任意類型的[ICON_GREAT_PEOPLE]偉人。所有城市每位專業人員+1[ICON_PEACE]信仰</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_UNDERGROUND_SECT">
-			<Text>您的間諜對他們所处的城市實施宗教壓迫。額外提供一名[ICON_SPY]間諜</Text>
+			<Text>你的間諜可向所處城市註入宗教壓力。額外提供一名[ICON_SPY]間諜</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_EVANGELISM">
-			<Text>傳教士的佈教活動沖刷了現有來自其他宗教的壓迫。宗教單位佈教次數+1</Text>
+			<Text>傳教士的傳教活動能消解其他宗教的壓力。宗教單位傳教次數+1</Text>
 		</Replace>
 
 		<!--**************************************************New Belief Texts*************************************-->
@@ -7691,12 +7742,6 @@
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_MARSH_BELIEF">
 			<Text>沼澤+3[ICON_PEACE]信仰值。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BELIEF_SNOW_BELIEF_SHORT">
-			<Text>風暴之神</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BELIEF_SNOW_BELIEF">
-			<Text>雪地+2[ICON_PEACE]信仰值並+1[ICON_FOOD]食物。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_RIVER_CRAFTSMAN_SHORT">
 			<Text>河圖洛書</Text>
@@ -7839,7 +7884,7 @@
 			人類玩家也可以組建軍團和集團軍，不過只能在有兵工廠和軍事基地的城市範圍內通過消耗大軍（陸軍）或提督（海軍）實現；[NEWLINE][NEWLINE]
 			引入“兵力”設定，兵力決定你總共能擁有的軍事單位數量，兵力點滿後獲取軍事單位將變得非常困難，新建的軍事單位也會被清除，AI兵力點滿後也將停止刷出單位，分三個遊戲選項檔：[NEWLINE]
 			高：除小鎮以外的每個城市規模等級提供4兵力點，玩家初始24點，AI初始32點 —— 適合高配置玩家；[NEWLINE]
-			中：除小鎮以外的每個城市規模等級提供2兵力點，玩家初始12點，AI初始16點 —— 適合中配置玩家；[NEWLINE]
+			中：除小鎮以外的每個城市規模等級提供2兵力點，玩家初始12點，AI初始16點 —— 適合中配置玩家（默認情況）；[NEWLINE]
 			低：除小鎮以外的每個城市規模等級提供1兵力點，玩家初始 6點，AI初始 8點 —— 適合低配置玩家或和平主義者；[NEWLINE]
 			（平民、要塞及空軍單位不計入，也不進行單位合並操作，不過艦載機會跟隨載具獲得相應“提升”）
 			</Text>

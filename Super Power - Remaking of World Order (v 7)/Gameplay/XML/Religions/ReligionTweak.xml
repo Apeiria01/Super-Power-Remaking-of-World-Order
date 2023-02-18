@@ -3,27 +3,6 @@
 <GameData>
 	<!--**************************************************Pantheon to Follwer*************************************-->
 	<Beliefs>
-		<!--<Update>
-			<Set Follower="true" Pantheon="false"/>
-			<Where Type="BELIEF_SACRED_WATERS" Pantheon="true"/>
-		</Update>
-		<Update>
-			<Set Follower="true"/>
-			<Where Type="BELIEF_ORAL_TRADITION" Pantheon="true"/>
-		</Update>
-		<Update>
-			<Set Follower="true" Pantheon="false"/>
-			<Where Type="BELIEF_GODDESS_LOVE" Pantheon="true"/>
-		</Update>-->
-
-		<Update>
-			<Set CityRangeStrikeModifier="0"/>
-			<Where Type="BELIEF_GODDESS_STRATEGY" />
-		</Update>
-		<Update>
-			<Set PlotCultureCostModifier="-50"/>
-			<Where Type="BELIEF_RELIGIOUS_SETTLEMENTS" />
-		</Update>
 		<Update>
 			<Set HappinessPerFollowingCity="1" />
 			<Where Type="BELIEF_CEREMONIAL_BURIAL" />
@@ -43,11 +22,6 @@
 		<Update>
 			<Set MaxDistance="6"/>
 			<Where Type="BELIEF_GOD_WAR" />
-		</Update>
-
-		<Update>
-			<Set CityGrowthModifier="0" />
-			<Where Type="BELIEF_FERTILITY_RITES" />
 		</Update>
 		<Update>
 			<Set WonderProductionModifier="0" ObsoleteEra="NULL" />
@@ -77,6 +51,13 @@
 			<Type>BELIEF_SNOW_BELIEF</Type>
 			<Description>TXT_KEY_BELIEF_SNOW_BELIEF</Description>
 			<ShortDescription>TXT_KEY_BELIEF_SNOW_BELIEF_SHORT</ShortDescription>
+			<Pantheon>true</Pantheon>
+		</Row>
+
+		<Row>
+			<Type>BELIEF_GODDESS_OF_PURITY</Type>
+			<Description>TXT_KEY_BELIEF_GODDESS_OF_PURITY</Description>
+			<ShortDescription>TXT_KEY_BELIEF_GODDESS_OF_PURITY_SHORT</ShortDescription>
 			<Pantheon>true</Pantheon>
 		</Row>
 
@@ -140,10 +121,6 @@
 
 	<Beliefs>
 		<Update>
-			<Set MinPopulation="0"/>
-			<Where Type="BELIEF_GOD_CRAFTSMEN" />
-		</Update>
-		<Update>
 			<Set CityStateMinimumInfluence="35" />
 			<Where Type="BELIEF_PAPAL_PRIMACY" />
 		</Update>
@@ -194,8 +171,6 @@
 	</Belief_YieldChangeWorldWonder>
 
 	<Belief_ResourceYieldChanges>
-		<Delete BeliefType="BELIEF_SUN_GOD" />
-		<Delete BeliefType="BELIEF_EARTH_MOTHER" />
 		<Delete BeliefType="BELIEF_GOD_FESTIVALS" />
 		<Delete BeliefType="BELIEF_FORMAL_LITURGY" />
 
@@ -300,163 +275,12 @@
 			<Yield>2</Yield>
 		</Row>
 		
-		<Row>
-			<BeliefType>BELIEF_GOD_CRAFTSMEN</BeliefType>
-			<ResourceType>RESOURCE_JADE</ResourceType>
-			<YieldType>YIELD_FAITH</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BeliefType>BELIEF_GOD_CRAFTSMEN</BeliefType>
-			<ResourceType>RESOURCE_AMBER</ResourceType>
-			<YieldType>YIELD_FAITH</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BeliefType>BELIEF_GOD_CRAFTSMEN</BeliefType>
-			<ResourceType>RESOURCE_CORAL</ResourceType>
-			<YieldType>YIELD_FAITH</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BeliefType>BELIEF_GOD_CRAFTSMEN</BeliefType>
-			<ResourceType>RESOURCE_LAPIS</ResourceType>
-			<YieldType>YIELD_FAITH</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BeliefType>BELIEF_GOD_CRAFTSMEN</BeliefType>
-			<ResourceType>RESOURCE_JADE</ResourceType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BeliefType>BELIEF_GOD_CRAFTSMEN</BeliefType>
-			<ResourceType>RESOURCE_AMBER</ResourceType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BeliefType>BELIEF_GOD_CRAFTSMEN</BeliefType>
-			<ResourceType>RESOURCE_CORAL</ResourceType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BeliefType>BELIEF_GOD_CRAFTSMEN</BeliefType>
-			<ResourceType>RESOURCE_LAPIS</ResourceType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		
-		<Row>
-			<BeliefType>BELIEF_SUN_GOD</BeliefType>
-			<ResourceType>RESOURCE_OLIVE</ResourceType>
-			<YieldType>YIELD_FAITH</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BeliefType>BELIEF_SUN_GOD</BeliefType>
-			<ResourceType>RESOURCE_TOBACCO</ResourceType>
-			<YieldType>YIELD_FAITH</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BeliefType>BELIEF_SUN_GOD</BeliefType>
-			<ResourceType>RESOURCE_PERFUME</ResourceType>
-			<YieldType>YIELD_FAITH</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BeliefType>BELIEF_SUN_GOD</BeliefType>
-			<ResourceType>RESOURCE_SUGAR</ResourceType>
-			<YieldType>YIELD_FAITH</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BeliefType>BELIEF_SUN_GOD</BeliefType>
-			<ResourceType>RESOURCE_OLIVE</ResourceType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BeliefType>BELIEF_SUN_GOD</BeliefType>
-			<ResourceType>RESOURCE_TOBACCO</ResourceType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BeliefType>BELIEF_SUN_GOD</BeliefType>
-			<ResourceType>RESOURCE_PERFUME</ResourceType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BeliefType>BELIEF_SUN_GOD</BeliefType>
-			<ResourceType>RESOURCE_SUGAR</ResourceType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		
-		<Row>
-			<BeliefType>BELIEF_EARTH_MOTHER</BeliefType>
-			<ResourceType>RESOURCE_SPICES</ResourceType>
-			<YieldType>YIELD_FAITH</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BeliefType>BELIEF_EARTH_MOTHER</BeliefType>
-			<ResourceType>RESOURCE_BANANA</ResourceType>
-			<YieldType>YIELD_FAITH</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BeliefType>BELIEF_EARTH_MOTHER</BeliefType>
-			<ResourceType>RESOURCE_CITRUS</ResourceType>
-			<YieldType>YIELD_FAITH</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BeliefType>BELIEF_EARTH_MOTHER</BeliefType>
-			<ResourceType>RESOURCE_COTTON</ResourceType>
-			<YieldType>YIELD_FAITH</YieldType>
-			<Yield>1</Yield>
-		</Row>
-
-		<!--<Row>
-			<BeliefType>BELIEF_GOD_SEA</BeliefType>
-			<ResourceType>RESOURCE_FISH</ResourceType>
-			<YieldType>YIELD_FAITH</YieldType>
-			<Yield>1</Yield>
-		</Row>-->
 	</Belief_ResourceYieldChanges>
 	
 	
 	
 	<Belief_ImprovementYieldChanges>
-		<Delete BeliefType="BELIEF_GOD_SEA"/>
-
-
-		<Row>
-			<BeliefType>BELIEF_GOD_SEA</BeliefType>
-			<ImprovementType>IMPROVEMENT_FISHFARM_MOD</ImprovementType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BeliefType>BELIEF_GOD_SEA</BeliefType>
-			<ImprovementType>IMPROVEMENT_FISHERY_MOD</ImprovementType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		
-		<Row>
-			<BeliefType>BELIEF_GODDESS_HUNT</BeliefType>
-			<ImprovementType>IMPROVEMENT_CAMP</ImprovementType>
-			<YieldType>YIELD_FAITH</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		
+			
 		<Row>
 			<BeliefType>BELIEF_RELIQUARY</BeliefType>
 			<ImprovementType>IMPROVEMENT_LANDMARK</ImprovementType>
@@ -561,64 +385,10 @@
 			<EraType>ERA_RENAISSANCE</EraType>
 		</Row>
 	</Belief_EraFaithUnitPurchase>
-
-	<Belief_TerrainYieldChanges>
-		<Delete BeliefType="BELIEF_DANCE_AURORA" />
-		<Row>
-			<BeliefType>BELIEF_SNOW_BELIEF</BeliefType>
-			<TerrainType>TERRAIN_SNOW</TerrainType>
-			<YieldType>YIELD_FOOD</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BeliefType>BELIEF_SNOW_BELIEF</BeliefType>
-			<TerrainType>TERRAIN_SNOW</TerrainType>
-			<YieldType>YIELD_FAITH</YieldType>
-			<Yield>2</Yield>
-		</Row>
-		<Row>
-			<BeliefType>BELIEF_DANCE_AURORA</BeliefType>
-			<TerrainType>TERRAIN_TUNDRA</TerrainType>
-			<YieldType>YIELD_FAITH</YieldType>
-			<Yield>2</Yield>
-		</Row>
-	
-
-	</Belief_TerrainYieldChanges>
-
-
-
-	<Belief_YieldChangeTradeRoute>
-		<Delete BeliefType="BELIEF_MESSENGER_GODS" />
-		<Row>
-			<BeliefType>BELIEF_MESSENGER_GODS</BeliefType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BeliefType>BELIEF_MESSENGER_GODS</BeliefType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BeliefType>BELIEF_MESSENGER_GODS</BeliefType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>1</Yield>
-		</Row>
-	</Belief_YieldChangeTradeRoute>
-	
 	
 	<Belief_BuildingClassYieldChanges>
-		<Delete BeliefType="BELIEF_ANCESTOR_WORSHIP" />
 		<Delete BeliefType="BELIEF_FEED_WORLD" />
 		<Delete BeliefType="BELIEF_RELIGIOUS_ART" />
-		<Delete BeliefType="BELIEF_GOD_KING" />
-		<Row>
-			<BeliefType>BELIEF_GOD_KING</BeliefType>
-			<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-			<YieldType>YIELD_FAITH</YieldType>
-			<YieldChange>4</YieldChange>
-		</Row>
 		<Row>
 			<BeliefType>BELIEF_FEED_WORLD</BeliefType>
 			<BuildingClassType>BUILDINGCLASS_SHRINE</BuildingClassType>
@@ -631,28 +401,9 @@
 			<YieldType>YIELD_FOOD</YieldType>
 			<YieldChange>2</YieldChange>
 		</Row>
-		
-		<Row>
-			<BeliefType>BELIEF_ANCESTOR_WORSHIP</BeliefType>
-			<BuildingClassType>BUILDINGCLASS_SHRINE</BuildingClassType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<YieldChange>1</YieldChange>
-		</Row>
-		<Row>
-			<BeliefType>BELIEF_ANCESTOR_WORSHIP</BeliefType>
-			<BuildingClassType>BUILDINGCLASS_SHRINE</BuildingClassType>
-			<YieldType>YIELD_FAITH</YieldType>
-			<YieldChange>1</YieldChange>
-		</Row>
 		<Row>
 			<BeliefType>BELIEF_STONE_CIRCLES</BeliefType>
 			<BuildingClassType>BUILDINGCLASS_STONE_WORKS</BuildingClassType>
-			<YieldType>YIELD_FAITH</YieldType>
-			<YieldChange>2</YieldChange>
-		</Row>
-		<Row>
-			<BeliefType>BELIEF_FERTILITY_RITES</BeliefType>
-			<BuildingClassType>BUILDINGCLASS_GRANARY</BuildingClassType>
 			<YieldType>YIELD_FAITH</YieldType>
 			<YieldChange>2</YieldChange>
 		</Row>
@@ -662,19 +413,6 @@
 			<YieldType>YIELD_FAITH</YieldType>
 			<YieldChange>2</YieldChange>
 		</Row>
-		<Row>
-			<BeliefType>BELIEF_GODDESS_STRATEGY</BeliefType>
-			<BuildingClassType>BUILDINGCLASS_WALLS</BuildingClassType>
-			<YieldType>YIELD_FAITH</YieldType>
-			<YieldChange>2</YieldChange>
-		</Row>
-		<Row>
-			<BeliefType>BELIEF_GODDESS_STRATEGY</BeliefType>
-			<BuildingClassType>BUILDINGCLASS_CASTLE</BuildingClassType>
-			<YieldType>YIELD_FAITH</YieldType>
-			<YieldChange>2</YieldChange>
-		</Row>
-		
 		
 		<!--<Row>
 			<BeliefType>BELIEF_RIVER_CRAFTSMAN</BeliefType>

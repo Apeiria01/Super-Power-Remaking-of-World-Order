@@ -1,0 +1,1 @@
+print('New Religion Rule: Check Pass')

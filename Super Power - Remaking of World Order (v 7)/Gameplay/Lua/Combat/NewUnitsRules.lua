@@ -2,7 +2,7 @@
 
 --------------------------------------------------------------
 
---include( "UtilityFunctions.lua" )
+include( "UtilityFunctions" )
 
 
 g_CorpsCount = {};
@@ -395,13 +395,15 @@ function NewUnitCreationRules()   ------------------------Human Player's units r
 			end-------for units END
 			
 			-- Troops count - Set
-			if     PreGame.GetGameOption("GAMEOPTION_SP_CORPS_MODE_HIGH") == 1 then
-				iTotalTroops = iTotalTroops * 4;
-			elseif PreGame.GetGameOption("GAMEOPTION_SP_CORPS_MODE_MEDIUM") == 1 then
-				iTotalTroops = iTotalTroops * 2;
-			elseif PreGame.GetGameOption("GAMEOPTION_SP_CORPS_MODE_LOW") == 1 then
-				iTotalTroops = iTotalTroops * 1;
-			else
+			if PreGame.GetGameOption("GAMEOPTION_SP_CORPS_MODE_DISABLE") == 0 then
+				if PreGame.GetGameOption("GAMEOPTION_SP_CORPS_MODE_HIGH") == 1 then
+					iTotalTroops = iTotalTroops * 4;
+				elseif PreGame.GetGameOption("GAMEOPTION_SP_CORPS_MODE_LOW") == 1 then
+					iTotalTroops = iTotalTroops * 1;
+				else
+					iTotalTroops = iTotalTroops * 2;
+				end
+			else 
 				iTotalTroops = 0;
 			end
 			if iTotalTroops < iUsedTroops then
