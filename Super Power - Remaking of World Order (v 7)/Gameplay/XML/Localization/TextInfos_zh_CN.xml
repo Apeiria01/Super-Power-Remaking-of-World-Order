@@ -6195,7 +6195,6 @@
 		<Replace Tag="TXT_KEY_POLICY_LANDED_ELITE_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]绅缙阶层[ENDCOLOR]
-				[NEWLINE][ICON_BULLET][ICON_CAPITAL]首都地块+4[ICON_FOOD]食物产出。
 				[NEWLINE][ICON_BULLET]每处农田、渔船、梯田、圩田、卡斯巴哈、蹄皮帐篷设施+1[ICON_FOOD]食物产出。
 			</Text>
 		</Replace>
@@ -6210,7 +6209,6 @@
 		<Replace Tag="TXT_KEY_POLICY_OLIGARCHY_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]寡头政体[ENDCOLOR]
-				[NEWLINE][ICON_CAPITAL]首都地块+4[ICON_PRODUCTION]产能。
 				[NEWLINE]各个不同规模的城市获得相应的额外产能：
 				[NEWLINE][ICON_BULLET][ICON_CITYBANNER_CITY_SMALL]小型城市（6[ICON_CITIZEN]人口）：+4[ICON_PRODUCTION]产能。
 				[NEWLINE][ICON_BULLET][ICON_CITYBANNER_CITY_MEDIUM]中型城市（15[ICON_CITIZEN]人口）：+8[ICON_PRODUCTION]产能。
@@ -6225,7 +6223,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]君主政体[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]城市规模导致的[ICON_HAPPINESS_4]不满减半。
-				[NEWLINE][ICON_BULLET][ICON_CAPITAL]首都每个[ICON_CITIZEN]市民+1[ICON_GOLD]金钱。
+				[NEWLINE][ICON_BULLET][ICON_CAPITAL]首都每2[ICON_CITIZEN]人口+1[ICON_FOOD]食物、[ICON_CULTURE]文化、[ICON_PRODUCTION]产能、[ICON_GOLD]金钱。
 			</Text>
 		</Replace>
 
@@ -6235,7 +6233,6 @@
 		<Replace Tag="TXT_KEY_POLICY_PREFECTURE_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]郡县制度[ENDCOLOR]
-				[NEWLINE][ICON_CAPITAL]首都地块+4[ICON_CULTURE]文化产出。
 				[NEWLINE]各个不同规模的城市获得相应的额外文化产出：
 				[NEWLINE][ICON_BULLET][ICON_CITYBANNER_CITY_SMALL]小型城市（6[ICON_CITIZEN]人口）：+4[ICON_CULTURE]文化。
 				[NEWLINE][ICON_BULLET][ICON_CITYBANNER_CITY_MEDIUM]中型城市（15[ICON_CITIZEN]人口）：+8[ICON_CULTURE]文化。
@@ -7682,7 +7679,7 @@
 			<Text>城市+1[ICON_HAPPINESS_1]快乐，城市[ICON_CITIZEN]人口增长时获得6点[ICON_PEACE]信仰（标准速度下）</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_OPEN_SKY">
-			<Text>牧场+1[ICON_CULTURE]文化,[ICON_RES_COW]牛+1[ICON_PEACE]信仰、[ICON_RES_SHEEP]羊+1[ICON_CULTURE]文化、[ICON_RES_HORSE]马+1[ICON_RESEARCH]科研</Text>
+			<Text>牧场+1[ICON_CULTURE]文化,[ICON_RES_COW]牛+1[ICON_PEACE]信仰、[ICON_RES_SHEEP]羊+1[ICON_FOOD]食物、[ICON_RES_HORSE]马+1[ICON_PRODUCTION]产能</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_EARTH_MOTHER">
 			<Text>香料、柑橘、香蕉和棉花+1[ICON_PEACE]信仰、+1[ICON_FOOD]食物</Text>
@@ -7694,10 +7691,10 @@
 			<Text>玉石、琥珀、珊瑚和天青石+1[ICON_PEACE]信仰、+1[ICON_PRODUCTION]产能</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_DANCE_AURORA_SHORT">
-			<Text>盗火之神</Text>
+			<Text>燧明天火</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_DANCE_AURORA">
-			<Text>城市+2[ICON_PRODUCTION]产能</Text>
+			<Text>城市+1[ICON_PRODUCTION]产能、+1[ICON_PEACE]信仰</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_ANCESTOR_WORSHIP">
 			<Text>神祠+1[ICON_PEACE]信仰、+1[ICON_CULTURE]文化，建造工业时代之前的奇观+10%[ICON_PRODUCTION]产能</Text>
@@ -7769,7 +7766,7 @@
 			<Text>全国每座信仰该宗教的城市贡献1[ICON_HAPPINESS_1]快乐</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_INITIATION_RITES">
-			<Text>每座城市首次皈依该宗教时贡献金钱（标速255[ICON_GOLD]金钱，史诗345[ICON_GOLD]金钱）</Text>
+			<Text>每座城市首次皈依该宗教时贡献金钱（标速180[ICON_GOLD]金钱，史诗243[ICON_GOLD]金钱）</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_CHURCH_PROPERTY">
 			<Text>每座信仰该宗教的城市贡献6[ICON_GOLD]金钱</Text>
@@ -7903,7 +7900,7 @@
 			<Text>神圣殿堂</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_RELIGION_PRESSURE">
-			<Text>25%来自于世界奇观、自然奇观和地面设施（风景地标、摩艾石像群、宫堡等）的[ICON_CULTURE]文化产出增加到该城市的[ICON_TOURISM]魅力产出中。来自杰作的[ICON_TOURISM]魅力产出+25%。来自圣城的宗教压力+100%</Text>
+			<Text>25%来自于世界奇观、自然奇观和地面设施（风景地标、摩艾石像群、宫堡等）的[ICON_CULTURE]文化产出增加到该城市的[ICON_TOURISM]魅力产出中</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SCIENCE_RELIGION_SHORT">
 			<Text>文庙私塾</Text>
@@ -7914,6 +7911,9 @@
 
 		<Row Tag="TXT_KEY_EXTRA_RELIGION_SPREADS">
 			<Text>+1次宗教传播次数</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EXTRA_RELIGION_SPREADS_2">
+			<Text>+2次宗教传播次数</Text>
 		</Row>
 		<Row Tag="TXT_KEY_EXTRA_RELIGION_SPREADS_4">
 			<Text>+4次宗教传播次数</Text>
@@ -7947,7 +7947,18 @@
 		<Row Tag="TXT_KEY_PROMOTION_ARTIST_PROMOTION_HELP">
 			<Text>开启一轮[ICON_GOLDEN_AGE]黄金时代，回合数值等同于[ICON_GREAT_ARTIST]大艺术家。</Text>
 		</Row>
-
+		<Row Tag="TXT_KEY_RELIGION_HOLYCITY_MARK">
+			<Text>圣城标记</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_BELIEF_MISSIONARY_ZEAL">
+			<Text>传教士传教能力+25%，圣城诞生的传教士传教次数+2。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_MESSIAH">
+			<Text>大先知能力增强25%，催生大先知所需的[ICON_PEACE]信仰减少25%，大先知能进入未开边国家领土。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_TEXTS">
+			<Text>宗教传播速度+25%(研发印刷机后+50%)，宗教以双倍速度传播到友好的城邦</Text>
+		</Replace>
 
 
 		<!--Resources-->

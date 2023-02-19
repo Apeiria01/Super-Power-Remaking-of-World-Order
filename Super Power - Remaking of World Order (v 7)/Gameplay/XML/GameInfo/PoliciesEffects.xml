@@ -24,19 +24,6 @@
 			<Yield>3</Yield>
 		</Row>
 	</Policy_CoastalCityYieldChanges>
-	
-	<Policy_CapitalYieldModifiers>
-		<!--<Row>
-			<PolicyType>POLICY_MONARCHY</PolicyType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>25</Yield>
-		</Row>-->
-		<!-- <Row>
-			<PolicyType>POLICY_MONARCHY</PolicyType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>25</Yield>
-		</Row>-->
-	</Policy_CapitalYieldModifiers>
 
 	<Policy_CapitalYieldChanges>
 		<Row>
@@ -49,49 +36,7 @@
 			<YieldType>YIELD_CULTURE</YieldType>
 			<Yield>3</Yield>
 		</Row>
-		<!--
-		<Row>
-			<PolicyType>POLICY_LANDED_ELITE</PolicyType>
-			<YieldType>YIELD_FOOD</YieldType>
-			<Yield>4</Yield>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_LEGALISM</PolicyType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>8</Yield>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_PREFECTURE</PolicyType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>4</Yield>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_OLIGARCHY</PolicyType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>4</Yield>
-		</Row>
-		-->
 	</Policy_CapitalYieldChanges>
-
-	<Policy_CapitalYieldPerPopChanges>
-		<Row>
-			<PolicyType>POLICY_MONARCHY</PolicyType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>100</Yield>
-		</Row>
-		<!--
-		<Row>
-			<PolicyType>POLICY_ARISTOCRACY</PolicyType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>50</Yield>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_ARISTOCRACY</PolicyType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>50</Yield>
-		</Row>
-		-->
-	</Policy_CapitalYieldPerPopChanges>
 
 	<Policy_GreatWorkYieldChanges>
 		<Row>
