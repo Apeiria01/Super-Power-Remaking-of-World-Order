@@ -4305,7 +4305,7 @@ function TipHandler(Button)
                 if unit:IsHasPromotion(unitPromotion.ID) then
                     if unitPromotion ~= nil then
                         table.insert(otherPromotions,
-                            unitPromotion.IconString .. Locale.ConvertTextKey(unitPromotion.Description));
+                            unitPromotion.IconStringSP .. Locale.ConvertTextKey(unitPromotion.Description));
                     end
                 end
             end

@@ -7152,8 +7152,8 @@
 		<Replace Tag="TXT_KEY_POLICY_LANDED_ELITE_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]Landed Elite[ENDCOLOR]
-				[NEWLINE][ICON_CAPITAL]Capital Plot +4 [ICON_FOOD] Food.
 				[NEWLINE][ICON_BULLET]+1 [ICON_FOOD] Food for every Farm and Fishing Net.
+				[NEWLINE][ICON_BULLET]+1 [ICON_FOOD] Food for every Terrace, Farm Polder, Kasbah, Shoshone Tipi.
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_LEGALISM_HELP" >
@@ -7165,7 +7165,6 @@
 		<Replace Tag="TXT_KEY_POLICY_OLIGARCHY_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]Oligarchy[ENDCOLOR]
-				[NEWLINE][ICON_CAPITAL]Capital Plot +4 [ICON_PRODUCTION] Production.
 				[NEWLINE][ICON_BULLET]Gain additional [ICON_PRODUCTION] Production in cities reached certain Population Size:
 				[NEWLINE][ICON_BULLET]Small City: +4 [ICON_PRODUCTION] Production.
 				[NEWLINE][ICON_BULLET]Medium City: +8 [ICON_PRODUCTION] Production.
@@ -7179,7 +7178,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]Monarchy[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]-50% extra [ICON_HAPPINESS_4] Unhappiness due to city's Population Size.
-				[NEWLINE][ICON_BULLET]+1 [ICON_GOLD] Gold for each [ICON_CITIZEN] Citizen in the [ICON_CAPITAL] Capital.
+				[NEWLINE][ICON_BULLET]+1 [ICON_RESEARCH] Science, [ICON_CULTURE] Culture, [ICON_PRODUCTION] Production and [ICON_GOLD] Gold for every 5 [ICON_CITIZEN] Citizens in the [ICON_CAPITAL] Capital.
 			</Text>
 		</Replace>
 
@@ -7195,7 +7194,6 @@
 		<Row Tag="TXT_KEY_POLICY_PREFECTURE_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]Prefeture[ENDCOLOR]
-				[NEWLINE][ICON_CAPITAL]Capital Plot +4 [ICON_CULTURE] Culture.
 				[NEWLINE][ICON_BULLET]Gain additional [ICON_CULTURE] Culture in cities reached certain Population Size:
 				[NEWLINE][ICON_BULLET]Small City: +4 [ICON_CULTURE] Culture.
 				[NEWLINE][ICON_BULLET]Medium City: +8 [ICON_CULTURE] Culture.
@@ -8720,7 +8718,7 @@
 			<Text>+1 [ICON_HAPPINESS_1] Happiness in cities, gain 6 point [ICON_PEACE] Faith when a new [ICON_CITIZEN] Citizen is born (At Normal Game Speed)</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_OPEN_SKY">
-			<Text>+1 [ICON_CULTURE] Culture from Pasture, [ICON_RES_COW] +1 [ICON_PEACE], [ICON_RES_SHEEP] +1 [ICON_CULTURE], [ICON_RES_HORSE] +1 [ICON_RESEARCH]</Text>
+			<Text>+1 [ICON_CULTURE] Culture from Pasture, [ICON_RES_COW] +1 [ICON_PEACE] Faith, [ICON_RES_SHEEP] +1 [ICON_FOOD] Food, [ICON_RES_HORSE] +1 [ICON_PRODUCTION] Production</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_ANCESTOR_WORSHIP">
 			<Text>+1 [ICON_PEACE] Faith and +1 [ICON_CULTURE] Culture from every Shrine, +10% [ICON_PRODUCTION] Production for pre-industrial wonders</Text>
@@ -8729,7 +8727,7 @@
 			<Text>Prometheus</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_DANCE_AURORA">
-			<Text>+2 [ICON_PRODUCTION] Produciton in cities</Text>
+			<Text>+1 [ICON_PRODUCTION] and +1 [ICON_PEACE] Faith Produciton in cities</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_DESERT_FOLKLORE">
 			<Text>+1 [ICON_PEACE] Faith from Desert tiles, +2 [ICON_CULTURE] Culture and +1 [ICON_PEACE] Faith from Oasis</Text>
@@ -8748,8 +8746,8 @@
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_GODDESS_OF_PURITY">
 			<Text>
-				+4 [ICON_FOOD] Food, +4[ICON_PEACE] Faith, +2[ICON_PRODUCTION] Production and +2[ICON_RESEARCH] Science from Fountain of Youth , 
-				+4 [ICON_CULTURE] Culrure, +4[ICON_PEACE] Faith, +2[ICON_PRODUCTION] Production and +2[ICON_RESEARCH] Science from Lake Victoria
+				+4 [ICON_FOOD] Food, +4[ICON_PEACE] Faith, +2 [ICON_PRODUCTION] Production and +2 [ICON_RESEARCH] Science from Fountain of Youth , 
+				+4 [ICON_CULTURE] Culrure, +4[ICON_PEACE] Faith, +2 [ICON_PRODUCTION] Production and +2 [ICON_RESEARCH] Science from Lake Victoria
 			</Text>
 		</Row>
 		<Replace Tag="TXT_KEY_BELIEF_SACRED_WATERS">
@@ -8786,7 +8784,7 @@
 			<Text>+1 [ICON_HAPPINESS_1] Global Happiness for each city following this religion</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_INITIATION_RITES">
-			<Text>+255 [ICON_GOLD] Gold when each city first converts to this religion (At Normal Game Speed)</Text>
+			<Text>+180 [ICON_GOLD] Gold when each city first converts to this religion (At Normal Game Speed)</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_CHURCH_PROPERTY">
 			<Text>+6 [ICON_GOLD] Gold for each City following this religion</Text>
@@ -8937,7 +8935,7 @@
 			<Text>The Sacred Palace</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_RELIGION_PRESSURE">
-			<Text>25% of the [ICON_CULTURE] Culture from World Wonders, Natural Wonders, and Improvements (Landmarks, Moai, Chateau) is added to the [ICON_TOURISM] Tourism output of the city. [ICON_TOURISM] Tourism output from Great Works +25%. +100% religious pressure emanating from the Holy City</Text>
+			<Text>25% of the [ICON_CULTURE] Culture from World Wonders, Natural Wonders, and Improvements (Landmarks, Moai, Chateau) is added to the [ICON_TOURISM] Tourism output of the city. </Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SCIENCE_RELIGION_SHORT">
 			<Text>Juku</Text>
@@ -8948,6 +8946,9 @@
 
 		<Row Tag="TXT_KEY_EXTRA_RELIGION_SPREADS">
 			<Text>+1 Extra Religion Spread</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EXTRA_RELIGION_SPREADS_2">
+			<Text>+2 Extra Religion Spread</Text>
 		</Row>
 		<Row Tag="TXT_KEY_EXTRA_RELIGION_SPREADS_4">
 			<Text>+4 Extra Religion Spread</Text>
@@ -8984,6 +8985,19 @@
 		<Row Tag="TXT_KEY_PROMOTION_ARTIST_PROMOTION_HELP">
 			<Text>Can start a [ICON_GOLDEN_AGE] Golden Age whose lasting turns equal to [ICON_GREAT_ARTIST]Great Artist.</Text>
 		</Row>
+		<Row Tag="TXT_KEY_RELIGION_HOLYCITY_MARK">
+			<Text>Holy City Mark</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_BELIEF_MISSIONARY_ZEAL">
+			<Text>Messionary conversion strength +25%, +2 extra Religion Spread when Messionaries born in Holy City.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_MESSIAH">
+			<Text>Prophets 25% stronger and earned with 25% less [ICON_PEACE] Faith, your Prophets can enter other nations' territory even without an Open Border Agreement.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_TEXTS">
+			<Text>Religion spreads 25% faster (50% with Printing Press), religion spreads to friendly city-states at double rate.</Text>
+		</Replace>
+
 
 
 <!-- Resolutions -->

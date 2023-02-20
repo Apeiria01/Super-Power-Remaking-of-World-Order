@@ -6117,7 +6117,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]君主政體[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]城市規模導致的[ICON_HAPPINESS_4]不滿減半。
-				[NEWLINE][ICON_BULLET][ICON_CAPITAL]首都每個[ICON_CITIZEN]市民+1[ICON_GOLD]金錢。
+				[NEWLINE][ICON_BULLET][ICON_CAPITAL]首都每2[ICON_CITIZEN]人口+1[ICON_FOOD]食物、[ICON_CULTURE]文化、[ICON_PRODUCTION]產能、[ICON_GOLD]金錢。
 			</Text>
 		</Replace>
 
@@ -7561,7 +7561,7 @@
 			<Text>城市+1[ICON_HAPPINESS_1]快樂，城市[ICON_CITIZEN]人口增長時獲得6點[ICON_PEACE]信仰（標準速度下）</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_OPEN_SKY">
-			<Text>牧場+1[ICON_CULTURE]文化,[ICON_RES_COW]牛+1[ICON_PEACE]信仰、[ICON_RES_SHEEP]羊+1[ICON_CULTURE]文化、[ICON_RES_HORSE]馬+1[ICON_RESEARCH]科研</Text>
+			<Text>牧場+1[ICON_CULTURE]文化,[ICON_RES_COW]牛+1[ICON_PEACE]信仰、[ICON_RES_SHEEP]羊+1[ICON_FOOD]食物、[ICON_RES_HORSE]馬+1[ICON_PRODUCTION]產能</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_EARTH_MOTHER">
 			<Text>香料、柑橘、香蕉和棉花+1[ICON_PEACE]信仰、+1[ICON_FOOD]食物</Text>
@@ -7573,10 +7573,10 @@
 			<Text>玉石、琥珀、珊瑚和天青石+1[ICON_PEACE]信仰、+1[ICON_PRODUCTION]產能</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_DANCE_AURORA_SHORT">
-			<Text>盜火之神</Text>
+			<Text>燧明天火</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_DANCE_AURORA">
-			<Text>城市+2[ICON_PRODUCTION]產能</Text>
+			<Text>城市+1[ICON_PRODUCTION]產能、+1[ICON_PEACE]信仰</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_ANCESTOR_WORSHIP">
 			<Text>神祠+1[ICON_PEACE]信仰、+1[ICON_CULTURE]文化，建造工業時代之前的奇觀+10%[ICON_PRODUCTION]產能</Text>
@@ -7649,7 +7649,7 @@
 			<Text>全國每座信仰該宗教的城市貢獻1[ICON_HAPPINESS_1]快樂</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_INITIATION_RITES">
-			<Text>每座城市首次皈依該宗教時貢獻金錢（標速255[ICON_GOLD]金錢，史詩345[ICON_GOLD]金錢）</Text>
+			<Text>每座城市首次皈依該宗教時貢獻金錢（標速180[ICON_GOLD]金錢，史詩243[ICON_GOLD]金錢）</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_CHURCH_PROPERTY">
 			<Text>每座信仰該宗教的城市貢獻6[ICON_GOLD]金錢</Text>
@@ -7777,7 +7777,7 @@
 			<Text>神聖殿堂</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_RELIGION_PRESSURE">
-			<Text>由世界奇跡、自然奇跡和改良設施（地標、摩艾石像、法國古堡）所產出的[ICON_CULTURE]文化值的25%會添加到該城市產出的[ICON_TOURISM]旅遊業績。來自巨作的[ICON_TOURISM]旅遊業績產出+25%。聖城產生的宗教壓力+100%</Text>
+			<Text>由世界奇跡、自然奇跡和改良設施（地標、摩艾石像、法國古堡）所產出的[ICON_CULTURE]文化值的25%會添加到該城市產出的[ICON_TOURISM]旅遊業績</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SCIENCE_RELIGION_SHORT">
 			<Text>文廟私塾</Text>
@@ -7788,6 +7788,9 @@
 
 		<Row Tag="TXT_KEY_EXTRA_RELIGION_SPREADS">
 			<Text>+1次宗教傳播次數</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EXTRA_RELIGION_SPREADS_2">
+			<Text>+2次宗教傳播次數</Text>
 		</Row>
 		<Row Tag="TXT_KEY_EXTRA_RELIGION_SPREADS_4">
 			<Text>+4次宗教傳播次數</Text>
@@ -7821,7 +7824,18 @@
 		<Row Tag="TXT_KEY_PROMOTION_ARTIST_PROMOTION_HELP">
 			<Text>開啟一輪[ICON_GOLDEN_AGE]黃金時代，回合數值等同於[ICON_GREAT_ARTIST]大藝術家。</Text>
 		</Row>
-		
+		<Row Tag="TXT_KEY_RELIGION_HOLYCITY_MARK">
+			<Text>聖城標記</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_BELIEF_MISSIONARY_ZEAL">
+			<Text>傳教士傳教能力+25%，聖城誕生的傳教士傳教次數+2</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_MESSIAH">
+			<Text>大先知能力增強25%，催生大先知所需的[ICON_PEACE]信仰減少25%，大先知能進入未開邊國家領土。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_TEXTS">
+			<Text>宗教傳播速度+25%(研發印刷機後+50%)，宗教以雙倍速度傳播到友好的城邦</Text>
+		</Replace>
 	
 		
 <!--Resources-->

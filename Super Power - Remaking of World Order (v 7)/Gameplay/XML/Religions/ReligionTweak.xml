@@ -8,10 +8,6 @@
 			<Where Type="BELIEF_CEREMONIAL_BURIAL" />
 		</Update>
 		<Update>
-			<Set GoldPerFirstCityConversion="300" />
-			<Where Type="BELIEF_INITIATION_RITES" />
-		</Update>
-		<Update>
 			<Set GoldPerFollowingCity="6"/>
 			<Where Type="BELIEF_CHURCH_PROPERTY" />
 		</Update>
