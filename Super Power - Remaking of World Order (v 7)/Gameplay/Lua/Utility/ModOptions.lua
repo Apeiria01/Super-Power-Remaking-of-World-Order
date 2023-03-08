@@ -1,5 +1,5 @@
-if PreGame.GetGameOption("GAMEOPTION_SP_CORPS_MODE_HIGH") == 1 or PreGame.GetGameOption("GAMEOPTION_SP_CORPS_MODE_MEDIUM") == 1
-or PreGame.GetGameOption("GAMEOPTION_SP_CORPS_MODE_LOW") == 1  or PreGame.GetGameOption("GAMEOPTION_SP_RECORD_MODE") == 1
+if PreGame.GetGameOption("GAMEOPTION_SP_CORPS_MODE_DISABLE") == 0
+or PreGame.GetGameOption("GAMEOPTION_SP_RECORD_MODE") == 1
 then
 	Controls.SP_Option_BTN_EmergencyRest:SetHide( true );
 end

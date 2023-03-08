@@ -286,8 +286,12 @@
     <!-- Enables additional unit supply from traits (v78) -->
     <!-- See also: "Traits - Extra Supply" -->
     <Row Class="6" Name="TRAITS_EXTRA_SUPPLY" Value="0" DbUpdates="1"/>
-	
-    <!-- Permits cities to work more rings (v19) -->
+
+    <Row Class="6" Name="TRAITS_CAN_FOUND_MOUNTAIN_CITY" Value="1" DbUpdates="1"/>
+
+	<Row Class="6" Name="TRAITS_CAN_FOUND_COAST_CITY" Value="1" DbUpdates="1"/>
+
+	<!-- Permits cities to work more rings (v19) -->
     <!-- See also: "Global - City Working Distance" -->
     <Row Class="2" Name="POLICIES_CITY_WORKING" Value="0"/>
 
@@ -847,6 +851,13 @@
     <!-- * Enables the Extensions API (v19) -->
     <!-- See also: "Unique Building - Cistern" -->
     <Row Class="2" Name="API_EXTENSIONS" Value="1"/>
+    <!-- function City:GetMajorReligionPantheonBelief() return BeliefType -->
+    <!-- function City:IsHasMajorBelief(eBelief) true/false -->
+    <!-- function City:IsHasSecondaryBelief(eBelief) true/false -->
+    <!-- function City:IsSecondaryReligionActive() true/false -->
+    <!-- function Player:IsSecondaryReligionActive() true/false -->
+    <Row Class="2" Name="API_RELIGION_EXTENSIONS" Value="1"/>
+
     <!-- * Push various hard-coded values controlling the game out into XML - see DB/CONFIG/GameInXml.sql for specific values (v53) -->
     <Row Class="2" Name="CONFIG_GAME_IN_XML" Value="1"/>
     <!-- * Push various hard-coded values controlling the AI out into XML - see DB/CONFIG/AiInXml.sql for specific values (v19) -->
@@ -947,6 +958,8 @@
 	<Row Class="6" Name="BALANCE_CORE" Value="1" DbUpdates="1"/>
 	  
 	<Row Class="6" Name="BUILDINGS_YIELD_FROM_OTHER_YIELD" Value="1" DbUpdates="1"/>
+
+	<Row Class="6" Name="ERA_EFFECTS_EXTENSIONS" Value="1" DbUpdates="1"/>
   </CustomModOptions>
 
   <CustomModPostDefines>
