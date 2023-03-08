@@ -154,13 +154,13 @@
 	<Building_EnableUnitPurchase>
 		<Row>
 			<BuildingType>BUILDING_BELIEF_RELIGIOUS_COLONIZATION</BuildingType>
-			<UnitClassType>UNITCLASS_CARGO_SHIP</UnitClassType>
+			<UnitClassType>UNITCLASS_SETTLER</UnitClassType>
 			<YieldType>YIELD_FAITH</YieldType>
 			<CostModifier>600</CostModifier>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_BELIEF_RELIGIOUS_COLONIZATION_2</BuildingType>
-			<UnitClassType>UNITCLASS_CARGO_SHIP</UnitClassType>
+			<UnitClassType>UNITCLASS_SETTLER</UnitClassType>
 			<YieldType>YIELD_FAITH</YieldType>
 			<CostModifier>200</CostModifier>
 		</Row>

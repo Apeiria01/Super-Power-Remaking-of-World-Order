@@ -1,3 +1,6 @@
+local policyCollectionRuleID = GameInfo.Policies["POLICY_COLLECTIVE_RULE"].ID
+
+
 function SPNReligionPopulationBuff(iX, iY, iOld, iNew)
     if Game.IsOption(GameOptionTypes.GAMEOPTION_NO_RELIGION) then
 		return
@@ -45,6 +48,19 @@ function SPNReligionFounded(iPlayer, iHolyCity, iReligion, iBelief1, iBelief2, i
 	local pHolyCity = pPlayer:GetCityByID(iHolyCity)
 	pHolyCity:SetNumRealBuilding(GameInfoTypes.BUILDING_RELIGION_HOLYCITY_MARK,1)
 
+    --BELIEF_RELIGIOUS_COLONIZATION
+    if iBelief3 == GameInfo.Beliefs{Type="BELIEF_RELIGIOUS_COLONIZATION"}().ID then
+		if pPlayer:HasPolicy(policyCollectionRuleID) 
+        and not pPlayer:IsPolicyBlocked(policyCollectionRuleID)
+        then
+            print("Player chose BELIEF_RELIGIOUS_COLONIZATION and has POLICY_COLLECTIVE_RULE, set free Building")
+            pHolyCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGIOUS_COLONIZATION_2,1)
+        else 
+            print("Player chose BELIEF_RELIGIOUS_COLONIZATION , set free Building")
+            pHolyCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGIOUS_COLONIZATION,1)
+        end
+	end
+
 end
 GameEvents.ReligionFounded.Add(SPNReligionFounded)
 
@@ -71,7 +87,7 @@ function SPNReligionEnhanced(iPlayer, eReligion, iBelief1, iBelief2)
         pPlayer:SetHasPolicy(GameInfo.Policies["POLICY_BELIEF_MESSIAH"].ID,true,true)
         for iUnit in pPlayer:Units() do
 			if iUnit:GetUnitClassType() == GameInfoTypes.UNITCLASS_PROPHET then 
-				iUnit:SetHasPromotion((GameInfo.UnitPromotions["PROMOTION_GPS_MOVEMENT_SMALL"].ID), true)
+				iUnit:SetHasPromotion((GameInfo.UnitPromotions["PROMOTION_RIVAL_TERRITORY"].ID), true)
 			end
 		end	
     end
@@ -101,10 +117,22 @@ function SPNReligionConquestedHolyCity(oldOwnerID, isCapital, cityX, cityY, newO
 		local pReligion = newOwnerPlayer:GetReligionCreatedByPlayer()
 		for i,v in ipairs(Game.GetBeliefsInReligion(pReligion)) do
 			if GameInfo.Beliefs[v].Type == "BELIEF_MISSIONARY_ZEAL" then
-				print("Player chose BELIEF_MISSIONARY_ZEAL take back the Holy City")
+				print("Player has BELIEF_MISSIONARY_ZEAL and take back the Holy City")
 				pCity:SetNumRealBuilding(GameInfoTypes.BUILDING_EXTRA_RELIGION_SPREADS_2,1)
+
 			elseif GameInfo.Beliefs[v].Type == "BELIEF_RELIGION_PRESSURE" then
-				print("Player chose BELIEF_RELIGION_PRESSURE take back the Holy City")
+				print("Player has BELIEF_RELIGION_PRESSURE and take back the Holy City")
+				pCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGION_PRESSURE,1)
+
+            elseif GameInfo.Beliefs[v].Type == "BELIEF_RELIGIOUS_COLONIZATION" then
+				print("Player has BELIEF_RELIGIOUS_COLONIZATION and take back the Holy City")
+                if newOwnerPlayer:HasPolicy(policyCollectionRuleID) 
+                and not newOwnerPlayer:IsPolicyBlocked(policyCollectionRuleID)
+                then
+                    pCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGIOUS_COLONIZATION_2,1)
+                else
+                    pCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGIOUS_COLONIZATION,1)
+                end
 				pCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGION_PRESSURE,1)
 			end
 		end
@@ -124,12 +152,61 @@ function SPNReligionUnitCreatedBuffBonus(iPlayer, iUnit)
     end
 
 	if pUnit:GetUnitClassType() == GameInfoTypes.UNITCLASS_PROPHET 
-    and pPlayer:HasPolicy(GameInfo.Policies["POLICY_BELIEF_ENLIGHTENMENT"].ID)
+    and pPlayer:HasPolicy(GameInfo.Policies["POLICY_BELIEF_MESSIAH"].ID)
     then
         print("Player has BELIEF_MESSIAH and Prophet has been born")
-        pUnit:SetHasPromotion((GameInfo.UnitPromotions["PROMOTION_GPS_MOVEMENT_SMALL"].ID), true)
+        pUnit:SetHasPromotion((GameInfo.UnitPromotions["PROMOTION_RIVAL_TERRITORY"].ID), true)
 	end
 end
 Events.SerialEventUnitCreated.Add(SPNReligionUnitCreatedBuffBonus)
+
+function SPNReligionPolicyAdopt(iPlayer,iPolicy)
+	if Game.IsOption(GameOptionTypes.GAMEOPTION_NO_RELIGION) or iPlayer == -1 or not Players[iPlayer]:HasCreatedReligion() then
+		return
+	end
+    local pPlayer = Players[iPlayer]
+	if not pPlayer:IsMajorCiv() then
+        return
+    end
+
+    if iPolicy == GameInfoTypes["POLICY_COLLECTIVE_RULE"] then
+        local eReligion = pPlayer:GetReligionCreatedByPlayer()
+        local pHolyCity = Game.GetHolyCityForReligion(eReligion, iPlayer)
+        if pHolyCity:IsHasBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGIOUS_COLONIZATION) then
+            print("Player chose POLICY_COLLECTIVE_RULE, and has BELIEF_RELIGIOUS_COLONIZATION, change free Building")
+            pHolyCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGIOUS_COLONIZATION,0)
+            pHolyCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGIOUS_COLONIZATION_2,1)
+        end
+    end
+
+end
+GameEvents.PlayerAdoptPolicy.Add(SPNReligionPolicyAdopt)
+
+function SPNReligionBlockPolicyBranch(iPlayer,iPolicyBranch,isBlock)
+	if Game.IsOption(GameOptionTypes.GAMEOPTION_NO_RELIGION) or iPlayer == -1 or not Players[iPlayer]:HasCreatedReligion() then
+		return
+	end
+    local pPlayer = Players[iPlayer]
+	if not pPlayer:IsMajorCiv() then
+        return
+    end
+	if (iPolicyBranch == GameInfo.PolicyBranchTypes["POLICY_BRANCH_LIBERTY"].ID
+	or iPolicyBranch == GameInfo.PolicyBranchTypes["POLICY_BRANCH_TRADITION"].ID)
+    and isBlock
+	then
+        local eReligion = pPlayer:GetReligionCreatedByPlayer()
+        local pHolyCity = Game.GetHolyCityForReligion(eReligion, iPlayer)
+        if pHolyCity:IsHasBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGIOUS_COLONIZATION_2) then
+            print("Player has BELIEF_RELIGIOUS_COLONIZATION, and change base Policy Branch 1")
+            pHolyCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGIOUS_COLONIZATION_2,0)
+            pHolyCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGIOUS_COLONIZATION,1)
+        elseif pHolyCity:IsHasBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGIOUS_COLONIZATION) then
+            print("Player has BELIEF_RELIGIOUS_COLONIZATION, and change base Policy Branch 2")
+            pHolyCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGIOUS_COLONIZATION,0)
+            pHolyCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGIOUS_COLONIZATION_2,1)
+        end
+	end
+end
+GameEvents.PlayerBlockPolicyBranch.Add(SPNReligionBlockPolicyBranch)
 
 print('New Religion Rule: Check Pass')

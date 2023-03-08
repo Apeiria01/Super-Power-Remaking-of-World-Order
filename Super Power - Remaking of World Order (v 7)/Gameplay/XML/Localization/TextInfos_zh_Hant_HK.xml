@@ -7730,6 +7730,13 @@
 		</Replace>
 
 		<!--**************************************************New Belief Texts*************************************-->
+		<Row Tag="TXT_KEY_BELIEF_RELIGIOUS_COLONIZATION_SHORT">
+			<Text>宗教殖民</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_RELIGIOUS_COLONIZATION">
+			<Text>在聖城可以使用信仰[ICON_PEACE]購買移民，采用自主的「集體統治」政策後購買價格下降。</Text>
+		</Row>
+		
 		<Row Tag="TXT_KEY_BELIEF_FAITH_WITHOUT_BORDERS_SHORT">
 			<Text>普世宗教</Text>
 		</Row>
