@@ -8882,6 +8882,13 @@
 		
 
 		<!--**************************************************New Belief Texts*************************************-->
+		<Row Tag="TXT_KEY_BELIEF_RELIGIOUS_COLONIZATION_SHORT">
+			<Text>Religious Colonization</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_RELIGIOUS_COLONIZATION">
+			<Text>Use [ICON_PEACE] Faith to purchase Settler in Holy City, the price will go down when you adopt the policy Collective Rule.</Text>
+		</Row>
+
 		<Row Tag="TXT_KEY_BELIEF_FAITH_WITHOUT_BORDERS_SHORT">
 			<Text>Faith Without Borders</Text>
 		</Row>

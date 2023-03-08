@@ -58,6 +58,13 @@
 		</Row>
 
 		<Row>
+			<Type>BELIEF_RELIGIOUS_COLONIZATION</Type>
+			<Description>TXT_KEY_BELIEF_RELIGIOUS_COLONIZATION</Description>
+			<ShortDescription>TXT_KEY_BELIEF_RELIGIOUS_COLONIZATION_SHORT</ShortDescription>
+			<Founder>true</Founder>
+		</Row>
+
+		<Row>
 			<Type>BELIEF_FAITH_WITHOUT_BORDERS</Type>
 			<Description>TXT_KEY_BELIEF_FAITH_WITHOUT_BORDERS</Description>
 			<ShortDescription>TXT_KEY_BELIEF_FAITH_WITHOUT_BORDERS_SHORT</ShortDescription>
