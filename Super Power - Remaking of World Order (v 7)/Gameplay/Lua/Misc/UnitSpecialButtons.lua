@@ -1452,7 +1452,7 @@ EstablishCorpsButton = {
       if nUnit then
         nUnit:Kill();
       end
-      if tUnit ~= unit then
+      if tUnit ~= unit and nUnit ~= unit then
          unit:Kill();
       end
     end
