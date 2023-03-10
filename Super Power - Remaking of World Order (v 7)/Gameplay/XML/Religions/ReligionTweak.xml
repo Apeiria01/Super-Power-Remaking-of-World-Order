@@ -12,10 +12,6 @@
 			<Where Type="BELIEF_CHURCH_PROPERTY" />
 		</Update>
 		<Update>
-			<Set GoldPerXFollowers="3"/>
-			<Where Type="BELIEF_TITHE" />
-		</Update>
-		<Update>
 			<Set MaxDistance="6"/>
 			<Where Type="BELIEF_GOD_WAR" />
 		</Update>
@@ -65,6 +61,13 @@
 		</Row>
 
 		<Row>
+			<Type>BELIEF_RELIGIOUS_SCIENCE</Type>
+			<Description>TXT_KEY_RELIGIOUS_SCIENCE</Description>
+			<ShortDescription>TXT_KEY_RELIGIOUS_SCIENCE_SHORT</ShortDescription>
+			<Founder>true</Founder>
+		</Row>
+
+		<Row>
 			<Type>BELIEF_FAITH_WITHOUT_BORDERS</Type>
 			<Description>TXT_KEY_BELIEF_FAITH_WITHOUT_BORDERS</Description>
 			<ShortDescription>TXT_KEY_BELIEF_FAITH_WITHOUT_BORDERS_SHORT</ShortDescription>
@@ -94,7 +97,7 @@
 			<Description>TXT_KEY_BELIEF_EIRENE</Description>
 			<ShortDescription>TXT_KEY_BELIEF_EIRENE_SHORT</ShortDescription>
 			<Follower>true</Follower>
-			<PlayerCultureModifier>15</PlayerCultureModifier>
+			<PlayerCultureModifier>25</PlayerCultureModifier>
 			<RequiresPeace>true</RequiresPeace>
 		</Row>
 		<Row>
@@ -109,6 +112,21 @@
 			<ShortDescription>TXT_KEY_BELIEF_RELIGION_PRESSURE_SHORT</ShortDescription>
 			<Enhancer>true</Enhancer>
 		</Row>
+
+		<Row>
+			<Type>BELIEF_SACRED_CALENDAR</Type>
+			<Description>TXT_KEY_BELIEF_SACRED_CALENDAR</Description>
+			<ShortDescription>TXT_KEY_BELIEF_SACRED_CALENDAR_SHORT</ShortDescription>
+			<Enhancer>true</Enhancer>
+		</Row>
+
+		<Row>
+			<Type>BELIEF_ORTHODOX_CHURCH</Type>
+			<Description>TXT_KEY_BELIEF_ORTHODOX_CHURCH</Description>
+			<ShortDescription>TXT_KEY_BELIEF_ORTHODOX_CHURCH_SHORT</ShortDescription>
+			<Enhancer>true</Enhancer>
+		</Row>
+
 		<Row>
 			<Type>BELIEF_SCIENCE_RELIGION</Type>
 			<Description>TXT_KEY_BELIEF_SCIENCE_RELIGION</Description>
@@ -121,18 +139,6 @@
 
 
 	<!--**************************************************Belief Change*************************************-->
-
-	<Beliefs>
-		<Update>
-			<Set CityStateMinimumInfluence="35" />
-			<Where Type="BELIEF_PAPAL_PRIMACY" />
-		</Update>
-		<Update>
-			<Set CityStateInfluenceModifier="50" CityStateMinimumInfluence="20"/>
-			<Where Type="BELIEF_CHARITABLE_MISSIONS" />
-		</Update>
-	</Beliefs>
-
 
 	<!--<Belief_ResourceHappiness>
 		<Row>
@@ -279,66 +285,6 @@
 		</Row>
 		
 	</Belief_ResourceYieldChanges>
-	
-	
-	
-	<Belief_ImprovementYieldChanges>
-			
-		<Row>
-			<BeliefType>BELIEF_RELIQUARY</BeliefType>
-			<ImprovementType>IMPROVEMENT_LANDMARK</ImprovementType>
-			<YieldType>YIELD_FAITH</YieldType>
-			<Yield>5</Yield>
-		</Row>
-		<Row>
-			<BeliefType>BELIEF_RELIQUARY</BeliefType>
-			<ImprovementType>IMPROVEMENT_ACADEMY</ImprovementType>
-			<YieldType>YIELD_FAITH</YieldType>
-			<Yield>5</Yield>
-		</Row>
-		<Row>
-			<BeliefType>BELIEF_RELIQUARY</BeliefType>
-			<ImprovementType>IMPROVEMENT_CUSTOMS_HOUSE</ImprovementType>
-			<YieldType>YIELD_FAITH</YieldType>
-			<Yield>5</Yield>
-		</Row>
-		<Row>
-			<BeliefType>BELIEF_RELIQUARY</BeliefType>
-			<ImprovementType>IMPROVEMENT_MANUFACTORY</ImprovementType>
-			<YieldType>YIELD_FAITH</YieldType>
-			<Yield>5</Yield>
-		</Row>
-		<Row>
-			<BeliefType>BELIEF_RELIQUARY</BeliefType>
-			<ImprovementType>IMPROVEMENT_HOLY_SITE</ImprovementType>
-			<YieldType>YIELD_FAITH</YieldType>
-			<Yield>5</Yield>
-		</Row>
-		<Row>
-			<BeliefType>BELIEF_SACRED_SITES</BeliefType>
-			<ImprovementType>IMPROVEMENT_HOLY_SITE</ImprovementType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>5</Yield>
-		</Row>
-		<Row>
-			<BeliefType>BELIEF_SACRED_SITES</BeliefType>
-			<ImprovementType>IMPROVEMENT_MANUFACTORY</ImprovementType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>5</Yield>
-		</Row>
-		<Row>
-			<BeliefType>BELIEF_SACRED_SITES</BeliefType>
-			<ImprovementType>IMPROVEMENT_CUSTOMS_HOUSE</ImprovementType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>5</Yield>
-		</Row>
-		<Row>
-			<BeliefType>BELIEF_SACRED_SITES</BeliefType>
-			<ImprovementType>IMPROVEMENT_ACADEMY</ImprovementType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>5</Yield>
-		</Row>
-	</Belief_ImprovementYieldChanges>
 	
 	
 	<Belief_YieldChangeAnySpecialist>
@@ -520,21 +466,7 @@
 			<Happiness>2</Happiness>
 		</Row>
 	</Belief_BuildingClassHappiness>
-	<Belief_MaxYieldModifierPerFollower>
-		<Row>
-			<BeliefType>BELIEF_SCIENCE_RELIGION</BeliefType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<Max>50</Max>
-		</Row>
-	</Belief_MaxYieldModifierPerFollower>
 	
-	<Belief_YieldChangePerXForeignFollowers>
-		<Row>
-			<BeliefType>BELIEF_FAITH_WITHOUT_BORDERS</BeliefType>
-			<YieldType>YIELD_FAITH</YieldType>
-			<ForeignFollowers>7</ForeignFollowers>
-		</Row>
-	</Belief_YieldChangePerXForeignFollowers>
 	
 	<Belief_BuildingClassTourism>
 		<Delete BeliefType="BELIEF_RELIGIOUS_ART" />

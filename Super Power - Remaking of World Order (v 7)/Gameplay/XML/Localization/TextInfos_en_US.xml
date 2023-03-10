@@ -7549,7 +7549,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]Gunboat Diplomacy[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]Gain 5 more [ICON_INFLUENCE] Influence (at Standard speed) per turn with City-States you could demand tribute from.
-				[NEWLINE][ICON_BULLET]+100% military score when you demand tribute from City-States, and cost of influence is reduced to 1/4.
+				[NEWLINE][ICON_BULLET]+100% military score when you demand tribute from City-States, and cost of [ICON_INFLUENCE] Influence is reduced to 1/4.
 				[NEWLINE][ICON_BULLET]Gain Food, Production, Culture and Science bonus when you demand tribute from City-States.
 			</Text>
 		</Replace>
@@ -8730,7 +8730,7 @@
 			<Text>+1 [ICON_PRODUCTION] and +1 [ICON_PEACE] Faith Produciton in cities</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_DESERT_FOLKLORE">
-			<Text>+1 [ICON_PEACE] Faith from Desert tiles, +2 [ICON_CULTURE] Culture and +1 [ICON_PEACE] Faith from Oasis</Text>
+			<Text>+1 [ICON_PEACE] Faith from Desert tiles, +1 [ICON_CULTURE] Culture and +1 [ICON_PEACE] Faith from Oasis</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_SACRED_PATH">
 			<Text>+1 [ICON_CULTURE] Culture and +1 [ICON_PEACE] Faith from Jungle tiles</Text>
@@ -8750,6 +8750,9 @@
 				+4 [ICON_CULTURE] Culrure, +4[ICON_PEACE] Faith, +2 [ICON_PRODUCTION] Production and +2 [ICON_RESEARCH] Science from Lake Victoria
 			</Text>
 		</Row>
+		<Replace Tag="TXT_KEY_BELIEF_ASCETISM">
+			<Text>Shrines provide +1 [ICON_HAPPINESS_1] Happiness in cities</Text>
+		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_SACRED_WATERS">
 			<Text>+1 [ICON_HAPPINESS_1] Happiness from cities onrivers, +1 [ICON_PEACE] Faith from Lake and Coast</Text>
 		</Replace>
@@ -8766,7 +8769,10 @@
 			<Text>+1 [ICON_FOOD] Food and +1 [ICON_PEACE] Faith from Camps, +1 [ICON_FOOD] Food from [ICON_RES_BISON], +1 [ICON_PRODUCTION] Production from [ICON_RES_DEER]</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GURUSHIP">
-			<Text>+2 [ICON_PEACE] Faith if city has a Specialist</Text>
+			<Text>+2 [ICON_PEACE] Faith, +1 [ICON_CULTURE] Culture, +1 [ICON_PRODUCTION] Production and +1 [ICON_RESEARCH] Science if city has a Specialist</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_SETTLEMENTS_SHORT">
+			<Text>Land Mania</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_SETTLEMENTS">
 			<Text>+2 [ICON_CULTURE] Culture in cities, +50% faster border growth</Text>
@@ -8790,7 +8796,7 @@
 			<Text>+6 [ICON_GOLD] Gold for each City following this religion</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_TITHE">
-			<Text>+1 [ICON_GOLD] Gold for every 3 followers of this religion</Text>
+			<Text>+1 [ICON_GOLD] Gold for every 2 followers of this religion</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GOD_WAR">
 			<Text>Gain [ICON_PEACE] Faith if you win a battle within 6 tiles if your city, Barracks and Armony provides +2 [ICON_PEACE] Faith in city</Text>
@@ -8801,7 +8807,7 @@
 
 
 		<Replace Tag="TXT_KEY_BELIEF_GODDESS_STRATEGY">
-			<Text>+10 extra Damage output of the City's [ICON_RANGE_STRENGTH] ranged attacks, +2 [ICON_PEACE] Faith for every Walls, +2 [ICON_CULTURE] Culture for every Castles</Text>
+			<Text>+2 [ICON_PEACE] Faith for every Walls, +2 [ICON_CULTURE] Culture for every Castles</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_ART">
 			<Text>+2 [ICON_TOURISM] Tourism from Hagia Sophia, Great Mosque of Djenne, Angkor Wat, Borobudur, Sistine Chapel and Notre Dame</Text>
@@ -8846,14 +8852,14 @@
 			<Text>+2 [ICON_PEACE] Faith and +2 [ICON_CULTURE] Culture for every Gem and Pearl</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GOD_KING">
-			<Text>Palace provides +3 [ICON_PEACE] Faith, +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production and +1 [ICON_CULTURE] Culture from each City Hall [COLOR_NEGATIVE_TEXT](Lv1)[ENDCOLOR]</Text>
+			<Text>Palace provides +3 [ICON_PEACE] Faith, +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production and +1 [ICON_CULTURE] Culture from each [ICON_CITYBANNER_CITY_LV1] City Hall [COLOR_NEGATIVE_TEXT](Lv1)[ENDCOLOR]</Text>
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_BELIEF_PAPAL_PRIMACY">
 			<Text>+35 to [ICON_INFLUENCE] Influence resting point with City-States following this religion</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_CHARITABLE_MISSIONS">
-			<Text>Influence boosts from [ICON_GOLD] Gold gifts to City-States are increased by 50%. +20 to [ICON_INFLUENCE] Influence resting point with City-States following this religion</Text>
+			<Text>Influence boosts from [ICON_GOLD] Gold gifts to City-States are increased by 50%. +30 to [ICON_INFLUENCE] Influence resting point with City-States following this religion</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_JESUIT_EDUCATION">
 			<Text>May build Universities, Public Schools, and Research Labs with [ICON_PEACE] Faith. +2 [ICON_PEACE] Faith from every Universities, Public Schools, and Research Labs</Text>
@@ -8886,14 +8892,57 @@
 			<Text>Religious Colonization</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_RELIGIOUS_COLONIZATION">
-			<Text>Use [ICON_PEACE] Faith to purchase Settler in Holy City, the price will go down when you adopt the policy Collective Rule.</Text>
+			<Text>Use [ICON_PEACE] Faith to purchase [COLOR_POSITIVE_TEXT]Settler[ENDCOLOR] in Holy City, the cost will decrease after you adopt the policy Collective Rule.</Text>
 		</Row>
+		<Row Tag="TXT_KEY_RELIGIOUS_SCIENCE_SHORT">
+			<Text>Religious Sciece</Text>
+		</Row>
+		<Row Tag="TXT_KEY_RELIGIOUS_SCIENCE">
+			<Text>+2 [ICON_RESEARCH] Science for each City following this religion, +2 [ICON_RESEARCH] Science from Holy Sites.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_SACRED_CALENDAR_SHORT">
+			<Text>Sacred Calendar</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_SACRED_CALENDAR">
+			<Text>+33% [ICON_GOLDEN_AGE] Golden Age length, +3 [ICON_GOLDEN_AGE] golden age points for every Religious Building purchased with [ICON_PEACE] Faith.</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_COMMUNITY">
+			<Text>+1% [ICON_PRODUCTION] Production for each follower (max +20%).</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_HEATHEN_CONVERSION">
+			<Text>Missionaries convert adjacent Barbarian units to this civilization, convert some of the heretics to your religion in captured city, and gain output of [ICON_PEACE] Faith, [ICON_CULTURE] Culture and [ICON_GOLD] Gold related to the number of converted believers.</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_MESSAGE_BELIEF_HEATHEN_CONVERSION_ALERT">
+			<Text>Some heretics in {1_name} were converted by us, gain [COLOR_POSITIVE_TEXT]{2_name} points[ENDCOLOR] [ICON_PEACE] Faith, [ICON_CULTURE] Culture and [ICON_GOLD] Gold.</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_BELIEF_JUST_WAR">
+			<Text>+20% [ICON_STRENGTH] Combat Strength near enemy cities that follow this religion, -50% [ICON_RESISTANCE] Resistance Time for this cities when captured.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_PEACE_LOVING">
+			<Text>+1 [ICON_HAPPINESS_1] Global Happiness for every 6 followers of this religion in non-enemy foreign cities</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_CHORAL_MUSIC">
+			<Text>Temples provide +4 [ICON_CULTURE] Culture in cities with 5 followers</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_DEFENDER_FAITH">
+			<Text>+20% [ICON_STRENGTH] Combat Strength near friendly cities that follow this religion, +15 XP for Units trained in holy city.</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_BELIEF_ORTHODOX_CHURCH_SHORT">
+			<Text>Orthodox Church</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_ORTHODOX_CHURCH">
+			<Text>+200% religious pressure emanating from the Holy City, each city of your religion will provide you with a one-time [ICON_CULTURE] Cultural output when [ICON_PROPHET] Great Prophet appears.</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_UNITY">
+			<Text>Gain 50% more [ICON_INFLUENCE] Influence than usual when you achieve any Quests from City-States with your Religion</Text>
+		</Replace>
+		
 
 		<Row Tag="TXT_KEY_BELIEF_FAITH_WITHOUT_BORDERS_SHORT">
 			<Text>Faith Without Borders</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_FAITH_WITHOUT_BORDERS">
-			<Text>+1 [ICON_PEACE] Faith for every 7 followers of this religion in other civilizations.</Text>
+			<Text>+1 [ICON_PEACE] Faith for every 4 followers of this religion in other civilizations.</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_BELIEF_MARSH_BELIEF_SHORT">
@@ -8930,7 +8979,7 @@
 			<Text>Universal Love</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_EIRENE">
-			<Text>+15% [ICON_CULTURE] Culture for The Empire if not at war</Text>
+			<Text>+25% [ICON_CULTURE] Culture for The Empire if not at war</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_INQUISITION_SHORT">
 			<Text>Inquisition</Text>
@@ -8948,7 +8997,7 @@
 			<Text>Juku</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SCIENCE_RELIGION">
-			<Text>+1% [ICON_RESEARCH] Science for each follower (max +50%)</Text>
+			<Text>+1% [ICON_RESEARCH] Science for each follower (max +30%)</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_EXTRA_RELIGION_SPREADS">
