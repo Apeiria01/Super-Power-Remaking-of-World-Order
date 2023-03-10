@@ -6493,7 +6493,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]炮艦外交[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]對於能夠勒索的城邦每回合獲得5[ICON_INFLUENCE]影響力（標準速度）。
-				[NEWLINE][ICON_BULLET]勒索城邦的軍事分數影響翻倍，勒索城邦消耗的影響力下降到1/4。
+				[NEWLINE][ICON_BULLET]勒索城邦的軍事分數影響翻倍，勒索城邦消耗的[ICON_INFLUENCE]影響力下降到1/4。
 				[NEWLINE][ICON_BULLET]勒索城邦可為最近的城市提供城邦一回合的糧食、產能、文化和科研。
 			</Text>
 		</Replace>
@@ -7582,13 +7582,13 @@
 			<Text>神祠+1[ICON_PEACE]信仰、+1[ICON_CULTURE]文化，建造工業時代之前的奇觀+10%[ICON_PRODUCTION]產能</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GODDESS_STRATEGY">
-			<Text>城市[ICON_RANGE_STRENGTH]遠程攻擊額外造成10點傷害，城墻+2[ICON_PEACE]信仰，城堡+4[ICON_CULTURE]文化</Text>
+			<Text>城墻+2[ICON_PEACE]信仰，城堡+4[ICON_CULTURE]文化</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_DESERT_FOLKLORE">
-			<Text>荒漠+1[ICON_PEACE]信仰，綠洲額外+2[ICON_CULTURE]文化、+1[ICON_PEACE]信仰</Text>
+			<Text>荒漠+1[ICON_PEACE]信仰，綠洲額外+1[ICON_CULTURE]文化、+1[ICON_PEACE]信仰</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GOD_KING">
-			<Text>宮殿+3[ICON_PEACE]信仰、1級城市+1[ICON_FOOD]食物、[ICON_PRODUCTION]產能、[ICON_CULTURE]文化</Text>
+			<Text>宮殿+3[ICON_PEACE]信仰、[ICON_CITYBANNER_CITY_LV1]一級城市+1[ICON_FOOD]食物、[ICON_PRODUCTION]產能、[ICON_CULTURE]文化</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GODDESS_HUNT">
 			<Text>獵場+1[ICON_FOOD]食物、+1[ICON_PEACE]信仰，[ICON_RES_BISON]野牛+1[ICON_FOOD]食物，[ICON_RES_DEER]野鹿+1[ICON_PRODUCTION]產能</Text>
@@ -7611,6 +7611,9 @@
 		<Replace Tag="TXT_KEY_BELIEF_MESSENGER_GODS">
 			<Text>有[ICON_CONNECTED]城市連接的城市+2[ICON_PEACE]信仰、+2[ICON_RESEARCH]科研</Text>
 		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_SETTLEMENTS_SHORT">
+			<Text>土地狂熱</Text>
+		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_SETTLEMENTS">
 			<Text>城市+2[ICON_CULTURE]文化，邊界擴張速度+50%</Text>
 		</Replace>
@@ -7623,6 +7626,9 @@
 				維多利亞湖+4[ICON_CULTURE]文化、+4[ICON_PEACE]信仰、+2[ICON_PRODUCTION]產能、+2[ICON_RESEARCH]科研
 			</Text>
 		</Row>
+		<Replace Tag="TXT_KEY_BELIEF_ASCETISM">
+			<Text>神祠+1[ICON_HAPPINESS_1]快樂</Text>
+		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_SACRED_WATERS">
 			<Text>沿河城市+1[ICON_HAPPINESS_1]快樂，湖泊、海濱+1[ICON_PEACE]信仰</Text>
 		</Replace>
@@ -7634,7 +7640,7 @@
 		</Row>
 
 		<Replace Tag="TXT_KEY_BELIEF_GURUSHIP">
-			<Text>城市有專業人員時+2[ICON_PEACE]信仰</Text>
+			<Text>城市有專業人員時+2[ICON_PEACE]信仰，+1[ICON_CULTURE]文化、[ICON_PRODUCTION]產能、[ICON_RESEARCH]科研</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_PILGRIMAGE">
 			<Text>其他文明每個信仰該宗教的城市為此宗教+4[ICON_PEACE]信仰</Text>
@@ -7655,7 +7661,7 @@
 			<Text>每座信仰該宗教的城市貢獻6[ICON_GOLD]金錢</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_TITHE">
-			<Text>每3個該宗教的信徒貢獻1[ICON_GOLD]金錢</Text>
+			<Text>每2個該宗教的信徒貢獻1[ICON_GOLD]金錢</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_MONASTERIES">
 			<Text>允許使用[ICON_PEACE]信仰購買修道院（+2[ICON_PEACE]信仰、+1[ICON_CULTURE]文化，城市[ICON_GREAT_PEOPLE]偉人誕生速度+25%）</Text>
@@ -7702,7 +7708,7 @@
 			<Text>對信仰此宗教的城邦的[ICON_INFLUENCE]影響力下限值+35</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_CHARITABLE_MISSIONS">
-			<Text>向城邦贈送[ICON_GOLD]金錢增加影響力的效果提升50%。對信仰此宗教的城邦的[ICON_INFLUENCE]影響力下限值+20</Text>
+			<Text>向城邦贈送[ICON_GOLD]金錢增加影響力的效果提升50%。對信仰此宗教的城邦的[ICON_INFLUENCE]影響力下限值+30</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_JESUIT_EDUCATION">
 			<Text>可以使用[ICON_PEACE]信仰購買大學、公立學校和研發實驗室。大學、公立學校和研發實驗室+2[ICON_PEACE]信仰</Text>
@@ -7734,16 +7740,57 @@
 			<Text>宗教殖民</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_RELIGIOUS_COLONIZATION">
-			<Text>在聖城可以使用信仰[ICON_PEACE]購買移民，采用自主的「集體統治」政策後購買價格下降。</Text>
+			<Text>在聖城可以使用信仰[ICON_PEACE]購買[COLOR_POSITIVE_TEXT]移民[ENDCOLOR]，采用自主的「集體統治」政策後購買價格下降</Text>
 		</Row>
-		
+		<Row Tag="TXT_KEY_RELIGIOUS_SCIENCE_SHORT">
+			<Text>宗教科學</Text>
+		</Row>
+		<Row Tag="TXT_KEY_RELIGIOUS_SCIENCE">
+			<Text>每座信仰該宗教的城市貢獻2[ICON_RESEARCH]科研，宗教聖地+2[ICON_RESEARCH]科研</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_SACRED_CALENDAR_SHORT">
+			<Text>神聖歷法</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_SACRED_CALENDAR">
+			<Text>[ICON_GOLDEN_AGE]黃金時代長度+33%，每種[ICON_PEACE]信仰購買的建築+3[ICON_GOLDEN_AGE]黃金時代點數</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_COMMUNITY">
+			<Text>每個信徒+1%[ICON_PRODUCTION]產能（最大+20%）</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_HEATHEN_CONVERSION">
+			<Text>傳教士可使相鄰的蠻族單位加入本文明，攻占敵方城市可以轉換部分異教徒為本宗教信徒，且獲得轉換信徒數相關的[ICON_PEACE]信仰、[ICON_CULTURE]文化、[ICON_GOLD]金錢</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_MESSAGE_BELIEF_HEATHEN_CONVERSION_ALERT">
+			<Text>{1_name}中的部分異教徒受到了我方感化皈依，獲得[COLOR_POSITIVE_TEXT]{2_name}點[ENDCOLOR][ICON_PEACE]信仰、[ICON_CULTURE]文化、[ICON_GOLD]金錢。</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_BELIEF_JUST_WAR">
+			<Text>在信仰該宗教的敵方城市附近+20%[ICON_STRENGTH]戰鬥力，且占領該城市後[ICON_RESISTANCE]抵抗時間減半</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_PEACE_LOVING">
+			<Text>每6個在非敵對的別國城市中該宗教的信徒貢獻1[ICON_HAPPINESS_1]快樂（全國）</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_CHORAL_MUSIC">
+			<Text>信眾規模達到5的城市中神廟+4[ICON_CULTURE]文化</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_DEFENDER_FAITH">
+			<Text>在信仰該宗教的己方城市附近+20%[ICON_STRENGTH]戰鬥力，聖城訓練的軍事單位+15經驗</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_BELIEF_ORTHODOX_CHURCH_SHORT">
+			<Text>正統教會</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_ORTHODOX_CHURCH">
+			<Text>聖城壓力+200%，大先知誕生時，你的每座信仰本宗教的城市都會為你提供一次性文化產出</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_UNITY">
+			<Text>完成信仰該宗教的城邦的任務獲得的[ICON_INFLUENCE]影響力+50%</Text>
+		</Replace>
+
 		<Row Tag="TXT_KEY_BELIEF_FAITH_WITHOUT_BORDERS_SHORT">
 			<Text>普世宗教</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_FAITH_WITHOUT_BORDERS">
-			<Text>其他文明的城市中每7個信徒+1 [ICON_PEACE]信仰值</Text>
+			<Text>其他文明的城市中每4個信徒+1[ICON_PEACE]信仰值</Text>
 		</Row>
-		
 		<Row Tag="TXT_KEY_BELIEF_MARSH_BELIEF_SHORT">
 			<Text>河童傳說</Text>
 		</Row>
@@ -7772,7 +7819,7 @@
 			<Text>兼愛非攻</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_EIRENE">
-			<Text>和平時期全國+15%[ICON_CULTURE]文化值產出。</Text>
+			<Text>和平時期全國+25%[ICON_CULTURE]文化值產出。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_INQUISITION_SHORT">
 			<Text>異端審判</Text>
@@ -7790,7 +7837,7 @@
 			<Text>文廟私塾</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SCIENCE_RELIGION">
-			<Text>每個信徒增加本城+1%[ICON_RESEARCH]科技值產出(最大+50%)</Text>
+			<Text>每個信徒增加本城+1%[ICON_RESEARCH]科技值產出(最大+30%)</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_EXTRA_RELIGION_SPREADS">

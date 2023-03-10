@@ -1837,10 +1837,10 @@
 			<BuildingType>BUILDING_BEVERAGE_FACTORY</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_LARGE</BuildingClassType>
 		</Row>
-	<!--<Row>
+		<!--<Row>
 			<BuildingType>BUILDING_COFFEE_HOUSE</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_LARGE</BuildingClassType>
-		</Row>
+		</Row>-->
 		<!--<Row>
 			<BuildingType>BUILDING_CELTS_IRISHPUB</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_LARGE</BuildingClassType>
