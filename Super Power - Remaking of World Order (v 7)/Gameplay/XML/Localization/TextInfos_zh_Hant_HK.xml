@@ -7779,7 +7779,7 @@
 			<Text>正統教會</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_ORTHODOX_CHURCH">
-			<Text>聖城壓力+200%，大先知誕生時，你的每座信仰本宗教的城市都會為你提供一次性文化產出</Text>
+			<Text>聖城壓力+200%，大先知誕生時，你的每座信仰本宗教的城市都會為你提供一次性[ICON_CULTURE]文化產出</Text>
 		</Row>
 		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_UNITY">
 			<Text>完成信仰該宗教的城邦的任務獲得的[ICON_INFLUENCE]影響力+50%</Text>
