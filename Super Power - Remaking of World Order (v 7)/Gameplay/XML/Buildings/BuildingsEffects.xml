@@ -1094,6 +1094,11 @@
 			<Yield>2</Yield>
 		</Row>
 		<Row>
+			<BuildingType>BUILDING_OTTOMAN_SIEGE_WORKSHOP</BuildingType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
 			<BuildingType>BUILDING_LONGHOUSE</BuildingType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<Yield>2</Yield>
@@ -2971,6 +2976,18 @@
 		<Row>
 			<BuildingType>BUILDING_SAWMILL</BuildingType>
 			<FeatureType>FEATURE_FOREST</FeatureType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_OTTOMAN_SIEGE_WORKSHOP</BuildingType>
+			<FeatureType>FEATURE_FOREST</FeatureType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_OTTOMAN_SIEGE_WORKSHOP</BuildingType>
+			<FeatureType>FEATURE_JUNGLE</FeatureType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<Yield>1</Yield>
 		</Row>
@@ -6632,6 +6649,22 @@
 			<BuildingType>BUILDING_SAWMILL</BuildingType>
 			<FlavorType>FLAVOR_EXPANSION</FlavorType>
 			<Flavor>45</Flavor>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_OTTOMAN_SIEGE_WORKSHOP</BuildingType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>70</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_OTTOMAN_SIEGE_WORKSHOP</BuildingType>
+			<FlavorType>FLAVOR_EXPANSION</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_OTTOMAN_SIEGE_WORKSHOP</BuildingType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>80</Flavor>
 		</Row>
 		
 		<Row>

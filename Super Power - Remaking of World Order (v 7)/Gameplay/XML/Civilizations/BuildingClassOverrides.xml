@@ -269,7 +269,11 @@
 			<BuildingType>BUILDING_OTTOMAN_EMPIRE_PORT</BuildingType>
 		</Row>
 
-		
+		<Row>
+			<CivilizationType>CIVILIZATION_OTTOMAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_SAWMILL</BuildingClassType>
+			<BuildingType>BUILDING_OTTOMAN_SIEGE_WORKSHOP</BuildingType>
+		</Row>
 
 		<Row>
 			<CivilizationType>CIVILIZATION_DENMARK</CivilizationType>

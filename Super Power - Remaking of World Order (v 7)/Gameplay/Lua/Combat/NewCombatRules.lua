@@ -224,6 +224,8 @@ function NewAttackEffect()
 	local AirSiege3ID = GameInfo.UnitPromotions["PROMOTION_AIR_SIEGE_3"].ID
 	local BombShelterID = GameInfo.Buildings["BUILDING_BOMB_SHELTER"].ID
 
+	local OrbanCannonID = GameInfo.UnitPromotions["PROMOTION_ORBAN_CANNON"].ID
+
 	local AttackAirCraftID = GameInfo.UnitPromotions["PROMOTION_AIR_ATTACK"].ID
 	local AirTarget1ID = GameInfo.UnitPromotions["PROMOTION_AIR_TARGETING_1"].ID
 	local AirTarget2ID = GameInfo.UnitPromotions["PROMOTION_AIR_TARGETING_2"].ID
@@ -796,6 +798,24 @@ function NewAttackEffect()
 			end
 		end
 
+		if attUnit:IsHasPromotion(OrbanCannonID) then
+			local isDoDestroy = defPlayer:IsMajorCiv() and Game.Rand(100, "OrbanCannon") < 40;
+			if isDoDestroy then
+				local buildingClassesToDestroy = {"BUILDINGCLASS_BARRACKS", "BUILDINGCLASS_ARMORY", "BUILDINGCLASS_WALLS", "BUILDINGCLASS_CASTLE"};
+				for i, buildingClass in ipairs(buildingClassesToDestroy) do
+					local buildingClassID = GameInfoTypes[buildingClass];
+					if defCity:IsHasBuildingClass(buildingClassID) then
+						defCity:SetNumRealBuildingClass(buildingClassID, 0);
+						if attPlayer:IsHuman() then
+							local text = Locale.ConvertTextKey("TXT_KEY_PROMOTION_ORBAN_CANNON_COMBAT_INFO", GameInfo.BuildingClasses[buildingClassID].Description);
+							Events.GameplayAlertMessage(text);
+						end
+
+						break;
+					end
+				end
+			end
+		end
 
 		------------------------Attack Aircraft attack units inside the city
 		if (attUnit:IsHasPromotion(AirTarget1ID) or attUnit:IsHasPromotion(AirTarget_CarrierID))

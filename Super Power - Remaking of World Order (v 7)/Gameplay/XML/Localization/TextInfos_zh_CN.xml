@@ -14665,5 +14665,33 @@
 				[NEWLINE][ICON_BULLET]处于[ICON_GOLDEN_AGE]黄金时代时，单位[ICON_WAR]战斗力+2%。
 			</Text>
 		</Replace>
+
+		<Replace Tag="TXT_KEY_BUILDING_OTTOMAN_SIEGE_WORKSHOP">
+			<Text>[ICON_PRODUCTION][ICON_WAR]攻城工坊</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_OTTOMAN_SIEGE_WORKSHOP_HELP">
+			<Text>
+				[ICON_BULLET]城市内所有[COLOR_POSITIVE_TEXT]森林[ENDCOLOR]和[COLOR_POSITIVE_TEXT]丛林[ENDCOLOR]地块+1[ICON_PRODUCTION]产能。
+				[NEWLINE][ICON_BULLET]研发炸药之后[COLOR_NEGATIVE_TEXT]过期[ENDCOLOR]（提供产出但不能建造）。
+				[NEWLINE][ICON_BULLET]研发因特网后+2[ICON_TOURISM]魅力。
+				[NEWLINE][ICON_BULLET]本城新建的攻城单位获得晋升【乌尔班大炮】，攻城时有一定概率摧毁城市的军事和防御建筑。
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_ORBAN_CANNON">
+			<Text>
+				乌尔班大炮
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_ORBAN_CANNON_HELP">
+			<Text>
+				攻击主要文明的城市时，有40%的概率摧毁一座军事建筑，按优先级：军营、军械所、城墙、城堡。
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_ORBAN_CANNON_COMBAT_INFO">
+			<Text>
+				你的乌尔班大炮破坏了敌方城市的{1_building}!
+			</Text>
+		</Replace>
+
 	</Language_zh_CN>
 </GameData>
