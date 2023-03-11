@@ -2625,7 +2625,7 @@
 			<Text>#總督府</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_SATRAPS_COURT_HELP">
-			<Text>替代#市政廳[COLOR_NEGATIVE_TEXT]（一級）[ENDCOLOR]，和普通[COLOR_NEGATIVE_TEXT]一級[ENDCOLOR]市政廳相比，無維護費，不消耗額外消費品且不會造成額外政策閾值上漲，沒有額外紅臉。另外，每座總督府+2[ICON_HAPPINESS_1]全局幸福度。</Text>
+			<Text>替代#市政廳[COLOR_NEGATIVE_TEXT]（一級）[ENDCOLOR]，和普通[COLOR_NEGATIVE_TEXT]一級[ENDCOLOR]市政廳相比，無維護費，不消耗額外消費品且不會造成額外政策閾值上漲，沒有額外紅臉。另外，每座總督府+2[ICON_HAPPINESS_1]全局幸福度，+4%[ICON_GOLDEN_AGE]黃金時代長度。</Text>
 		</Replace>
 
 		<Row>
@@ -14437,6 +14437,18 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_FREEPROMOTIONS">
 			<Text>[COLOR_CYAN]單位屬性:[ENDCOLOR]</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_BUILDING_PARADISE_GARDEN">
+			<Text>[ICON_GREAT_PEOPLE][ICON_GOLDEN_AGE][ICON_WAR]天堂花園</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_PARADISE_GARDEN_HELP">
+			<Text>
+				[ICON_BULLET]本城市+25%[ICON_GREAT_PEOPLE]偉人點數積累。
+				[NEWLINE][ICON_BULLET]只能在中型城市（15人口）建造。
+				[NEWLINE][ICON_BULLET][ICON_GOLDEN_AGE]黃金時代閾值降低3%。
+				[NEWLINE][ICON_BULLET]處於[ICON_GOLDEN_AGE]黃金時代時，單位[ICON_WAR]戰鬥力+2%。
+			</Text>
 		</Replace>
 	</Language_zh_Hant_HK>
 </GameData>

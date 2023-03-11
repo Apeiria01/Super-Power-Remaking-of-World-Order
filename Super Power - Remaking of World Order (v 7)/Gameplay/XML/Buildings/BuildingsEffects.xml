@@ -5451,7 +5451,22 @@
 			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
 			<Flavor>30</Flavor>
 		</Row>
-		
+
+		<Row>
+			<BuildingType>BUILDING_PARADISE_GARDEN</BuildingType>
+			<FlavorType>FLAVOR_GREAT_PEOPLE</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_PARADISE_GARDEN</BuildingType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>100</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_PARADISE_GARDEN</BuildingType>
+			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
 		
 		<Row>
 			<BuildingType>BUILDING_HEROIC_EPIC</BuildingType>

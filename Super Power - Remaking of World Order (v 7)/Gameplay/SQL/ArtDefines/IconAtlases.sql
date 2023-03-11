@@ -15,6 +15,10 @@ VALUES		('SP8_EXTRA_ATLAS', 				256, 		'SP8Units&BuildingsAtlas256.dds',				4, 	
 			('BUILDING_AZTEC_ATLAS', 			256, 		'HueyTeocalliPicture_256.dds',					1, 				1),
 			('BUILDING_AZTEC_ATLAS', 			128, 		'HueyTeocalliPicture_128.dds',					1, 				1),
 			('BUILDING_AZTEC_ATLAS', 			045, 		'HueyTeocalliPicture_045.dds',					1, 				1),
-			('BUILDING_AZTEC_ATLAS', 			064, 		'HueyTeocalliPicture_064.dds',					1, 				1);
+			('BUILDING_AZTEC_ATLAS', 			064, 		'HueyTeocalliPicture_064.dds',					1, 				1),
+			('BUILDING_PAIRIDAEZA_ATLAS', 		256, 		'PairidaezaPicture_256.dds',					1, 				1),
+			('BUILDING_PAIRIDAEZA_ATLAS', 		128, 		'PairidaezaPicture_128.dds',					1, 				1),
+			('BUILDING_PAIRIDAEZA_ATLAS', 		064, 		'PairidaezaPicture_064.dds',					1, 				1),
+			('BUILDING_PAIRIDAEZA_ATLAS', 		045, 		'PairidaezaPicture_045.dds',					1, 				1);
 --==========================================================================================================================
 --==========================================================================================================================

@@ -83,6 +83,12 @@
 		</Row>
 
 		<Row>
+			<CivilizationType>CIVILIZATION_PERSIA</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_GARDEN</BuildingClassType>
+			<BuildingType>BUILDING_PARADISE_GARDEN</BuildingType>
+		</Row>
+
+		<Row>
 			<CivilizationType>CIVILIZATION_JAPAN</CivilizationType>
 			<BuildingClassType>BUILDINGCLASS_CASTLE</BuildingClassType>
 			<BuildingType>BUILDING_JAPANESE_TENSHU</BuildingType>

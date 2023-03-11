@@ -2681,7 +2681,11 @@
 			<Text>#总督府</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_SATRAPS_COURT_HELP">
-			<Text>替代#市政厅[COLOR_NEGATIVE_TEXT]（一级）[ENDCOLOR]，和普通[COLOR_NEGATIVE_TEXT]一级[ENDCOLOR]市政厅相比，无维护费，不消耗额外消费品且不会造成额外政策阈值上涨，没有额外红脸。另外，每座总督府+2[ICON_HAPPINESS_1]全局快乐。</Text>
+			<Text>
+				替代#市政厅[COLOR_NEGATIVE_TEXT]（一级）[ENDCOLOR]，和普通[COLOR_NEGATIVE_TEXT]一级[ENDCOLOR]市政厅相比，
+				无维护费，不消耗额外消费品且不会造成额外政策阈值上涨，没有额外红脸。
+				另外，每座总督府+2[ICON_HAPPINESS_1]全局快乐，+4%[ICON_GOLDEN_AGE]黄金时代长度。
+			</Text>
 		</Replace>
 
 		<Row>
@@ -14640,6 +14644,18 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_FREEPROMOTIONS">
 			<Text>[COLOR_CYAN]单位属性:[ENDCOLOR]</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_BUILDING_PARADISE_GARDEN">
+			<Text>[ICON_GREAT_PEOPLE][ICON_GOLDEN_AGE][ICON_WAR]天堂花园</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_PARADISE_GARDEN_HELP">
+			<Text>
+				[ICON_BULLET]本城市+25%[ICON_GREAT_PEOPLE]伟人点数积累。
+				[NEWLINE][ICON_BULLET]只能在中型城市（15人口）建造。
+				[NEWLINE][ICON_BULLET][ICON_GOLDEN_AGE]黄金时代阈值降低3%。
+				[NEWLINE][ICON_BULLET]处于[ICON_GOLDEN_AGE]黄金时代时，单位[ICON_WAR]战斗力+2%。
+			</Text>
 		</Replace>
 	</Language_zh_CN>
 </GameData>

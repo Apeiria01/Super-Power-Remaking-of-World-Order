@@ -5273,7 +5273,8 @@
 			<Text>#Satrap's Court</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_SATRAPS_COURT_HELP">
-			<Text>Replace #City Hall [COLOR_NEGATIVE_TEXT](Lv1)[ENDCOLOR]. Compared with [COLOR_NEGATIVE_TEXT]Lv1[ENDCOLOR] City Hall, it requires no Maintenance, Consumer, extra Culture Threshold for implementing new policy or extra Unhappiness. In addition, it +2[ICON_HAPPINESS_1]Global Happiness.
+			<Text>
+				Replace #City Hall [COLOR_NEGATIVE_TEXT](Lv1)[ENDCOLOR]. Compared with [COLOR_NEGATIVE_TEXT]Lv1[ENDCOLOR] City Hall, it requires no Maintenance, Consumer, extra Culture Threshold for implementing new policy or extra Unhappiness. In addition, it +2[ICON_HAPPINESS_1]Global Happiness. +4% [ICON_GOLDEN_AGE] Golden Age Length.
 			</Text>
 		</Replace>
 
@@ -16685,6 +16686,18 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_FREE PROMOTIONS">
 			<Text>[COLOR_CYAN]unit promotions: [ENDCOLOR]</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_BUILDING_PARADISE_GARDEN">
+			<Text>[ICON_GREAT_PEOPLE][ICON_GOLDEN_AGE][ICON_WAR] Paradise Garden</Text>
+			</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_PARADISE_GARDEN_HELP">
+			<Text>
+				[ICON_BULLET] This city +25% [ICON_GREAT_PEOPLE] great man point accumulation.
+				[NEWLINE][ICON_BULLET] can only be built in middle cities (population 15).
+				[NEWLINE][ICON_BULLET][ICON_GOLDEN_AGE] Golden Age threshold is reduced by 3%.
+				[NEWLINE]When [ICON_BULLET] is in the golden age of [ICON_GOLDEN_AGE], unit [ICON_WAR] has +2% combat power.
+			</Text>
 		</Replace>
 	</Language_en_US>
 </GameData>

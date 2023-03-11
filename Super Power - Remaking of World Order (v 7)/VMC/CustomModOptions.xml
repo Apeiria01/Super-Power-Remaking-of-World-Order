@@ -960,6 +960,8 @@
 	<Row Class="6" Name="BUILDINGS_YIELD_FROM_OTHER_YIELD" Value="1" DbUpdates="1"/>
 
 	<Row Class="6" Name="ERA_EFFECTS_EXTENSIONS" Value="1" DbUpdates="1"/>
+
+	<Row Class="6" Name="BUILDINGS_GOLDEN_AGE_EXTEND" Value="1" DbUpdates="1"/>
   </CustomModOptions>
 
   <CustomModPostDefines>
