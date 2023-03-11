@@ -1,5 +1,7 @@
 alter table Buildings add column `MinorFriendshipAnchorChange` int not null default 0;
 alter table Buildings add column `MinorQuestFriendshipMod` int not null default 0;
+alter table Buildings add column `GoldenAgeUnitCombatModifier` int not null default 0;
+alter table Buildings add column `GoldenAgeMeterMod` int not null default 0;
 
 create table Building_YieldFromOtherYield(
 	BuildingType text not null references Buildings(Type),

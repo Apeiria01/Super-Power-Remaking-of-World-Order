@@ -1281,22 +1281,6 @@
 			<Description>TXT_KEY_BUILDING_CIV_S_P_ELE_RESOURCES</Description>
 		</Row>
 		
-		
-		<Row>
-			<Type>BUILDINGCLASS_EXTRA_RELIGION_SPREADS</Type>
-			<DefaultBuilding>BUILDING_EXTRA_RELIGION_SPREADS</DefaultBuilding>
-			<Description>TXT_KEY_EXTRA_RELIGION_SPREADS</Description>
-		</Row>
-		<Row>
-			<Type>BUILDINGCLASS_BELIEF_RELIGION_PRESSURE</Type>
-			<DefaultBuilding>BUILDING_BELIEF_RELIGION_PRESSURE</DefaultBuilding>
-			<Description>TXT_KEY_BELIEF_RELIGION_PRESSURE_SHORT</Description>
-		</Row>
-		<Row>
-			<Type>BUILDINGCLASS_BELIEF_TO_GLORY_OF_GOD</Type>
-			<DefaultBuilding>BUILDING_BELIEF_TO_GLORY_OF_GOD</DefaultBuilding>
-			<Description>TXT_KEY_BELIEF_TO_GLORY_OF_GOD_SHORT</Description>
-		</Row>
 		<!--New Build-->
 		<Row>
 			<Type>BUILDINGCLASS_GREEK_OLYMPICS_DUMMY</Type>

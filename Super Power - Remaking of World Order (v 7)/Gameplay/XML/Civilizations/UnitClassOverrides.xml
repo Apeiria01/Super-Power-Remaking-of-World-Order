@@ -140,11 +140,11 @@
 			<UnitClassType>UNITCLASS_LANCER</UnitClassType>
 			<UnitType>UNIT_OTTOMAN_SIPAHI</UnitType>
 		</Row>
-		<Row>
+		<!-- <Row>
 			<CivilizationType>CIVILIZATION_PERSIA</CivilizationType>
 			<UnitClassType>UNITCLASS_NUCLEAR_SUBMARINE</UnitClassType>
 			<UnitType>UNIT_PERSIAN_MINISUB</UnitType>
-		</Row>
+		</Row> -->
 
 
 		<Row>
@@ -206,12 +206,6 @@
 			<UnitClassType>UNITCLASS_FRIGATE</UnitClassType>
 			<UnitType>UNIT_OTTOMAN_PRIVATEER</UnitType>
 		</Row>
-		<Row>
-			<CivilizationType>CIVILIZATION_OTTOMAN</CivilizationType>
-			<UnitClassType>UNITCLASS_SAM_INFANTRY</UnitClassType>
-			<UnitType>UNIT_OTTOMAN_COBRA</UnitType>
-		</Row>
-		
 		
 		<Row>
 			<CivilizationType>CIVILIZATION_ZULU</CivilizationType>

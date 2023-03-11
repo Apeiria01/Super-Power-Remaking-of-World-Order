@@ -385,6 +385,27 @@
 			<ProhibitedCityTerrain>TERRAIN_DESERT</ProhibitedCityTerrain>
 		</Row>
 		<Row>
+			<Type>BUILDING_OTTOMAN_SIEGE_WORKSHOP</Type>
+			<BuildingClass>BUILDINGCLASS_SAWMILL</BuildingClass>
+			<FreeStartEra>ERA_INDUSTRIAL</FreeStartEra>
+			<Cost>100</Cost>
+			<GoldMaintenance>2</GoldMaintenance>
+			<PrereqTech>TECH_MACHINERY</PrereqTech>
+			<Help>TXT_KEY_BUILDING_OTTOMAN_SIEGE_WORKSHOP_HELP</Help>
+			<Description>TXT_KEY_BUILDING_OTTOMAN_SIEGE_WORKSHOP</Description>
+			<Civilopedia>TXT_KEY_CIV5_BUILDINGS_SAWMILL_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+			<ArtDefineTag>ART_DEF_BUILDING_FORGE</ArtDefineTag>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>66</ConquestProb>
+			<HurryCostModifier>25</HurryCostModifier>
+			<IconAtlas>BW_ATLAS_1</IconAtlas>
+			<PortraitIndex>28</PortraitIndex>
+			<EnhancedYieldTech>TECH_INTERNET</EnhancedYieldTech>
+			<TechEnhancedTourism>2</TechEnhancedTourism>
+			<TrainedFreePromotion>PROMOTION_ORBAN_CANNON</TrainedFreePromotion>
+		</Row>
+		<Row>
 			<Type>BUILDING_LONGHOUSE</Type>
 			<BuildingClass>BUILDINGCLASS_SAWMILL</BuildingClass>
 			<FreeStartEra>ERA_INDUSTRIAL</FreeStartEra>
@@ -945,7 +966,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_OBSERVATORY</ArtDefineTag>
 			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
 			<SpecialistCount>2</SpecialistCount>
-			<NearbyMountainRequired>true</NearbyMountainRequired>
 			<MinAreaSize>-1</MinAreaSize>
 			<ConquestProb>100</ConquestProb>
 			<HurryCostModifier>50</HurryCostModifier>
@@ -994,6 +1014,7 @@
 			<SpecialistCount>1</SpecialistCount>
 			<IconAtlas>BW_ATLAS_1</IconAtlas>
 			<PortraitIndex>39</PortraitIndex>
+			<ReligiousPressureModifier>100</ReligiousPressureModifier>
 		</Row>
 		
 
@@ -2429,71 +2450,6 @@
 			<GreatWorkCount>-1</GreatWorkCount>
 			<Help>TXT_KEY_BUILDING_CIV_S_P_ELE_RESOURCES</Help>
 			<Description>TXT_KEY_BUILDING_CIV_S_P_ELE_RESOURCES</Description>
-		</Row>
-		
-		<Row>
-			<Type>BUILDING_EXTRA_RELIGION_SPREADS</Type>
-			<BuildingClass>BUILDINGCLASS_EXTRA_RELIGION_SPREADS</BuildingClass>
-			<Cost>-1</Cost>
-			<FaithCost>-1</FaithCost>
-			<NukeImmune>true</NukeImmune>
-			<ConquestProb>100</ConquestProb>
-			<GreatWorkCount>-1</GreatWorkCount>
-			<ExtraMissionarySpreads>1</ExtraMissionarySpreads>
-			<Help>TXT_KEY_EXTRA_RELIGION_SPREADS</Help>
-			<Description>TXT_KEY_EXTRA_RELIGION_SPREADS</Description>
-		</Row>
-		<Row>
-			<Type>BUILDING_EXTRA_RELIGION_SPREADS_4</Type>
-			<BuildingClass>BUILDINGCLASS_EXTRA_RELIGION_SPREADS</BuildingClass>
-			<Cost>-1</Cost>
-			<FaithCost>-1</FaithCost>
-			<NukeImmune>true</NukeImmune>
-			<ConquestProb>100</ConquestProb>
-			<GreatWorkCount>-1</GreatWorkCount>
-			<ExtraMissionarySpreads>4</ExtraMissionarySpreads>
-			<Help>TXT_KEY_EXTRA_RELIGION_SPREADS_4</Help>
-			<Description>TXT_KEY_EXTRA_RELIGION_SPREADS_4</Description>
-		</Row>
-		<Row>
-			<Type>BUILDING_BELIEF_UNDERGROUND_SECT</Type>
-			<BuildingClass>BUILDINGCLASS_EXTRA_RELIGION_SPREADS</BuildingClass>
-			<Cost>-1</Cost>
-			<FaithCost>-1</FaithCost>
-			<NukeImmune>true</NukeImmune>
-			<ConquestProb>100</ConquestProb>
-			<GreatWorkCount>-1</GreatWorkCount>
-			<HolyCity>true</HolyCity>
-			<ExtraSpies>1</ExtraSpies>
-			<Help>TXT_KEY_BELIEF_UNDERGROUND_SECT</Help>
-			<Description>TXT_KEY_BELIEF_UNDERGROUND_SECT_SHORT</Description>
-		</Row>
-		<Row>
-			<Type>BUILDING_BELIEF_RELIGION_PRESSURE</Type>
-			<BuildingClass>BUILDINGCLASS_BELIEF_RELIGION_PRESSURE</BuildingClass>
-			<Cost>-1</Cost>
-			<FaithCost>-1</FaithCost>
-			<NukeImmune>true</NukeImmune>
-			<ConquestProb>100</ConquestProb>
-			<GreatWorkCount>-1</GreatWorkCount>
-			<HolyCity>true</HolyCity>
-			<LandmarksTourismPercent>25</LandmarksTourismPercent>
-			<GreatWorksTourismModifier>25</GreatWorksTourismModifier>
-			<ReligiousPressureModifier>100</ReligiousPressureModifier>
-			<Help>TXT_KEY_BELIEF_RELIGION_PRESSURE</Help>
-			<Description>TXT_KEY_BELIEF_RELIGION_PRESSURE_SHORT</Description>
-		</Row>
-		<Row>
-			<Type>BUILDING_BELIEF_TO_GLORY_OF_GOD</Type>
-			<BuildingClass>BUILDINGCLASS_BELIEF_TO_GLORY_OF_GOD</BuildingClass>
-			<Cost>-1</Cost>
-			<FaithCost>-1</FaithCost>
-			<NukeImmune>true</NukeImmune>
-			<ConquestProb>100</ConquestProb>
-			<GreatWorkCount>-1</GreatWorkCount>
-			<HolyCity>true</HolyCity>
-			<Help>TXT_KEY_BELIEF_TO_GLORY_OF_GOD</Help>
-			<Description>TXT_KEY_BELIEF_TO_GLORY_OF_GOD_SHORT</Description>
 		</Row>
 		<!--New build-->
 

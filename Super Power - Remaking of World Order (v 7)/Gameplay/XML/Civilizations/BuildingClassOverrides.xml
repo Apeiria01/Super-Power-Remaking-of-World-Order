@@ -83,6 +83,12 @@
 		</Row>
 
 		<Row>
+			<CivilizationType>CIVILIZATION_PERSIA</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_GARDEN</BuildingClassType>
+			<BuildingType>BUILDING_PARADISE_GARDEN</BuildingType>
+		</Row>
+
+		<Row>
 			<CivilizationType>CIVILIZATION_JAPAN</CivilizationType>
 			<BuildingClassType>BUILDINGCLASS_CASTLE</BuildingClassType>
 			<BuildingType>BUILDING_JAPANESE_TENSHU</BuildingType>
@@ -263,7 +269,11 @@
 			<BuildingType>BUILDING_OTTOMAN_EMPIRE_PORT</BuildingType>
 		</Row>
 
-		
+		<Row>
+			<CivilizationType>CIVILIZATION_OTTOMAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_SAWMILL</BuildingClassType>
+			<BuildingType>BUILDING_OTTOMAN_SIEGE_WORKSHOP</BuildingType>
+		</Row>
 
 		<Row>
 			<CivilizationType>CIVILIZATION_DENMARK</CivilizationType>

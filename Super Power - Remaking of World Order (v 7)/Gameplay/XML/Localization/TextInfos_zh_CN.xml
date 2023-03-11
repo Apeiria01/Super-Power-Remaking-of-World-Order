@@ -12,7 +12,7 @@
 			<Text>[COLOR_YELLOW]注意事项：[ENDCOLOR][NEWLINE]1、检查存档文件大小。[NEWLINE]2、查阅文明百科（快捷键[COLOR_POSITIVE_TEXT]F1[ENDCOLOR]）[NEWLINE]3、如果始终发生游戏崩溃或存档损坏，尝试Dx9。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_VERSION">
-			<Text>[COLOR_YELLOW]版本号 8.0[ENDCOLOR]</Text>
+			<Text>[COLOR_YELLOW]版本号 9.0[ENDCOLOR]</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_SP_MOD_SETUP">
@@ -73,19 +73,19 @@
 			<Text>SP-军团模式（高）</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_HIGH_HELP">
-			<Text>军团模式-高允许建立军团和集团军，兵力规模等级高。</Text>
+			<Text>允许建立军团和集团军，兵力规模等级高。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_MEDIUM">
-			<Text>SP-军团模式（中）</Text>
+		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_CLOSE">
+			<Text>SP-关闭 [COLOR_YELLOW]军团模式[ENDCOLOR]</Text>
 		</Row>
-		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_MEDIUM_HELP">
-			<Text>军团模式-高允许建立军团和集团军，兵力规模等级中。</Text>
+		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_CLOSE_HELP">
+			<Text>军团模式：允许建立军团和集团军</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_LOW">
 			<Text>SP-军团模式（低）</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_LOW_HELP">
-			<Text>军团模式-高允许建立军团和集团军，兵力规模等级低。</Text>
+			<Text>允许建立军团和集团军，兵力规模等级低。</Text>
 		</Row>
 
 
@@ -779,7 +779,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_INCA_QURIKANCHA_HELP</Tag>
-			<Text>城市2格内的本国领土上必须有山脉。</Text>
+			<Text>无须临近山脉，即可建造。</Text>
 		</Row>
 
 		<Row>
@@ -2681,7 +2681,11 @@
 			<Text>#总督府</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_SATRAPS_COURT_HELP">
-			<Text>替代#市政厅[COLOR_NEGATIVE_TEXT]（一级）[ENDCOLOR]，和普通[COLOR_NEGATIVE_TEXT]一级[ENDCOLOR]市政厅相比，无维护费，不消耗额外消费品且不会造成额外政策阈值上涨，没有额外红脸。另外，每座总督府+2[ICON_HAPPINESS_1]全局快乐。</Text>
+			<Text>
+				替代#市政厅[COLOR_NEGATIVE_TEXT]（一级）[ENDCOLOR]，和普通[COLOR_NEGATIVE_TEXT]一级[ENDCOLOR]市政厅相比，
+				无维护费，不消耗额外消费品且不会造成额外政策阈值上涨，没有额外红脸。
+				另外，每座总督府+2[ICON_HAPPINESS_1]全局快乐，+4%[ICON_GOLDEN_AGE]黄金时代长度。
+			</Text>
 		</Replace>
 
 		<Row>
@@ -3855,7 +3859,12 @@
 			<Text>[ICON_GREAT_WRITER][ICON_RESEARCH]莫卧儿清真寺</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_MUGHAL_FORT_HELP">
-			<Text>本城市中每2[ICON_CITIZEN]市民+1[ICON_RESEARCH]科研。[NEWLINE][NEWLINE]没有额外[ICON_GOLD]维护费。[NEWLINE][NEWLINE]只能在大型城市（26人口）建造。</Text>
+			<Text>
+				本城市中每2[ICON_CITIZEN]市民+1[ICON_RESEARCH]科研。
+				[NEWLINE][ICON_BULLET]没有额外[ICON_GOLD]维护费。
+				[NEWLINE][ICON_BULLET]只能在中型城市（15人口）建造。
+				[NEWLINE][ICON_BULLET]本城宗教压力+100%。
+			</Text>
 		</Replace>
 
 		<Row>
@@ -5669,7 +5678,12 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_WAYFINDING">
-			<Text>单位初始时即能以海运模式进入大洋。市政厅最高等级为3级（无4和5级城市）。在摩艾石像群周边2格内单位+10%[ICON_STRENGTH]战斗力。</Text>
+			<Text>
+				[ICON_BULLET]单位初始时即能以海运模式进入大洋。
+				[NEWLINE][ICON_BULLET]移民可以在海滨地块建城，海滨城市获得额外的[ICON_PRODUCTION]产能和[ICON_CULTURE]文化，随时代增加。
+				[NEWLINE][ICON_BULLET]市政厅最高等级为3级（无4和5级城市）。
+				[NEWLINE][ICON_BULLET]在摩艾石像群周边2格内单位+10%[ICON_STRENGTH]战斗力。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_CULTURE_FROM_KILLS">
@@ -5685,7 +5699,10 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_POPULATION_GROWTH">
-			<Text>城市[ICON_CITIZEN]人口带来的[ICON_HAPPINESS_4]不满-20%。</Text>
+			<Text>
+				[ICON_BULLET]城市[ICON_CITIZEN]人口带来的[ICON_HAPPINESS_4]不满-20%。
+				[NEWLINE][ICON_BULLET]城市中每个主流宗教信徒+1%[ICON_FOOD]粮食产出。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_EXTRA_BELIEF">
@@ -5732,7 +5749,13 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_GREAT_ANDEAN_ROAD">
-			<Text>单位进入丘陵地块不消耗额外移动力。丘陵上的设施不需要维护费，其他地形上的设施维护费减半。工人可以铲除丘陵地块上的[ICON_RES_SHEEP]羊。</Text>
+			<Text>
+				[ICON_BULLET]单位进入丘陵地块不消耗额外移动力。
+				[NEWLINE][ICON_BULLET]丘陵上的设施不需要维护费，其他地形上的设施维护费减半。
+				[NEWLINE][ICON_BULLET]工人可以铲除丘陵地块上的[ICON_RES_SHEEP]羊。
+				[NEWLINE][ICON_BULLET]平民单位可以进入山脉地块。
+				[NEWLINE][ICON_BULLET]移民可以在山脉地块上建立城市。山脉城市获得额外的[ICON_RESEARCH]科研和[ICON_FOOD]食物产出，随时代加成。
+			</Text>
 		</Replace>
 
 		<!--*******************Unique Units' Names*****************-->
@@ -6184,7 +6207,6 @@
 		<Replace Tag="TXT_KEY_POLICY_LANDED_ELITE_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]绅缙阶层[ENDCOLOR]
-				[NEWLINE][ICON_BULLET][ICON_CAPITAL]首都地块+4[ICON_FOOD]食物产出。
 				[NEWLINE][ICON_BULLET]每处农田、渔船、梯田、圩田、卡斯巴哈、蹄皮帐篷设施+1[ICON_FOOD]食物产出。
 			</Text>
 		</Replace>
@@ -6199,7 +6221,6 @@
 		<Replace Tag="TXT_KEY_POLICY_OLIGARCHY_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]寡头政体[ENDCOLOR]
-				[NEWLINE][ICON_CAPITAL]首都地块+4[ICON_PRODUCTION]产能。
 				[NEWLINE]各个不同规模的城市获得相应的额外产能：
 				[NEWLINE][ICON_BULLET][ICON_CITYBANNER_CITY_SMALL]小型城市（6[ICON_CITIZEN]人口）：+4[ICON_PRODUCTION]产能。
 				[NEWLINE][ICON_BULLET][ICON_CITYBANNER_CITY_MEDIUM]中型城市（15[ICON_CITIZEN]人口）：+8[ICON_PRODUCTION]产能。
@@ -6214,7 +6235,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]君主政体[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]城市规模导致的[ICON_HAPPINESS_4]不满减半。
-				[NEWLINE][ICON_BULLET][ICON_CAPITAL]首都每个[ICON_CITIZEN]市民+1[ICON_GOLD]金钱。
+				[NEWLINE][ICON_BULLET][ICON_CAPITAL]首都每2[ICON_CITIZEN]人口+1[ICON_FOOD]食物、[ICON_CULTURE]文化、[ICON_PRODUCTION]产能、[ICON_GOLD]金钱。
 			</Text>
 		</Replace>
 
@@ -6224,7 +6245,6 @@
 		<Replace Tag="TXT_KEY_POLICY_PREFECTURE_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]郡县制度[ENDCOLOR]
-				[NEWLINE][ICON_CAPITAL]首都地块+4[ICON_CULTURE]文化产出。
 				[NEWLINE]各个不同规模的城市获得相应的额外文化产出：
 				[NEWLINE][ICON_BULLET][ICON_CITYBANNER_CITY_SMALL]小型城市（6[ICON_CITIZEN]人口）：+4[ICON_CULTURE]文化。
 				[NEWLINE][ICON_BULLET][ICON_CITYBANNER_CITY_MEDIUM]中型城市（15[ICON_CITIZEN]人口）：+8[ICON_CULTURE]文化。
@@ -6590,7 +6610,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]炮舰外交[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]对于能够勒索的城邦每回合获得5[ICON_INFLUENCE]影响力（标准速度）。
-				[NEWLINE][ICON_BULLET]勒索城邦的军事分数影响翻倍，勒索城邦消耗的影响力下降到1/4。
+				[NEWLINE][ICON_BULLET]勒索城邦的军事分数影响翻倍，勒索城邦消耗的[ICON_INFLUENCE]影响力下降到1/4。
 				[NEWLINE][ICON_BULLET]勒索城邦可为最近的城市提供城邦一回合的粮食、产能、文化和科研。
 			</Text>
 		</Replace>
@@ -7660,33 +7680,96 @@
 
 		<!--Religions-->
 		<!--**************************************************Belief Texts Tweak*************************************-->
-
+		<!--Pantheon-->
+		<Replace Tag="TXT_KEY_BELIEF_GODDESS_LOVE_SHORT">
+			<Text>创世母神</Text>
+		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_ANCESTOR_WORSHIP">
 			<Text>神祠+1[ICON_PEACE]信仰、+1[ICON_CULTURE]文化</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_DANCE_AURORA">
-			<Text>无森林的冻土地块+2[ICON_PEACE]信仰</Text>
+		<Replace Tag="TXT_KEY_BELIEF_GODDESS_LOVE">
+			<Text>城市+1[ICON_HAPPINESS_1]快乐，城市[ICON_CITIZEN]人口增长时获得6点[ICON_PEACE]信仰（标准速度下）</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_MESSENGER_GODS">
-			<Text>有[ICON_CONNECTED]城市连接的城市+1[ICON_RESEARCH]科研、+1[ICON_CULTURE]文化、+1[ICON_GOLD]金钱</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_GOD_CRAFTSMEN">
-			<Text>玉石、琥珀、珊瑚和天青石+1[ICON_PEACE]信仰、+1[ICON_CULTURE]文化</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_SUN_GOD">
-			<Text>橄榄、蔗糖、香水和烟草+1[ICON_PEACE]信仰、+1[ICON_CULTURE]文化</Text>
+		<Replace Tag="TXT_KEY_BELIEF_OPEN_SKY">
+			<Text>牧场+1[ICON_CULTURE]文化,[ICON_RES_COW]牛+1[ICON_PEACE]信仰、[ICON_RES_SHEEP]羊+1[ICON_FOOD]食物、[ICON_RES_HORSE]马+1[ICON_PRODUCTION]产能</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_EARTH_MOTHER">
-			<Text>香料、柑橘、香蕉和棉花+1[ICON_PEACE]信仰</Text>
+			<Text>香料、柑橘、香蕉和棉花+1[ICON_PEACE]信仰、+1[ICON_FOOD]食物</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_FERTILITY_RITES">
+			<Text>粮仓+2[ICON_PEACE]信仰，[ICON_RES_WHEAT]小麦+1[ICON_PEACE]信仰</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_GOD_CRAFTSMEN">
+			<Text>玉石、琥珀、珊瑚和天青石+1[ICON_PEACE]信仰、+1[ICON_PRODUCTION]产能</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_DANCE_AURORA_SHORT">
+			<Text>燧明天火</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_DANCE_AURORA">
+			<Text>城市+1[ICON_PRODUCTION]产能、+1[ICON_PEACE]信仰</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_ANCESTOR_WORSHIP">
+			<Text>神祠+1[ICON_PEACE]信仰、+1[ICON_CULTURE]文化，建造工业时代之前的奇观+10%[ICON_PRODUCTION]产能</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_GODDESS_STRATEGY">
+			<Text>城墙+2[ICON_PEACE]信仰，城堡+4[ICON_CULTURE]文化</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_DESERT_FOLKLORE">
+			<Text>荒漠+1[ICON_PEACE]信仰，绿洲额外+1[ICON_CULTURE]文化、+1[ICON_PEACE]信仰</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_GOD_KING">
+			<Text>宫殿+3[ICON_PEACE]信仰、[ICON_CITYBANNER_CITY_LV1]一级城市+1[ICON_FOOD]食物、[ICON_PRODUCTION]产能、[ICON_CULTURE]文化</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GODDESS_HUNT">
-			<Text>猎场+1[ICON_FOOD]食物、+1[ICON_PEACE]信仰</Text>
+			<Text>猎场+1[ICON_FOOD]食物、+1[ICON_PEACE]信仰，[ICON_RES_BISON]野牛+1[ICON_FOOD]食物，[ICON_RES_DEER]野鹿+1[ICON_PRODUCTION]产能</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_GURUSHIP">
-			<Text>城市有专业人员时+2[ICON_PEACE]信仰</Text>
+		<Replace Tag="TXT_KEY_BELIEF_SACRED_PATH">
+			<Text>丛林+1[ICON_CULTURE]文化、+1[ICON_PEACE]信仰</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_GOD_SEA">
+			<Text>渔船+1[ICON_CULTURE]文化，捕捞船+1[ICON_PEACE]信仰、+1[ICON_CULTURE]文化</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_ORAL_TRADITION">
+			<Text>种植园+1[ICON_CULTURE]文化、+1[ICON_GOLD]金钱，[ICON_RES_SILK]丝绸、[ICON_RES_TEA]茶叶+1[ICON_CULTURE]文化</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_SUN_GOD">
+			<Text>橄榄、蔗糖、香水和烟草+1[ICON_PEACE]信仰、+1[ICON_RESEARCH]科研</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_GOD_WAR">
+			<Text>在你的城市6格以内战斗胜利时获得[ICON_PEACE]信仰，兵营、军械所+2[ICON_PEACE]信仰</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_MESSENGER_GODS">
+			<Text>有[ICON_CONNECTED]城市连接的城市+2[ICON_PEACE]信仰、+2[ICON_RESEARCH]科研</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_SETTLEMENTS_SHORT">
+			<Text>土地狂热</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_SETTLEMENTS">
-			<Text>城市边界扩张速度+50%</Text>
+			<Text>城市+2[ICON_CULTURE]文化，边界扩张速度+50%</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_BELIEF_GODDESS_OF_PURITY_SHORT">
+			<Text>纯洁女神</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_GODDESS_OF_PURITY">
+			<Text>
+				青春泉+4[ICON_FOOD]食物、+4[ICON_PEACE]信仰、+2[ICON_PRODUCTION]产能、+2[ICON_RESEARCH]科研，
+				维多利亚湖+4[ICON_CULTURE]文化、+4[ICON_PEACE]信仰、+2[ICON_PRODUCTION]产能、+2[ICON_RESEARCH]科研
+			</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_BELIEF_ASCETISM">
+			<Text>神祠+1[ICON_HAPPINESS_1]快乐</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_SACRED_WATERS">
+			<Text>沿河城市+1[ICON_HAPPINESS_1]快乐，湖泊、海滨+1[ICON_PEACE]信仰</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_BELIEF_SNOW_BELIEF_SHORT">
+			<Text>风暴之神</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_SNOW_BELIEF">
+			<Text>无森林的冻土地块+2[ICON_PEACE]信仰,雪地+1[ICON_FOOD]食物、+2[ICON_PEACE]信仰</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_BELIEF_GURUSHIP">
+			<Text>城市有专业人员时+2[ICON_PEACE]信仰，+1[ICON_CULTURE]文化、[ICON_PRODUCTION]产能、[ICON_RESEARCH]科研</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_PILGRIMAGE">
 			<Text>其他文明每个信仰该宗教的城市为此宗教+4[ICON_PEACE]信仰</Text>
@@ -7701,32 +7784,22 @@
 			<Text>全国每座信仰该宗教的城市贡献1[ICON_HAPPINESS_1]快乐</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_INITIATION_RITES">
-			<Text>每座城市首次皈依该宗教时贡献金钱（标速255[ICON_GOLD]金钱，史诗345[ICON_GOLD]金钱）</Text>
+			<Text>每座城市首次皈依该宗教时贡献金钱（标速180[ICON_GOLD]金钱，史诗243[ICON_GOLD]金钱）</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_CHURCH_PROPERTY">
 			<Text>每座信仰该宗教的城市贡献6[ICON_GOLD]金钱</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_TITHE">
-			<Text>每3个该宗教的信徒贡献1[ICON_GOLD]金钱</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_GOD_WAR">
-			<Text>在你的城市6格以内战斗胜利时获得[ICON_PEACE]信仰</Text>
+			<Text>每2个该宗教的信徒贡献1[ICON_GOLD]金钱</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_MONASTERIES">
 			<Text>允许使用[ICON_PEACE]信仰购买修道院（+2[ICON_PEACE]信仰、+1[ICON_CULTURE]文化，城市[ICON_GREAT_PEOPLE]伟人诞生速度+25%）</Text>
-		</Replace>
-
-		<Replace Tag="TXT_KEY_BELIEF_GODDESS_STRATEGY">
-			<Text>城墙和城堡+2[ICON_PEACE]信仰</Text>
-		</Replace>
+		</Replace>	
 		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_ART">
 			<Text>圣索菲亚、杰内大清真寺、吴哥窟、婆罗浮屠、西斯廷教堂、圣母院+2[ICON_TOURISM]魅力</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_FEED_WORLD">
 			<Text>神祠和神庙+2[ICON_FOOD]食物</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_FERTILITY_RITES">
-			<Text>粮仓+2[ICON_PEACE]信仰</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_MONUMENT_GODS">
 			<Text>纪念碑+2[ICON_PEACE]信仰</Text>
@@ -7755,21 +7828,14 @@
 		<Replace Tag="TXT_KEY_BELIEF_SWORD_PLOWSHARES">
 			<Text>和平时期[ICON_FOOD]食物积累速率提高25%</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_GOD_SEA">
-			<Text>渔船+1[ICON_CULTURE]文化</Text>
-		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_TEARS_OF_GODS">
 			<Text>每一处钻石和珍珠+2[ICON_PEACE]信仰、+2[ICON_CULTURE]文化</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_GOD_KING">
-			<Text>宫殿+4[ICON_PEACE]信仰</Text>
-		</Replace>
-
 		<Replace Tag="TXT_KEY_BELIEF_PAPAL_PRIMACY">
 			<Text>对信仰此宗教的城邦的[ICON_INFLUENCE]影响力下限值+35</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_CHARITABLE_MISSIONS">
-			<Text>向城邦赠送[ICON_GOLD]金钱增加影响力的效果提升50%。对信仰此宗教的城邦的[ICON_INFLUENCE]影响力下限值+20</Text>
+			<Text>向城邦赠送[ICON_GOLD]金钱增加影响力的效果提升50%。对信仰此宗教的城邦的[ICON_INFLUENCE]影响力下限值+30</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_JESUIT_EDUCATION">
 			<Text>可以使用[ICON_PEACE]信仰购买大学、公立学校和研发实验室。大学、公立学校和研发实验室+2[ICON_PEACE]信仰</Text>
@@ -7797,24 +7863,69 @@
 		</Replace>
 
 		<!--**************************************************New Belief Texts*************************************-->
+		<Row Tag="TXT_KEY_BELIEF_RELIGIOUS_COLONIZATION_SHORT">
+			<Text>宗教殖民</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_RELIGIOUS_COLONIZATION">
+			<Text>在圣城可以使用信仰[ICON_PEACE]购买[COLOR_POSITIVE_TEXT]移民[ENDCOLOR]，采用自主的“集体统治”政策后购买价格下降</Text>
+		</Row>
+		<Row Tag="TXT_KEY_RELIGIOUS_SCIENCE_SHORT">
+			<Text>宗教科学</Text>
+		</Row>
+		<Row Tag="TXT_KEY_RELIGIOUS_SCIENCE">
+			<Text>每座信仰该宗教的城市贡献2[ICON_RESEARCH]科研，宗教圣地+2[ICON_RESEARCH]科研</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_SACRED_CALENDAR_SHORT">
+			<Text>神圣历法</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_SACRED_CALENDAR">
+			<Text>[ICON_GOLDEN_AGE]黄金时代长度+33%，每种[ICON_PEACE]信仰购买的建筑+3[ICON_GOLDEN_AGE]黄金时代点数</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_COMMUNITY">
+			<Text>每个信徒+1%[ICON_PRODUCTION]产能（最大+20%）</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_HEATHEN_CONVERSION">
+			<Text>传教士可使相邻的蛮族单位加入本文明，攻占敌方城市可以转换部分异教徒为本宗教信徒，且获得转换信徒数相关的[ICON_PEACE]信仰、[ICON_CULTURE]文化、[ICON_GOLD]金钱</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_MESSAGE_BELIEF_HEATHEN_CONVERSION_ALERT">
+			<Text>{1_name}中的部分异教徒受到了我方感化皈依，获得[COLOR_POSITIVE_TEXT]{2_name}点[ENDCOLOR][ICON_PEACE]信仰、[ICON_CULTURE]文化、[ICON_GOLD]金钱。</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_BELIEF_HEATHEN_CONVERSION">
+			<Text>传教士可使相邻的蛮族单位加入本文明，攻占敌方城市可以转换部分异教徒为本宗教信徒，且获得转换信徒数相关的[ICON_PEACE]信仰、[ICON_CULTURE]文化、[ICON_GOLD]金钱</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_JUST_WAR">
+			<Text>在信仰该宗教的敌方城市附近+20%[ICON_STRENGTH]战斗力，且占领该城市后[ICON_RESISTANCE]抵抗时间减半</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_PEACE_LOVING">
+			<Text>每6个在非敌对的别国城市中该宗教的信徒贡献1[ICON_HAPPINESS_1]快乐（全国）</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_CHORAL_MUSIC">
+			<Text>信众规模达到5的城市中神庙+4[ICON_CULTURE]文化</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_DEFENDER_FAITH">
+			<Text>在信仰该宗教的己方城市附近+20%[ICON_STRENGTH]战斗力，圣城训练的军事单位+15经验</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_BELIEF_ORTHODOX_CHURCH_SHORT">
+			<Text>正统教会</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_ORTHODOX_CHURCH">
+			<Text>圣城压力+200%，大先知诞生时，你的每座信仰本宗教的城市都会为你提供一次性[ICON_CULTURE]文化产出</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_UNITY">
+			<Text>完成信仰该宗教的城邦的任务获得的[ICON_INFLUENCE]影响力+50%</Text>
+		</Replace>
+
 		<Row Tag="TXT_KEY_BELIEF_FAITH_WITHOUT_BORDERS_SHORT">
 			<Text>普世宗教</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_FAITH_WITHOUT_BORDERS">
-			<Text>其他文明的城市中每7个信徒+1 [ICON_PEACE]信仰</Text>
+			<Text>其他文明的城市中每4个信徒+1[ICON_PEACE]信仰</Text>
 		</Row>
-
 		<Row Tag="TXT_KEY_BELIEF_MARSH_BELIEF_SHORT">
 			<Text>河童传说</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_MARSH_BELIEF">
 			<Text>沼泽+3[ICON_PEACE]信仰。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BELIEF_SNOW_BELIEF_SHORT">
-			<Text>风暴之神</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BELIEF_SNOW_BELIEF">
-			<Text>雪地+2[ICON_PEACE]信仰并+1[ICON_FOOD]食物。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_RIVER_CRAFTSMAN_SHORT">
 			<Text>河图洛书</Text>
@@ -7838,7 +7949,7 @@
 			<Text>兼爱非攻</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_EIRENE">
-			<Text>和平时期全国+15%[ICON_CULTURE]文化产出。</Text>
+			<Text>和平时期全国+25%[ICON_CULTURE]文化产出。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_INQUISITION_SHORT">
 			<Text>异端审判</Text>
@@ -7850,17 +7961,20 @@
 			<Text>神圣殿堂</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_RELIGION_PRESSURE">
-			<Text>25%来自于世界奇观、自然奇观和地面设施（风景地标、摩艾石像群、宫堡等）的[ICON_CULTURE]文化产出增加到该城市的[ICON_TOURISM]魅力产出中。来自杰作的[ICON_TOURISM]魅力产出+25%。来自圣城的宗教压力+100%</Text>
+			<Text>25%来自于世界奇观、自然奇观和地面设施（风景地标、摩艾石像群、宫堡等）的[ICON_CULTURE]文化产出增加到该城市的[ICON_TOURISM]魅力产出中</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SCIENCE_RELIGION_SHORT">
 			<Text>文庙私塾</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SCIENCE_RELIGION">
-			<Text>每个信徒增加本城+1%[ICON_RESEARCH]科研产出(最大+50%)</Text>
+			<Text>每个信徒增加本城+1%[ICON_RESEARCH]科研产出(最大+30%)</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_EXTRA_RELIGION_SPREADS">
 			<Text>+1次宗教传播次数</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EXTRA_RELIGION_SPREADS_2">
+			<Text>+2次宗教传播次数</Text>
 		</Row>
 		<Row Tag="TXT_KEY_EXTRA_RELIGION_SPREADS_4">
 			<Text>+4次宗教传播次数</Text>
@@ -7894,7 +8008,18 @@
 		<Row Tag="TXT_KEY_PROMOTION_ARTIST_PROMOTION_HELP">
 			<Text>开启一轮[ICON_GOLDEN_AGE]黄金时代，回合数值等同于[ICON_GREAT_ARTIST]大艺术家。</Text>
 		</Row>
-
+		<Row Tag="TXT_KEY_RELIGION_HOLYCITY_MARK">
+			<Text>圣城标记</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_BELIEF_MISSIONARY_ZEAL">
+			<Text>传教士传教能力+25%，圣城诞生的传教士传教次数+2。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_MESSIAH">
+			<Text>大先知能力增强25%，催生大先知所需的[ICON_PEACE]信仰减少25%，大先知能进入未开边国家领土。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_TEXTS">
+			<Text>宗教传播速度+25%(研发印刷机后+50%)，宗教以双倍速度传播到友好的城邦</Text>
+		</Replace>
 
 
 		<!--Resources-->
@@ -7958,7 +8083,7 @@
 				人类玩家也可以组建军团和集团军，不过只能在有兵工厂和军事基地的城市范围内通过消耗大军（陆军）或提督（海军）实现；[NEWLINE][NEWLINE]
 				引入“兵力”设定，兵力决定你总共能拥有的军事单位数量，兵力点满后获取军事单位将变得非常困难，新建的军事单位也会被清除，AI兵力点满后也将停止刷出单位，分三个游戏选项档：[NEWLINE]
 				高：除小镇以外的每个城市规模等级提供4兵力点，玩家初始24点，AI初始32点 —— 适合高配置玩家；[NEWLINE]
-				中：除小镇以外的每个城市规模等级提供2兵力点，玩家初始12点，AI初始16点 —— 适合中配置玩家；[NEWLINE]
+				中：除小镇以外的每个城市规模等级提供2兵力点，玩家初始12点，AI初始16点 —— 适合中配置玩家（默认情况）；[NEWLINE]
 				低：除小镇以外的每个城市规模等级提供1兵力点，玩家初始 6点，AI初始 8点 —— 适合低配置玩家或和平主义者；[NEWLINE]
 				（平民、要塞及空军单位不计入，也不进行单位合并操作，不过舰载机会跟随载具获得相应“提升”）
 			</Text>
@@ -14528,5 +14653,45 @@
 		<Replace Tag="TXT_KEY_FREEPROMOTIONS">
 			<Text>[COLOR_CYAN]单位属性:[ENDCOLOR]</Text>
 		</Replace>
+
+		<Replace Tag="TXT_KEY_BUILDING_PARADISE_GARDEN">
+			<Text>[ICON_GREAT_PEOPLE][ICON_GOLDEN_AGE][ICON_WAR]天堂花园</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_PARADISE_GARDEN_HELP">
+			<Text>
+				[ICON_BULLET]本城市+25%[ICON_GREAT_PEOPLE]伟人点数积累。
+				[NEWLINE][ICON_BULLET]只能在中型城市（15人口）建造。
+				[NEWLINE][ICON_BULLET][ICON_GOLDEN_AGE]黄金时代阈值降低3%。
+				[NEWLINE][ICON_BULLET]处于[ICON_GOLDEN_AGE]黄金时代时，单位[ICON_WAR]战斗力+2%。
+			</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_BUILDING_OTTOMAN_SIEGE_WORKSHOP">
+			<Text>[ICON_PRODUCTION][ICON_WAR]攻城工坊</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_OTTOMAN_SIEGE_WORKSHOP_HELP">
+			<Text>
+				[ICON_BULLET]城市内所有[COLOR_POSITIVE_TEXT]森林[ENDCOLOR]和[COLOR_POSITIVE_TEXT]丛林[ENDCOLOR]地块+1[ICON_PRODUCTION]产能。
+				[NEWLINE][ICON_BULLET]研发炸药之后[COLOR_NEGATIVE_TEXT]过期[ENDCOLOR]（提供产出但不能建造）。
+				[NEWLINE][ICON_BULLET]研发因特网后+2[ICON_TOURISM]魅力。
+				[NEWLINE][ICON_BULLET]本城新建的攻城单位获得晋升【乌尔班大炮】，攻城时有一定概率摧毁城市的军事和防御建筑。
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_ORBAN_CANNON">
+			<Text>
+				乌尔班大炮
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_ORBAN_CANNON_HELP">
+			<Text>
+				攻击主要文明的城市时，有40%的概率摧毁一座军事建筑，按优先级：军营、军械所、城墙、城堡。
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_ORBAN_CANNON_COMBAT_INFO">
+			<Text>
+				你的乌尔班大炮破坏了敌方城市的{1_building}!
+			</Text>
+		</Replace>
+
 	</Language_zh_CN>
 </GameData>
