@@ -3859,7 +3859,12 @@
 			<Text>[ICON_GREAT_WRITER][ICON_RESEARCH]莫卧儿清真寺</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_MUGHAL_FORT_HELP">
-			<Text>本城市中每2[ICON_CITIZEN]市民+1[ICON_RESEARCH]科研。[NEWLINE][NEWLINE]没有额外[ICON_GOLD]维护费。[NEWLINE][NEWLINE]只能在大型城市（26人口）建造。</Text>
+			<Text>
+				本城市中每2[ICON_CITIZEN]市民+1[ICON_RESEARCH]科研。
+				[NEWLINE][ICON_BULLET]没有额外[ICON_GOLD]维护费。
+				[NEWLINE][ICON_BULLET]只能在中型城市（15人口）建造。
+				[NEWLINE][ICON_BULLET]本城宗教压力+100%。
+			</Text>
 		</Replace>
 
 		<Row>
@@ -5694,7 +5699,10 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_POPULATION_GROWTH">
-			<Text>城市[ICON_CITIZEN]人口带来的[ICON_HAPPINESS_4]不满-20%。</Text>
+			<Text>
+				[ICON_BULLET]城市[ICON_CITIZEN]人口带来的[ICON_HAPPINESS_4]不满-20%。
+				[NEWLINE][ICON_BULLET]城市中每个主流宗教信徒+1%[ICON_FOOD]粮食产出。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_EXTRA_BELIEF">

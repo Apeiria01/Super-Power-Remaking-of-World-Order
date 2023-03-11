@@ -993,6 +993,7 @@
 			<SpecialistCount>1</SpecialistCount>
 			<IconAtlas>BW_ATLAS_1</IconAtlas>
 			<PortraitIndex>39</PortraitIndex>
+			<ReligiousPressureModifier>100</ReligiousPressureModifier>
 		</Row>
 		
 

@@ -1818,7 +1818,7 @@
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_MUGHAL_FORT</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_LARGE</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_MEDIUM</BuildingClassType>
 		</Row>
 
 
