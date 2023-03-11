@@ -401,7 +401,6 @@
 			<HurryCostModifier>25</HurryCostModifier>
 			<IconAtlas>BW_ATLAS_1</IconAtlas>
 			<PortraitIndex>28</PortraitIndex>
-			<ObsoleteTech>TECH_DYNAMITE</ObsoleteTech>
 			<EnhancedYieldTech>TECH_INTERNET</EnhancedYieldTech>
 			<TechEnhancedTourism>2</TechEnhancedTourism>
 			<TrainedFreePromotion>PROMOTION_ORBAN_CANNON</TrainedFreePromotion>
