@@ -1873,8 +1873,6 @@
 			<PortraitIndex>60</PortraitIndex>
 		</Row>
 
-
-
 		<Row>
 			<Type>BUILDING_TEMPLE</Type>
 			<BuildingClass>BUILDINGCLASS_TEMPLE</BuildingClass>
@@ -1891,6 +1889,25 @@
 			<HurryCostModifier>25</HurryCostModifier>
 			<IconAtlas>BW_ATLAS_1</IconAtlas>
 			<PortraitIndex>37</PortraitIndex>
+		</Row>
+		<Row>
+			<Type>BUILDING_ASSUR_TEMPLE</Type>
+			<BuildingClass>BUILDINGCLASS_TEMPLE</BuildingClass>
+			<MaxStartEra>ERA_RENAISSANCE</MaxStartEra>
+			<Cost>35</Cost>
+			<GoldMaintenance>2</GoldMaintenance>
+			<PrereqTech>TECH_POTTERY</PrereqTech>
+			<Description>TXT_KEY_BUILDING_ASSUR_TEMPLE</Description>
+			<Civilopedia>TXT_KEY_CIV5_BUILDINGS_TEMPLE_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+			<Help>TXT_KEY_BUILDING_ASSUR_TEMPLE_HELP</Help>
+			<ArtDefineTag>TEMPLE</ArtDefineTag>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<HurryCostModifier>25</HurryCostModifier>
+			<IconAtlas>BW_ATLAS_1</IconAtlas>
+			<PortraitIndex>37</PortraitIndex>
+			<MilitaryProductionModifier>15</MilitaryProductionModifier>
 		</Row>
 		<Row>
 			<Type>BUILDING_INDIA_TEMPLE</Type>
@@ -2005,14 +2022,10 @@
 			<BuildingType>BUILDING_TEMPLE</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_SHRINE</BuildingClassType>
 		</Row>
-		<!--<Row>
-			<BuildingType>BUILDING_MUD_PYRAMID_MOSQUE</BuildingType>
+		<Row>
+			<BuildingType>BUILDING_ASSUR_TEMPLE</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_SHRINE</BuildingClassType>
-		</Row>-->
-		<!--<Row>
-			<BuildingType>BUILDING_BURIAL_TOMB</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_SHRINE</BuildingClassType>
-		</Row>-->
+		</Row>
 		<Row>
 			<BuildingType>BUILDING_INDIA_TEMPLE</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_SHRINE</BuildingClassType>

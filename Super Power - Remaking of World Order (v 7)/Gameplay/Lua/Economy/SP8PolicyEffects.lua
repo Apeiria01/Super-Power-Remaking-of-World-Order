@@ -401,6 +401,6 @@ function SPEPlayerCompletedMinorCivQuest(iMajor, iMinor, iQuestType, iStartTurn,
 		end
 	end
 end
-GameEvents.PlayerCompletedQuest.Add(SPEPlayerCompletedMinorCivQuest) 
+GameEvents.PlayerCompletedQuest.Add(SPEPlayerCompletedMinorCivQuest);
 
 print('SP8PolicyEffects: Check Pass')

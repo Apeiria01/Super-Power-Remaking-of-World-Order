@@ -14693,5 +14693,15 @@
 			</Text>
 		</Replace>
 
+		<Replace Tag="TXT_KEY_BUILDING_ASSUR_TEMPLE">
+			<Text>[ICON_PEACE][ICON_WAR]阿苏尔神庙</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_ASSUR_TEMPLE_HELP">
+			<Text>
+				[ICON_BULLET]组建作战单位+15%产能。
+				[NEWLINE][ICON_BULLET]歼灭位于城市6格内敌人时，获得目标单位50%[ICON_STRENGTH]战斗力的[ICON_FOOD]食物、[ICON_PEACE]信仰。
+			</Text>
+		</Replace>
+
 	</Language_zh_CN>
 </GameData>

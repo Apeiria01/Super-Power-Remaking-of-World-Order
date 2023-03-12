@@ -267,11 +267,6 @@
 			<UnitClassType>UNITCLASS_MOTORISED_INFANTRY</UnitClassType>
 			<UnitType>UNIT_ASSYRIAN_BMP</UnitType>
 		</Row>
-		<Row>
-			<CivilizationType>CIVILIZATION_ASSYRIA</CivilizationType>
-			<UnitClassType>UNITCLASS_GUIDED_MISSILE</UnitClassType>
-			<UnitType>UNIT_ASSYRIAN_SCUD_MISSILE</UnitType>
-		</Row>
 
 		<Row>
 			<CivilizationType>CIVILIZATION_INDIA</CivilizationType>

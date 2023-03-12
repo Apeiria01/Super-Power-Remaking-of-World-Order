@@ -252,6 +252,11 @@
 			<BuildingType>BUILDING_ROYAL_LIBRARY</BuildingType>
 		</Row>
 		<Row>
+			<CivilizationType>CIVILIZATION_ASSYRIA</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_TEMPLE</BuildingClassType>
+			<BuildingType>BUILDING_ASSUR_TEMPLE</BuildingType>
+		</Row>
+		<Row>
 			<CivilizationType>CIVILIZATION_GREECE</CivilizationType>
 			<BuildingClassType>BUILDINGCLASS_RACECOURSE</BuildingClassType>
 			<BuildingType>BUILDING_GREEK_OLYMPICS</BuildingType>

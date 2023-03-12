@@ -3,6 +3,7 @@
 --------------------------------------------------------------
 include("FLuaVector.lua");
 include("UtilityFunctions.lua");
+include("PlotIterators.lua");
 
 -----------New building effects when it is built
 function NewBuildingEffects(iPlayer, iCity, iBuilding, bGold, bFaith)
@@ -732,6 +733,47 @@ end
 GameEvents.PlayerDoTurn.Add(UpdateCarthaginanUWEffect);
 GameEvents.PlayerAdoptPolicy.Add(function(iPlayerID, iPolicyID) UpdateCarthaginanUWEffect(iPlayerID); end);
 ------------------ CARTHAGINIAN_AGORA END   ------------------
+
+function ASHUR_TEMPLEGetFoodAndFaith(iPlayer, iUnit, iUnitType, iX, iY, bDelay, iByPlayer)
+	local pPlayer = Players[iPlayer]
+	local pUnit = pPlayer:GetUnitByID(iUnit)
+	local ByPlayer = Players[iByPlayer]
+	if iPlayer == iByPlayer then return end
+	if iByPlayer == -1 then return end
+
+	if pPlayer == nil
+	then
+		return
+	end
+
+	if not pUnit:IsCombatUnit() then return end
+
+	if ByPlayer == nil or ByPlayer:CountNumBuildings(GameInfoTypes["BUILDING_ASSUR_TEMPLE"]) == 0 then
+		print("@1")
+		return
+	end
+
+	local plot = pUnit:GetPlot()
+	local iStrength = pUnit:GetBaseCombatStrength()
+	local iFoodBoost = iStrength * 0.5
+	local iFaithdBoost = iStrength * 0.5
+	for LoopPlot in PlotAreaSpiralIterator(plot, 6, SECTOR_NORTH, DIRECTION_CLOCKWISE, DIRECTION_OUTWARDS, CENTRE_EXCLUDE) do
+		if LoopPlot:IsCity() then
+			local pCity = LoopPlot:GetPlotCity()
+			if pCity:GetOwner() == iByPlayer then
+				if pCity:IsHasBuilding(GameInfoTypes["BUILDING_ASSUR_TEMPLE"]) then
+					ByPlayer:ChangeFaith(iFaithdBoost)
+					pCity:ChangeFood(iFoodBoost)
+					if ByPlayer:IsHuman() then
+						local hex = ToHexFromGrid(Vector2(pCity:GetX(), pCity:GetY()));
+						Events.AddPopupTextEvent(HexToWorld(hex), Locale.ConvertTextKey("+{1_Num}[ICON_PEACE] +{2_Num}[ICON_FOOD]", iFaithdBoost, iFoodBoost))
+					end
+				end
+			end
+		end
+	end
+end
+GameEvents.UnitPrekill.Add(ASHUR_TEMPLEGetFoodAndFaith)
 
 print("New Building Effects Check Pass!")
 

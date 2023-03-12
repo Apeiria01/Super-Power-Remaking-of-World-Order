@@ -1418,6 +1418,11 @@
 			<Yield>2</Yield>
 		</Row>
 		<Row>
+			<BuildingType>BUILDING_ASSUR_TEMPLE</BuildingType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
 			<BuildingType>BUILDING_INDIA_TEMPLE</BuildingType>
 			<YieldType>YIELD_FAITH</YieldType>
 			<Yield>2</Yield>
@@ -5444,6 +5449,16 @@
 		<Row>
 			<BuildingType>BUILDING_TEMPLE</BuildingType>
 			<FlavorType>FLAVOR_RELIGION</FlavorType>
+			<Flavor>80</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_ASSUR_TEMPLE</BuildingType>
+			<FlavorType>FLAVOR_RELIGION</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_ASSUR_TEMPLE</BuildingType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
 			<Flavor>80</Flavor>
 		</Row>
 

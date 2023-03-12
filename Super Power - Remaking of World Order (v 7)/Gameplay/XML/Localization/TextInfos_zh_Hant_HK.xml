@@ -14485,5 +14485,15 @@
 				你的烏爾班大砲破壞了敌方城市的{1_building}!
 			</Text>
 		</Replace>
+
+		<Replace Tag="TXT_KEY_BUILDING_ASSUR_TEMPLE">
+			<Text>[ICON_PEACE][ICON_WAR]阿蘇爾神廟</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_ASSUR_TEMPLE_HELP">
+			<Text>
+				[ICON_BULLET]組建作戰單位+15%產能。
+				[NEWLINE][ICON_BULLET]殲滅位於城市6格內敵人時，獲得目標單位50%[ICON_STRENGTH]戰鬥力的[ICON_FOOD]食物、[ICON_PEACE]信仰。
+			</Text>
+		</Replace>
 	</Language_zh_Hant_HK>
 </GameData>
