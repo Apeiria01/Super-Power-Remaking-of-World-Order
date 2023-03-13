@@ -269,7 +269,7 @@ function SPNReligionUnitCreatedBuffBonus(iPlayer, iUnit)
         end
 	end
 end
-GameEvents.SerialEventUnitCreated.Add(SPNReligionUnitCreatedBuffBonus)
+Events.SerialEventUnitCreated.Add(SPNReligionUnitCreatedBuffBonus)
 
 function SPNReligionUnitCreatedOutputBonus(iPlayer, iUnit, iUnitType, iPlotX, iPlotY)
 	if Game.IsOption(GameOptionTypes.GAMEOPTION_NO_RELIGION) or iPlayer == -1 or not Players[iPlayer]:HasCreatedReligion() then
@@ -285,7 +285,7 @@ function SPNReligionUnitCreatedOutputBonus(iPlayer, iUnit, iUnitType, iPlotX, iP
     then
         local eReligion = pPlayer:GetReligionCreatedByPlayer()
 		local pHolyCity = Game.GetHolyCityForReligion(eReligion, iPlayer)
-        if iPlotX ~= pHolyCity:GetX() and iPlotY ~= pHolyCity:GetY() then
+        if iPlotX ~= pHolyCity:GetX() or iPlotY ~= pHolyCity:GetY() then
             return
         end
         if pHolyCity:IsHasBuilding(GameInfoTypes.BUILDING_BELIEF_ORTHODOX_CHURCH) then
