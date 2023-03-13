@@ -3957,7 +3957,16 @@
 			<Text>{TXT_KEY_CONCEPT_CITIES_CORRUPTION_TOPIC}</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CONCEPT_CITIES_CORRUPTION_SUMMARY">
-			<Text>由于地方政府的腐败、边远城市的分离倾向、国家资源的传递效率问题等等诸多原因，你直辖城市的产出效率会随著与首都距离的变远而逐渐降低。在除首都之外的直辖城市，不管是文明自己建造还是从其他文明处获得，额外的管理成本都会发生。[NEWLINE][NEWLINE]城市管理成本的等级和其与首都的距离之间遵循以下规律：[NEWLINE][NEWLINE]6格以内——没有额外成本。[NEWLINE]地图大小的1/12（至少8格，至多12格）内——轻微。[NEWLINE]地图大小的1/6（至少12格）内——中等。[NEWLINE]地图大小的1/3（至少24格）内——严重。[NEWLINE]地图大小的1/3（至少24格）外——极度严重。[NEWLINE][NEWLINE]这些耗费的成本还会导致城市人力、商品、满意度上的损失。</Text>
+			<Text>
+				由于地方政府的腐败、边远城市的分离倾向、国家资源的传递效率问题等等诸多原因，你直辖城市的产出效率会随著与首都距离的变远而逐渐降低。在除首都之外的直辖城市，不管是文明自己建造还是从其他文明处获得，额外的管理成本都会发生。
+				[NEWLINE][NEWLINE]城市管理成本等级和其与首都的距离之间遵循以下规律：
+				[NEWLINE][NEWLINE]7格及以内——没有额外成本。
+				[NEWLINE]地图大小的1/8（至少14格，至多18格）内——轻微。
+				[NEWLINE]地图大小的1/5（至少26格，至多30格）内——中等。
+				[NEWLINE]地图大小的1/3（至少36格，至多44格）内——严重。
+				[NEWLINE]地图大小的1/3（至少36格，至多44格）外——极度严重。
+				[NEWLINE][NEWLINE]这些耗费的成本还会导致城市人力、商品、满意度上的损失。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CONCEPT_CITIES_CORRUPTION_ADVISOR_QUESTION">
 			<Text>什么是管理成本？</Text>
