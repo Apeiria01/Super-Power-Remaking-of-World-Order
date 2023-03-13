@@ -136,6 +136,16 @@
 		<!--************************************Combats********************************-->
 
 		<Row>
+			<Type>CONCEPT_CORPS_MOD_RULES</Type>
+			<Topic>TXT_KEY_CONCEPT_CORPS_MOD_RULES_TOPIC</Topic>
+			<Description>TXT_KEY_CONCEPT_CORPS_MOD_RULES_DESCRIPTION</Description>
+			<Summary>TXT_KEY_SP_TROOPS_TEXT</Summary>
+			<AdvisorQuestion>TXT_KEY_CONCEPT_CORPS_MOD_RULES_QUESTION</AdvisorQuestion>
+			<Advisor>MILITARY</Advisor>
+			<CivilopediaHeaderType>HEADER_COMBAT</CivilopediaHeaderType>
+		</Row>
+
+		<Row>
 			<Type>CONCEPT_NEW_ATTACK_RULES</Type>
 			<Topic>TXT_KEY_CONCEPT_NEW_ATTACK_RULES_TOPIC</Topic>
 			<Description>TXT_KEY_CONCEPT_NEW_ATTACK_RULES_DESCRIPTION</Description>

@@ -287,7 +287,14 @@
 			<Text>{TXT_KEY_CONCEPT_CITIES_CORRUPTION_TOPIC}</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CONCEPT_CITIES_CORRUPTION_SUMMARY">
-			<Text>Your city's efficiency fades with the distance from your capital due to corruption. Corruption happens in cities you founded other than capital as well as all annexed cities.[NEWLINE][NEWLINE] The city's corruption and the distance from your capital follows such rules:[NEWLINE][NEWLINE]less than 6 tiles - no corruption[NEWLINE]1/12 of the map length (at least 8 tiles, at most 12 tiles) - low corruption[NEWLINE]1/6 of the map length(at least 12 tiles) - medium corruption[NEWLINE]more than 1/3 of the map length (at least 24 tiles) - heavy corruption[NEWLINE][NEWLINE]Corruption will cause the output of Production, Gold, Science lost in those cities by a certain percent.</Text>
+			<Text>
+				Your city's efficiency fades with the distance from your capital due to corruption. Corruption happens in cities you founded other than capital as well as all annexed cities.
+				[NEWLINE][NEWLINE] The city's corruption and the distance from your capital follows such rules:
+				[NEWLINE][NEWLINE]less than 8 tiles - no corruption
+				[NEWLINE]1/8 of the map length (at least 14 tiles, at most 18 tiles) - low corruption
+				[NEWLINE]1/5 of the map length(at least 26 tiles) - medium corruption
+				[NEWLINE]more than 1/3 of the map length (at least 36 tiles) - heavy corruption
+				[NEWLINE][NEWLINE]Corruption will cause the output of Production, Gold, Science lost in those cities by a certain percent.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CONCEPT_CITIES_CORRUPTION_ADVISOR_QUESTION">
 			<Text>What is Corruption?</Text>
@@ -407,6 +414,15 @@
 
 
 		<!--************************************Combat********************************-->
+		<Row Tag="TXT_KEY_CONCEPT_CORPS_MOD_RULES_TOPIC">
+			<Text>[COLOR_POSITIVE_TEXT]SP: Corps Mod [ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CONCEPT_CORPS_MOD_RULES_DESCRIPTION">
+			<Text>{TXT_KEY_CONCEPT_CORPS_MOD_RULES_TOPIC}</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CONCEPT_CORPS_MOD_RULES_QUESTION">
+			<Text>What is Corps Mod?</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_CONCEPT_NEW_ATTACK_RULES_TOPIC">
 			<Text>SP: New Combat Rules</Text>
@@ -7014,9 +7030,9 @@
 		</Row>
 		<Row Tag="TXT_KEY_SP_TROOPS_TEXT">
 			<Text>Corps Mode:[NEWLINE][NEWLINE]
-			Allows players to establish corps, combining 2 units of same type at one tile into corps (fleet for naval combat units), [ICON_STRENGTH]Strengh +10%, Max HP+100%. This requires the nearest city to has arsenal. You can find the action's button in unit panel.[NEWLINE]
-			Corps units can absorb an extra unit of same type to establish Armee (Armada for naval combat units). [ICON_STRENGTH]Strengh +40%, Max HP+200%. This requires the nearest city to has military base.[NEWLINE]
-			Besides, you can use great general (great admiral for naval combat units) to "upgrade" normal units to corps, with no requirements of buildings in city. The great general will be consumed then.[NEWLINE]
+			Allows players to establish corps, combining 2 units of same type at one tile into corps, [ICON_STRENGTH]Strengh +10%, Max HP+100%. This requires the nearest city to has arsenal. You can find the action's button in unit panel.[NEWLINE]
+			Corps units can absorb an extra unit of same type to establish Armee. [ICON_STRENGTH]Strengh +15%, Max HP+200%. This requires the nearest city to has military base.[NEWLINE]
+			Besides, you can use great general to "upgrade" normal units to corps, with no requirements of buildings in city. The great general will be consumed then.[NEWLINE]
 			Air forces are not able to establish corps or Armee. [NEWLINE]
 			"Troops" resource is introduced to limit the number of combat units. [NEWLINE]
 			Troop level high: Initially 24 troops provided for human players and 32 for AI. Cities with city size higher than "town" provide 4 extra troops per city size they acquire. [NEWLINE]
@@ -8933,7 +8949,7 @@
 			<Text>Orthodox Church</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_ORTHODOX_CHURCH">
-			<Text>+200% religious pressure emanating from the Holy City, each city of your religion will provide you with a one-time [ICON_CULTURE] Cultural output when [ICON_PROPHET] Great Prophet appears.</Text>
+			<Text>+200% religious pressure emanating from the Holy City, each city of your religion will provide you with a one-time [ICON_CULTURE] Cultural output when [ICON_PROPHET] Great Prophet appears in Holy City.</Text>
 		</Row>
 		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_UNITY">
 			<Text>Gain 50% more [ICON_INFLUENCE] Influence than usual when you achieve any Quests from City-States with your Religion</Text>

@@ -3860,7 +3860,16 @@
 			<Text>{TXT_KEY_CONCEPT_CITIES_CORRUPTION_TOPIC}</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CONCEPT_CITIES_CORRUPTION_SUMMARY">
-			<Text>由於地方政府的腐敗、邊遠城市的分離傾向、國家資源的傳遞效率問題等等諸多原因，你直轄城市的產出效率會隨著與首都距離的變遠而逐漸降低。在除首都之外的直轄城市，不管是文明自己建造還是從其他文明處獲得，額外的管理成本都會發生。[NEWLINE][NEWLINE]城市管理成本的等級和其與首都的距離之間遵循以下規律：[NEWLINE][NEWLINE]6格以內——沒有額外成本。[NEWLINE]地圖大小的1/12（至少8格，至多12格）內——輕微。[NEWLINE]地圖大小的1/6（至少12格）內——中等。[NEWLINE]地圖大小的1/3（至少24格）內——嚴重。[NEWLINE]地圖大小的1/3（至少24格）外——極度嚴重。[NEWLINE][NEWLINE]這些耗費的成本還會導致城市人力、商品、滿意度上的損失。</Text>
+			<Text>
+				由於地方政府的腐敗、邊遠城市的分離傾向、國家資源的傳遞效率問題等等諸多原因，你直轄城市的產出效率會隨著與首都距離的變遠而逐漸降低。在除首都之外的直轄城市，不管是文明自己建造還是從其他文明處獲得，額外的管理成本都會發生。
+				[NEWLINE][NEWLINE]城市管理成本等級和其與首都的距離之間遵循以下規律：
+				[NEWLINE][NEWLINE]7格及以內——沒有額外成本。
+				[NEWLINE]地圖大小的1/8（至少14格，至多18格）內——輕微。
+				[NEWLINE]地圖大小的1/5（至少26格，至多30格）內——中等。
+				[NEWLINE]地圖大小的1/3（至少36格，至多44格）內——嚴重。
+				[NEWLINE]地圖大小的1/3（至少36格，至多44格）外——極度嚴重。
+				[NEWLINE][NEWLINE]這些耗費的成本還會導致城市人力、商品、滿意度上的損失。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CONCEPT_CITIES_CORRUPTION_ADVISOR_QUESTION">
 			<Text>什麼是管理成本？</Text>
@@ -3975,6 +3984,16 @@
 
 
 		<!--************************************Combat********************************-->
+		<Row Tag="TXT_KEY_CONCEPT_CORPS_MOD_RULES_TOPIC">
+			<Text>[COLOR_POSITIVE_TEXT]SP：軍團模式[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CONCEPT_CORPS_MOD_RULES_DESCRIPTION">
+			<Text>{TXT_KEY_CONCEPT_CORPS_MOD_RULES_TOPIC}</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CONCEPT_CORPS_MOD_RULES_QUESTION">
+			<Text>軍團模式是什麽?</Text>
+		</Row>
+
 		<Row Tag="TXT_KEY_CONCEPT_NEW_ATTACK_RULES_TOPIC">
 			<Text>SP：新的戰鬥規則</Text>
 		</Row>
@@ -7787,7 +7806,7 @@
 			<Text>正統教會</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_ORTHODOX_CHURCH">
-			<Text>聖城壓力+200%，大先知誕生時，你的每座信仰本宗教的城市都會為你提供一次性[ICON_CULTURE]文化產出</Text>
+			<Text>聖城壓力+200%，聖城誕生大先知時，你的每座信仰本宗教的城市都會為你提供一次性[ICON_CULTURE]文化產出</Text>
 		</Row>
 		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_UNITY">
 			<Text>完成信仰該宗教的城邦的任務獲得的[ICON_INFLUENCE]影響力+50%</Text>
@@ -7953,16 +7972,21 @@
 			<Text>兵力的多少決定了一個文明軍事單位的數量上限。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_TROOPS_TEXT">
-			<Text>“軍團模式”：[NEWLINE][NEWLINE]
-			AI擁有兵工廠後允許建立“軍團”，即可以將兩個相同單位“合並”成一個單位，[ICON_STRENGTH]戰鬥力+10%，血量上限+100%；[NEWLINE]
-			AI擁有軍事基地後允許建立“集團軍”，在“軍團”基礎上允許再合入一個相同的單位，[ICON_STRENGTH]戰鬥力+40%，血量上限再+100%；[NEWLINE]
-			AI新造|新刷單位優先補充舊單位的損失，其次在條件滿足的情況下合入舊單位（根據遊戲難度合入概率依次為8級100%，7級90%...），最後才會真正產生一個新單位；[NEWLINE]
-			人類玩家也可以組建軍團和集團軍，不過只能在有兵工廠和軍事基地的城市範圍內通過消耗大軍（陸軍）或提督（海軍）實現；[NEWLINE][NEWLINE]
-			引入“兵力”設定，兵力決定你總共能擁有的軍事單位數量，兵力點滿後獲取軍事單位將變得非常困難，新建的軍事單位也會被清除，AI兵力點滿後也將停止刷出單位，分三個遊戲選項檔：[NEWLINE]
-			高：除小鎮以外的每個城市規模等級提供4兵力點，玩家初始24點，AI初始32點 —— 適合高配置玩家；[NEWLINE]
-			中：除小鎮以外的每個城市規模等級提供2兵力點，玩家初始12點，AI初始16點 —— 適合中配置玩家（默認情況）；[NEWLINE]
-			低：除小鎮以外的每個城市規模等級提供1兵力點，玩家初始 6點，AI初始 8點 —— 適合低配置玩家或和平主義者；[NEWLINE]
-			（平民、要塞及空軍單位不計入，也不進行單位合並操作，不過艦載機會跟隨載具獲得相應“提升”）
+			<Text>
+				「軍團模式」：[NEWLINE][NEWLINE]
+				只有陸軍可以建立「軍團」或者「集團軍」；[NEWLINE]
+				[ICON_BULLET]AI擁有兵工廠後允許建立「軍團」，可以將兩個相同單位「合並」成一個單位，[ICON_STRENGTH]戰鬥力+10%，血量上限+100%；[NEWLINE]
+				[ICON_BULLET]AI擁有軍事基地後允許建立「集團軍」，在「軍團」基礎上允許再合入一個相同的單位，[ICON_STRENGTH]戰鬥力再+15%，血量上限再+100%；[NEWLINE]
+				[ICON_BULLET]AI新造/新刷單位優先補充舊單位的損失，其次在條件滿足的情況下合入舊單位（根據遊戲難度合入概率依次為8級100%，7級90%...），最後才會真正產生一個新單位；[NEWLINE]
+				人類玩家也可以組建軍團和集團軍，不過只能在有兵工廠和軍事基地的城市範圍內通過兩個相同單位合成或者消耗陸軍統帥實現；[NEWLINE]
+				使用相同單位合成軍團可以同時合並兩個單位的晉升，並由此得到一個強力單位，而消耗陸軍統帥會直接賦予單位軍團/集團軍晉升；[NEWLINE][NEWLINE]
+				引入「兵力」設定，兵力決定你總共能擁有的軍事單位數量，兵力點滿後獲取軍事單位將變得非常困難，新建的軍事單位也會被清除，AI兵力點滿後也將停止刷出單位，分三個遊戲選項檔：[NEWLINE]
+				[ICON_BULLET]高：除小鎮以外的每個城市規模等級提供4兵力點，玩家初始24點，AI初始32點，每個兵工廠/軍事基地分別提供2點軍團/集團軍組建上限 ——適合高配置玩家；[NEWLINE]
+				[ICON_BULLET]中：除小鎮以外的每個城市規模等級提供2兵力點，玩家初始12點，AI初始16點，每個兵工廠/軍事基地分別提供1點軍團/集團軍組建上限 ——適合中配置玩家（默認情況）；[NEWLINE]
+				[ICON_BULLET]低：除小鎮以外的每個城市規模等級提供1兵力點，玩家初始 6點，AI初始 8點，每個兵工廠/軍事基地分別提供1點軍團/集團軍組建上限 ——適合低配置玩家或和平主義者；[NEWLINE][NEWLINE]
+				特別註意，「軍團」或者「集團軍」的上限只與兵工廠或者軍事基地的數量有關，消耗陸軍統帥可以無視數量上限組建，但是並不會增加上限（你會看到組建按鈕顯示可組建數量為負數）；[NEWLINE]
+				消耗陸軍統帥組建「集團軍」仍然需要城市擁有兵工廠；[NEWLINE]
+				（平民、要塞及空軍單位不計入兵力消耗，也不進行單位合並操作）
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_TROOPS_USED">

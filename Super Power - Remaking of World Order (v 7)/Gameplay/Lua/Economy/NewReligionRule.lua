@@ -72,8 +72,8 @@ function SPNReligionPopulationBuff(iX, iY, iOld, iNew)
     local pCity = pPlot:GetPlotCity()
 	if pCity == nil then return end
     local eBelief = GameInfo.Beliefs["BELIEF_GODDESS_LOVE"].ID
-    if pCity:GetMajorReligionPantheonBelief() == eBelief
-    or pCity:GetSecondaryReligionPantheonBelief() == eBelief
+    if pCity:IsHasMajorBelief(eBelief) 
+    or (pCity:IsSecondaryReligionActive() and pCity:GetSecondaryReligionPantheonBelief() == eBelief) 
     then
         local pPlayer = Players[pPlot:GetOwner()]
         if not pPlayer:IsMajorCiv() then
@@ -267,8 +267,27 @@ function SPNReligionUnitCreatedBuffBonus(iPlayer, iUnit)
             print("Player has BELIEF_MESSIAH and Prophet has been born")
             pUnit:SetHasPromotion((GameInfo.UnitPromotions["PROMOTION_RIVAL_TERRITORY"].ID), true)
         end
+	end
+end
+Events.SerialEventUnitCreated.Add(SPNReligionUnitCreatedBuffBonus)
+
+function SPNReligionUnitCreatedOutputBonus(iPlayer, iUnit, iUnitType, iPlotX, iPlotY)
+	if Game.IsOption(GameOptionTypes.GAMEOPTION_NO_RELIGION) or iPlayer == -1 or not Players[iPlayer]:HasCreatedReligion() then
+		return
+	end
+    local pPlayer = Players[iPlayer]
+    local pUnit = pPlayer:GetUnitByID(iUnit)
+    if not pPlayer:IsMajorCiv() or pUnit == nil then
+        return
+    end
+
+	if pUnit:GetUnitClassType() == GameInfoTypes.UNITCLASS_PROPHET 
+    then
         local eReligion = pPlayer:GetReligionCreatedByPlayer()
 		local pHolyCity = Game.GetHolyCityForReligion(eReligion, iPlayer)
+        if iPlotX ~= pHolyCity:GetX() or iPlotY ~= pHolyCity:GetY() then
+            return
+        end
         if pHolyCity:IsHasBuilding(GameInfoTypes.BUILDING_BELIEF_ORTHODOX_CHURCH) then
             local numOfTargetCity = 0
             for iCity in pPlayer:Cities() do
@@ -280,8 +299,7 @@ function SPNReligionUnitCreatedBuffBonus(iPlayer, iUnit)
                 local religionCultureBonus = (pPlayer:GetCurrentEra() + 1) * 10 * numOfTargetCity
                 pPlayer:ChangeJONSCulture(religionCultureBonus)
                 if pPlayer:IsHuman() then
-                    local pPlot = pUnit:GetPlot()
-                    local hex = ToHexFromGrid(Vector2(pPlot:GetX(),pPlot:GetY()))
+                    local hex = ToHexFromGrid(Vector2(iPlotX,iPlotY))
                     Events.AddPopupTextEvent(HexToWorld(hex), Locale.ConvertTextKey("+{1_Num}[ICON_CULTURE]",religionCultureBonus))
                     Events.GameplayFX(hex.x, hex.y, -1)
                 end
@@ -289,7 +307,7 @@ function SPNReligionUnitCreatedBuffBonus(iPlayer, iUnit)
         end
 	end
 end
-Events.SerialEventUnitCreated.Add(SPNReligionUnitCreatedBuffBonus)
+GameEvents.UnitCreated.Add(SPNReligionUnitCreatedOutputBonus)
 
 function SPNReligionPolicyAdopt(iPlayer,iPolicy)
 	if Game.IsOption(GameOptionTypes.GAMEOPTION_NO_RELIGION) or iPlayer == -1 or not Players[iPlayer]:HasCreatedReligion() then
