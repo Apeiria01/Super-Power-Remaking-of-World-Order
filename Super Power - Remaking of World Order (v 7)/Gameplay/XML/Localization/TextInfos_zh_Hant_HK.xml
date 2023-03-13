@@ -3860,7 +3860,16 @@
 			<Text>{TXT_KEY_CONCEPT_CITIES_CORRUPTION_TOPIC}</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CONCEPT_CITIES_CORRUPTION_SUMMARY">
-			<Text>由於地方政府的腐敗、邊遠城市的分離傾向、國家資源的傳遞效率問題等等諸多原因，你直轄城市的產出效率會隨著與首都距離的變遠而逐漸降低。在除首都之外的直轄城市，不管是文明自己建造還是從其他文明處獲得，額外的管理成本都會發生。[NEWLINE][NEWLINE]城市管理成本的等級和其與首都的距離之間遵循以下規律：[NEWLINE][NEWLINE]6格以內——沒有額外成本。[NEWLINE]地圖大小的1/12（至少8格，至多12格）內——輕微。[NEWLINE]地圖大小的1/6（至少12格）內——中等。[NEWLINE]地圖大小的1/3（至少24格）內——嚴重。[NEWLINE]地圖大小的1/3（至少24格）外——極度嚴重。[NEWLINE][NEWLINE]這些耗費的成本還會導致城市人力、商品、滿意度上的損失。</Text>
+			<Text>
+				由於地方政府的腐敗、邊遠城市的分離傾向、國家資源的傳遞效率問題等等諸多原因，你直轄城市的產出效率會隨著與首都距離的變遠而逐漸降低。在除首都之外的直轄城市，不管是文明自己建造還是從其他文明處獲得，額外的管理成本都會發生。
+				[NEWLINE][NEWLINE]城市管理成本等級和其與首都的距離之間遵循以下規律：
+				[NEWLINE][NEWLINE]7格及以內——沒有額外成本。
+				[NEWLINE]地圖大小的1/8（至少14格，至多18格）內——輕微。
+				[NEWLINE]地圖大小的1/5（至少26格，至多30格）內——中等。
+				[NEWLINE]地圖大小的1/3（至少36格，至多44格）內——嚴重。
+				[NEWLINE]地圖大小的1/3（至少36格，至多44格）外——極度嚴重。
+				[NEWLINE][NEWLINE]這些耗費的成本還會導致城市人力、商品、滿意度上的損失。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CONCEPT_CITIES_CORRUPTION_ADVISOR_QUESTION">
 			<Text>什麼是管理成本？</Text>
