@@ -16746,5 +16746,15 @@
 			Your Cannon has destroyed {1_building} of the enemy city!
 			</Text>
 		</Replace>
+
+		<Replace Tag="TXT_KEY_BUILDING_ASSUR_TEMPLE">
+			<Text>[ICON_PEACE][ICON_WAR] Temple of Asur</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_ASSUR_TEMPLE_HELP">
+			<Text>
+			[ICON_BULLET] Form combat units +15% production capacity.
+			[NEWLINE][ICON_BULLET] When an enemy within 6 squares of the city is destroyed, [ICON_FOOD] food and [ICON_PEACE] belief of 50% [ICON_STRENGTH] combat power of the target unit will be obtained.
+			</Text>
+		</Replace>
 	</Language_en_US>
 </GameData>
