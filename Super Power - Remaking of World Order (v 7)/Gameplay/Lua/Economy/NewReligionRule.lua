@@ -18,6 +18,11 @@ function SPEReligionAdopt(pPlayer,iBelief,pHolyCity)
 	then
 		print("Choose BELIEF_MISSIONARY_ZEAL")
 		pHolyCity:SetNumRealBuilding(GameInfoTypes.BUILDING_EXTRA_RELIGION_SPREADS_2,1)
+    
+    elseif iBelief == GameInfo.Beliefs["BELIEF_RELIGIOUS_TEXTS"].ID
+	then
+		print("Choose BELIEF_RELIGIOUS_TEXTS")
+		pHolyCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGIOUS_TEXTS,1)
 
     elseif iBelief == GameInfo.Beliefs["BELIEF_MESSIAH"].ID
     then
@@ -222,6 +227,10 @@ function SPNReligionConquestedHolyCity(oldOwnerID, isCapital, cityX, cityY, newO
 				print("Player has BELIEF_MISSIONARY_ZEAL and take back the Holy City")
 				pCity:SetNumRealBuilding(GameInfoTypes.BUILDING_EXTRA_RELIGION_SPREADS_2,1)
 
+            elseif GameInfo.Beliefs[v].Type == "BELIEF_RELIGIOUS_TEXTS" then
+				print("Player has BELIEF_RELIGIOUS_TEXTS and take back the Holy City")
+				pCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGIOUS_TEXTS,1)
+
 			elseif GameInfo.Beliefs[v].Type == "BELIEF_RELIGION_PRESSURE" then
 				print("Player has BELIEF_RELIGION_PRESSURE and take back the Holy City")
 				pCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGION_PRESSURE,1)
@@ -371,7 +380,12 @@ function SPNReligionMinorCivQuestBonus(iMajor, iMinor, iQuestType, iStartTurn, i
     and civPlayer:HasReligionInMostCities(pPlayer:GetReligionCreatedByPlayer())
     then
 		local bonus =math.floor((iNewInfluence - iOldInfluence) / 100 * 0.5)
-        civPlayer:ChangeMinorCivFriendshipWithMajor(iMajor,bonus)
+        civPlayer:ChangeMinorCivFriendshipWithMajor(iMajor,bonus) 
+        if pPlayer:IsHuman() then
+            local heading = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_RELIGION_CIVQUEST_BONUS_SHORT")
+            local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_RELIGION_CIVQUEST_BONUS",civPlayer:GetName(),bonus)
+            pPlayer:AddNotification(NotificationTypes.NOTIFICATION_MINOR_QUEST, text, heading, civPlayer:GetCapitalCity():GetX(),civPlayer:GetCapitalCity():GetY())
+        end
 		print("MajorCiv has BELIEF_RELIGIOUS_UNITY and completed MinorCiv quest:",bonus)
 	end
 end

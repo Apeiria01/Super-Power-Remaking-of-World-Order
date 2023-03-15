@@ -8840,7 +8840,7 @@
 			<Text>+2 [ICON_PEACE] Faith for every Monument</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_STONE_CIRCLES">
-			<Text>+2 [ICON_PEACE] Faith from Quarries and +2 [ICON_PEACE] Faith for every Stone Works</Text>
+			<Text>+2 [ICON_PEACE] Faith from Quarries and +2 [ICON_PEACE] Faith for every Stone Works, +1 [ICON_PRODUCTION] Production from each [ICON_RES_MARBLE] Marble</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_RELIQUARY">
 			<Text>+5 [ICON_PEACE] Faith from Landmarks, Academies, Customs Houses, Manufactories and Holy Sites</Text>
@@ -8910,31 +8910,31 @@
 			<Text>Religious Colonization</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_RELIGIOUS_COLONIZATION">
-			<Text>Use [ICON_PEACE] Faith to purchase [COLOR_POSITIVE_TEXT]Settler[ENDCOLOR] in Holy City, the cost will decrease after you adopt the policy Collective Rule.</Text>
+			<Text>Use [ICON_PEACE] Faith to purchase [COLOR_POSITIVE_TEXT]Settler[ENDCOLOR] in Holy City, the cost will decrease after you adopt the policy Collective Rule</Text>
 		</Row>
 		<Row Tag="TXT_KEY_RELIGIOUS_SCIENCE_SHORT">
 			<Text>Religious Sciece</Text>
 		</Row>
 		<Row Tag="TXT_KEY_RELIGIOUS_SCIENCE">
-			<Text>+2 [ICON_RESEARCH] Science for each City following this religion, +2 [ICON_RESEARCH] Science from Holy Sites.</Text>
+			<Text>+2 [ICON_RESEARCH] Science for each City following this religion, +2 [ICON_RESEARCH] Science from Holy Sites</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SACRED_CALENDAR_SHORT">
 			<Text>Sacred Calendar</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SACRED_CALENDAR">
-			<Text>+33% [ICON_GOLDEN_AGE] Golden Age length, +3 [ICON_GOLDEN_AGE] golden age points for every Religious Building purchased with [ICON_PEACE] Faith.</Text>
+			<Text>+33% [ICON_GOLDEN_AGE] Golden Age length, +3 [ICON_GOLDEN_AGE] golden age points for every Religious Building purchased with [ICON_PEACE] Faith</Text>
 		</Row>
 		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_COMMUNITY">
-			<Text>+1% [ICON_PRODUCTION] Production for each follower (max +20%).</Text>
+			<Text>+1% [ICON_PRODUCTION] Production for each follower (max +20%)</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_HEATHEN_CONVERSION">
-			<Text>Missionaries convert adjacent Barbarian units to this civilization, convert some of the heretics to your religion in captured city, and gain output of [ICON_PEACE] Faith, [ICON_CULTURE] Culture and [ICON_GOLD] Gold related to the number of converted believers.</Text>
+			<Text>Missionaries convert adjacent Barbarian units to this civilization, convert some of the heretics to your religion in captured city, and gain output of [ICON_PEACE] Faith, [ICON_CULTURE] Culture and [ICON_GOLD] Gold related to the number of converted believers</Text>
 		</Replace>
 		<Row Tag="TXT_KEY_MESSAGE_BELIEF_HEATHEN_CONVERSION_ALERT">
-			<Text>Some heretics in {1_name} were converted by us, gain [COLOR_POSITIVE_TEXT]{2_name} points[ENDCOLOR] [ICON_PEACE] Faith, [ICON_CULTURE] Culture and [ICON_GOLD] Gold.</Text>
+			<Text>Some heretics in {1_name} were converted by us, gain [COLOR_POSITIVE_TEXT]{2_name} points[ENDCOLOR] [ICON_PEACE] Faith, [ICON_CULTURE] Culture and [ICON_GOLD] Gold</Text>
 		</Row>
 		<Replace Tag="TXT_KEY_BELIEF_JUST_WAR">
-			<Text>+20% [ICON_STRENGTH] Combat Strength near enemy cities that follow this religion, -50% [ICON_RESISTANCE] Resistance Time for this cities when captured.</Text>
+			<Text>+20% [ICON_STRENGTH] Combat Strength near enemy cities that follow this religion, -50% [ICON_RESISTANCE] Resistance Time for this cities when captured</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_PEACE_LOVING">
 			<Text>+1 [ICON_HAPPINESS_1] Global Happiness for every 6 followers of this religion in non-enemy foreign cities</Text>
@@ -8943,49 +8943,59 @@
 			<Text>Temples provide +4 [ICON_CULTURE] Culture in cities with 5 followers</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_DEFENDER_FAITH">
-			<Text>+20% [ICON_STRENGTH] Combat Strength near friendly cities that follow this religion, +15 XP for Units trained in holy city.</Text>
+			<Text>+20% [ICON_STRENGTH] Combat Strength near friendly cities that follow this religion, +15 XP for Units trained in holy city</Text>
 		</Replace>
 		<Row Tag="TXT_KEY_BELIEF_ORTHODOX_CHURCH_SHORT">
 			<Text>Orthodox Church</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_ORTHODOX_CHURCH">
-			<Text>+200% religious pressure emanating from the Holy City, each city of your religion will provide you with a one-time [ICON_CULTURE] Cultural output when [ICON_PROPHET] Great Prophet appears in Holy City.</Text>
+			<Text>+200% religious pressure emanating from the Holy City, each city of your religion will provide you with a one-time [ICON_CULTURE] Cultural output when [ICON_PROPHET] Great Prophet appears in Holy City</Text>
 		</Row>
 		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_UNITY">
-			<Text>Gain 50% more [ICON_INFLUENCE] Influence than usual when you achieve any Quests from City-States with your Religion</Text>
+			<Text>Religion spreads to friendly city-states at double rate, gain 50% more [ICON_INFLUENCE] Influence than usual when you achieve any Quests from City-States with your Religion</Text>
 		</Replace>
+		<Row Tag="TXT_KEY_SP_NOTIFICATION_RELIGION_CIVQUEST_BONUS_SHORT">
+			<Text>Religion influence bonus</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_NOTIFICATION_RELIGION_CIVQUEST_BONUS">
+			<Text>Because {1_Name} adopted your religion, gain {2_Name} points extra [ICON_INFLUENCE] Influence from achievement of their Quests.</Text>
+		</Row>
 		
 
 		<Row Tag="TXT_KEY_BELIEF_FAITH_WITHOUT_BORDERS_SHORT">
 			<Text>Faith Without Borders</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_FAITH_WITHOUT_BORDERS">
-			<Text>+1 [ICON_PEACE] Faith for every 4 followers of this religion in other civilizations.</Text>
+			<Text>+1 [ICON_PEACE] Faith for every 3 followers of this religion in other civilizations</Text>
 		</Row>
+
+		<Replace Tag="TXT_KEY_BELIEF_WORLD_CHURCH">
+			<Text>+1 [ICON_CULTURE] Culture for every 3 followers of this religion in other civilizations</Text>
+		</Replace>
 
 		<Row Tag="TXT_KEY_BELIEF_MARSH_BELIEF_SHORT">
 			<Text>Swamp Belief</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_MARSH_BELIEF">
-			<Text>+3 [ICON_PEACE] Faith from Marsh tiles. </Text>
+			<Text>+3 [ICON_PEACE] Faith and +1 [ICON_CULTURE] Culture from Marsh tiles</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SNOW_BELIEF_SHORT">
 			<Text>Snow Spirit</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SNOW_BELIEF">
-			<Text>+1 [ICON_PEACE] Faith from Tundra tiles without Forest, +2 [ICON_PEACE] Faith and +1 [ICON_FOOD] Food from tiles covered with Snow.</Text>
+			<Text>+1 [ICON_PEACE] Faith from Tundra tiles without Forest, +2 [ICON_PEACE] Faith and +1 [ICON_FOOD] Food from tiles covered with Snow</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_RIVER_CRAFTSMAN_SHORT">
 			<Text>Sudoku</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_RIVER_CRAFTSMAN">
-			<Text>+2 [ICON_HAPPINESS_1] Happiness for every Watermill.</Text>
+			<Text>+2 [ICON_HAPPINESS_1] Happiness for every Watermill</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_MAZU_SHORT">
 			<Text>Worship of Mazu</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_MAZU">
-			<Text>+2 [ICON_HAPPINESS_1] Happiness for every Harbor.</Text>
+			<Text>+2 [ICON_HAPPINESS_1] Happiness for every Harbor</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_CHARITES_SHORT">
 			<Text>Worship of Charites</Text>
@@ -9009,7 +9019,7 @@
 			<Text>The Sacred Palace</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_RELIGION_PRESSURE">
-			<Text>25% of the [ICON_CULTURE] Culture from World Wonders, Natural Wonders, and Improvements (Landmarks, Moai, Chateau) is added to the [ICON_TOURISM] Tourism output of the city. </Text>
+			<Text>25% of the [ICON_CULTURE] Culture from World Wonders, Natural Wonders, and Improvements (Landmarks, Moai, Chateau) is added to the [ICON_TOURISM] Tourism output of the city </Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SCIENCE_RELIGION_SHORT">
 			<Text>Juku</Text>
@@ -9063,13 +9073,13 @@
 			<Text>Holy City Mark</Text>
 		</Row>
 		<Replace Tag="TXT_KEY_BELIEF_MISSIONARY_ZEAL">
-			<Text>Messionary conversion strength +25%, +2 extra Religion Spread when Messionaries born in Holy City.</Text>
+			<Text>Messionary conversion strength +25%, +2 extra Religion Spread when Messionaries born in Holy City</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_MESSIAH">
-			<Text>Prophets 25% stronger and earned with 25% less [ICON_PEACE] Faith, your Prophets can enter other nations' territory even without an Open Border Agreement.</Text>
+			<Text>Prophets 25% stronger and earned with 25% less [ICON_PEACE] Faith, your Prophets can enter other nations' territory even without an Open Border Agreement</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_TEXTS">
-			<Text>Religion spreads 25% faster (50% with Printing Press), religion spreads to friendly city-states at double rate.</Text>
+			<Text>Religion spreads 25% faster (50% with Printing Press), every 3 [ICON_PEACE] Faith output in Holy City offer additional +1 basic [ICON_CULTURE] Culture output</Text>
 		</Replace>
 
 
