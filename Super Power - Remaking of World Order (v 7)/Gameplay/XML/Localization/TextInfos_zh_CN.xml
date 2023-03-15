@@ -7703,9 +7703,6 @@
 		<Replace Tag="TXT_KEY_BELIEF_GODDESS_LOVE_SHORT">
 			<Text>创世母神</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_ANCESTOR_WORSHIP">
-			<Text>神祠+1[ICON_PEACE]信仰、+1[ICON_CULTURE]文化</Text>
-		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GODDESS_LOVE">
 			<Text>城市+1[ICON_HAPPINESS_1]快乐，城市[ICON_CITIZEN]人口增长时获得6点[ICON_PEACE]信仰（标准速度下）</Text>
 		</Replace>
@@ -7824,7 +7821,7 @@
 			<Text>纪念碑+2[ICON_PEACE]信仰</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_STONE_CIRCLES">
-			<Text>采石场和石工坊+2[ICON_PEACE]信仰</Text>
+			<Text>采石场和石工坊+2[ICON_PEACE]信仰，[ICON_RES_MARBLE]大理石+1[ICON_PRODUCTION]产能</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_RELIQUARY">
 			<Text>风景地标、学园、海关、制造中心、宗教圣地+5[ICON_PEACE]信仰</Text>
@@ -7907,11 +7904,8 @@
 			<Text>传教士可使相邻的蛮族单位加入本文明，攻占敌方城市可以转换部分异教徒为本宗教信徒，且获得转换信徒数相关的[ICON_PEACE]信仰、[ICON_CULTURE]文化、[ICON_GOLD]金钱</Text>
 		</Replace>
 		<Row Tag="TXT_KEY_MESSAGE_BELIEF_HEATHEN_CONVERSION_ALERT">
-			<Text>{1_name}中的部分异教徒受到了我方感化皈依，获得[COLOR_POSITIVE_TEXT]{2_name}点[ENDCOLOR][ICON_PEACE]信仰、[ICON_CULTURE]文化、[ICON_GOLD]金钱。</Text>
+			<Text>{1_name}中的部分异教徒受到了我方感化皈依，获得[COLOR_POSITIVE_TEXT]{2_name}点[ENDCOLOR][ICON_PEACE]信仰、[ICON_CULTURE]文化、[ICON_GOLD]金钱</Text>
 		</Row>
-		<Replace Tag="TXT_KEY_BELIEF_HEATHEN_CONVERSION">
-			<Text>传教士可使相邻的蛮族单位加入本文明，攻占敌方城市可以转换部分异教徒为本宗教信徒，且获得转换信徒数相关的[ICON_PEACE]信仰、[ICON_CULTURE]文化、[ICON_GOLD]金钱</Text>
-		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_JUST_WAR">
 			<Text>在信仰该宗教的敌方城市附近+20%[ICON_STRENGTH]战斗力，且占领该城市后[ICON_RESISTANCE]抵抗时间减半</Text>
 		</Replace>
@@ -7931,50 +7925,59 @@
 			<Text>圣城压力+200%，圣城诞生大先知时，你的每座信仰本宗教的城市都会为你提供一次性[ICON_CULTURE]文化产出</Text>
 		</Row>
 		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_UNITY">
-			<Text>完成信仰该宗教的城邦的任务获得的[ICON_INFLUENCE]影响力+50%</Text>
+			<Text>宗教以双倍速度传播到友好的城邦，完成信仰同宗教城邦的任务获得的[ICON_INFLUENCE]影响力+50%</Text>
 		</Replace>
+		<Row Tag="TXT_KEY_SP_NOTIFICATION_RELIGION_CIVQUEST_BONUS_SHORT">
+			<Text>宗教带来的城邦影响力加成</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_NOTIFICATION_RELIGION_CIVQUEST_BONUS">
+			<Text>由于{1_Name}信仰你创立的宗教，完成其任务获得{2_Name}点额外[ICON_INFLUENCE]影响力。</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_BELIEF_FAITH_WITHOUT_BORDERS_SHORT">
 			<Text>普世宗教</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_FAITH_WITHOUT_BORDERS">
-			<Text>其他文明的城市中每4个信徒+1[ICON_PEACE]信仰</Text>
+			<Text>其他文明的城市中每3个信徒+1[ICON_PEACE]信仰</Text>
 		</Row>
+		<Replace Tag="TXT_KEY_BELIEF_WORLD_CHURCH">
+			<Text>每3个其他文明中该宗教的信徒贡献1[ICON_CULTURE]文化</Text>
+		</Replace>
 		<Row Tag="TXT_KEY_BELIEF_MARSH_BELIEF_SHORT">
 			<Text>河童传说</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_MARSH_BELIEF">
-			<Text>沼泽+3[ICON_PEACE]信仰。</Text>
+			<Text>沼泽+3[ICON_PEACE]信仰、+1[ICON_CULTURE]文化</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_RIVER_CRAFTSMAN_SHORT">
 			<Text>河图洛书</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_RIVER_CRAFTSMAN">
-			<Text>水力磨坊+2[ICON_HAPPINESS_1]快乐。</Text>
+			<Text>水力磨坊+2[ICON_HAPPINESS_1]快乐</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_MAZU_SHORT">
 			<Text>妈祖祭典</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_MAZU">
-			<Text>港口+2[ICON_HAPPINESS_1]快乐。</Text>
+			<Text>港口+2[ICON_HAPPINESS_1]快乐</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_CHARITES_SHORT">
 			<Text>美惠三女神</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_CHARITES">
-			<Text>露天剧场、画廊和歌剧院+2[ICON_CULTURE]文化。</Text>
+			<Text>露天剧场、画廊和歌剧院+2[ICON_CULTURE]文化</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_EIRENE_SHORT">
 			<Text>兼爱非攻</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_EIRENE">
-			<Text>和平时期全国+25%[ICON_CULTURE]文化产出。</Text>
+			<Text>和平时期全国+25%[ICON_CULTURE]文化产出</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_INQUISITION_SHORT">
 			<Text>异端审判</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_INQUISITION">
-			<Text>允许宗教单位消耗自身在其所在城市中建立[COLOR_POSITIVE_TEXT]宗教裁判所[ENDCOLOR]（城中的每种异教+3[ICON_PEACE]信仰、+2[ICON_GOLD]金钱。+1[ICON_HAPPINESS_1]快乐。只能在存在非主流异教的城市中建造）</Text>
+			<Text>允许宗教单位消耗自身在其所在城市中建立[COLOR_POSITIVE_TEXT]宗教裁判所[ENDCOLOR]（城中的每种异教+3[ICON_PEACE]信仰、+2[ICON_GOLD]金钱、+1[ICON_HAPPINESS_1]快乐。只能在存在非主流异教的城市中建造）</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_RELIGION_PRESSURE_SHORT">
 			<Text>神圣殿堂</Text>
@@ -8031,13 +8034,13 @@
 			<Text>圣城标记</Text>
 		</Row>
 		<Replace Tag="TXT_KEY_BELIEF_MISSIONARY_ZEAL">
-			<Text>传教士传教能力+25%，圣城诞生的传教士传教次数+2。</Text>
+			<Text>传教士传教能力+25%，圣城诞生的传教士传教次数+2</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_MESSIAH">
-			<Text>大先知能力增强25%，催生大先知所需的[ICON_PEACE]信仰减少25%，大先知能进入未开边国家领土。</Text>
+			<Text>大先知能力增强25%，催生大先知所需的[ICON_PEACE]信仰减少25%，大先知能进入未开边国家领土</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_TEXTS">
-			<Text>宗教传播速度+25%(研发印刷机后+50%)，宗教以双倍速度传播到友好的城邦</Text>
+			<Text>宗教传播速度+25%(研发印刷机后+50%)，圣城每3点[ICON_PEACE]信仰提供1点基础[ICON_CULTURE]文化产出</Text>
 		</Replace>
 
 
