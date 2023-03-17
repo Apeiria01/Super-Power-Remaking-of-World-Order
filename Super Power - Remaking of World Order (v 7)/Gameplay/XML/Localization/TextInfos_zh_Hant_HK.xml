@@ -14527,5 +14527,37 @@
 				[NEWLINE][ICON_BULLET]殲滅位於城市6格內敵人時，獲得目標單位50%[ICON_STRENGTH]戰鬥力的[ICON_FOOD]食物、[ICON_PEACE]信仰。
 			</Text>
 		</Replace>
+
+		<Replace Tag="TXT_KEY_CITY_NAME_LHASA">
+			<Text>甘托克</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CITYSTATE_LHASA">
+			<Text>甘托克</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CITYSTATE_LHASA_ADJ">
+			<Text>甘托克</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CIV5_LHASA_TITLE">
+			<Text>甘托克</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CIV5_LHASA_TEXT">
+			<Text>
+				甘托克，是曾經存在的獨立君主製國家錫金的首都。錫金王國曾在19世紀60年代成為被英國「保護」的國家，後又被英國強占；二十世紀40年代，印度與錫金簽訂《維持現狀協定》，後印度又成為錫金「保護國」，直至二十世紀70年代，印度軍隊發動政變吞並錫金，國王流亡美國。
+				[NEWLINE][NEWLINE]甘托克曾是印度—西藏傳統商路上的交通要道和貿易中心，也是古代中亞香客前往恒河和雅魯藏布江聖地的習慣通道，如今的甘托克城市經濟依舊落後，政府財政收入大部分來自森林資源和運輸業，幾乎沒有工業，是一個原生態城市。
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CITYSTATE_HONG_KONG">
+			<Text>杜拜</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CITYSTATE_HONG_KONG_ADJ">
+			<Text>杜拜</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CIV5_HONG_KONG_TEXT">
+			<Text>
+				杜拜（阿拉伯語：دبي、Dubayy；英語：Dubai），是阿拉伯聯合酋長國人口最多的城市，也是該國七個酋長國之一杜拜酋長國的首府，其位於中東地區的中央，是面向波斯灣的一片平坦的沙漠之地。
+				[NEWLINE][NEWLINE]杜拜是中東地區的經濟金融中心，它也是中東地區旅客和貨物的主要運輸樞紐。石油收入促進了杜拜的早期發展，繼石油之後，杜拜的經濟主要依靠旅遊業、航空業、房地產和金融服務。
+				[NEWLINE][NEWLINE]杜拜的大型建築項目和體育賽事常常能吸引全世界的目光，其擁有世界上最高的人工建築哈利法塔，還有世界上面積最大的人工島項目棕櫚島。
+			</Text>
+		</Replace>
 	</Language_zh_Hant_HK>
 </GameData>

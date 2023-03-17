@@ -14729,5 +14729,37 @@
 			</Text>
 		</Replace>
 
+		<Replace Tag="TXT_KEY_CITY_NAME_LHASA">
+			<Text>甘托克</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CITYSTATE_LHASA">
+			<Text>甘托克</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CITYSTATE_LHASA_ADJ">
+			<Text>甘托克</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CIV5_LHASA_TITLE">
+			<Text>甘托克</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CIV5_LHASA_TEXT">
+			<Text>
+				甘托克，是曾经存在的独立君主制国家锡金的首都。锡金王国曾在19世纪60年代成为被英国“保护”的国家，后又被英国强占；二十世纪40年代，印度与锡金签订《维持现状协定》，后印度又成为锡金“保护国”，直至二十世纪70年代，印度军队发动政变吞并锡金，国王流亡美国。
+				[NEWLINE][NEWLINE]甘托克曾是印度—西藏传统商路上的交通要道和贸易中心，也是古代中亚香客前往恒河和雅鲁藏布江圣地的习惯通道，如今的甘托克城市经济依旧落后，政府财政收入大部分来自森林资源和运输业，几乎没有工业，是一个原生态城市。
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CITYSTATE_HONG_KONG">
+			<Text>迪拜</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CITYSTATE_HONG_KONG_ADJ">
+			<Text>迪拜</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CIV5_HONG_KONG_TEXT">
+			<Text>
+				迪拜（阿拉伯语：دبي、Dubayy；英语：Dubai），是阿拉伯联合酋长国人口最多的城市，也是该国七个酋长国之一迪拜酋长国的首府，其位于中东地区的中央，是面向波斯湾的一片平坦的沙漠之地。
+				[NEWLINE][NEWLINE]迪拜是中东地区的经济金融中心，它也是中东地区旅客和货物的主要运输枢纽。石油收入促进了迪拜的早期发展，继石油之后，迪拜的经济主要依靠旅游业、航空业、房地产和金融服务。
+				[NEWLINE][NEWLINE]迪拜的大型建筑项目和体育赛事常常能吸引全世界的目光，其拥有世界上最高的人工建筑哈利法塔，还有世界上面积最大的人工岛项目棕榈岛。
+			</Text>
+		</Replace>
+
 	</Language_zh_CN>
 </GameData>

@@ -16766,5 +16766,34 @@
 			[NEWLINE][ICON_BULLET] When an enemy within 6 squares of the city is destroyed, [ICON_FOOD] food and [ICON_PEACE] belief of 50% [ICON_STRENGTH] combat power of the target unit will be obtained.
 			</Text>
 		</Replace>
+		<Replace Tag="TXT_KEY_CITY_NAME_LHASA">
+			<Text>Gangtok</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CITYSTATE_LHASA">
+			<Text>Gangtok</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CITYSTATE_LHASA_ADJ">
+			<Text>Gangtok</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CIV5_LHASA_TITLE">
+			<Text>Gangtok</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CIV5_LHASA_TEXT">
+			<Text>
+				Gangtok is a city , the capital and the largest populated place of Sikkim. The Kingdom of Sikkim was founded by the Namgyal dynasty in the 17th century.It became a princely state of British India in 1890. Following Indian independence, Sikkim continued its "protectorate status" with the Union of India after 1947, and the Republic of India after 1950.In 1973, anti-royalist riots took place in front of the Chogyal's palace. In 1975, after the Indian Army took over the city of Gangtok, a referendum under surveillance with Indian army was held that led to the dissolution of the monarchy and Sikkim joining India as its 22nd state.
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CITYSTATE_HONG_KONG">
+			<Text>Dubai</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CITYSTATE_HONG_KONG_ADJ">
+			<Text>Dubai</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CIV5_HONG_KONG_TEXT">
+			<Text>
+				Dubai is the most populous city in the United Arab Emirates (UAE) and the capital of the Emirate of Dubai, the most populated of the 7 emirates of the United Arab Emirates.This city grew rapidly in the early 21st century with a focus on tourism and luxury, having the second most five-star hotels in the world, and the tallest building in the world, the Burj Khalifa, which is 828 metres (2,717 ft) tall. 
+				[NEWLINE][NEWLINE]In the eastern Arabian Peninsula on the coast of the Persian Gulf, it is also a major global transport hub for passengers and cargo. Oil revenue helped accelerate the development of the city, which was already a major mercantile hub.
+			</Text>
+		</Replace>
 	</Language_en_US>
 </GameData>
