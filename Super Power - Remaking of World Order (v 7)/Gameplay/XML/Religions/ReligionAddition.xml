@@ -35,6 +35,11 @@
 			<DefaultBuilding>BUILDING_BELIEF_ORTHODOX_CHURCH</DefaultBuilding>
 			<Description>TXT_KEY_BELIEF_ORTHODOX_CHURCH_SHORT</Description>
 		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_BELIEF_RELIGIOUS_TEXTS</Type>
+			<DefaultBuilding>BUILDING_BELIEF_RELIGIOUS_TEXTS</DefaultBuilding>
+			<Description>TXT_KEY_BELIEF_RELIGIOUS_TEXTS_SHORT</Description>
+		</Row>
     </BuildingClasses>
 
     <Buildings>
@@ -191,6 +196,22 @@
 			<NeverCapture>true</NeverCapture>
 			<ReligiousPressureModifier>200</ReligiousPressureModifier>
 		</Row>
+
+		<Row>
+			<Type>BUILDING_BELIEF_RELIGIOUS_TEXTS</Type>
+			<BuildingClass>BUILDINGCLASS_BELIEF_RELIGIOUS_TEXTS</BuildingClass>
+			<Cost>-1</Cost>
+			<Description>TXT_KEY_BELIEF_RELIGIOUS_TEXTS_SHORT</Description>
+			<Civilopedia>TXT_KEY_BELIEF_RELIGIOUS_TEXTS_SHORT</Civilopedia>
+			<Strategy>TXT_KEY_BELIEF_RELIGIOUS_TEXTS_SHORT</Strategy>
+			<MinAreaSize>-1</MinAreaSize>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<IconAtlas>BW_ATLAS_2</IconAtlas>
+			<PortraitIndex>8</PortraitIndex>
+			<GreatWorkCount>-1</GreatWorkCount>
+            <HolyCity>true</HolyCity>
+			<NeverCapture>true</NeverCapture>
+		</Row>
     </Buildings>
 
 	<Building_EnableUnitPurchase>
@@ -225,6 +246,16 @@
 			<Experience>15</Experience>
 		</Row>
 	</Building_DomainFreeExperiences>
+
+	<Building_YieldFromOtherYield>
+		<Row>
+			<BuildingType>BUILDING_BELIEF_RELIGIOUS_TEXTS</BuildingType>
+			<InYieldType>YIELD_FAITH</InYieldType>
+			<InYieldValue>3</InYieldValue>
+			<OutYieldType>YIELD_CULTURE</OutYieldType>
+			<OutYieldValue>1</OutYieldValue>
+		</Row>
+	</Building_YieldFromOtherYield>
 
 	<Policies>
 		<Row>

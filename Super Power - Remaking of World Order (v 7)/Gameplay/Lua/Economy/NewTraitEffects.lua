@@ -141,9 +141,7 @@ function JapanReligionEnhancedUA(iPlayer, eReligion, iBelief1, iBelief2)
 		local availableBeliefs = {};
 		for i,v in ipairs(Game.GetAvailablePantheonBeliefs()) do
 			local belief = GameInfo.Beliefs[v];
-			if  belief ~= nil
-			-- and belief.Type ~= "BELIEF_ANCESTOR_WORSHIP" and belief.Type ~= "BELIEF_MONUMENT_GODS"
-			-- and belief.Type ~= "BELIEF_GODDESS_STRATEGY" and belief.Type ~= "BELIEF_FERTILITY_RITES"
+			if belief ~= nil and belief.Pantheon
 			then
 				table.insert(availableBeliefs, belief.ID);
 			end
