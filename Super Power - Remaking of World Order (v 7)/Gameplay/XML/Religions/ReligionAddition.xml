@@ -279,5 +279,9 @@
 			<Type>POLICY_BELIEF_RELIGIOUS_UNITY</Type>
 			<Description>TXT_KEY_BELIEF_RELIGIOUS_UNITY_SHORT</Description>
 		</Row>
+		<Row>
+			<Type>POLICY_BELIEF_RELIGIOUS_SCIENCE</Type>
+			<Description>TXT_KEY_RELIGIOUS_SCIENCE_SHORT</Description>
+		</Row>
 	</Policies>
 </GameData>

@@ -14760,6 +14760,9 @@
 				[NEWLINE][NEWLINE]迪拜的大型建筑项目和体育赛事常常能吸引全世界的目光，其拥有世界上最高的人工建筑哈利法塔，还有世界上面积最大的人工岛项目棕榈岛。
 			</Text>
 		</Replace>
+		<Row Tag="TXT_KEY_TP_SCIENCE_FROM_RELIGION">
+			<Text>[ICON_BULLET][COLOR_POSITIVE_TEXT]+{1_Num}[ENDCOLOR][ICON_RESEARCH]来自宗教。</Text>
+		</Row>
 
 	</Language_zh_CN>
 </GameData>

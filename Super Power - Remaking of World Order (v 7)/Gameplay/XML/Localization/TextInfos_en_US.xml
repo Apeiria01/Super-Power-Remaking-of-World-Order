@@ -16795,5 +16795,8 @@
 				[NEWLINE][NEWLINE]In the eastern Arabian Peninsula on the coast of the Persian Gulf, it is also a major global transport hub for passengers and cargo. Oil revenue helped accelerate the development of the city, which was already a major mercantile hub.
 			</Text>
 		</Replace>
+		<Row Tag="TXT_KEY_TP_SCIENCE_FROM_RELIGION">
+			<Text>[ICON_BULLET][COLOR_POSITIVE_TEXT]+{1_Num}[ENDCOLOR] [ICON_RESEARCH] from Religion.</Text>
+		</Row>
 	</Language_en_US>
 </GameData>

@@ -14559,5 +14559,8 @@
 				[NEWLINE][NEWLINE]杜拜的大型建築項目和體育賽事常常能吸引全世界的目光，其擁有世界上最高的人工建築哈利法塔，還有世界上面積最大的人工島項目棕櫚島。
 			</Text>
 		</Replace>
+		<Row Tag="TXT_KEY_TP_SCIENCE_FROM_RELIGION">
+			<Text>[ICON_BULLET]來自宗教的[COLOR_POSITIVE_TEXT]+{1_Num}[ENDCOLOR][ICON_RESEARCH]。</Text>
+		  </Row>
 	</Language_zh_Hant_HK>
 </GameData>
