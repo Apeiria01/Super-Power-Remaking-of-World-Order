@@ -560,7 +560,25 @@ function ScienceTipHandler( control )
 
 			strText = strText .. Locale.ConvertTextKey("TXT_KEY_TP_SCIENCE_FROM_MINORS", iScienceFromOtherPlayers / 100);
 		end
-	
+
+		-- Science from Religion
+		if pPlayer:HasPolicy(GameInfo.Policies["POLICY_BELIEF_RELIGIOUS_SCIENCE"].ID) then
+			local iScienceFromReligion = 0;
+			local scienceBelief = GameInfo.Beliefs["BELIEF_RELIGIOUS_SCIENCE"].ID
+			for playerID,player in pairs(Players) do
+				if player and player:IsAlive() and player:GetNumCities() >= 1 then
+					for city in player:Cities() do
+						if city:IsHasMajorBelief(scienceBelief) then
+							iScienceFromReligion = iScienceFromReligion + 2
+						end
+					end
+				end
+			end
+			if (iScienceFromReligion ~= 0) then
+				strText = strText .. "[NEWLINE]";
+				strText = strText .. Locale.ConvertTextKey("TXT_KEY_TP_SCIENCE_FROM_RELIGION", iScienceFromReligion);
+			end
+		end
 	
 	
 		-- Science from Happiness------Civ5 Original Backup

@@ -13,6 +13,11 @@ function SPEReligionAdopt(pPlayer,iBelief,pHolyCity)
             pHolyCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGIOUS_COLONIZATION,1)
         end
 
+    elseif iBelief == GameInfo.Beliefs["BELIEF_RELIGIOUS_SCIENCE"].ID
+	then
+		print("Choose BELIEF_RELIGIOUS_SCIENCE")
+		pPlayer:SetHasPolicy(GameInfo.Policies["POLICY_BELIEF_RELIGIOUS_SCIENCE"].ID,true,true)	
+
     --Enhanced
     elseif iBelief == GameInfo.Beliefs["BELIEF_MISSIONARY_ZEAL"].ID
 	then
