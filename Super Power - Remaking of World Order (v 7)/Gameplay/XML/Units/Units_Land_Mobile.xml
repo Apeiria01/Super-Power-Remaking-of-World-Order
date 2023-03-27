@@ -364,7 +364,7 @@
 		</Row>
 		<Row>
 			<Class>UNITCLASS_KNIGHT</Class>
-			<Type>UNIT_MAMLUK</Type>
+			<Type>UNIT_EGYPTAIN_MAMLUK</Type>
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
 			<BaseSightRange>2</BaseSightRange>
 			<Combat>45</Combat>
@@ -375,10 +375,10 @@
 			<CombatClass>UNITCOMBAT_MOUNTED</CombatClass>
 			<Domain>DOMAIN_LAND</Domain>
 			<DefaultUnitAI>UNITAI_FAST_ATTACK</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_MAMLUK</Description>
+			<Description>TXT_KEY_UNIT_EGYPTAIN_MAMLUK</Description>
 			<Civilopedia>TXT_KEY_CIVILOPEDIA_UNITS_MEDIEVAL_MAMLUK_TEXT</Civilopedia>
 			<Strategy>TXT_KEY_SP_UNITS_HEAVY_MOBILE_UNITS_STRATEGY</Strategy>
-			<Help>TXT_KEY_UNIT_MAMLUK_HELP</Help>
+			<Help>TXT_KEY_UNIT_EGYPTAIN_MAMLUK_HELP</Help>
 			<MilitarySupport>true</MilitarySupport>
 			<MilitaryProduction>true</MilitaryProduction>
 			<Pillage>true</Pillage>
@@ -1774,7 +1774,7 @@
 			<UnitClassType>UNITCLASS_LANCER</UnitClassType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_MAMLUK</UnitType>
+			<UnitType>UNIT_EGYPTAIN_MAMLUK</UnitType>
 			<UnitClassType>UNITCLASS_LANCER</UnitClassType>
 		</Row>
 		<Row>
@@ -2135,11 +2135,11 @@
 			<PromotionType>PROMOTION_KNIGHT_COMBAT</PromotionType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_MAMLUK</UnitType>
+			<UnitType>UNIT_EGYPTAIN_MAMLUK</UnitType>
 			<PromotionType>PROMOTION_KNIGHT_COMBAT</PromotionType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_MAMLUK</UnitType>
+			<UnitType>UNIT_EGYPTAIN_MAMLUK</UnitType>
 			<PromotionType>PROMOTION_SPN_MAMLUK_COMBAT_FAITH</PromotionType>
 		</Row>
 		<Row>
@@ -2765,11 +2765,11 @@
 			<UnitAIType>UNITAI_FAST_ATTACK</UnitAIType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_MAMLUK</UnitType>
+			<UnitType>UNIT_EGYPTAIN_MAMLUK</UnitType>
 			<UnitAIType>UNITAI_ATTACK</UnitAIType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_MAMLUK</UnitType>
+			<UnitType>UNIT_EGYPTAIN_MAMLUK</UnitType>
 			<UnitAIType>UNITAI_FAST_ATTACK</UnitAIType>
 		</Row>
 		<Row>
@@ -3191,7 +3191,7 @@
 			<ResourceType>RESOURCE_HORSE</ResourceType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_MAMLUK</UnitType>
+			<UnitType>UNIT_EGYPTAIN_MAMLUK</UnitType>
 			<ResourceType>RESOURCE_HORSE</ResourceType>
 		</Row>
 		<Row>
@@ -3304,7 +3304,7 @@
 			<Cost>3</Cost>
 		</Row>
 		<Row>
-			<UnitType>UNIT_MAMLUK</UnitType>
+			<UnitType>UNIT_EGYPTAIN_MAMLUK</UnitType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 			<Cost>3</Cost>
 		</Row>
@@ -3752,12 +3752,12 @@
 			<Flavor>20</Flavor>
 		</Row>
 		<Row>
-			<UnitType>UNIT_MAMLUK</UnitType>
+			<UnitType>UNIT_EGYPTAIN_MAMLUK</UnitType>
 			<FlavorType>FLAVOR_MOBILE</FlavorType>
 			<Flavor>50</Flavor>
 		</Row>
 		<Row>
-			<UnitType>UNIT_MAMLUK</UnitType>
+			<UnitType>UNIT_EGYPTAIN_MAMLUK</UnitType>
 			<FlavorType>FLAVOR_OFFENSE</FlavorType>
 			<Flavor>40</Flavor>
 		</Row>

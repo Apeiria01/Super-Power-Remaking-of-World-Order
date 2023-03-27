@@ -5659,11 +5659,9 @@
 		
 		<Replace Tag="TXT_KEY_TRAIT_GREAT_ANDEAN_ROAD">
 			<Text>
-				[ICON_BULLET]單位進入丘陵地塊不消耗額外移動力。
+				[ICON_BULLET]單位進入丘陵地塊不消耗額外移動力，工人可以鏟除丘陵地塊上的[ICON_RES_SHEEP]羊。
 				[NEWLINE][ICON_BULLET]丘陵上的設施不需要維護費，其他地形上的設施維護費減半。
-				[NEWLINE][ICON_BULLET]工人可以剷除丘陵地塊上的[ICON_RES_SHEEP]羊。
-				[NEWLINE][ICON_BULLET]平民單位可以進入山脈地塊。
-				[NEWLINE][ICON_BULLET]移民可以在山脈地塊上建立城市。山脈城市獲得額外的[ICON_RESEARCH]科研和[ICON_FOOD]食物產出，隨時代加成。
+				[NEWLINE][ICON_BULLET]平民單位可以進入山脈地塊，且移民可以在山脈地塊上建立城市。山脈城市獲得額外的[ICON_RESEARCH]科研和[ICON_FOOD]食物產出，隨時代加成。
 			</Text>
 		</Replace>
 		
@@ -9907,10 +9905,10 @@
 			<Text>強大的機動單位，替代巡航坦克，擁有更高的移動更大的視野，面對敵人的進攻有50%概率全身而退，面對殘軍增加戰鬥力，境外作戰+25%[ICON_STRENGTH]戰鬥力。</Text>
 		</Row>
 	
-		<Row Tag="TXT_KEY_UNIT_MAMLUK">
+		<Row Tag="TXT_KEY_UNIT_EGYPTAIN_MAMLUK">
 			<Text>馬穆魯克</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_MAMLUK_HELP">
+		<Row Tag="TXT_KEY_UNIT_EGYPTAIN_MAMLUK_HELP">
 			<Text>馬穆魯克是埃及文明的特色單位，替代騎士。
 				[NEWLINE][ICON_BULLET]位於城市時可禁止其他文明進行傳教。
 				[NEWLINE][ICON_BULLET]攻擊時獲得與造成傷害數值相同的[ICON_PEACE]信仰。

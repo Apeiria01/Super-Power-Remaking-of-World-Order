@@ -345,7 +345,7 @@
 		</Row>-->
 
 		<Row>
-			<UnitType>UNIT_MAMLUK</UnitType>
+			<UnitType>UNIT_EGYPTAIN_MAMLUK</UnitType>
 			<SelectionSound>AS2D_BUILD_UNIT</SelectionSound>
 			<FirstSelectionSound>AS2D_BUILD_UNIT</FirstSelectionSound>
 		</Row>

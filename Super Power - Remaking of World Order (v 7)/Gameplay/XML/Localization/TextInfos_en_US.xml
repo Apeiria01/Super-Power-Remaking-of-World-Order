@@ -11774,10 +11774,10 @@
 
 
 
-		<Row Tag="TXT_KEY_UNIT_MAMLUK">
+		<Row Tag="TXT_KEY_UNIT_EGYPTAIN_MAMLUK">
 			<Text>Mamluk</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_MAMLUK_HELP">
+		<Row Tag="TXT_KEY_UNIT_EGYPTAIN_MAMLUK_HELP">
 			<Text>
 				Mamluk is the Egyptian unique unit, replacing the Knight. 
 				[NEWLINE][ICON_BULLET]Prohibits Other Religions Spread to the City Garrisoned.

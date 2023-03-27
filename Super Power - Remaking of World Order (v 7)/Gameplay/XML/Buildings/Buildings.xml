@@ -399,8 +399,8 @@
 			<MinAreaSize>-1</MinAreaSize>
 			<ConquestProb>66</ConquestProb>
 			<HurryCostModifier>25</HurryCostModifier>
-			<IconAtlas>BW_ATLAS_1</IconAtlas>
-			<PortraitIndex>28</PortraitIndex>
+			<IconAtlas>SP8_EXTRA_ATLAS</IconAtlas>
+			<PortraitIndex>7</PortraitIndex>
 			<EnhancedYieldTech>TECH_INTERNET</EnhancedYieldTech>
 			<TechEnhancedTourism>2</TechEnhancedTourism>
 			<TrainedFreePromotion>PROMOTION_ORBAN_CANNON</TrainedFreePromotion>
@@ -1905,8 +1905,8 @@
 			<MinAreaSize>-1</MinAreaSize>
 			<ConquestProb>100</ConquestProb>
 			<HurryCostModifier>25</HurryCostModifier>
-			<IconAtlas>BW_ATLAS_1</IconAtlas>
-			<PortraitIndex>37</PortraitIndex>
+			<IconAtlas>SP8_EXTRA_ATLAS</IconAtlas>
+			<PortraitIndex>5</PortraitIndex>
 			<MilitaryProductionModifier>15</MilitaryProductionModifier>
 		</Row>
 		<Row>

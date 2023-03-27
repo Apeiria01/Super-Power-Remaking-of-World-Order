@@ -304,7 +304,7 @@
 			<BuildingClassType>BUILDINGCLASS_ARMORY</BuildingClassType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_MAMLUK</UnitType>
+			<UnitType>UNIT_EGYPTAIN_MAMLUK</UnitType>
 			<BuildingClassType>BUILDINGCLASS_ARMORY</BuildingClassType>
 		</Row>
 		<Row>
