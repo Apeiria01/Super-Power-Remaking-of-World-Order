@@ -2,7 +2,7 @@
 
 
 --include( "UtilityFunctions.lua" )
-
+include("FLuaVector.lua");
 --******************************************************************************* Unit Combat Rules *******************************************************************************
 local g_DoNewAttackEffect = nil;
 function NewAttackEffectStarted(iType, iPlotX, iPlotY)
@@ -267,6 +267,8 @@ function NewAttackEffect()
 	local AntiDebuffID = GameInfo.UnitPromotions["PROMOTION_ANTI_DEBUFF"].ID
 
 	local DoppelsoldnerID = GameInfo.UnitPromotions["PROMOTION_GERMAN_LONGSWORDSMAN"].ID
+	local MamlukCombatID = GameInfo.UnitPromotions["PROMOTION_SPN_MAMLUK_COMBAT_FAITH"].ID
+	
 	-- Ranged Unit Logistics can only move to the adjusted plot
 	if attUnit:IsDead() then
 	elseif attUnit:GetMoves() > 0 and not attUnit:IsImmobile() and not attUnit:IsRangedSupportFire()
@@ -434,6 +436,21 @@ function NewAttackEffect()
 		return
 	end
 
+	--Mamluk gain Faith from Combat
+	if not defCity and attUnit:IsHasPromotion(MamlukCombatID) then
+		local MamlukDamageBonus = 0
+		if defUnit then
+			MamlukDamageBonus = defUnitDamage
+		end
+		print("Mamluk Attack Damage is :",MamlukDamageBonus)
+		attPlayer:ChangeFaith(MamlukDamageBonus)
+		if attPlayer:IsHuman() and MamlukDamageBonus >0 then
+			local hex = ToHexFromGrid(Vector2(plotX,plotY))
+			Events.AddPopupTextEvent(HexToWorld(hex), Locale.ConvertTextKey("+{1_Num}[ICON_PEACE]",MamlukDamageBonus))
+			Events.GameplayFX(hex.x, hex.y, -1)
+		end
+	end
+		
 
 	----------------EMP Bomber effects
 	if attUnit:IsHasPromotion(EMPBomberID) then

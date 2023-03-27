@@ -2199,7 +2199,7 @@
 			<Text>[ICON_CULTURE]{1_Num: number \"'+'##;'[COLOR_RED]-'##\"}</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CHOOSE_INTERNATIONAL_TRADE_ROUTE_ITEM_FAITH_SHORT">
-			<Text>[ICON_FAITH]{1_Num: number \"'+'##;'[COLOR_RED]-'##\"}</Text>
+			<Text>[ICON_PEACE]{1_Num: number \"'+'##;'[COLOR_RED]-'##\"}</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CHOOSE_INTERNATIONAL_TRADE_ROUTE_ITEM_RELIGIOUS_PRESSURE_SHORT">
 			<Text>{1_ReligionIcon}+{2_Num}</Text>
@@ -11774,19 +11774,25 @@
 
 
 
-		<!--<Row Tag="TXT_KEY_UNIT_EGYPT_MAMLUK">
-			<Text>Mamluk</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_EGYPT_MAMLUK_HEADING">
+		<Row Tag="TXT_KEY_UNIT_MAMLUK">
 			<Text>Mamluk</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_HELP_EGYPT_MAMLUK">
+		<Row Tag="TXT_KEY_UNIT_MAMLUK_HELP">
+			<Text>
+				Mamluk is the Egyptian unique unit, replacing the Knight. 
+				[NEWLINE][ICON_BULLET]Prohibits Other Religions Spread to the City Garrisoned.
+				[NEWLINE][ICON_BULLET]Gain the Faith [ICON_PEACE] as the amount of damage dealt when attacking.
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIVILOPEDIA_UNITS_MEDIEVAL_MAMLUK_TEXT">
 			<Text>WIP</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_EGYPT_MAMLUK_PEDIA">
-			<Text>WIP</Text>
-		</Row>-->
+		<Row Tag="TXT_KEY_PROMOTION_SPN_MAMLUK_COMBAT_FAITH">
+			<Text>Sultan's Blade</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_SPN_MAMLUK_COMBAT_FAITH_HELP">
+			<Text>Gain the Faith [ICON_PEACE] as the amount of damage dealt when attacking enemy troops.</Text>
+		</Row>
 
 
 		<!--<Row Tag="TXT_KEY_UNIT_PERSIAN_CATAPHRACT">
@@ -12231,24 +12237,6 @@
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_HUN_SHAMAN_TEXT">
 			<Text>The word "shaman" probably originates from the Tungusic Evenki language of North Asia. According to ethnolinguist Juha Janhunen, "the word is attested in all of the Tungusic idioms" such as Negidal, Lamut, Udehe/Orochi, Nanai, Ilcha, Orok, Manchu and Ulcha, and "nothing seems to contradict the assumption that the meaning 'shaman' also derives from Proto-Tungusic" and may have roots that extend back in time at least two millennia. </Text>
-		</Row>
-
-
-
-
-
-		<Row Tag="TXT_KEY_UNIT_EGYPT_UNIT777">
-			<Text>[COLOR_SELECTED_TEXT]Unit 777[ENDCOLOR]</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_EGYPT_UNIT777_HEADING">
-			<Text>[COLOR_SELECTED_TEXT]Unit 777[ENDCOLOR]</Text>
-		</Row>
-		<!--<Row Tag="TXT_KEY_UNIT_EGYPT_UNIT777_HELP">
-			<Text>WIP</Text>
-		</Row>-->
-		<Row Tag="TXT_KEY_UNIT_EGYPT_UNIT777_TEXT">
-			<Text>Unit 777 (Arabic: الوحدة 777 قتال‎), also known as Task Force 777, is an Egyptian military counter-terrorism and special operations unit. It was created in 1978[1] by the government of Anwar Sadat in response to concerns of increased terrorist activity following the expulsion of Soviet military advisors from the country by Sadat and his efforts to achieve peace with Israel.</Text>
 		</Row>
 
 

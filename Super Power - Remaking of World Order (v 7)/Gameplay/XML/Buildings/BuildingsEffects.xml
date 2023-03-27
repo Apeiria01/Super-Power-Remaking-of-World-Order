@@ -1767,6 +1767,12 @@
 			<YieldType>YIELD_FOOD</YieldType>
 			<Yield>60</Yield>
 		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_EGYPT_SIRIUS</BuildingType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>1</Yield>
+		</Row>
 	</Building_YieldChanges>
 
 

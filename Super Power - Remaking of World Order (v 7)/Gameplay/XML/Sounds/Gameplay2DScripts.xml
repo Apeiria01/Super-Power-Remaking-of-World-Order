@@ -345,9 +345,9 @@
 		</Row>-->
 
 		<Row>
-			<UnitType>UNIT_EGYPT_UNIT777</UnitType>
-			<SelectionSound>AS2D_SELECT_PARATROOPER</SelectionSound>
-			<FirstSelectionSound>AS2D_BIRTH_PARATROOPER</FirstSelectionSound>
+			<UnitType>UNIT_MAMLUK</UnitType>
+			<SelectionSound>AS2D_BUILD_UNIT</SelectionSound>
+			<FirstSelectionSound>AS2D_BUILD_UNIT</FirstSelectionSound>
 		</Row>
 		<Row>
 			<UnitType>UNIT_WWI_PARATROOPER</UnitType>

@@ -9907,19 +9907,28 @@
 			<Text>強大的機動單位，替代巡航坦克，擁有更高的移動更大的視野，面對敵人的進攻有50%概率全身而退，面對殘軍增加戰鬥力，境外作戰+25%[ICON_STRENGTH]戰鬥力。</Text>
 		</Row>
 	
-		<!--<Row Tag="TXT_KEY_UNIT_EGYPT_MAMLUK">
-			<Text>馬穆魯克</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_EGYPT_MAMLUK_HEADING">
+		<Row Tag="TXT_KEY_UNIT_MAMLUK">
 			<Text>馬穆魯克</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_HELP_EGYPT_MAMLUK">
-			<Text>WIP</Text>
+		<Row Tag="TXT_KEY_UNIT_MAMLUK_HELP">
+			<Text>馬穆魯克是埃及文明的特色單位，替代騎士。
+				[NEWLINE][ICON_BULLET]位於城市時可禁止其他文明進行傳教。
+				[NEWLINE][ICON_BULLET]攻擊時獲得與造成傷害數值相同的[ICON_PEACE]信仰。
+			</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_EGYPT_MAMLUK_PEDIA">
-			<Text>WIP</Text>
-		</Row>-->
+		<Row Tag="TXT_KEY_CIVILOPEDIA_UNITS_MEDIEVAL_MAMLUK_TEXT">
+			<Text>
+				馬穆魯克（阿拉伯語：مملوك，英文：Mamluk）的原意是「奴隸」，因為音譯的不同，也被譯為「馬木留克」，最初出現於阿拉伯帝國阿拔斯王朝時期的「突厥古拉姆」製度，逐漸形成了一個獨特的軍事貴族集團。
+				[NEWLINE]馬穆魯克是中世紀服務於阿拉伯哈裏發的奴隸兵，主要效命於埃及的阿尤布王朝。後來，隨著哈裏發的勢微和阿尤布王朝的解體，他們逐漸成為強大的軍事統治集團，並建立了自己的王朝，統治埃及達三百年之久（1250年—1517年）。馬穆魯克的前身，古拉姆衛隊，源自阿拔斯中期的政治鬥爭。阿拔斯王朝的第八代哈裏發穆塔西姆是一個突厥女奴之子，他登基之後深深地忌憚著當時朝廷中如日中天的波斯系貴族，於是就通過自己的母親從中亞雇傭了一批突厥戰士做自己的護衛，這就是最早期的「古拉姆」也為之後的馬穆魯克奠定了基礎。
+				[NEWLINE]十一世紀的十字軍東征，對阿拉伯地區造成了重大的影響，馬穆魯克在薩拉丁的指揮下作為一個獨立的軍事集團出現於阿拉伯的政治舞臺上。並且因為戰功卓著，這些奴隸出身的將領在埃及建立了自己的王朝，延續了三百多年。十三世紀他們在艾因·賈魯戰役打敗了蒙古帝國的伊兒汗國。奧斯曼帝國時期，馬穆魯克建立的埃及馬穆魯克王朝長期與奧斯曼土耳其帝國為敵，直到1517年被土耳其蘇丹塞利姆一世擊敗。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_SPN_MAMLUK_COMBAT_FAITH">
+			<Text>蘇丹之刃</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_SPN_MAMLUK_COMBAT_FAITH_HELP">
+			<Text>攻擊敵方單位時獲得與造成傷害數值相同的[ICON_PEACE]信仰。</Text>
+		</Row>
 		
 		<!--<Row Tag="TXT_KEY_UNIT_PERSIAN_CATAPHRACT">
 			<Text>薩珊鐵騎</Text>
@@ -10320,20 +10329,6 @@
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_HUN_SHAMAN_TEXT">
 			<Text>“薩滿”一詞也可音譯為“珊蠻”“嚓瑪”等。該詞源自通古斯語saman與北美印第安語shamman，原詞含有：智者、曉徹、探究、等意，後逐漸演變為薩滿教巫師即跳神之人的專稱，也被理解為這些氏族中薩滿之神的代理人和化身。薩滿至少有兩千年的歷史。</Text>
-		</Row>
-		
-		<Row Tag="TXT_KEY_UNIT_EGYPT_UNIT777">
-			<Text>[COLOR_SELECTED_TEXT]777特戰隊[ENDCOLOR]</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_EGYPT_UNIT777_HEADING">
-			<Text>777特戰隊</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_EGYPT_UNIT777_HELP">
-			<Text>替代空降部隊。自帶可繼承的+3移動，長途行軍，閃擊晉升（空降當回合即可攻擊，可以疊加成3擊），以及攻城時+300%戰鬥力的晉升。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_EGYPT_UNIT777_TEXT">
-			<Text>777特戰隊（阿拉伯語：الوحدة777قتال‎），又被稱為“777專案組”，是一個埃及用於軍事反恐和特種作戰的軍隊。它是在1978年由安瓦爾•薩達特政府創建，當時在蘇聯間諜的驅使下，恐怖活動逐漸增多，薩達特政府出於對恐怖活動的擔憂與實現和平的目的創建了777特戰隊。</Text>
 		</Row>
 
 	<!-- *************************Sea Units****************************-->
