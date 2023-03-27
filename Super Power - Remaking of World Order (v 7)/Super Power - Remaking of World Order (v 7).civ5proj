@@ -1011,10 +1011,6 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Gameplay/Lua/Combat/NewBattleCustomDamage.lua">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
     <Content Include="Gameplay/Lua/Combat/NewUnitsRules.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
@@ -1342,6 +1338,10 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
     <Content Include="Gameplay/SQL/Buildings/BuildingEffect.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="Gameplay\Lua\Combat\NewBattleCustomDamage.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="Gameplay\Lua\CSD\NewCityStateDiplomaticRule.lua">
       <SubType>Lua</SubType>

@@ -3,7 +3,6 @@ function SPEBattleCustomDamage(iBattleUnitType, iBattleType,
 	iDefensePlayerID, iDefenseUnitOrCityID, bDefenseIsCity, iDefenseDamage,
 	iInterceptorPlayerID, iInterceptorUnitOrCityID, bInterceptorIsCity, iInterceptorDamage)
 
-	print("SPEBattleCustomDamage");
 	local additionalDamage = 0;
 
 	local attPlayer = Players[iAttackPlayerID]
@@ -51,3 +50,5 @@ function SPEBattleCustomDamage(iBattleUnitType, iBattleType,
 	return additionalDamage
 end
 GameEvents.BattleCustomDamage.Add(SPEBattleCustomDamage)
+
+print("NewBattleCustomDamage Check Pass ");

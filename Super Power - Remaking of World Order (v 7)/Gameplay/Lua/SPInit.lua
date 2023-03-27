@@ -14,6 +14,7 @@ include("NewHandicap");
 -- Combat
 include("NewCombatRules");
 include("NewUnitsRules");
+include("NewBattleCustomDamage");
 -- Economy
 include("NewBuildingEffects");
 include("NewCityRule");
