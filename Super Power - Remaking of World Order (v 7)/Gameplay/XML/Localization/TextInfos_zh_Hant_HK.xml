@@ -1075,6 +1075,22 @@
 			<Text>[ICON_STRENGTH]城堡</Text>
 		</Replace>
 		
+		<Row Tag="TXT_KEY_BUILDING_NORMAN_CAMP">
+			<Text>[ICON_STRENGTH][ICON_WAR]諾曼營地</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_BUILDINGS_NORMAN_CAMP_TEXT">
+			<Text>
+				諾曼人（拉丁語：Normanni）源於丹麥、挪威等地的維京人， 10至11世紀，他們作為赫赫有名的「北歐海盜」，南下征服了今法國北部的大片地區，該地區由此得名為諾曼底。911年，經過和談，這批維京人的領袖羅洛宣誓效忠西法蘭克國王查理三世，而查理則割讓大片土地作為回報，羅洛便成為第一任諾曼底公爵。諾曼人並未發明城堡建築的技術，但他們善於構築簡易卻極有效率的草原圍墻城堡——高地上四周圍以溝渠、木柵的木柵高樓。這些補給小批騎兵在曠野作戰的小堡壘成為諾曼人滲透征服他人的標誌。再者，盡管諾曼人在騎戰方面一開始是模仿的新手，但他們立即成為其中能手並在歐陸馳騁作戰。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_DENFENSE_BUILDING_NORMAN_CAMP_HELP">
+			<Text>
+				諾曼營地是丹麥特色建築，替代城墻，造價更低，不會過時。
+				[NEWLINE][ICON_BULLET]本城新建陸、海軍單位額外獲得+15經驗。
+				[NEWLINE][ICON_BULLET]每當攻占或夷平一座城市，諾曼營地為所在城市提供一次性[ICON_FOOD]食物或者[ICON_PRODUCTION]產能(每次觸發所有城市的產出一致)。
+			</Text>
+		</Row>
+		
 		<Replace Tag="TXT_KEY_BUILDING_BARRACKS">
 			<Text>[ICON_WAR]軍營</Text>
 		</Replace>
@@ -5659,11 +5675,9 @@
 		
 		<Replace Tag="TXT_KEY_TRAIT_GREAT_ANDEAN_ROAD">
 			<Text>
-				[ICON_BULLET]單位進入丘陵地塊不消耗額外移動力。
+				[ICON_BULLET]單位進入丘陵地塊不消耗額外移動力，工人可以鏟除丘陵地塊上的[ICON_RES_SHEEP]羊。
 				[NEWLINE][ICON_BULLET]丘陵上的設施不需要維護費，其他地形上的設施維護費減半。
-				[NEWLINE][ICON_BULLET]工人可以剷除丘陵地塊上的[ICON_RES_SHEEP]羊。
-				[NEWLINE][ICON_BULLET]平民單位可以進入山脈地塊。
-				[NEWLINE][ICON_BULLET]移民可以在山脈地塊上建立城市。山脈城市獲得額外的[ICON_RESEARCH]科研和[ICON_FOOD]食物產出，隨時代加成。
+				[NEWLINE][ICON_BULLET]平民單位可以進入山脈地塊，且移民可以在山脈地塊上建立城市。山脈城市獲得額外的[ICON_RESEARCH]科研和[ICON_FOOD]食物產出，隨時代加成。
 			</Text>
 		</Replace>
 		
@@ -9907,19 +9921,28 @@
 			<Text>強大的機動單位，替代巡航坦克，擁有更高的移動更大的視野，面對敵人的進攻有50%概率全身而退，面對殘軍增加戰鬥力，境外作戰+25%[ICON_STRENGTH]戰鬥力。</Text>
 		</Row>
 	
-		<!--<Row Tag="TXT_KEY_UNIT_EGYPT_MAMLUK">
-			<Text>馬穆魯克</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_EGYPT_MAMLUK_HEADING">
+		<Row Tag="TXT_KEY_UNIT_EGYPTAIN_MAMLUK">
 			<Text>馬穆魯克</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_HELP_EGYPT_MAMLUK">
-			<Text>WIP</Text>
+		<Row Tag="TXT_KEY_UNIT_EGYPTAIN_MAMLUK_HELP">
+			<Text>馬穆魯克是埃及文明的特色單位，替代騎士。
+				[NEWLINE][ICON_BULLET]位於城市時可禁止其他文明進行傳教。
+				[NEWLINE][ICON_BULLET]攻擊時獲得與造成傷害數值相同的[ICON_PEACE]信仰。
+			</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_EGYPT_MAMLUK_PEDIA">
-			<Text>WIP</Text>
-		</Row>-->
+		<Row Tag="TXT_KEY_CIVILOPEDIA_UNITS_MEDIEVAL_MAMLUK_TEXT">
+			<Text>
+				馬穆魯克（阿拉伯語：مملوك，英文：Mamluk）的原意是「奴隸」，因為音譯的不同，也被譯為「馬木留克」，最初出現於阿拉伯帝國阿拔斯王朝時期的「突厥古拉姆」製度，逐漸形成了一個獨特的軍事貴族集團。
+				[NEWLINE]馬穆魯克是中世紀服務於阿拉伯哈裏發的奴隸兵，主要效命於埃及的阿尤布王朝。後來，隨著哈裏發的勢微和阿尤布王朝的解體，他們逐漸成為強大的軍事統治集團，並建立了自己的王朝，統治埃及達三百年之久（1250年—1517年）。馬穆魯克的前身，古拉姆衛隊，源自阿拔斯中期的政治鬥爭。阿拔斯王朝的第八代哈裏發穆塔西姆是一個突厥女奴之子，他登基之後深深地忌憚著當時朝廷中如日中天的波斯系貴族，於是就通過自己的母親從中亞雇傭了一批突厥戰士做自己的護衛，這就是最早期的「古拉姆」也為之後的馬穆魯克奠定了基礎。
+				[NEWLINE]十一世紀的十字軍東征，對阿拉伯地區造成了重大的影響，馬穆魯克在薩拉丁的指揮下作為一個獨立的軍事集團出現於阿拉伯的政治舞臺上。並且因為戰功卓著，這些奴隸出身的將領在埃及建立了自己的王朝，延續了三百多年。十三世紀他們在艾因·賈魯戰役打敗了蒙古帝國的伊兒汗國。奧斯曼帝國時期，馬穆魯克建立的埃及馬穆魯克王朝長期與奧斯曼土耳其帝國為敵，直到1517年被土耳其蘇丹塞利姆一世擊敗。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_SPN_MAMLUK_COMBAT_FAITH">
+			<Text>蘇丹之刃</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_SPN_MAMLUK_COMBAT_FAITH_HELP">
+			<Text>攻擊敵方單位時獲得與造成傷害數值相同的[ICON_PEACE]信仰。</Text>
+		</Row>
 		
 		<!--<Row Tag="TXT_KEY_UNIT_PERSIAN_CATAPHRACT">
 			<Text>薩珊鐵騎</Text>
@@ -10320,20 +10343,6 @@
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_HUN_SHAMAN_TEXT">
 			<Text>“薩滿”一詞也可音譯為“珊蠻”“嚓瑪”等。該詞源自通古斯語saman與北美印第安語shamman，原詞含有：智者、曉徹、探究、等意，後逐漸演變為薩滿教巫師即跳神之人的專稱，也被理解為這些氏族中薩滿之神的代理人和化身。薩滿至少有兩千年的歷史。</Text>
-		</Row>
-		
-		<Row Tag="TXT_KEY_UNIT_EGYPT_UNIT777">
-			<Text>[COLOR_SELECTED_TEXT]777特戰隊[ENDCOLOR]</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_EGYPT_UNIT777_HEADING">
-			<Text>777特戰隊</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_EGYPT_UNIT777_HELP">
-			<Text>替代空降部隊。自帶可繼承的+3移動，長途行軍，閃擊晉升（空降當回合即可攻擊，可以疊加成3擊），以及攻城時+300%戰鬥力的晉升。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_EGYPT_UNIT777_TEXT">
-			<Text>777特戰隊（阿拉伯語：الوحدة777قتال‎），又被稱為“777專案組”，是一個埃及用於軍事反恐和特種作戰的軍隊。它是在1978年由安瓦爾•薩達特政府創建，當時在蘇聯間諜的驅使下，恐怖活動逐漸增多，薩達特政府出於對恐怖活動的擔憂與實現和平的目的創建了777特戰隊。</Text>
 		</Row>
 
 	<!-- *************************Sea Units****************************-->
@@ -10802,16 +10811,6 @@
 			[NEWLINE][NEWLINE]殺敵掠奪到敵人[ICON_STRENGTH]戰鬥力兩倍的[ICON_GOLD]金幣</Text>
 		</Row>
 		
-		<Row Tag="TXT_KEY_UNIT_DANISH_ABSALON">
-			<Text>[COLOR_MAGENTA]阿布薩隆級支援艦[ENDCOLOR]</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_DANISH_ABSALON_HEADING">
-			<Text>阿布薩隆級支援艦</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_DANISH_ABSALON_PEDIA">
-			<Text>阿布薩隆級支援艦，又稱為阿布薩隆級靈活支援艦。一般認為，護衛艦在艦隊中主要負責反潛、防空並兼具一定的對艦攻擊能力，但丹麥海軍卻劍走偏鋒地將兩栖艦設計融入護衛艦當中，打造出了理念新銳的“阿布薩隆”級戰鬥支援艦。這種“混血”戰艦不僅防空、反潛、反艦樣樣不差，還具備佈雷和投送部隊的能力，是名副其實的海上多面手。</Text>
-		</Row>
 		<Row Tag="TXT_KEY_BUILD_CARRIER_FIGHTER">
 			<Text>購買：[ICON_BULLET] </Text>	<!-- 購買艦載機 -->
 		</Row>

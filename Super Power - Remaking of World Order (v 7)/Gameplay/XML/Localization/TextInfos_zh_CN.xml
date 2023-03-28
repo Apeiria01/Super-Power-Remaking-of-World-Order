@@ -1112,6 +1112,22 @@
 		<Replace Tag="TXT_KEY_BUILDING_CASTLE">
 			<Text>[ICON_STRENGTH]城堡</Text>
 		</Replace>
+		
+		<Row Tag="TXT_KEY_BUILDING_NORMAN_CAMP">
+			<Text>[ICON_STRENGTH][ICON_WAR]诺曼营地</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_BUILDINGS_NORMAN_CAMP_TEXT">
+			<Text>
+				诺曼人（拉丁语：Normanni）源于丹麦、挪威等地的维京人， 10至11世纪，他们作为赫赫有名的“北欧海盗”，南下征服了今法国北部的大片地区，该地区由此得名为诺曼底。911年，经过和谈，这批维京人的领袖罗洛宣誓效忠西法兰克国王查理三世，而查理则割让大片土地作为回报，罗洛便成为第一任诺曼底公爵。诺曼人并未发明城堡建筑的技术，但他们善于构筑简易却极有效率的草原围墙城堡——高地上四周围以沟渠、木栅的木栅高楼。这些补给小批骑兵在旷野作战的小堡垒成为诺曼人渗透征服他人的标志。再者，尽管诺曼人在骑战方面一开始是模仿的新手，但他们立即成为其中能手并在欧陆驰骋作战。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_DENFENSE_BUILDING_NORMAN_CAMP_HELP">
+			<Text>
+				诺曼营地是丹麦特色建筑，替代城墙，造价更低，不会过时。
+				[NEWLINE][ICON_BULLET]本城新建陆、海军单位额外获得+15经验。
+				[NEWLINE][ICON_BULLET]每当攻占或夷平一座城市，诺曼营地为所在城市提供一次性[ICON_FOOD]食物或者[ICON_PRODUCTION]产能(每次触发所有城市的产出一致)。
+			</Text>
+		</Row>
 
 		<Replace Tag="TXT_KEY_BUILDING_BARRACKS">
 			<Text>[ICON_WAR]军营</Text>
@@ -5635,7 +5651,7 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_VIKING_FURY">
-			<Text>所有陆军近战单位和海军近战单位劫掠均不消耗[ICON_MOVES]移动力，并具有攻城时将对城市造成伤害的200%数值转化为金钱的能力。攻占城市或攻占营寨所获得3倍的[ICON_GOLD]金钱。每处海上设施+1[ICON_CULTURE]文化产出。</Text>
+			<Text>所有陆军近战单位和海军近战单位劫掠均不消耗[ICON_MOVES]移动力，并具有攻城时将对城市造成伤害的200%数值转化为金钱的能力。攻占城市或攻占营寨所获得2倍的[ICON_GOLD]金钱。每处海上设施+1[ICON_CULTURE]文化产出。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_SLAYER_OF_TIAMAT">
@@ -5769,11 +5785,9 @@
 
 		<Replace Tag="TXT_KEY_TRAIT_GREAT_ANDEAN_ROAD">
 			<Text>
-				[ICON_BULLET]单位进入丘陵地块不消耗额外移动力。
+				[ICON_BULLET]单位进入丘陵地块不消耗额外移动力，工人可以铲除丘陵地块上的[ICON_RES_SHEEP]羊。
 				[NEWLINE][ICON_BULLET]丘陵上的设施不需要维护费，其他地形上的设施维护费减半。
-				[NEWLINE][ICON_BULLET]工人可以铲除丘陵地块上的[ICON_RES_SHEEP]羊。
-				[NEWLINE][ICON_BULLET]平民单位可以进入山脉地块。
-				[NEWLINE][ICON_BULLET]移民可以在山脉地块上建立城市。山脉城市获得额外的[ICON_RESEARCH]科研和[ICON_FOOD]食物产出，随时代加成。
+				[NEWLINE][ICON_BULLET]平民单位可以进入山脉地块，且移民可以在山脉地块上建立城市。山脉城市获得额外的[ICON_RESEARCH]科研和[ICON_FOOD]食物产出，随时代加成。
 			</Text>
 		</Replace>
 
@@ -10039,19 +10053,30 @@
 			<Text>强大的机动单位，替代巡航坦克，拥有更高的移动更大的视野，面对敌人的进攻有50%概率全身而退，面对残军增加战斗力，境外作战+25%[ICON_STRENGTH]战斗力。</Text>
 		</Row>
 
-		<!--<Row Tag="TXT_KEY_UNIT_EGYPT_MAMLUK">
-			<Text>马穆鲁克</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_EGYPT_MAMLUK_HEADING">
+		<Row Tag="TXT_KEY_UNIT_EGYPTAIN_MAMLUK">
 			<Text>马穆鲁克</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_HELP_EGYPT_MAMLUK">
-			<Text>WIP</Text>
+		<Row Tag="TXT_KEY_UNIT_EGYPTAIN_MAMLUK_HELP">
+			<Text>马穆鲁克是埃及文明的特色单位，替代骑士。
+				[NEWLINE][ICON_BULLET]位于城市时可禁止其他文明进行传教。
+				[NEWLINE][ICON_BULLET]攻击时获得与造成伤害数值相同的[ICON_PEACE]信仰。
+			</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_EGYPT_MAMLUK_PEDIA">
-			<Text>WIP</Text>
-		</Row>-->
+		<Row Tag="TXT_KEY_CIVILOPEDIA_UNITS_MEDIEVAL_MAMLUK_TEXT">
+			<Text>
+				马穆鲁克（阿拉伯语：مملوك，英文：Mamluk）的原意是“奴隶”，因为音译的不同，也被译为“马木留克”，最初出现于阿拉伯帝国阿拔斯王朝时期的“突厥古拉姆”制度，逐渐形成了一个独特的军事贵族集团。
+				[NEWLINE]马穆鲁克是中世纪服务于阿拉伯哈里发的奴隶兵，主要效命于埃及的阿尤布王朝。后来，随着哈里发的势微和阿尤布王朝的解体，他们逐渐成为强大的军事统治集团，并建立了自己的王朝，统治埃及达三百年之久（1250年—1517年）。马穆鲁克的前身，古拉姆卫队，源自阿拔斯中期的政治斗争。阿拔斯王朝的第八代哈里发穆塔西姆是一个突厥女奴之子，他登基之后深深地忌惮着当时朝廷中如日中天的波斯系贵族，于是就通过自己的母亲从中亚雇佣了一批突厥战士做自己的护卫，这就是最早期的“古拉姆”也为之后的马穆鲁克奠定了基础。
+				[NEWLINE]十一世纪的十字军东征，对阿拉伯地区造成了重大的影响，马穆鲁克在萨拉丁的指挥下作为一个独立的军事集团出现于阿拉伯的政治舞台上。并且因为战功卓著，这些奴隶出身的将领在埃及建立了自己的王朝，延续了三百多年。十三世纪他们在艾因·贾鲁战役打败了蒙古帝国的伊儿汗国。奥斯曼帝国时期，马穆鲁克建立的埃及马穆鲁克王朝长期与奥斯曼土耳其帝国为敌，直到1517年被土耳其苏丹塞利姆一世击败。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_SPN_MAMLUK_COMBAT_FAITH">
+			<Text>苏丹之刃</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_SPN_MAMLUK_COMBAT_FAITH_HELP">
+			<Text>攻击敌方单位时获得与造成伤害数值相同的[ICON_PEACE]信仰。</Text>
+		</Row>
+		
+
 
 		<!--<Row Tag="TXT_KEY_UNIT_PERSIAN_CATAPHRACT">
 			<Text>萨珊铁骑</Text>
@@ -10458,20 +10483,6 @@
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_HUN_SHAMAN_TEXT">
 			<Text>“萨满”一词也可音译为“珊蛮”“嚓玛”等。该词源自通古斯语saman与北美印第安语shamman，原词含有：智者、晓彻、探究、等意，后逐渐演变为萨满教巫师即跳神之人的专称，也被理解为这些氏族中萨满之神的代理人和化身。萨满至少有两千年的历史。</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_UNIT_EGYPT_UNIT777">
-			<Text>[COLOR_SELECTED_TEXT]777特战队[ENDCOLOR]</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_EGYPT_UNIT777_HEADING">
-			<Text>777特战队</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_EGYPT_UNIT777_HELP">
-			<Text>替代空降部队。自带可继承的+3移动，长途行军，闪击晋升（空降当回合即可攻击，可以叠加成3击），以及攻城时+300%战斗力的晋升。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_EGYPT_UNIT777_TEXT">
-			<Text>777特战队（阿拉伯语：الوحدة777قتال‎），又被称为“777专案组”，是一个埃及用于军事反恐和特种作战的军队。它是在1978年由安瓦尔·萨达特政府创建，当时在苏联间谍的驱使下，恐怖活动逐渐增多，萨达特政府出于对恐怖活动的担忧与实现和平的目的创建了777特战队。</Text>
 		</Row>
 
 		<!-- *************************Sea Units****************************-->
@@ -10955,16 +10966,6 @@
 			</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_UNIT_DANISH_ABSALON">
-			<Text>[COLOR_MAGENTA]阿布萨隆级支援舰[ENDCOLOR]</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_DANISH_ABSALON_HEADING">
-			<Text>阿布萨隆级支援舰</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_DANISH_ABSALON_PEDIA">
-			<Text>阿布萨隆级支援舰，又称为阿布萨隆级灵活支援舰。一般认为，护卫舰在舰队中主要负责反潜、防空并兼具一定的对舰攻击能力，但丹麦海军却剑走偏锋地将两栖舰设计融入护卫舰当中，打造出了理念新锐的“阿布萨隆”级战斗支援舰。这种“混血”战舰不仅防空、反潜、反舰样样不差，还具备布雷和投送部队的能力，是名副其实的海上多面手。</Text>
-		</Row>
 		<Row Tag="TXT_KEY_BUILD_CARRIER_FIGHTER">
 			<Text>购买：[ICON_BULLET] </Text>
 			<!-- 购买舰载机 -->

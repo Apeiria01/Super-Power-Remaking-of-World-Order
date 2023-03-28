@@ -172,8 +172,8 @@
 		</Row>
 		<Row>
 			<CivilizationType>CIVILIZATION_EGYPT</CivilizationType>
-			<UnitClassType>UNITCLASS_PARATROOPER</UnitClassType>
-			<UnitType>UNIT_EGYPT_UNIT777</UnitType>
+			<UnitClassType>UNITCLASS_KNIGHT</UnitClassType>
+			<UnitType>UNIT_EGYPTAIN_MAMLUK</UnitType>
 		</Row>
 		
 		
@@ -233,11 +233,6 @@
 			<CivilizationType>CIVILIZATION_DENMARK</CivilizationType>
 			<UnitClassType>UNITCLASS_GALLEASS</UnitClassType>
 			<UnitType>UNIT_DANISH_DRAGONSHIP</UnitType>
-		</Row>
-		<Row>
-			<CivilizationType>CIVILIZATION_DENMARK</CivilizationType>
-			<UnitClassType>UNITCLASS_LITTORAL_COMBAT_SHIP</UnitClassType>
-			<UnitType>UNIT_DANISH_ABSALON</UnitType>
 		</Row>
 		
 		

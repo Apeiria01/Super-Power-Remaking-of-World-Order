@@ -212,6 +212,11 @@
 			<BuildingType>BUILDING_WALLS_OF_BABYLON</BuildingType>
 		</Row>
 		<Row>
+			<CivilizationType>CIVILIZATION_DENMARK</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_WALLS</BuildingClassType>
+			<BuildingType>BUILDING_NORMAN_CAMP</BuildingType>
+		</Row>
+		<Row>
 			<CivilizationType>CIVILIZATION_BABYLON</CivilizationType>
 			<BuildingClassType>BUILDINGCLASS_WINDMILL</BuildingClassType>
 			<BuildingType>BUILDING_BABYLON_WATER_PUMP</BuildingType>

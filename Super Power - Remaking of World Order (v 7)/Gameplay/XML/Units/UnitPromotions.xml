@@ -1954,14 +1954,6 @@
 			<PromotionType>PROMOTION_AMBUSH_2</PromotionType>
 			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
 		</Row>
-		<Row>
-			<PromotionType>PROMOTION_CQB_COMBAT_1</PromotionType>
-			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_CQB_COMBAT_2</PromotionType>
-			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-		</Row>
 		
 
 		
@@ -5371,6 +5363,18 @@
 			<PediaEntry>TXT_KEY_PROMOTION_CITY_PILLAGE_FREE</PediaEntry>
 		</Row>
 
+
+		<Row>
+			<Type>PROMOTION_SPN_MAMLUK_COMBAT_FAITH</Type>
+			<Description>TXT_KEY_PROMOTION_SPN_MAMLUK_COMBAT_FAITH</Description>
+			<Help>TXT_KEY_PROMOTION_SPN_MAMLUK_COMBAT_FAITH_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>XT_KEY_PROMOTION_SPN_MAMLUK_COMBAT_FAITH</PediaEntry>
+		</Row>
 
 
 		<Row>
