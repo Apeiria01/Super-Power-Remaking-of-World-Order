@@ -1954,14 +1954,6 @@
 			<PromotionType>PROMOTION_AMBUSH_2</PromotionType>
 			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
 		</Row>
-		<Row>
-			<PromotionType>PROMOTION_CQB_COMBAT_1</PromotionType>
-			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_CQB_COMBAT_2</PromotionType>
-			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-		</Row>
 		
 
 		
