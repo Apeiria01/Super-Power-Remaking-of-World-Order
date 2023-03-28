@@ -2081,6 +2081,27 @@
 			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
 			<SpecialistCount>1</SpecialistCount>
 		</Row>
+
+		<Row>
+			<Type>BUILDING_NORMAN_CAMP</Type>
+			<BuildingClass>BUILDINGCLASS_WALLS</BuildingClass>
+			<Cost>24</Cost>
+			<PrereqTech>TECH_MASONRY</PrereqTech>
+			<Help>TXT_KEY_DENFENSE_BUILDING_NORMAN_CAMP_HELP</Help>
+			<Description>TXT_KEY_BUILDING_NORMAN_CAMP</Description>
+			<Civilopedia>TXT_KEY_CIV5_BUILDINGS_NORMAN_CAMP_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_SP_CITY_MILITARY_BUILDINGS_STRATEGY</Strategy>
+			<ArtDefineTag>ART_DEF_BUILDING_WALLS</ArtDefineTag>
+			<MinAreaSize>-1</MinAreaSize>
+			<AllowsRangeStrike>true</AllowsRangeStrike>
+			<Defense>2500</Defense>
+			<ExtraCityHitPoints>25</ExtraCityHitPoints>
+			<CityWall>true</CityWall>
+			<HurryCostModifier>25</HurryCostModifier>
+			<IconAtlas>SP8_EXTRA_ATLAS</IconAtlas>
+			<PortraitIndex>9</PortraitIndex>
+			<NeverCapture>true</NeverCapture>
+		</Row>
 		
 		<Row>
 			<Type>BUILDING_CASTLE</Type>

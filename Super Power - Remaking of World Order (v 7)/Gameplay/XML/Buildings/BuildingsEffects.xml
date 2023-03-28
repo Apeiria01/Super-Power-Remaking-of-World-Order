@@ -214,6 +214,17 @@
 			<DomainType>DOMAIN_SEA</DomainType>
 			<Experience>15</Experience>
 		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_NORMAN_CAMP</BuildingType>
+			<DomainType>DOMAIN_LAND</DomainType>
+			<Experience>15</Experience>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_NORMAN_CAMP</BuildingType>
+			<DomainType>DOMAIN_SEA</DomainType>
+			<Experience>15</Experience>
+		</Row>
 		
 		<Row>
 			<BuildingType>BUILDING_MILITARY_ACADEMY</BuildingType>
@@ -4720,6 +4731,16 @@
 			<BuildingType>BUILDING_WALLS_OF_BABYLON</BuildingType>
 			<FlavorType>FLAVOR_SCIENCE</FlavorType>
 			<Flavor>40</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_NORMAN_CAMP</BuildingType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>120</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_NORMAN_CAMP</BuildingType>
+			<FlavorType>FLAVOR_CITY_DEFENSE</FlavorType>
+			<Flavor>25</Flavor>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_CASTLE</BuildingType>

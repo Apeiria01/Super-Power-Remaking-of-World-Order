@@ -1112,6 +1112,22 @@
 		<Replace Tag="TXT_KEY_BUILDING_CASTLE">
 			<Text>[ICON_STRENGTH]城堡</Text>
 		</Replace>
+		
+		<Row Tag="TXT_KEY_BUILDING_NORMAN_CAMP">
+			<Text>[ICON_STRENGTH][ICON_WAR]诺曼营地</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_BUILDINGS_NORMAN_CAMP_TEXT">
+			<Text>
+				诺曼人（拉丁语：Normanni）源于丹麦、挪威等地的维京人， 10至11世纪，他们作为赫赫有名的“北欧海盗”，南下征服了今法国北部的大片地区，该地区由此得名为诺曼底。911年，经过和谈，这批维京人的领袖罗洛宣誓效忠西法兰克国王查理三世，而查理则割让大片土地作为回报，罗洛便成为第一任诺曼底公爵。诺曼人并未发明城堡建筑的技术，但他们善于构筑简易却极有效率的草原围墙城堡——高地上四周围以沟渠、木栅的木栅高楼。这些补给小批骑兵在旷野作战的小堡垒成为诺曼人渗透征服他人的标志。再者，尽管诺曼人在骑战方面一开始是模仿的新手，但他们立即成为其中能手并在欧陆驰骋作战。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_DENFENSE_BUILDING_NORMAN_CAMP_HELP">
+			<Text>
+				诺曼营地是丹麦特色建筑，替代城墙，造价更低，不会过时。
+				[NEWLINE][ICON_BULLET]本城新建陆、海军单位额外获得+15经验。
+				[NEWLINE][ICON_BULLET]每当攻占或夷平一座城市，诺曼营地为所在城市提供一次性[ICON_FOOD]食物或者[ICON_PRODUCTION]产能(每次触发所有城市的产出一致)。
+			</Text>
+		</Row>
 
 		<Replace Tag="TXT_KEY_BUILDING_BARRACKS">
 			<Text>[ICON_WAR]军营</Text>
@@ -5635,7 +5651,7 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_VIKING_FURY">
-			<Text>所有陆军近战单位和海军近战单位劫掠均不消耗[ICON_MOVES]移动力，并具有攻城时将对城市造成伤害的200%数值转化为金钱的能力。攻占城市或攻占营寨所获得3倍的[ICON_GOLD]金钱。每处海上设施+1[ICON_CULTURE]文化产出。</Text>
+			<Text>所有陆军近战单位和海军近战单位劫掠均不消耗[ICON_MOVES]移动力，并具有攻城时将对城市造成伤害的200%数值转化为金钱的能力。攻占城市或攻占营寨所获得2倍的[ICON_GOLD]金钱。每处海上设施+1[ICON_CULTURE]文化产出。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_SLAYER_OF_TIAMAT">
@@ -10950,16 +10966,6 @@
 			</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_UNIT_DANISH_ABSALON">
-			<Text>[COLOR_MAGENTA]阿布萨隆级支援舰[ENDCOLOR]</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_DANISH_ABSALON_HEADING">
-			<Text>阿布萨隆级支援舰</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_DANISH_ABSALON_PEDIA">
-			<Text>阿布萨隆级支援舰，又称为阿布萨隆级灵活支援舰。一般认为，护卫舰在舰队中主要负责反潜、防空并兼具一定的对舰攻击能力，但丹麦海军却剑走偏锋地将两栖舰设计融入护卫舰当中，打造出了理念新锐的“阿布萨隆”级战斗支援舰。这种“混血”战舰不仅防空、反潜、反舰样样不差，还具备布雷和投送部队的能力，是名副其实的海上多面手。</Text>
-		</Row>
 		<Row Tag="TXT_KEY_BUILD_CARRIER_FIGHTER">
 			<Text>购买：[ICON_BULLET] </Text>
 			<!-- 购买舰载机 -->

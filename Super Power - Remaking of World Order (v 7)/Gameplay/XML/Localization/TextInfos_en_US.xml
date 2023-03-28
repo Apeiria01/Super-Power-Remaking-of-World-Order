@@ -3406,6 +3406,20 @@
 		<Replace Tag="TXT_KEY_BUILDING_CASTLE">
 			<Text>[ICON_STRENGTH] Castle</Text>
 		</Replace>
+
+		<Row Tag="TXT_KEY_BUILDING_NORMAN_CAMP">
+			<Text>[ICON_STRENGTH][ICON_WAR]Norman Camp</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_BUILDINGS_NORMAN_CAMP_TEXT">
+			<Text>WIP</Text>
+		</Row>
+		<Row Tag="TXT_KEY_DENFENSE_BUILDING_NORMAN_CAMP_HELP">
+			<Text>
+				Norman Camp is a Danish Unique Building, replacing the standard city Walls and cheaper, it never expires.
+				[NEWLINE][ICON_BULLET]+15 XP for Land Units and Naval trained in this city.
+				[NEWLINE][ICON_BULLET]Gain one-time Output of [ICON_FOOD] Food or [ICON_PRODUCTION] Production in this City when Capturing Cities or Destroying a City (All cities have the same random output per trigger).
+			</Text>
+		</Row>
 		
 		<Replace Tag="TXT_KEY_BUILDING_BARRACKS">
 			<Text>[ICON_WAR] Barracks</Text>
@@ -12650,16 +12664,6 @@
 			</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_UNIT_DANISH_ABSALON">
-			<Text>[COLOR_MAGENTA]Absalon-class Support Ship[ENDCOLOR]</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_DANISH_ABSALON_HEADING">
-			<Text>Absalon-class Support Ship</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_DANISH_ABSALON_PEDIA">
-			<Text>The Absalon class are support ships of the Royal Danish Navy, commissioned in 2005. The two ships in the class may be described as an hybrid between a Frigate and military transport ship with multi role capabilities, with the capacity for being transformed from a combat ship with the firepower of a traditional frigate to a hospital ship within a day.</Text>
-		</Row>
 		<Row Tag="TXT_KEY_BUILD_CARRIER_FIGHTER">
 			<Text>Purchase: [ICON_BULLET] </Text>	<!-- Purchase Carrier-Based-Aircraft -->
 		</Row>

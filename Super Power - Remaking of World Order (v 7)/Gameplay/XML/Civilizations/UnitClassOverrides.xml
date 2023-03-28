@@ -234,11 +234,6 @@
 			<UnitClassType>UNITCLASS_GALLEASS</UnitClassType>
 			<UnitType>UNIT_DANISH_DRAGONSHIP</UnitType>
 		</Row>
-		<Row>
-			<CivilizationType>CIVILIZATION_DENMARK</CivilizationType>
-			<UnitClassType>UNITCLASS_LITTORAL_COMBAT_SHIP</UnitClassType>
-			<UnitType>UNIT_DANISH_ABSALON</UnitType>
-		</Row>
 		
 		
 		<Row>

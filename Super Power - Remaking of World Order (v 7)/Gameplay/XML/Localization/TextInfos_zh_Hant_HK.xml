@@ -1075,6 +1075,22 @@
 			<Text>[ICON_STRENGTH]城堡</Text>
 		</Replace>
 		
+		<Row Tag="TXT_KEY_BUILDING_NORMAN_CAMP">
+			<Text>[ICON_STRENGTH][ICON_WAR]諾曼營地</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_BUILDINGS_NORMAN_CAMP_TEXT">
+			<Text>
+				諾曼人（拉丁語：Normanni）源於丹麥、挪威等地的維京人， 10至11世紀，他們作為赫赫有名的「北歐海盜」，南下征服了今法國北部的大片地區，該地區由此得名為諾曼底。911年，經過和談，這批維京人的領袖羅洛宣誓效忠西法蘭克國王查理三世，而查理則割讓大片土地作為回報，羅洛便成為第一任諾曼底公爵。諾曼人並未發明城堡建築的技術，但他們善於構築簡易卻極有效率的草原圍墻城堡——高地上四周圍以溝渠、木柵的木柵高樓。這些補給小批騎兵在曠野作戰的小堡壘成為諾曼人滲透征服他人的標誌。再者，盡管諾曼人在騎戰方面一開始是模仿的新手，但他們立即成為其中能手並在歐陸馳騁作戰。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_DENFENSE_BUILDING_NORMAN_CAMP_HELP">
+			<Text>
+				諾曼營地是丹麥特色建築，替代城墻，造價更低，不會過時。
+				[NEWLINE][ICON_BULLET]本城新建陸、海軍單位額外獲得+15經驗。
+				[NEWLINE][ICON_BULLET]每當攻占或夷平一座城市，諾曼營地為所在城市提供一次性[ICON_FOOD]食物或者[ICON_PRODUCTION]產能(每次觸發所有城市的產出一致)。
+			</Text>
+		</Row>
+		
 		<Replace Tag="TXT_KEY_BUILDING_BARRACKS">
 			<Text>[ICON_WAR]軍營</Text>
 		</Replace>
@@ -10795,16 +10811,6 @@
 			[NEWLINE][NEWLINE]殺敵掠奪到敵人[ICON_STRENGTH]戰鬥力兩倍的[ICON_GOLD]金幣</Text>
 		</Row>
 		
-		<Row Tag="TXT_KEY_UNIT_DANISH_ABSALON">
-			<Text>[COLOR_MAGENTA]阿布薩隆級支援艦[ENDCOLOR]</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_DANISH_ABSALON_HEADING">
-			<Text>阿布薩隆級支援艦</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_DANISH_ABSALON_PEDIA">
-			<Text>阿布薩隆級支援艦，又稱為阿布薩隆級靈活支援艦。一般認為，護衛艦在艦隊中主要負責反潛、防空並兼具一定的對艦攻擊能力，但丹麥海軍卻劍走偏鋒地將兩栖艦設計融入護衛艦當中，打造出了理念新銳的“阿布薩隆”級戰鬥支援艦。這種“混血”戰艦不僅防空、反潛、反艦樣樣不差，還具備佈雷和投送部隊的能力，是名副其實的海上多面手。</Text>
-		</Row>
 		<Row Tag="TXT_KEY_BUILD_CARRIER_FIGHTER">
 			<Text>購買：[ICON_BULLET] </Text>	<!-- 購買艦載機 -->
 		</Row>
