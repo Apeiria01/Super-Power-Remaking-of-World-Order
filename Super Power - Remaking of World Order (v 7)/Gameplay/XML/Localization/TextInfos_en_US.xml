@@ -7214,7 +7214,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]Monarchy[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]-50% extra [ICON_HAPPINESS_4] Unhappiness due to city's Population Size.
-				[NEWLINE][ICON_BULLET]+1 [ICON_RESEARCH] Science, [ICON_CULTURE] Culture, [ICON_PRODUCTION] Production and [ICON_GOLD] Gold for every 5 [ICON_CITIZEN] Citizens in the [ICON_CAPITAL] Capital.
+				[NEWLINE][ICON_BULLET]+1 [ICON_FOOD] Food, [ICON_CULTURE] Culture, [ICON_PRODUCTION] Production, [ICON_RESEARCH] Science and [ICON_GOLD] Gold for every [ICON_CITIZEN] Citizens in the [ICON_CAPITAL] Capital.
 			</Text>
 		</Replace>
 
