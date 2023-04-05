@@ -3777,8 +3777,12 @@
 			<Where Tag="TXT_KEY_WONDER_EIFFEL_TOWER_HELP" />
 			<Set Text="+24 [ICON_TOURISM] Tourism output." />
 		</Update>
-		
 
+
+		<Update>
+			<Where Tag="TXT_KEY_WONDER_UFFIZI_HELP" />
+			<Set Text="1 free Great Artist appears near the City where the Wonder was built." />
+		</Update>	
 
 
 
@@ -15859,7 +15863,18 @@
 			<Text>Immune to "Sundered", "Slowed Down", "Charged Damage", "Target Marked", but cannot avoid EMP Damage, Collateral Damage and Area of Effect Damage. </Text>
 		</Row>
 
-
+		<Row Tag="TXT_KEY_PROMOTION_ANTI_COLLATERAL">
+			<Text>Collateral Damage Immune</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_ANTI_COLLATERAL_HELP">
+			<Text>Immune to Collateral Damage.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_ANTI_SPLASH">
+			<Text>Splash Damage Immune</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_ANTI_SPLASH_HELP">
+			<Text>Immune to Area of Effect Damage</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_NUCLEAR_ARTILLERY">
 			<Text>Tactical Nuclear Artillery</Text>
