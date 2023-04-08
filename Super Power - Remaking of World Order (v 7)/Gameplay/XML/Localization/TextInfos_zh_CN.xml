@@ -11723,7 +11723,13 @@
 			<Text>[COLOR_YELLOW]雪橇步兵[ENDCOLOR]</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_ELITE_NAME_DANISH_SKI_INFANTRY">
-			<Text>[COLOR_YELLOW]雪橇[ENDCOLOR]</Text>
+			<Text>[COLOR_YELLOW]雪橇步兵[ENDCOLOR]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CIV5_DENMARK_SKI_INFANTRY_HELP">
+			<Text>擅长在雪原、冻土和丘陵地形作战的精英陆军近战单位。 [NEWLINE][NEWLINE]需要冬季两项运动解锁。你最多只能组建十队雪橇步兵，且无法通过金钱购买。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CIV5_DENMARK_SKI_INFANTRY_STRATEGY">
+			<Text>雪撬步兵正如他的名字所描述的，非常擅长在雪原、冻土和丘陵地形中作战。在这些地形上，他们不但有战斗力加成，且移动力加倍，甚至坦克都无法追上他们。</Text>
 		</Replace>
 
 		<Row Tag="TXT_KEY_UNIT_PROTOTYPE_SUBMARINE">
@@ -13203,7 +13209,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_NEWLYCAPTURED_HELP">
 			<Text>
-				[ICON_BULLET]这个单位是刚刚俘获的，他保留攻击方1/3的经验，但是仅有少量HP剩余。
+				[ICON_BULLET]这个单位是刚刚俘获的，他保留攻击方1/4的经验，但是仅有少量HP剩余。
 				[NEWLINE][ICON_BULLET]本回合仅剩少量 [ICON_MOVES] 移动力，但是下回合恢复。
 				[NEWLINE][ICON_BULLET]本回合不能[COLOR_NEGATIVE_TEXT]攻击[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]这一状态不能被大军事家或者提督消除，但是下回合自动去除，那时你也可以为他选择晋升。

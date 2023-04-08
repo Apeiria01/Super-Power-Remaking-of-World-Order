@@ -1,6 +1,12 @@
 local policyCollectionRuleID = GameInfo.Policies["POLICY_COLLECTIVE_RULE"].ID
 
 function SPEReligionAdopt(pPlayer,iBelief,pHolyCity)
+    if not pHolyCity 
+    or not pPlayer
+    or not iBelief
+    then 
+        return 
+    end
     --Founded
     if iBelief == GameInfo.Beliefs["BELIEF_RELIGIOUS_COLONIZATION"].ID then
 		if pPlayer:HasPolicy(policyCollectionRuleID) 
@@ -19,6 +25,11 @@ function SPEReligionAdopt(pPlayer,iBelief,pHolyCity)
 		pPlayer:SetHasPolicy(GameInfo.Policies["POLICY_BELIEF_RELIGIOUS_SCIENCE"].ID,true,true)	
 
     --Enhanced
+    elseif iBelief == GameInfo.Beliefs["BELIEF_RELIGION_PRESSURE"].ID
+    then
+    print("Choose The Sacred Palace")
+    pHolyCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGION_PRESSURE,1)
+
     elseif iBelief == GameInfo.Beliefs["BELIEF_MISSIONARY_ZEAL"].ID
 	then
 		print("Choose BELIEF_MISSIONARY_ZEAL")
@@ -332,10 +343,10 @@ function SPNReligionPolicyAdopt(iPlayer,iPolicy)
         return
     end
 
-    if iPolicy == GameInfoTypes["POLICY_COLLECTIVE_RULE"] then
+    if iPolicy == policyCollectionRuleID then
         local eReligion = pPlayer:GetReligionCreatedByPlayer()
         local pHolyCity = Game.GetHolyCityForReligion(eReligion, iPlayer)
-        if pHolyCity:IsHasBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGIOUS_COLONIZATION) then
+        if pHolyCity and pHolyCity:IsHasBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGIOUS_COLONIZATION) then
             print("Player chose POLICY_COLLECTIVE_RULE, and has BELIEF_RELIGIOUS_COLONIZATION, change free Building")
             pHolyCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGIOUS_COLONIZATION,0)
             pHolyCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGIOUS_COLONIZATION_2,1)
@@ -363,7 +374,10 @@ function SPNReligionBlockPolicyBranch(iPlayer,iPolicyBranch,isBlock)
             print("Player has BELIEF_RELIGIOUS_COLONIZATION, and change base Policy Branch 1")
             pHolyCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGIOUS_COLONIZATION_2,0)
             pHolyCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGIOUS_COLONIZATION,1)
-        elseif pHolyCity:IsHasBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGIOUS_COLONIZATION) then
+        elseif pHolyCity:IsHasBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGIOUS_COLONIZATION) 
+        and pPlayer:HasPolicy(policyCollectionRuleID) 
+        and not pPlayer:IsPolicyBlocked(policyCollectionRuleID)
+        then
             print("Player has BELIEF_RELIGIOUS_COLONIZATION, and change base Policy Branch 2")
             pHolyCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGIOUS_COLONIZATION,0)
             pHolyCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGIOUS_COLONIZATION_2,1)
