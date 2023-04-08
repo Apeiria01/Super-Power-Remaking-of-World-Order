@@ -1407,7 +1407,7 @@
 		
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_UFFIZI_HELP"/>
-			<Set Text="獲得一位免費的大文學家。"/>
+			<Set Text="獲得一位免費的大藝術家。"/>
 		</Update>
 		
 		<Update>
@@ -2046,7 +2046,7 @@
 		</Row>
 		<!-- Help tags -->
 		<Row Tag="TXT_KEY_BUILDING_NATIONAL_BANK_HELP">
-			<Text>所在市場、銀行、證券交易所、金融公司、客棧和港口+2[ICON_GOLD]金幣。[NEWLINE][NEWLINE]獲得一條額外的商路。[NEWLINE][NEWLINE]必須在文明的所有城市中建造銀行，建造價格隨城市數量增加。</Text>
+			<Text>所有市場、銀行、證券交易所、金融公司、客棧和港口+2[ICON_GOLD]金幣。[NEWLINE][NEWLINE]獲得一條額外的商路。[NEWLINE][NEWLINE]必須在文明的所有城市中建造銀行，建造價格隨城市數量增加。</Text>
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_NATIONAL_BANK_STRATEGY</Tag>
@@ -6158,7 +6158,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]君主政體[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]城市規模導致的[ICON_HAPPINESS_4]不滿減半。
-				[NEWLINE][ICON_BULLET][ICON_CAPITAL]首都每2[ICON_CITIZEN]人口+1[ICON_FOOD]食物、[ICON_CULTURE]文化、[ICON_PRODUCTION]產能、[ICON_GOLD]金錢。
+				[NEWLINE][ICON_BULLET][ICON_CAPITAL]首都每個[ICON_CITIZEN]人口+1[ICON_FOOD]食物、[ICON_CULTURE]文化、[ICON_PRODUCTION]產能、[ICON_RESEARCH]科研、[ICON_GOLD]金錢。
 			</Text>
 		</Replace>
 
@@ -13488,6 +13488,19 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_ANTI_DEBUFF_HELP">
 			<Text>免疫大部分負面狀態和附帶傷害。（EMP效果、重炮穿透和範圍傷害有效）。</Text>
+		</Row>
+		
+		<Row Tag="TXT_KEY_PROMOTION_ANTI_COLLATERAL">
+			<Text>穿透免疫</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_ANTI_COLLATERAL_HELP">
+			<Text>免疫來自攻城單位和遠程海軍單位等的穿透傷害。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_ANTI_SPLASH">
+			<Text>濺射免疫</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_ANTI_SPLASH_HELP">
+			<Text>免疫來自陸軍特種單位和海軍旗艦等的濺射傷害。</Text>
 		</Row>
 		
 		<Row Tag="TXT_KEY_PROMOTION_NUCLEAR_ARTILLERY">

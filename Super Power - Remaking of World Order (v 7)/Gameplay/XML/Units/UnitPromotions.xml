@@ -5373,7 +5373,7 @@
 			<PortraitIndex>59</PortraitIndex>
 			<IconAtlas>ABILITY_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>XT_KEY_PROMOTION_SPN_MAMLUK_COMBAT_FAITH</PediaEntry>
+			<PediaEntry>TXT_KEY_PROMOTION_SPN_MAMLUK_COMBAT_FAITH</PediaEntry>
 		</Row>
 
 
@@ -6408,6 +6408,28 @@
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_ANTI_DEBUFF</PediaEntry>
+			<CannotBeChosen>true</CannotBeChosen>
+		</Row>
+		<Row>
+			<Type>PROMOTION_ANTI_COLLATERAL</Type>
+			<Description>TXT_KEY_PROMOTION_ANTI_COLLATERAL</Description>
+			<Help>TXT_KEY_PROMOTION_ANTI_COLLATERAL_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_ANTI_COLLATERAL</PediaEntry>
+			<CannotBeChosen>true</CannotBeChosen>
+		</Row>
+		<Row>
+			<Type>PROMOTION_ANTI_SPLASH</Type>
+			<Description>TXT_KEY_PROMOTION_ANTI_SPLASH</Description>
+			<Help>TXT_KEY_PROMOTION_ANTI_SPLASH_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_ANTI_SPLASH</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
 		</Row>
 

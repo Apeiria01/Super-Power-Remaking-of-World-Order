@@ -268,6 +268,9 @@ function NewAttackEffect()
 
 	local DoppelsoldnerID = GameInfo.UnitPromotions["PROMOTION_GERMAN_LONGSWORDSMAN"].ID
 	local MamlukCombatID = GameInfo.UnitPromotions["PROMOTION_SPN_MAMLUK_COMBAT_FAITH"].ID
+
+	local CollateralDamageImmuneID = GameInfo.UnitPromotions["PROMOTION_ANTI_COLLATERAL"].ID
+	local SplashDamageImmuneID = GameInfo.UnitPromotions["PROMOTION_ANTI_SPLASH"].ID
 	
 	-- Ranged Unit Logistics can only move to the adjusted plot
 	if attUnit:IsDead() then
@@ -875,7 +878,7 @@ function NewAttackEffect()
 			local unitCount = batPlot:GetNumUnits()
 			for i = 0, unitCount - 1, 1 do
 				local pFoundUnit = batPlot:GetUnit(i)
-				if (pFoundUnit and pFoundUnit ~= defUnit and pFoundUnit:GetDomainType() ~= DomainTypes.DOMAIN_AIR) then
+				if (pFoundUnit and pFoundUnit ~= defUnit and pFoundUnit:GetDomainType() ~= DomainTypes.DOMAIN_AIR and not pFoundUnit:IsHasPromotion(CollateralDamageImmuneID)) then
 					local pPlayer = Players[pFoundUnit:GetOwner()]
 					if PlayersAtWar(attPlayer, pPlayer) then
 						local CollDamageOri = 0;
@@ -948,7 +951,7 @@ function NewAttackEffect()
 			local unitCount = batPlot:GetNumUnits()
 			for i = 0, unitCount - 1, 1 do
 				local pFoundUnit = batPlot:GetUnit(i)
-				if (pFoundUnit and pFoundUnit ~= defUnit and pFoundUnit:GetDomainType() ~= DomainTypes.DOMAIN_AIR) then
+				if (pFoundUnit and pFoundUnit ~= defUnit and pFoundUnit:GetDomainType() ~= DomainTypes.DOMAIN_AIR and not pFoundUnit:IsHasPromotion(CollateralDamageImmuneID)) then
 					local pPlayer = Players[pFoundUnit:GetOwner()]
 					if PlayersAtWar(attPlayer, pPlayer) then
 						local CollDamageOri = 0;
@@ -1008,7 +1011,9 @@ function NewAttackEffect()
 
 					local pUnit = adjPlot:GetUnit(0) ------------Find Units affected
 					if pUnit and
-						(pUnit:GetDomainType() == DomainTypes.DOMAIN_LAND or pUnit:GetDomainType() == DomainTypes.DOMAIN_SEA) then
+						(pUnit:GetDomainType() == DomainTypes.DOMAIN_LAND or pUnit:GetDomainType() == DomainTypes.DOMAIN_SEA) 
+						and not pUnit:IsHasPromotion(SplashDamageImmuneID)
+						then
 						local pCombat = pUnit:GetBaseCombatStrength()
 						local pPlayer = Players[pUnit:GetOwner()]
 
@@ -1789,7 +1794,8 @@ function CaptureSPDKP(iPlayerID, iUnitID)
 		end
 		if pUnit:IsCombatUnit() then
 			-- pUnit:SetLevel(tCaptureSPUnits[6]);
-			pUnit:SetExperience(tCaptureSPUnits[7] / 3);
+			pUnit:SetExperience(tCaptureSPUnits[7] / 4);
+			pUnit:SetLevel(1);
 			local pMoves = pUnit:MaxMoves();
 			print("MaxMoves of captured unit is " .. pMoves);
 			local qMoves = tCaptureSPUnits[8];
