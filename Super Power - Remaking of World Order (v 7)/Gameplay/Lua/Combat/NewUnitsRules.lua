@@ -917,8 +917,11 @@ function HeroicCarrierGenerate(playerID)
 	if CapitalCity:IsHasBuilding(GameInfoTypes["BUILDING_HEROIC_CARRIER_START"]) then
 		print("HeroicRoll Starts at the capital:"..CapitalCity:GetName())
 		for pUnit in pPlayer:Units() do
-			if pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_CARRIER_UNIT"])then
-				local heroicRoll = Game.Rand(100, "At NewUnitCreationRules.lua HeroicCarrierGenerate(), spawn heroic") + 1
+			if pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_CARRIER_UNIT"])
+			and (pUnit:GetUnitClassType() == GameInfo.UnitClasses.UNITCLASS_CARRIER.ID
+				or pUnit:GetUnitClassType() == GameInfo.UnitClasses.UNITCLASS_NUCLEAR_CARRIER.ID)
+			then
+				local HeroicRoll = Game.Rand(100, "At NewUnitCreationRules.lua HeroicCarrierGenerate(), spawn heroic") + 1
 				--local HeroicRoll = math.random(1, 100)
 				print("HeroicRoll:" .. HeroicRoll)
 				if HeroicRoll >= 75  then
@@ -933,7 +936,10 @@ function HeroicCarrierGenerate(playerID)
 					NewUnit:SetExperience(unitEXP)
 					for unitPromotion in GameInfo.UnitPromotions() do
 						local unitPromotionID = unitPromotion.ID 
-						if pUnit:IsHasPromotion(unitPromotionID) and not unitPromotion.LostWithUpgrade then
+						if pUnit:IsHasPromotion(unitPromotionID) 
+						and not unitPromotion.LostWithUpgrade 
+						and not NewUnit:IsHasPromotion(unitPromotionID) 
+						then
 							NewUnit:SetHasPromotion(unitPromotionID, true)
 						end
 					end
