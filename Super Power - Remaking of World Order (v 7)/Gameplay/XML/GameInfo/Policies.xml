@@ -1116,6 +1116,26 @@
 			<Flavor>10</Flavor>
 		</Row>
 		<Row>
+			<PolicyType>POLICY_MONARCHY</PolicyType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_MONARCHY</PolicyType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_MONARCHY</PolicyType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_MONARCHY</PolicyType>
+			<FlavorType>FLAVOR_CULTURE</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
 			<PolicyType>POLICY_PREFECTURE</PolicyType>
 			<FlavorType>FLAVOR_SCIENCE</FlavorType>
 			<Flavor>30</Flavor>

@@ -241,7 +241,6 @@
 			<Help>TXT_KEY_BUILDING_HEROIC_EPIC_HELP</Help>
 			<Description>TXT_KEY_BUILDING_HEROIC_EPIC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HEROIC_EPIC_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HEROIC_EPIC_STRATEGY</Strategy>
 			<ArtDefineTag>ART_DEF_BUILDING_HEROIC_EPIC</ArtDefineTag>
 			<NukeImmune>true</NukeImmune>
 			<NumCityCostMod>20</NumCityCostMod>
@@ -542,7 +541,6 @@
 			<ThemingBonusHelp>TXT_KEY_OXFORD_UNIVERSITY_THEMING_BONUS_HELP</ThemingBonusHelp>
 			<Description>TXT_KEY_BUILDING_OXFORD_UNIVERSITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_OXFORD_UNIVERSITY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_OXFORD_UNIVERSITY_STRATEGY</Strategy>
 			<ArtDefineTag>ART_DEF_BUILDING_OXFORD_UNIVERSITY</ArtDefineTag>
 			<NukeImmune>true</NukeImmune>
 			<NumCityCostMod>30</NumCityCostMod>
@@ -565,7 +563,6 @@
 			<ThemingBonusHelp>TXT_KEY_OXFORD_UNIVERSITY_THEMING_BONUS_HELP</ThemingBonusHelp>
 			<Description>TXT_KEY_BUILDING_BABYLON_BABEL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BABYLON_BABEL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_OXFORD_UNIVERSITY_STRATEGY</Strategy>
 			<ArtDefineTag>ART_DEF_BUILDING_OXFORD_UNIVERSITY</ArtDefineTag>
 			<NukeImmune>true</NukeImmune>
 			<NumCityCostMod>40</NumCityCostMod>

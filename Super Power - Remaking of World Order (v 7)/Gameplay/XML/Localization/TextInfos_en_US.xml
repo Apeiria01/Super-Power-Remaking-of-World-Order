@@ -13418,7 +13418,7 @@
 			<Text>[COLOR_YELLOW]Ski Infantry[ENDCOLOR]</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_ELITE_NAME_DANISH_SKI_INFANTRY">
-			<Text>[COLOR_YELLOW]Ski[ENDCOLOR]</Text>
+			<Text>[COLOR_YELLOW]Ski Infantry[ENDCOLOR]</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_CIV5_DENMARK_SKI_INFANTRY_HELP">
 			<Text>Elite Infantry Unit which has great bonus fighting in snow, tundra, or hills. [NEWLINE][NEWLINE]Requires Ski Infantry Training Project. You can only build up to 10 of this unit at one time. Cannot be purchased.</Text>
@@ -15255,7 +15255,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_NEWLYCAPTURED_HELP">
 			<Text>
-				[ICON_BULLET]This unit is Newly Captured in this turn. It inherits 1/3 of the experience from the Attacking Unit but remains few Hit Points.
+				[ICON_BULLET]This unit is Newly Captured in this turn. It inherits 1/4 of the experience from the Attacking Unit but remains few Hit Points.
 				[NEWLINE][ICON_BULLET]It has only few [ICON_MOVES] Movements left for this turn but would recover in the next turn.
 				[NEWLINE][ICON_BULLET]It cannot perform [COLOR_NEGATIVE_TEXT]Attack[ENDCOLOR] in this turn.
 				[NEWLINE][ICON_BULLET]Great General or Admiral may not remove this debuff, but it would be removed automaticly in the next turn, when you may also chose promotions.
