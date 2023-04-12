@@ -14579,6 +14579,10 @@
 		</Replace>
 		<Row Tag="TXT_KEY_TP_SCIENCE_FROM_RELIGION">
 			<Text>[ICON_BULLET]來自宗教的[COLOR_POSITIVE_TEXT]+{1_Num}[ENDCOLOR][ICON_RESEARCH]。</Text>
-		  </Row>
+		</Row>
+		
+		<Row Tag="TXT_KEY_EUPANEL_BONUS_CITY_STATE_FRENDSHIP">
+			<Text>同盟城邦加成</Text>
+		</Row>
 	</Language_zh_Hant_HK>
 </GameData>
