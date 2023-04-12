@@ -563,6 +563,13 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
 			end
 
+			iModifier = pMyPlayer:GetTraitCityStateFriendshipModifier();
+			if (iModifier ~= 0) then
+				controlTable = g_MyCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_CITY_STATE_FRENDSHIP");
+				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
+			end
+
 			if (not bRanged) then
 
 				-- Crossing a River
@@ -1411,6 +1418,13 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
 			end
 
+			iModifier = pMyPlayer:GetTraitCityStateFriendshipModifier();
+			if (iModifier ~= 0) then
+				controlTable = g_MyCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_CITY_STATE_FRENDSHIP");
+				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
+			end
+
 			----------------------------------------------------------------------------
 			-- BONUSES THEIR UNIT GETS
 			----------------------------------------------------------------------------
@@ -1819,6 +1833,14 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 					controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_GOLDEN_AGE");
 					controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
 				end
+
+				iModifier = pTheirPlayer:GetTraitCityStateFriendshipModifier();
+				if (iModifier ~= 0) then
+					controlTable = g_TheirCombatDataIM:GetInstance();
+					controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_CITY_STATE_FRENDSHIP");
+					controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
+				end
+
 			end
 
 			--------------------------
@@ -2185,6 +2207,13 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 		if (iModifier ~= 0 and theirPlayer:IsGoldenAge()) then
 			controlTable = g_TheirCombatDataIM:GetInstance();
 			controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_GOLDEN_AGE");
+			controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
+		end
+
+		iModifier = theirPlayer:GetTraitCityStateFriendshipModifier();
+		if (iModifier ~= 0) then
+			controlTable = g_TheirCombatDataIM:GetInstance();
+			controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_CITY_STATE_FRENDSHIP");
 			controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
 		end
 	end

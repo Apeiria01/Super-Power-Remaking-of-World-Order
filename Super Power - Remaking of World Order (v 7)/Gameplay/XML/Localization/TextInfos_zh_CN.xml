@@ -14784,5 +14784,9 @@
 			<Text>[ICON_BULLET][COLOR_POSITIVE_TEXT]+{1_Num}[ENDCOLOR][ICON_RESEARCH]来自宗教。</Text>
 		</Row>
 
+		<Row Tag="TXT_KEY_EUPANEL_BONUS_CITY_STATE_FRENDSHIP">
+			<Text>同盟城邦加成</Text>
+		</Row>
+
 	</Language_zh_CN>
 </GameData>

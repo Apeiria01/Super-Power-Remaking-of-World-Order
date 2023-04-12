@@ -16805,5 +16805,9 @@
 		<Row Tag="TXT_KEY_TP_SCIENCE_FROM_RELIGION">
 			<Text>[ICON_BULLET][COLOR_POSITIVE_TEXT]+{1_Num}[ENDCOLOR] [ICON_RESEARCH] from Religion.</Text>
 		</Row>
+
+		<Row Tag="TXT_KEY_EUPANEL_BONUS_CITY_STATE_FRENDSHIP">
+			<Text>Frendship City State Bonus</Text>
+		</Row>
 	</Language_en_US>
 </GameData>
