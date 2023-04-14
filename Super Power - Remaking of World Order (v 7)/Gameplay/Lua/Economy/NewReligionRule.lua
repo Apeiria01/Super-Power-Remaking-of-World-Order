@@ -318,12 +318,7 @@ function SPNReligionUnitCreatedOutputBonus(iPlayer, iUnit, iUnitType, iPlotX, iP
             return
         end
         if pHolyCity:IsHasBuilding(GameInfoTypes.BUILDING_BELIEF_ORTHODOX_CHURCH) then
-            local numOfTargetCity = 0
-            for iCity in pPlayer:Cities() do
-                if eReligion == iCity:GetReligiousMajority() then
-                    numOfTargetCity = numOfTargetCity +1
-                end
-            end
+            local numOfTargetCity = Game.GetNumCitiesFollowing(eReligion)
             if numOfTargetCity > 0 then
                 local religionCultureBonus = (pPlayer:GetCurrentEra() + 1) * 10 * numOfTargetCity
                 pPlayer:ChangeJONSCulture(religionCultureBonus)
