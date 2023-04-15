@@ -217,25 +217,6 @@ function PolicyAdoptedEffects(playerID,policyID)
 end
 GameEvents.PlayerAdoptPolicy.Add(PolicyAdoptedEffects);
 
-
--- Beliefs
-function SPReligionEnhanced(iPlayer, eReligion, iBelief1, iBelief2)
-	if Game.IsOption(GameOptionTypes.GAMEOPTION_NO_RELIGION) or iPlayer == -1 or not Players[iPlayer]:HasCreatedReligion() then
-		return;
-	end
-	
-	-- The Sacred Palace
-	if iBelief1 and (GameInfo.Beliefs[iBelief1].Type == "BELIEF_RELIGION_PRESSURE"
-	or (GameInfo.Beliefs[iBelief2] and GameInfo.Beliefs[iBelief2].Type == "BELIEF_RELIGION_PRESSURE"))
-	then
-		local holyCity = Game.GetHolyCityForReligion(eReligion, iPlayer);
-		if holyCity then
-			holyCity:SetNumRealBuilding(GameInfoTypes["BUILDING_BELIEF_RELIGION_PRESSURE"], 1)
-		end
-	end
-end
-GameEvents.ReligionEnhanced.Add(SPReligionEnhanced);
-
 function SPReformeBeliefs(iPlayer, iReligion, iBelief)
 	if Game.IsOption(GameOptionTypes.GAMEOPTION_NO_RELIGION) or iPlayer == -1 or not Players[iPlayer]:HasCreatedReligion()
 	or Game.GetHolyCityForReligion(iReligion, iPlayer) == nil

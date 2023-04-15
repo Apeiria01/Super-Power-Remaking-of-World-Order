@@ -1,6 +1,7 @@
 local policyCollectionRuleID = GameInfo.Policies["POLICY_COLLECTIVE_RULE"].ID
 
 function SPEReligionAdopt(pPlayer,iBelief,pHolyCity)
+    if iBelief == -1 then return end
     --Founded
     if iBelief == GameInfo.Beliefs["BELIEF_RELIGIOUS_COLONIZATION"].ID then
 		if pPlayer:HasPolicy(policyCollectionRuleID) 
@@ -13,11 +14,29 @@ function SPEReligionAdopt(pPlayer,iBelief,pHolyCity)
             pHolyCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGIOUS_COLONIZATION,1)
         end
 
+    elseif iBelief == GameInfo.Beliefs["BELIEF_RELIGIOUS_SCIENCE"].ID
+	then
+		print("Choose BELIEF_RELIGIOUS_SCIENCE")
+		pPlayer:SetHasPolicy(GameInfo.Policies["POLICY_BELIEF_RELIGIOUS_SCIENCE"].ID,true,true)	
+
     --Enhanced
+    elseif iBelief == GameInfo.Beliefs["BELIEF_RELIGION_PRESSURE"].ID
+    and pPlayer:GetID() == pHolyCity:GetOwner()
+    then
+    print("Choose The Sacred Palace")
+    pHolyCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGION_PRESSURE,1)
+
     elseif iBelief == GameInfo.Beliefs["BELIEF_MISSIONARY_ZEAL"].ID
+    and pPlayer:GetID() == pHolyCity:GetOwner()
 	then
 		print("Choose BELIEF_MISSIONARY_ZEAL")
 		pHolyCity:SetNumRealBuilding(GameInfoTypes.BUILDING_EXTRA_RELIGION_SPREADS_2,1)
+    
+    elseif iBelief == GameInfo.Beliefs["BELIEF_RELIGIOUS_TEXTS"].ID
+    and pPlayer:GetID() == pHolyCity:GetOwner()
+	then
+		print("Choose BELIEF_RELIGIOUS_TEXTS")
+		pHolyCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGIOUS_TEXTS,1)
 
     elseif iBelief == GameInfo.Beliefs["BELIEF_MESSIAH"].ID
     then
@@ -34,7 +53,8 @@ function SPEReligionAdopt(pPlayer,iBelief,pHolyCity)
 		print("Choose BELIEF_JUST_WAR, set free Policy")
 		pPlayer:SetHasPolicy(GameInfo.Policies["POLICY_BELIEF_JUST_WAR"].ID,true,true)	
     
-    elseif iBelief == GameInfo.Beliefs["BELIEF_DEFENDER_FAITH"].ID 
+    elseif iBelief == GameInfo.Beliefs["BELIEF_DEFENDER_FAITH"].ID
+    and pPlayer:GetID() == pHolyCity:GetOwner()
     then
 		print("Choose BELIEF_DEFENDER_FAITH,set free building in holy city")
 		pHolyCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_DEFENDER_FAITH,1)
@@ -45,6 +65,7 @@ function SPEReligionAdopt(pPlayer,iBelief,pHolyCity)
         pPlayer:SetHasPolicy(GameInfo.Policies["POLICY_BELIEF_SACRED_CALENDAR"].ID,true,true)
     
     elseif iBelief == GameInfo.Beliefs["BELIEF_ORTHODOX_CHURCH"].ID 
+    and pPlayer:GetID() == pHolyCity:GetOwner()
     then
 		print("Choose BELIEF_ORTHODOX_CHURCH,set free building in holy city")
 		pHolyCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_ORTHODOX_CHURCH,1)
@@ -110,7 +131,10 @@ function SPNReligionFounded(iPlayer, iHolyCity, iReligion, iBelief1, iBelief2, i
 	local pHolyCity = pPlayer:GetCityByID(iHolyCity)
 	pHolyCity:SetNumRealBuilding(GameInfoTypes.BUILDING_RELIGION_HOLYCITY_MARK,1)
     --Founded Belief Effect
+    SPEReligionAdopt(pPlayer,iBelief1,pHolyCity)   
+    SPEReligionAdopt(pPlayer,iBelief2,pHolyCity)
     SPEReligionAdopt(pPlayer,iBelief3,pHolyCity)
+    SPEReligionAdopt(pPlayer,iBelief4,pHolyCity)
     SPEReligionAdopt(pPlayer,iBelief5,pHolyCity)
 
 end
@@ -126,6 +150,7 @@ function SPNReligionEnhanced(iPlayer, eReligion, iBelief1, iBelief2)
     end
     local pHolyCity = Game.GetHolyCityForReligion(eReligion, iPlayer)
     --Enhanced Belief Effect
+    SPEReligionAdopt(pPlayer,iBelief1,pHolyCity)
     SPEReligionAdopt(pPlayer,iBelief2,pHolyCity)
 
 end
@@ -222,6 +247,10 @@ function SPNReligionConquestedHolyCity(oldOwnerID, isCapital, cityX, cityY, newO
 				print("Player has BELIEF_MISSIONARY_ZEAL and take back the Holy City")
 				pCity:SetNumRealBuilding(GameInfoTypes.BUILDING_EXTRA_RELIGION_SPREADS_2,1)
 
+            elseif GameInfo.Beliefs[v].Type == "BELIEF_RELIGIOUS_TEXTS" then
+				print("Player has BELIEF_RELIGIOUS_TEXTS and take back the Holy City")
+				pCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGIOUS_TEXTS,1)
+
 			elseif GameInfo.Beliefs[v].Type == "BELIEF_RELIGION_PRESSURE" then
 				print("Player has BELIEF_RELIGION_PRESSURE and take back the Holy City")
 				pCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGION_PRESSURE,1)
@@ -289,12 +318,7 @@ function SPNReligionUnitCreatedOutputBonus(iPlayer, iUnit, iUnitType, iPlotX, iP
             return
         end
         if pHolyCity:IsHasBuilding(GameInfoTypes.BUILDING_BELIEF_ORTHODOX_CHURCH) then
-            local numOfTargetCity = 0
-            for iCity in pPlayer:Cities() do
-                if eReligion == iCity:GetReligiousMajority() then
-                    numOfTargetCity = numOfTargetCity +1
-                end
-            end
+            local numOfTargetCity = Game.GetNumCitiesFollowing(eReligion)
             if numOfTargetCity > 0 then
                 local religionCultureBonus = (pPlayer:GetCurrentEra() + 1) * 10 * numOfTargetCity
                 pPlayer:ChangeJONSCulture(religionCultureBonus)
@@ -318,7 +342,7 @@ function SPNReligionPolicyAdopt(iPlayer,iPolicy)
         return
     end
 
-    if iPolicy == GameInfoTypes["POLICY_COLLECTIVE_RULE"] then
+    if iPolicy == policyCollectionRuleID then
         local eReligion = pPlayer:GetReligionCreatedByPlayer()
         local pHolyCity = Game.GetHolyCityForReligion(eReligion, iPlayer)
         if pHolyCity:IsHasBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGIOUS_COLONIZATION) then
@@ -349,7 +373,10 @@ function SPNReligionBlockPolicyBranch(iPlayer,iPolicyBranch,isBlock)
             print("Player has BELIEF_RELIGIOUS_COLONIZATION, and change base Policy Branch 1")
             pHolyCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGIOUS_COLONIZATION_2,0)
             pHolyCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGIOUS_COLONIZATION,1)
-        elseif pHolyCity:IsHasBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGIOUS_COLONIZATION) then
+        elseif pHolyCity:IsHasBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGIOUS_COLONIZATION) 
+        and pPlayer:HasPolicy(policyCollectionRuleID) 
+        and not pPlayer:IsPolicyBlocked(policyCollectionRuleID)
+        then
             print("Player has BELIEF_RELIGIOUS_COLONIZATION, and change base Policy Branch 2")
             pHolyCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGIOUS_COLONIZATION,0)
             pHolyCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGIOUS_COLONIZATION_2,1)
@@ -371,7 +398,12 @@ function SPNReligionMinorCivQuestBonus(iMajor, iMinor, iQuestType, iStartTurn, i
     and civPlayer:HasReligionInMostCities(pPlayer:GetReligionCreatedByPlayer())
     then
 		local bonus =math.floor((iNewInfluence - iOldInfluence) / 100 * 0.5)
-        civPlayer:ChangeMinorCivFriendshipWithMajor(iMajor,bonus)
+        civPlayer:ChangeMinorCivFriendshipWithMajor(iMajor,bonus) 
+        if pPlayer:IsHuman() then
+            local heading = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_RELIGION_CIVQUEST_BONUS_SHORT")
+            local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_RELIGION_CIVQUEST_BONUS",civPlayer:GetName(),bonus)
+            pPlayer:AddNotification(NotificationTypes.NOTIFICATION_MINOR_QUEST, text, heading, civPlayer:GetCapitalCity():GetX(),civPlayer:GetCapitalCity():GetY())
+        end
 		print("MajorCiv has BELIEF_RELIGIOUS_UNITY and completed MinorCiv quest:",bonus)
 	end
 end

@@ -1393,20 +1393,7 @@
 			<PediaType>PEDIA_SCOUTING</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_SP_FORCE_3</PediaEntry>
 		</Row>
-		<Row>
-			<Type>PROMOTION_SP_FORCE_EAGLE_WORRIER</Type>
-			<Description>TXT_KEY_PROMOTION_SP_FORCE_3</Description>
-			<Help>TXT_KEY_PROMOTION_SP_FORCE_3_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<CaptureDefeatedEnemy>true</CaptureDefeatedEnemy>
-			<OutsideFriendlyLandsModifier>33</OutsideFriendlyLandsModifier>
-			<PortraitIndex>18</PortraitIndex>
-			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_SCOUTING</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_SP_FORCE_3</PediaEntry>
-		</Row>
 
-		
 		<Row>
 			<Type>PROMOTION_SP_FORCE_X_1</Type>
 			<Description>TXT_KEY_PROMOTION_SP_FORCE_I</Description>
@@ -1952,14 +1939,6 @@
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_AMBUSH_2</PromotionType>
-			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_CQB_COMBAT_1</PromotionType>
-			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_CQB_COMBAT_2</PromotionType>
 			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
 		</Row>
 		
@@ -5372,6 +5351,18 @@
 		</Row>
 
 
+		<Row>
+			<Type>PROMOTION_SPN_MAMLUK_COMBAT_FAITH</Type>
+			<Description>TXT_KEY_PROMOTION_SPN_MAMLUK_COMBAT_FAITH</Description>
+			<Help>TXT_KEY_PROMOTION_SPN_MAMLUK_COMBAT_FAITH_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_SPN_MAMLUK_COMBAT_FAITH</PediaEntry>
+		</Row>
+
 
 		<Row>
 			<Type>PROMOTION_HAKA_WAR_DANCE</Type>
@@ -6404,6 +6395,28 @@
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_ANTI_DEBUFF</PediaEntry>
+			<CannotBeChosen>true</CannotBeChosen>
+		</Row>
+		<Row>
+			<Type>PROMOTION_ANTI_COLLATERAL</Type>
+			<Description>TXT_KEY_PROMOTION_ANTI_COLLATERAL</Description>
+			<Help>TXT_KEY_PROMOTION_ANTI_COLLATERAL_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_ANTI_COLLATERAL</PediaEntry>
+			<CannotBeChosen>true</CannotBeChosen>
+		</Row>
+		<Row>
+			<Type>PROMOTION_ANTI_SPLASH</Type>
+			<Description>TXT_KEY_PROMOTION_ANTI_SPLASH</Description>
+			<Help>TXT_KEY_PROMOTION_ANTI_SPLASH_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_ANTI_SPLASH</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
 		</Row>
 

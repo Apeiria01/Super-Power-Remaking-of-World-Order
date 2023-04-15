@@ -19,3 +19,6 @@ UPDATE Yields SET ImageTexture='YieldAtlas_128_Culture.dds' WHERE Type='YIELD_CU
 UPDATE Yields SET ImageTexture='YieldAtlas_128_Faith.dds' WHERE Type='YIELD_FAITH';
 
 INSERT INTO CustomModDbUpdates(Name, Value) VALUES('API_UNIFIED_YIELDS_SQL', 1);
+
+
+ALTER TABLE Features ADD COLUMN 'FreePromotionIfOwned' TEXT DEFAULT NULL;

@@ -1379,7 +1379,10 @@ EstablishCorpsButton = {
           end
         end
       end
-      if tUnit and nUnit and tUnit ~= nUnit then
+      if tUnit and nUnit and tUnit ~= nUnit 
+      and not tUnit:IsHasPromotion(GameInfoTypes["PROMOTION_CORPS_2"])
+      and not nUnit:IsHasPromotion(GameInfoTypes["PROMOTION_CORPS_2"])
+      then
         bIsCondition = true;
         g_CorpsCount[playerID][3] = tUnit;
         g_CorpsCount[playerID][4] = nUnit;

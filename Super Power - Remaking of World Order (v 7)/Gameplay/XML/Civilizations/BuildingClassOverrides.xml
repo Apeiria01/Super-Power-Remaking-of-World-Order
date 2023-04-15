@@ -212,6 +212,11 @@
 			<BuildingType>BUILDING_WALLS_OF_BABYLON</BuildingType>
 		</Row>
 		<Row>
+			<CivilizationType>CIVILIZATION_DENMARK</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_WALLS</BuildingClassType>
+			<BuildingType>BUILDING_NORMAN_CAMP</BuildingType>
+		</Row>
+		<Row>
 			<CivilizationType>CIVILIZATION_BABYLON</CivilizationType>
 			<BuildingClassType>BUILDINGCLASS_WINDMILL</BuildingClassType>
 			<BuildingType>BUILDING_BABYLON_WATER_PUMP</BuildingType>
@@ -250,6 +255,11 @@
 			<CivilizationType>CIVILIZATION_ASSYRIA</CivilizationType>
 			<BuildingClassType>BUILDINGCLASS_LIBRARY</BuildingClassType>
 			<BuildingType>BUILDING_ROYAL_LIBRARY</BuildingType>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_ASSYRIA</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_TEMPLE</BuildingClassType>
+			<BuildingType>BUILDING_ASSUR_TEMPLE</BuildingType>
 		</Row>
 		<Row>
 			<CivilizationType>CIVILIZATION_GREECE</CivilizationType>

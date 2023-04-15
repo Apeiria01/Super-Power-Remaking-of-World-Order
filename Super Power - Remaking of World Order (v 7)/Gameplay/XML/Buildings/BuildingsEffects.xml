@@ -214,6 +214,17 @@
 			<DomainType>DOMAIN_SEA</DomainType>
 			<Experience>15</Experience>
 		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_NORMAN_CAMP</BuildingType>
+			<DomainType>DOMAIN_LAND</DomainType>
+			<Experience>15</Experience>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_NORMAN_CAMP</BuildingType>
+			<DomainType>DOMAIN_SEA</DomainType>
+			<Experience>15</Experience>
+		</Row>
 		
 		<Row>
 			<BuildingType>BUILDING_MILITARY_ACADEMY</BuildingType>
@@ -1418,6 +1429,11 @@
 			<Yield>2</Yield>
 		</Row>
 		<Row>
+			<BuildingType>BUILDING_ASSUR_TEMPLE</BuildingType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
 			<BuildingType>BUILDING_INDIA_TEMPLE</BuildingType>
 			<YieldType>YIELD_FAITH</YieldType>
 			<Yield>2</Yield>
@@ -1761,6 +1777,12 @@
 			<BuildingType>BUILDING_MEGACITY_PYRAMID</BuildingType>
 			<YieldType>YIELD_FOOD</YieldType>
 			<Yield>60</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_EGYPT_SIRIUS</BuildingType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>1</Yield>
 		</Row>
 	</Building_YieldChanges>
 
@@ -4711,6 +4733,16 @@
 			<Flavor>40</Flavor>
 		</Row>
 		<Row>
+			<BuildingType>BUILDING_NORMAN_CAMP</BuildingType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>120</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_NORMAN_CAMP</BuildingType>
+			<FlavorType>FLAVOR_CITY_DEFENSE</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		<Row>
 			<BuildingType>BUILDING_CASTLE</BuildingType>
 			<FlavorType>FLAVOR_CITY_DEFENSE</FlavorType>
 			<Flavor>35</Flavor>
@@ -5444,6 +5476,16 @@
 		<Row>
 			<BuildingType>BUILDING_TEMPLE</BuildingType>
 			<FlavorType>FLAVOR_RELIGION</FlavorType>
+			<Flavor>80</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_ASSUR_TEMPLE</BuildingType>
+			<FlavorType>FLAVOR_RELIGION</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_ASSUR_TEMPLE</BuildingType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
 			<Flavor>80</Flavor>
 		</Row>
 

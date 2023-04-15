@@ -1,10 +1,11 @@
 
 --Traditional Policies: CapitalYieldChanges +4
 INSERT INTO Policy_CapitalYieldPerPopChanges (PolicyType,YieldType,Yield)
-SELECT 'POLICY_MONARCHY','YIELD_FOOD',50 UNION ALL
-SELECT 'POLICY_MONARCHY','YIELD_CULTURE',50 UNION ALL
-SELECT 'POLICY_MONARCHY','YIELD_SCIENCE',50 UNION ALL
-SELECT 'POLICY_MONARCHY','YIELD_PRODUCTION',50 ;
+SELECT 'POLICY_MONARCHY','YIELD_GOLD',100 UNION ALL
+SELECT 'POLICY_MONARCHY','YIELD_FOOD',100 UNION ALL
+SELECT 'POLICY_MONARCHY','YIELD_CULTURE',100 UNION ALL
+SELECT 'POLICY_MONARCHY','YIELD_SCIENCE',100 UNION ALL
+SELECT 'POLICY_MONARCHY','YIELD_PRODUCTION',100 ;
 
 --POLICY_LANDED_ELITE
 INSERT INTO Policy_ImprovementYieldChanges (PolicyType,ImprovementType,YieldType,Yield)
@@ -44,18 +45,18 @@ WHERE t1.Type =  t2.DefaultBuilding AND t1.SpecialistCount > 0
 AND (t1.SpecialistType = 'SPECIALIST_ENGINEER' OR t1.SpecialistType='SPECIALIST_SCIENTIST' OR t1.SpecialistType='SPECIALIST_MERCHANT'
 or t1.SpecialistType='SPECIALIST_WRITER' OR t1.SpecialistType='SPECIALIST_MUSICIAN' OR t1.SpecialistType='SPECIALIST_ARTIST');
 
---CREATE TRIGGER Policy_Bill_Of_Right_Trigger
---AFTER INSERT ON Buildings
---WHEN  NEW.SpecialistCount > 0 
-      --AND NEW.Type IN (SELECT DefaultBuilding FROM BuildingClasses WHERE Type = NEW.BuildingClass)
-      --AND (NEW.SpecialistType = 'SPECIALIST_ENGINEER' OR NEW.SpecialistType='SPECIALIST_SCIENTIST' OR NEW.SpecialistType='SPECIALIST_MERCHANT'
-      --or NEW.SpecialistType='SPECIALIST_WRITER' OR NEW.SpecialistType='SPECIALIST_MUSICIAN' OR NEW.SpecialistType='SPECIALIST_ARTIST')
---BEGIN
-	--INSERT INTO Policy_BuildingClassYieldChanges (PolicyType, BuildingClassType, YieldType, YieldChange)
-      --SELECT 'POLICY_BILL_OF_RIGHTS', NEW.BuildingClass,t1.YieldType,NEW.SpecialistCount
-      --FROM SpecialistYields t1
-      --WHERE NEW.SpecialistType = t1.SpecialistType;
---END;
+/*CREATE TRIGGER Policy_Bill_Of_Right_Trigger
+AFTER INSERT ON Buildings
+WHEN  NEW.SpecialistCount > 0 
+      AND NEW.Type IN (SELECT DefaultBuilding FROM BuildingClasses WHERE Type = NEW.BuildingClass)
+      AND (NEW.SpecialistType = 'SPECIALIST_ENGINEER' OR NEW.SpecialistType='SPECIALIST_SCIENTIST' OR NEW.SpecialistType='SPECIALIST_MERCHANT'
+      or NEW.SpecialistType='SPECIALIST_WRITER' OR NEW.SpecialistType='SPECIALIST_MUSICIAN' OR NEW.SpecialistType='SPECIALIST_ARTIST')
+BEGIN
+	INSERT INTO Policy_BuildingClassYieldChanges (PolicyType, BuildingClassType, YieldType, YieldChange)
+      SELECT 'POLICY_BILL_OF_RIGHTS', NEW.BuildingClass,t1.YieldType,NEW.SpecialistCount
+      FROM SpecialistYields t1
+      WHERE NEW.SpecialistType = t1.SpecialistType;
+END;*/
 
 -- POLICY_MERCHANT_CONFEDERACY
 insert into Policy_MinorsTradeRouteYieldRate (PolicyType, YieldType, Rate) values

@@ -148,7 +148,7 @@
 			<Description>TXT_KEY_TRAIT_VIKING_FURY</Description>
 			<ShortDescription>TXT_KEY_TRAIT_VIKING_FURY_SHORT</ShortDescription>
 			<!--<ExtraEmbarkMoves>1</ExtraEmbarkMoves>-->
-			<PlunderModifier>200</PlunderModifier>
+			<PlunderModifier>100</PlunderModifier>
 			<EmbarkedToLandFlatCost>true</EmbarkedToLandFlatCost>
 		</Row>
 		<Row>

@@ -1,60 +1,6 @@
 -- ********************************************************
 -- POLICY_HORSEMAN_TRAINING and POLICY_MILITARY_CASTE
 -- ******************************************************** 
-function SPEBattleCustomDamage(iBattleUnitType, iBattleType,
-	iAttackPlayerID, iAttackUnitOrCityID, bAttackIsCity, iAttackDamage,
-	iDefensePlayerID, iDefenseUnitOrCityID, bDefenseIsCity, iDefenseDamage,
-	iInterceptorPlayerID, iInterceptorUnitOrCityID, bInterceptorIsCity, iInterceptorDamage)
-
-	print("SPEBattleCustomDamage");
-	local additionalDamage = 0;
-
-	local attPlayer = Players[iAttackPlayerID]
-	local defPlayer = Players[iDefensePlayerID]
-	if attPlayer == nil or defPlayer == nil then
-		return 0
-	end
-
-	if iBattleUnitType == GameInfoTypes["BATTLEROLE_ATTACKER"] then
-		if bAttackIsCity then
-			return 0
-		end
-
-		local attUnit = attPlayer:GetUnitByID(iAttackUnitOrCityID)
-		if attUnit == nil then
-			return 0
-		end
-
-		local attUnitCombatType = attUnit:GetUnitCombatType() 
-
-		if attPlayer:HasPolicy(GameInfo.Policies["POLICY_HORSEMAN_TRAINING"].ID) 
-		and ((attUnitCombatType == GameInfoTypes.UNITCOMBAT_MOUNTED) or (attUnitCombatType == GameInfoTypes.UNITCOMBAT_ARMOR))
-		then
-			additionalDamage = additionalDamage + 5
-		end
-
-		if attPlayer:HasPolicy(GameInfo.Policies["POLICY_MILITARY_CASTE"].ID) then
-			if ( (attUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_ARCHERY_COMBAT"].ID) ) 
-			or ( (attUnitCombatType == GameInfoTypes.UNITCOMBAT_HELICOPTER) ) )
-			then
-				additionalDamage = additionalDamage + 5
-			end
-
-			if bDefenseIsCity then
-				local defCity = defPlayer:GetCityByID(iDefenseUnitOrCityID) 
-				if defCity == nil then return 0 end
-
-				if attUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_CITY_SIEGE"].ID) 
-				or attUnit:GetDomainType() == DomainTypes.DOMAIN_AIR then
-					additionalDamage = additionalDamage + defCity:GetMaxHitPoints() * 0.1
-				end
-			end
-		end
-	end
-	return additionalDamage
-end
-GameEvents.BattleCustomDamage.Add(SPEBattleCustomDamage)
-
 function SPEConquestedCity(oldOwnerID, isCapital, cityX, cityY, newOwnerID, numPop, isConquest)
     local pPlayer = Players[newOwnerID]
     local capturedPlayer = Players[oldOwnerID]
@@ -284,9 +230,10 @@ GameEvents.CityTrained.Add(SPECityTrainCompleted)
 --When block Liberty,recycle free building and policy
 function SPEPlayerBlockPolicyBranch(iPlayer,iPolicyBranch,isBlock)
 	local pPlayer = Players[iPlayer]
-	if pPlayer == nil or pPlayer:IsMinorCiv() or pPlayer:IsBarbarian() then
+	if not pPlayer:IsMajorCiv() then
 	 	return
 	end
+	--Special case
 	if iPolicyBranch == GameInfo.PolicyBranchTypes["POLICY_BRANCH_LIBERTY"].ID
 	or iPolicyBranch == GameInfo.PolicyBranchTypes["POLICY_BRANCH_TRADITION"].ID
 	then
@@ -294,19 +241,12 @@ function SPEPlayerBlockPolicyBranch(iPlayer,iPolicyBranch,isBlock)
 			print("Player Block Liberty and adopt Tradition!!!")
 			pPlayer:SetHasPolicy(PolicyCollectiveRuleFreeID,false)
 			for iCity in pPlayer:Cities() do
-				iCity:SetNumRealBuilding(GameInfoTypes.BUILDING_POLICY_REPUBLIC_FREE,0)
-				iCity:SetNumRealBuilding(GameInfoTypes.BUILDING_REPRESENTATION_CULTURE,0)
-				iCity:SetNumRealBuilding(GameInfoTypes.BUILDING_REPRESENTATION_CULTURE_COST,0)
-				--Liberty manpower 
-				iCity:SetNumRealBuilding(GameInfoTypes.BUILDING_CIV_S_P_MAN_RESOURCES,0)
-
-				if(pPlayer:HasPolicy(GameInfo.Policies["POLICY_ARISTOCRACY"].ID)) then
+				if(pPlayer:HasPolicy(GameInfo.Policies["POLICY_ARISTOCRACY"].ID)) 
+				and iCity:GetPopulation() < 6
+				then
 					iCity:SetNumRealBuilding(GameInfoTypes.BUILDING_TRADITION_FOOD_GROWTH,1)
 				end
-				if(pPlayer:HasPolicy(GameInfo.Policies["POLICY_FAMILY_REGISTER"].ID)) then
-					iCity:SetNumRealBuilding(GameInfoTypes.BUILDING_FAMILY_PRODUCTION,1)
-				end
-				
+				iCity:SetNumRealBuilding(GameInfoTypes.BUILDING_REPRESENTATION_CULTURE_COST,0)
 			end
 
 		elseif iPolicyBranch == GameInfo.PolicyBranchTypes["POLICY_BRANCH_TRADITION"].ID and isBlock then
@@ -316,17 +256,8 @@ function SPEPlayerBlockPolicyBranch(iPlayer,iPolicyBranch,isBlock)
 			end
 			for iCity in pPlayer:Cities() do
 				iCity:SetNumRealBuilding(GameInfoTypes.BUILDING_TRADITION_FOOD_GROWTH,0)
-				iCity:SetNumRealBuilding(GameInfoTypes.BUILDING_FAMILY_PRODUCTION,0)
-
-				if(pPlayer:HasPolicy(GameInfo.Policies["POLICY_REPUBLIC"].ID)) then
-					iCity:SetNumRealBuilding(GameInfoTypes.BUILDING_POLICY_REPUBLIC_FREE,1)
-				end
 				if(pPlayer:HasPolicy(GameInfo.Policies["POLICY_REPRESENTATION"].ID)) then
-					iCity:SetNumRealBuilding(GameInfoTypes.BUILDING_REPRESENTATION_CULTURE,1)
 					iCity:SetNumRealBuilding(GameInfoTypes.BUILDING_REPRESENTATION_CULTURE_COST,1)
-				end
-				if(pPlayer:HasPolicy(GameInfo.Policies["POLICY_CITIZENSHIP"].ID)) then
-					iCity:SetNumRealBuilding(GameInfoTypes.BUILDING_CIV_S_P_MAN_RESOURCES,2)
 				end
 			end
 		end
@@ -401,6 +332,6 @@ function SPEPlayerCompletedMinorCivQuest(iMajor, iMinor, iQuestType, iStartTurn,
 		end
 	end
 end
-GameEvents.PlayerCompletedQuest.Add(SPEPlayerCompletedMinorCivQuest) 
+GameEvents.PlayerCompletedQuest.Add(SPEPlayerCompletedMinorCivQuest);
 
 print('SP8PolicyEffects: Check Pass')

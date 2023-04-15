@@ -577,6 +577,10 @@
     <!--   GameEvents.GreatPersonExpended.Add(function(iPlayer, iUnit, iUnitType, iX, iY) end) -->
     <Row Class="3" Name="EVENTS_GREAT_PEOPLE" Value="0"/>
 
+
+    <Row Class="3" Name="EVENTS_DISCOVER" Value="1"/>
+
+
     <!-- Events sent when a player is about to found a religion (v19) -->
     <!--   GameEvents.PlayerCanFoundPantheon.Add(function(iPlayer) return true end) -->
     <!--   GameEvents.PlayerCanFoundReligion.Add(function(iPlayer, iCity) return true end) -->
@@ -619,6 +623,8 @@
     <!-- Events sent by golden ages (v52) -->
     <!--   GameEvents.PlayerGoldenAge.Add(function(iPlayer, bStart, iTurns) end) -->
     <Row Class="3" Name="EVENTS_GOLDEN_AGE" Value="0"/>
+
+    <Row Class="3" Name="EVENTS_WLTKD" Value="1"/>
 
     <!-- Events sent after a city produces/buys/sells something (v19) -->
     <!--   GameEvents.CityTrained.Add(function(iPlayer, iCity, iUnit, bGold, bFaith) end) -->
@@ -964,6 +970,11 @@
 	<Row Class="6" Name="BUILDINGS_GOLDEN_AGE_EXTEND" Value="1" DbUpdates="1"/>
 
 	<Row Class="6" Name="TRAIT_RELIGION_FOLLOWER_EFFECTS" Value="1" DbUpdates="1"/>
+
+    <Row Class="5" Name="API_UNIT_CANNOT_BE_RANGED_ATTACKED" Value="1"/>
+
+    <Row Class="5" Name="API_PROMOTION_TO_PROMOTION_MODIFIERS" Value="1"/>
+
   </CustomModOptions>
 
   <CustomModPostDefines>

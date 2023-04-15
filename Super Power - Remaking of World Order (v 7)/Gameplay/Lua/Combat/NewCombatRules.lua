@@ -2,7 +2,7 @@
 
 
 --include( "UtilityFunctions.lua" )
-
+include("FLuaVector.lua");
 --******************************************************************************* Unit Combat Rules *******************************************************************************
 local g_DoNewAttackEffect = nil;
 function NewAttackEffectStarted(iType, iPlotX, iPlotY)
@@ -267,6 +267,11 @@ function NewAttackEffect()
 	local AntiDebuffID = GameInfo.UnitPromotions["PROMOTION_ANTI_DEBUFF"].ID
 
 	local DoppelsoldnerID = GameInfo.UnitPromotions["PROMOTION_GERMAN_LONGSWORDSMAN"].ID
+	local MamlukCombatID = GameInfo.UnitPromotions["PROMOTION_SPN_MAMLUK_COMBAT_FAITH"].ID
+
+	local CollateralDamageImmuneID = GameInfo.UnitPromotions["PROMOTION_ANTI_COLLATERAL"].ID
+	local SplashDamageImmuneID = GameInfo.UnitPromotions["PROMOTION_ANTI_SPLASH"].ID
+	
 	-- Ranged Unit Logistics can only move to the adjusted plot
 	if attUnit:IsDead() then
 	elseif attUnit:GetMoves() > 0 and not attUnit:IsImmobile() and not attUnit:IsRangedSupportFire()
@@ -434,6 +439,21 @@ function NewAttackEffect()
 		return
 	end
 
+	--Mamluk gain Faith from Combat
+	if not defCity and attUnit:IsHasPromotion(MamlukCombatID) then
+		local MamlukDamageBonus = 0
+		if defUnit then
+			MamlukDamageBonus = defUnitDamage
+		end
+		print("Mamluk Attack Damage is :",MamlukDamageBonus)
+		attPlayer:ChangeFaith(MamlukDamageBonus)
+		if attPlayer:IsHuman() and MamlukDamageBonus >0 then
+			local hex = ToHexFromGrid(Vector2(plotX,plotY))
+			Events.AddPopupTextEvent(HexToWorld(hex), Locale.ConvertTextKey("+{1_Num}[ICON_PEACE]",MamlukDamageBonus))
+			Events.GameplayFX(hex.x, hex.y, -1)
+		end
+	end
+		
 
 	----------------EMP Bomber effects
 	if attUnit:IsHasPromotion(EMPBomberID) then
@@ -858,7 +878,7 @@ function NewAttackEffect()
 			local unitCount = batPlot:GetNumUnits()
 			for i = 0, unitCount - 1, 1 do
 				local pFoundUnit = batPlot:GetUnit(i)
-				if (pFoundUnit and pFoundUnit ~= defUnit and pFoundUnit:GetDomainType() ~= DomainTypes.DOMAIN_AIR) then
+				if (pFoundUnit and pFoundUnit ~= defUnit and pFoundUnit:GetDomainType() ~= DomainTypes.DOMAIN_AIR and not pFoundUnit:IsHasPromotion(CollateralDamageImmuneID)) then
 					local pPlayer = Players[pFoundUnit:GetOwner()]
 					if PlayersAtWar(attPlayer, pPlayer) then
 						local CollDamageOri = 0;
@@ -931,7 +951,7 @@ function NewAttackEffect()
 			local unitCount = batPlot:GetNumUnits()
 			for i = 0, unitCount - 1, 1 do
 				local pFoundUnit = batPlot:GetUnit(i)
-				if (pFoundUnit and pFoundUnit ~= defUnit and pFoundUnit:GetDomainType() ~= DomainTypes.DOMAIN_AIR) then
+				if (pFoundUnit and pFoundUnit ~= defUnit and pFoundUnit:GetDomainType() ~= DomainTypes.DOMAIN_AIR and not pFoundUnit:IsHasPromotion(CollateralDamageImmuneID)) then
 					local pPlayer = Players[pFoundUnit:GetOwner()]
 					if PlayersAtWar(attPlayer, pPlayer) then
 						local CollDamageOri = 0;
@@ -991,7 +1011,9 @@ function NewAttackEffect()
 
 					local pUnit = adjPlot:GetUnit(0) ------------Find Units affected
 					if pUnit and
-						(pUnit:GetDomainType() == DomainTypes.DOMAIN_LAND or pUnit:GetDomainType() == DomainTypes.DOMAIN_SEA) then
+						(pUnit:GetDomainType() == DomainTypes.DOMAIN_LAND or pUnit:GetDomainType() == DomainTypes.DOMAIN_SEA) 
+						and not pUnit:IsHasPromotion(SplashDamageImmuneID)
+						then
 						local pCombat = pUnit:GetBaseCombatStrength()
 						local pPlayer = Players[pUnit:GetOwner()]
 
@@ -1256,11 +1278,11 @@ function NewAttackEffect()
 			end
 			defFinalUnitDamage = defFinalUnitDamage + defFinalUnitDamageChange;
 			defUnit:ChangeDamage(defFinalUnitDamageChange);
-			if attUnit:CanMoveThrough(batPlot) and batPlot ~= attPlot then
+			--[[if attUnit:CanMoveThrough(batPlot) and batPlot ~= attPlot then
 				-- if the target plot has no unit,your unit advances into the target plot!
 				attUnit:SetMoves(attUnit:MovesLeft() + GameDefines["MOVE_DENOMINATOR"]);
 				attUnit:PushMission(MissionTypes.MISSION_MOVE_TO, plotX, plotY);
-			end
+			end]]
 		end
 
 
@@ -1772,7 +1794,8 @@ function CaptureSPDKP(iPlayerID, iUnitID)
 		end
 		if pUnit:IsCombatUnit() then
 			-- pUnit:SetLevel(tCaptureSPUnits[6]);
-			pUnit:SetExperience(tCaptureSPUnits[7] / 3);
+			pUnit:SetExperience(tCaptureSPUnits[7] / 4);
+			pUnit:SetLevel(1);
 			local pMoves = pUnit:MaxMoves();
 			print("MaxMoves of captured unit is " .. pMoves);
 			local qMoves = tCaptureSPUnits[8];

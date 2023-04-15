@@ -505,12 +505,7 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>Gameplay/SQL/UnitPromotions_PromotionModifiers.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>Gameplay/SQL/APIUnitCannotBeRangedAttacked.sql</FileName>
+        <FileName>Gameplay/SQL/NewTableChanges.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
@@ -931,6 +926,8 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
     <Folder Include="UI\Art\Models" />
     <Folder Include="UI\Art\Models\Improvements" />
     <Folder Include="UI\Art\Models\Improvements\BeastDome" />
+    <Folder Include="UI\Art\Models\Improvements\MountainCity" />
+    <Folder Include="UI\Art\Models\Improvements\CoastalCity" />
     <Folder Include="UI\Art\Models\Units Extra" />
     <Folder Include="UI\Art\Models\Resources\Luxury Amber" />
     <Folder Include="UI\Art\Models\Resources\Luxury Coffee" />
@@ -954,6 +951,7 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
     <Folder Include="UI\Art\Models\Units Extra\Spartan300\" />
     <Folder Include="UI\Art\Models\Units Extra\T72B3\" />
     <Folder Include="UI\Art\Models\Units Infantry\Doppelsoldner\" />
+    <Folder Include="UI\Art\Models\Units Land\Mamluk" />
     <Folder Include="UI\Art\Models\Units Naval" />
     <Folder Include="UI\Art\Models\Units Land" />
     <Folder Include="UI\Art\Models\Units Infantry" />
@@ -1095,10 +1093,6 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="Gameplay/SQL/GeneralTweaks.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="Gameplay/SQL/UnitPromotions_PromotionModifiers.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
@@ -1326,7 +1320,7 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Gameplay/SQL/APIUnitCannotBeRangedAttacked.sql">
+    <Content Include="Gameplay/SQL/NewTableChanges.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
@@ -1338,11 +1332,19 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
+    <Content Include="Gameplay\Lua\Combat\NewBattleCustomDamage.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
     <Content Include="Gameplay\Lua\CSD\NewCityStateDiplomaticRule.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="Gameplay\Lua\Economy\NewBuildingRule.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Gameplay\Lua\Utility\PlotIterators.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
@@ -5502,6 +5504,74 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
+    <Content Include="UI\Art\Models\Improvements\CoastalCity\PolyWaterCity.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Improvements\CoastalCity\PolyWaterCity.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Improvements\CoastalCity\PolyWaterCity.gr2">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Improvements\CoastalCity\PolyWaterCity_E.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Improvements\CoastalCity\PolyWaterCity_E.gr2">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Improvements\CoastalCity\PolyWaterCity_NE.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Improvements\CoastalCity\PolyWaterCity_NE.gr2">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Improvements\CoastalCity\PolyWaterCity_NW.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Improvements\CoastalCity\PolyWaterCity_NW.gr2">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Improvements\CoastalCity\PolyWaterCity_SE.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Improvements\CoastalCity\PolyWaterCity_SE.gr2">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Improvements\CoastalCity\PolyWaterCity_SW.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Improvements\CoastalCity\PolyWaterCity_SW.gr2">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Improvements\CoastalCity\PolyWaterCity_W.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Improvements\CoastalCity\PolyWaterCity_W.gr2">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Improvements\MountainCity\MachuPicchu.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Improvements\MountainCity\MachuPicchu.gr2">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
     <Content Include="UI\Art\Models\Units Extra\Conscript\ra3_ussr_conscript.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
@@ -5755,6 +5825,34 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="UI\Art\IconAtlases\Buildings\Aztecs\HueyTeocalliPicture_256.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Units Land\Mamluk\Mamluk.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Units Land\Mamluk\Mamluk.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Units Land\Mamluk\Mamluk.gr2">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Units Land\Mamluk\MamlukFlag.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Units Land\Mamluk\Mamluk_Gloss.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Units Land\Mamluk\Mamluk_Horse.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Units Land\Mamluk\Mamluk_Horse_Gloss.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
@@ -6110,7 +6208,7 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="VMC\DLL\CvGameCoreDLL_Expansion2Win32Debug.pdb">
+    <Content Include="VMC\DLL\CvGameCoreDLL_Expansion2Win32Release.pdb">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
