@@ -10355,10 +10355,11 @@
 		<Replace Tag="TXT_KEY_TRAIT_GREAT_ANDEAN_ROAD">
 			<Text>
 				Units ignore terrain costs when moving into any tile with Hills.
-				No maintenance costs for improvements in Hills; half cost elsewhere
+				No maintenance costs for improvements in Hills; half cost elsewhere.
 				Workers can remove [ICON_RES_SHEEP] Sheep on the tiles with Hills.
 				Civilian units can enter mountain tiles.
-				Settlers can build cities on mountain tiles. Mountain cities gain additional [ICON_RESEARCH]science and [ICON_FOOD]food, which increases over eras.
+				Settlers will not lose HP if end turns on mountain tiles, and can build cities on them.
+				Mountain cities gain additional [ICON_RESEARCH]science and [ICON_FOOD]food, which increases over eras.
 			</Text>
 		</Replace>
 	
