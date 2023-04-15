@@ -55,6 +55,8 @@ local ExtraRSID = GameInfo.UnitPromotions["PROMOTION_EXTRA_RELIGION_SPREADS"].ID
 local CorpsID = GameInfo.UnitPromotions["PROMOTION_CORPS_1"].ID
 local ArmeeID = GameInfo.UnitPromotions["PROMOTION_CORPS_2"].ID
 
+local CitadelID = GameInfo.UnitPromotions["PROMOTION_CITADEL_DEFENSE"].ID
+
 
 function NewUnitCreationRules()   ------------------------Human Player's units rule & AI units assistance--
 	
@@ -597,15 +599,19 @@ Events.SerialEventUnitCreated.Add(OnCorpsArmeeSP)
 -- Citadel Manager
 local CitadelList = {};
 function OnCitadelCreatSP(iPlayerID, iUnitID)
-	if Players[iPlayerID] == nil or Players[iPlayerID]:GetUnitByID(iUnitID) == nil
-	or not Players[iPlayerID]:GetUnitByID(iUnitID):IsImmobile()
-	or Players[iPlayerID]:GetUnitByID(iUnitID):GetBaseCombatStrength() == 0
-	or Players[iPlayerID]:GetUnitByID(iUnitID):GetPlot() == nil
+	local pPlayer = Players[iPlayerID];
+	local pUnit = pPlayer:GetUnitByID(iUnitID);
+
+	if pPlayer == nil or pUnit == nil
+	or pUnit:GetBaseCombatStrength() == 0
+	or pUnit:GetPlot() == nil
+	or not pUnit:IsImmobile()
+	or not pUnit:IsHasPromotion(CitadelID)
 	then
 		return;
 	end
 	-- print ("Citadel Created!")
-	local pUnit = Players[iPlayerID]:GetUnitByID(iUnitID);
+	local pUnit = pPlayer:GetUnitByID(iUnitID);
 	local pPlot = pUnit:GetPlot();
 	
 	table.insert(CitadelList, {iPlayerID, iUnitID, pPlot});

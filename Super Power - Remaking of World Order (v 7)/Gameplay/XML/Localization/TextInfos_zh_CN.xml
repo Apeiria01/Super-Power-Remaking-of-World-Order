@@ -55,7 +55,10 @@
 			<Text>SP-关闭 [COLOR_YELLOW]新攻击特效[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_NEWATTACK_HELP">
-			<Text>新攻击特效：电磁脉冲、范围伤害、穿透伤害、践踏伤害、战争伤亡...</Text>
+			<Text>
+				新攻击特效：电磁脉冲、范围伤害、穿透伤害、践踏伤害、战争伤亡...
+				[NEWLINE][COLOR_NEGATIVE_TEXT]请尽量保持默认,否则可能导致部分功能失效[ENDCOLOR]
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_NUCLEARWINTER">
 			<Text>SP-关闭 [COLOR_YELLOW]核冬天[ENDCOLOR]</Text>
@@ -5660,9 +5663,9 @@
 
 		<Replace Tag="TXT_KEY_TRAIT_CITY_STATE_FRIENDSHIP">
 			<Text>
-				[ICON_BULLET]对城邦[ICON_INFLUENCE]影响力衰减速度减半，恢复速度加倍。
-				[NEWLINE][ICON_BULLET]军队在城邦境内停留时不会影响关系。对于能够勒索的城邦每回合额外获得5点[ICON_INFLUENCE]影响力（标准速度下）。
-				[NEWLINE][ICON_BULLET]每个同盟城邦为军事单位+3%战斗力，上限为30%。
+				对城邦[ICON_INFLUENCE]影响力衰减速度减半，恢复速度加倍。
+				军队在城邦境内停留时不会影响关系。对于能够勒索的城邦每回合额外获得5点[ICON_INFLUENCE]影响力（标准速度下）。
+				每个同盟城邦为军事单位+3%战斗力，上限为30%。
 			</Text>
 		</Replace>
 
@@ -5700,24 +5703,24 @@
 
 		<Replace Tag="TXT_KEY_TRAIT_SPICE">
 			<Text>
-				[ICON_BULLET]在非出生地大陆建造的前三座城市可以提供2份独有奢侈资源，这三座城市无法被摧毁且没有额外的管理成本。
-				[NEWLINE][ICON_BULLET]每拥有一种数量大于1的奢侈资源，完成城邦任务获得的[ICON_INFLUENCE]影响力+5%，上限为40%
+				在非出生地大陆建造的前三座城市可以提供2份独有奢侈资源，这三座城市无法被摧毁且没有额外的管理成本。
+				每拥有一种数量大于1的奢侈资源，完成城邦任务获得的[ICON_INFLUENCE]影响力+5%，上限为40%
 			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_GREAT_EXPANSE">
 			<Text>
-				[ICON_BULLET]新建城市获得额外的初始地块（6格），所有城市免费赠送一个粮仓。
-				[NEWLINE][ICON_BULLET]所有侦察兵单位可以选择遗迹结果。
+				新建城市获得额外的初始地块（6格），所有城市免费赠送一个粮仓。
+				所有侦察兵单位可以选择遗迹结果。
 			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_WAYFINDING">
 			<Text>
-				[ICON_BULLET]单位初始时即能以海运模式进入大洋。
-				[NEWLINE][ICON_BULLET]移民可以在海滨地块建城，海滨城市获得额外的[ICON_PRODUCTION]产能和[ICON_CULTURE]文化，随时代增加。
-				[NEWLINE][ICON_BULLET]市政厅最高等级为3级（无4和5级城市）。
-				[NEWLINE][ICON_BULLET]在摩艾石像群周边2格内单位+10%[ICON_STRENGTH]战斗力。
+				单位初始时即能以海运模式进入大洋。
+				移民可以在海滨地块建城，海滨城市获得额外的[ICON_PRODUCTION]产能和[ICON_CULTURE]文化，随时代增加。
+				市政厅最高等级为3级（无4和5级城市）。
+				在摩艾石像群周边2格内单位+10%[ICON_STRENGTH]战斗力。
 			</Text>
 		</Replace>
 
@@ -5735,8 +5738,8 @@
 
 		<Replace Tag="TXT_KEY_TRAIT_POPULATION_GROWTH">
 			<Text>
-				[ICON_BULLET]城市[ICON_CITIZEN]人口带来的[ICON_HAPPINESS_4]不满-20%。
-				[NEWLINE][ICON_BULLET]城市中每个主流宗教信徒+1%[ICON_FOOD]粮食产出。
+				城市[ICON_CITIZEN]人口带来的[ICON_HAPPINESS_4]不满-20%。
+				城市中每个主流宗教信徒+1%[ICON_FOOD]粮食产出。
 			</Text>
 		</Replace>
 
@@ -5762,8 +5765,8 @@
 
 		<Replace Tag="TXT_KEY_TRAIT_DIPLOMACY_GREAT_PEOPLE">
 			<Text>
-				[ICON_BULLET]所有达到小型城市（6[ICON_CITIZEN]人口）规模的城市中每2[ICON_CITIZEN]人口+1[ICON_RESEARCH]科研。
-				[NEWLINE][ICON_BULLET]当宣友时，瑞典和他的盟友得到+10%的[ICON_GREAT_PEOPLE]伟人点数。
+				所有达到小型城市（6[ICON_CITIZEN]人口）规模的城市中每2[ICON_CITIZEN]人口+1[ICON_RESEARCH]科研。
+				当宣友时，瑞典和他的盟友得到+10%的[ICON_GREAT_PEOPLE]伟人点数。
 			</Text>
 		</Replace>
 
@@ -5785,9 +5788,10 @@
 
 		<Replace Tag="TXT_KEY_TRAIT_GREAT_ANDEAN_ROAD">
 			<Text>
-				[ICON_BULLET]单位进入丘陵地块不消耗额外移动力，工人可以铲除丘陵地块上的[ICON_RES_SHEEP]羊。
-				[NEWLINE][ICON_BULLET]丘陵上的设施不需要维护费，其他地形上的设施维护费减半。
-				[NEWLINE][ICON_BULLET]平民单位可以进入山脉地块，且移民可以在山脉地块上建立城市。山脉城市获得额外的[ICON_RESEARCH]科研和[ICON_FOOD]食物产出，随时代加成。
+				单位进入丘陵地块不消耗额外移动力，工人可以铲除丘陵地块上的[ICON_RES_SHEEP]羊。
+				丘陵上的设施不需要维护费，其他地形上的设施维护费减半。
+				平民单位可以进入山脉地块。移民在山脉地块不会额外损耗，且可以建立城市。
+				山脉城市获得额外的[ICON_RESEARCH]科研和[ICON_FOOD]食物产出，随时代加成。
 			</Text>
 		</Replace>
 
@@ -7936,7 +7940,7 @@
 			<Text>正统教会</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_ORTHODOX_CHURCH">
-			<Text>圣城压力+200%，圣城诞生大先知时，你的每座信仰本宗教的城市都会为你提供一次性[ICON_CULTURE]文化产出</Text>
+			<Text>圣城压力+200%，圣城诞生大先知时，每座信仰本宗教的城市都会为你提供一次性[ICON_CULTURE]文化产出</Text>
 		</Row>
 		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_UNITY">
 			<Text>宗教以双倍速度传播到友好的城邦，完成信仰同宗教城邦的任务获得的[ICON_INFLUENCE]影响力+50%</Text>
@@ -14786,6 +14790,13 @@
 
 		<Row Tag="TXT_KEY_EUPANEL_BONUS_CITY_STATE_FRENDSHIP">
 			<Text>同盟城邦加成</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_IMPROVEMENT_INCA_CITY">
+			<Text>山脉城市</Text>
+		</Row>
+		<Row Tag="TXT_KEY_IMPROVEMENT_POLYNESIA_CITY">
+			<Text>海上城市</Text>
 		</Row>
 
 	</Language_zh_CN>

@@ -1278,11 +1278,11 @@ function NewAttackEffect()
 			end
 			defFinalUnitDamage = defFinalUnitDamage + defFinalUnitDamageChange;
 			defUnit:ChangeDamage(defFinalUnitDamageChange);
-			if attUnit:CanMoveThrough(batPlot) and batPlot ~= attPlot then
+			--[[if attUnit:CanMoveThrough(batPlot) and batPlot ~= attPlot then
 				-- if the target plot has no unit,your unit advances into the target plot!
 				attUnit:SetMoves(attUnit:MovesLeft() + GameDefines["MOVE_DENOMINATOR"]);
 				attUnit:PushMission(MissionTypes.MISSION_MOVE_TO, plotX, plotY);
-			end
+			end]]
 		end
 
 
