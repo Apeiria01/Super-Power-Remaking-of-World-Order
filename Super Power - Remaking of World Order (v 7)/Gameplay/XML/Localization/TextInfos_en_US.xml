@@ -16818,5 +16818,16 @@
 		<Row Tag="TXT_KEY_IMPROVEMENT_POLYNESIA_CITY">
 			<Text>Coastal City</Text>
 		</Row>
+
+		<Replace Tag="TXT_KEY_BUILDING_ZULU_IZIKO">
+			<Text>[ICON_GREAT_WRITER][ICON_WAR] Ithaca</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_ZULU_IZIKO_HELP">
+			<Text>
+			[ICON_BULLET]Alternative to the amphitheater, cheaper to build.
+			[NEWLINE][ICON_BULLET] +15% training speed of [ICON_WAR]military units in this city.
+			[NEWLINE][ICON_BULLET] When a military unit is upgraded, each Ithaca gets a one-time [ICON_CULTURE]culture boost, which varies with the era.
+			</Text>
+		</Replace>
 	</Language_en_US>
 </GameData>

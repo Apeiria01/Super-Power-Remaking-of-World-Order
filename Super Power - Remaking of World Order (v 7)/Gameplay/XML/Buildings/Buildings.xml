@@ -1570,6 +1570,29 @@
 			<PortraitIndex>0</PortraitIndex>
 		</Row>
 		<Row>
+			<Type>BUILDING_ZULU_IZIKO</Type>
+			<BuildingClass>BUILDINGCLASS_AMPHITHEATER</BuildingClass>
+			<FreeStartEra>ERA_INDUSTRIAL</FreeStartEra>
+			<Cost>40</Cost>
+			<GoldMaintenance>2</GoldMaintenance>
+			<SpecialistType>SPECIALIST_WRITER</SpecialistType>
+			<SpecialistCount>2</SpecialistCount>
+			<PrereqTech>TECH_WRITING</PrereqTech>
+			<Description>TXT_KEY_BUILDING_ZULU_IZIKO</Description>
+			<Help>TXT_KEY_BUILDING_ZULU_IZIKO_HELP</Help>
+			<Civilopedia>TXT_KEY_BUILDING_ZULU_IZIKO_HELP</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+			<ArtDefineTag>COLESSEUM</ArtDefineTag>
+			<GreatWorkSlotType>GREAT_WORK_SLOT_LITERATURE</GreatWorkSlotType>
+			<GreatWorkCount>1</GreatWorkCount>
+			<ConquestProb>100</ConquestProb>
+			<MinAreaSize>-1</MinAreaSize>
+			<HurryCostModifier>25</HurryCostModifier>
+			<IconAtlas>BUILDING_ZULU_IZIKO_ATLAS</IconAtlas>
+			<PortraitIndex>0</PortraitIndex>
+			<MilitaryProductionModifier>15</MilitaryProductionModifier>
+		</Row>
+		<Row>
 			<Type>BUILDING_ART_GALLERY</Type>
 			<BuildingClass>BUILDINGCLASS_ART_GALLERY</BuildingClass>
 			<Cost>80</Cost>

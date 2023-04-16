@@ -99,6 +99,11 @@
 			<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
 			<BuildingType>BUILDING_IKANDA</BuildingType>
 		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_ZULU</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_AMPHITHEATER</BuildingClassType>
+			<BuildingType>BUILDING_ZULU_IZIKO</BuildingType>
+		</Row>
 		
 		
 		<!--<Row>

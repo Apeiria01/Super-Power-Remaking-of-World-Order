@@ -14595,5 +14595,16 @@
 		<Row Tag="TXT_KEY_IMPROVEMENT_POLYNESIA_CITY">
 			<Text>海上城市</Text>
 		</Row>
+
+		<Replace Tag="TXT_KEY_BUILDING_ZULU_IZIKO">
+			<Text>[ICON_GREAT_WRITER][ICON_WAR]伊扎卡</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_ZULU_IZIKO_HELP">
+			<Text>
+				[ICON_BULLET]替代露天劇場，造價更低。
+				[NEWLINE][ICON_BULLET]本城[ICON_WAR]軍事單位訓練速度+15%。
+				[NEWLINE][ICON_BULLET]軍事單位升級時，每個伊扎卡獲得一次性[ICON_CULTURE]文化產出，隨時代變化。
+			</Text>
+		</Replace>
 	</Language_zh_Hant_HK>
 </GameData>

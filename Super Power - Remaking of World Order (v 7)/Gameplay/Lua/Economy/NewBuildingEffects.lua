@@ -774,7 +774,32 @@ function ASHUR_TEMPLEGetFoodAndFaith(iPlayer, iUnit, iUnitType, iX, iY, bDelay, 
 	end
 end
 GameEvents.UnitPrekill.Add(ASHUR_TEMPLEGetFoodAndFaith)
+if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_ZULU) then
+	GameEvents.UnitPromoted.Add(function(iPlayer, iUnit, iPromotionType)
+		local pPlayer = Players[iPlayer];
+		if pPlayer == nil then
+			return;
+		end
 
+		if pPlayer:CountNumBuildings(GameInfoTypes["BUILDING_ZULU_IZIKO"]) == 0 then
+			return;
+		end
+
+		local iBonus = 1 + 2 * pPlayer:GetCurrentEra();
+		for city in pPlayer:Cities() do
+			if city:IsHasBuilding(GameInfoTypes["BUILDING_ZULU_IZIKO"]) then
+				city:ChangeJONSCultureStored(iBonus);
+				pPlayer:ChangeJONSCulture(iBonus);
+
+				if pPlayer:IsHuman() and pPlayer:IsTurnActive() then
+					local hex = ToHexFromGrid(Vector2(city:GetX(), city:GetY()));
+					Events.AddPopupTextEvent(HexToWorld(hex),
+						Locale.ConvertTextKey("[COLOR_MAGENTA]+{1_Num}[ICON_CULTURE][ENDCOLOR]", iBonus));
+				end
+			end
+		end
+	end)
+end
 print("New Building Effects Check Pass!")
 
 

@@ -214,11 +214,6 @@
 		</Row>
 		<Row>
 			<CivilizationType>CIVILIZATION_ZULU</CivilizationType>
-			<UnitClassType>UNITCLASS_MAIN_BATTLE_TANK</UnitClassType>
-			<UnitType>UNIT_ZULU_OLIFANT</UnitType>
-		</Row>
-		<Row>
-			<CivilizationType>CIVILIZATION_ZULU</CivilizationType>
 			<UnitClassType>UNITCLASS_GREAT_WAR_INFANTRY</UnitClassType>
 			<UnitType>UNIT_ZULU_BOER_COMMANDO</UnitType>
 		</Row>
