@@ -7073,14 +7073,14 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_CULT_PERSONALITY_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]個人崇拜[ENDCOLOR][NEWLINE]非佔領人口的[ICON_HAPPINESS_4]不滿-15%，開啟一次[ICON_GOLDEN_AGE]黃金時代。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]個人崇拜[ENDCOLOR][NEWLINE]非佔領人口的[ICON_HAPPINESS_4]不滿-15%，開啟一次[ICON_GOLDEN_AGE]黃金時代。[NEWLINE]消除來自其他文明掌握科技所帶來的[ICON_TOURISM]旅遊業績加成。[ICON_HAPPINESS_4]公共輿論不滿減半。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_NEW_ORDER" >
 			<Text>威權政府</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_NEW_ORDER_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]威權政府[ENDCOLOR][NEWLINE]消除來自其他文明掌握科技所帶來的[ICON_TOURISM]旅遊業績加成。[ICON_HAPPINESS_4]公共輿論不滿減半。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]威權政府[ENDCOLOR][NEWLINE]每佔領一個原始首都，軍事單位攻擊傷害固定+4。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_NEW_ORDER_TEXT" >
 			<Text>威權主義是指處於民主政體和極權政體之間的一種非民主、非極權的政體形式。特點是嚴格遵從政府的權威，而政府常運用壓制性手段，用來維持和執行社會控制。[NEWLINE][NEWLINE]威權政府一般指依靠各種行政手段、法令、軍警以控制國民言論、結社、集會等自由之政府。一些人或組織尋求將他人置於自己的勢力範圍之下，並不顧及獲取共識，這個政府所控制的國家會是不自由、不民主的。[NEWLINE][NEWLINE]權威主義一詞也被用來形容這種人或組織的個性和管理風格。在權威主義的國家中，國家權威滲透到公民生活的各方面，其中很多方面根據其他的政治觀來看，都應屬於個人自由的範圍。權威主義的程度不同，甚至非常民主和自由主義的國家也會在某種程度上表現出權威主義的一面，例如在國家安全問題上。</Text>
