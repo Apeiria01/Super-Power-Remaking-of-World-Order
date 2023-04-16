@@ -10299,7 +10299,7 @@
 
 
 		<Replace Tag="TXT_KEY_TRAIT_BONUS_AGAINST_TECH">
-			<Text>+1 [ICON_CULTURE] Culture for all Specialists. All Units receive a [ICON_STRENGTH] Combat bonus (+25%)  when fighting units from a Civilization with more Cities than Ethiopia. </Text>
+			<Text>+2 [ICON_CULTURE] Culture for all Specialists. All Units receive a [ICON_STRENGTH] Combat bonus (+25%)  when fighting units from a Civilization with more Cities than Ethiopia. </Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_POPULATION_GROWTH">

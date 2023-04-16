@@ -898,37 +898,37 @@
 			<TraitType>TRAIT_BONUS_AGAINST_TECH</TraitType>
 			<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
 			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>1</Yield>
+			<Yield>2</Yield>
 		</Row>
 		<Row>
 			<TraitType>TRAIT_BONUS_AGAINST_TECH</TraitType>
 			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
 			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>1</Yield>
+			<Yield>2</Yield>
 		</Row>
 		<Row>
 			<TraitType>TRAIT_BONUS_AGAINST_TECH</TraitType>
 			<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
 			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>1</Yield>
+			<Yield>2</Yield>
 		</Row>
 		<Row>
 			<TraitType>TRAIT_BONUS_AGAINST_TECH</TraitType>
 			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
 			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>1</Yield>
+			<Yield>2</Yield>
 		</Row>
 		<Row>
 			<TraitType>TRAIT_BONUS_AGAINST_TECH</TraitType>
 			<SpecialistType>SPECIALIST_WRITER</SpecialistType>
 			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>1</Yield>
+			<Yield>2</Yield>
 		</Row>
 		<Row>
 			<TraitType>TRAIT_BONUS_AGAINST_TECH</TraitType>
 			<SpecialistType>SPECIALIST_MUSICIAN</SpecialistType>
 			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>1</Yield>
+			<Yield>2</Yield>
 		</Row>
 	</Trait_SpecialistYieldChanges>
 

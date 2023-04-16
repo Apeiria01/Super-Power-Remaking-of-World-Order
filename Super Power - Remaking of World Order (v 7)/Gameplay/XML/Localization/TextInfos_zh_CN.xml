@@ -5738,7 +5738,7 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_BONUS_AGAINST_TECH">
-			<Text>与拥有更多城市的文明的单位作战时获得25%战斗力加成。所有专家+1[ICON_CULTURE]文化产出。</Text>
+			<Text>与拥有更多城市的文明的单位作战时获得25%战斗力加成。所有专家+2[ICON_CULTURE]文化产出。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_POPULATION_GROWTH">

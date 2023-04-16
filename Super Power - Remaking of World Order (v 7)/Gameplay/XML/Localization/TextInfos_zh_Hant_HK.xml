@@ -5628,7 +5628,7 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_BONUS_AGAINST_TECH">
-			<Text>與擁有更多城市的文明的單位作戰時獲得25%戰鬥力加成。所有專家+1[ICON_CULTURE]文化值產出。</Text>
+			<Text>與擁有更多城市的文明的單位作戰時獲得25%戰鬥力加成。所有專家+2[ICON_CULTURE]文化值產出。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_POPULATION_GROWTH">
