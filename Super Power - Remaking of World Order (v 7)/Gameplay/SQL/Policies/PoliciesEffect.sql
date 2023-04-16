@@ -54,3 +54,78 @@ insert into Policy_MinorsTradeRouteYieldRate (PolicyType, YieldType, Rate) value
 insert into Policy_InternalTradeRouteDestYieldRate (PolicyType, YieldType, Rate) values
 ('POLICY_PROTECTIONISM', 'YIELD_SCIENCE', 5),
 ('POLICY_PROTECTIONISM', 'YIELD_CULTURE', 5);
+
+create table MillitaryBuildingClasses (
+    Type text primary key references BuildingClasses (Type)
+);
+insert into MillitaryBuildingClasses values
+('BUILDINGCLASS_BARRACKS'),
+('BUILDINGCLASS_ARMORY'),
+('BUILDINGCLASS_ARSENAL'),
+('BUILDINGCLASS_MILITARY_BASE'),
+('BUILDINGCLASS_WOOD_DOCK'),
+('BUILDINGCLASS_SHIPYARD'),
+('BUILDINGCLASS_JAPANESE_DOJO'),
+('BUILDINGCLASS_MILITARY_ACADEMY');
+
+create table StrategyResourceBuildingClasses (
+    Type text primary key references BuildingClasses (Type)
+);
+insert into StrategyResourceBuildingClasses values
+('BUILDINGCLASS_STABLE'),
+('BUILDINGCLASS_COAL_COMPANY'),
+('BUILDINGCLASS_COAL_TO_OIL'),
+('BUILDINGCLASS_STEEL_MILL'),
+('BUILDINGCLASS_IRON_PROVIDER'),
+('BUILDINGCLASS_OIL_REFINERY'),
+('BUILDINGCLASS_ALUMINUM_PROVIDER'),
+('BUILDINGCLASS_COAL_TO_URANIUM'),
+('BUILDINGCLASS_METAL_FACTORY');
+
+delete from Policy_BuildingClassYieldChanges where PolicyType = 'POLICY_FORTIFIED_BORDERS';
+insert into Policy_BuildingClassYieldChanges (PolicyType, BuildingClassType, YieldType, YieldChange)
+select 'POLICY_FORTIFIED_BORDERS', t1.Type, 'YIELD_GOLD', t2.GoldMaintenance / 2
+from MillitaryBuildingClasses as t1
+left join Buildings as t2
+on t1.Type = t2.BuildingClass
+left join BuildingClasses t3
+where t3.DefaultBuilding = t2.Type and t2.GoldMaintenance > 0
+union all
+select 'POLICY_FORTIFIED_BORDERS', t1.Type, 'YIELD_GOLD', t2.GoldMaintenance
+from StrategyResourceBuildingClasses as t1
+left join Buildings as t2
+on t1.Type = t2.BuildingClass
+left join BuildingClasses t3
+where t3.DefaultBuilding = t2.Type and t2.GoldMaintenance > 0;
+
+delete from Policy_BuildingClassHappiness where PolicyType = 'POLICY_FORTIFIED_BORDERS';
+insert into Policy_BuildingClassHappiness (PolicyType, BuildingClassType, Happiness)
+select 'POLICY_FORTIFIED_BORDERS', t1.Type, 1
+from MillitaryBuildingClasses as t1
+left join Buildings as t2
+on t1.Type = t2.BuildingClass
+left join BuildingClasses t3
+where t3.DefaultBuilding = t2.Type
+union all
+select 'POLICY_FORTIFIED_BORDERS', t1.Type, 1
+from StrategyResourceBuildingClasses as t1
+left join Buildings as t2
+on t1.Type = t2.BuildingClass
+left join BuildingClasses t3
+where t3.DefaultBuilding = t2.Type;
+
+delete from Policy_BuildingClassProductionModifiers where PolicyType = 'POLICY_FORTIFIED_BORDERS';
+insert into Policy_BuildingClassProductionModifiers (PolicyType, BuildingClassType, ProductionModifier)
+select 'POLICY_FORTIFIED_BORDERS', t1.Type, 100
+from MillitaryBuildingClasses as t1
+left join Buildings as t2
+on t1.Type = t2.BuildingClass
+left join BuildingClasses t3
+where t3.DefaultBuilding = t2.Type
+union all
+select 'POLICY_FORTIFIED_BORDERS', t1.Type, 100
+from StrategyResourceBuildingClasses as t1
+left join Buildings as t2
+on t1.Type = t2.BuildingClass
+left join BuildingClasses t3
+where t3.DefaultBuilding = t2.Type;

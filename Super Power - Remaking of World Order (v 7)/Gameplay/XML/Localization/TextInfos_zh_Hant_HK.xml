@@ -7048,8 +7048,11 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_FORTIFIED_BORDERS_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]邊界強化[ENDCOLOR][NEWLINE]每個軍營、軍械所、兵工廠、軍事基地、軍事學院、金屬鍛造廠、冶鐵坊、煉焦廠、回收中心、石油精煉廠、增殖反應堆、煤液化工廠、煤灰提取廠+1[ICON_HAPPINESS_1]本地幸福度。
-			[NEWLINE]這些建築的維護費-50%[ICON_GOLD]。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]邊界強化[ENDCOLOR][NEWLINE]每個軍營、軍械所、兵工廠、軍事基地、軍事學院、碼頭、船塢、軍事學院、道場、馬厩、金屬鍛造廠、冶鐵坊、煉焦廠、回收中心、石油精煉廠、增殖反應堆、煤液化工廠、煤灰提取廠+1[ICON_HAPPINESS_1]本地幸福度。
+				[NEWLINE]這些建築的維護費-50%[ICON_GOLD]。
+				[NEWLINE]建造這些建築時+100%[ICON_PRODUCTION]生產力。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_NATIONALISM_HELP">

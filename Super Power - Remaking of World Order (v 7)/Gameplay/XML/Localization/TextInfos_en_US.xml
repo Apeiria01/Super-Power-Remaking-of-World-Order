@@ -8128,8 +8128,11 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_FORTIFIED_BORDERS_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]Fortified Borders[ENDCOLOR][NEWLINE]+1 [ICON_HAPPINESS_1] Local Happiness from every Barracks, Arsenal, Military Base, Military Academy, Dojo, Metal Processing Plant, Steel Warehouse, Coal Company, Recycling Center, Oil Refinery, Uraninite Refinery, Coal Liquefaction System and Uranium in Coal Refining System.
-			[NEWLINE]-50% [ICON_GOLD]Maintenance of these Buildings.</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]Fortified Borders[ENDCOLOR][NEWLINE]+1 [ICON_HAPPINESS_1] Local Happiness from every Barracks, Arsenal, Military Base, Military Academy, Dojo, Stable, Wood Dock, Shipyard, Metal Processing Plant, Steel Warehouse, Coal Company, Recycling Center, Oil Refinery, Uraninite Refinery, Coal Liquefaction System and Uranium in Coal Refining System.
+				[NEWLINE]-50% [ICON_GOLD]Maintenance of these Buildings.
+				[NEWLINE]+100%[ICON_PRODUCTION] while building these buildings
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_NATIONALISM_HELP">

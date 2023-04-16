@@ -7162,8 +7162,9 @@
 
 		<Replace Tag="TXT_KEY_POLICY_FORTIFIED_BORDERS_HELP" >
 			<Text>
-				[COLOR_POSITIVE_TEXT]边界强化[ENDCOLOR][NEWLINE]每个军营、军械所、兵工厂、军事基地、军事学院、金属锻造厂、冶铁坊、炼焦厂、回收中心、石油精炼厂、增殖反应堆、煤液化工厂、煤灰提取厂+1[ICON_HAPPINESS_1]本地快乐。
+				[COLOR_POSITIVE_TEXT]边界强化[ENDCOLOR][NEWLINE]每个军营、军械所、兵工厂、军事基地、军事学院、码头、船坞、军事学院、道场、马厩、金属锻造厂、冶铁坊、炼焦厂、回收中心、石油精炼厂、增殖反应堆、煤液化工厂、煤灰提取厂+1[ICON_HAPPINESS_1]本地快乐。
 				[NEWLINE]这些建筑的维护费-50%[ICON_GOLD]。
+				[NEWLINE]建造这些建筑时+100%[ICON_PRODUCTION]产能。
 			</Text>
 		</Replace>
 
