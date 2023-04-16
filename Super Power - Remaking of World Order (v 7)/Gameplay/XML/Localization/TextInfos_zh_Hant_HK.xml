@@ -1579,7 +1579,7 @@
 		</Row>
 		<!-- Help tags -->
 		<Row Tag="TXT_KEY_WONDER_SAN_MARCO_HELP">
-			<Text>所有城市傑作[ICON_TOURISM]旅遊業績產出+50%，本城市[ICON_CULTURE]文化值產出+50%。[NEWLINE][NEWLINE]建成奇跡的城市附近出現兩位大藝術家。[NEWLINE]擁有4個美術傑作展位。[NEWLINE][NEWLINE]必須在威尼斯擁有博物館才能建造。</Text>
+			<Text>所有城市傑作[ICON_TOURISM]旅遊業績產出+50%，本城市[ICON_CULTURE]文化值產出+50%。[NEWLINE][NEWLINE]建成奇跡的城市附近出現兩位大藝術家。[NEWLINE]擁有4個美術傑作展位。[NEWLINE][NEWLINE]必須在威尼斯擁有博物館才能建造。+1城市工作範圍。</Text>
 		</Row>
 		<!-- Pedia tags -->
 		<Row Tag="TXT_KEY_WONDER_SAN_MARCO_PEDIA">
@@ -5593,7 +5593,7 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_SUPER_CITY_STATE">
-			<Text>不能建造移民和吞併已佔領城市，可在傀儡城市中以金幣購買項目，可建商路數量加倍，首都內奇跡和博物館[ICON_TOURISM]藝術品搭配的效果翻倍。研究光學科技後立即獲得一位威尼斯商人。</Text>
+			<Text>不能建造移民和吞併已佔領城市，可在傀儡城市中以金幣購買項目，可建商路數量加倍，首都內奇跡和博物館[ICON_TOURISM]藝術品搭配的效果翻倍。研究光學科技後立即獲得一位威尼斯商人。可向同盟城邦購買糧食，每回合僅限一次。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_SPICE">
@@ -14609,6 +14609,33 @@
 				[ICON_BULLET]替代露天劇場，造價更低。
 				[NEWLINE][ICON_BULLET]本城[ICON_WAR]軍事單位訓練速度+15%。
 				[NEWLINE][ICON_BULLET]軍事單位升級時，每個伊扎卡獲得一次性[ICON_CULTURE]文化產出，隨時代變化。
+			</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_POP_CSTATE_VENICE_BUY_FOOD">
+			<Text>購買食物([COLOR_GREEN]+{1_food}[ICON_FOOD][END_COLOR],[COLOR_NEGATIVE_TEXT]-{2_gold}[ICON_GOLD][END_COLOR])</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_POP_CSTATE_VENICE_BUY_FOOD_TT">
+			<Text>
+				你的首都當前的人口增長閾值是{1_threshold}，
+				可購買相當於閾值{2_percent}%的[ICON_FOOD]糧食(={3_food})。
+				每單位糧食的價格為{4_price}，總價為{5_total}[ICON_GOLD]。
+				每回合僅限一次。
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_POP_CSTATE_VENICE_BUY_FOOD_NOTIFY_HEADING">
+			<Text>
+				購買食物
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_POP_CSTATE_VENICE_BUY_FOOD_NOTIFY_TEXT">
+			<Text>
+				你的首都獲得{1_food}[ICON_FOOD]食物。
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_POP_CSTATE_VENICE_BUY_FOOD_DISABLE_TT">
+			<Text>
+				本回合已經購買過食物或金錢不足。
 			</Text>
 		</Replace>
 	</Language_zh_Hant_HK>

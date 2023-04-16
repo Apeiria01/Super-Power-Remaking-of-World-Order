@@ -485,6 +485,7 @@
 			<NeverCapture>true</NeverCapture>
 			<IconAtlas>SPWondersUB_ATLAS</IconAtlas>
 			<PortraitIndex>1</PortraitIndex>
+			<CityWorkingChange>1</CityWorkingChange>
 		</Row>
 
 		<Row>

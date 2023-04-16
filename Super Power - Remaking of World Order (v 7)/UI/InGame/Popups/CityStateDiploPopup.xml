@@ -141,6 +141,16 @@
               </AlphaAnim>
             </ShowOnMouseOver>
           </Button>
+          <!-- Venice buys food BUTTON -->
+          <Button Hidden="0" Size="500,32" Anchor="C,C" Offset="0,0" ID="VeniceBuyFoodButton" ToolTip="TXT_KEY_POP_CSTATE_VENICE_BUY_FOOD_TT">
+            <Label Anchor="C,C" Offset="0,0" ID="VeniceBuyFoodLabel" String="TXT_KEY_POP_CSTATE_VENICE_BUY_FOOD"/>
+            <Image Anchor="C,B" Offset="0,0" Texture="bar500x2.dds" Size="500.1"/>
+            <ShowOnMouseOver>
+              <AlphaAnim ID="VeniceBuyFoodAnim" Anchor="C,C" Offset="0,0" Size="500,35" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="2" AlphaEnd="1">
+                <Grid ID="VeniceBuyFoodButtonHL" Size="500,35" Offset="0,0" Padding="0,0" Style="Grid9FrameTurnsHL"/>
+              </AlphaAnim>
+            </ShowOnMouseOver>
+          </Button>
           <!-- NO UNIT SPAWNING BUTTON -->
           <Button Hidden="0" Size="500,32" Anchor="C,C" Offset="0,0" ID="NoUnitSpawningButton" ToolTip="TXT_KEY_POP_CSTATE_STOP_UNITS_TT">
             <Label Anchor="C,C" Offset="0,0" ID="NoUnitSpawningLabel" String="TXT_KEY_POP_CSTATE_STOP_UNIT_SPAWNING"/>

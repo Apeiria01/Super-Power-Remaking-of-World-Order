@@ -3977,7 +3977,9 @@
 				+50% [ICON_TOURISM] Tourism output from Great Works in all cities.
 				[NEWLINE][NEWLINE]+50% [ICON_CULTURE] Culture output in the city.
 				[NEWLINE][NEWLINE]Two Great Artist appear in the city where the building is built.
-				[NEWLINE][NEWLINE]Must have built a Museum in Venice.</Text>
+				[NEWLINE][NEWLINE]Must have built a Museum in Venice.
+				[NEWLINE][NEWLINE]+1 city work range.
+			</Text>
 		</Row>
 
 		<!-- Pedia tags -->
@@ -10260,7 +10262,7 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_SUPER_CITY_STATE">
-			<Text>Cannot gain settlers nor annex cities. May purchase in puppet cities and puppet cities offers full [ICON_RESEARCH] Science, [ICON_CULTURE] Culture output and [ICON_FOOD] Food Growth. Double the normal number of Trade Routes and [ICON_TOURISM] Theming Bonus in [ICON_CAPITAL] Captal. A Merchant of Venice appears after researching Optics.</Text>
+			<Text>Cannot gain settlers nor annex cities. May purchase in puppet cities and puppet cities offers full [ICON_RESEARCH] Science, [ICON_CULTURE] Culture output and [ICON_FOOD] Food Growth. Double the normal number of Trade Routes and [ICON_TOURISM] Theming Bonus in [ICON_CAPITAL] Captal. A Merchant of Venice appears after researching Optics. Food can be purchased from allied city-states, only once per turn.</Text>
 		</Replace>
 
 
@@ -16832,6 +16834,33 @@
 			[ICON_BULLET]Alternative to the amphitheater, cheaper to build.
 			[NEWLINE][ICON_BULLET] +15% training speed of [ICON_WAR]military units in this city.
 			[NEWLINE][ICON_BULLET] When a military unit is upgraded, each Ithaca gets a one-time [ICON_CULTURE]culture boost, which varies with the era.
+			</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_POP_CSTATE_VENICE_BUY_FOOD">
+			<Text>Buy food ([COLOR_GREEN]+{1_food}[ICON_FOOD][END_COLOR],[COLOR_NEGATIVE_TEXT]-{2_gold}[ICON_GOLD][END_COLOR])</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_POP_CSTATE_VENICE_BUY_FOOD_TT">
+			<Text>
+			Your capital's current population growth threshold is {1_threshold},
+			[ICON_FOOD] food (={3_food}) equivalent to {2_percent}% of the threshold can be purchased.
+			The price per unit of food is {4_price} and the total price is {5_total}[ICON_GOLD].
+			Only once per round.
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_POP_CSTATE_VENICE_BUY_FOOD_NOTIFY_HEADING">
+			<Text>
+			buy food
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_POP_CSTATE_VENICE_BUY_FOOD_NOTIFY_TEXT">
+			<Text>
+			Your capital gains {1_food}[ICON_FOOD] food.
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_POP_CSTATE_VENICE_BUY_FOOD_DISABLE_TT">
+			<Text>
+			Already bought food or not enough money this turn.
 			</Text>
 		</Replace>
 	</Language_en_US>

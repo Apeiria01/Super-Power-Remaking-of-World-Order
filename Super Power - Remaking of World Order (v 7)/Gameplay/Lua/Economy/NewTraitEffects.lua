@@ -398,4 +398,17 @@ if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_RUSSIA) then
 	end)
 end
 
+if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_VENICE) then
+	GameEvents.PlayerDoTurn.Add(function(iPlayer) -- Venice AI food bonus.
+		local pPlayer = Players[iPlayer];
+		if pPlayer == nil or pPlayer:IsHuman() or not pPlayer:IsAlive() or not pPlayer:IsMajorCiv() or pPlayer:GetCivilizationType() ~= GameInfoTypes.CIVILIZATION_VENICE then
+			return;
+		end
+
+		local pCapital = pPlayer:GetCapitalCity();
+		local iBonus = Game.GetHandicapType() * 4 * pCapital:GrowthThreshold() / 100;
+		pCapital:ChangeFood(iBonus);
+	end)
+end
+
   print ("New Trait Effect Check Pass!")  
