@@ -12147,7 +12147,7 @@
 		<Plurality>2</Plurality>
 	</Row>
 	<Row Tag="TXT_KEY_UNIT_FRANCE_BATTERY_HELP">
-		<Text>Fast and Powerful Sige Unit. Only the France may build it. It has indirect fire and doesn't need to set up before attacking.</Text>
+		<Text>Fast and Powerful Sige Unit. Only the France may build it. It has indirect fire and doesn't need to set up before attacking. It has the promotion of Sunder I-II</Text>
 	</Row>
 	<Row Tag="TXT_KEY_UNIT_FRANCE_BATTERY_HEADING">
 		<Text>Grand Battery</Text>

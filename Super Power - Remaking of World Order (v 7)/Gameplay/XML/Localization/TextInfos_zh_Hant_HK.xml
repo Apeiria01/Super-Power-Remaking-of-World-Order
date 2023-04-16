@@ -10241,7 +10241,7 @@
 			<Plurality>2</Plurality>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_FRANCE_BATTERY_HELP">
-			<Text>快速且強大的攻城單位。法國特色單位，替代加農炮。具有間接火力，並且在攻擊前不需要進行遠程攻擊準備。</Text>
+			<Text>快速且強大的攻城單位。法國特色單位，替代加農炮。具有間接火力，並且在攻擊前不需要進行遠程攻擊準備。自帶破陣1-2級晉升。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_FRANCE_BATTERY_HEADING">
 			<Text>大炮兵連</Text>
