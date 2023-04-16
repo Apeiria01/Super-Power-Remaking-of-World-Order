@@ -7176,7 +7176,7 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_LIGHTNING_WARFARE_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]闪电战[ENDCOLOR][NEWLINE]大军事家+2[ICON_MOVES]移动力。所有非民兵陆军单位+1[ICON_MOVES]移动力。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]闪电战[ENDCOLOR][NEWLINE]大军事家+2[ICON_MOVES]移动力。所有非民兵陆军单位+1[ICON_MOVES]移动力，允许使用敌军境内道路。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_TOTAL_WAR_HELP" >
@@ -13312,7 +13312,7 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_PROMOTION_LIGHTNING_WARFARE_HELP">
-			<Text>+1[ICON_MOVES]移动力，无视敌方控制区域（ZOC）。</Text>
+			<Text>+1[ICON_MOVES]移动力，无视敌方控制区域（ZOC），允许使用敌军境内道路。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_PROMOTION_FAST_GENERAL_HELP">
