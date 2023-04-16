@@ -11801,7 +11801,7 @@
 			<Text>
 				Mamluk is the Egyptian unique unit, replacing the Knight. 
 				[NEWLINE][ICON_BULLET]Prohibits Other Religions Spread to the City Garrisoned.
-				[NEWLINE][ICON_BULLET]Gain the Faith [ICON_PEACE] as the amount of damage dealt when attacking.
+				[NEWLINE][ICON_BULLET]Gain the Faith [ICON_PEACE] as the amount of damage dealt when attacking enemies.
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIVILOPEDIA_UNITS_MEDIEVAL_MAMLUK_TEXT">
