@@ -7065,7 +7065,7 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_TOTAL_WAR_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]全面戰爭[ENDCOLOR][NEWLINE]所有城市+5 [ICON_RES_MANPOWER]人力。城市升級到大城市前，因城市規模造成的[ICON_RES_CONSUMER]商品和[ICON_RES_ELECTRICITY]電力消耗減少一個等級。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]全面戰爭[ENDCOLOR][NEWLINE]所有城市+5 [ICON_RES_MANPOWER]人力。城市升級到大城市前，因城市規模造成的[ICON_RES_CONSUMER]商品和[ICON_RES_ELECTRICITY]電力消耗減少一個等級。 軍事單位訓練速度+25%。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_POLICE_STATE_HELP" >

@@ -7180,7 +7180,7 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_TOTAL_WAR_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]全面战争[ENDCOLOR][NEWLINE]所有城市+5[ICON_RES_MANPOWER]人力。城市升级到大城市前，因城市规模造成的[ICON_RES_CONSUMER]商品和[ICON_RES_ELECTRICITY]电力消耗减少一个等级。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]全面战争[ENDCOLOR][NEWLINE]所有城市+5[ICON_RES_MANPOWER]人力。城市升级到大城市前，因城市规模造成的[ICON_RES_CONSUMER]商品和[ICON_RES_ELECTRICITY]电力消耗减少一个等级，军事单位训练速度+25%。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_POLICE_STATE_HELP" >

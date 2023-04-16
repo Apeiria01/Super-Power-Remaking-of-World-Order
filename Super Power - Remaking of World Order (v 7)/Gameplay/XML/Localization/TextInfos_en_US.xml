@@ -8153,7 +8153,7 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_TOTAL_WAR_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]Total War[ENDCOLOR][NEWLINE]+5 [ICON_RES_MANPOWER] Manpower for each city. -1 Level [ICON_RES_CONSUMER] Consumer Goods and [ICON_RES_ELECTRICITY] Electricity cost of City Size before the city growing up to Large.</Text>
+			<Text>[COLOR_POSITIVE_TEXT]Total War[ENDCOLOR][NEWLINE]+5 [ICON_RES_MANPOWER] Manpower for each city. -1 Level [ICON_RES_CONSUMER] Consumer Goods and [ICON_RES_ELECTRICITY] Electricity cost of City Size before the city growing up to Large. Military unit training speed +25%.</Text>
 		</Replace>
 
 
