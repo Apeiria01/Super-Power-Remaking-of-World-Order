@@ -7322,7 +7322,7 @@
 				[NEWLINE][ICON_BULLET]One Worker appears near the [ICON_CAPITAL] Capital.
 				[NEWLINE][ICON_BULLET]When you found a [COLOR_POSITIVE_TEXT]New City[ENDCOLOR], one Worker will appear outside the city.
 				[NEWLINE][ICON_BULLET]+2 [ICON_RES_MANPOWER] Manpower per city.
-				[NEWLINE][ICON_BULLET]Gain 25 point free [ICON_PRODUCTION] Production for new founded city.
+				[NEWLINE][ICON_BULLET]Gain +25 one-time [ICON_PRODUCTION] production for all cities.
 				</Text>
 		</Replace>
 		
@@ -16489,7 +16489,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_MESSAGE_POLICY_CITIZENSHIP_ALERT">
 			<Text>
-				Because you adopted the policy CitizenShip, your new city [COLOR_POSITIVE_TEXT]{1_name}[ENDCOLOR] gain {2_name} point [ICON_PRODUCTION] Production.
+				Because you adopted the policy CitizenShip, your city [COLOR_POSITIVE_TEXT]{1_name}[ENDCOLOR] gain {2_name} point [ICON_PRODUCTION] Production.
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_MESSAGE_POLICY_CULTURAL_DIPLOMACY_ALERT">

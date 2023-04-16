@@ -6258,7 +6258,7 @@
 				[COLOR_POSITIVE_TEXT]公民製度[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]每座新建立的城市免費獲得一名工人，[ICON_CAPITAL]首都立刻獲得一名工人。
 				[NEWLINE][ICON_BULLET]每座城市+2[ICON_RES_MANPOWER]人力。
-				[NEWLINE][ICON_BULLET]新建城市獲得一次性的25點[ICON_PRODUCTION]產能（標準速度下）。
+				[NEWLINE][ICON_BULLET]已有城市和新建城市獲得一次性的25點[ICON_PRODUCTION]產能（標準速度下）。
 			</Text>
 		</Replace>
 
@@ -14261,7 +14261,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_MESSAGE_POLICY_CITIZENSHIP_ALERT">
 			<Text>
-				由於你采用了政策公民製度，你的新城市[COLOR_POSITIVE_TEXT]{1_name}[ENDCOLOR]獲得了{2_name}點[ICON_PRODUCTION]產能。
+				由於你采用了政策公民製度，你的城市[COLOR_POSITIVE_TEXT]{1_name}[ENDCOLOR]獲得了{2_name}點[ICON_PRODUCTION]產能。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_MESSAGE_POLICY_CULTURAL_DIPLOMACY_ALERT">
