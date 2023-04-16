@@ -7057,7 +7057,7 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_MILITARISM_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]軍國主義[ENDCOLOR][NEWLINE]佔領敵方城市後[COLOR_POSITIVE_TEXT]抵抗時間[ENDCOLOR]減半。如果該城市[ICON_CITIZEN]人口少於6則沒有抵抗。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]軍國主義[ENDCOLOR][NEWLINE]佔領敵方城市後[COLOR_POSITIVE_TEXT]抵抗時間[ENDCOLOR]減半。如果該城市[ICON_CITIZEN]人口少於6或敵方已失去原始首都則沒有抵抗。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_LIGHTNING_WARFARE_HELP" >

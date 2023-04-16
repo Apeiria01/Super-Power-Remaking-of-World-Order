@@ -8142,7 +8142,7 @@
 			<Text>War Propaganda</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_MILITARISM_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]War Propaganda[ENDCOLOR][NEWLINE]-50% [ICON_RESISTANCE] Resistance Time for newly captured cities. The city will NOT resist if its [ICON_CITIZEN] Population is less than 6 after capturing.</Text>
+			<Text>[COLOR_POSITIVE_TEXT]War Propaganda[ENDCOLOR][NEWLINE]-50% [ICON_RESISTANCE] Resistance Time for newly captured cities. The city will NOT resist if its [ICON_CITIZEN] Population is less than 6 after capturing or the old owner has loss its original capital city.</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_MILITARISM_TEXT" >
 			<Text>Propaganda is a powerful weapon in war; it is used to dehumanize and create hatred toward a supposed enemy, either internal or external, by creating a false image in the mind. This can be done by using derogatory or racist terms, avoiding some words or by making allegations of enemy atrocities. Most propaganda wars require the home population to feel the enemy has inflicted an injustice, which may be fictitious or may be based on facts. The home population must also decide that the cause of their nation is just.</Text>
