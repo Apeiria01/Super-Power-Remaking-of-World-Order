@@ -2514,7 +2514,7 @@
 			<BuildingClassType>BUILDINGCLASS_MERCHANTNAVY_TRADEROUTE</BuildingClassType>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_NEW_ORDER</PolicyType>
+			<PolicyType>POLICY_CULT_PERSONALITY</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_AUTOCRACY_FIREWALL</BuildingClassType>
 		</Row>
 		<Row>

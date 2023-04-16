@@ -155,13 +155,13 @@ function NewCitySystem(playerID)
                     GameInfoTypes["BUILDING_IRON_CURTAIN_UNHAP"],
                     iUnhappinessFromPublicOpinion);
             end
-            -- Policy - Authoritarianism
+            -- POLICY_CULT_PERSONALITY
             iUnhappinessFromPublicOpinion = math.floor(
                                                 iUnhappinessFromPublicOpinion /
                                                     2) +
                                                 pCapital:GetNumBuilding(
                                                     GameInfoTypes["BUILDING_IRON_CURTAIN_HAPPI"]);
-            if player:HasPolicy(GameInfoTypes["POLICY_NEW_ORDER"]) then
+            if player:HasPolicy(GameInfoTypes["POLICY_CULT_PERSONALITY"]) then
                 pCapital:SetNumRealBuilding(
                     GameInfoTypes["BUILDING_IRON_CURTAIN_HAPPI"],
                     iUnhappinessFromPublicOpinion);

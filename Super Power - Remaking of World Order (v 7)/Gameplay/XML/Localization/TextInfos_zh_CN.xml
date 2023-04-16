@@ -7188,14 +7188,14 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_CULT_PERSONALITY_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]个人崇拜[ENDCOLOR][NEWLINE]非占领人口的[ICON_HAPPINESS_4]不满-15%，开启一次[ICON_GOLDEN_AGE]黄金时代。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]个人崇拜[ENDCOLOR][NEWLINE]非占领人口的[ICON_HAPPINESS_4]不满-15%，开启一次[ICON_GOLDEN_AGE]黄金时代。[NEWLINE]消除来自其他文明掌握科技所带来的[ICON_TOURISM]魅力加成。[NEWLINE][ICON_HAPPINESS_4]公共舆论不满减半。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_NEW_ORDER" >
 			<Text>威权政府</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_NEW_ORDER_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]威权政府[ENDCOLOR][NEWLINE]消除来自其他文明掌握科技所带来的[ICON_TOURISM]魅力加成。[ICON_HAPPINESS_4]公共舆论不满减半。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]威权政府[ENDCOLOR][NEWLINE]每占领一个原始首都，军事单位攻击伤害固定+4。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_NEW_ORDER_TEXT" >
 			<Text>威权主义是指处于民主政体和极权政体之间的一种非民主、非极权的政体形式。特点是严格遵从政府的权威，而政府常运用压制性手段，用来维持和执行社会控制。[NEWLINE][NEWLINE]威权政府一般指依靠各种行政手段、法令、军警以控制国民言论、结社、集会等自由之政府。一些人或组织寻求将他人置于自己的势力范围之下，并不顾及获取共识，这个政府所控制的国家会是不自由、不民主的。[NEWLINE][NEWLINE]权威主义一词也被用来形容这种人或组织的个性和管理风格。在权威主义的国家中，国家权威渗透到公民生活的各方面，其中很多方面根据其他的政治观来看，都应属于个人自由的范围。权威主义的程度不同，甚至非常民主和自由主义的国家也会在某种程度上表现出权威主义的一面，例如在国家安全问题上。</Text>

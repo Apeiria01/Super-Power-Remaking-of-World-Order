@@ -749,7 +749,6 @@ function ASHUR_TEMPLEGetFoodAndFaith(iPlayer, iUnit, iUnitType, iX, iY, bDelay, 
 	if not pUnit:IsCombatUnit() then return end
 
 	if ByPlayer == nil or ByPlayer:CountNumBuildings(GameInfoTypes["BUILDING_ASSUR_TEMPLE"]) == 0 then
-		print("@1")
 		return
 	end
 
