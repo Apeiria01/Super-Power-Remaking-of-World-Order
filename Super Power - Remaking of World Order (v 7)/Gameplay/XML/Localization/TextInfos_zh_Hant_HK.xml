@@ -9931,7 +9931,7 @@
 		<Row Tag="TXT_KEY_UNIT_EGYPTAIN_MAMLUK_HELP">
 			<Text>馬穆魯克是埃及文明的特色單位，替代騎士。
 				[NEWLINE][ICON_BULLET]位於城市時可禁止其他文明進行傳教。
-				[NEWLINE][ICON_BULLET]攻擊時獲得與造成傷害數值相同的[ICON_PEACE]信仰。
+				[NEWLINE][ICON_BULLET]攻擊敵軍時獲得與造成傷害數值相同的[ICON_PEACE]信仰。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIVILOPEDIA_UNITS_MEDIEVAL_MAMLUK_TEXT">

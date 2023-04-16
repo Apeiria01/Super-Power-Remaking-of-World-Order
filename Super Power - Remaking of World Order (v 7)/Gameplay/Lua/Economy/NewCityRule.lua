@@ -1646,7 +1646,6 @@ function chooseCoastalCityDirection(plotX, plotY)
     for i = 0, 11 do
         local index = i%6
         local adjPlot = Map.PlotDirection(plotX, plotY, index)
-        print(adjPlot:GetX(),adjPlot:GetY(),adjPlot:IsWater())
         if adjPlot ~= nil then
             if adjPlot:IsWater() then 
                 if ContinuousWaterPlot >= maxContinuousWaterPlot then
@@ -1671,17 +1670,15 @@ function SPNCityFoundedInSpecialTerrain(playerID, plotX, plotY)
     local cityPlot = Map.GetPlot(plotX,plotY)
 
     --Inca city
-	if (player:GetCivilizationType() == incaID) 
-    and cityPlot:IsMountain()
+	if cityPlot:IsMountain()
     then
-        print("Inca Mountain city founded!")
+        print("Inca Mountain city! Set Improvement")
 		cityPlot:SetImprovementType(improvementMachuID)
     --Poly city
-    elseif (player:GetCivilizationType() == polyID) 
-    and cityPlot:IsWater()
+    elseif cityPlot:IsWater()
     then
         local PolyCityDirection = chooseCoastalCityDirection(plotX, plotY)
-        print("Poly Coastal City founded!",PolyCityDirection)
+        print("Poly Coastal City! Set Improvement",PolyCityDirection)
         cityPlot:SetImprovementType(improvementPolyCity[PolyCityDirection])
     end
 end
@@ -1696,9 +1693,14 @@ function SPNDestroySpecialTerrainCity(hexPos,iPlayer,iCity)
         pPlot:SetImprovementType(-1)
     end
 end
+function SPNConquestedSpecialTerrianCity(oldOwnerID, isCapital, cityX, cityY, newOwnerID, numPop, isConquest)
+    SPNCityFoundedInSpecialTerrain(newOwnerID,cityX,cityY)
+end 
+
 if SPNIsCivilisationActive(incaID) or SPNIsCivilisationActive(polyID)then
 	GameEvents.PlayerCityFounded.Add(SPNCityFoundedInSpecialTerrain)
     Events.SerialEventCityDestroyed.Add(SPNDestroySpecialTerrainCity)
+    GameEvents.CityCaptureComplete.Add(SPNConquestedSpecialTerrianCity)
 end
 
 print("New City Rules Check Pass!")

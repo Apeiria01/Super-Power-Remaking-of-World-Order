@@ -10063,7 +10063,7 @@
 		<Row Tag="TXT_KEY_UNIT_EGYPTAIN_MAMLUK_HELP">
 			<Text>马穆鲁克是埃及文明的特色单位，替代骑士。
 				[NEWLINE][ICON_BULLET]位于城市时可禁止其他文明进行传教。
-				[NEWLINE][ICON_BULLET]攻击时获得与造成伤害数值相同的[ICON_PEACE]信仰。
+				[NEWLINE][ICON_BULLET]攻击敌军时获得与造成伤害数值相同的[ICON_PEACE]信仰。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIVILOPEDIA_UNITS_MEDIEVAL_MAMLUK_TEXT">
