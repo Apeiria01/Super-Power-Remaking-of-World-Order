@@ -5608,7 +5608,12 @@
 			<Text>俄罗斯精神</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_TRAIT_STRATEGIC_RICHES">
-			<Text>每座城市+4[ICON_GOLD]金钱产出+2[ICON_RES_CONSUMER]消费品+2[ICON_HAPPINESS_1]本地快乐。所有军事单位在境内作战时+15%[ICON_STRENGTH]战斗力。</Text>
+			<Text>
+				[ICON_BULLET]每座城市+4[ICON_GOLD]金钱产出+2[ICON_RES_CONSUMER]消费品+2[ICON_HAPPINESS_1]本地快乐+1工作范围。
+				[NEWLINE][ICON_BULLET]所有军事单位在境内作战时+15%[ICON_STRENGTH]战斗力。
+				[NEWLINE][ICON_BULLET]城市自然拓展边界时，获得一次性[ICON_RESEARCH]科研产出，随时代加成。
+				[NEWLINE][ICON_BULLET]研发工业化后即可选择意识形态。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_OCEAN_MOVEMENT">

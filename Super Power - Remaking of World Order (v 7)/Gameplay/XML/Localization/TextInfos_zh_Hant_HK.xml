@@ -5498,7 +5498,12 @@
 			<Text>俄羅斯精神</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_TRAIT_STRATEGIC_RICHES">
-			<Text>每座城市+4[ICON_GOLD]金幣產出+2[ICON_RES_CONSUMER]消費品+2[ICON_HAPPINESS_1]本地快乐。所有軍事單位在境內作戰時+15%[ICON_STRENGTH]戰鬥力。</Text>
+			<Text>
+				[ICON_BULLET]每座城市+4[ICON_GOLD]金錢產出+2[ICON_RES_CONSUMER]消費品+2[ICON_HAPPINESS_1]本地快樂+1工作範圍。
+				[NEWLINE][ICON_BULLET]所有軍事單位在境內作戰時+15%[ICON_STRENGTH]戰鬥力。
+				[NEWLINE][ICON_BULLET]城市自然拓展邊界時，獲得一次性[ICON_RESEARCH]科研產出，隨時代加成。
+				[NEWLINE][ICON_BULLET]研發工業化後即可選擇意識形態。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_OCEAN_MOVEMENT">

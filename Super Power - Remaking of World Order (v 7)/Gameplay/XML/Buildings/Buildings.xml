@@ -1657,7 +1657,7 @@
 		<Row>
 			<Type>BUILDING_RUSSIAN_BALLET_HALL</Type>
 			<BuildingClass>BUILDINGCLASS_OPERA_HOUSE</BuildingClass>
-			<Cost>140</Cost>
+			<Cost>110</Cost>
 			<GoldMaintenance>3</GoldMaintenance>
 			<SpecialistType>SPECIALIST_MUSICIAN</SpecialistType>
 			<SpecialistCount>2</SpecialistCount>
@@ -1801,10 +1801,6 @@
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_OPERA_HOUSE</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_ART_GALLERY</BuildingClassType>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_RUSSIAN_BALLET_HALL</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_ART_GALLERY</BuildingClassType>
 		</Row>
 		<Row>

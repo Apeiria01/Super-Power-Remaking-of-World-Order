@@ -10164,7 +10164,12 @@
 			<Text>Great Russian Soul</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_TRAIT_STRATEGIC_RICHES">
-			<Text>+4 [ICON_GOLD] Gold, +2 [ICON_RES_CONSUMER] Consumer Goods and +2 [ICON_HAPPINESS_1] Local Happiness in all cities. All Units +15% [ICON_STRENGTH] Combat Strength bonus while fighting within their own territory.</Text>
+			<Text>
+				[ICON_BULLET]+4 [ICON_GOLD] Gold, +2 [ICON_RES_CONSUMER] Consumer Goods, +2 [ICON_HAPPINESS_1] Local Happiness, and +1 working range in all cities.
+				[NEWLINE][ICON_BULLET]All Units +15% [ICON_STRENGTH] Combat Strength bonus while fighting within their own territory.
+				[NEWLINE][ICON_BULLET]Ideology can be adopt after researching industrialized technology.
+				[NEWLINE][ICON_BULLET]Gain [ICON_RESEARCH]research when a city gets a new plot naturally.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_OCEAN_MOVEMENT">
