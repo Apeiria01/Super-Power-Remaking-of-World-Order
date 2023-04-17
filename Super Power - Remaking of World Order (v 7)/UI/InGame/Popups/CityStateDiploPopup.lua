@@ -9,6 +9,7 @@
 include( "IconSupport" );
 include( "InfoTooltipInclude" );
 include( "CityStateStatusHelper" );
+include( "SaveUtils" );  MY_MOD_NAME = "Super Power";
 
 local g_iMinorCivID = -1;
 local g_iMinorCivTeamID = -1;
@@ -147,6 +148,9 @@ function OnGameDataDirty()
 end
 Events.SerialEventGameDataDirty.Add(OnGameDataDirty);
 
+local iFoodPrice = 3;
+local iFoodGrowthRate = 30;
+
 -------------------------------------------------
 -- On Display
 -------------------------------------------------
@@ -169,6 +173,17 @@ function OnDisplay()
 	
 	local bAllies = pPlayer:IsAllies(iActivePlayer);
 	local bFriends = pPlayer:IsFriends(iActivePlayer);
+
+	local pActivePlayerCapital = pActivePlayer:GetCapitalCity();
+	local iGrowthThreshold = pActivePlayerCapital:GrowthThreshold();
+	local iFoodToBuy = iGrowthThreshold * iFoodGrowthRate / 100;
+	local iGoldToPay = iFoodToBuy * iFoodPrice;
+	local iLastBuyFoodTurn = load(pActivePlayer, "iLastBuyFoodTurn") or -1;
+	local bIsVenice = pActivePlayer:GetCivilizationType() == GameInfoTypes.CIVILIZATION_VENICE;
+	local bShowBuyFood = bIsVenice and bAllies;
+	local bCanBuyFood = bAllies and 
+		bIsVenice and 
+		(iLastBuyFoodTurn == nil or iLastBuyFoodTurn < Game.GetGameTurn()) and pActivePlayer:GetGold() >= iGoldToPay;
 	
 	-- At war?
 	local bWar = pActiveTeam:IsAtWar(iTeam);
@@ -445,6 +460,22 @@ function OnDisplay()
 				Controls.NoUnitSpawningLabel:SetText(strSpawnText);
 			end
 		end
+
+		Controls.VeniceBuyFoodButton:SetHide(true);
+		if bShowBuyFood then
+			Controls.VeniceBuyFoodButton:SetHide(false);
+			if bCanBuyFood then
+				Controls.VeniceBuyFoodButton:SetDisabled(false);
+				Controls.VeniceBuyFoodLabel:SetText(Locale.ConvertTextKey("TXT_KEY_POP_CSTATE_VENICE_BUY_FOOD", iFoodToBuy, iGoldToPay));
+				Controls.VeniceBuyFoodButton:LocalizeAndSetToolTip("TXT_KEY_POP_CSTATE_VENICE_BUY_FOOD_TT", iGrowthThreshold,
+				iFoodGrowthRate, iFoodToBuy, iFoodPrice, iGoldToPay);
+			else
+				Controls.VeniceBuyFoodButton:SetDisabled(true);
+				Controls.VeniceBuyFoodLabel:SetText(Locale.ConvertTextKey("TXT_KEY_POP_CSTATE_VENICE_BUY_FOOD", iFoodToBuy, iGoldToPay));
+				Controls.VeniceBuyFoodButton:LocalizeAndSetToolTip("TXT_KEY_POP_CSTATE_VENICE_BUY_FOOD_DISABLE_TT");
+			end
+
+		end
 		
 		Controls.GiveButton:SetHide(false);
 		Controls.TakeButton:SetHide(false);
@@ -469,6 +500,7 @@ function OnDisplay()
 		Controls.TakeButton:SetHide(true);
 		Controls.WarButton:SetHide(true);
 		Controls.NoUnitSpawningButton:SetHide(true);
+		Controls.VeniceBuyFoodButton:SetHide(true);
 		
 	end
 	
@@ -572,6 +604,7 @@ function OnDisplay()
 	SetButtonSize(Controls.WarLabel, Controls.WarButton, Controls.WarAnim, Controls.WarButtonHL);
 	SetButtonSize(Controls.PledgeLabel, Controls.PledgeButton, Controls.PledgeAnim, Controls.PledgeButtonHL);
 	SetButtonSize(Controls.RevokePledgeLabel, Controls.RevokePledgeButton, Controls.RevokePledgeAnim, Controls.RevokePledgeButtonHL);
+	SetButtonSize(Controls.VeniceBuyFoodLabel, Controls.VeniceBuyFoodButton, Controls.VeniceBuyFoodAnim, Controls.VeniceBuyFoodButtonHL);
 	SetButtonSize(Controls.NoUnitSpawningLabel, Controls.NoUnitSpawningButton, Controls.NoUnitSpawningAnim, Controls.NoUnitSpawningButtonHL);
 	SetButtonSize(Controls.BuyoutLabel, Controls.BuyoutButton, Controls.BuyoutAnim, Controls.BuyoutButtonHL);
 	
@@ -704,6 +737,26 @@ function OnStopStartSpawning()
 	Network.SendMinorNoUnitSpawning(g_iMinorCivID, not bSpawningDisabled);
 end
 Controls.NoUnitSpawningButton:RegisterCallback( Mouse.eLClick, OnStopStartSpawning );
+
+function onBuyFood()
+    local pPlayer = Players[g_iMinorCivID];
+	local iActivePlayer = Game.GetActivePlayer();
+	local pActivePlayer = Players[iActivePlayer];
+
+	local pCapitalCity = pActivePlayer:GetCapitalCity();
+	local iFood = pCapitalCity:GrowthThreshold() * iFoodGrowthRate / 100;
+	pCapitalCity:ChangeFood(iFood);
+	pActivePlayer:ChangeGold(-iFood * iFoodPrice);
+	save(pActivePlayer, "iLastBuyFoodTurn", Game.GetGameTurn());
+	Controls.VeniceBuyFoodButton:SetHide(true);
+
+	if pActivePlayer:IsHuman() then
+		local heading = Locale.ConvertTextKey("TXT_KEY_POP_CSTATE_VENICE_BUY_FOOD_NOTIFY_HEADING");
+		local text = Locale.ConvertTextKey("TXT_KEY_POP_CSTATE_VENICE_BUY_FOOD_NOTIFY_TEXT", iFood);
+		pActivePlayer:AddNotification(NotificationTypes.NOTIFICATION_CITY_GROWTH, heading, text, pCapitalCity:GetX(), pCapitalCity:GetY())
+	end
+end
+Controls.VeniceBuyFoodButton:RegisterCallback(Mouse.eLClick, onBuyFood);
 
 ----------------------------------------------------------------
 -- Open Give Submenu

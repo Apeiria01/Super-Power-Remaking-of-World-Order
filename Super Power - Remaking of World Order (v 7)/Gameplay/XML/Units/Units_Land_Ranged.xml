@@ -1599,6 +1599,14 @@
 			<UnitType>UNIT_FRANCE_BATTERY</UnitType>
 			<PromotionType>PROMOTION_INDIRECT_FIRE</PromotionType>
 		</Row>
+		<Row>
+			<UnitType>UNIT_FRANCE_BATTERY</UnitType>
+			<PromotionType>PROMOTION_SUNDER_1</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FRANCE_BATTERY</UnitType>
+			<PromotionType>PROMOTION_SUNDER_2</PromotionType>
+		</Row>
 
 		<Row>
 			<UnitType>UNIT_HOWITZER</UnitType>

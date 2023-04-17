@@ -1,6 +1,8 @@
 -- New Trait and Policies
 --include( "UtilityFunctions.lua" )
-
+include("FLuaVector.lua");
+include("UtilityFunctions.lua");
+include("PlotIterators.lua");
 -------------------------------------------------------------------------New Trait Effects-----------------------------------------------------------------------
 function SpecialUnitType(iPlayerID, iUnitID)
 	local pPlayer = Players[iPlayerID]
@@ -361,5 +363,52 @@ function SPTraitsTech(iTeam, eTech, bAdopted)
 	end
 end
 GameEvents.TeamSetHasTech.Add(SPTraitsTech)
+
+if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_RUSSIA) then
+	GameEvents.CityBoughtPlot.Add(function(iPlayer, iCity, iPlotX, iPlotY, bGold, bCulture)
+		local pPlayer = Players[iPlayer]
+		if pPlayer == nil or not pPlayer:IsAlive() or pPlayer:GetCivilizationType() ~= GameInfoTypes.CIVILIZATION_RUSSIA then
+			return;
+		end
+		if not bCulture then
+			return;
+		end
+
+		local iBonus = 2 + 2 * pPlayer:GetCurrentEra();
+		pPlayer:ChangeOverflowResearch(iBonus);
+		if pPlayer:IsHuman() and pPlayer:IsTurnActive() then
+			local hex = ToHexFromGrid(Vector2(iPlotX, iPlotY));
+			Events.AddPopupTextEvent(HexToWorld(hex),
+				Locale.ConvertTextKey("[COLOR_BLUE]+{1_Num}[ICON_RESEARCH][ENDCOLOR]", iBonus));
+		end
+	end)
+
+	GameEvents.TeamSetHasTech.Add(function(iTeam, eTech, bAdopted)
+		if not (bAdopted and eTech == GameInfoTypes.TECH_INDUSTRIALIZATION) then
+			return;
+		end
+
+		for playerID, pPlayer in pairs(Players) do
+			if pPlayer:GetTeam() == iTeam and pPlayer:GetCivilizationType() == GameInfoTypes.CIVILIZATION_RUSSIA then
+				local capital = pPlayer:GetCapitalCity();
+				capital:SetNumRealBuilding(GameInfoTypes.BUILDING_TB_STRATEGIC_RICHES_IDEOLOGY, 1);
+				print("Russia: Strategic Riches ideology building added to capital");
+			end
+		end
+	end)
+end
+
+if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_VENICE) then
+	GameEvents.PlayerDoTurn.Add(function(iPlayer) -- Venice AI food bonus.
+		local pPlayer = Players[iPlayer];
+		if pPlayer == nil or pPlayer:IsHuman() or not pPlayer:IsAlive() or not pPlayer:IsMajorCiv() or pPlayer:GetCivilizationType() ~= GameInfoTypes.CIVILIZATION_VENICE then
+			return;
+		end
+
+		local pCapital = pPlayer:GetCapitalCity();
+		local iBonus = Game.GetHandicapType() * 4 * pCapital:GrowthThreshold() / 100;
+		pCapital:ChangeFood(iBonus);
+	end)
+end
 
   print ("New Trait Effect Check Pass!")  

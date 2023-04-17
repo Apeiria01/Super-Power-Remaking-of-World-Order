@@ -898,37 +898,37 @@
 			<TraitType>TRAIT_BONUS_AGAINST_TECH</TraitType>
 			<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
 			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>1</Yield>
+			<Yield>2</Yield>
 		</Row>
 		<Row>
 			<TraitType>TRAIT_BONUS_AGAINST_TECH</TraitType>
 			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
 			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>1</Yield>
+			<Yield>2</Yield>
 		</Row>
 		<Row>
 			<TraitType>TRAIT_BONUS_AGAINST_TECH</TraitType>
 			<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
 			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>1</Yield>
+			<Yield>2</Yield>
 		</Row>
 		<Row>
 			<TraitType>TRAIT_BONUS_AGAINST_TECH</TraitType>
 			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
 			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>1</Yield>
+			<Yield>2</Yield>
 		</Row>
 		<Row>
 			<TraitType>TRAIT_BONUS_AGAINST_TECH</TraitType>
 			<SpecialistType>SPECIALIST_WRITER</SpecialistType>
 			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>1</Yield>
+			<Yield>2</Yield>
 		</Row>
 		<Row>
 			<TraitType>TRAIT_BONUS_AGAINST_TECH</TraitType>
 			<SpecialistType>SPECIALIST_MUSICIAN</SpecialistType>
 			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>1</Yield>
+			<Yield>2</Yield>
 		</Row>
 	</Trait_SpecialistYieldChanges>
 
@@ -997,6 +997,11 @@
 			<DefaultBuilding>BUILDING_TB_ENHANCED_CULTURE</DefaultBuilding>
 			<Description>TXT_KEY_TRAIT_ENHANCED_CULTURE_SHORT</Description>
 		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_TB_STRATEGIC_RICHES_IDEOLOGY</Type>
+			<DefaultBuilding>BUILDING_TB_STRATEGIC_RICHES_IDEOLOGY</DefaultBuilding>
+			<Description>TXT_KEY_TRAIT_STRATEGIC_RICHES_SHORT</Description>
+		</Row>
 	</BuildingClasses>
 
 	<Buildings>
@@ -1044,6 +1049,22 @@
 			<IconAtlas>CIV_COLOR_ATLAS</IconAtlas>
 			<Happiness>2</Happiness>
 			<GreatWorkCount>-2</GreatWorkCount>
+			<CityWorkingChange>1</CityWorkingChange>
+		</Row>
+		<Row>
+			<Type>BUILDING_TB_STRATEGIC_RICHES_IDEOLOGY</Type>
+			<BuildingClass>BUILDINGCLASS_TB_STRATEGIC_RICHES_IDEOLOGY</BuildingClass>
+			<Cost>-1</Cost>
+			<Description>TXT_KEY_TRAIT_STRATEGIC_RICHES_SHORT</Description>
+			<Help>TXT_KEY_TRAIT_STRATEGIC_RICHES</Help>
+			<MinAreaSize>-1</MinAreaSize>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<NeverCapture>true</NeverCapture>
+			<NukeImmune>true</NukeImmune>
+			<PortraitIndex>18</PortraitIndex>
+			<IconAtlas>CIV_COLOR_ATLAS</IconAtlas>
+			<GreatWorkCount>-2</GreatWorkCount>
+			<XBuiltTriggersIdeologyChoice>1</XBuiltTriggersIdeologyChoice>
 		</Row>
 		<Row>
 			<Type>BUILDING_TB_CONVERTS_LAND_BARBARIANS</Type>

@@ -1,3 +1,4 @@
+local policyNewOrder = GameInfo.Policies["POLICY_NEW_ORDER"].ID;
 function SPEBattleCustomDamage(iBattleUnitType, iBattleType,
 	iAttackPlayerID, iAttackUnitOrCityID, bAttackIsCity, iAttackDamage,
 	iDefensePlayerID, iDefenseUnitOrCityID, bDefenseIsCity, iDefenseDamage,
@@ -45,6 +46,11 @@ function SPEBattleCustomDamage(iBattleUnitType, iBattleType,
 					additionalDamage = additionalDamage + defCity:GetMaxHitPoints() * 0.1
 				end
 			end
+		end
+
+		if attPlayer:HasPolicy(policyNewOrder) and not attPlayer:IsPolicyBlocked(policyNewOrder) then
+			additionalDamage = additionalDamage + (attPlayer:GetNumOriginalCapital() - 1) * 4;
+			print("@2 " .. (attPlayer:GetNumOriginalCapital() - 1) * 4);
 		end
 	end
 	return additionalDamage

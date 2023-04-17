@@ -5001,7 +5001,7 @@
 			<PortraitIndex>59</PortraitIndex>
 			<IconAtlas>ABILITY_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<FlankAttackModifier>5</FlankAttackModifier>
+			<FlankAttackModifier>50</FlankAttackModifier>
 			<PediaEntry>TXT_KEY_PROMOTION_JAPANESE_SAMURAI</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
 		</Row>

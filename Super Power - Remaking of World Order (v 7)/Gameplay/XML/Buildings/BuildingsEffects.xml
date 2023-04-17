@@ -1472,6 +1472,11 @@
 			<Yield>1</Yield>
 		</Row>
 		<Row>
+			<BuildingType>BUILDING_ZULU_IZIKO</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
 			<BuildingType>BUILDING_SHRINE</BuildingType>
 			<YieldType>YIELD_FAITH</YieldType>
 			<Yield>1</Yield>
@@ -6134,6 +6139,21 @@
 		<Row>
 			<BuildingType>BUILDING_AMPHITHEATER</BuildingType>
 			<FlavorType>FLAVOR_GREAT_PEOPLE</FlavorType>
+			<Flavor>2</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_ZULU_IZIKO</BuildingType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_ZULU_IZIKO</BuildingType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>50</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_ZULU_IZIKO</BuildingType>
+			<FlavorType>FLAVOR_CULTURE</FlavorType>
 			<Flavor>2</Flavor>
 		</Row>
 		<Row>

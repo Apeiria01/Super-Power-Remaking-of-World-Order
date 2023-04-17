@@ -665,7 +665,7 @@
 		<Row>
 			<StrategicViewType>ART_DEF_UNIT_KNIGHT_EGYPT</StrategicViewType>
 			<TileType>Unit</TileType>
-			<Asset>SV_Hittite_WarChariot.dds</Asset>
+			<Asset>MamlukSV.dds</Asset>
 		</Row>
 	</ArtDefine_StrategicView>
 	

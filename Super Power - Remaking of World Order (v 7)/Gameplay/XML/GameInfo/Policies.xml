@@ -636,7 +636,7 @@
 		
 		
 		<Update>
-			<Set FreeExperience="0" MilitaryProductionModifier="0"/>
+			<Set FreeExperience="0" MilitaryProductionModifier="25"/>
 			<Where Type="POLICY_TOTAL_WAR"/>
 		</Update>
 		
