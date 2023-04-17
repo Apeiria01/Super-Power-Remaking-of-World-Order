@@ -7327,14 +7327,14 @@
 		<Replace Tag="TXT_KEY_POLICY_TOTAL_WAR_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]全面战争[ENDCOLOR]
-				[NEWLINE]所有城市+5[ICON_RES_MANPOWER]人力，升级到大城市前，因城市规模造成的[ICON_RES_CONSUMER]商品和[ICON_RES_ELECTRICITY]电力消耗减少一个等级，军事单位训练速度+25%。
+				[NEWLINE]所有城市+5[ICON_RES_MANPOWER]人力，升级到大城市前，因城市规模造成的[ICON_RES_CONSUMER]商品和[ICON_RES_ELECTRICITY]电力消耗减少一个等级。军事单位训练速度+25%。
 			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_POLICE_STATE_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]警察国家[ENDCOLOR]
-				[NEWLINE]法院、治安署、审计署、警察局和地检署+3[ICON_HAPPINESS_1]本地快乐。这些建筑因[ICON_CITIZEN]人口造成的[ICON_GOLD]维护费减半
+				[NEWLINE]法院、治安署、审计署、警察局和地检署+3[ICON_HAPPINESS_1]本地快乐。这些建筑因[ICON_CITIZEN]人口造成的[ICON_GOLD]维护费减半。
 			</Text>
 		</Replace>
 
