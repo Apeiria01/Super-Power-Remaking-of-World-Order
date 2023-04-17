@@ -915,6 +915,7 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
     <Folder Include="UI\Art\Flags\Strategic" />
     <Folder Include="UI\Art\IconAtlases" />
     <Folder Include="UI\Art\IconAtlases\Buildings" />
+    <Folder Include="UI\Art\IconAtlases\Buildings\Zulu" />
     <Folder Include="UI\Art\IconAtlases\Buildings\Persia" />
     <Folder Include="UI\Art\IconAtlases\Extra" />
     <Folder Include="UI\Art\IconAtlases\Buildings\Aztecs" />
@@ -1345,6 +1346,10 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="Gameplay\Lua\Utility\PlotIterators.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Gameplay\Lua\Utility\SaveUtils.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
@@ -5417,6 +5422,22 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="UI\Art\IconAtlases\Buildings\Persia\PairidaezaPicture_256.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\IconAtlases\Buildings\Zulu\IzikoPicture_045.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\IconAtlases\Buildings\Zulu\IzikoPicture_064.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\IconAtlases\Buildings\Zulu\IzikoPicture_128.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\IconAtlases\Buildings\Zulu\IzikoPicture_256.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>

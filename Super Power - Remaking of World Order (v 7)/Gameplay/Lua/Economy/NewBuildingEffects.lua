@@ -676,12 +676,12 @@ GameEvents.TradeRouteMove.Add(function(iX, iY, iUnit, iOwner, iOriginalPlayer, i
 
 	local pCity = plot:GetWorkingCity();
 	if pCity == nil then
-		print("TradeRouteMove-Portugal-UB: pCity == nil");
+		-- print("TradeRouteMove-Portugal-UB: pCity == nil");
 		return;
 	end
 
 	if not pCity:IsHasBuilding(GameInfoTypes["BUILDING_PORTUGAL_PORT"]) then
-		print("TradeRouteMove-Portugal-UB: do not have BUILDING_PORTUGAL_PORT");
+		-- print("TradeRouteMove-Portugal-UB: do not have BUILDING_PORTUGAL_PORT");
 		return;
 	end
 
@@ -749,7 +749,6 @@ function ASHUR_TEMPLEGetFoodAndFaith(iPlayer, iUnit, iUnitType, iX, iY, bDelay, 
 	if not pUnit:IsCombatUnit() then return end
 
 	if ByPlayer == nil or ByPlayer:CountNumBuildings(GameInfoTypes["BUILDING_ASSUR_TEMPLE"]) == 0 then
-		print("@1")
 		return
 	end
 
@@ -774,7 +773,32 @@ function ASHUR_TEMPLEGetFoodAndFaith(iPlayer, iUnit, iUnitType, iX, iY, bDelay, 
 	end
 end
 GameEvents.UnitPrekill.Add(ASHUR_TEMPLEGetFoodAndFaith)
+if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_ZULU) then
+	GameEvents.UnitPromoted.Add(function(iPlayer, iUnit, iPromotionType)
+		local pPlayer = Players[iPlayer];
+		if pPlayer == nil then
+			return;
+		end
 
+		if pPlayer:CountNumBuildings(GameInfoTypes["BUILDING_ZULU_IZIKO"]) == 0 then
+			return;
+		end
+
+		local iBonus = 1 + 2 * pPlayer:GetCurrentEra();
+		for city in pPlayer:Cities() do
+			if city:IsHasBuilding(GameInfoTypes["BUILDING_ZULU_IZIKO"]) then
+				city:ChangeJONSCultureStored(iBonus);
+				pPlayer:ChangeJONSCulture(iBonus);
+
+				if pPlayer:IsHuman() and pPlayer:IsTurnActive() then
+					local hex = ToHexFromGrid(Vector2(city:GetX(), city:GetY()));
+					Events.AddPopupTextEvent(HexToWorld(hex),
+						Locale.ConvertTextKey("[COLOR_MAGENTA]+{1_Num}[ICON_CULTURE][ENDCOLOR]", iBonus));
+				end
+			end
+		end
+	end)
+end
 print("New Building Effects Check Pass!")
 
 

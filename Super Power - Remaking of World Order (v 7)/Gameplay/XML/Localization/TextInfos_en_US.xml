@@ -3977,7 +3977,9 @@
 				+50% [ICON_TOURISM] Tourism output from Great Works in all cities.
 				[NEWLINE][NEWLINE]+50% [ICON_CULTURE] Culture output in the city.
 				[NEWLINE][NEWLINE]Two Great Artist appear in the city where the building is built.
-				[NEWLINE][NEWLINE]Must have built a Museum in Venice.</Text>
+				[NEWLINE][NEWLINE]Must have built a Museum in Venice.
+				[NEWLINE][NEWLINE]+1 city work range.
+			</Text>
 		</Row>
 
 		<!-- Pedia tags -->
@@ -7320,7 +7322,7 @@
 				[NEWLINE][ICON_BULLET]One Worker appears near the [ICON_CAPITAL] Capital.
 				[NEWLINE][ICON_BULLET]When you found a [COLOR_POSITIVE_TEXT]New City[ENDCOLOR], one Worker will appear outside the city.
 				[NEWLINE][ICON_BULLET]+2 [ICON_RES_MANPOWER] Manpower per city.
-				[NEWLINE][ICON_BULLET]Gain 25 point free [ICON_PRODUCTION] Production for new founded city.
+				[NEWLINE][ICON_BULLET]Gain +25 one-time [ICON_PRODUCTION] production for all cities.
 				</Text>
 		</Replace>
 		
@@ -8126,8 +8128,11 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_FORTIFIED_BORDERS_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]Fortified Borders[ENDCOLOR][NEWLINE]+1 [ICON_HAPPINESS_1] Local Happiness from every Barracks, Arsenal, Military Base, Military Academy, Dojo, Metal Processing Plant, Steel Warehouse, Coal Company, Recycling Center, Oil Refinery, Uraninite Refinery, Coal Liquefaction System and Uranium in Coal Refining System.
-			[NEWLINE]-50% [ICON_GOLD]Maintenance of these Buildings.</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]Fortified Borders[ENDCOLOR][NEWLINE]+1 [ICON_HAPPINESS_1] Local Happiness from every Barracks, Arsenal, Military Base, Military Academy, Dojo, Stable, Wood Dock, Shipyard, Metal Processing Plant, Steel Warehouse, Coal Company, Recycling Center, Oil Refinery, Uraninite Refinery, Coal Liquefaction System and Uranium in Coal Refining System.
+				[NEWLINE]-50% [ICON_GOLD]Maintenance of these Buildings.
+				[NEWLINE]+100%[ICON_PRODUCTION] while building these buildings
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_NATIONALISM_HELP">
@@ -8140,18 +8145,18 @@
 			<Text>War Propaganda</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_MILITARISM_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]War Propaganda[ENDCOLOR][NEWLINE]-50% [ICON_RESISTANCE] Resistance Time for newly captured cities. The city will NOT resist if its [ICON_CITIZEN] Population is less than 6 after capturing.</Text>
+			<Text>[COLOR_POSITIVE_TEXT]War Propaganda[ENDCOLOR][NEWLINE]-50% [ICON_RESISTANCE] Resistance Time for newly captured cities. The city will NOT resist if its [ICON_CITIZEN] Population is less than 6 after capturing or the old owner has loss its original capital city.</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_MILITARISM_TEXT" >
 			<Text>Propaganda is a powerful weapon in war; it is used to dehumanize and create hatred toward a supposed enemy, either internal or external, by creating a false image in the mind. This can be done by using derogatory or racist terms, avoiding some words or by making allegations of enemy atrocities. Most propaganda wars require the home population to feel the enemy has inflicted an injustice, which may be fictitious or may be based on facts. The home population must also decide that the cause of their nation is just.</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_LIGHTNING_WARFARE_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]Lightning Warfare[ENDCOLOR][NEWLINE]+2 [ICON_MOVES] Movement for Great Generals.  +1 [ICON_MOVES] Movement for All Land Non-militia Units.</Text>
+			<Text>[COLOR_POSITIVE_TEXT]Lightning Warfare[ENDCOLOR][NEWLINE]+2 [ICON_MOVES] Movement for Great Generals.  +1 [ICON_MOVES] Movement for All Land Non-militia Units. The use of roads in enemy territory is permitted.</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_TOTAL_WAR_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]Total War[ENDCOLOR][NEWLINE]+5 [ICON_RES_MANPOWER] Manpower for each city. -1 Level [ICON_RES_CONSUMER] Consumer Goods and [ICON_RES_ELECTRICITY] Electricity cost of City Size before the city growing up to Large.</Text>
+			<Text>[COLOR_POSITIVE_TEXT]Total War[ENDCOLOR][NEWLINE]+5 [ICON_RES_MANPOWER] Manpower for each city. -1 Level [ICON_RES_CONSUMER] Consumer Goods and [ICON_RES_ELECTRICITY] Electricity cost of City Size before the city growing up to Large. Military unit training speed +25%.</Text>
 		</Replace>
 
 
@@ -8161,14 +8166,14 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_CULT_PERSONALITY_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]Cult of Personality[ENDCOLOR][NEWLINE] -15% [ICON_HAPPINESS_4] Unhappiness from [ICON_CITIZEN] Citizens in non-occupied Cities and the empire immediately enters a [ICON_GOLDEN_AGE] Golden Age.</Text>
+			<Text>[COLOR_POSITIVE_TEXT]Cult of Personality[ENDCOLOR][NEWLINE] -15% [ICON_HAPPINESS_4] Unhappiness from [ICON_CITIZEN] Citizens in non-occupied Cities and the empire immediately enters a [ICON_GOLDEN_AGE] Golden Age.[NEWLINE]Negates the [ICON_TOURISM] Tourism bonus from other players' technologies (from Printing Press to Internet). Half the [ICON_HAPPINESS_4] Unhappiness from Public Opinion.</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_NEW_ORDER" >
 			<Text>Authoritarianism</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_NEW_ORDER_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]Authoritarianism[ENDCOLOR][NEWLINE]Negates the [ICON_TOURISM] Tourism bonus from other players' technologies (from Printing Press to Internet). Half the [ICON_HAPPINESS_4] Unhappiness from Public Opinion.</Text>
+			<Text>[COLOR_POSITIVE_TEXT]Authoritarianism[ENDCOLOR][NEWLINE]+4 attack demage for each occupied original capital city.</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_NEW_ORDER_TEXT" >
 			<Text>Authoritarianism is a form of government characterized by absolute or blind obedience to authority, as against individual freedom and related to the expectation of unquestioning obedience.</Text>
@@ -10164,7 +10169,12 @@
 			<Text>Great Russian Soul</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_TRAIT_STRATEGIC_RICHES">
-			<Text>+4 [ICON_GOLD] Gold, +2 [ICON_RES_CONSUMER] Consumer Goods and +2 [ICON_HAPPINESS_1] Local Happiness in all cities. All Units +15% [ICON_STRENGTH] Combat Strength bonus while fighting within their own territory.</Text>
+			<Text>
+				[ICON_BULLET]+4 [ICON_GOLD] Gold, +2 [ICON_RES_CONSUMER] Consumer Goods, +2 [ICON_HAPPINESS_1] Local Happiness, and +1 working range in all cities.
+				[NEWLINE][ICON_BULLET]All Units +15% [ICON_STRENGTH] Combat Strength bonus while fighting within their own territory.
+				[NEWLINE][ICON_BULLET]Ideology can be adopt after researching industrialized technology.
+				[NEWLINE][ICON_BULLET]Gain [ICON_RESEARCH]research when a city gets a new plot naturally.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_OCEAN_MOVEMENT">
@@ -10255,7 +10265,7 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_SUPER_CITY_STATE">
-			<Text>Cannot gain settlers nor annex cities. May purchase in puppet cities and puppet cities offers full [ICON_RESEARCH] Science, [ICON_CULTURE] Culture output and [ICON_FOOD] Food Growth. Double the normal number of Trade Routes and [ICON_TOURISM] Theming Bonus in [ICON_CAPITAL] Captal. A Merchant of Venice appears after researching Optics.</Text>
+			<Text>Cannot gain settlers nor annex cities. May purchase in puppet cities and puppet cities offers full [ICON_RESEARCH] Science, [ICON_CULTURE] Culture output and [ICON_FOOD] Food Growth. Double the normal number of Trade Routes and [ICON_TOURISM] Theming Bonus in [ICON_CAPITAL] Captal. A Merchant of Venice appears after researching Optics. Food can be purchased from allied city-states, only once per turn.</Text>
 		</Replace>
 
 
@@ -10294,7 +10304,7 @@
 
 
 		<Replace Tag="TXT_KEY_TRAIT_BONUS_AGAINST_TECH">
-			<Text>+1 [ICON_CULTURE] Culture for all Specialists. All Units receive a [ICON_STRENGTH] Combat bonus (+25%)  when fighting units from a Civilization with more Cities than Ethiopia. </Text>
+			<Text>+2 [ICON_CULTURE] Culture for all Specialists. All Units receive a [ICON_STRENGTH] Combat bonus (+25%)  when fighting units from a Civilization with more Cities than Ethiopia. </Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_POPULATION_GROWTH">
@@ -12142,7 +12152,7 @@
 		<Plurality>2</Plurality>
 	</Row>
 	<Row Tag="TXT_KEY_UNIT_FRANCE_BATTERY_HELP">
-		<Text>Fast and Powerful Sige Unit. Only the France may build it. It has indirect fire and doesn't need to set up before attacking.</Text>
+		<Text>Fast and Powerful Sige Unit. Only the France may build it. It has indirect fire and doesn't need to set up before attacking. It has the promotion of Sunder I-II</Text>
 	</Row>
 	<Row Tag="TXT_KEY_UNIT_FRANCE_BATTERY_HEADING">
 		<Text>Grand Battery</Text>
@@ -15389,7 +15399,7 @@
 			<Text> Bonus vs Cities(50).</Text>
 		</Replace>-->
 		<Replace Tag="TXT_KEY_PROMOTION_LIGHTNING_WARFARE_HELP">
-			<Text> +1 [ICON_MOVES] Movement and ignore enemy Zones of Control.</Text>
+			<Text> +1 [ICON_MOVES] Movement and ignore enemy Zones of Control. The use of roads in enemy territory is permitted.</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_PROMOTION_FAST_GENERAL_HELP">
@@ -16479,7 +16489,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_MESSAGE_POLICY_CITIZENSHIP_ALERT">
 			<Text>
-				Because you adopted the policy CitizenShip, your new city [COLOR_POSITIVE_TEXT]{1_name}[ENDCOLOR] gain {2_name} point [ICON_PRODUCTION] Production.
+				Because you adopted the policy CitizenShip, your city [COLOR_POSITIVE_TEXT]{1_name}[ENDCOLOR] gain {2_name} point [ICON_PRODUCTION] Production.
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_MESSAGE_POLICY_CULTURAL_DIPLOMACY_ALERT">
@@ -16818,5 +16828,43 @@
 		<Row Tag="TXT_KEY_IMPROVEMENT_POLYNESIA_CITY">
 			<Text>Coastal City</Text>
 		</Row>
+
+		<Replace Tag="TXT_KEY_BUILDING_ZULU_IZIKO">
+			<Text>[ICON_GREAT_WRITER][ICON_WAR] Ithaca</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_ZULU_IZIKO_HELP">
+			<Text>
+			[ICON_BULLET]Alternative to the amphitheater, cheaper to build.
+			[NEWLINE][ICON_BULLET] +15% training speed of [ICON_WAR]military units in this city.
+			[NEWLINE][ICON_BULLET] When a military unit is upgraded, each Ithaca gets a one-time [ICON_CULTURE]culture boost, which varies with the era.
+			</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_POP_CSTATE_VENICE_BUY_FOOD">
+			<Text>Buy food ([COLOR_GREEN]+{1_food}[ICON_FOOD][END_COLOR],[COLOR_NEGATIVE_TEXT]-{2_gold}[ICON_GOLD][END_COLOR])</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_POP_CSTATE_VENICE_BUY_FOOD_TT">
+			<Text>
+			Your capital's current population growth threshold is {1_threshold},
+			[ICON_FOOD] food (={3_food}) equivalent to {2_percent}% of the threshold can be purchased.
+			The price per unit of food is {4_price} and the total price is {5_total}[ICON_GOLD].
+			Only once per round.
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_POP_CSTATE_VENICE_BUY_FOOD_NOTIFY_HEADING">
+			<Text>
+			buy food
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_POP_CSTATE_VENICE_BUY_FOOD_NOTIFY_TEXT">
+			<Text>
+			Your capital gains {1_food}[ICON_FOOD] food.
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_POP_CSTATE_VENICE_BUY_FOOD_DISABLE_TT">
+			<Text>
+			Already bought food or not enough money this turn.
+			</Text>
+		</Replace>
 	</Language_en_US>
 </GameData>

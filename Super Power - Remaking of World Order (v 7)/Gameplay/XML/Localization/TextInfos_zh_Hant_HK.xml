@@ -1579,7 +1579,7 @@
 		</Row>
 		<!-- Help tags -->
 		<Row Tag="TXT_KEY_WONDER_SAN_MARCO_HELP">
-			<Text>所有城市傑作[ICON_TOURISM]旅遊業績產出+50%，本城市[ICON_CULTURE]文化值產出+50%。[NEWLINE][NEWLINE]建成奇跡的城市附近出現兩位大藝術家。[NEWLINE]擁有4個美術傑作展位。[NEWLINE][NEWLINE]必須在威尼斯擁有博物館才能建造。</Text>
+			<Text>所有城市傑作[ICON_TOURISM]旅遊業績產出+50%，本城市[ICON_CULTURE]文化值產出+50%。[NEWLINE][NEWLINE]建成奇跡的城市附近出現兩位大藝術家。[NEWLINE]擁有4個美術傑作展位。[NEWLINE][NEWLINE]必須在威尼斯擁有博物館才能建造。+1城市工作範圍。</Text>
 		</Row>
 		<!-- Pedia tags -->
 		<Row Tag="TXT_KEY_WONDER_SAN_MARCO_PEDIA">
@@ -5498,7 +5498,12 @@
 			<Text>俄羅斯精神</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_TRAIT_STRATEGIC_RICHES">
-			<Text>每座城市+4[ICON_GOLD]金幣產出+2[ICON_RES_CONSUMER]消費品+2[ICON_HAPPINESS_1]本地快乐。所有軍事單位在境內作戰時+15%[ICON_STRENGTH]戰鬥力。</Text>
+			<Text>
+				[ICON_BULLET]每座城市+4[ICON_GOLD]金錢產出+2[ICON_RES_CONSUMER]消費品+2[ICON_HAPPINESS_1]本地快樂+1工作範圍。
+				[NEWLINE][ICON_BULLET]所有軍事單位在境內作戰時+15%[ICON_STRENGTH]戰鬥力。
+				[NEWLINE][ICON_BULLET]城市自然拓展邊界時，獲得一次性[ICON_RESEARCH]科研產出，隨時代加成。
+				[NEWLINE][ICON_BULLET]研發工業化後即可選擇意識形態。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_OCEAN_MOVEMENT">
@@ -5588,7 +5593,7 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_SUPER_CITY_STATE">
-			<Text>不能建造移民和吞併已佔領城市，可在傀儡城市中以金幣購買項目，可建商路數量加倍，首都內奇跡和博物館[ICON_TOURISM]藝術品搭配的效果翻倍。研究光學科技後立即獲得一位威尼斯商人。</Text>
+			<Text>不能建造移民和吞併已佔領城市，可在傀儡城市中以金幣購買項目，可建商路數量加倍，首都內奇跡和博物館[ICON_TOURISM]藝術品搭配的效果翻倍。研究光學科技後立即獲得一位威尼斯商人。可向同盟城邦購買糧食，每回合僅限一次。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_SPICE">
@@ -5623,7 +5628,7 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_BONUS_AGAINST_TECH">
-			<Text>與擁有更多城市的文明的單位作戰時獲得25%戰鬥力加成。所有專家+1[ICON_CULTURE]文化值產出。</Text>
+			<Text>與擁有更多城市的文明的單位作戰時獲得25%戰鬥力加成。所有專家+2[ICON_CULTURE]文化值產出。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_POPULATION_GROWTH">
@@ -6253,7 +6258,7 @@
 				[COLOR_POSITIVE_TEXT]公民製度[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]每座新建立的城市免費獲得一名工人，[ICON_CAPITAL]首都立刻獲得一名工人。
 				[NEWLINE][ICON_BULLET]每座城市+2[ICON_RES_MANPOWER]人力。
-				[NEWLINE][ICON_BULLET]新建城市獲得一次性的25點[ICON_PRODUCTION]產能（標準速度下）。
+				[NEWLINE][ICON_BULLET]已有城市和新建城市獲得一次性的25點[ICON_PRODUCTION]產能（標準速度下）。
 			</Text>
 		</Replace>
 
@@ -7043,8 +7048,11 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_FORTIFIED_BORDERS_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]邊界強化[ENDCOLOR][NEWLINE]每個軍營、軍械所、兵工廠、軍事基地、軍事學院、金屬鍛造廠、冶鐵坊、煉焦廠、回收中心、石油精煉廠、增殖反應堆、煤液化工廠、煤灰提取廠+1[ICON_HAPPINESS_1]本地幸福度。
-			[NEWLINE]這些建築的維護費-50%[ICON_GOLD]。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]邊界強化[ENDCOLOR][NEWLINE]每個軍營、軍械所、兵工廠、軍事基地、軍事學院、碼頭、船塢、軍事學院、道場、馬厩、金屬鍛造廠、冶鐵坊、煉焦廠、回收中心、石油精煉廠、增殖反應堆、煤液化工廠、煤灰提取廠+1[ICON_HAPPINESS_1]本地幸福度。
+				[NEWLINE]這些建築的維護費-50%[ICON_GOLD]。
+				[NEWLINE]建造這些建築時+100%[ICON_PRODUCTION]生產力。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_NATIONALISM_HELP">
@@ -7052,15 +7060,15 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_MILITARISM_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]軍國主義[ENDCOLOR][NEWLINE]佔領敵方城市後[COLOR_POSITIVE_TEXT]抵抗時間[ENDCOLOR]減半。如果該城市[ICON_CITIZEN]人口少於6則沒有抵抗。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]軍國主義[ENDCOLOR][NEWLINE]佔領敵方城市後[COLOR_POSITIVE_TEXT]抵抗時間[ENDCOLOR]減半。如果該城市[ICON_CITIZEN]人口少於6或敵方已失去原始首都則沒有抵抗。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_LIGHTNING_WARFARE_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]閃電戰[ENDCOLOR][NEWLINE]大軍事家+2[ICON_MOVES]移動力。所有非民兵陸軍單位+1[ICON_MOVES]移動力。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]閃電戰[ENDCOLOR][NEWLINE]大軍事家+2[ICON_MOVES]移動力。所有非民兵陸軍單位+1[ICON_MOVES]移動力，允許使用敵軍境內道路。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_TOTAL_WAR_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]全面戰爭[ENDCOLOR][NEWLINE]所有城市+5 [ICON_RES_MANPOWER]人力。城市升級到大城市前，因城市規模造成的[ICON_RES_CONSUMER]商品和[ICON_RES_ELECTRICITY]電力消耗減少一個等級。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]全面戰爭[ENDCOLOR][NEWLINE]所有城市+5 [ICON_RES_MANPOWER]人力。城市升級到大城市前，因城市規模造成的[ICON_RES_CONSUMER]商品和[ICON_RES_ELECTRICITY]電力消耗減少一個等級。 軍事單位訓練速度+25%。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_POLICE_STATE_HELP" >
@@ -7068,14 +7076,14 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_CULT_PERSONALITY_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]個人崇拜[ENDCOLOR][NEWLINE]非佔領人口的[ICON_HAPPINESS_4]不滿-15%，開啟一次[ICON_GOLDEN_AGE]黃金時代。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]個人崇拜[ENDCOLOR][NEWLINE]非佔領人口的[ICON_HAPPINESS_4]不滿-15%，開啟一次[ICON_GOLDEN_AGE]黃金時代。[NEWLINE]消除來自其他文明掌握科技所帶來的[ICON_TOURISM]旅遊業績加成。[ICON_HAPPINESS_4]公共輿論不滿減半。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_NEW_ORDER" >
 			<Text>威權政府</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_NEW_ORDER_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]威權政府[ENDCOLOR][NEWLINE]消除來自其他文明掌握科技所帶來的[ICON_TOURISM]旅遊業績加成。[ICON_HAPPINESS_4]公共輿論不滿減半。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]威權政府[ENDCOLOR][NEWLINE]每佔領一個原始首都，軍事單位攻擊傷害固定+4。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_NEW_ORDER_TEXT" >
 			<Text>威權主義是指處於民主政體和極權政體之間的一種非民主、非極權的政體形式。特點是嚴格遵從政府的權威，而政府常運用壓制性手段，用來維持和執行社會控制。[NEWLINE][NEWLINE]威權政府一般指依靠各種行政手段、法令、軍警以控制國民言論、結社、集會等自由之政府。一些人或組織尋求將他人置於自己的勢力範圍之下，並不顧及獲取共識，這個政府所控制的國家會是不自由、不民主的。[NEWLINE][NEWLINE]權威主義一詞也被用來形容這種人或組織的個性和管理風格。在權威主義的國家中，國家權威滲透到公民生活的各方面，其中很多方面根據其他的政治觀來看，都應屬於個人自由的範圍。權威主義的程度不同，甚至非常民主和自由主義的國家也會在某種程度上表現出權威主義的一面，例如在國家安全問題上。</Text>
@@ -10236,7 +10244,7 @@
 			<Plurality>2</Plurality>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_FRANCE_BATTERY_HELP">
-			<Text>快速且強大的攻城單位。法國特色單位，替代加農炮。具有間接火力，並且在攻擊前不需要進行遠程攻擊準備。</Text>
+			<Text>快速且強大的攻城單位。法國特色單位，替代加農炮。具有間接火力，並且在攻擊前不需要進行遠程攻擊準備。自帶破陣1-2級晉升。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_FRANCE_BATTERY_HEADING">
 			<Text>大炮兵連</Text>
@@ -13117,7 +13125,7 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_PROMOTION_LIGHTNING_WARFARE_HELP">
-			<Text>+1[ICON_MOVES]移動力，無視敵方控制區域（ZOC）。</Text>
+			<Text>+1[ICON_MOVES]移動力，無視敵方控制區域（ZOC），允許使用敵軍境內道路。</Text>
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_PROMOTION_FAST_GENERAL_HELP">
@@ -14253,7 +14261,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_MESSAGE_POLICY_CITIZENSHIP_ALERT">
 			<Text>
-				由於你采用了政策公民製度，你的新城市[COLOR_POSITIVE_TEXT]{1_name}[ENDCOLOR]獲得了{2_name}點[ICON_PRODUCTION]產能。
+				由於你采用了政策公民製度，你的城市[COLOR_POSITIVE_TEXT]{1_name}[ENDCOLOR]獲得了{2_name}點[ICON_PRODUCTION]產能。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_MESSAGE_POLICY_CULTURAL_DIPLOMACY_ALERT">
@@ -14595,5 +14603,43 @@
 		<Row Tag="TXT_KEY_IMPROVEMENT_POLYNESIA_CITY">
 			<Text>海上城市</Text>
 		</Row>
+
+		<Replace Tag="TXT_KEY_BUILDING_ZULU_IZIKO">
+			<Text>[ICON_GREAT_WRITER][ICON_WAR]伊扎卡</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_ZULU_IZIKO_HELP">
+			<Text>
+				[ICON_BULLET]替代露天劇場，造價更低。
+				[NEWLINE][ICON_BULLET]本城[ICON_WAR]軍事單位訓練速度+15%。
+				[NEWLINE][ICON_BULLET]軍事單位升級時，每個伊扎卡獲得一次性[ICON_CULTURE]文化產出，隨時代變化。
+			</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_POP_CSTATE_VENICE_BUY_FOOD">
+			<Text>購買食物([COLOR_GREEN]+{1_food}[ICON_FOOD][END_COLOR],[COLOR_NEGATIVE_TEXT]-{2_gold}[ICON_GOLD][END_COLOR])</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_POP_CSTATE_VENICE_BUY_FOOD_TT">
+			<Text>
+				你的首都當前的人口增長閾值是{1_threshold}，
+				可購買相當於閾值{2_percent}%的[ICON_FOOD]糧食(={3_food})。
+				每單位糧食的價格為{4_price}，總價為{5_total}[ICON_GOLD]。
+				每回合僅限一次。
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_POP_CSTATE_VENICE_BUY_FOOD_NOTIFY_HEADING">
+			<Text>
+				購買食物
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_POP_CSTATE_VENICE_BUY_FOOD_NOTIFY_TEXT">
+			<Text>
+				你的首都獲得{1_food}[ICON_FOOD]食物。
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_POP_CSTATE_VENICE_BUY_FOOD_DISABLE_TT">
+			<Text>
+				本回合已經購買過食物或金錢不足。
+			</Text>
+		</Replace>
 	</Language_zh_Hant_HK>
 </GameData>

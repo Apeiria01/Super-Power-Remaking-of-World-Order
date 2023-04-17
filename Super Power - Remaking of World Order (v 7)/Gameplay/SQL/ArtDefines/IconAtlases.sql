@@ -19,6 +19,10 @@ VALUES		('SP8_EXTRA_ATLAS', 				256, 		'SP8Units&BuildingsAtlas256.dds',				8, 	
 			('BUILDING_PAIRIDAEZA_ATLAS', 		256, 		'PairidaezaPicture_256.dds',					1, 				1),
 			('BUILDING_PAIRIDAEZA_ATLAS', 		128, 		'PairidaezaPicture_128.dds',					1, 				1),
 			('BUILDING_PAIRIDAEZA_ATLAS', 		064, 		'PairidaezaPicture_064.dds',					1, 				1),
-			('BUILDING_PAIRIDAEZA_ATLAS', 		045, 		'PairidaezaPicture_045.dds',					1, 				1);
+			('BUILDING_PAIRIDAEZA_ATLAS', 		045, 		'PairidaezaPicture_045.dds',					1, 				1),
+			('BUILDING_ZULU_IZIKO_ATLAS', 		256, 		'IzikoPicture_256.dds',					        1, 				1),
+			('BUILDING_ZULU_IZIKO_ATLAS', 		128, 		'IzikoPicture_128.dds',					        1, 				1),
+			('BUILDING_ZULU_IZIKO_ATLAS', 		064, 		'IzikoPicture_064.dds',					        1, 				1),
+			('BUILDING_ZULU_IZIKO_ATLAS', 		045, 		'IzikoPicture_045.dds',					        1, 				1);
 --==========================================================================================================================
 --==========================================================================================================================

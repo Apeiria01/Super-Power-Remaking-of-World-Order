@@ -123,6 +123,17 @@ function SPEPlayerIntoNewEra(eTeam, eEra, bFirst)
 end
 GameEvents.TeamSetEra.Add(SPEPlayerIntoNewEra)
 
+local iPolicyCitizenship = GameInfo.Policies["POLICY_CITIZENSHIP"].ID;
+function SPEPolicyCitizenshipHelper(pPlayer, pCity)
+	local bonus = math.floor(GameInfo.GameSpeeds[Game.GetGameSpeedType()].ConstructPercent * 25 / 100)
+	pCity:SetOverflowProduction(pCity:GetOverflowProduction() + bonus)
+	if pPlayer:IsHuman() then
+		Events.GameplayAlertMessage(Locale.ConvertTextKey("TXT_KEY_MESSAGE_POLICY_CITIZENSHIP_ALERT", pCity:GetName(),
+		bonus))
+	end
+	print("SPEPolicyCitizenshipHelper: ", bonus);
+end
+
 function SPEPlayerAdoptPolicy(playerID, policyID)
 	if(policyID == PolicyCollectiveRuleID) then
 		local pPlayer = Players[playerID]
@@ -140,6 +151,13 @@ function SPEPlayerAdoptPolicy(playerID, policyID)
 			pPlayer:SetHasPolicy(PolicyCollectiveRuleFreeID,true,true)
 		end
 	end
+
+	if policyID == iPolicyCitizenship then
+		local pPlayer = Players[playerID]
+		for pCity in pPlayer:Cities() do
+			SPEPolicyCitizenshipHelper(pPlayer, pCity)
+		end
+	end
 end
 GameEvents.PlayerAdoptPolicy.Add(SPEPlayerAdoptPolicy)
 
@@ -153,16 +171,10 @@ function SPEPlayerCityFounded(iPlayer,cityX, cityY)
 	local pCity = cityPlot:GetPlotCity()
 	if pCity == nil then return end
 
-	if pPlayer:HasPolicy(GameInfo.Policies["POLICY_CITIZENSHIP"].ID) 
-	and not pPlayer:IsPolicyBlocked(GameInfo.Policies["POLICY_CITIZENSHIP"].ID)
+	if pPlayer:HasPolicy(iPolicyCitizenship) 
+	and not pPlayer:IsPolicyBlocked(iPolicyCitizenship)
 	then 
-		local bonus=GameInfo.GameSpeeds[Game.GetGameSpeedType()].ConstructPercent/100
-		bonus = math.floor(bonus * 25)
-		pCity:SetOverflowProduction(pCity:GetOverflowProduction() + bonus)
-		if pPlayer:IsHuman() then
-			Events.GameplayAlertMessage(Locale.ConvertTextKey("TXT_KEY_MESSAGE_POLICY_CITIZENSHIP_ALERT", pCity:GetName(), bonus) )
-		end
-		print("SPEPlayerCityFounded:",bonus)	
+		SPEPolicyCitizenshipHelper(pPlayer, pCity)
 	end
 end
 GameEvents.PlayerCityFounded.Add(SPEPlayerCityFounded)
