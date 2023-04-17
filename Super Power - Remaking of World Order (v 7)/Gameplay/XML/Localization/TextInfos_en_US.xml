@@ -10148,7 +10148,10 @@
 			<Text>Pax Sinica</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_TRAIT_ART_OF_WAR">
-			<Text>During a [ICON_GOLDEN_AGE] Golden Age, China receive additional +20% [ICON_RESEARCH] Science and +20% [ICON_FOOD] Food nationwide. All Land Units can earn points toward a [ICON_GOLDEN_AGE] Golden Age for each enemy killed (50% of its [ICON_STRENGTH] Combat Strength).</Text>
+			<Text>
+				[ICON_BULLET]During a [ICON_GOLDEN_AGE] Golden Age, China receive additional +20% [ICON_RESEARCH] Science and +20% [ICON_FOOD] Food nationwide.
+				[NEWLINE][ICON_BULLET]All Land Units can earn points toward a [ICON_GOLDEN_AGE] Golden Age for each enemy killed (50% of its [ICON_STRENGTH] Combat Strength).
+			</Text>
 		</Replace>
 
 		<Row Tag="TXT_KEY_SP_UA_CHINA_GOLDENAGE_ANNOUNCE">
@@ -10162,7 +10165,10 @@
 			<Text>Republicanism</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_TRAIT_RIVER_EXPANSION">
-			<Text>Each Scientist +2 [ICON_RESEARCH] Science, Engineer +1 [ICON_PRODUCTION] Production, Merchant +2 [ICON_GOLD] Gold, Writer, Artist and Musician +1 [ICON_CULTURE] Culture. +50% [ICON_TEAM_4] International Immigration Move-in Rate from a Civilization with less [ICON_HAPPINESS_1] Happiness.</Text>
+			<Text>
+				[ICON_BULLET]Each Scientist +2 [ICON_RESEARCH] Science, Engineer +1 [ICON_PRODUCTION] Production, Merchant +2 [ICON_GOLD] Gold, Writer, Artist and Musician +1 [ICON_CULTURE] Culture.
+				[NEWLINE][ICON_BULLET]+50% [ICON_TEAM_4] International Immigration Move-in Rate from a Civilization with less [ICON_HAPPINESS_1] Happiness.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_STRATEGIC_RICHES_SHORT">
@@ -10171,163 +10177,243 @@
 		<Replace Tag="TXT_KEY_TRAIT_STRATEGIC_RICHES">
 			<Text>
 				[ICON_BULLET]+4 [ICON_GOLD] Gold, +2 [ICON_RES_CONSUMER] Consumer Goods, +2 [ICON_HAPPINESS_1] Local Happiness, and +1 working range in all cities.
+				Gain [ICON_RESEARCH]research when a city gets a new plot naturally.
 				[NEWLINE][ICON_BULLET]All Units +15% [ICON_STRENGTH] Combat Strength bonus while fighting within their own territory.
 				[NEWLINE][ICON_BULLET]Ideology can be adopt after researching industrialized technology.
-				[NEWLINE][ICON_BULLET]Gain [ICON_RESEARCH]research when a city gets a new plot naturally.
 			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_OCEAN_MOVEMENT">
-			<Text>-1 Level for all Lv2 -Lv5 cities (England only has Lv1-Lv4 cities). All Units +15% [ICON_STRENGTH] Combat Strength bonus while fighting outside their own territory. </Text>
+			<Text>
+				[ICON_BULLET]-1 Level for all Lv2 -Lv5 cities (England only has Lv1-Lv4 cities).
+				[NEWLINE][ICON_BULLET]All Units +15% [ICON_STRENGTH] Combat Strength bonus while fighting outside their own territory. 
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_ENHANCED_CULTURE">
-			<Text>+3 [ICON_CULTURE] Culture for all cities and it never expires. +1 [ICON_TOURISM] Tourism output for all Great Works.</Text>
+			<Text>
+				[ICON_BULLET]+3 [ICON_CULTURE] Culture for all cities and it never expires.
+				[NEWLINE][ICON_BULLET]+1 [ICON_TOURISM] Tourism output for all Great Works.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_CONVERTS_LAND_BARBARIANS_SHORT">
 			<Text>Kritik der reinen Vernunft</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_TRAIT_CONVERTS_LAND_BARBARIANS">
-			<Text>Every 50 [ICON_PRODUCTION] Production output(production rate change to specifical items such as Settler is Not included) in a city offer additional +10 [ICON_CULTURE] Culture and +10 [ICON_RESEARCH] Science output. The bonus are added to the base outputs of your cities so they can be multiplied by buildings, policies, etc.</Text>
+			<Text>
+				[ICON_BULLET]Every 50 [ICON_PRODUCTION] Production output(production rate change to specifical items such as Settler is Not included) in a city offer additional +10 [ICON_CULTURE] Culture and +10 [ICON_RESEARCH] Science output. The bonus are added to the base outputs of your cities so they can be multiplied by buildings, policies, etc.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_CAPITAL_BUILDINGS_CHEAPER">
-			<Text>+2 [ICON_PRODUCTION] Production for all cities and it never expires. +15% [ICON_PRODUCTION] Production towards any buildings in all cities.</Text>
+			<Text>
+				[ICON_BULLET]+2 [ICON_PRODUCTION] Production for all cities and it never expires. 
+				[NEWLINE][ICON_BULLET]+15% [ICON_PRODUCTION] Production towards any buildings in all cities.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_WONDER_BUILDER_SHORT">
 			<Text>The Gift from the Nile</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_TRAIT_WONDER_BUILDER">
-			<Text>+1 [ICON_GOLD] Gold in every tile next to a river and +1 [ICON_PRODUCTION] Production for every Flood Plains tiles worked by your city. +2 [ICON_RES_MANPOWER] Manpower per city. +25% [ICON_PRODUCTION] Production towards Wonder construction. </Text>
+			<Text>
+				[ICON_BULLET]+1 [ICON_GOLD] Gold in every tile next to a river and +1 [ICON_PRODUCTION] Production for every Flood Plains tiles worked by your city.
+				[NEWLINE][ICON_BULLET]+2 [ICON_RES_MANPOWER] Manpower per city. +25% [ICON_PRODUCTION] Production towards Wonder construction.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_ENHANCED_GOLDEN_AGES">
-			<Text>During a [ICON_GOLDEN_AGE] Golden Age, all units receive +1 [ICON_MOVES] Movement and a +15% [ICON_STRENGTH] Combat Strength bonus. [ICON_GOLDEN_AGE] Golden Ages last 50% longer.</Text>
+			<Text>
+				[ICON_BULLET]During a [ICON_GOLDEN_AGE] Golden Age, all units receive +1 [ICON_MOVES] Movement and a +15% [ICON_STRENGTH] Combat Strength bonus. 
+				[NEWLINE][ICON_BULLET][ICON_GOLDEN_AGE] Golden Ages last 50% longer.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_TERROR">
-			<Text>+1 [ICON_PRODUCTION] Production for every Pasture. +1 [ICON_MOVES] Movement for all Mounted Units, Tank Units, Land Hit-and-run Units and Helicopter Units. Great General and Great Admiral Provide additional 15%[ICON_STRENGTH] Combat Strength and can build Military Academy without Consumed.</Text>
+			<Text>
+				[ICON_BULLET]+1 [ICON_PRODUCTION] Production for every Pasture.
+				[NEWLINE][ICON_BULLET]+1 [ICON_MOVES] Movement for all Mounted Units, Tank Units, Land Hit-and-run Units and Helicopter Units. Great General and Great Admiral Provide additional 15%[ICON_STRENGTH] Combat Strength and can build Military Academy without Consumed.
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_TRAIT_FIGHT_WELL_DAMAGED">
-			<Text>Units fight as though they were at full strength even when damaged. Gain [ICON_CULTURE] Culture when you build a Military Unit (100% of its [ICON_STRENGTH] Combat Strength). Add a random unselected Pantheon when you enhance a religion. </Text>
+			<Text>
+				[ICON_BULLET]Units fight as though they were at full strength even when damaged. 
+				[NEWLINE][ICON_BULLET]Gain [ICON_CULTURE] Culture when you build a Military Unit (100% of its [ICON_STRENGTH] Combat Strength). 
+				[NEWLINE][ICON_BULLET]Add a random unselected Pantheon when you enhance a religion.
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_TRAIT_BUFFALO_HORNS">
-			<Text>-50% experience needed to earn their next promotion for all units and pay 15% less for land unit maintenance. Each source of [ICON_RES_GOLD] Gold, [ICON_RES_SILVER] Silver and [ICON_RES_GEMS] Gems worked by Zulu Cities produces +5 [ICON_GOLD] Gold. </Text>
+			<Text>
+				[ICON_BULLET]-50% experience needed to earn their next promotion for all units and pay 15% less for land unit maintenance.
+				[NEWLINE][ICON_BULLET]Each source of [ICON_RES_GOLD] Gold, [ICON_RES_SILVER] Silver and [ICON_RES_GEMS] Gems worked by Zulu Cities produces +5 [ICON_GOLD] Gold. 
+			</Text>
 		</Replace>
 
 
 		<Replace Tag="TXT_KEY_TRAIT_VIKING_FURY">
-			<Text>Land Melee units and Naval Melee units pay no Movement [ICON_MOVES] to pillage and pillage Gold equal to 200% of the damage inflicted on a city. Receive triple [ICON_GOLD] Gold from barbarian encampments or pillaging cities. +1 [ICON_CULTURE] Culture output for every Fishing Net, Workboats and Offshore Platform.</Text>
+			<Text>
+				[ICON_BULLET]Land Melee units and Naval Melee units pay no Movement [ICON_MOVES] to pillage and pillage Gold equal to 200% of the damage inflicted on a city. 
+				[NEWLINE][ICON_BULLET]Receive triple [ICON_GOLD] Gold from barbarian encampments or pillaging cities.
+				[NEWLINE][ICON_BULLET]+1 [ICON_CULTURE] Culture output for every Fishing Net, Workboats and Offshore Platform.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_SLAYER_OF_TIAMAT">
-			<Text>When a city is conquered by force, gain a free Technology discovered by its owner (one Technology per enemy city). If there are at least 5 [ICON_CITIZEN] Citizens left in the city after capturing, +1 [ICON_CITIZEN] Citizen in your [ICON_CAPITAL] Capital.</Text>
+			<Text>
+				[ICON_BULLET]When a city is conquered by force, gain a free Technology discovered by its owner (one Technology per enemy city).
+				[NEWLINE][ICON_BULLET]If there are at least 5 [ICON_CITIZEN] Citizens left in the city after capturing, +1 [ICON_CITIZEN] Citizen in your [ICON_CAPITAL] Capital.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_CITY_STATE_FRIENDSHIP">
 			<Text>
-				City-State [ICON_INFLUENCE] Influence degrades at half and recovers at twice the normal rate.
-				City-States do not become upset by intruding units and + 5 [ICON_INFLUENCE] Influence (at Standard speed) per turn with City-States you could demand tribute from.
-				Each allied city-state gives military units +3% combat power, up to 30%.
+				[ICON_BULLET]City-State[ICON_INFLUENCE]Influence degrades at half and recovers at twice the normal rate.
+				[NEWLINE][ICON_BULLET]City-States do not become upset by intruding units and + 5 [ICON_INFLUENCE] Influence (at Standard speed) per turn with City-States you could demand tribute from.
+				[NEWLINE][ICON_BULLET] Each allied city-state gives military units +3% combat power, up to 30%.
 			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_RAZE_AND_HORSES">
-			<Text>Defeated Barbarian unit in encampments will join you. Receive [ICON_CULTURE] Culture, [ICON_RESEARCH] Science, [ICON_GOLD] Gold and [ICON_PEACE] Faith after destroying a city (amount = 10*turn, 1,000 maximum). Borrow City names from other in-game Civs.</Text>
+			<Text>
+				[ICON_BULLET]Defeated Barbarian unit in encampments will join you. 
+				[NEWLINE][ICON_BULLET]Receive [ICON_CULTURE] Culture, [ICON_RESEARCH] Science, [ICON_GOLD] Gold and [ICON_PEACE] Faith after destroying a city (amount = 10*turn, 1,000 maximum). 
+				[NEWLINE][ICON_BULLET]Borrow City names from other in-game Civs.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_CONVERTS_SEA_BARBARIANS_SHORT">
 			<Text>Pax Ottomana</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_TRAIT_CONVERTS_SEA_BARBARIANS">
-			<Text>+1 [ICON_PRODUCTION] Production for every Quarry, Fishing Net. +2 [ICON_PRODUCTION] Production for every Strategic Resources. +25% speed for worker's Tile Improvement construction rate.</Text>
+			<Text>
+				[ICON_BULLET]+1 [ICON_PRODUCTION] Production for every Quarry, Fishing Net. 
+				[NEWLINE][ICON_BULLET]+2 [ICON_PRODUCTION] Production for every Strategic Resources. 
+				[NEWLINE][ICON_BULLET]+25% speed for worker's Tile Improvement construction rate.
+			</Text>
 		</Replace>
 		
 		
 		
 
 		<Replace Tag="TXT_KEY_TRAIT_GATEWAY_AFRICA">
-			<Text>+2 Gold [ICON_GOLD], [ICON_CULTURE] Culture, [ICON_PEACE] Faith and [ICON_RESEARCH] Science for each Trade Route with a different civ or City-State. +4 [ICON_GOLD] Gold for each Trade Route sent to Morocco. All Land Units receive a [ICON_STRENGTH] Combat bonus (+20%) when fighting in Desert Tiles.</Text>
+			<Text>
+				[ICON_BULLET]+2 Gold [ICON_GOLD], [ICON_CULTURE] Culture, [ICON_PEACE] Faith and [ICON_RESEARCH] Science for each Trade Route with a different civ or City-State.
+				[NEWLINE][ICON_BULLET]+4 [ICON_GOLD] Gold for each Trade Route sent to Morocco. All Land Units receive a [ICON_STRENGTH] Combat bonus (+20%) when fighting in Desert Tiles.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_LUXURY_RETENTION">
-			<Text>Only lose 2 [ICON_HAPPINESS_1] Happiness from a Luxury Resource if your last copy of it is traded away. All cities receive free Markets. Economic Building will be gained to the city with Prerequisite Building after researching the corresponding technology.</Text>
+			<Text>
+				[ICON_BULLET]Only lose 2 [ICON_HAPPINESS_1] Happiness from a Luxury Resource if your last copy of it is traded away. 
+				[NEWLINE][ICON_BULLET]All cities receive free Markets. Economic Building will be gained to the city with Prerequisite Building after researching the corresponding technology.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_PHOENICIAN_HERITAGE">
-			<Text>+2 [ICON_PRODUCTION] Production for every Specialists. +4 [ICON_GOLD] Base Gold for every Sea International Trade Route and +25% Range for Cargoships.</Text>
+			<Text>
+				[ICON_BULLET]+2 [ICON_PRODUCTION] Production for every Specialists. 
+				[NEWLINE][ICON_BULLET]+4 [ICON_GOLD] Base Gold for every Sea International Trade Route and +25% Range for Cargoships.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_EXTRA_TRADE">
-			<Text>Resource diversity grants twice as much [ICON_GOLD] Gold for Portugal in Trade Routes. All coastal Cities receive a free Harbor.</Text>
+			<Text>
+				[ICON_BULLET]Resource diversity grants twice as much [ICON_GOLD]Gold for Portugal in Trade Routes.
+				[NEWLINE][ICON_BULLET]All coastal Cities receive a free Harbor.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_SUPER_CITY_STATE">
-			<Text>Cannot gain settlers nor annex cities. May purchase in puppet cities and puppet cities offers full [ICON_RESEARCH] Science, [ICON_CULTURE] Culture output and [ICON_FOOD] Food Growth. Double the normal number of Trade Routes and [ICON_TOURISM] Theming Bonus in [ICON_CAPITAL] Captal. A Merchant of Venice appears after researching Optics. Food can be purchased from allied city-states, only once per turn.</Text>
+			<Text>
+				[ICON_BULLET]Cannot gain settlers nor annex cities. May purchase in puppet cities and puppet cities offers full [ICON_RESEARCH] Science, [ICON_CULTURE] Culture output and [ICON_FOOD] Food Growth.
+				[NEWLINE][ICON_BULLET]Double the normal number of Trade Routes and[ICON_TOURISM]Theming Bonus in[ICON_CAPITAL]Captal.
+				[NEWLINE][ICON_BULLET]A Merchant of Venice appears after researching Optics. Food [ICON_FOOD] can be purchased from allied city-states, only once per turn.
+			</Text>
 		</Replace>
 
 
 
 		<Replace Tag="TXT_KEY_TRAIT_SPICE">
 			<Text>
-				The first 3 cities founded on continents other than where Indonesia started each provide 2 unique Luxury Resources. These 3 cities are free from Corruption and Public Security problems, cost No [ICON_GOLD] Gold maintance and can never be razed.
-				For each luxury resource with a quantity greater than 1, the influence of [ICON_INFLUENCE] obtained by completing the city-state task +5%, the upper limit is 40%.
+				[ICON_BULLET]The first 3 cities founded on continents other than where Indonesia started each provide 2 unique Luxury Resources. These 3 cities are free from Corruption and Public Security problems, cost No [ICON_GOLD] Gold maintance and can never be razed.
+				[NEWLINE][ICON_BULLET] For each luxury resource with a quantity greater than 1, the influence of [ICON_INFLUENCE] obtained by completing the city-state task +5%, the upper limit is 40%.
 			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_GREAT_EXPANSE">
 			<Text>
-				Founded cities start with additional territory (6 tiles). 
-				All cities receive free Granaries.
-				All of your Scouts can choose the result of Goody Hut.
+				[ICON_BULLET]Founded cities start with additional territory (6 tiles). 
+				[NEWLINE][ICON_BULLET]All cities receive free Granaries.
+				[NEWLINE][ICON_BULLET]All of your Scouts can choose the result of Goody Hut.
 			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_WAYFINDING">
 			<Text>
-				Can embark and move over Oceans immediately. 
-				Settlers can found cities on coast plots. Cities founded on coast plots receive extra [ICON_PRODUTION] prodution and [ICON_CULTURE] culture, which increases with the eras.
-				City Hall Level is limited to Lv 3 (No Lv 4 and Lv 5 Cities). 
-				+10% [ICON_STRENGTH] Combat Strength bonus if within 2 tiles of a Moai.
-			</Text>
+				[ICON_BULLET]Can embark and move over Oceans immediately. 
+				[NEWLINE][ICON_BULLET]Settlers can found cities on coast plots. Cities founded on coast plots receive extra [ICON_PRODUTION] prodution and [ICON_CULTURE] culture, which increases with the eras.
+				[NEWLINE][ICON_BULLET]City Hall Level is limited to Lv 3 (No Lv 4 and Lv 5 Cities). 
+				[NEWLINE][ICON_BULLET]+10% [ICON_STRENGTH] Combat Strength bonus if within 2 tiles of a Moai.</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_CULTURE_FROM_KILLS">
-			<Text>Gains [ICON_CULTURE] Culture for the empire from each enemy unit killed (50% of their [ICON_STRENGTH] Combat Strength). -10% [ICON_CULTURE] Culture cost for adopting new Policies. </Text>
+			<Text>
+				[ICON_BULLET]Gains [ICON_CULTURE] Culture for the empire from each enemy unit killed (50% of their [ICON_STRENGTH] Combat Strength). 
+				[NEWLINE][ICON_BULLET]-10% [ICON_CULTURE] Culture cost for adopting new Policies. 
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_AMPHIB_WARLORD">
-			<Text> Rivers and adjacent difficult terrain count as clear terrain for [ICON_MOVES] Movement. Rivers extend length of land trade routes as if they were roads. +1 [ICON_GOLD] Gold for every Trading Post.</Text>
+			<Text>
+				[ICON_BULLET]Rivers and adjacent difficult terrain count as clear terrain for [ICON_MOVES] Movement. 
+				[NEWLINE][ICON_BULLET]Rivers extend length of land trade routes as if they were roads. +1 [ICON_GOLD] Gold for every Trading Post.
+			</Text>
 		</Replace>
 
 
 		<Replace Tag="TXT_KEY_TRAIT_BONUS_AGAINST_TECH">
-			<Text>+2 [ICON_CULTURE] Culture for all Specialists. All Units receive a [ICON_STRENGTH] Combat bonus (+25%)  when fighting units from a Civilization with more Cities than Ethiopia. </Text>
+			<Text>
+				[ICON_BULLET]+2 [ICON_CULTURE] Culture for all Specialists. 
+				[NEWLINE][ICON_BULLET]All Units receive a [ICON_STRENGTH] Combat bonus (+25%)  when fighting units from a Civilization with more Cities than Ethiopia. 
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_POPULATION_GROWTH">
 			<Text>
-				-20% [ICON_HAPPINESS_4] Unhappiness from number of [ICON_CITIZEN] Citizens.
-				+1%[ICON_FOOD]food for each [ICON_CITIZEN]major religion follower.
+				[ICON_BULLET]-20% [ICON_HAPPINESS_4] Unhappiness from number of [ICON_CITIZEN] Citizens.
+				[NEWLINE][ICON_BULLET]+1%[ICON_FOOD]food for each [ICON_CITIZEN]major religion follower.
 			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_EXTRA_BELIEF">
-			<Text>Choose one more Belief than normal when you found a Religion. A Great Prophet appears after researching Writing.</Text>
+			<Text>
+				[ICON_BULLET]Choose one more Belief than normal when you found a Religion. 
+				[NEWLINE][ICON_BULLET]A Great Prophet appears after researching Writing.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_FAITH_FROM_NATURE">
-			<Text>+1 [ICON_PEACE] Faith per city with an adjacent unimproved Forest. Bonus increases to +2 [ICON_PEACE] Faith in Cities with 3 or more adjacent unimproved Forest tiles. +1 [ICON_PRODUCTION] Production and +1 [ICON_PEACE] Faith for every Camp. </Text>
+			<Text>
+				[ICON_BULLET]+1 [ICON_PEACE] Faith per city with an adjacent unimproved Forest. 
+				[NEWLINE][ICON_BULLET]Bonus increases to +2 [ICON_PEACE] Faith in Cities with 3 or more adjacent unimproved Forest tiles. 
+				[NEWLINE][ICON_BULLET]+1 [ICON_PRODUCTION] Production and +1 [ICON_PEACE] Faith for every Camp. 
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_ANNEX_CITY_STATE">
-			<Text>Can spend [ICON_GOLD] Gold to annex or puppet a City-State that has been your ally for 8 turns. Each old Capital of City-State -2 Lv. at most of City Hall in its City (non-puppet).</Text>
+			<Text>
+				[ICON_BULLET]Can spend [ICON_GOLD] Gold to annex or puppet a City-State that has been your ally for 8 turns. 
+				[NEWLINE][ICON_BULLET]Each old Capital of City-State -2 Lv. at most of City Hall in its City (non-puppet).
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_CITY_STATE_BONUSES">
-			<Text>+50% [ICON_FOOD] Food, [ICON_CULTURE] Culture, and [ICON_PEACE] Faith from friendly City-States. Friendly Militaristic City-States offer units with free experience(20).+150 [ICON_INFLUENCE] Influence with a Great Person gift to a City-State. </Text>
+			<Text>
+				[ICON_BULLET]+50% [ICON_FOOD] Food, [ICON_CULTURE] Culture, and [ICON_PEACE] Faith from friendly City-States. 
+				[NEWLINE][ICON_BULLET]Friendly Militaristic City-States offer units with free experience(20).
+				[NEWLINE][ICON_BULLET]+150 [ICON_INFLUENCE] Influence with a Great Person gift to a City-State. 
+			</Text>
 		</Replace>
 		
 		
@@ -10335,41 +10421,69 @@
 		
 
 		<Replace Tag="TXT_KEY_TRAIT_LAND_TRADE_GOLD2">
-			<Text>+50% Range for Caravans. +300% for the efficiency of your trade routes spread the home city's religion. +2 [ICON_CULTURE] Culture and +2 [ICON_PEACE] Faith from every Oasis.</Text>
+			<Text>
+				[ICON_BULLET]+50% Range for Caravans. +300% for the efficiency of your trade routes spread the home city's religion.
+				[NEWLINE][ICON_BULLET]+2 [ICON_CULTURE] Culture and +2 [ICON_PEACE] Faith from every Oasis.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_DIPLOMACY_GREAT_PEOPLE">
 			<Text>
-				When declaring friendship, Sweden and their friend gain a +10% boost to [ICON_GREAT_PEOPLE] Great Person generation.
-				Every 2 [ICON_CITIZEN] Citizens in Small Cities (6+ Population) provide +1 [ICON_RESEARCH] Science Output. 
+				[ICON_BULLET]When declaring friendship, Sweden and their friend gain a +10% boost to [ICON_GREAT_PEOPLE] Great Person generation.
+				[NEWLINE][ICON_BULLET]Every 2 [ICON_CITIZEN] Citizens in Small Cities (6+ Population) provide +1 [ICON_RESEARCH] Science Output. 
 			</Text>
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_TRAIT_SCHOLARS_JADE_HALL">
-			<Text>+2 [ICON_RESEARCH] Science for all Specialists. +2 [ICON_RESEARCH] Science for all Great Person tile improvements. </Text>
+			<Text>
+				[ICON_BULLET]+2 [ICON_RESEARCH] Science for all Specialists. 
+				[NEWLINE][ICON_BULLET]+2 [ICON_RESEARCH] Science for all Great Person tile improvements. 
+			</Text>
 		</Replace>
 
 
 		<Replace Tag="TXT_KEY_TRAIT_LONG_COUNT">
-			<Text>After researching Theology, receive a [ICON_RESEARCH] tech boost each time a scientific building / Wonder is built in the [ICON_CAPITAL] Capital. Also receive a bonus Great Person at the end of every Maya Long Count calendar cycle (every 394 years in game, not true!). Each bonus person can only be chosen once for the first round.</Text>
+			<Text>
+				After researching Theology, receive a [ICON_RESEARCH] tech boost each time a scientific building / Wonder is built in the [ICON_CAPITAL] Capital. Also receive a bonus Great Person at the end of every Maya Long Count calendar cycle (every 394 years in game, not true!). Each bonus person can only be chosen once for the first round.</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_IGNORE_TERRAIN_IN_FOREST">
-			<Text>Units move through Forest and Jungle in friendly territory as if they were Roads. These tiles can be used to establish [ICON_CONNECTED] City Connections upon researching The Wheel. Caravans move along Forest and Jungle as if they were Roads. All Land Units double the movement in Forest and Jungle. Forest will not be removed when a farm has been built. </Text>
+			<Text>
+				[ICON_BULLET]Units move through Forest and Jungle in friendly territory as if they were Roads.These tiles can be used to establish [ICON_CONNECTED] City Connections upon researching The Wheel. Caravans move along Forest and Jungle as if they were Roads. All Land Units double the movement in Forest and Jungle. 
+				[NEWLINE][ICON_BULLET]Forest will not be removed when a farm has been built. 
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_SEVEN_CITIES">
-			<Text>Receive [ICON_GOLD] Gold bonus for discovering a Natural Wonder (bonus enhanced if first to discover it) and tile yields from Natural Wonders are doubled. Cities with Amusement Park receive provides [ICON_HAPPINESS_1] Global Happiness instead of [ICON_HAPPINESS_1] Local Happiness, +2 [ICON_GOLD] Gold and +2 [ICON_CULTURE] Culture output for each source of [ICON_RES_COW] Cattle and [ICON_RES_BISON] Bison.</Text>
+			<Text>
+				[ICON_BULLET]Receive [ICON_GOLD] Gold bonus for discovering a Natural Wonder (bonus enhanced if first to discover it) and tile yields from Natural Wonders are doubled. 
+				[NEWLINE][ICON_BULLET]Cities with Amusement Park receive provides [ICON_HAPPINESS_1] Global Happiness instead of [ICON_HAPPINESS_1] Local Happiness, +2 [ICON_GOLD] Gold and +2 [ICON_CULTURE] Culture output for each source of [ICON_RES_COW] Cattle and [ICON_RES_BISON] Bison.</Text>
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_TRAIT_GREAT_ANDEAN_ROAD">
 			<Text>
-				Units ignore terrain costs when moving into any tile with Hills.
-				No maintenance costs for improvements in Hills; half cost elsewhere.
-				Workers can remove [ICON_RES_SHEEP] Sheep on the tiles with Hills.
-				Civilian units can enter mountain tiles.
-				Settlers will not lose HP if end turns on mountain tiles, and can build cities on them.
-				Mountain cities gain additional [ICON_RESEARCH]science and [ICON_FOOD]food, which increases over eras.
+				[ICON_BULLET]Units ignore terrain costs when moving into any tile with Hills.Civilian units can enter mountain tiles. No maintenance costs for improvements in Hills; half cost elsewhere. Workers can remove [ICON_RES_SHEEP] Sheep on the tiles with Hills.
+				[NEWLINE][ICON_BULLET]Settlers will not lose HP if end turns on mountain tiles, and can build cities on them.Mountain cities gain additional [ICON_RESEARCH]science and [ICON_FOOD]food, which increases over eras.
+			</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_TRAIT_SOLIDARITY">
+			<Text>
+				[ICON_BULLET]Receive a free Social Policy when you advance to the next era.
+			</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_TRAIT_INGENIOUS">
+			<Text>
+				[ICON_BULLET]Receive free Great Scientist when you discover Writing. 
+				[NEWLINE][ICON_BULLET]Earn Great Scientists 50% faster.
+			</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_TRAIT_CARNIVAL">
+			<Text>
+				[ICON_BULLET]Tourism [ICON_TOURISM] output is +100% during their Golden Ages. 
+				[NEWLINE][ICON_BULLET]Earn Great Artists, Musicians, and Writers 50% faster during their Golden Ages.
 			</Text>
 		</Replace>
 	

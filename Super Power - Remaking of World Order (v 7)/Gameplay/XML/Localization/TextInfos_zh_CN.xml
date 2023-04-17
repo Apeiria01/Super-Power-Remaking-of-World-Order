@@ -5588,7 +5588,10 @@
 			<Text>盛世皇朝</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_TRAIT_ART_OF_WAR">
-			<Text>所有陆军单位都自带消灭敌人后，获得相当于敌单位战斗力数值50%的[ICON_GOLDEN_AGE]黄金时代点数的晋升。黄金时代中，所有城市的[ICON_RESEARCH]科研产出、[ICON_FOOD]食物累积+20%。</Text>
+			<Text>
+				[ICON_BULLET]所有陆军单位都自带消灭敌人后，获得相当于敌单位战斗力数值50%的[ICON_GOLDEN_AGE]黄金时代点数的晋升。
+				[NEWLINE][ICON_BULLET]黄金时代中，所有城市的[ICON_RESEARCH]科研产出、[ICON_FOOD]食物累积+20%。
+			</Text>
 		</Replace>
 		<Row Tag="TXT_KEY_SP_UA_CHINA_GOLDENAGE_ANNOUNCE">
 			<Text>盛世来临！</Text>
@@ -5601,7 +5604,10 @@
 			<Text>精英共和</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_TRAIT_RIVER_EXPANSION">
-			<Text>专业人员额外产出：每位科学家+2[ICON_RESEARCH]科研、工程师+1[ICON_PRODUCTION]产能、商业家+2[ICON_GOLD]金钱、文学家、美术家、音乐家+1[ICON_CULTURE]文化。来自[ICON_HAPPINESS_1]满意度更低文明的移民[ICON_TEAM_4]迁入速率+50%。</Text>
+			<Text>
+				[ICON_BULLET]专业人员额外产出: 每位科学家+2[ICON_RESEARCH]科研、工程师+1[ICON_PRODUCTION]产能、商业家+2[ICON_GOLD]金钱、文学家、美术家、音乐家+1[ICON_CULTURE]文化。
+				[NEWLINE][ICON_BULLET]来自[ICON_HAPPINESS_1]满意度更低文明的移民[ICON_TEAM_4]迁入速率+50%。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_STRATEGIC_RICHES_SHORT">
@@ -5617,65 +5623,105 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_OCEAN_MOVEMENT">
-			<Text>所有二级到五级城市管理成本降低一级。所有军事单位在境外作战时+15%[ICON_STRENGTH]战斗力。</Text>
+			<Text>
+				[ICON_BULLET]所有二级到五级城市管理成本降低一级。
+				[NEWLINE][ICON_BULLET]所有军事单位在境外作战时+15%[ICON_STRENGTH]战斗力。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_ENHANCED_CULTURE">
-			<Text>所有城市+3[ICON_CULTURE]文化（不会过时）。所有杰作+1[ICON_TOURISM]魅力产出。</Text>
+			<Text>
+				[ICON_BULLET]所有城市+3[ICON_CULTURE]文化（不会过时）。
+				[NEWLINE][ICON_BULLET]所有杰作+1[ICON_TOURISM]魅力产出。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_CONVERTS_LAND_BARBARIANS_SHORT">
 			<Text>理性批判</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_TRAIT_CONVERTS_LAND_BARBARIANS">
-			<Text>城市每50点[ICON_PRODUCTION]产能产出（不计特定项目的加成，如移民）+10[ICON_CULTURE]文化和+10[ICON_RESEARCH]科研。（这些额外的科研文化为基础产出，可以受到奇观、建筑、政策的加成。）</Text>
+			<Text>
+				[ICON_BULLET]城市每50点[ICON_PRODUCTION]产能产出(不计特定项目的加成，如移民)+10[ICON_CULTURE]文化和+10[ICON_RESEARCH]科研。（这些额外的科研文化为基础产出，可以受到奇观、建筑、政策的加成。）
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_CAPITAL_BUILDINGS_CHEAPER">
-			<Text>所有城市+2[ICON_PRODUCTION]产能，城市建造建筑时+15%[ICON_PRODUCTION]产能。</Text>
+			<Text>
+				[ICON_BULLET]所有城市+2[ICON_PRODUCTION]产能。
+				[NEWLINE][ICON_BULLET]城市建造建筑时+15%[ICON_PRODUCTION]产能。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_WONDER_BUILDER_SHORT">
 			<Text>大河滔滔</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_TRAIT_WONDER_BUILDER">
-			<Text>所有城市额外+2[ICON_RES_MANPOWER]人力资源，每处沿河地块+1[ICON_GOLD]金，每处冲积平原地块+1[ICON_PRODUCTION]产能。建造奇观时+25%[ICON_PRODUCTION]产能积累速率。</Text>
+			<Text>
+				[ICON_BULLET]所有城市额外+2[ICON_RES_MANPOWER]人力资源，
+				[NEWLINE][ICON_BULLET]每处沿河地块+1[ICON_GOLD]金，每处冲积平原地块+1[ICON_PRODUCTION]产能。
+				[NEWLINE][ICON_BULLET]建造奇观时+25%[ICON_PRODUCTION]产能积累速率。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_ENHANCED_GOLDEN_AGES">
-			<Text>[ICON_GOLDEN_AGE]黄金时代长度增加50%，黄金时代中单位+1[ICON_MOVES]移动力，+15%[ICON_STRENGTH]战斗力</Text>
+			<Text>
+				[ICON_BULLET][ICON_GOLDEN_AGE]黄金时代长度增加50%。
+				[NEWLINE][ICON_BULLET]黄金时代中单位+1[ICON_MOVES]移动力，+15%[ICON_STRENGTH]战斗力。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_TERROR">
-			<Text>每处牧场+1[ICON_PRODUCTION]产能。所有重骑兵-装甲单位和骑射-直升机单位+1[ICON_MOVES]移动。陆军海军统帅额外提供15%战力加成并且可以无消耗建造军事学院。</Text>
+			<Text>
+				[ICON_BULLET]每处牧场+1[ICON_PRODUCTION]产能。
+				[NEWLINE][ICON_BULLET]所有重骑兵-装甲单位和骑射-直升机单位+1[ICON_MOVES]移动。
+				[NEWLINE][ICON_BULLET]陆军海军统帅额外提供15%战力加成并且可以无消耗建造军事学院。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_FIGHT_WELL_DAMAGED">
-			<Text>受伤单位攻击力不减。当你训练或购买了一个军事单位时，获得一次性的[ICON_CULTURE]文化加成（其数值相当于单位的100%[ICON_STRENGTH]战斗力）。强化宗教时添加一条未选的随机神系。</Text>
+			<Text>
+				[ICON_BULLET]受伤单位攻击力不减。
+				[NEWLINE][ICON_BULLET]当你训练或购买了一个军事单位时，获得一次性的[ICON_CULTURE]文化加成（其数值相当于单位的100%[ICON_STRENGTH]战斗力）。
+				[NEWLINE][ICON_BULLET]强化宗教时添加一条未选的随机神系。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_BUFFALO_HORNS">
-			<Text>所有军事单位获得晋升所需经验值-50%，陆上单位维护费-15%。境内开发的每处[ICON_RES_GOLD]黄金、[ICON_RES_SILVER]白银和[ICON_RES_GEMS]宝石资源+5[ICON_GOLD]金钱。</Text>
+			<Text>
+				[ICON_BULLET]所有军事单位获得晋升所需经验值-50%，陆上单位维护费-15%。
+				[NEWLINE][ICON_BULLET]境内开发的每处[ICON_RES_GOLD]黄金、[ICON_RES_SILVER]白银和[ICON_RES_GEMS]宝石资源+5[ICON_GOLD]金钱。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_VIKING_FURY">
-			<Text>所有陆军近战单位和海军近战单位劫掠均不消耗[ICON_MOVES]移动力，并具有攻城时将对城市造成伤害的200%数值转化为金钱的能力。攻占城市或攻占营寨所获得2倍的[ICON_GOLD]金钱。每处海上设施+1[ICON_CULTURE]文化产出。</Text>
+			<Text>
+				[ICON_BULLET]所有陆军近战单位和海军近战单位劫掠均不消耗[ICON_MOVES]移动力，并具有攻城时将对城市造成伤害的200%数值转化为金钱的能力。
+				[NEWLINE][ICON_BULLET]攻占城市或攻占营寨所获得2倍的[ICON_GOLD]金钱。每处海上设施+1[ICON_CULTURE]文化产出。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_SLAYER_OF_TIAMAT">
-			<Text>占领一座城市时免费获得其所属文明拥有的一项科技。通过交易获得城市除外，每座城市仅在首次占领时有效。如果城市攻占后不少于5人口，你的[ICON_CAPITAL]首都[ICON_CITIZEN]人口+1。</Text>
+			<Text>
+				[ICON_BULLET]占领一座城市时免费获得其所属文明拥有的一项科技。通过交易获得城市除外，每座城市仅在首次占领时有效。
+				[NEWLINE][ICON_BULLET]如果城市攻占后不少于5人口，你的[ICON_CAPITAL]首都[ICON_CITIZEN]人口+1。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_CITY_STATE_FRIENDSHIP">
 			<Text>
-				对城邦[ICON_INFLUENCE]影响力衰减速度减半，恢复速度加倍。
-				军队在城邦境内停留时不会影响关系。对于能够勒索的城邦每回合额外获得5点[ICON_INFLUENCE]影响力（标准速度下）。
-				每个同盟城邦为军事单位+3%战斗力，上限为30%。
+				[ICON_BULLET]对城邦[ICON_INFLUENCE]影响力衰减速度减半，恢复速度加倍。
+				[NEWLINE][ICON_BULLET]军队在城邦境内停留时不会影响关系。
+				[NEWLINE][ICON_BULLET]对于能够勒索的城邦每回合额外获得5点[ICON_INFLUENCE]影响力（标准速度下）。
+				[NEWLINE][ICON_BULLET]每个同盟城邦为军事单位+3%战斗力，上限为30%。
 			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_RAZE_AND_HORSES">
-			<Text>击败蛮族营寨中的单位会加入匈人军队。每夷平一座城市都会获得当前回合数*10的[ICON_GOLD]金钱、[ICON_RESEARCH]科研、[ICON_CULTURE]文化、[ICON_PEACE]信仰值（最多1000）。城市名从其他文明借用。</Text>
+			<Text>
+				[ICON_BULLET]击败蛮族营寨中的单位会加入匈人军队。
+				[NEWLINE][ICON_BULLET]夷平城市后获得当前回合数*10的[ICON_GOLD]金钱、[ICON_RESEARCH]科研、[ICON_CULTURE]文化、[ICON_PEACE]信仰值（最多1000）。
+				[NEWLINE][ICON_BULLET]城市名从其他文明借用。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_CONVERTS_SEA_BARBARIANS_SHORT">
@@ -5683,120 +5729,204 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_CONVERTS_SEA_BARBARIANS">
-			<Text>每处采石场和渔船+1[ICON_PRODUCTION]产能。每处战略资源+2[ICON_PRODUCTION]产能。工人建设地块设施速度+25%。</Text>
+			<Text>
+				[ICON_BULLET]每处采石场和渔船+1[ICON_PRODUCTION]产能。
+				[NEWLINE][ICON_BULLET]每处战略资源+2[ICON_PRODUCTION]产能。
+				[NEWLINE][ICON_BULLET]工人建设地块设施速度+25%。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_GATEWAY_AFRICA">
-			<Text>每一条通往不同文明或者城邦的国际商路+2[ICON_GOLD]金钱，+2[ICON_CULTURE]文化，+2[ICON_PEACE]信仰，+2[ICON_RESEARCH]科研。同时，每条通往摩洛哥的商路，其发起国+4[ICON_GOLD]金钱。所有陆军单位在沙漠地块作战+20%[ICON_STRENGTH]战斗力。</Text>
+			<Text>
+				[ICON_BULLET]每一条通往不同文明或者城邦的国际商路+2[ICON_GOLD]金钱，+2[ICON_CULTURE]文化，+2[ICON_PEACE]信仰，+2[ICON_RESEARCH]科研。
+				[NEWLINE][ICON_BULLET]每条通往摩洛哥的商路，其发起国+4[ICON_GOLD]金钱。
+				[NEWLINE][ICON_BULLET]所有陆军单位在沙漠地块作战+20%[ICON_STRENGTH]战斗力。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_LUXURY_RETENTION">
-			<Text>每种奢侈资源即使全部交易出去只减少2[ICON_HAPPINESS_1]快乐。所有城市免费获得市场。研发完成相应科技时，有前置建筑的城市获得对应经济建筑。</Text>
+			<Text>
+				[ICON_BULLET]每种奢侈资源即使全部交易出去只减少2[ICON_HAPPINESS_1]快乐。
+				[NEWLINE][ICON_BULLET]所有城市免费获得市场。
+				[NEWLINE][ICON_BULLET]研发完成相应科技时，有前置建筑的城市获得对应经济建筑。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_PHOENICIAN_HERITAGE">
-			<Text>每位专家+2[ICON_PRODUCTION]产能。每条海上商路+4[ICON_GOLD]金钱并且+25%商路距离。</Text>
+			<Text>
+				[ICON_BULLET]每位专家+2[ICON_PRODUCTION]产能。
+				[NEWLINE][ICON_BULLET]每条海上商路+4[ICON_GOLD]金钱并且+25%商路距离。
+			</Text>
 		</Replace>	
 
 		<Replace Tag="TXT_KEY_TRAIT_EXTRA_TRADE">
-			<Text>资源多样性使国际商路带给葡萄牙的[ICON_GOLD]金钱加倍。所有海滨城市免费获得港口。</Text>
+			<Text>
+				[ICON_BULLET]资源多样性使国际商路带给葡萄牙的[ICON_GOLD]金钱加倍。
+				[NEWLINE][ICON_BULLET]所有海滨城市免费获得港口。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_SUPER_CITY_STATE">
-			<Text>不能建造移民和吞并已占领城市，可在傀儡城市中以金钱购买项目，可建商路数量加倍，首都内奇观和博物馆[ICON_TOURISM]艺术品搭配的效果翻倍。研究光学科技后立即获得一位威尼斯商人。可向同盟城邦购买粮食，每回合仅限一次。</Text>
+			<Text>
+				[ICON_BULLET]不能建造移民和吞并已占领城市，可在傀儡城市中以金钱购买项目。
+				[NEWLINE][ICON_BULLET]可建商路数量加倍，首都内奇观和博物馆[ICON_TOURISM]艺术品搭配的效果翻倍。
+				[NEWLINE][ICON_BULLET]研究光学科技后立即获得一位威尼斯商人。
+				[NEWLINE][ICON_BULLET]可向同盟城邦购买食物[ICON_FOOD]，每回合仅限一次。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_SPICE">
 			<Text>
-				在非出生地大陆建造的前三座城市可以提供2份独有奢侈资源，这三座城市无法被摧毁且没有额外的管理成本。
-				每拥有一种数量大于1的奢侈资源，完成城邦任务获得的[ICON_INFLUENCE]影响力+5%，上限为40%
+				[ICON_BULLET]在非出生地大陆建造的前三座城市可以提供2份独有奢侈资源，这三座城市无法被摧毁且没有额外的管理成本。
+				[NEWLINE][ICON_BULLET]每拥有一种数量大于1的奢侈资源，完成城邦任务获得的[ICON_INFLUENCE]影响力+5%，上限为40%
 			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_GREAT_EXPANSE">
 			<Text>
-				新建城市获得额外的初始地块（6格），所有城市免费赠送一个粮仓。
-				所有侦察兵单位可以选择遗迹结果。
+				[ICON_BULLET]新建城市获得额外的初始地块（6格），所有城市免费赠送一个粮仓。
+				[NEWLINE][ICON_BULLET]所有侦察兵单位可以选择遗迹结果。
 			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_WAYFINDING">
 			<Text>
-				单位初始时即能以海运模式进入大洋。
-				移民可以在海滨地块建城，海滨城市获得额外的[ICON_PRODUCTION]产能和[ICON_CULTURE]文化，随时代增加。
-				市政厅最高等级为3级（无4和5级城市）。
-				在摩艾石像群周边2格内单位+10%[ICON_STRENGTH]战斗力。
+				[ICON_BULLET]单位初始时即能以海运模式进入大洋。
+				[NEWLINE][ICON_BULLET]移民可以在海滨地块建城，海滨城市获得额外的[ICON_PRODUCTION]产能和[ICON_CULTURE]文化，随时代增加。
+				[NEWLINE][ICON_BULLET]市政厅最高等级为3级（无4和5级城市）。
+				[NEWLINE][ICON_BULLET]在摩艾石像群周边2格内单位+10%[ICON_STRENGTH]战斗力。
 			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_CULTURE_FROM_KILLS">
-			<Text>当你杀死了一个敌人单位，你会获得相当于其50%[ICON_STRENGTH]战斗力的[ICON_CULTURE]文化。施行新政策所需[ICON_CULTURE]文化值-10%</Text>
+			<Text>
+				[ICON_BULLET]当你杀死了一个敌人单位，你会获得相当于其50%[ICON_STRENGTH]战斗力的[ICON_CULTURE]文化。
+				[NEWLINE][ICON_BULLET]施行新政策所需[ICON_CULTURE]文化值-10%
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_AMPHIB_WARLORD">
-			<Text>河流及其相邻区块不会阻碍本方单位[ICON_MOVES]移动。陆地商路能够通过河流线延长（视为道路）。所有贸易站+1[ICON_GOLD]金钱产出。</Text>
+			<Text>
+				[ICON_BULLET]河流及其相邻区块不会阻碍本方单位[ICON_MOVES]移动。
+				[NEWLINE][ICON_BULLET]陆地商路能够通过河流线延长（视为道路）。
+				[NEWLINE][ICON_BULLET]所有贸易站+1[ICON_GOLD]金钱产出。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_BONUS_AGAINST_TECH">
-			<Text>与拥有更多城市的文明的单位作战时获得25%战斗力加成。所有专家+2[ICON_CULTURE]文化产出。</Text>
+			<Text>
+				[ICON_BULLET]与拥有更多城市的文明的单位作战时获得25%战斗力加成。
+				[NEWLINE][ICON_BULLET]所有专家+2[ICON_CULTURE]文化产出。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_POPULATION_GROWTH">
 			<Text>
-				城市[ICON_CITIZEN]人口带来的[ICON_HAPPINESS_4]不满-20%。
-				城市中每个主流宗教信徒+1%[ICON_FOOD]粮食产出。
+				[ICON_BULLET]城市[ICON_CITIZEN]人口带来的[ICON_HAPPINESS_4]不满-20%。
+				[NEWLINE][ICON_BULLET]城市中每个主流宗教信徒+1%[ICON_FOOD]粮食产出。
 			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_EXTRA_BELIEF">
-			<Text>创立宗教时额外选择一项信条，研发文字后获得一位大先知。</Text>
+			<Text>
+				[ICON_BULLET]创立宗教时额外选择一项信条。
+				[NEWLINE][ICON_BULLET]研发文字后获得一位大先知。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_FAITH_FROM_NATURE">
-			<Text>邻近未开发森林地块的城市+1[ICON_PEACE]信仰。邻近3处以上未开发森林地块的城市+2[ICON_PEACE]信仰。每处猎场+1[ICON_PRODUCTION]产能，+1[ICON_PEACE]信仰。</Text>
+			<Text>
+				[ICON_BULLET]邻近未开发森林地块的城市+1[ICON_PEACE]信仰。
+				[NEWLINE][ICON_BULLET]邻近3处以上未开发森林地块的城市+2[ICON_PEACE]信仰。
+				[NEWLINE][ICON_BULLET]每处猎场+1[ICON_PRODUCTION]产能，+1[ICON_PEACE]信仰。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_ANNEX_CITY_STATE">
-			<Text>可以通过[ICON_GOLD]金钱来购买与奥地利同盟8回合的城邦。城邦故都所在城市（非傀儡）的市政厅管理成本最多可-2级。</Text>
+			<Text>
+				[ICON_BULLET]可以通过[ICON_GOLD]金钱来购买与奥地利同盟8回合的城邦。
+				[NEWLINE][ICON_BULLET]城邦故都所在城市（非傀儡）的市政厅管理成本最多可-2级。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_CITY_STATE_BONUSES">
-			<Text>友好城邦提供的[ICON_FOOD]食物,[ICON_CULTURE]文化,[ICON_PEACE]信仰增加50%, 军事城邦赠送的单位获得免费20经验。可以把伟人作为礼物单位送给城邦并获得150点[ICON_INFLUENCE]影响力。</Text>
+			<Text>
+				[ICON_BULLET]友好城邦提供的[ICON_FOOD]食物,[ICON_CULTURE]文化,[ICON_PEACE]信仰增加50%。
+				[NEWLINE][ICON_BULLET]军事城邦赠送的单位获得免费20经验。
+				[NEWLINE][ICON_BULLET]可以把伟人作为礼物单位送给城邦并获得150点[ICON_INFLUENCE]影响力。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_LAND_TRADE_GOLD2">
-			<Text>陆上商队+50%距离，商队传输宗教压力提高3倍。每处绿洲+2[ICON_CULTURE]文化和+2[ICON_PEACE]信仰。</Text>
+			<Text>
+				[ICON_BULLET]陆上商队+50%距离，商队传输宗教压力提高3倍。
+				[NEWLINE][ICON_BULLET]每处绿洲+2[ICON_CULTURE]文化和+2[ICON_PEACE]信仰。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_DIPLOMACY_GREAT_PEOPLE">
 			<Text>
-				所有达到小型城市（6[ICON_CITIZEN]人口）规模的城市中每2[ICON_CITIZEN]人口+1[ICON_RESEARCH]科研。
-				当宣友时，瑞典和他的盟友得到+10%的[ICON_GREAT_PEOPLE]伟人点数。
+				[ICON_BULLET]所有达到小型城市（6[ICON_CITIZEN]人口）规模的城市中每2[ICON_CITIZEN]人口+1[ICON_RESEARCH]科研。
+				[NEWLINE][ICON_BULLET]当宣友时，瑞典和他的盟友得到+10%的[ICON_GREAT_PEOPLE]伟人点数。
 			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_SCHOLARS_JADE_HALL">
-			<Text>所有专业人员+2[ICON_RESEARCH]科研，所有伟人地块设施+2[ICON_RESEARCH]科研。</Text>
+			<Text>
+				[ICON_BULLET]所有专业人员+2[ICON_RESEARCH]科研。
+				[NEWLINE][ICON_BULLET]所有伟人地块设施+2[ICON_RESEARCH]科研。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_LONG_COUNT">
-			<Text>若你已研发神学科技，首都每次完成科研建筑时获得一次性科研奖励，且每个长纪历（394年，游戏需要！这不是真实的周期时长！）周期获得一位自选伟人，首轮每种伟人仅能选择一次。</Text>
+			<Text>
+				[ICON_BULLET]若你已研发神学科技，启用长纪历，首都每次完成科研建筑时获得一次性科研奖励
+				[NEWLINE][ICON_BULLET]启用长纪历后，每个长纪历(394年，游戏需要!这不是真实的周期时长!)周期获得一位自选伟人，首轮每种伟人仅能选择一次。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_IGNORE_TERRAIN_IN_FOREST">
-			<Text>单位在己方森林和丛林地块移动视同道路。此类地块在获得轮子科技后可建立[ICON_CONNECTED]城市连接。商队在森林和丛林地块移动视同道路。所有陆军单位在森林和丛林移动力翻倍。建成农场时，地块上的森林不会被移除。</Text>
+			<Text>
+				[ICON_BULLET]单位在己方森林和丛林地块移动视同道路。
+				[NEWLINE][ICON_BULLET]森林和丛林地块在获得轮子科技后可建立[ICON_CONNECTED]城市连接。
+				[NEWLINE][ICON_BULLET]商队在森林和丛林地块移动视同道路。所有陆军单位在森林和丛林移动力翻倍。
+				[NEWLINE][ICON_BULLET]建成农场时，地块上的森林不会被移除。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_SEVEN_CITIES">
-			<Text>发现自然奇观时获得[ICON_GOLD]金钱奖励（首先发现则可获得更多），自然奇观提供的地块产出加倍。游乐场提供[ICON_HAPPINESS_1]全局快乐而非[ICON_HAPPINESS_1]本地快乐，并给其所在城每处[ICON_RES_COW]牛和[ICON_RES_BISON]野牛资源+2[ICON_GOLD]金钱、+2[ICON_CULTURE]文化产出。</Text>
+			<Text>
+				[ICON_BULLET]发现自然奇观时获得[ICON_GOLD]金钱奖励(首先发现则可获得更多)，自然奇观提供的地块产出加倍。
+				[NEWLINE][ICON_BULLET]游乐场提供[ICON_HAPPINESS_1]全局快乐而非[ICON_HAPPINESS_1]本地快乐，并给其所在城每处[ICON_RES_COW]牛和[ICON_RES_BISON]野牛资源+2[ICON_GOLD]金钱、+2[ICON_CULTURE]文化产出。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_GREAT_ANDEAN_ROAD">
 			<Text>
-				单位进入丘陵地块不消耗额外移动力，工人可以铲除丘陵地块上的[ICON_RES_SHEEP]羊。
-				丘陵上的设施不需要维护费，其他地形上的设施维护费减半。
-				平民单位可以进入山脉地块。移民在山脉地块不会额外损耗，且可以建立城市。
-				山脉城市获得额外的[ICON_RESEARCH]科研和[ICON_FOOD]食物产出，随时代加成。
+				[ICON_BULLET]单位进入丘陵地块不消耗额外移动力，工人可以铲除丘陵地块上的[ICON_RES_SHEEP]羊。
+				[NEWLINE][ICON_BULLET]丘陵上的设施不需要维护费，其他地形上的设施维护费减半。
+				[NEWLINE][ICON_BULLET]平民单位可以进入山脉地块。移民在山脉地块不会额外损耗，允许建立山脉城市。
+				[NEWLINE][ICON_BULLET]山脉城市获得额外的[ICON_RESEARCH]科研和[ICON_FOOD]食物产出，随时代加成。
+			</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_TRAIT_SOLIDARITY">
+			<Text>
+				[ICON_BULLET]每次进入新时代时免费获得一项社会政策。
+			</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_TRAIT_INGENIOUS">
+			<Text>
+				[ICON_BULLET]发明文字后立即获得一位大科学家。
+				[NEWLINE][ICON_BULLET]大科学家点数积累速率+50%。
+			</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_TRAIT_CARNIVAL">
+			<Text>
+				[ICON_BULLET]黄金时代期间魅力[ICON_TOURISM]产出+100%。
+				[NEWLINE][ICON_BULLET]黄金时代期间大美术家、大音乐家、大文学家产生速率+50%。
 			</Text>
 		</Replace>
 

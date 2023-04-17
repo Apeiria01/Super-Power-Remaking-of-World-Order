@@ -1968,6 +1968,9 @@ Events.SerialEventCityInfoDirty.Add(OnCityViewUpdate);
 function RecalcPanelSize()
 	Controls.RightStack:CalculateSize();
 	local size = math.min( screenSizeY + 30, Controls.RightStack:GetSizeY() + 85 );
+	if UI.GetHeadSelectedCity():IsNoAutoAssignSpecialists() then
+		size = screenSizeY + 30;
+	end
 	size = math.max( size, 160 );
     Controls.BuildingListBackground:SetSizeY( size );
     
