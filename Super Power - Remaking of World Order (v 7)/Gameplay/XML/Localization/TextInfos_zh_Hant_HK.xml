@@ -7164,68 +7164,101 @@
 		<!--*******************Autocracy********************* -->
 		
 		<Replace Tag="TXT_KEY_POLICY_FUTURISM_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]未來主義[ENDCOLOR][NEWLINE]佔領一座城市時可以一次性掠奪到該城市在之前20回合內[ICON_CULTURE]文化值產出值總和。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]未來主義[ENDCOLOR]
+				[NEWLINE]占領一座城市時可以一次性掠奪到該城市在之前20回合內[ICON_CULTURE]文化產出值總和。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_ELITE_FORCES_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]精英部隊[ENDCOLOR][NEWLINE]所有新單位獲得15點經驗值。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]精英部隊[ENDCOLOR]
+				[NEWLINE]所有新單位獲得15點經驗值。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_UNITED_FRONT_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]統一戰線[ENDCOLOR][NEWLINE]每個軍事基地，軍事學院和道場為城市+15%[ICON_PRODUCTION]生產力和[ICON_RESEARCH]科技值產出。
-			[NEWLINE][NEWLINE]建有軍事基地的城市在賣掉市政府以後仍可保留所有軍事建築。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]統一戰線[ENDCOLOR][NEWLINE]每個軍事基地，軍事學院和道場為城市+15%[ICON_PRODUCTION]產能和[ICON_RESEARCH]科研產出。
+				[NEWLINE]建有軍事基地的城市在賣掉市政府以後仍可保留所有軍事建築。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_FORTIFIED_BORDERS_HELP" >
 			<Text>
-				[COLOR_POSITIVE_TEXT]邊界強化[ENDCOLOR][NEWLINE]每個軍營、軍械所、兵工廠、軍事基地、軍事學院、碼頭、船塢、軍事學院、道場、馬厩、金屬鍛造廠、冶鐵坊、煉焦廠、回收中心、石油精煉廠、增殖反應堆、煤液化工廠、煤灰提取廠+1[ICON_HAPPINESS_1]本地幸福度。
-				[NEWLINE]這些建築的維護費-50%[ICON_GOLD]。
-				[NEWLINE]建造這些建築時+100%[ICON_PRODUCTION]生產力。
+				[COLOR_POSITIVE_TEXT]邊界強化[ENDCOLOR]
+				[NEWLINE]所有的軍事建築和資源建築+1[ICON_HAPPINESS_1]本地快樂、-50%維護費[ICON_GOLD]，且建造時+100%[ICON_PRODUCTION]產能積累。
 			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_NATIONALISM_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]民族主義[ENDCOLOR][NEWLINE]單位[ICON_GOLD]維護費-20%。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]民族主義[ENDCOLOR]
+				[NEWLINE]單位[ICON_GOLD]維護費-20%。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_MILITARISM_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]軍國主義[ENDCOLOR][NEWLINE]佔領敵方城市後[COLOR_POSITIVE_TEXT]抵抗時間[ENDCOLOR]減半。如果該城市[ICON_CITIZEN]人口少於6或敵方已失去原始首都則沒有抵抗。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]軍國主義[ENDCOLOR]
+				[NEWLINE]占領敵方城市後[COLOR_POSITIVE_TEXT]抵抗時間[ENDCOLOR]減半。如果該城市[ICON_CITIZEN]人口少於6或敵方已失去原始首都則沒有抵抗。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_LIGHTNING_WARFARE_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]閃電戰[ENDCOLOR][NEWLINE]大軍事家+2[ICON_MOVES]移動力。所有非民兵陸軍單位+1[ICON_MOVES]移動力，允許使用敵軍境內道路。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]閃電戰[ENDCOLOR]
+				[NEWLINE]大軍事家+2[ICON_MOVES]移動力。所有非民兵陸軍單位+1[ICON_MOVES]移動力，允許使用敵軍境內道路。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_TOTAL_WAR_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]全面戰爭[ENDCOLOR][NEWLINE]所有城市+5 [ICON_RES_MANPOWER]人力。城市升級到大城市前，因城市規模造成的[ICON_RES_CONSUMER]商品和[ICON_RES_ELECTRICITY]電力消耗減少一個等級。 軍事單位訓練速度+25%。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]全面戰爭[ENDCOLOR]
+				[NEWLINE]所有城市+5[ICON_RES_MANPOWER]人力，升級到大城市前，因城市規模造成的[ICON_RES_CONSUMER]商品和[ICON_RES_ELECTRICITY]電力消耗減少一個等級，軍事單位訓練速度+25%。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_POLICE_STATE_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]警察國家[ENDCOLOR][NEWLINE]法院、治安署、審計署、警察局和地檢署+3[ICON_HAPPINESS_1]本地幸福度。這些建築因[ICON_CITIZEN]人口造成的[ICON_GOLD]維護費減半</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]警察國家[ENDCOLOR]
+				[NEWLINE]法院、治安署、審計署、警察局和地檢署+3[ICON_HAPPINESS_1]本地快樂。這些建築因[ICON_CITIZEN]人口造成的[ICON_GOLD]維護費減半
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_CULT_PERSONALITY_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]個人崇拜[ENDCOLOR][NEWLINE]非佔領人口的[ICON_HAPPINESS_4]不滿-15%，開啟一次[ICON_GOLDEN_AGE]黃金時代。[NEWLINE]消除來自其他文明掌握科技所帶來的[ICON_TOURISM]旅遊業績加成。[ICON_HAPPINESS_4]公共輿論不滿減半。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]個人崇拜[ENDCOLOR]
+				[NEWLINE]非占領人口的[ICON_HAPPINESS_4]不滿-15%，開啟一次[ICON_GOLDEN_AGE]黃金時代。
+				[NEWLINE]消除來自其他文明掌握科技所帶來的[ICON_TOURISM]魅力加成。
+				[NEWLINE][ICON_HAPPINESS_4]公共輿論不滿減半。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_NEW_ORDER" >
 			<Text>威權政府</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_NEW_ORDER_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]威權政府[ENDCOLOR][NEWLINE]每佔領一個原始首都，軍事單位攻擊傷害固定+4。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]威權政府[ENDCOLOR]
+				[NEWLINE]每占領一個原始首都，軍事單位攻擊傷害固定+4。
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_NEW_ORDER_TEXT" >
-			<Text>威權主義是指處於民主政體和極權政體之間的一種非民主、非極權的政體形式。特點是嚴格遵從政府的權威，而政府常運用壓制性手段，用來維持和執行社會控制。[NEWLINE][NEWLINE]威權政府一般指依靠各種行政手段、法令、軍警以控制國民言論、結社、集會等自由之政府。一些人或組織尋求將他人置於自己的勢力範圍之下，並不顧及獲取共識，這個政府所控制的國家會是不自由、不民主的。[NEWLINE][NEWLINE]權威主義一詞也被用來形容這種人或組織的個性和管理風格。在權威主義的國家中，國家權威滲透到公民生活的各方面，其中很多方面根據其他的政治觀來看，都應屬於個人自由的範圍。權威主義的程度不同，甚至非常民主和自由主義的國家也會在某種程度上表現出權威主義的一面，例如在國家安全問題上。</Text>
+			<Text>威權主義是指處於民主政體和極權政體之間的一種非民主、非極權的政體形式。特點是嚴格遵從政府的權威，而政府常運用壓製性手段，用來維持和執行社會控製。[NEWLINE][NEWLINE]威權政府一般指依靠各種行政手段、法令、軍警以控製國民言論、結社、集會等自由之政府。一些人或組織尋求將他人置於自己的勢力範圍之下，並不顧及獲取共識，這個政府所控製的國家會是不自由、不民主的。[NEWLINE][NEWLINE]權威主義一詞也被用來形容這種人或組織的個性和管理風格。在權威主義的國家中，國家權威滲透到公民生活的各方面，其中很多方面根據其他的政治觀來看，都應屬於個人自由的範圍。權威主義的程度不同，甚至非常民主和自由主義的國家也會在某種程度上表現出權威主義的一面，例如在國家安全問題上。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_GUNBOAT_DIPLOMACY" >
 			<Text>霸權主義</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_GUNBOAT_DIPLOMACY_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]霸權主義[ENDCOLOR][NEWLINE]每當你生產戰略威懾性武器，對所有文明施加一次性[ICON_TOURISM]旅遊業績輸出。（無畏艦、戰列艦、導彈巡洋艦、戰略轟炸機、航母和核動力航母：相當於其[ICON_STRENGTH]戰鬥力數值一半的[ICON_TOURISM]旅遊業績；原子彈：250[ICON_TOURISM]旅遊業績；核導彈：500[ICON_TOURISM]旅遊業績；洲際核導彈：1000[ICON_TOURISM]旅遊業績）</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]霸權主義[ENDCOLOR]
+				[NEWLINE]每當你生產戰略威懾性武器，對所有文明施加一次性[ICON_TOURISM]魅力輸出。（無畏艦、戰列艦、導彈巡洋艦、戰略轟炸機、航母和核動力航母：相當於其[ICON_STRENGTH]戰鬥力數值一半的[ICON_TOURISM]魅力；原子彈：250[ICON_TOURISM]魅力；核導彈：500[ICON_TOURISM]魅力；洲際核導彈：1000[ICON_TOURISM]魅力）
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_GUNBOAT_DIPLOMACY_TEXT" >
-			<Text>1974年毛澤東接見贊比亞總統卡翁達時，提出霸權主義的概念。這是他一以貫之的民族主義傾向、世界景觀和反霸防修思想的體現。具有國內意識形支撐態邏輯框架和外交政策兩種既有區別、又有關聯的功能。它是指在國際關係上，大國、強國憑藉軍事和經濟實力，超越國際法、國際政治格局現狀一味擴張自身勢力範圍，操縱國際事務，干涉他國內政，甚至進行武裝侵略和佔領，稱霸世界、主宰世界的強權政治、強權政策。冷戰時期，主要是指美國和前蘇聯這兩個在核武器和軍備競賽中握有絕對優勢的超級大國的對外政策。成了蘇美的代名詞。與帝國主義、殖民主義等概念並舉，帶有強烈道德譴責意味。比直指帝國主義在外交禮儀上顯得相對委婉一些。與英文Hegemony或Hegemonism指非均衡的政治支配狀態，特定政治佈局中某一國因其政治和經濟實力之優勢而具有主導運作的局面不同。</Text>
+			<Text>1974年毛澤東接見贊比亞總統卡翁達時，提出霸權主義的概念。這是他一以貫之的民族主義傾向、世界景觀和反霸防修思想的體現。具有國內意識形支撐態邏輯框架和外交政策兩種既有區別、又有關聯的功能。它是指在國際關系上，大國、強國憑借軍事和經濟實力，超越國際法、國際政治格局現狀一味擴張自身勢力範圍，操縱國際事務，幹涉他國內政，甚至進行武裝侵略和占領，稱霸世界、主宰世界的強權政治、強權政策。冷戰時期，主要是指美國和前蘇聯這兩個在核武器和軍備競賽中握有絕對優勢的超級大國的對外政策。成了蘇美的代名詞。與帝國主義、殖民主義等概念並舉，帶有強烈道德譴責意味。比直指帝國主義在外交禮儀上顯得相對委婉一些。與英文Hegemony或Hegemonism指非均衡的政治支配狀態，特定政治布局中某一國因其政治和經濟實力之優勢而具有主導運作的局面不同。</Text>
 		</Replace>
 
 	<!--************************* Policy Effects Texts *************************** -->
