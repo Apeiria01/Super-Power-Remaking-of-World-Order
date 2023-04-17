@@ -7276,57 +7276,85 @@
 		<!--*******************Autocracy********************* -->
 
 		<Replace Tag="TXT_KEY_POLICY_FUTURISM_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]未来主义[ENDCOLOR][NEWLINE]占领一座城市时可以一次性掠夺到该城市在之前20回合内[ICON_CULTURE]文化产出值总和。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]未来主义[ENDCOLOR]
+				[NEWLINE]占领一座城市时可以一次性掠夺到该城市在之前20回合内[ICON_CULTURE]文化产出值总和。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_ELITE_FORCES_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]精英部队[ENDCOLOR][NEWLINE]所有新单位获得15点经验值。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]精英部队[ENDCOLOR]
+				[NEWLINE]所有新单位获得15点经验值。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_UNITED_FRONT_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]统一战线[ENDCOLOR][NEWLINE]每个军事基地，军事学院和道场为城市+15%[ICON_PRODUCTION]产能和[ICON_RESEARCH]科研产出。
-				[NEWLINE][NEWLINE]建有军事基地的城市在卖掉市政府以后仍可保留所有军事建筑。
+				[NEWLINE]建有军事基地的城市在卖掉市政府以后仍可保留所有军事建筑。
 			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_FORTIFIED_BORDERS_HELP" >
 			<Text>
-				[COLOR_POSITIVE_TEXT]边界强化[ENDCOLOR][NEWLINE]每个军营、军械所、兵工厂、军事基地、军事学院、码头、船坞、军事学院、道场、马厩、金属锻造厂、冶铁坊、炼焦厂、回收中心、石油精炼厂、增殖反应堆、煤液化工厂、煤灰提取厂+1[ICON_HAPPINESS_1]本地快乐。
-				[NEWLINE]这些建筑的维护费-50%[ICON_GOLD]。
-				[NEWLINE]建造这些建筑时+100%[ICON_PRODUCTION]产能。
+				[COLOR_POSITIVE_TEXT]边界强化[ENDCOLOR]
+				[NEWLINE]所有的军事建筑和资源建筑+1[ICON_HAPPINESS_1]本地快乐、-50%维护费[ICON_GOLD]，且建造时+100%[ICON_PRODUCTION]产能积累。
 			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_NATIONALISM_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]民族主义[ENDCOLOR][NEWLINE]单位[ICON_GOLD]维护费-20%。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]民族主义[ENDCOLOR]
+				[NEWLINE]单位[ICON_GOLD]维护费-20%。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_MILITARISM_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]军国主义[ENDCOLOR][NEWLINE]占领敌方城市后[COLOR_POSITIVE_TEXT]抵抗时间[ENDCOLOR]减半。如果该城市[ICON_CITIZEN]人口少于6或敌方已失去原始首都则没有抵抗。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]军国主义[ENDCOLOR]
+				[NEWLINE]占领敌方城市后[COLOR_POSITIVE_TEXT]抵抗时间[ENDCOLOR]减半。如果该城市[ICON_CITIZEN]人口少于6或敌方已失去原始首都则没有抵抗。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_LIGHTNING_WARFARE_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]闪电战[ENDCOLOR][NEWLINE]大军事家+2[ICON_MOVES]移动力。所有非民兵陆军单位+1[ICON_MOVES]移动力，允许使用敌军境内道路。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]闪电战[ENDCOLOR]
+				[NEWLINE]大军事家+2[ICON_MOVES]移动力。所有非民兵陆军单位+1[ICON_MOVES]移动力，允许使用敌军境内道路。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_TOTAL_WAR_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]全面战争[ENDCOLOR][NEWLINE]所有城市+5[ICON_RES_MANPOWER]人力。城市升级到大城市前，因城市规模造成的[ICON_RES_CONSUMER]商品和[ICON_RES_ELECTRICITY]电力消耗减少一个等级，军事单位训练速度+25%。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]全面战争[ENDCOLOR]
+				[NEWLINE]所有城市+5[ICON_RES_MANPOWER]人力，升级到大城市前，因城市规模造成的[ICON_RES_CONSUMER]商品和[ICON_RES_ELECTRICITY]电力消耗减少一个等级。军事单位训练速度+25%。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_POLICE_STATE_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]警察国家[ENDCOLOR][NEWLINE]法院、治安署、审计署、警察局和地检署+3[ICON_HAPPINESS_1]本地快乐。这些建筑因[ICON_CITIZEN]人口造成的[ICON_GOLD]维护费减半</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]警察国家[ENDCOLOR]
+				[NEWLINE]法院、治安署、审计署、警察局和地检署+3[ICON_HAPPINESS_1]本地快乐。这些建筑因[ICON_CITIZEN]人口造成的[ICON_GOLD]维护费减半。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_CULT_PERSONALITY_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]个人崇拜[ENDCOLOR][NEWLINE]非占领人口的[ICON_HAPPINESS_4]不满-15%，开启一次[ICON_GOLDEN_AGE]黄金时代。[NEWLINE]消除来自其他文明掌握科技所带来的[ICON_TOURISM]魅力加成。[NEWLINE][ICON_HAPPINESS_4]公共舆论不满减半。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]个人崇拜[ENDCOLOR]
+				[NEWLINE]非占领人口的[ICON_HAPPINESS_4]不满-15%，开启一次[ICON_GOLDEN_AGE]黄金时代。
+				[NEWLINE]消除来自其他文明掌握科技所带来的[ICON_TOURISM]魅力加成。
+				[NEWLINE][ICON_HAPPINESS_4]公共舆论不满减半。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_NEW_ORDER" >
 			<Text>威权政府</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_NEW_ORDER_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]威权政府[ENDCOLOR][NEWLINE]每占领一个原始首都，军事单位攻击伤害固定+4。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]威权政府[ENDCOLOR]
+				[NEWLINE]每占领一个原始首都，军事单位攻击伤害固定+4。
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_NEW_ORDER_TEXT" >
 			<Text>威权主义是指处于民主政体和极权政体之间的一种非民主、非极权的政体形式。特点是严格遵从政府的权威，而政府常运用压制性手段，用来维持和执行社会控制。[NEWLINE][NEWLINE]威权政府一般指依靠各种行政手段、法令、军警以控制国民言论、结社、集会等自由之政府。一些人或组织寻求将他人置于自己的势力范围之下，并不顾及获取共识，这个政府所控制的国家会是不自由、不民主的。[NEWLINE][NEWLINE]权威主义一词也被用来形容这种人或组织的个性和管理风格。在权威主义的国家中，国家权威渗透到公民生活的各方面，其中很多方面根据其他的政治观来看，都应属于个人自由的范围。权威主义的程度不同，甚至非常民主和自由主义的国家也会在某种程度上表现出权威主义的一面，例如在国家安全问题上。</Text>
@@ -7336,7 +7364,10 @@
 			<Text>霸权主义</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_GUNBOAT_DIPLOMACY_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]霸权主义[ENDCOLOR][NEWLINE]每当你生产战略威慑性武器，对所有文明施加一次性[ICON_TOURISM]魅力输出。（无畏舰、战列舰、导弹巡洋舰、战略轰炸机、航母和核动力航母：相当于其[ICON_STRENGTH]战斗力数值一半的[ICON_TOURISM]魅力；原子弹：250[ICON_TOURISM]魅力；核导弹：500[ICON_TOURISM]魅力；洲际核导弹：1000[ICON_TOURISM]魅力）</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]霸权主义[ENDCOLOR]
+				[NEWLINE]每当你生产战略威慑性武器，对所有文明施加一次性[ICON_TOURISM]魅力输出。（无畏舰、战列舰、导弹巡洋舰、战略轰炸机、航母和核动力航母：相当于其[ICON_STRENGTH]战斗力数值一半的[ICON_TOURISM]魅力；原子弹：250[ICON_TOURISM]魅力；核导弹：500[ICON_TOURISM]魅力；洲际核导弹：1000[ICON_TOURISM]魅力）
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_GUNBOAT_DIPLOMACY_TEXT" >
 			<Text>1974年毛泽东接见赞比亚总统卡翁达时，提出霸权主义的概念。这是他一以贯之的民族主义倾向、世界景观和反霸防修思想的体现。具有国内意识形支撑态逻辑框架和外交政策两种既有区别、又有关联的功能。它是指在国际关系上，大国、强国凭借军事和经济实力，超越国际法、国际政治格局现状一味扩张自身势力范围，操纵国际事务，干涉他国内政，甚至进行武装侵略和占领，称霸世界、主宰世界的强权政治、强权政策。冷战时期，主要是指美国和前苏联这两个在核武器和军备竞赛中握有绝对优势的超级大国的对外政策。成了苏美的代名词。与帝国主义、殖民主义等概念并举，带有强烈道德谴责意味。比直指帝国主义在外交礼仪上显得相对委婉一些。与英文Hegemony或Hegemonism指非均衡的政治支配状态，特定政治布局中某一国因其政治和经济实力之优势而具有主导运作的局面不同。</Text>
