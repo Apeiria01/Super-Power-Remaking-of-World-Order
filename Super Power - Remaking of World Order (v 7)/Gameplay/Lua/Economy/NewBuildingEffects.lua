@@ -676,12 +676,12 @@ GameEvents.TradeRouteMove.Add(function(iX, iY, iUnit, iOwner, iOriginalPlayer, i
 
 	local pCity = plot:GetWorkingCity();
 	if pCity == nil then
-		print("TradeRouteMove-Portugal-UB: pCity == nil");
+		-- print("TradeRouteMove-Portugal-UB: pCity == nil");
 		return;
 	end
 
 	if not pCity:IsHasBuilding(GameInfoTypes["BUILDING_PORTUGAL_PORT"]) then
-		print("TradeRouteMove-Portugal-UB: do not have BUILDING_PORTUGAL_PORT");
+		-- print("TradeRouteMove-Portugal-UB: do not have BUILDING_PORTUGAL_PORT");
 		return;
 	end
 
