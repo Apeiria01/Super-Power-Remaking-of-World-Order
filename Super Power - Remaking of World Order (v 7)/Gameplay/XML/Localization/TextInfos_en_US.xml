@@ -8123,15 +8123,17 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_UNITED_FRONT_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]United Front[ENDCOLOR][NEWLINE]+15% [ICON_RESEARCH] Science and [ICON_PRODUCTION] Production from every Military Base, Military Academy and Dojo. 
-			[NEWLINE][NEWLINE]The military buildings in city with military base keep existing even you sell the local government.</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]United Front[ENDCOLOR][NEWLINE]+15% [ICON_RESEARCH] Science and [ICON_PRODUCTION] Production from every Military Base, Military Academy and Dojo. 
+				[NEWLINE]The military buildings in city with military base keep existing even you sell the local government.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_FORTIFIED_BORDERS_HELP" >
 			<Text>
-				[COLOR_POSITIVE_TEXT]Fortified Borders[ENDCOLOR][NEWLINE]+1 [ICON_HAPPINESS_1] Local Happiness from every Barracks, Arsenal, Military Base, Military Academy, Dojo, Stable, Wood Dock, Shipyard, Metal Processing Plant, Steel Warehouse, Coal Company, Recycling Center, Oil Refinery, Uraninite Refinery, Coal Liquefaction System and Uranium in Coal Refining System.
-				[NEWLINE]-50% [ICON_GOLD]Maintenance of these Buildings.
-				[NEWLINE]+100%[ICON_PRODUCTION] while building these buildings
+				[COLOR_POSITIVE_TEXT]Fortified Borders[ENDCOLOR]
+				[NEWLINE]+1 [ICON_HAPPINESS_1] Local Happiness from every Military building and Resource building.
+				[NEWLINE]-50% [ICON_GOLD]Maintenance of these Buildings and +100%[ICON_PRODUCTION] while building these buildings.
 			</Text>
 		</Replace>
 
