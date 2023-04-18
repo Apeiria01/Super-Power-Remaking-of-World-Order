@@ -5696,7 +5696,8 @@
 		<Replace Tag="TXT_KEY_TRAIT_VIKING_FURY">
 			<Text>
 				[ICON_BULLET]所有陆军近战单位和海军近战单位劫掠均不消耗[ICON_MOVES]移动力，并具有攻城时将对城市造成伤害的200%数值转化为金钱的能力。
-				[NEWLINE][ICON_BULLET]攻占城市或攻占营寨所获得2倍的[ICON_GOLD]金钱。每处海上设施+1[ICON_CULTURE]文化产出。
+				[NEWLINE][ICON_BULLET]攻占城市或攻占营寨所获得2倍的[ICON_GOLD]金钱。
+				[NEWLINE][ICON_BULLET]每处海上设施+1[ICON_CULTURE]文化产出。
 			</Text>
 		</Replace>
 
@@ -5746,7 +5747,7 @@
 
 		<Replace Tag="TXT_KEY_TRAIT_LUXURY_RETENTION">
 			<Text>
-				[ICON_BULLET]每种奢侈资源即使全部交易出去只减少2[ICON_HAPPINESS_1]快乐。
+				[ICON_BULLET]每种奢侈资源即使全部交易出去也只减少2[ICON_HAPPINESS_1]快乐。
 				[NEWLINE][ICON_BULLET]所有城市免费获得市场。
 				[NEWLINE][ICON_BULLET]研发完成相应科技时，有前置建筑的城市获得对应经济建筑。
 			</Text>
@@ -5769,8 +5770,8 @@
 		<Replace Tag="TXT_KEY_TRAIT_SUPER_CITY_STATE">
 			<Text>
 				[ICON_BULLET]不能建造移民和吞并已占领城市，可在傀儡城市中以金钱购买项目。
-				[NEWLINE][ICON_BULLET]可建商路数量加倍，首都内奇观和博物馆[ICON_TOURISM]艺术品搭配的效果翻倍。
-				[NEWLINE][ICON_BULLET]研究光学科技后立即获得一位威尼斯商人。
+				[NEWLINE][ICON_BULLET]可建商路数量加倍，研究光学科技后立即获得一位威尼斯商人。
+				[NEWLINE][ICON_BULLET]首都内奇观和博物馆[ICON_TOURISM]艺术品搭配的效果翻倍。
 				[NEWLINE][ICON_BULLET]可向同盟城邦购买食物[ICON_FOOD]，每回合仅限一次。
 			</Text>
 		</Replace>
@@ -5784,7 +5785,8 @@
 
 		<Replace Tag="TXT_KEY_TRAIT_GREAT_EXPANSE">
 			<Text>
-				[ICON_BULLET]新建城市获得额外的初始地块（6格），所有城市免费赠送一个粮仓。
+				[ICON_BULLET]新建城市获得额外的初始地块（6格）。
+				[NEWLINE][ICON_BULLET]所有城市免费赠送一个粮仓。
 				[NEWLINE][ICON_BULLET]所有侦察兵单位可以选择遗迹结果。
 			</Text>
 		</Replace>
@@ -5807,7 +5809,7 @@
 
 		<Replace Tag="TXT_KEY_TRAIT_AMPHIB_WARLORD">
 			<Text>
-				[ICON_BULLET]河流及其相邻区块不会阻碍本方单位[ICON_MOVES]移动。
+				[ICON_BULLET]河流及其相邻区块不会阻碍己方单位[ICON_MOVES]移动。
 				[NEWLINE][ICON_BULLET]陆地商路能够通过河流线延长（视为道路）。
 				[NEWLINE][ICON_BULLET]所有贸易站+1[ICON_GOLD]金钱产出。
 			</Text>
