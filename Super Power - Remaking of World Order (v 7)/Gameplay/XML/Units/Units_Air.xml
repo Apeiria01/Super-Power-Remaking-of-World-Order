@@ -316,7 +316,7 @@
 		<Row>
 			<Class>UNITCLASS_JET_FIGHTER</Class>
 			<Type>UNIT_SWEDISH_JAS39_FIGHTER</Type>
-			<PrereqTech>TECH_STEALTH</PrereqTech>
+			<PrereqTech>TECH_MOBILE_TACTICS</PrereqTech>
 			<RangedCombat>400</RangedCombat>
 			<Cost>1100</Cost>
 			<Moves>3</Moves>
