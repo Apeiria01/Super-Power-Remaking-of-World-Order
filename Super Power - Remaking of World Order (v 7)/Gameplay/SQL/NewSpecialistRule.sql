@@ -6,20 +6,21 @@ UPDATE Specialists Set CulturePerTurn = 0;
 
 --GreatPeopleImprovement provide surrounding output
 INSERT INTO Improvement_AdjacentImprovementYieldChanges(ImprovementType,OtherImprovementType,YieldType,Yield)
-SELECT	'IMPROVEMENT_ACADEMY',Type,  'YIELD_SCIENCE', 1  
-FROM Improvements ;
+SELECT	'IMPROVEMENT_ACADEMY',Type,  'YIELD_SCIENCE', 1 FROM Improvements UNION ALL
+SELECT	'IMPROVEMENT_CUSTOMS_HOUSE',Type,  'YIELD_GOLD', 3 FROM Improvements UNION ALL
+SELECT	'IMPROVEMENT_MANUFACTORY',Type,  'YIELD_PRODUCTION', 1 FROM Improvements UNION ALL
+SELECT	'IMPROVEMENT_HOLY_SITE',Type,  'YIELD_FAITH', 1 FROM Improvements ;
 
-INSERT INTO Improvement_AdjacentImprovementYieldChanges(ImprovementType,OtherImprovementType,YieldType,Yield)
-SELECT	'IMPROVEMENT_CUSTOMS_HOUSE',Type,  'YIELD_GOLD', 3 
-FROM Improvements ;
-
-INSERT INTO Improvement_AdjacentImprovementYieldChanges(ImprovementType,OtherImprovementType,YieldType,Yield)
-SELECT	'IMPROVEMENT_MANUFACTORY',Type,  'YIELD_PRODUCTION', 1  
-FROM Improvements ;
-
-INSERT INTO Improvement_AdjacentImprovementYieldChanges(ImprovementType,OtherImprovementType,YieldType,Yield)
-SELECT	'IMPROVEMENT_HOLY_SITE',Type,  'YIELD_FAITH', 1  
-FROM Improvements ;
+CREATE TRIGGER SP_AdjacentImprovementYieldChangesForNewImproments
+AFTER INSERT ON Improvements
+WHEN New.Type != 'IMPROVEMENT_INCA_CITY' AND New.Type NOT LIKE 'IMPROVEMENT_POLYNESIA_CITY_%'
+BEGIN
+	INSERT INTO Improvement_AdjacentImprovementYieldChanges(ImprovementType,OtherImprovementType,YieldType,Yield)
+    SELECT 'IMPROVEMENT_ACADEMY',       New.Type, 'YIELD_SCIENCE',      1 UNION ALL
+    SELECT 'IMPROVEMENT_CUSTOMS_HOUSE', New.Type, 'YIELD_GOLD',         3 UNION ALL
+    SELECT 'IMPROVEMENT_MANUFACTORY',   New.Type, 'YIELD_PRODUCTION',   1 UNION ALL
+    SELECT 'IMPROVEMENT_HOLY_SITE',     New.Type, 'YIELD_FAITH',        1 ;
+END;
 
 --BUILDING_SPECIALISTS
 CREATE TABLE BuildingSpecialistTemp (BuildingType text, SpecialistType text,YieldType text);
