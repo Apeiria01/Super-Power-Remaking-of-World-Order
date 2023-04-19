@@ -197,4 +197,7 @@ BEGIN
 END;
 --UPDATE SPTriggerControler SET Enabled = 1 WHERE TriggerType = 'Policy_Bill_Of_Right_Trigger';
 
-
+CREATE TABLE SPNewEffectControler (Type text PRIMARY KEY, Enabled boolean);
+INSERT INTO SPNewEffectControler (Type,Enabled)
+SELECT 'SP_NEWATTACK_OFF',0 UNION ALL
+SELECT 'UNIT_DEATH_COUNTER_OFF',0;

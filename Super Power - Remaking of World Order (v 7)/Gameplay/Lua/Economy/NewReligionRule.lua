@@ -84,8 +84,11 @@ function SPEReligionAdopt(pPlayer,iBelief,pHolyCity)
     end
 end
 
+local GoddessLovaEnable = GameInfo.SPReligionLuaEffectEnable.BELIEF_GODDESS_LOVE.Enabled
 function SPNReligionPopulationBuff(iX, iY, iOld, iNew)
-    if Game.IsOption(GameOptionTypes.GAMEOPTION_NO_RELIGION) then
+    if Game.IsOption(GameOptionTypes.GAMEOPTION_NO_RELIGION) 
+    or not GoddessLovaEnable
+    then
 		return
 	end
     local pPlot = Map.GetPlot(iX, iY)
@@ -178,6 +181,7 @@ for row in DB.Query("SELECT ID FROM Religions WHERE Type != 'RELIGION_PANTHEON';
 	spn_Religions_Count = spn_Religions_Count + 1
 end
 
+local HeathenConversionEnable = GameInfo.SPReligionLuaEffectEnable.BELIEF_HEATHEN_CONVERSION.Enabled
 function SPNReligionConquestedHolyCity(oldOwnerID, isCapital, cityX, cityY, newOwnerID, numPop, isConquest)
     if Game.IsOption(GameOptionTypes.GAMEOPTION_NO_RELIGION) or newOwnerID == -1 then
 		return
@@ -208,7 +212,8 @@ function SPNReligionConquestedHolyCity(oldOwnerID, isCapital, cityX, cityY, newO
     end
 
     --Player has BELIEF_HEATHEN_CONVERSION and conquested city
-    if newOwnerPlayer:HasPolicy(GameInfo.Policies["POLICY_BELIEF_HEATHEN_CONVERSION"].ID) 
+    if HeathenConversionEnable
+    and newOwnerPlayer:HasPolicy(GameInfo.Policies["POLICY_BELIEF_HEATHEN_CONVERSION"].ID) 
     and isConquest
     then
         local newOwnerReligionID = newOwnerPlayer:GetReligionCreatedByPlayer()

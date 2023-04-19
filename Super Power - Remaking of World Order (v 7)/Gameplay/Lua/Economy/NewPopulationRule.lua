@@ -37,8 +37,10 @@ GameEvents.CityTrained.Add(SettlerTrainedCity)
 
 
 -- Unit death cause population loss -- MOD by CaptainCWB
+local NewAttackOff = GameInfo.SPNewEffectControler.SP_NEWATTACK_OFF.Enabled
+local UnitDeathCounterOff = GameInfo.SPNewEffectControler.UNIT_DEATH_COUNTER_OFF.Enabled
 function UnitDeathCounter(iKerPlayer, iKeePlayer, eUnitType)
-	if (PreGame.GetGameOption("GAMEOPTION_SP_NEWATTACK_OFF") == 1) then
+	if NewAttackOff or UnitDeathCounterOff then
 		print("New Attack Effects - War Casualties - OFF!");
 		return;
 	end

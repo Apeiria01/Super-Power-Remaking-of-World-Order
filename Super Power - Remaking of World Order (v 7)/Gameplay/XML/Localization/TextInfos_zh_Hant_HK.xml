@@ -50,13 +50,13 @@
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_IMMIGRATION_HELP">
 			<Text>國際移民：允許人口跨境流動。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_GAME_OPTION_SP_NEWATTACK">
-			<Text>SP-關閉 [COLOR_YELLOW]新攻擊特效[ENDCOLOR]</Text>
+		<Row Tag="TXT_KEY_GAMEOPTION_SP_SPLASH_AND_COLLATERAL">
+			<Text>SP-關閉 [COLOR_YELLOW]濺射和穿透[ENDCOLOR]</Text>
 		</Row>
-		<Row Tag="TXT_KEY_GAME_OPTION_SP_NEWATTACK_HELP">
+		<Row Tag="TXT_KEY_GAMEOPTION_SP_SPLASH_AND_COLLATERAL_HELP">
 			<Text>
-				新攻擊特效：電磁脈沖、範圍傷害、穿透傷害、踐踏傷害、戰爭傷亡...
-				[NEWLINE][COLOR_NEGATIVE_TEXT]請盡量保持默認,否則可能導致部分功能失效[ENDCOLOR]
+				濺射和穿透：戰鬥中的特殊傷害效果。
+				[NEWLINE][COLOR_NEGATIVE_TEXT]請盡量保持默認[ENDCOLOR]
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_NUCLEARWINTER">

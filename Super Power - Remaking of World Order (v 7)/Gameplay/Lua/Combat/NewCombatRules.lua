@@ -5,8 +5,10 @@
 include("FLuaVector.lua");
 --******************************************************************************* Unit Combat Rules *******************************************************************************
 local g_DoNewAttackEffect = nil;
+local NewAttackOff = GameInfo.SPNewEffectControler.SP_NEWATTACK_OFF.Enabled
+local SplashAndCollateralOff = PreGame.GetGameOption("GAMEOPTION_SP_SPLASH_AND_COLLATERAL_OFF")
 function NewAttackEffectStarted(iType, iPlotX, iPlotY)
-	if (PreGame.GetGameOption("GAMEOPTION_SP_NEWATTACK_OFF") == 1) then
+	if NewAttackOff then
 		print("SP Attack Effect - OFF!");
 		return;
 	end
@@ -872,8 +874,10 @@ function NewAttackEffect()
 		-- Attacking a Unit!
 	elseif defUnit then
 		------ Collateral damage (both melee and ranged)!
-		if (attUnit:IsHasPromotion(NavalRangedShipUnitID) or attUnit:IsHasPromotion(NavalRangedCruiserUnitID)
-			or attUnit:IsHasPromotion(CitySiegeUnitID)) and batPlot:GetNumUnits() > 1 then
+		if not SplashAndCollateralOff 
+		and (attUnit:IsHasPromotion(NavalRangedShipUnitID) or attUnit:IsHasPromotion(NavalRangedCruiserUnitID)
+			or attUnit:IsHasPromotion(CitySiegeUnitID)) and batPlot:GetNumUnits() > 1 
+		then
 			-- print("Melee or Ranged attack and Available for Collateral Damage!")
 			local unitCount = batPlot:GetNumUnits()
 			for i = 0, unitCount - 1, 1 do
@@ -945,7 +949,8 @@ function NewAttackEffect()
 		end
 
 		----Doppelsoldner Splash！
-		if attUnit:IsHasPromotion(DoppelsoldnerID)
+		if not SplashAndCollateralOff 
+		and attUnit:IsHasPromotion(DoppelsoldnerID)
 		and batPlot:GetNumUnits() > 1 then
 			-- print("Melee or Ranged attack and Available for Collateral Damage!")
 			local unitCount = batPlot:GetNumUnits()
@@ -1002,7 +1007,8 @@ function NewAttackEffect()
 	
 
 		--------Splash Damage (AOE)
-		if (attUnit:IsHasPromotion(SplashDamageID) or attUnit:IsHasPromotion(NavalCapitalShipID)) then
+		if not SplashAndCollateralOff 
+		and (attUnit:IsHasPromotion(SplashDamageID) or attUnit:IsHasPromotion(NavalCapitalShipID)) then
 
 			for i = 0, 5 do
 				local adjPlot = Map.PlotDirection(plotX, plotY, i)
@@ -1010,10 +1016,10 @@ function NewAttackEffect()
 					print("Available for AOE Damage!")
 
 					local pUnit = adjPlot:GetUnit(0) ------------Find Units affected
-					if pUnit and
-						(pUnit:GetDomainType() == DomainTypes.DOMAIN_LAND or pUnit:GetDomainType() == DomainTypes.DOMAIN_SEA) 
-						and not pUnit:IsHasPromotion(SplashDamageImmuneID)
-						then
+					if pUnit 
+					and (pUnit:GetDomainType() == DomainTypes.DOMAIN_LAND or pUnit:GetDomainType() == DomainTypes.DOMAIN_SEA) 
+					and not pUnit:IsHasPromotion(SplashDamageImmuneID)
+					then
 						local pCombat = pUnit:GetBaseCombatStrength()
 						local pPlayer = Players[pUnit:GetOwner()]
 
@@ -1072,7 +1078,9 @@ function NewAttackEffect()
 		end
 
 		-------------------------Both Collateral Damage and AOE
-		if attUnit:IsHasPromotion(NuclearArtilleryID) then
+		if not SplashAndCollateralOff 
+		and attUnit:IsHasPromotion(NuclearArtilleryID) 
+		then
 			local unitCount = batPlot:GetNumUnits();
 			local iDamage = 0;
 			-- Collateral
@@ -1124,7 +1132,9 @@ function NewAttackEffect()
 					local unitCount = adjPlot:GetNumUnits();
 					for i = 0, unitCount - 1, 1 do
 						local pFoundUnit = adjPlot:GetUnit(i)
-						if (pFoundUnit and pFoundUnit:GetID() ~= defUnit:GetID()) then
+						if (pFoundUnit and pFoundUnit:GetID() ~= defUnit:GetID()) 
+
+						then
 							local textd = nil;
 							local texta = nil;
 							local attUnitName = attUnit:GetName();
