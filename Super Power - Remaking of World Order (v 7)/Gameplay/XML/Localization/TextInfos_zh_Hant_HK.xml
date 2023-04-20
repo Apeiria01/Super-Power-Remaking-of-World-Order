@@ -12,7 +12,7 @@
 			<Text>[COLOR_YELLOW]注意事項：[ENDCOLOR][NEWLINE]1、檢查存檔文件大小。[NEWLINE]2、查閱文明百科（快捷鍵[COLOR_POSITIVE_TEXT]F1[ENDCOLOR]）[NEWLINE]3、如果始終發生遊戲崩潰或存檔損壞，嘗試Dx9。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_VERSION">
-			<Text>[COLOR_YELLOW]版本號 8.0[ENDCOLOR]</Text>
+			<Text>[COLOR_YELLOW]版本號 9.0[ENDCOLOR]</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_SP_MOD_SETUP">
@@ -50,11 +50,14 @@
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_IMMIGRATION_HELP">
 			<Text>國際移民：允許人口跨境流動。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_GAME_OPTION_SP_NEWATTACK">
-			<Text>SP-關閉 [COLOR_YELLOW]新攻擊特效[ENDCOLOR]</Text>
+		<Row Tag="TXT_KEY_GAMEOPTION_SP_SPLASH_AND_COLLATERAL">
+			<Text>SP-關閉 [COLOR_YELLOW]濺射和穿透[ENDCOLOR]</Text>
 		</Row>
-		<Row Tag="TXT_KEY_GAME_OPTION_SP_NEWATTACK_HELP">
-			<Text>新攻擊特效：電磁脈沖、範圍傷害、穿透傷害、踐踏傷害、戰爭傷亡...</Text>
+		<Row Tag="TXT_KEY_GAMEOPTION_SP_SPLASH_AND_COLLATERAL_HELP">
+			<Text>
+				濺射和穿透：戰鬥中的特殊傷害效果。
+				[NEWLINE][COLOR_NEGATIVE_TEXT]請盡量保持默認[ENDCOLOR]
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_NUCLEARWINTER">
 			<Text>SP-關閉 [COLOR_YELLOW]核冬天[ENDCOLOR]</Text>
@@ -72,19 +75,19 @@
 			<Text>SP-軍團模式（高）</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_HIGH_HELP">
-			<Text>軍團模式-高允許建立軍團和集團軍，兵力規模等級高。</Text>
+			<Text>允許建立軍團和集團軍，兵力規模等級高。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_MEDIUM">
-			<Text>SP-軍團模式（中）</Text>
+		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_CLOSE">
+			<Text>SP-關閉 [COLOR_YELLOW]軍團模式[ENDCOLOR]</Text>
 		</Row>
-		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_MEDIUM_HELP">
-			<Text>軍團模式-高允許建立軍團和集團軍，兵力規模等級中。</Text>
+		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_CLOSE_HELP">
+			<Text>軍團模式：允許建立軍團和集團軍</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_LOW">
 			<Text>SP-軍團模式（低）</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_LOW_HELP">
-			<Text>軍團模式-高允許建立軍團和集團軍，兵力規模等級低。</Text>
+			<Text>允許建立軍團和集團軍，兵力規模等級低。</Text>
 		</Row>
 
 
@@ -753,7 +756,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_INCA_QURIKANCHA_HELP</Tag>
-			<Text>城市2格內的本國領土上必須有山脈。</Text>
+			<Text>無須臨近山脈，即可建造。</Text>
 		</Row>
 		
 		<Row>
@@ -1075,6 +1078,22 @@
 			<Text>[ICON_STRENGTH]城堡</Text>
 		</Replace>
 		
+		<Row Tag="TXT_KEY_BUILDING_NORMAN_CAMP">
+			<Text>[ICON_STRENGTH][ICON_WAR]諾曼營地</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_BUILDINGS_NORMAN_CAMP_TEXT">
+			<Text>
+				諾曼人（拉丁語：Normanni）源於丹麥、挪威等地的維京人， 10至11世紀，他們作為赫赫有名的「北歐海盜」，南下征服了今法國北部的大片地區，該地區由此得名為諾曼底。911年，經過和談，這批維京人的領袖羅洛宣誓效忠西法蘭克國王查理三世，而查理則割讓大片土地作為回報，羅洛便成為第一任諾曼底公爵。諾曼人並未發明城堡建築的技術，但他們善於構築簡易卻極有效率的草原圍墻城堡——高地上四周圍以溝渠、木柵的木柵高樓。這些補給小批騎兵在曠野作戰的小堡壘成為諾曼人滲透征服他人的標誌。再者，盡管諾曼人在騎戰方面一開始是模仿的新手，但他們立即成為其中能手並在歐陸馳騁作戰。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_DENFENSE_BUILDING_NORMAN_CAMP_HELP">
+			<Text>
+				諾曼營地是丹麥特色建築，替代城墻，造價更低，不會過時。
+				[NEWLINE][ICON_BULLET]本城新建陸、海軍單位額外獲得+15經驗。
+				[NEWLINE][ICON_BULLET]每當攻占或夷平一座城市，諾曼營地為所在城市提供一次性[ICON_FOOD]食物或者[ICON_PRODUCTION]產能(每次觸發所有城市的產出一致)。
+			</Text>
+		</Row>
+		
 		<Replace Tag="TXT_KEY_BUILDING_BARRACKS">
 			<Text>[ICON_WAR]軍營</Text>
 		</Replace>
@@ -1391,7 +1410,7 @@
 		
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_UFFIZI_HELP"/>
-			<Set Text="獲得一位免費的大文學家。"/>
+			<Set Text="獲得一位免費的大藝術家。"/>
 		</Update>
 		
 		<Update>
@@ -1560,7 +1579,7 @@
 		</Row>
 		<!-- Help tags -->
 		<Row Tag="TXT_KEY_WONDER_SAN_MARCO_HELP">
-			<Text>所有城市傑作[ICON_TOURISM]旅遊業績產出+50%，本城市[ICON_CULTURE]文化值產出+50%。[NEWLINE][NEWLINE]建成奇跡的城市附近出現兩位大藝術家。[NEWLINE]擁有4個美術傑作展位。[NEWLINE][NEWLINE]必須在威尼斯擁有博物館才能建造。</Text>
+			<Text>所有城市傑作[ICON_TOURISM]旅遊業績產出+50%，本城市[ICON_CULTURE]文化值產出+50%。[NEWLINE][NEWLINE]建成奇跡的城市附近出現兩位大藝術家。[NEWLINE]擁有4個美術傑作展位。[NEWLINE][NEWLINE]必須在威尼斯擁有博物館才能建造。+1城市工作範圍。</Text>
 		</Row>
 		<!-- Pedia tags -->
 		<Row Tag="TXT_KEY_WONDER_SAN_MARCO_PEDIA">
@@ -2030,7 +2049,7 @@
 		</Row>
 		<!-- Help tags -->
 		<Row Tag="TXT_KEY_BUILDING_NATIONAL_BANK_HELP">
-			<Text>所在市場、銀行、證券交易所、金融公司、客棧和港口+2[ICON_GOLD]金幣。[NEWLINE][NEWLINE]獲得一條額外的商路。[NEWLINE][NEWLINE]必須在文明的所有城市中建造銀行，建造價格隨城市數量增加。</Text>
+			<Text>所有市場、銀行、證券交易所、金融公司、客棧和港口+2[ICON_GOLD]金幣。[NEWLINE][NEWLINE]獲得一條額外的商路。[NEWLINE][NEWLINE]必須在文明的所有城市中建造銀行，建造價格隨城市數量增加。</Text>
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_NATIONAL_BANK_STRATEGY</Tag>
@@ -2625,7 +2644,7 @@
 			<Text>#總督府</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_SATRAPS_COURT_HELP">
-			<Text>替代#市政廳[COLOR_NEGATIVE_TEXT]（一級）[ENDCOLOR]，和普通[COLOR_NEGATIVE_TEXT]一級[ENDCOLOR]市政廳相比，無維護費，不消耗額外消費品且不會造成額外政策閾值上漲，沒有額外紅臉。另外，每座總督府+2[ICON_HAPPINESS_1]全局幸福度。</Text>
+			<Text>替代#市政廳[COLOR_NEGATIVE_TEXT]（一級）[ENDCOLOR]，和普通[COLOR_NEGATIVE_TEXT]一級[ENDCOLOR]市政廳相比，無維護費，不消耗額外消費品且不會造成額外政策閾值上漲，沒有額外紅臉。另外，每座總督府+2[ICON_HAPPINESS_1]全局幸福度，+4%[ICON_GOLDEN_AGE]黃金時代長度。</Text>
 		</Replace>
 
 		<Row>
@@ -3763,7 +3782,12 @@
 			<Text>[ICON_GREAT_WRITER][ICON_RESEARCH]莫臥兒清真寺</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_MUGHAL_FORT_HELP">
-			<Text>本城市中每2[ICON_CITIZEN]市民+1[ICON_RESEARCH]科技值。[NEWLINE][NEWLINE]沒有額外[ICON_GOLD]維護費。[NEWLINE][NEWLINE]只能在大型城市（26人口）建造。</Text>
+			<Text>
+				本城市中每2[ICON_CITIZEN]市民+1[ICON_RESEARCH]科研。
+				[NEWLINE][ICON_BULLET]没有额外[ICON_GOLD]维护费。
+				[NEWLINE][ICON_BULLET]只能在中型城市（15人口）建造。
+				[NEWLINE][ICON_BULLET]本城宗教压力+100%。
+			</Text>
 		</Replace>
 
 		<Row>
@@ -3855,7 +3879,16 @@
 			<Text>{TXT_KEY_CONCEPT_CITIES_CORRUPTION_TOPIC}</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CONCEPT_CITIES_CORRUPTION_SUMMARY">
-			<Text>由於地方政府的腐敗、邊遠城市的分離傾向、國家資源的傳遞效率問題等等諸多原因，你直轄城市的產出效率會隨著與首都距離的變遠而逐漸降低。在除首都之外的直轄城市，不管是文明自己建造還是從其他文明處獲得，額外的管理成本都會發生。[NEWLINE][NEWLINE]城市管理成本的等級和其與首都的距離之間遵循以下規律：[NEWLINE][NEWLINE]6格以內——沒有額外成本。[NEWLINE]地圖大小的1/12（至少8格，至多12格）內——輕微。[NEWLINE]地圖大小的1/6（至少12格）內——中等。[NEWLINE]地圖大小的1/3（至少24格）內——嚴重。[NEWLINE]地圖大小的1/3（至少24格）外——極度嚴重。[NEWLINE][NEWLINE]這些耗費的成本還會導致城市人力、商品、滿意度上的損失。</Text>
+			<Text>
+				由於地方政府的腐敗、邊遠城市的分離傾向、國家資源的傳遞效率問題等等諸多原因，你直轄城市的產出效率會隨著與首都距離的變遠而逐漸降低。在除首都之外的直轄城市，不管是文明自己建造還是從其他文明處獲得，額外的管理成本都會發生。
+				[NEWLINE][NEWLINE]城市管理成本等級和其與首都的距離之間遵循以下規律：
+				[NEWLINE][NEWLINE]7格及以內——沒有額外成本。
+				[NEWLINE]地圖大小的1/8（至少14格，至多18格）內——輕微。
+				[NEWLINE]地圖大小的1/5（至少26格，至多30格）內——中等。
+				[NEWLINE]地圖大小的1/3（至少36格，至多44格）內——嚴重。
+				[NEWLINE]地圖大小的1/3（至少36格，至多44格）外——極度嚴重。
+				[NEWLINE][NEWLINE]這些耗費的成本還會導致城市人力、商品、滿意度上的損失。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CONCEPT_CITIES_CORRUPTION_ADVISOR_QUESTION">
 			<Text>什麼是管理成本？</Text>
@@ -3970,6 +4003,16 @@
 
 
 		<!--************************************Combat********************************-->
+		<Row Tag="TXT_KEY_CONCEPT_CORPS_MOD_RULES_TOPIC">
+			<Text>[COLOR_POSITIVE_TEXT]SP：軍團模式[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CONCEPT_CORPS_MOD_RULES_DESCRIPTION">
+			<Text>{TXT_KEY_CONCEPT_CORPS_MOD_RULES_TOPIC}</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CONCEPT_CORPS_MOD_RULES_QUESTION">
+			<Text>軍團模式是什麽?</Text>
+		</Row>
+
 		<Row Tag="TXT_KEY_CONCEPT_NEW_ATTACK_RULES_TOPIC">
 			<Text>SP：新的戰鬥規則</Text>
 		</Row>
@@ -5427,125 +5470,199 @@
 			<Text>直接購買並為此單位裝備一枚導彈。需要1000[ICON_GOLD]金（沒有折扣）。</Text>
 		</Row>
 
-<!--Civilizations-->
+		<!--Civilizations-->
 
-	<!--********************************************** Traits Info Change ********************************************** -->
-	
+		<!--********************************************** Traits Info Change ********************************************** -->
+
 		<Replace Tag="TXT_KEY_TRAIT_ART_OF_WAR_SHORT">
 			<Text>盛世皇朝</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_TRAIT_ART_OF_WAR">
-			<Text>所有陸軍單位都自帶消滅敵人後，獲得相當於敵單位戰鬥力數值50%的[ICON_GOLDEN_AGE]黃金時代點數的晉升。黃金時代中，所有城市的[ICON_RESEARCH]科技值產出、[ICON_FOOD]食物累積+20%。</Text>
+			<Text>
+				[ICON_BULLET]所有陸軍單位都自帶消滅敵人後，獲得相當於敵單位戰鬥力數值50%的[ICON_GOLDEN_AGE]黃金時代點數的晉升。
+				[NEWLINE][ICON_BULLET]黃金時代中，所有城市的[ICON_RESEARCH]科研產出、[ICON_FOOD]食物累積+20%。
+			</Text>
 		</Replace>
 		<Row Tag="TXT_KEY_SP_UA_CHINA_GOLDENAGE_ANNOUNCE">
 			<Text>盛世來臨！</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_UA_CHINA_GOLDENAGE_EFFECTS">
-			<Text>中國進入了一個嶄新的[ICON_GOLDEN_AGE][COLOR_POSITIVE_TEXT]盛世[ENDCOLOR]！[NEWLINE][NEWLINE]所有金幣產出的地塊額外+1[ICON_GOLD]金幣產出，全國+20%[ICON_PRODUCTION]生產力，[ICON_RESEARCH]科技值，[ICON_CULTURE]文化值，[ICON_FOOD]食物。</Text>
+			<Text>中國進入了一個嶄新的[ICON_GOLDEN_AGE][COLOR_POSITIVE_TEXT]盛世[ENDCOLOR]！[NEWLINE][NEWLINE]所有金錢產出的地塊額外+1[ICON_GOLD]金錢產出，全國+20%[ICON_PRODUCTION]產能，[ICON_RESEARCH]科研，[ICON_CULTURE]文化，[ICON_FOOD]食物。</Text>
 		</Row>
-		
+
 		<Replace Tag="TXT_KEY_TRAIT_RIVER_EXPANSION_SHORT">
 			<Text>精英共和</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_TRAIT_RIVER_EXPANSION">
-			<Text>專業人員額外產出：每位科學家+2[ICON_RESEARCH]科技值、工程師+1[ICON_PRODUCTION]生產力、商業家+2[ICON_GOLD]金幣、文學家、美術家、音樂家+1[ICON_CULTURE]文化值。來自[ICON_HAPPINESS_1]滿意度更低文明的移民[ICON_TEAM_4]遷入速率+50%。</Text>
+			<Text>
+				[ICON_BULLET]專業人員額外產出: 每位科學家+2[ICON_RESEARCH]科研、工程師+1[ICON_PRODUCTION]產能、商業家+2[ICON_GOLD]金錢、文學家、美術家、音樂家+1[ICON_CULTURE]文化。
+				[NEWLINE][ICON_BULLET]來自[ICON_HAPPINESS_1]滿意度更低文明的移民[ICON_TEAM_4]遷入速率+50%。
+			</Text>
 		</Replace>
-		
+
 		<Replace Tag="TXT_KEY_TRAIT_STRATEGIC_RICHES_SHORT">
 			<Text>俄羅斯精神</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_TRAIT_STRATEGIC_RICHES">
-			<Text>每座城市+4[ICON_GOLD]金幣產出+2[ICON_RES_CONSUMER]消費品+2[ICON_HAPPINESS_1]本地快乐。所有軍事單位在境內作戰時+15%[ICON_STRENGTH]戰鬥力。</Text>
+			<Text>
+				[ICON_BULLET]每座城市+4[ICON_GOLD]金錢產出+2[ICON_RES_CONSUMER]消費品+2[ICON_HAPPINESS_1]本地快樂+1工作範圍。
+				[NEWLINE][ICON_BULLET]所有軍事單位在境內作戰時+15%[ICON_STRENGTH]戰鬥力。
+				[NEWLINE][ICON_BULLET]城市自然拓展邊界時，獲得一次性[ICON_RESEARCH]科研產出，隨時代加成。
+				[NEWLINE][ICON_BULLET]研發工業化後即可選擇意識形態。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_OCEAN_MOVEMENT">
-			<Text>所有二級到五級城市管理成本降低一級。所有軍事單位在境外作戰時+15%[ICON_STRENGTH]戰鬥力。</Text>
+			<Text>
+				[ICON_BULLET]所有二級到五級城市管理成本降低一級。
+				[NEWLINE][ICON_BULLET]所有軍事單位在境外作戰時+15%[ICON_STRENGTH]戰鬥力。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_ENHANCED_CULTURE">
-			<Text>所有城市+3[ICON_CULTURE]文化值（不會過時）。所有傑作+1[ICON_TOURISM]旅遊業績產出。</Text>
+			<Text>
+				[ICON_BULLET]所有城市+3[ICON_CULTURE]文化（不會過時）。
+				[NEWLINE][ICON_BULLET]所有傑作+1[ICON_TOURISM]魅力產出。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_CONVERTS_LAND_BARBARIANS_SHORT">
 			<Text>理性批判</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_TRAIT_CONVERTS_LAND_BARBARIANS">
-			<Text>城市每50點[ICON_PRODUCTION]生產力產出（不计特定项目的加成，如移民）+10[ICON_CULTURE]文化值和+10[ICON_RESEARCH]科技值。（這些額外的科研文化為基礎產出，可以受到奇跡、建築、政策的加成。）</Text>
+			<Text>
+				[ICON_BULLET]城市每50點[ICON_PRODUCTION]產能產出(不計特定項目的加成，如移民)+10[ICON_CULTURE]文化和+10[ICON_RESEARCH]科研。（這些額外的科研文化為基礎產出，可以受到奇觀、建築、政策的加成。）
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_CAPITAL_BUILDINGS_CHEAPER">
-			<Text>所有城市+2[ICON_PRODUCTION]生產力，城市建造建築時+15%[ICON_PRODUCTION]生產力。</Text>
+			<Text>
+				[ICON_BULLET]所有城市+2[ICON_PRODUCTION]產能。
+				[NEWLINE][ICON_BULLET]城市建造建築時+15%[ICON_PRODUCTION]產能。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_WONDER_BUILDER_SHORT">
 			<Text>大河滔滔</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_TRAIT_WONDER_BUILDER">
-			<Text>所有城市額外+2[ICON_RES_MANPOWER]人力資源，每處沿河地塊+1[ICON_GOLD]金，每處衝積平原地塊+1[ICON_PRODUCTION]生產力。建造奇跡時+25%[ICON_PRODUCTION]生產力積累速率。</Text>
+			<Text>
+				[ICON_BULLET]所有城市額外+2[ICON_RES_MANPOWER]人力資源，
+				[NEWLINE][ICON_BULLET]每處沿河地塊+1[ICON_GOLD]金，每處沖積平原地塊+1[ICON_PRODUCTION]產能。
+				[NEWLINE][ICON_BULLET]建造奇觀時+25%[ICON_PRODUCTION]產能積累速率。
+			</Text>
 		</Replace>
-		
+
 		<Replace Tag="TXT_KEY_TRAIT_ENHANCED_GOLDEN_AGES">
-			<Text>[ICON_GOLDEN_AGE]黃金時代長度增加50%，黃金時代中單位+1[ICON_MOVES]移動力，+15%[ICON_STRENGTH]戰鬥力</Text>
+			<Text>
+				[ICON_BULLET][ICON_GOLDEN_AGE]黃金時代長度增加50%。
+				[NEWLINE][ICON_BULLET]黃金時代中單位+1[ICON_MOVES]移動力，+15%[ICON_STRENGTH]戰鬥力。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_TERROR">
-			<Text>每處牧場+1[ICON_PRODUCTION]生產力。所有重騎兵-裝甲單位和騎射-直升機單位+1[ICON_MOVES]移動。陆军海军统帅额外提供15%战力加成并且可以无消耗建造军事学院。</Text>
+			<Text>
+				[ICON_BULLET]每處牧場+1[ICON_PRODUCTION]產能。
+				[NEWLINE][ICON_BULLET]所有重騎兵-裝甲單位和騎射-直升機單位+1[ICON_MOVES]移動。
+				[NEWLINE][ICON_BULLET]陸軍海軍統帥額外提供15%戰力加成並且可以無消耗建造軍事學院。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_FIGHT_WELL_DAMAGED">
-			<Text>受傷單位攻擊力不減。當你訓練或購買了一個軍事單位時，獲得一次性的[ICON_CULTURE]文化值加成（其數值相當於單位的100%[ICON_STRENGTH]戰鬥力）。強化宗教時添加一條未選的隨機神系。</Text>
+			<Text>
+				[ICON_BULLET]受傷單位攻擊力不減。
+				[NEWLINE][ICON_BULLET]當你訓練或購買了一個軍事單位時，獲得一次性的[ICON_CULTURE]文化加成（其數值相當於單位的100%[ICON_STRENGTH]戰鬥力）。
+				[NEWLINE][ICON_BULLET]強化宗教時添加一條未選的隨機神系。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_BUFFALO_HORNS">
-			<Text>所有軍事單位獲得晉升所需經驗值-50%，陸上單位維護費-15%。境內開發的每處[ICON_RES_GOLD]黃金、[ICON_RES_SILVER]白銀和[ICON_RES_GEMS]寶石資源+5[ICON_GOLD]金幣。</Text>
+			<Text>
+				[ICON_BULLET]所有軍事單位獲得晉升所需經驗值-50%，陸上單位維護費-15%。
+				[NEWLINE][ICON_BULLET]境內開發的每處[ICON_RES_GOLD]黃金、[ICON_RES_SILVER]白銀和[ICON_RES_GEMS]寶石資源+5[ICON_GOLD]金錢。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_VIKING_FURY">
-			<Text>所有陸軍近戰單位和海軍近戰單位劫掠均不消耗[ICON_MOVES]移動力，並具有攻城時將對城市造成傷害的200%數值轉化為金幣的能力。攻佔城市或攻佔營寨所獲得3倍的[ICON_GOLD]金幣。每處海上設施+1[ICON_CULTURE]文化值產出。</Text>
+			<Text>
+				[ICON_BULLET]所有陸軍近戰單位和海軍近戰單位劫掠均不消耗[ICON_MOVES]移動力，並具有攻城時將對城市造成傷害的200%數值轉化為金錢的能力。
+				[NEWLINE][ICON_BULLET]攻占城市或攻占營寨所獲得2倍的[ICON_GOLD]金錢。
+				[NEWLINE][ICON_BULLET]每處海上設施+1[ICON_CULTURE]文化產出。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_SLAYER_OF_TIAMAT">
-			<Text>佔領一座城市時免費獲得其所屬文明擁有的一項科技。通過交易獲得城市除外，每座城市僅在首次佔領時有效。如果城市攻佔後不少於5人口，你的[ICON_CAPITAL]首都[ICON_CITIZEN]人口+1。</Text>
+			<Text>
+				[ICON_BULLET]占領一座城市時免費獲得其所屬文明擁有的一項科技。通過交易獲得城市除外，每座城市僅在首次占領時有效。
+				[NEWLINE][ICON_BULLET]如果城市攻占後不少於5人口，你的[ICON_CAPITAL]首都[ICON_CITIZEN]人口+1。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_CITY_STATE_FRIENDSHIP">
 			<Text>
-				[ICON_BULLET]對城邦[ICON_INFLUENCE]影響力衰減速度減半，恢復速度加倍。對於能夠勒索的城邦每回合額外獲得5點[ICON_INFLUENCE]影響力（標準速度下）
-				[NEWLINE][ICON_BULLET]軍隊在城邦境內停留時不會影響關係。
+				[ICON_BULLET]對城邦[ICON_INFLUENCE]影響力衰減速度減半，恢復速度加倍。
+				[NEWLINE][ICON_BULLET]軍隊在城邦境內停留時不會影響關系。對於能夠勒索的城邦每回合額外獲得5點[ICON_INFLUENCE]影響力（標準速度下）。
 				[NEWLINE][ICON_BULLET]每個同盟城邦為軍事單位+3%戰鬥力，上限為30%。
 			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_RAZE_AND_HORSES">
-			<Text>擊敗蠻族營寨中的單位會加入匈人軍隊。每夷平一座城市都會獲得當前回合數*10的[ICON_GOLD]金幣、[ICON_RESEARCH]科技值、[ICON_CULTURE]文化值、[ICON_PEACE]信仰值（最多1000）。城市名從其他文明借用。</Text>
+			<Text>
+				[ICON_BULLET]擊敗蠻族營寨中的單位會加入匈人軍隊。
+				[NEWLINE][ICON_BULLET]夷平城市後獲得當前回合數*10的[ICON_GOLD]金錢、[ICON_RESEARCH]科研、[ICON_CULTURE]文化、[ICON_PEACE]信仰值（最多1000）。
+				[NEWLINE][ICON_BULLET]城市名從其他文明借用。
+			</Text>
 		</Replace>
-		
+
 		<Replace Tag="TXT_KEY_TRAIT_CONVERTS_SEA_BARBARIANS_SHORT">
 			<Text>蘇丹法典</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_CONVERTS_SEA_BARBARIANS">
-			<Text>每處採石場和漁船+1[ICON_PRODUCTION]生產力。每處戰略資源+2[ICON_PRODUCTION]生產力。工人建設地塊設施速度+25%。</Text>
+			<Text>
+				[ICON_BULLET]每處采石場和漁船+1[ICON_PRODUCTION]產能。
+				[NEWLINE][ICON_BULLET]每處戰略資源+2[ICON_PRODUCTION]產能。
+				[NEWLINE][ICON_BULLET]工人建設地塊設施速度+25%。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_GATEWAY_AFRICA">
-			<Text>每一條通往不同文明或者城邦的國際商路+2[ICON_GOLD]金幣，+2[ICON_CULTURE]文化值，+2[ICON_PEACE]信仰值，+2[ICON_RESEARCH]科技值。同時，每條通往摩洛哥的商路，其發起國+4[ICON_GOLD]金幣。所有陸軍單位在沙漠地塊作戰+20%[ICON_STRENGTH]戰鬥力。</Text>
+			<Text>
+				[ICON_BULLET]每一條通往不同文明或者城邦的國際商路+2[ICON_GOLD]金錢，+2[ICON_CULTURE]文化，+2[ICON_PEACE]信仰，+2[ICON_RESEARCH]科研。
+				[NEWLINE][ICON_BULLET]每條通往摩洛哥的商路，其發起國+4[ICON_GOLD]金錢。
+				[NEWLINE][ICON_BULLET]所有陸軍單位在沙漠地塊作戰+20%[ICON_STRENGTH]戰鬥力。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_LUXURY_RETENTION">
-			<Text>每種奢侈資源即使全部交易出去只減少2[ICON_HAPPINESS_1]幸福度。所有城市免費獲得市場。研發完成相應科技時，有前置建築的城市獲得對應經濟建築。</Text>
+			<Text>
+				[ICON_BULLET]每種奢侈資源即使全部交易出去也只減少2[ICON_HAPPINESS_1]快樂。
+				[NEWLINE][ICON_BULLET]所有城市免費獲得市場。
+				[NEWLINE][ICON_BULLET]研發完成相應科技時，有前置建築的城市獲得對應經濟建築。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_PHOENICIAN_HERITAGE">
-			<Text>每位專家+2[ICON_PRODUCTION]生產力。每條海上商路+4[ICON_GOLD]金幣並且+25%商路距離。</Text>
+			<Text>
+				[ICON_BULLET]每位專家+2[ICON_PRODUCTION]產能。
+				[NEWLINE][ICON_BULLET]每條海上商路+4[ICON_GOLD]金錢並且+25%商路距離。
+			</Text>
 		</Replace>	
 
 		<Replace Tag="TXT_KEY_TRAIT_EXTRA_TRADE">
-			<Text>資源多樣性使國際商路帶給葡萄牙的[ICON_GOLD]金幣加倍。所有海濱城市免費獲得港口。</Text>
+			<Text>
+				[ICON_BULLET]資源多樣性使國際商路帶給葡萄牙的[ICON_GOLD]金錢加倍。
+				[NEWLINE][ICON_BULLET]所有海濱城市免費獲得港口。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_SUPER_CITY_STATE">
-			<Text>不能建造移民和吞併已佔領城市，可在傀儡城市中以金幣購買項目，可建商路數量加倍，首都內奇跡和博物館[ICON_TOURISM]藝術品搭配的效果翻倍。研究光學科技後立即獲得一位威尼斯商人。</Text>
+			<Text>
+				[ICON_BULLET]不能建造移民和吞並已占領城市，可在傀儡城市中以金錢購買項目。
+				[NEWLINE][ICON_BULLET]可建商路數量加倍，研究光學科技後立即獲得一位威尼斯商人。
+				[NEWLINE][ICON_BULLET]首都內奇觀和博物館[ICON_TOURISM]藝術品搭配的效果翻倍。
+				[NEWLINE][ICON_BULLET]可向同盟城邦購買糧食[ICON_FOOD]，每回合僅限一次。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_SPICE">
@@ -5557,78 +5674,153 @@
 
 		<Replace Tag="TXT_KEY_TRAIT_GREAT_EXPANSE">
 			<Text>
-				[ICON_BULLET]新建城市獲得額外的初始地塊（6格），所有城市免費贈送一個糧倉。
+				[ICON_BULLET]新建城市獲得額外的初始地塊（6格）。
+				[NEWLINE][ICON_BULLET]所有城市免費贈送一個糧倉。
 				[NEWLINE][ICON_BULLET]所有偵察兵單位可以選擇遺跡結果。
 			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_WAYFINDING">
-			<Text>單位初始時即能以海運模式進入大洋。市政廳最高等級為3級（無4和5級城市）。在摩艾石像群周邊2格內單位+10%[ICON_STRENGTH]戰鬥力。</Text>
+			<Text>
+				[ICON_BULLET]單位初始時即能以海運模式進入大洋。
+				[NEWLINE][ICON_BULLET]移民可以在海濱地塊建城，海濱城市獲得額外的[ICON_PRODUCTION]產能和[ICON_CULTURE]文化，隨時代增加。
+				[NEWLINE][ICON_BULLET]市政廳最高等級為3級（無4和5級城市）。
+				[NEWLINE][ICON_BULLET]在摩艾石像群周邊2格內單位+10%[ICON_STRENGTH]戰鬥力。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_CULTURE_FROM_KILLS">
-			<Text>當你殺死了一個敵人單位，你會獲得相當於其50%[ICON_STRENGTH]戰鬥力的[ICON_CULTURE]文化值。施行新政策所需[ICON_CULTURE]文化值-10%</Text>
+			<Text>
+				[ICON_BULLET]當你殺死了一個敵人單位，你會獲得相當於其50%[ICON_STRENGTH]戰鬥力的[ICON_CULTURE]文化。
+				[NEWLINE][ICON_BULLET]施行新政策所需[ICON_CULTURE]文化值-10%
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_AMPHIB_WARLORD">
-			<Text>河流及其相鄰區塊不會阻礙本方單位[ICON_MOVES]移動。陸地商路能夠通過河流線延長（視為道路）。所有貿易站+1[ICON_GOLD]金幣產出。</Text>
+			<Text>
+				[ICON_BULLET]河流及其相鄰區塊不會阻礙己方單位[ICON_MOVES]移動。
+				[NEWLINE][ICON_BULLET]陸地商路能夠通過河流線延長（視為道路）。
+				[NEWLINE][ICON_BULLET]所有貿易站+1[ICON_GOLD]金錢產出。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_BONUS_AGAINST_TECH">
-			<Text>與擁有更多城市的文明的單位作戰時獲得25%戰鬥力加成。所有專家+1[ICON_CULTURE]文化值產出。</Text>
+			<Text>
+				[ICON_BULLET]與擁有更多城市的文明的單位作戰時獲得25%戰鬥力加成。
+				[NEWLINE][ICON_BULLET]所有專家+2[ICON_CULTURE]文化產出。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_POPULATION_GROWTH">
-			<Text>城市[ICON_CITIZEN]人口帶來的[ICON_HAPPINESS_4]不滿-20%。</Text>
+			<Text>
+				[ICON_BULLET]城市[ICON_CITIZEN]人口帶來的[ICON_HAPPINESS_4]不滿-20%。
+				[NEWLINE][ICON_BULLET]城市中每個主流宗教信徒+1%[ICON_FOOD]糧食產出。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_EXTRA_BELIEF">
-			<Text>創立宗教時額外選擇一項信條，研發文字後獲得一位預言家。</Text>
+			<Text>
+				[ICON_BULLET]創立宗教時額外選擇一項信條。
+				[NEWLINE][ICON_BULLET]研發文字後獲得一位大先知。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_FAITH_FROM_NATURE">
-			<Text>鄰近未開發森林地塊的城市+1[ICON_PEACE]信仰值。鄰近3處以上未開發森林地塊的城市+2[ICON_PEACE]信仰值。每處獵場+1[ICON_PRODUCTION]生產力，+1[ICON_PEACE]信仰值。</Text>
+			<Text>
+				[ICON_BULLET]鄰近未開發森林地塊的城市+1[ICON_PEACE]信仰。
+				[NEWLINE][ICON_BULLET]鄰近3處以上未開發森林地塊的城市+2[ICON_PEACE]信仰。
+				[NEWLINE][ICON_BULLET]每處獵場+1[ICON_PRODUCTION]產能，+1[ICON_PEACE]信仰。
+			</Text>
 		</Replace>
-		
+
 		<Replace Tag="TXT_KEY_TRAIT_ANNEX_CITY_STATE">
-			<Text>可以通過[ICON_GOLD]金幣來購買與奧地利同盟8回合的城邦。城邦故都所在城市（非傀儡）的市政廳管理成本最多可-2級。</Text>
+			<Text>
+				[ICON_BULLET]可以通過[ICON_GOLD]金錢來購買與奧地利同盟8回合的城邦。
+				[NEWLINE][ICON_BULLET]城邦故都所在城市（非傀儡）的市政廳管理成本最多可-2級。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_CITY_STATE_BONUSES">
-			<Text>友好城邦提供的[ICON_FOOD]食物,[ICON_CULTURE]文化值,[ICON_PEACE]信仰值增加50%，军事城邦赠送的单位获得免费20经验。可以把偉人作為禮物單位送給城邦並獲得150點[ICON_INFLUENCE]影響力。</Text>
+			<Text>
+				[ICON_BULLET]友好城邦提供的[ICON_FOOD]食物,[ICON_CULTURE]文化,[ICON_PEACE]信仰增加50%。
+				[NEWLINE][ICON_BULLET]軍事城邦贈送的單位獲得免費20經驗。
+				[NEWLINE][ICON_BULLET]可以把偉人作為禮物單位送給城邦並獲得150點[ICON_INFLUENCE]影響力。
+			</Text>
 		</Replace>
-		
+
 		<Replace Tag="TXT_KEY_TRAIT_LAND_TRADE_GOLD2">
-			<Text>陸上商隊+50%距離，商隊傳輸宗教壓力提高3倍。每處綠洲+2[ICON_CULTURE]文化值和+2[ICON_PEACE]信仰值。</Text>
+			<Text>
+				[ICON_BULLET]陸上商隊+50%距離，商隊傳輸宗教壓力提高3倍。
+				[NEWLINE][ICON_BULLET]每處綠洲+2[ICON_CULTURE]文化和+2[ICON_PEACE]信仰。
+			</Text>
 		</Replace>
-		
+
 		<Replace Tag="TXT_KEY_TRAIT_DIPLOMACY_GREAT_PEOPLE">
 			<Text>
 				[ICON_BULLET]所有達到小型城市（6[ICON_CITIZEN]人口）規模的城市中每2[ICON_CITIZEN]人口+1[ICON_RESEARCH]科研。
 				[NEWLINE][ICON_BULLET]當宣友時，瑞典和他的盟友得到+10%的[ICON_GREAT_PEOPLE]偉人點數。
 			</Text>
 		</Replace>
-	
+
 		<Replace Tag="TXT_KEY_TRAIT_SCHOLARS_JADE_HALL">
-			<Text>所有專業人員+2[ICON_RESEARCH]科技值，所有偉人地塊設施+2[ICON_RESEARCH]科技值。</Text>
+			<Text>
+				[ICON_BULLET]所有專業人員+2[ICON_RESEARCH]科研。
+				[NEWLINE][ICON_BULLET]所有偉人地塊設施+2[ICON_RESEARCH]科研。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_LONG_COUNT">
-			<Text>若你已研發神學科技，首都每次完成科研建築時獲得一次性科研獎勵，且每個長紀曆（394年，遊戲需要！這不是真實的周期時長！）週期獲得一位自選偉人，首輪每種偉人僅能選擇一次。</Text>
+			<Text>
+				[ICON_BULLET]若你已研發神學科技，啟用每個長紀歷，首都每次完成科研建築時獲得一次性科研獎勵
+				[NEWLINE][ICON_BULLET]啟用長紀歷後，每個長紀歷(394年，遊戲需要!這不是真實的周期時長!)周期獲得一位自選偉人，首輪每種偉人僅能選擇一次。
+			</Text>
 		</Replace>
-		
+
 		<Replace Tag="TXT_KEY_TRAIT_IGNORE_TERRAIN_IN_FOREST">
-			<Text>單位在己方森林和叢林地塊移動視同道路。此類地塊在獲得輪子科技後可建立[ICON_CONNECTED]城市連接。商隊在森林和叢林地塊移動視同道路。所有軍事單位在森林和叢林移動力翻倍。建成農場時，地塊上的森林不會被移除。</Text>
+			<Text>
+				[ICON_BULLET]單位在己方森林和叢林地塊移動視同道路。
+				[NEWLINE][ICON_BULLET]森林和叢林地塊在獲得輪子科技後可建立[ICON_CONNECTED]城市連接。
+				[NEWLINE][ICON_BULLET]商隊在森林和叢林地塊移動視同道路。所有陸軍單位在森林和叢林移動力翻倍。
+				[NEWLINE][ICON_BULLET]建成農場時，地塊上的森林不會被移除。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_SEVEN_CITIES">
-			<Text>發現自然奇跡時獲得[ICON_GOLD]金幣獎勵（首先發現則可獲得更多），自然奇跡提供的地塊產出加倍。遊樂場提供[ICON_HAPPINESS_1]全局快樂而非[ICON_HAPPINESS_1]本地快樂，並給其所在城每處[ICON_RES_COW]牛和[ICON_RES_BISON]野牛資源+2[ICON_GOLD]金幣、+2[ICON_CULTURE]文化值產出。</Text>
+			<Text>
+				[ICON_BULLET]發現自然奇觀時獲得[ICON_GOLD]金錢獎勵(首先發現則可獲得更多)，自然奇觀提供的地塊產出加倍。
+				[NEWLINE][ICON_BULLET]遊樂場提供[ICON_HAPPINESS_1]全局快樂而非[ICON_HAPPINESS_1]本地快樂，並給其所在城每處[ICON_RES_COW]牛和[ICON_RES_BISON]野牛資源+2[ICON_GOLD]金錢、+2[ICON_CULTURE]文化產出。
+			</Text>
 		</Replace>
-		
+
 		<Replace Tag="TXT_KEY_TRAIT_GREAT_ANDEAN_ROAD">
-			<Text>進入丘陵地格時單位忽略地形對移動力的影響。改良設施位於丘陵時無需維護費用；位於其他地形則費用減半。工人可以鏟除丘陵地塊上的[ICON_RES_SHEEP]羊。</Text>
+			<Text>
+				[ICON_BULLET]單位進入丘陵地塊不消耗額外移動力，工人可以鏟除丘陵地塊上的[ICON_RES_SHEEP]羊。
+				[NEWLINE][ICON_BULLET]丘陵上的設施不需要維護費，其他地形上的設施維護費減半。
+				[NEWLINE][ICON_BULLET]平民單位可以進入山脈地塊。移民在山脈地塊不會額外損耗，允許建立山脈城市。
+				[NEWLINE][ICON_BULLET]山脈城市獲得額外的[ICON_RESEARCH]科研和[ICON_FOOD]食物產出，隨時代加成。
+			</Text>
 		</Replace>
 		
+		<Replace Tag="TXT_KEY_TRAIT_SOLIDARITY">
+			<Text>
+				[ICON_BULLET]每次進入新時代時免費獲得一項社會政策。
+			</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_TRAIT_INGENIOUS">
+			<Text>
+				[ICON_BULLET]發明文字後立即獲得一位大科學家。
+				[NEWLINE][ICON_BULLET]大科學家點數積累速率+50%。
+			</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_TRAIT_CARNIVAL">
+			<Text>
+				[ICON_BULLET]黃金時代期間魅力[ICON_TOURISM]產出+100%。
+				[NEWLINE][ICON_BULLET]黃金時代期間大美術家、大音樂家、大文學家產生速率+50%。
+			</Text>
+		</Replace>
+
 	<!--*******************Unique Units' Names*****************-->
 		
 		<Row Tag="TXT_KEY_ENGLISH_HMS_VICTORY">
@@ -6106,7 +6298,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]君主政體[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]城市規模導致的[ICON_HAPPINESS_4]不滿減半。
-				[NEWLINE][ICON_BULLET][ICON_CAPITAL]首都每個[ICON_CITIZEN]市民+1[ICON_GOLD]金錢。
+				[NEWLINE][ICON_BULLET][ICON_CAPITAL]首都每個[ICON_CITIZEN]人口+1[ICON_FOOD]食物、[ICON_CULTURE]文化、[ICON_PRODUCTION]產能、[ICON_RESEARCH]科研、[ICON_GOLD]金錢。
 			</Text>
 		</Replace>
 
@@ -6197,7 +6389,7 @@
 				[COLOR_POSITIVE_TEXT]公民製度[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]每座新建立的城市免費獲得一名工人，[ICON_CAPITAL]首都立刻獲得一名工人。
 				[NEWLINE][ICON_BULLET]每座城市+2[ICON_RES_MANPOWER]人力。
-				[NEWLINE][ICON_BULLET]新建城市獲得一次性的25點[ICON_PRODUCTION]產能（標準速度下）。
+				[NEWLINE][ICON_BULLET]已有城市和新建城市獲得一次性的25點[ICON_PRODUCTION]產能（標準速度下）。
 			</Text>
 		</Replace>
 
@@ -6482,7 +6674,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]炮艦外交[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]對於能夠勒索的城邦每回合獲得5[ICON_INFLUENCE]影響力（標準速度）。
-				[NEWLINE][ICON_BULLET]勒索城邦的軍事分數影響翻倍，勒索城邦消耗的影響力下降到1/4。
+				[NEWLINE][ICON_BULLET]勒索城邦的軍事分數影響翻倍，勒索城邦消耗的[ICON_INFLUENCE]影響力下降到1/4。
 				[NEWLINE][ICON_BULLET]勒索城邦可為最近的城市提供城邦一回合的糧食、產能、文化和科研。
 			</Text>
 		</Replace>
@@ -6974,65 +7166,101 @@
 		<!--*******************Autocracy********************* -->
 		
 		<Replace Tag="TXT_KEY_POLICY_FUTURISM_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]未來主義[ENDCOLOR][NEWLINE]佔領一座城市時可以一次性掠奪到該城市在之前20回合內[ICON_CULTURE]文化值產出值總和。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]未來主義[ENDCOLOR]
+				[NEWLINE]占領一座城市時可以一次性掠奪到該城市在之前20回合內[ICON_CULTURE]文化產出值總和。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_ELITE_FORCES_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]精英部隊[ENDCOLOR][NEWLINE]所有新單位獲得15點經驗值。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]精英部隊[ENDCOLOR]
+				[NEWLINE]所有新單位獲得15點經驗值。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_UNITED_FRONT_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]統一戰線[ENDCOLOR][NEWLINE]每個軍事基地，軍事學院和道場為城市+15%[ICON_PRODUCTION]生產力和[ICON_RESEARCH]科技值產出。
-			[NEWLINE][NEWLINE]建有軍事基地的城市在賣掉市政府以後仍可保留所有軍事建築。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]統一戰線[ENDCOLOR][NEWLINE]每個軍事基地，軍事學院和道場為城市+15%[ICON_PRODUCTION]產能和[ICON_RESEARCH]科研產出。
+				[NEWLINE]建有軍事基地的城市在賣掉市政府以後仍可保留所有軍事建築。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_FORTIFIED_BORDERS_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]邊界強化[ENDCOLOR][NEWLINE]每個軍營、軍械所、兵工廠、軍事基地、軍事學院、金屬鍛造廠、冶鐵坊、煉焦廠、回收中心、石油精煉廠、增殖反應堆、煤液化工廠、煤灰提取廠+1[ICON_HAPPINESS_1]本地幸福度。
-			[NEWLINE]這些建築的維護費-50%[ICON_GOLD]。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]邊界強化[ENDCOLOR]
+				[NEWLINE]所有的軍事建築和資源建築+1[ICON_HAPPINESS_1]本地快樂、-50%維護費[ICON_GOLD]，且建造時+100%[ICON_PRODUCTION]產能積累。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_NATIONALISM_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]民族主義[ENDCOLOR][NEWLINE]單位[ICON_GOLD]維護費-20%。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]民族主義[ENDCOLOR]
+				[NEWLINE]單位[ICON_GOLD]維護費-20%。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_MILITARISM_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]軍國主義[ENDCOLOR][NEWLINE]佔領敵方城市後[COLOR_POSITIVE_TEXT]抵抗時間[ENDCOLOR]減半。如果該城市[ICON_CITIZEN]人口少於6則沒有抵抗。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]軍國主義[ENDCOLOR]
+				[NEWLINE]占領敵方城市後[COLOR_POSITIVE_TEXT]抵抗時間[ENDCOLOR]減半。如果該城市[ICON_CITIZEN]人口少於6或敵方已失去原始首都則沒有抵抗。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_LIGHTNING_WARFARE_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]閃電戰[ENDCOLOR][NEWLINE]大軍事家+2[ICON_MOVES]移動力。所有非民兵陸軍單位+1[ICON_MOVES]移動力。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]閃電戰[ENDCOLOR]
+				[NEWLINE]大軍事家+2[ICON_MOVES]移動力。所有非民兵陸軍單位+1[ICON_MOVES]移動力，允許使用敵軍境內道路。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_TOTAL_WAR_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]全面戰爭[ENDCOLOR][NEWLINE]所有城市+5 [ICON_RES_MANPOWER]人力。城市升級到大城市前，因城市規模造成的[ICON_RES_CONSUMER]商品和[ICON_RES_ELECTRICITY]電力消耗減少一個等級。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]全面戰爭[ENDCOLOR]
+				[NEWLINE]所有城市+5[ICON_RES_MANPOWER]人力，升級到大城市前，因城市規模造成的[ICON_RES_CONSUMER]商品和[ICON_RES_ELECTRICITY]電力消耗減少一個等級。軍事單位訓練速度+25%。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_POLICE_STATE_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]警察國家[ENDCOLOR][NEWLINE]法院、治安署、審計署、警察局和地檢署+3[ICON_HAPPINESS_1]本地幸福度。這些建築因[ICON_CITIZEN]人口造成的[ICON_GOLD]維護費減半</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]警察國家[ENDCOLOR]
+				[NEWLINE]法院、治安署、審計署、警察局和地檢署+3[ICON_HAPPINESS_1]本地快樂。這些建築因[ICON_CITIZEN]人口造成的[ICON_GOLD]維護費減半。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_CULT_PERSONALITY_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]個人崇拜[ENDCOLOR][NEWLINE]非佔領人口的[ICON_HAPPINESS_4]不滿-15%，開啟一次[ICON_GOLDEN_AGE]黃金時代。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]個人崇拜[ENDCOLOR]
+				[NEWLINE]非占領人口的[ICON_HAPPINESS_4]不滿-15%，開啟一次[ICON_GOLDEN_AGE]黃金時代。
+				[NEWLINE]消除來自其他文明掌握科技所帶來的[ICON_TOURISM]魅力加成。
+				[NEWLINE][ICON_HAPPINESS_4]公共輿論不滿減半。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_NEW_ORDER" >
 			<Text>威權政府</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_NEW_ORDER_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]威權政府[ENDCOLOR][NEWLINE]消除來自其他文明掌握科技所帶來的[ICON_TOURISM]旅遊業績加成。[ICON_HAPPINESS_4]公共輿論不滿減半。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]威權政府[ENDCOLOR]
+				[NEWLINE]每占領一個原始首都，軍事單位攻擊傷害固定+4。
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_NEW_ORDER_TEXT" >
-			<Text>威權主義是指處於民主政體和極權政體之間的一種非民主、非極權的政體形式。特點是嚴格遵從政府的權威，而政府常運用壓制性手段，用來維持和執行社會控制。[NEWLINE][NEWLINE]威權政府一般指依靠各種行政手段、法令、軍警以控制國民言論、結社、集會等自由之政府。一些人或組織尋求將他人置於自己的勢力範圍之下，並不顧及獲取共識，這個政府所控制的國家會是不自由、不民主的。[NEWLINE][NEWLINE]權威主義一詞也被用來形容這種人或組織的個性和管理風格。在權威主義的國家中，國家權威滲透到公民生活的各方面，其中很多方面根據其他的政治觀來看，都應屬於個人自由的範圍。權威主義的程度不同，甚至非常民主和自由主義的國家也會在某種程度上表現出權威主義的一面，例如在國家安全問題上。</Text>
+			<Text>威權主義是指處於民主政體和極權政體之間的一種非民主、非極權的政體形式。特點是嚴格遵從政府的權威，而政府常運用壓製性手段，用來維持和執行社會控製。[NEWLINE][NEWLINE]威權政府一般指依靠各種行政手段、法令、軍警以控製國民言論、結社、集會等自由之政府。一些人或組織尋求將他人置於自己的勢力範圍之下，並不顧及獲取共識，這個政府所控製的國家會是不自由、不民主的。[NEWLINE][NEWLINE]權威主義一詞也被用來形容這種人或組織的個性和管理風格。在權威主義的國家中，國家權威滲透到公民生活的各方面，其中很多方面根據其他的政治觀來看，都應屬於個人自由的範圍。權威主義的程度不同，甚至非常民主和自由主義的國家也會在某種程度上表現出權威主義的一面，例如在國家安全問題上。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_GUNBOAT_DIPLOMACY" >
 			<Text>霸權主義</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_GUNBOAT_DIPLOMACY_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]霸權主義[ENDCOLOR][NEWLINE]每當你生產戰略威懾性武器，對所有文明施加一次性[ICON_TOURISM]旅遊業績輸出。（無畏艦、戰列艦、導彈巡洋艦、戰略轟炸機、航母和核動力航母：相當於其[ICON_STRENGTH]戰鬥力數值一半的[ICON_TOURISM]旅遊業績；原子彈：250[ICON_TOURISM]旅遊業績；核導彈：500[ICON_TOURISM]旅遊業績；洲際核導彈：1000[ICON_TOURISM]旅遊業績）</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]霸權主義[ENDCOLOR]
+				[NEWLINE]每當你生產戰略威懾性武器，對所有文明施加一次性[ICON_TOURISM]魅力輸出。（無畏艦、戰列艦、導彈巡洋艦、戰略轟炸機、航母和核動力航母：相當於其[ICON_STRENGTH]戰鬥力數值一半的[ICON_TOURISM]魅力；原子彈：250[ICON_TOURISM]魅力；核導彈：500[ICON_TOURISM]魅力；洲際核導彈：1000[ICON_TOURISM]魅力）
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_GUNBOAT_DIPLOMACY_TEXT" >
-			<Text>1974年毛澤東接見贊比亞總統卡翁達時，提出霸權主義的概念。這是他一以貫之的民族主義傾向、世界景觀和反霸防修思想的體現。具有國內意識形支撐態邏輯框架和外交政策兩種既有區別、又有關聯的功能。它是指在國際關係上，大國、強國憑藉軍事和經濟實力，超越國際法、國際政治格局現狀一味擴張自身勢力範圍，操縱國際事務，干涉他國內政，甚至進行武裝侵略和佔領，稱霸世界、主宰世界的強權政治、強權政策。冷戰時期，主要是指美國和前蘇聯這兩個在核武器和軍備競賽中握有絕對優勢的超級大國的對外政策。成了蘇美的代名詞。與帝國主義、殖民主義等概念並舉，帶有強烈道德譴責意味。比直指帝國主義在外交禮儀上顯得相對委婉一些。與英文Hegemony或Hegemonism指非均衡的政治支配狀態，特定政治佈局中某一國因其政治和經濟實力之優勢而具有主導運作的局面不同。</Text>
+			<Text>1974年毛澤東接見贊比亞總統卡翁達時，提出霸權主義的概念。這是他一以貫之的民族主義傾向、世界景觀和反霸防修思想的體現。具有國內意識形支撐態邏輯框架和外交政策兩種既有區別、又有關聯的功能。它是指在國際關系上，大國、強國憑借軍事和經濟實力，超越國際法、國際政治格局現狀一味擴張自身勢力範圍，操縱國際事務，幹涉他國內政，甚至進行武裝侵略和占領，稱霸世界、主宰世界的強權政治、強權政策。冷戰時期，主要是指美國和前蘇聯這兩個在核武器和軍備競賽中握有絕對優勢的超級大國的對外政策。成了蘇美的代名詞。與帝國主義、殖民主義等概念並舉，帶有強烈道德譴責意味。比直指帝國主義在外交禮儀上顯得相對委婉一些。與英文Hegemony或Hegemonism指非均衡的政治支配狀態，特定政治布局中某一國因其政治和經濟實力之優勢而具有主導運作的局面不同。</Text>
 		</Replace>
 
 	<!--************************* Policy Effects Texts *************************** -->
@@ -7542,207 +7770,306 @@
 
 <!--Religions-->
 	<!--**************************************************Belief Texts Tweak*************************************-->
-		
-		<Replace Tag="TXT_KEY_BELIEF_ANCESTOR_WORSHIP">
-			<Text>神祠+1[ICON_PEACE]信仰值、+1[ICON_CULTURE]文化值</Text>
+	<!--Pantheon-->
+		<Replace Tag="TXT_KEY_BELIEF_GODDESS_LOVE_SHORT">
+			<Text>創世母神</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_DANCE_AURORA">
-			<Text>無森林的凍土地塊+2[ICON_PEACE]信仰值</Text>
+		<Replace Tag="TXT_KEY_BELIEF_GODDESS_LOVE">
+			<Text>城市+1[ICON_HAPPINESS_1]快樂，城市[ICON_CITIZEN]人口增長時獲得6點[ICON_PEACE]信仰（標準速度下）。</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_MESSENGER_GODS">
-			<Text>有[ICON_CONNECTED]城市連接的城市+1[ICON_RESEARCH]科技值、+1[ICON_CULTURE]文化值、+1[ICON_GOLD]金幣</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_GOD_CRAFTSMEN">
-			<Text>玉石、琥珀、珊瑚和天青石+1[ICON_PEACE]信仰值、+1[ICON_CULTURE]文化值</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_SUN_GOD">
-			<Text>橄欖、蔗糖、香水和煙草+1[ICON_PEACE]信仰值、+1[ICON_CULTURE]文化值</Text>
+		<Replace Tag="TXT_KEY_BELIEF_OPEN_SKY">
+			<Text>牧場+1[ICON_CULTURE]文化,[ICON_RES_COW]牛+1[ICON_PEACE]信仰、[ICON_RES_SHEEP]羊+1[ICON_FOOD]食物、[ICON_RES_HORSE]馬+1[ICON_PRODUCTION]產能。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_EARTH_MOTHER">
-			<Text>香料、柑橘、香蕉和棉花+1[ICON_PEACE]信仰值</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_GODDESS_HUNT">
-			<Text>獵場+1[ICON_FOOD]食物、+1[ICON_PEACE]信仰值</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_GURUSHIP">
-			<Text>城市有專業人員時+2[ICON_PEACE]信仰值</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_SETTLEMENTS">
-			<Text>城市邊界擴張速度+50%</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_PILGRIMAGE">
-			<Text>其他文明每個信仰該宗教的城市為此宗教+4[ICON_PEACE]信仰值</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_HOLY_WARRIORS">
-			<Text>消耗[ICON_PEACE]信仰值以購買[COLOR_POSITIVE_TEXT]聖殿騎士[ENDCOLOR]，該單位能夠通過擊殺單位獲得信仰</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_DIVINE_INSPIRATION">
-			<Text>每个世界奇观+2[ICON_PEACE]信仰值、+2[ICON_CULTURE]文化值</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_CEREMONIAL_BURIAL">
-			<Text>全國每座信仰該宗教的城市貢獻1[ICON_HAPPINESS_1]幸福度</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_INITIATION_RITES">
-			<Text>每座城市首次皈依該宗教時貢獻金幣（標速255[ICON_GOLD]金幣，史詩345[ICON_GOLD]金幣）</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_CHURCH_PROPERTY">
-			<Text>每座信仰該宗教的城市貢獻6[ICON_GOLD]金幣</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_TITHE">
-			<Text>每3位該宗教的信徒提供+1[ICON_GOLD]金幣</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_GOD_WAR">
-			<Text>在你的城市6格以內戰鬥勝利時獲得[ICON_PEACE]信仰值</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_MONASTERIES">
-			<Text>允許使用[ICON_PEACE]信仰值購買修道院（+2[ICON_PEACE]信仰值、+1[ICON_CULTURE]文化值，城市[ICON_GREAT_PEOPLE]偉人誕生速度+25%）</Text>
-		</Replace>
-		
-		<Replace Tag="TXT_KEY_BELIEF_GODDESS_STRATEGY">
-			<Text>城牆和城堡+2[ICON_PEACE]信仰值</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_ART">
-			<Text>聖索菲亞、傑內大清真寺、吳哥窟、婆羅浮屠、西斯廷教堂、聖母院+2[ICON_TOURISM]旅遊業績</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_FEED_WORLD">
-			<Text>神祠和神廟+2[ICON_FOOD]食物</Text>
+			<Text>香料、柑橘、香蕉和棉花+1[ICON_PEACE]信仰、+1[ICON_FOOD]食物。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_FERTILITY_RITES">
-			<Text>糧倉+2[ICON_PEACE]信仰值</Text>
+			<Text>糧倉+2[ICON_PEACE]信仰，[ICON_RES_WHEAT]小麥+1[ICON_PEACE]信仰。</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_MONUMENT_GODS">
-			<Text>紀念碑+2[ICON_PEACE]信仰值</Text>
+		<Replace Tag="TXT_KEY_BELIEF_GOD_CRAFTSMEN">
+			<Text>玉石、琥珀、珊瑚和天青石+1[ICON_PEACE]信仰、+1[ICON_PRODUCTION]產能。</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_STONE_CIRCLES">
-			<Text>採石場和石工坊+2[ICON_PEACE]信仰值</Text>
+		<Replace Tag="TXT_KEY_BELIEF_DANCE_AURORA_SHORT">
+			<Text>燧明天火</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_RELIQUARY">
-			<Text>風景地標、學園、海關、制造中心、宗教聖地+5[ICON_PEACE]信仰值</Text>
+		<Replace Tag="TXT_KEY_BELIEF_DANCE_AURORA">
+			<Text>城市+1[ICON_PRODUCTION]產能、+1[ICON_PEACE]信仰。</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_FORMAL_LITURGY">
-			<Text>每一處黃金、白銀、赤銅、鐵礦、鹽資源+1[ICON_PEACE]信仰值、+1[ICON_CULTURE]文化值</Text>
+		<Replace Tag="TXT_KEY_BELIEF_ANCESTOR_WORSHIP">
+			<Text>神祠+1[ICON_PEACE]信仰、+1[ICON_CULTURE]文化，建造工業時代之前的奇觀+10%[ICON_PRODUCTION]產能。</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_GOD_FESTIVALS">
-			<Text>每一處紅酒和熏香+2[ICON_PEACE]信仰值、+2[ICON_CULTURE]文化值</Text>
+		<Replace Tag="TXT_KEY_BELIEF_GODDESS_STRATEGY">
+			<Text>城墻+2[ICON_PEACE]信仰，城堡+4[ICON_CULTURE]文化。</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_ONE_WITH_NATURE">
-			<Text>自然奇跡+8[ICON_PEACE]信仰值</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_PEACE_GARDENS">
-			<Text>公園提供城市+4[ICON_HAPPINESS_1]幸福度</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_LITURGICAL_DRAMA">
-			<Text>露天劇場有3位信徒的城市提供+1[ICON_PEACE]信仰值、+1[ICON_HAPPINESS_1]幸福度</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_SWORD_PLOWSHARES">
-			<Text>和平時期[ICON_FOOD]食物積累速率提高25%</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_GOD_SEA">
-			<Text>漁船+1[ICON_CULTURE]文化值</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_TEARS_OF_GODS">
-			<Text>每一處鑽石和珍珠+2[ICON_PEACE]信仰值、+2[ICON_CULTURE]文化值</Text>
+		<Replace Tag="TXT_KEY_BELIEF_DESERT_FOLKLORE">
+			<Text>荒漠+1[ICON_PEACE]信仰，綠洲額外+1[ICON_CULTURE]文化、+1[ICON_PEACE]信仰。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GOD_KING">
-			<Text>宮殿+4[ICON_PEACE]信仰值</Text>
+			<Text>宮殿+3[ICON_PEACE]信仰、[ICON_CITYBANNER_CITY_LV1]一級城市+1[ICON_FOOD]食物、[ICON_PRODUCTION]產能、[ICON_CULTURE]文化。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_GODDESS_HUNT">
+			<Text>獵場+1[ICON_FOOD]食物、+1[ICON_PEACE]信仰，[ICON_RES_BISON]野牛+1[ICON_FOOD]食物，[ICON_RES_DEER]野鹿+1[ICON_PRODUCTION]產能。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_SACRED_PATH">
+			<Text>叢林+1[ICON_CULTURE]文化、+1[ICON_PEACE]信仰。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_GOD_SEA">
+			<Text>漁船+1[ICON_CULTURE]文化，捕撈船+1[ICON_PEACE]信仰、+1[ICON_CULTURE]文化。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_ORAL_TRADITION">
+			<Text>種植園+1[ICON_CULTURE]文化、+1[ICON_GOLD]金錢，[ICON_RES_SILK]絲綢、[ICON_RES_TEA]茶葉+1[ICON_CULTURE]文化。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_SUN_GOD">
+			<Text>橄欖、蔗糖、香水和煙草+1[ICON_PEACE]信仰、+1[ICON_RESEARCH]科研。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_GOD_WAR">
+			<Text>在你的城市6格以內戰鬥勝利時獲得[ICON_PEACE]信仰，兵營、軍械所+2[ICON_PEACE]信仰。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_MESSENGER_GODS">
+			<Text>有[ICON_CONNECTED]城市連接的城市+2[ICON_PEACE]信仰、+2[ICON_RESEARCH]科研。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_SETTLEMENTS_SHORT">
+			<Text>土地狂熱</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_SETTLEMENTS">
+			<Text>城市+2[ICON_CULTURE]文化，邊界擴張速度+50%。</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_BELIEF_GODDESS_OF_PURITY_SHORT">
+			<Text>純潔女神</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_GODDESS_OF_PURITY">
+			<Text>
+				青春泉+4[ICON_FOOD]食物、+4[ICON_PEACE]信仰、+2[ICON_PRODUCTION]產能、+2[ICON_RESEARCH]科研，
+				維多利亞湖+4[ICON_CULTURE]文化、+4[ICON_PEACE]信仰、+2[ICON_PRODUCTION]產能、+2[ICON_RESEARCH]科研。
+			</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_BELIEF_ASCETISM">
+			<Text>神祠+1[ICON_HAPPINESS_1]快樂</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_SACRED_WATERS">
+			<Text>沿河城市+1[ICON_HAPPINESS_1]快樂，湖泊、海濱+1[ICON_PEACE]信仰。</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_BELIEF_SNOW_BELIEF_SHORT">
+			<Text>風暴之神</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_SNOW_BELIEF">
+			<Text>無森林的凍土地塊+2[ICON_PEACE]信仰,雪地+1[ICON_FOOD]食物、+2[ICON_PEACE]信仰。</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_BELIEF_GURUSHIP">
+			<Text>城市有專業人員時+2[ICON_PEACE]信仰，+1[ICON_CULTURE]文化、[ICON_PRODUCTION]產能、[ICON_RESEARCH]科研。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_PILGRIMAGE">
+			<Text>其他文明每個信仰該宗教的城市為此宗教+4[ICON_PEACE]信仰。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_HOLY_WARRIORS">
+			<Text>允許使用[ICON_PEACE]信仰購買[COLOR_POSITIVE_TEXT]聖殿騎士[ENDCOLOR]，該單位能夠通過擊殺單位獲得信仰。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_DIVINE_INSPIRATION">
+			<Text>每個世界奇觀+2[ICON_PEACE]信仰、+2[ICON_CULTURE]文化。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_CEREMONIAL_BURIAL">
+			<Text>全國每座信仰該宗教的城市貢獻1[ICON_HAPPINESS_1]快樂。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_INITIATION_RITES">
+			<Text>每座城市首次皈依該宗教時貢獻金錢（標速180[ICON_GOLD]金錢，史詩243[ICON_GOLD]金錢）。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_CHURCH_PROPERTY">
+			<Text>每座信仰該宗教的城市貢獻6[ICON_GOLD]金錢。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_TITHE">
+			<Text>每2個該宗教的信徒貢獻1[ICON_GOLD]金錢。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_MONASTERIES">
+			<Text>允許使用[ICON_PEACE]信仰購買修道院（+2[ICON_PEACE]信仰、+1[ICON_CULTURE]文化，城市[ICON_GREAT_PEOPLE]偉人誕生速度+25%）。</Text>
+		</Replace>	
+		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_ART">
+			<Text>聖索菲亞、傑內大清真寺、吳哥窟、婆羅浮屠、西斯廷教堂、聖母院+2[ICON_TOURISM]魅力。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_FEED_WORLD">
+			<Text>神祠和神廟+2[ICON_FOOD]食物。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_MONUMENT_GODS">
+			<Text>紀念碑+2[ICON_PEACE]信仰。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_STONE_CIRCLES">
+			<Text>采石場和石工坊+2[ICON_PEACE]信仰，[ICON_RES_MARBLE]大理石+1[ICON_PRODUCTION]產能</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_RELIQUARY">
+			<Text>風景地標、學園、海關、製造中心、宗教聖地+5[ICON_PEACE]信仰。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_FORMAL_LITURGY">
+			<Text>每一處黃金、白銀、赤銅、鐵礦、鹽資源+1[ICON_PEACE]信仰、+1[ICON_CULTURE]文化。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_GOD_FESTIVALS">
+			<Text>每一處紅酒和熏香+2[ICON_PEACE]信仰、+2[ICON_CULTURE]文化。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_ONE_WITH_NATURE">
+			<Text>自然奇觀+8[ICON_PEACE]信仰。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_PEACE_GARDENS">
+			<Text>城市中的公園+4[ICON_HAPPINESS_1]快樂。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_LITURGICAL_DRAMA">
+			<Text>信眾規模達到3的城市中露天劇場+1[ICON_PEACE]信仰、+1[ICON_HAPPINESS_1]快樂。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_SWORD_PLOWSHARES">
+			<Text>和平時期[ICON_FOOD]食物積累速率提高25%。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_TEARS_OF_GODS">
+			<Text>每一處鉆石和珍珠+2[ICON_PEACE]信仰、+2[ICON_CULTURE]文化。</Text>
 		</Replace>
 		
+
 		<Replace Tag="TXT_KEY_BELIEF_PAPAL_PRIMACY">
-			<Text>對信奉此宗教的城邦+35[ICON_INFLUENCE]剩餘影響力</Text>
+			<Text>對信仰此宗教的城邦的[ICON_INFLUENCE]影響力下限值+35。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_CHARITABLE_MISSIONS">
-			<Text>贈送[ICON_GOLD]金幣對城邦的影響力增加50%。對信奉此宗教的城邦+20[ICON_INFLUENCE]剩餘影響力</Text>
+			<Text>向城邦贈送[ICON_GOLD]金錢增加影響力的效果提升50%。對信仰此宗教的城邦的[ICON_INFLUENCE]影響力下限值+30。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_JESUIT_EDUCATION">
-			<Text>可以使用[ICON_PEACE]信仰值購買大學、公立學校和研發實驗室。大學、公立學校和研發實驗室+2[ICON_PEACE]信仰值</Text>
+			<Text>可以使用[ICON_PEACE]信仰購買大學、公立學校和研發實驗室。大學、公立學校和研發實驗室+2[ICON_PEACE]信仰。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_SACRED_SITES">
-			<Text>所有用[ICON_PEACE]信仰值購買的建築物可分別提供2點[ICON_TOURISM]旅遊收入。學園、海關、制造中心、宗教聖地+5[ICON_CULTURE]文化值</Text>
+			<Text>每座使用[ICON_PEACE]信仰購買的建築+2[ICON_TOURISM]魅力。學園、海關、製造中心、宗教聖地+5[ICON_CULTURE]文化。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_FERVOR_SHORT">
 			<Text>教會藝匠</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_FERVOR">
-			<Text>消耗[ICON_PEACE]信仰值以購買[COLOR_POSITIVE_TEXT]宗教藝術師[ENDCOLOR]，該單位能夠開啟黃金時代。露天劇場、畫廊和歌劇院+2[ICON_PEACE]信仰值。建造非未來時代奇跡時+25%[ICON_PRODUCTION]生產力積累</Text>
+			<Text>允許使用[ICON_PEACE]信仰購買[COLOR_POSITIVE_TEXT]宗教藝術師[ENDCOLOR]，該單位能夠開啟黃金時代。露天劇場、畫廊和歌劇院+2[ICON_PEACE]信仰。建造非未來時代奇觀時+25%[ICON_PRODUCTION]產能積累。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_UNITY_OF_PROPHETS">
-			<Text>異端審問官和預言家降低一半該宗教的影響力（不將其廢除）。聖城中誕生一位[ICON_PROPHET]預言家</Text>
+			<Text>宗教裁判官和先知只能將此宗教的信眾減少一半（而非全部清除）。聖城中誕生一位[ICON_PROPHET]大先知。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_TO_GLORY_OF_GOD">
-			<Text>進入工業時代之後可以使用[ICON_PEACE]信仰值購買任意類型的[ICON_GREAT_PEOPLE]偉人。每個城市的專家所產出的[ICON_PEACE]信仰值+1</Text>
+			<Text>進入工業時代之後可以使用[ICON_PEACE]信仰購買任意類型的[ICON_GREAT_PEOPLE]偉人。所有城市每位專業人員+1[ICON_PEACE]信仰。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_UNDERGROUND_SECT">
-			<Text>您的間諜對他們所处的城市實施宗教壓迫。額外提供一名[ICON_SPY]間諜</Text>
+			<Text>你的間諜可向所處城市註入宗教壓力。額外提供一名[ICON_SPY]間諜。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_EVANGELISM">
-			<Text>傳教士的佈教活動沖刷了現有來自其他宗教的壓迫。宗教單位佈教次數+1</Text>
+			<Text>傳教士的傳教活動能消解其他宗教的壓力。宗教單位傳教次數+1。</Text>
 		</Replace>
 
 		<!--**************************************************New Belief Texts*************************************-->
+		<Row Tag="TXT_KEY_BELIEF_RELIGIOUS_COLONIZATION_SHORT">
+			<Text>宗教殖民</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_RELIGIOUS_COLONIZATION">
+			<Text>在聖城可以使用信仰[ICON_PEACE]購買[COLOR_POSITIVE_TEXT]移民[ENDCOLOR]，采用自主的「集體統治」政策後購買價格下降。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_RELIGIOUS_SCIENCE_SHORT">
+			<Text>宗教科學</Text>
+		</Row>
+		<Row Tag="TXT_KEY_RELIGIOUS_SCIENCE">
+			<Text>每座信仰該宗教的城市貢獻2[ICON_RESEARCH]科研，宗教聖地+2[ICON_RESEARCH]科研。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_SACRED_CALENDAR_SHORT">
+			<Text>神聖歷法</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_SACRED_CALENDAR">
+			<Text>[ICON_GOLDEN_AGE]黃金時代長度+33%，每種[ICON_PEACE]信仰購買的建築+3[ICON_GOLDEN_AGE]黃金時代點數。</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_COMMUNITY">
+			<Text>每個信徒+1%[ICON_PRODUCTION]產能（最大+20%）。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_HEATHEN_CONVERSION">
+			<Text>傳教士可使相鄰的蠻族單位加入本文明，攻占敵方城市可以轉換部分異教徒為本宗教信徒，且獲得轉換信徒數相關的[ICON_PEACE]信仰、[ICON_CULTURE]文化、[ICON_GOLD]金錢。</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_MESSAGE_BELIEF_HEATHEN_CONVERSION_ALERT">
+			<Text>{1_name}中的部分異教徒受到了我方感化皈依，獲得[COLOR_POSITIVE_TEXT]{2_name}點[ENDCOLOR][ICON_PEACE]信仰、[ICON_CULTURE]文化、[ICON_GOLD]金錢。</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_BELIEF_JUST_WAR">
+			<Text>在信仰該宗教的敵方城市附近+20%[ICON_STRENGTH]戰鬥力，且占領該城市後[ICON_RESISTANCE]抵抗時間減半。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_PEACE_LOVING">
+			<Text>每6個在非敵對的別國城市中該宗教的信徒貢獻1[ICON_HAPPINESS_1]快樂（全國）。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_CHORAL_MUSIC">
+			<Text>信眾規模達到5的城市中神廟+4[ICON_CULTURE]文化。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_DEFENDER_FAITH">
+			<Text>在信仰該宗教的己方城市附近+20%[ICON_STRENGTH]戰鬥力，聖城訓練的軍事單位+15經驗。</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_BELIEF_ORTHODOX_CHURCH_SHORT">
+			<Text>正統教會</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_ORTHODOX_CHURCH">
+			<Text>聖城壓力+200%，聖城誕生大先知時，每座信仰本宗教的城市都會為你提供一次性[ICON_CULTURE]文化產出。</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_UNITY">
+			<Text>宗教以雙倍速度傳播到友好的城邦，完成信仰同宗教城邦的任務獲得的[ICON_INFLUENCE]影響力+50%。</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_SP_NOTIFICATION_RELIGION_CIVQUEST_BONUS_SHORT">
+			<Text>宗教帶來的城邦影響力加成</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_NOTIFICATION_RELIGION_CIVQUEST_BONUS">
+			<Text>由於{1_Name}信仰你創立的宗教，完成其任務獲得{2_Name}點額外[ICON_INFLUENCE]影響力。</Text>
+		</Row>
+
 		<Row Tag="TXT_KEY_BELIEF_FAITH_WITHOUT_BORDERS_SHORT">
 			<Text>普世宗教</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_FAITH_WITHOUT_BORDERS">
-			<Text>其他文明的城市中每7個信徒+1 [ICON_PEACE]信仰值</Text>
+			<Text>其他文明的城市中每3個信徒+1[ICON_PEACE]信仰。</Text>
 		</Row>
-		
+		<Replace Tag="TXT_KEY_BELIEF_WORLD_CHURCH">
+			<Text>每3個其他文明中該宗教的信徒貢獻1[ICON_CULTURE]文化。</Text>
+		</Replace>
 		<Row Tag="TXT_KEY_BELIEF_MARSH_BELIEF_SHORT">
 			<Text>河童傳說</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_MARSH_BELIEF">
-			<Text>沼澤+3[ICON_PEACE]信仰值。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BELIEF_SNOW_BELIEF_SHORT">
-			<Text>風暴之神</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BELIEF_SNOW_BELIEF">
-			<Text>雪地+2[ICON_PEACE]信仰值並+1[ICON_FOOD]食物。</Text>
+			<Text>沼澤+3[ICON_PEACE]信仰、+1[ICON_CULTURE]文化。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_RIVER_CRAFTSMAN_SHORT">
 			<Text>河圖洛書</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_RIVER_CRAFTSMAN">
-			<Text>水力磨坊+2[ICON_HAPPINESS_1]幸福度。</Text>
+			<Text>水力磨坊+2[ICON_HAPPINESS_1]快樂。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_MAZU_SHORT">
 			<Text>媽祖祭典</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_MAZU">
-			<Text>港口+2[ICON_HAPPINESS_1]幸福度。</Text>
+			<Text>港口+2[ICON_HAPPINESS_1]快樂。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_CHARITES_SHORT">
 			<Text>美惠三女神</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_CHARITES">
-			<Text>露天劇場、畫廊和歌劇院+2[ICON_CULTURE]文化值。</Text>
+			<Text>露天劇場、畫廊和歌劇院+2[ICON_CULTURE]文化。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_EIRENE_SHORT">
 			<Text>兼愛非攻</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_EIRENE">
-			<Text>和平時期全國+15%[ICON_CULTURE]文化值產出。</Text>
+			<Text>和平時期全國+25%[ICON_CULTURE]文化產出。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_INQUISITION_SHORT">
 			<Text>異端審判</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_INQUISITION">
-			<Text>允許宗教單位消耗自身在其所在城市中建立[COLOR_POSITIVE_TEXT]宗教裁判所[ENDCOLOR]（城中的每種異教+3[ICON_PEACE]信仰值、+2[ICON_GOLD]金幣。+1[ICON_HAPPINESS_1]幸福度。只能在存在非主流異教的城市中建造）</Text>
+			<Text>允許宗教單位消耗自身在其所在城市中建立[COLOR_POSITIVE_TEXT]宗教裁判所[ENDCOLOR]（城中的每種異教+3[ICON_PEACE]信仰、+2[ICON_GOLD]金錢、+1[ICON_HAPPINESS_1]快樂。只能在存在非主流異教的城市中建造）。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_RELIGION_PRESSURE_SHORT">
 			<Text>神聖殿堂</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_RELIGION_PRESSURE">
-			<Text>由世界奇跡、自然奇跡和改良設施（地標、摩艾石像、法國古堡）所產出的[ICON_CULTURE]文化值的25%會添加到該城市產出的[ICON_TOURISM]旅遊業績。來自巨作的[ICON_TOURISM]旅遊業績產出+25%。聖城產生的宗教壓力+100%</Text>
+			<Text>25%來自於世界奇觀、自然奇觀和地面設施（風景地標、摩艾石像群、宮堡等）的[ICON_CULTURE]文化產出增加到該城市的[ICON_TOURISM]魅力產出中。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SCIENCE_RELIGION_SHORT">
 			<Text>文廟私塾</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SCIENCE_RELIGION">
-			<Text>每個信徒增加本城+1%[ICON_RESEARCH]科技值產出(最大+50%)</Text>
+			<Text>每個信徒增加本城+1%[ICON_RESEARCH]科研產出(最大+30%)。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_EXTRA_RELIGION_SPREADS">
 			<Text>+1次宗教傳播次數</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EXTRA_RELIGION_SPREADS_2">
+			<Text>+2次宗教傳播次數</Text>
 		</Row>
 		<Row Tag="TXT_KEY_EXTRA_RELIGION_SPREADS_4">
 			<Text>+4次宗教傳播次數</Text>
@@ -7776,7 +8103,18 @@
 		<Row Tag="TXT_KEY_PROMOTION_ARTIST_PROMOTION_HELP">
 			<Text>開啟一輪[ICON_GOLDEN_AGE]黃金時代，回合數值等同於[ICON_GREAT_ARTIST]大藝術家。</Text>
 		</Row>
-		
+		<Row Tag="TXT_KEY_RELIGION_HOLYCITY_MARK">
+			<Text>聖城標記</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_BELIEF_MISSIONARY_ZEAL">
+			<Text>傳教士傳教能力+25%，聖城誕生的傳教士傳教次數+2。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_MESSIAH">
+			<Text>大先知能力增強25%，催生大先知所需的[ICON_PEACE]信仰減少25%，大先知能進入未開邊國家領土。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_TEXTS">
+			<Text>宗教傳播速度+25%(研發印刷機後+50%)，聖城每3點[ICON_PEACE]信仰提供1點基礎[ICON_CULTURE]文化產出。</Text>
+		</Replace>
 	
 		
 <!--Resources-->
@@ -7832,16 +8170,21 @@
 			<Text>兵力的多少決定了一個文明軍事單位的數量上限。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_TROOPS_TEXT">
-			<Text>“軍團模式”：[NEWLINE][NEWLINE]
-			AI擁有兵工廠後允許建立“軍團”，即可以將兩個相同單位“合並”成一個單位，[ICON_STRENGTH]戰鬥力+10%，血量上限+100%；[NEWLINE]
-			AI擁有軍事基地後允許建立“集團軍”，在“軍團”基礎上允許再合入一個相同的單位，[ICON_STRENGTH]戰鬥力+40%，血量上限再+100%；[NEWLINE]
-			AI新造|新刷單位優先補充舊單位的損失，其次在條件滿足的情況下合入舊單位（根據遊戲難度合入概率依次為8級100%，7級90%...），最後才會真正產生一個新單位；[NEWLINE]
-			人類玩家也可以組建軍團和集團軍，不過只能在有兵工廠和軍事基地的城市範圍內通過消耗大軍（陸軍）或提督（海軍）實現；[NEWLINE][NEWLINE]
-			引入“兵力”設定，兵力決定你總共能擁有的軍事單位數量，兵力點滿後獲取軍事單位將變得非常困難，新建的軍事單位也會被清除，AI兵力點滿後也將停止刷出單位，分三個遊戲選項檔：[NEWLINE]
-			高：除小鎮以外的每個城市規模等級提供4兵力點，玩家初始24點，AI初始32點 —— 適合高配置玩家；[NEWLINE]
-			中：除小鎮以外的每個城市規模等級提供2兵力點，玩家初始12點，AI初始16點 —— 適合中配置玩家；[NEWLINE]
-			低：除小鎮以外的每個城市規模等級提供1兵力點，玩家初始 6點，AI初始 8點 —— 適合低配置玩家或和平主義者；[NEWLINE]
-			（平民、要塞及空軍單位不計入，也不進行單位合並操作，不過艦載機會跟隨載具獲得相應“提升”）
+			<Text>
+				「軍團模式」：[NEWLINE][NEWLINE]
+				只有陸軍可以建立「軍團」或者「集團軍」；[NEWLINE]
+				[ICON_BULLET]AI擁有兵工廠後允許建立「軍團」，可以將兩個相同單位「合並」成一個單位，[ICON_STRENGTH]戰鬥力+10%，血量上限+100%；[NEWLINE]
+				[ICON_BULLET]AI擁有軍事基地後允許建立「集團軍」，在「軍團」基礎上允許再合入一個相同的單位，[ICON_STRENGTH]戰鬥力再+15%，血量上限再+100%；[NEWLINE]
+				[ICON_BULLET]AI新造/新刷單位優先補充舊單位的損失，其次在條件滿足的情況下合入舊單位（根據遊戲難度合入概率依次為8級100%，7級90%...），最後才會真正產生一個新單位；[NEWLINE]
+				人類玩家也可以組建軍團和集團軍，不過只能在有兵工廠和軍事基地的城市範圍內通過兩個相同單位合成或者消耗陸軍統帥實現；[NEWLINE]
+				使用相同單位合成軍團可以同時合並兩個單位的晉升，並由此得到一個強力單位，而消耗陸軍統帥會直接賦予單位軍團/集團軍晉升；[NEWLINE][NEWLINE]
+				引入「兵力」設定，兵力決定你總共能擁有的軍事單位數量，兵力點滿後獲取軍事單位將變得非常困難，新建的軍事單位也會被清除，AI兵力點滿後也將停止刷出單位，分三個遊戲選項檔：[NEWLINE]
+				[ICON_BULLET]高：除小鎮以外的每個城市規模等級提供4兵力點，玩家初始24點，AI初始32點，每個兵工廠/軍事基地分別提供2點軍團/集團軍組建上限 ——適合高配置玩家；[NEWLINE]
+				[ICON_BULLET]中：除小鎮以外的每個城市規模等級提供2兵力點，玩家初始12點，AI初始16點，每個兵工廠/軍事基地分別提供1點軍團/集團軍組建上限 ——適合中配置玩家（默認情況）；[NEWLINE]
+				[ICON_BULLET]低：除小鎮以外的每個城市規模等級提供1兵力點，玩家初始 6點，AI初始 8點，每個兵工廠/軍事基地分別提供1點軍團/集團軍組建上限 ——適合低配置玩家或和平主義者；[NEWLINE][NEWLINE]
+				特別註意，「軍團」或者「集團軍」的上限只與兵工廠或者軍事基地的數量有關，消耗陸軍統帥可以無視數量上限組建，但是並不會增加上限（你會看到組建按鈕顯示可組建數量為負數）；[NEWLINE]
+				消耗陸軍統帥組建「集團軍」仍然需要城市擁有兵工廠；[NEWLINE]
+				（平民、要塞及空軍單位不計入兵力消耗，也不進行單位合並操作）
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_TROOPS_USED">
@@ -9754,19 +10097,28 @@
 			<Text>強大的機動單位，替代巡航坦克，擁有更高的移動更大的視野，面對敵人的進攻有50%概率全身而退，面對殘軍增加戰鬥力，境外作戰+25%[ICON_STRENGTH]戰鬥力。</Text>
 		</Row>
 	
-		<!--<Row Tag="TXT_KEY_UNIT_EGYPT_MAMLUK">
-			<Text>馬穆魯克</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_EGYPT_MAMLUK_HEADING">
+		<Row Tag="TXT_KEY_UNIT_EGYPTAIN_MAMLUK">
 			<Text>馬穆魯克</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_HELP_EGYPT_MAMLUK">
-			<Text>WIP</Text>
+		<Row Tag="TXT_KEY_UNIT_EGYPTAIN_MAMLUK_HELP">
+			<Text>馬穆魯克是埃及文明的特色單位，替代騎士。
+				[NEWLINE][ICON_BULLET]位於城市時可禁止其他文明進行傳教。
+				[NEWLINE][ICON_BULLET]攻擊敵軍時獲得與造成傷害數值相同的[ICON_PEACE]信仰。
+			</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_EGYPT_MAMLUK_PEDIA">
-			<Text>WIP</Text>
-		</Row>-->
+		<Row Tag="TXT_KEY_CIVILOPEDIA_UNITS_MEDIEVAL_MAMLUK_TEXT">
+			<Text>
+				馬穆魯克（阿拉伯語：مملوك，英文：Mamluk）的原意是「奴隸」，因為音譯的不同，也被譯為「馬木留克」，最初出現於阿拉伯帝國阿拔斯王朝時期的「突厥古拉姆」製度，逐漸形成了一個獨特的軍事貴族集團。
+				[NEWLINE]馬穆魯克是中世紀服務於阿拉伯哈裏發的奴隸兵，主要效命於埃及的阿尤布王朝。後來，隨著哈裏發的勢微和阿尤布王朝的解體，他們逐漸成為強大的軍事統治集團，並建立了自己的王朝，統治埃及達三百年之久（1250年—1517年）。馬穆魯克的前身，古拉姆衛隊，源自阿拔斯中期的政治鬥爭。阿拔斯王朝的第八代哈裏發穆塔西姆是一個突厥女奴之子，他登基之後深深地忌憚著當時朝廷中如日中天的波斯系貴族，於是就通過自己的母親從中亞雇傭了一批突厥戰士做自己的護衛，這就是最早期的「古拉姆」也為之後的馬穆魯克奠定了基礎。
+				[NEWLINE]十一世紀的十字軍東征，對阿拉伯地區造成了重大的影響，馬穆魯克在薩拉丁的指揮下作為一個獨立的軍事集團出現於阿拉伯的政治舞臺上。並且因為戰功卓著，這些奴隸出身的將領在埃及建立了自己的王朝，延續了三百多年。十三世紀他們在艾因·賈魯戰役打敗了蒙古帝國的伊兒汗國。奧斯曼帝國時期，馬穆魯克建立的埃及馬穆魯克王朝長期與奧斯曼土耳其帝國為敵，直到1517年被土耳其蘇丹塞利姆一世擊敗。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_SPN_MAMLUK_COMBAT_FAITH">
+			<Text>蘇丹之刃</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_SPN_MAMLUK_COMBAT_FAITH_HELP">
+			<Text>攻擊敵方單位時獲得與造成傷害數值相同的[ICON_PEACE]信仰。</Text>
+		</Row>
 		
 		<!--<Row Tag="TXT_KEY_UNIT_PERSIAN_CATAPHRACT">
 			<Text>薩珊鐵騎</Text>
@@ -10056,7 +10408,7 @@
 			<Plurality>2</Plurality>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_FRANCE_BATTERY_HELP">
-			<Text>快速且強大的攻城單位。法國特色單位，替代加農炮。具有間接火力，並且在攻擊前不需要進行遠程攻擊準備。</Text>
+			<Text>快速且強大的攻城單位。法國特色單位，替代加農炮。具有間接火力，並且在攻擊前不需要進行遠程攻擊準備。自帶破陣1-2級晉升。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_FRANCE_BATTERY_HEADING">
 			<Text>大炮兵連</Text>
@@ -10167,20 +10519,6 @@
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_HUN_SHAMAN_TEXT">
 			<Text>“薩滿”一詞也可音譯為“珊蠻”“嚓瑪”等。該詞源自通古斯語saman與北美印第安語shamman，原詞含有：智者、曉徹、探究、等意，後逐漸演變為薩滿教巫師即跳神之人的專稱，也被理解為這些氏族中薩滿之神的代理人和化身。薩滿至少有兩千年的歷史。</Text>
-		</Row>
-		
-		<Row Tag="TXT_KEY_UNIT_EGYPT_UNIT777">
-			<Text>[COLOR_SELECTED_TEXT]777特戰隊[ENDCOLOR]</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_EGYPT_UNIT777_HEADING">
-			<Text>777特戰隊</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_EGYPT_UNIT777_HELP">
-			<Text>替代空降部隊。自帶可繼承的+3移動，長途行軍，閃擊晉升（空降當回合即可攻擊，可以疊加成3擊），以及攻城時+300%戰鬥力的晉升。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_EGYPT_UNIT777_TEXT">
-			<Text>777特戰隊（阿拉伯語：الوحدة777قتال‎），又被稱為“777專案組”，是一個埃及用於軍事反恐和特種作戰的軍隊。它是在1978年由安瓦爾•薩達特政府創建，當時在蘇聯間諜的驅使下，恐怖活動逐漸增多，薩達特政府出於對恐怖活動的擔憂與實現和平的目的創建了777特戰隊。</Text>
 		</Row>
 
 	<!-- *************************Sea Units****************************-->
@@ -10649,16 +10987,6 @@
 			[NEWLINE][NEWLINE]殺敵掠奪到敵人[ICON_STRENGTH]戰鬥力兩倍的[ICON_GOLD]金幣</Text>
 		</Row>
 		
-		<Row Tag="TXT_KEY_UNIT_DANISH_ABSALON">
-			<Text>[COLOR_MAGENTA]阿布薩隆級支援艦[ENDCOLOR]</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_DANISH_ABSALON_HEADING">
-			<Text>阿布薩隆級支援艦</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_DANISH_ABSALON_PEDIA">
-			<Text>阿布薩隆級支援艦，又稱為阿布薩隆級靈活支援艦。一般認為，護衛艦在艦隊中主要負責反潛、防空並兼具一定的對艦攻擊能力，但丹麥海軍卻劍走偏鋒地將兩栖艦設計融入護衛艦當中，打造出了理念新銳的“阿布薩隆”級戰鬥支援艦。這種“混血”戰艦不僅防空、反潛、反艦樣樣不差，還具備佈雷和投送部隊的能力，是名副其實的海上多面手。</Text>
-		</Row>
 		<Row Tag="TXT_KEY_BUILD_CARRIER_FIGHTER">
 			<Text>購買：[ICON_BULLET] </Text>	<!-- 購買艦載機 -->
 		</Row>
@@ -11408,7 +11736,13 @@
 			<Text>[COLOR_YELLOW]雪橇步兵[ENDCOLOR]</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_ELITE_NAME_DANISH_SKI_INFANTRY">
-			<Text>[COLOR_YELLOW]雪橇[ENDCOLOR]</Text>
+			<Text>[COLOR_YELLOW]雪橇步兵[ENDCOLOR]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CIV5_DENMARK_SKI_INFANTRY_HELP">
+			<Text>擅長在雪原、凍土和丘陵地形作戰的精英陸軍近戰單位。 [NEWLINE][NEWLINE]需要冬季兩項運動解鎖。你最多只能組建十隊雪橇步兵，且無法通過金錢購買。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CIV5_DENMARK_SKI_INFANTRY_STRATEGY">
+			<Text>雪撬步兵正如他的名字所描述的，非常擅長在雪原、凍土和丘陵地形中作戰。在這些地形上，他們不但有戰鬥力加成，且移動力加倍，甚至坦克都無法追上他們。</Text>
 		</Replace>
 
 		<Row Tag="TXT_KEY_UNIT_PROTOTYPE_SUBMARINE">
@@ -11537,7 +11871,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_ENTERPRISE_HELP">
 			<Text>
-			[NEWLINE]只有在完成灰色幽靈工程並在之後宣戰或被宣戰後隨機產生
+			只有在完成灰色幽靈工程並在之後宣戰或被宣戰後隨機產生
 			[NEWLINE]戰爭狀態如上改變後的每回合，完成計劃者的每艘航母都有一定幾率轉為企業號，直到成功轉化或者其首都被攻陷。
 			[NEWLINE]只能有一艘企業號出現過。</Text>
 		</Row>
@@ -12861,7 +13195,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_NEWLYCAPTURED_HELP">
 			<Text>
-				[ICON_BULLET]这个单位是刚刚俘获的，他保留攻击方1/3的经验，但是仅有少量HP剩余。
+				[ICON_BULLET]这个单位是刚刚俘获的，他保留攻击方1/4的经验，但是仅有少量HP剩余。
 				[NEWLINE][ICON_BULLET]本回合仅剩少量 [ICON_MOVES] 移动力，但是下回合恢复。
 				[NEWLINE][ICON_BULLET]本回合不能[COLOR_NEGATIVE_TEXT]攻击[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]这一状态不能被大军事家或者提督消除，但是下回合自动去除，那时你也可以为他选择晋升。
@@ -12955,7 +13289,7 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_PROMOTION_LIGHTNING_WARFARE_HELP">
-			<Text>+1[ICON_MOVES]移動力，無視敵方控制區域（ZOC）。</Text>
+			<Text>+1[ICON_MOVES]移動力，無視敵方控制區域（ZOC），允許使用敵軍境內道路。</Text>
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_PROMOTION_FAST_GENERAL_HELP">
@@ -13338,6 +13672,19 @@
 			<Text>免疫大部分負面狀態和附帶傷害。（EMP效果、重炮穿透和範圍傷害有效）。</Text>
 		</Row>
 		
+		<Row Tag="TXT_KEY_PROMOTION_ANTI_COLLATERAL">
+			<Text>穿透免疫</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_ANTI_COLLATERAL_HELP">
+			<Text>免疫來自攻城單位和遠程海軍單位等的穿透傷害。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_ANTI_SPLASH">
+			<Text>濺射免疫</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_ANTI_SPLASH_HELP">
+			<Text>免疫來自陸軍特種單位和海軍旗艦等的濺射傷害。</Text>
+		</Row>
+		
 		<Row Tag="TXT_KEY_PROMOTION_NUCLEAR_ARTILLERY">
 			<Text>戰術核武器</Text>
 		</Row>
@@ -13402,20 +13749,6 @@
 			[NEWLINE]+2[ICON_FOOD]食物，+1[ICON_PRODUCTION]生產力。
 			[NEWLINE]+10%[ICON_FOOD]粮食。
 			[NEWLINE]無地形限制。</Text>
-		</Replace>
-		
-	<!-- Max. HP Reduce -->
-		<Replace Tag="TXT_KEY_PROMOTION_MAXHP_REDUCE_1">
-			<Text>最大生命值-100</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_MAXHP_REDUCE_2">
-			<Text>最大生命值-200</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_MAXHP_REDUCE_3">
-			<Text>最大生命值-300</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_MAXHP_REDUCE_4">
-			<Text>最大生命值-400</Text>
 		</Replace>
 		
 		<Row Tag="TXT_KEY_UNIT_ENTERPRISE">
@@ -14078,7 +14411,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_MESSAGE_POLICY_CITIZENSHIP_ALERT">
 			<Text>
-				由於你采用了政策公民製度，你的新城市[COLOR_POSITIVE_TEXT]{1_name}[ENDCOLOR]獲得了{2_name}點[ICON_PRODUCTION]產能。
+				由於你采用了政策公民製度，你的城市[COLOR_POSITIVE_TEXT]{1_name}[ENDCOLOR]獲得了{2_name}點[ICON_PRODUCTION]產能。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_MESSAGE_POLICY_CULTURAL_DIPLOMACY_ALERT">
@@ -14324,6 +14657,139 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_FREEPROMOTIONS">
 			<Text>[COLOR_CYAN]單位屬性:[ENDCOLOR]</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_BUILDING_PARADISE_GARDEN">
+			<Text>[ICON_GREAT_PEOPLE][ICON_GOLDEN_AGE][ICON_WAR]天堂花園</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_PARADISE_GARDEN_HELP">
+			<Text>
+				[ICON_BULLET]本城市+25%[ICON_GREAT_PEOPLE]偉人點數積累。
+				[NEWLINE][ICON_BULLET]只能在中型城市（15人口）建造。
+				[NEWLINE][ICON_BULLET][ICON_GOLDEN_AGE]黃金時代閾值降低3%。
+				[NEWLINE][ICON_BULLET]處於[ICON_GOLDEN_AGE]黃金時代時，單位[ICON_WAR]戰鬥力+2%。
+			</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_BUILDING_OTTOMAN_SIEGE_WORKSHOP">
+			<Text>[ICON_PRODUCTION][ICON_WAR]攻城工坊</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_OTTOMAN_SIEGE_WORKSHOP_HELP">
+			<Text>
+				[ICON_BULLET]城市內所有[COLOR_POSITIVE_TEXT]森林[ENDCOLOR]和[COLOR_POSITIVE_TEXT]叢林[ENDCOLOR]地塊+1[ICON_PRODUCTION]產能。
+				[NEWLINE][ICON_BULLET]研發炸藥之後[COLOR_NEGATIVE_TEXT]過期[ENDCOLOR]（提供產出但不能建造）。
+				[NEWLINE][ICON_BULLET]研發因特網後+2[ICON_TOURISM]魅力。
+				[NEWLINE][ICON_BULLET]本城新建的攻城單位獲得晉升【烏爾班大砲】，攻城時有一定概率摧毀城市的軍事和防禦建築。
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_ORBAN_CANNON">
+			<Text>
+				烏爾班大砲
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_ORBAN_CANNON_HELP">
+			<Text>
+				攻擊主要文明的城市時，有40%的概率摧毀一座軍事建築，按優先級：軍營、軍械所、城牆、城堡。
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_ORBAN_CANNON_COMBAT_INFO">
+			<Text>
+				你的烏爾班大砲破壞了敌方城市的{1_building}!
+			</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_BUILDING_ASSUR_TEMPLE">
+			<Text>[ICON_PEACE][ICON_WAR]阿蘇爾神廟</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_ASSUR_TEMPLE_HELP">
+			<Text>
+				[ICON_BULLET]組建作戰單位+15%產能。
+				[NEWLINE][ICON_BULLET]殲滅位於城市6格內敵人時，獲得目標單位50%[ICON_STRENGTH]戰鬥力的[ICON_FOOD]食物、[ICON_PEACE]信仰。
+			</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_CITY_NAME_LHASA">
+			<Text>甘托克</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CITYSTATE_LHASA">
+			<Text>甘托克</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CITYSTATE_LHASA_ADJ">
+			<Text>甘托克</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CIV5_LHASA_TITLE">
+			<Text>甘托克</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CIV5_LHASA_TEXT">
+			<Text>
+				甘托克，是曾經存在的獨立君主製國家錫金的首都。錫金王國曾在19世紀60年代成為被英國「保護」的國家，後又被英國強占；二十世紀40年代，印度與錫金簽訂《維持現狀協定》，後印度又成為錫金「保護國」，直至二十世紀70年代，印度軍隊發動政變吞並錫金，國王流亡美國。
+				[NEWLINE][NEWLINE]甘托克曾是印度—西藏傳統商路上的交通要道和貿易中心，也是古代中亞香客前往恒河和雅魯藏布江聖地的習慣通道，如今的甘托克城市經濟依舊落後，政府財政收入大部分來自森林資源和運輸業，幾乎沒有工業，是一個原生態城市。
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CITYSTATE_HONG_KONG">
+			<Text>杜拜</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CITYSTATE_HONG_KONG_ADJ">
+			<Text>杜拜</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CIV5_HONG_KONG_TEXT">
+			<Text>
+				杜拜（阿拉伯語：دبي、Dubayy；英語：Dubai），是阿拉伯聯合酋長國人口最多的城市，也是該國七個酋長國之一杜拜酋長國的首府，其位於中東地區的中央，是面向波斯灣的一片平坦的沙漠之地。
+				[NEWLINE][NEWLINE]杜拜是中東地區的經濟金融中心，它也是中東地區旅客和貨物的主要運輸樞紐。石油收入促進了杜拜的早期發展，繼石油之後，杜拜的經濟主要依靠旅遊業、航空業、房地產和金融服務。
+				[NEWLINE][NEWLINE]杜拜的大型建築項目和體育賽事常常能吸引全世界的目光，其擁有世界上最高的人工建築哈利法塔，還有世界上面積最大的人工島項目棕櫚島。
+			</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_TP_SCIENCE_FROM_RELIGION">
+			<Text>[ICON_BULLET]來自宗教的[COLOR_POSITIVE_TEXT]+{1_Num}[ENDCOLOR][ICON_RESEARCH]。</Text>
+		</Row>
+		
+		<Row Tag="TXT_KEY_EUPANEL_BONUS_CITY_STATE_FRENDSHIP">
+			<Text>同盟城邦加成</Text>
+		</Row>
+		
+		<Row Tag="TXT_KEY_IMPROVEMENT_INCA_CITY">
+			<Text>山脈城市</Text>
+		</Row>
+		<Row Tag="TXT_KEY_IMPROVEMENT_POLYNESIA_CITY">
+			<Text>海上城市</Text>
+		</Row>
+
+		<Replace Tag="TXT_KEY_BUILDING_ZULU_IZIKO">
+			<Text>[ICON_GREAT_WRITER][ICON_WAR]伊扎卡</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_ZULU_IZIKO_HELP">
+			<Text>
+				[ICON_BULLET]替代露天劇場，造價更低。
+				[NEWLINE][ICON_BULLET]本城[ICON_WAR]軍事單位訓練速度+15%。
+				[NEWLINE][ICON_BULLET]軍事單位升級時，每個伊扎卡獲得一次性[ICON_CULTURE]文化產出，隨時代變化。
+			</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_POP_CSTATE_VENICE_BUY_FOOD">
+			<Text>購買食物([COLOR_GREEN]+{1_food}[ICON_FOOD][END_COLOR],[COLOR_NEGATIVE_TEXT]-{2_gold}[ICON_GOLD][END_COLOR])</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_POP_CSTATE_VENICE_BUY_FOOD_TT">
+			<Text>
+				你的首都當前的人口增長閾值是{1_threshold}，
+				可購買相當於閾值{2_percent}%的[ICON_FOOD]糧食(={3_food})。
+				每單位糧食的價格為{4_price}，總價為{5_total}[ICON_GOLD]。
+				每回合僅限一次。
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_POP_CSTATE_VENICE_BUY_FOOD_NOTIFY_HEADING">
+			<Text>
+				購買食物
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_POP_CSTATE_VENICE_BUY_FOOD_NOTIFY_TEXT">
+			<Text>
+				你的首都獲得{1_food}[ICON_FOOD]食物。
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_POP_CSTATE_VENICE_BUY_FOOD_DISABLE_TT">
+			<Text>
+				本回合已經購買過食物或金錢不足。
+			</Text>
 		</Replace>
 	</Language_zh_Hant_HK>
 </GameData>

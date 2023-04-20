@@ -83,6 +83,12 @@
 		</Row>
 
 		<Row>
+			<CivilizationType>CIVILIZATION_PERSIA</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_GARDEN</BuildingClassType>
+			<BuildingType>BUILDING_PARADISE_GARDEN</BuildingType>
+		</Row>
+
+		<Row>
 			<CivilizationType>CIVILIZATION_JAPAN</CivilizationType>
 			<BuildingClassType>BUILDINGCLASS_CASTLE</BuildingClassType>
 			<BuildingType>BUILDING_JAPANESE_TENSHU</BuildingType>
@@ -92,6 +98,11 @@
 			<CivilizationType>CIVILIZATION_ZULU</CivilizationType>
 			<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
 			<BuildingType>BUILDING_IKANDA</BuildingType>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_ZULU</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_AMPHITHEATER</BuildingClassType>
+			<BuildingType>BUILDING_ZULU_IZIKO</BuildingType>
 		</Row>
 		
 		
@@ -206,6 +217,11 @@
 			<BuildingType>BUILDING_WALLS_OF_BABYLON</BuildingType>
 		</Row>
 		<Row>
+			<CivilizationType>CIVILIZATION_DENMARK</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_WALLS</BuildingClassType>
+			<BuildingType>BUILDING_NORMAN_CAMP</BuildingType>
+		</Row>
+		<Row>
 			<CivilizationType>CIVILIZATION_BABYLON</CivilizationType>
 			<BuildingClassType>BUILDINGCLASS_WINDMILL</BuildingClassType>
 			<BuildingType>BUILDING_BABYLON_WATER_PUMP</BuildingType>
@@ -246,6 +262,11 @@
 			<BuildingType>BUILDING_ROYAL_LIBRARY</BuildingType>
 		</Row>
 		<Row>
+			<CivilizationType>CIVILIZATION_ASSYRIA</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_TEMPLE</BuildingClassType>
+			<BuildingType>BUILDING_ASSUR_TEMPLE</BuildingType>
+		</Row>
+		<Row>
 			<CivilizationType>CIVILIZATION_GREECE</CivilizationType>
 			<BuildingClassType>BUILDINGCLASS_RACECOURSE</BuildingClassType>
 			<BuildingType>BUILDING_GREEK_OLYMPICS</BuildingType>
@@ -263,7 +284,11 @@
 			<BuildingType>BUILDING_OTTOMAN_EMPIRE_PORT</BuildingType>
 		</Row>
 
-		
+		<Row>
+			<CivilizationType>CIVILIZATION_OTTOMAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_SAWMILL</BuildingClassType>
+			<BuildingType>BUILDING_OTTOMAN_SIEGE_WORKSHOP</BuildingType>
+		</Row>
 
 		<Row>
 			<CivilizationType>CIVILIZATION_DENMARK</CivilizationType>

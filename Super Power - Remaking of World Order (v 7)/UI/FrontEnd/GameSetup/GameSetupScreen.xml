@@ -11,10 +11,10 @@
     
     <Box Anchor="C,C" Size="1024,768" Color="0,0,0,0" />
 
-    <Container Anchor="C,C"  Size="1024,700" ID="MainSelection">
+    <Container Anchor="C,C"  Size="1024,720" ID="MainSelection">
       
 
-        <Grid Size="960,658" Anchor="C,C" Offset="0,36" Padding="0,0" Style="Grid9DetailFive140" >
+        <Grid Size="960,678" Anchor="C,C" Offset="0,36" Padding="0,0" Style="Grid9DetailFive140" >
 
           <Box Style="MenuLeftSideTreatment"/>
           <Box Style="MenuRightSideTreatment"/>
@@ -64,12 +64,12 @@
             <!--=======================================================================================================================-->
 
 
-            <Button Anchor="C,T"  Offset="0,0"   Size="910,100" Color="255,255,255,0" ID="CivilizationButton"  >
+            <Button Anchor="C,T"  Offset="0,0"   Size="910,120" Color="255,255,255,0" ID="CivilizationButton"  >
 
 
 
                 <TextButton Offset="76,5" Anchor="r,t" Style="Font16or20" ColorSet="Beige_Black_Alpha" String="TXT_KEY_SP_OPEN_CIVILOPEDIA" ToolTip="TXT_KEY_SP_OPEN_CIVILOPEDIA_TOOLTIP" FontStyle="Shadow" MouseOverStyle="SoftShadow" ConsumeMouse="1" ID="CivilopediaButton" >
-		</TextButton>
+		        </TextButton>
 
                 <TextButton Offset="16,5" Anchor="r,t" Style="Font16or20" ColorSet="Beige_Black_Alpha" String="TXT_KEY_EDIT_BUTTON" ToolTip="TXT_KEY_NAME_CIV_TITLE" FontStyle="Shadow" MouseOverStyle="SoftShadow" ConsumeMouse="1" ID="EditButton" >
                     <TextButton Offset="20,0" Anchor="L,C" AnchorSide="o,i" Style="Font16or20" ColorSet="Beige_Black_Alpha" String="TXT_KEY_CANCEL_BUTTON" FontStyle="Shadow" MouseOverStyle="SoftShadow" ConsumeMouse="1" ID="RemoveButton" >
@@ -79,8 +79,8 @@
 
 
                 <ShowOnMouseOver>
-                    <AlphaAnim Anchor="L,T" Size="922,102" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="1.5" AlphaEnd="1">
-                        <Grid   Size="922,104" Offset="0,-2" Padding="0,0" Style="Grid9FrameTurnsHL" />
+                    <AlphaAnim Anchor="L,T" Size="922,122" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="1.5" AlphaEnd="1">
+                        <Grid   Size="922,124" Offset="0,-2" Padding="0,0" Style="Grid9FrameTurnsHL" />
                     </AlphaAnim>
                 </ShowOnMouseOver>
 

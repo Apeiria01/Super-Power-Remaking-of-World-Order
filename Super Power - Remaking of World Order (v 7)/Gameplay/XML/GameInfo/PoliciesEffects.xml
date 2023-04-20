@@ -24,19 +24,6 @@
 			<Yield>3</Yield>
 		</Row>
 	</Policy_CoastalCityYieldChanges>
-	
-	<Policy_CapitalYieldModifiers>
-		<!--<Row>
-			<PolicyType>POLICY_MONARCHY</PolicyType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>25</Yield>
-		</Row>-->
-		<!-- <Row>
-			<PolicyType>POLICY_MONARCHY</PolicyType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>25</Yield>
-		</Row>-->
-	</Policy_CapitalYieldModifiers>
 
 	<Policy_CapitalYieldChanges>
 		<Row>
@@ -49,49 +36,7 @@
 			<YieldType>YIELD_CULTURE</YieldType>
 			<Yield>3</Yield>
 		</Row>
-		<!--
-		<Row>
-			<PolicyType>POLICY_LANDED_ELITE</PolicyType>
-			<YieldType>YIELD_FOOD</YieldType>
-			<Yield>4</Yield>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_LEGALISM</PolicyType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>8</Yield>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_PREFECTURE</PolicyType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>4</Yield>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_OLIGARCHY</PolicyType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>4</Yield>
-		</Row>
-		-->
 	</Policy_CapitalYieldChanges>
-
-	<Policy_CapitalYieldPerPopChanges>
-		<Row>
-			<PolicyType>POLICY_MONARCHY</PolicyType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>100</Yield>
-		</Row>
-		<!--
-		<Row>
-			<PolicyType>POLICY_ARISTOCRACY</PolicyType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>50</Yield>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_ARISTOCRACY</PolicyType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>50</Yield>
-		</Row>
-		-->
-	</Policy_CapitalYieldPerPopChanges>
 
 	<Policy_GreatWorkYieldChanges>
 		<Row>
@@ -503,74 +448,6 @@
 			<BuildingClassType>BUILDINGCLASS_POLAR_STATION</BuildingClassType>
 			<YieldType>YIELD_GOLD</YieldType>
 			<YieldChange>4</YieldChange>
-		</Row>
-		
-<!--***********************FORTIFIED BORDERS reduce the maintainance-->
-		<Row>
-			<PolicyType>POLICY_FORTIFIED_BORDERS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<YieldChange>1</YieldChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_FORTIFIED_BORDERS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_ARSENAL</BuildingClassType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<YieldChange>4</YieldChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_FORTIFIED_BORDERS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_MILITARY_BASE</BuildingClassType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<YieldChange>5</YieldChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_FORTIFIED_BORDERS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_COAL_COMPANY</BuildingClassType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<YieldChange>2</YieldChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_FORTIFIED_BORDERS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_COAL_TO_OIL</BuildingClassType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<YieldChange>3</YieldChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_FORTIFIED_BORDERS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_STEEL_MILL</BuildingClassType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<YieldChange>3</YieldChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_FORTIFIED_BORDERS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_IRON_PROVIDER</BuildingClassType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<YieldChange>2</YieldChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_FORTIFIED_BORDERS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_OIL_REFINERY</BuildingClassType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<YieldChange>3</YieldChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_FORTIFIED_BORDERS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_ALUMINUM_PROVIDER</BuildingClassType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<YieldChange>3</YieldChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_FORTIFIED_BORDERS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_COAL_TO_URANIUM</BuildingClassType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<YieldChange>3</YieldChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_FORTIFIED_BORDERS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_METAL_FACTORY</BuildingClassType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<YieldChange>2</YieldChange>
 		</Row>
 <!--***********************Young Poineer reduce the maintainance-->
 		<Row>
@@ -1225,89 +1102,6 @@
 			<BuildingClassType>BUILDINGCLASS_FUSION_PLANT</BuildingClassType>
 			<Happiness>1</Happiness>
 		</Row>
-		
-
-
-		<!--<Row>
-			<PolicyType>POLICY_WORKERS_FACULTIES</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_FACTORY</BuildingClassType>
-			<Happiness>2</Happiness>
-		</Row>-->
-
-
-		<Row>
-			<PolicyType>POLICY_FORTIFIED_BORDERS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
-			<Happiness>1</Happiness>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_FORTIFIED_BORDERS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_JAPANESE_DOJO</BuildingClassType>
-			<Happiness>1</Happiness>
-		</Row>
-		<!--<Row>
-			<PolicyType>POLICY_FORTIFIED_BORDERS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_ARMORY</BuildingClassType>
-			<Happiness>2</Happiness>
-		</Row>-->
-		<Row>
-			<PolicyType>POLICY_FORTIFIED_BORDERS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_ARSENAL</BuildingClassType>
-			<Happiness>1</Happiness>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_FORTIFIED_BORDERS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_MILITARY_BASE</BuildingClassType>
-			<Happiness>1</Happiness>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_FORTIFIED_BORDERS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_MILITARY_ACADEMY</BuildingClassType>
-			<Happiness>1</Happiness>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_FORTIFIED_BORDERS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_METAL_FACTORY</BuildingClassType>
-			<Happiness>1</Happiness>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_FORTIFIED_BORDERS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_COAL_TO_OIL</BuildingClassType>
-			<Happiness>1</Happiness>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_FORTIFIED_BORDERS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_COAL_TO_URANIUM</BuildingClassType>
-			<Happiness>1</Happiness>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_FORTIFIED_BORDERS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_OIL_REFINERY</BuildingClassType>
-			<Happiness>1</Happiness>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_FORTIFIED_BORDERS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_COAL_COMPANY</BuildingClassType>
-			<Happiness>1</Happiness>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_FORTIFIED_BORDERS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_STEEL_MILL</BuildingClassType>
-			<Happiness>1</Happiness>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_FORTIFIED_BORDERS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_ALUMINUM_PROVIDER</BuildingClassType>
-			<Happiness>1</Happiness>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_FORTIFIED_BORDERS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_IRON_PROVIDER</BuildingClassType>
-			<Happiness>1</Happiness>
-		</Row>
-		
-		
-		
 		
 		<Row>
 			<PolicyType>POLICY_POLICE_STATE</PolicyType>
@@ -2060,7 +1854,8 @@
 			<PediaType>PEDIA_SHARED</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_LIGHTNING_WARFARE</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
-			<MovesChange>1</MovesChange>	
+			<MovesChange>1</MovesChange>
+			<EnemyRoute>true</EnemyRoute>
 		</Row>
 		<Row>
 			<Type>PROMOTION_FAST_GENERAL</Type>
@@ -2569,7 +2364,7 @@
 			<BuildingClassType>BUILDINGCLASS_MERCHANTNAVY_TRADEROUTE</BuildingClassType>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_NEW_ORDER</PolicyType>
+			<PolicyType>POLICY_CULT_PERSONALITY</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_AUTOCRACY_FIREWALL</BuildingClassType>
 		</Row>
 		<Row>
@@ -3242,7 +3037,6 @@
 	</Building_SpecialistYieldChanges>
 
 	<Policies>
-		<!--集体统治假政策-->
 		<Row>
 			<Type>POLICY_COLLECTIVE_RULE_FREE</Type>
 			<Description>POLICY_COLLECTIVE_RULE</Description>
@@ -3251,13 +3045,11 @@
 	</Policies>
 
 	<BuildingClasses>
-		<!--商船舰队假建筑-->
 		<Row>
 			<Type>BUILDINGCLASS_POLICY_MERCHANT_NAVY_FREE</Type>
 			<DefaultBuilding>BUILDING_POLICY_MERCHANT_NAVY_FREE</DefaultBuilding>
 			<Description>TXT_KEY_POLICY_MERCHANT_NAVY</Description>
 		</Row>
-		<!--共和政体假建筑-->
 		<Row>
 			<Type>BUILDINGCLASS_POLICY_REPUBLIC_FREE</Type>
 			<DefaultBuilding>BUILDING_POLICY_REPUBLIC_FREE</DefaultBuilding>
@@ -3266,7 +3058,6 @@
 	</BuildingClasses>
 
 	<Buildings>
-		<!--商船舰队假建筑-->
 		<Row>
 			<Type>BUILDING_POLICY_MERCHANT_NAVY_FREE</Type>
 			<BuildingClass>BUILDINGCLASS_POLICY_MERCHANT_NAVY_FREE</BuildingClass>
@@ -3279,7 +3070,6 @@
 			<GreatWorkCount>-1</GreatWorkCount>
 			<Description>TXT_KEY_POLICY_MERCHANT_NAVY</Description>
 		</Row>
-		<!--共和政体假建筑-->
 		<Row>
 			<Type>BUILDING_POLICY_REPUBLIC_FREE</Type>
 			<BuildingClass>BUILDINGCLASS_POLICY_REPUBLIC_FREE</BuildingClass>
@@ -3294,7 +3084,6 @@
 		</Row>
 	</Buildings>
 	<Building_GlobalYieldModifiers>
-		<!--共和政体假建筑每城全局+1%粮食产能-->
 		<Row>
 			<BuildingType>BUILDING_POLICY_REPUBLIC_FREE</BuildingType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
@@ -3308,13 +3097,11 @@
 	</Building_GlobalYieldModifiers>
 
 	<Policy_FreeBuildingClass>
-		<!--商船舰队假建筑赠送-->
 		<Row>
 			<PolicyType>POLICY_MERCHANT_NAVY</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_POLICY_MERCHANT_NAVY_FREE</BuildingClassType>
 			<Count>1</Count>
 		</Row>
-		<!--共和政体假建筑赠送-->
 		<Row>
 			<PolicyType>POLICY_REPUBLIC</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_POLICY_REPUBLIC_FREE</BuildingClassType>
@@ -3323,7 +3110,6 @@
 	</Policy_FreeBuildingClass>
 
 	<Building_EnableUnitPurchase>
-		<!--商船舰队假建筑解锁信仰购买商船-->
 		<Row>
 			<BuildingType>BUILDING_POLICY_MERCHANT_NAVY_FREE</BuildingType>
 			<UnitClassType>UNITCLASS_CARGO_SHIP</UnitClassType>
@@ -3332,7 +3118,6 @@
 		</Row>
 	</Building_EnableUnitPurchase>
 	<Building_ResourceQuantity>
-		<!--共和政体假建筑增加商品-->
 		<Row>
 			<BuildingType>BUILDING_POLICY_REPUBLIC_FREE</BuildingType>
 			<ResourceType>RESOURCE_CONSUMER</ResourceType>

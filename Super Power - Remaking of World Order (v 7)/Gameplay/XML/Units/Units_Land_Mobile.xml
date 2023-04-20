@@ -364,6 +364,40 @@
 		</Row>
 		<Row>
 			<Class>UNITCLASS_KNIGHT</Class>
+			<Type>UNIT_EGYPTAIN_MAMLUK</Type>
+			<PrereqTech>TECH_CHIVALRY</PrereqTech>
+			<BaseSightRange>2</BaseSightRange>
+			<Combat>45</Combat>
+			<Cost>180</Cost>
+			<Moves>4</Moves>
+			<FaithCost>180</FaithCost>
+			<HurryCostModifier>33</HurryCostModifier>
+			<CombatClass>UNITCOMBAT_MOUNTED</CombatClass>
+			<Domain>DOMAIN_LAND</Domain>
+			<DefaultUnitAI>UNITAI_FAST_ATTACK</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_EGYPTAIN_MAMLUK</Description>
+			<Civilopedia>TXT_KEY_CIVILOPEDIA_UNITS_MEDIEVAL_MAMLUK_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_SP_UNITS_HEAVY_MOBILE_UNITS_STRATEGY</Strategy>
+			<Help>TXT_KEY_UNIT_EGYPTAIN_MAMLUK_HELP</Help>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<Pillage>true</Pillage>
+			<ObsoleteTech>TECH_METALLURGY</ObsoleteTech>
+			<GoodyHutUpgradeUnitClass>UNITCLASS_LANCER</GoodyHutUpgradeUnitClass>
+			<AdvancedStartCost>25</AdvancedStartCost>
+			<XPValueAttack>4</XPValueAttack>
+			<XPValueDefense>3</XPValueDefense>
+			<UnitArtInfo>ART_DEF_UNIT_KNIGHT_EGYPT</UnitArtInfo>
+			<UnitFlagIconOffset>0</UnitFlagIconOffset>
+			<UnitFlagAtlas>UNIT_EGYPT_FLAG_ATLAS</UnitFlagAtlas>			
+			<IconAtlas>SP8_EXTRA_ATLAS</IconAtlas>
+			<PortraitIndex>10</PortraitIndex>
+			<MoveRate>QUADRUPED</MoveRate>
+			<ExtraMaintenanceCost>6</ExtraMaintenanceCost>
+			<ProhibitsSpread>true</ProhibitsSpread>
+		</Row>
+		<Row>
+			<Class>UNITCLASS_KNIGHT</Class>
 			<Type>UNIT_SONGHAI_MUSLIMCAVALRY</Type>
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
 			<BaseSightRange>2</BaseSightRange>
@@ -1740,6 +1774,10 @@
 			<UnitClassType>UNITCLASS_LANCER</UnitClassType>
 		</Row>
 		<Row>
+			<UnitType>UNIT_EGYPTAIN_MAMLUK</UnitType>
+			<UnitClassType>UNITCLASS_LANCER</UnitClassType>
+		</Row>
+		<Row>
 			<UnitType>UNIT_SONGHAI_MUSLIMCAVALRY</UnitType>
 			<UnitClassType>UNITCLASS_LANCER</UnitClassType>
 		</Row>
@@ -2095,6 +2133,14 @@
 		<Row>
 			<UnitType>UNIT_KNIGHT</UnitType>
 			<PromotionType>PROMOTION_KNIGHT_COMBAT</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_EGYPTAIN_MAMLUK</UnitType>
+			<PromotionType>PROMOTION_KNIGHT_COMBAT</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_EGYPTAIN_MAMLUK</UnitType>
+			<PromotionType>PROMOTION_SPN_MAMLUK_COMBAT_FAITH</PromotionType>
 		</Row>
 		<Row>
 			<UnitType>UNIT_OTTOMAN_SIPAHI</UnitType>
@@ -2719,6 +2765,14 @@
 			<UnitAIType>UNITAI_FAST_ATTACK</UnitAIType>
 		</Row>
 		<Row>
+			<UnitType>UNIT_EGYPTAIN_MAMLUK</UnitType>
+			<UnitAIType>UNITAI_ATTACK</UnitAIType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_EGYPTAIN_MAMLUK</UnitType>
+			<UnitAIType>UNITAI_FAST_ATTACK</UnitAIType>
+		</Row>
+		<Row>
 			<UnitType>UNIT_OTTOMAN_SIPAHI</UnitType>
 			<UnitAIType>UNITAI_ATTACK</UnitAIType>
 		</Row>
@@ -3137,6 +3191,10 @@
 			<ResourceType>RESOURCE_HORSE</ResourceType>
 		</Row>
 		<Row>
+			<UnitType>UNIT_EGYPTAIN_MAMLUK</UnitType>
+			<ResourceType>RESOURCE_HORSE</ResourceType>
+		</Row>
+		<Row>
 			<UnitType>UNIT_OTTOMAN_SIPAHI</UnitType>
 			<ResourceType>RESOURCE_HORSE</ResourceType>
 		</Row>
@@ -3242,6 +3300,11 @@
 
 		<Row>
 			<UnitType>UNIT_KNIGHT</UnitType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>3</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_EGYPTAIN_MAMLUK</UnitType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 			<Cost>3</Cost>
 		</Row>
@@ -3687,6 +3750,16 @@
 			<UnitType>UNIT_KNIGHT</UnitType>
 			<FlavorType>FLAVOR_OFFENSE</FlavorType>
 			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_EGYPTAIN_MAMLUK</UnitType>
+			<FlavorType>FLAVOR_MOBILE</FlavorType>
+			<Flavor>50</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_EGYPTAIN_MAMLUK</UnitType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>40</Flavor>
 		</Row>
 		<Row>
 			<UnitType>UNIT_OTTOMAN_SIPAHI</UnitType>

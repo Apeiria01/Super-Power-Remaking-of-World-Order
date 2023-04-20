@@ -372,7 +372,7 @@
           <Label Anchor="L,C" Offset="12,-2" Font="TwCenMT18" ColorSet="Beige_Black_Alpha" FontStyle="Shadow" ID="WorkerHeaderLabel"/>
         </Button>
         <Stack Anchor="L,T" Offset="0,0" Size="64,64" StackGrowth="Bottom" Padding="0" ID="WorkerManagementBox" Hidden="1">
-          <RadioButton ID="BalancedFocusButton" String="TXT_KEY_CITYVIEW_FOCUS_BALANCED_TEXT" ButtonTexture="Assets/UI/Art/Controls/CheckBox.dds" Font="TwCenMT16" FontStyle="Shadow" ColorLayer0="Beige" ColorLayer1="Black" TextAnchor="R,C" TextAnchorSide="O,O" IsChecked="1" RadioGroup="FocusGroup" ToolTip="TXT_KEY_CITYVIEW_FOCUS_BALANCED_TT"/>
+          <!--<RadioButton ID="BalancedFocusButton" String="TXT_KEY_CITYVIEW_FOCUS_BALANCED_TEXT" ButtonTexture="Assets/UI/Art/Controls/CheckBox.dds" Font="TwCenMT16" FontStyle="Shadow" ColorLayer0="Beige" ColorLayer1="Black" TextAnchor="R,C" TextAnchorSide="O,O" IsChecked="1" RadioGroup="FocusGroup" ToolTip="TXT_KEY_CITYVIEW_FOCUS_BALANCED_TT"/>
           <Box Anchor="L,B" Color="27.53.64.255" Offset="0,0" Size="254,2"/>
           <RadioButton ID="FoodFocusButton" String="TXT_KEY_CITYVIEW_FOCUS_FOOD_TEXT" ButtonTexture="Assets/UI/Art/Controls/CheckBox.dds" Font="TwCenMT16" FontStyle="Shadow" ColorLayer0="Beige" ColorLayer1="Black" TextAnchor="R,C" TextAnchorSide="O,O" IsChecked="0" RadioGroup="FocusGroup" ToolTip="TXT_KEY_CITYVIEW_FOCUS_FOOD_TT"/>
           <Box Anchor="L,B" Color="27.53.64.255" Offset="0,0" Size="254,2"/>
@@ -389,7 +389,21 @@
           <RadioButton ID="FaithFocusButton" String="TXT_KEY_CITYVIEW_FOCUS_FAITH_TEXT" ButtonTexture="Assets/UI/Art/Controls/CheckBox.dds" Font="TwCenMT16" FontStyle="Shadow" ColorLayer0="Beige" ColorLayer1="Black" TextAnchor="R,C" TextAnchorSide="O,O" IsChecked="0" RadioGroup="FocusGroup" ToolTip="TXT_KEY_CITYVIEW_FOCUS_FAITH_TT"/>
           <Box Anchor="L,B" Color="27.53.64.255" Offset="0,0" Size="254,2"/>
           <CheckBox Style="SquareCheck" ID="AvoidGrowthButton" String="TXT_KEY_CITYVIEW_FOCUS_AVOID_GROWTH_TEXT" Font="TwCenMT16" FontStyle="Shadow" ColorLayer0="Beige" ColorLayer1="Black" TextAnchor="R,C" TextAnchorSide="O,O" IsChecked="0" ToolTip="TXT_KEY_CITYVIEW_FOCUS_AVOID_GROWTH_TT"/>
-          <Box Anchor="L,B" Color="27.53.64.255" Offset="0,0" Size="254,2"/>
+          <Box Anchor="L,B" Color="27.53.64.255" Offset="0,0" Size="254,2"/>-->
+          <!-- Maggi: Focus Buttons changed into one (slightly smaller) Box -->
+					<Box Offset="0,0" Anchor="L,T" Size="254,56" Color="255,255,255,0" Hidden="0" ID="WorkerManagementSizeBox">
+						<Stack Anchor="L,T" Offset="0,0" Size="64,64" StackGrowth="Right" Padding="-5" ID="WorkerManagementRightBox" Hidden="0">
+							<RadioButton ID="BalancedFocusButton" String="[ICON_CITIZEN]" ButtonTexture="Assets/UI/Art/Controls/CheckBox.dds" Font="TwCenMT16" FontStyle="Shadow" ColorLayer0="Beige" ColorLayer1="Black" TextAnchor="C,B" TextAnchorSide="O,O" IsChecked="1" RadioGroup="FocusGroup" ToolTip="TXT_KEY_CITYVIEW_FOCUS_BALANCED_TT"/>
+							<RadioButton ID="FoodFocusButton" String="[ICON_FOOD]" ButtonTexture="Assets/UI/Art/Controls/CheckBox.dds" Font="TwCenMT16" FontStyle="Shadow" ColorLayer0="Beige" ColorLayer1="Black" TextAnchor="C,B" TextAnchorSide="O,O" IsChecked="0" RadioGroup="FocusGroup" ToolTip="TXT_KEY_CITYVIEW_FOCUS_FOOD_TT"/>
+							<RadioButton ID="ProductionFocusButton" String="[ICON_PRODUCTION]" ButtonTexture="Assets/UI/Art/Controls/CheckBox.dds" Font="TwCenMT16" FontStyle="Shadow" ColorLayer0="Beige" ColorLayer1="Black" TextAnchor="C,B" TextAnchorSide="O,O" IsChecked="0" RadioGroup="FocusGroup" ToolTip="TXT_KEY_CITYVIEW_FOCUS_PROD_TT"/>
+							<RadioButton ID="GoldFocusButton" String="[ICON_GOLD]" ButtonTexture="Assets/UI/Art/Controls/CheckBox.dds" Font="TwCenMT16" FontStyle="Shadow" ColorLayer0="Beige" ColorLayer1="Black" TextAnchor="C,B" TextAnchorSide="O,O" IsChecked="0" RadioGroup="FocusGroup" ToolTip="TXT_KEY_CITYVIEW_FOCUS_GOLD_TT"/>
+							<RadioButton ID="ResearchFocusButton" String="[ICON_RESEARCH]" ButtonTexture="Assets/UI/Art/Controls/CheckBox.dds" Font="TwCenMT16" FontStyle="Shadow" ColorLayer0="Beige" ColorLayer1="Black" TextAnchor="C,B" TextAnchorSide="O,O" IsChecked="0" RadioGroup="FocusGroup" ToolTip="TXT_KEY_CITYVIEW_FOCUS_RESEARCH_TT"/>
+							<RadioButton ID="CultureFocusButton" String="[ICON_CULTURE]" ButtonTexture="Assets/UI/Art/Controls/CheckBox.dds" Font="TwCenMT16" FontStyle="Shadow" ColorLayer0="Beige" ColorLayer1="Black" TextAnchor="C,B" TextAnchorSide="O,O" IsChecked="0" RadioGroup="FocusGroup" ToolTip="TXT_KEY_CITYVIEW_FOCUS_CULTURE_TT"/>
+							<RadioButton ID="GPFocusButton" String="[ICON_GREAT_PEOPLE]" ButtonTexture="Assets/UI/Art/Controls/CheckBox.dds" Font="TwCenMT16" FontStyle="Shadow" ColorLayer0="Beige" ColorLayer1="Black" TextAnchor="C,B" TextAnchorSide="O,O" IsChecked="0" RadioGroup="FocusGroup" ToolTip="TXT_KEY_CITYVIEW_FOCUS_GREAT_PERSON_TT"/>
+							<RadioButton ID="FaithFocusButton" String="[ICON_PEACE]" ButtonTexture="Assets/UI/Art/Controls/CheckBox.dds" Font="TwCenMT16" FontStyle="Shadow" ColorLayer0="Beige" ColorLayer1="Black" TextAnchor="C,B" TextAnchorSide="O,O" IsChecked="0" RadioGroup="FocusGroup" ToolTip="TXT_KEY_CITYVIEW_FOCUS_FAITH_TT"/>
+							<CheckBox Style="SquareCheck" ID="AvoidGrowthButton" String="[ICON_LOCKED]" Font="TwCenMT16" FontStyle="Shadow" ColorLayer0="Beige" ColorLayer1="Black" TextAnchor="C,B" TextAnchorSide="O,O" IsChecked="0" ToolTip="TXT_KEY_CITYVIEW_FOCUS_AVOID_GROWTH_TT"/>
+						</Stack>
+					</Box>
 		
 		<!-- Global Orders Begin - SP MOD -->
 			<Button Anchor="L,B" Size="254,27" Offset="2,0" Texture="CivilopediaButtons272x27.dds" ID="GlobalOrdersHeader">

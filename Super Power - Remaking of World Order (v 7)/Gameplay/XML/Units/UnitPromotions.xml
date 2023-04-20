@@ -576,55 +576,6 @@
 			<PediaEntry>TXT_KEY_PROMOTION_MARKED_TARGET</PediaEntry>
 		</Row>
 		
-	<!-- MaxHitPoints Change Promotions for Units - by CaptainCWB! -->
-		<Row>
-			<Type>PROMOTION_MAXHP_REDUCE_1</Type>
-			<Description>TXT_KEY_PROMOTION_MAXHP_REDUCE_1</Description>
-			<Help>TXT_KEY_PROMOTION_MAXHP_REDUCE_1</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<CannotBeChosen>true</CannotBeChosen>
-			<MaxHitPointsChange>-100</MaxHitPointsChange>
-			<PortraitIndex>57</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_MAXHP_REDUCE_1</PediaEntry>
-		</Row>
-		<Row>
-			<Type>PROMOTION_MAXHP_REDUCE_2</Type>
-			<Description>TXT_KEY_PROMOTION_MAXHP_REDUCE_2</Description>
-			<Help>TXT_KEY_PROMOTION_MAXHP_REDUCE_2</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<CannotBeChosen>true</CannotBeChosen>
-			<MaxHitPointsChange>-200</MaxHitPointsChange>
-			<PortraitIndex>57</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_MAXHP_REDUCE_2</PediaEntry>
-		</Row>
-		<Row>
-			<Type>PROMOTION_MAXHP_REDUCE_3</Type>
-			<Description>TXT_KEY_PROMOTION_MAXHP_REDUCE_3</Description>
-			<Help>TXT_KEY_PROMOTION_MAXHP_REDUCE_3</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<CannotBeChosen>true</CannotBeChosen>
-			<MaxHitPointsChange>-300</MaxHitPointsChange>
-			<PortraitIndex>57</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_MAXHP_REDUCE_3</PediaEntry>
-		</Row>
-		<Row>
-			<Type>PROMOTION_MAXHP_REDUCE_4</Type>
-			<Description>TXT_KEY_PROMOTION_MAXHP_REDUCE_4</Description>
-			<Help>TXT_KEY_PROMOTION_MAXHP_REDUCE_4</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<CannotBeChosen>true</CannotBeChosen>
-			<MaxHitPointsChange>-400</MaxHitPointsChange>
-			<PortraitIndex>57</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_MAXHP_REDUCE_4</PediaEntry>
-		</Row>
 	</UnitPromotions>
 	
 	<!-- Route Move debuff -->
@@ -1393,20 +1344,7 @@
 			<PediaType>PEDIA_SCOUTING</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_SP_FORCE_3</PediaEntry>
 		</Row>
-		<Row>
-			<Type>PROMOTION_SP_FORCE_EAGLE_WORRIER</Type>
-			<Description>TXT_KEY_PROMOTION_SP_FORCE_3</Description>
-			<Help>TXT_KEY_PROMOTION_SP_FORCE_3_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<CaptureDefeatedEnemy>true</CaptureDefeatedEnemy>
-			<OutsideFriendlyLandsModifier>33</OutsideFriendlyLandsModifier>
-			<PortraitIndex>18</PortraitIndex>
-			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_SCOUTING</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_SP_FORCE_3</PediaEntry>
-		</Row>
 
-		
 		<Row>
 			<Type>PROMOTION_SP_FORCE_X_1</Type>
 			<Description>TXT_KEY_PROMOTION_SP_FORCE_I</Description>
@@ -1952,14 +1890,6 @@
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_AMBUSH_2</PromotionType>
-			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_CQB_COMBAT_1</PromotionType>
-			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_CQB_COMBAT_2</PromotionType>
 			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
 		</Row>
 		
@@ -4802,6 +4732,18 @@
 		</Row>
 
 		<Row>
+			<Type>PROMOTION_ORBAN_CANNON</Type>
+			<Description>TXT_KEY_PROMOTION_ORBAN_CANNON</Description>
+			<Help>TXT_KEY_PROMOTION_ORBAN_CANNON_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PediaType>PEDIA_RANGED</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_ORBAN_CANNON</PediaEntry>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<CannotBeChosen>true</CannotBeChosen>
+		</Row>
+
+		<Row>
 			<Type>PROMOTION_BUFFALO_HORNS</Type>
 			<Description>TXT_KEY_PROMOTION_BUFFALO_HORNS</Description>
 			<Help>TXT_KEY_PROMOTION_BUFFALO_HORNS_HELP</Help>
@@ -4991,6 +4933,11 @@
 			<PromotionType>PROMOTION_BUFFALO_LOINS</PromotionType>
 			<UnitCombatType>UNITCOMBAT_ARMOR</UnitCombatType>
 		</Row>
+
+		<Row>
+			<PromotionType>PROMOTION_ORBAN_CANNON</PromotionType>
+			<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+		</Row>
 	</UnitPromotions_UnitCombats>
 
 
@@ -5005,7 +4952,7 @@
 			<PortraitIndex>59</PortraitIndex>
 			<IconAtlas>ABILITY_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<FlankAttackModifier>5</FlankAttackModifier>
+			<FlankAttackModifier>50</FlankAttackModifier>
 			<PediaEntry>TXT_KEY_PROMOTION_JAPANESE_SAMURAI</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
 		</Row>
@@ -5354,6 +5301,18 @@
 			<PediaEntry>TXT_KEY_PROMOTION_CITY_PILLAGE_FREE</PediaEntry>
 		</Row>
 
+
+		<Row>
+			<Type>PROMOTION_SPN_MAMLUK_COMBAT_FAITH</Type>
+			<Description>TXT_KEY_PROMOTION_SPN_MAMLUK_COMBAT_FAITH</Description>
+			<Help>TXT_KEY_PROMOTION_SPN_MAMLUK_COMBAT_FAITH_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_SPN_MAMLUK_COMBAT_FAITH</PediaEntry>
+		</Row>
 
 
 		<Row>
@@ -6389,6 +6348,28 @@
 			<PediaEntry>TXT_KEY_PROMOTION_ANTI_DEBUFF</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
 		</Row>
+		<Row>
+			<Type>PROMOTION_ANTI_COLLATERAL</Type>
+			<Description>TXT_KEY_PROMOTION_ANTI_COLLATERAL</Description>
+			<Help>TXT_KEY_PROMOTION_ANTI_COLLATERAL_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_ANTI_COLLATERAL</PediaEntry>
+			<CannotBeChosen>true</CannotBeChosen>
+		</Row>
+		<Row>
+			<Type>PROMOTION_ANTI_SPLASH</Type>
+			<Description>TXT_KEY_PROMOTION_ANTI_SPLASH</Description>
+			<Help>TXT_KEY_PROMOTION_ANTI_SPLASH_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_ANTI_SPLASH</PediaEntry>
+			<CannotBeChosen>true</CannotBeChosen>
+		</Row>
 
 		<Row>
 			<Type>PROMOTION_GAIN_MOVES_AFFER_KILLING</Type>
@@ -6537,6 +6518,19 @@
 		<Row>
 			<Type>PROMOTION_CAN_CROSS_MOUNTAINS</Type>
 			<Description>TXT_KEY_PROMOTION_CAN_CROSS_MOUNTAINS</Description>
+			<Help>TXT_KEY_PROMOTION_CAN_CROSS_MOUNTAINS</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PortraitIndex>0</PortraitIndex>
+			<CanCrossMountains>true</CanCrossMountains>
+			<IconAtlas>EXPANSION2_PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_SCOUTING</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_CAN_CROSS_MOUNTAINS</PediaEntry>
+			<CannotBeChosen>true</CannotBeChosen>
+		</Row>
+
+		<Row>
+			<Type>PROMOTION_INCA_CAN_CROSS_MOUNTAINS</Type>
+			<Description>TXT_KEY_TRAIT_GREAT_ANDEAN_ROAD_SHORT</Description>
 			<Help>TXT_KEY_PROMOTION_CAN_CROSS_MOUNTAINS</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PortraitIndex>0</PortraitIndex>

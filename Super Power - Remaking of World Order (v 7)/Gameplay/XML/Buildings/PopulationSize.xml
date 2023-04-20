@@ -1117,6 +1117,27 @@
 			<GreatPeopleRateModifier>25</GreatPeopleRateModifier>
 		</Row>
 		<Row>
+			<Type>BUILDING_PARADISE_GARDEN</Type>
+			<BuildingClass>BUILDINGCLASS_GARDEN</BuildingClass>
+			<Cost>50</Cost>
+			<GoldMaintenance>3</GoldMaintenance>
+			<Happiness>2</Happiness>
+			<PrereqTech>TECH_ART_THEORY</PrereqTech>
+			<Description>TXT_KEY_BUILDING_PARADISE_GARDEN</Description>
+			<Civilopedia>TXT_KEY_CIV5_BUILDINGS_GARDEN_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_SP_CITYSIZE_BUILDINGS_STRATEGY</Strategy>
+			<Help>TXT_KEY_BUILDING_PARADISE_GARDEN_HELP</Help>
+			<ArtDefineTag>ART_DEF_BUILDING_GARDEN</ArtDefineTag>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<HurryCostModifier>25</HurryCostModifier>
+			<IconAtlas>BUILDING_PAIRIDAEZA_ATLAS</IconAtlas>
+			<GreatPeopleRateModifier>25</GreatPeopleRateModifier>
+			<PortraitIndex>0</PortraitIndex>
+			<GoldenAgeUnitCombatModifier>2</GoldenAgeUnitCombatModifier>
+			<GoldenAgeMeterMod>-3</GoldenAgeMeterMod>
+		</Row>
+		<Row>
 			<Type>BUILDING_CHINESE_GARDEN</Type>
 			<BuildingClass>BUILDINGCLASS_GARDEN</BuildingClass>
 			<Cost>50</Cost>
@@ -1797,7 +1818,7 @@
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_MUGHAL_FORT</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_LARGE</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_MEDIUM</BuildingClassType>
 		</Row>
 
 
@@ -1837,10 +1858,10 @@
 			<BuildingType>BUILDING_BEVERAGE_FACTORY</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_LARGE</BuildingClassType>
 		</Row>
-	<!--<Row>
+		<!--<Row>
 			<BuildingType>BUILDING_COFFEE_HOUSE</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_LARGE</BuildingClassType>
-		</Row>
+		</Row>-->
 		<!--<Row>
 			<BuildingType>BUILDING_CELTS_IRISHPUB</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_LARGE</BuildingClassType>
@@ -1878,6 +1899,10 @@
 		<Row>
 			<BuildingType>BUILDING_GARDEN</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_LARGE</BuildingClassType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_PARADISE_GARDEN</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_MEDIUM</BuildingClassType>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_CHINESE_GARDEN</BuildingType>

@@ -155,13 +155,13 @@ function NewCitySystem(playerID)
                     GameInfoTypes["BUILDING_IRON_CURTAIN_UNHAP"],
                     iUnhappinessFromPublicOpinion);
             end
-            -- Policy - Authoritarianism
+            -- POLICY_CULT_PERSONALITY
             iUnhappinessFromPublicOpinion = math.floor(
                                                 iUnhappinessFromPublicOpinion /
                                                     2) +
                                                 pCapital:GetNumBuilding(
                                                     GameInfoTypes["BUILDING_IRON_CURTAIN_HAPPI"]);
-            if player:HasPolicy(GameInfoTypes["POLICY_NEW_ORDER"]) then
+            if player:HasPolicy(GameInfoTypes["POLICY_CULT_PERSONALITY"]) then
                 pCapital:SetNumRealBuilding(
                     GameInfoTypes["BUILDING_IRON_CURTAIN_HAPPI"],
                     iUnhappinessFromPublicOpinion);
@@ -1610,5 +1610,97 @@ function TechDynamiteEffectOnRazing(playerID)
 	end
 end
 GameEvents.PlayerDoTurn.Add(TechDynamiteEffectOnRazing)
+
+--City Founded in Special Terrain
+local improvementMachuID = GameInfoTypes["IMPROVEMENT_INCA_CITY"]
+local improvementPolyCity= {
+    [0] = GameInfoTypes["IMPROVEMENT_POLYNESIA_CITY_NE"], 
+    [1] = GameInfoTypes["IMPROVEMENT_POLYNESIA_CITY_E"] , 
+    [2] = GameInfoTypes["IMPROVEMENT_POLYNESIA_CITY_SE"], 
+	[3] = GameInfoTypes["IMPROVEMENT_POLYNESIA_CITY_SW"], 
+    [4] = GameInfoTypes["IMPROVEMENT_POLYNESIA_CITY_W"] ,
+	[5] = GameInfoTypes["IMPROVEMENT_POLYNESIA_CITY_NW"]
+}
+
+local incaID = GameInfoTypes["CIVILIZATION_INCA"]
+local polyID = GameInfoTypes["CIVILIZATION_POLYNESIA"]
+
+function SPNIsCivilisationActive(civilizationID)
+    for iSlot = 0, GameDefines.MAX_MAJOR_CIVS-1, 1 do
+		local slotStatus = PreGame.GetSlotStatus(iSlot)
+		if (slotStatus == SlotStatus.SS_TAKEN or slotStatus == SlotStatus.SS_COMPUTER) then
+			if PreGame.GetCivilization(iSlot) == civilizationID then
+				return true
+			end
+		end
+	end
+	return false
+end
+
+function chooseCoastalCityDirection(plotX, plotY)
+    if Map.GetPlot(plotX,plotY):GetPlotCity() == nil then return end
+    local improvementPolyCityID = 0
+    local ContinuousWaterPlot = 0
+    local maxContinuousWaterPlot = 0
+    --Looking for the center of the largest continuous water plot
+    for i = 0, 11 do
+        local index = i%6
+        local adjPlot = Map.PlotDirection(plotX, plotY, index)
+        if adjPlot ~= nil then
+            if adjPlot:IsWater() then 
+                if ContinuousWaterPlot >= maxContinuousWaterPlot then
+                    improvementPolyCityID = math.abs(i - math.floor(ContinuousWaterPlot/2)) %6
+                end
+                ContinuousWaterPlot = ContinuousWaterPlot + 1
+            else 
+                if ContinuousWaterPlot > maxContinuousWaterPlot then
+                    maxContinuousWaterPlot = ContinuousWaterPlot
+                end
+                ContinuousWaterPlot = 0
+            end
+        end
+    end
+    --print("improvementPolyCityID=",improvementPolyCityID,maxContinuousWaterPlot)
+    return improvementPolyCityID
+end
+
+function SPNCityFoundedInSpecialTerrain(playerID, plotX, plotY)
+	local player = Players[playerID]
+    if not player:IsAlive() then return end
+    local cityPlot = Map.GetPlot(plotX,plotY)
+
+    --Inca city
+	if cityPlot:IsMountain()
+    then
+        print("Inca Mountain city! Set Improvement")
+		cityPlot:SetImprovementType(improvementMachuID)
+    --Poly city
+    elseif cityPlot:IsWater()
+    then
+        local PolyCityDirection = chooseCoastalCityDirection(plotX, plotY)
+        print("Poly Coastal City! Set Improvement",PolyCityDirection)
+        cityPlot:SetImprovementType(improvementPolyCity[PolyCityDirection])
+    end
+end
+function SPNDestroySpecialTerrainCity(hexPos,iPlayer,iCity)
+    local pCity = Players[iPlayer]:GetCityByID(iCity);
+    if pCity == nil then return end
+    local pPlot = Map.GetPlot(pCity:GetX(),pCity:GetY())
+    if pPlot:IsMountain()
+    or pPlot:IsWater()
+    then
+        print("A Mountain City or a Coastal City was destoryed,remove fake Improvement")
+        pPlot:SetImprovementType(-1)
+    end
+end
+function SPNConquestedSpecialTerrianCity(oldOwnerID, isCapital, cityX, cityY, newOwnerID, numPop, isConquest)
+    SPNCityFoundedInSpecialTerrain(newOwnerID,cityX,cityY)
+end 
+
+if SPNIsCivilisationActive(incaID) or SPNIsCivilisationActive(polyID)then
+	GameEvents.PlayerCityFounded.Add(SPNCityFoundedInSpecialTerrain)
+    Events.SerialEventCityDestroyed.Add(SPNDestroySpecialTerrainCity)
+    GameEvents.CityCaptureComplete.Add(SPNConquestedSpecialTerrianCity)
+end
 
 print("New City Rules Check Pass!")

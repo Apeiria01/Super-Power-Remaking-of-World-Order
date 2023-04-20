@@ -78,6 +78,7 @@
 			<UnmoddedHappiness>2</UnmoddedHappiness>
 			<HurryCostModifier>-1</HurryCostModifier>
 			<IconAtlas>BW_ATLAS_1</IconAtlas>
+			<GoldenAgeModifier>4</GoldenAgeModifier>
 			<PortraitIndex>53</PortraitIndex>
 			<!--<PolicyCostModifier>5</PolicyCostModifier>-->
 		</Row>

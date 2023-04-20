@@ -214,6 +214,17 @@
 			<DomainType>DOMAIN_SEA</DomainType>
 			<Experience>15</Experience>
 		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_NORMAN_CAMP</BuildingType>
+			<DomainType>DOMAIN_LAND</DomainType>
+			<Experience>15</Experience>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_NORMAN_CAMP</BuildingType>
+			<DomainType>DOMAIN_SEA</DomainType>
+			<Experience>15</Experience>
+		</Row>
 		
 		<Row>
 			<BuildingType>BUILDING_MILITARY_ACADEMY</BuildingType>
@@ -1094,6 +1105,11 @@
 			<Yield>2</Yield>
 		</Row>
 		<Row>
+			<BuildingType>BUILDING_OTTOMAN_SIEGE_WORKSHOP</BuildingType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
 			<BuildingType>BUILDING_LONGHOUSE</BuildingType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<Yield>2</Yield>
@@ -1413,6 +1429,11 @@
 			<Yield>2</Yield>
 		</Row>
 		<Row>
+			<BuildingType>BUILDING_ASSUR_TEMPLE</BuildingType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
 			<BuildingType>BUILDING_INDIA_TEMPLE</BuildingType>
 			<YieldType>YIELD_FAITH</YieldType>
 			<Yield>2</Yield>
@@ -1447,6 +1468,11 @@
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_AMPHITHEATER</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_ZULU_IZIKO</BuildingType>
 			<YieldType>YIELD_CULTURE</YieldType>
 			<Yield>1</Yield>
 		</Row>
@@ -1756,6 +1782,12 @@
 			<BuildingType>BUILDING_MEGACITY_PYRAMID</BuildingType>
 			<YieldType>YIELD_FOOD</YieldType>
 			<Yield>60</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_EGYPT_SIRIUS</BuildingType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>1</Yield>
 		</Row>
 	</Building_YieldChanges>
 
@@ -2971,6 +3003,18 @@
 		<Row>
 			<BuildingType>BUILDING_SAWMILL</BuildingType>
 			<FeatureType>FEATURE_FOREST</FeatureType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_OTTOMAN_SIEGE_WORKSHOP</BuildingType>
+			<FeatureType>FEATURE_FOREST</FeatureType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_OTTOMAN_SIEGE_WORKSHOP</BuildingType>
+			<FeatureType>FEATURE_JUNGLE</FeatureType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<Yield>1</Yield>
 		</Row>
@@ -4694,6 +4738,16 @@
 			<Flavor>40</Flavor>
 		</Row>
 		<Row>
+			<BuildingType>BUILDING_NORMAN_CAMP</BuildingType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>120</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_NORMAN_CAMP</BuildingType>
+			<FlavorType>FLAVOR_CITY_DEFENSE</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		<Row>
 			<BuildingType>BUILDING_CASTLE</BuildingType>
 			<FlavorType>FLAVOR_CITY_DEFENSE</FlavorType>
 			<Flavor>35</Flavor>
@@ -5429,6 +5483,16 @@
 			<FlavorType>FLAVOR_RELIGION</FlavorType>
 			<Flavor>80</Flavor>
 		</Row>
+		<Row>
+			<BuildingType>BUILDING_ASSUR_TEMPLE</BuildingType>
+			<FlavorType>FLAVOR_RELIGION</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_ASSUR_TEMPLE</BuildingType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>80</Flavor>
+		</Row>
 
 		<Row>
 			<BuildingType>BUILDING_INDIA_TEMPLE</BuildingType>
@@ -5451,7 +5515,22 @@
 			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
 			<Flavor>30</Flavor>
 		</Row>
-		
+
+		<Row>
+			<BuildingType>BUILDING_PARADISE_GARDEN</BuildingType>
+			<FlavorType>FLAVOR_GREAT_PEOPLE</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_PARADISE_GARDEN</BuildingType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>100</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_PARADISE_GARDEN</BuildingType>
+			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
 		
 		<Row>
 			<BuildingType>BUILDING_HEROIC_EPIC</BuildingType>
@@ -6063,6 +6142,21 @@
 			<Flavor>2</Flavor>
 		</Row>
 		<Row>
+			<BuildingType>BUILDING_ZULU_IZIKO</BuildingType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_ZULU_IZIKO</BuildingType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>50</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_ZULU_IZIKO</BuildingType>
+			<FlavorType>FLAVOR_CULTURE</FlavorType>
+			<Flavor>2</Flavor>
+		</Row>
+		<Row>
 			<BuildingType>BUILDING_SHRINE</BuildingType>
 			<FlavorType>FLAVOR_RELIGION</FlavorType>
 			<Flavor>45</Flavor>
@@ -6617,6 +6711,22 @@
 			<BuildingType>BUILDING_SAWMILL</BuildingType>
 			<FlavorType>FLAVOR_EXPANSION</FlavorType>
 			<Flavor>45</Flavor>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_OTTOMAN_SIEGE_WORKSHOP</BuildingType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>70</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_OTTOMAN_SIEGE_WORKSHOP</BuildingType>
+			<FlavorType>FLAVOR_EXPANSION</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_OTTOMAN_SIEGE_WORKSHOP</BuildingType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>80</Flavor>
 		</Row>
 		
 		<Row>

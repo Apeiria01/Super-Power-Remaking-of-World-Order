@@ -14,14 +14,17 @@ include("NewHandicap");
 -- Combat
 include("NewCombatRules");
 include("NewUnitsRules");
+include("NewBattleCustomDamage");
 -- Economy
 include("NewBuildingEffects");
 include("NewCityRule");
 include("NewPolicyEffects");
 include("SP8PolicyEffects");
+include("NewReligionRule.lua");
 include("NewPopulationRule");
 include("NewTraitEffects");
 include("NuclearWinter");
+include("NewBuildingRule");
 -- Misc
 include("TerrainTransform");
 include("UnitSpecialButtons");

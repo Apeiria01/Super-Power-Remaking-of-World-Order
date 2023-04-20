@@ -469,6 +469,10 @@
 			<Set Value="10"/>
 			<Where Name="MIN_CITY_STRIKE_DAMAGE" />
 		</Update>
+		<Replace>
+			<Name>CITY_STRENGTH_MOUNTAIN_CHANGE</Name>
+			<Value>1000</Value>
+		</Replace>
 
 		<!--Experience & Promotion Defines-->
 		
