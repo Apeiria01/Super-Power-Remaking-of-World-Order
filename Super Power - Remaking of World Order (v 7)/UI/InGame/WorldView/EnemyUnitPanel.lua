@@ -126,48 +126,6 @@ function UpdateUnitPortrait(pUnit)
 		end
 	end
 
-	if pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_MAXHP_REDUCE_1"])
-		and pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_MAXHP_REDUCE_2"])
-		and pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_MAXHP_REDUCE_3"])
-		and pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_MAXHP_REDUCE_4"])
-	then
-		name = name .. " (-1000[ICON_SILVER_FIST])";
-	elseif pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_MAXHP_REDUCE_2"])
-		and pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_MAXHP_REDUCE_3"])
-		and pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_MAXHP_REDUCE_4"])
-	then
-		name = name .. " (-900[ICON_SILVER_FIST])";
-	elseif pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_MAXHP_REDUCE_1"])
-		and pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_MAXHP_REDUCE_3"])
-		and pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_MAXHP_REDUCE_4"])
-	then
-		name = name .. " (-800[ICON_SILVER_FIST])";
-	elseif pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_MAXHP_REDUCE_3"])
-		and pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_MAXHP_REDUCE_4"])
-	then
-		name = name .. " (-700[ICON_SILVER_FIST])";
-	elseif pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_MAXHP_REDUCE_2"])
-		and pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_MAXHP_REDUCE_4"])
-	then
-		name = name .. " (-600[ICON_SILVER_FIST])";
-	elseif pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_MAXHP_REDUCE_1"])
-		and pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_MAXHP_REDUCE_4"])
-	then
-		name = name .. " (-500[ICON_SILVER_FIST])";
-	elseif pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_MAXHP_REDUCE_4"])
-	then
-		name = name .. " (-400[ICON_SILVER_FIST])";
-	elseif pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_MAXHP_REDUCE_3"])
-	then
-		name = name .. " (-300[ICON_SILVER_FIST])";
-	elseif pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_MAXHP_REDUCE_2"])
-	then
-		name = name .. " (-200[ICON_SILVER_FIST])";
-	elseif pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_MAXHP_REDUCE_1"])
-	then
-		name = name .. " (-100[ICON_SILVER_FIST])";
-	end
-
 	SetName(name);
 
 	local flagOffset, flagAtlas = UI.GetUnitFlagIcon(pUnit);

@@ -16066,21 +16066,6 @@
 				+100%[ICON_STRENGTH]Strength fighting against Naval Units.
 			</Text>
 		</Replace>
-		
-	<!-- Max. HP Reduce -->
-		<Replace Tag="TXT_KEY_PROMOTION_MAXHP_REDUCE_1">
-			<Text>Max. HP -100</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_MAXHP_REDUCE_2">
-			<Text>Max. HP -200</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_MAXHP_REDUCE_3">
-			<Text>Max. HP -300</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_MAXHP_REDUCE_4">
-			<Text>Max. HP -400</Text>
-		</Replace>
-
 
 <!-- New CivilopediaScreen Text -->
 	<!-- Created by Tokata -->

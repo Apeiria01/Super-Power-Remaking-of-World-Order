@@ -13947,20 +13947,6 @@
 			</Text>
 		</Replace>
 
-		<!-- Max. HP Reduce -->
-		<Replace Tag="TXT_KEY_PROMOTION_MAXHP_REDUCE_1">
-			<Text>最大生命值-100</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_MAXHP_REDUCE_2">
-			<Text>最大生命值-200</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_MAXHP_REDUCE_3">
-			<Text>最大生命值-300</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_MAXHP_REDUCE_4">
-			<Text>最大生命值-400</Text>
-		</Replace>
-
 		<Row Tag="TXT_KEY_UNIT_ENTERPRISE">
 			<Text>[COLOR_YELLOW]企业号(CV-6)[ENDCOLOR]</Text>
 			<Plurality>2</Plurality>
