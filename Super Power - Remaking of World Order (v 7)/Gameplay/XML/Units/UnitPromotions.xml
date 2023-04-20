@@ -576,55 +576,6 @@
 			<PediaEntry>TXT_KEY_PROMOTION_MARKED_TARGET</PediaEntry>
 		</Row>
 		
-	<!-- MaxHitPoints Change Promotions for Units - by CaptainCWB! -->
-		<Row>
-			<Type>PROMOTION_MAXHP_REDUCE_1</Type>
-			<Description>TXT_KEY_PROMOTION_MAXHP_REDUCE_1</Description>
-			<Help>TXT_KEY_PROMOTION_MAXHP_REDUCE_1</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<CannotBeChosen>true</CannotBeChosen>
-			<MaxHitPointsChange>-100</MaxHitPointsChange>
-			<PortraitIndex>57</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_MAXHP_REDUCE_1</PediaEntry>
-		</Row>
-		<Row>
-			<Type>PROMOTION_MAXHP_REDUCE_2</Type>
-			<Description>TXT_KEY_PROMOTION_MAXHP_REDUCE_2</Description>
-			<Help>TXT_KEY_PROMOTION_MAXHP_REDUCE_2</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<CannotBeChosen>true</CannotBeChosen>
-			<MaxHitPointsChange>-200</MaxHitPointsChange>
-			<PortraitIndex>57</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_MAXHP_REDUCE_2</PediaEntry>
-		</Row>
-		<Row>
-			<Type>PROMOTION_MAXHP_REDUCE_3</Type>
-			<Description>TXT_KEY_PROMOTION_MAXHP_REDUCE_3</Description>
-			<Help>TXT_KEY_PROMOTION_MAXHP_REDUCE_3</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<CannotBeChosen>true</CannotBeChosen>
-			<MaxHitPointsChange>-300</MaxHitPointsChange>
-			<PortraitIndex>57</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_MAXHP_REDUCE_3</PediaEntry>
-		</Row>
-		<Row>
-			<Type>PROMOTION_MAXHP_REDUCE_4</Type>
-			<Description>TXT_KEY_PROMOTION_MAXHP_REDUCE_4</Description>
-			<Help>TXT_KEY_PROMOTION_MAXHP_REDUCE_4</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<CannotBeChosen>true</CannotBeChosen>
-			<MaxHitPointsChange>-400</MaxHitPointsChange>
-			<PortraitIndex>57</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_MAXHP_REDUCE_4</PediaEntry>
-		</Row>
 	</UnitPromotions>
 	
 	<!-- Route Move debuff -->
