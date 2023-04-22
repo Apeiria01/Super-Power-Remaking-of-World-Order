@@ -1,3 +1,5 @@
+if Game.IsOption(GameOptionTypes.GAMEOPTION_NO_RELIGION) then return end
+
 local policyCollectionRuleID = GameInfo.Policies["POLICY_COLLECTIVE_RULE"].ID
 
 function SPEReligionAdopt(pPlayer,iBelief,pHolyCity)
@@ -86,11 +88,6 @@ end
 
 local GoddessLovaEnable = GameInfo.SPReligionLuaEffectEnable.BELIEF_GODDESS_LOVE.Enabled
 function SPNReligionPopulationBuff(iX, iY, iOld, iNew)
-    if Game.IsOption(GameOptionTypes.GAMEOPTION_NO_RELIGION) 
-    or not GoddessLovaEnable
-    then
-		return
-	end
     local pPlot = Map.GetPlot(iX, iY)
 	if pPlot == nil then return end
     local pCity = pPlot:GetPlotCity()
@@ -109,7 +106,7 @@ function SPNReligionPopulationBuff(iX, iY, iOld, iNew)
         
         local bonus = (GameInfo.GameSpeeds[Game.GetGameSpeedType()].ConstructPercent/100) * 6
         bonus = math.floor(bonus * (iNew - iOld))
-        print("Religion Population Buff bonus = ",bonus)
+        --print("Religion Population Buff bonus = ",bonus)
         if pPlayer:IsHuman() then
             local hex = ToHexFromGrid(Vector2(iX, iY))
             Events.AddPopupTextEvent(HexToWorld(hex), Locale.ConvertTextKey("+{1_Num}[ICON_PEACE]",bonus))
@@ -119,12 +116,11 @@ function SPNReligionPopulationBuff(iX, iY, iOld, iNew)
     end
 
 end
-GameEvents.SetPopulation.Add(SPNReligionPopulationBuff)
+if GoddessLovaEnable then
+    GameEvents.SetPopulation.Add(SPNReligionPopulationBuff)
+end
 
 function SPNReligionFounded(iPlayer, iHolyCity, iReligion, iBelief1, iBelief2, iBelief3, iBelief4, iBelief5) 
-    if Game.IsOption(GameOptionTypes.GAMEOPTION_NO_RELIGION) then
-		return
-	end
 	local pPlayer = Players[iPlayer]
 	if not pPlayer:IsMajorCiv() then
         return
@@ -144,7 +140,7 @@ end
 GameEvents.ReligionFounded.Add(SPNReligionFounded)
 
 function SPNReligionEnhanced(iPlayer, eReligion, iBelief1, iBelief2)
-	if Game.IsOption(GameOptionTypes.GAMEOPTION_NO_RELIGION) or iPlayer == -1 or not Players[iPlayer]:HasCreatedReligion() then
+	if iPlayer == -1 or not Players[iPlayer]:HasCreatedReligion() then
 		return
 	end
     local pPlayer = Players[iPlayer]
@@ -160,7 +156,7 @@ end
 GameEvents.ReligionEnhanced.Add(SPNReligionEnhanced)
 
 function SPNReligionReformed(iPlayer, iReligion, iBelief1) 
-	if Game.IsOption(GameOptionTypes.GAMEOPTION_NO_RELIGION) or iPlayer == -1 or not Players[iPlayer]:HasCreatedReligion() then
+	if iPlayer == -1 or not Players[iPlayer]:HasCreatedReligion() then
 		return
 	end
     local pPlayer = Players[iPlayer]
@@ -183,9 +179,7 @@ end
 
 local HeathenConversionEnable = GameInfo.SPReligionLuaEffectEnable.BELIEF_HEATHEN_CONVERSION.Enabled
 function SPNReligionConquestedHolyCity(oldOwnerID, isCapital, cityX, cityY, newOwnerID, numPop, isConquest)
-    if Game.IsOption(GameOptionTypes.GAMEOPTION_NO_RELIGION) or newOwnerID == -1 then
-		return
-	end
+    if newOwnerID == -1 then return end
     local newOwnerPlayer = Players[newOwnerID]
     local oldOwnerPlayer = Players[oldOwnerID]
 	local pCity = Map.GetPlot(cityX, cityY):GetPlotCity()
@@ -286,7 +280,7 @@ end
 GameEvents.CityCaptureComplete.Add(SPNReligionConquestedHolyCity) 
 
 function SPNReligionUnitCreatedBuffBonus(iPlayer, iUnit)
-	if Game.IsOption(GameOptionTypes.GAMEOPTION_NO_RELIGION) or iPlayer == -1 or not Players[iPlayer]:HasCreatedReligion() then
+	if iPlayer == -1 or not Players[iPlayer]:HasCreatedReligion() then
 		return
 	end
     local pPlayer = Players[iPlayer]
@@ -306,7 +300,7 @@ end
 Events.SerialEventUnitCreated.Add(SPNReligionUnitCreatedBuffBonus)
 
 function SPNReligionUnitCreatedOutputBonus(iPlayer, iUnit, iUnitType, iPlotX, iPlotY)
-	if Game.IsOption(GameOptionTypes.GAMEOPTION_NO_RELIGION) or iPlayer == -1 or not Players[iPlayer]:HasCreatedReligion() then
+	if iPlayer == -1 or not Players[iPlayer]:HasCreatedReligion() then
 		return
 	end
     local pPlayer = Players[iPlayer]
@@ -339,7 +333,7 @@ end
 GameEvents.UnitCreated.Add(SPNReligionUnitCreatedOutputBonus)
 
 function SPNReligionPolicyAdopt(iPlayer,iPolicy)
-	if Game.IsOption(GameOptionTypes.GAMEOPTION_NO_RELIGION) or iPlayer == -1 or not Players[iPlayer]:HasCreatedReligion() then
+	if iPlayer == -1 or not Players[iPlayer]:HasCreatedReligion() then
 		return
 	end
     local pPlayer = Players[iPlayer]
@@ -361,7 +355,7 @@ end
 GameEvents.PlayerAdoptPolicy.Add(SPNReligionPolicyAdopt)
 
 function SPNReligionBlockPolicyBranch(iPlayer,iPolicyBranch,isBlock)
-	if Game.IsOption(GameOptionTypes.GAMEOPTION_NO_RELIGION) or iPlayer == -1 or not Players[iPlayer]:HasCreatedReligion() then
+	if iPlayer == -1 or not Players[iPlayer]:HasCreatedReligion() then
 		return
 	end
     local pPlayer = Players[iPlayer]
@@ -391,7 +385,7 @@ end
 GameEvents.PlayerBlockPolicyBranch.Add(SPNReligionBlockPolicyBranch)
 
 function SPNReligionMinorCivQuestBonus(iMajor, iMinor, iQuestType, iStartTurn, iOldInfluence, iNewInfluence) 
-    if Game.IsOption(GameOptionTypes.GAMEOPTION_NO_RELIGION) or iMajor == -1 or not Players[iMajor]:HasCreatedReligion() then
+    if iMajor == -1 or not Players[iMajor]:HasCreatedReligion() then
 		return
 	end
 	local pPlayer = Players[iMajor]
