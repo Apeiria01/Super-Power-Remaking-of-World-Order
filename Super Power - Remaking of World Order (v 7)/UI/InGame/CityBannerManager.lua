@@ -1369,13 +1369,13 @@ end
 ------------------------------------------------------------
 ------------------------------------------------------------
 function GarrisonComplete( cityBanner, pCity )
-	local active_team = Players[Game.GetActivePlayer()]:GetTeam();
+	--[[local active_team = Players[Game.GetActivePlayer()]:GetTeam();
 	local team = Players[cityBanner.playerID]:GetTeam();
 	
 	local controls = cityBanner.SubControls;
 	if active_team == team then
 		controls.GarrisonFrame:SetHide(false);
-	end	
+	end]]
 end
 
 -------------------------------------------------
@@ -1532,8 +1532,8 @@ function OnCombatBegin( attackerPlayerID,
                         defenderY )
     print( "CityBanner CombatBegin" );                        
 				
-	HideGarrisonRing(attackerX, attackerY, true);
-	HideGarrisonRing(defenderX, defenderY, true);
+	--HideGarrisonRing(attackerX, attackerY, true);
+	--HideGarrisonRing(defenderX, defenderY, true);
 end
 Events.RunCombatSim.Add( OnCombatBegin );
 
@@ -1557,8 +1557,8 @@ function OnCombatEnd( attackerPlayerID,
                          
     print( "CityBanner CombatEnd" );                        
     
-	HideGarrisonRing(attackerX, attackerY, false);
-	HideGarrisonRing(defenderX, defenderY, false);
+	--HideGarrisonRing(attackerX, attackerY, false);
+	--HideGarrisonRing(defenderX, defenderY, false);
 end
 Events.EndCombatSim.Add( OnCombatEnd );
 
