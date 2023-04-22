@@ -975,6 +975,8 @@
 
     <Row Class="5" Name="API_PROMOTION_TO_PROMOTION_MODIFIERS" Value="1"/>
 
+    <Row Class="2" Name="ROG_CORE" Value="1"/>
+
   </CustomModOptions>
 
   <CustomModPostDefines>
