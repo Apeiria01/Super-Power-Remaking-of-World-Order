@@ -591,6 +591,28 @@ function RefreshCityBanner(cityBanner, iActiveTeam, iActivePlayer)
 			controls.CityGrowth:SetText(cityGrowth);
 		end
 		
+		-- Update City Culture Meter
+		if ( controls.CultureBar ) then
+			local iCultureStored = city:GetJONSCultureStored();
+			local iCultureNeeded = city:GetJONSCultureThreshold();
+			local iCulturePerTurn = city:GetJONSCulturePerTurn();
+
+			local iCultureStoredPlusThisTurn = iCultureStored + iCulturePerTurn;
+			local fCultureProgressPercent = iCultureStored / iCultureNeeded;
+			local fCultureProgressPlusThisTurnPercent = iCultureStoredPlusThisTurn / iCultureNeeded;
+			if (fCultureProgressPlusThisTurnPercent > 1) then
+					fCultureProgressPlusThisTurnPercent = 1;
+			end
+
+			controls.CultureBar:SetPercent( fCultureProgressPercent );
+			controls.CultureBarShadow:SetPercent( fCultureProgressPlusThisTurnPercent );
+			if iCulturePerTurn > 0 then
+				controls.CultureGrowth:SetText(math.ceil( (iCultureNeeded-iCultureStored) / iCulturePerTurn ));
+			else
+				controls.CultureGrowth:SetText("-");
+			end
+		end
+		
 		-- Update Production Time
 		if(controls.BuildGrowth) then
 			local buildGrowth = "-";
