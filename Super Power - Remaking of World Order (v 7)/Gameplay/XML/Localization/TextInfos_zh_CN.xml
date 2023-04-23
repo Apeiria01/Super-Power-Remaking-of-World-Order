@@ -5802,7 +5802,7 @@
 
 		<Replace Tag="TXT_KEY_TRAIT_CULTURE_FROM_KILLS">
 			<Text>
-				[ICON_BULLET]当你杀死了一个敌人单位，你会获得相当于其50%[ICON_STRENGTH]战斗力的[ICON_CULTURE]文化。
+				[ICON_BULLET]当你杀死了一个敌人单位，获得相当于其50%[ICON_STRENGTH]战斗力的[ICON_CULTURE]文化。
 				[NEWLINE][ICON_BULLET]施行新政策所需[ICON_CULTURE]文化值-10%
 			</Text>
 		</Replace>
