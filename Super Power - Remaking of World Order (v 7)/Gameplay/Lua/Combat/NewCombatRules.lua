@@ -874,7 +874,7 @@ function NewAttackEffect()
 		-- Attacking a Unit!
 	elseif defUnit then
 		------ Collateral damage (both melee and ranged)!
-		if not SplashAndCollateralOff 
+		if SplashAndCollateralOff == 0
 		and (attUnit:IsHasPromotion(NavalRangedShipUnitID) or attUnit:IsHasPromotion(NavalRangedCruiserUnitID)
 			or attUnit:IsHasPromotion(CitySiegeUnitID)) and batPlot:GetNumUnits() > 1 
 		then
@@ -949,7 +949,7 @@ function NewAttackEffect()
 		end
 
 		----Doppelsoldner Splash！
-		if not SplashAndCollateralOff 
+		if SplashAndCollateralOff == 0
 		and attUnit:IsHasPromotion(DoppelsoldnerID)
 		and batPlot:GetNumUnits() > 1 then
 			-- print("Melee or Ranged attack and Available for Collateral Damage!")
@@ -1007,7 +1007,7 @@ function NewAttackEffect()
 	
 
 		--------Splash Damage (AOE)
-		if not SplashAndCollateralOff 
+		if SplashAndCollateralOff == 0
 		and (attUnit:IsHasPromotion(SplashDamageID) or attUnit:IsHasPromotion(NavalCapitalShipID)) then
 
 			for i = 0, 5 do
@@ -1078,7 +1078,7 @@ function NewAttackEffect()
 		end
 
 		-------------------------Both Collateral Damage and AOE
-		if not SplashAndCollateralOff 
+		if SplashAndCollateralOff == 0
 		and attUnit:IsHasPromotion(NuclearArtilleryID) 
 		then
 			local unitCount = batPlot:GetNumUnits();

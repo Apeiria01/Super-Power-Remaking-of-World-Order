@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <GameData>
 	<Language_zh_CN>
 		<!--Civilopedias-->
@@ -6409,7 +6409,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]君主政体[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]城市规模导致的[ICON_HAPPINESS_4]不满减半。
-				[NEWLINE][ICON_BULLET][ICON_CAPITAL]首都每个[ICON_CITIZEN]人口+1[ICON_FOOD]食物、[ICON_CULTURE]文化、[ICON_PRODUCTION]产能、[ICON_RESEARCH]科研、[ICON_GOLD]金钱。
+				[NEWLINE][ICON_BULLET][ICON_CAPITAL]首都每个[ICON_CITIZEN]人口+1[ICON_GOLD]金钱，每2个[ICON_CITIZEN]人口+1[ICON_FOOD]食物、[ICON_CULTURE]文化、[ICON_PRODUCTION]产能、[ICON_RESEARCH]科研。
 			</Text>
 		</Replace>
 

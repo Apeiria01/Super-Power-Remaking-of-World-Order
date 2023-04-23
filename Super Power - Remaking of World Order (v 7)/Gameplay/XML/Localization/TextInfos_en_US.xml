@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <GameData>
 	<Language_en_US>
 <!--Civilopedias-->
@@ -7216,7 +7216,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]Monarchy[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]-50% extra [ICON_HAPPINESS_4] Unhappiness due to city's Population Size.
-				[NEWLINE][ICON_BULLET]+1 [ICON_FOOD] Food, [ICON_CULTURE] Culture, [ICON_PRODUCTION] Production, [ICON_RESEARCH] Science and [ICON_GOLD] Gold for every [ICON_CITIZEN] Citizens in the [ICON_CAPITAL] Capital.
+				[NEWLINE][ICON_BULLET]+1[ICON_GOLD] Gold for every [ICON_CITIZEN] Citizens and +1 [ICON_FOOD] Food, [ICON_CULTURE] Culture, [ICON_PRODUCTION] Production, [ICON_RESEARCH] Science for every 2 [ICON_CITIZEN] Citizens in the [ICON_CAPITAL] Capital.
 			</Text>
 		</Replace>
 

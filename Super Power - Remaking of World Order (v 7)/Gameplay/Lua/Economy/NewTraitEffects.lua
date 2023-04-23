@@ -406,6 +406,7 @@ if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_VENICE) then
 		end
 
 		local pCapital = pPlayer:GetCapitalCity();
+		if pCapital == nil then 
 		local iBonus = Game.GetHandicapType() * 4 * pCapital:GrowthThreshold() / 100;
 		pCapital:ChangeFood(iBonus);
 	end)
