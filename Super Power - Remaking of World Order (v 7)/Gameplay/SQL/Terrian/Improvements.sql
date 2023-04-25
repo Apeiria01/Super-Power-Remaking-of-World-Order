@@ -6,6 +6,11 @@ INSERT INTO Improvements
 		(Type,							    SpecificCivRequired,	CivilizationType,		    NoTwoAdjacent,  DestroyedWhenPillaged,  Description,							    Help,										    Civilopedia,								    ArtDefineTag,						        PortraitIndex,	IconAtlas)
 VALUES	('IMPROVEMENT_SHOSHONE_WILDDOME',	1,						'CIVILIZATION_SHOSHONE',    1,              1,                      'TXT_KEY_IMPROVEMENT_SHOSHONE_WILDDOME',	'TXT_KEY_IMPROVEMENT_SHOSHONE_WILDDOME_HELP',	'TXT_KEY_IMPROVEMENT_SHOSHONE_WILDDOME_HELP',	'ART_DEF_IMPROVEMENT_SHOSHONE_WILDDOME', 	2,				'SP8_EXTRA_ATLAS');
 
+INSERT INTO Improvement_Yields
+		(ImprovementType,					YieldType,		Yield)
+VALUES  ('IMPROVEMENT_SHOSHONE_WILDDOME', 'YIELD_FOOD',         3),
+        ('IMPROVEMENT_ETHIOPIA_COFFEE',   'YIELD_FOOD',         3);
+
 INSERT OR REPLACE INTO Improvements
 		(Type,								Description,							ArtDefineTag,							GraphicalOnly,	Water)
 SELECT	'IMPROVEMENT_INCA_CITY',			'TXT_KEY_IMPROVEMENT_INCA_CITY',		'ART_DEF_IMPROVEMENT_INCA_CITY',	 	1, 				0	UNION ALL
