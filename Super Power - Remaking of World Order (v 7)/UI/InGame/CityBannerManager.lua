@@ -557,10 +557,10 @@ function RefreshCityBanner(cityBanner, iActiveTeam, iActivePlayer)
 		-- Update strength
 		local cityStrengthStr = math.floor(city:GetStrengthValue() / 100);
 		
-		local garrisonedUnit = city:GetGarrisonedUnit();
+		--[[local garrisonedUnit = city:GetGarrisonedUnit();
 		if isActiveTeamCity and controls.GarrisonFrame and garrisonedUnit == nil then
 			controls.GarrisonFrame:SetHide(true);
-		end
+		end]]
 		
 		controls.CityStrength:SetText(cityStrengthStr);
 		
