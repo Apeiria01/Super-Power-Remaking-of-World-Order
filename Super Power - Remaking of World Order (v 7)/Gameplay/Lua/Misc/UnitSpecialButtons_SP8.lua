@@ -30,7 +30,7 @@ SacrificeMissionButton = {
         local player = Players[unit:GetOwner()]
         if not city then return end
 
-        local strength = unit:GetBaseCombatStrength();
+        local strength = math.max(unit:GetBaseCombatStrength(), unit:GetBaseRangedCombatStrength())
         local cultureBonus = strength * SacrificeMissionCultureRate / 100
         local faithBonus = strength * SacrificeMissionFaithRate / 100
         player:ChangeJONSCulture(cultureBonus);
