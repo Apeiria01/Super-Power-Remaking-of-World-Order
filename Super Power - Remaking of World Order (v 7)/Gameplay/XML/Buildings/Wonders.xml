@@ -2046,8 +2046,8 @@
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
 			<ConquestProb>100</ConquestProb>
-			<IconAtlas>BW_ATLAS_1</IconAtlas>
-			<PortraitIndex>4</PortraitIndex>
+			<IconAtlas>SP8_EXTRA_ATLAS</IconAtlas>
+			<PortraitIndex>11</PortraitIndex>
 			<WonderSplashImage>WonderRuhrIndustrialBase.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,T</WonderSplashAnchor>
 			<FreeBuilding>BUILDINGCLASS_INDUSTRIAL_ZONE_EXTEND</FreeBuilding>
