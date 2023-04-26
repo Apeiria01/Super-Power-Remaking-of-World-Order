@@ -8128,7 +8128,7 @@
 			<Text>其他文明的城市中每3个信徒+1[ICON_PEACE]信仰</Text>
 		</Row>
 		<Replace Tag="TXT_KEY_BELIEF_WORLD_CHURCH">
-			<Text>每3个其他文明中该宗教信徒贡献1[ICON_CULTURE]文化</Text>
+			<Text>其他文明的城市中每3个信徒+1[ICON_CULTURE]文化</Text>
 		</Replace>
 		<Row Tag="TXT_KEY_BELIEF_MARSH_BELIEF_SHORT">
 			<Text>河童传说</Text>
