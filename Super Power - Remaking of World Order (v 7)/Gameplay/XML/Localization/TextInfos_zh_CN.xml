@@ -7987,7 +7987,7 @@
 			<Text>全国每座信仰该宗教的城市贡献1[ICON_HAPPINESS_1]快乐</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_INITIATION_RITES">
-			<Text>每座城市首次皈依该宗教时贡献金钱（标速180[ICON_GOLD]金钱，史诗243[ICON_GOLD]金钱）</Text>
+			<Text>每座城市首次皈依该宗教时贡献180[ICON_GOLD]金钱（标准速度）</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_CHURCH_PROPERTY">
 			<Text>每座信仰该宗教的城市贡献6[ICON_GOLD]金钱</Text>
@@ -8128,7 +8128,7 @@
 			<Text>其他文明的城市中每3个信徒+1[ICON_PEACE]信仰</Text>
 		</Row>
 		<Replace Tag="TXT_KEY_BELIEF_WORLD_CHURCH">
-			<Text>每3个其他文明中该宗教的信徒贡献1[ICON_CULTURE]文化</Text>
+			<Text>其他文明的城市中每3个信徒+1[ICON_CULTURE]文化</Text>
 		</Replace>
 		<Row Tag="TXT_KEY_BELIEF_MARSH_BELIEF_SHORT">
 			<Text>河童传说</Text>

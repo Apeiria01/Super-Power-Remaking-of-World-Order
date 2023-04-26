@@ -218,9 +218,9 @@ function SPNReligionConquestedHolyCity(oldOwnerID, isCapital, cityX, cityY, newO
 		for index = 1, numReligions do
 			local row = religionsTable[index]
 			local religionID = row.ID
-			pCity:ConvertPercentFollowers(newOwnerReligionID, religionID, 50) 
+			pCity:ConvertPercentFollowers(newOwnerReligionID, religionID, 40) 
 		end
-		pCity:ConvertPercentFollowers(newOwnerReligionID, -1, 50)
+		pCity:ConvertPercentFollowers(newOwnerReligionID, -1, 40)
 
 		local newReligionFollowersInCity = pCity:GetNumFollowers(newOwnerReligionID)
         local ReligionFollowersBonus = 10 * (newOwnerPlayer:GetCurrentEra() + 1)
