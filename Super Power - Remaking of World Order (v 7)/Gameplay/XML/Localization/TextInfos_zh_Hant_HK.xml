@@ -7868,7 +7868,7 @@
 			<Text>全國每座信仰該宗教的城市貢獻1[ICON_HAPPINESS_1]快樂。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_INITIATION_RITES">
-			<Text>每座城市首次皈依該宗教時貢獻金錢（標速180[ICON_GOLD]金錢，史詩243[ICON_GOLD]金錢）。</Text>
+			<Text>每座城市首次皈依該宗教時貢獻180[ICON_GOLD]金錢（標準速度）。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_CHURCH_PROPERTY">
 			<Text>每座信仰該宗教的城市貢獻6[ICON_GOLD]金錢。</Text>

@@ -7987,7 +7987,7 @@
 			<Text>全国每座信仰该宗教的城市贡献1[ICON_HAPPINESS_1]快乐</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_INITIATION_RITES">
-			<Text>每座城市首次皈依该宗教时贡献金钱（标速180[ICON_GOLD]金钱，史诗243[ICON_GOLD]金钱）</Text>
+			<Text>每座城市首次皈依该宗教时贡献180[ICON_GOLD]金钱（标准速度）</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_CHURCH_PROPERTY">
 			<Text>每座信仰该宗教的城市贡献6[ICON_GOLD]金钱</Text>
