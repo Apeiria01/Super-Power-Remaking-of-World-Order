@@ -15,6 +15,7 @@
 		<Delete UnitType="UNIT_GALLEY"/>
 		<Delete UnitType="UNIT_MOBILE_SAM"/>
 		<Delete UnitType="UNIT_SWEDISH_HAKKAPELIITTA"/>
+		<Delete UnitType="UNIT_SHOSHONE_PATHFINDER"/>
 		
 		<Row>
 			<UnitType>UNIT_CITADEL_EARLY</UnitType>

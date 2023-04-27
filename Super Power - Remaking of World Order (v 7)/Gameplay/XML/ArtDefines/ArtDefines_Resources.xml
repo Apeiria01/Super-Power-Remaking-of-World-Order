@@ -2,7 +2,7 @@
 <!-- Created by ModBuddy on 12/15/2014 6:49:40 PM -->
 <GameData>
 	<ArtDefine_Landmarks>
-		<!-- Fix 'SPECIAL' does not exist in ArtDefine_Landmarks - by CaptainCWB! -->
+		<!-- Fix 'SPECIAL' does not exist in ArtDefine_Landmarks(Seem ineffective) - by CaptainCWB! -->
 		<Update>
 			<Set LayoutHandler="RANDOM"/>
 			<Where LayoutHandler="SPECIAL"/>
