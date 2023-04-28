@@ -5061,6 +5061,11 @@
 			<Tag>TXT_KEY_BUILDING_CONSUMER_BONUS</Tag>
 			<Text>Provides additional [ICON_RES_CONSUMER] Consumer Goods.</Text>
 		</Row>
+
+		<Row>
+			<Tag>TXT_KEY_BUILDING_ELECTRICITY_BONUS</Tag>
+			<Text>Provides additional [ICON_RES_ELECTRICITY] Electricity.</Text>
+		</Row>
 		<!--Floating garden modify -->
 		<Replace Tag="TXT_KEY_BUILDING_FLOATING_GARDENS_HELP">
 			<Text>+3[ICON_FOOD] Food for lakes.

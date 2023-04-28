@@ -1,5 +1,11 @@
 ALTER TABLE UnitPromotions ADD IconStringSP text default '[ICON_PROMOTION_ATTRIBUTES]';
 -- Group Promotions
+INSERT OR REPLACE INTO IconTextureAtlases (Atlas,IconSize,Filename,IconsPerRow,IconsPerColumn)
+SELECT 'GROUP_PROMOTION_ATLAS'  ,32,    'PromotionsUnionSquare32_Exp2_CivilWar.dds',    5,5 UNION ALL
+SELECT 'GROUP_PROMOTION_ATLAS'  ,45,    'Promotions45_Exp2_CivilWar.dds',               5,5 UNION ALL
+SELECT 'GROUP_PROMOTION_ATLAS'  ,64,    'Promotions64_Exp2_CivilWar.dds',               5,5 UNION ALL
+SELECT 'GROUP_PROMOTION_ATLAS'  ,256,   'PromotionsUnion256_Exp2_CivilWar.dds',         5,5;
+
 INSERT OR REPLACE INTO UnitPromotions (Type, Description, Help, Sound, MovesChange, RoughTerrainEndsTurn, LostWithUpgrade, CannotBeChosen, OnlyDefensive, PortraitIndex, IconAtlas, PediaType, PediaEntry) VALUES ('PROMOTION_GROUP',               'TXT_KEY_PROMOTION_GROUP',             'TXT_KEY_PROMOTION_GROUP_HELP',             'AS2D_IF_LEVELUP',  0, 0, 0, 1, 0, 17, 'GROUP_PROMOTION_ATLAS', 'PEDIA_ATTRIBUTES', 'TXT_KEY_PROMOTION_GROUP'            );
 INSERT OR REPLACE INTO UnitPromotions (Type, Description, Help, Sound, MovesChange, RoughTerrainEndsTurn, LostWithUpgrade, CannotBeChosen, OnlyDefensive, PortraitIndex, IconAtlas, PediaType, PediaEntry) VALUES ('PROMOTION_GROUP_AIR',           'TXT_KEY_PROMOTION_GROUP_AIR',         'TXT_KEY_PROMOTION_GROUP_HELP',             'AS2D_IF_LEVELUP',  0, 0, 0, 1, 0, 17, 'GROUP_PROMOTION_ATLAS', 'PEDIA_ATTRIBUTES', 'TXT_KEY_PROMOTION_GROUP_AIR'        );
 --	INSERT OR REPLACE INTO UnitPromotions (Type, Description, Help, Sound, MovesChange, RoughTerrainEndsTurn, LostWithUpgrade, CannotBeChosen, OnlyDefensive, PortraitIndex, IconAtlas, PediaType, PediaEntry) VALUES ('PROMOTION_GROUP_MOVE',          'TXT_KEY_PROMOTION_GROUP_MOVE',        'TXT_KEY_PROMOTION_GROUP_MOVE_HELP',        'AS2D_IF_LEVELUP',  0, 0, 1, 1, 0, 23, 'GROUP_PROMOTION_ATLAS', 'PEDIA_ATTRIBUTES', 'TXT_KEY_PROMOTION_GROUP_MOVE'       );

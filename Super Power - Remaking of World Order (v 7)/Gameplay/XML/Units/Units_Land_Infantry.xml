@@ -733,7 +733,7 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_GERMAN_LONGSWORDSMAN</Description>
-			<Civilopedia>TXT_KEY_CIV5_UNIT_GERMAN_LONGSWORDSMAN_TEXT</Civilopedia>
+			<Civilopedia>TXT_KEY_CIV5_GERMAN_LONGSWORDSMAN_TEXT</Civilopedia>
 			<Strategy>TXT_KEY_SP_UNITS_LAND_INFANTRY_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_GERMAN_LONGSWORDSMAN_HELP</Help>
 			<MilitarySupport>true</MilitarySupport>
