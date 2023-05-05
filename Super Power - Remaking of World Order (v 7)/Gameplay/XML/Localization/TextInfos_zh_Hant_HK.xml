@@ -3888,6 +3888,9 @@
 				[NEWLINE]地圖大小的1/3（至少36格，至多44格）內——嚴重。
 				[NEWLINE]地圖大小的1/3（至少36格，至多44格）外——極度嚴重。
 				[NEWLINE][NEWLINE]這些耗費的成本還會導致城市人力、商品、滿意度上的損失。
+				[NEWLINE][NEWLINE]將間諜移動到你的城市可以降低城市的腐敗等級，具體效果如下：
+				[NEWLINE]一級和二級間諜：城市腐敗等級降低一級，且至多降低為一級城市。
+				[NEWLINE]三級間諜：完全消除城市腐敗等級。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CONCEPT_CITIES_CORRUPTION_ADVISOR_QUESTION">
