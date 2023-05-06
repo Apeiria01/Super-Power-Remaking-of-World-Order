@@ -41,6 +41,11 @@
 			<DefaultBuilding>BUILDING_CITY_SIZE_GLOBAL</DefaultBuilding>
 			<Description>TXT_KEY_BUILDING_CITY_SIZE_GLOBAL</Description>
 		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_COUNT_BUILIDNGS</Type>
+			<DefaultBuilding>BUILDING_WAR_CASUALTIES</DefaultBuilding>
+			<Description>TXT_KEY_COUNT_BUILIDNGS</Description>
+		</Row>
 	</BuildingClasses>
 
 
@@ -191,6 +196,21 @@
 			<TradeRouteRecipientBonus>32</TradeRouteRecipientBonus>
 			<TradeRouteTargetBonus>16</TradeRouteTargetBonus>
 			<PolicyCostModifier>5</PolicyCostModifier>
+			<GreatWorkCount>-1</GreatWorkCount>
+		</Row>
+
+		<Row>
+			<Type>BUILDING_WAR_CASUALTIES</Type>
+			<BuildingClass>BUILDINGCLASS_COUNT_BUILIDNGS</BuildingClass>
+			<Cost>-1</Cost>
+			<Help>TXT_KEY_CONCEPT_WAR_DAMAGE_SUMMARY</Help>
+			<Description>TXT_KEY_CONCEPT_WAR_DAMAGE_DESCRIPTION</Description>
+			<MinAreaSize>-1</MinAreaSize>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<NeverCapture>true</NeverCapture>
+			<NukeImmune>true</NukeImmune>
+			<IconAtlas>SPBalance_ATLAS</IconAtlas>
+			<PortraitIndex>29</PortraitIndex>
 			<GreatWorkCount>-1</GreatWorkCount>
 		</Row>
 		<Row>
