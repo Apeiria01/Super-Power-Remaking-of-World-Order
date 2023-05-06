@@ -194,6 +194,18 @@
 			<Where Name="GLOBAL_PARATROOPS_AA_DAMAGE"/>
 			<Set Value="1"/>
 		</Update>-->
+		<Update>
+			<Where Name="GLOBAL_UNIT_EXTRA_ATTACK_DEFENSE_EXPERENCE"/>
+			<Set Value="1"/>
+		</Update>
+		<Update>
+			<Where Name="GLOBAL_WAR_CASUALTIES"/>
+			<Set Value="1"/>
+		</Update>
+		<Update>
+			<Where Name="PROMOTION_SPLASH_DAMAGEWQ"/>
+			<Set Value="1"/>
+		</Update>
 	</CustomModOptions>
 
 

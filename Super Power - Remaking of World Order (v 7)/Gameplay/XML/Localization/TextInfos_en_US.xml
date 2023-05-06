@@ -352,10 +352,6 @@
 			<Text>What is International Immigration?</Text>
 		</Row>
 		
-		<Row Tag="TXT_KEY_COUNT_BUILIDNGS">
-			<Text>Count Buildings</Text>
-		</Row>
-		
 		<!--************************************Research********************************-->
 
 		<Row Tag="TXT_KEY_CONCEPT_NEW_SCIENCE_RULE_TOPIC">
