@@ -821,7 +821,7 @@ function NewAttackEffect()
 		end
 
 		if attUnit:IsHasPromotion(OrbanCannonID) then
-			local isDoDestroy = defPlayer:IsMajorCiv() and Game.Rand(100, "OrbanCannon") < 40;
+			local isDoDestroy = Game.Rand(100, "OrbanCannon") < 40;
 			if isDoDestroy then
 				local buildingClassesToDestroy = {"BUILDINGCLASS_BARRACKS", "BUILDINGCLASS_ARMORY", "BUILDINGCLASS_WALLS", "BUILDINGCLASS_CASTLE"};
 				for i, buildingClass in ipairs(buildingClassesToDestroy) do
