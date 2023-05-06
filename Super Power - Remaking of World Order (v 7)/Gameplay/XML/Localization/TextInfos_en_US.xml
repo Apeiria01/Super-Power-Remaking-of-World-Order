@@ -352,10 +352,6 @@
 			<Text>What is International Immigration?</Text>
 		</Row>
 		
-		<Row Tag="TXT_KEY_COUNT_BUILIDNGS">
-			<Text>Count Buildings</Text>
-		</Row>
-		
 		<!--************************************Research********************************-->
 
 		<Row Tag="TXT_KEY_CONCEPT_NEW_SCIENCE_RULE_TOPIC">
@@ -16972,5 +16968,18 @@
 			Already bought food or not enough money this turn.
 			</Text>
 		</Replace>
+
+		<Replace Tag="TXT_KEY_TP_GOLDEN_AGE_ADDITION">
+			<Text>[ICON_BULLET][COLOR_POSITIVE_TEXT]+{1_Num}[ENDCOLOR] from excess [ICON_HAPPINESS_1] Happiness.</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_TP_GOLDEN_AGE_ADDITION_RELIGION">
+			<Text>[ICON_BULLET][COLOR_POSITIVE_TEXT]+{1_Num}[ENDCOLOR] from Religion.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TP_GOLDEN_AGE_ADDITION_TRAIT">
+			<Text>[ICON_BULLET][COLOR_POSITIVE_TEXT]+{1_Num}[ENDCOLOR] from Traits.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TP_GOLDEN_AGE_ADDITION_CITY">
+			<Text>[ICON_BULLET][COLOR_POSITIVE_TEXT]+{1_Num}[ENDCOLOR] from Cities.</Text>
+		</Row>
 	</Language_en_US>
 </GameData>

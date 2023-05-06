@@ -523,7 +523,6 @@ function NewAttackEffect()
 				if ChainDamage >= unit:GetCurrHitPoints() then
 					ChainDamage = unit:GetCurrHitPoints();
 					local eUnitType = unit:GetUnitType();
-					UnitDeathCounter(attPlayerID, unit:GetOwner(), eUnitType);
 				end
 				unit:ChangeDamage(ChainDamage, attPlayer);
 				print("Chain Reaction!");
@@ -861,7 +860,6 @@ function NewAttackEffect()
 						if iChangeDamage >= pFoundUnit:GetCurrHitPoints() then
 							iChangeDamage = pFoundUnit:GetCurrHitPoints();
 							local eUnitType = pFoundUnit:GetUnitType();
-							UnitDeathCounter(attPlayerID, pFoundUnit:GetOwner(), eUnitType);
 						end
 						pFoundUnit:ChangeDamage(iChangeDamage);
 					end
@@ -919,7 +917,6 @@ function NewAttackEffect()
 						if CollDamageFinal >= pFoundUnit:GetCurrHitPoints() then
 							CollDamageFinal = pFoundUnit:GetCurrHitPoints();
 							local eUnitType = pFoundUnit:GetUnitType();
-							UnitDeathCounter(attPlayerID, pFoundUnit:GetOwner(), eUnitType);
 
 							-- Notification
 							if defPlayerID == Game.GetActivePlayer() then
@@ -977,7 +974,6 @@ function NewAttackEffect()
 						if CollDamageFinal >= pFoundUnit:GetCurrHitPoints() then
 							CollDamageFinal = pFoundUnit:GetCurrHitPoints();
 							local eUnitType = pFoundUnit:GetUnitType();
-							UnitDeathCounter(attPlayerID, pFoundUnit:GetOwner(), eUnitType);
 	
 							-- Notification
 							if defPlayerID == Game.GetActivePlayer() then
@@ -1044,7 +1040,6 @@ function NewAttackEffect()
 							if SplashDamageFinal >= pUnit:GetCurrHitPoints() then
 								SplashDamageFinal = pUnit:GetCurrHitPoints();
 								local eUnitType = pUnit:GetUnitType();
-								UnitDeathCounter(attPlayerID, pUnit:GetOwner(), eUnitType);
 
 								-- Notification
 								if defPlayerID == Game.GetActivePlayer() then
@@ -1096,7 +1091,6 @@ function NewAttackEffect()
 					if iDamage >= pFoundUnit:GetCurrHitPoints() then
 						iDamage = pFoundUnit:GetCurrHitPoints();
 						local eUnitType = pFoundUnit:GetUnitType();
-						UnitDeathCounter(attPlayerID, pFoundUnit:GetOwner(), eUnitType);
 						-- Notification
 						if pFoundUnit:GetOwner() == Game.GetActivePlayer() then
 							-- local heading = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_UNIT_DESTROYED_SHORT")
@@ -1144,7 +1138,6 @@ function NewAttackEffect()
 							if iDamage >= pFoundUnit:GetCurrHitPoints() then
 								iDamage = pFoundUnit:GetCurrHitPoints();
 								local eUnitType = pFoundUnit:GetUnitType();
-								UnitDeathCounter(attPlayerID, pFoundUnit:GetOwner(), eUnitType);
 
 								-- Notification
 								if pFoundUnit:GetOwner() == Game.GetActivePlayer() then
@@ -1224,7 +1217,6 @@ function NewAttackEffect()
 							local ChargeDamageFinal = math.floor(ChargeDamageOri * ChargeMod);
 							if ChargeDamageFinal >= pFoundUnit:GetCurrHitPoints() then
 								local eUnitType = pFoundUnit:GetUnitType();
-								UnitDeathCounter(attPlayerID, pFoundUnit:GetOwner(), eUnitType);
 
 								-- Notification
 								if defPlayerID == Game.GetActivePlayer() then
@@ -1263,7 +1255,6 @@ function NewAttackEffect()
 			if defFinalUnitDamageChange >= defUnit:GetCurrHitPoints() then
 				defFinalUnitDamageChange = defUnit:GetCurrHitPoints();
 				local eUnitType = defUnit:GetUnitType();
-				UnitDeathCounter(attPlayerID, defPlayerID, eUnitType);
 
 				-- Notification
 				if defPlayerID == Game.GetActivePlayer() then
@@ -1287,7 +1278,7 @@ function NewAttackEffect()
 				Events.GameplayAlertMessage(text);
 			end
 			defFinalUnitDamage = defFinalUnitDamage + defFinalUnitDamageChange;
-			defUnit:ChangeDamage(defFinalUnitDamageChange);
+			defUnit:ChangeDamage(defFinalUnitDamageChange,attPlayer);
 			--[[if attUnit:CanMoveThrough(batPlot) and batPlot ~= attPlot then
 				-- if the target plot has no unit,your unit advances into the target plot!
 				attUnit:SetMoves(attUnit:MovesLeft() + GameDefines["MOVE_DENOMINATOR"]);
@@ -1671,7 +1662,6 @@ function NewAttackEffect()
 			if attDamageInflicted >= attUnit:GetCurrHitPoints() then
 				attDamageInflicted = attUnit:GetCurrHitPoints();
 				local eUnitType = attUnit:GetUnitType();
-				UnitDeathCounter(defPlayerID, attPlayerID, eUnitType);
 				print("Airsweep Unit died!")
 
 				if defPlayerID == Game.GetActivePlayer() then
@@ -1691,7 +1681,6 @@ function NewAttackEffect()
 			if defDamageInflicted >= defUnit:GetCurrHitPoints() then
 				defDamageInflicted = defUnit:GetCurrHitPoints();
 				local eUnitType = defUnit:GetUnitType();
-				UnitDeathCounter(attPlayerID, defPlayerID, eUnitType);
 				print("AA Unit died!")
 
 				if defPlayerID == Game.GetActivePlayer() then

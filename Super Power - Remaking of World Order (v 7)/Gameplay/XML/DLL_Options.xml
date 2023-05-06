@@ -194,6 +194,18 @@
 			<Where Name="GLOBAL_PARATROOPS_AA_DAMAGE"/>
 			<Set Value="1"/>
 		</Update>-->
+		<Update>
+			<Where Name="GLOBAL_UNIT_EXTRA_ATTACK_DEFENSE_EXPERENCE"/>
+			<Set Value="1"/>
+		</Update>
+		<Update>
+			<Where Name="GLOBAL_WAR_CASUALTIES"/>
+			<Set Value="1"/>
+		</Update>
+		<Update>
+			<Where Name="PROMOTION_SPLASH_DAMAGE"/>
+			<Set Value="1"/>
+		</Update>
 	</CustomModOptions>
 
 
@@ -319,5 +331,18 @@
 			<Description>TXT_KEY_GAME_OPTION_ABLE_GIFT_MILITIA</Description>
 			<Help>TXT_KEY_GAME_OPTION_ABLE_GIFT_MILITIA_HELP</Help>
 		</Row>
+
+		<Update>
+			<Where Type="GAMEOPTION_SP_CORPS_MODE_HIGH"/>
+			<Set Default="1"/>
+		</Update>
+		<Update>
+			<Where Type="GAMEOPTION_SP_IMMIGRATION_OFF"/>
+			<Set Default="1"/>
+		</Update>
+		<Update>
+			<Where Type="GAMEOPTION_SP_NUCLEARWINTER_OFF"/>
+			<Set Default="1"/>
+		</Update>
 	</GameOptions>
 </GameData>
