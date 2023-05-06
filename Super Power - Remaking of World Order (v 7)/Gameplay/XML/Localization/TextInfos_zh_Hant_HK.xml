@@ -14689,7 +14689,7 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_ORBAN_CANNON_HELP">
 			<Text>
-				攻擊主要文明的城市時，有40%的概率摧毀一座軍事建築，按優先級：軍營、軍械所、城牆、城堡。
+				攻擊城市時，有40%的概率摧毀一座軍事建築，按優先級：軍營、軍械所、城牆、城堡。
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_ORBAN_CANNON_COMBAT_INFO">
