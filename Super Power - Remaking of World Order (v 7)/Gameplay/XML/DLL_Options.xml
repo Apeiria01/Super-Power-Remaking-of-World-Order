@@ -319,5 +319,18 @@
 			<Description>TXT_KEY_GAME_OPTION_ABLE_GIFT_MILITIA</Description>
 			<Help>TXT_KEY_GAME_OPTION_ABLE_GIFT_MILITIA_HELP</Help>
 		</Row>
+
+		<Update>
+			<Where Type="GAMEOPTION_SP_CORPS_MODE_HIGH"/>
+			<Set Default="1"/>
+		</Update>
+		<Update>
+			<Where Type="GAMEOPTION_SP_IMMIGRATION_OFF"/>
+			<Set Default="1"/>
+		</Update>
+		<Update>
+			<Where Type="GAMEOPTION_SP_NUCLEARWINTER_OFF"/>
+			<Set Default="1"/>
+		</Update>
 	</GameOptions>
 </GameData>
