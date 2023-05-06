@@ -16869,7 +16869,7 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_ORBAN_CANNON_HELP">
 			<Text>
-				When attacking a major civ's city, there is a 40% chance of destroying a military building, according to priority: barracks, armory, city wall, castle.
+				When attacking a city, there is a 40% chance of destroying a military building, according to priority: barracks, armory, city wall, castle.
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_ORBAN_CANNON_COMBAT_INFO">
