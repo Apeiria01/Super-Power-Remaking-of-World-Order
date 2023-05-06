@@ -1524,6 +1524,8 @@
 			<PortraitIndex>28</PortraitIndex>
 			<MoveRate>BOAT</MoveRate>
 			<ExtraMaintenanceCost>32</ExtraMaintenanceCost>
+			<ExtraXPValueAttack>2</ExtraXPValueAttack>
+			<ExtraXPValueDefense>1</ExtraXPValueDefense>
 		</Row>
 
 		<Row>
@@ -1561,6 +1563,8 @@
 			<PortraitIndex>19</PortraitIndex>
 			<MoveRate>BOAT</MoveRate>
 			<ExtraMaintenanceCost>32</ExtraMaintenanceCost>
+			<ExtraXPValueAttack>2</ExtraXPValueAttack>
+			<ExtraXPValueDefense>1</ExtraXPValueDefense>
 		</Row>
 		
 		
@@ -1598,6 +1602,8 @@
 			<PortraitIndex>21</PortraitIndex>
 			<MoveRate>BOAT</MoveRate>
 			<ExtraMaintenanceCost>45</ExtraMaintenanceCost>
+			<ExtraXPValueAttack>3</ExtraXPValueAttack>
+			<ExtraXPValueDefense>1</ExtraXPValueDefense>
 		</Row>
 
 		<Row>
@@ -1633,6 +1639,8 @@
 			<PortraitIndex>29</PortraitIndex>
 			<MoveRate>BOAT</MoveRate>
 			<ExtraMaintenanceCost>45</ExtraMaintenanceCost>
+			<ExtraXPValueAttack>3</ExtraXPValueAttack>
+			<ExtraXPValueDefense>1</ExtraXPValueDefense>
 		</Row>
 		
 		<Row>
@@ -1669,6 +1677,8 @@
 			<PortraitIndex>38</PortraitIndex>
 			<MoveRate>BOAT</MoveRate>
 			<ExtraMaintenanceCost>36</ExtraMaintenanceCost>
+			<ExtraXPValueAttack>3</ExtraXPValueAttack>
+			<ExtraXPValueDefense>1</ExtraXPValueDefense>
 		</Row>
 
 		<Row>
@@ -1707,6 +1717,8 @@
 			<ExtraMaintenanceCost>60</ExtraMaintenanceCost>
 			<SpecialCargo>SPECIALUNIT_MISSILE</SpecialCargo>
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
+			<ExtraXPValueAttack>4</ExtraXPValueAttack>
+			<ExtraXPValueDefense>2</ExtraXPValueDefense>
 		</Row>
 	
 		

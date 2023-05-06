@@ -938,13 +938,13 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 					if (mod ~= 0) then
 						controlTable = g_TheirCombatDataIM:GetInstance();
 						controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_PROMOTION_PROMOTION_GENERIC", Locale.ConvertTextKey(row.Description));
-						controlTable.Value:SetText(GetFormattedText(strText, mod, true, true));
+						controlTable.Value:SetText(GetFormattedText(strText, mod, false, true));
 					end
 
 					if (defenseMod ~= 0) then
 						controlTable = g_TheirCombatDataIM:GetInstance();
 						controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_PROMOTION_PROMOTION_DEFENSE", Locale.ConvertTextKey(row.Description));
-						controlTable.Value:SetText(GetFormattedText(strText, defenseMod, true, true));
+						controlTable.Value:SetText(GetFormattedText(strText, defenseMod, false, true));
 					end
 				end
 			end

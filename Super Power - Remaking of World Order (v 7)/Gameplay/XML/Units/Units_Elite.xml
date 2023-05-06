@@ -605,6 +605,8 @@
 			<ExtraMaintenanceCost>30</ExtraMaintenanceCost>
 			<SpecialCargo>SPECIALUNIT_MISSILE</SpecialCargo>
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
+			<ExtraXPValueAttack>4</ExtraXPValueAttack>
+			<ExtraXPValueDefense>2</ExtraXPValueDefense>
 		</Row>
 
 
@@ -644,6 +646,8 @@
 			<ExtraMaintenanceCost>50</ExtraMaintenanceCost>
 			<SpecialCargo>SPECIALUNIT_MISSILE</SpecialCargo>
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
+			<ExtraXPValueAttack>5</ExtraXPValueAttack>
+			<ExtraXPValueDefense>2</ExtraXPValueDefense>
 		</Row>
 
 		
