@@ -709,6 +709,15 @@
 			<Where Name="BASE_CULTURE_PER_GREAT_WORK" />
 		</Update>
 
+		<Update>
+			<Set Value="4"/>
+			<Where Name="INTERNAL_TRADE_ROUTE_FOOD_BONUS_BASE_FROM_ORIGIN" />
+		</Update>
+		<Update>
+			<Set Value="4"/>
+			<Where Name="INTERNAL_TRADE_ROUTE_PRODUCTION_BONUS_BASE_FROM_ORIGIN" />
+		</Update>
+
 		<Row>
 			<Name>GREEK_UB_DUMMY_MAX</Name>
 			<Value>20</Value>
