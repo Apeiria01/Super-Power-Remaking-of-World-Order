@@ -203,7 +203,7 @@
 			<Set Value="1"/>
 		</Update>
 		<Update>
-			<Where Name="PROMOTION_SPLASH_DAMAGEWQ"/>
+			<Where Name="PROMOTION_SPLASH_DAMAGE"/>
 			<Set Value="1"/>
 		</Update>
 	</CustomModOptions>
