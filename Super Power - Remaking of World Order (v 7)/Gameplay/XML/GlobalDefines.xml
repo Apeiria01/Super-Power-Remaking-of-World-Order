@@ -186,7 +186,7 @@
 			<Where Name="GOLDEN_AGE_THRESHOLD_CITY_MULTIPLIER" />
 		</Update>
 		<Update>
-			<Set Value="100"/>
+			<Set Value="150"/>
 			<Where Name="GOLDEN_AGE_EACH_GA_ADDITIONAL_HAPPINESS" />
 		</Update>
 		<Update>
@@ -752,6 +752,10 @@
 		<Row>
 			<Name>POLICY_BRANCH_LIBERTY_CITY_LEVEL_DISTANCE_LV4</Name>
 			<Value>4</Value>
+		</Row>
+		<Row>
+			<Name>GOLDEN_AGE_POINT_MULTIPLE_IN_GA</Name>
+			<Value>3</Value>
 		</Row>
 	</Defines>
 	

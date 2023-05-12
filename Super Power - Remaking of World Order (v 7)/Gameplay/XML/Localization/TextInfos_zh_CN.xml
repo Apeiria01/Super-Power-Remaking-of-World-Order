@@ -15007,6 +15007,9 @@
 		<Row Tag="TXT_KEY_TP_GOLDEN_AGE_ADDITION_CITY">
 			<Text>[ICON_BULLET][COLOR_POSITIVE_TEXT]+{1_Num}[ENDCOLOR]来自城市。</Text>
 		</Row>
+		<Row Tag="TXT_KEY_TP_GOLDEN_AGE_NOW_EXTRA">
+			<Text>[ICON_BULLET]处于黄金时代，你的黄金时代点数[ICON_GOLDEN_AGE]仍将以[COLOR_POSITIVE_TEXT]1/{1_Num}[ENDCOLOR]的速率积累。</Text>
+		</Row>
 
 	</Language_zh_CN>
 </GameData>

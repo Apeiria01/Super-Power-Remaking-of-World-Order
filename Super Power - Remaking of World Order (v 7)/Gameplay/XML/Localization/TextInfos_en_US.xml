@@ -16981,5 +16981,8 @@
 		<Row Tag="TXT_KEY_TP_GOLDEN_AGE_ADDITION_CITY">
 			<Text>[ICON_BULLET][COLOR_POSITIVE_TEXT]+{1_Num}[ENDCOLOR] from Cities.</Text>
 		</Row>
+		<Row Tag="TXT_KEY_TP_GOLDEN_AGE_NOW_EXTRA">
+			<Text>[ICON_BULLET]In GOLDEN AGE, your Golden Age Point [ICON_GOLDEN_AGE] will still accumulate at the rate of [COLOR_POSITIVE_TEXT]1/{1_Num}[ENDCOLOR].</Text>
+		</Row>
 	</Language_en_US>
 </GameData>

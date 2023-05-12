@@ -1275,32 +1275,38 @@ function GoldenAgeTipHandler( control )
 		local pPlayer = Players[iPlayerID];
 		local pTeam = Teams[pPlayer:GetTeam()];
 		local pCity = UI.GetHeadSelectedCity();
+
+		local iHappiness = pPlayer:GetExcessHappiness();
+		local iGoldAgePointFromReligion = pPlayer:GetGoldenAgePointPerTurnFromReligion();
+		local iGoldAgePointFromTraits = pPlayer:GetGoldenAgePointPerTurnFromTraits();
+		local iGoldAgePointFromCitys = pPlayer:GetGoldenAgePointPerTurnFromCitys();
 	
 		if (pPlayer:GetGoldenAgeTurns() > 0) then
+			local GoldAgePointMultiple = GameDefines["GOLDEN_AGE_POINT_MULTIPLE_IN_GA"];
+			iHappiness = math.floor(iHappiness/3);
+			iGoldAgePointFromReligion = math.floor(iGoldAgePointFromReligion/GoldAgePointMultiple);
+			iGoldAgePointFromTraits = math.floor(iGoldAgePointFromTraits/GoldAgePointMultiple);
+			iGoldAgePointFromCitys = math.floor(iGoldAgePointFromCitys/GoldAgePointMultiple);
 			strText = Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_NOW", pPlayer:GetGoldenAgeTurns());
-		else
-			local iHappiness = pPlayer:GetExcessHappiness();
+			strText = strText .. "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_NOW_EXTRA",GoldAgePointMultiple);
+		end
 
-			strText = Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_PROGRESS", pPlayer:GetGoldenAgeProgressMeter(), pPlayer:GetGoldenAgeProgressThreshold());
-			strText = strText .. "[NEWLINE]";
-		
-			if (iHappiness >= 0) then
-				strText = strText .. Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_ADDITION", iHappiness);
-			else
-				strText = strText .. "[COLOR_WARNING_TEXT]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_LOSS", -iHappiness) .. "[ENDCOLOR]";
-			end
-			local iGoldAgePointFromReligion = pPlayer:GetGoldenAgePointPerTurnFromReligion();
-			local iGoldAgePointFromTraits = pPlayer:GetGoldenAgePointPerTurnFromTraits();
-			local iGoldAgePointFromCitys = pPlayer:GetGoldenAgePointPerTurnFromCitys();
-			if (iGoldAgePointFromReligion > 0) then
-				strText = strText .. "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_ADDITION_RELIGION", iGoldAgePointFromReligion);
-			end
-			if (iGoldAgePointFromTraits > 0) then
-				strText = strText .. "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_ADDITION_TRAIT", iGoldAgePointFromTraits);
-			end
-			if (iGoldAgePointFromCitys > 0) then
-				strText = strText .. "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_ADDITION_CITY", iGoldAgePointFromCitys);
-			end
+		strText = strText .. "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_PROGRESS", pPlayer:GetGoldenAgeProgressMeter(), pPlayer:GetGoldenAgeProgressThreshold());
+		strText = strText .. "[NEWLINE]";
+
+		if (iHappiness >= 0) then
+			strText = strText .. Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_ADDITION", iHappiness);
+		else
+			strText = strText .. "[COLOR_WARNING_TEXT]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_LOSS", -iHappiness) .. "[ENDCOLOR]";
+		end
+		if (iGoldAgePointFromReligion > 0) then
+			strText = strText .. "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_ADDITION_RELIGION", iGoldAgePointFromReligion);
+		end
+		if (iGoldAgePointFromTraits > 0) then
+			strText = strText .. "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_ADDITION_TRAIT", iGoldAgePointFromTraits);
+		end
+		if (iGoldAgePointFromCitys > 0) then
+			strText = strText .. "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_ADDITION_CITY", iGoldAgePointFromCitys);
 		end
 	
 		strText = strText .. "[NEWLINE][NEWLINE]";

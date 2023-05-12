@@ -14804,5 +14804,8 @@
 		<Row Tag="TXT_KEY_TP_GOLDEN_AGE_ADDITION_CITY">
 			<Text>[ICON_BULLET][COLOR_POSITIVE_TEXT]+{1_Num}[ENDCOLOR]來自城市。</Text>
 		</Row>
+		<Row Tag="TXT_KEY_TP_GOLDEN_AGE_NOW_EXTRA">
+			<Text>[ICON_BULLET]處於黃金時代，你的黃金時代點數[ICON_GOLDEN_AGE]仍將以[COLOR_POSITIVE_TEXT]1/{1_Num}[ENDCOLOR]的速率積累。</Text>
+		</Row>
 	</Language_zh_Hant_HK>
 </GameData>
