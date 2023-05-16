@@ -2520,7 +2520,7 @@
 			<Type>ART_DEF_UNIT_MEMBER_FRANCE_MISTRAL</Type>
 			<Scale>0.100000035762787</Scale>
 			<Domain>Sea</Domain>
-			<Model>AAS.fxsxml</Model>
+			<Model>Mistral.fxsxml</Model>
 			<MaterialTypeTag>METAL</MaterialTypeTag>
 			<MaterialTypeSoundOverrideTag>METALLRG</MaterialTypeSoundOverrideTag>
 		</Row>
