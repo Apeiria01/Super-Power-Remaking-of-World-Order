@@ -108,15 +108,6 @@ function ImprovementBuilt(iPlayer, x, y, eImprovement)
 	    else
 		pPlot:SetFeatureType(-1, iPlayer);
 	    end
-	elseif (eImprovement == GameInfo.Improvements["IMPROVEMENT_FISHERY_MOD"].ID) then
-		pPlot:SetImprovementType(-1)
-		if pPlot:GetResourceType(-1) == -1 then
-			
-			pPlot:SetResourceType(GameInfoTypes.RESOURCE_FISH, 1)
-		end
-		pPlot:SetImprovementType(GameInfo.Improvements["IMPROVEMENT_FISHFARM_MOD"].ID)
-		print ("fish farm created!")
-		
 --	elseif (eImprovement == GameInfo.Improvements["IMPROVEMENT_SAND_DREDGE_MOD"].ID) then
 --		print ("Sand dredge ceated!")
 --		pPlot:SetImprovementType(-1)
@@ -125,38 +116,10 @@ function ImprovementBuilt(iPlayer, x, y, eImprovement)
 --		end
 --		pPlot:SetImprovementType(GameInfo.Improvements["IMPROVEMENT_SAND_DREDGE_MOD"].ID)
 		
-	elseif (eImprovement == GameInfo.Improvements["IMPROVEMENT_GAS_RIG_MOD"].ID) then
-		pPlot:SetImprovementType(-1)
-		if pPlot:GetResourceType(-1) == -1 then
-			pPlot:SetResourceType(GameInfoTypes.RESOURCE_NATRUALGAS, 1)
-		end
-		pPlot:SetImprovementType(GameInfo.Improvements["IMPROVEMENT_OFFSHORE_PLATFORM"].ID)
-		print ("Gas Rig created!")
-		
 --	elseif (eImprovement == GameInfo.Improvements["IMPROVEMENT_IROQUOIAN_FOREST_FARM"].ID) then
 --		pPlot:SetImprovementType(-1)
 --		pPlot:SetImprovementType(GameInfo.Improvements["IMPROVEMENT_FARM"].ID)
 --		print ("Farm in Forest created!")
-		
-	elseif (eImprovement == GameInfo.Improvements["IMPROVEMENT_ETHIOPIA_COFFEE"].ID) then
-		if     pPlot:GetTerrainType() == TerrainTypes.TERRAIN_GRASS then
-			pPlot:SetFeatureType(-1)
-			pPlot:SetImprovementType(-1)
-			if pPlot:GetResourceType(-1) == -1 then
-				pPlot:SetResourceType(GameInfoTypes.RESOURCE_COFFEE, 1)
-			end
-			pPlot:SetImprovementType(GameInfo.Improvements["IMPROVEMENT_PLANTATION"].ID)
-			print ("Ethiopian Coffee created!")
-		elseif pPlot:GetTerrainType() == TerrainTypes.TERRAIN_PLAINS then
-			pPlot:SetFeatureType(-1)
-			pPlot:SetImprovementType(-1)
-			if pPlot:GetResourceType(-1) == -1 then
-				pPlot:SetResourceType(GameInfoTypes.RESOURCE_COCOA, 1)
-			end
-			pPlot:SetImprovementType(GameInfo.Improvements["IMPROVEMENT_PLANTATION"].ID)
-			print ("Ethiopian Cocoa created!")
-		end
-		
 	elseif (eImprovement == GameInfo.Improvements["IMPROVEMENT_CITADEL"].ID) or (eImprovement == GameInfo.Improvements["IMPROVEMENT_COASTAL_FORT"].ID) then		
 		SetCitadelUnits(iPlayer, x, y)
 		if pPlot:GetResourceType(-1) == GameInfoTypes.RESOURCE_FISH then
@@ -168,20 +131,7 @@ function ImprovementBuilt(iPlayer, x, y, eImprovement)
 		if pPlot:GetResourceType(-1) == GameInfoTypes.RESOURCE_FISH then
 			pPlot:SetResourceType(-1);
 			print ("Fish removed!");
-		end
-		
-	elseif (eImprovement == GameInfo.Improvements["IMPROVEMENT_CREATE_FOREST_MOD"].ID) then
-		pPlot:SetImprovementType(-1)
-		pPlot:SetFeatureType(-1)
-		pPlot:SetFeatureType(FeatureTypes.FEATURE_FOREST, -1)
-		print ("Forest created!")
-		
-	elseif (eImprovement == GameInfo.Improvements["IMPROVEMENT_CREATE_JUNGLE_MOD"].ID) then
-		pPlot:SetImprovementType(-1)
-		pPlot:SetFeatureType(-1)
-		pPlot:SetFeatureType(FeatureTypes.FEATURE_JUNGLE, -1)
-		print ("Jungle created!")
-		
+		end	
 	elseif (eImprovement == GameInfo.Improvements["IMPROVEMENT_TUNNEL"].ID) then
 		pPlot:SetRouteType(GameInfoTypes.ROUTE_RAILROAD);
 --	elseif (eImprovement == GameInfo.Improvements["IMPROVEMENT_MOUNTAIN_ROCKS"].ID) then
@@ -198,16 +148,6 @@ function ImprovementBuilt(iPlayer, x, y, eImprovement)
 --		    end
 --		    print("Mountain digged!")
 --		end
-
-	elseif (eImprovement == GameInfo.Improvements["IMPROVEMENT_SHOSHONE_WILDDOME"].ID) then
-		-- Shoshone Wild Domesticate
-		pPlot:SetImprovementType(-1)
-		--local numRandom = math.random(1, 5)
-		local numRandom = Game.Rand(5, "At TerrainTransform.lua ImprovementBuilt(), choose resource for SHOSHONE WILDDOME") + 1
-		local g_ResourcesWild = {GameInfoTypes.RESOURCE_TRUFFLES, GameInfoTypes.RESOURCE_FUR, GameInfoTypes.RESOURCE_BISON,
-								 GameInfoTypes.RESOURCE_DEER, GameInfoTypes.RESOURCE_IVORY}
-		pPlot:SetResourceType(g_ResourcesWild[numRandom], 1)
-		print ("Shoshone Wild Domesticate!")
 	end
 
 end

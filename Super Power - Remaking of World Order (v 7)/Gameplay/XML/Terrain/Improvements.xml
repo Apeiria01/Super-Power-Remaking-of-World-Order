@@ -69,6 +69,10 @@
 			<DestroyedWhenPillaged>true</DestroyedWhenPillaged>
 			<PortraitIndex>0</PortraitIndex>
 			<IconAtlas>SP_IMPROVEMENTS_ATLAS</IconAtlas>
+			<CreatedItemMod>3</CreatedItemMod>
+			<CreatedResourceQuantity>1</CreatedResourceQuantity>
+			<SetNewImprovement>IMPROVEMENT_FISHFARM_MOD</SetNewImprovement>
+
 		</Row>
 
 
@@ -95,6 +99,9 @@
 			<DestroyedWhenPillaged>true</DestroyedWhenPillaged>
 			<PortraitIndex>2</PortraitIndex>
 			<IconAtlas>SP_IMPROVEMENTS_ATLAS</IconAtlas>
+			<CreatedItemMod>3</CreatedItemMod>
+			<CreatedResourceQuantity>1</CreatedResourceQuantity>
+			<SetNewImprovement>IMPROVEMENT_OFFSHORE_PLATFORM</SetNewImprovement>
 		</Row>
 
 
@@ -106,6 +113,8 @@
 			<DestroyedWhenPillaged>true</DestroyedWhenPillaged>
 			<PortraitIndex>8</PortraitIndex>
 			<IconAtlas>SP_IMPROVEMENTS_ATLAS</IconAtlas>
+			<CreatedItemMod>2</CreatedItemMod>
+			<SetNewFeature>FEATURE_FOREST</SetNewFeature>
 		</Row>
 		<Row>
 			<Type>IMPROVEMENT_CREATE_JUNGLE_MOD</Type>
@@ -115,6 +124,8 @@
 			<DestroyedWhenPillaged>true</DestroyedWhenPillaged>
 			<PortraitIndex>9</PortraitIndex>
 			<IconAtlas>SP_IMPROVEMENTS_ATLAS</IconAtlas>
+			<CreatedItemMod>2</CreatedItemMod>
+			<SetNewFeature>FEATURE_JUNGLE</SetNewFeature>
 		</Row>
 
 
@@ -144,6 +155,9 @@
 			<NoTwoAdjacent>true</NoTwoAdjacent>
 			<PortraitIndex>6</PortraitIndex>
 			<IconAtlas>SP_IMPROVEMENTS_ATLAS</IconAtlas>
+			<CreatedItemMod>3</CreatedItemMod>
+			<CreatedResourceQuantity>1</CreatedResourceQuantity>
+			<SetNewImprovement>IMPROVEMENT_PLANTATION</SetNewImprovement>
 		</Row>
 
 		<Row>
