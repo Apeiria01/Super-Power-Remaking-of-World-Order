@@ -3,8 +3,8 @@
 -- Improvements
 --==========================================================================================================================	
 INSERT INTO Improvements
-		(Type,							    SpecificCivRequired,	CivilizationType,		    NoTwoAdjacent,  DestroyedWhenPillaged,  Description,							    Help,										    Civilopedia,								    ArtDefineTag,						        PortraitIndex,	IconAtlas)
-VALUES	('IMPROVEMENT_SHOSHONE_WILDDOME',	1,						'CIVILIZATION_SHOSHONE',    1,              1,                      'TXT_KEY_IMPROVEMENT_SHOSHONE_WILDDOME',	'TXT_KEY_IMPROVEMENT_SHOSHONE_WILDDOME_HELP',	'TXT_KEY_IMPROVEMENT_SHOSHONE_WILDDOME_HELP',	'ART_DEF_IMPROVEMENT_SHOSHONE_WILDDOME', 	2,				'SP8_EXTRA_ATLAS');
+		(Type,							    SpecificCivRequired,	CivilizationType,		    NoTwoAdjacent,  DestroyedWhenPillaged,  Description,							    Help,										    Civilopedia,								    ArtDefineTag,						        PortraitIndex,	IconAtlas,			CreatedItemMod, CreatedResourceQuantity)
+VALUES	('IMPROVEMENT_SHOSHONE_WILDDOME',	1,						'CIVILIZATION_SHOSHONE',    1,              1,                      'TXT_KEY_IMPROVEMENT_SHOSHONE_WILDDOME',	'TXT_KEY_IMPROVEMENT_SHOSHONE_WILDDOME_HELP',	'TXT_KEY_IMPROVEMENT_SHOSHONE_WILDDOME_HELP',	'ART_DEF_IMPROVEMENT_SHOSHONE_WILDDOME', 	2,				'SP8_EXTRA_ATLAS',	3,				1);
 
 INSERT INTO Improvement_Yields
 		(ImprovementType,					YieldType,		Yield)
@@ -54,6 +54,22 @@ VALUES	('BUILD_SHOSHONE_WILDDOME',		'FEATURE_JUNGLE',	'TECH_GUNPOWDER',	    100,
 INSERT INTO Unit_Builds
 		(UnitType,			BuildType)
 VALUES	('UNIT_WORKER',		'BUILD_SHOSHONE_WILDDOME');
+--==========================================================================================================================	
+-- Improvements_Create_Collection
+--==========================================================================================================================	
+INSERT INTO Improvements_Create_Collection(ImprovementType,TerrainType,TerrainOnly,FeatureType,FeatureOnly,ResourceType)
+SELECT 'IMPROVEMENT_FISHERY_MOD',NULL,0,NULL,0,'RESOURCE_FISH' UNION ALL
+SELECT 'IMPROVEMENT_GAS_RIG_MOD',NULL,0,NULL,0,'RESOURCE_NATRUALGAS' UNION ALL
+
+SELECT 'IMPROVEMENT_ETHIOPIA_COFFEE','TERRAIN_GRASS',1,NULL,0,'RESOURCE_COFFEE' UNION ALL
+SELECT 'IMPROVEMENT_ETHIOPIA_COFFEE','TERRAIN_PLAINS',1,NULL,0,'RESOURCE_COCOA' UNION ALL
+
+SELECT 'IMPROVEMENT_SHOSHONE_WILDDOME',NULL,0,NULL,0,'RESOURCE_TRUFFLES' UNION ALL
+SELECT 'IMPROVEMENT_SHOSHONE_WILDDOME',NULL,0,NULL,0,'RESOURCE_FUR' UNION ALL
+SELECT 'IMPROVEMENT_SHOSHONE_WILDDOME',NULL,0,NULL,0,'RESOURCE_BISON' UNION ALL
+SELECT 'IMPROVEMENT_SHOSHONE_WILDDOME',NULL,0,NULL,0,'RESOURCE_DEER' UNION ALL
+SELECT 'IMPROVEMENT_SHOSHONE_WILDDOME',NULL,0,NULL,0,'RESOURCE_IVORY';
+
 
 
 
