@@ -1266,7 +1266,7 @@ end
 -- Golden Age Tooltip
 function GoldenAgeTipHandler( control )
 
-	local strText;
+	local strText = "";
 	
 	if (Game.IsOption(GameOptionTypes.GAMEOPTION_NO_HAPPINESS)) then
 		strText = Locale.ConvertTextKey("TXT_KEY_TOP_PANEL_HAPPINESS_OFF_TOOLTIP");
@@ -1288,10 +1288,10 @@ function GoldenAgeTipHandler( control )
 			iGoldAgePointFromTraits = math.floor(iGoldAgePointFromTraits/GoldAgePointMultiple);
 			iGoldAgePointFromCitys = math.floor(iGoldAgePointFromCitys/GoldAgePointMultiple);
 			strText = Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_NOW", pPlayer:GetGoldenAgeTurns());
-			strText = strText .. "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_NOW_EXTRA",GoldAgePointMultiple);
+			strText = strText .. "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_NOW_EXTRA",GoldAgePointMultiple) .. "[NEWLINE]";
 		end
 
-		strText = strText .. "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_PROGRESS", pPlayer:GetGoldenAgeProgressMeter(), pPlayer:GetGoldenAgeProgressThreshold());
+		strText = strText .. Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_PROGRESS", pPlayer:GetGoldenAgeProgressMeter(), pPlayer:GetGoldenAgeProgressThreshold());
 		strText = strText .. "[NEWLINE]";
 
 		if (iHappiness >= 0) then
