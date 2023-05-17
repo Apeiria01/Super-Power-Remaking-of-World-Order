@@ -1283,7 +1283,7 @@ function GoldenAgeTipHandler( control )
 	
 		if (pPlayer:GetGoldenAgeTurns() > 0) then
 			local GoldAgePointMultiple = GameDefines["GOLDEN_AGE_POINT_MULTIPLE_IN_GA"];
-			iHappiness = math.floor(iHappiness/3);
+			iHappiness = math.floor(iHappiness/GoldAgePointMultiple);
 			iGoldAgePointFromReligion = math.floor(iGoldAgePointFromReligion/GoldAgePointMultiple);
 			iGoldAgePointFromTraits = math.floor(iGoldAgePointFromTraits/GoldAgePointMultiple);
 			iGoldAgePointFromCitys = math.floor(iGoldAgePointFromCitys/GoldAgePointMultiple);
