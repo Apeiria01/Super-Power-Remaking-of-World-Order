@@ -13435,20 +13435,20 @@
 		<Row Tag="TXT_KEY_PROMOTION_FOREIGN_LANDS_SMALL_HELP">
 			<Text>在境外作戰+15%[ICON_STRENGTH]戰鬥力。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_INVISIBLE_INSIDE">
-			<Text>境內隱形</Text>
+		<Row Tag="TXT_KEY_PROMOTION_INVISIBLE_FOREST">
+			<Text>森林和叢林隱形</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SAME_CONTINENT">
 			<Text>大陸霸主</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SAME_CONTINENT_HELP">
-			<Text>在首都所在大陸作戰時“強化士氣”。</Text>
+			<Text>在首都所在大陸作戰時+15%[ICON_STRENGTH]戰鬥力。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_OTHER_CONTINENT">
 			<Text>異域霸主</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_OTHER_CONTINENT_HELP">
-			<Text>離開首都所在大陸作戰時“強化士氣”。</Text>
+			<Text>離開首都所在大陸作戰時+15%[ICON_STRENGTH]戰鬥力。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_LASER_SUPPRESSION">

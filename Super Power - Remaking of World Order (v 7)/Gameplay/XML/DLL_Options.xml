@@ -215,6 +215,10 @@
 			<Set Value="1"/>
 		</Update>
 		<Update>
+			<Where Name="PROMOTION_FEATURE_INVISIBLE"/>
+			<Set Value="1"/>
+		</Update>
+		<Update>
 			<Where Name="GLOBAL_TRIGGER_NEW_GOLDEN_AGE_IN_GA"/>
 			<Set Value="1"/>
 		</Update>

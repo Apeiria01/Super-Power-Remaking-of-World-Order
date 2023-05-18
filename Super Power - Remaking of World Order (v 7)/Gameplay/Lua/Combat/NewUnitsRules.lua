@@ -1004,66 +1004,6 @@ function SetEliteUnitsName( iPlayerID, iUnitID )
 end
 Events.SerialEventUnitCreated.Add(SetEliteUnitsName)
 
--- Promotions Add|Remove when Units Move
-function PromotionsARonUnitsMove( iPlayerID, iUnitID )
-	if( Players[ iPlayerID ] == nil or
-	not Players[ iPlayerID ]:IsAlive()
-	or  Players[ iPlayerID ]:GetCapitalCity() == nil
-	or  Players[ iPlayerID ]:GetCapitalCity():Plot() == nil
-	or  Players[ iPlayerID ]:GetUnitByID( iUnitID ) == nil
-	or  Players[ iPlayerID ]:GetUnitByID( iUnitID ):GetPlot() == nil
-	or  Players[ iPlayerID ]:GetUnitByID( iUnitID ):IsDead()
-	or  Players[ iPlayerID ]:GetUnitByID( iUnitID ):IsDelayedDeath() )
-	then
-		return;
-	end
-	
-	local pPlayer = Players[ iPlayerID ];
-	local pCPlot  = pPlayer:GetCapitalCity():Plot();
-	local pUnit   = pPlayer:GetUnitByID( iUnitID );
-	local pUPlot  = pUnit:GetPlot();
-	
-	-- Invisible inside owner's territory
-	if pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_INVISIBLE_INSIDE"].ID) then
-	    if pUPlot:GetOwner() == pUnit:GetOwner() then
-		pUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_RECON_UNIT"].ID, true);
-	    else
-		pUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_RECON_UNIT"].ID, false);
-	    end
-	end
-	
-	-- Scurvy
---	if pPlayer:IsBarbarian() or pPlayer:IsMinorCiv() or pUnit:IsTrade() then
---	elseif pUPlot:GetTerrainType() == TerrainTypes.TERRAIN_OCEAN and Teams[pPlayer:GetTeam()]:GetProjectCount(GameInfoTypes["PROJECT_NAVAL_EXPLORATION"]) == 0 then
---	    if not pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_SCURVY"].ID) then
---		pUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_SCURVY"].ID, true);
---	    end
---	elseif pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_SCURVY"].ID) then
---		pUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_SCURVY"].ID, false);
---	end
-	
-	-- Continental Overlord & Exotic Overlord
-	if pUnit:GetBaseCombatStrength() <= 0
-	or (not pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_SAME_CONTINENT"].ID)
-	and not pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_OTHER_CONTINENT"].ID))
-	then
-		return;
-	elseif  pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_SAME_CONTINENT"].ID)
-	and     pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_OTHER_CONTINENT"].ID)
-	then
-		if not pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_MORALE"].ID) then
-			pUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_MORALE"].ID, true);
-		end
-		return;
-	end
-	local bIsSetMorale = (pCPlot:GetArea() == pUPlot:GetArea()) == pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_SAME_CONTINENT"].ID);
-	if bIsSetMorale ~= pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_MORALE"].ID) then
-		pUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_MORALE"].ID, bIsSetMorale);
-	end
-end
-Events.UnitMoveQueueChanged.Add(PromotionsARonUnitsMove)
-Events.SerialEventUnitCreated.Add(PromotionsARonUnitsMove)
-
 function FixWorkerBridge( iPlayerID, iUnitID )
 	if (Players[ iPlayerID ] == nil or not Players[ iPlayerID ]:IsAlive()
 	or  Players[ iPlayerID ]:GetUnitByID( iUnitID ) == nil

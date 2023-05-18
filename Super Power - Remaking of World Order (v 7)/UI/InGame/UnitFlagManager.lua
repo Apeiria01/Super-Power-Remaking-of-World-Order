@@ -3392,7 +3392,7 @@ function OnUnitVisibility(playerID, unitID, visible, checkFlag, blendTime)
             and g_MasterList[playerID][unitID] ~= nil)
         then
             local flag = g_MasterList[playerID][unitID];
-            flag.m_IsInvisible = not visible;
+            flag.m_IsInvisible = not (visible or Players[playerID]:GetUnitByID(unitID):IsInvisibleInvalid());
             local pAirCraftState = CheckPlot(flag.m_Escort);
             if flag.m_IsAirCraft and flag.m_Escort and flag.m_Escort:IsCity() then
                 UpdateCityCargo(flag.m_Escort, pAirCraftState);

@@ -15701,20 +15701,20 @@
 		<Row Tag="TXT_KEY_PROMOTION_FOREIGN_LANDS_SMALL_HELP">
 			<Text>+15% [ICON_STRENGTH] Combat Strength when fighting outside Friendly Territory.</Text>
 		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_INVISIBLE_INSIDE">
-			<Text>Invisible inside owner's territory</Text>
+		<Row Tag="TXT_KEY_PROMOTION_INVISIBLE_FOREST">
+			<Text>Invisible in Forest and Jungle</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SAME_CONTINENT">
 			<Text>Continental Overlord</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SAME_CONTINENT_HELP">
-			<Text>Boost "Morale" when fighting on Capital's home continent.</Text>
+			<Text>+15% [ICON_STRENGTH] Combat Strength when fighting on Capital's home continent.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_OTHER_CONTINENT">
 			<Text>Exotic Overlord</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_OTHER_CONTINENT_HELP">
-			<Text>Boost "Morale" when fighting outside Capital's continent.</Text>
+			<Text>+15% [ICON_STRENGTH] Combat Strength when fighting outside Capital's continent.</Text>
 		</Row>
 
 

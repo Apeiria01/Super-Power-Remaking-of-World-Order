@@ -2037,7 +2037,7 @@
 		</Row>
 		<Row>
 			<UnitType>UNIT_IROQUOIAN_MOHAWKWARRIOR</UnitType>
-			<PromotionType>PROMOTION_INVISIBLE_INSIDE</PromotionType>
+			<PromotionType>PROMOTION_INVISIBLE_FOREST</PromotionType>
 		</Row>
 		<!--<Row>
 			<UnitType>UNIT_IROQUOIAN_MOHAWKWARRIOR</UnitType>

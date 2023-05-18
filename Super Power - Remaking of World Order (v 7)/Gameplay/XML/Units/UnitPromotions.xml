@@ -5565,15 +5565,19 @@
 		</Row>
 		
 		<Row>
-			<Type>PROMOTION_INVISIBLE_INSIDE</Type>
-			<Description>TXT_KEY_PROMOTION_INVISIBLE_INSIDE</Description>
-			<Help>TXT_KEY_PROMOTION_INVISIBLE_INSIDE</Help>
+			<Type>PROMOTION_INVISIBLE_FOREST</Type>
+			<Description>TXT_KEY_PROMOTION_INVISIBLE_FOREST</Description>
+			<Help>TXT_KEY_PROMOTION_INVISIBLE_FOREST</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<CannotBeChosen>true</CannotBeChosen>
 			<PortraitIndex>59</PortraitIndex>
 			<IconAtlas>ABILITY_ATLAS</IconAtlas>
 			<PediaType>PEDIA_SHARED</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_INVISIBLE_INSIDE</PediaEntry>
+			<PediaEntry>TXT_KEY_PROMOTION_INVISIBLE_FOREST</PediaEntry>
+			<Invisible>INVISIBLE_SUBMARINE</Invisible>
+			<SeeInvisible>INVISIBLE_SUBMARINE</SeeInvisible>
+			<FeatureInvisible>FEATURE_JUNGLE</FeatureInvisible>
+			<FeatureInvisible2>FEATURE_FOREST</FeatureInvisible2>
 		</Row>
 		<Row>
 			<Type>PROMOTION_SAME_CONTINENT</Type>
@@ -5585,6 +5589,8 @@
 			<IconAtlas>ABILITY_ATLAS</IconAtlas>
 			<PediaType>PEDIA_SHARED</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_SAME_CONTINENT</PediaEntry>
+			<OnCapitalLandAttackMod>15</OnCapitalLandAttackMod>
+			<OnCapitalLandDefenseMod>15</OnCapitalLandDefenseMod>
 		</Row>
 		<Row>
 			<Type>PROMOTION_OTHER_CONTINENT</Type>
@@ -5596,6 +5602,8 @@
 			<IconAtlas>ABILITY_ATLAS</IconAtlas>
 			<PediaType>PEDIA_SHARED</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_OTHER_CONTINENT</PediaEntry>
+			<OutsideCapitalLandAttackMod>15</OutsideCapitalLandAttackMod>
+			<OutsideCapitalLandDefenseMod>15</OutsideCapitalLandDefenseMod>
 		</Row>
 		<Row>
 			<Type>PROMOTION_MORALE</Type>
