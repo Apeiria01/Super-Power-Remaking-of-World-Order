@@ -931,6 +931,7 @@
 			<HurryCostModifier>0</HurryCostModifier>
 			<IconAtlas>EXPANSION_BW_ATLAS_1</IconAtlas>
 			<PortraitIndex>1</PortraitIndex>
+			<SiegeKillCitizensModifier>-75</SiegeKillCitizensModifier>
 		</Row>
 
 

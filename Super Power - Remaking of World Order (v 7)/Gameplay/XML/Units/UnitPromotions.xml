@@ -4171,6 +4171,7 @@
 			<IconAtlas>EXPANSION2_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_AIR</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_NAPALMBOMB_1</PediaEntry>
+			<SiegeKillCitizensPercent>20</SiegeKillCitizensPercent>
 		</Row>
 		<Row>
 			<Type>PROMOTION_NAPALMBOMB_2</Type>
@@ -4184,6 +4185,7 @@
 			<IconAtlas>EXPANSION2_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_AIR</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_NAPALMBOMB_2</PediaEntry>
+			<SiegeKillCitizensPercent>20</SiegeKillCitizensPercent>
 		</Row>
 		<Row>
 			<Type>PROMOTION_NAPALMBOMB_3</Type>
@@ -4197,6 +4199,7 @@
 			<IconAtlas>EXPANSION2_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_AIR</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_NAPALMBOMB_3</PediaEntry>
+			<SiegeKillCitizensPercent>20</SiegeKillCitizensPercent>
 		</Row>
 	
 		<Row>
@@ -6416,6 +6419,7 @@
 			<SplashDamagePlotUnitLimit>4</SplashDamagePlotUnitLimit>
 			<CollateralDamagePercent>100</CollateralDamagePercent>
 			<CollateralDamagePlotUnitLimit>4</CollateralDamagePlotUnitLimit>
+			<SiegeKillCitizensPercent>60</SiegeKillCitizensPercent>
 		</Row>
 
 		<Row>

@@ -217,13 +217,9 @@ function NewAttackEffect()
 	local EMPBomberID = GameInfo.UnitPromotions["PROMOTION_EMP_ATTACK"].ID
 	local AntiEMPID = GameInfo.UnitPromotions["PROMOTION_ANTI_EMP"].ID
 
-	local NapalmBomb1ID = GameInfo.UnitPromotions["PROMOTION_NAPALMBOMB_1"].ID
-	local NapalmBomb2ID = GameInfo.UnitPromotions["PROMOTION_NAPALMBOMB_2"].ID
-	local NapalmBomb3ID = GameInfo.UnitPromotions["PROMOTION_NAPALMBOMB_3"].ID
 	local AirSiege1ID = GameInfo.UnitPromotions["PROMOTION_AIR_SIEGE_1"].ID
 	local AirSiege2ID = GameInfo.UnitPromotions["PROMOTION_AIR_SIEGE_2"].ID
 	local AirSiege3ID = GameInfo.UnitPromotions["PROMOTION_AIR_SIEGE_3"].ID
-	local BombShelterID = GameInfo.Buildings["BUILDING_BOMB_SHELTER"].ID
 
 	local OrbanCannonID = GameInfo.UnitPromotions["PROMOTION_ORBAN_CANNON"].ID
 
@@ -248,7 +244,6 @@ function NewAttackEffect()
 	--local FireSupport1ID = GameInfo.UnitPromotions["PROMOTION_FIRESUPPORT_1"].ID
 	--local FireSupport2ID = GameInfo.UnitPromotions["PROMOTION_FIRESUPPORT_2"].ID
 
-	local NuclearArtilleryID = GameInfo.UnitPromotions["PROMOTION_NUCLEAR_ARTILLERY"].ID
 	local ChainReactionID = GameInfo.UnitPromotions["PROMOTION_CHAIN_REACTION"].ID
 
 	local AntiDebuffID = GameInfo.UnitPromotions["PROMOTION_ANTI_DEBUFF"].ID
@@ -482,72 +477,6 @@ function NewAttackEffect()
 			end
 		end
 
-
-		----------------Strategic Bomber kill popluation
-		if (attUnit:IsHasPromotion(NapalmBomb1ID) or attUnit:IsHasPromotion(NuclearArtilleryID))
-			and not (attUnit:IsHasPromotion(AttackAirCraftID) or attUnit:IsHasPromotion(CarrierFighterUnitID))
-		then
-			local CityPopLoss = 0
-			local cityPop = defCity:GetPopulation()
-			-- *************************Popluation Loss************************************
-			if cityPop > 1 then
-				local CityPopLoss1 = 0
-				local CityPopLoss2 = 0
-				local CityPopLoss3 = 0
-				if attUnit:IsHasPromotion(NapalmBomb1ID) then --Strategic Bomber attacking City killing popluation Lv1
-					if defCity:IsHasBuilding(BombShelterID) then
-						defCity:ChangePopulation(-math.floor(cityPop * 0.05), true)
-						CityPopLoss1 = math.floor(cityPop * 0.05)
-					else
-						defCity:ChangePopulation(-math.floor(cityPop * 0.2), true)
-						CityPopLoss1 = math.floor(cityPop * 0.2)
-					end
-				end
-				if attUnit:IsHasPromotion(NapalmBomb2ID) then --Strategic Bomber attacking City killing popluation Lv2
-					if defCity:IsHasBuilding(BombShelterID) then
-						defCity:ChangePopulation(-math.floor(cityPop * 0.05), true)
-						CityPopLoss2 = math.floor(cityPop * 0.05)
-					else
-						defCity:ChangePopulation(-math.floor(cityPop * 0.2), true)
-						CityPopLoss2 = math.floor(cityPop * 0.2)
-					end
-				end
-				if attUnit:IsHasPromotion(NapalmBomb3ID) then --Strategic Bomber attacking City killing popluation Lv3
-					if defCity:IsHasBuilding(BombShelterID) then
-						defCity:ChangePopulation(-math.floor(cityPop * 0.05), true)
-						CityPopLoss3 = math.floor(cityPop * 0.05)
-					else
-						defCity:ChangePopulation(-math.floor(cityPop * 0.2), true)
-						CityPopLoss3 = math.floor(cityPop * 0.2)
-					end
-				end
-				if attUnit:IsHasPromotion(NuclearArtilleryID) then -- killing popluation for Nuclear Artillery
-					if defCity:IsHasBuilding(BombShelterID) then
-						defCity:ChangePopulation(-math.floor(cityPop * 0.15), true)
-						CityPopLoss2 = math.floor(cityPop * 0.15)
-					else
-						defCity:ChangePopulation(-math.floor(cityPop * 0.6), true)
-						CityPopLoss2 = math.floor(cityPop * 0.6)
-					end
-				end
-
-				CityPopLoss = CityPopLoss1 + CityPopLoss2 + CityPopLoss3
-				print("Population loss:" .. CityPopLoss)
-			end
-
-			-- Notification
-			if attPlayer:IsHuman() then
-				local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_BOMBER_CITY_KILL_POPULATION_ATTACKING",
-					tostring(CityPopLoss))
-				Events.GameplayAlertMessage(text)
-			end
-			if defPlayer:IsHuman() then
-				local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_BOMBER_CITY_KILL_POPULATION_ATTACKED",
-					tostring(CityPopLoss), defCity:GetName())
-				local heading = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_BOMBER_CITY_ATTACKED_SHORT", defCity:GetName())
-				defPlayer:AddNotification(NotificationTypes.NOTIFICATION_STARVING, text, heading, plotX, plotY)
-			end
-		end
 
 		-- *************************Destroy Building************************************
 		if attUnit:IsHasPromotion(AirSiege1ID) then
