@@ -146,7 +146,10 @@ function NewUnitCreationRules()   ------------------------Human Player's units r
 					end
 					
 					-- MOD Begin by CaptainCWB
-
+					-- Romve Temp promotion
+					if unit:IsHasPromotion(DroneReleasedID) then
+						unit:SetHasPromotion(DroneReleasedID, false)
+					end
 					--Restore form Temp Effects
 					if unit:IsHasPromotion(RapidMarchID) or unit:IsHasPromotion(MarkedTargetID)
 					or unit:IsHasPromotion(ClearShot3ID) or unit:IsHasPromotion(LegionGroupID)
