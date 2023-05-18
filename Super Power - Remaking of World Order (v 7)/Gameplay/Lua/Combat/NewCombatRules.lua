@@ -739,7 +739,7 @@ function NewAttackEffect()
 
 		-----------Attacking with debuffs
 		if (
-			attUnit:IsHasPromotion(Sunder1ID) or attUnit:IsHasPromotion(Barrage1ID) or attUnit:IsHasPromotion(CollDamageLV1ID)
+			attUnit:IsHasPromotion(Sunder1ID) or attUnit:IsHasPromotion(CollDamageLV1ID)
 				or attUnit:IsHasPromotion(DestroySupply_CarrierID) or attUnit:IsHasPromotion(DestroySupply1ID) or
 				attUnit:IsHasPromotion(SPForce1ID)
 				or attUnit:IsHasPromotion(CitySiegeUnitID)) and not defUnit:IsDead()
@@ -800,96 +800,96 @@ function NewAttackEffect()
 			text = nil;
 			Message = 0;
 
-			if (defFinalUnitDamage / defUnit:GetMaxHitPoints() > 0.4) then
-				if attUnit:IsHasPromotion(Sunder1ID) then ---only for legal units
-					SetPenetration(defUnit)
-					Message = 1
-				end
+			-- if (defFinalUnitDamage / defUnit:GetMaxHitPoints() > 0.4) then
+			-- 	if attUnit:IsHasPromotion(Sunder1ID) then ---only for legal units
+			-- 		SetPenetration(defUnit)
+			-- 		Message = 1
+			-- 	end
 
-				if attUnit:IsHasPromotion(CollDamageLV1ID) then
-					SetMoralWeaken(defUnit)
-					Message = 4
-				end
+			-- 	if attUnit:IsHasPromotion(CollDamageLV1ID) then
+			-- 		SetMoralWeaken(defUnit)
+			-- 		Message = 4
+			-- 	end
 
-				if attUnit:IsHasPromotion(Barrage1ID)
-					and not defUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_MOVEMENT_LOST_1"].ID, true) then
-					defUnit:SetMoves(GameDefines["MOVE_DENOMINATOR"])
-					SetSlowDown(defUnit)
-					Message = 2
-				elseif attUnit:IsHasPromotion(Barrage1ID) and
-					defUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_MOVEMENT_LOST_1"].ID, true) then
-					if defUnit:CanMove() then
-						IsNotification = true;
-						defUnit:SetMoves(0)
-					end
-					SetSlowDown(defUnit)
-					Message = 3
-				end
-			elseif (
-				defFinalUnitDamage / defUnit:GetMaxHitPoints() > 0.25 and defFinalUnitDamage / defUnit:GetMaxHitPoints() <=
-					0.4) then
-				if attUnit:IsHasPromotion(Sunder1ID) then
-					SetPenetration(defUnit)
-					Message = 1
-				end
+			-- 	if attUnit:IsHasPromotion(Barrage1ID)
+			-- 		and not defUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_MOVEMENT_LOST_1"].ID, true) then
+			-- 		defUnit:SetMoves(GameDefines["MOVE_DENOMINATOR"])
+			-- 		SetSlowDown(defUnit)
+			-- 		Message = 2
+			-- 	elseif attUnit:IsHasPromotion(Barrage1ID) and
+			-- 		defUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_MOVEMENT_LOST_1"].ID, true) then
+			-- 		if defUnit:CanMove() then
+			-- 			IsNotification = true;
+			-- 			defUnit:SetMoves(0)
+			-- 		end
+			-- 		SetSlowDown(defUnit)
+			-- 		Message = 3
+			-- 	end
+			-- elseif (
+			-- 	defFinalUnitDamage / defUnit:GetMaxHitPoints() > 0.25 and defFinalUnitDamage / defUnit:GetMaxHitPoints() <=
+			-- 		0.4) then
+			-- 	if attUnit:IsHasPromotion(Sunder1ID) then
+			-- 		SetPenetration(defUnit)
+			-- 		Message = 1
+			-- 	end
 
-				if attUnit:IsHasPromotion(CollDamageLV1ID) then
-					SetMoralWeaken(defUnit)
-					Message = 4
-				end
+			-- 	if attUnit:IsHasPromotion(CollDamageLV1ID) then
+			-- 		SetMoralWeaken(defUnit)
+			-- 		Message = 4
+			-- 	end
 
-				if attUnit:IsHasPromotion(Barrage2ID) and
-					not defUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_MOVEMENT_LOST_1"].ID, true) then
-					defUnit:SetMoves(GameDefines["MOVE_DENOMINATOR"])
-					SetSlowDown(defUnit)
-					Message = 2
-				elseif attUnit:IsHasPromotion(Barrage2ID) and
-					defUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_MOVEMENT_LOST_1"].ID, true) then
-					if defUnit:CanMove() then
-						IsNotification = true;
-						defUnit:SetMoves(0)
-					end
-					SetSlowDown(defUnit)
-					Message = 3
-				end
-			elseif (defFinalUnitDamage / defUnit:GetMaxHitPoints() > 0.1 and defFinalUnitDamage / defUnit:GetMaxHitPoints() <=
-				0.25) then
-				if attUnit:IsHasPromotion(Sunder2ID)
-				--(attUnit:IsHasPromotion(NavalRangedCruiserUnitID)
-				--or attUnit:IsHasPromotion(NavalRangedShipUnitID)
-				--or attUnit:IsHasPromotion(HitAndRunUnitID)
-				--or attUnit:IsHasPromotion(HelicopterUnitID)
-				--or attUnit:IsHasPromotion(GunpowderInfantryUnitID)
-				--or attUnit:IsHasPromotion(MissileUnitID)
-				--or attUnit:IsHasPromotion(LongBowManUnitID))
-				then
-					SetPenetration(defUnit)
-					Message = 1
-				end
+			-- 	if attUnit:IsHasPromotion(Barrage2ID) and
+			-- 		not defUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_MOVEMENT_LOST_1"].ID, true) then
+			-- 		defUnit:SetMoves(GameDefines["MOVE_DENOMINATOR"])
+			-- 		SetSlowDown(defUnit)
+			-- 		Message = 2
+			-- 	elseif attUnit:IsHasPromotion(Barrage2ID) and
+			-- 		defUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_MOVEMENT_LOST_1"].ID, true) then
+			-- 		if defUnit:CanMove() then
+			-- 			IsNotification = true;
+			-- 			defUnit:SetMoves(0)
+			-- 		end
+			-- 		SetSlowDown(defUnit)
+			-- 		Message = 3
+			-- 	end
+			-- elseif (defFinalUnitDamage / defUnit:GetMaxHitPoints() > 0.1 and defFinalUnitDamage / defUnit:GetMaxHitPoints() <=
+			-- 	0.25) then
+			-- 	if attUnit:IsHasPromotion(Sunder2ID)
+			-- 	--(attUnit:IsHasPromotion(NavalRangedCruiserUnitID)
+			-- 	--or attUnit:IsHasPromotion(NavalRangedShipUnitID)
+			-- 	--or attUnit:IsHasPromotion(HitAndRunUnitID)
+			-- 	--or attUnit:IsHasPromotion(HelicopterUnitID)
+			-- 	--or attUnit:IsHasPromotion(GunpowderInfantryUnitID)
+			-- 	--or attUnit:IsHasPromotion(MissileUnitID)
+			-- 	--or attUnit:IsHasPromotion(LongBowManUnitID))
+			-- 	then
+			-- 		SetPenetration(defUnit)
+			-- 		Message = 1
+			-- 	end
 
-				if attUnit:IsHasPromotion(CollDamageLV2ID) then
-					SetMoralWeaken(defUnit)
-					Message = 4
-				end
+			-- 	if attUnit:IsHasPromotion(CollDamageLV2ID) then
+			-- 		SetMoralWeaken(defUnit)
+			-- 		Message = 4
+			-- 	end
 
-				if attUnit:IsHasPromotion(Barrage3ID) and
-					not defUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_MOVEMENT_LOST_1"].ID, true) then
-					defUnit:SetMoves(GameDefines["MOVE_DENOMINATOR"])
-					SetSlowDown(defUnit)
-					Message = 2
-				elseif attUnit:IsHasPromotion(Barrage3ID) and
-					(attUnit:IsHasPromotion(ArcheryUnitID)
-						or attUnit:IsHasPromotion(NavalHitAndRunUnitID)
-						or attUnit:IsHasPromotion(SubmarineUnitID)) and
-					defUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_MOVEMENT_LOST_1"].ID, true) then
-					if defUnit:CanMove() then
-						IsNotification = true;
-						defUnit:SetMoves(0)
-					end
-					SetSlowDown(defUnit)
-					Message = 3
-				end
-			end
+			-- 	if attUnit:IsHasPromotion(Barrage3ID) and
+			-- 		not defUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_MOVEMENT_LOST_1"].ID, true) then
+			-- 		defUnit:SetMoves(GameDefines["MOVE_DENOMINATOR"])
+			-- 		SetSlowDown(defUnit)
+			-- 		Message = 2
+			-- 	elseif attUnit:IsHasPromotion(Barrage3ID) and
+			-- 		(attUnit:IsHasPromotion(ArcheryUnitID)
+			-- 			or attUnit:IsHasPromotion(NavalHitAndRunUnitID)
+			-- 			or attUnit:IsHasPromotion(SubmarineUnitID)) and
+			-- 		defUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_MOVEMENT_LOST_1"].ID, true) then
+			-- 		if defUnit:CanMove() then
+			-- 			IsNotification = true;
+			-- 			defUnit:SetMoves(0)
+			-- 		end
+			-- 		SetSlowDown(defUnit)
+			-- 		Message = 3
+			-- 	end
+			-- end
 
 			-- Notification
 			if attPlayer:IsHuman() then

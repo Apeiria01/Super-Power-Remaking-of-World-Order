@@ -222,6 +222,10 @@
 			<Where Name="GLOBAL_TRIGGER_NEW_GOLDEN_AGE_IN_GA"/>
 			<Set Value="1"/>
 		</Update>
+		<Update>
+			<Where Name="PROMOTION_ADD_ENERMY_PROMOTIONS"/>
+			<Set Value="1"/>
+		</Update>
 	</CustomModOptions>
 
 
