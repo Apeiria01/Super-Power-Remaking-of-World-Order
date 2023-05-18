@@ -13218,12 +13218,6 @@
 		<Row Tag="TXT_KEY_PROMOTION_ROUTE_MOVE_ONLY">
 			<Text>[COLOR_NEGATIVE_TEXT]只能沿道路移動[ENDCOLOR]</Text>
 		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_MOVE_TO_ADJUST_ONLY">
-			<Text>[COLOR_NEGATIVE_TEXT]只能移動到相鄰地塊[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_MOVE_TO_ADJUST_ONLY_MARK">
-			<Text>[COLOR_NEGATIVE_TEXT]只能移動到相鄰地塊[ENDCOLOR]*</Text>
-		</Row>
 		
 		<Row Tag="TXT_KEY_PROMOTION_MARKED_TARGET">
 			<Text>警告，你已被鎖定！</Text>
@@ -13382,10 +13376,6 @@
 			<Text>+1[ICON_RANGE_STRENGTH]射程；[NEWLINE]+50%[ICON_STRENGTH]防禦力和遠程戰鬥力。</Text>
 		</Row>
 		
-		<Row Tag="TXT_KEY_PROMOTION_SPFORCE_2">
-			<Text>不死者</Text>
-		</Row>
-		
 		<Row Tag="TXT_KEY_PROMOTION_SP_ATTACK_25">
 			<Text>精確打擊</Text>
 		</Row>
@@ -13445,20 +13435,20 @@
 		<Row Tag="TXT_KEY_PROMOTION_FOREIGN_LANDS_SMALL_HELP">
 			<Text>在境外作戰+15%[ICON_STRENGTH]戰鬥力。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_INVISIBLE_INSIDE">
-			<Text>境內隱形</Text>
+		<Row Tag="TXT_KEY_PROMOTION_INVISIBLE_FOREST">
+			<Text>森林和叢林隱形</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SAME_CONTINENT">
 			<Text>大陸霸主</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SAME_CONTINENT_HELP">
-			<Text>在首都所在大陸作戰時“強化士氣”。</Text>
+			<Text>在首都所在大陸作戰時+15%[ICON_STRENGTH]戰鬥力。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_OTHER_CONTINENT">
 			<Text>異域霸主</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_OTHER_CONTINENT_HELP">
-			<Text>離開首都所在大陸作戰時“強化士氣”。</Text>
+			<Text>離開首都所在大陸作戰時+15%[ICON_STRENGTH]戰鬥力。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_LASER_SUPPRESSION">
@@ -14677,7 +14667,6 @@
 		<Replace Tag="TXT_KEY_BUILDING_OTTOMAN_SIEGE_WORKSHOP_HELP">
 			<Text>
 				[ICON_BULLET]城市內所有[COLOR_POSITIVE_TEXT]森林[ENDCOLOR]和[COLOR_POSITIVE_TEXT]叢林[ENDCOLOR]地塊+1[ICON_PRODUCTION]產能。
-				[NEWLINE][ICON_BULLET]研發炸藥之後[COLOR_NEGATIVE_TEXT]過期[ENDCOLOR]（提供產出但不能建造）。
 				[NEWLINE][ICON_BULLET]研發因特網後+2[ICON_TOURISM]魅力。
 				[NEWLINE][ICON_BULLET]本城新建的攻城單位獲得晉升【烏爾班大砲】，攻城時有一定概率摧毀城市的軍事和防禦建築。
 			</Text>

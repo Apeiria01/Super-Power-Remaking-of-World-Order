@@ -503,68 +503,6 @@
 			<PediaEntry>TXT_KEY_PROMOTION_MOVEMENT_LOST_2</PediaEntry>
 		</Row>
 		<Row>
-			<Type>PROMOTION_MOVE_TO_ADJUST_ONLY</Type>
-			<Description>TXT_KEY_PROMOTION_MOVE_TO_ADJUST_ONLY</Description>
-			<Help>TXT_KEY_PROMOTION_MOVE_TO_ADJUST_ONLY</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<LostWithUpgrade>true</LostWithUpgrade>
-			<CannotBeChosen>true</CannotBeChosen>
-			<FlatMovementCost>true</FlatMovementCost>
-			<PortraitIndex>21</PortraitIndex>
-			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_SHARED</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_MOVE_TO_ADJUST_ONLY</PediaEntry>
-		</Row>
-		<Row>
-			<Type>PROMOTION_MOVE_TO_ADJUST_ONLY_MARK_I</Type>
-			<Description>TXT_KEY_PROMOTION_MOVE_TO_ADJUST_ONLY_MARK</Description>
-			<Help>TXT_KEY_PROMOTION_MOVE_TO_ADJUST_ONLY_MARK</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<LostWithUpgrade>true</LostWithUpgrade>
-			<CannotBeChosen>true</CannotBeChosen>
-			<PortraitIndex>21</PortraitIndex>
-			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_SHARED</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_MOVE_TO_ADJUST_ONLY_MARK</PediaEntry>
-		</Row>
-		<Row>
-			<Type>PROMOTION_MOVE_TO_ADJUST_ONLY_MARK_II</Type>
-			<Description>TXT_KEY_PROMOTION_MOVE_TO_ADJUST_ONLY_MARK</Description>
-			<Help>TXT_KEY_PROMOTION_MOVE_TO_ADJUST_ONLY_MARK</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<LostWithUpgrade>true</LostWithUpgrade>
-			<CannotBeChosen>true</CannotBeChosen>
-			<PortraitIndex>21</PortraitIndex>
-			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_SHARED</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_MOVE_TO_ADJUST_ONLY_MARK</PediaEntry>
-		</Row>
-		<Row>
-			<Type>PROMOTION_MOVE_TO_ADJUST_ONLY_MARK_III</Type>
-			<Description>TXT_KEY_PROMOTION_MOVE_TO_ADJUST_ONLY_MARK</Description>
-			<Help>TXT_KEY_PROMOTION_MOVE_TO_ADJUST_ONLY_MARK</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<LostWithUpgrade>true</LostWithUpgrade>
-			<CannotBeChosen>true</CannotBeChosen>
-			<PortraitIndex>21</PortraitIndex>
-			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_SHARED</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_MOVE_TO_ADJUST_ONLY_MARK</PediaEntry>
-		</Row>
-		<Row>
-			<Type>PROMOTION_MOVE_TO_ADJUST_ONLY_MARK_IV</Type>
-			<Description>TXT_KEY_PROMOTION_MOVE_TO_ADJUST_ONLY_MARK</Description>
-			<Help>TXT_KEY_PROMOTION_MOVE_TO_ADJUST_ONLY_MARK</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<LostWithUpgrade>true</LostWithUpgrade>
-			<CannotBeChosen>true</CannotBeChosen>
-			<PortraitIndex>21</PortraitIndex>
-			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_SHARED</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_MOVE_TO_ADJUST_ONLY_MARK</PediaEntry>
-		</Row>
-
-		<Row>
 			<Type>PROMOTION_MARKED_TARGET</Type>
 			<Description>TXT_KEY_PROMOTION_MARKED_TARGET</Description>
 			<Help>TXT_KEY_PROMOTION_MARKED_TARGET_HELP</Help>
@@ -2426,6 +2364,8 @@
 			<PediaEntry>TXT_KEY_PEDIA_PROMOTION_CITY_SIEGE</PediaEntry>
 			<LostWithUpgrade>true</LostWithUpgrade>
 			<CannotBeChosen>true</CannotBeChosen>
+			<CollateralDamagePercent>50</CollateralDamagePercent>
+			<CollateralDamagePlotUnitLimit>4</CollateralDamagePlotUnitLimit>			
 		</Row>
 
 		<Row>
@@ -2570,6 +2510,9 @@
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_SPLASH_DAMAGE</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
+			<SplashDamagePercent>50</SplashDamagePercent>
+			<SplashDamageRadius>1</SplashDamageRadius>
+			<SplashDamagePlotUnitLimit>1</SplashDamagePlotUnitLimit>
 		</Row>
 
 		
@@ -3171,6 +3114,8 @@
 			<PediaEntry>TXT_KEY_PROMOTION_NAVAL_RANGED_SHIP</PediaEntry>
 			<HealOutsideFriendly>true</HealOutsideFriendly>
 			<CannotBeChosen>true</CannotBeChosen>
+			<CollateralDamagePercent>50</CollateralDamagePercent>
+			<CollateralDamagePlotUnitLimit>4</CollateralDamagePlotUnitLimit>
 		</Row>
 		<Row>
 			<Type>PROMOTION_NAVAL_RANGED_CRUISER</Type>
@@ -3188,6 +3133,8 @@
 			<InterceptChanceChange>100</InterceptChanceChange>
 			<NumInterceptionChange>1</NumInterceptionChange>
 			<InterceptionCombatModifier>50</InterceptionCombatModifier>
+			<CollateralDamagePercent>50</CollateralDamagePercent>
+			<CollateralDamagePlotUnitLimit>4</CollateralDamagePlotUnitLimit>
 		</Row>
 
 		<Row>
@@ -3204,6 +3151,8 @@
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_RANGED</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_COLLATERAL_DAMAGE_1</PediaEntry>
+			<CollateralDamagePercent>50</CollateralDamagePercent>
+			<CollateralDamagePlotUnitLimit>4</CollateralDamagePlotUnitLimit>
 		</Row>
 		<Row>
 			<Type>PROMOTION_COLLATERAL_DAMAGE_2</Type>
@@ -3216,6 +3165,8 @@
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_RANGED</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_COLLATERAL_DAMAGE_2</PediaEntry>
+			<CollateralDamagePercent>50</CollateralDamagePercent>
+			<CollateralDamagePlotUnitLimit>4</CollateralDamagePlotUnitLimit>
 		</Row>
 		<!--
 		<Row>
@@ -3470,6 +3421,9 @@
 			<HealOutsideFriendly>true</HealOutsideFriendly>
 			<OnlyDefensive>true</OnlyDefensive>
 			<CannotBeChosen>true</CannotBeChosen>
+			<SplashDamagePercent>50</SplashDamagePercent>
+			<SplashDamageRadius>1</SplashDamageRadius>
+			<SplashDamagePlotUnitLimit>1</SplashDamagePlotUnitLimit>
 		</Row>
 		
 		<Row>
@@ -3533,6 +3487,9 @@
 			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_RANGED</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_CLUSTER_ROCKET_1</PediaEntry>
+			<SplashDamagePercent>25</SplashDamagePercent>
+			<SplashDamageRadius>1</SplashDamageRadius>
+			<SplashDamagePlotUnitLimit>1</SplashDamagePlotUnitLimit>
 		</Row>
 		<Row>
 			<Type>PROMOTION_CLUSTER_ROCKET_2</Type>
@@ -3544,6 +3501,9 @@
 			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_RANGED</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_CLUSTER_ROCKET_2</PediaEntry>
+			<SplashDamagePercent>25</SplashDamagePercent>
+			<SplashDamageRadius>1</SplashDamageRadius>
+			<SplashDamagePlotUnitLimit>1</SplashDamagePlotUnitLimit>
 		</Row>
 
 	</UnitPromotions>
@@ -4211,6 +4171,7 @@
 			<IconAtlas>EXPANSION2_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_AIR</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_NAPALMBOMB_1</PediaEntry>
+			<SiegeKillCitizensPercent>20</SiegeKillCitizensPercent>
 		</Row>
 		<Row>
 			<Type>PROMOTION_NAPALMBOMB_2</Type>
@@ -4224,6 +4185,7 @@
 			<IconAtlas>EXPANSION2_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_AIR</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_NAPALMBOMB_2</PediaEntry>
+			<SiegeKillCitizensPercent>20</SiegeKillCitizensPercent>
 		</Row>
 		<Row>
 			<Type>PROMOTION_NAPALMBOMB_3</Type>
@@ -4237,6 +4199,7 @@
 			<IconAtlas>EXPANSION2_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_AIR</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_NAPALMBOMB_3</PediaEntry>
+			<SiegeKillCitizensPercent>20</SiegeKillCitizensPercent>
 		</Row>
 	
 		<Row>
@@ -4983,6 +4946,8 @@
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_GERMAN_LONGSWORDSMAN</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
+			<CollateralDamagePercent>100</CollateralDamagePercent>
+			<CollateralDamagePlotUnitLimit>4</CollateralDamagePlotUnitLimit>
 		</Row>
 		<Row>
 			<Type>PROMOTION_GERMAN_LONGSWORDSMAN_GOLD</Type>
@@ -5600,15 +5565,19 @@
 		</Row>
 		
 		<Row>
-			<Type>PROMOTION_INVISIBLE_INSIDE</Type>
-			<Description>TXT_KEY_PROMOTION_INVISIBLE_INSIDE</Description>
-			<Help>TXT_KEY_PROMOTION_INVISIBLE_INSIDE</Help>
+			<Type>PROMOTION_INVISIBLE_FOREST</Type>
+			<Description>TXT_KEY_PROMOTION_INVISIBLE_FOREST</Description>
+			<Help>TXT_KEY_PROMOTION_INVISIBLE_FOREST</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<CannotBeChosen>true</CannotBeChosen>
 			<PortraitIndex>59</PortraitIndex>
 			<IconAtlas>ABILITY_ATLAS</IconAtlas>
 			<PediaType>PEDIA_SHARED</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_INVISIBLE_INSIDE</PediaEntry>
+			<PediaEntry>TXT_KEY_PROMOTION_INVISIBLE_FOREST</PediaEntry>
+			<Invisible>INVISIBLE_SUBMARINE</Invisible>
+			<SeeInvisible>INVISIBLE_SUBMARINE</SeeInvisible>
+			<FeatureInvisible>FEATURE_JUNGLE</FeatureInvisible>
+			<FeatureInvisible2>FEATURE_FOREST</FeatureInvisible2>
 		</Row>
 		<Row>
 			<Type>PROMOTION_SAME_CONTINENT</Type>
@@ -5620,6 +5589,8 @@
 			<IconAtlas>ABILITY_ATLAS</IconAtlas>
 			<PediaType>PEDIA_SHARED</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_SAME_CONTINENT</PediaEntry>
+			<OnCapitalLandAttackMod>15</OnCapitalLandAttackMod>
+			<OnCapitalLandDefenseMod>15</OnCapitalLandDefenseMod>
 		</Row>
 		<Row>
 			<Type>PROMOTION_OTHER_CONTINENT</Type>
@@ -5631,6 +5602,8 @@
 			<IconAtlas>ABILITY_ATLAS</IconAtlas>
 			<PediaType>PEDIA_SHARED</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_OTHER_CONTINENT</PediaEntry>
+			<OutsideCapitalLandAttackMod>15</OutsideCapitalLandAttackMod>
+			<OutsideCapitalLandDefenseMod>15</OutsideCapitalLandDefenseMod>
 		</Row>
 		<Row>
 			<Type>PROMOTION_MORALE</Type>
@@ -6449,6 +6422,12 @@
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_NUCLEAR_ARTILLERY</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
+			<SplashDamagePercent>100</SplashDamagePercent>
+			<SplashDamageRadius>1</SplashDamageRadius>
+			<SplashDamagePlotUnitLimit>4</SplashDamagePlotUnitLimit>
+			<CollateralDamagePercent>100</CollateralDamagePercent>
+			<CollateralDamagePlotUnitLimit>4</CollateralDamagePlotUnitLimit>
+			<SiegeKillCitizensPercent>60</SiegeKillCitizensPercent>
 		</Row>
 
 		<Row>
@@ -6854,18 +6833,6 @@
 			<PediaEntry>TXT_KEY_PROMOTION_DOUBLE_CASUALTIES</PediaEntry>
 			<LostWithUpgrade>true</LostWithUpgrade>
 		</Row>-->
-		
-		<Row>
-			<Type>PROMOTION_SPFORCE_2</Type>
-			<Description>TXT_KEY_PROMOTION_SPFORCE_2</Description>
-			<Help>TXT_KEY_PROMOTION_SPFORCE_2</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>59</PortraitIndex>
-			<CannotBeChosen>true</CannotBeChosen>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
-			<PediaType>PEDIA_SPFORCE_2</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_SPFORCE_2</PediaEntry>
-		</Row>
 	</UnitPromotions>
 	
 		<!--For Aircrafts*****************************-->

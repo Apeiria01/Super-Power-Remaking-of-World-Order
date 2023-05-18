@@ -15415,12 +15415,6 @@
 		<Row Tag="TXT_KEY_PROMOTION_ROUTE_MOVE_ONLY">
 			<Text>[COLOR_NEGATIVE_TEXT]Move alone the Routes only[ENDCOLOR]</Text>
 		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_MOVE_TO_ADJUST_ONLY">
-			<Text>[COLOR_NEGATIVE_TEXT]Can Move to Adjusted Plots only[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_MOVE_TO_ADJUST_ONLY_MARK">
-			<Text>[COLOR_NEGATIVE_TEXT]Can Move to Adjusted Plots only[ENDCOLOR]*</Text>
-		</Row>
 
 
 		<Row Tag="TXT_KEY_PROMOTION_MARKED_TARGET">
@@ -15634,11 +15628,6 @@
 		<Row Tag="TXT_KEY_PROMOTION_SP_ATTACK_25_HELP">
 			<Text>+25%[ICON_STRENGTH] Strength for both defence and ranged attack.</Text>
 		</Row>
-		
-		<Row Tag="TXT_KEY_PROMOTION_SPFORCE_2">
-			<Text>Undead</Text>
-		</Row>
-
 
 		<Row Tag="TXT_KEY_PROMOTION_WOLFPACK">
 			<Text>Wolfpack</Text>
@@ -15712,20 +15701,20 @@
 		<Row Tag="TXT_KEY_PROMOTION_FOREIGN_LANDS_SMALL_HELP">
 			<Text>+15% [ICON_STRENGTH] Combat Strength when fighting outside Friendly Territory.</Text>
 		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_INVISIBLE_INSIDE">
-			<Text>Invisible inside owner's territory</Text>
+		<Row Tag="TXT_KEY_PROMOTION_INVISIBLE_FOREST">
+			<Text>Invisible in Forest and Jungle</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SAME_CONTINENT">
 			<Text>Continental Overlord</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SAME_CONTINENT_HELP">
-			<Text>Boost "Morale" when fighting on Capital's home continent.</Text>
+			<Text>+15% [ICON_STRENGTH] Combat Strength when fighting on Capital's home continent.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_OTHER_CONTINENT">
 			<Text>Exotic Overlord</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_OTHER_CONTINENT_HELP">
-			<Text>Boost "Morale" when fighting outside Capital's continent.</Text>
+			<Text>+15% [ICON_STRENGTH] Combat Strength when fighting outside Capital's continent.</Text>
 		</Row>
 
 
@@ -16857,7 +16846,6 @@
 		<Replace Tag="TXT_KEY_BUILDING_OTTOMAN_SIEGE_WORKSHOP_HELP">
 			<Text>
 			[ICON_BULLET]All [COLOR_POSITIVE_TEXT]Forest[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Jungle[ENDCOLOR] plots in the city +1[ICON_PRODUCTION]production.
-			[NEWLINE][ICON_BULLET]Expires[COLOR_NEGATIVE_TEXT][ENDCOLOR] after [ICON_BULLET] researches explosives (gives output but cannot be built).
 			[NEWLINE][ICON_BULLET] +2 [ICON_TOURISM] charm after researching the Internet.
 			[NEWLINE][ICON_BULLET] The newly built siege unit in this city has been promoted [Urban Cannon], which has a certain probability of destroying the city's military and defensive buildings during siege.
 			</Text>

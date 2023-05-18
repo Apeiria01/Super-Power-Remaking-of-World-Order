@@ -30,11 +30,6 @@ local LoseSupplyID = GameInfo.UnitPromotions["PROMOTION_LOSE_SUPPLY"].ID
 local RangeBanID = GameInfo.UnitPromotions["PROMOTION_RANGE_BAN"].ID
 local Damage1ID = GameInfo.UnitPromotions["PROMOTION_DAMAGE_1"].ID
 local Damage2ID = GameInfo.UnitPromotions["PROMOTION_DAMAGE_2"].ID
-local MovetoAdjOnlyID = GameInfo.UnitPromotions["PROMOTION_MOVE_TO_ADJUST_ONLY"].ID
-local MovetoAdjOnly1ID = GameInfo.UnitPromotions["PROMOTION_MOVE_TO_ADJUST_ONLY_MARK_I"].ID
-local MovetoAdjOnly2ID = GameInfo.UnitPromotions["PROMOTION_MOVE_TO_ADJUST_ONLY_MARK_II"].ID
-local MovetoAdjOnly3ID = GameInfo.UnitPromotions["PROMOTION_MOVE_TO_ADJUST_ONLY_MARK_III"].ID
-local MovetoAdjOnly4ID = GameInfo.UnitPromotions["PROMOTION_MOVE_TO_ADJUST_ONLY_MARK_IV"].ID
 
 local LuckyCarrierID = GameInfo.UnitPromotions["PROMOTION_LUCKY_CARRIER"].ID
 local RapidMarchID = GameInfo.UnitPromotions["PROMOTION_RAPID_MARCH"].ID
@@ -151,23 +146,7 @@ function NewUnitCreationRules()   ------------------------Human Player's units r
 					end
 					
 					-- MOD Begin by CaptainCWB
-					
 					-- Romve Temp promotion
-					if unit:IsHasPromotion(MovetoAdjOnlyID) then
-						unit:SetHasPromotion(MovetoAdjOnlyID,false);
-					end
-					if unit:IsHasPromotion(MovetoAdjOnly1ID) then
-						unit:SetHasPromotion(MovetoAdjOnly1ID,false);
-					end
-					if unit:IsHasPromotion(MovetoAdjOnly2ID) then
-						unit:SetHasPromotion(MovetoAdjOnly2ID,false);
-					end
-					if unit:IsHasPromotion(MovetoAdjOnly3ID) then
-						unit:SetHasPromotion(MovetoAdjOnly3ID,false);
-					end
-					if unit:IsHasPromotion(MovetoAdjOnly4ID) then
-						unit:SetHasPromotion(MovetoAdjOnly4ID,false);
-					end
 					if unit:IsHasPromotion(DroneReleasedID) then
 						unit:SetHasPromotion(DroneReleasedID, false)
 					end
@@ -1027,95 +1006,6 @@ function SetEliteUnitsName( iPlayerID, iUnitID )
 	end
 end
 Events.SerialEventUnitCreated.Add(SetEliteUnitsName)
-
--- Promotions Add|Remove when Units Move
-function PromotionsARonUnitsMove( iPlayerID, iUnitID )
-	if( Players[ iPlayerID ] == nil or
-	not Players[ iPlayerID ]:IsAlive()
-	or  Players[ iPlayerID ]:GetCapitalCity() == nil
-	or  Players[ iPlayerID ]:GetCapitalCity():Plot() == nil
-	or  Players[ iPlayerID ]:GetUnitByID( iUnitID ) == nil
-	or  Players[ iPlayerID ]:GetUnitByID( iUnitID ):GetPlot() == nil
-	or  Players[ iPlayerID ]:GetUnitByID( iUnitID ):IsDead()
-	or  Players[ iPlayerID ]:GetUnitByID( iUnitID ):IsDelayedDeath() )
-	then
-		return;
-	end
-	
-	local pPlayer = Players[ iPlayerID ];
-	local pCPlot  = pPlayer:GetCapitalCity():Plot();
-	local pUnit   = pPlayer:GetUnitByID( iUnitID );
-	local pUPlot  = pUnit:GetPlot();
-	
-	-- Invisible inside owner's territory
-	if pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_INVISIBLE_INSIDE"].ID) then
-	    if pUPlot:GetOwner() == pUnit:GetOwner() then
-		pUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_RECON_UNIT"].ID, true);
-	    else
-		pUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_RECON_UNIT"].ID, false);
-	    end
-	end
-	
-	-- Scurvy
---	if pPlayer:IsBarbarian() or pPlayer:IsMinorCiv() or pUnit:IsTrade() then
---	elseif pUPlot:GetTerrainType() == TerrainTypes.TERRAIN_OCEAN and Teams[pPlayer:GetTeam()]:GetProjectCount(GameInfoTypes["PROJECT_NAVAL_EXPLORATION"]) == 0 then
---	    if not pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_SCURVY"].ID) then
---		pUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_SCURVY"].ID, true);
---	    end
---	elseif pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_SCURVY"].ID) then
---		pUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_SCURVY"].ID, false);
---	end
-	
-	-- Continental Overlord & Exotic Overlord
-	if pUnit:GetBaseCombatStrength() <= 0
-	or (not pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_SAME_CONTINENT"].ID)
-	and not pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_OTHER_CONTINENT"].ID))
-	then
-		return;
-	elseif  pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_SAME_CONTINENT"].ID)
-	and     pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_OTHER_CONTINENT"].ID)
-	then
-		if not pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_MORALE"].ID) then
-			pUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_MORALE"].ID, true);
-		end
-		return;
-	end
-	local bIsSetMorale = (pCPlot:GetArea() == pUPlot:GetArea()) == pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_SAME_CONTINENT"].ID);
-	if bIsSetMorale ~= pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_MORALE"].ID) then
-		pUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_MORALE"].ID, bIsSetMorale);
-	end
-end
-Events.UnitMoveQueueChanged.Add(PromotionsARonUnitsMove)
-Events.SerialEventUnitCreated.Add(PromotionsARonUnitsMove)
-
-function OnUnitMovetoAdjOnly( iPlayerID, iUnitID, bRemainingMoves )
-	if Players[ iPlayerID ] == nil or not Players[ iPlayerID ]:IsAlive()
-	or Players[ iPlayerID ]:GetUnitByID( iUnitID ) == nil
-	or Players[ iPlayerID ]:GetUnitByID( iUnitID ):IsDead()
-	or Players[ iPlayerID ]:GetUnitByID( iUnitID ):IsDelayedDeath()
-	or not Players[ iPlayerID ]:GetUnitByID( iUnitID ):IsHasPromotion(MovetoAdjOnlyID)
-	then
-		return;
-	end
-	local pUnit = Players[ iPlayerID ]:GetUnitByID( iUnitID );
-	-- Romve Temp promotion after move
-	if pUnit:IsHasPromotion(MovetoAdjOnlyID) then
-		pUnit:SetHasPromotion(MovetoAdjOnlyID,false);
-	end
-	if pUnit:IsHasPromotion(MovetoAdjOnly1ID) then
-		pUnit:SetHasPromotion(MovetoAdjOnly1ID,false);
-	end
-	if pUnit:IsHasPromotion(MovetoAdjOnly2ID) then
-		pUnit:SetHasPromotion(MovetoAdjOnly2ID,false);
-	end
-	if pUnit:IsHasPromotion(MovetoAdjOnly3ID) then
-		pUnit:SetHasPromotion(MovetoAdjOnly3ID,false);
-	end
-	if pUnit:IsHasPromotion(MovetoAdjOnly4ID) then
-		pUnit:SetHasPromotion(MovetoAdjOnly4ID,false);
-	end
-end
-Events.UnitMoveQueueChanged.Add( OnUnitMovetoAdjOnly );
 
 function FixWorkerBridge( iPlayerID, iUnitID )
 	if (Players[ iPlayerID ] == nil or not Players[ iPlayerID ]:IsAlive()

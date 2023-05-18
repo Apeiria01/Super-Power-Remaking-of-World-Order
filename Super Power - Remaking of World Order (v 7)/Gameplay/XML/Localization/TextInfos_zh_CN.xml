@@ -13408,12 +13408,6 @@
 		<Row Tag="TXT_KEY_PROMOTION_ROUTE_MOVE_ONLY">
 			<Text>[COLOR_NEGATIVE_TEXT]只能沿道路移动[ENDCOLOR]</Text>
 		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_MOVE_TO_ADJUST_ONLY">
-			<Text>[COLOR_NEGATIVE_TEXT]只能移动到相邻地块[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_MOVE_TO_ADJUST_ONLY_MARK">
-			<Text>[COLOR_NEGATIVE_TEXT]只能移动到相邻地块[ENDCOLOR]*</Text>
-		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_MARKED_TARGET">
 			<Text>警告，你已被锁定！</Text>
@@ -13579,10 +13573,6 @@
 			<Text>+25%[ICON_STRENGTH]防御力和远程战斗力</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_PROMOTION_SPFORCE_2">
-			<Text>不死者</Text>
-		</Row>
-
 		<Row Tag="TXT_KEY_PROMOTION_NO_CASUALTIES">
 			<Text>境外人力</Text>
 		</Row>
@@ -13636,20 +13626,20 @@
 		<Row Tag="TXT_KEY_PROMOTION_FOREIGN_LANDS_SMALL_HELP">
 			<Text>在境外作战+15%[ICON_STRENGTH]战斗力。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_INVISIBLE_INSIDE">
-			<Text>境内隐形</Text>
+		<Row Tag="TXT_KEY_PROMOTION_INVISIBLE_FOREST">
+			<Text>森林和丛林隐形</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SAME_CONTINENT">
 			<Text>大陆霸主</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SAME_CONTINENT_HELP">
-			<Text>在首都所在大陆作战时“强化士气”。</Text>
+			<Text>在首都所在大陆作战时+15%[ICON_STRENGTH]战斗力。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_OTHER_CONTINENT">
 			<Text>异域霸主</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_OTHER_CONTINENT_HELP">
-			<Text>离开首都所在大陆作战时“强化士气”。</Text>
+			<Text>离开首都所在大陆作战时+15%[ICON_STRENGTH]战斗力。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_LASER_SUPPRESSION">
@@ -14880,7 +14870,6 @@
 		<Replace Tag="TXT_KEY_BUILDING_OTTOMAN_SIEGE_WORKSHOP_HELP">
 			<Text>
 				[ICON_BULLET]城市内所有[COLOR_POSITIVE_TEXT]森林[ENDCOLOR]和[COLOR_POSITIVE_TEXT]丛林[ENDCOLOR]地块+1[ICON_PRODUCTION]产能。
-				[NEWLINE][ICON_BULLET]研发炸药之后[COLOR_NEGATIVE_TEXT]过期[ENDCOLOR]（提供产出但不能建造）。
 				[NEWLINE][ICON_BULLET]研发因特网后+2[ICON_TOURISM]魅力。
 				[NEWLINE][ICON_BULLET]本城新建的攻城单位获得晋升【乌尔班大炮】，攻城时有一定概率摧毁城市的军事和防御建筑。
 			</Text>
