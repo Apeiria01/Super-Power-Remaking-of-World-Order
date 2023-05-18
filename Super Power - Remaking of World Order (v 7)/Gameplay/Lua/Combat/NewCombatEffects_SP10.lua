@@ -28,12 +28,12 @@ GameEvents.OnTriggerAddEnermyPromotion.Add(function(eThisPromotionType, eThisPro
         if pThatUnit:CanMove() then
             pThatUnit:SetMoves(0);
         end
-        message = 0;
+        message = 1;
     else
         if pThatUnit:CanMove() then
             pThatUnit:SetMoves(iMoveDenominator);
         end
-        message = 1;
+        message = 0;
     end
 
     local thisUnitName = pThisUnit:GetName();
