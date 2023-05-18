@@ -16846,7 +16846,6 @@
 		<Replace Tag="TXT_KEY_BUILDING_OTTOMAN_SIEGE_WORKSHOP_HELP">
 			<Text>
 			[ICON_BULLET]All [COLOR_POSITIVE_TEXT]Forest[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Jungle[ENDCOLOR] plots in the city +1[ICON_PRODUCTION]production.
-			[NEWLINE][ICON_BULLET]Expires[COLOR_NEGATIVE_TEXT][ENDCOLOR] after [ICON_BULLET] researches explosives (gives output but cannot be built).
 			[NEWLINE][ICON_BULLET] +2 [ICON_TOURISM] charm after researching the Internet.
 			[NEWLINE][ICON_BULLET] The newly built siege unit in this city has been promoted [Urban Cannon], which has a certain probability of destroying the city's military and defensive buildings during siege.
 			</Text>
