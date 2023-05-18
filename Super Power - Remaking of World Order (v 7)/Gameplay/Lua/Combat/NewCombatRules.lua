@@ -212,16 +212,8 @@ function NewAttackEffect()
 
 	local SPForce1ID = GameInfo.UnitPromotions["PROMOTION_SP_FORCE_1"].ID
 
-	local StgBomberID = GameInfo.UnitPromotions["PROMOTION_STRATEGIC_BOMBER"].ID
-
 	local EMPBomberID = GameInfo.UnitPromotions["PROMOTION_EMP_ATTACK"].ID
 	local AntiEMPID = GameInfo.UnitPromotions["PROMOTION_ANTI_EMP"].ID
-
-	local AirSiege1ID = GameInfo.UnitPromotions["PROMOTION_AIR_SIEGE_1"].ID
-	local AirSiege2ID = GameInfo.UnitPromotions["PROMOTION_AIR_SIEGE_2"].ID
-	local AirSiege3ID = GameInfo.UnitPromotions["PROMOTION_AIR_SIEGE_3"].ID
-
-	local OrbanCannonID = GameInfo.UnitPromotions["PROMOTION_ORBAN_CANNON"].ID
 
 	local AttackAirCraftID = GameInfo.UnitPromotions["PROMOTION_AIR_ATTACK"].ID
 	local AirTarget1ID = GameInfo.UnitPromotions["PROMOTION_AIR_TARGETING_1"].ID
@@ -240,9 +232,6 @@ function NewAttackEffect()
 	local LoseSupplyID = GameInfo.UnitPromotions["PROMOTION_LOSE_SUPPLY"].ID
 	local Damage1ID = GameInfo.UnitPromotions["PROMOTION_DAMAGE_1"].ID
 	local Damage2ID = GameInfo.UnitPromotions["PROMOTION_DAMAGE_2"].ID
-
-	--local FireSupport1ID = GameInfo.UnitPromotions["PROMOTION_FIRESUPPORT_1"].ID
-	--local FireSupport2ID = GameInfo.UnitPromotions["PROMOTION_FIRESUPPORT_2"].ID
 
 	local ChainReactionID = GameInfo.UnitPromotions["PROMOTION_CHAIN_REACTION"].ID
 
@@ -473,152 +462,6 @@ function NewAttackEffect()
 					end
 
 
-				end
-			end
-		end
-
-
-		-- *************************Destroy Building************************************
-		if attUnit:IsHasPromotion(AirSiege1ID) then
-			local BuildingLoss = 1
-			if attUnit:IsHasPromotion(AirSiege2ID) and attUnit:IsHasPromotion(StragegicBomberUnitID) then
-				BuildingLoss = BuildingLoss + 1
-			end
-			if attUnit:IsHasPromotion(AirSiege3ID) and attUnit:IsHasPromotion(StragegicBomberUnitID) then
-				BuildingLoss = BuildingLoss + 1
-			end
-
-			if batPlot and defCity then
-				for i = 0, BuildingLoss - 1 do
-					if defCity:IsHasBuilding(GameInfo.Buildings["BUILDING_MILITARY_BASE"].ID) then
-						defCity:SetNumRealBuilding(GameInfoTypes["BUILDING_MILITARY_BASE"], 0);
-
-					elseif defCity:IsHasBuilding(GameInfo.Buildings["BUILDING_SHIPYARD"].ID) then
-						defCity:SetNumRealBuilding(GameInfoTypes["BUILDING_SHIPYARD"], 0);
-
-					elseif defCity:IsHasBuilding(GameInfo.Buildings["BUILDING_ARSENAL"].ID) then
-						defCity:SetNumRealBuilding(GameInfoTypes["BUILDING_ARSENAL"], 0);
-
-					elseif defCity:IsHasBuilding(GameInfo.Buildings["BUILDING_ARMORY"].ID) then
-						defCity:SetNumRealBuilding(GameInfoTypes["BUILDING_ARMORY"], 0);
-
-					elseif defCity:IsHasBuilding(GameInfo.Buildings["BUILDING_BARRACKS"].ID) then
-						defCity:SetNumRealBuilding(GameInfoTypes["BUILDING_BARRACKS"], 0);
-					elseif defCity:IsHasBuilding(GameInfo.Buildings["BUILDING_WOOD_DOCK"].ID) then
-						defCity:SetNumRealBuilding(GameInfoTypes["BUILDING_WOOD_DOCK"], 0);
-					elseif defCity:IsHasBuilding(GameInfo.Buildings["BUILDING_CASTLE"].ID) then
-						defCity:SetNumRealBuilding(GameInfoTypes["BUILDING_CASTLE"], 0)
-					elseif defCity:IsHasBuilding(GameInfo.Buildings["BUILDING_JAPANESE_TENSHU"].ID) then
-						defCity:SetNumRealBuilding(GameInfoTypes["BUILDING_JAPANESE_TENSHU"], 0);
-					elseif defCity:IsHasBuilding(GameInfo.Buildings["BUILDING_WALLS"].ID) then
-						defCity:SetNumRealBuilding(GameInfoTypes["BUILDING_WALLS"], 0);
-					elseif defCity:IsHasBuilding(GameInfo.Buildings["BUILDING_WALLS_OF_BABYLON"].ID) then
-						defCity:SetNumRealBuilding(GameInfoTypes["BUILDING_WALLS_OF_BABYLON"], 0);
-
-					elseif defCity:IsHasBuilding(GameInfo.Buildings["BUILDING_FUSION_PLANT"].ID) then
-						defCity:SetNumRealBuilding(GameInfoTypes["BUILDING_FUSION_PLANT"], 0);
-
-					elseif defCity:IsHasBuilding(GameInfo.Buildings["BUILDING_NUCLEAR_PLANT_EXTEND"].ID) then
-						defCity:SetNumRealBuilding(GameInfoTypes["BUILDING_NUCLEAR_PLANT_EXTEND"], 0);
-
-					elseif defCity:IsHasBuilding(GameInfo.Buildings["BUILDING_NUCLEAR_PLANT"].ID) then
-						defCity:SetNumRealBuilding(GameInfoTypes["BUILDING_NUCLEAR_PLANT"], 0);
-
-					elseif defCity:IsHasBuilding(GameInfo.Buildings["BUILDING_COAL_PLANT_EXTEND"].ID) then
-						defCity:SetNumRealBuilding(GameInfoTypes["BUILDING_COAL_PLANT_EXTEND"], 0);
-
-					elseif defCity:IsHasBuilding(GameInfo.Buildings["BUILDING_COAL_PLANT"].ID) then
-						defCity:SetNumRealBuilding(GameInfoTypes["BUILDING_COAL_PLANT"], 0);
-
-					elseif defCity:IsHasBuilding(GameInfo.Buildings["BUILDING_WIND_PLANT"].ID) then
-						defCity:SetNumRealBuilding(GameInfoTypes["BUILDING_WIND_PLANT"], 0);
-
-					elseif defCity:IsHasBuilding(GameInfo.Buildings["BUILDING_DANISH_WIND_TURBINE"].ID) then
-						defCity:SetNumRealBuilding(GameInfoTypes["BUILDING_DANISH_WIND_TURBINE"], 0);
-
-					elseif defCity:IsHasBuilding(GameInfo.Buildings["BUILDING_HYDRO_PLANT"].ID) then
-						defCity:SetNumRealBuilding(GameInfoTypes["BUILDING_HYDRO_PLANT"], 0);
-
-					elseif defCity:IsHasBuilding(GameInfo.Buildings["BUILDING_OIL_PLANT"].ID) then
-						defCity:SetNumRealBuilding(GameInfoTypes["BUILDING_OIL_PLANT"], 0);
-
-					elseif defCity:IsHasBuilding(GameInfo.Buildings["BUILDING_GAS_PLANT"].ID) then
-						defCity:SetNumRealBuilding(GameInfoTypes["BUILDING_GAS_PLANT"], 0);
-
-					elseif defCity:IsHasBuilding(GameInfo.Buildings["BUILDING_SPAIN_SOLAR10"].ID) then
-						defCity:SetNumRealBuilding(GameInfoTypes["BUILDING_SPAIN_SOLAR10"], 0);
-					elseif defCity:IsHasBuilding(GameInfo.Buildings["BUILDING_SOLAR_PLANT"].ID) then
-						defCity:SetNumRealBuilding(GameInfoTypes["BUILDING_SOLAR_PLANT"], 0);
-					elseif defCity:IsHasBuilding(GameInfo.Buildings["BUILDING_TIDAL_PLANT"].ID) then
-						defCity:SetNumRealBuilding(GameInfoTypes["BUILDING_TIDAL_PLANT"], 0);
-
-					elseif defCity:IsHasBuilding(GameInfo.Buildings["BUILDING_DUTCH_DTP"].ID) then
-						defCity:SetNumRealBuilding(GameInfoTypes["BUILDING_DUTCH_DTP"], 0);
-
-					elseif defCity:IsHasBuilding(GameInfo.Buildings["BUILDING_SPACESHIP_FACTORY"].ID) then
-						defCity:SetNumRealBuilding(GameInfoTypes["BUILDING_SPACESHIP_FACTORY"], 0);
-
-					elseif defCity:IsHasBuilding(GameInfo.Buildings["BUILDING_FUTURE_FACTORY"].ID) then
-						defCity:SetNumRealBuilding(GameInfoTypes["BUILDING_FACTORY"], 0);
-
-					elseif defCity:IsHasBuilding(GameInfo.Buildings["BUILDING_FACTORY"].ID) then
-						defCity:SetNumRealBuilding(GameInfoTypes["BUILDING_FACTORY"], 0);
-
-					elseif defCity:IsHasBuilding(GameInfo.Buildings["BUILDING_STEEL_MILL"].ID) then
-						defCity:SetNumRealBuilding(GameInfoTypes["BUILDING_STEEL_MILL"], 0);
-
-					elseif defCity:IsHasBuilding(GameInfo.Buildings["BUILDING_OIL_REFINERY"].ID) then
-						defCity:SetNumRealBuilding(GameInfoTypes["BUILDING_OIL_REFINERY"], 0);
-
-					elseif defCity:IsHasBuilding(GameInfo.Buildings["BUILDING_SONGHAI_ISLAM_MINT"].ID) then
-						defCity:SetNumRealBuilding(GameInfoTypes["BUILDING_SONGHAI_ISLAM_MINT"], 0);
-
-					elseif defCity:IsHasBuilding(GameInfo.Buildings["BUILDING_FORGE"].ID) then
-						defCity:SetNumRealBuilding(GameInfoTypes["BUILDING_FORGE"], 0);
-
-					elseif defCity:IsHasBuilding(GameInfo.Buildings["BUILDING_MINGING_FACTORY"].ID) then
-						defCity:SetNumRealBuilding(GameInfoTypes["BUILDING_MINGING_FACTORY"], 0);
-
-					elseif defCity:IsHasBuilding(GameInfo.Buildings["BUILDING_INLAND_CANAL"].ID) then
-						defCity:SetNumRealBuilding(GameInfoTypes["BUILDING_INLAND_CANAL"], 0);
-
-					elseif defCity:IsHasBuilding(GameInfo.Buildings["BUILDING_METAL_FACTORY"].ID) then
-						defCity:SetNumRealBuilding(GameInfoTypes["BUILDING_METAL_FACTORY"], 0);
-					end
-				end
-
-				print("Building loss:" .. BuildingLoss)
-				---------------------Notification
-				if attPlayer:IsHuman() then
-					local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_BOMBER_CITY_BUILDING_DESTROYED_ATTACKING",
-						tostring(BuildingLoss))
-					Events.GameplayAlertMessage(text)
-				end
-
-				if defPlayer:IsHuman() then
-					local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_BOMBER_CITY_BUILDING_DESTROYED_ATTACKED",
-						tostring(CityPopLoss), defCity:GetName())
-					local heading = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_BOMBER_CITY_ATTACKED_SHORT", defCity:GetName())
-					defPlayer:AddNotification(NotificationTypes.NOTIFICATION_STARVING, text, heading, plotX, plotY)
-				end
-			end
-		end
-
-		if attUnit:IsHasPromotion(OrbanCannonID) then
-			local isDoDestroy = Game.Rand(100, "OrbanCannon") < 40;
-			if isDoDestroy then
-				local buildingClassesToDestroy = {"BUILDINGCLASS_BARRACKS", "BUILDINGCLASS_ARMORY", "BUILDINGCLASS_WALLS", "BUILDINGCLASS_CASTLE"};
-				for i, buildingClass in ipairs(buildingClassesToDestroy) do
-					local buildingClassID = GameInfoTypes[buildingClass];
-					if defCity:IsHasBuildingClass(buildingClassID) then
-						defCity:SetNumRealBuildingClass(buildingClassID, 0);
-						if attPlayer:IsHuman() then
-							local text = Locale.ConvertTextKey("TXT_KEY_PROMOTION_ORBAN_CANNON_COMBAT_INFO", GameInfo.BuildingClasses[buildingClassID].Description);
-							Events.GameplayAlertMessage(text);
-						end
-
-						break;
-					end
 				end
 			end
 		end

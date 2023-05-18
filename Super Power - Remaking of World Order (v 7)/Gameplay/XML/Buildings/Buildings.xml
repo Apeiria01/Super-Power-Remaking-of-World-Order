@@ -2074,7 +2074,6 @@
 			<IconAtlas>BW_ATLAS_1</IconAtlas>
 			<NeverCapture>true</NeverCapture>
 			<PortraitIndex>32</PortraitIndex>
-			<ObsoleteTech>TECH_DYNAMITE</ObsoleteTech>
 			<EnhancedYieldTech>TECH_MASS_MEDIA</EnhancedYieldTech>
 			<TechEnhancedTourism>2</TechEnhancedTourism>
 		</Row>
@@ -2142,7 +2141,6 @@
 			<DisplayPosition>1</DisplayPosition>
 			<NeverCapture>true</NeverCapture>
 			<PortraitIndex>33</PortraitIndex>
-			<ObsoleteTech>TECH_DYNAMITE</ObsoleteTech>
 			<EnhancedYieldTech>TECH_MASS_MEDIA</EnhancedYieldTech>
 			<TechEnhancedTourism>2</TechEnhancedTourism>
 		</Row>

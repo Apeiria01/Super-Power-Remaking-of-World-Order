@@ -1099,7 +1099,7 @@
 		</Replace>
 
 		<Row Tag="TXT_KEY_DENFENSE_BUILDING_OBSOLETE_HELP">
-			<Text>研发炸药之后该建筑[COLOR_NEGATIVE_TEXT]过期[ENDCOLOR]（仍然提供城防但不能再建造）了。[NEWLINE][NEWLINE]但研发因特网后其+2[ICON_TOURISM]魅力。</Text>
+			<Text>防御建筑是城市抵御敌军进攻的主要保障。[NEWLINE]研发因特网后+2[ICON_TOURISM]魅力。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_CIV5_BABYLON_WALLS_HELP">
@@ -1173,7 +1173,7 @@
 
 		<Update>
 			<Where Tag="TXT_KEY_BUILDING_ARMORY_HELP" />
-			<Set Text="允许你在本城市训练或雇佣以下[COLOR_POSITIVE_TEXT]军事单位[ENDCOLOR]。[NEWLINE][ICON_BULLET][COLOR_YELLOW]重骑兵单位[ENDCOLOR]；[NEWLINE][ICON_BULLET][COLOR_YELLOW]骑射单位[ENDCOLOR]；[NEWLINE][ICON_BULLET][COLOR_YELLOW]早期攻城单位[ENDCOLOR]（从抛石机到加农炮）。[NEWLINE][NEWLINE]城市必须拥有兵营。[NEWLINE][NEWLINE]研发炸药之后[COLOR_NEGATIVE_TEXT]过期[ENDCOLOR]（仍然提供城防但不能再建造）。[NEWLINE][NEWLINE]研发因特网后+2[ICON_TOURISM]魅力。" />
+			<Set Text="允许你在本城市训练或雇佣以下[COLOR_POSITIVE_TEXT]军事单位[ENDCOLOR]。[NEWLINE][ICON_BULLET][COLOR_YELLOW]重骑兵单位[ENDCOLOR]；[NEWLINE][ICON_BULLET][COLOR_YELLOW]骑射单位[ENDCOLOR]；[NEWLINE][ICON_BULLET][COLOR_YELLOW]早期攻城单位[ENDCOLOR]（从抛石机到加农炮）。[NEWLINE][NEWLINE]城市必须拥有兵营。[NEWLINE][NEWLINE]研发军事后勤学之后[COLOR_NEGATIVE_TEXT]过期[ENDCOLOR]（仍然提供城防但不能再建造）。[NEWLINE][NEWLINE]研发因特网后+2[ICON_TOURISM]魅力。" />
 		</Update>
 
 		<Update>
@@ -12577,19 +12577,6 @@
 			<Text>如果目标单位被攻击后HP小于90，则其下回合[ICON_MOVES]移动力降低至1，并失去近战攻击能力，再次受到攻击则完全丧失移动，直至其恢复满员该效果才会消失。</Text>
 		</Replace>
 
-		<!--<Row Tag="TXT_KEY_PROMOTION_FIRESUPPORT_1">
-			<Text>反击一级</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_FIRESUPPORT_1_HELP">
-			<Text>当本单位与[COLOR_POSITIVE_TEXT]步兵[ENDCOLOR]、[COLOR_POSITIVE_TEXT]反制[ENDCOLOR]或[COLOR_POSITIVE_TEXT]炮台[ENDCOLOR]单位重叠时，如果被敌方[COLOR_POSITIVE_TEXT]近战[ENDCOLOR]单位攻击，本单位会自动反击。[NEWLINE][ICON_BULLET]每回合反击次数无限。[NEWLINE][ICON_BULLET]如果你的掩护单位被消灭，则不能反击。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_FIRESUPPORT_2">
-			<Text>反击二级</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_FIRESUPPORT_2_HELP">
-			<Text>对敌方的[COLOR_POSITIVE_TEXT]远程攻击[ENDCOLOR]也进行反击，只要敌方远程单位在本单位的射程范围之内。</Text>
-		</Row>-->
-
 		<Row Tag="TXT_KEY_PROMOTION_FLANK_GUN_1">
 			<Text>速射一级</Text>
 		</Row>
@@ -15000,5 +14987,11 @@
 			<Text>[ICON_BULLET]处于黄金时代，你的黄金时代点数[ICON_GOLDEN_AGE]仍将以[COLOR_POSITIVE_TEXT]1/{1_Num}[ENDCOLOR]的速率积累。</Text>
 		</Row>
 
+		<Row Tag="TXT_KEY_PROMOTION_POWERFUL_CANNON">
+			<Text>强力火炮</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_POWERFUL_CANNON_HELP">
+			<Text>攻击城市时，按照城堡、城墙的顺序摧毁一座防御建筑</Text>
+		</Row>
 	</Language_zh_CN>
 </GameData>
