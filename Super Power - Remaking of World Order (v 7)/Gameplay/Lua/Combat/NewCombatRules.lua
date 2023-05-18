@@ -164,22 +164,12 @@ function NewAttackEffect()
 
 	------- PromotionID
 	local ArcheryUnitID = GameInfo.UnitPromotions["PROMOTION_ARCHERY_COMBAT"].ID
-	local NavalHitAndRunUnitID = GameInfo.UnitPromotions["PROMOTION_NAVAL_HIT_AND_RUN"].ID
-	local SubmarineUnitID = GameInfo.UnitPromotions["PROMOTION_SUBMARINE_COMBAT"].ID
 	local GunpowderInfantryUnitID = GameInfo.UnitPromotions["PROMOTION_GUNPOWDER_INFANTRY_COMBAT"].ID
-	local NavalCapitalShipUnitID = GameInfo.UnitPromotions["PROMOTION_NAVAL_CAPITAL_SHIP"].ID
 	local NavalRangedShipUnitID = GameInfo.UnitPromotions["PROMOTION_NAVAL_RANGED_SHIP"].ID
 	local NavalRangedCruiserUnitID = GameInfo.UnitPromotions["PROMOTION_NAVAL_RANGED_CRUISER"].ID
 	local StragegicBomberUnitID = GameInfo.UnitPromotions["PROMOTION_STRATEGIC_BOMBER"].ID
-	local AttackAircraftUnitID = GameInfo.UnitPromotions["PROMOTION_AIR_ATTACK"].ID
 	local CitySiegeUnitID = GameInfo.UnitPromotions["PROMOTION_CITY_SIEGE"].ID
-	local CarrierFighterUnitID = GameInfo.UnitPromotions["PROMOTION_CARRIER_FIGHTER"].ID
-	local IntercepterAircraftUnitID = GameInfo.UnitPromotions["PROMOTION_ANTI_AIR_II"].ID
-	local HelicopterUnitID = GameInfo.UnitPromotions["PROMOTION_HELI_ATTACK"].ID
-	local HitAndRunUnitID = GameInfo.UnitPromotions["PROMOTION_HITANDRUN"].ID
-	local MissileUnitID = GameInfo.UnitPromotions["PROMOTION_NO_CASUALTIES"].ID
 	local InfantryUnitID = GameInfo.UnitPromotions["PROMOTION_INFANTRY_COMBAT"].ID
-	local LongBowManUnitID = GameInfo.UnitPromotions["PROMOTION_RANGE_SPECIAL"].ID
 	local KnightID = GameInfo.UnitPromotions["PROMOTION_KNIGHT_COMBAT"].ID
 	local TankID = GameInfo.UnitPromotions["PROMOTION_TANK_COMBAT"].ID
 	local PillageFreeID = GameInfo.UnitPromotions["PROMOTION_CITY_PILLAGE_FREE"].ID
@@ -190,20 +180,7 @@ function NewAttackEffect()
 	local Charge2ID = GameInfo.UnitPromotions["PROMOTION_CHARGE_2"].ID
 	local Charge3ID = GameInfo.UnitPromotions["PROMOTION_CHARGE_3"].ID
 
-	local Barrage1ID = GameInfo.UnitPromotions["PROMOTION_BARRAGE_1"].ID
-	local Barrage2ID = GameInfo.UnitPromotions["PROMOTION_BARRAGE_2"].ID
-	local Barrage3ID = GameInfo.UnitPromotions["PROMOTION_BARRAGE_3"].ID
-
 	local Sunder1ID = GameInfo.UnitPromotions["PROMOTION_SUNDER_1"].ID
-	local Sunder2ID = GameInfo.UnitPromotions["PROMOTION_SUNDER_2"].ID
-	-- local Sunder3ID = GameInfo.UnitPromotions["PROMOTION_SUNDER_3"].ID
-
-	local Penetration1ID = GameInfo.UnitPromotions["PROMOTION_PENETRATION_1"].ID
-	local Penetration2ID = GameInfo.UnitPromotions["PROMOTION_PENETRATION_2"].ID
-
-	local CollDamageLV1ID = GameInfo.UnitPromotions["PROMOTION_COLLATERAL_DAMAGE_1"].ID
-	local CollDamageLV2ID = GameInfo.UnitPromotions["PROMOTION_COLLATERAL_DAMAGE_2"].ID
-	-- local CollDamageLV3ID = GameInfo.UnitPromotions["PROMOTION_COLLATERAL_DAMAGE_3"].ID
 
 	local CQBCombat1ID = GameInfo.UnitPromotions["PROMOTION_CQB_COMBAT_1"].ID
 	local CQBCombat2ID = GameInfo.UnitPromotions["PROMOTION_CQB_COMBAT_2"].ID
@@ -215,16 +192,11 @@ function NewAttackEffect()
 	local EMPBomberID = GameInfo.UnitPromotions["PROMOTION_EMP_ATTACK"].ID
 	local AntiEMPID = GameInfo.UnitPromotions["PROMOTION_ANTI_EMP"].ID
 
-	local AttackAirCraftID = GameInfo.UnitPromotions["PROMOTION_AIR_ATTACK"].ID
 	local AirTarget1ID = GameInfo.UnitPromotions["PROMOTION_AIR_TARGETING_1"].ID
 	local AirTarget2ID = GameInfo.UnitPromotions["PROMOTION_AIR_TARGETING_2"].ID
 	local AirTarget3ID = GameInfo.UnitPromotions["PROMOTION_AIR_TARGETING_3"].ID
 
-	local CarrierFighterID = GameInfo.UnitPromotions["PROMOTION_CARRIER_FIGHTER"].ID
 	local AirTarget_CarrierID = GameInfo.UnitPromotions["PROMOTION_CARRIER_FIGHTER_SIEGE_2"].ID
-
-	local AntiAirID = GameInfo.UnitPromotions["PROMOTION_ANTI_AIR"].ID
-	local DestroyerID = GameInfo.UnitPromotions["PROMOTION_DESTROYER_COMBAT"].ID
 
 	local DestroySupply_CarrierID = GameInfo.UnitPromotions["PROMOTION_CARRIER_FIGHTER_SIEGE_1"].ID
 	local DestroySupply1ID = GameInfo.UnitPromotions["PROMOTION_DESTROY_SUPPLY_1"].ID
@@ -239,8 +211,6 @@ function NewAttackEffect()
 
 	local MamlukCombatID = GameInfo.UnitPromotions["PROMOTION_SPN_MAMLUK_COMBAT_FAITH"].ID
 
-	local CollateralDamageImmuneID = GameInfo.UnitPromotions["PROMOTION_ANTI_COLLATERAL"].ID
-	local SplashDamageImmuneID = GameInfo.UnitPromotions["PROMOTION_ANTI_SPLASH"].ID
 	-------Nuclear Rocket Launcher Kills itself (<suicide>is not working!)
 	if attUnit:GetUnitType() == GameInfoTypes.UNIT_BAZOOKA then
 		attUnit:ChangeDamage(attUnit:GetCurrHitPoints());
@@ -739,7 +709,7 @@ function NewAttackEffect()
 
 		-----------Attacking with debuffs
 		if (
-			attUnit:IsHasPromotion(Sunder1ID) or attUnit:IsHasPromotion(CollDamageLV1ID)
+			attUnit:IsHasPromotion(Sunder1ID)
 				or attUnit:IsHasPromotion(DestroySupply_CarrierID) or attUnit:IsHasPromotion(DestroySupply1ID) or
 				attUnit:IsHasPromotion(SPForce1ID)
 				or attUnit:IsHasPromotion(CitySiegeUnitID)) and not defUnit:IsDead()
@@ -800,136 +770,18 @@ function NewAttackEffect()
 			text = nil;
 			Message = 0;
 
-			-- if (defFinalUnitDamage / defUnit:GetMaxHitPoints() > 0.4) then
-			-- 	if attUnit:IsHasPromotion(Sunder1ID) then ---only for legal units
-			-- 		SetPenetration(defUnit)
-			-- 		Message = 1
-			-- 	end
-
-			-- 	if attUnit:IsHasPromotion(CollDamageLV1ID) then
-			-- 		SetMoralWeaken(defUnit)
-			-- 		Message = 4
-			-- 	end
-
-			-- 	if attUnit:IsHasPromotion(Barrage1ID)
-			-- 		and not defUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_MOVEMENT_LOST_1"].ID, true) then
-			-- 		defUnit:SetMoves(GameDefines["MOVE_DENOMINATOR"])
-			-- 		SetSlowDown(defUnit)
-			-- 		Message = 2
-			-- 	elseif attUnit:IsHasPromotion(Barrage1ID) and
-			-- 		defUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_MOVEMENT_LOST_1"].ID, true) then
-			-- 		if defUnit:CanMove() then
-			-- 			IsNotification = true;
-			-- 			defUnit:SetMoves(0)
-			-- 		end
-			-- 		SetSlowDown(defUnit)
-			-- 		Message = 3
-			-- 	end
-			-- elseif (
-			-- 	defFinalUnitDamage / defUnit:GetMaxHitPoints() > 0.25 and defFinalUnitDamage / defUnit:GetMaxHitPoints() <=
-			-- 		0.4) then
-			-- 	if attUnit:IsHasPromotion(Sunder1ID) then
-			-- 		SetPenetration(defUnit)
-			-- 		Message = 1
-			-- 	end
-
-			-- 	if attUnit:IsHasPromotion(CollDamageLV1ID) then
-			-- 		SetMoralWeaken(defUnit)
-			-- 		Message = 4
-			-- 	end
-
-			-- 	if attUnit:IsHasPromotion(Barrage2ID) and
-			-- 		not defUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_MOVEMENT_LOST_1"].ID, true) then
-			-- 		defUnit:SetMoves(GameDefines["MOVE_DENOMINATOR"])
-			-- 		SetSlowDown(defUnit)
-			-- 		Message = 2
-			-- 	elseif attUnit:IsHasPromotion(Barrage2ID) and
-			-- 		defUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_MOVEMENT_LOST_1"].ID, true) then
-			-- 		if defUnit:CanMove() then
-			-- 			IsNotification = true;
-			-- 			defUnit:SetMoves(0)
-			-- 		end
-			-- 		SetSlowDown(defUnit)
-			-- 		Message = 3
-			-- 	end
-			-- elseif (defFinalUnitDamage / defUnit:GetMaxHitPoints() > 0.1 and defFinalUnitDamage / defUnit:GetMaxHitPoints() <=
-			-- 	0.25) then
-			-- 	if attUnit:IsHasPromotion(Sunder2ID)
-			-- 	--(attUnit:IsHasPromotion(NavalRangedCruiserUnitID)
-			-- 	--or attUnit:IsHasPromotion(NavalRangedShipUnitID)
-			-- 	--or attUnit:IsHasPromotion(HitAndRunUnitID)
-			-- 	--or attUnit:IsHasPromotion(HelicopterUnitID)
-			-- 	--or attUnit:IsHasPromotion(GunpowderInfantryUnitID)
-			-- 	--or attUnit:IsHasPromotion(MissileUnitID)
-			-- 	--or attUnit:IsHasPromotion(LongBowManUnitID))
-			-- 	then
-			-- 		SetPenetration(defUnit)
-			-- 		Message = 1
-			-- 	end
-
-			-- 	if attUnit:IsHasPromotion(CollDamageLV2ID) then
-			-- 		SetMoralWeaken(defUnit)
-			-- 		Message = 4
-			-- 	end
-
-			-- 	if attUnit:IsHasPromotion(Barrage3ID) and
-			-- 		not defUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_MOVEMENT_LOST_1"].ID, true) then
-			-- 		defUnit:SetMoves(GameDefines["MOVE_DENOMINATOR"])
-			-- 		SetSlowDown(defUnit)
-			-- 		Message = 2
-			-- 	elseif attUnit:IsHasPromotion(Barrage3ID) and
-			-- 		(attUnit:IsHasPromotion(ArcheryUnitID)
-			-- 			or attUnit:IsHasPromotion(NavalHitAndRunUnitID)
-			-- 			or attUnit:IsHasPromotion(SubmarineUnitID)) and
-			-- 		defUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_MOVEMENT_LOST_1"].ID, true) then
-			-- 		if defUnit:CanMove() then
-			-- 			IsNotification = true;
-			-- 			defUnit:SetMoves(0)
-			-- 		end
-			-- 		SetSlowDown(defUnit)
-			-- 		Message = 3
-			-- 	end
-			-- end
-
 			-- Notification
 			if attPlayer:IsHuman() then
 				if Message == 1 then
-					-- local heading = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_ENEMY_SUNDERED_SHORT");
 					text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_ENEMY_SUNDERED", attUnitName, defUnitName);
-					-- attPlayer:AddNotification(NotificationTypes.NOTIFICATION_GENERIC, text, heading, plotX, plotY);
-				elseif Message == 2 then
-					-- local heading = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_ENEMY_SLOWED_SHORT");
-					text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_ENEMY_SLOWED", attUnitName, defUnitName);
-					-- attPlayer:AddNotification(NotificationTypes.NOTIFICATION_GENERIC, text, heading, plotX, plotY);
-				elseif Message == 3 then
-					-- local heading = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_ENEMY_STOPPED_SHORT");
-					text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_ENEMY_STOPPED", attUnitName, defUnitName);
-					-- attPlayer:AddNotification(NotificationTypes.NOTIFICATION_GENERIC, text, heading, plotX, plotY);
 				elseif Message == 4 then
-					-- local heading = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_ENEMY_MORAL_WEAKEN_SHORT");
 					text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_ENEMY_MORAL_WEAKEN", attUnitName, defUnitName);
-					-- attPlayer:AddNotification(NotificationTypes.NOTIFICATION_GENERIC, text, heading, plotX, plotY);
 				end
 			elseif defPlayer:IsHuman() then
 				if Message == 1 then
-					-- local heading = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_US_SUNDERED_SHORT");
 					text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_US_SUNDERED", attUnitName, defUnitName);
-					-- defPlayer:AddNotification(NotificationTypes.NOTIFICATION_GENERIC, text, heading, plotX, plotY);
-				elseif Message == 2 then
-					-- local heading = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_US_SLOWED_SHORT");
-					text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_US_SLOWED", attUnitName, defUnitName);
-					-- defPlayer:AddNotification(NotificationTypes.NOTIFICATION_GENERIC, text, heading, plotX, plotY);
-				elseif Message == 3 then
-					local heading = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_US_STOPPED_SHORT");
-					text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_US_STOPPED", attUnitName, defUnitName);
-					if IsNotification then
-						defPlayer:AddNotification(NotificationTypes.NOTIFICATION_GENERIC, text, heading, plotX, plotY);
-						text = nil;
-					end
 				elseif Message == 4 then
-					-- local heading = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_US_MORAL_WEAKEN_SHORT");
 					text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_US_MORAL_WEAKEN", attUnitName, defUnitName);
-					-- defPlayer:AddNotification(NotificationTypes.NOTIFICATION_GENERIC, text, heading, plotX, plotY);
 				end
 			end
 			if text then
