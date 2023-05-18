@@ -4178,6 +4178,9 @@
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_AIR</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_AIR_SIEGE_1</PediaEntry>
+			<DestroyBuildingCollection>COLLECTIONS_AIR_SIEGE</DestroyBuildingCollection>
+			<DestroyBuildingProbability>100</DestroyBuildingProbability>
+			<DestroyBuildingNumLimit>1</DestroyBuildingNumLimit>
 		</Row>
 		<Row>
 			<Type>PROMOTION_AIR_SIEGE_2</Type>
@@ -4190,6 +4193,9 @@
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_AIR</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_AIR_SIEGE_2</PediaEntry>
+			<DestroyBuildingCollection>COLLECTIONS_AIR_SIEGE</DestroyBuildingCollection>
+			<DestroyBuildingProbability>100</DestroyBuildingProbability>
+			<DestroyBuildingNumLimit>1</DestroyBuildingNumLimit>
 		</Row>
 		<Row>
 			<Type>PROMOTION_AIR_SIEGE_3</Type>
@@ -4202,6 +4208,9 @@
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_AIR</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_AIR_SIEGE_3</PediaEntry>
+			<DestroyBuildingCollection>COLLECTIONS_AIR_SIEGE</DestroyBuildingCollection>
+			<DestroyBuildingProbability>100</DestroyBuildingProbability>
+			<DestroyBuildingNumLimit>1</DestroyBuildingNumLimit>
 		</Row>
 
 
@@ -4673,6 +4682,24 @@
 			<PortraitIndex>59</PortraitIndex>
 			<IconAtlas>ABILITY_ATLAS</IconAtlas>
 			<CannotBeChosen>true</CannotBeChosen>
+			<DestroyBuildingCollection>COLLECTIONS_ORBAN_CANNON</DestroyBuildingCollection>
+			<DestroyBuildingProbability>40</DestroyBuildingProbability>
+			<DestroyBuildingNumLimit>1</DestroyBuildingNumLimit>
+		</Row>
+
+		<Row>
+			<Type>PROMOTION_POWERFUL_CANNON</Type>
+			<Description>TXT_KEY_PROMOTION_POWERFUL_CANNON</Description>
+			<Help>TXT_KEY_PROMOTION_POWERFUL_CANNON_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PediaType>PEDIA_RANGED</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_POWERFUL_CANNON</PediaEntry>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<CannotBeChosen>true</CannotBeChosen>
+			<DestroyBuildingCollection>COLLECTIONS_POWERFUL_CANNON</DestroyBuildingCollection>
+			<DestroyBuildingProbability>100</DestroyBuildingProbability>
+			<DestroyBuildingNumLimit>1</DestroyBuildingNumLimit>
 		</Row>
 
 		<Row>

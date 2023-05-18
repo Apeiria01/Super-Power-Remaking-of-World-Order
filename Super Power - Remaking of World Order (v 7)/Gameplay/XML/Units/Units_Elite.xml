@@ -1370,6 +1370,10 @@
 		<Row>
 			<UnitType>UNIT_SUPER_HOWITZER</UnitType>
 			<PromotionType>PROMOTION_CITY_SIEGE</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_SUPER_HOWITZER</UnitType>
+			<PromotionType>PROMOTION_POWERFUL_CANNON</PromotionType>
 		</Row>		
 		<Row>
 			<UnitType>UNIT_SUPER_HOWITZER</UnitType>
@@ -1585,6 +1589,10 @@
 			<UnitType>UNIT_CRUSADER_ARTILLERY</UnitType>
 			<PromotionType>PROMOTION_CITY_SIEGE</PromotionType>
 		</Row>
+		<Row>
+			<UnitType>UNIT_CRUSADER_ARTILLERY</UnitType>
+			<PromotionType>PROMOTION_POWERFUL_CANNON</PromotionType>
+		</Row>	
 		<Row>
 			<UnitType>UNIT_CRUSADER_ARTILLERY</UnitType>
 			<PromotionType>PROMOTION_CAN_FULL_FIRE</PromotionType>

@@ -1614,6 +1614,10 @@
 		</Row>
 		<Row>
 			<UnitType>UNIT_HOWITZER</UnitType>
+			<PromotionType>PROMOTION_POWERFUL_CANNON</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_HOWITZER</UnitType>
 			<PromotionType>PROMOTION_MUST_SET_UP</PromotionType>
 		</Row>
 		<Row>
@@ -1624,6 +1628,10 @@
 		<Row>
 			<UnitType>UNIT_AUSTRIAN_SKODA</UnitType>
 			<PromotionType>PROMOTION_CITY_SIEGE</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_AUSTRIAN_SKODA</UnitType>
+			<PromotionType>PROMOTION_POWERFUL_CANNON</PromotionType>
 		</Row>
 		<Row>
 			<UnitType>UNIT_AUSTRIAN_SKODA</UnitType>
@@ -1649,6 +1657,10 @@
 		</Row>
 		<Row>
 			<UnitType>UNIT_ARTILLERY</UnitType>
+			<PromotionType>PROMOTION_POWERFUL_CANNON</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_ARTILLERY</UnitType>
 			<PromotionType>PROMOTION_INDIRECT_FIRE</PromotionType>
 		</Row>
 
@@ -1656,6 +1668,10 @@
 		<Row>
 			<UnitType>UNIT_SELF_PROPELLED_ARTILLERY</UnitType>
 			<PromotionType>PROMOTION_CITY_SIEGE</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_SELF_PROPELLED_ARTILLERY</UnitType>
+			<PromotionType>PROMOTION_POWERFUL_CANNON</PromotionType>
 		</Row>
 		<Row>
 			<UnitType>UNIT_SELF_PROPELLED_ARTILLERY</UnitType>

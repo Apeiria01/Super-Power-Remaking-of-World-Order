@@ -3384,7 +3384,7 @@
 		
 		
 		<Row Tag="TXT_KEY_DENFENSE_BUILDING_OBSOLETE_HELP">
-			<Text>Upon discovering Dynamite, this kind of building becomes [COLOR_NEGATIVE_TEXT]obsolete[ENDCOLOR] (You can no longer build it but its city defense bonus is still effective). [NEWLINE][NEWLINE]+2 [ICON_TOURISM] Tourism after discovering Internet. </Text>
+			<Text>Defensive buildings are the main protection of a city against enemy attacks. [NEWLINE]+2 [ICON_TOURISM] Tourism after discovering Internet. </Text>
 		</Row>
 
 
@@ -16955,6 +16955,13 @@
 		</Row>
 		<Row Tag="TXT_KEY_TP_GOLDEN_AGE_NOW_EXTRA">
 			<Text>[ICON_BULLET]In GOLDEN AGE, your Golden Age Point [ICON_GOLDEN_AGE] will still accumulate at the rate of [COLOR_POSITIVE_TEXT]1/{1_Num}[ENDCOLOR].</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_POWERFUL_CANNON">
+			<Text>Powerful Cannon</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_POWERFUL_CANNON_HELP">
+			<Text>When attacking a city, destroying a Defensive building, according to priority: castle, city wall.</Text>
 		</Row>
 	</Language_en_US>
 </GameData>
