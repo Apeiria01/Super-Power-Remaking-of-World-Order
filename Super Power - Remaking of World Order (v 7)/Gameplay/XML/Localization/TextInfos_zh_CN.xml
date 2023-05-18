@@ -12577,19 +12577,6 @@
 			<Text>如果目标单位被攻击后HP小于90，则其下回合[ICON_MOVES]移动力降低至1，并失去近战攻击能力，再次受到攻击则完全丧失移动，直至其恢复满员该效果才会消失。</Text>
 		</Replace>
 
-		<!--<Row Tag="TXT_KEY_PROMOTION_FIRESUPPORT_1">
-			<Text>反击一级</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_FIRESUPPORT_1_HELP">
-			<Text>当本单位与[COLOR_POSITIVE_TEXT]步兵[ENDCOLOR]、[COLOR_POSITIVE_TEXT]反制[ENDCOLOR]或[COLOR_POSITIVE_TEXT]炮台[ENDCOLOR]单位重叠时，如果被敌方[COLOR_POSITIVE_TEXT]近战[ENDCOLOR]单位攻击，本单位会自动反击。[NEWLINE][ICON_BULLET]每回合反击次数无限。[NEWLINE][ICON_BULLET]如果你的掩护单位被消灭，则不能反击。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_FIRESUPPORT_2">
-			<Text>反击二级</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_FIRESUPPORT_2_HELP">
-			<Text>对敌方的[COLOR_POSITIVE_TEXT]远程攻击[ENDCOLOR]也进行反击，只要敌方远程单位在本单位的射程范围之内。</Text>
-		</Row>-->
-
 		<Row Tag="TXT_KEY_PROMOTION_FLANK_GUN_1">
 			<Text>速射一级</Text>
 		</Row>

@@ -12396,19 +12396,6 @@
 			<Text>如果目標單位被攻擊後HP小於90，則其下回合[ICON_MOVES]移動力降低至1，並失去近戰攻擊能力，再次受到攻擊則完全喪失移動，直至其恢復滿員該效果才會消失。</Text>
 		</Replace>
 		
-		<!--<Row Tag="TXT_KEY_PROMOTION_FIRESUPPORT_1">
-			<Text>反擊一級</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_FIRESUPPORT_1_HELP">
-			<Text>當本單位與[COLOR_POSITIVE_TEXT]步兵[ENDCOLOR]、[COLOR_POSITIVE_TEXT]反制[ENDCOLOR]或[COLOR_POSITIVE_TEXT]炮臺[ENDCOLOR]單位重疊時，如果被敵方[COLOR_POSITIVE_TEXT]近戰[ENDCOLOR]單位攻擊，本單位會自動反擊。[NEWLINE][ICON_BULLET]每回合反擊次數無限。[NEWLINE][ICON_BULLET]如果你的掩護單位被消滅，則不能反擊。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_FIRESUPPORT_2">
-			<Text>反擊二級</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_FIRESUPPORT_2_HELP">
-			<Text>對敵方的[COLOR_POSITIVE_TEXT]遠程攻擊[ENDCOLOR]也進行反擊，只要敵方遠程單位在本單位的射程範圍之內。</Text>
-		</Row>-->
-
 		<Row Tag="TXT_KEY_PROMOTION_FLANK_GUN_1">
 			<Text>速射一級</Text>
 		</Row>

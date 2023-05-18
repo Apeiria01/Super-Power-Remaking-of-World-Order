@@ -241,9 +241,6 @@ function NewAttackEffect()
 	local Damage1ID = GameInfo.UnitPromotions["PROMOTION_DAMAGE_1"].ID
 	local Damage2ID = GameInfo.UnitPromotions["PROMOTION_DAMAGE_2"].ID
 
-	--local FireSupport1ID = GameInfo.UnitPromotions["PROMOTION_FIRESUPPORT_1"].ID
-	--local FireSupport2ID = GameInfo.UnitPromotions["PROMOTION_FIRESUPPORT_2"].ID
-
 	local ChainReactionID = GameInfo.UnitPromotions["PROMOTION_CHAIN_REACTION"].ID
 
 	local AntiDebuffID = GameInfo.UnitPromotions["PROMOTION_ANTI_DEBUFF"].ID

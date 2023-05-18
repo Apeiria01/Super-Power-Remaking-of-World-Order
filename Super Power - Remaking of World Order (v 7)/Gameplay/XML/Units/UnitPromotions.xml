@@ -2144,32 +2144,6 @@
 		</Row>
 
 		<!--<Row>
-			<Type>PROMOTION_FIRESUPPORT_1</Type>
-			<Description>TXT_KEY_PROMOTION_FIRESUPPORT_1</Description>
-			<Help>TXT_KEY_PROMOTION_FIRESUPPORT_1_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionPrereqOr1>PROMOTION_ARCHERY_COMBAT</PromotionPrereqOr1>
-			<OrderPriority>1</OrderPriority>
-			<PortraitIndex>36</PortraitIndex>
-			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_RANGED</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_FIRESUPPORT_1</PediaEntry>
-		</Row>
-		<Row>
-			<Type>PROMOTION_FIRESUPPORT_2</Type>
-			<Description>TXT_KEY_PROMOTION_FIRESUPPORT_2</Description>
-			<Help>TXT_KEY_PROMOTION_FIRESUPPORT_2_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionPrereqOr1>PROMOTION_FIRESUPPORT_1</PromotionPrereqOr1>
-			<OrderPriority>1</OrderPriority>
-			<PortraitIndex>37</PortraitIndex>
-			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_RANGED</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_FIRESUPPORT_2</PediaEntry>
-		</Row>-->
-
-
-		<!--<Row>
 			<Type>PROMOTION_FLANK_GUN_3</Type>
 			<Description>TXT_KEY_PROMOTION_FLANK_GUN_3</Description>
 			<Help>TXT_KEY_PROMOTION_FLANK_GUN_3_HELP</Help>
@@ -2184,7 +2158,7 @@
 		</Row>-->
 		
 		
-		
+	
 		
 	</UnitPromotions>
 
@@ -2215,15 +2189,6 @@
 			<PromotionType>PROMOTION_BARRAGE_3</PromotionType>
 			<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
 		</Row>
-
-		<!--<Row>
-			<PromotionType>PROMOTION_FIRESUPPORT_1</PromotionType>
-			<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_FIRESUPPORT_2</PromotionType>
-			<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
-		</Row>-->
 
 		<Row>
 			<PromotionType>PROMOTION_FLANK_GUN_1</PromotionType>
