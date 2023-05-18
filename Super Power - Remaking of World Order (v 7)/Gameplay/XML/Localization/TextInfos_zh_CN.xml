@@ -13408,12 +13408,6 @@
 		<Row Tag="TXT_KEY_PROMOTION_ROUTE_MOVE_ONLY">
 			<Text>[COLOR_NEGATIVE_TEXT]只能沿道路移动[ENDCOLOR]</Text>
 		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_MOVE_TO_ADJUST_ONLY">
-			<Text>[COLOR_NEGATIVE_TEXT]只能移动到相邻地块[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_MOVE_TO_ADJUST_ONLY_MARK">
-			<Text>[COLOR_NEGATIVE_TEXT]只能移动到相邻地块[ENDCOLOR]*</Text>
-		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_MARKED_TARGET">
 			<Text>警告，你已被锁定！</Text>
@@ -13577,10 +13571,6 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SP_ATTACK_25_HELP">
 			<Text>+25%[ICON_STRENGTH]防御力和远程战斗力</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_PROMOTION_SPFORCE_2">
-			<Text>不死者</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_NO_CASUALTIES">

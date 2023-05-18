@@ -15415,12 +15415,6 @@
 		<Row Tag="TXT_KEY_PROMOTION_ROUTE_MOVE_ONLY">
 			<Text>[COLOR_NEGATIVE_TEXT]Move alone the Routes only[ENDCOLOR]</Text>
 		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_MOVE_TO_ADJUST_ONLY">
-			<Text>[COLOR_NEGATIVE_TEXT]Can Move to Adjusted Plots only[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_MOVE_TO_ADJUST_ONLY_MARK">
-			<Text>[COLOR_NEGATIVE_TEXT]Can Move to Adjusted Plots only[ENDCOLOR]*</Text>
-		</Row>
 
 
 		<Row Tag="TXT_KEY_PROMOTION_MARKED_TARGET">
@@ -15634,11 +15628,6 @@
 		<Row Tag="TXT_KEY_PROMOTION_SP_ATTACK_25_HELP">
 			<Text>+25%[ICON_STRENGTH] Strength for both defence and ranged attack.</Text>
 		</Row>
-		
-		<Row Tag="TXT_KEY_PROMOTION_SPFORCE_2">
-			<Text>Undead</Text>
-		</Row>
-
 
 		<Row Tag="TXT_KEY_PROMOTION_WOLFPACK">
 			<Text>Wolfpack</Text>
