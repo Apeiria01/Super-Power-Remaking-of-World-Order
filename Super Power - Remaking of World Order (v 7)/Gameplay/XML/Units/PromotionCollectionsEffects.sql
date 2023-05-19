@@ -19,6 +19,8 @@ insert into PromotionCollections_Entries(CollectionType, PromotionIndex, Promoti
 ('PROMOTION_COLLECTION_SUNDER', 1, 'PROMOTION_SUNDER_1', 1, 1, 75, 1),
 ('PROMOTION_COLLECTION_SUNDER', 2, 'PROMOTION_SUNDER_2', 1, 1, 90, 1);
 
+update UnitPromotions set AddEnermyPromotionImmune = 1 where Type = 'PROMOTION_ANTI_DEBUFF';
+
 insert into PromotionCollections(Type) values ('PROMOTION_COLLECTION_PENETRATION');
 insert into PromotionCollections_Entries(CollectionType, PromotionIndex, PromotionType) values
 ('PROMOTION_COLLECTION_PENETRATION', 1, 'PROMOTION_PENETRATION_1'),
@@ -39,3 +41,20 @@ insert into PromotionCollections_Entries(CollectionType, PromotionIndex, Promoti
 ('PROMOTION_COLLECTION_MORAL_WEAKEN', 2, 'PROMOTION_MORAL_WEAKEN_2');
 insert into PromotionCollections_AddEnermyPromotions(CollectionType, OtherCollectionType) values
 ('PROMOTION_COLLECTION_COLLATERAL_DAMAGE', 'PROMOTION_COLLECTION_MORAL_WEAKEN');
+
+-- PROMOTION_COLLECTION_SP_FORCE/PROMOTION_COLLECTION_DESTROY_SUPPLY -> PROMOTION_COLLECTION_LOSE_SUPPLY
+insert into PromotionCollections(Type) values ('PROMOTION_COLLECTION_SP_FORCE');
+insert into PromotionCollections_Entries(CollectionType, PromotionIndex, PromotionType, TriggerRangedAttack, TriggerMeleeAttack, TriggerHPPercent, TriggerLuaHook) values
+('PROMOTION_COLLECTION_SP_FORCE', 1, 'PROMOTION_SP_FORCE_1', 1, 1, 100, 0);
+insert into PromotionCollections(Type) values ('PROMOTION_COLLECTION_DESTROY_SUPPLY');
+insert into PromotionCollections_Entries(CollectionType, PromotionIndex, PromotionType, TriggerRangedAttack, TriggerMeleeAttack, TriggerHPPercent, TriggerLuaHook) values
+('PROMOTION_COLLECTION_DESTROY_SUPPLY', 1, 'PROMOTION_DESTROY_SUPPLY_1', 1, 1, 100, 1),
+('PROMOTION_COLLECTION_DESTROY_SUPPLY', 2, 'PROMOTION_DESTROY_SUPPLY_2', 1, 1, 100, 1);
+
+insert into PromotionCollections(Type) values ('PROMOTION_COLLECTION_LOSE_SUPPLY');
+insert into PromotionCollections_Entries(CollectionType, PromotionIndex, PromotionType) values
+('PROMOTION_COLLECTION_LOSE_SUPPLY', 1, 'PROMOTION_LOSE_SUPPLY');
+insert into PromotionCollections_AddEnermyPromotions(CollectionType, OtherCollectionType) values
+('PROMOTION_COLLECTION_SP_FORCE', 'PROMOTION_COLLECTION_LOSE_SUPPLY');
+insert into PromotionCollections_AddEnermyPromotions(CollectionType, OtherCollectionType) values
+('PROMOTION_COLLECTION_DESTROY_SUPPLY', 'PROMOTION_COLLECTION_LOSE_SUPPLY');

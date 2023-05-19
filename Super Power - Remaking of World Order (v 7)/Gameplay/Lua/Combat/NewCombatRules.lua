@@ -168,7 +168,6 @@ function NewAttackEffect()
 	local NavalRangedShipUnitID = GameInfo.UnitPromotions["PROMOTION_NAVAL_RANGED_SHIP"].ID
 	local NavalRangedCruiserUnitID = GameInfo.UnitPromotions["PROMOTION_NAVAL_RANGED_CRUISER"].ID
 	local StragegicBomberUnitID = GameInfo.UnitPromotions["PROMOTION_STRATEGIC_BOMBER"].ID
-	local CitySiegeUnitID = GameInfo.UnitPromotions["PROMOTION_CITY_SIEGE"].ID
 	local InfantryUnitID = GameInfo.UnitPromotions["PROMOTION_INFANTRY_COMBAT"].ID
 	local KnightID = GameInfo.UnitPromotions["PROMOTION_KNIGHT_COMBAT"].ID
 	local TankID = GameInfo.UnitPromotions["PROMOTION_TANK_COMBAT"].ID
@@ -185,8 +184,6 @@ function NewAttackEffect()
 
 	local KillingEffectsID = GameInfo.UnitPromotions["PROMOTION_GAIN_MOVES_AFFER_KILLING"].ID
 
-	local SPForce1ID = GameInfo.UnitPromotions["PROMOTION_SP_FORCE_1"].ID
-
 	local EMPBomberID = GameInfo.UnitPromotions["PROMOTION_EMP_ATTACK"].ID
 	local AntiEMPID = GameInfo.UnitPromotions["PROMOTION_ANTI_EMP"].ID
 
@@ -195,13 +192,6 @@ function NewAttackEffect()
 	local AirTarget3ID = GameInfo.UnitPromotions["PROMOTION_AIR_TARGETING_3"].ID
 
 	local AirTarget_CarrierID = GameInfo.UnitPromotions["PROMOTION_CARRIER_FIGHTER_SIEGE_2"].ID
-
-	local DestroySupply_CarrierID = GameInfo.UnitPromotions["PROMOTION_CARRIER_FIGHTER_SIEGE_1"].ID
-	local DestroySupply1ID = GameInfo.UnitPromotions["PROMOTION_DESTROY_SUPPLY_1"].ID
-	local DestroySupply2ID = GameInfo.UnitPromotions["PROMOTION_DESTROY_SUPPLY_2"].ID
-	local LoseSupplyID = GameInfo.UnitPromotions["PROMOTION_LOSE_SUPPLY"].ID
-	local Damage1ID = GameInfo.UnitPromotions["PROMOTION_DAMAGE_1"].ID
-	local Damage2ID = GameInfo.UnitPromotions["PROMOTION_DAMAGE_2"].ID
 
 	local ChainReactionID = GameInfo.UnitPromotions["PROMOTION_CHAIN_REACTION"].ID
 
@@ -801,22 +791,6 @@ function NewAttackEffect()
 			attUnit:ChangeDamage(attDamageInflicted, defPlayer);
 			defUnit:ChangeDamage(defDamageInflicted, attPlayer);
 		end
-
-
-		--------------------------- Supply Damage AOE Effects
-		if attUnit:IsHasPromotion(DestroySupply2ID) then
-			defUnit:SetHasPromotion(LoseSupplyID, true)
-
-			for i = 0, 5 do
-				local adjPlot = Map.PlotDirection(plotX, plotY, i)
-				if (adjPlot ~= nil) then
-					local pUnit = adjPlot:GetUnit(0)
-					if pUnit and pUnit:GetOwner() ~= attUnit:GetOwner() and not pUnit:IsHasPromotion(AntiDebuffID) then --not for immune unit---by HMS
-						pUnit:SetHasPromotion(LoseSupplyID, true);
-					end
-				end
-			end
-		end
 	end
 end --function END
 
@@ -882,51 +856,5 @@ end
 
 Events.SerialEventUnitCreated.Add(CaptureSPDKP);
 -- MOD End   - by CaptainCWB
-
-
-
-
-
-
-
-
-
---****************************************************************************Utilities*************************************************************************************************
----- Set Debuff Effects: Armor Damaged
-function SetPenetration(defUnit)
-	local Penetration1ID = GameInfo.UnitPromotions["PROMOTION_PENETRATION_1"].ID
-	local Penetration2ID = GameInfo.UnitPromotions["PROMOTION_PENETRATION_2"].ID
-
-	if (defUnit:IsHasPromotion(Penetration1ID, true)) then
-		defUnit:SetHasPromotion(Penetration2ID, true)
-	else
-		defUnit:SetHasPromotion(Penetration1ID, true)
-		return
-	end
-end
-
----- Set Debuff Effects: Slow Down
-function SetSlowDown(defUnit)
-	local SlowDown1ID = GameInfo.UnitPromotions["PROMOTION_MOVEMENT_LOST_1"].ID
-	local SlowDown2ID = GameInfo.UnitPromotions["PROMOTION_MOVEMENT_LOST_2"].ID
-
-	if (defUnit:IsHasPromotion(SlowDown1ID, true)) then
-		defUnit:SetHasPromotion(SlowDown2ID, true)
-	else
-		defUnit:SetHasPromotion(SlowDown1ID, true)
-	end
-end
-
----- Set Debuff Effects: Moral Weaken
-function SetMoralWeaken(defUnit)
-	local MoralWeaken1ID = GameInfo.UnitPromotions["PROMOTION_MORAL_WEAKEN_1"].ID
-	local MoralWeaken2ID = GameInfo.UnitPromotions["PROMOTION_MORAL_WEAKEN_2"].ID
-
-	if (defUnit:IsHasPromotion(MoralWeaken1ID, true)) then
-		defUnit:SetHasPromotion(MoralWeaken2ID, true)
-	else
-		defUnit:SetHasPromotion(MoralWeaken1ID, true)
-	end
-end
 
 print("New Combat Rules Check Pass!")

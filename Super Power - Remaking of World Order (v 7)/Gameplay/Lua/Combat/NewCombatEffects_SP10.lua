@@ -1,4 +1,5 @@
 print("NewCombatEffects_SP10 start");
+include("FLuaVector.lua");
 
 local iBarrageCollecton = GameInfoTypes["PROMOTION_COLLECTION_BARRAGE"];
 local iMovementLossCollecton = GameInfoTypes["PROMOTION_COLLECTION_MOVEMENT_LOST"];
@@ -129,6 +130,45 @@ GameEvents.OnTriggerAddEnermyPromotion.Add(function(eThisPromotionType, eThisPro
     if pThatPlayer:IsHuman() then
         local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_US_MORAL_WEAKEN", thisUnitName, thatUnitName);
         Events.GameplayAlertMessage(text);
+    end
+end);
+
+local iDestroySupplyCollectionID = GameInfoTypes["PROMOTION_COLLECTION_DESTROY_SUPPLY"];
+local iLoseSupplyCollectionID = GameInfoTypes["PROMOTION_COLLECTION_LOSE_SUPPLY"];
+local DestroySupply2ID = GameInfoTypes["PROMOTION_DESTROY_SUPPLY_2"]
+local LoseSupplyID = GameInfoTypes["PROMOTION_LOSE_SUPPLY"]
+GameEvents.OnTriggerAddEnermyPromotion.Add(function(eThisPromotionType, eThisPromotionCollection, iThisPlayer,
+                                                    eThisBattleType, iThisUnit, iThisUnitType, eThatPromotionType,
+                                                    eThatPromotionCollection, iThatPlayer, iThatUnit, iThatUnitType)
+    if eThisPromotionCollection ~= iDestroySupplyCollectionID or eThatPromotionCollection ~= iLoseSupplyCollectionID then
+        return;
+    end
+
+    local pThisPlayer = Players[iThisPlayer];
+    local pThatPlayer = Players[iThatPlayer];
+    if pThisPlayer == nil or pThatPlayer == nil then
+        return;
+    end
+
+    local pThisUnit = pThisPlayer:GetUnitByID(iThisUnit);
+    local pThatUnit = pThatPlayer:GetUnitByID(iThatUnit);
+    if pThisUnit == nil or pThatUnit == nil then
+        return;
+    end
+
+    -- TODO: will implement in DLL later
+    if pThisUnit:IsHasPromotion(DestroySupply2ID) then
+        local plotX = pThatUnit:GetX();
+        local plotY = pThatUnit:GetY();
+        for i = 0, 5 do
+            local adjPlot = Map.PlotDirection(plotX, plotY, i)
+            if (adjPlot ~= nil) then
+                local pUnit = adjPlot:GetUnit(0)
+                if pUnit and pUnit:GetOwner() ~= pThisUnit:GetOwner() and not pUnit:IsImmuneNegtivePromotions() then --not for immune unit---by HMS
+                    pUnit:SetHasPromotion(LoseSupplyID, true);
+                end
+            end
+        end
     end
 end);
 
