@@ -180,8 +180,6 @@ function NewAttackEffect()
 	local Charge2ID = GameInfo.UnitPromotions["PROMOTION_CHARGE_2"].ID
 	local Charge3ID = GameInfo.UnitPromotions["PROMOTION_CHARGE_3"].ID
 
-	local Sunder1ID = GameInfo.UnitPromotions["PROMOTION_SUNDER_1"].ID
-
 	local CQBCombat1ID = GameInfo.UnitPromotions["PROMOTION_CQB_COMBAT_1"].ID
 	local CQBCombat2ID = GameInfo.UnitPromotions["PROMOTION_CQB_COMBAT_2"].ID
 
@@ -705,89 +703,6 @@ function NewAttackEffect()
 		--		end
 		--	    end
 
-
-
-		-----------Attacking with debuffs
-		if (
-			attUnit:IsHasPromotion(Sunder1ID)
-				or attUnit:IsHasPromotion(DestroySupply_CarrierID) or attUnit:IsHasPromotion(DestroySupply1ID) or
-				attUnit:IsHasPromotion(SPForce1ID)
-				or attUnit:IsHasPromotion(CitySiegeUnitID)) and not defUnit:IsDead()
-		then
-
-			-- if defFinalUnitDamage >= defUnit:GetMaxHitPoints() then
-			-- print("Defender is dead, no debuff effects!")
-			-- return
-			-- end
-
-			local text = nil;
-			local attUnitName = attUnit:GetName();
-			local defUnitName = defUnit:GetName();
-			local MovesLeft = defUnit:MovesLeft();
-			local Message = 0;
-			local IsNotification = false;
-			--		print("Moves Left:"..MovesLeft);
-
-			local tdebuff = nil;
-			local tlostHP = nil;
-			local combatRoll = Game.Rand(10, "At NewCombatRules.lua NewAttackEffect()") + 1
-			if (
-				attUnit:IsHasPromotion(DestroySupply1ID) or attUnit:IsHasPromotion(SPForce1ID) or
-					attUnit:IsHasPromotion(DestroySupply_CarrierID))
-				and not defUnit:IsHasPromotion(LoseSupplyID)
-			then
-				defUnit:SetHasPromotion(LoseSupplyID, true)
-				tdebuff = Locale.ConvertTextKey("TXT_KEY_PROMOTION_LOSE_SUPPLY");
-				tlostHP = "[COLOR_NEGATIVE_TEXT]" .. -20 .. "[ENDCOLOR]";
-				Message = 5
-			elseif attUnit:IsHasPromotion(CitySiegeUnitID) and defUnit:IsCombatUnit() and
-				defUnit:GetDomainType() == DomainTypes.DOMAIN_SEA and GameInfo.Units[defUnit:GetUnitType()].MoveRate == "WOODEN_BOAT" then
-				if not defUnit:IsHasPromotion(Damage1ID) and combatRoll <= 5 then
-					defUnit:SetHasPromotion(Damage1ID, true);
-					tdebuff = Locale.ConvertTextKey("TXT_KEY_PROMOTION_DAMAGE_1");
-					tlostHP = "[COLOR_NEGATIVE_TEXT]" .. -10 .. "[ENDCOLOR]";
-					Message = 5;
-				elseif defUnit:IsHasPromotion(Damage1ID) and not defUnit:IsHasPromotion(Damage2ID) and combatRoll <= 8 then
-					defUnit:SetHasPromotion(Damage2ID, true);
-					tdebuff = Locale.ConvertTextKey("TXT_KEY_PROMOTION_DAMAGE_2");
-					tlostHP = "[COLOR_NEGATIVE_TEXT]" .. -20 .. "[ENDCOLOR]";
-					Message = 5;
-				end
-			end
-
-			-- Notification
-			if Message ~= 5 then
-			elseif attPlayer:IsHuman() then
-				-- local heading = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_ENEMY_SUPPLY_DESTROYED_SHORT", tdebuff);
-				text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_ENEMY_SUPPLY_DESTROYED", tdebuff, defUnitName, tlostHP);
-				-- attPlayer:AddNotification(NotificationTypes.NOTIFICATION_GENERIC, text, heading, plotX, plotY);
-				Events.GameplayAlertMessage(text);
-			elseif defPlayer:IsHuman() then
-				local heading = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_US_SUPPLY_DESTROYED_SHORT", tdebuff);
-				text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_US_SUPPLY_DESTROYED", tdebuff, defUnitName, tlostHP);
-				defPlayer:AddNotification(NotificationTypes.NOTIFICATION_GENERIC, text, heading, plotX, plotY);
-			end
-			text = nil;
-			Message = 0;
-
-			-- Notification
-			if attPlayer:IsHuman() then
-				if Message == 1 then
-					text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_ENEMY_SUNDERED", attUnitName, defUnitName);
-				elseif Message == 4 then
-					text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_ENEMY_MORAL_WEAKEN", attUnitName, defUnitName);
-				end
-			elseif defPlayer:IsHuman() then
-				if Message == 1 then
-					text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_US_SUNDERED", attUnitName, defUnitName);
-				elseif Message == 4 then
-					text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_US_MORAL_WEAKEN", attUnitName, defUnitName);
-				end
-			end
-			if text then
-				Events.GameplayAlertMessage(text);
-			end
-		end
 
 
 		-------Fighters will damage land and naval AA units in an air-sweep

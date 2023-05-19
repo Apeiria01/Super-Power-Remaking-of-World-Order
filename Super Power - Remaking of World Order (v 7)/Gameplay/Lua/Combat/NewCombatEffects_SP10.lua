@@ -38,26 +38,61 @@ GameEvents.OnTriggerAddEnermyPromotion.Add(function(eThisPromotionType, eThisPro
 
     local thisUnitName = pThisUnit:GetName();
     local thatUnitName = pThatUnit:GetName();
-    local text = "";
     if pThisPlayer:IsHuman() then
         if message == 0 then
-            text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_ENEMY_SLOWED", thisUnitName, thatUnitName);
+            local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_ENEMY_SLOWED", thisUnitName, thatUnitName);
+            Events.GameplayAlertMessage(text);
         elseif message == 1 then
-            text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_ENEMY_STOPPED", thisUnitName, thatUnitName);
+            local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_ENEMY_STOPPED", thisUnitName, thatUnitName);
+            Events.GameplayAlertMessage(text);
         end
     end
     if pThatPlayer:IsHuman() then
         if message == 0 then
-            text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_US_SLOWED", thisUnitName, thatUnitName);
+            local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_US_SLOWED", thisUnitName, thatUnitName);
+            Events.GameplayAlertMessage(text);
         elseif message == 1 then
-            text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_US_STOPPED", thisUnitName, thatUnitName);
+            local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_US_STOPPED", thisUnitName, thatUnitName);
+            Events.GameplayAlertMessage(text);
         end
-    end
-
-    if text ~= "" then
-        Events.GameplayAlertMessage(text);
     end
 end);
 
+local iSunderCollectionID = GameInfoTypes["PROMOTION_COLLECTION_SUNDER"];
+local iPenetrationCollectionID = GameInfoTypes["PROMOTION_COLLECTION_PENETRATION"];
+GameEvents.OnTriggerAddEnermyPromotion.Add(function(eThisPromotionType, eThisPromotionCollection, iThisPlayer,
+                                                    eThisBattleType, iThisUnit, iThisUnitType, eThatPromotionType,
+                                                    eThatPromotionCollection, iThatPlayer, iThatUnit, iThatUnitType)
+    if eThisPromotionCollection ~= iSunderCollectionID or eThatPromotionCollection ~= iPenetrationCollectionID then
+        return;
+    end
+
+    local pThisPlayer = Players[iThisPlayer];
+    local pThatPlayer = Players[iThatPlayer];
+    if pThisPlayer == nil or pThatPlayer == nil then
+        return;
+    end
+
+    local pThisUnit = pThisPlayer:GetUnitByID(iThisUnit);
+    local pThatUnit = pThatPlayer:GetUnitByID(iThatUnit);
+    if pThisUnit == nil or pThatUnit == nil then
+        return;
+    end
+
+    if eThatPromotionType == -1 then
+        return;
+    end
+
+    local thisUnitName = pThisUnit:GetName();
+    local thatUnitName = pThatUnit:GetName();
+    if pThisPlayer:IsHuman() then
+        local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_ENEMY_SUNDERED", thisUnitName, thatUnitName);
+        Events.GameplayAlertMessage(text);
+    end
+    if pThatPlayer:IsHuman() then
+        local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_US_SUNDERED", thisUnitName, thatUnitName);
+        Events.GameplayAlertMessage(text);
+    end
+end);
 
 print("NewCombatEffects_SP10 end");
