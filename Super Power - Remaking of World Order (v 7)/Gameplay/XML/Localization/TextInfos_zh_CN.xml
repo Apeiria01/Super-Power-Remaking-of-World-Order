@@ -11400,7 +11400,7 @@
 			<Plurality>2</Plurality>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_EMP_BOMBER_AIR_HELP">
-			<Text>一次性使用的战略武器。可以部署在城市或航空母舰上。能够瘫痪敌军单位或敌方城市。</Text>
+			<Text>一次性使用的战略武器。可以部署在城市或航空母舰上。能够瘫痪单位或城市。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_EMP_BOMBER_AIR_STRATEGY">
 			<Text>电磁脉冲弹是战略性的武器。[NEWLINE][NEWLINE]尽管它只能对敌军单位造成很少的伤害，但它的脉冲电磁波会毁伤一格范围内所有敌军的装备电路，使其下一轮处于瘫痪状态。[NEWLINE][NEWLINE]同样的，电磁脉冲也可以损害敌方城市的电力系统，使其陷入一回合的无政府状态。[NEWLINE][NEWLINE]然而，如果目标文明尚未研发“计算机”技术，电磁脉冲弹则不会起效。[NEWLINE][NEWLINE]它很容易被防空单位拦截，因此尽量派遣制空战机为其护航！</Text>
@@ -13355,7 +13355,7 @@
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_PENETRATION_1">
-			<Text>阵型破坏</Text>
+			<Text>[COLOR_NEGATIVE_TEXT]阵型破坏[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_PENETRATION_1_HELP">
 			<Text>[COLOR_NEGATIVE_TEXT]防御力[ENDCOLOR]-25%，单位恢复满员后此状态消失。</Text>
@@ -13382,14 +13382,14 @@
 			<Text>[COLOR_NEGATIVE_TEXT]受到迟滞[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_MOVEMENT_LOST_1_HELP">
-			<Text>本轮只有1[ICON_MOVES]移动力。[NEWLINE]下回合恢复。</Text>
+			<Text>本轮只有1[ICON_MOVES]移动力。[NEWLINE]下回合恢复，但会持续损失1[ICON_MOVES]移动力，单位恢复满员后此状态消失。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_MOVEMENT_LOST_2">
 			<Text>[COLOR_NEGATIVE_TEXT]受到阻碍[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_MOVEMENT_LOST_2_HELP">
-			<Text>本轮丧失[ICON_MOVES]移动力。[NEWLINE]下回合恢复，但会持续损失1[ICON_MOVES]移动力，直到单位恢复满员。</Text>
+			<Text>本轮丧失[ICON_MOVES]移动力。[NEWLINE]下回合恢复，但不能[COLOR_NEGATIVE_TEXT]近战攻击[ENDCOLOR]，单位恢复满员后此状态消失。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_ROUTE_MOVE_ONLY">

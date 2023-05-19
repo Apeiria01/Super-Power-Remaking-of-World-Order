@@ -15,33 +15,14 @@ local SiegeID = GameInfo.UnitPromotions["PROMOTION_CITY_SIEGE"].ID
 local MilitiaID = GameInfo.UnitPromotions["PROMOTION_MILITIA_COMBAT"].ID
 
 local CarrierSupply3ID = GameInfo.UnitPromotions["PROMOTION_CARRIER_SUPPLY_3"].ID
-local DroneReleasedID = GameInfo.UnitPromotions["PROMOTION_DRONE_RELEASED"].ID
 
 local SatelliteID = GameInfo.UnitPromotions["PROMOTION_SATELLITE_UNIT"].ID
 
 local OceanImpassableID = GameInfo.UnitPromotions["PROMOTION_OCEAN_IMPASSABLE"].ID
-local Penetration1ID = GameInfo.UnitPromotions["PROMOTION_PENETRATION_1"].ID
-local Penetration2ID = GameInfo.UnitPromotions["PROMOTION_PENETRATION_2"].ID
-local SlowDown1ID = GameInfo.UnitPromotions["PROMOTION_MOVEMENT_LOST_1"].ID
-local SlowDown2ID = GameInfo.UnitPromotions["PROMOTION_MOVEMENT_LOST_2"].ID
-local MoralWeaken1ID = GameInfo.UnitPromotions["PROMOTION_MORAL_WEAKEN_1"].ID
-local MoralWeaken2ID = GameInfo.UnitPromotions["PROMOTION_MORAL_WEAKEN_2"].ID
-local LoseSupplyID = GameInfo.UnitPromotions["PROMOTION_LOSE_SUPPLY"].ID
 local RangeBanID = GameInfo.UnitPromotions["PROMOTION_RANGE_BAN"].ID
-local Damage1ID = GameInfo.UnitPromotions["PROMOTION_DAMAGE_1"].ID
-local Damage2ID = GameInfo.UnitPromotions["PROMOTION_DAMAGE_2"].ID
 
 local LuckyCarrierID = GameInfo.UnitPromotions["PROMOTION_LUCKY_CARRIER"].ID
-local RapidMarchID = GameInfo.UnitPromotions["PROMOTION_RAPID_MARCH"].ID
-local MarkedTargetID = GameInfo.UnitPromotions["PROMOTION_MARKED_TARGET"].ID
-local ClearShot3ID = GameInfo.UnitPromotions["PROMOTION_TRAGET_CLEARSHOOT_III"].ID
 
-local LegionGroupID = GameInfo.UnitPromotions["PROMOTION_LEGION_GROUP"].ID
-
-local BlackBirdID = GameInfo.UnitPromotions["PROMOTION_BLACKBIRD_RECON"].ID
-local LuckyEID = GameInfo.UnitPromotions["PROMOTION_LUCKYE"].ID
-local NoLuckID = GameInfo.UnitPromotions["PROMOTION_NO_LUCK"].ID
-local NewlyCapturedID = GameInfo.UnitPromotions["PROMOTION_NEWLYCAPTURED"].ID
 local GeneralSID = GameInfo.UnitPromotions["PROMOTION_GENERAL_STACKING"].ID
 local SetUpID = GameInfo.UnitPromotions["PROMOTION_MUST_SET_UP"].ID
 local ForeignLandsID = GameInfo.UnitPromotions["PROMOTION_FOREIGN_LANDS"].ID
@@ -146,47 +127,9 @@ function NewUnitCreationRules()   ------------------------Human Player's units r
 					end
 					
 					-- MOD Begin by CaptainCWB
-					-- Romve Temp promotion
-					if unit:IsHasPromotion(DroneReleasedID) then
-						unit:SetHasPromotion(DroneReleasedID, false)
-					end
-					--Restore form Temp Effects
-					if unit:IsHasPromotion(RapidMarchID) or unit:IsHasPromotion(MarkedTargetID)
-					or unit:IsHasPromotion(ClearShot3ID) or unit:IsHasPromotion(LegionGroupID)
-					or unit:IsHasPromotion(BlackBirdID)  or unit:IsHasPromotion(LuckyEID)
-					or unit:IsHasPromotion(NoLuckID)     or unit:IsHasPromotion(NewlyCapturedID)
-					then
-						unit:SetHasPromotion(RapidMarchID,false);
-						unit:SetHasPromotion(MarkedTargetID,false);
-						unit:SetHasPromotion(ClearShot3ID,false);
-						unit:SetHasPromotion(LegionGroupID,false);
-						unit:SetHasPromotion(BlackBirdID,false);
-						unit:SetHasPromotion(LuckyEID,false);
-						unit:SetHasPromotion(NoLuckID,false);
-						unit:SetHasPromotion(NewlyCapturedID,false);
-					end
-					---- Restore from Debuff Effects -- Repair the loopholes
-					if unit:IsHasPromotion(Penetration1ID) or unit:IsHasPromotion(SlowDown1ID)
-					or unit:IsHasPromotion(MoralWeaken1ID) or unit:IsHasPromotion(LoseSupplyID)
-					or unit:IsHasPromotion(Damage1ID)
-					then	-- Remove Debuff
-						local CurrHP = unit:GetCurrHitPoints();
-						local MaxHP  = unit:GetMaxHitPoints();
-						if (CurrHP == MaxHP) then
-							unit:SetHasPromotion(Penetration1ID, false);
-							unit:SetHasPromotion(Penetration2ID, false);
-							unit:SetHasPromotion(SlowDown1ID, false);
-							unit:SetHasPromotion(SlowDown2ID, false);
-							unit:SetHasPromotion(MoralWeaken1ID, false);
-							unit:SetHasPromotion(MoralWeaken2ID, false);
-							unit:SetHasPromotion(LoseSupplyID, false);
-							unit:SetHasPromotion(Damage1ID, false);
-							unit:SetHasPromotion(Damage2ID, false);
-						end
-					end
 					
 					-- Enterprise upgrade to become the most powerful carrier
-					if unit:GetUnitClassType() == GameInfoTypes["UNITCLASS_SUPER_CARRIER"] and unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_LUCKY_CARRIER"].ID)
+					if unit:GetUnitClassType() == GameInfoTypes["UNITCLASS_SUPER_CARRIER"] and unit:IsHasPromotion(LuckyCarrierID)
 					and not unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_ADDITIONAL_CARGO_II"].ID)
 					then
 						unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_ADDITIONAL_CARGO_II"].ID,true) 

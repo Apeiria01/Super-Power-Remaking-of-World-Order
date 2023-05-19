@@ -15381,7 +15381,7 @@
 			<Text>
 				[ICON_BULLET]This unit has been attacked by the enmey Archery Units, Anti-Air Units or Naval Hit-and-run Units with [COLOR_NEGATIVE_TEXT]"Barrage"[ENDCOLOR] Effect and it is under suppression.
 				[NEWLINE][ICON_BULLET]It has only 1 [ICON_MOVES] Movement left for this turn but will recover in the next turn.
-				[NEWLINE][ICON_BULLET]It cannot perform [COLOR_NEGATIVE_TEXT]Melee Attack[ENDCOLOR] till unitl its HP fully restored.
+				[NEWLINE][ICON_BULLET]It will recovers in the next turn but will suffer -1 [ICON_MOVES] MP till unitl its HP fully restored.
 				[NEWLINE][ICON_BULLET]If it survives to the next turn, You'd better withdraw it from the frontline  to heal or call your Great General, Great Admiral to help it recover.
 			</Text>
 		</Row>
@@ -15393,7 +15393,8 @@
 			<Text>
 				[ICON_BULLET]This unit has been attacked by the enmey Archery Units, Anti-Air Units or naval Hit-and-run Units with [COLOR_NEGATIVE_TEXT]"Barrage"[ENDCOLOR] Effect twice in a turn and now it is pinned down.
 				[NEWLINE][ICON_BULLET]It lost all its [ICON_MOVES] [COLOR_NEGATIVE_TEXT]Movements[ENDCOLOR] for this turn.
-				[NEWLINE][ICON_BULLET]It will recovers in the next turn but will suffer -1 [ICON_MOVES] MP till unitl its HP fully restored.[NEWLINE][ICON_BULLET]If it survives to the next turn, You'd better withdraw it from the frontline  to heal or call your Great General, Great Admiral to help it recover.</Text>
+				[NEWLINE][ICON_BULLET]It cannot perform [COLOR_NEGATIVE_TEXT]Melee Attack[ENDCOLOR] till unitl its HP fully restored.
+				[NEWLINE][ICON_BULLET]If it survives to the next turn, You'd better withdraw it from the frontline  to heal or call your Great General, Great Admiral to help it recover.</Text>
 		</Row>
 		
 		<Row Tag="TXT_KEY_PROMOTION_ROUTE_MOVE_ONLY">

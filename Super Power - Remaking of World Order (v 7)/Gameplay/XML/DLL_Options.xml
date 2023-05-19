@@ -226,6 +226,10 @@
 			<Where Name="PROMOTION_ADD_ENERMY_PROMOTIONS"/>
 			<Set Value="1"/>
 		</Update>
+		<Update>
+			<Where Name="GLOBAL_PROMOTIONS_REMOVAL"/>
+			<Set Value="1"/>
+		</Update>
 	</CustomModOptions>
 
 
