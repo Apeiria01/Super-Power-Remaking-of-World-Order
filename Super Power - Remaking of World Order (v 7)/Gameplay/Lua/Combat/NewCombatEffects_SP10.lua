@@ -95,4 +95,41 @@ GameEvents.OnTriggerAddEnermyPromotion.Add(function(eThisPromotionType, eThisPro
     end
 end);
 
+local iColCollectionID = GameInfoTypes["PROMOTION_COLLECTION_COLLATERAL_DAMAGE"];
+local iWeakenCollectionID = GameInfoTypes["PROMOTION_COLLECTION_MORAL_WEAKEN"];
+GameEvents.OnTriggerAddEnermyPromotion.Add(function(eThisPromotionType, eThisPromotionCollection, iThisPlayer,
+                                                    eThisBattleType, iThisUnit, iThisUnitType, eThatPromotionType,
+                                                    eThatPromotionCollection, iThatPlayer, iThatUnit, iThatUnitType)
+    if eThisPromotionCollection ~= iColCollectionID or eThatPromotionCollection ~= iWeakenCollectionID then
+        return;
+    end
+
+    local pThisPlayer = Players[iThisPlayer];
+    local pThatPlayer = Players[iThatPlayer];
+    if pThisPlayer == nil or pThatPlayer == nil then
+        return;
+    end
+
+    local pThisUnit = pThisPlayer:GetUnitByID(iThisUnit);
+    local pThatUnit = pThatPlayer:GetUnitByID(iThatUnit);
+    if pThisUnit == nil or pThatUnit == nil then
+        return;
+    end
+
+    if eThatPromotionType == -1 then
+        return;
+    end
+
+    local thisUnitName = pThisUnit:GetName();
+    local thatUnitName = pThatUnit:GetName();
+    if pThisPlayer:IsHuman() then
+        local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_ENEMY_MORAL_WEAKEN", thisUnitName, thatUnitName);
+        Events.GameplayAlertMessage(text);
+    end
+    if pThatPlayer:IsHuman() then
+        local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_US_MORAL_WEAKEN", thisUnitName, thatUnitName);
+        Events.GameplayAlertMessage(text);
+    end
+end);
+
 print("NewCombatEffects_SP10 end");
