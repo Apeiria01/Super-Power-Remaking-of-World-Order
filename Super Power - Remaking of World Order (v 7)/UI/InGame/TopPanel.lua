@@ -1283,10 +1283,10 @@ function GoldenAgeTipHandler( control )
 	
 		if (pPlayer:GetGoldenAgeTurns() > 0) then
 			local GoldAgePointMultiple = GameDefines["GOLDEN_AGE_POINT_MULTIPLE_IN_GA"];
-			iHappiness = math.floor(iHappiness/GoldAgePointMultiple);
-			iGoldAgePointFromReligion = math.floor(iGoldAgePointFromReligion/GoldAgePointMultiple);
-			iGoldAgePointFromTraits = math.floor(iGoldAgePointFromTraits/GoldAgePointMultiple);
-			iGoldAgePointFromCitys = math.floor(iGoldAgePointFromCitys/GoldAgePointMultiple);
+			iHappiness = math.floor(iHappiness*GoldAgePointMultiple/100);
+			iGoldAgePointFromReligion = math.floor(iGoldAgePointFromReligion*GoldAgePointMultiple/100);
+			iGoldAgePointFromTraits = math.floor(iGoldAgePointFromTraits*GoldAgePointMultiple/100);
+			iGoldAgePointFromCitys = math.floor(iGoldAgePointFromCitys*GoldAgePointMultiple/100);
 			strText = Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_NOW", pPlayer:GetGoldenAgeTurns());
 			strText = strText .. "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_NOW_EXTRA",GoldAgePointMultiple) .. "[NEWLINE]";
 		end
