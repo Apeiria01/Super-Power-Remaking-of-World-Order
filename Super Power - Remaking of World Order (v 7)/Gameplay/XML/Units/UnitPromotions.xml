@@ -109,6 +109,7 @@
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_NO_LUCK</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
+			<RemoveAfterXTurns>1</RemoveAfterXTurns>
 		</Row>
 		<Row>
 			<Type>PROMOTION_GALLOPING_GHOST</Type>
@@ -136,6 +137,7 @@
 			<CannotBeChosen>true</CannotBeChosen>
 			<CombatPercent>150</CombatPercent>
 			<CityAttack>150</CityAttack>
+			<RemoveAfterXTurns>1</RemoveAfterXTurns>
 		</Row>
 		
 		<!--*****************************Satellite Effects*******************************************-->
@@ -178,6 +180,7 @@
 			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_LEGION_GROUP</PediaEntry>
+			<RemoveAfterXTurns>1</RemoveAfterXTurns>
 		</Row>
 	</UnitPromotions>
 	<UnitPromotions>
@@ -314,6 +317,7 @@
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_RAPID_MARCH</PediaEntry>
 			<RangeChange>-2</RangeChange>
+			<RemoveAfterXTurns>1</RemoveAfterXTurns>
 		</Row>
 		<Row>
 			<Type>PROMOTION_LOSE_SUPPLY</Type>
@@ -330,6 +334,8 @@
 			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_SHARED</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_LOSE_SUPPLY</PediaEntry>
+			<RemoveAfterFullyHeal>true</RemoveAfterFullyHeal>
+			<CanActionClear>true</CanActionClear>
 		</Row>
 		<Row>
 			<Type>PROMOTION_DAMAGE_1</Type>
@@ -346,6 +352,8 @@
 			<IconAtlas>KRIS_SWORDSMAN_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_SHARED</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_DAMAGE_1</PediaEntry>
+			<RemoveAfterFullyHeal>true</RemoveAfterFullyHeal>
+			<CanActionClear>true</CanActionClear>
 		</Row>
 		<Row>
 			<Type>PROMOTION_DAMAGE_2</Type>
@@ -362,6 +370,8 @@
 			<IconAtlas>KRIS_SWORDSMAN_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_SHARED</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_DAMAGE_2</PediaEntry>
+			<RemoveAfterFullyHeal>true</RemoveAfterFullyHeal>
+			<CanActionClear>true</CanActionClear>
 		</Row>
 
 		<!--<Row>
@@ -416,6 +426,8 @@
 			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_SHARED</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_PENETRATION_1</PediaEntry>
+			<RemoveAfterFullyHeal>true</RemoveAfterFullyHeal>
+			<CanActionClear>true</CanActionClear>
 		</Row>
 		<Row>
 			<Type>PROMOTION_PENETRATION_2</Type>
@@ -429,6 +441,8 @@
 			<IconAtlas>KRIS_SWORDSMAN_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_SHARED</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_PENETRATION_1</PediaEntry>
+			<RemoveAfterFullyHeal>true</RemoveAfterFullyHeal>
+			<CanActionClear>true</CanActionClear>
 		</Row>
 
 
@@ -445,6 +459,8 @@
 			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_SHARED</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_MORAL_WEAKEN_1</PediaEntry>
+			<RemoveAfterFullyHeal>true</RemoveAfterFullyHeal>
+			<CanActionClear>true</CanActionClear>
 		</Row>
 		<Row>
 			<Type>PROMOTION_MORAL_WEAKEN_2</Type>
@@ -459,6 +475,8 @@
 			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_SHARED</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_MORAL_WEAKEN_1</PediaEntry>
+			<RemoveAfterFullyHeal>true</RemoveAfterFullyHeal>
+			<CanActionClear>true</CanActionClear>
 		</Row>
 
 		
@@ -475,6 +493,7 @@
 			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_SHARED</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_NEWLYCAPTURED</PediaEntry>
+			<RemoveAfterXTurns>1</RemoveAfterXTurns>
 		</Row>
 		<Row>
 			<Type>PROMOTION_MOVEMENT_LOST_1</Type>
@@ -483,11 +502,13 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<LostWithUpgrade>true</LostWithUpgrade>
 			<CannotBeChosen>true</CannotBeChosen>
-			<OnlyDefensive>true</OnlyDefensive>
+			<MovesChange>-1</MovesChange>
 			<PortraitIndex>20</PortraitIndex>
 			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_SHARED</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_MOVEMENT_LOST_1</PediaEntry>
+			<RemoveAfterFullyHeal>true</RemoveAfterFullyHeal>
+			<CanActionClear>true</CanActionClear>
 		</Row>
 		<Row>
 			<Type>PROMOTION_MOVEMENT_LOST_2</Type>
@@ -496,11 +517,13 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<LostWithUpgrade>true</LostWithUpgrade>
 			<CannotBeChosen>true</CannotBeChosen>
+			<OnlyDefensive>true</OnlyDefensive>
 			<PortraitIndex>21</PortraitIndex>
-			<MovesChange>-1</MovesChange>
 			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_SHARED</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_MOVEMENT_LOST_2</PediaEntry>
+			<RemoveAfterFullyHeal>true</RemoveAfterFullyHeal>
+			<CanActionClear>true</CanActionClear>
 		</Row>
 		<Row>
 			<Type>PROMOTION_MARKED_TARGET</Type>
@@ -512,6 +535,8 @@
 			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_SHARED</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_MARKED_TARGET</PediaEntry>
+			<RemoveAfterXTurns>1</RemoveAfterXTurns>
+			<CanActionClear>true</CanActionClear>
 		</Row>
 		
 	</UnitPromotions>
@@ -773,6 +798,7 @@
 			<OrderPriority>11</OrderPriority>
 			<PediaEntry>TXT_KEY_PROMOTION_DRONE_RELEASED</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
+			<RemoveAfterXTurns>1</RemoveAfterXTurns>
 		</Row>
 
 		<!--<Row>
@@ -1037,6 +1063,7 @@
 			<PediaType>PEDIA_SCOUTING</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_TRAGET_CLEARSHOOT_3</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
+			<RemoveAfterXTurns>1</RemoveAfterXTurns>
 		</Row>
 
 
@@ -5148,6 +5175,7 @@
 			<IconAtlas>ABILITY_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_GAIN_EXPERIENCE</PediaEntry>
+			<MultipleInitExperence>100</MultipleInitExperence>
 		</Row>
 
 		<Row>
@@ -6402,6 +6430,7 @@
 			<CannotBeChosen>true</CannotBeChosen>
 			<CombatPercent>100</CombatPercent>
 			<CityAttack>100</CityAttack>
+			<RemoveAfterXTurns>1</RemoveAfterXTurns>
 		</Row>
 
 		<Row>

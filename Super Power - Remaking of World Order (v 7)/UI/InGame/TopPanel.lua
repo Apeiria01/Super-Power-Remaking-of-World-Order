@@ -427,13 +427,6 @@ function DoInitTooltips()
 	Controls.InternationalTradeRoutes:SetToolTipCallback( InternationalTradeRoutesTipHandler );
 end
 
---Load Values of BELIEF_RELIGIOUS_SCIENCE When Game Start
-local ScienceFromBelifReligiousScience = 0
-for row in DB.Query("SELECT Yield FROM Belief_YieldPerFollowingCity WHERE BeliefType = 'BELIEF_RELIGIOUS_SCIENCE' AND YieldType = 'YIELD_SCIENCE'") do
-	ScienceFromBelifReligiousScience =  row.Yield
-	break
-end
-
 -- Science Tooltip
 local tipControlTable = {};
 TTManager:GetTypeControlTable( "TooltipTypeTopPanel", tipControlTable );
@@ -569,19 +562,10 @@ function ScienceTipHandler( control )
 		end
 
 		-- Science from Religion
-		if pPlayer:HasPolicy(GameInfo.Policies["POLICY_BELIEF_RELIGIOUS_SCIENCE"].ID) 
-		and pPlayer:HasCreatedReligion()
-		then
-			local iScienceFromReligion = 0
-			local eReligion = pPlayer:GetReligionCreatedByPlayer()
-			if eReligion > 0 then
-				iScienceFromReligion = Game.GetNumCitiesFollowing(eReligion)
-			end
-			iScienceFromReligion = iScienceFromReligion * ScienceFromBelifReligiousScience
-			if (iScienceFromReligion ~= 0) then
-				strText = strText .. "[NEWLINE]";
-				strText = strText .. Locale.ConvertTextKey("TXT_KEY_TP_SCIENCE_FROM_RELIGION", iScienceFromReligion);
-			end
+		local iScienceFromReligion = pPlayer:GetScienceFromReligion();
+		if (iScienceFromReligion ~= 0) then
+			strText = strText .. "[NEWLINE]";
+			strText = strText .. Locale.ConvertTextKey("TXT_KEY_TP_SCIENCE_FROM_RELIGION", iScienceFromReligion);
 		end
 	
 	
@@ -1283,10 +1267,10 @@ function GoldenAgeTipHandler( control )
 	
 		if (pPlayer:GetGoldenAgeTurns() > 0) then
 			local GoldAgePointMultiple = GameDefines["GOLDEN_AGE_POINT_MULTIPLE_IN_GA"];
-			iHappiness = math.floor(iHappiness/GoldAgePointMultiple);
-			iGoldAgePointFromReligion = math.floor(iGoldAgePointFromReligion/GoldAgePointMultiple);
-			iGoldAgePointFromTraits = math.floor(iGoldAgePointFromTraits/GoldAgePointMultiple);
-			iGoldAgePointFromCitys = math.floor(iGoldAgePointFromCitys/GoldAgePointMultiple);
+			iHappiness = math.floor(iHappiness*GoldAgePointMultiple/100);
+			iGoldAgePointFromReligion = math.floor(iGoldAgePointFromReligion*GoldAgePointMultiple/100);
+			iGoldAgePointFromTraits = math.floor(iGoldAgePointFromTraits*GoldAgePointMultiple/100);
+			iGoldAgePointFromCitys = math.floor(iGoldAgePointFromCitys*GoldAgePointMultiple/100);
 			strText = Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_NOW", pPlayer:GetGoldenAgeTurns());
 			strText = strText .. "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_NOW_EXTRA",GoldAgePointMultiple) .. "[NEWLINE]";
 		end

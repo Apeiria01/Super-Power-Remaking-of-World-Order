@@ -11239,7 +11239,7 @@
 			<Plurality>2</Plurality>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_EMP_BOMBER_AIR_HELP">
-			<Text>一次性使用的戰略武器。可以部署在城市或航空母艦上。能夠癱瘓敵軍單位或敵方城市。</Text>
+			<Text>一次性使用的戰略武器。可以部署在城市或航空母艦上。能夠癱瘓單位或城市。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_EMP_BOMBER_AIR_STRATEGY">
 			<Text>電磁脈衝彈是戰略性的武器。[NEWLINE][NEWLINE]儘管它只能對敵軍單位造成很少的傷害，但它的脈衝電磁波會毀傷一格範圍內所有敵軍的裝備電路，使其下一輪處於癱瘓狀態。[NEWLINE][NEWLINE]同樣的，電磁脈衝也可以損害敵方城市的電力系統，使其陷入一回合的無政府狀態。[NEWLINE][NEWLINE]然而，如果目標文明尚未研發“計算機”技術，電磁脈衝彈則不會起效。[NEWLINE][NEWLINE]它很容易被防空單位攔截，因此儘量派遣制空戰機為其護航！</Text>
@@ -13165,7 +13165,7 @@
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_PENETRATION_1">
-			<Text>陣型破壞</Text>
+			<Text>[COLOR_NEGATIVE_TEXT]陣型破壞[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_PENETRATION_1_HELP">
 			<Text>[COLOR_NEGATIVE_TEXT]防禦力[ENDCOLOR]-25%，單位恢復滿員後此狀態消失。</Text>
@@ -13192,14 +13192,14 @@
 			<Text>[COLOR_NEGATIVE_TEXT]受到遲滯[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_MOVEMENT_LOST_1_HELP">
-			<Text>本輪只有1[ICON_MOVES]移動力。[NEWLINE]下回合恢復。</Text>
+			<Text>本輪只有1[ICON_MOVES]移動力。[NEWLINE]下回合恢復，但會持續損失1[ICON_MOVES]移動力，單位恢復滿員後此狀態消失。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_MOVEMENT_LOST_2">
 			<Text>[COLOR_NEGATIVE_TEXT]受到阻礙[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_MOVEMENT_LOST_2_HELP">
-			<Text>本輪喪失[ICON_MOVES]移動力。[NEWLINE]下回合恢復，但會持續損失1[ICON_MOVES]移動力，直到單位恢復滿員。</Text>
+			<Text>本輪喪失[ICON_MOVES]移動力。[NEWLINE]下回合恢復，但不能[COLOR_NEGATIVE_TEXT]近戰攻擊[ENDCOLOR]，單位恢復滿員後此狀態消失。</Text>
 		</Row>
 		
 		<Row Tag="TXT_KEY_PROMOTION_ROUTE_MOVE_ONLY">
@@ -14781,7 +14781,7 @@
 			<Text>[ICON_BULLET][COLOR_POSITIVE_TEXT]+{1_Num}[ENDCOLOR]來自城市。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_TP_GOLDEN_AGE_NOW_EXTRA">
-			<Text>[ICON_BULLET]處於黃金時代，你的黃金時代點數[ICON_GOLDEN_AGE]仍將以[COLOR_POSITIVE_TEXT]1/{1_Num}[ENDCOLOR]的速率積累。</Text>
+			<Text>[ICON_BULLET]處於黃金時代，你的黃金時代點數[ICON_GOLDEN_AGE]仍將以[COLOR_POSITIVE_TEXT]{1_Num}%[ENDCOLOR]的速率積累。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_POWERFUL_CANNON">

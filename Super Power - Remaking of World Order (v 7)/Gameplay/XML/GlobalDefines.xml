@@ -755,7 +755,11 @@
 		</Row>
 		<Row>
 			<Name>GOLDEN_AGE_POINT_MULTIPLE_IN_GA</Name>
-			<Value>3</Value>
+			<Value>50</Value>
+		</Row>
+		<Row>
+			<Name>UNIT_MOVES_AFTER_DISEMBARK</Name>
+			<Value>60</Value>
 		</Row>
 	</Defines>
 	

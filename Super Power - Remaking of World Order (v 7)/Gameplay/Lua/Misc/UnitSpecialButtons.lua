@@ -1487,43 +1487,8 @@ MoralBoostButton = {
 	if unit:GetPlot() == nil or unit:GetPlot():GetNumUnits() <= 1 then
 		return;
 	end
-	local plot = unit:GetPlot()
-	local unitCount = plot:GetNumUnits()
-	
-	local Penetration1ID = GameInfo.UnitPromotions["PROMOTION_PENETRATION_1"].ID
-	local Penetration2ID = GameInfo.UnitPromotions["PROMOTION_PENETRATION_2"].ID
-	local SlowDown1ID = GameInfo.UnitPromotions["PROMOTION_MOVEMENT_LOST_1"].ID
-	local SlowDown2ID = GameInfo.UnitPromotions["PROMOTION_MOVEMENT_LOST_2"].ID
-	local MoralWeaken1ID = GameInfo.UnitPromotions["PROMOTION_MORAL_WEAKEN_1"].ID
-	local MoralWeaken2ID = GameInfo.UnitPromotions["PROMOTION_MORAL_WEAKEN_2"].ID
-	local LoseSupplyID = GameInfo.UnitPromotions["PROMOTION_LOSE_SUPPLY"].ID
-	local Damage1ID = GameInfo.UnitPromotions["PROMOTION_DAMAGE_1"].ID
-	local Damage2ID = GameInfo.UnitPromotions["PROMOTION_DAMAGE_2"].ID
-	local MarkedTargetID = GameInfo.UnitPromotions["PROMOTION_MARKED_TARGET"].ID
-	
-   	for i = 0, unitCount-1, 1 do
-   		local pFoundUnit = plot:GetUnit(i)
-   		if Players[unit:GetOwner()] == Players[pFoundUnit:GetOwner()]
-		and (pFoundUnit:IsHasPromotion(Penetration1ID)
-		or   pFoundUnit:IsHasPromotion(SlowDown1ID)
-		or   pFoundUnit:IsHasPromotion(MoralWeaken1ID)
-		or   pFoundUnit:IsHasPromotion(LoseSupplyID)
-		or   pFoundUnit:IsHasPromotion(Damage1ID)
-		or   pFoundUnit:IsHasPromotion(MarkedTargetID))
-		then
-			pFoundUnit:SetHasPromotion(Penetration1ID, false)
-			pFoundUnit:SetHasPromotion(Penetration2ID, false)
-			pFoundUnit:SetHasPromotion(SlowDown1ID, false)
-			pFoundUnit:SetHasPromotion(SlowDown2ID, false)
-			pFoundUnit:SetHasPromotion(MoralWeaken1ID, false)
-			pFoundUnit:SetHasPromotion(MoralWeaken2ID, false)
-			pFoundUnit:SetHasPromotion(LoseSupplyID, false)
-			pFoundUnit:SetHasPromotion(Damage1ID, false)
-			pFoundUnit:SetHasPromotion(Damage2ID, false)
-			pFoundUnit:SetHasPromotion(MarkedTargetID, false) 
-			print ("Moral Boost!")
-   		end
-   	end
+	unit:ClearSamePlotPromotions()
+  print ("Moral Boost!")
 	unit:SetMoves(0)
   end
 };
