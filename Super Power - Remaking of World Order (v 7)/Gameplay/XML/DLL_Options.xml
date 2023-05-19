@@ -230,6 +230,10 @@
 			<Where Name="GLOBAL_PROMOTIONS_REMOVAL"/>
 			<Set Value="1"/>
 		</Update>
+		<Update>
+			<Where Name="GLOBAL_UNIT_MOVES_AFTER_DISEMBARK"/>
+			<Set Value="1"/>
+		</Update>
 	</CustomModOptions>
 
 

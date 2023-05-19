@@ -558,21 +558,6 @@ function OnCitadelDestroyedSP(iPlayerID, iUnitID)
 end
 Events.SerialEventUnitDestroyed.Add(OnCitadelDestroyedSP)
 
--- Disembark Unit will get 1 movement at least
-function SPDisembarkUnit(iPlayerID, iUnitID)
-	if Players[iPlayerID] == nil or Players[iPlayerID]:GetUnitByID(iUnitID) == nil
-	or Players[iPlayerID]:GetUnitByID(iUnitID):IsEmbarked()
-	or Players[iPlayerID]:GetUnitByID(iUnitID):IsDead()
-	or Players[iPlayerID]:GetUnitByID(iUnitID):IsDelayedDeath()
-	then
-		return;
-	end
-	local pUnit = Players[iPlayerID]:GetUnitByID(iUnitID);
-	if not pUnit:CanMove() then
-		pUnit:SetMoves(GameDefines["MOVE_DENOMINATOR"]);
-	end
-end
-Events.UnitEmbark.Add( SPDisembarkUnit );
 -- MOD End   by CaptainCWB
 
 
