@@ -223,7 +223,7 @@
 			<Set Value="1"/>
 		</Update>
 		<Update>
-			<Where Name="PROMOTION_ADD_ENERMY_PROMOTIONS"/>
+			<Where Name="PROMOTION_ADD_ENEMY_PROMOTIONS"/>
 			<Set Value="1"/>
 		</Update>
 		<Update>
