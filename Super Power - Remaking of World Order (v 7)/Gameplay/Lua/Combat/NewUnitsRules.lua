@@ -749,27 +749,6 @@ function AASPromotionTransfer(player,unit)
 	
 end
 -- MOD Begin by HMS
----------strong quick study
-function NewUnitWithQuickStudy(iPlayer, iCity, iUnit, bGold, bFaith)
-	if Players[iPlayer] == nil
-	or Players[iPlayer]:GetUnitByID(iUnit) == nil
-	or Players[iPlayer]:GetCityByID(iCity) == nil
-	or GameInfo.UnitPromotions["PROMOTION_GAIN_EXPERIENCE"] == nil
-	then
-		return;
-	end
-	local pPlayer = Players[iPlayer];
-	local pUnit = pPlayer:GetUnitByID(iUnit);
-	if not pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_GAIN_EXPERIENCE"].ID) then
-		return;
-	end
-	print("found NewUnitWithQuickStudy! Original Exp Is: ".. pUnit:GetExperience());
-	pUnit:SetExperience(pUnit:GetExperience()*2);
-	print("New Exp is: "..pUnit:GetExperience());
-end
-GameEvents.CityTrained.Add(NewUnitWithQuickStudy)
-
-
 -----Enterprise Carrier Roll to Generate
 function SetHeroicCarrierRoll(iPlayer, iCity, iProject, bGold, bFaith) 
 	if Players[iPlayer] == nil
