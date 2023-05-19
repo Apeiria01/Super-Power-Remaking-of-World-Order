@@ -6,8 +6,8 @@ local iMovementLossCollecton = GameInfoTypes["PROMOTION_COLLECTION_MOVEMENT_LOST
 local iMovementLoss2 = GameInfoTypes["PROMOTION_MOVEMENT_LOST_2"];
 local iMoveDenominator = GameDefines["MOVE_DENOMINATOR"];
 GameEvents.OnTriggerAddEnemyPromotion.Add(function(eThisPromotionType, eThisPromotionCollection, iThisPlayer,
-                                                    eThisBattleType, iThisUnit, iThisUnitType, eThatPromotionType,
-                                                    eThatPromotionCollection, iThatPlayer, iThatUnit, iThatUnitType)
+                                                   eThisBattleType, iThisUnit, iThisUnitType, eThatPromotionType,
+                                                   eThatPromotionCollection, iThatPlayer, iThatUnit, iThatUnitType)
     if eThisPromotionCollection ~= iBarrageCollecton or eThatPromotionCollection ~= iMovementLossCollecton then
         return;
     end
@@ -62,8 +62,8 @@ end);
 local iSunderCollectionID = GameInfoTypes["PROMOTION_COLLECTION_SUNDER"];
 local iPenetrationCollectionID = GameInfoTypes["PROMOTION_COLLECTION_PENETRATION"];
 GameEvents.OnTriggerAddEnemyPromotion.Add(function(eThisPromotionType, eThisPromotionCollection, iThisPlayer,
-                                                    eThisBattleType, iThisUnit, iThisUnitType, eThatPromotionType,
-                                                    eThatPromotionCollection, iThatPlayer, iThatUnit, iThatUnitType)
+                                                   eThisBattleType, iThisUnit, iThisUnitType, eThatPromotionType,
+                                                   eThatPromotionCollection, iThatPlayer, iThatUnit, iThatUnitType)
     if eThisPromotionCollection ~= iSunderCollectionID or eThatPromotionCollection ~= iPenetrationCollectionID then
         return;
     end
@@ -99,8 +99,8 @@ end);
 local iColCollectionID = GameInfoTypes["PROMOTION_COLLECTION_COLLATERAL_DAMAGE"];
 local iWeakenCollectionID = GameInfoTypes["PROMOTION_COLLECTION_MORAL_WEAKEN"];
 GameEvents.OnTriggerAddEnemyPromotion.Add(function(eThisPromotionType, eThisPromotionCollection, iThisPlayer,
-                                                    eThisBattleType, iThisUnit, iThisUnitType, eThatPromotionType,
-                                                    eThatPromotionCollection, iThatPlayer, iThatUnit, iThatUnitType)
+                                                   eThisBattleType, iThisUnit, iThisUnitType, eThatPromotionType,
+                                                   eThatPromotionCollection, iThatPlayer, iThatUnit, iThatUnitType)
     if eThisPromotionCollection ~= iColCollectionID or eThatPromotionCollection ~= iWeakenCollectionID then
         return;
     end
@@ -138,8 +138,8 @@ local iLoseSupplyCollectionID = GameInfoTypes["PROMOTION_COLLECTION_LOSE_SUPPLY"
 local DestroySupply2ID = GameInfoTypes["PROMOTION_DESTROY_SUPPLY_2"]
 local LoseSupplyID = GameInfoTypes["PROMOTION_LOSE_SUPPLY"]
 GameEvents.OnTriggerAddEnemyPromotion.Add(function(eThisPromotionType, eThisPromotionCollection, iThisPlayer,
-                                                    eThisBattleType, iThisUnit, iThisUnitType, eThatPromotionType,
-                                                    eThatPromotionCollection, iThatPlayer, iThatUnit, iThatUnitType)
+                                                   eThisBattleType, iThisUnit, iThisUnitType, eThatPromotionType,
+                                                   eThatPromotionCollection, iThatPlayer, iThatUnit, iThatUnitType)
     if eThisPromotionCollection ~= iDestroySupplyCollectionID or eThatPromotionCollection ~= iLoseSupplyCollectionID then
         return;
     end
@@ -171,5 +171,61 @@ GameEvents.OnTriggerAddEnemyPromotion.Add(function(eThisPromotionType, eThisProm
         end
     end
 end);
+
+local iSiegeWoodenBoatCollectionID = GameInfoTypes["PROMOTION_COLLECTION_SIEGE_WOODEN_BOAT"];
+local iPromotionDamage1 = GameInfoTypes["PROMOTION_DAMAGE_1"];
+local iPromotionDamage2 = GameInfoTypes["PROMOTION_DAMAGE_2"];
+GameEvents.CanAddEnemyPromotion.Add(function(eThisPromotionType, iThisPromotionCollectionType, eThisBattleRole,
+                                              iThisPlayer, iThisUnit, iThatPlayer, iThatUnit)
+    if iThisPromotionCollectionType ~= iSiegeWoodenBoatCollectionID then
+        return false;
+    end
+
+    local pThisPlayer = Players[iThisPlayer];
+    local pThatPlayer = Players[iThatPlayer];
+    if pThisPlayer == nil or pThatPlayer == nil then
+        return false;
+    end
+
+    local pThisUnit = pThisPlayer:GetUnitByID(iThisUnit);
+    local pThatUnit = pThatPlayer:GetUnitByID(iThatUnit);
+    if pThisUnit == nil or pThatUnit == nil then
+        return false;
+    end
+
+    if pThatUnit:IsHasPromotion(iPromotionDamage2) then
+        return false;
+    end
+
+    local result = false;
+    if pThatUnit:IsCombatUnit() and
+    pThatUnit:GetDomainType() == DomainTypes.DOMAIN_SEA and GameInfo.Units[pThatUnit:GetUnitType()].MoveRate == "WOODEN_BOAT" then
+        local combatRoll = Game.Rand(100, "At NewCombatRules.lua NewAttackEffect()");
+        if pThatUnit:IsHasPromotion(iPromotionDamage1) then
+            result = combatRoll <= 80;
+            tdebuff = Locale.ConvertTextKey("TXT_KEY_PROMOTION_DAMAGE_2");
+            tlostHP = "[COLOR_NEGATIVE_TEXT]" .. -20 .. "[ENDCOLOR]";
+        else
+            result = combatRoll <= 50;
+            tdebuff = Locale.ConvertTextKey("TXT_KEY_PROMOTION_DAMAGE_1");
+            tlostHP = "[COLOR_NEGATIVE_TEXT]" .. -10 .. "[ENDCOLOR]";
+        end
+    end
+
+    if result then
+        if pThisUnit:IsHuman() then
+            text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_ENEMY_SUPPLY_DESTROYED", tdebuff, pThatUnit:GetName(), tlostHP);
+            Events.GameplayAlertMessage(text);
+        end
+        if pThatUnit:IsHuman() then
+            local heading = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_US_SUPPLY_DESTROYED_SHORT", tdebuff);
+            text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_US_SUPPLY_DESTROYED", tdebuff, pThatUnit:GetName(), tlostHP);
+            pThatPlayer:AddNotification(NotificationTypes.NOTIFICATION_GENERIC, text, heading, pThisUnit:GetX(), pThisUnit:GetY());
+        end
+    end
+
+    return result;
+end);
+
 
 print("NewCombatEffects_SP10 end");

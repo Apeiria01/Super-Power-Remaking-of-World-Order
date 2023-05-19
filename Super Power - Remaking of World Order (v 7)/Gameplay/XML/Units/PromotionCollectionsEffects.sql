@@ -58,3 +58,14 @@ insert into PromotionCollections_AddEnemyPromotions(CollectionType, OtherCollect
 ('PROMOTION_COLLECTION_SP_FORCE', 'PROMOTION_COLLECTION_LOSE_SUPPLY');
 insert into PromotionCollections_AddEnemyPromotions(CollectionType, OtherCollectionType) values
 ('PROMOTION_COLLECTION_DESTROY_SUPPLY', 'PROMOTION_COLLECTION_LOSE_SUPPLY');
+
+-- Siege units attack Wooden Boat
+insert into PromotionCollections(Type) values ('PROMOTION_COLLECTION_SIEGE_WOODEN_BOAT');
+insert into PromotionCollections_Entries(CollectionType, PromotionIndex, PromotionType, TriggerRangedAttack, TriggerLuaCheck) values
+('PROMOTION_COLLECTION_SIEGE_WOODEN_BOAT', 1, 'PROMOTION_CITY_SIEGE', 1, 1);
+insert into PromotionCollections(Type) values ('PROMOTION_COLLECTION_WOODEN_BOAT_DAMAGE');
+insert into PromotionCollections_Entries(CollectionType, PromotionIndex, PromotionType) values
+('PROMOTION_COLLECTION_WOODEN_BOAT_DAMAGE', 1, 'PROMOTION_DAMAGE_1'),
+('PROMOTION_COLLECTION_WOODEN_BOAT_DAMAGE', 2, 'PROMOTION_DAMAGE_2');
+insert into PromotionCollections_AddEnemyPromotions(CollectionType, OtherCollectionType) values
+('PROMOTION_COLLECTION_SIEGE_WOODEN_BOAT', 'PROMOTION_COLLECTION_WOODEN_BOAT_DAMAGE');
