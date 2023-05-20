@@ -60,17 +60,6 @@ function NewBuildingEffects(iPlayer, iCity, iBuilding, bGold, bFaith)
 			player:ChangeGold(300)
 		end
 
-		-- Remove Utility Penalty
-	elseif iBuildingClass == GameInfo.BuildingClasses.BUILDINGCLASS_AQUEDUCT.ID
-		or iBuildingClass == GameInfo.BuildingClasses.BUILDINGCLASS_TAP_WATER_SUPPLY.ID
-		or iBuildingClass == GameInfo.BuildingClasses.BUILDINGCLASS_WATER_TREATMENT_FACTORY.ID
-		or iBuildingClass == GameInfo.BuildingClasses.BUILDINGCLASS_HOSPITAL.ID
-		or iBuildingClass == GameInfo.BuildingClasses.BUILDINGCLASS_MEDICAL_LAB.ID
-		or iBuilding == GameInfo.Buildings.BUILDING_VENICE_FONDACO.ID
-	then
-		local UPID = GameInfo.Buildings.BUILDING_NO_UTILITY_WARNING.ID
-		pCity:SetNumRealBuilding(UPID, 0)
-
 		-- One-time Population Effect
 	elseif iBuilding == GameInfo.Buildings.BUILDING_MEGACITY_PYRAMID.ID then
 		pCity:ChangePopulation(30, true)

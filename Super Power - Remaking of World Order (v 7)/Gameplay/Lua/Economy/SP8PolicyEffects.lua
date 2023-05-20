@@ -249,19 +249,7 @@ function SPEPlayerBlockPolicyBranch(iPlayer,iPolicyBranch,isBlock)
 	if iPolicyBranch == GameInfo.PolicyBranchTypes["POLICY_BRANCH_LIBERTY"].ID
 	or iPolicyBranch == GameInfo.PolicyBranchTypes["POLICY_BRANCH_TRADITION"].ID
 	then
-		if iPolicyBranch == GameInfo.PolicyBranchTypes["POLICY_BRANCH_LIBERTY"].ID and isBlock then
-			print("Player Block Liberty and adopt Tradition!!!")
-			pPlayer:SetHasPolicy(PolicyCollectiveRuleFreeID,false)
-			for iCity in pPlayer:Cities() do
-				if(pPlayer:HasPolicy(GameInfo.Policies["POLICY_ARISTOCRACY"].ID)) 
-				and iCity:GetPopulation() < 6
-				then
-					iCity:SetNumRealBuilding(GameInfoTypes.BUILDING_TRADITION_FOOD_GROWTH,1)
-				end
-				iCity:SetNumRealBuilding(GameInfoTypes.BUILDING_REPRESENTATION_CULTURE_COST,0)
-			end
-
-		elseif iPolicyBranch == GameInfo.PolicyBranchTypes["POLICY_BRANCH_TRADITION"].ID and isBlock then
+		if iPolicyBranch == GameInfo.PolicyBranchTypes["POLICY_BRANCH_TRADITION"].ID and isBlock then
 			print("Player Block Tradition and adopt Liberty!!!")
 			if pPlayer:HasPolicy(PolicyCollectiveRuleID) then
 				pPlayer:SetHasPolicy(PolicyCollectiveRuleFreeID,true,true)
