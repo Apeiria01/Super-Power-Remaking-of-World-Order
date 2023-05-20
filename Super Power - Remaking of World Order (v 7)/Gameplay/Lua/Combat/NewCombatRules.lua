@@ -168,7 +168,6 @@ function NewAttackEffect()
 	local NavalRangedShipUnitID = GameInfo.UnitPromotions["PROMOTION_NAVAL_RANGED_SHIP"].ID
 	local NavalRangedCruiserUnitID = GameInfo.UnitPromotions["PROMOTION_NAVAL_RANGED_CRUISER"].ID
 	local StragegicBomberUnitID = GameInfo.UnitPromotions["PROMOTION_STRATEGIC_BOMBER"].ID
-	local CitySiegeUnitID = GameInfo.UnitPromotions["PROMOTION_CITY_SIEGE"].ID
 	local InfantryUnitID = GameInfo.UnitPromotions["PROMOTION_INFANTRY_COMBAT"].ID
 	local KnightID = GameInfo.UnitPromotions["PROMOTION_KNIGHT_COMBAT"].ID
 	local TankID = GameInfo.UnitPromotions["PROMOTION_TANK_COMBAT"].ID
@@ -180,14 +179,10 @@ function NewAttackEffect()
 	local Charge2ID = GameInfo.UnitPromotions["PROMOTION_CHARGE_2"].ID
 	local Charge3ID = GameInfo.UnitPromotions["PROMOTION_CHARGE_3"].ID
 
-	local Sunder1ID = GameInfo.UnitPromotions["PROMOTION_SUNDER_1"].ID
-
 	local CQBCombat1ID = GameInfo.UnitPromotions["PROMOTION_CQB_COMBAT_1"].ID
 	local CQBCombat2ID = GameInfo.UnitPromotions["PROMOTION_CQB_COMBAT_2"].ID
 
 	local KillingEffectsID = GameInfo.UnitPromotions["PROMOTION_GAIN_MOVES_AFFER_KILLING"].ID
-
-	local SPForce1ID = GameInfo.UnitPromotions["PROMOTION_SP_FORCE_1"].ID
 
 	local EMPBomberID = GameInfo.UnitPromotions["PROMOTION_EMP_ATTACK"].ID
 	local AntiEMPID = GameInfo.UnitPromotions["PROMOTION_ANTI_EMP"].ID
@@ -197,13 +192,6 @@ function NewAttackEffect()
 	local AirTarget3ID = GameInfo.UnitPromotions["PROMOTION_AIR_TARGETING_3"].ID
 
 	local AirTarget_CarrierID = GameInfo.UnitPromotions["PROMOTION_CARRIER_FIGHTER_SIEGE_2"].ID
-
-	local DestroySupply_CarrierID = GameInfo.UnitPromotions["PROMOTION_CARRIER_FIGHTER_SIEGE_1"].ID
-	local DestroySupply1ID = GameInfo.UnitPromotions["PROMOTION_DESTROY_SUPPLY_1"].ID
-	local DestroySupply2ID = GameInfo.UnitPromotions["PROMOTION_DESTROY_SUPPLY_2"].ID
-	local LoseSupplyID = GameInfo.UnitPromotions["PROMOTION_LOSE_SUPPLY"].ID
-	local Damage1ID = GameInfo.UnitPromotions["PROMOTION_DAMAGE_1"].ID
-	local Damage2ID = GameInfo.UnitPromotions["PROMOTION_DAMAGE_2"].ID
 
 	local ChainReactionID = GameInfo.UnitPromotions["PROMOTION_CHAIN_REACTION"].ID
 
@@ -707,89 +695,6 @@ function NewAttackEffect()
 
 
 
-		-----------Attacking with debuffs
-		if (
-			attUnit:IsHasPromotion(Sunder1ID)
-				or attUnit:IsHasPromotion(DestroySupply_CarrierID) or attUnit:IsHasPromotion(DestroySupply1ID) or
-				attUnit:IsHasPromotion(SPForce1ID)
-				or attUnit:IsHasPromotion(CitySiegeUnitID)) and not defUnit:IsDead()
-		then
-
-			-- if defFinalUnitDamage >= defUnit:GetMaxHitPoints() then
-			-- print("Defender is dead, no debuff effects!")
-			-- return
-			-- end
-
-			local text = nil;
-			local attUnitName = attUnit:GetName();
-			local defUnitName = defUnit:GetName();
-			local MovesLeft = defUnit:MovesLeft();
-			local Message = 0;
-			local IsNotification = false;
-			--		print("Moves Left:"..MovesLeft);
-
-			local tdebuff = nil;
-			local tlostHP = nil;
-			local combatRoll = Game.Rand(10, "At NewCombatRules.lua NewAttackEffect()") + 1
-			if (
-				attUnit:IsHasPromotion(DestroySupply1ID) or attUnit:IsHasPromotion(SPForce1ID) or
-					attUnit:IsHasPromotion(DestroySupply_CarrierID))
-				and not defUnit:IsHasPromotion(LoseSupplyID)
-			then
-				defUnit:SetHasPromotion(LoseSupplyID, true)
-				tdebuff = Locale.ConvertTextKey("TXT_KEY_PROMOTION_LOSE_SUPPLY");
-				tlostHP = "[COLOR_NEGATIVE_TEXT]" .. -20 .. "[ENDCOLOR]";
-				Message = 5
-			elseif attUnit:IsHasPromotion(CitySiegeUnitID) and defUnit:IsCombatUnit() and
-				defUnit:GetDomainType() == DomainTypes.DOMAIN_SEA and GameInfo.Units[defUnit:GetUnitType()].MoveRate == "WOODEN_BOAT" then
-				if not defUnit:IsHasPromotion(Damage1ID) and combatRoll <= 5 then
-					defUnit:SetHasPromotion(Damage1ID, true);
-					tdebuff = Locale.ConvertTextKey("TXT_KEY_PROMOTION_DAMAGE_1");
-					tlostHP = "[COLOR_NEGATIVE_TEXT]" .. -10 .. "[ENDCOLOR]";
-					Message = 5;
-				elseif defUnit:IsHasPromotion(Damage1ID) and not defUnit:IsHasPromotion(Damage2ID) and combatRoll <= 8 then
-					defUnit:SetHasPromotion(Damage2ID, true);
-					tdebuff = Locale.ConvertTextKey("TXT_KEY_PROMOTION_DAMAGE_2");
-					tlostHP = "[COLOR_NEGATIVE_TEXT]" .. -20 .. "[ENDCOLOR]";
-					Message = 5;
-				end
-			end
-
-			-- Notification
-			if Message ~= 5 then
-			elseif attPlayer:IsHuman() then
-				-- local heading = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_ENEMY_SUPPLY_DESTROYED_SHORT", tdebuff);
-				text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_ENEMY_SUPPLY_DESTROYED", tdebuff, defUnitName, tlostHP);
-				-- attPlayer:AddNotification(NotificationTypes.NOTIFICATION_GENERIC, text, heading, plotX, plotY);
-				Events.GameplayAlertMessage(text);
-			elseif defPlayer:IsHuman() then
-				local heading = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_US_SUPPLY_DESTROYED_SHORT", tdebuff);
-				text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_US_SUPPLY_DESTROYED", tdebuff, defUnitName, tlostHP);
-				defPlayer:AddNotification(NotificationTypes.NOTIFICATION_GENERIC, text, heading, plotX, plotY);
-			end
-			text = nil;
-			Message = 0;
-
-			-- Notification
-			if attPlayer:IsHuman() then
-				if Message == 1 then
-					text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_ENEMY_SUNDERED", attUnitName, defUnitName);
-				elseif Message == 4 then
-					text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_ENEMY_MORAL_WEAKEN", attUnitName, defUnitName);
-				end
-			elseif defPlayer:IsHuman() then
-				if Message == 1 then
-					text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_US_SUNDERED", attUnitName, defUnitName);
-				elseif Message == 4 then
-					text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_US_MORAL_WEAKEN", attUnitName, defUnitName);
-				end
-			end
-			if text then
-				Events.GameplayAlertMessage(text);
-			end
-		end
-
-
 		-------Fighters will damage land and naval AA units in an air-sweep
 		if not attUnit:IsDead() and not defUnit:IsDead() and defUnit:IsCombatUnit()
 			and batType == GameInfoTypes["BATTLETYPE_SWEEP"]
@@ -886,22 +791,6 @@ function NewAttackEffect()
 			attUnit:ChangeDamage(attDamageInflicted, defPlayer);
 			defUnit:ChangeDamage(defDamageInflicted, attPlayer);
 		end
-
-
-		--------------------------- Supply Damage AOE Effects
-		if attUnit:IsHasPromotion(DestroySupply2ID) then
-			defUnit:SetHasPromotion(LoseSupplyID, true)
-
-			for i = 0, 5 do
-				local adjPlot = Map.PlotDirection(plotX, plotY, i)
-				if (adjPlot ~= nil) then
-					local pUnit = adjPlot:GetUnit(0)
-					if pUnit and pUnit:GetOwner() ~= attUnit:GetOwner() and not pUnit:IsHasPromotion(AntiDebuffID) then --not for immune unit---by HMS
-						pUnit:SetHasPromotion(LoseSupplyID, true);
-					end
-				end
-			end
-		end
 	end
 end --function END
 
@@ -967,51 +856,5 @@ end
 
 Events.SerialEventUnitCreated.Add(CaptureSPDKP);
 -- MOD End   - by CaptainCWB
-
-
-
-
-
-
-
-
-
---****************************************************************************Utilities*************************************************************************************************
----- Set Debuff Effects: Armor Damaged
-function SetPenetration(defUnit)
-	local Penetration1ID = GameInfo.UnitPromotions["PROMOTION_PENETRATION_1"].ID
-	local Penetration2ID = GameInfo.UnitPromotions["PROMOTION_PENETRATION_2"].ID
-
-	if (defUnit:IsHasPromotion(Penetration1ID, true)) then
-		defUnit:SetHasPromotion(Penetration2ID, true)
-	else
-		defUnit:SetHasPromotion(Penetration1ID, true)
-		return
-	end
-end
-
----- Set Debuff Effects: Slow Down
-function SetSlowDown(defUnit)
-	local SlowDown1ID = GameInfo.UnitPromotions["PROMOTION_MOVEMENT_LOST_1"].ID
-	local SlowDown2ID = GameInfo.UnitPromotions["PROMOTION_MOVEMENT_LOST_2"].ID
-
-	if (defUnit:IsHasPromotion(SlowDown1ID, true)) then
-		defUnit:SetHasPromotion(SlowDown2ID, true)
-	else
-		defUnit:SetHasPromotion(SlowDown1ID, true)
-	end
-end
-
----- Set Debuff Effects: Moral Weaken
-function SetMoralWeaken(defUnit)
-	local MoralWeaken1ID = GameInfo.UnitPromotions["PROMOTION_MORAL_WEAKEN_1"].ID
-	local MoralWeaken2ID = GameInfo.UnitPromotions["PROMOTION_MORAL_WEAKEN_2"].ID
-
-	if (defUnit:IsHasPromotion(MoralWeaken1ID, true)) then
-		defUnit:SetHasPromotion(MoralWeaken2ID, true)
-	else
-		defUnit:SetHasPromotion(MoralWeaken1ID, true)
-	end
-end
 
 print("New Combat Rules Check Pass!")
