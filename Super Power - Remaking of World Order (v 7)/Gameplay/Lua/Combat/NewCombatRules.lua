@@ -124,7 +124,6 @@ function NewAttackEffect()
 
 	local attFinalUnitDamage = attUnit:GetDamage();
 	local defFinalUnitDamage = 0;
-	local attUnitDamage = attFinalUnitDamage - g_DoNewAttackEffect.attODamage;
 	local defUnitDamage = 0;
 
 	if not bIsCity and defPlayer:GetUnitByID(g_DoNewAttackEffect.defUnitID) then
@@ -140,21 +139,6 @@ function NewAttackEffect()
 
 	--Complex Effects Only for Human VS AI(reduce time and enhance stability)
 	if not attPlayer:IsHuman() and not defPlayer:IsHuman() then
-		--[[
-		--Larger AI's Bonus against Smaller AIs - AI is easier to become a Boss! Player will feel excited fighting Boss!
-		--AI will capture another AI's city by ranged attack
-		-- AI boss's City cann't be Captured by AI Ranged Unit!
-		if not AICanBeBoss(defPlayer) and defCity then
-			print ("AI attacking AI's City!")
-			if defCity:GetDamage() >= defCity:GetMaxHitPoints() - 1 then
-				local cityPop = defCity:GetPopulation()
-				if cityPop < 10 or AICanBeBoss(attPlayer) then
-					-- attPlayer:AcquireCity(defCity)
-					print ("AI Ranged Unit Takes another AI's city!")
-				end
-			end
-		end
-		]]
 		return;
 	end
 	-- Not for Barbarins
@@ -163,7 +147,6 @@ function NewAttackEffect()
 	end
 
 	------- PromotionID
-	local ArcheryUnitID = GameInfo.UnitPromotions["PROMOTION_ARCHERY_COMBAT"].ID
 	local GunpowderInfantryUnitID = GameInfo.UnitPromotions["PROMOTION_GUNPOWDER_INFANTRY_COMBAT"].ID
 	local NavalRangedShipUnitID = GameInfo.UnitPromotions["PROMOTION_NAVAL_RANGED_SHIP"].ID
 	local NavalRangedCruiserUnitID = GameInfo.UnitPromotions["PROMOTION_NAVAL_RANGED_CRUISER"].ID
@@ -564,11 +547,6 @@ function NewAttackEffect()
 			end
 			defFinalUnitDamage = defFinalUnitDamage + defFinalUnitDamageChange;
 			defUnit:ChangeDamage(defFinalUnitDamageChange,attPlayer);
-			--[[if attUnit:CanMoveThrough(batPlot) and batPlot ~= attPlot then
-				-- if the target plot has no unit,your unit advances into the target plot!
-				attUnit:SetMoves(attUnit:MovesLeft() + GameDefines["MOVE_DENOMINATOR"]);
-				attUnit:PushMission(MissionTypes.MISSION_MOVE_TO, plotX, plotY);
-			end]]
 		end
 
 
@@ -588,16 +566,6 @@ function NewAttackEffect()
 			print("Charging Unit Gains Movement!")
 		end
 
-
-		-- 	    if attUnit:IsHasPromotion(SpecialForcesID) and defUnit:GetUnitCombatType() == GameInfoTypes.UNITCOMBAT_RECON then
-		--  		if math.floor(defFinalUnitDamage/100)-math.floor(defUnitDamage/100) > 0  then
-		--			attUnit:SetMoves(attUnit:MovesLeft()+GameDefines["MOVE_DENOMINATOR"])
-		--			attUnit:SetMadeAttack(false)
-		--			print ("Ah, fresh meat!")
-		--		end
-		-- 	    end
-
-
 		-- Debuff immune unit
 		if defUnit:IsHasPromotion(AntiDebuffID) then
 			print("This unit is debuff immune")
@@ -614,86 +582,6 @@ function NewAttackEffect()
 			Message = 3
 			print("Attacker Stopped!")
 		end
-
-
-		----------------------Ranged Unit Counter Attack
-
-		--	    if not attUnit:IsDead() and not defUnit:IsDead() then    ----------------------Ranged Unit Counter Attack
-		--		if (attUnit:IsRanged() and defUnit:IsRanged() and not attUnit:GetPlot():IsCity()) then
-		--			if attUnit:GetBaseRangedCombatStrength() > attUnit:GetBaseCombatStrength() and defUnit:GetBaseRangedCombatStrength() > defUnit:GetBaseCombatStrength()	then --Hit and Run units won't have this effect
-		--				-- Initialize the attack-tracking if this is the first attack of the turn.
-		--				   HasAttackedThisTurn = {}
-		--				if HasAttackedThisTurn[defUnit] ~= true and HasAttackedThisTurn[attUnit] ~= true then
-		--				   HasAttackedThisTurn[attUnit] = true
-		--				end
-		--
-		--				if HasAttackedThisTurn[defUnit] ~= true then
-		--					local movesLeft = defUnit:MovesLeft()
-		--					print("Qualifies for a counterattack.")
-		--					defUnit:RangeStrike( attUnit:GetX(), attUnit:GetY() )
-		--					--The defender can defend itself for more than its attacks allowed every turn.
-		--					defUnit:SetMadeAttack(false)
-		--					defUnit:SetMoves(movesLeft)
-		--					-- By this point, the attacker will already have been checked to make a counter-counter attack, so let's delete our table.
-		--					HasAttackedThisTurn = nil
-		--				else
-		--					return
-		--				end
-		--			end
-		--		end
-		--	    end
-
-
-		-----------Archery Unit Counter-attack the attacker attacking the Stacking units
-		if batPlot:GetNumUnits() <= 1 then
-		elseif (defUnit:IsImmobile() and defUnit:GetBaseCombatStrength() > 0)
-			or defUnit:GetUnitCombatType() == GameInfoTypes.UNITCOMBAT_MELEE
-		then
-			local unitCount = batPlot:GetNumUnits();
-			for i = 0, unitCount - 1, 1 do
-				local pFoundUnit = batPlot:GetUnit(i);
-				if pFoundUnit and not pFoundUnit:IsDead() and pFoundUnit ~= defUnit and pFoundUnit:IsRanged()
-					and (pFoundUnit:IsHasPromotion(ArcheryUnitID) and batType == GameInfoTypes["BATTLETYPE_MELEE"])
-				-- or (pFoundUnit:IsHasPromotion(FireSupport2ID) and batType == GameInfoTypes["BATTLETYPE_RANGED"]))
-				then
-					local movesLeft = pFoundUnit:MovesLeft();
-					pFoundUnit:RangeStrike(attUnit:GetX(), attUnit:GetY());
-					pFoundUnit:SetMadeAttack(false);
-					pFoundUnit:SetMoves(movesLeft);
-					break;
-				end
-			end
-		elseif defUnit:IsRanged() and not defUnit:IsDead()
-			and (defUnit:IsHasPromotion(ArcheryUnitID) and batType == GameInfoTypes["BATTLETYPE_MELEE"])
-		-- or    (defUnit:IsHasPromotion(FireSupport2ID) and batType == GameInfoTypes["BATTLETYPE_RANGED"]) )
-		then
-			local unitCount = batPlot:GetNumUnits();
-			for i = 0, unitCount - 1, 1 do
-				local pFoundUnit = batPlot:GetUnit(i);
-				if pFoundUnit and not pFoundUnit:IsDead()
-					and ((pFoundUnit:IsImmobile() and pFoundUnit:GetBaseCombatStrength() > 0)
-						or pFoundUnit:GetUnitCombatType() == GameInfoTypes.UNITCOMBAT_MELEE)
-				then
-					local movesLeft = defUnit:MovesLeft();
-					defUnit:RangeStrike(attUnit:GetX(), attUnit:GetY());
-					defUnit:SetMadeAttack(false);
-					defUnit:SetMoves(movesLeft);
-					break;
-				end
-			end
-		end
-
-
-		------LaserSuppression and CQB Combat Freeze the Attacker
-		--	    if defUnit:IsHasPromotion(SuppressionID) and attUnit:GetDomainType() == DomainTypes.DOMAIN_LAND then
-		--		if not attUnit:IsHasPromotion(CitySiegeUnitID) then
-		--			attUnit:SetMoves(0)
-		--			Message = 1
-		--			print ("Attacker Stopped!")
-		--		end
-		--	    end
-
-
 
 		-------Fighters will damage land and naval AA units in an air-sweep
 		if not attUnit:IsDead() and not defUnit:IsDead() and defUnit:IsCombatUnit()

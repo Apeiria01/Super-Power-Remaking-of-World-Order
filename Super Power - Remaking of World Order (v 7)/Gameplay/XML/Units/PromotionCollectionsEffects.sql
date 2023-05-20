@@ -69,3 +69,8 @@ insert into PromotionCollections_Entries(CollectionType, PromotionIndex, Promoti
 ('PROMOTION_COLLECTION_WOODEN_BOAT_DAMAGE', 2, 'PROMOTION_DAMAGE_2');
 insert into PromotionCollections_AddEnemyPromotions(CollectionType, OtherCollectionType) values
 ('PROMOTION_COLLECTION_SIEGE_WOODEN_BOAT', 'PROMOTION_COLLECTION_WOODEN_BOAT_DAMAGE');
+
+-- PROMOTION_COLLECTION_ARCHERY_COMBAT counter attack
+insert into PromotionCollections(Type, StackingFightBack) values ('PROMOTION_COLLECTION_ARCHERY_COMBAT', 1);
+insert into PromotionCollections_Entries(CollectionType, PromotionIndex, PromotionType, StackingFightBackOnlyMelee) values
+('PROMOTION_COLLECTION_ARCHERY_COMBAT', 1, 'PROMOTION_ARCHERY_COMBAT', 1);
