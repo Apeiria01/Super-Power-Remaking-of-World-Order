@@ -5301,6 +5301,7 @@
 			<IconAtlas>ABILITY_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_SPN_MAMLUK_COMBAT_FAITH</PediaEntry>
+			<UnitAttackFaithBonus>100</UnitAttackFaithBonus>
 		</Row>
 
 
@@ -5406,6 +5407,7 @@
 			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_GENERAL_STACKING</PediaEntry>
+			<RemovePromotionUpgrade>PROMOTION_MUST_SET_UP</RemovePromotionUpgrade>
 		</Row>
 		<Row>
 			<Type>PROMOTION_ONLY_ATTACKS_CITIES</Type>

@@ -14993,5 +14993,12 @@
 		<Row Tag="TXT_KEY_PROMOTION_POWERFUL_CANNON_HELP">
 			<Text>攻击城市时，按照城堡、城墙的顺序摧毁一座防御建筑</Text>
 		</Row>
+
+		<Row Tag="TXT_KEY_EUPANEL_SAME_CONTINENT_BONUS">
+			<Text>本大陆加成</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_OTHER_CONTINENT_BONUS">
+			<Text>异大陆加成</Text>
+		</Row>
 	</Language_zh_CN>
 </GameData>

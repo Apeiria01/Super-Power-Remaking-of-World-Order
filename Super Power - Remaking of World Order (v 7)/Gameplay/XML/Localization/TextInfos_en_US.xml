@@ -16964,5 +16964,12 @@
 		<Row Tag="TXT_KEY_PROMOTION_POWERFUL_CANNON_HELP">
 			<Text>When attacking a city, destroying a Defensive building, according to priority: castle, city wall.</Text>
 		</Row>
+
+		<Row Tag="TXT_KEY_EUPANEL_SAME_CONTINENT_BONUS">
+			<Text>Same Continent Bouns</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_OTHER_CONTINENT_BONUS">
+			<Text>Other Continent Bouns</Text>
+		</Row>
 	</Language_en_US>
 </GameData>

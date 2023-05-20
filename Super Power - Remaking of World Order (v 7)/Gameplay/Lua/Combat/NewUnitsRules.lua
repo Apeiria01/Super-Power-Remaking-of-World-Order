@@ -23,8 +23,6 @@ local RangeBanID = GameInfo.UnitPromotions["PROMOTION_RANGE_BAN"].ID
 
 local LuckyCarrierID = GameInfo.UnitPromotions["PROMOTION_LUCKY_CARRIER"].ID
 
-local GeneralSID = GameInfo.UnitPromotions["PROMOTION_GENERAL_STACKING"].ID
-local SetUpID = GameInfo.UnitPromotions["PROMOTION_MUST_SET_UP"].ID
 local ForeignLandsID = GameInfo.UnitPromotions["PROMOTION_FOREIGN_LANDS"].ID
 local ExtraRSID = GameInfo.UnitPromotions["PROMOTION_EXTRA_RELIGION_SPREADS"].ID
 
@@ -630,23 +628,6 @@ function UnitGroupMovement(player,DesPlot,unitID)---------Move all Units in a Le
 	end
 end
 ]]
-
-
--- MOD Begin by CaptainCWB
--------No Set-up for Upgraded Howitzer from France Battery
-function NoSetUPforUFHowitzer(iPlayerID, iUnitID)
-	if  Players[ iPlayerID ] and Players[ iPlayerID ]:IsAlive()
-	and Players[ iPlayerID ]:GetUnitByID( iUnitID )
-	and not Players[ iPlayerID ]:GetUnitByID( iUnitID ):IsDead()
-	and not Players[ iPlayerID ]:GetUnitByID( iUnitID ):IsDelayedDeath()
-	and Players[ iPlayerID ]:GetUnitByID( iUnitID ):IsHasPromotion(GeneralSID)
-	and Players[ iPlayerID ]:GetUnitByID( iUnitID ):IsHasPromotion(SetUpID)
-	then
-		Players[ iPlayerID ]:GetUnitByID( iUnitID ):SetHasPromotion(SetUpID, false);
-	end
-end
-Events.SerialEventUnitCreated.Add( NoSetUPforUFHowitzer );
--- MOD End   by CaptainCWB
 
 
 

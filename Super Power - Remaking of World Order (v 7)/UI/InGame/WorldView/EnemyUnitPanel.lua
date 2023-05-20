@@ -491,6 +491,31 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
 			end
 
+			--Same Continent Bouns
+			iModifier = pMyUnit:GetOnCapitalLandAttackMod();
+			if pMyPlayer:GetCapitalCity()~=nil then
+				local pCapitalPlot = Map.GetPlot(pMyPlayer:GetCapitalCity():GetX(),pMyPlayer:GetCapitalCity():GetY())
+				local pCapitalArea = pCapitalPlot:GetArea() 
+				local pArea = pMyUnit:GetPlot():GetArea()	
+				if (iModifier ~= 0 and  pArea == pCapitalArea) then
+					controlTable = g_MyCombatDataIM:GetInstance();		
+					controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_SAME_CONTINENT_BONUS");
+					controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
+				end
+		  	end
+			--Other Continent Bouns
+			iModifier = pMyUnit:GetOutsideCapitalLandAttackMod();
+			if pMyPlayer:GetCapitalCity()~=nil then
+				local pCapitalPlot = Map.GetPlot(pMyPlayer:GetCapitalCity():GetX(),pMyPlayer:GetCapitalCity():GetY())
+				local pCapitalArea = pCapitalPlot:GetArea() 
+				local pArea = pMyUnit:GetPlot():GetArea()	
+				if (iModifier ~= 0 and  pArea ~= pCapitalArea) then
+					controlTable = g_MyCombatDataIM:GetInstance();		
+					controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_OTHER_CONTINENT_BONUS");
+					controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
+				end
+		  	end
+
 			iModifier = pMyPlayer:GetFoundedReligionEnemyCityCombatMod(pPlot);
 			if (iModifier ~= 0) then
 				controlTable = g_MyCombatDataIM:GetInstance();
@@ -1187,6 +1212,31 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
 			end
 
+			--Same Continent Bouns
+			iModifier = pMyUnit:GetOnCapitalLandAttackMod();
+			if pMyPlayer:GetCapitalCity()~=nil then
+				local pCapitalPlot = Map.GetPlot(pMyPlayer:GetCapitalCity():GetX(),pMyPlayer:GetCapitalCity():GetY())
+				local pCapitalArea = pCapitalPlot:GetArea() 
+				local pArea = pMyUnit:GetPlot():GetArea()	
+				if (iModifier ~= 0 and  pArea == pCapitalArea) then
+					controlTable = g_MyCombatDataIM:GetInstance();		
+					controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_SAME_CONTINENT_BONUS");
+					controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
+				end
+		  	end
+		  	--Other Continent Bouns
+			iModifier = pMyUnit:GetOutsideCapitalLandAttackMod();
+			if pMyPlayer:GetCapitalCity()~=nil then
+				local pCapitalPlot = Map.GetPlot(pMyPlayer:GetCapitalCity():GetX(),pMyPlayer:GetCapitalCity():GetY())
+				local pCapitalArea = pCapitalPlot:GetArea() 
+				local pArea = pMyUnit:GetPlot():GetArea()	
+				if (iModifier ~= 0 and  pArea ~= pCapitalArea) then
+					controlTable = g_MyCombatDataIM:GetInstance();		
+					controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_OTHER_CONTINENT_BONUS");
+					controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
+				end
+		  	end
+
 			-- UnitClassModifier
 			iModifier = pMyUnit:GetUnitClassModifier(pTheirUnit:GetUnitClassType());
 			if (iModifier ~= 0) then
@@ -1430,6 +1480,31 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 					end
 				end
 				----------------------------SP Bug Fix END--------Cover Promotion --------------
+				--Same Continent Bouns
+				iModifier = pTheirUnit:GetOnCapitalLandDefenseMod();
+				if pTheirPlayer:GetCapitalCity()~=nil then
+					local pCapitalPlot = Map.GetPlot(pTheirPlayer:GetCapitalCity():GetX(),pTheirPlayer:GetCapitalCity():GetY())
+					local pCapitalArea = pCapitalPlot:GetArea() 
+					local pArea = pTheirUnit:GetPlot():GetArea()	
+					if (iModifier ~= 0 and  pArea == pCapitalArea) then
+						controlTable = g_TheirCombatDataIM:GetInstance();		
+						controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_SAME_CONTINENT_BONUS");
+						controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
+					end
+			  	end
+  
+			 	--Other Continent Bouns
+				iModifier = pTheirUnit:GetOutsideCapitalLandDefenseMod();
+				if pTheirPlayer:GetCapitalCity()~=nil then
+					local pCapitalPlot = Map.GetPlot(pTheirPlayer:GetCapitalCity():GetX(),pTheirPlayer:GetCapitalCity():GetY())
+					local pCapitalArea = pCapitalPlot:GetArea() 
+					local pArea = pTheirUnit:GetPlot():GetArea()	
+					if (iModifier ~= 0 and  pArea ~= pCapitalArea) then
+						controlTable = g_TheirCombatDataIM:GetInstance();		
+						controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_OTHER_CONTINENT_BONUS");
+						controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
+					end
+			 	end
 
 				-- Empire Unhappy
 				iModifier = pTheirUnit:GetUnhappinessCombatPenalty();
@@ -1908,7 +1983,7 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 		local theirPlot = theirUnit:GetPlot();
 
 		-- Empire Unhappy
-		iModifier = theirUnit:GetUnhappinessCombatPenalty();
+		local iModifier = theirUnit:GetUnhappinessCombatPenalty();
 		if (iModifier ~= 0) then
 			controlTable = g_TheirCombatDataIM:GetInstance();
 			if (theirPlayer:IsEmpireVeryUnhappy()) then
@@ -1918,6 +1993,32 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 			end
 			controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
 		end
+
+		--Same Continent Bouns
+		iModifier = theirUnit:GetOnCapitalLandDefenseMod();
+		if pTheirPlayer:GetCapitalCity()~=nil then
+			local pCapitalPlot = Map.GetPlot(pTheirPlayer:GetCapitalCity():GetX(),pTheirPlayer:GetCapitalCity():GetY())
+			local pCapitalArea = pCapitalPlot:GetArea() 
+			local pArea = theirUnit:GetPlot():GetArea()	
+			if (iModifier ~= 0 and  pArea == pCapitalArea) then
+				controlTable = g_TheirCombatDataIM:GetInstance();		
+				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_SAME_CONTINENT_BONUS");
+				controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
+			end
+	  	end
+
+	  	--Other Continent Bouns
+		iModifier = theirUnit:GetOutsideCapitalLandDefenseMod();
+		if pTheirPlayer:GetCapitalCity()~=nil then
+			local pCapitalPlot = Map.GetPlot(pTheirPlayer:GetCapitalCity():GetX(),pTheirPlayer:GetCapitalCity():GetY())
+			local pCapitalArea = pCapitalPlot:GetArea() 
+			local pArea = theirUnit:GetPlot():GetArea()	
+			if (iModifier ~= 0 and  pArea ~= pCapitalArea) then
+				controlTable = g_TheirCombatDataIM:GetInstance();		
+				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_OTHER_CONTINENT_BONUS");
+				controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true) );
+			end
+	  	end
 
 		-- Lack Strategic Resources
 		iModifier = theirUnit:GetStrategicResourceCombatPenalty();
@@ -2031,7 +2132,7 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 		end
 
 		-- Defense Modifier
-		local iModifier = theirUnit:GetDefenseModifier();
+		iModifier = theirUnit:GetDefenseModifier();
 		if (iModifier ~= 0) then
 			controlTable = g_TheirCombatDataIM:GetInstance();
 			controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_DEFENSE_BONUS");
