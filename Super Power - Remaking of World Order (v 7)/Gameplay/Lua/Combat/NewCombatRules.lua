@@ -197,8 +197,6 @@ function NewAttackEffect()
 
 	local AntiDebuffID = GameInfo.UnitPromotions["PROMOTION_ANTI_DEBUFF"].ID
 
-	local MamlukCombatID = GameInfo.UnitPromotions["PROMOTION_SPN_MAMLUK_COMBAT_FAITH"].ID
-
 	-------Nuclear Rocket Launcher Kills itself (<suicide>is not working!)
 	if attUnit:GetUnitType() == GameInfoTypes.UNIT_BAZOOKA then
 		attUnit:ChangeDamage(attUnit:GetCurrHitPoints());
@@ -238,22 +236,6 @@ function NewAttackEffect()
 	if not defPlayer:IsAlive() then
 		return
 	end
-
-	--Mamluk gain Faith from Combat
-	if not defCity and attUnit:IsHasPromotion(MamlukCombatID) then
-		local MamlukDamageBonus = 0
-		if defUnit then
-			MamlukDamageBonus = defUnitDamage
-		end
-		print("Mamluk Attack Damage is :",MamlukDamageBonus)
-		attPlayer:ChangeFaith(MamlukDamageBonus)
-		if attPlayer:IsHuman() and MamlukDamageBonus >0 then
-			local hex = ToHexFromGrid(Vector2(plotX,plotY))
-			Events.AddPopupTextEvent(HexToWorld(hex), Locale.ConvertTextKey("+{1_Num}[ICON_PEACE]",MamlukDamageBonus))
-			Events.GameplayFX(hex.x, hex.y, -1)
-		end
-	end
-		
 
 	----------------EMP Bomber effects
 	if attUnit:IsHasPromotion(EMPBomberID) then
