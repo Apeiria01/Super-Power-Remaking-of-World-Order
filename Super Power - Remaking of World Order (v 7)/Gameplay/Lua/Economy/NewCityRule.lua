@@ -1095,15 +1095,6 @@ function CitySetSize(city, player, cityPop)
         city:SetNumRealBuilding(GameInfoTypes["BUILDING_CITY_SIZE_GLOBAL"], 1)
         city:SetNumRealBuilding(GameInfoTypes["BUILDING_NO_UTILITY_WARNING"], 0)
 
-        --[[
-			if player:HasPolicy(GameInfoTypes["POLICY_MONARCHY"])then
-				city:SetNumRealBuilding(GameInfoTypes["BUILDING_TRADITION_MANPOWER"],5)
-				print ("Monarchy Manpower Bonus!")
-			else
-				city:SetNumRealBuilding(GameInfoTypes["BUILDING_TRADITION_MANPOWER"],0)
-			end
-			]]
-
     elseif cityPop >= 60 then
         city:SetNumRealBuilding(GameInfoTypes["BUILDING_CITY_SIZE_TOWN"], 1)
         city:SetNumRealBuilding(GameInfoTypes["BUILDING_CITY_SIZE_SMALL"], 1)
@@ -1112,15 +1103,6 @@ function CitySetSize(city, player, cityPop)
         city:SetNumRealBuilding(GameInfoTypes["BUILDING_CITY_SIZE_XL"], 1)
         city:SetNumRealBuilding(GameInfoTypes["BUILDING_CITY_SIZE_XXL"], 1)
         city:SetNumRealBuilding(GameInfoTypes["BUILDING_CITY_SIZE_GLOBAL"], 0)
-
-        --[[
-			if player:HasPolicy(GameInfoTypes["POLICY_MONARCHY"])then
-				city:SetNumRealBuilding(GameInfoTypes["BUILDING_TRADITION_MANPOWER"],4)
-				print ("Monarchy Manpower Bonus!")
-			else
-				city:SetNumRealBuilding(GameInfoTypes["BUILDING_TRADITION_MANPOWER"],0)
-			end
-			]]
 
         if city:IsHasBuilding(GameInfo.Buildings["BUILDING_MEDICAL_LAB"].ID) or
             city:IsHasBuilding(GameInfo.Buildings["BUILDING_VENICE_FONDACO"].ID) then --------Check if city has utility building?
@@ -1142,15 +1124,6 @@ function CitySetSize(city, player, cityPop)
         city:SetNumRealBuilding(GameInfoTypes["BUILDING_CITY_SIZE_XL"], 1)
         city:SetNumRealBuilding(GameInfoTypes["BUILDING_CITY_SIZE_XXL"], 0)
         city:SetNumRealBuilding(GameInfoTypes["BUILDING_CITY_SIZE_GLOBAL"], 0)
-
-        --[[
-			if player:HasPolicy(GameInfoTypes["POLICY_MONARCHY"])then
-				city:SetNumRealBuilding(GameInfoTypes["BUILDING_TRADITION_MANPOWER"],3)
-				print ("Monarchy Manpower Bonus!")
-			else
-				city:SetNumRealBuilding(GameInfoTypes["BUILDING_TRADITION_MANPOWER"],0)
-			end
-			]]
 
         if city:IsHasBuilding(
             GameInfo.Buildings["BUILDING_WATER_TREATMENT_FACTORY"].ID) or
@@ -1174,15 +1147,6 @@ function CitySetSize(city, player, cityPop)
         city:SetNumRealBuilding(GameInfoTypes["BUILDING_CITY_SIZE_XXL"], 0)
         city:SetNumRealBuilding(GameInfoTypes["BUILDING_CITY_SIZE_GLOBAL"], 0)
 
-        --[[
-			if player:HasPolicy(GameInfoTypes["POLICY_MONARCHY"])then
-				city:SetNumRealBuilding(GameInfoTypes["BUILDING_TRADITION_MANPOWER"],2)
-				print ("Monarchy Manpower Bonus!")
-			else
-				city:SetNumRealBuilding(GameInfoTypes["BUILDING_TRADITION_MANPOWER"],0)
-			end
-			]]
-
         if city:IsHasBuilding(GameInfo.Buildings["BUILDING_HOSPITAL"].ID) or
             city:IsHasBuilding(GameInfo.Buildings["BUILDING_VENICE_FONDACO"].ID) then --------Check if city has utility building?
             city:SetNumRealBuilding(
@@ -1205,15 +1169,6 @@ function CitySetSize(city, player, cityPop)
         city:SetNumRealBuilding(GameInfoTypes["BUILDING_CITY_SIZE_GLOBAL"], 0)
         city:SetNumRealBuilding(GameInfoTypes["BUILDING_TRADITION_FOOD_GROWTH"],
                                 0)
-
-        --[[
-			if player:HasPolicy(GameInfoTypes["POLICY_MONARCHY"])then
-				city:SetNumRealBuilding(GameInfoTypes["BUILDING_TRADITION_MANPOWER"],1)
-				print ("Monarchy Manpower Bonus!")
-			else
-				city:SetNumRealBuilding(GameInfoTypes["BUILDING_TRADITION_MANPOWER"],0)
-			end
-			]]
 
         if city:IsHasBuilding(GameInfo.Buildings["BUILDING_AQUEDUCT"].ID) or
             city:IsHasBuilding(GameInfo.Buildings["BUILDING_VENICE_FONDACO"].ID) or
@@ -1285,84 +1240,6 @@ function CitySetSize(city, player, cityPop)
     end
 
 end -------------Function End
-
------------------ Monarchy -------New Policy
---[[
-	function PolicyMonarchyAdopt(playerID,policyID)
-		local player = Players[playerID]
-	 
-		 if player== nil then
-			 return
-		 end
-		
-		if not player:IsHuman() then
-			print ("Ai Poicy, not available!")
-			return
-		end
-		
-		if player:GetNumCities() < 1 then 
-			return
-			print("Not enough city!")
-		end
-		
-		if policyID == nil then
-			return
-		   end 
-		   
-		if policyID == GameInfo.Policies["POLICY_MONARCHY"].ID then
-			for city in player:Cities() do
-				local CityPopManpower = 0
-				if not city:IsPuppet() and city:GetPopulation() > 2 then
-					local CityPop = city:GetPopulation()
-					CityPopManpower = math.floor(CityPop/3)
-					print("CityPopManpower:"..CityPopManpower)
-					city:SetNumRealBuilding(GameInfoTypes["BUILDING_TRADITION_MANPOWER"], CityPopManpower)
-				end
-			end
-		end 
-	end
-	GameEvents.PlayerAdoptPolicy.Add(PolicyMonarchyAdopt);
-	function PolicyMonarchyCityPop(hexX, hexY, population, citySize)
-		if hexX == nil or hexY ==nil then
-			print ("No Plot")
-		return
-		end	
-	
-		local plot = Map.GetPlot(ToGridFromHex(hexX, hexY))
-		local city = plot:GetPlotCity()
-		
-		if city == nil then
-			print ("No cities")
-		return
-		end
-		
-		local player = Players[city:GetOwner()]
-	
-		
-		if player == nil then
-			print ("No players")
-			return
-		end
-		
-		if player:IsBarbarian() or player:IsMinorCiv() then
-			return
-		end
-	
-		if player:IsHuman() then
-			if player:HasPolicy(GameInfoTypes["POLICY_MONARCHY"]) then
-				city:SetNumRealBuilding(GameInfoTypes["BUILDING_TRADITION_MANPOWER"], 0)
-				local CityPopManpower = 0
-				if not city:IsPuppet() and city:GetPopulation() > 2 then
-					local CityPop = city:GetPopulation()
-					CityPopManpower = math.floor(CityPop/3)
-					print("CityPopManpower:"..CityPopManpower)
-					city:SetNumRealBuilding(GameInfoTypes["BUILDING_TRADITION_MANPOWER"], CityPopManpower)
-				end
-			end
-		end
-	end
-	Events.SerialEventCityPopulationChanged.Add(PolicyMonarchyCityPop)
-	]]
 
 ------------remove real buildings when a national wonder which sent free building is built(used for grand_shrine & grand_temple)-by Null
 function RemoveRealBuildingsiffree(iPlayer, iCity, iBuilding, bGold, bFaith)
