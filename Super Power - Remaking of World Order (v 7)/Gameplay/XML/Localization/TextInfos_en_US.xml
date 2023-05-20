@@ -15506,7 +15506,7 @@
 			<Text>Maneuver Warfare</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_FIRST_STRIKE_HELP">
-			<Text>+1 [ICON_MOVES] Movement and ignore enemy ZOC.</Text>
+			<Text>+1 [ICON_MOVES] Movement and ignore enemy ZOC. +5 fixed damage when attacking.</Text>
 		</Row>
 
 

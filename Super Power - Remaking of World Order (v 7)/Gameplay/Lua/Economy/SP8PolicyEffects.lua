@@ -1,5 +1,5 @@
 -- ********************************************************
--- POLICY_HORSEMAN_TRAINING and POLICY_MILITARY_CASTE
+-- POLICY_MILITARY_CASTE
 -- ******************************************************** 
 function SPEConquestedCity(oldOwnerID, isCapital, cityX, cityY, newOwnerID, numPop, isConquest)
     local pPlayer = Players[newOwnerID]

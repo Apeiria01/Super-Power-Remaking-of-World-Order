@@ -24,12 +24,6 @@ function SPEBattleCustomDamage(iBattleUnitType, iBattleType,
 
 		local attUnitCombatType = attUnit:GetUnitCombatType() 
 
-		if attPlayer:HasPolicy(GameInfo.Policies["POLICY_HORSEMAN_TRAINING"].ID) 
-		and ((attUnitCombatType == GameInfoTypes.UNITCOMBAT_MOUNTED) or (attUnitCombatType == GameInfoTypes.UNITCOMBAT_ARMOR))
-		then
-			additionalDamage = additionalDamage + 5
-		end
-
 		if attPlayer:HasPolicy(GameInfo.Policies["POLICY_MILITARY_CASTE"].ID) then
 			if ( (attUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_ARCHERY_COMBAT"].ID) ) 
 			or ( (attUnitCombatType == GameInfoTypes.UNITCOMBAT_HELICOPTER) ) )
@@ -50,7 +44,6 @@ function SPEBattleCustomDamage(iBattleUnitType, iBattleType,
 
 		if attPlayer:HasPolicy(policyNewOrder) and not attPlayer:IsPolicyBlocked(policyNewOrder) then
 			additionalDamage = additionalDamage + (attPlayer:GetNumOriginalCapital() - 1) * 4;
-			print("@2 " .. (attPlayer:GetNumOriginalCapital() - 1) * 4);
 		end
 	end
 	return additionalDamage
