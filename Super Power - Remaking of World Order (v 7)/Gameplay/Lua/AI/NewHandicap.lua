@@ -1094,9 +1094,6 @@ function AIPromotion(iPlayer, iCity, iUnit, bGold, bFaith)
 			unit:Kill()
 		end
 	end
-	if unit~=nil and unit:GetID()~=nil then 
-		RemoveErrorPromotion(unit:GetOwner(), unit:GetID())
-	end
 end
 GameEvents.CityTrained.Add(AIPromotion)
 
