@@ -1997,6 +1997,7 @@
 			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_MELEE</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_CHARGE_1</PediaEntry>
+			<HeavyChargeAddMoves>1</HeavyChargeAddMoves>
 		</Row>
 		<Row>
 			<Type>PROMOTION_CHARGE_2</Type>
@@ -2009,6 +2010,8 @@
 			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_MELEE</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_CHARGE_2</PediaEntry>
+			<HeavyChargeCollateralPercent>100</HeavyChargeCollateralPercent>
+			<HeavyChargeExtraDamage>10</HeavyChargeExtraDamage>
 		</Row>
 		<Row>
 			<Type>PROMOTION_CHARGE_3</Type>
@@ -2021,6 +2024,8 @@
 			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_MELEE</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_CHARGE_2</PediaEntry>
+			<HeavyChargeCollateralPercent>50</HeavyChargeCollateralPercent>
+			<HeavyChargeExtraDamage>10</HeavyChargeExtraDamage>
 		</Row>
 		
 
