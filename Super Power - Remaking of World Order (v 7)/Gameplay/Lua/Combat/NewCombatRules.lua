@@ -350,16 +350,6 @@ function NewAttackEffect()
 		end
 
 
-		if not attUnit:IsDead() and not attUnit:IsHasPromotion(AntiDebuffID) and batType == GameInfoTypes["BATTLETYPE_MELEE"]
-			and defUnit:GetDomainType() == attUnit:GetDomainType()
-			and ((defUnit:IsHasPromotion(CQBCombat1ID) and attFinalUnitDamage < 20) or defUnit:IsHasPromotion(CQBCombat2ID))
-			and not defUnit:IsHasPromotion(GunpowderInfantryUnitID) and not defUnit:IsHasPromotion(InfantryUnitID)
-		then
-			attUnit:SetMoves(0)
-			Message = 3
-			print("Attacker Stopped!")
-		end
-
 		-------Fighters will damage land and naval AA units in an air-sweep
 		if not attUnit:IsDead() and not defUnit:IsDead() and defUnit:IsCombatUnit()
 			and batType == GameInfoTypes["BATTLETYPE_SWEEP"]
