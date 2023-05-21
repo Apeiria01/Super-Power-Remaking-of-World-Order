@@ -1950,13 +1950,13 @@
 			<Text>Enemy Under Suppression!</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_NOTIFICATION_ENEMY_SLOWED">
-			<Text>The enemy unit: {2_EnUName} is Under Suppression by your {1_UnitName}. [NEWLINE]It cannot perform [COLOR_NEGATIVE_TEXT]Melee Attack[ENDCOLOR] and only have 1 [ICON_MOVES] MP left for the next turn due to your Barrage Effect!</Text>
+			<Text>The enemy unit: {2_EnUName} is Under Suppression by your {1_UnitName}. [NEWLINE]It only have 1 [ICON_MOVES] MP left for the next turn due to your Barrage Effect and will suffer -1 [ICON_MOVES] MP till unitl its HP fully restored!</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_NOTIFICATION_US_SLOWED_SHORT">
 			<Text>A Unit is Under Suppression!</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_NOTIFICATION_US_SLOWED">
-			<Text>Your unit: {2_UnitName} is Under Suppression by an enemy {1_EnUName}. [NEWLINE]It cannot perform [COLOR_NEGATIVE_TEXT]Melee Attack[ENDCOLOR] and it will only have 1 [ICON_MOVES] MP left for the next turn due to enemy's Barrage Effect!</Text>
+			<Text>Your unit: {2_UnitName} is Under Suppression by an enemy {1_EnUName}. [NEWLINE]It only have 1 [ICON_MOVES] MP left for the next turn due to your Barrage Effect and will suffer -1 [ICON_MOVES] MP till unitl its HP fully restored!</Text>
 		</Row>
 
 
@@ -1964,13 +1964,13 @@
 			<Text>Enemy Pinned Down!</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_NOTIFICATION_ENEMY_STOPPED">
-			<Text>The enemy unit: {2_EnUName} has lost all [ICON_MOVES] MP for the next turn due to your {1_UnitName}'s Barrage Effect or Close Quarters Combat Effect!</Text>
+			<Text>The enemy unit: {2_EnUName} has lost all [ICON_MOVES] MP for the next turn due to your {1_UnitName}'s Barrage Effect or Close Quarters Combat Effect and cannot perform [COLOR_NEGATIVE_TEXT]Melee Attack[ENDCOLOR] unitl its HP fully restored!</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_NOTIFICATION_US_STOPPED_SHORT">
 			<Text>A Unit is Pinned Down!</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_NOTIFICATION_US_STOPPED">
-			<Text>Your unit: {2_UnitName} has lost all [ICON_MOVES] MP next turn due to an enemy {1_EnUName}'s Barrage Effect or Close Quarters Combat Effect!</Text>
+			<Text>Your unit: {2_UnitName} has lost all [ICON_MOVES] MP next turn due to an enemy {1_EnUName}'s Barrage Effect or Close Quarters Combat Effect and cannot perform [COLOR_NEGATIVE_TEXT]Melee Attack[ENDCOLOR] unitl its HP fully restored!</Text>
 		</Row>
 
 
