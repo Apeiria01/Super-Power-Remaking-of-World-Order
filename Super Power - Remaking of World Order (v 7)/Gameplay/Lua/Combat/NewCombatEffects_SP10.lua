@@ -5,8 +5,8 @@ local iBarrageCollecton = GameInfoTypes["PROMOTION_COLLECTION_BARRAGE"];
 local iMovementLossCollecton = GameInfoTypes["PROMOTION_COLLECTION_MOVEMENT_LOST"];
 local iMovementLoss2 = GameInfoTypes["PROMOTION_MOVEMENT_LOST_2"];
 local iMoveDenominator = GameDefines["MOVE_DENOMINATOR"];
-GameEvents.OnTriggerAddEnemyPromotion.Add(function(eThisPromotionType, eThisPromotionCollection, iThisPlayer,
-                                                   eThisBattleType, iThisUnit, iThisUnitType, eThatPromotionType,
+GameEvents.OnTriggerAddEnemyPromotion.Add(function(eThisPromotionType, eThisPromotionCollection, eThisBattleType, iThisPlayer,
+                                                   iThisUnit, iThisUnitType, eThatPromotionType,
                                                    eThatPromotionCollection, iThatPlayer, iThatUnit, iThatUnitType)
     if eThisPromotionCollection ~= iBarrageCollecton or eThatPromotionCollection ~= iMovementLossCollecton then
         return;
@@ -61,8 +61,8 @@ end);
 
 local iSunderCollectionID = GameInfoTypes["PROMOTION_COLLECTION_SUNDER"];
 local iPenetrationCollectionID = GameInfoTypes["PROMOTION_COLLECTION_PENETRATION"];
-GameEvents.OnTriggerAddEnemyPromotion.Add(function(eThisPromotionType, eThisPromotionCollection, iThisPlayer,
-                                                   eThisBattleType, iThisUnit, iThisUnitType, eThatPromotionType,
+GameEvents.OnTriggerAddEnemyPromotion.Add(function(eThisPromotionType, eThisPromotionCollection, eThisBattleType, iThisPlayer,
+                                                   iThisUnit, iThisUnitType, eThatPromotionType,
                                                    eThatPromotionCollection, iThatPlayer, iThatUnit, iThatUnitType)
     if eThisPromotionCollection ~= iSunderCollectionID or eThatPromotionCollection ~= iPenetrationCollectionID then
         return;
@@ -98,8 +98,8 @@ end);
 
 local iColCollectionID = GameInfoTypes["PROMOTION_COLLECTION_COLLATERAL_DAMAGE"];
 local iWeakenCollectionID = GameInfoTypes["PROMOTION_COLLECTION_MORAL_WEAKEN"];
-GameEvents.OnTriggerAddEnemyPromotion.Add(function(eThisPromotionType, eThisPromotionCollection, iThisPlayer,
-                                                   eThisBattleType, iThisUnit, iThisUnitType, eThatPromotionType,
+GameEvents.OnTriggerAddEnemyPromotion.Add(function(eThisPromotionType, eThisPromotionCollection, eThisBattleType, iThisPlayer,
+                                                   iThisUnit, iThisUnitType, eThatPromotionType,
                                                    eThatPromotionCollection, iThatPlayer, iThatUnit, iThatUnitType)
     if eThisPromotionCollection ~= iColCollectionID or eThatPromotionCollection ~= iWeakenCollectionID then
         return;
@@ -137,8 +137,8 @@ local iDestroySupplyCollectionID = GameInfoTypes["PROMOTION_COLLECTION_DESTROY_S
 local iLoseSupplyCollectionID = GameInfoTypes["PROMOTION_COLLECTION_LOSE_SUPPLY"];
 local DestroySupply2ID = GameInfoTypes["PROMOTION_DESTROY_SUPPLY_2"]
 local LoseSupplyID = GameInfoTypes["PROMOTION_LOSE_SUPPLY"]
-GameEvents.OnTriggerAddEnemyPromotion.Add(function(eThisPromotionType, eThisPromotionCollection, iThisPlayer,
-                                                   eThisBattleType, iThisUnit, iThisUnitType, eThatPromotionType,
+GameEvents.OnTriggerAddEnemyPromotion.Add(function(eThisPromotionType, eThisPromotionCollection, eThisBattleType, iThisPlayer,
+                                                   iThisUnit, iThisUnitType, eThatPromotionType,
                                                    eThatPromotionCollection, iThatPlayer, iThatUnit, iThatUnitType)
     if eThisPromotionCollection ~= iDestroySupplyCollectionID or eThatPromotionCollection ~= iLoseSupplyCollectionID then
         return;
