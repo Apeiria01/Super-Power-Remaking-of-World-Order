@@ -1997,6 +1997,7 @@
 			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_MELEE</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_CHARGE_1</PediaEntry>
+			<HeavyChargeAddMoves>1</HeavyChargeAddMoves>
 		</Row>
 		<Row>
 			<Type>PROMOTION_CHARGE_2</Type>
@@ -2009,6 +2010,8 @@
 			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_MELEE</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_CHARGE_2</PediaEntry>
+			<HeavyChargeCollateralPercent>100</HeavyChargeCollateralPercent>
+			<HeavyChargeExtraDamage>10</HeavyChargeExtraDamage>
 		</Row>
 		<Row>
 			<Type>PROMOTION_CHARGE_3</Type>
@@ -2021,6 +2024,8 @@
 			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_MELEE</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_CHARGE_2</PediaEntry>
+			<HeavyChargeCollateralPercent>50</HeavyChargeCollateralPercent>
+			<HeavyChargeExtraDamage>10</HeavyChargeExtraDamage>
 		</Row>
 		
 
@@ -4061,6 +4066,10 @@
 			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_AIR</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_AIR_TARGETING_1</PediaEntry>
+			<CollateralDamageFixed>20</CollateralDamageFixed>
+			<CollateralDamagePlotUnitLimit>4</CollateralDamagePlotUnitLimit>
+			<CollateralOnlyCity>1</CollateralOnlyCity>
+			<CollateralOnlyUnit>0</CollateralOnlyUnit>
 		</Row>
 		<Row>
 			<Type>PROMOTION_AIR_TARGETING_2</Type>
@@ -4073,6 +4082,10 @@
 			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_AIR</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_AIR_TARGETING_2</PediaEntry>
+			<CollateralDamageFixed>20</CollateralDamageFixed>
+			<CollateralDamagePlotUnitLimit>4</CollateralDamagePlotUnitLimit>
+			<CollateralOnlyCity>1</CollateralOnlyCity>
+			<CollateralOnlyUnit>0</CollateralOnlyUnit>
 		</Row>
 		<Row>
 			<Type>PROMOTION_AIR_TARGETING_3</Type>
@@ -4085,6 +4098,10 @@
 			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_AIR</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_AIR_TARGETING_3</PediaEntry>
+			<CollateralDamageFixed>20</CollateralDamageFixed>
+			<CollateralDamagePlotUnitLimit>4</CollateralDamagePlotUnitLimit>
+			<CollateralOnlyCity>1</CollateralOnlyCity>
+			<CollateralOnlyUnit>0</CollateralOnlyUnit>
 		</Row>
 
 		<Row>

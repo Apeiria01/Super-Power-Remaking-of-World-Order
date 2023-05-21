@@ -287,7 +287,7 @@ SettlerMissionButton = {
   Disabled = function(action, unit) 
     local plot = unit:GetPlot();
     local city = plot:GetPlotCity()
-    return not plot:IsCity() or city == nil or city:GetOwner() ~= unit:GetOwner() or city:IsHasBuilding(GameInfoTypes["BUILDING_NO_UTILITY_WARNING"]);
+    return not plot:IsCity() or city == nil or city:GetOwner() ~= unit:GetOwner() or not city:CanGrowNormally();
   end, -- or nil or a boolean, default is false
   
   Action = function(action, unit, eClick)

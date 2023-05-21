@@ -1177,6 +1177,7 @@
 			<IconAtlas>NEWLUXURIES_RESOURCE_ATLAS</IconAtlas>
 			<TradeRouteLandDistanceModifier>50</TradeRouteLandDistanceModifier>
 			<TradeRouteSeaDistanceModifier>50</TradeRouteSeaDistanceModifier>
+			<EnableAllCityScaleGrowth>1</EnableAllCityScaleGrowth>
 		</Row>
 
 

@@ -13281,7 +13281,7 @@
 			<Text>機動戰術</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_FIRST_STRIKE_HELP">
-			<Text>+1[ICON_MOVES]移動力，無視敵方控制區域（ZOC）。</Text>
+			<Text>+1[ICON_MOVES]移動力，無視敵方控制區域（ZOC）。攻擊時+5固定傷害。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_EMP_ATTACK">

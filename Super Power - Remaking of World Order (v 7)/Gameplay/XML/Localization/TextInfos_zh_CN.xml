@@ -13471,7 +13471,7 @@
 			<Text>机动战术</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_FIRST_STRIKE_HELP">
-			<Text>+1[ICON_MOVES]移动力，无视敌方控制区域（ZOC）。</Text>
+			<Text>+1[ICON_MOVES]移动力，无视敌方控制区域（ZOC）。攻击时+5固定伤害。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_EMP_ATTACK">

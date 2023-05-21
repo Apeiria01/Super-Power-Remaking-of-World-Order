@@ -574,6 +574,7 @@
 			<ObsoleteTech>TECH_URBANLIZATION</ObsoleteTech>
 			<EnhancedYieldTech>TECH_INTERNET</EnhancedYieldTech>
 			<TechEnhancedTourism>2</TechEnhancedTourism>
+			<EnableCityScaleGrowth>CITYSCALE_MEDIUM</EnableCityScaleGrowth>
 		</Row>
 		<Row>
 			<Type>BUILDING_BASILICA_CISTERN</Type>
@@ -593,6 +594,7 @@
 			<HurryCostModifier>50</HurryCostModifier>
 			<IconAtlas>EXPANSION2_BUILDING_ATLAS</IconAtlas>
 			<PortraitIndex>11</PortraitIndex>
+			<EnableCityScaleGrowth>CITYSCALE_MEDIUM</EnableCityScaleGrowth>
 		</Row>
 		
 		
@@ -613,6 +615,7 @@
 			<HurryCostModifier>100</HurryCostModifier>
 			<IconAtlas>SPBuildings_ATLAS</IconAtlas>
 			<PortraitIndex>3</PortraitIndex>
+			<EnableCityScaleGrowth>CITYSCALE_MEDIUM</EnableCityScaleGrowth>
 		</Row>
 		
 		
@@ -762,6 +765,7 @@
 			<HurryCostModifier>100</HurryCostModifier>
 			<IconAtlas>SPBuildings_ATLAS</IconAtlas>
 			<PortraitIndex>2</PortraitIndex>
+			<EnableCityScaleGrowth>CITYSCALE_XL</EnableCityScaleGrowth>
 		</Row>
 
 		<Row>
@@ -956,6 +960,7 @@
 			<HurryCostModifier>125</HurryCostModifier>
 			<IconAtlas>BW_ATLAS_1</IconAtlas>
 			<PortraitIndex>45</PortraitIndex>
+			<EnableCityScaleGrowth>CITYSCALE_LARGE</EnableCityScaleGrowth>
 		</Row>
 
 
@@ -1457,6 +1462,7 @@
 			<HurryCostModifier>150</HurryCostModifier>
 			<IconAtlas>BW_ATLAS_1</IconAtlas>
 			<PortraitIndex>62</PortraitIndex>
+			<EnableCityScaleGrowth>CITYSCALE_XXL</EnableCityScaleGrowth>
 		</Row>
 
 		<Row>

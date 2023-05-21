@@ -1,3 +1,5 @@
+update UnitPromotions set AddEnemyPromotionImmune = 1 where Type = 'PROMOTION_ANTI_DEBUFF';
+
 -- PROMOTION_COLLECTION_BARRAGE -> PROMOTION_COLLECTION_MOVEMENT_LOST
 insert into PromotionCollections(Type) values ('PROMOTION_COLLECTION_BARRAGE');
 insert into PromotionCollections_Entries(CollectionType, PromotionIndex, PromotionType, TriggerRangedAttack, TriggerHPFixed, TriggerLuaHook) values
@@ -18,8 +20,6 @@ insert into PromotionCollections(Type) values ('PROMOTION_COLLECTION_SUNDER');
 insert into PromotionCollections_Entries(CollectionType, PromotionIndex, PromotionType, TriggerRangedAttack, TriggerMeleeAttack, TriggerHPFixed, TriggerLuaHook) values
 ('PROMOTION_COLLECTION_SUNDER', 1, 'PROMOTION_SUNDER_1', 1, 1, 75, 1),
 ('PROMOTION_COLLECTION_SUNDER', 2, 'PROMOTION_SUNDER_2', 1, 1, 90, 1);
-
-update UnitPromotions set AddEnemyPromotionImmune = 1 where Type = 'PROMOTION_ANTI_DEBUFF';
 
 insert into PromotionCollections(Type) values ('PROMOTION_COLLECTION_PENETRATION');
 insert into PromotionCollections_Entries(CollectionType, PromotionIndex, PromotionType) values

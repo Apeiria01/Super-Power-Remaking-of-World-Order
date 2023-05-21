@@ -242,6 +242,10 @@
 			<Where Name="GLOBAL_UNIT_MOVES_AFTER_DISEMBARK"/>
 			<Set Value="1"/>
 		</Update>
+		<Update>
+			<Where Name="GLOBAL_CITY_SCALES"/>
+			<Set Value="1"/>
+		</Update>
 	</CustomModOptions>
 
 

@@ -488,7 +488,7 @@ function RefreshCityBanner(cityBanner, iActiveTeam, iActivePlayer)
 					sCityScaleIcon = "[ICON_CITYBANNER_CITY_TOWN]";
 					sCityScaleIconTT = Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_SIZE_TOWN_HELP");
 				end
-				if     city:IsHasBuilding(GameInfoTypes["BUILDING_NO_UTILITY_WARNING"])then
+				if     not city:CanGrowNormally() then
 					if sCityScaleIcon == nil then
 						sCityScaleIcon = "";
 					end
