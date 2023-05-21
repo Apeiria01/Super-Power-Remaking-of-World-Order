@@ -147,16 +147,11 @@ function NewAttackEffect()
 	end
 
 	------- PromotionID
-	local GunpowderInfantryUnitID = GameInfo.UnitPromotions["PROMOTION_GUNPOWDER_INFANTRY_COMBAT"].ID
-	local InfantryUnitID = GameInfo.UnitPromotions["PROMOTION_INFANTRY_COMBAT"].ID
 	local KnightID = GameInfo.UnitPromotions["PROMOTION_KNIGHT_COMBAT"].ID
 	local TankID = GameInfo.UnitPromotions["PROMOTION_TANK_COMBAT"].ID
 	local PillageFreeID = GameInfo.UnitPromotions["PROMOTION_CITY_PILLAGE_FREE"].ID
 	local SpeComID = GameInfo.UnitPromotions["PROMOTION_SPECIAL_FORCES_COMBAT"].ID
 	local SPForce2ID = GameInfo.UnitPromotions["PROMOTION_SP_FORCE_2"].ID
-
-	local CQBCombat1ID = GameInfo.UnitPromotions["PROMOTION_CQB_COMBAT_1"].ID
-	local CQBCombat2ID = GameInfo.UnitPromotions["PROMOTION_CQB_COMBAT_2"].ID
 
 	local KillingEffectsID = GameInfo.UnitPromotions["PROMOTION_GAIN_MOVES_AFFER_KILLING"].ID
 
@@ -164,14 +159,12 @@ function NewAttackEffect()
 	local AntiEMPID = GameInfo.UnitPromotions["PROMOTION_ANTI_EMP"].ID
 
 	local ChainReactionID = GameInfo.UnitPromotions["PROMOTION_CHAIN_REACTION"].ID
-
 	local AntiDebuffID = GameInfo.UnitPromotions["PROMOTION_ANTI_DEBUFF"].ID
 
 	-------Nuclear Rocket Launcher Kills itself (<suicide>is not working!)
 	if attUnit:GetUnitType() == GameInfoTypes.UNIT_BAZOOKA then
 		attUnit:ChangeDamage(attUnit:GetCurrHitPoints());
 	end
-
 
 	-- Carrier-based aircrafts give EXP to carrier
 	if not attUnit:IsDead() and attUnit:IsCargo() and batType == GameInfoTypes["BATTLETYPE_AIR"]
