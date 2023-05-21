@@ -524,48 +524,7 @@ function ResourcePolicyEffects(playerID, policyID)
 end
 GameEvents.PlayerAdoptPolicy.Add(ResourcePolicyEffects);
 
-----------------City sized changing by population growth
-
-function CitySizeChanged(hexX, hexY, population, citySize)
-    if hexX == nil or hexY == nil then
-        print("No Plot")
-        return
-    end
-
-    local plot = Map.GetPlot(ToGridFromHex(hexX, hexY))
-    local city = plot:GetPlotCity()
-
-    if city == nil then
-        print("No cities")
-        return
-    end
-
-    local player = Players[city:GetOwner()]
-
-    if player == nil then
-        print("No players")
-        return
-    end
-
-    if player:IsBarbarian() or player:IsMinorCiv() then return end
-
-end -------------Function End
-Events.SerialEventCityPopulationChanged.Add(CitySizeChanged)
-
 ----------------------------------------------Utilities----------------------------------------
---
----- On city sell a building
--- function CitySellGovernment(playerID, cityID, buildingID)
---	local pPlayer = Players[playerID]
---	local pBuilding = GameInfo.Buildings[buildingID]
---	if pBuilding.CityHallLevel > 0 then -- we sell the government!
---		local pCity = pPlayer:GetCityByID(cityID)
---		pCity:SetPuppet(true)
---		pCity:SetNumRealBuilding(bPuppetGov, 1) -- we do not need to consider Venice because they cannot sell governments!
---	end
--- end
--- GameEvents.CitySoldBuilding.Add(CitySellGovernment)
---
 
 --------------------- International Immigration
 function InternationalImmigration(TargetPlayerID)
