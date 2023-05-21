@@ -148,19 +148,12 @@ function NewAttackEffect()
 
 	------- PromotionID
 	local GunpowderInfantryUnitID = GameInfo.UnitPromotions["PROMOTION_GUNPOWDER_INFANTRY_COMBAT"].ID
-	local NavalRangedShipUnitID = GameInfo.UnitPromotions["PROMOTION_NAVAL_RANGED_SHIP"].ID
-	local NavalRangedCruiserUnitID = GameInfo.UnitPromotions["PROMOTION_NAVAL_RANGED_CRUISER"].ID
-	local StragegicBomberUnitID = GameInfo.UnitPromotions["PROMOTION_STRATEGIC_BOMBER"].ID
 	local InfantryUnitID = GameInfo.UnitPromotions["PROMOTION_INFANTRY_COMBAT"].ID
 	local KnightID = GameInfo.UnitPromotions["PROMOTION_KNIGHT_COMBAT"].ID
 	local TankID = GameInfo.UnitPromotions["PROMOTION_TANK_COMBAT"].ID
 	local PillageFreeID = GameInfo.UnitPromotions["PROMOTION_CITY_PILLAGE_FREE"].ID
 	local SpeComID = GameInfo.UnitPromotions["PROMOTION_SPECIAL_FORCES_COMBAT"].ID
 	local SPForce2ID = GameInfo.UnitPromotions["PROMOTION_SP_FORCE_2"].ID
-
-	local Charge1ID = GameInfo.UnitPromotions["PROMOTION_CHARGE_1"].ID
-	local Charge2ID = GameInfo.UnitPromotions["PROMOTION_CHARGE_2"].ID
-	local Charge3ID = GameInfo.UnitPromotions["PROMOTION_CHARGE_3"].ID
 
 	local CQBCombat1ID = GameInfo.UnitPromotions["PROMOTION_CQB_COMBAT_1"].ID
 	local CQBCombat2ID = GameInfo.UnitPromotions["PROMOTION_CQB_COMBAT_2"].ID
@@ -169,12 +162,6 @@ function NewAttackEffect()
 
 	local EMPBomberID = GameInfo.UnitPromotions["PROMOTION_EMP_ATTACK"].ID
 	local AntiEMPID = GameInfo.UnitPromotions["PROMOTION_ANTI_EMP"].ID
-
-	local AirTarget1ID = GameInfo.UnitPromotions["PROMOTION_AIR_TARGETING_1"].ID
-	local AirTarget2ID = GameInfo.UnitPromotions["PROMOTION_AIR_TARGETING_2"].ID
-	local AirTarget3ID = GameInfo.UnitPromotions["PROMOTION_AIR_TARGETING_3"].ID
-
-	local AirTarget_CarrierID = GameInfo.UnitPromotions["PROMOTION_CARRIER_FIGHTER_SIEGE_2"].ID
 
 	local ChainReactionID = GameInfo.UnitPromotions["PROMOTION_CHAIN_REACTION"].ID
 
@@ -323,49 +310,6 @@ function NewAttackEffect()
 
 		end
 
-		------- Fix Strong Unit cannot capture city Bug(damage overflow)
-		if not attUnit:IsDead() and
-			(
-			attUnit:GetUnitCombatType() == GameInfoTypes.UNITCOMBAT_NAVALMELEE or
-				attUnit:GetUnitCombatType() == GameInfoTypes.UNITCOMBAT_ARMOR or attUnit:IsHasPromotion(GunpowderInfantryUnitID)
-				or attUnit:IsHasPromotion(NavalRangedShipUnitID) or attUnit:IsHasPromotion(NavalRangedCruiserUnitID))
-			and attUnit:GetBaseCombatStrength() >= 100
-		then
-			print("Strong Unit is attacking the city!")
-			local IsAdjacentToDefendingCity = false
-			for i = 0, 5 do
-				local adjPlot = Map.PlotDirection(plotX, plotY, i)
-				if adjPlot:GetX() == attUnit:GetX() and adjPlot:GetY() == attUnit:GetY() then
-					IsAdjacentToDefendingCity = true
-					print("Unit is adjacent to the city!")
-				end
-			end
-			if attUnit:GetBaseCombatStrength() / (defCity:GetStrengthValue() / 100) >= 11 and defCity:GetPopulation() < 15 and
-				IsAdjacentToDefendingCity then
-				local TempUnit = attPlayer:InitUnit(GameInfoTypes.UNIT_ROMAN_LEGION, plotX, plotY, UNITAI_ATTACK)
-				TempUnit:Kill()
-				attUnit:SetXY(plotX, plotY)
-				--			attUnit:AcquireCity(defCity)
-				print("Strong Unit Takes the city!")
-			end
-		end
-
-
-		------- Fix Stealth Unit cannot capture city Bug
-		if not attUnit:IsDead() and batType == GameInfoTypes["BATTLETYPE_MELEE"]
-			and attPlot == batPlot and defCity:GetDamage() >= defCity:GetMaxHitPoints()
-		then
-			local TempUnit = attPlayer:InitUnit(GameInfoTypes.UNIT_ROMAN_LEGION, plotX, plotY, UNITAI_ATTACK)
-			TempUnit:Kill()
-			attUnit:SetXY(plotX, plotY)
-			--		attPlayer:AcquireCity(defCity)
-			print("Special Forces Takes the city!")
-		end
-
-
-
-
-
 		-------------- Ranged Attack Kill Popluation of Heavily Damaged City
 		if batType == GameInfoTypes["BATTLETYPE_RANGED"] or batType == GameInfoTypes["BATTLETYPE_AIR"] then
 			--		print ("Ranged Unit attacked City!")
@@ -383,42 +327,9 @@ function NewAttackEffect()
 						local heading = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_CITY_POPULATION_LOST_BY_RANGEDFIRE_SHORT")
 						pPlayer:AddNotification(NotificationTypes.NOTIFICATION_STARVING, text, heading, plotX, plotY)
 					end
-
-
 				end
 			end
 		end
-
-		------------------------Attack Aircraft attack units inside the city
-		if (attUnit:IsHasPromotion(AirTarget1ID) or attUnit:IsHasPromotion(AirTarget_CarrierID))
-			and not attUnit:IsHasPromotion(StragegicBomberUnitID) and batPlot:IsUnit()
-		then
-			print("Attak AirCraft attacking City!")
-			local unitCount = batPlot:GetNumUnits()
-			if unitCount > 0 then
-				print("Units in the city!")
-				for i = 0, unitCount - 1, 1 do
-					local pFoundUnit = batPlot:GetUnit(i)
-					if (pFoundUnit ~= nil) then
-						local iChangeDamage = 20;
-						print("Units in the city are attacked!")
-						if attUnit:IsHasPromotion(AirTarget2ID) then
-							iChangeDamage = iChangeDamage + 20;
-						end
-						if attUnit:IsHasPromotion(AirTarget3ID) then
-							iChangeDamage = iChangeDamage + 20;
-						end
-						if iChangeDamage >= pFoundUnit:GetCurrHitPoints() then
-							iChangeDamage = pFoundUnit:GetCurrHitPoints();
-							local eUnitType = pFoundUnit:GetUnitType();
-						end
-						pFoundUnit:ChangeDamage(iChangeDamage);
-					end
-				end
-			end
-		end
-
-
 
 		-- Attacking a Unit!
 	elseif defUnit then
