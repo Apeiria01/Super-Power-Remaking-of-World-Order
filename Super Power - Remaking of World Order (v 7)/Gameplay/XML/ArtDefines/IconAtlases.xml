@@ -223,6 +223,34 @@
 		</Row>
 
 
+		<Row>
+			<Atlas>SP10_PROMOTION_ATLAS</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>SP10_Promotion_Atlas032.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SP10_PROMOTION_ATLAS</Atlas>
+			<IconSize>45</IconSize>
+			<Filename>SP10_Promotion_Atlas045.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SP10_PROMOTION_ATLAS</Atlas>
+			<IconSize>64</IconSize>
+			<Filename>SP10_Promotion_Atlas064.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SP10_PROMOTION_ATLAS</Atlas>
+			<IconSize>256</IconSize>
+			<Filename>SP10_Promotion_Atlas256.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
 
 
 		<Row>

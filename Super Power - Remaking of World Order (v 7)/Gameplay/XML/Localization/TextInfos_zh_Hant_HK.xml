@@ -5261,13 +5261,13 @@
 			<Text>敵軍被火力阻礙！</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_NOTIFICATION_ENEMY_SLOWED">
-			<Text>敵方{2_EnUName}在你的{1_UnitName}火力阻礙下移動力降低至1，並且不能近戰攻擊，持續一回合。</Text>
+			<Text>敵方{2_EnUName}在你的{1_UnitName}火力阻礙下移動力降低至1，持續一回合，並且恢復滿員前移動力上限減1。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_NOTIFICATION_US_SLOWED_SHORT">
 			<Text>我軍被火力阻礙！</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_NOTIFICATION_US_SLOWED">
-			<Text>你的{2_UnitName}在敵方{1_EnUName}火力阻礙下移動力降低至1，並且不能近戰攻擊，持續一回合。</Text>
+			<Text>你的{2_UnitName}在敵方{1_EnUName}火力阻礙下移動力降低至1，持續一回合，並且恢復滿員前移動力上限減1。</Text>
 		</Row>
 
 
@@ -5275,13 +5275,13 @@
 			<Text>敵軍被火力壓制！</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_NOTIFICATION_ENEMY_STOPPED">
-			<Text>敵方{2_EnUName}在你的{1_UnitName}火力壓制下移動力喪失，持續一回合。</Text>
+			<Text>敵方{2_EnUName}在你的{1_UnitName}火力壓製下移動力喪失，持續一回合，並且恢復滿員前不能近戰攻擊。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_NOTIFICATION_US_STOPPED_SHORT">
 			<Text>我軍被火力壓制！</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_NOTIFICATION_US_STOPPED">
-			<Text>你的{2_UnitName}在敵方{1_EnUName}火力阻礙下移動力喪失，持續一回合。</Text>
+			<Text>你的{2_UnitName}在敵方{1_EnUName}火力阻礙下移動力喪失，持續一回合，並且恢復滿員前不能近戰攻擊。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_SP_NOTIFICATION_ENEMY_MORAL_WEAKEN_SHORT">

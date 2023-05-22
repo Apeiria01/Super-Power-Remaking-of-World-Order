@@ -931,8 +931,8 @@
 			<!--<EnemyHealChange>15</EnemyHealChange>
 			<NeutralHealChange>15</NeutralHealChange>
 			<FriendlyHealChange>15</FriendlyHealChange>-->
-			<PortraitIndex>32</PortraitIndex>
-			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+			<PortraitIndex>7</PortraitIndex>
+			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_HEAL</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_MEDIC_II</PediaEntry>
 		</Row>
@@ -4952,8 +4952,8 @@
 			<Description>TXT_KEY_PROMOTION_JAPANESE_SAMURAI</Description>
 			<Help>TXT_KEY_PROMOTION_JAPANESE_SAMURAI_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PortraitIndex>14</PortraitIndex>
+			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<FlankAttackModifier>50</FlankAttackModifier>
 			<PediaEntry>TXT_KEY_PROMOTION_JAPANESE_SAMURAI</PediaEntry>
@@ -4965,8 +4965,8 @@
 			<Help>TXT_KEY_PROMOTION_JAPANESE_SAMURAI_CULTURE_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<LostWithUpgrade>true</LostWithUpgrade>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PortraitIndex>15</PortraitIndex>
+			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_JAPANESE_SAMURAI_CULTURE</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
@@ -4977,8 +4977,8 @@
 			<Description>TXT_KEY_PROMOTION_GERMAN_LONGSWORDSMAN</Description>
 			<Help>TXT_KEY_PROMOTION_GERMAN_LONGSWORDSMAN_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PortraitIndex>11</PortraitIndex>
+			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_GERMAN_LONGSWORDSMAN</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
@@ -4991,8 +4991,8 @@
 			<Help>TXT_KEY_PROMOTION_GERMAN_LONGSWORDSMAN_GOLD_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<LostWithUpgrade>true</LostWithUpgrade>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PortraitIndex>4</PortraitIndex>
+			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_GERMAN_LONGSWORDSMAN_GOLD</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
@@ -5188,8 +5188,8 @@
 			<Help>TXT_KEY_PROMOTION_GAIN_EXPERIENCE_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<ExperiencePercent>100</ExperiencePercent>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PortraitIndex>13</PortraitIndex>
+			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_GAIN_EXPERIENCE</PediaEntry>
 			<MultipleInitExperence>100</MultipleInitExperence>
@@ -5299,10 +5299,10 @@
 			<Help>TXT_KEY_PROMOTION_CITY_PILLAGE_FREE_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<CannotBeChosen>true</CannotBeChosen>
-			<PortraitIndex>59</PortraitIndex>
+			<PortraitIndex>6</PortraitIndex>
 			<FreePillageMoves>true</FreePillageMoves>
 			<CityAttackPlunderModifier>200</CityAttackPlunderModifier>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_CITY_PILLAGE_FREE</PediaEntry>
 		</Row>
@@ -5314,8 +5314,8 @@
 			<Help>TXT_KEY_PROMOTION_SPN_MAMLUK_COMBAT_FAITH_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<CannotBeChosen>true</CannotBeChosen>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_SPN_MAMLUK_COMBAT_FAITH</PediaEntry>
 			<UnitAttackFaithBonus>100</UnitAttackFaithBonus>
@@ -5344,8 +5344,8 @@
 			<CannotBeChosen>true</CannotBeChosen>
 			<NearbyEnemyCombatMod>-10</NearbyEnemyCombatMod>
 			<NearbyEnemyCombatRange>2</NearbyEnemyCombatRange>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PortraitIndex>3</PortraitIndex>
+			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_FEARED_ELEPHANT</PediaEntry>
 		</Row>
@@ -6204,8 +6204,8 @@
 			<Description>TXT_KEY_PROMOTION_NUMIDIAN_MARCH</Description>
 			<Help>TXT_KEY_PROMOTION_NUMIDIAN_MARCH_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PortraitIndex>12</PortraitIndex>
+			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_NUMIDIAN_MARCH</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
@@ -6322,8 +6322,8 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<CanMoveAfterAttacking>true</CanMoveAfterAttacking>
 			<ExtraAttacks>1</ExtraAttacks>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PortraitIndex>5</PortraitIndex>
+			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PEDIA_PROMOTION_SECOND_ATTACK</PediaEntry>
 		</Row>

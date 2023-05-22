@@ -567,6 +567,7 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
     <Folder Include="UI\Art\IconAtlases\Units" />
     <Folder Include="UI\Art\IconAtlases\Technologies" />
     <Folder Include="UI\Art\IconAtlases\Resources" />
+    <Folder Include="UI\Art\IconAtlases\Units\Promotion" />
     <Folder Include="UI\Art\Images" />
     <Folder Include="UI\Art\Images\Satellites" />
     <Folder Include="UI\Art\Models" />
@@ -5045,6 +5046,14 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
+    <Content Include="UI\Art\Flags\FontIcons_Promotions_SP10.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Flags\FontIcons_Promotions_SP10.ggxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
     <Content Include="UI\Art\Flags\Strategic\SV_Doppe.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
@@ -5118,6 +5127,22 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="UI\Art\IconAtlases\Extra\SP8Units&amp;BuildingsAtlas256.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\IconAtlases\Units\Promotion\SP10_Promotion_Atlas032.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\IconAtlases\Units\Promotion\SP10_Promotion_Atlas045.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\IconAtlases\Units\Promotion\SP10_Promotion_Atlas064.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\IconAtlases\Units\Promotion\SP10_Promotion_Atlas256.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
