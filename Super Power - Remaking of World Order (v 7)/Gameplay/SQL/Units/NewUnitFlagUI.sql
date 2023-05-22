@@ -247,3 +247,14 @@ UPDATE UnitPromotions SET IconStringSP = '[ICON_PROMOTION_ELITE]'               
 UPDATE UnitPromotions SET IconStringSP = '[ICON_PROMOTION_SPACE_ELEVATOR]'      WHERE (IconAtlas = 'SP_PROMOTION_OLD_ATLAS' OR IconAtlas = 'SPPROMOTION_ATLAS') AND PortraitIndex = 19;
 UPDATE UnitPromotions SET IconStringSP = '[ICON_PROMOTION_GROUP]'               WHERE (IconAtlas = 'SP_PROMOTION_OLD_ATLAS' OR IconAtlas = 'SPPROMOTION_ATLAS') AND PortraitIndex = 20;
 UPDATE UnitPromotions SET IconStringSP = '[ICON_PROMOTION_GROUP]'               WHERE IconAtlas = 'GROUP_PROMOTION_ATLAS';
+
+
+INSERT OR REPLACE INTO IconFontTextures(IconFontTexture,IconFontTextureFile)
+SELECT 'ICON_FONT_TEXTURE_SP10_PROMOTIONS','FontIcons_Promotions_SP10';
+
+INSERT OR REPLACE INTO IconFontMapping(IconName,IconFontTexture,IconMapping) 
+SELECT 'ICON_PROMOTION_SP10_' || CAST(PortraitIndex+1 AS TEXT),'ICON_FONT_TEXTURE_SP10_PROMOTIONS',PortraitIndex+1 
+FROM UnitPromotions WHERE IconAtlas = 'SP10_PROMOTION_ATLAS';
+
+UPDATE UnitPromotions SET IconStringSP = '[ICON_PROMOTION_SP10_' || CAST(PortraitIndex+1 AS TEXT)|| ']'
+WHERE IconAtlas = 'SP10_PROMOTION_ATLAS';
