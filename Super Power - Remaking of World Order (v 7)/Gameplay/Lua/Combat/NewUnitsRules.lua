@@ -386,7 +386,7 @@ function OnCorpsArmeeSP(iPlayerID, iUnitID)
 				and pEUnit:GetUnitCombatType() ~= GameInfoTypes.UNITCOMBAT_RECON
 				and pEUnit:IsCombatUnit() and not pEUnit:IsImmobile()
 				and not pEUnit:IsHasPromotion(ArmeeID)
-				and pEUnit.GetDomainType() == DomainTypes.DOMAIN_LAND -- SP8.0: Corps & Armee only for land units
+				and pEUnit:GetDomainType() == DomainTypes.DOMAIN_LAND -- SP8.0: Corps & Armee only for land units
 			then
 				table.insert(eUnitList, pEUnit);
 			end
