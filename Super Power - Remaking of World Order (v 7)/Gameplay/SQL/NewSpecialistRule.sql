@@ -55,3 +55,10 @@ SELECT BuildingType, SpecialistType, 'YIELD_GOLD', -2
 FROM BuildingSpecialistTemp WHERE SpecialistType != 'SPECIALIST_MERCHANT';
 
 DROP TABLE BuildingSpecialistTemp;
+
+insert into Specialist_Resources (SpecialistType, ResourceType, Quantity, RequiredPolicyType, RequiredTechType) values 
+('SPECIALIST_MERCHANT', 'RESOURCE_CONSUMER', 6, null, null),
+('SPECIALIST_MERCHANT', 'RESOURCE_CONSUMER', 3, 'POLICY_MERCANTILISM', null),
+('SPECIALIST_MERCHANT', 'RESOURCE_CONSUMER', 3, 'POLICY_SPACE_PROCUREMENTS', null),
+('SPECIALIST_ENGINEER', 'RESOURCE_MANPOWER', 2, null, null),
+('SPECIALIST_ENGINEER', 'RESOURCE_ELECTRICITY', 2, null, 'TECH_ELECTRICITY');

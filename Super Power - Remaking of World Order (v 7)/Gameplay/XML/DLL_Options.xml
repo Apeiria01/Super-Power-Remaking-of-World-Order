@@ -246,6 +246,10 @@
 			<Where Name="GLOBAL_CITY_SCALES"/>
 			<Set Value="1"/>
 		</Update>
+		<Update>
+			<Where Name="SPECIALIST_RESOURCES"/>
+			<Set Value="1"/>
+		</Update>
 	</CustomModOptions>
 
 

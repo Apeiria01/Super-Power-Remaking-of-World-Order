@@ -524,30 +524,17 @@ function AddBuildingButton( pCity, building )
 				ToolTipString = ToolTipString .. " +" .. pSpecialistInfo.GreatPeopleRateChange .. "[ICON_GREAT_PEOPLE]";					
 			end
 			
-				-----------------------------------------------SP Specialists Add Resources--------------------------------------
-			
-			if building.SpecialistType == "SPECIALIST_ENGINEER"  then
-				ToolTipString = ToolTipString .. " +2" .. "[ICON_RES_MANPOWER]";
-				local player = Players[pCity:GetOwner()];
-				if Teams[player:GetTeam()]:IsHasTech(GameInfo.Technologies["TECH_ELECTRICITY"].ID) then
-					ToolTipString = ToolTipString .. " +2" .. "[ICON_RES_ELECTRICITY]";
+			-----------------------------------------------SP Specialists Add Resources--------------------------------------
+			local pPlayer = Players[pCity:GetOwner()];
+			if pPlayer ~= nil then
+				local tSpecialistResources = pPlayer:GetSpecialistResources(iSpecialistID);
+				for i, v in ipairs(tSpecialistResources) do
+					local tResourceInfo = GameInfo.Resources{ID = v["ResourceType"]}();
+					local iNum = v["Quantity"];
+					ToolTipString = ToolTipString .. " +" .. tostring(iNum) .. tResourceInfo["IconString"];
 				end
-				
-			elseif building.SpecialistType == "SPECIALIST_MERCHANT" then
-				local player = Players[pCity:GetOwner()]
-				local ConsumerCount = 6
-				if player:HasPolicy(GameInfo.Policies["POLICY_SPACE_PROCUREMENTS"].ID) then
-					ConsumerCount = ConsumerCount + 2
-				end				
-				if player:HasPolicy(GameInfo.Policies["POLICY_MERCANTILISM"].ID) then
-					ConsumerCount = ConsumerCount + 2
-				end
-				ToolTipString = ToolTipString .. " +" ..ConsumerCount.. "[ICON_RES_CONSUMER]";
-				
 			end
-				-----------------------------------------------SP Specialists Add Resources END--------------------------------------	
-				
-					
+			-----------------------------------------------SP Specialists Add Resources END--------------------------------------	
 					
 			controlTable.BuildingFilledSpecialistSlot1:SetToolTipString(ToolTipString);
 			controlTable.BuildingFilledSpecialistSlot2:SetToolTipString(ToolTipString);

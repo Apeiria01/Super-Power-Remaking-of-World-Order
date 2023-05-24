@@ -59,14 +59,7 @@ function PlayerEditCity() ------------------------This will trigger when player 
 
     local city = UI.GetHeadSelectedCity()
 
-    local ManpowerRes = player:GetNumResourceAvailable(
-                            GameInfoTypes["RESOURCE_MANPOWER"], true)
-    local ConsumerRes = player:GetNumResourceAvailable(
-                            GameInfoTypes["RESOURCE_CONSUMER"], true)
     --
-    --	SetCityPerTurnEffects(Game.GetActivePlayer())
-
-    SetCitySpecialistResources(city)
 
     SetCityAntiNegGoldBonus(city)
 
@@ -501,28 +494,7 @@ function HumanFoundingNewCities(iPlayerID, iX, iY)
 end
 GameEvents.PlayerCityFounded.Add(HumanFoundingNewCities)
 
-----------Adopt Resource Policy Effects instantly
-function ResourcePolicyEffects(playerID, policyID)
-    local player = Players[playerID]
 
-    if player == nil then return end
-
-    if not player:IsHuman() then ------(only for human players for now)
-        print("AI Poicy, not available!")
-        return
-    end
-
-    if player:GetNumCities() < 1 then return print("Not enough city!") end
-
-    if policyID == nil then return end
-
-    if policyID == GameInfo.Policies["POLICY_MERCANTILISM"].ID or policyID ==
-        GameInfo.Policies["POLICY_SPACE_PROCUREMENTS"].ID then
-
-        for city in player:Cities() do SetCitySpecialistResources(city) end
-    end
-end
-GameEvents.PlayerAdoptPolicy.Add(ResourcePolicyEffects);
 
 ----------------------------------------------Utilities----------------------------------------
 
@@ -713,8 +685,6 @@ function SetCityPerTurnEffects(playerID)
 
                 SetCityLevelbyDistance(city)
 
-                SetCitySpecialistResources(city)
-
                 SetCityAntiNegGoldBonus(city)
 
                 -- Add|Remove "Bullring" for Spainish Amusement Park
@@ -771,64 +741,6 @@ function SetCityAntiNegGoldBonus(city)
     end
 
 end
-
-function SetCitySpecialistResources(city)
-
-    if city == nil then
-        print("City does not exist!")
-        return
-    end
-    local player = Players[city:GetOwner()];
-    if player == nil then
-        print("No players")
-        return
-    end
-
-    city:SetNumRealBuilding(GameInfoTypes["BUILDING_SPECIALISTS_MANPOWER"], 0)
-    city:SetNumRealBuilding(GameInfoTypes["BUILDING_SPECIALISTS_CONSUMER"], 0)
-    city:SetNumRealBuilding(GameInfoTypes["BUILDING_SPECIALISTS_ELECTRICITY"], 0)
-
-    -------------------Set Manpower offered by Engineers
-    local CityEngineerCount = city:GetSpecialistCount(
-                                  GameInfo.Specialists.SPECIALIST_ENGINEER.ID)
-    if CityEngineerCount > 0 then
-        print("Engineers in the city:" .. CityEngineerCount)
-        city:SetNumRealBuilding(GameInfoTypes["BUILDING_SPECIALISTS_MANPOWER"],
-                                CityEngineerCount)
-
-        if Teams[player:GetTeam()]:IsHasTech(
-            GameInfo.Technologies["TECH_ELECTRICITY"].ID) then
-            city:SetNumRealBuilding(
-                GameInfoTypes["BUILDING_SPECIALISTS_ELECTRICITY"],
-                CityEngineerCount)
-        end
-    end
-
-    -------------------Set Comsumer Goods offered by Merchants
-    local CityMerchantCount = city:GetSpecialistCount(
-                                  GameInfo.Specialists.SPECIALIST_MERCHANT.ID)
-
-    if CityMerchantCount > 0 then
-        local ComsumerGoodsMultiplier = 2
-        print("Merchant in the city Base:" .. CityMerchantCount)
-        if player:HasPolicy(GameInfo.Policies["POLICY_MERCANTILISM"].ID) then
-            ComsumerGoodsMultiplier = ComsumerGoodsMultiplier + 1
-        end
-        if player:HasPolicy(GameInfo.Policies["POLICY_SPACE_PROCUREMENTS"].ID) then
-            ComsumerGoodsMultiplier = ComsumerGoodsMultiplier + 1
-        end
-        print("Merchant Multiplier:" .. ComsumerGoodsMultiplier)
-
-        local CityMerchantProducingFinal = CityMerchantCount *
-                                               ComsumerGoodsMultiplier
-
-        print("Merchant in the city producing Final:" ..
-                  CityMerchantProducingFinal)
-
-        city:SetNumRealBuilding(GameInfoTypes["BUILDING_SPECIALISTS_CONSUMER"],
-                                CityMerchantProducingFinal)
-    end
-end ---------function end
 
 function SetCityResEffects(playerID, ManpowerRes, ConsumerRes, ElectricRes)
     if playerID == nil or Players[playerID] == nil or
