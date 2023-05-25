@@ -122,7 +122,6 @@ function NewBuildingEffects(iPlayer, iCity, iBuilding, bGold, bFaith)
 						or building.Type == "BUILDING_CONSUMER_BONUS"
 						or building.Type == "BUILDING_CONSUMER_PENALTY_WARNING"
 						or building.Type == "BUILDING_CONSUMER_PENALTY"
-						or building.Type == "BUILDING_TB_ART_OF_WAR"
 						or building.Type == "BUILDING_HAPPINESS_TOURISMBOOST"
 						or building.Type == "BUILDING_TRADE_TO_SCIENCE"
 						or building.Type == "BUILDING_RATIONALISM_HAPPINESS"

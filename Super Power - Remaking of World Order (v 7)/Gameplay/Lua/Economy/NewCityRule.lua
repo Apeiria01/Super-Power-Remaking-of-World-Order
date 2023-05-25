@@ -68,23 +68,6 @@ function PlayerEditCity() ------------------------This will trigger when player 
 end
 Events.SerialEventCityInfoDirty.Add(PlayerEditCity)
 
-----------China's UA trigger
-function ChinaGoldenAgeTrigger()
-    local player = Players[Game.GetActivePlayer()];
-    if player and GameInfo.Leader_Traits {
-        LeaderType = GameInfo.Leaders[player:GetLeaderType()].Type,
-        TraitType = "TRAIT_ART_OF_WAR"
-    }() and (GameInfo.Traits["TRAIT_ART_OF_WAR"].PrereqPolicy == nil or
-        (GameInfo.Traits["TRAIT_ART_OF_WAR"].PrereqPolicy and
-            player:HasPolicy(
-                GameInfoTypes[GameInfo.Traits["TRAIT_ART_OF_WAR"].PrereqPolicy]))) and
-        player:IsGoldenAge() and player:GetCapitalCity() then
-        local pCapital = player:GetCapitalCity();
-        SetGoldenAgeBonus(player, pCapital);
-        print("Chinese UA!")
-    end
-end
-Events.GoldenAgeStarted.Add(ChinaGoldenAgeTrigger)
 
 local g_InternationalismIdeology = nil;
 for playerID, player in pairs(Players) do
@@ -161,18 +144,6 @@ function NewCitySystem(playerID)
             end
         end
 
-        -- Chinese UA
-        if GameInfo.Leader_Traits {
-            LeaderType = GameInfo.Leaders[player:GetLeaderType()].Type,
-            TraitType = "TRAIT_ART_OF_WAR"
-        }() and (GameInfo.Traits["TRAIT_ART_OF_WAR"].PrereqPolicy == nil or
-            (GameInfo.Traits["TRAIT_ART_OF_WAR"].PrereqPolicy and
-                player:HasPolicy(
-                    GameInfoTypes[GameInfo.Traits["TRAIT_ART_OF_WAR"]
-                        .PrereqPolicy]))) then
-            SetGoldenAgeBonus(player, pCapital)
-            print("Chinese UA!")
-        end
     end
 
     -- Set "Allah Akbar" from Islamic University
@@ -654,20 +625,6 @@ function DoInternationalImmigration(MoveOutPlayerID, MoveInPlayerID)
 
 end ---------function end
 
----------------------China's UA
-function SetGoldenAgeBonus(player, capCity)
-    if player and capCity then
-        if player:IsGoldenAge() then
-            capCity:SetNumRealBuilding(GameInfoTypes["BUILDING_TB_ART_OF_WAR"],
-                                       1);
-            print("China in Pax Sinica!");
-        else
-            capCity:SetNumRealBuilding(GameInfoTypes["BUILDING_TB_ART_OF_WAR"],
-                                       0);
-        end
-    end
-end
-
 function SetCityPerTurnEffects(playerID)
 
     if Players[playerID] and Players[playerID]:GetNumCities() > 0 then
@@ -1000,7 +957,6 @@ function CheckCapital(iPlayerID)
                             building.Type == "BUILDING_CONSUMER_BONUS" or
                             building.Type == "BUILDING_CONSUMER_PENALTY_WARNING" or
                             building.Type == "BUILDING_CONSUMER_PENALTY" or
-                            building.Type == "BUILDING_TB_ART_OF_WAR" or
                             building.Type == "BUILDING_HAPPINESS_TOURISMBOOST" or
                             building.Type == "BUILDING_TRADE_TO_SCIENCE" or
                             building.Type == "BUILDING_RATIONALISM_HAPPINESS" --	or  building.Type == "BUILDING_SCHOLASTICISM"
