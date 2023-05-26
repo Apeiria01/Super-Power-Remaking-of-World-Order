@@ -20,19 +20,7 @@ function SPEConquestedCity(oldOwnerID, isCapital, cityX, cityY, newOwnerID, numP
 		and isConquest
 		and newOwnerID ~= pCity:GetOriginalOwner()
 		then 
-			local buildingClass = "BUILDINGCLASS_COURTHOUSE"
-			local thisCivilizationType = pPlayer:GetCivilizationType()
-			local buildingType = GameInfoTypes["BUILDING_COURTHOUSE"]
-			
-			for row in GameInfo.Civilization_BuildingClassOverrides() do
-
-				if (GameInfoTypes[row.CivilizationType] == thisCivilizationType and row.BuildingClassType == buildingClass) then
-					print("POLICY_WARRIOR_CODE: Courthouse UB!")
-					buildingType = row.BuildingType
-				end
-			end
-			print("POLICY_WARRIOR_CODE: set courthouse!")
-			pCity:SetNumRealBuilding(buildingType,1)
+			pCity:SetNumRealBuildingClass(GameInfo.BuildingClasses.BUILDINGCLASS_COURTHOUSE.ID,1)
 		end 				
 	end
 

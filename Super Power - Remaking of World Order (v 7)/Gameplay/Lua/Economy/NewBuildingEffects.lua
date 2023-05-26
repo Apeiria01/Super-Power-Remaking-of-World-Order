@@ -66,27 +66,9 @@ function NewBuildingEffects(iPlayer, iCity, iBuilding, bGold, bFaith)
 
 		-- Terracotta Army provides Barracks, Armory and Military Academy
 	elseif iBuilding == GameInfo.Buildings.BUILDING_TERRACOTTA_ARMY.ID then
-		local iMB = GameInfo.Buildings.BUILDING_BARRACKS.ID;
-		local overrideMB = GameInfo.Civilization_BuildingClassOverrides { BuildingClassType = "BUILDINGCLASS_BARRACKS", CivilizationType =
-		GameInfo.Civilizations[player:GetCivilizationType()].Type } ();
-		if overrideMB ~= nil then
-			iMB = GameInfo.Buildings[overrideMB.BuildingType].ID;
-		end
-		pCity:SetNumRealBuilding(iMB, 1);
-		iMB = GameInfo.Buildings.BUILDING_ARMORY.ID;
-		overrideMB = GameInfo.Civilization_BuildingClassOverrides { BuildingClassType = "BUILDINGCLASS_ARMORY", CivilizationType =
-		GameInfo.Civilizations[player:GetCivilizationType()].Type } ();
-		if overrideMB ~= nil then
-			iMB = GameInfo.Buildings[overrideMB.BuildingType].ID;
-		end
-		pCity:SetNumRealBuilding(iMB, 1);
-		iMB = GameInfo.Buildings.BUILDING_MILITARY_ACADEMY.ID;
-		overrideMB = GameInfo.Civilization_BuildingClassOverrides { BuildingClassType = "BUILDINGCLASS_MILITARY_ACADEMY", CivilizationType =
-		GameInfo.Civilizations[player:GetCivilizationType()].Type } ();
-		if overrideMB ~= nil then
-			iMB = GameInfo.Buildings[overrideMB.BuildingType].ID;
-		end
-		pCity:SetNumRealBuilding(iMB, 1);
+		pCity:SetNumRealBuildingClass(GameInfo.BuildingClasses.BUILDINGCLASS_BARRACKS.ID, 1);
+		pCity:SetNumRealBuildingClass(GameInfo.BuildingClasses.BUILDINGCLASS_ARMORY.ID, 1);
+		pCity:SetNumRealBuildingClass(GameInfo.BuildingClasses.BUILDINGCLASS_MILITARY_ACADEMY.ID, 1);
 
 		-- Move Captial
 	elseif iBuilding == GameInfo.Buildings.BUILDING_NEW_PALACE.ID then
