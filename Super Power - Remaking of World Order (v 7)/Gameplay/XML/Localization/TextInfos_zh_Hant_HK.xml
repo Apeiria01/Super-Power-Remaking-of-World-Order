@@ -13270,7 +13270,7 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_PROMOTION_LIGHTNING_WARFARE_HELP">
-			<Text>+1[ICON_MOVES]移動力，無視敵方控制區域（ZOC），允許使用敵軍境內道路。</Text>
+			<Text>+1[ICON_MOVES]移動力，允許使用敵軍境內道路。</Text>
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_PROMOTION_FAST_GENERAL_HELP">

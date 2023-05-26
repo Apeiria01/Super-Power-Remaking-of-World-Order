@@ -15495,7 +15495,7 @@
 			<Text> Bonus vs Cities(50).</Text>
 		</Replace>-->
 		<Replace Tag="TXT_KEY_PROMOTION_LIGHTNING_WARFARE_HELP">
-			<Text> +1 [ICON_MOVES] Movement and ignore enemy Zones of Control. The use of roads in enemy territory is permitted.</Text>
+			<Text> +1 [ICON_MOVES] Movement. The use of roads in enemy territory is permitted.</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_PROMOTION_FAST_GENERAL_HELP">
