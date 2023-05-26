@@ -2,32 +2,6 @@
 -- Author: Lincoln_lyf
 -- Edited by Tokata
 
-
-function PlayerEditCity() ------------------------This will trigger when player edit the specialists slots inside their cities.
-    ------------------------CANNOT use Events.SpecificCityInfoDirty because it will cause infinte LOOP!!!!!!!!!!!!!!!!!!!!!!WTF!!!!!!!!!!!!!!!!!!!!!!!________
-
-    local player = Players[Game.GetActivePlayer()]
-
-    if player:IsBarbarian() or player:IsMinorCiv() then
-        print("Minors are Not available - PlayerEditCity!")
-        return
-    end
-
-    if not player:IsHuman() then return end
-
-    if UI.GetHeadSelectedCity() == nil then return end
-
-    local city = UI.GetHeadSelectedCity()
-
-    --
-
-    SetCityAntiNegGoldBonus(city)
-
-    print("city's Specialist slot Updated in city screen!")
-end
-
-Events.SerialEventCityInfoDirty.Add(PlayerEditCity)
-
 function NewCitySystem(playerID)
     local player = Players[playerID]
 
@@ -433,8 +407,6 @@ function SetCityPerTurnEffects(playerID)
 
                 SetCityLevelbyDistance(city)
 
-                SetCityAntiNegGoldBonus(city)
-
                 -- Add|Remove "Bullring" for Spainish Amusement Park
                 if GameInfo.Leader_Traits {
                         LeaderType = GameInfo.Leaders[player:GetLeaderType()].Type,
@@ -466,27 +438,6 @@ function SetCityPerTurnEffects(playerID)
         end
     end
 end -------------Function End
-
-function SetCityAntiNegGoldBonus(city)
-    if city == nil then
-        print("City does not exist!")
-        return
-    end
-    if city:IsHasBuilding(GameInfoTypes["BUILDING_BUGFIX_NEGATIVE_GOLD"]) then
-        city:SetNumRealBuilding(GameInfoTypes["BUILDING_BUGFIX_NEGATIVE_GOLD"],
-            0)
-    end
-    if not city:IsHasBuilding(GameInfoTypes["BUILDING_BANK_OF_ENGLAND"]) then
-        return
-    end
-    print("Bank of england exists")
-
-    if city:GetYieldRate(YieldTypes.YIELD_GOLD) < 0 then
-        print("City Goldyield < 0!")
-        city:SetNumRealBuilding(GameInfoTypes["BUILDING_BUGFIX_NEGATIVE_GOLD"],
-            1)
-    end
-end
 
 function SetCityResEffects(playerID, ManpowerRes, ConsumerRes, ElectricRes)
     if playerID == nil or Players[playerID] == nil or
