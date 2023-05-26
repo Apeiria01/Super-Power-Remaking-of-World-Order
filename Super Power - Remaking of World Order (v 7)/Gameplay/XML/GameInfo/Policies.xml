@@ -606,7 +606,7 @@
 			<Where Type="POLICY_PARTY_LEADERSHIP"/>
 		</Update>
 		<Update>
-			<Set FreeBuildingOnConquest="NULL"/>
+			<Set FreeBuildingOnConquest="NULL" IdeologyUnhappinessModifier="-100" IdeologyPressureModifier="100"/>
 			<Where Type="POLICY_IRON_CURTAIN"/>
 		</Update>
 		
@@ -643,7 +643,7 @@
 		
 				
 		<Update>
-			<Set UnhappinessMod="-15" GoldenAgeTurns="10" CommonFoeTourismModifier="0"/>
+			<Set UnhappinessMod="-15" GoldenAgeTurns="10" CommonFoeTourismModifier="0" IdeologyUnhappinessModifier="-50"/>
 			<Where Type="POLICY_CULT_PERSONALITY"/>
 		</Update>
 		<Update>

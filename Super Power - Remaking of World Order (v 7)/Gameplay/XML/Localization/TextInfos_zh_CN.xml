@@ -7272,7 +7272,7 @@
 			<Text>国际主义</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_IRON_CURTAIN_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]国际主义[ENDCOLOR][NEWLINE]你向其他国家移民的速度降低50%。[COLOR_POSITIVE_TEXT]傀儡[ENDCOLOR]城市[ICON_PRODUCTION]产能和[ICON_GOLD]金钱产出+33%。抵消自身受到的[ICON_HAPPINESS_4]公共舆论不满，其他意识形态文明的[ICON_HAPPINESS_4]公共舆论不满翻倍。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]国际主义[ENDCOLOR][NEWLINE]你向其他国家移民的速度降低50%。[COLOR_POSITIVE_TEXT]傀儡[ENDCOLOR]城市[ICON_PRODUCTION]产能和[ICON_GOLD]金钱产出+33%。抵消自身受到的[ICON_HAPPINESS_4]公共舆论不满，对其他意识形态文明的[ICON_HAPPINESS_4]公共舆论压力翻倍。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_IRON_CURTAIN_TEXT" >
 			<Text>国际主义是指各国无产阶级在反对剥削制度，争取自身解放斗争中，在政治、经济、道义等方面互相支持，互相援助，坚持国际团结的思想和政治原则。国际主义体现了无产阶级的民族观，是无产阶级处理民族问题的基本原则，也是无产阶级认识和处理各国无产阶级之间、各国无产阶级政党之间以及社会主义国家之间相互关系的行为准则。资本压迫和统治的国际性，决定了无产阶级反对资产阶级的斗争，从形式上看，首先是在一国范围内进行，但从内容上看，从来就是国际性的：无产阶级只有解放全人类，才能最后解放自己。[NEWLINE][NEWLINE]—— “这是最后的斗争，团结起来到明天，英特纳雄耐尔就一定要实现！这是最后的斗争，团结起来到明天，英特纳雄耐尔就一定要实现！”</Text>

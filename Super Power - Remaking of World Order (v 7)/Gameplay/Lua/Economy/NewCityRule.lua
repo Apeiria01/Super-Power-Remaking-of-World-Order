@@ -68,27 +68,6 @@ function PlayerEditCity() ------------------------This will trigger when player 
 end
 Events.SerialEventCityInfoDirty.Add(PlayerEditCity)
 
-
-local g_InternationalismIdeology = nil;
-for playerID, player in pairs(Players) do
-    if player and player:IsAlive() and
-        player:HasPolicy(GameInfoTypes["POLICY_IRON_CURTAIN"]) then
-        g_InternationalismIdeology =
-            GameInfoTypes[GameInfo.Policies["POLICY_IRON_CURTAIN"]
-                .PolicyBranchType];
-        break
-    end
-end
-function SPInternationalismAdopted(playerID, policyID)
-    if policyID == GameInfoTypes["POLICY_IRON_CURTAIN"] and
-        g_InternationalismIdeology == nil then
-        g_InternationalismIdeology =
-            GameInfoTypes[GameInfo.Policies["POLICY_IRON_CURTAIN"]
-                .PolicyBranchType];
-    end
-end
-GameEvents.PlayerAdoptPolicy.Add(SPInternationalismAdopted);
-
 function NewCitySystem(playerID)
     local player = Players[playerID]
 
@@ -105,45 +84,6 @@ function NewCitySystem(playerID)
     if player:GetNumCities() <= 0 then
         print("No Cities!")
         return
-    end
-
-    -- Policie Effects & Some Civs' UAs
-    if player:GetCapitalCity() ~= nil then
-        local pCapital = player:GetCapitalCity();
-        -- Set Policy Buildings in Capital
-
-        pCapital:SetNumRealBuilding(
-            GameInfoTypes["BUILDING_IRON_CURTAIN_HAPPI"], 0);
-        pCapital:SetNumRealBuilding(
-            GameInfoTypes["BUILDING_IRON_CURTAIN_UNHAP"], 0);
-        local iUnhappinessFromPublicOpinion =
-            player:GetPublicOpinionUnhappiness(); -- iUnhappinessFromPublicOpinion = player:GetUnhappinessFromPublicOpinion()
-        -- print("Player: " .. playerID .. " - UnhappinessFromPublicOpinion: " .. iUnhappinessFromPublicOpinion .. " - Ideology: " .. tostring(player:GetLateGamePolicyTree()) .. " - Order Ideology: " .. tostring(g_InternationalismIdeology));
-        if iUnhappinessFromPublicOpinion > 0 then
-            -- Policy - Internationalism
-            if player:HasPolicy(GameInfoTypes["POLICY_IRON_CURTAIN"]) then
-                pCapital:SetNumRealBuilding(
-                    GameInfoTypes["BUILDING_IRON_CURTAIN_HAPPI"],
-                    iUnhappinessFromPublicOpinion);
-            elseif g_InternationalismIdeology and player:GetLateGamePolicyTree() ~=
-                g_InternationalismIdeology then
-                pCapital:SetNumRealBuilding(
-                    GameInfoTypes["BUILDING_IRON_CURTAIN_UNHAP"],
-                    iUnhappinessFromPublicOpinion);
-            end
-            -- POLICY_CULT_PERSONALITY
-            iUnhappinessFromPublicOpinion = math.floor(
-                                                iUnhappinessFromPublicOpinion /
-                                                    2) +
-                                                pCapital:GetNumBuilding(
-                                                    GameInfoTypes["BUILDING_IRON_CURTAIN_HAPPI"]);
-            if player:HasPolicy(GameInfoTypes["POLICY_CULT_PERSONALITY"]) then
-                pCapital:SetNumRealBuilding(
-                    GameInfoTypes["BUILDING_IRON_CURTAIN_HAPPI"],
-                    iUnhappinessFromPublicOpinion);
-            end
-        end
-
     end
 
     -- Set "Allah Akbar" from Islamic University
