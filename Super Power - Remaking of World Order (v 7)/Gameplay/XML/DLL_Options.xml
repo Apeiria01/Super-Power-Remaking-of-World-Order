@@ -254,6 +254,10 @@
 			<Where Name="TRAITS_GOLDEN_AGE_YIELD_MODIFIER"/>
 			<Set Value="1"/>
 		</Update>
+		<Update>
+			<Where Name="POLICY_WATER_BUILD_SPEED_MODIFIER"/>
+			<Set Value="1"/>
+		</Update>
 	</CustomModOptions>
 
 
