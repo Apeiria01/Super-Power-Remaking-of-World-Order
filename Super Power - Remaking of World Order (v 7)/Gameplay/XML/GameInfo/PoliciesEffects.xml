@@ -2457,11 +2457,6 @@
 			<Description>TXT_KEY_POLICY_FLOURISHING_OF_ARTS</Description>
 		</Row>
 		<Row>
-			<Type>BUILDINGCLASS_ARTISTIC_GENIUS</Type>
-			<DefaultBuilding>BUILDING_ARTISTIC_GENIUS</DefaultBuilding>
-			<Description>TXT_KEY_POLICY_ARTISTIC_GENIUS</Description>
-		</Row>
-		<Row>
 			<Type>BUILDINGCLASS_MARKET_ECONOMY</Type>
 			<DefaultBuilding>BUILDING_MARKET_ECONOMY</DefaultBuilding>
 			<Description>TXT_KEY_POLICY_MARKET_ECONOMY</Description>
@@ -2815,20 +2810,6 @@
 			<GreatWorkCount>-1</GreatWorkCount>
 		</Row>
 		
-		<Row>
-			<Type>BUILDING_ARTISTIC_GENIUS</Type>
-			<BuildingClass>BUILDINGCLASS_ARTISTIC_GENIUS</BuildingClass>
-			<Cost>-1</Cost>
-			<NeverCapture>true</NeverCapture>
-			<NukeImmune>true</NukeImmune>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<PortraitIndex>5</PortraitIndex>
-			<IconAtlas>POLICY_ATLAS_EXP2</IconAtlas>
-			<Description>TXT_KEY_POLICY_ARTISTIC_GENIUS</Description>
-			<Help>TXT_KEY_POLICY_ARTISTIC_GENIUS_HELP</Help>
-			<WonderProductionModifier>25</WonderProductionModifier>
-			<GreatWorkCount>-1</GreatWorkCount>
-		</Row>
 		<Row>
 			<Type>BUILDING_ENTREPRENEURSHIP</Type>
 			<BuildingClass>BUILDINGCLASS_ENTREPRENEURSHIP</BuildingClass>

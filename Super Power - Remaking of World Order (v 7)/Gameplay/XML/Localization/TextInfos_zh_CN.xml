@@ -6845,7 +6845,7 @@
 				[COLOR_POSITIVE_TEXT]艺术天才[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]立刻获得一位大艺术家。
 				[NEWLINE][ICON_BULLET]大音乐家、大艺术家和大文学家的获得速度+25%。
-				[NEWLINE][ICON_BULLET]进入全战时代前，建造奇观时+25%[ICON_PRODUCTION]产能积累速率。
+				[NEWLINE][ICON_BULLET]建造奇观时+25%[ICON_PRODUCTION]产能积累速率。
 			</Text>
 		</Replace>
 

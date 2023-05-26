@@ -6732,7 +6732,7 @@
 				[COLOR_POSITIVE_TEXT]藝術天才[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]立刻獲得一位大藝術家。
 				[NEWLINE][ICON_BULLET]大音樂家、大藝術家和大文學家的獲得速度+25%。
-				[NEWLINE][ICON_BULLET]進入全戰時代前，建造奇觀時+25%[ICON_PRODUCTION]產能積累速率。
+				[NEWLINE][ICON_BULLET]建造奇觀時+25%[ICON_PRODUCTION]產能積累速率。
 			</Text>
 		</Replace>
 

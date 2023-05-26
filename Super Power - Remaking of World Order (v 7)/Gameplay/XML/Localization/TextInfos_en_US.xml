@@ -7646,7 +7646,7 @@
 				[COLOR_POSITIVE_TEXT]Artistic Genius[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]One Great Artist appears.
 				[NEWLINE][ICON_BULLET]Earn Great Writers, Artists, and Musicians 25% faster.
-				[NEWLINE][ICON_BULLET]+25% [ICON_PRODUCTION] Production towards Wonder construction before entering the World War Era.
+				[NEWLINE][ICON_BULLET]+25% [ICON_PRODUCTION] Production towards Wonder construction.
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_FLOURISHING_OF_ARTS" >
