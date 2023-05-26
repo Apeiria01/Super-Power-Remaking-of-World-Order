@@ -729,37 +729,6 @@ end
 
 GameEvents.PlayerDoTurn.Add(CheckCapital)
 
-function TechDynamiteEffectOnRazing(playerID)
-    if playerID == nil then
-        return;
-    end
-
-    local player = Players[playerID];
-    if player:IsMinorCiv() or player:IsBarbarian() then
-        return;
-    end
-
-    local bIsHasTechDynamite = Teams[player:GetTeam()]:IsHasTech(GameInfo.Technologies["TECH_DYNAMITE"].ID);
-    if not bIsHasTechDynamite then
-        return;
-    end
-
-    for city in player:Cities() do
-        if city:IsRazing() then
-            local cityName = city:GetName();
-            print("raze in one turn!")
-            player:Disband(city);
-            Events.SerialEventGameDataDirty();
-
-            if player:IsHuman() then
-                Events.GameplayAlertMessage(Locale.ConvertTextKey("TXT_KEY_RAZE_WITH_DYNAMITE", cityName))
-            end
-        end
-    end
-end
-
-GameEvents.PlayerDoTurn.Add(TechDynamiteEffectOnRazing)
-
 --City Founded in Special Terrain
 local improvementMachuID = GameInfoTypes["IMPROVEMENT_INCA_CITY"]
 local improvementPolyCity = {
