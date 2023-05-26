@@ -402,7 +402,7 @@
 			<Where Type="POLICY_EXPLORATION"/>
 		</Update>
 		<Update>
-			<Set GridX="1"/>
+			<Set GridX="1" WaterBuildSpeedModifier="50"/>
 			<Where Type="POLICY_MARITIME_INFRASTRUCTURE"/>
 		</Update>
 		<Update>
