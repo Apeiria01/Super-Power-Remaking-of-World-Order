@@ -1495,11 +1495,7 @@ function CarrierRestore(iPlayerID, iUnitID, iCargoUnit)
 			for _, unitPromotionID in ipairs(tUnitPromotions) do
 				pNewCargoUnit:SetHasPromotion(unitPromotionID, true);
 			end
-			--[[
-			if not pPlayer:IsHuman() then
-				pNewCargoUnit:PushMission(GameInfoTypes.MISSION_AIRPATROL);
-			end
-			]]
+
 			pNewCargoUnit:SetMoves(0);
 			return iCost;
 		end
@@ -1510,7 +1506,7 @@ end
 
 -- MOD Begin by HMS
 function RemoveErrorPromotion(iPlayerID, iUnitID)
-	-- Disable this function
+	-- TODO(catgrep): remove this function
 end
 
 -- MOD end by HMS
