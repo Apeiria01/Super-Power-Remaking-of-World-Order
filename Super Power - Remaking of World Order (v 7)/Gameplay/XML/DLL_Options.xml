@@ -258,6 +258,11 @@
 			<Where Name="POLICIY_PUBLIC_OPTION"/>
 			<Set Value="1"/>
 		</Update>
+
+		<Update>
+			<Where Name="BATTLE_CAPTURE_NEW_RULE"/>
+			<Set Value="1"/>
+		</Update>
 	</CustomModOptions>
 
 
