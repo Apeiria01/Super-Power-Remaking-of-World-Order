@@ -389,6 +389,7 @@
 			<IconAtlas>POLICY_ATLAS</IconAtlas>
 			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
 			<ExtraHappinessPerLuxury>1</ExtraHappinessPerLuxury>
+			<HappinessInWLTKDCities>3</HappinessInWLTKDCities>
 		</Row>
 
 	</Policies>

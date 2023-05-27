@@ -2434,11 +2434,6 @@
 			<Description>TXT_KEY_POLICY_FLOURISHING_OF_ARTS</Description>
 		</Row>
 		<Row>
-			<Type>BUILDINGCLASS_MARKET_ECONOMY</Type>
-			<DefaultBuilding>BUILDING_MARKET_ECONOMY</DefaultBuilding>
-			<Description>TXT_KEY_POLICY_MARKET_ECONOMY</Description>
-		</Row>
-		<Row>
 			<Type>BUILDINGCLASS_ENTREPRENEURSHIP</Type>
 			<DefaultBuilding>BUILDING_ENTREPRENEURSHIP</DefaultBuilding>
 			<Description>TXT_KEY_POLICY_ENTREPRENEURSHIP</Description>
@@ -2756,20 +2751,6 @@
 			<Description>TXT_KEY_POLICY_FLOURISHING_OF_ARTS</Description>
 			<Help>TXT_KEY_POLICY_FLOURISHING_OF_ARTS_HELP</Help>
 			<HappinessPerXPolicies>2</HappinessPerXPolicies>
-			<GreatWorkCount>-1</GreatWorkCount>
-		</Row>
-		<Row>
-			<Type>BUILDING_MARKET_ECONOMY</Type>
-			<BuildingClass>BUILDINGCLASS_MARKET_ECONOMY</BuildingClass>
-			<Cost>-1</Cost>
-			<NeverCapture>true</NeverCapture>
-			<NukeImmune>true</NukeImmune>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<PortraitIndex>11</PortraitIndex>
-			<IconAtlas>POLICY_ATLAS</IconAtlas>
-			<Description>TXT_KEY_POLICY_MARKET_ECONOMY</Description>
-			<Help>TXT_KEY_POLICY_MARKET_ECONOMY_HELP</Help>
-			<Happiness>3</Happiness>
 			<GreatWorkCount>-1</GreatWorkCount>
 		</Row>
 		

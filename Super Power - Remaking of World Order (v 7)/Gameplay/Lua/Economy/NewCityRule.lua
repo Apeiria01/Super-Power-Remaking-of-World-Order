@@ -31,7 +31,6 @@ function NewCitySystem(playerID)
         -- Get Consumers & Electricities from Policy - Total War
         or (player:HasPolicy(GameInfoTypes["POLICY_REPRESENTATION"]) or
             player:HasPolicy(GameInfoTypes["POLICY_MERCHANT_NAVY"]) or
-            player:HasPolicy(GameInfoTypes["POLICY_MARKET_ECONOMY"]) or
             player:HasPolicy(GameInfoTypes["POLICY_TOTAL_WAR"])) then
         local iCountIU = math.floor(player:CountNumBuildings(
                 GameInfoTypes["BUILDING_ARABIA_ISIAMIC_UNIVERSITY"]) /
@@ -163,14 +162,6 @@ function NewCitySystem(playerID)
                     pCity:SetNumRealBuilding(
                         GameInfoTypes["BUILDING_CIV_S_P_ELE_RESOURCES"], iNumEle);
                 end
-                -- Get Extra Happiness
-                if player:HasPolicy(GameInfoTypes["POLICY_MARKET_ECONOMY"])
-                    and pCity:GetWeLoveTheKingDayCounter() > 0 then
-                    pCity:SetNumRealBuilding(GameInfoTypes["BUILDING_MARKET_ECONOMY"], 1);
-                elseif pCity:IsHasBuilding(GameInfoTypes["BUILDING_MARKET_ECONOMY"]) then
-                    pCity:SetNumRealBuilding(GameInfoTypes["BUILDING_MARKET_ECONOMY"], 0);
-                end
-
             end
         end
     end
