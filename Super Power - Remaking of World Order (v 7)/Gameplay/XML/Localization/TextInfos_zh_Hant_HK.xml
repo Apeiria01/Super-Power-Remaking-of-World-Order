@@ -1736,7 +1736,7 @@
 		</Row>
 		<!-- Help tags -->
 		<Row Tag="TXT_KEY_WONDER_BURJ_TOWER_HELP">
-			<Text>立即獲得大量[ICON_GOLD]金幣（快速22222[ICON_GOLD]，標準44444[ICON_GOLD]，史詩66666[ICON_GOLD]，馬拉松99999[ICON_GOLD]）。</Text>
+			<Text>立即獲得大量[ICON_GOLD]金幣（標準44444[ICON_GOLD]）。</Text>
 		</Row>
 		<!-- Quote tags -->
 		<Row Tag="TXT_KEY_WONDER_BURJ_TOWER_QUOTE">

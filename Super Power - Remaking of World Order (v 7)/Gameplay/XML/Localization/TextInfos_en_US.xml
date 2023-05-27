@@ -4143,7 +4143,7 @@
 		</Row>
 		<!-- Help tags -->
 		<Row Tag="TXT_KEY_WONDER_BURJ_TOWER_HELP">
-			<Text>Receive a rebate with [ICON_GOLD] Gold according to the game speed:[NEWLINE]Quick: 22,222 [ICON_GOLD] Gold. [NEWLINE]Normal: 44,444 [ICON_GOLD] Gold. [NEWLINE]Epic: 66,666 [ICON_GOLD] Gold.  [NEWLINE]Marathon: 99,999[ICON_GOLD] Gold.</Text>
+			<Text>Receive a rebate with [ICON_GOLD] Gold according to the game speed (44,444 [ICON_GOLD] Gold at Normal Game Speed).</Text>
 		</Row>
 		<!-- Quote tags -->
 		<Row Tag="TXT_KEY_WONDER_BURJ_TOWER_QUOTE">
