@@ -32,7 +32,6 @@ function NewCitySystem(playerID)
         -- Get Local Happiness from Policy - Protectionism
         -- Get Consumers & Electricities from Policy - Total War
         or (player:HasPolicy(GameInfoTypes["POLICY_REPRESENTATION"]) or
-            player:HasPolicy(GameInfoTypes["POLICY_PIETY"]) or
             player:HasPolicy(GameInfoTypes["POLICY_MERCHANT_NAVY"]) or
             player:HasPolicy(GameInfoTypes["POLICY_MARKET_ECONOMY"]) or
             player:HasPolicy(GameInfoTypes["POLICY_TOTAL_WAR"])) then
@@ -135,13 +134,6 @@ function NewCitySystem(playerID)
                             GameInfoTypes["BUILDING_REPRESENTATION_CULTURE_COST"],
                             1);
                     end
-                end
-                -- +25% Faith in all cities which have built a World Wonder
-                if pCity:GetNumWorldWonders() > 0 and
-                    not pCity:IsHasBuilding(
-                        GameInfoTypes["BUILDING_WONDER_YIELD_FAITH_MOD"]) then
-                    pCity:SetNumRealBuilding(
-                        GameInfoTypes["BUILDING_WONDER_YIELD_FAITH_MOD"], 1);
                 end
 
                 -- Get Extra Consumers & Electricities
