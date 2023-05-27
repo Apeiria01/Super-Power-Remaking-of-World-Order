@@ -50,12 +50,6 @@
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_IMMIGRATION_HELP">
 			<Text>International Immigration: Allow Population movement across borders.</Text>
 		</Row>
-		<Row Tag="TXT_KEY_GAMEOPTION_SP_SPLASH_AND_COLLATERAL">
-			<Text>SP - [COLOR_YELLOW]Collateral and Splash[ENDCOLOR] - OFF</Text>
-		</Row>
-		<Row Tag="TXT_KEY_GAMEOPTION_SP_SPLASH_AND_COLLATERAL_HELP">
-			<Text>Collateral and Splash Effects: Special damage effects in combat.</Text>
-		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_NUCLEARWINTER">
 			<Text>SP - [COLOR_YELLOW]Nuclear Winter[ENDCOLOR] - OFF</Text>
 		</Row>

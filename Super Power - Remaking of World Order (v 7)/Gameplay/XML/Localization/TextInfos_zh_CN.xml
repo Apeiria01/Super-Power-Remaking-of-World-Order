@@ -51,15 +51,6 @@
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_IMMIGRATION_HELP">
 			<Text>国际移民：允许人口跨境流动。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_GAMEOPTION_SP_SPLASH_AND_COLLATERAL">
-			<Text>SP-关闭 [COLOR_YELLOW]溅射和穿透[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_GAMEOPTION_SP_SPLASH_AND_COLLATERAL_HELP">
-			<Text>
-				溅射和穿透：战斗中的特殊伤害效果。
-				[NEWLINE][COLOR_NEGATIVE_TEXT]请尽量保持默认[ENDCOLOR]
-			</Text>
-		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_NUCLEARWINTER">
 			<Text>SP-关闭 [COLOR_YELLOW]核冬天[ENDCOLOR]</Text>
 		</Row>

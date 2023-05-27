@@ -6,7 +6,6 @@ include("FLuaVector.lua");
 --******************************************************************************* Unit Combat Rules *******************************************************************************
 local g_DoNewAttackEffect = nil;
 local NewAttackOff = GameInfo.SPNewEffectControler.SP_NEWATTACK_OFF.Enabled
-local SplashAndCollateralOff = PreGame.GetGameOption("GAMEOPTION_SP_SPLASH_AND_COLLATERAL_OFF")
 function NewAttackEffectStarted(iType, iPlotX, iPlotY)
 	if NewAttackOff then
 		print("SP Attack Effect - OFF!");
