@@ -9089,9 +9089,6 @@
 		<Row Tag="TXT_KEY_PROMOTION_ARTIST_PROMOTION_HELP">
 			<Text>Can start a [ICON_GOLDEN_AGE] Golden Age whose lasting turns equal to [ICON_GREAT_ARTIST]Great Artist.</Text>
 		</Row>
-		<Row Tag="TXT_KEY_RELIGION_HOLYCITY_MARK">
-			<Text>Holy City Mark</Text>
-		</Row>
 		<Replace Tag="TXT_KEY_BELIEF_MISSIONARY_ZEAL">
 			<Text>Messionary conversion strength +25%, +2 extra Religion Spread when Messionaries born in Holy City</Text>
 		</Replace>

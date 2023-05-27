@@ -8094,9 +8094,6 @@
 		<Row Tag="TXT_KEY_PROMOTION_ARTIST_PROMOTION_HELP">
 			<Text>開啟一輪[ICON_GOLDEN_AGE]黃金時代，回合數值等同於[ICON_GREAT_ARTIST]大藝術家。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_RELIGION_HOLYCITY_MARK">
-			<Text>聖城標記</Text>
-		</Row>
 		<Replace Tag="TXT_KEY_BELIEF_MISSIONARY_ZEAL">
 			<Text>傳教士傳教能力+25%，聖城誕生的傳教士傳教次數+2</Text>
 		</Replace>
