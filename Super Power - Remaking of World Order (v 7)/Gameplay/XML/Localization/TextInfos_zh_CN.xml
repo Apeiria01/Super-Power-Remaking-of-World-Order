@@ -8079,7 +8079,7 @@
 			<Text>宗教科学</Text>
 		</Row>
 		<Row Tag="TXT_KEY_RELIGIOUS_SCIENCE">
-			<Text>每座信仰该宗教的城市贡献2[ICON_RESEARCH]科研，宗教圣地+3[ICON_RESEARCH]科研</Text>
+			<Text>每座信仰该宗教的城市贡献2[ICON_RESEARCH]科研，宗教圣地+4[ICON_RESEARCH]科研</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SACRED_CALENDAR_SHORT">
 			<Text>神圣历法</Text>
