@@ -1002,6 +1002,7 @@ function HappinessTipHandler( control )
 		local iExtraHappinessPerCity = pPlayer:GetExtraHappinessPerCity() * pPlayer:GetNumCities();
 		local iMinorCivHappiness = pPlayer:GetHappinessFromMinorCivs();
 		local iLeagueHappiness = pPlayer:GetHappinessFromLeagues();
+		local iFaithHappiness = pPlayer:GetHappinessFromFaith();
 	
 --		local iHandicapHappiness = pPlayer:GetHappiness() - iPoliciesHappiness - iResourcesHappiness - iCityHappiness - iBuildingHappiness - iTradeRouteHappiness - iReligionHappiness - iNaturalWonderHappiness - iMinorCivHappiness - iExtraHappinessPerCity - iLeagueHappiness;
 
@@ -1104,6 +1105,10 @@ function HappinessTipHandler( control )
 		if (iLeagueHappiness ~= 0) then
 			strText = strText .. "[NEWLINE]";
 			strText = strText .. "  [ICON_BULLET]" .. Locale.ConvertTextKey("TXT_KEY_TP_HAPPINESS_LEAGUES", iLeagueHappiness);
+		end
+		if (iFaithHappiness ~= 0) then
+			strText = strText .. "[NEWLINE]";
+			strText = strText .. "  [ICON_BULLET]" .. Locale.ConvertTextKey("TXT_KEY_TP_HAPPINESS_FAITH", iFaithHappiness);
 		end
 		strText = strText .. "[NEWLINE]";
 		strText = strText .. "  [ICON_BULLET]" .. Locale.ConvertTextKey("TXT_KEY_TP_HAPPINESS_DIFFICULTY_LEVEL", iHandicapHappiness);
@@ -1621,35 +1626,6 @@ function FaithTipHandler( control )
 		end
 	
 		strText = strText .. "[NEWLINE]";
-		
-		
-		
-		
-		
-		
-		
-		---------------------------------SP Faith to Happiness---------------------------
-		
-		if pPlayer:HasPolicy(GameInfoTypes["POLICY_RELIGIOUS_POLITICS"]) then
-			local CaptialCity = pPlayer:GetCapitalCity()
-			local FaithToHappinessCount = CaptialCity:GetNumBuilding(GameInfoTypes["BUILDING_FAITH_RELIGIOUS_POLITICS"])
-			local FaithToHappinessCountFinal = FaithToHappinessCount * 2
-				
-			if FaithToHappinessCount >= 1 then
-				strText = strText .. Locale.ConvertTextKey("TXT_KEY_SP_UI_FAITH_FROM_RELIGION", FaithToHappinessCountFinal);
-			end
-		end
-		
-		strText = strText .. "[NEWLINE][NEWLINE]";
-		--------------------------------SP Faith to Happiness END------------------------	
-		
-		
-		
-		
-		
-		
-		
-		
 
 		if (pPlayer:HasCreatedPantheon()) then
 			if (Game.GetNumReligionsStillToFound() > 0 or pPlayer:HasCreatedReligion()) then

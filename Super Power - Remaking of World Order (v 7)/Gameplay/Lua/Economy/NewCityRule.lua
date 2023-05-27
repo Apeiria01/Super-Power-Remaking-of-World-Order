@@ -26,8 +26,6 @@ function NewCitySystem(playerID)
             player:CountNumBuildings(
                 GameInfoTypes["BUILDING_ARABIA_ISIAMIC_UNIVERSITY_ALLAH_AKBAR"]) > 0) -- Policy Effects
         -- +5% Culture Cost for New Policies if the city hasn't city hall -- Representation
-        -- +25% Faith in all cities which have built a World Wonder -- Piety - Opening Effect
-        -- Remove +25% WonderProductionModifier after enter "World War Era" -- Artistic Genius
         -- Get Consumers from Policy - Merchant Navy
         -- Get Local Happiness from Policy - Protectionism
         -- Get Consumers & Electricities from Policy - Total War
@@ -180,14 +178,6 @@ function NewCitySystem(playerID)
     if not player:IsHuman() then ------(only for human players for now)
         print("Not available for AI!")
         return
-    end
-
-    -------------Special Policy Effects
-
-    if player:HasPolicy(GameInfoTypes["POLICY_RELIGIOUS_POLITICS"]) or
-        player:HasPolicy(GameInfoTypes["POLICY_CAPITALISM"]) then
-        SetPolicyPerTurnEffects(playerID)
-        print("Set Policy Per Turn Effects!")
     end
 
     -------------Set City Per Turn Effects

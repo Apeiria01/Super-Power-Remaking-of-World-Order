@@ -246,7 +246,7 @@
 			<PortraitIndex>37</PortraitIndex>
 			<IconAtlas>POLICY_ATLAS</IconAtlas>
 			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
-			<!--<IncludesOneShotFreeUnits>true</IncludesOneShotFreeUnits>-->
+			<GlobalHappinessFromFaithPercent>20</GlobalHappinessFromFaithPercent>
 		</Row>
 	</Policies>
 

@@ -310,22 +310,7 @@ end -------------Function End
 
 ---------------------Policy Per Turn Effects
 function SetPolicyPerTurnEffects(playerID)
-	local player = Players[playerID];
-	local pCity = player:GetCapitalCity();
-
-	if pCity then
-		if player:HasPolicy(GameInfoTypes["POLICY_RELIGIOUS_POLITICS"]) then
-			local FaithGained = player:GetTotalFaithPerTurn()
-			local FaithToHappiness = math.floor(0.1 * FaithGained)
-			print("Player Faith to Happiness per Turn:" .. FaithToHappiness)
-			if FaithToHappiness > 0 then
-				pCity:SetNumRealBuilding(GameInfoTypes["BUILDING_FAITH_RELIGIOUS_POLITICS"], FaithToHappiness)
-			else
-				pCity:SetNumRealBuilding(GameInfoTypes["BUILDING_FAITH_RELIGIOUS_POLITICS"], 0)
-			end
-		end
-
-	end
+	-- TODO: remove this function
 end
 
 if (PreGame.GetGameOption("GAMEOPTION_SP_IMMIGRATION_OFF") == 1) then

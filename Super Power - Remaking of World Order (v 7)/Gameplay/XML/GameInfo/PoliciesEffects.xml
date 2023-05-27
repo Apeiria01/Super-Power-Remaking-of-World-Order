@@ -2483,7 +2483,6 @@
 			<IconAtlas>TECH_ATLAS_1</IconAtlas>
 			<Description>TXT_KEY_POLICY_RELIGIOUS_POLITICS</Description>
 			<Help>TXT_KEY_POLICY_RELIGIOUS_POLITICS_HELP</Help>
-			<UnmoddedHappiness>2</UnmoddedHappiness>
 			<GreatWorkCount>-1</GreatWorkCount>
 		</Row>
 

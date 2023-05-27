@@ -92,8 +92,6 @@ function PolicyAdoptedEffects(playerID, policyID)
 
 	if policyID == GameInfo.Policies["POLICY_ARISTOCRACY"].ID then
 		FasterFoodGrowth(playerID)
-	elseif policyID == GameInfo.Policies["POLICY_RELIGIOUS_POLITICS"].ID or policyID == GameInfo.Policies["POLICY_CAPITALISM"].ID then
-		SetPolicyPerTurnEffects(playerID)
 	elseif policyID == GameInfo.Policies["POLICY_RATIONALISM"].ID or policyID == GameInfo.Policies["POLICY_TREATY_ORGANIZATION"].ID then
 		SetHappinessEffects(playerID)
 	end
