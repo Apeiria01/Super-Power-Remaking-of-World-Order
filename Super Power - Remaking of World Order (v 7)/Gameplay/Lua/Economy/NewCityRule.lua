@@ -1,93 +1,6 @@
 -- NewCityRule
 -- Author: Lincoln_lyf
 -- Edited by Tokata
---------------------------------------------------------------
--- include( "UtilityFunctions.lua" )
--- ==========================================================================================
--- Global Defines
--- ==========================================================================================
--- local resManpower		= GameInfoTypes["RESOURCE_MANPOWER"]
--- local resConsumer		= GameInfoTypes["RESOURCE_CONSUMER"]
--- local resElectricity	= GameInfoTypes["RESOURCE_ELECTRICITY"]
--- local bCitySizeLV1	= GameInfoTypes["BUILDING_CITY_SIZE_TOWN"]
--- local bCitySizeLV2	= GameInfoTypes["BUILDING_CITY_SIZE_SMALL"]
--- local bCitySizeLV3	= GameInfoTypes["BUILDING_CITY_SIZE_MEDIUM"]
--- local bCitySizeLV4	= GameInfoTypes["BUILDING_CITY_SIZE_LARGE"]
--- local bCitySizeLV5	= GameInfoTypes["BUILDING_CITY_SIZE_XL"]
--- local bCitySizeLV6	= GameInfoTypes["BUILDING_CITY_SIZE_XXL"]
--- local bCitySizeLV7	= GameInfoTypes["BUILDING_CITY_SIZE_GLOBAL"]
---
--- local bPuppetGov	= GameInfoTypes["BUILDING_PUPPET_GOVERNEMENT"]
--- local bPuppetGovFull= GameInfoTypes["BUILDING_PUPPET_GOVERNEMENT_FULL"]
--- local bConstable	= GameInfoTypes["BUILDING_CONSTABLE"]
--- local bRomanSenate	= GameInfoTypes["BUILDING_ROMAN_SENATE"]
--- local bSheriffOffice= GameInfoTypes["BUILDING_SHERIFF_OFFICE"]
--- local bPoliceStation= GameInfoTypes["BUILDING_POLICE_STATION"]
--- local bProcuratorate= GameInfoTypes["BUILDING_PROCURATORATE"]
---
--- local polRationalismID	= GameInfo.Policies["POLICY_RATIONALISM"].ID
--- local bRationalism	= GameInfoTypes["BUILDING_RATIONALISM_HAPPINESS"]
--- local polAristocracyID	= GameInfo.Policies["POLICY_ARISTOCRACY"].ID
--- local bTourismBoost	= GameInfoTypes["BUILDING_HAPPINESS_TOURISMBOOST"]
---
--- local bManpowerBonus	= GameInfoTypes["BUILDING_MANPOWER_BONUS"]
--- local bConsumerBonus	= GameInfoTypes["BUILDING_CONSUMER_BONUS"]
--- local bConsumerPenalty	= GameInfoTypes["BUILDING_CONSUMER_PENALTY"]
--- local bElectricityBonus	= GameInfoTypes["BUILDING_ELECTRICITY_BONUS"]
--- local bElectriPenalty	= GameInfoTypes["BUILDING_ELECTRICITY_PENALTY"]
---
--- local eModernID	= GameInfo.Eras["ERA_MODERN"].ID
---
--- local polMonarchyID	= GameInfoTypes["POLICY_MONARCHY"]
--- local bTManpower	= GameInfoTypes["BUILDING_TRADITION_MANPOWER"]
--- local bTFood		= GameInfoTypes["BUILDING_TRADITION_FOOD_GROWTH"]
---
-function PlayerEditCity() ------------------------This will trigger when player edit the specialists slots inside their cities.
-
-    ------------------------CANNOT use Events.SpecificCityInfoDirty because it will cause infinte LOOP!!!!!!!!!!!!!!!!!!!!!!WTF!!!!!!!!!!!!!!!!!!!!!!!________
-
-    local player = Players[Game.GetActivePlayer()]
-
-    if player:IsBarbarian() or player:IsMinorCiv() then
-        print("Minors are Not available - PlayerEditCity!")
-        return
-    end
-
-    if not player:IsHuman() then return end
-
-    if UI.GetHeadSelectedCity() == nil then return end
-
-    local city = UI.GetHeadSelectedCity()
-
-    --
-
-    SetCityAntiNegGoldBonus(city)
-
-    print("city's Specialist slot Updated in city screen!")
-
-end
-Events.SerialEventCityInfoDirty.Add(PlayerEditCity)
-
-
-local g_InternationalismIdeology = nil;
-for playerID, player in pairs(Players) do
-    if player and player:IsAlive() and
-        player:HasPolicy(GameInfoTypes["POLICY_IRON_CURTAIN"]) then
-        g_InternationalismIdeology =
-            GameInfoTypes[GameInfo.Policies["POLICY_IRON_CURTAIN"]
-                .PolicyBranchType];
-        break
-    end
-end
-function SPInternationalismAdopted(playerID, policyID)
-    if policyID == GameInfoTypes["POLICY_IRON_CURTAIN"] and
-        g_InternationalismIdeology == nil then
-        g_InternationalismIdeology =
-            GameInfoTypes[GameInfo.Policies["POLICY_IRON_CURTAIN"]
-                .PolicyBranchType];
-    end
-end
-GameEvents.PlayerAdoptPolicy.Add(SPInternationalismAdopted);
 
 function NewCitySystem(playerID)
     local player = Players[playerID]
@@ -107,80 +20,24 @@ function NewCitySystem(playerID)
         return
     end
 
-    -- Policie Effects & Some Civs' UAs
-    if player:GetCapitalCity() ~= nil then
-        local pCapital = player:GetCapitalCity();
-        -- Set Policy Buildings in Capital
-
-        pCapital:SetNumRealBuilding(
-            GameInfoTypes["BUILDING_IRON_CURTAIN_HAPPI"], 0);
-        pCapital:SetNumRealBuilding(
-            GameInfoTypes["BUILDING_IRON_CURTAIN_UNHAP"], 0);
-        local iUnhappinessFromPublicOpinion =
-            player:GetPublicOpinionUnhappiness(); -- iUnhappinessFromPublicOpinion = player:GetUnhappinessFromPublicOpinion()
-        -- print("Player: " .. playerID .. " - UnhappinessFromPublicOpinion: " .. iUnhappinessFromPublicOpinion .. " - Ideology: " .. tostring(player:GetLateGamePolicyTree()) .. " - Order Ideology: " .. tostring(g_InternationalismIdeology));
-        if iUnhappinessFromPublicOpinion > 0 then
-            -- Policy - Internationalism
-            if player:HasPolicy(GameInfoTypes["POLICY_IRON_CURTAIN"]) then
-                pCapital:SetNumRealBuilding(
-                    GameInfoTypes["BUILDING_IRON_CURTAIN_HAPPI"],
-                    iUnhappinessFromPublicOpinion);
-            elseif g_InternationalismIdeology and player:GetLateGamePolicyTree() ~=
-                g_InternationalismIdeology then
-                pCapital:SetNumRealBuilding(
-                    GameInfoTypes["BUILDING_IRON_CURTAIN_UNHAP"],
-                    iUnhappinessFromPublicOpinion);
-            end
-            -- POLICY_CULT_PERSONALITY
-            iUnhappinessFromPublicOpinion = math.floor(
-                                                iUnhappinessFromPublicOpinion /
-                                                    2) +
-                                                pCapital:GetNumBuilding(
-                                                    GameInfoTypes["BUILDING_IRON_CURTAIN_HAPPI"]);
-            if player:HasPolicy(GameInfoTypes["POLICY_CULT_PERSONALITY"]) then
-                pCapital:SetNumRealBuilding(
-                    GameInfoTypes["BUILDING_IRON_CURTAIN_HAPPI"],
-                    iUnhappinessFromPublicOpinion);
-            end
-        end
-
-    end
-
     -- Set "Allah Akbar" from Islamic University
     if (player:CountNumBuildings(
-        GameInfoTypes["BUILDING_ARABIA_ISIAMIC_UNIVERSITY"]) > 6 or
-        player:CountNumBuildings(
-            GameInfoTypes["BUILDING_ARABIA_ISIAMIC_UNIVERSITY_ALLAH_AKBAR"]) > 0) -- Policy Effects
-    -- +5% Culture Cost for New Policies if the city hasn't city hall -- Representation
-    -- +25% Faith in all cities which have built a World Wonder -- Piety - Opening Effect
-    -- Remove +25% WonderProductionModifier after enter "World War Era" -- Artistic Genius
-    -- Get Consumers from Policy - Merchant Navy
-    -- Get Local Happiness from Policy - Protectionism
-    -- Get Consumers & Electricities from Policy - Total War
-    or (player:HasPolicy(GameInfoTypes["POLICY_REPRESENTATION"]) or
-        player:HasPolicy(GameInfoTypes["POLICY_PIETY"]) or
-        player:HasPolicy(GameInfoTypes["POLICY_MERCHANT_NAVY"]) or
-        (player:HasPolicy(GameInfoTypes["POLICY_ARTISTIC_GENIUS"]) and
-            player:GetCurrentEra() > 5) or
-        player:HasPolicy(GameInfoTypes["POLICY_MARKET_ECONOMY"]) or
-        player:HasPolicy(GameInfoTypes["POLICY_TOTAL_WAR"])) -- German UA
-    or (GameInfo.Leader_Traits {
-        LeaderType = GameInfo.Leaders[player:GetLeaderType()].Type,
-        TraitType = "TRAIT_CONVERTS_LAND_BARBARIANS"
-    }() and
-        (GameInfo.Traits["TRAIT_CONVERTS_LAND_BARBARIANS"].PrereqPolicy == nil or
-            (GameInfo.Traits["TRAIT_CONVERTS_LAND_BARBARIANS"].PrereqPolicy and
-                player:HasPolicy(
-                    GameInfoTypes[GameInfo.Traits["TRAIT_CONVERTS_LAND_BARBARIANS"]
-                        .PrereqPolicy])))) --[[
-		-- Hunnic UA
-		or (GameInfo.Leader_Traits{ LeaderType = GameInfo.Leaders[player:GetLeaderType()].Type, TraitType = "TRAIT_RAZE_AND_HORSES" }()
-		and(GameInfo.Traits["TRAIT_RAZE_AND_HORSES"].PrereqPolicy == nil or (GameInfo.Traits["TRAIT_RAZE_AND_HORSES"].PrereqPolicy 
-		and player:HasPolicy(GameInfoTypes[GameInfo.Traits["TRAIT_RAZE_AND_HORSES"].PrereqPolicy]))))
-		]] then
+                GameInfoTypes["BUILDING_ARABIA_ISIAMIC_UNIVERSITY"]) > 6 or
+            player:CountNumBuildings(
+                GameInfoTypes["BUILDING_ARABIA_ISIAMIC_UNIVERSITY_ALLAH_AKBAR"]) > 0) -- Policy Effects
+        -- +5% Culture Cost for New Policies if the city hasn't city hall -- Representation
+        -- +25% Faith in all cities which have built a World Wonder -- Piety - Opening Effect
+        -- Remove +25% WonderProductionModifier after enter "World War Era" -- Artistic Genius
+        -- Get Consumers from Policy - Merchant Navy
+        -- Get Local Happiness from Policy - Protectionism
+        -- Get Consumers & Electricities from Policy - Total War
+        or (player:HasPolicy(GameInfoTypes["POLICY_REPRESENTATION"]) or
+            player:HasPolicy(GameInfoTypes["POLICY_MERCHANT_NAVY"]) or
+            player:HasPolicy(GameInfoTypes["POLICY_MARKET_ECONOMY"]) or
+            player:HasPolicy(GameInfoTypes["POLICY_TOTAL_WAR"])) then
         local iCountIU = math.floor(player:CountNumBuildings(
-                                        GameInfoTypes["BUILDING_ARABIA_ISIAMIC_UNIVERSITY"]) /
-                                        7);
+                GameInfoTypes["BUILDING_ARABIA_ISIAMIC_UNIVERSITY"]) /
+            7);
 
         for pCity in player:Cities() do
             if pCity ~= nil then
@@ -197,9 +54,9 @@ function NewCitySystem(playerID)
                 local bHasCH = false;
                 -- Islamic University
                 if (iCountIU > 0 and not pCity:IsPuppet() and
-                    pCity:IsHasBuilding(
-                        GameInfoTypes["BUILDING_ARABIA_ISIAMIC_UNIVERSITY"])) -- +5% Culture Cost for New Policies if the city hasn't city hall
-                or
+                        pCity:IsHasBuilding(
+                            GameInfoTypes["BUILDING_ARABIA_ISIAMIC_UNIVERSITY"])) -- +5% Culture Cost for New Policies if the city hasn't city hall
+                    or
                     pCity:IsHasBuilding(
                         GameInfoTypes["BUILDING_REPRESENTATION_CULTURE"]) then
                     local iNumFB = 0;
@@ -210,15 +67,15 @@ function NewCitySystem(playerID)
                             if building.BuildingClass ~=
                                 "BUILDINGCLASS_ARABIA_ISIAMIC_UNIVERSITY_ALLAH_AKBAR" then
                                 if (building.FaithCost > 0 and building.Cost ==
-                                    -1) or building.BuildingClass ==
+                                        -1) or building.BuildingClass ==
                                     "BUILDINGCLASS_SHRINE" or
                                     building.BuildingClass ==
                                     "BUILDINGCLASS_TEMPLE" then
                                     iNumFB = iNumFB + 1;
                                 elseif GameInfo.Building_YieldChanges {
-                                    BuildingType = building.Type,
-                                    YieldType = "YIELD_FAITH"
-                                }() then
+                                        BuildingType = building.Type,
+                                        YieldType = "YIELD_FAITH"
+                                    } () then
                                     iNumOFB = iNumOFB + 1;
                                 end
                             end
@@ -251,7 +108,7 @@ function NewCitySystem(playerID)
                     -- iNumAIUAA = math.min(iNumAIUAA,20);
                 end
                 if pCity:GetNumBuilding(
-                    GameInfoTypes["BUILDING_ARABIA_ISIAMIC_UNIVERSITY_ALLAH_AKBAR"]) ~=
+                        GameInfoTypes["BUILDING_ARABIA_ISIAMIC_UNIVERSITY_ALLAH_AKBAR"]) ~=
                     iNumAIUAA then
                     pCity:SetNumRealBuilding(
                         GameInfoTypes["BUILDING_ARABIA_ISIAMIC_UNIVERSITY_ALLAH_AKBAR"],
@@ -261,9 +118,9 @@ function NewCitySystem(playerID)
                 -- Policy Effects
                 -- +5% Culture Cost for New Policies if the city hasn't city hall
                 if pCity:IsHasBuilding(
-                    GameInfoTypes["BUILDING_REPRESENTATION_CULTURE_COST"]) then
+                        GameInfoTypes["BUILDING_REPRESENTATION_CULTURE_COST"]) then
                     if not pCity:IsHasBuilding(
-                        GameInfoTypes["BUILDING_REPRESENTATION_CULTURE"]) or
+                            GameInfoTypes["BUILDING_REPRESENTATION_CULTURE"]) or
                         bHasCH then
                         pCity:SetNumRealBuilding(
                             GameInfoTypes["BUILDING_REPRESENTATION_CULTURE_COST"],
@@ -271,28 +128,14 @@ function NewCitySystem(playerID)
                     end
                 else
                     if pCity:IsHasBuilding(
-                        GameInfoTypes["BUILDING_REPRESENTATION_CULTURE"]) and
+                            GameInfoTypes["BUILDING_REPRESENTATION_CULTURE"]) and
                         not bHasCH then
                         pCity:SetNumRealBuilding(
                             GameInfoTypes["BUILDING_REPRESENTATION_CULTURE_COST"],
                             1);
                     end
                 end
-                -- +25% Faith in all cities which have built a World Wonder
-                if pCity:GetNumWorldWonders() > 0 and
-                    not pCity:IsHasBuilding(
-                        GameInfoTypes["BUILDING_WONDER_YIELD_FAITH_MOD"]) then
-                    pCity:SetNumRealBuilding(
-                        GameInfoTypes["BUILDING_WONDER_YIELD_FAITH_MOD"], 1);
-                end
 
-                -- Remove Effect after enter "World War Era"
-                if player:GetCurrentEra() > 5 and
-                    pCity:IsHasBuilding(
-                        GameInfoTypes["BUILDING_ARTISTIC_GENIUS"]) then
-                    pCity:SetNumRealBuilding(
-                        GameInfoTypes["BUILDING_ARTISTIC_GENIUS"], 0);
-                end
                 -- Get Extra Consumers & Electricities
                 local iNumCon = 0;
                 local iNumEle = 0;
@@ -302,85 +145,34 @@ function NewCitySystem(playerID)
                 end
                 if player:HasPolicy(GameInfoTypes["POLICY_TOTAL_WAR"]) then
                     if pCity:IsHasBuilding(
-                        GameInfoTypes["BUILDING_CITY_SIZE_SMALL"]) then
+                            GameInfoTypes["BUILDING_CITY_SIZE_SMALL"]) then
                         iNumCon = iNumCon + 3;
                         iNumEle = iNumEle + 3;
                     end
                     if pCity:IsHasBuilding(
-                        GameInfoTypes["BUILDING_CITY_SIZE_MEDIUM"]) then
+                            GameInfoTypes["BUILDING_CITY_SIZE_MEDIUM"]) then
                         iNumCon = iNumCon + 3;
                         iNumEle = iNumEle + 3;
                     end
                 end
                 if pCity:GetNumBuilding(
-                    GameInfoTypes["BUILDING_CIV_S_P_CON_RESOURCES"]) ~= iNumCon then
+                        GameInfoTypes["BUILDING_CIV_S_P_CON_RESOURCES"]) ~= iNumCon then
                     pCity:SetNumRealBuilding(
                         GameInfoTypes["BUILDING_CIV_S_P_CON_RESOURCES"], iNumCon);
                 end
                 if pCity:GetNumBuilding(
-                    GameInfoTypes["BUILDING_CIV_S_P_ELE_RESOURCES"]) ~= iNumEle then
+                        GameInfoTypes["BUILDING_CIV_S_P_ELE_RESOURCES"]) ~= iNumEle then
                     pCity:SetNumRealBuilding(
                         GameInfoTypes["BUILDING_CIV_S_P_ELE_RESOURCES"], iNumEle);
                 end
                 -- Get Extra Happiness
-                if player:HasPolicy(GameInfoTypes["POLICY_MARKET_ECONOMY"]) 
-                and pCity:GetWeLoveTheKingDayCounter() > 0 then
+                if player:HasPolicy(GameInfoTypes["POLICY_MARKET_ECONOMY"])
+                    and pCity:GetWeLoveTheKingDayCounter() > 0 then
                     pCity:SetNumRealBuilding(GameInfoTypes["BUILDING_MARKET_ECONOMY"], 1);
-                    
                 elseif pCity:IsHasBuilding(GameInfoTypes["BUILDING_MARKET_ECONOMY"]) then
                     pCity:SetNumRealBuilding(GameInfoTypes["BUILDING_MARKET_ECONOMY"], 0);
                 end
 
-                --[[
-				-- Hunnic UA
-				if GameInfo.Leader_Traits{ LeaderType = GameInfo.Leaders[player:GetLeaderType()].Type, TraitType = "TRAIT_RAZE_AND_HORSES" }()
-				and(GameInfo.Traits["TRAIT_RAZE_AND_HORSES"].PrereqPolicy == nil or (GameInfo.Traits["TRAIT_RAZE_AND_HORSES"].PrereqPolicy 
-				and player:HasPolicy(GameInfoTypes[GameInfo.Traits["TRAIT_RAZE_AND_HORSES"].PrereqPolicy])))
-				and pCity:IsRazing()
-				then
-					local Cityname = pCity:GetName()
-					print ("Burning pCity:"..Cityname)
-					
-					local CityPop = pCity:GetPopulation()
-					
-					if CityPop < 1 then
-						print ("Citizens are all dead!")
-						return
-					end
-					
-					local GoldOutput = pCity:GetYieldRate(YieldTypes.YIELD_GOLD)
-					local ScienceOutput = pCity:GetYieldRate(YieldTypes.YIELD_SCIENCE)
-					local CultureOutput = pCity:GetYieldRate(YieldTypes.YIELD_CULTURE)
-					local FaithOutput = pCity:GetYieldRate(YieldTypes.YIELD_FAITH)
-					
-					print ("Gold:"..GoldOutput)
-					print ("Science:"..ScienceOutput)
-					print ("Culture:"..CultureOutput)
-					print ("Faith:"..FaithOutput)
-					
-					player:ChangeJONSCulture(CultureOutput)
-					player:ChangeGold(GoldOutput)
-					player:ChangeFaith(FaithOutput)
-					
-					local team = Teams[player:GetTeam()]
-					local teamTechs = team:GetTeamTechs()
-					
-					if teamTechs ~= nil then 
-						local currentTech = player:GetCurrentResearch()
-						local researchProgress = teamTechs:GetResearchProgress(currentTech)
-						
-						if currentTech ~= nil and researchProgress > 0 then
-							teamTechs:SetResearchProgress(currentTech, researchProgress + ScienceOutput)
-						end
-					end
-					
-					if player:IsHuman() and ScienceOutput > 0 then
-						 local text = Locale.ConvertTextKey( "TXT_KEY_SP_NOTIFICATION_TRAIT_OUTPUT_FROM_RAZING", tostring(ScienceOutput), Cityname)
-						Events.GameplayAlertMessage( text )
-					end
-					print ("Hunnic UA!")
-				end
-				]]
             end
         end
     end
@@ -401,18 +193,14 @@ function NewCitySystem(playerID)
     -------------Set City Per Turn Effects
 
     local ManpowerRes = player:GetNumResourceAvailable(
-                            GameInfoTypes["RESOURCE_MANPOWER"], true)
+        GameInfoTypes["RESOURCE_MANPOWER"], true)
     local ConsumerRes = player:GetNumResourceAvailable(
-                            GameInfoTypes["RESOURCE_CONSUMER"], true)
+        GameInfoTypes["RESOURCE_CONSUMER"], true)
     local ElectricRes = player:GetNumResourceAvailable(
-                            GameInfoTypes["RESOURCE_ELECTRICITY"], true)
+        GameInfoTypes["RESOURCE_ELECTRICITY"], true)
 
     print("International Immigration Start!");
     InternationalImmigration(playerID)
-
-    --	if ConsumerRes < 0 then
-    --		AutoAddingMerchants (player,ConsumerRes)
-    --	end
 
     SetCityPerTurnEffects(playerID)
     SetCityResEffects(playerID, ManpowerRes, ConsumerRes, ElectricRes)
@@ -420,38 +208,12 @@ function NewCitySystem(playerID)
 
     print("City per Turn Effects set!!")
 
-    ---------------------Automation set auto improvement working
-    --[[
-		if Teams[player:GetTeam()]:IsHasTech(GameInfoTypes["TECH_AUTOMATION_T"]) then
-			local iTurnsElapsed = Game.GetElapsedGameTurns()
-			local iTurnTrigger = 2
-			local GameSpeed = Game.GetGameSpeedType()
-			if GameSpeed == 0 then
-				iTurnTrigger = 5
-			elseif GameSpeed == 1 then
-				iTurnTrigger = 4
-			elseif GameSpeed == 2 then
-				iTurnTrigger = 3
-			elseif GameSpeed == 3 then
-				iTurnTrigger = 2
-			end	
-			print ("Automation active cycle:"..iTurnTrigger)
-	
-			if iTurnsElapsed % iTurnTrigger == 0 then
-				print ("Automation: an active turn!")
-				
-				local text = Locale.ConvertTextKey( "TXT_KEY_SP_NOTIFICATION_AUTOMATION_ACTIVE")
-				Events.GameplayAlertMessage( text )
-				ImproveTiles(true);	-- player:IsHuman()
-			end
-		end
-		]]
 end ---------Function End
+
 GameEvents.PlayerDoTurn.Add(NewCitySystem)
 
 --------------Trigger the city system when player build new city
 function HumanFoundingNewCities(iPlayerID, iX, iY)
-
     local player = Players[iPlayerID]
     if player and player:IsHuman() and player:GetNumCities() >= 1 then
         local pPlot = Map.GetPlot(iX, iY)
@@ -463,6 +225,7 @@ function HumanFoundingNewCities(iPlayerID, iX, iY)
         print("Human's New city founded!")
     end
 end
+
 GameEvents.PlayerCityFounded.Add(HumanFoundingNewCities)
 
 
@@ -483,7 +246,7 @@ function InternationalImmigration(TargetPlayerID)
             not player:IsMinorCiv() and not player:IsBarbarian() and playerID ~=
             TargetPlayerID then
             local iCountBuildingID = GameInfoTypes["BUILDING_IMMIGRATION_" ..
-                                         tostring(TargetPlayerID)];
+            tostring(TargetPlayerID)];
             if iCountBuildingID == -1 or nil then
                 print("No CountBuilding");
             elseif CheckMoveOutCounter(TargetPlayerID, playerID) then
@@ -492,7 +255,7 @@ function InternationalImmigration(TargetPlayerID)
                 local pCapital = player:GetCapitalCity();
                 if not pCapital:IsHasBuilding(iCountBuildingID) then
                     pCapital:SetNumRealBuilding(iCountBuildingID,
-                                                ImmigrationCount[2]);
+                        ImmigrationCount[2]);
                 end
                 local iCount = pCapital:GetNumBuilding(iCountBuildingID);
 
@@ -519,12 +282,12 @@ function InternationalImmigration(TargetPlayerID)
                         DoInternationalImmigration(OutPlayer, InPlayer);
                     if bIsDoImmigration then
                         pCapital:SetNumRealBuilding(iCountBuildingID,
-                                                    ImmigrationCount[2]);
+                            ImmigrationCount[2]);
                         print("Successful International Immigration: Player " ..
-                                  OutPlayer .. " to Player " .. InPlayer);
+                            OutPlayer .. " to Player " .. InPlayer);
                     else
                         print("Fail International Immigration: Player " ..
-                                  OutPlayer .. " to Player " .. InPlayer);
+                            OutPlayer .. " to Player " .. InPlayer);
                     end
                 end
             end
@@ -533,9 +296,8 @@ function InternationalImmigration(TargetPlayerID)
 end ---------function end
 
 function DoInternationalImmigration(MoveOutPlayerID, MoveInPlayerID)
-
     local MoveOutPlayer = Players[MoveOutPlayerID] -----------This nation's population tries to move out
-    local MoveInPlayer = Players[MoveInPlayerID] -----------Move to this nation
+    local MoveInPlayer = Players[MoveInPlayerID]   -----------Move to this nation
 
     if MoveOutPlayer:GetNumCities() < 1 or MoveInPlayer:GetNumCities() < 1 then
         return false
@@ -562,10 +324,10 @@ function DoInternationalImmigration(MoveOutPlayerID, MoveInPlayerID)
         ------------Notification-----------
         if MoveOutPlayer:IsHuman() and targetCity ~= nil then
             local text = Locale.ConvertTextKey(
-                             "TXT_KEY_SP_NOTIFICATION_IMMIGRANT_LEFT_CITY",
-                             targetCity:GetName())
+                "TXT_KEY_SP_NOTIFICATION_IMMIGRANT_LEFT_CITY",
+                targetCity:GetName())
             local heading = Locale.ConvertTextKey(
-                                "TXT_KEY_SP_NOTIFICATION_IMMIGRANT_LEFT_CITY_SHORT")
+                "TXT_KEY_SP_NOTIFICATION_IMMIGRANT_LEFT_CITY_SHORT")
             MoveOutPlayer:AddNotification(
                 NotificationTypes.NOTIFICATION_STARVING, text, heading,
                 targetCity:GetX(), targetCity:GetY())
@@ -609,10 +371,10 @@ function DoInternationalImmigration(MoveOutPlayerID, MoveInPlayerID)
         ------------Notification-----------
         if MoveInPlayer:IsHuman() and targetCity ~= nil then
             local text = Locale.ConvertTextKey(
-                             "TXT_KEY_SP_NOTIFICATION_IMMIGRANT_REACHED_CITY",
-                             targetCity:GetName())
+                "TXT_KEY_SP_NOTIFICATION_IMMIGRANT_REACHED_CITY",
+                targetCity:GetName())
             local heading = Locale.ConvertTextKey(
-                                "TXT_KEY_SP_NOTIFICATION_IMMIGRANT_REACHED_CITY_SHORT")
+                "TXT_KEY_SP_NOTIFICATION_IMMIGRANT_REACHED_CITY_SHORT")
             MoveInPlayer:AddNotification(
                 NotificationTypes.NOTIFICATION_CITY_GROWTH, text, heading,
                 targetCity:GetX(), targetCity:GetY())
@@ -620,19 +382,14 @@ function DoInternationalImmigration(MoveOutPlayerID, MoveInPlayerID)
         return true
     else
         return false
-
     end
-
 end ---------function end
 
 function SetCityPerTurnEffects(playerID)
-
     if Players[playerID] and Players[playerID]:GetNumCities() > 0 then
         local player = Players[playerID];
         for city in player:Cities() do
-
             if city ~= nil then
-
                 local Cityname = city:GetName()
                 print("Get the city:" .. Cityname)
 
@@ -642,28 +399,26 @@ function SetCityPerTurnEffects(playerID)
 
                 SetCityLevelbyDistance(city)
 
-                SetCityAntiNegGoldBonus(city)
-
                 -- Add|Remove "Bullring" for Spainish Amusement Park
                 if GameInfo.Leader_Traits {
-                    LeaderType = GameInfo.Leaders[player:GetLeaderType()].Type,
-                    TraitType = "TRAIT_SEVEN_CITIES"
-                }() and
+                        LeaderType = GameInfo.Leaders[player:GetLeaderType()].Type,
+                        TraitType = "TRAIT_SEVEN_CITIES"
+                    } () and
                     (GameInfo.Traits["TRAIT_SEVEN_CITIES"].PrereqPolicy == nil or
                         (GameInfo.Traits["TRAIT_SEVEN_CITIES"].PrereqPolicy and
                             player:HasPolicy(
                                 GameInfoTypes[GameInfo.Traits["TRAIT_SEVEN_CITIES"]
-                                    .PrereqPolicy]))) then
+                                .PrereqPolicy]))) then
                     if (city:IsHasBuilding(
-                        GameInfoTypes["BUILDING_AMUSEMENT_PARK"]) and
-                        city:IsHasBuilding(
-                            GameInfoTypes["BUILDING_SPAIN_BULLRING"])) or
+                                GameInfoTypes["BUILDING_AMUSEMENT_PARK"]) and
+                            city:IsHasBuilding(
+                                GameInfoTypes["BUILDING_SPAIN_BULLRING"])) or
                         (not city:IsHasBuilding(
-                            GameInfoTypes["BUILDING_AMUSEMENT_PARK"]) and
+                                GameInfoTypes["BUILDING_AMUSEMENT_PARK"]) and
                             not city:IsHasBuilding(
                                 GameInfoTypes["BUILDING_SPAIN_BULLRING"])) then
                     elseif city:IsHasBuilding(
-                        GameInfoTypes["BUILDING_AMUSEMENT_PARK"]) then
+                            GameInfoTypes["BUILDING_AMUSEMENT_PARK"]) then
                         city:SetNumRealBuilding(
                             GameInfoTypes["BUILDING_SPAIN_BULLRING"], 1);
                     else
@@ -676,33 +431,12 @@ function SetCityPerTurnEffects(playerID)
     end
 end -------------Function End
 
-function SetCityAntiNegGoldBonus(city)
-
-    if city == nil then
-        print("City does not exist!")
-        return
-    end
-    if city:IsHasBuilding(GameInfoTypes["BUILDING_BUGFIX_NEGATIVE_GOLD"]) then
-        city:SetNumRealBuilding(GameInfoTypes["BUILDING_BUGFIX_NEGATIVE_GOLD"],
-                                0)
-    end
-    if not city:IsHasBuilding(GameInfoTypes["BUILDING_BANK_OF_ENGLAND"]) then
-        return
-    end
-    print("Bank of england exists")
-
-    if city:GetYieldRate(YieldTypes.YIELD_GOLD) < 0 then
-        print("City Goldyield < 0!")
-        city:SetNumRealBuilding(GameInfoTypes["BUILDING_BUGFIX_NEGATIVE_GOLD"],
-                                1)
-    end
-
-end
-
 function SetCityResEffects(playerID, ManpowerRes, ConsumerRes, ElectricRes)
     if playerID == nil or Players[playerID] == nil or
         Players[playerID]:GetCapitalCity() == nil or ManpowerRes == nil or
-        ConsumerRes == nil or ElectricRes == nil then return; end
+        ConsumerRes == nil or ElectricRes == nil then
+        return;
+    end
     local player = Players[playerID];
     local CaptialCity = player:GetCapitalCity();
 
@@ -710,7 +444,7 @@ function SetCityResEffects(playerID, ManpowerRes, ConsumerRes, ElectricRes)
     CaptialCity:SetNumRealBuilding(GameInfoTypes["BUILDING_CONSUMER_BONUS"], 0)
     CaptialCity:SetNumRealBuilding(GameInfoTypes["BUILDING_CONSUMER_PENALTY"], 0)
     CaptialCity:SetNumRealBuilding(GameInfoTypes["BUILDING_ELECTRICITY_BONUS"],
-                                   0)
+        0)
     CaptialCity:SetNumRealBuilding(
         GameInfoTypes["BUILDING_ELECTRICITY_PENALTY"], 0)
 
@@ -724,16 +458,16 @@ function SetCityResEffects(playerID, ManpowerRes, ConsumerRes, ElectricRes)
         local ManpowerRate = math.floor(ManpowerRes / DubCityTotal)
         if ManpowerRate > 7 then ManpowerRate = 7 end
 
-        --		local PlayerHurryMod = player:GetHurryModifier(GameInfo.HurryInfos.HURRY_GOLD.ID) 
+        --		local PlayerHurryMod = player:GetHurryModifier(GameInfo.HurryInfos.HURRY_GOLD.ID)
         --		print ("-------------------------------------------------Player HurryModifier:"..PlayerHurryMod)
 
         print("Manpower Rate:" .. ManpowerRate)
         CaptialCity:SetNumRealBuilding(GameInfoTypes["BUILDING_MANPOWER_BONUS"],
-                                       ManpowerRate)
+            ManpowerRate)
         print("Manpower Bonus!")
     else
         CaptialCity:SetNumRealBuilding(GameInfoTypes["BUILDING_MANPOWER_BONUS"],
-                                       0)
+            0)
         print("No Manpower Bonus!")
     end
 
@@ -741,9 +475,9 @@ function SetCityResEffects(playerID, ManpowerRes, ConsumerRes, ElectricRes)
     if ConsumerRes >= 25 then
         local ConsumerRate = math.floor(ConsumerRes / CityTotal)
         if player:HasPolicy(GameInfo.Policies["POLICY_MERCANTILISM"].ID) then
-            ConsumerRate = math.floor( ConsumerRate * 1.2 )
+            ConsumerRate = math.floor(ConsumerRate * 1.2)
             if ConsumerRate >= 60 then ConsumerRate = 60 end
-        else 
+        else
             if ConsumerRate >= 50 then ConsumerRate = 50 end
         end
         print("Consumer Rate:" .. ConsumerRate)
@@ -759,13 +493,12 @@ function SetCityResEffects(playerID, ManpowerRes, ConsumerRes, ElectricRes)
         end
     elseif ConsumerRes >= 0 and ConsumerRes < 25 then
         CaptialCity:SetNumRealBuilding(GameInfoTypes["BUILDING_CONSUMER_BONUS"],
-                                       0)
+            0)
         CaptialCity:SetNumRealBuilding(
             GameInfoTypes["BUILDING_CONSUMER_PENALTY"], 0)
         CaptialCity:SetNumRealBuilding(
             GameInfoTypes["BUILDING_CONSUMER_PENALTY_WARNING"], 0)
         print("No Consumer Bonus!")
-
     elseif ConsumerRes < 0 then
         local ConsumerLackRaw = math.floor(ConsumerRes * CityDivd)
         local ConsumerLack = math.abs(ConsumerLackRaw)
@@ -778,7 +511,7 @@ function SetCityResEffects(playerID, ManpowerRes, ConsumerRes, ElectricRes)
         end
 
         if CaptialCity:IsHasBuilding(
-            GameInfoTypes["BUILDING_CONSUMER_PENALTY_WARNING"]) then
+                GameInfoTypes["BUILDING_CONSUMER_PENALTY_WARNING"]) then
             CaptialCity:SetNumRealBuilding(
                 GameInfoTypes["BUILDING_CONSUMER_PENALTY"], ConsumerLack)
             print("Consumer Penalty Effective!")
@@ -787,9 +520,9 @@ function SetCityResEffects(playerID, ManpowerRes, ConsumerRes, ElectricRes)
                 GameInfoTypes["BUILDING_CONSUMER_PENALTY_WARNING"], 1)
             if player:IsHuman() then
                 local heading = Locale.ConvertTextKey(
-                                    "TXT_KEY_SP_NOTIFICATION_LACKING_CONSUMER_GOODS_WARNING_SHORT")
+                    "TXT_KEY_SP_NOTIFICATION_LACKING_CONSUMER_GOODS_WARNING_SHORT")
                 local text = Locale.ConvertTextKey(
-                                 "TXT_KEY_SP_NOTIFICATION_LACKING_CONSUMER_GOODS_WARNING")
+                    "TXT_KEY_SP_NOTIFICATION_LACKING_CONSUMER_GOODS_WARNING")
                 player:AddNotification(
                     NotificationTypes.NOTIFICATION_REQUEST_RESOURCE, text,
                     heading, -1, -1, GameInfoTypes["RESOURCE_CONSUMER"])
@@ -797,13 +530,12 @@ function SetCityResEffects(playerID, ManpowerRes, ConsumerRes, ElectricRes)
             print(
                 "Consumer Penalty Warning! Penalty will come if still lacking next turn!")
         end
-
     end
 
     ----------------------Electricity Effects
     if player:GetCurrentEra() >= GameInfo.Eras["ERA_MODERN"].ID then
         local PlayerTechsCount = Teams[player:GetTeam()]:GetTeamTechs()
-                                     :GetNumTechsKnown()
+            :GetNumTechsKnown()
         print("Player Techs count:" .. PlayerTechsCount)
         local ModernTechsCount = PlayerTechsCount - 50
         if ModernTechsCount > 15 then ModernTechsCount = 15 end
@@ -829,14 +561,12 @@ function SetCityResEffects(playerID, ManpowerRes, ConsumerRes, ElectricRes)
                     GameInfoTypes["BUILDING_ELECTRICITY_BONUS"], ElectricityRate)
                 print("Electricity Bonus!")
             end
-
         elseif ElectricRes >= 0 and ElectricRes < 25 then
             CaptialCity:SetNumRealBuilding(
                 GameInfoTypes["BUILDING_ELECTRICITY_BONUS"], 0)
             CaptialCity:SetNumRealBuilding(
                 GameInfoTypes["BUILDING_ELECTRICITY_PENALTY"], 0)
             print("No Electricity Bonus!")
-
         elseif ElectricRes < 0 then
             local ElectricityLackRaw = math.floor(ElectricRes * CityDivd)
             local ElectricityLack = math.abs(ElectricityLackRaw)
@@ -856,16 +586,16 @@ function SetCityResEffects(playerID, ManpowerRes, ConsumerRes, ElectricRes)
             CaptialCity:SetNumRealBuilding(
                 GameInfoTypes["BUILDING_ELECTRICITY_PENALTY"], ElectricityLack)
             print("Electricity Penalty!")
-
         end
     end
-
 end -------------Function End
 
 -- Check to Set Capital for avoiding CTD -- by CaptainCWB
 function CheckCapital(iPlayerID)
     if Players[iPlayerID] == nil or not Players[iPlayerID]:IsAlive() or
-        Players[iPlayerID]:GetNumCities() <= 0 then return; end
+        Players[iPlayerID]:GetNumCities() <= 0 then
+        return;
+    end
     local pPlayer = Players[iPlayerID];
     local pOCapital = pPlayer:GetCapitalCity();
     local pNCapital = nil;
@@ -874,15 +604,15 @@ function CheckCapital(iPlayerID)
 
     -- Fix Puppet|Annex for "MayNotAnnex Player" & Capital
     if pOCapital == nil or ((pPlayer:MayNotAnnex() and pOCapital:IsPuppet()) or
-        (pPlayer:GetBuildingClassCount(
-            GameInfoTypes["BUILDINGCLASS_CAPITAL_MOVEMARK"]) > 0 and
-            not pOCapital:IsHasBuilding(
-                GameInfoTypes["BUILDING_CAPITAL_MOVEMARK"]))) then
+            (pPlayer:GetBuildingClassCount(
+                    GameInfoTypes["BUILDINGCLASS_CAPITAL_MOVEMARK"]) > 0 and
+                not pOCapital:IsHasBuilding(
+                    GameInfoTypes["BUILDING_CAPITAL_MOVEMARK"]))) then
         for pCity in pPlayer:Cities() do
             if pCity == nil then
             elseif not pCity:IsCapital() then
                 if pCity:IsHasBuilding(
-                    GameInfoTypes["BUILDING_CAPITAL_MOVEMARK"]) then
+                        GameInfoTypes["BUILDING_CAPITAL_MOVEMARK"]) then
                     pNCapital = pCity;
                     ibIsNewCapital = true;
                 end
@@ -916,7 +646,7 @@ function CheckCapital(iPlayerID)
                     BuildingClassType = "BUILDINGCLASS_PALACE",
                     CivilizationType = GameInfo.Civilizations[pPlayer:GetCivilizationType()]
                         .Type
-                }();
+                } ();
             if overridePalace ~= nil then
                 iPalaceID = GameInfo.Buildings[overridePalace.BuildingType].ID;
             end
@@ -960,7 +690,7 @@ function CheckCapital(iPlayerID)
                             building.Type == "BUILDING_HAPPINESS_TOURISMBOOST" or
                             building.Type == "BUILDING_TRADE_TO_SCIENCE" or
                             building.Type == "BUILDING_RATIONALISM_HAPPINESS" --	or  building.Type == "BUILDING_SCHOLASTICISM"
-                        or building.Type == "BUILDING_TROOPS_DEBUFF") then
+                            or building.Type == "BUILDING_TROOPS_DEBUFF") then
                         pOCapital:SetNumRealBuilding(building.ID, 0);
                     end
 
@@ -968,7 +698,7 @@ function CheckCapital(iPlayerID)
                     local policFreeBCCapital =
                         GameInfo.Policy_FreeBuildingClassCapital {
                             BuildingClassType = building.BuildingClass
-                        }()
+                        } ()
                     if pOCapital:IsHasBuilding(building.ID) and
                         (policFreeBCCapital ~= nil or building.BuildingClass ==
                             "BUILDINGCLASS_COUNT_BUILIDNGS") then
@@ -982,86 +712,57 @@ function CheckCapital(iPlayerID)
 
             if pNCapital:IsRazing() then
                 Network.SendDoTask(pNCapital:GetID(), TaskTypes.TASK_UNRAZE, -1,
-                                   -1, false, false, false, false);
+                    -1, false, false, false, false);
                 -- pNCapital:SetNeverLost(true);
             end
         end
     end
 end
+
 GameEvents.PlayerDoTurn.Add(CheckCapital)
-
-function TechDynamiteEffectOnRazing(playerID)
-	if playerID == nil then
-		return;
-	end
-
-	local player = Players[playerID];
-	if player:IsMinorCiv() or player:IsBarbarian() then
-		return;
-	end
-
-	local bIsHasTechDynamite = Teams[player:GetTeam()]:IsHasTech(GameInfo.Technologies["TECH_DYNAMITE"].ID);
-	if not bIsHasTechDynamite then
-		return;
-	end
-
-	for city in player:Cities() do
-		if city:IsRazing() then
-			local cityName = city:GetName();
-			print("raze in one turn!")
-			player:Disband(city);
-			Events.SerialEventGameDataDirty();
-
-			if player:IsHuman() then
-				Events.GameplayAlertMessage(Locale.ConvertTextKey("TXT_KEY_RAZE_WITH_DYNAMITE", cityName))
-			end
-		end
-	end
-end
-GameEvents.PlayerDoTurn.Add(TechDynamiteEffectOnRazing)
 
 --City Founded in Special Terrain
 local improvementMachuID = GameInfoTypes["IMPROVEMENT_INCA_CITY"]
-local improvementPolyCity= {
-    [0] = GameInfoTypes["IMPROVEMENT_POLYNESIA_CITY_NE"], 
-    [1] = GameInfoTypes["IMPROVEMENT_POLYNESIA_CITY_E"] , 
-    [2] = GameInfoTypes["IMPROVEMENT_POLYNESIA_CITY_SE"], 
-	[3] = GameInfoTypes["IMPROVEMENT_POLYNESIA_CITY_SW"], 
-    [4] = GameInfoTypes["IMPROVEMENT_POLYNESIA_CITY_W"] ,
-	[5] = GameInfoTypes["IMPROVEMENT_POLYNESIA_CITY_NW"]
+local improvementPolyCity = {
+    [0] = GameInfoTypes["IMPROVEMENT_POLYNESIA_CITY_NE"],
+    [1] = GameInfoTypes["IMPROVEMENT_POLYNESIA_CITY_E"],
+    [2] = GameInfoTypes["IMPROVEMENT_POLYNESIA_CITY_SE"],
+    [3] = GameInfoTypes["IMPROVEMENT_POLYNESIA_CITY_SW"],
+    [4] = GameInfoTypes["IMPROVEMENT_POLYNESIA_CITY_W"],
+    [5] = GameInfoTypes["IMPROVEMENT_POLYNESIA_CITY_NW"]
 }
 
 local incaID = GameInfoTypes["CIVILIZATION_INCA"]
 local polyID = GameInfoTypes["CIVILIZATION_POLYNESIA"]
 
 function SPNIsCivilisationActive(civilizationID)
-    for iSlot = 0, GameDefines.MAX_MAJOR_CIVS-1, 1 do
-		local slotStatus = PreGame.GetSlotStatus(iSlot)
-		if (slotStatus == SlotStatus.SS_TAKEN or slotStatus == SlotStatus.SS_COMPUTER) then
-			if PreGame.GetCivilization(iSlot) == civilizationID then
-				return true
-			end
-		end
-	end
-	return false
+    for iSlot = 0, GameDefines.MAX_MAJOR_CIVS - 1, 1 do
+        local slotStatus = PreGame.GetSlotStatus(iSlot)
+        if (slotStatus == SlotStatus.SS_TAKEN or slotStatus == SlotStatus.SS_COMPUTER) then
+            if PreGame.GetCivilization(iSlot) == civilizationID then
+                return true
+            end
+        end
+    end
+    return false
 end
 
 function chooseCoastalCityDirection(plotX, plotY)
-    if Map.GetPlot(plotX,plotY):GetPlotCity() == nil then return end
+    if Map.GetPlot(plotX, plotY):GetPlotCity() == nil then return end
     local improvementPolyCityID = 0
     local ContinuousWaterPlot = 0
     local maxContinuousWaterPlot = 0
     --Looking for the center of the largest continuous water plot
     for i = 0, 11 do
-        local index = i%6
+        local index = i % 6
         local adjPlot = Map.PlotDirection(plotX, plotY, index)
         if adjPlot ~= nil then
-            if adjPlot:IsWater() then 
+            if adjPlot:IsWater() then
                 if ContinuousWaterPlot >= maxContinuousWaterPlot then
-                    improvementPolyCityID = math.abs(i - math.floor(ContinuousWaterPlot/2)) %6
+                    improvementPolyCityID = math.abs(i - math.floor(ContinuousWaterPlot / 2)) % 6
                 end
                 ContinuousWaterPlot = ContinuousWaterPlot + 1
-            else 
+            else
                 if ContinuousWaterPlot > maxContinuousWaterPlot then
                     maxContinuousWaterPlot = ContinuousWaterPlot
                 end
@@ -1074,40 +775,42 @@ function chooseCoastalCityDirection(plotX, plotY)
 end
 
 function SPNCityFoundedInSpecialTerrain(playerID, plotX, plotY)
-	local player = Players[playerID]
+    local player = Players[playerID]
     if not player:IsAlive() then return end
-    local cityPlot = Map.GetPlot(plotX,plotY)
+    local cityPlot = Map.GetPlot(plotX, plotY)
 
     --Inca city
-	if cityPlot:IsMountain()
+    if cityPlot:IsMountain()
     then
         print("Inca Mountain city! Set Improvement")
-		cityPlot:SetImprovementType(improvementMachuID)
-    --Poly city
+        cityPlot:SetImprovementType(improvementMachuID)
+        --Poly city
     elseif cityPlot:IsWater()
     then
         local PolyCityDirection = chooseCoastalCityDirection(plotX, plotY)
-        print("Poly Coastal City! Set Improvement",PolyCityDirection)
+        print("Poly Coastal City! Set Improvement", PolyCityDirection)
         cityPlot:SetImprovementType(improvementPolyCity[PolyCityDirection])
     end
 end
-function SPNDestroySpecialTerrainCity(hexPos,iPlayer,iCity)
+
+function SPNDestroySpecialTerrainCity(hexPos, iPlayer, iCity)
     local pCity = Players[iPlayer]:GetCityByID(iCity);
     if pCity == nil then return end
-    local pPlot = Map.GetPlot(pCity:GetX(),pCity:GetY())
+    local pPlot = Map.GetPlot(pCity:GetX(), pCity:GetY())
     if pPlot:IsMountain()
-    or pPlot:IsWater()
+        or pPlot:IsWater()
     then
         print("A Mountain City or a Coastal City was destoryed,remove fake Improvement")
         pPlot:SetImprovementType(-1)
     end
 end
-function SPNConquestedSpecialTerrianCity(oldOwnerID, isCapital, cityX, cityY, newOwnerID, numPop, isConquest)
-    SPNCityFoundedInSpecialTerrain(newOwnerID,cityX,cityY)
-end 
 
-if SPNIsCivilisationActive(incaID) or SPNIsCivilisationActive(polyID)then
-	GameEvents.PlayerCityFounded.Add(SPNCityFoundedInSpecialTerrain)
+function SPNConquestedSpecialTerrianCity(oldOwnerID, isCapital, cityX, cityY, newOwnerID, numPop, isConquest)
+    SPNCityFoundedInSpecialTerrain(newOwnerID, cityX, cityY)
+end
+
+if SPNIsCivilisationActive(incaID) or SPNIsCivilisationActive(polyID) then
+    GameEvents.PlayerCityFounded.Add(SPNCityFoundedInSpecialTerrain)
     Events.SerialEventCityDestroyed.Add(SPNDestroySpecialTerrainCity)
     GameEvents.CityCaptureComplete.Add(SPNConquestedSpecialTerrianCity)
 end

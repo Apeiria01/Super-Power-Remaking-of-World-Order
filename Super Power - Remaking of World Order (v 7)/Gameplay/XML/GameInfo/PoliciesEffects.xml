@@ -563,13 +563,6 @@
 
 	<Policy_BuildingClassYieldModifiers>
 		<Row>
-			<PolicyType>POLICY_PIETY</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_WONDER_YIELD_FAITH_MOD</BuildingClassType>
-			<YieldType>YIELD_FAITH</YieldType>
-			<YieldMod>25</YieldMod>
-		</Row>
-
-		<Row>
 			<PolicyType>POLICY_UNITED_FRONT</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_MILITARY_BASE</BuildingClassType>
 			<YieldType>YIELD_SCIENCE</YieldType>
@@ -2305,10 +2298,6 @@
 			<BuildingClassType>BUILDINGCLASS_EXPLORATION_REMOVE_DEBUFF</BuildingClassType>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_ARTISTIC_GENIUS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_ARTISTIC_GENIUS</BuildingClassType>
-		</Row>
-		<Row>
 			<PolicyType>POLICY_CULTURAL_REVOLUTION</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CULTURAL_REVOLUTION</BuildingClassType>
 		</Row>
@@ -2447,19 +2436,9 @@
 			<Description>TXT_KEY_BUILDING_SCHOLASTICISM</Description>
 		</Row>
 		<Row>
-			<Type>BUILDINGCLASS_WONDER_YIELD_FAITH_MOD</Type>
-			<DefaultBuilding>BUILDING_WONDER_YIELD_FAITH_MOD</DefaultBuilding>
-			<Description>TXT_KEY_POLICY_BRANCH_PIETY</Description>
-		</Row>
-		<Row>
 			<Type>BUILDINGCLASS_FLOURISHING_OF_ARTS</Type>
 			<DefaultBuilding>BUILDING_FLOURISHING_OF_ARTS</DefaultBuilding>
 			<Description>TXT_KEY_POLICY_FLOURISHING_OF_ARTS</Description>
-		</Row>
-		<Row>
-			<Type>BUILDINGCLASS_ARTISTIC_GENIUS</Type>
-			<DefaultBuilding>BUILDING_ARTISTIC_GENIUS</DefaultBuilding>
-			<Description>TXT_KEY_POLICY_ARTISTIC_GENIUS</Description>
 		</Row>
 		<Row>
 			<Type>BUILDINGCLASS_MARKET_ECONOMY</Type>
@@ -2480,11 +2459,6 @@
 			<Type>BUILDINGCLASS_SPACEFLIGHT_PIONEERS</Type>
 			<DefaultBuilding>BUILDING_SPACEFLIGHT_PIONEERS</DefaultBuilding>
 			<Description>TXT_KEY_POLICY_SPACEFLIGHT_PIONEERS</Description>
-		</Row>
-		<Row>
-			<Type>BUILDINGCLASS_IRON_CURTAIN</Type>
-			<DefaultBuilding>BUILDING_IRON_CURTAIN_HAPPI</DefaultBuilding>
-			<Description>TXT_KEY_POLICY_IRON_CURTAIN</Description>
 		</Row>
 	</BuildingClasses>
 	<Buildings>
@@ -2779,19 +2753,6 @@
 		</Row>
 		
 		<Row>
-			<Type>BUILDING_WONDER_YIELD_FAITH_MOD</Type>
-			<BuildingClass>BUILDINGCLASS_WONDER_YIELD_FAITH_MOD</BuildingClass>
-			<Cost>-1</Cost>
-			<ConquestProb>100</ConquestProb>
-			<NukeImmune>true</NukeImmune>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<PortraitIndex>5</PortraitIndex>
-			<IconAtlas>POLICY_ATLAS_EXP2</IconAtlas>
-			<Description>TXT_KEY_POLICY_BRANCH_PIETY</Description>
-			<Help>TXT_KEY_POLICY_PIETY_HELP</Help>
-			<GreatWorkCount>-1</GreatWorkCount>
-		</Row>
-		<Row>
 			<Type>BUILDING_FLOURISHING_OF_ARTS</Type>
 			<BuildingClass>BUILDINGCLASS_FLOURISHING_OF_ARTS</BuildingClass>
 			<Cost>-1</Cost>
@@ -2820,20 +2781,6 @@
 			<GreatWorkCount>-1</GreatWorkCount>
 		</Row>
 		
-		<Row>
-			<Type>BUILDING_ARTISTIC_GENIUS</Type>
-			<BuildingClass>BUILDINGCLASS_ARTISTIC_GENIUS</BuildingClass>
-			<Cost>-1</Cost>
-			<NeverCapture>true</NeverCapture>
-			<NukeImmune>true</NukeImmune>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<PortraitIndex>5</PortraitIndex>
-			<IconAtlas>POLICY_ATLAS_EXP2</IconAtlas>
-			<Description>TXT_KEY_POLICY_ARTISTIC_GENIUS</Description>
-			<Help>TXT_KEY_POLICY_ARTISTIC_GENIUS_HELP</Help>
-			<WonderProductionModifier>25</WonderProductionModifier>
-			<GreatWorkCount>-1</GreatWorkCount>
-		</Row>
 		<Row>
 			<Type>BUILDING_ENTREPRENEURSHIP</Type>
 			<BuildingClass>BUILDINGCLASS_ENTREPRENEURSHIP</BuildingClass>
@@ -2871,34 +2818,6 @@
 			<IconAtlas>POLICY_ATLAS_EXP2</IconAtlas>
 			<Description>TXT_KEY_POLICY_SPACEFLIGHT_PIONEERS</Description>
 			<Help>TXT_KEY_POLICY_SPACEFLIGHT_PIONEERS_HELP</Help>
-			<GreatWorkCount>-1</GreatWorkCount>
-		</Row>
-		<Row>
-			<Type>BUILDING_IRON_CURTAIN_HAPPI</Type>
-			<BuildingClass>BUILDINGCLASS_IRON_CURTAIN</BuildingClass>
-			<Cost>-1</Cost>
-			<NeverCapture>true</NeverCapture>
-			<NukeImmune>true</NukeImmune>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<PortraitIndex>11</PortraitIndex>
-			<IconAtlas>POLICY_ATLAS_EXP2</IconAtlas>
-			<Description>TXT_KEY_POLICY_IRON_CURTAIN</Description>
-			<Help>TXT_KEY_POLICY_IRON_CURTAIN_HELP</Help>
-			<UnmoddedHappiness>1</UnmoddedHappiness>
-			<GreatWorkCount>-1</GreatWorkCount>
-		</Row>
-		<Row>
-			<Type>BUILDING_IRON_CURTAIN_UNHAP</Type>
-			<BuildingClass>BUILDINGCLASS_IRON_CURTAIN</BuildingClass>
-			<Cost>-1</Cost>
-			<NeverCapture>true</NeverCapture>
-			<NukeImmune>true</NukeImmune>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<PortraitIndex>11</PortraitIndex>
-			<IconAtlas>POLICY_ATLAS_EXP2</IconAtlas>
-			<Description>TXT_KEY_POLICY_IRON_CURTAIN</Description>
-			<Help>TXT_KEY_POLICY_IRON_CURTAIN_HELP</Help>
-			<UnmoddedHappiness>-1</UnmoddedHappiness>
 			<GreatWorkCount>-1</GreatWorkCount>
 		</Row>
 	</Buildings>
@@ -3092,4 +3011,12 @@
 			<Quantity>2</Quantity>
 		</Row>
 	</Building_ResourceQuantity>
+
+	<Policy_CityWithWorldWonderYieldModifier>
+		<Row>
+			<PolicyType>POLICY_PIETY</PolicyType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>25</Yield>
+		</Row>
+	</Policy_CityWithWorldWonderYieldModifier>
 </GameData>

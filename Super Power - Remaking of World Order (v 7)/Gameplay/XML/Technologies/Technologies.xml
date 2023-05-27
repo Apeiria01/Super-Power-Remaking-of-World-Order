@@ -1030,6 +1030,7 @@
 			<IconAtlas>TECH_ATLAS_1</IconAtlas>
 			<AudioIntro>AS2D_TECH_DYNAMITE</AudioIntro>
 			<AudioIntroHeader>AS2D_HEADING_TECH_DYNAMITE</AudioIntroHeader>
+			<RazeSpeedModifier>99999</RazeSpeedModifier>
 		</Row>
 
 		<Row>
