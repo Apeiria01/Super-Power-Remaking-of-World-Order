@@ -7443,4 +7443,16 @@
 			<CostModifier>440</CostModifier>
 		</Row>
 	</Building_EnableUnitPurchase>
+	<Building_InstantYield>
+		<Row>
+			<BuildingType>BUILDING_BURJ_TOWER</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>44444</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_AUSTRIA_MUSIC_SCHOOL</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>500</Yield>
+		</Row>
+	</Building_InstantYield>
 </GameData>

@@ -34,59 +34,11 @@ function NewBuildingEffects(iPlayer, iCity, iBuilding, bGold, bFaith)
 			end
 		end
 
-		-- One-time Money Offer Effect
-	elseif iBuilding == GameInfo.Buildings.BUILDING_BURJ_TOWER.ID then
-		local GameSpeed = Game.GetGameSpeedType()
-		print("Game Speed:" .. GameSpeed)
-		if GameSpeed == 0 then
-			player:ChangeGold(99999)
-		elseif GameSpeed == 1 then
-			player:ChangeGold(66666)
-		elseif GameSpeed == 2 then
-			player:ChangeGold(44444)
-		elseif GameSpeed == 3 then
-			player:ChangeGold(22222)
-		end
-	elseif iBuilding == GameInfo.Buildings.BUILDING_AUSTRIA_MUSIC_SCHOOL.ID then
-		local GameSpeed = Game.GetGameSpeedType()
-		print("Game Speed:" .. GameSpeed)
-		if GameSpeed == 0 then
-			player:ChangeGold(1000)
-		elseif GameSpeed == 1 then
-			player:ChangeGold(750)
-		elseif GameSpeed == 2 then
-			player:ChangeGold(500)
-		elseif GameSpeed == 3 then
-			player:ChangeGold(300)
-		end
-
-		-- One-time Population Effect
-	elseif iBuilding == GameInfo.Buildings.BUILDING_MEGACITY_PYRAMID.ID then
-		pCity:ChangePopulation(30, true)
-
 		-- Terracotta Army provides Barracks, Armory and Military Academy
 	elseif iBuilding == GameInfo.Buildings.BUILDING_TERRACOTTA_ARMY.ID then
-		local iMB = GameInfo.Buildings.BUILDING_BARRACKS.ID;
-		local overrideMB = GameInfo.Civilization_BuildingClassOverrides { BuildingClassType = "BUILDINGCLASS_BARRACKS", CivilizationType =
-		GameInfo.Civilizations[player:GetCivilizationType()].Type } ();
-		if overrideMB ~= nil then
-			iMB = GameInfo.Buildings[overrideMB.BuildingType].ID;
-		end
-		pCity:SetNumRealBuilding(iMB, 1);
-		iMB = GameInfo.Buildings.BUILDING_ARMORY.ID;
-		overrideMB = GameInfo.Civilization_BuildingClassOverrides { BuildingClassType = "BUILDINGCLASS_ARMORY", CivilizationType =
-		GameInfo.Civilizations[player:GetCivilizationType()].Type } ();
-		if overrideMB ~= nil then
-			iMB = GameInfo.Buildings[overrideMB.BuildingType].ID;
-		end
-		pCity:SetNumRealBuilding(iMB, 1);
-		iMB = GameInfo.Buildings.BUILDING_MILITARY_ACADEMY.ID;
-		overrideMB = GameInfo.Civilization_BuildingClassOverrides { BuildingClassType = "BUILDINGCLASS_MILITARY_ACADEMY", CivilizationType =
-		GameInfo.Civilizations[player:GetCivilizationType()].Type } ();
-		if overrideMB ~= nil then
-			iMB = GameInfo.Buildings[overrideMB.BuildingType].ID;
-		end
-		pCity:SetNumRealBuilding(iMB, 1);
+		pCity:SetNumRealBuildingClass(GameInfo.BuildingClasses.BUILDINGCLASS_BARRACKS.ID, 1);
+		pCity:SetNumRealBuildingClass(GameInfo.BuildingClasses.BUILDINGCLASS_ARMORY.ID, 1);
+		pCity:SetNumRealBuildingClass(GameInfo.BuildingClasses.BUILDINGCLASS_MILITARY_ACADEMY.ID, 1);
 
 		-- Move Captial
 	elseif iBuilding == GameInfo.Buildings.BUILDING_NEW_PALACE.ID then

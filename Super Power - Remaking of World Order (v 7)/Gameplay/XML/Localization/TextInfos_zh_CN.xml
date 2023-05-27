@@ -1783,7 +1783,7 @@
 		</Row>
 		<!-- Help tags -->
 		<Row Tag="TXT_KEY_WONDER_BURJ_TOWER_HELP">
-			<Text>立即获得大量[ICON_GOLD]金钱（快速22222[ICON_GOLD]，标准44444[ICON_GOLD]，史诗66666[ICON_GOLD]，马拉松99999[ICON_GOLD]）。</Text>
+			<Text>立即获得大量[ICON_GOLD]金钱（标准44444[ICON_GOLD]）。</Text>
 		</Row>
 		<!-- Quote tags -->
 		<Row Tag="TXT_KEY_WONDER_BURJ_TOWER_QUOTE">
@@ -13460,7 +13460,7 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_PROMOTION_LIGHTNING_WARFARE_HELP">
-			<Text>+1[ICON_MOVES]移动力，无视敌方控制区域（ZOC），允许使用敌军境内道路。</Text>
+			<Text>+1[ICON_MOVES]移动力，允许使用敌军境内道路。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_PROMOTION_FAST_GENERAL_HELP">

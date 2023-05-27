@@ -1718,6 +1718,7 @@
 			<IconAtlas>SPWondersUB_ATLAS</IconAtlas>
 			<PortraitIndex>34</PortraitIndex>
 			<GreatPeopleRateModifier>25</GreatPeopleRateModifier>
+			<AllowInstantYield>true</AllowInstantYield>
 		</Row>
 		
 		

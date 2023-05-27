@@ -255,6 +255,14 @@
 			<Set Value="1"/>
 		</Update>
 		<Update>
+			<Where Name="POLICY_WATER_BUILD_SPEED_MODIFIER"/>
+			<Set Value="1"/>
+		</Update>
+		<Update>
+			<Where Name="BELIEF_BIRTH_INSTANT_YIELD"/>
+			<Set Value="1"/>
+		</Update>
+		<Update>
 			<Where Name="POLICIY_PUBLIC_OPTION"/>
 			<Set Value="1"/>
 		</Update>

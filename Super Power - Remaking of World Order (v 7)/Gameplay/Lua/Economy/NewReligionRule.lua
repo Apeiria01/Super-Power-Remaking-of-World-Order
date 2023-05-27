@@ -81,40 +81,6 @@ function SPEReligionAdopt(pPlayer,iBelief,pHolyCity)
     end
 end
 
-local GoddessLovaEnable = GameInfo.SPReligionLuaEffectEnable.BELIEF_GODDESS_LOVE.Enabled
-function SPNReligionPopulationBuff(iX, iY, iOld, iNew)
-    local pPlot = Map.GetPlot(iX, iY)
-	if pPlot == nil then return end
-    local pCity = pPlot:GetPlotCity()
-	if pCity == nil then return end
-    local eBelief = GameInfo.Beliefs["BELIEF_GODDESS_LOVE"].ID
-    if pCity:IsHasMajorBelief(eBelief) 
-    or (pCity:IsSecondaryReligionActive() and pCity:GetSecondaryReligionPantheonBelief() == eBelief) 
-    then
-        local pPlayer = Players[pPlot:GetOwner()]
-        if not pPlayer:IsMajorCiv() then
-            return
-        end
-        if not (iNew > iOld and iNew > 1) then return end
-        local pPlot = Map.GetPlot(iX, iY)
-        if pPlot== nil then return end
-        
-        local bonus = (GameInfo.GameSpeeds[Game.GetGameSpeedType()].ConstructPercent/100) * 6
-        bonus = math.floor(bonus * (iNew - iOld))
-        --print("Religion Population Buff bonus = ",bonus)
-        if pPlayer:IsHuman() then
-            local hex = ToHexFromGrid(Vector2(iX, iY))
-            Events.AddPopupTextEvent(HexToWorld(hex), Locale.ConvertTextKey("+{1_Num}[ICON_PEACE]",bonus))
-            Events.GameplayFX(hex.x, hex.y, -1)
-        end
-        pPlayer:ChangeFaith(bonus)
-    end
-
-end
-if GoddessLovaEnable then
-    GameEvents.SetPopulation.Add(SPNReligionPopulationBuff)
-end
-
 function SPNReligionFounded(iPlayer, iHolyCity, iReligion, iBelief1, iBelief2, iBelief3, iBelief4, iBelief5) 
 	local pPlayer = Players[iPlayer]
 	if not pPlayer:IsMajorCiv() then
