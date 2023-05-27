@@ -7021,7 +7021,7 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_CAPITALISM_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]資本主義[ENDCOLOR][NEWLINE]每條國際商路為全國+3%[ICON_RESEARCH]科技值產出。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]資本主義[ENDCOLOR][NEWLINE]每條商路為全國+3%[ICON_RESEARCH]科技值產出。</Text>
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_POLICY_ECONOMIC_UNION_HELP" >

@@ -980,13 +980,6 @@
 			<BuildingClassType>BUILDINGCLASS_POLAR_STATION</BuildingClassType>
 			<Happiness>1</Happiness>
 		</Row>
-
-	
-		<!--<Row>
-			<PolicyType>POLICY_CAPITALISM</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_STOCK_EXCHANGE</BuildingClassType>
-			<Happiness>1</Happiness>
-		</Row>-->
 		
 		<Row>
 			<PolicyType>POLICY_URBANIZATION</PolicyType>
@@ -3019,4 +3012,12 @@
 			<Yield>25</Yield>
 		</Row>
 	</Policy_CityWithWorldWonderYieldModifier>
+
+	<Policy_TradeRouteCityYieldModifier>
+		<Row>
+			<PolicyType>POLICY_CAPITALISM</PolicyType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>3</Yield>
+		</Row>
+	</Policy_TradeRouteCityYieldModifier>
 </GameData>

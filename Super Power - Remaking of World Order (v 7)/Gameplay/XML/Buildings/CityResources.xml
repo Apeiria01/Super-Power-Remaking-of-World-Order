@@ -90,6 +90,7 @@
 			<GreatWorkCount>-1</GreatWorkCount>
 		</Row>
 
+		<!-- TODO: remove -->
 		<Row>
 			<Type>BUILDING_TRADE_TO_SCIENCE</Type>
 			<BuildingClass>BUILDINGCLASS_ELECTRICITY_NATIONALWIDE_EFFECTS</BuildingClass>
@@ -258,17 +259,6 @@
 			<YieldType>YIELD_SCIENCE</YieldType>
 			<Yield>5</Yield>
 		</Row>
-
-
-		<Row>
-			<BuildingType>BUILDING_TRADE_TO_SCIENCE</BuildingType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>3</Yield>
-		</Row>
-
-		
-
-
 
 		<Row>
 			<BuildingType>BUILDING_ELECTRICITY_BONUS</BuildingType>

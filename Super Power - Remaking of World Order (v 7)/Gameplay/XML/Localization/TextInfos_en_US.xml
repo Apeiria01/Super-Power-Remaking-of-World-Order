@@ -7958,7 +7958,7 @@
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_POLICY_CAPITALISM_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]Capitalism[ENDCOLOR][NEWLINE]+3% [ICON_RESEARCH] Science nationwide for every International Trade Routes in use.</Text>
+			<Text>[COLOR_POSITIVE_TEXT]Capitalism[ENDCOLOR][NEWLINE]+3% [ICON_RESEARCH] Science nationwide for every Trade Routes in use.</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_ECONOMIC_UNION_HELP" >

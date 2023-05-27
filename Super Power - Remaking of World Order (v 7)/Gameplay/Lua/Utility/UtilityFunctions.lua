@@ -325,16 +325,6 @@ function SetPolicyPerTurnEffects(playerID)
 			end
 		end
 
-
-		if player:HasPolicy(GameInfoTypes["POLICY_CAPITALISM"]) then
-			local iUsedTradeRoutes = player:GetNumInternationalTradeRoutesUsed()
-			if iUsedTradeRoutes > 0 then
-				print("Science from International Trade Route:" .. iUsedTradeRoutes)
-				pCity:SetNumRealBuilding(GameInfoTypes["BUILDING_TRADE_TO_SCIENCE"], iUsedTradeRoutes)
-			else
-				pCity:SetNumRealBuilding(GameInfoTypes["BUILDING_TRADE_TO_SCIENCE"], 0)
-			end
-		end
 	end
 end
 
