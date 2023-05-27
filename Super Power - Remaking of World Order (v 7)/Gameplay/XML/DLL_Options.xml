@@ -404,5 +404,13 @@
 			<Where Type="GAMEOPTION_SP_NUCLEARWINTER_OFF"/>
 			<Set Default="1"/>
 		</Update>
+		<Update>
+			<Where Type="GAMEOPTION_POLICY_SAVING"/>
+			<Set Default="1"/>
+		</Update>
+		<Update>
+			<Where Type="GAMEOPTION_PROMOTION_SAVING"/>
+			<Set Default="1"/>
+		</Update>
 	</GameOptions>
 </GameData>
