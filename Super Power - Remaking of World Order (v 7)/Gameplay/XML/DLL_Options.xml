@@ -361,11 +361,6 @@
 			<Help>TXT_KEY_GAME_OPTION_SP_IMMIGRATION_HELP</Help>
 		</Row>
 		<Row>
-			<Type>GAMEOPTION_SP_SPLASH_AND_COLLATERAL_OFF</Type>
-			<Description>TXT_KEY_GAMEOPTION_SP_SPLASH_AND_COLLATERAL</Description>
-			<Help>TXT_KEY_GAMEOPTION_SP_SPLASH_AND_COLLATERAL_HELP</Help>
-		</Row>
-		<Row>
 			<Type>GAMEOPTION_SP_NUCLEARWINTER_OFF</Type>
 			<Description>TXT_KEY_GAME_OPTION_SP_NUCLEARWINTER</Description>
 			<Help>TXT_KEY_GAME_OPTION_SP_NUCLEARWINTER_HELP</Help>
@@ -407,6 +402,14 @@
 		</Update>
 		<Update>
 			<Where Type="GAMEOPTION_SP_NUCLEARWINTER_OFF"/>
+			<Set Default="1"/>
+		</Update>
+		<Update>
+			<Where Type="GAMEOPTION_POLICY_SAVING"/>
+			<Set Default="1"/>
+		</Update>
+		<Update>
+			<Where Type="GAMEOPTION_PROMOTION_SAVING"/>
 			<Set Default="1"/>
 		</Update>
 	</GameOptions>

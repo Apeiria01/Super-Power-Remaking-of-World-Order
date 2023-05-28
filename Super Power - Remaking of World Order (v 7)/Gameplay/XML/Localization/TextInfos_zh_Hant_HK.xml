@@ -50,15 +50,6 @@
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_IMMIGRATION_HELP">
 			<Text>國際移民：允許人口跨境流動。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_GAMEOPTION_SP_SPLASH_AND_COLLATERAL">
-			<Text>SP-關閉 [COLOR_YELLOW]濺射和穿透[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_GAMEOPTION_SP_SPLASH_AND_COLLATERAL_HELP">
-			<Text>
-				濺射和穿透：戰鬥中的特殊傷害效果。
-				[NEWLINE][COLOR_NEGATIVE_TEXT]請盡量保持默認[ENDCOLOR]
-			</Text>
-		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_NUCLEARWINTER">
 			<Text>SP-關閉 [COLOR_YELLOW]核冬天[ENDCOLOR]</Text>
 		</Row>
@@ -7058,7 +7049,11 @@
 			<Text>民主燈塔</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_TREATY_ORGANIZATION_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]民主燈塔[ENDCOLOR][NEWLINE]每25點[ICON_HAPPINESS_1]滿意度+5%[ICON_RESEARCH]科技值的上限提升50%。其他國家向你移民的速度加快100%。</Text>
+			<Text>
+			[COLOR_POSITIVE_TEXT]民主燈塔[ENDCOLOR]
+			[NEWLINE]每25點[ICON_HAPPINESS_1]滿意度+5%[ICON_RESEARCH]科技值，上限提升50%。
+			其他國家向你移民的速度加快100%。
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_TREATY_ORGANIZATION_TEXT">
 			<Text>不似希臘偉岸銅塑雕像那樣擁有征服疆域的臂膀，紅霞落波之門您巍然屹立，高舉燈盞噴薄光芒，您凝聚流光的名字 —— 放逐者之母。把廣袤大地照亮，凝視中寬柔撒滿長橋海港。“扼守你們曠古虛華的土地與功勛吧！”她呼喊，顫栗著緘默雙唇：“把你們疲憊的人、你們貧窮的人、你們渴望呼吸自由空氣的擠在一堆的人，都給我，把那些無家可歸、飽經風浪的人，都送來，在這金色的大門旁，我要為他們把燈舉起！”</Text>
@@ -7962,7 +7957,7 @@
 			<Text>宗教科學</Text>
 		</Row>
 		<Row Tag="TXT_KEY_RELIGIOUS_SCIENCE">
-			<Text>每座信仰該宗教的城市貢獻2[ICON_RESEARCH]科研，宗教聖地+2[ICON_RESEARCH]科研</Text>
+			<Text>每座信仰該宗教的城市貢獻2[ICON_RESEARCH]科研，宗教聖地+4[ICON_RESEARCH]科研</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SACRED_CALENDAR_SHORT">
 			<Text>神聖歷法</Text>
@@ -8102,9 +8097,6 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_ARTIST_PROMOTION_HELP">
 			<Text>開啟一輪[ICON_GOLDEN_AGE]黃金時代，回合數值等同於[ICON_GREAT_ARTIST]大藝術家。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_RELIGION_HOLYCITY_MARK">
-			<Text>聖城標記</Text>
 		</Row>
 		<Replace Tag="TXT_KEY_BELIEF_MISSIONARY_ZEAL">
 			<Text>傳教士傳教能力+25%，聖城誕生的傳教士傳教次數+2</Text>
@@ -13231,7 +13223,7 @@
 			<Text>對所有[COLOR_POSITIVE_TEXT]遠程攻擊[ENDCOLOR]+33%防禦力。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_ARMOR_PLATING_3_HELP" >
-			<Text>對所有[COLOR_POSITIVE_TEXT]遠程攻擊[ENDCOLOR]+34%防禦力。</Text>
+			<Text>對所有[COLOR_POSITIVE_TEXT]遠程攻擊[ENDCOLOR]+100%防禦力。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_PROMOTION_ATTACK_BONUS" >

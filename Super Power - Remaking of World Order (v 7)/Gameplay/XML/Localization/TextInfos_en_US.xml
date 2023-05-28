@@ -50,12 +50,6 @@
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_IMMIGRATION_HELP">
 			<Text>International Immigration: Allow Population movement across borders.</Text>
 		</Row>
-		<Row Tag="TXT_KEY_GAMEOPTION_SP_SPLASH_AND_COLLATERAL">
-			<Text>SP - [COLOR_YELLOW]Collateral and Splash[ENDCOLOR] - OFF</Text>
-		</Row>
-		<Row Tag="TXT_KEY_GAMEOPTION_SP_SPLASH_AND_COLLATERAL_HELP">
-			<Text>Collateral and Splash Effects: Special damage effects in combat.</Text>
-		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_NUCLEARWINTER">
 			<Text>SP - [COLOR_YELLOW]Nuclear Winter[ENDCOLOR] - OFF</Text>
 		</Row>
@@ -4863,7 +4857,7 @@
 		<Row>
 			<Tag>TXT_KEY_UNIT_SATELLITE_GPS_HELP</Tag>
 			<Text>
-				Satellite Unit with Global Effect:[NEWLINE][ICON_BULLET]The Launcher's all civlian units +2 [ICON_MOVES] Movement, allowed to enter other nations' territory even without an Open Border Agreement.
+				Satellite Unit with Global Effect:[NEWLINE][ICON_BULLET]The Launcher's all civlian units +4 [ICON_MOVES] Movement, allowed to enter other nations' territory even without an Open Border Agreement.
 				[NEWLINE][ICON_BULLET]Other Nations' all civlian units are allowed enter other nations' territory even without an Open Border Agreement.
 			</Text>
 		</Row>
@@ -7986,7 +7980,7 @@
 			<Text>[COLOR_POSITIVE_TEXT]Peaceful Evolution [ENDCOLOR][NEWLINE] +50% [ICON_TOURISM] Tourism to the civilizations fighting against the common foe.</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_ARSENAL_DEMOCRACY_TEXT" >
-			<Text>he "Peaceful Evolution" theory in international political thought refers to the alleged attempt to effect a political transformation. </Text>
+			<Text>The "Peaceful Evolution" theory in international political thought refers to the alleged attempt to effect a political transformation. </Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_MEDIA_CULTURE_HELP" >
@@ -7997,7 +7991,11 @@
 			<Text>Beacon of Democracy</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_TREATY_ORGANIZATION_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]Beacon of Democracy[ENDCOLOR][NEWLINE]+50% upper limit of Every 25 [ICON_HAPPINESS_1] excess Happiness providing +5% [ICON_RESEARCH] Science in all cities. +100% [ICON_TEAM_4] International Immigration Rate from other civlizations to Your Nation.</Text>
+			<Text>
+			[COLOR_POSITIVE_TEXT]Beacon of Democracy[ENDCOLOR]
+			[NEWLINE]+50% upper limit of Every 25 [ICON_HAPPINESS_1] excess Happiness providing +5% [ICON_RESEARCH] Science in all cities. 
+			+100% [ICON_TEAM_4] International Immigration Rate from other civlizations to Your Nation.
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_TREATY_ORGANIZATION_TEXT">
 			<Text>Not like the brazen giant of Greek fame, with conquering limbs astride from land to land; Here at our sea-washed, sunset gates shall stand a mighty woman with a torch whose flame is imprisoned lightning, and her name Mother of Exiles. From her beacon-hand glows world-wide welcome; her mild eyes command the air-bridged harbor that twin cities. "Keep ancient lands your storied pomp!" cries she with silent lips. "Give me your tired your poor, your huddled masses yearning to breathe free, the wretched refuse of your teeming shore. Send these, the homeless, tempest-tossed to me, I lift my lamp beside the golden door!"</Text>
@@ -8942,7 +8940,7 @@
 			<Text>Religious Sciece</Text>
 		</Row>
 		<Row Tag="TXT_KEY_RELIGIOUS_SCIENCE">
-			<Text>+2 [ICON_RESEARCH] Science for each City following this religion, +2 [ICON_RESEARCH] Science from Holy Sites</Text>
+			<Text>+2 [ICON_RESEARCH] Science for each City following this religion, +4 [ICON_RESEARCH] Science from Holy Sites</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SACRED_CALENDAR_SHORT">
 			<Text>Sacred Calendar</Text>
@@ -9094,9 +9092,6 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_ARTIST_PROMOTION_HELP">
 			<Text>Can start a [ICON_GOLDEN_AGE] Golden Age whose lasting turns equal to [ICON_GREAT_ARTIST]Great Artist.</Text>
-		</Row>
-		<Row Tag="TXT_KEY_RELIGION_HOLYCITY_MARK">
-			<Text>Holy City Mark</Text>
 		</Row>
 		<Replace Tag="TXT_KEY_BELIEF_MISSIONARY_ZEAL">
 			<Text>Messionary conversion strength +25%, +2 extra Religion Spread when Messionaries born in Holy City</Text>

@@ -20,8 +20,8 @@ function SPEReligionAdopt(pPlayer,iBelief,pHolyCity)
     elseif iBelief == GameInfo.Beliefs["BELIEF_RELIGION_PRESSURE"].ID
     and pPlayer:GetID() == pHolyCity:GetOwner()
     then
-    print("Choose The Sacred Palace")
-    pHolyCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGION_PRESSURE,1)
+        print("Choose The Sacred Palace")
+        pHolyCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGION_PRESSURE,1)
 
     elseif iBelief == GameInfo.Beliefs["BELIEF_MISSIONARY_ZEAL"].ID
     and pPlayer:GetID() == pHolyCity:GetOwner()
@@ -86,10 +86,7 @@ function SPNReligionFounded(iPlayer, iHolyCity, iReligion, iBelief1, iBelief2, i
 	if not pPlayer:IsMajorCiv() then
         return
     end
-    --Holy City Mark
-    print("Player founded a religion, mark holy city!")
 	local pHolyCity = pPlayer:GetCityByID(iHolyCity)
-	pHolyCity:SetNumRealBuilding(GameInfoTypes.BUILDING_RELIGION_HOLYCITY_MARK,1)
     --Founded Belief Effect
     SPEReligionAdopt(pPlayer,iBelief1,pHolyCity)   
     SPEReligionAdopt(pPlayer,iBelief2,pHolyCity)
@@ -199,7 +196,7 @@ function SPNReligionConquestedHolyCity(oldOwnerID, isCapital, cityX, cityY, newO
 
 	--Player take back the Holy City
 	if newOwnerID == pCity:GetOriginalOwner() 
-    and pCity:IsHasBuilding(GameInfoTypes.BUILDING_RELIGION_HOLYCITY_MARK)
+    and pCity:IsHolyCityAnyReligion()
     then
 		local pReligion = newOwnerPlayer:GetReligionCreatedByPlayer()
 		for i,v in ipairs(Game.GetBeliefsInReligion(pReligion)) do
@@ -232,7 +229,6 @@ function SPNReligionConquestedHolyCity(oldOwnerID, isCapital, cityX, cityY, newO
                 else
                     pCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGIOUS_COLONIZATION,1)
                 end
-				pCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGION_PRESSURE,1)
 			end
 		end
 	end

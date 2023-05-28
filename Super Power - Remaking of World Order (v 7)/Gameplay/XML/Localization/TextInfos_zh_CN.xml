@@ -51,15 +51,6 @@
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_IMMIGRATION_HELP">
 			<Text>国际移民：允许人口跨境流动。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_GAMEOPTION_SP_SPLASH_AND_COLLATERAL">
-			<Text>SP-关闭 [COLOR_YELLOW]溅射和穿透[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_GAMEOPTION_SP_SPLASH_AND_COLLATERAL_HELP">
-			<Text>
-				溅射和穿透：战斗中的特殊伤害效果。
-				[NEWLINE][COLOR_NEGATIVE_TEXT]请尽量保持默认[ENDCOLOR]
-			</Text>
-		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_NUCLEARWINTER">
 			<Text>SP-关闭 [COLOR_YELLOW]核冬天[ENDCOLOR]</Text>
 		</Row>
@@ -7171,7 +7162,11 @@
 			<Text>民主灯塔</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_TREATY_ORGANIZATION_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]民主灯塔[ENDCOLOR][NEWLINE]每25点[ICON_HAPPINESS_1]满意度+5%[ICON_RESEARCH]科研的上限提升50%。其他国家向你移民的速度加快100%。</Text>
+			<Text>
+			[COLOR_POSITIVE_TEXT]民主灯塔[ENDCOLOR]
+			[NEWLINE]每25点[ICON_HAPPINESS_1]满意度+5%[ICON_RESEARCH]科研，上限提升50%。
+			其他国家向你移民的速度加快100%。
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_TREATY_ORGANIZATION_TEXT">
 			<Text>不似希腊伟岸铜塑雕像那样拥有征服疆域的臂膀，红霞落波之门您巍然屹立，高举灯盏喷薄光芒，您凝聚流光的名字 —— 放逐者之母。把广袤大地照亮，凝视中宽柔撒满长桥海港。“扼守你们旷古虚华的土地与功勋吧！”她呼喊，颤栗着缄默双唇：“把你们疲惫的人、你们贫穷的人、你们渴望呼吸自由空气的挤在一堆的人，都给我，把那些无家可归、饱经风浪的人，都送来，在这金色的大门旁，我要为他们把灯举起！”</Text>
@@ -8079,7 +8074,7 @@
 			<Text>宗教科学</Text>
 		</Row>
 		<Row Tag="TXT_KEY_RELIGIOUS_SCIENCE">
-			<Text>每座信仰该宗教的城市贡献2[ICON_RESEARCH]科研，宗教圣地+3[ICON_RESEARCH]科研</Text>
+			<Text>每座信仰该宗教的城市贡献2[ICON_RESEARCH]科研，宗教圣地+4[ICON_RESEARCH]科研</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SACRED_CALENDAR_SHORT">
 			<Text>神圣历法</Text>
@@ -8219,9 +8214,6 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_ARTIST_PROMOTION_HELP">
 			<Text>开启一轮[ICON_GOLDEN_AGE]黄金时代，回合数值等同于[ICON_GREAT_ARTIST]大艺术家。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_RELIGION_HOLYCITY_MARK">
-			<Text>圣城标记</Text>
 		</Row>
 		<Replace Tag="TXT_KEY_BELIEF_MISSIONARY_ZEAL">
 			<Text>传教士传教能力+25%，圣城诞生的传教士传教次数+2</Text>
