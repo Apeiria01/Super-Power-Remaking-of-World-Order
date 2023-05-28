@@ -8964,7 +8964,7 @@
 			<Text>+1 [ICON_HAPPINESS_1] Global Happiness for every 6 followers of this religion in non-enemy foreign cities</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_CHORAL_MUSIC">
-			<Text>Temples provide +3 [ICON_CULTURE] Culture in cities with 5 followers</Text>
+			<Text>Temples provide +4 [ICON_CULTURE] Culture in cities with 5 followers</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_DEFENDER_FAITH">
 			<Text>+20% [ICON_STRENGTH] Combat Strength near friendly cities that follow this religion, +15 XP for Units trained in holy city</Text>

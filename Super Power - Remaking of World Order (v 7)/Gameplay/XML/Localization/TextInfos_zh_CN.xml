@@ -8098,7 +8098,7 @@
 			<Text>每6个在非敌对的别国城市中该宗教的信徒贡献1[ICON_HAPPINESS_1]快乐（全国）</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_CHORAL_MUSIC">
-			<Text>信众规模达到5的城市中神庙+3[ICON_CULTURE]文化</Text>
+			<Text>信众规模达到5的城市中神庙+4[ICON_CULTURE]文化</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_DEFENDER_FAITH">
 			<Text>在信仰该宗教的己方城市附近+20%[ICON_STRENGTH]战斗力，圣城训练的军事单位+15经验</Text>
