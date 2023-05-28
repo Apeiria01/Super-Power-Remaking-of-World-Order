@@ -7162,7 +7162,11 @@
 			<Text>民主灯塔</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_TREATY_ORGANIZATION_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]民主灯塔[ENDCOLOR][NEWLINE]每25点[ICON_HAPPINESS_1]满意度+5%[ICON_RESEARCH]科研的上限提升50%。其他国家向你移民的速度加快100%。</Text>
+			<Text>
+			[COLOR_POSITIVE_TEXT]民主灯塔[ENDCOLOR]
+			[NEWLINE]每25点[ICON_HAPPINESS_1]满意度+5%[ICON_RESEARCH]科研，上限提升50%。
+			其他国家向你移民的速度加快100%。
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_TREATY_ORGANIZATION_TEXT">
 			<Text>不似希腊伟岸铜塑雕像那样拥有征服疆域的臂膀，红霞落波之门您巍然屹立，高举灯盏喷薄光芒，您凝聚流光的名字 —— 放逐者之母。把广袤大地照亮，凝视中宽柔撒满长桥海港。“扼守你们旷古虚华的土地与功勋吧！”她呼喊，颤栗着缄默双唇：“把你们疲惫的人、你们贫穷的人、你们渴望呼吸自由空气的挤在一堆的人，都给我，把那些无家可归、饱经风浪的人，都送来，在这金色的大门旁，我要为他们把灯举起！”</Text>

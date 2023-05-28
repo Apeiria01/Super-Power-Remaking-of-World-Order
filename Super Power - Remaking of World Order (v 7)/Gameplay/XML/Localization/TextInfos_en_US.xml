@@ -7980,7 +7980,7 @@
 			<Text>[COLOR_POSITIVE_TEXT]Peaceful Evolution [ENDCOLOR][NEWLINE] +50% [ICON_TOURISM] Tourism to the civilizations fighting against the common foe.</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_ARSENAL_DEMOCRACY_TEXT" >
-			<Text>he "Peaceful Evolution" theory in international political thought refers to the alleged attempt to effect a political transformation. </Text>
+			<Text>The "Peaceful Evolution" theory in international political thought refers to the alleged attempt to effect a political transformation. </Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_MEDIA_CULTURE_HELP" >
@@ -7991,7 +7991,11 @@
 			<Text>Beacon of Democracy</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_TREATY_ORGANIZATION_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]Beacon of Democracy[ENDCOLOR][NEWLINE]+50% upper limit of Every 25 [ICON_HAPPINESS_1] excess Happiness providing +5% [ICON_RESEARCH] Science in all cities. +100% [ICON_TEAM_4] International Immigration Rate from other civlizations to Your Nation.</Text>
+			<Text>
+			[COLOR_POSITIVE_TEXT]Beacon of Democracy[ENDCOLOR]
+			[NEWLINE]+50% upper limit of Every 25 [ICON_HAPPINESS_1] excess Happiness providing +5% [ICON_RESEARCH] Science in all cities. 
+			+100% [ICON_TEAM_4] International Immigration Rate from other civlizations to Your Nation.
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_TREATY_ORGANIZATION_TEXT">
 			<Text>Not like the brazen giant of Greek fame, with conquering limbs astride from land to land; Here at our sea-washed, sunset gates shall stand a mighty woman with a torch whose flame is imprisoned lightning, and her name Mother of Exiles. From her beacon-hand glows world-wide welcome; her mild eyes command the air-bridged harbor that twin cities. "Keep ancient lands your storied pomp!" cries she with silent lips. "Give me your tired your poor, your huddled masses yearning to breathe free, the wretched refuse of your teeming shore. Send these, the homeless, tempest-tossed to me, I lift my lamp beside the golden door!"</Text>
