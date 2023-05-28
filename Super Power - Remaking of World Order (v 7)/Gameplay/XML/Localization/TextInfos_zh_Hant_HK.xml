@@ -13219,7 +13219,7 @@
 			<Text>對所有[COLOR_POSITIVE_TEXT]遠程攻擊[ENDCOLOR]+33%防禦力。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_ARMOR_PLATING_3_HELP" >
-			<Text>對所有[COLOR_POSITIVE_TEXT]遠程攻擊[ENDCOLOR]+34%防禦力。</Text>
+			<Text>對所有[COLOR_POSITIVE_TEXT]遠程攻擊[ENDCOLOR]+100%防禦力。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_PROMOTION_ATTACK_BONUS" >

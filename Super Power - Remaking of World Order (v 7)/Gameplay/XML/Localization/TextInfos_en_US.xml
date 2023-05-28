@@ -4857,7 +4857,7 @@
 		<Row>
 			<Tag>TXT_KEY_UNIT_SATELLITE_GPS_HELP</Tag>
 			<Text>
-				Satellite Unit with Global Effect:[NEWLINE][ICON_BULLET]The Launcher's all civlian units +2 [ICON_MOVES] Movement, allowed to enter other nations' territory even without an Open Border Agreement.
+				Satellite Unit with Global Effect:[NEWLINE][ICON_BULLET]The Launcher's all civlian units +4 [ICON_MOVES] Movement, allowed to enter other nations' territory even without an Open Border Agreement.
 				[NEWLINE][ICON_BULLET]Other Nations' all civlian units are allowed enter other nations' territory even without an Open Border Agreement.
 			</Text>
 		</Row>
