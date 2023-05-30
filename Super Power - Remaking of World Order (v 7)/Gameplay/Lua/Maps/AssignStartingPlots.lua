@@ -7528,7 +7528,7 @@ function AssignStartingPlots:GenerateGlobalResourcePlotLists()
 	--
 	-- local iW, iH = Map.GetGridSize();	-- MOD.Barathor: Disabled -- already initialized above, though, not a big deal
 	local temp_hills_list, temp_coast_list, temp_grass_flat_no_feature = {}, {}, {};
-	local temp_tundra_flat_no_feature, temp_snow_flat_list, temp_land_list = {}, {}, {}, {};
+	local temp_tundra_flat_no_feature, temp_snow_flat_list, temp_land_list = {}, {}, {};
 	local temp_marble_list, temp_deer_list, temp_desert_wheat_list, temp_banana_list = {}, {}, {}, {};
 	--
 	for y = 0, iH - 1 do
