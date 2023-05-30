@@ -11697,7 +11697,7 @@
 			<Text>菊</Text>
 		</Row>
 		<Row Tag = "TXT_KEY_PROMOTION_JAPANESE_SAMURAI_CULTURE_HELP">
-			<Text>消灭敌人时获得相当于单位[ICON_STRENGTH]战斗力50%的[ICON_CULTURE]文化。</Text>
+			<Text>消灭敌人时获得相当于单位[ICON_STRENGTH]战斗力50%的[ICON_CULTURE]文化，这项能力在升级后不保留。</Text>
 		</Row>
 
 
