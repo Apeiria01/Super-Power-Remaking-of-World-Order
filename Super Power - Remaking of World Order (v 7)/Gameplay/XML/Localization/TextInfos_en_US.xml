@@ -1744,9 +1744,9 @@
 		<Row Tag="TXT_KEY_SP_BTNNOTE_BUILDING_JAPANESE_DOJO">
 			<Text>
 				Build a Dojo in this city.
-				[NEWLINE][NEWLINE]All new units built or purchased in this city +15 XP and allows Special Forces Units to be trained in this city.
+				[NEWLINE][NEWLINE]All new units built or purchased in this city +15 XP.
 				[NEWLINE][NEWLINE]+2 [ICON_HAPPINESS_1] Happiness.
-				[NEWLINE][NEWLINE]+3 [ICON_RES_MANPOWER] Manpower.
+				[NEWLINE][NEWLINE]+5 [ICON_RES_MANPOWER] Manpower.
 				[NEWLINE][NEWLINE]This order will consume the Samurai.
 				[NEWLINE][NEWLINE]One city can ONLY have ONE Dojo building.
 			</Text>
