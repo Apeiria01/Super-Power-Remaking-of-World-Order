@@ -1204,7 +1204,7 @@
 		
 		<Row>
 			<Tag>TXT_KEY_BUILDING_JAPANESE_DOJO_HELP</Tag>
-			<Text>該城市所有建造和購買的軍事單位+15經驗值且允許在本城市組建特戰單位和精英單位。[NEWLINE][NEWLINE]+5[ICON_RES_MANPOWER]人力,+2[ICON_HAPPINESS_1]本地幸福度。[NEWLINE][NEWLINE]只能由日本武士建造。</Text>
+			<Text>該城市所有建造和購買的軍事單位+15經驗值。[NEWLINE][NEWLINE]+5[ICON_RES_MANPOWER]人力,+2[ICON_HAPPINESS_1]本地幸福度。[NEWLINE][NEWLINE]只能由日本武士建造，且建造完成後單位被消耗。</Text>
 		</Row>
 		
 		<Replace Tag="TXT_KEY_BUILDING_CIRCUS_HELP">
@@ -11535,7 +11535,7 @@
 			<Text>菊</Text>
 		</Row>
 		<Row Tag = "TXT_KEY_PROMOTION_JAPANESE_SAMURAI_CULTURE_HELP">
-			<Text>消滅敵人時獲得相當於單位[ICON_STRENGTH]戰鬥力50%的[ICON_CULTURE]文化。</Text>
+			<Text>消滅敵人時獲得相當於單位[ICON_STRENGTH]戰鬥力50%的[ICON_CULTURE]文化，这项能力在升级后不保留。</Text>
 		</Row>
 
 		
