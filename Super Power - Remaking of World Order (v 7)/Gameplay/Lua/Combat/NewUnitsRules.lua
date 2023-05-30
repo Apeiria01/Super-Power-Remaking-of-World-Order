@@ -117,6 +117,10 @@ function NewUnitCreationRules() ------------------------Human Player's units rul
 
 					-- Remove error promotion
 
+					if IsTimetoCheckPromotion then
+						RemoveErrorPromotion(playerID,unit:GetID())
+					end
+					
 					-- MOD Begin by CaptainCWB
 
 					-- Enterprise upgrade to become the most powerful carrier
@@ -715,6 +719,19 @@ function HeroicCarrierGenerate(playerID)
 end
 
 GameEvents.PlayerDoTurn.Add(HeroicCarrierGenerate)
+
+function NewUnitRemoveErrorPromotion( iPlayerID, iUnitID )
+	if( Players[ iPlayerID ] == nil or not Players[ iPlayerID ]:IsAlive()
+	or  Players[ iPlayerID ]:GetUnitByID( iUnitID ) == nil
+	or  Players[ iPlayerID ]:GetUnitByID( iUnitID ):IsDead()
+	or  Players[ iPlayerID ]:GetUnitByID( iUnitID ):IsDelayedDeath() )
+	then
+		return;
+	end
+	RemoveErrorPromotion(iPlayerID, iUnitID)
+end
+Events.SerialEventUnitCreated.Add(NewUnitRemoveErrorPromotion)
+-- MOD end by HMS
 
 -- MOD by CaptainCWB
 function SetEliteUnitsName(iPlayerID, iUnitID)
