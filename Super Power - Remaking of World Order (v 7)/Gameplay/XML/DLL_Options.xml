@@ -271,6 +271,10 @@
 			<Where Name="BATTLE_CAPTURE_NEW_RULE"/>
 			<Set Value="1"/>
 		</Update>
+		<Update>
+			<Where Name="GLOBAL_RANGE_ATTACK_KILL_POPULATION_OF_HEAVY"/>
+			<Set Value="1"/>
+		</Update>
 	</CustomModOptions>
 
 
