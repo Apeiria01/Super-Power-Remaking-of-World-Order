@@ -302,27 +302,6 @@ function NewAttackEffect()
 
 		end
 
-		-------------- Ranged Attack Kill Popluation of Heavily Damaged City
-		if batType == GameInfoTypes["BATTLETYPE_RANGED"] or batType == GameInfoTypes["BATTLETYPE_AIR"] then
-			--		print ("Ranged Unit attacked City!")
-			if (defCity:GetDamage() >= defCity:GetMaxHitPoints() - 1) then
-				local cityPop = defCity:GetPopulation()
-				if (cityPop > 1) then
-					local NewCityPop = cityPop - 1
-					defCity:SetPopulation(NewCityPop, true) ----Set Real Population
-					local CityOwner = defCity:GetOwner()
-
-					if Players[CityOwner]:IsHuman() then
-						local pPlayer = Players[CityOwner]
-						local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_CITY_POPULATION_LOST_BY_RANGEDFIRE", attUnit:GetName()
-							, defCity:GetName())
-						local heading = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_CITY_POPULATION_LOST_BY_RANGEDFIRE_SHORT")
-						pPlayer:AddNotification(NotificationTypes.NOTIFICATION_STARVING, text, heading, plotX, plotY)
-					end
-				end
-			end
-		end
-
 		-- Attacking a Unit!
 	elseif defUnit then
 		----------- PROMOTION_GAIN_MOVES_AFFER_KILLING Effects
