@@ -963,42 +963,6 @@
 			<MoveRate>AIR_REBASE</MoveRate>
 			<ExtraMaintenanceCost>2</ExtraMaintenanceCost>
 		</Row>
-		<Row>
-			<Class>UNITCLASS_GUIDED_MISSILE</Class>
-			<Type>UNIT_ASSYRIAN_SCUD_MISSILE</Type>
-			<PrereqTech>TECH_ADV_FLIGHT</PrereqTech>
-			<RangedCombat>200</RangedCombat>
-			<Cost>200</Cost>
-			<Moves>2</Moves>
-			<Immobile>true</Immobile>
-			<!--<NoMaintenance>true</NoMaintenance>-->
-			<Range>16</Range>
-			<Special>SPECIALUNIT_STEALTH</Special>
-			<Domain>DOMAIN_AIR</Domain>
-			<HurryCostModifier>25</HurryCostModifier>
-			<DefaultUnitAI>UNITAI_MISSILE_AIR</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_ASSYRIAN_SCUD_MISSILE</Description>
-			<Civilopedia>TXT_KEY_UNIT_ASSYRIAN_SCUD_MISSILE_TEXT</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GUIDED_MISSILE_STRATEGY</Strategy>
-			<Help>TXT_KEY_UNIT_HELP_GUIDED_MISSILE</Help>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
-			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
-			<Mechanized>true</Mechanized>
-			<Suicide>true</Suicide>
-			<AdvancedStartCost>40</AdvancedStartCost>
-			<AirUnitCap>1</AirUnitCap>
-			<RangedCombatLimit>100</RangedCombatLimit>
-			<CombatLimit>0</CombatLimit>
-			<XPValueDefense>2</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_GUIDED_MISSILE</UnitArtInfo>
-			<UnitFlagAtlas>SPUnitFlags_FLAG</UnitFlagAtlas>
-			<UnitFlagIconOffset>114</UnitFlagIconOffset>
-			<IconAtlas>SPUNITS02_ATLAS</IconAtlas>
-			<PortraitIndex>43</PortraitIndex>
-			<MoveRate>AIR_REBASE</MoveRate>
-			<ExtraMaintenanceCost>2</ExtraMaintenanceCost>
-		</Row>
 
 		<Row>
 			<Class>UNITCLASS_EMP_BOMBER_AIR</Class>
@@ -1438,30 +1402,6 @@
 		<Row>
 			<UnitType>UNIT_CARRIER_FIGHTER_ENGLISH_HARRIER_ADV</UnitType>
 			<PromotionType>PROMOTION_NAVAL_BONUS_STRONG</PromotionType>
-		</Row>
-
-
-
-
-		<Row>
-			<UnitType>UNIT_ASSYRIAN_SCUD_MISSILE</UnitType>
-			<PromotionType>PROMOTION_NO_CASUALTIES</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_ASSYRIAN_SCUD_MISSILE</UnitType>
-			<PromotionType>PROMOTION_VOLLEY_1</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_ASSYRIAN_SCUD_MISSILE</UnitType>
-			<PromotionType>PROMOTION_VOLLEY_2</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_ASSYRIAN_SCUD_MISSILE</UnitType>
-			<PromotionType>PROMOTION_NAVAL_BONUS_STRONG</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_ASSYRIAN_SCUD_MISSILE</UnitType>
-			<PromotionType>PROMOTION_EVASION_II</PromotionType>
 		</Row>
 		
 		<Row>
@@ -2332,18 +2272,6 @@
 		<Row>
 			<UnitType>UNIT_ICBM_MISSILE</UnitType>
 			<FlavorType>FLAVOR_NUKE</FlavorType>
-			<Flavor>100</Flavor>
-		</Row>
-
-
-		<Row>
-			<UnitType>UNIT_ASSYRIAN_SCUD_MISSILE</UnitType>
-			<FlavorType>FLAVOR_AIR</FlavorType>
-			<Flavor>100</Flavor>
-		</Row>
-		<Row>
-			<UnitType>UNIT_ASSYRIAN_SCUD_MISSILE</UnitType>
-			<FlavorType>FLAVOR_OFFENSE</FlavorType>
 			<Flavor>100</Flavor>
 		</Row>
 

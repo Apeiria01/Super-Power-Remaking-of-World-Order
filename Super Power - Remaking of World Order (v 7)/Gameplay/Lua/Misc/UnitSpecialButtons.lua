@@ -413,13 +413,6 @@ UnitLaunchUavButton = {
   		NewUnit:JumpToNearestValidPlot();
   	end
   	
-  	if unit:GetUnitType() == GameInfoTypes.UNIT_PERSIAN_MINISUB then
-  		NewUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_CARRIER_FIGHTER_ATTACK_1"].ID,true)
-  		NewUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_CARRIER_FIGHTER_ATTACK_2"].ID,true)
-  	end
-  	
-  	
-  	
   end
 };
 LuaEvents.UnitPanelActionAddin(UnitLaunchUavButton);

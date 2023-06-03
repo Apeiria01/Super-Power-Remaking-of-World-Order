@@ -511,37 +511,6 @@
 			<PortraitIndex>35</PortraitIndex>
 			<ExtraMaintenanceCost>8</ExtraMaintenanceCost>
 		</Row>
-		<Row>
-			<Class>UNITCLASS_SAM_INFANTRY</Class>
-			<Type>UNIT_OTTOMAN_COBRA</Type>
-			<BaseSightRange>2</BaseSightRange>
-			<PrereqTech>TECH_LASERS</PrereqTech>
-			<Combat>50</Combat>
-			<RangedCombat>125</RangedCombat>
-			<Cost>475</Cost>
-			<Moves>5</Moves>
-			<Range>2</Range>
-			<AirInterceptRange>3</AirInterceptRange>
-			<CombatClass>UNITCOMBAT_SIEGE</CombatClass>
-			<Domain>DOMAIN_LAND</Domain>
-			<DefaultUnitAI>UNITAI_RANGED</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_OTTOMAN_COBRA</Description>
-			<Civilopedia>TXT_KEY_UNIT_OTTOMAN_COBRA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_SP_UNITS_ARCHERY_UNITS_STRATEGY</Strategy>
-			<Help>TXT_KEY_PROMOTION_ANTI_AIR_HELP</Help>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
-			<Pillage>true</Pillage>
-			<AdvancedStartCost>50</AdvancedStartCost>
-			<XPValueAttack>3</XPValueAttack>
-			<XPValueDefense>3</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_ANTITANK_INFANTRY</UnitArtInfo>
-			<UnitFlagIconOffset>110</UnitFlagIconOffset>
-			<UnitFlagAtlas>SPUnitFlags_FLAG</UnitFlagAtlas>
-			<IconAtlas>SPUNITS02_ATLAS</IconAtlas>
-			<PortraitIndex>55</PortraitIndex>
-			<ExtraMaintenanceCost>8</ExtraMaintenanceCost>
-		</Row>
 
 		<!--Siege Weapons-->
 		
@@ -1428,45 +1397,6 @@
 			<PromotionType>PROMOTION_BARRAGE_3</PromotionType>
 		</Row>
 
-
-
-		<Row>
-			<UnitType>UNIT_OTTOMAN_COBRA</UnitType>
-			<PromotionType>PROMOTION_ARCHERY_COMBAT</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_OTTOMAN_COBRA</UnitType>
-			<PromotionType>PROMOTION_ANTI_AIR</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_OTTOMAN_COBRA</UnitType>
-			<PromotionType>PROMOTION_ANTI_HELICOPTER</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_OTTOMAN_COBRA</UnitType>
-			<PromotionType>PROMOTION_CAN_MOVE_AFTER_ATTACKING</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_OTTOMAN_COBRA</UnitType>
-			<PromotionType>PROMOTION_STEALTH_OPERATION</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_OTTOMAN_COBRA</UnitType>
-			<PromotionType>PROMOTION_PARADROP_II</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_OTTOMAN_COBRA</UnitType>
-			<PromotionType>PROMOTION_BARRAGE_1</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_OTTOMAN_COBRA</UnitType>
-			<PromotionType>PROMOTION_BARRAGE_2</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_OTTOMAN_COBRA</UnitType>
-			<PromotionType>PROMOTION_BARRAGE_3</PromotionType>
-		</Row>
-		
 		
 		<!--<Row>
 			<UnitType>UNIT_MOBILE_SAM</UnitType>
@@ -1740,13 +1670,7 @@
 			<UnitType>UNIT_SAM_INFANTRY</UnitType>
 			<ResourceType>RESOURCE_OIL</ResourceType>
 		</Row>
-		<Row>
-			<UnitType>UNIT_OTTOMAN_COBRA</UnitType>
-			<ResourceType>RESOURCE_OIL</ResourceType>
-		</Row>
 
-
-		
 		<Row>
 			<UnitType>UNIT_CULVERIN</UnitType>
 			<ResourceType>RESOURCE_IRON</ResourceType>
@@ -1881,13 +1805,7 @@
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 			<Cost>2</Cost>
 		</Row>
-		<Row>
-			<UnitType>UNIT_OTTOMAN_COBRA</UnitType>
-			<ResourceType>RESOURCE_MANPOWER</ResourceType>
-			<Cost>2</Cost>
-		</Row>
 		
-
 		<Row>
 			<UnitType>UNIT_CATAPULT</UnitType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
@@ -2125,19 +2043,6 @@
 			<UnitType>UNIT_SAM_INFANTRY</UnitType>
 			<UnitAIType>UNITAI_COUNTER</UnitAIType>
 		</Row>
-		<Row>
-			<UnitType>UNIT_OTTOMAN_COBRA</UnitType>
-			<UnitAIType>UNITAI_RANGED</UnitAIType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_OTTOMAN_COBRA</UnitType>
-			<UnitAIType>UNITAI_CITY_SPECIAL</UnitAIType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_OTTOMAN_COBRA</UnitType>
-			<UnitAIType>UNITAI_COUNTER</UnitAIType>
-		</Row>
-
 
 		<Row>
 			<UnitType>UNIT_CATAPULT</UnitType>
@@ -2441,24 +2346,6 @@
 			<FlavorType>FLAVOR_DEFENSE</FlavorType>
 			<Flavor>50</Flavor>
 		</Row>
-		<Row>
-			<UnitType>UNIT_OTTOMAN_COBRA</UnitType>
-			<FlavorType>FLAVOR_RANGED</FlavorType>
-			<Flavor>85</Flavor>
-		</Row>
-		<Row>
-			<UnitType>UNIT_OTTOMAN_COBRA</UnitType>
-			<FlavorType>FLAVOR_ANTIAIR</FlavorType>
-			<Flavor>120</Flavor>
-		</Row>
-		<Row>
-			<UnitType>UNIT_OTTOMAN_COBRA</UnitType>
-			<FlavorType>FLAVOR_DEFENSE</FlavorType>
-			<Flavor>100</Flavor>
-		</Row>
-
-
-
 
 		<Row>
 			<UnitType>UNIT_CATAPULT</UnitType>

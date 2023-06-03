@@ -952,44 +952,6 @@
 			<MoveRate>SUB</MoveRate>
 			<ExtraMaintenanceCost>18</ExtraMaintenanceCost>
 		</Row>
-		<Row>
-			<Class>UNITCLASS_NUCLEAR_SUBMARINE</Class>
-			<Type>UNIT_PERSIAN_MINISUB</Type>
-			<PrereqTech>TECH_ROBOTICS</PrereqTech>
-			<BaseSightRange>6</BaseSightRange>
-			<Combat>120</Combat>
-			<RangedCombat>240</RangedCombat>
-			<Cost>600</Cost>
-			<Moves>11</Moves>
-			<Range>2</Range>
-			<CombatClass>UNITCOMBAT_SUBMARINE</CombatClass>
-			<Domain>DOMAIN_SEA</Domain>
-			<DefaultUnitAI>UNITAI_ASSAULT_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_PERSIAN_MINISUB</Description>
-			<Civilopedia>TXT_KEY_UNIT_PERSIAN_MINISUB_TEXT</Civilopedia>
-			<Strategy>TXT_KEY_SP_UNITS_NAVAL_HIT_AND_RUN_SHIPS_STRATEGY</Strategy>
-			<Help>TXT_KEY_PROMOTION_SUBMARINE_COMBAT_HELP</Help>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
-			<Pillage>true</Pillage>
-			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
-			<Mechanized>true</Mechanized>
-			<AdvancedStartCost>100</AdvancedStartCost>
-			<MinAreaSize>20</MinAreaSize>
-			<RangeAttackOnlyInDomain>true</RangeAttackOnlyInDomain>
-			<XPValueAttack>9</XPValueAttack>
-			<XPValueDefense>6</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_SSGN</UnitArtInfo>
-			<UnitFlagAtlas>SPUnitFlags_FLAG</UnitFlagAtlas>
-			<UnitFlagIconOffset>118</UnitFlagIconOffset>
-			<IconAtlas>SPUNITS01_ATLAS</IconAtlas>
-			<PortraitIndex>63</PortraitIndex>
-			<MoveRate>SUB</MoveRate>
-			<ExtraMaintenanceCost>18</ExtraMaintenanceCost>
-		</Row>
-		
-		
-		
 
 		<!--Naval Ranged-->
 
@@ -2523,32 +2485,6 @@
 		</Row>
 
 		<Row>
-			<UnitType>UNIT_PERSIAN_MINISUB</UnitType>
-			<PromotionType>PROMOTION_SUBMARINE_COMBAT</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_PERSIAN_MINISUB</UnitType>
-			<PromotionType>PROMOTION_DRONE_CARRIER</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_PERSIAN_MINISUB</UnitType>
-			<PromotionType>PROMOTION_NUMIDIAN_MARCH</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_PERSIAN_MINISUB</UnitType>
-			<PromotionType>PROMOTION_WITHDRAW_BEFORE_MELEE</PromotionType>
-		</Row>
-		<!--<Row>
-			<UnitType>UNIT_PERSIAN_MINISUB</UnitType>
-			<PromotionType>PROMOTION_MISSILE_CARRIER</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_PERSIAN_MINISUB</UnitType>
-			<PromotionType>PROMOTION_CARGO_I</PromotionType>
-		</Row>-->
-		
-
-		<Row>
 			<UnitType>UNIT_VENETIAN_GALLEASS</UnitType>
 			<PromotionType>PROMOTION_NAVAL_RANGED_SHIP</PromotionType>
 		</Row>
@@ -3034,10 +2970,6 @@
 			<UnitType>UNIT_NUCLEAR_SUBMARINE</UnitType>
 			<ResourceType>RESOURCE_URANIUM</ResourceType>
 		</Row>
-		<Row>
-			<UnitType>UNIT_PERSIAN_MINISUB</UnitType>
-			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
-		</Row>
 
 		<Row>
 			<UnitType>UNIT_VENETIAN_GALLEASS</UnitType>
@@ -3383,13 +3315,6 @@
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 			<Cost>5</Cost>
 		</Row>
-		<Row>
-			<UnitType>UNIT_PERSIAN_MINISUB</UnitType>
-			<ResourceType>RESOURCE_MANPOWER</ResourceType>
-			<Cost>3</Cost>
-		</Row>
-
-		
 		
 		<Row>
 			<UnitType>UNIT_VENETIAN_GALLEASS</UnitType>
@@ -3744,15 +3669,6 @@
 			<UnitType>UNIT_NUCLEAR_SUBMARINE</UnitType>
 			<UnitAIType>UNITAI_EXPLORE_SEA</UnitAIType>
 		</Row>
-		<Row>
-			<UnitType>UNIT_PERSIAN_MINISUB</UnitType>
-			<UnitAIType>UNITAI_ASSAULT_SEA</UnitAIType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_PERSIAN_MINISUB</UnitType>
-			<UnitAIType>UNITAI_EXPLORE_SEA</UnitAIType>
-		</Row>
-
 
 		<Row>
 			<UnitType>UNIT_VENETIAN_GALLEASS</UnitType>
@@ -4433,16 +4349,6 @@
 		</Row>
 		<Row>
 			<UnitType>UNIT_NUCLEAR_SUBMARINE</UnitType>
-			<FlavorType>FLAVOR_NAVAL_RECON</FlavorType>
-			<Flavor>190</Flavor>
-		</Row>
-		<Row>
-			<UnitType>UNIT_PERSIAN_MINISUB</UnitType>
-			<FlavorType>FLAVOR_NAVAL</FlavorType>
-			<Flavor>100</Flavor>
-		</Row>
-		<Row>
-			<UnitType>UNIT_PERSIAN_MINISUB</UnitType>
 			<FlavorType>FLAVOR_NAVAL_RECON</FlavorType>
 			<Flavor>190</Flavor>
 		</Row>
