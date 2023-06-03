@@ -131,3 +131,25 @@ left join Buildings as t2
 on t1.Type = t2.BuildingClass
 left join BuildingClasses t3
 where t3.DefaultBuilding = t2.Type;
+
+insert into Policy_CityResources (PolicyType, ResourceType, Quantity) values
+('POLICY_CITIZENSHIP', 'RESOURCE_MANPOWER', 2);
+insert into Policy_CityResources (PolicyType, ResourceType, Quantity) values
+('POLICY_REPUBLIC', 'RESOURCE_CONSUMER', 2);
+
+insert into Policy_CityResources (PolicyType, ResourceType, Quantity, MustCoastal) values
+('POLICY_MERCHANT_NAVY', 'RESOURCE_CONSUMER', 3, 1);
+
+insert into Policy_CityResources (PolicyType, ResourceType, Quantity) values
+('POLICY_TOTAL_WAR', 'RESOURCE_MANPOWER', 5);
+insert into Policy_CityResources (PolicyType, ResourceType, Quantity, CityScaleType) values
+('POLICY_TOTAL_WAR', 'RESOURCE_ELECTRICITY', 1, 'CITYSCALE_TOWN'),
+('POLICY_TOTAL_WAR', 'RESOURCE_CONSUMER', 1, 'CITYSCALE_TOWN'),
+('POLICY_TOTAL_WAR', 'RESOURCE_ELECTRICITY', 4, 'CITYSCALE_SMALL'),
+('POLICY_TOTAL_WAR', 'RESOURCE_CONSUMER', 4, 'CITYSCALE_SMALL'),
+('POLICY_TOTAL_WAR', 'RESOURCE_ELECTRICITY', 7, 'CITYSCALE_MEDIUM'),
+('POLICY_TOTAL_WAR', 'RESOURCE_CONSUMER', 7, 'CITYSCALE_MEDIUM');
+
+insert into Policy_CityResources (PolicyType, ResourceType, Quantity) values
+('POLICY_DOUBLE_AGENTS', 'RESOURCE_CONSUMER', 6),
+('POLICY_DOUBLE_AGENTS', 'RESOURCE_ELECTRICITY', 6);

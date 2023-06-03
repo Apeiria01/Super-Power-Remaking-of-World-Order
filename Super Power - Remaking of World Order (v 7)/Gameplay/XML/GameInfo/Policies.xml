@@ -619,10 +619,6 @@
 			<Set WoundedUnitDamageMod="0" FreeExperience="15"/>
 			<Where Type="POLICY_ELITE_FORCES"/>
 		</Update>
-		<!--<Update>
-			<Set FreeBuildingOnConquest="BUILDING_UNITED_FRONT_FOOD"/>
-			<Where Type="POLICY_UNITED_FRONT"/>
-		</Update>-->
 		<Update>
 			<Set UnitGoldMaintenanceMod="-20" Level="1"/>
 			<Where Type="POLICY_NATIONALISM"/>

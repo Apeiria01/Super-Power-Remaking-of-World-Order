@@ -25,13 +25,8 @@ function NewCitySystem(playerID)
                 GameInfoTypes["BUILDING_ARABIA_ISIAMIC_UNIVERSITY"]) > 6 or
             player:CountNumBuildings(
                 GameInfoTypes["BUILDING_ARABIA_ISIAMIC_UNIVERSITY_ALLAH_AKBAR"]) > 0) -- Policy Effects
-        -- +5% Culture Cost for New Policies if the city hasn't city hall -- Representation
-        -- Get Consumers from Policy - Merchant Navy
-        -- Get Local Happiness from Policy - Protectionism
-        -- Get Consumers & Electricities from Policy - Total War
-        or (player:HasPolicy(GameInfoTypes["POLICY_REPRESENTATION"]) or
-            player:HasPolicy(GameInfoTypes["POLICY_MERCHANT_NAVY"]) or
-            player:HasPolicy(GameInfoTypes["POLICY_TOTAL_WAR"])) then
+        or player:HasPolicy(GameInfoTypes["POLICY_REPRESENTATION"])
+    then
         local iCountIU = math.floor(player:CountNumBuildings(
                 GameInfoTypes["BUILDING_ARABIA_ISIAMIC_UNIVERSITY"]) /
             7);
@@ -134,34 +129,34 @@ function NewCitySystem(playerID)
                 end
 
                 -- Get Extra Consumers & Electricities
-                local iNumCon = 0;
-                local iNumEle = 0;
-                if player:HasPolicy(GameInfoTypes["POLICY_MERCHANT_NAVY"]) and
-                    pCity:IsCoastal(GameDefines["MIN_WATER_SIZE_FOR_OCEAN"]) then
-                    iNumCon = iNumCon + 3;
-                end
-                if player:HasPolicy(GameInfoTypes["POLICY_TOTAL_WAR"]) then
-                    if pCity:IsHasBuilding(
-                            GameInfoTypes["BUILDING_CITY_SIZE_SMALL"]) then
-                        iNumCon = iNumCon + 3;
-                        iNumEle = iNumEle + 3;
-                    end
-                    if pCity:IsHasBuilding(
-                            GameInfoTypes["BUILDING_CITY_SIZE_MEDIUM"]) then
-                        iNumCon = iNumCon + 3;
-                        iNumEle = iNumEle + 3;
-                    end
-                end
-                if pCity:GetNumBuilding(
-                        GameInfoTypes["BUILDING_CIV_S_P_CON_RESOURCES"]) ~= iNumCon then
-                    pCity:SetNumRealBuilding(
-                        GameInfoTypes["BUILDING_CIV_S_P_CON_RESOURCES"], iNumCon);
-                end
-                if pCity:GetNumBuilding(
-                        GameInfoTypes["BUILDING_CIV_S_P_ELE_RESOURCES"]) ~= iNumEle then
-                    pCity:SetNumRealBuilding(
-                        GameInfoTypes["BUILDING_CIV_S_P_ELE_RESOURCES"], iNumEle);
-                end
+                -- local iNumCon = 0;
+                -- local iNumEle = 0;
+                -- if player:HasPolicy(GameInfoTypes["POLICY_MERCHANT_NAVY"]) and
+                --     pCity:IsCoastal(GameDefines["MIN_WATER_SIZE_FOR_OCEAN"]) then
+                --     iNumCon = iNumCon + 3;
+                -- end
+                -- if player:HasPolicy(GameInfoTypes["POLICY_TOTAL_WAR"]) then
+                --     if pCity:IsHasBuilding(
+                --             GameInfoTypes["BUILDING_CITY_SIZE_SMALL"]) then
+                --         iNumCon = iNumCon + 3;
+                --         iNumEle = iNumEle + 3;
+                --     end
+                --     if pCity:IsHasBuilding(
+                --             GameInfoTypes["BUILDING_CITY_SIZE_MEDIUM"]) then
+                --         iNumCon = iNumCon + 3;
+                --         iNumEle = iNumEle + 3;
+                --     end
+                -- end
+                -- if pCity:GetNumBuilding(
+                --         GameInfoTypes["BUILDING_CIV_S_P_CON_RESOURCES"]) ~= iNumCon then
+                --     pCity:SetNumRealBuilding(
+                --         GameInfoTypes["BUILDING_CIV_S_P_CON_RESOURCES"], iNumCon);
+                -- end
+                -- if pCity:GetNumBuilding(
+                --         GameInfoTypes["BUILDING_CIV_S_P_ELE_RESOURCES"]) ~= iNumEle then
+                --     pCity:SetNumRealBuilding(
+                --         GameInfoTypes["BUILDING_CIV_S_P_ELE_RESOURCES"], iNumEle);
+                -- end
             end
         end
     end
@@ -188,7 +183,6 @@ function NewCitySystem(playerID)
     SetHappinessEffects(playerID)
 
     print("City per Turn Effects set!!")
-
 end ---------Function End
 
 GameEvents.PlayerDoTurn.Add(NewCitySystem)

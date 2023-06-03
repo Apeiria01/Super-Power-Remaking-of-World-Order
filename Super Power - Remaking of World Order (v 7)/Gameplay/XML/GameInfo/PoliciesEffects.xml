@@ -312,72 +312,6 @@
 			<YieldChange>12</YieldChange>
 		</Row>
 
-
-		<!--<Row>
-			<PolicyType>POLICY_REPUBLIC</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_FISH_FARM</BuildingClassType>
-			<YieldType>YIELD_FOOD</YieldType>
-			<YieldChange>1</YieldChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_REPUBLIC</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_GRANARY</BuildingClassType>
-			<YieldType>YIELD_FOOD</YieldType>
-			<YieldChange>1</YieldChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_REPUBLIC</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_GRAIN_MILL</BuildingClassType>
-			<YieldType>YIELD_FOOD</YieldType>
-			<YieldChange>1</YieldChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_REPUBLIC</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_WATERMILL</BuildingClassType>
-			<YieldType>YIELD_FOOD</YieldType>
-			<YieldChange>1</YieldChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_REPUBLIC</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_WINDMILL</BuildingClassType>
-			<YieldType>YIELD_FOOD</YieldType>
-			<YieldChange>1</YieldChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_REPUBLIC</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_GRAIN_DEPOT</BuildingClassType>
-			<YieldType>YIELD_FOOD</YieldType>
-			<YieldChange>1</YieldChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_REPUBLIC</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_MECHANIZED_FARM</BuildingClassType>
-			<YieldType>YIELD_FOOD</YieldType>
-			<YieldChange>1</YieldChange>
-		</Row>
-
-		<Row>
-			<PolicyType>POLICY_REPUBLIC</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_CARAVANSARY</BuildingClassType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<YieldChange>2</YieldChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_REPUBLIC</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_MARKET</BuildingClassType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<YieldChange>2</YieldChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_REPUBLIC</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_HARBOR</BuildingClassType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<YieldChange>2</YieldChange>
-		</Row>-->
-
-
-
-
 		<Row>
 			<PolicyType>POLICY_OLIGARCHY</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_SMALL</BuildingClassType>
@@ -2262,21 +2196,8 @@
 
 	<Policy_FreeBuildingClass>
 		<Row>
-			<PolicyType>POLICY_CITIZENSHIP</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_CIV_S_P_MAN_RESOURCES</BuildingClassType>
-			<Count>2</Count>
-		</Row>
-		<Row>
 			<PolicyType>POLICY_REPRESENTATION</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_REPRESENTATION_CULTURE</BuildingClassType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_TOTAL_WAR</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_UNITED_FRONT_FOOD</BuildingClassType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_DOUBLE_AGENTS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_CONSUMER_GOODS_OFFER</BuildingClassType>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_FAMILY_REGISTER</PolicyType>
@@ -2351,17 +2272,6 @@
 			<DefaultBuilding>BUILDING_THEOCRACY_WRITER</DefaultBuilding>
 			<Description>TXT_KEY_BUILDING_THEOCRACY_WRITER</Description>
 		</Row>
-
-		<!--<Row>
-			<Type>BUILDINGCLASS_CONSUMER_GOODS_LIBERTY</Type>
-			<DefaultBuilding>BUILDING_CONSUMER_GOODS_LIBERTY</DefaultBuilding>
-			<Description>TXT_KEY_POLICY_REPUBLIC</Description>
-		</Row>-->
-		<Row>
-			<Type>BUILDINGCLASS_CONSUMER_GOODS_OFFER</Type>
-			<DefaultBuilding>BUILDING_CONSUMER_GOODS_OFFER</DefaultBuilding>
-			<Description>TXT_KEY_POLICY_DOUBLE_AGENTS</Description>
-		</Row>
 		
 		<Row>
 			<Type>BUILDINGCLASS_RESETTLEMENT_FOOD_KEPT</Type>
@@ -2375,11 +2285,6 @@
 			<Description>TXT_KEY_BUILDING_POLICE_STATE</Description>
 		</Row>
 		
-		<Row>
-			<Type>BUILDINGCLASS_UNITED_FRONT_FOOD</Type>
-			<DefaultBuilding>BUILDING_UNITED_FRONT_FOOD</DefaultBuilding>
-			<Description>TXT_KEY_POLICY_TOTAL_WAR</Description>
-		</Row>
 		<Row>
 			<Type>BUILDINGCLASS_REPRESENTATION_CULTURE</Type>
 			<DefaultBuilding>BUILDING_REPRESENTATION_CULTURE</DefaultBuilding>
@@ -2526,22 +2431,7 @@
 			<Help>TXT_KEY_POLICY_RESETTLEMENT_HELP</Help>
 			<GreatWorkCount>-1</GreatWorkCount>
 		</Row>
-		
-		<Row>
-			<Type>BUILDING_CONSUMER_GOODS_OFFER</Type>
-			<BuildingClass>BUILDINGCLASS_CONSUMER_GOODS_OFFER</BuildingClass>
-			<Cost>-1</Cost>
-			<NeverCapture>true</NeverCapture>
-			<NukeImmune>true</NukeImmune>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<PortraitIndex>26</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<Description>TXT_KEY_POLICY_DOUBLE_AGENTS</Description>
-			<Help>TXT_KEY_POLICY_DOUBLE_AGENTS_HELP</Help>
-			<GreatWorkCount>-1</GreatWorkCount>
-		</Row>
-		
-		
+
 		<Row>
 			<Type>BUILDING_POLICE_STATE_LV2</Type>
 			<BuildingClass>BUILDINGCLASS_POLICE_STATE</BuildingClass>
@@ -2595,20 +2485,6 @@
 			<GreatWorkCount>-1</GreatWorkCount>
 		</Row>
 		
-		
-		<Row>
-			<Type>BUILDING_UNITED_FRONT_FOOD</Type>
-			<BuildingClass>BUILDINGCLASS_UNITED_FRONT_FOOD</BuildingClass>
-			<Cost>-1</Cost>
-			<NeverCapture>true</NeverCapture>
-			<NukeImmune>true</NukeImmune>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<PortraitIndex>21</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<Description>TXT_KEY_POLICY_TOTAL_WAR</Description>
-			<Help>TXT_KEY_POLICY_TOTAL_WAR_HELP</Help>
-			<GreatWorkCount>-1</GreatWorkCount>
-		</Row>
 		<Row>
 			<Type>BUILDING_REPRESENTATION_CULTURE</Type>
 			<BuildingClass>BUILDINGCLASS_REPRESENTATION_CULTURE</BuildingClass>
@@ -2856,24 +2732,7 @@
 			<Yield>1</Yield>
 		</Row>
 	</Building_GlobalYieldModifiers>
-	<Building_ResourceQuantity>
-		<Row>
-			<BuildingType>BUILDING_UNITED_FRONT_FOOD</BuildingType>
-			<ResourceType>RESOURCE_MANPOWER</ResourceType>
-			<Quantity>5</Quantity>
-		</Row>
 
-		<Row>
-			<BuildingType>BUILDING_CONSUMER_GOODS_OFFER</BuildingType>
-			<ResourceType>RESOURCE_CONSUMER</ResourceType>
-			<Quantity>6</Quantity>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_CONSUMER_GOODS_OFFER</BuildingType>
-			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
-			<Quantity>6</Quantity>
-		</Row>
-	</Building_ResourceQuantity>
 	<Building_SpecialistYieldChanges>
 		<Row>
 			<BuildingType>BUILDING_ENTREPRENEURSHIP</BuildingType>
@@ -2910,11 +2769,6 @@
 			<DefaultBuilding>BUILDING_POLICY_MERCHANT_NAVY_FREE</DefaultBuilding>
 			<Description>TXT_KEY_POLICY_MERCHANT_NAVY</Description>
 		</Row>
-		<Row>
-			<Type>BUILDINGCLASS_POLICY_REPUBLIC_FREE</Type>
-			<DefaultBuilding>BUILDING_POLICY_REPUBLIC_FREE</DefaultBuilding>
-			<Description>TXT_KEY_POLICY_REPUBLIC</Description>
-		</Row>
 	</BuildingClasses>
 
 	<Buildings>
@@ -2930,41 +2784,12 @@
 			<GreatWorkCount>-1</GreatWorkCount>
 			<Description>TXT_KEY_POLICY_MERCHANT_NAVY</Description>
 		</Row>
-		<Row>
-			<Type>BUILDING_POLICY_REPUBLIC_FREE</Type>
-			<BuildingClass>BUILDINGCLASS_POLICY_REPUBLIC_FREE</BuildingClass>
-			<Cost>-1</Cost>
-			<NeverCapture>true</NeverCapture>
-			<NukeImmune>true</NukeImmune>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<PortraitIndex>21</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<GreatWorkCount>-1</GreatWorkCount>
-			<Description>TXT_KEY_POLICY_REPUBLIC</Description>
-		</Row>
 	</Buildings>
-	<Building_GlobalYieldModifiers>
-		<Row>
-			<BuildingType>BUILDING_POLICY_REPUBLIC_FREE</BuildingType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_POLICY_REPUBLIC_FREE</BuildingType>
-			<YieldType>YIELD_FOOD</YieldType>
-			<Yield>1</Yield>
-		</Row>
-	</Building_GlobalYieldModifiers>
 
 	<Policy_FreeBuildingClass>
 		<Row>
 			<PolicyType>POLICY_MERCHANT_NAVY</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_POLICY_MERCHANT_NAVY_FREE</BuildingClassType>
-			<Count>1</Count>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_REPUBLIC</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_POLICY_REPUBLIC_FREE</BuildingClassType>
 			<Count>1</Count>
 		</Row>
 	</Policy_FreeBuildingClass>
@@ -2977,13 +2802,6 @@
 			<CostModifier>500</CostModifier>
 		</Row>
 	</Building_EnableUnitPurchase>
-	<Building_ResourceQuantity>
-		<Row>
-			<BuildingType>BUILDING_POLICY_REPUBLIC_FREE</BuildingType>
-			<ResourceType>RESOURCE_CONSUMER</ResourceType>
-			<Quantity>2</Quantity>
-		</Row>
-	</Building_ResourceQuantity>
 
 	<Policy_CityWithWorldWonderYieldModifier>
 		<Row>
