@@ -2402,21 +2402,6 @@
 			<Description>TXT_KEY_BUILDING_THEOCRACY_WRITER</Description>
 		</Row>
 
-
-		<!--<Row>
-			<Type>BUILDING_CONSUMER_GOODS_LIBERTY</Type>
-			<BuildingClass>BUILDINGCLASS_CONSUMER_GOODS_LIBERTY</BuildingClass>
-			<Cost>-1</Cost>
-			<NeverCapture>true</NeverCapture>
-			<NukeImmune>true</NukeImmune>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<PortraitIndex>20</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<Description>TXT_KEY_POLICY_REPUBLIC</Description>
-			<Help>TXT_KEY_POLICY_REPUBLIC_HELP</Help>
-		</Row>-->
-
-
 		<Row>
 			<Type>BUILDING_RESETTLEMENT_FOOD_KEPT</Type>
 			<BuildingClass>BUILDINGCLASS_RESETTLEMENT_FOOD_KEPT</BuildingClass>
@@ -2818,4 +2803,17 @@
 			<Yield>3</Yield>
 		</Row>
 	</Policy_TradeRouteCityYieldModifier>
+
+	<Policy_CityNumberCityYieldModifier>
+		<Row>
+			<PolicyType>POLICY_REPUBLIC</PolicyType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_REPUBLIC</PolicyType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	</Policy_CityNumberCityYieldModifier>
 </GameData>
