@@ -68,35 +68,7 @@
 			<PortraitIndex>5</PortraitIndex>
 			<ExtraMaintenanceCost>1</ExtraMaintenanceCost>
 		</Row>
-		<!--<Row>
-			<Class>UNITCLASS_SCOUT</Class>
-			<Type>UNIT_SHOSHONE_PATHFINDER</Type>
-			<BaseSightRange>3</BaseSightRange>
-			<Combat>5</Combat>
-			<Cost>15</Cost>
-			<Moves>3</Moves>
-			<CombatClass>UNITCOMBAT_RECON</CombatClass>
-			<Domain>DOMAIN_LAND</Domain>
-			<DefaultUnitAI>UNITAI_EXPLORE</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_SHOSHONE_PATHFINDER</Description>
-			<Civilopedia>TXT_KEY_CIV5_SHOSHONE_PATHFINDER_TEXT</Civilopedia>
-			<Strategy>TXT_KEY_SP_UNITS_RECON_UNITS_STRATEGY</Strategy>
-			<Help>TXT_KEY_PROMOTION_RECON_UNIT_HELP</Help>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
-			<Pillage>false</Pillage>
-			<NoBadGoodies>true</NoBadGoodies>
-			<ObsoleteTech>TECH_ASTRONOMY</ObsoleteTech>
-			<AdvancedStartCost>10</AdvancedStartCost>
-			<XPValueAttack>1</XPValueAttack>
-			<XPValueDefense>1</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_U_SHOSHONE_PATHFINDER</UnitArtInfo>
-			<UnitFlagAtlas>EXPANSION2_UNIT_FLAG_ATLAS</UnitFlagAtlas>
-			<UnitFlagIconOffset>14</UnitFlagIconOffset>
-			<IconAtlas>EXPANSION2_UNIT_ATLAS</IconAtlas>
-			<PortraitIndex>14</PortraitIndex>
-			<ExtraMaintenanceCost>1</ExtraMaintenanceCost>
-		</Row>-->
+
 		<Row>
 			<Class>UNITCLASS_SCOUT</Class>
 			<Type>UNIT_INCAN_CHASQUI</Type>
@@ -971,40 +943,6 @@
 			<MoveRate>WHEELED</MoveRate>
 			<ExtraMaintenanceCost>14</ExtraMaintenanceCost>
 		</Row>-->
-		<!--<Row>
-			<Class>UNITCLASS_MODERN_ARMOR</Class>
-			<Type>UNIT_PERSIAN_ZULFIQAR</Type>
-			<PrereqTech>TECH_BVR_COMBAT</PrereqTech>
-			<BaseSightRange>3</BaseSightRange>
-			<Combat>250</Combat>
-			<Cost>1100</Cost>
-			<Moves>6</Moves>
-			<HurryCostModifier>75</HurryCostModifier>
-			<CombatClass>UNITCOMBAT_ARMOR</CombatClass>
-			<Domain>DOMAIN_LAND</Domain>
-			<DefaultUnitAI>UNITAI_FAST_ATTACK</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_PERSIAN_ZULFIQAR</Description>
-			<Civilopedia>TXT_KEY_UNIT_PERSIAN_ZULFIQAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_SP_UNITS_HEAVY_MOBILE_UNITS_STRATEGY</Strategy>
-			<Help>TXT_KEY_PROMOTION_TANK_COMBAT_HELP</Help>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
-			<Pillage>true</Pillage>
-			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
-			<Mechanized>true</Mechanized>
-			<AdvancedStartCost>50</AdvancedStartCost>
-			<XPValueAttack>4</XPValueAttack>
-			<XPValueDefense>3</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_PERSIAN_ZULFIQAR</UnitArtInfo>
-			<UnitFlagIconOffset>51</UnitFlagIconOffset>
-			<UnitFlagAtlas>SPUnitFlags_FLAG</UnitFlagAtlas>
-			<IconAtlas>SPUNITS01_ATLAS</IconAtlas>
-			<PortraitIndex>63</PortraitIndex>
-			<MoveRate>WHEELED</MoveRate>
-			<ExtraMaintenanceCost>18</ExtraMaintenanceCost>
-		</Row>-->
-		
-		
 		
 		<!--Hit & Run-->
 
@@ -1663,39 +1601,6 @@
 			<MoveRate>WHEELED</MoveRate>
 			<ExtraMaintenanceCost>25</ExtraMaintenanceCost>
 		</Row>
-		<!-- <Row>
-			<Class>UNITCLASS_ATTACK_HELICOPTER</Class>
-			<Type>UNIT_GERMAN_EUROCOPTER_TIGER</Type>
-			<PrereqTech>TECH_MOBILE_TACTICS</PrereqTech>
-			<BaseSightRange>5</BaseSightRange>
-			<Combat>150</Combat>
-			<RangedCombat>130</RangedCombat>
-			<Cost>1030</Cost>
-			<Moves>11</Moves>
-			<Range>1</Range>
-			<AirInterceptRange>4</AirInterceptRange>
-			<CombatClass>UNITCOMBAT_HELICOPTER</CombatClass>
-			<Domain>DOMAIN_LAND</Domain>
-			<DefaultUnitAI>UNITAI_FAST_ATTACK</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_GERMAN_EUROCOPTER_TIGER</Description>
-			<Civilopedia>TXT_KEY_UNIT_GERMAN_EUROCOPTER_TIGER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_SP_UNITS_LAND_HIT_AND_RUN_UNITS_STRATEGY</Strategy>
-			<Help>TXT_KEY_PROMOTION_HELI_ATTACK_HELP</Help>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
-			<Pillage>true</Pillage>
-			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
-			<AdvancedStartCost>120</AdvancedStartCost>
-			<XPValueAttack>9</XPValueAttack>
-			<XPValueDefense>3</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_GERMAN_EUROCOPTER_TIGER</UnitArtInfo>
-			<UnitFlagIconOffset>93</UnitFlagIconOffset>
-			<UnitFlagAtlas>SPUnitFlags_FLAG</UnitFlagAtlas>
-			<PortraitIndex>48</PortraitIndex>
-			<IconAtlas>SPUNITS01_ATLAS</IconAtlas>
-			<MoveRate>WHEELED</MoveRate>
-			<ExtraMaintenanceCost>25</ExtraMaintenanceCost>
-		</Row> -->
 
 	</Units>
 
@@ -1708,11 +1613,6 @@
 			<UnitType>UNIT_SCOUT</UnitType>
 			<UnitClassType>UNITCLASS_EXPLORERX</UnitClassType>
 		</Row>
-
-		<!--<Row>
-			<UnitType>UNIT_SHOSHONE_PATHFINDER</UnitType>
-			<UnitClassType>UNITCLASS_EXPLORERX</UnitClassType>
-		</Row>-->
 		
 		<Row>
 			<UnitType>UNIT_INCAN_CHASQUI</UnitType>
@@ -1937,19 +1837,6 @@
 			<UnitType>UNIT_SCOUT</UnitType>
 			<PromotionType>PROMOTION_IGNORE_TERRAIN_COST</PromotionType>
 		</Row>
-
-		<!--<Row>
-			<UnitType>UNIT_SHOSHONE_PATHFINDER</UnitType>
-			<PromotionType>PROMOTION_RECON_UNIT</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_SHOSHONE_PATHFINDER</UnitType>
-			<PromotionType>PROMOTION_IGNORE_TERRAIN_COST</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_SHOSHONE_PATHFINDER</UnitType>
-			<PromotionType>PROMOTION_GOODY_HUT_PICKER</PromotionType>
-		</Row>-->
 
 		<Row>
 			<UnitType>UNIT_INCAN_CHASQUI</UnitType>
@@ -2335,16 +2222,6 @@
 			<UnitType>UNIT_CHINESE_TYPE99</UnitType>
 			<PromotionType>PROMOTION_HEAVY_SHOCK_3</PromotionType>
 		</Row>-->
-		
-		<!--<Row>
-			<UnitType>UNIT_PERSIAN_ZULFIQAR</UnitType>
-			<PromotionType>PROMOTION_TANK_COMBAT</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_PERSIAN_ZULFIQAR</UnitType>
-			<PromotionType>PROMOTION_UNLIMITED_ATTACK</PromotionType>
-		</Row>-->
-
 
 		<!--Hit and Run-->
 		<Row>
@@ -2584,35 +2461,6 @@
 			<UnitType>UNIT_ATTACK_HELICOPTER</UnitType>
 			<PromotionType>PROMOTION_IGNORE_TERRAIN_COST</PromotionType>
 		</Row>
-
-
-		<!-- <Row>
-			<UnitType>UNIT_GERMAN_EUROCOPTER_TIGER</UnitType>
-			<PromotionType>PROMOTION_HELI_ATTACK</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_GERMAN_EUROCOPTER_TIGER</UnitType>
-			<PromotionType>PROMOTION_RECON_UNIT</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_GERMAN_EUROCOPTER_TIGER</UnitType>
-			<PromotionType>PROMOTION_IGNORE_TERRAIN_COST</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_GERMAN_EUROCOPTER_TIGER</UnitType>
-			<PromotionType>PROMOTION_ANTI_HELICOPTER</PromotionType>
-		</Row> -->
-		<!--<Row>
-			<UnitType>UNIT_GERMAN_EUROCOPTER_TIGER</UnitType>
-			<PromotionType>PROMOTION_MARCH</PromotionType>
-		</Row>-->
-		<!-- <Row>
-			<UnitType>UNIT_GERMAN_EUROCOPTER_TIGER</UnitType>
-			<PromotionType>PROMOTION_SECOND_ATTACK</PromotionType>
-		</Row> -->
-		
-		
-		
 		
 		<Row>
 			<UnitType>UNIT_AMERICAN_APACHE</UnitType>
@@ -2652,11 +2500,6 @@
 			<UnitType>UNIT_SCOUT</UnitType>
 			<UnitAIType>UNITAI_EXPLORE</UnitAIType>
 		</Row>
-
-		<!--<Row>
-			<UnitType>UNIT_SHOSHONE_PATHFINDER</UnitType>
-			<UnitAIType>UNITAI_EXPLORE</UnitAIType>
-		</Row>-->
 
 		<Row>
 			<UnitType>UNIT_INCAN_CHASQUI</UnitType>
@@ -2901,16 +2744,6 @@
 			<UnitType>UNIT_CHINESE_TYPE99</UnitType>
 			<UnitAIType>UNITAI_FAST_ATTACK</UnitAIType>
 		</Row>-->
-		<!--<Row>
-			<UnitType>UNIT_PERSIAN_ZULFIQAR</UnitType>
-			<UnitAIType>UNITAI_ATTACK</UnitAIType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_PERSIAN_ZULFIQAR</UnitType>
-			<UnitAIType>UNITAI_FAST_ATTACK</UnitAIType>
-		</Row>-->
-	
-
 
 		<Row>
 			<UnitType>UNIT_CHARIOT_ARCHER</UnitType>
@@ -3063,18 +2896,7 @@
 			<UnitType>UNIT_ATTACK_HELICOPTER</UnitType>
 			<UnitAIType>UNITAI_RANGED</UnitAIType>
 		</Row>
-		
-
-		<!-- <Row>
-			<UnitType>UNIT_GERMAN_EUROCOPTER_TIGER</UnitType>
-			<UnitAIType>UNITAI_FAST_ATTACK</UnitAIType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_GERMAN_EUROCOPTER_TIGER</UnitType>
-			<UnitAIType>UNITAI_RANGED</UnitAIType>
-		</Row> -->
-		
-		
+	
 		<Row>
 			<UnitType>UNIT_AMERICAN_APACHE</UnitType>
 			<UnitAIType>UNITAI_FAST_ATTACK</UnitAIType>
@@ -3126,10 +2948,6 @@
 
 		<!--<Row>
 			<UnitType>UNIT_SCOUT</UnitType>
-			<ResourceType>RESOURCE_MANPOWER</ResourceType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_SHOSHONE_PATHFINDER</UnitType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 		</Row>
 		<Row>
@@ -3259,12 +3077,6 @@
 			<UnitType>UNIT_CHINESE_TYPE99</UnitType>
 			<ResourceType>RESOURCE_OIL</ResourceType>
 		</Row>-->
-		<!--<Row>
-			<UnitType>UNIT_PERSIAN_ZULFIQAR</UnitType>
-			<ResourceType>RESOURCE_OIL</ResourceType>
-		</Row>-->
-		
-
 
 		<Row>
 			<UnitType>UNIT_HORSEMAN</UnitType>
@@ -3389,11 +3201,6 @@
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 			<Cost>4</Cost>
 		</Row>-->
-		<!--<Row>
-			<UnitType>UNIT_PERSIAN_ZULFIQAR</UnitType>
-			<ResourceType>RESOURCE_MANPOWER</ResourceType>
-			<Cost>4</Cost>
-		</Row>-->
 
 <!--Hit and Run-->
 
@@ -3471,10 +3278,6 @@
 			<UnitType>UNIT_ATTACK_HELICOPTER</UnitType>
 			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
 		</Row>
-		<!-- <Row>
-			<UnitType>UNIT_GERMAN_EUROCOPTER_TIGER</UnitType>
-			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
-		</Row> -->
 		<Row>
 			<UnitType>UNIT_AMERICAN_APACHE</UnitType>
 			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
@@ -3488,12 +3291,6 @@
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 			<Cost>1</Cost>
 		</Row>
-
-		<!-- <Row>
-			<UnitType>UNIT_SHOSHONE_PATHFINDER</UnitType>
-			<ResourceType>RESOURCE_MANPOWER</ResourceType>
-			<Cost>1</Cost>
-		</Row>-->
 
 		<Row>
 			<UnitType>UNIT_INCAN_CHASQUI</UnitType>
@@ -3598,11 +3395,6 @@
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 			<Cost>3</Cost>
 		</Row>
-		<!-- <Row>
-			<UnitType>UNIT_GERMAN_EUROCOPTER_TIGER</UnitType>
-			<ResourceType>RESOURCE_MANPOWER</ResourceType>
-			<Cost>3</Cost>
-		</Row> -->
 		<Row>
 			<UnitType>UNIT_AMERICAN_APACHE</UnitType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
@@ -3642,11 +3434,6 @@
 		</Row>
 		
 		<!--<Row>
-			<UnitType>UNIT_SHOSHONE_PATHFINDER</UnitType>
-			<FlavorType>FLAVOR_RECON</FlavorType>
-			<Flavor>2</Flavor>
-		</Row>
-		<Row>
 			<UnitType>UNIT_OTTOMAN_SIPAHI</UnitType>
 			<FlavorType>FLAVOR_RECON</FlavorType>
 			<Flavor>2</Flavor>
@@ -3942,17 +3729,6 @@
 			<FlavorType>FLAVOR_DEFENSE</FlavorType>
 			<Flavor>150</Flavor>
 		</Row>-->
-		<!--<Row>
-			<UnitType>UNIT_PERSIAN_ZULFIQAR</UnitType>
-			<FlavorType>FLAVOR_MOBILE</FlavorType>
-			<Flavor>90</Flavor>
-		</Row>
-		<Row>
-			<UnitType>UNIT_PERSIAN_ZULFIQAR</UnitType>
-			<FlavorType>FLAVOR_OFFENSE</FlavorType>
-			<Flavor>200</Flavor>
-		</Row>-->
-		
 
 		<Row>
 			<UnitType>UNIT_CHARIOT_ARCHER</UnitType>
@@ -4246,26 +4022,6 @@
 			<FlavorType>FLAVOR_RANGED</FlavorType>
 			<Flavor>50</Flavor>
 		</Row>
-		<!-- <Row>
-			<UnitType>UNIT_GERMAN_EUROCOPTER_TIGER</UnitType>
-			<FlavorType>FLAVOR_MOBILE</FlavorType>
-			<Flavor>190</Flavor>
-		</Row> -->
-		<!-- <Row>
-			<UnitType>UNIT_GERMAN_EUROCOPTER_TIGER</UnitType>
-			<FlavorType>FLAVOR_OFFENSE</FlavorType>
-			<Flavor>90</Flavor>
-		</Row>
-		<Row>
-			<UnitType>UNIT_GERMAN_EUROCOPTER_TIGER</UnitType>
-			<FlavorType>FLAVOR_DEFENSE</FlavorType>
-			<Flavor>70</Flavor>
-		</Row>
-		<Row>
-			<UnitType>UNIT_GERMAN_EUROCOPTER_TIGER</UnitType>
-			<FlavorType>FLAVOR_RANGED</FlavorType>
-			<Flavor>50</Flavor>
-		</Row> -->
 		<Row>
 			<UnitType>UNIT_AMERICAN_APACHE</UnitType>
 			<FlavorType>FLAVOR_MOBILE</FlavorType>

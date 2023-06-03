@@ -222,10 +222,6 @@
 			<UnitType>UNIT_SAM_INFANTRY</UnitType>
 			<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
 		</Row>
-		<Row>
-			<UnitType>UNIT_OTTOMAN_COBRA</UnitType>
-			<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
-		</Row>
 
 		<Row>
 			<UnitType>UNIT_SPARTAN300</UnitType>
@@ -465,10 +461,7 @@
 			<UnitType>UNIT_MAIN_BATTLE_TANK</UnitType>
 			<BuildingClassType>BUILDINGCLASS_ARSENAL</BuildingClassType>
 		</Row>
-		<!--<Row>
-			<UnitType>UNIT_PERSIAN_ZULFIQAR</UnitType>
-			<BuildingClassType>BUILDINGCLASS_ARSENAL</BuildingClassType>
-		</Row>-->
+
 		<Row>
 			<UnitType>UNIT_RUSSIAN_T34</UnitType>
 			<BuildingClassType>BUILDINGCLASS_ARSENAL</BuildingClassType>
@@ -573,10 +566,6 @@
 			<UnitType>UNIT_ATTACK_HELICOPTER</UnitType>
 			<BuildingClassType>BUILDINGCLASS_MILITARY_BASE</BuildingClassType>
 		</Row>
-		<!-- <Row>
-			<UnitType>UNIT_GERMAN_EUROCOPTER_TIGER</UnitType>
-			<BuildingClassType>BUILDINGCLASS_MILITARY_BASE</BuildingClassType>
-		</Row> -->
 		<Row>
 			<UnitType>UNIT_AMERICAN_APACHE</UnitType>
 			<BuildingClassType>BUILDINGCLASS_MILITARY_BASE</BuildingClassType>
@@ -846,10 +835,6 @@
 			<UnitType>UNIT_NUCLEAR_SUBMARINE</UnitType>
 			<BuildingClassType>BUILDINGCLASS_SHIPYARD</BuildingClassType>
 		</Row>
-		<Row>
-			<UnitType>UNIT_PERSIAN_MINISUB</UnitType>
-			<BuildingClassType>BUILDINGCLASS_SHIPYARD</BuildingClassType>
-		</Row>
 		
 		<Row>
 			<UnitType>UNIT_PROTECTED_CRUISER</UnitType>
@@ -998,10 +983,6 @@
 		</Row>
 		<Row>
 			<UnitType>UNIT_MARINE</UnitType>
-			<BuildingClassType>BUILDINGCLASS_MILITARY_ACADEMY</BuildingClassType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_BRAZILIAN_PRACINHA</UnitType>
 			<BuildingClassType>BUILDINGCLASS_MILITARY_ACADEMY</BuildingClassType>
 		</Row>
 		

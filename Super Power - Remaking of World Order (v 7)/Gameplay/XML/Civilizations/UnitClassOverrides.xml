@@ -101,11 +101,6 @@
 			<UnitClassType>UNITCLASS_LONGSWORDSMAN</UnitClassType>
 			<UnitType>UNIT_GERMAN_LONGSWORDSMAN</UnitType>
 		</Row>
-		<!-- <Row>
-			<CivilizationType>CIVILIZATION_GERMANY</CivilizationType>
-			<UnitClassType>UNITCLASS_ATTACK_HELICOPTER</UnitClassType>
-			<UnitType>UNIT_GERMAN_EUROCOPTER_TIGER</UnitType>
-		</Row> -->
 		<Row>
 			<CivilizationType>CIVILIZATION_GERMANY</CivilizationType>
 			<UnitClassType>UNITCLASS_SUBMARINE</UnitClassType>
@@ -140,12 +135,6 @@
 			<UnitClassType>UNITCLASS_LANCER</UnitClassType>
 			<UnitType>UNIT_OTTOMAN_SIPAHI</UnitType>
 		</Row>
-		<!-- <Row>
-			<CivilizationType>CIVILIZATION_PERSIA</CivilizationType>
-			<UnitClassType>UNITCLASS_NUCLEAR_SUBMARINE</UnitClassType>
-			<UnitType>UNIT_PERSIAN_MINISUB</UnitType>
-		</Row> -->
-
 
 		<Row>
 			<CivilizationType>CIVILIZATION_MONGOL</CivilizationType>
@@ -414,13 +403,6 @@
 			<UnitClassType>UNITCLASS_HELICOPTER_GUNSHIP</UnitClassType>
 			<UnitType>UNIT_POLISH_PZLW3_HELICOPTER</UnitType>
 		</Row>
-
-		
-		<!--<Row>
-			<CivilizationType>CIVILIZATION_SHOSHONE</CivilizationType>
-			<UnitClassType>UNITCLASS_SCOUT</UnitClassType>
-			<UnitType>UNIT_SHOSHONE_PATHFINDER</UnitType>
-		</Row>-->
 
 		<Row>
 			<CivilizationType>CIVILIZATION_SHOSHONE</CivilizationType>

@@ -16,6 +16,7 @@
 		<Delete UnitType="UNIT_MOBILE_SAM"/>
 		<Delete UnitType="UNIT_SWEDISH_HAKKAPELIITTA"/>
 		<Delete UnitType="UNIT_SHOSHONE_PATHFINDER"/>
+		<Delete UnitType="UNIT_BRAZILIAN_PRACINHA"/>
 		
 		<Row>
 			<UnitType>UNIT_CITADEL_EARLY</UnitType>
@@ -299,12 +300,7 @@
 			<SelectionSound>AS2D_SELECT_ANTI_AIRCRAFT_GUN</SelectionSound>
 			<FirstSelectionSound>AS2D_BIRTH_ANTI_AIRCRAFT_GUN</FirstSelectionSound>
 		</Row>
-
-		<Row>
-			<UnitType>UNIT_OTTOMAN_COBRA</UnitType>
-			<SelectionSound>AS2D_SELECT_MOBILE_SAM</SelectionSound>
-			<FirstSelectionSound>AS2D_BIRTH_MOBILE_SAM</FirstSelectionSound>
-		</Row>
+		
 		<Row>
 			<UnitType>UNIT_ATGM_VEHICLE</UnitType>
 			<SelectionSound>AS2D_SELECT_MOBILE_SAM</SelectionSound>
@@ -383,11 +379,7 @@
 			<SelectionSound>AS2D_SELECT_TANK</SelectionSound>
 			<FirstSelectionSound>AS2D_BIRTH_TANK</FirstSelectionSound>
 		</Row>
-		<!--<Row>
-			<UnitType>UNIT_PERSIAN_ZULFIQAR</UnitType>
-			<SelectionSound>AS2D_SELECT_TANK</SelectionSound>
-			<FirstSelectionSound>AS2D_BIRTH_TANK</FirstSelectionSound>
-		</Row>-->
+
 		<Row>
 			<UnitType>UNIT_RUSSIAN_T34</UnitType>
 			<SelectionSound>AS2D_SELECT_TANK</SelectionSound>
@@ -444,13 +436,6 @@
 			<UnitType>UNIT_EMP_BOMBER_AIR</UnitType>
 			<SelectionSound>AS2D_SELECT_NUCLEAR_MISSILE</SelectionSound>
 			<FirstSelectionSound>AS2D_BIRTH_NUCLEAR_MISSILE</FirstSelectionSound>
-		</Row>
-
-
-		<Row>
-			<UnitType>UNIT_ASSYRIAN_SCUD_MISSILE</UnitType>
-			<SelectionSound>AS2D_SELECT_GUIDED_MISSILE</SelectionSound>
-			<FirstSelectionSound>AS2D_BIRTH_GUIDED_MISSILE</FirstSelectionSound>
 		</Row>
 
 		<Row>
@@ -511,11 +496,6 @@
 			<SelectionSound>AS2D_SELECT_HELICOPTER_GUNSHIP</SelectionSound>
 			<FirstSelectionSound>AS2D_BIRTH_HELICOPTER_GUNSHIP</FirstSelectionSound>
 		</Row>
-		<!-- <Row>
-			<UnitType>UNIT_GERMAN_EUROCOPTER_TIGER</UnitType>
-			<SelectionSound>AS2D_SELECT_HELICOPTER_GUNSHIP</SelectionSound>
-			<FirstSelectionSound>AS2D_BIRTH_HELICOPTER_GUNSHIP</FirstSelectionSound>
-		</Row> -->
 		<Row>
 			<UnitType>UNIT_POLISH_PZLW3_HELICOPTER</UnitType>
 			<SelectionSound>AS2D_SELECT_HELICOPTER_GUNSHIP</SelectionSound>
@@ -567,13 +547,6 @@
 			<UnitType>UNIT_SLOOP_OF_WAR</UnitType>
 			<SelectionSound>AS2D_SELECT_FRIGATE</SelectionSound>
 			<FirstSelectionSound>AS2D_BIRTH_FRIGATE</FirstSelectionSound>
-		</Row>
-
-
-		<Row>
-			<UnitType>UNIT_PERSIAN_MINISUB</UnitType>
-			<SelectionSound>AS2D_SELECT_NUCLEAR_SUBMARINE</SelectionSound>
-			<FirstSelectionSound>AS2D_BIRTH_NUCLEAR_SUBMARINE</FirstSelectionSound>
 		</Row>
 		
 		<Row>

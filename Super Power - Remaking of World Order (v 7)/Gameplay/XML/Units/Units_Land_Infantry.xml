@@ -430,68 +430,6 @@
 			<PortraitIndex>19</PortraitIndex>
 			<ExtraMaintenanceCost>10</ExtraMaintenanceCost>
 		</Row>
-		<Row>
-			<Class>UNITCLASS_MARINE</Class>
-			<Type>UNIT_BRAZILIAN_PRACINHA</Type>
-			<PrereqTech>TECH_ATOMIC_THEORY</PrereqTech>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<BaseSightRange>4</BaseSightRange>
-			<Combat>60</Combat>
-			<Cost>500</Cost>
-			<Moves>3</Moves>
-			<CombatClass>UNITCOMBAT_GUN</CombatClass>
-			<Domain>DOMAIN_LAND</Domain>
-			<DefaultUnitAI>UNITAI_PARADROP</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_BRAZILIAN_PRACINHA</Description>
-			<Civilopedia>TXT_KEY_CIV5_BRAZILIAN_PRACINHA_TEXT</Civilopedia>
-			<Strategy>TXT_KEY_SP_UNITS_SPECIAL_FORCES_STRATEGY</Strategy>
-			<Help>TXT_KEY_PROMOTION_SPECIAL_FORCES_COMBAT_HELP</Help>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
-			<Pillage>true</Pillage>
-			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
-			<AdvancedStartCost>20</AdvancedStartCost>
-			<XPValueAttack>7</XPValueAttack>
-			<XPValueDefense>7</XPValueDefense>
-			<Conscription>6</Conscription>
-			<UnitArtInfo>ART_DEF_UNIT_U_BRAZILIAN_PRACINHAS</UnitArtInfo>
-			<UnitFlagIconOffset>122</UnitFlagIconOffset>
-			<UnitFlagAtlas>SPUnitFlags_FLAG</UnitFlagAtlas>
-			<IconAtlas>EXPANSION2_UNIT_ATLAS</IconAtlas>
-			<PortraitIndex>16</PortraitIndex>
-			<ExtraMaintenanceCost>10</ExtraMaintenanceCost>
-		</Row>
-
-		<!--<Row>
-			<Class>UNITCLASS_MARINE</Class>
-			<Type>UNIT_ROYAL_MARINE</Type>
-			<PrereqTech>TECH_ATOMIC_THEORY</PrereqTech>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<BaseSightRange>2</BaseSightRange>
-			<Combat>45</Combat>
-			<Cost>405</Cost>
-			<Moves>3</Moves>
-			<CombatClass>UNITCOMBAT_GUN</CombatClass>
-			<Domain>DOMAIN_LAND</Domain>
-			<DefaultUnitAI>UNITAI_PARADROP</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_ROYAL_MARINE</Description>
-			<Civilopedia>TXT_KEY_CIV5_ROYAL_MARINE_TEXT</Civilopedia>
-			<Strategy>TXT_KEY_SP_UNITS_SPECIAL_FORCES_STRATEGY</Strategy>
-			<Help>TXT_KEY_PROMOTION_SPECIAL_FORCES_COMBAT_HELP</Help>
-			<ObsoleteTech>TECH_SPACE_TECHNOLOGY</ObsoleteTech>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
-			<Pillage>true</Pillage>
-			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
-			<AdvancedStartCost>20</AdvancedStartCost>
-			<XPValueAttack>4</XPValueAttack>
-			<XPValueDefense>4</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_SPECIAL_FORCES</UnitArtInfo>
-			<UnitFlagAtlas>UNITS_SPECIAL_FORCES_FLAG_ATLAS</UnitFlagAtlas>
-			<UnitFlagIconOffset>0</UnitFlagIconOffset>
-			<IconAtlas>SPUNITS_ATLAS</IconAtlas>
-			<PortraitIndex>25</PortraitIndex>
-		</Row>-->
 		
 		<Row>
 			<Class>UNITCLASS_PARATROOPER</Class>
@@ -1803,10 +1741,6 @@
 			<UnitType>UNIT_MARINE</UnitType>
 			<UnitClassType>UNITCLASS_PARATROOPER</UnitClassType>
 		</Row>
-		<Row>
-			<UnitType>UNIT_BRAZILIAN_PRACINHA</UnitType>
-			<UnitClassType>UNITCLASS_PARATROOPER</UnitClassType>
-		</Row>
 		
 		<Row>
 			<UnitType>UNIT_PARATROOPER</UnitType>
@@ -2115,49 +2049,7 @@
 			<UnitType>UNIT_MARINE</UnitType>
 			<PromotionType>PROMOTION_PARADROP_II</PromotionType>
 		</Row>
-		<Row>
-			<UnitType>UNIT_BRAZILIAN_PRACINHA</UnitType>
-			<PromotionType>PROMOTION_SPECIAL_FORCES_COMBAT</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_BRAZILIAN_PRACINHA</UnitType>
-			<PromotionType>PROMOTION_IGNORE_TERRAIN_COST</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_BRAZILIAN_PRACINHA</UnitType>
-			<PromotionType>PROMOTION_FOREIGN_LANDS</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_BRAZILIAN_PRACINHA</UnitType>
-			<PromotionType>PROMOTION_PARADROP_II</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_BRAZILIAN_PRACINHA</UnitType>
-			<PromotionType>PROMOTION_SP_FORCE_X_1</PromotionType>
-		</Row>
-		
 
-		<!--<Row>
-			<UnitType>UNIT_ROYAL_MARINE</UnitType>
-			<PromotionType>PROMOTION_SPECIAL_FORCES_COMBAT</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_ROYAL_MARINE</UnitType>
-			<PromotionType>PROMOTION_IGNORE_TERRAIN_COST</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_ROYAL_MARINE</UnitType>
-			<PromotionType>PROMOTION_PARADROP_I</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_ROYAL_MARINE</UnitType>
-			<PromotionType>PROMOTION_PARADROP_II</PromotionType>
-		</Row>-->
-		<!--<Row>
-			<UnitType>UNIT_ROYAL_MARINE</UnitType>
-			<PromotionType>PROMOTION_MOBILITY</PromotionType>
-		</Row>-->
-		
 		<Row>
 			<UnitType>UNIT_PARATROOPER</UnitType>
 			<PromotionType>PROMOTION_SPECIAL_FORCES_COMBAT</PromotionType>
@@ -2640,11 +2532,6 @@
 			<UnitType>UNIT_MARINE</UnitType>
 			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
 		</Row>
-		<Row>
-			<UnitType>UNIT_BRAZILIAN_PRACINHA</UnitType>
-			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
-		</Row>
-
 
 		<Row>
 			<UnitType>UNIT_PARATROOPER</UnitType>
@@ -2674,11 +2561,7 @@
 			<UnitType>UNIT_MARINE</UnitType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 		</Row>
-		<Row>
-			<UnitType>UNIT_BRAZILIAN_PRACINHA</UnitType>
-			<ResourceType>RESOURCE_MANPOWER</ResourceType>
-		</Row>
-		
+	
 		<Row>
 			<UnitType>UNIT_PARATROOPER</UnitType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
@@ -3041,19 +2924,6 @@
 		<Row>
 			<UnitType>UNIT_MARINE</UnitType>
 			<UnitAIType>UNITAI_EXPLORE</UnitAIType>
-		</Row>
-
-		<Row>
-			<UnitType>UNIT_BRAZILIAN_PRACINHA</UnitType>
-			<UnitAIType>UNITAI_ATTACK</UnitAIType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_BRAZILIAN_PRACINHA</UnitType>
-			<UnitAIType>UNITAI_EXPLORE</UnitAIType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_BRAZILIAN_PRACINHA</UnitType>
-			<UnitAIType>UNITAI_PARADROP</UnitAIType>
 		</Row>
 
 		<Row>
@@ -3534,21 +3404,6 @@
 			<UnitType>UNIT_MARINE</UnitType>
 			<FlavorType>FLAVOR_RECON</FlavorType>
 			<Flavor>5</Flavor>
-		</Row>
-		<Row>
-			<UnitType>UNIT_BRAZILIAN_PRACINHA</UnitType>
-			<FlavorType>FLAVOR_OFFENSE</FlavorType>
-			<Flavor>30</Flavor>
-		</Row>
-		<Row>
-			<UnitType>UNIT_BRAZILIAN_PRACINHA</UnitType>
-			<FlavorType>FLAVOR_AIR</FlavorType>
-			<Flavor>30</Flavor>
-		</Row>
-		<Row>
-			<UnitType>UNIT_BRAZILIAN_PRACINHA</UnitType>
-			<FlavorType>FLAVOR_RECON</FlavorType>
-			<Flavor>9</Flavor>
 		</Row>
 
 		<Row>

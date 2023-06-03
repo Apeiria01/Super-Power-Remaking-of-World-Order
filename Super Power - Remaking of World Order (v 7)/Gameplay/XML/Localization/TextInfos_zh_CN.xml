@@ -10331,38 +10331,6 @@
 					[NEWLINE]一台12150L型1500马力发动机和先进的传动系统为这种58吨的庞然大物提供了充沛的动力，其最厚处物理厚度超过一米的前装甲则为它和使用它的坦克兵提供了可靠的防护，堪称“叹息之墙”，它的125毫米主炮配合自动装弹机可以快速发射中国的最新型穿甲弹。而它配备的车内系统也非常高端，猎-歼火控、车长独立周视仪、高度集成并接入三军数据链的车际信息总线和先进的红外热成像仪等尖端设备。还配备一具大功率激光对抗装置，是99坦克上的激光装置的改进型，更加紧凑先进，甚至在主炮上方还配备有一台小型毫米波雷达。先进的性能带来了昂贵的造价，一辆99A的单价估计约为2000-3000万人民币。
 			</Text>
 		</Row>-->
-		
-		<!--<Row Tag="TXT_KEY_UNIT_PERSIAN_ZULFIQAR">
-			<Text>佐勒菲卡尔坦克</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_PERSIAN_ZULFIQAR_HEADING">
-			<Text>佐勒菲卡尔坦克</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_HELP_PERSIAN_ZULFIQAR">
-			<Text>替代现代装甲，装备了先进自动装弹机，使得每回合的攻击次数不限。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_PERSIAN_ZULFIQAR_PEDIA">
-			<Text>佐勒菲卡尔是伊朗于上世纪九十年代自行研制的一型主战坦克，也是第二代国产坦克。
-			[NEWLINE]其采用方形的焊接炮塔，全重36吨，动力采用780马力柴油发动机，单位功率为21.7马力/吨，乘员三人，采用了仿制T-72坦克的自动装弹机。配备了2A46M型125毫米滑膛炮作为主要火炮，2A46M为T-72B采用的主要武器，配备自动装弹机，最大射速可达10～15发/分，且可发射防空/反坦克两用导弹。在防护方面采用和英国“酋长”坦克类似的复合式装甲车体，为焊接结构，车体厚度为90～550毫米。车体首上装甲倾角32度，车体两侧装有装甲裙板，增加了车体抗破甲弹的能力。另外，坦克炮塔采用全焊接结构，其正面的装甲防护性能非常好。“佐勒菲卡尔”主战坦克的出现，表明伊朗在装备国产化方面已取得重大进展，不过，战场是检验所有武器的试验场，孰优孰劣只有经过铁血的洗礼才能见分晓。“佐勒菲卡尔”主战坦克到底能不能成为捍卫伊朗领土和主权完整的锋利战刀，还需要实战的检验。</Text>
-		</Row>-->
-
-		<Row Tag="TXT_KEY_UNIT_GERMAN_EUROCOPTER_TIGER">
-			<Text>虎式武装直升机</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_GERMAN_EUROCOPTER_TIGER_HEADING">
-			<Text>虎式武装直升机</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_GERMAN_EUROCOPTER_TIGER_HELP">
-			<Text>替代武装直升机，自带长途行军晋升和双击晋升，装备了毒刺导弹，每回合可以拦截2次（范围为2格），对直升机单位和空军单位+200%战斗力。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_GERMAN_EUROCOPTER_TIGER_PEDIA">
-			<Text>
-				欧洲虎式（英语：Eurocopter Tiger，法语：L'Eurocopter Tigre，欧直编号EC-665）是法国和德国联合研制，德国戴姆勒宇航和法国马特拉宇航（1992年合并为欧洲直升机公司）生产的四旋翼、双发多任务武装直升机，是世界上第一种将制空作战纳入设计思想并付诸实施的武装直升机。
-				[NEWLINE]虎式武装直升机的空中机动性能、续航力、机炮射击精确度均优于AH-64武装直升机等美制武装直升机，适合进行直升机空战，整体武器筹载虽然不如美制武装直升机，也仍足以胜任一般的反坦克、猎杀软性目标或密接支援等任务；而在后勤维持成本上，虎式相较于AH-64、AH-1系列则拥有较大的优势。虎式除了法国和德国使用外，现已外销西班牙和澳大利亚两国，名称拼写在使用各国稍有不同，在德国是Tiger，在法国和西班牙则是Tigre。
-			</Text>
-		</Row>
 
 		<Row Tag="TXT_KEY_UNIT_MONGOLIAN_HUIHUIPAO">
 			<Text>回回炮</Text>
@@ -10562,17 +10530,6 @@
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_SAM_INFANTRY_PEDIA">
 			<Text>步兵支援车就是伴随坦克冲锋时提供火力支援的装甲车，自行轮式/履带突击炮卫坦克提供远程直射火力支援，自行防空车为坦克提供近程低空域的防空能力。</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_UNIT_OTTOMAN_COBRA">
-			<Text>眼镜蛇防空装甲车</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_OTTOMAN_COBRA_HEADING">
-			<Text>眼镜蛇防空装甲车</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_OTTOMAN_COBRA_PEDIA">
-			<Text>“眼镜蛇”是土耳其奥托卡公司研制的4×4轻型装甲车。这家公司有着设计和生产轻型装甲车的丰富经验，曾为著名的欧洲“陆虎”轻型车生产系列配件，推出自己的名牌“蝎”式轻型装甲车。当他们了解土耳其军队对6吨重轻型装甲车预期需求后，便启动了“眼镜蛇”研制计划。到1998年年初，首批“眼镜蛇”进入土耳其陆军接受使用检验。M113ECV型“悍马”高机动性多用途轮式车被认为是世界上最先进的轻型军车。“眼镜蛇”设计目标就瞄上了它。奥托卡公司寻求美国AM通用公司合作，尽量吸收更多的“悍马”长处，并力避它的短处。“眼镜蛇”的发动机、传动装置和轮胎都与“悍马”相同，机动力很强，公路最大速度可达110公里/小时。但“眼镜蛇”配有独特的冷却系统，使车辆动力系统能适应中东、西亚地区的气候。重达6.3吨的“眼镜蛇”可用CH-47直升机进行吊运，也可由C-130运输机装运，具有较高的战略机动性。流线形车体没有凸出部位是“眼镜蛇”设计的最精彩之处。除了悬挂装置和差速器外，它的所有机械部件都包含在车体内。车体结构设计充分考虑到防轻武器袭击特别是防反坦克地雷袭击。像“悍马”那样遭地雷袭击车体便开裂的情形在“眼镜蛇”车上不会发生。“眼镜蛇”的全方位防护能力令人叫好。难怪一位欧洲兵器评论家说：就全向防护性能水平而论，“悍马”家族没有一种车型能比得上土耳其的“眼镜蛇”。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_UNIT_SWEDISH_GUSTAV_RECOILESS_GUN">
@@ -10859,20 +10816,6 @@
 			</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_UNIT_PERSIAN_MINISUB">
-			<Text>“游泳者15”袖珍潜艇</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_PERSIAN_MINISUB_HEADING">
-			<Text>“游泳者15”袖珍潜艇</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_PERSIAN_MINISUB_HELP">
-			<Text>WIP</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_PERSIAN_MINISUB_TEXT">
-			<Text>游泳者以一处什叶派穆斯林圣地Ghadir Khumm命名，是伊朗专门为巡航波斯湾的浅水区域而制造。排水量越115吨（117公吨），适合沿海和近海航行，类似意大利的速龙级但是体型更小，是基于朝鲜的鲑鱼级潜艇设计的。它的鱼类管约21英寸（直径530毫米），使其能发射重型鱼雷，同时还可以作为VA-111“暴风”水下火箭的发射平台。</Text>
-		</Row>
-
 		<Row Tag="TXT_KEY_UNIT_SHIP_OF_THE_LINE">
 			<Text>风帆主力舰</Text>
 			<Plurality>2</Plurality>
@@ -10946,20 +10889,6 @@
 				欧洲虎式（英语：Eurocopter Tiger，法语：L'Eurocopter Tigre，欧直编号EC-665）是法国和德国联合研制，德国戴姆勒宇航和法国马特拉宇航（1992年合并为欧洲直升机公司）生产的四旋翼、双发多任务武装直升机，是世界上第一种将制空作战纳入设计思想并付诸实施的武装直升机。
 				[NEWLINE]虎式武装直升机的空中机动性能、续航力、机炮射击精确度均优于AH-64武装直升机等美制武装直升机，适合进行直升机空战，整体武器筹载虽然不如美制武装直升机，也仍足以胜任一般的反坦克、猎杀软性目标或密接支援等任务；而在后勤维持成本上，虎式相较于AH-64、AH-1系列则拥有较大的优势。虎式除了法国和德国使用外，现已外销西班牙和澳大利亚两国，名称拼写在使用各国稍有不同，在德国是Tiger，在法国和西班牙则是Tigre。
 			</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_UNIT_ASSYRIAN_SCUD_MISSILE">
-			<Text>改进型飞毛腿导弹</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_ASSYRIAN_SCUD_MISSILE_HEADING">
-			<Text>改进型飞毛腿导弹</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_ASSYRIAN_SCUD_MISSILE_HELP">
-			<Text>WIP</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_ASSYRIAN_SCUD_MISSILE_TEXT">
-			<Text>飞毛腿导弹(Scud)是一个已经被大众接受了的词汇，指苏联在冷战时期开发并被广泛出口的一系列的战术弹道导弹。"飞毛腿"这个名字也被用来指同一种导弹经伊拉克修改的版本，飞毛腿导弹（Scud）、远程飞毛腿导弹（longer-range Scud或Scud LR）、侯赛因（Al Hussein）和阿巴斯（Al Abbas。修改后射程增加，当许多导弹向以色列（40）和沙特阿拉伯（46）发射时，这一点尤为突出。美国制造的爱国者导弹系统据说成功的拦截了导弹，但是许多评论家声称爱国者导弹的作用被严重夸张了，实际上有85%的失败率。这些导弹是伊拉克最有危险的进攻性武器之一，尤其是对于以色列而言。携带生化弹头的可能性也被广泛关注。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_UNIT_NUCLEAR_CARRIER">
@@ -11477,14 +11406,6 @@
 		<Row Tag="TXT_KEY_UNIT_WWI_PARATROOPER_PEDIA">
 			<Text>伞兵是轻装步兵，他们通过跳伞从敌人的后方加入战斗。伞兵只有基本的装甲和有限的弹药，他们唯有依靠突然性来战胜敌人。他们非常需要地面单位越过敌人前线来提供快速支援，不然，一旦围绕著他们的敌军重组，他们就面临著被彻底消灭的危险。[NEWLINE][NEWLINE]伞兵在二战中的战果有限。德国伞兵参与了1940年入侵丹麦的战役，并于1941年突袭并占领了克里特岛，但是德军伞兵的伤亡是如此巨大以至于阿道夫·希特勒禁止了之后的大规模空降形式的突袭。盟军的伞兵在1944年的诺曼底登陆中获得了不错的战果，不过在荷兰及德国腹地发起的“市场花园”空降行动却遭遇了惨败，直接导致英国、波兰和美国士兵巨大的伤亡。如今，除了少数特别作战部队之外，大部分的现代军队都停止了跳伞训练，直升机变成了运载空降部队进入战场的主要载具。</Text>
 		</Row>
-
-		<Replace Tag="TXT_KEY_UNIT_BRAZILIAN_PRACINHA">
-			<Text>[COLOR_SELECTED_TEXT]墨西哥海军陆战队[ENDCOLOR]</Text>
-		</Replace>
-
-		<Replace Tag="TXT_KEY_CIV5_BRAZILIAN_PRACINHA_TEXT">
-			<Text>墨西哥海军陆战队（Spanish: Fuerza de Infantería de Marina）是隶属墨西哥海军的海军陆战队和两栖步兵。其主要任务是保证国家港口的海事安全和国家的国际防务，也承担缉毒任务。为胜任职责，这支军队接受严格训练，武装以应对海陆空任何类型的行动。墨西哥海军陆战队于2007年-2009年改编为30个海军步兵营（Batallones de Infantería de Marina—BIM），1个伞兵营，1个附属于总统警卫旅的营，2支快速反应部队（每个由6个营组成）和3支特种部队。</Text>
-		</Replace>
 
 		<Replace Tag="TXT_KEY_UNIT_PARATROOPER">
 			<Text>[COLOR_SELECTED_TEXT]空降部队[ENDCOLOR]</Text>
@@ -13316,6 +13237,13 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_CARRIER_FIGHTER_SORTIE_HELP">
 			<Text>每回合+1[COLOR_POSITIVE_TEXT]攻击[ENDCOLOR]或[COLOR_POSITIVE_TEXT]游猎[ENDCOLOR]次数。</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_CARRIER_HELICOPTER">
+			<Text>舰载直升机</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_CARRIER_HELICOPTER_HELP">
+			<Text>能够将获得的经验传递给载具。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_LOSE_SUPPLY">

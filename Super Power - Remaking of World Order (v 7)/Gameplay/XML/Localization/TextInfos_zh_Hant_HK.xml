@@ -10195,36 +10195,6 @@
 			</Text>
 		</Row>-->
 		
-		<!--<Row Tag="TXT_KEY_UNIT_PERSIAN_ZULFIQAR">
-			<Text>佐勒菲卡爾坦克</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_PERSIAN_ZULFIQAR_HEADING">
-			<Text>佐勒菲卡爾坦克</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_HELP_PERSIAN_ZULFIQAR">
-			<Text>替代現代裝甲，裝備了先進自動裝彈機，使得每回合的攻擊次數不限。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_PERSIAN_ZULFIQAR_PEDIA">
-			<Text>佐勒菲卡爾是伊朗於上世紀九十年代自行研製的一型主戰坦克，也是第二代國產坦克。
-			[NEWLINE]其採用方形的焊接炮塔，全重36噸，動力採用780馬力柴油發動機，單位功率為21.7馬力/噸，乘員三人，採用了仿製T-72坦克的自動裝彈機。配備了2A46M型125毫米滑膛炮作為主要火炮，2A46M為T-72B採用的主要武器，配備自動裝彈機，最大射速可達10～15發/分，且可發射防空/反坦克兩用導彈。在防護方面採用和英國“酋長”坦克類似的複合式裝甲車體，為焊接結構，車體厚度為90～550毫米。車體首上裝甲傾角32度，車體兩側裝有裝甲裙板，增加了車體抗破甲彈的能力。另外，坦克炮塔採用全焊接結構，其正面的裝甲防護性能非常好。“佐勒菲卡爾”主戰坦克的出現，表明伊朗在裝備國產化方面已取得重大進展，不過，戰場是檢驗所有武器的試驗場，孰優孰劣只有經過鐵血的洗禮才能見分曉。“佐勒菲卡爾”主戰坦克到底能不能成為捍衛伊朗領土和主權完整的鋒利戰刀，還需要實戰的檢驗。</Text>
-		</Row>-->
-		
-		<Row Tag="TXT_KEY_UNIT_GERMAN_EUROCOPTER_TIGER">
-			<Text>虎式武裝直升機</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_GERMAN_EUROCOPTER_TIGER_HEADING">
-			<Text>虎式武裝直升機</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_GERMAN_EUROCOPTER_TIGER_HELP">
-			<Text>替代武裝直升機，自帶長途行軍晉升和雙擊晉升，裝備了毒刺導彈，每回合可以攔截2次（範圍為2格），對直升機單位和空軍單位+200%戰鬥力。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_GERMAN_EUROCOPTER_TIGER_PEDIA">
-			<Text>歐洲虎式（英語：Eurocopter Tiger，法語：L'Eurocopter Tigre，歐直編號EC-665）是法國和德國聯合研製，德國戴姆勒宇航和法國馬特拉宇航（1992年合併為歐洲直升機公司）生產的四旋翼、雙發多任務武裝直升機，是世界上第一種將制空作戰納入設計思想並付諸實施的武裝直升機。
-			[NEWLINE]虎式武裝直升機的空中機動性能、續航力、機炮射擊精確度均優於AH-64武裝直升機等美制武裝直升機，適合進行直升機空戰，整體武器籌載雖然不如美制武裝直升機，也仍足以勝任一般的反坦克、獵殺軟性目標或密接支援等任務；而在後勤維持成本上，虎式相較於AH-64、AH-1系列則擁有較大的優勢。虎式除了法國和德國使用外，現已外銷西班牙和澳大利亞兩國，名稱拼寫在使用各國稍有不同，在德國是Tiger，在法國和西班牙則是Tigre。</Text>
-		</Row>
-		
 		<Row Tag="TXT_KEY_UNIT_MONGOLIAN_HUIHUIPAO">
 			<Text>回回炮</Text>
 			<Plurality>2</Plurality>
@@ -10422,17 +10392,6 @@
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_SAM_INFANTRY_PEDIA">
 			<Text>步兵支援車就是伴隨坦克衝鋒時提供火力支援的裝甲車，自行輪式/履帶突擊炮衛坦克提供遠程直射火力支援，自行防空車為坦克提供近程低空域的防空能力。</Text>
-		</Row>
-		
-		<Row Tag="TXT_KEY_UNIT_OTTOMAN_COBRA">
-			<Text>眼鏡蛇防空裝甲車</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_OTTOMAN_COBRA_HEADING">
-			<Text>眼鏡蛇防空裝甲車</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_OTTOMAN_COBRA_PEDIA">
-			<Text>“眼鏡蛇”是土耳其奧托卡公司研製的4×4輕型裝甲車。這家公司有著設計和生產輕型裝甲車的豐富經驗，曾為著名的歐洲“陸虎”輕型車生產系列配件，推出自己的名牌“蠍”式輕型裝甲車。當他們瞭解土耳其軍隊對6噸重輕型裝甲車預期需求後，便啟動了“眼鏡蛇”研製計劃。到1998年年初，首批“眼鏡蛇”進入土耳其陸軍接受使用檢驗。M113ECV型“悍馬”高機動性多用途輪式車被認為是世界上最先進的輕型軍車。“眼鏡蛇”設計目標就瞄上了它。奧托卡公司尋求美國AM通用公司合作，儘量吸收更多的“悍馬”長處，並力避它的短處。“眼鏡蛇”的發動機、傳動裝置和輪胎都與“悍馬”相同，機動力很強，公路最大速度可達110公里/小時。但“眼鏡蛇”配有獨特的冷卻系統，使車輛動力系統能適應中東、西亞地區的氣候。重達6.3噸的“眼鏡蛇”可用CH-47直升機進行吊運，也可由C-130運輸機裝運，具有較高的戰略機動性。流線形車體沒有凸出部位是“眼鏡蛇”設計的最精彩之處。除了懸掛裝置和差速器外，它的所有機械部件都包含在車體內。車體結構設計充分考慮到防輕武器襲擊特別是防反坦克地雷襲擊。像“悍馬”那樣遭地雷襲擊車體便開裂的情形在“眼鏡蛇”車上不會發生。“眼鏡蛇”的全方位防護能力令人叫好。難怪一位歐洲兵器評論家說：就全向防護性能水平而論，“悍馬”家族沒有一種車型能比得上土耳其的“眼鏡蛇”。</Text>
 		</Row>
 		
 		<Row Tag="TXT_KEY_UNIT_SWEDISH_GUSTAV_RECOILESS_GUN">
@@ -10713,20 +10672,6 @@
 			</Text>
 		</Row>
 		
-		<Row Tag="TXT_KEY_UNIT_PERSIAN_MINISUB">
-			<Text>“游泳者15”袖珍潛艇</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_PERSIAN_MINISUB_HEADING">
-			<Text>“游泳者15”袖珍潛艇</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_PERSIAN_MINISUB_HELP">
-			<Text>WIP</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_PERSIAN_MINISUB_TEXT">
-			<Text>游泳者以一處什葉派穆斯林聖地Ghadir Khumm命名，是伊朗專門為巡航波斯灣的淺水區域而製造。排水量越115噸（117公噸），適合沿海和近海航行，類似義大利的速龍級但是體型更小，是基於朝鮮的鮭魚級潛艇設計的。它的魚類管約21英寸（直徑530毫米），使其能發射重型魚雷，同時還可以作為VA-111“暴風”水下火箭的發射平臺</Text>
-		</Row>
-		
 		<Row Tag="TXT_KEY_UNIT_SHIP_OF_THE_LINE">
 			<Text>風帆主力艦</Text>
 			<Plurality>2</Plurality>
@@ -10797,20 +10742,6 @@
 		<Row Tag="TXT_KEY_UNIT_FRANCE_EUROCOPTER_TIGER_PEDIA">
 			<Text>歐洲虎式（英語：Eurocopter Tiger，法語：L'Eurocopter Tigre，歐直編號EC-665）是法國和德國聯合研製，德國戴姆勒宇航和法國馬特拉宇航（1992年合併為歐洲直升機公司）生產的四旋翼、雙發多任務武裝直升機，是世界上第一種將制空作戰納入設計思想並付諸實施的武裝直升機。
 			[NEWLINE]虎式武裝直升機的空中機動性能、續航力、機炮射擊精確度均優於AH-64武裝直升機等美制武裝直升機，適合進行直升機空戰，整體武器籌載雖然不如美制武裝直升機，也仍足以勝任一般的反坦克、獵殺軟性目標或密接支援等任務；而在後勤維持成本上，虎式相較於AH-64、AH-1系列則擁有較大的優勢。虎式除了法國和德國使用外，現已外銷西班牙和澳大利亞兩國，名稱拼寫在使用各國稍有不同，在德國是Tiger，在法國和西班牙則是Tigre。</Text>
-		</Row>
-		
-		<Row Tag="TXT_KEY_UNIT_ASSYRIAN_SCUD_MISSILE">
-			<Text>改進型飛毛腿導彈</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_ASSYRIAN_SCUD_MISSILE_HEADING">
-			<Text>改進型飛毛腿導彈</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_ASSYRIAN_SCUD_MISSILE_HELP">
-			<Text>WIP</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_ASSYRIAN_SCUD_MISSILE_TEXT">
-			<Text>飛毛腿導彈(Scud)是一個已經被大眾接受了的辭彙，指蘇聯在冷戰時期開發並被廣泛出口的一系列的戰術彈道導彈。"飛毛腿"這個名字也被用來指同一種導彈經伊拉克修改的版本，飛毛腿導彈（Scud）、遠程飛毛腿導彈（longer-range Scud或Scud LR）、侯賽因（Al Hussein）和阿巴斯（Al Abbas。修改後射程增加，當許多導彈向以色列（40）和沙烏地阿拉伯（46）發射時，這一點尤為突出。美國製造的愛國者導彈系統據說成功的攔截了導彈，但是許多評論家聲稱愛國者導彈的作用被嚴重誇張了，實際上有85%的失敗率。這些導彈是伊拉克最有危險的進攻性武器之一，尤其是對於以色列而言。攜帶生化彈頭的可能性也被廣泛關注。</Text>
 		</Row>
 		
 		<Row Tag="TXT_KEY_UNIT_NUCLEAR_CARRIER">
@@ -11315,14 +11246,6 @@
 		<Row Tag="TXT_KEY_UNIT_WWI_PARATROOPER_PEDIA">
 			<Text>傘兵是輕裝步兵，他們通過跳傘從敵人的後方加入戰鬥。傘兵只有基本的裝甲和有限的彈藥，他們唯有依靠突然性來戰勝敵人。他們非常需要地面單位越過敵人前線來提供快速支援，不然，一旦圍繞著他們的敵軍重組，他們就面臨著被徹底消滅的危險。[NEWLINE][NEWLINE]傘兵在二戰中的戰果有限。德國傘兵參與了1940年入侵丹麥的戰役，並於1941年突襲並佔領了克裡特島，但是德軍傘兵的傷亡是如此巨大以至於阿道夫•希特勒禁止了之後的大規模空降形式的突襲。盟軍的傘兵在1944年的諾曼底登陸中獲得了不錯的戰果，不過在荷蘭及德國腹地發起的“市場花園”空降行動卻遭遇了慘敗，直接導致英國、波蘭和美國士兵巨大的傷亡。如今，除了少數特別作戰部隊之外，大部分的現代軍隊都停止了跳傘訓練，直升機變成了運載空降部隊進入戰場的主要載具。</Text>
 		</Row>
-		
-		<Replace Tag="TXT_KEY_UNIT_BRAZILIAN_PRACINHA">
-			<Text>[COLOR_SELECTED_TEXT]墨西哥海軍陸戰隊[ENDCOLOR]</Text>
-		</Replace>
-		
-		<Replace Tag="TXT_KEY_CIV5_BRAZILIAN_PRACINHA_TEXT">
-			<Text>墨西哥海軍陸戰隊（Spanish: Fuerza de Infantería de Marina）是隸屬墨西哥海軍的海軍陸戰隊和兩栖步兵。其主要任務是保證國家港口的海事安全和國家的國際防務，也承擔緝毒任務。為勝任職責，這支軍隊接受嚴格訓練，武裝以應對海陸空任何類型的行動。墨西哥海軍陸戰隊於2007年-2009年改編為30個海軍步兵營（Batallones de Infantería de Marina—BIM），1個傘兵營，1個附屬於總統警衛旅的營，2支快速反應部隊（每個由6個營組成）和3支特種部隊。</Text>
-		</Replace>
 
 		<Replace Tag="TXT_KEY_UNIT_PARATROOPER">
 			<Text>[COLOR_SELECTED_TEXT]空降部隊[ENDCOLOR]</Text>
@@ -13126,6 +13049,13 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_CARRIER_FIGHTER_SORTIE_HELP">
 			<Text>每回合+1[COLOR_POSITIVE_TEXT]攻擊[ENDCOLOR]或[COLOR_POSITIVE_TEXT]遊獵[ENDCOLOR]次數。</Text>
+		</Row>
+		
+		<Row Tag="TXT_KEY_PROMOTION_CARRIER_HELICOPTER">
+			<Text>艦載直升機</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_CARRIER_HELICOPTER_HELP">
+			<Text>能夠將獲得的經驗傳遞給載具。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_LOSE_SUPPLY">

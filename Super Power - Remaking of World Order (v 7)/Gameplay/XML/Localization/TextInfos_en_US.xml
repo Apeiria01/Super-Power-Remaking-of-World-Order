@@ -12007,38 +12007,6 @@
 			<Text>The Type 052 Luhu-class is one of the first modern multi-role guided missile destroyers built by China. There are currently two units in active service with the People's Liberation Army Navy Surface Force. There are serial types of the class successor: 052B, 052C, 052D. </Text>
 		</Row>
 
-
-		<!--<Row Tag="TXT_KEY_UNIT_PERSIAN_ZULFIQAR">
-			<Text>Zulfiqar</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_PERSIAN_ZULFIQAR_HEADING">
-			<Text>Zulfiqar</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_HELP_PERSIAN_ZULFIQAR">
-			<Text>WIP</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_PERSIAN_ZULFIQAR_PEDIA">
-			<Text>Zulfiqar (ذوالفقار) is an Iranian main battle tank (MBT), conceived by Brigadier General Mir-Younes Masoumzadeh, deputy ground force commander for research and self-sufficiency of the armed forces. It is named after Zulfiqar, the legendary sword of Ali, the fourth Caliph and the first Shiite Imam.</Text>
-		</Row>-->
-
-		<Row Tag="TXT_KEY_UNIT_GERMAN_EUROCOPTER_TIGER">
-			<Text>Eurocopter Tiger (UAT)</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_GERMAN_EUROCOPTER_TIGER_HEADING">
-			<Text>Eurocopter Tiger (UAT)</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_GERMAN_EUROCOPTER_TIGER_HELP">
-			<Text>WIP</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_GERMAN_EUROCOPTER_TIGER_PEDIA">
-			<Text>The Airbus Helicopters Tiger, formerly known as the Eurocopter Tiger, is a four-bladed, twin-engined attack helicopter which first entered service in 2003. It is manufactured by Eurocopter (now Airbus Helicopters), the successor company to Aérospatiale's and DASA's respective helicopter divisions, which designate it as the EC665. In Germany it is known as the Tiger; in France and Spain it is called the Tigre.</Text>
-		</Row>
-
-
-
-
 		<Row Tag="TXT_KEY_UNIT_MONGOLIAN_HUIHUIPAO">
 			<Text>Huihui Pao</Text>
 			<Plurality>2</Plurality>
@@ -12102,21 +12070,6 @@
 			<Text>The BMP-1 is a Soviet amphibious tracked infantry fighting vehicle, which is widely equipped by The Iraqi Republican Guard.</Text>
 		</Row>
 
-
-		<Row Tag="TXT_KEY_UNIT_PERSIAN_MINISUB">
-			<Text>Ghadir-class Submarine</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_PERSIAN_MINISUB_HEADING">
-			<Text>Ghadir-class submarine</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_PERSIAN_MINISUB_HELP">
-			<Text>WIP</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_PERSIAN_MINISUB_TEXT">
-			<Text>Ghadir is a class of midget submarines built by Iran specifically for cruising within the shallow waters of the Persian Gulf, with a displacement (surfaced) estimated at about 115 long tons (117 metric tons), is probably better described as a coastal or littoral submarine, similar in concept to the Italian Sauro class though significantly smaller. It is named after Ghadir Khumm, a holy place to Shia Muslims. It is based on the North Korean Yono class submarine. Photographs indicate a pair of bow torpedo tubes around 21 inches (530 mm) diameter, allowing them to fire typical heavyweight torpedoes. It could thus serve as a launch platform for the VA-111 Shkval rocket torpedo.</Text>
-		</Row>
-
 		<Row Tag="TXT_KEY_UNIT_SPANISH_CANARIAS">
 			<Text>Canarias-class Cruiser</Text>
 			<Plurality>2</Plurality>
@@ -12144,22 +12097,6 @@
 		<Row Tag="TXT_KEY_UNIT_IROQUOIAN_CANADIAN_FIGHTER_TEXT">
 			<Text>The Royal Canadian Air Force (RCAF) (French: Aviation royale canadienne, ARC) is the air force of Canada. Its role is to "provide the Canadian Forces with relevant, responsive and effective airpower". The RCAF is one of three environmental commands within the unified Canadian Armed Forces. As of 2013, operating 258 manned aircraft and 9 unmanned aerial vehicles, the Royal Canadian Air Force consists of 14,500 Regular Force and 2,600 Primary Reserve personnel, supported by 2,500 civilians. Lieutenant-General Michael J. Hood, CMM CD, is the current Commander of the Royal Canadian Air Force and Chief of the Air Force Staff.</Text>
 		</Row>
-
-		<Row Tag="TXT_KEY_UNIT_ASSYRIAN_SCUD_MISSILE">
-			<Text>Al Hussein Missile</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_ASSYRIAN_SCUD_MISSILE_HEADING">
-			<Text>Royal Canadian Air Force</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_ASSYRIAN_SCUD_MISSILE_HELP">
-			<Text>WIP</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_ASSYRIAN_SCUD_MISSILE_TEXT">
-			<Text>The Royal Canadian Air Force (RCAF) (French: Aviation royale canadienne, ARC) is the air force of Canada. Its role is to "provide the Canadian Forces with relevant, responsive and effective airpower". The RCAF is one of three environmental commands within the unified Canadian Armed Forces. As of 2013, operating 258 manned aircraft and 9 unmanned aerial vehicles, the Royal Canadian Air Force consists of 14,500 Regular Force and 2,600 Primary Reserve personnel, supported by 2,500 civilians. Lieutenant-General Michael J. Hood, CMM CD, is the current Commander of the Royal Canadian Air Force and Chief of the Air Force Staff.</Text>
-		</Row>
-		
-		
 
 		<Row Tag="TXT_KEY_UNIT_AUSTRIAN_SKODA">
 			<Text>Skoda Howitzer</Text>
@@ -12286,18 +12223,7 @@
 	</Row>
 
 
-		<Row Tag="TXT_KEY_UNIT_OTTOMAN_COBRA">
-			<Text>Otokar Cobra</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_OTTOMAN_COBRA_HEADING">
-			<Text>Otokar Cobra Anti-air Vehicle</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_OTTOMAN_COBRA_PEDIA">
-			<Text>The Cobra (Turkish: Kobra) is an infantry mobility vehicle developed by Turkish firm Otokar which uses some mechanical components and sub-systems of the HMMWV.</Text>
-		</Row>
-		
-		
+
 		
 		<Row Tag="TXT_KEY_UNIT_SWEDISH_GUSTAV_RECOILESS_GUN">
 			<Text>Carl Gustav Recoilless Rifle</Text>
@@ -12667,7 +12593,7 @@
 
 
 
-		<Row Tag="TXT_KEY_UNIT_SSBN">
+	<Row Tag="TXT_KEY_UNIT_SSBN">
 		<Text>Ballistic Missile Submarine (SSBN)</Text>
 		<Plurality>2</Plurality>
 	</Row>
@@ -13333,15 +13259,6 @@
 				Employed initially as tribal irregulars, then in regular contingents, the goumiers were employed extensively during the French occupation of Morocco from 1908 to the early 1930s. They then served in Italy and France during World War II between 1942 and 1945. During this period four Moroccan Tabors Groupments (GTM) were created, each comprising 3 Tabors (battalion) with 3 to 4 Goums (companies). Goumiers then served in Indochina from 1946 to 1954.
 			</Text>
 		</Replace>
-		
-		
-		<Replace Tag="TXT_KEY_UNIT_BRAZILIAN_PRACINHA">
-			<Text>Naval Infantry Force</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_CIV5_BRAZILIAN_PRACINHA_TEXT">
-			<Text>The Naval Infantry Force (Spanish: Fuerza de Infantería de Marina) are the marine corps and amphibious infantry force of the Mexican Navy. The main task of the Infantería de Marina is to guarantee the maritime security of the country's ports and external and internal defense of the country. To accomplish these responsibilities, the corps is trained and equipped to take on any type of operations from Sea, Air and Land. The Naval Infantry Corps was reorganized in 2007–2009 into 30 Naval Infantry Battalions (Batallones de Infantería de Marina—BIM), a paratroop battalion, a battalion attached to the Presidential Guard Brigade, two Fast Reaction Forces with six battalions each, and three Special Forces groups. The Naval Infantry are responsible for port security, protection of the ten-kilometer coastal fringe, and patrolling major waterways.</Text>
-		</Replace>
-
 
 		<Replace Tag="TXT_KEY_UNIT_HELP_CARAVEL">
 			<Text>
@@ -15290,6 +15207,13 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_CARRIER_FIGHTER_SORTIE_HELP">
 			<Text>+1 [COLOR_POSITIVE_TEXT]Attack[ENDCOLOR] or [COLOR_POSITIVE_TEXT]Air Sweep[ENDCOLOR] chance per turn.</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_CARRIER_HELICOPTER">
+			<Text>Carrier-based Helicopter</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_CARRIER_HELICOPTER_HELP">
+			<Text>XP earned by its Carrier-based Helicopter will transfer to the Carrier.</Text>
 		</Row>
 		
 		

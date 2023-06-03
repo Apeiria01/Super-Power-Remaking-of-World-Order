@@ -413,13 +413,6 @@ UnitLaunchUavButton = {
   		NewUnit:JumpToNearestValidPlot();
   	end
   	
-  	if unit:GetUnitType() == GameInfoTypes.UNIT_PERSIAN_MINISUB then
-  		NewUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_CARRIER_FIGHTER_ATTACK_1"].ID,true)
-  		NewUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_CARRIER_FIGHTER_ATTACK_2"].ID,true)
-  	end
-  	
-  	
-  	
   end
 };
 LuaEvents.UnitPanelActionAddin(UnitLaunchUavButton);
@@ -890,7 +883,7 @@ UnitRiotControlButton = {
     local plot = unit:GetPlot();
     if not plot:IsCity() then return true end;
     local city = plot:GetPlotCity()
-    return not city or city:GetOwner() ~= unit:GetOwner() or not city:IsResistance() or city:GetResistanceTurns() < 3;
+    return not city or city:GetOwner() ~= unit:GetOwner() or not city:IsResistance() or (city:GetResistanceTurns() < 3 and not unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_ANTI_RIOT_BONUS"].ID));
   end, -- or nil or a boolean, default is false
   
   Action = function(action, unit, eClick) 
