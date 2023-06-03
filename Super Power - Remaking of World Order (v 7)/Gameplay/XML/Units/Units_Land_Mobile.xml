@@ -943,40 +943,6 @@
 			<MoveRate>WHEELED</MoveRate>
 			<ExtraMaintenanceCost>14</ExtraMaintenanceCost>
 		</Row>-->
-		<!--<Row>
-			<Class>UNITCLASS_MODERN_ARMOR</Class>
-			<Type>UNIT_PERSIAN_ZULFIQAR</Type>
-			<PrereqTech>TECH_BVR_COMBAT</PrereqTech>
-			<BaseSightRange>3</BaseSightRange>
-			<Combat>250</Combat>
-			<Cost>1100</Cost>
-			<Moves>6</Moves>
-			<HurryCostModifier>75</HurryCostModifier>
-			<CombatClass>UNITCOMBAT_ARMOR</CombatClass>
-			<Domain>DOMAIN_LAND</Domain>
-			<DefaultUnitAI>UNITAI_FAST_ATTACK</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_PERSIAN_ZULFIQAR</Description>
-			<Civilopedia>TXT_KEY_UNIT_PERSIAN_ZULFIQAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_SP_UNITS_HEAVY_MOBILE_UNITS_STRATEGY</Strategy>
-			<Help>TXT_KEY_PROMOTION_TANK_COMBAT_HELP</Help>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
-			<Pillage>true</Pillage>
-			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
-			<Mechanized>true</Mechanized>
-			<AdvancedStartCost>50</AdvancedStartCost>
-			<XPValueAttack>4</XPValueAttack>
-			<XPValueDefense>3</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_PERSIAN_ZULFIQAR</UnitArtInfo>
-			<UnitFlagIconOffset>51</UnitFlagIconOffset>
-			<UnitFlagAtlas>SPUnitFlags_FLAG</UnitFlagAtlas>
-			<IconAtlas>SPUNITS01_ATLAS</IconAtlas>
-			<PortraitIndex>63</PortraitIndex>
-			<MoveRate>WHEELED</MoveRate>
-			<ExtraMaintenanceCost>18</ExtraMaintenanceCost>
-		</Row>-->
-		
-		
 		
 		<!--Hit & Run-->
 
@@ -2256,16 +2222,6 @@
 			<UnitType>UNIT_CHINESE_TYPE99</UnitType>
 			<PromotionType>PROMOTION_HEAVY_SHOCK_3</PromotionType>
 		</Row>-->
-		
-		<!--<Row>
-			<UnitType>UNIT_PERSIAN_ZULFIQAR</UnitType>
-			<PromotionType>PROMOTION_TANK_COMBAT</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_PERSIAN_ZULFIQAR</UnitType>
-			<PromotionType>PROMOTION_UNLIMITED_ATTACK</PromotionType>
-		</Row>-->
-
 
 		<!--Hit and Run-->
 		<Row>
@@ -2788,16 +2744,6 @@
 			<UnitType>UNIT_CHINESE_TYPE99</UnitType>
 			<UnitAIType>UNITAI_FAST_ATTACK</UnitAIType>
 		</Row>-->
-		<!--<Row>
-			<UnitType>UNIT_PERSIAN_ZULFIQAR</UnitType>
-			<UnitAIType>UNITAI_ATTACK</UnitAIType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_PERSIAN_ZULFIQAR</UnitType>
-			<UnitAIType>UNITAI_FAST_ATTACK</UnitAIType>
-		</Row>-->
-	
-
 
 		<Row>
 			<UnitType>UNIT_CHARIOT_ARCHER</UnitType>
@@ -3131,12 +3077,6 @@
 			<UnitType>UNIT_CHINESE_TYPE99</UnitType>
 			<ResourceType>RESOURCE_OIL</ResourceType>
 		</Row>-->
-		<!--<Row>
-			<UnitType>UNIT_PERSIAN_ZULFIQAR</UnitType>
-			<ResourceType>RESOURCE_OIL</ResourceType>
-		</Row>-->
-		
-
 
 		<Row>
 			<UnitType>UNIT_HORSEMAN</UnitType>
@@ -3258,11 +3198,6 @@
 		</Row>
 		<!--<Row>
 			<UnitType>UNIT_CHINESE_TYPE99</UnitType>
-			<ResourceType>RESOURCE_MANPOWER</ResourceType>
-			<Cost>4</Cost>
-		</Row>-->
-		<!--<Row>
-			<UnitType>UNIT_PERSIAN_ZULFIQAR</UnitType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 			<Cost>4</Cost>
 		</Row>-->
@@ -3794,17 +3729,6 @@
 			<FlavorType>FLAVOR_DEFENSE</FlavorType>
 			<Flavor>150</Flavor>
 		</Row>-->
-		<!--<Row>
-			<UnitType>UNIT_PERSIAN_ZULFIQAR</UnitType>
-			<FlavorType>FLAVOR_MOBILE</FlavorType>
-			<Flavor>90</Flavor>
-		</Row>
-		<Row>
-			<UnitType>UNIT_PERSIAN_ZULFIQAR</UnitType>
-			<FlavorType>FLAVOR_OFFENSE</FlavorType>
-			<Flavor>200</Flavor>
-		</Row>-->
-		
 
 		<Row>
 			<UnitType>UNIT_CHARIOT_ARCHER</UnitType>

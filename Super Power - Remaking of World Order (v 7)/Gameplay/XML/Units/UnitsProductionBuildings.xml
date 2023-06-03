@@ -461,10 +461,7 @@
 			<UnitType>UNIT_MAIN_BATTLE_TANK</UnitType>
 			<BuildingClassType>BUILDINGCLASS_ARSENAL</BuildingClassType>
 		</Row>
-		<!--<Row>
-			<UnitType>UNIT_PERSIAN_ZULFIQAR</UnitType>
-			<BuildingClassType>BUILDINGCLASS_ARSENAL</BuildingClassType>
-		</Row>-->
+
 		<Row>
 			<UnitType>UNIT_RUSSIAN_T34</UnitType>
 			<BuildingClassType>BUILDINGCLASS_ARSENAL</BuildingClassType>

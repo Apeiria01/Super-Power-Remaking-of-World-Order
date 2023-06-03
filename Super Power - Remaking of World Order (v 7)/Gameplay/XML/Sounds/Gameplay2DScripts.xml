@@ -379,11 +379,7 @@
 			<SelectionSound>AS2D_SELECT_TANK</SelectionSound>
 			<FirstSelectionSound>AS2D_BIRTH_TANK</FirstSelectionSound>
 		</Row>
-		<!--<Row>
-			<UnitType>UNIT_PERSIAN_ZULFIQAR</UnitType>
-			<SelectionSound>AS2D_SELECT_TANK</SelectionSound>
-			<FirstSelectionSound>AS2D_BIRTH_TANK</FirstSelectionSound>
-		</Row>-->
+
 		<Row>
 			<UnitType>UNIT_RUSSIAN_T34</UnitType>
 			<SelectionSound>AS2D_SELECT_TANK</SelectionSound>
