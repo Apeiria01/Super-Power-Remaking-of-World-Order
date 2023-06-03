@@ -3669,8 +3669,21 @@
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_CARRIER_FIGHTER</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
+			<CarrierEXPGivenModifier>100</CarrierEXPGivenModifier>
 		</Row>
 
+		<Row>
+			<Type>PROMOTION_CARRIER_HELICOPTER</Type>
+			<Description>TXT_KEY_PROMOTION_CARRIER_HELICOPTER</Description>
+			<Help>TXT_KEY_PROMOTION_CARRIER_HELICOPTER_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_CARRIER_HELICOPTER</PediaEntry>
+			<CannotBeChosen>true</CannotBeChosen>
+			<CarrierEXPGivenModifier>100</CarrierEXPGivenModifier>
+		</Row>
 
 		<Row>
 			<Type>PROMOTION_CARRIER_FIGHTER_ANTI_AIR_1</Type>

@@ -165,22 +165,6 @@ function NewAttackEffect()
 		attUnit:ChangeDamage(attUnit:GetCurrHitPoints());
 	end
 
-	-- Carrier-based aircrafts give EXP to carrier
-	if not attUnit:IsDead() and attUnit:IsCargo() and batType == GameInfoTypes["BATTLETYPE_AIR"]
-		and attUnit:GetSpecialUnitType() ~= GameInfo.SpecialUnits.SPECIALUNIT_STEALTH.ID
-	then
-		print("Found a carrier-based aircraft!")
-		local AircraftEXP = attUnit:GetExperience()
-		if AircraftEXP > 0 then
-			print("Gained EXP:" .. AircraftEXP);
-			local CarrierUnit = attUnit:GetTransportUnit()
-			print("Found its carrier!")
-			CarrierUnit:ChangeExperience(AircraftEXP)
-			attUnit:SetExperience(0)
-		end
-	end
-
-
 	-- Heavy Knight&Tank attacking cities lose all MPs
 	if bIsCity and not attUnit:IsDead() and batType == GameInfoTypes["BATTLETYPE_MELEE"]
 		and not attUnit:IsHasPromotion(PillageFreeID) and not attUnit:IsHasPromotion(AntiDebuffID)

@@ -2744,6 +2744,10 @@
 			<UnitType>UNIT_FRANCE_EUROCOPTER_TIGER</UnitType>
 			<PromotionType>PROMOTION_NO_CASUALTIES</PromotionType>
 		</Row>
+		<Row>
+			<UnitType>UNIT_FRANCE_EUROCOPTER_TIGER</UnitType>
+			<PromotionType>PROMOTION_CARRIER_HELICOPTER</PromotionType>
+		</Row>
 		<!--<Row>
 			<UnitType>UNIT_FRANCE_EUROCOPTER_TIGER</UnitType>
 			<PromotionType>PROMOTION_MARCH</PromotionType>

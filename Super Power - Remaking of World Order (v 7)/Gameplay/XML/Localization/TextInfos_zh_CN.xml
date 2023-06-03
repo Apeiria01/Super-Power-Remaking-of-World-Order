@@ -13318,6 +13318,13 @@
 			<Text>每回合+1[COLOR_POSITIVE_TEXT]攻击[ENDCOLOR]或[COLOR_POSITIVE_TEXT]游猎[ENDCOLOR]次数。</Text>
 		</Row>
 
+		<Row Tag="TXT_KEY_PROMOTION_CARRIER_HELICOPTER">
+			<Text>舰载直升机</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_CARRIER_HELICOPTER_HELP">
+			<Text>能够将获得的经验传递给载具。</Text>
+		</Row>
+
 		<Row Tag="TXT_KEY_PROMOTION_LOSE_SUPPLY">
 			<Text>[COLOR_NEGATIVE_TEXT]丧失补给[ENDCOLOR]</Text>
 		</Row>

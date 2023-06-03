@@ -15291,6 +15291,13 @@
 		<Row Tag="TXT_KEY_PROMOTION_CARRIER_FIGHTER_SORTIE_HELP">
 			<Text>+1 [COLOR_POSITIVE_TEXT]Attack[ENDCOLOR] or [COLOR_POSITIVE_TEXT]Air Sweep[ENDCOLOR] chance per turn.</Text>
 		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_CARRIER_HELICOPTER">
+			<Text>Carrier-based Helicopter</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_CARRIER_HELICOPTER_HELP">
+			<Text>XP earned by its Carrier-based Helicopter will transfer to the Carrier.</Text>
+		</Row>
 		
 		
 		<Row Tag="TXT_KEY_PROMOTION_LOSE_SUPPLY">
