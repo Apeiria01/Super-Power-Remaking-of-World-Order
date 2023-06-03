@@ -890,7 +890,7 @@ UnitRiotControlButton = {
     local plot = unit:GetPlot();
     if not plot:IsCity() then return true end;
     local city = plot:GetPlotCity()
-    return not city or city:GetOwner() ~= unit:GetOwner() or not city:IsResistance() or city:GetResistanceTurns() < 3;
+    return not city or city:GetOwner() ~= unit:GetOwner() or not city:IsResistance() or (city:GetResistanceTurns() < 3 and not unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_ANTI_RIOT_BONUS"].ID));
   end, -- or nil or a boolean, default is false
   
   Action = function(action, unit, eClick) 
