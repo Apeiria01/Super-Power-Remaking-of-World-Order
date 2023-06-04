@@ -141,8 +141,8 @@ SameCombatClassSleepButton = {
       or     GameInfo.Units[pUnit:GetUnitType()].DefaultUnitAI ~= GameInfo.Units[unit:GetUnitType()].DefaultUnitAI
       or not pUnit:CanMove() or pUnit:GetActivityType() ~= 0
       then
-      elseif pUnit:CanDoCommand(CommandTypes.COMMAND_AUTOMATE,0) and not pUnit:IsCombatUnit() then
-        pUnit:DoCommand(CommandTypes.COMMAND_AUTOMATE,0);
+      elseif pUnit:CanStartMission(GameInfoTypes.MISSION_SLEEP) and not pUnit:IsCombatUnit() then
+        pUnit:PushMission(GameInfoTypes.MISSION_SLEEP);
       elseif(GameInfo.Units[pUnit:GetUnitType()].DefaultUnitAI == "UNITAI_EXPLORE"
       or     GameInfo.Units[pUnit:GetUnitType()].DefaultUnitAI == "UNITAI_EXPLORE_SEA")
       and    pUnit:CanDoCommand(CommandTypes.COMMAND_AUTOMATE,1)
