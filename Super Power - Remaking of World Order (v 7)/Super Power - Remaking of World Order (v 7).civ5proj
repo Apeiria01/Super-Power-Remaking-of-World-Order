@@ -445,6 +445,11 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
         <Type>UpdateDatabase</Type>
         <FileName>Gameplay/SQL/Units/Unit_StopAttacker.sql</FileName>
       </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>Gameplay/SQL/Resources/NewResourceEffects.sql</FileName>
+      </Action>
     </ModActions>
     <ModProperties />
     <ModContent>
@@ -535,6 +540,7 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
     <Folder Include="Gameplay\SQL\Buildings" />
     <Folder Include="Gameplay\SQL\Eras" />
     <Folder Include="Gameplay\SQL\CityScales" />
+    <Folder Include="Gameplay\SQL\Resources" />
     <Folder Include="Gameplay\SQL\Religion\" />
     <Folder Include="Gameplay\SQL\Yields" />
     <Folder Include="Gameplay\SQL\Terrian" />
@@ -991,6 +997,10 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="Gameplay\SQL\Eras\NewSPErasEffects.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="Gameplay\SQL\Resources\NewResourceEffects.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>

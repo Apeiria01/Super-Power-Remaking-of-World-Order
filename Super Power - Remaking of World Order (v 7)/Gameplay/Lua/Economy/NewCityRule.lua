@@ -128,35 +128,6 @@ function NewCitySystem(playerID)
                     end
                 end
 
-                -- Get Extra Consumers & Electricities
-                -- local iNumCon = 0;
-                -- local iNumEle = 0;
-                -- if player:HasPolicy(GameInfoTypes["POLICY_MERCHANT_NAVY"]) and
-                --     pCity:IsCoastal(GameDefines["MIN_WATER_SIZE_FOR_OCEAN"]) then
-                --     iNumCon = iNumCon + 3;
-                -- end
-                -- if player:HasPolicy(GameInfoTypes["POLICY_TOTAL_WAR"]) then
-                --     if pCity:IsHasBuilding(
-                --             GameInfoTypes["BUILDING_CITY_SIZE_SMALL"]) then
-                --         iNumCon = iNumCon + 3;
-                --         iNumEle = iNumEle + 3;
-                --     end
-                --     if pCity:IsHasBuilding(
-                --             GameInfoTypes["BUILDING_CITY_SIZE_MEDIUM"]) then
-                --         iNumCon = iNumCon + 3;
-                --         iNumEle = iNumEle + 3;
-                --     end
-                -- end
-                -- if pCity:GetNumBuilding(
-                --         GameInfoTypes["BUILDING_CIV_S_P_CON_RESOURCES"]) ~= iNumCon then
-                --     pCity:SetNumRealBuilding(
-                --         GameInfoTypes["BUILDING_CIV_S_P_CON_RESOURCES"], iNumCon);
-                -- end
-                -- if pCity:GetNumBuilding(
-                --         GameInfoTypes["BUILDING_CIV_S_P_ELE_RESOURCES"]) ~= iNumEle then
-                --     pCity:SetNumRealBuilding(
-                --         GameInfoTypes["BUILDING_CIV_S_P_ELE_RESOURCES"], iNumEle);
-                -- end
             end
         end
     end
@@ -416,8 +387,8 @@ function SetCityResEffects(playerID, ManpowerRes, ConsumerRes, ElectricRes)
     local CaptialCity = player:GetCapitalCity();
 
     CaptialCity:SetNumRealBuilding(GameInfoTypes["BUILDING_MANPOWER_BONUS"], 0)
-    CaptialCity:SetNumRealBuilding(GameInfoTypes["BUILDING_CONSUMER_BONUS"], 0)
-    CaptialCity:SetNumRealBuilding(GameInfoTypes["BUILDING_CONSUMER_PENALTY"], 0)
+    -- CaptialCity:SetNumRealBuilding(GameInfoTypes["BUILDING_CONSUMER_BONUS"], 0)
+    -- CaptialCity:SetNumRealBuilding(GameInfoTypes["BUILDING_CONSUMER_PENALTY"], 0)
     CaptialCity:SetNumRealBuilding(GameInfoTypes["BUILDING_ELECTRICITY_BONUS"],
         0)
     CaptialCity:SetNumRealBuilding(
@@ -447,65 +418,65 @@ function SetCityResEffects(playerID, ManpowerRes, ConsumerRes, ElectricRes)
     end
 
     ----------------------Consumer Effects
-    if ConsumerRes >= 25 then
-        local ConsumerRate = math.floor(ConsumerRes / CityTotal)
-        if player:HasPolicy(GameInfo.Policies["POLICY_MERCANTILISM"].ID) then
-            ConsumerRate = math.floor(ConsumerRate * 1.2)
-            if ConsumerRate >= 60 then ConsumerRate = 60 end
-        else
-            if ConsumerRate >= 50 then ConsumerRate = 50 end
-        end
-        print("Consumer Rate:" .. ConsumerRate)
+    -- if ConsumerRes >= 25 then
+    --     local ConsumerRate = math.floor(ConsumerRes / CityTotal)
+    --     if player:HasPolicy(GameInfo.Policies["POLICY_MERCANTILISM"].ID) then
+    --         ConsumerRate = math.floor(ConsumerRate * 1.2)
+    --         if ConsumerRate >= 60 then ConsumerRate = 60 end
+    --     else
+    --         if ConsumerRate >= 50 then ConsumerRate = 50 end
+    --     end
+    --     print("Consumer Rate:" .. ConsumerRate)
 
-        if ConsumerRate >= 1 then
-            CaptialCity:SetNumRealBuilding(
-                GameInfoTypes["BUILDING_CONSUMER_BONUS"], ConsumerRate)
-            CaptialCity:SetNumRealBuilding(
-                GameInfoTypes["BUILDING_CONSUMER_PENALTY"], 0)
-            CaptialCity:SetNumRealBuilding(
-                GameInfoTypes["BUILDING_CONSUMER_PENALTY_WARNING"], 0)
-            print("Consumer Bonus!")
-        end
-    elseif ConsumerRes >= 0 and ConsumerRes < 25 then
-        CaptialCity:SetNumRealBuilding(GameInfoTypes["BUILDING_CONSUMER_BONUS"],
-            0)
-        CaptialCity:SetNumRealBuilding(
-            GameInfoTypes["BUILDING_CONSUMER_PENALTY"], 0)
-        CaptialCity:SetNumRealBuilding(
-            GameInfoTypes["BUILDING_CONSUMER_PENALTY_WARNING"], 0)
-        print("No Consumer Bonus!")
-    elseif ConsumerRes < 0 then
-        local ConsumerLackRaw = math.floor(ConsumerRes * CityDivd)
-        local ConsumerLack = math.abs(ConsumerLackRaw)
-        print("Consumer Lacking:" .. ConsumerLack)
+    --     if ConsumerRate >= 1 then
+    --         CaptialCity:SetNumRealBuilding(
+    --             GameInfoTypes["BUILDING_CONSUMER_BONUS"], ConsumerRate)
+    --         CaptialCity:SetNumRealBuilding(
+    --             GameInfoTypes["BUILDING_CONSUMER_PENALTY"], 0)
+    --         CaptialCity:SetNumRealBuilding(
+    --             GameInfoTypes["BUILDING_CONSUMER_PENALTY_WARNING"], 0)
+    --         print("Consumer Bonus!")
+    --     end
+    -- elseif ConsumerRes >= 0 and ConsumerRes < 25 then
+    --     CaptialCity:SetNumRealBuilding(GameInfoTypes["BUILDING_CONSUMER_BONUS"],
+    --         0)
+    --     CaptialCity:SetNumRealBuilding(
+    --         GameInfoTypes["BUILDING_CONSUMER_PENALTY"], 0)
+    --     CaptialCity:SetNumRealBuilding(
+    --         GameInfoTypes["BUILDING_CONSUMER_PENALTY_WARNING"], 0)
+    --     print("No Consumer Bonus!")
+    -- elseif ConsumerRes < 0 then
+    --     local ConsumerLackRaw = math.floor(ConsumerRes * CityDivd)
+    --     local ConsumerLack = math.abs(ConsumerLackRaw)
+    --     print("Consumer Lacking:" .. ConsumerLack)
 
-        if ConsumerLack >= 50 then
-            ConsumerLack = 50
-        elseif ConsumerLack <= 5 then
-            ConsumerLack = 5
-        end
+    --     if ConsumerLack >= 50 then
+    --         ConsumerLack = 50
+    --     elseif ConsumerLack <= 5 then
+    --         ConsumerLack = 5
+    --     end
 
-        if CaptialCity:IsHasBuilding(
-                GameInfoTypes["BUILDING_CONSUMER_PENALTY_WARNING"]) then
-            CaptialCity:SetNumRealBuilding(
-                GameInfoTypes["BUILDING_CONSUMER_PENALTY"], ConsumerLack)
-            print("Consumer Penalty Effective!")
-        else
-            CaptialCity:SetNumRealBuilding(
-                GameInfoTypes["BUILDING_CONSUMER_PENALTY_WARNING"], 1)
-            if player:IsHuman() then
-                local heading = Locale.ConvertTextKey(
-                    "TXT_KEY_SP_NOTIFICATION_LACKING_CONSUMER_GOODS_WARNING_SHORT")
-                local text = Locale.ConvertTextKey(
-                    "TXT_KEY_SP_NOTIFICATION_LACKING_CONSUMER_GOODS_WARNING")
-                player:AddNotification(
-                    NotificationTypes.NOTIFICATION_REQUEST_RESOURCE, text,
-                    heading, -1, -1, GameInfoTypes["RESOURCE_CONSUMER"])
-            end
-            print(
-                "Consumer Penalty Warning! Penalty will come if still lacking next turn!")
-        end
-    end
+    --     if CaptialCity:IsHasBuilding(
+    --             GameInfoTypes["BUILDING_CONSUMER_PENALTY_WARNING"]) then
+    --         CaptialCity:SetNumRealBuilding(
+    --             GameInfoTypes["BUILDING_CONSUMER_PENALTY"], ConsumerLack)
+    --         print("Consumer Penalty Effective!")
+    --     else
+    --         CaptialCity:SetNumRealBuilding(
+    --             GameInfoTypes["BUILDING_CONSUMER_PENALTY_WARNING"], 1)
+    --         if player:IsHuman() then
+    --             local heading = Locale.ConvertTextKey(
+    --                 "TXT_KEY_SP_NOTIFICATION_LACKING_CONSUMER_GOODS_WARNING_SHORT")
+    --             local text = Locale.ConvertTextKey(
+    --                 "TXT_KEY_SP_NOTIFICATION_LACKING_CONSUMER_GOODS_WARNING")
+    --             player:AddNotification(
+    --                 NotificationTypes.NOTIFICATION_REQUEST_RESOURCE, text,
+    --                 heading, -1, -1, GameInfoTypes["RESOURCE_CONSUMER"])
+    --         end
+    --         print(
+    --             "Consumer Penalty Warning! Penalty will come if still lacking next turn!")
+    --     end
+    -- end
 
     ----------------------Electricity Effects
     if player:GetCurrentEra() >= GameInfo.Eras["ERA_MODERN"].ID then
@@ -660,8 +631,8 @@ function CheckCapital(iPlayerID)
                             building.Type == "BUILDING_ELECTRICITY_PENALTY" or
                             building.Type == "BUILDING_MANPOWER_BONUS" or
                             building.Type == "BUILDING_CONSUMER_BONUS" or
-                            building.Type == "BUILDING_CONSUMER_PENALTY_WARNING" or
-                            building.Type == "BUILDING_CONSUMER_PENALTY" or
+                            -- building.Type == "BUILDING_CONSUMER_PENALTY_WARNING" or
+                            -- building.Type == "BUILDING_CONSUMER_PENALTY" or
                             building.Type == "BUILDING_HAPPINESS_TOURISMBOOST" or
                             building.Type == "BUILDING_RATIONALISM_HAPPINESS" --	or  building.Type == "BUILDING_SCHOLASTICISM"
                             or building.Type == "BUILDING_TROOPS_DEBUFF") then
@@ -790,3 +761,6 @@ if SPNIsCivilisationActive(incaID) or SPNIsCivilisationActive(polyID) then
 end
 
 print("New City Rules Check Pass!")
+
+-- local num, cityCount = ...
+-- if num < 0 then return math.min(50, -num * cityCount) else if num >= 25 then return math.max(-50, -math.floor(num / cityCount)) else return 0 end end

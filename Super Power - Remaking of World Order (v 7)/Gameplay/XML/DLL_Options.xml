@@ -271,6 +271,11 @@
 			<Where Name="GLOBAL_RANGE_ATTACK_KILL_POPULATION_OF_HEAVY"/>
 			<Set Value="1"/>
 		</Update>
+
+		<Update>
+			<Where Name="RESOURCE_EXTRA_BUFF"/>
+			<Set Value="1"/>
+		</Update>
 	</CustomModOptions>
 
 

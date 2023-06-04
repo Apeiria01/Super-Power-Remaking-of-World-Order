@@ -567,24 +567,7 @@ function ScienceTipHandler( control )
 			strText = strText .. "[NEWLINE]";
 			strText = strText .. Locale.ConvertTextKey("TXT_KEY_TP_SCIENCE_FROM_RELIGION", iScienceFromReligion);
 		end
-	
-	
-		-- Science from Happiness------Civ5 Original Backup
---		local iScienceFromHappiness = pPlayer:GetScienceFromHappinessTimes100();
---		if (iScienceFromHappiness ~= 0) then
---			
---			-- Add separator for non-initial entries
---			if (bFirstEntry) then
---				bFirstEntry = false;
---			else
---				strText = strText .. "[NEWLINE]";
---			end
---	
---			strText = strText .. Locale.ConvertTextKey("TXT_KEY_TP_SCIENCE_FROM_HAPPINESS", iScienceFromHappiness / 100);
---		end
---	
-	
-	
+
 	
 	
 		-- Science from Happiness-----------SP Tweaked
@@ -661,19 +644,11 @@ function ScienceTipHandler( control )
 			
 		
 			if ElectricityBonusCount >= 1 then
-									
---				local ScienceFromCitiesRaw = iScienceFromCities * ( 1 - ElectricityBonusCount * 0.01 )		
---				local SPScienceFromElectricity = ScienceFromCitiesRaw * ElectricityBonusCount * 0.01 
-				
---				local strSPElectricityScienceEffects = Locale.ConvertTextKey("TXT_KEY_SP_UI_ELECTRICITY_EFFECTS_BONUS", SPScienceFromElectricity/100 )
---					
 					
 				strText = strText  .. "[NEWLINE]  [ICON_BULLET][COLOR_POSITIVE_TEXT]" 
 				strText = strText  .. "+" ..ElectricityBonusCount.."% " 	
 				strText = strText .. "[ENDCOLOR]";	
 				strText = strText  .. Locale.ConvertTextKey("TXT_KEY_SP_UI_ELECTRICITY_EFFECTS_BONUS")
-				
-					
 				
 			elseif ElectricityPenaltyCount >= 1 then
 --			
@@ -683,55 +658,10 @@ function ScienceTipHandler( control )
 				strText = strText .. "[ENDCOLOR]";		
 				strText = strText  .. Locale.ConvertTextKey("TXT_KEY_SP_UI_ELECTRICITY_EFFECTS_PENALTY")
 
-
-
---				local ScienceFromCitiesRaw = iScienceFromCities * ( 1 + ElectricityPenaltyCount * 0.01 )		
---				local SPScienceFromElectricity = math.abs(ScienceFromCitiesRaw * ElectricityPenaltyCount * 0.01 )
-			
---				local strSPElectricityScienceEffects = Locale.ConvertTextKey("TXT_KEY_SP_UI_ELECTRICITY_EFFECTS_PENALTY", SPScienceFromElectricity/100 )	
---				
---				
---				
---				strText = strText  .. "[NEWLINE]  [ICON_BULLET]" .. strSPElectricityScienceEffects
---						
---				strText = strText  ..  "(-" ..ElectricityPenaltyCount.."%)" 			
 			end
 			
 		
 		end
-		
---		local ElectricityAmount = pPlayer:GetNumResourceAvailable(GameInfoTypes["RESOURCE_ELECTRICITY"], true)
---		
---		
---		if pPlayer:GetCurrentEra() >= GameInfo.Eras["ERA_MODERN"].ID then
---			if ElectricityAmount >= 60 then
---				strSPElectricityScienceEffects = Locale.ConvertTextKey("TXT_KEY_SP_UI_ELECTRICITY_SCIENCE_BONUS_25")
---			elseif ElectricityAmount >= 25 then
---				strSPElectricityScienceEffects = Locale.ConvertTextKey("TXT_KEY_SP_UI_ELECTRICITY_SCIENCE_BONUS_10")
---			elseif ElectricityAmount < 0 and ElectricityAmount > -10 then
---				strSPElectricityScienceEffects = Locale.ConvertTextKey("TXT_KEY_SP_UI_ELECTRICITY_SCIENCE_PENALTY_10")			
---			elseif ElectricityAmount < -10 and ElectricityAmount > -25 then
---			strSPElectricityScienceEffects = Locale.ConvertTextKey("TXT_KEY_SP_UI_ELECTRICITY_SCIENCE_PENALTY_25")	
---			elseif ElectricityAmount < -25 and ElectricityAmount > -60 then
---				strSPElectricityScienceEffects = Locale.ConvertTextKey("TXT_KEY_SP_UI_ELECTRICITY_SCIENCE_PENALTY_50")
---			elseif ElectricityAmount < -60 then
---				strSPElectricityScienceEffects = Locale.ConvertTextKey("TXT_KEY_SP_UI_ELECTRICITY_SCIENCE_PENALTY_99")					
---			end
---		end
---
---
---
---			strText = strText .. "[NEWLINE]  [ICON_BULLET]"  .. strSPElectricityScienceEffects;
-
-				
-			-----------------------------SP Electricity Extra Science Income END----------------------------------------
-		
-		
-		
-		
-		
-		
-		
 		
 		-- Let people know that building more cities makes techs harder to get
 		if (not OptionsManager.IsNoBasicHelp()) then
@@ -800,87 +730,8 @@ function GoldTipHandler( control )
 		strText = strText .. "[NEWLINE]  [ICON_BULLET]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLD_FROM_RELIGION", iGoldPerTurnFromReligion);
 	end
 	
-
-
-
-
-
-
-
-
-
-	
---		-----------------------------SP Consumer Goods Extra TradeRoute Income----------------------------------------
---		local strSPConsumerGold = Locale.ConvertTextKey("TXT_KEY_SP_UI_GOLDINCOME_CONSUMERGOODS_LOW")
---		local ConsumerAmount = pPlayer:GetNumResourceAvailable(GameInfoTypes["RESOURCE_CONSUMER"], true)
---		
---		
---		if ConsumerAmount > 100 then
---			strSPConsumerGold = Locale.ConvertTextKey("TXT_KEY_SP_UI_GOLDINCOME_CONSUMERGOODS_HIGH")
---		elseif ConsumerAmount > 60 then
---			strSPConsumerGold = Locale.ConvertTextKey("TXT_KEY_SP_UI_GOLDINCOME_CONSUMERGOODS_MID")
---		end
---
---    	if ConsumerAmount > 25 then
---			strText = strText .. "[NEWLINE]  [ICON_BULLET]"  .. strSPConsumerGold;
---		end
-				
-			-----------------------------SP Consumer Goods Extra TradeRoute Income END----------------------------------------
-			
-			
-			
-			
-			
-	
-	
-	
-
-	
-	
-
---			-----------------------------SP Electricity Extra Gold Income----------------------------------------
---		local strSPElectricityGoldEffects = Locale.ConvertTextKey("TXT_KEY_SP_UI_ELECTRICITY_EFFECTS_GENERAL")
---		local ElectricityAmount = pPlayer:GetNumResourceAvailable(GameInfoTypes["RESOURCE_ELECTRICITY"], true)
---		
---		if pPlayer:GetCurrentEra() >= GameInfo.Eras["ERA_MODERN"].ID then
---			if ElectricityAmount >= 60 then
---				strSPElectricityGoldEffects = Locale.ConvertTextKey("TXT_KEY_SP_UI_ELECTRICITY_GOLD_BONUS_25")
---			elseif ElectricityAmount >= 25 then
---				strSPElectricityGoldEffects = Locale.ConvertTextKey("TXT_KEY_SP_UI_ELECTRICITY_GOLD_BONUS_10")
---			elseif ElectricityAmount < 0 and ElectricityAmount > -10 then
---				strSPElectricityGoldEffects = Locale.ConvertTextKey("TXT_KEY_SP_UI_ELECTRICITY_GOLD_PENALTY_10")			
---			elseif ElectricityAmount < -10 and ElectricityAmount > -25 then
---				strSPElectricityGoldEffects = Locale.ConvertTextKey("TXT_KEY_SP_UI_ELECTRICITY_GOLD_PENALTY_25")	
---			elseif ElectricityAmount < -25 and ElectricityAmount > -60 then
---				strSPElectricityGoldEffects = Locale.ConvertTextKey("TXT_KEY_SP_UI_ELECTRICITY_GOLD_PENALTY_50")
---			elseif ElectricityAmount < -60 then
---				strSPElectricityGoldEffects = Locale.ConvertTextKey("TXT_KEY_SP_UI_ELECTRICITY_GOLD_PENALTY_99")					
---			end
---		end
---
---
---
---			strText = strText .. "[NEWLINE]  [ICON_BULLET]"  .. strSPElectricityGoldEffects;
-
-				
-			-----------------------------SP Electricity Extra Gold Income END----------------------------------------
-	
-	
-	
-	
-	
 	strText = strText .. "[/COLOR]";
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	local iUnitCost = pPlayer:CalculateUnitCost();
 	local iUnitSupply = pPlayer:CalculateUnitSupply();
 	local iBuildingMaintenance = pPlayer:GetBuildingGoldMaintenance();
@@ -926,17 +777,7 @@ function GoldTipHandler( control )
 			strText = strText .. "[NEWLINE]  " .. strSPManPowerDiscount .. " " ..ManPowerBonuFinal.."%";
 		end
 		
-		
-
-    
-		
-	
-				
 			-----------------------------SP Manpower Discount END----------------------------------------
-	
-	
-	
-	
 	
 	-- Basic explanation of Gold
 	if (not OptionsManager.IsNoBasicHelp()) then
@@ -1211,32 +1052,21 @@ function HappinessTipHandler( control )
 		local strSPConsumerPenalty = Locale.ConvertTextKey("TXT_KEY_SP_UI_HAPPINESS_CONSUMERGOODS_PENALTY")
 		local SPPolicyConsumerBonus = Locale.ConvertTextKey("TXT_KEY_POLICY_MERCANTILISM_CONSUMERGOODS_BONUS")
 		
-		local CaptialCity = pPlayer:GetCapitalCity()
-		local ConsumerBonusCount = CaptialCity:GetNumBuilding(GameInfoTypes["BUILDING_CONSUMER_BONUS"])
-		local ConsumerPenaltyCount = CaptialCity:GetNumBuilding(GameInfoTypes["BUILDING_CONSUMER_PENALTY"])
-		
+		local ConsumerUnhappinessMod = pPlayer:GetUnHappinessModFromResourceByIndex(GameInfoTypes["RESOURCE_CONSUMER"])
 
-    	if ConsumerBonusCount >= 1 then
-			if pPlayer:HasPolicy(GameInfo.Policies["POLICY_MERCANTILISM"].ID) then
-				strText = strText .. "[NEWLINE][NEWLINE]";
-				strText = strText .. strSPConsumerHappiness .." " ..ConsumerBonusCount.."%".."[NEWLINE]"..SPPolicyConsumerBonus;
-			else 
-				strText = strText .. "[NEWLINE][NEWLINE]";
-				strText = strText .. strSPConsumerHappiness .." " ..ConsumerBonusCount.."%";
-			end
-			
-		elseif ConsumerPenaltyCount >= 1 then	
+    	if ConsumerUnhappinessMod < 0 then
 			strText = strText .. "[NEWLINE][NEWLINE]";
-			strText = strText .. strSPConsumerPenalty .." " ..ConsumerPenaltyCount.."%";			
-			
+			strText = strText .. strSPConsumerHappiness .." " ..-ConsumerUnhappinessMod.."%";
+			if pPlayer:HasPolicy(GameInfo.Policies["POLICY_MERCANTILISM"].ID) then
+				strText = strText .."[NEWLINE]"..SPPolicyConsumerBonus;
+			end
+		elseif ConsumerUnhappinessMod > 0 then	
+			strText = strText .. "[NEWLINE][NEWLINE]";
+			strText = strText .. strSPConsumerPenalty .." " ..ConsumerUnhappinessMod.."%";			
 		end
 	
 	--------------------------------------SP Additional Happiness by Extra Consumer Goods END-----------------------------
-		
-	
-	
-	
-	
+
 		-- Basic explanation of Happiness
 		if (not OptionsManager.IsNoBasicHelp()) then
 			strText = strText .. "[NEWLINE][NEWLINE]";
@@ -1867,7 +1697,6 @@ DoInitTooltips();
 
 		
 		
-
 
 
 

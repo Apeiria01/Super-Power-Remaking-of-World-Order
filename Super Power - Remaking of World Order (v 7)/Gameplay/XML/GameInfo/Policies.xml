@@ -369,7 +369,7 @@
 			<Where Type="POLICY_ENTREPRENEURSHIP"/>
 		</Update>	
 		<Update>
-			<Set GridX="5"/>
+			<Set GridX="5" ResourceUnhappinessModifier="20" ResourceCityConnectionTradeRouteGoldModifier="20"/>
 			<Where Type="POLICY_MERCANTILISM"/>
 		</Update>
 		<Update>
