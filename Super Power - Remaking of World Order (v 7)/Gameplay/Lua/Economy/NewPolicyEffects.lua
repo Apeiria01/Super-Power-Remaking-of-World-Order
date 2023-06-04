@@ -121,36 +121,10 @@ function SPReformeBeliefs(iPlayer, iReligion, iBelief)
 	elseif GameInfo.Beliefs[iBelief].Type == "BELIEF_UNDERGROUND_SECT" then
 		holyCity:SetNumRealBuilding(GameInfoTypes["BUILDING_BELIEF_UNDERGROUND_SECT"], 1);
 		holyCity:SetNumRealBuilding(GameInfoTypes["BUILDING_BELIEF_UNDERGROUND_SECT"], 0);
-	elseif GameInfo.Beliefs[iBelief].Type == "BELIEF_EVANGELISM" then
-		g_iEMSReligion = iReligion;
-		for iPlayer = 0, GameDefines.MAX_CIV_PLAYERS - 1 do
-			local player = Players[iPlayer];
-			if pPlayer and pPlayer:GetNumCities() > 0 then
-				for city in player:Cities() do
-					if city:GetReligiousMajority() == iReligion then
-						city:SetNumRealBuilding(GameInfoTypes["BUILDING_EXTRA_RELIGION_SPREADS"], 1);
-					end
-				end
-			end
-		end
 	end
 end
 
 GameEvents.ReligionReformed.Add(SPReformeBeliefs)
-function SPEvangelism(iOwner, iReligion, iX, iY)
-	local pPlot = Map.GetPlot(iX, iY);
-	if pPlot and pPlot:IsCity() then
-		local pCity = pPlot:GetPlotCity();
-		if g_iEMSReligion == -1 then
-		elseif iReligion == g_iEMSReligion then
-			pCity:SetNumRealBuilding(GameInfoTypes["BUILDING_EXTRA_RELIGION_SPREADS"], 1);
-		elseif pCity:IsHasBuilding(GameInfoTypes["BUILDING_EXTRA_RELIGION_SPREADS"]) then
-			pCity:SetNumRealBuilding(GameInfoTypes["BUILDING_EXTRA_RELIGION_SPREADS"], 0);
-		end
-	end
-end
-
-GameEvents.CityConvertsReligion.Add(SPEvangelism)
 
 function FasterFoodGrowth(playerID)
 	local player = Players[playerID];

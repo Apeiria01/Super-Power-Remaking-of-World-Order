@@ -325,6 +325,7 @@ UPDATE Beliefs SET CityStateInfluenceModifier='50',CityStateMinimumInfluence='30
 
 --BELIEF_UNDERGROUND_SECT
 --BELIEF_EVANGELISM
+UPDATE Beliefs SET CityExtraMissionarySpreads='1' WHERE Type = 'BELIEF_EVANGELISM';
 --BELIEF_UNITY_OF_PROPHETS
 
 UPDATE Beliefs SET WonderProductionModifier='25',ObsoleteEra='ERA_FUTURE' WHERE Type = 'BELIEF_RELIGIOUS_FERVOR';
