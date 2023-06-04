@@ -14183,7 +14183,7 @@
 			<Text>Charge III</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_CHARGE_3_HELP" >
-			<Text>[ICON_BULLET]If the enemy unit attacked by this unit withdraws, cause 150% damage to the another unit in the same tile with the enemy unit attacked.[NEWLINE][ICON_BULLET]The withdrawed enemy unit will receive additional 20 HP damage</Text>
+			<Text>[ICON_BULLET]If the enemy unit attacked by this unit withdraws, cause extra 50% damage to the another unit in the same tile with the enemy unit attacked.[NEWLINE][ICON_BULLET]The withdrawed enemy unit will receive additional 10 HP damage</Text>
 		</Row>
 
 
@@ -14240,10 +14240,10 @@
 		</Row>
 
 		<Replace Tag="TXT_KEY_PROMOTION_ACCURACY_1_HELP" >
-			<Text>+10% [ICON_RANGE_STRENGTH] Combat Strength and +90% [ICON_RANGE_STRENGTH] Combat Strength vs [COLOR_POSITIVE_TEXT]Anti-Mounted Units[ENDCOLOR], [COLOR_POSITIVE_TEXT]Anti-Tank Units[ENDCOLOR], [COLOR_POSITIVE_TEXT]Land Hit-and-run Units[ENDCOLOR] when performing a Ranged Attack.</Text>
+			<Text>+10% [ICON_RANGE_STRENGTH] Combat Strength and +45% [ICON_RANGE_STRENGTH] Combat Strength vs [COLOR_POSITIVE_TEXT]Anti-Mounted Units[ENDCOLOR], [COLOR_POSITIVE_TEXT]Anti-Tank Units[ENDCOLOR], [COLOR_POSITIVE_TEXT]Land Hit-and-run Units[ENDCOLOR] when performing a Ranged Attack.</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_ACCURACY_2_HELP" >
-			<Text>+10% [ICON_RANGE_STRENGTH] Combat Strength and +90% [ICON_RANGE_STRENGTH] Combat Strength vs [COLOR_POSITIVE_TEXT]Anti-Mounted Units[ENDCOLOR], [COLOR_POSITIVE_TEXT]Anti-Tank Units[ENDCOLOR], [COLOR_POSITIVE_TEXT]Land Hit-and-run Units[ENDCOLOR] when performing a Ranged Attack.</Text>
+			<Text>+10% [ICON_RANGE_STRENGTH] Combat Strength and +45% [ICON_RANGE_STRENGTH] Combat Strength vs [COLOR_POSITIVE_TEXT]Anti-Mounted Units[ENDCOLOR], [COLOR_POSITIVE_TEXT]Anti-Tank Units[ENDCOLOR], [COLOR_POSITIVE_TEXT]Land Hit-and-run Units[ENDCOLOR] when performing a Ranged Attack.</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_PROMOTION_BARRAGE_1_HELP" >
@@ -15482,6 +15482,9 @@
 
 
 		<Row Tag="TXT_KEY_PROMOTION_SATELLITE_RECON">
+			<Text>Reconnaissance Intel+</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_SATELLITE_RECON_SMALL">
 			<Text>Reconnaissance Intel</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SATELLITE_RECON_HELP">
@@ -16890,5 +16893,8 @@
 		<Row Tag="TXT_KEY_EUPANEL_OTHER_CONTINENT_BONUS">
 			<Text>Other Continent Bouns</Text>
 		</Row>
+		<Replace Tag="TXT_KEY_PEDIA_PROMOTION_ANTI_AIR">
+			<Text>Bonus vs Aircraft/Helicopters</Text>
+		</Replace>
 	</Language_en_US>
 </GameData>

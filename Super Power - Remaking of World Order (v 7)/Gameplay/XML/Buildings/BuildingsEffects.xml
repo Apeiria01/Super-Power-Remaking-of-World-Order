@@ -3800,7 +3800,7 @@
 		</Row>
 		<Row>
 			<Type>PROMOTION_SATELLITE_RECON_SMALL</Type>
-			<Description>TXT_KEY_PROMOTION_SATELLITE_RECON</Description>
+			<Description>TXT_KEY_PROMOTION_SATELLITE_RECON_SMALL</Description>
 			<Help>TXT_KEY_PROMOTION_SATELLITE_RECON_SMALL_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<EnemyRoute>true</EnemyRoute>
@@ -3808,7 +3808,7 @@
 			<PortraitIndex>59</PortraitIndex>
 			<IconAtlas>ABILITY_ATLAS</IconAtlas>
 			<PediaType>PEDIA_SHARED</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_SATELLITE_RECON</PediaEntry>
+			<PediaEntry>TXT_KEY_PROMOTION_SATELLITE_RECON_SMALL</PediaEntry>
 		</Row>
 
 

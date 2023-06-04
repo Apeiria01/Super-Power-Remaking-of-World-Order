@@ -12252,7 +12252,7 @@
 			<Text>衝鋒三級</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_CHARGE_3_HELP" >
-			<Text>如果目標單位被衝鋒擊退，對同一格的另外一個敵方單位造成150%的傷害。[NEWLINE]被擊退的單位受到額外20HP傷害。</Text>
+			<Text>如果目標單位被衝鋒擊退，對同一格的另外一個敵方單位再造成50%的傷害。[NEWLINE]被擊退的單位受到額外10HP傷害。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_HEAVY_SHOCK_1_HELP" >
@@ -12294,10 +12294,10 @@
 		</Row>
 
 		<Replace Tag="TXT_KEY_PROMOTION_ACCURACY_1_HELP" >
-			<Text>遠程攻擊時+10%[ICON_RANGE_STRENGTH]戰鬥力及對[COLOR_POSITIVE_TEXT]方陣步兵[ENDCOLOR]、[COLOR_POSITIVE_TEXT]反裝甲[ENDCOLOR]、[COLOR_POSITIVE_TEXT]陸軍遊獵[ENDCOLOR]單位額外+90%[ICON_RANGE_STRENGTH]戰鬥力。</Text>
+			<Text>遠程攻擊時+10%[ICON_RANGE_STRENGTH]戰鬥力及對[COLOR_POSITIVE_TEXT]方陣步兵[ENDCOLOR]、[COLOR_POSITIVE_TEXT]反裝甲[ENDCOLOR]、[COLOR_POSITIVE_TEXT]陸軍遊獵[ENDCOLOR]單位額外+45%[ICON_RANGE_STRENGTH]戰鬥力。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_ACCURACY_2_HELP" >
-			<Text>遠程攻擊時+10%[ICON_RANGE_STRENGTH]戰鬥力及對[COLOR_POSITIVE_TEXT]方陣步兵[ENDCOLOR]、[COLOR_POSITIVE_TEXT]反裝甲[ENDCOLOR]、[COLOR_POSITIVE_TEXT]陸軍遊獵[ENDCOLOR]單位額外+90%[ICON_RANGE_STRENGTH]戰鬥力。</Text>
+			<Text>遠程攻擊時+10%[ICON_RANGE_STRENGTH]戰鬥力及對[COLOR_POSITIVE_TEXT]方陣步兵[ENDCOLOR]、[COLOR_POSITIVE_TEXT]反裝甲[ENDCOLOR]、[COLOR_POSITIVE_TEXT]陸軍遊獵[ENDCOLOR]單位額外+45%[ICON_RANGE_STRENGTH]戰鬥力。</Text>
 		</Replace>
 
 
@@ -12950,7 +12950,12 @@
 			<Text>航空母艦</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_CARRIER_UNIT_HELP">
-			<Text>[NEWLINE]能夠裝載艦載機。[NEWLINE]艦載機獲得的經驗會傳遞給所在航母。[NEWLINE]在友方地域內能夠補充艦載機。[NEWLINE]與其在同一格的單位回復時每回合額外+15HP，本單位回復時每回合額外+15HP。[NEWLINE]被[COLOR_NEGATIVE_TEXT]海軍遊獵[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]潛艇[ENDCOLOR]單位克制。
+			<Text>
+			能夠裝載艦載機。
+			[NEWLINE]艦載機獲得的經驗會傳遞給所在航母。
+			[NEWLINE]在友方地域內能夠補充艦載機。
+			[NEWLINE]與其在同一格的單位回復時每回合額外+15HP，本單位回復時每回合額外+15HP。
+			[NEWLINE]被[COLOR_NEGATIVE_TEXT]海軍遊獵[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]潛艇[ENDCOLOR]單位克制。
 			</Text>
 		</Row>
 		
@@ -13249,11 +13254,14 @@
 		</Row>
 		
 		<Row Tag="TXT_KEY_PROMOTION_SATELLITE_RECON">
+			<Text>戰略偵查+</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_SATELLITE_RECON_SMALL">
 			<Text>戰略偵查</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SATELLITE_RECON_HELP">
 			<Text>
-				非友方區域作戰[ICON_BULLET]+15% [ICON_STRENGTH]戰鬥力。
+				[ICON_BULLET]非友方區域作戰+15%[ICON_STRENGTH]戰鬥力。
 				[NEWLINE][ICON_BULLET]戰爭時可以使用[COLOR_POSITIVE_TEXT]敵方道路[ENDCOLOR]。
 			</Text>
 		</Row>
@@ -13488,7 +13496,7 @@
 			<Text>飞驰的幽灵</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_GALLOPING_GHOST_HELP">
-			<Text>+2[ICON_MOVES]移动，+2视野.能发现潜艇.</Text>
+			<Text>+2[ICON_MOVES]移动，+2视野。能发现潜艇。</Text>
 		</Row>
 		
 		<Row Tag="TXT_KEY_PROMOTION_ENCOURAGE_AND_AWE">
@@ -14719,5 +14727,8 @@
 		<Row Tag="TXT_KEY_EUPANEL_OTHER_CONTINENT_BONUS">
 			<Text>異大陸加成</Text>
 		</Row>
+		<Replace Tag="TXT_KEY_PEDIA_PROMOTION_ANTI_AIR">
+			<Text>對空軍/直升機加成</Text>
+		</Replace>
 	</Language_zh_Hant_HK>
 </GameData>
