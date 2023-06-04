@@ -14092,7 +14092,7 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_PROMOTION_FORMATION_1_HELP" >
-			<Text>+50% [ICON_STRENGTH] Combat Strength VS [COLOR_POSITIVE_TEXT]Mounted[ENDCOLOR] units.</Text>
+			<Text>+25% [ICON_STRENGTH] Combat Strength VS [COLOR_POSITIVE_TEXT]Mounted[ENDCOLOR] units.</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_FORMATION_2_HELP" >
 			<Text>+50% [ICON_STRENGTH] Combat Strength VS [COLOR_POSITIVE_TEXT]Mounted[ENDCOLOR] units.</Text>
