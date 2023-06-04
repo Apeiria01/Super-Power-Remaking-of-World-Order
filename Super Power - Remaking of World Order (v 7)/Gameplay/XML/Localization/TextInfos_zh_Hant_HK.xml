@@ -12179,20 +12179,20 @@
 			<Text>對[COLOR_POSITIVE_TEXT]騎乘[ENDCOLOR]單位+25%[ICON_STRENGTH]戰鬥力。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_FORMATION_2_HELP" >
-			<Text>對[COLOR_POSITIVE_TEXT]騎乘[ENDCOLOR]單位+50%[ICON_STRENGTH]戰鬥力。</Text>
+			<Text>對[COLOR_POSITIVE_TEXT]騎乘[ENDCOLOR]單位+25%[ICON_STRENGTH]戰鬥力。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_PROMOTION_AMBUSH_1">
 			<Text>穿甲一級</Text>
 		</Replace>
 			<Replace Tag="TXT_KEY_PROMOTION_AMBUSH_1_HELP">
-			<Text>對[COLOR_POSITIVE_TEXT]裝甲[ENDCOLOR]單位+50%[ICON_STRENGTH]戰鬥力。</Text>
+			<Text>對[COLOR_POSITIVE_TEXT]裝甲[ENDCOLOR]單位+25%[ICON_STRENGTH]戰鬥力。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_AMBUSH_2">
 			<Text>穿甲二級</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_AMBUSH_2_HELP">
-			<Text>對[COLOR_POSITIVE_TEXT]裝甲[ENDCOLOR]單位+50%[ICON_STRENGTH]戰鬥力。</Text>
+			<Text>對[COLOR_POSITIVE_TEXT]裝甲[ENDCOLOR]單位+25%[ICON_STRENGTH]戰鬥力。</Text>
 		</Replace>
 		
 		<Row Tag="TXT_KEY_PROMOTION_HALF_CASUALTIES">
@@ -12206,13 +12206,13 @@
 			<Text>近戰一級</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_CQB_COMBAT_1_HELP">
-			<Text>該單位防守時，若進攻方攻擊該單位後HP小於60，則失去所有[ICON_MOVES]移動力。</Text>
+			<Text>該單位防守時，若進攻方攻擊該單位後HP小於80，則失去所有[ICON_MOVES]移動力。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_CQB_COMBAT_2">
 			<Text>近戰二級</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_CQB_COMBAT_2_HELP">
-			<Text>該單位防守時，若進攻方攻擊該單位後HP小於90，則失去所有[ICON_MOVES]移動力。</Text>
+			<Text>該單位防守時，進攻方無論攻擊該單位後HP為多少，都失去所有[ICON_MOVES]移動力。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_KNIGHT_COMBAT">

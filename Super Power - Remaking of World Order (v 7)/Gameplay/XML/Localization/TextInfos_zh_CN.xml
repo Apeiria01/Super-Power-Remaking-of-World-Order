@@ -12359,20 +12359,20 @@
 			<Text>对[COLOR_POSITIVE_TEXT]骑乘[ENDCOLOR]单位+25%[ICON_STRENGTH]战斗力。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_FORMATION_2_HELP" >
-			<Text>对[COLOR_POSITIVE_TEXT]骑乘[ENDCOLOR]单位+50%[ICON_STRENGTH]战斗力。</Text>
+			<Text>对[COLOR_POSITIVE_TEXT]骑乘[ENDCOLOR]单位+25%[ICON_STRENGTH]战斗力。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_PROMOTION_AMBUSH_1">
 			<Text>穿甲一级</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_AMBUSH_1_HELP">
-			<Text>对[COLOR_POSITIVE_TEXT]装甲[ENDCOLOR]单位+50%[ICON_STRENGTH]战斗力。</Text>
+			<Text>对[COLOR_POSITIVE_TEXT]装甲[ENDCOLOR]单位+25%[ICON_STRENGTH]战斗力。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_AMBUSH_2">
 			<Text>穿甲二级</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_AMBUSH_2_HELP">
-			<Text>对[COLOR_POSITIVE_TEXT]装甲[ENDCOLOR]单位+50%[ICON_STRENGTH]战斗力。</Text>
+			<Text>对[COLOR_POSITIVE_TEXT]装甲[ENDCOLOR]单位+25%[ICON_STRENGTH]战斗力。</Text>
 		</Replace>
 
 		<Row Tag="TXT_KEY_PROMOTION_HALF_CASUALTIES">
