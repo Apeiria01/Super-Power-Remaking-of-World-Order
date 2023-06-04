@@ -1928,6 +1928,7 @@
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_KNIGHT_COMBAT</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
+			<LostAllMovesAttackCity>1</LostAllMovesAttackCity>
 		</Row>	
 		<Row>
 			<Type>PROMOTION_TANK_COMBAT</Type>
@@ -1944,6 +1945,7 @@
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_TANK_COMBAT</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
+			<LostAllMovesAttackCity>1</LostAllMovesAttackCity>
 		</Row>
 		
 		
@@ -5318,6 +5320,7 @@
 			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_CITY_PILLAGE_FREE</PediaEntry>
+			<LostAllMovesAttackCity>-1</LostAllMovesAttackCity>
 		</Row>
 
 
@@ -6376,6 +6379,7 @@
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_ANTI_DEBUFF</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
+			<LostAllMovesAttackCity>-1</LostAllMovesAttackCity>
 		</Row>
 		<Row>
 			<Type>PROMOTION_ANTI_COLLATERAL</Type>

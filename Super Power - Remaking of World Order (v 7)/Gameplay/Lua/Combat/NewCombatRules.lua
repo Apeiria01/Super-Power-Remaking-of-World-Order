@@ -146,9 +146,6 @@ function NewAttackEffect()
 	end
 
 	------- PromotionID
-	local KnightID = GameInfo.UnitPromotions["PROMOTION_KNIGHT_COMBAT"].ID
-	local TankID = GameInfo.UnitPromotions["PROMOTION_TANK_COMBAT"].ID
-	local PillageFreeID = GameInfo.UnitPromotions["PROMOTION_CITY_PILLAGE_FREE"].ID
 	local SpeComID = GameInfo.UnitPromotions["PROMOTION_SPECIAL_FORCES_COMBAT"].ID
 	local SPForce2ID = GameInfo.UnitPromotions["PROMOTION_SP_FORCE_2"].ID
 
@@ -164,20 +161,6 @@ function NewAttackEffect()
 	if attUnit:GetUnitType() == GameInfoTypes.UNIT_BAZOOKA then
 		attUnit:ChangeDamage(attUnit:GetCurrHitPoints());
 	end
-
-	-- Heavy Knight&Tank attacking cities lose all MPs
-	if bIsCity and not attUnit:IsDead() and batType == GameInfoTypes["BATTLETYPE_MELEE"]
-		and not attUnit:IsHasPromotion(PillageFreeID) and not attUnit:IsHasPromotion(AntiDebuffID)
-		and (attUnit:IsHasPromotion(KnightID) or attUnit:IsHasPromotion(TankID))
-	then
-		attUnit:SetMoves(0)
-		print("Attacking City and lost all MPs!")
-		if attPlayer:IsHuman() then
-			Events.GameplayAlertMessage(Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_ATTACKING_CITY_LOST_MOVEMENT",
-				attUnit:GetName()))
-		end
-	end
-
 
 	if not defPlayer:IsAlive() then
 		return

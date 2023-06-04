@@ -13429,7 +13429,7 @@
 			<Text>授權私掠</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_CITY_PILLAGE_FREE_HELP">
-			<Text>攻擊城市[ICON_BULLET]獲取相當於對城市損害200%的[ICON_GOLD]金幣。[NEWLINE][ICON_BULLET]骑兵攻擊城市後不會失去移動力。[NEWLINE][ICON_BULLET]劫掠不消耗[ICON_MOVES]移動力。
+			<Text>攻擊城市[ICON_BULLET]獲取相當於對城市損害200%的[ICON_GOLD]金幣。[NEWLINE][ICON_BULLET]骑兵攻擊城市後不會失去所有移動力。[NEWLINE][ICON_BULLET]劫掠不消耗[ICON_MOVES]移動力。
 			</Text>
 		</Row>
 		
