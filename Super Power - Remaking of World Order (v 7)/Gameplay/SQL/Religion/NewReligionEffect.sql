@@ -8,7 +8,7 @@ SELECT 'BELIEF_OPEN_SKY','RESOURCE_HORSE','YIELD_PRODUCTION',1;
 
 UPDATE Beliefs SET MinPopulation = '0', AllowYieldPerBirth = 'true' WHERE Type = 'BELIEF_GODDESS_LOVE';
 INSERT INTO Belief_YieldPerBirth (BeliefType,YieldType,Yield)
-SELECT 'BELIEF_GODDESS_LOVE','YIELD_FAITH',6;
+SELECT 'BELIEF_GODDESS_LOVE','YIELD_FAITH',7;
 
 INSERT INTO Belief_FeatureYieldChanges (BeliefType,FeatureType,YieldType,Yield)
 SELECT 'BELIEF_GODDESS_OF_PURITY','FEATURE_FOUNTAIN_YOUTH','YIELD_FOOD',4 UNION ALL
@@ -325,6 +325,7 @@ UPDATE Beliefs SET CityStateInfluenceModifier='50',CityStateMinimumInfluence='30
 
 --BELIEF_UNDERGROUND_SECT
 --BELIEF_EVANGELISM
+UPDATE Beliefs SET CityExtraMissionarySpreads='1' WHERE Type = 'BELIEF_EVANGELISM';
 --BELIEF_UNITY_OF_PROPHETS
 
 UPDATE Beliefs SET WonderProductionModifier='25',ObsoleteEra='ERA_FUTURE' WHERE Type = 'BELIEF_RELIGIOUS_FERVOR';

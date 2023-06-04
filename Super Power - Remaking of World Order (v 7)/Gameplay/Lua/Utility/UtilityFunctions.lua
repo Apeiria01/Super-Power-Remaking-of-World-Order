@@ -1790,25 +1790,4 @@ end
 
 -- MOD end by HMS
 
-
-
--- Beliefs
-g_iEMSReligion = -1;
-if not Game.IsOption(GameOptionTypes.GAMEOPTION_NO_RELIGION) then
-	for iPlayer = 0, GameDefines.MAX_CIV_PLAYERS - 1 do
-		local pPlayer = Players[iPlayer];
-		if pPlayer:IsEverAlive() and pPlayer:HasCreatedReligion() then
-			local eReligion = pPlayer:GetReligionCreatedByPlayer();
-			for i, v in ipairs(Game.GetBeliefsInReligion(eReligion)) do
-				if GameInfo.Beliefs[v].Type == "BELIEF_EVANGELISM" then
-					g_iEMSReligion = eReligion;
-					break;
-				end
-			end
-		end
-	end
-end
-
-
-
 print("UtilityFunctions Check Pass!")
