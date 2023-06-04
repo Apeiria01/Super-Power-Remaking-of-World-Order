@@ -12432,7 +12432,7 @@
 			<Text>冲锋三级</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_CHARGE_3_HELP" >
-			<Text>如果目标单位被冲锋击退，对同一格的另外一个敌方单位造成150%的伤害。[NEWLINE]被击退的单位受到额外20HP伤害。</Text>
+			<Text>如果目标单位被冲锋击退，对同一格的另外一个敌方单位再造成50%的伤害。[NEWLINE]被击退的单位受到额外10HP伤害。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_HEAVY_SHOCK_1_HELP" >
@@ -12474,10 +12474,10 @@
 		</Row>
 
 		<Replace Tag="TXT_KEY_PROMOTION_ACCURACY_1_HELP" >
-			<Text>远程攻击时+10%[ICON_RANGE_STRENGTH]战斗力及对[COLOR_POSITIVE_TEXT]方阵步兵[ENDCOLOR]、[COLOR_POSITIVE_TEXT]反装甲[ENDCOLOR]、[COLOR_POSITIVE_TEXT]陆军游猎[ENDCOLOR]单位额外+90%[ICON_RANGE_STRENGTH]战斗力。</Text>
+			<Text>远程攻击时+10%[ICON_RANGE_STRENGTH]战斗力及对[COLOR_POSITIVE_TEXT]方阵步兵[ENDCOLOR]、[COLOR_POSITIVE_TEXT]反装甲[ENDCOLOR]、[COLOR_POSITIVE_TEXT]陆军游猎[ENDCOLOR]单位额外+45%[ICON_RANGE_STRENGTH]战斗力。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_ACCURACY_2_HELP" >
-			<Text>远程攻击时+10%[ICON_RANGE_STRENGTH]战斗力及对[COLOR_POSITIVE_TEXT]方阵步兵[ENDCOLOR]、[COLOR_POSITIVE_TEXT]反装甲[ENDCOLOR]、[COLOR_POSITIVE_TEXT]陆军游猎[ENDCOLOR]单位额外+90%[ICON_RANGE_STRENGTH]战斗力。</Text>
+			<Text>远程攻击时+10%[ICON_RANGE_STRENGTH]战斗力及对[COLOR_POSITIVE_TEXT]方阵步兵[ENDCOLOR]、[COLOR_POSITIVE_TEXT]反装甲[ENDCOLOR]、[COLOR_POSITIVE_TEXT]陆军游猎[ENDCOLOR]单位额外+45%[ICON_RANGE_STRENGTH]战斗力。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_PROMOTION_BARRAGE_1_HELP" >
@@ -12661,7 +12661,7 @@
 			<Text>反舰一级</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_FAE_ROCKET_1_HELP">
-			<Text>+50%[ICON_STRENGTH]战斗力 对[COLOR_POSITIVE_TEXT]海军单位[ENDCOLOR]</Text>
+			<Text>对[COLOR_POSITIVE_TEXT]海军单位[ENDCOLOR]额外+50%[ICON_STRENGTH]战斗力。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_FAE_ROCKET_2">
 			<Text>反舰二级</Text>
@@ -13138,7 +13138,11 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_CARRIER_UNIT_HELP">
 			<Text>
-				[NEWLINE]能够装载舰载机。[NEWLINE]舰载机获得的经验会传递给所在航母。[NEWLINE]在友方地域内能够补充舰载机。[NEWLINE]与其在同一格的单位回复时每回合额外+15HP，本单位回复时每回合额外+15HP。[NEWLINE]被[COLOR_NEGATIVE_TEXT]海军游猎[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]潜艇[ENDCOLOR]单位克制。
+			能够装载舰载机。
+			[NEWLINE]舰载机获得的经验会传递给所在航母。
+			[NEWLINE]在友方地域内能够补充舰载机。
+			[NEWLINE]与其在同一格的单位回复时每回合额外+15HP，本单位回复时每回合额外+15HP。
+			[NEWLINE]被[COLOR_NEGATIVE_TEXT]海军游猎[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]潜艇[ENDCOLOR]单位克制。
 			</Text>
 		</Row>
 
@@ -13437,11 +13441,14 @@
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_SATELLITE_RECON">
+			<Text>战略侦查+</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_SATELLITE_RECON_SMALL">
 			<Text>战略侦查</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SATELLITE_RECON_HELP">
 			<Text>
-				非友方区域作战[ICON_BULLET]+15% [ICON_STRENGTH]战斗力。
+				[ICON_BULLET]非友方区域作战+15%[ICON_STRENGTH]战斗力。
 				[NEWLINE][ICON_BULLET]战争时可以使用[COLOR_POSITIVE_TEXT]敌方道路[ENDCOLOR]。
 			</Text>
 		</Row>
@@ -13681,7 +13688,7 @@
 			<Text>飞驰的幽灵</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_GALLOPING_GHOST_HELP">
-			<Text>+2[ICON_MOVES]移动，+2视野.能发现潜艇.</Text>
+			<Text>+2[ICON_MOVES]移动，+2视野。能发现潜艇。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_ENCOURAGE_AND_AWE">
@@ -14920,5 +14927,9 @@
 		<Row Tag="TXT_KEY_EUPANEL_OTHER_CONTINENT_BONUS">
 			<Text>异大陆加成</Text>
 		</Row>
+
+		<Replace Tag="TXT_KEY_PEDIA_PROMOTION_ANTI_AIR">
+			<Text>对空军/直升机加成</Text>
+		</Replace>
 	</Language_zh_CN>
 </GameData>
