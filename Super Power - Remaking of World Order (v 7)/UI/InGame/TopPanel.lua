@@ -765,18 +765,10 @@ function GoldTipHandler( control )
 	
 			-----------------------------SP Manpower Discount ----------------------------------------
 		local strSPManPowerDiscount = Locale.ConvertTextKey("TXT_KEY_SP_UI_MANPOWER_DISCOUNT")
-		local ManPowerAmount = pPlayer:GetNumResourceAvailable(GameInfoTypes["RESOURCE_MANPOWER"], true)
-		
-		
-		if ManPowerAmount >= 25 then
-			local CaptialCity = pPlayer:GetCapitalCity()
-			local ManPowerBonusCount = CaptialCity:GetNumBuilding(GameInfoTypes["BUILDING_MANPOWER_BONUS"])
-			
-			local ManPowerBonuFinal = ManPowerBonusCount*5
-
-			strText = strText .. "[NEWLINE]  " .. strSPManPowerDiscount .. " " ..ManPowerBonuFinal.."%";
+		local ManPowerBonus = math.abs(pPlayer:GetGoldHurryCostModifierFromResourceByIndex(GameInfoTypes["RESOURCE_MANPOWER"]))
+		if ManPowerBonus > 0 then
+			strText = strText .. "[NEWLINE]  " .. strSPManPowerDiscount .. " " .. ManPowerBonus .."%";
 		end
-		
 			-----------------------------SP Manpower Discount END----------------------------------------
 	
 	-- Basic explanation of Gold

@@ -386,7 +386,7 @@ function SetCityResEffects(playerID, ManpowerRes, ConsumerRes, ElectricRes)
     local player = Players[playerID];
     local CaptialCity = player:GetCapitalCity();
 
-    CaptialCity:SetNumRealBuilding(GameInfoTypes["BUILDING_MANPOWER_BONUS"], 0)
+    -- CaptialCity:SetNumRealBuilding(GameInfoTypes["BUILDING_MANPOWER_BONUS"], 0)
     -- CaptialCity:SetNumRealBuilding(GameInfoTypes["BUILDING_CONSUMER_BONUS"], 0)
     -- CaptialCity:SetNumRealBuilding(GameInfoTypes["BUILDING_CONSUMER_PENALTY"], 0)
     CaptialCity:SetNumRealBuilding(GameInfoTypes["BUILDING_ELECTRICITY_BONUS"],
@@ -400,22 +400,22 @@ function SetCityResEffects(playerID, ManpowerRes, ConsumerRes, ElectricRes)
     print("Player Total Cities:" .. CityTotal)
 
     ----------------------Manpower Effects
-    if ManpowerRes >= 25 then
-        local ManpowerRate = math.floor(ManpowerRes / DubCityTotal)
-        if ManpowerRate > 7 then ManpowerRate = 7 end
+    -- if ManpowerRes >= 25 then
+    --     local ManpowerRate = math.floor(ManpowerRes / DubCityTotal)
+    --     if ManpowerRate > 7 then ManpowerRate = 7 end
 
-        --		local PlayerHurryMod = player:GetHurryModifier(GameInfo.HurryInfos.HURRY_GOLD.ID)
-        --		print ("-------------------------------------------------Player HurryModifier:"..PlayerHurryMod)
+    --     --		local PlayerHurryMod = player:GetHurryModifier(GameInfo.HurryInfos.HURRY_GOLD.ID)
+    --     --		print ("-------------------------------------------------Player HurryModifier:"..PlayerHurryMod)
 
-        print("Manpower Rate:" .. ManpowerRate)
-        CaptialCity:SetNumRealBuilding(GameInfoTypes["BUILDING_MANPOWER_BONUS"],
-            ManpowerRate)
-        print("Manpower Bonus!")
-    else
-        CaptialCity:SetNumRealBuilding(GameInfoTypes["BUILDING_MANPOWER_BONUS"],
-            0)
-        print("No Manpower Bonus!")
-    end
+    --     print("Manpower Rate:" .. ManpowerRate)
+    --     CaptialCity:SetNumRealBuilding(GameInfoTypes["BUILDING_MANPOWER_BONUS"],
+    --         ManpowerRate)
+    --     print("Manpower Bonus!")
+    -- else
+    --     CaptialCity:SetNumRealBuilding(GameInfoTypes["BUILDING_MANPOWER_BONUS"],
+    --         0)
+    --     print("No Manpower Bonus!")
+    -- end
 
     ----------------------Consumer Effects
     -- if ConsumerRes >= 25 then
@@ -629,8 +629,8 @@ function CheckCapital(iPlayerID)
                     if pOCapital:IsHasBuilding(building.ID) and
                         (building.Type == "BUILDING_ELECTRICITY_BONUS" or
                             building.Type == "BUILDING_ELECTRICITY_PENALTY" or
-                            building.Type == "BUILDING_MANPOWER_BONUS" or
-                            building.Type == "BUILDING_CONSUMER_BONUS" or
+                            -- building.Type == "BUILDING_MANPOWER_BONUS" or
+                            -- building.Type == "BUILDING_CONSUMER_BONUS" or
                             -- building.Type == "BUILDING_CONSUMER_PENALTY_WARNING" or
                             -- building.Type == "BUILDING_CONSUMER_PENALTY" or
                             building.Type == "BUILDING_HAPPINESS_TOURISMBOOST" or
