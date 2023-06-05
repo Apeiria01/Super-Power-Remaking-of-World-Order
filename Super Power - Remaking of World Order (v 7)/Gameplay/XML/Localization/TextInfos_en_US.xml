@@ -6275,7 +6275,6 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_SPAIN_BULLRING_HELP</Tag>
 			<Text>
-				It provides [ICON_HAPPINESS_1] Global Happiness!
 				[NEWLINE][NEWLINE]+2 [ICON_GOLD] Gold and +2 [ICON_CULTURE] Culture output for each source of [ICON_RES_COW] Cattle and [ICON_RES_BISON] Bison worked by the city.
 			</Text>
 		</Row>
@@ -10455,7 +10454,7 @@
 		<Replace Tag="TXT_KEY_TRAIT_SEVEN_CITIES">
 			<Text>
 				[ICON_BULLET]Receive [ICON_GOLD] Gold bonus for discovering a Natural Wonder (bonus enhanced if first to discover it) and tile yields from Natural Wonders are doubled. 
-				[NEWLINE][ICON_BULLET]Cities with Amusement Park receive provides [ICON_HAPPINESS_1] Global Happiness instead of [ICON_HAPPINESS_1] Local Happiness, +2 [ICON_GOLD] Gold and +2 [ICON_CULTURE] Culture output for each source of [ICON_RES_COW] Cattle and [ICON_RES_BISON] Bison.</Text>
+				[NEWLINE][ICON_BULLET]+2 [ICON_GOLD] Gold and +2 [ICON_CULTURE] Culture output for each source of [ICON_RES_COW] Cattle and [ICON_RES_BISON] Bison.</Text>
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_TRAIT_GREAT_ANDEAN_ROAD">

@@ -1051,24 +1051,6 @@
 			<IconAtlas>EXPANSION2_WONDER_ATLAS</IconAtlas>
 			<PortraitIndex>1</PortraitIndex>
 		</Row>
-		<Row>
-			<Type>BUILDING_SPAIN_BULLRING</Type>
-			<BuildingClass>BUILDINGCLASS_AMUSEMENT_PARK</BuildingClass>
-			<Cost>-1</Cost>
-			<!--<GoldMaintenance>3</GoldMaintenance>-->
-			<Happiness>-4</Happiness>
-			<UnmoddedHappiness>4</UnmoddedHappiness>
-			<PrereqTech>TECH_TELEGRAPH</PrereqTech>
-			<Help>TXT_KEY_BUILDING_SPAIN_BULLRING_HELP</Help>
-			<Description>TXT_KEY_BUILDING_SPAIN_BULLRING</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SPAIN_BULLRING_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_SP_CITYSIZE_BUILDINGS_STRATEGY</Strategy>
-			<MinAreaSize>-1</MinAreaSize>
-			<NeverCapture>true</NeverCapture>
-			<!--<HurryCostModifier>25</HurryCostModifier>-->
-			<IconAtlas>SPWondersUB_ATLAS</IconAtlas>
-			<PortraitIndex>43</PortraitIndex>
-		</Row>
 
 		<Row>
 			<Type>BUILDING_WILDLIFE_PRESERVE</Type>
@@ -1893,10 +1875,6 @@
 			<BuildingType>BUILDING_AMUSEMENT_PARK</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_THEATRE</BuildingClassType>
 		</Row>
-		<!--<Row>
-			<BuildingType>BUILDING_SPAIN_BULLRING</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_THEATRE</BuildingClassType>
-		</Row>-->
 
 
 		<Row>
@@ -3486,33 +3464,6 @@
 			<Yield>2</Yield>
 		</Row>
 
-
-
-		<Row>
-			<BuildingType>BUILDING_SPAIN_BULLRING</BuildingType>
-			<ResourceType>RESOURCE_BISON</ResourceType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>2</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_SPAIN_BULLRING</BuildingType>
-			<ResourceType>RESOURCE_COW</ResourceType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>2</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_SPAIN_BULLRING</BuildingType>
-			<ResourceType>RESOURCE_BISON</ResourceType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>2</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_SPAIN_BULLRING</BuildingType>
-			<ResourceType>RESOURCE_COW</ResourceType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>2</Yield>
-		</Row>
-		
 	</Building_ResourceYieldChanges>
 
 
@@ -4129,12 +4080,6 @@
 			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
 			<Flavor>12</Flavor>
 		</Row>
-		<!--<Row>
-			<BuildingType>BUILDING_SPAIN_BULLRING</BuildingType>
-			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
-			<Flavor>58</Flavor>
-		</Row>-->
-
 
 		<Row>
 			<BuildingType>BUILDING_STAGECOACH</BuildingType>

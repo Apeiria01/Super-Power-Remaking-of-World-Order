@@ -68,18 +68,7 @@ function NewBuildingEffects(iPlayer, iCity, iBuilding, bGold, bFaith)
 
 				-- Remove "BonusBT" from Old
 				if oCity:IsHasBuilding(building.ID)
-					and (
-						-- building.Type == "BUILDING_ELECTRICITY_BONUS"
-						-- or building.Type == "BUILDING_ELECTRICITY_PENALTY"
-						-- or building.Type == "BUILDING_MANPOWER_BONUS"
-						-- or building.Type == "BUILDING_CONSUMER_BONUS"
-						-- or building.Type == "BUILDING_CONSUMER_PENALTY_WARNING"
-						-- or building.Type == "BUILDING_CONSUMER_PENALTY" or
-						building.Type == "BUILDING_HAPPINESS_TOURISMBOOST"
-						or building.Type == "BUILDING_RATIONALISM_HAPPINESS"
-						--	or  building.Type == "BUILDING_SCHOLASTICISM"
-						or building.Type == "BUILDING_TROOPS_DEBUFF"
-					) then
+					and building.Type == "BUILDING_TROOPS_DEBUFF" then
 					oCity:SetNumRealBuilding(building.ID, 0);
 				end
 

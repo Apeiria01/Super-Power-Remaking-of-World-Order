@@ -447,13 +447,6 @@
 			<BuildingType>BUILDING_SIAM_PHRAKAEW</BuildingType>
 		</Row>
 
-
-
-		<!--<Row>
-			<CivilizationType>CIVILIZATION_SPAIN</CivilizationType>
-			<BuildingClassType>BUILDINGCLASS_AMUSEMENT_PARK</BuildingClassType>
-			<BuildingType>BUILDING_SPAIN_BULLRING</BuildingType>
-		</Row>-->
 		<Row>
 			<CivilizationType>CIVILIZATION_SPAIN</CivilizationType>
 			<BuildingClassType>BUILDINGCLASS_SOLAR_PLANT</BuildingClassType>

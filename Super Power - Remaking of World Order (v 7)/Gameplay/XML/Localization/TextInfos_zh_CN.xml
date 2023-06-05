@@ -3488,7 +3488,7 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_SPAIN_BULLRING_HELP</Tag>
 			<Text>
-				提供全局[ICON_HAPPINESS_1]快乐![NEWLINE][NEWLINE]本城每处[ICON_RES_COW]牛和[ICON_RES_BISON]野牛资源+2[ICON_GOLD]金钱、+2[ICON_CULTURE]文化产出。
+				[NEWLINE][NEWLINE]本城每处[ICON_RES_COW]牛和[ICON_RES_BISON]野牛资源+2[ICON_GOLD]金钱、+2[ICON_CULTURE]文化产出。
 			</Text>
 		</Row>
 
@@ -5893,7 +5893,7 @@
 		<Replace Tag="TXT_KEY_TRAIT_SEVEN_CITIES">
 			<Text>
 				[ICON_BULLET]发现自然奇观时获得[ICON_GOLD]金钱奖励(首先发现则可获得更多)，自然奇观提供的地块产出加倍。
-				[NEWLINE][ICON_BULLET]游乐场提供[ICON_HAPPINESS_1]全局快乐而非[ICON_HAPPINESS_1]本地快乐，并给其所在城每处[ICON_RES_COW]牛和[ICON_RES_BISON]野牛资源+2[ICON_GOLD]金钱、+2[ICON_CULTURE]文化产出。
+				[NEWLINE][ICON_BULLET]每处[ICON_RES_COW]牛和[ICON_RES_BISON]野牛资源+2[ICON_GOLD]金钱、+2[ICON_CULTURE]文化产出。
 			</Text>
 		</Replace>
 

@@ -270,47 +270,8 @@ end -----------function END
 
 ----------------------------------City Functions----------------------------
 
-
-------------Happiness Effects
-function SetHappinessEffects(playerID)
-	if Players[playerID] == nil or Players[playerID]:GetNumCities() == 0 then
-		return;
-	end
-	local player = Players[playerID];
-	local ExcessHappiness = math.max(0, player:GetExcessHappiness());
-	local HappinessRatio = math.floor(ExcessHappiness / (player:GetNumCities() * 5));
-	print("Happiness to Tourism Ratio (5 times):" .. HappinessRatio)
-	if HappinessRatio > 0 or player:GetBuildingClassCount(GameInfoTypes["BUILDINGCLASS_HAPPINESS_TOURISMBOOST"]) > 0 then
-		for city in player:Cities() do
-			city:SetNumRealBuilding(GameInfoTypes["BUILDING_HAPPINESS_TOURISMBOOST"], HappinessRatio)
-			print("Excess Happiness add to Tourism!")
-		end
-	end
-
-	if player:GetCapitalCity() == nil then
-		return;
-	end
-	local CaptialCity = player:GetCapitalCity();
-
-	local HappinesstoScienceRatio = math.floor(ExcessHappiness / 25)
-	local MaxHappinesstoScienceRatio = 0;
-	if player:HasPolicy(GameInfo.Policies["POLICY_RATIONALISM"].ID) then
-		MaxHappinesstoScienceRatio = 10;
-	end
-	if player:HasPolicy(GameInfo.Policies["POLICY_TREATY_ORGANIZATION"].ID) then
-		MaxHappinesstoScienceRatio = MaxHappinesstoScienceRatio + 10;
-	end
-
-	local FinalHappinesstoScienceRatio = math.min(MaxHappinesstoScienceRatio, HappinesstoScienceRatio);
-	if FinalHappinesstoScienceRatio ~= CaptialCity:GetNumBuilding(GameInfoTypes["BUILDING_RATIONALISM_HAPPINESS"]) then
-		CaptialCity:SetNumRealBuilding(GameInfoTypes["BUILDING_RATIONALISM_HAPPINESS"], FinalHappinesstoScienceRatio)
-		print("Happiness to Science!" .. FinalHappinesstoScienceRatio)
-	end
-end -------------Function End
-
 ---------------------Policy Per Turn Effects
 function SetPolicyPerTurnEffects(playerID)
-	-- TODO: remove this function
 end
 
 if (PreGame.GetGameOption("GAMEOPTION_SP_IMMIGRATION_OFF") == 1) then
@@ -449,27 +410,6 @@ else
 
 			print("Human Move out Special Mod  " .. MoveOutCounterMod)
 		end
-
-
-		------------------------------------------Ideology Modifier--------------------------------
-		--	if MoveOutPlayer:GetCurrentEra() >= 5 then
-		--		local MoveOutIdeology = MoveOutPlayer:GetLateGamePolicyTree()
-		--	    local MoveInIdeology = MoveInPlayer:GetLateGamePolicyTree()
-		--	    local PreferedIdeology = MoveOutPlayer:GetPublicOpinionPreferredIdeology()
-		--	
-		--	    if MoveOutIdeology == MoveInIdeology then
-		--	    	MoveOutCounterMod = MoveOutCounterMod + 0.25
-		--	    	print ("Same Ideology +25%  "..MoveOutCounterMod)
-		--	    else
-		--	    	if PreferedIdeology > -1 and PreferedIdeology == MoveInIdeology then
-		--	    		MoveOutCounterMod = MoveOutCounterMod
-		--	    		print ("Different Ideology but preferred -25%  "..MoveOutCounterMod)
-		--	    	else
-		--	    		MoveOutCounterMod = MoveOutCounterMod - 0.25
-		--	    		print ("Different Ideology -25%  "..MoveOutCounterMod)
-		--	    	end
-		--	    end
-		--	end
 
 		if MoveOutPlayer:HasPolicy(GameInfoTypes["POLICY_IRON_CURTAIN"]) then
 			MoveOutCounterMod = MoveOutCounterMod - 0.5

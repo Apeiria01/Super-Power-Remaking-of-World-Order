@@ -502,51 +502,12 @@ function ScienceTipHandler( control )
 			
 			
 			------------SP Policy Effects-----------------------
-			if pPlayer:HasPolicy(GameInfoTypes["POLICY_CAPITALISM"]) then
-				local iUsedTradeRoutes = pPlayer:GetNumInternationalTradeRoutesUsed()
-				print ("iUsedTradeRoutes:"..iUsedTradeRoutes)
-				
-				
-				
---				
---				local iScienceRaw = 
---				print ("iScienceFromCities:"..iScienceFromCities)
-				
-				
-				
-				
-				
-				local SPTradeRouteRate = iUsedTradeRoutes * 0.03	
---				local ScienceFromCitiesRaw = iScienceFromCities * ( 1 - SPTradeRouteRate)-------------IS there a API only extract the science before adding modifiers from cities???
---								
---				local SPScienceFromTrade = ScienceFromCitiesRaw * SPTradeRouteRate
---				print ("SPScienceFromTrade:"..SPScienceFromTrade)
-				
-				local SPTradeRouteRate100 = SPTradeRouteRate * 100
-				
-				
-				strText = strText .. Locale.ConvertTextKey("TXT_KEY_TP_SCIENCE_FROM_ITR", iScienceFromTrade / 100 );
-				strText = strText .. "[NEWLINE][ICON_BULLET][COLOR_POSITIVE_TEXT]";
-				strText = strText .. "+"..SPTradeRouteRate100.."% ";
-				strText = strText .. "[ENDCOLOR]";
-				strText = strText .. Locale.ConvertTextKey("TXT_KEY_SP_UI_SCIENCE_FROM_ITR_POLICY");
-				strText = strText .. "[NEWLINE]";
-			else
-			   strText = strText .. Locale.ConvertTextKey("TXT_KEY_TP_SCIENCE_FROM_ITR", iScienceFromTrade / 100 );
-			   strText = strText .. "[NEWLINE]";
-			end  
+			strText = strText .. Locale.ConvertTextKey("TXT_KEY_TP_SCIENCE_FROM_ITR", iScienceFromTrade / 100 );
+			strText = strText .. "[NEWLINE]";
 			------------SP Policy Effects END-----------------------
-			   
 		end
 		
-		
-		
-		
-		
-		
-		
-		
-	
+
 		-- Science from Other Players
 		local iScienceFromOtherPlayers = pPlayer:GetScienceFromOtherPlayersTimes100();
 		if (iScienceFromOtherPlayers ~= 0) then
@@ -569,51 +530,6 @@ function ScienceTipHandler( control )
 		end
 
 	
-	
-		-- Science from Happiness-----------SP Tweaked
---		local iScienceFromHappiness = pPlayer:GetScienceFromHappinessTimes100();
-
-		local ExcessHappiness = pPlayer:GetExcessHappiness()
-		local HappinesstoScienceRatio = math.floor(ExcessHappiness/25)
-		
---		local ScienceFromCitiesRaw = iScienceFromCities * ( 1 - HappinesstoScienceRatio * 0.05 )-------------IS there a API only extract the science before adding modifiers from cities???
---		
---		local SPScienceFromHappiness = ScienceFromCitiesRaw * HappinesstoScienceRatio * 0.05
-		
-		
-
-		
-		if pPlayer:HasPolicy(GameInfo.Policies["POLICY_RATIONALISM"].ID) and HappinesstoScienceRatio >= 1 then
-			
-			-- Add separator for non-initial entries
-			if (bFirstEntry) then
-				bFirstEntry = false;
-			else
-				strText = strText .. "[NEWLINE]";
-			end
-			
-			if HappinesstoScienceRatio > 10 then
-				HappinesstoScienceRatio = 10
-			end
-			
-			local HappinesstoScienceRatioFinal = HappinesstoScienceRatio * 5
-	
-			strText = strText .. "[NEWLINE] [ICON_BULLET][COLOR_POSITIVE_TEXT]";
-			strText = strText .. "+"..HappinesstoScienceRatioFinal.."% ";
-			strText = strText .. "[ENDCOLOR]";
-			
-			strText = strText .. Locale.ConvertTextKey("TXT_KEY_TP_SCIENCE_FROM_HAPPINESS");
-
---			strText = strText .. Locale.ConvertTextKey("TXT_KEY_TP_SCIENCE_FROM_HAPPINESS", math.ceil(SPScienceFromHappiness/100) .." (+"..HappinesstoScienceRatioFinal.."%) ");
-		end
-	
-	
-	
-	
-	
-	
-	
-		-- Science from Research Agreements
 		local iScienceFromRAs = pPlayer:GetScienceFromResearchAgreementsTimes100();
 		if (iScienceFromRAs ~= 0) then
 		
