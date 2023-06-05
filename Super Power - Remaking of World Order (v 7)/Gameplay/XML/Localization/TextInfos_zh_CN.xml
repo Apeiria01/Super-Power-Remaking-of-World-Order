@@ -4717,6 +4717,9 @@
 		<Row Tag="TXT_KEY_SP_UI_TOURISMBOOST_BY_HAPPINESS">
 			<Text>由你的国家总体[ICON_HAPPINESS_1]满意度较高，你的[ICON_TOURISM]魅力产出+</Text>
 		</Row>
+		<Row Tag="TXT_KEY_SP_UI_TOURISMBOOST_BY_NUM_GREAT_WORK">
+			<Text>来自杰作数量的加成: {1_num}%</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_SP_UI_HAPPINESS_CONSUMERGOODS_LOW">
 			<Text>由于你的[ICON_RES_CONSUMER]商品盈馀[COLOR_POSITIVE_TEXT]25[ENDCOLOR]个单位，所有城市-5%[ICON_HAPPINESS_4]不满。</Text>

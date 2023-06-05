@@ -1251,27 +1251,19 @@ function TourismTipHandler( control )
 		
 	--------------------------------------SP Additional Tourism boost by Extra Happiness-----------------------------
 	
-		local strTextSPHappiness = Locale.ConvertTextKey("TXT_KEY_SP_UI_TOURISMBOOST_BY_HAPPINESS")
-			
-			
-		if pPlayer:GetExcessHappiness() > 0 then
-			local ExcessHappiness = pPlayer:GetExcessHappiness()
-			local CityTotal = pPlayer:GetNumCities()
-			local HappinessRatio = math.floor(ExcessHappiness/CityTotal)	
-			
-			strText = strText .. "[NEWLINE][NEWLINE]" .. strTextSPHappiness .. " " ..HappinessRatio.."%";
+		local iBonusFromHappiness = pPlayer:GetYieldModifierFromHappiness(GameInfoTypes["YIELD_TOURISM"])
+		if iBonusFromHappiness ~= 0 then
+			strText = strText .. "[NEWLINE][NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_SP_UI_TOURISMBOOST_BY_HAPPINESS") .. " " .. iBonusFromHappiness .. "%";
+		end
+
+		local iBonusFromNumGreakWork = pPlayer:GetYieldModifierFromNumGreakWork(GameInfoTypes["YIELD_TOURISM"])
+		if iBonusFromNumGreakWork ~= 0 then
+			strText = strText .. "[NEWLINE][NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_SP_UI_TOURISMBOOST_BY_NUM_GREAT_WORK", iBonusFromNumGreakWork) 
 		end
 		
 	--------------------------------------SP Additional Tourism boost by Extra Happiness END-----------------------------
 		
 	end	
-	
-	
-	
-		
-
-	
-	
 
 	tipControlTable.TooltipLabel:SetText( strText );
 	tipControlTable.TopPanelMouseover:SetHide(false);
