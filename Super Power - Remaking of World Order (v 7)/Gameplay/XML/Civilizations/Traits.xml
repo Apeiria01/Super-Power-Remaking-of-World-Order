@@ -815,6 +815,13 @@
 		</Row>
 		
 	</Trait_FreePromotionUnitCombats>
+	<Trait_FreePromotionUnitClasses>
+		<Row>
+			<TraitType>TRAIT_GREAT_EXPANSE</TraitType>
+			<UnitClassType>UNITCLASS_SCOUT</UnitClassType>
+			<PromotionType>PROMOTION_GOODY_HUT_PICKER</PromotionType>
+		</Row>
+	</Trait_FreePromotionUnitClasses>
 
 	<Trait_SpecialistYieldChanges>
 		<Row>

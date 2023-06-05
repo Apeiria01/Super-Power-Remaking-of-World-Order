@@ -4,22 +4,6 @@ include("FLuaVector.lua");
 include("UtilityFunctions.lua");
 include("PlotIterators.lua");
 -------------------------------------------------------------------------New Trait Effects-----------------------------------------------------------------------
-if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_SHOSHONE) then
-	Events.SerialEventUnitCreated.Add(function(iPlayerID, iUnitID)
-		local pPlayer = Players[iPlayerID]
-		if pPlayer == nil then return end
-		local pUnit = pPlayer:GetUnitByID(iUnitID)
-		if pUnit == nil then return end
-		if GameInfo.Leader_Traits { LeaderType = GameInfo.Leaders[pPlayer:GetLeaderType()].Type, TraitType =
-			"TRAIT_GREAT_EXPANSE" } ()
-			and pUnit:GetUnitType() == GameInfoTypes.UNIT_SCOUT
-			and (not pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_GOODY_HUT_PICKER"].ID))
-		then
-			pUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_GOODY_HUT_PICKER"].ID, true)
-		end
-	end)
-end
-
 if Game.GetGameSpeedType() == 3 then
 	Events.SerialEventUnitCreated.Add(
 		function(iPlayerID, iUnitID)
