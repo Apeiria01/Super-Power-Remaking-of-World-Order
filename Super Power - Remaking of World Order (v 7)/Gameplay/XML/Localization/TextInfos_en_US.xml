@@ -925,7 +925,7 @@
 			<Text>[COLOR_POSITIVE_TEXT]Order UNITS in the SAME Class[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_UI_BTN_SCC_SLEEP_HELP">
-			<Text>Click to Order your idle Units (not engaged in a scheduled task and waitting for new orders) in the SAME Class to do what they should do. [NEWLINE]Armies: Alert [NEWLINE]Explorer Units: Explore (Automated)[NEWLINE]Fighters: Intercept (If HP less than 30, it will stop intercepting and heal) [NEWLINE]Others (Navies, Bombers, Missiles, etc): Sleep [NEWLINE]Workers: Build Improvements (Automated)</Text>
+			<Text>Click to Order your idle Units (not engaged in a scheduled task and waitting for new orders) in the SAME Class to do what they should do. [NEWLINE]Armies: Alert [NEWLINE]Explorer Units: Explore (Automated)[NEWLINE]Fighters: Intercept (If HP less than 30, it will stop intercepting and heal) [NEWLINE]Others (Navies, Bombers, Missiles, etc): Sleep [NEWLINE]Workers: Sleep</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_UI_BTN_SCC_WAKE">
 			<Text>[COLOR_POSITIVE_TEXT]Wake UNITS in the SAME Class[ENDCOLOR]</Text>
@@ -16895,6 +16895,15 @@
 		</Row>
 		<Replace Tag="TXT_KEY_PEDIA_PROMOTION_ANTI_AIR">
 			<Text>Bonus vs Aircraft/Helicopters</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_BUILD_CONSUMED_HELP">
+			<Text>
+			Unit will be consumed.
+			[NEWLINE][NEWLINE]Great Tile Improvements will connect Strategic Resources on this tile to the trade network.
+			[NEWLINE]Great Tile Improvements will provide extra [ICON_RESEARCH][ICON_PRODUCTION][ICON_GOLD][ICON_PEACE] Output for surrounding land Improvements.
+			[NEWLINE]Academy can make Great Scientists provide 5% more [ICON_RESEARCH] Science when used to discover new technology.
+			</Text>
 		</Replace>
 	</Language_en_US>
 </GameData>

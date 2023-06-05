@@ -4478,7 +4478,7 @@
 			<Text>同類[COLOR_POSITIVE_TEXT]部署[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_UI_BTN_SCC_SLEEP_HELP">
-			<Text>點擊此鍵，為你所有空閑同類單位部署命令。[NEWLINE]陸軍：原地警戒[NEWLINE]探索單位：自動探索[NEWLINE]戰鬥機：攔截（如果其生命值低於30則命令轉為回復）[NEWLINE]其他單位（海軍、轟炸機、導彈等）：休眠[NEWLINE]工人：自動建造設施</Text>
+			<Text>點擊此鍵，為你所有空閑同類單位部署命令。[NEWLINE]陸軍：原地警戒[NEWLINE]探索單位：自動探索[NEWLINE]戰鬥機：攔截（如果其生命值低於30則命令轉為回復）[NEWLINE]其他單位（海軍、轟炸機、導彈等）：休眠[NEWLINE]工人：休眠</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_UI_BTN_SCC_WAKE">
 			<Text>同類[COLOR_POSITIVE_TEXT]喚醒[ENDCOLOR]</Text>
@@ -14729,6 +14729,15 @@
 		</Row>
 		<Replace Tag="TXT_KEY_PEDIA_PROMOTION_ANTI_AIR">
 			<Text>對空軍/直升機加成</Text>
+		</Replace>
+		
+		<Replace Tag="TXT_KEY_BUILD_CONSUMED_HELP">
+			<Text>
+			單位將被消耗。
+			[NEWLINE][NEWLINE]偉人所建設施可將該區塊的戰略資源連入貿易網絡。
+			[NEWLINE]偉人所建設施可為周圍陸地設施提供對應[ICON_RESEARCH][ICON_PRODUCTION][ICON_GOLD][ICON_PEACE]產出。
+			[NEWLINE]若為學院則可在消耗大科學家獲取科技的時候額外+5%[ICON_RESEARCH]科研產出。
+			</Text>
 		</Replace>
 	</Language_zh_Hant_HK>
 </GameData>
