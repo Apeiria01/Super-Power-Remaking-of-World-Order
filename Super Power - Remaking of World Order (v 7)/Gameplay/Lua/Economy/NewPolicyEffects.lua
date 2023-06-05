@@ -69,34 +69,6 @@ end
 
 GameEvents.PlayerCityFounded.Add(FreeUnitNewCity)
 
-
-function PolicyAdoptedEffects(playerID, policyID)
-	local player = Players[playerID]
-	if player == nil then
-		return
-	end
-
-	if not player:IsHuman() then ------(only for human players for now)
-		print("AI Poicy, not available!")
-		return
-	end
-
-	if player:GetNumCities() < 1 then
-		return
-			print("Not enough city!")
-	end
-
-	if policyID == nil then
-		return
-	end
-
-	if policyID == GameInfo.Policies["POLICY_ARISTOCRACY"].ID then
-		FasterFoodGrowth(playerID)
-	end
-end
-
-GameEvents.PlayerAdoptPolicy.Add(PolicyAdoptedEffects);
-
 function SPReformeBeliefs(iPlayer, iReligion, iBelief)
 	if Game.IsOption(GameOptionTypes.GAMEOPTION_NO_RELIGION) or iPlayer == -1 or not Players[iPlayer]:HasCreatedReligion()
 		or Game.GetHolyCityForReligion(iReligion, iPlayer) == nil
@@ -124,15 +96,5 @@ end
 
 GameEvents.ReligionReformed.Add(SPReformeBeliefs)
 
-function FasterFoodGrowth(playerID)
-	local player = Players[playerID];
-	for city in player:Cities() do
-		if city:IsHasBuilding(GameInfo.Buildings["BUILDING_CITY_SIZE_TOWN"].ID) then
-			local pThreshold = city:GrowthThreshold()
-			city:ChangeFood(pThreshold)
-			print ("Aristocracy Growth Bonus!")
-		end
-	end
-end
 
 print("New Policy Effects Check Pass!")
