@@ -153,3 +153,10 @@ insert into Policy_CityResources (PolicyType, ResourceType, Quantity, CityScaleT
 insert into Policy_CityResources (PolicyType, ResourceType, Quantity) values
 ('POLICY_DOUBLE_AGENTS', 'RESOURCE_CONSUMER', 6),
 ('POLICY_DOUBLE_AGENTS', 'RESOURCE_ELECTRICITY', 6);
+
+insert into LuaFormula(Type, Formula) values
+('FORMULA_EXCESS_HAPPINESS_POLICY_SCIENCE', 'local num, cityCount = ... if num <= 0 then return 0 else return math.min(5 * math.floor(num / 25), 50) end');
+
+insert into Policy_HappinessYieldModifier values
+('POLICY_RATIONALISM', 'YIELD_SCIENCE', 'FORMULA_EXCESS_HAPPINESS_POLICY_SCIENCE'),
+('POLICY_TREATY_ORGANIZATION', 'YIELD_SCIENCE', 'FORMULA_EXCESS_HAPPINESS_POLICY_SCIENCE');

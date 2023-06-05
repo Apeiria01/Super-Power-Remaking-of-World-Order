@@ -529,6 +529,11 @@ function ScienceTipHandler( control )
 			strText = strText .. Locale.ConvertTextKey("TXT_KEY_TP_SCIENCE_FROM_RELIGION", iScienceFromReligion);
 		end
 
+		local iScienceModFromHappiness = pPlayer:GetYieldModifierFromHappinessPolicy(GameInfoTypes["YIELD_SCIENCE"])
+		if iScienceModFromHappiness ~= 0 then
+			strText = strText .. "[NEWLINE]";
+			strText = strText .. Locale.ConvertTextKey("TXT_KEY_SP_UI_SCIENCE_BY_HAPPINESS_NEW", iScienceModFromHappiness);
+		end
 	
 		local iScienceFromRAs = pPlayer:GetScienceFromResearchAgreementsTimes100();
 		if (iScienceFromRAs ~= 0) then

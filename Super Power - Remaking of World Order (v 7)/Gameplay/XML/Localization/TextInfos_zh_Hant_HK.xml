@@ -4617,6 +4617,10 @@
 			<Row Tag="TXT_KEY_SP_UI_TOURISMBOOST_BY_NUM_GREAT_WORK">
 				<Text>來自傑作數量的加成: {1_num}%</Text>
 			</Row>
+
+			<Row Tag="TXT_KEY_SP_UI_SCIENCE_BY_HAPPINESS_NEW">
+				<Text>你的國家總體[ICON_HAPPINESS_1]滿意度較高，你的[ICON_RESEARCH]科研產出+{1_num}%</Text>
+			</Row>
 		
 			<Row Tag="TXT_KEY_SP_UI_HAPPINESS_CONSUMERGOODS_LOW">
 				<Text>由於你的[ICON_RES_CONSUMER]商品盈餘[COLOR_POSITIVE_TEXT]25[ENDCOLOR]個單位，所有城市-5%[ICON_HAPPINESS_4]不滿。</Text>
@@ -7055,7 +7059,7 @@
 		<Replace Tag="TXT_KEY_POLICY_TREATY_ORGANIZATION_HELP">
 			<Text>
 			[COLOR_POSITIVE_TEXT]民主燈塔[ENDCOLOR]
-			[NEWLINE]每25點[ICON_HAPPINESS_1]滿意度+5%[ICON_RESEARCH]科技值，上限提升50%。
+			[NEWLINE]每25點[ICON_HAPPINESS_1]滿意度+5%[ICON_RESEARCH]科技值，上限為50%（可同理性政策疊加）。
 			其他國家向你移民的速度加快100%。
 			</Text>
 		</Replace>

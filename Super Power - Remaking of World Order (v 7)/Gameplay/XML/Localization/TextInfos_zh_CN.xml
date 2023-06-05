@@ -4717,8 +4717,13 @@
 		<Row Tag="TXT_KEY_SP_UI_TOURISMBOOST_BY_HAPPINESS">
 			<Text>由你的国家总体[ICON_HAPPINESS_1]满意度较高，你的[ICON_TOURISM]魅力产出+</Text>
 		</Row>
+
 		<Row Tag="TXT_KEY_SP_UI_TOURISMBOOST_BY_NUM_GREAT_WORK">
 			<Text>来自杰作数量的加成: {1_num}%</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_SP_UI_SCIENCE_BY_HAPPINESS_NEW">
+			<Text>你的国家总体[ICON_HAPPINESS_1]满意度较高，你的[ICON_RESEARCH]科研产出+{1_num}%</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_SP_UI_HAPPINESS_CONSUMERGOODS_LOW">
@@ -7167,7 +7172,7 @@
 		<Replace Tag="TXT_KEY_POLICY_TREATY_ORGANIZATION_HELP">
 			<Text>
 			[COLOR_POSITIVE_TEXT]民主灯塔[ENDCOLOR]
-			[NEWLINE]每25点[ICON_HAPPINESS_1]满意度+5%[ICON_RESEARCH]科研，上限提升50%。
+			[NEWLINE]每25点[ICON_HAPPINESS_1]满意度+5%[ICON_RESEARCH]科研，上限为50%（可同理性政策叠加）。
 			其他国家向你移民的速度加快100%。
 			</Text>
 		</Replace>

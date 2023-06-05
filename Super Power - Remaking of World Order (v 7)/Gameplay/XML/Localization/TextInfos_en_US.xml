@@ -1168,6 +1168,9 @@
 				<Text>Bonus from the number of greak work: {1_num}%</Text>
 			</Row>
 		
+			<Row Tag="TXT_KEY_SP_UI_SCIENCE_BY_HAPPINESS_NEW">
+				<Text>Based on the overall [ICON_HAPPINESS_1] satisfaction of your country is high, your [ICON_RESEARCH] scientific research output +{1_num}%</Text>
+			</Row>
 
 			<Row Tag="TXT_KEY_SP_UI_HAPPINESS_CONSUMERGOODS_LOW">
 				<Text>-5% [ICON_HAPPINESS_4] Unhappiness in all cities because the amount of [ICON_RES_CONSUMER] Consumer Goods you have is larger than [COLOR_POSITIVE_TEXT]25[ENDCOLOR].</Text>
@@ -7994,7 +7997,7 @@
 		<Replace Tag="TXT_KEY_POLICY_TREATY_ORGANIZATION_HELP">
 			<Text>
 			[COLOR_POSITIVE_TEXT]Beacon of Democracy[ENDCOLOR]
-			[NEWLINE]+50% upper limit of Every 25 [ICON_HAPPINESS_1] excess Happiness providing +5% [ICON_RESEARCH] Science in all cities. 
+			[NEWLINE] Every 25 [ICON_HAPPINESS_1] excess Happiness providing +5% [ICON_RESEARCH] Science in all cities. (can be superimposed with the rational policy).
 			+100% [ICON_TEAM_4] International Immigration Rate from other civlizations to Your Nation.
 			</Text>
 		</Replace>
