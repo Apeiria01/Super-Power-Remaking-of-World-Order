@@ -627,42 +627,6 @@ function ScienceTipHandler( control )
 			strText = strText .. Locale.ConvertTextKey("TXT_KEY_TP_SCIENCE_FROM_RESEARCH_AGREEMENTS", iScienceFromRAs / 100);
 		end
 		
-		
---		-----------------------------SP Electricity Extra Science Income----------------------------------------
-		local strSPElectricityScienceEffects = Locale.ConvertTextKey("TXT_KEY_SP_UI_ELECTRICITY_EFFECTS_GENERAL")
-		
-		
-		if pPlayer:GetCurrentEra() >= GameInfo.Eras["ERA_MODERN"].ID then
-		
-			local CaptialCity = pPlayer:GetCapitalCity()
-			local ElectricityBonusCount = CaptialCity:GetNumBuilding(GameInfoTypes["BUILDING_ELECTRICITY_BONUS"])
-			local ElectricityPenaltyCount = CaptialCity:GetNumBuilding(GameInfoTypes["BUILDING_ELECTRICITY_PENALTY"])
-			
-
-			
-			
-			
-		
-			if ElectricityBonusCount >= 1 then
-					
-				strText = strText  .. "[NEWLINE]  [ICON_BULLET][COLOR_POSITIVE_TEXT]" 
-				strText = strText  .. "+" ..ElectricityBonusCount.."% " 	
-				strText = strText .. "[ENDCOLOR]";	
-				strText = strText  .. Locale.ConvertTextKey("TXT_KEY_SP_UI_ELECTRICITY_EFFECTS_BONUS")
-				
-			elseif ElectricityPenaltyCount >= 1 then
---			
-
-				strText = strText  .. "[NEWLINE]  [ICON_BULLET][COLOR_NEGATIVE_TEXT]" 
-				strText = strText  .. "-" ..ElectricityPenaltyCount.."% " 	
-				strText = strText .. "[ENDCOLOR]";		
-				strText = strText  .. Locale.ConvertTextKey("TXT_KEY_SP_UI_ELECTRICITY_EFFECTS_PENALTY")
-
-			end
-			
-		
-		end
-		
 		-- Let people know that building more cities makes techs harder to get
 		if (not OptionsManager.IsNoBasicHelp()) then
 			strText = strText .. "[NEWLINE][NEWLINE]";

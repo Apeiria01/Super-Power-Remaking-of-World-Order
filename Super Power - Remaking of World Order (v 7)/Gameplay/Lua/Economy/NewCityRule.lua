@@ -378,26 +378,26 @@ function SetCityPerTurnEffects(playerID)
 end -------------Function End
 
 function SetCityResEffects(playerID, ManpowerRes, ConsumerRes, ElectricRes)
-    if playerID == nil or Players[playerID] == nil or
-        Players[playerID]:GetCapitalCity() == nil or ManpowerRes == nil or
-        ConsumerRes == nil or ElectricRes == nil then
-        return;
-    end
-    local player = Players[playerID];
-    local CaptialCity = player:GetCapitalCity();
+    -- if playerID == nil or Players[playerID] == nil or
+    --     Players[playerID]:GetCapitalCity() == nil or ManpowerRes == nil or
+    --     ConsumerRes == nil or ElectricRes == nil then
+    --     return;
+    -- end
+    -- local player = Players[playerID];
+    -- local CaptialCity = player:GetCapitalCity();
 
     -- CaptialCity:SetNumRealBuilding(GameInfoTypes["BUILDING_MANPOWER_BONUS"], 0)
     -- CaptialCity:SetNumRealBuilding(GameInfoTypes["BUILDING_CONSUMER_BONUS"], 0)
     -- CaptialCity:SetNumRealBuilding(GameInfoTypes["BUILDING_CONSUMER_PENALTY"], 0)
-    CaptialCity:SetNumRealBuilding(GameInfoTypes["BUILDING_ELECTRICITY_BONUS"],
-        0)
-    CaptialCity:SetNumRealBuilding(
-        GameInfoTypes["BUILDING_ELECTRICITY_PENALTY"], 0)
+    -- CaptialCity:SetNumRealBuilding(GameInfoTypes["BUILDING_ELECTRICITY_BONUS"],
+    --     0)
+    -- CaptialCity:SetNumRealBuilding(
+    --     GameInfoTypes["BUILDING_ELECTRICITY_PENALTY"], 0)
 
-    local CityTotal = player:GetNumCities()
-    local DubCityTotal = CityTotal * 2
-    local CityDivd = math.ceil(CityTotal / 10)
-    print("Player Total Cities:" .. CityTotal)
+    -- local CityTotal = player:GetNumCities()
+    -- local DubCityTotal = CityTotal * 2
+    -- local CityDivd = math.ceil(CityTotal / 10)
+    -- print("Player Total Cities:" .. CityTotal)
 
     ----------------------Manpower Effects
     -- if ManpowerRes >= 25 then
@@ -479,61 +479,61 @@ function SetCityResEffects(playerID, ManpowerRes, ConsumerRes, ElectricRes)
     -- end
 
     ----------------------Electricity Effects
-    if player:GetCurrentEra() >= GameInfo.Eras["ERA_MODERN"].ID then
-        local PlayerTechsCount = Teams[player:GetTeam()]:GetTeamTechs()
-            :GetNumTechsKnown()
-        print("Player Techs count:" .. PlayerTechsCount)
-        local ModernTechsCount = PlayerTechsCount - 50
-        if ModernTechsCount > 15 then ModernTechsCount = 15 end
-        print("Modern Techs count" .. ModernTechsCount)
+    -- if player:GetCurrentEra() >= GameInfo.Eras["ERA_MODERN"].ID then
+    --     local PlayerTechsCount = Teams[player:GetTeam()]:GetTeamTechs()
+    --         :GetNumTechsKnown()
+    --     print("Player Techs count:" .. PlayerTechsCount)
+    --     local ModernTechsCount = PlayerTechsCount - 50
+    --     if ModernTechsCount > 15 then ModernTechsCount = 15 end
+    --     print("Modern Techs count" .. ModernTechsCount)
 
-        if ElectricRes >= 25 then
-            local ElectricityRate = math.floor(ElectricRes / CityTotal)
-            local ElectricityBonusLimit = ModernTechsCount * 5
-            print("Electricity Bonus Limit:" .. ElectricityBonusLimit)
+    --     if ElectricRes >= 25 then
+    --         local ElectricityRate = math.floor(ElectricRes / CityTotal)
+    --         local ElectricityBonusLimit = ModernTechsCount * 5
+    --         print("Electricity Bonus Limit:" .. ElectricityBonusLimit)
 
-            if ElectricityBonusLimit > 50 then
-                ElectricityBonusLimit = 50
-            end
+    --         if ElectricityBonusLimit > 50 then
+    --             ElectricityBonusLimit = 50
+    --         end
 
-            if ElectricityRate > ElectricityBonusLimit then
-                ElectricityRate = ElectricityBonusLimit
-            end
+    --         if ElectricityRate > ElectricityBonusLimit then
+    --             ElectricityRate = ElectricityBonusLimit
+    --         end
 
-            print("Electricity Rate:" .. ElectricityRate)
+    --         print("Electricity Rate:" .. ElectricityRate)
 
-            if ElectricityRate >= 1 then
-                CaptialCity:SetNumRealBuilding(
-                    GameInfoTypes["BUILDING_ELECTRICITY_BONUS"], ElectricityRate)
-                print("Electricity Bonus!")
-            end
-        elseif ElectricRes >= 0 and ElectricRes < 25 then
-            CaptialCity:SetNumRealBuilding(
-                GameInfoTypes["BUILDING_ELECTRICITY_BONUS"], 0)
-            CaptialCity:SetNumRealBuilding(
-                GameInfoTypes["BUILDING_ELECTRICITY_PENALTY"], 0)
-            print("No Electricity Bonus!")
-        elseif ElectricRes < 0 then
-            local ElectricityLackRaw = math.floor(ElectricRes * CityDivd)
-            local ElectricityLack = math.abs(ElectricityLackRaw)
-            local ElectricityPenaltyLimit = ModernTechsCount * 5
-            print("Electricity Penalty Limit:" .. ElectricityPenaltyLimit)
+    --         if ElectricityRate >= 1 then
+    --             CaptialCity:SetNumRealBuilding(
+    --                 GameInfoTypes["BUILDING_ELECTRICITY_BONUS"], ElectricityRate)
+    --             print("Electricity Bonus!")
+    --         end
+    --     elseif ElectricRes >= 0 and ElectricRes < 25 then
+    --         CaptialCity:SetNumRealBuilding(
+    --             GameInfoTypes["BUILDING_ELECTRICITY_BONUS"], 0)
+    --         CaptialCity:SetNumRealBuilding(
+    --             GameInfoTypes["BUILDING_ELECTRICITY_PENALTY"], 0)
+    --         print("No Electricity Bonus!")
+    --     elseif ElectricRes < 0 then
+    --         local ElectricityLackRaw = math.floor(ElectricRes * CityDivd)
+    --         local ElectricityLack = math.abs(ElectricityLackRaw)
+    --         local ElectricityPenaltyLimit = ModernTechsCount * 5
+    --         print("Electricity Penalty Limit:" .. ElectricityPenaltyLimit)
 
-            if ElectricityPenaltyLimit > 75 then
-                ElectricityPenaltyLimit = 75
-            end
+    --         if ElectricityPenaltyLimit > 75 then
+    --             ElectricityPenaltyLimit = 75
+    --         end
 
-            if ElectricityLack > ElectricityPenaltyLimit then
-                ElectricityLack = ElectricityPenaltyLimit
-            end
+    --         if ElectricityLack > ElectricityPenaltyLimit then
+    --             ElectricityLack = ElectricityPenaltyLimit
+    --         end
 
-            print("Electricity lacking:" .. ElectricityLack)
+    --         print("Electricity lacking:" .. ElectricityLack)
 
-            CaptialCity:SetNumRealBuilding(
-                GameInfoTypes["BUILDING_ELECTRICITY_PENALTY"], ElectricityLack)
-            print("Electricity Penalty!")
-        end
-    end
+    --         CaptialCity:SetNumRealBuilding(
+    --             GameInfoTypes["BUILDING_ELECTRICITY_PENALTY"], ElectricityLack)
+    --         print("Electricity Penalty!")
+    --     end
+    -- end
 end -------------Function End
 
 -- Check to Set Capital for avoiding CTD -- by CaptainCWB
@@ -627,8 +627,9 @@ function CheckCapital(iPlayerID)
 
                     -- Remove "BonusBT" from Old
                     if pOCapital:IsHasBuilding(building.ID) and
-                        (building.Type == "BUILDING_ELECTRICITY_BONUS" or
-                            building.Type == "BUILDING_ELECTRICITY_PENALTY" or
+                        (
+                            -- building.Type == "BUILDING_ELECTRICITY_BONUS" or
+                            -- building.Type == "BUILDING_ELECTRICITY_PENALTY" or
                             -- building.Type == "BUILDING_MANPOWER_BONUS" or
                             -- building.Type == "BUILDING_CONSUMER_BONUS" or
                             -- building.Type == "BUILDING_CONSUMER_PENALTY_WARNING" or
