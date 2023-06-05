@@ -160,3 +160,10 @@ insert into LuaFormula(Type, Formula) values
 insert into Policy_HappinessYieldModifier values
 ('POLICY_RATIONALISM', 'YIELD_SCIENCE', 'FORMULA_EXCESS_HAPPINESS_POLICY_SCIENCE'),
 ('POLICY_TREATY_ORGANIZATION', 'YIELD_SCIENCE', 'FORMULA_EXCESS_HAPPINESS_POLICY_SCIENCE');
+
+insert into LuaFormula(Type, Formula) values
+('FORMULA_CAPTURE_CITY_RESISTANCE_CHANGE', 'local pop, resistence, oldOwnerLoss = ... if pop < 6 or oldOwnerLoss then return -resistence else return -math.floor(resistence / 2) end');
+
+update Policies 
+set CaptureCityResistanceTurnsChangeFormula = 'FORMULA_CAPTURE_CITY_RESISTANCE_CHANGE'
+where Type = 'POLICY_MILITARISM';
