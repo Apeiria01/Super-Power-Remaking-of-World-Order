@@ -372,6 +372,7 @@
 			<ImprovementMaintenanceModifier>-50</ImprovementMaintenanceModifier>
 			<NoHillsImprovementMaintenance>true</NoHillsImprovementMaintenance>
 			<CanFoundMountainCity>true</CanFoundMountainCity>
+			<CiviliansFreePromotion>PROMOTION_INCA_CAN_CROSS_MOUNTAINS</CiviliansFreePromotion>
 		</Row>
 		<Row>
 			<Type>TRAIT_IGNORE_TERRAIN_IN_FOREST</Type>

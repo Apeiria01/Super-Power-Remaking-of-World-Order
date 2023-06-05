@@ -20,25 +20,6 @@ if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_SHOSHONE) then
 	end)
 end
 
-if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_INCA) then
-	Events.SerialEventUnitCreated.Add(function(iPlayerID, iUnitID)
-		local pPlayer = Players[iPlayerID]
-		if pPlayer == nil then return end
-		local pUnit = pPlayer:GetUnitByID(iUnitID)
-		if pUnit == nil then return end
-
-		if GameInfo.Leader_Traits { LeaderType = GameInfo.Leaders[pPlayer:GetLeaderType()].Type, TraitType =
-			"TRAIT_GREAT_ANDEAN_ROAD" } ()
-			and (GameInfo.Traits["TRAIT_GREAT_ANDEAN_ROAD"].PrereqPolicy == nil or (GameInfo.Traits["TRAIT_GREAT_ANDEAN_ROAD"].PrereqPolicy
-				and pPlayer:HasPolicy(GameInfoTypes[GameInfo.Traits["TRAIT_GREAT_ANDEAN_ROAD"].PrereqPolicy]))) then
-			if not pUnit:IsCombatUnit() then
-				pUnit:SetHasPromotion(GameInfoTypes["PROMOTION_INCA_CAN_CROSS_MOUNTAINS"], true);
-				print("Inca UA: Set Unit Can Cross Mountains", iPlayerID, iUnitID);
-			end
-		end
-	end)
-end
-
 if Game.GetGameSpeedType() == 3 then
 	Events.SerialEventUnitCreated.Add(
 		function(iPlayerID, iUnitID)
