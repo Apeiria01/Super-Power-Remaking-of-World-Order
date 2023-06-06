@@ -471,48 +471,6 @@ end
 
 Events.SerialEventUnitCreated.Add(OnCorpsArmeeSP)
 
--- Citadel Manager
-local CitadelList = {};
-function OnCitadelCreatSP(iPlayerID, iUnitID)
-	local pPlayer = Players[iPlayerID];
-	local pUnit = pPlayer:GetUnitByID(iUnitID);
-
-	if pPlayer == nil or pUnit == nil
-		or pUnit:GetBaseCombatStrength() == 0
-		or pUnit:GetPlot() == nil
-		or not pUnit:IsImmobile()
-		or not pUnit:IsHasPromotion(CitadelID)
-	then
-		return;
-	end
-	-- print ("Citadel Created!")
-	local pUnit = pPlayer:GetUnitByID(iUnitID);
-	local pPlot = pUnit:GetPlot();
-
-	table.insert(CitadelList, { iPlayerID, iUnitID, pPlot });
-	if not pPlot:IsWater() then
-		pPlot:SetImprovementType(GameInfo.Improvements["IMPROVEMENT_CITADEL"].ID);
-	else
-		pPlot:SetImprovementType(GameInfo.Improvements["IMPROVEMENT_COASTAL_FORT"].ID);
-	end
-end
-
-Events.SerialEventUnitCreated.Add(OnCitadelCreatSP)
-function OnCitadelDestroyedSP(iPlayerID, iUnitID)
-	for loop, citadelUnit in pairs(CitadelList) do
-		if iPlayerID == citadelUnit[1] and iUnitID == citadelUnit[2] and citadelUnit[3] ~= nil then
-			print("Citadel Destroyed!")
-			local pPlot = citadelUnit[3];
-
-			table.remove(CitadelList, loop)
-			pPlot:SetImprovementType(-1);
-			break;
-		end
-	end
-end
-
-Events.SerialEventUnitDestroyed.Add(OnCitadelDestroyedSP)
-
 function CarrierPromotionTransfer(player, unit)
 	local AntiAir1ID = GameInfo.UnitPromotions["PROMOTION_CARRIER_FIGHTER_ANTI_AIR_1"].ID
 	local AntiAir2ID = GameInfo.UnitPromotions["PROMOTION_CARRIER_FIGHTER_ANTI_AIR_2"].ID
