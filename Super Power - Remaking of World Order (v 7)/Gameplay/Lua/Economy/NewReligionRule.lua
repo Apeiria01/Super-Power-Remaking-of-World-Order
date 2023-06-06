@@ -50,12 +50,6 @@ function SPEReligionAdopt(pPlayer,iBelief,pHolyCity)
 		print("Choose BELIEF_JUST_WAR, set free Policy")
 		pPlayer:SetHasPolicy(GameInfo.Policies["POLICY_BELIEF_JUST_WAR"].ID,true,true)	
     
-    elseif iBelief == GameInfo.Beliefs["BELIEF_DEFENDER_FAITH"].ID
-    and pPlayer:GetID() == pHolyCity:GetOwner()
-    then
-		print("Choose BELIEF_DEFENDER_FAITH,set free building in holy city")
-		pHolyCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_DEFENDER_FAITH,1)
-
     elseif iBelief == GameInfo.Beliefs["BELIEF_SACRED_CALENDAR"].ID
     then
         print("Choose BELIEF_SACRED_CALENDAR, set free Policy")
@@ -205,10 +199,6 @@ function SPNReligionConquestedHolyCity(oldOwnerID, isCapital, cityX, cityY, newO
 			elseif GameInfo.Beliefs[v].Type == "BELIEF_RELIGION_PRESSURE" then
 				print("Player has BELIEF_RELIGION_PRESSURE and take back the Holy City")
 				pCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGION_PRESSURE,1)
-
-            elseif GameInfo.Beliefs[v].Type == "BELIEF_DEFENDER_FAITH" then
-				print("Player has BELIEF_DEFENDER_FAITH and take back the Holy City")
-				pCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_DEFENDER_FAITH,1)
 
             elseif GameInfo.Beliefs[v].Type == "BELIEF_RELIGIOUS_COLONIZATION" then
 				print("Player has BELIEF_RELIGIOUS_COLONIZATION and take back the Holy City")

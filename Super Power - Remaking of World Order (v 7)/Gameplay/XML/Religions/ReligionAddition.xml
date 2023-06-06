@@ -21,11 +21,6 @@
 			<Description>TXT_KEY_BELIEF_RELIGIOUS_COLONIZATION_SHORT</Description>
 		</Row>
 		<Row>
-			<Type>BUILDINGCLASS_BELIEF_DEFENDER_FAITH</Type>
-			<DefaultBuilding>BUILDING_BELIEF_DEFENDER_FAITH</DefaultBuilding>
-			<Description>TXT_KEY_BELIEF_DEFENDER_FAITH_SHORT</Description>
-		</Row>
-		<Row>
 			<Type>BUILDINGCLASS_BELIEF_RELIGIOUS_TEXTS</Type>
 			<DefaultBuilding>BUILDING_BELIEF_RELIGIOUS_TEXTS</DefaultBuilding>
 			<Description>TXT_KEY_BELIEF_RELIGIOUS_TEXTS_SHORT</Description>
@@ -128,22 +123,6 @@
 			<NeverCapture>true</NeverCapture>
 		</Row>
 		<Row>
-			<Type>BUILDING_BELIEF_DEFENDER_FAITH</Type>
-			<BuildingClass>BUILDINGCLASS_BELIEF_DEFENDER_FAITH</BuildingClass>
-			<Cost>-1</Cost>
-			<Description>TXT_KEY_BELIEF_DEFENDER_FAITH_SHORT</Description>
-			<Civilopedia>TXT_KEY_BELIEF_DEFENDER_FAITH_SHORT</Civilopedia>
-			<Strategy>TXT_KEY_BELIEF_DEFENDER_FAITH_SHORT</Strategy>
-			<MinAreaSize>-1</MinAreaSize>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<IconAtlas>BW_ATLAS_2</IconAtlas>
-			<PortraitIndex>8</PortraitIndex>
-			<GreatWorkCount>-1</GreatWorkCount>
-            <HolyCity>true</HolyCity>
-			<NeverCapture>true</NeverCapture>
-		</Row>
-
-		<Row>
 			<Type>BUILDING_BELIEF_RELIGIOUS_TEXTS</Type>
 			<BuildingClass>BUILDINGCLASS_BELIEF_RELIGIOUS_TEXTS</BuildingClass>
 			<Cost>-1</Cost>
@@ -174,24 +153,6 @@
 			<CostModifier>160</CostModifier>
 		</Row>
 	</Building_EnableUnitPurchase>
-
-	<Building_DomainFreeExperiences>
-		<Row>
-			<BuildingType>BUILDING_BELIEF_DEFENDER_FAITH</BuildingType>
-			<DomainType>DOMAIN_SEA</DomainType>
-			<Experience>15</Experience>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_BELIEF_DEFENDER_FAITH</BuildingType>
-			<DomainType>DOMAIN_LAND</DomainType>
-			<Experience>15</Experience>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_BELIEF_DEFENDER_FAITH</BuildingType>
-			<DomainType>DOMAIN_AIR</DomainType>
-			<Experience>15</Experience>
-		</Row>
-	</Building_DomainFreeExperiences>
 
 	<Building_YieldFromOtherYield>
 		<Row>
