@@ -3363,11 +3363,6 @@
 			<Text>The Wat is the Siamese unique building, replacing the Temple. It increases the [ICON_PEACE] Faith as well as the [ICON_RESEARCH] Science output of the city.</Text>
 		</Replace>-->
 
-
-
-		<Replace Tag="TXT_KEY_BUILDING_MUGHAL_FORT_HELP">
-			<Text>+25% [ICON_TOURISM] Tourism Output in the city. [NEWLINE][NEWLINE]City must have a Shrine.</Text>
-		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_MUGHAL_FORT_STRATEGY">
 			<Text>The Mughal is an unique to the Indian civilization, replacing the Temple. it not only increases the city's faith and culture output but also improves both the city's defensive strength. What's more, The Mughal will greatly improve the [ICON_TOURISM] Tourism Output in the city. The city must have a shrine to build this building.</Text>
 		</Replace>
@@ -8977,7 +8972,7 @@
 			<Text>Orthodox Church</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_ORTHODOX_CHURCH">
-			<Text>+200% religious pressure emanating from the Holy City, each city of your religion will provide you with a one-time [ICON_CULTURE] Cultural output when [ICON_PROPHET] Great Prophet appears in Holy City</Text>
+			<Text>+150% religious pressure emanating from the Holy City, each city of your religion will provide you with a one-time [ICON_CULTURE] Cultural output when [ICON_PROPHET] Great Prophet appears in Holy City</Text>
 		</Row>
 		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_UNITY">
 			<Text>Religion spreads to friendly city-states at double rate, gain 50% more [ICON_INFLUENCE] Influence than usual when you achieve any Quests from City-States with your Religion</Text>

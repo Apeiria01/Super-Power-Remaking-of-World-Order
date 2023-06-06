@@ -95,6 +95,7 @@
 			<Description>TXT_KEY_BELIEF_ORTHODOX_CHURCH</Description>
 			<ShortDescription>TXT_KEY_BELIEF_ORTHODOX_CHURCH_SHORT</ShortDescription>
 			<Enhancer>true</Enhancer>
+			<HolyCityPressureModifier>150</HolyCityPressureModifier>
 		</Row>
 
 		<Row>
