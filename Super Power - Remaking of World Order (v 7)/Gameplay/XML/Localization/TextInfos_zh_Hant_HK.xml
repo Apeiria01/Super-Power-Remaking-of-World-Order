@@ -1035,9 +1035,6 @@
 			<Text>研發科學理論之後該建築[COLOR_NEGATIVE_TEXT]過期[ENDCOLOR]（不再提供產出且不能建造）了。[NEWLINE][NEWLINE]但其+1[ICON_TOURISM]旅遊業績。</Text>
 		</Row>
 		
-		<Replace Tag="TXT_KEY_BUILDING_MUGHAL_FORT_HELP">
-			<Text>本城市+25%[ICON_TOURISM]旅遊業績產出。[NEWLINE][NEWLINE]城市必須擁有神祠。</Text>
-		</Replace>		
 		<Replace Tag="TXT_KEY_BUILDING_MUGHAL_FORT_STRATEGY">
 			<Text>莫臥兒城塞是印度文明的特有建築，替代神廟。它不僅提升城市的[ICON_PEACE]信仰值、[ICON_CULTURE]文化值和[ICON_TOURISM]旅遊業績產出，同時還能提高城市的防禦力。城市必須先擁有神祠。</Text>
 		</Replace>

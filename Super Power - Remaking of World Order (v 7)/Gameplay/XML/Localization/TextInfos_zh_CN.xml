@@ -1073,9 +1073,6 @@
 			<Text>研发科学理论之后该建筑[COLOR_NEGATIVE_TEXT]过期[ENDCOLOR]（不再提供产出且不能建造）了。[NEWLINE][NEWLINE]但其+1[ICON_TOURISM]魅力。</Text>
 		</Row>
 
-		<Replace Tag="TXT_KEY_BUILDING_MUGHAL_FORT_HELP">
-			<Text>本城市+25%[ICON_TOURISM]魅力产出。[NEWLINE][NEWLINE]城市必须拥有神祠。</Text>
-		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_MUGHAL_FORT_STRATEGY">
 			<Text>莫卧儿城塞是印度文明的特有建筑，替代神庙。它不仅提升城市的[ICON_PEACE]信仰、[ICON_CULTURE]文化和[ICON_TOURISM]魅力产出，同时还能提高城市的防御力。城市必须先拥有神祠。</Text>
 		</Replace>
