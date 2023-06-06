@@ -26,11 +26,6 @@
 			<Description>TXT_KEY_BELIEF_DEFENDER_FAITH_SHORT</Description>
 		</Row>
 		<Row>
-			<Type>BUILDINGCLASS_BELIEF_ORTHODOX_CHURCH</Type>
-			<DefaultBuilding>BUILDING_BELIEF_ORTHODOX_CHURCH</DefaultBuilding>
-			<Description>TXT_KEY_BELIEF_ORTHODOX_CHURCH_SHORT</Description>
-		</Row>
-		<Row>
 			<Type>BUILDINGCLASS_BELIEF_RELIGIOUS_TEXTS</Type>
 			<DefaultBuilding>BUILDING_BELIEF_RELIGIOUS_TEXTS</DefaultBuilding>
 			<Description>TXT_KEY_BELIEF_RELIGIOUS_TEXTS_SHORT</Description>
@@ -146,23 +141,6 @@
 			<GreatWorkCount>-1</GreatWorkCount>
             <HolyCity>true</HolyCity>
 			<NeverCapture>true</NeverCapture>
-		</Row>
-
-		<Row>
-			<Type>BUILDING_BELIEF_ORTHODOX_CHURCH</Type>
-			<BuildingClass>BUILDINGCLASS_BELIEF_ORTHODOX_CHURCH</BuildingClass>
-			<Cost>-1</Cost>
-			<Description>TXT_KEY_BELIEF_ORTHODOX_CHURCH_SHORT</Description>
-			<Civilopedia>TXT_KEY_BELIEF_ORTHODOX_CHURCH_SHORT</Civilopedia>
-			<Strategy>TXT_KEY_BELIEF_ORTHODOX_CHURCH_SHORT</Strategy>
-			<MinAreaSize>-1</MinAreaSize>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<IconAtlas>BW_ATLAS_2</IconAtlas>
-			<PortraitIndex>8</PortraitIndex>
-			<GreatWorkCount>-1</GreatWorkCount>
-            <HolyCity>true</HolyCity>
-			<NeverCapture>true</NeverCapture>
-			<ReligiousPressureModifier>200</ReligiousPressureModifier>
 		</Row>
 
 		<Row>

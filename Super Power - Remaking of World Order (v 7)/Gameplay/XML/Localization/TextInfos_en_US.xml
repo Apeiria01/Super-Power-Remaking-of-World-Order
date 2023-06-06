@@ -8972,7 +8972,7 @@
 			<Text>Orthodox Church</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_ORTHODOX_CHURCH">
-			<Text>+200% religious pressure emanating from the Holy City, each city of your religion will provide you with a one-time [ICON_CULTURE] Cultural output when [ICON_PROPHET] Great Prophet appears in Holy City</Text>
+			<Text>+150% religious pressure emanating from the Holy City, each city of your religion will provide you with a one-time [ICON_CULTURE] Cultural output when [ICON_PROPHET] Great Prophet appears in Holy City</Text>
 		</Row>
 		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_UNITY">
 			<Text>Religion spreads to friendly city-states at double rate, gain 50% more [ICON_INFLUENCE] Influence than usual when you achieve any Quests from City-States with your Religion</Text>
