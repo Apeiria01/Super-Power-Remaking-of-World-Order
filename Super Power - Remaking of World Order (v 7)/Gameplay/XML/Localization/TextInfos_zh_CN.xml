@@ -8173,7 +8173,7 @@
 			<Text>神圣殿堂</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_RELIGION_PRESSURE">
-			<Text>25%来自于世界奇观、自然奇观和地面设施（风景地标、摩艾石像群、宫堡等）的[ICON_CULTURE]文化产出增加到该城市的[ICON_TOURISM]魅力产出中</Text>
+			<Text>25%来自于世界奇观、自然奇观和地面设施（风景地标、摩艾石像群、葡萄酒庄园等）的[ICON_CULTURE]文化产出增加到信教城市的[ICON_TOURISM]魅力产出中</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SCIENCE_RELIGION_SHORT">
 			<Text>文庙私塾</Text>
