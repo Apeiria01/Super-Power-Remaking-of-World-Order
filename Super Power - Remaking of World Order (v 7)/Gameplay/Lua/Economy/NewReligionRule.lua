@@ -17,12 +17,6 @@ function SPEReligionAdopt(pPlayer,iBelief,pHolyCity)
         end
 
     --Enhanced
-    elseif iBelief == GameInfo.Beliefs["BELIEF_RELIGION_PRESSURE"].ID
-    and pPlayer:GetID() == pHolyCity:GetOwner()
-    then
-        print("Choose The Sacred Palace")
-        pHolyCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGION_PRESSURE,1)
-
     elseif iBelief == GameInfo.Beliefs["BELIEF_MISSIONARY_ZEAL"].ID
     and pPlayer:GetID() == pHolyCity:GetOwner()
 	then
@@ -195,10 +189,6 @@ function SPNReligionConquestedHolyCity(oldOwnerID, isCapital, cityX, cityY, newO
             elseif GameInfo.Beliefs[v].Type == "BELIEF_RELIGIOUS_TEXTS" then
 				print("Player has BELIEF_RELIGIOUS_TEXTS and take back the Holy City")
 				pCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGIOUS_TEXTS,1)
-
-			elseif GameInfo.Beliefs[v].Type == "BELIEF_RELIGION_PRESSURE" then
-				print("Player has BELIEF_RELIGION_PRESSURE and take back the Holy City")
-				pCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGION_PRESSURE,1)
 
             elseif GameInfo.Beliefs[v].Type == "BELIEF_RELIGIOUS_COLONIZATION" then
 				print("Player has BELIEF_RELIGIOUS_COLONIZATION and take back the Holy City")

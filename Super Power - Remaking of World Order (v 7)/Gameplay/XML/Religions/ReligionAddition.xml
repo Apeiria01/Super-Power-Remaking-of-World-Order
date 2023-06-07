@@ -10,11 +10,6 @@
 			<DefaultBuilding>BUILDING_BELIEF_TO_GLORY_OF_GOD</DefaultBuilding>
 			<Description>TXT_KEY_BELIEF_TO_GLORY_OF_GOD_SHORT</Description>
 		</Row>
-        <Row>
-            <Type>BUILDINGCLASS_BELIEF_RELIGION_PRESSURE</Type>
-            <DefaultBuilding>BUILDING_BELIEF_RELIGION_PRESSURE</DefaultBuilding>
-            <Description>TXT_KEY_BELIEF_RELIGION_PRESSURE_SHORT</Description>
-        </Row>
 		<Row>
 			<Type>BUILDINGCLASS_BELIEF_RELIGIOUS_COLONIZATION</Type>
 			<DefaultBuilding>BUILDING_BELIEF_RELIGIOUS_COLONIZATION</DefaultBuilding>
@@ -78,20 +73,6 @@
 			<Help>TXT_KEY_BELIEF_TO_GLORY_OF_GOD</Help>
 			<Description>TXT_KEY_BELIEF_TO_GLORY_OF_GOD_SHORT</Description>
 		</Row>
-        <Row>
-            <Type>BUILDING_BELIEF_RELIGION_PRESSURE</Type>
-            <BuildingClass>BUILDINGCLASS_BELIEF_RELIGION_PRESSURE</BuildingClass>
-            <Cost>-1</Cost>
-            <FaithCost>-1</FaithCost>
-            <NukeImmune>true</NukeImmune>
-            <GreatWorkCount>-1</GreatWorkCount>
-            <HolyCity>true</HolyCity>
-            <LandmarksTourismPercent>25</LandmarksTourismPercent>
-            <Help>TXT_KEY_BELIEF_RELIGION_PRESSURE</Help>
-            <Description>TXT_KEY_BELIEF_RELIGION_PRESSURE_SHORT</Description>
-            <NeverCapture>true</NeverCapture>
-        </Row>
-
 		<Row>
 			<Type>BUILDING_BELIEF_RELIGIOUS_COLONIZATION</Type>
 			<BuildingClass>BUILDINGCLASS_BELIEF_RELIGIOUS_COLONIZATION</BuildingClass>

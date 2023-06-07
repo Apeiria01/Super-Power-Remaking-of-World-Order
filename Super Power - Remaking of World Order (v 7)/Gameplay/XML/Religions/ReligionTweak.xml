@@ -81,6 +81,7 @@
 			<Description>TXT_KEY_BELIEF_RELIGION_PRESSURE</Description>
 			<ShortDescription>TXT_KEY_BELIEF_RELIGION_PRESSURE_SHORT</ShortDescription>
 			<Enhancer>true</Enhancer>
+			<LandmarksTourismPercent>25</LandmarksTourismPercent>
 		</Row>
 
 		<Row>

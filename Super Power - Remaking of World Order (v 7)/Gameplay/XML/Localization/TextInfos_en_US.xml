@@ -9042,7 +9042,7 @@
 			<Text>The Sacred Palace</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_RELIGION_PRESSURE">
-			<Text>25% of the [ICON_CULTURE] Culture from World Wonders, Natural Wonders, and Improvements (Landmarks, Moai, Chateau) is added to the [ICON_TOURISM] Tourism output of the city </Text>
+			<Text>25% of the [ICON_CULTURE] Culture from World Wonders, Natural Wonders, and Improvements (Landmarks, Moai, Winery) is added to the [ICON_TOURISM] Tourism output of the city </Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SCIENCE_RELIGION_SHORT">
 			<Text>Juku</Text>
