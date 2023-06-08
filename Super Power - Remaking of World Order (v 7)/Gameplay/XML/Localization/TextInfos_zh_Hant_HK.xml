@@ -8107,7 +8107,7 @@
 			<Text>傳教士傳教能力+25%，聖城誕生的傳教士傳教次數+2</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_MESSIAH">
-			<Text>大先知能力增強25%，催生大先知所需的[ICON_PEACE]信仰減少25%，大先知能進入未開邊國家領土</Text>
+			<Text>大先知能力增強25%，催生大先知所需的[ICON_PEACE]信仰減少25%，大先知移動無視地形，能夠進入敵方領土</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_TEXTS">
 			<Text>宗教傳播速度+25%(研發印刷機後+50%)，聖城每3點[ICON_PEACE]信仰提供1點基礎[ICON_CULTURE]文化產出</Text>
@@ -14748,5 +14748,9 @@
 			[NEWLINE][ICON_BULLET]聖地可為停留的單位移除[COLOR_POSITIVE_TEXT]負面狀態[ENDCOLOR]並使周圍單位恢復5HP。
 			</Text>
 		</Replace>
+
+		<Row Tag="TXT_KEY_PROMOTION_BELIEF_MESSIAH">
+			<Text>移動無視地形，能夠進入敵方領土。</Text>
+		</Row>
 	</Language_zh_Hant_HK>
 </GameData>

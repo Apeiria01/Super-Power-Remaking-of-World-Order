@@ -9096,7 +9096,7 @@
 			<Text>Messionary conversion strength +25%, +2 extra Religion Spread when Messionaries born in Holy City</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_MESSIAH">
-			<Text>Prophets 25% stronger and earned with 25% less [ICON_PEACE] Faith, your Prophets can enter other nations' territory even without an Open Border Agreement</Text>
+			<Text>Prophets 25% stronger and earned with 25% less [ICON_PEACE] Faith, your Prophets can move ignore terrain cost and enter other nations' territory even without an Open Border Agreement</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_TEXTS">
 			<Text>Religion spreads 25% faster (50% with Printing Press), every 3 [ICON_PEACE] Faith output in Holy City offer additional +1 basic [ICON_CULTURE] Culture output</Text>
@@ -16908,5 +16908,9 @@
 			[NEWLINE][ICON_BULLET]Holy Site will remove all [COLOR_POSITIVE_TEXT]Debuff Conditions[ENDCOLOR] and Heal +5 HP for units in adjacent tiles or in the same tile per turn.
 			</Text>
 		</Replace>
+
+		<Row Tag="TXT_KEY_PROMOTION_BELIEF_MESSIAH">
+			<Text>Move ignore terrain cost, Can Enter Rival Territory.</Text>
+		</Row>
 	</Language_en_US>
 </GameData>
