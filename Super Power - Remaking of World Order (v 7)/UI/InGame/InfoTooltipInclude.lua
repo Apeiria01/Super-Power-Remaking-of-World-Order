@@ -1659,6 +1659,16 @@ local function getHelpTextForImprovement( improvementID )
 	-- Culture
 	tips:insertIf( (improvement.Culture or 0)~=0 and S( "%s: %+i[ICON_CULTURE]", L"TXT_KEY_CITYVIEW_CULTURE_TEXT", improvement.Culture ) )
 
+	--Source from Improvment
+	if improvement.ImprovementResource ~= nil then
+		local item = GameInfo.Resources[improvement.ImprovementResource]
+		if  improvement.ImprovementResourceQuantity > 0 then
+			insert(tips,L(item.Description) .. ":" .. " " .."+" .. improvement.ImprovementResourceQuantity..L(item.IconString))
+		else 
+			insert(tips,L(item.Description) .. ":" .. " " .. improvement.ImprovementResourceQuantity..L(item.IconString))
+		end
+	end
+
 	-- Mountain Bonus
 	tip = GetYieldString( GameInfo.Improvement_AdjacentMountainYieldChanges( thisImprovementType ) )
 	tips:insertIf( #tip>0 and L"TXT_KEY_PEDIA_MOUNTAINADJYIELD_LABEL" .. tip )

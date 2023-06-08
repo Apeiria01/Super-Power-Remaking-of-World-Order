@@ -16901,7 +16901,11 @@
 			Unit will be consumed.
 			[NEWLINE][NEWLINE]Great Tile Improvements will connect Strategic Resources on this tile to the trade network.
 			[NEWLINE]Great Tile Improvements will provide extra [ICON_RESEARCH][ICON_PRODUCTION][ICON_GOLD][ICON_PEACE] Output for surrounding land Improvements.
-			[NEWLINE]Academy can make Great Scientists provide 5% more [ICON_RESEARCH] Science when used to discover new technology.
+			[NEWLINE]Each Great Tile Improvements will also provide the following additional effects:
+			[NEWLINE][ICON_BULLET]Academy can make Great Scientists provide 5% more [ICON_RESEARCH] Science when used to discover new technology.
+			[NEWLINE][ICON_BULLET]Manufactory can provide +10% [ICON_PRODUCTION] Production when constructing Wonders in located city.
+			[NEWLINE][ICON_BULLET]Costoms House provide +15 additional [ICON_RES_CONSUMER] Consumer.
+			[NEWLINE][ICON_BULLET]Holy Site will remove all [COLOR_POSITIVE_TEXT]Debuff Conditions[ENDCOLOR] and Heal +5 HP for units in adjacent tiles or in the same tile per turn.
 			</Text>
 		</Replace>
 	</Language_en_US>

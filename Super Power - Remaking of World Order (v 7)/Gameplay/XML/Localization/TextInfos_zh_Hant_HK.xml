@@ -14741,7 +14741,11 @@
 			單位將被消耗。
 			[NEWLINE][NEWLINE]偉人所建設施可將該區塊的戰略資源連入貿易網絡。
 			[NEWLINE]偉人所建設施可為周圍陸地設施提供對應[ICON_RESEARCH][ICON_PRODUCTION][ICON_GOLD][ICON_PEACE]產出。
-			[NEWLINE]若為學院則可在消耗大科學家獲取科技的時候額外+5%[ICON_RESEARCH]科研產出。
+			[NEWLINE]每處偉人設施提供以下額外效果：
+			[NEWLINE][ICON_BULLET]學院可在消耗大科學家獲取科技的時候額外+5%[ICON_RESEARCH]科研產出。
+			[NEWLINE][ICON_BULLET]製造中心可為所在城市建造奇觀時額外+10%[ICON_PRODUCTION]產能積累。
+			[NEWLINE][ICON_BULLET]海關提供額外+15[ICON_RES_CONSUMER]商品。
+			[NEWLINE][ICON_BULLET]聖地可為停留的單位移除[COLOR_POSITIVE_TEXT]負面狀態[ENDCOLOR]並使周圍單位恢復5HP。
 			</Text>
 		</Replace>
 	</Language_zh_Hant_HK>
