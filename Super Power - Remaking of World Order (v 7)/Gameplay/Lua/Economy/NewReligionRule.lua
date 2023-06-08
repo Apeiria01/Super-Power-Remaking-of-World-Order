@@ -29,16 +29,6 @@ function SPEReligionAdopt(pPlayer,iBelief,pHolyCity)
 		print("Choose BELIEF_RELIGIOUS_TEXTS")
 		pHolyCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGIOUS_TEXTS,1)
 
-    elseif iBelief == GameInfo.Beliefs["BELIEF_MESSIAH"].ID
-    then
-        print("Choose BELIEF_MESSIAH")
-        pPlayer:SetHasPolicy(GameInfo.Policies["POLICY_BELIEF_MESSIAH"].ID,true,true)
-        for iUnit in pPlayer:Units() do
-			if iUnit:GetUnitClassType() == GameInfoTypes.UNITCLASS_PROPHET then 
-				iUnit:SetHasPromotion((GameInfo.UnitPromotions["PROMOTION_RIVAL_TERRITORY"].ID), true)
-			end
-		end	
-
     elseif iBelief == GameInfo.Beliefs["BELIEF_JUST_WAR"].ID 
     then
 		print("Choose BELIEF_JUST_WAR, set free Policy")
@@ -205,26 +195,6 @@ function SPNReligionConquestedHolyCity(oldOwnerID, isCapital, cityX, cityY, newO
 
 end
 GameEvents.CityCaptureComplete.Add(SPNReligionConquestedHolyCity) 
-
-function SPNReligionUnitCreatedBuffBonus(iPlayer, iUnit)
-	if iPlayer == -1 or not Players[iPlayer]:HasCreatedReligion() then
-		return
-	end
-    local pPlayer = Players[iPlayer]
-    local pUnit = pPlayer:GetUnitByID(iUnit)
-    if not pPlayer:IsMajorCiv() or pUnit == nil then
-        return
-    end
-
-	if pUnit:GetUnitClassType() == GameInfoTypes.UNITCLASS_PROPHET 
-    then
-        if pPlayer:HasPolicy(GameInfo.Policies["POLICY_BELIEF_MESSIAH"].ID) then
-            print("Player has BELIEF_MESSIAH and Prophet has been born")
-            pUnit:SetHasPromotion((GameInfo.UnitPromotions["PROMOTION_RIVAL_TERRITORY"].ID), true)
-        end
-	end
-end
-Events.SerialEventUnitCreated.Add(SPNReligionUnitCreatedBuffBonus)
 
 function SPNReligionUnitCreatedOutputBonus(iPlayer, iUnit, iUnitType, iPlotX, iPlotY)
 	if iPlayer == -1 or not Players[iPlayer]:HasCreatedReligion() then

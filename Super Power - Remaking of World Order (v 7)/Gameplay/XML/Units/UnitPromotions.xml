@@ -1068,6 +1068,20 @@
 
 
 		<Row>
+			<Type>PROMOTION_BELIEF_MESSIAH</Type>
+			<Description>TXT_KEY_BELIEF_MESSIAH_SHORT</Description>
+			<Help>TXT_KEY_PROMOTION_BELIEF_MESSIAH</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<RivalTerritory>true</RivalTerritory>
+			<IgnoreTerrainCost>true</IgnoreTerrainCost>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_BELIEF_MESSIAH_SHORT</PediaEntry>
+			<CannotBeChosen>true</CannotBeChosen>
+		</Row>
+
+		<Row>
 			<Type>PROMOTION_RIVAL_TERRITORY</Type>
 			<Description>TXT_KEY_PROMOTION_RIVAL_TERRITORY</Description>
 			<Help>TXT_KEY_PROMOTION_RIVAL_TERRITORY</Help>

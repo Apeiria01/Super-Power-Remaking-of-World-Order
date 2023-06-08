@@ -293,6 +293,7 @@ SELECT 'BELIEF_RELIGIOUS_ART','BUILDINGCLASS_NOTRE_DAME',2 ;
 --***********************************************************************************************--
 --BELIEF_MISSIONARY_ZEAL
 --BELIEF_MESSIAH
+UPDATE Beliefs SET FreePromotionForProphet = 'PROMOTION_BELIEF_MESSIAH' WHERE Type = 'BELIEF_MESSIAH';
 --BELIEF_RELIGION_PRESSURE
 
 INSERT INTO Belief_BuildingClassYieldChanges(BeliefType,BuildingClassType,YieldType,YieldChange)
