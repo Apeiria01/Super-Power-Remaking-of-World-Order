@@ -9970,7 +9970,7 @@
 		</Row>
 
 		<Replace Tag="TXT_KEY_UNIT_JAPANESE_SAMURAI">
-			<Text>[COLOR_SELECTED_TEXT]旗本武士[ENDCOLOR]</Text>
+			<Text>旗本武士</Text>
 			<Plurality>2</Plurality>
 		</Replace>
 
@@ -14752,5 +14752,8 @@
 		<Row Tag="TXT_KEY_PROMOTION_BELIEF_MESSIAH">
 			<Text>移動無視地形，能夠進入敵方領土。</Text>
 		</Row>
+		<Replace Tag="TXT_KEY_PROMOTION_SAPPER_HELP">
+			<Text>攻城+66%戰鬥力，當在城市周邊時，所有2格內的友方單位獲得攻城+50%加成。</Text>
+		</Replace>
 	</Language_zh_Hant_HK>
 </GameData>

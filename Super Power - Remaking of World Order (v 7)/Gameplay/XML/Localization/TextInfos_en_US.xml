@@ -11762,7 +11762,7 @@
 		</Row>
 
 		<Replace Tag="TXT_KEY_UNIT_JAPANESE_SAMURAI">
-			<Text>[COLOR_SELECTED_TEXT]Hatamoto[ENDCOLOR]</Text>
+			<Text>Hatamoto</Text>
 			<Plurality>2</Plurality>
 		</Replace>
 		<Row Tag="TXT_KEY_UNIT_GERMAN_LONGSWORDSMAN">
@@ -16912,5 +16912,8 @@
 		<Row Tag="TXT_KEY_PROMOTION_BELIEF_MESSIAH">
 			<Text>Move ignore terrain cost, Can Enter Rival Territory.</Text>
 		</Row>
+		<Replace Tag="TXT_KEY_PROMOTION_SAPPER_HELP">
+			<Text>+66% Bonus vs Cities. [NEWLINE]When next to an enemy city, other units within 2 tiles get a 50% Bonus when attacking the city.</Text>
+		</Replace>
 	</Language_en_US>
 </GameData>

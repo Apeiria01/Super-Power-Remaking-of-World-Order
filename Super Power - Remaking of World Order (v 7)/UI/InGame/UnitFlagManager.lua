@@ -4305,8 +4305,13 @@ function TipHandler(Button)
             for unitPromotion in GameInfo.UnitPromotions() do
                 if unit:IsHasPromotion(unitPromotion.ID) then
                     if unitPromotion ~= nil then
-                        table.insert(otherPromotions,
-                            unitPromotion.IconStringSP .. Locale.ConvertTextKey(unitPromotion.Description));
+                        local promotionDescribe = unitPromotion.IconStringSP .. Locale.ConvertTextKey(unitPromotion.Description)
+                        if(unitPromotion.LostWithUpgrade) then
+                            promotionDescribe = Locale.ConvertTextKey("[ICON_NEGATIVE_BULLET]") .. promotionDescribe
+                        else 
+                            promotionDescribe = Locale.ConvertTextKey("[ICON_BULLET]") .. promotionDescribe
+                        end
+                        table.insert(otherPromotions,promotionDescribe);
                     end
                 end
             end
