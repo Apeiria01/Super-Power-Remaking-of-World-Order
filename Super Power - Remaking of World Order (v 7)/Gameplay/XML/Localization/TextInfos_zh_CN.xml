@@ -10102,7 +10102,7 @@
 		</Row>
 
 		<Replace Tag="TXT_KEY_UNIT_JAPANESE_SAMURAI">
-			<Text>[COLOR_SELECTED_TEXT]旗本武士[ENDCOLOR]</Text>
+			<Text>旗本武士</Text>
 			<Plurality>2</Plurality>
 		</Replace>
 
@@ -14953,5 +14953,8 @@
 		<Row Tag="TXT_KEY_PROMOTION_BELIEF_MESSIAH">
 			<Text>移动无视地形，能够进入敌方领土。</Text>
 		</Row>
+		<Replace Tag="TXT_KEY_PROMOTION_SAPPER_HELP">
+			<Text>攻城+66%战斗力，当在城市周边时，所有2格内的友方单位获得攻城+50%加成。</Text>
+		</Replace>
 	</Language_zh_CN>
 </GameData>

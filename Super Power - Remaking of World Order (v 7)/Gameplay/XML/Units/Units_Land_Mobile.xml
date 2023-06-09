@@ -1000,7 +1000,7 @@
 			<MilitarySupport>true</MilitarySupport>
 			<MilitaryProduction>true</MilitaryProduction>
 			<Pillage>true</Pillage>
-			<ObsoleteTech>TECH_ENGINEERING</ObsoleteTech>
+			<ObsoleteTech>TECH_GUNPOWDER</ObsoleteTech>
 			<GoodyHutUpgradeUnitClass>UNITCLASS_MEDIEVAL_CHARIOT</GoodyHutUpgradeUnitClass>
 			<AdvancedStartCost>15</AdvancedStartCost>
 			<XPValueAttack>3</XPValueAttack>
@@ -1033,7 +1033,7 @@
 			<MilitarySupport>true</MilitarySupport>
 			<MilitaryProduction>true</MilitaryProduction>
 			<Pillage>true</Pillage>
-			<ObsoleteTech>TECH_ENGINEERING</ObsoleteTech>
+			<ObsoleteTech>TECH_GUNPOWDER</ObsoleteTech>
 			<GoodyHutUpgradeUnitClass>UNITCLASS_MEDIEVAL_CHARIOT</GoodyHutUpgradeUnitClass>
 			<AdvancedStartCost>15</AdvancedStartCost>
 			<XPValueAttack>3</XPValueAttack>

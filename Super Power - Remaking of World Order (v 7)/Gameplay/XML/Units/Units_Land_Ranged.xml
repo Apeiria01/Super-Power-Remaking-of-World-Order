@@ -1433,10 +1433,6 @@
 			<UnitType>UNIT_ROMAN_BALLISTA</UnitType>
 			<PromotionType>PROMOTION_MUST_SET_UP</PromotionType>
 		</Row>
-		<!--<Row>
-			<UnitType>UNIT_ASSYRIAN_SIEGE_TOWER</UnitType>
-			<PromotionType>PROMOTION_CITY_SIEGE</PromotionType>
-		</Row>-->
 		<Row>
 			<UnitType>UNIT_ASSYRIAN_SIEGE_TOWER</UnitType>
 			<PromotionType>PROMOTION_ARMOR_BATTLESHIP_1</PromotionType>

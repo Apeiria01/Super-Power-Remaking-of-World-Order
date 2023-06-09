@@ -558,33 +558,16 @@
 
 	</IconTextureAtlases>
 	
-	
-
-
+	<!-- CIV5IconFontMapping.xml -->
 	<IconFontTextures>
 		<Row>
 			<IconFontTexture>ICON_FONT_TEXTURE_NEWLUXURIES</IconFontTexture>
 			<IconFontTextureFile>fonticons_newluxuries</IconFontTextureFile>
 		</Row>
-
 		<Row>
 			<IconFontTexture>ICON_FONT_TEXTURE_SPCITYBANNERS</IconFontTexture>
 			<IconFontTextureFile>FontIcons_SPCityBanners</IconFontTextureFile>
 		</Row>
-
-		<InsertOrAbort>
-			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS</IconFontTexture>
-			<IconFontTextureFile>FontIcons_Promotions</IconFontTextureFile>
-		</InsertOrAbort>
-		<InsertOrAbort>
-			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS</IconFontTexture>
-			<IconFontTextureFile>FontIcons_Promotions_New</IconFontTextureFile>
-		</InsertOrAbort>
-		
-	</IconFontTextures>
-
-	<!-- CIV5IconFontMapping.xml -->
-	<IconFontTextures>
 		<!-- Group -->
 			<InsertOrAbort>
 				<IconFontTexture>ICON_FONT_TEXTURE_GROUP</IconFontTexture>
@@ -1568,6 +1551,11 @@
 				<IconName>ICON_PROMOTION_HOWARD</IconName>
 				<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS</IconFontTexture>
 				<IconMapping>66</IconMapping>
+			</InsertOrAbort>
+			<InsertOrAbort>
+				<IconName>ICON_NEGATIVE_BULLET</IconName>
+				<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS</IconFontTexture>
+				<IconMapping>67</IconMapping>
 			</InsertOrAbort>
 		</IconFontMapping>
 
