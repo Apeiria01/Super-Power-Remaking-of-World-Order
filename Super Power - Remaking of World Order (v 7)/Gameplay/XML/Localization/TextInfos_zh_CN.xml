@@ -13721,7 +13721,7 @@
 			<Text>势如破竹</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_GAIN_MOVES_AFFER_KILLING_HELP">
-			<Text>每击杀一队敌方单位，获得一点移动力和一次额外攻击次数。</Text>
+			<Text>每对一支敌方部队造成30以上的伤害，则自身恢复25%最大生命并返还1移动力、1攻击次数。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_CAN_FULL_FIRE">
