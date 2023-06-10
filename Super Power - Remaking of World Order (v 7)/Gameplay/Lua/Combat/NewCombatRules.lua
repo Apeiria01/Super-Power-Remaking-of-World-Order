@@ -149,8 +149,6 @@ function NewAttackEffect()
 	local SpeComID = GameInfo.UnitPromotions["PROMOTION_SPECIAL_FORCES_COMBAT"].ID
 	local SPForce2ID = GameInfo.UnitPromotions["PROMOTION_SP_FORCE_2"].ID
 
-	local KillingEffectsID = GameInfo.UnitPromotions["PROMOTION_GAIN_MOVES_AFFER_KILLING"].ID
-
 	local EMPBomberID = GameInfo.UnitPromotions["PROMOTION_EMP_ATTACK"].ID
 	local AntiEMPID = GameInfo.UnitPromotions["PROMOTION_ANTI_EMP"].ID
 
@@ -271,16 +269,6 @@ function NewAttackEffect()
 
 		-- Attacking a Unit!
 	elseif defUnit then
-		----------- PROMOTION_GAIN_MOVES_AFFER_KILLING Effects
-		if attUnit:IsHasPromotion(KillingEffectsID) then
-			print("DefUnit Damage:" .. defFinalUnitDamage);
-			if defFinalUnitDamage >= 100 then
-				attUnit:SetMoves(attUnit:MovesLeft() + GameDefines["MOVE_DENOMINATOR"]);
-				attUnit:SetMadeAttack(false);
-				print("Ah, fresh meat!");
-			end
-		end
-
 		-- Debuff immune unit
 		if defUnit:IsHasPromotion(AntiDebuffID) then
 			print("This unit is debuff immune")
