@@ -36,13 +36,21 @@
 			</Image>
 			<!-- CityBannerBackgroundHL -->
 			<Image Anchor="C,C" Offset="0,0" TextureOffset="0,0" Size="111,32" Texture="Assets/UI/Art/Icons/CityBannerBackgroundHL.dds" ID="CityBannerBackgroundHL" Hidden="0">
+				<!-- CultureMeter -->
+				<Box Anchor="L,C" Offset="7,0" Size="6,30" Color="0,0,0,255" Hidden="0">
+					<Bar Anchor="C,B" Offset="0,0" Size="4,30" FGColor="Culture,128" Hidden="0" ID="CultureBarShadow" Direction="Up"/>
+					<Bar Anchor="C,B" Offset="0,0" Size="4,30" FGColor="Culture,255" Hidden="0" ID="CultureBar" Direction="Up"/>
+					<Box Anchor="L,C" Offset="0,0" Size="3,30" Color="0,0,0,64" Hidden="0"/>
+					<Box Anchor="R,C" Offset="1,0" Size="1,30" Color="255,255,0,64" Hidden="0"/>
+					<Label Anchor="R,B" AnchorSide="O.I" Offset="1,2" Color0="Culture,255" Color1="0,0,0,200" Font="TwCenMT14" FontStyle="Stroke" ForceNonIME="1" ID="CultureGrowth" Hidden="0"/>
+					<Label Anchor="R,T" AnchorSide="O.I" Offset="1,2" Color0="Food,255" Color1="0,0,0,200" Font="TwCenMT14" FontStyle="Stroke" ForceNonIME="1" ID="CityGrowth" Hidden="0"/>
+				</Box>
 				<!-- GrowthMeter CityBannerGrowthBackground -->
 				<Box Anchor="L,C" Offset="0,0" Size="6,30" Color="0,0,0,255" Hidden="0" ID="GrowthBox">
 					<Bar Anchor="C,B" Offset="0,0" Size="4,30" FGColor="Food,128" Hidden="0" ID="GrowthBarShadow" Direction="Up"/>
 					<Bar Anchor="C,B" Offset="0,0" Size="4,30" FGColor="Food,255" Hidden="0" ID="GrowthBar" Direction="Up"/>
 					<Box Anchor="L,C" Offset="0,0" Size="3,30" Color="0,0,0,64" Hidden="0"/>
 					<Box Anchor="R,C" Offset="1,0" Size="1,30" Color="255,255,0,64" Hidden="0"/>
-					<Label Anchor="R,B" AnchorSide="O.I" Offset="1,2" Color0="Food,255" Color1="0,0,0,200" Font="TwCenMT14" FontStyle="Stroke" ForceNonIME="1" ID="CityGrowth" Hidden="0"/>
 				</Box>
 				<!-- ProductionMeter  -->
 				<Box Anchor="R,C" Offset="0,0" Size="6,30" Color="0,0,0,255" Hidden="0">
@@ -80,8 +88,8 @@
 					<Box Anchor="C,T" Offset="0,1" Size="98,1" Color="255,255,255,64" Hidden="0"/>
 					<Box Anchor="C,B" Offset="0,0" Size="98,2" Color="0,0,0,64" Hidden="0"/>
 				</Box>
-				<!-- GarrisonFrame -->
-				<Image Anchor="C,C" Offset="-42,-8" Size="64,64" Texture="Assets/UI/Art/Icons/GarrisonFrame.dds" Hidden="0" ID="GarrisonFrame"/>
+				<!-- GarrisonFrame 
+				<Image Anchor="C,C" Offset="-42,-8" Size="64,64" Texture="Assets/UI/Art/Icons/GarrisonFrame.dds" Hidden="0" ID="GarrisonFrame"/>-->
 				<!-- CityBannerStrengthFrame  -->
 				<Image Anchor="C,C" Offset="0,0" Size="128,48" Texture="Assets/UI/Art/Icons/CityBannerStrengthFrame.dds" Hidden="0" ID="CityBannerStrengthFrame" ConsumeMouse="0"/>
 				<Box Anchor="C,C" Offset="0,6" Size="64,24" Color="0,0,0,0" Hidden="0" ConsumeMouse="0" ToolTip="TXT_KEY_CITYVIEW_CITY_COMB_STRENGTH_TT"/>

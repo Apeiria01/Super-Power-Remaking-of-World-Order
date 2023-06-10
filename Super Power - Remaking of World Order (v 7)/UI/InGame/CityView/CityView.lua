@@ -1968,6 +1968,9 @@ Events.SerialEventCityInfoDirty.Add(OnCityViewUpdate);
 function RecalcPanelSize()
 	Controls.RightStack:CalculateSize();
 	local size = math.min( screenSizeY + 30, Controls.RightStack:GetSizeY() + 85 );
+	if UI.GetHeadSelectedCity():IsNoAutoAssignSpecialists() then
+		size = screenSizeY + 30;
+	end
 	size = math.max( size, 160 );
     Controls.BuildingListBackground:SetSizeY( size );
     
@@ -2889,6 +2892,7 @@ function OnBuildingClicked(iBuildingID)
 	Controls.SellBuildingConfirm:SetHide(false);
 end
 
+local policyUnitedFront = GameInfo.Policies["POLICY_UNITED_FRONT"].ID
 function OnYes( )
 	Controls.SellBuildingConfirm:SetHide(true);
 
@@ -2905,6 +2909,28 @@ function OnYes( )
 			print("City Hall sold! Set Puppet!")
 			
 			pCity:SetNumRealBuilding(GameInfoTypes["BUILDING_PUPPET_GOVERNEMENT"],1);
+			--Policy United Front effect:if city has Military Base, donnot sell Military Buildings
+			local pPlayer = Players[pCity:GetOwner()]
+			if pPlayer == nil then return end
+
+			local isHasUnitedFront = pPlayer:HasPolicy(policyUnitedFront) and not pPlayer:IsPolicyBlocked(policyUnitedFront) 
+			if isHasUnitedFront then
+				print("Player has policy United Front")
+				local buildingClass = "BUILDINGCLASS_MILITARY_BASE"
+				local thisCivilizationType = pPlayer:GetCivilizationType()
+				local buildingType = GameInfoTypes["BUILDING_MILITARY_BASE"]
+				
+				for row in GameInfo.Civilization_BuildingClassOverrides() do
+					if (GameInfoTypes[row.CivilizationType] == thisCivilizationType and row.BuildingClassType == buildingClass) then
+						print("POLICY_UNITED_FRONT: Military Base UB!")
+						buildingType = row.BuildingType
+					end
+				end
+				if not pCity:IsHasBuilding(buildingType) then
+					print("City donnot have Military Base")
+					isHasUnitedFront = false
+				end
+			end
 			
 			for building in GameInfo.Buildings() do
 				if pCity:IsHasBuilding(building.ID)
@@ -2913,10 +2939,10 @@ function OnYes( )
 				or  building.BuildingClass == "BUILDINGCLASS_POLICE_STATION"
 				or  building.BuildingClass == "BUILDINGCLASS_PROCURATORATE"
 				
-				or  building.BuildingClass == "BUILDINGCLASS_BARRACKS"
+				or  ((building.BuildingClass == "BUILDINGCLASS_BARRACKS"
 				or  building.BuildingClass == "BUILDINGCLASS_ARMORY"
 				or  building.BuildingClass == "BUILDINGCLASS_ARSENAL"
-				or  building.BuildingClass == "BUILDINGCLASS_MILITARY_BASE")
+				or  building.BuildingClass == "BUILDINGCLASS_MILITARY_BASE") and not isHasUnitedFront))
 				then
 					pCity:SetNumRealBuilding(building.ID, 0);
 				end

@@ -126,48 +126,6 @@ function UpdateUnitPortrait(pUnit)
 		end
 	end
 
-	if pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_MAXHP_REDUCE_1"])
-		and pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_MAXHP_REDUCE_2"])
-		and pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_MAXHP_REDUCE_3"])
-		and pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_MAXHP_REDUCE_4"])
-	then
-		name = name .. " (-1000[ICON_SILVER_FIST])";
-	elseif pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_MAXHP_REDUCE_2"])
-		and pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_MAXHP_REDUCE_3"])
-		and pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_MAXHP_REDUCE_4"])
-	then
-		name = name .. " (-900[ICON_SILVER_FIST])";
-	elseif pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_MAXHP_REDUCE_1"])
-		and pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_MAXHP_REDUCE_3"])
-		and pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_MAXHP_REDUCE_4"])
-	then
-		name = name .. " (-800[ICON_SILVER_FIST])";
-	elseif pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_MAXHP_REDUCE_3"])
-		and pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_MAXHP_REDUCE_4"])
-	then
-		name = name .. " (-700[ICON_SILVER_FIST])";
-	elseif pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_MAXHP_REDUCE_2"])
-		and pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_MAXHP_REDUCE_4"])
-	then
-		name = name .. " (-600[ICON_SILVER_FIST])";
-	elseif pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_MAXHP_REDUCE_1"])
-		and pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_MAXHP_REDUCE_4"])
-	then
-		name = name .. " (-500[ICON_SILVER_FIST])";
-	elseif pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_MAXHP_REDUCE_4"])
-	then
-		name = name .. " (-400[ICON_SILVER_FIST])";
-	elseif pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_MAXHP_REDUCE_3"])
-	then
-		name = name .. " (-300[ICON_SILVER_FIST])";
-	elseif pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_MAXHP_REDUCE_2"])
-	then
-		name = name .. " (-200[ICON_SILVER_FIST])";
-	elseif pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_MAXHP_REDUCE_1"])
-	then
-		name = name .. " (-100[ICON_SILVER_FIST])";
-	end
-
 	SetName(name);
 
 	local flagOffset, flagAtlas = UI.GetUnitFlagIcon(pUnit);
@@ -563,6 +521,13 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
 			end
 
+			iModifier = pMyPlayer:GetTraitCityStateFriendshipModifier();
+			if (iModifier ~= 0) then
+				controlTable = g_MyCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_CITY_STATE_FRENDSHIP");
+				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
+			end
+
 			if (not bRanged) then
 
 				-- Crossing a River
@@ -767,7 +732,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				if (pTheirUnit:IsEmbarked()) then
 					iTheirStrength = pTheirUnit:GetEmbarkedUnitDefense();
 				else
-					iTheirStrength = pTheirUnit:GetMaxRangedCombatStrength(pMyUnit, nil, false, true);
+					iTheirStrength = pTheirUnit:GetMaxRangedCombatStrength(pMyUnit, nil, false, false);
 				end
 
 				if (iTheirStrength == 0 or pTheirUnit:GetDomainType() == DomainTypes.DOMAIN_SEA or pTheirUnit:IsRangedSupportFire()) then
@@ -973,13 +938,13 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 					if (mod ~= 0) then
 						controlTable = g_TheirCombatDataIM:GetInstance();
 						controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_PROMOTION_PROMOTION_GENERIC", Locale.ConvertTextKey(row.Description));
-						controlTable.Value:SetText(GetFormattedText(strText, mod, true, true));
+						controlTable.Value:SetText(GetFormattedText(strText, mod, false, true));
 					end
 
 					if (defenseMod ~= 0) then
 						controlTable = g_TheirCombatDataIM:GetInstance();
 						controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_PROMOTION_PROMOTION_DEFENSE", Locale.ConvertTextKey(row.Description));
-						controlTable.Value:SetText(GetFormattedText(strText, defenseMod, true, true));
+						controlTable.Value:SetText(GetFormattedText(strText, defenseMod, false, true));
 					end
 				end
 			end
@@ -1411,6 +1376,13 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
 			end
 
+			iModifier = pMyPlayer:GetTraitCityStateFriendshipModifier();
+			if (iModifier ~= 0) then
+				controlTable = g_MyCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_CITY_STATE_FRENDSHIP");
+				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
+			end
+
 			----------------------------------------------------------------------------
 			-- BONUSES THEIR UNIT GETS
 			----------------------------------------------------------------------------
@@ -1819,6 +1791,14 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 					controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_GOLDEN_AGE");
 					controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
 				end
+
+				iModifier = pTheirPlayer:GetTraitCityStateFriendshipModifier();
+				if (iModifier ~= 0) then
+					controlTable = g_TheirCombatDataIM:GetInstance();
+					controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_CITY_STATE_FRENDSHIP");
+					controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
+				end
+
 			end
 
 			--------------------------
@@ -2185,6 +2165,13 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 		if (iModifier ~= 0 and theirPlayer:IsGoldenAge()) then
 			controlTable = g_TheirCombatDataIM:GetInstance();
 			controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_GOLDEN_AGE");
+			controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
+		end
+
+		iModifier = theirPlayer:GetTraitCityStateFriendshipModifier();
+		if (iModifier ~= 0) then
+			controlTable = g_TheirCombatDataIM:GetInstance();
+			controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_CITY_STATE_FRENDSHIP");
 			controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
 		end
 	end

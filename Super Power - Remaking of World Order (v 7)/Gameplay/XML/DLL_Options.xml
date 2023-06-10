@@ -194,6 +194,18 @@
 			<Where Name="GLOBAL_PARATROOPS_AA_DAMAGE"/>
 			<Set Value="1"/>
 		</Update>-->
+		<Update>
+			<Where Name="GLOBAL_UNIT_EXTRA_ATTACK_DEFENSE_EXPERENCE"/>
+			<Set Value="1"/>
+		</Update>
+		<Update>
+			<Where Name="GLOBAL_WAR_CASUALTIES"/>
+			<Set Value="1"/>
+		</Update>
+		<Update>
+			<Where Name="PROMOTION_SPLASH_DAMAGE"/>
+			<Set Value="1"/>
+		</Update>
 	</CustomModOptions>
 
 
@@ -284,9 +296,9 @@
 			<Help>TXT_KEY_GAME_OPTION_SP_IMMIGRATION_HELP</Help>
 		</Row>
 		<Row>
-			<Type>GAMEOPTION_SP_NEWATTACK_OFF</Type>
-			<Description>TXT_KEY_GAME_OPTION_SP_NEWATTACK</Description>
-			<Help>TXT_KEY_GAME_OPTION_SP_NEWATTACK_HELP</Help>
+			<Type>GAMEOPTION_SP_SPLASH_AND_COLLATERAL_OFF</Type>
+			<Description>TXT_KEY_GAMEOPTION_SP_SPLASH_AND_COLLATERAL</Description>
+			<Help>TXT_KEY_GAMEOPTION_SP_SPLASH_AND_COLLATERAL_HELP</Help>
 		</Row>
 		<Row>
 			<Type>GAMEOPTION_SP_NUCLEARWINTER_OFF</Type>
@@ -305,9 +317,9 @@
 			<Help>TXT_KEY_GAME_OPTION_SP_CORPS_MODE_HIGH_HELP</Help>
 		</Row>
 		<Row>
-			<Type>GAMEOPTION_SP_CORPS_MODE_MEDIUM</Type>
-			<Description>TXT_KEY_GAME_OPTION_SP_CORPS_MODE_MEDIUM</Description>
-			<Help>TXT_KEY_GAME_OPTION_SP_CORPS_MODE_MEDIUM_HELP</Help>
+			<Type>GAMEOPTION_SP_CORPS_MODE_DISABLE</Type>
+			<Description>TXT_KEY_GAME_OPTION_SP_CORPS_MODE_CLOSE</Description>
+			<Help>TXT_KEY_GAME_OPTION_SP_CORPS_MODE_CLOSE_HELP</Help>
 		</Row>
 		<Row>
 			<Type>GAMEOPTION_SP_CORPS_MODE_LOW</Type>
@@ -319,5 +331,18 @@
 			<Description>TXT_KEY_GAME_OPTION_ABLE_GIFT_MILITIA</Description>
 			<Help>TXT_KEY_GAME_OPTION_ABLE_GIFT_MILITIA_HELP</Help>
 		</Row>
+
+		<Update>
+			<Where Type="GAMEOPTION_SP_CORPS_MODE_HIGH"/>
+			<Set Default="1"/>
+		</Update>
+		<Update>
+			<Where Type="GAMEOPTION_SP_IMMIGRATION_OFF"/>
+			<Set Default="1"/>
+		</Update>
+		<Update>
+			<Where Type="GAMEOPTION_SP_NUCLEARWINTER_OFF"/>
+			<Set Default="1"/>
+		</Update>
 	</GameOptions>
 </GameData>

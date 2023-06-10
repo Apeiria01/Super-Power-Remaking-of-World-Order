@@ -469,6 +469,10 @@
 			<Set Value="10"/>
 			<Where Name="MIN_CITY_STRIKE_DAMAGE" />
 		</Update>
+		<Replace>
+			<Name>CITY_STRENGTH_MOUNTAIN_CHANGE</Name>
+			<Value>1000</Value>
+		</Replace>
 
 		<!--Experience & Promotion Defines-->
 		
@@ -703,6 +707,15 @@
 		<Update>
 			<Set Value="4"/>
 			<Where Name="BASE_CULTURE_PER_GREAT_WORK" />
+		</Update>
+
+		<Update>
+			<Set Value="4"/>
+			<Where Name="INTERNAL_TRADE_ROUTE_FOOD_BONUS_BASE_FROM_ORIGIN" />
+		</Update>
+		<Update>
+			<Set Value="4"/>
+			<Where Name="INTERNAL_TRADE_ROUTE_PRODUCTION_BONUS_BASE_FROM_ORIGIN" />
 		</Update>
 
 		<Row>

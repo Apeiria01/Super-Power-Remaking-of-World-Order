@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <GameData>
 	<Language_en_US>
 <!--Civilopedias-->
@@ -12,7 +12,7 @@
 			<Text>[COLOR_YELLOW]Important Notes:[ENDCOLOR][NEWLINE]1. Check the saved file size. [NEWLINE]2. Check the Civilopedia before play (Hotkey [COLOR_POSITIVE_TEXT]F1[ENDCOLOR]). [NEWLINE]3. If always crash or saved files damaged, try Dx9.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_VERSION">
-			<Text>[COLOR_YELLOW]Version 8.0[ENDCOLOR]</Text>
+			<Text>[COLOR_YELLOW]Version 9.0[ENDCOLOR]</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_SP_MOD_SETUP">
@@ -50,11 +50,11 @@
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_IMMIGRATION_HELP">
 			<Text>International Immigration: Allow Population movement across borders.</Text>
 		</Row>
-		<Row Tag="TXT_KEY_GAME_OPTION_SP_NEWATTACK">
-			<Text>SP - [COLOR_YELLOW]New Attack Effects[ENDCOLOR] - OFF</Text>
+		<Row Tag="TXT_KEY_GAMEOPTION_SP_SPLASH_AND_COLLATERAL">
+			<Text>SP - [COLOR_YELLOW]Collateral and Splash[ENDCOLOR] - OFF</Text>
 		</Row>
-		<Row Tag="TXT_KEY_GAME_OPTION_SP_NEWATTACK_HELP">
-			<Text>New Attack Effects: EMP, AOE, Collateral Damage, Charge Damage, War Casualties...</Text>
+		<Row Tag="TXT_KEY_GAMEOPTION_SP_SPLASH_AND_COLLATERAL_HELP">
+			<Text>Collateral and Splash Effects: Special damage effects in combat.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_NUCLEARWINTER">
 			<Text>SP - [COLOR_YELLOW]Nuclear Winter[ENDCOLOR] - OFF</Text>
@@ -74,11 +74,11 @@
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_HIGH_HELP">
 			<Text>Corps Mode - High:   Allow to establish Corps and Armee. The Troops Level is High. Please refer to wiki page of troops.</Text>
 		</Row>
-		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_MEDIUM">
-			<Text>SP - Corps Mode (Medium)</Text>
+		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_CLOSE">
+			<Text>SP - [COLOR_YELLOW]Corps Mode[ENDCOLOR] - OFF</Text>
 		</Row>
-		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_MEDIUM_HELP">
-			<Text>Corps Mode - Medium: Allow to establish Corps and Armee. The Troops Level is Medium. Please refer to wiki page of troops.</Text>
+		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_CLOSE_HELP">
+			<Text>Corps Mode: Allow to establish Corps and Armee.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_LOW">
 			<Text>SP - Corps Mode (Low)</Text>
@@ -287,7 +287,14 @@
 			<Text>{TXT_KEY_CONCEPT_CITIES_CORRUPTION_TOPIC}</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CONCEPT_CITIES_CORRUPTION_SUMMARY">
-			<Text>Your city's efficiency fades with the distance from your capital due to corruption. Corruption happens in cities you founded other than capital as well as all annexed cities.[NEWLINE][NEWLINE] The city's corruption and the distance from your capital follows such rules:[NEWLINE][NEWLINE]less than 6 tiles - no corruption[NEWLINE]1/12 of the map length (at least 8 tiles, at most 12 tiles) - low corruption[NEWLINE]1/6 of the map length(at least 12 tiles) - medium corruption[NEWLINE]more than 1/3 of the map length (at least 24 tiles) - heavy corruption[NEWLINE][NEWLINE]Corruption will cause the output of Production, Gold, Science lost in those cities by a certain percent.</Text>
+			<Text>
+				Your city's efficiency fades with the distance from your capital due to corruption. Corruption happens in cities you founded other than capital as well as all annexed cities.
+				[NEWLINE][NEWLINE] The city's corruption and the distance from your capital follows such rules:
+				[NEWLINE][NEWLINE]less than 8 tiles - no corruption
+				[NEWLINE]1/8 of the map length (at least 14 tiles, at most 18 tiles) - low corruption
+				[NEWLINE]1/5 of the map length(at least 26 tiles) - medium corruption
+				[NEWLINE]more than 1/3 of the map length (at least 36 tiles) - heavy corruption
+				[NEWLINE][NEWLINE]Corruption will cause the output of Production, Gold, Science lost in those cities by a certain percent.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CONCEPT_CITIES_CORRUPTION_ADVISOR_QUESTION">
 			<Text>What is Corruption?</Text>
@@ -343,10 +350,6 @@
 		</Row>
 		<Row Tag="TXT_KEY_CONCEPT_IMMIGRATION_ADVISOR_QUESTION">
 			<Text>What is International Immigration?</Text>
-		</Row>
-		
-		<Row Tag="TXT_KEY_COUNT_BUILIDNGS">
-			<Text>Count Buildings</Text>
 		</Row>
 		
 		<!--************************************Research********************************-->
@@ -407,6 +410,15 @@
 
 
 		<!--************************************Combat********************************-->
+		<Row Tag="TXT_KEY_CONCEPT_CORPS_MOD_RULES_TOPIC">
+			<Text>[COLOR_POSITIVE_TEXT]SP: Corps Mod [ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CONCEPT_CORPS_MOD_RULES_DESCRIPTION">
+			<Text>{TXT_KEY_CONCEPT_CORPS_MOD_RULES_TOPIC}</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CONCEPT_CORPS_MOD_RULES_QUESTION">
+			<Text>What is Corps Mod?</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_CONCEPT_NEW_ATTACK_RULES_TOPIC">
 			<Text>SP: New Combat Rules</Text>
@@ -2183,7 +2195,7 @@
 			<Text>[ICON_CULTURE]{1_Num: number \"'+'##;'[COLOR_RED]-'##\"}</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CHOOSE_INTERNATIONAL_TRADE_ROUTE_ITEM_FAITH_SHORT">
-			<Text>[ICON_FAITH]{1_Num: number \"'+'##;'[COLOR_RED]-'##\"}</Text>
+			<Text>[ICON_PEACE]{1_Num: number \"'+'##;'[COLOR_RED]-'##\"}</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CHOOSE_INTERNATIONAL_TRADE_ROUTE_ITEM_RELIGIOUS_PRESSURE_SHORT">
 			<Text>{1_ReligionIcon}+{2_Num}</Text>
@@ -2971,7 +2983,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_INCA_QURIKANCHA_HELP</Tag>
-			<Text>City must be built within 2 tiles of a Mountain that is inside your territory.</Text>
+			<Text>Qurikancha can be built without nearby mountains.</Text>
 		</Row>
 		
 
@@ -3390,6 +3402,20 @@
 		<Replace Tag="TXT_KEY_BUILDING_CASTLE">
 			<Text>[ICON_STRENGTH] Castle</Text>
 		</Replace>
+
+		<Row Tag="TXT_KEY_BUILDING_NORMAN_CAMP">
+			<Text>[ICON_STRENGTH][ICON_WAR]Norman Camp</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_BUILDINGS_NORMAN_CAMP_TEXT">
+			<Text>WIP</Text>
+		</Row>
+		<Row Tag="TXT_KEY_DENFENSE_BUILDING_NORMAN_CAMP_HELP">
+			<Text>
+				Norman Camp is a Danish Unique Building, replacing the standard city Walls and cheaper, it never expires.
+				[NEWLINE][ICON_BULLET]+15 XP for Land Units and Naval trained in this city.
+				[NEWLINE][ICON_BULLET]Gain one-time Output of [ICON_FOOD] Food or [ICON_PRODUCTION] Production in this City when Capturing Cities or Destroying a City (All cities have the same random output per trigger).
+			</Text>
+		</Row>
 		
 		<Replace Tag="TXT_KEY_BUILDING_BARRACKS">
 			<Text>[ICON_WAR] Barracks</Text>
@@ -3747,8 +3773,12 @@
 			<Where Tag="TXT_KEY_WONDER_EIFFEL_TOWER_HELP" />
 			<Set Text="+24 [ICON_TOURISM] Tourism output." />
 		</Update>
-		
 
+
+		<Update>
+			<Where Tag="TXT_KEY_WONDER_UFFIZI_HELP" />
+			<Set Text="1 free Great Artist appears near the City where the Wonder was built." />
+		</Update>	
 
 
 
@@ -3943,7 +3973,9 @@
 				+50% [ICON_TOURISM] Tourism output from Great Works in all cities.
 				[NEWLINE][NEWLINE]+50% [ICON_CULTURE] Culture output in the city.
 				[NEWLINE][NEWLINE]Two Great Artist appear in the city where the building is built.
-				[NEWLINE][NEWLINE]Must have built a Museum in Venice.</Text>
+				[NEWLINE][NEWLINE]Must have built a Museum in Venice.
+				[NEWLINE][NEWLINE]+1 city work range.
+			</Text>
 		</Row>
 
 		<!-- Pedia tags -->
@@ -5025,6 +5057,11 @@
 			<Tag>TXT_KEY_BUILDING_CONSUMER_BONUS</Tag>
 			<Text>Provides additional [ICON_RES_CONSUMER] Consumer Goods.</Text>
 		</Row>
+
+		<Row>
+			<Tag>TXT_KEY_BUILDING_ELECTRICITY_BONUS</Tag>
+			<Text>Provides additional [ICON_RES_ELECTRICITY] Electricity.</Text>
+		</Row>
 		<!--Floating garden modify -->
 		<Replace Tag="TXT_KEY_BUILDING_FLOATING_GARDENS_HELP">
 			<Text>+3[ICON_FOOD] Food for lakes.
@@ -5273,7 +5310,8 @@
 			<Text>#Satrap's Court</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_SATRAPS_COURT_HELP">
-			<Text>Replace #City Hall [COLOR_NEGATIVE_TEXT](Lv1)[ENDCOLOR]. Compared with [COLOR_NEGATIVE_TEXT]Lv1[ENDCOLOR] City Hall, it requires no Maintenance, Consumer, extra Culture Threshold for implementing new policy or extra Unhappiness. In addition, it +2[ICON_HAPPINESS_1]Global Happiness.
+			<Text>
+				Replace #City Hall [COLOR_NEGATIVE_TEXT](Lv1)[ENDCOLOR]. Compared with [COLOR_NEGATIVE_TEXT]Lv1[ENDCOLOR] City Hall, it requires no Maintenance, Consumer, extra Culture Threshold for implementing new policy or extra Unhappiness. In addition, it +2[ICON_HAPPINESS_1]Global Happiness. +4% [ICON_GOLDEN_AGE] Golden Age Length.
 			</Text>
 		</Replace>
 
@@ -6776,9 +6814,10 @@
 		<Replace Tag="TXT_KEY_BUILDING_MUGHAL_FORT_HELP">
 			<Text>
 				Mughal Mosque is a Public Education building which can boost both the city's [ICON_RESEARCH] Science and [ICON_CULTURE] Culture output by enhancing the quality of its [ICON_CITIZEN] Population.
-				[NEWLINE][NEWLINE]+1 [ICON_RESEARCH] Science for every 2 [ICON_CITIZEN] Citizens in this City.
-				[NEWLINE][NEWLINE]No extra [ICON_GOLD] Gold Maintenance.
-				[NEWLINE][NEWLINE]Must be built in Large Cities.
+				[NEWLINE][ICON_BULLET]+1 [ICON_RESEARCH] Science for every 2 [ICON_CITIZEN] Citizens in this City.
+				[NEWLINE][ICON_BULLET]No extra [ICON_GOLD] Gold Maintenance.
+				[NEWLINE][ICON_BULLET]Must be built in Medium Cities.
+				[NEWLINE][ICON_BULLET]+100% religious pressure in the citiy.
 			</Text>
 		</Replace>
 		
@@ -7012,13 +7051,13 @@
 		</Row>
 		<Row Tag="TXT_KEY_SP_TROOPS_TEXT">
 			<Text>Corps Mode:[NEWLINE][NEWLINE]
-			Allows players to establish corps, combining 2 units of same type at one tile into corps (fleet for naval combat units), [ICON_STRENGTH]Strengh +10%, Max HP+100%. This requires the nearest city to has arsenal. You can find the action's button in unit panel.[NEWLINE]
-			Corps units can absorb an extra unit of same type to establish Armee (Armada for naval combat units). [ICON_STRENGTH]Strengh +40%, Max HP+200%. This requires the nearest city to has military base.[NEWLINE]
-			Besides, you can use great general (great admiral for naval combat units) to "upgrade" normal units to corps, with no requirements of buildings in city. The great general will be consumed then.[NEWLINE]
+			Allows players to establish corps, combining 2 units of same type at one tile into corps, [ICON_STRENGTH]Strengh +10%, Max HP+100%. This requires the nearest city to has arsenal. You can find the action's button in unit panel.[NEWLINE]
+			Corps units can absorb an extra unit of same type to establish Armee. [ICON_STRENGTH]Strengh +15%, Max HP+200%. This requires the nearest city to has military base.[NEWLINE]
+			Besides, you can use great general to "upgrade" normal units to corps, with no requirements of buildings in city. The great general will be consumed then.[NEWLINE]
 			Air forces are not able to establish corps or Armee. [NEWLINE]
 			"Troops" resource is introduced to limit the number of combat units. [NEWLINE]
 			Troop level high: Initially 24 troops provided for human players and 32 for AI. Cities with city size higher than "town" provide 4 extra troops per city size they acquire. [NEWLINE]
-			Troop level medium: Initially 12 troops provided for human players and 16 for AI. Cities with city size higher than "town" provide 2 extra troops per city size they acquire. [NEWLINE]
+			Troop level medium: Initially 12 troops provided for human players and 16 for AI. Cities with city size higher than "town" provide 2 extra troops per city size they acquire(Default). [NEWLINE]
 			Troop level low: Initially 6 troops provided for human players and 8 for AI. Cities with city size higher than "town" provide 1 extra troops per city size they acquire. [NEWLINE]
 			</Text>
 		</Row>
@@ -7152,8 +7191,8 @@
 		<Replace Tag="TXT_KEY_POLICY_LANDED_ELITE_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]Landed Elite[ENDCOLOR]
-				[NEWLINE][ICON_CAPITAL]Capital Plot +4 [ICON_FOOD] Food.
 				[NEWLINE][ICON_BULLET]+1 [ICON_FOOD] Food for every Farm and Fishing Net.
+				[NEWLINE][ICON_BULLET]+1 [ICON_FOOD] Food for every Terrace, Farm Polder, Kasbah, Shoshone Tipi.
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_LEGALISM_HELP" >
@@ -7165,7 +7204,6 @@
 		<Replace Tag="TXT_KEY_POLICY_OLIGARCHY_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]Oligarchy[ENDCOLOR]
-				[NEWLINE][ICON_CAPITAL]Capital Plot +4 [ICON_PRODUCTION] Production.
 				[NEWLINE][ICON_BULLET]Gain additional [ICON_PRODUCTION] Production in cities reached certain Population Size:
 				[NEWLINE][ICON_BULLET]Small City: +4 [ICON_PRODUCTION] Production.
 				[NEWLINE][ICON_BULLET]Medium City: +8 [ICON_PRODUCTION] Production.
@@ -7179,7 +7217,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]Monarchy[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]-50% extra [ICON_HAPPINESS_4] Unhappiness due to city's Population Size.
-				[NEWLINE][ICON_BULLET]+1 [ICON_GOLD] Gold for each [ICON_CITIZEN] Citizen in the [ICON_CAPITAL] Capital.
+				[NEWLINE][ICON_BULLET]+1 [ICON_GOLD] Gold for every [ICON_CITIZEN] Citizens and +1 [ICON_FOOD] Food, [ICON_CULTURE] Culture, [ICON_PRODUCTION] Production, [ICON_RESEARCH] Science for every 2 [ICON_CITIZEN] Citizens in the [ICON_CAPITAL] Capital.
 			</Text>
 		</Replace>
 
@@ -7195,7 +7233,6 @@
 		<Row Tag="TXT_KEY_POLICY_PREFECTURE_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]Prefeture[ENDCOLOR]
-				[NEWLINE][ICON_CAPITAL]Capital Plot +4 [ICON_CULTURE] Culture.
 				[NEWLINE][ICON_BULLET]Gain additional [ICON_CULTURE] Culture in cities reached certain Population Size:
 				[NEWLINE][ICON_BULLET]Small City: +4 [ICON_CULTURE] Culture.
 				[NEWLINE][ICON_BULLET]Medium City: +8 [ICON_CULTURE] Culture.
@@ -7286,7 +7323,7 @@
 				[NEWLINE][ICON_BULLET]One Worker appears near the [ICON_CAPITAL] Capital.
 				[NEWLINE][ICON_BULLET]When you found a [COLOR_POSITIVE_TEXT]New City[ENDCOLOR], one Worker will appear outside the city.
 				[NEWLINE][ICON_BULLET]+2 [ICON_RES_MANPOWER] Manpower per city.
-				[NEWLINE][ICON_BULLET]Gain 25 point free [ICON_PRODUCTION] Production for new founded city.
+				[NEWLINE][ICON_BULLET]Gain +25 one-time [ICON_PRODUCTION] production for all cities.
 				</Text>
 		</Replace>
 		
@@ -7551,7 +7588,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]Gunboat Diplomacy[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]Gain 5 more [ICON_INFLUENCE] Influence (at Standard speed) per turn with City-States you could demand tribute from.
-				[NEWLINE][ICON_BULLET]+100% military score when you demand tribute from City-States, and cost of influence is reduced to 1/4.
+				[NEWLINE][ICON_BULLET]+100% military score when you demand tribute from City-States, and cost of [ICON_INFLUENCE] Influence is reduced to 1/4.
 				[NEWLINE][ICON_BULLET]Gain Food, Production, Culture and Science bonus when you demand tribute from City-States.
 			</Text>
 		</Replace>
@@ -8087,13 +8124,18 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_UNITED_FRONT_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]United Front[ENDCOLOR][NEWLINE]+15% [ICON_RESEARCH] Science and [ICON_PRODUCTION] Production from every Military Base, Military Academy and Dojo. 
-			[NEWLINE][NEWLINE]The military buildings in city with military base keep existing even you sell the local government.</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]United Front[ENDCOLOR][NEWLINE]+15% [ICON_RESEARCH] Science and [ICON_PRODUCTION] Production from every Military Base, Military Academy and Dojo. 
+				[NEWLINE]The military buildings in city with military base keep existing even you sell the local government.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_FORTIFIED_BORDERS_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]Fortified Borders[ENDCOLOR][NEWLINE]+1 [ICON_HAPPINESS_1] Local Happiness from every Barracks, Arsenal, Military Base, Military Academy, Dojo, Metal Processing Plant, Steel Warehouse, Coal Company, Recycling Center, Oil Refinery, Uraninite Refinery, Coal Liquefaction System and Uranium in Coal Refining System.
-			[NEWLINE]-50% [ICON_GOLD]Maintenance of these Buildings.</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]Fortified Borders[ENDCOLOR]
+				[NEWLINE]+1 [ICON_HAPPINESS_1] Local Happiness from every Military building and Resource building.
+				[NEWLINE]-50% [ICON_GOLD]Maintenance of these Buildings and +100%[ICON_PRODUCTION] while building these buildings.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_NATIONALISM_HELP">
@@ -8106,18 +8148,18 @@
 			<Text>War Propaganda</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_MILITARISM_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]War Propaganda[ENDCOLOR][NEWLINE]-50% [ICON_RESISTANCE] Resistance Time for newly captured cities. The city will NOT resist if its [ICON_CITIZEN] Population is less than 6 after capturing.</Text>
+			<Text>[COLOR_POSITIVE_TEXT]War Propaganda[ENDCOLOR][NEWLINE]-50% [ICON_RESISTANCE] Resistance Time for newly captured cities. The city will NOT resist if its [ICON_CITIZEN] Population is less than 6 after capturing or the old owner has loss its original capital city.</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_MILITARISM_TEXT" >
 			<Text>Propaganda is a powerful weapon in war; it is used to dehumanize and create hatred toward a supposed enemy, either internal or external, by creating a false image in the mind. This can be done by using derogatory or racist terms, avoiding some words or by making allegations of enemy atrocities. Most propaganda wars require the home population to feel the enemy has inflicted an injustice, which may be fictitious or may be based on facts. The home population must also decide that the cause of their nation is just.</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_LIGHTNING_WARFARE_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]Lightning Warfare[ENDCOLOR][NEWLINE]+2 [ICON_MOVES] Movement for Great Generals.  +1 [ICON_MOVES] Movement for All Land Non-militia Units.</Text>
+			<Text>[COLOR_POSITIVE_TEXT]Lightning Warfare[ENDCOLOR][NEWLINE]+2 [ICON_MOVES] Movement for Great Generals.  +1 [ICON_MOVES] Movement for All Land Non-militia Units. The use of roads in enemy territory is permitted.</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_TOTAL_WAR_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]Total War[ENDCOLOR][NEWLINE]+5 [ICON_RES_MANPOWER] Manpower for each city. -1 Level [ICON_RES_CONSUMER] Consumer Goods and [ICON_RES_ELECTRICITY] Electricity cost of City Size before the city growing up to Large.</Text>
+			<Text>[COLOR_POSITIVE_TEXT]Total War[ENDCOLOR][NEWLINE]+5 [ICON_RES_MANPOWER] Manpower for each city. -1 Level [ICON_RES_CONSUMER] Consumer Goods and [ICON_RES_ELECTRICITY] Electricity cost of City Size before the city growing up to Large. Military unit training speed +25%.</Text>
 		</Replace>
 
 
@@ -8127,14 +8169,14 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_CULT_PERSONALITY_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]Cult of Personality[ENDCOLOR][NEWLINE] -15% [ICON_HAPPINESS_4] Unhappiness from [ICON_CITIZEN] Citizens in non-occupied Cities and the empire immediately enters a [ICON_GOLDEN_AGE] Golden Age.</Text>
+			<Text>[COLOR_POSITIVE_TEXT]Cult of Personality[ENDCOLOR][NEWLINE] -15% [ICON_HAPPINESS_4] Unhappiness from [ICON_CITIZEN] Citizens in non-occupied Cities and the empire immediately enters a [ICON_GOLDEN_AGE] Golden Age.[NEWLINE]Negates the [ICON_TOURISM] Tourism bonus from other players' technologies (from Printing Press to Internet). Half the [ICON_HAPPINESS_4] Unhappiness from Public Opinion.</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_NEW_ORDER" >
 			<Text>Authoritarianism</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_NEW_ORDER_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]Authoritarianism[ENDCOLOR][NEWLINE]Negates the [ICON_TOURISM] Tourism bonus from other players' technologies (from Printing Press to Internet). Half the [ICON_HAPPINESS_4] Unhappiness from Public Opinion.</Text>
+			<Text>[COLOR_POSITIVE_TEXT]Authoritarianism[ENDCOLOR][NEWLINE]+4 attack demage for each occupied original capital city.</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_NEW_ORDER_TEXT" >
 			<Text>Authoritarianism is a form of government characterized by absolute or blind obedience to authority, as against individual freedom and related to the expectation of unquestioning obedience.</Text>
@@ -8712,32 +8754,72 @@
 
 <!-- Religions -->
 	<!--**************************************************Belief Texts Tweak*************************************-->
+
+		<Replace Tag="TXT_KEY_BELIEF_GODDESS_LOVE_SHORT">
+			<Text>Goddress of Creation</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_GODDESS_LOVE">
+			<Text>+1 [ICON_HAPPINESS_1] Happiness in cities, gain 6 point [ICON_PEACE] Faith when a new [ICON_CITIZEN] Citizen is born (At Normal Game Speed)</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_OPEN_SKY">
+			<Text>+1 [ICON_CULTURE] Culture from Pasture, [ICON_RES_COW] +1 [ICON_PEACE] Faith, [ICON_RES_SHEEP] +1 [ICON_FOOD] Food, [ICON_RES_HORSE] +1 [ICON_PRODUCTION] Production</Text>
+		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_ANCESTOR_WORSHIP">
-			<Text>+1 [ICON_PEACE] Faith and +1 [ICON_CULTURE] Culture from every Shrine</Text>
+			<Text>+1 [ICON_PEACE] Faith and +1 [ICON_CULTURE] Culture from every Shrine, +10% [ICON_PRODUCTION] Production for pre-industrial wonders</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_DANCE_AURORA_SHORT">
+			<Text>Prometheus</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_DANCE_AURORA">
-			<Text>+2 [ICON_PEACE] Faith from Tundra tiles without Forest (Resource tiles on Tundra without Forest also qualify)</Text>
+			<Text>+1 [ICON_PRODUCTION] and +1 [ICON_PEACE] Faith Produciton in cities</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_DESERT_FOLKLORE">
+			<Text>+1 [ICON_PEACE] Faith from Desert tiles, +1 [ICON_CULTURE] Culture and +1 [ICON_PEACE] Faith from Oasis</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_SACRED_PATH">
+			<Text>+1 [ICON_CULTURE] Culture and +1 [ICON_PEACE] Faith from Jungle tiles</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_ORAL_TRADITION">
+			<Text>+1 [ICON_CULTURE] Culture from Plantations, +1 [ICON_GOLD] Gold from [ICON_RES_SILK], +1 [ICON_CULTURE] Culture from [ICON_RES_TEA]</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_MESSENGER_GODS">
-			<Text>+1 [ICON_RESEARCH] Science, [ICON_CULTURE] Culture and [ICON_GOLD] Gold in cities with a City Connection</Text>
+			<Text>+2 [ICON_RESEARCH] Science and +2 [ICON_PEACE] Faith in cities with a City Connection</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_BELIEF_GODDESS_OF_PURITY_SHORT">
+			<Text>Goddess of purity</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_GODDESS_OF_PURITY">
+			<Text>
+				+4 [ICON_FOOD] Food, +4[ICON_PEACE] Faith, +2 [ICON_PRODUCTION] Production and +2 [ICON_RESEARCH] Science from Fountain of Youth , 
+				+4 [ICON_CULTURE] Culrure, +4[ICON_PEACE] Faith, +2 [ICON_PRODUCTION] Production and +2 [ICON_RESEARCH] Science from Lake Victoria
+			</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_BELIEF_ASCETISM">
+			<Text>Shrines provide +1 [ICON_HAPPINESS_1] Happiness in cities</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_SACRED_WATERS">
+			<Text>+1 [ICON_HAPPINESS_1] Happiness from cities onrivers, +1 [ICON_PEACE] Faith from Lake and Coast</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GOD_CRAFTSMEN">
-			<Text>+1 [ICON_PEACE] Faith and +1 [ICON_CULTURE] Culture for each Amber, Jade, Coral and Lapis Lazuli resource</Text>
+			<Text>+1 [ICON_PEACE] Faith and +1[ICON_PRODUCTION] Production for each Amber, Jade, Coral and Lapis Lazuli resource</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_SUN_GOD">
-			<Text>+1 [ICON_PEACE] Faith and +1 [ICON_CULTURE] Culture for each Olive, Sugar, Perfume and Tobacco resource</Text>
+			<Text>+1 [ICON_PEACE] Faith and +1 [ICON_RESEARCH] Science for each Olive, Sugar, Perfume and Tobacco resource</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_EARTH_MOTHER">
-			<Text>+1 [ICON_PEACE] Faith for each Spices, Citrus, Banana and Cotton resource</Text>
+			<Text>+1 [ICON_PEACE] Faith and +1 [ICON_FOOD] Food for each Spices, Citrus, Banana and Cotton resource</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GODDESS_HUNT">
-			<Text>+1 [ICON_FOOD] Food and +1 [ICON_PEACE] Faith from Camps</Text>
+			<Text>+1 [ICON_FOOD] Food and +1 [ICON_PEACE] Faith from Camps, +1 [ICON_FOOD] Food from [ICON_RES_BISON], +1 [ICON_PRODUCTION] Production from [ICON_RES_DEER]</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GURUSHIP">
-			<Text>+2 [ICON_PEACE] Faith if city has a Specialist</Text>
+			<Text>+2 [ICON_PEACE] Faith, +1 [ICON_CULTURE] Culture, +1 [ICON_PRODUCTION] Production and +1 [ICON_RESEARCH] Science if city has a Specialist</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_SETTLEMENTS_SHORT">
+			<Text>Land Mania</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_SETTLEMENTS">
-			<Text>+50% faster border growth</Text>
+			<Text>+2 [ICON_CULTURE] Culture in cities, +50% faster border growth</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_PILGRIMAGE">
 			<Text>+4 [ICON_PEACE] Faith for each foreign city following this religion</Text>
@@ -8752,16 +8834,16 @@
 			<Text>+1 [ICON_HAPPINESS_1] Global Happiness for each city following this religion</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_INITIATION_RITES">
-			<Text>+255 [ICON_GOLD] Gold when each city first converts to this religion (At Normal Game Speed)</Text>
+			<Text>+180 [ICON_GOLD] Gold when each city first converts to this religion (At Normal Game Speed)</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_CHURCH_PROPERTY">
 			<Text>+6 [ICON_GOLD] Gold for each City following this religion</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_TITHE">
-			<Text>+1 [ICON_GOLD] Gold for every 3 followers of this religion</Text>
+			<Text>+1 [ICON_GOLD] Gold for every 2 followers of this religion</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GOD_WAR">
-			<Text>Gain [ICON_PEACE] Faith if you win a battle within 6 tiles if your city</Text>
+			<Text>Gain [ICON_PEACE] Faith if you win a battle within 6 tiles if your city, Barracks and Armony provides +2 [ICON_PEACE] Faith in city</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_MONASTERIES">
 			<Text>Use [ICON_PEACE] Faith to purchase Monasteries (+2 [ICON_PEACE] Faith, +2 [ICON_CULTURE] Culture, +1 [ICON_HAPPINESS_1] Local Happiness, +25% [ICON_GREAT_PEOPLE] Great People generation in this City)</Text>
@@ -8769,7 +8851,7 @@
 
 
 		<Replace Tag="TXT_KEY_BELIEF_GODDESS_STRATEGY">
-			<Text>+2 [ICON_PEACE] Faith for every Walls and Castles</Text>
+			<Text>+2 [ICON_PEACE] Faith for every Walls, +2 [ICON_CULTURE] Culture for every Castles</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_ART">
 			<Text>+2 [ICON_TOURISM] Tourism from Hagia Sophia, Great Mosque of Djenne, Angkor Wat, Borobudur, Sistine Chapel and Notre Dame</Text>
@@ -8778,13 +8860,13 @@
 			<Text>+2 [ICON_FOOD] Food for every Shrine and Temple</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_FERTILITY_RITES">
-			<Text>+2 [ICON_PEACE] Faith for every Granary</Text>
+			<Text>+2 [ICON_PEACE] Faith for every Granary, +1 [ICON_PEACE] Faith from [ICON_RES_WHEAT]</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_MONUMENT_GODS">
 			<Text>+2 [ICON_PEACE] Faith for every Monument</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_STONE_CIRCLES">
-			<Text>+2 [ICON_PEACE] Faith from Quarries and +2 [ICON_PEACE] Faith for every Stone Works</Text>
+			<Text>+2 [ICON_PEACE] Faith from Quarries and +2 [ICON_PEACE] Faith for every Stone Works, +1 [ICON_PRODUCTION] Production from each [ICON_RES_MARBLE] Marble</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_RELIQUARY">
 			<Text>+5 [ICON_PEACE] Faith from Landmarks, Academies, Customs Houses, Manufactories and Holy Sites</Text>
@@ -8808,20 +8890,20 @@
 			<Text>+25% [ICON_FOOD] Food Growth rate for city if not at war</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GOD_SEA">
-			<Text>+1 [ICON_CULTURE] Culture for every Fishing Net</Text>
+			<Text>+1 [ICON_CULTURE] Culture for every Fishing Net, +1 [ICON_PEACE] Faith and +1 [ICON_CULTURE] Culture for every Fishing Boat</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_TEARS_OF_GODS">
 			<Text>+2 [ICON_PEACE] Faith and +2 [ICON_CULTURE] Culture for every Gem and Pearl</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GOD_KING">
-			<Text>Palace provides +4 [ICON_PEACE] Faith</Text>
+			<Text>Palace provides +3 [ICON_PEACE] Faith, +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production and +1 [ICON_CULTURE] Culture from each [ICON_CITYBANNER_CITY_LV1] City Hall [COLOR_NEGATIVE_TEXT](Lv1)[ENDCOLOR]</Text>
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_BELIEF_PAPAL_PRIMACY">
 			<Text>+35 to [ICON_INFLUENCE] Influence resting point with City-States following this religion</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_CHARITABLE_MISSIONS">
-			<Text>Influence boosts from [ICON_GOLD] Gold gifts to City-States are increased by 50%. +20 to [ICON_INFLUENCE] Influence resting point with City-States following this religion</Text>
+			<Text>Influence boosts from [ICON_GOLD] Gold gifts to City-States are increased by 50%. +30 to [ICON_INFLUENCE] Influence resting point with City-States following this religion</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_JESUIT_EDUCATION">
 			<Text>May build Universities, Public Schools, and Research Labs with [ICON_PEACE] Faith. +2 [ICON_PEACE] Faith from every Universities, Public Schools, and Research Labs</Text>
@@ -8850,36 +8932,96 @@
 		
 
 		<!--**************************************************New Belief Texts*************************************-->
+		<Row Tag="TXT_KEY_BELIEF_RELIGIOUS_COLONIZATION_SHORT">
+			<Text>Religious Colonization</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_RELIGIOUS_COLONIZATION">
+			<Text>Use [ICON_PEACE] Faith to purchase [COLOR_POSITIVE_TEXT]Settler[ENDCOLOR] in Holy City, the cost will decrease after you adopt the policy Collective Rule</Text>
+		</Row>
+		<Row Tag="TXT_KEY_RELIGIOUS_SCIENCE_SHORT">
+			<Text>Religious Sciece</Text>
+		</Row>
+		<Row Tag="TXT_KEY_RELIGIOUS_SCIENCE">
+			<Text>+2 [ICON_RESEARCH] Science for each City following this religion, +2 [ICON_RESEARCH] Science from Holy Sites</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_SACRED_CALENDAR_SHORT">
+			<Text>Sacred Calendar</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_SACRED_CALENDAR">
+			<Text>+33% [ICON_GOLDEN_AGE] Golden Age length, +3 [ICON_GOLDEN_AGE] golden age points for every Religious Building purchased with [ICON_PEACE] Faith</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_COMMUNITY">
+			<Text>+1% [ICON_PRODUCTION] Production for each follower (max +20%)</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_HEATHEN_CONVERSION">
+			<Text>Missionaries convert adjacent Barbarian units to this civilization, convert some of the heretics to your religion in captured city, and gain output of [ICON_PEACE] Faith, [ICON_CULTURE] Culture and [ICON_GOLD] Gold related to the number of converted believers</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_MESSAGE_BELIEF_HEATHEN_CONVERSION_ALERT">
+			<Text>Some heretics in {1_name} were converted by us, gain [COLOR_POSITIVE_TEXT]{2_name} points[ENDCOLOR] [ICON_PEACE] Faith, [ICON_CULTURE] Culture and [ICON_GOLD] Gold</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_BELIEF_JUST_WAR">
+			<Text>+20% [ICON_STRENGTH] Combat Strength near enemy cities that follow this religion, -50% [ICON_RESISTANCE] Resistance Time for this cities when captured</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_PEACE_LOVING">
+			<Text>+1 [ICON_HAPPINESS_1] Global Happiness for every 6 followers of this religion in non-enemy foreign cities</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_CHORAL_MUSIC">
+			<Text>Temples provide +4 [ICON_CULTURE] Culture in cities with 5 followers</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_DEFENDER_FAITH">
+			<Text>+20% [ICON_STRENGTH] Combat Strength near friendly cities that follow this religion, +15 XP for Units trained in holy city</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_BELIEF_ORTHODOX_CHURCH_SHORT">
+			<Text>Orthodox Church</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_ORTHODOX_CHURCH">
+			<Text>+200% religious pressure emanating from the Holy City, each city of your religion will provide you with a one-time [ICON_CULTURE] Cultural output when [ICON_PROPHET] Great Prophet appears in Holy City</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_UNITY">
+			<Text>Religion spreads to friendly city-states at double rate, gain 50% more [ICON_INFLUENCE] Influence than usual when you achieve any Quests from City-States with your Religion</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_SP_NOTIFICATION_RELIGION_CIVQUEST_BONUS_SHORT">
+			<Text>Religion influence bonus</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_NOTIFICATION_RELIGION_CIVQUEST_BONUS">
+			<Text>Because {1_Name} adopted your religion, gain {2_Name} points extra [ICON_INFLUENCE] Influence from achievement of their Quests.</Text>
+		</Row>
+		
+
 		<Row Tag="TXT_KEY_BELIEF_FAITH_WITHOUT_BORDERS_SHORT">
 			<Text>Faith Without Borders</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_FAITH_WITHOUT_BORDERS">
-			<Text>+1 [ICON_PEACE] Faith for every 7 followers of this religion in other civilizations.</Text>
+			<Text>+1 [ICON_PEACE] Faith for every 3 followers of this religion in other civilizations</Text>
 		</Row>
+
+		<Replace Tag="TXT_KEY_BELIEF_WORLD_CHURCH">
+			<Text>+1 [ICON_CULTURE] Culture for every 3 followers of this religion in other civilizations</Text>
+		</Replace>
 
 		<Row Tag="TXT_KEY_BELIEF_MARSH_BELIEF_SHORT">
 			<Text>Swamp Belief</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_MARSH_BELIEF">
-			<Text>+3 [ICON_PEACE] Faith from Marsh tiles. </Text>
+			<Text>+3 [ICON_PEACE] Faith and +1 [ICON_CULTURE] Culture from Marsh tiles</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SNOW_BELIEF_SHORT">
 			<Text>Snow Spirit</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SNOW_BELIEF">
-			<Text>+2 [ICON_PEACE] Faith and +1 [ICON_FOOD] Food from tiles covered with Snow.</Text>
+			<Text>+1 [ICON_PEACE] Faith from Tundra tiles without Forest, +2 [ICON_PEACE] Faith and +1 [ICON_FOOD] Food from tiles covered with Snow</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_RIVER_CRAFTSMAN_SHORT">
 			<Text>Sudoku</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_RIVER_CRAFTSMAN">
-			<Text>+2 [ICON_HAPPINESS_1] Happiness for every Watermill.</Text>
+			<Text>+2 [ICON_HAPPINESS_1] Happiness for every Watermill</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_MAZU_SHORT">
 			<Text>Worship of Mazu</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_MAZU">
-			<Text>+2 [ICON_HAPPINESS_1] Happiness for every Harbor.</Text>
+			<Text>+2 [ICON_HAPPINESS_1] Happiness for every Harbor</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_CHARITES_SHORT">
 			<Text>Worship of Charites</Text>
@@ -8891,7 +9033,7 @@
 			<Text>Universal Love</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_EIRENE">
-			<Text>+15% [ICON_CULTURE] Culture for The Empire if not at war</Text>
+			<Text>+25% [ICON_CULTURE] Culture for The Empire if not at war</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_INQUISITION_SHORT">
 			<Text>Inquisition</Text>
@@ -8903,17 +9045,20 @@
 			<Text>The Sacred Palace</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_RELIGION_PRESSURE">
-			<Text>25% of the [ICON_CULTURE] Culture from World Wonders, Natural Wonders, and Improvements (Landmarks, Moai, Chateau) is added to the [ICON_TOURISM] Tourism output of the city. [ICON_TOURISM] Tourism output from Great Works +25%. +100% religious pressure emanating from the Holy City</Text>
+			<Text>25% of the [ICON_CULTURE] Culture from World Wonders, Natural Wonders, and Improvements (Landmarks, Moai, Chateau) is added to the [ICON_TOURISM] Tourism output of the city </Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SCIENCE_RELIGION_SHORT">
 			<Text>Juku</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SCIENCE_RELIGION">
-			<Text>+1% [ICON_RESEARCH] Science for each follower (max +50%)</Text>
+			<Text>+1% [ICON_RESEARCH] Science for each follower (max +30%)</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_EXTRA_RELIGION_SPREADS">
 			<Text>+1 Extra Religion Spread</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EXTRA_RELIGION_SPREADS_2">
+			<Text>+2 Extra Religion Spread</Text>
 		</Row>
 		<Row Tag="TXT_KEY_EXTRA_RELIGION_SPREADS_4">
 			<Text>+4 Extra Religion Spread</Text>
@@ -8950,6 +9095,19 @@
 		<Row Tag="TXT_KEY_PROMOTION_ARTIST_PROMOTION_HELP">
 			<Text>Can start a [ICON_GOLDEN_AGE] Golden Age whose lasting turns equal to [ICON_GREAT_ARTIST]Great Artist.</Text>
 		</Row>
+		<Row Tag="TXT_KEY_RELIGION_HOLYCITY_MARK">
+			<Text>Holy City Mark</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_BELIEF_MISSIONARY_ZEAL">
+			<Text>Messionary conversion strength +25%, +2 extra Religion Spread when Messionaries born in Holy City</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_MESSIAH">
+			<Text>Prophets 25% stronger and earned with 25% less [ICON_PEACE] Faith, your Prophets can enter other nations' territory even without an Open Border Agreement</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_TEXTS">
+			<Text>Religion spreads 25% faster (50% with Printing Press), every 3 [ICON_PEACE] Faith output in Holy City offer additional +1 basic [ICON_CULTURE] Culture output</Text>
+		</Replace>
+
 
 
 <!-- Resolutions -->
@@ -9993,7 +10151,10 @@
 			<Text>Pax Sinica</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_TRAIT_ART_OF_WAR">
-			<Text>During a [ICON_GOLDEN_AGE] Golden Age, China receive additional +20% [ICON_RESEARCH] Science and +20% [ICON_FOOD] Food nationwide. All Land Units can earn points toward a [ICON_GOLDEN_AGE] Golden Age for each enemy killed (50% of its [ICON_STRENGTH] Combat Strength).</Text>
+			<Text>
+				[ICON_BULLET]During a [ICON_GOLDEN_AGE] Golden Age, China receive additional +20% [ICON_RESEARCH] Science and +20% [ICON_FOOD] Food nationwide.
+				[NEWLINE][ICON_BULLET]All Land Units can earn points toward a [ICON_GOLDEN_AGE] Golden Age for each enemy killed (50% of its [ICON_STRENGTH] Combat Strength).
+			</Text>
 		</Replace>
 
 		<Row Tag="TXT_KEY_SP_UA_CHINA_GOLDENAGE_ANNOUNCE">
@@ -10007,105 +10168,171 @@
 			<Text>Republicanism</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_TRAIT_RIVER_EXPANSION">
-			<Text>Each Scientist +2 [ICON_RESEARCH] Science, Engineer +1 [ICON_PRODUCTION] Production, Merchant +2 [ICON_GOLD] Gold, Writer, Artist and Musician +1 [ICON_CULTURE] Culture. +50% [ICON_TEAM_4] International Immigration Move-in Rate from a Civilization with less [ICON_HAPPINESS_1] Happiness.</Text>
+			<Text>
+				[ICON_BULLET]Each Scientist +2 [ICON_RESEARCH] Science, Engineer +1 [ICON_PRODUCTION] Production, Merchant +2 [ICON_GOLD] Gold, Writer, Artist and Musician +1 [ICON_CULTURE] Culture.
+				[NEWLINE][ICON_BULLET]+50% [ICON_TEAM_4] International Immigration Move-in Rate from a Civilization with less [ICON_HAPPINESS_1] Happiness.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_STRATEGIC_RICHES_SHORT">
 			<Text>Great Russian Soul</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_TRAIT_STRATEGIC_RICHES">
-			<Text>+4 [ICON_GOLD] Gold, +2 [ICON_RES_CONSUMER] Consumer Goods and +2 [ICON_HAPPINESS_1] Local Happiness in all cities. All Units +15% [ICON_STRENGTH] Combat Strength bonus while fighting within their own territory.</Text>
+			<Text>
+				[ICON_BULLET]+4 [ICON_GOLD] Gold, +2 [ICON_RES_CONSUMER] Consumer Goods, +2 [ICON_HAPPINESS_1] Local Happiness, and +1 working range in all cities.
+				Gain [ICON_RESEARCH]research when a city gets a new plot naturally.
+				[NEWLINE][ICON_BULLET]All Units +15% [ICON_STRENGTH] Combat Strength bonus while fighting within their own territory.
+				[NEWLINE][ICON_BULLET]Ideology can be adopt after researching industrialized technology.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_OCEAN_MOVEMENT">
-			<Text>-1 Level for all Lv2 -Lv5 cities (England only has Lv1-Lv4 cities). All Units +15% [ICON_STRENGTH] Combat Strength bonus while fighting outside their own territory. </Text>
+			<Text>
+				[ICON_BULLET]-1 Level for all Lv2 -Lv5 cities (England only has Lv1-Lv4 cities).
+				[NEWLINE][ICON_BULLET]All Units +15% [ICON_STRENGTH] Combat Strength bonus while fighting outside their own territory. 
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_ENHANCED_CULTURE">
-			<Text>+3 [ICON_CULTURE] Culture for all cities and it never expires. +1 [ICON_TOURISM] Tourism output for all Great Works.</Text>
+			<Text>
+				[ICON_BULLET]+3 [ICON_CULTURE] Culture for all cities and it never expires.
+				[NEWLINE][ICON_BULLET]+1 [ICON_TOURISM] Tourism output for all Great Works.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_CONVERTS_LAND_BARBARIANS_SHORT">
 			<Text>Kritik der reinen Vernunft</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_TRAIT_CONVERTS_LAND_BARBARIANS">
-			<Text>Every 50 [ICON_PRODUCTION] Production output(production rate change to specifical items such as Settler is Not included) in a city offer additional +10 [ICON_CULTURE] Culture and +10 [ICON_RESEARCH] Science output. The bonus are added to the base outputs of your cities so they can be multiplied by buildings, policies, etc.</Text>
+			<Text>
+				[ICON_BULLET]Every 50 [ICON_PRODUCTION] Production output(production rate change to specifical items such as Settler is Not included) in a city offer additional +10 [ICON_CULTURE] Culture and +10 [ICON_RESEARCH] Science output. The bonus are added to the base outputs of your cities so they can be multiplied by buildings, policies, etc.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_CAPITAL_BUILDINGS_CHEAPER">
-			<Text>+2 [ICON_PRODUCTION] Production for all cities and it never expires. +15% [ICON_PRODUCTION] Production towards any buildings in all cities.</Text>
+			<Text>
+				[ICON_BULLET]+2 [ICON_PRODUCTION] Production for all cities and it never expires. 
+				[NEWLINE][ICON_BULLET]+15% [ICON_PRODUCTION] Production towards any buildings in all cities.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_WONDER_BUILDER_SHORT">
 			<Text>The Gift from the Nile</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_TRAIT_WONDER_BUILDER">
-			<Text>+1 [ICON_GOLD] Gold in every tile next to a river and +1 [ICON_PRODUCTION] Production for every Flood Plains tiles worked by your city. +2 [ICON_RES_MANPOWER] Manpower per city. +25% [ICON_PRODUCTION] Production towards Wonder construction. </Text>
+			<Text>
+				[ICON_BULLET]+1 [ICON_GOLD] Gold in every tile next to a river and +1 [ICON_PRODUCTION] Production for every Flood Plains tiles worked by your city.
+				[NEWLINE][ICON_BULLET]+2 [ICON_RES_MANPOWER] Manpower per city. +25% [ICON_PRODUCTION] Production towards Wonder construction.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_ENHANCED_GOLDEN_AGES">
-			<Text>During a [ICON_GOLDEN_AGE] Golden Age, all units receive +1 [ICON_MOVES] Movement and a +15% [ICON_STRENGTH] Combat Strength bonus. [ICON_GOLDEN_AGE] Golden Ages last 50% longer.</Text>
+			<Text>
+				[ICON_BULLET]During a [ICON_GOLDEN_AGE] Golden Age, all units receive +1 [ICON_MOVES] Movement and a +15% [ICON_STRENGTH] Combat Strength bonus. 
+				[NEWLINE][ICON_BULLET][ICON_GOLDEN_AGE] Golden Ages last 50% longer.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_TERROR">
-			<Text>+1 [ICON_PRODUCTION] Production for every Pasture. +1 [ICON_MOVES] Movement for all Mounted Units, Tank Units, Land Hit-and-run Units and Helicopter Units. Great General and Great Admiral Provide additional 15%[ICON_STRENGTH] Combat Strength and can build Military Academy without Consumed.</Text>
+			<Text>
+				[ICON_BULLET]+1 [ICON_PRODUCTION] Production for every Pasture.
+				[NEWLINE][ICON_BULLET]+1 [ICON_MOVES] Movement for all Mounted Units, Tank Units, Land Hit-and-run Units and Helicopter Units. Great General and Great Admiral Provide additional 15%[ICON_STRENGTH] Combat Strength and can build Military Academy without Consumed.
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_TRAIT_FIGHT_WELL_DAMAGED">
-			<Text>Units fight as though they were at full strength even when damaged. Gain [ICON_CULTURE] Culture when you build a Military Unit (100% of its [ICON_STRENGTH] Combat Strength). Add a random unselected Pantheon when you enhance a religion. </Text>
+			<Text>
+				[ICON_BULLET]Units fight as though they were at full strength even when damaged. 
+				[NEWLINE][ICON_BULLET]Gain [ICON_CULTURE] Culture when you build a Military Unit (100% of its [ICON_STRENGTH] Combat Strength). 
+				[NEWLINE][ICON_BULLET]Add a random unselected Pantheon when you enhance a religion.
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_TRAIT_BUFFALO_HORNS">
-			<Text>-50% experience needed to earn their next promotion for all units and pay 15% less for land unit maintenance. Each source of [ICON_RES_GOLD] Gold, [ICON_RES_SILVER] Silver and [ICON_RES_GEMS] Gems worked by Zulu Cities produces +5 [ICON_GOLD] Gold. </Text>
+			<Text>
+				[ICON_BULLET]-50% experience needed to earn their next promotion for all units and pay 15% less for land unit maintenance.
+				[NEWLINE][ICON_BULLET]Each source of [ICON_RES_GOLD] Gold, [ICON_RES_SILVER] Silver and [ICON_RES_GEMS] Gems worked by Zulu Cities produces +5 [ICON_GOLD] Gold. 
+			</Text>
 		</Replace>
 
 
 		<Replace Tag="TXT_KEY_TRAIT_VIKING_FURY">
-			<Text>Land Melee units and Naval Melee units pay no Movement [ICON_MOVES] to pillage and pillage Gold equal to 200% of the damage inflicted on a city. Receive triple [ICON_GOLD] Gold from barbarian encampments or pillaging cities. +1 [ICON_CULTURE] Culture output for every Fishing Net, Workboats and Offshore Platform.</Text>
+			<Text>
+				[ICON_BULLET]Land Melee units and Naval Melee units pay no Movement [ICON_MOVES] to pillage and pillage Gold equal to 200% of the damage inflicted on a city. 
+				[NEWLINE][ICON_BULLET]Receive triple [ICON_GOLD] Gold from barbarian encampments or pillaging cities.
+				[NEWLINE][ICON_BULLET]+1 [ICON_CULTURE] Culture output for every Fishing Net, Workboats and Offshore Platform.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_SLAYER_OF_TIAMAT">
-			<Text>When a city is conquered by force, gain a free Technology discovered by its owner (one Technology per enemy city). If there are at least 5 [ICON_CITIZEN] Citizens left in the city after capturing, +1 [ICON_CITIZEN] Citizen in your [ICON_CAPITAL] Capital.</Text>
+			<Text>
+				[ICON_BULLET]When a city is conquered by force, gain a free Technology discovered by its owner (one Technology per enemy city).
+				[NEWLINE][ICON_BULLET]If there are at least 5 [ICON_CITIZEN] Citizens left in the city after capturing, +1 [ICON_CITIZEN] Citizen in your [ICON_CAPITAL] Capital.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_CITY_STATE_FRIENDSHIP">
 			<Text>
-				[ICON_BULLET]City-State [ICON_INFLUENCE] Influence degrades at half and recovers at twice the normal rate.
+				[ICON_BULLET]City-State[ICON_INFLUENCE]Influence degrades at half and recovers at twice the normal rate.
 				[NEWLINE][ICON_BULLET]City-States do not become upset by intruding units and + 5 [ICON_INFLUENCE] Influence (at Standard speed) per turn with City-States you could demand tribute from.
 				[NEWLINE][ICON_BULLET] Each allied city-state gives military units +3% combat power, up to 30%.
 			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_RAZE_AND_HORSES">
-			<Text>Defeated Barbarian unit in encampments will join you. Receive [ICON_CULTURE] Culture, [ICON_RESEARCH] Science, [ICON_GOLD] Gold and [ICON_PEACE] Faith after destroying a city (amount = 10*turn, 1,000 maximum). Borrow City names from other in-game Civs.</Text>
+			<Text>
+				[ICON_BULLET]Defeated Barbarian unit in encampments will join you. 
+				[NEWLINE][ICON_BULLET]Receive [ICON_CULTURE] Culture, [ICON_RESEARCH] Science, [ICON_GOLD] Gold and [ICON_PEACE] Faith after destroying a city (amount = 10*turn, 1,000 maximum). 
+				[NEWLINE][ICON_BULLET]Borrow City names from other in-game Civs.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_CONVERTS_SEA_BARBARIANS_SHORT">
 			<Text>Pax Ottomana</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_TRAIT_CONVERTS_SEA_BARBARIANS">
-			<Text>+1 [ICON_PRODUCTION] Production for every Quarry, Fishing Net. +2 [ICON_PRODUCTION] Production for every Strategic Resources. +25% speed for worker's Tile Improvement construction rate.</Text>
+			<Text>
+				[ICON_BULLET]+1 [ICON_PRODUCTION] Production for every Quarry, Fishing Net. 
+				[NEWLINE][ICON_BULLET]+2 [ICON_PRODUCTION] Production for every Strategic Resources. 
+				[NEWLINE][ICON_BULLET]+25% speed for worker's Tile Improvement construction rate.
+			</Text>
 		</Replace>
 		
 		
 		
 
 		<Replace Tag="TXT_KEY_TRAIT_GATEWAY_AFRICA">
-			<Text>+2 Gold [ICON_GOLD], [ICON_CULTURE] Culture, [ICON_PEACE] Faith and [ICON_RESEARCH] Science for each Trade Route with a different civ or City-State. +4 [ICON_GOLD] Gold for each Trade Route sent to Morocco. All Land Units receive a [ICON_STRENGTH] Combat bonus (+20%) when fighting in Desert Tiles.</Text>
+			<Text>
+				[ICON_BULLET]+2 Gold [ICON_GOLD], [ICON_CULTURE] Culture, [ICON_PEACE] Faith and [ICON_RESEARCH] Science for each Trade Route with a different civ or City-State.
+				[NEWLINE][ICON_BULLET]+4 [ICON_GOLD] Gold for each Trade Route sent to Morocco. All Land Units receive a [ICON_STRENGTH] Combat bonus (+20%) when fighting in Desert Tiles.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_LUXURY_RETENTION">
-			<Text>Only lose 2 [ICON_HAPPINESS_1] Happiness from a Luxury Resource if your last copy of it is traded away. All cities receive free Markets. Economic Building will be gained to the city with Prerequisite Building after researching the corresponding technology.</Text>
+			<Text>
+				[ICON_BULLET]Only lose 2 [ICON_HAPPINESS_1] Happiness from a Luxury Resource if your last copy of it is traded away. 
+				[NEWLINE][ICON_BULLET]All cities receive free Markets. Economic Building will be gained to the city with Prerequisite Building after researching the corresponding technology.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_PHOENICIAN_HERITAGE">
-			<Text>+2 [ICON_PRODUCTION] Production for every Specialists. +4 [ICON_GOLD] Base Gold for every Sea International Trade Route and +25% Range for Cargoships.</Text>
+			<Text>
+				[ICON_BULLET]+2 [ICON_PRODUCTION] Production for every Specialists. 
+				[NEWLINE][ICON_BULLET]+4 [ICON_GOLD] Base Gold for every Sea International Trade Route and +25% Range for Cargoships.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_EXTRA_TRADE">
-			<Text>Resource diversity grants twice as much [ICON_GOLD] Gold for Portugal in Trade Routes. All coastal Cities receive a free Harbor.</Text>
+			<Text>
+				[ICON_BULLET]Resource diversity grants twice as much [ICON_GOLD]Gold for Portugal in Trade Routes.
+				[NEWLINE][ICON_BULLET]All coastal Cities receive a free Harbor.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_SUPER_CITY_STATE">
-			<Text>Cannot gain settlers nor annex cities. May purchase in puppet cities and puppet cities offers full [ICON_RESEARCH] Science, [ICON_CULTURE] Culture output and [ICON_FOOD] Food Growth. Double the normal number of Trade Routes and [ICON_TOURISM] Theming Bonus in [ICON_CAPITAL] Captal. A Merchant of Venice appears after researching Optics.</Text>
+			<Text>
+				[ICON_BULLET]Cannot gain settlers nor annex cities. May purchase in puppet cities and puppet cities offers full [ICON_RESEARCH] Science, [ICON_CULTURE] Culture output and [ICON_FOOD] Food Growth.
+				[NEWLINE][ICON_BULLET]Double the normal number of Trade Routes and[ICON_TOURISM]Theming Bonus in[ICON_CAPITAL]Captal.
+				[NEWLINE][ICON_BULLET]A Merchant of Venice appears after researching Optics. Food [ICON_FOOD] can be purchased from allied city-states, only once per turn.
+			</Text>
 		</Replace>
 
 
@@ -10126,40 +10353,70 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_WAYFINDING">
-			<Text>Can embark and move over Oceans immediately. City Hall Level is limited to Lv 3 (No Lv 4 and Lv 5 Cities). +10% [ICON_STRENGTH] Combat Strength bonus if within 2 tiles of a Moai.</Text>
+			<Text>
+				[ICON_BULLET]Can embark and move over Oceans immediately. 
+				[NEWLINE][ICON_BULLET]Settlers can found cities on coast plots. Cities founded on coast plots receive extra [ICON_PRODUTION] prodution and [ICON_CULTURE] culture, which increases with the eras.
+				[NEWLINE][ICON_BULLET]City Hall Level is limited to Lv 3 (No Lv 4 and Lv 5 Cities). 
+				[NEWLINE][ICON_BULLET]+10% [ICON_STRENGTH] Combat Strength bonus if within 2 tiles of a Moai.</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_CULTURE_FROM_KILLS">
-			<Text>Gains [ICON_CULTURE] Culture for the empire from each enemy unit killed (50% of their [ICON_STRENGTH] Combat Strength). -10% [ICON_CULTURE] Culture cost for adopting new Policies. </Text>
+			<Text>
+				[ICON_BULLET]Gains [ICON_CULTURE] Culture for the empire from each enemy unit killed (50% of their [ICON_STRENGTH] Combat Strength). 
+				[NEWLINE][ICON_BULLET]-10% [ICON_CULTURE] Culture cost for adopting new Policies. 
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_AMPHIB_WARLORD">
-			<Text> Rivers and adjacent difficult terrain count as clear terrain for [ICON_MOVES] Movement. Rivers extend length of land trade routes as if they were roads. +1 [ICON_GOLD] Gold for every Trading Post.</Text>
+			<Text>
+				[ICON_BULLET]Rivers and adjacent difficult terrain count as clear terrain for [ICON_MOVES] Movement. 
+				[NEWLINE][ICON_BULLET]Rivers extend length of land trade routes as if they were roads. +1 [ICON_GOLD] Gold for every Trading Post.
+			</Text>
 		</Replace>
 
 
 		<Replace Tag="TXT_KEY_TRAIT_BONUS_AGAINST_TECH">
-			<Text>+1 [ICON_CULTURE] Culture for all Specialists. All Units receive a [ICON_STRENGTH] Combat bonus (+25%)  when fighting units from a Civilization with more Cities than Ethiopia. </Text>
+			<Text>
+				[ICON_BULLET]+2 [ICON_CULTURE] Culture for all Specialists. 
+				[NEWLINE][ICON_BULLET]All Units receive a [ICON_STRENGTH] Combat bonus (+25%)  when fighting units from a Civilization with more Cities than Ethiopia. 
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_POPULATION_GROWTH">
-			<Text>-20% [ICON_HAPPINESS_4] Unhappiness from number of [ICON_CITIZEN] Citizens.</Text>
+			<Text>
+				[ICON_BULLET]-20% [ICON_HAPPINESS_4] Unhappiness from number of [ICON_CITIZEN] Citizens.
+				[NEWLINE][ICON_BULLET]+1%[ICON_FOOD]food for each [ICON_CITIZEN]major religion follower.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_EXTRA_BELIEF">
-			<Text>Choose one more Belief than normal when you found a Religion. A Great Prophet appears after researching Writing.</Text>
+			<Text>
+				[ICON_BULLET]Choose one more Belief than normal when you found a Religion. 
+				[NEWLINE][ICON_BULLET]A Great Prophet appears after researching Writing.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_FAITH_FROM_NATURE">
-			<Text>+1 [ICON_PEACE] Faith per city with an adjacent unimproved Forest. Bonus increases to +2 [ICON_PEACE] Faith in Cities with 3 or more adjacent unimproved Forest tiles. +1 [ICON_PRODUCTION] Production and +1 [ICON_PEACE] Faith for every Camp. </Text>
+			<Text>
+				[ICON_BULLET]+1 [ICON_PEACE] Faith per city with an adjacent unimproved Forest. 
+				[NEWLINE][ICON_BULLET]Bonus increases to +2 [ICON_PEACE] Faith in Cities with 3 or more adjacent unimproved Forest tiles. 
+				[NEWLINE][ICON_BULLET]+1 [ICON_PRODUCTION] Production and +1 [ICON_PEACE] Faith for every Camp. 
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_ANNEX_CITY_STATE">
-			<Text>Can spend [ICON_GOLD] Gold to annex or puppet a City-State that has been your ally for 8 turns. Each old Capital of City-State -2 Lv. at most of City Hall in its City (non-puppet).</Text>
+			<Text>
+				[ICON_BULLET]Can spend [ICON_GOLD] Gold to annex or puppet a City-State that has been your ally for 8 turns. 
+				[NEWLINE][ICON_BULLET]Each old Capital of City-State -2 Lv. at most of City Hall in its City (non-puppet).
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_CITY_STATE_BONUSES">
-			<Text>+50% [ICON_FOOD] Food, [ICON_CULTURE] Culture, and [ICON_PEACE] Faith from friendly City-States. Friendly Militaristic City-States offer units with free experience(20).+150 [ICON_INFLUENCE] Influence with a Great Person gift to a City-State. </Text>
+			<Text>
+				[ICON_BULLET]+50% [ICON_FOOD] Food, [ICON_CULTURE] Culture, and [ICON_PEACE] Faith from friendly City-States. 
+				[NEWLINE][ICON_BULLET]Friendly Militaristic City-States offer units with free experience(20).
+				[NEWLINE][ICON_BULLET]+150 [ICON_INFLUENCE] Influence with a Great Person gift to a City-State. 
+			</Text>
 		</Replace>
 		
 		
@@ -10167,7 +10424,10 @@
 		
 
 		<Replace Tag="TXT_KEY_TRAIT_LAND_TRADE_GOLD2">
-			<Text>+50% Range for Caravans. +300% for the efficiency of your trade routes spread the home city's religion. +2 [ICON_CULTURE] Culture and +2 [ICON_PEACE] Faith from every Oasis.</Text>
+			<Text>
+				[ICON_BULLET]+50% Range for Caravans. +300% for the efficiency of your trade routes spread the home city's religion.
+				[NEWLINE][ICON_BULLET]+2 [ICON_CULTURE] Culture and +2 [ICON_PEACE] Faith from every Oasis.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_DIPLOMACY_GREAT_PEOPLE">
@@ -10178,27 +10438,57 @@
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_TRAIT_SCHOLARS_JADE_HALL">
-			<Text>+2 [ICON_RESEARCH] Science for all Specialists. +2 [ICON_RESEARCH] Science for all Great Person tile improvements. </Text>
+			<Text>
+				[ICON_BULLET]+2 [ICON_RESEARCH] Science for all Specialists. 
+				[NEWLINE][ICON_BULLET]+2 [ICON_RESEARCH] Science for all Great Person tile improvements. 
+			</Text>
 		</Replace>
 
 
 		<Replace Tag="TXT_KEY_TRAIT_LONG_COUNT">
-			<Text>After researching Theology, receive a [ICON_RESEARCH] tech boost each time a scientific building / Wonder is built in the [ICON_CAPITAL] Capital. Also receive a bonus Great Person at the end of every Maya Long Count calendar cycle (every 394 years in game, not true!). Each bonus person can only be chosen once for the first round.</Text>
+			<Text>
+				After researching Theology, receive a [ICON_RESEARCH] tech boost each time a scientific building / Wonder is built in the [ICON_CAPITAL] Capital. Also receive a bonus Great Person at the end of every Maya Long Count calendar cycle (every 394 years in game, not true!). Each bonus person can only be chosen once for the first round.</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_IGNORE_TERRAIN_IN_FOREST">
-			<Text>Units move through Forest and Jungle in friendly territory as if they were Roads. These tiles can be used to establish [ICON_CONNECTED] City Connections upon researching The Wheel. Caravans move along Forest and Jungle as if they were Roads. All Land Units double the movement in Forest and Jungle. Forest will not be removed when a farm has been built. </Text>
+			<Text>
+				[ICON_BULLET]Units move through Forest and Jungle in friendly territory as if they were Roads.These tiles can be used to establish [ICON_CONNECTED] City Connections upon researching The Wheel. Caravans move along Forest and Jungle as if they were Roads. All Land Units double the movement in Forest and Jungle. 
+				[NEWLINE][ICON_BULLET]Forest will not be removed when a farm has been built. 
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_SEVEN_CITIES">
-			<Text>Receive [ICON_GOLD] Gold bonus for discovering a Natural Wonder (bonus enhanced if first to discover it) and tile yields from Natural Wonders are doubled. Cities with Amusement Park receive provides [ICON_HAPPINESS_1] Global Happiness instead of [ICON_HAPPINESS_1] Local Happiness, +2 [ICON_GOLD] Gold and +2 [ICON_CULTURE] Culture output for each source of [ICON_RES_COW] Cattle and [ICON_RES_BISON] Bison.</Text>
+			<Text>
+				[ICON_BULLET]Receive [ICON_GOLD] Gold bonus for discovering a Natural Wonder (bonus enhanced if first to discover it) and tile yields from Natural Wonders are doubled. 
+				[NEWLINE][ICON_BULLET]Cities with Amusement Park receive provides [ICON_HAPPINESS_1] Global Happiness instead of [ICON_HAPPINESS_1] Local Happiness, +2 [ICON_GOLD] Gold and +2 [ICON_CULTURE] Culture output for each source of [ICON_RES_COW] Cattle and [ICON_RES_BISON] Bison.</Text>
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_TRAIT_GREAT_ANDEAN_ROAD">
-			<Text>Units ignore terrain costs when moving into any tile with Hills. No maintenance costs for improvements in Hills; half cost elsewhere. Workers can remove [ICON_RES_SHEEP] Sheep on the tiles with Hills.</Text>
+			<Text>
+				[ICON_BULLET]Units ignore terrain costs when moving into any tile with Hills.Civilian units can enter mountain tiles. No maintenance costs for improvements in Hills; half cost elsewhere. Workers can remove [ICON_RES_SHEEP] Sheep on the tiles with Hills.
+				[NEWLINE][ICON_BULLET]Settlers will not lose HP if end turns on mountain tiles, and can build cities on them.Mountain cities gain additional [ICON_RESEARCH]science and [ICON_FOOD]food, which increases over eras.
+			</Text>
 		</Replace>
 
-	
+		<Replace Tag="TXT_KEY_TRAIT_SOLIDARITY">
+			<Text>
+				[ICON_BULLET]Receive a free Social Policy when you advance to the next era.
+			</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_TRAIT_INGENIOUS">
+			<Text>
+				[ICON_BULLET]Receive free Great Scientist when you discover Writing. 
+				[NEWLINE][ICON_BULLET]Earn Great Scientists 50% faster.
+			</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_TRAIT_CARNIVAL">
+			<Text>
+				[ICON_BULLET]Tourism [ICON_TOURISM] output is +100% during their Golden Ages. 
+				[NEWLINE][ICON_BULLET]Earn Great Artists, Musicians, and Writers 50% faster during their Golden Ages.
+			</Text>
+		</Replace>
 	
 		<Row Tag="TXT_KEY_ENGLISH_HMS_VICTORY">
 			<Text>Victory</Text>
@@ -11631,19 +11921,25 @@
 
 
 
-		<!--<Row Tag="TXT_KEY_UNIT_EGYPT_MAMLUK">
-			<Text>Mamluk</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_EGYPT_MAMLUK_HEADING">
+		<Row Tag="TXT_KEY_UNIT_EGYPTAIN_MAMLUK">
 			<Text>Mamluk</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_HELP_EGYPT_MAMLUK">
+		<Row Tag="TXT_KEY_UNIT_EGYPTAIN_MAMLUK_HELP">
+			<Text>
+				Mamluk is the Egyptian unique unit, replacing the Knight. 
+				[NEWLINE][ICON_BULLET]Prohibits Other Religions Spread to the City Garrisoned.
+				[NEWLINE][ICON_BULLET]Gain the Faith [ICON_PEACE] as the amount of damage dealt when attacking enemies.
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIVILOPEDIA_UNITS_MEDIEVAL_MAMLUK_TEXT">
 			<Text>WIP</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_EGYPT_MAMLUK_PEDIA">
-			<Text>WIP</Text>
-		</Row>-->
+		<Row Tag="TXT_KEY_PROMOTION_SPN_MAMLUK_COMBAT_FAITH">
+			<Text>Sultan's Blade</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_SPN_MAMLUK_COMBAT_FAITH_HELP">
+			<Text>Gain the Faith [ICON_PEACE] as the amount of damage dealt when attacking enemy troops.</Text>
+		</Row>
 
 
 		<!--<Row Tag="TXT_KEY_UNIT_PERSIAN_CATAPHRACT">
@@ -11973,7 +12269,7 @@
 		<Plurality>2</Plurality>
 	</Row>
 	<Row Tag="TXT_KEY_UNIT_FRANCE_BATTERY_HELP">
-		<Text>Fast and Powerful Sige Unit. Only the France may build it. It has indirect fire and doesn't need to set up before attacking.</Text>
+		<Text>Fast and Powerful Sige Unit. Only the France may build it. It has indirect fire and doesn't need to set up before attacking. It has the promotion of Sunder I-II</Text>
 	</Row>
 	<Row Tag="TXT_KEY_UNIT_FRANCE_BATTERY_HEADING">
 		<Text>Grand Battery</Text>
@@ -12088,24 +12384,6 @@
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_HUN_SHAMAN_TEXT">
 			<Text>The word "shaman" probably originates from the Tungusic Evenki language of North Asia. According to ethnolinguist Juha Janhunen, "the word is attested in all of the Tungusic idioms" such as Negidal, Lamut, Udehe/Orochi, Nanai, Ilcha, Orok, Manchu and Ulcha, and "nothing seems to contradict the assumption that the meaning 'shaman' also derives from Proto-Tungusic" and may have roots that extend back in time at least two millennia. </Text>
-		</Row>
-
-
-
-
-
-		<Row Tag="TXT_KEY_UNIT_EGYPT_UNIT777">
-			<Text>[COLOR_SELECTED_TEXT]Unit 777[ENDCOLOR]</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_EGYPT_UNIT777_HEADING">
-			<Text>[COLOR_SELECTED_TEXT]Unit 777[ENDCOLOR]</Text>
-		</Row>
-		<!--<Row Tag="TXT_KEY_UNIT_EGYPT_UNIT777_HELP">
-			<Text>WIP</Text>
-		</Row>-->
-		<Row Tag="TXT_KEY_UNIT_EGYPT_UNIT777_TEXT">
-			<Text>Unit 777 (Arabic: الوحدة 777 قتال‎), also known as Task Force 777, is an Egyptian military counter-terrorism and special operations unit. It was created in 1978[1] by the government of Anwar Sadat in response to concerns of increased terrorist activity following the expulsion of Soviet military advisors from the country by Sadat and his efforts to achieve peace with Israel.</Text>
 		</Row>
 
 
@@ -12519,16 +12797,6 @@
 			</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_UNIT_DANISH_ABSALON">
-			<Text>[COLOR_MAGENTA]Absalon-class Support Ship[ENDCOLOR]</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_DANISH_ABSALON_HEADING">
-			<Text>Absalon-class Support Ship</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_DANISH_ABSALON_PEDIA">
-			<Text>The Absalon class are support ships of the Royal Danish Navy, commissioned in 2005. The two ships in the class may be described as an hybrid between a Frigate and military transport ship with multi role capabilities, with the capacity for being transformed from a combat ship with the firepower of a traditional frigate to a hospital ship within a day.</Text>
-		</Row>
 		<Row Tag="TXT_KEY_BUILD_CARRIER_FIGHTER">
 			<Text>Purchase: [ICON_BULLET] </Text>	<!-- Purchase Carrier-Based-Aircraft -->
 		</Row>
@@ -13279,7 +13547,7 @@
 			<Text>[COLOR_YELLOW]Ski Infantry[ENDCOLOR]</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_ELITE_NAME_DANISH_SKI_INFANTRY">
-			<Text>[COLOR_YELLOW]Ski[ENDCOLOR]</Text>
+			<Text>[COLOR_YELLOW]Ski Infantry[ENDCOLOR]</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_CIV5_DENMARK_SKI_INFANTRY_HELP">
 			<Text>Elite Infantry Unit which has great bonus fighting in snow, tundra, or hills. [NEWLINE][NEWLINE]Requires Ski Infantry Training Project. You can only build up to 10 of this unit at one time. Cannot be purchased.</Text>
@@ -15116,7 +15384,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_NEWLYCAPTURED_HELP">
 			<Text>
-				[ICON_BULLET]This unit is Newly Captured in this turn. It inherits 1/3 of the experience from the Attacking Unit but remains few Hit Points.
+				[ICON_BULLET]This unit is Newly Captured in this turn. It inherits 1/4 of the experience from the Attacking Unit but remains few Hit Points.
 				[NEWLINE][ICON_BULLET]It has only few [ICON_MOVES] Movements left for this turn but would recover in the next turn.
 				[NEWLINE][ICON_BULLET]It cannot perform [COLOR_NEGATIVE_TEXT]Attack[ENDCOLOR] in this turn.
 				[NEWLINE][ICON_BULLET]Great General or Admiral may not remove this debuff, but it would be removed automaticly in the next turn, when you may also chose promotions.
@@ -15248,7 +15516,7 @@
 			<Text> Bonus vs Cities(50).</Text>
 		</Replace>-->
 		<Replace Tag="TXT_KEY_PROMOTION_LIGHTNING_WARFARE_HELP">
-			<Text> +1 [ICON_MOVES] Movement and ignore enemy Zones of Control.</Text>
+			<Text> +1 [ICON_MOVES] Movement and ignore enemy Zones of Control. The use of roads in enemy territory is permitted.</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_PROMOTION_FAST_GENERAL_HELP">
@@ -15724,7 +15992,18 @@
 			<Text>Immune to "Sundered", "Slowed Down", "Charged Damage", "Target Marked", but cannot avoid EMP Damage, Collateral Damage and Area of Effect Damage. </Text>
 		</Row>
 
-
+		<Row Tag="TXT_KEY_PROMOTION_ANTI_COLLATERAL">
+			<Text>Collateral Damage Immune</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_ANTI_COLLATERAL_HELP">
+			<Text>Immune to Collateral Damage.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_ANTI_SPLASH">
+			<Text>Splash Damage Immune</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_ANTI_SPLASH_HELP">
+			<Text>Immune to Area of Effect Damage</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_NUCLEAR_ARTILLERY">
 			<Text>Tactical Nuclear Artillery</Text>
@@ -15788,21 +16067,6 @@
 				+100%[ICON_STRENGTH]Strength fighting against Naval Units.
 			</Text>
 		</Replace>
-		
-	<!-- Max. HP Reduce -->
-		<Replace Tag="TXT_KEY_PROMOTION_MAXHP_REDUCE_1">
-			<Text>Max. HP -100</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_MAXHP_REDUCE_2">
-			<Text>Max. HP -200</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_MAXHP_REDUCE_3">
-			<Text>Max. HP -300</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_MAXHP_REDUCE_4">
-			<Text>Max. HP -400</Text>
-		</Replace>
-
 
 <!-- New CivilopediaScreen Text -->
 	<!-- Created by Tokata -->
@@ -16327,7 +16591,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_MESSAGE_POLICY_CITIZENSHIP_ALERT">
 			<Text>
-				Because you adopted the policy CitizenShip, your new city [COLOR_POSITIVE_TEXT]{1_name}[ENDCOLOR] gain {2_name} point [ICON_PRODUCTION] Production.
+				Because you adopted the policy CitizenShip, your city [COLOR_POSITIVE_TEXT]{1_name}[ENDCOLOR] gain {2_name} point [ICON_PRODUCTION] Production.
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_MESSAGE_POLICY_CULTURAL_DIPLOMACY_ALERT">
@@ -16574,5 +16838,148 @@
 		<Replace Tag="TXT_KEY_FREE PROMOTIONS">
 			<Text>[COLOR_CYAN]unit promotions: [ENDCOLOR]</Text>
 		</Replace>
+
+		<Replace Tag="TXT_KEY_BUILDING_PARADISE_GARDEN">
+			<Text>[ICON_GREAT_PEOPLE][ICON_GOLDEN_AGE][ICON_WAR] Paradise Garden</Text>
+			</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_PARADISE_GARDEN_HELP">
+			<Text>
+				[ICON_BULLET] This city +25% [ICON_GREAT_PEOPLE] great man point accumulation.
+				[NEWLINE][ICON_BULLET] can only be built in middle cities (population 15).
+				[NEWLINE][ICON_BULLET][ICON_GOLDEN_AGE] Golden Age threshold is reduced by 3%.
+				[NEWLINE]When [ICON_BULLET] is in the golden age of [ICON_GOLDEN_AGE], unit [ICON_WAR] has +2% combat power.
+			</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_BUILDING_OTTOMAN_SIEGE_WORKSHOP">
+			<Text>[ICON_PRODUCTION][ICON_WAR] Siege Workshop</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_OTTOMAN_SIEGE_WORKSHOP_HELP">
+			<Text>
+			[ICON_BULLET]All [COLOR_POSITIVE_TEXT]Forest[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Jungle[ENDCOLOR] plots in the city +1[ICON_PRODUCTION]production.
+			[NEWLINE][ICON_BULLET]Expires[COLOR_NEGATIVE_TEXT][ENDCOLOR] after [ICON_BULLET] researches explosives (gives output but cannot be built).
+			[NEWLINE][ICON_BULLET] +2 [ICON_TOURISM] charm after researching the Internet.
+			[NEWLINE][ICON_BULLET] The newly built siege unit in this city has been promoted [Urban Cannon], which has a certain probability of destroying the city's military and defensive buildings during siege.
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_ORBAN_CANNON">
+			<Text>
+			Orban Cannon
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_ORBAN_CANNON_HELP">
+			<Text>
+				When attacking a city, there is a 40% chance of destroying a military building, according to priority: barracks, armory, city wall, castle.
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_ORBAN_CANNON_COMBAT_INFO">
+			<Text>
+			Your Cannon has destroyed {1_building} of the enemy city!
+			</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_BUILDING_ASSUR_TEMPLE">
+			<Text>[ICON_PEACE][ICON_WAR] Temple of Asur</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_ASSUR_TEMPLE_HELP">
+			<Text>
+			[ICON_BULLET] Form combat units +15% production capacity.
+			[NEWLINE][ICON_BULLET] When an enemy within 6 squares of the city is destroyed, [ICON_FOOD] food and [ICON_PEACE] belief of 50% [ICON_STRENGTH] combat power of the target unit will be obtained.
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CITY_NAME_LHASA">
+			<Text>Gangtok</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CITYSTATE_LHASA">
+			<Text>Gangtok</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CITYSTATE_LHASA_ADJ">
+			<Text>Gangtok</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CIV5_LHASA_TITLE">
+			<Text>Gangtok</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CIV5_LHASA_TEXT">
+			<Text>
+				Gangtok is a city , the capital and the largest populated place of Sikkim. The Kingdom of Sikkim was founded by the Namgyal dynasty in the 17th century.It became a princely state of British India in 1890. Following Indian independence, Sikkim continued its "protectorate status" with the Union of India after 1947, and the Republic of India after 1950.In 1973, anti-royalist riots took place in front of the Chogyal's palace. In 1975, after the Indian Army took over the city of Gangtok, a referendum under surveillance with Indian army was held that led to the dissolution of the monarchy and Sikkim joining India as its 22nd state.
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CITYSTATE_HONG_KONG">
+			<Text>Dubai</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CITYSTATE_HONG_KONG_ADJ">
+			<Text>Dubai</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CIV5_HONG_KONG_TEXT">
+			<Text>
+				Dubai is the most populous city in the United Arab Emirates (UAE) and the capital of the Emirate of Dubai, the most populated of the 7 emirates of the United Arab Emirates.This city grew rapidly in the early 21st century with a focus on tourism and luxury, having the second most five-star hotels in the world, and the tallest building in the world, the Burj Khalifa, which is 828 metres (2,717 ft) tall. 
+				[NEWLINE][NEWLINE]In the eastern Arabian Peninsula on the coast of the Persian Gulf, it is also a major global transport hub for passengers and cargo. Oil revenue helped accelerate the development of the city, which was already a major mercantile hub.
+			</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_TP_SCIENCE_FROM_RELIGION">
+			<Text>[ICON_BULLET][COLOR_POSITIVE_TEXT]+{1_Num}[ENDCOLOR] [ICON_RESEARCH] from Religion.</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_EUPANEL_BONUS_CITY_STATE_FRENDSHIP">
+			<Text>Frendship City State Bonus</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_IMPROVEMENT_INCA_CITY">
+			<Text>Mountain City</Text>
+		</Row>
+		<Row Tag="TXT_KEY_IMPROVEMENT_POLYNESIA_CITY">
+			<Text>Coastal City</Text>
+		</Row>
+
+		<Replace Tag="TXT_KEY_BUILDING_ZULU_IZIKO">
+			<Text>[ICON_GREAT_WRITER][ICON_WAR] Ithaca</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_ZULU_IZIKO_HELP">
+			<Text>
+			[ICON_BULLET]Alternative to the amphitheater, cheaper to build.
+			[NEWLINE][ICON_BULLET] +15% training speed of [ICON_WAR]military units in this city.
+			[NEWLINE][ICON_BULLET] When a military unit is upgraded, each Ithaca gets a one-time [ICON_CULTURE]culture boost, which varies with the era.
+			</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_POP_CSTATE_VENICE_BUY_FOOD">
+			<Text>Buy food ([COLOR_GREEN]+{1_food}[ICON_FOOD][END_COLOR],[COLOR_NEGATIVE_TEXT]-{2_gold}[ICON_GOLD][END_COLOR])</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_POP_CSTATE_VENICE_BUY_FOOD_TT">
+			<Text>
+			Your capital's current population growth threshold is {1_threshold},
+			[ICON_FOOD] food (={3_food}) equivalent to {2_percent}% of the threshold can be purchased.
+			The price per unit of food is {4_price} and the total price is {5_total}[ICON_GOLD].
+			Only once per round.
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_POP_CSTATE_VENICE_BUY_FOOD_NOTIFY_HEADING">
+			<Text>
+			buy food
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_POP_CSTATE_VENICE_BUY_FOOD_NOTIFY_TEXT">
+			<Text>
+			Your capital gains {1_food}[ICON_FOOD] food.
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_POP_CSTATE_VENICE_BUY_FOOD_DISABLE_TT">
+			<Text>
+			Already bought food or not enough money this turn.
+			</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_TP_GOLDEN_AGE_ADDITION">
+			<Text>[ICON_BULLET][COLOR_POSITIVE_TEXT]+{1_Num}[ENDCOLOR] from excess [ICON_HAPPINESS_1] Happiness.</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_TP_GOLDEN_AGE_ADDITION_RELIGION">
+			<Text>[ICON_BULLET][COLOR_POSITIVE_TEXT]+{1_Num}[ENDCOLOR] from Religion.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TP_GOLDEN_AGE_ADDITION_TRAIT">
+			<Text>[ICON_BULLET][COLOR_POSITIVE_TEXT]+{1_Num}[ENDCOLOR] from Traits.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TP_GOLDEN_AGE_ADDITION_CITY">
+			<Text>[ICON_BULLET][COLOR_POSITIVE_TEXT]+{1_Num}[ENDCOLOR] from Cities.</Text>
+		</Row>
 	</Language_en_US>
 </GameData>

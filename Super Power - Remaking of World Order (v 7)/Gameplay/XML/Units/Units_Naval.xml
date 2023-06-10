@@ -218,40 +218,6 @@
 			<ExtraMaintenanceCost>8</ExtraMaintenanceCost>
 			<WorkRate>100</WorkRate>
 		</Row>
-		<Row>
-			<Class>UNITCLASS_LITTORAL_COMBAT_SHIP</Class>
-			<Type>UNIT_DANISH_ABSALON</Type>
-			<PrereqTech>TECH_AUTOMATION_T</PrereqTech>
-			<BaseSightRange>3</BaseSightRange>
-			<Combat>240</Combat>
-			<RangedCombat>240</RangedCombat>
-			<Cost>240</Cost>
-			<Moves>8</Moves>
-			<Range>2</Range>
-			<CombatClass>UNITCOMBAT_RECON</CombatClass>
-			<Domain>DOMAIN_SEA</Domain>
-			<DefaultUnitAI>UNITAI_ESCORT_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_DANISH_ABSALON</Description>
-			<Civilopedia>TXT_KEY_UNIT_DANISH_ABSALON_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_SP_UNITS_MILITIA_STRATEGY</Strategy>
-			<Help>TXT_KEY_PROMOTION_MILITIA_NAVAL_HELP</Help>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
-			<Pillage>true</Pillage>
-			<Mechanized>true</Mechanized>
-			<AdvancedStartCost>10</AdvancedStartCost>
-			<MinAreaSize>10</MinAreaSize>
-			<XPValueAttack>3</XPValueAttack>
-			<XPValueDefense>3</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_FW_NEODESTROYER</UnitArtInfo>
-			<UnitFlagIconOffset>107</UnitFlagIconOffset>
-			<UnitFlagAtlas>SPUnitFlags_FLAG</UnitFlagAtlas>
-			<IconAtlas>SPUNITS01_ATLAS</IconAtlas>
-			<PortraitIndex>55</PortraitIndex>
-			<MoveRate>BOAT</MoveRate>
-			<ExtraMaintenanceCost>8</ExtraMaintenanceCost>
-			<WorkRate>100</WorkRate>
-		</Row>
 
 
 
@@ -1558,6 +1524,8 @@
 			<PortraitIndex>28</PortraitIndex>
 			<MoveRate>BOAT</MoveRate>
 			<ExtraMaintenanceCost>32</ExtraMaintenanceCost>
+			<ExtraXPValueAttack>2</ExtraXPValueAttack>
+			<ExtraXPValueDefense>1</ExtraXPValueDefense>
 		</Row>
 
 		<Row>
@@ -1595,6 +1563,8 @@
 			<PortraitIndex>19</PortraitIndex>
 			<MoveRate>BOAT</MoveRate>
 			<ExtraMaintenanceCost>32</ExtraMaintenanceCost>
+			<ExtraXPValueAttack>2</ExtraXPValueAttack>
+			<ExtraXPValueDefense>1</ExtraXPValueDefense>
 		</Row>
 		
 		
@@ -1632,6 +1602,8 @@
 			<PortraitIndex>21</PortraitIndex>
 			<MoveRate>BOAT</MoveRate>
 			<ExtraMaintenanceCost>45</ExtraMaintenanceCost>
+			<ExtraXPValueAttack>3</ExtraXPValueAttack>
+			<ExtraXPValueDefense>1</ExtraXPValueDefense>
 		</Row>
 
 		<Row>
@@ -1667,6 +1639,8 @@
 			<PortraitIndex>29</PortraitIndex>
 			<MoveRate>BOAT</MoveRate>
 			<ExtraMaintenanceCost>45</ExtraMaintenanceCost>
+			<ExtraXPValueAttack>3</ExtraXPValueAttack>
+			<ExtraXPValueDefense>1</ExtraXPValueDefense>
 		</Row>
 		
 		<Row>
@@ -1703,6 +1677,8 @@
 			<PortraitIndex>38</PortraitIndex>
 			<MoveRate>BOAT</MoveRate>
 			<ExtraMaintenanceCost>36</ExtraMaintenanceCost>
+			<ExtraXPValueAttack>3</ExtraXPValueAttack>
+			<ExtraXPValueDefense>1</ExtraXPValueDefense>
 		</Row>
 
 		<Row>
@@ -1741,6 +1717,8 @@
 			<ExtraMaintenanceCost>60</ExtraMaintenanceCost>
 			<SpecialCargo>SPECIALUNIT_MISSILE</SpecialCargo>
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
+			<ExtraXPValueAttack>4</ExtraXPValueAttack>
+			<ExtraXPValueDefense>2</ExtraXPValueDefense>
 		</Row>
 	
 		
@@ -2271,18 +2249,6 @@
 		<Row>
 			<UnitType>UNIT_LITTORAL_COMBAT_SHIP</UnitType>
 			<PromotionType>PROMOTION_HALF_CASUALTIES</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_DANISH_ABSALON</UnitType>
-			<PromotionType>PROMOTION_MILITIA_COMBAT</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_DANISH_ABSALON</UnitType>
-			<PromotionType>PROMOTION_HALF_CASUALTIES</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_DANISH_ABSALON</UnitType>
-			<PromotionType>PROMOTION_CAN_MOVE_AFTER_ATTACKING</PromotionType>
 		</Row>
 
 
@@ -3600,10 +3566,6 @@
 			<UnitType>UNIT_LITTORAL_COMBAT_SHIP</UnitType>
 			<UnitAIType>UNITAI_ESCORT_SEA</UnitAIType>
 		</Row>
-		<Row>
-			<UnitType>UNIT_DANISH_ABSALON</UnitType>
-			<UnitAIType>UNITAI_ESCORT_SEA</UnitAIType>
-		</Row>
 		
 		
 		<Row>
@@ -4060,11 +4022,6 @@
 			<FlavorType>FLAVOR_NAVAL</FlavorType>
 			<Flavor>100</Flavor>
 		</Row>
-		<Row>
-			<UnitType>UNIT_DANISH_ABSALON</UnitType>
-			<FlavorType>FLAVOR_NAVAL</FlavorType>
-			<Flavor>140</Flavor>
-		</Row>
 
 		<Row>
 			<UnitType>UNIT_NAVAL_MILITIA</UnitType>
@@ -4085,11 +4042,6 @@
 			<UnitType>UNIT_LITTORAL_COMBAT_SHIP</UnitType>
 			<FlavorType>FLAVOR_DEFENSE</FlavorType>
 			<Flavor>65</Flavor>
-		</Row>
-		<Row>
-			<UnitType>UNIT_DANISH_ABSALON</UnitType>
-			<FlavorType>FLAVOR_DEFENSE</FlavorType>
-			<Flavor>85</Flavor>
 		</Row>
 
 

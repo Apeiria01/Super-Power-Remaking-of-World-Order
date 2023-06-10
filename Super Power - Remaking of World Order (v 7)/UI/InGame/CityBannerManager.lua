@@ -557,10 +557,10 @@ function RefreshCityBanner(cityBanner, iActiveTeam, iActivePlayer)
 		-- Update strength
 		local cityStrengthStr = math.floor(city:GetStrengthValue() / 100);
 		
-		local garrisonedUnit = city:GetGarrisonedUnit();
+		--[[local garrisonedUnit = city:GetGarrisonedUnit();
 		if isActiveTeamCity and controls.GarrisonFrame and garrisonedUnit == nil then
 			controls.GarrisonFrame:SetHide(true);
-		end
+		end]]
 		
 		controls.CityStrength:SetText(cityStrengthStr);
 		
@@ -589,6 +589,28 @@ function RefreshCityBanner(cityBanner, iActiveTeam, iActivePlayer)
 			end
 			
 			controls.CityGrowth:SetText(cityGrowth);
+		end
+		
+		-- Update City Culture Meter
+		if ( controls.CultureBar ) then
+			local iCultureStored = city:GetJONSCultureStored();
+			local iCultureNeeded = city:GetJONSCultureThreshold();
+			local iCulturePerTurn = city:GetJONSCulturePerTurn();
+
+			local iCultureStoredPlusThisTurn = iCultureStored + iCulturePerTurn;
+			local fCultureProgressPercent = iCultureStored / iCultureNeeded;
+			local fCultureProgressPlusThisTurnPercent = iCultureStoredPlusThisTurn / iCultureNeeded;
+			if (fCultureProgressPlusThisTurnPercent > 1) then
+					fCultureProgressPlusThisTurnPercent = 1;
+			end
+
+			controls.CultureBar:SetPercent( fCultureProgressPercent );
+			controls.CultureBarShadow:SetPercent( fCultureProgressPlusThisTurnPercent );
+			if iCulturePerTurn > 0 then
+				controls.CultureGrowth:SetText(math.ceil( (iCultureNeeded-iCultureStored) / iCulturePerTurn ));
+			else
+				controls.CultureGrowth:SetText("-");
+			end
 		end
 		
 		-- Update Production Time
@@ -1369,13 +1391,13 @@ end
 ------------------------------------------------------------
 ------------------------------------------------------------
 function GarrisonComplete( cityBanner, pCity )
-	local active_team = Players[Game.GetActivePlayer()]:GetTeam();
+	--[[local active_team = Players[Game.GetActivePlayer()]:GetTeam();
 	local team = Players[cityBanner.playerID]:GetTeam();
 	
 	local controls = cityBanner.SubControls;
 	if active_team == team then
 		controls.GarrisonFrame:SetHide(false);
-	end	
+	end]]
 end
 
 -------------------------------------------------
@@ -1532,8 +1554,8 @@ function OnCombatBegin( attackerPlayerID,
                         defenderY )
     print( "CityBanner CombatBegin" );                        
 				
-	HideGarrisonRing(attackerX, attackerY, true);
-	HideGarrisonRing(defenderX, defenderY, true);
+	--HideGarrisonRing(attackerX, attackerY, true);
+	--HideGarrisonRing(defenderX, defenderY, true);
 end
 Events.RunCombatSim.Add( OnCombatBegin );
 
@@ -1557,8 +1579,8 @@ function OnCombatEnd( attackerPlayerID,
                          
     print( "CityBanner CombatEnd" );                        
     
-	HideGarrisonRing(attackerX, attackerY, false);
-	HideGarrisonRing(defenderX, defenderY, false);
+	--HideGarrisonRing(attackerX, attackerY, false);
+	--HideGarrisonRing(defenderX, defenderY, false);
 end
 Events.EndCombatSim.Add( OnCombatEnd );
 

@@ -427,6 +427,13 @@ function DoInitTooltips()
 	Controls.InternationalTradeRoutes:SetToolTipCallback( InternationalTradeRoutesTipHandler );
 end
 
+--Load Values of BELIEF_RELIGIOUS_SCIENCE When Game Start
+local ScienceFromBelifReligiousScience = 0
+for row in DB.Query("SELECT Yield FROM Belief_YieldPerFollowingCity WHERE BeliefType = 'BELIEF_RELIGIOUS_SCIENCE' AND YieldType = 'YIELD_SCIENCE'") do
+	ScienceFromBelifReligiousScience =  row.Yield
+	break
+end
+
 -- Science Tooltip
 local tipControlTable = {};
 TTManager:GetTypeControlTable( "TooltipTypeTopPanel", tipControlTable );
@@ -560,7 +567,22 @@ function ScienceTipHandler( control )
 
 			strText = strText .. Locale.ConvertTextKey("TXT_KEY_TP_SCIENCE_FROM_MINORS", iScienceFromOtherPlayers / 100);
 		end
-	
+
+		-- Science from Religion
+		if pPlayer:HasPolicy(GameInfo.Policies["POLICY_BELIEF_RELIGIOUS_SCIENCE"].ID) 
+		and pPlayer:HasCreatedReligion()
+		then
+			local iScienceFromReligion = 0
+			local eReligion = pPlayer:GetReligionCreatedByPlayer()
+			if eReligion > 0 then
+				iScienceFromReligion = Game.GetNumCitiesFollowing(eReligion)
+			end
+			iScienceFromReligion = iScienceFromReligion * ScienceFromBelifReligiousScience
+			if (iScienceFromReligion ~= 0) then
+				strText = strText .. "[NEWLINE]";
+				strText = strText .. Locale.ConvertTextKey("TXT_KEY_TP_SCIENCE_FROM_RELIGION", iScienceFromReligion);
+			end
+		end
 	
 	
 		-- Science from Happiness------Civ5 Original Backup
@@ -1266,6 +1288,18 @@ function GoldenAgeTipHandler( control )
 				strText = strText .. Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_ADDITION", iHappiness);
 			else
 				strText = strText .. "[COLOR_WARNING_TEXT]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_LOSS", -iHappiness) .. "[ENDCOLOR]";
+			end
+			local iGoldAgePointFromReligion = pPlayer:GetGoldenAgePointPerTurnFromReligion();
+			local iGoldAgePointFromTraits = pPlayer:GetGoldenAgePointPerTurnFromTraits();
+			local iGoldAgePointFromCitys = pPlayer:GetGoldenAgePointPerTurnFromCitys();
+			if (iGoldAgePointFromReligion > 0) then
+				strText = strText .. "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_ADDITION_RELIGION", iGoldAgePointFromReligion);
+			end
+			if (iGoldAgePointFromTraits > 0) then
+				strText = strText .. "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_ADDITION_TRAIT", iGoldAgePointFromTraits);
+			end
+			if (iGoldAgePointFromCitys > 0) then
+				strText = strText .. "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_ADDITION_CITY", iGoldAgePointFromCitys);
 			end
 		end
 	

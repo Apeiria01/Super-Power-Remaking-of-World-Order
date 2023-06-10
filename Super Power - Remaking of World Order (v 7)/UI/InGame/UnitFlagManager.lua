@@ -16,6 +16,7 @@ local g_LastUnitID;
 local g_ListPlot;
 local g_PrintDebug = false;
 local g_GarrisonedUnitFlagsInStrategicView = true;
+local g_DeleteALLStrategicUnitFlag = GameInfo.SPNewEffectControler.SP_DELETE_ALL_STRATEGIC_UNIT_FLAG.Enabled
 
 local g_UnitList = {};
 ContextPtr:BuildInstanceForControl("UnitList", g_UnitList, Controls.CityContainer);
@@ -401,7 +402,7 @@ local g_UnitFlagClass         =
     UpdateVisibility = function(self)
         local bVisible = self.m_IsCurrentlyVisible and not self.m_IsInvisible and not self.m_IsForceHide;
         self.m_Instance.Anchor:SetHide(not bVisible);
-        if InStrategicView() then
+        if InStrategicView() and not g_DeleteALLStrategicUnitFlag then
             local bShowInStrategicView = bVisible and g_GarrisonedUnitFlagsInStrategicView and self.m_IsGarrisoned;
             self.m_Instance.FlagShadow:SetHide(not bShowInStrategicView);
         else

@@ -2,11 +2,13 @@
 
 
 --include( "UtilityFunctions.lua" )
-
+include("FLuaVector.lua");
 --******************************************************************************* Unit Combat Rules *******************************************************************************
 local g_DoNewAttackEffect = nil;
+local NewAttackOff = GameInfo.SPNewEffectControler.SP_NEWATTACK_OFF.Enabled
+local SplashAndCollateralOff = PreGame.GetGameOption("GAMEOPTION_SP_SPLASH_AND_COLLATERAL_OFF")
 function NewAttackEffectStarted(iType, iPlotX, iPlotY)
-	if (PreGame.GetGameOption("GAMEOPTION_SP_NEWATTACK_OFF") == 1) then
+	if NewAttackOff then
 		print("SP Attack Effect - OFF!");
 		return;
 	end
@@ -224,6 +226,8 @@ function NewAttackEffect()
 	local AirSiege3ID = GameInfo.UnitPromotions["PROMOTION_AIR_SIEGE_3"].ID
 	local BombShelterID = GameInfo.Buildings["BUILDING_BOMB_SHELTER"].ID
 
+	local OrbanCannonID = GameInfo.UnitPromotions["PROMOTION_ORBAN_CANNON"].ID
+
 	local AttackAirCraftID = GameInfo.UnitPromotions["PROMOTION_AIR_ATTACK"].ID
 	local AirTarget1ID = GameInfo.UnitPromotions["PROMOTION_AIR_TARGETING_1"].ID
 	local AirTarget2ID = GameInfo.UnitPromotions["PROMOTION_AIR_TARGETING_2"].ID
@@ -265,6 +269,11 @@ function NewAttackEffect()
 	local AntiDebuffID = GameInfo.UnitPromotions["PROMOTION_ANTI_DEBUFF"].ID
 
 	local DoppelsoldnerID = GameInfo.UnitPromotions["PROMOTION_GERMAN_LONGSWORDSMAN"].ID
+	local MamlukCombatID = GameInfo.UnitPromotions["PROMOTION_SPN_MAMLUK_COMBAT_FAITH"].ID
+
+	local CollateralDamageImmuneID = GameInfo.UnitPromotions["PROMOTION_ANTI_COLLATERAL"].ID
+	local SplashDamageImmuneID = GameInfo.UnitPromotions["PROMOTION_ANTI_SPLASH"].ID
+	
 	-- Ranged Unit Logistics can only move to the adjusted plot
 	if attUnit:IsDead() then
 	elseif attUnit:GetMoves() > 0 and not attUnit:IsImmobile() and not attUnit:IsRangedSupportFire()
@@ -432,6 +441,21 @@ function NewAttackEffect()
 		return
 	end
 
+	--Mamluk gain Faith from Combat
+	if not defCity and attUnit:IsHasPromotion(MamlukCombatID) then
+		local MamlukDamageBonus = 0
+		if defUnit then
+			MamlukDamageBonus = defUnitDamage
+		end
+		print("Mamluk Attack Damage is :",MamlukDamageBonus)
+		attPlayer:ChangeFaith(MamlukDamageBonus)
+		if attPlayer:IsHuman() and MamlukDamageBonus >0 then
+			local hex = ToHexFromGrid(Vector2(plotX,plotY))
+			Events.AddPopupTextEvent(HexToWorld(hex), Locale.ConvertTextKey("+{1_Num}[ICON_PEACE]",MamlukDamageBonus))
+			Events.GameplayFX(hex.x, hex.y, -1)
+		end
+	end
+		
 
 	----------------EMP Bomber effects
 	if attUnit:IsHasPromotion(EMPBomberID) then
@@ -499,7 +523,6 @@ function NewAttackEffect()
 				if ChainDamage >= unit:GetCurrHitPoints() then
 					ChainDamage = unit:GetCurrHitPoints();
 					local eUnitType = unit:GetUnitType();
-					UnitDeathCounter(attPlayerID, unit:GetOwner(), eUnitType);
 				end
 				unit:ChangeDamage(ChainDamage, attPlayer);
 				print("Chain Reaction!");
@@ -796,6 +819,24 @@ function NewAttackEffect()
 			end
 		end
 
+		if attUnit:IsHasPromotion(OrbanCannonID) then
+			local isDoDestroy = Game.Rand(100, "OrbanCannon") < 40;
+			if isDoDestroy then
+				local buildingClassesToDestroy = {"BUILDINGCLASS_BARRACKS", "BUILDINGCLASS_ARMORY", "BUILDINGCLASS_WALLS", "BUILDINGCLASS_CASTLE"};
+				for i, buildingClass in ipairs(buildingClassesToDestroy) do
+					local buildingClassID = GameInfoTypes[buildingClass];
+					if defCity:IsHasBuildingClass(buildingClassID) then
+						defCity:SetNumRealBuildingClass(buildingClassID, 0);
+						if attPlayer:IsHuman() then
+							local text = Locale.ConvertTextKey("TXT_KEY_PROMOTION_ORBAN_CANNON_COMBAT_INFO", GameInfo.BuildingClasses[buildingClassID].Description);
+							Events.GameplayAlertMessage(text);
+						end
+
+						break;
+					end
+				end
+			end
+		end
 
 		------------------------Attack Aircraft attack units inside the city
 		if (attUnit:IsHasPromotion(AirTarget1ID) or attUnit:IsHasPromotion(AirTarget_CarrierID))
@@ -819,7 +860,6 @@ function NewAttackEffect()
 						if iChangeDamage >= pFoundUnit:GetCurrHitPoints() then
 							iChangeDamage = pFoundUnit:GetCurrHitPoints();
 							local eUnitType = pFoundUnit:GetUnitType();
-							UnitDeathCounter(attPlayerID, pFoundUnit:GetOwner(), eUnitType);
 						end
 						pFoundUnit:ChangeDamage(iChangeDamage);
 					end
@@ -832,13 +872,15 @@ function NewAttackEffect()
 		-- Attacking a Unit!
 	elseif defUnit then
 		------ Collateral damage (both melee and ranged)!
-		if (attUnit:IsHasPromotion(NavalRangedShipUnitID) or attUnit:IsHasPromotion(NavalRangedCruiserUnitID)
-			or attUnit:IsHasPromotion(CitySiegeUnitID)) and batPlot:GetNumUnits() > 1 then
+		if SplashAndCollateralOff == 0
+		and (attUnit:IsHasPromotion(NavalRangedShipUnitID) or attUnit:IsHasPromotion(NavalRangedCruiserUnitID)
+			or attUnit:IsHasPromotion(CitySiegeUnitID)) and batPlot:GetNumUnits() > 1 
+		then
 			-- print("Melee or Ranged attack and Available for Collateral Damage!")
 			local unitCount = batPlot:GetNumUnits()
 			for i = 0, unitCount - 1, 1 do
 				local pFoundUnit = batPlot:GetUnit(i)
-				if (pFoundUnit and pFoundUnit ~= defUnit and pFoundUnit:GetDomainType() ~= DomainTypes.DOMAIN_AIR) then
+				if (pFoundUnit and pFoundUnit ~= defUnit and pFoundUnit:GetDomainType() ~= DomainTypes.DOMAIN_AIR and not pFoundUnit:IsHasPromotion(CollateralDamageImmuneID)) then
 					local pPlayer = Players[pFoundUnit:GetOwner()]
 					if PlayersAtWar(attPlayer, pPlayer) then
 						local CollDamageOri = 0;
@@ -875,7 +917,6 @@ function NewAttackEffect()
 						if CollDamageFinal >= pFoundUnit:GetCurrHitPoints() then
 							CollDamageFinal = pFoundUnit:GetCurrHitPoints();
 							local eUnitType = pFoundUnit:GetUnitType();
-							UnitDeathCounter(attPlayerID, pFoundUnit:GetOwner(), eUnitType);
 
 							-- Notification
 							if defPlayerID == Game.GetActivePlayer() then
@@ -905,13 +946,14 @@ function NewAttackEffect()
 		end
 
 		----Doppelsoldner Splash！
-		if attUnit:IsHasPromotion(DoppelsoldnerID)
+		if SplashAndCollateralOff == 0
+		and attUnit:IsHasPromotion(DoppelsoldnerID)
 		and batPlot:GetNumUnits() > 1 then
 			-- print("Melee or Ranged attack and Available for Collateral Damage!")
 			local unitCount = batPlot:GetNumUnits()
 			for i = 0, unitCount - 1, 1 do
 				local pFoundUnit = batPlot:GetUnit(i)
-				if (pFoundUnit and pFoundUnit ~= defUnit and pFoundUnit:GetDomainType() ~= DomainTypes.DOMAIN_AIR) then
+				if (pFoundUnit and pFoundUnit ~= defUnit and pFoundUnit:GetDomainType() ~= DomainTypes.DOMAIN_AIR and not pFoundUnit:IsHasPromotion(CollateralDamageImmuneID)) then
 					local pPlayer = Players[pFoundUnit:GetOwner()]
 					if PlayersAtWar(attPlayer, pPlayer) then
 						local CollDamageOri = 0;
@@ -932,7 +974,6 @@ function NewAttackEffect()
 						if CollDamageFinal >= pFoundUnit:GetCurrHitPoints() then
 							CollDamageFinal = pFoundUnit:GetCurrHitPoints();
 							local eUnitType = pFoundUnit:GetUnitType();
-							UnitDeathCounter(attPlayerID, pFoundUnit:GetOwner(), eUnitType);
 	
 							-- Notification
 							if defPlayerID == Game.GetActivePlayer() then
@@ -962,7 +1003,8 @@ function NewAttackEffect()
 	
 
 		--------Splash Damage (AOE)
-		if (attUnit:IsHasPromotion(SplashDamageID) or attUnit:IsHasPromotion(NavalCapitalShipID)) then
+		if SplashAndCollateralOff == 0
+		and (attUnit:IsHasPromotion(SplashDamageID) or attUnit:IsHasPromotion(NavalCapitalShipID)) then
 
 			for i = 0, 5 do
 				local adjPlot = Map.PlotDirection(plotX, plotY, i)
@@ -970,8 +1012,10 @@ function NewAttackEffect()
 					print("Available for AOE Damage!")
 
 					local pUnit = adjPlot:GetUnit(0) ------------Find Units affected
-					if pUnit and
-						(pUnit:GetDomainType() == DomainTypes.DOMAIN_LAND or pUnit:GetDomainType() == DomainTypes.DOMAIN_SEA) then
+					if pUnit 
+					and (pUnit:GetDomainType() == DomainTypes.DOMAIN_LAND or pUnit:GetDomainType() == DomainTypes.DOMAIN_SEA) 
+					and not pUnit:IsHasPromotion(SplashDamageImmuneID)
+					then
 						local pCombat = pUnit:GetBaseCombatStrength()
 						local pPlayer = Players[pUnit:GetOwner()]
 
@@ -996,7 +1040,6 @@ function NewAttackEffect()
 							if SplashDamageFinal >= pUnit:GetCurrHitPoints() then
 								SplashDamageFinal = pUnit:GetCurrHitPoints();
 								local eUnitType = pUnit:GetUnitType();
-								UnitDeathCounter(attPlayerID, pUnit:GetOwner(), eUnitType);
 
 								-- Notification
 								if defPlayerID == Game.GetActivePlayer() then
@@ -1030,7 +1073,9 @@ function NewAttackEffect()
 		end
 
 		-------------------------Both Collateral Damage and AOE
-		if attUnit:IsHasPromotion(NuclearArtilleryID) then
+		if SplashAndCollateralOff == 0
+		and attUnit:IsHasPromotion(NuclearArtilleryID) 
+		then
 			local unitCount = batPlot:GetNumUnits();
 			local iDamage = 0;
 			-- Collateral
@@ -1046,7 +1091,6 @@ function NewAttackEffect()
 					if iDamage >= pFoundUnit:GetCurrHitPoints() then
 						iDamage = pFoundUnit:GetCurrHitPoints();
 						local eUnitType = pFoundUnit:GetUnitType();
-						UnitDeathCounter(attPlayerID, pFoundUnit:GetOwner(), eUnitType);
 						-- Notification
 						if pFoundUnit:GetOwner() == Game.GetActivePlayer() then
 							-- local heading = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_UNIT_DESTROYED_SHORT")
@@ -1082,7 +1126,9 @@ function NewAttackEffect()
 					local unitCount = adjPlot:GetNumUnits();
 					for i = 0, unitCount - 1, 1 do
 						local pFoundUnit = adjPlot:GetUnit(i)
-						if (pFoundUnit and pFoundUnit:GetID() ~= defUnit:GetID()) then
+						if (pFoundUnit and pFoundUnit:GetID() ~= defUnit:GetID()) 
+
+						then
 							local textd = nil;
 							local texta = nil;
 							local attUnitName = attUnit:GetName();
@@ -1092,7 +1138,6 @@ function NewAttackEffect()
 							if iDamage >= pFoundUnit:GetCurrHitPoints() then
 								iDamage = pFoundUnit:GetCurrHitPoints();
 								local eUnitType = pFoundUnit:GetUnitType();
-								UnitDeathCounter(attPlayerID, pFoundUnit:GetOwner(), eUnitType);
 
 								-- Notification
 								if pFoundUnit:GetOwner() == Game.GetActivePlayer() then
@@ -1172,7 +1217,6 @@ function NewAttackEffect()
 							local ChargeDamageFinal = math.floor(ChargeDamageOri * ChargeMod);
 							if ChargeDamageFinal >= pFoundUnit:GetCurrHitPoints() then
 								local eUnitType = pFoundUnit:GetUnitType();
-								UnitDeathCounter(attPlayerID, pFoundUnit:GetOwner(), eUnitType);
 
 								-- Notification
 								if defPlayerID == Game.GetActivePlayer() then
@@ -1211,7 +1255,6 @@ function NewAttackEffect()
 			if defFinalUnitDamageChange >= defUnit:GetCurrHitPoints() then
 				defFinalUnitDamageChange = defUnit:GetCurrHitPoints();
 				local eUnitType = defUnit:GetUnitType();
-				UnitDeathCounter(attPlayerID, defPlayerID, eUnitType);
 
 				-- Notification
 				if defPlayerID == Game.GetActivePlayer() then
@@ -1235,12 +1278,12 @@ function NewAttackEffect()
 				Events.GameplayAlertMessage(text);
 			end
 			defFinalUnitDamage = defFinalUnitDamage + defFinalUnitDamageChange;
-			defUnit:ChangeDamage(defFinalUnitDamageChange);
-			if attUnit:CanMoveThrough(batPlot) and batPlot ~= attPlot then
+			defUnit:ChangeDamage(defFinalUnitDamageChange,attPlayer);
+			--[[if attUnit:CanMoveThrough(batPlot) and batPlot ~= attPlot then
 				-- if the target plot has no unit,your unit advances into the target plot!
 				attUnit:SetMoves(attUnit:MovesLeft() + GameDefines["MOVE_DENOMINATOR"]);
 				attUnit:PushMission(MissionTypes.MISSION_MOVE_TO, plotX, plotY);
-			end
+			end]]
 		end
 
 
@@ -1619,7 +1662,6 @@ function NewAttackEffect()
 			if attDamageInflicted >= attUnit:GetCurrHitPoints() then
 				attDamageInflicted = attUnit:GetCurrHitPoints();
 				local eUnitType = attUnit:GetUnitType();
-				UnitDeathCounter(defPlayerID, attPlayerID, eUnitType);
 				print("Airsweep Unit died!")
 
 				if defPlayerID == Game.GetActivePlayer() then
@@ -1639,7 +1681,6 @@ function NewAttackEffect()
 			if defDamageInflicted >= defUnit:GetCurrHitPoints() then
 				defDamageInflicted = defUnit:GetCurrHitPoints();
 				local eUnitType = defUnit:GetUnitType();
-				UnitDeathCounter(attPlayerID, defPlayerID, eUnitType);
 				print("AA Unit died!")
 
 				if defPlayerID == Game.GetActivePlayer() then
@@ -1752,7 +1793,8 @@ function CaptureSPDKP(iPlayerID, iUnitID)
 		end
 		if pUnit:IsCombatUnit() then
 			-- pUnit:SetLevel(tCaptureSPUnits[6]);
-			pUnit:SetExperience(tCaptureSPUnits[7] / 3);
+			pUnit:SetExperience(tCaptureSPUnits[7] / 4);
+			pUnit:SetLevel(1);
 			local pMoves = pUnit:MaxMoves();
 			print("MaxMoves of captured unit is " .. pMoves);
 			local qMoves = tCaptureSPUnits[8];

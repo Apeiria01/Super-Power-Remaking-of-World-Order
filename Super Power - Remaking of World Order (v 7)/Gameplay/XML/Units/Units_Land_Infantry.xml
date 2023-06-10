@@ -525,39 +525,6 @@
 		</Row>
 
 		<Row>
-			<Class>UNITCLASS_PARATROOPER</Class>
-			<Type>UNIT_EGYPT_UNIT777</Type>
-			<PrereqTech>TECH_SATELLITES</PrereqTech>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<BaseSightRange>4</BaseSightRange>
-			<Combat>65</Combat>
-			<Cost>750</Cost>
-			<Moves>3</Moves>
-			<CombatClass>UNITCOMBAT_GUN</CombatClass>
-			<Domain>DOMAIN_LAND</Domain>
-			<DefaultUnitAI>UNITAI_PARADROP</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_EGYPT_UNIT777</Description>
-			<Civilopedia>TXT_KEY_UNIT_EGYPT_UNIT777_TEXT</Civilopedia>
-			<Strategy>TXT_KEY_SP_UNITS_SPECIAL_FORCES_STRATEGY</Strategy>
-			<Help>TXT_KEY_PROMOTION_SPECIAL_FORCES_COMBAT_HELP</Help>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
-			<Pillage>true</Pillage>
-			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
-			<XPValueAttack>8</XPValueAttack>
-			<XPValueDefense>8</XPValueDefense>
-			<Conscription>1</Conscription>
-			<UnitArtInfo>ART_DEF_UNIT_PARATROOPER</UnitArtInfo>
-			<UnitFlagIconOffset>65</UnitFlagIconOffset>
-			<UnitFlagAtlas>SPUnitFlags_FLAG</UnitFlagAtlas>
-			<IconAtlas>SPUNITS02_ATLAS</IconAtlas>
-			<PortraitIndex>58</PortraitIndex>
-			<ExtraMaintenanceCost>14</ExtraMaintenanceCost>
-		</Row>
-		
-		
-
-		<Row>
 			<Class>UNITCLASS_XCOM_SQUAD</Class>
 			<Type>UNIT_XCOM_SQUAD</Type>
 			<PrereqTech>TECH_INTEGRATED_DEFENSE</PrereqTech>
@@ -766,7 +733,7 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_GERMAN_LONGSWORDSMAN</Description>
-			<Civilopedia>TXT_KEY_CIV5_UNIT_GERMAN_LONGSWORDSMAN_TEXT</Civilopedia>
+			<Civilopedia>TXT_KEY_CIV5_GERMAN_LONGSWORDSMAN_TEXT</Civilopedia>
 			<Strategy>TXT_KEY_SP_UNITS_LAND_INFANTRY_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_GERMAN_LONGSWORDSMAN_HELP</Help>
 			<MilitarySupport>true</MilitarySupport>
@@ -1845,10 +1812,6 @@
 			<UnitType>UNIT_PARATROOPER</UnitType>
 			<UnitClassType>UNITCLASS_XCOM_SQUAD</UnitClassType>
 		</Row>
-		<Row>
-			<UnitType>UNIT_EGYPT_UNIT777</UnitType>
-			<UnitClassType>UNITCLASS_XCOM_SQUAD</UnitClassType>
-		</Row>
 
 		
 		<!--*******Infantry *******-->
@@ -2207,40 +2170,6 @@
 			<UnitType>UNIT_PARATROOPER</UnitType>
 			<PromotionType>PROMOTION_PARADROP_III</PromotionType>
 		</Row>
-
-		<Row>
-			<UnitType>UNIT_EGYPT_UNIT777</UnitType>
-			<PromotionType>PROMOTION_SPECIAL_FORCES_COMBAT</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_EGYPT_UNIT777</UnitType>
-			<PromotionType>PROMOTION_IGNORE_TERRAIN_COST</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_EGYPT_UNIT777</UnitType>
-			<PromotionType>PROMOTION_PARADROP_III</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_EGYPT_UNIT777</UnitType>
-			<PromotionType>PROMOTION_MOBILITY</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_EGYPT_UNIT777</UnitType>
-			<PromotionType>PROMOTION_SCOUTING_3</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_EGYPT_UNIT777</UnitType>
-			<PromotionType>PROMOTION_SECOND_ATTACK</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_EGYPT_UNIT777</UnitType>
-			<PromotionType>PROMOTION_CITY_ASSAULT_NOLOST</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_EGYPT_UNIT777</UnitType>
-			<PromotionType>PROMOTION_MARCH</PromotionType>
-		</Row>
-
 
 		<Row>
 			<UnitType>UNIT_XCOM_SQUAD</UnitType>
@@ -2722,10 +2651,6 @@
 			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_EGYPT_UNIT777</UnitType>
-			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
-		</Row>
-		<Row>
 			<UnitType>UNIT_XCOM_SQUAD</UnitType>
 			<ResourceType>RESOURCE_URANIUM</ResourceType>
 		</Row>
@@ -2756,10 +2681,6 @@
 		
 		<Row>
 			<UnitType>UNIT_PARATROOPER</UnitType>
-			<ResourceType>RESOURCE_MANPOWER</ResourceType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_EGYPT_UNIT777</UnitType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 		</Row>
 		<Row>
@@ -3148,19 +3069,6 @@
 			<UnitAIType>UNITAI_EXPLORE</UnitAIType>
 		</Row>
 
-
-		<Row>
-			<UnitType>UNIT_EGYPT_UNIT777</UnitType>
-			<UnitAIType>UNITAI_ATTACK</UnitAIType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_EGYPT_UNIT777</UnitType>
-			<UnitAIType>UNITAI_PARADROP</UnitAIType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_EGYPT_UNIT777</UnitType>
-			<UnitAIType>UNITAI_EXPLORE</UnitAIType>
-		</Row>
 
 		<Row>
 			<UnitType>UNIT_XCOM_SQUAD</UnitType>
@@ -3655,22 +3563,6 @@
 		</Row>
 		<Row>
 			<UnitType>UNIT_PARATROOPER</UnitType>
-			<FlavorType>FLAVOR_RECON</FlavorType>
-			<Flavor>5</Flavor>
-		</Row>
-
-		<Row>
-			<UnitType>UNIT_EGYPT_UNIT777</UnitType>
-			<FlavorType>FLAVOR_OFFENSE</FlavorType>
-			<Flavor>60</Flavor>
-		</Row>
-		<Row>
-			<UnitType>UNIT_EGYPT_UNIT777</UnitType>
-			<FlavorType>FLAVOR_AIR</FlavorType>
-			<Flavor>50</Flavor>
-		</Row>
-		<Row>
-			<UnitType>UNIT_EGYPT_UNIT777</UnitType>
 			<FlavorType>FLAVOR_RECON</FlavorType>
 			<Flavor>5</Flavor>
 		</Row>

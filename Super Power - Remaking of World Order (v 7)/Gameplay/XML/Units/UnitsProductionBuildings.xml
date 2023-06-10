@@ -304,6 +304,10 @@
 			<BuildingClassType>BUILDINGCLASS_ARMORY</BuildingClassType>
 		</Row>
 		<Row>
+			<UnitType>UNIT_EGYPTAIN_MAMLUK</UnitType>
+			<BuildingClassType>BUILDINGCLASS_ARMORY</BuildingClassType>
+		</Row>
+		<Row>
 			<UnitType>UNIT_OTTOMAN_SIPAHI</UnitType>
 			<BuildingClassType>BUILDINGCLASS_ARMORY</BuildingClassType>
 		</Row>
@@ -1005,10 +1009,7 @@
 			<UnitType>UNIT_PARATROOPER</UnitType>
 			<BuildingClassType>BUILDINGCLASS_MILITARY_ACADEMY</BuildingClassType>
 		</Row>
-		<Row>
-			<UnitType>UNIT_EGYPT_UNIT777</UnitType>
-			<BuildingClassType>BUILDINGCLASS_MILITARY_ACADEMY</BuildingClassType>
-		</Row>
+
 		<Row>
 			<UnitType>UNIT_XCOM_SQUAD</UnitType>
 			<BuildingClassType>BUILDINGCLASS_MILITARY_ACADEMY</BuildingClassType>

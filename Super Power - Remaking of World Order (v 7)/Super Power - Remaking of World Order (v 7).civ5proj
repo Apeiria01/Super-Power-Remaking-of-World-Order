@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Default</Configuration>
     <ProjectGuid>{ef76ff1b-0497-463c-a616-d02546312750}</ProjectGuid>
-    <Name>Super Power - Rise of Hegemony</Name>
+    <Name>(2) Super Power - Rise of Hegemony</Name>
     <Guid>f9b9c8aa-b6d1-4188-9239-c1de2207ab7c</Guid>
-    <ModVersion>8</ModVersion>
-    <Stability>Beta</Stability>
+    <ModVersion>9</ModVersion>
+    <Stability>Alpha</Stability>
     <Teaser>[COLOR_YELLOW]A Total Conversion Mod for a better late game experience and realistic modern warfare[/COLOR]</Teaser>
     <Description>A Total Conversion Mod of Sid Meier's Civilization V for a better late game experience and realistic modern warfare.  
 [NEWLINE][NEWLINE]Require CIV5 BNW 1.0.3.279[NEWLINE][NEWLINE]This MOD includes a modified version of whoward69's DLLVMC v97 for some Lua events support and multiplayer support. Source is released on https://github.com/Apeiria01/CIV5MPDLL
@@ -42,396 +42,19 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
     <SupportsMac>true</SupportsMac>
     <AssemblyName>Super Power - Remaking of World Order (v 7)</AssemblyName>
     <RootNamespace>Super Power - Remaking of World Order (v 7)</RootNamespace>
-    <ModReferences />
+    <ModReferences>
+      <Association>
+        <Type>Mod</Type>
+        <Name>(1)CIV5MPDLL</Name>
+        <Id>a2969a0a-e4da-41cc-9e0b-19b29aa971d8</Id>
+        <MinVersion>2</MinVersion>
+        <MaxVersion>999</MaxVersion>
+      </Association>
+    </ModReferences>
     <ReloadLandmarkSystem>true</ReloadLandmarkSystem>
     <ReloadStrategicViewSystem>true</ReloadStrategicViewSystem>
     <ReloadUnitSystem>true</ReloadUnitSystem>
     <ModActions>
-      <Action>
-        <Set>OnGetDLLPath</Set>
-        <Type>SetDllPath</Type>
-        <FileName>VMC/DLL/CvGameCore_Expansion2.dll</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/CustomModTables.xml</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/CustomModOptions.xml</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/API/Achievements.xml</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/API/Espionage.xml</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/API/Extensions.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/API/PlotBasedDamage.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/API/PlotYields.xml</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/API/Religion.xml</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/API/UnifiedYields.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/API/UnifiedYields.xml</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/API/UnifiedYieldsGoldenAge.xml</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/API/UnifiedYieldsTourism.xml</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/BUGFIX/DummyPolicies.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/BUGFIX/FeatureRemoval.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/BUGFIX/GoodyHutMessages.xml</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/BUGFIX/SpyNames.xml</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/BUGFIX/UnitclassNotUnit.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/BUGFIX/UnitclassNotUnit.xml</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/CONFIG/AiInXml.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/CONFIG/GameInXml.xml</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/DIPLOMACY/Stfu.xml</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/DIPLOMACY/Stfu.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/EVENTS/BattleRoles.xml</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/EVENTS/CanMoveInto.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/EVENTS/CityBombard.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/EVENTS/DiploModifiers.xml</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/EVENTS/Quests.xml</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/GLOBAL/AlpinePasses.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/GLOBAL/CannotEmbark.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/GLOBAL/CityAutomatonWorkers.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/GLOBAL/CityWorking.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/GLOBAL/ExcludeFromGifts.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/GLOBAL/GreatworkYieldtypes.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/GLOBAL/MoveAfterUpgrade.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/GLOBAL/NoFollowup.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/GLOBAL/PassableForts.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/GLOBAL/PromotionClasses.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/GLOBAL/Relocation.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/GLOBAL/SeparateGreatAdmiral.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/GLOBAL/StackingRules.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/PROMOTIONS/AuraChange.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/PROMOTIONS/CrossIce.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/PROMOTIONS/CrossMountains.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/PROMOTIONS/CrossOceans.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/PROMOTIONS/DeepWaterEmbarkation.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/PROMOTIONS/GGfromBarbarians.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/PROMOTIONS/HalfMove.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/PROMOTIONS/ImprovementBonus.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/PROMOTIONS/UnitNaming.xml</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/PROMOTIONS/VariableRecon.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/PROMOTIONS/VariableRecon.xml</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/RELIGION/ConversionModifiers.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/RELIGION/LocalReligions.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/RELIGION/PlotYields.xml</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/RELIGION/PolicyBranchFaithGp.xml</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/TRADE/RouteScaling.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/TRAITS/AnyBelief.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/TRAITS/CrossesIce.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/TRAITS/ExtraSupply.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/TRAITS/GGfromBarbarians.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/TRAITS/OtherPrereqs.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/TRAITS/TradeRouteBonuses.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/UI/CityExpansion.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/UNITS/NewUnits_DDL.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/UNITS/Unit_ScalingFromOwnedImprovements.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/UNITS/MaxHp.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/UNITS/NoSupply.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/_TEXT/AllText_en_US.xml</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/_TEXT/AllText_de_DE.xml</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/_TEXT/AllText_ja_JP.xml</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/_TEXT/AllText_ru_RU.xml</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/_TEXT/AllText_zh_CN.xml</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/_TEXT/AllText_zh_Hant_HK.xml</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/BUILDINGS/DLL_Buildings.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/POLICIES/DDL_Policies.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/TRAITS/DDL_Traits.sql</FileName>
-      </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
@@ -486,26 +109,6 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
         <FileName>Gameplay/XML/GameInfo/HandicapInfos.xml</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>Gameplay/XML/GameInfo/Building_EnableUnitPurchase.xml</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>Gameplay/XML/GameInfo/Improvement_AdjacentImprovementYieldChanges.xml</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>Gameplay/SQL/UnitPromotions_PromotionModifiers.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>Gameplay/SQL/APIUnitCannotBeRangedAttacked.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
@@ -665,6 +268,11 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
+        <FileName>Gameplay/XML/Religions/ReligionAddition.xml</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
         <FileName>Gameplay/XML/Religions/ReligionUnits.xml</FileName>
       </Action>
       <Action>
@@ -721,6 +329,11 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
         <FileName>Gameplay/SQL/NewSpecialistRule.sql</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>Gameplay/SQL/Religion/NewReligionEffect.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
@@ -785,12 +398,17 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>VMC/DB/YIELDS/NewYields_DDL.sql</FileName>
+        <FileName>Gameplay/SQL/Yields/SP_Yields.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>Gameplay/SQL/Yields/SP_Yields.sql</FileName>
+        <FileName>Gameplay/SQL/Eras/NewSPErasEffects.sql</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>Gameplay/SQL/Units/NewUnitPromotionsEffectsSP.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
@@ -843,6 +461,13 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
         <MinVersion>0</MinVersion>
         <MaxVersion>999</MaxVersion>
       </Association>
+      <Association>
+        <Type>Mod</Type>
+        <Name>(1)CIV5MPDLL</Name>
+        <Id>a2969a0a-e4da-41cc-9e0b-19b29aa971d8</Id>
+        <MinVersion>2</MinVersion>
+        <MaxVersion>999</MaxVersion>
+      </Association>
     </ModDependencies>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Default' ">
@@ -869,6 +494,8 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
     <Folder Include="Gameplay\Lua\Utility" />
     <Folder Include="Gameplay\SQL\ArtDefines\" />
     <Folder Include="Gameplay\SQL\Buildings" />
+    <Folder Include="Gameplay\SQL\Eras" />
+    <Folder Include="Gameplay\SQL\Religion\" />
     <Folder Include="Gameplay\SQL\Yields" />
     <Folder Include="Gameplay\SQL\Terrian" />
     <Folder Include="Gameplay\SQL\Policies\" />
@@ -893,6 +520,8 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
     <Folder Include="UI\Art\Flags\Strategic" />
     <Folder Include="UI\Art\IconAtlases" />
     <Folder Include="UI\Art\IconAtlases\Buildings" />
+    <Folder Include="UI\Art\IconAtlases\Buildings\Zulu" />
+    <Folder Include="UI\Art\IconAtlases\Buildings\Persia" />
     <Folder Include="UI\Art\IconAtlases\Extra" />
     <Folder Include="UI\Art\IconAtlases\Buildings\Aztecs" />
     <Folder Include="UI\Art\IconAtlases\Units" />
@@ -903,6 +532,8 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
     <Folder Include="UI\Art\Models" />
     <Folder Include="UI\Art\Models\Improvements" />
     <Folder Include="UI\Art\Models\Improvements\BeastDome" />
+    <Folder Include="UI\Art\Models\Improvements\MountainCity" />
+    <Folder Include="UI\Art\Models\Improvements\CoastalCity" />
     <Folder Include="UI\Art\Models\Units Extra" />
     <Folder Include="UI\Art\Models\Resources\Luxury Amber" />
     <Folder Include="UI\Art\Models\Resources\Luxury Coffee" />
@@ -926,12 +557,14 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
     <Folder Include="UI\Art\Models\Units Extra\Spartan300\" />
     <Folder Include="UI\Art\Models\Units Extra\T72B3\" />
     <Folder Include="UI\Art\Models\Units Infantry\Doppelsoldner\" />
+    <Folder Include="UI\Art\Models\Units Land\Mamluk" />
     <Folder Include="UI\Art\Models\Units Naval" />
     <Folder Include="UI\Art\Models\Units Land" />
     <Folder Include="UI\Art\Models\Units Infantry" />
     <Folder Include="UI\Art\Models\Units Air" />
     <Folder Include="UI\Art\Models\Unit Elite" />
     <Folder Include="UI\Art\Models\Resources" />
+    <Folder Include="UI\Art\Units" />
     <Folder Include="UI\Art\_Edited_Animations" />
     <Folder Include="UI\Atlas" />
     <Folder Include="UI\Civlopedia" />
@@ -942,30 +575,6 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
     <Folder Include="UI\InGame\WorldView" />
     <Folder Include="UI\InGame\PopupsGeneric" />
     <Folder Include="UI\InGame\Popups" />
-    <Folder Include="VMC" />
-    <Folder Include="VMC\ART\" />
-    <Folder Include="VMC\DB" />
-    <Folder Include="VMC\DB\API" />
-    <Folder Include="VMC\DB\BUGFIX" />
-    <Folder Include="VMC\DB\CONFIG" />
-    <Folder Include="VMC\DB\DIPLOMACY" />
-    <Folder Include="VMC\DB\EVENTS" />
-    <Folder Include="VMC\DB\GLOBAL" />
-    <Folder Include="VMC\DB\BUILDINGS" />
-    <Folder Include="VMC\DB\YIELDS" />
-    <Folder Include="VMC\DB\POLICIES" />
-    <Folder Include="VMC\DB\UNITS" />
-    <Folder Include="VMC\DB\UI" />
-    <Folder Include="VMC\DB\TRAITS" />
-    <Folder Include="VMC\DB\TRADE" />
-    <Folder Include="VMC\DB\RELIGION" />
-    <Folder Include="VMC\DB\PROMOTIONS" />
-    <Folder Include="VMC\DB\_TEXT" />
-    <Folder Include="VMC\DLL" />
-    <Folder Include="VMC\LUA" />
-    <Folder Include="VMC\UI" />
-    <Folder Include="VMC\UI\InGame" />
-    <Folder Include="VMC\UI\InGame\Popups" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Gameplay/Lua/SPInit.lua">
@@ -997,6 +606,10 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="Gameplay/Lua/Economy/SP8PolicyEffects.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Gameplay/Lua/Economy/NewReligionRule.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
@@ -1048,19 +661,19 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Gameplay/SQL/NewSpecialistRule.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
     <Content Include="Gameplay/SQL/Deletor.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Gameplay/SQL/GeneralTweaks.sql">
+    <Content Include="Gameplay/SQL/NewSpecialistRule.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Gameplay/SQL/UnitPromotions_PromotionModifiers.sql">
+    <Content Include="Gameplay/SQL/Religion/NewReligionEffect.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="Gameplay/SQL/GeneralTweaks.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
@@ -1132,10 +745,6 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Gameplay/XML/GameInfo/Building_EnableUnitPurchase.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
     <Content Include="Gameplay/XML/GameInfo/Eras.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
@@ -1145,10 +754,6 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="Gameplay/XML/GameInfo/HandicapInfos.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="Gameplay/XML/GameInfo/Improvement_AdjacentImprovementYieldChanges.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
@@ -1205,6 +810,10 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="Gameplay/XML/Religions/ReligionTweak.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="Gameplay/XML/Religions/ReligionAddition.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
@@ -1284,10 +893,6 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Gameplay/SQL/APIUnitCannotBeRangedAttacked.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
     <Content Include="Gameplay/SQL/Policies/PoliciesEffect.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
@@ -1296,7 +901,23 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
+    <Content Include="Gameplay\Lua\Combat\NewBattleCustomDamage.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
     <Content Include="Gameplay\Lua\CSD\NewCityStateDiplomaticRule.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Gameplay\Lua\Economy\NewBuildingRule.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Gameplay\Lua\Utility\PlotIterators.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Gameplay\Lua\Utility\SaveUtils.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
@@ -1320,7 +941,15 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
+    <Content Include="Gameplay\SQL\Eras\NewSPErasEffects.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
     <Content Include="Gameplay\SQL\Terrian\Improvements.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="Gameplay\SQL\Units\NewUnitPromotionsEffectsSP.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
@@ -5232,6 +4861,10 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
+    <Content Include="UI/InGame/Popups/SocialPolicyPopup.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
     <Content Include="UI/InGame/Popups/SocialPolicyPopup.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
@@ -5348,6 +4981,38 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
+    <Content Include="UI\Art\IconAtlases\Buildings\Persia\PairidaezaPicture_045.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\IconAtlases\Buildings\Persia\PairidaezaPicture_064.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\IconAtlases\Buildings\Persia\PairidaezaPicture_128.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\IconAtlases\Buildings\Persia\PairidaezaPicture_256.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\IconAtlases\Buildings\Zulu\IzikoPicture_045.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\IconAtlases\Buildings\Zulu\IzikoPicture_064.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\IconAtlases\Buildings\Zulu\IzikoPicture_128.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\IconAtlases\Buildings\Zulu\IzikoPicture_256.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
     <Content Include="UI\Art\IconAtlases\Extra\SP8Units&amp;BuildingsAtlas016.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
@@ -5429,6 +5094,74 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="UI\Art\Models\Improvements\BeastDome\SV_BeastDome.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Improvements\CoastalCity\PolyWaterCity.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Improvements\CoastalCity\PolyWaterCity.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Improvements\CoastalCity\PolyWaterCity.gr2">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Improvements\CoastalCity\PolyWaterCity_E.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Improvements\CoastalCity\PolyWaterCity_E.gr2">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Improvements\CoastalCity\PolyWaterCity_NE.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Improvements\CoastalCity\PolyWaterCity_NE.gr2">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Improvements\CoastalCity\PolyWaterCity_NW.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Improvements\CoastalCity\PolyWaterCity_NW.gr2">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Improvements\CoastalCity\PolyWaterCity_SE.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Improvements\CoastalCity\PolyWaterCity_SE.gr2">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Improvements\CoastalCity\PolyWaterCity_SW.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Improvements\CoastalCity\PolyWaterCity_SW.gr2">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Improvements\CoastalCity\PolyWaterCity_W.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Improvements\CoastalCity\PolyWaterCity_W.gr2">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Improvements\MountainCity\MachuPicchu.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Improvements\MountainCity\MachuPicchu.gr2">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
@@ -5688,6 +5421,38 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
+    <Content Include="UI\Art\Models\Units Land\Mamluk\Mamluk.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Units Land\Mamluk\Mamluk.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Units Land\Mamluk\Mamluk.gr2">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Units Land\Mamluk\MamlukFlag.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Units Land\Mamluk\MamlukSV.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Units Land\Mamluk\Mamluk_Gloss.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Units Land\Mamluk\Mamluk_Horse.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Units Land\Mamluk\Mamluk_Horse_Gloss.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
     <Content Include="UI\InGame\Popups\CityStateDiploPopup.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
@@ -5695,350 +5460,6 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
     <Content Include="UI\InGame\Popups\CityStateDiploPopup.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/ART/YieldAtlas_128_GoldenAge.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/ART/YieldAtlas_128_Tourism.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/CustomModOptions.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/API/Achievements.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/API/Espionage.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/API/Extensions.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/API/PlotBasedDamage.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/API/PlotYields.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/API/Religion.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/API/UnifiedYields.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/API/UnifiedYields.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/API/UnifiedYieldsGoldenAge.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/API/UnifiedYieldsTourism.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/BUGFIX/DummyPolicies.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/BUGFIX/FeatureRemoval.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/BUGFIX/GoodyHutMessages.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/BUGFIX/SpyNames.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/BUGFIX/UnitclassNotUnit.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/BUGFIX/UnitclassNotUnit.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/CONFIG/AiInXml.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/CONFIG/GameInXml.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/CustomModTables.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/DIPLOMACY/Stfu.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/DIPLOMACY/Stfu.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/EVENTS/BattleRoles.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/EVENTS/CanMoveInto.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/EVENTS/CityBombard.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/EVENTS/DiploModifiers.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/EVENTS/Quests.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/GLOBAL/AlpinePasses.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/GLOBAL/CannotEmbark.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/GLOBAL/CityAutomatonWorkers.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/GLOBAL/CityWorking.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/GLOBAL/ExcludeFromGifts.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/GLOBAL/GreatworkYieldtypes.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/GLOBAL/MoveAfterUpgrade.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/GLOBAL/NoFollowup.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/GLOBAL/PassableForts.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/GLOBAL/PromotionClasses.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/GLOBAL/Relocation.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/GLOBAL/SeparateGreatAdmiral.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/GLOBAL/StackingRules.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/PROMOTIONS/AuraChange.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/PROMOTIONS/CrossIce.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/PROMOTIONS/CrossMountains.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/PROMOTIONS/CrossOceans.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/PROMOTIONS/DeepWaterEmbarkation.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/PROMOTIONS/GGfromBarbarians.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/PROMOTIONS/HalfMove.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/PROMOTIONS/ImprovementBonus.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/PROMOTIONS/UnitNaming.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/PROMOTIONS/VariableRecon.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/PROMOTIONS/VariableRecon.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/RELIGION/ConversionModifiers.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/RELIGION/LocalReligions.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/RELIGION/PlotYields.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/RELIGION/PolicyBranchFaithGp.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/TRADE/RouteScaling.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/TRAITS/AnyBelief.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/TRAITS/CrossesIce.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/TRAITS/ExtraSupply.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/TRAITS/GGfromBarbarians.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/TRAITS/OtherPrereqs.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/TRAITS/TradeRouteBonuses.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/UI/CityExpansion.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/UNITS/MaxHp.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/UNITS/NoSupply.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/_TEXT/AllText_de_DE.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/_TEXT/AllText_en_US.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/_TEXT/AllText_ja_JP.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/_TEXT/AllText_ru_RU.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/_TEXT/AllText_zh_CN.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DB/_TEXT/AllText_zh_Hant_HK.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/DLL/CvGameCore_Expansion2.dll">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/LUA/Stfu.lua">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/UI/InGame/Popups/LeagueOverview.lua">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/UI/InGame/Popups/LeagueOverview.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/UI/InGame/YieldIconManager.lua">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC/UI/InGame/YieldIconManager.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC\DB\BUILDINGS\DLL_Buildings.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC\DB\POLICIES\DDL_Policies.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC\DB\TRAITS\DDL_Traits.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC\DB\UNITS\NewUnits_DDL.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC\DB\UNITS\Unit_ScalingFromOwnedImprovements.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC\DB\YIELDS\NewYields_DDL.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="VMC\DLL\CvGameCoreDLL_Expansion2Win32Release.pdb">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Firaxis\ModBuddy\Civ5Mod.targets" />

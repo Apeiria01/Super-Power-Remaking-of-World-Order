@@ -77,6 +77,7 @@
 			<FreeExperience>15</FreeExperience>
 			<IconAtlas>POLICY_ATLAS</IconAtlas>
 			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<WarCasualtiesModifier>-33</WarCasualtiesModifier>
 		</Row>
 	</Policies>
 	
@@ -636,7 +637,7 @@
 		
 		
 		<Update>
-			<Set FreeExperience="0" MilitaryProductionModifier="0"/>
+			<Set FreeExperience="0" MilitaryProductionModifier="25"/>
 			<Where Type="POLICY_TOTAL_WAR"/>
 		</Update>
 		
@@ -1114,6 +1115,26 @@
 			<PolicyType>POLICY_MONARCHY</PolicyType>
 			<FlavorType>FLAVOR_GOLD</FlavorType>
 			<Flavor>10</Flavor>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_MONARCHY</PolicyType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_MONARCHY</PolicyType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_MONARCHY</PolicyType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_MONARCHY</PolicyType>
+			<FlavorType>FLAVOR_CULTURE</FlavorType>
+			<Flavor>20</Flavor>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_PREFECTURE</PolicyType>

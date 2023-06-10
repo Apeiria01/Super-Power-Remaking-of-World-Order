@@ -1,30 +1,42 @@
 -- New Trait and Policies
 --include( "UtilityFunctions.lua" )
-
+include("FLuaVector.lua");
+include("UtilityFunctions.lua");
+include("PlotIterators.lua");
 -------------------------------------------------------------------------New Trait Effects-----------------------------------------------------------------------
 function SpecialUnitType(iPlayerID, iUnitID)
 	local pPlayer = Players[iPlayerID]
 	if pPlayer == nil then return end
 	local pUnit = pPlayer:GetUnitByID(iUnitID)
 	if pUnit == nil then return end
---	local ChineseGeneralID = GameInfoTypes.UNIT_CHINESE_GREAT_GENERAL
---	local NoOceanID = GameInfo.UnitPromotions["PROMOTION_OCEAN_IMPASSABLE"].ID
+	--	local ChineseGeneralID = GameInfoTypes.UNIT_CHINESE_GREAT_GENERAL
+	--	local NoOceanID = GameInfo.UnitPromotions["PROMOTION_OCEAN_IMPASSABLE"].ID
 
 	--Shoshone new UA effect
-	if GameInfo.Leader_Traits{ LeaderType = GameInfo.Leaders[pPlayer:GetLeaderType()].Type, TraitType = "TRAIT_GREAT_EXPANSE" }()
-	and pUnit:GetUnitType()== GameInfoTypes.UNIT_SCOUT
-	and ( not pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_GOODY_HUT_PICKER"].ID) )
+	if GameInfo.Leader_Traits { LeaderType = GameInfo.Leaders[pPlayer:GetLeaderType()].Type, TraitType = "TRAIT_GREAT_EXPANSE" }()
+		and pUnit:GetUnitType() == GameInfoTypes.UNIT_SCOUT
+		and (not pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_GOODY_HUT_PICKER"].ID))
 	then
 		pUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_GOODY_HUT_PICKER"].ID, true)
 	end
-	
+
+	if GameInfo.Leader_Traits { LeaderType = GameInfo.Leaders[pPlayer:GetLeaderType()].Type, TraitType = "TRAIT_GREAT_ANDEAN_ROAD" }()
+		and (GameInfo.Traits["TRAIT_GREAT_ANDEAN_ROAD"].PrereqPolicy == nil or (GameInfo.Traits["TRAIT_GREAT_ANDEAN_ROAD"].PrereqPolicy
+		and pPlayer:HasPolicy(GameInfoTypes[GameInfo.Traits["TRAIT_GREAT_ANDEAN_ROAD"].PrereqPolicy]))) then
+		if not pUnit:IsCombatUnit() then
+			pUnit:SetHasPromotion(GameInfoTypes["PROMOTION_INCA_CAN_CROSS_MOUNTAINS"], true);
+			print("Inca UA: Set Unit Can Cross Mountains", iPlayerID, iUnitID);
+		end
+	end
+
 	local GameSpeed = Game.GetGameSpeedType()
-	local QuickGameSpeedID = GameInfo.UnitPromotions["PROMOTION_GAME_QUICKSPEED"].ID 
-	
+	local QuickGameSpeedID = GameInfo.UnitPromotions["PROMOTION_GAME_QUICKSPEED"].ID
+
 	if GameSpeed == 3 then
 		pUnit:SetHasPromotion(QuickGameSpeedID, true)
 	end
 end
+
 Events.SerialEventUnitCreated.Add(SpecialUnitType)
 
 
@@ -131,9 +143,7 @@ function JapanReligionEnhancedUA(iPlayer, eReligion, iBelief1, iBelief2)
 		local availableBeliefs = {};
 		for i,v in ipairs(Game.GetAvailablePantheonBeliefs()) do
 			local belief = GameInfo.Beliefs[v];
-			if  belief ~= nil
-			-- and belief.Type ~= "BELIEF_ANCESTOR_WORSHIP" and belief.Type ~= "BELIEF_MONUMENT_GODS"
-			-- and belief.Type ~= "BELIEF_GODDESS_STRATEGY" and belief.Type ~= "BELIEF_FERTILITY_RITES"
+			if belief ~= nil and belief.Pantheon
 			then
 				table.insert(availableBeliefs, belief.ID);
 			end
@@ -354,61 +364,52 @@ function SPTraitsTech(iTeam, eTech, bAdopted)
 end
 GameEvents.TeamSetHasTech.Add(SPTraitsTech)
 
+if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_RUSSIA) then
+	GameEvents.CityBoughtPlot.Add(function(iPlayer, iCity, iPlotX, iPlotY, bGold, bCulture)
+		local pPlayer = Players[iPlayer]
+		if pPlayer == nil or not pPlayer:IsAlive() or pPlayer:GetCivilizationType() ~= GameInfoTypes.CIVILIZATION_RUSSIA then
+			return;
+		end
+		if not bCulture then
+			return;
+		end
 
+		local iBonus = 2 + 2 * pPlayer:GetCurrentEra();
+		pPlayer:ChangeOverflowResearch(iBonus);
+		if pPlayer:IsHuman() and pPlayer:IsTurnActive() then
+			local hex = ToHexFromGrid(Vector2(iPlotX, iPlotY));
+			Events.AddPopupTextEvent(HexToWorld(hex),
+				Locale.ConvertTextKey("[COLOR_BLUE]+{1_Num}[ICON_RESEARCH][ENDCOLOR]", iBonus));
+		end
+	end)
 
--- Double CS's Friendship if USA change the Ally from another Major Civ -- by CaptainCWB
---[[
-function OnUSADoubleCSFriendship (iMinor, iOldAlly, iNewAlly)
-	if Players[ iMinor ] == nil or not Players[ iMinor ]:IsAlive() or not Players[ iMinor ]:IsMinorCiv()
-	or Players[ iOldAlly ] == nil or Players[ iNewAlly ] == nil or iOldAlly == iNewAlly
-	then
-		return;
-	end
-	
-	local NewAlly = Players[iNewAlly];
-	if GameInfo.Leader_Traits{ LeaderType = GameInfo.Leaders[NewAlly:GetLeaderType()].Type, TraitType = "TRAIT_RIVER_EXPANSION" }()
-	and(GameInfo.Traits["TRAIT_RIVER_EXPANSION"].PrereqPolicy == nil or (GameInfo.Traits["TRAIT_RIVER_EXPANSION"].PrereqPolicy 
-	and NewAlly:HasPolicy(GameInfoTypes[GameInfo.Traits["TRAIT_RIVER_EXPANSION"].PrereqPolicy])))
-	then
-		local iFriendship = Players[iMinor]:GetMinorCivFriendshipWithMajor(iNewAlly);
-		Players[iMinor]:ChangeMinorCivFriendshipWithMajor( iNewAlly, iFriendship );
-	end
+	GameEvents.TeamSetHasTech.Add(function(iTeam, eTech, bAdopted)
+		if not (bAdopted and eTech == GameInfoTypes.TECH_INDUSTRIALIZATION) then
+			return;
+		end
+
+		for playerID, pPlayer in pairs(Players) do
+			if pPlayer:GetTeam() == iTeam and pPlayer:GetCivilizationType() == GameInfoTypes.CIVILIZATION_RUSSIA then
+				local capital = pPlayer:GetCapitalCity();
+				capital:SetNumRealBuilding(GameInfoTypes.BUILDING_TB_STRATEGIC_RICHES_IDEOLOGY, 1);
+				print("Russia: Strategic Riches ideology building added to capital");
+			end
+		end
+	end)
 end
-GameEvents.SetAlly.Add(OnUSADoubleCSFriendship)
-]]
 
+if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_VENICE) then
+	GameEvents.PlayerDoTurn.Add(function(iPlayer) -- Venice AI food bonus.
+		local pPlayer = Players[iPlayer];
+		if pPlayer == nil or pPlayer:IsHuman() or not pPlayer:IsAlive() or not pPlayer:IsMajorCiv() or pPlayer:GetCivilizationType() ~= GameInfoTypes.CIVILIZATION_VENICE then
+			return;
+		end
 
-
--- Change AdjacentLand Fishing Boats to Polder for Dutch 
---[["
-function DutchFtPUA( iHexX, iHexY )
-	local pPlot = Map.GetPlot(ToGridFromHex(iHexX, iHexY));
-	if pPlot == nil or not plot:IsCoastalLand() or pPlot:GetOwner() == -1
-	or pPlot:GetFeatureType() ~= -1
-	or  pPlot:GetResourceType(-1) ~= -1
-	or( 
-	pPlot:GetImprovementType() ~= GameInfoTypes["IMPROVEMENT_FARM"]
-	and pPlot:GetImprovementType() ~= GameInfoTypes["IMPROVEMENT_TRADING_POST"]
-	and pPlot:GetTerrainType() ~= TerrainTypes.TERRAIN_SNOW
-	)
-	or pPlot:IsHills()
-	then
-		return;
-	end
-	local pPlayer = Players[ pPlot:GetOwner() ];
-	if     GameInfo.Leader_Traits{ LeaderType = GameInfo.Leaders[pPlayer:GetLeaderType()].Type, TraitType = "TRAIT_LUXURY_RETENTION" }()
-	and(GameInfo.Traits["TRAIT_LUXURY_RETENTION"].PrereqPolicy == nil or (GameInfo.Traits["TRAIT_LUXURY_RETENTION"].PrereqPolicy 
-	and pPlayer:HasPolicy(GameInfoTypes[GameInfo.Traits["TRAIT_LUXURY_RETENTION"].PrereqPolicy])))
-	and Teams[pPlayer:GetTeam()]:IsHasTech(GameInfoTypes[GameInfo.Builds["BUILD_POLDER"].PrereqTech])
-	and	Teams[pPlayer:GetTeam()]:IsHasTech(GameInfoTypes["TECH_ENGINEERING"])
-	then
-		pPlot:SetImprovementType(GameInfoTypes["IMPROVEMENT_POLDER"]);
-		--pPlot:SetResourceType(GameInfoTypes.RESOURCE_FISH, -1)
-	end
+		local pCapital = pPlayer:GetCapitalCity();
+		if pCapital == nil then return; end
+		local iBonus = Game.GetHandicapType() * 4 * pCapital:GrowthThreshold() / 100;
+		pCapital:ChangeFood(iBonus);
+	end)
 end
-Events.SerialEventImprovementCreated.Add(DutchFtPUA)
-"]]
 
-
-   
   print ("New Trait Effect Check Pass!")  

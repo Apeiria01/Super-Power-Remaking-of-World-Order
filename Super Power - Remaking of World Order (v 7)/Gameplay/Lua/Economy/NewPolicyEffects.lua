@@ -7,43 +7,43 @@
 -------------------------------------------------------------------------New Policy Effects-----------------------------------------------------------------------
 -- Militarism reduce city resistance time
 function OnCityCaptured(oldPlayerID, iCapital, iX, iY, newPlayerID, bConquest, iGreatWorksPresent, iGreatWorksXferred)
-
 	local PolicyAuto = GameInfo.Policies["POLICY_MILITARISM"].ID
 	local NewPlayer = Players[newPlayerID]
+	local oldPlayer = Players[oldPlayerID]
 	local resModifier = -50
 	local pPlot = Map.GetPlot(iX, iY)
 	local pCity = pPlot:GetPlotCity()
-	
+
 	if NewPlayer == nil then
-		print ("No players")
-		return
-	end 
-	
-	if NewPlayer:IsBarbarian() or NewPlayer:IsMinorCiv() then
-		print ("Minors are Not available - City Captured!")
+		print("No players")
 		return
 	end
-	
+
+	if NewPlayer:IsBarbarian() or NewPlayer:IsMinorCiv() then
+		print("Minors are Not available - City Captured!")
+		return
+	end
+
 	if NewPlayer:HasPolicy(PolicyAuto) then
-	local resTime = pCity:GetResistanceTurns()
-	local CityPop = pCity:GetPopulation()
-		print("resTime="..resTime)
-		
-		if CityPop < 6 then
+		local resTime = pCity:GetResistanceTurns()
+		local CityPop = pCity:GetPopulation()
+		print("resTime=" .. resTime)
+
+		if CityPop < 6 or oldPlayer:IsHasLostCapital() then
 			pCity:ChangeResistanceTurns(-resTime)
-			print("War Propaganda effect, resTime:"..pCity:GetResistanceTurns())
+			print("War Propaganda effect, resTime:" .. pCity:GetResistanceTurns())
 			print("should be 0 turn")
+		else
+			if resTime > 1 then
+				local resTimeRatio = resTime * resModifier / 100
+				local resTimeChange = math.floor(resTimeRatio)
+				print("resTimeChange=" .. resTimeChange)
+				pCity:ChangeResistanceTurns(resTimeChange)
+				print("War Propaganda effect, resTime:" .. pCity:GetResistanceTurns())
+				print("should be:" .. resTime / 2 + 0.5)
+			end
 		end
-		
-		if resTime > 1 then
-		  	local resTimeRatio =  resTime * resModifier/100
-		  	local resTimeChange = math.floor(resTimeRatio)
-			print ("resTimeChange="..resTimeChange)
-			pCity:ChangeResistanceTurns(resTimeChange)
-			print("War Propaganda effect, resTime:"..pCity:GetResistanceTurns())
-			print("should be:"..resTime/2+0.5)
-		end
-	end	
+	end
 end
 GameEvents.CityCaptureComplete.Add(OnCityCaptured)
 
@@ -216,25 +216,6 @@ function PolicyAdoptedEffects(playerID,policyID)
 	end
 end
 GameEvents.PlayerAdoptPolicy.Add(PolicyAdoptedEffects);
-
-
--- Beliefs
-function SPReligionEnhanced(iPlayer, eReligion, iBelief1, iBelief2)
-	if Game.IsOption(GameOptionTypes.GAMEOPTION_NO_RELIGION) or iPlayer == -1 or not Players[iPlayer]:HasCreatedReligion() then
-		return;
-	end
-	
-	-- The Sacred Palace
-	if iBelief1 and (GameInfo.Beliefs[iBelief1].Type == "BELIEF_RELIGION_PRESSURE"
-	or (GameInfo.Beliefs[iBelief2] and GameInfo.Beliefs[iBelief2].Type == "BELIEF_RELIGION_PRESSURE"))
-	then
-		local holyCity = Game.GetHolyCityForReligion(eReligion, iPlayer);
-		if holyCity then
-			holyCity:SetNumRealBuilding(GameInfoTypes["BUILDING_BELIEF_RELIGION_PRESSURE"], 1)
-		end
-	end
-end
-GameEvents.ReligionEnhanced.Add(SPReligionEnhanced);
 
 function SPReformeBeliefs(iPlayer, iReligion, iBelief)
 	if Game.IsOption(GameOptionTypes.GAMEOPTION_NO_RELIGION) or iPlayer == -1 or not Players[iPlayer]:HasCreatedReligion()
