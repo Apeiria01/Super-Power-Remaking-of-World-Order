@@ -16919,5 +16919,9 @@
 		<Replace Tag="TXT_KEY_PROMOTION_SAPPER_HELP">
 			<Text>+66% Bonus vs Cities. [NEWLINE]When next to an enemy city, other units within 2 tiles get a 50% Bonus when attacking the city.</Text>
 		</Replace>
+
+		<Row Tag="TXT_KEY_GREAT_WRITER_GW_BOUNS">
+			<Text>Each Great Works or Artefacts you have can take [COLOR_POSITIVE_TEXT]additional[ENDCOLOR] {1_Num}% output boost, Total {2_Num}% so far.</Text>
+		</Row>
 	</Language_en_US>
 </GameData>

@@ -1541,6 +1541,10 @@ function TipHandler(control)
 			end
 
 			strToolTip = strToolTip .. "[NEWLINE]" .. Locale.Lookup("TXT_KEY_MISSION_GIVE_POLICIES_HELP");
+			local GWBouns = GameInfo.Units[unit:GetUnitType()].ScaleFromNumGWs;
+			if GWBouns > 0 then
+				strToolTip = strToolTip .. "[NEWLINE]" .. Locale.Lookup("TXT_KEY_GREAT_WRITER_GW_BOUNS", GWBouns, pActivePlayer:GetNumGreatWorks() * GWBouns);
+			end
 
 			if (not bDisabled) then
 				strToolTip = strToolTip .. "[NEWLINE]----------------[NEWLINE]";
