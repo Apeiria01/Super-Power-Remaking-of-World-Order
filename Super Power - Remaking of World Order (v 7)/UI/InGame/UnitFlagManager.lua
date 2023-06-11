@@ -4149,7 +4149,7 @@ function TipHandler(Button)
         end
 
         -- Level, Experience for ActivePlayer
-        if iPlayer == activePlayerID and (unit:IsCombatUnit() or unit:CanAirAttack()) then
+        if unit:IsCombatUnit() or unit:CanAirAttack() then
             toolTipString = toolTipString ..
                 "[NEWLINE]" ..
                 Locale.ConvertTextKey("TXT_KEY_UNIT_EXPERIENCE_INFO", unit:GetLevel(), unit:GetExperience(),
