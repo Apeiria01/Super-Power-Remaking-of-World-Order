@@ -14973,5 +14973,9 @@
 			[NEWLINE][ICON_BULLET]Steam页面steamcommunity.com/sharedfiles/filedetails/?id=2904685641
 			</Text>
 		</Replace>
+
+		<Row Tag="TXT_KEY_GREAT_WRITER_GW_BOUNS">
+			<Text>你所拥有的每个杰作/文物可以提供[COLOR_POSITIVE_TEXT]额外[ENDCOLOR]{1_Num}%产出加成，目前共计{2_Num}%</Text>
+		</Row>
 	</Language_zh_CN>
 </GameData>
