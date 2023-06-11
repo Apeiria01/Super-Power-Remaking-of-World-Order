@@ -16921,7 +16921,7 @@
 		</Replace>
 
 		<Row Tag="TXT_KEY_GREAT_WRITER_GW_BOUNS">
-			<Text>Each Great Works or Artefacts you have can take [COLOR_POSITIVE_TEXT]additional[ENDCOLOR] {1_Num}% output boost, Total {2_Num}% so far.</Text>
+			<Text>Each Great Works or Artefacts you have can take [COLOR_POSITIVE_TEXT]additional[ENDCOLOR] {1_Num}% output boost, Total {2_Num}% so far</Text>
 		</Row>
 	</Language_en_US>
 </GameData>

@@ -14774,7 +14774,7 @@
 		</Replace>
 
 		<Row Tag="TXT_KEY_GREAT_WRITER_GW_BOUNS">
-			<Text>你所擁有的每個傑作/文物可以提供[COLOR_POSITIVE_TEXT]額外[ENDCOLOR]{1_Num}%產出加成，目前共計{2_Num}%。</Text>
+			<Text>你所擁有的每個傑作/文物可以提供[COLOR_POSITIVE_TEXT]額外[ENDCOLOR]{1_Num}%產出加成，目前共計{2_Num}%</Text>
 		</Row>
 	</Language_zh_Hant_HK>
 </GameData>
