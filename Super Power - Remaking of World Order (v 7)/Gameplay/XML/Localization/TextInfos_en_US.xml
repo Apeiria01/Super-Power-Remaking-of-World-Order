@@ -255,7 +255,11 @@
 			<Text>{TXT_KEY_CONCEPT_BUILDING_EXTRA_POPCOST_TOPIC}</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CONCEPT_BUILDING_EXTRA_POPCOST_SUMMARY">
-			<Text>In Super Power Mod, many public service buildings will charge you with extra cost according to the population in the city, like Public Schools and Hospitals. The extra charge will directly add to the base gold output other than calculate separately. [NEWLINE][NEWLINE]It is less noticeable in a small city, but in a populous city, the total city income will be lowered significantly and sometimes even cause negative gold output. Be careful when building these buildings! You must be sure your economy is strong enough to support the cost. You may consider moving out some citizens from over-populated cities into other developing cities for a better price-performance ratio. [NEWLINE][NEWLINE]Important! If this city has a negative gold output, you should sell the market, bank and stock exchange to avoid additional gold lost, since the game will also modifier the negative value! For instance, a city with -5 gold output, with market, bank and stock exchange buildings, its final gold output will be -5*(1+0.75)=-8.75. (This could be a bug but maybe I could fix it in the future versions) </Text>
+			<Text>
+			In Super Power Mod, many public service buildings will charge you with extra cost according to the population in the city, like Public Schools and Hospitals. The extra charge will directly add to the base gold output other than calculate separately. 
+			[NEWLINE][NEWLINE]It is less noticeable in a small city, but in a populous city, the total city income will be lowered significantly and sometimes even cause negative gold output. Be careful when building these buildings! You must be sure your economy is strong enough to support the cost. You may consider moving out some citizens from over-populated cities into other developing cities for a better price-performance ratio. 
+			[NEWLINE][NEWLINE]Important! Since SP9.1, If this city has a negative gold output, it will no longer receive money building (market, bank and stock...) bonuses!
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CONCEPT_BUILDING_EXTRA_POPCOST_ADVISOR_QUESTION">
 			<Text>What is the Extra Buildings Cost?</Text>
