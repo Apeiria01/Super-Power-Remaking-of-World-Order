@@ -14759,5 +14759,17 @@
 		<Replace Tag="TXT_KEY_PROMOTION_SAPPER_HELP">
 			<Text>攻城+66%戰鬥力，當在城市周邊時，所有2格內的友方單位獲得攻城+50%加成。</Text>
 		</Replace>
+
+		<Replace Tag="TXT_KEY_PEDIA_HOME_PAGE_HELP_TEXT">
+			<Text>
+			歡迎來到文明百科！在這裏您將了解到關於這個遊戲各方面的細節。使用「搜索」框可查找特定主題的內容。點擊屏幕頂端的選項卡將帶您到文明百科的各主要部分。屏幕左邊的導航條將會顯示當前部分各個條目。點擊條目直接查看詳細信息。
+			[NEWLINE][NEWLINE]在屏幕左上方區域，您可以看到「前進」和「後退」按鈕，它們可以協助您進行頁面間的切換。點擊右上方「X」將會返回遊戲。
+			[NEWLINE][NEWLINE]這裏是Super Power超級大國模組，關於本模組更多[COLOR_POSITIVE_TEXT]拓展內容[ENDCOLOR]以及[COLOR_POSITIVE_TEXT]最新消息[ENDCOLOR]，請：
+			[NEWLINE][ICON_BULLET]關註百度貼吧：文明5超級大國模組吧
+			[NEWLINE][ICON_BULLET]關註GitHub頁面：github.com/Apeiria01/Super-Power-Remaking-of-World-Order
+			[NEWLINE][ICON_BULLET]加入SP模組的QQ群563095872、水群529905723
+			[NEWLINE][ICON_BULLET]收藏超級大國QQ群發布頁面qingyin3545.github.io/Super-Power-Page
+			</Text>
+		</Replace>
 	</Language_zh_Hant_HK>
 </GameData>
