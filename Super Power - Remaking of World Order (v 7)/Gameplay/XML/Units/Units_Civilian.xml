@@ -560,7 +560,7 @@
 			<CombatLimit>0</CombatLimit>
 			<FoundReligion>true</FoundReligion>
 			<SpreadReligion>true</SpreadReligion>
-			<ReligionSpreads>1</ReligionSpreads>
+			<ReligionSpreads>5</ReligionSpreads>
 			<ReligiousStrength>3000</ReligiousStrength>
 			<UnitArtInfo>ART_DEF_UNIT_GREAT_PROPHET</UnitArtInfo>
 			<UnitFlagIconOffset>94</UnitFlagIconOffset>
@@ -1288,10 +1288,6 @@
 		<Row>
 			<UnitType>UNIT_ARABIAN_PROPHET</UnitType>
 			<PromotionType>PROMOTION_SIGHT_PENALTY</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_ARABIAN_PROPHET</UnitType>
-			<PromotionType>PROMOTION_EXTRA_RELIGION_SPREADS</PromotionType>
 		</Row>
 		<Row>
 			<UnitType>UNIT_MISSIONARY</UnitType>
