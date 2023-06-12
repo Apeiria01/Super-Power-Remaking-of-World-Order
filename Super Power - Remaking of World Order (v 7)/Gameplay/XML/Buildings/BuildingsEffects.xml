@@ -26,12 +26,12 @@
 		<Row>
 			<BuildingType>BUILDING_GRAND_TEMPLE</BuildingType>
 			<UnitType>UNIT_MISSIONARY</UnitType>
-			<NumUnits>1</NumUnits>
+			<NumUnits>2</NumUnits>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_AZTEC_HUEY_TEOCALLI_SP</BuildingType>
 			<UnitType>UNIT_MISSIONARY</UnitType>
-			<NumUnits>1</NumUnits>
+			<NumUnits>2</NumUnits>
 		</Row>
 
 		<Row>
