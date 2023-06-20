@@ -1697,6 +1697,7 @@
 			<PediaType>PEDIA_SHARED</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_FIRST_STRIKE</PediaEntry>
 			<AttackInflictDamageChange>5</AttackInflictDamageChange>
+			<SiegeInflictDamageChange>5</SiegeInflictDamageChange>
 		</Row>
 
 		<Row>
@@ -1713,12 +1714,45 @@
 			<RangedDefenseMod>15</RangedDefenseMod>
 		</Row>
 
+		<Row>
+			<Type>PROMOTION_DAMAGE_FIX_5</Type>
+			<Description>TXT_KEY_PROMOTION_DAMAGE_FIX_5</Description>
+			<Help>TXT_KEY_PROMOTION_DAMAGE_FIX_5_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_SHARED</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_DAMAGE_FIX_5</PediaEntry>
+			<AttackInflictDamageChange>5</AttackInflictDamageChange>
+			<SiegeInflictDamageChange>5</SiegeInflictDamageChange>
+		</Row>
 
+		<Row>
+			<Type>PROMOTION_CITY_DAMAGE_MAXHP_PERCENT</Type>
+			<Description>TXT_KEY_PROMOTION_CITY_DAMAGE_MAXHP_PERCENT</Description>
+			<Help>TXT_KEY_PROMOTION_CITY_DAMAGE_MAXHP_PERCENT_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_SHARED</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_CITY_DAMAGE_MAXHP_PERCENT</PediaEntry>
+			<SiegeInflictDamageChangeMaxHPPercent>10</SiegeInflictDamageChangeMaxHPPercent>
+		</Row>
 
-
-
-
-
+		<Row>
+			<Type>PROMOTION_NEW_ORDER</Type>
+			<Description>TXT_KEY_PROMOTION_NEW_ORDER</Description>
+			<Help>TXT_KEY_PROMOTION_NEW_ORDER_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_SHARED</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_NEW_ORDER</PediaEntry>
+			<OriginalCapitalDamageFix>4</OriginalCapitalDamageFix>
+		</Row>
 
 		<Row>
 			<Type>PROMOTION_NATIONALISM</Type>
@@ -1850,8 +1884,20 @@
 			<PolicyType>POLICY_MILITARY_CASTE</PolicyType>
 			<PromotionType>PROMOTION_SHOOTING_TRAINING</PromotionType>
 		</Row>
-		
-		
+		<Row>
+			<PolicyType>POLICY_MILITARY_CASTE</PolicyType>
+			<PromotionType>PROMOTION_DAMAGE_FIX_5</PromotionType>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_MILITARY_CASTE</PolicyType>
+			<PromotionType>PROMOTION_CITY_DAMAGE_MAXHP_PERCENT</PromotionType>
+		</Row>
+
+		<Row>
+			<PolicyType>POLICY_NEW_ORDER</PolicyType>
+			<PromotionType>PROMOTION_NEW_ORDER</PromotionType>
+		</Row>
+
 		<Row>
 			<PolicyType>POLICY_EXPLORATION</PolicyType>
 			<PromotionType>PROMOTION_FAST_WORKER</PromotionType>
@@ -1926,13 +1972,67 @@
 			<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
 		</Row>
 
-		
+		<Row>
+			<PromotionType>PROMOTION_CITY_DAMAGE_MAXHP_PERCENT</PromotionType>
+			<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+		</Row>
 
-
-		<!--<Row>
-			<PromotionType>PROMOTION_FIRST_STRIKE</PromotionType>
-			<UnitCombatType>UNITCOMBAT_LAND_HIT_AND_RUN</UnitCombatType>
-		</Row>-->
+		<Row>
+			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+			<PromotionType>PROMOTION_NEW_ORDER</PromotionType>
+		</Row>
+		<Row>
+			<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
+			<PromotionType>PROMOTION_NEW_ORDER</PromotionType>
+		</Row>
+		<Row>
+			<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+			<PromotionType>PROMOTION_NEW_ORDER</PromotionType>
+		</Row>
+		<Row>
+			<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+			<PromotionType>PROMOTION_NEW_ORDER</PromotionType>
+		</Row>
+		<Row>
+			<UnitCombatType>UNITCOMBAT_ARMOR</UnitCombatType>
+			<PromotionType>PROMOTION_NEW_ORDER</PromotionType>
+		</Row>
+		<Row>
+			<UnitCombatType>UNITCOMBAT_HELICOPTER</UnitCombatType>
+			<PromotionType>PROMOTION_NEW_ORDER</PromotionType>
+		</Row>
+		<Row>
+			<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+			<PromotionType>PROMOTION_NEW_ORDER</PromotionType>
+		</Row>
+		<Row>
+			<UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType>
+			<PromotionType>PROMOTION_NEW_ORDER</PromotionType>
+		</Row>
+		<Row>
+			<UnitCombatType>UNITCOMBAT_NAVALMELEE</UnitCombatType>
+			<PromotionType>PROMOTION_NEW_ORDER</PromotionType>
+		</Row>
+		<Row>
+			<UnitCombatType>UNITCOMBAT_CARRIER</UnitCombatType>
+			<PromotionType>PROMOTION_NEW_ORDER</PromotionType>
+		</Row>
+		<Row>
+			<UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
+			<PromotionType>PROMOTION_NEW_ORDER</PromotionType>
+		</Row>
+		<Row>
+			<UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType>
+			<PromotionType>PROMOTION_NEW_ORDER</PromotionType>
+		</Row>
+		<Row>
+			<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+			<PromotionType>PROMOTION_NEW_ORDER</PromotionType>
+		</Row>
+		<Row>
+			<UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType>
+			<PromotionType>PROMOTION_NEW_ORDER</PromotionType>
+		</Row>
 
 		<Row>
 			<PromotionType>PROMOTION_LIGHTNING_WARFARE</PromotionType>
@@ -2060,6 +2160,30 @@
 			<UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
 		</Row>
 	</UnitPromotions_UnitCombats>
+
+	<UnitPromotions_Promotions>
+		<Row>
+			<FreePromotionType>PROMOTION_DAMAGE_FIX_5</FreePromotionType>
+			<PrePromotionType>PROMOTION_ARCHERY_COMBAT</PrePromotionType>
+		</Row>
+		<Row>
+			<FreePromotionType>PROMOTION_DAMAGE_FIX_5</FreePromotionType>
+			<PrePromotionType>PROMOTION_HITANDRUN</PrePromotionType>
+		</Row>
+		<Row>
+			<FreePromotionType>PROMOTION_DAMAGE_FIX_5</FreePromotionType>
+			<PrePromotionType>PROMOTION_HELI_ATTACK</PrePromotionType>
+		</Row>
+
+		<Row>
+			<FreePromotionType>PROMOTION_CITY_DAMAGE_MAXHP_PERCENT</FreePromotionType>
+			<PrePromotionType>PROMOTION_CITY_SIEGE</PrePromotionType>
+		</Row>
+		<Row>
+			<FreePromotionType>PROMOTION_CITY_DAMAGE_MAXHP_PERCENT</FreePromotionType>
+			<PrePromotionType>PROMOTION_CARRIER_FIGHTER</PrePromotionType>
+		</Row>
+	</UnitPromotions_Promotions>
 
 	
 	
