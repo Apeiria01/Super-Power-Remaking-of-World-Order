@@ -25,12 +25,6 @@ function SPEBattleCustomDamage(iBattleUnitType, iBattleType,
 		local attUnitCombatType = attUnit:GetUnitCombatType() 
 
 		if attPlayer:HasPolicy(GameInfo.Policies["POLICY_MILITARY_CASTE"].ID) then
-			if ( (attUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_ARCHERY_COMBAT"].ID) ) 
-			or ( (attUnitCombatType == GameInfoTypes.UNITCOMBAT_HELICOPTER) ) )
-			then
-				additionalDamage = additionalDamage + 5
-			end
-
 			if bDefenseIsCity then
 				local defCity = defPlayer:GetCityByID(iDefenseUnitOrCityID) 
 				if defCity == nil then return 0 end

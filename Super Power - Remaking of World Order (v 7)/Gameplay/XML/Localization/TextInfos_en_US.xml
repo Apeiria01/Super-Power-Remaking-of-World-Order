@@ -15431,6 +15431,10 @@
 			<Text>+1 [ICON_MOVES] Movement and ignore enemy ZOC. +5 fixed damage when attacking.</Text>
 		</Row>
 
+		<Row Tag="TXT_KEY_PROMOTION_DAMAGE_FIX_5">
+			<Text>+5 fixed damage</Text>
+		</Row>
+
 
 		<Row Tag="TXT_KEY_PROMOTION_EMP_ATTACK">
 			<Text>EMP Bomb</Text>

@@ -13220,6 +13220,10 @@
 			<Text>+1[ICON_MOVES]移動力，無視敵方控制區域（ZOC）。攻擊時+5固定傷害。</Text>
 		</Row>
 
+		<Row Tag="TXT_KEY_PROMOTION_DAMAGE_FIX_5">
+			<Text>固定傷害+5</Text>
+		</Row>
+
 		<Row Tag="TXT_KEY_PROMOTION_EMP_ATTACK">
 			<Text>電磁脈衝彈</Text>
 		</Row>
