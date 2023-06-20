@@ -1697,6 +1697,7 @@
 			<PediaType>PEDIA_SHARED</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_FIRST_STRIKE</PediaEntry>
 			<AttackInflictDamageChange>5</AttackInflictDamageChange>
+			<SiegeInflictDamageChange>5</SiegeInflictDamageChange>
 		</Row>
 
 		<Row>
@@ -1724,6 +1725,7 @@
 			<PediaType>PEDIA_SHARED</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_DAMAGE_FIX_5</PediaEntry>
 			<AttackInflictDamageChange>5</AttackInflictDamageChange>
+			<SiegeInflictDamageChange>5</SiegeInflictDamageChange>
 		</Row>
 
 
