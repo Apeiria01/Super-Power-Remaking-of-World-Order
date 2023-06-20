@@ -24,24 +24,12 @@ function SPEBattleCustomDamage(iBattleUnitType, iBattleType,
 
 		local attUnitCombatType = attUnit:GetUnitCombatType() 
 
-		if attPlayer:HasPolicy(GameInfo.Policies["POLICY_MILITARY_CASTE"].ID) then
-			if bDefenseIsCity then
-				local defCity = defPlayer:GetCityByID(iDefenseUnitOrCityID) 
-				if defCity == nil then return 0 end
-
-				if attUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_CITY_SIEGE"].ID) 
-				or attUnit:GetDomainType() == DomainTypes.DOMAIN_AIR then
-					additionalDamage = additionalDamage + defCity:GetMaxHitPoints() * 0.1
-				end
-			end
-		end
-
 		if attPlayer:HasPolicy(policyNewOrder) and not attPlayer:IsPolicyBlocked(policyNewOrder) then
 			additionalDamage = additionalDamage + (attPlayer:GetNumOriginalCapital() - 1) * 4;
 		end
 	end
 	return additionalDamage
 end
-GameEvents.BattleCustomDamage.Add(SPEBattleCustomDamage)
+--GameEvents.BattleCustomDamage.Add(SPEBattleCustomDamage)
 
 print("NewBattleCustomDamage Check Pass ");

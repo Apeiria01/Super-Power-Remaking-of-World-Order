@@ -15432,9 +15432,18 @@
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_DAMAGE_FIX_5">
-			<Text>+5 fixed damage</Text>
+			<Text>Shoot Training</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_DAMAGE_FIX_5_HELP">
+			<Text>+5 fixed damage.</Text>
 		</Row>
 
+		<Row Tag="TXT_KEY_PROMOTION_CITY_DAMAGE_MAXHP_PERCENT">
+			<Text>Offensive Operation</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_CITY_DAMAGE_MAXHP_PERCENT_HELP">
+			<Text>+10% extra damage from city max hit point.</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_EMP_ATTACK">
 			<Text>EMP Bomb</Text>

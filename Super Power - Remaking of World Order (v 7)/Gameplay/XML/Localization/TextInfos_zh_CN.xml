@@ -13408,7 +13408,17 @@
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_DAMAGE_FIX_5">
-			<Text>固定伤害+5</Text>
+			<Text>射击训练</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_DAMAGE_FIX_5_HELP">
+			<Text>固定伤害+5。</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_CITY_DAMAGE_MAXHP_PERCENT">
+			<Text>攻坚作战</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_CITY_DAMAGE_MAXHP_PERCENT_HELP">
+			<Text>增加城市最大血量10%伤害。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_EMP_ATTACK">
