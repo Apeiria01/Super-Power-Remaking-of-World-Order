@@ -23,10 +23,6 @@ function SPEBattleCustomDamage(iBattleUnitType, iBattleType,
 		end
 
 		local attUnitCombatType = attUnit:GetUnitCombatType() 
-
-		if attPlayer:HasPolicy(policyNewOrder) and not attPlayer:IsPolicyBlocked(policyNewOrder) then
-			additionalDamage = additionalDamage + (attPlayer:GetNumOriginalCapital() - 1) * 4;
-		end
 	end
 	return additionalDamage
 end

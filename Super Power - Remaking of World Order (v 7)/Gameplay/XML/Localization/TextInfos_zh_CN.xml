@@ -13421,6 +13421,13 @@
 			<Text>增加城市最大血量10%伤害。</Text>
 		</Row>
 
+		<Row Tag="TXT_KEY_PROMOTION_NEW_ORDER">
+			<Text>威权</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_NEW_ORDER_HELP">
+			<Text>每占领一个原始首都，军事单位攻击伤害固定+4。</Text>
+		</Row>
+
 		<Row Tag="TXT_KEY_PROMOTION_EMP_ATTACK">
 			<Text>电磁脉冲弹</Text>
 		</Row>

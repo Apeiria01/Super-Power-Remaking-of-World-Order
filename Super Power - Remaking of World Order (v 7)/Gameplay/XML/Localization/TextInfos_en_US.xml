@@ -15445,6 +15445,13 @@
 			<Text>+10% extra damage from city max hit point.</Text>
 		</Row>
 
+		<Row Tag="TXT_KEY_PROMOTION_NEW_ORDER">
+			<Text>Authoritarianism</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_NEW_ORDER_HELP">
+			<Text>+4 attack demage for each occupied original capital city.</Text>
+		</Row>
+
 		<Row Tag="TXT_KEY_PROMOTION_EMP_ATTACK">
 			<Text>EMP Bomb</Text>
 		</Row>
