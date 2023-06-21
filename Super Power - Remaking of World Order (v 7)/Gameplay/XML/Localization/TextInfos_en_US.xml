@@ -16943,5 +16943,8 @@
 		<Row Tag="TXT_KEY_GREAT_WRITER_GW_BOUNS">
 			<Text>Each Great Works or Artefacts you have can take [COLOR_POSITIVE_TEXT]additional[ENDCOLOR] {1_Num}% output boost, Total {2_Num}% so far</Text>
 		</Row>
+		<Replace Tag="TXT_KEY_WONDER_PORCELAIN_TOWER_HELP">
+			<Text>Requires Rationalism. A Great Scientist appears near the City where the Wonder was built. 25% more [ICON_RESEARCH] Science generated from Research Agreements.</Text>
+		</Replace>
 	</Language_en_US>
 </GameData>

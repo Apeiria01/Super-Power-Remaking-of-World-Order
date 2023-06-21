@@ -6224,6 +6224,21 @@
 			<Flavor>500</Flavor>
 		</Row>
 		<Row>
+			<BuildingType>BUILDING_CARTHAGINIAN_AGORA</BuildingType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>500</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CARTHAGINIAN_AGORA</BuildingType>
+			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
+			<Flavor>100</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CARTHAGINIAN_AGORA</BuildingType>
+			<FlavorType>FLAVOR_GOLD</FlavorType>
+			<Flavor>200</Flavor>
+		</Row>
+		<Row>
 			<BuildingType>BUILDING_STELE</BuildingType>
 			<FlavorType>FLAVOR_CULTURE</FlavorType>
 			<Flavor>20</Flavor>
