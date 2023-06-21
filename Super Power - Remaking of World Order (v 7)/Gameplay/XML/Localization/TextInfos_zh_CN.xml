@@ -14998,5 +14998,8 @@
 		<Row Tag="TXT_KEY_GREAT_WRITER_GW_BOUNS">
 			<Text>你所拥有的每个杰作/文物可以提供[COLOR_POSITIVE_TEXT]额外[ENDCOLOR]{1_Num}%产出加成，目前共计{2_Num}%</Text>
 		</Row>
+		<Replace Tag="TXT_KEY_WONDER_PORCELAIN_TOWER_HELP">
+			<Text>需要开启理性政策树。建成奇观的城市附近出现一位大科学家。合作研究产出的[ICON_RESEARCH]科研+25%。</Text>
+		</Replace>
 	</Language_zh_CN>
 </GameData>
