@@ -31,6 +31,8 @@
 				<NoTechTradeModifier>70</NoTechTradeModifier>
 				<BarbCampGold>25</BarbCampGold>
 				<BarbSpawnMod>0</BarbSpawnMod>
+				<BarbarianBonus>40</BarbarianBonus>
+				<AIBarbarianBonus>60</AIBarbarianBonus>
 				<EarliestBarbarianReleaseTurn>5</EarliestBarbarianReleaseTurn>
 				<BarbarianLandTargetRange>5</BarbarianLandTargetRange>
 				<BarbarianSeaTargetRange>10</BarbarianSeaTargetRange>
@@ -84,6 +86,8 @@
 				<NoTechTradeModifier>50</NoTechTradeModifier>
 				<BarbCampGold>25</BarbCampGold>
 				<BarbSpawnMod>0</BarbSpawnMod>
+				<BarbarianBonus>20</BarbarianBonus>
+				<AIBarbarianBonus>60</AIBarbarianBonus>
 				<EarliestBarbarianReleaseTurn>5</EarliestBarbarianReleaseTurn>
 				<BarbarianLandTargetRange>5</BarbarianLandTargetRange>
 				<BarbarianSeaTargetRange>10</BarbarianSeaTargetRange>
@@ -135,6 +139,8 @@
 				<NoTechTradeModifier>50</NoTechTradeModifier>
 				<BarbCampGold>25</BarbCampGold>
 				<BarbSpawnMod>0</BarbSpawnMod>
+				<BarbarianBonus>0</BarbarianBonus>
+				<AIBarbarianBonus>60</AIBarbarianBonus>
 				<EarliestBarbarianReleaseTurn>0</EarliestBarbarianReleaseTurn>
 				<BarbarianLandTargetRange>5</BarbarianLandTargetRange>
 				<BarbarianSeaTargetRange>10</BarbarianSeaTargetRange>
@@ -192,6 +198,8 @@
 				<NoTechTradeModifier>30</NoTechTradeModifier>
 				<BarbCampGold>25</BarbCampGold>
 				<BarbSpawnMod>0</BarbSpawnMod>
+				<BarbarianBonus>0</BarbarianBonus>
+				<AIBarbarianBonus>60</AIBarbarianBonus>
 				<EarliestBarbarianReleaseTurn>0</EarliestBarbarianReleaseTurn>
 				<BarbarianLandTargetRange>5</BarbarianLandTargetRange>
 				<BarbarianSeaTargetRange>10</BarbarianSeaTargetRange>
@@ -248,6 +256,8 @@
 				<NoTechTradeModifier>30</NoTechTradeModifier>
 				<BarbCampGold>25</BarbCampGold>
 				<BarbSpawnMod>0</BarbSpawnMod>
+				<BarbarianBonus>0</BarbarianBonus>
+				<AIBarbarianBonus>60</AIBarbarianBonus>
 				<EarliestBarbarianReleaseTurn>0</EarliestBarbarianReleaseTurn>
 				<BarbarianLandTargetRange>5</BarbarianLandTargetRange>
 				<BarbarianSeaTargetRange>10</BarbarianSeaTargetRange>
@@ -306,6 +316,8 @@
 				<NoTechTradeModifier>30</NoTechTradeModifier>
 				<BarbCampGold>25</BarbCampGold>
 				<BarbSpawnMod>0</BarbSpawnMod>
+				<BarbarianBonus>0</BarbarianBonus>
+				<AIBarbarianBonus>60</AIBarbarianBonus>
 				<EarliestBarbarianReleaseTurn>0</EarliestBarbarianReleaseTurn>
 				<BarbarianLandTargetRange>5</BarbarianLandTargetRange>
 				<BarbarianSeaTargetRange>10</BarbarianSeaTargetRange>
@@ -364,6 +376,8 @@
 				<NoTechTradeModifier>30</NoTechTradeModifier>
 				<BarbCampGold>25</BarbCampGold>
 				<BarbSpawnMod>0</BarbSpawnMod>
+				<BarbarianBonus>0</BarbarianBonus>
+				<AIBarbarianBonus>60</AIBarbarianBonus>
 				<EarliestBarbarianReleaseTurn>0</EarliestBarbarianReleaseTurn>
 				<BarbarianLandTargetRange>5</BarbarianLandTargetRange>
 				<BarbarianSeaTargetRange>10</BarbarianSeaTargetRange>
@@ -422,6 +436,8 @@
 				<NoTechTradeModifier>30</NoTechTradeModifier>
 				<BarbCampGold>25</BarbCampGold>
 				<BarbSpawnMod>0</BarbSpawnMod>
+				<BarbarianBonus>0</BarbarianBonus>
+				<AIBarbarianBonus>60</AIBarbarianBonus>
 				<EarliestBarbarianReleaseTurn>0</EarliestBarbarianReleaseTurn>
 				<BarbarianLandTargetRange>5</BarbarianLandTargetRange>
 				<BarbarianSeaTargetRange>10</BarbarianSeaTargetRange>

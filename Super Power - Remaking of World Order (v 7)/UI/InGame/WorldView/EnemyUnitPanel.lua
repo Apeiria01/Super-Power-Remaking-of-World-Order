@@ -1400,7 +1400,25 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 
 			-- BarbarianBonuses
 			if (pTheirUnit:IsBarbarian()) then
-				iModifier = GameInfo.HandicapInfos[Game:GetHandicapType()].BarbarianBonus;
+				--iModifier = GameInfo.HandicapInfos[Game:GetHandicapType()].BarbarianBonus;
+				iModifier=0
+				if PreGame.GetHandicap(0)== GameInfoTypes.HANDICAP_SETTLER then
+					iModifier=40
+				elseif PreGame.GetHandicap(0)== GameInfoTypes.HANDICAP_CHIEFTAIN then
+					iModifier=20
+				elseif PreGame.GetHandicap(0)== GameInfoTypes.HANDICAP_WARLORD then
+					iModifier=0
+				elseif PreGame.GetHandicap(0)== GameInfoTypes.HANDICAP_PRINCE then
+					iModifier=0
+				elseif PreGame.GetHandicap(0)== GameInfoTypes.HANDICAP_KING then
+					iModifier=0
+				elseif PreGame.GetHandicap(0)== GameInfoTypes.HANDICAP_EMPEROR then
+					iModifier=0
+				elseif PreGame.GetHandicap(0)== GameInfoTypes.HANDICAP_IMMORTAL then
+					iModifier=0
+				elseif PreGame.GetHandicap(0)== GameInfoTypes.HANDICAP_DEITY then
+					iModifier=0
+				end
 
 				iModifier = iModifier + Players[pMyUnit:GetOwner()]:GetBarbarianCombatBonus();
 

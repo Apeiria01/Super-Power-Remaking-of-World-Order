@@ -15835,7 +15835,10 @@
 			<Text>Grow in Courage</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_GAIN_MOVES_AFFER_KILLING_HELP">
-			<Text>After taking more than 30 damage of an enemy Unit, heal 25% Max Hit Point, +1 [ICON_MOVES] Movement and +1 Attack Chance for this turn.</Text>
+			<Text>
+			[ICON_BULLET]After taking more than 30 damage of an enemy Unit, +1 [ICON_MOVES] Movement and +1 Attack Chance for this turn.
+			[NEWLINE][ICON_BULLET]Heal 10 Hit Point after killing an enemy Unit.
+			</Text>
 		</Row>
 
 		<Replace Tag="TXT_KEY_PROMOTION_SKI_INFANTRY_HELP">
