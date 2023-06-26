@@ -13554,7 +13554,10 @@
 			<Text>勢如破竹</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_GAIN_MOVES_AFFER_KILLING_HELP">
-			<Text>每或對一支敵方部隊造成30以上的傷害，則自身恢復25%最大生命並返還1移動力、1攻擊次數。</Text>
+			<Text>
+			[ICON_BULLET]每對一支敵方部隊造成30以上的傷害，返還1移動力、1攻擊次數。
+			[NEWLINE][ICON_BULLET]每擊殺一支敵方部隊,額外恢復10HP。
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_CAN_FULL_FIRE">

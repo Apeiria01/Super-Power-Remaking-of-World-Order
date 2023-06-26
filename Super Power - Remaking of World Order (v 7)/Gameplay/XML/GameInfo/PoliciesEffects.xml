@@ -1678,8 +1678,8 @@
 			<CannotBeChosen>true</CannotBeChosen>
 			<AdjacentMod>25</AdjacentMod>
 			<FlankAttackModifier>50</FlankAttackModifier>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PortraitIndex>21</PortraitIndex>
+			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_SHARED</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_DISCIPLINE</PediaEntry>
 		</Row>
@@ -1692,8 +1692,8 @@
 			<MovesChange>1</MovesChange>
 			<IgnoreZOC>true</IgnoreZOC>
 			<CannotBeChosen>true</CannotBeChosen>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+			<PortraitIndex>19</PortraitIndex>
+			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_SHARED</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_FIRST_STRIKE</PediaEntry>
 			<AttackInflictDamageChange>5</AttackInflictDamageChange>
@@ -1706,8 +1706,8 @@
 			<Help>TXT_KEY_PROMOTION_SHOOTING_TRAINING_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<CannotBeChosen>true</CannotBeChosen>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+			<PortraitIndex>17</PortraitIndex>
+			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_SHARED</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_SHOOTING_TRAINING</PediaEntry>
 			<RangedAttackModifier>15</RangedAttackModifier>
@@ -1720,8 +1720,8 @@
 			<Help>TXT_KEY_PROMOTION_DAMAGE_FIX_5_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<CannotBeChosen>true</CannotBeChosen>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+			<PortraitIndex>20</PortraitIndex>
+			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_SHARED</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_DAMAGE_FIX_5</PediaEntry>
 			<AttackInflictDamageChange>5</AttackInflictDamageChange>
@@ -1734,8 +1734,8 @@
 			<Help>TXT_KEY_PROMOTION_CITY_DAMAGE_MAXHP_PERCENT_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<CannotBeChosen>true</CannotBeChosen>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+			<PortraitIndex>18</PortraitIndex>
+			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_SHARED</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_CITY_DAMAGE_MAXHP_PERCENT</PediaEntry>
 			<SiegeInflictDamageChangeMaxHPPercent>10</SiegeInflictDamageChangeMaxHPPercent>
@@ -1747,8 +1747,8 @@
 			<Help>TXT_KEY_PROMOTION_NEW_ORDER_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<CannotBeChosen>true</CannotBeChosen>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+			<PortraitIndex>22</PortraitIndex>
+			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_SHARED</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_NEW_ORDER</PediaEntry>
 			<OriginalCapitalDamageFix>4</OriginalCapitalDamageFix>
