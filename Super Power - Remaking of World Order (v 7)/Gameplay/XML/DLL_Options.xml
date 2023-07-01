@@ -281,6 +281,11 @@
 			<Where Name="SP_SMART_AI"/>
 			<Set Value="1"/>
 		</Update>
+
+		<Update>
+			<Where Name="GLOBAL_CORRUPTION"/>
+			<Set Value="1"/>
+		</Update>
 	</CustomModOptions>
 
 

@@ -1,0 +1,12 @@
+insert into CorruptionLevels
+(Type, ScoreLowerBoundBase, MapWidthModifier, MapHeightModifier, IsCapital, IsPuppet, CityHallBuildingClass, PublicSecurityBuildingClass) values
+('CORRUPTION_PUPPET', 0, 0, 0, 0, 1, 'BUILDINGCLASS_PUPPET_GOVERNEMENT', null),
+('CORRUPTION_CAPITAL', 0, 0, 0, 1, 0, null, null),
+('CORRUPTION_LV0', 0,  0, 0, 0, 0, null, null),
+('CORRUPTION_LV1', 1,  0, 0, 0, 0, 'BUILDINGCLASS_CITY_HALL_LV1', null),
+('CORRUPTION_LV2', 8,  0, 0, 0, 0, 'BUILDINGCLASS_CITY_HALL_LV2', 'BUILDINGCLASS_CONSTABLE'),
+('CORRUPTION_LV3', 14, 1, 1, 0, 0, 'BUILDINGCLASS_CITY_HALL_LV3', 'BUILDINGCLASS_SHERIFF_OFFICE'),
+('CORRUPTION_LV4', 26, 2, 2, 0, 0, 'BUILDINGCLASS_CITY_HALL_LV4', 'BUILDINGCLASS_POLICE_STATION'),
+('CORRUPTION_LV5', 36, 2, 2, 0, 0, 'BUILDINGCLASS_CITY_HALL_LV5', 'BUILDINGCLASS_PROCURATORATE');
+
+update Resources set CorruptionScoreChange = -9999 where CivilizationType = 'CIVILIZATION_INDONESIA';

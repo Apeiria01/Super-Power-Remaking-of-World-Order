@@ -78,7 +78,6 @@ PopupLayouts[ButtonPopupTypes.BUTTONPOPUP_CITY_CAPTURED] = function(popupInfo)
 --		newCity:ChooseProduction();
 
 		----------------------------------------------------------------------SP Annexing city build a City Hall Start--------------------------
-	    SetCityLevelbyDistance(newCity)
 	    print ("New City Hall built!")
 	 	----------------------------------------------------------------------SP Annexing city build a City Hall End--------------------------	
 		

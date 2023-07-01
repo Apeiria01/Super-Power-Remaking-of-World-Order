@@ -6358,7 +6358,7 @@
 				[NEWLINE][NEWLINE]啟用自主政策：
 				[NEWLINE][ICON_BULLET]使每座城市+1[ICON_CULTURE]文化，+1[ICON_RESEARCH]科研。
 				[NEWLINE][ICON_BULLET]工人修建地塊設施速度+25%。
-				[NEWLINE][ICON_BULLET]提升市政廳等級的判定距離（x級城的最大距離+x格）。
+        [NEWLINE][ICON_BULLET]所有城市的行政成本下降-15%。
 				[NEWLINE][ICON_BULLET]允許建造大金字塔。
 				[NEWLINE][NEWLINE]推行所有自主政策：
 				[NEWLINE][ICON_BULLET]在首都[ICON_CAPITAL]附近免費獲得一位大工程師。

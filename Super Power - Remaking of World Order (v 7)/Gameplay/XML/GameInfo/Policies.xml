@@ -86,7 +86,7 @@
 		
 		<Update>
 			<Set WorkerSpeedModifier="25" GreatGeneralRateModifier="25" GreatAdmiralRateModifier="25" RiggingElectionModifier="50"
-			StealTechFasterModifier="50"/>
+			StealTechFasterModifier="50" CorruptionScoreModifier="-15"/>
 			<Where Type="POLICY_LIBERTY"/>
 		</Update>
 		<Update>
@@ -599,7 +599,7 @@
 			<Where Type="POLICY_CULTURAL_REVOLUTION"/>
 		</Update>
 		<Update>
-			<Set LessHappyTourismModifier="0" Level="2"/>
+			<Set LessHappyTourismModifier="0" Level="2" CorruptionLevelReduceByOne="1"/>
 			<Where Type="POLICY_DICTATORSHIP_PROLETARIAT"/>
 		</Update>
 		<Update>

@@ -61,7 +61,7 @@
 			<Type>TRAIT_OCEAN_MOVEMENT</Type>
 			<Description>TXT_KEY_TRAIT_OCEAN_MOVEMENT</Description>
 			<ShortDescription>TXT_KEY_TRAIT_OCEAN_MOVEMENT_SHORT</ShortDescription>
-			<!--<ExtraSpies>1</ExtraSpies>-->
+      <CorruptionLevelReduceByOne>true</CorruptionLevelReduceByOne>
 		</Row>
 		<Row>
 			<Type>TRAIT_ENHANCED_CULTURE</Type>
@@ -391,6 +391,7 @@
 			<CombatBonusImprovement>IMPROVEMENT_MOAI</CombatBonusImprovement>
 			<FreeBuilding>BUILDING_TB_WAYFINDING</FreeBuilding>
 			<CanFoundCoastCity>true</CanFoundCoastCity>
+      <MaxCorruptionLevel>3</MaxCorruptionLevel>
 		</Row>
 		<Row>
 			<Type>TRAIT_GREAT_EXPANSE</Type>

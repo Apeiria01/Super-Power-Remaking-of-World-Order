@@ -23,11 +23,6 @@ PopupLayouts[ButtonPopupTypes.BUTTONPOPUP_ANNEX_CITY] = function(popupInfo)
 		----------------------------------------------------------------------SP Annexing city build a City Hall Start--------------------------
 		newCity:SetPuppet (false)
 		newCity:SetProductionAutomated (false)
-		newCity:SetNumRealBuilding(GameInfoTypes["BUILDING_PUPPET_GOVERNEMENT"],0)
-		newCity:SetNumRealBuilding(GameInfoTypes["BUILDING_PUPPET_GOVERNEMENT_FULL"],0)
-		
---		newCity:ChangeResistanceTurns(1)
-	    SetCityLevelbyDistance(newCity)
 
 	    
 	    print ("New City Hall built!")

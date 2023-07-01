@@ -133,19 +133,6 @@ end ---------Function End
 
 GameEvents.PlayerDoTurn.Add(NewCitySystem)
 
---------------Trigger the city system when player build new city
-function HumanFoundingNewCities(iPlayerID, iX, iY)
-    local player = Players[iPlayerID]
-    if player and player:IsHuman() and player:GetNumCities() >= 1 then
-        local pPlot = Map.GetPlot(iX, iY)
-        local pCity = pPlot:GetPlotCity()
-
-        SetCityLevelbyDistance(pCity);
-    end
-end
-
-GameEvents.PlayerCityFounded.Add(HumanFoundingNewCities)
-
 ----------------------------------------------Utilities----------------------------------------
 
 --------------------- International Immigration
@@ -308,7 +295,6 @@ function SetCityPerTurnEffects(playerID)
             if city ~= nil then
                 city:SetNumRealBuilding(
                     GameInfoTypes["BUILDING_IMMIGRANT_RECEIVED"], 0)
-                SetCityLevelbyDistance(city)
             end
         end
     end

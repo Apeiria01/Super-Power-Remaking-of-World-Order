@@ -7286,7 +7286,7 @@
 				[NEWLINE][NEWLINE]Opening Effect:
 				[NEWLINE][ICON_BULLET]+1 [ICON_CULTURE] Culture and +1 [ICON_RESEARCH] Science in every city.
 				[NEWLINE][ICON_BULLET]+25% Tile Improvement construction rate.
-				[NEWLINE][ICON_BULLET] Increase the judgment distance of the city hall level (the maximum distance of the x-level city + x blocks).
+        [NEWLINE][ICON_BULLET]-15% Administrative cost in all cities.
 				[NEWLINE][ICON_BULLET]Wonder Unlocked: The Pyramids.
 				[NEWLINE][NEWLINE]Finishing Bonus:
 				[NEWLINE][ICON_BULLET]One free Great Engineer.

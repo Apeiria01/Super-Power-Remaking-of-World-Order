@@ -333,6 +333,7 @@
 			<NeverCapture>true</NeverCapture>
 			<IconAtlas>BW_ATLAS_1</IconAtlas>
 			<PortraitIndex>19</PortraitIndex>
+      <CorruptionLevelChange>-2</CorruptionLevelChange>
 		</Row>
 	</Buildings>
 	
@@ -523,4 +524,12 @@
 			<Cost>16</Cost>
 		</Row>
 	</Building_ResourceQuantityRequirements>
+
+  <Civilization_BuildingClassOverrides>
+    <Row>
+      <CivilizationType>CIVILIZATION_VENICE</CivilizationType>
+      <BuildingClassType>BUILDINGCLASS_PUPPET_GOVERNEMENT</BuildingClassType>
+      <BuildingType>BUILDING_PUPPET_GOVERNEMENT_FULL</BuildingType>
+    </Row>
+  </Civilization_BuildingClassOverrides>
 </GameData>
