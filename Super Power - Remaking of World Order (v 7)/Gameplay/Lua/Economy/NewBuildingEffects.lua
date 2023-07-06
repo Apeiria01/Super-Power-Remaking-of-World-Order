@@ -645,7 +645,7 @@ if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_ZULU) then
 			return;
 		end
 
-		local iBonus = 1 + 2 * pPlayer:GetCurrentEra();
+		local iBonus = 1 + pPlayer:GetCurrentEra();
 		for city in pPlayer:Cities() do
 			if city:IsHasBuilding(GameInfoTypes["BUILDING_ZULU_IZIKO"]) then
 				city:ChangeJONSCultureStored(iBonus);

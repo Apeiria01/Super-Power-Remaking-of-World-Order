@@ -391,7 +391,7 @@
 			<CombatBonusImprovement>IMPROVEMENT_MOAI</CombatBonusImprovement>
 			<FreeBuilding>BUILDING_TB_WAYFINDING</FreeBuilding>
 			<CanFoundCoastCity>true</CanFoundCoastCity>
-      <MaxCorruptionLevel>3</MaxCorruptionLevel>
+      		<MaxCorruptionLevel>3</MaxCorruptionLevel>
 		</Row>
 		<Row>
 			<Type>TRAIT_GREAT_EXPANSE</Type>

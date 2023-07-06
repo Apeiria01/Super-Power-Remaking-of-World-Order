@@ -7916,7 +7916,7 @@
 			<Text>燧明天火</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_DANCE_AURORA">
-			<Text>城市+1[ICON_PRODUCTION]产能、+1[ICON_PEACE]信仰</Text>
+			<Text>城市+1[ICON_PRODUCTION]产能、+1[ICON_PEACE]信仰、+1[ICON_GREAT_PEOPLE]大工程师点数</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_ANCESTOR_WORSHIP">
 			<Text>神祠+1[ICON_PEACE]信仰、+1[ICON_CULTURE]文化，建造工业时代之前的奇观+10%[ICON_PRODUCTION]产能</Text>
@@ -8083,7 +8083,7 @@
 			<Text>宗教科学</Text>
 		</Row>
 		<Row Tag="TXT_KEY_RELIGIOUS_SCIENCE">
-			<Text>每座信仰该宗教的城市贡献2[ICON_RESEARCH]科研，宗教圣地+4[ICON_RESEARCH]科研</Text>
+			<Text>每座信仰该宗教的城市贡献2[ICON_RESEARCH]科研，宗教圣地+4[ICON_RESEARCH]科研，首都+2[ICON_GREAT_PEOPLE]大科学家点数</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SACRED_CALENDAR_SHORT">
 			<Text>神圣历法</Text>

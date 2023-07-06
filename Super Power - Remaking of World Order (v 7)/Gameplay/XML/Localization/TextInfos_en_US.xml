@@ -3670,7 +3670,7 @@
 			<Set Text="Contains a prebuilt Great Work of Art in the Great Work Slot. [NEWLINE][NEWLINE]+6 [ICON_TOURISM] Tourism when Archaeology is discovered." />
 		</Update>
 		<Row Tag="TXT_KEY_BUILDING_STONEHENGE_HELP">
-			<Text>+6 [ICON_TOURISM] Tourism when Archaeology is discovered. </Text>
+			<Text>+9[ICON_PEACE] Faith, +1 [ICON_GREAT_PEOPLE] Great Engineer Points, +6 [ICON_TOURISM] Tourism when Archaeology is discovered. </Text>
 		</Row>
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_ANGKOR_WAT_HELP" />
@@ -8772,7 +8772,7 @@
 			<Text>Prometheus</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_DANCE_AURORA">
-			<Text>+1 [ICON_PRODUCTION] and +1 [ICON_PEACE] Faith Produciton in cities</Text>
+			<Text>+1 [ICON_PRODUCTION] Produciton, +1 [ICON_PEACE] Faith and +1 [ICON_GREAT_PEOPLE] Great Engineer Points  in cities</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_DESERT_FOLKLORE">
 			<Text>+1 [ICON_PEACE] Faith from Desert tiles, +1 [ICON_CULTURE] Culture and +1 [ICON_PEACE] Faith from Oasis</Text>
@@ -8943,7 +8943,7 @@
 			<Text>Religious Sciece</Text>
 		</Row>
 		<Row Tag="TXT_KEY_RELIGIOUS_SCIENCE">
-			<Text>+2 [ICON_RESEARCH] Science for each City following this religion, +4 [ICON_RESEARCH] Science from Holy Sites</Text>
+			<Text>+2 [ICON_RESEARCH] Science for each City following this religion, +4 [ICON_RESEARCH] Science from Holy Sites, +2 [ICON_GREAT_PEOPLE] Great Scientist Points in Capital City </Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SACRED_CALENDAR_SHORT">
 			<Text>Sacred Calendar</Text>

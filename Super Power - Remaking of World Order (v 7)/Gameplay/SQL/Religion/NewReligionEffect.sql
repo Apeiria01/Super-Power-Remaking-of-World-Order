@@ -127,6 +127,9 @@ SELECT 'BELIEF_GODDESS_HUNT','RESOURCE_DEER','YIELD_PRODUCTION',1 UNION ALL
 SELECT 'BELIEF_GODDESS_HUNT','RESOURCE_BISON','YIELD_FOOD',1;
 
 DELETE FROM Belief_TerrainYieldChanges WHERE BeliefType = 'BELIEF_DANCE_AURORA';
+UPDATE Beliefs SET GreatPersonPointsPerCity = 1 WHERE Type='BELIEF_DANCE_AURORA';
+INSERT INTO Belief_GreatPersonPoints (BeliefType, GreatPersonType, Value)
+SELECT 'BELIEF_DANCE_AURORA', 'GREATPERSON_ENGINEER', 1;
 INSERT INTO Belief_CityYieldChanges (BeliefType,YieldType,Yield)
 SELECT 'BELIEF_DANCE_AURORA','YIELD_FAITH',1 UNION ALL
 SELECT 'BELIEF_DANCE_AURORA','YIELD_PRODUCTION',1;
@@ -203,6 +206,9 @@ UPDATE Beliefs SET HappinessPerFollowingCity = '1' WHERE Type = 'BELIEF_CEREMONI
 
 UPDATE Beliefs SET CityStateMinimumInfluence = '35' WHERE Type = 'BELIEF_PAPAL_PRIMACY';
 
+UPDATE Beliefs SET GreatPersonPointsCapital = 1 WHERE Type='BELIEF_RELIGIOUS_SCIENCE';
+INSERT INTO Belief_GreatPersonPoints (BeliefType, GreatPersonType, Value)
+SELECT 'BELIEF_RELIGIOUS_SCIENCE', 'GREATPERSON_SCIENTIST', 2;
 INSERT INTO Belief_YieldPerFollowingCity (BeliefType,YieldType,Yield)
 SELECT 'BELIEF_RELIGIOUS_SCIENCE','YIELD_SCIENCE',2;
 INSERT INTO Belief_ImprovementYieldChanges (BeliefType,ImprovementType,YieldType,Yield)
