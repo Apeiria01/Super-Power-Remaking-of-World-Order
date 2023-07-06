@@ -1177,6 +1177,7 @@ function OnCityViewUpdate()
 							iGPPChange = iGPPChange + building.GreatPeopleRateChange * 100;
 						end
 					end
+					iGPPChange = iGPPChange + pCity:GetGreatPersonPointFromReligion(iSpecialistIndex) * 100 ;
 					if iGPPChange > 0 then
 						-- Generic GP mods
 						local iPlayerMod = pPlayer:GetGreatPeopleRateModifier();

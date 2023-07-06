@@ -4754,8 +4754,8 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PediaType>PEDIA_RANGED</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_ORBAN_CANNON</PediaEntry>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PortraitIndex>25</PortraitIndex>
+			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
 			<CannotBeChosen>true</CannotBeChosen>
 			<DestroyBuildingCollection>COLLECTIONS_ORBAN_CANNON</DestroyBuildingCollection>
 			<DestroyBuildingProbability>40</DestroyBuildingProbability>
@@ -5133,8 +5133,8 @@
 			<Description>TXT_KEY_PROMOTION_ANTI_GUNPOWDER</Description>
 			<Help>TXT_KEY_PROMOTION_ANTI_GUNPOWDER_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>9</PortraitIndex>
-			<IconAtlas>EXPANSION2_PROMOTION_ATLAS</IconAtlas>
+			<PortraitIndex>24</PortraitIndex>
+			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_ANTI_GUNPOWDER</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
@@ -6649,8 +6649,8 @@
 			<Help>TXT_KEY_PROMOTION_IGNORE_TERRAIN_COST</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<IgnoreTerrainCost>true</IgnoreTerrainCost>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PortraitIndex>26</PortraitIndex>
+			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_SHARED</PediaType>
 			<PediaEntry>TXT_KEY_PEDIA_PROMOTION_IGNORE_TERRAIN_COST</PediaEntry>
 		</Row>
