@@ -8772,7 +8772,7 @@
 			<Text>Prometheus</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_DANCE_AURORA">
-			<Text>+1 [ICON_PRODUCTION] Produciton, +1 [ICON_PEACE] Faith and +1 [ICON_GREAT_PEOPLE] Great Engineer Points  in cities</Text>
+			<Text>+1 [ICON_PRODUCTION] Produciton, +1 [ICON_PEACE] Faith and +1 [ICON_GREAT_PEOPLE] Great Engineer Points in cities</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_DESERT_FOLKLORE">
 			<Text>+1 [ICON_PEACE] Faith from Desert tiles, +1 [ICON_CULTURE] Culture and +1 [ICON_PEACE] Faith from Oasis</Text>
@@ -8787,13 +8787,19 @@
 			<Text>+2 [ICON_RESEARCH] Science and +2 [ICON_PEACE] Faith in cities with a City Connection</Text>
 		</Replace>
 		<Row Tag="TXT_KEY_BELIEF_GODDESS_OF_PURITY_SHORT">
-			<Text>Goddess of purity</Text>
+			<Text>Goddess of Purity</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_GODDESS_OF_PURITY">
 			<Text>
 				+4 [ICON_FOOD] Food, +4[ICON_PEACE] Faith, +2 [ICON_PRODUCTION] Production and +2 [ICON_RESEARCH] Science from Fountain of Youth , 
 				+4 [ICON_CULTURE] Culrure, +4[ICON_PEACE] Faith, +2 [ICON_PRODUCTION] Production and +2 [ICON_RESEARCH] Science from Lake Victoria
 			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_GODDESS_OF_WISDOM_SHORT">
+			<Text>Goddess of Wisdom</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_GODDESS_OF_WISDOM">
+			<Text>+2 [ICON_RESEARCH] Science and +2 [ICON_GREAT_PEOPLE] Great Scientist Points in Capital, +1 [ICON_RESEARCH] Science and +1 [ICON_GREAT_PEOPLE] Great Scientist Points in other cities.</Text>
 		</Row>
 		<Replace Tag="TXT_KEY_BELIEF_ASCETISM">
 			<Text>Shrines provide +1 [ICON_HAPPINESS_1] Happiness in cities</Text>
@@ -8832,7 +8838,7 @@
 			<Text>Each World Wonder provides +2 [ICON_PEACE] Faith and +2 [ICON_CULTURE] Culture in city</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_CEREMONIAL_BURIAL">
-			<Text>+1 [ICON_HAPPINESS_1] Global Happiness for each city following this religion</Text>
+			<Text>+1 [ICON_HAPPINESS_1] Global Happiness for each city following this religion, +3 [ICON_GOLDEN_AGE] golden age points for each your City following this religion</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_INITIATION_RITES">
 			<Text>+180 [ICON_GOLD] Gold when each city first converts to this religion (At Normal Game Speed)</Text>
@@ -8864,7 +8870,7 @@
 			<Text>+2 [ICON_PEACE] Faith for every Granary, +1 [ICON_PEACE] Faith from [ICON_RES_WHEAT]</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_MONUMENT_GODS">
-			<Text>+2 [ICON_PEACE] Faith for every Monument</Text>
+			<Text>+2 [ICON_PEACE] Faith for every Monument, +2 [ICON_CULTURE] Culture in Capital City</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_STONE_CIRCLES">
 			<Text>+2 [ICON_PEACE] Faith from Quarries and +2 [ICON_PEACE] Faith for every Stone Works, +1 [ICON_PRODUCTION] Production from each [ICON_RES_MARBLE] Marble</Text>
@@ -8897,7 +8903,7 @@
 			<Text>+2 [ICON_PEACE] Faith and +2 [ICON_CULTURE] Culture for every Gem and Pearl</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GOD_KING">
-			<Text>Palace provides +3 [ICON_PEACE] Faith, +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production and +1 [ICON_CULTURE] Culture from each [ICON_CITYBANNER_CITY_LV1] City Hall [COLOR_NEGATIVE_TEXT](Lv1)[ENDCOLOR]</Text>
+			<Text>Palace provides +3 [ICON_PEACE] Faith, +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production, +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production and +1 [ICON_CULTURE] Culture from each [ICON_CITYBANNER_CITY_LV1] City Hall [COLOR_NEGATIVE_TEXT](Lv1)[ENDCOLOR]</Text>
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_BELIEF_PAPAL_PRIMACY">

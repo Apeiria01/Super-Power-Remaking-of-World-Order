@@ -7928,7 +7928,7 @@
 			<Text>荒漠+1[ICON_PEACE]信仰，绿洲额外+1[ICON_CULTURE]文化、+1[ICON_PEACE]信仰</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GOD_KING">
-			<Text>宫殿+3[ICON_PEACE]信仰、[ICON_CITYBANNER_CITY_LV1]一级城市+1[ICON_FOOD]食物、[ICON_PRODUCTION]产能、[ICON_CULTURE]文化</Text>
+			<Text>宫殿+3[ICON_PEACE]信仰、+1[ICON_FOOD]食物、[ICON_PRODUCTION]产能，[ICON_CITYBANNER_CITY_LV1]一级城市+1[ICON_FOOD]食物、[ICON_PRODUCTION]产能、[ICON_CULTURE]文化</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GODDESS_HUNT">
 			<Text>猎场+1[ICON_FOOD]食物、+1[ICON_PEACE]信仰，[ICON_RES_BISON]野牛+1[ICON_FOOD]食物，[ICON_RES_DEER]野鹿+1[ICON_PRODUCTION]产能</Text>
@@ -7966,6 +7966,12 @@
 				维多利亚湖+4[ICON_CULTURE]文化、+4[ICON_PEACE]信仰、+2[ICON_PRODUCTION]产能、+2[ICON_RESEARCH]科研
 			</Text>
 		</Row>
+		<Row Tag="TXT_KEY_BELIEF_GODDESS_OF_WISDOM_SHORT">
+			<Text>智慧女神</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_GODDESS_OF_WISDOM">
+			<Text>城市+1[ICON_RESEARCH]科研、+1[ICON_GREAT_PEOPLE]大科学家点数，首都加成翻倍</Text>
+		</Row>
 		<Replace Tag="TXT_KEY_BELIEF_ASCETISM">
 			<Text>神祠+1[ICON_HAPPINESS_1]快乐</Text>
 		</Replace>
@@ -7991,7 +7997,7 @@
 			<Text>每个世界奇观+2[ICON_PEACE]信仰、+2[ICON_CULTURE]文化</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_CEREMONIAL_BURIAL">
-			<Text>全国每座信仰该宗教的城市贡献1[ICON_HAPPINESS_1]快乐</Text>
+			<Text>每座信仰该宗教的城市贡献1[ICON_HAPPINESS_1]全局快乐，全国每座信仰该宗教的城市贡献3[ICON_GOLDEN_AGE]黄金时代点数</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_INITIATION_RITES">
 			<Text>每座城市首次皈依该宗教时贡献180[ICON_GOLD]金钱（标准速度）</Text>
@@ -8012,7 +8018,7 @@
 			<Text>神祠和神庙+2[ICON_FOOD]食物</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_MONUMENT_GODS">
-			<Text>纪念碑+2[ICON_PEACE]信仰</Text>
+			<Text>纪念碑+2[ICON_PEACE]信仰，首都+2[ICON_CULTURE]文化</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_STONE_CIRCLES">
 			<Text>采石场和石工坊+2[ICON_PEACE]信仰，[ICON_RES_MARBLE]大理石+1[ICON_PRODUCTION]产能</Text>
