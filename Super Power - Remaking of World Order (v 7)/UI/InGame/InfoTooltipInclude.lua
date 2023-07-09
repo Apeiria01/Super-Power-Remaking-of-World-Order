@@ -1570,6 +1570,7 @@ local function getHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader,
 	terrains:insertLocalizedIf( building.Water and "TXT_KEY_TERRAIN_COAST" )
 	terrains:insertLocalizedIf( building.River and "TXT_KEY_PLOTROLL_RIVER" )
 	terrains:insertLocalizedIf( building.FreshWater and "TXT_KEY_ABLTY_FRESH_WATER_STRING" )
+	terrains:insertLocalizedIf( building.AnyWater == 1 and "TXT_KEY_BUILDING_NEED_ANY_WATER" )
 	terrains:insertIf( building.Mountain and L"TXT_KEY_TERRAIN_MOUNTAIN" .. "[ICON_RANGE_STRENGTH]1" )
 	terrains:insertIf( building.NearbyMountainRequired and L"TXT_KEY_TERRAIN_MOUNTAIN" .. "[ICON_RANGE_STRENGTH]2" )
 	terrains:insertLocalizedIf( building.Hill and "TXT_KEY_TERRAIN_HILL" )

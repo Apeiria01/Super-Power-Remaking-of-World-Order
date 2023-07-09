@@ -2965,7 +2965,7 @@
 			<Text>[ICON_RES_ELECTRICITY]核電擴容機組</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_NUCLEAR_PLANT_EXTEND_HELP">
-			<Text>只能建造於擁有核電站的城市。[NEWLINE][NEWLINE]只能在中型城市（15人口）建造。</Text>
+			<Text>只能建造於擁有核電站且臨近淡水或沿海的城市。[NEWLINE][NEWLINE]只能在中型城市（15人口）建造。</Text>
 		</Row>
 		
 		
@@ -14809,5 +14809,8 @@
 		<Replace Tag="TXT_KEY_WONDER_PORCELAIN_TOWER_HELP">
       		<Text>要求理性政策分支。當該奇跡建成時城市附近出現一位大科學家。從研究協定中獲得的[ICON_RESEARCH]科技值增加25%。</Text>
     	</Replace>
+		<Row Tag="TXT_KEY_BUILDING_NEED_ANY_WATER">
+			<Text>水源</Text>
+		</Row>
 	</Language_zh_Hant_HK>
 </GameData>

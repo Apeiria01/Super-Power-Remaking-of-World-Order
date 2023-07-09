@@ -320,7 +320,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HYDRO_PLANT</ArtDefineTag>
 			<MinAreaSize>10</MinAreaSize>
 			<NeverCapture>true</NeverCapture>
-			<Water>true</Water>
+			<AnyWater>true</AnyWater>
 			<HurryCostModifier>50</HurryCostModifier>
 			<IconAtlas>SPBuildings_ATLAS</IconAtlas>
 			<PortraitIndex>42</PortraitIndex>
@@ -696,7 +696,12 @@
 		<Row>
 			<BuildingType>BUILDING_NUCLEAR_PLANT</BuildingType>
 			<ResourceType>RESOURCE_URANIUM</ResourceType>
-			<Cost>2</Cost>
+			<Cost>1</Cost>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_NUCLEAR_PLANT_EXTEND</BuildingType>
+			<ResourceType>RESOURCE_URANIUM</ResourceType>
+			<Cost>1</Cost>
 		</Row>
 		
 		<Row>
