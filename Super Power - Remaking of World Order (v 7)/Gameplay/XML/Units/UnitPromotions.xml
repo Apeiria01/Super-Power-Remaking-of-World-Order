@@ -66,8 +66,8 @@
 			<OrderPriority>11</OrderPriority>
 			<CombatPercent>10</CombatPercent>
 			<MaxHitPointsModifier>50</MaxHitPointsModifier>
-			<PortraitIndex>18</PortraitIndex>
-			<IconAtlas>SP_PROMOTION_OLD_ATLAS</IconAtlas>
+			<PortraitIndex>27</PortraitIndex>
+			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_AZTEC_HUEY_TEOCALLI</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
@@ -5416,8 +5416,8 @@
 			<CannotBeChosen>true</CannotBeChosen>
 			<CapitalDefenseModifier>30</CapitalDefenseModifier>
 			<CapitalDefenseFalloff>-3</CapitalDefenseFalloff>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PortraitIndex>28</PortraitIndex>
+			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_DEFEND_NEAR_CAPITAL</PediaEntry>
 		</Row>
@@ -5699,8 +5699,8 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<HPHealedIfDestroyEnemy>50</HPHealedIfDestroyEnemy>
 			<HealIfDestroyExcludesBarbarians>true</HealIfDestroyExcludesBarbarians>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PortraitIndex>29</PortraitIndex>
+			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PEDIA_PROMOTION_HEAL_IF_DESTROY_ENEMY</PediaEntry>
 		</Row>
@@ -6308,8 +6308,8 @@
 			<Help>TXT_KEY_PROMOTION_STRONGER_VS_DAMAGED_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<AttackWoundedMod>50</AttackWoundedMod>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PortraitIndex>10</PortraitIndex>
+			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PEDIA_PROMOTION_STRONGER_VS_DAMAGED</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
