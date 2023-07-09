@@ -3034,7 +3034,7 @@
 			<Text>[ICON_RES_ELECTRICITY]核电扩容机组</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_NUCLEAR_PLANT_EXTEND_HELP">
-			<Text>只能建造于拥有核电站的城市。[NEWLINE][NEWLINE]只能在中型城市（15人口）建造。</Text>
+			<Text>只能建造于拥有核电站且临近淡水或沿海的城市。[NEWLINE][NEWLINE]只能在中型城市（15人口）建造。</Text>
 		</Row>
 
 
@@ -15013,5 +15013,8 @@
 		<Replace Tag="TXT_KEY_BUILD_FEATURE_CLEARED">
 			<Text>位于该地块上的{1_FeatureName:textkey}将会被清除</Text>
 		</Replace>
+		<Row Tag="TXT_KEY_BUILDING_NEED_ANY_WATER">
+			<Text>水源</Text>
+		</Row>
 	</Language_zh_CN>
 </GameData>

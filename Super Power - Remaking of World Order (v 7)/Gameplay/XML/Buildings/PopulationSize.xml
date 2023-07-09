@@ -2528,14 +2528,6 @@
 			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
 			<Quantity>5</Quantity>
 		</Row>
-		<Row>
-			<BuildingType>BUILDING_NUCLEAR_PLANT_EXTEND</BuildingType>
-			<ResourceType>RESOURCE_URANIUM</ResourceType>
-			<Quantity>1</Quantity>
-		</Row>
-
-
-
 
 		<!--<Row>
 			<BuildingType>BUILDING_MARKET</BuildingType>
