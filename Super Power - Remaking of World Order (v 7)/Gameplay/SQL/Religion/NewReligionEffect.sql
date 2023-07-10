@@ -105,7 +105,7 @@ UPDATE Beliefs SET WonderProductionModifier = '0',ObsoleteEra= NULL WHERE Type =
 INSERT INTO Belief_BuildingClassYieldChanges (BeliefType,BuildingClassType,YieldType,YieldChange)
 SELECT 'BELIEF_MONUMENT_GODS','BUILDINGCLASS_MONUMENT','YIELD_FAITH',2;
 INSERT INTO Belief_CapitalYieldChanges (BeliefType,YieldType,Yield)
-SELECT 'BELIEF_MONUMENT_GODS','YIELD_CULTURE',2;
+SELECT 'BELIEF_MONUMENT_GODS','YIELD_CULTURE',1;
 
 INSERT INTO Belief_FeatureYieldChanges (BeliefType,FeatureType,YieldType,Yield)
 SELECT 'BELIEF_SACRED_PATH','FEATURE_JUNGLE','YIELD_FAITH',1;
@@ -220,7 +220,7 @@ SELECT 'BELIEF_CEREMONIAL_BURIAL','YIELD_GOLDEN_AGE_POINTS',3;
 
 UPDATE Beliefs SET CityStateMinimumInfluence = '35' WHERE Type = 'BELIEF_PAPAL_PRIMACY';
 
-UPDATE Beliefs SET GreatPersonPointsCapital = 1 WHERE Type='BELIEF_RELIGIOUS_SCIENCE';
+UPDATE Beliefs SET GreatPersonPointsHolyCity = 1 WHERE Type='BELIEF_RELIGIOUS_SCIENCE';
 INSERT INTO Belief_GreatPersonPoints (BeliefType, GreatPersonType, Value)
 SELECT 'BELIEF_RELIGIOUS_SCIENCE', 'GREATPERSON_SCIENTIST', 2;
 INSERT INTO Belief_YieldPerFollowingCity (BeliefType,YieldType,Yield)

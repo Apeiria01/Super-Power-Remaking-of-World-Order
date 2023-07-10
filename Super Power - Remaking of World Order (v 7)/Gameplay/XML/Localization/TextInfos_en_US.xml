@@ -8870,7 +8870,7 @@
 			<Text>+2 [ICON_PEACE] Faith for every Granary, +1 [ICON_PEACE] Faith from [ICON_RES_WHEAT]</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_MONUMENT_GODS">
-			<Text>+2 [ICON_PEACE] Faith for every Monument, +2 [ICON_CULTURE] Culture in Capital City</Text>
+			<Text>+2 [ICON_PEACE] Faith for every Monument, +1 [ICON_CULTURE] Culture in Capital City</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_STONE_CIRCLES">
 			<Text>+2 [ICON_PEACE] Faith from Quarries and +2 [ICON_PEACE] Faith for every Stone Works, +1 [ICON_PRODUCTION] Production from each [ICON_RES_MARBLE] Marble</Text>
@@ -8949,7 +8949,7 @@
 			<Text>Religious Sciece</Text>
 		</Row>
 		<Row Tag="TXT_KEY_RELIGIOUS_SCIENCE">
-			<Text>+2 [ICON_RESEARCH] Science for each City following this religion, +4 [ICON_RESEARCH] Science from Holy Sites, +2 [ICON_GREAT_PEOPLE] Great Scientist Points in Capital City </Text>
+			<Text>+2 [ICON_RESEARCH] Science for each City following this religion, +4 [ICON_RESEARCH] Science from Holy Sites, +2 [ICON_GREAT_PEOPLE] Great Scientist Points in Holy City </Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SACRED_CALENDAR_SHORT">
 			<Text>Sacred Calendar</Text>
@@ -14438,7 +14438,7 @@
 		-->
 
 		<Replace Tag="TXT_KEY_PROMOTION_LOGISTICS_HELP" >
-			<Text>[ICON_BULLET]+1 [COLOR_POSITIVE_TEXT]Attack[ENDCOLOR] Chance per turn. [NEWLINE][ICON_BULLET]Units without other "Move after Attack" Promotions can [COLOR_NEGATIVE_TEXT]move to adjusted plots only[ENDCOLOR] after Attack.</Text>
+			<Text>[ICON_BULLET]+1 [COLOR_POSITIVE_TEXT]Attack[ENDCOLOR] Chance per turn.</Text>
 		</Replace>
 
 		<Row Tag="TXT_KEY_PROMOTION_SPLASH_DAMAGE">
