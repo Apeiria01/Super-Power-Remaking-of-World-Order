@@ -1104,7 +1104,7 @@ local function getHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader,
 		tips:insertIf( ( building.GreatPeopleRateChange or 0 ) ~= 0 and S("%s %+i[ICON_GREAT_PEOPLE]", L( specialist.GreatPeopleTitle or "???" ), building.GreatPeopleRateChange) )
 		if (building.SpecialistCount or 0) ~= 0 then
 			if civ5_mode then
-				local numSpecialistsInBuilding = UI.GetHeadSelectedCity() and city:GetNumSpecialistsInBuilding( buildingID ) or building.SpecialistCount
+				local numSpecialistsInBuilding = UI.GetHeadSelectedCity() and UI.GetHeadSelectedCity():GetNumSpecialistsInBuilding( buildingID ) or building.SpecialistCount
 				if numSpecialistsInBuilding ~= building.SpecialistCount then
 					numSpecialistsInBuilding = numSpecialistsInBuilding.."/"..building.SpecialistCount
 				end
