@@ -8018,7 +8018,7 @@
 			<Text>神祠和神庙+2[ICON_FOOD]食物</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_MONUMENT_GODS">
-			<Text>纪念碑+2[ICON_PEACE]信仰，首都+2[ICON_CULTURE]文化</Text>
+			<Text>纪念碑+2[ICON_PEACE]信仰，首都+1[ICON_CULTURE]文化</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_STONE_CIRCLES">
 			<Text>采石场和石工坊+2[ICON_PEACE]信仰，[ICON_RES_MARBLE]大理石+1[ICON_PRODUCTION]产能</Text>
@@ -8089,7 +8089,7 @@
 			<Text>宗教科学</Text>
 		</Row>
 		<Row Tag="TXT_KEY_RELIGIOUS_SCIENCE">
-			<Text>每座信仰该宗教的城市贡献2[ICON_RESEARCH]科研，宗教圣地+4[ICON_RESEARCH]科研，首都+2[ICON_GREAT_PEOPLE]大科学家点数</Text>
+			<Text>每座信仰该宗教的城市贡献2[ICON_RESEARCH]科研，宗教圣地+4[ICON_RESEARCH]科研，圣城+2[ICON_GREAT_PEOPLE]大科学家点数</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SACRED_CALENDAR_SHORT">
 			<Text>神圣历法</Text>
@@ -12649,7 +12649,7 @@
 		-->
 
 		<Replace Tag="TXT_KEY_PROMOTION_LOGISTICS_HELP" >
-			<Text>每回合增加1次额外攻击次数。[NEWLINE]没有其他“攻击后移动”晋升的单位在攻击后[COLOR_NEGATIVE_TEXT]只能移动至邻近地格[ENDCOLOR]。</Text>
+			<Text>每回合增加1次额外攻击次数。</Text>
 		</Replace>
 
 		<Row Tag="TXT_KEY_PROMOTION_SPLASH_DAMAGE">
