@@ -2233,6 +2233,8 @@ local function getCultureTooltip( city )
 
 	-- Empire Culture modifier
 	tips:insertLocalizedBulletIfNonZero( "TXT_KEY_CULTURE_PLAYER_MOD", cityOwner and cityOwner:GetCultureCityModifier() or 0 )
+	-- Greak Work Gobal modifier
+	tips:insertLocalizedBulletIfNonZero( "TXT_KEY_CULTURE_GREAT_WORK_MOD", cityOwner and cityOwner:GetYieldModifierFromNumGreakWork(YieldTypes.YIELD_CULTURE) or 0 )
 
 	if civ5_mode then
 		-- City Culture modifier

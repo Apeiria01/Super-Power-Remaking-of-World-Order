@@ -14812,5 +14812,8 @@
 		<Row Tag="TXT_KEY_BUILDING_NEED_ANY_WATER">
 			<Text>水源</Text>
 		</Row>
+		<Row Tag="TXT_KEY_CULTURE_GREAT_WORK_MOD">
+			<Text>+{1_Num}%[ICON_CULTURE] 來自傑作數量全局加成</Text>
+		</Row>
 	</Language_zh_Hant_HK>
 </GameData>
