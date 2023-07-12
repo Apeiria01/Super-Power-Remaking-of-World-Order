@@ -16958,5 +16958,8 @@
 		<Row Tag="TXT_KEY_BUILDING_NEED_ANY_WATER">
 			<Text>Water</Text>
 		</Row>
+		<Row Tag="TXT_KEY_CULTURE_GREAT_WORK_MOD">
+			<Text>+{1_Num}% [ICON_CULTURE] from Num of Great Works</Text>
+		</Row>
 	</Language_en_US>
 </GameData>
