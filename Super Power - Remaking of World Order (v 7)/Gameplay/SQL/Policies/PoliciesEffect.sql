@@ -38,14 +38,24 @@ SELECT 'POLICY_COASTAL_ADMINISTRATION','BUILDINGCLASS_HARBOR','YIELD_GOLD',4 UNI
 SELECT 'POLICY_COASTAL_ADMINISTRATION','BUILDINGCLASS_WOOD_DOCK','YIELD_GOLD',4 ;
 
 --POLICY_BILL_OF_RIGHTS
-INSERT INTO Policy_BuildingClassYieldChanges (PolicyType, BuildingClassType, YieldType, YieldChange)
-SELECT 'POLICY_BILL_OF_RIGHTS', t1.Type, t3.YieldType, t2.SpecialistCount
-FROM BuildingClasses t1 LEFT JOIN Buildings t2 LEFT JOIN SpecialistYields t3
-ON t1.DefaultBuilding = t2.Type AND t2.SpecialistType = t3.SpecialistType
-WHERE t2.SpecialistCount > 0 AND 
-(t2.SpecialistType = 'SPECIALIST_ENGINEER' OR t2.SpecialistType='SPECIALIST_SCIENTIST' OR t2.SpecialistType='SPECIALIST_MERCHANT'
-or t2.SpecialistType='SPECIALIST_WRITER' OR t2.SpecialistType='SPECIALIST_MUSICIAN' OR t2.SpecialistType='SPECIALIST_ARTIST')
-AND t3.Yield > 0;
+--DROP TRIGGER Policy_Bill_Of_Right_Trigger;
+CREATE TRIGGER Policy_Bill_Of_Right_Trigger
+AFTER UPDATE ON SPTriggerControler
+WHEN NEW.TriggerType = 'Policy_Bill_Of_Right_Trigger' AND NEW.Enabled = 1
+BEGIN
+	DELETE FROM Policy_BuildingClassYieldChanges 
+    WHERE PolicyType = 'POLICY_BILL_OF_RIGHTS' AND BuildingClassType NOT LIKE 'BUILDINGCLASS_CITY_HALL_LV%';
+
+    INSERT INTO Policy_BuildingClassYieldChanges (PolicyType, BuildingClassType, YieldType, YieldChange)
+    SELECT 'POLICY_BILL_OF_RIGHTS', t1.Type, t3.YieldType, t2.SpecialistCount
+    FROM BuildingClasses t1 LEFT JOIN Buildings t2 LEFT JOIN SpecialistYields t3
+    ON t1.DefaultBuilding = t2.Type AND t2.SpecialistType = t3.SpecialistType
+    WHERE t2.SpecialistCount > 0 AND
+    (t2.SpecialistType = 'SPECIALIST_ENGINEER' OR t2.SpecialistType='SPECIALIST_SCIENTIST' OR t2.SpecialistType='SPECIALIST_MERCHANT'
+    or t2.SpecialistType='SPECIALIST_WRITER' OR t2.SpecialistType='SPECIALIST_MUSICIAN' OR t2.SpecialistType='SPECIALIST_ARTIST')
+    AND t3.Yield > 0;
+END;
+UPDATE SPTriggerControler SET Enabled = 1 WHERE TriggerType = 'Policy_Bill_Of_Right_Trigger';
 
 -- POLICY_MERCHANT_CONFEDERACY
 insert into Policy_MinorsTradeRouteYieldRate (PolicyType, YieldType, Rate) values
