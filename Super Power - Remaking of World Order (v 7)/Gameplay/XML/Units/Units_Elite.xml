@@ -1360,6 +1360,22 @@
 			<UnitType>UNIT_ELITE_SNIPER</UnitType>
 			<PromotionType>PROMOTION_SECOND_ATTACK</PromotionType>
 		</Row>
+		<Row>
+			<UnitType>UNIT_ELITE_SNIPER</UnitType>
+			<PromotionType>PROMOTION_SUNDER_1</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_ELITE_SNIPER</UnitType>
+			<PromotionType>PROMOTION_SUNDER_2</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_ELITE_SNIPER</UnitType>
+			<PromotionType>PROMOTION_ANTI_COLLATERAL</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_ELITE_SNIPER</UnitType>
+			<PromotionType>PROMOTION_ANTI_SPLASH</PromotionType>
+		</Row>
 
 
 

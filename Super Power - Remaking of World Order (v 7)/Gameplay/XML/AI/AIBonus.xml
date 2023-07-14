@@ -11,6 +11,7 @@
 			<SettlerProductionModifier>300</SettlerProductionModifier>
 			<CityGrowthMod>10</CityGrowthMod>
 			<PlotCultureExponentModifier>-15</PlotCultureExponentModifier>
+			<FreeExperience>10</FreeExperience>
 		</Row>
 		<Row>
 			<Type>POLICY_AI_MEDIEVAL</Type>
@@ -18,21 +19,22 @@
 			<CityGrowthMod>15</CityGrowthMod>
 			<IncludesOneShotFreeUnits>true</IncludesOneShotFreeUnits>
 			<UnhappinessMod>-5</UnhappinessMod>
+			<FreeExperience>15</FreeExperience>
 		</Row>
 		<Row>
 			<Type>POLICY_AI_RENAISSANCE</Type>
 			<Description>TXT_KEY_POLICY_PHILANTHROPY</Description>
 			<CatchSpiesModifier>-30</CatchSpiesModifier>
 			<UnhappinessMod>-5</UnhappinessMod>
-			<FreeExperience>15</FreeExperience>
 			<CityGrowthMod>15</CityGrowthMod>
+			<FreeExperience>25</FreeExperience>
 		</Row>
 		<Row>
 			<Type>POLICY_AI_INDUSTRY</Type>
 			<Description>TXT_KEY_POLICY_PHILANTHROPY</Description>	
 			<CatchSpiesModifier>-60</CatchSpiesModifier>
 			<UnhappinessMod>-10</UnhappinessMod>
-			<FreeExperience>15</FreeExperience>
+			<FreeExperience>30</FreeExperience>
 		</Row>
 		<Row>
 			<Type>POLICY_AI_MODERN</Type>
@@ -40,8 +42,8 @@
 			<MinorGoldFriendshipMod>25</MinorGoldFriendshipMod>
 			<UnitGoldMaintenanceMod>-25</UnitGoldMaintenanceMod>
 			<ThemingBonusMultiplier>200</ThemingBonusMultiplier>
-			<FreeExperience>30</FreeExperience>
 			<UnhappinessMod>-20</UnhappinessMod>
+			<FreeExperience>30</FreeExperience>
 		</Row>
 		<Row>
 			<Type>POLICY_AI_WORLDWAR</Type>
@@ -51,6 +53,7 @@
 			<AfraidMinorPerTurnInfluence>100</AfraidMinorPerTurnInfluence>
 			<ThemingBonusMultiplier>300</ThemingBonusMultiplier>
 			<UnhappinessMod>-20</UnhappinessMod>
+			<FreeExperience>45</FreeExperience>
 		</Row>
 		<Row>
 			<Type>POLICY_AI_ATOMIC</Type>
@@ -59,6 +62,7 @@
 			<ProtectedMinorPerTurnInfluence>200</ProtectedMinorPerTurnInfluence>
 			<AfraidMinorPerTurnInfluence>200</AfraidMinorPerTurnInfluence>
 			<ThemingBonusMultiplier>600</ThemingBonusMultiplier>
+			<FreeExperience>45</FreeExperience>
 		</Row>
 
 
@@ -245,7 +249,6 @@
 	
 	
 	<Policy_FreePromotions>
-		
 		<Row>
 			<PolicyType>POLICY_AI_ATOMIC</PolicyType>
 			<PromotionType>PROMOTION_MARCH</PromotionType>
@@ -270,464 +273,6 @@
 			<PolicyType>POLICY_AI_ATOMIC</PolicyType>
 			<PromotionType>PROMOTION_FASTER_HEAL</PromotionType>
 		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_MODERN</PolicyType>
-			<PromotionType>PROMOTION_FAE_ROCKET_1</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_WORLDWAR</PolicyType>
-			<PromotionType>PROMOTION_FAE_ROCKET_2</PromotionType>
-		</Row>
-	
-
-
-		<Row>
-			<PolicyType>POLICY_AI_WORLDWAR</PolicyType>
-			<PromotionType>PROMOTION_RANGE</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_WORLDWAR</PolicyType>
-			<PromotionType>PROMOTION_BLITZ</PromotionType>
-		</Row>
-		<!--<Row>
-			<PolicyType>POLICY_AI_WORLDWAR</PolicyType>
-			<PromotionType>PROMOTION_LOGISTICS</PromotionType>
-		</Row>-->
-
-
-		<Row>
-			<PolicyType>POLICY_AI_MEDIEVAL</PolicyType>
-			<PromotionType>PROMOTION_GUERRILLA_1</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_MEDIEVAL</PolicyType>
-			<PromotionType>PROMOTION_MEDIC</PromotionType>
-		</Row>
-
-		<Row>
-			<PolicyType>POLICY_AI_INDUSTRY</PolicyType>
-			<PromotionType>PROMOTION_GUERRILLA_2</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_INDUSTRY</PolicyType>
-			<PromotionType>PROMOTION_MEDIC_II</PromotionType>
-		</Row>
-
-
-
-
-		<Row>
-			<PolicyType>POLICY_AI_MEDIEVAL</PolicyType>
-			<PromotionType>PROMOTION_SP_FORCE_1</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_INDUSTRY</PolicyType>
-			<PromotionType>PROMOTION_SP_FORCE_2</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_MODERN</PolicyType>
-			<PromotionType>PROMOTION_SP_FORCE_3</PromotionType>
-		</Row>
-
-
-		<Row>
-			<PolicyType>POLICY_AI_MEDIEVAL</PolicyType>
-			<PromotionType>PROMOTION_SHOCK_1</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_RENAISSANCE</PolicyType>
-			<PromotionType>PROMOTION_SHOCK_2</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_INDUSTRY</PolicyType>
-			<PromotionType>PROMOTION_SHOCK_3</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_RENAISSANCE</PolicyType>
-			<PromotionType>PROMOTION_COVER_1</PromotionType>
-		</Row>
-		<Row> 
-			<PolicyType>POLICY_AI_MODERN</PolicyType>
-			<PromotionType>PROMOTION_COVER_2</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_WORLDWAR</PolicyType>
-			<PromotionType>PROMOTION_COVER_3</PromotionType>
-		</Row>
-		
-
-
-
-
-		<Row>
-			<PolicyType>POLICY_AI_MEDIEVAL</PolicyType>
-			<PromotionType>PROMOTION_SUNDER_1</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_INDUSTRY</PolicyType>
-			<PromotionType>PROMOTION_SUNDER_2</PromotionType>
-		</Row>
-		<!--
-		<Row>
-			<PolicyType>POLICY_AI_WORLDWAR</PolicyType>
-			<PromotionType>PROMOTION_SUNDER_3</PromotionType>
-		</Row>
-		-->
-		<Row>
-			<PolicyType>POLICY_AI_RENAISSANCE</PolicyType>
-			<PromotionType>PROMOTION_HUNTDOWN_1</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_MODERN</PolicyType>
-			<PromotionType>PROMOTION_HUNTDOWN_2</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_ATOMIC</PolicyType>
-			<PromotionType>PROMOTION_HUNTDOWN_3</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_RENAISSANCE</PolicyType>
-			<PromotionType>PROMOTION_CQB_COMBAT_1</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_MODERN</PolicyType>
-			<PromotionType>PROMOTION_CQB_COMBAT_2</PromotionType>
-		</Row>
-
-
-		<Row>
-			<PolicyType>POLICY_AI_MEDIEVAL</PolicyType>
-			<PromotionType>PROMOTION_FORMATION_1</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_RENAISSANCE</PolicyType>
-			<PromotionType>PROMOTION_FORMATION_2</PromotionType>
-		</Row>
-		
-		<Row>
-			<PolicyType>POLICY_AI_MODERN</PolicyType>
-			<PromotionType>PROMOTION_AMBUSH_1</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_WORLDWAR</PolicyType>
-			<PromotionType>PROMOTION_AMBUSH_2</PromotionType>
-		</Row>
-
-
-
-
-		 <Row>
-			<PolicyType>POLICY_AI_MEDIEVAL</PolicyType>
-			<PromotionType>PROMOTION_HEAVY_SHOCK_1</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_INDUSTRY</PolicyType>
-			<PromotionType>PROMOTION_HEAVY_SHOCK_2</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_WORLDWAR</PolicyType>
-			<PromotionType>PROMOTION_HEAVY_SHOCK_3</PromotionType>
-		</Row>	
-		<Row>
-			<PolicyType>POLICY_AI_RENAISSANCE</PolicyType>
-			<PromotionType>PROMOTION_CHARGE_1</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_MODERN</PolicyType>
-			<PromotionType>PROMOTION_CHARGE_2</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_ATOMIC</PolicyType>
-			<PromotionType>PROMOTION_CHARGE_3</PromotionType>
-		</Row>
-
-
-		<Row>
-			<PolicyType>POLICY_AI_MEDIEVAL</PolicyType>
-			<PromotionType>PROMOTION_ACCURACY_1</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_INDUSTRY</PolicyType>
-			<PromotionType>PROMOTION_ACCURACY_2</PromotionType>
-		</Row>
-
-
-		<Row>
-			<PolicyType>POLICY_AI_MEDIEVAL</PolicyType>
-			<PromotionType>PROMOTION_BARRAGE_1</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_RENAISSANCE</PolicyType>
-			<PromotionType>PROMOTION_BARRAGE_2</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_INDUSTRY</PolicyType>
-			<PromotionType>PROMOTION_BARRAGE_3</PromotionType>
-		</Row>
-
-
-		<Row>
-			<PolicyType>POLICY_AI_WORLDWAR</PolicyType>
-			<PromotionType>PROMOTION_FLANK_GUN_1</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_ATOMIC</PolicyType>
-			<PromotionType>PROMOTION_FLANK_GUN_2</PromotionType>
-		</Row>
-	
-
-
-
-		<Row>
-			<PolicyType>POLICY_AI_MEDIEVAL</PolicyType>
-			<PromotionType>PROMOTION_VOLLEY_1</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_INDUSTRY</PolicyType>
-			<PromotionType>PROMOTION_VOLLEY_2</PromotionType>
-		</Row>
-		
-
-
-		<Row>
-			<PolicyType>POLICY_AI_INDUSTRY</PolicyType>
-			<PromotionType>PROMOTION_CLUSTER_ROCKET_1</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_MODERN</PolicyType>
-			<PromotionType>PROMOTION_CLUSTER_ROCKET_2</PromotionType>
-		</Row>
-
-		<Row>
-			<PolicyType>POLICY_AI_MODERN</PolicyType>
-			<PromotionType>PROMOTION_ARMOR_BATTLESHIP_1</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_WORLDWAR</PolicyType>
-			<PromotionType>PROMOTION_ARMOR_BATTLESHIP_2</PromotionType>
-		</Row>
-
-
-
-		<Row>
-			<PolicyType>POLICY_AI_MEDIEVAL</PolicyType>
-			<PromotionType>PROMOTION_BOARDING_PARTY_1</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_INDUSTRY</PolicyType>
-			<PromotionType>PROMOTION_BOARDING_PARTY_2</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_WORLDWAR</PolicyType>
-			<PromotionType>PROMOTION_BOARDING_PARTY_3</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_MEDIEVAL</PolicyType>
-			<PromotionType>PROMOTION_SCOUTING_1</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_INDUSTRY</PolicyType>
-			<PromotionType>PROMOTION_SCOUTING_2</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_MODERN</PolicyType>
-			<PromotionType>PROMOTION_SCOUTING_3</PromotionType>
-		</Row>
-	
-
-
-
-
-		<Row>
-			<PolicyType>POLICY_AI_MEDIEVAL</PolicyType>
-			<PromotionType>PROMOTION_COLLATERAL_DAMAGE_1</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_INDUSTRY</PolicyType>
-			<PromotionType>PROMOTION_COLLATERAL_DAMAGE_2</PromotionType>
-		</Row>
-		<!--
-		<Row>
-			<PolicyType>POLICY_AI_WORLDWAR</PolicyType>
-			<PromotionType>PROMOTION_COLLATERAL_DAMAGE_3</PromotionType>
-		</Row>
-		-->
-
-		<Row>
-			<PolicyType>POLICY_AI_WORLDWAR</PolicyType>
-			<PromotionType>PROMOTION_CARRIER_SUPPLY_1</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_WORLDWAR</PolicyType>
-			<PromotionType>PROMOTION_CARRIER_SUPPLY_2</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_ATOMIC</PolicyType>
-			<PromotionType>PROMOTION_CARRIER_SUPPLY_3</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_WORLDWAR</PolicyType>
-			<PromotionType>PROMOTION_CARRIER_FIGHTER_ATTACK_1</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_ATOMIC</PolicyType>
-			<PromotionType>PROMOTION_CARRIER_FIGHTER_ATTACK_2</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_WORLDWAR</PolicyType>
-			<PromotionType>PROMOTION_CARRIER_FIGHTER_SIEGE_1</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_ATOMIC</PolicyType>
-			<PromotionType>PROMOTION_CARRIER_FIGHTER_SIEGE_2</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_ATOMIC</PolicyType>
-			<PromotionType>PROMOTION_CARRIER_FIGHTER_SORTIE</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_WORLDWAR</PolicyType>
-			<PromotionType>PROMOTION_CARRIER_FIGHTER_ANTI_AIR_1</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_ATOMIC</PolicyType>
-			<PromotionType>PROMOTION_CARRIER_FIGHTER_ANTI_AIR_2</PromotionType>
-		</Row>
-
-
-		<Row>
-			<PolicyType>POLICY_AI_MODERN</PolicyType>
-			<PromotionType>PROMOTION_INTERCEPTION_1</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_WORLDWAR</PolicyType>
-			<PromotionType>PROMOTION_INTERCEPTION_2</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_WORLDWAR</PolicyType>
-			<PromotionType>PROMOTION_INTERCEPTION_3</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_MODERN</PolicyType>
-			<PromotionType>PROMOTION_DOGFIGHTING_1</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_WORLDWAR</PolicyType>
-			<PromotionType>PROMOTION_DOGFIGHTING_2</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_WORLDWAR</PolicyType>
-			<PromotionType>PROMOTION_DOGFIGHTING_3</PromotionType>
-		</Row>
-
-
-		<Row>
-			<PolicyType>POLICY_AI_MODERN</PolicyType>
-			<PromotionType>PROMOTION_AIR_BOMBARDMENT_1</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_WORLDWAR</PolicyType>
-			<PromotionType>PROMOTION_AIR_BOMBARDMENT_2</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_WORLDWAR</PolicyType>
-			<PromotionType>PROMOTION_AIR_BOMBARDMENT_3</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_MODERN</PolicyType>
-			<PromotionType>PROMOTION_AIR_TARGETING_1</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_WORLDWAR</PolicyType>
-			<PromotionType>PROMOTION_AIR_TARGETING_2</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_WORLDWAR</PolicyType>
-			<PromotionType>PROMOTION_AIR_TARGETING_3</PromotionType>
-		</Row>
-
-		
-		<Row>
-			<PolicyType>POLICY_AI_WORLDWAR</PolicyType>
-			<PromotionType>PROMOTION_NAPALMBOMB_1</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_WORLDWAR</PolicyType>
-			<PromotionType>PROMOTION_NAPALMBOMB_2</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_ATOMIC</PolicyType>
-			<PromotionType>PROMOTION_NAPALMBOMB_3</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_WORLDWAR</PolicyType>
-			<PromotionType>PROMOTION_AIR_SIEGE_1</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_WORLDWAR</PolicyType>
-			<PromotionType>PROMOTION_AIR_SIEGE_2</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_ATOMIC</PolicyType>
-			<PromotionType>PROMOTION_AIR_SIEGE_3</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_WORLDWAR</PolicyType>
-			<PromotionType>PROMOTION_DESTROY_SUPPLY_1</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_WORLDWAR</PolicyType>
-			<PromotionType>PROMOTION_DESTROY_SUPPLY_2</PromotionType>
-		</Row>
-		<!--Test!
-		<Row>
-			<PolicyType>POLICY_ELITE_FORCES</PolicyType>
-			<PromotionType>PROMOTION_CQB_COMBAT_1</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_ELITE_FORCES</PolicyType>
-			<PromotionType>PROMOTION_AIR_BOMBARDMENT_1</PromotionType>
-		</Row>
-				<Row>
-			<PolicyType>POLICY_ELITE_FORCES</PolicyType>
-			<PromotionType>PROMOTION_BARRAGE_1</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_ELITE_FORCES</PolicyType>
-			<PromotionType>PROMOTION_BARRAGE_2</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_ELITE_FORCES</PolicyType>
-			<PromotionType>PROMOTION_BARRAGE_3</PromotionType>
-		</Row>
-
-
-		<Row>
-			<PolicyType>POLICY_ELITE_FORCES</PolicyType>
-			<PromotionType>PROMOTION_FLANK_GUN_1</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_ATOMIC</PolicyType>
-			<PromotionType>PROMOTION_FLANK_GUN_2</PromotionType>
-		</Row>
-	
-
-
-
-		<Row>
-			<PolicyType>POLICY_ELITE_FORCES</PolicyType>
-			<PromotionType>PROMOTION_VOLLEY_1</PromotionType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_ELITE_FORCES</PolicyType>
-			<PromotionType>PROMOTION_VOLLEY_2</PromotionType>
-		</Row>
-		
-		<Row>
-			<PolicyType>POLICY_ELITE_FORCES</PolicyType>
-			<PromotionType>PROMOTION_AIR_SIEGE_1</PromotionType>
-		</Row>-->
-		
 	</Policy_FreePromotions>
 	
 	
