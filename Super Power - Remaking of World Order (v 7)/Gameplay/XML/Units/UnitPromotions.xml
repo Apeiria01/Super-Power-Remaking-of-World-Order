@@ -4584,6 +4584,8 @@
 			<SameTileHealChange>15</SameTileHealChange>
 			<EnemyHealChange>25</EnemyHealChange>
 			<NeutralHealChange>25</NeutralHealChange>
+			<CollateralDamageImmune>true</CollateralDamageImmune>
+			<SplashDamageImmune>true</SplashDamageImmune>
 		</Row>
 
 		<Row>
@@ -4599,6 +4601,8 @@
 			<PediaEntry>TXT_KEY_PEDIA_PROMOTION_GREAT_GENERAL</PediaEntry>
 			<EnemyHealChange>25</EnemyHealChange>
 			<NeutralHealChange>25</NeutralHealChange>
+			<CollateralDamageImmune>true</CollateralDamageImmune>
+			<SplashDamageImmune>true</SplashDamageImmune>
 		</Row>
 
 	</UnitPromotions>
@@ -6408,6 +6412,7 @@
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_ANTI_COLLATERAL</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
+			<CollateralDamageImmune>true</CollateralDamageImmune>
 		</Row>
 		<Row>
 			<Type>PROMOTION_ANTI_SPLASH</Type>
@@ -6419,6 +6424,7 @@
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_ANTI_SPLASH</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
+			<SplashDamageImmune>true</SplashDamageImmune>
 		</Row>
 
 		<Row>

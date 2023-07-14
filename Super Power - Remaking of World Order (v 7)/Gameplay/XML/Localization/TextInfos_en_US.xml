@@ -15401,7 +15401,8 @@
 
 		<Replace Tag="TXT_KEY_PROMOTION_GREAT_GENERAL_HELP" >
 			<Text>[ICON_BULLET]Improve [ICON_STRENGTH] Combat Strength to all [COLOR_POSITIVE_TEXT]land Units[ENDCOLOR] within 2 tiles.
-			[NEWLINE][ICON_BULLET]Can [COLOR_POSITIVE_TEXT]Encourage[ENDCOLOR] an unit to remove all its Debuff conditions by consuming all [ICON_MOVES] MPs of the Great General.</Text>
+			[NEWLINE][ICON_BULLET]Can [COLOR_POSITIVE_TEXT]Encourage[ENDCOLOR] an unit to remove all its Debuff conditions by consuming all [ICON_MOVES] MPs of the Great General.
+			[NEWLINE][ICON_BULLET]Immune to Collateral Damage and Splash Damage.</Text>
 		</Replace>
 		
 		

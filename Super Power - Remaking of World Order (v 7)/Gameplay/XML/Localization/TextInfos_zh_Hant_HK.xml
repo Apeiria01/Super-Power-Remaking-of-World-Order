@@ -13200,7 +13200,7 @@
 		</Replace>-->		
 
 		<Replace Tag="TXT_KEY_PROMOTION_GREAT_GENERAL_HELP" >
-			<Text>提升鄰近兩格的陸軍單位的戰鬥效率。[NEWLINE]能夠消耗一回合移動力來移除一個陸軍單位的所有負面狀態。</Text>
+			<Text>提升鄰近兩格的陸軍單位的戰鬥效率。[NEWLINE]能夠消耗一回合移動力來移除一個陸軍單位的所有負面狀態。[NEWLINE]免疫濺射和穿透傷害。</Text>
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_PROMOTION_GREAT_ADMIRAL_HELP" >

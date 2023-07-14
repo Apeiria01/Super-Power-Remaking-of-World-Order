@@ -13387,7 +13387,7 @@
 		</Replace>-->
 
 		<Replace Tag="TXT_KEY_PROMOTION_GREAT_GENERAL_HELP" >
-			<Text>提升邻近两格的陆军单位的战斗效率。[NEWLINE]能够消耗一回合移动力来移除一个陆军单位的所有负面状态。</Text>
+			<Text>提升邻近两格的陆军单位的战斗效率。[NEWLINE]能够消耗一回合移动力来移除一个陆军单位的所有负面状态。[NEWLINE]免疫溅射和穿透伤害。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_PROMOTION_GREAT_ADMIRAL_HELP" >
