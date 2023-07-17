@@ -7919,7 +7919,7 @@
 			<Text>城市+1[ICON_PRODUCTION]产能、+1[ICON_PEACE]信仰、+1[ICON_GREAT_PEOPLE]大工程师点数</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_ANCESTOR_WORSHIP">
-			<Text>神祠+1[ICON_PEACE]信仰、+1[ICON_CULTURE]文化，建造工业时代之前的奇观+10%[ICON_PRODUCTION]产能</Text>
+			<Text>神祠+1[ICON_PEACE]信仰、+1[ICON_CULTURE]文化，建造奇观+10%[ICON_PRODUCTION]产能</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GODDESS_STRATEGY">
 			<Text>城墙+2[ICON_PEACE]信仰，城堡+4[ICON_CULTURE]文化</Text>
