@@ -1630,10 +1630,6 @@
 			<UnitType>UNIT_KATYUSHA</UnitType>
 			<PromotionType>PROMOTION_INDIRECT_FIRE</PromotionType>
 		</Row>
-		<Row>
-			<UnitType>UNIT_KATYUSHA</UnitType>
-			<PromotionType>PROMOTION_MUST_SET_UP</PromotionType>
-		</Row>
 		
 		<Row>
 			<UnitType>UNIT_ROCKET_ARTILLERY</UnitType>
