@@ -1615,10 +1615,6 @@
 		</Row>
 		<Row>
 			<UnitType>UNIT_RAILROAD_GUN</UnitType>
-			<PromotionType>PROMOTION_MUST_SET_UP</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_RAILROAD_GUN</UnitType>
 			<PromotionType>PROMOTION_INDIRECT_FIRE</PromotionType>
 		</Row>
 		
