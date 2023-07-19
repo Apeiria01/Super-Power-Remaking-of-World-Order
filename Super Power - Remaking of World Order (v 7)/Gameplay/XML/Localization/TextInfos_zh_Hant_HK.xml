@@ -5301,13 +5301,13 @@
 			<Text>敵軍單位{1_Debuff}！</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_NOTIFICATION_ENEMY_SUPPLY_DESTROYED">
-			<Text>敵方{2_EnUName}被你{1_Debuff}了！他在友方區域之外每輪會{3_Num}HP！</Text>
+			<Text>敵方{2_EnUName}{1_Debuff}了！他在友方區域之外每輪會{3_Num}HP！</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_NOTIFICATION_US_SUPPLY_DESTROYED_SHORT">
 			<Text>我軍單位{1_Debuff}！</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_NOTIFICATION_US_SUPPLY_DESTROYED">
-			<Text>你的{2_UnitName}被敵方{1_Debuff}了！他在友方區域之外每輪會{3_Num}HP！</Text>
+			<Text>你的{2_UnitName}{1_Debuff}了！他在友方區域之外每輪會{3_Num}HP！</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_SP_NOTIFICATION_ENEMY_SUNDERED_SHORT">
@@ -11407,10 +11407,6 @@
 			<Text>自行火炮（又稱為機動火炮或動力火炮）是同車輛底盤構成一體，自身即能運動的火炮。自行火炮越野性能好，進出陣地快，多數有裝甲防護，戰場生存力強，有些還可浮渡。自行火炮的使用，更有利於不間斷地實施火力支援，使炮兵和裝甲兵、摩托化步兵的戰鬥協同更加緊密。自行火炮主要由武器系統、底盤部分和裝甲車體組成。</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_CIV5_KOREA_HWACHA_HELP">
-			<Text>遊戲中首種能夠造成範圍殺傷的集束火箭發射武器。能有效消滅陸上單位，但在攻城時有懲罰。朝鮮特色單位，替代重炮。</Text>
-		</Replace>
-
 		<Replace Tag="TXT_KEY_UNIT_ROCKET_ARTILLERY">
 			<Text>現代多管火箭炮</Text>
 		</Replace>
@@ -11639,7 +11635,7 @@
 			<Text>[COLOR_YELLOW]火廂車[ENDCOLOR]</Text>
 		</Row>
 		<Replace Tag="TXT_KEY_CIV5_KOREA_HWACHA_HELP">
-			<Text>及其強大的集束火箭發射武器，能夠對敵方造成大範圍殺傷。[NEWLINE][NEWLINE]需要神機箭工程解鎖，你只能建造一隊。</Text>
+			<Text>極其強大的集束火箭發射武器，擁有獨特晉升線，能夠對敵方造成大範圍殺傷。[NEWLINE][NEWLINE]需要神機箭工程解鎖，你只能建造一隊。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_CIV5_KOREA_HWACHA_STRATEGY">
 			<Text>火廂車能夠對敵方集聚的單位同時進行打擊。擁有驚人的4格射程以及間接火力晉升。毫無疑問，它可以狠狠地壓制敵方的大兵團推進，但用於攻城則效率不高。此外，鑒於該單位移動不便且極易受損，要適當派遣其他單位保護之。</Text>
@@ -12502,9 +12498,63 @@
 		<Row Tag="TXT_KEY_PROMOTION_FAE_ROCKET_2">
 			<Text>反艦二級</Text>
 		</Row>
-		<!--<Row Tag="TXT_KEY_PROMOTION_FAE_ROCKET_2_HELP">
-			<Text>對[COLOR_POSITIVE_TEXT]駐守單位[ENDCOLOR]和[COLOR_POSITIVE_TEXT]複雜地形[ENDCOLOR]中的單位+33%攻擊力。</Text>
-		</Row>-->
+
+		<Row Tag="TXT_KEY_PROMOTION_KOREA_HWACHA">
+			<Text>火星車</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_KOREA_HWACHA_HELP">
+			<Text>
+			對[COLOR_POSITIVE_TEXT]相鄰區域[ENDCOLOR]目標傷害+40%，對[COLOR_POSITIVE_TEXT]目標地格[ENDCOLOR]的其他單位+50%的傷害。
+			[NEWLINE]每對一個敵軍造成[COLOR_POSITIVE_TEXT]濺射或穿透[ENDCOLOR]傷害+1XP。
+			[NEWLINE]解鎖[COLOR_POSITIVE_TEXT]獨特[ENDCOLOR]晉升線。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_GUN_BARRER_1">
+			<Text>銃筒一級</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_GUN_BARRER_1_HELP">
+			<Text>對[COLOR_POSITIVE_TEXT]相鄰區域[ENDCOLOR]目標傷害+30%。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_GUN_BARRER_2">
+			<Text>銃筒二級</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_GUN_BARRER_2_HELP">
+			<Text>對[COLOR_POSITIVE_TEXT]相鄰兩環區域[ENDCOLOR]目標傷害+20%。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_GUN_BARRER_3">
+			<Text>銃筒三級</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_GUN_BARRER_3_HELP">
+			<Text>對[COLOR_POSITIVE_TEXT]相鄰三環區域[ENDCOLOR]目標傷害+10%。</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_DIVINE_WEAPON_1">
+			<Text>神機箭一級</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_DIVINE_WEAPON_1_HELP">
+			<Text>
+			對[COLOR_POSITIVE_TEXT]目標地格[ENDCOLOR]的其他單位+25%的傷害。
+			[NEWLINE]若目標單位剩余血量小於50，受到[COLOR_NEGATIVE_TEXT]遲滯/阻礙[ENDCOLOR]效果。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_DIVINE_WEAPON_2">
+			<Text>神機箭二級</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_DIVINE_WEAPON_2_HELP">
+			<Text>
+			對[COLOR_POSITIVE_TEXT]目標地格[ENDCOLOR]的其他單位+25%的傷害。
+			[NEWLINE]若目標單位剩余血量小於50，受到[COLOR_NEGATIVE_TEXT]陣型破壞[ENDCOLOR]效果。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_DIVINE_WEAPON_3">
+			<Text>神機箭三級</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_DIVINE_WEAPON_3_HELP">
+			<Text>
+			對[COLOR_POSITIVE_TEXT]目標地格[ENDCOLOR]的其他單位+25%的傷害。
+			[NEWLINE]若目標單位剩余血量小於50，受到[COLOR_NEGATIVE_TEXT]喪失補給[ENDCOLOR]效果。
+			</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_RECON_UNIT">
 			<Text>偽裝偵查</Text>
@@ -12809,7 +12859,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_DESTROY_SUPPLY_2_HELP">
 			<Text>即使行动过也能回复HP。
-			[NEWLINE]攻擊目標單位及其相鄰單位。如果處於友方地域之外，每回合會因為缺乏補給-20HP。</Text>
+			[NEWLINE]若目標單位及其相鄰單位處於友方地域之外，每回合會因為缺乏補給-20HP。</Text>
 		</Row>
 		
 		<Replace Tag="TXT_KEY_PROMOTION_EVASION_I" >
@@ -14774,7 +14824,7 @@
 			<Text>
 			單位將被消耗。
 			[NEWLINE][NEWLINE]偉人所建設施可將該區塊的戰略資源連入貿易網絡。
-			[NEWLINE]偉人所建設施可為周圍陸地設施提供對應[ICON_RESEARCH][ICON_PRODUCTION][ICON_GOLD][ICON_PEACE]產出。
+			[NEWLINE]偉人所建設施可為周圍改良設施提供對應[ICON_RESEARCH][ICON_PRODUCTION][ICON_GOLD][ICON_PEACE]產出。
 			[NEWLINE]每處偉人設施提供以下額外效果：
 			[NEWLINE][ICON_BULLET]學院可在消耗大科學家獲取科技的時候額外+5%[ICON_RESEARCH]科研產出。
 			[NEWLINE][ICON_BULLET]製造中心可為所在城市建造奇觀時額外+10%[ICON_PRODUCTION]產能積累。
