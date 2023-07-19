@@ -164,9 +164,28 @@ GameEvents.OnTriggerAddEnemyPromotion.Add(function(eThisPromotionType, eThisProm
             local adjPlot = Map.PlotDirection(plotX, plotY, i)
             if (adjPlot ~= nil) then
                 local pUnit = adjPlot:GetUnit(0)
-                if pUnit and pUnit:GetOwner() ~= pThisUnit:GetOwner() and not pUnit:IsImmuneNegtivePromotions() then --not for immune unit---by HMS
+                if pUnit and pUnit:GetOwner() ~= pThisUnit:GetOwner() and not pUnit:IsImmuneNegtivePromotions() then
                     pUnit:SetHasPromotion(LoseSupplyID, true);
+                    if pThisPlayer:IsHuman() then
+                        local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_ENEMY_SUPPLY_DESTROYED", Locale.ConvertTextKey("TXT_KEY_PROMOTION_LOSE_SUPPLY"), pThisUnit:GetName(), "[COLOR_NEGATIVE_TEXT]" .. -20 .. "[ENDCOLOR]");
+                        Events.GameplayAlertMessage(text);
+                    end
+                    if pThatPlayer:IsHuman() then
+                        local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_ENEMY_SUPPLY_DESTROYED", Locale.ConvertTextKey("TXT_KEY_PROMOTION_LOSE_SUPPLY"), pThatUnit:GetName(), "[COLOR_NEGATIVE_TEXT]" .. -20 .. "[ENDCOLOR]");
+                        Events.GameplayAlertMessage(text);
+                    end
                 end
+            end
+        end
+    else
+        if pThatUnit and pThatUnit:GetOwner() ~= pThisUnit:GetOwner() and not pThatUnit:IsImmuneNegtivePromotions() then
+            if pThisPlayer:IsHuman() then
+                local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_ENEMY_SUPPLY_DESTROYED", Locale.ConvertTextKey("TXT_KEY_PROMOTION_LOSE_SUPPLY"), pThatUnit:GetName(), "[COLOR_NEGATIVE_TEXT]" .. -20 .. "[ENDCOLOR]");
+                Events.GameplayAlertMessage(text);
+            end
+            if pThatPlayer:IsHuman() then
+                local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_ENEMY_SUPPLY_DESTROYED", Locale.ConvertTextKey("TXT_KEY_PROMOTION_LOSE_SUPPLY"), pThatUnit:GetName(), "[COLOR_NEGATIVE_TEXT]" .. -20 .. "[ENDCOLOR]");
+                Events.GameplayAlertMessage(text);
             end
         end
     end

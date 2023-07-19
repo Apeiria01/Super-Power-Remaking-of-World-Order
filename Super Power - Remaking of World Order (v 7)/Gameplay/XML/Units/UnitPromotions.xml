@@ -2554,6 +2554,109 @@
 			<PediaType>PEDIA_RANGED</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_FAE_ROCKET_2</PediaEntry>
 		</Row>
+
+		<Row>
+			<Type>PROMOTION_KOREA_HWACHA</Type>
+			<Description>TXT_KEY_PROMOTION_KOREA_HWACHA</Description>
+			<Help>TXT_KEY_PROMOTION_KOREA_HWACHA_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
+			<PortraitIndex>30</PortraitIndex>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_KOREA_HWACHA</PediaEntry>
+			<CannotBeChosen>true</CannotBeChosen>
+			<SplashDamagePercent>40</SplashDamagePercent>
+			<SplashDamageRadius>1</SplashDamageRadius>
+			<SplashDamagePlotUnitLimit>1</SplashDamagePlotUnitLimit>
+			<SplashXP>1</SplashXP>
+			<CollateralDamagePercent>50</CollateralDamagePercent>
+			<CollateralDamagePlotUnitLimit>8</CollateralDamagePlotUnitLimit>
+			<CollateralXP>1</CollateralXP>		
+		</Row>
+		<Row>
+			<Type>PROMOTION_GUN_BARRER_1</Type>
+			<Description>TXT_KEY_PROMOTION_GUN_BARRER_1</Description>
+			<Help>TXT_KEY_PROMOTION_GUN_BARRER_1_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereqOr1>PROMOTION_KOREA_HWACHA</PromotionPrereqOr1>
+			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
+			<PortraitIndex>32</PortraitIndex>
+			<PediaType>PEDIA_RANGED</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_GUN_BARRER_1</PediaEntry>
+			<SplashDamagePercent>30</SplashDamagePercent>
+			<SplashDamageRadius>1</SplashDamageRadius>
+			<SplashDamagePlotUnitLimit>1</SplashDamagePlotUnitLimit>
+		</Row>
+
+		<Row>
+			<Type>PROMOTION_GUN_BARRER_2</Type>
+			<Description>TXT_KEY_PROMOTION_GUN_BARRER_2</Description>
+			<Help>TXT_KEY_PROMOTION_GUN_BARRER_2_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereqOr1>PROMOTION_GUN_BARRER_1</PromotionPrereqOr1>
+			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
+			<PortraitIndex>33</PortraitIndex>
+			<PediaType>PEDIA_RANGED</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_GUN_BARRER_2</PediaEntry>
+			<SplashDamagePercent>20</SplashDamagePercent>
+			<SplashDamageRadius>2</SplashDamageRadius>
+			<SplashDamagePlotUnitLimit>1</SplashDamagePlotUnitLimit>
+		</Row>
+		<Row>
+			<Type>PROMOTION_GUN_BARRER_3</Type>
+			<Description>TXT_KEY_PROMOTION_GUN_BARRER_3</Description>
+			<Help>TXT_KEY_PROMOTION_GUN_BARRER_3_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereqOr1>PROMOTION_GUN_BARRER_2</PromotionPrereqOr1>
+			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
+			<PortraitIndex>34</PortraitIndex>
+			<PediaType>PEDIA_RANGED</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_GUN_BARRER_3</PediaEntry>
+			<SplashDamagePercent>10</SplashDamagePercent>
+			<SplashDamageRadius>3</SplashDamageRadius>
+			<SplashDamagePlotUnitLimit>1</SplashDamagePlotUnitLimit>
+		</Row>
+
+		<Row>
+			<Type>PROMOTION_DIVINE_WEAPON_1</Type>
+			<Description>TXT_KEY_PROMOTION_DIVINE_WEAPON_1</Description>
+			<Help>TXT_KEY_PROMOTION_DIVINE_WEAPON_1_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereqOr1>PROMOTION_KOREA_HWACHA</PromotionPrereqOr1>
+			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
+			<PortraitIndex>35</PortraitIndex>
+			<PediaType>PEDIA_RANGED</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_DIVINE_WEAPON_1</PediaEntry>
+			<CollateralDamagePercent>25</CollateralDamagePercent>
+			<CollateralDamagePlotUnitLimit>8</CollateralDamagePlotUnitLimit>
+		</Row>
+		<Row>
+			<Type>PROMOTION_DIVINE_WEAPON_2</Type>
+			<Description>TXT_KEY_PROMOTION_DIVINE_WEAPON_2</Description>
+			<Help>TXT_KEY_PROMOTION_DIVINE_WEAPON_2_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereqOr1>PROMOTION_DIVINE_WEAPON_1</PromotionPrereqOr1>
+			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
+			<PortraitIndex>36</PortraitIndex>
+			<PediaType>PEDIA_RANGED</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_DIVINE_WEAPON_2</PediaEntry>
+			<CollateralDamagePercent>25</CollateralDamagePercent>
+			<CollateralDamagePlotUnitLimit>8</CollateralDamagePlotUnitLimit>
+		</Row>
+		<Row>
+			<Type>PROMOTION_DIVINE_WEAPON_3</Type>
+			<Description>TXT_KEY_PROMOTION_DIVINE_WEAPON_3</Description>
+			<Help>TXT_KEY_PROMOTION_DIVINE_WEAPON_3_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereqOr1>PROMOTION_DIVINE_WEAPON_2</PromotionPrereqOr1>
+			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
+			<PortraitIndex>37</PortraitIndex>
+			<PediaType>PEDIA_RANGED</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_DIVINE_WEAPON_3</PediaEntry>
+			<CollateralDamagePercent>25</CollateralDamagePercent>
+			<CollateralDamagePlotUnitLimit>8</CollateralDamagePlotUnitLimit>
+		</Row>
+
 	</UnitPromotions>
 	
 	
@@ -3553,6 +3656,32 @@
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_FAE_ROCKET_2</PromotionType>
+			<UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType>
+		</Row>
+
+		<Row>
+			<PromotionType>PROMOTION_GUN_BARRER_1</PromotionType>
+			<UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_GUN_BARRER_2</PromotionType>
+			<UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_GUN_BARRER_3</PromotionType>
+			<UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType>
+		</Row>
+
+		<Row>
+			<PromotionType>PROMOTION_DIVINE_WEAPON_1</PromotionType>
+			<UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_DIVINE_WEAPON_2</PromotionType>
+			<UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_DIVINE_WEAPON_3</PromotionType>
 			<UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType>
 		</Row>
 

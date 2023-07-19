@@ -202,7 +202,7 @@
 			<BaseSightRange>1</BaseSightRange>
 			<Combat>10</Combat>
 			<RangedCombat>80</RangedCombat>
-			<Cost>400</Cost>
+			<Cost>300</Cost>
 			<Moves>1</Moves>
 			<Range>4</Range>
 			<HurryCostModifier>-1</HurryCostModifier>
@@ -1293,15 +1293,11 @@
 
 		<Row>
 			<UnitType>UNIT_KOREAN_HWACHA</UnitType>
-			<PromotionType>PROMOTION_SPLASH_DAMAGE</PromotionType>
+			<PromotionType>PROMOTION_KOREA_HWACHA</PromotionType>
 		</Row>
 		<Row>
 			<UnitType>UNIT_KOREAN_HWACHA</UnitType>
 			<PromotionType>PROMOTION_INDIRECT_FIRE</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_KOREAN_HWACHA</UnitType>
-			<PromotionType>PROMOTION_MUST_SET_UP</PromotionType>
 		</Row>
 
 		<Row>
@@ -3112,11 +3108,5 @@
 		</Row>
 		-->
 	</BuildingClasses>
-	
-
-
-
-
-	
 	
 </GameData>

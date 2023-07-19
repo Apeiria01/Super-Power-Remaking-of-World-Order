@@ -152,7 +152,7 @@
 			<TechPrereq>TECH_CHEMISTRY</TechPrereq>
 			<MaxGlobalInstances>1</MaxGlobalInstances>
 			<MaxTeamInstances>1</MaxTeamInstances>
-			<Cost>260</Cost>
+			<Cost>200</Cost>
 			<PortraitIndex>29</PortraitIndex>
 			<IconAtlas>SPBalance_ATLAS</IconAtlas>
 		</Row>
@@ -605,7 +605,12 @@
 		<Row>
 			<ProjectType>PROJECT_PROTOTYPE_KOREAN_HWACHA</ProjectType>
 			<FlavorType>FLAVOR_RANGED</FlavorType>
-			<Flavor>24</Flavor>
+			<Flavor>60</Flavor>
+		</Row>
+		<Row>
+			<ProjectType>PROJECT_PROTOTYPE_KOREAN_HWACHA</ProjectType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>60</Flavor>
 		</Row>
 
 		<Row>

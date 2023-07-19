@@ -69,3 +69,9 @@ insert into PromotionCollections_Entries(CollectionType, PromotionIndex, Promoti
 ('PROMOTION_COLLECTION_WOODEN_BOAT_DAMAGE', 2, 'PROMOTION_DAMAGE_2');
 insert into PromotionCollections_AddEnemyPromotions(CollectionType, OtherCollectionType) values
 ('PROMOTION_COLLECTION_SIEGE_WOODEN_BOAT', 'PROMOTION_COLLECTION_WOODEN_BOAT_DAMAGE');
+
+--Hwacha
+insert into PromotionCollections_Entries(CollectionType, PromotionIndex, PromotionType, TriggerRangedAttack, TriggerHPFixed, TriggerLuaHook) values
+('PROMOTION_COLLECTION_BARRAGE', 1, 'PROMOTION_DIVINE_WEAPON_1', 1, 50, 1),
+('PROMOTION_COLLECTION_SUNDER', 1, 'PROMOTION_DIVINE_WEAPON_2', 1, 50, 1),
+('PROMOTION_COLLECTION_DESTROY_SUPPLY', 1, 'PROMOTION_DIVINE_WEAPON_3', 1, 50, 1);

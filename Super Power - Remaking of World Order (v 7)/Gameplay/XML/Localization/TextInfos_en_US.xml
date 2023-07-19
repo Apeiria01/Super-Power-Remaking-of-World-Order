@@ -1995,13 +1995,13 @@
 			<Text>Enemy's Unit {1_Debuff}!</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_NOTIFICATION_ENEMY_SUPPLY_DESTROYED">
-			<Text>The enemy unit {2_EnUName} {1_Debuff} by you! It will suffer {3_Num} Hp if Ends Turn outside of Friendly Territory.</Text>
+			<Text>The enemy unit {2_EnUName} {1_Debuff} ! It will suffer {3_Num} Hp if Ends Turn outside of Friendly Territory.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_NOTIFICATION_US_SUPPLY_DESTROYED_SHORT">
 			<Text>Your Unit {1_Debuff}!</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_NOTIFICATION_US_SUPPLY_DESTROYED">
-			<Text>Your unit {2_UnitName} {1_Debuff} by an enemy! It will suffer {3_Num} Hp if Ends Turn outside of Friendly Territory.</Text>
+			<Text>Your unit {2_UnitName} {1_Debuff} ! It will suffer {3_Num} Hp if Ends Turn outside of Friendly Territory.</Text>
 		</Row>
 		
 		
@@ -13177,12 +13177,6 @@
 		</Text>
 	</Replace>
 
-		<Replace Tag="TXT_KEY_CIV5_KOREA_HWACHA_HELP">
-			<Text>First multiple rocket launcher with Area of Effect damage in the game. Strong against land units, but weak against cities. Only Korea may build it. Replaces the Culverin.  </Text>
-		</Replace>
-
-
-
 	<Replace Tag="TXT_KEY_UNIT_ROCKET_ARTILLERY">
 		<Text>MLRS</Text>
 	</Replace>
@@ -13438,7 +13432,7 @@
 			<Text>[COLOR_YELLOW]Hwacha[ENDCOLOR]</Text>
 		</Row>
 		<Replace Tag="TXT_KEY_CIV5_KOREA_HWACHA_HELP">
-			<Text>An extremely powerful prototype Multiple Rocket Launcher. It can cause area of effect (AoE) damage to multiple enemy units. [NEWLINE][NEWLINE]Requires Early Multiple Rocket Launcher Project and only one can exist in the world.</Text>
+			<Text>An extremely powerful prototype Multiple Rocket Launcher. Has a unique promotion line. It can cause area of effect (AoE) damage to multiple enemy units. [NEWLINE][NEWLINE]Requires Early Multiple Rocket Launcher Project and only one can exist in the world.</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_CIV5_KOREA_HWACHA_STRATEGY">
 			<Text>The Hwacha is able to cause area of effect damage to multiple enemy units in one shot. Also it is the earliest ranged unit built with 4-hex range and indirect fire. It is a great weapon for defending a large group of enemy units but very ineffectively attacking cities. Also, never forget to use other units to protect it due to its slow movement and strength. </Text>
@@ -14475,9 +14469,64 @@
 		<Row Tag="TXT_KEY_PROMOTION_FAE_ROCKET_2">
 			<Text>Anti-ship Rocket Rocket II</Text>
 		</Row>
-		<!--<Row Tag="TXT_KEY_PROMOTION_FAE_ROCKET_2_HELP">
-			<Text>+50% [ICON_RANGE_STRENGTH] Ranged Combat Strength attacking [COLOR_POSITIVE_TEXT]Fortified Units[ENDCOLOR] and Units in [COLOR_POSITIVE_TEXT]Rough Terrain[ENDCOLOR].</Text>
-		</Row>-->
+
+		<Row Tag="TXT_KEY_PROMOTION_KOREA_HWACHA">
+			<Text>Hwacha</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_KOREA_HWACHA_HELP">
+			<Text>
+			[ICON_BULLET]Cause 40% Damage to all enemy units [COLOR_POSITIVE_TEXT]Adjacent[ENDCOLOR] to the target unit.
+			[NEWLINE][ICON_BULLET]Cause 50% Damage to other units in the [COLOR_POSITIVE_TEXT]target[ENDCOLOR] plot.
+			[NEWLINE][ICON_BULLET]+1XP when Cause Splash Damage or Collateral Damage to an enemy unit.
+			[NEWLINE]Unlock Unique follow-up Promotions
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_GUN_BARRER_1">
+			<Text>Gun Barrer I</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_GUN_BARRER_1_HELP">
+			<Text>Cause extra 30% Damage to all enemy units [COLOR_POSITIVE_TEXT]Adjacent[ENDCOLOR] to the target unit.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_GUN_BARRER_2">
+			<Text>Gun Barrer II</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_GUN_BARRER_2_HELP">
+			<Text>Cause extra 20% Damage to all enemy units [COLOR_POSITIVE_TEXT]Within 2 ring plots[ENDCOLOR] to the target unit.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_GUN_BARRER_3">
+			<Text>Gun Barrer III</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_GUN_BARRER_3_HELP">
+			<Text>Cause extra 10% Damage to all enemy units [COLOR_POSITIVE_TEXT]Within 3 ring plots[ENDCOLOR] to the target unit.</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_DIVINE_WEAPON_1">
+			<Text>Divine Weapon I</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_DIVINE_WEAPON_1_HELP">
+			<Text>
+			[ICON_BULLET]+25% Damage to other units in the [COLOR_POSITIVE_TEXT]target[ENDCOLOR] plot.
+			[NEWLINE][ICON_BULLET]If the Target Unit's HP is less than 50 after this attack, the target unit suffers [COLOR_NEGATIVE_TEXT]Pinned Down / Move alone the Routes only[ENDCOLOR].
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_DIVINE_WEAPON_2">
+			<Text>Divine Weapon II</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_DIVINE_WEAPON_2_HELP">
+			<Text>
+			[ICON_BULLET]+25% Damage to other units in the [COLOR_POSITIVE_TEXT]target[ENDCOLOR] plot.
+			[NEWLINE][ICON_BULLET]If the Target Unit's HP is less than 50 after this attack, the target unit suffers [COLOR_NEGATIVE_TEXT]Armor Damaged[ENDCOLOR].
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_DIVINE_WEAPON_3">
+			<Text>Divine Weapon III</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_DIVINE_WEAPON_3_HELP">
+			<Text>
+			[ICON_BULLET]+25% Damage to other units in the [COLOR_POSITIVE_TEXT]target[ENDCOLOR] plot.
+			[NEWLINE][ICON_BULLET]If the Target Unit's HP is less than 50 after this attack, the target unit suffers [COLOR_NEGATIVE_TEXT]Supply Destroyed[ENDCOLOR].
+			</Text>
+		</Row>
 
 
 		<Row Tag="TXT_KEY_PROMOTION_RECON_UNIT">
@@ -16934,7 +16983,7 @@
 			<Text>
 			Unit will be consumed.
 			[NEWLINE][NEWLINE]Great Tile Improvements will connect Strategic Resources on this tile to the trade network.
-			[NEWLINE]Great Tile Improvements will provide extra [ICON_RESEARCH][ICON_PRODUCTION][ICON_GOLD][ICON_PEACE] Output for surrounding land Improvements.
+			[NEWLINE]Great Tile Improvements will provide extra [ICON_RESEARCH][ICON_PRODUCTION][ICON_GOLD][ICON_PEACE] Output for surrounding Improvements.
 			[NEWLINE]Each Great Tile Improvements will also provide the following additional effects:
 			[NEWLINE][ICON_BULLET]Academy can make Great Scientists provide 5% more [ICON_RESEARCH] Science when used to discover new technology.
 			[NEWLINE][ICON_BULLET]Manufactory can provide +10% [ICON_PRODUCTION] Production when constructing Wonders in located city.
