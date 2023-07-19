@@ -8907,7 +8907,7 @@
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_BELIEF_PAPAL_PRIMACY">
-			<Text>+35 to [ICON_INFLUENCE] Influence resting point with City-States following this religion</Text>
+			<Text>+35 to [ICON_INFLUENCE] Influence resting point with City-States following this religion, +300% for City-State[ICON_INFLUENCE]Influence recovers rate</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_CHARITABLE_MISSIONS">
 			<Text>Influence boosts from [ICON_GOLD] Gold gifts to City-States are increased by 50%. +30 to [ICON_INFLUENCE] Influence resting point with City-States following this religion</Text>
