@@ -218,7 +218,7 @@ UPDATE Beliefs SET HappinessPerFollowingCity = '1' WHERE Type = 'BELIEF_CEREMONI
 INSERT INTO Belief_CityYieldChanges (BeliefType,YieldType,Yield)
 SELECT 'BELIEF_CEREMONIAL_BURIAL','YIELD_GOLDEN_AGE_POINTS',3;
 
-UPDATE Beliefs SET CityStateMinimumInfluence = '35' WHERE Type = 'BELIEF_PAPAL_PRIMACY';
+UPDATE Beliefs SET CityStateMinimumInfluence = '35', SameReligionMinorRecoveryModifier = '300' WHERE Type = 'BELIEF_PAPAL_PRIMACY';
 
 UPDATE Beliefs SET GreatPersonPointsHolyCity = 1 WHERE Type='BELIEF_RELIGIOUS_SCIENCE';
 INSERT INTO Belief_GreatPersonPoints (BeliefType, GreatPersonType, Value)

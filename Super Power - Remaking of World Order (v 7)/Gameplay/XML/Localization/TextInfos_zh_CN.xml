@@ -8048,7 +8048,7 @@
 			<Text>每一处钻石和珍珠+2[ICON_PEACE]信仰、+2[ICON_CULTURE]文化</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_PAPAL_PRIMACY">
-			<Text>对信仰此宗教的城邦的[ICON_INFLUENCE]影响力下限值+35</Text>
+			<Text>对信仰此宗教的城邦的[ICON_INFLUENCE]影响力下限值+35且[ICON_INFLUENCE]影响力恢复速率+300%</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_CHARITABLE_MISSIONS">
 			<Text>向城邦赠送[ICON_GOLD]金钱增加影响力的效果提升50%。对信仰此宗教的城邦的[ICON_INFLUENCE]影响力下限值+30</Text>

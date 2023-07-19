@@ -7931,7 +7931,7 @@
 		
 
 		<Replace Tag="TXT_KEY_BELIEF_PAPAL_PRIMACY">
-			<Text>對信仰此宗教的城邦的[ICON_INFLUENCE]影響力下限值+35</Text>
+			<Text>對信仰此宗教的城邦的[ICON_INFLUENCE]影響力下限值+35且[ICON_INFLUENCE]影響力恢復速率+300%</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_CHARITABLE_MISSIONS">
 			<Text>向城邦贈送[ICON_GOLD]金錢增加影響力的效果提升50%。對信仰此宗教的城邦的[ICON_INFLUENCE]影響力下限值+30</Text>
