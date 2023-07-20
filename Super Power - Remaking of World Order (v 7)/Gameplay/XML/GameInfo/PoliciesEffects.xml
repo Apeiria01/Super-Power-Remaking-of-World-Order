@@ -2901,5 +2901,10 @@
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<Yield>1</Yield>
 		</Row>
+		<Row>
+			<PolicyType>POLICY_REPRESENTATION</PolicyType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>1</Yield>
+		</Row>
 	</Policy_CityNumberCityYieldModifier>
 </GameData>
