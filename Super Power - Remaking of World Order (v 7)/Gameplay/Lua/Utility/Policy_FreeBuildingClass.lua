@@ -317,42 +317,5 @@ function ResetPolicyFreeBuildings(playerID,iPolicyBranch,isBlock)
 end
 GameEvents.PlayerBlockPolicyBranch.Add(ResetPolicyFreeBuildings);
 
-function PolicyRepresentationBugfix(playerID, policyID)
-	local pPlayer = Players[playerID]
-	if pPlayer == nil or not pPlayer:IsMajorCiv() then
-		return
-	end
-
-	--POLICY_REPRESENTATION bugfix, only for Human
-	if(policyID == GameInfo.Policies["POLICY_REPRESENTATION"].ID)
-	and pPlayer:IsHuman()
-	then
-		local RepresentationBuildings = GameInfoTypes["BUILDING_REPRESENTATION_CULTURE"]
-		local RepresentationBuildings2 = GameInfoTypes["BUILDING_REPRESENTATION_CULTURE_COST"]
-		for iCity in pPlayer:Cities() do
-			if iCity:IsHasBuilding(RepresentationBuildings) then
-				local bHasCH = false;
-				for building in GameInfo.Buildings() do
-					if iCity:IsHasBuilding(building.ID) then
-						if building.BuildingClass =="BUILDINGCLASS_CITY_HALL_LV1" 
-						or building.BuildingClass =="BUILDINGCLASS_CITY_HALL_LV2" 
-						or building.BuildingClass =="BUILDINGCLASS_CITY_HALL_LV3" 
-						or building.BuildingClass =="BUILDINGCLASS_CITY_HALL_LV4" 
-						or building.BuildingClass =="BUILDINGCLASS_CITY_HALL_LV5" 
-						then
-                            bHasCH = true
-							break
-                        end
-                    end
-				end
-				if bHasCH == false then
-					iCity:SetNumRealBuilding(RepresentationBuildings2,1);
-				end
-			end
-		end
-	end
-end
-GameEvents.PlayerAdoptPolicy.Add(PolicyRepresentationBugfix)
-
 
 print("New Policy Free BuildingClass Check Pass!")

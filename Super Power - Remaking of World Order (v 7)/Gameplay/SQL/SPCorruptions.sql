@@ -10,3 +10,10 @@ insert into CorruptionLevels
 ('CORRUPTION_LV5', 36, 2, 2, 0, 0, 'BUILDINGCLASS_CITY_HALL_LV5', 'BUILDINGCLASS_PROCURATORATE');
 
 update Resources set CorruptionScoreChange = -9999 where CivilizationType = 'CIVILIZATION_INDONESIA';
+
+insert into Policy_CorruptionLevelPolicyCostModifier (PolicyType, CorruptionLevelType, Modifier) values
+('POLICY_REPRESENTATION', 'CORRUPTION_LV1', -5),
+('POLICY_REPRESENTATION', 'CORRUPTION_LV2', -5),
+('POLICY_REPRESENTATION', 'CORRUPTION_LV3', -5),
+('POLICY_REPRESENTATION', 'CORRUPTION_LV4', -5),
+('POLICY_REPRESENTATION', 'CORRUPTION_LV5', -5);

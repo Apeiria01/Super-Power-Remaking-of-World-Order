@@ -2320,10 +2320,6 @@
 
 	<Policy_FreeBuildingClass>
 		<Row>
-			<PolicyType>POLICY_REPRESENTATION</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_REPRESENTATION_CULTURE</BuildingClassType>
-		</Row>
-		<Row>
 			<PolicyType>POLICY_FAMILY_REGISTER</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_FAMILY_PRODUCTION</BuildingClassType>
 		</Row>
@@ -2409,11 +2405,6 @@
 			<Description>TXT_KEY_BUILDING_POLICE_STATE</Description>
 		</Row>
 		
-		<Row>
-			<Type>BUILDINGCLASS_REPRESENTATION_CULTURE</Type>
-			<DefaultBuilding>BUILDING_REPRESENTATION_CULTURE</DefaultBuilding>
-			<Description>TXT_KEY_POLICY_REPRESENTATION</Description>
-		</Row>
 		<Row>
 			<Type>BUILDINGCLASS_FAMILY_PRODUCTION</Type>
 			<DefaultBuilding>BUILDING_FAMILY_PRODUCTION</DefaultBuilding>
@@ -2594,35 +2585,6 @@
 			<GreatWorkCount>-1</GreatWorkCount>
 		</Row>
 		
-		<Row>
-			<Type>BUILDING_REPRESENTATION_CULTURE</Type>
-			<BuildingClass>BUILDINGCLASS_REPRESENTATION_CULTURE</BuildingClass>
-			<Cost>-1</Cost>
-			<NeverCapture>true</NeverCapture>
-			<NukeImmune>true</NukeImmune>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<GlobalCultureRateModifier>1</GlobalCultureRateModifier>
-			<PolicyCostModifier>-5</PolicyCostModifier>
-			<PortraitIndex>27</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<Description>TXT_KEY_POLICY_REPRESENTATION</Description>
-			<Help>TXT_KEY_POLICY_REPRESENTATION_HELP</Help>
-			<GreatWorkCount>-1</GreatWorkCount>
-		</Row>
-		<Row>
-			<Type>BUILDING_REPRESENTATION_CULTURE_COST</Type>
-			<BuildingClass>BUILDINGCLASS_REPRESENTATION_CULTURE</BuildingClass>
-			<Cost>-1</Cost>
-			<NeverCapture>true</NeverCapture>
-			<NukeImmune>true</NukeImmune>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<PolicyCostModifier>5</PolicyCostModifier>
-			<PortraitIndex>27</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<Description>TXT_KEY_POLICY_REPRESENTATION</Description>
-			<Help>TXT_KEY_BUILDING_REPRESENTATION_CULTURE</Help>
-			<GreatWorkCount>-1</GreatWorkCount>
-		</Row>
 		<Row>
 			<Type>BUILDING_FAMILY_PRODUCTION</Type>
 			<BuildingClass>BUILDINGCLASS_FAMILY_PRODUCTION</BuildingClass>

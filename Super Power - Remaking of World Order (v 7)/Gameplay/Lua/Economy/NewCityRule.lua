@@ -1,143 +1,11 @@
-function NewCitySystem(playerID)
-    local player = Players[playerID]
-    if player == nil then
-        return
-    end
-    if player:IsBarbarian() or player:IsMinorCiv() then
-        return
-    end
-    if player:GetNumCities() <= 0 then
-        return
-    end
-
-    -- Set "Allah Akbar" from Islamic University
-    if (player:CountNumBuildings(
-                GameInfoTypes["BUILDING_ARABIA_ISIAMIC_UNIVERSITY"]) > 6 or
-            player:CountNumBuildings(
-                GameInfoTypes["BUILDING_ARABIA_ISIAMIC_UNIVERSITY_ALLAH_AKBAR"]) > 0) -- Policy Effects
-        or player:HasPolicy(GameInfoTypes["POLICY_REPRESENTATION"])
-    then
-        local iCountIU = math.floor(player:CountNumBuildings(
-                GameInfoTypes["BUILDING_ARABIA_ISIAMIC_UNIVERSITY"]) /
-            7);
-
-        for pCity in player:Cities() do
-            if pCity ~= nil then
-                -- CityName Change
-                if not pCity:IsCapital() and pCity:GetName() ==
-                    Locale.ConvertTextKey("TXT_KEY_CITY_NAME_SHENDU") then
-                    pCity:SetName("TXT_KEY_CITY_NAME_LOYANG");
-                elseif pCity:IsCapital() and pCity:GetName() ==
-                    Locale.ConvertTextKey("TXT_KEY_CITY_NAME_LOYANG") then
-                    pCity:SetName("TXT_KEY_CITY_NAME_SHENDU");
-                end
-
-                local iNumAIUAA = 0;
-                local bHasCH = false;
-                -- Islamic University
-                if (iCountIU > 0 and not pCity:IsPuppet() and
-                        pCity:IsHasBuilding(
-                            GameInfoTypes["BUILDING_ARABIA_ISIAMIC_UNIVERSITY"])) -- +5% Culture Cost for New Policies if the city hasn't city hall
-                    or
-                    pCity:IsHasBuilding(
-                        GameInfoTypes["BUILDING_REPRESENTATION_CULTURE"]) then
-                    local iNumFB = 0;
-                    local iNumOFB = 0;
-                    local bHasLab = false;
-                    for building in GameInfo.Buildings() do
-                        if pCity:IsHasBuilding(building.ID) then
-                            if building.BuildingClass ~=
-                                "BUILDINGCLASS_ARABIA_ISIAMIC_UNIVERSITY_ALLAH_AKBAR" then
-                                if (building.FaithCost > 0 and building.Cost ==
-                                        -1) or building.BuildingClass ==
-                                    "BUILDINGCLASS_SHRINE" or
-                                    building.BuildingClass ==
-                                    "BUILDINGCLASS_TEMPLE" then
-                                    iNumFB = iNumFB + 1;
-                                elseif GameInfo.Building_YieldChanges {
-                                        BuildingType = building.Type,
-                                        YieldType = "YIELD_FAITH"
-                                    } () then
-                                    iNumOFB = iNumOFB + 1;
-                                end
-                            end
-                            if building.BuildingClass ==
-                                "BUILDINGCLASS_LABORATORY" then
-                                bHasLab = true;
-                            end
-                            if building.BuildingClass ==
-                                "BUILDINGCLASS_CITY_HALL_LV1" or
-                                building.BuildingClass ==
-                                "BUILDINGCLASS_CITY_HALL_LV2" or
-                                building.BuildingClass ==
-                                "BUILDINGCLASS_CITY_HALL_LV3" or
-                                building.BuildingClass ==
-                                "BUILDINGCLASS_CITY_HALL_LV4" or
-                                building.BuildingClass ==
-                                "BUILDINGCLASS_CITY_HALL_LV5" then
-                                bHasCH = true;
-                            end
-                        end
-                    end
-                    if pCity:IsPuppet() or
-                        not pCity:IsHasBuilding(
-                            GameInfoTypes["BUILDING_ARABIA_ISIAMIC_UNIVERSITY"]) then
-                    elseif bHasLab then
-                        iNumAIUAA = iCountIU * (iNumFB + iNumOFB);
-                    else
-                        iNumAIUAA = iCountIU * iNumFB;
-                    end
-                    -- iNumAIUAA = math.min(iNumAIUAA,20);
-                end
-                if pCity:GetNumBuilding(
-                        GameInfoTypes["BUILDING_ARABIA_ISIAMIC_UNIVERSITY_ALLAH_AKBAR"]) ~=
-                    iNumAIUAA then
-                    pCity:SetNumRealBuilding(
-                        GameInfoTypes["BUILDING_ARABIA_ISIAMIC_UNIVERSITY_ALLAH_AKBAR"],
-                        iNumAIUAA);
-                end
-
-                -- Policy Effects
-                -- +5% Culture Cost for New Policies if the city hasn't city hall
-                if pCity:IsHasBuilding(
-                        GameInfoTypes["BUILDING_REPRESENTATION_CULTURE_COST"]) then
-                    if not pCity:IsHasBuilding(
-                            GameInfoTypes["BUILDING_REPRESENTATION_CULTURE"]) or
-                        bHasCH then
-                        pCity:SetNumRealBuilding(
-                            GameInfoTypes["BUILDING_REPRESENTATION_CULTURE_COST"],
-                            0);
-                    end
-                else
-                    if pCity:IsHasBuilding(
-                            GameInfoTypes["BUILDING_REPRESENTATION_CULTURE"]) and
-                        not bHasCH then
-                        pCity:SetNumRealBuilding(
-                            GameInfoTypes["BUILDING_REPRESENTATION_CULTURE_COST"],
-                            1);
-                    end
-                end
-            end
-        end
-    end
-
-    if not player:IsHuman() then ------(only for human players for now)
-        return
-    end
-
-    InternationalImmigration(playerID)
-
-    SetCityPerTurnEffects(playerID)
-
-end ---------Function End
-
-GameEvents.PlayerDoTurn.Add(NewCitySystem)
-
-----------------------------------------------Utilities----------------------------------------
-
 --------------------- International Immigration
 function InternationalImmigration(TargetPlayerID)
     if CheckMoveOutCounter == nil or (TargetPlayerID == -1 or nil) then
+        return;
+    end
+
+    local thisPlayer = Players[TargetPlayerID]
+    if thisPlayer == nil or not thisPlayer:IsHuman() then
         return;
     end
 
@@ -197,6 +65,7 @@ function InternationalImmigration(TargetPlayerID)
         end
     end
 end ---------function end
+GameEvents.PlayerDoTurn.Add(InternationalImmigration)
 
 function DoInternationalImmigration(MoveOutPlayerID, MoveInPlayerID)
     local MoveOutPlayer = Players[MoveOutPlayerID] -----------This nation's population tries to move out
@@ -253,7 +122,6 @@ function DoInternationalImmigration(MoveOutPlayerID, MoveInPlayerID)
         if cityPop > 0 and cityPop < 80 and not pCity:IsPuppet() and
             not pCity:IsRazing() and not pCity:IsResistance() and
             not pCity:IsForcedAvoidGrowth() and
-            not pCity:IsHasBuilding(GameInfoTypes["BUILDING_IMMIGRANT_RECEIVED"]) and
             pCity:CanGrowNormally() and
             pCity:GetSpecialistCount(GameInfo.Specialists.SPECIALIST_CITIZEN.ID) <=
             0 then
@@ -267,8 +135,6 @@ function DoInternationalImmigration(MoveOutPlayerID, MoveInPlayerID)
         local targetCity = apCities[iRandChoice]
         local Cityname = targetCity:GetName()
         targetCity:ChangePopulation(1, true)
-        targetCity:SetNumRealBuilding(
-            GameInfoTypes["BUILDING_IMMIGRANT_RECEIVED"], 1)
         print("Immigrant Move into this city:" .. Cityname)
 
         ------------Notification-----------
@@ -287,18 +153,6 @@ function DoInternationalImmigration(MoveOutPlayerID, MoveInPlayerID)
         return false
     end
 end ---------function end
-
-function SetCityPerTurnEffects(playerID)
-    if Players[playerID] and Players[playerID]:GetNumCities() > 0 then
-        local player = Players[playerID];
-        for city in player:Cities() do
-            if city ~= nil then
-                city:SetNumRealBuilding(
-                    GameInfoTypes["BUILDING_IMMIGRANT_RECEIVED"], 0)
-            end
-        end
-    end
-end -------------Function End
 
 -- Check to Set Capital for avoiding CTD -- by CaptainCWB
 function CheckCapital(iPlayerID)
@@ -363,22 +217,6 @@ function CheckCapital(iPlayerID)
             pNCapital:SetNumRealBuilding(iPalaceID, 1);
 
             for building in GameInfo.Buildings() do
-                -- Remove "Corrupt" from New
-                if pNCapital:IsHasBuilding(building.ID) and
-                    (building.BuildingClass == "BUILDINGCLASS_CITY_HALL_LV1" or
-                        building.BuildingClass == "BUILDINGCLASS_CITY_HALL_LV2" or
-                        building.BuildingClass == "BUILDINGCLASS_CITY_HALL_LV3" or
-                        building.BuildingClass == "BUILDINGCLASS_CITY_HALL_LV4" or
-                        building.BuildingClass == "BUILDINGCLASS_CITY_HALL_LV5" or
-                        building.BuildingClass ==
-                        "BUILDINGCLASS_PUPPET_GOVERNEMENT" or
-                        building.BuildingClass == "BUILDINGCLASS_CONSTABLE" or
-                        building.BuildingClass == "BUILDINGCLASS_SHERIFF_OFFICE" or
-                        building.BuildingClass == "BUILDINGCLASS_POLICE_STATION" or
-                        building.BuildingClass == "BUILDINGCLASS_PROCURATORATE") then
-                    pNCapital:SetNumRealBuilding(building.ID, 0);
-                end
-
                 if pOCapital then
                     -- Palace
                     if pOCapital:IsHasBuilding(building.ID) and building.Capital then

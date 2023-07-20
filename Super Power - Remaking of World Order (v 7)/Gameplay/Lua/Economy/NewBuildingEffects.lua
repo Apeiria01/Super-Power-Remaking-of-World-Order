@@ -660,6 +660,83 @@ if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_ZULU) then
 		end
 	end)
 end
+
+if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_ARABIA) then
+  local iIsiamicFactor = GameDefines["ARABIA_ISIAMIC_UNIVERSITY_FACTOR"] or 7;
+  local eIsiamicSchool = GameInfoTypes["BUILDING_ARABIA_ISIAMIC_UNIVERSITY"]
+  local eIsiamicUniversityAllahAkbar = GameInfoTypes["BUILDING_ARABIA_ISIAMIC_UNIVERSITY_ALLAH_AKBAR"]
+
+  local faithBuildingCollection1 = {}
+  local faithBuildingCollection2 = {}
+  for building in GameInfo.Buildings do
+    if building.Type ~= "BUILDING_ARABIA_ISIAMIC_UNIVERSITY_ALLAH_AKBAR" then
+      if (building.FaithCost > 0 and building.Cost == -1) or
+        building.BuildingClass == "BUILDINGCLASS_SHRINE" or
+        building.BuildingClass == "BUILDINGCLASS_TEMPLE" then
+        faithBuildingCollection1[building.ID] = true
+      elseif GameInfo.Building_YieldChanges {
+        BuildingType = building.Type,
+        YieldType = "YIELD_FAITH",
+      } () then
+        faithBuildingCollection2[building.ID] = true
+      end
+    end
+  end
+
+  function setIsiamSchoolEffect(pCity, iNumBonusFactor)
+    if pCity == nil then
+      return
+    end
+    if pCity:IsPuppet() then
+      pCity:SetNumRealBuilding(eIsiamicUniversityAllahAkbar, 0)
+      return
+    end
+
+    local iNumBonus = 0;
+    local iNumFaithBuildingInCollection1 = 0
+    for i, v in ipairs(faithBuildingCollection1) do
+      if v == true and pCity:IsHasBuilding(i) then
+        iNumFaithBuildingInCollection1 = iNumFaithBuildingInCollection1 + 1
+      end
+    end
+    iNumBonus = iNumBonus + iNumFaithBuildingInCollection1 * iNumBonusFactor
+
+
+    local bHasLab = pCity:IsHasBuilding(Buildings["BUILDING_LABORATORY"])
+    if bHasLab then
+      local iNumFaithBuildingInCollection2 = 0
+      for i, v in ipairs(faithBuildingCollection2) do
+        if v == true and pCity:IsHasBuilding(i) then
+          iNumFaithBuildingInCollection2 = iNumFaithBuildingInCollection2 + 1
+        end
+      end
+      iNumBonus = iNumBonus + iNumFaithBuildingInCollection2 * iNumBonusFactor
+    end
+
+    pCity:SetNumRealBuilding(eIsiamicUniversityAllahAkbar, iNumBonus)
+  end
+
+	GameEvents.PlayerDoTurn.Add(function(iPlayer)
+		local pPlayer = Players[iPlayer]
+		if pPlayer == nil or not pPlayer:IsAlive() then
+			return
+		end
+    if pPlayer:GetCivilizationType() ~= GameInfoTypes.CIVILIZATION_ARABIA then
+      return
+    end
+
+    local iNumIsiamicSchool = pPlayer:CountNumBuildings(eIsiamicSchool)
+    local iNumBonusFactor = math.floor(iNumIsiamicSchool / iIsiamicFactor)
+    if iNumBonusFactor <= 0 then
+      return
+    end
+
+		for city in pPlayer:Cities() do
+      setIsiamSchoolEffect(city, iNumBonusFactor)
+		end
+	end)
+end
+
 print("New Building Effects Check Pass!")
 
 
