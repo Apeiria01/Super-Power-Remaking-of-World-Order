@@ -2672,27 +2672,6 @@
 		</Row>
 		
 		<Row>
-			<Tag>TXT_KEY_BUILDING_CITY_HALL_NOAC_LV2</Tag>
-			<Text>[COLOR_WARNING_TEXT]-管理成本報告-[ENDCOLOR][NEWLINE][NEWLINE][ICON_BULLET]本城市的離心傾向會導致全國[ICON_HAPPINESS_4]不滿額外+2%！[NEWLINE][ICON_BULLET]建造[COLOR_YIELD_FOOD]治安署[ENDCOLOR]來強化你對本城市的管理以消除全國性的額外[ICON_HAPPINESS_4]不滿！
-			</Text>
-		</Row>
-		<Row>
-			<Tag>TXT_KEY_BUILDING_CITY_HALL_NOAC_LV3</Tag>
-			<Text>[COLOR_WARNING_TEXT]-管理成本報告-[ENDCOLOR][NEWLINE][NEWLINE][ICON_BULLET]本城市的離心傾向會導致全國[ICON_HAPPINESS_4]不滿額外+3%！[NEWLINE][ICON_BULLET]建造[COLOR_YIELD_FOOD]審計署[ENDCOLOR]來強化你對本城市的管理以消除全國性的額外[ICON_HAPPINESS_4]不滿！
-			</Text>
-		</Row>
-		<Row>
-			<Tag>TXT_KEY_BUILDING_CITY_HALL_NOAC_LV4</Tag>
-			<Text>[COLOR_WARNING_TEXT]-管理成本報告-[ENDCOLOR][NEWLINE][NEWLINE][ICON_BULLET]本城市的離心傾向會導致全國[ICON_HAPPINESS_4]不滿額外+4%！[NEWLINE][ICON_BULLET]建造[COLOR_YIELD_FOOD]警察局[ENDCOLOR]來強化你對本城市的管理以消除全國性的額外[ICON_HAPPINESS_4]不滿！
-			</Text>
-		</Row>
-		<Row>
-			<Tag>TXT_KEY_BUILDING_CITY_HALL_NOAC_LV5</Tag>
-			<Text>[COLOR_WARNING_TEXT]-管理成本報告-[ENDCOLOR][NEWLINE][NEWLINE][ICON_BULLET]本城市的離心傾向會導致全國[ICON_HAPPINESS_4]不滿額外+5%！[NEWLINE][ICON_BULLET]建造[COLOR_YIELD_FOOD]地檢署[ENDCOLOR]來強化你對本城市的管理以消除全國性的額外[ICON_HAPPINESS_4]不滿！
-			</Text>
-		</Row>
-		
-		<Row>
 			<Tag>TXT_KEY_BUILDING_PUPPET_GOVERNEMENT</Tag>
 			<Text>#市政廳[COLOR_GREY]（傀儡）[ENDCOLOR]</Text>
 		</Row>

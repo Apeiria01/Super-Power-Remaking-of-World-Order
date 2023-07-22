@@ -5,6 +5,7 @@ include( "IconSupport" );
 include( "InstanceManager" );
 include( "InfoTooltipInclude" );
 include( "CityStateStatusHelper" );
+include( "CorruptionUIUtils" );
 
 local g_TeamIM  = InstanceManager:new( "TeamCityBanner",  "Anchor", Controls.CityBanners );
 local g_OtherIM = InstanceManager:new( "OtherCityBanner", "Anchor", Controls.CityBanners  );
@@ -290,7 +291,12 @@ function RefreshCityBanner(cityBanner, iActiveTeam, iActivePlayer)
 			controls.PuppetIcon:SetHide(false);
 			
 			if(isActivePlayerCity) then
-				controls.PuppetIcon:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_CITY_PUPPET"));
+        local estimatedLevel = city:DecideCorruptionLevelForNormalCity(city:GetCorruptionScore()) - GameInfoTypes["CORRUPTION_LV0"];
+        local tip = Locale.ConvertTextKey("TXT_KEY_CITY_PUPPET")
+        if estimatedLevel >= 0 then
+          tip = tip .. "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_CITYBANNER_CORRUPTION_ANNEX_PUPPET_LEVEL_PREVIEW", estimatedLevel)
+        end
+				controls.PuppetIcon:SetToolTipString(tip);
 			else
 				controls.PuppetIcon:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_CITY_PUPPET_OTHER"));
 			end
@@ -375,95 +381,52 @@ function RefreshCityBanner(cityBanner, iActiveTeam, iActivePlayer)
 			controls.CityScaleIcon:SetHide(true);
 			controls.CityFocusIcon:SetHide(true);
 			if (isActivePlayerCity) then
-			    -- City Level for SP6
+        -- City Level for SP9.2
 				local sCityLevelIcon  = nil;
 				local sCityLevelIconTT = nil;
-				local iCityLv1 = GameInfoTypes["BUILDING_CITY_HALL_LV1"];
-				local iCityLv2 = GameInfoTypes["BUILDING_CITY_HALL_LV2"];
-				local iCityLv3 = GameInfoTypes["BUILDING_CITY_HALL_LV3"];
-				local iCityLv4 = GameInfoTypes["BUILDING_CITY_HALL_LV4"];
-				local iCityLv5 = GameInfoTypes["BUILDING_CITY_HALL_LV5"];
-				local iConstable     = GameInfoTypes["BUILDING_CONSTABLE"];
-				local iSheriffOffice = GameInfoTypes["BUILDING_SHERIFF_OFFICE"];
-				local iPoliceStation = GameInfoTypes["BUILDING_POLICE_STATION"];
-				local iProcuratorate = GameInfoTypes["BUILDING_PROCURATORATE"];
-				-- Set Override
-				local overrideBuilding = nil;
-				overrideBuilding = GameInfo.Civilization_BuildingClassOverrides{ BuildingClassType = "BUILDINGCLASS_CITY_HALL_LV1", CivilizationType = GameInfo.Civilizations[player:GetCivilizationType()].Type }();
-				if overrideBuilding ~= nil then
-					iCityLv1 = GameInfo.Buildings[overrideBuilding.BuildingType].ID;
-				end
-				overrideBuilding = GameInfo.Civilization_BuildingClassOverrides{ BuildingClassType = "BUILDINGCLASS_CITY_HALL_LV2", CivilizationType = GameInfo.Civilizations[player:GetCivilizationType()].Type }();
-				if overrideBuilding ~= nil then
-					iCityLv2 = GameInfo.Buildings[overrideBuilding.BuildingType].ID;
-				end
-				overrideBuilding = GameInfo.Civilization_BuildingClassOverrides{ BuildingClassType = "BUILDINGCLASS_CITY_HALL_LV3", CivilizationType = GameInfo.Civilizations[player:GetCivilizationType()].Type }();
-				if overrideBuilding ~= nil then
-					iCityLv3 = GameInfo.Buildings[overrideBuilding.BuildingType].ID;
-				end
-				overrideBuilding = GameInfo.Civilization_BuildingClassOverrides{ BuildingClassType = "BUILDINGCLASS_CITY_HALL_LV4", CivilizationType = GameInfo.Civilizations[player:GetCivilizationType()].Type }();
-				if overrideBuilding ~= nil then
-					iCityLv4 = GameInfo.Buildings[overrideBuilding.BuildingType].ID;
-				end
-				overrideBuilding = GameInfo.Civilization_BuildingClassOverrides{ BuildingClassType = "BUILDINGCLASS_CITY_HALL_LV5", CivilizationType = GameInfo.Civilizations[player:GetCivilizationType()].Type }();
-				if overrideBuilding ~= nil then
-					iCityLv5 = GameInfo.Buildings[overrideBuilding.BuildingType].ID;
-				end
-				overrideBuilding = GameInfo.Civilization_BuildingClassOverrides{ BuildingClassType = "BUILDINGCLASS_CONSTABLE", CivilizationType = GameInfo.Civilizations[Players[Game.GetActivePlayer()]:GetCivilizationType()].Type }();
-				if overrideBuilding ~= nil then
-					iConstable     = GameInfo.Buildings[overrideBuilding.BuildingType].ID;
-				end
-				overrideBuilding = GameInfo.Civilization_BuildingClassOverrides{ BuildingClassType = "BUILDINGCLASS_SHERIFF_OFFICE", CivilizationType = GameInfo.Civilizations[Players[Game.GetActivePlayer()]:GetCivilizationType()].Type }();
-				if overrideBuilding ~= nil then
-					iSheriffOffice = GameInfo.Buildings[overrideBuilding.BuildingType].ID;
-				end
-				overrideBuilding = GameInfo.Civilization_BuildingClassOverrides{ BuildingClassType = "BUILDINGCLASS_POLICE_STATION", CivilizationType = GameInfo.Civilizations[Players[Game.GetActivePlayer()]:GetCivilizationType()].Type }();
-				if overrideBuilding ~= nil then
-					iPoliceStation = GameInfo.Buildings[overrideBuilding.BuildingType].ID;
-				end
-				overrideBuilding = GameInfo.Civilization_BuildingClassOverrides{ BuildingClassType = "BUILDINGCLASS_PROCURATORATE", CivilizationType = GameInfo.Civilizations[Players[Game.GetActivePlayer()]:GetCivilizationType()].Type }();
-				if overrideBuilding ~= nil then
-					iProcuratorate = GameInfo.Buildings[overrideBuilding.BuildingType].ID;
-				end
+
+        local iCityLevel = city:GetCorruptionLevel()
+        local iAntiCorruptionBuildingID = getAntiCorruptionBuildingID(player, iCityLevel)
+        local sCityLevelIconString = getCorruptionLevelIconString(iCityLevel)
 				if     city:IsCapital() or city:IsPuppet() then
-				elseif city:IsHasBuilding(iCityLv1) then
-					sCityLevelIcon = "[ICON_CITYBANNER_CITY_LV1]";
+				elseif iCityLevel == GameInfoTypes["CORRUPTION_LV1"] then
+					sCityLevelIcon = sCityLevelIconString;
 					sCityLevelIconTT = Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_HALL_LV1_HELP");
-				elseif city:IsHasBuilding(iCityLv2) then
+				elseif iCityLevel == GameInfoTypes["CORRUPTION_LV2"] then
+					sCityLevelIcon = sCityLevelIconString;
 					sCityLevelIcon = "[ICON_CITYBANNER_CITY_LV2]";
 					sCityLevelIconTT = Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_HALL_LV2_HELP");
-					if not city:IsHasBuilding(iConstable) then
+					if iAntiCorruptionBuildingID ~= -1 and not city:IsHasBuilding(iAntiCorruptionBuildingID) then
 						sCityLevelIcon = sCityLevelIcon .. "[ICON_HAPPINESS_3] ";
-						sCityLevelIconTT = Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_HALL_NOAC_LV2");
 					end
-				elseif city:IsHasBuilding(iCityLv3) then
-					sCityLevelIcon = "[ICON_CITYBANNER_CITY_LV3]";
+				elseif iCityLevel == GameInfoTypes["CORRUPTION_LV3"] then
+					sCityLevelIcon = sCityLevelIconString;
 					sCityLevelIconTT = Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_HALL_LV3_HELP");
-					if not city:IsHasBuilding(iSheriffOffice) then
+					if iAntiCorruptionBuildingID ~= -1 and not city:IsHasBuilding(iAntiCorruptionBuildingID) then
 						sCityLevelIcon = sCityLevelIcon .. "[ICON_HAPPINESS_3] ";
-						sCityLevelIconTT = Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_HALL_NOAC_LV3");
 					end
-				elseif city:IsHasBuilding(iCityLv4) then
-					sCityLevelIcon = "[ICON_CITYBANNER_CITY_LV4]";
+				elseif iCityLevel == GameInfoTypes["CORRUPTION_LV4"] then
+					sCityLevelIcon = sCityLevelIconString;
 					sCityLevelIconTT = Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_HALL_LV4_HELP");
-					if not city:IsHasBuilding(iPoliceStation) then
+					if iAntiCorruptionBuildingID ~= -1 and not city:IsHasBuilding(iAntiCorruptionBuildingID) then
 						sCityLevelIcon = sCityLevelIcon .. "[ICON_HAPPINESS_3] ";
-						sCityLevelIconTT = Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_HALL_NOAC_LV4");
 					end
-				elseif city:IsHasBuilding(iCityLv5) then
-					sCityLevelIcon = "[ICON_CITYBANNER_CITY_LV5]";
+				elseif iCityLevel == GameInfoTypes["CORRUPTION_LV5"] then
+					sCityLevelIcon = sCityLevelIconString;
 					sCityLevelIconTT = Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_HALL_LV5_HELP");
-					if not city:IsHasBuilding(iProcuratorate) then
+					if iAntiCorruptionBuildingID ~= -1 and not city:IsHasBuilding(iAntiCorruptionBuildingID) then
 						sCityLevelIcon = sCityLevelIcon .. "[ICON_HAPPINESS_3] ";
-						sCityLevelIconTT = Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_HALL_NOAC_LV5");
 					end
 				end
+
 				if sCityLevelIconTT ~= nil then
+          sCityLevelIconTT = getCorruptionScoreReport(player, city) .. sCityLevelIconTT;
 					controls.CityLevelIcon:SetHide(false);
 					controls.CityLevelIcon:SetText(sCityLevelIcon);
 					controls.CityLevelIcon:SetToolTipString(sCityLevelIconTT);
 				end
-			    -- City Scale for SP6
+
+			  -- City Scale for SP9
 				local sCityScaleIcon  = nil;
 				local sCityScaleIconTT = nil;
 				if     city:IsHasBuilding(iCitySc7)then

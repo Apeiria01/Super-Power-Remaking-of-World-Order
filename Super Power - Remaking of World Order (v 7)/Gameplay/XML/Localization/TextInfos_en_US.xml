@@ -5381,49 +5381,6 @@
 				[NEWLINE][NEWLINE]If you sell the City Hall Building, this city will become a puppet but suffer a [COLOR_NEGATIVE_TEXT]Resistance Time[ENDCOLOR] (equals 50% of its Population).
 			</Text>
 		</Row>
-
-
-
-		<Row>
-			<Tag>TXT_KEY_BUILDING_CITY_HALL_NOAC_LV2</Tag>
-			<Text>
-				City Level: [COLOR_PLAYER_DARK_PINK_TEXT]Lv2[ENDCOLOR]
-				[NEWLINE][COLOR_WARNING_TEXT]Corruption and Public Security Problems![ENDCOLOR]
-				[NEWLINE][NEWLINE][ICON_BULLET]There are minor Corruption and Public Security problems in this city, which cause +2% extra Nationwide [ICON_HAPPINESS_4] Unhappiness!
-				[NEWLINE][ICON_BULLET]Build a [COLOR_YIELD_FOOD]Constable[ENDCOLOR] to eliminate the Nationwide [ICON_HAPPINESS_4] Unhappiness!
-			</Text>
-		</Row>
-		<Row>
-			<Tag>TXT_KEY_BUILDING_CITY_HALL_NOAC_LV3</Tag>
-			<Text>
-				City Level: [COLOR_PLAYER_FRANCE_BACKGROUND]Lv3[ENDCOLOR]
-				[NEWLINE][COLOR_WARNING_TEXT]Corruption and Public Security Problems![ENDCOLOR]
-				[NEWLINE][NEWLINE][ICON_BULLET]There are major Corruption and Public Security problems in this city, which cause +3% extra Nationwide [ICON_HAPPINESS_4] Unhappiness!
-				[NEWLINE][ICON_BULLET]Build a [COLOR_YIELD_FOOD]Sheriff Office[ENDCOLOR] to eliminate the Nationwide [ICON_HAPPINESS_4] Unhappiness!
-			</Text>
-		</Row>
-		<Row>
-			<Tag>TXT_KEY_BUILDING_CITY_HALL_NOAC_LV4</Tag>
-			<Text>
-				City Level: [COLOR_POSITIVE_TEXT]Lv4[ENDCOLOR]
-				[NEWLINE][COLOR_WARNING_TEXT]Corruption and Public Security Problems![ENDCOLOR]
-				[NEWLINE][NEWLINE][ICON_BULLET]There are major Corruption and Public Security problems in this city, which cause +4% extra Nationwide [ICON_HAPPINESS_4] Unhappiness!
-				[NEWLINE][ICON_BULLET]Build a [COLOR_YIELD_FOOD]Police Staion[ENDCOLOR] to eliminate the Nationwide [ICON_HAPPINESS_4] Unhappiness!
-			</Text>
-		</Row>
-		<Row>
-			<Tag>TXT_KEY_BUILDING_CITY_HALL_NOAC_LV5</Tag>
-			<Text>
-				City Level: [COLOR_YIELD_GOLD]Lv5[ENDCOLOR]
-				[NEWLINE][COLOR_WARNING_TEXT]Corruption and Public Security Problems![ENDCOLOR]
-				[NEWLINE][NEWLINE][ICON_BULLET]There are major Corruption and Public Security problems in this city, which cause +5% extra Nationwide [ICON_HAPPINESS_4] Unhappiness!
-				[NEWLINE][ICON_BULLET]Build a [COLOR_YIELD_FOOD]Police Staion[ENDCOLOR] to eliminate the Nationwide [ICON_HAPPINESS_4] Unhappiness!
-			</Text>
-		</Row>
-		
-		
-		
-		
 		
 		<Row>
 			<Tag>TXT_KEY_BUILDING_PUPPET_GOVERNEMENT</Tag>
