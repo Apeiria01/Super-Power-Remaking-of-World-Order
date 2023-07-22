@@ -290,15 +290,15 @@ else
 		print("Human Player: " .. tostring(HumanPlayer:GetName()));
 		print("AI Player: " .. tostring(AIPlayer:GetName()));
 
-		local iRegressand = 200;
+		local iRegressand = 45;
 		if Game.GetGameSpeedType() == 0 then -- GAMESPEED_MARATHON
-			iRegressand = 800;
+			iRegressand = 90;
 		elseif Game.GetGameSpeedType() == 1 then -- GAMESPEED_EPIC
-			iRegressand = 400;
+			iRegressand = 60;
 		elseif Game.GetGameSpeedType() == 2 then -- GAMESPEED_STANDARD
-			iRegressand = 200;
+			iRegressand = 45;
 		elseif Game.GetGameSpeedType() == 3 then -- GAMESPEED_QUICK
-			iRegressand = 100;
+			iRegressand = 30;
 		end
 
 		local iCountBuildingID = GameInfoTypes["BUILDING_IMMIGRATION_" .. tostring(HumanPlayerID)];
