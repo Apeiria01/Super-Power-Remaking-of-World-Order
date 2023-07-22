@@ -366,11 +366,6 @@
 	<!-- SP New Game Options -->
 	<GameOptions>
 		<Row>
-			<Type>GAMEOPTION_SP_CORRUPTION_OFF</Type>
-			<Description>TXT_KEY_GAME_OPTION_SP_CORRUPTION</Description>
-			<Help>TXT_KEY_GAME_OPTION_SP_CORRUPTION_HELP</Help>
-		</Row>
-		<Row>
 			<Type>GAMEOPTION_SP_IMMIGRATION_OFF</Type>
 			<Description>TXT_KEY_GAME_OPTION_SP_IMMIGRATION</Description>
 			<Help>TXT_KEY_GAME_OPTION_SP_IMMIGRATION_HELP</Help>

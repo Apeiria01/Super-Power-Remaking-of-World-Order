@@ -39,12 +39,6 @@
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_ALL">
 			<Text>[COLOR_YELLOW]全部[ENDCOLOR]</Text>
 		</Row>
-		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORRUPTION">
-			<Text>SP-关闭 [COLOR_YELLOW]政府腐败[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORRUPTION_HELP">
-			<Text>腐败系统：市政厅和反腐建筑。</Text>
-		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_IMMIGRATION">
 			<Text>SP-关闭 [COLOR_YELLOW]国际移民[ENDCOLOR]</Text>
 		</Row>

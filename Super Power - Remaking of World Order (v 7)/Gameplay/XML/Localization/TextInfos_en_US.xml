@@ -38,12 +38,6 @@
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_ALL">
 			<Text>[COLOR_YELLOW]All[ENDCOLOR]</Text>
 		</Row>
-		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORRUPTION">
-			<Text>SP - [COLOR_YELLOW]Corruption[ENDCOLOR] - OFF</Text>
-		</Row>
-		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORRUPTION_HELP">
-			<Text>Corruption System: City Halls and Anti-Corruption Buildings.</Text>
-		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_IMMIGRATION">
 			<Text>SP - [COLOR_YELLOW]Immigration[ENDCOLOR] - OFF</Text>
 		</Row>
