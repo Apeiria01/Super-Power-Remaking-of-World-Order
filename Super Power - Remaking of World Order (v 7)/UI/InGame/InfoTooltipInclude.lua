@@ -2233,8 +2233,9 @@ local function getCultureTooltip( city )
 
 	-- Empire Culture modifier
 	tips:insertLocalizedBulletIfNonZero( "TXT_KEY_CULTURE_PLAYER_MOD", cityOwner and cityOwner:GetCultureCityModifier() or 0 )
-	-- Greak Work Gobal modifier
-	tips:insertLocalizedBulletIfNonZero( "TXT_KEY_CULTURE_GREAT_WORK_MOD", cityOwner and cityOwner:GetYieldModifierFromNumGreakWork(YieldTypes.YIELD_CULTURE) or 0 )
+
+	local strModifiersString = city:GetYieldModifierTooltip( YieldTypes.YIELD_CULTURE )
+  tips:insert(strModifiersString)
 
 	if civ5_mode then
 		-- City Culture modifier
@@ -2299,6 +2300,10 @@ local function getFaithTooltip( city )
 
 		-- Puppet modifier
 		tips:insertLocalizedBulletIfNonZero( "TXT_KEY_PRODMOD_PUPPET", city:IsPuppet() and GameDefines.PUPPET_FAITH_MODIFIER or 0 )
+
+		tips:insert("[NEWLINE]")
+    local strModifiersString = city:GetYieldModifierTooltip( YieldTypes.YIELD_FAITH )
+    tips:insert(strModifiersString)
 
 		-- Citizens breakdown
 		tips:insert( "----------------")
