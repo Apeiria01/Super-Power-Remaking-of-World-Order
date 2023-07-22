@@ -304,7 +304,7 @@ SettlerMissionButton = {
 
 
     city:ChangePopulation(count,true);
-    if not (player:HasPolicy(GameInfo.Policies["POLICY_COLLECTIVE_RULE_FREE"].ID)) then
+    if not (player:HasPolicy(GameInfo.Policies["POLICY_COLLECTIVE_RULE"].ID) and player:GetCurrentEra() >= GameInfo.Eras["ERA_RENAISSANCE"].ID) then
       city:SetFood(0);
   	end
 

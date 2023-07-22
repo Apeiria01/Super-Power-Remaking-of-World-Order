@@ -2826,14 +2826,6 @@
 		</Row>
 	</Building_SpecialistYieldChanges>
 
-	<Policies>
-		<Row>
-			<Type>POLICY_COLLECTIVE_RULE_FREE</Type>
-			<Description>TXT_KEY_POLICY_COLLECTIVE_RULE</Description>
-			<SettlerProductionModifier>50</SettlerProductionModifier>
-		</Row>
-	</Policies>
-
 	<BuildingClasses>
 		<Row>
 			<Type>BUILDINGCLASS_POLICY_MERCHANT_NAVY_FREE</Type>
