@@ -14824,5 +14824,8 @@
 		<Row Tag="TXT_KEY_CULTURE_GREAT_WORK_MOD">
 			<Text>+{1_Num}%[ICON_CULTURE] 來自傑作數量全局加成</Text>
 		</Row>
+		<Row Tag="TXT_KEY_MAP_XY">
+			<Text>坐標</Text>
+		</Row>
 	</Language_zh_Hant_HK>
 </GameData>
