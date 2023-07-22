@@ -95,31 +95,6 @@ local function OnActivateButtonClicked ()
 	end
 	
 	UI.SetDontShowPopups( false );
-
-	--UI.SetNextGameState( GameStates.MainGameView, g_iAIPlayer );
-	
-	-- Record Mode
-	if PreGame.GetGameOption("GAMEOPTION_SP_RECORD_MODE") == 1 then
-		-- Count Other MODs used
-		local iOtherMODsCount = 0;
-		for _, MOD in pairs(Modding.GetActivatedMods()) do
-			if  MOD.ID ~= "f9b9c8aa-b6d1-4188-9239-c1de2207ab7c" -- SP - RWO
-			and MOD.ID ~= "4e394966-aec9-4473-807f-0ddf8c1dddc1" -- TNL
-			and MOD.ID ~= "d1b6328c-ff44-4b0d-aad7-c657f83610cd" -- DLL - VMC
-			then
-				iOtherMODsCount = iOtherMODsCount + 1
-			end
-		end
-		local iOMs = Players[Game.GetActivePlayer()]:GetNumResourceTotal(GameInfoTypes["RESOURCE_OTHER_MODS"], false);
-		if iOtherMODsCount > - iOMs then
-			Players[Game.GetActivePlayer()]:ChangeNumResourceTotal(GameInfoTypes["RESOURCE_OTHER_MODS"], iOMs - iOtherMODsCount);
-		end
-		
-		-- Count Game Load Times
-		if UI:IsLoadedGame() then
-			Players[Game.GetActivePlayer()]:ChangeNumResourceTotal(GameInfoTypes["RESOURCE_LOAD"], - 1);
-		end
-	end
 end
 Controls.ActivateButton:RegisterCallback( Mouse.eLClick, OnActivateButtonClicked );
 

@@ -6977,20 +6977,6 @@
 			<Text>Consumer goods are goods that are ultimately consumed rather than used in the production of another good. For example, a microwave oven or a bicycle which is sold to a consumer is a final good or consumer good, whereas the components which are sold to be used in those goods are called intermediate goods.</Text>
 		</Row>
 		
-		
-		<Row Tag="TXT_KEY_SP_RESOURCE_LOAD">
-			<Text>Loading</Text>
-		</Row>
-		<Row Tag="TXT_KEY_SP_RESOURCE_LOAD_HELP">
-			<Text>This "Resource" is the count of Game Loading times.</Text>
-		</Row>
-		<Row Tag="TXT_KEY_SP_RESOURCE_OTHER_MODS">
-			<Text>Other MODs</Text>
-		</Row>
-		<Row Tag="TXT_KEY_SP_RESOURCE_OTHER_MODSD_HELP">
-			<Text>This "Resource" is the count of Other MODs Used.</Text>
-		</Row>
-		
 		<Row Tag="TXT_KEY_SP_TROOPS">
 			<Text>Troops</Text>
 		</Row>

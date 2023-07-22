@@ -8129,20 +8129,6 @@
 			<Text>商品是超級大國模組中極為重要的一種資源。大規模城市會消耗巨量的商品，如果不能滿足商品需求，你的人民滿意度會急劇降低。[NEWLINE][NEWLINE]商品主要通過市場建築和商業家提供。</Text>
 		</Row>
 		
-		
-		<Row Tag="TXT_KEY_SP_RESOURCE_LOAD">
-			<Text>讀檔</Text>
-		</Row>
-		<Row Tag="TXT_KEY_SP_RESOURCE_LOAD_HELP">
-			<Text>該“資源”計數本局遊戲的讀檔次數。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_SP_RESOURCE_OTHER_MODS">
-			<Text>其他模組</Text>
-		</Row>
-		<Row Tag="TXT_KEY_SP_RESOURCE_OTHER_MODSD_HELP">
-			<Text>該“資源”計數其他模組的使用數量。</Text>
-		</Row>
-		
 		<Row Tag="TXT_KEY_SP_TROOPS">
 			<Text>兵力</Text>
 		</Row>

@@ -8242,20 +8242,6 @@
 			<Text>商品是超级大国模组中极为重要的一种资源。大规模城市会消耗巨量的商品，如果不能满足商品需求，你的人民满意度会急剧降低。[NEWLINE][NEWLINE]商品主要通过市场建筑和商业家提供。</Text>
 		</Row>
 
-
-		<Row Tag="TXT_KEY_SP_RESOURCE_LOAD">
-			<Text>读档</Text>
-		</Row>
-		<Row Tag="TXT_KEY_SP_RESOURCE_LOAD_HELP">
-			<Text>该“资源”计数本局游戏的读档次数。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_SP_RESOURCE_OTHER_MODS">
-			<Text>其他模组</Text>
-		</Row>
-		<Row Tag="TXT_KEY_SP_RESOURCE_OTHER_MODSD_HELP">
-			<Text>该“资源”计数其他模组的使用数量。</Text>
-		</Row>
-
 		<Row Tag="TXT_KEY_SP_TROOPS">
 			<Text>兵力</Text>
 		</Row>

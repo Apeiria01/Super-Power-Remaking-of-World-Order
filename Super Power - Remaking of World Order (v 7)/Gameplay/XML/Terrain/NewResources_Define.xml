@@ -67,35 +67,6 @@
 		</Row>
 		
 		<Row>
-			<Type>RESOURCE_LOAD</Type>
-			<Description>TXT_KEY_SP_RESOURCE_LOAD</Description>
-			<!--<Civilopedia>TXT_KEY_SP_RESOURCE_LOAD_TEXT</Civilopedia>-->
-			<Help>TXT_KEY_SP_RESOURCE_LOAD_HELP</Help>
-			<ResourceClassType>RESOURCECLASS_RUSH</ResourceClassType>
-			<ArtDefineTag>ART_DEF_RESOURCE_URANIUM</ArtDefineTag>
-			<ResourceUsage>1</ResourceUsage>
-			<!--<AITradeModifier>90</AITradeModifier>
-			<AIObjective>1</AIObjective>-->
-			<IconString>[ICON_ALPHA]</IconString>
-			<PortraitIndex>1</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_2</IconAtlas>
-		</Row>
-		<Row>
-			<Type>RESOURCE_OTHER_MODS</Type>
-			<Description>TXT_KEY_SP_RESOURCE_OTHER_MODS</Description>
-			<!--<Civilopedia>TXT_KEY_SP_RESOURCE_OTHER_MODS_TEXT</Civilopedia>-->
-			<Help>TXT_KEY_SP_RESOURCE_OTHER_MODSD_HELP</Help>
-			<ResourceClassType>RESOURCECLASS_RUSH</ResourceClassType>
-			<ArtDefineTag>ART_DEF_RESOURCE_URANIUM</ArtDefineTag>
-			<ResourceUsage>1</ResourceUsage>
-			<!--<AITradeModifier>90</AITradeModifier>
-			<AIObjective>1</AIObjective>-->
-			<IconString>[ICON_OMEGA]</IconString>
-			<PortraitIndex>8</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_2</IconAtlas>
-		</Row>
-		
-		<Row>
 			<Type>RESOURCE_TROOPS</Type>
 			<Description>TXT_KEY_SP_TROOPS</Description>
 			<Civilopedia>TXT_KEY_SP_TROOPS_TEXT</Civilopedia>

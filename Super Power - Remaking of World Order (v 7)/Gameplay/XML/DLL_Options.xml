@@ -376,12 +376,6 @@
 			<Help>TXT_KEY_GAME_OPTION_SP_NUCLEARWINTER_HELP</Help>
 		</Row>
 		<Row>
-			<Type>GAMEOPTION_SP_RECORD_MODE</Type>
-			<Description>TXT_KEY_GAME_OPTION_SP_RECORD_MODE</Description>
-			<Help>TXT_KEY_GAME_OPTION_SP_RECORD_MODE_HELP</Help>
-			<SupportsMultiplayer>false</SupportsMultiplayer>
-		</Row>
-		<Row>
 			<Type>GAMEOPTION_SP_CORPS_MODE_HIGH</Type>
 			<Description>TXT_KEY_GAME_OPTION_SP_CORPS_MODE_HIGH</Description>
 			<Help>TXT_KEY_GAME_OPTION_SP_CORPS_MODE_HIGH_HELP</Help>

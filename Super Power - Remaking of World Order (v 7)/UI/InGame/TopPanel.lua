@@ -195,8 +195,6 @@ function UpdateData()
 			local pResource;
 			local bShowResource;
 			local iNumAvailable;
-			local iNumUsed;
-			local iNumTotal;
 			local iMin;
 			
 			local strResourceText = "";
@@ -219,10 +217,8 @@ function UpdateData()
 					end
 					
 					iNumAvailable = pPlayer:GetNumResourceAvailable(iResourceLoop, true);
-					iNumUsed = pPlayer:GetNumResourceUsed(iResourceLoop);
-					iNumTotal = pPlayer:GetNumResourceTotal(iResourceLoop, true);
 					
-					if pResource.Type == "RESOURCE_LOAD" or pResource.Type == "RESOURCE_OTHER_MODS" or pResource.Type == "RESOURCE_TROOPS" then
+					if pResource.Type == "RESOURCE_TROOPS" then
 						iNumAvailable = math.abs(iNumAvailable);
 						if iNumAvailable == 0 then
 							bShowResource = false;
@@ -245,7 +241,7 @@ function UpdateData()
 					end
 					
 					-- Hide Enough Resources
-					if iNumAvailable > 20 and pResource.Type ~= "RESOURCE_LOAD" and pResource.Type ~= "RESOURCE_OTHER_MODS" and pResource.Type ~= "RESOURCE_TROOPS" then
+					if iNumAvailable > 30 and pResource.Type ~= "RESOURCE_TROOPS" then
 						bShowResource = false;
 					end
 					if (bShowResource) then
@@ -440,8 +436,6 @@ function ScienceTipHandler( control )
 	
 		local iPlayerID = Game.GetActivePlayer();
 		local pPlayer = Players[iPlayerID];
-		local pTeam = Teams[pPlayer:GetTeam()];
-		local pCity = UI.GetHeadSelectedCity();
 	
 		local iSciencePerTurn = pPlayer:GetScience();
 	
@@ -1424,21 +1418,13 @@ function ResourcesTipHandler( control )
 			    iNumUsed = pPlayer:GetNumResourceUsed(iResourceLoop);
 			    iNumTotal = pPlayer:GetNumResourceTotal(iResourceLoop, true);
 			    
-			    if pResource.Type == "RESOURCE_OTHER_MODS" or pResource.Type == "RESOURCE_LOAD" or pResource.Type == "RESOURCE_TROOPS" then
-				iNumAvailable = math.abs(iNumAvailable);
-				if iNumTotal == 0 then
-					bShowResource = false;
-				end
-				iNumTotal = 0;
-				
-				if pResource.Type == "RESOURCE_TROOPS" then
-					iNumTotal = pPlayer:GetNumResourceUsed(iResourceLoop);
-					iNumUsed  = pPlayer:GetNumResourceTotal(iResourceLoop, true);
-					if (iNumUsed ~= 0 or iNumAvailable ~= 0) and not bThisIsFirstResourceShown then
-						strText = strText .. "[NEWLINE][NEWLINE]"
-						bShowResource = true;
-					end
-				end
+          if pResource.Type == "RESOURCE_TROOPS" then
+              iNumTotal = pPlayer:GetNumResourceUsed(iResourceLoop);
+              iNumUsed  = pPlayer:GetNumResourceTotal(iResourceLoop, true);
+              if (iNumUsed ~= 0 or iNumAvailable ~= 0) and not bThisIsFirstResourceShown then
+                strText = strText .. "[NEWLINE][NEWLINE]"
+                bShowResource = true;
+              end
 			    end
 			    
 			    if (bShowResource) then
