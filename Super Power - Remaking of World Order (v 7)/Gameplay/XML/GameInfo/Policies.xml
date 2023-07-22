@@ -94,7 +94,7 @@
 			<Where Type="POLICY_CITIZENSHIP"/>
 		</Update>
 		<Update>
-			<Set CapitalSettlerProductionModifier="0" SettlerProductionModifier="50" GridX="1"  GridY="1"/>
+			<Set CapitalSettlerProductionModifier="0" SettlerProductionModifier="50" SettlerProductionEraModifier="50" SettlerProductionStartEra="ERA_RENAISSANCE" GridX="1"  GridY="1"/>
 			<Where Type="POLICY_COLLECTIVE_RULE"/>
 		</Update>
 		<Update>

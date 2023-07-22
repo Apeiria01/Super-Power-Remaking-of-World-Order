@@ -71,28 +71,8 @@ end
 Events.SerialEventUnitCreated.Add(SPEPolicyUnitCreated)
 
 -- ********************************************************
--- POLLICY_COLLECTIVE_RULE
+-- POLICY_CITIZENSHIP
 -- ******************************************************** 
-local PolicyCollectiveRuleID = GameInfo.Policies["POLICY_COLLECTIVE_RULE"].ID
-local PolicyCollectiveRuleFreeID = GameInfo.Policies["POLICY_COLLECTIVE_RULE_FREE"].ID
-function SPEPlayerIntoNewEra(eTeam, eEra, bFirst)
-	for iPlayer=0, GameDefines.MAX_MAJOR_CIVS-1, 1 do
-		local pPlayer = Players[iPlayer]
-
-		if pPlayer:IsAlive()
-		and pPlayer:GetTeam() == eTeam
-		and eEra >= GameInfo.Eras["ERA_RENAISSANCE"].ID
-		and pPlayer:HasPolicy(PolicyCollectiveRuleID) 
-		and not pPlayer:IsPolicyBlocked(PolicyCollectiveRuleID)
-		and (not pPlayer:HasPolicy(PolicyCollectiveRuleFreeID))
-		then
-			print("POLLICY_COLLECTIVE_RULE: enter Renaissance, free policy");  
-			pPlayer:SetHasPolicy(PolicyCollectiveRuleFreeID,true,true)
-		end
-	end
-end
-GameEvents.TeamSetEra.Add(SPEPlayerIntoNewEra)
-
 local iPolicyCitizenship = GameInfo.Policies["POLICY_CITIZENSHIP"].ID;
 function SPEPolicyCitizenshipHelper(pPlayer, pCity)
 	local bonus = math.floor(GameInfo.GameSpeeds[Game.GetGameSpeedType()].ConstructPercent * 25 / 100)
@@ -105,23 +85,6 @@ function SPEPolicyCitizenshipHelper(pPlayer, pCity)
 end
 
 function SPEPlayerAdoptPolicy(playerID, policyID)
-	if(policyID == PolicyCollectiveRuleID) then
-		local pPlayer = Players[playerID]
-		if pPlayer == nil or pPlayer:IsMinorCiv() or pPlayer:IsBarbarian() then
-			return
-		end
-
-		local eEra = pPlayer:GetCurrentEra()
-		if pPlayer:IsAlive()
-		and eEra >= GameInfo.Eras["ERA_RENAISSANCE"].ID
-		and not pPlayer:IsPolicyBlocked(PolicyCollectiveRuleID)
-		and (not pPlayer:HasPolicy(PolicyCollectiveRuleFreeID))
-		then
-			print("POLLICY_COLLECTIVE_RULE: adopt after Renaissance, free policy"); 
-			pPlayer:SetHasPolicy(PolicyCollectiveRuleFreeID,true,true)
-		end
-	end
-
 	if policyID == iPolicyCitizenship then
 		local pPlayer = Players[playerID]
 		for pCity in pPlayer:Cities() do
