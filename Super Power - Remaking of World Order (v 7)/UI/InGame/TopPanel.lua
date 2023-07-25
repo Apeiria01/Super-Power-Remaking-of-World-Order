@@ -525,8 +525,13 @@ function ScienceTipHandler( control )
 
 		local iScienceModFromHappiness = pPlayer:GetYieldModifierFromHappinessPolicy(GameInfoTypes["YIELD_SCIENCE"])
 		if iScienceModFromHappiness ~= 0 then
-			strText = strText .. "[NEWLINE]";
+			strText = strText .. "[NEWLINE][NEWLINE][ICON_BULLET]";
 			strText = strText .. Locale.ConvertTextKey("TXT_KEY_SP_UI_SCIENCE_BY_HAPPINESS_NEW", iScienceModFromHappiness);
+		end
+
+		local iScienceModFromResource = pPlayer:GetGlobalYieldModifierFromResource(GameInfoTypes["YIELD_SCIENCE"])
+		if iScienceModFromResource ~= 0 then
+			strText = strText .. Locale.ConvertTextKey("TXT_KEY_PRODMOD_YIELD_RESOURCE_BUFF", iScienceModFromResource);
 		end
 	
 		local iScienceFromRAs = pPlayer:GetScienceFromResearchAgreementsTimes100();
