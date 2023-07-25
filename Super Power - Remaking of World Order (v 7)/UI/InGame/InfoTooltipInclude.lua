@@ -2032,12 +2032,6 @@ local function getGoldTooltip( city )
 	end
 end
 
--- ENERGY
-local function getEnergyTooltip( city )
-
-	return L"TXT_KEY_ENERGY_HELP_INFO" .. "[NEWLINE][NEWLINE]" .. getYieldTooltipHelper( city, YieldTypes.YIELD_ENERGY )
-end
-
 -- SCIENCE
 local function getScienceTooltip( city )
 
@@ -2129,40 +2123,6 @@ local function getProductionTooltip( city )
 	end
 end
 
--- HEALTH
-function GetHealthTooltip(city)
-
-	local tips = table( L"TXT_KEY_HEALTH_HELP_INFO", "", L"TXT_KEY_HEALTH_HELP_INFO_POP_CAP_WARNING", "" )
-	
-	-- base Health
-	local localHealth = city:GetLocalHealth()
-	local healthFromTerrain = city:GetHealthFromTerrain()
-	local healthFromBuildings = city:GetHealthFromBuildings()	
-	local baseLocalHealth = healthFromTerrain + healthFromBuildings
-		
-	tips:insertLocalizedBulletIfNonZero( "TXT_KEY_YIELD_FROM_BUILDINGS", healthFromBuildings, "[ICON_HEALTH_1]" )
-	tips:insertLocalizedBulletIfNonZero( "TXT_KEY_YIELD_FROM_TERRAIN", healthFromTerrain, "[ICON_HEALTH_1]" )
-	tips:insertLocalized( "TXT_KEY_YIELD_BASE", baseLocalHealth, "[ICON_HEALTH_1]" )
-	tips:insert( "----------------" )
-
-	-- health Modifier
-	local healthModifier = city:GetTotalHealthModifier() - 100
-	if healthModifier ~= 0 then
-		tips:insertLocalizedBulletIfNonZero( "TXT_KEY_HEALTH_BUILDING_MOD_INFO", healthModifier )
-		tips:insert( "----------------" )
-	end
-
-	-- total Health
-	tips:insertLocalized( "TXT_KEY_YIELD_TOTAL", localHealth, localHealth < 0 and "[ICON_HEALTH_3]" or "[ICON_HEALTH_1]" )
-
-	-- if local health is positive and our output is higher than the city's population, include the cap reminder
-	if baseLocalHealth > localHealth then		
-		tips:append( L("TXT_KEY_HEALTH_POP_CAPPED", city:GetPopulation() ) )
-	end
-
-	return tips:concat( "[NEWLINE]" )
-end
-
 -- CULTURE
 local function getCultureTooltip( city )
 
@@ -2234,9 +2194,6 @@ local function getCultureTooltip( city )
 	-- Empire Culture modifier
 	tips:insertLocalizedBulletIfNonZero( "TXT_KEY_CULTURE_PLAYER_MOD", cityOwner and cityOwner:GetCultureCityModifier() or 0 )
 
-	local strModifiersString = city:GetYieldModifierTooltip( YieldTypes.YIELD_CULTURE )
-  tips:insert(strModifiersString)
-
 	if civ5_mode then
 		-- City Culture modifier
 		tips:insertLocalizedBulletIfNonZero( "TXT_KEY_CULTURE_CITY_MOD", city:GetCultureRateModifier())
@@ -2250,6 +2207,9 @@ local function getCultureTooltip( city )
 	if puppetMod ~= 0 then
 		tips:append( L( "TXT_KEY_PRODMOD_PUPPET", puppetMod ) )
 	end
+
+	local strModifiersString = city:GetYieldModifierTooltip( YieldTypes.YIELD_CULTURE )
+  	tips:insert(strModifiersString)
 
 	-- Total
 	tips:insert( "----------------" )
@@ -2301,9 +2261,8 @@ local function getFaithTooltip( city )
 		-- Puppet modifier
 		tips:insertLocalizedBulletIfNonZero( "TXT_KEY_PRODMOD_PUPPET", city:IsPuppet() and GameDefines.PUPPET_FAITH_MODIFIER or 0 )
 
-		tips:insert("[NEWLINE]")
-    local strModifiersString = city:GetYieldModifierTooltip( YieldTypes.YIELD_FAITH )
-    tips:insert(strModifiersString)
+		local strModifiersString = city:GetYieldModifierTooltip( YieldTypes.YIELD_FAITH )
+		tips:insert(strModifiersString)
 
 		-- Citizens breakdown
 		tips:insert( "----------------")
@@ -2996,7 +2955,6 @@ function GetHelpTextForProject( ... ) return select(2, pcall( getHelpTextForProj
 function GetHelpTextForProcess( ... ) return select(2, pcall( getHelpTextForProcess, ... ) ) end
 function GetFoodTooltip( ... ) return select(2, pcall( getFoodTooltip, ... ) ) end
 function GetGoldTooltip( ... ) return select(2, pcall( getGoldTooltip, ... ) ) end
-function GetEnergyTooltip( ... ) return select(2, pcall( getEnergyTooltip, ... ) ) end
 function GetScienceTooltip( ... ) return select(2, pcall( getScienceTooltip, ... ) ) end
 function GetProductionTooltip( ... ) return select(2, pcall( getProductionTooltip, ... ) ) end
 function GetCultureTooltip( ... ) return select(2, pcall( getCultureTooltip, ... ) ) end
