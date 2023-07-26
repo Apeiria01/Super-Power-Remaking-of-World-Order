@@ -9072,7 +9072,7 @@
 			<Text>蹄皮帐篷</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_IMPROVEMENTS_SHOSHONE_TIPI_HELP">
-			<Text>蹄皮帐篷只能建造在没有资源产出的平地。</Text>
+			<Text>蹄皮帐篷只能建造在有[ICON_RES_TRUFFLES][ICON_RES_FUR][ICON_RES_BISON][ICON_RES_DEER][ICON_RES_IVORY]陆地野生动物资源或其他没有资源产出的平地。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_IMPROVEMENTS_SHOSHONE_TIPI_TEXT">
 			<Text>蹄皮帐篷（tipi）是北美大平原印第安人的一种传统建筑，由鞣制皮革和木柱建造成圆锥形。该词来源于拉科塔语，为“他们居住”之意。不同部落的蹄皮帐篷往往绘制有不同的图样花纹。</Text>
@@ -9091,7 +9091,7 @@
 		<Row Tag="TXT_KEY_IMPROVEMENT_SHOSHONE_WILDDOME_HELP">
 			<Text>
 				在该地块驯养野兽以创造[ICON_RES_TRUFFLES]松露、[ICON_RES_FUR]毛皮、[ICON_RES_BISON]野牛、[ICON_RES_DEER]野鹿和[ICON_RES_IVORY]象牙资源中的一种。
-				[NEWLINE]只能在无资源的平原、草原和冻土地块执行该指令。
+				[NEWLINE]只能在无资源且临近淡水的平原、草原和冻土地块执行该指令。
 				[NEWLINE]不能在相邻的地块进行野兽驯养。
 				[NEWLINE][COLOR_WARNING_TEXT]警告：[ENDCOLOR]该地块的原有设施会被移除。
 			</Text>
@@ -9108,7 +9108,7 @@
 		<Row Tag="TXT_KEY_BUILD_SHOSHONE_WILDDOME_HELP">
 			<Text>
 				在该地块驯养野兽以创造[ICON_RES_TRUFFLES]松露、[ICON_RES_FUR]毛皮、[ICON_RES_BISON]野牛、[ICON_RES_DEER]野鹿和[ICON_RES_IVORY]象牙资源中的一种。
-				[NEWLINE]只能在无资源的平原、草原、冻土地块执行该指令。
+				[NEWLINE]只能在无资源且临近淡水的平原、草原、冻土地块执行该指令。
 				[NEWLINE][COLOR_WARNING_TEXT]警告：[ENDCOLOR]该地块的原有设施会被移除。
 			</Text>
 		</Row>

@@ -9882,7 +9882,7 @@
 			<Text>Tipi</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_IMPROVEMENTS_SHOSHONE_TIPI_HELP">
-			<Text>A Tipi can only be built on a Flat Terrain tile.</Text>
+			<Text>A Tipi can only be built on a Flat Terrain tile which has [ICON_RES_TRUFFLES][ICON_RES_FUR][ICON_RES_BISON][ICON_RES_DEER][ICON_RES_IVORY] resource or no resource.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_IMPROVEMENTS_SHOSHONE_TIPI_TEXT">
 			<Text>The tipi (or teepee) is a portable, conical tent constructed of tanned hides and wooden poles traditionally associated with the migratory North American Plains Indians. The word itself comes from the Lakota for "they dwell." Often elaborately painted, tipis served to identify the separate tribes.</Text>
@@ -9901,7 +9901,7 @@
 		<Row Tag="TXT_KEY_IMPROVEMENT_SHOSHONE_WILDDOME_HELP">
 			<Text>
 				Domesticate wild animals on this tile to create a [ICON_RES_TRUFFLES][ICON_RES_FUR][ICON_RES_BISON][ICON_RES_DEER][ICON_RES_IVORY]. 
-				[NEWLINE]This action can only be performed on Plains, Grassland or Tundra tiles without resources.
+				[NEWLINE]This action can only be performed on Plains, Grassland or Tundra tiles without resources and next fresh water.
 				[NEWLINE][NEWLINE]May not be constructed adjacent to another tile is currently domesticating wild animals.
 				[NEWLINE][COLOR_WARNING_TEXT]Warning:[ENDCOLOR] Any previous improvements will be removed.
 			</Text>
@@ -9918,7 +9918,7 @@
 		<Row Tag="TXT_KEY_BUILD_SHOSHONE_WILDDOME_HELP">
 			<Text>
 				Domesticate wild animals on this tile to create a [ICON_RES_TRUFFLES][ICON_RES_FUR][ICON_RES_BISON][ICON_RES_DEER][ICON_RES_IVORY]. 
-				[NEWLINE]This action can only be performed on Plains, Grassland or Tundra tiles without resources.
+				[NEWLINE]This action can only be performed on Plains, Grassland or Tundra tiles without resources and next fresh water.
 				[NEWLINE][NEWLINE]May not be constructed adjacent to another tile is currently domesticating wild animals.
 				[NEWLINE][COLOR_WARNING_TEXT]Warning:[ENDCOLOR] Any previous improvements will be removed.
 			</Text>
