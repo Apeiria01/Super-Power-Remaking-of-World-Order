@@ -770,6 +770,27 @@
 			<ImprovementType>IMPROVEMENT_CHATEAU</ImprovementType>
 			<ResourceType>RESOURCE_WINE</ResourceType>
 		</Row>-->
+
+		<Row>
+			<ImprovementType>IMPROVEMENT_SHOSHONE_TIPI</ImprovementType>
+			<ResourceType>RESOURCE_TRUFFLES</ResourceType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_SHOSHONE_TIPI</ImprovementType>
+			<ResourceType>RESOURCE_FUR</ResourceType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_SHOSHONE_TIPI</ImprovementType>
+			<ResourceType>RESOURCE_BISON</ResourceType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_SHOSHONE_TIPI</ImprovementType>
+			<ResourceType>RESOURCE_DEER</ResourceType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_SHOSHONE_TIPI</ImprovementType>
+			<ResourceType>RESOURCE_IVORY</ResourceType>
+		</Row>
 		
 	</Improvement_ResourceTypes>
 
