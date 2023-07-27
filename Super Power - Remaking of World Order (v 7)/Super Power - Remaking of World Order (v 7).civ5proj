@@ -7,7 +7,7 @@
     <Guid>f9b9c8aa-b6d1-4188-9239-c1de2207ab7c</Guid>
     <ModVersion>9</ModVersion>
     <Stability>Alpha</Stability>
-    <Teaser>(9.1) [COLOR_YELLOW]A Total Conversion Mod for a better late game experience and realistic modern warfare[/COLOR]</Teaser>
+    <Teaser>(9.2) [COLOR_YELLOW]A Total Conversion Mod for a better late game experience and realistic modern warfare[/COLOR]</Teaser>
     <Description>A Total Conversion Mod of Sid Meier's Civilization V for a better late game experience and realistic modern warfare.  
 [NEWLINE][NEWLINE]Require CIV5 BNW 1.0.3.279[NEWLINE][NEWLINE]This MOD includes a modified version of whoward69's DLLVMC v97 for some Lua events support and multiplayer support. Source is released on https://github.com/Apeiria01/CIV5MPDLL
 [NEWLINE][NEWLINE]Special Thanks:
