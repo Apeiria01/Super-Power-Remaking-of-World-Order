@@ -1664,9 +1664,9 @@ local function getHelpTextForImprovement( improvementID )
 	if improvement.ImprovementResource ~= nil then
 		local item = GameInfo.Resources[improvement.ImprovementResource]
 		if  improvement.ImprovementResourceQuantity > 0 then
-			insert(tips,L(item.Description) .. ":" .. " " .."+" .. improvement.ImprovementResourceQuantity..L(item.IconString))
+			table.insert(tips,L(item.Description) .. ":" .. " " .."+" .. improvement.ImprovementResourceQuantity..L(item.IconString))
 		else 
-			insert(tips,L(item.Description) .. ":" .. " " .. improvement.ImprovementResourceQuantity..L(item.IconString))
+			table.insert(tips,L(item.Description) .. ":" .. " " .. improvement.ImprovementResourceQuantity..L(item.IconString))
 		end
 	end
 
