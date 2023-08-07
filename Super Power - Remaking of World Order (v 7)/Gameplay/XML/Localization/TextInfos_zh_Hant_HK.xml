@@ -13749,11 +13749,23 @@
 		<Replace Tag="TXT_KEY_TRULY">
 			<Text>真</Text>
 		</Replace>
+		<Replace Tag="TXT_KEY_FREE_TECHS">
+			<Text>免費科技:</Text>
+		</Replace>
 		<Replace Tag="TXT_KEY_FREE_POLICIES">
-			<Text>免費政策：</Text>
+			<Text>免費政策:</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BO1">
 			<Text>敵軍在境內消耗額外移動</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CAPITAL1">
+			<Text>首都</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_GLOBAL1">
+			<Text>全國</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_EL1">
+			<Text>所在城市每處已開發的奢侈資源額外+1</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_ASN1">
 			<Text>間諜效果減成</Text>
@@ -13761,68 +13773,131 @@
 		<Replace Tag="TXT_KEY_NIM1">
 			<Text>消除科技魅力影響</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_GCRM1">
-			<Text>所有城市：</Text>
+		<Replace Tag="TXT_KEY_ARS1">
+			<Text>允許守軍遠程攻擊</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_GGPRM1">
-			<Text>所有城市：</Text>
+		<Replace Tag="TXT_KEY_CRM1">
+			<Text>文化:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_GPRM1">
+			<Text>偉人點:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_GGRM2">
+			<Text>大軍點:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_GPEG1">
+			<Text>每次消耗偉人</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UUCM1">
+			<Text>升級花費:</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_AIR_MODIFIER11">
-			<Text>停機位：</Text>
+			<Text>停機位:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_NUKE_MODIFIER11">
+			<Text>受核彈打擊後的人口損失減少:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UH11">
+			<Text>全局快樂:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNHAPPINESS_MODIFIER111">
+			<Text>非占領城市的[ICON_CITIZEN]市民導致的[ICON_HAPPINESS_4]不滿:</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_HAPPINESS_PERCITY111">
-			<Text>所有城市：</Text>
+			<Text>所有城市:</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_WORKER_SPEED_MODIFIER111">
-			<Text>工人改造速度：</Text>
+			<Text>工人改造速度:</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_GLOBAL_SPACE_PRODUCTION_MODIFIER11">
-			<Text>建造飛船組件：</Text>
+		<Replace Tag="TXT_KEY_MILITARY_PRODUCTION_MODIFIER111">
+			<Text>軍事生產效率:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_SPACE_PRODUCTION_MODIFIER11">
+			<Text>建造飛船組件:</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_PRODUCTION_MODIFIER11">
-			<Text>建造建築：</Text>
+			<Text>建造建築速度:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_WONDER_PRODUCTION_MODIFIER111">
+			<Text>建造奇觀速度:</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_CCTRM22">
-			<Text>[ICON_CONNECTED]城市連接：</Text>
+			<Text>[ICON_CONNECTED]城市連接:</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_GPC_2">
-			<Text>所有城市：</Text>
+		<Replace Tag="TXT_KEY_CPM3">
+			<Text>被劫掠:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PCM22">
+			<Text>推行新政策:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PCCM4">
+			<Text>擴展新區塊:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PBCM5">
+			<Text>購買新區塊:</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_GP111">
-			<Text>贈送偉人：</Text>
+			<Text>贈送偉人:</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_MTPC_444">
-			<Text>合作研究產出：</Text>
+			<Text>合作研究產出:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DM_0">
+			<Text>防禦建築效率:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_MFC_23">
+			<Text>對所有城邦的[ICON_INFLUENCE]影響力一次性:</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_EMS_5">
-			<Text>贈送建築：</Text>
+			<Text>傳教次數:</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_RPM_10">
-			<Text>宗教壓力：</Text>
+			<Text>宗教壓力:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_EM561">
+			<Text>竊取科技效率:</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_ES123123">
-			<Text>間諜：</Text>
+			<Text>間諜:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_SC_10">
+			<Text>新生間諜等級:</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_ISC_10">
-			<Text>所有間諜等級：</Text>
+			<Text>現有間諜等級:</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_LTP11">
-			<Text>地塊與奇跡[ICON_CULTURE]文化值轉化[ICON_TOURISM]旅遊業績：</Text>
+			<Text>地塊與奇觀[ICON_CULTURE]文化轉化[ICON_TOURISM]魅力:</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_GWTM1111111">
-			<Text>傑作[ICON_TOURISM]旅遊業績：</Text>
+		<Replace Tag="TXT_KEY_IMI11">
+			<Text>每類陸軍事單位免費增加一個</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_GWTM111">
+			<Text>傑作[ICON_TOURISM]魅力:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_XBTIC1">
+			<Text>建成{1_Num}個可選擇意識形態</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_TSDM1">
-			<Text>海上商路距離：</Text>
+			<Text>海上商路距離:</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_TRLDM1">
-			<Text>陸地商路距離：</Text>
+			<Text>陸地商路距離:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_TRSGB1">
+			<Text>海上商路</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_TRLGB1">
+			<Text>陸地商路</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_CSTRPM1111">
-			<Text>城邦商路增加全國：</Text>
+			<Text>每條城邦商路使全國:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_GSBM4">
+			<Text>大科研究新科技時</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_ELV3434">
-			<Text>會議代表：</Text>
+			<Text>會議代表:</Text>
 		</Replace>
 
 		<!-- Units' EUI -->
@@ -13839,9 +13914,116 @@
 			<Text>禁止附近傳教</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_REL_STR">
-			<Text>宗教力量：</Text>
+			<Text>宗教力量:</Text>
 		</Replace>
 
+		<!-- New from World Power -->
+		<Replace Tag="TXT_KEY_PEDIA_RANGEDCOMBAT_LABEL">
+			<Text>遠程攻擊力:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PEDIA_COMBAT_LABEL">
+			<Text>戰鬥力:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PEDIA_MOVEMENT_LABEL">
+			<Text>移動力:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PEDIA_DEFENSE_HITPOINTS">
+			<Text>+{1_DefenseHP}生命值</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FREEPROMOTIONS">
+			<Text>[COLOR_CYAN]免費晉升:[ENDCOLOR]</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_PEDIA_MAXHP_LABEL_SP">
+			<Text>生命值上限:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PEDIA_SIGHT_LABEL_SP">
+			<Text>視野:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PEDIA_FREEPROMOTIONS_LABEL_EXTRA_SP">
+			<Text>[COLOR_YELLOW]贈送能力:[ENDCOLOR]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_NUKE_INTERCEPTION11_SP">
+			<Text>核攔截幾率:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CITY_ATTACK_CHANGE_SP">
+			<Text>城市攻擊次數:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CITY_RANGED_ATTACK_MOD_SP">
+			<Text>城市攻擊加成:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_GLOBAL_CITY_STRENGTH_MOD_SP">
+			<Text>全局城防加成:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_GLOBAL_CITY_RANGED_ATTACK_MOD_SP">
+			<Text>全局城市攻擊加成:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CITYVIEW_GLOBAL_EACH_SP" >
+			<Text>全國每個</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_EVERY_PER_SP" >
+			<Text>本城:每</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_EXPERIENCE_DOMAIN_GLOBAL_SP" >
+			<Text>全國</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_LOCAL_POP_SP" >
+			<Text>本城</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PEDIA_NEAR_ENEMY_DAMAGE_SP" >
+			<Text>臨近敵人每回合傷害:{1_Num}</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PEDIA_NEAR_OUR_HEAL_SP" >
+			<Text>臨近己方每回合治療:{1_Num}</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PEDIA_CONQUESTPROB_SP">
+			<Text>占領幾率:{1_Num}%</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PEDIA_NEVER_CAPTURE_SP">
+			<Text>不可占領</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PEDIA_CITY_BOMBARDRANGE_SP">
+			<Text>城市攻擊範圍:{1_Num}[ICON_RANGE_STRENGTH]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PRODUCTION_BUILDING_DEFENSE_MOD_SP">
+			<Text>[ICON_STRENGTH]全國城防提升:+{1_Num}%</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_LOCAL_IMPROVEMENT_YIELD_SP" >
+			<Text>本地</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PEDIA_GLOBAL_RESOURCES_SP" >
+			<Text>全國</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_SV_ICONS_GLOBAL_SP" >
+			<Text>全國</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_LOCAL_SPECIALIST_SP" >
+			<Text>本地</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_SV_ICONS_LOCAL_SP" >
+			<Text>本地</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PEDIA_REQ_BLDG_LABEL2_SP">
+			<Text>至少擁有下列建築中的一種:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PEDIA_IMPROVEMENT_OBSOLETE_TECH_LABEL_SP">
+			<Text>過時科技:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PEDIA_IMADJCITY_LABEL_SP">
+			<Text>城市相鄰地塊:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_ABLTY_RIVER_SIDE_STRING_SP" >
+			<Text>臨近河流:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_ABLTY_COASTALAND_SIDE_STRING_SP" >
+			<Text>沿海:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_GOLD_COST_LABEL_SP">
+			<Text>維護費:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_NO_ACTION_CITY_COUNT_MAX_SP">
+			<Text>每座城市只允許{1_Num}個。</Text>
+		</Replace>
 
 <!-- New CivilopediaScreen Text -->
 	<!-- Created by Tokata -->
