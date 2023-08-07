@@ -95,11 +95,23 @@
 		<Replace Tag="TXT_KEY_TRULY">
 			<Text>Truly</Text>
 		</Replace>
+		<Replace Tag="TXT_KEY_FREE_TECHS">
+			<Text>Num of Free Techs: </Text>
+		</Replace>
 		<Replace Tag="TXT_KEY_FREE_POLICIES">
 			<Text>Num of Free Policies: </Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BO1">
 			<Text>Enemy's Units Extra MP Cost in Your Territory</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CAPITAL1">
+			<Text>Capital</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_GLOBAL1">
+			<Text>Global </Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_EL1">
+			<Text>+1 extra copy of each improved luxury resource near its City</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_ASN1">
 			<Text>Affect Spies Now</Text>
@@ -107,14 +119,35 @@
 		<Replace Tag="TXT_KEY_NIM1">
 			<Text>Nullify Influence Modifier by Techs</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_GCRM1">
-			<Text>Global Culture Rate Modifier: </Text>
+		<Replace Tag="TXT_KEY_ARS1">
+			<Text>Allows Garrison Range Strike</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_GGPRM1">
-			<Text>Global GreatPeople Rate Modifier: </Text>
+		<Replace Tag="TXT_KEY_CRM1">
+			<Text>Culture Rate Modifier: </Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_GPRM1">
+			<Text>Great People Rate Modifier: </Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_GGRM2">
+			<Text>Great General Rate Modifier: </Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_GPEG1">
+			<Text>Expend a Great Person </Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UUCM1">
+			<Text>Cost of Upgrade: </Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_AIR_MODIFIER11">
 			<Text>Aircrafts Stands Modifier: </Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_NUKE_MODIFIER11">
+			<Text>Reduces population loss from nuclear attack by: </Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UH11">
+			<Text>Global Happiness: </Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNHAPPINESS_MODIFIER111">
+			<Text>[ICON_HAPPINESS_4] Unhappiness from [ICON_CITIZEN] Citizens in non-occupied Cities: </Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_HAPPINESS_PERCITY111">
 			<Text>All Cities: </Text>
@@ -122,23 +155,44 @@
 		<Replace Tag="TXT_KEY_WORKER_SPEED_MODIFIER111">
 			<Text>Workers' Speed Modifier: </Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_GLOBAL_SPACE_PRODUCTION_MODIFIER11">
-			<Text>Global Spaceship Production Speed Modifier: </Text>
+		<Replace Tag="TXT_KEY_MILITARY_PRODUCTION_MODIFIER111">
+			<Text>Military Production Modifier: </Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_SPACE_PRODUCTION_MODIFIER11">
+			<Text>Spaceship Production Speed Modifier: </Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_PRODUCTION_MODIFIER11">
 			<Text>Buildings' Construction Speed Modifier: </Text>
 		</Replace>
+		<Replace Tag="TXT_KEY_WONDER_PRODUCTION_MODIFIER111">
+			<Text>Wonders' Construction Speed Modifier: </Text>
+		</Replace>
 		<Replace Tag="TXT_KEY_CCTRM22">
 			<Text>[ICON_CONNECTED] City Connection TradeRoute Modifier: </Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_GPC_2">
-			<Text>Global Population Change: </Text>
+		<Replace Tag="TXT_KEY_CPM3">
+			<Text>Plundered: </Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PCM22">
+			<Text>Cost of adopting new Policies: </Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PCCM4">
+			<Text>Costs of acquiring new tiles: </Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PBCM5">
+			<Text>Costs of buying new tiles: </Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_GP111">
-			<Text>Free GreatPeople: </Text>
+			<Text>Free Great People: </Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_MTPC_444">
-			<Text>[ICON_RESEARCH] Science Output from Research Agreement: </Text>
+			<Text>Science Output from Research Agreement: </Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DM_0">
+			<Text>Defensive Buildings Modifier: </Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_MFC_23">
+			<Text>[ICON_INFLUENCE] Influences with all City-States one-time: </Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_EMS_5">
 			<Text>Extra Missionary Spreads: </Text>
@@ -146,8 +200,14 @@
 		<Replace Tag="TXT_KEY_RPM_10">
 			<Text>Religious Spreading Speed Modifier: </Text>
 		</Replace>
+		<Replace Tag="TXT_KEY_EM561">
+			<Text>Enemy Spy Stealing Rate: </Text>
+		</Replace>
 		<Replace Tag="TXT_KEY_ES123123">
 			<Text>Extra Spies: </Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_SC_10">
+			<Text>New Spies' Ranks Change: </Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_ISC_10">
 			<Text>Instant Spies' Ranks Change: </Text>
@@ -155,8 +215,14 @@
 		<Replace Tag="TXT_KEY_LTP11">
 			<Text>[ICON_CULTURE] Culture from Plots and Wonders to [ICON_TOURISM] Tourism: </Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_GWTM1111111">
+		<Replace Tag="TXT_KEY_IMI11">
+			<Text>Creates a copy of each type of military land unit you control</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_GWTM111">
 			<Text>[ICON_TOURISM] Tourism from Great Works: </Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_XBTIC1">
+			<Text>Built {1_Num} to Choice Ideology</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_TSDM1">
 			<Text>Sea Trade Route Distance Modifier: </Text>
@@ -164,8 +230,17 @@
 		<Replace Tag="TXT_KEY_TRLDM1">
 			<Text>Land Trade Route Distance Modifier: </Text>
 		</Replace>
+		<Replace Tag="TXT_KEY_TRSGB1">
+			<Text>Sea Trade Route </Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_TRLGB1">
+			<Text>Land Trade Route </Text>
+		</Replace>
 		<Replace Tag="TXT_KEY_CSTRPM1111">
-			<Text>Trade Routs to City States: </Text>
+			<Text>Each Trade Route to City States Makes All Cities: </Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_GSBM4">
+			<Text>Great Scientists Discover New Tech </Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_ELV3434">
 			<Text>Extra League Votes: </Text>
@@ -186,6 +261,114 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_REL_STR">
 			<Text>Religious Strength</Text>
+		</Replace>
+
+		<!-- New from World Power -->
+		<Replace Tag="TXT_KEY_PEDIA_RANGEDCOMBAT_LABEL">
+			<Text>Range Combat:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PEDIA_COMBAT_LABEL">
+			<Text>Combat:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PEDIA_MOVEMENT_LABEL">
+			<Text>Movement:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PEDIA_DEFENSE_HITPOINTS">
+			<Text>+{1_DefenseHP} HitPoints</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FREEPROMOTIONS">
+			<Text>[COLOR_CYAN]Free Promotions:[ENDCOLOR]</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_PEDIA_MAXHP_LABEL_SP">
+			<Text>Max Hitpoints:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PEDIA_SIGHT_LABEL_SP">
+			<Text>Sight:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PEDIA_FREEPROMOTIONS_LABEL_EXTRA_SP">
+			<Text>[COLOR_YELLOW]Free Promotions:[ENDCOLOR]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_NUKE_INTERCEPTION11_SP">
+			<Text>Nuke Interception:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CITY_ATTACK_CHANGE_SP">
+			<Text>City Attack Change:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CITY_RANGED_ATTACK_MOD_SP">
+			<Text>City Range Attack Mod:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_GLOBAL_CITY_STRENGTH_MOD_SP">
+			<Text>Gobal City Strength:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_GLOBAL_CITY_RANGED_ATTACK_MOD_SP">
+			<Text>Gobal City Range Attack Mod:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CITYVIEW_GLOBAL_EACH_SP" >
+			<Text>Gobal each</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_EVERY_PER_SP" >
+			<Text>Local: Per</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_EXPERIENCE_DOMAIN_GLOBAL_SP" >
+			<Text>Gobal</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_LOCAL_POP_SP" >
+			<Text>Local</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PEDIA_NEAR_ENEMY_DAMAGE_SP" >
+			<Text>Near Emeny Damage: {1_Num}</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PEDIA_NEAR_OUR_HEAL_SP" >
+			<Text>Near Heal: {1_Num}</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PEDIA_CONQUESTPROB_SP">
+			<Text>Capture Probability: {1_Num}%</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PEDIA_NEVER_CAPTURE_SP">
+			<Text>Cannot Capture</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PEDIA_CITY_BOMBARDRANGE_SP">
+			<Text>City Attack Range: {1_Num}[ICON_RANGE_STRENGTH]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PRODUCTION_BUILDING_DEFENSE_MOD_SP">
+			<Text>[ICON_STRENGTH]Gobal City Strength Mod: +{1_Num}%</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_LOCAL_IMPROVEMENT_YIELD_SP" >
+			<Text>Local</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PEDIA_GLOBAL_RESOURCES_SP" >
+			<Text>Gobal</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_SV_ICONS_GLOBAL_SP" >
+			<Text>Gobal</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_LOCAL_SPECIALIST_SP" >
+			<Text>Local</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_SV_ICONS_LOCAL_SP" >
+			<Text>Local</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PEDIA_REQ_BLDG_LABEL2_SP">
+			<Text>Have at least one of the following Buildings:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PEDIA_IMPROVEMENT_OBSOLETE_TECH_LABEL_SP">
+			<Text>Obsolete Tech:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PEDIA_IMADJCITY_LABEL_SP">
+			<Text>Near City:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_ABLTY_RIVER_SIDE_STRING_SP" >
+			<Text>Near River:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_ABLTY_COASTALAND_SIDE_STRING_SP" >
+			<Text>Near Coast:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_GOLD_COST_LABEL_SP">
+			<Text>Cost:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_NO_ACTION_CITY_COUNT_MAX_SP">
+			<Text>Only {1_Num} per City.</Text>
 		</Replace>
 
 
