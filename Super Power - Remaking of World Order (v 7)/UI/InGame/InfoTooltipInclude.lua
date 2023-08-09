@@ -1507,7 +1507,7 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		end
 	end
 
-	-- 全局资源加成
+	-- Gobal Resource Bouns
 	for resource in GameInfo.Resources() do
 		thisBuildingAndResourceTypes.ResourceType = resource.Type or -1
 		tip = GetYieldString( GameInfo.Building_ResourceYieldChangesGlobal( thisBuildingAndResourceTypes ) )
@@ -1516,21 +1516,13 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		end
 	end
 
-	-- 全国改良设施产出
+	-- Gobal Improvement Bouns
 	for Improvement in GameInfo.Improvements() do
 		tip = GetYieldString( GameInfo.Building_ImprovementYieldChangesGlobal{ BuildingType = buildingType, ImprovementType = Improvement.Type } )
 		if tip ~= "" then
 			insert( tips, L"TXT_KEY_PEDIA_GLOBAL_RESOURCES_SP" ..ResourceColor(L(Improvement.Description)).. ":" .. tip )
 		end
 	end
-
-	-- 本地改良设施资源产出
-	--for Improvement in GameInfo.Improvements() do
-		--tip = GetresourceString( GameInfo.Building_ImprovementResourcesQuantity{ BuildingType = buildingType, ImprovementType = Improvement.Type } )
-		--if tip ~= "" then
-			--insert( tips, L"TXT_KEY_LOCAL_IMPROVEMENT_YIELD_SP" ..ResourceColor(L(Improvement.Description)).. ":" .. tip )
-		--end
-	--end
 
 	-- Feature Yields enhanced by Building
 	for feature in GameInfo.Features() do
@@ -1547,7 +1539,7 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		end
 	end
 
-	--本地改良设施产出
+	-- Local Improvement Bouns
 	for Improvement in GameInfo.Improvements() do
 		tip = GetYieldString( GameInfo.Building_ImprovementYieldChanges{ BuildingType = buildingType, ImprovementType = Improvement.Type } )
 		if tip ~= "" then
@@ -1579,7 +1571,7 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		end
 	end
 
-	--本地专家产出 Specialist Yields enhanced by Building
+	--Local Specialist Yields enhanced by Building
 	for specialist in GameInfo.Specialists() do
 		tip = GetYieldString( GameInfo.Building_SpecialistYieldChangesLocal{ BuildingType = buildingType, SpecialistType = specialist.Type } )
 		if tip ~= "" then
@@ -1891,7 +1883,7 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 			end
 		
 
-			-- Other Building Yields enhanced by this Building   建筑对全局其他建筑产出基础加成
+			-- Other Building Yields enhanced by this Building
 			local buildingClassTypes2 = {}
 			for row in GameInfo.BuildingClasses() do
 				if GameInfo.Building_BuildingClassLocalYieldChanges{ BuildingType = buildingType, BuildingClassType = row.Type }()
@@ -1911,7 +1903,7 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 
 	
 
-			-- Other Building Yields enhanced by this Building   建筑对全局其他建筑产出加成
+			-- Other Building Yields Modifiers enhanced by this Building
 			local buildingClassTypes3 = {}
 			for row in GameInfo.BuildingClasses() do
 				if GameInfo.Building_BuildingClassYieldModifiers{ BuildingType = buildingType, BuildingClassType = row.Type }()
