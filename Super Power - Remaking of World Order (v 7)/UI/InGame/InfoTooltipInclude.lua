@@ -2876,25 +2876,8 @@ if Game then
 
 		yieldIconString = yieldIconString or YieldIcons[yieldID] or "?"
 		local tips = {}
-		-- Base Yield from Terrain
-		insertLocalizedBulletIfNonZero( tips, "TXT_KEY_YIELD_FROM_TERRAIN", city:GetBaseYieldRateFromTerrain( yieldID ), yieldIconString )
 
-		-- Base Yield from Buildings
-		insertLocalizedBulletIfNonZero( tips, "TXT_KEY_YIELD_FROM_BUILDINGS", city:GetBaseYieldRateFromBuildings( yieldID ), yieldIconString )
-
-		-- Base Yield from Specialists
-		insertLocalizedBulletIfNonZero( tips, "TXT_KEY_YIELD_FROM_SPECIALISTS", city:GetBaseYieldRateFromSpecialists( yieldID ), yieldIconString )
-
-		-- Base Yield from Misc
-		insertLocalizedBulletIfNonZero( tips, yieldID == YieldTypes.YIELD_SCIENCE and "TXT_KEY_YIELD_FROM_POP" or "TXT_KEY_YIELD_FROM_MISC", city:GetBaseYieldRateFromMisc( yieldID ), yieldIconString )
-
-		-- Base Yield from Population
-		insertLocalizedBulletIfNonZero( tips, "TXT_KEY_YIELD_FROM_POP_EXTRA", city:GetYieldPerPopTimes100( yieldID ) * city:GetPopulation() / 100, yieldIconString )
-
-		-- Base Yield from Religion
-		if not IsCiv5Vanilla then
-			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_YIELD_FROM_RELIGION", city:GetBaseYieldRateFromReligion( yieldID ), yieldIconString )
-		end
+		insert( tips, city:GetYieldRateInfoTool(yieldID) )
 
 		-- Food eaten by pop
 		if yieldID == YieldTypes.YIELD_FOOD then
@@ -2977,7 +2960,7 @@ if Game then
 		end
 
 		if isNoob then
-			return L"TXT_KEY_FOOD_HELP_INFO" .. "[NEWLINE][NEWLINE]" .. tipText
+			return L"TXT_KEY_FOOD_HELP_INFO" .. "[NEWLINE]" .. tipText
 		else
 			return tipText
 		end
@@ -2989,7 +2972,7 @@ if Game then
 		if IsCiv5 and OptionsManager.IsNoBasicHelp() then
 			return GetYieldTooltipHelper( city, YieldTypes.YIELD_GOLD )
 		else
-			return L"TXT_KEY_GOLD_HELP_INFO" .. "[NEWLINE][NEWLINE]" .. GetYieldTooltipHelper( city, YieldTypes.YIELD_GOLD )
+			return L"TXT_KEY_GOLD_HELP_INFO" .. "[NEWLINE]" .. GetYieldTooltipHelper( city, YieldTypes.YIELD_GOLD )
 		end
 	end
 
@@ -3000,7 +2983,7 @@ if Game then
 			if IsCiv5 and OptionsManager.IsNoBasicHelp() then
 				return GetYieldTooltipHelper( city, YieldTypes.YIELD_SCIENCE )
 			else
-				return L"TXT_KEY_SCIENCE_HELP_INFO" .. "[NEWLINE][NEWLINE]" .. GetYieldTooltipHelper( city, YieldTypes.YIELD_SCIENCE )
+				return L"TXT_KEY_SCIENCE_HELP_INFO" .. "[NEWLINE]" .. GetYieldTooltipHelper( city, YieldTypes.YIELD_SCIENCE )
 			end
 		else
 			return L"TXT_KEY_TOP_PANEL_SCIENCE_OFF_TOOLTIP"
@@ -3026,15 +3009,12 @@ if Game then
 		local processProductionID = city:GetProductionProcess()
 
 		if unitProductionID ~= -1 then
-	--		tipText = GetHelpTextForUnit( unitProductionID, false )
 			productionColor = UnitColor
 
 		elseif buildingProductionID ~= -1 then
-	--		tipText = GetHelpTextForBuilding( buildingProductionID, true, true, true, city )
 			productionColor = BuildingColor
 
 		elseif projectProductionID ~= -1 then
-	--		tipText = GetHelpTextForProject( projectProductionID, false )
 			productionColor = BuildingColor
 
 		elseif processProductionID ~= -1 then
@@ -3087,7 +3067,7 @@ if Game then
 
 		-- Basic explanation of production
 		if isNoob then
-			return L"TXT_KEY_PRODUCTION_HELP_INFO" .. "[NEWLINE][NEWLINE]" .. tipText
+			return L"TXT_KEY_PRODUCTION_HELP_INFO" .. "[NEWLINE]" .. tipText
 		else
 			return tipText
 		end
@@ -3100,52 +3080,21 @@ if Game then
 		local cityOwner = Players[city:GetOwner()]
 		local culturePerTurn, cultureStored, cultureNeeded, cultureFromBuildings, cultureFromPolicies, cultureFromSpecialists, cultureFromTraits, baseCulturePerTurn
 		-- Thanks fo Firaxis Cleverness...
-		if IsCiv5 then
-			culturePerTurn = city:GetJONSCulturePerTurn()
-			cultureStored = city:GetJONSCultureStored()
-			cultureNeeded = city:GetJONSCultureThreshold()
-			cultureFromBuildings = city:GetJONSCulturePerTurnFromBuildings()
-			cultureFromPolicies = city:GetJONSCulturePerTurnFromPolicies()
-			cultureFromSpecialists = city:GetJONSCulturePerTurnFromSpecialists()
-			cultureFromTraits = city:GetJONSCulturePerTurnFromTraits()
-			baseCulturePerTurn = city:GetBaseJONSCulturePerTurn()
-		else
-			culturePerTurn = city:GetCulturePerTurn()
-			cultureStored = city:GetCultureStored()
-			cultureNeeded = city:GetCultureThreshold()
-			cultureFromBuildings = city:GetCulturePerTurnFromBuildings()
-			cultureFromPolicies = city:GetCulturePerTurnFromPolicies()
-			cultureFromSpecialists = city:GetCulturePerTurnFromSpecialists()
-			cultureFromTraits = city:GetCulturePerTurnFromTraits()
-			baseCulturePerTurn = city:GetBaseCulturePerTurn()
+		culturePerTurn = city:GetJONSCulturePerTurn()
+		cultureStored = city:GetJONSCultureStored()
+		cultureNeeded = city:GetJONSCultureThreshold()
+		cultureFromBuildings = city:GetJONSCulturePerTurnFromBuildings()
+		cultureFromPolicies = city:GetJONSCulturePerTurnFromPolicies()
+		cultureFromSpecialists = city:GetJONSCulturePerTurnFromSpecialists()
+		cultureFromTraits = city:GetJONSCulturePerTurnFromTraits()
+		baseCulturePerTurn = city:GetBaseJONSCulturePerTurn()
+
+		if not OptionsManager.IsNoBasicHelp() then
+			insert( tips, L"TXT_KEY_CULTURE_HELP_INFO" )
 		end
 
-		-- Culture from Buildings
-		insertLocalizedBulletIfNonZero( tips, "TXT_KEY_CULTURE_FROM_BUILDINGS", cultureFromBuildings )
+		insert( tips, city:GetYieldRateInfoTool(YieldTypes.YIELD_CULTURE) )
 
-		-- Culture from Policies
-		insertLocalizedBulletIfNonZero( tips, "TXT_KEY_CULTURE_FROM_POLICIES", cultureFromPolicies )
-
-		-- Culture from Specialists
-		insertLocalizedBulletIfNonZero( tips, "TXT_KEY_CULTURE_FROM_SPECIALISTS", cultureFromSpecialists )
-
-		-- Culture from Religion
-		if not IsCiv5Vanilla then
-			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_CULTURE_FROM_RELIGION", city:GetJONSCulturePerTurnFromReligion() )
-		end
-
-		if IsCiv5BNW then
-			-- Culture from Great Works
-			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_CULTURE_FROM_GREAT_WORKS", city:GetJONSCulturePerTurnFromGreatWorks() )
-			-- Culture from Leagues
-			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_CULTURE_FROM_LEAGUES", city:GetJONSCulturePerTurnFromLeagues() )
-		end
-
-		-- Culture from Terrain
-		insertLocalizedBulletIfNonZero( tips, "TXT_KEY_CULTURE_FROM_TERRAIN", IsCiv5Vanilla and city:GetJONSCulturePerTurnFromTerrain() or city:GetBaseYieldRateFromTerrain( YieldTypes.YIELD_CULTURE ) )
-
-		-- Culture from Traits
-		insertLocalizedBulletIfNonZero( tips, "TXT_KEY_CULTURE_FROM_TRAITS", cultureFromTraits )
 		-- Base Total
 		if baseCulturePerTurn ~= culturePerTurn then
 			insert( tips, "----------------" )
@@ -3267,35 +3216,22 @@ if Game then
 
 			if not OptionsManager.IsNoBasicHelp() then
 				insert( tips, L"TXT_KEY_FAITH_HELP_INFO" )
-				insert( tips, "" )
 			end
 
-			-- Faith from Buildings
-			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_FAITH_FROM_BUILDINGS", city:GetFaithPerTurnFromBuildings() )
+			local iFaithPerTurn = city:GetFaithPerTurn()
+			if iFaithPerTurn ~= 0 then
+				insert( tips, city:GetYieldRateInfoTool(YieldTypes.YIELD_FAITH) )
 
-			-- Faith from Traits
-			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_FAITH_FROM_TRAITS", city:GetFaithPerTurnFromTraits() )
+				-- Puppet modifier
+				insertLocalizedBulletIfNonZero( tips, "TXT_KEY_PRODMOD_PUPPET", city:IsPuppet() and GameDefines.PUPPET_FAITH_MODIFIER or 0 )
 
-			-- Faith from Terrain
-			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_FAITH_FROM_TERRAIN", city:GetBaseYieldRateFromTerrain( YieldTypes.YIELD_FAITH ) )
+				insert( tips, city:GetYieldModifierTooltip( YieldTypes.YIELD_FAITH ) )
 
-			-- Faith from Policies
-			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_FAITH_FROM_POLICIES", city:GetFaithPerTurnFromPolicies() )
-
-			-- Faith from Religion
-			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_FAITH_FROM_RELIGION", city:GetFaithPerTurnFromReligion() )
-
-			-- Puppet modifier
-			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_PRODMOD_PUPPET", city:IsPuppet() and GameDefines.PUPPET_FAITH_MODIFIER or 0 )
-
-			insert( tips, city:GetYieldModifierTooltip( YieldTypes.YIELD_FAITH ) )
-
-			-- Citizens breakdown
-			insert( tips, "----------------")
-			insert( tips, L( "TXT_KEY_YIELD_TOTAL", city:GetFaithPerTurn(), "[ICON_PEACE]" ) )
-			insert( tips, "" )
-			insert( tips, GetReligionTooltip( city ) )
-
+				-- Citizens breakdown
+				insert( tips, "----------------")
+				insert( tips, L( "TXT_KEY_YIELD_TOTAL", city:GetFaithPerTurn(), "[ICON_PEACE]" ) )
+				insert( tips, GetReligionTooltip( city ) )
+			end
 			return concat( tips, "[NEWLINE]" )
 		else
 			return L"TXT_KEY_TOP_PANEL_RELIGION_OFF_TOOLTIP"
