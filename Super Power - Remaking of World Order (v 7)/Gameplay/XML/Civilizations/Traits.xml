@@ -363,7 +363,6 @@
 			<NaturalWonderSubsequentFinderGold>300</NaturalWonderSubsequentFinderGold>
 			<NaturalWonderYieldModifier>100</NaturalWonderYieldModifier>
 			<NaturalWonderHappinessModifier>100</NaturalWonderHappinessModifier>
-			<FreeBuilding>BUILDING_SPAIN_BULLRING</FreeBuilding>
 		</Row>
 		<Row>
 			<Type>TRAIT_GREAT_ANDEAN_ROAD</Type>
@@ -995,9 +994,32 @@
 		</Row>
 	</Trait_ImprovementYieldChanges>
 
-
-
-
+	<Trait_ResourceYieldChanges>
+		<Row>
+			<TraitType>TRAIT_SEVEN_CITIES</TraitType>
+			<ResourceType>RESOURCE_BISON</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_SEVEN_CITIES</TraitType>
+			<ResourceType>RESOURCE_COW</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_SEVEN_CITIES</TraitType>
+			<ResourceType>RESOURCE_BISON</ResourceType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_SEVEN_CITIES</TraitType>
+			<ResourceType>RESOURCE_COW</ResourceType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>2</Yield>
+		</Row>
+	</Trait_ResourceYieldChanges>
 
 	<!--*******************************Special Traits achieved by Buildings*********************-->
 
@@ -1067,19 +1089,6 @@
 			<CityWorkingChange>1</CityWorkingChange>
 		</Row>
 		<Row>
-			<Type>BUILDING_SPAIN_BULLRING</Type>
-			<BuildingClass>BUILDINGCLASS_TAITS_EFFECTS_BUILDINGS</BuildingClass>
-			<Cost>-1</Cost>
-			<Help>TXT_KEY_BUILDING_SPAIN_BULLRING_HELP</Help>
-			<Description>TXT_KEY_BUILDING_SPAIN_BULLRING</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SPAIN_BULLRING_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_SP_CITYSIZE_BUILDINGS_STRATEGY</Strategy>
-			<MinAreaSize>-1</MinAreaSize>
-			<NeverCapture>true</NeverCapture>
-			<IconAtlas>SPWondersUB_ATLAS</IconAtlas>
-			<PortraitIndex>43</PortraitIndex>
-		</Row>
-		<Row>
 			<Type>BUILDING_TB_STRATEGIC_RICHES_IDEOLOGY</Type>
 			<BuildingClass>BUILDINGCLASS_TB_STRATEGIC_RICHES_IDEOLOGY</BuildingClass>
 			<Cost>-1</Cost>
@@ -1120,21 +1129,6 @@
 			<NukeImmune>true</NukeImmune>
 			<PortraitIndex>5</PortraitIndex>
 			<IconAtlas>CIV_COLOR_ATLAS</IconAtlas>
-			<GreatWorkCount>-2</GreatWorkCount>
-		</Row>
-		<Row>
-			<Type>BUILDING_TB_ART_OF_WAR</Type>
-			<BuildingClass>BUILDINGCLASS_TAITS_EFFECTS_BUILDINGS</BuildingClass>
-			<Cost>-1</Cost>
-			<Description>TXT_KEY_TRAIT_ART_OF_WAR_SHORT</Description>
-			<Help>TXT_KEY_TRAIT_ART_OF_WAR</Help>
-			<MinAreaSize>-1</MinAreaSize>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<NeverCapture>true</NeverCapture>
-			<NukeImmune>true</NukeImmune>
-			<PortraitIndex>4</PortraitIndex>
-			<IconAtlas>CIV_COLOR_ATLAS</IconAtlas>
-			<!--<GlobalGreatPeopleRateModifier>20</GlobalGreatPeopleRateModifier>-->
 			<GreatWorkCount>-2</GreatWorkCount>
 		</Row>
 		<Row>
@@ -1258,31 +1252,6 @@
 			<Yield>5</Yield>
 		</Row>
 
-		<Row>
-			<BuildingType>BUILDING_SPAIN_BULLRING</BuildingType>
-			<ResourceType>RESOURCE_BISON</ResourceType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>2</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_SPAIN_BULLRING</BuildingType>
-			<ResourceType>RESOURCE_COW</ResourceType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>2</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_SPAIN_BULLRING</BuildingType>
-			<ResourceType>RESOURCE_BISON</ResourceType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>2</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_SPAIN_BULLRING</BuildingType>
-			<ResourceType>RESOURCE_COW</ResourceType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>2</Yield>
-		</Row>
-		
 	</Building_ResourceYieldChanges>
 	
 	<Building_FeatureYieldChanges>
@@ -1294,19 +1263,6 @@
 		</Row>
 	</Building_FeatureYieldChanges>
 	
-	<Building_GlobalYieldModifiers>
-		<Row>
-			<BuildingType>BUILDING_TB_ART_OF_WAR</BuildingType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>20</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_TB_ART_OF_WAR</BuildingType>
-			<YieldType>YIELD_FOOD</YieldType>
-			<Yield>20</Yield>
-		</Row>
-	</Building_GlobalYieldModifiers>
-
 	<Building_YieldChangesPerPop>
 		<Row>
 			<BuildingType>BUILDING_TB_DIPLOMACY_GREAT_PEOPLE</BuildingType>

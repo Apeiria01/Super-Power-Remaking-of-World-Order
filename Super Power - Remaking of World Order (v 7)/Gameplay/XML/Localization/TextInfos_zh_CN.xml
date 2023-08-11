@@ -2522,12 +2522,6 @@
 		</Row>
 
 		<!-- ***************************New Buildings for Special Building Effects***************************-->
-
-		<Row>
-			<Tag>TXT_KEY_BUILDING_FREE_XP_THIS_CITY</Tag>
-			<Text>单位+15点经验</Text>
-		</Row>
-
 		<Row>
 			<Tag>TXT_KEY_BUILDING_TRADEINCOME_BOST</Tag>
 			<Text>国际商路+8[ICON_GOLD]金钱</Text>
@@ -3439,23 +3433,6 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_AMUSEMENT_PARK_HELP</Tag>
 			<Text>该建筑提供的[ICON_HAPPINESS_1]快乐点数以该城市的[ICON_CITIZEN]市民数量为限。[NEWLINE][NEWLINE]只能在大型城市（26人口）建造。</Text>
-		</Row>
-
-		<Row>
-			<Tag>TXT_KEY_BUILDING_SPAIN_BULLRING</Tag>
-			<Text>[ICON_HAPPINESS_1]斗牛场</Text>
-		</Row>
-		<Row>
-			<Tag>TXT_KEY_BUILDING_SPAIN_BULLRING_PEDIA</Tag>
-			<Text>
-				斗牛（toreo）是西班牙的国粹，风靡全国，享誉世界，尽管从动物保护的观点上看目前人们对此存在争议，但是作为西班牙特有的古老传统还是保留到现在，并受到很多人的欢迎。
-			</Text>
-		</Row>
-		<Row>
-			<Tag>TXT_KEY_BUILDING_SPAIN_BULLRING_HELP</Tag>
-			<Text>
-				[NEWLINE][NEWLINE]本城每处[ICON_RES_COW]牛和[ICON_RES_BISON]野牛资源+2[ICON_GOLD]金钱、+2[ICON_CULTURE]文化产出。
-			</Text>
 		</Row>
 
 		<Replace Tag="TXT_KEY_BUILDING_GARDEN_HELP">
@@ -7437,11 +7414,6 @@
 		<Row Tag="TXT_KEY_BUILDING_FAMILY_PRODUCTION_HELP" >
 			<Text>每5[ICON_CITIZEN]人口+1[ICON_RESEARCH]科研。</Text>
 		</Row>
-
-		<Row Tag="TXT_KEY_BUILDING_BLD_TRADEROUTE_PLUS" >
-			<Text>商路+1</Text>
-		</Row>
-
 
 		<Row Tag="TXT_KEY_TRO_COL_FROM_CULTURE">
       		<Text>[ICON_ARROW_LEFT][ICON_CULTURE]</Text>

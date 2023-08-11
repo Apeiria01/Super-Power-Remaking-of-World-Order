@@ -2339,20 +2339,8 @@
 
 	<Policy_FreeBuildingClassCapital>
 		<Row>
-			<PolicyType>POLICY_MERCHANT_CONFEDERACY</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_PATRONAGE_TRADEROUTE</BuildingClassType>
-		</Row>
-		<Row>
 			<PolicyType>POLICY_FAMILY_REGISTER</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_FAMILY_PRODUCTION</BuildingClassType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_COMMERCE</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_COMMERCE_TRADEROUTE</BuildingClassType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_MERCHANT_NAVY</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_MERCHANTNAVY_TRADEROUTE</BuildingClassType>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_CULT_PERSONALITY</PolicyType>
@@ -2382,12 +2370,6 @@
 	
 	<BuildingClasses>
 		<Row>
-			<Type>BUILDINGCLASS_POLICY_PERTURN_EFFECTS</Type>
-			<DefaultBuilding>BUILDING_FAITH_RELIGIOUS_POLITICS</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_THEOCRACY_WRITER</Description>
-		</Row>
-
-		<Row>
 			<Type>BUILDINGCLASS_THEOCRACY_WRITER</Type>
 			<DefaultBuilding>BUILDING_THEOCRACY_WRITER</DefaultBuilding>
 			<Description>TXT_KEY_BUILDING_THEOCRACY_WRITER</Description>
@@ -2415,22 +2397,7 @@
 			<DefaultBuilding>BUILDING_TRADITION_FINISHER_BONUS</DefaultBuilding>
 			<Description>TXT_KEY_BUILDING_TRADITION_FINISHER_BONUS</Description>
 		</Row>
-		
-		<Row>
-			<Type>BUILDINGCLASS_PATRONAGE_TRADEROUTE</Type>
-			<DefaultBuilding>BUILDING_PATRONAGE_TRADEROUTE</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_BLD_TRADEROUTE_PLUS</Description>
-		</Row>
-		<Row>
-			<Type>BUILDINGCLASS_COMMERCE_TRADEROUTE</Type>
-			<DefaultBuilding>BUILDING_COMMERCE_TRADEROUTE</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_BLD_TRADEROUTE_PLUS</Description>
-		</Row>
-		<Row>
-			<Type>BUILDINGCLASS_MERCHANTNAVY_TRADEROUTE</Type>
-			<DefaultBuilding>BUILDING_MERCHANTNAVY_TRADEROUTE</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_BLD_TRADEROUTE_PLUS</Description>
-		</Row>
+
 		<Row>
 			<Type>BUILDINGCLASS_AUTOCRACY_FIREWALL</Type>
 			<DefaultBuilding>BUILDING_AUTOCRACY_FIREWALL</DefaultBuilding>
@@ -2484,24 +2451,6 @@
 			<FreePromotionRemoved>PROMOTION_LOSE_HP_OUTSIDE</FreePromotionRemoved>
 			<GreatWorkCount>-1</GreatWorkCount>
 		</Row>
-	
-
-	
-		<Row>
-			<Type>BUILDING_FAITH_RELIGIOUS_POLITICS</Type>
-			<BuildingClass>BUILDINGCLASS_POLICY_PERTURN_EFFECTS</BuildingClass>
-			<Cost>-1</Cost>
-			<NeverCapture>true</NeverCapture>
-			<NukeImmune>true</NukeImmune>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<PortraitIndex>21</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<Description>TXT_KEY_POLICY_RELIGIOUS_POLITICS</Description>
-			<Help>TXT_KEY_POLICY_RELIGIOUS_POLITICS_HELP</Help>
-			<GreatWorkCount>-1</GreatWorkCount>
-		</Row>
-
-
 
 		<Row>
 			<Type>BUILDING_THEOCRACY_WRITER</Type>
@@ -2615,48 +2564,6 @@
 			<GreatWorkCount>-1</GreatWorkCount>
 		</Row>
 
-		<Row>
-			<Type>BUILDING_PATRONAGE_TRADEROUTE</Type>
-			<BuildingClass>BUILDINGCLASS_PATRONAGE_TRADEROUTE</BuildingClass>
-			<Cost>-1</Cost>
-			<NeverCapture>true</NeverCapture>
-			<NukeImmune>true</NukeImmune>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<NumTradeRouteBonus>1</NumTradeRouteBonus>
-			<PortraitIndex>2</PortraitIndex>
-			<IconAtlas>EXPANSION_TECH_ATLAS_1</IconAtlas>
-			<Description>TXT_KEY_BUILDING_BLD_TRADEROUTE_PLUS</Description>
-			<Help>TXT_KEY_BUILDING_BLD_TRADEROUTE_PLUS</Help>
-			<GreatWorkCount>-1</GreatWorkCount>
-		</Row>
-		<Row>
-			<Type>BUILDING_COMMERCE_TRADEROUTE</Type>
-			<BuildingClass>BUILDINGCLASS_COMMERCE_TRADEROUTE</BuildingClass>
-			<Cost>-1</Cost>
-			<NeverCapture>true</NeverCapture>
-			<NukeImmune>true</NukeImmune>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<NumTradeRouteBonus>1</NumTradeRouteBonus>
-			<PortraitIndex>2</PortraitIndex>
-			<IconAtlas>EXPANSION_TECH_ATLAS_1</IconAtlas>
-			<Description>TXT_KEY_BUILDING_BLD_TRADEROUTE_PLUS</Description>
-			<Help>TXT_KEY_BUILDING_BLD_TRADEROUTE_PLUS</Help>
-			<GreatWorkCount>-1</GreatWorkCount>
-		</Row>
-		<Row>
-			<Type>BUILDING_MERCHANTNAVY_TRADEROUTE</Type>
-			<BuildingClass>BUILDINGCLASS_MERCHANTNAVY_TRADEROUTE</BuildingClass>
-			<Cost>-1</Cost>
-			<NeverCapture>true</NeverCapture>
-			<NukeImmune>true</NukeImmune>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<NumTradeRouteBonus>1</NumTradeRouteBonus>
-			<PortraitIndex>2</PortraitIndex>
-			<IconAtlas>EXPANSION_TECH_ATLAS_1</IconAtlas>
-			<Description>TXT_KEY_BUILDING_BLD_TRADEROUTE_PLUS</Description>
-			<Help>TXT_KEY_BUILDING_BLD_TRADEROUTE_PLUS</Help>
-			<GreatWorkCount>-1</GreatWorkCount>
-		</Row>
 		<Row>
 			<Type>BUILDING_AUTOCRACY_FIREWALL</Type>
 			<BuildingClass>BUILDINGCLASS_AUTOCRACY_FIREWALL</BuildingClass>

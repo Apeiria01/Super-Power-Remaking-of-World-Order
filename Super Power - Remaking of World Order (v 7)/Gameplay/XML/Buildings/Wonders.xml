@@ -251,7 +251,6 @@
 			<NeverCapture>true</NeverCapture>
 			<IconAtlas>BW_ATLAS_2</IconAtlas>
 			<PortraitIndex>31</PortraitIndex>
-			<FreeBuilding>BUILDINGCLASS_FREE_XP_HEROIC_EPIC</FreeBuilding>
 		</Row>
 
 		<Row>
@@ -2094,7 +2093,6 @@
 			<WonderSplashImage>WonderConceptBrandenburg.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,T</WonderSplashAnchor>
 			<WonderSplashAudio>AS2D_WONDER_SPEECH_BRANDENBURG_GATE</WonderSplashAudio>
-			<FreeBuilding>BUILDINGCLASS_FREE_XP_BRANDENBURG_GATE</FreeBuilding>
 		</Row>
 
 
@@ -2838,32 +2836,6 @@
 
 	<Buildings>
 		<Row>
-			<Type>BUILDING_FREE_XP_HEROIC_EPIC</Type>
-			<BuildingClass>BUILDINGCLASS_FREE_XP_HEROIC_EPIC</BuildingClass>
-			<Cost>-1</Cost>
-			<Description>TXT_KEY_BUILDING_FREE_XP_THIS_CITY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FREE_XP_THIS_CITY</Civilopedia>
-			<MinAreaSize>-1</MinAreaSize>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<NeverCapture>true</NeverCapture>
-			<IconAtlas>BW_ATLAS_2</IconAtlas>
-			<PortraitIndex>31</PortraitIndex>
-			<GreatWorkCount>-1</GreatWorkCount>
-		</Row>
-		<Row>
-			<Type>BUILDING_FREE_XP_BRANDENBURG_GATE</Type>
-			<BuildingClass>BUILDINGCLASS_FREE_XP_BRANDENBURG_GATE</BuildingClass>
-			<Cost>-1</Cost>
-			<Description>TXT_KEY_BUILDING_FREE_XP_THIS_CITY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FREE_XP_THIS_CITY</Civilopedia>
-			<MinAreaSize>-1</MinAreaSize>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<NeverCapture>true</NeverCapture>
-			<IconAtlas>BW_ATLAS_2</IconAtlas>
-			<PortraitIndex>20</PortraitIndex>
-			<GreatWorkCount>-1</GreatWorkCount>
-		</Row>
-		<Row>
 			<Type>BUILDING_INDUSTRIAL_ZONE_EXTEND</Type>
 			<BuildingClass>BUILDINGCLASS_INDUSTRIAL_ZONE_EXTEND</BuildingClass>
 			<Cost>-1</Cost>
@@ -3040,39 +3012,39 @@
 	</Building_ResourceQuantity>
 	
 
-	<Building_DomainFreeExperiences>
+	<Building_DomainFreeExperiencesGlobal>
 		<Row>
-			<BuildingType>BUILDING_FREE_XP_HEROIC_EPIC</BuildingType>
+			<BuildingType>BUILDING_BRANDENBURG_GATE</BuildingType>
 			<DomainType>DOMAIN_LAND</DomainType>
 			<Experience>15</Experience>
 		</Row>
 		<Row>
-			<BuildingType>BUILDING_FREE_XP_HEROIC_EPIC</BuildingType>
+			<BuildingType>BUILDING_BRANDENBURG_GATE</BuildingType>
 			<DomainType>DOMAIN_SEA</DomainType>
 			<Experience>15</Experience>
 		</Row>
 		<Row>
-			<BuildingType>BUILDING_FREE_XP_HEROIC_EPIC</BuildingType>
+			<BuildingType>BUILDING_BRANDENBURG_GATE</BuildingType>
 			<DomainType>DOMAIN_AIR</DomainType>
 			<Experience>15</Experience>
 		</Row>
 
 		<Row>
-			<BuildingType>BUILDING_FREE_XP_BRANDENBURG_GATE</BuildingType>
+			<BuildingType>BUILDING_HEROIC_EPIC</BuildingType>
 			<DomainType>DOMAIN_LAND</DomainType>
 			<Experience>15</Experience>
 		</Row>
 		<Row>
-			<BuildingType>BUILDING_FREE_XP_BRANDENBURG_GATE</BuildingType>
+			<BuildingType>BUILDING_HEROIC_EPIC</BuildingType>
 			<DomainType>DOMAIN_SEA</DomainType>
 			<Experience>15</Experience>
 		</Row>
 		<Row>
-			<BuildingType>BUILDING_FREE_XP_BRANDENBURG_GATE</BuildingType>
+			<BuildingType>BUILDING_HEROIC_EPIC</BuildingType>
 			<DomainType>DOMAIN_AIR</DomainType>
 			<Experience>15</Experience>
 		</Row>
-	</Building_DomainFreeExperiences>
+	</Building_DomainFreeExperiencesGlobal>
 
 
 
