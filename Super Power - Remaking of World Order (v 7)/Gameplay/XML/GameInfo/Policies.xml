@@ -274,7 +274,7 @@
 			<Where Type="POLICY_CULTURAL_DIPLOMACY"/>
 		</Update>
 		<Update>
-			<Set CityStateTradeChange="0" ProtectedMinorPerTurnInfluence="400" GridX="5" GridY="1" PortraitIndex="17"/>
+			<Set CityStateTradeChange="0" ProtectedMinorPerTurnInfluence="400" NumTradeRouteBonus="1" GridX="5" GridY="1" PortraitIndex="17"/>
 			<Where Type="POLICY_MERCHANT_CONFEDERACY"/>
 		</Update>
 
@@ -348,10 +348,10 @@
 
 	<!--******************Commerce******************* -->
 	<Policies>
-		<!--<Update>
-			<Set CityConnectionTradeRouteGoldModifier="15"/>
+		<Update>
+			<Set NumTradeRouteBonus="1"/>
 			<Where Type="POLICY_COMMERCE"/>
-		</Update>-->
+		</Update>
 		<Update>
 			<Set PortraitIndex="7" IconAtlas="POLICY_ATLAS" IconAtlasAchieved="POLICY_A_ATLAS"/>
 			<Where Type="POLICY_TRADE_UNIONS"/>
@@ -407,7 +407,7 @@
 			<Where Type="POLICY_MARITIME_INFRASTRUCTURE"/>
 		</Update>
 		<Update>
-			<Set SeaTradeRouteGoldChange="600" PortraitIndex="8" IconAtlas="POLICY_ATLAS_EXP2" IconAtlasAchieved="POLICY_A_ATLAS_EXP2" GridX="3" GridY="1"/>
+			<Set SeaTradeRouteGoldChange="600" PortraitIndex="8" NumTradeRouteBonus="1" IconAtlas="POLICY_ATLAS_EXP2" IconAtlasAchieved="POLICY_A_ATLAS_EXP2" GridX="3" GridY="1"/>
 			<Where Type="POLICY_MERCHANT_NAVY"/>
 		</Update>
 		<Update>

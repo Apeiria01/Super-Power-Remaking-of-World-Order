@@ -1191,16 +1191,6 @@
 
 	<BuildingClasses>
 		<Row>
-			<Type>BUILDINGCLASS_FREE_XP_HEROIC_EPIC</Type>
-			<DefaultBuilding>BUILDING_FREE_XP_HEROIC_EPIC</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_FREE_XP_THIS_CITY</Description>
-		</Row>
-		<Row>
-			<Type>BUILDINGCLASS_FREE_XP_BRANDENBURG_GATE</Type>
-			<DefaultBuilding>BUILDING_FREE_XP_BRANDENBURG_GATE</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_FREE_XP_THIS_CITY</Description>
-		</Row>
-		<Row>
 			<Type>BUILDINGCLASS_INDUSTRIAL_ZONE_EXTEND</Type>
 			<DefaultBuilding>BUILDING_INDUSTRIAL_ZONE_EXTEND</DefaultBuilding>
 			<Description>TXT_KEY_BUILDING_INDUSTRIAL_ZONE</Description>

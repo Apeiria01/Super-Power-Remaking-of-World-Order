@@ -5209,11 +5209,6 @@
 
 
 	<!-- ***************************New Buildings for Special Building Effects***************************-->
-
-		<Row>
-			<Tag>TXT_KEY_BUILDING_FREE_XP_THIS_CITY</Tag>
-			<Text>+15 XP for new units trained in this city.</Text>
-		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_TRADEINCOME_BOST</Tag>
 			<Text>+8 [ICON_GOLD] Gold for each International Trade Route from this city.</Text>
@@ -6399,25 +6394,6 @@
 				[NEWLINE][NEWLINE]Must be built in large Cities.
 			</Text>
 		</Row>
-
-		<Row>
-			<Tag>TXT_KEY_BUILDING_SPAIN_BULLRING</Tag>
-			<Text>[ICON_HAPPINESS_1] Bullring</Text>
-		</Row>
-		<Row>
-			<Tag>TXT_KEY_BUILDING_SPAIN_BULLRING_PEDIA</Tag>
-			<Text>
-				A bullring is an arena where bullfighting is performed. Bullrings are often associated with Spain, but they can also be found in neighboring countries and the New World. Bullrings are often historic and culturally significant centres that bear many structural similarities to the Roman amphitheatre.
-			</Text>
-		</Row>
-		<Row>
-			<Tag>TXT_KEY_BUILDING_SPAIN_BULLRING_HELP</Tag>
-			<Text>
-				[NEWLINE][NEWLINE]+2 [ICON_GOLD] Gold and +2 [ICON_CULTURE] Culture output for each source of [ICON_RES_COW] Cattle and [ICON_RES_BISON] Bison worked by the city.
-			</Text>
-		</Row>
-		
-
 
 		<Replace Tag="TXT_KEY_BUILDING_GARDEN_HELP">
 			<Text>+25% [ICON_GREAT_PEOPLE] Great People generation rate in the city. 
@@ -8412,9 +8388,6 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_FAMILY_PRODUCTION_HELP" >
 			<Text>+1 [ICON_RESEARCH] Science for every 5 [ICON_CITIZEN] Population.</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_BLD_TRADEROUTE_PLUS" >
-			<Text>+1 Trade Route</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_TRO_COL_FROM_CULTURE">
