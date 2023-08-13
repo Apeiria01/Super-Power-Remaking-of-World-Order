@@ -352,6 +352,12 @@
 		<Replace Tag="TXT_KEY_PEDIA_REQ_BLDG_LABEL2_SP">
 			<Text>Have at least one of the following Buildings:</Text>
 		</Replace>
+		<Replace Tag="TXT_KEY_BUILDIND_NEEDED_GLOBAL_SP">
+			<Text>Need Building In Country:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDIND_UNLOCKED_GLOBAL_SP">
+            <Text>Buildings Unlocked Global:</Text>
+        </Replace>
 		<Replace Tag="TXT_KEY_PEDIA_IMPROVEMENT_OBSOLETE_TECH_LABEL_SP">
 			<Text>Obsolete Tech:</Text>
 		</Replace>
@@ -5774,7 +5780,7 @@
 			<Text>[ICON_RES_ELECTRICITY] Coal Plant Additional Unit II</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_COAL_PLANT_EXTEND_IZ_HELP">
-			<Text>City must have a Coal Plant Additional Unit.</Text>
+			<Text>Unlock when you own the Ruhr Industrial Base, City must have a Coal Plant Additional Unit.</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_BUILDING_DANISH_WIND_TURBINE">
@@ -17104,5 +17110,9 @@
 		<Row Tag="TXT_KEY_MAP_XY">
 			<Text>Coord</Text>
 		</Row>
+
+		<Replace Tag="TXT_KEY_NOTIFICATION_CHOOSE_IDEOLOGY_FACTORIES">
+			<Text>The ideas of the Revolution now permeate your society. Your people clamor for you to pick an Ideology for your civilization.</Text>
+		</Replace>
 	</Language_en_US>
 </GameData>

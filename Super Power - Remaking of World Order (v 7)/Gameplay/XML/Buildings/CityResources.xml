@@ -168,6 +168,7 @@
 			<Type>BUILDING_COAL_PLANT_EXTEND_IZ</Type>
 			<BuildingClass>BUILDINGCLASS_COAL_PLANT_EXTEND_IZ</BuildingClass>
 			<Cost>35</Cost>
+			<PrereqTech>TECH_INDUSTRIALIZATION</PrereqTech>
 			<Help>TXT_KEY_BUILDING_COAL_PLANT_EXTEND_IZ_HELP</Help>
 			<Description>TXT_KEY_BUILDING_COAL_PLANT_EXTEND_IZ</Description>
 			<Civilopedia>TXT_KEY_CIV5_BUILDINGS_COAL_PLANT_TEXT</Civilopedia>
@@ -468,10 +469,7 @@
 			<BuildingType>BUILDING_COAL_PLANT_EXTEND</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_COAL_PLANT</BuildingClassType>
 		</Row>
-		<Row>
-			<BuildingType>BUILDING_COAL_PLANT_EXTEND_IZ</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_INDUSTRIAL_ZONE_EXTEND</BuildingClassType>
-		</Row>
+
 		<Row>
 			<BuildingType>BUILDING_COAL_PLANT_EXTEND_IZ</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_COAL_PLANT_EXTEND</BuildingClassType>
@@ -515,6 +513,13 @@
 		
 		
 	</Building_ClassesNeededInCity>
+
+	<Building_ClassesNeededGlobal>
+		<Row>
+			<BuildingType>BUILDING_COAL_PLANT_EXTEND_IZ</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_INDUSTRIAL_ZONE</BuildingClassType>
+		</Row>
+	</Building_ClassesNeededGlobal>
 
 
 

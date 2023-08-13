@@ -2104,6 +2104,18 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 
 	--end
 
+	-- Required Buildings Global:
+	local buildingsGloabl = {}
+	for row in GameInfo.Building_ClassesNeededGlobal( thisBuildingType ) do
+		local item = GetCivBuilding( activeCivilizationType, row.BuildingClassType )
+		if item and not buildingsGloabl[ item ] then
+			insert( buildingsGloabl, BuildingColor( L(item.Description) ) )
+		end
+	end
+	if #buildingsGloabl > 0 then
+		insert( tips, L"TXT_KEY_BUILDIND_NEEDED_GLOBAL_SP" .. " " .. concat( buildingsGloabl, ", ") )
+	end
+
 	-- Local Resources Required:
 	local resources = {}
 	for row in GameInfo.Building_LocalResourceAnds( thisBuildingType ) do
@@ -2198,6 +2210,24 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 	if #items > 0 then
 		insert( tips, L"TXT_KEY_PEDIA_BLDG_UNLOCK_LABEL" .. " " .. concat( items, ", ") )
 	end
+
+	-- Buildings Unlocked Global:
+	local buildingsUnlockedGlobal = {}
+	for row in GameInfo.Building_ClassesNeededGlobal( thisBuildingClassType ) do
+		local buildingUnlocked = GameInfo.Buildings[ row.BuildingType ]
+		SetKey( buildingsUnlockedGlobal, buildingUnlocked and buildingUnlocked.BuildingClass )
+	end
+	items = {}
+	for buildingUnlocked in pairs(buildingsUnlockedGlobal) do
+		buildingUnlocked = GetCivBuilding( activeCivilizationType, buildingUnlocked )
+		if buildingUnlocked then
+			insert( items, BuildingColor( L(buildingUnlocked.Description) ) )
+		end
+	end
+	if #items > 0 then
+		insert( tips, L"TXT_KEY_BUILDIND_UNLOCKED_GLOBAL_SP" .. " " .. concat( items, ", ") )
+	end
+
 
 	-- Built <> Buiding Class Count
 	local countText = {};

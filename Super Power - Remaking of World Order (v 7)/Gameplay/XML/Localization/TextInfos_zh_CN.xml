@@ -2927,7 +2927,7 @@
 			<Text>[ICON_RES_ELECTRICITY]燃煤发电扩容2级机组</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_COAL_PLANT_EXTEND_IZ_HELP">
-			<Text>城市必须拥有燃煤发电扩容机组。</Text>
+			<Text>拥有鲁尔工业区后解锁，城市必须拥有燃煤发电扩容机组。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_BUILDING_DANISH_WIND_TURBINE">
@@ -14172,6 +14172,12 @@
 		<Replace Tag="TXT_KEY_PEDIA_REQ_BLDG_LABEL2_SP">
 			<Text>至少拥有下列建筑中的一种:</Text>
 		</Replace>
+		<Replace Tag="TXT_KEY_BUILDIND_NEEDED_GLOBAL_SP">
+			<Text>需要国内拥有建筑:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDIND_UNLOCKED_GLOBAL_SP">
+			<Text>全国启用建筑:</Text>
+		</Replace>
 		<Replace Tag="TXT_KEY_PEDIA_IMPROVEMENT_OBSOLETE_TECH_LABEL_SP">
 			<Text>过时科技:</Text>
 		</Replace>
@@ -15180,5 +15186,8 @@
 			<Text>坐标</Text>
 		</Row>
 
+		<Replace Tag="TXT_KEY_NOTIFICATION_CHOOSE_IDEOLOGY_FACTORIES">
+			<Text>革命的浪潮已经在你的文明掀起，你的人民要求你选择一项意识形态。</Text>
+		</Replace>
 	</Language_zh_CN>
 </GameData>
