@@ -1191,11 +1191,6 @@
 
 	<BuildingClasses>
 		<Row>
-			<Type>BUILDINGCLASS_INDUSTRIAL_ZONE_EXTEND</Type>
-			<DefaultBuilding>BUILDING_INDUSTRIAL_ZONE_EXTEND</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_INDUSTRIAL_ZONE</Description>
-		</Row>
-		<Row>
 			<Type>BUILDINGCLASS_TRADEROUTE_INCOME_BOOST_EMPIRE</Type>
 			<DefaultBuilding>BUILDING_TRADEROUTE_INCOME_BOOST_EMPIRE</DefaultBuilding>
 			<Description>TXT_KEY_BUILDING_TRADEROUTE_INCOME_BOOST_EMPIRE</Description>

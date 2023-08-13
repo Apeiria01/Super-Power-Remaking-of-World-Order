@@ -2866,7 +2866,7 @@
 			<Text>[ICON_RES_ELECTRICITY]燃煤發電擴容2級機組</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_COAL_PLANT_EXTEND_IZ_HELP">
-			<Text>城市必須擁有燃煤發電擴容機組。</Text>
+			<Text>擁有魯爾工業區後解鎖，城市必須擁有燃煤發電擴容機組。</Text>
 		</Row>
 		
 		<Row Tag="TXT_KEY_BUILDING_DANISH_WIND_TURBINE">
@@ -13980,6 +13980,12 @@
 		<Replace Tag="TXT_KEY_PEDIA_REQ_BLDG_LABEL2_SP">
 			<Text>至少擁有下列建築中的一種:</Text>
 		</Replace>
+		<Replace Tag="TXT_KEY_BUILDIND_NEEDED_GLOBAL_SP">
+			<Text>需要國內擁有建築:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDIND_UNLOCKED_GLOBAL_SP">
+			<Text>全國啟用建築:</Text>
+		</Replace>
 		<Replace Tag="TXT_KEY_PEDIA_IMPROVEMENT_OBSOLETE_TECH_LABEL_SP">
 			<Text>過時科技:</Text>
 		</Replace>
@@ -14980,5 +14986,9 @@
 		<Row Tag="TXT_KEY_MAP_XY">
 			<Text>坐標</Text>
 		</Row>
+
+		<Replace Tag="TXT_KEY_NOTIFICATION_CHOOSE_IDEOLOGY_FACTORIES">
+			<Text>革命的浪潮已經在你的文明掀起，你的人民要求你選擇一項意識形態。</Text>
+		</Replace>
 	</Language_zh_Hant_HK>
 </GameData>
