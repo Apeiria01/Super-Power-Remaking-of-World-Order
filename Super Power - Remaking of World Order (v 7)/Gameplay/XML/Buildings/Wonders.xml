@@ -2231,8 +2231,6 @@
 			<PortraitIndex>3</PortraitIndex>
 			<WonderSplashImage>EMPIRE_splash.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,B</WonderSplashAnchor>
-			<!--<NumTradeRouteBonus>1</NumTradeRouteBonus>-->
-			<!--<FreeBuilding>BUILDINGCLASS_TRADEROUTE_INCOME_BOOST_EMPIRE</FreeBuilding>-->
 		</Row>
 		<Row>
 			<Type>BUILDING_BAUHAUS</Type>

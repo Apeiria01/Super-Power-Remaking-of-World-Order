@@ -697,21 +697,11 @@ function HappinessTipHandler( control )
 		local iPoliciesHappiness = pPlayer:GetHappinessFromPolicies();
 		local iResourcesHappiness = pPlayer:GetHappinessFromResources();
 		local iExtraLuxuryHappiness = pPlayer:GetExtraHappinessPerLuxury();
+
 		local iCityHappinessRaw = pPlayer:GetHappinessFromCities();
-		
 		local SPUnhappinessCityException = SPUnhappinessFromCitiesCount (pPlayer)
-		
-		
 		local iCityHappiness = iCityHappinessRaw + SPUnhappinessCityException
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
 		local iBuildingHappiness = pPlayer:GetHappinessFromBuildings();
 		local iTradeRouteHappiness = pPlayer:GetHappinessFromTradeRoutes();
 		local iReligionHappiness = pPlayer:GetHappinessFromReligion();
@@ -742,7 +732,21 @@ function HappinessTipHandler( control )
 			strText = strText .. "[COLOR:255:60:60:255]" .. Locale.ConvertTextKey("TXT_KEY_TP_EMPIRE_UNHAPPY") .. "[/COLOR]";
 		end
 	
-		local iTotalHappiness = iPoliciesHappiness + iResourcesHappiness + iCityHappiness + iBuildingHappiness + iMinorCivHappiness + iHandicapHappiness + iTradeRouteHappiness + iReligionHappiness + iNaturalWonderHappiness + iExtraHappinessPerCity + iLeagueHappiness;
+		--[[local iTotalHappiness = 0
+		+ iHandicapHappiness
+		+ iResourcesHappiness
+		+ iCityHappiness
+		+ iBuildingHappiness
+		+ iPoliciesHappiness
+		+ iExtraHappinessPerCity
+		+ iReligionHappiness 
+		+ iNaturalWonderHappiness
+		+ iMinorCivHappiness
+		+ iLeagueHappiness
+		+ iTradeRouteHappiness
+		+ iFaithHappiness*
+		;]]
+		local iTotalHappiness = pPlayer:GetHappiness();
 	
 		strText = strText .. "[NEWLINE][NEWLINE]";
 		strText = strText .. "[COLOR:150:255:150:255]";
@@ -777,7 +781,7 @@ function HappinessTipHandler( control )
 		-- Extra Happiness from each Luxury
 		if (iExtraLuxuryHappiness >= 1) then
 			strText = strText .. "[NEWLINE]";
-			strText = strText .. "          +" .. Locale.ConvertTextKey("TXT_KEY_TP_HAPPINESS_EXTRA_PER_RESOURCE", iExtraLuxuryHappiness, iNumHappinessResources);
+			strText = strText .. "          " .. Locale.ConvertTextKey("TXT_KEY_TP_HAPPINESS_EXTRA_PER_RESOURCE", iExtraLuxuryHappiness, iNumHappinessResources * iExtraLuxuryHappiness);
 		end
 	
 		-- Misc Happiness from Resources

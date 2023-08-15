@@ -2267,13 +2267,6 @@
 			<YieldType>YIELD_SCIENCE</YieldType>
 			<Yield>15</Yield>
 		</Row>
-		<!--
-		<Row>
-			<PolicyType>POLICY_TRADITION_FINISHER</PolicyType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>15</Yield>
-		</Row>
-		-->
 		<Row>
 			<PolicyType>POLICY_TRADITION_FINISHER</PolicyType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
@@ -2347,20 +2340,27 @@
 			<BuildingClassType>BUILDINGCLASS_AUTOCRACY_FIREWALL</BuildingClassType>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_FLOURISHING_OF_ARTS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_FLOURISHING_OF_ARTS</BuildingClassType>
-		</Row>
-		<Row>
 			<PolicyType>POLICY_ENTREPRENEURSHIP</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_ENTREPRENEURSHIP</BuildingClassType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_SPACEFLIGHT_PIONEERS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_SPACEFLIGHT_PIONEERS</BuildingClassType>
 		</Row>
 	</Policy_FreeBuildingClassCapital>
 
 	<Policy_FreeBuildingClassCityStates />
+
+	<Policy_SpecialistYieldChanges>
+		<Row>
+			<PolicyType>POLICY_SPACEFLIGHT_PIONEERS</PolicyType>
+			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_SPACEFLIGHT_PIONEERS</PolicyType>
+			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>2</Yield>
+		</Row>
+	</Policy_SpecialistYieldChanges>
 
 
 
@@ -2392,11 +2392,6 @@
 			<DefaultBuilding>BUILDING_FAMILY_PRODUCTION</DefaultBuilding>
 			<Description>TXT_KEY_BUILDING_FAMILY_PRODUCTION</Description>
 		</Row>
-		<Row>
-			<Type>BUILDINGCLASS_TRADITION_FINISHER_BONUS</Type>
-			<DefaultBuilding>BUILDING_TRADITION_FINISHER_BONUS</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_TRADITION_FINISHER_BONUS</Description>
-		</Row>
 
 		<Row>
 			<Type>BUILDINGCLASS_AUTOCRACY_FIREWALL</Type>
@@ -2416,11 +2411,6 @@
 			<Description>TXT_KEY_BUILDING_SCHOLASTICISM</Description>
 		</Row>
 		<Row>
-			<Type>BUILDINGCLASS_FLOURISHING_OF_ARTS</Type>
-			<DefaultBuilding>BUILDING_FLOURISHING_OF_ARTS</DefaultBuilding>
-			<Description>TXT_KEY_POLICY_FLOURISHING_OF_ARTS</Description>
-		</Row>
-		<Row>
 			<Type>BUILDINGCLASS_ENTREPRENEURSHIP</Type>
 			<DefaultBuilding>BUILDING_ENTREPRENEURSHIP</DefaultBuilding>
 			<Description>TXT_KEY_POLICY_ENTREPRENEURSHIP</Description>
@@ -2429,11 +2419,6 @@
 			<Type>BUILDINGCLASS_CULTURAL_REVOLUTION</Type>
 			<DefaultBuilding>BUILDING_CULTURAL_REVOLUTION</DefaultBuilding>
 			<Description>TXT_KEY_POLICY_CULTURAL_REVOLUTION</Description>
-		</Row>
-		<Row>
-			<Type>BUILDINGCLASS_SPACEFLIGHT_PIONEERS</Type>
-			<DefaultBuilding>BUILDING_SPACEFLIGHT_PIONEERS</DefaultBuilding>
-			<Description>TXT_KEY_POLICY_SPACEFLIGHT_PIONEERS</Description>
 		</Row>
 	</BuildingClasses>
 	<Buildings>
@@ -2549,20 +2534,6 @@
 			<Help>TXT_KEY_BUILDING_FAMILY_PRODUCTION_HELP</Help>
 			
 		</Row>
-		<Row>
-			<Type>BUILDING_TRADITION_FINISHER_BONUS</Type>
-			<BuildingClass>BUILDINGCLASS_TRADITION_FINISHER_BONUS</BuildingClass>
-			<Cost>-1</Cost>
-			<NeverCapture>true</NeverCapture>
-			<NukeImmune>true</NukeImmune>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<GlobalCultureRateModifier>10</GlobalCultureRateModifier>
-			<PortraitIndex>27</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<Description>TXT_KEY_BUILDING_TRADITION_FINISHER_BONUS</Description>
-			<Help>TXT_KEY_BUILDING_TRADITION_FINISHER_BONUS_HELP</Help>
-			<GreatWorkCount>-1</GreatWorkCount>
-		</Row>
 
 		<Row>
 			<Type>BUILDING_AUTOCRACY_FIREWALL</Type>
@@ -2592,22 +2563,7 @@
 			<Help>TXT_KEY_BUILDING_SCHOLASTICISM_HELP</Help>
 			<GreatWorkCount>-1</GreatWorkCount>
 		</Row>
-		
-		<Row>
-			<Type>BUILDING_FLOURISHING_OF_ARTS</Type>
-			<BuildingClass>BUILDINGCLASS_FLOURISHING_OF_ARTS</BuildingClass>
-			<Cost>-1</Cost>
-			<NeverCapture>true</NeverCapture>
-			<NukeImmune>true</NukeImmune>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<PortraitIndex>5</PortraitIndex>
-			<IconAtlas>POLICY_ATLAS_EXP2</IconAtlas>
-			<Description>TXT_KEY_POLICY_FLOURISHING_OF_ARTS</Description>
-			<Help>TXT_KEY_POLICY_FLOURISHING_OF_ARTS_HELP</Help>
-			<HappinessPerXPolicies>2</HappinessPerXPolicies>
-			<GreatWorkCount>-1</GreatWorkCount>
-		</Row>
-		
+
 		<Row>
 			<Type>BUILDING_ENTREPRENEURSHIP</Type>
 			<BuildingClass>BUILDINGCLASS_ENTREPRENEURSHIP</BuildingClass>
@@ -2632,19 +2588,6 @@
 			<IconAtlas>POLICY_ATLAS_EXP2</IconAtlas>
 			<Description>TXT_KEY_POLICY_CULTURAL_REVOLUTION</Description>
 			<Help>TXT_KEY_POLICY_CULTURAL_REVOLUTION_HELP</Help>
-			<GreatWorkCount>-1</GreatWorkCount>
-		</Row>
-		<Row>
-			<Type>BUILDING_SPACEFLIGHT_PIONEERS</Type>
-			<BuildingClass>BUILDINGCLASS_SPACEFLIGHT_PIONEERS</BuildingClass>
-			<Cost>-1</Cost>
-			<NeverCapture>true</NeverCapture>
-			<NukeImmune>true</NukeImmune>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<PortraitIndex>3</PortraitIndex>
-			<IconAtlas>POLICY_ATLAS_EXP2</IconAtlas>
-			<Description>TXT_KEY_POLICY_SPACEFLIGHT_PIONEERS</Description>
-			<Help>TXT_KEY_POLICY_SPACEFLIGHT_PIONEERS_HELP</Help>
 			<GreatWorkCount>-1</GreatWorkCount>
 		</Row>
 	</Buildings>
@@ -2678,27 +2621,6 @@
 		
 	</Building_YieldChangesPerPop>
 	<Building_GlobalYieldModifiers>
-		<!--<Row>
-			<BuildingType>BUILDING_TRADITION_FINISHER_BONUS</BuildingType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>10</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_TRADITION_FINISHER_BONUS</BuildingType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>10</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_TRADITION_FINISHER_BONUS</BuildingType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>10</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_TRADITION_FINISHER_BONUS</BuildingType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>10</Yield>
-		</Row>-->
-		
 		<Row>
 			<BuildingType>BUILDING_SCHOLASTICISM</BuildingType>
 			<YieldType>YIELD_CULTURE</YieldType>
@@ -2717,19 +2639,6 @@
 			<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
 			<YieldType>YIELD_SCIENCE</YieldType>
 			<Yield>1</Yield>
-		</Row>
-		
-		<Row>
-			<BuildingType>BUILDING_SPACEFLIGHT_PIONEERS</BuildingType>
-			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>2</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_SPACEFLIGHT_PIONEERS</BuildingType>
-			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>2</Yield>
 		</Row>
 	</Building_SpecialistYieldChanges>
 

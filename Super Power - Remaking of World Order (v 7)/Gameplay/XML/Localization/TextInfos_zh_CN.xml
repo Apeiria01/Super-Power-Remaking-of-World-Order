@@ -5638,7 +5638,7 @@
 		<Replace Tag="TXT_KEY_TRAIT_BUFFALO_HORNS">
 			<Text>
 				[ICON_BULLET]所有军事单位获得晋升所需经验值-50%，陆上单位维护费-15%。
-				[NEWLINE][ICON_BULLET]境内开发的每处[ICON_RES_GOLD]黄金、[ICON_RES_SILVER]白银和[ICON_RES_GEMS]宝石资源+5[ICON_GOLD]金钱。
+				[NEWLINE][ICON_BULLET]境内有市民工作的每处[ICON_RES_GOLD]黄金、[ICON_RES_SILVER]白银和[ICON_RES_GEMS]宝石资源+5[ICON_GOLD]金钱。
 			</Text>
 		</Replace>
 
@@ -7399,13 +7399,6 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_MONARCHY_CULTURE_HELP" >
 			<Text>首都+50%[ICON_TOURISM]魅力产出。</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_BUILDING_TRADITION_FINISHER_BONUS" >
-			<Text>解锁全部传统政策</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_TRADITION_FINISHER_BONUS_HELP" >
-			<Text>所有城市+10%[ICON_RESEARCH]科研、[ICON_CULTURE]文化、[ICON_PRODUCTION]产能和[ICON_GOLD]金钱产出。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_BUILDING_FAMILY_PRODUCTION" >
@@ -15188,6 +15181,9 @@
 
 		<Replace Tag="TXT_KEY_NOTIFICATION_CHOOSE_IDEOLOGY_FACTORIES">
 			<Text>革命的浪潮已经在你的文明掀起，你的人民要求你选择一项意识形态。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_TP_HAPPINESS_EXTRA_PER_RESOURCE">
+			<Text>每种奢侈资源增加额外{1_Num}快乐(总计{2_NumResources})。</Text>
 		</Replace>
 	</Language_zh_CN>
 </GameData>

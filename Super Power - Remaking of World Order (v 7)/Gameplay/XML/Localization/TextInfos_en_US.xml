@@ -8380,12 +8380,6 @@
 		<Row Tag="TXT_KEY_BUILDING_MONARCHY_CULTURE" >
 			<Text>Monarchy</Text>
 		</Row>
-		<Row Tag="TXT_KEY_BUILDING_TRADITION_FINISHER_BONUS_HELP" >
-			<Text>+10% [ICON_RESEARCH] Science, [ICON_CULTURE] Culture, [ICON_PRODUCTION] Production and [ICON_GOLD] Gold output in all cities. </Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_TRADITION_FINISHER_BONUS" >
-			<Text>Tradition Finisher</Text>
-		</Row>
 		<Row Tag="TXT_KEY_BUILDING_MONARCHY_CULTURE_HELP" >
 			<Text>+50% [ICON_TOURISM] Tourism in the Capital.</Text>
 		</Row>
