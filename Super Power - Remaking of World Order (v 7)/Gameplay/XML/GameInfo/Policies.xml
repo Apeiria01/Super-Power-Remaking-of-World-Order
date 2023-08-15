@@ -311,7 +311,7 @@
 			<Where Type="POLICY_FINE_ARTS"/>
 		</Update>
 		<Update>
-			<Set PolicyCostModifier="-15" CultureWonderMultiplier="0" GoldenAgeTurns="0" GridX="3"/>
+			<Set PolicyCostModifier="-15" CultureWonderMultiplier="0" GoldenAgeTurns="0" HappinessPerPolicy="50" GridX="3"/>
 			<Where Type="POLICY_FLOURISHING_OF_ARTS"/>
 		</Update>
 		<Update>

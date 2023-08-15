@@ -5533,7 +5533,7 @@
 		<Replace Tag="TXT_KEY_TRAIT_BUFFALO_HORNS">
 			<Text>
 				[ICON_BULLET]所有軍事單位獲得晉升所需經驗值-50%，陸上單位維護費-15%。
-				[NEWLINE][ICON_BULLET]境內開發的每處[ICON_RES_GOLD]黃金、[ICON_RES_SILVER]白銀和[ICON_RES_GEMS]寶石資源+5[ICON_GOLD]金錢。
+				[NEWLINE][ICON_BULLET]境內有市民工作的每處[ICON_RES_GOLD]黃金、[ICON_RES_SILVER]白銀和[ICON_RES_GEMS]寶石資源+5[ICON_GOLD]金錢。
 			</Text>
 		</Replace>
 
@@ -7290,14 +7290,7 @@
 		<Row Tag="TXT_KEY_BUILDING_MONARCHY_CULTURE_HELP" >
 			<Text>首都+50%[ICON_TOURISM]旅遊業績產出。</Text>
 		</Row>
-		
-		<Row Tag="TXT_KEY_BUILDING_TRADITION_FINISHER_BONUS" >
-			<Text>解鎖全部傳統政策</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_TRADITION_FINISHER_BONUS_HELP" >
-			<Text>所有城市+10%[ICON_RESEARCH]科技值、[ICON_CULTURE]文化值、[ICON_PRODUCTION]生產力和[ICON_GOLD]金幣產出。</Text>
-		</Row>
-		
+
 		<Row Tag="TXT_KEY_BUILDING_FAMILY_PRODUCTION" >
 			<Text>[ICON_RESEARCH]府學</Text>
 		</Row>
