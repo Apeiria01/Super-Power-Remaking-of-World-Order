@@ -15,7 +15,7 @@ SelectedItems = {};
 
 PopulateItems["GreatPeople"] = function(stackControl, playerID)
 	
-	local max = 0;
+	local num = 0;
 	Controls.TitleLabel:LocalizeAndSetText("TXT_KEY_CHOOSE_LONG_COUNT");
 	Controls.DescriptionLabel:LocalizeAndSetText("TXT_KEY_CHOOSE_LONG_COUNT_TT");
 	
@@ -27,15 +27,15 @@ PopulateItems["GreatPeople"] = function(stackControl, playerID)
 	-- build the buttons
 	----------------------------------------------------------------        
 	for info in GameInfo.Units{Special = "SPECIALUNIT_PEOPLE"} do
-		if player:CanTrain(info.ID, true, true, true, false) and not info.FoundReligion then
-			if player:GetUnitBaktun(info.ID) > max then
-				max = player:GetUnitBaktun(info.ID);
+		if player:CanTrain(info.ID, true, true, true, false) then
+			if player:GetUnitBaktun(info.ID) > 0 then
+				num = num + 1;
 			end
 			table.insert(itemTable, info);
 		end
 	end
 	
-	print("Long Count GP Count: " .. max .. " / " .. #itemTable);
+	print("Long Count GP Count: " .. num .. " / " .. #itemTable);
 	if #itemTable > 0 then
 		for _, info in pairs(itemTable) do
 			local controlTable = {};
@@ -49,7 +49,7 @@ PopulateItems["GreatPeople"] = function(stackControl, playerID)
 
 			local iEarlierBaktun = player:GetUnitBaktun(info.ID);
 			-- if (iEarlierBaktun > 0 and not player:IsFreeMayaGreatPersonChoice()) then
-			if iEarlierBaktun > 0 and max < #itemTable then
+			if iEarlierBaktun > 0 and num < #itemTable then
 				controlTable.Button:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_SELECTED_EARLIER_BAKTUN", iEarlierBaktun));
 				controlTable.Button:SetDisabled(true);
 			else
