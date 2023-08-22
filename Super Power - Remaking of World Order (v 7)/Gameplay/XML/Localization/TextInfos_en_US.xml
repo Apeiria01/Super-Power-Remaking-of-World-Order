@@ -17108,5 +17108,8 @@
 		<Replace Tag="TXT_KEY_NOTIFICATION_CHOOSE_IDEOLOGY_FACTORIES">
 			<Text>The ideas of the Revolution now permeate your society. Your people clamor for you to pick an Ideology for your civilization.</Text>
 		</Replace>
+		<Row Tag="TXT_KEY_TRADE_TO_OTHER_CITY_BONUS">
+			<Text>Trade Routes to this City</Text>
+		</Row>
 	</Language_en_US>
 </GameData>
