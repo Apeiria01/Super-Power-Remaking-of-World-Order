@@ -14983,5 +14983,8 @@
 		<Replace Tag="TXT_KEY_NOTIFICATION_CHOOSE_IDEOLOGY_FACTORIES">
 			<Text>革命的浪潮已經在你的文明掀起，你的人民要求你選擇一項意識形態。</Text>
 		</Replace>
+		<Row Tag="TXT_KEY_TRADE_TO_OTHER_CITY_BONUS">
+			<Text>連接到本城的商路</Text>
+		</Row>
 	</Language_zh_Hant_HK>
 </GameData>

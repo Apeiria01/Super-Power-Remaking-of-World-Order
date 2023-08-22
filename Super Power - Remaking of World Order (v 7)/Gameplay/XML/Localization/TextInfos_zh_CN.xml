@@ -15185,5 +15185,11 @@
 		<Replace Tag="TXT_KEY_TP_HAPPINESS_EXTRA_PER_RESOURCE">
 			<Text>每种奢侈资源增加额外{1_Num}快乐(总计{2_NumResources})。</Text>
 		</Replace>
+		<Replace Tag="TXT_KEY_UPANEL_SPREAD_RELIGION_USES">
+			<Text>传教</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_TRADE_TO_OTHER_CITY_BONUS">
+			<Text>连接到本城的商路</Text>
+		</Row>
 	</Language_zh_CN>
 </GameData>
