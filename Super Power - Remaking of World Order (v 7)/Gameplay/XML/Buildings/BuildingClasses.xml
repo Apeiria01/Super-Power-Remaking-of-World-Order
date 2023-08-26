@@ -1191,16 +1191,6 @@
 
 	<BuildingClasses>
 		<Row>
-			<Type>BUILDINGCLASS_TRADEROUTE_INCOME_BOOST_EMPIRE</Type>
-			<DefaultBuilding>BUILDING_TRADEROUTE_INCOME_BOOST_EMPIRE</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_TRADEROUTE_INCOME_BOOST_EMPIRE</Description>
-		</Row>
-		<!--<Row>
-			<Type>BUILDINGCLASS_TERRACOTTA_ARMY_FREE</Type>
-			<DefaultBuilding>BUILDING_TERRACOTTA_ARMY_FREE</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_TERRACOTTA_ARMY_FREE</Description>
-		</Row>-->
-		<Row>
 			<Type>BUILDINGCLASS_TOURISM_GREATWORKS</Type>
 			<DefaultBuilding>BUILDING_TOURISM_GREATWORKS</DefaultBuilding>
 			<Description>TXT_KEY_BUILDING_TOURISM_GREATWORKS</Description>

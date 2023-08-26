@@ -958,7 +958,7 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 	local thisBuildingType = { BuildingType = buildingType }
 	local thisBuildingAndResourceTypes =  { BuildingType = buildingType }
 	local thisBuildingClassType = { BuildingClassType = buildingClassType }
-	local tip, tips, items, item, yieldID, yieldChange, yieldModifier, yieldPerPop,yieldPerPopGlobal, yieldPerReligion, tradeRouteSeaGoldBonus, tradeRouteLandGoldBonus, resource
+	local tip, tips, items, item, yieldID, yieldChange, yieldModifier, yieldPerPop,yieldPerPopGlobal, yieldPerReligion, tradeRouteSeaGoldBonus, tradeRouteLandGoldBonus, resource, tradeRouteSeaGoldBonusGlobal, tradeRouteLandGoldBonusGlobal
 
 	if g_isReligionEnabled and activePlayer then
 		local religionID = activePlayer:GetReligionCreatedByPlayer()
@@ -1314,6 +1314,28 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 			end
 			tip = format("%s[ICON_INTERNATIONAL_TRADE]%s%s%s", tip, L"TXT_KEY_TRLGB1", tradeRouteLandGoldBonus, yield.IconString or "?" )
 		end
+
+		if yield.Type == "YIELD_GOLD" and building.TradeRouteSeaGoldBonusGlobal > 0 then
+			tradeRouteSeaGoldBonusGlobal = (building.TradeRouteSeaGoldBonusGlobal)/100
+			if tradeRouteSeaGoldBonusGlobal > 0 then
+				tradeRouteSeaGoldBonusGlobal = format("+%s", tradeRouteSeaGoldBonusGlobal);
+			end
+			if tip ~= "" then
+				tip = format("%s, ", tip )
+			end
+			tip = format("%s[ICON_INTERNATIONAL_TRADE]%s%s%s", tip, L"TXT_KEY_GLOBAL1" .. L"TXT_KEY_TRSGB1", tradeRouteSeaGoldBonusGlobal, yield.IconString or "?" )
+		end
+		if yield.Type == "YIELD_GOLD" and building.TradeRouteLandGoldBonusGlobal > 0 then
+			tradeRouteLandGoldBonusGlobal = (building.TradeRouteLandGoldBonusGlobal)/100
+			if tradeRouteLandGoldBonusGlobal > 0 then
+				tradeRouteLandGoldBonusGlobal = format("+%s", tradeRouteLandGoldBonusGlobal);
+			end
+			if tip ~= "" then
+				tip = format("%s, ", tip )
+			end
+			tip = format("%s[ICON_INTERNATIONAL_TRADE]%s%s%s", tip, L"TXT_KEY_GLOBAL1" .. L"TXT_KEY_TRLGB1", tradeRouteLandGoldBonusGlobal, yield.IconString or "?" )
+		end
+
 		if tip ~= "" then
 			insert( tips, L(yield.Description) .. ": " .. tip )
 		end

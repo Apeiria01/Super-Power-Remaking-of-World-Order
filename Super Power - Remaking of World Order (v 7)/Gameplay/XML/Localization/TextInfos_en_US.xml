@@ -4387,11 +4387,6 @@
 			<Text>The Shimizu TRY 2004 Mega-City Pyramid is a proposed Shimizu Corporation project for the construction of a massive pyramid over Tokyo Bay in Japan. The structure would be more than 14 times as high as the Great Pyramid of Giza (139 metres, 456.04 feet), and would house 1,000,000 people. The structure would be 2,000 meters (6,561 feet) tall measured from mean sea level, including 5 stacked trusses, each with similar dimensions to that of the Great Pyramid of Giza. This pyramid would help answer Tokyo's increasing lack of space, although the project would only handle a small fraction of the population of the Greater Tokyo Area. </Text>
 		</Row>
 		
-		<Row Tag="TXT_KEY_BUILDING_TERRACOTTA_ARMY_FREE">
-			<Text>+20%[ICON_PRODUCTION] production building units.</Text>
-		</Row>
-		
-		
 	<!--****************************National Wonders*************************************-->
 
 		<Update>
