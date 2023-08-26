@@ -1173,9 +1173,6 @@
 			<WonderSplashAudio>AS2D_WONDER_SPEECH_TERRACOTTA_ARMY</WonderSplashAudio>
 			<EnhancedYieldTech>TECH_ARCHAEOLOGY</EnhancedYieldTech>
 			<TechEnhancedTourism>2</TechEnhancedTourism>
-			<!--<FreePromotion>PROMOTION_BARRAGE_1</FreePromotion>
-			<FreeBuilding>BUILDINGCLASS_TERRACOTTA_ARMY_FREE</FreeBuilding>
-			<FreeBuildingThisCity>BUILDINGCLASS_MILITARY_ACADEMY</FreeBuildingThisCity>-->
 		</Row>
 		
 
@@ -1823,7 +1820,8 @@
 			<WonderSplashAnchor>L,B</WonderSplashAnchor>
 			<NumTradeRouteBonus>1</NumTradeRouteBonus>
 			<Water>true</Water>
-			<FreeBuilding>BUILDINGCLASS_TRADEROUTE_INCOME_BOOST_EMPIRE</FreeBuilding>
+			<TradeRouteSeaGoldBonusGlobal>800</TradeRouteSeaGoldBonusGlobal>
+			<TradeRouteLandGoldBonusGlobal>800</TradeRouteLandGoldBonusGlobal>
 		</Row>
 		
 		<Row>
@@ -2832,36 +2830,6 @@
 	<!-- ***************************New Buildings for Special Building Effects***************************-->
 
 	<Buildings>
-		<Row>
-			<Type>BUILDING_TRADEROUTE_INCOME_BOOST_EMPIRE</Type>
-			<BuildingClass>BUILDINGCLASS_TRADEROUTE_INCOME_BOOST_EMPIRE</BuildingClass>
-			<Cost>-1</Cost>
-			<Description>TXT_KEY_BUILDING_TRADEINCOME_BOST</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TRADEINCOME_BOST</Civilopedia>
-			<MinAreaSize>-1</MinAreaSize>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<NeverCapture>true</NeverCapture>
-			<PortraitIndex>35</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<TradeRouteSeaGoldBonus>500</TradeRouteSeaGoldBonus>
-			<TradeRouteLandGoldBonus>500</TradeRouteLandGoldBonus>
-			<!--<BuildingProductionModifier>15</BuildingProductionModifier>
-			<WonderProductionModifier>15</WonderProductionModifier>-->
-			<GreatWorkCount>-1</GreatWorkCount>
-		</Row>
-		<!--<Row>
-			<Type>BUILDING_TERRACOTTA_ARMY_FREE</Type>
-			<BuildingClass>BUILDINGCLASS_TERRACOTTA_ARMY_FREE</BuildingClass>
-			<Cost>-1</Cost>
-			<Description>TXT_KEY_BUILDING_TERRACOTTA_ARMY_FREE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TERRACOTTA_ARMY_FREE</Civilopedia>
-			<MinAreaSize>-1</MinAreaSize>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<NeverCapture>true</NeverCapture>
-			<PortraitIndex>35</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<GreatWorkCount>-1</GreatWorkCount>
-		</Row>-->
 		<Row>
 			<Type>BUILDING_TOURISM_GREATWORKS</Type>
 			<BuildingClass>BUILDINGCLASS_TOURISM_GREATWORKS</BuildingClass>
