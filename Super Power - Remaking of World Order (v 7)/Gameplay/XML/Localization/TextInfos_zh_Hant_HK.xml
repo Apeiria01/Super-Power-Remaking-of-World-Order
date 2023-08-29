@@ -14981,5 +14981,29 @@
 		<Row Tag="TXT_KEY_TRADE_TO_OTHER_CITY_BONUS">
 			<Text>連接到本城的商路</Text>
 		</Row>
+		<!-- New Automated Item in CityView -->
+		<Replace Tag="TXT_KEY_CITYVIEW_BTN_CITYAUTO_SHORT">
+			<Text>[COLOR_YIELD_FOOD]自動建設[ENDCOLOR]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CITYVIEW_BTN_CITYAUTO">
+			<Text>點擊此鍵將本城市設定為[COLOR_YIELD_FOOD]自動建設[ENDCOLOR]，城市將會自動安排未來建造序列。[NEWLINE][NEWLINE]如果城市已安排建造任務，任務不會中止。[NEWLINE][NEWLINE]你依然可以在任意時刻修改城市建造序列。[NEWLINE][NEWLINE][COLOR_YELLOW]注意：[ENDCOLOR]AI的城建規劃能力有限，你最好對其自動建造的任務保持注意，以避免其建造你不想要的東西。 </Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CITYVIEW_BTN_CITYAUTO_OFF">
+			<Text>本城市已開啟[COLOR_YIELD_FOOD]自動建設[ENDCOLOR]模式，點擊此鍵以關閉之。城市當前任務會立刻取消。</Text>
+		</Replace>
+		
+		<!-- New Specialists Item in CityView -->
+		<Replace Tag="TXT_KEY_CITYVIEW_SPECIALIST_TEXT">
+			<Text>專家</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CITYVIEW_SPECIALIST_HEADER_SLOT_TT">
+			<Text>{1_Num}個專家位置</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CITYVIEW_SPECIALIST_HEADER_TT">
+			<Text>{1_Num}個專家</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CITYVIEW_SPECIALIST_TOOLTIP">
+			<Text>左擊增加一個{1_Specialist}；[NEWLINE]右擊減少一個{1_Specialist}。</Text>
+		</Replace>
 	</Language_zh_Hant_HK>
 </GameData>

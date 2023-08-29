@@ -17106,5 +17106,29 @@
 		<Row Tag="TXT_KEY_TRADE_TO_OTHER_CITY_BONUS">
 			<Text>Trade Routes to this City</Text>
 		</Row>
+		<!-- New Automated Item in CityView -->
+		<Replace Tag="TXT_KEY_CITYVIEW_BTN_CITYAUTO_SHORT">
+			<Text>[COLOR_YIELD_FOOD]Automated[ENDCOLOR]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CITYVIEW_BTN_CITYAUTO">
+			<Text>Click to set this city [COLOR_YIELD_FOOD]Autonomous[ENDCOLOR]. It will automatically schedule its future production queue. [NEWLINE][NEWLINE]if this city is already assigned a production mission, it will be autonomous after finishing its current production queue. [NEWLINE][NEWLINE]You can still change its production queue anytime like adding or removing items in the queue. [NEWLINE][NEWLINE][COLOR_YELLOW]Important Notes:[ENDCOLOR] The AI is not as smart as you. You'd better keep an eye on these autonomous cities in case they start to build something you don't want. </Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CITYVIEW_BTN_CITYAUTO_OFF">
+			<Text>This city is now [COLOR_YIELD_FOOD]Autonomous[ENDCOLOR]. Click to quit the Autonomous mode. It will stop its current production and wait for your orders.</Text>
+		</Replace>
+		
+		<!-- New Specialists Item in CityView -->
+		<Replace Tag="TXT_KEY_CITYVIEW_SPECIALIST_TEXT">
+			<Text>Specialists</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CITYVIEW_SPECIALIST_HEADER_SLOT_TT">
+			<Text>{1_Num} Specialist Slot(s)</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CITYVIEW_SPECIALIST_HEADER_TT">
+			<Text>{1_Num} Specialist(s)</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CITYVIEW_SPECIALIST_TOOLTIP">
+			<Text>Left-Click to Add a {1_Specialist}; [NEWLINE]Right-click to Remove a {1_Specialist}.</Text>
+		</Replace>
 	</Language_en_US>
 </GameData>
