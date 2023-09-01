@@ -2880,7 +2880,7 @@
 			<Text>[ICON_RES_ELECTRICITY]風力電站</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_WIND_PLANT_HELP">
-			<Text>+4[ICON_RES_ELECTRICITY]電力，本城市每10[ICON_CITIZEN]人口+1[ICON_GOLD]金幣。[COLOR_POSITIVE_TEXT]無污染[ENDCOLOR]。</Text>
+			<Text>本城市每10[ICON_CITIZEN]人口+1[ICON_GOLD]金幣。[COLOR_POSITIVE_TEXT]無污染[ENDCOLOR]。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_BUILDINGS_WIND_PLANT_TEXT">
 			<Text>風是一種潛力很大的新能源，十八世紀初，橫掃英法兩國的一次狂暴大風，吹毀了四百座風力磨坊、八百座房屋、一百座教堂、四百多條帆船，並有數千人受到傷害，二十五萬株大樹連根拔起。僅就拔樹一事而論，風在數秒鐘內就發出了一千萬馬力(即750萬千瓦；一馬力等於0．75千瓦)的功率!有人估計過，地球上可用來發電的風力資源約有100億千瓦，幾乎是現在全世界水力發電量的10倍。目前全世界每年燃燒煤所獲得的能量，只有風力在一年內所提供能量的三分之一。因此，國內外都很重視利用風力來發電，開發新能源。</Text>
@@ -15004,6 +15004,13 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_CITYVIEW_SPECIALIST_TOOLTIP">
 			<Text>左擊增加一個{1_Specialist}；[NEWLINE]右擊減少一個{1_Specialist}。</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_PROMOTION_ROLLING_STONE">
+			<Text>滾滾落石</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_ROLLING_STONE_HELP">
+			<Text>對[COLOR_POSITIVE_TEXT]相鄰區域[ENDCOLOR]目標傷害+15%。</Text>
 		</Replace>
 	</Language_zh_Hant_HK>
 </GameData>

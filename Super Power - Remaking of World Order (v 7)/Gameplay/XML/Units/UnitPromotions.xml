@@ -212,7 +212,7 @@
 			<PortraitIndex>33</PortraitIndex>
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_MOBILITY</PediaEntry>
+			<PediaEntry>TXT_KEY_PROMOTION_GAME_QUICKSPEED</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
 		</Row>
 	</UnitPromotions>
@@ -2206,7 +2206,24 @@
 			<PediaType>PEDIA_AIR</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_FLANK_GUN_3</PediaEntry>
 		</Row>-->
-		
+
+		<Row>
+			<Type>PROMOTION_ROLLING_STONE</Type>
+			<Description>TXT_KEY_PROMOTION_ROLLING_STONE</Description>
+			<Help>TXT_KEY_PROMOTION_ROLLING_STONE_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereqOr1>PROMOTION_ARCHERY_COMBAT</PromotionPrereqOr1>
+			<OrderPriority>1</OrderPriority>
+			<RangedAttackModifier>10</RangedAttackModifier>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_RANGED</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_ROLLING_STONE</PediaEntry>
+			<SplashDamagePercent>15</SplashDamagePercent>
+			<SplashDamageRadius>1</SplashDamageRadius>
+			<SplashDamagePlotUnitLimit>1</SplashDamagePlotUnitLimit>
+			<CannotBeChosen>true</CannotBeChosen>
+		</Row>
 		
 	
 		
@@ -5944,7 +5961,7 @@
 			<MovesChange>1</MovesChange>
 			<PortraitIndex>33</PortraitIndex>
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_NAVAL</PediaType>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_MOBILITY</PediaEntry>
 			<PromotionPrereqOr1>PROMOTION_RECON_UNIT</PromotionPrereqOr1>
 			<PromotionPrereqOr2>PROMOTION_ARMOR_BATTLESHIP_2</PromotionPrereqOr2>

@@ -53,17 +53,21 @@ function ImprovementBuilt(iPlayer, x, y, eImprovement)
 	--AI build Citadels
 	if eImprovement == GameInfo.Improvements["IMPROVEMENT_FARM"].ID or eImprovement == GameInfo.Improvements["IMPROVEMENT_TRADING_POST"].ID or eImprovement == GameInfo.Improvements["IMPROVEMENT_LUMBERMILL"].ID then
 	
-		if player:GetUnitClassCount(GameInfo.UnitClasses.UNITCLASS_CITADEL_EARLY.ID) < player:GetNumCities() * 1.5 or player:GetUnitClassCount(GameInfo.UnitClasses.UNITCLASS_CITADEL_MID.ID) < player:GetNumCities() * 1.5 or player:GetUnitClassCount(GameInfo.UnitClasses.UNITCLASS_CITADEL_LATE.ID) < player:GetNumCities()* 1.5 and not player:IsHuman() then
-			local pTeam = Teams[player:GetTeam()]
-			if pTeam:IsHasTech(GameInfoTypes["TECH_GUNPOWDER"]) then
+		if player:GetUnitClassCount(GameInfo.UnitClasses.UNITCLASS_CITADEL_EARLY.ID) < player:GetNumCities() * 1.5
+		or player:GetUnitClassCount(GameInfo.UnitClasses.UNITCLASS_CITADEL_MID.ID) < player:GetNumCities() * 1.5
+		or player:GetUnitClassCount(GameInfo.UnitClasses.UNITCLASS_CITADEL_LATE.ID) < player:GetNumCities()* 1.5
+		and not player:IsHuman()
+		then
+			if player:HasTech(GameInfoTypes["TECH_GUNPOWDER"]) then
 				if not PlotIsVisibleToHuman(pPlot) then
 					if player:CanBuild (pPlot,GameInfo.Builds.BUILD_CITADEL.ID,iPlayer) then
 						if pPlot:CanHaveImprovement (GameInfo.Improvements.IMPROVEMENT_CITADEL.ID, player:GetTeam()) then
 							if pPlot:IsRoute() or pPlot:IsFreshWater() then
 								print ("This is a good location for building a Citadel!")
 								pPlot:SetImprovementType(-1)
-								pPlot:SetFeatureType(-1)
-								pPlot:SetImprovementType(GameInfo.Improvements["IMPROVEMENT_CITADEL"].ID)
+								if pPlot:IsBuildRemovesFeature(GameInfo.Builds.BUILD_CITADEL.ID) then
+									pPlot:SetFeatureType(-1)
+								end
 								SetCitadelUnits(iPlayer, x, y)
 								print ("AI built a Citadel!")
 							end
@@ -74,19 +78,24 @@ function ImprovementBuilt(iPlayer, x, y, eImprovement)
 		end
 	end
 	-----AI build Coastal Fort
-	if eImprovement  == GameInfo.Improvements["IMPROVEMENT_FISHERY_MOD"].ID then
+	if eImprovement  == GameInfo.Improvements["IMPROVEMENT_FISHFARM_MOD"].ID then
 	
-		if player:GetUnitClassCount(GameInfo.UnitClasses.UNITCLASS_CITADEL_EARLY.ID) < player:GetNumCities() * 1.5 or player:GetUnitClassCount(GameInfo.UnitClasses.UNITCLASS_CITADEL_MID.ID) < player:GetNumCities() * 1.5 or player:GetUnitClassCount(GameInfo.UnitClasses.UNITCLASS_CITADEL_LATE.ID) < player:GetNumCities()* 1.5 and not player:IsHuman() then
-			local pTeam = Teams[player:GetTeam()]
-			if pTeam:IsHasTech(GameInfoTypes["TECH_GUNPOWDER"]) then
+		if player:GetUnitClassCount(GameInfo.UnitClasses.UNITCLASS_CITADEL_EARLY.ID) < player:GetNumCities() * 1.5
+		or player:GetUnitClassCount(GameInfo.UnitClasses.UNITCLASS_CITADEL_MID.ID) < player:GetNumCities() * 1.5
+		or player:GetUnitClassCount(GameInfo.UnitClasses.UNITCLASS_CITADEL_LATE.ID) < player:GetNumCities()* 1.5
+		and not player:IsHuman()
+		then
+			if player:HasTech(GameInfoTypes["TECH_GUNPOWDER"]) then
 				if not PlotIsVisibleToHuman(pPlot) then
-					if player:CanBuild (pPlot,GameInfo.Builds.BUILD_CITADEL.ID,iPlayer) then
-						if pPlot:CanHaveImprovement (GameInfo.Improvements.IMPROVEMENT_CITADEL.ID, player:GetTeam()) then
+					if player:CanBuild (pPlot,GameInfo.Builds.BUILD_COASTAL_FORT.ID,iPlayer) then
+						if pPlot:CanHaveImprovement (GameInfo.Improvements.IMPROVEMENT_COASTAL_FORT.ID, player:GetTeam()) then
 							if pPlot:IsAdjacentToLand() then
 								print ("This is a good location for building a Coastal Fort!")
 								pPlot:SetImprovementType(-1)
-								pPlot:SetFeatureType(-1)
-								pPlot:SetImprovementType(GameInfo.Improvements["IMPROVEMENT_COASTAL_FORT"].ID)
+								if pPlot:GetResourceType(-1) == GameInfoTypes.RESOURCE_FISH then
+									pPlot:SetResourceType(-1);
+									print ("Fish removed!");
+								end
 								SetCitadelUnits(iPlayer, x, y)
 								print ("AI built a Coastal Fort!")
 							end
@@ -153,53 +162,7 @@ function ImprovementBuilt(iPlayer, x, y, eImprovement)
 end
 GameEvents.BuildFinished.Add(ImprovementBuilt) 
 
-
---Fix Citadel Improvement when the unit is Created by other reasons or destroyed
---[[
-function FixCitadel(playerID, unitID, iX, iY)
-	if Players[playerID] == nil
-	or Players[playerID]:GetUnitByID(unitID) == nil
-	or Players[playerID]:GetUnitByID(unitID):GetBaseCombatStrength() <= 0
-	or not Players[playerID]:GetUnitByID(unitID):IsImmobile()
-	or Map.GetPlot(iX, iY) == nil
-	then
-		return
-	end
-	local pCitadel = Players[playerID]:GetUnitByID(unitID);
-	local pCitadelPlot = Map.GetPlot(iX, iY);
-	
-	if    (pCitadel:IsDead() or pCitadel:IsDelayedDeath())
-	and   (pCitadelPlot:GetImprovementType() == GameInfo.Improvements["IMPROVEMENT_COASTAL_FORT"].ID
-	    or pCitadelPlot:GetImprovementType() == GameInfo.Improvements["IMPROVEMENT_CITADEL"].ID)
-	then
-		pCitadelPlot:SetImprovementType(-1);
-	elseif pCitadelPlot:GetImprovementType() ~= GameInfo.Improvements["IMPROVEMENT_COASTAL_FORT"].ID
-	and pCitadelPlot:GetImprovementType() ~= GameInfo.Improvements["IMPROVEMENT_CITADEL"].ID
-	then
-	    if pCitadelPlot:IsWater() then
-		pCitadelPlot:SetImprovementType(GameInfo.Improvements["IMPROVEMENT_COASTAL_FORT"].ID);
-	    else
-		pCitadelPlot:SetImprovementType(GameInfo.Improvements["IMPROVEMENT_CITADEL"].ID);
-	    end
-	end
-end
-GameEvents.UnitSetXY.Add(FixCitadel)
---]]
-
 --------------------------------------------------Utilities-------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 --------------------------Clear the naval improvement resource after being destroyed--------------------------
