@@ -174,6 +174,38 @@
 			<PortraitIndex>0</PortraitIndex>
 			<ExtraMaintenanceCost>2</ExtraMaintenanceCost>
 		</Row>
+		<Row>
+			<Class>UNITCLASS_COMPOSITE_BOWMAN</Class>
+			<Type>UNIT_INCAN_SLINGER</Type>
+			<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
+			<BaseSightRange>1</BaseSightRange>
+			<Combat>8</Combat>
+			<RangedCombat>15</RangedCombat>
+			<Cost>50</Cost>
+			<Moves>2</Moves>
+			<Range>2</Range>
+			<CombatClass>UNITCOMBAT_SIEGE</CombatClass>
+			<Domain>DOMAIN_LAND</Domain>
+			<DefaultUnitAI>UNITAI_RANGED</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_INCAN_SLINGER</Description>
+			<Civilopedia>TXT_KEY_CIV5_INCA_SLINGER_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_SP_UNITS_ARCHERY_UNITS_STRATEGY</Strategy>
+			<Help>TXT_KEY_PROMOTION_ARCHERY_COMBAT_HELP</Help>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<Pillage>true</Pillage>
+			<ObsoleteTech>TECH_GUNPOWDER</ObsoleteTech>
+			<GoodyHutUpgradeUnitClass>UNITCLASS_CROSSBOWMAN</GoodyHutUpgradeUnitClass>
+			<AdvancedStartCost>15</AdvancedStartCost>
+			<XPValueAttack>3</XPValueAttack>
+			<XPValueDefense>3</XPValueDefense>
+			<UnitArtInfo>ART_DEF_UNIT_U_INCAN_SLINGER</UnitArtInfo>
+			<IconAtlas>DLC02_UNIT_ATLAS</IconAtlas>
+			<UnitFlagAtlas>DLC02_UNIT_FLAG_ATLAS</UnitFlagAtlas>
+			<UnitFlagIconOffset>0</UnitFlagIconOffset>
+			<PortraitIndex>0</PortraitIndex>
+			<ExtraMaintenanceCost>2</ExtraMaintenanceCost>
+		</Row>
 
 		
 		
@@ -305,38 +337,6 @@
 			<IconAtlas>SPUNITS01_ATLAS</IconAtlas>
 			<PortraitIndex>19</PortraitIndex>
 			<ExtraMaintenanceCost>3</ExtraMaintenanceCost>
-		</Row>
-		<Row>
-			<Class>UNITCLASS_VOLLEY_GUN</Class>
-			<Type>UNIT_INCAN_SLINGER</Type>
-			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
-			<BaseSightRange>1</BaseSightRange>
-			<Combat>10</Combat>
-			<RangedCombat>30</RangedCombat>
-			<Cost>100</Cost>
-			<Moves>2</Moves>
-			<Range>2</Range>
-			<CombatClass>UNITCOMBAT_SIEGE</CombatClass>
-			<Domain>DOMAIN_LAND</Domain>
-			<DefaultUnitAI>UNITAI_RANGED</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_INCAN_SLINGER</Description>
-			<Civilopedia>TXT_KEY_CIV5_INCA_SLINGER_TEXT</Civilopedia>
-			<Strategy>TXT_KEY_SP_UNITS_ARCHERY_UNITS_STRATEGY</Strategy>
-			<Help>TXT_KEY_PROMOTION_ARCHERY_COMBAT_HELP</Help>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
-			<Pillage>true</Pillage>
-			<ObsoleteTech>TECH_BALLISTICS</ObsoleteTech>
-			<GoodyHutUpgradeUnitClass>UNITCLASS_GATLINGGUN</GoodyHutUpgradeUnitClass>
-			<AdvancedStartCost>15</AdvancedStartCost>
-			<XPValueAttack>3</XPValueAttack>
-			<XPValueDefense>3</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_U_INCAN_SLINGER</UnitArtInfo>
-			<IconAtlas>DLC02_UNIT_ATLAS</IconAtlas>
-			<UnitFlagAtlas>DLC02_UNIT_FLAG_ATLAS</UnitFlagAtlas>
-			<UnitFlagIconOffset>0</UnitFlagIconOffset>
-			<PortraitIndex>0</PortraitIndex>
-			<ExtraMaintenanceCost>2</ExtraMaintenanceCost>
 		</Row>
 		
 		<Row>
@@ -1112,6 +1112,10 @@
 			<UnitType>UNIT_BABYLONIAN_BOWMAN</UnitType>
 			<UnitClassType>UNITCLASS_CROSSBOWMAN</UnitClassType>
 		</Row>
+		<Row>
+			<UnitType>UNIT_INCAN_SLINGER</UnitType>
+			<UnitClassType>UNITCLASS_CROSSBOWMAN</UnitClassType>
+		</Row>
 
 		<Row>
 			<UnitType>UNIT_CROSSBOWMAN</UnitType>
@@ -1128,10 +1132,6 @@
 
 		<Row>
 			<UnitType>UNIT_VOLLEY_GUN</UnitType>
-			<UnitClassType>UNITCLASS_GATLINGGUN</UnitClassType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_INCAN_SLINGER</UnitType>
 			<UnitClassType>UNITCLASS_GATLINGGUN</UnitClassType>
 		</Row>
 
@@ -1293,6 +1293,10 @@
 			<UnitType>UNIT_CHINESE_CHUKONU</UnitType>
 			<PromotionType>PROMOTION_GENERAL_STACKING</PromotionType>
 		</Row>
+		<Row>
+			<UnitType>UNIT_CHINESE_CHUKONU</UnitType>
+			<PromotionType>PROMOTION_MOBILITY</PromotionType>
+		</Row>
 
 		<Row>
 			<UnitType>UNIT_MAYAN_ATLATLIST</UnitType>
@@ -1331,6 +1335,10 @@
 		<Row>
 			<UnitType>UNIT_INCAN_SLINGER</UnitType>
 			<PromotionType>PROMOTION_CAN_MOVE_AFTER_ATTACKING</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_INCAN_SLINGER</UnitType>
+			<PromotionType>PROMOTION_ROLLING_STONE</PromotionType>
 		</Row>
 
 

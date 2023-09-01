@@ -639,12 +639,12 @@
 
 		<Row>
 			<Type>BUILD_CREATE_JUNGLE</Type>
-			<PrereqTech>TECH_ECOLOGY</PrereqTech>
+			<PrereqTech>TECH_PENICILIN</PrereqTech>
 			<ImprovementType>IMPROVEMENT_CREATE_JUNGLE_MOD</ImprovementType>
 			<Description>TXT_KEY_BUILD_CREATE_JUNGLE</Description>
 			<Help>TXT_KEY_BUILD_CREATE_JUNGLE_HELP</Help>
 			<EntityEvent>ENTITY_EVENT_CHOP</EntityEvent>
-			<Time>2000</Time>
+			<Time>1600</Time>
 			<HotKey>KB_C</HotKey>
 			<OrderPriority>1</OrderPriority>
 			<AltDown>1</AltDown>
@@ -808,26 +808,6 @@
 	
 
 	<Improvement_Yields>
-		<!--<Row>
-			<ImprovementType>IMPROVEMENT_CITADEL</ImprovementType>
-			<YieldType>YIELD_FOOD</YieldType>
-			<Yield>-9</Yield>
-		</Row>
-		<Row>
-			<ImprovementType>IMPROVEMENT_CITADEL</ImprovementType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>-9</Yield>
-		</Row>
-		<Row>
-			<ImprovementType>IMPROVEMENT_CITADEL</ImprovementType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>-9</Yield>
-		</Row>
-		<Row>
-			<ImprovementType>IMPROVEMENT_CITADEL</ImprovementType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>-9</Yield>
-		</Row>-->
 		
 		<Update>
 			<Set Yield="10"/>

@@ -17130,5 +17130,12 @@
 		<Replace Tag="TXT_KEY_CITYVIEW_SPECIALIST_TOOLTIP">
 			<Text>Left-Click to Add a {1_Specialist}; [NEWLINE]Right-click to Remove a {1_Specialist}.</Text>
 		</Replace>
+
+		<Replace Tag="TXT_KEY_PROMOTION_ROLLING_STONE">
+			<Text>Rolling Stone</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_ROLLING_STONE_HELP">
+			<Text>Cause extra 15% Damage to all enemy units [COLOR_POSITIVE_TEXT]Adjacent[ENDCOLOR] to the target unit.</Text>
+		</Replace>
 	</Language_en_US>
 </GameData>

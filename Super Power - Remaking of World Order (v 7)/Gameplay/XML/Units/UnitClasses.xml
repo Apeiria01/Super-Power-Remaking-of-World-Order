@@ -539,21 +539,25 @@
 			<Type>UNITCLASS_NAVAL_MILITIA</Type>
 			<Description>TXT_KEY_UNIT_NAVAL_MILITIA</Description>
 			<DefaultUnit>UNIT_NAVAL_MILITIA</DefaultUnit>
+			<MaxPlayerInstances>10</MaxPlayerInstances>
 		</Row>
 		<Row>
 			<Type>UNITCLASS_MONITOR_SHIP</Type>
 			<Description>TXT_KEY_UNIT_MONITOR_SHIP</Description>
 			<DefaultUnit>UNIT_MONITOR_SHIP</DefaultUnit>
+			<MaxPlayerInstances>10</MaxPlayerInstances>
 		</Row>
 		<Row>
 			<Type>UNITCLASS_CORVETTE</Type>
 			<Description>TXT_KEY_UNIT_CORVETTE</Description>
 			<DefaultUnit>UNIT_CORVETTE</DefaultUnit>
+			<MaxPlayerInstances>10</MaxPlayerInstances>
 		</Row>
 		<Row>
 			<Type>UNITCLASS_LITTORAL_COMBAT_SHIP</Type>
 			<Description>TXT_KEY_UNIT_LITTORAL_COMBAT_SHIP</Description>
 			<DefaultUnit>UNIT_LITTORAL_COMBAT_SHIP</DefaultUnit>
+			<MaxPlayerInstances>10</MaxPlayerInstances>
 		</Row>
 		
 		<Row>
