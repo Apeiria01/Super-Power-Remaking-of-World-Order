@@ -69,6 +69,8 @@
 			<ShortDescription>TXT_KEY_TRAIT_ENHANCED_CULTURE_SHORT</ShortDescription>
 			<CityCultureBonus>3</CityCultureBonus>
 			<FreeBuilding>BUILDING_TB_ENHANCED_CULTURE</FreeBuilding>
+      <FreePolicyWhenFirstConquerMajorCapital>1</FreePolicyWhenFirstConquerMajorCapital>
+      <InstantTourismBombWhenFirstConquerMajorCapital>4</InstantTourismBombWhenFirstConquerMajorCapital>
 		</Row>
 		<Row>
 			<Type>TRAIT_CONVERTS_LAND_BARBARIANS</Type>

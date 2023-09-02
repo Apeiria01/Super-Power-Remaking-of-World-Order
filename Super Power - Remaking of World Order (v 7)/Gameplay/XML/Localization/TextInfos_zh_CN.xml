@@ -5577,6 +5577,7 @@
 			<Text>
 				[ICON_BULLET]所有城市+3[ICON_CULTURE]文化（不会过时）。
 				[NEWLINE][ICON_BULLET]所有杰作+1[ICON_TOURISM]魅力产出。
+				[NEWLINE][ICON_BULLET]首次征服主要文明的原始首都后，获得一条免费的[ICON_CULTURE]社会政策，并向所有已谋面文明传播一次性的[ICON_TOURISM]旅游产出。
 			</Text>
 		</Replace>
 
