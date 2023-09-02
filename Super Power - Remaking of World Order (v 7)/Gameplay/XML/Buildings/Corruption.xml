@@ -215,6 +215,7 @@
 			<PortraitIndex>61</PortraitIndex>
 			<PlotCultureCostModifier>-50</PlotCultureCostModifier>
 			<PlotBuyCostModifier>-50</PlotBuyCostModifier>
+			<GreatWorkCount>-1</GreatWorkCount>
 		</Row>
 		
 
