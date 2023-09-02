@@ -7170,10 +7170,6 @@
 			</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_CULTURAL_REVOLUTION_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]文化大革命[ENDCOLOR][NEWLINE]向其他意识形态国家输出的[ICON_TOURISM]魅力+50%，向其他秩序意识形态国家输出的[ICON_TOURISM]魅力+25%。</Text>
-		</Replace>
-
 		<Replace Tag="TXT_KEY_POLICY_SPACEFLIGHT_PIONEERS_HELP">
 			<Text>[COLOR_POSITIVE_TEXT]航天先驱[ENDCOLOR][NEWLINE]可以用大工程师加速建造太空部件。每位科学家+2[ICON_PRODUCTION]产能、工程师+2[ICON_RESEARCH]科研。[ICON_CAPITAL]首都旁出现一位大科学家。</Text>
 		</Replace>
@@ -7186,15 +7182,18 @@
 			<Text>[COLOR_POSITIVE_TEXT]移民安置[ENDCOLOR][NEWLINE]移民等同于3[ICON_CITIZEN]人口（生产移民城市失去3[ICON_CITIZEN]人口，新建城市直接获得3[ICON_CITIZEN]人口，移民加入新城市也会增加其3[ICON_CITIZEN]人口）。所有城市因污染导致的[ICON_FOOD]食物损失-15%。</Text>
 		</Replace>
 
-		<!--<Replace Tag="TXT_KEY_POLICY_ACADEMY_SCIENCES">
+		<Replace Tag="TXT_KEY_POLICY_ACADEMY_SCIENCES">
 			<Text>科学社会主义</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_ACADEMY_SCIENCES_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]科学社会主义[ENDCOLOR][NEWLINE]对所有[ICON_HAPPINESS_1]快乐度低于我方的文明+25%[ICON_TOURISM]魅力。每座城市+1[ICON_HAPPINESS_1]快乐。</Text>
+			<Text>
+			[COLOR_POSITIVE_TEXT]科学社会主义[ENDCOLOR]
+			[NEWLINE]向其他意识形态国家输出的[ICON_TOURISM]魅力+50%，向其他秩序意识形态国家输出的[ICON_TOURISM]魅力+25%。
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_ACADEMY_SCIENCES_TEXT">
 			<Text>“科学社会主义”是马克思与恩格斯为区别于“空想社会主义”而提出的社会-政治-经济学说。“科学社会主义”与“空想社会主义”的区别在于该理论是基于现实，以实证精神进行推演的理论，这使其拥有辩证性和可操作性，同时又难免在各种情况下被各种目的不一的人群以自己的方式加以“解读”。</Text>
-		</Replace>-->
+		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_PARTY_LEADERSHIP">
 			<Text>上山下乡运动</Text>
@@ -8488,6 +8487,12 @@
 
 		<Row Tag="TXT_KEY_ERA_8">
 			<Text>信息时代</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ERA_8_SHORT_SP">
+			<Text>信息</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ERA_8_ABBREV">
+			<Text>信息</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_ERA_9">

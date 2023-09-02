@@ -512,7 +512,7 @@
 		</Update>
 		<Update>
 			<Set PolicyBranchType="NULL"/>
-			<Where Type="POLICY_ACADEMY_SCIENCES"/>
+			<Where Type="POLICY_CULTURAL_REVOLUTION"/>
 		</Update>
 		<Update>
 			<Set PolicyBranchType="NULL"/>
@@ -595,8 +595,8 @@
 			<Where Type="POLICY_RESETTLEMENT"/>
 		</Update>
 		<Update>
-			<Set SharedIdeologyTourismModifier="-25" Level="3"/>
-			<Where Type="POLICY_CULTURAL_REVOLUTION"/>
+			<Set SharedIdeologyTourismModifier="25" DifferentIdeologyTourismModifier="50" Level="3"/>
+			<Where Type="POLICY_ACADEMY_SCIENCES"/>
 		</Update>
 		<Update>
 			<Set LessHappyTourismModifier="0" Level="2" CorruptionLevelReduceByOne="1"/>
@@ -1906,7 +1906,7 @@
 			<Flavor>44</Flavor>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_CULTURAL_REVOLUTION</PolicyType>
+			<PolicyType>POLICY_ACADEMY_SCIENCES</PolicyType>
 			<FlavorType>FLAVOR_CULTURE</FlavorType>
 			<Flavor>44</Flavor>
 		</Row>
