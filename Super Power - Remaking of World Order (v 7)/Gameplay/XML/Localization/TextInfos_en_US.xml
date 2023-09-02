@@ -8149,11 +8149,6 @@
 			[NEWLINE]-33%[ICON_GOLD]Maintenance of these buildings.</Text>
 		</Replace>
 
-
-		<Replace Tag="TXT_KEY_POLICY_CULTURAL_REVOLUTION_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]Cultural Revolution[ENDCOLOR][NEWLINE]+50% Tourism [ICON_TOURISM] to other Ideology Civilizations, +25% Tourism [ICON_TOURISM] to other Order civilizations.</Text>
-		</Replace>
-		
 		<Replace Tag="TXT_KEY_POLICY_SPACEFLIGHT_PIONEERS_HELP">
 			<Text>[COLOR_POSITIVE_TEXT]Spaceflight Pioneers[ENDCOLOR][NEWLINE]May finish Spaceship parts with Great Engineers. Each Scientist +2 [ICON_PRODUCTION] Production, Engineer +2 [ICON_RESEARCH] Science. A Great Scientist appear outside the [ICON_CAPITAL] Capital.</Text>
 		</Replace>
@@ -8162,24 +8157,22 @@
 			<Text>[COLOR_POSITIVE_TEXT]Workers' Faculties[ENDCOLOR][NEWLINE]+15% [ICON_PRODUCTION] Production, [ICON_RESEARCH] Science and [ICON_TOURISM] Tourism output from each Factory.</Text>
 		</Replace>
 
-
-
-
 		<Replace Tag="TXT_KEY_POLICY_RESETTLEMENT_HELP" >
 			<Text>[COLOR_POSITIVE_TEXT]Resettlement[ENDCOLOR][NEWLINE]Settler equals 3 [ICON_CITIZEN] Population (New city start with 3 [ICON_CITIZEN] Population or add 3 [ICON_CITIZEN] Population when joining the existing city). Reduces the [ICON_FOOD] Food Growth loss due to the Pollution by 15% in all cities.</Text>
 		</Replace>
 
-
-
-		<!--<Replace Tag="TXT_KEY_POLICY_ACADEMY_SCIENCES">
+		<Replace Tag="TXT_KEY_POLICY_ACADEMY_SCIENCES">
 			<Text>Scientific Socialism</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_ACADEMY_SCIENCES_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]Scientific Socialism[ENDCOLOR][NEWLINE]+1[ICON_HAPPINESS_1]Happiness for each city and +25% Tourism [ICON_TOURISM] to civilizations that have less [ICON_HAPPINESS_1] Happiness.</Text>
+			<Text>
+			[COLOR_POSITIVE_TEXT]Scientific Socialism[ENDCOLOR]
+			[NEWLINE]+50% Tourism [ICON_TOURISM] to other Ideology Civilizations, +25% Tourism [ICON_TOURISM] to other Order civilizations.
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_ACADEMY_SCIENCES_TEXT">
 			<Text>Scientific socialism is the term used by Friedrich Engels[1] to describe the social-political-economic theory first pioneered by Karl Marx. The purported reason why this socialism is "scientific socialism" (as opposed to "utopian socialism") is because its theories are held to an empirical standard, observations are essential to its development, and these can result in changes and/or falsification of elements of the theory.</Text>
-		</Replace>-->
+		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_PARTY_LEADERSHIP">
 			<Text>Down to the Countryside Movement</Text>
@@ -9408,6 +9401,12 @@
 
 		<Row Tag="TXT_KEY_ERA_8">
 			<Text>Information Era</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ERA_8_SHORT_SP">
+			<Text>Information</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ERA_8_ABBREV">
+			<Text>IE</Text>
 		</Row>
 		
 		<Row Tag="TXT_KEY_ERA_9">

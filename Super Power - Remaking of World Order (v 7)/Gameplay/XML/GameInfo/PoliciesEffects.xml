@@ -691,11 +691,6 @@
 		</Row>-->
 
 		<Row>
-			<PolicyType>POLICY_CULTURAL_REVOLUTION</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_CULTURAL_REVOLUTION</BuildingClassType>
-			<TourismModifier>50</TourismModifier>
-		</Row>
-		<Row>
 			<PolicyType>POLICY_WORKERS_FACULTIES</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_FACTORY</BuildingClassType>
 			<TourismModifier>15</TourismModifier>
@@ -2324,10 +2319,6 @@
 			<PolicyType>POLICY_EXPLORATION</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_EXPLORATION_REMOVE_DEBUFF</BuildingClassType>
 		</Row>
-		<Row>
-			<PolicyType>POLICY_CULTURAL_REVOLUTION</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_CULTURAL_REVOLUTION</BuildingClassType>
-		</Row>
 	</Policy_FreeBuildingClass>
 
 	<Policy_FreeBuildingClassCapital>
@@ -2414,11 +2405,6 @@
 			<Type>BUILDINGCLASS_ENTREPRENEURSHIP</Type>
 			<DefaultBuilding>BUILDING_ENTREPRENEURSHIP</DefaultBuilding>
 			<Description>TXT_KEY_POLICY_ENTREPRENEURSHIP</Description>
-		</Row>
-		<Row>
-			<Type>BUILDINGCLASS_CULTURAL_REVOLUTION</Type>
-			<DefaultBuilding>BUILDING_CULTURAL_REVOLUTION</DefaultBuilding>
-			<Description>TXT_KEY_POLICY_CULTURAL_REVOLUTION</Description>
 		</Row>
 	</BuildingClasses>
 	<Buildings>
@@ -2575,19 +2561,6 @@
 			<IconAtlas>POLICY_ATLAS_EXP2</IconAtlas>
 			<Description>TXT_KEY_POLICY_ENTREPRENEURSHIP</Description>
 			<Help>TXT_KEY_POLICY_ENTREPRENEURSHIP_HELP</Help>
-			<GreatWorkCount>-1</GreatWorkCount>
-		</Row>
-		<Row>
-			<Type>BUILDING_CULTURAL_REVOLUTION</Type>
-			<BuildingClass>BUILDINGCLASS_CULTURAL_REVOLUTION</BuildingClass>
-			<Cost>-1</Cost>
-			<NeverCapture>true</NeverCapture>
-			<NukeImmune>true</NukeImmune>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<PortraitIndex>11</PortraitIndex>
-			<IconAtlas>POLICY_ATLAS_EXP2</IconAtlas>
-			<Description>TXT_KEY_POLICY_CULTURAL_REVOLUTION</Description>
-			<Help>TXT_KEY_POLICY_CULTURAL_REVOLUTION_HELP</Help>
 			<GreatWorkCount>-1</GreatWorkCount>
 		</Row>
 	</Buildings>

@@ -7059,11 +7059,7 @@
 			<Text>[COLOR_POSITIVE_TEXT]少年先鋒隊[ENDCOLOR][NEWLINE]所有發電站+1[ICON_HAPPINESS_1]本地幸福度（不包括擴容機組）。
 			[NEWLINE]這些建築的維護費-33%[ICON_GOLD]。</Text>
 		</Replace>
-		
-		<Replace Tag="TXT_KEY_POLICY_CULTURAL_REVOLUTION_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]文化大革命[ENDCOLOR][NEWLINE]向其他意识形态国家输出的[ICON_TOURISM]旅遊業績+50%，向其他秩序意识形态国家输出的[ICON_TOURISM]旅遊業績+25%。</Text>
-		</Replace>
-		
+
 		<Replace Tag="TXT_KEY_POLICY_SPACEFLIGHT_PIONEERS_HELP">
 			<Text>[COLOR_POSITIVE_TEXT]航天先驅[ENDCOLOR][NEWLINE]可以用大工程師加速建造太空部件。每位科學家+2[ICON_PRODUCTION]生產力、工程師+2[ICON_RESEARCH]科技值。[ICON_CAPITAL]首都旁出現一位大科學家。</Text>
 		</Replace>
@@ -7076,15 +7072,18 @@
 			<Text>[COLOR_POSITIVE_TEXT]移民安置[ENDCOLOR][NEWLINE]移民等同於3[ICON_CITIZEN]人口（生產移民城市失去3[ICON_CITIZEN]人口，新建城市直接獲得3[ICON_CITIZEN]人口，移民加入新城市也會增加其3[ICON_CITIZEN]人口）。所有城市因污染導致的[ICON_FOOD]食物損失-15%。</Text>
 		</Replace>
 
-		<!--<Replace Tag="TXT_KEY_POLICY_ACADEMY_SCIENCES">
+		<Replace Tag="TXT_KEY_POLICY_ACADEMY_SCIENCES">
 			<Text>科學社會主義</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_ACADEMY_SCIENCES_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]科學社會主義[ENDCOLOR][NEWLINE]對所有[ICON_HAPPINESS_1]幸福度低於我方的文明+25%[ICON_TOURISM]旅遊業績。每座城市+1[ICON_HAPPINESS_1]幸福度。</Text>
+			<Text>
+			[COLOR_POSITIVE_TEXT]科學社會主義[ENDCOLOR]
+			[NEWLINE]向其他意识形态国家输出的[ICON_TOURISM]旅遊業績+50%，向其他秩序意识形态国家输出的[ICON_TOURISM]旅遊業績+25%。
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_ACADEMY_SCIENCES_TEXT">
 			<Text>“科學社會主義”是馬克思與恩格斯為區別於“空想社會主義”而提出的社會-政治-經濟學說。“科學社會主義”與“空想社會主義”的區別在於該理論是基於現實，以實證精神進行推演的理論，這使其擁有辯證性和可操作性，同時又難免在各種情況下被各種目的不一的人群以自己的方式加以“解讀”。</Text>
-		</Replace>-->
+		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_PARTY_LEADERSHIP">
 			<Text>上山下鄉運動</Text>
@@ -8375,6 +8374,12 @@
 
 		<Row Tag="TXT_KEY_ERA_8">
 			<Text>信息時代</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ERA_8_SHORT_SP">
+			<Text>信息</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ERA_8_ABBREV">
+			<Text>信息</Text>
 		</Row>
 		
 		<Row Tag="TXT_KEY_ERA_9">

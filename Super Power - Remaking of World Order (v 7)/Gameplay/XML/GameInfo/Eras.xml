@@ -398,7 +398,7 @@
 			<ID>8</ID>
 			<Type>ERA_INFORMATION</Type>
 			<Description>TXT_KEY_ERA_8</Description>
-			<ShortDescription>TXT_KEY_ERA_8_SHORT</ShortDescription>
+			<ShortDescription>TXT_KEY_ERA_8_SHORT_SP</ShortDescription>
 			<Abbreviation>TXT_KEY_ERA_8_ABBREV</Abbreviation>
 			<Strategy>TXT_KEY_ERA_POSTMODERN_STRATEGY</Strategy>
 			<ArtPrefix>MODERN </ArtPrefix>
