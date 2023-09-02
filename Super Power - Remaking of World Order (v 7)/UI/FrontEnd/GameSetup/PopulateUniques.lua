@@ -781,6 +781,7 @@ if not bIsUsedPopulateUniques then
 						Civilization_BuildingClassOverrides.BuildingType IS NOT NULL]]
 						.. ( bnw_mode and " AND Buildings.GreatWorkCount IS NOT -1" or "" ) );
 
+
 		g_uniqueImprovementsQuery = DB.CreateQuery([[SELECT ID, Description, PortraitIndex, IconAtlas from Improvements
 						WHERE CivilizationType = ?]]);
 	end
