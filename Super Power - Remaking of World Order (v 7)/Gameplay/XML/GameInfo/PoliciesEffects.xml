@@ -2330,10 +2330,6 @@
 			<PolicyType>POLICY_CULT_PERSONALITY</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_AUTOCRACY_FIREWALL</BuildingClassType>
 		</Row>
-		<Row>
-			<PolicyType>POLICY_ENTREPRENEURSHIP</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_ENTREPRENEURSHIP</BuildingClassType>
-		</Row>
 	</Policy_FreeBuildingClassCapital>
 
 	<Policy_FreeBuildingClassCityStates />
@@ -2350,6 +2346,12 @@
 			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
 			<YieldType>YIELD_SCIENCE</YieldType>
 			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_ENTREPRENEURSHIP</PolicyType>
+			<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>1</Yield>
 		</Row>
 	</Policy_SpecialistYieldChanges>
 
@@ -2400,11 +2402,6 @@
 			<Type>BUILDINGCLASS_SCHOLASTICISM</Type>
 			<DefaultBuilding>BUILDING_SCHOLASTICISM</DefaultBuilding>
 			<Description>TXT_KEY_BUILDING_SCHOLASTICISM</Description>
-		</Row>
-		<Row>
-			<Type>BUILDINGCLASS_ENTREPRENEURSHIP</Type>
-			<DefaultBuilding>BUILDING_ENTREPRENEURSHIP</DefaultBuilding>
-			<Description>TXT_KEY_POLICY_ENTREPRENEURSHIP</Description>
 		</Row>
 	</BuildingClasses>
 	<Buildings>
@@ -2549,20 +2546,6 @@
 			<Help>TXT_KEY_BUILDING_SCHOLASTICISM_HELP</Help>
 			<GreatWorkCount>-1</GreatWorkCount>
 		</Row>
-
-		<Row>
-			<Type>BUILDING_ENTREPRENEURSHIP</Type>
-			<BuildingClass>BUILDINGCLASS_ENTREPRENEURSHIP</BuildingClass>
-			<Cost>-1</Cost>
-			<NeverCapture>true</NeverCapture>
-			<NukeImmune>true</NukeImmune>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<PortraitIndex>3</PortraitIndex>
-			<IconAtlas>POLICY_ATLAS_EXP2</IconAtlas>
-			<Description>TXT_KEY_POLICY_ENTREPRENEURSHIP</Description>
-			<Help>TXT_KEY_POLICY_ENTREPRENEURSHIP_HELP</Help>
-			<GreatWorkCount>-1</GreatWorkCount>
-		</Row>
 	</Buildings>
 	<Building_YieldChangesPerPop>
 		<Row>
@@ -2605,15 +2588,6 @@
 			<Yield>1</Yield>
 		</Row>
 	</Building_GlobalYieldModifiers>
-
-	<Building_SpecialistYieldChanges>
-		<Row>
-			<BuildingType>BUILDING_ENTREPRENEURSHIP</BuildingType>
-			<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>1</Yield>
-		</Row>
-	</Building_SpecialistYieldChanges>
 
 	<BuildingClasses>
 		<Row>
