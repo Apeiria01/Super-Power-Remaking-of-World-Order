@@ -15223,5 +15223,10 @@
 		<Replace Tag="TXT_KEY_PROMOTION_ROLLING_STONE_HELP">
 			<Text>对[COLOR_POSITIVE_TEXT]相邻区域[ENDCOLOR]目标伤害+15%。</Text>
 		</Replace>
+
+		<Replace Tag="TXT_KEY_CIV5_HUN_HORSE_ARCHER_HELP_TEXT">
+      <Text>每杀死一名敌军，+2近战和远程战斗力，积累的战斗力升级可继承，但是不能再增加。{TXT_KEY_PROMOTION_HITANDRUN_HELP}</Text>
+		</Replace>
+
 	</Language_zh_CN>
 </GameData>

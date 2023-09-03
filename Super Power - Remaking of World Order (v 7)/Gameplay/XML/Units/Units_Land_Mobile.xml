@@ -1029,7 +1029,7 @@
 			<Description>TXT_KEY_UNIT_HUN_HORSE_ARCHER</Description>
 			<Civilopedia>TXT_KEY_CIV5_HUN_HORSE_ARCHER_TEXT</Civilopedia>
 			<Strategy>TXT_KEY_SP_UNITS_LAND_HIT_AND_RUN_UNITS_STRATEGY</Strategy>
-			<Help>TXT_KEY_PROMOTION_HITANDRUN_HELP</Help>
+			<Help>TXT_KEY_CIV5_HUN_HORSE_ARCHER_HELP_TEXT</Help>
 			<MilitarySupport>true</MilitarySupport>
 			<MilitaryProduction>true</MilitaryProduction>
 			<Pillage>true</Pillage>
@@ -1045,6 +1045,8 @@
 			<PortraitIndex>7</PortraitIndex>
 			<MoveRate>QUADRUPED</MoveRate>
 			<ExtraMaintenanceCost>5</ExtraMaintenanceCost>
+      <CombatStrengthChangeAfterKilling>2</CombatStrengthChangeAfterKilling>
+      <RangedCombatStrengthChangeAfterKilling>2</RangedCombatStrengthChangeAfterKilling>
 		</Row>
 
 		<Row>

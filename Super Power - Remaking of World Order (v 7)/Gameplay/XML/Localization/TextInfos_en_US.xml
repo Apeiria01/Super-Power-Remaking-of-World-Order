@@ -17138,5 +17138,9 @@
 		<Replace Tag="TXT_KEY_PROMOTION_ROLLING_STONE_HELP">
 			<Text>Cause extra 15% Damage to all enemy units [COLOR_POSITIVE_TEXT]Adjacent[ENDCOLOR] to the target unit.</Text>
 		</Replace>
+
+    <Replace Tag="TXT_KEY_CIV5_HUN_HORSE_ARCHER_HELP_TEXT">
+      <Text>Every time you kill an enemy, +2 melee and long-range combat strength. The accumulated combat strength upgrade can be inherited, but cannot be increased. {TXT_KEY_PROMOTION_HITANDRUN_HELP}</Text>
+    </Replace>
 	</Language_en_US>
 </GameData>
