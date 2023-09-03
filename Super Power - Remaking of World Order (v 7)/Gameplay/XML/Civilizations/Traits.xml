@@ -141,7 +141,8 @@
 			<ShortDescription>TXT_KEY_TRAIT_RAZE_AND_HORSES_SHORT</ShortDescription>
 			<!--<RazeSpeedModifier>100</RazeSpeedModifier>-->
 			<LandBarbarianConversionPercent>100</LandBarbarianConversionPercent>
-			
+      <UnitMaxHitPointChangePerRazedCityPop>2</UnitMaxHitPointChangePerRazedCityPop>
+      <UnitMaxHitPointChangePerRazedCityPopLimit>150</UnitMaxHitPointChangePerRazedCityPopLimit>
 		</Row>
 
 		<Row>

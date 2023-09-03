@@ -5560,6 +5560,7 @@
 			<Text>
 				[ICON_BULLET]擊敗蠻族營寨中的單位會加入匈人軍隊。
 				[NEWLINE][ICON_BULLET]夷平城市後獲得當前回合數*10的[ICON_GOLD]金錢、[ICON_RESEARCH]科研、[ICON_CULTURE]文化、[ICON_PEACE]信仰值（最多1000）。
+        [NEWLINE][ICON_BULLET]夷平城市時，每減少一人口，所有位於該城市工作地塊上的戰鬥單位+2最大生命值，該效果的上限是150。
 				[NEWLINE][ICON_BULLET]城市名從其他文明借用。
 			</Text>
 		</Replace>
