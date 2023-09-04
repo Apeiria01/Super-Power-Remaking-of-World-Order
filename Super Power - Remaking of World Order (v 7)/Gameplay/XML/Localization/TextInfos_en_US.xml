@@ -4151,11 +4151,11 @@
 		<!-- Help tags -->
 		<Row Tag="TXT_KEY_WONDER_SAN_MARCO_HELP">
 			<Text>
-				+50% [ICON_TOURISM] Tourism output from Great Works in all cities.
-				[NEWLINE][NEWLINE]+50% [ICON_CULTURE] Culture output in the city.
-				[NEWLINE][NEWLINE]Two Great Artist appear in the city where the building is built.
+				[ICON_BULLET]+50% [ICON_TOURISM] Tourism output from Great Works in the city.
+				[NEWLINE][ICON_BULLET]+50% [ICON_CULTURE] Culture output in the city.
+				[NEWLINE][ICON_BULLET]Two Great Artist appear in the city where the building is built.
+				[NEWLINE][ICON_BULLET]+1 city work range.
 				[NEWLINE][NEWLINE]Must have built a Museum in Venice.
-				[NEWLINE][NEWLINE]+1 city work range.
 			</Text>
 		</Row>
 
@@ -4737,24 +4737,6 @@
 			<Text>A convention center (American English, conference centre outside the USA) is a large building that is designed to hold a convention, where individuals and groups gather to promote and share common interests. </Text>
 		</Row>
 
-		<!-- Description tags --><!--
-		<Row Tag="TXT_KEY_BUILDING_NATIONAL_FINANCE">
-			<Text>National Industrial Park</Text>
-		</Row>
-		--><!-- Help tags --><!--
-		<Row Tag="TXT_KEY_BUILDING_NATIONAL_FINANCE_HELP">
-			<Text>+1 [ICON_PRODUCTION] Production per 1 [ICON_CITIZEN] Citizen in this city. [NEWLINE][NEWLINE]Must have a Factory in all Cities. The cost goes up the more cities there are in the empire.</Text>
-		</Row>
-		<Row>
-			<Tag>TXT_KEY_BUILDING_NATIONAL_FINANCE_STRATEGY</Tag>
-			<Text>National Industrial Park can greatly improve the production in large cities. </Text>
-		</Row>
-		--><!-- Pedia tags --><!--
-		<Row Tag="TXT_KEY_BUILDING_NATIONAL_FINANCE_PEDIA">
-			<Text>An industrial park (also known as industrial estate, trading estate) is an area zoned and planned for the purpose of industrial development. </Text>
-		</Row>-->
-
-
 		<!-- Description tags -->
 		<Row Tag="TXT_KEY_BUILDING_NATIONAL_STOCK_EXCHANGE">
 			<Text>National Stock Exchange</Text>
@@ -5210,15 +5192,6 @@
 
 
 	<!-- ***************************New Buildings for Special Building Effects***************************-->
-		<Row>
-			<Tag>TXT_KEY_BUILDING_TRADEINCOME_BOST</Tag>
-			<Text>+8 [ICON_GOLD] Gold for each International Trade Route from this city.</Text>
-		</Row>
-		<Row>
-			<Tag>TXT_KEY_BUILDING_TOURISM_GREATWORKS</Tag>
-			<Text>The [ICON_TOURISM] Tourism output from Great Works +50% in this city.</Text>
-		</Row>
-
 		<Row>
 			<Tag>TXT_KEY_BUILDING_MANPOWER_BONUS</Tag>
 			<Text>Provides additional [ICON_RES_MANPOWER] Manpower.</Text>
@@ -10371,10 +10344,9 @@
 
 		<Replace Tag="TXT_KEY_TRAIT_RAZE_AND_HORSES">
 			<Text>
-				[ICON_BULLET]Defeated Barbarian unit in encampments will join you. 
+				[ICON_BULLET]Defeated Barbarian unit in encampments will join you. Borrow City names from other in-game Civs.
 				[NEWLINE][ICON_BULLET]Receive [ICON_CULTURE] Culture, [ICON_RESEARCH] Science, [ICON_GOLD] Gold and [ICON_PEACE] Faith after destroying a city (amount = 10*turn, 1,000 maximum). 
-        [NEWLINE][ICON_BULLET] When razing a city, for every one population reduction, all combat units located on the city's work plot will have +2 maximum HP, and the upper limit of this effect is 150.
-				[NEWLINE][ICON_BULLET]Borrow City names from other in-game Civs.
+       			[NEWLINE][ICON_BULLET]When razing a city, for every one population reduction, all combat units located on the city's work plot will have +2 maximum [ICON_SILVER_FIST] HP, and the upper limit of this effect is 150.
 			</Text>
 		</Replace>
 

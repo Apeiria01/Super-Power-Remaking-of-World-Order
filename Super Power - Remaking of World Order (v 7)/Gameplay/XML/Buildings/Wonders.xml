@@ -379,7 +379,7 @@
 			<NeverCapture>true</NeverCapture>
 			<IconAtlas>BW_ATLAS_1</IconAtlas>
 			<PortraitIndex>20</PortraitIndex>
-			<FreeBuilding>BUILDINGCLASS_TOURISM_GREATWORKS_THEATRE</FreeBuilding>
+			<GreatWorksTourismModifierGlobal>50</GreatWorksTourismModifierGlobal>
 		</Row>
 		<Row>
 			<Type>BUILDING_NATIONAL_SCULPTURE</Type>
@@ -503,7 +503,7 @@
 			<NeverCapture>true</NeverCapture>
 			<IconAtlas>SPWondersUB_ATLAS</IconAtlas>
 			<PortraitIndex>50</PortraitIndex>
-			<FreeBuilding>BUILDINGCLASS_TOURISM_GREATWORKS_HERMITAGE</FreeBuilding>
+			<GreatWorksTourismModifierGlobal>50</GreatWorksTourismModifierGlobal>
 		</Row>
 
 
@@ -1896,9 +1896,9 @@
 			<PortraitIndex>5</PortraitIndex>
 			<WonderSplashImage>WonderConceptNeuschwanstein.dds</WonderSplashImage>
 			<WonderSplashAudio>AS2D_WONDER_SPEECH_NEUSCHWANSTEIN</WonderSplashAudio>
-			<FreeBuilding>BUILDINGCLASS_TOURISM_GREATWORKS</FreeBuilding>
 			<EnhancedYieldTech>TECH_ARCHITECTURE</EnhancedYieldTech>
 			<TechEnhancedTourism>6</TechEnhancedTourism>
+			<GreatWorksTourismModifierGlobal>50</GreatWorksTourismModifierGlobal>
 		</Row>
 		<Row>
 			<Type>BUILDING_UFFIZI</Type>
@@ -2358,7 +2358,7 @@
 			<PortraitIndex>4</PortraitIndex>
 			<WonderSplashImage>PEARL_TOWER_splash.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,B</WonderSplashAnchor>
-			<FreeBuilding>BUILDINGCLASS_TOURISM_LANDMARKS</FreeBuilding>
+			<LandmarksTourismPercentGlobal>50</LandmarksTourismPercentGlobal>
 		</Row>
 		<Row>
 			<Type>BUILDING_SYDNEY_OPERA_HOUSE</Type>
@@ -2830,64 +2830,6 @@
 	<!-- ***************************New Buildings for Special Building Effects***************************-->
 
 	<Buildings>
-		<Row>
-			<Type>BUILDING_TOURISM_GREATWORKS</Type>
-			<BuildingClass>BUILDINGCLASS_TOURISM_GREATWORKS</BuildingClass>
-			<Cost>-1</Cost>
-			<Description>TXT_KEY_BUILDING_TOURISM_GREATWORKS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TOURISM_GREATWORKS</Civilopedia>
-			<MinAreaSize>-1</MinAreaSize>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<NeverCapture>true</NeverCapture>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<GreatWorksTourismModifier>50</GreatWorksTourismModifier>
-			<GreatWorkCount>-1</GreatWorkCount>
-		</Row>
-		<Row>
-			<Type>BUILDING_TOURISM_GREATWORKS_THEATRE</Type>
-			<BuildingClass>BUILDINGCLASS_TOURISM_GREATWORKS_THEATRE</BuildingClass>
-			<Cost>-1</Cost>
-			<Description>TXT_KEY_BUILDING_TOURISM_GREATWORKS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TOURISM_GREATWORKS</Civilopedia>
-			<MinAreaSize>-1</MinAreaSize>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<NeverCapture>true</NeverCapture>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<GreatWorksTourismModifier>50</GreatWorksTourismModifier>
-			<GreatWorkCount>-1</GreatWorkCount>
-		</Row>
-		<Row>
-			<Type>BUILDING_TOURISM_GREATWORKS_HERMITAGE</Type>
-			<BuildingClass>BUILDINGCLASS_TOURISM_GREATWORKS_HERMITAGE</BuildingClass>
-			<Cost>-1</Cost>
-			<Description>TXT_KEY_BUILDING_TOURISM_GREATWORKS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TOURISM_GREATWORKS</Civilopedia>
-			<MinAreaSize>-1</MinAreaSize>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<NeverCapture>true</NeverCapture>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<GreatWorksTourismModifier>50</GreatWorksTourismModifier>
-			<GreatWorkCount>-1</GreatWorkCount>
-		</Row>
-		<Row>
-			<Type>BUILDING_TOURISM_LANDMARKS</Type>
-			<BuildingClass>BUILDINGCLASS_TOURISM_LANDMARKS</BuildingClass>
-			<Cost>-1</Cost>
-			<Description>TXT_KEY_BUILDING_TOURISM_GREATWORKS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TOURISM_GREATWORKS</Civilopedia>
-			<MinAreaSize>-1</MinAreaSize>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<NeverCapture>true</NeverCapture>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<LandmarksTourismPercent>50</LandmarksTourismPercent>
-			<GreatWorkCount>-1</GreatWorkCount>
-		</Row>
-
-
 		<Row>
 			<Type>BUILDING_MOTHER_CALLS_MANPOWER</Type>
 			<BuildingClass>BUILDINGCLASS_MOTHER_CALLS_MANPOWER</BuildingClass>

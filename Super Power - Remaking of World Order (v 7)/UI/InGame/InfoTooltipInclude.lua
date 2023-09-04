@@ -1151,7 +1151,9 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		TradeRouteTargetBonus = "[ICON_INTERNATIONAL_TRADE]" .. L"TXT_KEY_TRADE_TO_OTHER_CITY_BONUS" .. " %+i"..g_currencyIcon.."[ICON_ARROW_RIGHT]",
 		NumTradeRouteBonus = "%+i[ICON_INTERNATIONAL_TRADE]" .. L"TXT_KEY_DECLARE_WAR_TRADE_ROUTES_HEADER",
 		LandmarksTourismPercent = L"TXT_KEY_LTP11" .. "%i%%[ICON_TOURISM]",	-- TOTO
+		LandmarksTourismPercentGlobal = L"TXT_KEY_GLOBAL1" .. L"TXT_KEY_LTP11" .. "%i%%[ICON_TOURISM]",	-- TOTO
 		GreatWorksTourismModifier = L"TXT_KEY_GWTM111" .. "%+i%%[ICON_TOURISM]",-- TOTO
+		GreatWorksTourismModifierGlobal = L"TXT_KEY_GLOBAL1" .. L"TXT_KEY_GWTM111" .. "%+i%%[ICON_TOURISM]",-- TOTO
 		XBuiltTriggersIdeologyChoice = L("TXT_KEY_XBTIC1", "%i"),			-- TOTO
 		TradeRouteSeaDistanceModifier = L"TXT_KEY_TSDM1" .. "%+i%%",
 	--y	TradeRouteSeaGoldBonus = L"TXT_KEY_TRSGB1" .. "%+i%%[ICON_GOLD]",	-- TOTO

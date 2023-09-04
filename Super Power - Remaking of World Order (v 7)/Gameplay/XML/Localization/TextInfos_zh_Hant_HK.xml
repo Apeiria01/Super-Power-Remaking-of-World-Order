@@ -1561,7 +1561,14 @@
 		</Row>
 		<!-- Help tags -->
 		<Row Tag="TXT_KEY_WONDER_SAN_MARCO_HELP">
-			<Text>所有城市傑作[ICON_TOURISM]旅遊業績產出+50%，本城市[ICON_CULTURE]文化值產出+50%。[NEWLINE][NEWLINE]建成奇跡的城市附近出現兩位大藝術家。[NEWLINE]擁有4個美術傑作展位。[NEWLINE][NEWLINE]必須在威尼斯擁有博物館才能建造。+1城市工作範圍。</Text>
+			<Text>
+			[ICON_BULLET]本城市[ICON_TOURISM]旅遊業績產出產出+50%。
+			[NEWLINE][ICON_BULLET]本城市[ICON_CULTURE]文化產出+50%。
+			[NEWLINE][ICON_BULLET]城市附近出現兩位大藝術家。
+			[NEWLINE][ICON_BULLET]擁有4個美術傑作展位。
+			[NEWLINE][ICON_BULLET]本城市工作範圍+1。
+			[NEWLINE][NEWLINE]必須在威尼斯擁有博物館才能建造。
+			</Text>
 		</Row>
 		<!-- Pedia tags -->
 		<Row Tag="TXT_KEY_WONDER_SAN_MARCO_PEDIA">
@@ -2461,16 +2468,6 @@
 		</Row>
 			
 	<!-- ***************************New Buildings for Special Building Effects***************************-->
-		<Row>
-			<Tag>TXT_KEY_BUILDING_TRADEINCOME_BOST</Tag>
-			<Text>國際商路+8[ICON_GOLD]金幣</Text>
-		</Row>
-		
-		<Row>
-			<Tag>TXT_KEY_BUILDING_TOURISM_GREATWORKS</Tag>
-			<Text>傑作[ICON_TOURISM]旅遊業績值+50%</Text>
-		</Row>
-		
 		<Row>
 			<Tag>TXT_KEY_BUILDING_MANPOWER_BONUS</Tag>
 			<Text>提供額外[ICON_RES_MANPOWER]人力</Text>
@@ -5558,10 +5555,9 @@
 
 		<Replace Tag="TXT_KEY_TRAIT_RAZE_AND_HORSES">
 			<Text>
-				[ICON_BULLET]擊敗蠻族營寨中的單位會加入匈人軍隊。
-				[NEWLINE][ICON_BULLET]夷平城市後獲得當前回合數*10的[ICON_GOLD]金錢、[ICON_RESEARCH]科研、[ICON_CULTURE]文化、[ICON_PEACE]信仰值（最多1000）。
-        [NEWLINE][ICON_BULLET]夷平城市時，每減少一人口，所有位於該城市工作地塊上的戰鬥單位+2最大生命值，該效果的上限是150。
-				[NEWLINE][ICON_BULLET]城市名從其他文明借用。
+				[ICON_BULLET]擊敗蠻族營寨中的單位會加入匈人軍隊，城市名從其他文明借用。
+				[NEWLINE][ICON_BULLET]夷平城市後獲得當前回合數*10的[ICON_GOLD][ICON_RESEARCH][ICON_CULTURE][ICON_PEACE]一次性產出，上限1000點。
+				[NEWLINE][ICON_BULLET]夷平城市時，每減少一人口，所有位於該城市工作地塊上的戰鬥單位+2最大[ICON_SILVER_FIST]生命值，上限150。
 			</Text>
 		</Replace>
 
