@@ -3468,8 +3468,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_RUSSIAN_BALLET_HALL_HELP</Tag>
-			<Text>+3% [ICON_CULTURE] Culture output in all cities. 
-			[NEWLINE][NEWLINE]City must have an Amphitheater.</Text>
+			<Text>+3% [ICON_CULTURE] Culture output in all cities. </Text>
 		</Row>
 
 		<Row>

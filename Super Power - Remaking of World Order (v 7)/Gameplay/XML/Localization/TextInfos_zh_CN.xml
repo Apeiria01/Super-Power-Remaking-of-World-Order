@@ -1016,7 +1016,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_RUSSIAN_BALLET_HALL_HELP</Tag>
-			<Text>所有城市+3%[ICON_CULTURE]文化产出。[NEWLINE][NEWLINE]城市必须拥有画廊。</Text>
+			<Text>所有城市+3%[ICON_CULTURE]文化产出。</Text>
 		</Row>
 
 		<Row>
