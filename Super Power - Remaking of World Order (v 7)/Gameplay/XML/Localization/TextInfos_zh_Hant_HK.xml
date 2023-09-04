@@ -472,7 +472,12 @@
 		</Row>
 		
 		<Replace Tag="TXT_KEY_BUILDING_STONE_WORKS_HELP">
-			<Text>所在城市每處已開發的[ICON_RES_MARBLE]大理石和[ICON_RES_STONE]花崗岩資源+1[ICON_PRODUCTION]生產力。[NEWLINE][NEWLINE]城市必須至少擁有一處已修建採石場的上述資源。[NEWLINE][NEWLINE]不能建造於平原城市。[NEWLINE][NEWLINE]研發炸藥之後[COLOR_NEGATIVE_TEXT]過期[ENDCOLOR]（不再提供產出且不能建造）。[NEWLINE][NEWLINE]研發因特網後+2[ICON_TOURISM]旅遊業績。</Text>
+			<Text>
+			所在城市每處已開發的[ICON_RES_MARBLE]大理石和[ICON_RES_STONE]花崗岩資源+1[ICON_PRODUCTION]生產力。
+			[NEWLINE][NEWLINE]城市必須至少擁有一處已修建採石場的上述資源。
+			[NEWLINE][NEWLINE]研發炸藥之後[COLOR_NEGATIVE_TEXT]過期[ENDCOLOR]（不再提供產出且不能建造）。
+			[NEWLINE][NEWLINE]研發因特網後+2[ICON_TOURISM]旅遊業績。
+			</Text>
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_BUILDING_WORKSHOP_HELP">

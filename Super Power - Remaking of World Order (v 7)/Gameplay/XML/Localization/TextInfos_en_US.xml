@@ -2781,7 +2781,6 @@
 		<Replace Tag="TXT_KEY_BUILDING_STONE_WORKS_HELP">
 			<Text>
 				+1 [ICON_PRODUCTION] Production for each source of [ICON_RES_MARBLE] Marble and [ICON_RES_STONE] Stone worked by this city.[NEWLINE][NEWLINE]City must have at least one of these resources improved with a Quarry.
-				[NEWLINE][NEWLINE]City must NOT be built on a Plain Tile.
 				[NEWLINE][NEWLINE]Upon discovering Dynamite, this kind of building becomes [COLOR_NEGATIVE_TEXT]obsolete[ENDCOLOR] (it is no longer allowed to build and its bonuses are lost).
 				[NEWLINE][NEWLINE]+2 [ICON_TOURISM] Tourism after discovering Internet.</Text>
 		</Replace>

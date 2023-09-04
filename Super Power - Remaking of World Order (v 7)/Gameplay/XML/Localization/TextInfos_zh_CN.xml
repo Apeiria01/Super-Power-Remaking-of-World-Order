@@ -486,7 +486,12 @@
 		</Row>
 
 		<Replace Tag="TXT_KEY_BUILDING_STONE_WORKS_HELP">
-			<Text>所在城市每处已开发的[ICON_RES_MARBLE]大理石和[ICON_RES_STONE]花岗岩资源+1[ICON_PRODUCTION]产能。[NEWLINE][NEWLINE]城市必须至少拥有一处已修建采石场的上述资源。[NEWLINE][NEWLINE]不能建造于平原城市。[NEWLINE][NEWLINE]研发炸药之后[COLOR_NEGATIVE_TEXT]过期[ENDCOLOR]（不再提供产出且不能建造）。[NEWLINE][NEWLINE]研发因特网后+2[ICON_TOURISM]魅力。</Text>
+			<Text>
+			所在城市每处已开发的[ICON_RES_MARBLE]大理石和[ICON_RES_STONE]花岗岩资源+1[ICON_PRODUCTION]产能。
+			[NEWLINE][NEWLINE]城市必须至少拥有一处已修建采石场的上述资源。
+			[NEWLINE][NEWLINE]研发炸药之后[COLOR_NEGATIVE_TEXT]过期[ENDCOLOR]（不再提供产出且不能建造）。
+			[NEWLINE][NEWLINE]研发因特网后+2[ICON_TOURISM]魅力。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_BUILDING_WORKSHOP_HELP">
