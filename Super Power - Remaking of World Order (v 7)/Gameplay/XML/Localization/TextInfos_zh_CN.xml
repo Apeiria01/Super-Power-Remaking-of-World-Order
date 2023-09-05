@@ -7286,7 +7286,7 @@
 		<Replace Tag="TXT_KEY_POLICY_POLICE_STATE_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]警察国家[ENDCOLOR]
-				[NEWLINE]法院、治安署、审计署、警察局和地检署+3[ICON_HAPPINESS_1]本地快乐。这些建筑因[ICON_CITIZEN]人口造成的[ICON_GOLD]维护费减半。
+				[NEWLINE]法院、治安署、审计署、警察局和地检署+3[ICON_HAPPINESS_1]本地快乐。建造这些建筑+200%[ICON_PRODUCTION]产能积累。
 			</Text>
 		</Replace>
 
@@ -7373,22 +7373,6 @@
 
 		<Row Tag="TXT_KEY_BUILDING_UNITED_FRONT_HELP" >
 			<Text>人口到达20前+50%食物累积</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_BUILDING_POLICE_STATE_LV2" >
-			<Text>[ICON_CITYBANNER_CITY_LV2]治安署维护费-50%</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_POLICE_STATE_LV3" >
-			<Text>[ICON_CITYBANNER_CITY_LV3]审计署维护费-50%</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_POLICE_STATE_LV4" >
-			<Text>[ICON_CITYBANNER_CITY_LV4]警察局维护费-50%</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_POLICE_STATE_LV5" >
-			<Text>[ICON_CITYBANNER_CITY_LV5]地检署维护费-50%</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_POLICE_STATE" >
-			<Text>强化管理类建筑因[ICON_CITIZEN]人口造成的[ICON_GOLD]维护费-50%</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_BUILDING_MONARCHY_CULTURE" >

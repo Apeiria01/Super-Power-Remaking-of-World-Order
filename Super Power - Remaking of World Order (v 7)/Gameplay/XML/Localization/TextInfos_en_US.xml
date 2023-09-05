@@ -8227,7 +8227,11 @@
 
 
 		<Replace Tag="TXT_KEY_POLICY_POLICE_STATE_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]Police State[ENDCOLOR][NEWLINE]+3 [ICON_HAPPINESS_1] Local Happiness from every Courthouse, Constabulary, Sheriff Office, Police Station and Procuratorate. -50% extra [ICON_GOLD] Maintenance Cost added by cities' [ICON_CITIZEN] Population for these buildings.</Text>
+			<Text>
+			[COLOR_POSITIVE_TEXT]Police State[ENDCOLOR]
+			[NEWLINE]+3 [ICON_HAPPINESS_1] Local Happiness from every Courthouse, Constabulary, Sheriff Office, Police Station and Procuratorate. 
+			+200% [ICON_PRODUCTION] Production when constructing these buildings.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_CULT_PERSONALITY_HELP" >
@@ -8318,23 +8322,6 @@
 		<Row Tag="TXT_KEY_BUILDING_UNITED_FRONT_HELP" >
 			<Text>+50% Food Growth until the Population reaches 20.</Text>
 		</Row>
-		
-		<Row Tag="TXT_KEY_BUILDING_POLICE_STATE_LV2" >
-			<Text>-50% extra [ICON_GOLD] Maintenance Cost for [ICON_CITYBANNER_CITY_LV2] Constabulary</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_POLICE_STATE_LV3" >
-			<Text>-50% extra [ICON_GOLD] Maintenance Cost for [ICON_CITYBANNER_CITY_LV3] Sheriff Office</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_POLICE_STATE_LV4" >
-			<Text>-50% extra [ICON_GOLD] Maintenance Cost for [ICON_CITYBANNER_CITY_LV4] Police Station</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_POLICE_STATE_LV5" >
-			<Text>-50% extra [ICON_GOLD] Maintenance Cost for [ICON_CITYBANNER_CITY_LV5] Procuratorate</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_POLICE_STATE" >
-			<Text>-50% extra [ICON_GOLD] Maintenance Cost added by cities' Population for AC buildings.</Text>
-		</Row>
-
 
 		<Row Tag="TXT_KEY_BUILDING_MONARCHY_CULTURE" >
 			<Text>Monarchy</Text>

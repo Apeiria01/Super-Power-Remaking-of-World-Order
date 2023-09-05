@@ -7176,7 +7176,7 @@
 		<Replace Tag="TXT_KEY_POLICY_POLICE_STATE_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]警察國家[ENDCOLOR]
-				[NEWLINE]法院、治安署、審計署、警察局和地檢署+3[ICON_HAPPINESS_1]本地快樂。這些建築因[ICON_CITIZEN]人口造成的[ICON_GOLD]維護費減半。
+				[NEWLINE]法院、治安署、審計署、警察局和地檢署+3[ICON_HAPPINESS_1]本地快樂。建造這些建築+200%[ICON_PRODUCTION]生產力積累。
 			</Text>
 		</Replace>
 
@@ -7263,22 +7263,6 @@
 		
 		<Row Tag="TXT_KEY_BUILDING_UNITED_FRONT_HELP" >
 			<Text>人口到達20前+50%食物累積</Text>
-		</Row>
-		
-		<Row Tag="TXT_KEY_BUILDING_POLICE_STATE_LV2" >
-			<Text>[ICON_CITYBANNER_CITY_LV2]治安署維護費-50%</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_POLICE_STATE_LV3" >
-			<Text>[ICON_CITYBANNER_CITY_LV3]審計署維護費-50%</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_POLICE_STATE_LV4" >
-			<Text>[ICON_CITYBANNER_CITY_LV4]警察局維護費-50%</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_POLICE_STATE_LV5" >
-			<Text>[ICON_CITYBANNER_CITY_LV5]地檢署維護費-50%</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_POLICE_STATE" >
-			<Text>強化管理類建築因[ICON_CITIZEN]人口造成的[ICON_GOLD]維護費-50%</Text>
 		</Row>
 		
 		<Row Tag="TXT_KEY_BUILDING_MONARCHY_CULTURE" >
