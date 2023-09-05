@@ -479,6 +479,9 @@
 	
 	<Trait_UnimprovedFeatureYieldChanges>
 		<Delete TraitType="TRAIT_FIGHT_WELL_DAMAGED"/>
+	</Trait_UnimprovedFeatureYieldChanges>
+	
+	<Trait_FeatureYieldChanges>
 		<Row>
 			<TraitType>TRAIT_LAND_TRADE_GOLD</TraitType>
 			<FeatureType>FEATURE_OASIS</FeatureType>
@@ -491,7 +494,7 @@
 			<YieldType>YIELD_FAITH</YieldType>
 			<Yield>2</Yield>
 		</Row>
-	</Trait_UnimprovedFeatureYieldChanges>
+	</Trait_FeatureYieldChanges>
 
 	<Trait_YieldChangesStrategicResources>
 		<Row>
