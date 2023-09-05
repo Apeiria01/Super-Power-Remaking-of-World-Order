@@ -6034,18 +6034,6 @@
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PEDIA_PROMOTION_RECON_LONG_RANGE</PediaEntry>
 		</Row>
-		
-		<Row>
-			<Type>PROMOTION_EXTRA_RELIGION_SPREADS</Type>
-			<Description>TXT_KEY_EXTRA_RELIGION_SPREADS_4</Description>
-			<Help>TXT_KEY_EXTRA_RELIGION_SPREADS_4</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PortraitIndex>59</PortraitIndex>
-			<PediaEntry>TXT_KEY_EXTRA_RELIGION_SPREADS_4</PediaEntry>
-			<CannotBeChosen>true</CannotBeChosen>
-		</Row>
 	</UnitPromotions>
 
 	
