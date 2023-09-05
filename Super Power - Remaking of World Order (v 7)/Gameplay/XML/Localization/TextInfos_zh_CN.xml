@@ -7181,7 +7181,7 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_RESETTLEMENT_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]移民安置[ENDCOLOR][NEWLINE]移民等同于3[ICON_CITIZEN]人口（生产移民城市失去3[ICON_CITIZEN]人口，新建城市直接获得3[ICON_CITIZEN]人口，移民加入新城市也会增加其3[ICON_CITIZEN]人口）。所有城市因污染导致的[ICON_FOOD]食物损失-15%。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]移民安置[ENDCOLOR][NEWLINE]移民等同于3[ICON_CITIZEN]人口（生产移民城市失去3[ICON_CITIZEN]人口，新建城市直接获得3[ICON_CITIZEN]人口，移民加入新城市也会增加其3[ICON_CITIZEN]人口）。移民不再产生[ICON_HAPPINESS_4]不满。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_ACADEMY_SCIENCES">
