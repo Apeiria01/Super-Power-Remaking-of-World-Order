@@ -8302,32 +8302,6 @@
 			<Text>[ICON_GREAT_WRITER] Theocracy</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_BUILDING_POLICY_MERCHANT_CONFEDERACY" >
-			<Text>Merchant Confederacy</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_POLICY_MERCHANT_CONFEDERACY_HELP" >
-			<Text>+2% [ICON_PRODUCTION] Production for all cities from each trade route with City-States.</Text>
-		</Row>
-		<!--<Row Tag="TXT_KEY_BUILDING_POLICY_ORGANIZED_RELIGION_DESC" >
-			<Text>Organized Religion</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_POLICY_ORGANIZED_RELIGION_HELP" >
-			<Text>Religious pressure incresing speed +50% in all cities.</Text>
-		</Row>-->
-		
-		<Row Tag="TXT_KEY_BUILDING_REPRESENTATION_CULTURE" >
-			<Text>+5% [ICON_CULTURE] Culture Cost for New Policies.</Text>
-		</Row>
-		
-		<Row Tag="TXT_KEY_BUILDING_UNITED_FRONT_HELP" >
-			<Text>+50% Food Growth until the Population reaches 20.</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_BUILDING_MONARCHY_CULTURE" >
-			<Text>Monarchy</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_MONARCHY_CULTURE_HELP" >
-			<Text>+50% [ICON_TOURISM] Tourism in the Capital.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_FAMILY_PRODUCTION" >
 			<Text>[ICON_RESEARCH] Imperial Academy</Text>

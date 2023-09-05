@@ -7353,35 +7353,6 @@
 			<Text>[ICON_GREAT_WRITER]神权政治</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_BUILDING_POLICY_MERCHANT_CONFEDERACY" >
-			<Text>商人公会</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_POLICY_MERCHANT_CONFEDERACY_HELP" >
-			<Text>每条与城邦的商路+2%的全国[ICON_PRODUCTION]产能。</Text>
-		</Row>
-
-		<!--<Row Tag="TXT_KEY_BUILDING_POLICY_ORGANIZED_RELIGION_DESC" >
-			<Text>教会组织</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_POLICY_ORGANIZED_RELIGION_HELP" >
-			<Text>本城市的宗教压力+50%。</Text>
-		</Row>-->
-
-		<Row Tag="TXT_KEY_BUILDING_REPRESENTATION_CULTURE" >
-			<Text>新政策成本+5%[ICON_CULTURE]文化</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_BUILDING_UNITED_FRONT_HELP" >
-			<Text>人口到达20前+50%食物累积</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_BUILDING_MONARCHY_CULTURE" >
-			<Text>君主政体</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_MONARCHY_CULTURE_HELP" >
-			<Text>首都+50%[ICON_TOURISM]魅力产出。</Text>
-		</Row>
-
 		<Row Tag="TXT_KEY_BUILDING_FAMILY_PRODUCTION" >
 			<Text>[ICON_RESEARCH]府学</Text>
 		</Row>
