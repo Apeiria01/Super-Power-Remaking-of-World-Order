@@ -7272,13 +7272,6 @@
 		<Row Tag="TXT_KEY_BUILDING_AUTOCRACY_FIREWALL_HELP" >
 			<Text>消除來自其他文明掌握科技所帶來的魅力加成。</Text>
 		</Row>
-
-		<Row Tag="TXT_KEY_BUILDING_SCHOLASTICISM" >
-			<Text>[ICON_CULTURE][ICON_PEACE]經院哲學</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_SCHOLASTICISM_HELP" >
-			<Text>所有城市+1%[ICON_CULTURE]文化值和[ICON_PEACE]信仰值產出。</Text>
-		</Row>
 		
 <!--Projects-->
 	

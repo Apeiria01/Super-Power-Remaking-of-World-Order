@@ -2411,12 +2411,6 @@
 			<DefaultBuilding>BUILDING_EXPLORATION_REMOVE_DEBUFF</DefaultBuilding>
 			<Description>TXT_KEY_POLICY_BRANCH_EXPLORATION</Description>
 		</Row>
-
-		<Row>
-			<Type>BUILDINGCLASS_SCHOLASTICISM</Type>
-			<DefaultBuilding>BUILDING_SCHOLASTICISM</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_SCHOLASTICISM</Description>
-		</Row>
 	</BuildingClasses>
 	<Buildings>
 		<Row>
@@ -2493,20 +2487,6 @@
 			<Help>TXT_KEY_BUILDING_AUTOCRACY_FIREWALL_HELP</Help>
 			<GreatWorkCount>-1</GreatWorkCount>
 		</Row>
-		
-		<Row>
-			<Type>BUILDING_SCHOLASTICISM</Type>
-			<BuildingClass>BUILDINGCLASS_SCHOLASTICISM</BuildingClass>
-			<Cost>-1</Cost>
-			<NeverCapture>true</NeverCapture>
-			<NukeImmune>true</NukeImmune>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<PortraitIndex>39</PortraitIndex>
-			<IconAtlas>POLICY_ATLAS</IconAtlas>
-			<Description>TXT_KEY_BUILDING_SCHOLASTICISM</Description>
-			<Help>TXT_KEY_BUILDING_SCHOLASTICISM_HELP</Help>
-			<GreatWorkCount>-1</GreatWorkCount>
-		</Row>
 	</Buildings>
 	<Building_YieldChangesPerPop>
 		<Row>
@@ -2537,18 +2517,6 @@
 		</Row>
 		
 	</Building_YieldChangesPerPop>
-	<Building_GlobalYieldModifiers>
-		<Row>
-			<BuildingType>BUILDING_SCHOLASTICISM</BuildingType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_SCHOLASTICISM</BuildingType>
-			<YieldType>YIELD_FAITH</YieldType>
-			<Yield>1</Yield>
-		</Row>
-	</Building_GlobalYieldModifiers>
 
 	<BuildingClasses>
 		<Row>

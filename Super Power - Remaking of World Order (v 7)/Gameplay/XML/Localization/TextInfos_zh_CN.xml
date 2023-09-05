@@ -7384,13 +7384,6 @@
 			<Text>消除来自其他文明掌握科技所带来的魅力加成。</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_BUILDING_SCHOLASTICISM" >
-			<Text>[ICON_CULTURE][ICON_PEACE]经院哲学</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_SCHOLASTICISM_HELP" >
-			<Text>所有城市+1%[ICON_CULTURE]文化和[ICON_PEACE]信仰产出。</Text>
-		</Row>
-
 		<!--Projects-->
 
 		<Replace Tag="TXT_KEY_PROJECT_APOLLO_PROGRAM_HELP" >

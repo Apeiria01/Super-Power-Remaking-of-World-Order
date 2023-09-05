@@ -8333,14 +8333,6 @@
 			<Text>Negates the Tourism bonus from other players' technologies.</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_BUILDING_SCHOLASTICISM" >
-			<Text>[ICON_CULTURE][ICON_PEACE] Scholasticism</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_SCHOLASTICISM_HELP" >
-			<Text>+1% [ICON_CULTURE] Culture and [ICON_PEACE] Faith output in all cities.</Text>
-		</Row>
-
-
 <!-- ProjectTexts -->
 
 		<Replace Tag="TXT_KEY_PROJECT_APOLLO_PROGRAM_HELP" >
