@@ -2172,7 +2172,11 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 
 	local terrains = {}
 	if building.Water then
-		insert( terrains, L"TXT_KEY_TERRAIN_COAST" )
+		if building.MinAreaSize > 0 then
+			insert( terrains, L"TXT_KEY_TERRAIN_COAST" .. "(" .. building.MinAreaSize .. ")")
+		else
+			insert( terrains, L"TXT_KEY_TERRAIN_COAST")
+		end
 	end
 	if building.River then
 		insert( terrains, L"TXT_KEY_PLOTROLL_RIVER" )
