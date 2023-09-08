@@ -207,7 +207,7 @@
 		<Row>
 			<Class>UNITCLASS_MINUTEMAN</Class>
 			<Type>UNIT_IROQUOIAN_MOHAWKWARRIOR</Type>
-			<PrereqTech>TECH_METALLURGY</PrereqTech>
+			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
 			<BaseSightRange>2</BaseSightRange>
 			<Combat>24</Combat>
 			<Cost>32</Cost>
