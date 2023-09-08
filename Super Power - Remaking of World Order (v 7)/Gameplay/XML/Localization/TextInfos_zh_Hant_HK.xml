@@ -5653,6 +5653,7 @@
 				[ICON_BULLET]河流及其相鄰區塊不會阻礙己方單位[ICON_MOVES]移動。
 				[NEWLINE][ICON_BULLET]陸地商路能夠通過河流線延長（視為道路）。
 				[NEWLINE][ICON_BULLET]所有貿易站+1[ICON_GOLD]金錢產出。
+				[NEWLINE][ICON_BULLET]沿河城市减少200点离心倾向。
 			</Text>
 		</Replace>
 

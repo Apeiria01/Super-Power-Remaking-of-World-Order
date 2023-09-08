@@ -10379,7 +10379,9 @@
 		<Replace Tag="TXT_KEY_TRAIT_AMPHIB_WARLORD">
 			<Text>
 				[ICON_BULLET]Rivers and adjacent difficult terrain count as clear terrain for [ICON_MOVES] Movement. 
-				[NEWLINE][ICON_BULLET]Rivers extend length of land trade routes as if they were roads. +1 [ICON_GOLD] Gold for every Trading Post.
+				[NEWLINE][ICON_BULLET]Rivers extend length of land trade routes as if they were roads. 
+				[NEWLINE][ICON_BULLET]+1 [ICON_GOLD] Gold for every Trading Post.
+				[NEWLINE][ICON_BULLET]-200 Administrative cost for City onrivers.
 			</Text>
 		</Replace>
 

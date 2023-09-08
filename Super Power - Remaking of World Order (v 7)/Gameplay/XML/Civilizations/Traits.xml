@@ -293,6 +293,7 @@
 			<ShortDescription>TXT_KEY_TRAIT_AMPHIB_WARLORD_SHORT</ShortDescription>
 			<RiverTradeRoad>true</RiverTradeRoad>
 			<FasterAlongRiver>true</FasterAlongRiver>
+			<RiverCorruptionScoreChange>-200</RiverCorruptionScoreChange>
 		</Row>
 		<Row>
 			<Type>TRAIT_PHOENICIAN_HERITAGE</Type>

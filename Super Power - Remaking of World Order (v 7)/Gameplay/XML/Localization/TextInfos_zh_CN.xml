@@ -5759,6 +5759,7 @@
 				[ICON_BULLET]河流及其相邻区块不会阻碍己方单位[ICON_MOVES]移动。
 				[NEWLINE][ICON_BULLET]陆地商路能够通过河流线延长（视为道路）。
 				[NEWLINE][ICON_BULLET]所有贸易站+1[ICON_GOLD]金钱产出。
+				[NEWLINE][ICON_BULLET]沿河城市减少200点离心倾向。
 			</Text>
 		</Replace>
 
