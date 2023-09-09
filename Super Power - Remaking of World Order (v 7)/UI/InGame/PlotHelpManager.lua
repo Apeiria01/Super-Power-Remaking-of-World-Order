@@ -183,7 +183,11 @@ function Level1Tip()
 		else
 			TextString = TextString .. "[NEWLINE]";
 		end
-		TextString = TextString .. "[COLOR_POSITIVE_TEXT]" .. Locale.ConvertTextKey("TXT_KEY_MAP_XY") .. "[ENDCOLOR]" .. " : " .. plot:GetX() ..",".. plot:GetY();
+		TextString = TextString 
+		.. "[COLOR_POSITIVE_TEXT]" .. Locale.ConvertTextKey("TXT_KEY_MAP_XY") .. "[ENDCOLOR]" .. " : " 
+		.. plot:GetX() ..",".. plot:GetY()
+		.. ",".. plot:SeeFromLevel(iActiveTeam)
+		.. ",".. plot:SeeThroughLevel(true)
 
 		-- Resource
 		local strResource = GetResourceString(plot, true);
