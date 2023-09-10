@@ -15864,7 +15864,10 @@
 			<Text>The Galloping Ghost</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_GALLOPING_GHOST_HELP">
-			<Text>+2[ICON_MOVES]Movements and +2 Eye Sights. Can See Submarine.</Text>
+			<Text>
+			+2[ICON_MOVES]Movements. Can See Submarine.
+			[NEWLINE]6 tiles in every direction always visible.
+			</Text>
 		</Row>
 		
 		

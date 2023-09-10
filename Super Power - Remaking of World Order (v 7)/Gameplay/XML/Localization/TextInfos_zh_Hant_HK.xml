@@ -13454,7 +13454,10 @@
 			<Text>飞驰的幽灵</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_GALLOPING_GHOST_HELP">
-			<Text>+2[ICON_MOVES]移动，+2视野。能发现潜艇。</Text>
+			<Text>
+			+2[ICON_MOVES]移动。能发现潜艇。
+			[NEWLINE]6個單元格內一切可見。
+			</Text>
 		</Row>
 		
 		<Row Tag="TXT_KEY_PROMOTION_ENCOURAGE_AND_AWE">
