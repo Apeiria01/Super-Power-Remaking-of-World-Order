@@ -173,7 +173,7 @@ function UpdateUnitPromotions(pUnit)
 		--For each avail promotion, display the icon
 		for unitPromotion in GameInfo.UnitPromotions() do
 			local unitPromotionID = unitPromotion.ID;
-			if (pUnit:IsHasPromotion(unitPromotionID)) then
+			if (pUnit:IsHasPromotion(unitPromotionID)   and unitPromotion.ShowInUnitPanel ~= 0 ) then
 
 				-- Get next available promotion button
 				local idx = 1;
