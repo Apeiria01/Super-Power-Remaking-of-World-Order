@@ -544,7 +544,7 @@ CivilopediaCategory[CategoryPromotions].PopulateList = function()
 	
 	-- for each promotion
 	for thisPromotion in GameInfo.UnitPromotions() do
-		if thisPromotion.PediaType == "PEDIA_MELEE" then
+		if thisPromotion.PediaType == "PEDIA_MELEE"  and thisPromotion.ShowInPedia ~= 0  then
 			-- add an article to the list (localized name, unit tag, etc.)
 			local article = {};
 			local name = Locale.ConvertTextKey( thisPromotion.PediaEntry )
@@ -565,7 +565,7 @@ CivilopediaCategory[CategoryPromotions].PopulateList = function()
 	sortedList[CategoryPromotions][2] = {}; 
 	local tableid = 1;
 	for thisPromotion in GameInfo.UnitPromotions() do
-		if thisPromotion.PediaType == "PEDIA_RANGED" then
+		if thisPromotion.PediaType == "PEDIA_RANGED"   and thisPromotion.ShowInPedia ~= 0   then
 			-- add an article to the list (localized name, unit tag, etc.)
 			local article = {};
 			local name = Locale.ConvertTextKey( thisPromotion.PediaEntry )
@@ -586,7 +586,7 @@ CivilopediaCategory[CategoryPromotions].PopulateList = function()
 	sortedList[CategoryPromotions][3] = {}; 
 	local tableid = 1;
 	for thisPromotion in GameInfo.UnitPromotions() do
-		if thisPromotion.PediaType == "PEDIA_NAVAL" then
+		if thisPromotion.PediaType == "PEDIA_NAVAL"   and thisPromotion.ShowInPedia ~= 0  then
 			-- add an article to the list (localized name, unit tag, etc.)
 			local article = {};
 			local name = Locale.ConvertTextKey( thisPromotion.PediaEntry )
@@ -607,7 +607,7 @@ CivilopediaCategory[CategoryPromotions].PopulateList = function()
 	sortedList[CategoryPromotions][4] = {}; 
 	local tableid = 1;
 	for thisPromotion in GameInfo.UnitPromotions() do
-		if thisPromotion.PediaType == "PEDIA_HEAL" then
+		if thisPromotion.PediaType == "PEDIA_HEAL"   and thisPromotion.ShowInPedia ~= 0  then
 			-- add an article to the list (localized name, unit tag, etc.)
 			local article = {};
 			local name = Locale.ConvertTextKey( thisPromotion.PediaEntry )
@@ -628,7 +628,7 @@ CivilopediaCategory[CategoryPromotions].PopulateList = function()
 	sortedList[CategoryPromotions][5] = {}; 
 	local tableid = 1;
 	for thisPromotion in GameInfo.UnitPromotions() do
-		if thisPromotion.PediaType == "PEDIA_SCOUTING" then
+		if thisPromotion.PediaType == "PEDIA_SCOUTING"   and thisPromotion.ShowInPedia ~= 0  then
 			-- add an article to the list (localized name, unit tag, etc.)
 			local article = {};
 			local name = Locale.ConvertTextKey( thisPromotion.PediaEntry )
@@ -649,7 +649,7 @@ CivilopediaCategory[CategoryPromotions].PopulateList = function()
 	sortedList[CategoryPromotions][6] = {}; 
 	local tableid = 1;
 	for thisPromotion in GameInfo.UnitPromotions() do
-		if thisPromotion.PediaType == "PEDIA_AIR" then
+		if thisPromotion.PediaType == "PEDIA_AIR"   and thisPromotion.ShowInPedia ~= 0  then
 			-- add an article to the list (localized name, unit tag, etc.)
 			local article = {};
 			local name = Locale.ConvertTextKey( thisPromotion.PediaEntry )
@@ -670,7 +670,7 @@ CivilopediaCategory[CategoryPromotions].PopulateList = function()
 	sortedList[CategoryPromotions][7] = {}; 
 	local tableid = 1;
 	for thisPromotion in GameInfo.UnitPromotions() do
-		if thisPromotion.PediaType == "PEDIA_SHARED" then
+		if thisPromotion.PediaType == "PEDIA_SHARED"   and thisPromotion.ShowInPedia ~= 0  then
 			-- add an article to the list (localized name, unit tag, etc.)
 			local article = {};
 			local name = Locale.ConvertTextKey( thisPromotion.PediaEntry )
@@ -691,7 +691,7 @@ CivilopediaCategory[CategoryPromotions].PopulateList = function()
 	sortedList[CategoryPromotions][8] = {}; 
 	local tableid = 1;
 	for thisPromotion in GameInfo.UnitPromotions() do
-		if thisPromotion.PediaType == "PEDIA_ATTRIBUTES" then
+		if thisPromotion.PediaType == "PEDIA_ATTRIBUTES"   and thisPromotion.ShowInPedia ~= 0  then
 			-- add an article to the list (localized name, unit tag, etc.)
 			local article = {};
 			local name = Locale.ConvertTextKey( thisPromotion.PediaEntry )

@@ -4303,7 +4303,7 @@ function TipHandler(Button)
         local otherPromotions = {};
         if not unit:IsTrade() then
             for unitPromotion in GameInfo.UnitPromotions() do
-                if unit:IsHasPromotion(unitPromotion.ID) then
+                if unit:IsHasPromotion(unitPromotion.ID) and unitPromotion.ShowInUnitPanel ~= 0 then
                     if unitPromotion ~= nil then
                         local promotionDescribe = unitPromotion.IconStringSP .. Locale.ConvertTextKey(unitPromotion.Description)
                         if(unitPromotion.LostWithUpgrade) then
