@@ -1681,16 +1681,6 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		end
 	end
 
-	-- free units (Truly)
-	if GameInfo.Building_FreeUnits_Truly then
-	    for row in GameInfo.Building_FreeUnits_Truly( thisBuildingType ) do
-		item = GameInfo.Units[ row.UnitType ]
-		item = item and GetCivUnit( activeCivilizationType, item.Class )
-		if item and (row.NumUnits or 0) > 0 then
-			insert( tips, L("{1: plural 2?{1} ;}{TXT_KEY_FREE}({TXT_KEY_TRULY}) {2}", row.NumUnits, format( "%s %s", ( item.Special and item.Special == "SPECIALUNIT_PEOPLE" and GreatPeopleIcon( item.Type ) or "" ), UnitColor( L(item.Description) ) ) ) )
-		end
-	    end
-	end
     --Building_FreeSpecialistCounts unused ?
 	-- free promotion to units trained in this city
 	item = building.TrainedFreePromotion and GameInfo.UnitPromotions[ building.TrainedFreePromotion ]
