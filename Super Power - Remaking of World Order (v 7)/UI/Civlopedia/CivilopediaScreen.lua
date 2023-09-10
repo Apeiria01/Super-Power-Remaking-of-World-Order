@@ -2894,7 +2894,7 @@ CivilopediaCategory[CategoryUnits].SelectArticle = function( unitID, shouldAddTo
 		local condition = "UnitType = '" .. thisUnit.Type .. "'";
 		for row in GameInfo.Unit_FreePromotions( condition ) do
 			local promotion = GameInfo.UnitPromotions[row.PromotionType];
-			if promotion then
+			if promotion and promotion.ShowInPedia ~= 0 then
 				local thisPromotionInstance = g_PromotionsManager:GetInstance();
 				if thisPromotionInstance then
 					local textureOffset, textureSheet = IconLookup( promotion.PortraitIndex, buttonSize, promotion.IconAtlas );				
@@ -3157,7 +3157,7 @@ CivilopediaCategory[CategoryPromotions].SelectArticle = function( promotionID, s
 		endTopic = currentTopic;
 	end
 	
-	if promotionID ~= -1 then
+	if promotionID ~= -1 and GameInfo.UnitPromotions[promotionID].ShowInPedia ~= 0 then
 		local thisPromotion = GameInfo.UnitPromotions[promotionID];
 		
 		-- update the name
