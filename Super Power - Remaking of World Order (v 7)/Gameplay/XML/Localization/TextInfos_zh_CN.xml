@@ -5034,7 +5034,7 @@
 			<Text>[COLOR_POSITIVE_TEXT]建立军团[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS">
-			<Text>将该地格上两个相同的单位合并为军团：+100%最大生命值，+10%[ICON_STRENGTH]战斗力。</Text>
+			<Text>将该地格上两个相同的单位合并为军团或者消耗伟人将一个单位升级为军团：+100%最大生命值，+10%[ICON_STRENGTH]战斗力。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_EXTRA">
 			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]当前可组建军团数:{1_name}[ENDCOLOR]</Text>
@@ -5043,7 +5043,7 @@
 			<Text>[COLOR_POSITIVE_TEXT]建立集团军[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMEE">
-			<Text>将该地格上一个相同的单位合入军团以建立集团军：+100%最大生命值，+15%[ICON_STRENGTH]战斗力。</Text>
+			<Text>将该地格上一个相同的单位合入军团以建立集团军或者消耗伟人将一个单位升级为集团军：+100%最大生命值，+15%[ICON_STRENGTH]战斗力。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMEE_EXTRA">
 			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]当前可组建集团军数:{1_name}[ENDCOLOR]</Text>
@@ -5052,13 +5052,22 @@
 			<Text>[COLOR_POSITIVE_TEXT]建立舰队[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_FLEET">
-			<Text>将该地格上两个相同的单位合并为舰队：+100%最大生命值，+10%[ICON_STRENGTH]战斗力。</Text>
+			<Text>将该地格上两个相同的单位合并为舰队或者消耗伟人将一个单位升级为舰队：+100%最大生命值，+10%[ICON_STRENGTH]战斗力。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMADA_SHORT">
 			<Text>[COLOR_POSITIVE_TEXT]建立大舰队[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMADA">
-			<Text>将该地格上一个相同的单位合入舰队以建立大舰队：+100%最大生命值，+15%[ICON_STRENGTH]战斗力。</Text>
+			<Text>将该地格上一个相同的单位合入舰队以建立大舰队或者消耗伟人将一个单位升级为大舰队：+100%最大生命值，+15%[ICON_STRENGTH]战斗力。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_1">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]使用伟人升级集团军需要所在城市拥有兵工厂[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_2">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]组建军团需要所在城市市拥有兵工厂[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_3">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]组建集团军需要所在城市市拥有军事基地[ENDCOLOR]</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_FULLATTACK_ON_SHORT">
@@ -8163,8 +8172,8 @@
 				人类玩家也可以组建军团和集团军，不过只能在有兵工厂和军事基地的城市范围内通过两个相同单位合成或者消耗陆军统帅实现；[NEWLINE]
 				使用相同单位合成军团可以同时合并两个单位的晋升，并由此得到一个强力单位，而消耗陆军统帅会直接赋予单位军团/集团军晋升；[NEWLINE][NEWLINE]
 				引入“兵力”设定，兵力决定你总共能拥有的军事单位数量，兵力点满后获取军事单位将变得非常困难，新建的军事单位也会被清除，AI兵力点满后也将停止刷出单位，分三个游戏选项档：[NEWLINE]
-				[ICON_BULLET]高：除小镇以外的每个城市规模等级提供4兵力点，玩家初始24点，AI初始32点，每个兵工厂/军事基地分别提供2点军团/集团军组建上限 ——适合高配置玩家；[NEWLINE]
-				[ICON_BULLET]中：除小镇以外的每个城市规模等级提供2兵力点，玩家初始12点，AI初始16点，每个兵工厂/军事基地分别提供1点军团/集团军组建上限 ——适合中配置玩家（默认情况）；[NEWLINE]
+				[ICON_BULLET]高：除小镇以外的每个城市规模等级提供4兵力点，玩家初始24点，AI初始32点，每个兵工厂/军事基地分别提供3点军团/集团军组建上限 ——适合高配置玩家；[NEWLINE]
+				[ICON_BULLET]中：除小镇以外的每个城市规模等级提供2兵力点，玩家初始12点，AI初始16点，每个兵工厂/军事基地分别提供2点军团/集团军组建上限 ——适合中配置玩家（默认情况）；[NEWLINE]
 				[ICON_BULLET]低：除小镇以外的每个城市规模等级提供1兵力点，玩家初始 6点，AI初始 8点，每个兵工厂/军事基地分别提供1点军团/集团军组建上限 ——适合低配置玩家或和平主义者；[NEWLINE][NEWLINE]
 				特别注意，“军团”或者“集团军”的上限只与兵工厂或者军事基地的数量有关，消耗陆军统帅可以无视数量上限组建，但是并不会增加上限（你会看到组建按钮显示可组建数量为负数）；[NEWLINE]
 				消耗陆军统帅组建“集团军”仍然需要城市拥有兵工厂；[NEWLINE]

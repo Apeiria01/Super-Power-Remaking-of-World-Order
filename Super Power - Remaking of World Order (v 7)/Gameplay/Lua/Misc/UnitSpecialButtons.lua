@@ -1102,6 +1102,16 @@ LuaEvents.UnitPanelActionAddin(HackingMissionButton);
 
 -----------------------------------------------------Great People-----------------------------------------------------------------------
 
+local CorpsID = GameInfo.UnitPromotions["PROMOTION_CORPS_1"].ID
+local ArmeeID = GameInfo.UnitPromotions["PROMOTION_CORPS_2"].ID
+local iArsenal = GameInfoTypes["BUILDINGCLASS_ARSENAL"]
+local iMilitaryBase = GameInfoTypes["BUILDINGCLASS_MILITARY_BASE"]
+local ifac = 2
+if PreGame.GetGameOption("GAMEOPTION_SP_CORPS_MODE_HIGH") == 1 then
+	ifac = 3
+elseif PreGame.GetGameOption("GAMEOPTION_SP_CORPS_MODE_LOW") == 1 then
+    ifac = 1
+end
 -- Establish Corps & Armee
 EstablishCorpsButton = {
     Name = "Establish Corps & Armee",
@@ -1111,140 +1121,172 @@ EstablishCorpsButton = {
     PortraitIndex = 1,
     ToolTip = "TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS", -- or a TXT_KEY_ or a function
     Condition = function(action, unit)
-        if unit:GetDomainType() ~= DomainTypes.DOMAIN_LAND then
-            return false;
-        end
-
-        local bIsCondition = false;
         local playerID = unit:GetOwner();
         local player = Players[playerID];
         local plot = unit:GetPlot();
-        local iArsenal = GameInfoTypes["BUILDING_ARSENAL"];
-        local iMilitaryBase = GameInfoTypes["BUILDING_MILITARY_BASE"];
-        local overrideArsenal = GameInfo.Civilization_BuildingClassOverrides {
-            BuildingClassType = "BUILDINGCLASS_ARSENAL",
-            CivilizationType = GameInfo.Civilizations[player:GetCivilizationType()].Type
-        }();
-        if overrideArsenal ~= nil then
-            iArsenal = GameInfo.Buildings[overrideArsenal.BuildingType].ID;
-        end
-        local overrideMilitaryBase = GameInfo.Civilization_BuildingClassOverrides {
-            BuildingClassType = "BUILDINGCLASS_MILITARY_BASE",
-            CivilizationType = GameInfo.Civilizations[player:GetCivilizationType()].Type
-        }();
-        if overrideMilitaryBase ~= nil then
-            iMilitaryBase = GameInfo.Buildings[overrideMilitaryBase.BuildingType].ID;
-        end
-        if plot and plot:GetNumUnits() > 1 and not unit:IsEmbarked() and not unit:IsImmobile() and not unit:IsHasPromotion(GameInfoTypes["PROMOTION_CORPS_2"]) and ((unit:GetDomainType() == DomainTypes.DOMAIN_LAND and not plot:IsWater()) or (unit:GetDomainType() == DomainTypes.DOMAIN_SEA and plot:IsWater())) and (unit:GetUnitClassType() == GameInfo.UnitClasses.UNITCLASS_GREAT_GENERAL.ID or unit:IsCombatUnit()) and player:CountNumBuildings(GameInfoTypes["BUILDING_TROOPS"]) > 0 then
-            if g_CorpsCount[playerID] == nil then
-                g_CorpsCount[playerID] = {0, 0, nil, nil, nil};
-                for pUnit in player:Units() do
-                    if pUnit and pUnit:IsCombatUnit() and not pUnit:IsImmobile() then
-                        if pUnit and pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_CORPS_1"]) and GameInfo.Unit_FreePromotions {
-                            UnitType = GameInfo.Units[pUnit:GetUnitType()].Type,
-                            PromotionType = "PROMOTION_CORPS_1"
-                        }() == nil then
-                            g_CorpsCount[playerID][1] = g_CorpsCount[playerID][1] + 1;
-                        end
-                        if pUnit and pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_CORPS_2"]) and GameInfo.Unit_FreePromotions {
-                            UnitType = GameInfo.Units[pUnit:GetUnitType()].Type,
-                            PromotionType = "PROMOTION_CORPS_2"
-                        }() == nil then
-                            g_CorpsCount[playerID][2] = g_CorpsCount[playerID][2] + 1;
-                        end
-                    end
-                end
-            end
+		local city = plot:GetPlotCity() or plot:GetWorkingCity();
 
-            local city = plot:GetPlotCity() or plot:GetWorkingCity();
-            local ifac = 1;
-            if PreGame.GetGameOption("GAMEOPTION_SP_CORPS_MODE_HIGH") == 1 then
-                ifac = 2;
+		if player:CountNumBuildings(GameInfoTypes["BUILDING_TROOPS"]) <= 0
+        --only land unit can establish corps SP8.0
+        or unit:GetDomainType() ~= DomainTypes.DOMAIN_LAND
+        or plot:GetNumUnits() ~= 2
+		or city == nil or city:GetOwner() ~= playerID
+		or unit:IsHasPromotion(ArmeeID)
+		or unit:IsEmbarked() or unit:IsImmobile() or not unit:CanMove()
+		or (unit:GetDomainType() == DomainTypes.DOMAIN_LAND and plot:IsWater())
+		or (unit:GetDomainType() == DomainTypes.DOMAIN_SEA and not plot:IsWater())
+		then
+			return false
+		end
+
+		local iNumCanEstCorp = player:GetBuildingClassCount(GameInfoTypes["BUILDINGCLASS_ARSENAL"]) * ifac - g_CorpsCount[playerID][1]
+		local iNumCanEstArmee = player:GetBuildingClassCount(GameInfoTypes["BUILDINGCLASS_MILITARY_BASE"]) * ifac - g_CorpsCount[playerID][2]
+		local tUnit = nil;
+		local nUnit = nil;
+		local bIsGreatPeople = false;
+
+		if unit:GetUnitClassType() == GameInfo.UnitClasses.UNITCLASS_GREAT_GENERAL.ID 
+		or unit:GetUnitClassType() == GameInfo.UnitClasses.UNITCLASS_GREAT_ADMIRAL.ID 
+		then
+			bIsGreatPeople = true;
+			nUnit = unit;
+		elseif unit:IsCombatUnit() then
+            if player:GetBuildingClassCount(iArsenal) <= 0 then
+                return false
             end
-            local bIsCMax = g_CorpsCount[playerID][1] >= player:GetBuildingClassCount(GameInfoTypes["BUILDINGCLASS_ARSENAL"]) * ifac;
-            local bIsAMax = g_CorpsCount[playerID][2] >= player:GetBuildingClassCount(GameInfoTypes["BUILDINGCLASS_MILITARY_BASE"]) * ifac;
-            local tUnit = nil;
-            local nUnit = nil;
-            local bIsGreatPeople = false;
-            if unit:GetUnitClassType() == GameInfo.UnitClasses.UNITCLASS_GREAT_GENERAL.ID or unit:GetUnitClassType() == GameInfo.UnitClasses.UNITCLASS_GREAT_ADMIRAL.ID then
-                bIsGreatPeople = true;
-                nUnit = unit;
-            end
-            local bIsCorps = false;
-            if city == nil or city:GetOwner() ~= playerID or ((not city:IsHasBuilding(iArsenal) or bIsCMax) and (not city:IsHasBuilding(iMilitaryBase) or bIsAMax) and nUnit == nil) then
-            else
-                for i = 0, plot:GetNumUnits() - 1, 1 do
-                    local fUnit = plot:GetUnit(i);
-                    if fUnit and fUnit ~= nUnit and fUnit:IsCombatUnit() and fUnit:GetOwner() == playerID and fUnit:GetDomainType() == unit:GetDomainType() and not fUnit:IsImmobile() and not fUnit:IsHasPromotion(GameInfoTypes["PROMOTION_CORPS_2"]) then
-                        if nUnit == nil and not fUnit:IsHasPromotion(GameInfoTypes["PROMOTION_CORPS_1"]) then
-                            nUnit = fUnit;
-                            if tUnit and fUnit:GetUnitType() ~= tUnit:GetUnitType() then
-                                tUnit = nil;
-                            end
-                        end
-                        if fUnit ~= nUnit then
-                            tUnit = fUnit;
-                            if nUnit and (fUnit:GetUnitType() ~= nUnit:GetUnitType() and not bIsGreatPeople) then
-                                tUnit = nil;
-                            end
-                            if tUnit and tUnit:IsHasPromotion(GameInfoTypes["PROMOTION_CORPS_1"]) then
-                                if (bIsGreatPeople and player:GetBuildingClassCount(GameInfoTypes["BUILDINGCLASS_ARSENAL"]) > 0) or (city:IsHasBuilding(iMilitaryBase) and not bIsAMax) then
-                                    bIsCorps = true;
-                                else
-                                    tUnit = nil;
-                                end
-                            elseif tUnit and not bIsGreatPeople and (not city:IsHasBuilding(iArsenal) or bIsCMax) then
-                                tUnit = nil;
-                            end
-                        end
-                        if tUnit and nUnit and tUnit ~= nUnit then
-                            break
-                        end
+			tUnit = unit;
+		else
+            --Other civilians don't need it
+			return false
+		end
+		
+		for i = 0, plot:GetNumUnits() - 1, 1 do
+			local iUnit = plot:GetUnit(i)
+            if iUnit ~= unit then
+                --unit is Great Person
+                if tUnit == nil then
+                    tUnit = iUnit
+                    break
+                else
+                    if not iUnit:IsCombatUnit()
+                    --not allow other unit is crops: we only want keep tUnit and kill nUnit 
+                    or iUnit:IsHasPromotion(CorpsID)
+                    --only for same Type
+                    or iUnit:GetUnitType() ~= unit:GetUnitType()
+                    then
+                        return false
                     end
+                    nUnit = iUnit
+                    break
                 end
             end
-            if tUnit and nUnit and tUnit ~= nUnit and not tUnit:IsHasPromotion(GameInfoTypes["PROMOTION_CORPS_2"]) and not nUnit:IsHasPromotion(GameInfoTypes["PROMOTION_CORPS_2"]) then
-                bIsCondition = true;
-                g_CorpsCount[playerID][3] = tUnit;
-                g_CorpsCount[playerID][4] = nUnit;
-                g_CorpsCount[playerID][5] = unit;
-                if bIsCorps then
-                    if unit:GetDomainType() == DomainTypes.DOMAIN_LAND then
-                        EstablishCorpsButton.Title = "TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMEE_SHORT";
-                        local AvailableArmeeNum = player:GetBuildingClassCount(GameInfoTypes["BUILDINGCLASS_MILITARY_BASE"]) * ifac - g_CorpsCount[playerID][2];
-                        local ArmeeButtonText = Locale.ConvertTextKey("TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMEE") .. Locale.ConvertTextKey("TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMEE_EXTRA", AvailableArmeeNum);
-                        EstablishCorpsButton.ToolTip = ArmeeButtonText;
-                    else
-                        EstablishCorpsButton.Title = "TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMADA_SHORT";
-                        EstablishCorpsButton.ToolTip = "TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMADA";
+		end
+		local bIsCorps = tUnit:IsHasPromotion(CorpsID)
+
+        if g_CorpsCount[playerID] == nil then
+            g_CorpsCount[playerID] = {0, 0, nil, nil, nil};
+            for pUnit in player:Units() do
+                if pUnit and pUnit:IsCombatUnit() and not pUnit:IsImmobile() then
+                    if pUnit and pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_CORPS_1"]) and GameInfo.Unit_FreePromotions {
+                        UnitType = GameInfo.Units[pUnit:GetUnitType()].Type,
+                        PromotionType = "PROMOTION_CORPS_1"
+                    }() == nil then
+                        g_CorpsCount[playerID][1] = g_CorpsCount[playerID][1] + 1;
                     end
-                    EstablishCorpsButton.PortraitIndex = 3;
-                else
-                    if unit:GetDomainType() == DomainTypes.DOMAIN_LAND then
-                        EstablishCorpsButton.Title = "TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_SHORT";
-                        local AvailableCropsNum = player:GetBuildingClassCount(GameInfoTypes["BUILDINGCLASS_ARSENAL"]) * ifac - g_CorpsCount[playerID][1];
-                        local CorpsButtonText = Locale.ConvertTextKey("TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS") .. Locale.ConvertTextKey("TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_EXTRA", AvailableCropsNum);
-                        EstablishCorpsButton.ToolTip = CorpsButtonText;
-                    else
-                        EstablishCorpsButton.Title = "TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_FLEET_SHORT";
-                        EstablishCorpsButton.ToolTip = "TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_FLEET";
+                    if pUnit and pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_CORPS_2"]) and GameInfo.Unit_FreePromotions {
+                        UnitType = GameInfo.Units[pUnit:GetUnitType()].Type,
+                        PromotionType = "PROMOTION_CORPS_2"
+                    }() == nil then
+                        g_CorpsCount[playerID][2] = g_CorpsCount[playerID][2] + 1;
                     end
-                    EstablishCorpsButton.PortraitIndex = 1;
                 end
             end
         end
-        return unit:CanMove() and bIsCondition;
+
+		if tUnit and nUnit and tUnit ~= nUnit 
+		then
+			g_CorpsCount[playerID][3] = tUnit;
+			g_CorpsCount[playerID][4] = nUnit;
+			g_CorpsCount[playerID][5] = unit;
+			if bIsCorps then
+				if unit:GetDomainType() == DomainTypes.DOMAIN_LAND then
+					EstablishCorpsButton.Title = "TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMEE_SHORT"
+					EstablishCorpsButton.ToolTip = Locale.ConvertTextKey("TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMEE")
+				else
+					EstablishCorpsButton.Title = "TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMADA_SHORT"
+					EstablishCorpsButton.ToolTip = Locale.ConvertTextKey("TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMADA")
+				end
+                local AvailableArmeeNum = player:GetBuildingClassCount(iMilitaryBase) * ifac - g_CorpsCount[playerID][2]
+                EstablishCorpsButton.ToolTip = EstablishCorpsButton.ToolTip .. Locale.ConvertTextKey("TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMEE_EXTRA", AvailableArmeeNum)
+				EstablishCorpsButton.PortraitIndex = 3;
+			else
+				if unit:GetDomainType() == DomainTypes.DOMAIN_LAND then
+					EstablishCorpsButton.Title = "TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_SHORT"
+					EstablishCorpsButton.ToolTip = Locale.ConvertTextKey("TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS")
+				else
+					EstablishCorpsButton.Title = "TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_FLEET_SHORT"
+					EstablishCorpsButton.ToolTip = Locale.ConvertTextKey("TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_FLEET")
+				end
+                local AvailableCropsNum = player:GetBuildingClassCount(iArsenal) * ifac - g_CorpsCount[playerID][1];
+				EstablishCorpsButton.ToolTip = EstablishCorpsButton.ToolTip .. Locale.ConvertTextKey("TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_EXTRA", AvailableCropsNum);
+				EstablishCorpsButton.PortraitIndex = 1;
+			end
+		end
+        return true
     end, -- or nil or a boolean, default is true
 
     Disabled = function(action, unit)
-        return unit:GetPlot():GetNumUnits() <= 1;
+		local plot = unit:GetPlot()
+		local city = plot:GetPlotCity() or plot:GetWorkingCity()
+		local playerID = unit:GetOwner()
+        local player = Players[playerID]
+
+		if unit:GetUnitClassType() == GameInfo.UnitClasses.UNITCLASS_GREAT_GENERAL.ID 
+		or unit:GetUnitClassType() == GameInfo.UnitClasses.UNITCLASS_GREAT_ADMIRAL.ID 
+		then
+			for i = 0, plot:GetNumUnits() - 1, 1 do
+				local iUnit = plot:GetUnit(i)
+				if iUnit:IsCombatUnit()
+				and not iUnit:IsHasPromotion(ArmeeID) 
+				then
+					if iUnit:IsHasPromotion(CorpsID) and not city:IsHasBuildingClass(iArsenal) then
+						EstablishCorpsButton.ToolTip = EstablishCorpsButton.ToolTip .. Locale.ConvertTextKey("TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_1")
+						return true
+					end
+				end
+			end
+		elseif unit:IsCombatUnit() then
+			if not unit:IsHasPromotion(CorpsID) then
+				if not city:IsHasBuildingClass(iArsenal) then
+					EstablishCorpsButton.ToolTip = EstablishCorpsButton.ToolTip .. Locale.ConvertTextKey("TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_2")
+					return true
+				elseif g_CorpsCount[playerID][1] >= player:GetBuildingClassCount(iArsenal) * ifac then
+					return true
+				end
+			else
+				if not city:IsHasBuildingClass(iMilitaryBase) then
+					EstablishCorpsButton.ToolTip = EstablishCorpsButton.ToolTip .. Locale.ConvertTextKey("TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_3")
+					return true
+				elseif g_CorpsCount[playerID][2] >= player:GetBuildingClassCount(iMilitaryBase) * ifac then
+					return true
+				end
+			end
+		end
+
+		return false
     end, -- or nil or a boolean, default is false
 
     Action = function(action, unit, eClick)
         local playerID = unit:GetOwner();
         local player = Players[playerID];
         local plot = unit:GetPlot();
-        if plot and plot:GetNumUnits() > 1 and not unit:IsEmbarked() and not unit:IsImmobile() and not unit:IsHasPromotion(GameInfoTypes["PROMOTION_CORPS_2"]) and g_CorpsCount[playerID] and g_CorpsCount[playerID][5] == unit and g_CorpsCount[playerID][3] ~= nil and g_CorpsCount[playerID][4] ~= nil and g_CorpsCount[playerID][3] ~= g_CorpsCount[playerID][4] and g_CorpsCount[playerID][3]:GetPlot() == g_CorpsCount[playerID][4]:GetPlot() then
+        if plot and plot:GetNumUnits() > 1 and not unit:IsEmbarked() and not unit:IsImmobile() 
+		and not unit:IsHasPromotion(GameInfoTypes["PROMOTION_CORPS_2"]) 
+		and g_CorpsCount[playerID] and g_CorpsCount[playerID][5] == unit 
+		and g_CorpsCount[playerID][3] ~= nil and g_CorpsCount[playerID][4] ~= nil 
+		and g_CorpsCount[playerID][3] ~= g_CorpsCount[playerID][4] 
+		and g_CorpsCount[playerID][3]:GetPlot() == g_CorpsCount[playerID][4]:GetPlot() 
+		then
             local tUnit = g_CorpsCount[playerID][3];
             local nUnit = g_CorpsCount[playerID][4];
             if tUnit:GetUnitType() == nUnit:GetUnitType() then
@@ -1259,6 +1301,17 @@ EstablishCorpsButton = {
                         tUnit:SetHasPromotion(unitPromotion.ID, true);
                     end
                 end
+				--new for SP9.3
+                local HPFromRazedCityPopLimit = player:GetTraitUnitMaxHitPointChangePerRazedCityPopLimit()
+                local HPFromRazedCityPop = tUnit:GetMaxHitPointsChangeFromRazedCityPop()+nUnit:GetMaxHitPointsChangeFromRazedCityPop()
+                if HPFromRazedCityPop > HPFromRazedCityPopLimit
+                then
+                    HPFromRazedCityPop = HPFromRazedCityPopLimit
+                end
+				tUnit:SetMaxHitPointsChangeFromRazedCityPop(HPFromRazedCityPop)
+				tUnit:SetCombatStrengthChangeFromKilledUnits(tUnit:GetCombatStrengthChangeFromKilledUnits()+nUnit:GetCombatStrengthChangeFromKilledUnits())
+				tUnit:SetRangedCombatStrengthChangeFromKilledUnits(tUnit:GetRangedCombatStrengthChangeFromKilledUnits()+nUnit:GetRangedCombatStrengthChangeFromKilledUnits())
+				
             else
                 nUnit = nil;
             end
@@ -1273,6 +1326,7 @@ EstablishCorpsButton = {
             if nUnit then
                 nUnit:Kill();
             end
+            --kill Great People
             if tUnit ~= unit and nUnit ~= unit then
                 unit:Kill();
             end

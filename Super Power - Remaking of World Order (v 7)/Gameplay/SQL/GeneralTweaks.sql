@@ -40,15 +40,6 @@ END;
 -- UPDATE Units SET Moves=2 WHERE Class='UNITCLASS_CARAVAN';
 -- UPDATE Units SET Moves=4 WHERE Class='UNITCLASS_CARGO_SHIP';
 
--- +25% Faith from World Wonders - POLICY_PIETY - by CaptainCWB!
-/*
-CREATE TRIGGER Policy_BuildingClassYieldModifiers_SP
-AFTER INSERT ON BuildingClasses WHEN NEW.MaxGlobalInstances = 1
-BEGIN
-	INSERT INTO Policy_BuildingClassYieldModifiers (PolicyType, BuildingClassType, YieldType, YieldMod) VALUES ('POLICY_PIETY', NEW.Type, 'YIELD_FAITH', 25);
-END;
-*/
-
 --Trade Route Scale
 UPDATE Worlds SET TradeRouteDistanceMod=60 WHERE Type='WORLDSIZE_DUEL';
 UPDATE Worlds SET TradeRouteDistanceMod=60 WHERE Type='WORLDSIZE_TINY';

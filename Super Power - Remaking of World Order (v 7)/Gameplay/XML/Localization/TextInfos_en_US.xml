@@ -1799,7 +1799,7 @@
 			<Text>[COLOR_POSITIVE_TEXT]Establish Corps[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS">
-			<Text>Combine two same type of Units in this tile into Corps: +100% Max. HP, +10% [ICON_STRENGTH] Combat Strength.</Text>
+			<Text>Combine two same type of Units in this tile into Corps or Consume a Great Prople to Upgrade a Unit: +100% Max. HP, +10% [ICON_STRENGTH] Combat Strength.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_EXTRA">
 			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]The number of remaining Corps you can Establish : {1_name}[ENDCOLOR]</Text>
@@ -1808,7 +1808,7 @@
 			<Text>[COLOR_POSITIVE_TEXT]Establish Armee[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMEE">
-			<Text>Add one same type Unit in this tile into Corps to become an Armee: +100% Max. HP, +15% [ICON_STRENGTH] Combat Strength.</Text>
+			<Text>Add one same type Unit in this tile into Corps to become an Armee or Consume a Great Prople to Upgrade a Unit: +100% Max. HP, +15% [ICON_STRENGTH] Combat Strength.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMEE_EXTRA">
 			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]The number of remaining Armee you can Establish : {1_name}[ENDCOLOR]</Text>
@@ -1817,13 +1817,22 @@
 			<Text>[COLOR_POSITIVE_TEXT]Establish Fleet[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_FLEET">
-			<Text>Combine two same type of Units in this tile into Fleet: +100% Max. HP, +10% [ICON_STRENGTH] Combat Strength.</Text>
+			<Text>Combine two same type of Units in this tile into Fleet or Consume a Great Prople to Upgrade a Unit: +100% Max. HP, +10% [ICON_STRENGTH] Combat Strength.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMADA_SHORT">
 			<Text>[COLOR_POSITIVE_TEXT]Establish Armada[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMADA">
-			<Text>Add one same type Unit in this tile into Fleet to become an Armada: +100% Max. HP, +15% [ICON_STRENGTH] Combat Strength.</Text>
+			<Text>Add one same type Unit in this tile into Fleet to become an Armada or Consume a Great Prople to Upgrade a Unit: +100% Max. HP, +15% [ICON_STRENGTH] Combat Strength.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_1">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]Consume a Great Prople to Upgrade a Unit need Arsenal in this City[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_2">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]Combine two same type of Units in this tile into Corps need Arsenal in this City[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_3">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]Add one same type Unit in this tile into Corps to become an Armee need MilitaryBase in this City[ENDCOLOR]</Text>
 		</Row>
 		
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_FULLATTACK_ON_SHORT">

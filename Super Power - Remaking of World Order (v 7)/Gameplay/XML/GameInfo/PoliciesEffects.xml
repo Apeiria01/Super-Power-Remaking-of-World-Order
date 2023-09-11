@@ -2469,28 +2469,6 @@
 			<YieldType>YIELD_SCIENCE</YieldType>
 			<Yield>20</Yield>
 		</Row>
-
-		<Row>
-			<BuildingType>BUILDING_POLICE_STATE_LV2</BuildingType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>8</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_POLICE_STATE_LV3</BuildingType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>10</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_POLICE_STATE_LV4</BuildingType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>13</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_POLICE_STATE_LV5</BuildingType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>16</Yield>
-		</Row>
-		
 	</Building_YieldChangesPerPop>
 
 	<BuildingClasses>

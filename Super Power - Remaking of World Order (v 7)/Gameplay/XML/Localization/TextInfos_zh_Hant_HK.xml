@@ -4933,7 +4933,7 @@
 			<Text>[COLOR_POSITIVE_TEXT]建立軍團[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS">
-			<Text>將該地格上兩個相同的單位合並為軍團：最大生命值+100%，[ICON_STRENGTH]戰鬥力+10%。</Text>
+			<Text>將該地格上兩個相同的單位合並為軍團或者消耗偉人將一個單位升級為軍團：+100%最大生命值，+10%[ICON_STRENGTH]戰鬥力。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_EXTRA">
 			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]當前可組建軍團數:{1_name}[ENDCOLOR]</Text>
@@ -4942,7 +4942,7 @@
 			<Text>[COLOR_POSITIVE_TEXT]建立集團軍[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMEE">
-			<Text>將該地格上一個相同的單位合入軍團以建立集團軍：最大生命值+100%，[ICON_STRENGTH]戰鬥力+15%。</Text>
+			<Text>將該地格上一個相同的單位合入軍團以建立集團軍或者消耗偉人將一個單位升級為集團軍：+100%最大生命值，+15%[ICON_STRENGTH]戰鬥力。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMEE_EXTRA">
 			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]當前可組建集團軍數:{1_name}[ENDCOLOR]</Text>
@@ -4951,13 +4951,22 @@
 			<Text>[COLOR_POSITIVE_TEXT]建立艦隊[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_FLEET">
-			<Text>將該地格上兩個相同的單位合並為艦隊：最大生命值+100%，[ICON_STRENGTH]戰鬥力+10%。</Text>
+			<Text>將該地格上兩個相同的單位合並為艦隊或者消耗偉人將一個單位升級為艦隊：+100%最大生命值，+10%[ICON_STRENGTH]戰鬥力。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMADA_SHORT">
 			<Text>[COLOR_POSITIVE_TEXT]建立大艦隊[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMADA">
-			<Text>將該地格上一個相同的單位合入艦隊以建立大艦隊：最大生命值+100%，[ICON_STRENGTH]戰鬥力+15%。</Text>
+			<Text>將該地格上一個相同的單位合入艦隊以建立大艦隊或者消耗偉人將一個單位升級為大艦隊：+100%最大生命值，+15%[ICON_STRENGTH]戰鬥力。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_1">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]使用偉人升級集團軍需要所在城市擁有兵工廠[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_2">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]組建軍團需要所在城市市擁有兵工廠[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_3">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]組建集團軍需要所在城市市擁有軍事基地[ENDCOLOR]</Text>
 		</Row>
 		
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_FULLATTACK_ON_SHORT">
@@ -8052,8 +8061,8 @@
 				人類玩家也可以組建軍團和集團軍，不過只能在有兵工廠和軍事基地的城市範圍內通過兩個相同單位合成或者消耗陸軍統帥實現；[NEWLINE]
 				使用相同單位合成軍團可以同時合並兩個單位的晉升，並由此得到一個強力單位，而消耗陸軍統帥會直接賦予單位軍團/集團軍晉升；[NEWLINE][NEWLINE]
 				引入「兵力」設定，兵力決定你總共能擁有的軍事單位數量，兵力點滿後獲取軍事單位將變得非常困難，新建的軍事單位也會被清除，AI兵力點滿後也將停止刷出單位，分三個遊戲選項檔：[NEWLINE]
-				[ICON_BULLET]高：除小鎮以外的每個城市規模等級提供4兵力點，玩家初始24點，AI初始32點，每個兵工廠/軍事基地分別提供2點軍團/集團軍組建上限 ——適合高配置玩家；[NEWLINE]
-				[ICON_BULLET]中：除小鎮以外的每個城市規模等級提供2兵力點，玩家初始12點，AI初始16點，每個兵工廠/軍事基地分別提供1點軍團/集團軍組建上限 ——適合中配置玩家（默認情況）；[NEWLINE]
+				[ICON_BULLET]高：除小鎮以外的每個城市規模等級提供4兵力點，玩家初始24點，AI初始32點，每個兵工廠/軍事基地分別提供3點軍團/集團軍組建上限 ——適合高配置玩家；[NEWLINE]
+				[ICON_BULLET]中：除小鎮以外的每個城市規模等級提供2兵力點，玩家初始12點，AI初始16點，每個兵工廠/軍事基地分別提供2點軍團/集團軍組建上限 ——適合中配置玩家（默認情況）；[NEWLINE]
 				[ICON_BULLET]低：除小鎮以外的每個城市規模等級提供1兵力點，玩家初始 6點，AI初始 8點，每個兵工廠/軍事基地分別提供1點軍團/集團軍組建上限 ——適合低配置玩家或和平主義者；[NEWLINE][NEWLINE]
 				特別註意，「軍團」或者「集團軍」的上限只與兵工廠或者軍事基地的數量有關，消耗陸軍統帥可以無視數量上限組建，但是並不會增加上限（你會看到組建按鈕顯示可組建數量為負數）；[NEWLINE]
 				消耗陸軍統帥組建「集團軍」仍然需要城市擁有兵工廠；[NEWLINE]
