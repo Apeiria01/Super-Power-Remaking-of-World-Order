@@ -1045,8 +1045,8 @@
 			<PortraitIndex>7</PortraitIndex>
 			<MoveRate>QUADRUPED</MoveRate>
 			<ExtraMaintenanceCost>5</ExtraMaintenanceCost>
-      <CombatStrengthChangeAfterKilling>2</CombatStrengthChangeAfterKilling>
-      <RangedCombatStrengthChangeAfterKilling>2</RangedCombatStrengthChangeAfterKilling>
+			<CombatStrengthChangeAfterKilling>2</CombatStrengthChangeAfterKilling>
+			<RangedCombatStrengthChangeAfterKilling>2</RangedCombatStrengthChangeAfterKilling>
 		</Row>
 
 		<Row>
