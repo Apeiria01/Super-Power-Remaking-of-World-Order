@@ -40,26 +40,6 @@ END;
 -- UPDATE Units SET Moves=2 WHERE Class='UNITCLASS_CARAVAN';
 -- UPDATE Units SET Moves=4 WHERE Class='UNITCLASS_CARGO_SHIP';
 
--- +25% Faith from World Wonders - POLICY_PIETY - by CaptainCWB!
-/*
-CREATE TRIGGER Policy_BuildingClassYieldModifiers_SP
-AFTER INSERT ON BuildingClasses WHEN NEW.MaxGlobalInstances = 1
-BEGIN
-	INSERT INTO Policy_BuildingClassYieldModifiers (PolicyType, BuildingClassType, YieldType, YieldMod) VALUES ('POLICY_PIETY', NEW.Type, 'YIELD_FAITH', 25);
-END;
-*/
-
--- Free Great People from Buildings don't Upgrade Threshold - by CaptainCWB!
-/*
-CREATE TABLE IF NOT EXISTS Building_FreeUnits_Truly("BuildingType" TEXT NOT NULL, "UnitType" TEXT NOT NULL, "NumUnits" INTEGER, FOREIGN KEY("BuildingType") REFERENCES Buildings("Type"), FOREIGN KEY("UnitType") REFERENCES Units("Type"));
-CREATE TRIGGER TrulyFreeGPfromBuildings_SP
-AFTER INSERT ON Building_FreeUnits WHEN EXISTS (SELECT * FROM CustomModOptions WHERE Name = 'GLOBAL_TRULY_FREE_GP' AND Value = 0) AND EXISTS (SELECT * FROM Units WHERE Type = NEW.UnitType AND Special = 'SPECIALUNIT_PEOPLE')
-BEGIN
-	INSERT INTO Building_FreeUnits_Truly (BuildingType, UnitType, NumUnits) VALUES (NEW.BuildingType, NEW.UnitType, NEW.NumUnits);
-	DELETE FROM Building_FreeUnits WHERE BuildingType = NEW.BuildingType AND UnitType = NEW.UnitType;
-END;
-*/
-
 --Trade Route Scale
 UPDATE Worlds SET TradeRouteDistanceMod=60 WHERE Type='WORLDSIZE_DUEL';
 UPDATE Worlds SET TradeRouteDistanceMod=60 WHERE Type='WORLDSIZE_TINY';

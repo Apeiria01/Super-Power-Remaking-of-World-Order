@@ -870,6 +870,7 @@
 	<Improvement_TechYieldChanges>
 		<Delete ImprovementType="IMPROVEMENT_PASTURE"/>
 		<Delete ImprovementType="IMPROVEMENT_LUMBERMILL"/>
+		<Delete ImprovementType="IMPROVEMENT_MOAI"/>
 		
 		
 		<Update>

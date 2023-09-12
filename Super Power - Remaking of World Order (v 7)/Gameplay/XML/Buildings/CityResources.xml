@@ -494,11 +494,6 @@
 			<BuildingType>BUILDING_OIL_PLANT</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_SMALL</BuildingClassType>
 		</Row>
-		<!--<Row>
-			<BuildingType>BUILDING_GAS_PLANT</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_SMALL</BuildingClassType>
-		</Row>-->
-
 
 		<Row>
 			<BuildingType>BUILDING_FUSION_PLANT</BuildingType>

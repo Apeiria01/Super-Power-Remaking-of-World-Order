@@ -1979,11 +1979,6 @@
 			<Happiness>5</Happiness>
 		</Row>
 
-		<!--<Row>
-			<BuildingType>BUILDING_PEARL_TOWER</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_SMALL</BuildingClassType>
-			<Happiness>1</Happiness>
-		</Row>-->
 		<Row>
 			<BuildingType>BUILDING_PEARL_TOWER</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_MEDIUM</BuildingClassType>
@@ -3158,27 +3153,6 @@
 			<Yield>1</Yield>
 		</Row>-->
 		<!---->
-
-
-		<!--<Row>
-			<BuildingType>BUILDING_NATIONAL_EXHIBITION</BuildingType>
-			<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_NATIONAL_EXHIBITION</BuildingType>
-			<SpecialistType>SPECIALIST_WRITER</SpecialistType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_NATIONAL_EXHIBITION</BuildingType>
-			<SpecialistType>SPECIALIST_MUSICIAN</SpecialistType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>1</Yield>
-		</Row>-->
-
 
 		<!--<Row>
 			<BuildingType>BUILDING_NATIONAL_TREASURY_II</BuildingType>

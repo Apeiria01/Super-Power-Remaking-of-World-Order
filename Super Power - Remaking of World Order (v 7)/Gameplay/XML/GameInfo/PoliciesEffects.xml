@@ -650,13 +650,33 @@
 
 	
 	
-	<!--<Policy_BuildingClassProductionModifiers>
+	<Policy_BuildingClassProductionModifiers>
 		<Row>
-			<PolicyType>POLICY_SOCIALIST_REALISM</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_MECHANIZED_FARM</BuildingClassType>
-			<ProductionModifier>100</ProductionModifier>
+			<PolicyType>POLICY_POLICE_STATE</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_COURTHOUSE</BuildingClassType>
+			<ProductionModifier>200</ProductionModifier>
 		</Row>
-	</Policy_BuildingClassProductionModifiers>-->
+		<Row>
+			<PolicyType>POLICY_POLICE_STATE</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_CONSTABLE</BuildingClassType>
+			<ProductionModifier>200</ProductionModifier>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_POLICE_STATE</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_SHERIFF_OFFICE</BuildingClassType>
+			<ProductionModifier>200</ProductionModifier>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_POLICE_STATE</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_POLICE_STATION</BuildingClassType>
+			<ProductionModifier>200</ProductionModifier>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_POLICE_STATE</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_PROCURATORATE</BuildingClassType>
+			<ProductionModifier>200</ProductionModifier>
+		</Row>
+	</Policy_BuildingClassProductionModifiers>
 	
 	
 
@@ -1917,10 +1937,6 @@
 			<PolicyType>POLICY_PATRIOTIC_WAR</PolicyType>
 			<PromotionType>PROMOTION_NATIONALISM</PromotionType>
 		</Row>
-		<!--<Row>
-			<PolicyType>POLICY_RESETTLEMENT</PolicyType>
-			<PromotionType>PROMOTION_SETTLER_POP_3</PromotionType>
-		</Row>-->
 		<Row>
 			<PolicyType>POLICY_LIGHTNING_WARFARE</PolicyType>
 			<PromotionType>PROMOTION_FAST_GENERAL</PromotionType>
@@ -2367,19 +2383,7 @@
 			<DefaultBuilding>BUILDING_THEOCRACY_WRITER</DefaultBuilding>
 			<Description>TXT_KEY_BUILDING_THEOCRACY_WRITER</Description>
 		</Row>
-		
-		<Row>
-			<Type>BUILDINGCLASS_RESETTLEMENT_FOOD_KEPT</Type>
-			<DefaultBuilding>BUILDING_RESETTLEMENT_FOOD_KEPT</DefaultBuilding>
-			<Description>TXT_KEY_POLICY_RESETTLEMENT</Description>
-		</Row>
-		
-		<Row>
-			<Type>BUILDINGCLASS_POLICE_STATE</Type>
-			<DefaultBuilding>BUILDING_POLICE_STATE_LV2</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_POLICE_STATE</Description>
-		</Row>
-		
+
 		<Row>
 			<Type>BUILDINGCLASS_FAMILY_PRODUCTION</Type>
 			<DefaultBuilding>BUILDING_FAMILY_PRODUCTION</DefaultBuilding>
@@ -2396,12 +2400,6 @@
 			<Type>BUILDINGCLASS_EXPLORATION_REMOVE_DEBUFF</Type>
 			<DefaultBuilding>BUILDING_EXPLORATION_REMOVE_DEBUFF</DefaultBuilding>
 			<Description>TXT_KEY_POLICY_BRANCH_EXPLORATION</Description>
-		</Row>
-
-		<Row>
-			<Type>BUILDINGCLASS_SCHOLASTICISM</Type>
-			<DefaultBuilding>BUILDING_SCHOLASTICISM</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_SCHOLASTICISM</Description>
 		</Row>
 	</BuildingClasses>
 	<Buildings>
@@ -2435,74 +2433,6 @@
 		</Row>
 
 		<Row>
-			<Type>BUILDING_RESETTLEMENT_FOOD_KEPT</Type>
-			<BuildingClass>BUILDINGCLASS_RESETTLEMENT_FOOD_KEPT</BuildingClass>
-			<Cost>-1</Cost>
-			<NeverCapture>true</NeverCapture>
-			<NukeImmune>true</NukeImmune>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<PortraitIndex>26</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<FoodKept>15</FoodKept>
-			<Description>TXT_KEY_POLICY_RESETTLEMENT</Description>
-			<Help>TXT_KEY_POLICY_RESETTLEMENT_HELP</Help>
-			<GreatWorkCount>-1</GreatWorkCount>
-		</Row>
-
-		<Row>
-			<Type>BUILDING_POLICE_STATE_LV2</Type>
-			<BuildingClass>BUILDINGCLASS_POLICE_STATE</BuildingClass>
-			<Cost>-1</Cost>
-			<NeverCapture>true</NeverCapture>
-			<NukeImmune>true</NukeImmune>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<PortraitIndex>21</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<Description>TXT_KEY_BUILDING_POLICE_STATE_LV2</Description>
-			<Help>TXT_KEY_BUILDING_POLICE_STATE</Help>
-			<GreatWorkCount>-1</GreatWorkCount>
-		</Row>
-		<Row>
-			<Type>BUILDING_POLICE_STATE_LV3</Type>
-			<BuildingClass>BUILDINGCLASS_POLICE_STATE</BuildingClass>
-			<Cost>-1</Cost>
-			<NeverCapture>true</NeverCapture>
-			<NukeImmune>true</NukeImmune>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<PortraitIndex>21</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<Description>TXT_KEY_BUILDING_POLICE_STATE_LV3</Description>
-			<Help>TXT_KEY_BUILDING_POLICE_STATE</Help>
-			<GreatWorkCount>-1</GreatWorkCount>
-		</Row>
-		<Row>
-			<Type>BUILDING_POLICE_STATE_LV4</Type>
-			<BuildingClass>BUILDINGCLASS_POLICE_STATE</BuildingClass>
-			<Cost>-1</Cost>
-			<NeverCapture>true</NeverCapture>
-			<NukeImmune>true</NukeImmune>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<PortraitIndex>21</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<Description>TXT_KEY_BUILDING_POLICE_STATE_LV4</Description>
-			<Help>TXT_KEY_BUILDING_POLICE_STATE</Help>
-			<GreatWorkCount>-1</GreatWorkCount>
-		</Row>
-		<Row>
-			<Type>BUILDING_POLICE_STATE_LV5</Type>
-			<BuildingClass>BUILDINGCLASS_POLICE_STATE</BuildingClass>
-			<Cost>-1</Cost>
-			<NeverCapture>true</NeverCapture>
-			<NukeImmune>true</NukeImmune>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<PortraitIndex>21</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<Description>TXT_KEY_BUILDING_POLICE_STATE_LV5</Description>
-			<Help>TXT_KEY_BUILDING_POLICE_STATE</Help>
-			<GreatWorkCount>-1</GreatWorkCount>
-		</Row>
-		
-		<Row>
 			<Type>BUILDING_FAMILY_PRODUCTION</Type>
 			<BuildingClass>BUILDINGCLASS_FAMILY_PRODUCTION</BuildingClass>
 			<Cost>-1</Cost>
@@ -2532,20 +2462,6 @@
 			<Help>TXT_KEY_BUILDING_AUTOCRACY_FIREWALL_HELP</Help>
 			<GreatWorkCount>-1</GreatWorkCount>
 		</Row>
-		
-		<Row>
-			<Type>BUILDING_SCHOLASTICISM</Type>
-			<BuildingClass>BUILDINGCLASS_SCHOLASTICISM</BuildingClass>
-			<Cost>-1</Cost>
-			<NeverCapture>true</NeverCapture>
-			<NukeImmune>true</NukeImmune>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<PortraitIndex>39</PortraitIndex>
-			<IconAtlas>POLICY_ATLAS</IconAtlas>
-			<Description>TXT_KEY_BUILDING_SCHOLASTICISM</Description>
-			<Help>TXT_KEY_BUILDING_SCHOLASTICISM_HELP</Help>
-			<GreatWorkCount>-1</GreatWorkCount>
-		</Row>
 	</Buildings>
 	<Building_YieldChangesPerPop>
 		<Row>
@@ -2553,41 +2469,7 @@
 			<YieldType>YIELD_SCIENCE</YieldType>
 			<Yield>20</Yield>
 		</Row>
-
-		<Row>
-			<BuildingType>BUILDING_POLICE_STATE_LV2</BuildingType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>8</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_POLICE_STATE_LV3</BuildingType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>10</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_POLICE_STATE_LV4</BuildingType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>13</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_POLICE_STATE_LV5</BuildingType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>16</Yield>
-		</Row>
-		
 	</Building_YieldChangesPerPop>
-	<Building_GlobalYieldModifiers>
-		<Row>
-			<BuildingType>BUILDING_SCHOLASTICISM</BuildingType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_SCHOLASTICISM</BuildingType>
-			<YieldType>YIELD_FAITH</YieldType>
-			<Yield>1</Yield>
-		</Row>
-	</Building_GlobalYieldModifiers>
 
 	<BuildingClasses>
 		<Row>

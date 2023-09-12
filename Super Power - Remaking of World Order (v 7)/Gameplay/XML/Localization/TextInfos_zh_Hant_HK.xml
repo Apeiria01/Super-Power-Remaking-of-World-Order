@@ -12,7 +12,7 @@
 			<Text>[COLOR_YELLOW]注意事項：[ENDCOLOR][NEWLINE]1、檢查存檔文件大小。[NEWLINE]2、查閱文明百科（快捷鍵[COLOR_POSITIVE_TEXT]F1[ENDCOLOR]）[NEWLINE]3、如果始終發生遊戲崩潰或存檔損壞，嘗試Dx9。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_VERSION">
-			<Text>[COLOR_YELLOW]版本號 9.2[ENDCOLOR]</Text>
+			<Text>[COLOR_YELLOW]版本號 9.3[ENDCOLOR]</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_SP_MOD_SETUP">
@@ -472,7 +472,12 @@
 		</Row>
 		
 		<Replace Tag="TXT_KEY_BUILDING_STONE_WORKS_HELP">
-			<Text>所在城市每處已開發的[ICON_RES_MARBLE]大理石和[ICON_RES_STONE]花崗岩資源+1[ICON_PRODUCTION]生產力。[NEWLINE][NEWLINE]城市必須至少擁有一處已修建採石場的上述資源。[NEWLINE][NEWLINE]不能建造於平原城市。[NEWLINE][NEWLINE]研發炸藥之後[COLOR_NEGATIVE_TEXT]過期[ENDCOLOR]（不再提供產出且不能建造）。[NEWLINE][NEWLINE]研發因特網後+2[ICON_TOURISM]旅遊業績。</Text>
+			<Text>
+			所在城市每處已開發的[ICON_RES_MARBLE]大理石和[ICON_RES_STONE]花崗岩資源+1[ICON_PRODUCTION]生產力。
+			[NEWLINE][NEWLINE]城市必須至少擁有一處已修建採石場的上述資源。
+			[NEWLINE][NEWLINE]研發炸藥之後[COLOR_NEGATIVE_TEXT]過期[ENDCOLOR]（不再提供產出且不能建造）。
+			[NEWLINE][NEWLINE]研發因特網後+2[ICON_TOURISM]旅遊業績。
+			</Text>
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_BUILDING_WORKSHOP_HELP">
@@ -976,7 +981,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_RUSSIAN_BALLET_HALL_HELP</Tag>
-			<Text>所有城市+3%[ICON_CULTURE]文化值產出。[NEWLINE][NEWLINE]城市必須擁有畫廊。</Text>
+			<Text>所有城市+3%[ICON_CULTURE]文化值產出。</Text>
 		</Row>
 		
 		<Row>
@@ -1561,7 +1566,14 @@
 		</Row>
 		<!-- Help tags -->
 		<Row Tag="TXT_KEY_WONDER_SAN_MARCO_HELP">
-			<Text>所有城市傑作[ICON_TOURISM]旅遊業績產出+50%，本城市[ICON_CULTURE]文化值產出+50%。[NEWLINE][NEWLINE]建成奇跡的城市附近出現兩位大藝術家。[NEWLINE]擁有4個美術傑作展位。[NEWLINE][NEWLINE]必須在威尼斯擁有博物館才能建造。+1城市工作範圍。</Text>
+			<Text>
+			[ICON_BULLET]本城市[ICON_TOURISM]旅遊業績產出產出+50%。
+			[NEWLINE][ICON_BULLET]本城市[ICON_CULTURE]文化產出+50%。
+			[NEWLINE][ICON_BULLET]城市附近出現兩位大藝術家。
+			[NEWLINE][ICON_BULLET]擁有4個美術傑作展位。
+			[NEWLINE][ICON_BULLET]本城市工作範圍+1。
+			[NEWLINE][NEWLINE]必須在威尼斯擁有博物館才能建造。
+			</Text>
 		</Row>
 		<!-- Pedia tags -->
 		<Row Tag="TXT_KEY_WONDER_SAN_MARCO_PEDIA">
@@ -2461,16 +2473,6 @@
 		</Row>
 			
 	<!-- ***************************New Buildings for Special Building Effects***************************-->
-		<Row>
-			<Tag>TXT_KEY_BUILDING_TRADEINCOME_BOST</Tag>
-			<Text>國際商路+8[ICON_GOLD]金幣</Text>
-		</Row>
-		
-		<Row>
-			<Tag>TXT_KEY_BUILDING_TOURISM_GREATWORKS</Tag>
-			<Text>傑作[ICON_TOURISM]旅遊業績值+50%</Text>
-		</Row>
-		
 		<Row>
 			<Tag>TXT_KEY_BUILDING_MANPOWER_BONUS</Tag>
 			<Text>提供額外[ICON_RES_MANPOWER]人力</Text>
@@ -4931,7 +4933,7 @@
 			<Text>[COLOR_POSITIVE_TEXT]建立軍團[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS">
-			<Text>將該地格上兩個相同的單位合並為軍團：最大生命值+100%，[ICON_STRENGTH]戰鬥力+10%。</Text>
+			<Text>將該地格上兩個相同的單位合並為軍團或者消耗偉人將一個單位升級為軍團：+100%最大生命值，+10%[ICON_STRENGTH]戰鬥力。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_EXTRA">
 			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]當前可組建軍團數:{1_name}[ENDCOLOR]</Text>
@@ -4940,7 +4942,7 @@
 			<Text>[COLOR_POSITIVE_TEXT]建立集團軍[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMEE">
-			<Text>將該地格上一個相同的單位合入軍團以建立集團軍：最大生命值+100%，[ICON_STRENGTH]戰鬥力+15%。</Text>
+			<Text>將該地格上一個相同的單位合入軍團以建立集團軍或者消耗偉人將一個單位升級為集團軍：+100%最大生命值，+15%[ICON_STRENGTH]戰鬥力。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMEE_EXTRA">
 			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]當前可組建集團軍數:{1_name}[ENDCOLOR]</Text>
@@ -4949,13 +4951,22 @@
 			<Text>[COLOR_POSITIVE_TEXT]建立艦隊[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_FLEET">
-			<Text>將該地格上兩個相同的單位合並為艦隊：最大生命值+100%，[ICON_STRENGTH]戰鬥力+10%。</Text>
+			<Text>將該地格上兩個相同的單位合並為艦隊或者消耗偉人將一個單位升級為艦隊：+100%最大生命值，+10%[ICON_STRENGTH]戰鬥力。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMADA_SHORT">
 			<Text>[COLOR_POSITIVE_TEXT]建立大艦隊[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMADA">
-			<Text>將該地格上一個相同的單位合入艦隊以建立大艦隊：最大生命值+100%，[ICON_STRENGTH]戰鬥力+15%。</Text>
+			<Text>將該地格上一個相同的單位合入艦隊以建立大艦隊或者消耗偉人將一個單位升級為大艦隊：+100%最大生命值，+15%[ICON_STRENGTH]戰鬥力。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_1">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]使用偉人升級集團軍需要所在城市擁有兵工廠[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_2">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]組建軍團需要所在城市市擁有兵工廠[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_3">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]組建集團軍需要所在城市市擁有軍事基地[ENDCOLOR]</Text>
 		</Row>
 		
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_FULLATTACK_ON_SHORT">
@@ -5558,10 +5569,9 @@
 
 		<Replace Tag="TXT_KEY_TRAIT_RAZE_AND_HORSES">
 			<Text>
-				[ICON_BULLET]擊敗蠻族營寨中的單位會加入匈人軍隊。
-				[NEWLINE][ICON_BULLET]夷平城市後獲得當前回合數*10的[ICON_GOLD]金錢、[ICON_RESEARCH]科研、[ICON_CULTURE]文化、[ICON_PEACE]信仰值（最多1000）。
-        [NEWLINE][ICON_BULLET]夷平城市時，每減少一人口，所有位於該城市工作地塊上的戰鬥單位+2最大生命值，該效果的上限是150。
-				[NEWLINE][ICON_BULLET]城市名從其他文明借用。
+				[ICON_BULLET]擊敗蠻族營寨中的單位會加入匈人軍隊，城市名從其他文明借用。
+				[NEWLINE][ICON_BULLET]夷平城市後獲得當前回合數*10的[ICON_GOLD][ICON_RESEARCH][ICON_CULTURE][ICON_PEACE]一次性產出，上限1000點。
+				[NEWLINE][ICON_BULLET]夷平城市時，每減少一人口，所有位於該城市工作地塊上的戰鬥單位+2最大[ICON_SILVER_FIST]生命值，上限150。
 			</Text>
 		</Replace>
 
@@ -5619,7 +5629,7 @@
 		<Replace Tag="TXT_KEY_TRAIT_SPICE">
 			<Text>
 				[ICON_BULLET]在非出生地大陸建造的前三座城市可以提供2份獨有奢侈資源，這三座城市無法被摧毀且沒有額外的管理成本。
-				[NEWLINE][ICON_BULLET]每擁有一種數量大於1的奢侈資源，完成城邦任務獲得的[ICON_INFLUENCE]影響力+5%，上限為40%
+				[NEWLINE][ICON_BULLET]每擁有一種數量大於1的奢侈資源，完成城邦任務獲得的[ICON_INFLUENCE]影響力+10%，上限為100%
 			</Text>
 		</Replace>
 
@@ -5652,6 +5662,7 @@
 				[ICON_BULLET]河流及其相鄰區塊不會阻礙己方單位[ICON_MOVES]移動。
 				[NEWLINE][ICON_BULLET]陸地商路能夠通過河流線延長（視為道路）。
 				[NEWLINE][ICON_BULLET]所有貿易站+1[ICON_GOLD]金錢產出。
+				[NEWLINE][ICON_BULLET]沿河城市减少200点离心倾向。
 			</Text>
 		</Replace>
 
@@ -7070,7 +7081,7 @@
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_POLICY_RESETTLEMENT_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]移民安置[ENDCOLOR][NEWLINE]移民等同於3[ICON_CITIZEN]人口（生產移民城市失去3[ICON_CITIZEN]人口，新建城市直接獲得3[ICON_CITIZEN]人口，移民加入新城市也會增加其3[ICON_CITIZEN]人口）。所有城市因污染導致的[ICON_FOOD]食物損失-15%。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]移民安置[ENDCOLOR][NEWLINE]移民等同於3[ICON_CITIZEN]人口（生產移民城市失去3[ICON_CITIZEN]人口，新建城市直接獲得3[ICON_CITIZEN]人口，移民加入新城市也會增加其3[ICON_CITIZEN]人口）。移民不再產生[ICON_HAPPINESS_4]不滿。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_ACADEMY_SCIENCES">
@@ -7175,7 +7186,7 @@
 		<Replace Tag="TXT_KEY_POLICY_POLICE_STATE_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]警察國家[ENDCOLOR]
-				[NEWLINE]法院、治安署、審計署、警察局和地檢署+3[ICON_HAPPINESS_1]本地快樂。這些建築因[ICON_CITIZEN]人口造成的[ICON_GOLD]維護費減半。
+				[NEWLINE]法院、治安署、審計署、警察局和地檢署+3[ICON_HAPPINESS_1]本地快樂。建造這些建築+200%[ICON_PRODUCTION]生產力積累。
 			</Text>
 		</Replace>
 
@@ -7242,51 +7253,6 @@
 			<Text>[ICON_GREAT_WRITER]神權政治</Text>
 		</Row>
 	
-		<Row Tag="TXT_KEY_BUILDING_POLICY_MERCHANT_CONFEDERACY" >
-			<Text>商人公會</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_POLICY_MERCHANT_CONFEDERACY_HELP" >
-			<Text>每條與城邦的商路+2%的全國[ICON_PRODUCTION]生產力。</Text>
-		</Row>
-		
-		<!--<Row Tag="TXT_KEY_BUILDING_POLICY_ORGANIZED_RELIGION_DESC" >
-			<Text>教會組織</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_POLICY_ORGANIZED_RELIGION_HELP" >
-			<Text>本城市的宗教壓力+50%。</Text>
-		</Row>-->
-		
-		<Row Tag="TXT_KEY_BUILDING_REPRESENTATION_CULTURE" >
-			<Text>新政策成本+5%[ICON_CULTURE]文化值</Text>
-		</Row>
-		
-		<Row Tag="TXT_KEY_BUILDING_UNITED_FRONT_HELP" >
-			<Text>人口到達20前+50%食物累積</Text>
-		</Row>
-		
-		<Row Tag="TXT_KEY_BUILDING_POLICE_STATE_LV2" >
-			<Text>[ICON_CITYBANNER_CITY_LV2]治安署維護費-50%</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_POLICE_STATE_LV3" >
-			<Text>[ICON_CITYBANNER_CITY_LV3]審計署維護費-50%</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_POLICE_STATE_LV4" >
-			<Text>[ICON_CITYBANNER_CITY_LV4]警察局維護費-50%</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_POLICE_STATE_LV5" >
-			<Text>[ICON_CITYBANNER_CITY_LV5]地檢署維護費-50%</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_POLICE_STATE" >
-			<Text>強化管理類建築因[ICON_CITIZEN]人口造成的[ICON_GOLD]維護費-50%</Text>
-		</Row>
-		
-		<Row Tag="TXT_KEY_BUILDING_MONARCHY_CULTURE" >
-			<Text>君主政體</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_MONARCHY_CULTURE_HELP" >
-			<Text>首都+50%[ICON_TOURISM]旅遊業績產出。</Text>
-		</Row>
-
 		<Row Tag="TXT_KEY_BUILDING_FAMILY_PRODUCTION" >
 			<Text>[ICON_RESEARCH]府學</Text>
 		</Row>
@@ -7315,13 +7281,6 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_AUTOCRACY_FIREWALL_HELP" >
 			<Text>消除來自其他文明掌握科技所帶來的魅力加成。</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_BUILDING_SCHOLASTICISM" >
-			<Text>[ICON_CULTURE][ICON_PEACE]經院哲學</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_SCHOLASTICISM_HELP" >
-			<Text>所有城市+1%[ICON_CULTURE]文化值和[ICON_PEACE]信仰值產出。</Text>
 		</Row>
 		
 <!--Projects-->
@@ -8011,14 +7970,8 @@
 			<Text>每個信徒增加本城+1%[ICON_RESEARCH]科研產出(最大+30%)</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_EXTRA_RELIGION_SPREADS">
-			<Text>+1次宗教傳播次數</Text>
-		</Row>
 		<Row Tag="TXT_KEY_EXTRA_RELIGION_SPREADS_2">
 			<Text>+2次宗教傳播次數</Text>
-		</Row>
-		<Row Tag="TXT_KEY_EXTRA_RELIGION_SPREADS_4">
-			<Text>+4次宗教傳播次數</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_UNIT_TEUTONIC_KNIGHT_STRATEGY">
@@ -8108,8 +8061,8 @@
 				人類玩家也可以組建軍團和集團軍，不過只能在有兵工廠和軍事基地的城市範圍內通過兩個相同單位合成或者消耗陸軍統帥實現；[NEWLINE]
 				使用相同單位合成軍團可以同時合並兩個單位的晉升，並由此得到一個強力單位，而消耗陸軍統帥會直接賦予單位軍團/集團軍晉升；[NEWLINE][NEWLINE]
 				引入「兵力」設定，兵力決定你總共能擁有的軍事單位數量，兵力點滿後獲取軍事單位將變得非常困難，新建的軍事單位也會被清除，AI兵力點滿後也將停止刷出單位，分三個遊戲選項檔：[NEWLINE]
-				[ICON_BULLET]高：除小鎮以外的每個城市規模等級提供4兵力點，玩家初始24點，AI初始32點，每個兵工廠/軍事基地分別提供2點軍團/集團軍組建上限 ——適合高配置玩家；[NEWLINE]
-				[ICON_BULLET]中：除小鎮以外的每個城市規模等級提供2兵力點，玩家初始12點，AI初始16點，每個兵工廠/軍事基地分別提供1點軍團/集團軍組建上限 ——適合中配置玩家（默認情況）；[NEWLINE]
+				[ICON_BULLET]高：除小鎮以外的每個城市規模等級提供4兵力點，玩家初始24點，AI初始32點，每個兵工廠/軍事基地分別提供3點軍團/集團軍組建上限 ——適合高配置玩家；[NEWLINE]
+				[ICON_BULLET]中：除小鎮以外的每個城市規模等級提供2兵力點，玩家初始12點，AI初始16點，每個兵工廠/軍事基地分別提供2點軍團/集團軍組建上限 ——適合中配置玩家（默認情況）；[NEWLINE]
 				[ICON_BULLET]低：除小鎮以外的每個城市規模等級提供1兵力點，玩家初始 6點，AI初始 8點，每個兵工廠/軍事基地分別提供1點軍團/集團軍組建上限 ——適合低配置玩家或和平主義者；[NEWLINE][NEWLINE]
 				特別註意，「軍團」或者「集團軍」的上限只與兵工廠或者軍事基地的數量有關，消耗陸軍統帥可以無視數量上限組建，但是並不會增加上限（你會看到組建按鈕顯示可組建數量為負數）；[NEWLINE]
 				消耗陸軍統帥組建「集團軍」仍然需要城市擁有兵工廠；[NEWLINE]
@@ -13510,7 +13463,10 @@
 			<Text>飞驰的幽灵</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_GALLOPING_GHOST_HELP">
-			<Text>+2[ICON_MOVES]移动，+2视野。能发现潜艇。</Text>
+			<Text>
+			+2[ICON_MOVES]移动。能发现潜艇。
+			[NEWLINE]6個單元格內一切可見。
+			</Text>
 		</Row>
 		
 		<Row Tag="TXT_KEY_PROMOTION_ENCOURAGE_AND_AWE">

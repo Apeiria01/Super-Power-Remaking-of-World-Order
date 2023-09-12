@@ -1151,7 +1151,9 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		TradeRouteTargetBonus = "[ICON_INTERNATIONAL_TRADE]" .. L"TXT_KEY_TRADE_TO_OTHER_CITY_BONUS" .. " %+i"..g_currencyIcon.."[ICON_ARROW_RIGHT]",
 		NumTradeRouteBonus = "%+i[ICON_INTERNATIONAL_TRADE]" .. L"TXT_KEY_DECLARE_WAR_TRADE_ROUTES_HEADER",
 		LandmarksTourismPercent = L"TXT_KEY_LTP11" .. "%i%%[ICON_TOURISM]",	-- TOTO
+		LandmarksTourismPercentGlobal = L"TXT_KEY_GLOBAL1" .. L"TXT_KEY_LTP11" .. "%i%%[ICON_TOURISM]",	-- TOTO
 		GreatWorksTourismModifier = L"TXT_KEY_GWTM111" .. "%+i%%[ICON_TOURISM]",-- TOTO
+		GreatWorksTourismModifierGlobal = L"TXT_KEY_GLOBAL1" .. L"TXT_KEY_GWTM111" .. "%+i%%[ICON_TOURISM]",-- TOTO
 		XBuiltTriggersIdeologyChoice = L("TXT_KEY_XBTIC1", "%i"),			-- TOTO
 		TradeRouteSeaDistanceModifier = L"TXT_KEY_TSDM1" .. "%+i%%",
 	--y	TradeRouteSeaGoldBonus = L"TXT_KEY_TRSGB1" .. "%+i%%[ICON_GOLD]",	-- TOTO
@@ -1679,16 +1681,6 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		end
 	end
 
-	-- free units (Truly)
-	if GameInfo.Building_FreeUnits_Truly then
-	    for row in GameInfo.Building_FreeUnits_Truly( thisBuildingType ) do
-		item = GameInfo.Units[ row.UnitType ]
-		item = item and GetCivUnit( activeCivilizationType, item.Class )
-		if item and (row.NumUnits or 0) > 0 then
-			insert( tips, L("{1: plural 2?{1} ;}{TXT_KEY_FREE}({TXT_KEY_TRULY}) {2}", row.NumUnits, format( "%s %s", ( item.Special and item.Special == "SPECIALUNIT_PEOPLE" and GreatPeopleIcon( item.Type ) or "" ), UnitColor( L(item.Description) ) ) ) )
-		end
-	    end
-	end
     --Building_FreeSpecialistCounts unused ?
 	-- free promotion to units trained in this city
 	item = building.TrainedFreePromotion and GameInfo.UnitPromotions[ building.TrainedFreePromotion ]
@@ -2170,7 +2162,11 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 
 	local terrains = {}
 	if building.Water then
-		insert( terrains, L"TXT_KEY_TERRAIN_COAST" )
+		if building.MinAreaSize > 0 then
+			insert( terrains, L"TXT_KEY_TERRAIN_COAST" .. "(" .. building.MinAreaSize .. ")")
+		else
+			insert( terrains, L"TXT_KEY_TERRAIN_COAST")
+		end
 	end
 	if building.River then
 		insert( terrains, L"TXT_KEY_PLOTROLL_RIVER" )

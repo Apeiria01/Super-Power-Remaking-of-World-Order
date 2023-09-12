@@ -34,11 +34,6 @@ function SPEReligionAdopt(pPlayer,iBelief,pHolyCity)
 		print("Choose BELIEF_JUST_WAR, set free Policy")
 		pPlayer:SetHasPolicy(GameInfo.Policies["POLICY_BELIEF_JUST_WAR"].ID,true,true)	
     
-    elseif iBelief == GameInfo.Beliefs["BELIEF_SACRED_CALENDAR"].ID
-    then
-        print("Choose BELIEF_SACRED_CALENDAR, set free Policy")
-        pPlayer:SetHasPolicy(GameInfo.Policies["POLICY_BELIEF_SACRED_CALENDAR"].ID,true,true)
-    
     elseif iBelief == GameInfo.Beliefs["BELIEF_RELIGIOUS_UNITY"].ID 
     then
 		print("Choose BELIEF_RELIGIOUS_UNITY, set free Policy")

@@ -418,7 +418,7 @@
 		</Row>
 		<Row>
 			<CivilizationType>CIVILIZATION_INCA</CivilizationType>
-			<UnitClassType>UNITCLASS_VOLLEY_GUN</UnitClassType>
+			<UnitClassType>UNITCLASS_COMPOSITE_BOWMAN</UnitClassType>
 			<UnitType>UNIT_INCAN_SLINGER</UnitType>
 		</Row>
 		

@@ -3,7 +3,7 @@
         <Row>
 			<Type>BUILDINGCLASS_EXTRA_RELIGION_SPREADS</Type>
 			<DefaultBuilding>BUILDING_EXTRA_RELIGION_SPREADS_2</DefaultBuilding>
-			<Description>TXT_KEY_EXTRA_RELIGION_SPREADS</Description>
+			<Description>TXT_KEY_EXTRA_RELIGION_SPREADS_2</Description>
 		</Row>
         <Row>
 			<Type>BUILDINGCLASS_BELIEF_TO_GLORY_OF_GOD</Type>
@@ -35,31 +35,6 @@
 			<Help>TXT_KEY_EXTRA_RELIGION_SPREADS_2</Help>
 			<Description>TXT_KEY_EXTRA_RELIGION_SPREADS_2</Description>
             <NeverCapture>true</NeverCapture>
-		</Row>
-        <Row>
-			<Type>BUILDING_EXTRA_RELIGION_SPREADS_4</Type>
-			<BuildingClass>BUILDINGCLASS_EXTRA_RELIGION_SPREADS</BuildingClass>
-			<Cost>-1</Cost>
-			<FaithCost>-1</FaithCost>
-			<NukeImmune>true</NukeImmune>
-			<ConquestProb>100</ConquestProb>
-			<GreatWorkCount>-1</GreatWorkCount>
-			<ExtraMissionarySpreads>4</ExtraMissionarySpreads>
-			<Help>TXT_KEY_EXTRA_RELIGION_SPREADS_4</Help>
-			<Description>TXT_KEY_EXTRA_RELIGION_SPREADS_4</Description>
-		</Row>
-        <Row>
-			<Type>BUILDING_BELIEF_UNDERGROUND_SECT</Type>
-			<BuildingClass>BUILDINGCLASS_EXTRA_RELIGION_SPREADS</BuildingClass>
-			<Cost>-1</Cost>
-			<FaithCost>-1</FaithCost>
-			<NukeImmune>true</NukeImmune>
-			<ConquestProb>100</ConquestProb>
-			<GreatWorkCount>-1</GreatWorkCount>
-			<HolyCity>true</HolyCity>
-			<ExtraSpies>1</ExtraSpies>
-			<Help>TXT_KEY_BELIEF_UNDERGROUND_SECT</Help>
-			<Description>TXT_KEY_BELIEF_UNDERGROUND_SECT_SHORT</Description>
 		</Row>
         <Row>
 			<Type>BUILDING_BELIEF_TO_GLORY_OF_GOD</Type>
@@ -149,11 +124,6 @@
 		<Row>
 			<Type>POLICY_BELIEF_MESSIAH</Type>
 			<Description>TXT_KEY_BELIEF_MESSIAH_SHORT</Description>
-		</Row>
-		<Row>
-			<Type>POLICY_BELIEF_SACRED_CALENDAR</Type>
-			<Description>TXT_KEY_BELIEF_SACRED_CALENDAR_SHORT</Description>
-			<GoldenAgeDurationMod>33</GoldenAgeDurationMod>
 		</Row>
 		<Row>
 			<Type>POLICY_BELIEF_JUST_WAR</Type>

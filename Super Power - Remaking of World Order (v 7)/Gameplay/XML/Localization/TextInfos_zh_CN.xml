@@ -12,7 +12,7 @@
 			<Text>[COLOR_YELLOW]注意事项：[ENDCOLOR][NEWLINE]1、检查存档文件大小。[NEWLINE]2、查阅文明百科（快捷键[COLOR_POSITIVE_TEXT]F1[ENDCOLOR]）[NEWLINE]3、如果始终发生游戏崩溃或存档损坏，尝试Dx9。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_VERSION">
-			<Text>[COLOR_YELLOW]版本号 9.2[ENDCOLOR]</Text>
+			<Text>[COLOR_YELLOW]版本号 9.3[ENDCOLOR]</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_SP_MOD_SETUP">
@@ -486,7 +486,12 @@
 		</Row>
 
 		<Replace Tag="TXT_KEY_BUILDING_STONE_WORKS_HELP">
-			<Text>所在城市每处已开发的[ICON_RES_MARBLE]大理石和[ICON_RES_STONE]花岗岩资源+1[ICON_PRODUCTION]产能。[NEWLINE][NEWLINE]城市必须至少拥有一处已修建采石场的上述资源。[NEWLINE][NEWLINE]不能建造于平原城市。[NEWLINE][NEWLINE]研发炸药之后[COLOR_NEGATIVE_TEXT]过期[ENDCOLOR]（不再提供产出且不能建造）。[NEWLINE][NEWLINE]研发因特网后+2[ICON_TOURISM]魅力。</Text>
+			<Text>
+			所在城市每处已开发的[ICON_RES_MARBLE]大理石和[ICON_RES_STONE]花岗岩资源+1[ICON_PRODUCTION]产能。
+			[NEWLINE][NEWLINE]城市必须至少拥有一处已修建采石场的上述资源。
+			[NEWLINE][NEWLINE]研发炸药之后[COLOR_NEGATIVE_TEXT]过期[ENDCOLOR]（不再提供产出且不能建造）。
+			[NEWLINE][NEWLINE]研发因特网后+2[ICON_TOURISM]魅力。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_BUILDING_WORKSHOP_HELP">
@@ -1011,7 +1016,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_RUSSIAN_BALLET_HALL_HELP</Tag>
-			<Text>所有城市+3%[ICON_CULTURE]文化产出。[NEWLINE][NEWLINE]城市必须拥有画廊。</Text>
+			<Text>所有城市+3%[ICON_CULTURE]文化产出。</Text>
 		</Row>
 
 		<Row>
@@ -1606,7 +1611,14 @@
 		</Row>
 		<!-- Help tags -->
 		<Row Tag="TXT_KEY_WONDER_SAN_MARCO_HELP">
-			<Text>所有城市杰作[ICON_TOURISM]魅力产出+50%，本城市[ICON_CULTURE]文化产出+50%。[NEWLINE][NEWLINE]建成奇观的城市附近出现两位大艺术家。[NEWLINE]拥有4个美术杰作展位。[NEWLINE][NEWLINE]必须在威尼斯拥有博物馆才能建造。+1城市工作范围。</Text>
+			<Text>
+			[ICON_BULLET]本城市杰作[ICON_TOURISM]魅力产出+50%。
+			[NEWLINE][ICON_BULLET]本城市[ICON_CULTURE]文化产出+50%。
+			[NEWLINE][ICON_BULLET]城市附近出现两位大艺术家。
+			[NEWLINE][ICON_BULLET]拥有4个美术杰作展位。
+			[NEWLINE][ICON_BULLET]本城市工作范围+1。
+			[NEWLINE][NEWLINE]必须在威尼斯拥有博物馆才能建造。
+			</Text>
 		</Row>
 		<!-- Pedia tags -->
 		<Row Tag="TXT_KEY_WONDER_SAN_MARCO_PEDIA">
@@ -2517,16 +2529,6 @@
 		</Row>
 
 		<!-- ***************************New Buildings for Special Building Effects***************************-->
-		<Row>
-			<Tag>TXT_KEY_BUILDING_TRADEINCOME_BOST</Tag>
-			<Text>国际商路+8[ICON_GOLD]金钱</Text>
-		</Row>
-
-		<Row>
-			<Tag>TXT_KEY_BUILDING_TOURISM_GREATWORKS</Tag>
-			<Text>杰作[ICON_TOURISM]魅力值+50%</Text>
-		</Row>
-
 		<Row>
 			<Tag>TXT_KEY_BUILDING_MANPOWER_BONUS</Tag>
 			<Text>提供额外[ICON_RES_MANPOWER]人力</Text>
@@ -5032,7 +5034,7 @@
 			<Text>[COLOR_POSITIVE_TEXT]建立军团[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS">
-			<Text>将该地格上两个相同的单位合并为军团：+100%最大生命值，+10%[ICON_STRENGTH]战斗力。</Text>
+			<Text>将该地格上两个相同的单位合并为军团或者消耗伟人将一个单位升级为军团：+100%最大生命值，+10%[ICON_STRENGTH]战斗力。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_EXTRA">
 			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]当前可组建军团数:{1_name}[ENDCOLOR]</Text>
@@ -5041,7 +5043,7 @@
 			<Text>[COLOR_POSITIVE_TEXT]建立集团军[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMEE">
-			<Text>将该地格上一个相同的单位合入军团以建立集团军：+100%最大生命值，+15%[ICON_STRENGTH]战斗力。</Text>
+			<Text>将该地格上一个相同的单位合入军团以建立集团军或者消耗伟人将一个单位升级为集团军：+100%最大生命值，+15%[ICON_STRENGTH]战斗力。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMEE_EXTRA">
 			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]当前可组建集团军数:{1_name}[ENDCOLOR]</Text>
@@ -5050,13 +5052,22 @@
 			<Text>[COLOR_POSITIVE_TEXT]建立舰队[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_FLEET">
-			<Text>将该地格上两个相同的单位合并为舰队：+100%最大生命值，+10%[ICON_STRENGTH]战斗力。</Text>
+			<Text>将该地格上两个相同的单位合并为舰队或者消耗伟人将一个单位升级为舰队：+100%最大生命值，+10%[ICON_STRENGTH]战斗力。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMADA_SHORT">
 			<Text>[COLOR_POSITIVE_TEXT]建立大舰队[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMADA">
-			<Text>将该地格上一个相同的单位合入舰队以建立大舰队：+100%最大生命值，+15%[ICON_STRENGTH]战斗力。</Text>
+			<Text>将该地格上一个相同的单位合入舰队以建立大舰队或者消耗伟人将一个单位升级为大舰队：+100%最大生命值，+15%[ICON_STRENGTH]战斗力。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_1">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]使用伟人升级集团军需要所在城市拥有兵工厂[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_2">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]组建军团需要所在城市市拥有兵工厂[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_3">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]组建集团军需要所在城市市拥有军事基地[ENDCOLOR]</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_FULLATTACK_ON_SHORT">
@@ -5664,10 +5675,9 @@
 
 		<Replace Tag="TXT_KEY_TRAIT_RAZE_AND_HORSES">
 			<Text>
-				[ICON_BULLET]击败蛮族营寨中的单位会加入匈人军队。
-				[NEWLINE][ICON_BULLET]夷平城市后获得当前回合数*10的[ICON_GOLD]金钱、[ICON_RESEARCH]科研、[ICON_CULTURE]文化、[ICON_PEACE]信仰值（最多1000）。
-				[NEWLINE][ICON_BULLET]夷平城市时，每减少一人口，所有位于该城市工作地块上的战斗单位+2最大生命值，该效果的上限是150。
-				[NEWLINE][ICON_BULLET]城市名从其他文明借用。
+				[ICON_BULLET]击败蛮族营寨中的单位会加入匈人军队，城市名从其他文明借用。
+				[NEWLINE][ICON_BULLET]夷平城市后获得当前回合数*10的[ICON_GOLD][ICON_RESEARCH][ICON_CULTURE][ICON_PEACE]一次性产出，上限1000点。
+				[NEWLINE][ICON_BULLET]夷平城市时，每减少一人口，所有位于该城市工作地块上的战斗单位+2最大[ICON_SILVER_FIST]生命值，上限150。
 			</Text>
 		</Replace>
 
@@ -5725,7 +5735,7 @@
 		<Replace Tag="TXT_KEY_TRAIT_SPICE">
 			<Text>
 				[ICON_BULLET]在非出生地大陆建造的前三座城市可以提供2份独有奢侈资源，这三座城市无法被摧毁且没有额外的管理成本。
-				[NEWLINE][ICON_BULLET]每拥有一种数量大于1的奢侈资源，完成城邦任务获得的[ICON_INFLUENCE]影响力+5%，上限为40%
+				[NEWLINE][ICON_BULLET]每拥有一种数量大于1的奢侈资源，完成城邦任务获得的[ICON_INFLUENCE]影响力+10%，上限为100%
 			</Text>
 		</Replace>
 
@@ -5758,6 +5768,7 @@
 				[ICON_BULLET]河流及其相邻区块不会阻碍己方单位[ICON_MOVES]移动。
 				[NEWLINE][ICON_BULLET]陆地商路能够通过河流线延长（视为道路）。
 				[NEWLINE][ICON_BULLET]所有贸易站+1[ICON_GOLD]金钱产出。
+				[NEWLINE][ICON_BULLET]沿河城市减少200点离心倾向。
 			</Text>
 		</Replace>
 
@@ -7180,7 +7191,7 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_RESETTLEMENT_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]移民安置[ENDCOLOR][NEWLINE]移民等同于3[ICON_CITIZEN]人口（生产移民城市失去3[ICON_CITIZEN]人口，新建城市直接获得3[ICON_CITIZEN]人口，移民加入新城市也会增加其3[ICON_CITIZEN]人口）。所有城市因污染导致的[ICON_FOOD]食物损失-15%。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]移民安置[ENDCOLOR][NEWLINE]移民等同于3[ICON_CITIZEN]人口（生产移民城市失去3[ICON_CITIZEN]人口，新建城市直接获得3[ICON_CITIZEN]人口，移民加入新城市也会增加其3[ICON_CITIZEN]人口）。移民不再产生[ICON_HAPPINESS_4]不满。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_ACADEMY_SCIENCES">
@@ -7285,7 +7296,7 @@
 		<Replace Tag="TXT_KEY_POLICY_POLICE_STATE_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]警察国家[ENDCOLOR]
-				[NEWLINE]法院、治安署、审计署、警察局和地检署+3[ICON_HAPPINESS_1]本地快乐。这些建筑因[ICON_CITIZEN]人口造成的[ICON_GOLD]维护费减半。
+				[NEWLINE]法院、治安署、审计署、警察局和地检署+3[ICON_HAPPINESS_1]本地快乐。建造这些建筑+200%[ICON_PRODUCTION]产能积累。
 			</Text>
 		</Replace>
 
@@ -7352,51 +7363,6 @@
 			<Text>[ICON_GREAT_WRITER]神权政治</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_BUILDING_POLICY_MERCHANT_CONFEDERACY" >
-			<Text>商人公会</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_POLICY_MERCHANT_CONFEDERACY_HELP" >
-			<Text>每条与城邦的商路+2%的全国[ICON_PRODUCTION]产能。</Text>
-		</Row>
-
-		<!--<Row Tag="TXT_KEY_BUILDING_POLICY_ORGANIZED_RELIGION_DESC" >
-			<Text>教会组织</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_POLICY_ORGANIZED_RELIGION_HELP" >
-			<Text>本城市的宗教压力+50%。</Text>
-		</Row>-->
-
-		<Row Tag="TXT_KEY_BUILDING_REPRESENTATION_CULTURE" >
-			<Text>新政策成本+5%[ICON_CULTURE]文化</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_BUILDING_UNITED_FRONT_HELP" >
-			<Text>人口到达20前+50%食物累积</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_BUILDING_POLICE_STATE_LV2" >
-			<Text>[ICON_CITYBANNER_CITY_LV2]治安署维护费-50%</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_POLICE_STATE_LV3" >
-			<Text>[ICON_CITYBANNER_CITY_LV3]审计署维护费-50%</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_POLICE_STATE_LV4" >
-			<Text>[ICON_CITYBANNER_CITY_LV4]警察局维护费-50%</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_POLICE_STATE_LV5" >
-			<Text>[ICON_CITYBANNER_CITY_LV5]地检署维护费-50%</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_POLICE_STATE" >
-			<Text>强化管理类建筑因[ICON_CITIZEN]人口造成的[ICON_GOLD]维护费-50%</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_BUILDING_MONARCHY_CULTURE" >
-			<Text>君主政体</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_MONARCHY_CULTURE_HELP" >
-			<Text>首都+50%[ICON_TOURISM]魅力产出。</Text>
-		</Row>
-
 		<Row Tag="TXT_KEY_BUILDING_FAMILY_PRODUCTION" >
 			<Text>[ICON_RESEARCH]府学</Text>
 		</Row>
@@ -7426,13 +7392,6 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_AUTOCRACY_FIREWALL_HELP" >
 			<Text>消除来自其他文明掌握科技所带来的魅力加成。</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_BUILDING_SCHOLASTICISM" >
-			<Text>[ICON_CULTURE][ICON_PEACE]经院哲学</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_SCHOLASTICISM_HELP" >
-			<Text>所有城市+1%[ICON_CULTURE]文化和[ICON_PEACE]信仰产出。</Text>
 		</Row>
 
 		<!--Projects-->
@@ -8122,14 +8081,8 @@
 			<Text>每个信徒增加本城+1%[ICON_RESEARCH]科研产出(最大+30%)</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_EXTRA_RELIGION_SPREADS">
-			<Text>+1次宗教传播次数</Text>
-		</Row>
 		<Row Tag="TXT_KEY_EXTRA_RELIGION_SPREADS_2">
 			<Text>+2次宗教传播次数</Text>
-		</Row>
-		<Row Tag="TXT_KEY_EXTRA_RELIGION_SPREADS_4">
-			<Text>+4次宗教传播次数</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_UNIT_TEUTONIC_KNIGHT_STRATEGY">
@@ -8219,8 +8172,8 @@
 				人类玩家也可以组建军团和集团军，不过只能在有兵工厂和军事基地的城市范围内通过两个相同单位合成或者消耗陆军统帅实现；[NEWLINE]
 				使用相同单位合成军团可以同时合并两个单位的晋升，并由此得到一个强力单位，而消耗陆军统帅会直接赋予单位军团/集团军晋升；[NEWLINE][NEWLINE]
 				引入“兵力”设定，兵力决定你总共能拥有的军事单位数量，兵力点满后获取军事单位将变得非常困难，新建的军事单位也会被清除，AI兵力点满后也将停止刷出单位，分三个游戏选项档：[NEWLINE]
-				[ICON_BULLET]高：除小镇以外的每个城市规模等级提供4兵力点，玩家初始24点，AI初始32点，每个兵工厂/军事基地分别提供2点军团/集团军组建上限 ——适合高配置玩家；[NEWLINE]
-				[ICON_BULLET]中：除小镇以外的每个城市规模等级提供2兵力点，玩家初始12点，AI初始16点，每个兵工厂/军事基地分别提供1点军团/集团军组建上限 ——适合中配置玩家（默认情况）；[NEWLINE]
+				[ICON_BULLET]高：除小镇以外的每个城市规模等级提供4兵力点，玩家初始24点，AI初始32点，每个兵工厂/军事基地分别提供3点军团/集团军组建上限 ——适合高配置玩家；[NEWLINE]
+				[ICON_BULLET]中：除小镇以外的每个城市规模等级提供2兵力点，玩家初始12点，AI初始16点，每个兵工厂/军事基地分别提供2点军团/集团军组建上限 ——适合中配置玩家（默认情况）；[NEWLINE]
 				[ICON_BULLET]低：除小镇以外的每个城市规模等级提供1兵力点，玩家初始 6点，AI初始 8点，每个兵工厂/军事基地分别提供1点军团/集团军组建上限 ——适合低配置玩家或和平主义者；[NEWLINE][NEWLINE]
 				特别注意，“军团”或者“集团军”的上限只与兵工厂或者军事基地的数量有关，消耗陆军统帅可以无视数量上限组建，但是并不会增加上限（你会看到组建按钮显示可组建数量为负数）；[NEWLINE]
 				消耗陆军统帅组建“集团军”仍然需要城市拥有兵工厂；[NEWLINE]
@@ -13696,7 +13649,10 @@
 			<Text>飞驰的幽灵</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_GALLOPING_GHOST_HELP">
-			<Text>+2[ICON_MOVES]移动，+2视野。能发现潜艇。</Text>
+			<Text>
+			+2[ICON_MOVES]移动。能发现潜艇。
+			[NEWLINE]6格范围内可见。
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_ENCOURAGE_AND_AWE">

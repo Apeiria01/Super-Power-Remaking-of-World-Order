@@ -1191,29 +1191,6 @@
 
 	<BuildingClasses>
 		<Row>
-			<Type>BUILDINGCLASS_TOURISM_GREATWORKS</Type>
-			<DefaultBuilding>BUILDING_TOURISM_GREATWORKS</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_TOURISM_GREATWORKS</Description>
-		</Row>
-		<Row>
-			<Type>BUILDINGCLASS_TOURISM_GREATWORKS_THEATRE</Type>
-			<DefaultBuilding>BUILDING_TOURISM_GREATWORKS_THEATRE</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_TOURISM_GREATWORKS</Description>
-		</Row>
-		<Row>
-			<Type>BUILDINGCLASS_TOURISM_GREATWORKS_HERMITAGE</Type>
-			<DefaultBuilding>BUILDING_TOURISM_GREATWORKS_HERMITAGE</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_TOURISM_GREATWORKS</Description>
-		</Row>
-		<Row>
-			<Type>BUILDINGCLASS_TOURISM_LANDMARKS</Type>
-			<DefaultBuilding>BUILDING_TOURISM_LANDMARKS</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_TOURISM_GREATWORKS</Description>
-		</Row>
-		
-		
-
-		<Row>
 			<Type>BUILDINGCLASS_MOTHER_CALLS_MANPOWER</Type>
 			<DefaultBuilding>BUILDING_MOTHER_CALLS_MANPOWER</DefaultBuilding>
 			<Description>TXT_KEY_BUILDING_MANPOWER_BONUS</Description>

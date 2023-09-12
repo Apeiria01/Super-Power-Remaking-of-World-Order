@@ -815,7 +815,7 @@ function UpdateUnitPromotions(unit)
 			--	        local index = 1;
 
 
-			if (unit:IsHasPromotion(unitPromotionID) and not unit:IsTrade()) then
+			if (unit:IsHasPromotion(unitPromotionID) and not unit:IsTrade()  and unitPromotion.ShowInUnitPanel ~= 0  ) then
 
 
 				if unitPromotion.PediaType == "PEDIA_ATTRIBUTES" or unitPromotion.PediaType == "PEDIA_SHARED"
@@ -838,7 +838,7 @@ function UpdateUnitPromotions(unit)
 
 
 		else
-			if (unit:IsHasPromotion(unitPromotionID)) then
+			if (unit:IsHasPromotion(unitPromotionID)  and unitPromotion.ShowInUnitPanel ~= 0  ) then
 
 				if index % 2 == 1 then
 					controlTable = g_EarnedPromotionIM:GetInstance();

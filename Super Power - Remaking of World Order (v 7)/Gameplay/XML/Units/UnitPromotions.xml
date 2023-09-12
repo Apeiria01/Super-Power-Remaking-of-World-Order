@@ -82,7 +82,6 @@
 			<PortraitIndex>39</PortraitIndex>
 			<IconAtlas>ABILITY_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<Recon>true</Recon>
 			<PediaEntry>TXT_KEY_PROMOTION_LUCKY_CARRIER</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
 		</Row>
@@ -94,7 +93,6 @@
 			<PortraitIndex>59</PortraitIndex>
 			<IconAtlas>ABILITY_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<Recon>true</Recon>
 			<PediaEntry>TXT_KEY_PROMOTION_TOKYO_RAID</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
 			<LostWithUpgrade>true</LostWithUpgrade>
@@ -121,9 +119,9 @@
 			<IconAtlas>ABILITY_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_GALLOPING_GHOST</PediaEntry>
-			<VisibilityChange>2</VisibilityChange>
 			<MovesChange>2</MovesChange>
 			<SeeInvisible>INVISIBLE_SUBMARINE</SeeInvisible>
+			<Recon>true</Recon>
 		</Row>
 		<Row>
 			<Type>PROMOTION_LUCKYE</Type>
@@ -3828,7 +3826,6 @@
 			<AirSweepCapable>true</AirSweepCapable>
 			<CanMoveAfterAttacking>true</CanMoveAfterAttacking>
 			<ExtraAttacks>1</ExtraAttacks>
-			<Recon>true</Recon>
 			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_CARRIER_FIGHTER</PediaEntry>
@@ -4043,7 +4040,6 @@
 			<AirSweepCapable>true</AirSweepCapable>
 			<AirSweepCombatModifier>75</AirSweepCombatModifier>
 			<CanMoveAfterAttacking>true</CanMoveAfterAttacking>
-			<!--<Recon>true</Recon>-->
 			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_ANTI_AIR_II</PediaEntry>
@@ -5211,7 +5207,6 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<CannotBeChosen>true</CannotBeChosen>
 			<VisibilityChange>3</VisibilityChange>
-			<Recon>true</Recon>
 			<PortraitIndex>43</PortraitIndex>
 			<IconAtlas>ABILITY_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
@@ -6033,18 +6028,6 @@
 			<IconAtlas>ABILITY_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PEDIA_PROMOTION_RECON_LONG_RANGE</PediaEntry>
-		</Row>
-		
-		<Row>
-			<Type>PROMOTION_EXTRA_RELIGION_SPREADS</Type>
-			<Description>TXT_KEY_EXTRA_RELIGION_SPREADS_4</Description>
-			<Help>TXT_KEY_EXTRA_RELIGION_SPREADS_4</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PortraitIndex>59</PortraitIndex>
-			<PediaEntry>TXT_KEY_EXTRA_RELIGION_SPREADS_4</PediaEntry>
-			<CannotBeChosen>true</CannotBeChosen>
 		</Row>
 	</UnitPromotions>
 

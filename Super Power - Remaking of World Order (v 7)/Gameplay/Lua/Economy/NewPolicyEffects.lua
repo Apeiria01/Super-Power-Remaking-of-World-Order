@@ -37,9 +37,6 @@ function SPReformeBeliefs(iPlayer, iReligion, iBelief)
 		pPlayer:InitUnit(iProphetID, holyCity:GetX(), holyCity:GetY(), UNITAI_PROPHET)
 	elseif GameInfo.Beliefs[iBelief].Type == "BELIEF_TO_GLORY_OF_GOD" then
 		holyCity:SetNumRealBuilding(GameInfoTypes["BUILDING_BELIEF_TO_GLORY_OF_GOD"], 1);
-	elseif GameInfo.Beliefs[iBelief].Type == "BELIEF_UNDERGROUND_SECT" then
-		holyCity:SetNumRealBuilding(GameInfoTypes["BUILDING_BELIEF_UNDERGROUND_SECT"], 1);
-		holyCity:SetNumRealBuilding(GameInfoTypes["BUILDING_BELIEF_UNDERGROUND_SECT"], 0);
 	end
 end
 
