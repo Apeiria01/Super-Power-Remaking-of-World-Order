@@ -5113,12 +5113,14 @@
 			<PromotionType>PROMOTION_BUFFALO_LOINS</PromotionType>
 			<UnitCombatType>UNITCOMBAT_ARMOR</UnitCombatType>
 		</Row>
-
-		<Row>
-			<PromotionType>PROMOTION_ORBAN_CANNON</PromotionType>
-			<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
-		</Row>
 	</UnitPromotions_UnitCombats>
+
+	<UnitPromotions_Promotions>
+		<Row>
+			<FreePromotionType>PROMOTION_ORBAN_CANNON</FreePromotionType>
+			<PrePromotionType>PROMOTION_CITY_SIEGE</PrePromotionType>
+		</Row>
+	</UnitPromotions_Promotions>
 
 
 	<!--*****************************Civlization Unique Unit Promotions*******************************************-->

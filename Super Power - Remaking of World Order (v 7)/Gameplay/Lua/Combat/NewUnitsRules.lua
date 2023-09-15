@@ -28,15 +28,8 @@ local ArmeeID = GameInfo.UnitPromotions["PROMOTION_CORPS_2"].ID
 local CitadelID = GameInfo.UnitPromotions["PROMOTION_CITADEL_DEFENSE"].ID
 
 
-function NewUnitCreationRules() ------------------------Human Player's units rule & AI units assistance--
-	local iTurnTrigger = 10;
-	local iTurnsElapsed = Game.GetElapsedGameTurns();
-	local IsTimetoCheckPromotion = false;
-	if iTurnsElapsed % iTurnTrigger == 9 then
-		IsTimetoCheckPromotion = true;
-		print("It's Time to Check Unit Promotion");
-	end
-
+-- Human Player's units rule & AI units assistance
+function NewUnitCreationRules()
 	for playerID, player in pairs(Players) do
 		if player and player:IsAlive() and not player:IsMinorCiv() and player:GetNumUnits() > 0 then --  and not player:IsBarbarian() then
 			print("Player " .. playerID .. " - Unit Counts: " .. player:GetNumUnits());

@@ -352,7 +352,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_GRAIN_MILL_HELP</Tag>
-			<Text>城市+10%[ICON_FOOD]食物产出。本城必须拥有已开发的[ICON_RES_COW]牛，[ICON_RES_SHEEP]羊或[ICON_RES_HORSE]马资源且这些资源+1[ICON_FOOD]食物。[NEWLINE][NEWLINE]研发工业化之后[COLOR_NEGATIVE_TEXT]过期[ENDCOLOR]（不再提供产出且不能建造）。[NEWLINE][NEWLINE]研发大众传媒后+1[ICON_TOURISM]魅力。</Text>
+			<Text>城市+5%[ICON_FOOD]食物产出。本城必须拥有已开发的[ICON_RES_COW]牛，[ICON_RES_SHEEP]羊或[ICON_RES_HORSE]马资源且这些资源+1[ICON_FOOD]食物。[NEWLINE][NEWLINE]研发工业化之后[COLOR_NEGATIVE_TEXT]过期[ENDCOLOR]（不再提供产出且不能建造）。[NEWLINE][NEWLINE]研发大众传媒后+1[ICON_TOURISM]魅力。</Text>
 		</Row>
 
 		<Row>
