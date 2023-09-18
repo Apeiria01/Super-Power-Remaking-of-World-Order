@@ -1428,14 +1428,15 @@ function ResourcesTipHandler( control )
 			    iNumUsed = pPlayer:GetNumResourceUsed(iResourceLoop);
 			    iNumTotal = pPlayer:GetNumResourceTotal(iResourceLoop, true);
 			    
-          if pResource.Type == "RESOURCE_TROOPS" then
-              iNumTotal = pPlayer:GetNumResourceUsed(iResourceLoop);
-              iNumUsed  = pPlayer:GetNumResourceTotal(iResourceLoop, true);
-              if (iNumUsed ~= 0 or iNumAvailable ~= 0) and not bThisIsFirstResourceShown then
-                strText = strText .. "[NEWLINE][NEWLINE]"
-                bShowResource = true;
-              end
-			    end
+				if pResource.Type == "RESOURCE_TROOPS" then
+					iNumAvailable = math.abs(iNumAvailable);
+					iNumTotal = pPlayer:GetNumResourceUsed(iResourceLoop);
+					iNumUsed  = pPlayer:GetNumResourceTotal(iResourceLoop, true);
+					if (iNumUsed ~= 0 or iNumAvailable ~= 0) and not bThisIsFirstResourceShown then
+						strText = strText .. "[NEWLINE][NEWLINE]"
+						bShowResource = true;
+					end
+				end
 			    
 			    if (bShowResource) then
 				-- Add newline to the front of all entries that AREN'T the first
