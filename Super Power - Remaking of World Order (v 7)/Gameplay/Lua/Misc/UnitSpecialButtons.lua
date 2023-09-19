@@ -1169,7 +1169,7 @@ EstablishCorpsButton = {
                     break
                 else
                     if not iUnit:IsCombatUnit()
-                    --not allow other unit is crops: we only want keep tUnit and kill nUnit 
+                    --not allow other unit is crops: we only want to keep tUnit and kill nUnit 
                     or iUnit:IsHasPromotion(CorpsID)
                     --only for same Type
                     or iUnit:GetUnitType() ~= unit:GetUnitType()
@@ -1261,6 +1261,7 @@ EstablishCorpsButton = {
 					EstablishCorpsButton.ToolTip = EstablishCorpsButton.ToolTip .. Locale.ConvertTextKey("TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_2")
 					return true
 				elseif g_CorpsCount[playerID][1] >= player:GetBuildingClassCount(iArsenal) * ifac then
+                    --Corps reached limit
 					return true
 				end
 			else
@@ -1268,6 +1269,7 @@ EstablishCorpsButton = {
 					EstablishCorpsButton.ToolTip = EstablishCorpsButton.ToolTip .. Locale.ConvertTextKey("TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_3")
 					return true
 				elseif g_CorpsCount[playerID][2] >= player:GetBuildingClassCount(iMilitaryBase) * ifac then
+                    --Armee reached limit
 					return true
 				end
 			end
@@ -1301,7 +1303,7 @@ EstablishCorpsButton = {
                         tUnit:SetHasPromotion(unitPromotion.ID, true);
                     end
                 end
-				--new for SP9.3
+				--new for SP9.3, merge some attributes of unit
                 local HPFromRazedCityPopLimit = player:GetTraitUnitMaxHitPointChangePerRazedCityPopLimit()
                 local HPFromRazedCityPop = tUnit:GetMaxHitPointsChangeFromRazedCityPop()+nUnit:GetMaxHitPointsChangeFromRazedCityPop()
                 if HPFromRazedCityPop > HPFromRazedCityPopLimit
