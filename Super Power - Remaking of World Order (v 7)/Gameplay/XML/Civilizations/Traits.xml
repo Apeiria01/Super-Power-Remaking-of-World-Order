@@ -44,6 +44,9 @@
 			<Description>TXT_KEY_TRAIT_ART_OF_WAR</Description>
 			<ShortDescription>TXT_KEY_TRAIT_ART_OF_WAR_SHORT</ShortDescription>
 			<!--<GreatGeneralRateModifier>50</GreatGeneralRateModifier>-->
+      <GoldenAgeResearchTotalCostModifier>-20</GoldenAgeResearchTotalCostModifier>
+      <GoldenAgeResearchCityCountCostModifier>-100</GoldenAgeResearchCityCountCostModifier>
+      <GoldenAgeGrowThresholdModifier>-20</GoldenAgeGrowThresholdModifier>
 		</Row>
 		
 		<Row>
