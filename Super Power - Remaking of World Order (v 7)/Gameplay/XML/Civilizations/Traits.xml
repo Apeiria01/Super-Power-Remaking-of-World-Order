@@ -1259,17 +1259,4 @@
 		</Row>
 	</Trait_PerMajorReligionFollowerYieldModifier>
 
-	<Trait_GoldenAgeYieldModifiers>
-		<Row>
-			<TraitType>TRAIT_ART_OF_WAR</TraitType>
-			<YieldType>YIELD_FOOD</YieldType>
-			<Yield>20</Yield>
-		</Row>
-		<Row>
-			<TraitType>TRAIT_ART_OF_WAR</TraitType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>20</Yield>
-		</Row>
-	</Trait_GoldenAgeYieldModifiers>
-
 </GameData>
