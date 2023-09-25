@@ -134,6 +134,11 @@
 			<BuildingType>BUILDING_MOROCCO_MARKET</BuildingType>
 		</Row>
 		<Row>
+			<CivilizationType>CIVILIZATION_SONGHAI</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_MARKET</BuildingClassType>
+			<BuildingType>BUILDING_SONGHAI_MARKET</BuildingType>
+		</Row>
+		<Row>
 			<CivilizationType>CIVILIZATION_MOROCCO</CivilizationType>
 			<BuildingClassType>BUILDINGCLASS_GRAIN_DEPOT</BuildingClassType>
 			<BuildingType>BUILDING_MOROCCO_IRRIGATION</BuildingType>
@@ -334,12 +339,7 @@
 			<BuildingClassType>BUILDINGCLASS_SHRINE</BuildingClassType>
 			<BuildingType>BUILDING_MUD_PYRAMID_MOSQUE</BuildingType>
 		</Row>
-		<Row>
-			<CivilizationType>CIVILIZATION_SONGHAI</CivilizationType>
-			<BuildingClassType>BUILDINGCLASS_OIL_REFINERY</BuildingClassType>
-			<BuildingType>BUILDING_SONGHAI_ISLAM_MINT</BuildingType>
-		</Row>
-
+		
 		<Row>
 			<CivilizationType>CIVILIZATION_ETHIOPIA</CivilizationType>
 			<BuildingClassType>BUILDINGCLASS_MONUMENT</BuildingClassType>

@@ -301,21 +301,6 @@
 			<Experience>15</Experience>
 		</Row>
 
-		<!--<Row>
-			<BuildingType>BUILDING_AUSTRIA_MUSIC_SCHOOL</BuildingType>
-			<DomainType>DOMAIN_LAND</DomainType>
-			<Experience>15</Experience>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_AUSTRIA_MUSIC_SCHOOL</BuildingType>
-			<DomainType>DOMAIN_SEA</DomainType>
-			<Experience>15</Experience>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_AUSTRIA_MUSIC_SCHOOL</BuildingType>
-			<DomainType>DOMAIN_AIR</DomainType>
-			<Experience>15</Experience>
-		</Row>-->
 	</Building_DomainFreeExperiencePerGreatWork>
 	
 	
@@ -468,11 +453,6 @@
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_OIL_REFINERY</BuildingType>
-			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
-			<Cost>1</Cost>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_SONGHAI_ISLAM_MINT</BuildingType>
 			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
 			<Cost>1</Cost>
 		</Row>
@@ -642,12 +622,6 @@
 			<ResourceType>RESOURCE_OIL</ResourceType>
 			<Quantity>5</Quantity>
 		</Row>
-		<Row>
-			<BuildingType>BUILDING_SONGHAI_ISLAM_MINT</BuildingType>
-			<ResourceType>RESOURCE_OIL</ResourceType>
-			<Quantity>5</Quantity>
-		</Row>
-
 
 		<Row>
 			<BuildingType>BUILDING_STEEL_MILL</BuildingType>
@@ -1025,6 +999,11 @@
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_MOROCCO_MARKET</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_SONGHAI_MARKET</BuildingType>
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>2</Yield>
 		</Row>
@@ -2819,18 +2798,6 @@
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<Yield>3</Yield>
 		</Row>
-		<Row>
-			<BuildingType>BUILDING_SONGHAI_ISLAM_MINT</BuildingType>
-			<ResourceType>RESOURCE_OIL</ResourceType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>3</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_SONGHAI_ISLAM_MINT</BuildingType>
-			<ResourceType>RESOURCE_OIL</ResourceType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>3</Yield>
-		</Row>
 		
 		<Row>
 			<BuildingType>BUILDING_STEEL_MILL</BuildingType>
@@ -3379,11 +3346,11 @@
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>25</Yield>
 		</Row>
-		<!--<Row>
-			<BuildingType>BUILDING_BAZAAR</BuildingType>
+		<Row>
+			<BuildingType>BUILDING_SONGHAI_MARKET</BuildingType>
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>25</Yield>
-		</Row>-->
+		</Row>
 		<Row>
 			<BuildingType>BUILDING_BANK</BuildingType>
 			<YieldType>YIELD_GOLD</YieldType>
@@ -5117,6 +5084,27 @@
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_MOROCCO_MARKET</BuildingType>
+			<FlavorType>FLAVOR_GREAT_PEOPLE</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_SONGHAI_MARKET</BuildingType>
+			<FlavorType>FLAVOR_GOLD</FlavorType>
+			<Flavor>100</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_SONGHAI_MARKET</BuildingType>
+			<FlavorType>FLAVOR_I_TRADE_ORIGIN</FlavorType>
+			<Flavor>50</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_SONGHAI_MARKET</BuildingType>
+			<FlavorType>FLAVOR_I_TRADE_DESTINATION</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_SONGHAI_MARKET</BuildingType>
 			<FlavorType>FLAVOR_GREAT_PEOPLE</FlavorType>
 			<Flavor>10</Flavor>
 		</Row>
@@ -6884,23 +6872,6 @@
 		</Row>
 
 		<Row>
-			<BuildingType>BUILDING_SONGHAI_ISLAM_MINT</BuildingType>
-			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
-			<Flavor>150</Flavor>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_SONGHAI_ISLAM_MINT</BuildingType>
-			<FlavorType>FLAVOR_GOLD</FlavorType>
-			<Flavor>150</Flavor>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_SONGHAI_ISLAM_MINT</BuildingType>
-			<FlavorType>FLAVOR_OFFENSE</FlavorType>
-			<Flavor>200</Flavor>
-		</Row>
-
-
-		<Row>
 			<BuildingType>BUILDING_COAL_COMPANY</BuildingType>
 			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
 			<Flavor>15</Flavor>
@@ -7443,5 +7414,18 @@
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>500</Yield>
 		</Row>
+		<Row>
+			<BuildingType>BUILDING_SONGHAI_MARKET</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>150</Yield>
+		</Row>
 	</Building_InstantYield>
+	<Building_SpecialistYieldChangesLocal>
+		<Row>
+			<BuildingType>BUILDING_SONGHAI_MARKET</BuildingType>
+			<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>3</Yield>
+		</Row>
+	</Building_SpecialistYieldChangesLocal>
 </GameData>

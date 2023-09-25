@@ -934,13 +934,33 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_MOROCCO_MARKET_HELP">
 			<Text>
-				本城每4[ICON_CITIZEN]人口+1[ICON_GOLD]金钱产出。[NEWLINE][NEWLINE]本城市所有拥有的奢侈资源数量+1。
+				[ICON_BULLET]本城每4[ICON_CITIZEN]人口+1[ICON_GOLD]金钱产出。
+				[NEWLINE][ICON_BULLET]城市+25%[ICON_GOLD]金钱产出。
+				[NEWLINE][ICON_BULLET]本城市所有拥有的奢侈资源数量+1。
 			</Text>
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_CIV5_BUILDING_MOROCCO_MARKET_TEXT</Tag>
 			<Text>
 				苏克，即街市或集市（阿拉伯语:سوق‎,印地语:सूक,希伯来语:שוק‎sūq,也拼shuk,shooq,soq,esouk,suk,sooq），是北非或者西亚城市用于商业的露天市场。
+			</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_BUILDING_SONGHAI_MARKET">
+			<Text>[ICON_GOLD]旺加拉集市</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_SONGHAI_MARKET_HELP">
+			<Text>
+				[ICON_BULLET]本城每4[ICON_CITIZEN]人口+1[ICON_GOLD]金钱产出。
+				[NEWLINE][ICON_BULLET]每座旺加拉集市建成时获得一次性的150[ICON_GOLD]金钱奖励（标速下）。
+				[NEWLINE][ICON_BULLET]所有陆地国际商路+2[ICON_GOLD]金钱。
+				[NEWLINE][ICON_BULLET]每个本地商业家+3[ICON_GOLD]金钱。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_BUILDING_SONGHAI_MARKET_TEXT">
+			<Text>
+			旺加拉人是索宁克人的分支，作为散居在整个西非萨赫勒-苏丹地区的商人阶层专门从事跨撒哈拉和金粉秘密贸易。
+			[NEWLINE][NEWLINE]在桑海帝国时期，旺加拉人主要从事黄金和盐等矿物的贸易。他们在西非各地建立了散居社区，并在他们定居的城市建立了商会和清真寺。
 			</Text>
 		</Row>
 
@@ -3161,24 +3181,6 @@
 		<Replace Tag="TXT_KEY_BUILDING_MINT_HELP">
 			<Text>城市中每有3[ICON_CITIZEN]人口+1[ICON_GOLD]金钱产出。本城市的每处[ICON_RES_GOLD]黄金、[ICON_RES_SILVER]白银和[ICON_RES_COPPER]赤铜+3[ICON_GOLD]金钱。[NEWLINE][NEWLINE]只能在小型城市（6人口）建造。</Text>
 		</Replace>
-
-		<Row>
-			<Tag>TXT_KEY_BUILDING_SONGHAI_ISLAM_MINT</Tag>
-			<Text>[ICON_GOLD][ICON_RES_OIL]尼日利亚石油公司</Text>
-		</Row>
-		<Row>
-			<Tag>TXT_KEY_BUILDING_SONGHAI_ISLAM_MINT_HELP</Tag>
-			<Text>提供5单位额外[ICON_RES_OIL]石油资源。[NEWLINE]本城每处有市民工作的[ICON_RES_OIL]石油资源+3[ICON_PRODUCTION]产能+3[ICON_GOLD]金钱。[NEWLINE][NEWLINE][COLOR_NEGATIVE_TEXT]污染[ENDCOLOR]将会导致[ICON_FOOD]食物累积-5%。[NEWLINE][NEWLINE]需要1单位[ICON_RES_ELECTRICITY]电力。[NEWLINE][NEWLINE]每座尼日利亚石油公司会使[ICON_CONNECTED]城市连接+5%[ICON_GOLD]金钱产出。</Text>
-		</Row>
-		<Row>
-			<Tag>TXT_KEY_CIV5_BUILDINGS_SONGHAI_ISLAM_MINT_TEXT</Tag>
-			<Text>尼日利亚是非洲能源资源大国，是非洲第一大石油生产和出口大国。截止2014年已探明石油储量居非洲第二、世界第十。尼日利亚国家石油公司(Nigerian National Petroleum Corporation,NNPC)是尼日利亚从事石油工业的石油总公司，总部位于阿布贾。该公司于1977年4月1日由尼日利亚国家石油公司和尼日利亚联邦矿业和钢铁部合并而来。尼日利亚国家石油公司负责管理尼日利亚联邦政府和一些外国跨国公司，通过与这些公司合作，尼日利亚政府方便进行石油勘探和生产。</Text>
-		</Row>
-		<!--<Row>
-			<Tag>TXT_KEY_CIV5_BUILDINGS_SONGHAI_ISLAM_MINT_TEXT</Tag>
-			<Text>与迦纳和马利一样，桑海的繁荣主要依靠的是对穿越撒哈拉商路的控制。桑海帝国地处西苏丹萨赫勒地区的中部，是南北交通要冲，得撒哈拉商道之利，贸易十分发达。尼日河由西向东流经桑海，也方便了交通运输，两岸的肥沃土地是精耕细作的良田。[NEWLINE][NEWLINE]西苏丹和萨赫勒地区的城镇，如瓦拉塔、廷巴克图、杰内和加奥（此为规模宏大的穿越撒哈拉贸易的几个中心），与撒哈拉、北非以及远至地中海沿岸地区的许多大市场联系在一起。一些商人有完善的组织，在许多城市中设有分理处，在尼日河上有商船队，骆驼和牛是他们最重要的运输工具。[NEWLINE][NEWLINE]有的交易采取传统的以物易物方式，更多的则是采用货币形式。小笔买卖多用玛瑙贝，大宗生意则多用黄金、食盐或铜币。输入桑海的商品主要有盐、武器、马匹、铜、玻璃器皿、糖和北非的手工业品，如鞋类和羊毛制品，以及欧洲的布匹。对外则出口黄金、奴隶、象牙、香料、柯拉果和棉织品。除商业外，桑海帝国的采金业、制盐业和纺织业也较发达。
-			</Text>
-		</Row>-->
 
 		<Replace Tag="TXT_KEY_BUILDING_IRON_PROVIDER">
 			<Text>[ICON_RES_IRON]冶铁坊</Text>
