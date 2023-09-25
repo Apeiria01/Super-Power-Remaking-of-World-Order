@@ -901,12 +901,33 @@
 			<Text>[ICON_GOLD]蘇克</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_MOROCCO_MARKET_HELP">
-			<Text>本城每4[ICON_CITIZEN]人口+1[ICON_GOLD]金幣產出。[NEWLINE][NEWLINE]本城市所有擁有的奢侈資源數量+1。
+			<Text>
+			[ICON_BULLET]本城每4[ICON_CITIZEN]人口+1[ICON_GOLD]金幣產出。
+			[NEWLINE][ICON_BULLET]城市+25%[ICON_GOLD]金幣產出。
+			[NEWLINE][ICON_BULLET]本城市所有擁有的奢侈資源數量+1。
 			</Text>
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_CIV5_BUILDING_MOROCCO_MARKET_TEXT</Tag>
 			<Text>蘇克，即街市或集市（阿拉伯語:سوق‎,印地語:सूक,希伯來語:שוק‎sūq,也拼shuk,shooq,soq,esouk,suk,sooq），是北非或者西亞城市用於商業的露天市場。
+			</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_BUILDING_SONGHAI_MARKET">
+			<Text>[ICON_GOLD]旺加拉集市</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_SONGHAI_MARKET_HELP">
+			<Text>
+				[ICON_BULLET]本城每4[ICON_CITIZEN]人口+1[ICON_GOLD]金錢產出。
+				[NEWLINE][ICON_BULLET]每座旺加拉集市建成時獲得一次性的150[ICON_GOLD]金錢獎勵（標速下）。
+				[NEWLINE][ICON_BULLET]所有陸地國際商路+2[ICON_GOLD]金錢。
+				[NEWLINE][ICON_BULLET]每個本地商業家+3[ICON_GOLD]金錢。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_BUILDING_SONGHAI_MARKET_TEXT">
+			<Text>
+			旺加拉人是索寧克人的分支，作為散居在整個西非薩赫勒-蘇丹地區的商人階層專門從事跨撒哈拉和金粉秘密貿易。
+			[NEWLINE][NEWLINE]在桑海帝國時期，旺加拉人主要從事黃金和鹽等礦物的貿易。他們在西非各地建立了散居社區，並在他們定居的城市建立了商會和清真寺。
 			</Text>
 		</Row>
 		
@@ -3092,24 +3113,6 @@
 		<Replace Tag="TXT_KEY_BUILDING_MINT_HELP">
 			<Text>城市中每有3[ICON_CITIZEN]人口+1[ICON_GOLD]金幣產出。本城市的每處[ICON_RES_GOLD]黃金、[ICON_RES_SILVER]白銀和[ICON_RES_COPPER]赤銅+3[ICON_GOLD]金幣。[NEWLINE][NEWLINE]只能在小型城市（6人口）建造。</Text>			
 		</Replace>
-		
-		<Row>
-			<Tag>TXT_KEY_BUILDING_SONGHAI_ISLAM_MINT</Tag>
-			<Text>[ICON_GOLD][ICON_RES_OIL]尼日利亞石油公司</Text>
-		</Row>
-		<Row>
-			<Tag>TXT_KEY_BUILDING_SONGHAI_ISLAM_MINT_HELP</Tag>
-			<Text>提供5單位額外[ICON_RES_OIL]石油資源。[NEWLINE]本城每處有市民工作的[ICON_RES_OIL]石油資源+3[ICON_PRODUCTION]生產力+3[ICON_GOLD]金幣。[NEWLINE][NEWLINE][COLOR_NEGATIVE_TEXT]污染[ENDCOLOR]將會導致[ICON_FOOD]食物累積-5%。[NEWLINE][NEWLINE]需要1單位[ICON_RES_ELECTRICITY]電力。[NEWLINE][NEWLINE]每座尼日利亞石油公司會使[ICON_CONNECTED]城市連接+5%[ICON_GOLD]金幣產出。</Text>
-		</Row>
-		<Row>
-			<Tag>TXT_KEY_CIV5_BUILDINGS_SONGHAI_ISLAM_MINT_TEXT</Tag>
-			<Text>尼日利亞是非洲能源資源大國，是非洲第一大石油生產和出口大國。截止2014年已探明石油儲量居非洲第二、世界第十。尼日利亞國家石油公司(Nigerian National Petroleum Corporation,NNPC)是尼日利亞從事石油工業的石油總公司，總部位於阿布賈。該公司於1977年4月1日由尼日利亞國家石油公司和尼日利亞聯邦礦業和鋼鐵部合併而來。尼日利亞國家石油公司負責管理尼日利亞聯邦政府和一些外國跨國公司，通過與這些公司合作，尼日利亞政府方便進行石油勘探和生產。</Text>
-		</Row>
-		<!--<Row>
-			<Tag>TXT_KEY_CIV5_BUILDINGS_SONGHAI_ISLAM_MINT_TEXT</Tag>
-			<Text>與迦納和馬利一樣，桑海的繁榮主要依靠的是對穿越撒哈拉商路的控制。桑海帝國地處西蘇丹薩赫勒地區的中部，是南北交通要沖，得撒哈拉商道之利，貿易十分發達。尼日河由西向東流經桑海，也方便了交通運輸，兩岸的肥沃土地是精耕細作的良田。[NEWLINE][NEWLINE]西蘇丹和薩赫勒地區的城鎮，如瓦拉塔、廷巴克圖、傑內和加奧（此為規模宏大的穿越撒哈拉貿易的幾個中心），與撒哈拉、北非以及遠至地中海沿岸地區的許多大市場聯系在一起。一些商人有完善的組織，在許多城市中設有分理處，在尼日河上有商船隊，駱駝和牛是他們最重要的運輸工具。[NEWLINE][NEWLINE]有的交易采取傳統的以物易物方式，更多的則是采用貨幣形式。小筆買賣多用瑪瑙貝，大宗生意則多用黃金、食鹽或銅幣。輸入桑海的商品主要有鹽、武器、馬匹、銅、玻璃器皿、糖和北非的手工業品，如鞋類和羊毛制品，以及歐洲的布匹。對外則出口黃金、奴隸、象牙、香料、柯拉果和棉織品。除商業外，桑海帝國的采金業、制鹽業和紡織業也較發達。
-			</Text>
-		</Row>-->
 		
 		<Replace Tag="TXT_KEY_BUILDING_IRON_PROVIDER">
 			<Text>[ICON_RES_IRON]冶鐵坊</Text>

@@ -2980,32 +2980,6 @@
 			[NEWLINE][NEWLINE]Requires 1 [ICON_RES_ELECTRICITY] Electricity.</Text>
 		</Row>
 
-
-
-		<Row>
-			<Tag>TXT_KEY_BUILDING_SONGHAI_ISLAM_MINT</Tag>
-			<Text>[ICON_RES_OIL][ICON_CONNECTED] Nigeria Petroleum Company</Text>
-		</Row>
-		<Row>
-			<Tag>TXT_KEY_BUILDING_SONGHAI_ISLAM_MINT_HELP</Tag>
-			<Text>
-				+5 additional [ICON_RES_OIL] Oil.
-				[NEWLINE][NEWLINE]+3 [ICON_PRODUCTION] Production and +3 [ICON_GOLD] Gold for every [ICON_RES_OIL] Oil resource worked by this city.
-				[NEWLINE][NEWLINE]Each Nigeria Petroleum Company provides +5% [ICON_GOLD] Gold from [ICON_CONNECTED] City Connections.
-				[NEWLINE][NEWLINE][COLOR_NEGATIVE_TEXT]Pollution[ENDCOLOR] will cause -5% [ICON_FOOD] Food Growth.
-				[NEWLINE][NEWLINE]Requires 1 [ICON_RES_ELECTRICITY] Electricity.
-			</Text>
-		</Row>
-		<Row>
-			<Tag>TXT_KEY_CIV5_BUILDINGS_SONGHAI_ISLAM_MINT_TEXT</Tag>
-			<Text>
-				Economic trade existed throughout the Songhai Empire, due to the standing army stationed in the provinces. Central to the regional economy were independent gold fields.
-			</Text>
-		</Row>
-
-
-
-
 		<Row>
 			<Tag>TXT_KEY_BUILDING_STEEL_MILL</Tag>
 			<Text>[ICON_PRODUCTION][ICON_RES_URANIUM] Uraninite Refinery</Text>
@@ -3368,9 +3342,9 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_MOROCCO_MARKET_HELP">
 			<Text>
-				+1 [ICON_GOLD] Gold for every 4 [ICON_CITIZEN] Citizens in the city.
-				[NEWLINE][NEWLINE]+25%[ICON_GOLD] Gold output in this city.
-				[NEWLINE][NEWLINE]1 extra luxury resource from each improved luxury near the city.
+				[ICON_BULLET]+1 [ICON_GOLD] Gold for every 4 [ICON_CITIZEN] Citizens in the city.
+				[NEWLINE][ICON_BULLET]+25%[ICON_GOLD] Gold output in this city.
+				[NEWLINE][ICON_BULLET]1 extra luxury resource from each improved luxury near the city.
 			</Text>
 		</Row>
 		<Row>
@@ -3379,7 +3353,24 @@
 				A souq or souk (Arabic: سوق‎, Hindi: सूक, Hebrew: שוק‎ sūq, also spelled shuk, shooq, soq, esouk, suk, sooq, suq) is an open-air marketplace or commercial quarter in Western Asian and North African cities. The equivalent Persian term is "bazaar".
 			</Text>
 		</Row>
-		
+
+		<Row Tag="TXT_KEY_BUILDING_SONGHAI_MARKET">
+			<Text>[ICON_GOLD]Wangara Entrepot</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_SONGHAI_MARKET_HELP">
+			<Text>
+				[ICON_BULLET]+1 [ICON_GOLD] Gold for every 4 [ICON_CITIZEN] Citizens in the city.
+				[NEWLINE][ICON_BULLET]Receive one-time 150 [ICON_GOLD] Gold (at Normal Game Speed) after a Wangara Entrepot is built.
+				[NEWLINE][ICON_BULLET]all Land International Trade produces +2 [ICON_GOLD] Gold.
+				[NEWLINE][ICON_BULLET]+3 [ICON_GOLD] Gold for each local Merchant.
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_BUILDING_SONGHAI_MARKET_TEXT">
+			<Text>
+			The Wangara are Soninke subgroups and later ethno-Linguistically assimilated merchant class that specialized in both Trans-Saharan and Secret Trade of Gold Dust Their diaspora operated all throughout West Africa Sahel-Sudan.   Fostering regionally organized trade networks and archhedure projects, but based in the many Sahelian and Niger-Volta-Sene-Gambia river city-states.
+			[NEWLINE][NEWLINE]During the Songhai Empire, the Wangara operated as traveling merchants who primarily engaged in the trade of minerals such as gold and salt. They established diaspora communities throughout West Africa and constructed merchant guilds as well as mosques in the cities where they settled.
+			</Text>
+		</Row>
 		
 		<Replace>
 			<Tag>TXT_KEY_BUILDING_BANK_HELP</Tag>
@@ -4187,7 +4178,7 @@
 		</Row>
 		<!-- Help tags -->
 		<Row Tag="TXT_KEY_WONDER_PORT_OF_ROTTERDAM_HELP">
-			<Text>Gain an additional Trade Route slot and all International Trade produces +5 [ICON_GOLD] Gold. 
+			<Text>Gain an additional Trade Route slot and all International Trade produces +8 [ICON_GOLD] Gold. 
 			[NEWLINE][NEWLINE]City must be built on the coast.</Text>
 		</Row>
 		<!-- Quote tags -->

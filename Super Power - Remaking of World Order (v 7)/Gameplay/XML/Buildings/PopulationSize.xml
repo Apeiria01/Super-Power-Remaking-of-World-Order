@@ -1758,10 +1758,7 @@
 			<BuildingType>BUILDING_MINT</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_SMALL</BuildingClassType>
 		</Row>
-		<!--<Row>
-			<BuildingType>BUILDING_SONGHAI_ISLAM_MINT</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_SMALL</BuildingClassType>
-		</Row>-->
+
 		<Row>
 			<BuildingType>BUILDING_IRON_PROVIDER</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_SMALL</BuildingClassType>
@@ -2482,11 +2479,6 @@
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>33</Yield>
 		</Row>
-		<!--<Row>
-			<BuildingType>BUILDING_SONGHAI_ISLAM_MINT</BuildingType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>33</Yield>
-		</Row>-->
 
 		<Row>
 			<BuildingType>BUILDING_3DPRINTING</BuildingType>
@@ -2797,27 +2789,6 @@
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>3</Yield>
 		</Row>
-
-		<!--<Row>
-			<BuildingType>BUILDING_SONGHAI_ISLAM_MINT</BuildingType>
-			<ResourceType>RESOURCE_GOLD</ResourceType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>3</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_SONGHAI_ISLAM_MINT</BuildingType>
-			<ResourceType>RESOURCE_SILVER</ResourceType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>3</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_SONGHAI_ISLAM_MINT</BuildingType>
-			<ResourceType>RESOURCE_COPPER</ResourceType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>3</Yield>
-		</Row>-->
-
-
 
 		<Row>
 			<BuildingType>BUILDING_COUNTRY_CLUB</BuildingType>
