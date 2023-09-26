@@ -14990,5 +14990,15 @@
 		<Replace Tag="TXT_KEY_PROMOTION_EXTRA_MOVE_HALF">
 			<Text>移動力+0.25</Text>
 		</Replace>
+
+		<Replace Tag="TXT_KEY_PRODUCTION_NEEDED_UNIT_MODIFIER">
+			<Text>全國單位[ICON_PRODUCTION]花費:{1_Num}%</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PRODUCTION_NEEDED_BUILDING_MODIFIER">
+			<Text>全國建築[ICON_PRODUCTION]花費:{1_Num}%</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PRODUCTION_NEEDED_PROJECT_MODIFIER">
+			<Text>全國項目[ICON_PRODUCTION]花費:{1_Num}%</Text>
+		</Replace>
 	</Language_zh_Hant_HK>
 </GameData>

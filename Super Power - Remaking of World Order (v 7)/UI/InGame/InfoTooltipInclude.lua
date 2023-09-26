@@ -1768,6 +1768,10 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		end
 	end
 
+	insertLocalizedIfNonZero( tips, "TXT_KEY_PRODUCTION_NEEDED_UNIT_MODIFIER", building.GlobalProductionNeededUnitModifier or 0 )
+	insertLocalizedIfNonZero( tips, "TXT_KEY_PRODUCTION_NEEDED_BUILDING_MODIFIER", building.GlobalProductionNeededBuildingModifier or 0 )
+	insertLocalizedIfNonZero( tips, "TXT_KEY_PRODUCTION_NEEDED_PROJECT_MODIFIER", building.GlobalProductionNeededProjectModifier or 0 )
+
 	--New for Yield From Other Yield
 	for row in GameInfo.Building_YieldFromOtherYield(thisBuildingType) do
 		item = GameInfo.Yields[ row.InYieldType ]
@@ -1936,20 +1940,6 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 			end
 
 		end
-
-
-	else
-		-- Orbital Production
-		insertLocalizedIfNonZero( tips, "TXT_KEY_DOMAIN_PRODUCTION_MOD", building.OrbitalProductionModifier or 0, "TXT_KEY_ORBITAL_UNITS" )
-
-		-- Orbital Coverage
-		insertLocalizedIfNonZero( tips, "TXT_KEY_BUILDING_ORBITAL_COVERAGE", building.OrbitalCoverageChange or 0 )
-
-		-- Anti-Orbital Strike
-		insertLocalizedIfNonZero( tips, "TXT_KEY_UNITPERK_RANGE_AGAINST_ORBITAL_CHANGE", building.OrbitalStrikeRangeChange or 0 )
-
-		-- Covert Ops Intrigue Cap
-		insertLocalizedIfNonZero( tips, "TXT_KEY_BUILDING_CITY_INTRIGUE_CAP", -(building.IntrigueCapChange or 0) * (GameDefines.MAX_CITY_INTRIGUE_LEVELS or 0) / 100 )
 	end
 
 	insert( tips, "----------------" )

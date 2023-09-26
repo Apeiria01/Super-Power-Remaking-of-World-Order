@@ -17069,5 +17069,15 @@
 		<Replace Tag="TXT_KEY_PROMOTION_EXTRA_MOVE_HALF">
 			<Text>+0.25 Moves</Text>
 		</Replace>
+
+		<Replace Tag="TXT_KEY_PRODUCTION_NEEDED_UNIT_MODIFIER">
+			<Text>Global Unit [ICON_PRODUCTION] Cost:{1_Num}%</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PRODUCTION_NEEDED_BUILDING_MODIFIER">
+			<Text>Global Building [ICON_PRODUCTION] Cost:{1_Num}%</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PRODUCTION_NEEDED_PROJECT_MODIFIER">
+			<Text>Global Project [ICON_PRODUCTION] Cost:{1_Num}%</Text>
+		</Replace>
 	</Language_en_US>
 </GameData>
