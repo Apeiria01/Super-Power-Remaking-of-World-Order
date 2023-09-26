@@ -10162,7 +10162,7 @@
 		<Replace Tag="TXT_KEY_TRAIT_ART_OF_WAR">
 			<Text>
 				[ICON_BULLET]During a [ICON_GOLDEN_AGE] Golden Age, China receive additional +20% [ICON_RESEARCH] Science and +20% [ICON_FOOD] Food nationwide.
-        [NEWLINE][ICON_BULLET]In the Golden Age, the [ICON_CITIZEN] population growth of all cities requires -20% food, eliminates the [ICON_RESEARCH] increase in scientific research expenditures from the number of cities, and [ICON_RESEARCH] the total scientific research expenditure -20%.
+				[NEWLINE][ICON_BULLET]In the Golden Age, the [ICON_CITIZEN] population growth of all cities requires -20% food, eliminates the [ICON_RESEARCH] increase in scientific research expenditures from the number of cities, and [ICON_RESEARCH] the total scientific research expenditure -20%.
 			</Text>
 		</Replace>
 
@@ -17063,8 +17063,11 @@
 			<Text>Cause extra 15% Damage to all enemy units [COLOR_POSITIVE_TEXT]Adjacent[ENDCOLOR] to the target unit.</Text>
 		</Replace>
 
-    <Replace Tag="TXT_KEY_CIV5_HUN_HORSE_ARCHER_HELP_TEXT">
-      <Text>Every time you kill an enemy, +2 melee and long-range combat strength. The accumulated combat strength upgrade can be inherited, but cannot be increased. {TXT_KEY_PROMOTION_HITANDRUN_HELP}</Text>
-    </Replace>
+		<Replace Tag="TXT_KEY_CIV5_HUN_HORSE_ARCHER_HELP_TEXT">
+			<Text>Every time you kill an enemy, +2 melee and long-range combat strength. The accumulated combat strength upgrade can be inherited, but cannot be increased. {TXT_KEY_PROMOTION_HITANDRUN_HELP}</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_EXTRA_MOVE_HALF">
+			<Text>+0.25 Moves</Text>
+		</Replace>
 	</Language_en_US>
 </GameData>

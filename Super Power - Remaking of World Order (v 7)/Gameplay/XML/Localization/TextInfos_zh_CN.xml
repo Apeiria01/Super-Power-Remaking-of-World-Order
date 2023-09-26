@@ -5551,7 +5551,7 @@
 		<Replace Tag="TXT_KEY_TRAIT_ART_OF_WAR">
 			<Text>
 				[ICON_BULLET]所有陆军单位都自带消灭敌人后，获得相当于敌单位战斗力数值50%的[ICON_GOLDEN_AGE]黄金时代点数的晋升。
-				[NEWLINE][ICON_BULLET]黄金时代中，所有城市的[ICON_CITIZEN]人口增长所需粮食-20%，消除来自城市数量的[ICON_RESEARCH]科研花费增加， [ICON_RESEARCH]总科研花费-20%。
+				[NEWLINE][ICON_BULLET]黄金时代中，所有城市的[ICON_CITIZEN]人口增长所需粮食-20%，消除来自城市数量的[ICON_RESEARCH]科研花费增加，[ICON_RESEARCH]总科研花费-20%。
 			</Text>
 		</Replace>
 		<Row Tag="TXT_KEY_SP_UA_CHINA_GOLDENAGE_ANNOUNCE">
@@ -15187,7 +15187,11 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_CIV5_HUN_HORSE_ARCHER_HELP_TEXT">
-      <Text>每杀死一名敌军，+2近战和远程战斗力，积累的战斗力升级可继承，但是不能再增加。{TXT_KEY_PROMOTION_HITANDRUN_HELP}</Text>
+    		<Text>每杀死一名敌军，+2近战和远程战斗力，积累的战斗力升级可继承，但是不能再增加。{TXT_KEY_PROMOTION_HITANDRUN_HELP}</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_PROMOTION_EXTRA_MOVE_HALF">
+			<Text>移动力+0.25</Text>
 		</Replace>
 
 	</Language_zh_CN>
