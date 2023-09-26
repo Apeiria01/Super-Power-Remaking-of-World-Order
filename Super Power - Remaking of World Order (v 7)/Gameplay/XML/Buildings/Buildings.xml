@@ -360,9 +360,9 @@
 			<EnhancedYieldTech>TECH_INTERNET</EnhancedYieldTech>
 			<TechEnhancedTourism>2</TechEnhancedTourism>
 			<AllowsProductionTradeRoutes>true</AllowsProductionTradeRoutes>
-      <GlobalProductionNeededUnitModifier>-2</GlobalProductionNeededUnitModifier>
-      <GlobalProductionNeededBuildingModifier>-2</GlobalProductionNeededBuildingModifier>
-      <GlobalProductionNeededProjectModifier>-2</GlobalProductionNeededProjectModifier>
+			<GlobalProductionNeededUnitModifier>-2</GlobalProductionNeededUnitModifier>
+			<GlobalProductionNeededBuildingModifier>-2</GlobalProductionNeededBuildingModifier>
+			<GlobalProductionNeededProjectModifier>-2</GlobalProductionNeededProjectModifier>
 		</Row>
 		
 		<Row>

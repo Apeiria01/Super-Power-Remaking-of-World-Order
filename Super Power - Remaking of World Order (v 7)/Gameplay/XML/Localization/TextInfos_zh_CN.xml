@@ -15194,5 +15194,15 @@
 			<Text>移动力+0.25</Text>
 		</Replace>
 
+		<Replace Tag="TXT_KEY_PRODUCTION_NEEDED_UNIT_MODIFIER">
+			<Text>全国单位[ICON_PRODUCTION]花费:{1_Num}%</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PRODUCTION_NEEDED_BUILDING_MODIFIER">
+			<Text>全国建筑[ICON_PRODUCTION]花费:{1_Num}%</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PRODUCTION_NEEDED_PROJECT_MODIFIER">
+			<Text>全国项目[ICON_PRODUCTION]花费:{1_Num}%</Text>
+		</Replace>
+
 	</Language_zh_CN>
 </GameData>
