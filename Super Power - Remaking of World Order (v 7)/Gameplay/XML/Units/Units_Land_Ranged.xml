@@ -1295,7 +1295,7 @@
 		</Row>
 		<Row>
 			<UnitType>UNIT_CHINESE_CHUKONU</UnitType>
-			<PromotionType>PROMOTION_MOBILITY</PromotionType>
+			<PromotionType>PROMOTION_EXTRA_MOVE_HALF</PromotionType>
 		</Row>
 
 		<Row>

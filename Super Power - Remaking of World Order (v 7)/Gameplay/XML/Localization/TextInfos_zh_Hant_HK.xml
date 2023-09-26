@@ -5447,7 +5447,7 @@
 		<Replace Tag="TXT_KEY_TRAIT_ART_OF_WAR">
 			<Text>
 				[ICON_BULLET]所有陸軍單位都自帶消滅敵人後，獲得相當於敵單位戰鬥力數值50%的[ICON_GOLDEN_AGE]黃金時代點數的晉升。
-        [NEWLINE][ICON_BULLET]黃金時代中，所有城市的[ICON_CITIZEN]人口增長所需糧食-20%，消除來自城市數量的[ICON_RESEARCH]科研花費增加， [ICON_RESEARCH]總科研花費-20%。
+				[NEWLINE][ICON_BULLET]黃金時代中，所有城市的[ICON_CITIZEN]人口增長所需糧食-20%，消除來自城市數量的[ICON_RESEARCH]科研花費增加，[ICON_RESEARCH]總科研花費-20%。
 			</Text>
 		</Replace>
 		<Row Tag="TXT_KEY_SP_UA_CHINA_GOLDENAGE_ANNOUNCE">
@@ -14983,8 +14983,12 @@
 			<Text>對[COLOR_POSITIVE_TEXT]相鄰區域[ENDCOLOR]目標傷害+15%。</Text>
 		</Replace>
 
-    <Replace Tag="TXT_KEY_CIV5_HUN_HORSE_ARCHER_HELP_TEXT">
-      <Text>每殺死一名敵軍，+2近戰和遠程戰鬥力，積累的戰鬥力升級可繼承，但是不能再增加。 {TXT_KEY_PROMOTION_HITANDRUN_HELP}</Text>
+    	<Replace Tag="TXT_KEY_CIV5_HUN_HORSE_ARCHER_HELP_TEXT">
+    		<Text>每殺死一名敵軍，+2近戰和遠程戰鬥力，積累的戰鬥力升級可繼承，但是不能再增加。 {TXT_KEY_PROMOTION_HITANDRUN_HELP}</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_PROMOTION_EXTRA_MOVE_HALF">
+			<Text>移動力+0.25</Text>
 		</Replace>
 	</Language_zh_Hant_HK>
 </GameData>
