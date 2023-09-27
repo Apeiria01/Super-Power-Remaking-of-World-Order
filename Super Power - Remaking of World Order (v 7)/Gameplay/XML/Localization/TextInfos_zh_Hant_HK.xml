@@ -949,19 +949,6 @@
 			<Text>所有城市+4%[ICON_GOLD]金幣產出。但不提供本城的[ICON_GOLD]金幣加成。</Text>
 		</Row>
 		
-		<Row>
-			<Tag>TXT_KEY_BUILDING_PERSIA_TRADEPOST</Tag>
-			<Text>[ICON_GOLD]腓尼基商會</Text>
-		</Row>
-		<Row>
-			<Tag>TXT_KEY_CIV5_BUILDINGS_PERSIA_TRADEPOST_TEXT</Tag>
-			<Text>腓尼基人被併入波斯帝國之後，腓尼基商人獲得了一個巨大的內陸貿易區，同時，在地中海上，在與其商業競爭對手希臘人的鬥爭中，他們也爭取到了波斯的支援。與腓尼基人一樣，亞洲希臘人也成了波斯的子民，不過，是不馴順的子民；而敘利亞的腓尼基人卻幫了波斯人的大忙，並得到其青睞。3個敘利亞腓尼基城邦國家阿臘杜斯、提爾和西頓，被授予小型地方自治王國的地位。腓尼基人並不打算背叛波斯人，因而，波斯人不必擔心殖民地中的腓尼基城邦會介入敘利亞事務。波斯人並不想把利比亞的腓尼基人和敘利亞的腓尼基人併入他們的帝國，相反在公元前6世紀末葉，他們與迦太基人訂立了反希臘協定，當時殖民地中的腓尼基人城邦在迦太基的領導之下組成了一個統一陣線。</Text>
-		</Row>
-		<Row>
-			<Tag>TXT_KEY_BUILDING_PERSIA_TRADEPOST_HELP</Tag>
-			<Text>本城市每4[ICON_CITIZEN]人口+1[ICON_GOLD]金幣。[NEWLINE][NEWLINE][ICON_GOLDEN_AGE]黃金時代長度+2%。</Text>
-		</Row>
-		
 		<Replace>
 			<Tag>TXT_KEY_BUILDING_STOCK_EXCHANGE_HELP</Tag>
 			<Text>本城市每4[ICON_CITIZEN]人口+1[ICON_GOLD]金幣。[NEWLINE][NEWLINE]城市必須擁有銀行。</Text>

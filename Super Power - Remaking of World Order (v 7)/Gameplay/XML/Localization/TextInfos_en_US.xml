@@ -3392,24 +3392,6 @@
 			<Text>+4% [ICON_GOLD] Gold output in all cities. However it won't offer local [ICON_GOLD] Gold bonus.</Text>
 		</Row>
 
-
-		<Row>
-			<Tag>TXT_KEY_BUILDING_PERSIA_TRADEPOST</Tag>
-			<Text>[ICON_GOLD] Persia Tradepost</Text>
-		</Row>
-		<Row>
-			<Tag>TXT_KEY_CIV5_BUILDINGS_PERSIA_TRADEPOST_TEXT</Tag>
-			<Text>
-				WIP
-			</Text>
-		</Row>
-		<Row>
-			<Tag>TXT_KEY_BUILDING_PERSIA_TRADEPOST_HELP</Tag>
-			<Text>+1 [ICON_GOLD] Gold for every 4 [ICON_CITIZEN] Citizens in the city. [NEWLINE][NEWLINE]+2%  [ICON_GOLDEN_AGE] Golden Age length. </Text>
-		</Row>
-
-
-
 		<Replace>
 			<Tag>TXT_KEY_BUILDING_STOCK_EXCHANGE_HELP</Tag>
 			<Text>+1 [ICON_GOLD] Gold for every 4 [ICON_CITIZEN] Citizens in the city. 

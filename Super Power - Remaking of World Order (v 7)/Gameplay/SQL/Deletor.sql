@@ -62,6 +62,7 @@ DELETE FROM Building_ResourceCultureChanges;
 DELETE FROM Building_ResourceYieldModifiers;
 DELETE FROM Building_ResourceQuantityRequirements;
 DELETE FROM Building_PrereqBuildingClasses;
+DELETE FROM Building_LocalResourceAnds;
 DELETE FROM Building_LocalResourceOrs;
 DELETE FROM Building_HurryModifiers;
 DELETE FROM Building_GlobalYieldModifiers;

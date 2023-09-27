@@ -309,9 +309,6 @@
 	
 	<!--*********************Resource ********************-->
 	<Building_LocalResourceOrs>
-
-		<!--<Delete BuildingType="BUILDING_FORGE" />-->
-			
 		<Row>
 			<BuildingType>BUILDING_STABLE</BuildingType>
 			<ResourceType>RESOURCE_HORSE</ResourceType>
@@ -1022,12 +1019,6 @@
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>2</Yield>
 		</Row>
-		<Row>
-			<BuildingType>BUILDING_PERSIA_TRADEPOST</BuildingType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>2</Yield>
-		</Row>
-
 
 		<Row>
 			<BuildingType>BUILDING_STOCK_EXCHANGE</BuildingType>
@@ -3356,17 +3347,7 @@
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>25</Yield>
 		</Row>
-		<!--<Row>
-			<BuildingType>BUILDING_BANK_OF_ENGLAND</BuildingType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>25</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_PERSIA_TRADEPOST</BuildingType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>25</Yield>
-		</Row>-->
-		
+
 		<Row>
 			<BuildingType>BUILDING_STOCK_EXCHANGE</BuildingType>
 			<YieldType>YIELD_GOLD</YieldType>
@@ -4391,12 +4372,6 @@
 
 		<Row>
 			<BuildingType>BUILDING_BANK_OF_ENGLAND</BuildingType>
-			<FlavorType>FLAVOR_GOLD</FlavorType>
-			<Flavor>99</Flavor>
-		</Row>
-
-		<Row>
-			<BuildingType>BUILDING_PERSIA_TRADEPOST</BuildingType>
 			<FlavorType>FLAVOR_GOLD</FlavorType>
 			<Flavor>99</Flavor>
 		</Row>
