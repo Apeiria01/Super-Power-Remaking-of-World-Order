@@ -104,14 +104,6 @@
 			<BuildingClassType>BUILDINGCLASS_AMPHITHEATER</BuildingClassType>
 			<BuildingType>BUILDING_ZULU_IZIKO</BuildingType>
 		</Row>
-		
-		
-		<!--<Row>
-			<CivilizationType>CIVILIZATION_PERSIA</CivilizationType>
-			<BuildingClassType>BUILDINGCLASS_BANK</BuildingClassType>
-			<BuildingType>BUILDING_PERSIA_TRADEPOST</BuildingType>
-		</Row>-->
-
 
 		<Row>
 			<CivilizationType>CIVILIZATION_EGYPT</CivilizationType>

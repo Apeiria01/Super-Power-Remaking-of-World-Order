@@ -1389,26 +1389,6 @@
 			<IconAtlas>SPWondersUB_ATLAS</IconAtlas>
 			<PortraitIndex>25</PortraitIndex>
 		</Row>
-		<Row>
-			<Type>BUILDING_PERSIA_TRADEPOST</Type>
-			<BuildingClass>BUILDINGCLASS_BANK</BuildingClass>
-			<FreeStartEra>ERA_FUTURE</FreeStartEra>
-			<Cost>100</Cost>
-			<PrereqTech>TECH_ECONOMICS</PrereqTech>
-			<Help>TXT_KEY_BUILDING_PERSIA_TRADEPOST_HELP</Help>
-			<Description>TXT_KEY_BUILDING_PERSIA_TRADEPOST</Description>
-			<Civilopedia>TXT_KEY_CIV5_BUILDINGS_PERSIA_TRADEPOST_TEXT</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
-			<ArtDefineTag>ART_DEF_BUILDING_BANK</ArtDefineTag>
-			<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
-			<SpecialistCount>2</SpecialistCount>
-			<MinAreaSize>-1</MinAreaSize>
-			<ConquestProb>100</ConquestProb>
-			<HurryCostModifier>50</HurryCostModifier>
-			<IconAtlas>SPWondersUB_ATLAS</IconAtlas>
-			<PortraitIndex>20</PortraitIndex>
-			<GoldenAgeModifier>2</GoldenAgeModifier>
-		</Row>
 		
 		<Row>
 			<Type>BUILDING_STOCK_EXCHANGE</Type>
