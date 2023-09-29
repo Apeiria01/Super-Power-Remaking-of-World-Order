@@ -2194,6 +2194,14 @@
 			<FreePromotionType>PROMOTION_CITY_DAMAGE_MAXHP_PERCENT</FreePromotionType>
 			<PrePromotionType>PROMOTION_CARRIER_FIGHTER</PrePromotionType>
 		</Row>
+		<Row>
+			<FreePromotionType>PROMOTION_CITY_DAMAGE_MAXHP_PERCENT</FreePromotionType>
+			<PrePromotionType>PROMOTION_CITY_ASSAULT</PrePromotionType>
+		</Row>
+		<Row>
+			<FreePromotionType>PROMOTION_CITY_DAMAGE_MAXHP_PERCENT</FreePromotionType>
+			<PrePromotionType>PROMOTION_SAPPER</PrePromotionType>
+		</Row>
 	</UnitPromotions_Promotions>
 
 	
