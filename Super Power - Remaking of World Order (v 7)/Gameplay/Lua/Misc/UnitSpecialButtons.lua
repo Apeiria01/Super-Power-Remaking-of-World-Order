@@ -1139,6 +1139,27 @@ EstablishCorpsButton = {
 			return false
 		end
 
+        --Count Crops And Armee Unit
+        if g_CorpsCount[playerID] == nil then
+            g_CorpsCount[playerID] = {0, 0, nil, nil, nil};
+            for pUnit in player:Units() do
+                if pUnit and pUnit:IsCombatUnit() and not pUnit:IsImmobile() then
+                    if pUnit and pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_CORPS_1"]) and GameInfo.Unit_FreePromotions {
+                        UnitType = GameInfo.Units[pUnit:GetUnitType()].Type,
+                        PromotionType = "PROMOTION_CORPS_1"
+                    }() == nil then
+                        g_CorpsCount[playerID][1] = g_CorpsCount[playerID][1] + 1;
+                    end
+                    if pUnit and pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_CORPS_2"]) and GameInfo.Unit_FreePromotions {
+                        UnitType = GameInfo.Units[pUnit:GetUnitType()].Type,
+                        PromotionType = "PROMOTION_CORPS_2"
+                    }() == nil then
+                        g_CorpsCount[playerID][2] = g_CorpsCount[playerID][2] + 1;
+                    end
+                end
+            end
+        end
+
 		local iNumCanEstCorp = player:GetBuildingClassCount(GameInfoTypes["BUILDINGCLASS_ARSENAL"]) * ifac - g_CorpsCount[playerID][1]
 		local iNumCanEstArmee = player:GetBuildingClassCount(GameInfoTypes["BUILDINGCLASS_MILITARY_BASE"]) * ifac - g_CorpsCount[playerID][2]
 		local tUnit = nil;
@@ -1163,14 +1184,17 @@ EstablishCorpsButton = {
 		for i = 0, plot:GetNumUnits() - 1, 1 do
 			local iUnit = plot:GetUnit(i)
             if iUnit ~= unit then
+                --the other Unit must be a Combat Unit
+                if not iUnit:IsCombatUnit() then
+                    return false
+                end
                 --unit is Great Person
                 if tUnit == nil then
                     tUnit = iUnit
                     break
                 else
-                    if not iUnit:IsCombatUnit()
                     --not allow other unit is crops: we only want to keep tUnit and kill nUnit 
-                    or iUnit:IsHasPromotion(CorpsID)
+                    if iUnit:IsHasPromotion(CorpsID)
                     --only for same Type
                     or iUnit:GetUnitType() ~= unit:GetUnitType()
                     then
@@ -1182,26 +1206,6 @@ EstablishCorpsButton = {
             end
 		end
 		local bIsCorps = tUnit:IsHasPromotion(CorpsID)
-
-        if g_CorpsCount[playerID] == nil then
-            g_CorpsCount[playerID] = {0, 0, nil, nil, nil};
-            for pUnit in player:Units() do
-                if pUnit and pUnit:IsCombatUnit() and not pUnit:IsImmobile() then
-                    if pUnit and pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_CORPS_1"]) and GameInfo.Unit_FreePromotions {
-                        UnitType = GameInfo.Units[pUnit:GetUnitType()].Type,
-                        PromotionType = "PROMOTION_CORPS_1"
-                    }() == nil then
-                        g_CorpsCount[playerID][1] = g_CorpsCount[playerID][1] + 1;
-                    end
-                    if pUnit and pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_CORPS_2"]) and GameInfo.Unit_FreePromotions {
-                        UnitType = GameInfo.Units[pUnit:GetUnitType()].Type,
-                        PromotionType = "PROMOTION_CORPS_2"
-                    }() == nil then
-                        g_CorpsCount[playerID][2] = g_CorpsCount[playerID][2] + 1;
-                    end
-                end
-            end
-        end
 
 		if tUnit and nUnit and tUnit ~= nUnit 
 		then
