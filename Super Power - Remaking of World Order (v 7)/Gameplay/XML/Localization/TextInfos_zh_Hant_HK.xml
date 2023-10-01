@@ -14987,5 +14987,12 @@
 		<Replace Tag="TXT_KEY_PRODUCTION_NEEDED_PROJECT_MODIFIER">
 			<Text>全國項目[ICON_PRODUCTION]花費:{1_Num}%</Text>
 		</Replace>
+
+		<Replace Tag="TXT_KEY_DIPLO_TO_TRADE_CITY_TT">
+			<Text>
+			交易城市
+			[NEWLINE][NEWLINE][COLOR_NEGATIVE_TEXT]City needs to Found by either side or Polulation [ENDCOLOR]
+			</Text>
+		</Replace>
 	</Language_zh_Hant_HK>
 </GameData>
