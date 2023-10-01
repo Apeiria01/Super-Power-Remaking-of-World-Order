@@ -17061,5 +17061,12 @@
 		<Replace Tag="TXT_KEY_PRODUCTION_NEEDED_PROJECT_MODIFIER">
 			<Text>Global Project [ICON_PRODUCTION] Cost:{1_Num}%</Text>
 		</Replace>
+
+		<Replace Tag="TXT_KEY_DIPLO_TO_TRADE_CITY_TT">
+			<Text>
+			Trade a city
+			[NEWLINE][NEWLINE][COLOR_NEGATIVE_TEXT]City needs to Founded by either side or has 4+ Population and not in Resistance[ENDCOLOR]
+			</Text>
+		</Replace>
 	</Language_en_US>
 </GameData>

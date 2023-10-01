@@ -15191,5 +15191,12 @@
 			<Text>全国项目[ICON_PRODUCTION]花费:{1_Num}%</Text>
 		</Replace>
 
+		<Replace Tag="TXT_KEY_DIPLO_TO_TRADE_CITY_TT">
+			<Text>
+			交易城市
+			[NEWLINE][NEWLINE][COLOR_NEGATIVE_TEXT]若城市非双方建立且人口小于4或者处于抵抗，交易不可进行[ENDCOLOR]
+			</Text>
+		</Replace>
+
 	</Language_zh_CN>
 </GameData>
