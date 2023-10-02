@@ -282,6 +282,11 @@
 			<Where Name="GLOBAL_CORRUPTION"/>
 			<Set Value="1"/>
 		</Update>
+
+		<Update>
+			<Where Name="UNIT_COST_DONOT_INCTEASE_WITH_TURN"/>
+			<Set Value="1"/>
+		</Update>
 	</CustomModOptions>
 
 
