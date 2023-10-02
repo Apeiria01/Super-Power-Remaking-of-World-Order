@@ -8016,27 +8016,50 @@
 			<Text>人力</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_RESOURCE_MANPOWER_HELP">
-			<Text>人力資源（人力）是超級大國模組中極為重要的一種資源。絕大部分軍事單位和世紀奇跡都會消耗你的人力資源。[NEWLINE][NEWLINE]人力資源主要通過城市和人口提供，部分建築也可以提供。</Text>
+			<Text>
+			人力資源是超級大國模組中極為重要的一種資源。
+			[NEWLINE][ICON_BULLET]絕大部分軍事單位和世界奇觀都會消耗你的人力資源。
+			[NEWLINE][ICON_BULLET]人力資源主要通過城市和人口提供，部分建築和奇觀也可以提供。
+			[NEWLINE]
+			[NEWLINE][ICON_BULLET]人力資源充足時(數量>25)，玩家使用[ICON_GOLD]金錢購買單位和建築獲得打折加成，公式為P= 5*n/c/2，其中為n電力資源數量，c為城市數量。
+			[NEWLINE][ICON_BULLET]人力資源至多帶來35%的購買減成。
+			</Text>
 		</Row>
-		
+
 		<Row Tag="TXT_KEY_SP_RESOURCE_ELECTRICITY">
 			<Text>電力</Text>
 		</Row>
-		<Row Tag="TXT_KEY_SP_RESOURCE_ELECTRICITY_HELP">
+		<Row Tag="TXT_KEY_SP_RESOURCE_ELECTRICITY_TEXT">
 			<Text>電力是以電能作為動力的能源。發明於19世紀70年代，電力的發明和應用掀起了第二次工業化高潮。成為人類歷史18世紀以來，世界發生的三次科技革命之一，從此科技改變了人們的生活。產生的方式主要有：火力發電(煤等可燃燒物)、太陽能發電、大容量風力發電技術、核能發電、氫能發電、水利發電等，21世紀能源科學將為人類文明再創輝煌。燃料電池燃料電池是將氫、天然氣、煤氣、甲醇、肼等燃料的化學能直接轉換成電能的一類化學電源。生物質能的高效和清潔利用技術生物質能是以生物質為載體的能量。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_SP_RESOURCE_ELECTRICITY_TEXT">
-			<Text>電力資源是超級大國模組後期極為重要的一種資源。你的城市和現代建築都需要電力來維持運轉。[NEWLINE][NEWLINE]電力只能夠通過發電站設施產出。需要注意的是，絕大部分的發電站設施都會產生污染，降低城市的食物累積速率。</Text>
+		<Row Tag="TXT_KEY_SP_RESOURCE_ELECTRICITY_HELP">
+			<Text>
+			電力資源是超級大國模組後期極為重要的一種資源，玩家進入電氣時代且擁有50個科技後電力資源全局效果啟用。
+			[NEWLINE][ICON_BULLET]你的城市規模和近現代建築都需要消耗電力來維持。
+			[NEWLINE][ICON_BULLET]電力只能夠通過發電站設施產出。需要註意的是，絕大部分的發電站設施都會產生汙染，降低城市的食物累積速率。
+			[NEWLINE]
+			[NEWLINE][ICON_BULLET]電力充足時(數量>25)，國家會獲得全局[ICON_RESEARCH]科研加成，公式為P= n/c，其中n為電力資源數量，c為城市數量。
+			[NEWLINE][ICON_BULLET]電力資源不足時，國家獲得全局[ICON_RESEARCH]科研[ICON_PRODUCTION]產能減成，公式為P= n*(c/10)，其中n為電力資源數量，c為城市數量。
+			[NEWLINE][ICON_BULLET]電力資源加減成的限製公式為P= (t-50)*5，其中t為玩家擁有科技數，且上限至多為50%，下限至多為-75%。
+			</Text>
 		</Row>
-		
+
 		<Row Tag="TXT_KEY_SP_RESOURCE_CONSUMER">
 			<Text>商品</Text>
 		</Row>
-		<Row Tag="TXT_KEY_SP_RESOURCE_CONSUMER_HELP">
+		<Row Tag="TXT_KEY_SP_RESOURCE_CONSUMER_TEXT">
 			<Text>商業，是一種有組織的提供顧客所需的商品與服務行為。大多數的商業行為是通過以成本以上的價格賣出商品或服務來贏利，如微軟、索尼、IBM、聯想、通用都是盈利性的商業組織典型的代表。然而某些商業行為只是為了提供運營商業所需的基本資金，一般稱這種商業行為為非贏利性的，如各種基金會，以及紅十字會等。一般認為，商業源於原始社會以物易物的交換行為，它的本質是交換，而且是基於人們對價值的認識的等價交換。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_SP_RESOURCE_CONSUMER_TEXT">
-			<Text>商品是超級大國模組中極為重要的一種資源。大規模城市會消耗巨量的商品，如果不能滿足商品需求，你的人民滿意度會急劇降低。[NEWLINE][NEWLINE]商品主要通過市場建築和商業家提供。</Text>
+		<Row Tag="TXT_KEY_SP_RESOURCE_CONSUMER_HELP">
+			<Text>
+			商品是超級大國模組中極為重要的一種資源。
+			[NEWLINE][ICON_BULLET]大規模城市會消耗巨量的商品，如果不能滿足商品需求，你的人民滿意度會急劇降低。
+			[NEWLINE][ICON_BULLET]商品主要通過市場建築和商業家提供。
+			[NEWLINE]
+			[NEWLINE][ICON_BULLET]商品充足時(數量>25)，國家會獲得全局[ICON_CONNECTED]城市連接加成以及[ICON_HAPPINESS_4]不滿減成，公式為P= n/c，其中n為商品資源數量，c為城市數量。
+			[NEWLINE][ICON_BULLET]商品資源不足時，國家獲得全局[ICON_HAPPINESS_4]不滿加成，公式為P= n*(c/10)，其中n為商品資源數量，c為城市數量。
+			[NEWLINE][ICON_BULLET]商品資源的全局不滿加減成至多為+-50%。
+			</Text>
 		</Row>
 		
 		<Row Tag="TXT_KEY_SP_TROOPS">

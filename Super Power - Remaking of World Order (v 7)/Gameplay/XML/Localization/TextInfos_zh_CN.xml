@@ -8126,27 +8126,50 @@
 			<Text>人力</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_RESOURCE_MANPOWER_HELP">
-			<Text>人力资源（人力）是超级大国模组中极为重要的一种资源。绝大部分军事单位和世纪奇观都会消耗你的人力资源。[NEWLINE][NEWLINE]人力资源主要通过城市和人口提供，部分建筑也可以提供。</Text>
+			<Text>
+			人力资源是超级大国模组中极为重要的一种资源。
+			[NEWLINE][ICON_BULLET]绝大部分军事单位和世界奇观都会消耗你的人力资源。
+			[NEWLINE][ICON_BULLET]人力资源主要通过城市和人口提供，部分建筑和奇观也可以提供。
+			[NEWLINE]
+			[NEWLINE][ICON_BULLET]人力资源充足时(数量>25)，玩家使用[ICON_GOLD]金钱购买单位和建筑获得打折加成，公式为P= 5*n/c/2，其中为n电力资源数量，c为城市数量。
+			[NEWLINE][ICON_BULLET]人力资源至多带来35%的购买减成。
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_SP_RESOURCE_ELECTRICITY">
 			<Text>电力</Text>
 		</Row>
-		<Row Tag="TXT_KEY_SP_RESOURCE_ELECTRICITY_HELP">
+		<Row Tag="TXT_KEY_SP_RESOURCE_ELECTRICITY_TEXT">
 			<Text>电力是以电能作为动力的能源。发明于19世纪70年代，电力的发明和应用掀起了第二次工业化高潮。成为人类历史18世纪以来，世界发生的三次科技革命之一，从此科技改变了人们的生活。产生的方式主要有：火力发电(煤等可燃烧物)、太阳能发电、大容量风力发电技术、核能发电、氢能发电、水利发电等，21世纪能源科学将为人类文明再创辉煌。燃料电池燃料电池是将氢、天然气、煤气、甲醇、肼等燃料的化学能直接转换成电能的一类化学电源。生物质能的高效和清洁利用技术生物质能是以生物质为载体的能量。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_SP_RESOURCE_ELECTRICITY_TEXT">
-			<Text>电力资源是超级大国模组后期极为重要的一种资源。你的城市和现代建筑都需要电力来维持运转。[NEWLINE][NEWLINE]电力只能够通过发电站设施产出。需要注意的是，绝大部分的发电站设施都会产生污染，降低城市的食物累积速率。</Text>
+		<Row Tag="TXT_KEY_SP_RESOURCE_ELECTRICITY_HELP">
+			<Text>
+			电力资源是超级大国模组后期极为重要的一种资源，玩家进入电气时代且拥有50个科技后电力资源全局效果启用。
+			[NEWLINE][ICON_BULLET]你的城市规模和近现代建筑都需要消耗电力来维持。
+			[NEWLINE][ICON_BULLET]电力只能够通过发电站设施产出。需要注意的是，绝大部分的发电站设施都会产生污染，降低城市的食物累积速率。
+			[NEWLINE]
+			[NEWLINE][ICON_BULLET]电力充足时(数量>25)，国家会获得全局[ICON_RESEARCH]科研加成，公式为P= n/c，其中n为电力资源数量，c为城市数量。
+			[NEWLINE][ICON_BULLET]电力资源不足时，国家获得全局[ICON_RESEARCH]科研[ICON_PRODUCTION]产能减成，公式为P= n*(c/10)，其中n为电力资源数量，c为城市数量。
+			[NEWLINE][ICON_BULLET]电力资源加减成的限制公式为P= (t-50)*5，其中t为玩家拥有科技数，且上限至多为50%，下限至多为-75%。
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_SP_RESOURCE_CONSUMER">
 			<Text>商品</Text>
 		</Row>
-		<Row Tag="TXT_KEY_SP_RESOURCE_CONSUMER_HELP">
+		<Row Tag="TXT_KEY_SP_RESOURCE_CONSUMER_TEXT">
 			<Text>商业，是一种有组织的提供顾客所需的商品与服务行为。大多数的商业行为是通过以成本以上的价格卖出商品或服务来赢利，如微软、索尼、IBM、联想、通用都是盈利性的商业组织典型的代表。然而某些商业行为只是为了提供运营商业所需的基本资金，一般称这种商业行为为非赢利性的，如各种基金会，以及红十字会等。一般认为，商业源于原始社会以物易物的交换行为，它的本质是交换，而且是基于人们对价值的认识的等价交换。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_SP_RESOURCE_CONSUMER_TEXT">
-			<Text>商品是超级大国模组中极为重要的一种资源。大规模城市会消耗巨量的商品，如果不能满足商品需求，你的人民满意度会急剧降低。[NEWLINE][NEWLINE]商品主要通过市场建筑和商业家提供。</Text>
+		<Row Tag="TXT_KEY_SP_RESOURCE_CONSUMER_HELP">
+			<Text>
+			商品是超级大国模组中极为重要的一种资源。
+			[NEWLINE][ICON_BULLET]大规模城市会消耗巨量的商品，如果不能满足商品需求，你的人民满意度会急剧降低。
+			[NEWLINE][ICON_BULLET]商品主要通过市场建筑和商业家提供。
+			[NEWLINE]
+			[NEWLINE][ICON_BULLET]商品充足时(数量>25)，国家会获得全局[ICON_CONNECTED]城市连接加成以及[ICON_HAPPINESS_4]不满减成，公式为P= n/c，其中n为商品资源数量，c为城市数量。
+			[NEWLINE][ICON_BULLET]商品资源不足时，国家获得全局[ICON_HAPPINESS_4]不满加成，公式为P= n*(c/10)，其中n为商品资源数量，c为城市数量。
+			[NEWLINE][ICON_BULLET]商品资源的全局不满加减成至多为+-50%。
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_SP_TROOPS">

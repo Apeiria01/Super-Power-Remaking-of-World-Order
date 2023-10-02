@@ -7015,7 +7015,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_SP_RESOURCE_ELECTRICITY_HELP">
 			<Text>
-				In SuperPower Mod, after entering the Modern Era, the Electricity System will be functional. [ICON_RES_ELECTRICITY] Electricity is a very important resource in the late-game. A modern civilization cannot survive without enough power supply.
+				In SuperPower Mod, after entering the Electric Era, the Electricity System will be functional. [ICON_RES_ELECTRICITY] Electricity is a very important resource in the late-game. A modern civilization cannot survive without enough power supply.
 
 				[NEWLINE][NEWLINE]1. The use of Electricity:
 				[NEWLINE][ICON_BULLET]City population size. Larger cities will consume more [ICON_RES_ELECTRICITY] Electricity.
