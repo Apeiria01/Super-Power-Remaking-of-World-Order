@@ -1108,7 +1108,6 @@
 			<Type>BUILDING_CHINESE_GARDEN</Type>
 			<BuildingClass>BUILDINGCLASS_GARDEN</BuildingClass>
 			<Cost>50</Cost>
-			<UnmoddedHappiness>2</UnmoddedHappiness>
 			<PrereqTech>TECH_ART_THEORY</PrereqTech>
 			<Description>TXT_KEY_BUILDING_CHINESE_GARDEN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CHINESE_GARDEN_TEXT</Civilopedia>
