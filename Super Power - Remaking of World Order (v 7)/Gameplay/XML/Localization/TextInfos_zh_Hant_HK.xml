@@ -11651,7 +11651,11 @@
 			<Plurality>2</Plurality>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_HELP_ELITE_SNIPER">
-			<Text>一個遊擊型的隱形單位，高機動性及空投能力能讓你更快趕往戰場或破壞敵人補給線。[NEWLINE][NEWLINE]需要獵人訓練項目解鎖，你只能建造一個。</Text>
+			<Text>
+			一個遊擊型的隱形單位，高機動性及空投能力能讓你更快趕往戰場或破壞敵人補給線。
+			[NEWLINE]每殺死一名敵軍，+3[ICON_RANGE_STRENGTH]遠程戰鬥力。
+			[NEWLINE][NEWLINE]需要獵人訓練項目解鎖，你只能建造一個。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_ELITE_SNIPER_STRATEGY">
 			<Text>同現實中一樣，狙擊手是一個騷擾型的遊擊戰單位，而不是正面戰場上和敵人短兵相接。其機動性和生存力能夠讓它有獨立作戰時仍能有效與敵人周旋的能力。它也可以空降敵後，配合特戰單位作戰，進行破壞和騷擾活動。同其他輸出低但靈活性高的單位一樣，低狙擊手也是一個使用難度很高，卻有四兩拔千斤能力的“文藝型”單位。

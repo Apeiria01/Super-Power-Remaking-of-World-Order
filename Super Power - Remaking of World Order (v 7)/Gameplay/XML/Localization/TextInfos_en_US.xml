@@ -13567,7 +13567,11 @@
 			<Plurality>2</Plurality>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_HELP_ELITE_SNIPER">
-			<Text>Elite Sniper Unit, move stealthily and can paradrop within 16 hexes. [NEWLINE][NEWLINE]Requires Elite Sniper Training Project and only one can exist in the world.</Text>
+			<Text>
+			Elite Sniper Unit, move stealthily and can paradrop within 16 hexes. 
+			[NEWLINE]Every time you kill an enemy, +3 [ICON_RANGE_STRENGTH] range combat strength.
+			[NEWLINE][NEWLINE]Requires Elite Sniper Training Project and only one can exist in the world.
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_ELITE_SNIPER_STRATEGY">
 			<Text>The Elite Sniper can cause chaos to the enemy by destroying their supply line. It has excellent mobility and have 100% chance of withdarw if engaged in melee combat, which makes it the best harassment unit. </Text>

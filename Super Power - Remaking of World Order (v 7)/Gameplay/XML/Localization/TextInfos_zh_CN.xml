@@ -11805,7 +11805,11 @@
 			<Plurality>2</Plurality>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_HELP_ELITE_SNIPER">
-			<Text>一个游击型的隐形单位，高机动性及空投能力能让你更快赶往战场或破坏敌人补给线。[NEWLINE][NEWLINE]需要猎人训练项目解锁，你只能建造一个。</Text>
+			<Text>
+			一个游击型的隐形单位，高机动性及空投能力能让你更快赶往战场或破坏敌人补给线。
+			[NEWLINE]每杀死一名敌军，+3[ICON_RANGE_STRENGTH]远程战斗力。
+			[NEWLINE][NEWLINE]需要猎人训练项目解锁，你只能建造一个。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_ELITE_SNIPER_STRATEGY">
 			<Text>
