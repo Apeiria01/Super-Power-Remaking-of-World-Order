@@ -1333,6 +1333,18 @@
 			<UnitType>UNIT_PROTOTYPE_SUBMARINE</UnitType>
 			<PromotionType>PROMOTION_SUBMARINE_COMBAT</PromotionType>
 		</Row>
+		<Row>
+			<UnitType>UNIT_PROTOTYPE_SUBMARINE</UnitType>
+			<PromotionType>PROMOTION_SCOUTING_1</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_PROTOTYPE_SUBMARINE</UnitType>
+			<PromotionType>PROMOTION_SCOUTING_2</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_PROTOTYPE_SUBMARINE</UnitType>
+			<PromotionType>PROMOTION_SCOUTING_3</PromotionType>
+		</Row>
 
 
 
