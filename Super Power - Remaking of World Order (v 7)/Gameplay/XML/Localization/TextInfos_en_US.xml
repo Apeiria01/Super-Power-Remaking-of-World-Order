@@ -14010,9 +14010,8 @@
 		<Row Tag="TXT_KEY_PROMOTION_INFANTRY_COMBAT_HELP">
 			<Text>
 				Front Line Infantry Unit. Good at both offensive and defensive tasks.
-				[NEWLINE][NEWLINE][ICON_BULLET]Strong attacking [COLOR_POSITIVE_TEXT]Cities[ENDCOLOR].
-				[NEWLINE][ICON_BULLET]+25% [ICON_STRENGTH]Combat Strength when fighting in [COLOR_POSITIVE_TEXT]Rough Terrains[ENDCOLOR].
-				[NEWLINE][ICON_BULLET]Strong when defending attacks from [COLOR_POSITIVE_TEXT]Anti-Mounted Units[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Militia Units[ENDCOLOR].
+				[NEWLINE][NEWLINE][ICON_BULLET]+50% Strong attacking [COLOR_POSITIVE_TEXT]Cities[ENDCOLOR].
+				[NEWLINE][ICON_BULLET]+25% Strong when defending attacks from [COLOR_POSITIVE_TEXT]Anti-Mounted Units[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Militia Units[ENDCOLOR].
 			</Text>
 		</Row>
 
@@ -14022,9 +14021,9 @@
 		<Row Tag="TXT_KEY_PROMOTION_GUNPOWDER_INFANTRY_COMBAT_HELP">
 			<Text>
 				Front Line Infantry Unit. Good at both offensive and defensive tasks.
-				[NEWLINE][NEWLINE][ICON_BULLET]Perform a [COLOR_POSITIVE_TEXT]Ranged Attack[ENDCOLOR] before melee attacking. [NEWLINE][ICON_BULLET]Strong attacking [COLOR_POSITIVE_TEXT]Cities[ENDCOLOR].
-				[NEWLINE][ICON_BULLET]+25% [ICON_STRENGTH]Combat Strength when fighting in [COLOR_POSITIVE_TEXT]Rough Terrains[ENDCOLOR].
-				[NEWLINE][ICON_BULLET]Strong when defending attacks from [COLOR_POSITIVE_TEXT]Anti-Tank Units[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Militia Units[ENDCOLOR].
+				[NEWLINE][NEWLINE][ICON_BULLET]Perform a [COLOR_POSITIVE_TEXT]Ranged Attack[ENDCOLOR] before melee attacking. 
+				[NEWLINE][ICON_BULLET]+50% Strong attacking [COLOR_POSITIVE_TEXT]Cities[ENDCOLOR].
+				[NEWLINE][ICON_BULLET]+25% Strong when defending attacks from [COLOR_POSITIVE_TEXT]Anti-Tank Units[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Militia Units[ENDCOLOR].
 			</Text>
 		</Row>
 

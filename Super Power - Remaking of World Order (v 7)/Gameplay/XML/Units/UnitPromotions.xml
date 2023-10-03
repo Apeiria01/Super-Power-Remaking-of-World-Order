@@ -1449,8 +1449,6 @@
 			<PediaEntry>TXT_KEY_PROMOTION_INFANTRY_COMBAT</PediaEntry>
 			<CityAttack>50</CityAttack>
 			<CannotBeChosen>true</CannotBeChosen>
-			<RoughDefense>25</RoughDefense>
-			<RoughAttack>25</RoughAttack>
 		</Row>
 		<Row>
 			<Type>PROMOTION_GUNPOWDER_INFANTRY_COMBAT</Type>
