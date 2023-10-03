@@ -2136,6 +2136,8 @@
 			<NoDefensiveBonus>true</NoDefensiveBonus>
 			<LostWithUpgrade>true</LostWithUpgrade>
 			<OpenRangedAttackMod>25</OpenRangedAttackMod>
+			<HeightModPerX>25</HeightModPerX>
+			<HeightModLimited>2</HeightModLimited>
 		</Row>
 
 		<Row>

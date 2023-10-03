@@ -14206,6 +14206,7 @@
 			[NEWLINE][NEWLINE][ICON_BULLET]Strong when attacking [COLOR_POSITIVE_TEXT]Anti-Mounted Units[ENDCOLOR], [COLOR_POSITIVE_TEXT]Anti-Tank Units[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Land Hit-and-run Units[ENDCOLOR].
 			[NEWLINE][ICON_BULLET]Weak when engaged in [COLOR_NEGATIVE_TEXT]Melee Combat[ENDCOLOR] or attacked by [COLOR_NEGATIVE_TEXT]Siege Weapons[ENDCOLOR].
 			[NEWLINE][ICON_BULLET]+25% [ICON_RANGE_STRENGTH] Ranged Combat Strength against Units in [COLOR_POSITIVE_TEXT]OPEN[ENDCOLOR] Terrain.
+			[NEWLINE][ICON_BULLET]+25% [ICON_RANGE_STRENGTH] Combat Strength per point height against Units in low Land, maximum 50%.
 			[NEWLINE][ICON_BULLET]Cannot receive [COLOR_NEGATIVE_TEXT]Terrain Bonus[ENDCOLOR].
 			[NEWLINE][ICON_BULLET]When Stacking with an [COLOR_POSITIVE_TEXT]Infantry Unit[ENDCOLOR], [COLOR_POSITIVE_TEXT]Counter Unit[ENDCOLOR] or [COLOR_POSITIVE_TEXT]Citadel Unit[ENDCOLOR], this unit will automatically launch a Counter-attack at the enemy unit when this Tile is attacked by an enemy [COLOR_POSITIVE_TEXT]Melee[ENDCOLOR] Unit. 
 			[NEWLINE][ICON_BULLET]Times of Counter-attack in one turn is Unlimited.
@@ -17075,5 +17076,9 @@
 			[NEWLINE][NEWLINE][COLOR_NEGATIVE_TEXT]City needs to Founded by either side or has 4+ Population and not in Resistance[ENDCOLOR]
 			</Text>
 		</Replace>
+
+		<Row Tag="TXT_KEY_EUPANEL_BONUS_HEIGHT">
+			<Text>Height Bouns</Text>
+		</Row>
 	</Language_en_US>
 </GameData>
