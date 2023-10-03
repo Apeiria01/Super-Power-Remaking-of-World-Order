@@ -2135,6 +2135,7 @@
 			<OnlyDefensive>true</OnlyDefensive>
 			<NoDefensiveBonus>true</NoDefensiveBonus>
 			<LostWithUpgrade>true</LostWithUpgrade>
+			<OpenRangedAttackMod>25</OpenRangedAttackMod>
 		</Row>
 
 		<Row>
