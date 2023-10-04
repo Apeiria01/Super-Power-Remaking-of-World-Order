@@ -1473,6 +1473,10 @@
 			<UnitType>UNIT_NUCLEAR_ARTILLERY</UnitType>
 			<PromotionType>PROMOTION_INDIRECT_FIRE</PromotionType>
 		</Row>
+		<Row>
+			<UnitType>UNIT_NUCLEAR_ARTILLERY</UnitType>
+			<PromotionType>PROMOTION_EMBARKATION</PromotionType>
+		</Row>
 		
 
 
