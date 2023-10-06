@@ -7867,7 +7867,7 @@
 			<Text>神聖歷法</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SACRED_CALENDAR">
-			<Text>[ICON_GOLDEN_AGE]黃金時代長度+33%，每種[ICON_PEACE]信仰購買的建築+3[ICON_GOLDEN_AGE]黃金時代點數</Text>
+			<Text>[ICON_GOLDEN_AGE]黃金時代長度+34%，每種[ICON_PEACE]信仰購買的建築+3[ICON_GOLDEN_AGE]黃金時代點數</Text>
 		</Row>
 		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_COMMUNITY">
 			<Text>每個信徒+1%[ICON_PRODUCTION]產能（最大+20%）</Text>

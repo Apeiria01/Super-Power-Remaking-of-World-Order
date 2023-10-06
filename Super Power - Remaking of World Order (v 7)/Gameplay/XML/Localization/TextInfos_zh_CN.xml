@@ -7977,7 +7977,7 @@
 			<Text>神圣历法</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SACRED_CALENDAR">
-			<Text>[ICON_GOLDEN_AGE]黄金时代长度+33%，每种[ICON_PEACE]信仰购买的建筑+3[ICON_GOLDEN_AGE]黄金时代点数</Text>
+			<Text>[ICON_GOLDEN_AGE]黄金时代长度+34%，每种[ICON_PEACE]信仰购买的建筑+3[ICON_GOLDEN_AGE]黄金时代点数</Text>
 		</Row>
 		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_COMMUNITY">
 			<Text>每个信徒+1%[ICON_PRODUCTION]产能（最大+20%）</Text>
