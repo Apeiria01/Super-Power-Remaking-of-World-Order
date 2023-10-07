@@ -12240,13 +12240,22 @@
 
 
 		<Replace Tag="TXT_KEY_PROMOTION_BARRAGE_1_HELP" >
-			<Text>如果目標單位被攻擊後HP小於60，則其下回合[ICON_MOVES]移動力降低至1，並失去近戰攻擊能力，再次受到攻擊則完全喪失移動，直至其恢復滿員該效果才會消失。</Text>
+			<Text>
+			[ICON_BULLET]如果目標單位被攻擊後HP小於60，則其下回合[ICON_MOVES]移動力降低至1並持續-1[ICON_MOVES]移動力。
+			[NEWLINE][ICON_BULLET]再次受到攻擊則完全喪失移動並持續失去近戰攻擊能力，直至其恢復滿員該效果才會消失。
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_BARRAGE_2_HELP" >
-			<Text>如果目標單位被攻擊後HP小於75，則其下回合[ICON_MOVES]移動力降低至1，並失去近戰攻擊能力，再次受到攻擊則完全喪失移動，直至其恢復滿員該效果才會消失。</Text>
+			<Text>
+			[ICON_BULLET]如果目標單位被攻擊後HP小於75，則其下回合[ICON_MOVES]移動力降低至1並持續-1[ICON_MOVES]移動力。
+			[NEWLINE][ICON_BULLET]再次受到攻擊則完全喪失移動並持續失去近戰攻擊能力，直至其恢復滿員該效果才會消失。
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_BARRAGE_3_HELP" >
-			<Text>如果目標單位被攻擊後HP小於90，則其下回合[ICON_MOVES]移動力降低至1，並失去近戰攻擊能力，再次受到攻擊則完全喪失移動，直至其恢復滿員該效果才會消失。</Text>
+			<Text>
+			[ICON_BULLET]如果目標單位被攻擊後HP小於90，則其下回合[ICON_MOVES]移動力降低至1並持續-1[ICON_MOVES]移動力。
+			[NEWLINE][ICON_BULLET]再次受到攻擊則完全喪失移動並持續失去近戰攻擊能力，直至其恢復滿員該效果才會消失。
+			</Text>
 		</Replace>
 		
 		<Row Tag="TXT_KEY_PROMOTION_FLANK_GUN_1">
@@ -13111,14 +13120,20 @@
 			<Text>[COLOR_NEGATIVE_TEXT]受到遲滯[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_MOVEMENT_LOST_1_HELP">
-			<Text>本輪只有1[ICON_MOVES]移動力。[NEWLINE]下回合恢復，但會持續損失1[ICON_MOVES]移動力，單位恢復滿員後此狀態消失。</Text>
+			<Text>
+			[ICON_BULLET]本轮只有1[ICON_MOVES]移动力，下回合恢復。
+			[NEWLINE][ICON_BULLET]持续损失1[ICON_MOVES]移动力，单位恢复满员后此状态消失。
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_MOVEMENT_LOST_2">
-			<Text>[COLOR_NEGATIVE_TEXT]受到阻礙[ENDCOLOR]</Text>
+			<Text>[COLOR_NEGATIVE_TEXT]受到阻碍[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_MOVEMENT_LOST_2_HELP">
-			<Text>本輪喪失[ICON_MOVES]移動力。[NEWLINE]下回合恢復，但不能[COLOR_NEGATIVE_TEXT]近戰攻擊[ENDCOLOR]，單位恢復滿員後此狀態消失。</Text>
+			<Text>
+			[ICON_BULLET]本轮丧失[ICON_MOVES]移动力，下回合恢復。
+			[NEWLINE][ICON_BULLET]不能[COLOR_NEGATIVE_TEXT]近战攻击[ENDCOLOR]，单位恢复满员后此状态消失。
+			</Text>
 		</Row>
 		
 		<Row Tag="TXT_KEY_PROMOTION_ROUTE_MOVE_ONLY">

@@ -14246,13 +14246,22 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_PROMOTION_BARRAGE_1_HELP" >
-			<Text>[ICON_BULLET]If the Target Unit's HP is less than 60 after this attack, its [ICON_MOVES] MP will reduce to 1 for the next turn. [NEWLINE][ICON_BULLET]One more Barrage shot will make it lose all [ICON_MOVES] MP and suffers -1 [ICON_MOVES] MP Penalty for the next turn. It won't recover until HP is full.</Text>
+			<Text>
+			[ICON_BULLET]If the Target Unit's HP is less than 60 after this attack, its [ICON_MOVES] MP will reduce to 1 for the next turn and suffers -1 [ICON_MOVES] MP Penalty until HP is full. 
+			[NEWLINE][ICON_BULLET]One more Barrage shot will make it lose all [ICON_MOVES] MP and cannot perform [COLOR_NEGATIVE_TEXT]Melee Attack[ENDCOLOR] till unitl its HP fully restored.
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_BARRAGE_2_HELP" >
-			<Text>[ICON_BULLET]If the Target Unit's HP is less than 75 after this attack, its [ICON_MOVES] MP will reduce to 1 for the next turn. [NEWLINE][ICON_BULLET]One more Barrage shot will make it lose all [ICON_MOVES] MP and suffers -1 [ICON_MOVES] MP Penalty for the next turn. It won't recover until HP is full.</Text>
+			<Text>
+			[ICON_BULLET]If the Target Unit's HP is less than 75 after this attack, its [ICON_MOVES] MP will reduce to 1 for the next turn and suffers -1 [ICON_MOVES] MP Penalty until HP is full. 
+			[NEWLINE][ICON_BULLET]One more Barrage shot will make it lose all [ICON_MOVES] MP and cannot perform [COLOR_NEGATIVE_TEXT]Melee Attack[ENDCOLOR] till unitl its HP fully restored.
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_BARRAGE_3_HELP" >
-			<Text>[ICON_BULLET]If the Target Unit's HP is less than 90 after this attack, its [ICON_MOVES] MP will reduce to 1 for the next turn. [NEWLINE][ICON_BULLET]One more Barrage shot will make it lose all [ICON_MOVES] MP and suffers -1 [ICON_MOVES] MP Penalty for the next turn. It won't recover until HP is full.</Text>
+			<Text>
+			[ICON_BULLET]If the Target Unit's HP is less than 90 after this attack, its [ICON_MOVES] MP will reduce to 1 for the next turn and suffers -1 [ICON_MOVES] MP Penalty until HP is full. 
+			[NEWLINE][ICON_BULLET]One more Barrage shot will make it lose all [ICON_MOVES] MP and cannot perform [COLOR_NEGATIVE_TEXT]Melee Attack[ENDCOLOR] till unitl its HP fully restored.
+			</Text>
 		</Replace>
 
 		<Row Tag="TXT_KEY_PROMOTION_FLANK_GUN_1">

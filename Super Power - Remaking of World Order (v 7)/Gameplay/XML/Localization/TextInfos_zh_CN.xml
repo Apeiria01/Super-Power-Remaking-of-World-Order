@@ -12412,13 +12412,22 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_PROMOTION_BARRAGE_1_HELP" >
-			<Text>如果目标单位被攻击后HP小于60，则其下回合[ICON_MOVES]移动力降低至1，并失去近战攻击能力，再次受到攻击则完全丧失移动，直至其恢复满员该效果才会消失。</Text>
+			<Text>
+			[ICON_BULLET]如果目标单位被攻击后HP小于60，则其下回合[ICON_MOVES]移动力降低至1并持续-1[ICON_MOVES]移动力。
+			[NEWLINE][ICON_BULLET]再次受到攻击则完全丧失移动并持续失去近战攻击能力，直至其恢复满员该效果才会消失。
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_BARRAGE_2_HELP" >
-			<Text>如果目标单位被攻击后HP小于75，则其下回合[ICON_MOVES]移动力降低至1，并失去近战攻击能力，再次受到攻击则完全丧失移动，直至其恢复满员该效果才会消失。</Text>
+			<Text>
+			[ICON_BULLET]如果目标单位被攻击后HP小于75，则其下回合[ICON_MOVES]移动力降低至1并持续-1[ICON_MOVES]移动力。
+			[NEWLINE][ICON_BULLET]再次受到攻击则完全丧失移动并持续失去近战攻击能力，直至其恢复满员该效果才会消失。
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_BARRAGE_3_HELP" >
-			<Text>如果目标单位被攻击后HP小于90，则其下回合[ICON_MOVES]移动力降低至1，并失去近战攻击能力，再次受到攻击则完全丧失移动，直至其恢复满员该效果才会消失。</Text>
+			<Text>
+			[ICON_BULLET]如果目标单位被攻击后HP小于90，则其下回合[ICON_MOVES]移动力降低至1并持续-1[ICON_MOVES]移动力。
+			[NEWLINE][ICON_BULLET]再次受到攻击则完全丧失移动并持续失去近战攻击能力，直至其恢复满员该效果才会消失。
+			</Text>
 		</Replace>
 
 		<Row Tag="TXT_KEY_PROMOTION_FLANK_GUN_1">
@@ -13291,14 +13300,20 @@
 			<Text>[COLOR_NEGATIVE_TEXT]受到迟滞[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_MOVEMENT_LOST_1_HELP">
-			<Text>本轮只有1[ICON_MOVES]移动力。[NEWLINE]下回合恢复，但会持续损失1[ICON_MOVES]移动力，单位恢复满员后此状态消失。</Text>
+			<Text>
+			[ICON_BULLET]本轮只有1[ICON_MOVES]移动力，下回合恢复。
+			[NEWLINE][ICON_BULLET]持续损失1[ICON_MOVES]移动力，单位恢复满员后此状态消失。
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_MOVEMENT_LOST_2">
 			<Text>[COLOR_NEGATIVE_TEXT]受到阻碍[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_MOVEMENT_LOST_2_HELP">
-			<Text>本轮丧失[ICON_MOVES]移动力。[NEWLINE]下回合恢复，但不能[COLOR_NEGATIVE_TEXT]近战攻击[ENDCOLOR]，单位恢复满员后此状态消失。</Text>
+			<Text>
+			[ICON_BULLET]本轮丧失[ICON_MOVES]移动力，下回合恢复。
+			[NEWLINE][ICON_BULLET]不能[COLOR_NEGATIVE_TEXT]近战攻击[ENDCOLOR]，单位恢复满员后此状态消失。
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_ROUTE_MOVE_ONLY">
