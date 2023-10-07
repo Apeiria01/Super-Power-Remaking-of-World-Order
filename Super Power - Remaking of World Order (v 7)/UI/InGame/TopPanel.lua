@@ -546,7 +546,29 @@ function ScienceTipHandler( control )
 	
 			strText = strText .. Locale.ConvertTextKey("TXT_KEY_TP_SCIENCE_FROM_RESEARCH_AGREEMENTS", iScienceFromRAs / 100);
 		end
-		
+
+		-- Show Research Agreements
+		local tips = {}
+		local activeTeam = Teams[pPlayer:GetTeam()]
+		local iRemainingTurn = Game.GetDealDuration() - Game.GetGameTurn() + 1
+
+		for playerID = 0, GameDefines.MAX_MAJOR_CIVS-1 do
+			local player = Players[playerID]
+			local teamID = player:GetTeam()
+
+			if playerID ~= iPlayerID and player:IsAlive() and activeTeam:IsHasMet(teamID) then
+				if activeTeam:IsHasResearchAgreement(teamID) then
+					table.insert(tips, "[NEWLINE][ICON_BULLET][COLOR_POSITIVE_TEXT]" .. player:GetName() 
+					.. "[ENDCOLOR]" .. "(" .. iRemainingTurn + activeTeam:GetResearchAgreementStartTurn(teamID) ..")")
+				else
+					table.insert(tips, "[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]" .. player:GetName() .. "[ENDCOLOR]")
+				end
+			end
+		end
+		if #tips > 0 then
+			strText = strText .. "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_DO_RESEARCH_AGREEMENT") .. table.concat(tips)
+		end
+
 		-- Let people know that building more cities makes techs harder to get
 		if (not OptionsManager.IsNoBasicHelp()) then
 			strText = strText .. "[NEWLINE][NEWLINE]";
