@@ -10143,8 +10143,8 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_TRAIT_ART_OF_WAR">
 			<Text>
-				[ICON_BULLET]During a [ICON_GOLDEN_AGE] Golden Age, China receive additional +20% [ICON_RESEARCH] Science and +20% [ICON_FOOD] Food nationwide.
-				[NEWLINE][ICON_BULLET]In the Golden Age, the [ICON_CITIZEN] population growth of all cities requires -20% food, eliminates the [ICON_RESEARCH] increase in scientific research expenditures from the number of cities, and [ICON_RESEARCH] the total scientific research expenditure -20%.
+			[ICON_BULLET]During a [ICON_GOLDEN_AGE] Golden Age, China receive additional +20% [ICON_RESEARCH] Science and +20% [ICON_FOOD] Food nationwide.
+			[NEWLINE][ICON_BULLET]In the Golden Age, the [ICON_CITIZEN] population growth of all cities requires -20% food, the total [ICON_RESEARCH] Research expenditure -20%, eliminates the [ICON_RESEARCH] increase in Research expenditures from the number of cities.
 			</Text>
 		</Replace>
 
@@ -10152,9 +10152,11 @@
 			<Text>Pax Sinica!</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_UA_CHINA_GOLDENAGE_EFFECTS">
-      <Text>
-        China has entered a new [ICON_GOLDEN_AGE][COLOR_POSITIVE_TEXT]prosperity[ENDCOLOR]! [NEWLINE][NEWLINE]All gold-producing plots have an additional +1[ICON_GOLD] gold production, +20% national [ICON_PRODUCTION] production capacity, and [ICON_CULTURE] culture. The [ICON_CITIZEN] population growth of all cities requires -20% food, eliminates the [ICON_RESEARCH] increase in scientific research expenditure from the number of cities, and [ICON_RESEARCH] total scientific research expenditure -20%.
-      </Text>
+			<Text>
+			China has entered a new [ICON_GOLDEN_AGE][COLOR_POSITIVE_TEXT]prosperity[ENDCOLOR]! 
+			[NEWLINE][NEWLINE]All gold-producing plots have an additional +1[ICON_GOLD] gold production, +20% national [ICON_PRODUCTION] production capacity, and [ICON_CULTURE] culture. 
+			[NEWLINE]The [ICON_CITIZEN] population growth of all cities requires -20% food, total [ICON_RESEARCH] Research expenditure -20%, eliminates the increase in [ICON_RESEARCH] Research expenditure from the number of cities.
+			</Text>
 		</Row>
 
 		<Replace Tag="TXT_KEY_TRAIT_RIVER_EXPANSION_SHORT">
