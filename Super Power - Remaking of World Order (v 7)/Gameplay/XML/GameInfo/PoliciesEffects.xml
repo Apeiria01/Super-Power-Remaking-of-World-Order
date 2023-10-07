@@ -493,6 +493,11 @@
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<Yield>2</Yield>
 		</Row>
+		<Row>
+			<PolicyType>POLICY_DECENTRALIZATION</PolicyType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>4</Yield>
+		</Row>
 	</Policy_CityYieldChanges>
 
 	<Policy_BuildingClassYieldModifiers>

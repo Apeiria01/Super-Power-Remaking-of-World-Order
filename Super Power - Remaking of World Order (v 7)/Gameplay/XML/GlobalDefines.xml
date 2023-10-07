@@ -766,6 +766,11 @@
 			<Set Value="1"/>
 			<Where Name="MAXIMUM_WORK_PLOT_DISTANCE_MINOR_REDUCE" />
 		</Update>
+
+		<Update>
+			<Set Value="75"/>
+			<Where Name="MINOR_CIV_SCIENCE_BONUS_MULTIPLIER" />
+		</Update>
 	</Defines>
 	
 	

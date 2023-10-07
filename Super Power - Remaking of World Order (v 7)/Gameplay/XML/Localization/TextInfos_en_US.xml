@@ -7423,8 +7423,8 @@
 		<Row Tag="TXT_KEY_POLICY_DECENTRALIZATION_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]Decentralization[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]Garrisoned units cost no maintenance. Each City with at least 1 Garrisoned Unit increases [ICON_HAPPINESS_1] Local Happiness by 1.
-				[NEWLINE][ICON_BULLET]Each Garrisoned Unit will increase the local city's [ICON_CULTURE] Culture by 2. Can be up to +4 [ICON_CULTURE] Culture if you have 2 Garrisoned Unit in a city.
+				[NEWLINE][ICON_BULLET]+4 [ICON_CULTURE] Culture, +1 [ICON_HAPPINESS_1] Happiness in Cities.
+				[NEWLINE][ICON_BULLET]Garrisoned units cost no maintenance.
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_DECENTRALIZATION_TEXT">
@@ -7623,11 +7623,11 @@
 				[NEWLINE][ICON_BULLET]Gain [ICON_CULTURE] Culture bonus when you achieve any Quests from City-States.
 			</Text>
 		</Replace>
-		<!--<Replace Tag="TXT_KEY_POLICY_SCHOLASTICISM_HELP">
+		<Replace Tag="TXT_KEY_POLICY_SCHOLASTICISM_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]Scholasticism[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]All City-States which are Allies provide you with their 100% [ICON_RESEARCH] Science output.</Text>
-		</Replace>-->
+				[NEWLINE][ICON_BULLET]All City-States which are Allies provide you with their 75% [ICON_RESEARCH] Science output.</Text>
+		</Replace>
 		
 		<Replace Tag="TXT_KEY_POLICY_CULTURAL_DIPLOMACY">
 			<Text>Gunboat Diplomacy</Text>
