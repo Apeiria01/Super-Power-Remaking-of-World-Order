@@ -14,20 +14,6 @@ BEGIN
 	INSERT INTO UnitPromotions_CivilianUnitType (UnitType, PromotionType) SELECT Type, NEW.PromotionType FROM Units WHERE Class = (SELECT Type FROM UnitClasses WHERE DefaultUnit = NEW.UnitType) AND Type != NEW.UnitType;
 END;
 
-
--- Add Corps & Armee Promotions for UNITCLASS_CITADEL_MID & UNITCLASS_CITADEL_LATE - SP
-CREATE TRIGGER IF NOT EXISTS UnitClass_FreePromotions_Corps
-AFTER INSERT ON Unit_FreePromotions WHEN (NEW.PromotionType = 'PROMOTION_CARGO_I'  AND EXISTS (SELECT * FROM Unit_FreePromotions WHERE (PromotionType = 'PROMOTION_CITADEL_DEFENSE' AND UnitType = NEW.UnitType)))
-BEGIN
-	INSERT OR IGNORE INTO Unit_FreePromotions(UnitType, PromotionType) VALUES(NEW.UnitType, 'PROMOTION_CORPS_1');
-END;
-CREATE TRIGGER IF NOT EXISTS UnitClass_FreePromotions_Armee
-AFTER INSERT ON Unit_FreePromotions WHEN (NEW.PromotionType = 'PROMOTION_CARGO_IV' AND EXISTS (SELECT * FROM Unit_FreePromotions WHERE (PromotionType = 'PROMOTION_CITADEL_DEFENSE' AND UnitType = NEW.UnitType)))
-BEGIN
-	INSERT OR IGNORE INTO Unit_FreePromotions(UnitType, PromotionType) VALUES(NEW.UnitType, 'PROMOTION_CORPS_1');
-	INSERT OR IGNORE INTO Unit_FreePromotions(UnitType, PromotionType) VALUES(NEW.UnitType, 'PROMOTION_CORPS_2');
-END;
-
 CREATE TRIGGER SPFix
 AFTER INSERT ON ArtDefine_StrategicView WHEN NEW.StrategicViewType = 'ART_DEF_UNIT_ZULU_BOER_COMMANDO'
 BEGIN

@@ -11885,7 +11885,7 @@
 			<Plurality>2</Plurality>
 		</Replace>	
 		<Replace Tag="TXT_KEY_UNIT_HELP_MECH">
-			<Text>極為龐大的戰鬥機器人，能夠直接翻越山脈和涉過淺灘。不會擁有“被火力壓制”、“陣形破壞”等負面狀態，每回合都會自動修復。[NEWLINE][NEWLINE]需要機甲原型機項目解鎖，你只能建造一架該單位。</Text>
+			<Text>極為龐大的戰鬥機器人，自帶400血量，能夠直接翻越山脈和涉過淺灘。不會擁有“被火力壓制”、“陣形破壞”等負面狀態，每回合都會自動修復。[NEWLINE][NEWLINE]需要機甲原型機項目解鎖，你只能建造一架該單位。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_UNIT_MECH_STRATEGY">
 			<Text>強大，迅捷，精准，末日機甲是屬於未來的戰爭機械。它的人工智能高效而又冷酷，沒有編寫任何類似疑惑、憐憫、恐懼等人類情感的無用內容。火力壓制、陣型破壞、震懾與恐嚇等針對人類軍隊士氣的攻擊手段，已經證明對它統統無效。更糟糕的是，末日機甲攜帶的納米機器人每時每刻都在對其進行自動維修，使得這台冷血的機器能夠無止境地殺戮下去。似乎只有EMP攻擊能夠癱瘓它的量子計算機，暫時遏制它的進攻，記住，只是暫時！</Text>
@@ -12023,7 +12023,14 @@
 			<Text>固定炮臺</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_CITADEL_DEFENSE_HELP">
-			<Text>固定火力點，當建成[COLOR_POSITIVE_TEXT]軍事要塞[ENDCOLOR]時產生。[NEWLINE][NEWLINE]擁有防禦加成，不受[COLOR_POSITIVE_TEXT]負面效果[ENDCOLOR]影響，但如果所在城市被敵方攻占，每回合會-50HP且-50%[ICON_STRENGTH]戰鬥力。[NEWLINE]不能[COLOR_NEGATIVE_TEXT]移動[ENDCOLOR]，不能獲得[COLOR_NEGATIVE_TEXT]晉升[ENDCOLOR]，被[COLOR_NEGATIVE_TEXT]攻城單位[ENDCOLOR]克制。</Text>
+			<Text>
+			固定火力點，當建成[COLOR_POSITIVE_TEXT]軍事要塞[ENDCOLOR]時產生。
+			[NEWLINE][ICON_BULLET]友方地域內+25%[ICON_STRENGTH]戰鬥力。
+			[NEWLINE][ICON_BULLET]不受[COLOR_POSITIVE_TEXT]負面效果[ENDCOLOR]影響。
+			[NEWLINE][ICON_BULLET]處於境外每回合會-50HP且-25%[ICON_STRENGTH]戰鬥力。
+			[NEWLINE][ICON_BULLET]不能[COLOR_NEGATIVE_TEXT]移動[ENDCOLOR]，不能獲得[COLOR_NEGATIVE_TEXT]晉升[ENDCOLOR]。
+			[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]攻城單位[ENDCOLOR]克製。
+			</Text>
 		</Row>
 	
 		<Row Tag="TXT_KEY_PROMOTION_INFANTRY_COMBAT">
@@ -12031,6 +12038,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_INFANTRY_COMBAT_HELP">
 			<Text>
+			主力步兵單位，擅長進攻和防守任務。
 			[ICON_BULLET]面對[COLOR_POSITIVE_TEXT]城市[ENDCOLOR]+50%[ICON_STRENGTH]戰鬥力。
 			[NEWLINE][ICON_BULLET]防禦[COLOR_POSITIVE_TEXT]反騎兵/反坦克單位[ENDCOLOR]以及[COLOR_POSITIVE_TEXT]民兵單位[ENDCOLOR]時+25%[ICON_STRENGTH]戰鬥力。
 			</Text>
@@ -12041,6 +12049,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_GUNPOWDER_INFANTRY_COMBAT_HELP">
 			<Text>
+			主力步兵單位，擅長進攻和防守任務。
 			[ICON_BULLET]近戰開始之前進行一輪[COLOR_POSITIVE_TEXT]遠程攻擊[ENDCOLOR]。
 			[NEWLINE][ICON_BULLET]進攻[COLOR_POSITIVE_TEXT]城市[ENDCOLOR]+50%[ICON_STRENGTH]戰鬥力。
 			[NEWLINE][ICON_BULLET]防禦[COLOR_POSITIVE_TEXT]反騎兵/反坦克單位[ENDCOLOR]以及[COLOR_POSITIVE_TEXT]民兵單位[ENDCOLOR]時+25%[ICON_STRENGTH]戰鬥力。

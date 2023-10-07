@@ -1037,6 +1037,7 @@
 			<Combat>800</Combat>
 			<RangedCombat>800</RangedCombat>
 			<Range>2</Range>
+			<BaseSightRange>5</BaseSightRange>
 			<Cost>4500</Cost>
 			<Moves>6</Moves>
 			<CombatClass>UNITCOMBAT_ARMOR</CombatClass>
@@ -1052,8 +1053,8 @@
 			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
 			<Mechanized>true</Mechanized>
 			<AdvancedStartCost>120</AdvancedStartCost>
-			<XPValueAttack>3</XPValueAttack>
-			<XPValueDefense>3</XPValueDefense>
+			<ExtraXPValueAttack>7</ExtraXPValueAttack>
+			<ExtraXPValueDefense>5</ExtraXPValueDefense>
 			<UnitArtInfo>ART_DEF_UNIT_MECH</UnitArtInfo>
 			<UnitFlagIconOffset>83</UnitFlagIconOffset>
 			<IconAtlas>UNIT_ATLAS_2</IconAtlas>
@@ -1062,6 +1063,7 @@
 			<ProjectPrereq>PROJECT_ADV_MECH</ProjectPrereq>
 			<HurryCostModifier>-1</HurryCostModifier>
 			<ExtraMaintenanceCost>60</ExtraMaintenanceCost>
+			<MaxHitPoints>400</MaxHitPoints>
 		</Row>
 
 
@@ -1801,15 +1803,7 @@
 			<UnitType>UNIT_PAKFA_T50</UnitType>
 			<PromotionType>PROMOTION_EMP_ATTACK</PromotionType>
 		</Row>
-		
-		<Row>
-			<UnitType>UNIT_MECH</UnitType>
-			<PromotionType>PROMOTION_CORPS_1</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_MECH</UnitType>
-			<PromotionType>PROMOTION_CORPS_2</PromotionType>
-		</Row>
+
 		<Row>
 			<UnitType>UNIT_MECH</UnitType>
 			<PromotionType>PROMOTION_TANK_COMBAT</PromotionType>

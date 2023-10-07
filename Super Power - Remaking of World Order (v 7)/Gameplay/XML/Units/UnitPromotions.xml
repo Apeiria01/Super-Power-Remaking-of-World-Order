@@ -771,6 +771,8 @@
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_CITADEL_DEFENSE</PediaEntry>
+			<FriendlyLandsModifier>25</FriendlyLandsModifier>
+			<OutsideFriendlyLandsModifier>-25</OutsideFriendlyLandsModifier>
 		</Row>
 
 		<Row>

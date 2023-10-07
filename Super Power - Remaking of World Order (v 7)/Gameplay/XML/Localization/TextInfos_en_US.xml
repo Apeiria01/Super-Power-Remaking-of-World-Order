@@ -13858,7 +13858,7 @@
 			<Text>It is so tall that it can cross the mountains or walking in costal area. It is immune to strategic nuclear weapons' blasts and free from some debuff effects from the enemy like "sundered" and "slowed down". Can heal every turn.[NEWLINE][NEWLINE]Requires Prototype Mecha Project and only one can exist in the world.</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_UNIT_MECH_STRATEGY">
-			<Text>Giant, but fast, this is the battle machine of the future. Since it is remotely controlled by its pilot, it has no fears and never feels pain. Thus, these debuff effects - "Sundered", "Slowed Down", "Charged Damage", "Target Marked", prove to be useless on it. All of these make it the strongest defender unit in the game. It can also survive any strategic nuclear weapons' blasts including the ICBM. However, its CPU will be affected by enemy EMP attack and suffer from Collateral Damage and Area of Effect Damage, which cannot be avoided by remote-control. </Text>
+			<Text>Giant, but fast, this is the battle machine of the future, has 400 Max Hit Point. Since it is remotely controlled by its pilot, it has no fears and never feels pain. Thus, these debuff effects - "Sundered", "Slowed Down", "Charged Damage", "Target Marked", prove to be useless on it. All of these make it the strongest defender unit in the game. It can also survive any strategic nuclear weapons' blasts including the ICBM. However, its CPU will be affected by enemy EMP attack and suffer from Collateral Damage and Area of Effect Damage, which cannot be avoided by remote-control. </Text>
 		</Replace>
 		
 
@@ -13994,19 +13994,15 @@
 			<Text>Fixed Artillery</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_CITADEL_DEFENSE_HELP">
-			<Text>Fixed Firebase, created when a [COLOR_POSITIVE_TEXT]Citadel[ENDCOLOR] is built.
-			[NEWLINE][NEWLINE][ICON_BULLET]Strong when [COLOR_POSITIVE_TEXT]Defending[ENDCOLOR].
-			[NEWLINE][NEWLINE][ICON_BULLET]Immune to all [COLOR_POSITIVE_TEXT]Debuff Effects[ENDCOLOR].
-			[NEWLINE][ICON_BULLET]If its Tile is captured by the enemy, it suffer -50 HP per turn and -50% [ICON_STRENGTH]Combat Strength due to lack of supply.
+			<Text>
+			Fixed Firebase, created when a [COLOR_POSITIVE_TEXT]Citadel[ENDCOLOR] is built.
+			[NEWLINE][ICON_BULLET]+25% [ICON_STRENGTH] Combat Strength when fighting inside [COLOR_POSITIVE_TEXT]Friendly Territory[ENDCOLOR].
+			[NEWLINE][ICON_BULLET]Immune to all [COLOR_POSITIVE_TEXT]Debuff Effects[ENDCOLOR].
+			[NEWLINE][ICON_BULLET]If its Tile is captured by the enemy, it suffer -50 HP per turn and -25% [ICON_STRENGTH]Combat Strength due to lack of supply.
 			[NEWLINE][ICON_BULLET]Can NOT [COLOR_NEGATIVE_TEXT]Move[ENDCOLOR].
 			[NEWLINE][ICON_BULLET]Can NOT earn [COLOR_NEGATIVE_TEXT]Promotions[ENDCOLOR].
 			[NEWLINE][ICON_BULLET]Weak vs [COLOR_NEGATIVE_TEXT]Siege Units[ENDCOLOR].</Text>
 		</Row>
-		
-		
-		
-		
-		
 		
 		<Row Tag="TXT_KEY_PROMOTION_INFANTRY_COMBAT">
 			<Text>Melee Infantry Unit</Text>
