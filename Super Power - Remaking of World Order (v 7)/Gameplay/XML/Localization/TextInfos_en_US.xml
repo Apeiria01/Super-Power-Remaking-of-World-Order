@@ -7359,9 +7359,9 @@
 		<Replace Tag="TXT_KEY_POLICY_REPUBLIC_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]Republic[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]+2 [ICON_FOOD] Food and +4 [ICON_GOLD] Gold in every city.
+				[NEWLINE][ICON_BULLET]+4 [ICON_FOOD] Food and +4 [ICON_GOLD] Gold in every city.
 				[NEWLINE][ICON_BULLET]+2 [ICON_RES_CONSUMER] Consumer Goods per city.
-				[NEWLINE][ICON_BULLET]+1%[ICON_FOOD] Global Food and [ICON_PRODUCTION] Global Production from each City.
+				[NEWLINE][ICON_BULLET]+1% [ICON_FOOD] Global Food and [ICON_PRODUCTION] Global Production from each City.
 			</Text>
 		</Replace>
 		
@@ -7381,7 +7381,7 @@
 				[COLOR_POSITIVE_TEXT]Meritocracy[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]+2 [ICON_PRODUCTION] Production in every city.
 				[NEWLINE][ICON_BULLET]+10% [ICON_PRODUCTION] Production in cities when constructing Buildings.
-				[NEWLINE][ICON_BULLET]Gain free [ICON_RESEARCH]science and [ICON_CULTURE] culture  per settler trained, building or national wonder constructed (10% of its cost, purchases not included).
+				[NEWLINE][ICON_BULLET]Gain free [ICON_RESEARCH] Science and [ICON_CULTURE] Culture  per settler trained, building or national wonder constructed (10% of its cost, purchases not included).
 			</Text>
 		</Replace>
 
@@ -7393,6 +7393,7 @@
 				[COLOR_POSITIVE_TEXT]Bill of Rights[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]Each Specialist slot in the building provides 1 point corresponding base output (According to default building).
 				[NEWLINE][ICON_BULLET]-50% [ICON_GOLD] Maintenance Cost for All City Halls.
+				[NEWLINE][ICON_BULLET]+1% [ICON_RESEARCH] Global Science and [ICON_GOLD] Global Gold from each City.
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_BILL_OF_RIGHTS_TEXT">

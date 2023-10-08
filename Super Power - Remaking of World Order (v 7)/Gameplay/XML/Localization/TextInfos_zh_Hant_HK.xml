@@ -6315,7 +6315,7 @@
 				[NEWLINE][NEWLINE]啟用自主政策：
 				[NEWLINE][ICON_BULLET]使每座城市+1[ICON_CULTURE]文化，+1[ICON_RESEARCH]科研。
 				[NEWLINE][ICON_BULLET]工人修建地塊設施速度+25%。
-        [NEWLINE][ICON_BULLET]所有城市的行政成本下降-15%。
+				[NEWLINE][ICON_BULLET]所有城市的行政成本下降-15%。
 				[NEWLINE][ICON_BULLET]允許建造大金字塔。
 				[NEWLINE][NEWLINE]推行所有自主政策：
 				[NEWLINE][ICON_BULLET]在首都[ICON_CAPITAL]附近免費獲得一位大工程師。
@@ -6336,8 +6336,8 @@
 		<Replace Tag="TXT_KEY_POLICY_REPUBLIC_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]共和政體[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]每座城市+4[ICON_GOLD]金錢，+2[ICON_FOOD]食物，+2[ICON_RES_CONSUMER]商品。
-				[NEWLINE][ICON_BULLET]每座城市提供+1%[ICON_FOOD]全局糧食和[ICON_PRODUCTION]產能加成。
+				[NEWLINE][ICON_BULLET]每座城市+4[ICON_GOLD]金錢、[ICON_FOOD]食物，+2[ICON_RES_CONSUMER]商品。
+				[NEWLINE][ICON_BULLET]每座城市+1%[ICON_FOOD]全局糧食和[ICON_PRODUCTION]全局產能。
 			</Text>
 		</Replace>
 
@@ -6366,6 +6366,7 @@
 				[COLOR_POSITIVE_TEXT]權利法案[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]專家建築的每個專家槽提供1點對應的基礎產出（按默認建築計算）。
 				[NEWLINE][ICON_BULLET]市政廳維護費減半。
+				[NEWLINE][ICON_BULLET]每座城市+1%[ICON_RESEARCH]全局科研和[ICON_GOLD]全局金錢。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_BILL_OF_RIGHTS_TEXT">

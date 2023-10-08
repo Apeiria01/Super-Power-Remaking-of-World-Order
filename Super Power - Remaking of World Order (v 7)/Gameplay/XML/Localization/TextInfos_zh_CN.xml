@@ -6443,8 +6443,8 @@
 		<Replace Tag="TXT_KEY_POLICY_REPUBLIC_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]共和政体[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]每座城市+4[ICON_GOLD]金钱，+2[ICON_FOOD]食物、[ICON_RES_CONSUMER]商品。
-				[NEWLINE][ICON_BULLET]每座城市+1%[ICON_FOOD]全局粮食和[ICON_PRODUCTION]产能加成。
+				[NEWLINE][ICON_BULLET]每座城市+4[ICON_GOLD]金钱、[ICON_FOOD]食物，+2[ICON_RES_CONSUMER]商品。
+				[NEWLINE][ICON_BULLET]每座城市+1%[ICON_FOOD]全局粮食和[ICON_PRODUCTION]全局产能。
 			</Text>
 		</Replace>
 
@@ -6472,7 +6472,8 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]权利法案[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]专家建筑的每个专家槽提供1点对应的基础产出（按默认建筑计算）。
-				[NEWLINE][ICON_BULLET]市政厅维护费减半。
+				[NEWLINE][ICON_BULLET]市政厅[ICON_GOLD]维护费减半。
+				[NEWLINE][ICON_BULLET]每座城市+1%[ICON_RESEARCH]全局科研和[ICON_GOLD]全局金钱。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_BILL_OF_RIGHTS_TEXT">

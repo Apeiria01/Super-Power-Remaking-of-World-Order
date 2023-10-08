@@ -476,7 +476,7 @@
 		<Row>
 			<PolicyType>POLICY_REPUBLIC</PolicyType>
 			<YieldType>YIELD_FOOD</YieldType>
-			<Yield>2</Yield>
+			<Yield>4</Yield>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_REPUBLIC</PolicyType>
@@ -2554,6 +2554,16 @@
 		<Row>
 			<PolicyType>POLICY_REPRESENTATION</PolicyType>
 			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_BILL_OF_RIGHTS</PolicyType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_BILL_OF_RIGHTS</PolicyType>
+			<YieldType>YIELD_SCIENCE</YieldType>
 			<Yield>1</Yield>
 		</Row>
 	</Policy_CityNumberCityYieldModifier>
