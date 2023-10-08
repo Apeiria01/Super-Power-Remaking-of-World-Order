@@ -8769,7 +8769,7 @@
 			<Text>+1 [ICON_CULTURE] Culture and +1 [ICON_PEACE] Faith from Jungle tiles</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_ORAL_TRADITION">
-			<Text>+1 [ICON_CULTURE] Culture from Plantations, +1 [ICON_GOLD] Gold from [ICON_RES_SILK], +1 [ICON_CULTURE] Culture from [ICON_RES_TEA]</Text>
+			<Text>+1 [ICON_CULTURE] Culture, +1 [ICON_GOLD] Gold from Plantations, +1 [ICON_CULTURE] Culture from [ICON_RES_SILK] Silk, [ICON_RES_TEA] Tea and [ICON_RES_DYE] Dye </Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_MESSENGER_GODS">
 			<Text>+2 [ICON_RESEARCH] Science and +2 [ICON_PEACE] Faith in cities with a City Connection</Text>
@@ -8855,7 +8855,7 @@
 			<Text>+2 [ICON_FOOD] Food for every Shrine and Temple</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_FERTILITY_RITES">
-			<Text>+2 [ICON_PEACE] Faith for every Granary, +1 [ICON_PEACE] Faith from [ICON_RES_WHEAT]</Text>
+			<Text>+2 [ICON_PEACE] Faith for every Granary, +1 [ICON_PEACE] Faith from [ICON_RES_WHEAT] Wheat</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_MONUMENT_GODS">
 			<Text>+2 [ICON_PEACE] Faith for every Monument, +1 [ICON_CULTURE] Culture in Capital City</Text>
@@ -9005,6 +9005,12 @@
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SNOW_BELIEF">
 			<Text>+1 [ICON_PEACE] Faith from Tundra tiles without Forest, +2 [ICON_PEACE] Faith and +1 [ICON_FOOD] Food from tiles covered with Snow</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_GOD_OF_COMMERCE_SHORT">
+			<Text>God of Commerce</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_GOD_OF_COMMERCE">
+			<Text>+2 [ICON_GOLD] Gold, +2 [ICON_GOLDEN_AGE] Golden Age Point from [ICON_RES_IVORY] Ivory, [ICON_RES_TRUFFLES] Truffles and [ICON_RES_FUR] Fur.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_RIVER_CRAFTSMAN_SHORT">
 			<Text>Sudoku</Text>

@@ -7714,7 +7714,7 @@
 			<Text>漁船+1[ICON_CULTURE]文化，捕撈船+1[ICON_PEACE]信仰、+1[ICON_CULTURE]文化</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_ORAL_TRADITION">
-			<Text>種植園+1[ICON_CULTURE]文化、+1[ICON_GOLD]金錢，[ICON_RES_SILK]絲綢、[ICON_RES_TEA]茶葉+1[ICON_CULTURE]文化</Text>
+			<Text>種植園+1[ICON_CULTURE]文化、+1[ICON_GOLD]金錢，[ICON_RES_SILK]絲綢、[ICON_RES_TEA]茶葉、[ICON_RES_DYE]染料+1[ICON_CULTURE]文化</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_SUN_GOD">
 			<Text>橄欖、蔗糖、香水和煙草+1[ICON_PEACE]信仰、+1[ICON_RESEARCH]科研</Text>
@@ -7757,6 +7757,12 @@
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SNOW_BELIEF">
 			<Text>無森林的凍土地塊+2[ICON_PEACE]信仰,雪地+1[ICON_FOOD]食物、+2[ICON_PEACE]信仰</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_GOD_OF_COMMERCE_SHORT">
+			<Text>商賈信使</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_GOD_OF_COMMERCE">
+			<Text>[ICON_RES_IVORY]象牙、[ICON_RES_TRUFFLES]松露、[ICON_RES_FUR]毛皮+2[ICON_GOLD]金錢、+2[ICON_GOLDEN_AGE]黃金時代點數</Text>
 		</Row>
 		<Replace Tag="TXT_KEY_BELIEF_GURUSHIP">
 			<Text>城市有專業人員時+2[ICON_PEACE]信仰，+1[ICON_CULTURE]文化、[ICON_PRODUCTION]產能、[ICON_RESEARCH]科研</Text>

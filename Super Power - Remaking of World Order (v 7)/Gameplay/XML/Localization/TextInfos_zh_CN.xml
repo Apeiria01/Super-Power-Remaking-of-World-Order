@@ -7826,7 +7826,7 @@
 			<Text>渔船+1[ICON_CULTURE]文化，捕捞船+1[ICON_PEACE]信仰、+1[ICON_CULTURE]文化</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_ORAL_TRADITION">
-			<Text>种植园+1[ICON_CULTURE]文化、+1[ICON_GOLD]金钱，[ICON_RES_SILK]丝绸、[ICON_RES_TEA]茶叶+1[ICON_CULTURE]文化</Text>
+			<Text>种植园+1[ICON_CULTURE]文化、+1[ICON_GOLD]金钱，[ICON_RES_SILK]丝绸、[ICON_RES_TEA]茶叶、[ICON_RES_DYE]染料+1[ICON_CULTURE]文化</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_SUN_GOD">
 			<Text>橄榄、蔗糖、香水和烟草+1[ICON_PEACE]信仰、+1[ICON_RESEARCH]科研</Text>
@@ -7869,6 +7869,12 @@
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SNOW_BELIEF">
 			<Text>无森林的冻土地块+2[ICON_PEACE]信仰,雪地+1[ICON_FOOD]食物、+2[ICON_PEACE]信仰</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_GOD_OF_COMMERCE_SHORT">
+			<Text>商贾信使</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_GOD_OF_COMMERCE">
+			<Text>[ICON_RES_IVORY]象牙、[ICON_RES_TRUFFLES]松露、[ICON_RES_FUR]毛皮+2[ICON_GOLD]金钱、+2[ICON_GOLDEN_AGE]黄金时代点数</Text>
 		</Row>
 		<Replace Tag="TXT_KEY_BELIEF_GURUSHIP">
 			<Text>城市有专业人员时+2[ICON_PEACE]信仰，+1[ICON_CULTURE]文化、[ICON_PRODUCTION]产能、[ICON_RESEARCH]科研</Text>

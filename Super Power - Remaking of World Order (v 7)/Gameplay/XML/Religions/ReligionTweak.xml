@@ -29,6 +29,13 @@
 			<ShortDescription>TXT_KEY_BELIEF_GODDESS_OF_WISDOM_SHORT</ShortDescription>
 			<Pantheon>true</Pantheon>
 		</Row>
+
+		<Row>
+			<Type>BELIEF_GOD_OF_COMMERCE</Type>
+			<Description>TXT_KEY_BELIEF_GOD_OF_COMMERCE</Description>
+			<ShortDescription>TXT_KEY_BELIEF_GOD_OF_COMMERCE_SHORT</ShortDescription>
+			<Pantheon>true</Pantheon>
+		</Row>
 		
 		<Row>
 			<Type>BELIEF_RELIGIOUS_COLONIZATION</Type>
