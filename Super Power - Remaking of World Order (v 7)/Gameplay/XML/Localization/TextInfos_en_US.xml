@@ -7627,7 +7627,7 @@
 		<Replace Tag="TXT_KEY_POLICY_SCHOLASTICISM_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]Scholasticism[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]All City-States which are Allies provide you with their 75% [ICON_RESEARCH] Science output.</Text>
+				[NEWLINE][ICON_BULLET]All City-States which are Allies provide you with their 33% [ICON_RESEARCH] Science output.</Text>
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_POLICY_CULTURAL_DIPLOMACY">

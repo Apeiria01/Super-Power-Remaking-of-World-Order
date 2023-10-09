@@ -768,7 +768,7 @@
 		</Update>
 
 		<Update>
-			<Set Value="75"/>
+			<Set Value="33"/>
 			<Where Name="MINOR_CIV_SCIENCE_BONUS_MULTIPLIER" />
 		</Update>
 	</Defines>

@@ -566,7 +566,7 @@ function ScienceTipHandler( control )
 			end
 		end
 		if #tips > 0 then
-			strText = strText .. "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_DO_RESEARCH_AGREEMENT") .. table.concat(tips)
+			strText = strText .. "[NEWLINE][NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_DO_RESEARCH_AGREEMENT") .. table.concat(tips)
 		end
 
 		-- Let people know that building more cities makes techs harder to get
