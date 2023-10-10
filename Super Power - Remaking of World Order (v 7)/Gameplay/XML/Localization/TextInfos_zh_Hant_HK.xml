@@ -11895,7 +11895,7 @@
 			<Plurality>2</Plurality>
 		</Replace>	
 		<Replace Tag="TXT_KEY_UNIT_HELP_MECH">
-			<Text>極為龐大的戰鬥機器人，自帶400血量，能夠直接翻越山脈和涉過淺灘。不會擁有“被火力壓制”、“陣形破壞”等負面狀態，每回合都會自動修復。[NEWLINE][NEWLINE]需要機甲原型機項目解鎖，你只能建造一架該單位。</Text>
+			<Text>極為龐大的戰鬥機器人，自帶高血量，能夠直接翻越山脈和涉過淺灘。不會擁有“被火力壓制”、“陣形破壞”等負面狀態，每回合都會自動修復。[NEWLINE][NEWLINE]需要機甲原型機項目解鎖，你只能建造一架該單位。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_UNIT_MECH_STRATEGY">
 			<Text>強大，迅捷，精准，末日機甲是屬於未來的戰爭機械。它的人工智能高效而又冷酷，沒有編寫任何類似疑惑、憐憫、恐懼等人類情感的無用內容。火力壓制、陣型破壞、震懾與恐嚇等針對人類軍隊士氣的攻擊手段，已經證明對它統統無效。更糟糕的是，末日機甲攜帶的納米機器人每時每刻都在對其進行自動維修，使得這台冷血的機器能夠無止境地殺戮下去。似乎只有EMP攻擊能夠癱瘓它的量子計算機，暫時遏制它的進攻，記住，只是暫時！</Text>
@@ -12145,7 +12145,7 @@
 			<Text>近戰一級</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_CQB_COMBAT_1_HELP">
-			<Text>該單位防守時，若進攻方攻擊該單位後HP小於80，則失去所有[ICON_MOVES]移動力。</Text>
+			<Text>該單位防守時，若進攻方攻擊該單位後HP小於80%，則失去所有[ICON_MOVES]移動力。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_CQB_COMBAT_2">
 			<Text>近戰二級</Text>
@@ -12251,19 +12251,19 @@
 
 		<Replace Tag="TXT_KEY_PROMOTION_BARRAGE_1_HELP" >
 			<Text>
-			[ICON_BULLET]如果目標單位被攻擊後HP小於60，則其下回合[ICON_MOVES]移動力降低至1並持續-1[ICON_MOVES]移動力。
+			[ICON_BULLET]如果目標單位被攻擊後HP小於60%，則其下回合[ICON_MOVES]移動力降低至1並持續-1[ICON_MOVES]移動力。
 			[NEWLINE][ICON_BULLET]再次受到攻擊則完全喪失移動並持續失去近戰攻擊能力，直至其恢復滿員該效果才會消失。
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_BARRAGE_2_HELP" >
 			<Text>
-			[ICON_BULLET]如果目標單位被攻擊後HP小於75，則其下回合[ICON_MOVES]移動力降低至1並持續-1[ICON_MOVES]移動力。
+			[ICON_BULLET]如果目標單位被攻擊後HP小於75%，則其下回合[ICON_MOVES]移動力降低至1並持續-1[ICON_MOVES]移動力。
 			[NEWLINE][ICON_BULLET]再次受到攻擊則完全喪失移動並持續失去近戰攻擊能力，直至其恢復滿員該效果才會消失。
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_BARRAGE_3_HELP" >
 			<Text>
-			[ICON_BULLET]如果目標單位被攻擊後HP小於90，則其下回合[ICON_MOVES]移動力降低至1並持續-1[ICON_MOVES]移動力。
+			[ICON_BULLET]如果目標單位被攻擊後HP小於90%，則其下回合[ICON_MOVES]移動力降低至1並持續-1[ICON_MOVES]移動力。
 			[NEWLINE][ICON_BULLET]再次受到攻擊則完全喪失移動並持續失去近戰攻擊能力，直至其恢復滿員該效果才會消失。
 			</Text>
 		</Replace>
@@ -12334,22 +12334,14 @@
 			<Text>破陣一級</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SUNDER_1_HELP">
-			<Text>如果目標單位被攻擊後HP小於60，則其防禦力-25%，直至其恢復滿員該效果才會消失。（該效果可疊加）</Text>
+			<Text>如果目標單位被攻擊後HP小於60%，則其防禦力-25%，直至其恢復滿員該效果才會消失。（該效果可疊加）</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SUNDER_2">
 			<Text>破陣二級</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SUNDER_2_HELP">
-			<Text>如果目標單位被攻擊後HP小於75，則其防禦力-25%，直至其恢復滿員該效果才會消失。（該效果可疊加）</Text>
+			<Text>如果目標單位被攻擊後HP小於75%，則其防禦力-25%，直至其恢復滿員該效果才會消失。（該效果可疊加）</Text>
 		</Row>
-		<!--
-		<Row Tag="TXT_KEY_PROMOTION_SUNDER_3">
-			<Text>破陣三級</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_SUNDER_3_HELP">
-			<Text>如果目標單位被攻擊後HP小於90，則其防禦力-25%，直至其恢復滿員該效果才會消失。（該效果可疊加）</Text>
-		</Row>
-		-->
 
 		<Row Tag="TXT_KEY_PROMOTION_HUNTDOWN_1">
 			<Text>獵殺一級</Text>
@@ -12386,30 +12378,19 @@
 		<Row Tag="TXT_KEY_PROMOTION_VOLLEY_2">
 			<Text>攻堅二級</Text>
 		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_VOLLEY_3">
-			<Text>攻堅三級</Text>
-		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_COLLATERAL_DAMAGE_1">
 			<Text>重炮一級</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_COLLATERAL_DAMAGE_1_HELP" >
-			<Text>對目標地格的其他單位+50%的傷害。如果目標單位被攻擊後HP小於75，則其攻擊力-25%，-1射程，直至其恢復滿員該效果才會消失。（該效果可疊加2次，如果該單位最大射程為2則HP回復滿之前無法攻擊，不對受到濺射傷害的單位起效）</Text>
+			<Text>對目標地格的其他單位+50%的傷害。如果目標單位被攻擊後HP小於75%，則其攻擊力-25%，-1射程，直至其恢復滿員該效果才會消失。（該效果可疊加2次，如果單位射程為0則無法遠程攻擊，不對受到濺射傷害的單位起效）</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_COLLATERAL_DAMAGE_2">
 			<Text>重炮二級</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_COLLATERAL_DAMAGE_2_HELP" >
-			<Text>對目標地格的其他單位+50%的傷害。如果目標單位被攻擊後HP小於90，則其攻擊力-25%，-1射程，直至其恢復滿員該效果才會消失。（該效果可疊加2次，如果該單位最大射程為2則HP回復滿之前無法攻擊，不對受到濺射傷害的單位起效）</Text>
+			<Text>對目標地格的其他單位+50%的傷害。如果目標單位被攻擊後HP小於90%，則其攻擊力-25%，-1射程，直至其恢復滿員該效果才會消失。（該效果可疊加2次，如果單位射程為0則無法遠程攻擊，不對受到濺射傷害的單位起效）</Text>
 		</Row>
-		<!--
-		<Row Tag="TXT_KEY_PROMOTION_COLLATERAL_DAMAGE_3">
-			<Text>重炮三級</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_COLLATERAL_DAMAGE_3_HELP" >
-			<Text>對目標地格的其他單位+34%的傷害。如果目標單位被攻擊後HP小於90，則其攻擊力-25%，-1射程，直至其恢復滿員該效果才會消失。（該效果可疊加2次，如果該單位最大射程為2則HP回復滿之前無法攻擊，不對受到濺射傷害的單位起效）</Text>
-		</Row>
-		-->
 
 		<Replace Tag="TXT_KEY_PROMOTION_LOGISTICS_HELP" >
 			<Text>每回合增加1次額外攻擊次數。</Text>
@@ -13113,7 +13094,12 @@
 			<Text>[COLOR_NEGATIVE_TEXT]士氣低落[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_MORAL_WEAKEN_1_HELP">
-			<Text>[ICON_BULLET][ICON_STRENGTH][COLOR_NEGATIVE_TEXT]攻擊力[ENDCOLOR]-25%，[NEWLINE][ICON_BULLET][ICON_RANGE_STRENGTH][COLOR_NEGATIVE_TEXT]射程[ENDCOLOR]-1，[NEWLINE][ICON_BULLET]單位恢復滿員後此狀態消失。[NEWLINE][ICON_BULLET]可以用大軍事家或者提督消除。</Text>
+			<Text>
+			[ICON_BULLET][ICON_STRENGTH][COLOR_NEGATIVE_TEXT]攻擊力[ENDCOLOR]-25%。
+			[NEWLINE][ICON_BULLET][ICON_RANGE_STRENGTH][COLOR_NEGATIVE_TEXT]射程[ENDCOLOR]-1。
+			[NEWLINE][ICON_BULLET]單位恢復滿員後此狀態消失。
+			[NEWLINE][ICON_BULLET]可以用大軍事家或者提督消除。
+		</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_NEWLYCAPTURED">
 			<Text>[COLOR_NEGATIVE_TEXT]新近俘虏[ENDCOLOR]</Text>

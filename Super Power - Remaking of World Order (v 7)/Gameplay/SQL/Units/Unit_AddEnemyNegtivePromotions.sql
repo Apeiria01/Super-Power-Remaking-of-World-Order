@@ -2,7 +2,7 @@ update UnitPromotions set AddEnemyPromotionImmune = 1 where Type = 'PROMOTION_AN
 
 -- PROMOTION_COLLECTION_BARRAGE -> PROMOTION_COLLECTION_MOVEMENT_LOST
 insert into PromotionCollections(Type) values ('PROMOTION_COLLECTION_BARRAGE');
-insert into PromotionCollections_Entries(CollectionType, PromotionIndex, PromotionType, TriggerRangedAttack, TriggerHPFixed, TriggerLuaHook) values
+insert into PromotionCollections_Entries(CollectionType, PromotionIndex, PromotionType, TriggerRangedAttack, TriggerHPPercent, TriggerLuaHook) values
 ('PROMOTION_COLLECTION_BARRAGE', 1, 'PROMOTION_BARRAGE_1', 1, 60, 1),
 ('PROMOTION_COLLECTION_BARRAGE', 2, 'PROMOTION_BARRAGE_2', 1, 75, 1),
 ('PROMOTION_COLLECTION_BARRAGE', 3, 'PROMOTION_BARRAGE_3', 1, 90, 1);
@@ -17,7 +17,7 @@ insert into PromotionCollections_AddEnemyPromotions(CollectionType, OtherCollect
 
 -- PROMOTION_COLLECTION_SUNDER -> PROMOTION_COLLECTION_PENETRATION
 insert into PromotionCollections(Type) values ('PROMOTION_COLLECTION_SUNDER');
-insert into PromotionCollections_Entries(CollectionType, PromotionIndex, PromotionType, TriggerRangedAttack, TriggerMeleeAttack, TriggerHPFixed, TriggerLuaHook) values
+insert into PromotionCollections_Entries(CollectionType, PromotionIndex, PromotionType, TriggerRangedAttack, TriggerMeleeAttack, TriggerHPPercent, TriggerLuaHook) values
 ('PROMOTION_COLLECTION_SUNDER', 1, 'PROMOTION_SUNDER_1', 1, 1, 75, 1),
 ('PROMOTION_COLLECTION_SUNDER', 2, 'PROMOTION_SUNDER_2', 1, 1, 90, 1);
 
@@ -31,7 +31,7 @@ insert into PromotionCollections_AddEnemyPromotions(CollectionType, OtherCollect
 
 -- PROMOTION_COLLECTION_COLLATERAL_DAMAGE VS PROMOTION_COLLECTION_MORAL_WEAKEN
 insert into PromotionCollections(Type) values ('PROMOTION_COLLECTION_COLLATERAL_DAMAGE');
-insert into PromotionCollections_Entries(CollectionType, PromotionIndex, PromotionType, TriggerRangedAttack, TriggerMeleeAttack, TriggerHPFixed, TriggerLuaHook) values
+insert into PromotionCollections_Entries(CollectionType, PromotionIndex, PromotionType, TriggerRangedAttack, TriggerMeleeAttack, TriggerHPPercent, TriggerLuaHook) values
 ('PROMOTION_COLLECTION_COLLATERAL_DAMAGE', 1, 'PROMOTION_COLLATERAL_DAMAGE_1', 1, 1, 75, 1),
 ('PROMOTION_COLLECTION_COLLATERAL_DAMAGE', 2, 'PROMOTION_COLLATERAL_DAMAGE_2', 1, 1, 90, 1);
 
@@ -71,7 +71,7 @@ insert into PromotionCollections_AddEnemyPromotions(CollectionType, OtherCollect
 ('PROMOTION_COLLECTION_SIEGE_WOODEN_BOAT', 'PROMOTION_COLLECTION_WOODEN_BOAT_DAMAGE');
 
 --Hwacha
-insert into PromotionCollections_Entries(CollectionType, PromotionIndex, PromotionType, TriggerRangedAttack, TriggerHPFixed, TriggerLuaHook) values
+insert into PromotionCollections_Entries(CollectionType, PromotionIndex, PromotionType, TriggerRangedAttack, TriggerHPPercent, TriggerLuaHook) values
 ('PROMOTION_COLLECTION_BARRAGE', 1, 'PROMOTION_DIVINE_WEAPON_1', 1, 50, 1),
 ('PROMOTION_COLLECTION_SUNDER', 1, 'PROMOTION_DIVINE_WEAPON_2', 1, 50, 1),
 ('PROMOTION_COLLECTION_DESTROY_SUPPLY', 1, 'PROMOTION_DIVINE_WEAPON_3', 1, 50, 1);

@@ -1276,12 +1276,7 @@
 			<UnitType>UNIT_ENGLISH_LONGBOWMAN</UnitType>
 			<PromotionType>PROMOTION_SUNDER_2</PromotionType>
 		</Row>
-		<!--
-		<Row>
-			<UnitType>UNIT_ENGLISH_LONGBOWMAN</UnitType>
-			<PromotionType>PROMOTION_SUNDER_3</PromotionType>
-		</Row>
-		-->
+
 		<Row>
 			<UnitType>UNIT_ENGLISH_LONGBOWMAN</UnitType>
 			<PromotionType>PROMOTION_FORMATION_1</PromotionType>
@@ -1523,12 +1518,7 @@
 			<UnitType>UNIT_ELITE_BATTLECRUISER</UnitType>
 			<PromotionType>PROMOTION_SUNDER_2</PromotionType>
 		</Row>
-		<!--
-		<Row>
-			<UnitType>UNIT_ELITE_BATTLECRUISER</UnitType>
-			<PromotionType>PROMOTION_SUNDER_3</PromotionType>
-		</Row>
-		-->
+
 		<Row>
 			<UnitType>UNIT_ELITE_BATTLECRUISER</UnitType>
 			<PromotionType>PROMOTION_CAN_MOVE_AFTER_ATTACKING</PromotionType>
@@ -1638,12 +1628,6 @@
 			<UnitType>UNIT_CRUSADER_ARTILLERY</UnitType>
 			<PromotionType>PROMOTION_COLLATERAL_DAMAGE_2</PromotionType>
 		</Row>
-		<!--
-		<Row>
-			<UnitType>UNIT_CRUSADER_ARTILLERY</UnitType>
-			<PromotionType>PROMOTION_COLLATERAL_DAMAGE_3</PromotionType>
-		</Row>
-		-->
 		<Row>
 			<UnitType>UNIT_CRUSADER_ARTILLERY</UnitType>
 			<PromotionType>PROMOTION_CAN_MOVE_AFTER_ATTACKING</PromotionType>

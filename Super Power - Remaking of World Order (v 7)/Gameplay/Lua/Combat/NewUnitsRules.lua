@@ -499,10 +499,8 @@ end
 function AASPromotionTransfer(player, unit)
 	local Sunder1ID = GameInfo.UnitPromotions["PROMOTION_SUNDER_1"].ID
 	local Sunder2ID = GameInfo.UnitPromotions["PROMOTION_SUNDER_2"].ID
-	-- local Sunder3ID = GameInfo.UnitPromotions["PROMOTION_SUNDER_3"].ID
 	local CollDamageLV1ID = GameInfo.UnitPromotions["PROMOTION_COLLATERAL_DAMAGE_1"].ID
 	local CollDamageLV2ID = GameInfo.UnitPromotions["PROMOTION_COLLATERAL_DAMAGE_2"].ID
-	-- local CollDamageLV3ID = GameInfo.UnitPromotions["PROMOTION_COLLATERAL_DAMAGE_3"].ID
 
 	local LogisticsID = GameInfo.UnitPromotions["PROMOTION_LOGISTICS"].ID
 

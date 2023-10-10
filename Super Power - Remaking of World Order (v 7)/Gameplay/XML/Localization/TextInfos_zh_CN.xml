@@ -12063,7 +12063,7 @@
 			<Plurality>2</Plurality>
 		</Replace>
 		<Replace Tag="TXT_KEY_UNIT_HELP_MECH">
-			<Text>极为庞大的战斗机器人，自带400血量，能够直接翻越山脉和涉过浅滩。不会拥有“被火力压制”、“阵形破坏”等负面状态，每回合都会自动修复。[NEWLINE][NEWLINE]需要机甲原型机项目解锁，你只能建造一架该单位。</Text>
+			<Text>极为庞大的战斗机器人，自带高血量，能够直接翻越山脉和涉过浅滩。不会拥有“被火力压制”、“阵形破坏”等负面状态，每回合都会自动修复。[NEWLINE][NEWLINE]需要机甲原型机项目解锁，你只能建造一架该单位。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_UNIT_MECH_STRATEGY">
 			<Text>强大，迅捷，精准，末日机甲是属于未来的战争机械。它的人工智能高效而又冷酷，没有编写任何类似疑惑、怜悯、恐惧等人类情感的无用内容。火力压制、阵型破坏、震慑与恐吓等针对人类军队士气的攻击手段，已经证明对它统统无效。更糟糕的是，末日机甲携带的纳米机器人每时每刻都在对其进行自动维修，使得这台冷血的机器能够无止境地杀戮下去。似乎只有EMP攻击能够瘫痪它的量子计算机，暂时遏制它的进攻，记住，只是暂时！</Text>
@@ -12318,7 +12318,7 @@
 			<Text>近战一级</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_CQB_COMBAT_1_HELP">
-			<Text>该单位防守时，若进攻方攻击该单位后HP小于80，则失去所有[ICON_MOVES]移动力。</Text>
+			<Text>该单位防守时，若进攻方攻击该单位后HP小于80%，则失去所有[ICON_MOVES]移动力。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_CQB_COMBAT_2">
 			<Text>近战二级</Text>
@@ -12423,19 +12423,19 @@
 
 		<Replace Tag="TXT_KEY_PROMOTION_BARRAGE_1_HELP" >
 			<Text>
-			[ICON_BULLET]如果目标单位被攻击后HP小于60，则其下回合[ICON_MOVES]移动力降低至1并持续-1[ICON_MOVES]移动力。
+			[ICON_BULLET]如果目标单位被攻击后HP小于60%，则其下回合[ICON_MOVES]移动力降低至1并持续-1[ICON_MOVES]移动力。
 			[NEWLINE][ICON_BULLET]再次受到攻击则完全丧失移动并持续失去近战攻击能力，直至其恢复满员该效果才会消失。
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_BARRAGE_2_HELP" >
 			<Text>
-			[ICON_BULLET]如果目标单位被攻击后HP小于75，则其下回合[ICON_MOVES]移动力降低至1并持续-1[ICON_MOVES]移动力。
+			[ICON_BULLET]如果目标单位被攻击后HP小于75%，则其下回合[ICON_MOVES]移动力降低至1并持续-1[ICON_MOVES]移动力。
 			[NEWLINE][ICON_BULLET]再次受到攻击则完全丧失移动并持续失去近战攻击能力，直至其恢复满员该效果才会消失。
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_BARRAGE_3_HELP" >
 			<Text>
-			[ICON_BULLET]如果目标单位被攻击后HP小于90，则其下回合[ICON_MOVES]移动力降低至1并持续-1[ICON_MOVES]移动力。
+			[ICON_BULLET]如果目标单位被攻击后HP小于90%，则其下回合[ICON_MOVES]移动力降低至1并持续-1[ICON_MOVES]移动力。
 			[NEWLINE][ICON_BULLET]再次受到攻击则完全丧失移动并持续失去近战攻击能力，直至其恢复满员该效果才会消失。
 			</Text>
 		</Replace>
@@ -12506,22 +12506,14 @@
 			<Text>破阵一级</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SUNDER_1_HELP">
-			<Text>如果目标单位被攻击后HP小于75，则其防御力-25%，直至其恢复满员该效果才会消失。（该效果可叠加）</Text>
+			<Text>如果目标单位被攻击后HP小于75%，则其防御力-25%，直至其恢复满员该效果才会消失。（该效果可叠加）</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SUNDER_2">
 			<Text>破阵二级</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SUNDER_2_HELP">
-			<Text>如果目标单位被攻击后HP小于90，则其防御力-25%，直至其恢复满员该效果才会消失。（该效果可叠加）</Text>
+			<Text>如果目标单位被攻击后HP小于90%，则其防御力-25%，直至其恢复满员该效果才会消失。（该效果可叠加）</Text>
 		</Row>
-		<!--
-		<Row Tag="TXT_KEY_PROMOTION_SUNDER_3">
-			<Text>破阵三级</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_SUNDER_3_HELP">
-			<Text>如果目标单位被攻击后HP小于90，则其防御力-25%，直至其恢复满员该效果才会消失。（该效果可叠加）</Text>
-		</Row>
-		-->
 
 		<Row Tag="TXT_KEY_PROMOTION_HUNTDOWN_1">
 			<Text>猎杀一级</Text>
@@ -12558,30 +12550,19 @@
 		<Row Tag="TXT_KEY_PROMOTION_VOLLEY_2">
 			<Text>攻坚二级</Text>
 		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_VOLLEY_3">
-			<Text>攻坚三级</Text>
-		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_COLLATERAL_DAMAGE_1">
 			<Text>重炮一级</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_COLLATERAL_DAMAGE_1_HELP" >
-			<Text>对目标地格的其他单位+50%的伤害。如果目标单位被攻击后HP小于75，则其攻击力-25%，-1射程，直至其恢复满员该效果才会消失。（该效果可叠加2次，如果该单位最大射程为2则HP回复满之前无法攻击，不对受到溅射伤害的单位起效）</Text>
+			<Text>对目标地格的其他单位+50%的伤害。如果目标单位被攻击后HP小于75%，则其攻击力-25%，-1射程，直至其恢复满员该效果才会消失。（该效果可叠加2次，如果单位射程为0则无法远程攻击，不对受到溅射伤害的单位起效）</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_COLLATERAL_DAMAGE_2">
 			<Text>重炮二级</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_COLLATERAL_DAMAGE_2_HELP" >
-			<Text>对目标地格的其他单位+50%的伤害。如果目标单位被攻击后HP小于90，则其攻击力-25%，-1射程，直至其恢复满员该效果才会消失。（该效果可叠加2次，如果该单位最大射程为2则HP回复满之前无法攻击，不对受到溅射伤害的单位起效）</Text>
+			<Text>对目标地格的其他单位+50%的伤害。如果目标单位被攻击后HP小于90%，则其攻击力-25%，-1射程，直至其恢复满员该效果才会消失。（该效果可叠加2次，如果单位射程为0则无法远程攻击，不对受到溅射伤害的单位起效）</Text>
 		</Row>
-		<!--
-		<Row Tag="TXT_KEY_PROMOTION_COLLATERAL_DAMAGE_3">
-			<Text>重炮三级</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_COLLATERAL_DAMAGE_3_HELP" >
-			<Text>对目标地格的其他单位+34%的伤害。如果目标单位被攻击后HP小于90，则其攻击力-25%，-1射程，直至其恢复满员该效果才会消失。（该效果可叠加2次，如果该单位最大射程为2则HP回复满之前无法攻击，不对受到溅射伤害的单位起效）</Text>
-		</Row>
-		-->
 
 		<Replace Tag="TXT_KEY_PROMOTION_LOGISTICS_HELP" >
 			<Text>每回合增加1次额外攻击次数。</Text>
@@ -12652,7 +12633,7 @@
 		<Row Tag="TXT_KEY_PROMOTION_DIVINE_WEAPON_1_HELP">
 			<Text>
 			对[COLOR_POSITIVE_TEXT]目标地格[ENDCOLOR]的其他单位+25%的伤害。
-			[NEWLINE]若目标单位剩余血量小于50，受到[COLOR_NEGATIVE_TEXT]迟滞/阻碍[ENDCOLOR]效果。
+			[NEWLINE]若目标单位剩余血量小于50%，受到[COLOR_NEGATIVE_TEXT]迟滞/阻碍[ENDCOLOR]效果。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_DIVINE_WEAPON_2">
@@ -12661,7 +12642,7 @@
 		<Row Tag="TXT_KEY_PROMOTION_DIVINE_WEAPON_2_HELP">
 			<Text>
 			对[COLOR_POSITIVE_TEXT]目标地格[ENDCOLOR]的其他单位+25%的伤害。
-			[NEWLINE]若目标单位剩余血量小于50，受到[COLOR_NEGATIVE_TEXT]阵型破坏[ENDCOLOR]效果。
+			[NEWLINE]若目标单位剩余血量小于50%，受到[COLOR_NEGATIVE_TEXT]阵型破坏[ENDCOLOR]效果。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_DIVINE_WEAPON_3">
@@ -12670,7 +12651,7 @@
 		<Row Tag="TXT_KEY_PROMOTION_DIVINE_WEAPON_3_HELP">
 			<Text>
 			对[COLOR_POSITIVE_TEXT]目标地格[ENDCOLOR]的其他单位+25%的伤害。
-			[NEWLINE]若目标单位剩余血量小于50，受到[COLOR_NEGATIVE_TEXT]丧失补给[ENDCOLOR]效果。
+			[NEWLINE]若目标单位剩余血量小于50%，受到[COLOR_NEGATIVE_TEXT]丧失补给[ENDCOLOR]效果。
 			</Text>
 		</Row>
 
@@ -13293,7 +13274,12 @@
 			<Text>[COLOR_NEGATIVE_TEXT]士气低落[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_MORAL_WEAKEN_1_HELP">
-			<Text>[ICON_BULLET][ICON_STRENGTH][COLOR_NEGATIVE_TEXT]攻击力[ENDCOLOR]-25%，[NEWLINE][ICON_BULLET][ICON_RANGE_STRENGTH][COLOR_NEGATIVE_TEXT]射程[ENDCOLOR]-1，[NEWLINE][ICON_BULLET]单位恢复满员后此状态消失。[NEWLINE][ICON_BULLET]可以用大军事家或者提督消除。</Text>
+			<Text>
+			[ICON_BULLET][ICON_STRENGTH][COLOR_NEGATIVE_TEXT]攻击力[ENDCOLOR]-25%。
+			[NEWLINE][ICON_BULLET][ICON_RANGE_STRENGTH][COLOR_NEGATIVE_TEXT]射程[ENDCOLOR]-1。
+			[NEWLINE][ICON_BULLET]单位恢复满员后此状态消失。
+			[NEWLINE][ICON_BULLET]可以用大军事家或者提督消除。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_NEWLYCAPTURED">
 			<Text>[COLOR_NEGATIVE_TEXT]新近俘虏[ENDCOLOR]</Text>

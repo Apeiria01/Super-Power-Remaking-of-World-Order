@@ -1665,13 +1665,6 @@
 			<PromotionType>PROMOTION_SUNDER_2</PromotionType>
 			<UnitCombatType>UNITCOMBAT_HELICOPTER</UnitCombatType>
 		</Row>
-		<!--
-		<Row>
-			<PromotionType>PROMOTION_SUNDER_3</PromotionType>
-			<UnitCombatType>UNITCOMBAT_HELICOPTER</UnitCombatType>
-		</Row>
-		-->
-
 
 		<Row>
 			<PromotionType>PROMOTION_HUNTDOWN_1</PromotionType>
@@ -2444,21 +2437,6 @@
 			<PediaType>PEDIA_RANGED</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_VOLLEY_2</PediaEntry>
 		</Row>
-		<!--<Row>
-			<Type>PROMOTION_VOLLEY_3</Type>
-			<Description>TXT_KEY_PROMOTION_VOLLEY_3</Description>
-			<Help>TXT_KEY_PROMOTION_VOLLEY_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionPrereqOr1>PROMOTION_VOLLEY_2</PromotionPrereqOr1>
-			<OrderPriority>1</OrderPriority>
-			<AttackFortifiedMod>50</AttackFortifiedMod>
-			<CityAttack>50</CityAttack>
-			<PortraitIndex>42</PortraitIndex>
-			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_RANGED</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_VOLLEY_3</PediaEntry>
-		</Row>-->
-
 
 	</UnitPromotions>
 
@@ -2515,10 +2493,6 @@
 			<PromotionType>PROMOTION_VOLLEY_2</PromotionType>
 			<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
 		</Row>
-		<!--<Row>
-			<PromotionType>PROMOTION_VOLLEY_3</PromotionType>
-			<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
-		</Row>-->
 	
 		<Row>
 			<PromotionType>PROMOTION_COLLATERAL_DAMAGE_1</PromotionType>
@@ -2528,12 +2502,6 @@
 			<PromotionType>PROMOTION_COLLATERAL_DAMAGE_2</PromotionType>
 			<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
 		</Row>
-		<!--
-		<Row>
-			<PromotionType>PROMOTION_COLLATERAL_DAMAGE_3</PromotionType>
-			<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
-		</Row>
-		-->
 	</UnitPromotions_UnitCombats>
 
 
@@ -3318,20 +3286,6 @@
 			<CollateralDamagePercent>50</CollateralDamagePercent>
 			<CollateralDamagePlotUnitLimit>4</CollateralDamagePlotUnitLimit>
 		</Row>
-		<!--
-		<Row>
-			<Type>PROMOTION_COLLATERAL_DAMAGE_3</Type>
-			<Description>TXT_KEY_PROMOTION_COLLATERAL_DAMAGE_3</Description>
-			<Help>TXT_KEY_PROMOTION_COLLATERAL_DAMAGE_3_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionPrereqOr1>PROMOTION_COLLATERAL_DAMAGE_2</PromotionPrereqOr1>
-			<OrderPriority>4</OrderPriority>
-			<PortraitIndex>12</PortraitIndex>
-			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_RANGED</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_COLLATERAL_DAMAGE_3</PediaEntry>
-		</Row>
-		-->
 
 		<Row>
 			<Type>PROMOTION_SUNDER_1</Type>
@@ -3360,22 +3314,6 @@
 			<OrderPriority>7</OrderPriority>
 			<PediaEntry>TXT_KEY_PROMOTION_SUNDER_2</PediaEntry>
 		</Row>
-		<!--
-		<Row>
-			<Type>PROMOTION_SUNDER_3</Type>
-			<Description>TXT_KEY_PROMOTION_SUNDER_3</Description>
-			<Help>TXT_KEY_PROMOTION_SUNDER_3_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionPrereqOr1>PROMOTION_SUNDER_2</PromotionPrereqOr1>
-			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_RANGED</PediaType>
-			<PortraitIndex>10</PortraitIndex>
-			<OrderPriority>7</OrderPriority>
-			<PediaEntry>TXT_KEY_PROMOTION_SUNDER_3</PediaEntry>
-		</Row>
-		-->
-
-
 
 		<Row>
 			<Type>PROMOTION_FLANK_GUN_1</Type>
@@ -3448,12 +3386,6 @@
 			<PromotionType>PROMOTION_SUNDER_2</PromotionType>
 			<UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType>
 		</Row>
-		<!--
-		<Row>
-			<PromotionType>PROMOTION_SUNDER_3</PromotionType>
-			<UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType>
-		</Row>
-		-->
 
 		<Row>
 			<PromotionType>PROMOTION_COLLATERAL_DAMAGE_1</PromotionType>
@@ -3463,12 +3395,6 @@
 			<PromotionType>PROMOTION_COLLATERAL_DAMAGE_2</PromotionType>
 			<UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType>
 		</Row>
-		<!--
-		<Row>
-			<PromotionType>PROMOTION_COLLATERAL_DAMAGE_3</PromotionType>
-			<UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType>
-		</Row>
-		-->
 
 		<Row>
 			<PromotionType>PROMOTION_FLANK_GUN_1</PromotionType>

@@ -13867,7 +13867,7 @@
 			<Text>It is so tall that it can cross the mountains or walking in costal area. It is immune to strategic nuclear weapons' blasts and free from some debuff effects from the enemy like "sundered" and "slowed down". Can heal every turn.[NEWLINE][NEWLINE]Requires Prototype Mecha Project and only one can exist in the world.</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_UNIT_MECH_STRATEGY">
-			<Text>Giant, but fast, this is the battle machine of the future, has 400 Max Hit Point. Since it is remotely controlled by its pilot, it has no fears and never feels pain. Thus, these debuff effects - "Sundered", "Slowed Down", "Charged Damage", "Target Marked", prove to be useless on it. All of these make it the strongest defender unit in the game. It can also survive any strategic nuclear weapons' blasts including the ICBM. However, its CPU will be affected by enemy EMP attack and suffer from Collateral Damage and Area of Effect Damage, which cannot be avoided by remote-control. </Text>
+			<Text>Giant, but fast, this is the battle machine of the future, has More Hit Point. Since it is remotely controlled by its pilot, it has no fears and never feels pain. Thus, these debuff effects - "Sundered", "Slowed Down", "Charged Damage", "Target Marked", prove to be useless on it. All of these make it the strongest defender unit in the game. It can also survive any strategic nuclear weapons' blasts including the ICBM. However, its CPU will be affected by enemy EMP attack and suffer from Collateral Damage and Area of Effect Damage, which cannot be avoided by remote-control. </Text>
 		</Replace>
 		
 
@@ -14128,7 +14128,7 @@
 			<Text>Close Quarters Combat I</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_CQB_COMBAT_1_HELP">
-			<Text>When defending, if the attacker's HP is less than 80, the attacker will lose all [ICON_MOVES] MP after attacking this unit.</Text>
+			<Text>When defending, if the attacker's HP is less than 80%, the attacker will lose all [ICON_MOVES] MP after attacking this unit.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_CQB_COMBAT_2">
 			<Text>Close Quarters Combat II</Text>
@@ -14256,19 +14256,19 @@
 
 		<Replace Tag="TXT_KEY_PROMOTION_BARRAGE_1_HELP" >
 			<Text>
-			[ICON_BULLET]If the Target Unit's HP is less than 60 after this attack, its [ICON_MOVES] MP will reduce to 1 for the next turn and suffers -1 [ICON_MOVES] MP Penalty until HP is full. 
+			[ICON_BULLET]If the Target Unit's HP is less than 60% after this attack, its [ICON_MOVES] MP will reduce to 1 for the next turn and suffers -1 [ICON_MOVES] MP Penalty until HP is full. 
 			[NEWLINE][ICON_BULLET]One more Barrage shot will make it lose all [ICON_MOVES] MP and cannot perform [COLOR_NEGATIVE_TEXT]Melee Attack[ENDCOLOR] till unitl its HP fully restored.
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_BARRAGE_2_HELP" >
 			<Text>
-			[ICON_BULLET]If the Target Unit's HP is less than 75 after this attack, its [ICON_MOVES] MP will reduce to 1 for the next turn and suffers -1 [ICON_MOVES] MP Penalty until HP is full. 
+			[ICON_BULLET]If the Target Unit's HP is less than 75% after this attack, its [ICON_MOVES] MP will reduce to 1 for the next turn and suffers -1 [ICON_MOVES] MP Penalty until HP is full. 
 			[NEWLINE][ICON_BULLET]One more Barrage shot will make it lose all [ICON_MOVES] MP and cannot perform [COLOR_NEGATIVE_TEXT]Melee Attack[ENDCOLOR] till unitl its HP fully restored.
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_BARRAGE_3_HELP" >
 			<Text>
-			[ICON_BULLET]If the Target Unit's HP is less than 90 after this attack, its [ICON_MOVES] MP will reduce to 1 for the next turn and suffers -1 [ICON_MOVES] MP Penalty until HP is full. 
+			[ICON_BULLET]If the Target Unit's HP is less than 90% after this attack, its [ICON_MOVES] MP will reduce to 1 for the next turn and suffers -1 [ICON_MOVES] MP Penalty until HP is full. 
 			[NEWLINE][ICON_BULLET]One more Barrage shot will make it lose all [ICON_MOVES] MP and cannot perform [COLOR_NEGATIVE_TEXT]Melee Attack[ENDCOLOR] till unitl its HP fully restored.
 			</Text>
 		</Replace>
@@ -14358,22 +14358,14 @@
 			<Text>Sunder I</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SUNDER_1_HELP">
-			<Text>If the Target Unit's HP is less than 75 after this attack, the target unit suffers -25% [ICON_STRENGTH] Combat Strength when [COLOR_POSITIVE_TEXT]Defending[ENDCOLOR] and it won't recover until HP is full. (This effect can be multiplied to -50% )</Text>
+			<Text>If the Target Unit's HP is less than 75% after this attack, the target unit suffers -25% [ICON_STRENGTH] Combat Strength when [COLOR_POSITIVE_TEXT]Defending[ENDCOLOR] and it won't recover until HP is full. (This effect can be multiplied to -50% )</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SUNDER_2">
 			<Text>Sunder II</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SUNDER_2_HELP">
-			<Text>If the Target Unit's HP is less than 90 after this attack, the target unit suffers -25% [ICON_STRENGTH] Combat Strength when [COLOR_POSITIVE_TEXT]Defending[ENDCOLOR] and it won't recover until HP is full. (This effect can be multiplied to -50% )</Text>
+			<Text>If the Target Unit's HP is less than 90% after this attack, the target unit suffers -25% [ICON_STRENGTH] Combat Strength when [COLOR_POSITIVE_TEXT]Defending[ENDCOLOR] and it won't recover until HP is full. (This effect can be multiplied to -50% )</Text>
 		</Row>
-		<!--
-		<Row Tag="TXT_KEY_PROMOTION_SUNDER_3">
-			<Text>Sunder III</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_SUNDER_3_HELP">
-			<Text>If the Target Unit's HP is less than 90 after this attack, the target unit suffers -25% [ICON_STRENGTH] Combat Strength when [COLOR_POSITIVE_TEXT]Defending[ENDCOLOR] and it won't recover until HP is full. (This effect can be multiplied to -50% )</Text>
-		</Row>
-		-->
 
 		<Row Tag="TXT_KEY_PROMOTION_HUNTDOWN_1">
 			<Text>Hunt Down I</Text>
@@ -14419,31 +14411,18 @@
 			<Text>Volley II</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_PROMOTION_VOLLEY_3">
-			<Text>Volley III</Text>
-		</Row>
-
-
 		<Row Tag="TXT_KEY_PROMOTION_COLLATERAL_DAMAGE_1">
 			<Text>Collateral Damage I</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_COLLATERAL_DAMAGE_1_HELP" >
-			<Text>[ICON_BULLET]+50% Damage to other units in the target plot. [NEWLINE][ICON_BULLET]If the Target Unit's HP is less than 75 after this attack, the target unit suffers -25% [ICON_STRENGTH] Combat Strength and -1 [ICON_RANGE_STRENGTH] Range when [COLOR_POSITIVE_TEXT]Attacking[ENDCOLOR] and it won't recover until HP is full. (This effect can be multiplied to -50%). It won't apply to other units suffered from collateral damage.</Text>
+			<Text>[ICON_BULLET]+50% Damage to other units in the target plot. [NEWLINE][ICON_BULLET]If the Target Unit's HP is less than 75% after this attack, the target unit suffers -25% [ICON_STRENGTH] Combat Strength and -1 [ICON_RANGE_STRENGTH] Range when [COLOR_POSITIVE_TEXT]Attacking[ENDCOLOR] and it won't recover until HP is full. (This effect can be multiplied to -50%). It won't apply to other units suffered from collateral damage.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_COLLATERAL_DAMAGE_2">
 			<Text>Collateral Damage II</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_COLLATERAL_DAMAGE_2_HELP" >
-			<Text>[ICON_BULLET]+50% Damage to other units in the target plot. [NEWLINE][ICON_BULLET]If the Target Unit's HP is less than 90 after this attack, the target unit suffers -25% [ICON_STRENGTH] Combat Strength and -1 [ICON_RANGE_STRENGTH] Range when [COLOR_POSITIVE_TEXT]Attacking[ENDCOLOR] and it won't recover until HP is full. (This effect can be multiplied to -50%). It won't apply to other units suffered from collateral damage.</Text>
+			<Text>[ICON_BULLET]+50% Damage to other units in the target plot. [NEWLINE][ICON_BULLET]If the Target Unit's HP is less than 90% after this attack, the target unit suffers -25% [ICON_STRENGTH] Combat Strength and -1 [ICON_RANGE_STRENGTH] Range when [COLOR_POSITIVE_TEXT]Attacking[ENDCOLOR] and it won't recover until HP is full. (This effect can be multiplied to -50%). It won't apply to other units suffered from collateral damage.</Text>
 		</Row>
-		<!--
-		<Row Tag="TXT_KEY_PROMOTION_COLLATERAL_DAMAGE_3">
-			<Text>Collateral Damage III</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_COLLATERAL_DAMAGE_3_HELP" >
-			<Text>[ICON_BULLET]+34% Damage to other units in the target plot. [NEWLINE][ICON_BULLET]If the Target Unit's HP is less than 90 after this attack, the target unit suffers -25% [ICON_STRENGTH] Combat Strength when [COLOR_POSITIVE_TEXT]Attacking[ENDCOLOR] and it won't recover until HP is full. (This effect can be multiplied to -50%). It won't apply to other units suffered from collateral damage.</Text>
-		</Row>
-		-->
 
 		<Replace Tag="TXT_KEY_PROMOTION_LOGISTICS_HELP" >
 			<Text>[ICON_BULLET]+1 [COLOR_POSITIVE_TEXT]Attack[ENDCOLOR] Chance per turn.</Text>

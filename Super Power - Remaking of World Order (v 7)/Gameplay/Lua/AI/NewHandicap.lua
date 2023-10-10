@@ -738,7 +738,6 @@ function AIPromotion(iPlayer, iCity, iUnit, bGold, bFaith)
 	
 	local CollDamageLV1ID = GameInfo.UnitPromotions["PROMOTION_COLLATERAL_DAMAGE_1"].ID
 	local CollDamageLV2ID = GameInfo.UnitPromotions["PROMOTION_COLLATERAL_DAMAGE_2"].ID
-	-- local CollDamageLV3ID = GameInfo.UnitPromotions["PROMOTION_COLLATERAL_DAMAGE_3"].ID
 	
 	local Barrage1ID = GameInfo.UnitPromotions["PROMOTION_BARRAGE_1"].ID
 	local Barrage2ID = GameInfo.UnitPromotions["PROMOTION_BARRAGE_2"].ID
@@ -749,7 +748,6 @@ function AIPromotion(iPlayer, iCity, iUnit, bGold, bFaith)
 	
 	local Sunder1ID = GameInfo.UnitPromotions["PROMOTION_SUNDER_1"].ID
 	local Sunder2ID = GameInfo.UnitPromotions["PROMOTION_SUNDER_2"].ID
-	-- local Sunder3ID = GameInfo.UnitPromotions["PROMOTION_SUNDER_3"].ID
 	
 	local AOEAttack1ID = GameInfo.UnitPromotions["PROMOTION_CLUSTER_ROCKET_1"].ID
 	local AOEAttack2ID = GameInfo.UnitPromotions["PROMOTION_CLUSTER_ROCKET_2"].ID
