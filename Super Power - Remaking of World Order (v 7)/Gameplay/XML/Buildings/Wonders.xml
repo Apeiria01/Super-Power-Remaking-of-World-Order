@@ -719,11 +719,6 @@
 	</Buildings>
 
 	<Building_ClassesNeededInCity>
-		<!--<Row>
-			<BuildingType>BUILDING_HEROIC_EPIC</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
-		</Row>-->
-
 		<Row>
 			<BuildingType>BUILDING_NATIONAL_SHRINE</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_SHRINE</BuildingClassType>
@@ -868,12 +863,6 @@
 			<BuildingClassType>BUILDINGCLASS_TEMPLE</BuildingClassType>
 			<NumBuildingNeeded>-1</NumBuildingNeeded>
 		</Row>
-
-		<!--<Row>
-			<BuildingType>BUILDING_HEROIC_EPIC</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
-			<NumBuildingNeeded>-1</NumBuildingNeeded>
-		</Row>-->
 		<Row>
 			<BuildingType>BUILDING_NATIONAL_CARAVANSARY</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_CARAVANSARY</BuildingClassType>

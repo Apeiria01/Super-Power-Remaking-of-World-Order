@@ -1160,16 +1160,12 @@ EstablishCorpsButton = {
             end
         end
 
-		local iNumCanEstCorp = player:GetBuildingClassCount(GameInfoTypes["BUILDINGCLASS_ARSENAL"]) * ifac - g_CorpsCount[playerID][1]
-		local iNumCanEstArmee = player:GetBuildingClassCount(GameInfoTypes["BUILDINGCLASS_MILITARY_BASE"]) * ifac - g_CorpsCount[playerID][2]
 		local tUnit = nil;
 		local nUnit = nil;
-		local bIsGreatPeople = false;
 
 		if unit:GetUnitClassType() == GameInfo.UnitClasses.UNITCLASS_GREAT_GENERAL.ID 
 		or unit:GetUnitClassType() == GameInfo.UnitClasses.UNITCLASS_GREAT_ADMIRAL.ID 
 		then
-			bIsGreatPeople = true;
 			nUnit = unit;
 		elseif unit:IsCombatUnit() then
             if player:GetBuildingClassCount(iArsenal) <= 0 then
@@ -1254,6 +1250,7 @@ EstablishCorpsButton = {
 				and not iUnit:IsHasPromotion(ArmeeID) 
 				then
 					if iUnit:IsHasPromotion(CorpsID) and not city:IsHasBuildingClass(iArsenal) then
+                        --Use a Great Prople to Upgrade a Unit need Arsenal in this City
 						EstablishCorpsButton.ToolTip = EstablishCorpsButton.ToolTip .. Locale.ConvertTextKey("TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_1")
 						return true
 					end
@@ -1262,6 +1259,7 @@ EstablishCorpsButton = {
 		elseif unit:IsCombatUnit() then
 			if not unit:IsHasPromotion(CorpsID) then
 				if not city:IsHasBuildingClass(iArsenal) then
+                    --Combine two same type of Units in this tile into Corps need Arsenal in this City
 					EstablishCorpsButton.ToolTip = EstablishCorpsButton.ToolTip .. Locale.ConvertTextKey("TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_2")
 					return true
 				elseif g_CorpsCount[playerID][1] >= player:GetBuildingClassCount(iArsenal) * ifac then
@@ -1270,6 +1268,7 @@ EstablishCorpsButton = {
 				end
 			else
 				if not city:IsHasBuildingClass(iMilitaryBase) then
+                    --Add a same type Unit in this tile into Corps to become an Armee need MilitaryBase in this City
 					EstablishCorpsButton.ToolTip = EstablishCorpsButton.ToolTip .. Locale.ConvertTextKey("TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_3")
 					return true
 				elseif g_CorpsCount[playerID][2] >= player:GetBuildingClassCount(iMilitaryBase) * ifac then

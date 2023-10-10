@@ -1832,7 +1832,7 @@
 			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]Combine two same type of Units in this tile into Corps need Arsenal in this City[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_3">
-			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]Add one same type Unit in this tile into Corps to become an Armee need MilitaryBase in this City[ENDCOLOR]</Text>
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]Add a same type Unit in this tile into Corps to become an Armee need MilitaryBase in this City[ENDCOLOR]</Text>
 		</Row>
 		
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_FULLATTACK_ON_SHORT">
@@ -17072,6 +17072,13 @@
 
 		<Row Tag="TXT_KEY_EUPANEL_BONUS_HEIGHT">
 			<Text>Height Bouns</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_LUXURIES_SHORT">
+			<Text>Luxuries</Text>
+		</Row>
+		<Row Tag="TXT_KEY_STRATEGIC_SHORT">
+			<Text>Strategic</Text>
 		</Row>
 	</Language_en_US>
 </GameData>
