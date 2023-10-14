@@ -774,11 +774,6 @@
 		
 	</Building_YieldChangesPerPop>
 	<Building_HurryModifiers>
-		<Row>
-			<BuildingType>BUILDING_TROOPS_DEBUFF</BuildingType>
-			<HurryType>HURRY_GOLD</HurryType>
-			<HurryCostModifier>4000</HurryCostModifier>
-		</Row>
 	</Building_HurryModifiers>
 
 	<Building_Flavors>

@@ -60,7 +60,7 @@
 			<Text>SP - Corps Mode (High)</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_HIGH_HELP">
-			<Text>Corps Mode - High:   Allow to establish Corps and Armee. The Troops Level is High. Please refer to wiki page of troops.</Text>
+			<Text>Corps Mode - High:   Allow to establish Corps and Armee. The Troops Level is High (150%). Please refer to wiki page of troops.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_CLOSE">
 			<Text>SP - [COLOR_YELLOW]Corps Mode[ENDCOLOR] - OFF</Text>
@@ -72,7 +72,7 @@
 			<Text>SP - Corps Mode (Low)</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_LOW_HELP">
-			<Text>Corps Mode - Low:    Allow to establish Corps and Armee. The Troops Level is Low. Please refer to wiki page of troops.</Text>
+			<Text>Corps Mode - Low:    Allow to establish Corps and Armee. The Troops Level is Low (50%). Please refer to wiki page of troops.</Text>
 		</Row>
 
 
@@ -17079,6 +17079,12 @@
 		</Row>
 		<Row Tag="TXT_KEY_STRATEGIC_SHORT">
 			<Text>Strategic</Text>
+		</Row>
+		<Row Tag="TXT_KEY_LACKING_TROOPS_TOOLTIP">
+			<Text>
+			[COLOR_NEGATIVE_TEXT][ICON_RES_TROOPS]Lacking Troops: You cannot train military units, cannot capture military units from combat, and new military units will be disbanded ![ENDCOLOR]
+			[NEWLINE]Expanding the scale of cities will provide more troops.
+			</Text>
 		</Row>
 	</Language_en_US>
 </GameData>

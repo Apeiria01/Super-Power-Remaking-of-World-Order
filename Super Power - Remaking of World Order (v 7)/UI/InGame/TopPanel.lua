@@ -280,22 +280,49 @@ function UpdateData()
 		local turn = Locale.ConvertTextKey("TXT_KEY_TP_TURN_COUNTER", Game.GetGameTurn());
 		Controls.CurrentTurn:SetText(turn);
 		
-		-- Update Unit Supply
-		local iUnitSupplyMod = pPlayer:GetUnitProductionMaintenanceMod();
-		if (iUnitSupplyMod ~= 0) then
-			local iUnitsSupplied = pPlayer:GetNumUnitsSupplied();
-			local iUnitsOver = pPlayer:GetNumUnitsOutOfSupply();
-			local strUnitSupplyToolTip = Locale.ConvertTextKey("TXT_KEY_UNIT_SUPPLY_REACHED_TOOLTIP", iUnitsSupplied, iUnitsOver, -iUnitSupplyMod);
-			
-			Controls.UnitSupplyString:SetToolTipString(strUnitSupplyToolTip);
-			Controls.UnitSupplyString:SetHide(false);
+		-- Update Unit Supply / Troop Supply
+		if PreGame.GetGameOption("GAMEOPTION_SP_CORPS_MODE_DISABLE") == 1 then
+			local iUnitSupplyMod = pPlayer:GetUnitProductionMaintenanceMod();
+			if (iUnitSupplyMod ~= 0) then
+				local iUnitsSupplied = pPlayer:GetNumUnitsSupplied();
+				local iUnitsOver = pPlayer:GetNumUnitsOutOfSupply();
+				local strUnitSupplyToolTip = Locale.ConvertTextKey("TXT_KEY_UNIT_SUPPLY_REACHED_TOOLTIP", iUnitsSupplied, iUnitsOver, -iUnitSupplyMod);
+				
+				Controls.UnitSupplyString:SetToolTipString(strUnitSupplyToolTip);
+				Controls.UnitSupplyString:SetHide(false);
+			else
+				Controls.UnitSupplyString:SetHide(true);
+			end
+
+		--Using Crops Mod
 		else
-			Controls.UnitSupplyString:SetHide(true);
+			local iUnitSupplyMod = pPlayer:GetUnitProductionMaintenanceMod();
+			local bIsLackingTroops = pPlayer:IsLackingTroops()
+			if (iUnitSupplyMod ~= 0 or bIsLackingTroops) then
+				local strUnitSupplyToolTip = ""
+				if iUnitSupplyMod ~= 0 then
+					local iUnitsSupplied = pPlayer:GetNumUnitsSupplied();
+					local iUnitsOver = pPlayer:GetNumUnitsOutOfSupply();
+					strUnitSupplyToolTip = strUnitSupplyToolTip .. Locale.ConvertTextKey("TXT_KEY_UNIT_SUPPLY_REACHED_TOOLTIP", iUnitsSupplied, iUnitsOver, -iUnitSupplyMod);
+				end
+				if bIsLackingTroops then
+					if iUnitSupplyMod ~= 0 then
+						strUnitSupplyToolTip = strUnitSupplyToolTip .. "[NEWLINE][NEWLINE]"
+					end
+					strUnitSupplyToolTip = strUnitSupplyToolTip .. Locale.ConvertTextKey("TXT_KEY_LACKING_TROOPS_TOOLTIP")
+				end
+				
+				Controls.UnitSupplyString:SetTexture("OverSupplyLimit.dds")
+				Controls.UnitSupplyString:SetToolTipString(strUnitSupplyToolTip);
+				Controls.UnitSupplyString:SetHide(false);
+			else
+				--TODO:
+				--Controls.UnitSupplyString:SetTexture("TroopsTop.dds")
+				--Controls.UnitSupplyString:SetToolTipString()
+				--Controls.UnitSupplyString:SetHide(false);
+				Controls.UnitSupplyString:SetHide(true);
+			end
 		end
-		
-		
-		
-		
 		
 		
 		-- Update date

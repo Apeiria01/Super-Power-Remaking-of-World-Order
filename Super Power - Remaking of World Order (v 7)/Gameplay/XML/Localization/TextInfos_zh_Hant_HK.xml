@@ -60,7 +60,7 @@
 			<Text>SP-軍團模式（高）</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_HIGH_HELP">
-			<Text>允許建立軍團和集團軍，兵力規模等級高。</Text>
+			<Text>允許建立軍團和集團軍，兵力規模等級高(150%)。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_CLOSE">
 			<Text>SP-關閉 [COLOR_YELLOW]軍團模式[ENDCOLOR]</Text>
@@ -72,7 +72,7 @@
 			<Text>SP-軍團模式（低）</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_LOW_HELP">
-			<Text>允許建立軍團和集團軍，兵力規模等級低。</Text>
+			<Text>允許建立軍團和集團軍，兵力規模等級低(50%)。</Text>
 		</Row>
 
 
@@ -15067,6 +15067,12 @@
 		</Row>
 		<Row Tag="TXT_KEY_STRATEGIC_SHORT">
 			<Text>戰略</Text>
+		</Row>
+		<Row Tag="TXT_KEY_LACKING_TROOPS_TOOLTIP">
+			<Text>
+			[COLOR_NEGATIVE_TEXT][ICON_RES_TROOPS]兵力不足：你無法建造、從戰鬥中捕獲軍事單位，新生軍事單位會被強製解散！[ENDCOLOR]
+			[NEWLINE]增大城市規模數量可以提供更多兵力。
+			</Text>
 		</Row>
 	</Language_zh_Hant_HK>
 </GameData>

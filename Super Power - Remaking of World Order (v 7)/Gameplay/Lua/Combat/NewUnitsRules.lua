@@ -364,7 +364,8 @@ function OnCorpsArmeeSP(iPlayerID, iUnitID)
 	end
 
 	-- Remove redundance Units
-	if pPlayer:IsLackingTroops() 
+	if PreGame.GetGameOption("GAMEOPTION_SP_CORPS_MODE_DISABLE") == 0
+	and pPlayer:GetDomainTroopsActive() < 0
 	and not pUnit:IsNoTroops() 
 	and not (pUnit:GetLevel() > 1) 
 	then
