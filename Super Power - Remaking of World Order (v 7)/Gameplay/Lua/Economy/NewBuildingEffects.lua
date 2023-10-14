@@ -66,12 +66,6 @@ function NewBuildingEffects(iPlayer, iCity, iBuilding, bGold, bFaith)
 					pCity:SetNumRealBuilding(building.ID, i);
 				end
 
-				-- Remove "BonusBT" from Old
-				if oCity:IsHasBuilding(building.ID)
-					and building.Type == "BUILDING_TROOPS_DEBUFF" then
-					oCity:SetNumRealBuilding(building.ID, 0);
-				end
-
 				-- Remove "Corrupt" from New
 				if pCity:IsHasBuilding(building.ID)
 					and (building.BuildingClass == "BUILDINGCLASS_CITY_HALL_LV1"

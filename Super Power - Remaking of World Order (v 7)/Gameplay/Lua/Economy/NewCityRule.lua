@@ -227,12 +227,6 @@ function CheckCapital(iPlayerID)
                         end
                     end
 
-                    -- Remove "BonusBT" from Old
-                    if pOCapital:IsHasBuilding(building.ID) and
-                        building.Type == "BUILDING_TROOPS_DEBUFF" then
-                        pOCapital:SetNumRealBuilding(building.ID, 0);
-                    end
-
                     -- Move Policy Buildings & Count Buildings
                     local policFreeBCCapital =
                         GameInfo.Policy_FreeBuildingClassCapital {

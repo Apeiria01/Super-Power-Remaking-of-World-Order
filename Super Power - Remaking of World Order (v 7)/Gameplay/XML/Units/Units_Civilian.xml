@@ -681,7 +681,6 @@
 
 	<!--***********************Citadel Units***********************-->
 
-	
 	<Units>
 		<Row>
 			<Class>UNITCLASS_CITADEL_EARLY</Class>
@@ -720,6 +719,7 @@
 			<BoundLandImprovement>IMPROVEMENT_CITADEL</BoundLandImprovement>
 			<BoundWaterImprovement>IMPROVEMENT_COASTAL_FORT</BoundWaterImprovement>
 			<MaxHitPoints>100</MaxHitPoints>
+			<NoTroopConsume>true</NoTroopConsume>
 		</Row>
 
 		<Row>
@@ -762,6 +762,7 @@
 			<BoundLandImprovement>IMPROVEMENT_CITADEL</BoundLandImprovement>
 			<BoundWaterImprovement>IMPROVEMENT_COASTAL_FORT</BoundWaterImprovement>
 			<MaxHitPoints>200</MaxHitPoints>
+			<NoTroopConsume>true</NoTroopConsume>
 		</Row>
 
 		<Row>
@@ -803,17 +804,8 @@
 			<BoundLandImprovement>IMPROVEMENT_CITADEL</BoundLandImprovement>
 			<BoundWaterImprovement>IMPROVEMENT_COASTAL_FORT</BoundWaterImprovement>
 			<MaxHitPoints>300</MaxHitPoints>
+			<NoTroopConsume>true</NoTroopConsume>
 		</Row>
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 	</Units>
 
 

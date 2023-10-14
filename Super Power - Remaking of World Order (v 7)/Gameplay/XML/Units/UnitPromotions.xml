@@ -42,6 +42,7 @@
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_CORPS_1</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
+			<IsCrops>true</IsCrops>
 		</Row>
 		<Row>
 			<Type>PROMOTION_CORPS_2</Type>
@@ -56,6 +57,7 @@
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_CORPS_2</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
+			<IsArmee>true</IsArmee>
 		</Row>
 
 		<Row>
