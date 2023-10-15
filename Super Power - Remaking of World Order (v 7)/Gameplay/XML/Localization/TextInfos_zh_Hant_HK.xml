@@ -4698,25 +4698,18 @@
 			<Set Text="現在，我們的人民皆服右衽、聞雅樂。我擔心世界其他地方，也會屈服於你文化的影響力之下。"/>
 		</Update>
 		<Row Tag="TXT_KEY_CO_IMMIGRATION_COUNTER_HEADER">
-		<!--<Replace Tag="TXT_KEY_CO_VICTORY_EXCESS_HAPPINESS_HEADER">-->
 			<Text>[ICON_TEAM_4] / [ICON_TEAM_2]</Text>
-		<!--</Replace>-->
 		</Row>
 		<Row Tag="TXT_KEY_CO_IMMIGRATION_COUNTER_HEADER_TT">
-		<!--<Replace Tag="TXT_KEY_CO_VICTORY_EXCESS_HAPPINESS_HEADER_TT">-->
 			<Text>
-
 				左側：當前[ICON_TEAM_4]國際移民遷入速率。
 				[NEWLINE][ICON_BULLET]遷入速率體現了本文明對該國人民的吸引力。
 				[NEWLINE][ICON_BULLET]如果你的遷入速率大於等於4且比移出速率更高，則該國每回合會[ICON_TEAM_4]移民到你的國家一單位[ICON_CITIZEN]人口。
 				[NEWLINE][NEWLINE][NEWLINE]右側：當前[ICON_TEAM_2]國際移民移出速率。
 				[NEWLINE][ICON_BULLET]移出速率體現了該文明對你的國民的吸引力。
 				[NEWLINE][ICON_BULLET]如果你的移出速率大於等於4且比遷入速率更高，則本國每回合會[ICON_TEAM_4]移民到目標國家一單位[ICON_CITIZEN]人口。
-
 				[NEWLINE][NEWLINE]基礎[ICON_TEAM_4]遷移速率由文化影響度決定（默默無聞：0，初具風情：1，口耳相傳：2，廣受稱譽：3，無遠弗屆：4，絕對支配：5）。但遷移速率也會受到兩國間外交關係的影響。
-
 			</Text>
-		<!--</Replace>-->
 		</Row>
 
 
@@ -7018,7 +7011,7 @@
 			<Text>
 			[COLOR_POSITIVE_TEXT]民主燈塔[ENDCOLOR]
 			[NEWLINE]每25點[ICON_HAPPINESS_1]滿意度+5%[ICON_RESEARCH]科技值，上限為50%（可同理性政策疊加）。
-			其他國家向你移民的速度加快100%。
+			[NEWLINE]其他國家向你移民的速度加快100%。
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_TREATY_ORGANIZATION_TEXT">

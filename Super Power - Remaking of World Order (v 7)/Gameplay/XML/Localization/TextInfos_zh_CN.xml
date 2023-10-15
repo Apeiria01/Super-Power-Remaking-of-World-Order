@@ -4796,25 +4796,18 @@
 			<Set Text="现在，我们的人民皆服右衽、闻雅乐。我担心世界其他地方，也会屈服于你文化的影响力之下。"/>
 		</Update>
 		<Row Tag="TXT_KEY_CO_IMMIGRATION_COUNTER_HEADER">
-			<!--<Replace Tag="TXT_KEY_CO_VICTORY_EXCESS_HAPPINESS_HEADER">-->
 			<Text>[ICON_TEAM_4] / [ICON_TEAM_2]</Text>
-			<!--</Replace>-->
 		</Row>
 		<Row Tag="TXT_KEY_CO_IMMIGRATION_COUNTER_HEADER_TT">
-			<!--<Replace Tag="TXT_KEY_CO_VICTORY_EXCESS_HAPPINESS_HEADER_TT">-->
 			<Text>
-
 				左侧：当前[ICON_TEAM_4]国际移民迁入速率。
 				[NEWLINE][ICON_BULLET]迁入速率体现了本文明对该国人民的吸引力。
 				[NEWLINE][ICON_BULLET]如果你的迁入速率大于等于4且比移出速率更高，则该国每回合会[ICON_TEAM_4]移民到你的国家一单位[ICON_CITIZEN]人口。
 				[NEWLINE][NEWLINE][NEWLINE]右侧：当前[ICON_TEAM_2]国际移民移出速率。
 				[NEWLINE][ICON_BULLET]移出速率体现了该文明对你的国民的吸引力。
 				[NEWLINE][ICON_BULLET]如果你的移出速率大于等于4且比迁入速率更高，则本国每回合会[ICON_TEAM_4]移民到目标国家一单位[ICON_CITIZEN]人口。
-
 				[NEWLINE][NEWLINE]基础[ICON_TEAM_4]迁移速率由文化影响度决定（默默无闻：0，初具风情：1，口耳相传：2，广受称誉：3，无远弗届：4，绝对支配：5）。但迁移速率也会受到两国间外交关系的影响。
-
 			</Text>
-			<!--</Replace>-->
 		</Row>
 
 
@@ -4843,7 +4836,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_CO_SP_MOVE_DOF">
 			<Text>
-				因宣佈友好，[COLOR_POSITIVE_TEXT]+50%[ENDCOLOR]移民[ICON_TEAM_4]迁入和[ICON_TEAM_2]移出速率！
+				因发布友谊声明，[COLOR_POSITIVE_TEXT]+50%[ENDCOLOR]移民[ICON_TEAM_4]迁入和[ICON_TEAM_2]移出速率！
 			</Text>
 		</Row>
 
@@ -7125,7 +7118,7 @@
 			<Text>
 			[COLOR_POSITIVE_TEXT]民主灯塔[ENDCOLOR]
 			[NEWLINE]每25点[ICON_HAPPINESS_1]满意度+5%[ICON_RESEARCH]科研，上限为50%（可同理性政策叠加）。
-			其他国家向你移民的速度加快100%。
+			[NEWLINE]其他国家向你移民的速度加快100%。
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_TREATY_ORGANIZATION_TEXT">

@@ -2053,124 +2053,124 @@ function RefreshCultureVictory()
 			    local ImmigrationCounter = CheckMoveOutCounter(Game.GetActivePlayer(), iPlayer);
 			    local strInternationalImmigrationToolTip = "";
 			    
-			    if     type(ImmigrationCounter) == 'number' then
-				local iHumanMoveToAI = CheckMoveOutCounter(Game.GetActivePlayer(),iPlayer)
-				local iAIMoveToHuman = CheckMoveOutCounter(iPlayer,Game.GetActivePlayer())
-				
-				local strHumanMoveToAI = tostring(0)
-				local strAIMoveToHuman = tostring(0)
-				
-				if iAIMoveToHuman >= 4 and iAIMoveToHuman > iHumanMoveToAI then
-					strAIMoveToHuman = Locale.ConvertTextKey("TXT_KEY_CO_SP_GREEN", iAIMoveToHuman);
-				else
-					strAIMoveToHuman = tostring(iAIMoveToHuman);
-				end
-				
-				if iHumanMoveToAI >= 4 and iHumanMoveToAI > iAIMoveToHuman then
-					strHumanMoveToAI = Locale.ConvertTextKey("TXT_KEY_CO_SP_RED", iHumanMoveToAI);
-				else
-					strHumanMoveToAI = tostring(iHumanMoveToAI);
-				end
-				
-				row.iExcessHappiness = iHumanMoveToAI;
-				row.strExcessHappiness = strAIMoveToHuman.." / "..strHumanMoveToAI;
-				strInternationalImmigrationToolTip = Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_IN_BASE",activePlayer:GetInfluenceLevel(iPlayer),pPlayer:GetInfluenceLevel(Game.GetActivePlayer()))
-			    elseif type(ImmigrationCounter) == 'table' then
-				local strImmigrationCount = tostring(ImmigrationCounter[1]);
-				local strImmigrationIcon  = "[ICON_TEAM_1]";
-				if     ImmigrationCounter[1] > 0 then
-					strImmigrationCount = Locale.ConvertTextKey("TXT_KEY_CO_SP_GREEN", strImmigrationCount);
-					strImmigrationIcon  = "[ICON_TEAM_4]";
-				elseif ImmigrationCounter[1] < 0 then
-					strImmigrationCount = Locale.ConvertTextKey("TXT_KEY_CO_SP_RED", strImmigrationCount);
-					strImmigrationIcon  = "[ICON_TEAM_2]";
-				end
-				
-				row.iExcessHappiness = ImmigrationCounter[1];
-				row.strExcessHappiness = strImmigrationCount .. " (" .. 2*ImmigrationCounter[2] .. "/" .. ImmigrationCounter[3] ..")";
-				strInternationalImmigrationToolTip = Locale.ConvertTextKey("TXT_KEY_CO_SP_IMMIGRATION_RATE_BASE",activePlayer:GetInfluenceLevel(iPlayer)-pPlayer:GetInfluenceLevel(Game.GetActivePlayer()),strImmigrationIcon)
-			    end
-				
-			    if ImmigrationCounter ~= nil then
-				
-				if PlayerTeam:IsAllowsOpenBordersToTeam(pPlayer:GetTeam()) then
-					strInternationalImmigrationToolTip = strInternationalImmigrationToolTip.."[NEWLINE][ICON_BULLET]"..Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_IN_OPENBORDER")
-				end
-				
-				if AITeam:IsAllowsOpenBordersToTeam(activePlayer:GetTeam()) then
-					strInternationalImmigrationToolTip = strInternationalImmigrationToolTip.."[NEWLINE][ICON_BULLET]"..Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_OUT_OPENBORDER")
-				end
-				
-				if activePlayer:IsDenouncedPlayer(iPlayer) or pPlayer:IsDenouncedPlayer(Game.GetActivePlayer()) then
-					strInternationalImmigrationToolTip = strInternationalImmigrationToolTip.."[NEWLINE][ICON_BULLET]"..Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_DENOUNCING")
-				end
-				
-				if activePlayer:IsDoF(iPlayer) then
-					strInternationalImmigrationToolTip = strInternationalImmigrationToolTip.."[NEWLINE][ICON_BULLET]"..Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_DOF")
-				end
-				
-				if activePlayer:GetReligionCreatedByPlayer() ~= nil and activePlayer:GetReligionCreatedByPlayer() > 0 then
-				    local MoveInPlayerReligion = activePlayer:GetReligionCreatedByPlayer()
-				    if pPlayer:HasReligionInMostCities(MoveInPlayerReligion) then
-					strInternationalImmigrationToolTip = strInternationalImmigrationToolTip.."[NEWLINE][ICON_BULLET]"..Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_IN_RELIGION")
-				    end
-				end
-				
-				if pPlayer:GetReligionCreatedByPlayer() ~= nil and pPlayer:GetReligionCreatedByPlayer() > 0 then
-				    local MoveInPlayerReligion = pPlayer:GetReligionCreatedByPlayer()
-				    if activePlayer:HasReligionInMostCities(MoveInPlayerReligion) then
-					strInternationalImmigrationToolTip = strInternationalImmigrationToolTip.."[NEWLINE][ICON_BULLET]"..Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_OUT_RELIGION")
-				    end
-				end
-				
-				if     activePlayer:GetExcessHappiness() >=150 then
-					strInternationalImmigrationToolTip = strInternationalImmigrationToolTip.."[NEWLINE][ICON_BULLET]"..Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_IN_HAPPINESS_150")
-				elseif activePlayer:GetExcessHappiness() < 150 and activePlayer:GetExcessHappiness() >= 100 then
-					strInternationalImmigrationToolTip = strInternationalImmigrationToolTip.."[NEWLINE][ICON_BULLET]"..Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_IN_HAPPINESS_100")
-				elseif activePlayer:GetExcessHappiness() <  50 and activePlayer:GetExcessHappiness() >=  20 then
-					strInternationalImmigrationToolTip = strInternationalImmigrationToolTip.."[NEWLINE][ICON_BULLET]"..Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_IN_HAPPINESS_50")
-				elseif activePlayer:GetExcessHappiness() <  20 and activePlayer:GetExcessHappiness() >=   0 then
-					strInternationalImmigrationToolTip = strInternationalImmigrationToolTip.."[NEWLINE][ICON_BULLET]"..Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_IN_HAPPINESS_20")
-				elseif activePlayer:GetExcessHappiness() <   0 then
-					strInternationalImmigrationToolTip = strInternationalImmigrationToolTip.."[NEWLINE][ICON_BULLET]"..Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_IN_UNHAPPINESS")
-				end
-				
-				if     pPlayer:HasPolicy(GameInfoTypes["POLICY_IRON_CURTAIN"]) and activePlayer:HasPolicy(GameInfoTypes["POLICY_TREATY_ORGANIZATION"]) then
-				elseif pPlayer:HasPolicy(GameInfoTypes["POLICY_IRON_CURTAIN"]) then
-					strInternationalImmigrationToolTip = strInternationalImmigrationToolTip.."[NEWLINE][ICON_BULLET]"..Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_IN_POLICY_IRON_CURTAIN")
-				elseif activePlayer:HasPolicy(GameInfoTypes["POLICY_TREATY_ORGANIZATION"]) then
-					strInternationalImmigrationToolTip = strInternationalImmigrationToolTip.."[NEWLINE][ICON_BULLET]"..Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_IN_POLICY_TREATY_ORGANIZATION")
-				end
-				if     activePlayer:HasPolicy(GameInfoTypes["POLICY_IRON_CURTAIN"]) and pPlayer:HasPolicy(GameInfoTypes["POLICY_TREATY_ORGANIZATION"]) then
-				elseif activePlayer:HasPolicy(GameInfoTypes["POLICY_IRON_CURTAIN"]) then
-					strInternationalImmigrationToolTip = strInternationalImmigrationToolTip.."[NEWLINE][ICON_BULLET]"..Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_OUT_POLICY_IRON_CURTAIN")
-				elseif pPlayer:HasPolicy(GameInfoTypes["POLICY_TREATY_ORGANIZATION"]) then
-					strInternationalImmigrationToolTip = strInternationalImmigrationToolTip.."[NEWLINE][ICON_BULLET]"..Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_OUT_POLICY_TREATY_ORGANIZATION")
-				end
-				
-				if  activePlayer:GetExcessHappiness() > pPlayer:GetExcessHappiness()
-				and GameInfo.Leader_Traits{ LeaderType = GameInfo.Leaders[activePlayer:GetLeaderType()].Type, TraitType = "TRAIT_RIVER_EXPANSION" }()
-				and(GameInfo.Traits["TRAIT_RIVER_EXPANSION"].PrereqPolicy == nil or (GameInfo.Traits["TRAIT_RIVER_EXPANSION"].PrereqPolicy 
-				and activePlayer:HasPolicy(GameInfoTypes[GameInfo.Traits["TRAIT_RIVER_EXPANSION"].PrereqPolicy])))
-				then
-					strInternationalImmigrationToolTip = strInternationalImmigrationToolTip.."[NEWLINE][ICON_BULLET]"..Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_IN_TRAIT_RIVER_EXPANSION")
-				elseif pPlayer:GetExcessHappiness() > activePlayer:GetExcessHappiness()
-				and GameInfo.Leader_Traits{ LeaderType = GameInfo.Leaders[pPlayer:GetLeaderType()].Type, TraitType = "TRAIT_RIVER_EXPANSION" }()
-				and(GameInfo.Traits["TRAIT_RIVER_EXPANSION"].PrereqPolicy == nil or (GameInfo.Traits["TRAIT_RIVER_EXPANSION"].PrereqPolicy 
-				and    pPlayer:HasPolicy(GameInfoTypes[GameInfo.Traits["TRAIT_RIVER_EXPANSION"].PrereqPolicy])))
-				then
-					strInternationalImmigrationToolTip = strInternationalImmigrationToolTip.."[NEWLINE][ICON_BULLET]"..Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_OUT_TRAIT_RIVER_EXPANSION")
-				end
-				
-				if PlayersAtWar(pPlayer,activePlayer) then
-					strInternationalImmigrationToolTip = Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_WAR_STOPPED")
-				end
-				
-				if  activePlayer:GetNumResourceAvailable(GameInfoTypes["RESOURCE_CONSUMER"], true) <= 0 or activePlayer:GetCurrentEra() >= GameInfo.Eras["ERA_MODERN"].ID and activePlayer:GetNumResourceAvailable(GameInfoTypes["RESOURCE_ELECTRICITY"], true) <= 0 then
-					strInternationalImmigrationToolTip = Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_OTHER_STOPPED")
-				end
-				
-				row.strExcessHappinessToolTip = strInternationalImmigrationToolTip;
+			    if type(ImmigrationCounter) == 'number' then
+					local iHumanMoveToAI = CheckMoveOutCounter(Game.GetActivePlayer(), iPlayer)
+					local iAIMoveToHuman = CheckMoveOutCounter(iPlayer,Game.GetActivePlayer())
+					
+					local strHumanMoveToAI = tostring(0)
+					local strAIMoveToHuman = tostring(0)
+					
+					if iAIMoveToHuman >= 4 and iAIMoveToHuman > iHumanMoveToAI then
+						strAIMoveToHuman = Locale.ConvertTextKey("TXT_KEY_CO_SP_GREEN", iAIMoveToHuman);
+					else
+						strAIMoveToHuman = tostring(iAIMoveToHuman);
+					end
+					
+					if iHumanMoveToAI >= 4 and iHumanMoveToAI > iAIMoveToHuman then
+						strHumanMoveToAI = Locale.ConvertTextKey("TXT_KEY_CO_SP_RED", iHumanMoveToAI);
+					else
+						strHumanMoveToAI = tostring(iHumanMoveToAI);
+					end
+					
+					row.iExcessHappiness = iHumanMoveToAI;
+					row.strExcessHappiness = strAIMoveToHuman.." / "..strHumanMoveToAI;
+					strInternationalImmigrationToolTip = Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_IN_BASE",activePlayer:GetInfluenceLevel(iPlayer),pPlayer:GetInfluenceLevel(Game.GetActivePlayer()))
+				elseif type(ImmigrationCounter) == 'table' then
+					local strImmigrationCount = tostring(ImmigrationCounter[1]);
+					local strImmigrationIcon  = "[ICON_TEAM_1]";
+					if ImmigrationCounter[1] > 0 then
+						strImmigrationCount = Locale.ConvertTextKey("TXT_KEY_CO_SP_GREEN", strImmigrationCount);
+						strImmigrationIcon  = "[ICON_TEAM_4]";
+					elseif ImmigrationCounter[1] < 0 then
+						strImmigrationCount = Locale.ConvertTextKey("TXT_KEY_CO_SP_RED", strImmigrationCount);
+						strImmigrationIcon  = "[ICON_TEAM_2]";
+					end
+					
+					row.iExcessHappiness = ImmigrationCounter[1];
+					row.strExcessHappiness = strImmigrationCount .. " (" .. 2*ImmigrationCounter[2] .. "/" .. ImmigrationCounter[3] ..")";
+					strInternationalImmigrationToolTip = Locale.ConvertTextKey("TXT_KEY_CO_SP_IMMIGRATION_RATE_BASE",activePlayer:GetInfluenceLevel(iPlayer)-pPlayer:GetInfluenceLevel(Game.GetActivePlayer()),strImmigrationIcon)
+					end
+					
+					if ImmigrationCounter ~= nil then
+					
+					if PlayerTeam:IsAllowsOpenBordersToTeam(pPlayer:GetTeam()) then
+						strInternationalImmigrationToolTip = strInternationalImmigrationToolTip.."[NEWLINE][ICON_BULLET]"..Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_IN_OPENBORDER")
+					end
+					
+					if AITeam:IsAllowsOpenBordersToTeam(activePlayer:GetTeam()) then
+						strInternationalImmigrationToolTip = strInternationalImmigrationToolTip.."[NEWLINE][ICON_BULLET]"..Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_OUT_OPENBORDER")
+					end
+					
+					if activePlayer:IsDenouncedPlayer(iPlayer) or pPlayer:IsDenouncedPlayer(Game.GetActivePlayer()) then
+						strInternationalImmigrationToolTip = strInternationalImmigrationToolTip.."[NEWLINE][ICON_BULLET]"..Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_DENOUNCING")
+					end
+					
+					if activePlayer:IsDoF(iPlayer) then
+						strInternationalImmigrationToolTip = strInternationalImmigrationToolTip.."[NEWLINE][ICON_BULLET]"..Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_DOF")
+					end
+					
+					if activePlayer:GetReligionCreatedByPlayer() ~= nil and activePlayer:GetReligionCreatedByPlayer() > 0 then
+						local MoveInPlayerReligion = activePlayer:GetReligionCreatedByPlayer()
+						if pPlayer:HasReligionInMostCities(MoveInPlayerReligion) then
+						strInternationalImmigrationToolTip = strInternationalImmigrationToolTip.."[NEWLINE][ICON_BULLET]"..Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_IN_RELIGION")
+						end
+					end
+					
+					if pPlayer:GetReligionCreatedByPlayer() ~= nil and pPlayer:GetReligionCreatedByPlayer() > 0 then
+						local MoveInPlayerReligion = pPlayer:GetReligionCreatedByPlayer()
+						if activePlayer:HasReligionInMostCities(MoveInPlayerReligion) then
+						strInternationalImmigrationToolTip = strInternationalImmigrationToolTip.."[NEWLINE][ICON_BULLET]"..Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_OUT_RELIGION")
+						end
+					end
+					
+					if     activePlayer:GetExcessHappiness() >=150 then
+						strInternationalImmigrationToolTip = strInternationalImmigrationToolTip.."[NEWLINE][ICON_BULLET]"..Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_IN_HAPPINESS_150")
+					elseif activePlayer:GetExcessHappiness() < 150 and activePlayer:GetExcessHappiness() >= 100 then
+						strInternationalImmigrationToolTip = strInternationalImmigrationToolTip.."[NEWLINE][ICON_BULLET]"..Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_IN_HAPPINESS_100")
+					elseif activePlayer:GetExcessHappiness() <  50 and activePlayer:GetExcessHappiness() >=  20 then
+						strInternationalImmigrationToolTip = strInternationalImmigrationToolTip.."[NEWLINE][ICON_BULLET]"..Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_IN_HAPPINESS_50")
+					elseif activePlayer:GetExcessHappiness() <  20 and activePlayer:GetExcessHappiness() >=   0 then
+						strInternationalImmigrationToolTip = strInternationalImmigrationToolTip.."[NEWLINE][ICON_BULLET]"..Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_IN_HAPPINESS_20")
+					elseif activePlayer:GetExcessHappiness() <   0 then
+						strInternationalImmigrationToolTip = strInternationalImmigrationToolTip.."[NEWLINE][ICON_BULLET]"..Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_IN_UNHAPPINESS")
+					end
+					
+					if     pPlayer:HasPolicy(GameInfoTypes["POLICY_IRON_CURTAIN"]) and activePlayer:HasPolicy(GameInfoTypes["POLICY_TREATY_ORGANIZATION"]) then
+					elseif pPlayer:HasPolicy(GameInfoTypes["POLICY_IRON_CURTAIN"]) then
+						strInternationalImmigrationToolTip = strInternationalImmigrationToolTip.."[NEWLINE][ICON_BULLET]"..Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_IN_POLICY_IRON_CURTAIN")
+					elseif activePlayer:HasPolicy(GameInfoTypes["POLICY_TREATY_ORGANIZATION"]) then
+						strInternationalImmigrationToolTip = strInternationalImmigrationToolTip.."[NEWLINE][ICON_BULLET]"..Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_IN_POLICY_TREATY_ORGANIZATION")
+					end
+					if     activePlayer:HasPolicy(GameInfoTypes["POLICY_IRON_CURTAIN"]) and pPlayer:HasPolicy(GameInfoTypes["POLICY_TREATY_ORGANIZATION"]) then
+					elseif activePlayer:HasPolicy(GameInfoTypes["POLICY_IRON_CURTAIN"]) then
+						strInternationalImmigrationToolTip = strInternationalImmigrationToolTip.."[NEWLINE][ICON_BULLET]"..Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_OUT_POLICY_IRON_CURTAIN")
+					elseif pPlayer:HasPolicy(GameInfoTypes["POLICY_TREATY_ORGANIZATION"]) then
+						strInternationalImmigrationToolTip = strInternationalImmigrationToolTip.."[NEWLINE][ICON_BULLET]"..Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_OUT_POLICY_TREATY_ORGANIZATION")
+					end
+					
+					if  activePlayer:GetExcessHappiness() > pPlayer:GetExcessHappiness()
+					and GameInfo.Leader_Traits{ LeaderType = GameInfo.Leaders[activePlayer:GetLeaderType()].Type, TraitType = "TRAIT_RIVER_EXPANSION" }()
+					and(GameInfo.Traits["TRAIT_RIVER_EXPANSION"].PrereqPolicy == nil or (GameInfo.Traits["TRAIT_RIVER_EXPANSION"].PrereqPolicy 
+					and activePlayer:HasPolicy(GameInfoTypes[GameInfo.Traits["TRAIT_RIVER_EXPANSION"].PrereqPolicy])))
+					then
+						strInternationalImmigrationToolTip = strInternationalImmigrationToolTip.."[NEWLINE][ICON_BULLET]"..Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_IN_TRAIT_RIVER_EXPANSION")
+					elseif pPlayer:GetExcessHappiness() > activePlayer:GetExcessHappiness()
+					and GameInfo.Leader_Traits{ LeaderType = GameInfo.Leaders[pPlayer:GetLeaderType()].Type, TraitType = "TRAIT_RIVER_EXPANSION" }()
+					and(GameInfo.Traits["TRAIT_RIVER_EXPANSION"].PrereqPolicy == nil or (GameInfo.Traits["TRAIT_RIVER_EXPANSION"].PrereqPolicy 
+					and    pPlayer:HasPolicy(GameInfoTypes[GameInfo.Traits["TRAIT_RIVER_EXPANSION"].PrereqPolicy])))
+					then
+						strInternationalImmigrationToolTip = strInternationalImmigrationToolTip.."[NEWLINE][ICON_BULLET]"..Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_OUT_TRAIT_RIVER_EXPANSION")
+					end
+					
+					if PlayersAtWar(pPlayer,activePlayer) then
+						strInternationalImmigrationToolTip = Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_WAR_STOPPED")
+					end
+					
+					if  activePlayer:GetNumResourceAvailable(GameInfoTypes["RESOURCE_CONSUMER"], true) <= 0 or activePlayer:GetCurrentEra() >= GameInfo.Eras["ERA_MODERN"].ID and activePlayer:GetNumResourceAvailable(GameInfoTypes["RESOURCE_ELECTRICITY"], true) <= 0 then
+						strInternationalImmigrationToolTip = Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_OTHER_STOPPED")
+					end
+					
+					row.strExcessHappinessToolTip = strInternationalImmigrationToolTip;
 			    end
 			end
 			

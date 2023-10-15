@@ -1523,31 +1523,24 @@
 			<Text>[COLOR_NEGATIVE_TEXT]{1_Num}[ENDCOLOR]</Text>
 		</Row>
 		
-	<!-- New Cultural Influential Dialog 
+		<!-- New Cultural Influential Dialog-->
 		<Update>
 			<Where Tag="TXT_KEY_GENERIC_INFLUENTIAL_ON_AI_1"/>
 			<Set Text="Our people are now buying your blue jeans and listening to your pop music. I worry the rest of the world will also succumb to the influence of your culture."/>
-		</Update>-->
+		</Update>
 		<Row Tag="TXT_KEY_CO_IMMIGRATION_COUNTER_HEADER">
-		<!--<Replace Tag="TXT_KEY_CO_VICTORY_EXCESS_HAPPINESS_HEADER">-->
 			<Text>[ICON_TEAM_4] / [ICON_TEAM_2]</Text>
-		<!--</Replace>-->
 		</Row>
 		<Row Tag="TXT_KEY_CO_IMMIGRATION_COUNTER_HEADER_TT">
-		<!--<Replace Tag="TXT_KEY_CO_VICTORY_EXCESS_HAPPINESS_HEADER_TT">-->
 			<Text>
-
 				Left: Current [ICON_TEAM_4] International Immigration Move-in Rate.
 				[NEWLINE][ICON_BULLET]The Move-in Rate represents how attractive your country is to their people.
 				[NEWLINE][ICON_BULLET]If the Move-in Rate is 4 or above and is larger than the Move-out Rate, the people in this country will [ICON_TEAM_4] migrate to your country by 1 [ICON_CITIZEN] per turn.
 				[NEWLINE][NEWLINE][NEWLINE]Right: Current [ICON_TEAM_2] International Immigration Move-out Rate.
 				[NEWLINE][ICON_BULLET]The Move-out Rate represents how attractive this country is to your people.
 				[NEWLINE][ICON_BULLET]If the Move-out Rate is 4 or above and is larger than the Move-in Rate, your people will [ICON_TEAM_2] migrate to this country by 1 [ICON_CITIZEN] per turn.
-
 				[NEWLINE][NEWLINE]The base [ICON_TEAM_4]Move-in rate is decided by your current [ICON_TOURISM] influence level on the target nation (Unknown:0, Exotic:1, Familiar:2, Popular:3, Influential:4, Dominant:5). So does the base [ICON_TEAM_2]Move-in rate. However they are also greatly affected by the diplomacy condition between two nations.
-
 			</Text>
-		<!--</Replace>-->
 		</Row>
 
 
@@ -8049,7 +8042,7 @@
 			<Text>
 			[COLOR_POSITIVE_TEXT]Beacon of Democracy[ENDCOLOR]
 			[NEWLINE] Every 25 [ICON_HAPPINESS_1] excess Happiness providing +5% [ICON_RESEARCH] Science in all cities. (can be superimposed with the rational policy).
-			+100% [ICON_TEAM_4] International Immigration Rate from other civlizations to Your Nation.
+			[NEWLINE]+100% [ICON_TEAM_4] International Immigration Rate from other civlizations to Your Nation.
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_TREATY_ORGANIZATION_TEXT">

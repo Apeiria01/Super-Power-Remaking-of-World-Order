@@ -83,9 +83,8 @@ function NewBuildingEffects(iPlayer, iCity, iBuilding, bGold, bFaith)
 				end
 
 				-- Move Policy Buildings & Count Buildings
-				local policFreeBCCapital = GameInfo.Policy_FreeBuildingClassCapital { BuildingClassType = building
-				.BuildingClass } ()
-				if oCity:IsHasBuilding(building.ID) and (policFreeBCCapital ~= nil or building.BuildingClass == "BUILDINGCLASS_COUNT_BUILIDNGS") then
+				local policFreeBCCapital = GameInfo.Policy_FreeBuildingClassCapital { BuildingClassType = building.BuildingClass } ()
+				if oCity:IsHasBuilding(building.ID) and (policFreeBCCapital ~= nil) then
 					local i = oCity:GetNumBuilding(building.ID);
 					oCity:SetNumRealBuilding(building.ID, 0);
 					pCity:SetNumRealBuilding(building.ID, i);

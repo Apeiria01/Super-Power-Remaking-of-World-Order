@@ -453,7 +453,6 @@
 			<FaithCost>-1</FaithCost>
 			<NukeImmune>true</NukeImmune>
 			<NeverCapture>true</NeverCapture>
-			<MilitaryProductionModifier>-2000</MilitaryProductionModifier>
 			<Description>TXT_KEY_SP_TROOPS_DEBUFF</Description>
 			<Civilopedia>TXT_KEY_SP_TROOPS_TEXT</Civilopedia>
 			<IconAtlas>SP_BUILDING_ATLAS_DLC_07</IconAtlas>
