@@ -1457,6 +1457,10 @@
 			<UnitType>UNIT_BAZOOKA</UnitType>
 			<PromotionType>PROMOTION_ANTI_TANK_BAZOOKA</PromotionType>
 		</Row>
+		<Row>
+			<UnitType>UNIT_BAZOOKA</UnitType>
+			<PromotionType>PROMOTION_ONLY_DEFENSIVE</PromotionType>
+		</Row>
 
 		<Row>
 			<UnitType>UNIT_NUCLEAR_ARTILLERY</UnitType>

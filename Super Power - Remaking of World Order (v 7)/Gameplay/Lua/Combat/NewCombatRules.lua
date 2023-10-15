@@ -155,11 +155,6 @@ function NewAttackEffect()
 	local ChainReactionID = GameInfo.UnitPromotions["PROMOTION_CHAIN_REACTION"].ID
 	local AntiDebuffID = GameInfo.UnitPromotions["PROMOTION_ANTI_DEBUFF"].ID
 
-	-------Nuclear Rocket Launcher Kills itself (<suicide>is not working!)
-	if attUnit:GetUnitType() == GameInfoTypes.UNIT_BAZOOKA then
-		attUnit:ChangeDamage(attUnit:GetCurrHitPoints());
-	end
-
 	if not defPlayer:IsAlive() then
 		return
 	end
