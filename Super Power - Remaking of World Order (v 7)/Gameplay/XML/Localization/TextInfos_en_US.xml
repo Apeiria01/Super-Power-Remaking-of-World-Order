@@ -17069,8 +17069,5 @@
 			[NEWLINE]Expanding the scale of cities will provide more troops.
 			</Text>
 		</Row>
-		<Replace Tag="TXT_KEY_DIPLO_YOUR_ITEMS_LABEL">
-			<Text>----------------[NEWLINE][COLOR_POSITIVE_TEXT]YOUR Items[ENDCOLOR]</Text>
-		</Replace>
 	</Language_en_US>
 </GameData>

@@ -3602,7 +3602,7 @@ if Game then
 					end
 				end
 				if #luxuries > 0 or #strategic > 0 then
-					insert( tips, L"TXT_KEY_DIPLO_YOUR_ITEMS_LABEL")
+					insert( tips, "----------------" .. "[NEWLINE][COLOR_POSITIVE_TEXT]" .. L"TXT_KEY_DIPLO_YOUR_ITEMS_LABEL" .. "[ENDCOLOR]")
 					if #luxuries > 0 then
 						insert( tips, "[ICON_BULLET]" .. L"TXT_KEY_LUXURIES_SHORT" .. ":" .. concat(luxuries))
 					end
