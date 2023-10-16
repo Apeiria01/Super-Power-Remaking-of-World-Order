@@ -579,7 +579,6 @@
 	<Technologies>
 		<Row>
 			<Type>TECH_NAVIGATION</Type>
-<!--			<Cost>480</Cost>-->
 			<Cost>500</Cost>
 			<Description>TXT_KEY_TECH_NAVIGATION_TITLE</Description>
 			<Civilopedia>TXT_KEY_TECH_NAVIGATION_DESC</Civilopedia>
@@ -597,7 +596,6 @@
 		</Row>
 		<Row>
 			<Type>TECH_ACOUSTICS</Type>
-<!--			<Cost>480</Cost>-->
 			<Cost>500</Cost>
 			<Description>TXT_KEY_TECH_ACOUSTICS_TITLE</Description>
 			<Civilopedia>TXT_KEY_TECH_ACOUSTICS_DESC</Civilopedia>
@@ -614,7 +612,6 @@
 		</Row>
 		<Row>
 			<Type>TECH_ADMINISTRATION</Type>
-<!--			<Cost>480</Cost>-->
 			<Cost>500</Cost>
 			<Description>TXT_KEY_TECH_ADMINISTRATION_TITLE</Description>
 			<Civilopedia>TXT_KEY_TECH_ADMINISTRATION_DESC</Civilopedia>
@@ -631,7 +628,6 @@
 		</Row>
 		<Row>
 			<Type>TECH_PRINTING_PRESS</Type>
-<!--			<Cost>480</Cost>-->
 			<Cost>500</Cost>
 			<Description>TXT_KEY_TECH_PRINTING_PRESS_TITLE</Description>
 			<Civilopedia>TXT_KEY_TECH_PRINTING_PRESS_DESC</Civilopedia>
@@ -650,7 +646,6 @@
 		</Row>
 		<Row>
 			<Type>TECH_CHEMISTRY</Type>
-<!--			<Cost>480</Cost>-->
 			<Cost>500</Cost>
 			<Description>TXT_KEY_TECH_CHEMISTRY_TITLE</Description>
 			<Civilopedia>TXT_KEY_TECH_CHEMISTRY_DESC</Civilopedia>
@@ -667,7 +662,6 @@
 		</Row>
 		<Row>
 			<Type>TECH_GUNPOWDER</Type>
-<!--			<Cost>480</Cost>-->
 			<Cost>500</Cost>
 			<Description>TXT_KEY_TECH_GUNPOWDER_TITLE</Description>
 			<Civilopedia>TXT_KEY_TECH_GUNPOWDER_DESC</Civilopedia>
@@ -686,7 +680,6 @@
 
 		<Row>
 			<Type>TECH_ARCHITECTURE</Type>
-<!--			<Cost>660</Cost>-->
 			<Cost>700</Cost>
 			<Description>TXT_KEY_TECH_ARCHITECTURE_TITLE</Description>
 			<Civilopedia>TXT_KEY_TECH_ARCHITECTURE_DESC</Civilopedia>
@@ -703,7 +696,6 @@
 		</Row>
 		<Row>
 			<Type>TECH_SCIENTIFIC_THEORY</Type>
-<!--			<Cost>660</Cost>-->
 			<Cost>700</Cost>
 			<Description>TXT_KEY_TECH_SCIENTIFIC_THEORY_TITLE</Description>
 			<Civilopedia>TXT_KEY_TECH_SCIENTIFIC_THEORY_DESC</Civilopedia>
@@ -720,7 +712,6 @@
 		</Row>
 		<Row>
 			<Type>TECH_ECONOMICS</Type>
-<!--			<Cost>660</Cost>-->
 			<Cost>700</Cost>
 			<Description>TXT_KEY_TECH_ECONOMICS_TITLE</Description>
 			<Civilopedia>TXT_KEY_TECH_ECONOMICS_DESC</Civilopedia>
@@ -737,7 +728,6 @@
 		</Row>
 		<Row>
 			<Type>TECH_METALLURGY</Type>
-<!--			<Cost>660</Cost>-->
 			<Cost>700</Cost>
 			<Description>TXT_KEY_TECH_METALLURGY_TITLE</Description>
 			<Civilopedia>TXT_KEY_TECH_METALLURGY_DESC</Civilopedia>
@@ -759,7 +749,6 @@
 	<Technologies>
 		<Row>
 			<Type>TECH_ARCHAEOLOGY</Type>
-<!--			<Cost>850</Cost>-->
 			<Cost>950</Cost>
 			<Description>TXT_KEY_TECH_ARCHAEOLOGY_TITLE</Description>
 			<Civilopedia>TXT_KEY_TECH_ARCHAEOLOGY_DESC</Civilopedia>
@@ -777,7 +766,6 @@
 		</Row>
 		<Row>
 			<Type>TECH_STEAM_POWER</Type>
-<!--			<Cost>850</Cost>-->
 			<Cost>950</Cost>
 			<Description>TXT_KEY_TECH_STEAM_POWER_TITLE</Description>
 			<Civilopedia>TXT_KEY_TECH_STEAM_POWER_DESC</Civilopedia>
@@ -795,7 +783,6 @@
 		</Row>
 		<Row>
 			<Type>TECH_BIOLOGY</Type>
-<!--			<Cost>850</Cost>-->
 			<Cost>950</Cost>
 			<Description>TXT_KEY_TECH_BIOLOGY_TITLE</Description>
 			<Civilopedia>TXT_KEY_TECH_BIOLOGY_DESC</Civilopedia>
@@ -812,7 +799,6 @@
 		</Row>
 		<Row>
 			<Type>TECH_ELECTRICITY</Type>
-<!--			<Cost>850</Cost>-->
 			<Cost>950</Cost>
 			<Description>TXT_KEY_TECH_ELECTRICITY_TITLE</Description>
 			<Civilopedia>TXT_KEY_TECH_ELECTRICITY_DESC</Civilopedia>
@@ -829,7 +815,6 @@
 		</Row>
 		<Row>
 			<Type>TECH_FERTILIZER</Type>
-<!--			<Cost>850</Cost>-->
 			<Cost>950</Cost>
 			<Description>TXT_KEY_TECH_FERTILIZER_TITLE</Description>
 			<Civilopedia>TXT_KEY_TECH_FERTILIZER_DESC</Civilopedia>
@@ -846,7 +831,6 @@
 		</Row>
 		<Row>
 			<Type>TECH_RIFLING</Type>
-<!--			<Cost>850</Cost>-->
 			<Cost>950</Cost>
 			<Description>TXT_KEY_TECH_RIFLING_TITLE</Description>
 			<Civilopedia>TXT_KEY_TECH_RIFLING_DESC</Civilopedia>

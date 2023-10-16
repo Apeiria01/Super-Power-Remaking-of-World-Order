@@ -2348,19 +2348,14 @@
 			<PolicyType>POLICY_EXPLORATION</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_EXPLORATION_REMOVE_DEBUFF</BuildingClassType>
 		</Row>
+		<Row>
+			<PolicyType>POLICY_MERCHANT_NAVY</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_POLICY_MERCHANT_NAVY_FREE</BuildingClassType>
+			<Count>1</Count>
+		</Row>
 	</Policy_FreeBuildingClass>
 
-	<Policy_FreeBuildingClassCapital>
-		<Row>
-			<PolicyType>POLICY_FAMILY_REGISTER</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_FAMILY_PRODUCTION</BuildingClassType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_CULT_PERSONALITY</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_AUTOCRACY_FIREWALL</BuildingClassType>
-		</Row>
-	</Policy_FreeBuildingClassCapital>
-
+	<Policy_FreeBuildingClassCapital />
 	<Policy_FreeBuildingClassCityStates />
 
 	<Policy_SpecialistYieldChanges>
@@ -2401,12 +2396,6 @@
 			<Type>BUILDINGCLASS_FAMILY_PRODUCTION</Type>
 			<DefaultBuilding>BUILDING_FAMILY_PRODUCTION</DefaultBuilding>
 			<Description>TXT_KEY_BUILDING_FAMILY_PRODUCTION</Description>
-		</Row>
-
-		<Row>
-			<Type>BUILDINGCLASS_AUTOCRACY_FIREWALL</Type>
-			<DefaultBuilding>BUILDING_AUTOCRACY_FIREWALL</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_AUTOCRACY_FIREWALL</Description>
 		</Row>
 
 		<Row>
@@ -2460,21 +2449,6 @@
 			<Help>TXT_KEY_BUILDING_FAMILY_PRODUCTION_HELP</Help>
 			
 		</Row>
-
-		<Row>
-			<Type>BUILDING_AUTOCRACY_FIREWALL</Type>
-			<BuildingClass>BUILDINGCLASS_AUTOCRACY_FIREWALL</BuildingClass>
-			<Cost>-1</Cost>
-			<NeverCapture>true</NeverCapture>
-			<NukeImmune>true</NukeImmune>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<NullifyInfluenceModifier>true</NullifyInfluenceModifier>
-			<PortraitIndex>7</PortraitIndex>
-			<IconAtlas>EXPANSION_TECH_ATLAS_1</IconAtlas>
-			<Description>TXT_KEY_BUILDING_AUTOCRACY_FIREWALL</Description>
-			<Help>TXT_KEY_BUILDING_AUTOCRACY_FIREWALL_HELP</Help>
-			<GreatWorkCount>-1</GreatWorkCount>
-		</Row>
 	</Buildings>
 	<Building_YieldChangesPerPop>
 		<Row>
@@ -2506,14 +2480,6 @@
 			<Description>TXT_KEY_POLICY_MERCHANT_NAVY</Description>
 		</Row>
 	</Buildings>
-
-	<Policy_FreeBuildingClass>
-		<Row>
-			<PolicyType>POLICY_MERCHANT_NAVY</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_POLICY_MERCHANT_NAVY_FREE</BuildingClassType>
-			<Count>1</Count>
-		</Row>
-	</Policy_FreeBuildingClass>
 
 	<Building_EnableUnitPurchase>
 		<Row>

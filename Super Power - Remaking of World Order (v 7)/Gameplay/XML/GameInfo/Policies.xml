@@ -639,7 +639,7 @@
 		
 				
 		<Update>
-			<Set UnhappinessMod="-15" GoldenAgeTurns="10" CommonFoeTourismModifier="0" IdeologyUnhappinessModifier="-50"/>
+			<Set UnhappinessMod="-15" GoldenAgeTurns="10" CommonFoeTourismModifier="0" IdeologyUnhappinessModifier="-50" NullifyInfluenceModifier="1"/>
 			<Where Type="POLICY_CULT_PERSONALITY"/>
 		</Update>
 		<Update>

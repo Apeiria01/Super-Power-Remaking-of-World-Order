@@ -195,16 +195,7 @@ function CheckCapital(iPlayerID)
 
         if pNCapital and pNCapital ~= pOCapital then
             -- Palace
-            local iPalaceID = GameInfo.Buildings.BUILDING_PALACE.ID;
-            local overridePalace =
-                GameInfo.Civilization_BuildingClassOverrides {
-                    BuildingClassType = "BUILDINGCLASS_PALACE",
-                    CivilizationType = GameInfo.Civilizations[pPlayer:GetCivilizationType()]
-                        .Type
-                } ();
-            if overridePalace ~= nil then
-                iPalaceID = GameInfo.Buildings[overridePalace.BuildingType].ID;
-            end
+            local iPalaceID = pPlayer:GetCivBuilding(GameInfoTypes["BUILDINGCLASS_PALACE"])
             pNCapital:SetNumRealBuilding(iPalaceID, 1);
 
             for building in GameInfo.Buildings() do
