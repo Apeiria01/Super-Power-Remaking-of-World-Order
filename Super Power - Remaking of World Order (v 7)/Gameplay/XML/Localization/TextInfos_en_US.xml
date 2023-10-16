@@ -7102,16 +7102,6 @@
 			Troop level low: Initially 6 troops provided for human players and 8 for AI. Cities with city size higher than "town" provide 1 extra troops per city size they acquire. [NEWLINE]
 			</Text>
 		</Row>
-		<Row Tag="TXT_KEY_SP_TROOPS_USED">
-			<Text>Troops Used</Text>
-		</Row>
-		<Row Tag="TXT_KEY_SP_TROOPS_USED_HELP">
-			<Text>Sign the count of military units.</Text>
-		</Row>
-		<Row Tag="TXT_KEY_SP_TROOPS_DEBUFF">
-			<Text>Troops - Overrun Debuff</Text>
-		</Row>
-
 
 		<Row Tag="TXT_KEY_SP_RESOURCE_NATRUALGAS">
 			<Text>Natural Gas</Text>

@@ -121,11 +121,6 @@
 			<Description>TXT_KEY_BUILDING_SUPERCONDUCTING_CABLE</Description>
 		</Row>
 
-		<Row>
-			<Type>BUILDINGCLASS_TROOPS</Type>
-			<DefaultBuilding>BUILDING_TROOPS_DEBUFF</DefaultBuilding>
-			<Description>TXT_KEY_SP_TROOPS</Description>
-		</Row>
 	</BuildingClasses>
 	
 	
@@ -416,48 +411,6 @@
 			<HurryCostModifier>200</HurryCostModifier>
 			<IconAtlas>SPBuildings_ATLAS</IconAtlas>
 			<PortraitIndex>51</PortraitIndex>
-		</Row>
-		
-		<Row>
-			<Type>BUILDING_TROOPS</Type>
-			<BuildingClass>BUILDINGCLASS_COUNT_BUILIDNGS</BuildingClass>
-			<Cost>-1</Cost>
-			<FaithCost>-1</FaithCost>
-			<NukeImmune>true</NukeImmune>
-			<NeverCapture>true</NeverCapture>
-			<Help>TXT_KEY_SP_TROOPS_HELP</Help>
-			<Description>TXT_KEY_SP_TROOPS</Description>
-			<Civilopedia>TXT_KEY_SP_TROOPS_TEXT</Civilopedia>
-			<IconAtlas>CIVIL_WAR_RESOURCE_ATLAS_EXP2</IconAtlas>
-			<PortraitIndex>0</PortraitIndex>
-			<GreatWorkCount>-2</GreatWorkCount>
-		</Row>
-		<Row>
-			<Type>BUILDING_TROOPS_USED</Type>
-			<BuildingClass>BUILDINGCLASS_COUNT_BUILIDNGS</BuildingClass>
-			<Cost>-1</Cost>
-			<FaithCost>-1</FaithCost>
-			<NukeImmune>true</NukeImmune>
-			<NeverCapture>true</NeverCapture>
-			<Help>TXT_KEY_SP_TROOPS_USED_HELP</Help>
-			<Description>TXT_KEY_SP_TROOPS_USED</Description>
-			<Civilopedia>TXT_KEY_SP_TROOPS_TEXT</Civilopedia>
-			<IconAtlas>SP_BUILDING_ATLAS_DLC_07</IconAtlas>
-			<PortraitIndex>3</PortraitIndex>
-			<GreatWorkCount>-2</GreatWorkCount>
-		</Row>
-		<Row>
-			<Type>BUILDING_TROOPS_DEBUFF</Type>
-			<BuildingClass>BUILDINGCLASS_TROOPS</BuildingClass>
-			<Cost>-1</Cost>
-			<FaithCost>-1</FaithCost>
-			<NukeImmune>true</NukeImmune>
-			<NeverCapture>true</NeverCapture>
-			<Description>TXT_KEY_SP_TROOPS_DEBUFF</Description>
-			<Civilopedia>TXT_KEY_SP_TROOPS_TEXT</Civilopedia>
-			<IconAtlas>SP_BUILDING_ATLAS_DLC_07</IconAtlas>
-			<PortraitIndex>3</PortraitIndex>
-			<GreatWorkCount>-1</GreatWorkCount>
 		</Row>
 	</Buildings>
 

@@ -213,37 +213,6 @@ SameCombatClassUpgradeButton = {
 LuaEvents.UnitPanelActionAddin(SameCombatClassUpgradeButton);
 
 -------------------------------------------------------------------Special Missions---------------------------------------------------
---
---------Cancel TradeRoute
--- CancelTradeButton = {
---  Name = "Cancel Trade Route",
---  Title = "TXT_KEY_SP_UI_BTN_UNITUPGRADE_SHORT", -- or a TXT_KEY
---  OrderPriority = 200, -- default is 200
---  IconAtlas = "UNIT_ACTION_ATLAS", -- 45 and 64 variations required
---  PortraitIndex = 63,
---  ToolTip = "TXT_KEY_SP_UI_BTN_UNITUPGRADE", -- or a TXT_KEY_ or a function
---  
--- 
---  
---  Condition = function(action, unit)
---   return unit:IsTrade();
---  end, -- or nil or a boolean, default is true
---  
---  Disabled = function(action, unit)   
---    return unit:CanMove()
---  end, -- or nil or a boolean, default is false
---  
---  Action = function(action, unit, eClick) 
---  
---	print ("Cancel TradeRoute pressed!")
---	unit:Kill(false, -1)	
---  
---  
---  end
--- };
---
--- LuaEvents.UnitPanelActionAddin(CancelTradeButton);
---
 
 ----Settler joins the city
 SettlerMissionButton = {
@@ -1188,8 +1157,6 @@ EstablishCorpsButton = {
 					EstablishCorpsButton.ToolTip = Locale.ConvertTextKey("TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMADA")
 				end
                 local AvailableArmeeNum = player:GetNumArmeeTotal() - player:GetNumArmeeUsed();
-                print("集团军",player:GetNumArmeeTotal(), player:GetNumArmeeUsed())
-                
                 EstablishCorpsButton.ToolTip = EstablishCorpsButton.ToolTip .. Locale.ConvertTextKey("TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMEE_EXTRA", AvailableArmeeNum)
 				EstablishCorpsButton.PortraitIndex = 3;
 			else
@@ -1201,7 +1168,6 @@ EstablishCorpsButton = {
 					EstablishCorpsButton.ToolTip = Locale.ConvertTextKey("TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_FLEET")
 				end
                 local AvailableCropsNum = player:GetNumCropsTotal() - player:GetNumCropsUsed();
-                print("军团",player:GetNumCropsTotal(), player:GetNumCropsUsed())
 				EstablishCorpsButton.ToolTip = EstablishCorpsButton.ToolTip .. Locale.ConvertTextKey("TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_EXTRA", AvailableCropsNum);
 				EstablishCorpsButton.PortraitIndex = 1;
 			end
