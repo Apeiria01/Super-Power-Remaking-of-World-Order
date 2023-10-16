@@ -15270,5 +15270,8 @@
 			[NEWLINE]增大城市规模数量可以提供更多兵力。
 			</Text>
 		</Row>
+		<Replace Tag="TXT_KEY_DIPLO_YOUR_ITEMS_LABEL">
+			<Text>----------------[NEWLINE][COLOR_POSITIVE_TEXT]你的项目[ENDCOLOR]</Text>
+		</Replace>
 	</Language_zh_CN>
 </GameData>
