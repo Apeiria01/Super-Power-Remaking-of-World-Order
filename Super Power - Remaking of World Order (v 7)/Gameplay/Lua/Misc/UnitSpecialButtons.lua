@@ -1091,7 +1091,7 @@ EstablishCorpsButton = {
         local plot = unit:GetPlot();
 		local city = plot:GetPlotCity() or plot:GetWorkingCity();
 
-		if player:IsLackingTroops()
+		if player:GetDomainTroopsActive() <= 0
         --only land unit can establish corps SP8.0
         or unit:GetDomainType() ~= DomainTypes.DOMAIN_LAND
         or plot:GetNumUnits() ~= 2

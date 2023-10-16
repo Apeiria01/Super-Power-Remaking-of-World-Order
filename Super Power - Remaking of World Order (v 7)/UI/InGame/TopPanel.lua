@@ -233,7 +233,7 @@ function UpdateData()
 						strMinText = string.format("%i%s ", iNumAvailable, pResource.IconString);
 						
 						-- Colorize for amount available
-						if     (iNumAvailable > 0) then
+						if (iNumAvailable > 0) then
 							strMinText = "[COLOR_POSITIVE_TEXT]".. strMinText .."[ENDCOLOR] ";
 						elseif (iNumAvailable < 0) then
 							strMinText = "[COLOR_WARNING_TEXT]".. strMinText .."[ENDCOLOR] ";
