@@ -7334,10 +7334,10 @@
 			<Text>+1[ICON_MOVES]移动。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_FAST_WORKER_TECH" >
-			<Text>+1[ICON_MOVES]移动。</Text>
+			<Text>+1[ICON_MOVES]移动</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_PASSABLE_WORKER_TECH" >
-			<Text>能够穿越山脉和进入冰区。</Text>
+			<Text>能够穿越山脉和进入冰区</Text>
 		</Row>
 		<Replace Tag="TXT_KEY_PROMOTION_NAVAL_TRADITION_HELP" >
 			<Text>+1[ICON_MOVES]移动。[NEWLINE]+15%[ICON_STRENGTH]战斗力。</Text>
@@ -13471,7 +13471,7 @@
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_WORKER_EMBARKABLE_TECH">
-			<Text>能够在[COLOR_POSITIVE_TEXT]水面[ENDCOLOR]建造设施。</Text>
+			<Text>能够在[COLOR_POSITIVE_TEXT]水面[ENDCOLOR]建造设施</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_WOLFPACK">
@@ -15261,5 +15261,55 @@
 			[NEWLINE]增大城市规模数量可以提供更多兵力。
 			</Text>
 		</Row>
+
+		<Row Tag="TXT_KEY_CITY_BOMBARDMENT_MOD_SP">
+			<Text>城市获得间接火力</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TECH_HELP_UNITS_UNLOCKED_SP">
+			<Text>[NEWLINE][COLOR_ENDURANCE]解锁单位：[ENDCOLOR][NEWLINE]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TECH_HELP_BUILDINGS_UNLOCKED_SP">
+			<Text>[NEWLINE][COLOR_ENDURANCE]解锁建筑：[ENDCOLOR][NEWLINE]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TECH_HELP_WONDERS_UNLOCKED_SP">
+			<Text>[NEWLINE][COLOR_ENDURANCE]解锁奇观：[ENDCOLOR][NEWLINE]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TECH_HELP_PROJECTS_UNLOCKED_SP">
+			<Text>[NEWLINE][COLOR_ENDURANCE]解锁计划：[ENDCOLOR][NEWLINE]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TECH_HELP_PROCESSES_UNLOCKED_SP">
+			<Text>[NEWLINE][COLOR_ENDURANCE]解锁项目：[ENDCOLOR][NEWLINE]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TECH_HELP_BUILDS_UNLOCKED_SP">
+			<Text>[NEWLINE][COLOR_ENDURANCE]解锁建造：[ENDCOLOR][NEWLINE]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TECH_HELP_RESOURCES_UNLOCKED_SP">
+			<Text>[NEWLINE][COLOR_ENDURANCE]解锁资源：[ENDCOLOR][NEWLINE]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TECH_HELP_YIELDS_UNLOCKED_SP">
+			<Text>[NEWLINE][COLOR_ENDURANCE]解锁产出：[ENDCOLOR][NEWLINE]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TECH_HELP_ACTIONS_UNLOCKED_SP">
+			<Text>[NEWLINE][COLOR_ENDURANCE]解锁能力：[ENDCOLOR][NEWLINE]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TECH_HELP_BUILD_REDUCTION_SP">
+			<Text>{1_Build}: 减少{2_Turns}回合建造时间</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TECH_HELP_WORKER_SPEED_MODIFIER_SP">
+			<Text>[COLOR_POSITIVE_TEXT]区域设施[ENDCOLOR]修建速度增加{1_Percent}%</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TECH_HELP_RAZE_SPEED_MODIFIER_SP">
+			<Text>夷平城市的速度增加{1_Percent}%</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_TECH_AUTOMATION_T_HELP_SHORT">
+			<Text>可使用工人更新全图地块设施(自动建设设施开发资源地块，修复被劫掠地块，但不清除核辐射)</Text>
+		</Row>
+		<Row Tag="TXT_KEY_FREE_PROMOTION_FROM_TECH_SHORT">
+      		<Text>给予特定单位晋升: [COLOR_POSITIVE_TEXT]{@1_PromotionHelp}[ENDCOLOR]</Text>
+    	</Row>
+		<Row Tag="TXT_KEY_DOUBLE_TOURISM_PERCENT">
+			<Text>增加{1_Percent}%[ICON_TOURISM]魅力产出</Text>
+		</Row>
+		
 	</Language_zh_CN>
 </GameData>

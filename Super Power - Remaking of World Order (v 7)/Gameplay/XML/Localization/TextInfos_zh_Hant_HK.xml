@@ -7225,10 +7225,10 @@
 			<Text>+1[ICON_MOVES]移動。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_FAST_WORKER_TECH" >
-			<Text>+1[ICON_MOVES]移動。</Text>
+			<Text>+1[ICON_MOVES]移動</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_PASSABLE_WORKER_TECH" >
-			<Text>能夠穿越山脈和進入冰區。</Text>
+			<Text>能夠穿越山脈和進入冰區</Text>
 		</Row>
 		<Replace Tag="TXT_KEY_PROMOTION_NAVAL_TRADITION_HELP" >
 			<Text>+1[ICON_MOVES]移動。[NEWLINE]+15%[ICON_STRENGTH]戰鬥力。</Text>
@@ -13291,7 +13291,7 @@
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_WORKER_EMBARKABLE_TECH">
-			<Text>能夠在[COLOR_POSITIVE_TEXT]水面[ENDCOLOR]建造設施。</Text>
+			<Text>能夠在[COLOR_POSITIVE_TEXT]水面[ENDCOLOR]建造設施</Text>
 		</Row>
 		
 		<Row Tag="TXT_KEY_PROMOTION_WOLFPACK">
@@ -15057,6 +15057,55 @@
 			[COLOR_NEGATIVE_TEXT][ICON_RES_TROOPS]兵力不足：你無法建造、從戰鬥中捕獲軍事單位，新生軍事單位會被強製解散！[ENDCOLOR]
 			[NEWLINE]增大城市規模數量可以提供更多兵力。
 			</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_CITY_BOMBARDMENT_MOD_SP">
+			<Text>城市獲得間接火力</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TECH_HELP_UNITS_UNLOCKED_SP">
+			<Text>[NEWLINE][COLOR_ENDURANCE]解鎖單位：[ENDCOLOR][NEWLINE]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TECH_HELP_BUILDINGS_UNLOCKED_SP">
+			<Text>[NEWLINE][COLOR_ENDURANCE]解鎖建築：[ENDCOLOR][NEWLINE]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TECH_HELP_WONDERS_UNLOCKED_SP">
+			<Text>[NEWLINE][COLOR_ENDURANCE]解鎖奇觀：[ENDCOLOR][NEWLINE]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TECH_HELP_PROJECTS_UNLOCKED_SP">
+			<Text>[NEWLINE][COLOR_ENDURANCE]解鎖計劃：[ENDCOLOR][NEWLINE]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TECH_HELP_PROCESSES_UNLOCKED_SP">
+			<Text>[NEWLINE][COLOR_ENDURANCE]解鎖項目：[ENDCOLOR][NEWLINE]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TECH_HELP_BUILDS_UNLOCKED_SP">
+			<Text>[NEWLINE][COLOR_ENDURANCE]解鎖建造：[ENDCOLOR][NEWLINE]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TECH_HELP_RESOURCES_UNLOCKED_SP">
+			<Text>[NEWLINE][COLOR_ENDURANCE]解鎖資源：[ENDCOLOR][NEWLINE]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TECH_HELP_YIELDS_UNLOCKED_SP">
+			<Text>[NEWLINE][COLOR_ENDURANCE]解鎖產出：[ENDCOLOR][NEWLINE]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TECH_HELP_ACTIONS_UNLOCKED_SP">
+			<Text>[NEWLINE][COLOR_ENDURANCE]解鎖能力：[ENDCOLOR][NEWLINE]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TECH_HELP_BUILD_REDUCTION_SP">
+			<Text>{1_Build}: 減少{2_Turns}回合建造時間</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TECH_HELP_WORKER_SPEED_MODIFIER_SP">
+			<Text>[COLOR_POSITIVE_TEXT]區域設施[ENDCOLOR]修建速度增加{1_Percent}%</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TECH_HELP_RAZE_SPEED_MODIFIER_SP">
+			<Text>夷平城市的速度增加{1_Percent}%</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_TECH_AUTOMATION_T_HELP_SHORT">
+			<Text>可使用工人更新全圖地塊設施(自動建設設施開發資源地塊，修復被劫掠地塊，但不清除核輻射)</Text>
+		</Row>
+		<Row Tag="TXT_KEY_FREE_PROMOTION_FROM_TECH_SHORT">
+      		<Text>給予特定單位晉升: [COLOR_POSITIVE_TEXT]{@1_PromotionHelp}[ENDCOLOR]</Text>
+    	</Row>
+		<Row Tag="TXT_KEY_DOUBLE_TOURISM_PERCENT">
+			<Text>增加{1_Percent}%[ICON_TOURISM]旅遊業績產出</Text>
 		</Row>
 	</Language_zh_Hant_HK>
 </GameData>
