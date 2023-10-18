@@ -7097,11 +7097,21 @@
 			Besides, you can use great general to "upgrade" normal units to corps, with no requirements of buildings in city. The great general will be consumed then.[NEWLINE]
 			Air forces are not able to establish corps or Armee. [NEWLINE]
 			"Troops" resource is introduced to limit the number of combat units. [NEWLINE]
-			Troop level high: Initially 24 troops provided for human players and 32 for AI. Cities with city size higher than "town" provide 4 extra troops per city size they acquire. [NEWLINE]
-			Troop level medium: Initially 12 troops provided for human players and 16 for AI. Cities with city size higher than "town" provide 2 extra troops per city size they acquire(Default). [NEWLINE]
-			Troop level low: Initially 6 troops provided for human players and 8 for AI. Cities with city size higher than "town" provide 1 extra troops per city size they acquire. [NEWLINE]
+			Troop level high: Initially 36 troops provided for players. Cities with city size higher than "town" provide 6 extra troops per city size they acquire. [NEWLINE]
+			Troop level medium: Initially 24 troops provided for players. Cities with city size higher than "town" provide 4 extra troops per city size they acquire(Default). [NEWLINE]
+			Troop level low: Initially 12 troops provided for players. Cities with city size higher than "town" provide 2 extra troops per city size they acquire. [NEWLINE]
 			</Text>
 		</Row>
+		<Row Tag="TXT_KEY_SP_TROOPS_USED">
+			<Text>Troops Used</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_TROOPS_USED_HELP">
+			<Text>Sign the count of military units.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_TROOPS_DEBUFF">
+			<Text>Troops - Overrun Debuff</Text>
+		</Row>
+
 
 		<Row Tag="TXT_KEY_SP_RESOURCE_NATRUALGAS">
 			<Text>Natural Gas</Text>
