@@ -1,12 +1,6 @@
 -- CAPTURE CITY POPUP
 -- This popup occurs when a city is capture and must be annexed or puppeted.
 
-
---include( "UtilityFunctions.lua" )
-
-
-
-
 PopupLayouts[ButtonPopupTypes.BUTTONPOPUP_CITY_CAPTURED] = function(popupInfo)
 
 	local cityID				= popupInfo.Data1;
@@ -70,20 +64,10 @@ PopupLayouts[ButtonPopupTypes.BUTTONPOPUP_CITY_CAPTURED] = function(popupInfo)
 	
 	-- Initialize 'Annex' button.
 	local OnCaptureClicked = function()
-	
-
-	
-	
 		Network.SendDoTask(cityID, TaskTypes.TASK_ANNEX_PUPPET, -1, -1, false, false, false, false);
---		newCity:ChooseProduction();
-
 		----------------------------------------------------------------------SP Annexing city build a City Hall Start--------------------------
 	    print ("New City Hall built!")
 	 	----------------------------------------------------------------------SP Annexing city build a City Hall End--------------------------	
-		
-		
-		
-		
 	end
 	
 	if (not activePlayer:MayNotAnnex()) then
@@ -108,6 +92,26 @@ PopupLayouts[ButtonPopupTypes.BUTTONPOPUP_CITY_CAPTURED] = function(popupInfo)
 		strToolTip = strToolTip .. activePlayer:GetWarmongerPreviewString(iPreviousOwner);
 	end
 	AddButton(buttonText, OnPuppetClicked, strToolTip);
+
+	-- CITY SCREEN CLOSED - Don't look, Marc
+	local CityScreenClosed = function()
+		UIManager:DequeuePopup(Controls.EmptyPopup);
+		Events.SerialEventExitCityScreen.Remove(CityScreenClosed);
+	end
+
+	-- Initialize 'View City' button.
+	local OnViewCityClicked = function()
+		-- Queue up an empty popup at a higher priority so that it prevents other cities from appearing while we're looking at this one!
+		UIManager:QueuePopup(Controls.EmptyPopup, PopupPriority.GenericPopup+1);
+		Events.SerialEventExitCityScreen.Add(CityScreenClosed);
+		
+		UI.SetCityScreenViewingMode(true);
+		UI.DoSelectCityAtPlot( newCity:Plot() );
+	end
+	
+	buttonText = Locale.ConvertTextKey("TXT_KEY_POPUP_VIEW_CITY");
+	strToolTip = Locale.ConvertTextKey("TXT_KEY_POPUP_VIEW_CITY_DETAILS");
+	AddButton(buttonText, OnViewCityClicked, strToolTip, true);	-- true is bPreventClose
 	
 	-- Initialize 'Raze' button.
 	local bRaze = activePlayer:CanRaze(newCity);
@@ -124,26 +128,4 @@ PopupLayouts[ButtonPopupTypes.BUTTONPOPUP_CITY_CAPTURED] = function(popupInfo)
 		end
 		AddButton(buttonText, OnRazeClicked, strToolTip);
 	end
-
-	-- CITY SCREEN CLOSED - Don't look, Marc
-	local CityScreenClosed = function()
-		UIManager:DequeuePopup(Controls.EmptyPopup);
-		Events.SerialEventExitCityScreen.Remove(CityScreenClosed);
-	end
-	
-	-- Initialize 'View City' button.
-	local OnViewCityClicked = function()
-		
-		-- Queue up an empty popup at a higher priority so that it prevents other cities from appearing while we're looking at this one!
-		UIManager:QueuePopup(Controls.EmptyPopup, PopupPriority.GenericPopup+1);
-		
-		Events.SerialEventExitCityScreen.Add(CityScreenClosed);
-		
-		UI.SetCityScreenViewingMode(true);
-		UI.DoSelectCityAtPlot( newCity:Plot() );
-	end
-	
-	buttonText = Locale.ConvertTextKey("TXT_KEY_POPUP_VIEW_CITY");
-	strToolTip = Locale.ConvertTextKey("TXT_KEY_POPUP_VIEW_CITY_DETAILS");
-	AddButton(buttonText, OnViewCityClicked, strToolTip, true);	-- true is bPreventClose
 end
