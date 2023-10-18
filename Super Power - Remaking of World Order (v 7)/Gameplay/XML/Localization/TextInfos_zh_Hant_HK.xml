@@ -13617,7 +13617,7 @@
 			<Text>鏈式反應</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_CHAIN_REACTION_HELP">
-			<Text>[ICON_BULLET]對你視野中的所有敵方單位造成33%的傷害。</Text>
+			<Text>[ICON_BULLET]對你視野中的所有敵方軍事單位造成33%的傷害。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_LEGION_GROUP">

@@ -6599,6 +6599,7 @@
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_CHAIN_REACTION</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
+			<InsightEnemyDamageModifier>33</InsightEnemyDamageModifier>
 		</Row>
 	</UnitPromotions>
 

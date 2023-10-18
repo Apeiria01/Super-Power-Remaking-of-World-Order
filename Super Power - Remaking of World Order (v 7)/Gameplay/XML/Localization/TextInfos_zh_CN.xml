@@ -13802,7 +13802,7 @@
 			<Text>链式反应</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_CHAIN_REACTION_HELP">
-			<Text>[ICON_BULLET]对你视野中的所有敌方单位造成33%的伤害。</Text>
+			<Text>[ICON_BULLET]对你视野中的所有敌方军事单位造成33%的伤害。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_LEGION_GROUP">

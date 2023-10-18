@@ -152,7 +152,6 @@ function NewAttackEffect()
 	local EMPBomberID = GameInfo.UnitPromotions["PROMOTION_EMP_ATTACK"].ID
 	local AntiEMPID = GameInfo.UnitPromotions["PROMOTION_ANTI_EMP"].ID
 
-	local ChainReactionID = GameInfo.UnitPromotions["PROMOTION_CHAIN_REACTION"].ID
 	local AntiDebuffID = GameInfo.UnitPromotions["PROMOTION_ANTI_DEBUFF"].ID
 
 	if not defPlayer:IsAlive() then
@@ -211,28 +210,6 @@ function NewAttackEffect()
 			end
 		end
 	end
-
-
-	------------------------- Chain Reaction
-	if attUnit:IsHasPromotion(ChainReactionID) then
-		for unit in defPlayer:Units() do
-			local plot = unit:GetPlot()
-			if unit and unit ~= defUnit and not unit:IsHasPromotion(AntiDebuffID) and not unit:IsTrade()
-				and plot and PlotIsVisibleToHuman(plot)
-			then
-				local DamageOri = attUnit:GetRangeCombatDamage(unit, nil, false);
-				local ChainDamage = 0.33 * DamageOri;
-				if ChainDamage >= unit:GetCurrHitPoints() then
-					ChainDamage = unit:GetCurrHitPoints();
-					local eUnitType = unit:GetUnitType();
-				end
-				unit:ChangeDamage(ChainDamage, attPlayer);
-				print("Chain Reaction!");
-			end
-		end
-	end
-
-
 
 	-------------- attacking Cities
 	if defCity then
