@@ -39,4 +39,4 @@ select Type, 'BUILDINGCLASS_TRADITION_FOOD_GROWTH', 1, 'POLICY_ARISTOCRACY' from
 
 
 insert into Building_DomainTroops (BuildingType, DomainType, NumTroop)
-select BuildingType, 'DOMAIN_SEA', 4 from CitySizeBuildings;
+select BuildingType, 'DOMAIN_SEA', 4 from CitySizeBuildings where CitySize > 1;
