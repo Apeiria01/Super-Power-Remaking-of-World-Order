@@ -757,10 +757,20 @@
 			<Name>GOLDEN_AGE_POINT_MULTIPLE_IN_GA</Name>
 			<Value>50</Value>
 		</Row>
-		<Row>
-			<Name>UNIT_MOVES_AFTER_DISEMBARK</Name>
-			<Value>60</Value>
-		</Row>
+		
+		<Update>
+			<Set Value="60"/>
+			<Where Name="UNIT_MOVES_AFTER_DISEMBARK" />
+		</Update>
+		<Update>
+			<Set Value="1"/>
+			<Where Name="MAXIMUM_WORK_PLOT_DISTANCE_MINOR_REDUCE" />
+		</Update>
+
+		<Update>
+			<Set Value="33"/>
+			<Where Name="MINOR_CIV_SCIENCE_BONUS_MULTIPLIER" />
+		</Update>
 	</Defines>
 	
 	

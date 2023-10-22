@@ -36,3 +36,7 @@ select Type, 'BUILDINGCLASS_TB_DIPLOMACY_GREAT_PEOPLE', 1, 'TRAIT_DIPLOMACY_GREA
 
 insert into CityScale_FreeBuildingClass (CityScaleType, BuildingClassType, NumBuildings, RequiredPolicyType)
 select Type, 'BUILDINGCLASS_TRADITION_FOOD_GROWTH', 1, 'POLICY_ARISTOCRACY' from CityScales where ID = 1;
+
+
+insert into Building_DomainTroops (BuildingType, DomainType, NumTroop)
+select BuildingType, 'DOMAIN_SEA', 4 from CitySizeBuildings;

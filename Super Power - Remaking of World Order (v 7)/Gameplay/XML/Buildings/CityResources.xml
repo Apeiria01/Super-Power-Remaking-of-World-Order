@@ -453,7 +453,6 @@
 			<FaithCost>-1</FaithCost>
 			<NukeImmune>true</NukeImmune>
 			<NeverCapture>true</NeverCapture>
-			<MilitaryProductionModifier>-2000</MilitaryProductionModifier>
 			<Description>TXT_KEY_SP_TROOPS_DEBUFF</Description>
 			<Civilopedia>TXT_KEY_SP_TROOPS_TEXT</Civilopedia>
 			<IconAtlas>SP_BUILDING_ATLAS_DLC_07</IconAtlas>
@@ -622,7 +621,6 @@
 			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
 			<Quantity>100</Quantity>
 		</Row>
-		
 		<Row>
 			<BuildingType>BUILDING_TROOPS_USED</BuildingType>
 			<ResourceType>RESOURCE_TROOPS</ResourceType>
@@ -684,7 +682,6 @@
 			<ResourceType>RESOURCE_URANIUM</ResourceType>
 			<Cost>1</Cost>
 		</Row>
-		
 		<Row>
 			<BuildingType>BUILDING_TROOPS</BuildingType>
 			<ResourceType>RESOURCE_TROOPS</ResourceType>
@@ -774,11 +771,6 @@
 		
 	</Building_YieldChangesPerPop>
 	<Building_HurryModifiers>
-		<Row>
-			<BuildingType>BUILDING_TROOPS_DEBUFF</BuildingType>
-			<HurryType>HURRY_GOLD</HurryType>
-			<HurryCostModifier>4000</HurryCostModifier>
-		</Row>
 	</Building_HurryModifiers>
 
 	<Building_Flavors>

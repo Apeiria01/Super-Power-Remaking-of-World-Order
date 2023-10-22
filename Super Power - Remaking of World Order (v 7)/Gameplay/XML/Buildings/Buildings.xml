@@ -2277,6 +2277,7 @@
 			<IconAtlas>BW_ATLAS_1</IconAtlas>
 			<NeverCapture>true</NeverCapture>
 			<PortraitIndex>9</PortraitIndex>
+			<NumCrops>2</NumCrops>
 		</Row>
 		<Row>
 			<Type>BUILDING_MILITARY_BASE</Type>
@@ -2299,6 +2300,8 @@
 			<DisplayPosition>2</DisplayPosition>
 			<NeverCapture>true</NeverCapture>
 			<PortraitIndex>10</PortraitIndex>
+			<NumCrops>2</NumCrops>
+			<NumArmee>2</NumArmee>
 		</Row>
 
 		

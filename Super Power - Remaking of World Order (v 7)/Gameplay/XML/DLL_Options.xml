@@ -282,6 +282,19 @@
 			<Where Name="GLOBAL_CORRUPTION"/>
 			<Set Value="1"/>
 		</Update>
+
+		<Update>
+			<Where Name="UNIT_COST_DONOT_INCTEASE_WITH_TURN"/>
+			<Set Value="1"/>
+		</Update>
+		<Update>
+			<Where Name="TROOPS_AND_CROPS_FOR_SP"/>
+			<Set Value="1"/>
+		</Update>
+		<Update>
+			<Where Name="INTERNATIONAL_IMMIGRATION_FOR_SP"/>
+			<Set Value="1"/>
+		</Update>
 	</CustomModOptions>
 
 
@@ -392,10 +405,6 @@
 			<Help>TXT_KEY_GAME_OPTION_ABLE_GIFT_MILITIA_HELP</Help>
 		</Row>
 
-		<Update>
-			<Where Type="GAMEOPTION_SP_CORPS_MODE_HIGH"/>
-			<Set Default="1"/>
-		</Update>
 		<Update>
 			<Where Type="GAMEOPTION_SP_IMMIGRATION_OFF"/>
 			<Set Default="1"/>

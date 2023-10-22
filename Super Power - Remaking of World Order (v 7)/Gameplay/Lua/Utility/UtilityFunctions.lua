@@ -290,23 +290,18 @@ else
 		print("Human Player: " .. tostring(HumanPlayer:GetName()));
 		print("AI Player: " .. tostring(AIPlayer:GetName()));
 
-		local iRegressand = 45;
+		local iRegressand = 30;
 		if Game.GetGameSpeedType() == 0 then -- GAMESPEED_MARATHON
-			iRegressand = 90;
-		elseif Game.GetGameSpeedType() == 1 then -- GAMESPEED_EPIC
 			iRegressand = 60;
+		elseif Game.GetGameSpeedType() == 1 then -- GAMESPEED_EPIC
+			iRegressand = 40;
 		elseif Game.GetGameSpeedType() == 2 then -- GAMESPEED_STANDARD
-			iRegressand = 45;
-		elseif Game.GetGameSpeedType() == 3 then -- GAMESPEED_QUICK
 			iRegressand = 30;
+		elseif Game.GetGameSpeedType() == 3 then -- GAMESPEED_QUICK
+			iRegressand = 20;
 		end
 
-		local iCountBuildingID = GameInfoTypes["BUILDING_IMMIGRATION_" .. tostring(HumanPlayerID)];
-		if iCountBuildingID == -1 or nil then
-			print("No CountBuilding");
-			return;
-		end
-		iCount                   = AIPlayer:CountNumBuildings(iCountBuildingID);
+		iCount = AIPlayer:GetImmigrationCounter(HumanPlayerID);
 
 		local MoveOutTeam, MoveInTeam;
 
@@ -364,14 +359,13 @@ else
 
 		if MoveOutPlayer:IsDoF(MoveInPlayerID) then
 			MoveOutCounterMod = MoveOutCounterMod + 0.5
-			print("DOF! +50% " .. MoveOutCounterMod)
+			print("Has Friendship! +50% " .. MoveOutCounterMod)
 		end
 
 
 		------------------------------------------Religion Modifier---------------------------------
 		if MoveInPlayer:GetReligionCreatedByPlayer() ~= nil and MoveInPlayer:GetReligionCreatedByPlayer() > 0 then
 			local MoveInPlayerReligion = MoveInPlayer:GetReligionCreatedByPlayer()
-			--		print ("MoveInPlayerReligion:  "..MoveInPlayerReligion)
 			if MoveOutPlayer:HasReligionInMostCities(MoveInPlayerReligion) then
 				MoveOutCounterMod = MoveOutCounterMod + 1
 				print("Same Religion +100%  " .. MoveOutCounterMod)
@@ -513,7 +507,7 @@ end
 ----------Oringinal Codes from William Howard's Policy - Free Warrior' mod
 
 function AIForceBuildAirEscortUnits(unitX, unitY, player)
-	if unitX == nil or unitY == nil or player == nil or player:CountNumBuildings(GameInfoTypes["BUILDING_TROOPS_DEBUFF"]) > 0 then
+	if unitX == nil or unitY == nil or player == nil or player:IsLackingTroops() then
 		return
 	end
 
@@ -547,7 +541,7 @@ function AIForceBuildAirEscortUnits(unitX, unitY, player)
 end
 
 function AIForceBuildNavalEscortUnits(unitX, unitY, player)
-	if unitX == nil or unitY == nil or player == nil or player:CountNumBuildings(GameInfoTypes["BUILDING_TROOPS_DEBUFF"]) > 0 then
+	if unitX == nil or unitY == nil or player == nil or player:IsLackingTroops() then
 		return
 	end
 
@@ -581,7 +575,7 @@ function AIForceBuildNavalEscortUnits(unitX, unitY, player)
 end
 
 function AIForceBuildNavalHRUnits(unitX, unitY, player)
-	if unitX == nil or unitY == nil or player == nil or player:CountNumBuildings(GameInfoTypes["BUILDING_TROOPS_DEBUFF"]) > 0 then
+	if unitX == nil or unitY == nil or player == nil or player:IsLackingTroops() then
 		return
 	end
 
@@ -611,7 +605,7 @@ function AIForceBuildNavalHRUnits(unitX, unitY, player)
 end
 
 function AIForceBuildNavalRangedUnits(unitX, unitY, player)
-	if unitX == nil or unitY == nil or player == nil or player:CountNumBuildings(GameInfoTypes["BUILDING_TROOPS_DEBUFF"]) > 0 then
+	if unitX == nil or unitY == nil or player == nil or player:IsLackingTroops() then
 		return
 	end
 
@@ -650,7 +644,7 @@ function AIForceBuildNavalRangedUnits(unitX, unitY, player)
 end
 
 function AIForceBuildInfantryUnits(unitX, unitY, player)
-	if unitX == nil or unitY == nil or player == nil or player:CountNumBuildings(GameInfoTypes["BUILDING_TROOPS_DEBUFF"]) > 0 then
+	if unitX == nil or unitY == nil or player == nil or player:IsLackingTroops() then
 		return
 	end
 
@@ -684,7 +678,7 @@ function AIForceBuildInfantryUnits(unitX, unitY, player)
 end
 
 function AIForceBuildLandCounterUnits(unitX, unitY, player)
-	if unitX == nil or unitY == nil or player == nil or player:CountNumBuildings(GameInfoTypes["BUILDING_TROOPS_DEBUFF"]) > 0 then
+	if unitX == nil or unitY == nil or player == nil or player:IsLackingTroops() then
 		return
 	end
 	if player:GetNumResourceAvailable(GameInfoTypes["RESOURCE_MANPOWER"], true) <= 4 then
@@ -715,7 +709,7 @@ function AIForceBuildLandCounterUnits(unitX, unitY, player)
 end
 
 function AIForceBuildMobileUnits(unitX, unitY, player)
-	if unitX == nil or unitY == nil or player == nil or player:CountNumBuildings(GameInfoTypes["BUILDING_TROOPS_DEBUFF"]) > 0 then
+	if unitX == nil or unitY == nil or player == nil or player:IsLackingTroops() then
 		return
 	end
 
@@ -752,7 +746,7 @@ function AIForceBuildMobileUnits(unitX, unitY, player)
 end
 
 function AIForceBuildLandHRUnits(unitX, unitY, player)
-	if unitX == nil or unitY == nil or player == nil or player:CountNumBuildings(GameInfoTypes["BUILDING_TROOPS_DEBUFF"]) > 0 then
+	if unitX == nil or unitY == nil or player == nil or player:IsLackingTroops() then
 		return
 	end
 
@@ -802,7 +796,7 @@ function AIForceBuildLandHRUnits(unitX, unitY, player)
 end
 
 function AIConscriptMilitiaUnits(unitX, unitY, player)
-	if player == nil or player:IsHuman() or player:CountNumBuildings(GameInfoTypes["BUILDING_TROOPS_DEBUFF"]) > 0 then
+	if player == nil or player:IsHuman() or player:IsLackingTroops() then
 		return
 	end
 
@@ -824,7 +818,7 @@ function AIConscriptMilitiaUnits(unitX, unitY, player)
 end
 
 function AIConscriptMilitiaNavy(unitX, unitY, player)
-	if player == nil or player:IsHuman() or player:CountNumBuildings(GameInfoTypes["BUILDING_TROOPS_DEBUFF"]) > 0 then
+	if player == nil or player:IsHuman() or player:IsLackingTroops() then
 		return
 	end
 

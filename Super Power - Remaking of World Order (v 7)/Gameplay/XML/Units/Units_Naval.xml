@@ -2590,12 +2590,6 @@
 			<UnitType>UNIT_SPANISH_CANARIAS</UnitType>
 			<PromotionType>PROMOTION_COLLATERAL_DAMAGE_2</PromotionType>
 		</Row>
-		<!--
-		<Row>
-			<UnitType>UNIT_SPANISH_CANARIAS</UnitType>
-			<PromotionType>PROMOTION_COLLATERAL_DAMAGE_3</PromotionType>
-		</Row>
-		-->
 		<Row>
 			<UnitType>UNIT_SPANISH_CANARIAS</UnitType>
 			<PromotionType>PROMOTION_AIR_TARGETING_1</PromotionType>

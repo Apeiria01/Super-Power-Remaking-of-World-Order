@@ -12,8 +12,6 @@
 
 		<Row>
 			<Type>RESOURCE_MANPOWER</Type>
-			<!--<TechReveal>TECH_MOBILIZATION_T</TechReveal>
-			<TechCityTrade>TECH_MOBILIZATION_T</TechCityTrade>-->
 			<Description>TXT_KEY_SP_RESOURCE_MANPOWER</Description>
 			<Civilopedia>TXT_KEY_CIVIL_WAR_SCENARIO_RESOURCE_MANPOWER_TEXT</Civilopedia>
 			<Help>TXT_KEY_SP_RESOURCE_MANPOWER_HELP</Help>
@@ -25,6 +23,7 @@
 			<IconString>[ICON_RES_MANPOWER]</IconString>
 			<PortraitIndex>1</PortraitIndex>
 			<IconAtlas>UNIT_ATLAS_1</IconAtlas>
+			<NotificationTurn>1</NotificationTurn>
 		</Row>
 
 		<!--*****************SP Electricity *****************-->
@@ -44,6 +43,8 @@
 			<IconString>[ICON_RES_ELECTRICITY]</IconString>
 			<PortraitIndex>26</PortraitIndex>
 			<IconAtlas>SPBalance_ATLAS</IconAtlas>
+			<NotificationTurn>1</NotificationTurn>
+			<NoDefaultNotification>true</NoDefaultNotification>
 		</Row>
 
 
@@ -51,8 +52,6 @@
 
 		<Row>
 			<Type>RESOURCE_CONSUMER</Type>
-			<!--<TechReveal>TECH_ECONOMICS</TechReveal>
-			<TechCityTrade>TECH_ECONOMICS</TechCityTrade>-->
 			<Description>TXT_KEY_SP_RESOURCE_CONSUMER</Description>
 			<Civilopedia>TXT_KEY_SP_RESOURCE_CONSUMER_TEXT</Civilopedia>
 			<Help>TXT_KEY_SP_RESOURCE_CONSUMER_HELP</Help>
@@ -64,6 +63,8 @@
 			<IconString>[ICON_RES_CONSUMER]</IconString>
 			<PortraitIndex>28</PortraitIndex>
 			<IconAtlas>SPBalance_ATLAS</IconAtlas>
+			<NotificationTurn>1</NotificationTurn>
+			<NoDefaultNotification>true</NoDefaultNotification>
 		</Row>
 		
 		<Row>
@@ -79,6 +80,8 @@
 			<IconString>[ICON_RES_TROOPS]</IconString>
 			<PortraitIndex>0</PortraitIndex>
 			<IconAtlas>CIVIL_WAR_RESOURCE_ATLAS_EXP2</IconAtlas>
+			<NotificationTurn>-1</NotificationTurn>
+			<NoDefaultNotification>true</NoDefaultNotification>
 		</Row>
 
 		<!--*****************Naval Improvement Resources *****************-->

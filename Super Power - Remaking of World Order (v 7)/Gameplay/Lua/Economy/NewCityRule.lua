@@ -13,27 +13,25 @@ function InternationalImmigration(TargetPlayerID)
         local OutPlayer = -1;
         local InPlayer = -1;
 
-        if player and player:IsAlive() and player:GetCapitalCity() and
-            not player:IsMinorCiv() and not player:IsBarbarian() and playerID ~=
-            TargetPlayerID then
-            local iCountBuildingID = GameInfoTypes["BUILDING_IMMIGRATION_" ..
-            tostring(TargetPlayerID)];
-            if iCountBuildingID == -1 or nil then
-                print("No CountBuilding");
-            elseif CheckMoveOutCounter(TargetPlayerID, playerID) then
-                local ImmigrationCount =
-                    CheckMoveOutCounter(TargetPlayerID, playerID);
-                local pCapital = player:GetCapitalCity();
-                if not pCapital:IsHasBuilding(iCountBuildingID) then
-                    pCapital:SetNumRealBuilding(iCountBuildingID,
-                        ImmigrationCount[2]);
+        if player:IsAlive() and player:IsMajorCiv() and playerID ~= TargetPlayerID then
+            local ImmigrationCount = CheckMoveOutCounter(TargetPlayerID, playerID);
+            if ImmigrationCount then
+                if player:GetImmigrationCounter(TargetPlayerID) <= 0 
+                or player:GetImmigrationCounter(TargetPlayerID) >= ImmigrationCount[2] * 2
+                then
+                    --Init ImmigrationCounter, ImmigrationCount[2] is iRegressand, default 30
+                    player:SetImmigrationCounter(TargetPlayerID, ImmigrationCount[2])
                 end
-                local iCount = pCapital:GetNumBuilding(iCountBuildingID);
+                local iCount = player:GetImmigrationCounter(TargetPlayerID);
 
                 if iCount == 0 or iCount == ImmigrationCount[2] * 2 then
+                    --reach Upper and lower limits
                 else
+                    --ImmigrationCount[1] is MoveoutCounterFinal
                     iCount = iCount + ImmigrationCount[1];
                 end
+
+                --iCount must in (0, iRegressand * 2)
                 iCount = math.max(0, iCount);
                 iCount = math.min(iCount, ImmigrationCount[2] * 2);
 
@@ -44,18 +42,14 @@ function InternationalImmigration(TargetPlayerID)
                     OutPlayer = playerID;
                     InPlayer = TargetPlayerID;
                 end
-                if iCount ~= pCapital:GetNumBuilding(iCountBuildingID) then
-                    pCapital:SetNumRealBuilding(iCountBuildingID, iCount);
-                end
+                player:SetImmigrationCounter(TargetPlayerID, iCount)
 
                 if OutPlayer >= 0 and InPlayer >= 0 then
-                    local bIsDoImmigration =
-                        DoInternationalImmigration(OutPlayer, InPlayer);
+                    local bIsDoImmigration = DoInternationalImmigration(OutPlayer, InPlayer);
                     if bIsDoImmigration then
-                        pCapital:SetNumRealBuilding(iCountBuildingID,
-                            ImmigrationCount[2]);
-                        print("Successful International Immigration: Player " ..
-                            OutPlayer .. " to Player " .. InPlayer);
+                        --return to iRegressand
+                        player:SetImmigrationCounter(TargetPlayerID, ImmigrationCount[2])
+                        print("Successful International Immigration: Player " .. OutPlayer .. " to Player " .. InPlayer);
                     else
                         print("Fail International Immigration: Player " ..
                             OutPlayer .. " to Player " .. InPlayer);
@@ -68,8 +62,10 @@ end ---------function end
 GameEvents.PlayerDoTurn.Add(InternationalImmigration)
 
 function DoInternationalImmigration(MoveOutPlayerID, MoveInPlayerID)
-    local MoveOutPlayer = Players[MoveOutPlayerID] -----------This nation's population tries to move out
-    local MoveInPlayer = Players[MoveInPlayerID]   -----------Move to this nation
+    --This nation's population tries to move out
+    local MoveOutPlayer = Players[MoveOutPlayerID]
+    --Move to this nation
+    local MoveInPlayer = Players[MoveInPlayerID]
 
     if MoveOutPlayer:GetNumCities() < 1 or MoveInPlayer:GetNumCities() < 1 then
         return false
@@ -95,14 +91,9 @@ function DoInternationalImmigration(MoveOutPlayerID, MoveInPlayerID)
 
         ------------Notification-----------
         if MoveOutPlayer:IsHuman() and targetCity ~= nil then
-            local text = Locale.ConvertTextKey(
-                "TXT_KEY_SP_NOTIFICATION_IMMIGRANT_LEFT_CITY",
-                targetCity:GetName())
-            local heading = Locale.ConvertTextKey(
-                "TXT_KEY_SP_NOTIFICATION_IMMIGRANT_LEFT_CITY_SHORT")
-            MoveOutPlayer:AddNotification(
-                NotificationTypes.NOTIFICATION_STARVING, text, heading,
-                targetCity:GetX(), targetCity:GetY())
+            local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_IMMIGRANT_LEFT_CITY", targetCity:GetName())
+            local heading = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_IMMIGRANT_LEFT_CITY_SHORT")
+            MoveOutPlayer:AddNotification(NotificationTypes.NOTIFICATION_STARVING, text, heading, targetCity:GetX(), targetCity:GetY())
         end
 
         ------------AI will enhance culture output to encounter!
@@ -204,16 +195,7 @@ function CheckCapital(iPlayerID)
 
         if pNCapital and pNCapital ~= pOCapital then
             -- Palace
-            local iPalaceID = GameInfo.Buildings.BUILDING_PALACE.ID;
-            local overridePalace =
-                GameInfo.Civilization_BuildingClassOverrides {
-                    BuildingClassType = "BUILDINGCLASS_PALACE",
-                    CivilizationType = GameInfo.Civilizations[pPlayer:GetCivilizationType()]
-                        .Type
-                } ();
-            if overridePalace ~= nil then
-                iPalaceID = GameInfo.Buildings[overridePalace.BuildingType].ID;
-            end
+            local iPalaceID = pPlayer:GetCivBuilding(GameInfoTypes["BUILDINGCLASS_PALACE"])
             pNCapital:SetNumRealBuilding(iPalaceID, 1);
 
             for building in GameInfo.Buildings() do
@@ -227,20 +209,10 @@ function CheckCapital(iPlayerID)
                         end
                     end
 
-                    -- Remove "BonusBT" from Old
-                    if pOCapital:IsHasBuilding(building.ID) and
-                        building.Type == "BUILDING_TROOPS_DEBUFF" then
-                        pOCapital:SetNumRealBuilding(building.ID, 0);
-                    end
-
                     -- Move Policy Buildings & Count Buildings
-                    local policFreeBCCapital =
-                        GameInfo.Policy_FreeBuildingClassCapital {
-                            BuildingClassType = building.BuildingClass
-                        } ()
+                    local policFreeBCCapital = GameInfo.Policy_FreeBuildingClassCapital {BuildingClassType = building.BuildingClass} ()
                     if pOCapital:IsHasBuilding(building.ID) and
-                        (policFreeBCCapital ~= nil or building.BuildingClass ==
-                            "BUILDINGCLASS_COUNT_BUILIDNGS") then
+                        (policFreeBCCapital ~= nil) then
                         local i = pOCapital:GetNumBuilding(building.ID);
                         pOCapital:SetNumRealBuilding(building.ID, 0);
                         pNCapital:SetNumRealBuilding(building.ID, i);

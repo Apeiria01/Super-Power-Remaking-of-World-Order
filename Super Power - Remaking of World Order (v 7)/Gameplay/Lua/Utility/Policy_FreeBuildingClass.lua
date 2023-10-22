@@ -1,7 +1,7 @@
 --------------------------------------------------------------
 -- Policy_FreeBuildingClass
 -- Author: Machiavelli
--- Revisor: CaptainCWB
+-- Revisor: CaptainCWB, Qingyin
 -- DateCreated: 5/23/2012 6:10:34 PM
 -- DateModified_1: 4/23/2016 10:19:34 AM
 -- DateModified_2:12/27/2020 02:09:00 AM
@@ -56,23 +56,16 @@
 -- 1) The end turn check should test to see if the previous player is in anarchy.
 -- 2) Only remove buildings if the previous player is in anarchy.
 
---------------------
--- Private helper functions
---------------------
-function GetBuildingTypeFromClass(buildingClass, civilizationTypeID)
-	-- Assume it is the default building
-	local buildingType = GameInfo.BuildingClasses[buildingClass].DefaultBuilding;
+local tablePolicy_FreeBuildingClass = GameInfo.Policy_FreeBuildingClass
+local tablePolicy_FreeBuildingClassCapital = GameInfo.Policy_FreeBuildingClassCapital
+local tablePolicy_FreeBuildingClassCityStates = GameInfo.Policy_FreeBuildingClassCityStates
 
-	-- See if this civilization has a unique building for this building class
-	for row in GameInfo.Civilization_BuildingClassOverrides() do
-		if (GameInfoTypes[row.CivilizationType] == civilizationTypeID and row.BuildingClassType == buildingClass) then
-			-- This civilization has a unique building
-			buildingType = row.BuildingType;
-			return buildingType;
-		end
-	end
-
-	return buildingType;
+if #tablePolicy_FreeBuildingClassCapital == 0
+and #tablePolicy_FreeBuildingClassCityStates == 0
+and #tablePolicy_FreeBuildingClass == 0 
+then
+	print("New Policy Free BuildingClass: All Table Empty!!!")
+	return
 end
 
 --------------------
@@ -94,9 +87,7 @@ function AddPolicyBuildingsToCity(playerID, cityID)
 		policyID = GameInfoTypes[row.PolicyType];
 
 		if (player:HasPolicy(policyID) and not player:IsPolicyBlocked(policyID)) then
-			buildingType = GetBuildingTypeFromClass(row.BuildingClassType, player:GetCivilizationType());
-			num = row.Count;
-			city:SetNumRealBuilding(GameInfoTypes[buildingType], num);
+			city:SetNumRealBuilding(player:GetCivBuilding(GameInfoTypes[row.BuildingClassType]), row.Count);
 		end
 	end
 	----------------------------------------------------------
@@ -107,9 +98,7 @@ function AddPolicyBuildingsToCity(playerID, cityID)
 			policyID = GameInfoTypes[row.PolicyType];
 
 			if (player:HasPolicy(policyID) and not player:IsPolicyBlocked(policyID)) then
-				buildingType = GetBuildingTypeFromClass(row.BuildingClassType, player:GetCivilizationType());
-				num = row.Count;
-				city:SetNumRealBuilding(GameInfoTypes[buildingType], num);
+				city:SetNumRealBuilding(player:GetCivBuilding(GameInfoTypes[row.BuildingClassType]), row.Count);
 			end
 		end
 	end
@@ -133,11 +122,7 @@ function AddPolicyBuildingsToCapital(playerID)
 		policyID = GameInfoTypes[row.PolicyType];
 
 		if (player:HasPolicy(policyID) and not player:IsPolicyBlocked(policyID)) then
-			-- Determine what buildingType to give them based on the buildingClass
-			buildingType = GetBuildingTypeFromClass(row.BuildingClassType, player:GetCivilizationType());
-			num = row.Count;
-			-- Give the city the building
-			capital:SetNumRealBuilding(GameInfoTypes[buildingType], num);
+			capital:SetNumRealBuilding(player:GetCivBuilding(GameInfoTypes[row.BuildingClassType]), row.Count);
 		end
 	end
 end
@@ -171,7 +156,6 @@ function PolicyBuildingOnCityCapture(oldPlayerID, bCapital, iX, iY, newPlayerID,
 	-- If the new player just recovered their capital, they will need to have their capital-only policy buildings moved
 	if(newPlayer:GetCapitalCity() ~= nil and newPlayer:GetCapitalCity():GetID() == city:GetID()) then
 		local policyID;
-		local buildingType;
 		local buildingTypeID;
 		-- Remove capital only buildings from the new player's cities
 		for cityToRemove in newPlayer:Cities() do
@@ -180,8 +164,7 @@ function PolicyBuildingOnCityCapture(oldPlayerID, bCapital, iX, iY, newPlayerID,
 				-- Only remove the building if the player has the policy, but it is disabled
 				if(newPlayer:HasPolicy(policyID)) then
 					-- Determine what buildingType to remove based on the buildingClass
-					buildingType = GetBuildingTypeFromClass(row.BuildingClassType, newPlayer:GetCivilizationType());
-					buildingTypeID = GameInfoTypes[buildingType];
+					buildingTypeID = newPlayer:GetCivBuilding(GameInfoTypes[row.BuildingClassType]);
 
 					-- If the city has the building, remove it
 					if(cityToRemove:IsHasBuilding(buildingTypeID)) then
@@ -189,12 +172,12 @@ function PolicyBuildingOnCityCapture(oldPlayerID, bCapital, iX, iY, newPlayerID,
 						local iCount = GameInfo.Buildings[buildingType].SpecialistCount;
 						local i = 0;
 						while(cityToRemove:GetNumSpecialistsInBuilding(buildingTypeID) > 0 and i < iCount) do
-							local iSpecialist = GameInfoTypes[GameInfo.Buildings[buildingType].SpecialistType];
+							local iSpecialist = GameInfoTypes[GameInfo.Buildings[buildingTypeID].SpecialistType];
 							cityToRemove:DoTask(TaskTypes.TASK_REMOVE_SPECIALIST, iSpecialist, buildingTypeID, playerID);
 							i = i + 1;
 						end
 						-- Remove the building
-						cityToRemove:SetNumRealBuilding(GameInfoTypes[buildingType], 0);
+						cityToRemove:SetNumRealBuilding(buildingTypeID, 0);
 					end
 				end
 			end
@@ -228,7 +211,6 @@ function ResetPolicyFreeBuildings(playerID,iPolicyBranch,isBlock)
 	end
 	local capital = player:GetCapitalCity();
 	local policyID;
-	local buildingType;
 	local buildingTypeID;
 
 	print("Player Block a Policy tree, remove blocked policy building and set available building")
@@ -243,21 +225,20 @@ function ResetPolicyFreeBuildings(playerID,iPolicyBranch,isBlock)
 			-- Only remove the building if the player has the policy, but it is disabled and the building gets removed
 			if(player:HasPolicy(policyID) and player:IsPolicyBlocked(policyID)) then
 				-- Determine what buildingType to remove based on the buildingClass
-				buildingType = GetBuildingTypeFromClass(row.BuildingClassType, player:GetCivilizationType());
-				buildingTypeID = GameInfoTypes[buildingType];
+				buildingTypeID = player:GetCivBuilding(GameInfoTypes[row.BuildingClassType]);
 				
 				-- If the city has the building, remove it
 				if(capital:IsHasBuilding(buildingTypeID)) then
 					-- Remove any specialists from the building
-					local iCount = GameInfo.Buildings[buildingType].SpecialistCount;
+					local iCount = GameInfo.Buildings[buildingTypeID].SpecialistCount;
 					local i = 0;
+					local iSpecialist = GameInfoTypes[GameInfo.Buildings[buildingTypeID].SpecialistType];
 					while(capital:GetNumSpecialistsInBuilding(buildingTypeID) > 0 and i < iCount) do
-						local iSpecialist = GameInfoTypes[GameInfo.Buildings[buildingType].SpecialistType];
 						capital:DoTask(TaskTypes.TASK_REMOVE_SPECIALIST, iSpecialist, buildingTypeID, playerID);
 						i = i + 1;
 					end
 					-- Remove the building
-					capital:SetNumRealBuilding(GameInfoTypes[buildingType], 0);
+					capital:SetNumRealBuilding(buildingTypeID, 0);
 				end
 			end
 		end
@@ -272,18 +253,17 @@ function ResetPolicyFreeBuildings(playerID,iPolicyBranch,isBlock)
 			policyID = GameInfoTypes[row.PolicyType];
 
 			if(player:HasPolicy(policyID) and player:IsPolicyBlocked(policyID) and row.IsRemovedWhenPolicyBlocked) then
-				buildingType = GetBuildingTypeFromClass(row.BuildingClassType, player:GetCivilizationType());
-				buildingTypeID = GameInfoTypes[buildingType];
+				buildingTypeID = player:GetCivBuilding(GameInfoTypes[row.BuildingClassType]);
 				if(city:IsHasBuilding(buildingTypeID)) then
 					-- Remove any specialists from the building
-					local iCount = GameInfo.Buildings[buildingType].SpecialistCount;
+					local iCount = GameInfo.Buildings[buildingTypeID].SpecialistCount;
 					local i = 0;
+					local iSpecialist = GameInfoTypes[GameInfo.Buildings[buildingTypeID].SpecialistType];
 					while(city:GetNumSpecialistsInBuilding(buildingTypeID) > 0 and i < iCount) do
-						local iSpecialist = GameInfoTypes[GameInfo.Buildings[buildingType].SpecialistType];
 						city:DoTask(TaskTypes.TASK_REMOVE_SPECIALIST, iSpecialist, buildingTypeID, playerID);
 						i = i + 1;
 					end
-					city:SetNumRealBuilding(GameInfoTypes[buildingType], 0);
+					city:SetNumRealBuilding(buildingTypeID, 0);
 				end
 			end
 		end
@@ -294,17 +274,17 @@ function ResetPolicyFreeBuildings(playerID,iPolicyBranch,isBlock)
 			for row in GameInfo.Policy_FreeBuildingClassCityStates() do
 				policyID = GameInfoTypes[row.PolicyType];
 				if(player:HasPolicy(policyID) and player:IsPolicyBlocked(policyID) and row.IsRemovedWhenPolicyBlocked) then
-					buildingType = GetBuildingTypeFromClass(row.BuildingClassType, player:GetCivilizationType());
-					buildingTypeID = GameInfoTypes[buildingType];
+					buildingTypeID = player:GetCivBuilding(GameInfoTypes[row.BuildingClassType]);
 					if(city:IsHasBuilding(buildingTypeID)) then
 						-- Remove any specialists from the building
-						local iCount = GameInfo.Buildings[buildingType].SpecialistCount;
+						local iCount = GameInfo.Buildings[buildingTypeID].SpecialistCount;
 						local i = 0;
+						local iSpecialist = GameInfoTypes[GameInfo.Buildings[buildingTypeID].SpecialistType];
 						while(city:GetNumSpecialistsInBuilding(buildingTypeID) > 0 and i < iCount) do
 							city:DoTask(TaskTypes.TASK_REMOVE_SPECIALIST, iSpecialist, buildingTypeID, playerID);
 							i = i + 1;
 						end
-						city:SetNumRealBuilding(GameInfoTypes[buildingType], 0);
+						city:SetNumRealBuilding(buildingTypeID, 0);
 					end
 				end
 			end

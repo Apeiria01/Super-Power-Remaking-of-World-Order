@@ -7,29 +7,29 @@
     <Guid>f9b9c8aa-b6d1-4188-9239-c1de2207ab7c</Guid>
     <ModVersion>9</ModVersion>
     <Stability>Alpha</Stability>
-    <Teaser>(9.3) [COLOR_YELLOW]A Total Conversion Mod for a better late game experience and realistic modern warfare[/COLOR]</Teaser>
+    <Teaser>(9.4) [COLOR_YELLOW]A Total Conversion Mod for a better late game experience and realistic modern warfare[/COLOR]</Teaser>
     <Description>A Total Conversion Mod of Sid Meier's Civilization V for a better late game experience and realistic modern warfare.  
 [NEWLINE][NEWLINE]Require CIV5 BNW 1.0.3.279[NEWLINE][NEWLINE]This MOD includes a modified version of whoward69's DLLVMC v97 for some Lua events support and multiplayer support. Source is released on https://github.com/Apeiria01/CIV5MPDLL
 [NEWLINE][NEWLINE]Special Thanks:
 [NEWLINE]
-[ICON_BULLET]DLL Support: whoward69, Apeiria01, catgrep. 
+[ICON_BULLET]DLL Support: whoward69, Apeiria01, catgrep, Qingyin, rogcore. 
 [ICON_BULLET]Incorporated Mods: Enhanced User Interface (EUI) by bc1; More Luxuries by Barathor
 [NEWLINE]
-[ICON_BULLET]Coding Reference: whoward69, Gedemon, Barathor, Maximus, Machiavelli24, Ninakoru, FramedArchitect, Redox, Coban, far_away_land, Hulfgar, bc1, lemmy101, JFD, Tokata, CaptainCWB
+[ICON_BULLET]Coding Reference: whoward69, Gedemon, Barathor, Maximus, Machiavelli24, Ninakoru, FramedArchitect, Redox, Coban, far_away_land, Hulfgar, bc1, lemmy101, JFD, Tokata, CaptainCWB, Apeiria01, catgrep, Qingyin, rogcore.
 [NEWLINE]
-[ICON_BULLET]UI Elements: Tokata, CaptainCWB
+[ICON_BULLET]UI Elements: Tokata, CaptainCWB, catgrep, Qingyin
 [NEWLINE]
 [ICON_BULLET]Models: Wolfdog, Snafusmith, Danrell, Ekmek, asioasioasio, KnelRivendare, Jinzor, bernie14,  Barathor, Snafusmith(Smitty), JTitan,Deliverator, Walter Hawkwood, Refar, Patum333, hangman, Deliverator,  BouncyMischa, Smitty, Civitar  
 [NEWLINE]
 [ICON_BULLET]Icons &amp; Images: Barathor, JanBoruta, Jamie Meyer, Moriboe, sukritact, Pouakai, Sukritact, Envoy (@fourfourhero), Pouakai,  zsofiadome, BlackFeather_, Empoh, Tokata, Institute of Swedish Safety &amp; Security,  freepik.com, iranaware.com, photobucket.com, Brainbug's Egyptian Army (Retextured) von Brainbug (v1.0), calxibe.com, Chrisz3D, 3d_molier, Janboruta, Panaristi, CaptainCWB, wallpoper.com, others from Goolgle Search
 [NEWLINE]
 [ICON_BULLET]Chinese Language: MarbleGargoyle, LI&amp; Seven [NEWLINE]
-[ICON_BULLET]Promotion: BlackFeather_, GanJunWuDi, ggx2
+[ICON_BULLET]Promotion: BlackFeather_, GanJunWuDi, ggx2, catgrep, Qingyin
 [NEWLINE]
 [ICON_BULLET]Test: Tokata, Ben, Dante,  BlackFeather_, GanJunWuDi, 38AA, HJQ, xiaofeng, seraph, Li &amp; Seven, Xingen, Tianshu, SkyWalker, Arno, bot, ryst
 [NEWLINE]
 [ICON_BULLET]Civilopedia Texts: Wikipedia, www.azquotes.com, www.brainyquote.com, baike.baidu.com
-[NEWLINE][ICON_BULLET]Proofreading, Document Editing &amp; Balance: 爱玲的安逸人生, Seven
+[NEWLINE][ICON_BULLET]Proofreading, Document Editing &amp; Balance: 爱玲的安逸人生, Seven, Qingyin
 [NEWLINE][ICON_BULLET]
 Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namco Bandai Games and produced by Project Aces), Call of Duty: Modern Warfare (published and owned by Activision),World of Warships and World of Tanks(Wargaming) .  Command &amp; Conquer: Red Alert 3 (Electronic Arts).Cities XL 2012 (Focus Home Interactive)  Others from Google Search.</Description>
     <Authors>Super Power Team</Authors>
@@ -388,11 +388,6 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>Gameplay/SQL/Buildings/NewBuildingsEffect.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
         <FileName>Gameplay/SQL/Terrian/Improvements.sql</FileName>
       </Action>
       <Action>
@@ -527,7 +522,7 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
         <Type>Mod</Type>
         <Name>(1)CIV5MPDLL</Name>
         <Id>a2969a0a-e4da-41cc-9e0b-19b29aa971d8</Id>
-        <MinVersion>10</MinVersion>
+        <MinVersion>12</MinVersion>
         <MaxVersion>999</MaxVersion>
       </Association>
     </ModDependencies>
@@ -1020,10 +1015,6 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="Gameplay\SQL\Buildings\CitySizeBuildings.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="Gameplay\SQL\Buildings\NewBuildingsEffect.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
@@ -4963,6 +4954,10 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
+    <Content Include="UI/InGame/TechTree/TechHelpInclude.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
     <Content Include="UI/InGame/Popups/ChooseFreeItem.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
@@ -5171,35 +5166,39 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="UI\Art\IconAtlases\Extra\SP8Units&amp;BuildingsAtlas016.dds">
+    <Content Include="UI\Art\IconAtlases\Extra\SP8Units_BuildingsAtlas016.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="UI\Art\IconAtlases\Extra\SP8Units&amp;BuildingsAtlas032.dds">
+    <Content Include="UI\Art\IconAtlases\Extra\SP8Units_BuildingsAtlas032.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="UI\Art\IconAtlases\Extra\SP8Units&amp;BuildingsAtlas045.dds">
+    <Content Include="UI\Art\IconAtlases\Extra\SP8Units_BuildingsAtlas045.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="UI\Art\IconAtlases\Extra\SP8Units&amp;BuildingsAtlas048.dds">
+    <Content Include="UI\Art\IconAtlases\Extra\SP8Units_BuildingsAtlas048.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="UI\Art\IconAtlases\Extra\SP8Units&amp;BuildingsAtlas064.dds">
+    <Content Include="UI\Art\IconAtlases\Extra\SP8Units_BuildingsAtlas064.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="UI\Art\IconAtlases\Extra\SP8Units&amp;BuildingsAtlas080.dds">
+    <Content Include="UI\Art\IconAtlases\Extra\SP8Units_BuildingsAtlas080.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="UI\Art\IconAtlases\Extra\SP8Units&amp;BuildingsAtlas128.dds">
+    <Content Include="UI\Art\IconAtlases\Extra\SP8Units_BuildingsAtlas128.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="UI\Art\IconAtlases\Extra\SP8Units&amp;BuildingsAtlas256.dds">
+    <Content Include="UI\Art\IconAtlases\Extra\SP8Units_BuildingsAtlas256.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\IconAtlases\Extra\TroopsTop.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>

@@ -95,6 +95,7 @@ function RefreshCityBanner(cityBanner, iActiveTeam, iActivePlayer)
 	if iActiveTeam == team then
 		isActiveTeamCity = true
 	end
+	local bActivePlayerObserver = Players[iActivePlayer]:IsObserver()
 
 	-- grab city using playerID and cityID
 	local city = player:GetCityByID(cityBanner.cityID)
@@ -374,64 +375,15 @@ function RefreshCityBanner(cityBanner, iActiveTeam, iActivePlayer)
 
 		-- SP CityIcons
 		if GameInfoTypes["BUILDING_CITY_SIZE_TOWN"] ~= nil then
-			local iCitySc1 = GameInfoTypes["BUILDING_CITY_SIZE_TOWN"]
-			local iCitySc2 = GameInfoTypes["BUILDING_CITY_SIZE_SMALL"]
-			local iCitySc3 = GameInfoTypes["BUILDING_CITY_SIZE_MEDIUM"]
-			local iCitySc4 = GameInfoTypes["BUILDING_CITY_SIZE_LARGE"]
-			local iCitySc5 = GameInfoTypes["BUILDING_CITY_SIZE_XL"]
-			local iCitySc6 = GameInfoTypes["BUILDING_CITY_SIZE_XXL"]
-			local iCitySc7 = GameInfoTypes["BUILDING_CITY_SIZE_GLOBAL"]
-			-- Set Override
-			local overrideBuilding = nil
-			overrideBuilding = GameInfo.Civilization_BuildingClassOverrides({
-				BuildingClassType = "BUILDINGCLASS_CITY_SIZE_TOWN",
-				CivilizationType = GameInfo.Civilizations[player:GetCivilizationType()].Type,
-			})()
-			if overrideBuilding ~= nil then
-				iCitySc1 = GameInfo.Buildings[overrideBuilding.BuildingType].ID
-			end
-			overrideBuilding = GameInfo.Civilization_BuildingClassOverrides({
-				BuildingClassType = "BUILDINGCLASS_CITY_SIZE_SMALL",
-				CivilizationType = GameInfo.Civilizations[player:GetCivilizationType()].Type,
-			})()
-			if overrideBuilding ~= nil then
-				iCitySc2 = GameInfo.Buildings[overrideBuilding.BuildingType].ID
-			end
-			overrideBuilding = GameInfo.Civilization_BuildingClassOverrides({
-				BuildingClassType = "BUILDINGCLASS_CITY_SIZE_MEDIUM",
-				CivilizationType = GameInfo.Civilizations[player:GetCivilizationType()].Type,
-			})()
-			if overrideBuilding ~= nil then
-				iCitySc3 = GameInfo.Buildings[overrideBuilding.BuildingType].ID
-			end
-			overrideBuilding = GameInfo.Civilization_BuildingClassOverrides({
-				BuildingClassType = "BUILDINGCLASS_CITY_SIZE_LARGE",
-				CivilizationType = GameInfo.Civilizations[player:GetCivilizationType()].Type,
-			})()
-			if overrideBuilding ~= nil then
-				iCitySc4 = GameInfo.Buildings[overrideBuilding.BuildingType].ID
-			end
-			overrideBuilding = GameInfo.Civilization_BuildingClassOverrides({
-				BuildingClassType = "BUILDINGCLASS_CITY_SIZE_XL",
-				CivilizationType = GameInfo.Civilizations[player:GetCivilizationType()].Type,
-			})()
-			if overrideBuilding ~= nil then
-				iCitySc5 = GameInfo.Buildings[overrideBuilding.BuildingType].ID
-			end
-			overrideBuilding = GameInfo.Civilization_BuildingClassOverrides({
-				BuildingClassType = "BUILDINGCLASS_CITY_SIZE_XXL",
-				CivilizationType = GameInfo.Civilizations[player:GetCivilizationType()].Type,
-			})()
-			if overrideBuilding ~= nil then
-				iCitySc6 = GameInfo.Buildings[overrideBuilding.BuildingType].ID
-			end
-			overrideBuilding = GameInfo.Civilization_BuildingClassOverrides({
-				BuildingClassType = "BUILDINGCLASS_CITY_SIZE_GLOBAL",
-				CivilizationType = GameInfo.Civilizations[player:GetCivilizationType()].Type,
-			})()
-			if overrideBuilding ~= nil then
-				iCitySc7 = GameInfo.Buildings[overrideBuilding.BuildingType].ID
-			end
+			
+			local iCitySc1 = player:GetCivBuilding(GameInfoTypes["BUILDINGCLASS_CITY_SIZE_TOWN"])
+			local iCitySc2 = player:GetCivBuilding(GameInfoTypes["BUILDINGCLASS_CITY_SIZE_SMALL"])
+			local iCitySc3 = player:GetCivBuilding(GameInfoTypes["BUILDINGCLASS_CITY_SIZE_MEDIUM"])
+			local iCitySc4 = player:GetCivBuilding(GameInfoTypes["BUILDINGCLASS_CITY_SIZE_LARGE"])
+			local iCitySc5 = player:GetCivBuilding(GameInfoTypes["BUILDINGCLASS_CITY_SIZE_XL"])
+			local iCitySc6 = player:GetCivBuilding(GameInfoTypes["BUILDINGCLASS_CITY_SIZE_XXL"])
+			local iCitySc7 = player:GetCivBuilding(GameInfoTypes["BUILDINGCLASS_CITY_SIZE_GLOBAL"])
+
 			-- Fix No City Scale BUG!
 			if
 				not city:IsHasBuilding(iCitySc1)
@@ -1430,7 +1382,9 @@ function OnBannerClick(x, y)
 		local player = Players[playerID]
 
 		-- Active player city
-		if playerID == Game.GetActivePlayer() then
+		if playerID == Game.GetActivePlayer() 
+		or Players[Game.GetActivePlayer()]:IsObserver()
+		then
 			-- Puppets are special
 			if plot:GetPlotCity():IsPuppet() and not player:MayNotAnnex() then
 				local popupInfo = {

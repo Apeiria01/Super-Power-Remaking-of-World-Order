@@ -12,7 +12,7 @@
 			<Text>[COLOR_YELLOW]Important Notes:[ENDCOLOR][NEWLINE]1. Check the saved file size. [NEWLINE]2. Check the Civilopedia before play (Hotkey [COLOR_POSITIVE_TEXT]F1[ENDCOLOR]). [NEWLINE]3. If always crash or saved files damaged, try Dx9.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_VERSION">
-			<Text>[COLOR_YELLOW]Version 9.3[ENDCOLOR]</Text>
+			<Text>[COLOR_YELLOW]Version 9.4[ENDCOLOR]</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_SP_MOD_SETUP">
@@ -60,7 +60,7 @@
 			<Text>SP - Corps Mode (High)</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_HIGH_HELP">
-			<Text>Corps Mode - High:   Allow to establish Corps and Armee. The Troops Level is High. Please refer to wiki page of troops.</Text>
+			<Text>Corps Mode - High:   Allow to establish Corps and Armee. The Troops Level is High (150%). Please refer to wiki page of troops.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_CLOSE">
 			<Text>SP - [COLOR_YELLOW]Corps Mode[ENDCOLOR] - OFF</Text>
@@ -72,7 +72,7 @@
 			<Text>SP - Corps Mode (Low)</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_LOW_HELP">
-			<Text>Corps Mode - Low:    Allow to establish Corps and Armee. The Troops Level is Low. Please refer to wiki page of troops.</Text>
+			<Text>Corps Mode - Low:    Allow to establish Corps and Armee. The Troops Level is Low (50%). Please refer to wiki page of troops.</Text>
 		</Row>
 
 
@@ -1523,31 +1523,24 @@
 			<Text>[COLOR_NEGATIVE_TEXT]{1_Num}[ENDCOLOR]</Text>
 		</Row>
 		
-	<!-- New Cultural Influential Dialog 
+		<!-- New Cultural Influential Dialog-->
 		<Update>
 			<Where Tag="TXT_KEY_GENERIC_INFLUENTIAL_ON_AI_1"/>
 			<Set Text="Our people are now buying your blue jeans and listening to your pop music. I worry the rest of the world will also succumb to the influence of your culture."/>
-		</Update>-->
+		</Update>
 		<Row Tag="TXT_KEY_CO_IMMIGRATION_COUNTER_HEADER">
-		<!--<Replace Tag="TXT_KEY_CO_VICTORY_EXCESS_HAPPINESS_HEADER">-->
 			<Text>[ICON_TEAM_4] / [ICON_TEAM_2]</Text>
-		<!--</Replace>-->
 		</Row>
 		<Row Tag="TXT_KEY_CO_IMMIGRATION_COUNTER_HEADER_TT">
-		<!--<Replace Tag="TXT_KEY_CO_VICTORY_EXCESS_HAPPINESS_HEADER_TT">-->
 			<Text>
-
 				Left: Current [ICON_TEAM_4] International Immigration Move-in Rate.
 				[NEWLINE][ICON_BULLET]The Move-in Rate represents how attractive your country is to their people.
 				[NEWLINE][ICON_BULLET]If the Move-in Rate is 4 or above and is larger than the Move-out Rate, the people in this country will [ICON_TEAM_4] migrate to your country by 1 [ICON_CITIZEN] per turn.
 				[NEWLINE][NEWLINE][NEWLINE]Right: Current [ICON_TEAM_2] International Immigration Move-out Rate.
 				[NEWLINE][ICON_BULLET]The Move-out Rate represents how attractive this country is to your people.
 				[NEWLINE][ICON_BULLET]If the Move-out Rate is 4 or above and is larger than the Move-in Rate, your people will [ICON_TEAM_2] migrate to this country by 1 [ICON_CITIZEN] per turn.
-
 				[NEWLINE][NEWLINE]The base [ICON_TEAM_4]Move-in rate is decided by your current [ICON_TOURISM] influence level on the target nation (Unknown:0, Exotic:1, Familiar:2, Popular:3, Influential:4, Dominant:5). So does the base [ICON_TEAM_2]Move-in rate. However they are also greatly affected by the diplomacy condition between two nations.
-
 			</Text>
-		<!--</Replace>-->
 		</Row>
 
 
@@ -1832,7 +1825,7 @@
 			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]Combine two same type of Units in this tile into Corps need Arsenal in this City[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_3">
-			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]Add one same type Unit in this tile into Corps to become an Armee need MilitaryBase in this City[ENDCOLOR]</Text>
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]Add a same type Unit in this tile into Corps to become an Armee need MilitaryBase in this City[ENDCOLOR]</Text>
 		</Row>
 		
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_FULLATTACK_ON_SHORT">
@@ -6369,7 +6362,7 @@
 			<Tag>TXT_KEY_BUILDING_CHINESE_GARDEN_HELP</Tag>
 			<Text>
 				Can only be built in large cities (population 26).
-				[NEWLINE]This city +25% [ICON_GREAT_PEOPLE] accumulation of great man points, +2 global [ICON_HAPPINESS_1] Happiness.
+				[NEWLINE]This city +25% [ICON_GREAT_PEOPLE] accumulation of great man points.
 				[NEWLINE][NEWLINE]-3%[ICON_HAPPINESS_4] global dissatisfaction per garden.
 				[NEWLINE][NEWLINE]Each Chinese garden provides [ICON_FOOD] food, [ICON_RESEARCH] scientific research and [ICON_GOLDEN_AGE] golden age points output for each city size of large cities and above, and the value increases with the city size.
 			</Text>
@@ -7104,9 +7097,9 @@
 			Besides, you can use great general to "upgrade" normal units to corps, with no requirements of buildings in city. The great general will be consumed then.[NEWLINE]
 			Air forces are not able to establish corps or Armee. [NEWLINE]
 			"Troops" resource is introduced to limit the number of combat units. [NEWLINE]
-			Troop level high: Initially 24 troops provided for human players and 32 for AI. Cities with city size higher than "town" provide 4 extra troops per city size they acquire. [NEWLINE]
-			Troop level medium: Initially 12 troops provided for human players and 16 for AI. Cities with city size higher than "town" provide 2 extra troops per city size they acquire(Default). [NEWLINE]
-			Troop level low: Initially 6 troops provided for human players and 8 for AI. Cities with city size higher than "town" provide 1 extra troops per city size they acquire. [NEWLINE]
+			Troop level high: Initially 36 troops provided for players. Cities with city size higher than "town" provide 6 extra troops per city size they acquire. [NEWLINE]
+			Troop level medium: Initially 24 troops provided for players. Cities with city size higher than "town" provide 4 extra troops per city size they acquire(Default). [NEWLINE]
+			Troop level low: Initially 12 troops provided for players. Cities with city size higher than "town" provide 2 extra troops per city size they acquire. [NEWLINE]
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_TROOPS_USED">
@@ -7359,9 +7352,9 @@
 		<Replace Tag="TXT_KEY_POLICY_REPUBLIC_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]Republic[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]+2 [ICON_FOOD] Food and +4 [ICON_GOLD] Gold in every city.
+				[NEWLINE][ICON_BULLET]+4 [ICON_FOOD] Food and +4 [ICON_GOLD] Gold in every city.
 				[NEWLINE][ICON_BULLET]+2 [ICON_RES_CONSUMER] Consumer Goods per city.
-				[NEWLINE][ICON_BULLET]+1%[ICON_FOOD] Global Food and [ICON_PRODUCTION] Global Production from each City.
+				[NEWLINE][ICON_BULLET]+1% [ICON_FOOD] Global Food and [ICON_PRODUCTION] Global Production from each City.
 			</Text>
 		</Replace>
 		
@@ -7381,7 +7374,7 @@
 				[COLOR_POSITIVE_TEXT]Meritocracy[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]+2 [ICON_PRODUCTION] Production in every city.
 				[NEWLINE][ICON_BULLET]+10% [ICON_PRODUCTION] Production in cities when constructing Buildings.
-				[NEWLINE][ICON_BULLET]Gain free [ICON_RESEARCH]science and [ICON_CULTURE] culture  per settler trained, building or national wonder constructed (10% of its cost, purchases not included).
+				[NEWLINE][ICON_BULLET]Gain free [ICON_RESEARCH] Science and [ICON_CULTURE] Culture  per settler trained, building or national wonder constructed (10% of its cost, purchases not included).
 			</Text>
 		</Replace>
 
@@ -7393,6 +7386,7 @@
 				[COLOR_POSITIVE_TEXT]Bill of Rights[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]Each Specialist slot in the building provides 1 point corresponding base output (According to default building).
 				[NEWLINE][ICON_BULLET]-50% [ICON_GOLD] Maintenance Cost for All City Halls.
+				[NEWLINE][ICON_BULLET]+1% [ICON_RESEARCH] Global Science and [ICON_GOLD] Global Gold from each City.
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_BILL_OF_RIGHTS_TEXT">
@@ -7423,8 +7417,8 @@
 		<Row Tag="TXT_KEY_POLICY_DECENTRALIZATION_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]Decentralization[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]Garrisoned units cost no maintenance. Each City with at least 1 Garrisoned Unit increases [ICON_HAPPINESS_1] Local Happiness by 1.
-				[NEWLINE][ICON_BULLET]Each Garrisoned Unit will increase the local city's [ICON_CULTURE] Culture by 2. Can be up to +4 [ICON_CULTURE] Culture if you have 2 Garrisoned Unit in a city.
+				[NEWLINE][ICON_BULLET]+4 [ICON_CULTURE] Culture, +1 [ICON_HAPPINESS_1] Happiness in Cities.
+				[NEWLINE][ICON_BULLET]Garrisoned units cost no maintenance.
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_DECENTRALIZATION_TEXT">
@@ -7623,11 +7617,11 @@
 				[NEWLINE][ICON_BULLET]Gain [ICON_CULTURE] Culture bonus when you achieve any Quests from City-States.
 			</Text>
 		</Replace>
-		<!--<Replace Tag="TXT_KEY_POLICY_SCHOLASTICISM_HELP">
+		<Replace Tag="TXT_KEY_POLICY_SCHOLASTICISM_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]Scholasticism[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]All City-States which are Allies provide you with their 100% [ICON_RESEARCH] Science output.</Text>
-		</Replace>-->
+				[NEWLINE][ICON_BULLET]All City-States which are Allies provide you with their 33% [ICON_RESEARCH] Science output.</Text>
+		</Replace>
 		
 		<Replace Tag="TXT_KEY_POLICY_CULTURAL_DIPLOMACY">
 			<Text>Gunboat Diplomacy</Text>
@@ -8048,7 +8042,7 @@
 			<Text>
 			[COLOR_POSITIVE_TEXT]Beacon of Democracy[ENDCOLOR]
 			[NEWLINE] Every 25 [ICON_HAPPINESS_1] excess Happiness providing +5% [ICON_RESEARCH] Science in all cities. (can be superimposed with the rational policy).
-			+100% [ICON_TEAM_4] International Immigration Rate from other civlizations to Your Nation.
+			[NEWLINE]+100% [ICON_TEAM_4] International Immigration Rate from other civlizations to Your Nation.
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_TREATY_ORGANIZATION_TEXT">
@@ -8253,10 +8247,10 @@
 			<Text>+1[ICON_MOVES] Movement.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_FAST_WORKER_TECH" >
-			<Text>+1[ICON_MOVES] Movement.</Text>
+			<Text>+1[ICON_MOVES] Movement</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_PASSABLE_WORKER_TECH" >
-			<Text>Can move across Mountains or Ice.</Text>
+			<Text>Can move across Mountains or Ice</Text>
 		</Row>
 
 		<Replace Tag="TXT_KEY_PROMOTION_NAVAL_TRADITION_HELP" >
@@ -8768,7 +8762,7 @@
 			<Text>+1 [ICON_CULTURE] Culture and +1 [ICON_PEACE] Faith from Jungle tiles</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_ORAL_TRADITION">
-			<Text>+1 [ICON_CULTURE] Culture from Plantations, +1 [ICON_GOLD] Gold from [ICON_RES_SILK], +1 [ICON_CULTURE] Culture from [ICON_RES_TEA]</Text>
+			<Text>+1 [ICON_CULTURE] Culture, +1 [ICON_GOLD] Gold from Plantations, +1 [ICON_CULTURE] Culture from [ICON_RES_SILK] Silk, [ICON_RES_TEA] Tea and [ICON_RES_DYE] Dye </Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_MESSENGER_GODS">
 			<Text>+2 [ICON_RESEARCH] Science and +2 [ICON_PEACE] Faith in cities with a City Connection</Text>
@@ -8854,7 +8848,7 @@
 			<Text>+2 [ICON_FOOD] Food for every Shrine and Temple</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_FERTILITY_RITES">
-			<Text>+2 [ICON_PEACE] Faith for every Granary, +1 [ICON_PEACE] Faith from [ICON_RES_WHEAT]</Text>
+			<Text>+2 [ICON_PEACE] Faith for every Granary, +1 [ICON_PEACE] Faith from [ICON_RES_WHEAT] Wheat</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_MONUMENT_GODS">
 			<Text>+2 [ICON_PEACE] Faith for every Monument, +1 [ICON_CULTURE] Culture in Capital City</Text>
@@ -8942,7 +8936,7 @@
 			<Text>Sacred Calendar</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SACRED_CALENDAR">
-			<Text>+33% [ICON_GOLDEN_AGE] Golden Age length, +3 [ICON_GOLDEN_AGE] golden age points for every Religious Building purchased with [ICON_PEACE] Faith</Text>
+			<Text>+34% [ICON_GOLDEN_AGE] Golden Age length, +3 [ICON_GOLDEN_AGE] golden age points for every Religious Building purchased with [ICON_PEACE] Faith</Text>
 		</Row>
 		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_COMMUNITY">
 			<Text>+1% [ICON_PRODUCTION] Production for each follower (max +20%)</Text>
@@ -9004,6 +8998,12 @@
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SNOW_BELIEF">
 			<Text>+1 [ICON_PEACE] Faith from Tundra tiles without Forest, +2 [ICON_PEACE] Faith and +1 [ICON_FOOD] Food from tiles covered with Snow</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_GOD_OF_COMMERCE_SHORT">
+			<Text>God of Commerce</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_GOD_OF_COMMERCE">
+			<Text>+2 [ICON_GOLD] Gold, +2 [ICON_GOLDEN_AGE] Golden Age Point from [ICON_RES_IVORY] Ivory, [ICON_RES_TRUFFLES] Truffles and [ICON_RES_FUR] Fur.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_RIVER_CRAFTSMAN_SHORT">
 			<Text>Sudoku</Text>
@@ -10143,8 +10143,8 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_TRAIT_ART_OF_WAR">
 			<Text>
-				[ICON_BULLET]During a [ICON_GOLDEN_AGE] Golden Age, China receive additional +20% [ICON_RESEARCH] Science and +20% [ICON_FOOD] Food nationwide.
-				[NEWLINE][ICON_BULLET]In the Golden Age, the [ICON_CITIZEN] population growth of all cities requires -20% food, eliminates the [ICON_RESEARCH] increase in scientific research expenditures from the number of cities, and [ICON_RESEARCH] the total scientific research expenditure -20%.
+			[ICON_BULLET]During a [ICON_GOLDEN_AGE] Golden Age, China receive additional +20% [ICON_RESEARCH] Science and +20% [ICON_FOOD] Food nationwide.
+			[NEWLINE][ICON_BULLET]In the Golden Age, the [ICON_CITIZEN] population growth of all cities requires -20% food, the total [ICON_RESEARCH] Research expenditure -20%, eliminates the [ICON_RESEARCH] increase in Research expenditures from the number of cities.
 			</Text>
 		</Replace>
 
@@ -10152,9 +10152,11 @@
 			<Text>Pax Sinica!</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_UA_CHINA_GOLDENAGE_EFFECTS">
-      <Text>
-        China has entered a new [ICON_GOLDEN_AGE][COLOR_POSITIVE_TEXT]prosperity[ENDCOLOR]! [NEWLINE][NEWLINE]All gold-producing plots have an additional +1[ICON_GOLD] gold production, +20% national [ICON_PRODUCTION] production capacity, and [ICON_CULTURE] culture. The [ICON_CITIZEN] population growth of all cities requires -20% food, eliminates the [ICON_RESEARCH] increase in scientific research expenditure from the number of cities, and [ICON_RESEARCH] total scientific research expenditure -20%.
-      </Text>
+			<Text>
+			China has entered a new [ICON_GOLDEN_AGE][COLOR_POSITIVE_TEXT]prosperity[ENDCOLOR]! 
+			[NEWLINE][NEWLINE]All gold-producing plots have an additional +1[ICON_GOLD] gold production, +20% national [ICON_PRODUCTION] production capacity, and [ICON_CULTURE] culture. 
+			[NEWLINE]The [ICON_CITIZEN] population growth of all cities requires -20% food, total [ICON_RESEARCH] Research expenditure -20%, eliminates the increase in [ICON_RESEARCH] Research expenditure from the number of cities.
+			</Text>
 		</Row>
 
 		<Replace Tag="TXT_KEY_TRAIT_RIVER_EXPANSION_SHORT">
@@ -13567,7 +13569,11 @@
 			<Plurality>2</Plurality>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_HELP_ELITE_SNIPER">
-			<Text>Elite Sniper Unit, move stealthily and can paradrop within 16 hexes. [NEWLINE][NEWLINE]Requires Elite Sniper Training Project and only one can exist in the world.</Text>
+			<Text>
+			Elite Sniper Unit, move stealthily and can paradrop within 16 hexes. 
+			[NEWLINE]Every time you kill an enemy, +3 [ICON_RANGE_STRENGTH] range combat strength.
+			[NEWLINE][NEWLINE]Requires Elite Sniper Training Project and only one can exist in the world.
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_ELITE_SNIPER_STRATEGY">
 			<Text>The Elite Sniper can cause chaos to the enemy by destroying their supply line. It has excellent mobility and have 100% chance of withdarw if engaged in melee combat, which makes it the best harassment unit. </Text>
@@ -13854,7 +13860,7 @@
 			<Text>It is so tall that it can cross the mountains or walking in costal area. It is immune to strategic nuclear weapons' blasts and free from some debuff effects from the enemy like "sundered" and "slowed down". Can heal every turn.[NEWLINE][NEWLINE]Requires Prototype Mecha Project and only one can exist in the world.</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_UNIT_MECH_STRATEGY">
-			<Text>Giant, but fast, this is the battle machine of the future. Since it is remotely controlled by its pilot, it has no fears and never feels pain. Thus, these debuff effects - "Sundered", "Slowed Down", "Charged Damage", "Target Marked", prove to be useless on it. All of these make it the strongest defender unit in the game. It can also survive any strategic nuclear weapons' blasts including the ICBM. However, its CPU will be affected by enemy EMP attack and suffer from Collateral Damage and Area of Effect Damage, which cannot be avoided by remote-control. </Text>
+			<Text>Giant, but fast, this is the battle machine of the future, has More Hit Point. Since it is remotely controlled by its pilot, it has no fears and never feels pain. Thus, these debuff effects - "Sundered", "Slowed Down", "Charged Damage", "Target Marked", prove to be useless on it. All of these make it the strongest defender unit in the game. It can also survive any strategic nuclear weapons' blasts including the ICBM. However, its CPU will be affected by enemy EMP attack and suffer from Collateral Damage and Area of Effect Damage, which cannot be avoided by remote-control. </Text>
 		</Replace>
 		
 
@@ -13990,19 +13996,15 @@
 			<Text>Fixed Artillery</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_CITADEL_DEFENSE_HELP">
-			<Text>Fixed Firebase, created when a [COLOR_POSITIVE_TEXT]Citadel[ENDCOLOR] is built.
-			[NEWLINE][NEWLINE][ICON_BULLET]Strong when [COLOR_POSITIVE_TEXT]Defending[ENDCOLOR].
-			[NEWLINE][NEWLINE][ICON_BULLET]Immune to all [COLOR_POSITIVE_TEXT]Debuff Effects[ENDCOLOR].
-			[NEWLINE][ICON_BULLET]If its Tile is captured by the enemy, it suffer -50 HP per turn and -50% [ICON_STRENGTH]Combat Strength due to lack of supply.
+			<Text>
+			Fixed Firebase, created when a [COLOR_POSITIVE_TEXT]Citadel[ENDCOLOR] is built.
+			[NEWLINE][ICON_BULLET]+25% [ICON_STRENGTH] Combat Strength when fighting inside [COLOR_POSITIVE_TEXT]Friendly Territory[ENDCOLOR].
+			[NEWLINE][ICON_BULLET]Immune to all [COLOR_POSITIVE_TEXT]Debuff Effects[ENDCOLOR].
+			[NEWLINE][ICON_BULLET]If its Tile is captured by the enemy, it suffer -50 HP per turn and -25% [ICON_STRENGTH]Combat Strength due to lack of supply.
 			[NEWLINE][ICON_BULLET]Can NOT [COLOR_NEGATIVE_TEXT]Move[ENDCOLOR].
 			[NEWLINE][ICON_BULLET]Can NOT earn [COLOR_NEGATIVE_TEXT]Promotions[ENDCOLOR].
 			[NEWLINE][ICON_BULLET]Weak vs [COLOR_NEGATIVE_TEXT]Siege Units[ENDCOLOR].</Text>
 		</Row>
-		
-		
-		
-		
-		
 		
 		<Row Tag="TXT_KEY_PROMOTION_INFANTRY_COMBAT">
 			<Text>Melee Infantry Unit</Text>
@@ -14010,9 +14012,8 @@
 		<Row Tag="TXT_KEY_PROMOTION_INFANTRY_COMBAT_HELP">
 			<Text>
 				Front Line Infantry Unit. Good at both offensive and defensive tasks.
-				[NEWLINE][NEWLINE][ICON_BULLET]Strong attacking [COLOR_POSITIVE_TEXT]Cities[ENDCOLOR].
-				[NEWLINE][ICON_BULLET]+25% [ICON_STRENGTH]Combat Strength when fighting in [COLOR_POSITIVE_TEXT]Rough Terrains[ENDCOLOR].
-				[NEWLINE][ICON_BULLET]Strong when defending attacks from [COLOR_POSITIVE_TEXT]Anti-Mounted Units[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Militia Units[ENDCOLOR].
+				[NEWLINE][NEWLINE][ICON_BULLET]+50% Strong attacking [COLOR_POSITIVE_TEXT]Cities[ENDCOLOR].
+				[NEWLINE][ICON_BULLET]+25% Strong when defending attacks from [COLOR_POSITIVE_TEXT]Anti-Mounted Units[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Militia Units[ENDCOLOR].
 			</Text>
 		</Row>
 
@@ -14022,9 +14023,9 @@
 		<Row Tag="TXT_KEY_PROMOTION_GUNPOWDER_INFANTRY_COMBAT_HELP">
 			<Text>
 				Front Line Infantry Unit. Good at both offensive and defensive tasks.
-				[NEWLINE][NEWLINE][ICON_BULLET]Perform a [COLOR_POSITIVE_TEXT]Ranged Attack[ENDCOLOR] before melee attacking. [NEWLINE][ICON_BULLET]Strong attacking [COLOR_POSITIVE_TEXT]Cities[ENDCOLOR].
-				[NEWLINE][ICON_BULLET]+25% [ICON_STRENGTH]Combat Strength when fighting in [COLOR_POSITIVE_TEXT]Rough Terrains[ENDCOLOR].
-				[NEWLINE][ICON_BULLET]Strong when defending attacks from [COLOR_POSITIVE_TEXT]Anti-Tank Units[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Militia Units[ENDCOLOR].
+				[NEWLINE][NEWLINE][ICON_BULLET]Perform a [COLOR_POSITIVE_TEXT]Ranged Attack[ENDCOLOR] before melee attacking. 
+				[NEWLINE][ICON_BULLET]+50% Strong attacking [COLOR_POSITIVE_TEXT]Cities[ENDCOLOR].
+				[NEWLINE][ICON_BULLET]+25% Strong when defending attacks from [COLOR_POSITIVE_TEXT]Anti-Tank Units[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Militia Units[ENDCOLOR].
 			</Text>
 		</Row>
 
@@ -14120,7 +14121,7 @@
 			<Text>Close Quarters Combat I</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_CQB_COMBAT_1_HELP">
-			<Text>When defending, if the attacker's HP is less than 80, the attacker will lose all [ICON_MOVES] MP after attacking this unit.</Text>
+			<Text>When defending, if the attacker's HP is less than 80%, the attacker will lose all [ICON_MOVES] MP after attacking this unit.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_CQB_COMBAT_2">
 			<Text>Close Quarters Combat II</Text>
@@ -14202,8 +14203,13 @@
 			<Text>Ranged Unit, can strike foes from afar and slow them down.
 			[NEWLINE][NEWLINE][ICON_BULLET]Strong when attacking [COLOR_POSITIVE_TEXT]Anti-Mounted Units[ENDCOLOR], [COLOR_POSITIVE_TEXT]Anti-Tank Units[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Land Hit-and-run Units[ENDCOLOR].
 			[NEWLINE][ICON_BULLET]Weak when engaged in [COLOR_NEGATIVE_TEXT]Melee Combat[ENDCOLOR] or attacked by [COLOR_NEGATIVE_TEXT]Siege Weapons[ENDCOLOR].
+			[NEWLINE][ICON_BULLET]+25% [ICON_RANGE_STRENGTH] Ranged Combat Strength against Units in [COLOR_POSITIVE_TEXT]OPEN[ENDCOLOR] Terrain.
+			[NEWLINE][ICON_BULLET]+25% [ICON_RANGE_STRENGTH] Combat Strength per point height against Units in low Land, maximum 50%.
 			[NEWLINE][ICON_BULLET]Cannot receive [COLOR_NEGATIVE_TEXT]Terrain Bonus[ENDCOLOR].
-			[NEWLINE][ICON_BULLET]When Stacking with an [COLOR_POSITIVE_TEXT]Infantry Unit[ENDCOLOR], [COLOR_POSITIVE_TEXT]Counter Unit[ENDCOLOR] or [COLOR_POSITIVE_TEXT]Citadel Unit[ENDCOLOR], this unit will automatically launch a Counter-attack at the enemy unit when this Tile is attacked by an enemy [COLOR_POSITIVE_TEXT]Melee[ENDCOLOR] Unit. [NEWLINE][ICON_BULLET]Times of Counter-attack in one turn is Unlimited.[NEWLINE][ICON_BULLET]If your stacked unit is killed in the combat, the Counter-attack cannot be performed.</Text>
+			[NEWLINE][ICON_BULLET]When Stacking with an [COLOR_POSITIVE_TEXT]Infantry Unit[ENDCOLOR], [COLOR_POSITIVE_TEXT]Counter Unit[ENDCOLOR] or [COLOR_POSITIVE_TEXT]Citadel Unit[ENDCOLOR], this unit will automatically launch a Counter-attack at the enemy unit when this Tile is attacked by an enemy [COLOR_POSITIVE_TEXT]Melee[ENDCOLOR] Unit. 
+			[NEWLINE][ICON_BULLET]Times of Counter-attack in one turn is Unlimited.
+			[NEWLINE][ICON_BULLET]If your stacked unit is killed in the combat, the Counter-attack cannot be performed.
+			</Text>
 		</Row>
 
 
@@ -14242,13 +14248,22 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_PROMOTION_BARRAGE_1_HELP" >
-			<Text>[ICON_BULLET]If the Target Unit's HP is less than 60 after this attack, its [ICON_MOVES] MP will reduce to 1 for the next turn. [NEWLINE][ICON_BULLET]One more Barrage shot will make it lose all [ICON_MOVES] MP and suffers -1 [ICON_MOVES] MP Penalty for the next turn. It won't recover until HP is full.</Text>
+			<Text>
+			[ICON_BULLET]If the Target Unit's HP is less than 60% after this attack, its [ICON_MOVES] MP will reduce to 1 for the next turn and suffers -1 [ICON_MOVES] MP Penalty until HP is full. 
+			[NEWLINE][ICON_BULLET]One more Barrage shot will make it lose all [ICON_MOVES] MP and cannot perform [COLOR_NEGATIVE_TEXT]Melee Attack[ENDCOLOR] till unitl its HP fully restored.
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_BARRAGE_2_HELP" >
-			<Text>[ICON_BULLET]If the Target Unit's HP is less than 75 after this attack, its [ICON_MOVES] MP will reduce to 1 for the next turn. [NEWLINE][ICON_BULLET]One more Barrage shot will make it lose all [ICON_MOVES] MP and suffers -1 [ICON_MOVES] MP Penalty for the next turn. It won't recover until HP is full.</Text>
+			<Text>
+			[ICON_BULLET]If the Target Unit's HP is less than 75% after this attack, its [ICON_MOVES] MP will reduce to 1 for the next turn and suffers -1 [ICON_MOVES] MP Penalty until HP is full. 
+			[NEWLINE][ICON_BULLET]One more Barrage shot will make it lose all [ICON_MOVES] MP and cannot perform [COLOR_NEGATIVE_TEXT]Melee Attack[ENDCOLOR] till unitl its HP fully restored.
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_BARRAGE_3_HELP" >
-			<Text>[ICON_BULLET]If the Target Unit's HP is less than 90 after this attack, its [ICON_MOVES] MP will reduce to 1 for the next turn. [NEWLINE][ICON_BULLET]One more Barrage shot will make it lose all [ICON_MOVES] MP and suffers -1 [ICON_MOVES] MP Penalty for the next turn. It won't recover until HP is full.</Text>
+			<Text>
+			[ICON_BULLET]If the Target Unit's HP is less than 90% after this attack, its [ICON_MOVES] MP will reduce to 1 for the next turn and suffers -1 [ICON_MOVES] MP Penalty until HP is full. 
+			[NEWLINE][ICON_BULLET]One more Barrage shot will make it lose all [ICON_MOVES] MP and cannot perform [COLOR_NEGATIVE_TEXT]Melee Attack[ENDCOLOR] till unitl its HP fully restored.
+			</Text>
 		</Replace>
 
 		<Row Tag="TXT_KEY_PROMOTION_FLANK_GUN_1">
@@ -14336,22 +14351,14 @@
 			<Text>Sunder I</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SUNDER_1_HELP">
-			<Text>If the Target Unit's HP is less than 75 after this attack, the target unit suffers -25% [ICON_STRENGTH] Combat Strength when [COLOR_POSITIVE_TEXT]Defending[ENDCOLOR] and it won't recover until HP is full. (This effect can be multiplied to -50% )</Text>
+			<Text>If the Target Unit's HP is less than 75% after this attack, the target unit suffers -25% [ICON_STRENGTH] Combat Strength when [COLOR_POSITIVE_TEXT]Defending[ENDCOLOR] and it won't recover until HP is full. (This effect can be multiplied to -50% )</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SUNDER_2">
 			<Text>Sunder II</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SUNDER_2_HELP">
-			<Text>If the Target Unit's HP is less than 90 after this attack, the target unit suffers -25% [ICON_STRENGTH] Combat Strength when [COLOR_POSITIVE_TEXT]Defending[ENDCOLOR] and it won't recover until HP is full. (This effect can be multiplied to -50% )</Text>
+			<Text>If the Target Unit's HP is less than 90% after this attack, the target unit suffers -25% [ICON_STRENGTH] Combat Strength when [COLOR_POSITIVE_TEXT]Defending[ENDCOLOR] and it won't recover until HP is full. (This effect can be multiplied to -50% )</Text>
 		</Row>
-		<!--
-		<Row Tag="TXT_KEY_PROMOTION_SUNDER_3">
-			<Text>Sunder III</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_SUNDER_3_HELP">
-			<Text>If the Target Unit's HP is less than 90 after this attack, the target unit suffers -25% [ICON_STRENGTH] Combat Strength when [COLOR_POSITIVE_TEXT]Defending[ENDCOLOR] and it won't recover until HP is full. (This effect can be multiplied to -50% )</Text>
-		</Row>
-		-->
 
 		<Row Tag="TXT_KEY_PROMOTION_HUNTDOWN_1">
 			<Text>Hunt Down I</Text>
@@ -14397,31 +14404,18 @@
 			<Text>Volley II</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_PROMOTION_VOLLEY_3">
-			<Text>Volley III</Text>
-		</Row>
-
-
 		<Row Tag="TXT_KEY_PROMOTION_COLLATERAL_DAMAGE_1">
 			<Text>Collateral Damage I</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_COLLATERAL_DAMAGE_1_HELP" >
-			<Text>[ICON_BULLET]+50% Damage to other units in the target plot. [NEWLINE][ICON_BULLET]If the Target Unit's HP is less than 75 after this attack, the target unit suffers -25% [ICON_STRENGTH] Combat Strength and -1 [ICON_RANGE_STRENGTH] Range when [COLOR_POSITIVE_TEXT]Attacking[ENDCOLOR] and it won't recover until HP is full. (This effect can be multiplied to -50%). It won't apply to other units suffered from collateral damage.</Text>
+			<Text>[ICON_BULLET]+50% Damage to other units in the target plot. [NEWLINE][ICON_BULLET]If the Target Unit's HP is less than 75% after this attack, the target unit suffers -25% [ICON_STRENGTH] Combat Strength and -1 [ICON_RANGE_STRENGTH] Range when [COLOR_POSITIVE_TEXT]Attacking[ENDCOLOR] and it won't recover until HP is full. (This effect can be multiplied to -50%). It won't apply to other units suffered from collateral damage.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_COLLATERAL_DAMAGE_2">
 			<Text>Collateral Damage II</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_COLLATERAL_DAMAGE_2_HELP" >
-			<Text>[ICON_BULLET]+50% Damage to other units in the target plot. [NEWLINE][ICON_BULLET]If the Target Unit's HP is less than 90 after this attack, the target unit suffers -25% [ICON_STRENGTH] Combat Strength and -1 [ICON_RANGE_STRENGTH] Range when [COLOR_POSITIVE_TEXT]Attacking[ENDCOLOR] and it won't recover until HP is full. (This effect can be multiplied to -50%). It won't apply to other units suffered from collateral damage.</Text>
+			<Text>[ICON_BULLET]+50% Damage to other units in the target plot. [NEWLINE][ICON_BULLET]If the Target Unit's HP is less than 90% after this attack, the target unit suffers -25% [ICON_STRENGTH] Combat Strength and -1 [ICON_RANGE_STRENGTH] Range when [COLOR_POSITIVE_TEXT]Attacking[ENDCOLOR] and it won't recover until HP is full. (This effect can be multiplied to -50%). It won't apply to other units suffered from collateral damage.</Text>
 		</Row>
-		<!--
-		<Row Tag="TXT_KEY_PROMOTION_COLLATERAL_DAMAGE_3">
-			<Text>Collateral Damage III</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_COLLATERAL_DAMAGE_3_HELP" >
-			<Text>[ICON_BULLET]+34% Damage to other units in the target plot. [NEWLINE][ICON_BULLET]If the Target Unit's HP is less than 90 after this attack, the target unit suffers -25% [ICON_STRENGTH] Combat Strength when [COLOR_POSITIVE_TEXT]Attacking[ENDCOLOR] and it won't recover until HP is full. (This effect can be multiplied to -50%). It won't apply to other units suffered from collateral damage.</Text>
-		</Row>
-		-->
 
 		<Replace Tag="TXT_KEY_PROMOTION_LOGISTICS_HELP" >
 			<Text>[ICON_BULLET]+1 [COLOR_POSITIVE_TEXT]Attack[ENDCOLOR] Chance per turn.</Text>
@@ -15585,7 +15579,7 @@
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_WORKER_EMBARKABLE_TECH">
-			<Text>Can build Improvements on [COLOR_POSITIVE_TEXT]Water Tiles[ENDCOLOR].</Text>
+			<Text>Can build Improvements on [COLOR_POSITIVE_TEXT]Water Tiles[ENDCOLOR]</Text>
 		</Row>
 		<!--<Row Tag="TXT_KEY_PROMOTION_WORKER_EMBARKABLE_TECH_HELP">
 			<Text>Allow this unit to build Improvements on [COLOR_POSITIVE_TEXT]Water Tiles[ENDCOLOR].</Text>
@@ -17068,5 +17062,71 @@
 			[NEWLINE][NEWLINE][COLOR_NEGATIVE_TEXT]City needs to Founded by either side or has 4+ Population and not in Resistance[ENDCOLOR]
 			</Text>
 		</Replace>
+
+		<Row Tag="TXT_KEY_EUPANEL_BONUS_HEIGHT">
+			<Text>Height Bouns</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_LUXURIES_SHORT">
+			<Text>Luxuries</Text>
+		</Row>
+		<Row Tag="TXT_KEY_STRATEGIC_SHORT">
+			<Text>Strategic</Text>
+		</Row>
+		<Row Tag="TXT_KEY_LACKING_TROOPS_TOOLTIP">
+			<Text>
+			[COLOR_NEGATIVE_TEXT][ICON_RES_TROOPS]Lacking Troops: You cannot train military units, cannot capture military units from combat, and new military units will be disbanded ![ENDCOLOR]
+			[NEWLINE]Expanding the scale of cities will provide more troops.
+			</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_CITY_BOMBARDMENT_MOD_SP">
+			<Text>All City acquire Indirect Fire</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TECH_HELP_UNITS_UNLOCKED_SP">
+			<Text>[NEWLINE][COLOR_ENDURANCE]Unlock Unit: [ENDCOLOR][NEWLINE]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TECH_HELP_BUILDINGS_UNLOCKED_SP">
+			<Text>[NEWLINE][COLOR_ENDURANCE]Unlock Buildings: [ENDCOLOR][NEWLINE]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TECH_HELP_WONDERS_UNLOCKED_SP">
+			<Text>[NEWLINE][COLOR_ENDURANCE]Unlock Wonders: [ENDCOLOR][NEWLINE]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TECH_HELP_PROJECTS_UNLOCKED_SP">
+			<Text>[NEWLINE][COLOR_ENDURANCE]Unlock Project: [ENDCOLOR][NEWLINE]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TECH_HELP_PROCESSES_UNLOCKED_SP">
+			<Text>[NEWLINE][COLOR_ENDURANCE]Unlock Process: [ENDCOLOR][NEWLINE]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TECH_HELP_BUILDS_UNLOCKED_SP">
+			<Text>[NEWLINE][COLOR_ENDURANCE]Unlock Builds: [ENDCOLOR][NEWLINE]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TECH_HELP_RESOURCES_UNLOCKED_SP">
+			<Text>[NEWLINE][COLOR_ENDURANCE]Unlock Resources: [ENDCOLOR][NEWLINE]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TECH_HELP_YIELDS_UNLOCKED_SP">
+			<Text>[NEWLINE][COLOR_ENDURANCE]Unlock Yield: [ENDCOLOR][NEWLINE]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TECH_HELP_ACTIONS_UNLOCKED_SP">
+			<Text>[NEWLINE][COLOR_ENDURANCE]Unlock Abilities: [ENDCOLOR][NEWLINE]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TECH_HELP_BUILD_REDUCTION_SP">
+			<Text>{1_Build}: {2_Turns} Turn(s) Required</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TECH_HELP_WORKER_SPEED_MODIFIER_SP">
+			<Text>[COLOR_POSITIVE_TEXT]Tile improvement[ENDCOLOR] construction speed increased by {1_Percent}%</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TECH_HELP_RAZE_SPEED_MODIFIER_SP">
+			<Text>Raze Cities speed increased by {1_Percent}%</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_TECH_AUTOMATION_T_HELP_SHORT">
+			<Text>All pillaged improvements will be repaired and unimproved resources can be improved when you use a worker to do "Automation"</Text>
+		</Row>
+		<Row Tag="TXT_KEY_FREE_PROMOTION_FROM_TECH_SHORT">
+			<Text>Grants the [COLOR_POSITIVE_TEXT]{@1_PromotionHelp}[ENDCOLOR] Promotion to allowed Units</Text>
+    	</Row>
+		<Row Tag="TXT_KEY_DOUBLE_TOURISM_PERCENT">
+			<Text>Increase the [ICON_TOURISM] Tourism output by {1_Percent}%</Text>
+		</Row>
 	</Language_en_US>
 </GameData>

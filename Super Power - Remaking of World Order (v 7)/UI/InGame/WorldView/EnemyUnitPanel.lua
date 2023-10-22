@@ -1398,6 +1398,13 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				end
 			end
 
+			iModifier = pMyUnit:GetTotalHeightMod(pToPlot);
+			if (iModifier ~= 0) then
+				controlTable = g_MyCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_HEIGHT");
+				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
+			end
+
 			-- BarbarianBonuses
 			if (pTheirUnit:IsBarbarian()) then
 				--iModifier = GameInfo.HandicapInfos[Game:GetHandicapType()].BarbarianBonus;

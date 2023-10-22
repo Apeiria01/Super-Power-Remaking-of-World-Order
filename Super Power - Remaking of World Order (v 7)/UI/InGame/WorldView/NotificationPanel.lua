@@ -241,14 +241,6 @@ function OnNotificationAdded( Id, type, toolTip, strSummary, iGameValue, iExtraG
         return;
     end
     
-    -- Block the lost of "Special" Resources (Manpower, Consumer & Electricity) Notification
-    if (type == NotificationTypes.NOTIFICATION_DEMAND_RESOURCE and iExtraGameData == -1 and GameInfoTypes["RESOURCE_MANPOWER"] ~= nil
-    and (iGameValue == GameInfoTypes["RESOURCE_MANPOWER"] or iGameValue == GameInfoTypes["RESOURCE_CONSUMER"] or iGameValue == GameInfoTypes["RESOURCE_ELECTRICITY"] or iGameValue == GameInfoTypes["RESOURCE_TROOPS"]))
-    or (type == NotificationTypes.NOTIFICATION_GREAT_PERSON_ACTIVE_PLAYER and tExExRSUnitName ~= nil)
-    then
-        return;
-    end
-    
     local name = g_NameTable[ type ];
     
     local button;

@@ -29,6 +29,13 @@
 			<ShortDescription>TXT_KEY_BELIEF_GODDESS_OF_WISDOM_SHORT</ShortDescription>
 			<Pantheon>true</Pantheon>
 		</Row>
+
+		<Row>
+			<Type>BELIEF_GOD_OF_COMMERCE</Type>
+			<Description>TXT_KEY_BELIEF_GOD_OF_COMMERCE</Description>
+			<ShortDescription>TXT_KEY_BELIEF_GOD_OF_COMMERCE_SHORT</ShortDescription>
+			<Pantheon>true</Pantheon>
+		</Row>
 		
 		<Row>
 			<Type>BELIEF_RELIGIOUS_COLONIZATION</Type>
@@ -96,7 +103,7 @@
 			<Description>TXT_KEY_BELIEF_SACRED_CALENDAR</Description>
 			<ShortDescription>TXT_KEY_BELIEF_SACRED_CALENDAR_SHORT</ShortDescription>
 			<Enhancer>true</Enhancer>
-			<GoldenAgeModifier>33</GoldenAgeModifier>
+			<GoldenAgeModifier>34</GoldenAgeModifier>
 		</Row>
 
 		<Row>

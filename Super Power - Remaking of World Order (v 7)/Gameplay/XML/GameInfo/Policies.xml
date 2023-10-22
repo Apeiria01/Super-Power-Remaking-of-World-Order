@@ -149,12 +149,11 @@
 			<CultureCost>10</CultureCost>
 			<GridX>1</GridX>
 			<GridY>2</GridY>
-			<HappinessPerGarrisonedUnit>1</HappinessPerGarrisonedUnit>
-			<CulturePerGarrisonedUnit>2</CulturePerGarrisonedUnit>
 			<GarrisonFreeMaintenance>true</GarrisonFreeMaintenance>
 			<PortraitIndex>23</PortraitIndex>
 			<IconAtlas>POLICY_ATLAS</IconAtlas>
 			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<ExtraHappinessPerCity>1</ExtraHappinessPerCity>		
 		</Row>
 
 	</Policies>
@@ -640,7 +639,7 @@
 		
 				
 		<Update>
-			<Set UnhappinessMod="-15" GoldenAgeTurns="10" CommonFoeTourismModifier="0" IdeologyUnhappinessModifier="-50"/>
+			<Set UnhappinessMod="-15" GoldenAgeTurns="10" CommonFoeTourismModifier="0" IdeologyUnhappinessModifier="-50" NullifyInfluenceModifier="1"/>
 			<Where Type="POLICY_CULT_PERSONALITY"/>
 		</Update>
 		<Update>

@@ -475,11 +475,9 @@
 			<MilitarySupport>true</MilitarySupport>
 			<MilitaryProduction>true</MilitaryProduction>
 			<Pillage>true</Pillage>
-			<!--<ObsoleteTech>TECH_LASERS</ObsoleteTech>-->
 			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
 			<AdvancedStartCost>30</AdvancedStartCost>
-			<XPValueAttack>3</XPValueAttack>
-			<XPValueDefense>3</XPValueDefense>
+			<ExtraXPValueAttack>3</ExtraXPValueAttack>
 			<UnitArtInfo>ART_DEF_UNIT_ELITE_SNIPER</UnitArtInfo>
 			<UnitFlagIconOffset>54</UnitFlagIconOffset>
 			<UnitFlagAtlas>SPUnitFlags_FLAG</UnitFlagAtlas>
@@ -487,6 +485,7 @@
 			<PortraitIndex>17</PortraitIndex>
 			<ProjectPrereq>PROJECT_ELITE_SNIPER_TRAINING</ProjectPrereq>
 			<ExtraMaintenanceCost>5</ExtraMaintenanceCost>
+			<RangedCombatStrengthChangeAfterKilling>3</RangedCombatStrengthChangeAfterKilling>
 		</Row>
 		
 
@@ -1038,6 +1037,7 @@
 			<Combat>800</Combat>
 			<RangedCombat>800</RangedCombat>
 			<Range>2</Range>
+			<BaseSightRange>5</BaseSightRange>
 			<Cost>4500</Cost>
 			<Moves>6</Moves>
 			<CombatClass>UNITCOMBAT_ARMOR</CombatClass>
@@ -1053,8 +1053,8 @@
 			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
 			<Mechanized>true</Mechanized>
 			<AdvancedStartCost>120</AdvancedStartCost>
-			<XPValueAttack>3</XPValueAttack>
-			<XPValueDefense>3</XPValueDefense>
+			<ExtraXPValueAttack>7</ExtraXPValueAttack>
+			<ExtraXPValueDefense>5</ExtraXPValueDefense>
 			<UnitArtInfo>ART_DEF_UNIT_MECH</UnitArtInfo>
 			<UnitFlagIconOffset>83</UnitFlagIconOffset>
 			<IconAtlas>UNIT_ATLAS_2</IconAtlas>
@@ -1063,6 +1063,7 @@
 			<ProjectPrereq>PROJECT_ADV_MECH</ProjectPrereq>
 			<HurryCostModifier>-1</HurryCostModifier>
 			<ExtraMaintenanceCost>60</ExtraMaintenanceCost>
+			<MaxHitPoints>400</MaxHitPoints>
 		</Row>
 
 
@@ -1275,12 +1276,7 @@
 			<UnitType>UNIT_ENGLISH_LONGBOWMAN</UnitType>
 			<PromotionType>PROMOTION_SUNDER_2</PromotionType>
 		</Row>
-		<!--
-		<Row>
-			<UnitType>UNIT_ENGLISH_LONGBOWMAN</UnitType>
-			<PromotionType>PROMOTION_SUNDER_3</PromotionType>
-		</Row>
-		-->
+
 		<Row>
 			<UnitType>UNIT_ENGLISH_LONGBOWMAN</UnitType>
 			<PromotionType>PROMOTION_FORMATION_1</PromotionType>
@@ -1332,6 +1328,18 @@
 		<Row>
 			<UnitType>UNIT_PROTOTYPE_SUBMARINE</UnitType>
 			<PromotionType>PROMOTION_SUBMARINE_COMBAT</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_PROTOTYPE_SUBMARINE</UnitType>
+			<PromotionType>PROMOTION_SCOUTING_1</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_PROTOTYPE_SUBMARINE</UnitType>
+			<PromotionType>PROMOTION_SCOUTING_2</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_PROTOTYPE_SUBMARINE</UnitType>
+			<PromotionType>PROMOTION_SCOUTING_3</PromotionType>
 		</Row>
 
 
@@ -1449,6 +1457,10 @@
 			<UnitType>UNIT_BAZOOKA</UnitType>
 			<PromotionType>PROMOTION_ANTI_TANK_BAZOOKA</PromotionType>
 		</Row>
+		<Row>
+			<UnitType>UNIT_BAZOOKA</UnitType>
+			<PromotionType>PROMOTION_ONLY_DEFENSIVE</PromotionType>
+		</Row>
 
 		<Row>
 			<UnitType>UNIT_NUCLEAR_ARTILLERY</UnitType>
@@ -1461,6 +1473,10 @@
 		<Row>
 			<UnitType>UNIT_NUCLEAR_ARTILLERY</UnitType>
 			<PromotionType>PROMOTION_INDIRECT_FIRE</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NUCLEAR_ARTILLERY</UnitType>
+			<PromotionType>PROMOTION_EMBARKATION</PromotionType>
 		</Row>
 		
 
@@ -1506,12 +1522,7 @@
 			<UnitType>UNIT_ELITE_BATTLECRUISER</UnitType>
 			<PromotionType>PROMOTION_SUNDER_2</PromotionType>
 		</Row>
-		<!--
-		<Row>
-			<UnitType>UNIT_ELITE_BATTLECRUISER</UnitType>
-			<PromotionType>PROMOTION_SUNDER_3</PromotionType>
-		</Row>
-		-->
+
 		<Row>
 			<UnitType>UNIT_ELITE_BATTLECRUISER</UnitType>
 			<PromotionType>PROMOTION_CAN_MOVE_AFTER_ATTACKING</PromotionType>
@@ -1621,12 +1632,6 @@
 			<UnitType>UNIT_CRUSADER_ARTILLERY</UnitType>
 			<PromotionType>PROMOTION_COLLATERAL_DAMAGE_2</PromotionType>
 		</Row>
-		<!--
-		<Row>
-			<UnitType>UNIT_CRUSADER_ARTILLERY</UnitType>
-			<PromotionType>PROMOTION_COLLATERAL_DAMAGE_3</PromotionType>
-		</Row>
-		-->
 		<Row>
 			<UnitType>UNIT_CRUSADER_ARTILLERY</UnitType>
 			<PromotionType>PROMOTION_CAN_MOVE_AFTER_ATTACKING</PromotionType>
@@ -1786,15 +1791,7 @@
 			<UnitType>UNIT_PAKFA_T50</UnitType>
 			<PromotionType>PROMOTION_EMP_ATTACK</PromotionType>
 		</Row>
-		
-		<Row>
-			<UnitType>UNIT_MECH</UnitType>
-			<PromotionType>PROMOTION_CORPS_1</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_MECH</UnitType>
-			<PromotionType>PROMOTION_CORPS_2</PromotionType>
-		</Row>
+
 		<Row>
 			<UnitType>UNIT_MECH</UnitType>
 			<PromotionType>PROMOTION_TANK_COMBAT</PromotionType>

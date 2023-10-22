@@ -1,12 +1,4 @@
 -- New Handicap
-
-
---include( "UtilityFunctions.lua" )
-
-
-
-
-
 ---------------------------------------------Help AI to catch up with human----------------------------------------------------
 -----------Research Check
 function CheckHumanResearch(iTeam)
@@ -15,7 +7,7 @@ function CheckHumanResearch(iTeam)
 	end
 	
 	if Game:GetHandicapType() < 3 then
-		print ("Human beings are not as clever as AI in Research, AI should take care of human beings.")
+		--print ("Human beings are not as clever as AI in Research, AI should take care of human beings.")
 		return
 	end
 	
@@ -46,7 +38,7 @@ function CheckHumanEconomy(playerID)
 		return
 	end
 	if Game:GetHandicapType() < 3 then
-		print ("Human beings are not as clever as AI in Economy, AI should take care of human beings.")
+		--print ("Human beings are not as clever as AI in Economy, AI should take care of human beings.")
 		return
 	end
 	
@@ -74,7 +66,7 @@ function CheckHumanMilitary( iTeam1, iTeam2, bWar )
 		return
 	end
 	if Game:GetHandicapType() < 3 then
-		print ("Human beings are not as clever as AI in Military, AI should take care of human beings.")
+		--print ("Human beings are not as clever as AI in Military, AI should take care of human beings.")
 		return
 	end
 	
@@ -131,7 +123,6 @@ function CheckHumanScore(playerID)
 			
 			for playerID,AIplayer in pairs(Players) do		
 				if AIplayer ~= nil and AIplayer:GetNumCities() >= 1 and not AIplayer:IsMinorCiv() and not AIplayer:IsBarbarian() and not AIplayer:IsHuman() then
-				
 					local AIName = AIplayer:GetName()
 					local AIScore = AIplayer:GetScore()
 					TotalScore = TotalScore + AIScore
@@ -139,10 +130,8 @@ function CheckHumanScore(playerID)
 					if AIScore > HumanScore / 0.75 or AICanBeBoss (AIplayer) then
 						AIBossBonus(HumanScore,TotalScore,TotalMajCiv,AIplayer) 
 					end
-					
 				end
 			end
-			
 		end
 	end
 
@@ -156,7 +145,7 @@ function CheckHumanScore(playerID)
 		return;
 	end
 	if Game:GetHandicapType() < 3 then
-		print ("Human beings are not as clever as AI in Score, AI should take care of human beings.")
+		--print ("Human beings are not as clever as AI in Score, AI should take care of human beings.")
 		return
 	end
 	
@@ -270,26 +259,6 @@ function PlayerIntoNewEra(era, playerID) -- AI will get bonus when Human Player 
 	end
 end
 Events.SerialEventEraChanged.Add(PlayerIntoNewEra)
-
-
-
------------------------------------------ ------------------Give AI Map visibility so their units won't wander around---Cost too much system resource so canceled		------------------------------------------------
---function AIMapVisibility (player)
---   local AITeamID = player:GetTeam()
---   print ("AI Map Visibility!")
---  	  
---   for i = 0, Map.GetNumPlots()-1, 1 do
---		local plot = Map.GetPlotByIndex(i);
---		plot:ChangeVisibilityCount(AITeamID, 10, -1, true, false);
---		plot:SetRevealed(AITeamID, true);
---		plot:UpdateFog();
---		plot:UpdateVisibility();
---		Game.UpdateFOW(true);
---	end
---end
---
-
-
 
 ------------------------------------------------------------ AI will annex the city to recover quikly------------------------------------------------
 function AIAutoAnnexCity(hexX, hexY, population, citySize)
@@ -738,7 +707,6 @@ function AIPromotion(iPlayer, iCity, iUnit, bGold, bFaith)
 	
 	local CollDamageLV1ID = GameInfo.UnitPromotions["PROMOTION_COLLATERAL_DAMAGE_1"].ID
 	local CollDamageLV2ID = GameInfo.UnitPromotions["PROMOTION_COLLATERAL_DAMAGE_2"].ID
-	-- local CollDamageLV3ID = GameInfo.UnitPromotions["PROMOTION_COLLATERAL_DAMAGE_3"].ID
 	
 	local Barrage1ID = GameInfo.UnitPromotions["PROMOTION_BARRAGE_1"].ID
 	local Barrage2ID = GameInfo.UnitPromotions["PROMOTION_BARRAGE_2"].ID
@@ -749,7 +717,6 @@ function AIPromotion(iPlayer, iCity, iUnit, bGold, bFaith)
 	
 	local Sunder1ID = GameInfo.UnitPromotions["PROMOTION_SUNDER_1"].ID
 	local Sunder2ID = GameInfo.UnitPromotions["PROMOTION_SUNDER_2"].ID
-	-- local Sunder3ID = GameInfo.UnitPromotions["PROMOTION_SUNDER_3"].ID
 	
 	local AOEAttack1ID = GameInfo.UnitPromotions["PROMOTION_CLUSTER_ROCKET_1"].ID
 	local AOEAttack2ID = GameInfo.UnitPromotions["PROMOTION_CLUSTER_ROCKET_2"].ID

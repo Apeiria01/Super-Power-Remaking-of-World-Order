@@ -213,37 +213,6 @@ SameCombatClassUpgradeButton = {
 LuaEvents.UnitPanelActionAddin(SameCombatClassUpgradeButton);
 
 -------------------------------------------------------------------Special Missions---------------------------------------------------
---
---------Cancel TradeRoute
--- CancelTradeButton = {
---  Name = "Cancel Trade Route",
---  Title = "TXT_KEY_SP_UI_BTN_UNITUPGRADE_SHORT", -- or a TXT_KEY
---  OrderPriority = 200, -- default is 200
---  IconAtlas = "UNIT_ACTION_ATLAS", -- 45 and 64 variations required
---  PortraitIndex = 63,
---  ToolTip = "TXT_KEY_SP_UI_BTN_UNITUPGRADE", -- or a TXT_KEY_ or a function
---  
--- 
---  
---  Condition = function(action, unit)
---   return unit:IsTrade();
---  end, -- or nil or a boolean, default is true
---  
---  Disabled = function(action, unit)   
---    return unit:CanMove()
---  end, -- or nil or a boolean, default is false
---  
---  Action = function(action, unit, eClick) 
---  
---	print ("Cancel TradeRoute pressed!")
---	unit:Kill(false, -1)	
---  
---  
---  end
--- };
---
--- LuaEvents.UnitPanelActionAddin(CancelTradeButton);
---
 
 ----Settler joins the city
 SettlerMissionButton = {
@@ -1106,12 +1075,21 @@ local CorpsID = GameInfo.UnitPromotions["PROMOTION_CORPS_1"].ID
 local ArmeeID = GameInfo.UnitPromotions["PROMOTION_CORPS_2"].ID
 local iArsenal = GameInfoTypes["BUILDINGCLASS_ARSENAL"]
 local iMilitaryBase = GameInfoTypes["BUILDINGCLASS_MILITARY_BASE"]
-local ifac = 2
-if PreGame.GetGameOption("GAMEOPTION_SP_CORPS_MODE_HIGH") == 1 then
-	ifac = 3
-elseif PreGame.GetGameOption("GAMEOPTION_SP_CORPS_MODE_LOW") == 1 then
-    ifac = 1
+function bUnitCanEstablishCorps(unit)
+    if unit:IsHasPromotion(ArmeeID)
+    --only land unit can establish corps SP8.0
+    or unit:GetDomainType() ~= DomainTypes.DOMAIN_LAND
+    --CitadelUnits can't establish
+    or unit:IsEmbarked() or unit:IsImmobile() or not unit:CanMove()
+    or (unit:GetDomainType() == DomainTypes.DOMAIN_LAND and unit:GetPlot():IsWater())
+    or (unit:GetDomainType() == DomainTypes.DOMAIN_SEA and not unit:GetPlot():IsWater())
+    then
+        return false
+    end
+    return true
 end
+local tUnit = nil;
+local nUnit = nil;
 -- Establish Corps & Armee
 EstablishCorpsButton = {
     Name = "Establish Corps & Armee",
@@ -1126,50 +1104,20 @@ EstablishCorpsButton = {
         local plot = unit:GetPlot();
 		local city = plot:GetPlotCity() or plot:GetWorkingCity();
 
-		if player:CountNumBuildings(GameInfoTypes["BUILDING_TROOPS"]) <= 0
-        --only land unit can establish corps SP8.0
-        or unit:GetDomainType() ~= DomainTypes.DOMAIN_LAND
+		if player:GetDomainTroopsActive() <= 0
         or plot:GetNumUnits() ~= 2
 		or city == nil or city:GetOwner() ~= playerID
-		or unit:IsHasPromotion(ArmeeID)
-		or unit:IsEmbarked() or unit:IsImmobile() or not unit:CanMove()
-		or (unit:GetDomainType() == DomainTypes.DOMAIN_LAND and plot:IsWater())
-		or (unit:GetDomainType() == DomainTypes.DOMAIN_SEA and not plot:IsWater())
+		or not bUnitCanEstablishCorps(unit)
 		then
 			return false
 		end
 
-        --Count Crops And Armee Unit
-        if g_CorpsCount[playerID] == nil then
-            g_CorpsCount[playerID] = {0, 0, nil, nil, nil};
-            for pUnit in player:Units() do
-                if pUnit and pUnit:IsCombatUnit() and not pUnit:IsImmobile() then
-                    if pUnit and pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_CORPS_1"]) and GameInfo.Unit_FreePromotions {
-                        UnitType = GameInfo.Units[pUnit:GetUnitType()].Type,
-                        PromotionType = "PROMOTION_CORPS_1"
-                    }() == nil then
-                        g_CorpsCount[playerID][1] = g_CorpsCount[playerID][1] + 1;
-                    end
-                    if pUnit and pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_CORPS_2"]) and GameInfo.Unit_FreePromotions {
-                        UnitType = GameInfo.Units[pUnit:GetUnitType()].Type,
-                        PromotionType = "PROMOTION_CORPS_2"
-                    }() == nil then
-                        g_CorpsCount[playerID][2] = g_CorpsCount[playerID][2] + 1;
-                    end
-                end
-            end
-        end
-
-		local iNumCanEstCorp = player:GetBuildingClassCount(GameInfoTypes["BUILDINGCLASS_ARSENAL"]) * ifac - g_CorpsCount[playerID][1]
-		local iNumCanEstArmee = player:GetBuildingClassCount(GameInfoTypes["BUILDINGCLASS_MILITARY_BASE"]) * ifac - g_CorpsCount[playerID][2]
-		local tUnit = nil;
-		local nUnit = nil;
-		local bIsGreatPeople = false;
+		tUnit = nil;
+		nUnit = nil;
 
 		if unit:GetUnitClassType() == GameInfo.UnitClasses.UNITCLASS_GREAT_GENERAL.ID 
 		or unit:GetUnitClassType() == GameInfo.UnitClasses.UNITCLASS_GREAT_ADMIRAL.ID 
 		then
-			bIsGreatPeople = true;
 			nUnit = unit;
 		elseif unit:IsCombatUnit() then
             if player:GetBuildingClassCount(iArsenal) <= 0 then
@@ -1190,6 +1138,9 @@ EstablishCorpsButton = {
                 end
                 --unit is Great Person
                 if tUnit == nil then
+                    if not bUnitCanEstablishCorps(iUnit) then
+                        return false
+                    end
                     tUnit = iUnit
                     break
                 else
@@ -1205,14 +1156,10 @@ EstablishCorpsButton = {
                 end
             end
 		end
-		local bIsCorps = tUnit:IsHasPromotion(CorpsID)
 
 		if tUnit and nUnit and tUnit ~= nUnit 
 		then
-			g_CorpsCount[playerID][3] = tUnit;
-			g_CorpsCount[playerID][4] = nUnit;
-			g_CorpsCount[playerID][5] = unit;
-			if bIsCorps then
+			if tUnit:IsHasPromotion(CorpsID) then
 				if unit:GetDomainType() == DomainTypes.DOMAIN_LAND then
 					EstablishCorpsButton.Title = "TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMEE_SHORT"
 					EstablishCorpsButton.ToolTip = Locale.ConvertTextKey("TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMEE")
@@ -1220,7 +1167,7 @@ EstablishCorpsButton = {
 					EstablishCorpsButton.Title = "TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMADA_SHORT"
 					EstablishCorpsButton.ToolTip = Locale.ConvertTextKey("TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMADA")
 				end
-                local AvailableArmeeNum = player:GetBuildingClassCount(iMilitaryBase) * ifac - g_CorpsCount[playerID][2]
+                local AvailableArmeeNum = player:GetNumArmeeTotal() - player:GetNumArmeeUsed();
                 EstablishCorpsButton.ToolTip = EstablishCorpsButton.ToolTip .. Locale.ConvertTextKey("TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMEE_EXTRA", AvailableArmeeNum)
 				EstablishCorpsButton.PortraitIndex = 3;
 			else
@@ -1231,7 +1178,7 @@ EstablishCorpsButton = {
 					EstablishCorpsButton.Title = "TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_FLEET_SHORT"
 					EstablishCorpsButton.ToolTip = Locale.ConvertTextKey("TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_FLEET")
 				end
-                local AvailableCropsNum = player:GetBuildingClassCount(iArsenal) * ifac - g_CorpsCount[playerID][1];
+                local AvailableCropsNum = player:GetNumCropsTotal() - player:GetNumCropsUsed();
 				EstablishCorpsButton.ToolTip = EstablishCorpsButton.ToolTip .. Locale.ConvertTextKey("TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_EXTRA", AvailableCropsNum);
 				EstablishCorpsButton.PortraitIndex = 1;
 			end
@@ -1254,6 +1201,7 @@ EstablishCorpsButton = {
 				and not iUnit:IsHasPromotion(ArmeeID) 
 				then
 					if iUnit:IsHasPromotion(CorpsID) and not city:IsHasBuildingClass(iArsenal) then
+                        --Use a Great Prople to Upgrade a Unit need Arsenal in this City
 						EstablishCorpsButton.ToolTip = EstablishCorpsButton.ToolTip .. Locale.ConvertTextKey("TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_1")
 						return true
 					end
@@ -1262,17 +1210,19 @@ EstablishCorpsButton = {
 		elseif unit:IsCombatUnit() then
 			if not unit:IsHasPromotion(CorpsID) then
 				if not city:IsHasBuildingClass(iArsenal) then
+                    --Combine two same type of Units in this tile into Corps need Arsenal in this City
 					EstablishCorpsButton.ToolTip = EstablishCorpsButton.ToolTip .. Locale.ConvertTextKey("TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_2")
 					return true
-				elseif g_CorpsCount[playerID][1] >= player:GetBuildingClassCount(iArsenal) * ifac then
+				elseif not player:IsCanEstablishCrops() then
                     --Corps reached limit
 					return true
 				end
 			else
 				if not city:IsHasBuildingClass(iMilitaryBase) then
+                    --Add a same type Unit in this tile into Corps to become an Armee need MilitaryBase in this City
 					EstablishCorpsButton.ToolTip = EstablishCorpsButton.ToolTip .. Locale.ConvertTextKey("TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_3")
 					return true
-				elseif g_CorpsCount[playerID][2] >= player:GetBuildingClassCount(iMilitaryBase) * ifac then
+				elseif not player:IsCanEstablishArmee() then
                     --Armee reached limit
 					return true
 				end
@@ -1288,13 +1238,9 @@ EstablishCorpsButton = {
         local plot = unit:GetPlot();
         if plot and plot:GetNumUnits() > 1 and not unit:IsEmbarked() and not unit:IsImmobile() 
 		and not unit:IsHasPromotion(GameInfoTypes["PROMOTION_CORPS_2"]) 
-		and g_CorpsCount[playerID] and g_CorpsCount[playerID][5] == unit 
-		and g_CorpsCount[playerID][3] ~= nil and g_CorpsCount[playerID][4] ~= nil 
-		and g_CorpsCount[playerID][3] ~= g_CorpsCount[playerID][4] 
-		and g_CorpsCount[playerID][3]:GetPlot() == g_CorpsCount[playerID][4]:GetPlot() 
+		and tUnit ~= nil and nUnit ~= nil and tUnit ~= nUnit
+		and tUnit:GetPlot() == nUnit:GetPlot() 
 		then
-            local tUnit = g_CorpsCount[playerID][3];
-            local nUnit = g_CorpsCount[playerID][4];
             if tUnit:GetUnitType() == nUnit:GetUnitType() then
                 local iLevel = math.max(tUnit:GetLevel(), nUnit:GetLevel());
                 local iExperience = math.max(tUnit:GetExperience(), nUnit:GetExperience());
@@ -1323,10 +1269,8 @@ EstablishCorpsButton = {
             end
             if tUnit:IsHasPromotion(GameInfoTypes["PROMOTION_CORPS_1"]) then
                 tUnit:SetHasPromotion(GameInfoTypes["PROMOTION_CORPS_2"], true);
-                g_CorpsCount[playerID][2] = g_CorpsCount[playerID][2] + 1;
             else
                 tUnit:SetHasPromotion(GameInfoTypes["PROMOTION_CORPS_1"], true);
-                g_CorpsCount[playerID][1] = g_CorpsCount[playerID][1] + 1;
             end
             tUnit:SetMoves(0);
             if nUnit then
@@ -1710,11 +1654,22 @@ CarrierRestoreButton = {
         if GameInfo.Units[unit:GetUnitType()].SpecialCargo == "SPECIALUNIT_FIGHTER" and g_CargoSetList[PlayerID] == nil then
             SPCargoListSetup(PlayerID);
         end
-        return unit:CanMove() and GameInfo.Units[unit:GetUnitType()].SpecialCargo == "SPECIALUNIT_FIGHTER" and not unit:IsFull() and g_CargoSetList[PlayerID] and g_CargoSetList[PlayerID][1] ~= -1
+        return 
+            unit:CanMove() 
+            and GameInfo.Units[unit:GetUnitType()].SpecialCargo == "SPECIALUNIT_FIGHTER" 
+            and not unit:IsFull() and g_CargoSetList[PlayerID] and g_CargoSetList[PlayerID][1] ~= -1
     end, -- or nil or a boolean, default is true
 
     Disabled = function(action, unit)
-        return unit:GetOwner() < 0 or unit:GetPlot() == nil or unit:GetPlot():IsCity() or (not unit:GetPlot():IsFriendlyTerritory(unit:GetOwner()) and not unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_CARRIER_SUPPLY_3"].ID)) or g_CargoSetList[unit:GetOwner()] == nil or g_CargoSetList[unit:GetOwner()][3] < 0 or g_CargoSetList[unit:GetOwner()][3] > Players[unit:GetOwner()]:GetGold() or not Players[unit:GetOwner()]:IsCanPurchaseAnyCity(false, true, g_CargoSetList[unit:GetOwner()][4], -1, YieldTypes.YIELD_GOLD)
+        return 
+            unit:GetOwner() < 0 
+            or unit:GetPlot() == nil or unit:GetPlot():IsCity() 
+            or (not unit:GetPlot():IsFriendlyTerritory(unit:GetOwner()) 
+            and not unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_CARRIER_SUPPLY_3"].ID)) 
+            or g_CargoSetList[unit:GetOwner()] == nil 
+            or g_CargoSetList[unit:GetOwner()][3] < 0 
+            or g_CargoSetList[unit:GetOwner()][3] > Players[unit:GetOwner()]:GetGold() 
+            or not Players[unit:GetOwner()]:IsCanPurchaseAnyCity(false, true, g_CargoSetList[unit:GetOwner()][4], -1, YieldTypes.YIELD_GOLD)
     end, -- or nil or a boolean, default is false
 
     Action = function(action, unit, eClick)

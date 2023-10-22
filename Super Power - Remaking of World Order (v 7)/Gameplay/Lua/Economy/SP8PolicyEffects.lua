@@ -126,9 +126,8 @@ function SPECityBuildingCompleted(iPlayer, iCity, iBuilding, bGold, bFaithOrCult
 	and bFaithOrCulture == false
 	and isWonder  == -1
 	then 
-		local bonus = GameInfo.GameSpeeds[Game.GetGameSpeedType()].ConstructPercent/100
-		local pCost = GameInfo.Buildings[iBuilding].Cost
-		bonus = math.floor(bonus * pCost * 0.1)
+		local iCost = pPlayer:GetBuildingProductionNeeded(iBuilding)
+		local bonus = math.floor(iCost * 0.1)
 		pPlayer:ChangeJONSCulture(bonus)
 		pPlayer:ChangeOverflowResearch(bonus)
 		if pPlayer:IsHuman() then

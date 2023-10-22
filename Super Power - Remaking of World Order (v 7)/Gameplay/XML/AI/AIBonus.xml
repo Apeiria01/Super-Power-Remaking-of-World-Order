@@ -147,7 +147,7 @@
 			<Type>POLICY_AI_BONUS_WAR_LV1</Type>
 			<Description>TXT_KEY_POLICY_PHILANTHROPY</Description>
 			<CityGrowthMod>33</CityGrowthMod>
-<!--			<StrategicResourceMod>25</StrategicResourceMod>-->
+			<!--<StrategicResourceMod>25</StrategicResourceMod>-->
 			<MilitaryProductionModifier>50</MilitaryProductionModifier>
 			<UnitGoldMaintenanceMod>-25</UnitGoldMaintenanceMod>
 		</Row>
@@ -156,7 +156,7 @@
 			<Type>POLICY_AI_BONUS_WAR_LV2</Type>
 			<Description>TXT_KEY_POLICY_PHILANTHROPY</Description>
 			<CityGrowthMod>33</CityGrowthMod>
-<!--			<StrategicResourceMod>50</StrategicResourceMod>-->
+			<!--<StrategicResourceMod>50</StrategicResourceMod>-->
 			<MilitaryProductionModifier>100</MilitaryProductionModifier>
 			<UnitGoldMaintenanceMod>-25</UnitGoldMaintenanceMod>
 		</Row>
@@ -165,7 +165,7 @@
 			<Type>POLICY_AI_BONUS_WAR_LV3</Type>
 			<Description>TXT_KEY_POLICY_PHILANTHROPY</Description>
 			<CityGrowthMod>33</CityGrowthMod>
-<!--			<StrategicResourceMod>100</StrategicResourceMod>-->
+			<!--<StrategicResourceMod>100</StrategicResourceMod>-->
 			<MilitaryProductionModifier>100</MilitaryProductionModifier>
 			<UnitGoldMaintenanceMod>-25</UnitGoldMaintenanceMod>
 		</Row>
