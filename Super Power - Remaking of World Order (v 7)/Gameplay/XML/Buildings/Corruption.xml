@@ -334,7 +334,7 @@
 			<NeverCapture>true</NeverCapture>
 			<IconAtlas>BW_ATLAS_1</IconAtlas>
 			<PortraitIndex>19</PortraitIndex>
-      <CorruptionLevelChange>-2</CorruptionLevelChange>
+			<CorruptionLevelChange>-2</CorruptionLevelChange>
 		</Row>
 	</Buildings>
 	

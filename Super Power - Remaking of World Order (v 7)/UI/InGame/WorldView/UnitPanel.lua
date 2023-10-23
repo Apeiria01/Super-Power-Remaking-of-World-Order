@@ -1566,6 +1566,23 @@ function TipHandler(control)
 				strToolTip = strToolTip .. "[NEWLINE]----------------[NEWLINE]";
 				strToolTip = strToolTip .. "+" .. unit:GetBlastTourism() .. "[ICON_TOURISM]";
 			end
+
+			--Get Plot Corruption Score Report
+		elseif (action.Type == "MISSION_FOUND") then
+			-- Add spacing for all entries after the first
+			if (bFirstEntry) then
+				bFirstEntry = false;
+			elseif (not bFirstEntry) then
+				strActionHelp = strActionHelp .. "[NEWLINE]";
+			end
+
+			strActionHelp = "[NEWLINE]" .. Locale.ConvertTextKey(action.Help);
+			strToolTip = strToolTip .. strActionHelp;
+			local strCorruptionScoreReport = unit:GetPlotCorruptionScoreReport();
+			if string.len(strCorruptionScoreReport) > 0 then
+				strToolTip = strToolTip .. "[NEWLINE]----------------[NEWLINE]" .. strCorruptionScoreReport
+			end
+		
 		elseif (action.Help and action.Help ~= "") then
 
 			-- Add spacing for all entries after the first
