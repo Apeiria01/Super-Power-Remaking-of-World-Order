@@ -172,34 +172,34 @@
 		
 		
 		<Row>
-			<Type>POLICY_AI_BOUNS_RESEARCH_LV1</Type>
+			<Type>POLICY_AI_BONUS_RESEARCH_LV1</Type>
 			<Description>TXT_KEY_POLICY_PHILANTHROPY</Description>
 			<HappinessToScience>25</HappinessToScience>
 			<StealTechFasterModifier>50</StealTechFasterModifier>
 		</Row>
 		<Row>
-			<Type>POLICY_AI_BOUNS_RESEARCH_LV2</Type>
+			<Type>POLICY_AI_BONUS_RESEARCH_LV2</Type>
 			<Description>TXT_KEY_POLICY_PHILANTHROPY</Description>
 			<HappinessToScience>33</HappinessToScience>
 			<StealTechFasterModifier>50</StealTechFasterModifier>
 			<MedianTechPercentChange>50</MedianTechPercentChange>
 		</Row>
 		<Row>
-			<Type>POLICY_AI_BOUNS_RESEARCH_LV3</Type>
+			<Type>POLICY_AI_BONUS_RESEARCH_LV3</Type>
 			<Description>TXT_KEY_POLICY_PHILANTHROPY</Description>
 			<HappinessToScience>66</HappinessToScience>
 			<StealTechFasterModifier>100</StealTechFasterModifier>
 			<MedianTechPercentChange>100</MedianTechPercentChange>
 		</Row>
 		<Row>
-			<Type>POLICY_AI_BOUNS_RESEARCH_DEITY</Type>
+			<Type>POLICY_AI_BONUS_RESEARCH_DEITY</Type>
 			<Description>TXT_KEY_POLICY_PHILANTHROPY</Description>
 			<HappinessToScience>15</HappinessToScience>
 		</Row>
 
 
 		<Row>
-			<Type>POLICY_AI_BOUNS_ECONOMY_LV1</Type>
+			<Type>POLICY_AI_BONUS_ECONOMY_LV1</Type>
 			<Description>TXT_KEY_POLICY_PHILANTHROPY</Description>
 			<CityGrowthMod>15</CityGrowthMod>
 			<BuildingProductionModifier>33</BuildingProductionModifier>
@@ -208,7 +208,7 @@
 			<BuildingGoldMaintenanceMod>-15</BuildingGoldMaintenanceMod>
 		</Row>
 		<Row>
-			<Type>POLICY_AI_BOUNS_ECONOMY_LV2</Type>
+			<Type>POLICY_AI_BONUS_ECONOMY_LV2</Type>
 			<Description>TXT_KEY_POLICY_PHILANTHROPY</Description>
 			<CityGrowthMod>25</CityGrowthMod>
 			<BuildingProductionModifier>50</BuildingProductionModifier>
@@ -217,7 +217,7 @@
 			<BuildingGoldMaintenanceMod>-15</BuildingGoldMaintenanceMod>
 		</Row>
 		<Row>
-			<Type>POLICY_AI_BOUNS_ECONOMY_LV3</Type>
+			<Type>POLICY_AI_BONUS_ECONOMY_LV3</Type>
 			<Description>TXT_KEY_POLICY_PHILANTHROPY</Description>
 			<CityGrowthMod>50</CityGrowthMod>
 			<BuildingProductionModifier>50</BuildingProductionModifier>
@@ -330,57 +330,57 @@
 	
 	<Policy_BuildingClassYieldModifiers>
 		<Row>
-			<PolicyType>POLICY_AI_BOUNS_RESEARCH_LV1</PolicyType>
+			<PolicyType>POLICY_AI_BONUS_RESEARCH_LV1</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_TOWN</BuildingClassType>
 			<YieldType>YIELD_SCIENCE</YieldType>
 			<YieldMod>5</YieldMod>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_AI_BOUNS_RESEARCH_LV1</PolicyType>
+			<PolicyType>POLICY_AI_BONUS_RESEARCH_LV1</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_SMALL</BuildingClassType>
 			<YieldType>YIELD_SCIENCE</YieldType>
 			<YieldMod>5</YieldMod>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_AI_BOUNS_RESEARCH_LV1</PolicyType>
+			<PolicyType>POLICY_AI_BONUS_RESEARCH_LV1</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_MEDIUM</BuildingClassType>
 			<YieldType>YIELD_SCIENCE</YieldType>
 			<YieldMod>10</YieldMod>
 		</Row>
 
 		<Row>
-			<PolicyType>POLICY_AI_BOUNS_RESEARCH_LV2</PolicyType>
+			<PolicyType>POLICY_AI_BONUS_RESEARCH_LV2</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_TOWN</BuildingClassType>
 			<YieldType>YIELD_SCIENCE</YieldType>
 			<YieldMod>10</YieldMod>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_AI_BOUNS_RESEARCH_LV2</PolicyType>
+			<PolicyType>POLICY_AI_BONUS_RESEARCH_LV2</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_SMALL</BuildingClassType>
 			<YieldType>YIELD_SCIENCE</YieldType>
 			<YieldMod>10</YieldMod>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_AI_BOUNS_RESEARCH_LV2</PolicyType>
+			<PolicyType>POLICY_AI_BONUS_RESEARCH_LV2</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_MEDIUM</BuildingClassType>
 			<YieldType>YIELD_SCIENCE</YieldType>
 			<YieldMod>15</YieldMod>
 		</Row>
 
 		<Row>
-			<PolicyType>POLICY_AI_BOUNS_RESEARCH_LV3</PolicyType>
+			<PolicyType>POLICY_AI_BONUS_RESEARCH_LV3</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_TOWN</BuildingClassType>
 			<YieldType>YIELD_SCIENCE</YieldType>
 			<YieldMod>15</YieldMod>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_AI_BOUNS_RESEARCH_LV3</PolicyType>
+			<PolicyType>POLICY_AI_BONUS_RESEARCH_LV3</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_SMALL</BuildingClassType>
 			<YieldType>YIELD_SCIENCE</YieldType>
 			<YieldMod>20</YieldMod>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_AI_BOUNS_RESEARCH_LV3</PolicyType>
+			<PolicyType>POLICY_AI_BONUS_RESEARCH_LV3</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_MEDIUM</BuildingClassType>
 			<YieldType>YIELD_SCIENCE</YieldType>
 			<YieldMod>25</YieldMod>
@@ -389,19 +389,19 @@
 		
 		
 		<Row>
-			<PolicyType>POLICY_AI_BOUNS_ECONOMY_LV1</PolicyType>
+			<PolicyType>POLICY_AI_BONUS_ECONOMY_LV1</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_TOWN</BuildingClassType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<YieldMod>10</YieldMod>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_AI_BOUNS_ECONOMY_LV1</PolicyType>
+			<PolicyType>POLICY_AI_BONUS_ECONOMY_LV1</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_SMALL</BuildingClassType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<YieldMod>10</YieldMod>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_AI_BOUNS_ECONOMY_LV1</PolicyType>
+			<PolicyType>POLICY_AI_BONUS_ECONOMY_LV1</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_MEDIUM</BuildingClassType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<YieldMod>10</YieldMod>
@@ -409,38 +409,38 @@
 
 
 		<Row>
-			<PolicyType>POLICY_AI_BOUNS_ECONOMY_LV2</PolicyType>
+			<PolicyType>POLICY_AI_BONUS_ECONOMY_LV2</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_TOWN</BuildingClassType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<YieldMod>15</YieldMod>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_AI_BOUNS_ECONOMY_LV2</PolicyType>
+			<PolicyType>POLICY_AI_BONUS_ECONOMY_LV2</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_SMALL</BuildingClassType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<YieldMod>15</YieldMod>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_AI_BOUNS_ECONOMY_LV2</PolicyType>
+			<PolicyType>POLICY_AI_BONUS_ECONOMY_LV2</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_MEDIUM</BuildingClassType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<YieldMod>15</YieldMod>
 		</Row>
 
 		<Row>
-			<PolicyType>POLICY_AI_BOUNS_ECONOMY_LV3</PolicyType>
+			<PolicyType>POLICY_AI_BONUS_ECONOMY_LV3</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_TOWN</BuildingClassType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<YieldMod>15</YieldMod>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_AI_BOUNS_ECONOMY_LV3</PolicyType>
+			<PolicyType>POLICY_AI_BONUS_ECONOMY_LV3</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_SMALL</BuildingClassType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<YieldMod>15</YieldMod>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_AI_BOUNS_ECONOMY_LV3</PolicyType>
+			<PolicyType>POLICY_AI_BONUS_ECONOMY_LV3</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_MEDIUM</BuildingClassType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<YieldMod>15</YieldMod>
@@ -452,64 +452,64 @@
 	
 	<Policy_BuildingClassTourismModifiers>
 		<Row>
-			<PolicyType>POLICY_AI_BOUNS_ECONOMY_LV1</PolicyType>
+			<PolicyType>POLICY_AI_BONUS_ECONOMY_LV1</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_TOWN</BuildingClassType>
 			<TourismModifier>15</TourismModifier>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_AI_BOUNS_ECONOMY_LV1</PolicyType>
+			<PolicyType>POLICY_AI_BONUS_ECONOMY_LV1</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_SMALL</BuildingClassType>
 			<TourismModifier>20</TourismModifier>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_AI_BOUNS_ECONOMY_LV1</PolicyType>
+			<PolicyType>POLICY_AI_BONUS_ECONOMY_LV1</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_MEDIUM</BuildingClassType>
 			<TourismModifier>25</TourismModifier>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_AI_BOUNS_ECONOMY_LV1</PolicyType>
+			<PolicyType>POLICY_AI_BONUS_ECONOMY_LV1</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_LARGE</BuildingClassType>
 			<TourismModifier>25</TourismModifier>
 		</Row>
 
 		<Row>
-			<PolicyType>POLICY_AI_BOUNS_ECONOMY_LV2</PolicyType>
+			<PolicyType>POLICY_AI_BONUS_ECONOMY_LV2</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_TOWN</BuildingClassType>
 			<TourismModifier>15</TourismModifier>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_AI_BOUNS_ECONOMY_LV2</PolicyType>
+			<PolicyType>POLICY_AI_BONUS_ECONOMY_LV2</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_SMALL</BuildingClassType>
 			<TourismModifier>20</TourismModifier>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_AI_BOUNS_ECONOMY_LV2</PolicyType>
+			<PolicyType>POLICY_AI_BONUS_ECONOMY_LV2</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_MEDIUM</BuildingClassType>
 			<TourismModifier>25</TourismModifier>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_AI_BOUNS_ECONOMY_LV2</PolicyType>
+			<PolicyType>POLICY_AI_BONUS_ECONOMY_LV2</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_LARGE</BuildingClassType>
 			<TourismModifier>25</TourismModifier>
 		</Row>
 
 		<Row>
-			<PolicyType>POLICY_AI_BOUNS_ECONOMY_LV3</PolicyType>
+			<PolicyType>POLICY_AI_BONUS_ECONOMY_LV3</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_TOWN</BuildingClassType>
 			<TourismModifier>15</TourismModifier>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_AI_BOUNS_ECONOMY_LV3</PolicyType>
+			<PolicyType>POLICY_AI_BONUS_ECONOMY_LV3</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_SMALL</BuildingClassType>
 			<TourismModifier>20</TourismModifier>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_AI_BOUNS_ECONOMY_LV3</PolicyType>
+			<PolicyType>POLICY_AI_BONUS_ECONOMY_LV3</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_MEDIUM</BuildingClassType>
 			<TourismModifier>25</TourismModifier>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_AI_BOUNS_ECONOMY_LV3</PolicyType>
+			<PolicyType>POLICY_AI_BONUS_ECONOMY_LV3</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_LARGE</BuildingClassType>
 			<TourismModifier>25</TourismModifier>
 		</Row>
