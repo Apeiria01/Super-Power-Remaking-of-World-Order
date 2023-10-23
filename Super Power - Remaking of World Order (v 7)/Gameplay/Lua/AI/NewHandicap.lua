@@ -1223,40 +1223,40 @@ function AIResearchCatchUp(HumanResearchPerTurn,HumanCurrentEra,AIplayer)
 	print ("Human science Output:"..HumanResearchPerTurn)
 	print ("AI science Output:"..AIResearchPerTurn)
 	
-	if AIplayer:HasPolicy(GameInfo.Policies["POLICY_AI_BOUNS_RESEARCH_LV1"].ID) then
+	if AIplayer:HasPolicy(GameInfo.Policies["POLICY_AI_BONUS_RESEARCH_LV1"].ID) then
 		AIResearchPerTurn = AIResearchPerTurn * 0.75;
 	end
 	
 	if AICurrentEra >= 3 and AIResearchPerTurn > 1 then
 		if     HumanCurrentEra - AICurrentEra >= 2 then		-- HumanResearchPerTurn > AIResearchPerTurn * 2 or 
-			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BOUNS_RESEARCH_LV1"].ID,true)
-			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BOUNS_RESEARCH_LV2"].ID,true)
-			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BOUNS_RESEARCH_LV3"].ID,true)
+			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BONUS_RESEARCH_LV1"].ID,true)
+			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BONUS_RESEARCH_LV2"].ID,true)
+			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BONUS_RESEARCH_LV3"].ID,true)
 			print ("Human's research is too fast -2X, AI needs to catch up sooner!")
 			
 		elseif HumanCurrentEra - AICurrentEra == 1 then		-- HumanResearchPerTurn > AIResearchPerTurn * 1.5 or 
-			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BOUNS_RESEARCH_LV1"].ID,true)
-			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BOUNS_RESEARCH_LV2"].ID,true)
-			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BOUNS_RESEARCH_LV3"].ID,false)
+			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BONUS_RESEARCH_LV1"].ID,true)
+			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BONUS_RESEARCH_LV2"].ID,true)
+			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BONUS_RESEARCH_LV3"].ID,false)
 			print ("Human's research is fast -1.5X, AI needs to catch up!")
 			
 		elseif HumanResearchPerTurn > AIResearchPerTurn and HumanCurrentEra == AICurrentEra then
-			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BOUNS_RESEARCH_LV1"].ID,true)
-			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BOUNS_RESEARCH_LV2"].ID,false)
-			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BOUNS_RESEARCH_LV3"].ID,false)
+			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BONUS_RESEARCH_LV1"].ID,true)
+			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BONUS_RESEARCH_LV2"].ID,false)
+			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BONUS_RESEARCH_LV3"].ID,false)
 			print ("Human's research is not so fast!")	
 			
 		elseif HumanResearchPerTurn <= AIResearchPerTurn or HumanCurrentEra <  AICurrentEra then
-			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BOUNS_RESEARCH_LV1"].ID,false)
-			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BOUNS_RESEARCH_LV2"].ID,false)
-			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BOUNS_RESEARCH_LV3"].ID,false)
+			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BONUS_RESEARCH_LV1"].ID,false)
+			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BONUS_RESEARCH_LV2"].ID,false)
+			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BONUS_RESEARCH_LV3"].ID,false)
 			print ("Human's research is slow! So give him or her a chance!")
 		end
 	end
 	
 	-- Special AI Research Bonus for 8 Handicap
 	if Game:GetHandicapType() == 7 and HumanCurrentEra >= 5 then
-		AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BOUNS_RESEARCH_DEITY"].ID, true);
+		AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BONUS_RESEARCH_DEITY"].ID, true);
 		print ("Special AI Research Bonus for Super Power Players!")
 	end
 end
@@ -1273,24 +1273,24 @@ function AIEconomyCatchUp(HumanCityCount,HumanPopCount,AIplayer)
 	
 	if AIPopCount > 6 and AICityCount >= 1 then
 		if HumanCityCount > AICityCount * 2 or HumanPopCount > AIPopCount * 1.5 then
-			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BOUNS_ECONOMY_LV1"].ID,true)
-			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BOUNS_ECONOMY_LV2"].ID,true)
-			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BOUNS_ECONOMY_LV3"].ID,true)
+			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BONUS_ECONOMY_LV1"].ID,true)
+			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BONUS_ECONOMY_LV2"].ID,true)
+			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BONUS_ECONOMY_LV3"].ID,true)
 			print ("Human's nation is developing fast - 2X. AI must catch up!")
 		elseif HumanCityCount > AICityCount * 1.5 or HumanPopCount > AIPopCount * 1.25 then
-			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BOUNS_ECONOMY_LV1"].ID,true)
-			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BOUNS_ECONOMY_LV2"].ID,true)
-			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BOUNS_ECONOMY_LV3"].ID,false)
+			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BONUS_ECONOMY_LV1"].ID,true)
+			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BONUS_ECONOMY_LV2"].ID,true)
+			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BONUS_ECONOMY_LV3"].ID,false)
 			print ("Human's nation is developing well - 1.5X. AI must catch up!")
 		elseif HumanCityCount > AICityCount * 1.25 or HumanPopCount > AIPopCount then
-			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BOUNS_ECONOMY_LV1"].ID,true)
-			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BOUNS_ECONOMY_LV2"].ID,false)
-			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BOUNS_ECONOMY_LV3"].ID,false)
+			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BONUS_ECONOMY_LV1"].ID,true)
+			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BONUS_ECONOMY_LV2"].ID,false)
+			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BONUS_ECONOMY_LV3"].ID,false)
 			print ("Human's nation is developing. AI should catch up!")  	 
 		elseif HumanCityCount <= AICityCount or HumanPopCount <= AIPopCount * 0.75 then
-			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BOUNS_ECONOMY_LV1"].ID,false)
-			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BOUNS_ECONOMY_LV2"].ID,false)
-			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BOUNS_ECONOMY_LV3"].ID,false)
+			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BONUS_ECONOMY_LV1"].ID,false)
+			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BONUS_ECONOMY_LV2"].ID,false)
+			AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BONUS_ECONOMY_LV3"].ID,false)
 			print ("Human's nation is not developing well. So give him or her a chance!")
 		end
 	end
