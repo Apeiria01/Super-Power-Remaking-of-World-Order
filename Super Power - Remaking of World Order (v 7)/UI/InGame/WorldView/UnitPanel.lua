@@ -1578,9 +1578,11 @@ function TipHandler(control)
 
 			strActionHelp = "[NEWLINE]" .. Locale.ConvertTextKey(action.Help);
 			strToolTip = strToolTip .. strActionHelp;
-			local strCorruptionScoreReport = unit:GetPlotCorruptionScoreReport();
-			if string.len(strCorruptionScoreReport) > 0 then
-				strToolTip = strToolTip .. "[NEWLINE]----------------[NEWLINE]" .. strCorruptionScoreReport
+			if (not bDisabled) then
+				local strCorruptionScoreReport = unit:GetPlotCorruptionScoreReport();
+				if string.len(strCorruptionScoreReport) > 0 then
+					strToolTip = strToolTip .. "[NEWLINE]----------------[NEWLINE]" .. strCorruptionScoreReport
+				end
 			end
 		
 		elseif (action.Help and action.Help ~= "") then
