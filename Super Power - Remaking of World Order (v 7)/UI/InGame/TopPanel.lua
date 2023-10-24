@@ -759,10 +759,8 @@ function HappinessTipHandler( control )
 		local iMinorCivHappiness = pPlayer:GetHappinessFromMinorCivs();
 		local iLeagueHappiness = pPlayer:GetHappinessFromLeagues();
 		local iFaithHappiness = pPlayer:GetHappinessFromFaith();
-	
---		local iHandicapHappiness = pPlayer:GetHappiness() - iPoliciesHappiness - iResourcesHappiness - iCityHappiness - iBuildingHappiness - iTradeRouteHappiness - iReligionHappiness - iNaturalWonderHappiness - iMinorCivHappiness - iExtraHappinessPerCity - iLeagueHappiness;
 
---	SP Flat Hadicap Happiness
+		--SP Flat Hadicap Happiness
 		local iHandicapHappiness = 11
 
 	
@@ -883,17 +881,11 @@ function HappinessTipHandler( control )
 		strText = strText .. "[NEWLINE]";
 		strText = strText .. "  [ICON_BULLET]" .. Locale.ConvertTextKey("TXT_KEY_TP_HAPPINESS_DIFFICULTY_LEVEL", iHandicapHappiness);
 		strText = strText .. "[/COLOR]";
-	
 
---		local iUnhappinessFromCityCount = Locale.ToNumber( pPlayer:GetUnhappinessFromCityCount() / 100, "#.##" );
-		
 		local iUnhappinessFromCityCount = SPUnhappinessFromCitiesCount (pPlayer)
 	
 		
-		
-		
-		
-			-- Unhappiness
+		-- Unhappiness
 		local iTotalUnhappiness = pPlayer:GetUnhappiness() + iUnhappinessFromCityCount
 		
 		
@@ -951,25 +943,6 @@ function HappinessTipHandler( control )
 			strText = strText .. "  [ICON_BULLET]" .. Locale.ConvertTextKey("TXT_KEY_TP_UNHAPPINESS_PUBLIC_OPINION", iUnhappinessPublicOpinion);
 		end		
 		
-		
-		-----------------------------SP Consumer Goods UnHappiness----------------------------------------
---		local strSPConsumerUnHappiness = Locale.ConvertTextKey("TXT_KEY_SP_UI_UNHAPPINESS_CONSUMERGOODS_LOW")
---		local ConsumerAmount = pPlayer:GetNumResourceAvailable(GameInfoTypes["RESOURCE_CONSUMER"], true)
---		
---		
---		if ConsumerAmount < -50 then
---			strSPConsumerUnHappiness = Locale.ConvertTextKey("TXT_KEY_SP_UI_UNHAPPINESS_CONSUMERGOODS_HIGH")
---		elseif ConsumerAmount < -10 and ConsumerAmount >= -50 then
---			strSPConsumerUnHappiness = Locale.ConvertTextKey("TXT_KEY_SP_UI_UNHAPPINESS_CONSUMERGOODS_MID")
---		end
---
---    	if ConsumerAmount < 0 then
---			strText = strText .. "[NEWLINE]";
---			strText = strText .. "  [ICON_BULLET]"  .. strSPConsumerUnHappiness;
---		end
---				
-				-----------------------------SP Consumer Goods UnHappiness END----------------------------------------
-		
 		strText = strText .. "[/COLOR]";
 	
 	
@@ -994,7 +967,7 @@ function HappinessTipHandler( control )
 			strText = strText .. strSPConsumerPenalty .." " ..ConsumerUnhappinessMod.."%";			
 		end
 	
-	--------------------------------------SP Additional Happiness by Extra Consumer Goods END-----------------------------
+		--------------------------------------SP Additional Happiness by Extra Consumer Goods END-----------------------------
 
 		-- Basic explanation of Happiness
 		if (not OptionsManager.IsNoBasicHelp()) then
@@ -1598,31 +1571,7 @@ Events.SerialEventCityInfoDirty.Add(OnTopPanelDirty);
 UpdateData();
 DoInitTooltips();
 
-
-
-
-
-
-
-
-
-
-
-
-		
-		
-
-
-
-		-------------SP Unhappiness from city levels Count-------------------
---		
---		local Lv1CitiesUnhappiness = pPlayer:GetPlayerBuildingClassHappiness(GameInfo.BuildingClasses.BUILDINGCLASS_CITY_HALL_LV1.ID)
---		local Lv2CitiesUnhappiness = pPlayer:GetPlayerBuildingClassHappiness(GameInfo.BuildingClasses.BUILDINGCLASS_CITY_HALL_LV2.ID)
---		local Lv3CitiesUnhappiness = pPlayer:GetPlayerBuildingClassHappiness(GameInfo.BuildingClasses.BUILDINGCLASS_CITY_HALL_LV3.ID)
---		local Lv4CitiesUnhappiness = pPlayer:GetPlayerBuildingClassHappiness(GameInfo.BuildingClasses.BUILDINGCLASS_CITY_HALL_LV4.ID)
---		local Lv5CitiesUnhappiness = pPlayer:GetPlayerBuildingClassHappiness(GameInfo.BuildingClasses.BUILDINGCLASS_CITY_HALL_LV5.ID)	
-		
-
+-------------SP Unhappiness from city levels Count-------------------
 function SPUnhappinessFromCitiesCount (pPlayer)
 		local Lv1CitiesCount = pPlayer:GetBuildingClassCount(GameInfo.BuildingClasses.BUILDINGCLASS_CITY_HALL_LV1.ID)
 		local Lv2CitiesCount = pPlayer:GetBuildingClassCount(GameInfo.BuildingClasses.BUILDINGCLASS_CITY_HALL_LV2.ID)
@@ -1637,11 +1586,11 @@ function SPUnhappinessFromCitiesCount (pPlayer)
 		local Lv4CitiesUnhappiness = 8 * Lv4CitiesCount
 		local Lv5CitiesUnhappiness = 10 * Lv5CitiesCount
 		
-		print ("Lv1CitiesCount:"..Lv1CitiesCount)
-		print ("Lv2CitiesCount:"..Lv2CitiesCount)
-		print ("Lv3CitiesCount:"..Lv3CitiesCount)
-		print ("Lv4CitiesCount:"..Lv4CitiesCount)
-		print ("Lv5CitiesCount:"..Lv5CitiesCount)	
+		--print ("Lv1CitiesCount:"..Lv1CitiesCount)
+		--print ("Lv2CitiesCount:"..Lv2CitiesCount)
+		--print ("Lv3CitiesCount:"..Lv3CitiesCount)
+		--print ("Lv4CitiesCount:"..Lv4CitiesCount)
+		--print ("Lv5CitiesCount:"..Lv5CitiesCount)	
 			
 		local SPCitiesUnhappinessTotal = Lv1CitiesUnhappiness + Lv2CitiesUnhappiness + Lv3CitiesUnhappiness + Lv4CitiesUnhappiness + Lv5CitiesUnhappiness
 		
@@ -1651,15 +1600,12 @@ function SPUnhappinessFromCitiesCount (pPlayer)
 			SPCitiesUnhappinessMod = SPCitiesUnhappinessMod - 0.5		
 		end
 		
-		
 		if pPlayer:GetBuildingClassCount(GameInfo.BuildingClasses.BUILDINGCLASS_FORBIDDEN_PALACE.ID) >= 1 then
 			SPCitiesUnhappinessMod = SPCitiesUnhappinessMod - 0.5
 		end
 
-		
-	
-		print ("CitiesUnhappinessTotal:"..SPCitiesUnhappinessTotal)
-		print ("CitiesUnhappinessMod:"..SPCitiesUnhappinessMod)
+		--print ("CitiesUnhappinessTotal:"..SPCitiesUnhappinessTotal)
+		--print ("CitiesUnhappinessMod:"..SPCitiesUnhappinessMod)
 		
 		SPCitiesUnhappinessTotal = SPCitiesUnhappinessTotal * SPCitiesUnhappinessMod
 		
