@@ -475,21 +475,16 @@ end
 ------------------ CARTHAGINIAN_AGORA END   ------------------
 
 if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_ASSYRIA) then
+	local assurTemple = GameInfoTypes["BUILDING_ASSUR_TEMPLE"]
 	function ASHUR_TEMPLEGetFoodAndFaith(iPlayer, iUnit, iUnitType, iX, iY, bDelay, iByPlayer)
+		if iPlayer == iByPlayer or iByPlayer == -1 then return end
 		local pPlayer = Players[iPlayer]
-		local pUnit = pPlayer:GetUnitByID(iUnit)
 		local ByPlayer = Players[iByPlayer]
-		if iPlayer == iByPlayer then return end
-		if iByPlayer == -1 then return end
-
-		if pPlayer == nil
-		then
-			return
-		end
-
+		if ByPlayer == nil or pPlayer == nil then return end
+		local pUnit = pPlayer:GetUnitByID(iUnit)
 		if not pUnit:IsCombatUnit() then return end
 
-		if ByPlayer == nil or ByPlayer:CountNumBuildings(GameInfoTypes["BUILDING_ASSUR_TEMPLE"]) == 0 then
+		if ByPlayer:CountNumBuildings(assurTemple) == 0 then
 			return
 		end
 
@@ -497,25 +492,21 @@ if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_ASSYRIA) then
 		local iStrength = pUnit:GetBaseCombatStrength()
 		local iFoodBoost = iStrength * 0.5
 		local iFaithdBoost = iStrength * 0.5
-		for LoopPlot in PlotAreaSpiralIterator(plot, 6, SECTOR_NORTH, DIRECTION_CLOCKWISE, DIRECTION_OUTWARDS, CENTRE_EXCLUDE) do
-			if LoopPlot:IsCity() then
-				local pCity = LoopPlot:GetPlotCity()
-				if pCity:GetOwner() == iByPlayer then
-					if pCity:IsHasBuilding(GameInfoTypes["BUILDING_ASSUR_TEMPLE"]) then
-						ByPlayer:ChangeFaith(iFaithdBoost)
-						pCity:ChangeFood(iFoodBoost)
-						if ByPlayer:IsHuman() then
-							local hex = ToHexFromGrid(Vector2(pCity:GetX(), pCity:GetY()));
-							Events.AddPopupTextEvent(HexToWorld(hex),
-								Locale.ConvertTextKey("+{1_Num}[ICON_PEACE] +{2_Num}[ICON_FOOD]", iFaithdBoost,
-									iFoodBoost))
-						end
-					end
+		
+		for iCity in ByPlayer:Cities() do
+			if iCity:IsHasBuilding(assurTemple)
+			and Map.PlotDistance(iX, iY, iCity:GetX(), iCity:GetY()) <= 6
+			then
+				ByPlayer:ChangeFaith(iFaithdBoost)
+				iCity:ChangeFood(iFoodBoost)
+				if ByPlayer:IsHuman() then
+					local hex = ToHexFromGrid(Vector2(iCity:GetX(), iCity:GetY()));
+					Events.AddPopupTextEvent(HexToWorld(hex),
+					Locale.ConvertTextKey("+{1_Num}[ICON_PEACE] +{2_Num}[ICON_FOOD]", iFaithdBoost,iFoodBoost))
 				end
 			end
 		end
 	end
-
 	GameEvents.UnitPrekill.Add(ASHUR_TEMPLEGetFoodAndFaith)
 end
 
