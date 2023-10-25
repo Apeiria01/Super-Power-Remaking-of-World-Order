@@ -962,11 +962,11 @@ function SPCargoListSetup(iPlayerID)
 				iCBARangedCombat = unit.RangedCombat;
 				pCBAcraftUnit = unit;
 				iCBAcraft = unit.ID
-			elseif unit.Special == "SPECIALUNIT_STEALTH" and unit.RangedCombat > iASARangedCombat and unit.RangeAttackOnlyInDomain then
+			elseif unit.Special == "SPECIALUNIT_STEALTH" and unit.RangedCombat > iASARangedCombat and unit.RangeAttackOnlyInDomain and unit.ProjectPrereq == nil then
 				iASARangedCombat = unit.RangedCombat;
 				pASAcraftUnit = unit;
 				iASAcraft = unit.ID
-			elseif unit.Special == "SPECIALUNIT_MISSILE" and unit.RangedCombat > iMisRangedCombat then
+			elseif unit.Special == "SPECIALUNIT_MISSILE" and unit.RangedCombat > iMisRangedCombat and unit.ProjectPrereq == nil then
 				iMisRangedCombat = unit.RangedCombat;
 				pMissile_Unit = unit;
 				iMissileU = unit.ID
