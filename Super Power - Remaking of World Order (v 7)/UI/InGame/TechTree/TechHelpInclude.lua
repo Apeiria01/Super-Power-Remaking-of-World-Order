@@ -464,7 +464,7 @@ function GetHelpTextForTech( iTechID )
 		end
 	end
 	if TechHelpStringTable[iTechID] == nil then
-		TechHelpStringTable[iTechID] = GetBaseHelpTextForTech( row.ID );
+		TechHelpStringTable[iTechID] = GetBaseHelpTextForTech( iTechID );
 		print("TechHelpInclude.lua: Try to fix nil Value")
 	end
 	strHelpText = strHelpText .. TechHelpStringTable[iTechID]
