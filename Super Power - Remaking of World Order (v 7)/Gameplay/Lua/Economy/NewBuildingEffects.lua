@@ -476,20 +476,22 @@ end
 
 if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_ASSYRIA) then
 	local assurTemple = GameInfoTypes["BUILDING_ASSUR_TEMPLE"]
-	function ASHUR_TEMPLEGetFoodAndFaith(iPlayer, iUnit, iUnitType, iX, iY, bDelay, iByPlayer)
-		if iPlayer == iByPlayer or iByPlayer == -1 then return end
-		local pPlayer = Players[iPlayer]
-		local ByPlayer = Players[iByPlayer]
+	function ASHUR_TEMPLEGetFoodAndFaith(iPlayer, iKilledPlayer, iUnitType, iKillingUnit, iKilledUnit)
+		if iPlayer == iKilledPlayer or iPlayer == -1 then return end
+		local pPlayer = Players[iKilledPlayer]
+		local ByPlayer = Players[iPlayer]
 		if ByPlayer == nil or pPlayer == nil then return end
-		local pUnit = pPlayer:GetUnitByID(iUnit)
-		if not pUnit:IsCombatUnit() then return end
+		if ByPlayer:CountNumBuildings(assurTemple) == 0 then return end
 
-		if ByPlayer:CountNumBuildings(assurTemple) == 0 then
-			return
-		end
-
+		local pUnit = pPlayer:GetUnitByID(iKilledUnit)
 		local plot = pUnit:GetPlot()
+		if pUnit == nil or plot == nil then return end
+		local iX = plot:GetX()
+		local iY = plot:GetY()
+		
 		local iStrength = pUnit:GetBaseCombatStrength()
+		if iStrength <= 0 then return end
+
 		local iFoodBoost = iStrength * 0.5
 		local iFaithdBoost = iStrength * 0.5
 		
@@ -507,7 +509,7 @@ if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_ASSYRIA) then
 			end
 		end
 	end
-	GameEvents.UnitPrekill.Add(ASHUR_TEMPLEGetFoodAndFaith)
+	GameEvents.UnitKilledInCombat.Add(ASHUR_TEMPLEGetFoodAndFaith)
 end
 
 if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_ZULU) then
