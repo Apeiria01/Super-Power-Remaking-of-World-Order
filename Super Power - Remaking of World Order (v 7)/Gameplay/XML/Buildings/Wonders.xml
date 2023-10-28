@@ -2505,7 +2505,6 @@
 			<PortraitIndex>6</PortraitIndex>
 			<WonderSplashImage>BurjTower_splash.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,T</WonderSplashAnchor>
-			<AllowInstantYield>true</AllowInstantYield>
 		</Row>
 
 		<Row>
