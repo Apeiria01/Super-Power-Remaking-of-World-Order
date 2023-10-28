@@ -1347,7 +1347,6 @@
 			<IconAtlas>SP8_EXTRA_ATLAS</IconAtlas>
 			<PortraitIndex>12</PortraitIndex>
 			<TradeRouteLandGoldBonusGlobal>200</TradeRouteLandGoldBonusGlobal>
-			<AllowInstantYield>true</AllowInstantYield>
 		</Row>
 		
 		
@@ -1700,7 +1699,6 @@
 			<IconAtlas>SPWondersUB_ATLAS</IconAtlas>
 			<PortraitIndex>34</PortraitIndex>
 			<GreatPeopleRateModifier>25</GreatPeopleRateModifier>
-			<AllowInstantYield>true</AllowInstantYield>
 		</Row>
 		
 		
