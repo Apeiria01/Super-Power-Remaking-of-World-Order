@@ -15116,5 +15116,8 @@
 		<Row Tag="TXT_KEY_DOUBLE_TOURISM_PERCENT">
 			<Text>增加{1_Percent}%[ICON_TOURISM]旅遊業績產出</Text>
 		</Row>
+		<Row Tag="TXT_KEY_DO_RESEARCH_AGREEMENT_WITH">
+			<Text>[COLOR_POSITIVE_TEXT]合作研究-{1_CivName:textkey}[ENDCOLOR]</Text>
+		</Row>	
 	</Language_zh_Hant_HK>
 </GameData>
