@@ -3362,7 +3362,7 @@ if Game then
 		end
 
 		-- Techs Known
-		local tips = { team:GetTeamTechs():GetNumTechsKnown() .. " " .. TechColor( Locale_ToLower("TXT_KEY_VP_TECH") ) }
+		local tips = {}
 		-- Policies
 		for policyBranch in GameInfo.PolicyBranchTypes() do
 			local policyCount = 0
@@ -3395,13 +3395,32 @@ if Game then
 				insert( wonders, BuildingColor( L(building.Description) ) )
 			end
 		end
+		table.sort(wonders)
+		local project = {}
+		for iProject in GameInfo.Projects() do
+			if team:GetProjectCount(iProject.ID) > 0
+			then
+				if iProject.MaxGlobalInstances == 1 then
+					insert( project, BuildingColor(L(iProject.Description)))
+				elseif iProject.MaxTeamInstances == 1 then
+					insert( project, BuildColor(L(iProject.Description)))
+				end
+			end
+		end
+		table.sort(project)
 		-- Population
-		insert( tips, player:GetTotalPopulation() .. "[ICON_CITIZEN]"
+		insert( tips, 
+				team:GetTeamTechs():GetNumTechsKnown() .. " " .. TechColor( Locale_ToLower("TXT_KEY_VP_TECH") ) 
+				.. ", "
+				.. player:GetTotalPopulation() .. "[ICON_CITIZEN]"
 				.. ", "
 				.. L("{1} {1: plural 1?{TXT_KEY_CITY:lower}; 2?{TXT_KEY_VP_CITIES:lower};}", player:GetNumCities() )
-				.. ", "
+				.. "[NEWLINE]"
 				.. player:GetNumWorldWonders() .. " " .. L("{TXT_KEY_VP_WONDERS:lower}")
-				.. (#wonders>0 and ": " .. concat( wonders, ", " ) or "") )
+				.. (#wonders>0 and ": " .. concat( wonders, ", " ) or "")
+				.. "[NEWLINE]"
+				.. #project .. " " .. L("{TXT_KEY_WONDER_SECTION_3:lower}")
+				.. (#project>0 and ": " .. concat( project, ", " ) or ""))
 	--[[ too much info
 		local cities = {}
 		for city in player:Cities() do
