@@ -5379,7 +5379,7 @@
 				[NEWLINE][ICON_BULLET]Consume 54 [ICON_RES_ELECTRICITY] Electricity.
 				[NEWLINE][ICON_BULLET]Consume 54 [ICON_RES_CONSUMER] Consumer Goods.
 				[NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]Traffic and Pollution Problems[ENDCOLOR] cause -20% [ICON_FOOD] Food Growth and 10 extra [ICON_HAPPINESS_4] Unhappiness.
-				[NEWLINE][ICON_BULLET]+5% [ICON_CULTURE] Culture cost for future Policies.
+				[NEWLINE][ICON_BULLET]+5% [ICON_CULTURE] Culture cost for Policies.
 				[NEWLINE][ICON_BULLET]Upgrade to [COLOR_POSITIVE_TEXT]Global City[ENDCOLOR] when the popluation reaches 80.</Text>
 		</Row>
 
@@ -5400,7 +5400,7 @@
 				[NEWLINE][ICON_BULLET]Consume 72 [ICON_RES_ELECTRICITY] Electricity.
 				[NEWLINE][ICON_BULLET]Consume 72 [ICON_RES_CONSUMER] Consumer Goods.
 				[NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]Traffic and Pollution Problems[ENDCOLOR] cause -33% [ICON_FOOD] Food Growth and 16 extra [ICON_HAPPINESS_4] Unhappiness.
-				[NEWLINE][ICON_BULLET]+10% [ICON_CULTURE] Culture cost for future Policies.
+				[NEWLINE][ICON_BULLET]+10% [ICON_CULTURE] Culture cost for Policies.
 				[NEWLINE][ICON_BULLET]Congratulations! You have built such an epic city which will stand the test of the time!</Text>
 		</Row>
 
@@ -15290,15 +15290,6 @@
 			[NEWLINE][ICON_BULLET]Can't recover unitl its HP fully restored.
 			[NEWLINE][ICON_BULLET]You'd better withdraw it from the enemy territory to heal or call your Great General, Great Admiral or Special Forces Unit to help it recover.</Text>
 		</Row>
-		
-		
-		<Row Tag="TXT_KEY_PROMOTION_RANGE_REDUCE">
-			<Text>-1 [ICON_RANGE_STRENGTH] Range</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_RANGE_BAN">
-			<Text>-5 [ICON_RANGE_STRENGTH] Range</Text>
-		</Row>
-		
 		
 		<Row Tag="TXT_KEY_PROMOTION_PENETRATION_1">
 			<Text>[COLOR_NEGATIVE_TEXT]Armor Damaged[ENDCOLOR]</Text>
