@@ -388,46 +388,6 @@
 			<CanActionClear>true</CanActionClear>
 		</Row>
 
-		<!--<Row>
-			<Type>PROMOTION_ROUGH_TERRAIN_ENDS_TURN</Type>
-			<Description>TXT_KEY_PROMOTION_ROUGH_TERRAIN_ENDS</Description>
-			<Help>TXT_KEY_PROMOTION_ROUGH_TERRAIN_ENDS_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<RoughTerrainEndsTurn>true</RoughTerrainEndsTurn>
-			<LostWithUpgrade>true</LostWithUpgrade>
-			<PortraitIndex>57</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
-			<PediaType>PEDIA_SHARED</PediaType>
-			<PediaEntry>TXT_KEY_PEDIA_PROMOTION_ROUGH_TERRAIN_ENDS</PediaEntry>
-		</Row>-->
-
-		<Row>
-			<Type>PROMOTION_RANGE_REDUCE</Type>
-			<Description>TXT_KEY_PROMOTION_RANGE_REDUCE</Description>
-			<Help>TXT_KEY_PROMOTION_RANGE_REDUCE</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<LostWithUpgrade>true</LostWithUpgrade>
-			<CannotBeChosen>true</CannotBeChosen>
-			<RangeChange>-1</RangeChange>
-			<PortraitIndex>16</PortraitIndex>
-			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_SHARED</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_RANGE_REDUCE</PediaEntry>
-		</Row>
-		<Row>
-			<Type>PROMOTION_RANGE_BAN</Type>
-			<Description>TXT_KEY_PROMOTION_RANGE_BAN</Description>
-			<Help>TXT_KEY_PROMOTION_RANGE_BAN</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<LostWithUpgrade>true</LostWithUpgrade>
-			<CannotBeChosen>true</CannotBeChosen>
-			<RangeChange>-5</RangeChange>
-			<PortraitIndex>16</PortraitIndex>
-			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_SHARED</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_RANGE_BAN</PediaEntry>
-		</Row>
-
 		<Row>
 			<Type>PROMOTION_PENETRATION_1</Type>
 			<Description>TXT_KEY_PROMOTION_PENETRATION_1</Description>

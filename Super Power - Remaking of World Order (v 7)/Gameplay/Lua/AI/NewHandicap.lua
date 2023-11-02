@@ -736,7 +736,6 @@ function AIPromotion(iPlayer, iCity, iUnit, bGold, bFaith)
 	local AirTarget2ID = GameInfo.UnitPromotions["PROMOTION_AIR_TARGETING_2"].ID
 	local AirTarget3ID = GameInfo.UnitPromotions["PROMOTION_AIR_TARGETING_3"].ID
 	
-	local AIHitandRunID = GameInfo.UnitPromotions["PROMOTION_RANGE_REDUCE"].ID
 	local AIRangeID = GameInfo.UnitPromotions["PROMOTION_RANGE"].ID
 	
 	local AISPForceID = GameInfo.UnitPromotions["PROMOTION_SPECIAL_FORCES_COMBAT"].ID
@@ -958,9 +957,7 @@ function AIPromotion(iPlayer, iCity, iUnit, bGold, bFaith)
 		elseif unit:IsHasPromotion(HitandRunID) and player:GetCurrentEra() > 1 then
 			unit:SetHasPromotion(Sunder1ID, true)
 			unit:SetHasPromotion(Sunder2ID, true)
-			unit:SetHasPromotion(AIHitandRunID, true)
 			if player:GetCurrentEra() > 5 then
-				unit:SetHasPromotion(AIHitandRunID, false)
 				unit:SetHasPromotion(AIRangeID, true)
 			end
 			

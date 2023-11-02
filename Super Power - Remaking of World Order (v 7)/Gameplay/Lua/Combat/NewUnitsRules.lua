@@ -13,7 +13,6 @@ local CarrierSupply3ID = GameInfo.UnitPromotions["PROMOTION_CARRIER_SUPPLY_3"].I
 local SatelliteID = GameInfo.UnitPromotions["PROMOTION_SATELLITE_UNIT"].ID
 
 local OceanImpassableID = GameInfo.UnitPromotions["PROMOTION_OCEAN_IMPASSABLE"].ID
-local RangeBanID = GameInfo.UnitPromotions["PROMOTION_RANGE_BAN"].ID
 
 local LuckyCarrierID = GameInfo.UnitPromotions["PROMOTION_LUCKY_CARRIER"].ID
 
@@ -95,17 +94,6 @@ function NewUnitCreationRules()
 								plot:SetImprovementType(GameInfo.Improvements["IMPROVEMENT_COASTAL_FORT"].ID);
 							end
 							print("Miss-placed Citidal units Fixed!")
-						end
-					end
-
-					-- Help AI Use melee attack
-					if (unit:GetUnitCombatType() == GameInfoTypes.UNITCOMBAT_HELICOPTER or unit:GetUnitCombatType() == GameInfoTypes.UNITCOMBAT_MELEE)
-						and unit:GetBaseRangedCombatStrength() > 0 and not player:IsHuman()
-					then
-						if unit:GetNumEnemyUnitsAdjacent(unit) > 0 then
-							unit:SetHasPromotion(RangeBanID, true);
-						else
-							unit:SetHasPromotion(RangeBanID, false);
 						end
 					end
 
