@@ -9689,6 +9689,7 @@
 				[NEWLINE][ICON_BULLET]+1 [ICON_GOLD] Gold output for the tile.
 				[NEWLINE][ICON_BULLET]+1 additional [ICON_GOLD] Gold output if constructed near the coast or by the river (can mutiply to +2 additional [ICON_GOLD] Gold).
 				[NEWLINE][ICON_BULLET]+1 additional [ICON_GOLD] Gold output if constructed on the Road and +2 additional [ICON_GOLD] Gold output if constructed on the Railroad.
+				[NEWLINE][ICON_BULLET]+1 [ICON_CONSUMER] Consumer.
 			</Text>
 		</Replace>
 

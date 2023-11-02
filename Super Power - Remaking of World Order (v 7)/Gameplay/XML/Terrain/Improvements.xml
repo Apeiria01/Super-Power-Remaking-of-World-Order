@@ -5,8 +5,8 @@
 	<Improvements>
 
 		<Delete Type="IMPROVEMENT_FEITORIA"/>
-		
-		
+
+
 		
 		<Row>
 			<Type>IMPROVEMENT_PONTOON_BRIDGE_MOD</Type>
@@ -722,9 +722,11 @@
 			<Set BuildableOnResources="true"/>
 			<Where Type="IMPROVEMENT_TERRACE_FARM"/>
 		</Update>-->
-
 		
-
+		<Update>
+			<Where Type="IMPROVEMENT_TRADING_POST"/>
+			<Set ImprovementResource = "RESOURCE_CONSUMER" ImprovementResourceQuantity = "1"/>
+		</Update>
 
 		<Update>
 			<Set PortraitIndex="1" IconAtlas="SP_IMPROVEMENTS_ATLAS"/>
@@ -828,11 +830,6 @@
 			<Set Yield="2"/>
 			<Where ImprovementType="IMPROVEMENT_CHATEAU" YieldType="YIELD_GOLD"/>
 		</Update>
-
-		<!--<Update>
-			<Set Yield="2"/>
-			<Where ImprovementType="IMPROVEMENT_TRADING_POST"/>
-		</Update>-->
 	</Improvement_Yields>
 
 

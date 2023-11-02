@@ -3871,12 +3871,22 @@
 		<Row>
 			<BuildingType>BUILDING_STAGECOACH</BuildingType>
 			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-			<Flavor>55</Flavor>
+			<Flavor>90</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_STAGECOACH</BuildingType>
+			<FlavorType>FLAVOR_GOLD</FlavorType>
+			<Flavor>25</Flavor>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_BUS_STATION</BuildingType>
 			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-			<Flavor>75</Flavor>
+			<Flavor>90</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_BUS_STATION</BuildingType>
+			<FlavorType>FLAVOR_GOLD</FlavorType>
+			<Flavor>25</Flavor>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_GERMAN_AUTOBAHN</BuildingType>
@@ -3965,7 +3975,7 @@
 		<Row>
 			<BuildingType>BUILDING_GENE_LAB</BuildingType>
 			<FlavorType>FLAVOR_SCIENCE</FlavorType>
-			<Flavor>70</Flavor>
+			<Flavor>200</Flavor>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_INTERNATIONAL_TRADE_COMPANY</BuildingType>
