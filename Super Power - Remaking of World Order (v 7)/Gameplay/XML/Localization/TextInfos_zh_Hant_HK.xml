@@ -8698,7 +8698,12 @@
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_CIV5_IMPROVEMENTS_TRADING_POST_TEXT">
-			<Text>貿易站是一種商業設施，在這裡獵人和陷捕者可以拿他們的商品同居民交換食物、武器、威士忌酒、黃金以及市面上的其他物品。貿易站可以為社會產生大量財富。[NEWLINE][NEWLINE]建造在河邊與海邊的貿易站額外+1[ICON_GOLD]金幣，建造在河流入海口處的貿易站則疊加為額外+2[ICON_GOLD]金幣。[NEWLINE][NEWLINE]建造在道路上的貿易戰額外+1[ICON_GOLD]金幣，鐵路上的則額外+2[ICON_GOLD]金幣。</Text>
+			<Text>
+			貿易站是一種商業設施，在這裏獵人和陷捕者可以拿他們的商品同居民交換食物、武器、威士忌酒、黃金以及市面上的其他物品。貿易站可以為社會產生大量財富。
+			[NEWLINE][ICON_BULLET]建造在河邊與海邊的貿易站額外+1[ICON_GOLD]金錢，建造在河流入海口處的貿易站則疊加為額外+2[ICON_GOLD]金錢。
+			[NEWLINE][ICON_BULLET]建造在道路上的貿易戰額外+1[ICON_GOLD]金錢，鐵路上的則額外+2[ICON_GOLD]金錢。
+			[NEWLINE][ICON_BULLET]每處貿易站提供+1[ICON_RES_CONSUMER]商品。
+			</Text>
 		</Replace>
 		
 		<!-- Science Improvement Change -->

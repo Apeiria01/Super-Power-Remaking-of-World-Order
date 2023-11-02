@@ -6071,12 +6071,12 @@
 		<Row>
 			<BuildingType>BUILDING_AMPHITHEATER</BuildingType>
 			<FlavorType>FLAVOR_CULTURE</FlavorType>
-			<Flavor>20</Flavor>
+			<Flavor>30</Flavor>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_AMPHITHEATER</BuildingType>
 			<FlavorType>FLAVOR_GREAT_PEOPLE</FlavorType>
-			<Flavor>2</Flavor>
+			<Flavor>5</Flavor>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_ZULU_IZIKO</BuildingType>
@@ -6122,14 +6122,55 @@
 		
 		<Row>
 			<BuildingType>BUILDING_CONSTABLE</BuildingType>
-			<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
-			<Flavor>1</Flavor>
+			<FlavorType>FLAVOR_CULTURE</FlavorType>
+			<Flavor>40</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CONSTABLE</BuildingType>
+			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
+			<Flavor>40</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_ROMAN_SENATE</BuildingType>
+			<FlavorType>FLAVOR_CULTURE</FlavorType>
+			<Flavor>50</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_ROMAN_SENATE</BuildingType>
+			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
+			<Flavor>50</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_SHERIFF_OFFICE</BuildingType>
+			<FlavorType>FLAVOR_CULTURE</FlavorType>
+			<Flavor>60</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_SHERIFF_OFFICE</BuildingType>
+			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
+			<Flavor>60</Flavor>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_POLICE_STATION</BuildingType>
-			<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
-			<Flavor>1</Flavor>
+			<FlavorType>FLAVOR_CULTURE</FlavorType>
+			<Flavor>70</Flavor>
 		</Row>
+		<Row>
+			<BuildingType>BUILDING_POLICE_STATION</BuildingType>
+			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
+			<Flavor>70</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_PROCURATORATE</BuildingType>
+			<FlavorType>FLAVOR_CULTURE</FlavorType>
+			<Flavor>80</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_PROCURATORATE</BuildingType>
+			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
+			<Flavor>80</Flavor>
+		</Row>
+
 		<Row>
 			<BuildingType>BUILDING_GREAT_FIREWALL</BuildingType>
 			<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
@@ -6595,6 +6636,11 @@
 			<FlavorType>FLAVOR_I_TRADE_ORIGIN</FlavorType>
 			<Flavor>10</Flavor>
 		</Row>
+		<Row>
+			<BuildingType>BUILDING_CARAVANSARY</BuildingType>
+			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
 
 		<Row>
 			<BuildingType>BUILDING_VENICE_FONDACO</BuildingType>
@@ -6680,6 +6726,17 @@
 			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
 			<Flavor>80</Flavor>
 		</Row>
+		<Row>
+			<BuildingType>BUILDING_MINGING_FACTORY</BuildingType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>45</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_MINGING_FACTORY</BuildingType>
+			<FlavorType>FLAVOR_EXPANSION</FlavorType>
+			<Flavor>45</Flavor>
+		</Row>
+		
 		
 		<Row>
 			<BuildingType>BUILDING_GRAIN_DEPOT</BuildingType>
@@ -6811,13 +6868,8 @@
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_DIGITAL_NETWORK</BuildingType>
-			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
-			<Flavor>60</Flavor>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_DIGITAL_NETWORK</BuildingType>
-			<FlavorType>FLAVOR_CULTURE</FlavorType>
-			<Flavor>60</Flavor>
+			<FlavorType>FLAVOR_GREAT_PEOPLE</FlavorType>
+			<Flavor>80</Flavor>
 		</Row>
 
 		<Row>
@@ -7289,17 +7341,21 @@
 			<Flavor>999</Flavor>
 		</Row>
 		
-		
-
 		<Row>
 			<BuildingType>BUILDING_METAL_FACTORY</BuildingType>
 			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-			<Flavor>40</Flavor>
+			<Flavor>60</Flavor>
 		</Row>
+		<Row>
+			<BuildingType>BUILDING_METAL_FACTORY</BuildingType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>60</Flavor>
+		</Row>
+
 		<Row>
 			<BuildingType>BUILDING_INLAND_CANAL</BuildingType>
 			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-			<Flavor>40</Flavor>
+			<Flavor>60</Flavor>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_DUTCH_GRACHTENGORDEL</BuildingType>
