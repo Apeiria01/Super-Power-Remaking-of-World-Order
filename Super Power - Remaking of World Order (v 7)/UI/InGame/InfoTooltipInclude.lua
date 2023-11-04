@@ -2409,24 +2409,7 @@ function GetHelpTextForImprovement( improvementID )
 		insert( tips, L"TXT_KEY_ABLTY_RIVER_SIDE_STRING_SP"..tip)
 	end
 
-	-- -----------------New for Improvement_YieldAdjacentImprovementType---------------------------------------------
-	--items = {}
-	--condition = { ImprovementType = improvement.Type }
-	--for row in GameInfo.Improvement_YieldAdjacentImprovementType( thisImprovementType ) do
-		--SetKey( items, row.Improvement )
-	--end
-	--for Improvement in pairs( items ) do
-		--item = GameInfo.Improvements[ Improvement ]
-		--if item then
-			--condition.Improvement = Improvement
-			--tip = GetYieldString( GameInfo.Improvement_YieldAdjacentImprovementType( condition ) )
-			--if tip~="" then
-				--insert( tips, "[ICON_BULLET]" .. L(item.Description) .. tip )
-			--end
-		--end
-	--end
-
-	-- -----------------New for Improvement_RouteYieldChanges---------------------------------------------------------
+	-- -----------------New for Improvement_RouteYieldChanges--------------------------------------------------------
 	items = {}
 	condition = { ImprovementType = improvement.Type }
 	for row in GameInfo.Improvement_RouteYieldChanges( thisImprovementType ) do
@@ -2442,6 +2425,16 @@ function GetHelpTextForImprovement( improvementID )
 			end
 		end
 	end
+
+	-- -----------------New for Improvement_FeatureYieldChanges------------------------------------------------------
+
+	-- -----------------New for Improvement_AdjacentTerrainYieldChanges----------------------------------------------
+
+	-- -----------------New for Improvement_AdjacentFeatureYieldChanges----------------------------------------------
+
+	-- -----------------New for Improvement_AdjacentResourceYieldChanges---------------------------------------------
+
+	-- -----------------New for Improvement_AdjacentImprovementYieldChanges------------------------------------------
 
 	-- Tech yield changes
 	items = {}

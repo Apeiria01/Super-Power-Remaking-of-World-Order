@@ -1,6 +1,6 @@
 create table CitySizeBuildings (
     CitySize integer not null primary key,
-    BuildingType text
+    BuildingType text default ''
 );
 
 insert into CitySizeBuildings(CitySize, BuildingType) values
