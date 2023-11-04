@@ -270,8 +270,10 @@ function UpdateDisplay()
 	
 	if( g_pTeam:GetNumMembers() > 1 ) then
 	    Controls.TeamID:LocalizeAndSetText( "TXT_KEY_MULTIPLAYER_DEFAULT_TEAM_NAME", g_pTeam:GetID() + 1 );
+		Controls.TeamID:SetToolTipString(GetMoodInfo(g_iPlayer));
     else
-	    Controls.TeamID:SetText( "" );
+	    Controls.TeamID:LocalizeAndSetText( "TXT_KEY_YOU" );
+		Controls.TeamID:SetToolTipString(GetMoodInfo(g_iPlayer));
 	end
 	
 	local textBoxSize = Controls.NameBox:GetSizeX() - Controls.CivName:GetOffsetX() - 120;
