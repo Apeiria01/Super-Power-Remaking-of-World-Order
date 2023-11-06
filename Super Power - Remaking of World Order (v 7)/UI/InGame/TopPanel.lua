@@ -513,7 +513,7 @@ function ScienceTipHandler( control )
 		end
 	
 		-- Science from Trade Routes
-		local iScienceFromTrade = pPlayer:GetScienceFromCitiesTimes100(false) - iScienceFromCities;
+		local iScienceFromTrade = pPlayer:GetAllTradeValue(GameInfoTypes["YIELD_SCIENCE"])
 		if (iScienceFromTrade ~= 0) then
 			if (bFirstEntry) then
 				bFirstEntry = false;
