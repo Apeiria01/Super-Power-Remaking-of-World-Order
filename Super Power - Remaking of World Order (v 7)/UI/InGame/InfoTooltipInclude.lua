@@ -3414,7 +3414,7 @@ if Game then
 				.. "[NEWLINE]"
 				.. #project .. " " .. L("{TXT_KEY_WONDER_SECTION_3:lower}")
 				.. (#project>0 and ": " .. concat( project, ", " ) or ""))
-	--[[ too much info
+		--[[ too much info
 		local cities = {}
 		for city in player:Cities() do
 			-- Name & population
@@ -3439,7 +3439,7 @@ if Game then
 		elseif #cities ==1 then
 			insert( tips, cities[1] )
 		end
-	--]]
+		--]]
 
 		-- Gold (can be seen in diplo relation ship)
 		insert( tips, format( "%i%s(%+i)", player:GetGold(), g_currencyIcon, player:CalculateGoldRate() ) )
@@ -3532,6 +3532,7 @@ if Game then
 			end
 		end
 
+		--[[ too much info
 		local tip
 		if bnw_be then
 			for _, route in ipairs( activePlayer:GetTradeRoutes() ) do
@@ -3551,6 +3552,7 @@ if Game then
 				end
 			end
 		end
+		]]
 
 		if isUs then
 
