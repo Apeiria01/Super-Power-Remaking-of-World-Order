@@ -6833,7 +6833,7 @@
 		<Row>
 			<BuildingType>BUILDING_GARMENT_WORKSHOP</BuildingType>
 			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-			<Flavor>15</Flavor>
+			<Flavor>60</Flavor>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_FOOD_MARKET</BuildingType>
@@ -7225,11 +7225,27 @@
 			<Flavor>250</Flavor>
 		</Row>
 
-		<!--<Row>
+		<Row>
 			<BuildingType>BUILDING_NATIONAL_LIBRARY</BuildingType>
-			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<FlavorType>FLAVOR_CULTURE</FlavorType>
 			<Flavor>250</Flavor>
-		</Row>-->
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_IRONWORKS</BuildingType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>200</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_INTELLIGENCE_AGENCY</BuildingType>
+			<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
+			<Flavor>300</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_NATIONAL_EPIC</BuildingType>
+			<FlavorType>FLAVOR_GREAT_PEOPLE</FlavorType>
+			<Flavor>150</Flavor>
+		</Row>
+
 		<Row>
 			<BuildingType>BUILDING_HARVARD</BuildingType>
 			<FlavorType>FLAVOR_SCIENCE</FlavorType>

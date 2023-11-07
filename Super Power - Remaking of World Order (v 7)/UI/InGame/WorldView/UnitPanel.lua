@@ -1936,14 +1936,12 @@ function TipHandler(control)
 		end
 
 		--Source from Improvment
-		for row in GameInfo.Improvements("ImprovementResourceQuantity != '0'") do
-			if  row.Type==GameInfo.Builds[iBuildID].ImprovementType then
-				local item = GameInfo.Resources[row.ImprovementResource]
-				if (row.ImprovementResourceQuantity <0) then
-					strBuildYieldString = strBuildYieldString .."[NEWLINE]".."[COLOR_NEGATIVE_TEXT]"..row.ImprovementResourceQuantity.."[ENDCOLOR]"..Locale.ConvertTextKey(item.IconString)..Locale.ConvertTextKey(item.Description) ;
-				else
-					strBuildYieldString = strBuildYieldString .."[NEWLINE]".."[COLOR_POSITIVE_TEXT]".."+"..row.ImprovementResourceQuantity.."[ENDCOLOR]"..Locale.ConvertTextKey(item.IconString)..Locale.ConvertTextKey(item.Description) ;
-				end
+		if  pImprovement.ImprovementResource ~= nil then
+			local item = GameInfo.Resources[pImprovement.ImprovementResource]
+			if (pImprovement.ImprovementResourceQuantity <0) then
+				strBuildYieldString = strBuildYieldString .."[NEWLINE]".."[COLOR_NEGATIVE_TEXT]"..pImprovement.ImprovementResourceQuantity.."[ENDCOLOR]"..Locale.ConvertTextKey(item.IconString)..Locale.ConvertTextKey(item.Description) ;
+			else
+				strBuildYieldString = strBuildYieldString .."[NEWLINE]".."[COLOR_POSITIVE_TEXT]".."+"..pImprovement.ImprovementResourceQuantity.."[ENDCOLOR]"..Locale.ConvertTextKey(item.IconString)..Locale.ConvertTextKey(item.Description) ;
 			end
 		end
 

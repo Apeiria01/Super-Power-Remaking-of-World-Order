@@ -603,6 +603,7 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
     <Folder Include="UI\Art\Models\Improvements\BeastDome" />
     <Folder Include="UI\Art\Models\Improvements\MountainCity" />
     <Folder Include="UI\Art\Models\Improvements\CoastalCity" />
+    <Folder Include="UI\Art\Models\Improvements\Kuna" />
     <Folder Include="UI\Art\Models\Units Extra" />
     <Folder Include="UI\Art\Models\Resources\Luxury Amber" />
     <Folder Include="UI\Art\Models\Resources\Luxury Coffee" />
@@ -641,6 +642,7 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
     <Folder Include="UI\FrontEnd\GameSetup" />
     <Folder Include="UI\InGame" />
     <Folder Include="UI\InGame\CityView" />
+    <Folder Include="UI\InGame\TechTree\" />
     <Folder Include="UI\InGame\WorldView" />
     <Folder Include="UI\InGame\PopupsGeneric" />
     <Folder Include="UI\InGame\Popups" />
@@ -5335,6 +5337,42 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="UI\Art\Models\Improvements\CoastalCity\PolyWaterCity_W.gr2">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Improvements\Kuna\hb_kuna.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Improvements\Kuna\kuna.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Improvements\Kuna\KunaAtlas64.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Improvements\Kuna\KunaBuildIcon45.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Improvements\Kuna\KunaBuildIcon64.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Improvements\Kuna\kuna_Built.gr2">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Improvements\Kuna\kuna_HalfBuilt.gr2">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Improvements\Kuna\pl_kuna.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Improvements\Kuna\SV_Kuna.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>

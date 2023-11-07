@@ -9142,7 +9142,7 @@
 		<Row Tag="TXT_KEY_CIV5_IMPROVEMENT_MAYA_ALTAR_HELP">
 			<Text>
 				只能建在丛林或森林。
-				[NEWLINE][NEWLINE]玛雅祭坛每邻近1座山脉+1[ICON_RESEARCH]科研产出。
+				[NEWLINE][NEWLINE]玛雅祭坛每邻近一处丛林+1[ICON_RESEARCH]科研产出。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_IMPROVEMENT_MAYA_ALTAR_TEXT">

@@ -260,6 +260,12 @@ function GetImprovementString(plot)
 		improvementStr = improvementStr .. convertedKey;
 		if plot:IsImprovementPillaged() then
 			improvementStr = improvementStr .." " .. Memoize_LocaleLookup("TXT_KEY_PLOTROLL_PILLAGED")
+		else
+			local strImprovementResource = GameInfo.Improvements[iImprovementType].ImprovementResource
+			if strImprovementResource ~= nil then
+				local pResource = GameInfo.Resources[strImprovementResource]	
+				improvementStr = improvementStr .. " " .. GameInfo.Improvements[iImprovementType].ImprovementResourceQuantity .. pResource.IconString
+			end
 		end
 	end
 

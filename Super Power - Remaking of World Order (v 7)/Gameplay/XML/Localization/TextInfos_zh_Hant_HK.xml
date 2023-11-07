@@ -9019,7 +9019,7 @@
 		<Row Tag="TXT_KEY_CIV5_IMPROVEMENT_MAYA_ALTAR_HELP">
 			<Text>
 				只能建在叢林或森林。
-				[NEWLINE][NEWLINE]瑪雅祭壇每鄰近1座山脈+1[ICON_RESEARCH]科技值產出。
+				[NEWLINE][NEWLINE]瑪雅祭壇每鄰近壹處叢林+1[ICON_RESEARCH]科研産出。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_IMPROVEMENT_MAYA_ALTAR_TEXT">

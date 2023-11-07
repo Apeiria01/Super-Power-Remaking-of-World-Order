@@ -195,7 +195,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_MAYA_ALTAR</Description>
 			<Help>TXT_KEY_CIV5_IMPROVEMENT_MAYA_ALTAR_HELP</Help>
 			<Civilopedia>TXT_KEY_CIV5_IMPROVEMENT_MAYA_ALTAR_TEXT</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_GOODY_HUT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_KUNA</ArtDefineTag>
 			<SpecificCivRequired>true</SpecificCivRequired>
 			<CivilizationType>CIVILIZATION_MAYA</CivilizationType>
 			<PillageGold>60</PillageGold>
@@ -387,7 +387,12 @@
 		<Row>
 			<ImprovementType>IMPROVEMENT_MAYA_ALTAR</ImprovementType>
 			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>3</Yield>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_MAYA_ALTAR</ImprovementType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>1</Yield>
 		</Row>
 
 		<!--<Row>
@@ -1302,12 +1307,15 @@
 			<YieldType>YIELD_SCIENCE</YieldType>
 			<Yield>1</Yield>
 		</Row>
+	</Improvement_AdjacentMountainYieldChanges>
+	<Improvement_AdjacentFeatureYieldChanges>
 		<Row>
 			<ImprovementType>IMPROVEMENT_MAYA_ALTAR</ImprovementType>
+			<FeatureType>FEATURE_JUNGLE</FeatureType>
 			<YieldType>YIELD_SCIENCE</YieldType>
 			<Yield>1</Yield>
 		</Row>
-	</Improvement_AdjacentMountainYieldChanges>
+	</Improvement_AdjacentFeatureYieldChanges>
 
 
 	<!-- ************************UI Tweaks********************************************-->
