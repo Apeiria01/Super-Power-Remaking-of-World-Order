@@ -23,7 +23,8 @@ BEGIN
 END;
 
 UPDATE Improvements SET WonderProductionModifier = 10 WHERE Type = 'IMPROVEMENT_MANUFACTORY';
-UPDATE Improvements SET ImprovementResource = 'RESOURCE_CONSUMER', ImprovementResourceQuantity = 15 WHERE Type = 'IMPROVEMENT_CUSTOMS_HOUSE';
+UPDATE Improvements SET ImprovementResource = 'RESOURCE_MANPOWER', ImprovementResourceQuantity = 10 WHERE Type = 'IMPROVEMENT_MANUFACTORY';
+UPDATE Improvements SET ImprovementResource = 'RESOURCE_CONSUMER', ImprovementResourceQuantity = 20 WHERE Type = 'IMPROVEMENT_CUSTOMS_HOUSE';
 UPDATE Improvements SET NearbyFriendHeal = 5, ClearNegativePromotions = 1 WHERE Type = 'IMPROVEMENT_HOLY_SITE';
 
 --BUILDING_SPECIALISTS
