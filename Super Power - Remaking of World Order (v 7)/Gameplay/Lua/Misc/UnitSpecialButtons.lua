@@ -223,12 +223,23 @@ SettlerMissionButton = {
     PortraitIndex = 40,
     ToolTip = "TXT_KEY_SP_BTNNOTE_SETTLER_INTO_CITY", -- or a TXT_KEY_ or a function
     Condition = function(action, unit)
-        return unit:CanMove() and unit:IsFound() and unit:GetPlot():IsCity();
+        local plot = unit:GetPlot()
+        if plot == nil or not plot:IsCity() then return false end
+        local city = plot:GetPlotCity()
+        if city == nil then return false end
+        return unit:CanMove() and unit:IsFound() and city:GetOwner() == unit:GetOwner();
     end, -- or nil or a boolean, default is true
     Disabled = function(action, unit)
-        local plot = unit:GetPlot();
-        local city = plot:GetPlotCity()
-        return not plot:IsCity() or city == nil or city:GetOwner() ~= unit:GetOwner() or not city:CanGrowNormally();
+        SettlerMissionButton.ToolTip = Locale.ConvertTextKey("TXT_KEY_SP_BTNNOTE_SETTLER_INTO_CITY")
+        local city = unit:GetPlot():GetPlotCity()
+        if not (unit:GetExtraPopConsume() > 0) then
+            SettlerMissionButton.ToolTip = SettlerMissionButton.ToolTip .. Locale.ConvertTextKey("TXT_KEY_SP_BTNNOTE_SETTLER_INTO_CITY_DISABLE_1")
+            return true
+        end
+        if not city:CanGrowNormally() then
+            SettlerMissionButton.ToolTip = SettlerMissionButton.ToolTip .. Locale.ConvertTextKey("TXT_KEY_SP_BTNNOTE_SETTLER_INTO_CITY_DISABLE_2")
+            return true
+        end
     end, -- or nil or a boolean, default is false
 
     Action = function(action, unit, eClick)
@@ -239,12 +250,7 @@ SettlerMissionButton = {
             return
         end
 
-        local count = 1;
-        if player:HasPolicy(GameInfo.Policies["POLICY_RESETTLEMENT"].ID) and unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_SETTLER_POP_3"].ID) then
-            count = 3;
-        end
-
-        city:ChangePopulation(count, true);
+        city:ChangePopulation(unit:GetExtraPopConsume(), true);
         local iPolicyCollectiveRule = GameInfo.Policies["POLICY_COLLECTIVE_RULE"].ID
         if not (player:HasPolicy(iPolicyCollectiveRule) and not player:IsPolicyBlocked(iPolicyCollectiveRule) and player:GetCurrentEra() >= GameInfo.Eras["ERA_RENAISSANCE"].ID) then
             city:SetFood(0);

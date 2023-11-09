@@ -590,7 +590,7 @@
 			<Where Type="PATRIOTIC_WAR"/>
 		</Update>
 		<Update>
-			<Set UnhappinessFromUnitsMod="-100" NewCityExtraPopulation="2" CityGrowthMod="0"/>
+			<Set UnhappinessFromUnitsMod="-100" SettlerPopConsume="2" NewCityExtraPopulation="2" CityGrowthMod="0"/>
 			<Where Type="POLICY_RESETTLEMENT"/>
 		</Update>
 		<Update>

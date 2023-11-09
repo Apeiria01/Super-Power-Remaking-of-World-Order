@@ -7968,7 +7968,7 @@
 			<Text>宗教殖民</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_RELIGIOUS_COLONIZATION">
-			<Text>在圣城可以使用信仰[ICON_PEACE]购买[COLOR_POSITIVE_TEXT]移民[ENDCOLOR]，采用自主的“集体统治”政策后购买价格下降</Text>
+			<Text>在圣城可以使用信仰[ICON_PEACE]购买[COLOR_POSITIVE_TEXT]移民[ENDCOLOR]，采用自主的“集体统治”政策后购买价格下降，该移民不消耗人口且不可进行安置</Text>
 		</Row>
 		<Row Tag="TXT_KEY_RELIGIOUS_SCIENCE_SHORT">
 			<Text>宗教科学</Text>
@@ -15333,6 +15333,12 @@
 		</Row>
 		<Row Tag="TXT_KEY_GOODY_CHOOSE_PRODUCTION">
 			<Text>将遗迹中的建造材料运至最近城市，以获得[ICON_PRODUCTION]产能值</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_BTNNOTE_SETTLER_INTO_CITY_DISABLE_1">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]该单位建造时没有消耗人口[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_BTNNOTE_SETTLER_INTO_CITY_DISABLE_2">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]这个城市没有足够的公共卫生医疗设施[ENDCOLOR]</Text>
 		</Row>
 	</Language_zh_CN>
 </GameData>

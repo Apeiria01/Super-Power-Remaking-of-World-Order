@@ -22,7 +22,6 @@ include("NewCityRule");
 include("NewPolicyEffects");
 include("SP8PolicyEffects");
 include("NewReligionRule.lua");
-include("NewPopulationRule");
 include("NewTraitEffects");
 include("NuclearWinter");
 include("NewBuildingRule");

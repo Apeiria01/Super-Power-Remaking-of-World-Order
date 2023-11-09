@@ -29,6 +29,7 @@
 			<UnitArtInfoCulturalVariation>true</UnitArtInfoCulturalVariation>
 			<PortraitIndex>0</PortraitIndex>
 			<IconAtlas>UNIT_ATLAS_1</IconAtlas>
+			<TrainPopulationConsume>1</TrainPopulationConsume>
 		</Row>
 
 		<Row>
