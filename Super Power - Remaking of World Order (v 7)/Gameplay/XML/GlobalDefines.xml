@@ -696,6 +696,31 @@
 			<Where Name="PUPPET_CULTURE_MODIFIER" />
 		</Update>
 
+		<!-- Specialist Flavor -->
+		<Update>
+			<Set Value="16"/>
+			<Where Name="AI_CITIZEN_VALUE_FOOD" />
+		</Update>
+		<Update>
+			<Set Value="12"/>
+			<Where Name="AI_CITIZEN_VALUE_PRODUCTION" />
+		</Update>
+		<Update>
+			<Set Value="7"/>
+			<Where Name="AI_CITIZEN_VALUE_GOLD" />
+		</Update>
+		<Update>
+			<Set Value="14"/>
+			<Where Name="AI_CITIZEN_VALUE_SCIENCE" />
+		</Update>
+		<Update>
+			<Set Value="12"/>
+			<Where Name="AI_CITIZEN_VALUE_CULTURE" />
+		</Update>
+		<Update>
+			<Set Value="5"/>
+			<Where Name="AI_CITIZEN_VALUE_FAITH" />
+		</Update>
 
 		<!-- Misc-->
 		<Update>
