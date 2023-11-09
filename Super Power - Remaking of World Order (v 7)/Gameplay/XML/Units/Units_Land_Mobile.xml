@@ -53,7 +53,6 @@
 			<Civilopedia>TXT_KEY_CIV5_ANTIQUITY_SCOUT_TEXT</Civilopedia>
 			<Strategy>TXT_KEY_SP_UNITS_RECON_UNITS_STRATEGY</Strategy>
 			<Help>TXT_KEY_PROMOTION_RECON_UNIT_HELP</Help>
-			<NoBadGoodies>true</NoBadGoodies>
 			<Pillage>false</Pillage>
 			<MilitarySupport>true</MilitarySupport>
 			<MilitaryProduction>true</MilitaryProduction>
@@ -118,7 +117,6 @@
 			<Strategy>TXT_KEY_SP_UNITS_RECON_UNITS_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_HELP_EXPLORERX</Help>
 			<Civilopedia>TXT_KEY_UNIT_EXPLORERX_TEXT</Civilopedia>
-			<NoBadGoodies>true</NoBadGoodies>
 			<Pillage>false</Pillage>
 			<MilitarySupport>true</MilitarySupport>
 			<MilitaryProduction>true</MilitaryProduction>
@@ -448,7 +446,6 @@
 			<Civilopedia>TXT_KEY_CIV5_SPAIN_CONQUISTADOR_TEXT</Civilopedia>
 			<Strategy>TXT_KEY_CIV5_SPAIN_CONQUISTADOR_STRATEGY</Strategy>
 			<Help>TXT_KEY_PROMOTION_KNIGHT_COMBAT_HELP</Help>
-			<NoBadGoodies>true</NoBadGoodies>
 			<FoundAbroad>true</FoundAbroad>
 			<MilitarySupport>true</MilitarySupport>
 			<MilitaryProduction>true</MilitaryProduction>
