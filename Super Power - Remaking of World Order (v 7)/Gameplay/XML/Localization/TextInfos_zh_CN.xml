@@ -15321,6 +15321,18 @@
 		</Row>
 		<Row Tag="TXT_KEY_DO_RESEARCH_AGREEMENT_WITH">
 			<Text>[COLOR_POSITIVE_TEXT]合作研究-{1_CivName:textkey}[ENDCOLOR]</Text>
-		</Row>	
+		</Row>
+		<Row Tag="TXT_KEY_GOODY_SCIENCE">
+			<Text>你发现了大量先进的工具！</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GOODY_CHOOSE_SCIENCE">
+			<Text>研究他们的工具，获得[ICON_RESEARCH]科研值</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GOODY_PRODUCTION">
+			<Text>你发现了许多能够使用的建造材料！</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GOODY_CHOOSE_PRODUCTION">
+			<Text>将遗迹中的建造材料运至最近城市，以获得[ICON_PRODUCTION]产能值</Text>
+		</Row>
 	</Language_zh_CN>
 </GameData>
