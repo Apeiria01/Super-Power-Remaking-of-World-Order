@@ -113,6 +113,11 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
+        <FileName>Gameplay/XML/GameInfo/GoodyHuts.xml</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
         <FileName>Gameplay/XML/GameInfo/Eras.xml</FileName>
       </Action>
       <Action>
@@ -389,6 +394,11 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
         <FileName>Gameplay/SQL/Terrian/Improvements.sql</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>Gameplay/SQL/Terrian/HandicapInfo_Goodies.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
@@ -832,6 +842,10 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
+    <Content Include="Gameplay/XML/GameInfo/GoodyHuts.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
     <Content Include="Gameplay/XML/GameInfo/HandicapInfos.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
@@ -1041,6 +1055,10 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="Gameplay\SQL\Terrian\Improvements.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="Gameplay\SQL\Terrian\HandicapInfo_Goodies.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>

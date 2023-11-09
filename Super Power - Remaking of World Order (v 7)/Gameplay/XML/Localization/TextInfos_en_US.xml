@@ -17147,6 +17147,18 @@
 		</Row>
 		<Row Tag="TXT_KEY_DO_RESEARCH_AGREEMENT_WITH">
 			<Text>[COLOR_POSITIVE_TEXT]Research Agreement - {1_CivName:textkey}[ENDCOLOR]</Text>
-		</Row>	
+		</Row>
+		<Row Tag="TXT_KEY_GOODY_SCIENCE">
+			<Text>You find a lot of advanced tools! Get {1_Num} [ICON_RESEARCH] Science!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GOODY_CHOOSE_SCIENCE">
+			<Text>Study their tools to get [ICON_RESEARCH] Science.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GOODY_PRODUCTION">
+			<Text>You found a lot materials that you can use!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GOODY_CHOOSE_PRODUCTION">
+			<Text>Transported Building materials from the GoodyHut to the nearest city and Get [ICON_PRODUCTION] Production.</Text>
+		</Row>
 	</Language_en_US>
 </GameData>

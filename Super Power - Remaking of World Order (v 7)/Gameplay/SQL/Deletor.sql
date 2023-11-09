@@ -120,6 +120,8 @@ DELETE FROM GameSpeed_Turns;
 
 DELETE FROM HandicapInfo_AIFreeTechs;
 
+DELETE FROM HandicapInfo_Goodies;
+DELETE FROM GoodyHuts;
 
 UPDATE sqlite_sequence SET seq = 0 WHERE name = 'Traits';
 UPDATE sqlite_sequence SET seq = 0 WHERE name = 'Buildings';
