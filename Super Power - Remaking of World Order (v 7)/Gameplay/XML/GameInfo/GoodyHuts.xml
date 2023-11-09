@@ -149,5 +149,39 @@
 			<Healing>100</Healing>
 			<DamagePrereq>30</DamagePrereq>
 		</Row>
+
+		<!-- Block(MinGameTurns < 0) -->
+		<Row>
+			<Type>GOODY_LOW_GOLD</Type>
+			<Description>TXT_KEY_GOODY_GOLD</Description>
+			<Sound>AS2D_GOODY_GOLD</Sound>
+			<Gold>50</Gold>
+			<NumGoldRandRolls>5</NumGoldRandRolls>
+			<GoldRandAmount>11</GoldRandAmount>
+			<MinGameTurns>-1</MinGameTurns>
+		</Row>
+		<Row>
+			<Type>GOODY_HIGH_GOLD</Type>
+			<Description>TXT_KEY_GOODY_GOLD</Description>
+			<Sound>AS2D_GOODY_GOLD</Sound>
+			<Gold>100</Gold>
+			<NumGoldRandRolls>10</NumGoldRandRolls>
+			<GoldRandAmount>11</GoldRandAmount>
+			<MinGameTurns>-1</MinGameTurns>
+		</Row>
+		<Row>
+			<Type>GOODY_SETTLER</Type>
+			<Description>TXT_KEY_GOODY_SETTLER</Description>
+			<Sound>AS2D_GOODY_SETTLER</Sound>
+			<UnitClass>UNITCLASS_SETTLER</UnitClass>
+			<MinGameTurns>-1</MinGameTurns>
+		</Row>
+		<Row>
+			<Type>GOODY_TECH</Type>
+			<Description>TXT_KEY_GOODY_TECH</Description>
+			<Sound/>
+			<Tech>true</Tech>
+			<MinGameTurns>-1</MinGameTurns>
+		</Row>
 	</GoodyHuts>
 </GameData>
