@@ -8924,7 +8924,7 @@
 			<Text>Religious Colonization</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_RELIGIOUS_COLONIZATION">
-			<Text>Use [ICON_PEACE] Faith to purchase [COLOR_POSITIVE_TEXT]Settler[ENDCOLOR] in Holy City, the cost will decrease after you adopt the policy Collective Rule</Text>
+			<Text>Use [ICON_PEACE] Faith to purchase [COLOR_POSITIVE_TEXT]Settler[ENDCOLOR] in Holy City, the cost will decrease after you adopt the policy Collective Rule, This Settler does not consume population and cannot join city</Text>
 		</Row>
 		<Row Tag="TXT_KEY_RELIGIOUS_SCIENCE_SHORT">
 			<Text>Religious Sciece</Text>
@@ -17159,6 +17159,12 @@
 		</Row>
 		<Row Tag="TXT_KEY_GOODY_CHOOSE_PRODUCTION">
 			<Text>Transported Building materials from the GoodyHut to the nearest city and Get [ICON_PRODUCTION] Production.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_BTNNOTE_SETTLER_INTO_CITY_DISABLE_1">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]This unit was built without population consumption[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_BTNNOTE_SETTLER_INTO_CITY_DISABLE_2">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]Not enough Public Health and Sanitary Service Buildings in this city[ENDCOLOR]</Text>
 		</Row>
 	</Language_en_US>
 </GameData>
