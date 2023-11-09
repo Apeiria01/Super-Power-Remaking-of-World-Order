@@ -3061,7 +3061,7 @@
 
 		<Replace Tag="TXT_KEY_BUILDING_PAPER_MAKER_HELP">
 			<Text>Allows for movement of [ICON_PRODUCTION] Production via trade routes from this city. This build Won't becomes obsolete. 
-      [NEWLINE][NEWLINE] Each paper maker reduces unit, building, and project production costs nationwide by -2%, capped at -50%.
+			[NEWLINE][NEWLINE] Each paper maker reduces unit, building, and project production costs nationwide by -2%, capped at -30%.
 			[NEWLINE][NEWLINE]+2 [ICON_TOURISM] Tourism after discovering Internet.</Text>
 		</Replace>
 
@@ -8884,7 +8884,7 @@
 			<Text>+2 [ICON_PEACE] Faith and +2 [ICON_CULTURE] Culture for every Gem and Pearl</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GOD_KING">
-			<Text>Palace provides +3 [ICON_PEACE] Faith, +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production, +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production and +1 [ICON_CULTURE] Culture from each [ICON_CITYBANNER_CITY_LV1] City Hall [COLOR_NEGATIVE_TEXT](Lv1)[ENDCOLOR]</Text>
+			<Text>Palace provides +3 [ICON_PEACE] Faith, +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production, +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production and +1 [ICON_PEACE] Faith from each [ICON_CITYBANNER_CITY_LV1] City Hall [COLOR_NEGATIVE_TEXT](Lv1)[ENDCOLOR]</Text>
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_BELIEF_PAPAL_PRIMACY">
@@ -10070,7 +10070,9 @@
 		<Row Tag="TXT_KEY_CIV5_IMPROVEMENT_MAYA_ALTAR_HELP">
 			<Text>
 				Can only be built in Jungle or Forest.
-				[NEWLINE][NEWLINE] Each adjacent Jungle will provides +1 [ICON_RESEARCH] Science output for the Altar.
+				[NEWLINE][NEWLINE]May not be constructed adjacent to another Altar.
+				[NEWLINE][NEWLINE]Each adjacent Jungle will provides +1 [ICON_RESEARCH] Science output for the Altar.
+				[NEWLINE][NEWLINE]Each Prophet in Altar provide +1 [ICON_RESEARCH][ICON_PEACE][ICON_GOLDEN_AGE] Output.
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_IMPROVEMENT_MAYA_ALTAR_TEXT">
@@ -10144,8 +10146,8 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_TRAIT_ART_OF_WAR">
 			<Text>
-			[ICON_BULLET]During a [ICON_GOLDEN_AGE] Golden Age, China receive additional +20% [ICON_RESEARCH] Science and +20% [ICON_FOOD] Food nationwide.
-			[NEWLINE][ICON_BULLET]In the Golden Age, the [ICON_CITIZEN] population growth of all cities requires -20% food, the total [ICON_RESEARCH] Research expenditure -20%, eliminates the [ICON_RESEARCH] increase in Research expenditures from the number of cities.
+			[ICON_BULLET]All Land Units can earn points toward a [ICON_GOLDEN_AGE] Golden Age for each enemy killed (50% of its [ICON_STRENGTH] Combat Strength).
+			[NEWLINE][ICON_BULLET]In the Golden Age, the [ICON_CITIZEN] population growth of all cities requires -20% food, the total [ICON_RESEARCH] Research expenditure -10%, eliminates the [ICON_RESEARCH] increase in Research expenditures from the number of cities.
 			</Text>
 		</Replace>
 
@@ -10156,7 +10158,7 @@
 			<Text>
 			China has entered a new [ICON_GOLDEN_AGE][COLOR_POSITIVE_TEXT]prosperity[ENDCOLOR]! 
 			[NEWLINE][NEWLINE]All gold-producing plots have an additional +1[ICON_GOLD] gold production, +20% national [ICON_PRODUCTION] production capacity, and [ICON_CULTURE] culture. 
-			[NEWLINE]The [ICON_CITIZEN] population growth of all cities requires -20% food, total [ICON_RESEARCH] Research expenditure -20%, eliminates the increase in [ICON_RESEARCH] Research expenditure from the number of cities.
+			[NEWLINE]The [ICON_CITIZEN] population growth of all cities requires -20% food, total [ICON_RESEARCH] Research expenditure -10%, eliminates the increase in [ICON_RESEARCH] Research expenditure from the number of cities.
 			</Text>
 		</Row>
 

@@ -1936,7 +1936,7 @@ function TipHandler(control)
 		end
 
 		--Source from Improvment
-		if  pImprovement.ImprovementResource ~= nil then
+		if pImprovement and pImprovement.ImprovementResource ~= nil then
 			local item = GameInfo.Resources[pImprovement.ImprovementResource]
 			if (pImprovement.ImprovementResourceQuantity <0) then
 				strBuildYieldString = strBuildYieldString .."[NEWLINE]".."[COLOR_NEGATIVE_TEXT]"..pImprovement.ImprovementResourceQuantity.."[ENDCOLOR]"..Locale.ConvertTextKey(item.IconString)..Locale.ConvertTextKey(item.Description) ;

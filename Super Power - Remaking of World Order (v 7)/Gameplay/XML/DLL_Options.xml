@@ -295,6 +295,10 @@
 			<Where Name="INTERNATIONAL_IMMIGRATION_FOR_SP"/>
 			<Set Value="1"/>
 		</Update>
+		<Update>
+			<Where Name="IMPROVEMENTS_YIELD_CHANGE_PER_UNIT"/>
+			<Set Value="1"/>
+		</Update>
 	</CustomModOptions>
 
 

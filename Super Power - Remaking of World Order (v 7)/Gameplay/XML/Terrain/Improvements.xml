@@ -201,6 +201,7 @@
 			<PillageGold>60</PillageGold>
 			<PortraitIndex>11</PortraitIndex>
 			<IconAtlas>SP_IMPROVEMENTS_ATLAS</IconAtlas>
+			<NoTwoAdjacent>true</NoTwoAdjacent>
 		</Row>
 		
 		
@@ -388,11 +389,6 @@
 			<ImprovementType>IMPROVEMENT_MAYA_ALTAR</ImprovementType>
 			<YieldType>YIELD_SCIENCE</YieldType>
 			<Yield>2</Yield>
-		</Row>
-		<Row>
-			<ImprovementType>IMPROVEMENT_MAYA_ALTAR</ImprovementType>
-			<YieldType>YIELD_FAITH</YieldType>
-			<Yield>1</Yield>
 		</Row>
 
 		<!--<Row>
@@ -1316,6 +1312,26 @@
 			<Yield>1</Yield>
 		</Row>
 	</Improvement_AdjacentFeatureYieldChanges>
+	<Improvement_YieldChangesPerUnit>
+		<Row>
+			<ImprovementType>IMPROVEMENT_MAYA_ALTAR</ImprovementType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>1</Yield>
+			<UnitType>UNIT_PROPHET</UnitType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_MAYA_ALTAR</ImprovementType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>1</Yield>
+			<UnitType>UNIT_PROPHET</UnitType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_MAYA_ALTAR</ImprovementType>
+			<YieldType>YIELD_GOLDEN_AGE_POINTS</YieldType>
+			<Yield>1</Yield>
+			<UnitType>UNIT_PROPHET</UnitType>
+		</Row>
+	</Improvement_YieldChangesPerUnit>
 
 
 	<!-- ************************UI Tweaks********************************************-->

@@ -676,8 +676,8 @@
 		<Replace Tag="TXT_KEY_BUILDING_PAPER_MAKER_HELP">
       <Text>
         允許在本國的商路之間輸送[ICON_PRODUCTION]生產力。該建築不會過期。
-        [NEWLINE][NEWLINE]每一座造紙坊使全國範圍內的單位、建築和項目產能花費-2%，這個效果的上限是-50%。
-          [NEWLINE][NEWLINE]研發因特網後+2[ICON_TOURISM]旅遊業績。
+        [NEWLINE][NEWLINE]每一座造紙坊使全國範圍內的單位、建築和項目產能花費-2%，這個效果的上限是-30%。
+		[NEWLINE][NEWLINE]研發因特網後+2[ICON_TOURISM]旅遊業績。
       </Text>
 		</Replace>
 		
@@ -5427,7 +5427,7 @@
 		<Replace Tag="TXT_KEY_TRAIT_ART_OF_WAR">
 			<Text>
 				[ICON_BULLET]所有陸軍單位都自帶消滅敵人後，獲得相當於敵單位戰鬥力數值50%的[ICON_GOLDEN_AGE]黃金時代點數的晉升。
-				[NEWLINE][ICON_BULLET]黃金時代中，所有城市的[ICON_CITIZEN]人口增長所需糧食-20%，總[ICON_RESEARCH]科研花費-20%，消除來自城市數量的[ICON_RESEARCH]科研花費增加。
+				[NEWLINE][ICON_BULLET]黃金時代中，所有城市的[ICON_CITIZEN]人口增長所需糧食-20%，總[ICON_RESEARCH]科研花費-10%，消除來自城市數量的[ICON_RESEARCH]科研花費增加。
 			</Text>
 		</Replace>
 		<Row Tag="TXT_KEY_SP_UA_CHINA_GOLDENAGE_ANNOUNCE">
@@ -5437,7 +5437,7 @@
 			<Text>
 			中國進入了一個嶄新的[ICON_GOLDEN_AGE][COLOR_POSITIVE_TEXT]盛世[ENDCOLOR]！
 			[NEWLINE][NEWLINE]所有金錢產出的地塊額外+1[ICON_GOLD]金錢產出，全國+20%[ICON_PRODUCTION]產能，[ICON_CULTURE]文化。
-			[NEWLINE]所有城市的[ICON_CITIZEN]人口成長所需糧食-20%，總[ICON_RESEARCH]科研花費-20%，消除來自城市數量的[ICON_RESEARCH]科研花費增加。
+			[NEWLINE]所有城市的[ICON_CITIZEN]人口成長所需糧食-20%，總[ICON_RESEARCH]科研花費-10%，消除來自城市數量的[ICON_RESEARCH]科研花費增加。
 			</Text>
 		</Row>
 
@@ -7695,7 +7695,7 @@
 			<Text>荒漠+1[ICON_PEACE]信仰，綠洲額外+1[ICON_CULTURE]文化、+1[ICON_PEACE]信仰</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GOD_KING">
-			<Text>宮殿+3[ICON_PEACE]信仰、+1[ICON_FOOD]食物、[ICON_PRODUCTION]產能，[ICON_CITYBANNER_CITY_LV1]一級城市+1[ICON_FOOD]食物、[ICON_PRODUCTION]產能、[ICON_CULTURE]文化</Text>
+			<Text>宮殿+3[ICON_PEACE]信仰、+1[ICON_FOOD]食物、[ICON_PRODUCTION]產能，[ICON_CITYBANNER_CITY_LV1]一級城市+1[ICON_FOOD]食物、[ICON_PRODUCTION]產能、[ICON_PEACE]信仰</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GODDESS_HUNT">
 			<Text>獵場+1[ICON_FOOD]食物、+1[ICON_PEACE]信仰，[ICON_RES_BISON]野牛+1[ICON_FOOD]食物，[ICON_RES_DEER]野鹿+1[ICON_PRODUCTION]產能</Text>
@@ -9019,7 +9019,9 @@
 		<Row Tag="TXT_KEY_CIV5_IMPROVEMENT_MAYA_ALTAR_HELP">
 			<Text>
 				只能建在叢林或森林。
-				[NEWLINE][NEWLINE]瑪雅祭壇每鄰近壹處叢林+1[ICON_RESEARCH]科研産出。
+				[NEWLINE][NEWLINE]不能同時在相鄰的地塊建造瑪雅祭壇。
+				[NEWLINE][NEWLINE]瑪雅祭壇每鄰近一處叢林+1[ICON_RESEARCH]科研產出。
+				[NEWLINE][NEWLINE]瑪雅祭壇上的每一位大先知提供+1[ICON_RESEARCH][ICON_PEACE][ICON_GOLDEN_AGE]產出。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_IMPROVEMENT_MAYA_ALTAR_TEXT">
