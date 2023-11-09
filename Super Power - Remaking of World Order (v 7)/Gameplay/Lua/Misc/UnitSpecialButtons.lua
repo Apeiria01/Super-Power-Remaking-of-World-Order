@@ -230,11 +230,14 @@ SettlerMissionButton = {
         return unit:CanMove() and unit:IsFound() and city:GetOwner() == unit:GetOwner();
     end, -- or nil or a boolean, default is true
     Disabled = function(action, unit)
+        SettlerMissionButton.Title = Locale.ConvertTextKey("TXT_KEY_SP_BTNNOTE_SETTLER_INTO_CITY_SHORT")
         SettlerMissionButton.ToolTip = Locale.ConvertTextKey("TXT_KEY_SP_BTNNOTE_SETTLER_INTO_CITY")
         local city = unit:GetPlot():GetPlotCity()
         if not (unit:GetExtraPopConsume() > 0) then
             SettlerMissionButton.ToolTip = SettlerMissionButton.ToolTip .. Locale.ConvertTextKey("TXT_KEY_SP_BTNNOTE_SETTLER_INTO_CITY_DISABLE_1")
             return true
+        else
+            SettlerMissionButton.Title = SettlerMissionButton.Title .. "(" .. unit:GetExtraPopConsume() ..")"
         end
         if not city:CanGrowNormally() then
             SettlerMissionButton.ToolTip = SettlerMissionButton.ToolTip .. Locale.ConvertTextKey("TXT_KEY_SP_BTNNOTE_SETTLER_INTO_CITY_DISABLE_2")
@@ -246,9 +249,6 @@ SettlerMissionButton = {
         local plot = unit:GetPlot();
         local city = plot:GetPlotCity()
         local player = Players[unit:GetOwner()]
-        if not city then
-            return
-        end
 
         city:ChangePopulation(unit:GetExtraPopConsume(), true);
         local iPolicyCollectiveRule = GameInfo.Policies["POLICY_COLLECTIVE_RULE"].ID
