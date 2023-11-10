@@ -14502,6 +14502,30 @@
 			</Text>
 		</Row>
 
+		<Row Tag="TXT_KEY_GAME_OPTION_HUMAN_ALL_UC">
+			<Text>
+        SP-開啟 [COLOR_YELLOW]人類玩家全UC[ENDCOLOR]
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GAME_OPTION_HUMAN_ALL_UC_HELP">
+			<Text>
+        開啟後，允許人類玩家建造或訓練所有文明的特殊建築、改良設施和單位。
+        註：部分建築特效生效的前提是該文明在場，如伊斯蘭大學和諾曼營地等，若文明不在場，玩家只能取得其基礎產出。
+			</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_GAME_OPTION_CIV_CONQUER">
+			<Text>
+        SP-開啟 [COLOR_YELLOW]文明征服[ENDCOLOR]
+			</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_GAME_OPTION_CIV_CONQUER_HELP">
+			<Text>
+        開啟後，佔領文明的原始首都後，解鎖該文明的特殊建築、改良設施和單位。
+			</Text>
+		</Row>
+
 		<Row Tag="TXT_KEY_GAME_OPTION_ABLE_GIFT_MILITIA">
 			<Text>
 				SP-開啟 [COLOR_YELLOW]贈送民兵單位[ENDCOLOR]
