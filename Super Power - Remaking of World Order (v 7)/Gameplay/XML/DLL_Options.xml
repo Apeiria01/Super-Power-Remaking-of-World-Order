@@ -405,6 +405,17 @@
 			<Help>TXT_KEY_GAME_OPTION_ABLE_GIFT_MILITIA_HELP</Help>
 		</Row>
 
+		<Row>
+			<Type>GAMEOPTION_CIV_CONQUER</Type>
+			<Description>TXT_KEY_GAME_OPTION_CIV_CONQUER</Description>
+			<Help>TXT_KEY_GAME_OPTION_CIV_CONQUER_HELP</Help>
+		</Row>
+		<Row>
+			<Type>GAMEOPTION_HUMAN_ALL_UC</Type>
+			<Description>TXT_KEY_GAME_OPTION_HUMAN_ALL_UC</Description>
+			<Help>TXT_KEY_GAME_OPTION_HUMAN_ALL_UC_HELP</Help>
+		</Row>
+
 		<Update>
 			<Where Type="GAMEOPTION_SP_IMMIGRATION_OFF"/>
 			<Set Default="1"/>
