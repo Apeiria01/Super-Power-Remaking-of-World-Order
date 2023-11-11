@@ -10427,7 +10427,7 @@
 
 		<Replace Tag="TXT_KEY_TRAIT_DIPLOMACY_GREAT_PEOPLE">
 			<Text>
-				[ICON_BULLET]When declaring friendship, Sweden and their friend gain a +10% boost to [ICON_GREAT_PEOPLE] Great Person generation.
+				[ICON_BULLET]When declaring friendship, Sweden and their friend gain a +10% boost to [ICON_GREAT_PEOPLE] Great Person generation and +10% of the other's [ICON_RESEARCH] research.
 				[NEWLINE][ICON_BULLET]Every 2 [ICON_CITIZEN] Citizens in Small Cities (6+ Population) provide +1 [ICON_RESEARCH] Science Output. 
 			</Text>
 		</Replace>
@@ -17181,5 +17181,12 @@
 		<Row Tag="TXT_KEY_BASE_ARMEE">
 			<Text>[ICON_PROMOTION_GROUP]Armee Base:{1_Num}</Text>
 		</Row>
+
+    <Row Tag="TXT_KEY_TP_TITLE_SCIENCE_FROM_FRIENDS">
+      <Text>[NEWLINE][NEWLINE]From Allies:</Text>
+    </Row>
+    <Row Tag="TXT_KEY_TP_SCIENCE_FROM_FRIENDS">
+      <Text>[NEWLINE][ICON_BULLET]{1_CivName} {2_value}[ICON_RESEARCH]</Text>
+    </Row>
 	</Language_en_US>
 </GameData>

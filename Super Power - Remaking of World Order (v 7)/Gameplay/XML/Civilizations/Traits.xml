@@ -343,6 +343,7 @@
 			<Description>TXT_KEY_TRAIT_DIPLOMACY_GREAT_PEOPLE</Description>
 			<ShortDescription>TXT_KEY_TRAIT_DIPLOMACY_GREAT_PEOPLE_SHORT</ShortDescription>
 			<DOFGreatPersonModifier>10</DOFGreatPersonModifier>
+      <ShareAllyResearchPercent>10</ShareAllyResearchPercent>
 		</Row>
 		<Row>
 			<Type>TRAIT_INGENIOUS</Type>
