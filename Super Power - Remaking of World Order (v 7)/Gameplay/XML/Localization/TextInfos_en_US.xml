@@ -8798,7 +8798,7 @@
 			<Text>+1 [ICON_PEACE] Faith and +1 [ICON_FOOD] Food for each Spices, Citrus, Banana and Cotton resource</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GODDESS_HUNT">
-			<Text>+1 [ICON_FOOD] Food and +1 [ICON_PEACE] Faith from Camps, +1 [ICON_FOOD] Food from [ICON_RES_BISON], +1 [ICON_PRODUCTION] Production from [ICON_RES_DEER]</Text>
+			<Text>+1 [ICON_FOOD] Food and +1 [ICON_PEACE] Faith from Camps, +1 [ICON_CULTURE] Culture from [ICON_RES_BISON] and [ICON_RES_DEER]</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GURUSHIP">
 			<Text>+2 [ICON_PEACE] Faith, +1 [ICON_CULTURE] Culture, +1 [ICON_PRODUCTION] Production and +1 [ICON_RESEARCH] Science if city has a Specialist</Text>
@@ -9003,7 +9003,7 @@
 			<Text>God of Commerce</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_GOD_OF_COMMERCE">
-			<Text>+2 [ICON_GOLD] Gold, +2 [ICON_GOLDEN_AGE] Golden Age Point from [ICON_RES_IVORY] Ivory, [ICON_RES_TRUFFLES] Truffles and [ICON_RES_FUR] Fur.</Text>
+			<Text>+3 [ICON_GOLD] Gold, +3 [ICON_GOLDEN_AGE] Golden Age Point from [ICON_RES_IVORY] Ivory, [ICON_RES_TRUFFLES] Truffles and [ICON_RES_FUR] Fur.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_RIVER_CRAFTSMAN_SHORT">
 			<Text>Sudoku</Text>
