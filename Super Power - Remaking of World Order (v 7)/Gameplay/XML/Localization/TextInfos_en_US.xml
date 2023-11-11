@@ -16535,7 +16535,7 @@
     <Row Tag="TXT_KEY_GAME_OPTION_HUMAN_ALL_UC_HELP">
       <Text>
         When turned on, human players are allowed to build or train special buildings, improvements, and units for all civilizations.
-        Note: Some building special effects require the presence of the civilization, such as Islamic University and Norman Camp. If the civilization is not present, players can only obtain its basic output.
+		[NEWLINE][COLOR_YELLOW]Note[ENDCOLOR]: Some building special effects require the presence of the civilization, such as Islamic University and Norman Camp. If the civilization is not present, players can only obtain its basic output.
       </Text>
     </Row>
 
