@@ -5711,7 +5711,7 @@
 		<Replace Tag="TXT_KEY_TRAIT_DIPLOMACY_GREAT_PEOPLE">
 			<Text>
 				[ICON_BULLET]所有達到小型城市（6[ICON_CITIZEN]人口）規模的城市中每2[ICON_CITIZEN]人口+1[ICON_RESEARCH]科研。
-				[NEWLINE][ICON_BULLET]當宣友時，瑞典和他的盟友得到+10%的[ICON_GREAT_PEOPLE]偉人點數。
+				[NEWLINE][ICON_BULLET]當宣友時，瑞典和他的盟友得到+10%的[ICON_GREAT_PEOPLE]偉人點數，+10%對方的[ICON_RESEARCH]科研。
 			</Text>
 		</Replace>
 
@@ -15176,5 +15176,12 @@
 		<Row Tag="TXT_KEY_BASE_ARMEE">
 			<Text>[ICON_PROMOTION_GROUP]集團軍基數:{1_Num}</Text>
 		</Row>
+
+    <Row Tag="TXT_KEY_TP_TITLE_SCIENCE_FROM_FRIENDS">
+      <Text>[NEWLINE][NEWLINE]來自盟友：</Text>
+    </Row>
+    <Row Tag="TXT_KEY_TP_SCIENCE_FROM_FRIENDS">
+      <Text>[NEWLINE][ICON_BULLET]{1_CivName} {2_value}[ICON_RESEARCH]</Text>
+    </Row>
 	</Language_zh_Hant_HK>
 </GameData>
