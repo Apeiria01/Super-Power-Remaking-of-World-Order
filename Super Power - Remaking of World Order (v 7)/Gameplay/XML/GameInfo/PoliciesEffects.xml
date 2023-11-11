@@ -1666,6 +1666,7 @@
 	
 	<UnitPromotions>
 		<Row>
+			<!-- TODO: Delete in the future -->
 			<Type>PROMOTION_SETTLER_POP_3</Type>
 			<Description>TXT_KEY_PROMOTION_SETTLER_POP_3</Description>
 			<Help>TXT_KEY_PROMOTION_SETTLER_POP_3</Help>

@@ -200,6 +200,7 @@
 		</Row>
 
 		<Row>
+			<!-- TODO: Delete in the future -->
 			<Type>BUILDING_WAR_CASUALTIES</Type>
 			<BuildingClass>BUILDINGCLASS_COUNT_BUILIDNGS</BuildingClass>
 			<Cost>-1</Cost>

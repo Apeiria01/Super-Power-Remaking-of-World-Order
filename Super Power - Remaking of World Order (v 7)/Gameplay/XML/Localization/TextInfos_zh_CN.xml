@@ -8199,15 +8199,6 @@
 				（平民、要塞及空军单位不计入兵力消耗，也不进行单位合并操作）
 			</Text>
 		</Row>
-		<Row Tag="TXT_KEY_SP_TROOPS_USED">
-			<Text>已用兵力</Text>
-		</Row>
-		<Row Tag="TXT_KEY_SP_TROOPS_USED_HELP">
-			<Text>标记允许军事单位的数量上限。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_SP_TROOPS_DEBUFF">
-			<Text>兵力 - 超限减益</Text>
-		</Row>
 
 		<Row Tag="TXT_KEY_SP_RESOURCE_NATRUALGAS">
 			<Text>天然气</Text>

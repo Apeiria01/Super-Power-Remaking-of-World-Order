@@ -8089,15 +8089,6 @@
 				（平民、要塞及空軍單位不計入兵力消耗，也不進行單位合並操作）
 			</Text>
 		</Row>
-		<Row Tag="TXT_KEY_SP_TROOPS_USED">
-			<Text>已用兵力</Text>
-		</Row>
-		<Row Tag="TXT_KEY_SP_TROOPS_USED_HELP">
-			<Text>標記允許軍事單位的數量上限。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_SP_TROOPS_DEBUFF">
-			<Text>兵力 - 超限減益</Text>
-		</Row>
 		
 		<Row Tag="TXT_KEY_SP_RESOURCE_NATRUALGAS">
 			<Text>天然氣</Text>
