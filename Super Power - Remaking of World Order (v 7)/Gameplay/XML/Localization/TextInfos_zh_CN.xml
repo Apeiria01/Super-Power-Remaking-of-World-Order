@@ -3916,6 +3916,7 @@
 				[NEWLINE][NEWLINE]将间谍移动到你的城市可以降低城市的腐败等级，具体效果如下：
 				[NEWLINE]一级和二级间谍：城市腐败等级降低一级，且至多降低为一级城市。
 				[NEWLINE]三级间谍：完全消除城市腐败等级。
+				[NEWLINE][NEWLINE][COLOR_YELLOW]注[ENDCOLOR]：在当前版本中，腐败已经使用“腐败分数”来表示，原先的1格地图距离提供100腐败分数（“离心倾向”），腐败阈值也和过去相等（仅数值提高100倍），腐败分数相比过去可以得到更多方式减成，具体可以查看城市横幅下的UI面板的腐败报告/预览。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CONCEPT_CITIES_CORRUPTION_ADVISOR_QUESTION">
