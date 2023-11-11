@@ -478,7 +478,12 @@
 				[NEWLINE]1/8 of the map length (at least 14 tiles, at most 18 tiles) - low corruption
 				[NEWLINE]1/5 of the map length(at least 26 tiles) - medium corruption
 				[NEWLINE]more than 1/3 of the map length (at least 36 tiles) - heavy corruption
-				[NEWLINE][NEWLINE]Corruption will cause the output of Production, Gold, Science lost in those cities by a certain percent.</Text>
+				[NEWLINE][NEWLINE]Corruption will cause the output of Production, Gold, Science lost in those cities by a certain percent.
+				[NEWLINE][NEWLINE]Moving Spies to your city reduces the corruption level of your city, as follows:
+				[NEWLINE]Level 1 and Level 2 Spies: The city corruption level is reduced by one level and at most reduce to LV 1.
+				[NEWLINE]Level 3 Spy: Completely eliminate city corruption levels.
+				[NEWLINE][NEWLINE][COLOR_YELLOW]Note[ENDCOLOR]: In the current version, corruption has been represented by the "corruption score", the past 1-tile map distance provides 100 corruption scores ("Administrative cost"), the corruption threshold is also the same as in the past (only increased by 100 times), the corruption score can be reduced in more ways now than in the past, you can see the corruption report/preview in the UI panel below City Banner.
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CONCEPT_CITIES_CORRUPTION_ADVISOR_QUESTION">
 			<Text>What is Corruption?</Text>
