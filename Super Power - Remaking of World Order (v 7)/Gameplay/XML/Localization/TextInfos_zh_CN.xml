@@ -6356,7 +6356,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]君主政体[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]城市规模导致的[ICON_HAPPINESS_4]不满减半。
-				[NEWLINE][ICON_BULLET][ICON_CAPITAL]首都每个[ICON_CITIZEN]人口+1[ICON_GOLD]金钱，每2个[ICON_CITIZEN]人口+1[ICON_FOOD]食物、[ICON_CULTURE]文化、[ICON_PRODUCTION]产能、[ICON_RESEARCH]科研。
+				[NEWLINE][ICON_BULLET][ICON_CAPITAL]首都每个[ICON_CITIZEN]人口+1[ICON_GOLD]金钱，每3个[ICON_CITIZEN]人口+1[ICON_FOOD]食物、[ICON_CULTURE]文化、[ICON_PRODUCTION]产能、[ICON_RESEARCH]科研。
 			</Text>
 		</Replace>
 
@@ -15369,6 +15369,15 @@
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_SETTLER_INTO_CITY_DISABLE_2">
 			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]这个城市没有足够的公共卫生医疗设施[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BASE_TROOPS">
+			<Text>[ICON_RES_TROOPS]兵力基数:{1_Num}</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BASE_CROPS">
+			<Text>[ICON_PROMOTION_ELITE]军团基数:{1_Num}</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BASE_ARMEE">
+			<Text>[ICON_PROMOTION_GROUP]集团军基数:{1_Num}</Text>
 		</Row>
 	</Language_zh_CN>
 </GameData>

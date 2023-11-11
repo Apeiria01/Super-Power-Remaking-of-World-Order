@@ -7252,7 +7252,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]Monarchy[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]-50% extra [ICON_HAPPINESS_4] Unhappiness due to city's Population Size.
-				[NEWLINE][ICON_BULLET]+1 [ICON_GOLD] Gold for every [ICON_CITIZEN] Citizens and +1 [ICON_FOOD] Food, [ICON_CULTURE] Culture, [ICON_PRODUCTION] Production, [ICON_RESEARCH] Science for every 2 [ICON_CITIZEN] Citizens in the [ICON_CAPITAL] Capital.
+				[NEWLINE][ICON_BULLET]+1 [ICON_GOLD] Gold for every [ICON_CITIZEN] Citizens and +1 [ICON_FOOD] Food, [ICON_CULTURE] Culture, [ICON_PRODUCTION] Production, [ICON_RESEARCH] Science for every 3 [ICON_CITIZEN] Citizens in the [ICON_CAPITAL] Capital.
 			</Text>
 		</Replace>
 
@@ -17171,6 +17171,15 @@
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_SETTLER_INTO_CITY_DISABLE_2">
 			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]Not enough Public Health and Sanitary Service Buildings in this city[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BASE_TROOPS">
+			<Text>[ICON_RES_TROOPS]Troops Base:{1_Num}</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BASE_CROPS">
+			<Text>[ICON_PROMOTION_ELITE]Crops Base:{1_Num}</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BASE_ARMEE">
+			<Text>[ICON_PROMOTION_GROUP]Armee Base:{1_Num}</Text>
 		</Row>
 	</Language_en_US>
 </GameData>

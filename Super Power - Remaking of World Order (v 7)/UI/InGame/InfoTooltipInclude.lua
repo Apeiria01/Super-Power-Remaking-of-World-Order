@@ -1773,6 +1773,15 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 	insertLocalizedIfNonZero( tips, "TXT_KEY_PRODUCTION_NEEDED_BUILDING_MODIFIER", building.GlobalProductionNeededBuildingModifier or 0 )
 	insertLocalizedIfNonZero( tips, "TXT_KEY_PRODUCTION_NEEDED_PROJECT_MODIFIER", building.GlobalProductionNeededProjectModifier or 0 )
 
+	if PreGame.GetGameOption("GAMEOPTION_SP_CORPS_MODE_DISABLE") == 0 then
+		local TroopRow = GameInfo.Building_DomainTroops{BuildingType = buildingType, DomainType = "DOMAIN_SEA"}()
+		if TroopRow then
+			insertLocalizedIfNonZero( tips, "TXT_KEY_BASE_TROOPS", TroopRow.NumTroop or 0 )
+		end
+		insertLocalizedIfNonZero( tips, "TXT_KEY_BASE_CROPS", building.NumCrops  or 0 )
+		insertLocalizedIfNonZero( tips, "TXT_KEY_BASE_ARMEE", building.NumArmee or 0 )
+	end
+
 	--New for Yield From Other Yield
 	for row in GameInfo.Building_YieldFromOtherYield(thisBuildingType) do
 		item = GameInfo.Yields[ row.InYieldType ]
