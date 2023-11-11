@@ -420,6 +420,12 @@
 			<Help>TXT_KEY_GAME_OPTION_HUMAN_ALL_UC_HELP</Help>
 		</Row>
 
+		<Row>
+			<Type>GAMEOPTION_PROJECT_CAPTURE</Type>
+			<Description>TXT_KEY_GAME_OPTION_PROJECT_CAPTURE</Description>
+			<Help>TXT_KEY_GAME_OPTION_PROJECT_CAPTURE_HELP</Help>
+		</Row>
+
 		<Update>
 			<Where Type="GAMEOPTION_SP_IMMIGRATION_OFF"/>
 			<Set Default="1"/>

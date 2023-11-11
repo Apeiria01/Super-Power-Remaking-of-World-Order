@@ -16521,28 +16521,40 @@
 			</Text>
 		</Row>
 
-    <Row Tag="TXT_KEY_GAME_OPTION_HUMAN_ALL_UC">
-      <Text>
-        SP - [COLOR_YELLOW] All human players are UC[ENDCOLOR]
-      </Text>
-    </Row>
-    <Row Tag="TXT_KEY_GAME_OPTION_HUMAN_ALL_UC_HELP">
-      <Text>
-        When turned on, human players are allowed to build or train special buildings, improvements, and units for all civilizations.
-		[NEWLINE][COLOR_YELLOW]Note[ENDCOLOR]: Some building special effects require the presence of the civilization, such as Islamic University and Norman Camp. If the civilization is not present, players can only obtain its basic output.
-      </Text>
-    </Row>
+		<Row Tag="TXT_KEY_GAME_OPTION_HUMAN_ALL_UC">
+			<Text>
+				SP - [COLOR_YELLOW] All human players are UC[ENDCOLOR]
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GAME_OPTION_HUMAN_ALL_UC_HELP">
+			<Text>
+				When turned on, human players are allowed to build or train special buildings, improvements, and units for all civilizations.
+				[NEWLINE][COLOR_YELLOW]Note[ENDCOLOR]: Some building special effects require the presence of the civilization, such as Islamic University and Norman Camp. If the civilization is not present, players can only obtain its basic output.
+			</Text>
+		</Row>
 
-    <Row Tag="TXT_KEY_GAME_OPTION_CIV_CONQUER">
-      <Text>
-          SP - [COLOR_YELLOW]Civilization Conquest[ENDCOLOR]
-      </Text>
-    </Row>
-    <Row Tag="TXT_KEY_GAME_OPTION_CIV_CONQUER_HELP">
-      <Text>
-        Once activated, after capturing the original capital of a civilization, you will unlock the civilization's special buildings, improvements, and units.
-      </Text>
-    </Row>
+		<Row Tag="TXT_KEY_GAME_OPTION_CIV_CONQUER">
+			<Text>
+				SP - [COLOR_YELLOW]Civilization Conquest[ENDCOLOR]
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GAME_OPTION_CIV_CONQUER_HELP">
+			<Text>
+				Once activated, after capturing the original capital of a civilization, you will unlock the civilization's special buildings, improvements, and units.
+			</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_GAME_OPTION_PROJECT_CAPTURE">
+			<Text>
+			SP - [COLOR_YELLOW]Elite Project Capture[ENDCOLOR]
+			</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_GAME_OPTION_PROJECT_CAPTURE_HELP">
+			<Text>
+			Once activated, allows the player to get a same Elite project in their own capital after capturing the city with the Elite Project (the original owner will not lose the project).
+			</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_GAME_OPTION_ABLE_GIFT_MILITIA">
 			<Text>
