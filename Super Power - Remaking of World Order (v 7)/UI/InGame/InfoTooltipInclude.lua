@@ -1160,6 +1160,7 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		TradeRouteLandDistanceModifier = L"TXT_KEY_TRLDM1" .. "%+i%%",		-- TOTO
 	--y	TradeRouteLandGoldBonus = L"TXT_KEY_TRLGB1" .. "%+i%%[ICON_GOLD]",	-- TOTO 
 		CityStateTradeRouteProductionModifier = L"TXT_KEY_CSTRPM1111" .. "%+i%%[ICON_PRODUCTION]",-- TOTO
+		CityStateTradeRouteProductionModifierGlobal = L"TXT_KEY_CSTRPMG" .. "%+i%%[ICON_PRODUCTION]",-- TOTO
 		GreatScientistBeakerModifier = L"TXT_KEY_GSBM4" .. "%+i%%[ICON_RESEARCH]",-- TOTO
 	--y	TechEnhancedTourism = "",
 	--y	SpecialistCount = "",

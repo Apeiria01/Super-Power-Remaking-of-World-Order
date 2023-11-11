@@ -13857,7 +13857,10 @@
 			<Text>陸地商路</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_CSTRPM1111">
-			<Text>每條城邦商路使全國:</Text>
+			<Text>每條城邦商路使城市:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CSTRPMG">
+			<Text>每条城邦商路使全國:</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_GSBM4">
 			<Text>大科研究新科技時</Text>

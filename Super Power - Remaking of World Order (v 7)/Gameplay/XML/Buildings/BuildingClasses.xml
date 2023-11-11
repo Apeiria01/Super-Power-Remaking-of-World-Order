@@ -1195,14 +1195,7 @@
 			<DefaultBuilding>BUILDING_MOTHER_CALLS_MANPOWER</DefaultBuilding>
 			<Description>TXT_KEY_BUILDING_MANPOWER_BONUS</Description>
 		</Row>
-		
-		<Row>
-			<Type>BUILDINGCLASS_HANSE_CITYSTATE</Type>
-			<DefaultBuilding>BUILDING_HANSE</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_HANSE_DESC</Description>
-		</Row>
-		
-		
+
 		<Row>
 			<Type>BUILDINGCLASS_ARABIA_ISIAMIC_UNIVERSITY_ALLAH_AKBAR</Type>
 			<DefaultBuilding>BUILDING_ARABIA_ISIAMIC_UNIVERSITY_ALLAH_AKBAR</DefaultBuilding>

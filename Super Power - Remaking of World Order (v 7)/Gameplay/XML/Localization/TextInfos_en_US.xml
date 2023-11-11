@@ -237,6 +237,9 @@
 			<Text>Land Trade Route </Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_CSTRPM1111">
+			<Text>Each Trade Route to City States Makes Cities: </Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CSTRPMG">
 			<Text>Each Trade Route to City States Makes All Cities: </Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_GSBM4">
