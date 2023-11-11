@@ -14715,6 +14715,18 @@
 			</Text>
 		</Row>
 
+		<Row Tag="TXT_KEY_GAME_OPTION_PROJECT_CAPTURE">
+			<Text>
+				SP-开启 [COLOR_YELLOW]精英工程获取[ENDCOLOR]
+			</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_GAME_OPTION_PROJECT_CAPTURE_HELP">
+			<Text>
+				开启后允许玩家在攻占拥有精英工程的城市后在自己首都得到相同的精英工程（原拥有者不会失去工程）。
+			</Text>
+		</Row>
+
 		<Row Tag="TXT_KEY_GAME_OPTION_ABLE_GIFT_MILITIA">
 			<Text>
 				SP-开启 [COLOR_YELLOW]赠送民兵单位[ENDCOLOR]
