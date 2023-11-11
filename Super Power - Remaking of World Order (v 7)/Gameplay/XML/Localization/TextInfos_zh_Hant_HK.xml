@@ -5427,7 +5427,7 @@
 		<Replace Tag="TXT_KEY_TRAIT_ART_OF_WAR">
 			<Text>
 				[ICON_BULLET]所有陸軍單位都自帶消滅敵人後，獲得相當於敵單位戰鬥力數值50%的[ICON_GOLDEN_AGE]黃金時代點數的晉升。
-				[NEWLINE][ICON_BULLET]黃金時代中，所有城市的[ICON_CITIZEN]人口增長所需糧食-20%，總[ICON_RESEARCH]科研花費-10%，消除來自城市數量的[ICON_RESEARCH]科研花費增加。
+				[NEWLINE][ICON_BULLET]黃金時代中，所有城市的[ICON_CITIZEN]人口增長所需糧食-20%，消除來自城市數量的[ICON_RESEARCH]科研花費增加。
 			</Text>
 		</Replace>
 		<Row Tag="TXT_KEY_SP_UA_CHINA_GOLDENAGE_ANNOUNCE">
@@ -5437,7 +5437,7 @@
 			<Text>
 			中國進入了一個嶄新的[ICON_GOLDEN_AGE][COLOR_POSITIVE_TEXT]盛世[ENDCOLOR]！
 			[NEWLINE][NEWLINE]所有金錢產出的地塊額外+1[ICON_GOLD]金錢產出，全國+20%[ICON_PRODUCTION]產能，[ICON_CULTURE]文化。
-			[NEWLINE]所有城市的[ICON_CITIZEN]人口成長所需糧食-20%，總[ICON_RESEARCH]科研花費-10%，消除來自城市數量的[ICON_RESEARCH]科研花費增加。
+			[NEWLINE]所有城市的[ICON_CITIZEN]人口成長所需糧食-20%，消除來自城市數量的[ICON_RESEARCH]科研花費增加。
 			</Text>
 		</Row>
 
