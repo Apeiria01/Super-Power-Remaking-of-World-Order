@@ -696,7 +696,7 @@
 			<Where Name="PUPPET_CULTURE_MODIFIER" />
 		</Update>
 
-		<!-- Specialist Flavor -->
+		<!-- Yield Flavor 
 		<Update>
 			<Set Value="16"/>
 			<Where Name="AI_CITIZEN_VALUE_FOOD" />
@@ -720,7 +720,7 @@
 		<Update>
 			<Set Value="5"/>
 			<Where Name="AI_CITIZEN_VALUE_FAITH" />
-		</Update>
+		</Update>-->
 
 		<!-- Misc-->
 		<Update>
