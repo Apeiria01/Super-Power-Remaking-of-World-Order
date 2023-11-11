@@ -14048,6 +14048,9 @@
 			<Text>陆地商路</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_CSTRPM1111">
+			<Text>每条城邦商路使城市:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CSTRPMG">
 			<Text>每条城邦商路使全国:</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_GSBM4">

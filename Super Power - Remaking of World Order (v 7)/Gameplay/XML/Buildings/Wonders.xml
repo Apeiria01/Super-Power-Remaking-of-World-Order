@@ -1593,7 +1593,7 @@
 			<PortraitIndex>0</PortraitIndex>
 			<WonderSplashImage>Hanse_splash.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,B</WonderSplashAnchor>
-			<FreeBuilding>BUILDINGCLASS_HANSE_CITYSTATE</FreeBuilding>
+			<CityStateTradeRouteProductionModifierGlobal>4</CityStateTradeRouteProductionModifierGlobal>
 		</Row>
 		<Row>
 			<Type>BUILDING_ALHAMBRA</Type>
@@ -2831,25 +2831,6 @@
 			<PortraitIndex>11</PortraitIndex>
 			<GreatWorkCount>-1</GreatWorkCount>
 		</Row>
-		
-		<Row>
-			<Type>BUILDING_HANSE</Type>
-			<BuildingClass>BUILDINGCLASS_HANSE_CITYSTATE</BuildingClass>		
-			<Cost>-1</Cost>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<Help>TXT_KEY_BUILDING_HANSE_HELP</Help>
-			<Description>TXT_KEY_BUILDING_HANSE_DESC</Description>
-			<Civilopedia>TXT_KEY_CIV5_BUILDINGS_HANSE_TEXT</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HANSE_STRATEGY</Strategy>
-			<MinAreaSize>-1</MinAreaSize>
-			<NeverCapture>true</NeverCapture>
-			<CityStateTradeRouteProductionModifier>4</CityStateTradeRouteProductionModifier>
-			<IconAtlas>EXPANSION2PATCH_BUILDING_ATLAS</IconAtlas>
-			<PortraitIndex>0</PortraitIndex>
-			<GreatWorkCount>-1</GreatWorkCount>
-		</Row>
-		
-		
 	</Buildings>
 
 

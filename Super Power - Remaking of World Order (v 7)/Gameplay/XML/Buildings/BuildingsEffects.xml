@@ -1624,11 +1624,6 @@
 			<YieldType>YIELD_CULTURE</YieldType>
 			<Yield>1</Yield>
 		</Row>
-		<Row>
-			<BuildingType>BUILDING_HANSE</BuildingType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>1</Yield>
-		</Row>
 
 		<Row>
 			<BuildingType>BUILDING_NOTRE_DAME</BuildingType>
