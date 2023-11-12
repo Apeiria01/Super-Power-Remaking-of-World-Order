@@ -15176,5 +15176,8 @@
 		<Row Tag="TXT_KEY_TP_SCIENCE_FROM_FRIENDS">
 			<Text>[NEWLINE][ICON_BULLET]{1_CivName} {2_value}[ICON_RESEARCH]</Text>
 		</Row>
+		<Replace Tag="TXT_KEY_RESOURCE_TOOLTIP_IMPROVED_WORKED">
+			<Text>資源基礎產出:</Text>
+		</Replace>
 	</Language_zh_Hant_HK>
 </GameData>
