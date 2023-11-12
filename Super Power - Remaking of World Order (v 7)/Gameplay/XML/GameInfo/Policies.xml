@@ -63,6 +63,7 @@
 			<PortraitIndex>47</PortraitIndex>
 			<IconAtlas>POLICY_ATLAS</IconAtlas>
 			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<FreeBuildingClass>BUILDINGCLASS_FAMILY_PRODUCTION</FreeBuildingClass>
 		</Row>
 		<Row>
 			<Type>POLICY_CENTRALISATION</Type>
@@ -217,10 +218,10 @@
 			<Set FaithCostModifier="-33"/>
 			<Where Type="POLICY_MANDATE_OF_HEAVEN"/>
 		</Update>
-		<!--<Update>
-			<Set PortraitIndex="40"/>
+		<Update>
+			<Set FreeBuildingClass="BUILDINGCLASS_THEOCRACY_WRITER"/>
 			<Where Type="POLICY_THEOCRACY"/>
-		</Update>-->
+		</Update>
 		<Update>
 			<Set IncludesOneShotFreeUnits="false" NumFreePolicies="1" GreatPeopleRateModifier="25"/>
 			<Where Type="POLICY_PIETY_FINISHER"/>
@@ -398,7 +399,7 @@
 	
 	<Policies>
 		<Update>
-			<Set EmbarkedExtraMoves="1"/>
+			<Set EmbarkedExtraMoves="1" FreeBuildingClass="BUILDINGCLASS_EXPLORATION_REMOVE_DEBUFF"/>
 			<Where Type="POLICY_EXPLORATION"/>
 		</Update>
 		<Update>
@@ -406,7 +407,7 @@
 			<Where Type="POLICY_MARITIME_INFRASTRUCTURE"/>
 		</Update>
 		<Update>
-			<Set SeaTradeRouteGoldChange="600" PortraitIndex="8" NumTradeRouteBonus="1" IconAtlas="POLICY_ATLAS_EXP2" IconAtlasAchieved="POLICY_A_ATLAS_EXP2" GridX="3" GridY="1"/>
+			<Set SeaTradeRouteGoldChange="600" PortraitIndex="8" NumTradeRouteBonus="1" FreeBuildingClass="BUILDINGCLASS_POLICY_MERCHANT_NAVY_FREE" IconAtlas="POLICY_ATLAS_EXP2" IconAtlasAchieved="POLICY_A_ATLAS_EXP2" GridX="3" GridY="1"/>
 			<Where Type="POLICY_MERCHANT_NAVY"/>
 		</Update>
 		<Update>
@@ -766,10 +767,6 @@
 			<PolicyType>POLICY_REFORMATION</PolicyType>
 			<PrereqPolicy>POLICY_MANDATE_OF_HEAVEN</PrereqPolicy>
 		</Row>
-		<!--<Row>
-			<PolicyType>POLICY_RELIGIOUS_POLITICS</PolicyType>
-			<PrereqPolicy>POLICY_THEOCRACY</PrereqPolicy>
-		</Row>-->
 		<Row>
 			<PolicyType>POLICY_FREE_RELIGION</PolicyType>
 			<PrereqPolicy>POLICY_RELIGIOUS_POLITICS</PrereqPolicy>
