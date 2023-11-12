@@ -2336,26 +2336,7 @@
 
 	<!-- **********************Policy Building for Special Effects*************************** -->
 
-	<Policy_FreeBuildingClass>
-		<Row>
-			<PolicyType>POLICY_FAMILY_REGISTER</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_FAMILY_PRODUCTION</BuildingClassType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_THEOCRACY</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_THEOCRACY_WRITER</BuildingClassType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_EXPLORATION</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_EXPLORATION_REMOVE_DEBUFF</BuildingClassType>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_MERCHANT_NAVY</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_POLICY_MERCHANT_NAVY_FREE</BuildingClassType>
-			<Count>1</Count>
-		</Row>
-	</Policy_FreeBuildingClass>
-
+	<Policy_FreeBuildingClass />
 	<Policy_FreeBuildingClassCapital />
 	<Policy_FreeBuildingClassCityStates />
 
@@ -2404,6 +2385,12 @@
 			<DefaultBuilding>BUILDING_EXPLORATION_REMOVE_DEBUFF</DefaultBuilding>
 			<Description>TXT_KEY_POLICY_BRANCH_EXPLORATION</Description>
 		</Row>
+
+		<Row>
+			<Type>BUILDINGCLASS_POLICY_MERCHANT_NAVY_FREE</Type>
+			<DefaultBuilding>BUILDING_POLICY_MERCHANT_NAVY_FREE</DefaultBuilding>
+			<Description>TXT_KEY_POLICY_MERCHANT_NAVY</Description>
+		</Row>
 	</BuildingClasses>
 	<Buildings>
 		<Row>
@@ -2419,6 +2406,7 @@
 			<Help>TXT_KEY_POLICY_BRANCH_EXPLORATION_HELP</Help>
 			<FreePromotionRemoved>PROMOTION_LOSE_HP_OUTSIDE</FreePromotionRemoved>
 			<GreatWorkCount>-1</GreatWorkCount>
+			<DummyBuilding>true</DummyBuilding>
 		</Row>
 
 		<Row>
@@ -2433,6 +2421,7 @@
 			<PortraitIndex>21</PortraitIndex>
 			<IconAtlas>TECH_ATLAS_1</IconAtlas>
 			<Description>TXT_KEY_BUILDING_THEOCRACY_WRITER</Description>
+			<DummyBuilding>true</DummyBuilding>
 		</Row>
 
 		<Row>
@@ -2448,26 +2437,9 @@
 			<IconAtlas>TECH_ATLAS_1</IconAtlas>
 			<Description>TXT_KEY_BUILDING_FAMILY_PRODUCTION</Description>
 			<Help>TXT_KEY_BUILDING_FAMILY_PRODUCTION_HELP</Help>
-			
+			<DummyBuilding>true</DummyBuilding>
 		</Row>
-	</Buildings>
-	<Building_YieldChangesPerPop>
-		<Row>
-			<BuildingType>BUILDING_FAMILY_PRODUCTION</BuildingType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>20</Yield>
-		</Row>
-	</Building_YieldChangesPerPop>
 
-	<BuildingClasses>
-		<Row>
-			<Type>BUILDINGCLASS_POLICY_MERCHANT_NAVY_FREE</Type>
-			<DefaultBuilding>BUILDING_POLICY_MERCHANT_NAVY_FREE</DefaultBuilding>
-			<Description>TXT_KEY_POLICY_MERCHANT_NAVY</Description>
-		</Row>
-	</BuildingClasses>
-
-	<Buildings>
 		<Row>
 			<Type>BUILDING_POLICY_MERCHANT_NAVY_FREE</Type>
 			<BuildingClass>BUILDINGCLASS_POLICY_MERCHANT_NAVY_FREE</BuildingClass>
@@ -2479,8 +2451,16 @@
 			<IconAtlas>TECH_ATLAS_1</IconAtlas>
 			<GreatWorkCount>-1</GreatWorkCount>
 			<Description>TXT_KEY_POLICY_MERCHANT_NAVY</Description>
+			<DummyBuilding>true</DummyBuilding>
 		</Row>
 	</Buildings>
+	<Building_YieldChangesPerPop>
+		<Row>
+			<BuildingType>BUILDING_FAMILY_PRODUCTION</BuildingType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>20</Yield>
+		</Row>
+	</Building_YieldChangesPerPop>
 
 	<Building_EnableUnitPurchase>
 		<Row>
