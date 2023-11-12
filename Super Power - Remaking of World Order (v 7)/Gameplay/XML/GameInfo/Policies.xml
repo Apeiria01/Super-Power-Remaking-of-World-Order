@@ -415,7 +415,7 @@
 		</Update>
 
 		<Update>
-			<Set IncludesOneShotFreeUnits="false" GreatAdmiralRateModifier="0" />
+			<Set IncludesOneShotFreeUnits="false" GreatAdmiralRateModifier="0" DeepWaterNavalStrengthCultureModifier="100" />
 			<Where Type="POLICY_NAVIGATION_SCHOOL"/>
 		</Update>
 		<Update>

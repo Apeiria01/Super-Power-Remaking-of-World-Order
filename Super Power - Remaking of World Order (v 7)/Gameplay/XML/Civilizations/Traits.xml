@@ -121,6 +121,7 @@
 			<Description>TXT_KEY_TRAIT_FIGHT_WELL_DAMAGED</Description>
 			<ShortDescription>TXT_KEY_TRAIT_FIGHT_WELL_DAMAGED_SHORT</ShortDescription>
 			<FightWellDamaged>true</FightWellDamaged>
+			<CultureBonusUnitStrengthModify>100</CultureBonusUnitStrengthModify>
 		</Row>
 		<Row>
 			<Type>TRAIT_BUFFALO_HORNS</Type>

@@ -2047,14 +2047,6 @@
 
 
 		<!--********************************************** New Trait&Policy Notification Texts ********************************************** -->
-
-		<Row Tag="TXT_KEY_SP_TRAIT_CULTURE_FROM_UNIT">
-			<Text>Banzai! You received {@1_num} [ICON_CULTURE] Culture from building a {@2_name}!</Text>
-		</Row>
-		<Row Tag="TXT_KEY_SP_POLICY_CULTURE_FROM_UNIT">
-			<Text>You received {@1_num} [ICON_CULTURE] Culture from building a {@2_name}!</Text>
-		</Row>
-
 		<Row Tag="TXT_KEY_SP_NOTIFICATION_TRAIT_OUTPUT_FROM_RAZING">
 			<Text>You received {@1_num} [ICON_GOLD] Gold, [ICON_CULTURE] Culture, [ICON_RESEARCH] Science and [ICON_PEACE] Faith from destroying a city!</Text>
 		</Row>
@@ -17187,11 +17179,11 @@
 			<Text>[ICON_PROMOTION_GROUP]Armee Base:{1_Num}</Text>
 		</Row>
 
-    <Row Tag="TXT_KEY_TP_TITLE_SCIENCE_FROM_FRIENDS">
-      <Text>[NEWLINE][NEWLINE]From Allies:</Text>
-    </Row>
-    <Row Tag="TXT_KEY_TP_SCIENCE_FROM_FRIENDS">
-      <Text>[NEWLINE][ICON_BULLET]{1_CivName} {2_value}[ICON_RESEARCH]</Text>
-    </Row>
+		<Row Tag="TXT_KEY_TP_TITLE_SCIENCE_FROM_FRIENDS">
+			<Text>[NEWLINE][NEWLINE]From Allies:</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TP_SCIENCE_FROM_FRIENDS">
+			<Text>[NEWLINE][ICON_BULLET]{1_CivName} {2_value}[ICON_RESEARCH]</Text>
+		</Row>
 	</Language_en_US>
 </GameData>
