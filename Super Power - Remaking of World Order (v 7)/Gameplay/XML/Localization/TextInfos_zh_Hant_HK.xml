@@ -5099,14 +5099,6 @@
 		</Row>
 		
 		<!--********************************************** New Trait&Policy Notification Texts ********************************************** -->
-
-		<Row Tag="TXT_KEY_SP_TRAIT_CULTURE_FROM_UNIT">
-			<Text>板載!{@2_name}訓練完成，獲得{@1_num}[ICON_CULTURE]文化值！</Text>
-		</Row>
-		<Row Tag="TXT_KEY_SP_POLICY_CULTURE_FROM_UNIT">
-			<Text>{@2_name}訓練完成，獲得{@1_num}[ICON_CULTURE]文化值！</Text>
-		</Row>
-
 		<Row Tag="TXT_KEY_SP_NOTIFICATION_TRAIT_OUTPUT_FROM_RAZING">
 			<Text>在屠城中，你的軍隊劫掠到了{@1_num}點[ICON_GOLD]金幣、[ICON_CULTURE]文物、[ICON_RESEARCH]書籍和[ICON_PEACE]教器！</Text>
 		</Row>
@@ -15178,11 +15170,11 @@
 			<Text>[ICON_PROMOTION_GROUP]集團軍基數:{1_Num}</Text>
 		</Row>
 
-    <Row Tag="TXT_KEY_TP_TITLE_SCIENCE_FROM_FRIENDS">
-      <Text>[NEWLINE][NEWLINE]來自盟友：</Text>
-    </Row>
-    <Row Tag="TXT_KEY_TP_SCIENCE_FROM_FRIENDS">
-      <Text>[NEWLINE][ICON_BULLET]{1_CivName} {2_value}[ICON_RESEARCH]</Text>
-    </Row>
+		<Row Tag="TXT_KEY_TP_TITLE_SCIENCE_FROM_FRIENDS">
+			<Text>[NEWLINE][NEWLINE]來自盟友：</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TP_SCIENCE_FROM_FRIENDS">
+			<Text>[NEWLINE][ICON_BULLET]{1_CivName} {2_value}[ICON_RESEARCH]</Text>
+		</Row>
 	</Language_zh_Hant_HK>
 </GameData>

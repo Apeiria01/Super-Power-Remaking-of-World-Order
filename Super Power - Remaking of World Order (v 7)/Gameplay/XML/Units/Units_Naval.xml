@@ -3913,6 +3913,13 @@
 		</Row>
 	</Unit_YieldFromKills>
 
+	<Unit_InstantYieldFromTrainings>
+		<Row>
+			<UnitType>UNIT_BRAZILIAN_MINAS_GERAES</UnitType>
+			<YieldType>YIELD_GOLDEN_AGE_POINTS</YieldType>
+			<Yield>280</Yield>
+		</Row>
+	</Unit_InstantYieldFromTrainings>
 
 
 	<Unit_Flavors>

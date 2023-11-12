@@ -5199,14 +5199,6 @@
 		</Row>
 
 		<!--********************************************** New Trait&Policy Notification Texts ********************************************** -->
-
-		<Row Tag="TXT_KEY_SP_TRAIT_CULTURE_FROM_UNIT">
-			<Text>板载!{@2_name}训练完成，获得{@1_num}[ICON_CULTURE]文化！</Text>
-		</Row>
-		<Row Tag="TXT_KEY_SP_POLICY_CULTURE_FROM_UNIT">
-			<Text>{@2_name}训练完成，获得{@1_num}[ICON_CULTURE]文化！</Text>
-		</Row>
-
 		<Row Tag="TXT_KEY_SP_NOTIFICATION_TRAIT_OUTPUT_FROM_RAZING">
 			<Text>在屠城中，你的军队劫掠到了{@1_num}点[ICON_GOLD]金钱、[ICON_CULTURE]文物、[ICON_RESEARCH]书籍和[ICON_PEACE]教器！</Text>
 		</Row>
@@ -15382,10 +15374,10 @@
 		</Row>
 
 		<Row Tag="TXT_KEY_TP_TITLE_SCIENCE_FROM_FRIENDS">
-      <Text>[NEWLINE][NEWLINE]来自盟友：</Text>
+			<Text>[NEWLINE][NEWLINE]来自盟友：</Text>
 		</Row>
 		<Row Tag="TXT_KEY_TP_SCIENCE_FROM_FRIENDS">
-      <Text>[NEWLINE][ICON_BULLET]{1_CivName} {2_value}[ICON_RESEARCH]</Text>
+			<Text>[NEWLINE][ICON_BULLET]{1_CivName} {2_value}[ICON_RESEARCH]</Text>
 		</Row>
 	</Language_zh_CN>
 </GameData>
