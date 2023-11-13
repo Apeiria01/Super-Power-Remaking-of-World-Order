@@ -23,6 +23,10 @@ VALUES		('SP8_EXTRA_ATLAS', 				256, 		'SP8Units_BuildingsAtlas256.dds',				8, 	
 			('BUILDING_ZULU_IZIKO_ATLAS', 		256, 		'IzikoPicture_256.dds',					        1, 				1),
 			('BUILDING_ZULU_IZIKO_ATLAS', 		128, 		'IzikoPicture_128.dds',					        1, 				1),
 			('BUILDING_ZULU_IZIKO_ATLAS', 		064, 		'IzikoPicture_064.dds',					        1, 				1),
-			('BUILDING_ZULU_IZIKO_ATLAS', 		045, 		'IzikoPicture_045.dds',					        1, 				1);
+			('BUILDING_ZULU_IZIKO_ATLAS', 		045, 		'IzikoPicture_045.dds',					        1, 				1),
+			('BUILDING_SWEDEN_NOBEL_PRIZE_ATLAS', 		256, 		'NobelPrize_256.dds',					        1, 				1),
+			('BUILDING_SWEDEN_NOBEL_PRIZE_ATLAS', 		128, 		'NobelPrize_128.dds',					        1, 				1),
+			('BUILDING_SWEDEN_NOBEL_PRIZE_ATLAS', 		064, 		'NobelPrize_64.dds',					        1, 				1),
+			('BUILDING_SWEDEN_NOBEL_PRIZE_ATLAS', 		045, 		'NobelPrize_45.dds',					        1, 				1);
 --==========================================================================================================================
 --==========================================================================================================================
