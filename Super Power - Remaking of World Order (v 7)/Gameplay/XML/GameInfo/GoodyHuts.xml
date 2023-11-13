@@ -40,21 +40,21 @@
 			<Description>TXT_KEY_GOODY_PRODUCTION</Description>
 			<ChooseDescription>TXT_KEY_GOODY_CHOOSE_PRODUCTION</ChooseDescription>
 			<Sound/>
-			<Production>20</Production>
+			<Production>15</Production>
 		</Row>
 		<Row>
 			<Type>GOODY_CULTURE</Type>
 			<Description>TXT_KEY_GOODY_CULTURE</Description>
 			<ChooseDescription>TXT_KEY_GOODY_CHOOSE_CULTURE</ChooseDescription>
 			<Sound/>
-			<Culture>20</Culture>
+			<Culture>15</Culture>
 		</Row>
 		<Row>
 			<Type>GOODY_SCIENCE</Type>
 			<Description>TXT_KEY_GOODY_SCIENCE</Description>
 			<ChooseDescription>TXT_KEY_GOODY_CHOOSE_SCIENCE</ChooseDescription>
 			<Sound/>
-			<Science>20</Science>
+			<Science>15</Science>
 		</Row>
 		<Row>
 			<Type>GOODY_PANTHEON_FAITH</Type>
