@@ -1612,42 +1612,6 @@
 			<MoveRate>WHEELED</MoveRate>
 			<ExtraMaintenanceCost>4</ExtraMaintenanceCost>
 		</Row>
-		<Row>
-			<Class>UNITCLASS_TANK_DESTROYER</Class>
-			<Type>UNIT_SWEDISH_GUSTAV_RECOILESS_GUN</Type>
-			<PrereqTech>TECH_LARGE_CALIBRE</PrereqTech>
-			<BaseSightRange>2</BaseSightRange>
-			<Combat>85</Combat>
-			<RangedCombat>85</RangedCombat>
-			<Range>1</Range>
-			<Cost>160</Cost>
-			<Moves>4</Moves>
-			<CombatClass>UNITCOMBAT_MELEE</CombatClass>
-			<Domain>DOMAIN_LAND</Domain>
-			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_SWEDISH_GUSTAV_RECOILESS_GUN</Description>
-			<Civilopedia>TXT_KEY_UNIT_SWEDISH_GUSTAV_RECOILESS_GUN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_SP_UNITS_COUNTER_UNITS_STRATEGY</Strategy>
-			<Help>TXT_KEY_PROMOTION_ANTI_TANK_HELP</Help>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
-			<Pillage>true</Pillage>
-			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
-			<AdvancedStartCost>35</AdvancedStartCost>
-			<XPValueAttack>3</XPValueAttack>
-			<XPValueDefense>3</XPValueDefense>
-			<Conscription>1</Conscription>
-			<GoodyHutUpgradeUnitClass>UNITCLASS_ATGM_VEHICLE</GoodyHutUpgradeUnitClass>
-			<UnitArtInfo>ART_DEF_UNIT_BAZOOKA_INFANTRY</UnitArtInfo>
-			<UnitFlagIconOffset>102</UnitFlagIconOffset>
-			<UnitFlagAtlas>SPUnitFlags_FLAG</UnitFlagAtlas>
-			<IconAtlas>SPUNITS02_ATLAS</IconAtlas>
-			<PortraitIndex>49</PortraitIndex>
-			<MoveRate>WHEELED</MoveRate>
-			<ExtraMaintenanceCost>4</ExtraMaintenanceCost>
-		</Row>
-		
-		
 
 		<Row>
 			<Class>UNITCLASS_ATGM_VEHICLE</Class>
@@ -1895,10 +1859,6 @@
 		</Row>
 		<Row>
 			<UnitType>UNIT_TANK_DESTROYER</UnitType>
-			<UnitClassType>UNITCLASS_ATGM_VEHICLE</UnitClassType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_SWEDISH_GUSTAV_RECOILESS_GUN</UnitType>
 			<UnitClassType>UNITCLASS_ATGM_VEHICLE</UnitClassType>
 		</Row>
 		
@@ -2479,29 +2439,6 @@
 		</Row>
 
 		<Row>
-			<UnitType>UNIT_SWEDISH_GUSTAV_RECOILESS_GUN</UnitType>
-			<PromotionType>PROMOTION_ANTI_TANK</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_SWEDISH_GUSTAV_RECOILESS_GUN</UnitType>
-			<PromotionType>PROMOTION_HALF_CASUALTIES</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_SWEDISH_GUSTAV_RECOILESS_GUN</UnitType>
-			<PromotionType>PROMOTION_RANGE</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_SWEDISH_GUSTAV_RECOILESS_GUN</UnitType>
-			<PromotionType>PROMOTION_CAN_MOVE_AFTER_ATTACKING</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_SWEDISH_GUSTAV_RECOILESS_GUN</UnitType>
-			<PromotionType>PROMOTION_STEALTH_OPERATION</PromotionType>
-		</Row>
-
-
-
-		<Row>
 			<UnitType>UNIT_ATGM_VEHICLE</UnitType>
 			<PromotionType>PROMOTION_ANTI_TANK</PromotionType>
 		</Row>
@@ -2824,10 +2761,6 @@
 		</Row>
 		<Row>
 			<UnitType>UNIT_TANK_DESTROYER</UnitType>
-			<ResourceType>RESOURCE_MANPOWER</ResourceType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_SWEDISH_GUSTAV_RECOILESS_GUN</UnitType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 		</Row>
 		<Row>
@@ -3276,14 +3209,6 @@
 		</Row>
 		<Row>
 			<UnitType>UNIT_TANK_DESTROYER</UnitType>
-			<UnitAIType>UNITAI_COUNTER</UnitAIType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_SWEDISH_GUSTAV_RECOILESS_GUN</UnitType>
-			<UnitAIType>UNITAI_RANGED</UnitAIType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_SWEDISH_GUSTAV_RECOILESS_GUN</UnitType>
 			<UnitAIType>UNITAI_COUNTER</UnitAIType>
 		</Row>
 
@@ -3815,16 +3740,6 @@
 			<UnitType>UNIT_TANK_DESTROYER</UnitType>
 			<FlavorType>FLAVOR_RANGED</FlavorType>
 			<Flavor>20</Flavor>
-		</Row>
-		<Row>
-			<UnitType>UNIT_SWEDISH_GUSTAV_RECOILESS_GUN</UnitType>
-			<FlavorType>FLAVOR_DEFENSE</FlavorType>
-			<Flavor>70</Flavor>
-		</Row>
-		<Row>
-			<UnitType>UNIT_SWEDISH_GUSTAV_RECOILESS_GUN</UnitType>
-			<FlavorType>FLAVOR_RANGED</FlavorType>
-			<Flavor>50</Flavor>
 		</Row>
 
 		<Row>

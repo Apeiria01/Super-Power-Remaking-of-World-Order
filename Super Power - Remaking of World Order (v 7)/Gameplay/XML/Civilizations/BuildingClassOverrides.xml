@@ -196,6 +196,11 @@
 			<BuildingClassType>BUILDINGCLASS_LABORATORY</BuildingClassType>
 			<BuildingType>BUILDING_SWEDISH_LABORATORY_SERVICES</BuildingType>
 		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_SWEDEN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_SPECIALISTS_SCIENTIFIC_LV2</BuildingClassType>
+			<BuildingType>BUILDING_SWEDEN_NOBEL_PRIZE</BuildingType>
+		</Row>
 
 		<Row>
 			<CivilizationType>CIVILIZATION_KOREA</CivilizationType>

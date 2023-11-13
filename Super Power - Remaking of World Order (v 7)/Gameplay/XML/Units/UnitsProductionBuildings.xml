@@ -151,10 +151,6 @@
 			<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_SWEDISH_GUSTAV_RECOILESS_GUN</UnitType>
-			<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
-		</Row>
-		<Row>
 			<UnitType>UNIT_TANK_DESTROYER</UnitType>
 			<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
 		</Row>

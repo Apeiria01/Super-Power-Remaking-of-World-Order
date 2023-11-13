@@ -10301,17 +10301,6 @@
 			<Text>步兵支援車就是伴隨坦克衝鋒時提供火力支援的裝甲車，自行輪式/履帶突擊炮衛坦克提供遠程直射火力支援，自行防空車為坦克提供近程低空域的防空能力。</Text>
 		</Row>
 		
-		<Row Tag="TXT_KEY_UNIT_SWEDISH_GUSTAV_RECOILESS_GUN">
-			<Text>卡爾古斯塔夫無後坐力炮</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_SWEDISH_GUSTAV_RECOILESS_GUN_HEADING">
-			<Text>卡爾古斯塔夫炮</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_SWEDISH_GUSTAV_RECOILESS_GUN_PEDIA">
-			<Text>卡爾•古斯塔夫（英語：Carl(-)Gustav，又稱M2CG）是一枝由瑞典薩博博福斯動力公司（原本是波佛斯反裝甲公司）生產、並且是較常見的單兵攜帶多用途無後座力炮，發射84 x 246 毫米炮彈。卡爾•古斯塔夫的第一枝原型是在1946年製造，雖然在該時代的類似武器已經在現在普遍消失，卡爾•古斯塔夫直到今天仍然被廣泛使用。</Text>
-		</Row>
-		
 		<Row Tag="TXT_KEY_UNIT_ATGM_VEHICLE">
 			<Text>反坦克導彈</Text>
 			<Plurality>2</Plurality>
@@ -15179,5 +15168,15 @@
 		<Replace Tag="TXT_KEY_RESOURCE_TOOLTIP_IMPROVED_WORKED">
 			<Text>資源基礎產出:</Text>
 		</Replace>
+
+        <Row Tag="TXT_KEY_BUILDING_SWEDEN_NOBEL_PRIZE">
+            <Text>[ICON_RESEARCH][ICON_GREAT_PEOPLE][COLOR_CYAN]諾貝爾獎[ENDCOLOR]</Text>
+        </Row>
+        <Row Tag="TXT_KEY_BUILDING_SWEDEN_NOBEL_PRIZE_HELP">
+            <Text>
+                [ICON_BULLET]只需26人口即可建造。
+                [NEWLINE][ICON_BULLET]瑞典或盟友誕生一位大科學家時，為雙方帶來一次性[ICON_RESEARCH]科研產出，數值相當於該大科學家當前強度的20%。
+            </Text>
+        </Row>
 	</Language_zh_Hant_HK>
 </GameData>

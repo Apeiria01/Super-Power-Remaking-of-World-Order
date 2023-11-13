@@ -828,6 +828,10 @@
 			<Set Flavor="11"/>
 			<Where LeaderType="LEADER_GUSTAVUS_ADOLPHU" FlavorType="FLAVOR_SCIENCE"/>
 		</Update>
+		<Update>
+			<Set Flavor="11"/>
+			<Where LeaderType="LEADER_GUSTAVUS_ADOLPHU" FlavorType="FLAVOR_DIPLOMACY"/>
+		</Update>
 
 		
 		
