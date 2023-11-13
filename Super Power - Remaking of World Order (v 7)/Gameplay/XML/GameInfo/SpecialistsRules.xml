@@ -156,6 +156,24 @@
 			<IconAtlas>SPBalance_ATLAS</IconAtlas>
 		</Row>
 		<Row>
+			<Type>BUILDING_SWEDEN_NOBEL_PRIZE</Type>
+			<BuildingClass>BUILDINGCLASS_SPECIALISTS_SCIENTIFIC_LV2</BuildingClass>
+			<Cost>40</Cost>
+			<GoldMaintenance>4</GoldMaintenance>
+			<NumCityCostMod>40</NumCityCostMod>
+			<Help>TXT_KEY_BUILDING_SWEDEN_NOBEL_PRIZE_HELP</Help>
+			<Description>TXT_KEY_BUILDING_SWEDEN_NOBEL_PRIZE</Description>
+			<Strategy>TXT_KEY_SP_SPECIALISTS_UPGRADE_STRATEGY</Strategy>
+			<MinAreaSize>-1</MinAreaSize>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<ConquestProb>0</ConquestProb>
+			<NeverCapture>true</NeverCapture>
+			<NukeImmune>true</NukeImmune>
+			<PortraitIndex>35</PortraitIndex>
+			<IconAtlas>SPBalance_ATLAS</IconAtlas>
+            <InstantResearchFromFriendlyGreatScientist>20</InstantResearchFromFriendlyGreatScientist>
+		</Row>
+		<Row>
 			<Type>BUILDING_SPECIALISTS_SCIENTIFIC_LV3</Type>
 			<BuildingClass>BUILDINGCLASS_SPECIALISTS_SCIENTIFIC_LV3</BuildingClass>
 			<Cost>50</Cost>
@@ -340,6 +358,10 @@
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_XL</BuildingClassType>
 		</Row>
 		<Row>
+			<BuildingType>BUILDING_SWEDEN_NOBEL_PRIZE</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_LARGE</BuildingClassType>
+		</Row>
+		<Row>
 			<BuildingType>BUILDING_SPECIALISTS_SCIENTIFIC_LV3</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_GLOBAL</BuildingClassType>
 		</Row>
@@ -394,6 +416,16 @@
 			<BuildingType>BUILDING_SPECIALISTS_SCIENTIFIC_LV2</BuildingType>
 			<FlavorType>FLAVOR_SCIENCE</FlavorType>
 			<Flavor>90</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_SWEDEN_NOBEL_PRIZE</BuildingType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>200</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_SWEDEN_NOBEL_PRIZE</BuildingType>
+			<FlavorType>FLAVOR_DIPLOMACY</FlavorType>
+			<Flavor>200</Flavor>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_SPECIALISTS_SCIENTIFIC_LV3</BuildingType>

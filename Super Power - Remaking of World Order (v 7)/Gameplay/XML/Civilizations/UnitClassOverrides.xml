@@ -335,11 +335,13 @@
 			<UnitClassType>UNITCLASS_RIFLEMAN</UnitClassType>
 			<UnitType>UNIT_SWEDISH_CAROLEAN</UnitType>
 		</Row>
+        <!--
 		<Row>
 			<CivilizationType>CIVILIZATION_SWEDEN</CivilizationType>
 			<UnitClassType>UNITCLASS_TANK_DESTROYER</UnitClassType>
 			<UnitType>UNIT_SWEDISH_GUSTAV_RECOILESS_GUN</UnitType>
 		</Row>
+        -->
 		<Row>
 			<CivilizationType>CIVILIZATION_SWEDEN</CivilizationType>
 			<UnitClassType>UNITCLASS_JET_FIGHTER</UnitClassType>

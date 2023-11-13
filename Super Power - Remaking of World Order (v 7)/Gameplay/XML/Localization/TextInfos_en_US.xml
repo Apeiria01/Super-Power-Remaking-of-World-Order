@@ -12221,19 +12221,6 @@
 
 
 
-		
-		<Row Tag="TXT_KEY_UNIT_SWEDISH_GUSTAV_RECOILESS_GUN">
-			<Text>Carl Gustav Recoilless Rifle</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_SWEDISH_GUSTAV_RECOILESS_GUN_HEADING">
-			<Text>Carl Gustav Recoilless Rifle</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_SWEDISH_GUSTAV_RECOILESS_GUN_PEDIA">
-			<Text>The Carl Gustaf (Swedish pronunciation: [ˈkʰɑːɭ ˈɡɵ̞stɑːv]; also known as, Gustaf Bazooka and M2CG) is an 84 mm man-portable reusable anti-tank recoilless rifle produced by Saab Bofors Dynamics (formerly Bofors Anti-Armour AB) in Sweden. Although most rounds fired by the Carl Gustav work on the classic recoilless principle, modern rounds sometimes add a post-firing booster that technically make it a rocket launcher.</Text>
-		</Row>
-		
-
 		<Row Tag="TXT_KEY_UNIT_ATGM_VEHICLE">
 			<Text>Anti-tank Missile</Text>
 			<Plurality>2</Plurality>
@@ -17188,5 +17175,15 @@
 		<Replace Tag="TXT_KEY_RESOURCE_TOOLTIP_IMPROVED_WORKED">
 			<Text>Base Yield from Resouce:</Text>
 		</Replace>
+
+        <Row Tag="TXT_KEY_BUILDING_SWEDEN_NOBEL_PRIZE">
+            <Text>[ICON_RESEARCH][ICON_GREAT_PEOPLE][COLOR_CYAN]Nobel Prize[ENDCOLOR]</Text>
+        </Row>
+        <Row Tag="TXT_KEY_BUILDING_SWEDEN_NOBEL_PRIZE_HELP">
+            <Text>
+                [ICON_BULLET] Requires only 26 people to build.
+                [NEWLINE][ICON_BULLET] When a great scientist is born in Sweden or an ally, it will bring one-time [ICON_RESEARCH] scientific research output to both parties, equivalent to 20% of the great scientist's current strength.
+            </Text>
+        </Row>
 	</Language_en_US>
 </GameData>
