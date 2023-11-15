@@ -7896,7 +7896,7 @@
 			<Text>神祠和神庙+2[ICON_FOOD]食物</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_MONUMENT_GODS">
-			<Text>纪念碑+2[ICON_PEACE]信仰，首都+1[ICON_CULTURE]文化</Text>
+			<Text>纪念碑+2[ICON_PEACE]信仰，首都+2[ICON_CULTURE]文化</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_STONE_CIRCLES">
 			<Text>采石场和石工坊+2[ICON_PEACE]信仰，[ICON_RES_MARBLE]大理石+1[ICON_PRODUCTION]产能</Text>
