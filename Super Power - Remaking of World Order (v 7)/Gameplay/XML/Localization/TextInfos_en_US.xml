@@ -8842,7 +8842,7 @@
 			<Text>+2 [ICON_PEACE] Faith for every Granary, +1 [ICON_PEACE] Faith from [ICON_RES_WHEAT] Wheat</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_MONUMENT_GODS">
-			<Text>+2 [ICON_PEACE] Faith for every Monument, +1 [ICON_CULTURE] Culture in Capital City</Text>
+			<Text>+2 [ICON_PEACE] Faith for every Monument, +2 [ICON_CULTURE] Culture in Capital City</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_STONE_CIRCLES">
 			<Text>+2 [ICON_PEACE] Faith from Quarries and +2 [ICON_PEACE] Faith for every Stone Works, +1 [ICON_PRODUCTION] Production from each [ICON_RES_MARBLE] Marble</Text>

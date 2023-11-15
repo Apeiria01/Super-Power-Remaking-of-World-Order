@@ -114,7 +114,7 @@ UPDATE Beliefs SET WonderProductionModifier = '0',ObsoleteEra= NULL WHERE Type =
 INSERT INTO Belief_BuildingClassYieldChanges (BeliefType,BuildingClassType,YieldType,YieldChange)
 SELECT 'BELIEF_MONUMENT_GODS','BUILDINGCLASS_MONUMENT','YIELD_FAITH',2;
 INSERT INTO Belief_CapitalYieldChanges (BeliefType,YieldType,Yield)
-SELECT 'BELIEF_MONUMENT_GODS','YIELD_CULTURE',1;
+SELECT 'BELIEF_MONUMENT_GODS','YIELD_CULTURE',2;
 
 INSERT INTO Belief_FeatureYieldChanges (BeliefType,FeatureType,YieldType,Yield)
 SELECT 'BELIEF_SACRED_PATH','FEATURE_JUNGLE','YIELD_FAITH',1;
