@@ -10452,7 +10452,9 @@
 		<Replace Tag="TXT_KEY_TRAIT_SEVEN_CITIES">
 			<Text>
 				[ICON_BULLET]Receive [ICON_GOLD] Gold bonus for discovering a Natural Wonder (bonus enhanced if first to discover it) and tile yields from Natural Wonders are doubled. 
-				[NEWLINE][ICON_BULLET]+2 [ICON_GOLD] Gold and +2 [ICON_CULTURE] Culture output for each source of [ICON_RES_COW] Cattle and [ICON_RES_BISON] Bison.</Text>
+				[NEWLINE][ICON_BULLET]Natural Wonder Within 2 ring plots -50% corruption score of this City.
+				[NEWLINE][ICON_BULLET]+2 [ICON_GOLD] Gold and +2 [ICON_CULTURE] Culture output for each source of [ICON_RES_COW] Cattle and [ICON_RES_BISON] Bison.
+			</Text>
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_TRAIT_GREAT_ANDEAN_ROAD">
