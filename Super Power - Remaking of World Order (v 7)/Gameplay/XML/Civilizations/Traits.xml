@@ -372,6 +372,8 @@
 			<NaturalWonderSubsequentFinderGold>300</NaturalWonderSubsequentFinderGold>
 			<NaturalWonderYieldModifier>100</NaturalWonderYieldModifier>
 			<NaturalWonderHappinessModifier>100</NaturalWonderHappinessModifier>
+			<NaturalWonderCorruptionScoreChange>-50</NaturalWonderCorruptionScoreChange>
+			<NaturalWonderCorruptionRadius>2</NaturalWonderCorruptionRadius>
 		</Row>
 		<Row>
 			<Type>TRAIT_GREAT_ANDEAN_ROAD</Type>

@@ -5734,6 +5734,7 @@
 		<Replace Tag="TXT_KEY_TRAIT_SEVEN_CITIES">
 			<Text>
 				[ICON_BULLET]發現自然奇觀時獲得[ICON_GOLD]金錢獎勵(首先發現則可獲得更多)，自然奇觀提供的地塊產出加倍。
+				[NEWLINE][ICON_BULLET]城市二環範圍內的自然奇觀為该城市-50%管理成本。
 				[NEWLINE][ICON_BULLET]每處[ICON_RES_COW]牛和[ICON_RES_BISON]野牛資源+2[ICON_GOLD]金錢、+2[ICON_CULTURE]文化產出。
 			</Text>
 		</Replace>
