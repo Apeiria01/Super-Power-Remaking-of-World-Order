@@ -15157,8 +15157,8 @@
 			[NEWLINE]伟人所建设施可为周围改良设施提供对应[ICON_RESEARCH][ICON_PRODUCTION][ICON_GOLD][ICON_PEACE]产出。
 			[NEWLINE]每处伟人设施提供以下额外效果：
 			[NEWLINE][ICON_BULLET]学院可在消耗大科学家获取科技的时候额外+5%[ICON_RESEARCH]科研产出。
-			[NEWLINE][ICON_BULLET]制造中心可为所在城市建造奇观时额外+10%[ICON_PRODUCTION]产能积累。
-			[NEWLINE][ICON_BULLET]海关提供额外+15[ICON_RES_CONSUMER]商品。
+			[NEWLINE][ICON_BULLET]制造中心提供额外+10[ICON_RES_MANPOWER]人力，所在城市建造奇观时额外+10%[ICON_PRODUCTION]产能积累。
+			[NEWLINE][ICON_BULLET]海关提供额外+20[ICON_RES_CONSUMER]商品。
 			[NEWLINE][ICON_BULLET]圣地可为停留的单位移除[COLOR_POSITIVE_TEXT]负面状态[ENDCOLOR]并使周围单位恢复5HP。
 			</Text>
 		</Replace>
