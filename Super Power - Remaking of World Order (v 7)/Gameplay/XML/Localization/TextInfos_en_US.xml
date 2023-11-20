@@ -1074,19 +1074,6 @@
 			<Text>You have performed a Land Buyout recently, and may not do so again for another {1_Num} turns.</Text>
 		</Replace>
 
-
-<!-- ModOptionsTexts -->
-	<Row Tag="TXT_KEY_SP_UI_BTN_EMERGENCYRESET_SHORT">
-		<Text>[COLOR_NEGATIVE_TEXT]Reset[ENDCOLOR]</Text>
-	</Row>
-	<Row Tag="TXT_KEY_SP_UI_BTN_EMERGENCYRESET">
-		<Text>If the game freezes during AI turns, click this to do a force reset to make the game run again!
-		[NEWLINE]If the game is unable to pass the round in the AI action round, please "save it quickly" and restart the game to read this archive!
-		[NEWLINE]PS：[COLOR_YELLOW]Please do not try to click this button at the end of the round! If this button is still unable to solve the flashback situation, please contact the administrator in time to submit BUG to find a solution![ENDCOLOR]
-		</Text>
-	</Row>
-
-
 <!-- New CivilopediaScreen Text -->
 	<!--******** New Automation Texts ************************** -->
 		<Replace Tag="TXT_KEY_CURRENTLY_SELECTED_UNIT">

@@ -8388,23 +8388,6 @@
 			<Text>除了浪费食物之外他们一无是处，赶紧给他们找工作吧！</Text>
 		</Replace>
 
-
-		<Row Tag="TXT_KEY_SP_UI_BTN_EMERGENCYRESET_SHORT">
-			<Text>[COLOR_NEGATIVE_TEXT]重置[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_SP_UI_BTN_EMERGENCYRESET">
-			<Text>
-				如果游戏在AI行动回合闪退，请读档在自己回合点击此按钮重置AI单位，以此来使游戏正常运行！
-				[NEWLINE]如果游戏在AI行动回合卡住无法顺利通过回合，请“快速保存”后重启游戏读取此存档！
-				[NEWLINE]PS：[COLOR_YELLOW]请不要尝试在过回合的时候点击此按钮！如果此按钮依然无法解决闪退情况，请及时联系管理员提交BUG以寻求解决办法！[ENDCOLOR]
-			</Text>
-		</Row>
-
-
-
-
-
-
 		<!--Technologys-->
 
 		<!--*******************Era Texts*******************-->

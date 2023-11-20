@@ -33,4 +33,3 @@ include("UnitSpecialButtons_SP8");
 include("Policy_FreeBuildingClass");
 -- CSD
 include("NewCityStateDiplomaticRule");
-ContextPtr:LoadNewContext("ModOptions");
