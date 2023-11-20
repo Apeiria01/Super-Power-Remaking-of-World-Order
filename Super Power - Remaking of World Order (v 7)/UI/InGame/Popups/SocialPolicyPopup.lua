@@ -298,158 +298,129 @@ function UpdateDisplay()
 	-- Adjust Policy Branches
 	local i = 0;
 	local numUnlockedBranches = player:GetNumPolicyBranchesUnlocked();
---	if numUnlockedBranches > 0 then
-		local policyBranchInfo = GameInfo.PolicyBranchTypes[i];
-		while policyBranchInfo ~= nil and not policyBranchInfo.PurchaseByLevel do
-			local numString = tostring( i );
+	local policyBranchInfo = GameInfo.PolicyBranchTypes[i];
+	while policyBranchInfo ~= nil and not policyBranchInfo.PurchaseByLevel do
+		local numString = tostring( i );
+		
+		local buttonName = "BranchButton"..numString;
+		local backName = "BranchBack"..numString;
+		local DisabledBoxName = "DisabledBox"..numString;
+		local LockedBoxName = "LockedBox"..numString;
+		local ImageMaskName = "ImageMask"..numString;
+		local DisabledMaskName = "DisabledMask"..numString;
+		
+		local thisButton = Controls[buttonName];
+		local thisBack = Controls[backName];
+		local thisDisabledBox = Controls[DisabledBoxName];
+		local thisLockedBox = Controls[LockedBoxName];
+		
+		local thisImageMask = Controls[ImageMaskName];
+		local thisDisabledMask = Controls[DisabledMaskName];
+		
+		
+		if(thisImageMask == nil) then
+			print(ImageMaskName);
+		end
+		
+		local strToolTip = Locale.ConvertTextKey(policyBranchInfo.Help);
+		
+		-- Era Prereq
+		local iEraPrereq = GameInfoTypes[policyBranchInfo.EraPrereq]
+		local bEraLock = false;
+		if (iEraPrereq ~= nil and pTeam:GetCurrentEra() < iEraPrereq) then
+			bEraLock = true;
+		end
+		
+		local lockName = "Lock"..numString;
+		local thisLock = Controls[lockName];
+		
+		-- Branch is not yet unlocked
+		if not player:IsPolicyBranchUnlocked( i ) then
 			
-			local buttonName = "BranchButton"..numString;
-			local backName = "BranchBack"..numString;
-			local DisabledBoxName = "DisabledBox"..numString;
-			local LockedBoxName = "LockedBox"..numString;
-			local ImageMaskName = "ImageMask"..numString;
-			local DisabledMaskName = "DisabledMask"..numString;
-			--local EraLabelName = "EraLabel"..numString;
-			
-			local thisButton = Controls[buttonName];
-			local thisBack = Controls[backName];
-			local thisDisabledBox = Controls[DisabledBoxName];
-			local thisLockedBox = Controls[LockedBoxName];
-			
-			local thisImageMask = Controls[ImageMaskName];
-			local thisDisabledMask = Controls[DisabledMaskName];
-			
-			
-			if(thisImageMask == nil) then
-				print(ImageMaskName);
-			end
-			--local thisEraLabel = Controls[EraLabelName];
-			
-			local strToolTip = Locale.ConvertTextKey(policyBranchInfo.Help);
-			
-			-- Era Prereq
-			local iEraPrereq = GameInfoTypes[policyBranchInfo.EraPrereq]
-			local bEraLock = false;
-			if (iEraPrereq ~= nil and pTeam:GetCurrentEra() < iEraPrereq) then
-				bEraLock = true;
-			else
-				--thisEraLabel:SetHide(true);
-			end
-			
-			local lockName = "Lock"..numString;
-			local thisLock = Controls[lockName];
-			
-			-- Branch is not yet unlocked
-			if not player:IsPolicyBranchUnlocked( i ) then
-				
-				-- Cannot adopt this branch right now
-				if (policyBranchInfo.LockedWithoutReligion and Game.IsOption(GameOptionTypes.GAMEOPTION_NO_RELIGION)) then
-					strToolTip = strToolTip .. "[NEWLINE][NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_POLICY_BRANCH_CANNOT_UNLOCK_RELIGION");
+			-- Cannot adopt this branch right now
+			if (policyBranchInfo.LockedWithoutReligion and Game.IsOption(GameOptionTypes.GAMEOPTION_NO_RELIGION)) then
+				strToolTip = strToolTip .. "[NEWLINE][NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_POLICY_BRANCH_CANNOT_UNLOCK_RELIGION");
 
-				elseif (not player:CanUnlockPolicyBranch(i)) then
+			elseif (not player:CanUnlockPolicyBranch(i)) then
+				
+				strToolTip = strToolTip .. "[NEWLINE][NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_POLICY_BRANCH_CANNOT_UNLOCK");
+				
+				-- Not in prereq Era
+				if (bEraLock) then
+					local strEra = GameInfo.Eras[iEraPrereq].Description;
+					strToolTip = strToolTip .. " " .. Locale.ConvertTextKey("TXT_KEY_POLICY_BRANCH_CANNOT_UNLOCK_ERA", strEra);
+					-- Era Label
+					local strEraTitle = Locale.ConvertTextKey(strEra);
+					thisButton:SetText( strEraTitle );
 					
-					strToolTip = strToolTip .. "[NEWLINE][NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_POLICY_BRANCH_CANNOT_UNLOCK");
-					
-					-- Not in prereq Era
-					if (bEraLock) then
-						local strEra = GameInfo.Eras[iEraPrereq].Description;
-						strToolTip = strToolTip .. " " .. Locale.ConvertTextKey("TXT_KEY_POLICY_BRANCH_CANNOT_UNLOCK_ERA", strEra);
-						
-						-- Era Label
-						--local strEraTitle = "[COLOR_WARNING_TEXT]" .. Locale.ConvertTextKey(strEra) .. "[ENDCOLOR]";
-						local strEraTitle = Locale.ConvertTextKey(strEra);
-						thisButton:SetText( strEraTitle );
-						--thisEraLabel:SetText(strEraTitle);
-						--thisEraLabel:SetHide( true );
-						
-						--thisButton:SetHide( true );
-						
-					-- Don't have enough Culture Yet
-					else
-						strToolTip = strToolTip .. " " .. Locale.ConvertTextKey("TXT_KEY_POLICY_BRANCH_CANNOT_UNLOCK_CULTURE", player:GetNextPolicyCost());
-						thisButton:SetHide( false );
-						thisButton:SetText( Locale.ConvertTextKey( "TXT_KEY_POP_ADOPT_BUTTON" ) );
-						--thisEraLabel:SetHide( true );
-					end
-					
-					thisLock:SetHide( false );
-					thisButton:SetDisabled( true );
-				-- Can adopt this branch right now
+				-- Don't have enough Culture Yet
 				else
-					strToolTip = strToolTip .. "[NEWLINE][NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_POLICY_BRANCH_UNLOCK_SPEND", player:GetNextPolicyCost());
-					thisLock:SetHide( true );
-					--thisEraLabel:SetHide( true );
-					thisButton:SetDisabled( false );
+					strToolTip = strToolTip .. " " .. Locale.ConvertTextKey("TXT_KEY_POLICY_BRANCH_CANNOT_UNLOCK_CULTURE", player:GetNextPolicyCost());
 					thisButton:SetHide( false );
 					thisButton:SetText( Locale.ConvertTextKey( "TXT_KEY_POP_ADOPT_BUTTON" ) );
 				end
 				
-				if(not playerHas1City) then
-					thisButton:SetDisabled(true);
-				end
-				
-				thisBack:SetColor( fadeColor );
-				thisLockedBox:SetHide(false);
-				
-				thisImageMask:SetHide(true);
-				thisDisabledMask:SetHide(false);
-				
-			-- Branch is unlocked, but blocked by another branch
-			elseif (player:IsPolicyBranchBlocked(i)) then
-				thisButton:SetHide( false );
-				thisBack:SetColor( fadeColor );
 				thisLock:SetHide( false );
-				thisLockedBox:SetHide(true);
-				
-				strToolTip = strToolTip .. "[NEWLINE][NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_POLICY_BRANCH_BLOCKED");
-				
-			-- Branch is unlocked already
+				thisButton:SetDisabled( true );
+			-- Can adopt this branch right now
 			else
-				thisButton:SetHide( true );
-				thisBack:SetColor( fullColor );
-				thisLockedBox:SetHide(true);
-				
-				thisImageMask:SetHide(false);
-				thisDisabledMask:SetHide(true);
+				strToolTip = strToolTip .. "[NEWLINE][NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_POLICY_BRANCH_UNLOCK_SPEND", player:GetNextPolicyCost());
+				thisLock:SetHide( true );
+				thisButton:SetDisabled( false );
+				thisButton:SetHide( false );
+				thisButton:SetText( Locale.ConvertTextKey( "TXT_KEY_POP_ADOPT_BUTTON" ) );
 			end
 			
-			-- Update tooltips
-			thisButton:SetToolTipString(strToolTip);
-			
-			-- If the player doesn't have the era prereq, then dim out the branch
-			if (bEraLock) then
-				thisDisabledBox:SetHide(false);
-				thisLockedBox:SetHide(true);
-			else
-				thisDisabledBox:SetHide(true);
+			if(not playerHas1City) then
+				thisButton:SetDisabled(true);
 			end
 			
-			if (bShowAll) then
-				thisDisabledBox:SetHide(true);
-				thisLockedBox:SetHide(true);
-			end
+			thisBack:SetColor( fadeColor );
+			thisLockedBox:SetHide(false);
 			
-			i = i + 1;
-			policyBranchInfo = GameInfo.PolicyBranchTypes[i];
+			thisImageMask:SetHide(true);
+			thisDisabledMask:SetHide(false);
+			
+		-- Branch is unlocked, but blocked by another branch
+		elseif (player:IsPolicyBranchBlocked(i)) then
+			thisButton:SetHide( false );
+			thisBack:SetColor( fadeColor );
+			thisLock:SetHide( false );
+			thisLockedBox:SetHide(true);
+			
+			strToolTip = strToolTip .. "[NEWLINE][NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_POLICY_BRANCH_BLOCKED");
+			
+		-- Branch is unlocked already
+		else
+			thisButton:SetHide( true );
+			thisBack:SetColor( fullColor );
+			thisLockedBox:SetHide(true);
+			
+			thisImageMask:SetHide(false);
+			thisDisabledMask:SetHide(true);
 		end
-	--else
-		--local policyBranchInfo = GameInfo.PolicyBranchTypes[i];
-		--while policyBranchInfo ~= nil do
-			--local numString = tostring(i);
-			--local buttonName = "BranchButton"..numString;
-			--local backName = "BranchBack"..numString;
-			--local thisButton = Controls[buttonName];
-			--local thisBack = Controls[backName];
-			--thisBack:SetColor( fullColor );
-			--thisButton:SetHide( true );
-			--i = i + 1;
-			--policyBranchInfo = GameInfo.PolicyBranchTypes[i];
-		--end
-	--end
+		
+		-- Update tooltips
+		thisButton:SetToolTipString(strToolTip);
+		
+		-- If the player doesn't have the era prereq, then dim out the branch
+		if (bEraLock) then
+			thisDisabledBox:SetHide(false);
+			thisLockedBox:SetHide(true);
+		else
+			thisDisabledBox:SetHide(true);
+		end
+		
+		if (bShowAll) then
+			thisDisabledBox:SetHide(true);
+			thisLockedBox:SetHide(true);
+		end
+		
+		i = i + 1;
+		policyBranchInfo = GameInfo.PolicyBranchTypes[i];
+	end
 	
 	-- Adjust Policy buttons
-	
-	
 	i = 0;
 	local policyInfo = GameInfo.Policies[i];
 	while policyInfo ~= nil do
@@ -466,20 +437,13 @@ function UpdateDisplay()
 			
 			-- Player already has Policy
 			if player:HasPolicy( i ) then
-				--thisPolicyIcon.Lock:SetTexture( checkTexture ); 
-				--thisPolicyIcon.Lock:SetHide( true ); 
 				thisPolicyIcon.MouseOverContainer:SetHide( true );
 				thisPolicyIcon.PolicyIcon:SetDisabled( true );
-				--thisPolicyIcon.PolicyIcon:SetVoid1( -1 );
 				thisPolicyIcon.PolicyImage:SetColor( fullColor );
 				IconHookup( policyInfo.PortraitIndex, 64, policyInfo.IconAtlasAchieved, thisPolicyIcon.PolicyImage );
 			elseif(not playerHas1City) then
-				--thisPolicyIcon.Lock:SetTexture( lockTexture ); 
 				thisPolicyIcon.MouseOverContainer:SetHide( true );
-				--thisPolicyIcon.Lock:SetHide( true ); 
 				thisPolicyIcon.PolicyIcon:SetDisabled( true );
-				--thisPolicyIcon.Lock:SetHide( false ); 
-				--thisPolicyIcon.PolicyIcon:SetVoid1( -1 );
 				thisPolicyIcon.PolicyImage:SetColor( fadeColorRV );
 				IconHookup( policyInfo.PortraitIndex, 64, policyInfo.IconAtlas, thisPolicyIcon.PolicyImage );
 				-- Tooltip
@@ -487,11 +451,9 @@ function UpdateDisplay()
 			
 			-- Can adopt the Policy right now
 			elseif player:CanAdoptPolicy( i ) then
-				--thisPolicyIcon.Lock:SetHide( true ); 
 				thisPolicyIcon.MouseOverContainer:SetHide( false );
 				thisPolicyIcon.PolicyIcon:SetDisabled( false );
 				if justLooking then
-					--thisPolicyIcon.PolicyIcon:SetVoid1( -1 );
 					thisPolicyIcon.PolicyImage:SetColor( fullColor );
 				else
 					thisPolicyIcon.PolicyIcon:SetVoid1( i ); -- indicates policy to be chosen
@@ -501,23 +463,15 @@ function UpdateDisplay()
 				
 			-- Policy is unlocked, but we lack culture
 			elseif player:CanAdoptPolicy(i, true) then
-				--thisPolicyIcon.Lock:SetTexture( lockTexture ); 
 				thisPolicyIcon.MouseOverContainer:SetHide( true );
-				--thisPolicyIcon.Lock:SetHide( true ); 
 				thisPolicyIcon.PolicyIcon:SetDisabled( true );
-				--thisPolicyIcon.Lock:SetHide( false ); 
-				--thisPolicyIcon.PolicyIcon:SetVoid1( -1 );
 				thisPolicyIcon.PolicyImage:SetColor( fadeColorRV );
 				IconHookup( policyInfo.PortraitIndex, 64, policyInfo.IconAtlas, thisPolicyIcon.PolicyImage );
 				-- Tooltip
 				strTooltip = strTooltip .. "[NEWLINE][NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_POLICY_BRANCH_CANNOT_UNLOCK_CULTURE", player:GetNextPolicyCost());
 			else
-				--thisPolicyIcon.Lock:SetTexture( lockTexture ); 
 				thisPolicyIcon.MouseOverContainer:SetHide( true );
-				--thisPolicyIcon.Lock:SetHide( true ); 
 				thisPolicyIcon.PolicyIcon:SetDisabled( true );
-				--thisPolicyIcon.Lock:SetHide( false ); 
-				--thisPolicyIcon.PolicyIcon:SetVoid1( -1 );
 				thisPolicyIcon.PolicyImage:SetColor( fadeColorRV );
 				IconHookup( policyInfo.PortraitIndex, 64, policyInfo.IconAtlas, thisPolicyIcon.PolicyImage );
 				-- Tooltip
