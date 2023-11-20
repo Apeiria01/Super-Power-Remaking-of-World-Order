@@ -38,6 +38,3 @@ UPDATE GameSpeeds SET TradeRouteSpeedMod=900 WHERE Type='GAMESPEED_QUICK';
 UPDATE GameSpeeds SET TradeRouteSpeedMod=1000 WHERE Type='GAMESPEED_STANDARD';
 UPDATE GameSpeeds SET TradeRouteSpeedMod=1200 WHERE Type='GAMESPEED_EPIC';
 UPDATE GameSpeeds SET TradeRouteSpeedMod=1200 WHERE Type='GAMESPEED_MARATHON';
-
-UPDATE CustomModOptions SET Value = 1 WHERE Name = 'EVENTS_UNIT_UPGRADES';
-UPDATE CustomModOptions SET Value = 1 WHERE Name = 'EVENTS_UNIT_CREATED';

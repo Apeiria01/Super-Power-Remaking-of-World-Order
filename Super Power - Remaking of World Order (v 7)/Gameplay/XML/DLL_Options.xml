@@ -299,6 +299,14 @@
 			<Where Name="IMPROVEMENTS_YIELD_CHANGE_PER_UNIT"/>
 			<Set Value="1"/>
 		</Update>
+		<Update>
+			<Where Name="EVENTS_UNIT_UPGRADES"/>
+			<Set Value="1"/>
+		</Update>
+		<Update>
+			<Where Name="EVENTS_UNIT_CREATED"/>
+			<Set Value="1"/>
+		</Update>
 	</CustomModOptions>
 
 
