@@ -1520,8 +1520,8 @@
 		
 		<!-- New Cultural Influential Dialog-->
 		<Update>
-			<Where Tag="TXT_KEY_GENERIC_INFLUENTIAL_ON_AI_1"/>
-			<Set Text="Our people are now buying your blue jeans and listening to your pop music. I worry the rest of the world will also succumb to the influence of your culture."/>
+			<Where Tag="TXT_KEY_GENERIC_INFLUENTIAL_ON_AI_1" />
+			<Set Text="Our people are now buying your blue jeans and listening to your pop music. I worry the rest of the world will also succumb to the influence of your culture." />
 		</Update>
 		<Row Tag="TXT_KEY_CO_IMMIGRATION_COUNTER_HEADER">
 			<Text>[ICON_TEAM_4] / [ICON_TEAM_2]</Text>
@@ -3821,7 +3821,6 @@
 			<Set Text="+1 [ICON_HAPPINESS_1] Happiness for every Shrine, Temple and Religious Building purchased with [ICON_PEACE] Faith.[NEWLINE][NEWLINE]+4 [ICON_TOURISM] Tourism when Scientific Theory is discovered. " />
 		</Update>
 		<Update>
-			
 			<Where Tag="TXT_KEY_WONDER_CHICHEN_ITZA_HELP" />
 			<Set Text="Requires Liberty. 3 Free Workers appear near this city.
 			[NEWLINE]+1 [ICON_MOVES] Movement for all Civilian Units. +25% Tile Improvement construction speed. [NEWLINE][NEWLINE]+2 [ICON_TOURISM] Tourism when Archaeology is discovered." />
@@ -17176,6 +17175,62 @@
         </Row>
 		<Row Tag="TXT_KEY_YIELD_OVERFLOW">
 			<Text>[COLOR_POSITIVE_TEXT]{1_Num}{2_IconString} Overflow[ENDCOLOR]</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_EUPANEL_NO_CAPTURE_SP">
+			<Text>[COLOR_CYAN]Cannot be Captured [ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_CHANGE_DAMAGEVALUE_SUPPORT_SP">
+			<Text>[COLOR_CYAN]Change Final Damage {1_Num}[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_RANGED_SUPPORT_SP">
+			<Text>[COLOR_CYAN]Additional Range Attack[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_NO_RS_PSH_SP">
+			<Text>[COLOR_CYAN]Ignore Resource Penalty[ENDCOLOR]</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_EUPANEL_PLAYER_ORIGINAL_CAPITAL_BONUS_SP">
+			<Text>Original Capitals Bonus</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_PLAYER_GOLDENAGE_BONUS_SP">
+			<Text>Golden Age Bonus</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_MOVES_LEFT_BONUS_SP">
+			<Text>Left Movements Bonus</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_MOVES_USED_BONUS_SP">
+			<Text>Movements Bonus</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_PLAYER_GREATWORK_BONUS_SP">
+			<Text>GreatWorks Bonus</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_NUM_ENARBYENEMY_BONUS_SP">
+			<Text>Num of nearby enemies Bonus</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_LEFT_HITPOINT_BONUS_SP">
+			<Text>Current Hit Points Bonus</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_PLAYER_WORLDWONDER_BONUS_SP">
+			<Text>Num of Wonders Bonus</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_PLAYER_SPY_BONUS_SP">
+			<Text>Num of Spies Bonus</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_ATTACK_BUFF_SPY_SP">
+			<Text>Spy Bonus</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_UNIT_PROMOTION_NEAR_SP">
+			<Text>Near promotions Bonus</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNITCOMBAT_DAMAGE_MODIFIER_SP">
+			<Text>Hit Points Modify</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_RESOURCE_MODIFIER">
+			<Text>Extra Resouces Bonus</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_EXCESS_HAPINESS_MODIFIER">
+			<Text>Extra Happiness Bonus</Text>
 		</Row>
 	</Language_en_US>
 </GameData>

@@ -12008,7 +12008,7 @@
 		<Row Tag="TXT_KEY_PROMOTION_INFANTRY_COMBAT_HELP">
 			<Text>
 			主力步兵單位，擅長進攻和防守任務。
-			[ICON_BULLET]面對[COLOR_POSITIVE_TEXT]城市[ENDCOLOR]+50%[ICON_STRENGTH]戰鬥力。
+			[NEWLINE][ICON_BULLET]面對[COLOR_POSITIVE_TEXT]城市[ENDCOLOR]+50%[ICON_STRENGTH]戰鬥力。
 			[NEWLINE][ICON_BULLET]防禦[COLOR_POSITIVE_TEXT]反騎兵/反坦克單位[ENDCOLOR]以及[COLOR_POSITIVE_TEXT]民兵單位[ENDCOLOR]時+25%[ICON_STRENGTH]戰鬥力。
 			</Text>
 		</Row>
@@ -12019,7 +12019,7 @@
 		<Row Tag="TXT_KEY_PROMOTION_GUNPOWDER_INFANTRY_COMBAT_HELP">
 			<Text>
 			主力步兵單位，擅長進攻和防守任務。
-			[ICON_BULLET]近戰開始之前進行一輪[COLOR_POSITIVE_TEXT]遠程攻擊[ENDCOLOR]。
+			[NEWLINE][ICON_BULLET]近戰開始之前進行一輪[COLOR_POSITIVE_TEXT]遠程攻擊[ENDCOLOR]。
 			[NEWLINE][ICON_BULLET]進攻[COLOR_POSITIVE_TEXT]城市[ENDCOLOR]+50%[ICON_STRENGTH]戰鬥力。
 			[NEWLINE][ICON_BULLET]防禦[COLOR_POSITIVE_TEXT]反騎兵/反坦克單位[ENDCOLOR]以及[COLOR_POSITIVE_TEXT]民兵單位[ENDCOLOR]時+25%[ICON_STRENGTH]戰鬥力。
 			</Text>
@@ -15166,6 +15166,62 @@
         </Row>
 		<Row Tag="TXT_KEY_YIELD_OVERFLOW">
 			<Text>[COLOR_POSITIVE_TEXT]{1_Num}{2_IconString} 溢出[ENDCOLOR]</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_EUPANEL_NO_CAPTURE_SP" >
+			<Text>[COLOR_CYAN]不可被俘[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_CHANGE_DAMAGEVALUE_SUPPORT_SP" >
+			<Text>[COLOR_CYAN]受到的最終傷害{1_Num}[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_RANGED_SUPPORT_SP" >
+			<Text>[COLOR_CYAN]額外遠程攻擊能力[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_NO_RS_PSH_SP" >
+			<Text>[COLOR_CYAN]無視資源懲罰[ENDCOLOR]</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_EUPANEL_PLAYER_ORIGINAL_CAPITAL_BONUS_SP" >
+			<Text>原始首都數量加成</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_PLAYER_GOLDENAGE_BONUS_SP" >
+			<Text>黃金時代加成</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_MOVES_LEFT_BONUS_SP" >
+			<Text>剩余移動力加成</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_MOVES_USED_BONUS_SP" >
+			<Text>已用移動力加成</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_PLAYER_GREATWORK_BONUS_SP" >
+			<Text>傑作數量加成</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_NUM_ENARBYENEMY_BONUS_SP" >
+			<Text>臨近敵軍數量加成</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_LEFT_HITPOINT_BONUS_SP" >
+			<Text>損失血量加成</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_PLAYER_WORLDWONDER_BONUS_SP" >
+			<Text>世界奇觀數量加成</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_PLAYER_SPY_BONUS_SP" >
+			<Text>間諜數量加成</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_ATTACK_BUFF_SPY_SP" >
+			<Text>間諜加成</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_UNIT_PROMOTION_NEAR_SP" >
+			<Text>臨近晉升加成</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNITCOMBAT_DAMAGE_MODIFIER_SP">
+			<Text>單位生命值</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_RESOURCE_MODIFIER">
+			<Text>額外資源加成</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_EXCESS_HAPINESS_MODIFIER">
+			<Text>額外快樂度加成</Text>
 		</Row>
 	</Language_zh_Hant_HK>
 </GameData>
