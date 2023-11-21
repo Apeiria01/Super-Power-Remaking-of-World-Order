@@ -698,27 +698,28 @@ function RefreshCityBanner(cityBanner, iActiveTeam, iActivePlayer)
 					local cityProductionProcess = city:GetProductionProcess()
 					local tooltipString = GetHelpTextForProcess(cityProductionProcess, false)
 					controls.CityBannerLeftBackground:SetToolTipString(tooltipString)
+				elseif city:IsProductionUnit() then
+					local cityProductionUnit = city:GetProductionUnit()
+					local tooltipString = GetHelpTextForUnit(cityProductionUnit)
+					controls.CityBannerLeftBackground:SetToolTipString(tooltipString)
+				elseif city:IsProductionBuilding() then
+					local cityProductionBuilding = city:GetProductionBuilding()
+					local tooltipString = GetHelpTextForBuilding(cityProductionBuilding, true, true, true, city)
+					controls.CityBannerLeftBackground:SetToolTipString(tooltipString)
+				elseif city:IsProductionProject() then
+					local cityProductionProject = city:GetProductionProject()
+					local tooltipString = GetHelpTextForProject(cityProductionProject)
+					controls.CityBannerLeftBackground:SetToolTipString(tooltipString)
 				else
 					if cityProductionName == "TXT_KEY_PRODUCTION_NO_PRODUCTION" then
-						controls.CityBannerLeftBackground:SetToolTipString(
-							Locale.ConvertTextKey("TXT_KEY_CITY_NOT_PRODUCING", localizedCityName)
-						)
+						controls.CityBannerLeftBackground:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_CITY_NOT_PRODUCING", localizedCityName))
 					else
 						local productionTurnsLeft = city:GetProductionTurnsLeft()
 						local tooltipString
 						if productionTurnsLeft > 99 then
-							tooltipString = Locale.ConvertTextKey(
-								"TXT_KEY_CITY_CURRENTLY_PRODUCING_99PLUS_TT",
-								localizedCityName,
-								cityProductionName
-							)
+							tooltipString = Locale.ConvertTextKey("TXT_KEY_CITY_CURRENTLY_PRODUCING_99PLUS_TT", localizedCityName, cityProductionName)
 						else
-							tooltipString = Locale.ConvertTextKey(
-								"TXT_KEY_CITY_CURRENTLY_PRODUCING_TT",
-								localizedCityName,
-								cityProductionName,
-								productionTurnsLeft
-							)
+							tooltipString = Locale.ConvertTextKey("TXT_KEY_CITY_CURRENTLY_PRODUCING_TT", localizedCityName, cityProductionName, productionTurnsLeft)
 						end
 						controls.CityBannerLeftBackground:SetToolTipString(tooltipString)
 					end

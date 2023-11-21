@@ -17174,5 +17174,8 @@
                 [NEWLINE][ICON_BULLET] When a great scientist is born in Sweden or an ally, it will bring one-time [ICON_RESEARCH] scientific research output to both parties, equivalent to 20% of the great scientist's current strength.
             </Text>
         </Row>
+		<Row Tag="TXT_KEY_YIELD_OVERFLOW">
+			<Text>[COLOR_POSITIVE_TEXT]{1_Num}{2_IconString} Overflow[ENDCOLOR]</Text>
+		</Row>
 	</Language_en_US>
 </GameData>

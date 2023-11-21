@@ -2009,8 +2009,7 @@ function DoUpdateProductionInfo( bNoProduction )
 	-- Base Production per turn
 	local iProductionPerTurn = pCity:GetCurrentProductionDifferenceTimes100(false, false) / 100;--pCity:GetYieldRate(YieldTypes.YIELD_PRODUCTION);
 	local iProductionModifier = pCity:GetProductionModifier() + 100;
-	--iProductionPerTurn = iProductionPerTurn * iProductionModifier;
-	--iProductionPerTurn = iProductionPerTurn / 100;
+	local iProductionOverflow = pCity:GetOverflowProduction();
 	
 	-- Item being produced with food? (e.g. Settlers)
 	--if (pCity:IsFoodProduction()) then
@@ -2094,7 +2093,12 @@ function DoUpdateProductionInfo( bNoProduction )
 	-- Output
 	local strBase = Locale.ConvertTextKey("TXT_KEY_YIELD_BASE", iBaseProductionPT, "[ICON_PRODUCTION]");
 	local strTotal = Locale.ConvertTextKey("TXT_KEY_YIELD_TOTAL", iProductionPerTurn, "[ICON_PRODUCTION]");
-	local strOutput = strBase .. "[NEWLINE]" .. strTotal;
+	local strOverFlow = Locale.ConvertTextKey("TXT_KEY_YIELD_OVERFLOW", iProductionOverflow, "[ICON_PRODUCTION]");
+	local strOutput = "";
+	if iProductionOverflow > 0 then
+		strOutput = strOutput .. strOverFlow .. "[NEWLINE]"
+	end
+	strOutput = strOutput .. strBase .. "[NEWLINE]" .. strTotal;
 	strToolTip = strToolTip .. "[NEWLINE]";
 	
 	-- This builds the tooltip from C++
