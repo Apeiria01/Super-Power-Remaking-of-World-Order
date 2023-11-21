@@ -15365,5 +15365,8 @@
                 [NEWLINE][ICON_BULLET]瑞典或盟友诞生一位大科学家时，为双方带来一次性[ICON_RESEARCH]科研产出，数值相当于该大科学家当前强度的20%。
             </Text>
 		</Row>
+		<Row Tag="TXT_KEY_YIELD_OVERFLOW">
+			<Text>[COLOR_POSITIVE_TEXT]{1_Num}{2_IconString} 溢出[ENDCOLOR]</Text>
+		</Row>
 	</Language_zh_CN>
 </GameData>

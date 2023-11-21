@@ -15164,5 +15164,8 @@
                 [NEWLINE][ICON_BULLET]瑞典或盟友誕生一位大科學家時，為雙方帶來一次性[ICON_RESEARCH]科研產出，數值相當於該大科學家當前強度的20%。
             </Text>
         </Row>
+		<Row Tag="TXT_KEY_YIELD_OVERFLOW">
+			<Text>[COLOR_POSITIVE_TEXT]{1_Num}{2_IconString} 溢出[ENDCOLOR]</Text>
+		</Row>
 	</Language_zh_Hant_HK>
 </GameData>
