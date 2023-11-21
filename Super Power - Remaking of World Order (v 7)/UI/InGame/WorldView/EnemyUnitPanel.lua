@@ -93,32 +93,13 @@ function UpdateUnitPortrait(pUnit)
 	local name = pUnit:GetName();
 
 	-- Corps & Armee & Casualties
-	if pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_CORPS_2"])
-		and
-		GameInfo.Unit_FreePromotions { UnitType = GameInfo.Units[pUnit:GetUnitType()].Type, PromotionType = "PROMOTION_CORPS_2" } ()
-		== nil
-	then
+	if pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_CORPS_2"]) then
 		if pUnit:GetDomainType() == DomainTypes.DOMAIN_LAND then
 			name = name .. " " .. Locale.ConvertTextKey("TXT_KEY_PROMOTION_CORPS_2");
 		elseif pUnit:GetDomainType() == DomainTypes.DOMAIN_SEA then
-			if GameInfo.Leader_Traits { LeaderType = GameInfo.Leaders[Players[pUnit:GetOwner()]:GetLeaderType()].Type,
-				TraitType = "TRAIT_FIGHT_WELL_DAMAGED" } ()
-				and
-				(
-				GameInfo.Traits["TRAIT_FIGHT_WELL_DAMAGED"].PrereqPolicy == nil or
-					(GameInfo.Traits["TRAIT_FIGHT_WELL_DAMAGED"].PrereqPolicy
-						and Players[pUnit:GetOwner()]:HasPolicy(GameInfoTypes[GameInfo.Traits["TRAIT_FIGHT_WELL_DAMAGED"].PrereqPolicy])))
-			then
-				name = name .. " " .. Locale.ConvertTextKey("TXT_KEY_PROMOTION_CORPS_2_CF");
-			else
-				name = name .. " " .. Locale.ConvertTextKey("TXT_KEY_PROMOTION_CORPS_2_ARMADA");
-			end
+			name = name .. " " .. Locale.ConvertTextKey("TXT_KEY_PROMOTION_CORPS_2_ARMADA");
 		end
-	elseif pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_CORPS_1"])
-		and
-		GameInfo.Unit_FreePromotions { UnitType = GameInfo.Units[pUnit:GetUnitType()].Type, PromotionType = "PROMOTION_CORPS_1" } ()
-		== nil
-	then
+	elseif pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_CORPS_1"]) then
 		if pUnit:GetDomainType() == DomainTypes.DOMAIN_LAND then
 			name = name .. " " .. Locale.ConvertTextKey("TXT_KEY_PROMOTION_CORPS_1");
 		elseif pUnit:GetDomainType() == DomainTypes.DOMAIN_SEA then
@@ -199,15 +180,23 @@ end
 function UpdateCityStats(pCity)
 
 	-- Strength
+	local hp = pCity:GetMaxHitPoints()
 	local strength = math.floor(pCity:GetStrengthValue() / 100);
+	local maxhp = pCity:GetMaxHitPoints();
+	local currenthp =pCity:GetMaxHitPoints() - pCity:GetDamage();
+	
+	hp = currenthp.. "/" ..maxhp;
 
 	strength = strength .. " [ICON_STRENGTH]";
 	Controls.UnitStrengthBox:SetHide(false);
 	Controls.UnitStatStrength:SetText(strength);
 
-	Controls.UnitMovementBox:SetHide(true);
-	Controls.UnitRangedAttackBox:SetHide(true);
+	Controls.UnitMovementBox:SetHide(false);
+	Controls.UnitStatMovement:SetText(hp);
+	Controls.UnitStatNameMovement:SetText("[ICON_SILVER_FIST]");
 
+	Controls.UnitRangedAttackBox:SetHide(true);	
+	
 end
 
 --------------------------------------------------------------------------------
@@ -221,8 +210,10 @@ function UpdateUnitStats(pUnit)
 	local max_moves = pUnit:MaxMoves() / move_denominator;
 	local ignore_terrain = pUnit:IgnoreTerrainCost() and "*" or " ";
 	local szMoveStr = math.floor(moves_left) .. "/" .. math.floor(max_moves) .. ignore_terrain .. "[ICON_MOVES]";
+	local szMoveStrText = Locale.ConvertTextKey("TXT_KEY_EUPANEL_MOVEMENT")
 
 	Controls.UnitStatMovement:SetText(szMoveStr);
+	Controls.UnitStatNameMovement:SetText(szMoveStrText);
 	Controls.UnitMovementBox:SetHide(false);
 
 	-- Strength
@@ -300,10 +291,10 @@ function GetFormattedText(strLocalizedText, iValue, bForMe, bPercent, strOptiona
 
 	-- Formatting for my side
 	if (bForMe) then
-		strTextToReturn = " :  " .. strNumberPart;
+		strTextToReturn = ":  " .. strNumberPart;
 		-- Formatting for their side
 	else
-		strTextToReturn = strNumberPart .. "  : ";
+		strTextToReturn = strNumberPart .. "  :";
 	end
 
 	return strTextToReturn;
@@ -371,7 +362,7 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 					bInterceptPossible = true;
 				end
 
-				-- Normal Melee Combat
+			-- Normal Melee Combat
 			else
 				local pFireSupportUnit = pMyUnit:GetFireSupportUnit(pCity:GetOwner(), pPlot:GetX(), pPlot:GetY());
 				if (pFireSupportUnit ~= nil) then
@@ -384,6 +375,25 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 				iTheirDamageInflicted = iTheirDamageInflicted + iTheirFireSupportCombatDamage;
 
 			end
+
+			--Forced damage reduction
+			if pCity:GetChangeDamageValue() ~= 0 then
+				iMyDamageInflicted = iMyDamageInflicted + pCity:GetChangeDamageValue()
+				if iMyDamageInflicted < 0 then
+					iMyDamageInflicted=0
+				end
+            end
+
+			if pMyUnit:GetForcedDamageValue() > 0 then
+				iTheirDamageInflicted = pMyUnit:GetForcedDamageValue()
+			end
+
+			if pMyUnit:GetChangeDamageValue() ~= 0 then
+				iTheirDamageInflicted= iTheirDamageInflicted + pMyUnit:GetChangeDamageValue()
+				if iTheirDamageInflicted < 0 then
+					iTheirDamageInflicted = 0
+				end
+            end
 
 			-- City's max HP
 			local maxCityHitPoints = pCity:GetMaxHitPoints();
@@ -409,8 +419,7 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 
 			-- now do the health bars
 
-			DoUpdateHealthBars(maxUnitHitPoints, maxCityHitPoints, pMyUnit:GetDamage(), pCity:GetDamage(), iMyDamageInflicted,
-				iTheirDamageInflicted)
+			DoUpdateHealthBars(maxUnitHitPoints, maxCityHitPoints, pMyUnit:GetDamage(), pCity:GetDamage(), iMyDamageInflicted, iTheirDamageInflicted)
 
 			-- Now do text stuff
 
@@ -464,16 +473,167 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 			-- Their Damage
 			Controls.TheirDamageValue:SetText("[COLOR_RED]" .. iTheirDamageInflicted .. "[ENDCOLOR]");
 
-			--if (bRanged) then
-			--Controls.TheirDamageValue:SetHide(true);
-			--Controls.TheirDamage:SetHide(true);
-			--else
-			--Controls.TheirDamageValue:SetHide(false);
-			--Controls.TheirDamage:SetHide(false);
-			--end
+			--Forced damage reduction
+			if pCity:GetChangeDamageValue() ~= 0 then
+				local ChangeDamageValue= pCity:GetChangeDamageValue()
+				controlTable = g_TheirCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_CHANGE_DAMAGEVALUE_SUPPORT_SP",ChangeDamageValue);
+				controlTable.Value:SetText("");
+            end
 
 			-- Their Strength
 			Controls.TheirStrengthValue:SetText(Locale.ToNumber(iTheirStrength / 100, "#.##"));
+
+			local UnitChangeDamageValue = pMyUnit:GetChangeDamageValue()
+            if UnitChangeDamageValue ~= 0 and pMyUnit:GetDomainType() ~= DomainTypes.DOMAIN_AIR then
+                controlTable = g_MyCombatDataIM:GetInstance();
+                controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_CHANGE_DAMAGEVALUE_SUPPORT_SP", UnitChangeDamageValue);
+                controlTable.Value:SetText("");
+            end
+
+			-- Attack Modifier
+			local iModifier = pMyUnit:GetAttackModifier();
+			if (iModifier ~= 0) then
+				controlTable = g_MyCombatDataIM:GetInstance();		
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_ATTACK_MOD_BONUS");
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+			end
+
+			--Extra Resouce and Happiness Bonus
+			iModifier = pMyUnit:GetStrengthModifierFromExtraResource();
+			if (iModifier ~= 0) then
+				controlTable = g_MyCombatDataIM:GetInstance();		
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_RESOURCE_MODIFIER");
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+			end
+			iModifier = pMyUnit:GetStrengthModifierFromExtraHappiness();
+			if (iModifier ~= 0) then
+				controlTable = g_MyCombatDataIM:GetInstance();		
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_EXCESS_HAPINESS_MODIFIER");
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+			end
+
+			--Num Of Origin City
+			iModifier = pMyUnit:GetNumOriginalCapitalAttackMod();
+			if (iModifier ~= 0 and pMyPlayer:GetNumOriginalCapital() > 1) then
+				local inum = pMyPlayer:GetNumOriginalCapital() - 1
+				if inum > GameDefines["ORIGINAL_CAPITAL_MODMAX"] then
+					inum = GameDefines["ORIGINAL_CAPITAL_MODMAX"]
+				end
+				iModifier = pMyUnit:GetNumOriginalCapitalAttackMod() * inum
+				controlTable = g_MyCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_PLAYER_ORIGINAL_CAPITAL_BONUS_SP");
+				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
+			end
+
+			--Golden Age Bonus
+			iModifier = pMyUnit:GoldenAgeMod();
+			if (iModifier ~= 0 and pMyPlayer:IsGoldenAge()) then
+				controlTable = g_MyCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_PLAYER_GOLDENAGE_BONUS_SP");
+				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
+			end
+
+			--Same Continent Bonus
+			iModifier = pMyUnit:GetOnCapitalLandAttackMod();
+			if pMyPlayer:GetCapitalCity()~=nil then
+				local pCapitalPlot = Map.GetPlot(pMyPlayer:GetCapitalCity():GetX(),pMyPlayer:GetCapitalCity():GetY())
+				local pCapitalArea = pCapitalPlot:GetArea() 
+				local pArea = pMyUnit:GetPlot():GetArea()	
+				if (iModifier ~= 0 and  pArea == pCapitalArea) then
+					controlTable = g_MyCombatDataIM:GetInstance();		
+					controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_SAME_CONTINENT_BONUS");
+					controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
+				end
+		  	end
+			--Other Continent Bonus
+			iModifier = pMyUnit:GetOutsideCapitalLandAttackMod();
+			if pMyPlayer:GetCapitalCity()~=nil then
+				local pCapitalPlot = Map.GetPlot(pMyPlayer:GetCapitalCity():GetX(),pMyPlayer:GetCapitalCity():GetY())
+				local pCapitalArea = pCapitalPlot:GetArea() 
+				local pArea = pMyUnit:GetPlot():GetArea()	
+				if (iModifier ~= 0 and  pArea ~= pCapitalArea) then
+					controlTable = g_MyCombatDataIM:GetInstance();		
+					controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_OTHER_CONTINENT_BONUS");
+					controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
+				end
+		  	end
+
+			--Residual Movement Bonus
+			iModifier = pMyUnit:MoveLfetAttackMod();
+			if (iModifier ~= 0 and pMyUnit:MovesLeft()>0) then
+			    iModifier = pMyUnit:MoveLfetAttackMod()* pMyUnit:MovesLeft() / GameDefines["MOVE_DENOMINATOR"]
+				controlTable = g_MyCombatDataIM:GetInstance();		
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_MOVES_LEFT_BONUS_SP");
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+			end
+
+			--Used Movement Bonus
+			iModifier = pMyUnit:MoveUsedAttackMod();
+			if (iModifier ~= 0 and  (pMyUnit:MaxMoves() > pMyUnit:MovesLeft())) then
+			    iModifier = pMyUnit:MoveUsedAttackMod()* (pMyUnit:MaxMoves() - pMyUnit:MovesLeft())/ GameDefines["MOVE_DENOMINATOR"]
+				controlTable = g_MyCombatDataIM:GetInstance();		
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_MOVES_USED_BONUS_SP");
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+			end
+
+			--Num of GreatWorks Bonus
+			iModifier = pMyUnit:GetNumWorkAttackMod();
+			if (iModifier ~= 0 and  pMyPlayer:GetNumGreatWorks()>0) then
+			    iModifier =pMyUnit:GetNumWorkAttackMod()*pMyPlayer:GetNumGreatWorks()
+				controlTable = g_MyCombatDataIM:GetInstance();		
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_PLAYER_GREATWORK_BONUS_SP");
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+			end
+
+			--Near num of Enemy Bonus
+			iModifier = pMyUnit:GetNearNumEnemyAttackMod();
+			local bonus = pMyUnit:GetNumEnemyAdjacent()
+			iModifier =iModifier*bonus
+			if (iModifier ~= 0 ) then			    	
+				controlTable = g_MyCombatDataIM:GetInstance();		
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_NUM_ENARBYENEMY_BONUS_SP");
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier,true, true) );
+			end
+				
+			--Current HitPoint Bonus
+			iModifier = pMyUnit:GetCurrentHitPointAttackMod();
+			local Hitbonus = pMyUnit:GetMaxHitPoints()-pMyUnit:GetCurrHitPoints()
+			if pMyUnit:GetMaxHitPoints()-pMyUnit:GetCurrHitPoints()>100 then
+				Hitbonus =100
+			end
+			if (iModifier ~= 0 and Hitbonus~=0 ) then
+			    iModifier =pMyUnit:GetCurrentHitPointAttackMod()*Hitbonus	
+				controlTable = g_MyCombatDataIM:GetInstance();		
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_LEFT_HITPOINT_BONUS_SP");
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier,true, true) );
+			end
+
+			--Num of Wonder Bonus
+			iModifier = pMyUnit:GetNumWonderAttackMod();
+			if (iModifier ~= 0 and  pMyPlayer:GetNumWorldWonders()>0) then
+			    iModifier =pMyUnit:GetNumWonderAttackMod()*pMyPlayer:GetNumWorldWonders()
+				controlTable = g_MyCombatDataIM:GetInstance();		
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_PLAYER_WORLDWONDER_BONUS_SP");
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+			end
+
+			--Num of Spy Bonus
+			iModifier = pMyUnit:GetNumSpyAttackMod();
+			if (iModifier ~= 0 and  pMyPlayer:GetNumSpies()>0) then
+			    iModifier =pMyUnit:GetNumSpyAttackMod()*pMyPlayer:GetNumSpies()
+				controlTable = g_MyCombatDataIM:GetInstance();		
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_PLAYER_SPY_BONUS_SP");
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+			end
+
+			--Bonus outside Friendly Lands
+			iModifier = pMyUnit:GetOutsideFriendlyLandsModifier();
+			if (iModifier ~= 0) then
+				controlTable = g_MyCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_OUTSIDE_HOME_BONUS" );
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+			end
 
 			-- City Attack bonus
 			local iModifier = pMyUnit:CityAttackModifier();
@@ -490,31 +650,6 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 				controlTable.Text:LocalizeAndSetText(textKey);
 				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
 			end
-
-			--Same Continent Bouns
-			iModifier = pMyUnit:GetOnCapitalLandAttackMod();
-			if pMyPlayer:GetCapitalCity()~=nil then
-				local pCapitalPlot = Map.GetPlot(pMyPlayer:GetCapitalCity():GetX(),pMyPlayer:GetCapitalCity():GetY())
-				local pCapitalArea = pCapitalPlot:GetArea() 
-				local pArea = pMyUnit:GetPlot():GetArea()	
-				if (iModifier ~= 0 and  pArea == pCapitalArea) then
-					controlTable = g_MyCombatDataIM:GetInstance();		
-					controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_SAME_CONTINENT_BONUS");
-					controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
-				end
-		  	end
-			--Other Continent Bouns
-			iModifier = pMyUnit:GetOutsideCapitalLandAttackMod();
-			if pMyPlayer:GetCapitalCity()~=nil then
-				local pCapitalPlot = Map.GetPlot(pMyPlayer:GetCapitalCity():GetX(),pMyPlayer:GetCapitalCity():GetY())
-				local pCapitalArea = pCapitalPlot:GetArea() 
-				local pArea = pMyUnit:GetPlot():GetArea()	
-				if (iModifier ~= 0 and  pArea ~= pCapitalArea) then
-					controlTable = g_MyCombatDataIM:GetInstance();		
-					controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_OTHER_CONTINENT_BONUS");
-					controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
-				end
-		  	end
 
 			iModifier = pMyPlayer:GetFoundedReligionEnemyCityCombatMod(pPlot);
 			if (iModifier ~= 0) then
@@ -635,6 +770,22 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
 			end
 
+			-- Nearby Unit Promotion modifier
+			if (pMyUnit:GetNearbyUnitPromotionModifierFromUnitPromotion() ~= 0) then
+				iModifier = pMyUnit:GetNearbyUnitPromotionModifierFromUnitPromotion();
+				controlTable = g_MyCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_UNIT_PROMOTION_NEAR_SP" );
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+			end
+
+			-- Damaged unit
+			iModifier = pMyUnit:GetDamageCombatModifier();
+			if (iModifier ~= 0 ) then
+				controlTable = g_MyCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_UNITCOMBAT_DAMAGE_MODIFIER_SP" );
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+			end
+
 			-- Empire Unhappy
 			iModifier = pMyUnit:GetUnhappinessCombatPenalty();
 			if (iModifier ~= 0) then
@@ -703,6 +854,12 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 	local sizeX = Controls.DetailsGrid:GetSizeX();
 	Controls.DetailsGrid:DoAutoSize();
 	Controls.DetailsGrid:SetSizeX(sizeX);
+	local sizeY = Controls.MyCombatResultsStack:GetSizeY() + Controls.TheirCombatResultsStack:GetSizeY();
+	if sizeY > 160 then
+		Controls.DetailsGrid:SetSizeY(sizeY);
+	else
+		Controls.DetailsGrid:SetSizeY(160);
+	end
 	Controls.DetailsSeperator:SetSizeY(Controls.DetailsGrid:GetSizeY());
 	Controls.DetailsGrid:ReprocessAnchoring();
 end
@@ -765,39 +922,52 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				end
 
 				if (pMyUnit:GetDomainType() == DomainTypes.DOMAIN_AIR) then
-
-					--------------------------SP Bug Fix ------------Air unit attack infantry unit wrong damage---------
-					if pTheirUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_GUNPOWDER_INFANTRY_COMBAT"]) then
-						--						iTheirDamageInflicted = pTheirUnit:GetRangeCombatDamage(pMyUnit,nil,false);
-						iTheirDamageInflicted = 100
-						iNumVisibleAAUnits = pMyUnit:GetInterceptorCount(pToPlot, pTheirUnit, true, true);
-						bInterceptPossible = true;
-					else
-						iTheirDamageInflicted = pTheirUnit:GetAirStrikeDefenseDamage(pMyUnit, false);
-						iNumVisibleAAUnits = pMyUnit:GetInterceptorCount(pToPlot, pTheirUnit, true, true);
-						bInterceptPossible = true;
-					end
-					--------------------------SP Bug Fix END ------------Air unit attack infantry unit wrong damage---------
-
+					iTheirDamageInflicted = pTheirUnit:GetAirStrikeDefenseDamage(pMyUnit, false);				
+					iNumVisibleAAUnits = pMyUnit:GetInterceptorCount(pToPlot, pTheirUnit, true, true);		
+					bInterceptPossible = true;
 				end
 
-				-- Normal Melee Combat
+			-- Normal Melee Combat
 			else
-
 				iTheirStrength = pTheirUnit:GetMaxDefenseStrength(pToPlot, pMyUnit);
-
 				local pFireSupportUnit = pMyUnit:GetFireSupportUnit(pTheirUnit:GetOwner(), pToPlot:GetX(), pToPlot:GetY());
 				if (pFireSupportUnit ~= nil) then
+					--calculate damage Combat Modifier
+					local iTheirDamage = pTheirUnit:GetDamage();
+					local iTheirDamageModifier = pTheirUnit:GetDamageCombatModifier(false, iTheirDamage + pMyUnit:GetRangeCombatDamage(pTheirUnit, nil, false));
+					iTheirStrength = iTheirStrength * (100 + iTheirDamageModifier) / 100;
 					iTheirFireSupportCombatDamage = pFireSupportUnit:GetRangeCombatDamage(pMyUnit, nil, false);
 				end
 
-				iMyDamageInflicted = pMyUnit:GetCombatDamage(iMyStrength, iTheirStrength,
-					pMyUnit:GetDamage() + iTheirFireSupportCombatDamage, false, false, false);
-				iTheirDamageInflicted = pTheirUnit:GetCombatDamage(iTheirStrength, iMyStrength, pTheirUnit:GetDamage(), false, false
-					, false);
+				iMyDamageInflicted = pMyUnit:GetCombatDamage(iMyStrength, iTheirStrength, pMyUnit:GetDamage() + iTheirFireSupportCombatDamage, false, false, false);
+				iTheirDamageInflicted = pTheirUnit:GetCombatDamage(iTheirStrength, iMyStrength, pTheirUnit:GetDamage(), false, false, false);
 				iTheirDamageInflicted = iTheirDamageInflicted + iTheirFireSupportCombatDamage;
-
 			end
+
+			if pTheirUnit:GetForcedDamageValue() ~= 0 then
+				if pTheirUnit:GetForcedDamageValue() > 0 then
+					iMyDamageInflicted = pTheirUnit:GetForcedDamageValue()
+				end
+			end
+			if pTheirUnit:GetChangeDamageValue() ~= 0 then
+				iMyDamageInflicted = iMyDamageInflicted + pTheirUnit:GetChangeDamageValue()
+				if iMyDamageInflicted < 0 then
+					iMyDamageInflicted = 0
+				end
+			end
+
+			if pMyUnit:GetForcedDamageValue() ~= 0 then
+				if pMyUnit:GetForcedDamageValue() > 0 then
+					iTheirDamageInflicted = pMyUnit:GetForcedDamageValue()
+				end
+			end
+			if pMyUnit:GetChangeDamageValue() ~= 0 then
+				iTheirDamageInflicted = iTheirDamageInflicted + pMyUnit:GetChangeDamageValue()
+				if iTheirDamageInflicted < 0 then
+					iTheirDamageInflicted = 0
+				end
+			end
+
 			local iMyDie = false; --Modified
 			local iTheyDie = false;
 			-- Don't give numbers greater than a Unit's max HP
@@ -814,38 +984,12 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 
 			-- now do the health bars
 
-			DoUpdateHealthBars(myMaxUnitHitPoints, theirMaxUnitHitPoints, pMyUnit:GetDamage(), pTheirUnit:GetDamage(),
-				iMyDamageInflicted, iTheirDamageInflicted)
+			DoUpdateHealthBars(myMaxUnitHitPoints, theirMaxUnitHitPoints, pMyUnit:GetDamage(), pTheirUnit:GetDamage(), iMyDamageInflicted, iTheirDamageInflicted)
 
 			-- Now do text stuff
 
 			local controlTable;
 			local strText;
-
-			--local strMyDamageTextColor = "White_Black";
-			--local strTheirDamageTextColor = "White_Black";
-			--if (iMyDamageInflicted > iTheirDamageInflicted) then
-			--strMyDamageTextColor = "Green_Black";
-			--strTheirDamageTextColor = "Red_Black";
-			--elseif (iMyDamageInflicted < iTheirDamageInflicted) then
-			--strMyDamageTextColor = "Red_Black";
-			--strTheirDamageTextColor = "Green_Black";
-			--end
-			--
-			---- Damage I will suffer
-			--controlTable = g_MyCombatDataIM:GetInstance();
-			--if (bRanged) then
-			--strText = ".";
-			--else
-			--strText = "DAMAGE Taken: ~" .. iTheirDamageInflicted .. "/" .. theirMaxUnitHitPoints;
-			--controlTable.MyCombatInfoInstanceText:SetColorByName(strMyDamageTextColor);
-			--end
-			--controlTable.MyCombatInfoInstanceText:SetText(strText);
-			--
-			---- Damage they will suffer
-			--controlTable = g_TheirCombatDataIM:GetInstance();
-			--strText = "DAMAGE Taken: ~" .. iMyDamageInflicted .. "/" .. myMaxUnitHitPoints;
-
 
 			Controls.RangedAttackIndicator:SetHide(true);
 			Controls.SafeAttackIndicator:SetHide(true);
@@ -857,9 +1001,6 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			Controls.MajorDefeatIndicator:SetHide(true);
 			Controls.TotalDefeatIndicator:SetHide(true);
 			Controls.StalemateIndicator:SetHide(true);
-
-			--print("iMyDamageInflicted: " .. tostring(iMyDamageInflicted));
-			--print("iTheirDamageInflicted: " .. tostring(iTheirDamageInflicted));
 
 			local strMyDamageTextColor = "White_Black";
 			local strTheirDamageTextColor = "White_Black";
@@ -914,25 +1055,10 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				controlTable = g_TheirCombatDataIM:GetInstance();
 			end
 
-			-- Combat Strength
-			--if (not bRanged) then
-			--controlTable = g_MyCombatDataIM:GetInstance();
-			--strText = "STRENGTH: " .. iMyStrength / 100;
-			--
-			--controlTable = g_TheirCombatDataIM:GetInstance();
-			--strText = "STRENGTH: " .. iTheirStrength / 100;
-			--end
-
 			-- My Damage
-			--controlTable.Text:LocalizeAndSetText(  "TXT_KEY_EUPANEL_UNIT_APPROXIMATE_DAMAGE" );
-			--controlTable.Value:SetText( GetFormattedText(strText, iTheirDamageInflicted, true, false, "[COLOR_RED]");
-			--Controls.MyDamage:SetText(strText);
 			Controls.MyDamageValue:SetText("[COLOR_GREEN]" .. iMyDamageInflicted .. "[ENDCOLOR]");
 
 			-- My Strength
-			--controlTable.Text:LocalizeAndSetText(  "TXT_KEY_EUPANEL_UNIT_STRENGTH" ) .. " [ICON_STRENGTH]";
-			--controlTable.Value:SetText( GetFormattedText(strText, iMyStrength / 100, true, false, "[COLOR_CYAN]");
-			--Controls.MyStrength:SetText(strText);
 			Controls.MyStrengthValue:SetText(Locale.ToNumber(iMyStrength / 100, "#.##"));
 
 			----------------------------------------------------------------------------
@@ -977,6 +1103,61 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			----------------------------------------------------------------------------
 			-- BONUSES MY UNIT GETS
 			----------------------------------------------------------------------------
+
+			-------------------------
+			-- force damage --
+			-------------------------
+			if(pMyUnit:GetChangeDamageValue() < 0 and pMyUnit:GetDomainType() ~= DomainTypes.DOMAIN_AIR) then
+			    local ChangeDamageValue=pMyUnit:GetChangeDamageValue()
+				controlTable = g_MyCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_CHANGE_DAMAGEVALUE_SUPPORT_SP",ChangeDamageValue);
+				controlTable.Value:SetText("");
+			end
+			-------------------------
+			-- Ranged Support Fire --
+			-------------------------
+			if(pMyUnit:IsRangedSupportFire() == true) then
+				controlTable = g_MyCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_RANGED_SUPPORT_SP" );
+				controlTable.Value:SetText("");
+			end
+			-------------------------
+			--NoResourcePunishment--
+			-------------------------
+			if(pMyUnit:IsNoResourcePunishment() == true) then
+				controlTable = g_MyCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_NO_RS_PSH_SP" );
+				controlTable.Value:SetText("");
+			end
+			-------------------------
+			--Nocapture--
+			-------------------------
+			if(pMyUnit:IsCannotBeCapturedUnit() == true) then
+				controlTable = g_MyCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_NO_CAPTURE_SP" );
+				controlTable.Value:SetText("");
+			end
+			-------------------------
+			-- Movement Immunity ----
+			-------------------------
+			local movementRules = pMyUnit:GetZOCStatus();
+			if(movementRules ~= "") then
+				controlTable = g_MyCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText(movementRules);
+				controlTable.Value:SetText("");
+			end
+			-------------------------
+			-- PRIZE SHIPS PREVIEW --
+			-------------------------
+			if (not bRanged) then
+				local iChance;
+				iChance = pMyUnit:GetCaptureChance(pTheirUnit);
+				if (iChance > 0) then
+						controlTable = g_MyCombatDataIM:GetInstance();
+						controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_CAPTURE_CHANCE", iChance);
+						controlTable.Value:SetText("");
+				end
+			end
 
 			local iModifier;
 
@@ -1054,6 +1235,22 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
 			end
 
+			-- Nearby Unit Promotion modifier
+			if (pMyUnit:GetNearbyUnitPromotionModifierFromUnitPromotion() ~= 0) then
+				iModifier = pMyUnit:GetNearbyUnitPromotionModifierFromUnitPromotion();
+				controlTable = g_MyCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_UNIT_PROMOTION_NEAR_SP" );
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+			end
+
+			-- Damaged unit
+			iModifier = pMyUnit:GetDamageCombatModifier();
+			if (iModifier ~= 0 ) then
+				controlTable = g_MyCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_UNITCOMBAT_DAMAGE_MODIFIER_SP" );
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+			end
+
 			-- Policy Attack bonus
 			local iTurns = pMyPlayer:GetAttackBonusTurns();
 			if (iTurns > 0) then
@@ -1089,7 +1286,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			end
 
 			-- Bonus for fighting in one's lands
-			if (pToPlot:IsFriendlyTerritory(c)) then
+			if (pToPlot:IsFriendlyTerritory(iMyPlayer)) then
 
 				-- General combat mod
 				iModifier = pMyUnit:GetFriendlyLandsModifier();
@@ -1143,7 +1340,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 
 				if (pCapital ~= nil) then
 
-					local plotDistance = Map.PlotDistance(pCapital:GetX(), pCapital:GetY(), pMyUnit:GetX(), pMyUnit:GetY());
+					local plotDistance = Map.PlotDistance(pCapital:GetX(), pCapital:GetY(), pToPlot:GetX(), pToPlot:GetY());
 					iModifier = iModifier + (plotDistance * pMyUnit:CapitalDefenseFalloff());
 
 					if (iModifier > 0) then
@@ -1212,7 +1409,50 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
 			end
 
-			--Same Continent Bouns
+			--Extra Resouce and Happiness Bonus
+			iModifier = pMyUnit:GetStrengthModifierFromExtraResource();
+			if (iModifier ~= 0) then
+				controlTable = g_MyCombatDataIM:GetInstance();		
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_RESOURCE_MODIFIER");
+				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
+			end
+			iModifier = pMyUnit:GetStrengthModifierFromExtraHappiness();
+			if (iModifier ~= 0) then
+				controlTable = g_MyCombatDataIM:GetInstance();		
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_EXCESS_HAPINESS_MODIFIER");
+				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
+			end
+
+			--Num Of Origin City
+			iModifier = pMyUnit:GetNumOriginalCapitalAttackMod();
+			if (iModifier ~= 0 and pMyPlayer:GetNumOriginalCapital() > 1) then
+				local inum = pMyPlayer:GetNumOriginalCapital() - 1
+				if inum > GameDefines["ORIGINAL_CAPITAL_MODMAX"] then
+					inum = GameDefines["ORIGINAL_CAPITAL_MODMAX"]
+				end
+				iModifier = pMyUnit:GetNumOriginalCapitalAttackMod() * inum
+				controlTable = g_MyCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_PLAYER_ORIGINAL_CAPITAL_BONUS_SP");
+				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
+			end
+
+			--Height Bonus
+			iModifier = pMyUnit:GetTotalHeightMod(pToPlot);
+			if (iModifier ~= 0) then
+				controlTable = g_MyCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_HEIGHT");
+				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
+			end
+
+			--Golden Age Bonus
+			iModifier = pMyUnit:GoldenAgeMod();
+			if (iModifier ~= 0 and  pMyPlayer:IsGoldenAge()) then
+				controlTable = g_MyCombatDataIM:GetInstance();		
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_PLAYER_GOLDENAGE_BONUS_SP");
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+			end
+
+			--Same Continent Bonus
 			iModifier = pMyUnit:GetOnCapitalLandAttackMod();
 			if pMyPlayer:GetCapitalCity()~=nil then
 				local pCapitalPlot = Map.GetPlot(pMyPlayer:GetCapitalCity():GetX(),pMyPlayer:GetCapitalCity():GetY())
@@ -1224,7 +1464,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 					controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
 				end
 		  	end
-		  	--Other Continent Bouns
+		  	--Other Continent Bonus
 			iModifier = pMyUnit:GetOutsideCapitalLandAttackMod();
 			if pMyPlayer:GetCapitalCity()~=nil then
 				local pCapitalPlot = Map.GetPlot(pMyPlayer:GetCapitalCity():GetX(),pMyPlayer:GetCapitalCity():GetY())
@@ -1236,6 +1476,82 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 					controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
 				end
 		  	end
+
+			--Residual Movement Bonus
+			iModifier = pMyUnit:MoveLfetAttackMod();
+			if (iModifier ~= 0 and pMyUnit:MovesLeft()>0) then
+				iModifier = pMyUnit:MoveLfetAttackMod()* pMyUnit:MovesLeft() / GameDefines["MOVE_DENOMINATOR"]
+				controlTable = g_MyCombatDataIM:GetInstance();		
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_MOVES_LEFT_BONUS_SP");
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+			end
+
+			--Used Movement Bonus
+			iModifier = pMyUnit:MoveUsedAttackMod();
+			if (iModifier ~= 0 and  (pMyUnit:MaxMoves() > pMyUnit:MovesLeft())) then
+				iModifier = pMyUnit:MoveUsedAttackMod()* (pMyUnit:MaxMoves() - pMyUnit:MovesLeft())/ GameDefines["MOVE_DENOMINATOR"]
+				controlTable = g_MyCombatDataIM:GetInstance();		
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_MOVES_USED_BONUS_SP");
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+			end
+
+			--Num of GreatWorks Bonus
+			iModifier = pMyUnit:GetNumWorkAttackMod();
+			if (iModifier ~= 0 and  pMyPlayer:GetNumGreatWorks()>0) then
+				iModifier =pMyUnit:GetNumWorkAttackMod()*pMyPlayer:GetNumGreatWorks()
+				controlTable = g_MyCombatDataIM:GetInstance();		
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_PLAYER_GREATWORK_BONUS_SP");
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+			end
+
+			--Near num of Enemy Bonus
+			iModifier = pMyUnit:GetNearNumEnemyAttackMod();
+			local bonus = pMyUnit:GetNumEnemyAdjacent()
+			iModifier =iModifier*bonus
+			if (iModifier ~= 0 ) then		    	
+				controlTable = g_MyCombatDataIM:GetInstance();		
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_NUM_ENARBYENEMY_BONUS_SP");
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier,true, true) );
+			end
+							
+			--Current HitPoint Bonus
+			iModifier = pMyUnit:GetCurrentHitPointAttackMod();
+			local Hitbonus = pMyUnit:GetMaxHitPoints()-pMyUnit:GetCurrHitPoints()
+			if pMyUnit:GetMaxHitPoints()-pMyUnit:GetCurrHitPoints()>100 then
+				Hitbonus =100
+			end
+			if (iModifier ~= 0 and Hitbonus~=0 ) then
+				iModifier =pMyUnit:GetCurrentHitPointAttackMod()*Hitbonus	
+				controlTable = g_MyCombatDataIM:GetInstance();		
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_LEFT_HITPOINT_BONUS_SP");
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier,true, true) );
+			end
+
+			--Num of Wonder Bonus
+			iModifier = pMyUnit:GetNumWonderAttackMod();
+			if (iModifier ~= 0 and  pMyPlayer:GetNumWorldWonders()>0) then
+				iModifier =pMyUnit:GetNumWonderAttackMod()*pMyPlayer:GetNumWorldWonders()
+				controlTable = g_MyCombatDataIM:GetInstance();		
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_PLAYER_WORLDWONDER_BONUS_SP");
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+			end
+
+			--Num of Spy Bonus
+			iModifier = pMyUnit:GetNumSpyAttackMod();
+			if (iModifier ~= 0 and  pMyPlayer:GetNumSpies()>0) then
+				iModifier =pMyUnit:GetNumSpyAttackMod()*pMyPlayer:GetNumSpies()
+				controlTable = g_MyCombatDataIM:GetInstance();		
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_PLAYER_SPY_BONUS_SP");
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+			end
+
+			--Num Spy Bonus
+			iModifier = pMyUnit:GetNumSpyStayAttackMod();
+			if (iModifier ~= 0 and Teams[pMyUnit:GetTeam()]:HasSpyAtTeam(pTheirUnit:GetTeam()) ) then
+				controlTable = g_MyCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_ATTACK_BUFF_SPY_SP");
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+			end
 
 			-- UnitClassModifier
 			iModifier = pMyUnit:GetUnitClassModifier(pTheirUnit:GetUnitClassType());
@@ -1273,13 +1589,14 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				controlTable = g_MyCombatDataIM:GetInstance();
 				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_VS_DOMAIN");
 				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
+			end
 
-				--CvBaseInfo kDomainInfo;
-				--Database::SingleResult kResult;
-				--DB.SelectAt(kResult, "Domains", pTheirUnit:getDomainType());
-				--kDomainInfo.CacheResult(kResult);
-
-				--strString.append(GetLocalizedText("TXT_KEY_COMBAT_PLOT_MOD_VS_TYPE", iModifier, kDomainInfo.GetDescription()));
+			-- DomainAttack
+			iModifier = pMyUnit:DomainAttack(pTheirUnit:GetDomainType());
+			if (iModifier ~= 0) then
+				controlTable = g_MyCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_ATTACK_VS_DOMAIN");
+				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
 			end
 
 			-- attackFortifiedMod
@@ -1301,6 +1618,32 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 					controlTable = g_MyCombatDataIM:GetInstance();
 					controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_VS_WOUND_UNITS");
 					controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
+				end
+			else
+				iModifier = pMyUnit:AttackFullyHealedModifier();
+
+				if (iModifier ~= 0)  then
+					controlTable = g_MyCombatDataIM:GetInstance();
+					controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_BONUS_VS_FULLY_HEALED_UNITS" );
+					controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+				end
+			end
+			--Above or Below 50% HP Bonus
+			if (pTheirUnit:GetDamage() < (pTheirUnit:GetMaxHitPoints() / 2)) then
+				iModifier = pMyUnit:AttackAbove50Modifier();
+
+				if (iModifier ~= 0 ) then
+					controlTable = g_MyCombatDataIM:GetInstance();
+					controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_BONUS_VS_MORE_50_HP_UNITS" );
+					controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );	
+				end
+			else
+				iModifier = pMyUnit:AttackBelow50Modifier();
+
+				if (iModifier ~= 0 ) then
+					controlTable = g_MyCombatDataIM:GetInstance();
+					controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_BONUS_VS_LESS_50_HP_UNITS" );
+					controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
 				end
 			end
 
@@ -1329,18 +1672,9 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				-- OpenRangedAttackModifier
 				iModifier = pMyUnit:OpenRangedAttackModifier();
 
-				if (iModifier ~= 0) then
+				if (iModifier ~= 0 and bRanged) then
 					controlTable = g_MyCombatDataIM:GetInstance();
 					controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_OPEN_TERRAIN_RANGE_BONUS");
-					controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
-				end
-			end
-
-			if (bRanged) then
-				iModifier = pMyUnit:GetRangedAttackModifier();
-				if (iModifier ~= 0) then
-					controlTable = g_MyCombatDataIM:GetInstance();
-					controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_RANGED_ATTACK_MODIFIER");
 					controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
 				end
 			end
@@ -1366,6 +1700,15 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				end
 			end
 
+			if (bRanged) then
+				iModifier = pMyUnit:GetRangedAttackModifier();
+				if (iModifier ~= 0) then
+					controlTable = g_MyCombatDataIM:GetInstance();
+					controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_RANGED_ATTACK_MODIFIER");
+					controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
+				end
+			end
+
 			if (pToPlot:GetFeatureType() ~= -1) then
 
 				-- FeatureAttackModifier
@@ -1376,33 +1719,25 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 					controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_ATTACK_INTO_BONUS", featureTypeBonus);
 					controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
 				end
-			else
+			end
 
-				-- TerrainAttackModifier
-				iModifier = pMyUnit:TerrainAttackModifier(pToPlot:GetTerrainType());
+			-- TerrainAttackModifier
+			iModifier = pMyUnit:TerrainAttackModifier(pToPlot:GetTerrainType());
+			if (iModifier ~= 0) then
+				controlTable = g_MyCombatDataIM:GetInstance();
+				local terrainTypeBonus = Locale.ConvertTextKey(GameInfo.Terrains[pToPlot:GetTerrainType()].Description);
+				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_ATTACK_INTO_BONUS", terrainTypeBonus);
+				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
+			end
+
+			if (pToPlot:IsHills()) then
+				iModifier = pMyUnit:TerrainAttackModifier(GameInfo.Terrains["TERRAIN_HILL"].ID);
 				if (iModifier ~= 0) then
 					controlTable = g_MyCombatDataIM:GetInstance();
-					local terrainTypeBonus = Locale.ConvertTextKey(GameInfo.Terrains[pToPlot:GetTerrainType()].Description);
+					local terrainTypeBonus = Locale.ConvertTextKey(GameInfo.Terrains["TERRAIN_HILL"].Description);
 					controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_ATTACK_INTO_BONUS", terrainTypeBonus);
 					controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
 				end
-
-				if (pToPlot:IsHills()) then
-					iModifier = pMyUnit:TerrainAttackModifier(GameInfo.Terrains["TERRAIN_HILL"].ID);
-					if (iModifier ~= 0) then
-						controlTable = g_MyCombatDataIM:GetInstance();
-						local terrainTypeBonus = Locale.ConvertTextKey(GameInfo.Terrains["TERRAIN_HILL"].Description);
-						controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_ATTACK_INTO_BONUS", terrainTypeBonus);
-						controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
-					end
-				end
-			end
-
-			iModifier = pMyUnit:GetTotalHeightMod(pToPlot);
-			if (iModifier ~= 0) then
-				controlTable = g_MyCombatDataIM:GetInstance();
-				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_HEIGHT");
-				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
 			end
 
 			-- BarbarianBonuses
@@ -1462,50 +1797,113 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			-- BONUSES THEIR UNIT GETS
 			----------------------------------------------------------------------------
 
-			-- Their Damage
-			--controlTable.Text:LocalizeAndSetText(  "TXT_KEY_EUPANEL_UNIT_APPROXIMATE_DAMAGE" );
-			--controlTable.Value:SetText( GetFormattedText(strText, iMyDamageInflicted, false, false, "[COLOR_RED]") );
-			--Controls.TheirDamage:SetText(strText);
+			-------------------------
+			-- force damage --
+			-------------------------
+			if(pTheirUnit:GetChangeDamageValue() < 0 and pTheirUnit:GetDomainType() ~= DomainTypes.DOMAIN_AIR) then
+			    local ChangeDamageValue=pTheirUnit:GetChangeDamageValue()
+				controlTable = g_TheirCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_CHANGE_DAMAGEVALUE_SUPPORT_SP",ChangeDamageValue);
+				controlTable.Value:SetText("");
+			end
+			-------------------------
+			-- Ranged Support Fire --
+			-------------------------
+			if(pTheirUnit:IsRangedSupportFire() == true) then
+				controlTable = g_TheirCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_RANGED_SUPPORT_SP" );
+				controlTable.Value:SetText("");
+			end
+			-------------------------
+			--NoResourcePunishment--
+			-------------------------
+			if(pTheirUnit:IsNoResourcePunishment() == true) then
+				controlTable = g_TheirCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_NO_RS_PSH_SP" );
+				controlTable.Value:SetText("");
+			end
+			-------------------------
+			--Nocapture--
+			-------------------------
+			if(pTheirUnit:IsCannotBeCapturedUnit() == true) then
+				controlTable = g_TheirCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_NO_CAPTURE_SP" );
+				controlTable.Value:SetText("");
+			end
+			-------------------------
+			-- Movement Immunity ----
+			-------------------------
+			local movementTheir = pTheirUnit:GetZOCStatus();
+			if(movementTheir ~= "") then
+				controlTable = g_TheirCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText(movementTheir);
+				controlTable.Value:SetText("");
+			end
+
 			Controls.TheirDamageValue:SetText("[COLOR_RED]" .. iTheirDamageInflicted .. "[ENDCOLOR]");
 
-			-- Their Strength
-			--strText =  "[ICON_STRENGTH] " .. Locale.ConvertTextKey( "TXT_KEY_EUPANEL_UNIT_STRENGTH" );
-			--controlTable.Value:SetText( GetFormattedText(strText, iTheirStrength / 100, false, false, "[COLOR_CYAN]") );
-			--Controls.TheirStrength:SetText(strText);
 			Controls.TheirStrengthValue:SetText(Locale.ToNumber(iTheirStrength / 100, "#.##"));
-
-			--print("iTheirStrength: " .. iTheirStrength);
-
-			-- Show or hide based on whether this unit can fight back
-			--if (not pTheirUnit:IsCombatUnit() or bRanged) then
-			--Controls.TheirDamageValue:SetHide(true);
-			--Controls.TheirDamage:SetHide(true);
-			--else
-			--Controls.TheirDamageValue:SetHide(false);
-			--Controls.TheirDamage:SetHide(false);
-			--end
 
 			if (pTheirUnit:IsCombatUnit()) then
 
-				----------------------------SP Bug Fix--------Cover Promotion--------------
-				if (bRanged) and not pMyUnit:GetDomainType() == DomainTypes.DOMAIN_AIR then
-					print("Ranged Attack Preview!")
-					if pTheirUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_COVER_1"].ID) then
-						if pTheirUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_COVER_3"].ID) then
-							iModifier = 100
-						elseif pTheirUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_COVER_2"].ID) then
-							iModifier = 66
-						else
-							iModifier = 33
+				local iModifierFinal = pTheirUnit:GetDefenseModifier() + pTheirUnit:GetRangedDefenseModifier()
+				if iModifierFinal ~= 0 then
+					if pMyUnit:GetBaseRangedCombatStrength() > 0 then
+						if UI.GetInterfaceMode() ~= InterfaceModeTypes.INTERFACEMODE_ATTACK and UI.GetInterfaceMode() ~= InterfaceModeTypes.INTERFACEMODE_MOVE_TO then
+							controlTable = g_TheirCombatDataIM:GetInstance();
+							controlTable.Text:LocalizeAndSetText("TXT_KEY_SP_ENEMY_COVER_PENALTY");
+							controlTable.Value:SetText(GetFormattedText(strText, iModifierFinal, false, true));
 						end
 					end
-					if (iModifier ~= 0) then
-						controlTable.Text:LocalizeAndSetText("TXT_KEY_SP_ENEMY_COVER_PENALTY");
+				end
+
+				-- Defense Modifier
+				local iModifier = pTheirUnit:GetDefenseModifier() + pTheirUnit:GetMeleeDefenseModifier();
+				-- local iMeleeModifier = 0
+				if (iModifier ~= 0) then
+					if (not bRanged) then
+						controlTable = g_TheirCombatDataIM:GetInstance();
+						controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_DEFENSE_BONUS");
 						controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
 					end
 				end
-				----------------------------SP Bug Fix END--------Cover Promotion --------------
-				--Same Continent Bouns
+
+				--Extra Resouce and Happiness Bonus
+				iModifier = pTheirUnit:GetStrengthModifierFromExtraResource();
+				if (iModifier ~= 0) then
+					controlTable = g_TheirCombatDataIM:GetInstance();	
+					controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_RESOURCE_MODIFIER");
+					controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
+				end
+				iModifier = pTheirUnit:GetStrengthModifierFromExtraHappiness();
+				if (iModifier ~= 0) then
+					controlTable = g_TheirCombatDataIM:GetInstance();		
+					controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_EXCESS_HAPINESS_MODIFIER");
+					controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
+				end
+
+				--Num Of Origin City
+				iModifier = pTheirUnit:GetNumOriginalCapitalAttackMod();
+				if (iModifier ~= 0 and pTheirPlayer:GetNumOriginalCapital() > 1) then
+					local inum = pTheirPlayer:GetNumOriginalCapital() - 1
+					if inum > GameDefines["ORIGINAL_CAPITAL_MODMAX"] then
+						inum = GameDefines["ORIGINAL_CAPITAL_MODMAX"]
+					end
+					iModifier = pTheirUnit:GetNumOriginalCapitalDefenseMod() * inum
+					controlTable = g_TheirCombatDataIM:GetInstance();
+					controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_PLAYER_ORIGINAL_CAPITAL_BONUS_SP");
+					controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
+				end
+
+				--Golden Age Bonus
+				iModifier = pTheirUnit:GoldenAgeMod();
+				if (iModifier ~= 0 and pTheirPlayer:IsGoldenAge()) then
+					controlTable = g_TheirCombatDataIM:GetInstance();
+					controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_PLAYER_GOLDENAGE_BONUS_SP");
+					controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
+				end
+
+				--Same Continent Bonus
 				iModifier = pTheirUnit:GetOnCapitalLandDefenseMod();
 				if pTheirPlayer:GetCapitalCity()~=nil then
 					local pCapitalPlot = Map.GetPlot(pTheirPlayer:GetCapitalCity():GetX(),pTheirPlayer:GetCapitalCity():GetY())
@@ -1518,7 +1916,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 					end
 			  	end
   
-			 	--Other Continent Bouns
+			 	--Other Continent Bonus
 				iModifier = pTheirUnit:GetOutsideCapitalLandDefenseMod();
 				if pTheirPlayer:GetCapitalCity()~=nil then
 					local pCapitalPlot = Map.GetPlot(pTheirPlayer:GetCapitalCity():GetX(),pTheirPlayer:GetCapitalCity():GetY())
@@ -1530,6 +1928,109 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 						controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
 					end
 			 	end
+
+				--Num of GreatWorks Bonus
+                iModifier = pTheirUnit:GetNumWorkDefenseMod();
+                if (iModifier ~= 0 and pTheirPlayer:GetNumGreatWorks() > 0) then
+                    iModifier = pTheirUnit:GetNumWorkDefenseMod() * pTheirPlayer:GetNumGreatWorks()
+                    controlTable = g_TheirCombatDataIM:GetInstance();
+                    controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_PLAYER_GREATWORK_BONUS_SP");
+                    controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
+                end
+
+				--Near num of Enemy Bonus
+                iModifier = pTheirUnit:GetNearNumEnemyDefenseMod();
+                local bonus = pTheirUnit:GetNumEnemyAdjacent()
+                iModifier = iModifier * bonus
+                if (iModifier ~= 0) then
+                    controlTable = g_TheirCombatDataIM:GetInstance();
+                    controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_NUM_ENARBYENEMY_BONUS_SP");
+                    controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
+                end
+
+				--Current HitPoint Bonus
+                iModifier = pTheirUnit:GetCurrentHitPointDefenseMod();
+                local Hitbonus = pTheirUnit:GetMaxHitPoints() - pTheirUnit:GetCurrHitPoints()
+                if pTheirUnit:GetMaxHitPoints() - pTheirUnit:GetCurrHitPoints() > 100 then
+                    Hitbonus = 100
+                end
+                if (iModifier ~= 0 and Hitbonus ~= 0) then
+                    iModifier = pTheirUnit:GetCurrentHitPointDefenseMod() * Hitbonus
+                    controlTable = g_TheirCombatDataIM:GetInstance();
+                    controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_LEFT_HITPOINT_BONUS_SP");
+                    controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
+                end
+
+                --Num of Wonder Bonus
+                iModifier = pTheirUnit:GetNumWonderDefenseMod();
+                if (iModifier ~= 0 and pTheirPlayer:GetNumWorldWonders() > 0) then
+                    iModifier = pTheirUnit:GetNumWonderDefenseMod() * pTheirPlayer:GetNumWorldWonders()
+                    controlTable = g_TheirCombatDataIM:GetInstance();
+                    controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_PLAYER_WORLDWONDER_BONUS_SP");
+                    controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
+                end
+
+               	--Num Spy Defense Bonus
+                iModifier = pTheirUnit:GetNumSpyDefenseMod();
+                if (iModifier ~= 0 and pTheirPlayer:GetNumSpies() > 0) then
+                    iModifier = iModifier * pTheirPlayer:GetNumSpies()
+                    controlTable = g_TheirCombatDataIM:GetInstance();
+                    controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_PLAYER_SPY_BONUS_SP");
+                    controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
+                end
+
+                --Num Spy Bonus
+                iModifier = pTheirUnit:GetNumSpyStayAttackMod();
+                if (iModifier ~= 0 and Teams[pTheirUnit:GetTeam()]:HasSpyAtTeam(pMyUnit:GetTeam())) then
+                    controlTable = g_TheirCombatDataIM:GetInstance();
+                    controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_ATTACK_BUFF_SPY_SP");
+                    controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
+                end
+
+                -- AttackWoundedMod
+                if (pMyUnit:GetDamage() > 0) then
+                    iModifier = pTheirUnit:AttackWoundedModifier();
+                    if (iModifier ~= 0) then
+                        controlTable = g_TheirCombatDataIM:GetInstance();
+                        controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_VS_WOUND_UNITS");
+                        controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
+                    end
+                else
+                    iModifier = pTheirUnit:AttackFullyHealedModifier();
+                    if (iModifier ~= 0) then
+                        controlTable = g_TheirCombatDataIM:GetInstance();
+                        controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_VS_FULLY_HEALED_UNITS");
+                        controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
+                    end
+                end
+
+                --Above or Below 50% HP Bonus
+                if (pMyUnit:GetDamage() < (pMyUnit:GetMaxHitPoints() / 2)) then
+                    iModifier = pTheirUnit:AttackAbove50Modifier();
+
+                    if (iModifier ~= 0) then
+                        controlTable = g_TheirCombatDataIM:GetInstance();
+                        controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_VS_MORE_50_HP_UNITS");
+                        controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
+                    end
+                else
+                    iModifier = pTheirUnit:AttackBelow50Modifier();
+
+                    if (iModifier ~= 0) then
+                        controlTable = g_TheirCombatDataIM:GetInstance();
+                        controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_VS_LESS_50_HP_UNITS");
+                        controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
+                    end
+
+                end
+
+                -- Damaged unit
+                iModifier = pTheirUnit:GetDamageCombatModifier(bRanged);
+                if (iModifier ~= 0) then
+                    controlTable = g_TheirCombatDataIM:GetInstance();
+                    controlTable.Text:LocalizeAndSetText("TXT_KEY_UNITCOMBAT_DAMAGE_MODIFIER_SP");
+                    controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
+                end
 
 				-- Empire Unhappy
 				iModifier = pTheirUnit:GetUnhappinessCombatPenalty();
@@ -1627,6 +2128,14 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 					controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
 				end
 
+				-- Nearby Unit Promotion modifier
+                if (pTheirUnit:GetNearbyUnitPromotionModifierFromUnitPromotion() ~= 0) then
+                    iModifier = pTheirUnit:GetNearbyUnitPromotionModifierFromUnitPromotion();
+                    controlTable = g_TheirCombatDataIM:GetInstance();
+                    controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_UNIT_PROMOTION_NEAR_SP");
+                    controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
+                end
+
 				-- Flanking bonus
 				if (not bRanged) then
 					iNumAdjacentFriends = pMyUnit:GetNumEnemyUnitsAdjacent(pTheirUnit);
@@ -1683,14 +2192,6 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 					end
 				end
 
-				-- Defense Modifier
-				local iModifier = pTheirUnit:GetDefenseModifier();
-				if (iModifier ~= 0) then
-					controlTable = g_TheirCombatDataIM:GetInstance();
-					controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_DEFENSE_BONUS");
-					controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
-				end
-
 				-- UnitClassDefenseModifier
 				iModifier = pTheirUnit:UnitClassDefenseModifier(pMyUnit:GetUnitClassType());
 				if (iModifier ~= 0) then
@@ -1699,14 +2200,6 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 					controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_VS_CLASS", unitClassBonus);
 					controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
 				end
-
-				---- ClassDefenseModifier
-				--iModifier = pTheirUnit:unitClassDefenseModifier(pMyUnit:getUnitClassType());
-				--if (iModifier ~= 0) then
-				--controlTable = g_TheirCombatDataIM:GetInstance();
-				--strText = "Defense Bonus: " .. iModifier .. "%";
-				----				strString.append(GetLocalizedText("TXT_KEY_COMBAT_PLOT_MOD_VS_TYPE", iModifier, GC.getUnitClassInfo(pMyUnit:getUnitClassType()).GetTextKey()));
-				--end
 
 				-- UnitCombatModifier
 				if (pMyUnit:GetUnitCombatType() ~= -1) then
@@ -1720,32 +2213,21 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 					end
 				end
 
-				---- unitCombatModifier
-				--if (pMyUnit:getUnitCombatType() ~= NO_UNITCOMBAT)
-				--then
-				--iModifier = pTheirUnit:unitCombatModifier(pMyUnit:getUnitCombatType());
-				--
-				--if (iModifier ~= 0)
-				--then
-				--strString.append(NEWLINE);
-				--strString.append(GetLocalizedText("TXT_KEY_COMBAT_PLOT_MOD_VS_TYPE", iModifier, GC.getUnitCombatClassInfo(pMyUnit:getUnitCombatType()).GetTextKey()));
-				--end
-				--end
-
 				-- DomainModifier
 				iModifier = pTheirUnit:DomainModifier(pMyUnit:GetDomainType());
 				if (iModifier ~= 0) then
 					controlTable = g_TheirCombatDataIM:GetInstance();
 					controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_VS_DOMAIN");
 					controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
-
-					--CvBaseInfo kDomainInfo;
-					--Database::SingleResult kResult;
-					--DB.SelectAt(kResult, "Domains", pTheirUnit:getDomainType());
-					--kDomainInfo.CacheResult(kResult);
-
-					--strString.append(GetLocalizedText("TXT_KEY_COMBAT_PLOT_MOD_VS_TYPE", iModifier, kDomainInfo.GetDescription()));
 				end
+
+				-- Domain Defense
+                iModifier = pTheirUnit:DomainDefense(pMyUnit:GetDomainType());
+                if (iModifier ~= 0) then
+                    controlTable = g_TheirCombatDataIM:GetInstance();
+                    controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_DEFENSE_VS_DOMAIN");
+                    controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
+                end
 
 				-- HillsDefenseModifier
 				if (pToPlot:IsHills()) then
@@ -1851,39 +2333,6 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 					end
 				end
 
-				---- hillsDefenseModifier
-				--if (pToPlot:isHills())
-				--then
-				--iModifier = pTheirUnit:hillsDefenseModifier();
-				--
-				--if (iModifier ~= 0)
-				--then
-				--strString.append(NEWLINE);
-				--strString.append(GetLocalizedText("TXT_KEY_COMBAT_PLOT_HILLS_MOD", iModifier));
-				--end
-				--end
-				--
-				---- featureDefenseModifier
-				--if (pToPlot:getFeatureType() ~= NO_FEATURE)
-				--then
-				--iModifier = pTheirUnit:featureDefenseModifier(pToPlot:getFeatureType());
-				--
-				--if (iModifier ~= 0)
-				--then
-				--strString.append(NEWLINE);
-				--strString.append(GetLocalizedText("TXT_KEY_COMBAT_PLOT_UNIT_MOD", iModifier, GC.getFeatureInfo(pToPlot:getFeatureType()).GetTextKey()));
-				--end
-				---- terrainDefenseModifier
-				--else
-				--iModifier = pTheirUnit:terrainDefenseModifier(pToPlot:getTerrainType());
-				--
-				--if (iModifier ~= 0)
-				--then
-				--strString.append(NEWLINE);
-				--strString.append(GetLocalizedText("TXT_KEY_COMBAT_PLOT_UNIT_MOD", iModifier, GC.getTerrainInfo(pToPlot:getTerrainType()).GetTextKey()));
-				--end
-				--end
-
 				-- Civ Trait Bonus
 				iModifier = pTheirPlayer:GetTraitGoldenAgeCombatModifier();
 				if (iModifier ~= 0 and pTheirPlayer:IsGoldenAge()) then
@@ -1917,19 +2366,6 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_VISIBLE_AA_UNITS", iNumVisibleAAUnits);
 				controlTable.Value:SetText("");
 			end
-
-			-------------------------
-			-- PRIZE SHIPS PREVIEW --
-			-------------------------
-			if (not bRanged) then
-				local iChance;
-				iChance = pMyUnit:GetCaptureChance(pTheirUnit);
-				if (iChance > 0) then
-					controlTable = g_TheirCombatDataIM:GetInstance();
-					controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_CAPTURE_CHANCE", iChance);
-					controlTable.Value:SetText("");
-				end
-			end
 		end
 	end
 
@@ -1939,6 +2375,12 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 	local sizeX = Controls.DetailsGrid:GetSizeX();
 	Controls.DetailsGrid:DoAutoSize();
 	Controls.DetailsGrid:SetSizeX(sizeX);
+	local sizeY = Controls.MyCombatResultsStack:GetSizeY() + Controls.TheirCombatResultsStack:GetSizeY();
+	if sizeY > 160 then
+		Controls.DetailsGrid:SetSizeY(sizeY);
+	else
+		Controls.DetailsGrid:SetSizeY(160);
+	end
 	Controls.DetailsSeperator:SetSizeY(Controls.DetailsGrid:GetSizeY());
 	Controls.DetailsGrid:ReprocessAnchoring();
 end
@@ -1962,6 +2404,18 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 	local iTheirPlayer = theirUnit:GetOwner();
 	local pTheirPlayer = Players[iTheirPlayer];
 
+	if theirUnit:GetForcedDamageValue() ~= 0 then
+        if theirUnit:GetForcedDamageValue() > 0 then
+            myCityDamageInflicted = theirUnit:GetForcedDamageValue()
+        end
+    end
+    if theirUnit:GetChangeDamageValue() ~= 0 then
+        myCityDamageInflicted = myCityDamageInflicted + theirUnit:GetChangeDamageValue()
+        if myCityDamageInflicted < 0 then
+            myCityDamageInflicted = 0
+        end
+    end
+
 	if (myCityDamageInflicted > theirUnitMaxHP) then
 		myCityDamageInflicted = theirUnitMaxHP;
 	end
@@ -1982,8 +2436,7 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 	-- My Strength
 	Controls.MyStrengthValue:SetText(Locale.ToNumber(myCityStrength / 100, "#.##"));
 
-	DoUpdateHealthBars(myCityMaxHP, theirUnitMaxHP, myCityCurHP, theirUnitCurHP, myCityDamageInflicted,
-		theirUnitDamageInflicted);
+	DoUpdateHealthBars(myCityMaxHP, theirUnitMaxHP, myCityCurHP, theirUnitCurHP, myCityDamageInflicted, theirUnitDamageInflicted);
 
 	Controls.RangedAttackIndicator:SetHide(false);
 	Controls.SafeAttackIndicator:SetHide(true);
@@ -1996,6 +2449,16 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 	Controls.TotalDefeatIndicator:SetHide(true);
 	Controls.StalemateIndicator:SetHide(true);
 
+	-------------------------
+    -- force damage --
+    -------------------------
+    if theirUnit:GetChangeDamageValue() < 0 and theirUnit:GetDomainType() ~= DomainTypes.DOMAIN_AIR then
+        local ChangeDamageValue = theirUnit:GetChangeDamageValue()
+        controlTable = g_TheirCombatDataIM:GetInstance();
+        controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_CHANGE_DAMAGEVALUE_SUPPORT_SP", ChangeDamageValue);
+        controlTable.Value:SetText("");
+    end
+
 	-- Show some bonuses
 	if (theirUnit:IsCombatUnit()) then
 
@@ -2007,19 +2470,42 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 
 		local theirPlot = theirUnit:GetPlot();
 
-		-- Empire Unhappy
-		local iModifier = theirUnit:GetUnhappinessCombatPenalty();
+		--Extra Resouce and Happiness Bonus
+		local iModifier = theirUnit:GetStrengthModifierFromExtraResource();
 		if (iModifier ~= 0) then
-			controlTable = g_TheirCombatDataIM:GetInstance();
-			if (theirPlayer:IsEmpireVeryUnhappy()) then
-				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_EMPIRE_VERY_UNHAPPY_PENALTY");
-			else
-				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_EMPIRE_UNHAPPY_PENALTY");
-			end
+			controlTable = g_TheirCombatDataIM:GetInstance();	
+			controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_RESOURCE_MODIFIER");
+			controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
+		end
+		iModifier = theirUnit:GetStrengthModifierFromExtraHappiness();
+		if (iModifier ~= 0) then
+			controlTable = g_TheirCombatDataIM:GetInstance();		
+			controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_EXCESS_HAPINESS_MODIFIER");
 			controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
 		end
 
-		--Same Continent Bouns
+		--Num Of Origin City
+		local iModifier = theirUnit:GetNumOriginalCapitalDefenseMod();
+		if (iModifier ~= 0 and pTheirPlayer:GetNumOriginalCapital() > 1) then
+			local inum = pTheirPlayer:GetNumOriginalCapital() - 1
+			if inum > GameDefines["ORIGINAL_CAPITAL_MODMAX"] then
+				inum = GameDefines["ORIGINAL_CAPITAL_MODMAX"]
+			end
+			iModifier = theirUnit:GetNumOriginalCapitalDefenseMod() * inum
+			controlTable = g_TheirCombatDataIM:GetInstance();
+			controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_PLAYER_ORIGINAL_CAPITAL_BONUS_SP");
+			controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
+		end
+
+		--Golden Age Bonus
+		iModifier = theirUnit:GoldenAgeMod();
+		if (iModifier ~= 0 and pTheirPlayer:IsGoldenAge()) then
+			controlTable = g_TheirCombatDataIM:GetInstance();
+			controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_PLAYER_GOLDENAGE_BONUS_SP");
+			controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
+		end
+
+		--Same Continent Bonus
 		iModifier = theirUnit:GetOnCapitalLandDefenseMod();
 		if pTheirPlayer:GetCapitalCity()~=nil then
 			local pCapitalPlot = Map.GetPlot(pTheirPlayer:GetCapitalCity():GetX(),pTheirPlayer:GetCapitalCity():GetY())
@@ -2030,9 +2516,9 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_SAME_CONTINENT_BONUS");
 				controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
 			end
-	  	end
+		end
 
-	  	--Other Continent Bouns
+		--Other Continent Bonus
 		iModifier = theirUnit:GetOutsideCapitalLandDefenseMod();
 		if pTheirPlayer:GetCapitalCity()~=nil then
 			local pCapitalPlot = Map.GetPlot(pTheirPlayer:GetCapitalCity():GetX(),pTheirPlayer:GetCapitalCity():GetY())
@@ -2043,7 +2529,77 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_OTHER_CONTINENT_BONUS");
 				controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true) );
 			end
-	  	end
+		end
+
+		--Num of GreatWorks Bonus
+		iModifier = theirUnit:GetNumWorkDefenseMod();
+		if (iModifier ~= 0 and pTheirPlayer:GetNumGreatWorks() > 0) then
+			iModifier = theirUnit() * pTheirPlayer:GetNumGreatWorks()
+			controlTable = g_TheirCombatDataIM:GetInstance();
+			controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_PLAYER_GREATWORK_BONUS_SP");
+			controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
+		end
+
+		--Near num of Enemy Bonus
+		iModifier = theirUnit:GetNearNumEnemyDefenseMod();
+		local bonus = theirUnit:GetNumEnemyAdjacent()
+		iModifier = iModifier * bonus
+		if (iModifier ~= 0) then
+			controlTable = g_TheirCombatDataIM:GetInstance();
+			controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_NUM_ENARBYENEMY_BONUS_SP");
+			controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
+		end
+
+		--Current HitPoint Bonus
+		iModifier = theirUnit:GetCurrentHitPointDefenseMod();
+		local Hitbonus = theirUnit:GetMaxHitPoints() - theirUnit:GetCurrHitPoints()
+		if theirUnit:GetMaxHitPoints() - theirUnit:GetCurrHitPoints() > 100 then
+			Hitbonus = 100
+		end
+		if (iModifier ~= 0 and Hitbonus ~= 0) then
+			iModifier = theirUnit:GetCurrentHitPointDefenseMod() * Hitbonus
+			controlTable = g_TheirCombatDataIM:GetInstance();
+			controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_LEFT_HITPOINT_BONUS_SP");
+			controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
+		end
+
+		--Num of Wonder Bonus
+		iModifier = theirUnit:GetNumWonderDefenseMod();
+		if (iModifier ~= 0 and pTheirPlayer:GetNumWorldWonders() > 0) then
+			iModifier = theirUnit:GetNumWonderDefenseMod() * pTheirPlayer:GetNumWorldWonders()
+			controlTable = g_TheirCombatDataIM:GetInstance();
+			controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_PLAYER_WORLDWONDER_BONUS_SP");
+			controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
+		end
+
+		--Num Spy Defense Bonus
+		iModifier = theirUnit:GetNumSpyDefenseMod();
+		if (iModifier ~= 0 and pTheirPlayer:GetNumSpies() > 0) then
+			iModifier = iModifier * pTheirPlayer:GetNumSpies()
+			controlTable = g_TheirCombatDataIM:GetInstance();
+			controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_PLAYER_SPY_BONUS_SP");
+			controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
+		end
+
+		-- Damaged unit
+		iModifier = theirUnit:GetDamageCombatModifier(true);
+        if (iModifier ~= 0) then
+            controlTable = g_TheirCombatDataIM:GetInstance();
+            controlTable.Text:LocalizeAndSetText("TXT_KEY_UNITCOMBAT_DAMAGE_MODIFIER_SP");
+            controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
+        end
+
+		-- Empire Unhappy
+		iModifier = theirUnit:GetUnhappinessCombatPenalty();
+		if (iModifier ~= 0) then
+			controlTable = g_TheirCombatDataIM:GetInstance();
+			if (theirPlayer:IsEmpireVeryUnhappy()) then
+				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_EMPIRE_VERY_UNHAPPY_PENALTY");
+			else
+				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_EMPIRE_UNHAPPY_PENALTY");
+			end
+			controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
+		end
 
 		-- Lack Strategic Resources
 		iModifier = theirUnit:GetStrategicResourceCombatPenalty();
@@ -2309,6 +2865,12 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 	local sizeX = Controls.DetailsGrid:GetSizeX();
 	Controls.DetailsGrid:DoAutoSize();
 	Controls.DetailsGrid:SetSizeX(sizeX);
+	local sizeY = Controls.MyCombatResultsStack:GetSizeY() + Controls.TheirCombatResultsStack:GetSizeY();
+	if sizeY > 160 then
+		Controls.DetailsGrid:SetSizeY(sizeY);
+	else
+		Controls.DetailsGrid:SetSizeY(160);
+	end
 	Controls.DetailsSeperator:SetSizeY(Controls.DetailsGrid:GetSizeY());
 	Controls.DetailsGrid:ReprocessAnchoring();
 end
@@ -2480,24 +3042,19 @@ function OnMouseOverHex(hexX, hexY)
 							local pEUnit;
 							-- Loop through all Units
 							for i = 0, iNumUnits do
-								pUnit = pPlot:GetUnit(i);
+								local pUnit = pPlot:GetUnit(i);
 								if (pUnit ~= nil and not pUnit:IsInvisible(iTeam, false)) then
-
 									-- No air units
-									--if (pUnit:GetDomainType() ~= DomainTypes.DOMAIN_AIR) then
-
 									-- Other guy must be same domain, OR we must be ranged OR we must be naval and he is embarked
-									if (
-										pHeadUnit:GetDomainType() == pUnit:GetDomainType() or pHeadUnit:IsRanged() or
-											(pHeadUnit:GetDomainType() == DomainTypes.DOMAIN_SEA and pUnit:IsEmbarked())) then
-
-										if (pUnit:GetBaseCombatStrength() > 0 or pHeadUnit:IsRanged()) and
-											pUnit:GetMaxDefenseStrength(pPlot, pHeadUnit) > iMaxDefenseStrength then
+									if (pHeadUnit:GetDomainType() == pUnit:GetDomainType() or pHeadUnit:IsRanged()
+										or (pHeadUnit:GetDomainType() == DomainTypes.DOMAIN_SEA and pUnit:IsEmbarked()))
+									then
+										if (pUnit:GetBaseCombatStrength() > 0 or pHeadUnit:IsRanged()) 
+										and pUnit:GetMaxDefenseStrength(pPlot, pHeadUnit) > iMaxDefenseStrength then
 											iMaxDefenseStrength = pUnit:GetMaxDefenseStrength(pPlot, pHeadUnit);
 											pEUnit = pUnit;
 										end
 									end
-									--end
 								end
 							end
 
@@ -2553,10 +3110,10 @@ function OnMouseOverHex(hexX, hexY)
 
 							-- Loop through all Units
 							for i = 0, iNumUnits do
-								pUnit = pPlot:GetUnit(i);
+								local pUnit = pPlot:GetUnit(i);
 								if (pUnit ~= nil and not pUnit:IsInvisible(iTeam, false)) then
-									if (pUnit:GetBaseCombatStrength() > 0 or pHeadUnit:IsRanged()) and
-										pUnit:GetMaxDefenseStrength(pPlot, pHeadUnit) > iMaxDefenseStrength then
+									if (pUnit:GetBaseCombatStrength() > 0 or pHeadUnit:IsRanged()) 
+									and pUnit:GetMaxDefenseStrength(pPlot, pHeadUnit) > iMaxDefenseStrength then
 										iMaxDefenseStrength = pUnit:GetMaxDefenseStrength(pPlot, pHeadUnit);
 										pEUnit = pUnit;
 									end
