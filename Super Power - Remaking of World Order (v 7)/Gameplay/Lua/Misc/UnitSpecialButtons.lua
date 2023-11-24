@@ -1234,6 +1234,10 @@ EstablishCorpsButton = {
 				end
 			end
 		end
+        if tUnit:IsPromotionReady() or nUnit:IsPromotionReady() then
+            EstablishCorpsButton.ToolTip = EstablishCorpsButton.ToolTip .. Locale.ConvertTextKey("TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_4")
+            return true
+        end
 
 		return false
     end, -- or nil or a boolean, default is false
@@ -1250,10 +1254,8 @@ EstablishCorpsButton = {
             if tUnit:GetUnitType() == nUnit:GetUnitType() then
                 local iLevel = math.max(tUnit:GetLevel(), nUnit:GetLevel());
                 local iExperience = math.max(tUnit:GetExperience(), nUnit:GetExperience());
-                if tUnit:GetExperience() < iExperience then
-                    tUnit:SetLevel(iLevel);
-                    tUnit:SetExperience(iExperience);
-                end
+                tUnit:SetLevel(iLevel);
+                tUnit:SetExperience(iExperience);
                 for unitPromotion in GameInfo.UnitPromotions() do
                     if nUnit:IsHasPromotion(unitPromotion.ID) and not tUnit:IsHasPromotion(unitPromotion.ID) then
                         tUnit:SetHasPromotion(unitPromotion.ID, true);

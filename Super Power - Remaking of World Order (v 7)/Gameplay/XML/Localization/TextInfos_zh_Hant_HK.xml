@@ -4956,6 +4956,9 @@
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_3">
 			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]組建集團軍需要所在城市市擁有軍事基地[ENDCOLOR]</Text>
 		</Row>
+		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_4">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]單位有待選擇晉升[ENDCOLOR]</Text>
+		</Row>
 		
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_FULLATTACK_ON_SHORT">
 			<Text>啟動火力全開模式</Text>
@@ -8991,7 +8994,7 @@
 				只能建在叢林或森林。
 				[NEWLINE][NEWLINE]不能同時在相鄰的地塊建造瑪雅祭壇。
 				[NEWLINE][NEWLINE]瑪雅祭壇每鄰近一處叢林+1[ICON_RESEARCH]科研產出。
-				[NEWLINE][NEWLINE]瑪雅祭壇上的每一位大先知提供+1[ICON_RESEARCH][ICON_PEACE][ICON_GOLDEN_AGE]產出。
+				[NEWLINE][NEWLINE]瑪雅祭壇上的每一位大先知提供+2[ICON_RESEARCH][ICON_PEACE][ICON_GOLDEN_AGE]產出。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_IMPROVEMENT_MAYA_ALTAR_TEXT">
