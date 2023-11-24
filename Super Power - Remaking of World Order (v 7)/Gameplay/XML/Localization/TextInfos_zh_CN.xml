@@ -5056,6 +5056,9 @@
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_3">
 			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]组建集团军需要所在城市市拥有军事基地[ENDCOLOR]</Text>
 		</Row>
+		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_4">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]单位有待选择晋升[ENDCOLOR]</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_FULLATTACK_ON_SHORT">
 			<Text>启动火力全开模式</Text>
@@ -9112,7 +9115,7 @@
 				只能建在丛林或森林。
 				[NEWLINE][NEWLINE]不能同时在相邻的地块建造玛雅祭坛。
 				[NEWLINE][NEWLINE]玛雅祭坛每邻近一处丛林+1[ICON_RESEARCH]科研产出。
-				[NEWLINE][NEWLINE]玛雅祭坛上的每一位大先知提供+1[ICON_RESEARCH][ICON_PEACE][ICON_GOLDEN_AGE]产出。
+				[NEWLINE][NEWLINE]玛雅祭坛上的每一位大先知提供+2[ICON_RESEARCH][ICON_PEACE][ICON_GOLDEN_AGE]产出。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_IMPROVEMENT_MAYA_ALTAR_TEXT">

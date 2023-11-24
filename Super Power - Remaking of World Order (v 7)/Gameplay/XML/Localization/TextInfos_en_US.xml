@@ -1822,6 +1822,9 @@
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_3">
 			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]Add a same type Unit in this tile into Corps to become an Armee need MilitaryBase in this City[ENDCOLOR]</Text>
 		</Row>
+		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_4">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]Unit has Promotions to be selected[ENDCOLOR]</Text>
+		</Row>
 		
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_FULLATTACK_ON_SHORT">
 			<Text>[COLOR_POSITIVE_TEXT]Full Attack Mode ON[ENDCOLOR] </Text>
@@ -10049,7 +10052,7 @@
 				Can only be built in Jungle or Forest.
 				[NEWLINE][NEWLINE]May not be constructed adjacent to another Altar.
 				[NEWLINE][NEWLINE]Each adjacent Jungle will provides +1 [ICON_RESEARCH] Science output for the Altar.
-				[NEWLINE][NEWLINE]Each Prophet in Altar provide +1 [ICON_RESEARCH][ICON_PEACE][ICON_GOLDEN_AGE] Output.
+				[NEWLINE][NEWLINE]Each Prophet in Altar provide +2 [ICON_RESEARCH][ICON_PEACE][ICON_GOLDEN_AGE] Output.
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_IMPROVEMENT_MAYA_ALTAR_TEXT">

@@ -1316,19 +1316,19 @@
 		<Row>
 			<ImprovementType>IMPROVEMENT_MAYA_ALTAR</ImprovementType>
 			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>1</Yield>
+			<Yield>2</Yield>
 			<UnitType>UNIT_PROPHET</UnitType>
 		</Row>
 		<Row>
 			<ImprovementType>IMPROVEMENT_MAYA_ALTAR</ImprovementType>
 			<YieldType>YIELD_FAITH</YieldType>
-			<Yield>1</Yield>
+			<Yield>2</Yield>
 			<UnitType>UNIT_PROPHET</UnitType>
 		</Row>
 		<Row>
 			<ImprovementType>IMPROVEMENT_MAYA_ALTAR</ImprovementType>
 			<YieldType>YIELD_GOLDEN_AGE_POINTS</YieldType>
-			<Yield>1</Yield>
+			<Yield>2</Yield>
 			<UnitType>UNIT_PROPHET</UnitType>
 		</Row>
 	</Improvement_YieldChangesPerUnit>
