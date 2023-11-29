@@ -307,6 +307,14 @@
 			<Where Name="EVENTS_UNIT_CREATED"/>
 			<Set Value="1"/>
 		</Update>
+		<Update>
+			<Where Name="EVENTS_NEW_ERA"/>
+			<Set Value="1"/>
+		</Update>
+		<Update>
+			<Where Name="EVENTS_PLAYER_SET_HAS_TECH"/>
+			<Set Value="1"/>
+		</Update>
 	</CustomModOptions>
 
 

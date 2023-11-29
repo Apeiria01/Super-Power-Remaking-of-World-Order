@@ -98,19 +98,10 @@ end ------Function End
 GameEvents.CityConstructed.Add(NewBuildingEffects)
 
 -------Auto replacement for obsolete buildings, currently only for human player for stability issues
-function AutoBuildingReplace(iTeam, iTech, bAdopted)
-	--	print ("tech researched!")
-	local pTeam = Teams[iTeam]
+function AutoBuildingReplace(ePlayer, iTech, bAdopted)
 
-	if not pTeam:IsHuman() then
-		--	print ("Only for human!")
-		return
-	end
-
-	local player = Players[Game.GetActivePlayer()]
-	if player:IsMinorCiv() or player:IsBarbarian() or not player:IsHuman() then
-		return
-	end
+	local player = Players[ePlayer]
+	if player == nil or not player:IsHuman() then return end
 
 	if player:GetNumCities() > 0 then
 		print("Auto Buildings Replacement!")
@@ -282,7 +273,7 @@ function AutoBuildingReplace(iTeam, iTech, bAdopted)
 	end
 end ------Function End
 
-GameEvents.TeamSetHasTech.Add(AutoBuildingReplace)
+GameEvents.PlayerSetHasTech.Add(AutoBuildingReplace)
 
 function MinorProvideRes(iPlayerID)
 	local pMinor  = Players[iPlayerID]

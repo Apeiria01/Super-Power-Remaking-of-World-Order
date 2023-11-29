@@ -84,9 +84,9 @@
 			<StealTechFasterModifier>100</StealTechFasterModifier>
 			<ThemingBonusMultiplier>800</ThemingBonusMultiplier>
 			<InternalTradeRouteYieldModifier>200</InternalTradeRouteYieldModifier>
+			<StrategicResourceMod>150</StrategicResourceMod>
+			<FreeExperience>50</FreeExperience>
 		</Row>
-
-
 		<Row>
 			<Type>POLICY_AI_PLAYER_CITIES_30</Type>
 			<Description>TXT_KEY_POLICY_PHILANTHROPY</Description>
@@ -101,6 +101,8 @@
 			<StealTechFasterModifier>50</StealTechFasterModifier>
 			<ThemingBonusMultiplier>400</ThemingBonusMultiplier>
 			<InternalTradeRouteYieldModifier>100</InternalTradeRouteYieldModifier>
+			<StrategicResourceMod>135</StrategicResourceMod>
+			<FreeExperience>30</FreeExperience>
 		</Row>
 		<Row>
 			<Type>POLICY_AI_PLAYER_CITIES_20</Type>
@@ -117,6 +119,8 @@
 			<UnitGoldMaintenanceMod>-15</UnitGoldMaintenanceMod>
 			<InternalTradeRouteYieldModifier>100</InternalTradeRouteYieldModifier>
 			<RiggingElectionModifier>50</RiggingElectionModifier>
+			<StrategicResourceMod>120</StrategicResourceMod>
+			<FreeExperience>20</FreeExperience>
 		</Row>
 		<Row>
 			<Type>POLICY_AI_PLAYER_CITIES_10</Type>
@@ -129,25 +133,15 @@
 			<BuildingGoldMaintenanceMod>-15</BuildingGoldMaintenanceMod>
 			<UnitGoldMaintenanceMod>-25</UnitGoldMaintenanceMod>
 			<InternalTradeRouteYieldModifier>50</InternalTradeRouteYieldModifier>
+			<StrategicResourceMod>110</StrategicResourceMod>
+			<FreeExperience>10</FreeExperience>
 		</Row>
-
-		<!--<Row>
-			<Type>POLICY_AI_PLAYER_CITIES_6</Type>
-			<Description>TXT_KEY_POLICY_PHILANTHROPY</Description>
-			<UnhappinessMod>-10</UnhappinessMod>
-			<CityGrowthMod>10</CityGrowthMod>
-			<BuildingGoldMaintenanceMod>-15</BuildingGoldMaintenanceMod>
-			<UnitGoldMaintenanceMod>-15</UnitGoldMaintenanceMod>
-			<ThemingBonusMultiplier>100</ThemingBonusMultiplier>
-		</Row>-->
-
 
 
 		<Row>
 			<Type>POLICY_AI_BONUS_WAR_LV1</Type>
 			<Description>TXT_KEY_POLICY_PHILANTHROPY</Description>
 			<CityGrowthMod>33</CityGrowthMod>
-			<!--<StrategicResourceMod>25</StrategicResourceMod>-->
 			<MilitaryProductionModifier>50</MilitaryProductionModifier>
 			<UnitGoldMaintenanceMod>-25</UnitGoldMaintenanceMod>
 		</Row>
@@ -156,7 +150,6 @@
 			<Type>POLICY_AI_BONUS_WAR_LV2</Type>
 			<Description>TXT_KEY_POLICY_PHILANTHROPY</Description>
 			<CityGrowthMod>33</CityGrowthMod>
-			<!--<StrategicResourceMod>50</StrategicResourceMod>-->
 			<MilitaryProductionModifier>100</MilitaryProductionModifier>
 			<UnitGoldMaintenanceMod>-25</UnitGoldMaintenanceMod>
 		</Row>
@@ -165,7 +158,6 @@
 			<Type>POLICY_AI_BONUS_WAR_LV3</Type>
 			<Description>TXT_KEY_POLICY_PHILANTHROPY</Description>
 			<CityGrowthMod>33</CityGrowthMod>
-			<!--<StrategicResourceMod>100</StrategicResourceMod>-->
 			<MilitaryProductionModifier>100</MilitaryProductionModifier>
 			<UnitGoldMaintenanceMod>-25</UnitGoldMaintenanceMod>
 		</Row>
@@ -254,6 +246,10 @@
 			<PromotionType>PROMOTION_MARCH</PromotionType>
 		</Row>
 		<Row>
+			<PolicyType>POLICY_AI_ATOMIC</PolicyType>
+			<PromotionType>PROMOTION_FASTER_HEAL</PromotionType>
+		</Row>
+		<Row>
 			<PolicyType>POLICY_AI_WORLDWAR</PolicyType>
 			<PromotionType>PROMOTION_ALTITUDE_TRAINING</PromotionType>
 		</Row>
@@ -269,10 +265,6 @@
 			<PolicyType>POLICY_AI_MODERN</PolicyType>
 			<PromotionType>PROMOTION_EXTRA_SIGHT_III</PromotionType>
 		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_ATOMIC</PolicyType>
-			<PromotionType>PROMOTION_FASTER_HEAL</PromotionType>
-		</Row>
 	</Policy_FreePromotions>
 	
 	
@@ -285,11 +277,6 @@
 			<Yield>1</Yield>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_AI_RENAISSANCE</PolicyType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
 			<PolicyType>POLICY_AI_MEDIEVAL</PolicyType>
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>1</Yield>
@@ -297,6 +284,11 @@
 		<Row>
 			<PolicyType>POLICY_AI_RENAISSANCE</PolicyType>
 			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_AI_RENAISSANCE</PolicyType>
+			<YieldType>YIELD_SCIENCE</YieldType>
 			<Yield>1</Yield>
 		</Row>
 		<Row>
@@ -515,6 +507,120 @@
 		</Row>
 
 	</Policy_BuildingClassTourismModifiers>
+	<Policy_CityResources>
+		<Row>
+			<PolicyType>POLICY_AI_CLASSICAL</PolicyType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+			<Quantity>3</Quantity>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_AI_CLASSICAL</PolicyType>
+			<ResourceType>RESOURCE_HORSE</ResourceType>
+			<Quantity>3</Quantity>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_AI_CLASSICAL</PolicyType>
+			<ResourceType>RESOURCE_CONSUMER</ResourceType>
+			<Quantity>3</Quantity>
+		</Row>
+		
+		<Row>
+			<PolicyType>POLICY_AI_MEDIEVAL</PolicyType>
+			<ResourceType>RESOURCE_CONSUMER</ResourceType>
+			<Quantity>1</Quantity>
+			<CityScaleType>CITYSCALE_SMALL</CityScaleType>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_AI_MEDIEVAL</PolicyType>
+			<ResourceType>RESOURCE_CONSUMER</ResourceType>
+			<Quantity>1</Quantity>
+			<CityScaleType>CITYSCALE_MEDIUM</CityScaleType>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_AI_MEDIEVAL</PolicyType>
+			<ResourceType>RESOURCE_CONSUMER</ResourceType>
+			<Quantity>2</Quantity>
+			<CityScaleType>CITYSCALE_LARGE</CityScaleType>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_AI_MEDIEVAL</PolicyType>
+			<ResourceType>RESOURCE_CONSUMER</ResourceType>
+			<Quantity>2</Quantity>
+			<CityScaleType>CITYSCALE_XL</CityScaleType>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_AI_MEDIEVAL</PolicyType>
+			<ResourceType>RESOURCE_CONSUMER</ResourceType>
+			<Quantity>2</Quantity>
+			<CityScaleType>CITYSCALE_XXL</CityScaleType>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_AI_MEDIEVAL</PolicyType>
+			<ResourceType>RESOURCE_CONSUMER</ResourceType>
+			<Quantity>2</Quantity>
+			<CityScaleType>CITYSCALE_GLOBAL</CityScaleType>
+		</Row>
+
+
+		<Row>
+			<PolicyType>POLICY_AI_INDUSTRY</PolicyType>
+			<ResourceType>RESOURCE_COAL</ResourceType>
+			<Quantity>3</Quantity>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_AI_INDUSTRY</PolicyType>
+			<ResourceType>RESOURCE_OIL</ResourceType>
+			<Quantity>3</Quantity>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_AI_INDUSTRY</PolicyType>
+			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
+			<Quantity>3</Quantity>
+		</Row>
+
+		<Row>
+			<PolicyType>POLICY_AI_MODERN</PolicyType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Quantity>3</Quantity>
+		</Row>
+
+		<Row>
+			<PolicyType>POLICY_AI_WORLDWAR</PolicyType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Quantity>1</Quantity>
+			<CityScaleType>CITYSCALE_SMALL</CityScaleType>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_AI_WORLDWAR</PolicyType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Quantity>1</Quantity>
+			<CityScaleType>CITYSCALE_MEDIUM</CityScaleType>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_AI_WORLDWAR</PolicyType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Quantity>2</Quantity>
+			<CityScaleType>CITYSCALE_LARGE</CityScaleType>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_AI_WORLDWAR</PolicyType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Quantity>2</Quantity>
+			<CityScaleType>CITYSCALE_XL</CityScaleType>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_AI_WORLDWAR</PolicyType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Quantity>2</Quantity>
+			<CityScaleType>CITYSCALE_XXL</CityScaleType>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_AI_WORLDWAR</PolicyType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Quantity>2</Quantity>
+			<CityScaleType>CITYSCALE_GLOBAL</CityScaleType>
+		</Row>
+	</Policy_CityResources>
 	
 	
 </GameData>

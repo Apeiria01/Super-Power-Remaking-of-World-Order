@@ -1491,33 +1491,6 @@ SatelliteLaunchingButton = {
 };
 LuaEvents.UnitPanelActionAddin(SatelliteLaunchingButton);
 
-----Satellite Launching for AI
---[[
-function AISatelliteLaunching (iPlayer, iCity, iUnit, bGold, bFaith)
-	local player = Players[iPlayer]
-	if player == nil or player:IsHuman() or player:IsMinorCiv() or player:IsBarbarian()
-	or player:GetNumCities() < 1 or player:GetCurrentEra() <= 6
-	or player:GetCapitalCity() == nil
-	then
-		return
-	end
-	
-	local city = player:GetCapitalCity()
-	local unit = player:GetUnitByID(iUnit)
-	
-	if not unit == nil and not unit:IsCombatUnit() then
-		if unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_SATELLITE_UNIT"].ID) then 
-			SatelliteLaunchEffects (unit,city,player)
-			SatelliteEffectsGlobal(unit)
-			local UnitName = unit:GetName()
-			print ("AI has built a Satellite Unit:"..UnitName)
-		end
-	end
-
---end
---GameEvents.CityTrained.Add(AISatelliteLaunching)
---]]
-
 ---------MOD Begin By HMS------
 -----------------LuckyE Bonus
 LuckyEButton = {

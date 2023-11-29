@@ -3173,14 +3173,19 @@
 			<Text>[ICON_RES_IRON]冶铁坊</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_IRON_PROVIDER_HELP">
-			<Text>提供5单位[ICON_RES_IRON]铁资源。[NEWLINE][NEWLINE]只能在小型城市（6人口）建造。</Text>
+			<Text>
+			提供5单位[ICON_RES_IRON]铁资源。
+			[NEWLINE][ICON_BULLET]本城每处[ICON_RES_IRON]铁资源+1[ICON_PRODUCTION]产能。
+			[NEWLINE][ICON_BULLET]本城必须拥有已开发的[ICON_RES_IRON]铁。
+			[NEWLINE][ICON_BULLET]只能在小型城市（6人口）建造。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_BUILDING_RECYCLING_CENTER">
 			<Text>[ICON_RES_ALUMINUM]回收中心</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_RECYCLING_CENTER_HELP">
-			<Text>提供5单位[ICON_RES_ALUMINUM]铝资源。[NEWLINE][NEWLINE]只能在小型城市（6人口）建造。</Text>
+			<Text>提供3单位[ICON_RES_ALUMINUM]铝资源。[NEWLINE][NEWLINE]只能在小型城市（6人口）建造。</Text>
 		</Replace>
 
 		<Row>
@@ -3193,7 +3198,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_COAL_COMPANY_HELP</Tag>
-			<Text>提供5单位的[ICON_RES_COAL]煤炭。[NEWLINE]只能在小型城市（6人口）建造。</Text>
+			<Text>提供3单位的[ICON_RES_COAL]煤炭。[NEWLINE]只能在小型城市（6人口）建造。</Text>
 		</Row>
 
 		<Row>

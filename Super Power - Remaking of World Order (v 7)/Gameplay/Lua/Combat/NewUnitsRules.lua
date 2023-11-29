@@ -46,15 +46,10 @@ function NewUnitCreationRules()
 			g_CargoSetList[playerID] = nil;
 			for unit in player:Units() do
 				if unit == nil then
-					-- Fix Possible 0 HP Unit Bug (Temp Method)
-				elseif (unit:GetDamage() >= unit:GetMaxHitPoints() or unit:GetCurrHitPoints() <= 0) then
-					unit:Kill();
-					print("-----------------------BUG Fix-------0HP Unit---------------")
 					-- Remove mis-placed units in city
 				elseif (unit:GetSpecialUnitType() == GameInfo.SpecialUnits.SPECIALUNIT_MISSILE.ID
 						or unit:GetSpecialUnitType() == GameInfo.SpecialUnits.SPECIALUNIT_FIGHTER.ID)
-					and not unit:IsCargo()
-				then
+				and not unit:IsCargo() then
 					unit:Kill();
 					print("This unit shoudln't be put without Carrier, so it is removed!");
 					-- Remove Temp Units (UAV)
@@ -105,10 +100,9 @@ function NewUnitCreationRules()
 					-- Carriers & Cargos Setting System
 					local sSpecialCargo   = GameInfo.Units[unit:GetUnitType()].SpecialCargo;
 					local sSpecial        = GameInfo.Units[unit:GetUnitType()].Special;
-					local creationRandNum = Game.Rand(100,
-						"At NewUnitCreationRules.lua NewUnitCreationRules(), percentage") + 1
+					local creationRandNum = Game.Rand(100,"At NewUnitCreationRules.lua NewUnitCreationRules(), percentage") + 1
 					if unit:GetPlot() == nil or not unit:CanMove() then
-						-- Cargos Add for AI (Human use Button) & Missile for all
+					-- Cargos Add for AI (Human use Button) & Missile for all
 					elseif unit:CargoSpace() > 0 and not unit:IsFull()
 						and (sSpecialCargo == "SPECIALUNIT_FIGHTER" or sSpecialCargo == "SPECIALUNIT_MISSILE")
 						and (unit:GetPlot():IsFriendlyTerritory(playerID) or unit:IsHasPromotion(CarrierSupply3ID))
@@ -117,30 +111,34 @@ function NewUnitCreationRules()
 							SPCargoListSetup(playerID);
 						end
 						local iCost = -1;
-						if not player:IsHuman() and not PlayerAtWarWithHuman(player) then
+
+						if not player:IsHuman() 
+						and not PlayerAtWarWithHuman(player) 
+						and not Players[Game.GetActivePlayer()]:IsObserver() then
+							--Do Nothing
 						elseif sSpecialCargo == "SPECIALUNIT_FIGHTER"
-							and g_CargoSetList[playerID][1] and g_CargoSetList[playerID][1] ~= -1
-							and g_CargoSetList[playerID][4] and g_CargoSetList[playerID][4] ~= -1
-							and not player:IsHuman()
+						and g_CargoSetList[playerID][1] and g_CargoSetList[playerID][1] ~= -1
+						and g_CargoSetList[playerID][4] and g_CargoSetList[playerID][4] ~= -1
+						and not player:IsHuman()
 						then
 							iCost = CarrierRestore(playerID, unit:GetID(), g_CargoSetList[playerID][1]);
 						elseif sSpecialCargo == "SPECIALUNIT_MISSILE"
-							and g_CargoSetList[playerID][2] and g_CargoSetList[playerID][2] ~= -1
+						and g_CargoSetList[playerID][2] and g_CargoSetList[playerID][2] ~= -1
 						then
 							iCost = CarrierRestore(playerID, unit:GetID(), g_CargoSetList[playerID][2]);
 						end
 						if iCost and iCost > 0 then
 							player:ChangeGold(-iCost);
 						end
-						-- Cargos Update
+					-- Cargos Update
 					elseif unit:IsCargo() and unit:GetTransportUnit()
-						and GameInfo.Units[unit:GetUpgradeUnitType()] and GameInfo.Units[unit:GetUpgradeUnitType()].PrereqTech
-						and Teams[player:GetTeam()]:IsHasTech(GameInfoTypes[GameInfo.Units[unit:GetUpgradeUnitType()].PrereqTech])
-						and ((unit:GetTransportUnit():GetUnitType() == GameInfoTypes["UNIT_HORNET"] and creationRandNum < 34)
-							or sSpecial == "SPECIALUNIT_FIGHTER" or sSpecial == "SPECIALUNIT_MISSILE")
-						and (unit:GetPlot():IsFriendlyTerritory(playerID) or unit:GetTransportUnit():IsHasPromotion(CarrierSupply3ID))
-						-- not for AI
-						and player:IsHuman()
+					and GameInfo.Units[unit:GetUpgradeUnitType()] and GameInfo.Units[unit:GetUpgradeUnitType()].PrereqTech
+					and Teams[player:GetTeam()]:IsHasTech(GameInfoTypes[GameInfo.Units[unit:GetUpgradeUnitType()].PrereqTech])
+					and ((unit:GetTransportUnit():GetUnitType() == GameInfoTypes["UNIT_HORNET"] and creationRandNum < 34)
+						or sSpecial == "SPECIALUNIT_FIGHTER" or sSpecial == "SPECIALUNIT_MISSILE")
+					and (unit:GetPlot():IsFriendlyTerritory(playerID) or unit:GetTransportUnit():IsHasPromotion(CarrierSupply3ID))
+					-- not for AI
+					and player:IsHuman()
 					then
 						if g_CargoSetList[playerID] == nil then
 							SPCargoListSetup(playerID);
@@ -203,7 +201,6 @@ function NewUnitCreationRules()
 						end
 					end
 					-- MOD End   by CaptainCWB
-
 				end
 			end -------for units END
 		end ----------if player ~= nil END
@@ -428,18 +425,12 @@ function AASPromotionTransfer(player, unit)
 					pFoundUnit:SetHasPromotion(Sunder2ID, true)
 					print("Promotion for aircrafts on the carrier!-AntiAir2")
 				end
-				-- if unit:IsHasPromotion(Sunder3ID) then
-				-- pFoundUnit:SetHasPromotion(Sunder3ID, true)
-				-- end
 				if unit:IsHasPromotion(CollDamageLV1ID) then
 					pFoundUnit:SetHasPromotion(CollDamageLV1ID, true)
 				end
 				if unit:IsHasPromotion(CollDamageLV2ID) then
 					pFoundUnit:SetHasPromotion(CollDamageLV2ID, true)
 				end
-				-- if unit:IsHasPromotion(CollDamageLV3ID) then
-				-- pFoundUnit:SetHasPromotion(CollDamageLV3ID, true)
-				-- end
 				if unit:IsHasPromotion(LogisticsID) then
 					pFoundUnit:SetHasPromotion(LogisticsID, true)
 				end

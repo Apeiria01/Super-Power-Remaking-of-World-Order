@@ -60,8 +60,7 @@ function AICanBeBoss(player)
 	if Players[Game.GetActivePlayer()] ~= nil and Players[Game.GetActivePlayer()]:GetCapitalCity() ~= nil and player:GetCapitalCity() ~= nil then
 		local HumanCapital  = Players[Game.GetActivePlayer()]:GetCapitalCity();
 		local ThisAICapital = player:GetCapitalCity();
-		CapitalDistance     = Map.PlotDistance(HumanCapital:GetX(), HumanCapital:GetY(), ThisAICapital:GetX(),
-			ThisAICapital:GetY())
+		CapitalDistance     = Map.PlotDistance(HumanCapital:GetX(), HumanCapital:GetY(), ThisAICapital:GetX(), ThisAICapital:GetY())
 	end
 	if AICityCount >= 15 or AICityCount >= WorldCityTotal / MajorCivNum or AIPopCount >= WorldPopTotal / MajorCivNum or CapitalDistance >= WorldSizeLength / 3 then
 		print("This AI can become a Boss!")
@@ -73,6 +72,9 @@ end
 
 -----------------------------------------------Plot Functions------------------------------------------------------
 function PlotIsVisibleToHuman(plot) --------------------Is the plot can be seen by Human
+	if Players[Game.GetActivePlayer()]:IsObserver() then
+		return false
+	end
 	for playerID, HumanPlayer in pairs(Players) do
 		if HumanPlayer:IsHuman() then
 			local HumanPlayerTeamIndex = HumanPlayer:GetTeam()
@@ -1155,7 +1157,4 @@ function CarrierRestore(iPlayerID, iUnitID, iCargoUnit)
 end
 
 -- MOD End   by CaptainCWB
-function RemoveErrorPromotion(iPlayerID, iUnitID)
-	-- keep for compatibility
-end
 print("UtilityFunctions Check Pass!")
