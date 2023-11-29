@@ -210,14 +210,10 @@ if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_AUSTRIA) then
 end
 
 if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_NETHERLANDS) then
-	function SPTraitsTech(iTeam, eTech, bAdopted)
-		local Team = Teams[iTeam]
-		if Team == nil then
-			return
-		end
-
+	function SPTraitsTech(ePlayer, eTech, bAdopted)
+		
 		-- Nederland Set Buildings
-		local player = Players[Team:GetLeaderID()];
+		local player = Players[ePlayer];
 		if player == nil or player:IsMinorCiv() or player:IsBarbarian() then
 			return
 		end
@@ -248,7 +244,7 @@ if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_NETHERLANDS) then
 		end
 	end
 
-	GameEvents.TeamSetHasTech.Add(SPTraitsTech)
+	GameEvents.PlayerSetHasTech.Add(SPTraitsTech)
 end
 
 if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_RUSSIA) then
@@ -267,20 +263,6 @@ if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_RUSSIA) then
 			local hex = ToHexFromGrid(Vector2(iPlotX, iPlotY));
 			Events.AddPopupTextEvent(HexToWorld(hex),
 				Locale.ConvertTextKey("[COLOR_BLUE]+{1_Num}[ICON_RESEARCH][ENDCOLOR]", iBonus));
-		end
-	end)
-
-	GameEvents.TeamSetHasTech.Add(function(iTeam, eTech, bAdopted)
-		if not (bAdopted and eTech == GameInfoTypes.TECH_INDUSTRIALIZATION) then
-			return;
-		end
-
-		for playerID, pPlayer in pairs(Players) do
-			if pPlayer:GetTeam() == iTeam and pPlayer:GetCivilizationType() == GameInfoTypes.CIVILIZATION_RUSSIA then
-				local capital = pPlayer:GetCapitalCity();
-				capital:SetNumRealBuilding(GameInfoTypes.BUILDING_TB_STRATEGIC_RICHES_IDEOLOGY, 1);
-				print("Russia: Strategic Riches ideology building added to capital");
-			end
 		end
 	end)
 end

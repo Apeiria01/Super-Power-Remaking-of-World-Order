@@ -5989,14 +5989,19 @@
 			<Text>[ICON_RES_IRON] Steel Warehouse</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_IRON_PROVIDER_HELP">
-			<Text>+5 additional [ICON_RES_IRON] Iron.[NEWLINE][NEWLINE]Must be built in Small Cities.</Text>
+			<Text>
+			+5 additional [ICON_RES_IRON] Iron.
+			[NEWLINE][ICON_BULLET]+1 [ICON_PRODUCTION] Production from each source of [ICON_RES_IRON] Iron worked by this City. 
+			[NEWLINE][ICON_BULLET]City must have at least an improvement of [ICON_RES_IRON] Iron.
+			[NEWLINE][ICON_BULLET]Must be built in Small Cities.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_BUILDING_RECYCLING_CENTER">
 			<Text>[ICON_RES_ALUMINUM] Recycling Center</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_RECYCLING_CENTER_HELP">
-			<Text>+5 additional [ICON_RES_ALUMINUM] Aluminum.[NEWLINE][NEWLINE]Must be built in Small Cities.</Text>
+			<Text>+3 additional [ICON_RES_ALUMINUM] Aluminum.[NEWLINE][NEWLINE]Must be built in Small Cities.</Text>
 		</Replace>
 
 
@@ -6013,7 +6018,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_COAL_COMPANY_HELP</Tag>
-			<Text>+5 additional [ICON_RES_COAL] Coal. [NEWLINE][NEWLINE]Must be built in Small Cities.</Text>
+			<Text>+3 additional [ICON_RES_COAL] Coal. [NEWLINE][NEWLINE]Must be built in Small Cities.</Text>
 		</Row>
 
 
