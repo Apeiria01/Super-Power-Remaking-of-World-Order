@@ -331,15 +331,15 @@ function OnCorpsArmeeSP(iPlayerID, iUnitID)
 			Heal3Unit:SetMoves(math.floor(Heal3Unit:MovesLeft() / (2 * GameDefines["MOVE_DENOMINATOR"])) *
 			GameDefines["MOVE_DENOMINATOR"]);
 		end
-		pUnit:Kill();
+		pUnit:Kill(true);
 		return;
 	elseif CorpsUnit then
 		CorpsUnit:SetHasPromotion(ArmeeID, true);
-		pUnit:Kill();
+		pUnit:Kill(true);
 		return;
 	elseif otherUnit then
 		otherUnit:SetHasPromotion(CorpsID, true);
-		pUnit:Kill();
+		pUnit:Kill(true);
 		return;
 	end
 
@@ -348,7 +348,7 @@ function OnCorpsArmeeSP(iPlayerID, iUnitID)
 	and not pUnit:IsNoTroops() 
 	and not (pUnit:GetLevel() > 1) 
 	then
-		pUnit:Kill();
+		pUnit:Kill(true);
 	end
 end
 

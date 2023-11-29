@@ -1036,7 +1036,7 @@ function MinorLimitUnits(iPlayer, iUnit)
     end
 
     if unit:IsCombatUnit() and unit:GetUnitCombatType() == GameInfoTypes.UNITCOMBAT_RECON and player:GetNumMilitaryUnits() > 5 * player:GetNumCities() then
-        unit:Kill();
+        unit:Kill(true);
         print("Minor Civ removed too many militia units!");
     end
 end
