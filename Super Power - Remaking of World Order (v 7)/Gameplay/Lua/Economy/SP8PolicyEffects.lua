@@ -68,7 +68,7 @@ function SPEPolicyUnitCreated(iPlayerID, iUnitID)
     end
 
 end
-Events.SerialEventUnitCreated.Add(SPEPolicyUnitCreated)
+GameEvents.UnitCreated.Add(SPEPolicyUnitCreated)
 
 -- ********************************************************
 -- POLICY_CITIZENSHIP

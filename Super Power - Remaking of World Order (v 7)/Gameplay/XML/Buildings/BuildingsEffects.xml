@@ -6894,12 +6894,6 @@
 		</Row>
 
 		<Row>
-			<BuildingType>BUILDING_COAL_COMPANY</BuildingType>
-			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-			<Flavor>15</Flavor>
-		</Row>
-
-		<Row>
 			<BuildingType>BUILDING_STEEL_MILL</BuildingType>
 			<FlavorType>FLAVOR_NUKE</FlavorType>
 			<Flavor>35</Flavor>

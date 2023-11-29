@@ -583,6 +583,11 @@
 			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
 			<Quantity>3</Quantity>
 		</Row>
+		<Row>
+			<PolicyType>POLICY_AI_MODERN</PolicyType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+			<Quantity>2</Quantity>
+		</Row>
 
 		<Row>
 			<PolicyType>POLICY_AI_WORLDWAR</PolicyType>

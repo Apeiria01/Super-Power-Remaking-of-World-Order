@@ -488,22 +488,19 @@
 			<PortraitIndex>29</PortraitIndex>
 			<IconAtlas>SPBalance_ATLAS</IconAtlas>
 		</Row>
-			
 
-		<!--<Row>
-			<Type>PROJECT_ORBITAL_STRIKE</Type>
-			<Description>TXT_KEY_PROJECT_ORBITAL_STRIKE</Description>
-			<Help>TXT_KEY_PROJECT_ORBITAL_STRIKE_HELP</Help>
-			<Civilopedia>TXT_KEY_PROJECT_ORBITAL_STRIKE_PEDIA</Civilopedia>
-			<TechPrereq>TECH_INTEGRATED_DEFENSE</TechPrereq>
+		<Row>
+			<Type>PROJECT_HEROIC_CARRIER</Type>
+			<Description>TXT_KEY_PROJECT_HEROIC_CARRIER</Description>
+			<Help>TXT_KEY_PROJECT_HEROIC_CARRIER_HELP</Help>
+			<Civilopedia>TXT_KEY_PROJECT_HEROIC_CARRIER_PEDIA</Civilopedia>
+			<TechPrereq>TECH_RADAR</TechPrereq>
 			<MaxGlobalInstances>1</MaxGlobalInstances>
 			<MaxTeamInstances>1</MaxTeamInstances>
-			<Cost>1800</Cost>
+			<Cost>560</Cost>
 			<PortraitIndex>29</PortraitIndex>
 			<IconAtlas>SPBalance_ATLAS</IconAtlas>
-		</Row>-->
-
-	
+		</Row>
 	</Projects>
 
 	<Project_Prereqs>
@@ -729,7 +726,7 @@
 		<Row>
 			<ProjectType>PROJECT_HEROIC_CARRIER</ProjectType>
 			<FlavorType>FLAVOR_AIR_CARRIER</FlavorType>
-			<Flavor>15</Flavor>
+			<Flavor>70</Flavor>
 		</Row>
 		<Row>
 			<ProjectType>PROJECT_TASKFORCE141</ProjectType>
@@ -813,33 +810,5 @@
 			<Flavor>950</Flavor>
 		</Row>
 
-
-		<!--<Row>
-			<ProjectType>PROJECT_ORBITAL_STRIKE</ProjectType>
-			<FlavorType>FLAVOR_RANGED</FlavorType>
-			<Flavor>950</Flavor>
-		</Row>
-		<Row>
-			<ProjectType>PROJECT_ORBITAL_STRIKE</ProjectType>
-			<FlavorType>FLAVOR_AIR</FlavorType>
-			<Flavor>950</Flavor>
-		</Row>-->
 	</Project_Flavors>
-	<Projects>		
-		<Row>
-			<Type>PROJECT_HEROIC_CARRIER</Type>
-			<Description>TXT_KEY_PROJECT_HEROIC_CARRIER</Description>
-			<Help>TXT_KEY_PROJECT_HEROIC_CARRIER_HELP</Help>
-			<Civilopedia>TXT_KEY_PROJECT_HEROIC_CARRIER_PEDIA</Civilopedia>
-			<TechPrereq>TECH_RADAR</TechPrereq>
-			<MaxGlobalInstances>1</MaxGlobalInstances>
-			<MaxTeamInstances>1</MaxTeamInstances>
-			<Cost>1700</Cost>
-			<PortraitIndex>29</PortraitIndex>
-			<IconAtlas>SPBalance_ATLAS</IconAtlas>
-		</Row>
-		</Projects>	
-
-
-
 </GameData>

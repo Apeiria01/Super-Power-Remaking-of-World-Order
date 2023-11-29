@@ -5,7 +5,7 @@ include("UtilityFunctions.lua");
 include("PlotIterators.lua");
 -------------------------------------------------------------------------New Trait Effects-----------------------------------------------------------------------
 if Game.GetGameSpeedType() == 3 then
-	Events.SerialEventUnitCreated.Add(
+	GameEvents.UnitCreated.Add(
 		function(iPlayerID, iUnitID)
 			local pPlayer = Players[iPlayerID]
 			if pPlayer == nil then return end

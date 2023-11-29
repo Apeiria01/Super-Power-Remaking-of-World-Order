@@ -7749,18 +7749,6 @@
 		<Row Tag="TXT_KEY_PROJECT_PARTICLE_CANNON_PEDIA">
 			<Text>粒子束武器是利用加速器把质子和中子等粒子加速到数万-20万km/s的高速，并通过电极或磁集束形成非常细的粒子束流发射出去，用于轰击目标。按粒子是否带电可分为带电粒子束武器和中性粒子束武器。粒子束武器在太空可以破坏数十公里以外的目标；但在大气中威力衰减，只能攻击数公里以外的目标。[NEWLINE][NEWLINE]21世纪，武器的发展已经进入原子和分子世界，核武器就是应用了原子理论。原子物质中央的质子带正电，电子带负电，中子是中性的。被称为粒子的物质是指电子、质子、中子和其它带正、负电的离子。粒子只有被加速到光速才能作为武器使用。粒子束发射到空间，可熔化或破坏目标，而且在命中目标后，还会发生二次磁场作用，对目标进行破坏。[NEWLINE][NEWLINE]粒子束武器发射出高能定向强流、接近光速的亚原子束（带电粒子束和中性粒子束），以巨大的动能击毁卫星和来袭的洲际弹道导弹。即使不能直接摧毁核弹头，粒子束产生的强大电磁场脉冲热也会把导弹的电子设备烧毁，或利用目标周围发生的γ射线和X射线使目标的电子设备失效或受到破坏。带电粒子束武器通常在大气层内使用。中性粒子束武器在大气层外使用，主要用于拦截助推段和中段飞行的洲际弹道导弹。</Text>
 		</Row>
-
-		<!--<Row Tag="TXT_KEY_PROJECT_ORBITAL_STRIKE">
-			<Text>天基武器系统</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROJECT_ORBITAL_STRIKE_HELP">
-			<Text>只有[COLOR_POSITIVE_TEXT]首个[ENDCOLOR]完成此项目的文明可以建造天基打击装置：[COLOR_YIELD_GOLD]上帝之杖[ENDCOLOR]。
-			</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROJECT_ORBITAL_STRIKE_PEDIA">
-			<Text>上帝之杖全名为上帝之杖天基动能武器系统，该系统由位于低轨道的两颗卫星平台组成，其中一颗卫星搭载有名为“上帝之杖”的金属棒，该金属棒由钨、钛或铀金属制成，直径30厘米、长6.1米、重量达几吨。上帝之杖天基动能武器系统将在太空发射，其发射的钨杆弹能以流星的速度（39000km/h）击中目标，其设想攻击能力强大、打击范围广，未来可用于替代核武器。[NEWLINE][NEWLINE]事实上,金属棒所具有的动能远远小于核武器能释放的能量，并且因为动能释放时间越短造成的瞬时压力才能越大，“上帝之杖”的效果可能并不如预期。</Text>
-		</Row>-->
-
 		<Row Tag="TXT_KEY_PROJECT_NAVAL_EXPLORATION">
 			<Text>新航路开辟</Text>
 		</Row>
@@ -14901,13 +14889,7 @@
 		<Replace Tag="TXT_KEY_PROMOTION_MOVELIFT_V_HELP">
 			<Text>具有该晋升的单位-5[ICON_MOVES]移动力剩余！</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_GROUP_BUILD">
-			<Text>集群建造标记</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_GROUP_BUILD_HELP">
-			<Text>该单位正在集群建造设施！</Text>
-		</Replace>
-			
+		
 		<!-- UI - Super Group Manager -->
 		<Replace Tag="TXT_KEY_AIRCRAFT_ON_TT">
 			<Text>将该单位加入编队。</Text>

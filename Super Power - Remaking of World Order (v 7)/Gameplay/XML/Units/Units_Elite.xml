@@ -1838,13 +1838,6 @@
 			<UnitType>UNIT_PARTICLE_CANNON</UnitType>
 			<PromotionType>PROMOTION_INDIRECT_FIRE</PromotionType>
 		</Row>
-
-
-		<!--<Row>
-			<UnitType>UNIT_ORBITAL_STRIKE</UnitType>
-			<PromotionType>PROMOTION_EVASION_III</PromotionType>
-		</Row>-->
-
 	</Unit_FreePromotions>
 
 	<Unit_AITypes>
@@ -2043,10 +2036,6 @@
 			<UnitType>UNIT_PARTICLE_CANNON</UnitType>
 			<UnitAIType>UNITAI_ASSAULT_SEA</UnitAIType>
 		</Row>
-		<!--<Row>
-			<UnitType>UNIT_ORBITAL_STRIKE</UnitType>
-			<UnitAIType>UNITAI_MISSILE_AIR</UnitAIType>
-		</Row>-->
 	</Unit_AITypes>
 
 	
@@ -2603,7 +2592,7 @@
 		</Row>
 		<Row>
 			<UnitType>UNIT_ENTERPRISE</UnitType>
-			<ResourceType>RESOURCE_IRON</ResourceType>
+			<ResourceType>RESOURCE_OIL</ResourceType>
 			<Cost>4</Cost>
 		</Row>
 		<Row>
@@ -2613,7 +2602,7 @@
 		</Row>
 		<Row>
 			<UnitType>UNIT_HORNET</UnitType>
-			<ResourceType>RESOURCE_IRON</ResourceType>
+			<ResourceType>RESOURCE_OIL</ResourceType>
 			<Cost>4</Cost>
 		</Row>
 		<Row>
@@ -2890,7 +2879,7 @@
 			<PrereqTech>TECH_COMBINED_ARMS</PrereqTech>
 			<BaseSightRange>4</BaseSightRange>
 			<Combat>300</Combat>
-			<Cost>-1</Cost>
+			<Cost>3800</Cost>
 			<Moves>9</Moves>
 			<HurryCostModifier>-1</HurryCostModifier>
 			<CombatClass>UNITCOMBAT_CARRIER</CombatClass>
@@ -3035,75 +3024,4 @@
 		</Row>
 		
 	</Unit_FreePromotions>
-		
-			
-	<Buildings>
-		<Row>
-			<Type>BUILDING_HEROIC_CARRIER_PROJECT</Type>
-			<BuildingClass>BUILDINGCLASS_HEROIC_CARRIER_PROJECT</BuildingClass>
-			<Cost>-1</Cost>
-			<Description>TXT_KEY_PROJECT_HEROIC_CARRIER</Description>
-			<Civilopedia>TXT_KEY_PROJECT_HEROIC_CARRIER_PEDIA</Civilopedia>
-			<Help>TXT_KEY_PROJECT_HEROIC_CARRIER_HELP</Help>
-			<NukeImmune>true</NukeImmune>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<MinAreaSize>-1</MinAreaSize>
-			<NeverCapture>true</NeverCapture>
-			<IconAtlas>EXPANSION2_WONDER_ATLAS</IconAtlas>
-			<PortraitIndex>7</PortraitIndex>
-			<GreatWorkCount>-1</GreatWorkCount>
-		</Row>
-		<Row>
-			<Type>BUILDING_HEROIC_CARRIER_START</Type>
-			<BuildingClass>BUILDINGCLASS_HEROIC_CARRIER_START</BuildingClass>
-			<Cost>-1</Cost>
-			<Description>TXT_KEY_PROJECT_HEROIC_CARRIER</Description>
-			<Civilopedia>TXT_KEY_PROJECT_HEROIC_CARRIER_PEDIA</Civilopedia>
-			<Help>TXT_KEY_PROJECT_HEROIC_CARRIER_HELP</Help>
-			<NukeImmune>true</NukeImmune>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<MinAreaSize>-1</MinAreaSize>
-			<NeverCapture>true</NeverCapture>
-			<IconAtlas>EXPANSION2_WONDER_ATLAS</IconAtlas>
-			<PortraitIndex>8</PortraitIndex>
-			<GreatWorkCount>-1</GreatWorkCount>
-		</Row>
-		<!--
-		<Row>
-			<Type>BUILDING_CARRIER_FIGHTER</Type>
-			<BuildingClass>BUILDINGCLASS_CARRIER_FIGHTER</BuildingClass>
-			<Cost>-1</Cost>
-			<Description>TXT_KEY_BUILDING_CARRIER_FIGHTER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CARRIER_FIGHTER</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CARRIER_FIGHTER_HELP</Help>
-			<NukeImmune>true</NukeImmune>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<MinAreaSize>-1</MinAreaSize>
-			<NeverCapture>true</NeverCapture>
-			<IconAtlas>EXPANSION2_WONDER_ATLAS</IconAtlas>
-			<PortraitIndex>8</PortraitIndex>
-		</Row>
-		-->
-	</Buildings>
-	
-	<BuildingClasses>
-		<Row>
-			<Type>BUILDINGCLASS_HEROIC_CARRIER_PROJECT</Type>
-			<DefaultBuilding>BUILDING_HEROIC_CARRIER_PROJECT</DefaultBuilding>
-			<Description>TXT_KEY_PROJECT_HEROIC_CARRIER</Description>
-		</Row>
-		<Row>
-			<Type>BUILDINGCLASS_HEROIC_CARRIER_START</Type>
-			<DefaultBuilding>BUILDING_HEROIC_CARRIER_START</DefaultBuilding>
-			<Description>TXT_KEY_PROJECT_HEROIC_CARRIER</Description>
-		</Row>
-		<!--
-		<Row>
-			<Type>BUILDINGCLASS_CARRIER_FIGHTER</Type>
-			<DefaultBuilding>BUILDING_CARRIER_FIGHTER</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_CARRIER_FIGHTER_HELP</Description>
-		</Row>
-		-->
-	</BuildingClasses>
-	
 </GameData>

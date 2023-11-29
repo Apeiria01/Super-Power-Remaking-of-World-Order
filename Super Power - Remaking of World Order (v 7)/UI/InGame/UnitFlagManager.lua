@@ -1079,7 +1079,7 @@ function RemoveGroupMark(pUnit)
         iMoves = math.min(pUnit:GetMoves() + iChangeMoves, pUnit:MaxMoves());
         if not Players[Game.GetActivePlayer()]:IsTurnActive() then
             pUnit:SetMoves(pUnit:MaxMoves());
-        elseif not pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_GROUP_BUILD"].ID) then
+        else
             pUnit:SetMoves(iMoves);
         end
 
@@ -1127,7 +1127,6 @@ function RemoveGroupMark(pUnit)
         pUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_GROUP_MOVE_X_VIII"].ID, false);
         pUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_GROUP_MOVE_X_IX"].ID, false);
         pUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_GROUP_MOVE_X_X"].ID, false);
-        pUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_GROUP_BUILD"].ID, false);
     end
 end
 
@@ -1969,9 +1968,6 @@ function OnGroupStateChange()
             if g_DoGroupAlertUnit == nil then
                 g_DoGroupAlertUnit = thisUnit;
             end
-            -- Build Improvement
-        elseif thisUnit:GetBuildType() ~= -1 then
-            GroupBuild(thisUnit);
         end
 
         -- SetUP to Ranged Attack
@@ -2395,72 +2391,6 @@ function GroupSetUP(pOUnit)
     OnGroupMoveSet(pPlot);
 end
 
-function GroupBuild(pOUnit)
-    -- Build Improvement
-    if pOUnit == nil or pOUnit:GetPlot() == nil then
-        return;
-    end
-    local pPlot = pOUnit:GetPlot();
-    if pPlot ~= nil and pPlot:GetImprovementType() == -1 and pOUnit:GetBuildType() ~= -1 then
-        local iBuildType = pOUnit:GetBuildType();
-        for i = 0, pPlot:GetNumUnits() - 1 do
-            local pUnit = pPlot:GetUnit(i);
-            if pUnit ~= pOUnit and pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_GROUP"].ID)
-                and pUnit:GetUnitClassType() == pOUnit:GetUnitClassType() and pUnit:CanMove()
-            then
-                if pUnit:WorkRate(true, iBuildType) > 0 then
-                    if not pOUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_GROUP_BUILD"].ID) then
-                        pOUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_GROUP_BUILD"].ID, true);
-                    end
-                    if not pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_GROUP_BUILD"].ID) then
-                        pUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_GROUP_BUILD"].ID, true);
-                    end
-                    pPlot:ChangeBuildProgress(iBuildType, pUnit:WorkRate(true, iBuildType), pUnit:GetTeam());
-                    pUnit:SetMoves(0);
-                end
-                --[[
-				pOUnit:DoCommand(CommandTypes.COMMAND_CANCEL);
-				if ( pUnit:CanBuild(pPlot, iBuildType) )then
-					local action = nil;
-					for iAction = 0, #GameInfoActions, 1 do
-						if  GameInfoActions[iAction]
-						and GameInfoActions[iAction].SubType == ActionSubTypes.ACTIONSUBTYPE_BUILD
-						and GameInfoActions[iAction].MissionData == iBuildType
-						then
-							action = GameInfoActions[iAction];
-							break;
-						end
-					end
-					if action ~= nil then
-						UI.SelectUnit(pUnit);
-						Game.HandleAction( action );
-						if not pOUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_GROUP_BUILD"].ID) then
-							pOUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_GROUP_BUILD"].ID, true);
-						end
-						pOUnit = pUnit;
-					end
-				end
-				]]
-            end
-        end
-    end
-end
-
-function OnGroupBuildTurnStart()
-    local iPlayerID = Game.GetActivePlayer();
-    local pPlayer = Players[iPlayerID];
-    if pPlayer ~= nil and pPlayer:IsAlive() then
-        for pUnit in pPlayer:Units() do
-            if pUnit and pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_GROUP_BUILD"].ID) then
-                if pUnit:GetBuildType() ~= -1 and pUnit:GetPlot() ~= nil and pUnit:GetPlot():GetImprovementType() == -1 then
-                    GroupBuild(pUnit);
-                end
-            end
-        end
-    end
-end
-
-Events.ActivePlayerTurnStart.Add(OnGroupBuildTurnStart)
 
 function GroupMove(pOUnit, pOldPlot)
     -- Move or Rebase
