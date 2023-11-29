@@ -8689,24 +8689,6 @@
 		<Row Tag="TXT_KEY_PROJECT_PARTICLE_CANNON_PEDIA">
 			<Text>A particle-beam weapon uses a high-energy beam of atomic or subatomic particles to damage the target by disrupting its atomic and/or molecular structure. A particle-beam weapon is a type of directed-energy weapon, which directs energy in a particular and focused direction using particles with negligible mass. </Text>
 		</Row>
-		
-
-		<!--<Row Tag="TXT_KEY_PROJECT_ORBITAL_STRIKE">
-			<Text>Kinetic Bombardment System Project</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROJECT_ORBITAL_STRIKE_HELP">
-			<Text>Only the [COLOR_POSITIVE_TEXT]First[ENDCOLOR] civilization finishing this project is allowed to build the kinetic orbital strike unit: [COLOR_YIELD_GOLD]Kinetic Bombardment System[ENDCOLOR].
-			</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROJECT_ORBITAL_STRIKE_PEDIA">
-			<Text>A kinetic bombardment or a kinetic orbital strike is the hypothetical act of attacking a planetary surface with an inert projectile, where the destructive force comes from the kinetic energy of the projectile impacting at very high velocities. The concept is often encountered in science fiction and originated during the Cold War.</Text>
-		</Row>-->
-		
-		
-		
-		
-		
-		
 
 		<Row Tag="TXT_KEY_PROJECT_NAVAL_EXPLORATION">
 			<Text>Naval Exploration Project</Text>
@@ -14907,9 +14889,9 @@
 		<Replace Tag="TXT_KEY_PROMOTION_EVASION_II" >
 			<Text>Evasion (50)</Text>
 		</Replace>
-		<!--<Row Tag="TXT_KEY_PROMOTION_EVASION_III" >
+		<Row Tag="TXT_KEY_PROMOTION_EVASION_III" >
 			<Text>Evasion (100)</Text>
-		</Row>-->
+		</Row>
 
 		<Replace Tag="TXT_KEY_PROMOTION_OCEAN_IMPASSABLE" >
 			<Text>Cannot enter Ocean Tiles [COLOR_NEGATIVE_TEXT]Outside[ENDCOLOR] YOUR Territory.</Text>
@@ -16735,12 +16717,7 @@
 		<Replace Tag="TXT_KEY_PROMOTION_MOVELIFT_V_HELP">
 			<Text>Unit with this Promotion will -5 [ICON_MOVES] Move Lift!</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_GROUP_BUILD">
-			<Text>Group Build Mark</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_GROUP_BUILD_HELP">
-			<Text>Unit with this Promotion is building Improvement in Group!</Text>
-		</Replace>
+		
 		<!-- UI - Super Group Manager -->
 		<Replace Tag="TXT_KEY_AIRCRAFT_ON_TT">
 			<Text>Add this Unit into formation.</Text>

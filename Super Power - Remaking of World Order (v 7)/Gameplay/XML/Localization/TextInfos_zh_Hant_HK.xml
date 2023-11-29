@@ -7637,18 +7637,6 @@
 		<Row Tag="TXT_KEY_PROJECT_PARTICLE_CANNON_PEDIA">
 			<Text>粒子束武器是利用加速器把質子和中子等粒子加速到數萬-20萬km/s的高速，並通過電極或磁集束形成非常細的粒子束流發射出去，用於轟擊目標。按粒子是否帶電可分為帶電粒子束武器和中性粒子束武器。粒子束武器在太空可以破壞數十公里以外的目標；但在大氣中威力衰減，只能攻擊數公里以外的目標。[NEWLINE][NEWLINE]21世紀，武器的發展已經進入原子和分子世界，核武器就是應用了原子理論。原子物質中央的質子帶正電，電子帶負電，中子是中性的。被稱為粒子的物質是指電子、質子、中子和其它帶正、負電的離子。粒子只有被加速到光速才能作為武器使用。粒子束髮射到空間，可熔化或破壞目標，而且在命中目標後，還會發生二次磁場作用，對目標進行破壞。[NEWLINE][NEWLINE]粒子束武器發射出高能定向強流、接近光速的亞原子束（帶電粒子束和中性粒子束），以巨大的動能擊毀衛星和來襲的洲際彈道導彈。即使不能直接摧毀核彈頭，粒子束產生的強大電磁場脈衝熱也會把導彈的電子設備燒毀，或利用目標周圍發生的γ射線和X射線使目標的電子設備失效或受到破壞。帶電粒子束武器通常在大氣層內使用。中性粒子束武器在大氣層外使用，主要用於攔截助推段和中段飛行的洲際彈道導彈。</Text>
 		</Row>
-		
-		<!--<Row Tag="TXT_KEY_PROJECT_ORBITAL_STRIKE">
-			<Text>天基武器系統</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROJECT_ORBITAL_STRIKE_HELP">
-			<Text>只有[COLOR_POSITIVE_TEXT]首個[ENDCOLOR]完成此項目的文明可以建造天基打擊裝置：[COLOR_YIELD_GOLD]上帝之杖[ENDCOLOR]。
-			</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROJECT_ORBITAL_STRIKE_PEDIA">
-			<Text>上帝之杖全名為上帝之杖天基動能武器系統，該系統由位於低軌道的兩顆衛星平臺組成，其中一顆衛星搭載有名為“上帝之杖”的金屬棒，該金屬棒由鎢、鈦或鈾金屬製成，直徑30釐米、長6.1米、重量達幾噸。上帝之杖天基動能武器系統將在太空發射，其發射的鎢杆彈能以流星的速度（39000km/h）擊中目標，其設想攻擊能力強大、打擊範圍廣，未來可用於替代核武器。[NEWLINE][NEWLINE]事實上,金屬棒所具有的動能遠遠小於核武器能釋放的能量，並且因為動能釋放時間越短造成的瞬時壓力才能越大，“上帝之杖”的效果可能並不如預期。</Text>
-		</Row>-->
-		
 		<Row Tag="TXT_KEY_PROJECT_NAVAL_EXPLORATION">
 			<Text>新航路開闢</Text>
 		</Row>
@@ -14708,12 +14696,6 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_MOVELIFT_V_HELP">
 			<Text>具有該晉升的單位-5[ICON_MOVES]移動力剩余！</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_GROUP_BUILD">
-			<Text>集群建造標記</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_GROUP_BUILD_HELP">
-			<Text>該單位正在集群建造設施！</Text>
 		</Replace>
 		
 		<!-- UI - Super Group Manager -->
