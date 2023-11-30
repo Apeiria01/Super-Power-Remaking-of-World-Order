@@ -75,3 +75,5 @@ UPDATE Improvements Set ExtraScore = 250 WHERE Type = 'IMPROVEMENT_MOAI';
 UPDATE Improvements Set ExtraScore = 300 WHERE Type = 'IMPROVEMENT_MAYA_ALTAR';
 UPDATE Improvements Set ExtraScore = 700 WHERE Type = 'IMPROVEMENT_ETHIOPIA_COFFEE';
 UPDATE Improvements Set ExtraScore = 900 WHERE Type = 'IMPROVEMENT_SHOSHONE_WILDDOME';
+UPDATE Improvements Set ExtraScore = 300 WHERE Type = 'IMPROVEMENT_CREATE_FOREST_MOD';
+UPDATE Improvements Set ExtraScore = 300 WHERE Type = 'IMPROVEMENT_CREATE_JUNGLE_MOD';
