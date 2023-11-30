@@ -34,7 +34,6 @@ function NewUnitCreationRules(playerID)
 		return
 	end
 
-	print("Player " .. playerID .. " - TurnStart");
 	-- Fix Embarked Graphic Reoverride for POLYNESIAN & DANISH when they into ERA_INDUSTRIAL
 	if (player:GetEmbarkedGraphicOverride() == "ART_DEF_UNIT_U_POLYNESIAN_WAR_CANOE"
 			or player:GetEmbarkedGraphicOverride() == "ART_DEF_UNIT_U_DANISH_LONGBOAT")
