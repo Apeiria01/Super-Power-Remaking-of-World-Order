@@ -144,22 +144,21 @@ if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_HUNS) then
 	Events.SerialEventCityDestroyed.Add(HunDestroyCity)
 end
 
-----Reddit to avoid triggering when getting city peacefully---By HMS
+----Reddit to avoid triggering when getting city peacefully
 if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_ASSYRIA) then
-	function AssyriaCityCapture(oldPlayerID, bIsCapital, iX, iY, newPlayerID, bConquest, iGreatWorksPresent,
-								iGreatWorksXferred) -- Assyria gain population after capturing cities
-		print("conquested")
+	-- Assyria gain population after capturing cities
+	function AssyriaCityCapture(oldPlayerID, bIsCapital, iX, iY, newPlayerID, iOldPopulation, bConquest, iGreatWorksPresent, iGreatWorksXferred)
+		if not bConquest then
+			print("trading city is not availiable for assyria'ua")
+			return
+		end
+		
 		local NewPlayer = Players[newPlayerID]
 		local pPlot = Map.GetPlot(iX, iY)
 		local pCity = pPlot:GetPlotCity()
 		local OldPlayer = Players[oldPlayerID]
 		if NewPlayer == nil or OldPlayer == nil then
 			print("No players")
-			return
-		end
-
-		if not PlayersAtWar(NewPlayer, OldPlayer) then
-			print("trading city is not availiable for assyria'ua")
 			return
 		end
 
@@ -189,8 +188,7 @@ end
 -- Austria UA effects
 -- TODO(catgrep): will implement in DLL in the future
 if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_AUSTRIA) then
-	function AustriaAnnexCityState(oldPlayerID, bIsCapital, iX, iY, newPlayerID, bConquest, iGreatWorksPresent,
-								   iGreatWorksXferred)
+	function AustriaAnnexCityState(oldPlayerID, bIsCapital, iX, iY, newPlayerID, iOldPopulation, bConquest, iGreatWorksPresent, iGreatWorksXferred)
 		local NewPlayer = Players[newPlayerID];
 		local pPlot = Map.GetPlot(iX, iY);
 		local pCity = pPlot:GetPlotCity();

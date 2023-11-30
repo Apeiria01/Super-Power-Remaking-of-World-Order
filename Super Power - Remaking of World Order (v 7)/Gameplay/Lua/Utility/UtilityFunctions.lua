@@ -7,31 +7,21 @@
 -------------If two players are AT WAR?
 
 function PlayersAtWar(iPlayer, ePlayer)
-	local iTeam = Teams[iPlayer:GetTeam()];
-	local eTeamIndex = ePlayer:GetTeam();
-	if iTeam:IsAtWar(eTeamIndex) then
-		return true;
-	else
-		return false;
-	end
+	return iPlayer:IsAtWarWith(ePlayer:GetID())
 end
 
 ---------If the AI player is at war with Human?
 
 function PlayerAtWarWithHuman(player)
 	local CurrentPlayerTeam = Teams[player:GetTeam()]
-	local IsWarWithHuman = false;
-
+	
 	for playerID, HumanPlayer in pairs(Players) do
-		if IsWarWithHuman then
-			break;
-		end
 		if HumanPlayer:IsHuman() and CurrentPlayerTeam:IsAtWar(HumanPlayer:GetTeam()) then
 			print("Human is at war with this AI!")
-			IsWarWithHuman = true;
+			return true;
 		end
 	end
-	return IsWarWithHuman;
+	return false;
 end
 
 ---------If the AI has the chance to become the Boss?

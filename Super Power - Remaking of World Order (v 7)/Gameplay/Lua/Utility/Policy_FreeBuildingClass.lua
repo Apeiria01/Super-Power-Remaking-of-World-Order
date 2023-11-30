@@ -140,7 +140,7 @@ function PolicyBuildingOnCityFound(playerID, iX, iY)
 end
 GameEvents.PlayerCityFounded.Add(PolicyBuildingOnCityFound);
 
-function PolicyBuildingOnCityCapture(oldPlayerID, bCapital, iX, iY, newPlayerID, conquest, conquest2)
+function PolicyBuildingOnCityCapture(oldPlayerID, bCapital, iX, iY, newPlayerID, iOldPopulation, conquest, conquest2)
 	if Players[oldPlayerID] == nil or Players[newPlayerID] == nil or Map.GetPlot(iX, iY) == nil or not Map.GetPlot(iX, iY):IsCity() then
 		return;
 	end

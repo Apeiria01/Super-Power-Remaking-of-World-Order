@@ -1,4 +1,67 @@
 -- New Handicap
+local RangedUnitID = GameInfo.UnitPromotions["PROMOTION_ARCHERY_COMBAT"].ID
+local CitySiegeID = GameInfo.UnitPromotions["PROMOTION_CITY_SIEGE"].ID
+local LandAOEUnitID = GameInfo.UnitPromotions["PROMOTION_SPLASH_DAMAGE"].ID
+
+local HitandRunID = GameInfo.UnitPromotions["PROMOTION_HITANDRUN"].ID
+local HelicopterID = GameInfo.UnitPromotions["PROMOTION_HELI_ATTACK"].ID
+
+local NavalHitandRunID = GameInfo.UnitPromotions["PROMOTION_NAVAL_HIT_AND_RUN"].ID
+local NavalRangedID = GameInfo.UnitPromotions["PROMOTION_NAVAL_RANGED_SHIP"].ID
+local SubmarineID = GameInfo.UnitPromotions["PROMOTION_SUBMARINE_COMBAT"].ID
+
+local CapitalShipID = GameInfo.UnitPromotions["PROMOTION_NAVAL_CAPITAL_SHIP"].ID
+local CarrierID = GameInfo.UnitPromotions["PROMOTION_CARRIER_UNIT"].ID
+
+local SSBNID = GameInfo.UnitPromotions["PROMOTION_CARGO_IX"].ID
+
+local BomberID = GameInfo.UnitPromotions["PROMOTION_STRATEGIC_BOMBER"].ID
+local AirAttackID = GameInfo.UnitPromotions["PROMOTION_AIR_ATTACK"].ID
+
+local CollDamageLV1ID = GameInfo.UnitPromotions["PROMOTION_COLLATERAL_DAMAGE_1"].ID
+local CollDamageLV2ID = GameInfo.UnitPromotions["PROMOTION_COLLATERAL_DAMAGE_2"].ID
+
+local Barrage1ID = GameInfo.UnitPromotions["PROMOTION_BARRAGE_1"].ID
+local Barrage2ID = GameInfo.UnitPromotions["PROMOTION_BARRAGE_2"].ID
+local Barrage3ID = GameInfo.UnitPromotions["PROMOTION_BARRAGE_3"].ID
+
+local Accuracy1ID = GameInfo.UnitPromotions["PROMOTION_ACCURACY_1"].ID
+local Accuracy2ID = GameInfo.UnitPromotions["PROMOTION_ACCURACY_2"].ID
+
+local Sunder1ID = GameInfo.UnitPromotions["PROMOTION_SUNDER_1"].ID
+local Sunder2ID = GameInfo.UnitPromotions["PROMOTION_SUNDER_2"].ID
+
+local AOEAttack1ID = GameInfo.UnitPromotions["PROMOTION_CLUSTER_ROCKET_1"].ID
+local AOEAttack2ID = GameInfo.UnitPromotions["PROMOTION_CLUSTER_ROCKET_2"].ID
+local CapitalShipArmor1ID = GameInfo.UnitPromotions["PROMOTION_ARMOR_BATTLESHIP_1"].ID
+local CapitalShipArmor2ID = GameInfo.UnitPromotions["PROMOTION_ARMOR_BATTLESHIP_2"].ID
+
+local NapalmBomb1ID = GameInfo.UnitPromotions["PROMOTION_NAPALMBOMB_1"].ID
+local NapalmBomb2ID = GameInfo.UnitPromotions["PROMOTION_NAPALMBOMB_2"].ID
+local NapalmBomb3ID = GameInfo.UnitPromotions["PROMOTION_NAPALMBOMB_3"].ID
+local DestroySupply1ID = GameInfo.UnitPromotions["PROMOTION_DESTROY_SUPPLY_1"].ID
+local DestroySupply2ID = GameInfo.UnitPromotions["PROMOTION_DESTROY_SUPPLY_2"].ID
+
+local AirBomb1ID = GameInfo.UnitPromotions["PROMOTION_AIR_BOMBARDMENT_1"].ID
+local AirBomb2ID = GameInfo.UnitPromotions["PROMOTION_AIR_BOMBARDMENT_2"].ID
+local AirBomb3ID = GameInfo.UnitPromotions["PROMOTION_AIR_BOMBARDMENT_3"].ID
+local AirTarget1ID = GameInfo.UnitPromotions["PROMOTION_AIR_TARGETING_1"].ID
+local AirTarget2ID = GameInfo.UnitPromotions["PROMOTION_AIR_TARGETING_2"].ID
+local AirTarget3ID = GameInfo.UnitPromotions["PROMOTION_AIR_TARGETING_3"].ID
+
+local AIRangeID = GameInfo.UnitPromotions["PROMOTION_RANGE"].ID
+
+local AISPForceID = GameInfo.UnitPromotions["PROMOTION_SPECIAL_FORCES_COMBAT"].ID
+
+local SetUpID = GameInfo.UnitPromotions["PROMOTION_MUST_SET_UP"].ID
+
+local MilitiaUnitID = GameInfo.UnitPromotions["PROMOTION_MILITIA_COMBAT"].ID
+
+local CarrierSupply1ID = GameInfo.UnitPromotions["PROMOTION_CARRIER_SUPPLY_1"].ID
+local CarrierSupply2ID = GameInfo.UnitPromotions["PROMOTION_CARRIER_SUPPLY_2"].ID
+local CarrierSupply3ID = GameInfo.UnitPromotions["PROMOTION_CARRIER_SUPPLY_3"].ID
+local CarrierAntiAir1ID = GameInfo.UnitPromotions["PROMOTION_CARRIER_FIGHTER_ANTI_AIR_1"].ID
+local CarrierAntiAir2ID = GameInfo.UnitPromotions["PROMOTION_CARRIER_FIGHTER_ANTI_AIR_2"].ID
 ---------------------------------------------Help AI to catch up with human----------------------------------------------------
 -----------Research Check
 function CheckHumanResearch(ePlayer)
@@ -202,12 +265,12 @@ function PlayerIntoNewEra(playerID, era) -- AI will get bonus when Human Player 
     -- Minor Civs get bouns after industrial era
     if player:IsMinorCiv() and player:GetCapitalCity() and era >= 4 then
         local CaptialCity = player:GetCapitalCity()
-        CaptialCity:SetNumRealBuilding(GameInfoTypes["BUILDING_GRAIN_DEPOT"], 1)
-        CaptialCity:SetNumRealBuilding(GameInfoTypes["BUILDING_MECHANIZED_FARM"], 1)
-        CaptialCity:SetNumRealBuilding(GameInfoTypes["BUILDING_TAP_WATER_SUPPLY"], 1)
-        CaptialCity:SetNumRealBuilding(GameInfoTypes["BUILDING_HOSPITAL"], 1)
-        CaptialCity:SetNumRealBuilding(GameInfoTypes["BUILDING_LIBRARY"], 1)
-        CaptialCity:SetNumRealBuilding(GameInfoTypes["BUILDING_PUBLIC_SCHOOL"], 1)
+        CaptialCity:SetNumFreeBuilding(GameInfoTypes["BUILDING_GRAIN_DEPOT"], 1)
+        CaptialCity:SetNumFreeBuilding(GameInfoTypes["BUILDING_MECHANIZED_FARM"], 1)
+        CaptialCity:SetNumFreeBuilding(GameInfoTypes["BUILDING_TAP_WATER_SUPPLY"], 1)
+        CaptialCity:SetNumFreeBuilding(GameInfoTypes["BUILDING_HOSPITAL"], 1)
+        CaptialCity:SetNumFreeBuilding(GameInfoTypes["BUILDING_LIBRARY"], 1)
+        CaptialCity:SetNumFreeBuilding(GameInfoTypes["BUILDING_PUBLIC_SCHOOL"], 1)
         print("Minor civ get post-industrial bonus!")
     end
 
@@ -275,13 +338,9 @@ Events.SerialEventCityPopulationChanged.Add(AIAutoAnnexCity)
 
 function AIUnitsAssist(playerID)
     local player = Players[playerID]
+    if player == nil then return end
 
-    if player == nil then
-        print("No players")
-        return
-    end
-
-    if player:IsMinorCiv() or player:IsBarbarian() or player:IsHuman() then
+    if player:IsHuman() or not player:IsMajorCiv() then
         return
     end
 
@@ -290,65 +349,8 @@ function AIUnitsAssist(playerID)
         return
     end
 
-    local CarrierID = GameInfo.UnitPromotions["PROMOTION_CARRIER_UNIT"].ID
-    local SPForceID = GameInfo.UnitPromotions["PROMOTION_SPECIAL_FORCES_COMBAT"].ID
-    local StgBomberID = GameInfo.UnitPromotions["PROMOTION_STRATEGIC_BOMBER"].ID
-
-    local AICityCount = player:GetNumCities()
-
-    if AICityCount > 1 then
-
+    if player:GetNumCities() > 1 and PlayerAtWarWithHuman(player) then
         for unit in player:Units() do
-            ----------------------AI air attack human cities	
-            if unit:IsHasPromotion(SPForceID) or unit:IsHasPromotion(StgBomberID) then
-                if PlayerAtWarWithHuman(player) then
-                    for playerID, Humanplayer in pairs(Players) do
-                        if Humanplayer and Humanplayer:IsHuman() then
-                            -------------Pick up random human city to attack
-                            local TargetCities = {}
-                            local TargetCityCounter = 0
-                            for pCity in Humanplayer:Cities() do
-                                local cityPop = pCity:GetPopulation()
-                                if cityPop > 15 then
-                                    TargetCities[TargetCityCounter] = pCity
-                                    TargetCityCounter = TargetCityCounter + 1
-                                end
-                            end
-                            if (TargetCityCounter > 0) then
-                                local iRandChoice = Game.Rand(TargetCityCounter, "Choosing random city")
-                                local targetCity = TargetCities[iRandChoice]
-                                local plot = targetCity
-                                local plotX = plot:GetX()
-                                local plotY = plot:GetY()
-                                local unitPlot = unit:GetPlot()
-
-                                -----------------Paradrop!
-                                if unit:GetDomainType() == DomainTypes.DOMAIN_LAND and unit:CanParadropAt(unitPlot, plotX + 1, plotY) then
-                                    if targetCity:IsCapital() or targetCity:GetPopulation() > 50 then
-                                        unit:SetXY(plotX + 1, plotY)
-                                        unit:JumpToNearestValidPlot()
-                                        unit:SetMadeAttack(true)
-                                        print("AI paradrop at human's city!")
-                                    end
-                                end
-
-                                if unit:GetDomainType() == DomainTypes.DOMAIN_AIR and unit:CanRangeStrikeAt(plotX, plotY) then
-
-                                    local unitCount = plot:GetNumUnits()
-                                    if unitCount <= 2 then ---------Attack only when no patrol in the city!
-                                        unit:RangeStrike(plotX, plotY)
-                                        unit:SetMadeAttack(true)
-                                        print("AI bomber attacks human's city!")
-                                    end
-                                end
-
-                            end
-
-                        end
-                    end
-                end
-            end
-
             -- Add Escort Ships for AI carriers!
             if GameInfo.Units[unit:GetUnitType()].SpecialCargo == "SPECIALUNIT_FIGHTER" and not unit:IsFriendlyUnitAdjacent(true) then
                 local plot = unit:GetPlot()
@@ -364,7 +366,7 @@ function AIUnitsAssist(playerID)
 end
 GameEvents.PlayerDoTurn.Add(AIUnitsAssist)
 
------------------------------------------------------------- Remove AI Resources Bonus when it is losing / Enhance AI when lose its city to human------------------------------------------------
+------------------------------------------------------------Enhance AI when lose its city to human------------------------------------------------
 
 function AICityCaptured(oldPlayerID, iCapital, iX, iY, newPlayerID, bConquest, iGreatWorksPresent, iGreatWorksXferred)
     if Players[newPlayerID] == nil or Players[oldPlayerID] == nil or Map.GetPlot(iX, iY) == nil or not Map.GetPlot(iX, iY):IsCity() then
@@ -494,70 +496,6 @@ end
 GameEvents.CityCaptureComplete.Add(AICityCaptured)
 
 ---------------------------------------------------------------------AI Force Promotion and Unitclass Balance----------------------------------------------------
-local RangedUnitID = GameInfo.UnitPromotions["PROMOTION_ARCHERY_COMBAT"].ID
-local CitySiegeID = GameInfo.UnitPromotions["PROMOTION_CITY_SIEGE"].ID
-local LandAOEUnitID = GameInfo.UnitPromotions["PROMOTION_SPLASH_DAMAGE"].ID
-
-local HitandRunID = GameInfo.UnitPromotions["PROMOTION_HITANDRUN"].ID
-local HelicopterID = GameInfo.UnitPromotions["PROMOTION_HELI_ATTACK"].ID
-
-local NavalHitandRunID = GameInfo.UnitPromotions["PROMOTION_NAVAL_HIT_AND_RUN"].ID
-local NavalRangedID = GameInfo.UnitPromotions["PROMOTION_NAVAL_RANGED_SHIP"].ID
-local SubmarineID = GameInfo.UnitPromotions["PROMOTION_SUBMARINE_COMBAT"].ID
-
-local CapitalShipID = GameInfo.UnitPromotions["PROMOTION_NAVAL_CAPITAL_SHIP"].ID
-local CarrierID = GameInfo.UnitPromotions["PROMOTION_CARRIER_UNIT"].ID
-
-local SSBNID = GameInfo.UnitPromotions["PROMOTION_CARGO_IX"].ID
-
-local BomberID = GameInfo.UnitPromotions["PROMOTION_STRATEGIC_BOMBER"].ID
-local AirAttackID = GameInfo.UnitPromotions["PROMOTION_AIR_ATTACK"].ID
-
-local CollDamageLV1ID = GameInfo.UnitPromotions["PROMOTION_COLLATERAL_DAMAGE_1"].ID
-local CollDamageLV2ID = GameInfo.UnitPromotions["PROMOTION_COLLATERAL_DAMAGE_2"].ID
-
-local Barrage1ID = GameInfo.UnitPromotions["PROMOTION_BARRAGE_1"].ID
-local Barrage2ID = GameInfo.UnitPromotions["PROMOTION_BARRAGE_2"].ID
-local Barrage3ID = GameInfo.UnitPromotions["PROMOTION_BARRAGE_3"].ID
-
-local Accuracy1ID = GameInfo.UnitPromotions["PROMOTION_ACCURACY_1"].ID
-local Accuracy2ID = GameInfo.UnitPromotions["PROMOTION_ACCURACY_2"].ID
-
-local Sunder1ID = GameInfo.UnitPromotions["PROMOTION_SUNDER_1"].ID
-local Sunder2ID = GameInfo.UnitPromotions["PROMOTION_SUNDER_2"].ID
-
-local AOEAttack1ID = GameInfo.UnitPromotions["PROMOTION_CLUSTER_ROCKET_1"].ID
-local AOEAttack2ID = GameInfo.UnitPromotions["PROMOTION_CLUSTER_ROCKET_2"].ID
-local CapitalShipArmor1ID = GameInfo.UnitPromotions["PROMOTION_ARMOR_BATTLESHIP_1"].ID
-local CapitalShipArmor2ID = GameInfo.UnitPromotions["PROMOTION_ARMOR_BATTLESHIP_2"].ID
-
-local NapalmBomb1ID = GameInfo.UnitPromotions["PROMOTION_NAPALMBOMB_1"].ID
-local NapalmBomb2ID = GameInfo.UnitPromotions["PROMOTION_NAPALMBOMB_2"].ID
-local NapalmBomb3ID = GameInfo.UnitPromotions["PROMOTION_NAPALMBOMB_3"].ID
-local DestroySupply1ID = GameInfo.UnitPromotions["PROMOTION_DESTROY_SUPPLY_1"].ID
-local DestroySupply2ID = GameInfo.UnitPromotions["PROMOTION_DESTROY_SUPPLY_2"].ID
-
-local AirBomb1ID = GameInfo.UnitPromotions["PROMOTION_AIR_BOMBARDMENT_1"].ID
-local AirBomb2ID = GameInfo.UnitPromotions["PROMOTION_AIR_BOMBARDMENT_2"].ID
-local AirBomb3ID = GameInfo.UnitPromotions["PROMOTION_AIR_BOMBARDMENT_3"].ID
-local AirTarget1ID = GameInfo.UnitPromotions["PROMOTION_AIR_TARGETING_1"].ID
-local AirTarget2ID = GameInfo.UnitPromotions["PROMOTION_AIR_TARGETING_2"].ID
-local AirTarget3ID = GameInfo.UnitPromotions["PROMOTION_AIR_TARGETING_3"].ID
-
-local AIRangeID = GameInfo.UnitPromotions["PROMOTION_RANGE"].ID
-
-local AISPForceID = GameInfo.UnitPromotions["PROMOTION_SPECIAL_FORCES_COMBAT"].ID
-
-local SetUpID = GameInfo.UnitPromotions["PROMOTION_MUST_SET_UP"].ID
-
-local MilitiaUnitID = GameInfo.UnitPromotions["PROMOTION_MILITIA_COMBAT"].ID
-
-local CarrierSupply1ID = GameInfo.UnitPromotions["PROMOTION_CARRIER_SUPPLY_1"].ID
-local CarrierSupply2ID = GameInfo.UnitPromotions["PROMOTION_CARRIER_SUPPLY_2"].ID
-local CarrierSupply3ID = GameInfo.UnitPromotions["PROMOTION_CARRIER_SUPPLY_3"].ID
-local CarrierAntiAir1ID = GameInfo.UnitPromotions["PROMOTION_CARRIER_FIGHTER_ANTI_AIR_1"].ID
-local CarrierAntiAir2ID = GameInfo.UnitPromotions["PROMOTION_CARRIER_FIGHTER_ANTI_AIR_2"].ID
-
 function AIPromotion(iPlayer, iCity, iUnit, bGold, bFaith)
     local player = Players[iPlayer]
 
@@ -1042,22 +980,6 @@ function MinorLimitUnits(iPlayer, iUnit)
 end
 
 GameEvents.UnitCreated.Add(MinorLimitUnits)
-
-function MinorLoseCity(oldPlayerID, bCapital, iX, iY, newPlayerID, conquest, conquest2)
-    local oldPlayer = Players[oldPlayerID]
-    local newPlayer = Players[newPlayerID]
-    local City = Map.GetPlot(iX, iY):GetPlotCity()
-    if bCapital and oldPlayer:IsMinorCiv() and oldPlayer:GetCurrentEra() >= 4 and not newPlayer:IsMinorCiv() then
-        City:SetNumRealBuilding(GameInfoTypes["BUILDING_GRAIN_DEPOT"], 0)
-        City:SetNumRealBuilding(GameInfoTypes["BUILDING_MECHANIZED_FARM"], 0)
-        City:SetNumRealBuilding(GameInfoTypes["BUILDING_TAP_WATER_SUPPLY"], 0)
-        City:SetNumRealBuilding(GameInfoTypes["BUILDING_HOSPITAL"], 0)
-        City:SetNumRealBuilding(GameInfoTypes["BUILDING_LIBRARY"], 0)
-        City:SetNumRealBuilding(GameInfoTypes["BUILDING_PUBLIC_SCHOOL"], 0)
-        print("Minor civ lose post-industrial bonus!")
-    end
-end
-GameEvents.CityCaptureComplete.Add(MinorLoseCity)
 
 function ChangeUnitsToLand(iTeam1, iTeam2, bWar)
     if iTeam1 == nil or iTeam2 == nil then

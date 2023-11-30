@@ -95,7 +95,6 @@ function RefreshCityBanner(cityBanner, iActiveTeam, iActivePlayer)
 	if iActiveTeam == team then
 		isActiveTeamCity = true
 	end
-	local bActivePlayerObserver = Players[iActivePlayer]:IsObserver()
 
 	-- grab city using playerID and cityID
 	local city = player:GetCityByID(cityBanner.cityID)
@@ -1389,13 +1388,17 @@ function OnBannerClick(x, y)
 	if plot then
 		local playerID = plot:GetOwner()
 		local player = Players[playerID]
+		local bActivePlayerObserver = Players[Game.GetActivePlayer()]:IsObserver()
 
 		-- Active player city
 		if playerID == Game.GetActivePlayer() 
-		or Players[Game.GetActivePlayer()]:IsObserver()
+		or bActivePlayerObserver
 		then
 			-- Puppets are special
-			if plot:GetPlotCity():IsPuppet() and not player:MayNotAnnex() then
+			if plot:GetPlotCity():IsPuppet() 
+			and not player:MayNotAnnex() 
+			and not bActivePlayerObserver
+			then
 				local popupInfo = {
 					Type = ButtonPopupTypes.BUTTONPOPUP_ANNEX_CITY,
 					Data1 = plot:GetPlotCity():GetID(),
