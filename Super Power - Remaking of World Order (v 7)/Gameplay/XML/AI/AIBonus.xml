@@ -561,6 +561,11 @@
 			<CityScaleType>CITYSCALE_GLOBAL</CityScaleType>
 		</Row>
 
+		<Row>
+			<PolicyType>POLICY_AI_RENAISSANCE</PolicyType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Quantity>3</Quantity>
+		</Row>
 
 		<Row>
 			<PolicyType>POLICY_AI_INDUSTRY</PolicyType>
