@@ -774,7 +774,7 @@ function HappinessTipHandler( control )
 		local iFaithHappiness = pPlayer:GetHappinessFromFaith();
 
 		--SP Flat Hadicap Happiness
-		local iHandicapHappiness = 11
+		local iHandicapHappiness = Game.GetHappinessFromHandicap();
 
 	
 		if (pPlayer:IsEmpireVeryUnhappy()) then
