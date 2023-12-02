@@ -1742,27 +1742,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 
 			-- BarbarianBonuses
 			if (pTheirUnit:IsBarbarian()) then
-				--iModifier = GameInfo.HandicapInfos[Game:GetHandicapType()].BarbarianBonus;
-				iModifier=0
-				if PreGame.GetHandicap(0)== GameInfoTypes.HANDICAP_SETTLER then
-					iModifier=40
-				elseif PreGame.GetHandicap(0)== GameInfoTypes.HANDICAP_CHIEFTAIN then
-					iModifier=20
-				elseif PreGame.GetHandicap(0)== GameInfoTypes.HANDICAP_WARLORD then
-					iModifier=0
-				elseif PreGame.GetHandicap(0)== GameInfoTypes.HANDICAP_PRINCE then
-					iModifier=0
-				elseif PreGame.GetHandicap(0)== GameInfoTypes.HANDICAP_KING then
-					iModifier=0
-				elseif PreGame.GetHandicap(0)== GameInfoTypes.HANDICAP_EMPEROR then
-					iModifier=0
-				elseif PreGame.GetHandicap(0)== GameInfoTypes.HANDICAP_IMMORTAL then
-					iModifier=0
-				elseif PreGame.GetHandicap(0)== GameInfoTypes.HANDICAP_DEITY then
-					iModifier=0
-				end
-
-				iModifier = iModifier + Players[pMyUnit:GetOwner()]:GetBarbarianCombatBonus();
+				iModifier = iModifier + pMyUnit:GetBarbarianCombatBonusTotal();
 
 				if (iModifier ~= 0) then
 					controlTable = g_MyCombatDataIM:GetInstance();
@@ -2395,7 +2375,7 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 	local myCityMaxHP = myCity:GetMaxHitPoints();
 	local myCityCurHP = myCity:GetDamage();
 	local myCityDamageInflicted = myCity:RangeCombatDamage(theirUnit, nil);
-	local myCityStrength = myCity:GetStrengthValue();
+	local myCityStrength = myCity:GetStrengthValue(true);
 
 	local theirUnitMaxHP = theirUnit:GetMaxHitPoints();
 	local theirUnitCurHP = theirUnit:GetDamage();
@@ -2801,19 +2781,6 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 					controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_DEFENSE_TERRAIN", terrainTypeBonus);
 					controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
 				end
-			end
-		end
-
-		-- BarbarianBonuses
-		if (theirUnit:IsBarbarian()) then
-			iModifier = GameInfo.HandicapInfos[Game:GetHandicapType()].BarbarianBonus;
-
-			iModifier = iModifier + myPlayer:GetBarbarianCombatBonus();
-
-			if (iModifier ~= 0) then
-				controlTable = g_MyCombatDataIM:GetInstance();
-				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_VS_BARBARIANS_BONUS");
-				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
 			end
 		end
 
