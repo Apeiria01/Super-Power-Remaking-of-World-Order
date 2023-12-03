@@ -702,6 +702,10 @@
 			<Where Name="OPINION_WEIGHT_DOF" />
 		</Update>
 		<Update>
+			<Set Value="-90"/>
+			<Where Name="OPINION_WEIGHT_MARRIAGE" />
+		</Update>
+		<Update>
 			<Set Value="250"/>
 			<Where Name="OPINION_WEIGHT_DENOUNCED_ME_FRIENDS" />
 		</Update>

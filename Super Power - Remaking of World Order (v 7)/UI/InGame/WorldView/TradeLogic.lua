@@ -980,6 +980,8 @@ function ResetDisplay()
 	Controls.ThemPocketDefensivePact:SetHide(false);
 	Controls.UsPocketResearchAgreement:SetHide(false);
 	Controls.ThemPocketResearchAgreement:SetHide(false);
+	Controls.UsPocketMarriage:SetHide(false);
+	Controls.ThemPocketMarriage:SetHide(false);
 	--Controls.UsPocketTradeAgreement:SetHide( false );		Trade agreement disabled for now
 	--Controls.ThemPocketTradeAgreement:SetHide( false );		Trade agreement disabled for now
 	if (Controls.UsPocketDoF ~= nil) then
@@ -1402,6 +1404,31 @@ function ResetDisplay()
 	end
 
 	----------------------------------------------------------------------------------
+	-- pocket Marriage
+	----------------------------------------------------------------------------------
+	-- TODO: set the pocket button disabled, color and tooltip
+	-- TODO: add tooltip
+	local bUsDiplomaticMarriageAllowed = g_Deal:IsPossibleToTradeItem(g_iUs, g_iThem, TradeableItems
+		.TRADE_ITEM_DIPLOMATIC_MARRIAGE, g_iDealDuration);
+	if not bUsDiplomaticMarriageAllowed then
+		Controls.UsPocketMarriage:SetDisabled(true);
+		Controls.UsPocketMarriage:GetTextControl():SetColorByName("Gray_Black");
+	else
+		Controls.UsPocketMarriage:SetDisabled(false);
+		Controls.UsPocketMarriage:GetTextControl():SetColorByName("Beige_Black");
+	end
+
+	local bThemDiplomaticMarriageAllowed = g_Deal:IsPossibleToTradeItem(g_iThem, g_iUs, TradeableItems
+		.TRADE_ITEM_DIPLOMATIC_MARRIAGE, g_iDealDuration);
+	if not bThemDiplomaticMarriageAllowed then
+		Controls.ThemPocketMarriage:SetDisabled(true);
+		Controls.ThemPocketMarriage:GetTextControl():SetColorByName("Gray_Black");
+	else
+		Controls.ThemPocketMarriage:SetDisabled(false);
+		Controls.ThemPocketMarriage:GetTextControl():SetColorByName("Beige_Black");
+	end
+
+	----------------------------------------------------------------------------------
 	-- pocket Trade Agreement
 	----------------------------------------------------------------------------------
 
@@ -1790,11 +1817,13 @@ function ResetDisplay()
 		Controls.UsPocketDefensivePact:SetHide(true);
 		Controls.UsPocketResearchAgreement:SetHide(true);
 		Controls.UsPocketOtherPlayer:SetHide(true);
+		Controls.UsPocketMarriage:SetHide(true);
 		Controls.ThemPocketAllowEmbassy:SetHide(true);
 		Controls.ThemPocketOpenBorders:SetHide(true);
 		Controls.ThemPocketDefensivePact:SetHide(true);
 		Controls.ThemPocketResearchAgreement:SetHide(true);
 		Controls.ThemPocketOtherPlayer:SetHide(true);
+		Controls.ThemPocketMarriage:SetHide(true);
 	else
 		--print("Teams DO NOT match!");
 		Controls.UsPocketAllowEmbassy:SetHide(false);
@@ -1835,6 +1864,8 @@ function DoClearTable()
 	Controls.ThemTableDefensivePact:SetHide(true);
 	Controls.UsTableResearchAgreement:SetHide(true);
 	Controls.ThemTableResearchAgreement:SetHide(true);
+	Controls.UsTableMarriage:SetHide(true);
+	Controls.ThemTableMarriage:SetHide(true);
 	Controls.UsTableTradeAgreement:SetHide(true);
 	Controls.ThemTableTradeAgreement:SetHide(true);
 	Controls.UsTableCitiesStack:SetHide(true);
@@ -1850,6 +1881,9 @@ function DoClearTable()
 	Controls.ThemTableMakePeaceStack:SetHide(true);
 	Controls.UsTableDeclareWarStack:SetHide(true);
 	Controls.ThemTableDeclareWarStack:SetHide(true);
+
+	Controls.UsTableMarriage:SetHide(true);
+	Controls.ThemTableMarriage:SetHide(true);
 
 	for n, table in pairs(g_OtherPlayersButtons) do
 		table.UsTableWar.Button:SetHide(true);
@@ -2184,6 +2218,11 @@ function DisplayDeal()
 						"SCRIPTING ERROR: Could not find League when displaying a trade deal with a Vote Commitment");
 					end
 				end
+			elseif (TradeableItems.TRADE_ITEM_DIPLOMATIC_MARRIAGE == itemType) then
+				Controls.UsPocketMarriage:SetHide(true);
+				Controls.UsTableMarriage:SetHide(false);
+				Controls.ThemPocketMarriage:SetHide(true);
+				Controls.ThemTableMarriage:SetHide(false);
 			end
 			itemType, duration, finalTurn, data1, data2, data3, flag1, fromPlayer = g_Deal:GetNextItem();
 		until (itemType == nil)
@@ -2619,8 +2658,33 @@ end
 Controls.UsTableResearchAgreement:RegisterCallback(Mouse.eLClick, TableResearchAgreementHandler);
 Controls.ThemTableResearchAgreement:RegisterCallback(Mouse.eLClick, TableResearchAgreementHandler);
 
+-----------------------------------------------------------------------------------------------------------------------
+-- Marriage Handlers
+-----------------------------------------------------------------------------------------------------------------------
+function PocketMarriageHandler(isUs)
+	-- Note that currently diplomatic marriage is required on both sides
+	g_Deal:AddDiplomaticMarriage(g_iUs, g_iDealDuration);
+	g_Deal:AddDiplomaticMarriage(g_iThem, g_iDealDuration);
+	DisplayDeal();
+	DoUIDealChangedByHuman();
+end
 
+Controls.UsPocketMarriage:RegisterCallback(Mouse.eLClick, PocketMarriageHandler);
+Controls.ThemPocketMarriage:RegisterCallback(Mouse.eLClick, PocketMarriageHandler);
+Controls.UsPocketMarriage:SetVoid1(1);
+Controls.ThemPocketMarriage:SetVoid1(0);
 
+function TableMarriageHandler()
+	-- Remove from BOTH sides of the table
+	g_Deal:RemoveByType(TradeableItems.TRADE_ITEM_DIPLOMATIC_MARRIAGE, g_iUs);
+	g_Deal:RemoveByType(TradeableItems.TRADE_ITEM_DIPLOMATIC_MARRIAGE, g_iThem);
+	DoClearTable();
+	DisplayDeal();
+	DoUIDealChangedByHuman();
+end
+
+Controls.UsTableMarriage:RegisterCallback(Mouse.eLClick, TableMarriageHandler);
+Controls.ThemTableMarriage:RegisterCallback(Mouse.eLClick, TableMarriageHandler);
 
 -----------------------------------------------------------------------------------------------------------------------
 -- Trade Agreement Handlers
