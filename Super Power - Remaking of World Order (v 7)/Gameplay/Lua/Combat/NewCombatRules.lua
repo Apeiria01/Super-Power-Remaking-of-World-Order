@@ -341,8 +341,8 @@ function NewAttackEffect()
 			print("Air Sweep Damage Dealt: " .. attDamageInflicted);
 			print("Air Sweep Damage Received: " .. defDamageInflicted);
 
-			attUnit:ChangeDamage(attDamageInflicted, defPlayer);
-			defUnit:ChangeDamage(defDamageInflicted, attPlayer);
+			attUnit:ChangeDamage(attDamageInflicted, defPlayerID);
+			defUnit:ChangeDamage(defDamageInflicted, attPlayerID);
 		end
 	end
 end --function END
