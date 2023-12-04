@@ -1,17 +1,12 @@
 -- New Combat Rules
-
-
---include( "UtilityFunctions.lua" )
 include("FLuaVector.lua");
---******************************************************************************* Unit Combat Rules *******************************************************************************
-local g_DoNewAttackEffect = nil;
-local NewAttackOff = GameInfo.SPNewEffectControler.SP_NEWATTACK_OFF.Enabled
-function NewAttackEffectStarted(iType, iPlotX, iPlotY)
-	if NewAttackOff then
-		print("SP Attack Effect - OFF!");
-		return;
-	end
+if GameInfo.SPNewEffectControler.SP_NEWATTACK_OFF.Enabled then
+	print("SP Attack Effect - OFF!");
+	return;
+end
 
+local g_DoNewAttackEffect = nil;
+function NewAttackEffectStarted(iType, iPlotX, iPlotY)
 	if iType == GameInfoTypes["BATTLETYPE_MELEE"]
 		or iType == GameInfoTypes["BATTLETYPE_RANGED"]
 		or iType == GameInfoTypes["BATTLETYPE_AIR"]
@@ -34,7 +29,7 @@ function NewAttackEffectStarted(iType, iPlotX, iPlotY)
 end
 
 GameEvents.BattleStarted.Add(NewAttackEffectStarted);
-tCaptureSPUnits = {};
+
 function NewAttackEffectJoined(iPlayer, iUnitOrCity, iRole, bIsCity)
 	if g_DoNewAttackEffect == nil
 		or Players[iPlayer] == nil or not Players[iPlayer]:IsAlive()
@@ -57,41 +52,16 @@ function NewAttackEffectJoined(iPlayer, iUnitOrCity, iRole, bIsCity)
 		g_DoNewAttackEffect.defUnitID = iUnitOrCity;
 		g_DoNewAttackEffect.defODamage = Players[iPlayer]:GetUnitByID(iUnitOrCity):GetDamage();
 	end
-
-	-- Prepare for Capture Unit!
-	if not bIsCity and g_DoNewAttackEffect.battleType == GameInfoTypes["BATTLETYPE_MELEE"]
-		and Players[g_DoNewAttackEffect.attPlayerID] ~= nil and
-		Players[g_DoNewAttackEffect.attPlayerID]:GetUnitByID(g_DoNewAttackEffect.attUnitID) ~= nil
-		and Players[g_DoNewAttackEffect.defPlayerID] ~= nil and
-		Players[g_DoNewAttackEffect.defPlayerID]:GetUnitByID(g_DoNewAttackEffect.defUnitID) ~= nil
-	then
-		local attPlayer = Players[g_DoNewAttackEffect.attPlayerID];
-		local attUnit   = attPlayer:GetUnitByID(g_DoNewAttackEffect.attUnitID);
-		local defPlayer = Players[g_DoNewAttackEffect.defPlayerID];
-		local defUnit   = defPlayer:GetUnitByID(g_DoNewAttackEffect.defUnitID);
-
-		if attUnit:GetCaptureChance(defUnit) > 0 then
-			local unitClassType = defUnit:GetUnitClassType();
-			local unitPlot = defUnit:GetPlot();
-			local unitOriginalOwner = defUnit:GetOriginalOwner();
-
-			local sCaptUnitName = nil;
-			if defUnit:HasName() then
-				sCaptUnitName = defUnit:GetNameNoDesc();
-			end
-
-			local unitLevel = defUnit:GetLevel();
-			local unitEXP   = attUnit:GetExperience();
-			local attMoves  = attUnit:GetMoves();
-			print("attacking Unit remains moves:" .. attMoves);
-
-			tCaptureSPUnits = { unitClassType, unitPlot, g_DoNewAttackEffect.attPlayerID, unitOriginalOwner, sCaptUnitName,
-				unitLevel, unitEXP, attMoves };
-		end
-	end
 end
-
 GameEvents.BattleJoined.Add(NewAttackEffectJoined);
+
+------- PromotionID
+local SpeComID = GameInfo.UnitPromotions["PROMOTION_SPECIAL_FORCES_COMBAT"].ID
+local SPForce2ID = GameInfo.UnitPromotions["PROMOTION_SP_FORCE_2"].ID
+
+local EMPBomberID = GameInfo.UnitPromotions["PROMOTION_EMP_ATTACK"].ID
+local AntiEMPID = GameInfo.UnitPromotions["PROMOTION_ANTI_EMP"].ID
+
 function NewAttackEffect()
 	--Defines and status checks
 	if g_DoNewAttackEffect == nil or Players[g_DoNewAttackEffect.defPlayerID] == nil
@@ -144,16 +114,6 @@ function NewAttackEffect()
 	if attPlayer:IsBarbarian() then
 		return;
 	end
-
-	------- PromotionID
-	local SpeComID = GameInfo.UnitPromotions["PROMOTION_SPECIAL_FORCES_COMBAT"].ID
-	local SPForce2ID = GameInfo.UnitPromotions["PROMOTION_SP_FORCE_2"].ID
-
-	local EMPBomberID = GameInfo.UnitPromotions["PROMOTION_EMP_ATTACK"].ID
-	local AntiEMPID = GameInfo.UnitPromotions["PROMOTION_ANTI_EMP"].ID
-
-	local AntiDebuffID = GameInfo.UnitPromotions["PROMOTION_ANTI_DEBUFF"].ID
-
 	if not defPlayer:IsAlive() then
 		return
 	end
@@ -234,31 +194,15 @@ function NewAttackEffect()
 					end
 				end
 			end
-
-
-
 		end
 
 		-- Attacking a Unit!
 	elseif defUnit then
-		-- Debuff immune unit
-		if defUnit:IsHasPromotion(AntiDebuffID) then
-			print("This unit is debuff immune")
-			return
-		end
-
-
 		-------Fighters will damage land and naval AA units in an air-sweep
-		if not attUnit:IsDead() and not defUnit:IsDead() and defUnit:IsCombatUnit()
-			and batType == GameInfoTypes["BATTLETYPE_SWEEP"]
+		if batType == GameInfoTypes["BATTLETYPE_SWEEP"]
+		and not attUnit:IsDead() and not defUnit:IsDead() and defUnit:IsCombatUnit()
 		then
-			print("Airsweep!")
-
 			-- This AA unit is exempted from Air-sweep damage!
-
-			-- local attUnitStrength = attUnit:GetBaseCombatStrength()
-			-- local defUnitStrength = defUnit:GetBaseCombatStrength()
-
 			print("Airsweep and the defender is an AA unit!")
 
 			local attDamageInflicted = defUnit:GetRangeCombatDamage(defUnit, nil, false) * 0.5
