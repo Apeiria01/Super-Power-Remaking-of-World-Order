@@ -9240,6 +9240,10 @@
 		<Replace Tag="TXT_KEY_ERA_5">
 			<Text>Electric Era</Text>
 		</Replace>
+		<Replace Tag="TXT_KEY_ERA_5_SHORT">
+			<Text>Electric</Text>
+		</Replace>
+
 		<Replace Tag="TXT_KEY_ERA_6">
 			<Text>World War Era</Text>
 		</Replace>
