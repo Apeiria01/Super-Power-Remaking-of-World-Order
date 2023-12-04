@@ -8281,9 +8281,15 @@
 		<Replace Tag="TXT_KEY_ERA_3">
 			<Text>啟蒙時代</Text>
 		</Replace>
+		<Replace Tag="TXT_KEY_ERA_3_SHORT">
+			<Text>啟蒙</Text>
+		</Replace>
 
 		<Replace Tag="TXT_KEY_ERA_5">
 			<Text>電氣時代</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_ERA_5_SHORT">
+			<Text>電氣</Text>
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_ERA_6">
