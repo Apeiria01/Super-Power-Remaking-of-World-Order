@@ -28,7 +28,6 @@ function GetBaseHelpTextForTech( iTechID )
 	end
 	
 	if (strLeadsTo ~= "") then
-		strHelpText = strHelpText .. "[NEWLINE]";
 		strHelpText = strHelpText .. " " .. Locale.ConvertTextKey("TXT_KEY_TECH_HELP_LEADS_TO", strLeadsTo);
 	end
 
@@ -420,12 +419,22 @@ end
 
 function RoadTechHelpString()
 	for row in GameInfo.Technologies() do
-		TechHelpStringTable[row.ID] = GetBaseHelpTextForTech( row.ID );
+		if TechHelpStringTable[row.ID] == nil then
+			TechHelpStringTable[row.ID] = GetBaseHelpTextForTech( row.ID );
+		end
 	end
 	print("Pre Road Tech Help String Success!")
 end
 
 RoadTechHelpString()
+
+function GetShortHelpTextForTech(iTechID)
+	if TechHelpStringTable[iTechID] == nil then
+		print("TechHelpInclude.lua: nil Value:",iTechID)
+		return ""
+	end
+	return TechHelpStringTable[iTechID]
+end
 
 function GetHelpTextForTech( iTechID )
 	local pTechInfo = GameInfo.Technologies[iTechID];
@@ -450,6 +459,7 @@ function GetHelpTextForTech( iTechID )
 		strHelpText = strHelpText .. "[NEWLINE]-------------------------[NEWLINE]";
 	
 		local iProgress = pActivePlayer:GetResearchProgress(iTechID);
+		local iOverflow = pActivePlayer:GetOverflowResearch();
 		local bShowProgress = true;
 	
 		-- Don't show progres if we have 0 or we're done with the tech
@@ -458,15 +468,16 @@ function GetHelpTextForTech( iTechID )
 		end
 	
 		if (bShowProgress) then
-			strHelpText = strHelpText .. " " .. Locale.ConvertTextKey("TXT_KEY_TECH_HELP_COST_WITH_PROGRESS", iProgress, iTechCost);
+			if iOverflow > 0 then
+				strHelpText = strHelpText .. " " .. Locale.ConvertTextKey("TXT_KEY_TECH_HELP_PROGRESS_WITH_OVERFLOW", iProgress, iTechCost, iOverflow);
+			else
+				strHelpText = strHelpText .. " " .. Locale.ConvertTextKey("TXT_KEY_TECH_HELP_COST_WITH_PROGRESS", iProgress, iTechCost);
+			end
 		else
 			strHelpText = strHelpText .. " " .. Locale.ConvertTextKey("TXT_KEY_TECH_HELP_COST", iTechCost);
 		end
 	end
-	if TechHelpStringTable[iTechID] == nil then
-		TechHelpStringTable[iTechID] = GetBaseHelpTextForTech( iTechID );
-		print("TechHelpInclude.lua: Try to fix nil Value")
-	end
-	strHelpText = strHelpText .. TechHelpStringTable[iTechID]
+	
+	strHelpText = strHelpText .. "[NEWLINE]" .. GetShortHelpTextForTech(iTechID)
 	return strHelpText
 end

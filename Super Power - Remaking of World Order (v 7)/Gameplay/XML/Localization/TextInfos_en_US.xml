@@ -17221,5 +17221,11 @@
 		<Row Tag="TXT_KEY_EUPANEL_EXCESS_HAPINESS_MODIFIER">
 			<Text>Extra Happiness Bonus</Text>
 		</Row>
+		<Row Tag="TXT_KEY_TECH_HELP_PROGRESS_WITH_OVERFLOW">
+			<Text>[ICON_BULLET]Progress: {1_Num} of {2_Num} [ICON_RESEARCH] Science (Overflow: {3_Num})</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_RANGED_ATTACK_FLANK_MODIFIER_SP">
+			<Text>Range Flanking Bonus</Text>
+		</Row>
 	</Language_en_US>
 </GameData>

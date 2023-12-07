@@ -1707,6 +1707,19 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 					controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_RANGED_ATTACK_MODIFIER");
 					controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
 				end
+
+				-- Ranged Flanking bonus
+				local iNumEnemy = pTheirUnit:GetNumEnemyUnitsAdjacent(pMyUnit);
+				if (iNumEnemy > 0) then
+					iModifier = iNumEnemy * (GameDefines["BONUS_PER_ADJACENT_FRIEND_RANGED"] + pMyUnit:RangedFlankAttackModifier());
+					local iFlankModifierRanged = pMyUnit:RangedFlankAttackModifierPercent();
+					if (iModifier ~= 0 and iFlankModifierRanged >= 0) then
+						iModifier = iModifier * (100 + iFlankModifierRanged) / 100;
+						controlTable = g_MyCombatDataIM:GetInstance();
+						controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_RANGED_ATTACK_FLANK_MODIFIER_SP");
+						controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
+					end
+				end
 			end
 
 			if (pToPlot:GetFeatureType() ~= -1) then
@@ -2118,7 +2131,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 
 				-- Flanking bonus
 				if (not bRanged) then
-					iNumAdjacentFriends = pMyUnit:GetNumEnemyUnitsAdjacent(pTheirUnit);
+					local iNumAdjacentFriends = pMyUnit:GetNumEnemyUnitsAdjacent(pTheirUnit);
 					if (iNumAdjacentFriends > 0) then
 						iModifier = iNumAdjacentFriends * GameDefines["BONUS_PER_ADJACENT_FRIEND"];
 						controlTable = g_TheirCombatDataIM:GetInstance();
