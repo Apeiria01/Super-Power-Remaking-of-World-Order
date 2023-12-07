@@ -1405,7 +1405,7 @@ function OnBannerClick(x, y)
 					Data2 = -1,
 					Data3 = -1,
 					Option1 = false,
-					Option2 = false,
+					Option2 = false;
 				}
 				Events.SerialEventGameMessagePopup(popupInfo)
 			else

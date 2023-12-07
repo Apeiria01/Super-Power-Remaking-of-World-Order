@@ -3115,15 +3115,11 @@ if Game then
 
 		local tips = {}
 		local cityOwner = Players[city:GetOwner()]
-		local culturePerTurn, cultureStored, cultureNeeded, cultureFromBuildings, cultureFromPolicies, cultureFromSpecialists, cultureFromTraits, baseCulturePerTurn
+		local culturePerTurn, cultureStored, cultureNeeded, baseCulturePerTurn
 		-- Thanks fo Firaxis Cleverness...
 		culturePerTurn = city:GetJONSCulturePerTurn()
 		cultureStored = city:GetJONSCultureStored()
 		cultureNeeded = city:GetJONSCultureThreshold()
-		cultureFromBuildings = city:GetJONSCulturePerTurnFromBuildings()
-		cultureFromPolicies = city:GetJONSCulturePerTurnFromPolicies()
-		cultureFromSpecialists = city:GetJONSCulturePerTurnFromSpecialists()
-		cultureFromTraits = city:GetJONSCulturePerTurnFromTraits()
 		baseCulturePerTurn = city:GetBaseJONSCulturePerTurn()
 
 		if not OptionsManager.IsNoBasicHelp() then

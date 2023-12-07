@@ -15219,5 +15219,11 @@
 		<Row Tag="TXT_KEY_EUPANEL_EXCESS_HAPINESS_MODIFIER">
 			<Text>額外快樂度加成</Text>
 		</Row>
+		<Row Tag="TXT_KEY_TECH_HELP_PROGRESS_WITH_OVERFLOW">
+			<Text>[ICON_BULLET]進度: {1_Num}/{2_Num}[ICON_RESEARCH]科研（溢出：{3_Num}）</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_RANGED_ATTACK_FLANK_MODIFIER_SP">
+			<Text>遠程夾擊攻擊加成</Text>
+		</Row>
 	</Language_zh_Hant_HK>
 </GameData>
