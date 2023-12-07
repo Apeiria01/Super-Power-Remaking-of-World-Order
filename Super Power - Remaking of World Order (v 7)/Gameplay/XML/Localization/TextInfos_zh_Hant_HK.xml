@@ -794,7 +794,10 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_VENICE_FONDACO_HELP</Tag>
-			<Text>從本城市出發的海陸商隊範圍增加50%。支持城市人口增長不受污染擁擠的影響。</Text>
+			<Text>
+				[ICON_BULLET][ICON_BULLET]從本城市出發的海陸商隊範圍增加50%。
+				[NEWLINE][ICON_BULLET]城市人口增長不受缺少衛生設施的影響。
+			</Text>
 		</Row>
 				
 		<Replace Tag="TXT_KEY_BUILDING_CARAVANSARY_HELP">
