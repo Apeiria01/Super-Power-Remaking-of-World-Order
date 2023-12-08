@@ -8,26 +8,29 @@
 			<Type>POLICY_AI_CLASSICAL</Type>
 			<Description>TXT_KEY_POLICY_PHILANTHROPY</Description>
 			<UnhappinessMod>-5</UnhappinessMod>
-			<SettlerProductionModifier>300</SettlerProductionModifier>
-			<CityGrowthMod>10</CityGrowthMod>
-			<PlotCultureExponentModifier>-15</PlotCultureExponentModifier>
+			<SettlerProductionModifier>200</SettlerProductionModifier>
+			<CityGrowthMod>5</CityGrowthMod>
 			<FreeExperience>10</FreeExperience>
+			<PolicyCostModifier>3</PolicyCostModifier>
 		</Row>
 		<Row>
 			<Type>POLICY_AI_MEDIEVAL</Type>
 			<Description>TXT_KEY_POLICY_PHILANTHROPY</Description>
-			<CityGrowthMod>15</CityGrowthMod>
+			<CityGrowthMod>10</CityGrowthMod>
 			<IncludesOneShotFreeUnits>true</IncludesOneShotFreeUnits>
+			<SettlerProductionModifier>100</SettlerProductionModifier>
 			<UnhappinessMod>-5</UnhappinessMod>
 			<FreeExperience>15</FreeExperience>
+			<PolicyCostModifier>3</PolicyCostModifier>
 		</Row>
 		<Row>
 			<Type>POLICY_AI_RENAISSANCE</Type>
 			<Description>TXT_KEY_POLICY_PHILANTHROPY</Description>
 			<CatchSpiesModifier>-30</CatchSpiesModifier>
 			<UnhappinessMod>-5</UnhappinessMod>
-			<CityGrowthMod>15</CityGrowthMod>
+			<CityGrowthMod>10</CityGrowthMod>
 			<FreeExperience>25</FreeExperience>
+			<PolicyCostModifier>3</PolicyCostModifier>
 		</Row>
 		<Row>
 			<Type>POLICY_AI_INDUSTRY</Type>
@@ -35,6 +38,8 @@
 			<CatchSpiesModifier>-60</CatchSpiesModifier>
 			<UnhappinessMod>-10</UnhappinessMod>
 			<FreeExperience>30</FreeExperience>
+			<CityGrowthMod>15</CityGrowthMod>
+			<PolicyCostModifier>3</PolicyCostModifier>
 		</Row>
 		<Row>
 			<Type>POLICY_AI_MODERN</Type>
@@ -44,6 +49,7 @@
 			<ThemingBonusMultiplier>200</ThemingBonusMultiplier>
 			<UnhappinessMod>-20</UnhappinessMod>
 			<FreeExperience>30</FreeExperience>
+			<PolicyCostModifier>3</PolicyCostModifier>
 		</Row>
 		<Row>
 			<Type>POLICY_AI_WORLDWAR</Type>
@@ -54,6 +60,7 @@
 			<ThemingBonusMultiplier>300</ThemingBonusMultiplier>
 			<UnhappinessMod>-20</UnhappinessMod>
 			<FreeExperience>45</FreeExperience>
+			<PolicyCostModifier>3</PolicyCostModifier>
 		</Row>
 		<Row>
 			<Type>POLICY_AI_ATOMIC</Type>
@@ -63,6 +70,7 @@
 			<AfraidMinorPerTurnInfluence>200</AfraidMinorPerTurnInfluence>
 			<ThemingBonusMultiplier>600</ThemingBonusMultiplier>
 			<FreeExperience>45</FreeExperience>
+			<PolicyCostModifier>3</PolicyCostModifier>
 		</Row>
 
 
@@ -86,6 +94,7 @@
 			<InternalTradeRouteYieldModifier>200</InternalTradeRouteYieldModifier>
 			<StrategicResourceMod>150</StrategicResourceMod>
 			<FreeExperience>50</FreeExperience>
+			<PolicyCostModifier>3</PolicyCostModifier>
 		</Row>
 		<Row>
 			<Type>POLICY_AI_PLAYER_CITIES_30</Type>
@@ -103,6 +112,7 @@
 			<InternalTradeRouteYieldModifier>100</InternalTradeRouteYieldModifier>
 			<StrategicResourceMod>135</StrategicResourceMod>
 			<FreeExperience>30</FreeExperience>
+			<PolicyCostModifier>3</PolicyCostModifier>
 		</Row>
 		<Row>
 			<Type>POLICY_AI_PLAYER_CITIES_20</Type>
@@ -121,6 +131,7 @@
 			<RiggingElectionModifier>50</RiggingElectionModifier>
 			<StrategicResourceMod>120</StrategicResourceMod>
 			<FreeExperience>20</FreeExperience>
+			<PolicyCostModifier>3</PolicyCostModifier>
 		</Row>
 		<Row>
 			<Type>POLICY_AI_PLAYER_CITIES_10</Type>
@@ -135,6 +146,7 @@
 			<InternalTradeRouteYieldModifier>50</InternalTradeRouteYieldModifier>
 			<StrategicResourceMod>110</StrategicResourceMod>
 			<FreeExperience>10</FreeExperience>
+			<PolicyCostModifier>3</PolicyCostModifier>
 		</Row>
 
 
@@ -144,6 +156,7 @@
 			<CityGrowthMod>33</CityGrowthMod>
 			<MilitaryProductionModifier>50</MilitaryProductionModifier>
 			<UnitGoldMaintenanceMod>-25</UnitGoldMaintenanceMod>
+			<PolicyCostModifier>3</PolicyCostModifier>
 		</Row>
 
 		<Row>
@@ -152,6 +165,7 @@
 			<CityGrowthMod>33</CityGrowthMod>
 			<MilitaryProductionModifier>100</MilitaryProductionModifier>
 			<UnitGoldMaintenanceMod>-25</UnitGoldMaintenanceMod>
+			<PolicyCostModifier>3</PolicyCostModifier>
 		</Row>
 		
 		<Row>
@@ -160,6 +174,7 @@
 			<CityGrowthMod>33</CityGrowthMod>
 			<MilitaryProductionModifier>100</MilitaryProductionModifier>
 			<UnitGoldMaintenanceMod>-25</UnitGoldMaintenanceMod>
+			<PolicyCostModifier>3</PolicyCostModifier>
 		</Row>
 		
 		
@@ -168,6 +183,7 @@
 			<Description>TXT_KEY_POLICY_PHILANTHROPY</Description>
 			<HappinessToScience>25</HappinessToScience>
 			<StealTechFasterModifier>50</StealTechFasterModifier>
+			<PolicyCostModifier>3</PolicyCostModifier>
 		</Row>
 		<Row>
 			<Type>POLICY_AI_BONUS_RESEARCH_LV2</Type>
@@ -175,6 +191,7 @@
 			<HappinessToScience>33</HappinessToScience>
 			<StealTechFasterModifier>50</StealTechFasterModifier>
 			<MedianTechPercentChange>50</MedianTechPercentChange>
+			<PolicyCostModifier>3</PolicyCostModifier>
 		</Row>
 		<Row>
 			<Type>POLICY_AI_BONUS_RESEARCH_LV3</Type>
@@ -182,11 +199,13 @@
 			<HappinessToScience>66</HappinessToScience>
 			<StealTechFasterModifier>100</StealTechFasterModifier>
 			<MedianTechPercentChange>100</MedianTechPercentChange>
+			<PolicyCostModifier>3</PolicyCostModifier>
 		</Row>
 		<Row>
 			<Type>POLICY_AI_BONUS_RESEARCH_DEITY</Type>
 			<Description>TXT_KEY_POLICY_PHILANTHROPY</Description>
 			<HappinessToScience>15</HappinessToScience>
+			<PolicyCostModifier>3</PolicyCostModifier>
 		</Row>
 
 
@@ -196,8 +215,8 @@
 			<CityGrowthMod>15</CityGrowthMod>
 			<BuildingProductionModifier>33</BuildingProductionModifier>
 			<WonderProductionModifier>15</WonderProductionModifier>
-			<HappinessToCulture>25</HappinessToCulture>
 			<BuildingGoldMaintenanceMod>-15</BuildingGoldMaintenanceMod>
+			<PolicyCostModifier>3</PolicyCostModifier>
 		</Row>
 		<Row>
 			<Type>POLICY_AI_BONUS_ECONOMY_LV2</Type>
@@ -205,8 +224,8 @@
 			<CityGrowthMod>25</CityGrowthMod>
 			<BuildingProductionModifier>50</BuildingProductionModifier>
 			<WonderProductionModifier>25</WonderProductionModifier>
-			<HappinessToCulture>30</HappinessToCulture>
 			<BuildingGoldMaintenanceMod>-15</BuildingGoldMaintenanceMod>
+			<PolicyCostModifier>3</PolicyCostModifier>
 		</Row>
 		<Row>
 			<Type>POLICY_AI_BONUS_ECONOMY_LV3</Type>
@@ -216,6 +235,7 @@
 			<WonderProductionModifier>25</WonderProductionModifier>
 			<HappinessToCulture>50</HappinessToCulture>
 			<BuildingGoldMaintenanceMod>-15</BuildingGoldMaintenanceMod>
+			<PolicyCostModifier>3</PolicyCostModifier>
 		</Row>
 	
 		
@@ -323,12 +343,6 @@
 	<Policy_BuildingClassYieldModifiers>
 		<Row>
 			<PolicyType>POLICY_AI_BONUS_RESEARCH_LV1</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_TOWN</BuildingClassType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<YieldMod>5</YieldMod>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_BONUS_RESEARCH_LV1</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_SMALL</BuildingClassType>
 			<YieldType>YIELD_SCIENCE</YieldType>
 			<YieldMod>5</YieldMod>
@@ -344,7 +358,7 @@
 			<PolicyType>POLICY_AI_BONUS_RESEARCH_LV2</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_TOWN</BuildingClassType>
 			<YieldType>YIELD_SCIENCE</YieldType>
-			<YieldMod>10</YieldMod>
+			<YieldMod>5</YieldMod>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_AI_BONUS_RESEARCH_LV2</PolicyType>
@@ -363,7 +377,7 @@
 			<PolicyType>POLICY_AI_BONUS_RESEARCH_LV3</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_TOWN</BuildingClassType>
 			<YieldType>YIELD_SCIENCE</YieldType>
-			<YieldMod>15</YieldMod>
+			<YieldMod>10</YieldMod>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_AI_BONUS_RESEARCH_LV3</PolicyType>
@@ -384,7 +398,7 @@
 			<PolicyType>POLICY_AI_BONUS_ECONOMY_LV1</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_TOWN</BuildingClassType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
-			<YieldMod>10</YieldMod>
+			<YieldMod>5</YieldMod>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_AI_BONUS_ECONOMY_LV1</PolicyType>
@@ -404,7 +418,7 @@
 			<PolicyType>POLICY_AI_BONUS_ECONOMY_LV2</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_TOWN</BuildingClassType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
-			<YieldMod>15</YieldMod>
+			<YieldMod>10</YieldMod>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_AI_BONUS_ECONOMY_LV2</PolicyType>
@@ -423,7 +437,7 @@
 			<PolicyType>POLICY_AI_BONUS_ECONOMY_LV3</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_TOWN</BuildingClassType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
-			<YieldMod>15</YieldMod>
+			<YieldMod>10</YieldMod>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_AI_BONUS_ECONOMY_LV3</PolicyType>
