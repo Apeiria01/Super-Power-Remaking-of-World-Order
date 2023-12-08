@@ -28,23 +28,6 @@ function SPEReligionAdopt(pPlayer,iBelief,pHolyCity)
 	then
 		print("Choose BELIEF_RELIGIOUS_TEXTS")
 		pHolyCity:SetNumRealBuilding(GameInfoTypes.BUILDING_BELIEF_RELIGIOUS_TEXTS,1)
-
-    elseif iBelief == GameInfo.Beliefs["BELIEF_JUST_WAR"].ID 
-    then
-		print("Choose BELIEF_JUST_WAR, set free Policy")
-		pPlayer:SetHasPolicy(GameInfo.Policies["POLICY_BELIEF_JUST_WAR"].ID,true,true)	
-    
-    elseif iBelief == GameInfo.Beliefs["BELIEF_RELIGIOUS_UNITY"].ID 
-    then
-		print("Choose BELIEF_RELIGIOUS_UNITY, set free Policy")
-		pPlayer:SetHasPolicy(GameInfo.Policies["POLICY_BELIEF_RELIGIOUS_UNITY"].ID,true,true)	
-
-    --Reformed
-    elseif iBelief == GameInfo.Beliefs["BELIEF_HEATHEN_CONVERSION"].ID 
-    then
-		print("Choose BELIEF_HEATHEN_CONVERSION")
-		pPlayer:SetHasPolicy(GameInfo.Policies["POLICY_BELIEF_HEATHEN_CONVERSION"].ID,true,true)	
-    
     end
 end
 
@@ -117,7 +100,7 @@ function SPNReligionConquestedHolyCity(oldOwnerID, isCapital, cityX, cityY, newO
 	end
 
     --Player has BELIEF_JUST_WAR and conquested city
-    if newOwnerPlayer:HasPolicy(GameInfo.Policies["POLICY_BELIEF_JUST_WAR"].ID) 
+    if newOwnerPlayer:HasBelief(GameInfoTypes["BELIEF_JUST_WAR"])
     and isConquest
     then
         local aReligion = pCity:GetReligiousMajority()
@@ -132,7 +115,7 @@ function SPNReligionConquestedHolyCity(oldOwnerID, isCapital, cityX, cityY, newO
 
     --Player has BELIEF_HEATHEN_CONVERSION and conquested city
     if HeathenConversionEnable
-    and newOwnerPlayer:HasPolicy(GameInfo.Policies["POLICY_BELIEF_HEATHEN_CONVERSION"].ID) 
+    and newOwnerPlayer:HasBelief(GameInfoTypes["BELIEF_HEATHEN_CONVERSION"])
     and isConquest
     then
         local newOwnerReligionID = newOwnerPlayer:GetReligionCreatedByPlayer()
@@ -145,7 +128,7 @@ function SPNReligionConquestedHolyCity(oldOwnerID, isCapital, cityX, cityY, newO
 			local religionID = row.ID
 			pCity:ConvertPercentFollowers(newOwnerReligionID, religionID, 40) 
 		end
-		pCity:ConvertPercentFollowers(newOwnerReligionID, -1, 40)
+		pCity:ConvertPercentFollowers(newOwnerReligionID, -1, 50)
 
 		local newReligionFollowersInCity = pCity:GetNumFollowers(newOwnerReligionID)
         local ReligionFollowersBonus = 10 * (newOwnerPlayer:GetCurrentEra() + 1)
@@ -285,7 +268,7 @@ function SPNReligionMinorCivQuestBonus(iMajor, iMinor, iQuestType, iStartTurn, i
 	if pPlayer == nil or civPlayer == nil or pPlayer:IsMinorCiv() or pPlayer:IsBarbarian() then
 	 	return
 	end
-	if pPlayer:HasPolicy(GameInfo.Policies["POLICY_BELIEF_RELIGIOUS_UNITY"].ID) 
+	if pPlayer:HasBelief(GameInfoTypes["BELIEF_RELIGIOUS_UNITY"])
     and civPlayer:HasReligionInMostCities(pPlayer:GetReligionCreatedByPlayer())
     then
 		local bonus =math.floor((iNewInfluence - iOldInfluence) / 100 * 0.5)

@@ -102,23 +102,4 @@
 			<OutYieldValue>1</OutYieldValue>
 		</Row>
 	</Building_YieldFromOtherYield>
-
-	<Policies>
-		<Row>
-			<Type>POLICY_BELIEF_MESSIAH</Type>
-			<Description>TXT_KEY_BELIEF_MESSIAH_SHORT</Description>
-		</Row>
-		<Row>
-			<Type>POLICY_BELIEF_JUST_WAR</Type>
-			<Description>TXT_KEY_BELIEF_JUST_WAR_SHORT</Description>
-		</Row>
-		<Row>
-			<Type>POLICY_BELIEF_HEATHEN_CONVERSION</Type>
-			<Description>TXT_KEY_BELIEF_HEATHEN_CONVERSION_SHORT</Description>
-		</Row>
-		<Row>
-			<Type>POLICY_BELIEF_RELIGIOUS_UNITY</Type>
-			<Description>TXT_KEY_BELIEF_RELIGIOUS_UNITY_SHORT</Description>
-		</Row>
-	</Policies>
 </GameData>

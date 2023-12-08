@@ -917,11 +917,8 @@ function AIBossBonus(HumanScore, TotalScore, TotalMajCiv, AIplayer)
         return
     end
 
-    print("Total Score:" .. TotalScore)
-    print("Total Major Civs:" .. TotalMajCiv)
     local AvgScore = TotalScore / TotalMajCiv
     print("Average Score:" .. AvgScore)
-    print("Human Score:" .. HumanScore)
 
     ---------AI enhancement for human's score
     if HumanScore >= AvgScore * 2 then
