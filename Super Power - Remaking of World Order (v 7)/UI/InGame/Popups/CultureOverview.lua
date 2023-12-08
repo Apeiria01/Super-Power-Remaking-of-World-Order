@@ -2165,6 +2165,10 @@ function RefreshCultureVictory()
 					if PlayersAtWar(pPlayer,activePlayer) then
 						strInternationalImmigrationToolTip = Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_WAR_STOPPED")
 					end
+
+					if pPlayer:GetTeam() == activePlayer:GetTeam() then
+						strInternationalImmigrationToolTip = Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_TEAMMATE_STOPPED")
+					end
 					
 					if  activePlayer:GetNumResourceAvailable(GameInfoTypes["RESOURCE_CONSUMER"], true) <= 0 or activePlayer:GetCurrentEra() >= GameInfo.Eras["ERA_MODERN"].ID and activePlayer:GetNumResourceAvailable(GameInfoTypes["RESOURCE_ELECTRICITY"], true) <= 0 then
 						strInternationalImmigrationToolTip = Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_OTHER_STOPPED")

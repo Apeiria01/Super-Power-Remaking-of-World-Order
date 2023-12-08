@@ -275,52 +275,48 @@ end ------Function End
 
 GameEvents.PlayerSetHasTech.Add(AutoBuildingReplace)
 
+local ibRes_Man = GameInfoTypes["BUILDING_CIV_S_P_MAN_RESOURCES"]
+local ibRes_Con = GameInfoTypes["BUILDING_CIV_S_P_CON_RESOURCES"]
+local ibRes_Ele = GameInfoTypes["BUILDING_CIV_S_P_ELE_RESOURCES"]
+
 function MinorProvideRes(iPlayerID)
 	local pMinor  = Players[iPlayerID]
-	local pPlayer = Players[Game.GetActivePlayer()]
+	if pMinor == nil or not pMinor:IsMinorCiv() or pMinor:GetCapitalCity() == nil or pMinor:GetAlly() < 0 then return end
+	local pPlayer = Players[pMinor:GetAlly()]
+	if pPlayer == nil then return end
 
-	if pMinor == nil or not pMinor:IsMinorCiv() or pMinor:GetCapitalCity() == nil
-		or pPlayer == nil or not pPlayer:IsHuman()
-	then
-		return
-	end
-
+	local iAllyEra = pPlayer:GetCurrentEra()
 	local pCapital = pMinor:GetCapitalCity()
-	local ibRes_Man = GameInfoTypes["BUILDING_CIV_S_P_MAN_RESOURCES"]
-	if pPlayer:GetCurrentEra() >= 3 and pCapital:GetNumBuilding(ibRes_Man) < 10 then
+	
+	-------------Minor Has Res-ManPower----------------------
+	if iAllyEra >= 3 and pCapital:GetNumBuilding(ibRes_Man) < 10 then
 		pCapital:SetNumRealBuilding(ibRes_Man, 10)
-	elseif pPlayer:GetCurrentEra() == 2 and pCapital:GetNumBuilding(ibRes_Man) < 6 then
+	elseif iAllyEra == 2 and pCapital:GetNumBuilding(ibRes_Man) < 6 then
 		pCapital:SetNumRealBuilding(ibRes_Man, 6)
-	elseif pPlayer:GetCurrentEra() == 1 and pCapital:GetNumBuilding(ibRes_Man) < 3 then
+	elseif iAllyEra == 1 and pCapital:GetNumBuilding(ibRes_Man) < 3 then
 		pCapital:SetNumRealBuilding(ibRes_Man, 3)
-	elseif pPlayer:GetCurrentEra() == 0 and pCapital:GetNumBuilding(ibRes_Man) < 2 then
+	elseif iAllyEra == 0 and pCapital:GetNumBuilding(ibRes_Man) < 2 then
 		pCapital:SetNumRealBuilding(ibRes_Man, 2)
 	end
-	-------------Minor Has Res-ManPower----------------------
-
-	local ibRes_Con = GameInfoTypes["BUILDING_CIV_S_P_CON_RESOURCES"]
-	if pPlayer:GetCurrentEra() >= 4 and pCapital:GetNumBuilding(ibRes_Con) < 12 then
+	----------------Minor Has Res-Consumer----------------------
+	if iAllyEra >= 4 and pCapital:GetNumBuilding(ibRes_Con) < 12 then
 		pCapital:SetNumRealBuilding(ibRes_Con, 12)
-	elseif pPlayer:GetCurrentEra() == 3 and pCapital:GetNumBuilding(ibRes_Con) < 9 then
+	elseif iAllyEra == 3 and pCapital:GetNumBuilding(ibRes_Con) < 9 then
 		pCapital:SetNumRealBuilding(ibRes_Con, 9)
-	elseif pPlayer:GetCurrentEra() == 2 and pCapital:GetNumBuilding(ibRes_Con) < 6 then
+	elseif iAllyEra == 2 and pCapital:GetNumBuilding(ibRes_Con) < 6 then
 		pCapital:SetNumRealBuilding(ibRes_Con, 6)
-	elseif pPlayer:GetCurrentEra() == 1 and pCapital:GetNumBuilding(ibRes_Con) < 4 then
+	elseif iAllyEra == 1 and pCapital:GetNumBuilding(ibRes_Con) < 4 then
 		pCapital:SetNumRealBuilding(ibRes_Con, 4)
 	end
-	----------------Minor Has Res-Consumer----------------------
-
-	local ibRes_Ele = GameInfoTypes["BUILDING_CIV_S_P_ELE_RESOURCES"]
+	----------------Minor Has Res-Electricity----------------------
 	if not pPlayer:HasPolicy(GameInfoTypes["POLICY_MILITARY_AID"]) then
 		return;
-	elseif pPlayer:GetCurrentEra() > 6 and pCapital:GetNumBuilding(ibRes_Ele) < 8 then
+	elseif iAllyEra > 6 and pCapital:GetNumBuilding(ibRes_Ele) < 8 then
 		pCapital:SetNumRealBuilding(ibRes_Ele, 6)
-	elseif pPlayer:GetCurrentEra() > 4 and pCapital:GetNumBuilding(ibRes_Ele) < 4 then
+	elseif iAllyEra > 4 and pCapital:GetNumBuilding(ibRes_Ele) < 4 then
 		pCapital:SetNumRealBuilding(ibRes_Ele, 3)
 	end
-	----------------Minor Has Res-Electricity----------------------
 end
-
 GameEvents.PlayerDoTurn.Add(MinorProvideRes)
 
 
