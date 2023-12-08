@@ -207,12 +207,8 @@ function ImprovementAvailableSP(iX, iY, iImprovement)
 	or   iImprovement == GameInfo.Improvements["IMPROVEMENT_CREATE_JUNGLE_MOD"].ID)
 	and pPlot:GetFeatureType() ~= FeatureTypes.NO_FEATURE)
 	
-	or ((iImprovement == GameInfo.Improvements["IMPROVEMENT_FARM"].ID
-	or   iImprovement == GameInfo.Improvements["IMPROVEMENT_MINE"].ID
-	or   iImprovement == GameInfo.Improvements["IMPROVEMENT_TRADING_POST"].ID
-	or   iImprovement == GameInfo.Improvements["IMPROVEMENT_FISHERY_MOD"].ID)
-	and (pPlot:GetImprovementType() == GameInfo.Improvements["IMPROVEMENT_CITADEL"].ID
-	or   pPlot:GetImprovementType() == GameInfo.Improvements["IMPROVEMENT_COASTAL_FORT"].ID))
+	or (pPlot:GetImprovementType() == GameInfo.Improvements["IMPROVEMENT_CITADEL"].ID
+	or pPlot:GetImprovementType() == GameInfo.Improvements["IMPROVEMENT_COASTAL_FORT"].ID)
 	then
 		return false;
 	else

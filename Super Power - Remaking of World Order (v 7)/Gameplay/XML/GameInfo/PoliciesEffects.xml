@@ -1440,19 +1440,6 @@
 
 	<!-- **********************Tourism Created*************************** -->
 	<Policy_TourismOnUnitCreation>
-
-
-		<Row>
-			<PolicyType>POLICY_TRADITION</PolicyType>
-			<UnitClassType>UNITCLASS_SATELLITE_SPUTNIK</UnitClassType>
-			<Tourism>9999</Tourism>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_LIBERTY</PolicyType>
-			<UnitClassType>UNITCLASS_SATELLITE_SPUTNIK</UnitClassType>
-			<Tourism>9999</Tourism>
-		</Row>
-		
 		<Row>
 			<PolicyType>POLICY_OPEN_SOCIETY</PolicyType>
 			<UnitClassType>UNITCLASS_WRITER</UnitClassType>

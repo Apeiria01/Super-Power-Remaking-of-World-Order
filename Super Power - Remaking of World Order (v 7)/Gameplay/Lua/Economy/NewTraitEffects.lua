@@ -84,8 +84,7 @@ if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_JAPAN) then
 
 			print("Nums of available Pantheon Beliefs: " .. #availableBeliefs);
 			if #availableBeliefs > 0 then
-				local chooseBeliefRandNum = Game.Rand(#availableBeliefs,
-					"At NewTraitEffects.lua JapanReligionEnhancedUA(), choose belief") + 1
+				local chooseBeliefRandNum = Game.Rand(#availableBeliefs, "At NewTraitEffects.lua JapanReligionEnhancedUA(), choose belief") + 1
 				Game.EnhanceReligion(iPlayer, eReligion, availableBeliefs[chooseBeliefRandNum], -1);
 			end
 		end

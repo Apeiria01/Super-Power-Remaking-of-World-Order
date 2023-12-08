@@ -17233,5 +17233,8 @@
 		<Row Tag="TXT_KEY_EUPANEL_RANGED_ATTACK_FLANK_MODIFIER_SP">
 			<Text>Range Flanking Bonus</Text>
 		</Row>
+		<Row Tag="TXT_KEY_CO_SP_MOVE_TEAMMATE_STOPPED">
+			<Text>No Immigration because we are in the same team.</Text>
+		</Row>
 	</Language_en_US>
 </GameData>

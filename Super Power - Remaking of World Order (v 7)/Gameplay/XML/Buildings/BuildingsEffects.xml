@@ -7465,6 +7465,11 @@
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>150</Yield>
 		</Row>
+		<Row>
+			<BuildingType>BUILDING_SATELLITE_SPUTNIK</BuildingType>
+			<YieldType>YIELD_TOURISM</YieldType>
+			<Yield>10000</Yield>
+		</Row>
 	</Building_InstantYield>
 	<Building_SpecialistYieldChangesLocal>
 		<Row>

@@ -117,8 +117,10 @@ function NewUnitCreationRules(playerID)
 				local iCost = -1;
 
 				if not player:IsHuman() 
-				and not PlayerAtWarWithHuman(player) 
-				and not Players[Game.GetActivePlayer()]:IsObserver() then
+				and not PlayerAtWarWithHuman(player)
+				--Single Observer (Test Mod): All AI should buy aircraft for Cargos
+				and not (Players[Game.GetActivePlayer()]:IsObserver() and not Game.IsGameMultiPlayer())
+				then
 					--Do Nothing
 				elseif sSpecialCargo == "SPECIALUNIT_FIGHTER"
 				and g_CargoSetList[playerID][1] and g_CargoSetList[playerID][1] ~= -1
