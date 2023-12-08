@@ -776,7 +776,10 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_INCA_QURIKANCHA_HELP</Tag>
-			<Text>无须临近山脉，即可建造。</Text>
+			<Text>
+				[ICON_BULLET]无须临近山脉，即可建造。
+				[NEWLINE][ICON_BULLET]提供2个科学家席位。
+			</Text>
 		</Row>
 
 		<Row>

@@ -3135,7 +3135,10 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_INCA_QURIKANCHA_HELP</Tag>
-			<Text>Qurikancha can be built without nearby mountains.</Text>
+			<Text>
+				[ICON_BULLET]Qurikancha can be built without nearby mountains.
+				[NEWLINE][ICON_BULLET]Add 2 Scientist Slots in City.
+			</Text>
 		</Row>
 		
 

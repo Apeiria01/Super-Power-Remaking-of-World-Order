@@ -1726,7 +1726,7 @@
 		<Row>
 			<BuildingType>BUILDING_INCA_QURIKANCHA</BuildingType>
 			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>3</Yield>
+			<Yield>1</Yield>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_INCA_QURIKANCHA</BuildingType>
