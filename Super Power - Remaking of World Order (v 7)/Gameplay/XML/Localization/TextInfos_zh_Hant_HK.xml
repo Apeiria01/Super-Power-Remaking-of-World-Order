@@ -14709,6 +14709,12 @@
 		<Replace Tag="TXT_KEY_PROMOTION_MOVELIFT_V_HELP">
 			<Text>具有該晉升的單位-5[ICON_MOVES]移動力剩余！</Text>
 		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_BUILD">
+			<Text>集群建造標記</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GROUP_BUILD_HELP">
+			<Text>該單位正在集群建造設施！</Text>
+		</Replace>
 		
 		<!-- UI - Super Group Manager -->
 		<Replace Tag="TXT_KEY_AIRCRAFT_ON_TT">

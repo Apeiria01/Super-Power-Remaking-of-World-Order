@@ -204,10 +204,12 @@ WHEN (SELECT Enabled FROM SPTriggerControler WHERE TriggerType = 'SPNDeleteALLUn
 BEGIN
 	DELETE FROM ArtDefine_StrategicView WHERE StrategicViewType = NEW.UnitArtInfo;
 END;
---UPDATE SPTriggerControler SET Enabled = 1 WHERE TriggerType = 'SPNDeleteALLUnitStrategicFlag';
 
 CREATE TABLE SPNewEffectControler (Type text PRIMARY KEY, Enabled boolean);
 INSERT INTO SPNewEffectControler (Type,Enabled)
 SELECT 'SP_NEWATTACK_OFF',0 UNION ALL
 SELECT 'SP_DELETE_ALL_STRATEGIC_UNIT_FLAG',0 UNION ALL
 SELECT 'UNIT_DEATH_COUNTER_OFF',0;
+
+--UPDATE SPTriggerControler SET Enabled = 1 WHERE TriggerType = 'SPNDeleteALLUnitStrategicFlag';
+--UPDATE SPNewEffectControler SET Enabled = 1 WHERE Type = 'SP_DELETE_ALL_STRATEGIC_UNIT_FLAG';
