@@ -502,26 +502,23 @@ end
 if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_ZULU) then
 	GameEvents.UnitPromoted.Add(function(iPlayer, iUnit, iPromotionType)
 		local pPlayer = Players[iPlayer];
-		if pPlayer == nil then
+		if pPlayer == nil then return end
+
+		local iNumIzako = pPlayer:CountNumBuildings(GameInfoTypes["BUILDING_ZULU_IZIKO"])
+		if iNumIzako == 0 then
 			return;
 		end
 
-		if pPlayer:CountNumBuildings(GameInfoTypes["BUILDING_ZULU_IZIKO"]) == 0 then
-			return;
-		end
+		local pUnit = pPlayer:GetUnitByID(iUnit)
+		if pUnit == nil then return end
 
-		local iBonus = 1 + pPlayer:GetCurrentEra();
-		for city in pPlayer:Cities() do
-			if city:IsHasBuilding(GameInfoTypes["BUILDING_ZULU_IZIKO"]) then
-				city:ChangeJONSCultureStored(iBonus);
-				pPlayer:ChangeJONSCulture(iBonus);
-
-				if pPlayer:IsHuman() and pPlayer:IsTurnActive() then
-					local hex = ToHexFromGrid(Vector2(city:GetX(), city:GetY()));
-					Events.AddPopupTextEvent(HexToWorld(hex),
-						Locale.ConvertTextKey("[COLOR_MAGENTA]+{1_Num}[ICON_CULTURE][ENDCOLOR]", iBonus));
-				end
-			end
+		local iBonus = pPlayer:GetCurrentEra() / 2 + 1;
+		iBonus = math.floor(iBonus * iNumIzako);
+	
+		pPlayer:ChangeJONSCulture(iBonus);
+		if pPlayer:IsHuman() and pPlayer:IsTurnActive() then
+			local hex = ToHexFromGrid(Vector2(pUnit:GetX(), pUnit:GetY()));
+			Events.AddPopupTextEvent(HexToWorld(hex), Locale.ConvertTextKey("[COLOR_MAGENTA]+{1_Num}[ICON_CULTURE][ENDCOLOR]", iBonus));
 		end
 	end)
 end
