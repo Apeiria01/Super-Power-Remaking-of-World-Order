@@ -17251,5 +17251,17 @@
 		<Row Tag="TXT_KEY_CO_SP_MOVE_TEAMMATE_STOPPED">
 			<Text>No Immigration because we are in the same team.</Text>
 		</Row>
+		<Row Tag="TXT_KEY_SP_MISSION_BATCH_MOVE">
+			<Text>Batch Move</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_MISSION_BATCH_MOVE_TOOLTIP">
+			<Text>Move Unit and its surrounding same-Domain Units to the target plot</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_MISSION_BATCH_MOVE_ON">
+			<Text>[COLOR_POSITIVE_TEXT]Batch Move: On[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_MISSION_BATCH_MOVE_OFF">
+			<Text>[COLOR_NEGATIVE_TEXT]Batch Move: Off[ENDCOLOR]</Text>
+		</Row>
 	</Language_en_US>
 </GameData>

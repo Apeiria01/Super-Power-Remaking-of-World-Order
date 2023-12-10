@@ -15442,5 +15442,17 @@
 		<Row Tag="TXT_KEY_CO_SP_MOVE_TEAMMATE_STOPPED">
 			<Text>由于该国与你是队友，两国间没有移民。</Text>
 		</Row>
+		<Row Tag="TXT_KEY_SP_MISSION_BATCH_MOVE">
+			<Text>批量移动</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_MISSION_BATCH_MOVE_TOOLTIP">
+			<Text>将单位及其周围同领域单位移动到目标地块周围</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_MISSION_BATCH_MOVE_ON">
+			<Text>[COLOR_POSITIVE_TEXT]启用批量移动[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_MISSION_BATCH_MOVE_OFF">
+			<Text>[COLOR_NEGATIVE_TEXT]关闭批量移动[ENDCOLOR]</Text>
+		</Row>
 	</Language_zh_CN>
 </GameData>
