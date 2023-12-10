@@ -1,5 +1,5 @@
+include("FLuaVector.lua");
 -- Atztec UW
-
 local SacrificeMissionFaithRate = GameDefines["AZTEC_UB_FAITH_RATE"];
 local SacrificeMissionCultureRate = GameDefines["AZTEC_UB_CULTURE_RATE"];
 local SacrificeMissionPromotionProbability = GameDefines["AZTEC_UB_PROMOTION_PROBABILITY"];
@@ -79,5 +79,37 @@ SupplyExoticGoodsMissionButton = {
     end,
 };
 LuaEvents.UnitPanelActionAddin(SupplyExoticGoodsMissionButton);
+
+BatchMoveMissionButton = {
+    Name = "BatchMove",
+    Title = "TXT_KEY_SP_MISSION_BATCH_MOVE", -- or a TXT_KEY
+    OrderPriority = 0, -- default is 200
+    IconAtlas = "SP_UNIT_ACTION_ATLAS", -- 45 and 64 variations required
+    PortraitIndex = 40,
+    ToolTip = "TXT_KEY_SP_MISSION_BATCH_MOVE_TOOLTIP", -- or a TXT_KEY_ or a function
+
+    Condition = function(action, unit)
+        return unit:CanMove();
+    end, -- or nil or a boolean, default is true
+
+    Disabled = function(action, unit)
+        return false;
+    end, -- or nil or a boolean, default is false
+
+    Action = function(action, unit, eClick)
+        unit:SetIsBatchMark(not unit:IsBatchMark());
+        if unit:IsHuman() then
+			local hex = ToHexFromGrid(Vector2(unit:GetX(), unit:GetY()));
+            local message = ""
+            if unit:IsBatchMark() then
+                message = Locale.ConvertTextKey("TXT_KEY_SP_MISSION_BATCH_MOVE_ON")
+            else
+                message = Locale.ConvertTextKey("TXT_KEY_SP_MISSION_BATCH_MOVE_OFF")
+            end 
+			Events.AddPopupTextEvent(HexToWorld(hex), message);
+		end
+    end,
+};
+LuaEvents.UnitPanelActionAddin(BatchMoveMissionButton);
 
 print("UnitSpecialButtons_SP8: Check Pass!");
