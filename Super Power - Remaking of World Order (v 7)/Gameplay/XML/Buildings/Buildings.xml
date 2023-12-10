@@ -1562,7 +1562,7 @@
 			<PrereqTech>TECH_WRITING</PrereqTech>
 			<Description>TXT_KEY_BUILDING_ZULU_IZIKO</Description>
 			<Help>TXT_KEY_BUILDING_ZULU_IZIKO_HELP</Help>
-			<Civilopedia>TXT_KEY_BUILDING_ZULU_IZIKO_HELP</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_ZULU_IZIKO_TEXT</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
 			<ArtDefineTag>COLESSEUM</ArtDefineTag>
 			<GreatWorkSlotType>GREAT_WORK_SLOT_LITERATURE</GreatWorkSlotType>

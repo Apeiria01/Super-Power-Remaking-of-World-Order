@@ -3154,7 +3154,9 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_SWEDISH_LABORATORY_SERVICES_HELP</Tag>
-			<Text>+25% [ICON_GREAT_PEOPLE] Great People generation rate in the city. </Text>
+			<Text>
+				+33% [ICON_RESEARCH] Science output and +25% [ICON_GREAT_PEOPLE] Great People generation rate in the city. 
+			</Text>
 		</Row>
 
 
@@ -16900,7 +16902,14 @@
 			<Text>
 			[ICON_BULLET]Alternative to the amphitheater, cheaper to build.
 			[NEWLINE][ICON_BULLET] +15% training speed of [ICON_WAR]military units in this city.
-			[NEWLINE][ICON_BULLET] When a military unit is upgraded, each Ithaca gets a one-time [ICON_CULTURE]culture boost, which varies with the era.
+			[NEWLINE][ICON_BULLET] When a military unit is upgraded, get a one-time [ICON_CULTURE]culture boost with half of Current Era (at least 1) from each Ithaca.
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_ZULU_IZIKO_TEXT">
+			<Text>
+				An Iziko is a simple hearth used as a gathering place for Zulu communities。The fireplace was revered as a source for food，warmth，dreams，and ancestral ties。It is from these gatherings that a sense of community and identity was formed，and young Zulus could perform and bond。[NEWLINE][NEWLINE]
+				The fireplace is used metaphorically for the "cooking of songs" in isicathamiya stage performances，a modern offshoot of traditional Zulu music。Dreams were an essential part of communicating with ancestors and formed part of a deeply rooted Zulu religion。Some isicathamiya musicians claim some of their songs were created in the spiritual realm or given to them by their ancestors。[NEWLINE][NEWLINE]
+				"A person is a person because of other people"[NEWLINE]-Zulu proverb
 			</Text>
 		</Replace>
 
@@ -17171,7 +17180,7 @@
         <Row Tag="TXT_KEY_BUILDING_SWEDEN_NOBEL_PRIZE_HELP">
             <Text>
                 [ICON_BULLET] Requires only 26 people to build.
-                [NEWLINE][ICON_BULLET] When a great scientist is born in Sweden or an ally, it will bring one-time [ICON_RESEARCH] scientific research output to both parties, equivalent to 20% of the great scientist's current strength.
+                [NEWLINE][ICON_BULLET] When a great scientist is born in Sweden or an ally, it will bring one-time [ICON_RESEARCH] scientific research output to both parties, equivalent to 15% of the great scientist's current strength.
             </Text>
         </Row>
 		<Row Tag="TXT_KEY_YIELD_OVERFLOW">

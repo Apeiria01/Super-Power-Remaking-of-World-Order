@@ -794,7 +794,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_SWEDISH_LABORATORY_SERVICES_HELP</Tag>
-			<Text>本城市+50%[ICON_RESEARCH]科研产出，+25%[ICON_GREAT_PEOPLE]伟人点数累积。</Text>
+			<Text>本城市+33%[ICON_RESEARCH]科研产出，+25%[ICON_GREAT_PEOPLE]伟人点数累积。</Text>
 		</Row>
 
 		<Row>
@@ -15070,7 +15070,14 @@
 			<Text>
 				[ICON_BULLET]替代露天剧场，造价更低。
 				[NEWLINE][ICON_BULLET]本城[ICON_WAR]军事单位训练速度+15%。
-				[NEWLINE][ICON_BULLET]军事单位升级时，每个伊扎卡获得一次性[ICON_CULTURE]文化产出，随时代变化。
+				[NEWLINE][ICON_BULLET]军事单位升级时，每个伊扎卡使你获得当前时代/2的[ICON_CULTURE]文化（至少为1）。
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_ZULU_IZIKO_TEXT">
+			<Text>
+				伊扎卡，简单地说就是一堆篝火，祖鲁人在它周围进行社交聚会。篝火被祖鲁人尊为食物、温暖、梦想和祖先纽带的来源，从这些聚会中，祖鲁人形成了一种社区意识和身份认同感。[NEWLINE][NEWLINE]
+				梦是祖鲁人与祖先交流的重要组成部分，也是祖鲁人根深蒂固的宗教信仰的一部分，篝火在Isicathamiya——传统祖鲁音乐的现代分支的舞台表演中被比喻为“烹饪歌曲”，一些Isicathamiya音乐家声称，他们的一些歌曲是在精神领域创作的，或者是他们的祖先给他们的。[NEWLINE][NEWLINE]
+				“一个人之所以成为一个人，是因为其他人”——祖鲁谚语。
 			</Text>
 		</Replace>
 
@@ -15364,7 +15371,7 @@
 		<Row Tag="TXT_KEY_BUILDING_SWEDEN_NOBEL_PRIZE_HELP">
             <Text>
                 [ICON_BULLET]只需26人口即可建造。
-                [NEWLINE][ICON_BULLET]瑞典或盟友诞生一位大科学家时，为双方带来一次性[ICON_RESEARCH]科研产出，数值相当于该大科学家当前强度的20%。
+                [NEWLINE][ICON_BULLET]瑞典或盟友诞生一位大科学家时，为双方带来一次性[ICON_RESEARCH]科研产出，数值相当于该大科学家当前强度的15%。
             </Text>
 		</Row>
 		<Row Tag="TXT_KEY_YIELD_OVERFLOW">

@@ -171,7 +171,7 @@
 			<NukeImmune>true</NukeImmune>
 			<PortraitIndex>0</PortraitIndex>
 			<IconAtlas>BUILDING_SWEDEN_NOBEL_PRIZE_ATLAS</IconAtlas>
-            <InstantResearchFromFriendlyGreatScientist>20</InstantResearchFromFriendlyGreatScientist>
+            <InstantResearchFromFriendlyGreatScientist>15</InstantResearchFromFriendlyGreatScientist>
 		</Row>
 		<Row>
 			<Type>BUILDING_SPECIALISTS_SCIENTIFIC_LV3</Type>
