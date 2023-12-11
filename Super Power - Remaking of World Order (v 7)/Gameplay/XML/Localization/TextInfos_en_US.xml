@@ -15623,8 +15623,8 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_JAGUAR_HELP">
 			<Text>
-				+50% [ICON_STRENGTH] Combat Strength when fighting in Jungle and Forest.
-				Double [ICON_MOVES]Movement in Forest and Jungle.
+				[ICON_BULLET]+50% [ICON_STRENGTH] Combat Strength when fighting in Jungle and Forest.
+				[NEWLINE][ICON_BULLET]Double [ICON_MOVES]Movement in Forest and Jungle.
 			</Text>
 		</Replace>
 		
@@ -15636,7 +15636,13 @@
 			<Text>+15% [ICON_STRENGTH] Combat Strength when fighting outside Friendly Territory.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_INVISIBLE_FOREST">
-			<Text>Invisible in Forest and Jungle</Text>
+			<Text>Forest Invisible</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_INVISIBLE_FOREST_HELP">
+			<Text>
+				[ICON_BULLET]Invisible in Forest and Jungle
+				[NEWLINE][ICON_BULLET]Can spot enemy stealthy units
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SAME_CONTINENT">
 			<Text>Continental Overlord</Text>

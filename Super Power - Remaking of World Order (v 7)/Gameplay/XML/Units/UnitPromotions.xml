@@ -5691,11 +5691,11 @@
 		<Row>
 			<Type>PROMOTION_INVISIBLE_FOREST</Type>
 			<Description>TXT_KEY_PROMOTION_INVISIBLE_FOREST</Description>
-			<Help>TXT_KEY_PROMOTION_INVISIBLE_FOREST</Help>
+			<Help>TXT_KEY_PROMOTION_INVISIBLE_FOREST_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<CannotBeChosen>true</CannotBeChosen>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PortraitIndex>38</PortraitIndex>
+			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_SHARED</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_INVISIBLE_FOREST</PediaEntry>
 			<Invisible>INVISIBLE_SUBMARINE</Invisible>
