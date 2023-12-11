@@ -17269,6 +17269,7 @@
 		<Row Tag="TXT_KEY_SP_MISSION_BATCH_MOVE_OFF">
 			<Text>[COLOR_NEGATIVE_TEXT]Batch Move: Off[ENDCOLOR]</Text>
 		</Row>
+
 		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_1">
 			<Text>In SP game, the Corruption level distance depending on the Map size</Text>
 		</Row>
@@ -17304,6 +17305,9 @@
 		</Row>
 		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_12">
 			<Text>Keep your Carrier in friendly-territory, and the Carrier-based Aircraft will automatically upgrade in the next Turn</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_13">
+			<Text>After the upgrade, Hwacha will no longer be able to select unique Promotions, but existing unique Promotions will not be removed</Text>
 		</Row>
 	</Language_en_US>
 </GameData>

@@ -15265,6 +15265,7 @@
 		<Row Tag="TXT_KEY_SP_MISSION_BATCH_MOVE_OFF">
 			<Text>[COLOR_NEGATIVE_TEXT]關閉批量移動[ENDCOLOR]</Text>
 		</Row>
+
 		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_1">
 			<Text>在SP中，腐敗等級距離會隨地圖大小進行小範圍浮動</Text>
 		</Row>
@@ -15300,6 +15301,9 @@
 		</Row>
 		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_12">
 			<Text>將妳的航母停留在友好地塊，下回合艦載機會自動升級</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_13">
+			<Text>火廂車升級後將不能再選擇獨特晉升線，但已有的獨特晉升不會移除</Text>
 		</Row>
 	</Language_zh_Hant_HK>
 </GameData>
