@@ -13499,7 +13499,7 @@
 		<Replace Tag="TXT_KEY_PROMOTION_JAGUAR_HELP">
 			<Text>
 				[ICON_BULLET]在丛林和森林中作战+50%[ICON_STRENGTH]战斗力。
-				[NEWLINE]在丛林和森林[ICON_MOVES]移动力加倍。
+				[NEWLINE][ICON_BULLET]在丛林和森林[ICON_MOVES]移动力加倍。
 			</Text>
 		</Replace>
 
@@ -13510,7 +13510,13 @@
 			<Text>在境外作战+15%[ICON_STRENGTH]战斗力。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_INVISIBLE_FOREST">
-			<Text>森林和丛林隐形</Text>
+			<Text>林地隐形</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_INVISIBLE_FOREST_HELP">
+			<Text>
+				[ICON_BULLET]在森林和丛林隐形。
+				[NEWLINE][ICON_BULLET]能够发现隐形单位。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SAME_CONTINENT">
 			<Text>大陆霸主</Text>
