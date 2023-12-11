@@ -17263,5 +17263,41 @@
 		<Row Tag="TXT_KEY_SP_MISSION_BATCH_MOVE_OFF">
 			<Text>[COLOR_NEGATIVE_TEXT]Batch Move: Off[ENDCOLOR]</Text>
 		</Row>
+		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_1">
+			<Text>In SP game, the Corruption level distance depending on the Map size</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_2">
+			<Text>To Establish Crops, the City where the Units is located must have an Arsenal, and the number of Units on the Plot must be 2</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_3">
+			<Text>Razing city can be completed in 1 turn after you discover "Dynamite" technology</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_4">
+			<Text>You can improve all plots in country with one click of Workers after you discover "Automation" technology</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_5">
+			<Text>Polynesian Coastal City and Land City can be separated by as little as 3 plots</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_6">
+			<Text>The range between Cities in SP is at least 4, but the intercontinental Cities can be shortened to 3</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_7">
+			<Text>Move your mouse over the puppet logo before Annexing the City to see a preview of the level of City Hall</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_8">
+			<Text>The Electricity BUFF will only take effect after the player reaches the Electric Age or has 50 technologies</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_9">
+			<Text>Each of the Allied Minors will provide you with strategic Resources, and the amount will increase with the Era</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_10">
+			<Text>Adopting the "Military Training" Policy of the Honor Policy Tree and your Siege Units will make extra damage from City max HitPoint</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_11">
+			<Text>Buying Carrier-based Aircraft requires that the Carrier is not in a City plot, and you need at least one city that can buy land-based attack Aircraft</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_12">
+			<Text>Keep your Carrier in friendly-territory, and the Carrier-based Aircraft will automatically upgrade in the next Turn</Text>
+		</Row>
 	</Language_en_US>
 </GameData>

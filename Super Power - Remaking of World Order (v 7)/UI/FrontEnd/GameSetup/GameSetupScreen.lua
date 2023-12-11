@@ -594,11 +594,16 @@ function IsWBMap(file)
 	return Path.UsesExtension(file,".Civ5Map"); 
 end
 ----------------------------------------------------------------        
-----------------------------------------------------------------        
+----------------------------------------------------------------   
+local iNumHelp = 0;
+for row in DB.Query("SELECT COUNT(*) AS COUNT FROM Language_ZH_HANT_HK WHERE Tag LIKE 'TXT_KEY_SP_SETUP_SCREEN_HELP_%';") do 	
+	iNumHelp = row.COUNT
+end
 function ShowHideHandler( isHide, isInit )
 	if ( isInit == true) then
 		SetSPAtlas( string.format("SP_Atlas_%d.dds", math.random(0, 9)) );
 		Controls.SPLogo:SetTexture( string.format("SP_Logo_%d.dds", math.random(2)) );
+		Controls.SPHelpLabel:SetText(Locale.ConvertTextKey( string.format("TXT_KEY_SP_SETUP_SCREEN_HELP_%d", math.random(iNumHelp)) ));
 	else
 		Controls.Timer:Stop();
 		if( not isHide ) then
