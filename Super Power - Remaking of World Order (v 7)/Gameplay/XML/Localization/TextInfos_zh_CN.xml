@@ -15460,6 +15460,7 @@
 		<Row Tag="TXT_KEY_SP_MISSION_BATCH_MOVE_OFF">
 			<Text>[COLOR_NEGATIVE_TEXT]关闭批量移动[ENDCOLOR]</Text>
 		</Row>
+
 		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_1">
 			<Text>在SP中，腐败等级距离会随地图大小进行小范围浮动</Text>
 		</Row>
@@ -15495,6 +15496,9 @@
 		</Row>
 		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_12">
 			<Text>将你的航母停留在友好地块，下回合舰载机会自动升级</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_13">
+			<Text>火厢车升级后将不能再选择独特晋升线，但已有的独特晋升不会移除</Text>
 		</Row>
 	</Language_zh_CN>
 </GameData>
