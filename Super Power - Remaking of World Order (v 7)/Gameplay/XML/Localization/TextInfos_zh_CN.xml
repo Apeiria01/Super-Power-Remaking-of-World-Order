@@ -15454,5 +15454,41 @@
 		<Row Tag="TXT_KEY_SP_MISSION_BATCH_MOVE_OFF">
 			<Text>[COLOR_NEGATIVE_TEXT]关闭批量移动[ENDCOLOR]</Text>
 		</Row>
+		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_1">
+			<Text>在SP中，腐败等级距离会随地图大小进行小范围浮动</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_2">
+			<Text>合成军团需要单位所在城市拥有兵工厂，且地块上单位数量必须为2</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_3">
+			<Text>获得“炸药”科技后，夷平城市可以在1回合内完成</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_4">
+			<Text>获得“自动化”后，你可以使用工人一键改良全国地块</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_5">
+			<Text>波利尼西亚的海上城市和陆地城市可以仅相隔3个地块</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_6">
+			<Text>SP中城市间隔至少为4，但是异大陆城市可以缩短至3</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_7">
+			<Text>吞并城市前将鼠标移至傀儡标志可以查看市政厅等级预览</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_8">
+			<Text>电力BUFF在玩家进入电气时代或者拥有50个科技后才会生效</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_9">
+			<Text>每一个同盟城邦都会为你提供战略资源，且数量随宗主国所处时代增加</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_10">
+			<Text>采取荣誉政策树的“军事操练”政策可以让你的攻城单位获得城市血量百分比增伤</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_11">
+			<Text>购买舰载机要求航母不处于城市地块，并且你至少需要有一座城市可以购买陆基攻击机</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_12">
+			<Text>将你的航母停留在友好地块，下回合舰载机会自动升级</Text>
+		</Row>
 	</Language_zh_CN>
 </GameData>
