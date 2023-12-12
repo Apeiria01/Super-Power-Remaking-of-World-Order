@@ -10,8 +10,8 @@
     <Image Anchor="R,T" Offset="0,0" Size="630,200" Texture="CivilzationV_Logo.dds" ID="Civ5Logo" Hidden="0" />
 
     <!-- SP Help  -->
-    <Grid Anchor="C,B" Offset="0,5" Size="800,33"  Style="Grid9FrameTurns" ID="SPHelpFrame" Hidden="0" >
-        <Label ID="SPHelpLabel" Font="TwCenMT14" ColorSet="Beige_Black_Alpha" FontStyle="Shadow" Offset="0,0" Anchor="C,C" String="TXT_KEY_SP_OPEN_CIVILOPEDIA"/>
+    <Grid Anchor="C,B" Offset="0,5" Size="800,33"  Style="Grid9FrameTurns" ID="SPHelpFrame" Hidden="1" >
+        <Label ID="SPHelpLabel" Font="TwCenMT14" ColorSet="Beige_Black_Alpha" FontStyle="Shadow" Offset="0,0" Anchor="C,C" String=""/>
     </Grid>
     
 
