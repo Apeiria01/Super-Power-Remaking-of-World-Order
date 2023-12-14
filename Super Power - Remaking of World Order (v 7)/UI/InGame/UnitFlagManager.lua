@@ -937,7 +937,7 @@ function UpdateCargoList()
         end
     end
 
-    g_UnitList.ListGrid:SetSizeY(math.min(26 * unitCount + 24 + 88, 320));
+    g_UnitList.ListGrid:SetSizeY(math.min(26 * unitCount + 90, 298));
 
     g_UnitList.ListStack:CalculateSize();
     g_UnitList.ListStack:ReprocessAnchoring();
