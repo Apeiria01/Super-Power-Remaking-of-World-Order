@@ -5,19 +5,14 @@ include("UtilityFunctions.lua");
 include("PlotIterators.lua");
 -------------------------------------------------------------------------New Trait Effects-----------------------------------------------------------------------
 if Game.GetGameSpeedType() == 3 then
-	GameEvents.UnitCreated.Add(
+	local QuickGameSpeedID = GameInfo.UnitPromotions["PROMOTION_GAME_QUICKSPEED"].ID
+	Events.SerialEventUnitCreated.Add(
 		function(iPlayerID, iUnitID)
 			local pPlayer = Players[iPlayerID]
 			if pPlayer == nil then return end
 			local pUnit = pPlayer:GetUnitByID(iUnitID)
 			if pUnit == nil then return end
-
-			local GameSpeed = Game.GetGameSpeedType()
-			local QuickGameSpeedID = GameInfo.UnitPromotions["PROMOTION_GAME_QUICKSPEED"].ID
-
-			if GameSpeed == 3 then
-				pUnit:SetHasPromotion(QuickGameSpeedID, true)
-			end
+			pUnit:SetHasPromotion(QuickGameSpeedID, true)
 		end
 	)
 end

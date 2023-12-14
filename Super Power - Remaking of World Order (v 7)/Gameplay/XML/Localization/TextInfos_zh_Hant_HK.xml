@@ -11108,6 +11108,9 @@
 		<Row Tag="TXT_KEY_UNIT_HELP_EXPLORERX">
 			<Text>優秀的偵查單位，移動時不受地形因素影響，而且無需開邊即可進入他國的國界。</Text>
 		</Row>
+		<Row Tag="TXT_KEY_UNIT_EXPLORERX_TEXT">
+			<Text>探索是為了發現信息或資源而進行的搜索行為。幾乎所有動物都會進行探索，包括人類。在人類歷史上，它最引人註目的崛起是在地理大發現時期，當時歐洲探險家出於各種原因進行航行並繪制了世界大部分地區的地圖。</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_UNIT_RECON_CAVALRY">
 			<Text>偵查騎兵</Text>
@@ -11372,7 +11375,7 @@
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_CIV5_SPAIN_CONQUISTADOR_STRATEGY">
-			<Text>征服者是多用途的單位，在陸地和海上都能作戰。作為替代騎士的西班牙特色單位，征服者在陸上擁有額外的視野和戰鬥力，適於進行偵察。該單位在西班牙首都所在大陸以外的地方有更強的戰力並能建立城市。征服者在海運狀態下有更高的移動力。同時，在消滅敵方單位時，可以獲得其戰鬥力50%的[ICON_GOLD]金幣（該能力不繼承）。</Text>
+			<Text>征服者是西班牙特色單位，替代騎士。征服者在陸上擁有額外的視野，在海運狀態下有更高的移動力，適於進行偵察。該單位在西班牙首都所在大陸以外的地方有更強的戰力並能建立城市。同時，在消滅敵方單位時，可以獲得其戰鬥力50%的[ICON_GOLD]金幣（該能力不繼承）。</Text>
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_UNIT_HELP_BERBER_CAVALRY">
@@ -11991,10 +11994,6 @@
 		<Replace Tag="TXT_KEY_PROMOTION_GENERAL_STACKING_HELP">
 			<Text>和陸軍統帥在同一格時，+25%[ICON_STRENGTH]戰鬥力</Text>
 		</Replace>
-		
-		<Row Tag="TXT_KEY_UNIT_SPANISH_CONQUISTADOR_HELP">
-			<Text>只能由西班牙的輕帆船登陸產生，不能直接生產，跟探險家一樣可以進入未開邊的國家，並進行貿易。</Text>
-		</Row>
 		
 		<Row Tag="TXT_KEY_PROMOTION_CITADEL_DEFENSE">
 			<Text>固定炮臺</Text>
@@ -13357,6 +13356,12 @@
 		<Row Tag="TXT_KEY_PROMOTION_OTHER_CONTINENT_HELP">
 			<Text>離開首都所在大陸作戰時+15%[ICON_STRENGTH]戰鬥力。</Text>
 		</Row>
+		<Replace Tag="TXT_KEY_PROMOTION_OCEAN_MOVEMENT">
+			<Text>海上移動力</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_OCEAN_MOVEMENT_HELP">
+			<Text>+2海上移動力</Text>
+		</Replace>
 
 		<Row Tag="TXT_KEY_PROMOTION_LASER_SUPPRESSION">
 			<Text>激光炫目系統</Text>

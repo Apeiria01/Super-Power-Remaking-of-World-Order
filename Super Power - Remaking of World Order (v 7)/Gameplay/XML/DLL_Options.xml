@@ -319,6 +319,10 @@
 			<Where Name="EVENTS_PLAYER_TURN"/>
 			<Set Value="1"/>
 		</Update>
+		<Update>
+			<Where Name="SHOW_ATTACK_INTERFACE_WITHOUT_ENEMY"/>
+			<Set Value="1"/>
+		</Update>
 	</CustomModOptions>
 
 

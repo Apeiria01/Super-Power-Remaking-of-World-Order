@@ -2908,6 +2908,7 @@
 			<MoveRate>BOAT</MoveRate>
 			<ProjectPrereq>PROJECT_HEROIC_CARRIER</ProjectPrereq>
 			<ExtraMaintenanceCost>60</ExtraMaintenanceCost>
+			<ObsoleteTech>TECH_NUCLEAR_FUSION</ObsoleteTech>
 		</Row>
 		<Row>
 			<Class>UNITCLASS_ENTERPRISE</Class>
