@@ -45,10 +45,7 @@
     <Instance Name="UnitList">
         <WorldAnchor ID="LisAnchor" Hidden="1">
             <Grid Anchor="R,T" Offset="44,-22" Size="180,320" AnchorSide="O,i" Padding="0,0" Style="Grid9DetailSix140" ID="ListGrid">
-                <Grid Anchor="L,T" Size="160,24" Color="White.0" Offset="0,44" Style="GridSquare8" ConsumeMouse="1" ID="Title">
-                    <Image Anchor="C,B" Offset="0,0" Texture="bar300x2.dds" Size="170,1" />
-                </Grid>
-                <ScrollPanel Anchor="R,T" Offset="0,68" Size="180,208" Vertical="1" ID="ScrollPanel">
+                <ScrollPanel Anchor="R,T" Offset="0,46" Size="180,208" Vertical="1" ID="ScrollPanel">
                     <!-- Scroll Controls -->
                     <ScrollBar Style="VertSlider" Length="198" Anchor="R,C" Offset="-6,-11" AnchorSide="O,I" />
                     <UpButton Style="ScrollBarUp" Anchor="R,T" Offset="-6,-24" AnchorSide="O,I" />
