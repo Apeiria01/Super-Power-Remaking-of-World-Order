@@ -12994,9 +12994,9 @@
 			[NEWLINE][ICON_BULLET]The explorer can be upgraded to an Archaeologist unit. 
 		</Text>
 	</Row>
-		<Row Tag="TXT_KEY_UNIT_EXPLORERX_TEXT">
-			<Text>Exploration is the act of searching for the purpose of discovery of information or resources. Exploration occurs in all non-sessile animal species, including humans. In human history, its most dramatic rise was during the Age of Discovery when European explorers sailed and charted much of the rest of the world for a variety of reasons. Since then, major explorations after the Age of Discovery have occurred for reasons mostly aimed at information discovery.</Text>
-		</Row>
+	<Row Tag="TXT_KEY_UNIT_EXPLORERX_TEXT">
+		<Text>Exploration is the act of searching for the purpose of discovery of information or resources. Exploration occurs in all non-sessile animal species, including humans. In human history, its most dramatic rise was during the Age of Discovery when European explorers sailed and charted much of the rest of the world for a variety of reasons. Since then, major explorations after the Age of Discovery have occurred for reasons mostly aimed at information discovery.</Text>
+	</Row>
 		
 
 	<Row Tag="TXT_KEY_UNIT_RECON_CAVALRY">
@@ -13247,15 +13247,15 @@
 		</Replace>
 		
 
-	<Replace Tag="TXT_KEY_UNIT_HELP_EGYPTIAN_WAR_CHARIOT">
+		<Replace Tag="TXT_KEY_UNIT_HELP_EGYPTIAN_WAR_CHARIOT">
 			<Text>Egyptian unique early hit-and-run unit. Replaces the Chariot Archer. It is faster than the generic chariot and hitting the enemy with strong ranged attacks. </Text>
 		</Replace>
-	<Replace Tag="TXT_KEY_UNIT_HELP_HUN_HORSE_ARCHER">
+		<Replace Tag="TXT_KEY_UNIT_HELP_HUN_HORSE_ARCHER">
 			<Text>Unique Hunnic early hit-and-run unit. Replaces the Chariot Archer. It is stronger but cheaper than the generic chariot.</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_CIV5_SPAIN_CONQUISTADOR_STRATEGY">
-			<Text>The Conquistador is a multi-purpose unit that is strong both on land and at sea. Replacing the Knight, it is a great scout on land with strong combat strength and extra visibility. It has stronger combat and also has the ability to found new cities, but only on a foreign continent that does not contain the Spanish capital. The Conquistador can move faster when embarking in the water. Earns 50% of opponents' strength as [ICON_GOLD] Gold for kills.(Not inheritable)</Text>
+			<Text>The Conquistador is a multi-purpose unit that is strong both on land and at sea. Replacing the Knight, it is a great scout with extra visibility on land and can move faster when embarking in the water. It has stronger combat and also has the ability to found new cities, but only on a foreign continent that does not contain the Spanish capital. Earns 50% of opponents' strength as [ICON_GOLD] Gold for kills(Not inheritable).</Text>
 		</Replace>
 
 
@@ -15656,6 +15656,12 @@
 		<Row Tag="TXT_KEY_PROMOTION_OTHER_CONTINENT_HELP">
 			<Text>+15% [ICON_STRENGTH] Combat Strength when fighting outside Capital's continent.</Text>
 		</Row>
+		<Replace Tag="TXT_KEY_PROMOTION_OCEAN_MOVEMENT">
+			<Text>Ocean Movement</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_OCEAN_MOVEMENT_HELP">
+			<Text>+2 Extra Movement for Ocean</Text>
+		</Replace>
 
 
 		<Row Tag="TXT_KEY_PROMOTION_ANTI_RIOT_BONUS">

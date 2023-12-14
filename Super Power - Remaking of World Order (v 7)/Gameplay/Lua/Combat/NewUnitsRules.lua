@@ -96,11 +96,6 @@ function NewUnitCreationRules(playerID)
 				end
 			end
 
-			-- Add 2 Movements for Embarked Conquistador
-			if unit:GetUnitType() == GameInfoTypes.UNIT_SPANISH_CONQUISTADOR and unit:IsEmbarked() then
-				unit:SetMoves(unit:GetMoves() + 2 * GameDefines["MOVE_DENOMINATOR"]);
-			end
-
 			-- Carriers & Cargos Setting System
 			local sSpecialCargo   = GameInfo.Units[unit:GetUnitType()].SpecialCargo;
 			local sSpecial        = GameInfo.Units[unit:GetUnitType()].Special;

@@ -2002,12 +2002,10 @@
 			<UnitType>UNIT_SPANISH_CONQUISTADOR</UnitType>
 			<PromotionType>PROMOTION_IGNORE_TERRAIN_COST</PromotionType>
 		</Row>
-		<!--
 		<Row>
 			<UnitType>UNIT_SPANISH_CONQUISTADOR</UnitType>
-			<PromotionType>PROMOTION_RIVAL_TERRITORY</PromotionType>
+			<PromotionType>PROMOTION_OCEAN_MOVEMENT</PromotionType>
 		</Row>
-		-->
 		<Row>
 			<UnitType>UNIT_SPANISH_CONQUISTADOR</UnitType>
 			<PromotionType>PROMOTION_OTHER_CONTINENT</PromotionType>
