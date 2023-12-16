@@ -123,6 +123,8 @@
 			<ShortDescription>TXT_KEY_TRAIT_FIGHT_WELL_DAMAGED_SHORT</ShortDescription>
 			<FightWellDamaged>true</FightWellDamaged>
 			<CultureBonusUnitStrengthModify>100</CultureBonusUnitStrengthModify>
+			<AttackBonusAdjacentWhenUnitKilled>20</AttackBonusAdjacentWhenUnitKilled>
+			<KilledAttackBonusDecreasePerTurn>-20</KilledAttackBonusDecreasePerTurn>
 		</Row>
 		<Row>
 			<Type>TRAIT_BUFFALO_HORNS</Type>
