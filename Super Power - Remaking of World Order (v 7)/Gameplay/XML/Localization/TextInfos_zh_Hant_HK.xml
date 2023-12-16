@@ -5530,8 +5530,8 @@
 		<Replace Tag="TXT_KEY_TRAIT_FIGHT_WELL_DAMAGED">
 			<Text>
 				[ICON_BULLET]受傷單位攻擊力不減。
-				[NEWLINE][ICON_BULLET]當你訓練或購買了一個軍事單位時，獲得一次性的[ICON_CULTURE]文化加成（其數值相當於單位的100%[ICON_STRENGTH]戰鬥力）。
-				[NEWLINE][ICON_BULLET]強化宗教時添加一條未選的隨機神系。
+				[NEWLINE][ICON_BULLET]單位在戰鬥中死亡時臨近單位獲得20%攻擊加成（該數值每回合減少20%）。
+				[NEWLINE][ICON_BULLET]當妳訓練或購買了軍事單位時，獲得數值相當於單位[ICON_STRENGTH]戰鬥力的[ICON_CULTURE]文化產出。
 			</Text>
 		</Replace>
 
@@ -15255,6 +15255,10 @@
 		<Row Tag="TXT_KEY_EUPANEL_RANGED_ATTACK_FLANK_MODIFIER_SP">
 			<Text>遠程夾擊攻擊加成</Text>
 		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_DEATH_ATTACK_MODIFIER">
+			<Text>死亡單位加成</Text>
+		</Row>
+
 		<Row Tag="TXT_KEY_CO_SP_MOVE_TEAMMATE_STOPPED">
 			<Text>由於該國與你是隊友，兩國間沒有移民。</Text>
 		</Row>

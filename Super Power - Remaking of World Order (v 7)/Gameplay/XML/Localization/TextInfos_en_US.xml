@@ -10220,8 +10220,8 @@
 		<Replace Tag="TXT_KEY_TRAIT_FIGHT_WELL_DAMAGED">
 			<Text>
 				[ICON_BULLET]Units fight as though they were at full strength even when damaged. 
-				[NEWLINE][ICON_BULLET]Gain [ICON_CULTURE] Culture when you build a Military Unit (100% of its [ICON_STRENGTH] Combat Strength). 
-				[NEWLINE][ICON_BULLET]Add a random unselected Pantheon when you enhance a religion.
+				[NEWLINE][ICON_BULLET]When a Unit dies in combat, its adjacent Units gain a 20% attack bonus (this value is reduced by 20% per turn).
+				[NEWLINE][ICON_BULLET]Gain [ICON_CULTURE] Culture when you build or purchase a Military Unit (100% of its [ICON_STRENGTH] Combat Strength). 
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_TRAIT_BUFFALO_HORNS">
@@ -17260,6 +17260,10 @@
 		<Row Tag="TXT_KEY_EUPANEL_RANGED_ATTACK_FLANK_MODIFIER_SP">
 			<Text>Range Flanking Bonus</Text>
 		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_DEATH_ATTACK_MODIFIER">
+			<Text>Death Unit Bonus</Text>
+		</Row>
+
 		<Row Tag="TXT_KEY_CO_SP_MOVE_TEAMMATE_STOPPED">
 			<Text>No Immigration because we are in the same team.</Text>
 		</Row>
