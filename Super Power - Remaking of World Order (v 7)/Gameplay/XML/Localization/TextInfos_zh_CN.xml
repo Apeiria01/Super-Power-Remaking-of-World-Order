@@ -14608,7 +14608,7 @@
 				[ICON_BULLET]获得两个传教士，所有城市获得免费神庙。
 				[NEWLINE][ICON_BULLET]本城新建陆军单位+15经验。
 				[NEWLINE][ICON_BULLET]允许使用信仰购买美洲狮战士和雄鹰战士。
-				[NEWLINE][ICON_BULLET]可将陆军军事单位移至本城进行活人献祭，获得相当于军事单位战斗力300%的[ICON_CULTURE]文化和[ICON_PEACE]信仰。
+				[NEWLINE][ICON_BULLET]可将陆军正规军单位移至本城进行活人献祭，获得相当于军事单位战斗力300%的[ICON_CULTURE]文化和[ICON_PEACE]信仰。
 				该单位有20%的概率存活，并且获得晋升【战神齐洛波奇特利之力】，+50生命值上限，战斗力+10%。
 			</Text>
 		</Row>

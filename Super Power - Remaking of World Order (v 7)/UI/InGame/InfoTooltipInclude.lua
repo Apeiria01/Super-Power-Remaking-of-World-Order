@@ -2619,7 +2619,7 @@ end
 -- ===========================================================================
 -- Help text for Projects
 -- ===========================================================================
-function GetHelpTextForProject( projectID )
+function GetHelpTextForProject( projectID, bIncludeRequirements, city )
 	local project = GameInfo.Projects[ projectID ]
 	local maxGlobalInstances = project and tonumber(project.MaxGlobalInstances) or 0
 	local maxTeamInstances = project and tonumber(project.MaxTeamInstances) or 0
@@ -2627,7 +2627,12 @@ function GetHelpTextForProject( projectID )
 	local Maintenance = project and tonumber(project.Maintenance) or 0
 
 	-- Name & Cost
-	local productionCost = (Game and Players[Game.GetActivePlayer()]:GetProjectProductionNeeded(projectID)) or project.Cost
+	local productionCost = 0
+	if city ~= nil then
+		productionCost = city:GetProjectProductionNeeded(projectID)
+	else
+		productionCost = (Game and Players[Game.GetActivePlayer()]:GetProjectProductionNeeded(projectID)) or project.Cost
+	end
 	local tips = { Locale_ToUpper( project.Description or "???" ), "----------------", L"TXT_KEY_PEDIA_COST_LABEL" .. " " .. productionCost .. "[ICON_PRODUCTION]" }
 
 

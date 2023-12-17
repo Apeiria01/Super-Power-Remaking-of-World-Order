@@ -15,6 +15,7 @@ SacrificeMissionButton = {
         return (unit:CanMove()
             and unit:GetBaseCombatStrength() > 0
             and unit:GetDomainType() == DomainTypes.DOMAIN_LAND
+            and unit:GetUnitCombatType() ~= GameInfoTypes["UNITCOMBAT_RECON"]
             and unit:GetPlot():IsCity()
             and unit:GetPlot():GetPlotCity():GetOwner() == unit:GetOwner() 
             and unit:GetPlot():GetPlotCity():IsHasBuilding(GameInfoTypes["BUILDING_AZTEC_HUEY_TEOCALLI_SP"]));
