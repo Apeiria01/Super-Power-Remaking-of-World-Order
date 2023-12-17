@@ -369,21 +369,7 @@ WorkerToMilitiaButton = {
     end, -- or nil or a boolean, default is true
 
     Disabled = function(action, unit)
-        local plot = unit:GetPlot()
-        local player = Players[unit:GetOwner()]
-
-        if not plot:IsFriendlyTerritory(player) then
-            return true
-        end
-
-        if plot:GetNumUnits() > 1 then
-            return true
-        end
-
-        if plot:IsWater() then
-            return true
-        end
-
+        return unit:IsEmbarked() or unit:GetPlot() == nil or not unit:GetPlot():IsFriendlyTerritory(unit:GetOwner()) or unit:GetPlot():GetNumUnits() > 1;
     end, -- or nil or a boolean, default is false
 
     Action = function(action, unit, eClick)
@@ -455,57 +441,6 @@ MilitiaToWorkerButton = {
     end
 };
 LuaEvents.UnitPanelActionAddin(MilitiaToWorkerButton);
-
-------Purchase Missiles on units
---
--- BuyMissileMissionButton = {
---  Name = "Quick Missile Purchase",
---  Title = "TXT_KEY_SP_BTNNOTE_QUICK_BUY_MISSILE_SHORT", -- or a TXT_KEY
---  OrderPriority = 200, -- default is 200
---  IconAtlas = "SP_UNIT_ACTION_ATLAS", -- 45 and 64 variations required
---  PortraitIndex = 5,
---  ToolTip = "TXT_KEY_SP_BTNNOTE_QUICK_BUY_MISSILE", -- or a TXT_KEY_ or a function
---  Condition = function(action, unit)
---    return unit:CanMove() and (unit:GetUnitType() == GameInfoTypes.UNIT_MISSILE_CRUISER or unit:GetUnitType() == GameInfoTypes.UNIT_NUCLEAR_SUBMARINE);
---  end, -- or nil or a boolean, default is true
---  Disabled = function(action, unit) 
---    local plot = unit:GetPlot()
---    local player = Players[unit:GetOwner()]
---   	local pTeam = Teams[player:GetTeam()]
---    if not plot:IsFriendlyTerritory(player) then 
---     return true       
---    end 
---    
---   	if player:GetGold() < 1000 then
---    	return true
---    end 
---    
---
---	if not pTeam:IsHasTech(GameInfoTypes["TECH_ADVANCED_BALLISTICS"]) then
---    	return true
---    end 
---       
---     if unit:IsFull() then
---    	return true
---    end 
---       
---    return not plot:IsFriendlyTerritory(player)
---  end, -- or nil or a boolean, default is false
---  
---  Action = function(action, unit, eClick)  
---    local plot = unit:GetPlot()  
---    local player = Players[unit:GetOwner()]     
---    local NewUnitID = GameInfoTypes.UNIT_GUIDED_MISSILE    
---  	local NewUnit = player:InitUnit(NewUnitID, plot:GetX(), plot:GetY(),UNITAI_MISSILE_AIR)
---	local player = Players[Game.GetActivePlayer()]
---	
---    player:ChangeGold(-1000)
---    NewUnit:SetMoves(0)
---  
---  end
--- };
---
--- LuaEvents.UnitPanelActionAddin(BuyMissileMissionButton);
 
 -----------------Recon Airunits Bonus
 AirReconBonusButton = {
@@ -1020,56 +955,19 @@ HackingMissionButton = {
     end, -- or nil or a boolean, default is true
 
     Disabled = function(action, unit)
-
-        local plot = unit:GetPlot()
-
-        if plot:IsFriendlyTerritory(player) then
+        local plotOwner = Players[unit:GetPlot():GetOwner()]
+        if plotOwner == nil or not plotOwner:IsAtWar(unit:GetOwner())  then
             return true
         end
 
-        local unitOwner = Players[unit:GetOwner()]
-
-        local plotOwner = Players[plot:GetOwner()]
-        if plotOwner == nil then
-            print("Netrual Tile!")
-            return true
-        end
-
-        --    local iTeam = Teams[unitOwner:GetTeam()]
-        --	local eTeamIndex = Teams[plotOwner:GetTeam()]
-        --	
-        --    
-        --    if iTeam:IsAtWar(eTeamIndex) then 
-        --        return false
-        --    else 
-        --    	return true          
-        --    end
     end, -- or nil or a boolean, default is false
 
     Action = function(action, unit, eClick)
-        local plot = unit:GetPlot()
-        local unitOwner = Players[unit:GetOwner()]
-        local plotOwnerID = plot:GetOwner()
+        local plotOwner = Players[unit:GetPlot():GetOwner()]
 
-        if plotOwnerID == nil then
-            print("Netrual Tile!")
-            return
-        end
-
-        local plotOwner = Players[plot:GetOwner()]
-        if plotOwner == nil then
-            print("Netrual Tile!")
-            return true
-        end
-
-        local iTeam = Teams[unitOwner:GetTeam()]
-        local eTeamIndex = plotOwner:GetTeam()
-
-        if iTeam:IsAtWar(eTeamIndex) then
-            plotOwner:SetAnarchyNumTurns(2)
-            print("Hacking success!")
-            unit:Kill()
-        end
+        plotOwner:SetAnarchyNumTurns(2)
+        print("Hacking success!")
+        unit:Kill()
     end
 };
 

@@ -4541,21 +4541,6 @@
 			<FlavorType>FLAVOR_DEFENSE</FlavorType>
 			<Flavor>60</Flavor>
 		</Row>
-		<!--<Row>
-			<BuildingType>BUILDING_AZTEC_ANCIENT_BARRACKS</BuildingType>
-			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
-			<Flavor>90</Flavor>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_AZTEC_ANCIENT_BARRACKS</BuildingType>
-			<FlavorType>FLAVOR_OFFENSE</FlavorType>
-			<Flavor>30</Flavor>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_AZTEC_ANCIENT_BARRACKS</BuildingType>
-			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
-			<Flavor>20</Flavor>
-		</Row>-->
 
 		<Row>
 			<BuildingType>BUILDING_ARMORY</BuildingType>

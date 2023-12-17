@@ -1196,17 +1196,6 @@
 		</Update>
 
 		<Row>
-			<Tag>TXT_KEY_BUILDING_AZTEC_ANCIENT_BARRACKS</Tag>
-			<Text>[ICON_WAR]大神庙</Text>
-		</Row>
-		<Row>
-			<Tag>TXT_KEY_CIV5_BUILDINGS_AZTEC_ANCIENT_BARRACKS_TEXT</Tag>
-			<Text>
-				大神庙位于宪法广场的最边缘处，大都会教堂的一侧，是先古阿兹特克人祭祀的神庙。一侧修建了大型的博物馆，用来展览此地挖掘的诸多文物，古阿兹特克在此祭祀所有神祈包括动物的图腾，例如鹰、大蛇等。由于古阿兹特克的教义中，先神是牺牲自己创造人类，因此他们在祭祀时有著强烈的牺牲精神，非常频繁地有人殉葬来祭祀的传统。但同时，古阿兹特克人又崇尚人类繁衍，由于蛇蜕皮被古人认为是重生，同时蛇又身居大地，也与下雨有各种关系，因此，大蛇在古印第安人的建筑物中非常常见，类似龙和狮在东方一样，被广泛应用在建筑两侧、大门等各个地方。可惜大神庙目前只剩下残垣断壁，不过建筑物的地基尚在。
-			</Text>
-		</Row>
-
-		<Row>
 			<Tag>TXT_KEY_BUILDING_WOOD_DOCK</Tag>
 			<Text>[ICON_WAR]码头</Text>
 		</Row>
@@ -5634,7 +5623,7 @@
 		<Replace Tag="TXT_KEY_TRAIT_FIGHT_WELL_DAMAGED">
 			<Text>
 				[ICON_BULLET]受伤单位攻击力不减。
-				[NEWLINE][ICON_BULLET]单位在战斗中死亡时临近单位获得20%攻击加成（该数值每回合减少20%）。
+				[NEWLINE][ICON_BULLET]单位在战斗中死亡时临近单位获得10%攻击加成（该数值每回合减少10%）。
 				[NEWLINE][ICON_BULLET]当你训练或购买了军事单位时，获得数值相当于单位[ICON_STRENGTH]战斗力的[ICON_CULTURE]文化产出。
 			</Text>
 		</Replace>
