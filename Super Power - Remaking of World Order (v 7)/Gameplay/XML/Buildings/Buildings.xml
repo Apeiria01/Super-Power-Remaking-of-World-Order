@@ -2186,9 +2186,9 @@
 			<IconAtlas>BW_ATLAS_1</IconAtlas>
 			<NeverCapture>true</NeverCapture>
 			<PortraitIndex>5</PortraitIndex>
-			<MutuallyExclusiveGroup>13</MutuallyExclusiveGroup>
 			<Defense>500</Defense>
 			<ExtraCityHitPoints>25</ExtraCityHitPoints>
+			<NoPuppet>true</NoPuppet>
 		</Row>
 		<Row>
 			<Type>BUILDING_IKANDA</Type>
@@ -2207,33 +2207,12 @@
 			<IconAtlas>EXPANSION2_BUILDING_ATLAS</IconAtlas>
 			<NeverCapture>true</NeverCapture>
 			<PortraitIndex>2</PortraitIndex>
-			<MutuallyExclusiveGroup>13</MutuallyExclusiveGroup>
 			<Defense>500</Defense>
 			<ExtraCityHitPoints>25</ExtraCityHitPoints>
 			<Happiness>1</Happiness>
 			<MilitaryProductionModifier>15</MilitaryProductionModifier>
+			<NoPuppet>true</NoPuppet>
 		</Row>
-		<!--<Row>
-			<Type>BUILDING_AZTEC_ANCIENT_BARRACKS</Type>
-			<BuildingClass>BUILDINGCLASS_BARRACKS</BuildingClass>
-			<Cost>45</Cost>
-			--><!--<GoldMaintenance>1</GoldMaintenance>--><!--
-			<Happiness>2</Happiness>
-			--><!--<PrereqTech>TECH_HUNTING</PrereqTech>--><!--
-			<Help>TXT_KEY_BUILDING_BARRACKS_HELP</Help>
-			<Description>TXT_KEY_BUILDING_AZTEC_ANCIENT_BARRACKS</Description>
-			<Civilopedia>TXT_KEY_CIV5_BUILDINGS_AZTEC_ANCIENT_BARRACKS_TEXT</Civilopedia>
-			<Strategy>TXT_KEY_SP_CITY_MILITARY_BUILDINGS_STRATEGY</Strategy>
-			<ArtDefineTag>ART_DEF_BUILDING_BARRACKS</ArtDefineTag>
-			<MinAreaSize>-1</MinAreaSize>
-			<HurryCostModifier>25</HurryCostModifier>
-			<IconAtlas>SPWondersUB_ATLAS</IconAtlas>
-			<NeverCapture>true</NeverCapture>
-			<PortraitIndex>31</PortraitIndex>
-			<MutuallyExclusiveGroup>13</MutuallyExclusiveGroup>
-			<Defense>500</Defense>
-			<ExtraCityHitPoints>25</ExtraCityHitPoints>
-		</Row>-->
 	
 		<Row>
 			<Type>BUILDING_ARMORY</Type>

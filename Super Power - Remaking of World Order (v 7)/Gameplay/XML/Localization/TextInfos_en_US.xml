@@ -3652,21 +3652,6 @@
 				 [NEWLINE][NEWLINE]Must be built by a Great General or Great Admiral." />
 		</Update>
 
-
-		<Row>
-			<Tag>TXT_KEY_BUILDING_AZTEC_ANCIENT_BARRACKS</Tag>
-			<Text>[ICON_WAR] Templo Mayor</Text>
-		</Row>
-		<Row>
-			<Tag>TXT_KEY_CIV5_BUILDINGS_AZTEC_ANCIENT_BARRACKS_TEXT</Tag>
-			<Text>
-				The Templo Mayor (Spanish for "Great Temple") was one of the main temples of the Aztecs in their capital city of Tenochtitlan, which is now Mexico City. Its architectural style belongs to the late Postclassic period of Mesoamerica. The temple was called the huei teocalli [ˈwei teoˈkalːi].
-			</Text>
-		</Row>
-	
-
-
-
 		<Row>
 			<Tag>TXT_KEY_BUILDING_WOOD_DOCK</Tag>
 			<Text>[ICON_WAR] Wood Dock</Text>
@@ -10220,7 +10205,7 @@
 		<Replace Tag="TXT_KEY_TRAIT_FIGHT_WELL_DAMAGED">
 			<Text>
 				[ICON_BULLET]Units fight as though they were at full strength even when damaged. 
-				[NEWLINE][ICON_BULLET]When a Unit dies in combat, its adjacent Units gain a 20% attack bonus (this value is reduced by 20% per turn).
+				[NEWLINE][ICON_BULLET]When a Unit dies in combat, its adjacent Units gain a 10% attack bonus (this value is reduced by 10% per turn).
 				[NEWLINE][ICON_BULLET]Gain [ICON_CULTURE] Culture when you build or purchase a Military Unit (100% of its [ICON_STRENGTH] Combat Strength). 
 			</Text>
 		</Replace>
