@@ -16442,7 +16442,7 @@
 			[ICON_BULLET] Get two missionaries and all cities get free temples.
 			[NEWLINE][ICON_BULLET] New land army units in this city have +15 experience.
 			[NEWLINE][ICON_BULLET] Allow Faith to buy Cougar and Eagle Warriors.
-			[NEWLINE][ICON_BULLET] can move the army military unit to this city for human sacrifice, and get [ICON_CULTURE] culture and [ICON_PEACE] belief equivalent to 300% of the combat power of the military unit.
+			[NEWLINE][ICON_BULLET] Can move the land regular military unit to this city for human sacrifice, and get [ICON_CULTURE] culture and [ICON_PEACE] belief equivalent to 300% of the combat power of the military unit.
 			The unit has a 20% chance of surviving, and it will be promoted to [The Power of the God of War Zilopochtli], +50 maximum HP, and +10% combat power.
 			</Text>
 		</Row>

@@ -843,7 +843,7 @@ function UpdateWindow( city )
 			Controls.ProductionPortrait:SetHide( false );
 			
 			-- Info for this thing
-			strToolTip = Locale.ConvertTextKey(GetHelpTextForProject(projectProduction, true)) .. "[NEWLINE][NEWLINE]" .. strToolTip;
+			strToolTip = Locale.ConvertTextKey(GetHelpTextForProject(projectProduction, true, city)) .. "[NEWLINE][NEWLINE]" .. strToolTip;
 			
 		else
 			Controls.ProductionPortrait:SetHide( true );
@@ -1295,7 +1295,7 @@ function AddProductionButton( id, description, orderType, turnsLeft, column, isD
 				strToolTip = GetHelpTextForBuilding(id, bExcludeName, bExcludeHeader, false, pCity);
 			else
 				local bIncludeRequirementsInfo = false;
-				strToolTip = GetHelpTextForProject(id, bIncludeRequirementsInfo);
+				strToolTip = GetHelpTextForProject(id, bIncludeRequirementsInfo, pCity);
 			end
 			
 			-- Disabled help text
