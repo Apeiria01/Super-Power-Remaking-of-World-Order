@@ -14860,7 +14860,7 @@
 			<Text>In the same order, destroy 1 more building in the [COLOR_POSITIVE_TEXT]Target City[ENDCOLOR].+100%[ICON_STRENGTH]Strength Attacking Citadel.</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_AIR_SIEGE_3_HELP" >
-			<Text>In the same order, destroy 1 more building in the [COLOR_POSITIVE_TEXT]Target City[ENDCOLOR].+100%[ICON_STRENGTH]Strength Attacking Citadel.</Text>
+			<Text>In the same order, destroy 1 more building in the [COLOR_POSITIVE_TEXT]Target City[ENDCOLOR].+200%[ICON_STRENGTH]Strength Attacking Citadel.</Text>
 		</Replace>
 
 

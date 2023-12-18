@@ -12727,7 +12727,7 @@
 			<Text>按照同样顺序，追加摧毀[COLOR_POSITIVE_TEXT]目標城市[ENDCOLOR]的一座建築。攻击固定炮台加100%战斗力。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_AIR_SIEGE_3_HELP" >
-			<Text>按照同样顺序，追加摧毀[COLOR_POSITIVE_TEXT]目標城市[ENDCOLOR]的一座建築。攻击固定炮台加100%战斗力。</Text>
+			<Text>按照同样顺序，追加摧毀[COLOR_POSITIVE_TEXT]目標城市[ENDCOLOR]的一座建築。攻击固定炮台加200%战斗力。</Text>
 		</Replace>
 
 		<Row Tag="TXT_KEY_PROMOTION_DESTROY_SUPPLY_1">
