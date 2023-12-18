@@ -7007,17 +7007,17 @@
 		<Row>
 			<PromotionType>PROMOTION_AIR_SIEGE_1</PromotionType>
 			<OtherPromotionType>PROMOTION_CITADEL_DEFENSE</OtherPromotionType>
-			<Attack>100</Attack>
+			<Modifier>100</Modifier>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_AIR_SIEGE_2</PromotionType>
 			<OtherPromotionType>PROMOTION_CITADEL_DEFENSE</OtherPromotionType>
-			<Attack>100</Attack>
+			<Modifier>100</Modifier>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_AIR_SIEGE_3</PromotionType>
 			<OtherPromotionType>PROMOTION_CITADEL_DEFENSE</OtherPromotionType>
-			<Attack>100</Attack>
+			<Modifier>200</Modifier>
 		</Row>
 	</UnitPromotions_PromotionModifiers>
 		
