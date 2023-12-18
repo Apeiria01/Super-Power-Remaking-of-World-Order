@@ -11432,7 +11432,7 @@
 				[NEWLINE][ICON_BULLET]Flagship
 
 				[NEWLINE][NEWLINE][COLOR_YIELD_FOOD]Operation:[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]Automatically resupply its Carrier-based Aircrafts (One Aircraft Unit per turn) when it is inside Friendly Territory. After gained "Carrier Supply III" promotion, it can resupply its Carrier-based Aircrafts even outside Friendly Territory.
+				[NEWLINE][ICON_BULLET]To purchase its Carrier-based Aircrafts, Carrier should stay inside Friendly Territory and not in a City plot (you need have a city that can buy land-based attack Aircraft at least). After gained "Carrier Supply III" promotion, it can resupply its Carrier-based Aircrafts even outside Friendly Territory.
 				[NEWLINE][ICON_BULLET]EXP earned by its Carrier-based Aircrafts will transfer to the Aircraft Carrier. So the Aircraft Carrier will earn the promotions. Even the Carrier-based Aircrafts are all shot down, those promotions will not lose.
 				[NEWLINE][ICON_BULLET]New Carrier-based Aircrafts added to the Aircraft Carrier CANNOT move until NEXT turn and it will automatically inherit all available promotions in the NEXT turn.
 				[NEWLINE][ICON_BULLET]if the Aircraft Carrier is destroyed, it will lose all of its Carrier-based Aircrafts on board.
@@ -17296,7 +17296,7 @@
 			<Text>Adopting the "Military Training" Policy of the Honor Policy Tree and your Siege Units will make extra damage from City max HitPoint</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_11">
-			<Text>Buying Carrier-based Aircraft requires that the Carrier is not in a City plot, and you need at least one city that can buy land-based attack Aircraft</Text>
+			<Text>Purchase Carrier-based Aircraft requires the Carrier is not in a City plot, and you need have a city that can buy land-based attack Aircraft at least</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_12">
 			<Text>Keep your Carrier in friendly-territory, and the Carrier-based Aircraft will automatically upgrade in the next Turn</Text>
