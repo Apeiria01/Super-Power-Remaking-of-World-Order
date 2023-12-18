@@ -9609,7 +9609,7 @@
 				[NEWLINE][ICON_BULLET]補給
 
 				[NEWLINE][NEWLINE][COLOR_YIELD_FOOD]特點：[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]當其位於友方地域且沒有損傷時會自動補充載機（每回合一架）。不過你也可以直接花錢購買載機以進行快速補充；
+				[NEWLINE][ICON_BULLET]購買艦載機需要妳至少有壹座可以購買陸基攻擊機的城市，且航母必須位於非城市友方地塊（若航母擁有補給三級晉升則能夠在友方地域之外補充艦載機）；
 				[NEWLINE][ICON_BULLET]艦載機獲得的經驗將傳遞給其載機航母。因此航母可以更容易獲得晉升。即使航母載機被擊落了，其晉升不會消失；
 				[NEWLINE][ICON_BULLET]航母的新載機本回合不能行動，且下回合才能繼承航母的各項晉升；
 				[NEWLINE][ICON_BULLET]如果航母被擊沉，則所有載機也會損失掉；

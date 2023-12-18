@@ -9725,7 +9725,7 @@
 				[NEWLINE][ICON_BULLET]补给
 
 				[NEWLINE][NEWLINE][COLOR_YIELD_FOOD]特点：[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]当其位于友方地域且没有损伤时会自动补充载机（每回合一架）。不过你也可以直接花钱购买载机以进行快速补充；
+				[NEWLINE][ICON_BULLET]购买舰载机需要你至少有一座可以购买陆基攻击机的城市，且航母必须位于非城市友方地块（若航母拥有补给三级晋升则能够在友方地域之外补充舰载机）；
 				[NEWLINE][ICON_BULLET]舰载机获得的经验将传递给其载机航母。因此航母可以更容易获得晋升。即使航母载机被击落了，其晋升不会消失；
 				[NEWLINE][ICON_BULLET]航母的新载机本回合不能行动，且下回合才能继承航母的各项晋升；
 				[NEWLINE][ICON_BULLET]如果航母被击沉，则所有载机也会损失掉；

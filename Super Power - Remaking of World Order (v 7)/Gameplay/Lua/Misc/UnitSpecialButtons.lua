@@ -10,7 +10,7 @@ AllUnitsSleepButton = {
     ToolTip = "TXT_KEY_SP_UI_BTN_ALL_SLEEP_HELP", -- or a TXT_KEY_ or a function
 
     Condition = function(action, unit)
-        return true; -- unit:CanMove() and unit:GetActivityType() == 0;
+        return unit:CanMove();
     end, -- or nil or a boolean, default is true
 
     Disabled = function(action, unit)
@@ -51,7 +51,7 @@ AllUnitsWakeButton = {
     ToolTip = "TXT_KEY_SP_UI_BTN_ALL_WAKE_HELP", -- or a TXT_KEY_ or a function
 
     Condition = function(action, unit)
-        return true; -- unit:CanMove() and unit:GetActivityType() ~= 0;
+        return unit:CanMove();
     end, -- or nil or a boolean, default is true
 
     Disabled = function(action, unit)
@@ -85,7 +85,7 @@ AllUnitsUpgradeButton = {
     ToolTip = "TXT_KEY_SP_UI_BTN_ALL_UPGRADE_HELP", -- or a TXT_KEY_ or a function
 
     Condition = function(action, unit)
-        return true; -- unit:CanUpgradeRightNow();
+        return unit:CanMove();
     end, -- or nil or a boolean, default is true
 
     Disabled = function(action, unit)
