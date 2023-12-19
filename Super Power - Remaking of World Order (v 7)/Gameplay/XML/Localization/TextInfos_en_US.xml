@@ -2917,11 +2917,14 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_METAL_FACTORY_HELP</Tag>
 			<Text>
-				+5 [ICON_RES_MANPOWER] Manpower.
-				[NEWLINE][NEWLINE]+2 [ICON_PRODUCTION] Production from each source of [ICON_RES_IRON] Iron, [ICON_RES_COPPER] Copper, [ICON_RES_COAL] Coal, [ICON_RES_ALUMINUM] Aluminum and [ICON_RES_URANIUM] Uranium.
-				[NEWLINE][NEWLINE]+15% [ICON_PRODUCTION] Production when building Military Units.
-				[NEWLINE][NEWLINE]City must have an improved source of at least one of these resources nearby.
-				[NEWLINE][NEWLINE][COLOR_NEGATIVE_TEXT]Pollution[ENDCOLOR] will cause -5% [ICON_FOOD] Food Growth.[NEWLINE][NEWLINE]Requires 1 [ICON_RES_ELECTRICITY] Electricity.</Text>
+				[ICON_BULLET]+5 [ICON_RES_MANPOWER] Manpower.
+				[NEWLINE][ICON_BULLET]+1 [ICON_PRODUCTION] Production from each source of [ICON_RES_IRON] Iron, [ICON_RES_COPPER] Copper, [ICON_RES_COAL] Coal, [ICON_RES_ALUMINUM] Aluminum and [ICON_RES_URANIUM] Uranium.
+				[NEWLINE][ICON_BULLET]+1 [ICON_PRODUCTION] Production from each Mine.
+				[NEWLINE][ICON_BULLET]+15% [ICON_PRODUCTION] Production when building Military Units.
+				[NEWLINE][ICON_BULLET]City must have an improved source of at least one of these resources nearby.
+				[NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]Pollution[ENDCOLOR] will cause -5% [ICON_FOOD] Food Growth.
+				[NEWLINE][ICON_BULLET]Requires 1 [ICON_RES_ELECTRICITY] Electricity.
+			</Text>
 		</Row>
 
 		
@@ -9629,7 +9632,7 @@
 		<Replace Tag="TXT_KEY_CHOOSE_ARCH_ARTIFACT_RESULT">
 			<Text>Artifact will be placed in nearest Great Work of Art slot. Artifact provides +4 [ICON_CULTURE] Culture and +2 [ICON_TOURISM] Tourism. Archaeologist will be consumed.</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_CHOOSE_ARCH_ARTIFACT_RESULT">
+		<Replace Tag="TXT_KEY_CHOOSE_ARCH_WRITTEN_ARTIFACT_RESULT">
 			<Text>Ancient writing will be placed in nearest Great Work of Writing slot. Writing provides +4 [ICON_CULTURE] Culture and +2 [ICON_TOURISM] Tourism. Archaeologist will be consumed.</Text>
 		</Replace>
 		

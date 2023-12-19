@@ -79,3 +79,6 @@ UPDATE Improvements Set ExtraScore = 300 WHERE Type = 'IMPROVEMENT_CREATE_FOREST
 UPDATE Improvements Set ExtraScore = 300 WHERE Type = 'IMPROVEMENT_CREATE_JUNGLE_MOD';
 --UPDATE Improvements Set ExtraScore = 2000 WHERE Type = 'IMPROVEMENT_CITADEL';
 --UPDATE Improvements Set ExtraScore = 2000 WHERE Type = 'IMPROVEMENT_COASTAL_FORT';
+
+--BUG fix: Superfluous Archaeologist may cause some problems
+UPDATE Improvements Set ForbidSameBuildUnitClasses = 'UNITCLASS_ARCHAEOLOGIST' WHERE Type = 'IMPROVEMENT_LANDMARK';
