@@ -17,31 +17,6 @@ if Game.GetGameSpeedType() == 3 then
 	)
 end
 
--- Fix the "Archaeological Dig Finished" Freeze
-function OnPopupMessageCA(popupInfo)
-	local popupType = popupInfo.Type;
-	if popupType ~= ButtonPopupTypes.BUTTONPOPUP_CHOOSE_ARCHAEOLOGY then
-		return;
-	end
-
-	local iUnit = popupInfo.Data2;
-	if (iUnit == nil or iUnit == -1) and Players[Game.GetActivePlayer()]:GetUnitClassCount(GameInfoTypes.UNITCLASS_ARCHAEOLOGIST) == 1 then
-		for pUnit in Players[Game.GetActivePlayer()]:Units() do
-			if pUnit and pUnit:GetUnitClassType() == GameInfoTypes.UNITCLASS_ARCHAEOLOGIST
-				and pUnit:GetPlot():GetImprovementType() == GameInfoTypes["IMPROVEMENT_ARCHAEOLOGICAL_DIG"]
-			then
-				local iX, iY = pUnit:GetX(), pUnit:GetY();
-				pUnit:Kill();
-				Players[Game.GetActivePlayer()]:InitUnit(GameInfoTypes.UNIT_ARCHAEOLOGIST, iX, iY):SetMoves(0);
-				break;
-			end
-		end
-	end
-end
-
-Events.SerialEventGameMessagePopup.Add(OnPopupMessageCA);
-
-
 -- Hun UA effects
 if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_HUNS) then
 	function HunDestroyCity(hexPos, playerID, cityID) --Hun will gain yield after razing a city

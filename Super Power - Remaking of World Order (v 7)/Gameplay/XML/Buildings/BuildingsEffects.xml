@@ -2758,31 +2758,31 @@
 			<BuildingType>BUILDING_METAL_FACTORY</BuildingType>
 			<ResourceType>RESOURCE_IRON</ResourceType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>2</Yield>
+			<Yield>1</Yield>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_METAL_FACTORY</BuildingType>
 			<ResourceType>RESOURCE_COAL</ResourceType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>2</Yield>
+			<Yield>1</Yield>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_METAL_FACTORY</BuildingType>
 			<ResourceType>RESOURCE_COPPER</ResourceType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>2</Yield>
+			<Yield>1</Yield>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_METAL_FACTORY</BuildingType>
 			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>2</Yield>
+			<Yield>1</Yield>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_METAL_FACTORY</BuildingType>
 			<ResourceType>RESOURCE_URANIUM</ResourceType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>2</Yield>
+			<Yield>1</Yield>
 		</Row>
 		
 		<Row>
@@ -2906,6 +2906,15 @@
 			<Yield>2</Yield>
 		</Row>
 	</Building_ResourceYieldChanges>
+
+	<Building_ImprovementYieldChanges>
+		<Row>
+			<BuildingType>BUILDING_METAL_FACTORY</BuildingType>
+			<ImprovementType>IMPROVEMENT_MINE</ImprovementType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	</Building_ImprovementYieldChanges>
 
 
 	<Building_FeatureYieldChanges>
