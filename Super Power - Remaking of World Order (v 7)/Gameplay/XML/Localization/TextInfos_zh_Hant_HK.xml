@@ -10013,21 +10013,6 @@
 			<Text>攻擊敵方單位時獲得與造成傷害數值相同的[ICON_PEACE]信仰。</Text>
 		</Row>
 		
-		<!--<Row Tag="TXT_KEY_UNIT_PERSIAN_CATAPHRACT">
-			<Text>薩珊鐵騎</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_PERSIAN_CATAPHRACT_HEADING">
-			<Text>薩珊鐵騎</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_HELP_PERSIAN_CATAPHRACT">
-			<Text>替代騎士，擊殺敵人可得到黃金點數。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_PERSIAN_CATAPHRACT_TEXT">
-			<Text>公元224年，波斯貴族阿爾達希爾滅掉安息，建立了薩珊波斯帝國。公元226年，薩珊王朝取代帕提亞人王朝。薩珊人喚起波斯民族的自尊心，恢復瑣羅亞斯德教為國教，組織穿戴沉重的鎧甲的騎兵部隊，統一了全國。
-波斯薩珊騎兵是薩珊王朝稱霸中亞時的主力部隊，波斯人驍勇善戰，而騎兵的作用同樣起了巨大的作用。</Text>
-		</Row>-->
-		
 		<Row Tag="TXT_KEY_UNIT_MOBILE_AA_GUN">
 			<Text>自行防空炮</Text>
 			<Plurality>2</Plurality>
@@ -10112,37 +10097,6 @@
 				[NEWLINE]相鄰的和同格的所有陸軍單位每回合額外恢復15HP。該單位每回合額外恢復15HP。
 			</Text>
 		</Replace>
-
-		<Row Tag="TXT_KEY_UNIT_ZULU_OLIFANT">
-			<Text>南非號角主戰坦克</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_ZULU_OLIFANT_HEADING">
-			<Text>南非號角</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_ZULU_OLIFANT_HELP">
-			<Text>替代主戰坦克。造價更低，且少1單位人力資源消耗，自帶可繼承的長途行軍晉升和醫療1-2級的晉升，境外作戰+25%[ICON_STRENGTH]戰鬥力。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_ZULU_OLIFANT_PEDIA">
-			<Text>
-			南非號角主戰坦克是南非自主在“百夫長”坦克上發展起來的一款坦克，在軍事素質和國力普遍偏低的非洲大陸，南非號角作為一型從戰後第一代坦克的基礎上發展起來的坦克，已經足以滿足南非軍隊的戰鬥需求。
-			[NEWLINE]南非號角採用一門經典的L7型105毫米口徑的主炮，由於從百夫長的基礎上發展而來，因此防護能力和機動性相對於國際上的先進主戰坦克都不出彩，其火控系統是整個坦克中較為先進的部分，基本達到主流主戰坦克的水準，總體來說，除去車後可當澡盆的儲物箱以外，缺乏亮點。
-			</Text>
-		</Row>
-		
-		<!--<Row Tag="TXT_KEY_UNIT_ZULU_BOER_COMMANDO">
-			<Text>G6自行火炮</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_ZULU_BOER_COMMANDO_HEADING">
-			<Text>G6自行火炮</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_ZULU_BOER_COMMANDO_HELP">
-			<Text>替代自行火炮，近戰力量接近機械化步兵，自帶可以疊加的+1射程+1視野+1移動晉升，對海軍單位+100%[ICON_STRENGTH]戰鬥力，每回合可以自行裝載並補充2發巡航導彈。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_ZULU_BOER_COMMANDO_PEDIA">
-			<Text>從1979年開始，南非又在G5的基礎上，研制具有自行能力的G6自行榴彈炮。1982-1986年，制成了4臺樣車，開始了作戰適應性試驗。1987年又制成了4臺定型樣車。1988年正式設計定型，並開始了小批量生產。G6自行榴彈炮已開始裝備南非的裝甲師炮兵團，每團3個炮兵連，每連8輛。1990年，阿聯酋訂購了78輛G6，1991年開始交貨。此外，阿曼也準備訂購。</Text>
-		</Row>-->
 		
 		<Row Tag="TXT_KEY_UNIT_AUSTRIAN_SKODA">
 			<Text>斯柯達榴彈炮</Text>
@@ -10818,19 +10772,6 @@
 
 
 	<!-- *************************Air Units****************************-->
-		<Row Tag="TXT_KEY_UNIT_IROQUOIAN_CANADIAN_FIGHTER">
-			<Text>加拿大皇家空軍</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		
-		<Row Tag="TXT_KEY_UNIT_IROQUOIAN_CANADIAN_FIGHTER_HEADING">
-			<Text>加拿大皇家空軍</Text>
-		</Row>
-		
-		<Row Tag="TXT_KEY_UNIT_IROQUOIAN_CANADIAN_FIGHTER_TEXT">
-			<Text>加拿大皇家空軍正式建立於1924年4月，距今有92年的歷史，總部位於加拿大首都安大略省渥太華市的加拿大國防總部。其目前現役部隊人數有14500人，預備役部隊人數2600人，另外還有2500名平民雇員，裝備的有人駕駛飛機大約391架，另有多架無人機。加拿大皇家空軍信奉的座右銘是“穿過災難飛上星空”，其自成立後參與多場戰爭，包括第二次世界大戰、朝鮮戰爭、海灣戰爭、科索沃戰爭、科威特戰爭、南斯拉夫維和行動、阿富汗戰爭、伊拉克戰爭、敘利亞戰爭、利比亞維和行動等。加拿大皇家空軍負責加拿大武裝部隊內的飛行行動、對加拿大陸軍及皇家海軍提供飛機支援，並對加拿大國家開展的搜尋與救援任務提供必要的飛機支援。此外，其與美國空軍聯合組建起北美航空防禦指揮部，共同負責保衛北美大陸空域的安全。</Text>
-		</Row>
-		
 		<Row Tag="TXT_KEY_UNIT_FRANCE_MIRRAGE2000">
 			<Text>幻影2000</Text>
 			<Plurality>2</Plurality>
@@ -12857,17 +12798,6 @@
 		<Row Tag="TXT_KEY_PROMOTION_ARMOR_BATTLESHIP_2_HELP">
 			<Text>+33%[ICON_STRENGTH]防禦力。</Text>
 		</Row>
-
-		<!--<Replace Tag="TXT_KEY_PROMOTION_COASTAL_RAIDER_1_HELP" >
-			<Text>對城市+33%攻擊力。獲取相當於對城市損害33%的金幣。</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_COASTAL_RAIDER_2_HELP" >
-			<Text>對城市+33%攻擊力。獲取相當於對城市損害33%的金幣。</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_COASTAL_RAIDER_3_HELP" >
-			<Text>對城市+34%攻擊力。獲取相當於對城市損害34%的金幣。</Text>
-		</Replace>-->
-		
 		<Row Tag="TXT_KEY_PROMOTION_DRONE_CARRIER">
 			<Text>無人機載體</Text>
 		</Row>
@@ -12893,14 +12823,6 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_DRONE_UNIT_HELP">
 			<Text>[ICON_BULLET][COLOR_POSITIVE_TEXT]懸浮移動[ENDCOLOR]。發生戰鬥或第二輪開始時返回載機平臺。[NEWLINE]能夠發現潛艇和其他隱形單位。[NEWLINE]沒有維護費。[NEWLINE]擁有6格偵查範圍。[NEWLINE]能夠每回合進行一次空中游獵。[NEWLINE]不能獲得晉升。
-			</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_PROMOTION_MISSILE_UNIT">
-			<Text>導彈單位</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_MISSILE_UNIT_HELP">
-			<Text>能夠攻擊地面海面單位和城市。[NEWLINE]沒有維護費。[NEWLINE]每次攻擊都會消耗該單位。[NEWLINE]不能獲得晉升。可以被[COLOR_NEGATIVE_TEXT]戰鬥機[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]導彈巡洋艦[ENDCOLOR]攔截。
 			</Text>
 		</Row>
 

@@ -152,48 +152,6 @@
 			<MoveRate>AIR_REBASE</MoveRate>
 			<ExtraMaintenanceCost>22</ExtraMaintenanceCost>
 		</Row>
-		<Row>
-			<Class>UNITCLASS_FIGHTER</Class>
-			<Type>UNIT_IROQUOIAN_CANADIAN_FIGHTER</Type>
-			<PrereqTech>TECH_RADAR</PrereqTech>
-			<RangedCombat>80</RangedCombat>
-			<Cost>500</Cost>
-			<Moves>3</Moves>
-			<Immobile>true</Immobile>
-			<Range>15</Range>
-			<AirInterceptRange>15</AirInterceptRange>
-			<HurryCostModifier>75</HurryCostModifier>
-			<Special>SPECIALUNIT_STEALTH</Special>
-			<CombatClass>UNITCOMBAT_FIGHTER</CombatClass>
-			<Domain>DOMAIN_AIR</Domain>
-			<DefaultUnitAI>UNITAI_DEFENSE_AIR</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_IROQUOIAN_CANADIAN_FIGHTER</Description>
-			<Civilopedia>TXT_KEY_UNIT_IROQUOIAN_CANADIAN_FIGHTER_TEXT</Civilopedia>
-			<Strategy>TXT_KEY_SP_UNITS_AIR_FIGHTERS_STRATEGY</Strategy>
-			<Help>TXT_KEY_PROMOTION_ANTI_AIR_II_HELP</Help>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
-			<RangeAttackOnlyInDomain>true</RangeAttackOnlyInDomain>
-			<ObsoleteTech>TECH_STEALTH</ObsoleteTech>
-			<GoodyHutUpgradeUnitClass>UNITCLASS_INTERCEPTER</GoodyHutUpgradeUnitClass>
-			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
-			<Mechanized>true</Mechanized>
-			<AdvancedStartCost>50</AdvancedStartCost>
-			<AirUnitCap>1</AirUnitCap>
-			<RangedCombatLimit>100</RangedCombatLimit>
-			<CombatLimit>0</CombatLimit>
-			<XPValueAttack>5</XPValueAttack>
-			<XPValueDefense>5</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_FIGHTER</UnitArtInfo>
-			<UnitFlagAtlas>SPUnitFlags_FLAG</UnitFlagAtlas>
-			<UnitFlagIconOffset>116</UnitFlagIconOffset>
-			<IconAtlas>SPUNITS01_ATLAS</IconAtlas>
-			<PortraitIndex>15</PortraitIndex>
-			<MoveRate>AIR_REBASE</MoveRate>
-			<ExtraMaintenanceCost>22</ExtraMaintenanceCost>
-		</Row>
-		
-		
 
 		<Row>
 			<Class>UNITCLASS_INTERCEPTER</Class>
@@ -1140,10 +1098,6 @@
 			<UnitType>UNIT_FIGHTER</UnitType>
 			<UnitClassType>UNITCLASS_INTERCEPTER</UnitClassType>
 		</Row>
-		<Row>
-			<UnitType>UNIT_IROQUOIAN_CANADIAN_FIGHTER</UnitType>
-			<UnitClassType>UNITCLASS_INTERCEPTER</UnitClassType>
-		</Row>
 		
 		<Row>
 			<UnitType>UNIT_DIVE_BOMBER</UnitType>
@@ -1218,26 +1172,6 @@
 		<Row>
 			<UnitType>UNIT_FIGHTER</UnitType>
 			<PromotionType>PROMOTION_ANTI_AIR_II</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_IROQUOIAN_CANADIAN_FIGHTER</UnitType>
-			<PromotionType>PROMOTION_ANTI_AIR_II</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_IROQUOIAN_CANADIAN_FIGHTER</UnitType>
-			<PromotionType>PROMOTION_MARCH</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_IROQUOIAN_CANADIAN_FIGHTER</UnitType>
-			<PromotionType>PROMOTION_MEDIC</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_IROQUOIAN_CANADIAN_FIGHTER</UnitType>
-			<PromotionType>PROMOTION_MEDIC_II</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_IROQUOIAN_CANADIAN_FIGHTER</UnitType>
-			<PromotionType>PROMOTION_GAIN_EXPERIENCE</PromotionType>
 		</Row>
 
 		<Row>
@@ -1444,10 +1378,6 @@
 			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_IROQUOIAN_CANADIAN_FIGHTER</UnitType>
-			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
-		</Row>
-		<Row>
 			<UnitType>UNIT_DIVE_BOMBER</UnitType>
 			<ResourceType>RESOURCE_OIL</ResourceType>
 		</Row>
@@ -1618,11 +1548,6 @@
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 			<Cost>4</Cost>
 		</Row>
-		<Row>
-			<UnitType>UNIT_IROQUOIAN_CANADIAN_FIGHTER</UnitType>
-			<ResourceType>RESOURCE_MANPOWER</ResourceType>
-			<Cost>3</Cost>
-		</Row>
 
 		<Row>
 			<UnitType>UNIT_DIVE_BOMBER</UnitType>
@@ -1765,14 +1690,6 @@
 		</Row>
 		<Row>
 			<UnitType>UNIT_FIGHTER</UnitType>
-			<UnitAIType>UNITAI_CITY_SPECIAL</UnitAIType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_IROQUOIAN_CANADIAN_FIGHTER</UnitType>
-			<UnitAIType>UNITAI_DEFENSE_AIR</UnitAIType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_IROQUOIAN_CANADIAN_FIGHTER</UnitType>
 			<UnitAIType>UNITAI_CITY_SPECIAL</UnitAIType>
 		</Row>
 
@@ -2013,17 +1930,6 @@
 			<UnitType>UNIT_FIGHTER</UnitType>
 			<FlavorType>FLAVOR_ANTIAIR</FlavorType>
 			<Flavor>40</Flavor>
-		</Row>
-
-		<Row>
-			<UnitType>UNIT_IROQUOIAN_CANADIAN_FIGHTER</UnitType>
-			<FlavorType>FLAVOR_AIR</FlavorType>
-			<Flavor>80</Flavor>
-		</Row>
-		<Row>
-			<UnitType>UNIT_IROQUOIAN_CANADIAN_FIGHTER</UnitType>
-			<FlavorType>FLAVOR_ANTIAIR</FlavorType>
-			<Flavor>90</Flavor>
 		</Row>
 
 		<Row>

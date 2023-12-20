@@ -72,6 +72,7 @@ UPDATE Improvements Set ExtraScore = 100 WHERE Type = 'IMPROVEMENT_BRAZILWOOD_CA
 UPDATE Improvements Set ExtraScore = 100 WHERE Type = 'IMPROVEMENT_CHATEAU';
 UPDATE Improvements Set ExtraScore = 200 WHERE Type = 'IMPROVEMENT_TERRACE_FARM';
 UPDATE Improvements Set ExtraScore = 250 WHERE Type = 'IMPROVEMENT_MOAI';
+UPDATE Improvements Set ExtraScore = 300 WHERE Type = 'IMPROVEMENT_IROQUOIAN_FOREST_FARM';
 UPDATE Improvements Set ExtraScore = 300 WHERE Type = 'IMPROVEMENT_MAYA_ALTAR';
 UPDATE Improvements Set ExtraScore = 700 WHERE Type = 'IMPROVEMENT_ETHIOPIA_COFFEE';
 UPDATE Improvements Set ExtraScore = 900 WHERE Type = 'IMPROVEMENT_SHOSHONE_WILDDOME';

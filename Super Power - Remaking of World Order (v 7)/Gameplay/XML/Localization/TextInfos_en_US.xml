@@ -11915,24 +11915,6 @@
 			<Text>Gain the Faith [ICON_PEACE] as the amount of damage dealt when attacking enemy troops.</Text>
 		</Row>
 
-
-		<!--<Row Tag="TXT_KEY_UNIT_PERSIAN_CATAPHRACT">
-			<Text>Sassanid-era Cataphract</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_PERSIAN_CATAPHRACT_HEADING">
-			<Text>Sassanid-era Cataphract</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_HELP_PERSIAN_CATAPHRACT">
-			<Text>WIP</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_PERSIAN_CATAPHRACT_TEXT">
-			<Text>Eastern and Persian cataphracts, particularly those of the Sassanid Empire, carried bows as well as blunt-force weapons, to soften up enemy formations before an eventual attack, reflecting upon the longstanding Persian tradition of horse archery and its use in battle by successive Persian Empires.</Text>
-		</Row>-->
-
-
-
-
 		<Row Tag="TXT_KEY_UNIT_MOBILE_AA_GUN">
 			<Text>Mobile AA</Text>
 			<Plurality>2</Plurality>
@@ -12003,24 +11985,6 @@
 			[NEWLINE][NEWLINE]All player-owned land units within 1 tiles as well as Khan himself heal extra 15 Hp when healing.</Text>
 		</Replace>
 		
-		
-
-
-		<Row Tag="TXT_KEY_UNIT_ZULU_OLIFANT">
-			<Text>Olifant Mk1B</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_ZULU_OLIFANT_HEADING">
-			<Text>Olifant Mk1B</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_ZULU_OLIFANT_HELP">
-			<Text>WIP</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_ZULU_OLIFANT_PEDIA">
-			<Text>The Olifant mk1B main battle tank was developed and produced by the Olifant Manufacturing Company, OMC Engineering pty Ltd, based in South Africa. Development of the Olifant started in 1976 and first entered service with the South African Armoured Corps in the late 1970s. OMC Engineering later became Reumech OMC, then Vickers OMC and, in September 2002 was renamed Alvis OMC, following the acquisition of Vickers Defence by Alvis plc. In September 2004, Alvis OMC became part of BAE Systems Land Systems.</Text>
-		</Row>
-
-		
 		<Row Tag="TXT_KEY_UNIT_ZULU_BOER_COMMANDO">
 			<Text>Boer Commando</Text>
 			<Plurality>2</Plurality>
@@ -12061,20 +12025,6 @@
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_SPANISH_CANARIAS_PEDIA">
 			<Text>The Canarias class was a class of heavy cruiser of the Spanish Navy. Two ships of the class were completed in the 1930s. They were built in Spain by the Vickers-Armstrongs subsidiary Sociedad Española de Construcción Naval upon a British design, and were a modified version of the Royal Navy′s County class. The two ships completed, Canarias and Baleares, both saw service during the Spanish Civil War, the latter being sunk.</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_UNIT_IROQUOIAN_CANADIAN_FIGHTER">
-			<Text>Royal Canadian Air Force</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_IROQUOIAN_CANADIAN_FIGHTER_HEADING">
-			<Text>Royal Canadian Air Force</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_IROQUOIAN_CANADIAN_FIGHTER_HELP">
-			<Text>WIP</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_IROQUOIAN_CANADIAN_FIGHTER_TEXT">
-			<Text>The Royal Canadian Air Force (RCAF) (French: Aviation royale canadienne, ARC) is the air force of Canada. Its role is to "provide the Canadian Forces with relevant, responsive and effective airpower". The RCAF is one of three environmental commands within the unified Canadian Armed Forces. As of 2013, operating 258 manned aircraft and 9 unmanned aerial vehicles, the Royal Canadian Air Force consists of 14,500 Regular Force and 2,600 Primary Reserve personnel, supported by 2,500 civilians. Lieutenant-General Michael J. Hood, CMM CD, is the current Commander of the Royal Canadian Air Force and Chief of the Air Force Staff.</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_UNIT_AUSTRIAN_SKODA">
@@ -15076,32 +15026,7 @@
 				[NEWLINE][ICON_BULLET]No Maintenance Cost.
 				[NEWLINE][ICON_BULLET]Can NOT earn [COLOR_NEGATIVE_TEXT]Promotions[ENDCOLOR].
 			</Text>
-		</Row>
-
-			<Row Tag="TXT_KEY_PROMOTION_MISSILE_UNIT">
-				<Text>Guided Missile Unit</Text>
-			</Row>
-			<Row Tag="TXT_KEY_PROMOTION_MISSILE_UNIT_HELP">
-				<Text>
-					[ICON_BULLET]Can attack Naval units, Land Units and Cities.
-					[NEWLINE][ICON_BULLET]No Maintenance Cost.
-					[NEWLINE][ICON_BULLET]This unit will be destroyed when it attacks an enemy target.
-					[NEWLINE][ICON_BULLET]Can NOT earn [COLOR_NEGATIVE_TEXT]Promotions[ENDCOLOR].
-					[NEWLINE][ICON_BULLET]May be intercepted by [COLOR_NEGATIVE_TEXT]Missile Cruisers[ENDCOLOR] or [COLOR_NEGATIVE_TEXT]Fighters[ENDCOLOR].
-				</Text>
-			</Row>
-		
-		<!--<Replace Tag="TXT_KEY_PROMOTION_COASTAL_RAIDER_1_HELP" >
-			<Text> +33% Bonus vs Cities. Steal gold equal to 33% of the damage inflicted on a city.</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_COASTAL_RAIDER_2_HELP" >
-			<Text> +33% Bonus vs Cities. Steal gold equal to 33% of the damage inflicted on a city.</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_COASTAL_RAIDER_3_HELP" >
-			<Text> +34% Bonus vs Cities. Steal gold equal to 34% of the damage inflicted on a city.</Text>
-		</Replace>-->
-
-
+		</Row>	
 		<Row Tag="TXT_KEY_PROMOTION_CARRIER_UNIT">
 			<Text>Aircraft Carrier</Text>
 		</Row>

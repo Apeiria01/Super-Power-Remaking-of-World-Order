@@ -324,12 +324,6 @@
 			<UnitType>UNIT_PORTUGUESE_NAU</UnitType>
 		</Row>
 
-
-		<!--<Row>
-			<CivilizationType>CIVILIZATION_SWEDEN</CivilizationType>
-			<UnitClassType>UNITCLASS_LANCER</UnitClassType>
-			<UnitType>UNIT_SWEDISH_HAKKAPELIITTA</UnitType>
-		</Row>-->
 		<Row>
 			<CivilizationType>CIVILIZATION_SWEDEN</CivilizationType>
 			<UnitClassType>UNITCLASS_RIFLEMAN</UnitClassType>
@@ -524,11 +518,6 @@
 			<CivilizationType>CIVILIZATION_IROQUOIS</CivilizationType>
 			<UnitClassType>UNITCLASS_MINUTEMAN</UnitClassType>
 			<UnitType>UNIT_IROQUOIAN_MOHAWKWARRIOR</UnitType>
-		</Row>
-		<Row>
-			<CivilizationType>CIVILIZATION_IROQUOIS</CivilizationType>
-			<UnitClassType>UNITCLASS_FIGHTER</UnitClassType>
-			<UnitType>UNIT_IROQUOIAN_CANADIAN_FIGHTER</UnitType>
 		</Row>
 		<Row>
 			<CivilizationType>CIVILIZATION_IROQUOIS</CivilizationType>

@@ -303,10 +303,6 @@
 			<UnitType>UNIT_OTTOMAN_SIPAHI</UnitType>
 			<BuildingClassType>BUILDINGCLASS_ARMORY</BuildingClassType>
 		</Row>
-		<!--<Row>
-			<UnitType>UNIT_PERSIAN_CATAPHRACT</UnitType>
-			<BuildingClassType>BUILDINGCLASS_ARMORY</BuildingClassType>
-		</Row>-->
 		<Row>
 			<UnitType>UNIT_SONGHAI_MUSLIMCAVALRY</UnitType>
 			<BuildingClassType>BUILDINGCLASS_ARMORY</BuildingClassType>
@@ -319,10 +315,6 @@
 			<UnitType>UNIT_LANCER</UnitType>
 			<BuildingClassType>BUILDINGCLASS_ARMORY</BuildingClassType>
 		</Row>
-		<!--<Row>
-			<UnitType>UNIT_SWEDISH_HAKKAPELIITTA</UnitType>
-			<BuildingClassType>BUILDINGCLASS_ARMORY</BuildingClassType>
-		</Row>-->
 		<Row>
 			<UnitType>UNIT_POLISH_WINGED_HUSSAR</UnitType>
 			<BuildingClassType>BUILDINGCLASS_ARMORY</BuildingClassType>
@@ -462,20 +454,11 @@
 			<UnitType>UNIT_RUSSIAN_T34</UnitType>
 			<BuildingClassType>BUILDINGCLASS_ARSENAL</BuildingClassType>
 		</Row>
-		<Row>
-			<UnitType>UNIT_ZULU_OLIFANT</UnitType>
-			<BuildingClassType>BUILDINGCLASS_ARSENAL</BuildingClassType>
-		</Row>
 		
 		<Row>
 			<UnitType>UNIT_MODERN_ARMOR</UnitType>
 			<BuildingClassType>BUILDINGCLASS_ARSENAL</BuildingClassType>
 		</Row>
-		<!--<Row>
-			<UnitType>UNIT_CHINESE_TYPE99</UnitType>
-			<BuildingClassType>BUILDINGCLASS_ARSENAL</BuildingClassType>
-		</Row>-->
-		
 
 		<Row>
 			<UnitType>UNIT_CRUISER_TANK</UnitType>
@@ -578,10 +561,6 @@
 		</Row>
 		<Row>
 			<UnitType>UNIT_FIGHTER</UnitType>
-			<BuildingClassType>BUILDINGCLASS_MILITARY_BASE</BuildingClassType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_IROQUOIAN_CANADIAN_FIGHTER</UnitType>
 			<BuildingClassType>BUILDINGCLASS_MILITARY_BASE</BuildingClassType>
 		</Row>
 

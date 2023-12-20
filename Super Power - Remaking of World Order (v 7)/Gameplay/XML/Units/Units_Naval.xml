@@ -1432,7 +1432,7 @@
 			<RangedCombatLimit>100</RangedCombatLimit>
 			<CombatLimit>0</CombatLimit>
 			<XPValueDefense>2</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_GERMAN_EUROCOPTER_TIGER</UnitArtInfo>
+			<UnitArtInfo>ART_DEF_UNIT_FRANCE_EUROCOPTER_TIGER</UnitArtInfo>
 			<UnitFlagIconOffset>91</UnitFlagIconOffset>
 			<UnitFlagAtlas>SPUnitFlags_FLAG</UnitFlagAtlas>
 			<IconAtlas>SPUNITS02_ATLAS</IconAtlas>
