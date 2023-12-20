@@ -8961,7 +8961,7 @@
 			<Text>林地農田</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_IMPROVEMENTS_IROQUOIAN_FOREST_FARM_HELP">
-			<Text>易洛魁可以在不移除森林的情況下建造農田。</Text>
+			<Text>易洛魁可以在不移除森林和叢林的情況下建造農田。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_IMPROVEMENTS_IROQUOIAN_FOREST_FARM_TEXT">
 			<Text>易洛魁是集園藝家、採集者、獵人、農民、漁民為一體的民族，雖然他們主要的食物來源是來自農業。</Text>

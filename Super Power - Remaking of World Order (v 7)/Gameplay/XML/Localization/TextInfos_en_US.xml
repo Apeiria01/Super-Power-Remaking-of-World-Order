@@ -10000,7 +10000,7 @@
 			<Text>Forest Farming</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_IMPROVEMENTS_IROQUOIAN_FOREST_FARM_HELP">
-			<Text>The Iroquoian people can build a farming inside a Forest without removing the forest. The output of forest would remain.</Text>
+			<Text>The Iroquoian people can build a Farm inside a Forest or a Jungle without removing it.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_IMPROVEMENTS_IROQUOIAN_FOREST_FARM_TEXT">
 			<Text>The Iroquois are a mix of horticulturalists, farmers, fishers, gatherers and hunters, though their main diet traditionally has come from farming.</Text>
