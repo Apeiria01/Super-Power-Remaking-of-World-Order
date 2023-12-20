@@ -836,7 +836,7 @@
 		<Row>
 			<StrategicViewType>ART_DEF_UNIT_IROQUOIAN_MUSKETEER</StrategicViewType>
 			<TileType>Unit</TileType>
-			<Asset>SV_ForestGunman.dds</Asset>
+			<Asset>ProwlerFlag_128.dds</Asset>
 		</Row>
 	</ArtDefine_StrategicView>
 	

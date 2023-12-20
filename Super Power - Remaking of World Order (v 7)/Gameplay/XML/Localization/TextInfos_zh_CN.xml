@@ -518,7 +518,11 @@
 		</Row>
 
 		<Replace Tag="TXT_KEY_BUILDING_LONGHOUSE_HELP">
-			<Text>每处已开发的[COLOR_POSITIVE_TEXT]森林[ENDCOLOR]区块+1[ICON_PRODUCTION]产能+1[ICON_FOOD]食物。[NEWLINE]+1[ICON_HAPPINESS_1]本地快乐。</Text>
+			<Text>
+				[ICON_BULLET]+1[ICON_HAPPINESS_1]本地快乐。
+				[NEWLINE][ICON_BULLET]城市内所有的[COLOR_POSITIVE_TEXT]森林[ENDCOLOR]区块+1[ICON_PRODUCTION]产能、[COLOR_POSITIVE_TEXT]丛林[ENDCOLOR]区块+1[ICON_FOOD]食物。
+				[NEWLINE][ICON_BULLET]本城范围内的每一处有市民工作的锯木厂为城市+2%[ICON_PRODUCTION]产能产出。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_BUILDING_FACTORY_HELP">
@@ -5839,10 +5843,9 @@
 
 		<Replace Tag="TXT_KEY_TRAIT_IGNORE_TERRAIN_IN_FOREST">
 			<Text>
-				[ICON_BULLET]单位在己方森林和丛林地块移动视同道路。
-				[NEWLINE][ICON_BULLET]森林和丛林地块在获得轮子科技后可建立[ICON_CONNECTED]城市连接。
-				[NEWLINE][ICON_BULLET]商队在森林和丛林地块移动视同道路。所有陆军单位在森林和丛林移动力翻倍。
-				[NEWLINE][ICON_BULLET]建成农场时，地块上的森林不会被移除。
+				[ICON_BULLET]森林和丛林地块可视同道路，并在获得轮子科技后建立[ICON_CONNECTED]城市连接。
+				[NEWLINE][ICON_BULLET]所有陆军单位在森林和丛林中作战+20%[ICON_STRENGTH]战斗力。
+				[NEWLINE][ICON_BULLET]临近的森林为城市+5%[ICON_PRODUCTION]产能产出，临近的丛林为城市+5%[ICON_FOOD]食物产出。
 			</Text>
 		</Replace>
 
@@ -13484,7 +13487,7 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_MOHAWK_HELP">
 			<Text>
-				[ICON_BULLET]在森林和丛林中移动力翻倍。
+				[ICON_BULLET]在森林和丛林中作战+20%[ICON_STRENGTH]战斗力。
 			</Text>
 		</Replace>
 

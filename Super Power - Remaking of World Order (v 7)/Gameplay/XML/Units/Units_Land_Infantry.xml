@@ -874,10 +874,10 @@
 			<XPValueDefense>3</XPValueDefense>
 			<Conscription>4</Conscription>
 			<UnitArtInfo>ART_DEF_UNIT_IROQUOIAN_MUSKETEER</UnitArtInfo>
-			<UnitFlagIconOffset>67</UnitFlagIconOffset>
-			<UnitFlagAtlas>SPUnitFlags_FLAG</UnitFlagAtlas>
-			<IconAtlas>SPUNITS01_ATLAS</IconAtlas>
-			<PortraitIndex>60</PortraitIndex>
+			<UnitFlagIconOffset>0</UnitFlagIconOffset>
+			<UnitFlagAtlas>UNIT_IROQUOIS_FLAG_ATLAS</UnitFlagAtlas>
+			<IconAtlas>UNIT_IROQUOIS_ATLAS</IconAtlas>
+			<PortraitIndex>0</PortraitIndex>
 			<ExtraMaintenanceCost>4</ExtraMaintenanceCost>
 		</Row>	
 		

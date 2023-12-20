@@ -2805,7 +2805,10 @@
 		</Row>
 		
 		<Replace Tag="TXT_KEY_BUILDING_LONGHOUSE_HELP">
-			<Text>+1 [ICON_PRODUCTION] Production and +1 [ICON_FOOD] Food from each worked [COLOR_POSITIVE_TEXT]Forest[ENDCOLOR] Tile in this city. [NEWLINE]+1[ICON_HAPPINESS_1]Happiness.
+			<Text>
+				[ICON_BULLET]+1[ICON_HAPPINESS_1]Happiness.
+				[NEWLINE][ICON_BULLET]+1 [ICON_PRODUCTION] Production from each worked [COLOR_POSITIVE_TEXT]Forest[ENDCOLOR] Tile and +1 [ICON_FOOD] Food from each worked [COLOR_POSITIVE_TEXT]Jungle[ENDCOLOR] Tile in this city.
+				[NEWLINE][ICON_BULLET]City gain +2% [ICON_PRODUCTION] Production output from each worked Lumber Mill.
 			</Text>
 		</Replace>
 
@@ -10420,8 +10423,9 @@
 
 		<Replace Tag="TXT_KEY_TRAIT_IGNORE_TERRAIN_IN_FOREST">
 			<Text>
-				[ICON_BULLET]Units move through Forest and Jungle in friendly territory as if they were Roads.These tiles can be used to establish [ICON_CONNECTED] City Connections upon researching The Wheel. Caravans move along Forest and Jungle as if they were Roads. All Land Units double the movement in Forest and Jungle. 
-				[NEWLINE][ICON_BULLET]Forest will not be removed when a farm has been built. 
+				[ICON_BULLET]Units move through Forest and Jungle as if they were Roads.These tiles can be used to establish [ICON_CONNECTED] City Connections upon researching The Wheel. 
+				[NEWLINE][ICON_BULLET]+20% [ICON_STRENGTH] Combat Strength when Land Units fighting in Jungle and Forest.
+				[NEWLINE][ICON_BULLET]City gain +5% [ICON_PRODUCTION] Production output from each adjacent Forest, +5% [ICON_FOOD] Food output from each adjacent Jungle.
 			</Text>
 		</Replace>
 
@@ -15599,7 +15603,7 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_MOHAWK_HELP">
 			<Text>
-				Double [ICON_MOVES]Movement in Forest and Jungle.
+				+20% [ICON_STRENGTH] Combat Strength when fighting in Jungle and Forest.
 			</Text>
 		</Replace>
 

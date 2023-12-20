@@ -323,6 +323,15 @@
 			<Where Name="SHOW_ATTACK_INTERFACE_WITHOUT_ENEMY"/>
 			<Set Value="1"/>
 		</Update>
+		<Update>
+			<Where Name="TRAIT_WOOD_AS_ROAD_SP"/>
+			<Set Value="1"/>
+		</Update>
+		<Update>
+			<Where Name="IMPROVEMENT_FUNCTION"/>
+			<Set Value="1"/>
+		</Update>
+		
 	</CustomModOptions>
 
 

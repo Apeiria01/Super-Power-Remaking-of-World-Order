@@ -606,6 +606,7 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
     <Folder Include="UI\Art\IconAtlases\Units" />
     <Folder Include="UI\Art\IconAtlases\Technologies" />
     <Folder Include="UI\Art\IconAtlases\Resources" />
+    <Folder Include="UI\Art\IconAtlases\Units\IroquoianMusketeer" />
     <Folder Include="UI\Art\IconAtlases\Units\Promotion" />
     <Folder Include="UI\Art\Images" />
     <Folder Include="UI\Art\Images\Satellites" />
@@ -654,6 +655,7 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
     <Folder Include="UI\FrontEnd\Multiplayer" />
     <Folder Include="UI\InGame" />
     <Folder Include="UI\InGame\CityView" />
+    <Folder Include="UI\InGame\LeaderHead\" />
     <Folder Include="UI\InGame\TechTree\" />
     <Folder Include="UI\InGame\WorldView" />
     <Folder Include="UI\InGame\PopupsGeneric" />
@@ -5281,6 +5283,34 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="UI\Art\IconAtlases\Extra\TroopsTop.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\IconAtlases\Units\IroquoianMusketeer\ProwlerFlag_032.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\IconAtlases\Units\IroquoianMusketeer\ProwlerFlag_128.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\IconAtlases\Units\IroquoianMusketeer\ProwlerPicture_045.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\IconAtlases\Units\IroquoianMusketeer\ProwlerPicture_064.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\IconAtlases\Units\IroquoianMusketeer\ProwlerPicture_080.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\IconAtlases\Units\IroquoianMusketeer\ProwlerPicture_128.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\IconAtlases\Units\IroquoianMusketeer\ProwlerPicture_256.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>

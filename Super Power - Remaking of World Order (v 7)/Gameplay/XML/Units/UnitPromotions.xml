@@ -4902,21 +4902,17 @@
 
 
 	<UnitPromotions_Features>
-		<!--<Row>
+		<Row>
 			<PromotionType>PROMOTION_MOHAWK</PromotionType>
 			<FeatureType>FEATURE_FOREST</FeatureType>
 			<Defense>20</Defense>
 			<Attack>20</Attack>
-		</Row>-->
-		<Row>
-			<PromotionType>PROMOTION_MOHAWK</PromotionType>
-			<FeatureType>FEATURE_JUNGLE</FeatureType>
-			<DoubleMove>true</DoubleMove>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_MOHAWK</PromotionType>
-			<FeatureType>FEATURE_FOREST</FeatureType>
-			<DoubleMove>true</DoubleMove>
+			<FeatureType>FEATURE_JUNGLE</FeatureType>
+			<Defense>20</Defense>
+			<Attack>20</Attack>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_JAGUAR</PromotionType>
