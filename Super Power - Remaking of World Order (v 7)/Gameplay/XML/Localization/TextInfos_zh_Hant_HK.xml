@@ -503,7 +503,11 @@
 		</Row>
 
 		<Replace Tag="TXT_KEY_BUILDING_LONGHOUSE_HELP">
-			<Text>每處已開發的[COLOR_POSITIVE_TEXT]森林[ENDCOLOR]區塊+1[ICON_PRODUCTION]生產力+1[ICON_FOOD]食物。[NEWLINE]+1[ICON_HAPPINESS_1]本地幸福度。</Text>
+			<Text>
+				[ICON_BULLET]+1[ICON_HAPPINESS_1]本地快樂。
+				[NEWLINE][ICON_BULLET]城市內所有的[COLOR_POSITIVE_TEXT]森林[ENDCOLOR]區塊+1[ICON_PRODUCTION]產能、[COLOR_POSITIVE_TEXT]叢林[ENDCOLOR]區塊+1[ICON_FOOD]食物。
+				[NEWLINE][ICON_BULLET]本城範圍內的每壹處有市民工作的鋸木廠為城市+2%[ICON_PRODUCTION]產能產出。
+			</Text>
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_BUILDING_FACTORY_HELP">
@@ -5735,10 +5739,9 @@
 
 		<Replace Tag="TXT_KEY_TRAIT_IGNORE_TERRAIN_IN_FOREST">
 			<Text>
-				[ICON_BULLET]單位在己方森林和叢林地塊移動視同道路。
-				[NEWLINE][ICON_BULLET]森林和叢林地塊在獲得輪子科技後可建立[ICON_CONNECTED]城市連接。
-				[NEWLINE][ICON_BULLET]商隊在森林和叢林地塊移動視同道路。所有陸軍單位在森林和叢林移動力翻倍。
-				[NEWLINE][ICON_BULLET]建成農場時，地塊上的森林不會被移除。
+				[ICON_BULLET]森林和叢林地塊可視同道路，並在獲得輪子科技後建立[ICON_CONNECTED]城市連接。
+				[NEWLINE][ICON_BULLET]所有陸軍單位在森林和叢林中作戰+20%[ICON_STRENGTH]戰鬥力。
+				[NEWLINE][ICON_BULLET]臨近的森林為城市+5%[ICON_PRODUCTION]產能產出，臨近的叢林為城市+5%[ICON_FOOD]食物產出。
 			</Text>
 		</Replace>
 
@@ -13312,7 +13315,7 @@
 			<Text>莫霍克</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_MOHAWK_HELP">
-			<Text>[ICON_BULLET]在叢林和森林[ICON_MOVES]移動力加倍。
+			<Text>[ICON_BULLET]在叢林和森林中作戰+20%[ICON_STRENGTH]戰鬥力。
 			</Text>
 		</Replace>
 		

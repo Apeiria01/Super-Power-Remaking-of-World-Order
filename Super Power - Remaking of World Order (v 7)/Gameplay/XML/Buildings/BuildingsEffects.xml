@@ -2960,7 +2960,7 @@
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_LONGHOUSE</BuildingType>
-			<FeatureType>FEATURE_FOREST</FeatureType>
+			<FeatureType>FEATURE_JUNGLE</FeatureType>
 			<YieldType>YIELD_FOOD</YieldType>
 			<Yield>1</Yield>
 		</Row>
@@ -3030,6 +3030,15 @@
 			<Yield>2</Yield>
 		</Row>-->
 	</Building_FeatureYieldChanges>
+
+	<Building_ImprovementYieldModifiers>
+		<Row>
+			<BuildingType>BUILDING_LONGHOUSE</BuildingType>
+			<ImprovementType>IMPROVEMENT_LUMBERMILL</ImprovementType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>2</Yield>
+		</Row>
+	</Building_ImprovementYieldModifiers>
 	
 
 	<Building_TerrainYieldChanges>
@@ -4898,7 +4907,7 @@
 		<Row>
 			<BuildingType>BUILDING_LONGHOUSE</BuildingType>
 			<FlavorType>FLAVOR_GROWTH</FlavorType>
-			<Flavor>15</Flavor>
+			<Flavor>50</Flavor>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_LONGHOUSE</BuildingType>
