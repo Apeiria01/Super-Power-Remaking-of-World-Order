@@ -15,8 +15,8 @@ function ImprovementBuilt(iPlayer, x, y, eImprovement)
 		then
 			if (pPlot:IsRoute() or pPlot:IsFreshWater())
 			and player:CanBuild(pPlot, GameInfo.Builds.BUILD_CITADEL.ID) 
-			and PlotIsVisibleToHuman(pPlot)
-			and player:GetUnitCountFromHasPromotion(iCitadelPromotion) < player:GetNumCities() * 2
+			and not PlotIsVisibleToHuman(pPlot)
+			and player:GetUnitCountFromHasPromotion(iCitadelPromotion) < (player:GetNumCities() * 2 + player:GetTotalPopulation() / 20)
 			then
 				if pPlot:IsBuildRemovesFeature(GameInfo.Builds.BUILD_CITADEL.ID) then
 					pPlot:SetFeatureType(-1)
@@ -29,7 +29,7 @@ function ImprovementBuilt(iPlayer, x, y, eImprovement)
 			if pPlot:IsAdjacentToLand()
 			and player:CanBuild(pPlot, GameInfo.Builds.BUILD_COASTAL_FORT.ID)
 			and not PlotIsVisibleToHuman(pPlot) 
-			and player:GetUnitCountFromHasPromotion(iCitadelPromotion) < player:GetNumCities() * 2
+			and player:GetUnitCountFromHasPromotion(iCitadelPromotion) < (player:GetNumCities() * 2 + player:GetTotalPopulation() / 20)
 			then
 				if pPlot:GetResourceType(-1) == GameInfoTypes.RESOURCE_FISH then
 					pPlot:SetResourceType(-1);
