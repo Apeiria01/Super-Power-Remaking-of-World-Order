@@ -41,6 +41,7 @@
 			<AdditionalUnits>1</AdditionalUnits>
 			<PortraitIndex>24</PortraitIndex>
 			<IconAtlas>TERRAIN_ATLAS</IconAtlas>
+			<NoLake>true</NoLake>
 		</Row>
 
 
@@ -177,7 +178,7 @@
 			<IconAtlas>SP_IMPROVEMENTS_ATLAS</IconAtlas>
 		</Row>
 
-		<!--<Row>
+		<Row>
 			<Type>IMPROVEMENT_IROQUOIAN_FOREST_FARM</Type>
 			<Description>TXT_KEY_IMPROVEMENT_IROQUOIAN_FOREST_FARM</Description>
 			<Civilopedia>TXT_KEY_CIV5_IMPROVEMENTS_IROQUOIAN_FOREST_FARM_TEXT</Civilopedia>
@@ -188,7 +189,11 @@
 			<PillageGold>20</PillageGold>
 			<PortraitIndex>14</PortraitIndex>
 			<IconAtlas>SP_IMPROVEMENTS_ATLAS</IconAtlas>
-		</Row>-->
+			<CreatedItemMod>1</CreatedItemMod>
+			<SetNewImprovement>IMPROVEMENT_FARM</SetNewImprovement>
+			<FreshWaterMakesValid>true</FreshWaterMakesValid>
+			<RequiresFlatlandsOrFreshWater>true</RequiresFlatlandsOrFreshWater>
+		</Row>
 
 		<Row>
 			<Type>IMPROVEMENT_MAYA_ALTAR</Type>
@@ -296,28 +301,20 @@
 			<TerrainType>TERRAIN_COAST</TerrainType>
 		</Row>
 		
-		<!--<Row>
-			<ImprovementType>IMPROVEMENT_FISHFARM_MOD</ImprovementType>
-			<TerrainType>TERRAIN_COAST</TerrainType>
-		</Row>-->
 		<Row>
 			<ImprovementType>IMPROVEMENT_GAS_RIG_MOD</ImprovementType>
 			<TerrainType>TERRAIN_OCEAN</TerrainType>
 		</Row>
 
 
-		<!--<Row>
+		<Row>
 			<ImprovementType>IMPROVEMENT_IROQUOIAN_FOREST_FARM</ImprovementType>
 			<TerrainType>TERRAIN_PLAINS</TerrainType>
 		</Row>
 		<Row>
 			<ImprovementType>IMPROVEMENT_IROQUOIAN_FOREST_FARM</ImprovementType>
-			<TerrainType>TERRAIN_TUNDRA</TerrainType>
-		</Row>
-		<Row>
-			<ImprovementType>IMPROVEMENT_IROQUOIAN_FOREST_FARM</ImprovementType>
 			<TerrainType>TERRAIN_GRASS</TerrainType>
-		</Row>-->
+		</Row>
 
 		<Row>
 			<ImprovementType>IMPROVEMENT_CREATE_JUNGLE_MOD</ImprovementType>
@@ -327,10 +324,14 @@
 
 
 	<Improvement_ValidFeatures>
-		<!--<Row>
+		<Row>
 			<ImprovementType>IMPROVEMENT_IROQUOIAN_FOREST_FARM</ImprovementType>
 			<FeatureType>FEATURE_FOREST</FeatureType>
-		</Row>-->
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_IROQUOIAN_FOREST_FARM</ImprovementType>
+			<FeatureType>FEATURE_JUNGLE</FeatureType>
+		</Row>
 		<Row>
 			<ImprovementType>IMPROVEMENT_MAYA_ALTAR</ImprovementType>
 			<FeatureType>FEATURE_FOREST</FeatureType>
@@ -391,12 +392,6 @@
 			<Yield>2</Yield>
 		</Row>
 
-		<!--<Row>
-			<ImprovementType>IMPROVEMENT_IROQUOIAN_FOREST_FARM</ImprovementType>
-			<YieldType>YIELD_FOOD</YieldType>
-			<Yield>1</Yield>
-		</Row>-->
-		
 		<Row>
 			<ImprovementType>IMPROVEMENT_TUNNEL</ImprovementType>
 			<YieldType>YIELD_GOLD</YieldType>
@@ -442,45 +437,6 @@
 			<Yield>4</Yield>
 		</Row>
 	</Improvement_ResourceType_Yields>
-
-
-
-	<!--<Improvement_TechYieldChanges>
-		<Row>
-			<ImprovementType>IMPROVEMENT_FISHERY_MOD</ImprovementType>
-			<TechType>TECH_CIVIL_SERVICE</TechType>
-			<YieldType>YIELD_FOOD</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<ImprovementType>IMPROVEMENT_FISHERY_MOD</ImprovementType>
-			<TechType>TECH_FERTILIZER</TechType>
-			<YieldType>YIELD_FOOD</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<ImprovementType>IMPROVEMENT_FISHERY_MOD</ImprovementType>
-			<TechType>TECH_GENETIC_ENGEERING</TechType>
-			<YieldType>YIELD_FOOD</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<ImprovementType>IMPROVEMENT_SAND_DREDGE_MOD</ImprovementType>
-			<TechType>TECH_NAVIGATION</TechType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<ImprovementType>IMPROVEMENT_SAND_DREDGE_MOD</ImprovementType>
-			<TechType>TECH_STEAM_POWER</TechType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>1</Yield>
-		</Row>
-	</Improvement_TechYieldChanges>-->
-	
-	
-	
-	
 
 	<!-- ************************Builds New Improvement********************************************-->
 
@@ -554,10 +510,10 @@
 		</Row>
 
 
-		<!--<Row>
+		<Row>
 			<Type>BUILD_IROQUOIAN_FOREST_FARM</Type>
 			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
-			<Time>400</Time>
+			<Time>600</Time>
 			<ImprovementType>IMPROVEMENT_IROQUOIAN_FOREST_FARM</ImprovementType>
 			<Description>TXT_KEY_BUILD_IROQUOIAN_FOREST_FARM</Description>
 			<Help>TXT_KEY_CIV5_IMPROVEMENTS_IROQUOIAN_FOREST_FARM_HELP</Help>
@@ -566,7 +522,7 @@
 			<OrderPriority>97</OrderPriority>
 			<IconIndex>39</IconIndex>
 			<IconAtlas>SP_UNIT_ACTION_ATLAS</IconAtlas>
-		</Row>-->
+		</Row>
 
 
 		<Row>
@@ -768,11 +724,6 @@
 			<Where ResourceType="RESOURCE_FISH"/>
 		</Update>
 		<Delete ImprovementType="IMPROVEMENT_CITADEL"/>
-
-		<!--<Row>
-			<ImprovementType>IMPROVEMENT_CHATEAU</ImprovementType>
-			<ResourceType>RESOURCE_WINE</ResourceType>
-		</Row>-->
 
 		<Row>
 			<ImprovementType>IMPROVEMENT_SHOSHONE_TIPI</ImprovementType>
@@ -1019,12 +970,6 @@
 			<YieldType>YIELD_FOOD</YieldType>
 			<Yield>1</Yield>
 		</Row>
-		<!--<Row>
-			<ImprovementType>IMPROVEMENT_IROQUOIAN_FOREST_FARM</ImprovementType>
-			<TechType>TECH_FERTILIZER</TechType>
-			<YieldType>YIELD_FOOD</YieldType>
-			<Yield>1</Yield>
-		</Row>-->
 		<Row>
 			<ImprovementType>IMPROVEMENT_TERRACE_FARM</ImprovementType>
 			<TechType>TECH_FERTILIZER</TechType>
@@ -1078,12 +1023,6 @@
 			<YieldType>YIELD_FOOD</YieldType>
 			<Yield>1</Yield>
 		</Row>
-		<!--<Row>
-			<ImprovementType>IMPROVEMENT_IROQUOIAN_FOREST_FARM</ImprovementType>
-			<TechType>TECH_GENETIC_ENGEERING</TechType>
-			<YieldType>YIELD_FOOD</YieldType>
-			<Yield>1</Yield>
-		</Row>-->
 		<Row>
 			<ImprovementType>IMPROVEMENT_TERRACE_FARM</ImprovementType>
 			<TechType>TECH_GENETIC_ENGEERING</TechType>

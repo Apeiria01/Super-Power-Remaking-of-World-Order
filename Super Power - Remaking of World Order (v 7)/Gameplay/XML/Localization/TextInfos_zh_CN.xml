@@ -10128,23 +10128,6 @@
 		<Row Tag="TXT_KEY_PROMOTION_SPN_MAMLUK_COMBAT_FAITH_HELP">
 			<Text>攻击敌方单位时获得与造成伤害数值相同的[ICON_PEACE]信仰。</Text>
 		</Row>
-		
-
-
-		<!--<Row Tag="TXT_KEY_UNIT_PERSIAN_CATAPHRACT">
-			<Text>萨珊铁骑</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_PERSIAN_CATAPHRACT_HEADING">
-			<Text>萨珊铁骑</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_HELP_PERSIAN_CATAPHRACT">
-			<Text>替代骑士，击杀敌人可得到黄金点数。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_PERSIAN_CATAPHRACT_TEXT">
-			<Text>公元224年，波斯贵族阿尔达希尔灭掉安息，建立了萨珊波斯帝国。公元226年，萨珊王朝取代帕提亚人王朝。萨珊人唤起波斯民族的自尊心，恢复琐罗亚斯德教为国教，组织穿戴沉重的铠甲的骑兵部队，统一了全国。
-波斯萨珊骑兵是萨珊王朝称霸中亚时的主力部队，波斯人骁勇善战，而骑兵的作用同样起了巨大的作用。</Text>
-		</Row>-->
 
 		<Row Tag="TXT_KEY_UNIT_MOBILE_AA_GUN">
 			<Text>自行防空炮</Text>
@@ -10234,37 +10217,6 @@
 				[NEWLINE]相邻的和同格的所有陆军单位每回合额外恢复15HP。该单位每回合额外恢复15HP。
 			</Text>
 		</Replace>
-
-		<Row Tag="TXT_KEY_UNIT_ZULU_OLIFANT">
-			<Text>南非号角主战坦克</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_ZULU_OLIFANT_HEADING">
-			<Text>南非号角</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_ZULU_OLIFANT_HELP">
-			<Text>替代主战坦克。造价更低，且少1单位人力资源消耗，自带可继承的长途行军晋升和医疗1-2级的晋升，境外作战+25%[ICON_STRENGTH]战斗力。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_ZULU_OLIFANT_PEDIA">
-			<Text>
-				南非号角主战坦克是南非自主在“百夫长”坦克上发展起来的一款坦克，在军事素质和国力普遍偏低的非洲大陆，南非号角作为一型从战后第一代坦克的基础上发展起来的坦克，已经足以满足南非军队的战斗需求。
-				[NEWLINE]南非号角采用一门经典的L7型105毫米口径的主炮，由于从百夫长的基础上发展而来，因此防护能力和机动性相对于国际上的先进主战坦克都不出彩，其火控系统是整个坦克中较为先进的部分，基本达到主流主战坦克的水准，总体来说，除去车后可当澡盆的储物箱以外，缺乏亮点。
-			</Text>
-		</Row>
-
-		<!--<Row Tag="TXT_KEY_UNIT_ZULU_BOER_COMMANDO">
-			<Text>G6自行火炮</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_ZULU_BOER_COMMANDO_HEADING">
-			<Text>G6自行火炮</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_ZULU_BOER_COMMANDO_HELP">
-			<Text>替代自行火炮，近战力量接近机械化步兵，自带可以叠加的+1射程+1视野+1移动晋升，对海军单位+100%[ICON_STRENGTH]战斗力，每回合可以自行装载并补充2发巡航导弹。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_ZULU_BOER_COMMANDO_PEDIA">
-			<Text>从1979年开始，南非又在G5的基础上，研制具有自行能力的G6自行榴弹炮。1982-1986年，制成了4台样车，开始了作战适应性试验。1987年又制成了4台定型样车。1988年正式设计定型，并开始了小批量生产。G6自行榴弹炮已开始装备南非的装甲师炮兵团，每团3个炮兵连，每连8辆。1990年，阿联酋订购了78辆G6，1991年开始交货。此外，阿曼也准备订购。</Text>
-		</Row>-->
 
 		<Row Tag="TXT_KEY_UNIT_AUSTRIAN_SKODA">
 			<Text>斯柯达榴弹炮</Text>
@@ -10956,19 +10908,6 @@
 
 
 		<!-- *************************Air Units****************************-->
-		<Row Tag="TXT_KEY_UNIT_IROQUOIAN_CANADIAN_FIGHTER">
-			<Text>加拿大皇家空军</Text>
-			<Plurality>2</Plurality>
-		</Row>
-
-		<Row Tag="TXT_KEY_UNIT_IROQUOIAN_CANADIAN_FIGHTER_HEADING">
-			<Text>加拿大皇家空军</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_UNIT_IROQUOIAN_CANADIAN_FIGHTER_TEXT">
-			<Text>加拿大皇家空军正式建立于1924年4月，距今有92年的历史，总部位于加拿大首都安大略省渥太华市的加拿大国防总部。其目前现役部队人数有14500人，预备役部队人数2600人，另外还有2500名平民雇员，装备的有人驾驶飞机大约391架，另有多架无人机。加拿大皇家空军信奉的座右铭是“穿过灾难飞上星空”，其自成立后参与多场战争，包括第二次世界大战、朝鲜战争、海湾战争、科索沃战争、科威特战争、南斯拉夫维和行动、阿富汗战争、伊拉克战争、叙利亚战争、利比亚维和行动等。加拿大皇家空军负责加拿大武装部队内的飞行行动、对加拿大陆军及皇家海军提供飞机支援，并对加拿大国家开展的搜寻与救援任务提供必要的飞机支援。此外，其与美国空军联合组建起北美航空防御指挥部，共同负责保卫北美大陆空域的安全。</Text>
-		</Row>
-
 		<Row Tag="TXT_KEY_UNIT_FRANCE_MIRRAGE2000">
 			<Text>幻影2000</Text>
 			<Plurality>2</Plurality>
@@ -13027,16 +12966,6 @@
 			<Text>+33%[ICON_STRENGTH]防御力。</Text>
 		</Row>
 
-		<!--<Replace Tag="TXT_KEY_PROMOTION_COASTAL_RAIDER_1_HELP" >
-			<Text>对城市+33%攻击力。获取相当于对城市损害33%的金钱。</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_COASTAL_RAIDER_2_HELP" >
-			<Text>对城市+33%攻击力。获取相当于对城市损害33%的金钱。</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_COASTAL_RAIDER_3_HELP" >
-			<Text>对城市+34%攻击力。获取相当于对城市损害34%的金钱。</Text>
-		</Replace>-->
-
 		<Row Tag="TXT_KEY_PROMOTION_DRONE_CARRIER">
 			<Text>无人机载体</Text>
 		</Row>
@@ -13063,15 +12992,6 @@
 		<Row Tag="TXT_KEY_PROMOTION_DRONE_UNIT_HELP">
 			<Text>
 				[ICON_BULLET][COLOR_POSITIVE_TEXT]悬浮移动[ENDCOLOR]。发生战斗或第二轮开始时返回载机平台。[NEWLINE]能够发现潜艇和其他隐形单位。[NEWLINE]没有维护费。[NEWLINE]拥有6格侦查范围。[NEWLINE]能够每回合进行一次空中游猎。[NEWLINE]不能获得晋升。
-			</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_PROMOTION_MISSILE_UNIT">
-			<Text>导弹单位</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_MISSILE_UNIT_HELP">
-			<Text>
-				能够攻击地面海面单位和城市。[NEWLINE]没有维护费。[NEWLINE]每次攻击都会消耗该单位。[NEWLINE]不能获得晋升。可以被[COLOR_NEGATIVE_TEXT]战斗机[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]导弹巡洋舰[ENDCOLOR]拦截。
 			</Text>
 		</Row>
 

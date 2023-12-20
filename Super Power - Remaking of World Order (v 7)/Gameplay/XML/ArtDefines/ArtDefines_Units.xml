@@ -528,78 +528,6 @@
 	</ArtDefine_StrategicView>
 	-->
 
-
-	<!--CANADIAN FIGHTER
-	<ArtDefine_UnitInfos>
-		<Row>
-			<Type>ART_DEF_UNIT_IROQUOIAN_CANADIAN_FIGHTER</Type>
-			<DamageStates>1</DamageStates>
-			<Formation>FighterWing</Formation>
-		</Row>
-	</ArtDefine_UnitInfos>
-	<ArtDefine_UnitInfoMemberInfos>
-		<Row>
-			<UnitInfoType>ART_DEF_UNIT_IROQUOIAN_CANADIAN_FIGHTER</UnitInfoType>
-			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_IROQUOIAN_CANADIAN_FIGHTER</UnitMemberInfoType>
-			<NumMembers>4</NumMembers>
-		</Row>
-	</ArtDefine_UnitInfoMemberInfos>
-	<ArtDefine_UnitMemberInfos>
-		<Row>
-			<Type>ART_DEF_UNIT_MEMBER_IROQUOIAN_CANADIAN_FIGHTER</Type>
-			<Scale>0.07</Scale>
-			<Domain>Air</Domain>
-			<Model>Hawker_Hurricane_MK_II.fxsxml</Model>
-			<MaterialTypeTag>METAL</MaterialTypeTag>
-			<MaterialTypeSoundOverrideTag>METALLRG</MaterialTypeSoundOverrideTag>
-		</Row>
-	</ArtDefine_UnitMemberInfos>
-	<ArtDefine_UnitMemberCombats>
-		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_IROQUOIAN_CANADIAN_FIGHTER</UnitMemberType>
-			<EnableActions>Idle Attack Bombard Death Run</EnableActions>
-			<AttackRadius>45.0</AttackRadius>
-			<MoveRate>1.60000002384186</MoveRate>
-			<TurnRateMin>0.25</TurnRateMin>
-			<TurnRateMax>0.5</TurnRateMax>
-			<HasRefaceAfterCombat>0</HasRefaceAfterCombat>
-		</Row>
-	</ArtDefine_UnitMemberCombats>
-	<ArtDefine_UnitMemberCombatWeapons>
-		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_IROQUOIAN_CANADIAN_FIGHTER</UnitMemberType>
-			<Index>0</Index>
-			<SubIndex>0</SubIndex>
-			<VisKillStrengthMin>1.0</VisKillStrengthMin>
-			<VisKillStrengthMax>1.0</VisKillStrengthMax>
-			<HitEffect>ART_DEF_VEFFECT_IROQUOIAN_CANADIAN_FIGHTER_MACHINE_GUN_HIT_$(TERRAIN)</HitEffect>
-			<HitRadius>15.0</HitRadius>
-			<WeaponTypeTag>BULLETHC</WeaponTypeTag>
-			<WeaponTypeSoundOverrideTag>BULLETHC</WeaponTypeSoundOverrideTag>
-		</Row>
-		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_IROQUOIAN_CANADIAN_FIGHTER</UnitMemberType>
-			<Index>0</Index>
-			<SubIndex>1</SubIndex>
-			<ID>PROJECTILE</ID>
-			<VisKillStrengthMin>25.0</VisKillStrengthMin>
-			<VisKillStrengthMax>50.0</VisKillStrengthMax>
-			<ProjectileSpeed>3.0</ProjectileSpeed>
-			<TargetGround>1</TargetGround>
-			<IsDropped>1</IsDropped>
-			<WeaponTypeTag>EXPLOSIVE</WeaponTypeTag>
-			<WeaponTypeSoundOverrideTag>EXPLOSION200POUND</WeaponTypeSoundOverrideTag>
-		</Row>
-	</ArtDefine_UnitMemberCombatWeapons>
-	<ArtDefine_StrategicView>
-		<Row>
-			<StrategicViewType>ART_DEF_UNIT_IROQUOIAN_CANADIAN_FIGHTER</StrategicViewType>
-			<TileType>Unit</TileType>
-			<Asset>SV_CanadaFighter.dds</Asset>
-		</Row>
-	</ArtDefine_StrategicView>
-	-->
-
 	<!--Mamluk-->
 	<ArtDefine_UnitInfos>
 		<Row>
@@ -1268,133 +1196,6 @@
 	
 	
 	
-
-
-
-	<!--Olifant
-	<ArtDefine_UnitInfos>
-		<Row>
-			<Type>ART_DEF_UNIT_ZULU_OLIFANT</Type>
-			<DamageStates>1</DamageStates>
-			<Formation>Vehicle</Formation>
-		</Row>
-	</ArtDefine_UnitInfos>
-	<ArtDefine_UnitInfoMemberInfos>
-		<Row>
-			<UnitInfoType>ART_DEF_UNIT_ZULU_OLIFANT</UnitInfoType>
-			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_ZULU_OLIFANT</UnitMemberInfoType>
-			<NumMembers>3</NumMembers>
-		</Row>
-	</ArtDefine_UnitInfoMemberInfos>
-	<ArtDefine_UnitMemberInfos>
-		<Row>
-			<Type>ART_DEF_UNIT_MEMBER_ZULU_OLIFANT</Type>
-			<Scale>0.100000001490116</Scale>
-			<Model>centurion.fxsxml</Model>
-			<MaterialTypeTag>METAL</MaterialTypeTag>
-			<MaterialTypeSoundOverrideTag>METALSM</MaterialTypeSoundOverrideTag>
-		</Row>
-	</ArtDefine_UnitMemberInfos>
-	<ArtDefine_UnitMemberCombats>
-		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_ZULU_OLIFANT</UnitMemberType>
-			<EnableActions>Idle Attack RunCharge AttackCity Bombard Death BombardDefend Run Fortify CombatReady</EnableActions>
-			<HasShortRangedAttack>1</HasShortRangedAttack>
-			<HasStationaryMelee>1</HasStationaryMelee>
-			<HasRefaceAfterCombat>0</HasRefaceAfterCombat>
-			<ReformBeforeCombat>1</ReformBeforeCombat>
-			<HasIndependentWeaponFacing>1</HasIndependentWeaponFacing>
-		</Row>
-	</ArtDefine_UnitMemberCombats>
-	<ArtDefine_UnitMemberCombatWeapons>
-		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_ZULU_OLIFANT</UnitMemberType>
-			<Index>0</Index>
-			<SubIndex>0</SubIndex>
-			<VisKillStrengthMin>25.0</VisKillStrengthMin>
-			<VisKillStrengthMax>50.0</VisKillStrengthMax>
-			<HitEffect>ART_DEF_VEFFECT_TANK_IMPACT_$(TERRAIN)</HitEffect>
-			<WeaponTypeTag>EXPLOSIVE</WeaponTypeTag>
-			<WeaponTypeSoundOverrideTag>EXPLOSION20POUND</WeaponTypeSoundOverrideTag>
-		</Row>
-	</ArtDefine_UnitMemberCombatWeapons>
-	<ArtDefine_StrategicView>
-		<Row>
-			<StrategicViewType>ART_DEF_UNIT_ZULU_OLIFANT</StrategicViewType>
-			<TileType>Unit</TileType>
-			<Asset>SV_OliTank.dds</Asset>
-		</Row>
-	</ArtDefine_StrategicView>
-	-->
-
-
-
-
-	<!--Type 99-->
-	<!--<ArtDefine_UnitInfos>
-		<Row>
-			<Type>ART_DEF_UNIT_CHINESE_TYPE99</Type>
-			<DamageStates>1</DamageStates>
-			<Formation>Vehicle</Formation>
-		</Row>
-	</ArtDefine_UnitInfos>
-	<ArtDefine_UnitInfoMemberInfos>
-		<Row>
-			<UnitInfoType>ART_DEF_UNIT_CHINESE_TYPE99</UnitInfoType>
-			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_CHINESE_TYPE99</UnitMemberInfoType>
-			<NumMembers>3</NumMembers>
-		</Row>
-	</ArtDefine_UnitInfoMemberInfos>
-	<ArtDefine_UnitMemberInfos>
-		<Row>
-			<Type>ART_DEF_UNIT_MEMBER_CHINESE_TYPE99</Type>
-			<Scale>0.100000001490116</Scale>
-			<Model>Ariete_Camo.fxsxml</Model>
-			<MaterialTypeTag>METAL</MaterialTypeTag>
-			<MaterialTypeSoundOverrideTag>METALSM</MaterialTypeSoundOverrideTag>
-		</Row>
-	</ArtDefine_UnitMemberInfos>
-	<ArtDefine_UnitMemberCombats>
-		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_CHINESE_TYPE99</UnitMemberType>
-			<EnableActions>Idle Attack RunCharge AttackCity Bombard Death BombardDefend Run Fortify CombatReady</EnableActions>
-			<HasShortRangedAttack>1</HasShortRangedAttack>
-			<HasStationaryMelee>1</HasStationaryMelee>
-			<HasRefaceAfterCombat>0</HasRefaceAfterCombat>
-			<ReformBeforeCombat>1</ReformBeforeCombat>
-			<HasIndependentWeaponFacing>1</HasIndependentWeaponFacing>
-		</Row>
-	</ArtDefine_UnitMemberCombats>
-	<ArtDefine_UnitMemberCombatWeapons>
-		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_CHINESE_TYPE99</UnitMemberType>
-			<Index>0</Index>
-			<SubIndex>0</SubIndex>
-			<VisKillStrengthMin>25.0</VisKillStrengthMin>
-			<VisKillStrengthMax>50.0</VisKillStrengthMax>
-			<HitEffect>ART_DEF_VEFFECT_TANK_IMPACT_$(TERRAIN)</HitEffect>
-			<WeaponTypeTag>EXPLOSIVE</WeaponTypeTag>
-			<WeaponTypeSoundOverrideTag>EXPLOSION20POUND</WeaponTypeSoundOverrideTag>
-		</Row>
-	</ArtDefine_UnitMemberCombatWeapons>
-	<ArtDefine_StrategicView>
-		<Row>
-			<StrategicViewType>ART_DEF_UNIT_CHINESE_TYPE99</StrategicViewType>
-			<TileType>Unit</TileType>
-			<Asset>SV_Type99.dds</Asset>
-		</Row>
-	</ArtDefine_StrategicView>-->
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	<!--Re Umberto-class ironclad
 	<ArtDefine_UnitInfos>
 		<Row>
@@ -1780,68 +1581,6 @@
 			<Asset>SV_ATGM.dds</Asset>
 		</Row>
 	</ArtDefine_StrategicView>
-
-
-
-
-	<!--Persian Cataphract--><!--
-	<ArtDefine_UnitInfos>
-		<Row>
-			<Type>ART_DEF_UNIT_PERSIAN_CATAPHRACT</Type>
-			<DamageStates>1</DamageStates>
-			<Formation>DefaultCavalry</Formation>
-		</Row>
-	</ArtDefine_UnitInfos>
-	<ArtDefine_UnitInfoMemberInfos>
-		<Row>
-			<UnitInfoType>ART_DEF_UNIT_PERSIAN_CATAPHRACT</UnitInfoType>
-			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_PERSIAN_CATAPHRACT</UnitMemberInfoType>
-			<NumMembers>5</NumMembers>
-		</Row>
-	</ArtDefine_UnitInfoMemberInfos>
-	<ArtDefine_UnitMemberInfos>
-		<Row>
-			<Type>ART_DEF_UNIT_MEMBER_PERSIAN_CATAPHRACT</Type>
-			<Scale>0.140000000596046</Scale>
-			<Model>Knight_Persia_v2.fxsxml</Model>
-			<MaterialTypeTag>ARMOR</MaterialTypeTag>
-			<MaterialTypeSoundOverrideTag>ARMOR</MaterialTypeSoundOverrideTag>
-		</Row>
-	</ArtDefine_UnitMemberInfos>
-	<ArtDefine_UnitMemberCombats>
-		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_PERSIAN_CATAPHRACT</UnitMemberType>
-			<EnableActions>Idle Attack RunCharge AttackCity Bombard Death BombardDefend Run Fortify CombatReady Walk</EnableActions>
-			<ShortMoveRadius>24.0</ShortMoveRadius>
-			<ShortMoveRate>0.349999994039536</ShortMoveRate>
-			<TurnRateMin>0.5</TurnRateMin>
-			<TurnRateMax>0.75</TurnRateMax>
-			<TurnFacingRateMin>15.0</TurnFacingRateMin>
-			<TurnFacingRateMax>20.0</TurnFacingRateMax>
-			<TargetHeight>12.0</TargetHeight>
-			<HasStationaryMelee>1</HasStationaryMelee>
-			<HasRefaceAfterCombat>1</HasRefaceAfterCombat>
-			<ReformBeforeCombat>2</ReformBeforeCombat>
-			<OnlyTurnInMovementActions>1</OnlyTurnInMovementActions>
-			<RushAttackFormation>DefaultCavalry</RushAttackFormation>
-		</Row>
-	</ArtDefine_UnitMemberCombats>
-	<ArtDefine_UnitMemberCombatWeapons>
-		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_PERSIAN_CATAPHRACT</UnitMemberType>
-			<Index>0</Index>
-			<SubIndex>0</SubIndex>
-			<WeaponTypeTag>METAL</WeaponTypeTag>
-			<WeaponTypeSoundOverrideTag>SWORD</WeaponTypeSoundOverrideTag>
-		</Row>
-	</ArtDefine_UnitMemberCombatWeapons>
-	<ArtDefine_StrategicView>
-		<Row>
-			<StrategicViewType>ART_DEF_UNIT_PERSIAN_CATAPHRACT</StrategicViewType>
-			<TileType>Unit</TileType>
-			<Asset>SV_ArmoredKnight.dds</Asset>
-		</Row>
-	</ArtDefine_StrategicView>-->
 
 	<!--MBT-->
 	<ArtDefine_UnitInfos>
@@ -2229,7 +1968,7 @@
 	
 	
 	
-	<!--TIGER Helicopter-->
+	<!--TIGER Helicopter
 
 	<ArtDefine_UnitInfos>
 		<Row>
@@ -2291,7 +2030,7 @@
 			<TileType>Unit</TileType>
 			<Asset>SV_TigetCopter.dds</Asset>
 		</Row>
-	</ArtDefine_StrategicView>
+	</ArtDefine_StrategicView>-->
 
 
 
@@ -2502,7 +2241,7 @@
 
 
 
-	<!--French Eurocopter
+	<!--French Eurocopter-->
 	<ArtDefine_UnitInfos>
 		<Row>
 			<Type>ART_DEF_UNIT_FRANCE_EUROCOPTER_TIGER</Type>
@@ -2579,7 +2318,7 @@
 			<Asset>SV_TigetCopter.dds</Asset>
 		</Row>
 	</ArtDefine_StrategicView>
-	-->
+	
 
 	
 
@@ -4416,122 +4155,63 @@
 	</ArtDefine_StrategicView>
 
 	<!--Bombard -->
-		<ArtDefine_UnitInfos>
-			<Row>
-				<Type>ART_DEF_UNIT_BOMBARD</Type>
-				<DamageStates>1</DamageStates>
-				<Formation>DefaultCavalry</Formation>
-			</Row>
-		</ArtDefine_UnitInfos>
-		<ArtDefine_UnitInfoMemberInfos>
-			<Row>
-				<UnitInfoType>ART_DEF_UNIT_BOMBARD</UnitInfoType>
-				<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_BOMBARD</UnitMemberInfoType>
-				<NumMembers>7</NumMembers>
-			</Row>
-		</ArtDefine_UnitInfoMemberInfos>
-		<ArtDefine_UnitMemberInfos>
-			<Row>
-				<Type>ART_DEF_UNIT_MEMBER_BOMBARD</Type>
-				<Scale>0.09399997317791</Scale>
-				<Model>frecu1.fxsxml</Model>
-				<MaterialTypeTag>CLOTH</MaterialTypeTag>
-				<MaterialTypeSoundOverrideTag>FLESH</MaterialTypeSoundOverrideTag>
-			</Row>
-		</ArtDefine_UnitMemberInfos>
-		<ArtDefine_UnitMemberCombats>
-			<Row>
-				<UnitMemberType>ART_DEF_UNIT_MEMBER_BOMBARD</UnitMemberType>
-				<EnableActions>Idle Attack RunCharge AttackCity Bombard Death BombardDefend Run Fortify CombatReady Walk</EnableActions>
-				<ShortMoveRadius>24.0</ShortMoveRadius>
-				<ShortMoveRate>0.349999994039536</ShortMoveRate>
-				<TurnRateMin>0.5</TurnRateMin>
-				<TurnRateMax>0.75</TurnRateMax>
-				<TurnFacingRateMin>15.0</TurnFacingRateMin>
-				<TurnFacingRateMax>20.0</TurnFacingRateMax>
-				<TargetHeight>12.0</TargetHeight>
-				<HasShortRangedAttack>1</HasShortRangedAttack>
-				<HasStationaryMelee>1</HasStationaryMelee>
-				<HasRefaceAfterCombat>1</HasRefaceAfterCombat>
-				<ReformBeforeCombat>1</ReformBeforeCombat>
-				<OnlyTurnInMovementActions>1</OnlyTurnInMovementActions>
-			</Row>
-		</ArtDefine_UnitMemberCombats>
-		<ArtDefine_UnitMemberCombatWeapons>
-			<Row>
-				<UnitMemberType>ART_DEF_UNIT_MEMBER_BOMBARD</UnitMemberType>
-				<Index>0</Index>
-				<SubIndex>0</SubIndex>
-				<WeaponTypeTag>BULLET</WeaponTypeTag>
-				<WeaponTypeSoundOverrideTag>BULLET</WeaponTypeSoundOverrideTag>
-			</Row>
-		</ArtDefine_UnitMemberCombatWeapons>
-		<ArtDefine_StrategicView>
-			<Row>
-				<StrategicViewType>ART_DEF_UNIT_BOMBARD</StrategicViewType>
-				<TileType>Unit</TileType>
-				<Asset>SV_Carabinier.dds</Asset>
-			</Row>
-		</ArtDefine_StrategicView>
-
-
-
-	<!--Assult Gun--><!--
 	<ArtDefine_UnitInfos>
 		<Row>
-			<Type>ART_DEF_UNIT_ASSAULT_GUN</Type>
+			<Type>ART_DEF_UNIT_BOMBARD</Type>
 			<DamageStates>1</DamageStates>
-			<Formation>Vehicle</Formation>
+			<Formation>DefaultCavalry</Formation>
 		</Row>
 	</ArtDefine_UnitInfos>
 	<ArtDefine_UnitInfoMemberInfos>
 		<Row>
-			<UnitInfoType>ART_DEF_UNIT_ASSAULT_GUN</UnitInfoType>
-			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_ASSAULT_GUN</UnitMemberInfoType>
-			<NumMembers>3</NumMembers>
+			<UnitInfoType>ART_DEF_UNIT_BOMBARD</UnitInfoType>
+			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_BOMBARD</UnitMemberInfoType>
+			<NumMembers>7</NumMembers>
 		</Row>
 	</ArtDefine_UnitInfoMemberInfos>
 	<ArtDefine_UnitMemberInfos>
 		<Row>
-			<Type>ART_DEF_UNIT_MEMBER_ASSAULT_GUN</Type>
-			<Scale>0.109999997317791</Scale>
-			<Model>Sdkfz181_Sturmtiger.fxsxml</Model>
-			<MaterialTypeTag>METAL</MaterialTypeTag>
-			<MaterialTypeSoundOverrideTag>METALSM</MaterialTypeSoundOverrideTag>
+			<Type>ART_DEF_UNIT_MEMBER_BOMBARD</Type>
+			<Scale>0.09399997317791</Scale>
+			<Model>frecu1.fxsxml</Model>
+			<MaterialTypeTag>CLOTH</MaterialTypeTag>
+			<MaterialTypeSoundOverrideTag>FLESH</MaterialTypeSoundOverrideTag>
 		</Row>
 	</ArtDefine_UnitMemberInfos>
 	<ArtDefine_UnitMemberCombats>
 		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_ASSAULT_GUN</UnitMemberType>
-			<EnableActions>Idle Attack RunCharge AttackCity Bombard Death BombardDefend Run Fortify CombatReady</EnableActions>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_BOMBARD</UnitMemberType>
+			<EnableActions>Idle Attack RunCharge AttackCity Bombard Death BombardDefend Run Fortify CombatReady Walk</EnableActions>
+			<ShortMoveRadius>24.0</ShortMoveRadius>
+			<ShortMoveRate>0.349999994039536</ShortMoveRate>
+			<TurnRateMin>0.5</TurnRateMin>
+			<TurnRateMax>0.75</TurnRateMax>
+			<TurnFacingRateMin>15.0</TurnFacingRateMin>
+			<TurnFacingRateMax>20.0</TurnFacingRateMax>
+			<TargetHeight>12.0</TargetHeight>
 			<HasShortRangedAttack>1</HasShortRangedAttack>
 			<HasStationaryMelee>1</HasStationaryMelee>
-			<HasRefaceAfterCombat>0</HasRefaceAfterCombat>
+			<HasRefaceAfterCombat>1</HasRefaceAfterCombat>
 			<ReformBeforeCombat>1</ReformBeforeCombat>
-			<HasIndependentWeaponFacing>1</HasIndependentWeaponFacing>
+			<OnlyTurnInMovementActions>1</OnlyTurnInMovementActions>
 		</Row>
 	</ArtDefine_UnitMemberCombats>
 	<ArtDefine_UnitMemberCombatWeapons>
 		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_ASSAULT_GUN</UnitMemberType>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_BOMBARD</UnitMemberType>
 			<Index>0</Index>
 			<SubIndex>0</SubIndex>
-			<VisKillStrengthMin>25.0</VisKillStrengthMin>
-			<VisKillStrengthMax>50.0</VisKillStrengthMax>
-			<HitEffect>ART_DEF_VEFFECT_ASSAULT_GUN_IMPACT_$(TERRAIN)</HitEffect>
-			<WeaponTypeTag>EXPLOSIVE</WeaponTypeTag>
-			<WeaponTypeSoundOverrideTag>EXPLOSION6POUND</WeaponTypeSoundOverrideTag>
+			<WeaponTypeTag>BULLET</WeaponTypeTag>
+			<WeaponTypeSoundOverrideTag>BULLET</WeaponTypeSoundOverrideTag>
 		</Row>
 	</ArtDefine_UnitMemberCombatWeapons>
 	<ArtDefine_StrategicView>
 		<Row>
-			<StrategicViewType>ART_DEF_UNIT_ASSAULT_GUN</StrategicViewType>
+			<StrategicViewType>ART_DEF_UNIT_BOMBARD</StrategicViewType>
 			<TileType>Unit</TileType>
-			<Asset>SV_Hakkapeliitta.dds</Asset>
+			<Asset>SV_Carabinier.dds</Asset>
 		</Row>
-	</ArtDefine_StrategicView>-->
-
-
+	</ArtDefine_StrategicView>
 
 
 	<!--IJN Destroyer-->

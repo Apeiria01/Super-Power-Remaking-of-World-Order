@@ -337,10 +337,10 @@
 			<UnitType>UNIT_WORKER</UnitType>
 			<BuildType>BUILD_SHOSHONE_TIPI</BuildType>
 		</Row>
-		<!--<Row>
+		<Row>
 			<UnitType>UNIT_WORKER</UnitType>
 			<BuildType>BUILD_IROQUOIAN_FOREST_FARM</BuildType>
-		</Row>-->
+		</Row>
 		
 		
 		<Row>
@@ -467,11 +467,6 @@
 			<Time>200</Time>
 			<Remove>true</Remove>
 		</Row>
-		
-		<Update>
-			<Set Remove="false"/>
-			<Where BuildType="BUILD_FARM" FeatureType="FEATURE_FOREST"/>
-		</Update>
 
 		<Update>
 			<Set PrereqTech="TECH_MINING"/>

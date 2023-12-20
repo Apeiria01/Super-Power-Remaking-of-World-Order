@@ -465,45 +465,6 @@
 		</Row>
 
 
-
-
-		
-		
-		<!--<Row>
-			<Class>UNITCLASS_KNIGHT</Class>
-			<Type>UNIT_PERSIAN_CATAPHRACT</Type>
-			<PrereqTech>TECH_CHIVALRY</PrereqTech>
-			<BaseSightRange>2</BaseSightRange>
-			<Combat>40</Combat>
-			<Cost>180</Cost>
-			<Moves>4</Moves>
-			<HurryCostModifier>33</HurryCostModifier>
-			<CombatClass>UNITCOMBAT_MOUNTED</CombatClass>
-			<Domain>DOMAIN_LAND</Domain>
-			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_PERSIAN_CATAPHRACT</Description>
-			<Civilopedia>TXT_KEY_UNIT_PERSIAN_CATAPHRACT_TEXT</Civilopedia>
-			<Strategy>TXT_KEY_SP_UNITS_HEAVY_MOBILE_UNITS_STRATEGY</Strategy>
-			<Help>TXT_KEY_PROMOTION_KNIGHT_COMBAT_HELP</Help>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
-			<Pillage>true</Pillage>
-			<ObsoleteTech>TECH_COMBUSTION</ObsoleteTech>
-			<GoodyHutUpgradeUnitClass>UNITCLASS_LANCER</GoodyHutUpgradeUnitClass>
-			<AdvancedStartCost>25</AdvancedStartCost>
-			<XPValueAttack>4</XPValueAttack>
-			<XPValueDefense>3</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_PERSIAN_CATAPHRACT</UnitArtInfo>
-			<UnitFlagIconOffset>89</UnitFlagIconOffset>
-			<UnitFlagAtlas>SPUnitFlags_FLAG</UnitFlagAtlas>
-			<IconAtlas>SPUNITS02_ATLAS</IconAtlas>
-			<PortraitIndex>36</PortraitIndex>
-			<MoveRate>QUADRUPED</MoveRate>
-			<ExtraMaintenanceCost>6</ExtraMaintenanceCost>
-		</Row>-->
-
-
-
 		<Row>
 			<Class>UNITCLASS_LANCER</Class>
 			<Type>UNIT_LANCER</Type>
@@ -536,38 +497,6 @@
 			<MoveRate>QUADRUPED</MoveRate>
 			<ExtraMaintenanceCost>7</ExtraMaintenanceCost>
 		</Row>
-		<!--<Row>
-			<Class>UNITCLASS_LANCER</Class>
-			<Type>UNIT_SWEDISH_HAKKAPELIITTA</Type>
-			<PrereqTech>TECH_METALLURGY</PrereqTech>
-			<BaseSightRange>2</BaseSightRange>
-			<Combat>55</Combat>
-			<Cost>250</Cost>
-			<Moves>5</Moves>
-			<HurryCostModifier>33</HurryCostModifier>
-			<CombatClass>UNITCOMBAT_MOUNTED</CombatClass>
-			<Domain>DOMAIN_LAND</Domain>
-			<DefaultUnitAI>UNITAI_FAST_ATTACK</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_SWEDISH_HAKKAPELIITTA</Description>
-			<Civilopedia>TXT_KEY_CIV5_SWEDISH_HAKKAPELIITTA_TEXT</Civilopedia>
-			<Strategy>TXT_KEY_SP_UNITS_HEAVY_MOBILE_UNITS_STRATEGY</Strategy>
-			<Help>TXT_KEY_PROMOTION_KNIGHT_COMBAT_HELP</Help>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
-			<Pillage>true</Pillage>
-			<ObsoleteTech>TECH_COMBINED_ARMS</ObsoleteTech>
-			<GoodyHutUpgradeUnitClass>UNITCLASS_WWI_TANK</GoodyHutUpgradeUnitClass>
-			<AdvancedStartCost>30</AdvancedStartCost>
-			<XPValueAttack>3</XPValueAttack>
-			<XPValueDefense>3</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_U_SWEDISH_HAKKAPELITTA</UnitArtInfo>
-			<UnitFlagAtlas>EXPANSION_UNIT_FLAG_ATLAS</UnitFlagAtlas>
-			<UnitFlagIconOffset>6</UnitFlagIconOffset>
-			<IconAtlas>EXPANSION_UNIT_ATLAS_1</IconAtlas>
-			<PortraitIndex>6</PortraitIndex>
-			<MoveRate>QUADRUPED</MoveRate>
-			<ExtraMaintenanceCost>7</ExtraMaintenanceCost>
-		</Row>-->
 		<Row>
 			<Class>UNITCLASS_LANCER</Class>
 			<Type>UNIT_POLISH_WINGED_HUSSAR</Type>
@@ -839,42 +768,7 @@
 			<PortraitIndex>41</PortraitIndex>
 			<MoveRate>WHEELED</MoveRate>
 			<ExtraMaintenanceCost>15</ExtraMaintenanceCost>
-		</Row>
-		<Row>
-			<Class>UNITCLASS_MAIN_BATTLE_TANK</Class>
-			<Type>UNIT_ZULU_OLIFANT</Type>
-			<PrereqTech>TECH_COMPOSITE</PrereqTech>
-			<BaseSightRange>3</BaseSightRange>
-			<Combat>140</Combat>
-			<Cost>700</Cost>
-			<Moves>6</Moves>
-			<HurryCostModifier>25</HurryCostModifier>
-			<CombatClass>UNITCOMBAT_ARMOR</CombatClass>
-			<Domain>DOMAIN_LAND</Domain>
-			<DefaultUnitAI>UNITAI_FAST_ATTACK</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_ZULU_OLIFANT</Description>
-			<Civilopedia>TXT_KEY_UNIT_ZULU_OLIFANT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_SP_UNITS_HEAVY_MOBILE_UNITS_STRATEGY</Strategy>
-			<Help>TXT_KEY_PROMOTION_TANK_COMBAT_HELP</Help>
-			<GoodyHutUpgradeUnitClass>UNITCLASS_MODERN_ARMOR</GoodyHutUpgradeUnitClass>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
-			<Pillage>true</Pillage>
-			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
-			<Mechanized>true</Mechanized>
-			<AdvancedStartCost>50</AdvancedStartCost>
-			<XPValueAttack>4</XPValueAttack>
-			<XPValueDefense>3</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_MAIN_BATTLE_TANK</UnitArtInfo>
-			<UnitFlagIconOffset>51</UnitFlagIconOffset>
-			<UnitFlagAtlas>SPUnitFlags_FLAG</UnitFlagAtlas>
-			<IconAtlas>SPUNITS01_ATLAS</IconAtlas>
-			<PortraitIndex>54</PortraitIndex>
-			<MoveRate>WHEELED</MoveRate>
-			<ExtraMaintenanceCost>15</ExtraMaintenanceCost>
-		</Row>
-		
-				
+		</Row>	
 
 		<Row>
 			<Class>UNITCLASS_MODERN_ARMOR</Class>
@@ -907,39 +801,6 @@
 			<MoveRate>WHEELED</MoveRate>
 			<ExtraMaintenanceCost>18</ExtraMaintenanceCost>
 		</Row>
-
-		<!--<Row>
-			<Class>UNITCLASS_MODERN_ARMOR</Class>
-			<Type>UNIT_CHINESE_TYPE99</Type>
-			<PrereqTech>TECH_BVR_COMBAT</PrereqTech>
-			<BaseSightRange>3</BaseSightRange>
-			<Combat>200</Combat>
-			<Cost>825</Cost>
-			<Moves>6</Moves>
-			<HurryCostModifier>75</HurryCostModifier>
-			<CombatClass>UNITCOMBAT_ARMOR</CombatClass>
-			<Domain>DOMAIN_LAND</Domain>
-			<DefaultUnitAI>UNITAI_FAST_ATTACK</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_CHINESE_TYPE99</Description>
-			<Civilopedia>TXT_KEY_CIVILOPEDIA_UNITS_MODERN_MODERNARMOR_TEXT</Civilopedia>
-			<Strategy>TXT_KEY_SP_UNITS_HEAVY_MOBILE_UNITS_STRATEGY</Strategy>
-			<Help>TXT_KEY_PROMOTION_TANK_COMBAT_HELP</Help>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
-			<Pillage>true</Pillage>
-			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
-			<Mechanized>true</Mechanized>
-			<AdvancedStartCost>60</AdvancedStartCost>
-			<XPValueAttack>4</XPValueAttack>
-			<XPValueDefense>3</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_CHINESE_TYPE99</UnitArtInfo>
-			<UnitFlagIconOffset>85</UnitFlagIconOffset>
-			<UnitFlagAtlas>SPUnitFlags_FLAG</UnitFlagAtlas>
-			<IconAtlas>SPUNITS02_ATLAS</IconAtlas>
-			<PortraitIndex>32</PortraitIndex>
-			<MoveRate>WHEELED</MoveRate>
-			<ExtraMaintenanceCost>14</ExtraMaintenanceCost>
-		</Row>-->
 		
 		<!--Hit & Run-->
 
@@ -1695,10 +1556,6 @@
 			<UnitType>UNIT_LANCER</UnitType>
 			<UnitClassType>UNITCLASS_WWI_TANK</UnitClassType>
 		</Row>
-		<!--<Row>
-			<UnitType>UNIT_SWEDISH_HAKKAPELIITTA</UnitType>
-			<UnitClassType>UNITCLASS_WWI_TANK</UnitClassType>
-		</Row>-->
 		<Row>
 			<UnitType>UNIT_POLISH_WINGED_HUSSAR</UnitType>
 			<UnitClassType>UNITCLASS_WWI_TANK</UnitClassType>
@@ -1733,10 +1590,6 @@
 
 		<Row>
 			<UnitType>UNIT_MAIN_BATTLE_TANK</UnitType>
-			<UnitClassType>UNITCLASS_MODERN_ARMOR</UnitClassType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_ZULU_OLIFANT</UnitType>
 			<UnitClassType>UNITCLASS_MODERN_ARMOR</UnitClassType>
 		</Row>
 		
@@ -2038,19 +1891,6 @@
 			<UnitType>UNIT_OTTOMAN_SIPAHI</UnitType>
 			<PromotionType>PROMOTION_HEAL_IF_DESTROY_ENEMY</PromotionType>
 		</Row>
-
-		<!--<Row>
-			<UnitType>UNIT_PERSIAN_CATAPHRACT</UnitType>
-			<PromotionType>PROMOTION_KNIGHT_COMBAT</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_PERSIAN_CATAPHRACT</UnitType>
-			<PromotionType>PROMOTION_ARMOR_PLATING_I</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_PERSIAN_CATAPHRACT</UnitType>
-			<PromotionType>PROMOTION_GOLDEN_AGE_POINTS</PromotionType>
-		</Row>-->
 		
 		<Row>
 			<UnitType>UNIT_SONGHAI_MUSLIMCAVALRY</UnitType>
@@ -2067,23 +1907,6 @@
 			<UnitType>UNIT_LANCER</UnitType>
 			<PromotionType>PROMOTION_KNIGHT_COMBAT</PromotionType>
 		</Row>
-		
-		<!--<Row>
-			<UnitType>UNIT_SWEDISH_HAKKAPELIITTA</UnitType>
-			<PromotionType>PROMOTION_KNIGHT_COMBAT</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_SWEDISH_HAKKAPELIITTA</UnitType>
-			<PromotionType>PROMOTION_GENERAL_STACKING</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_SWEDISH_HAKKAPELIITTA</UnitType>
-			<PromotionType>PROMOTION_MOVEMENT_TO_GENERAL</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_SWEDISH_HAKKAPELIITTA</UnitType>
-			<PromotionType>PROMOTION_MOBILITY</PromotionType>
-		</Row>-->
 
 		<Row>
 			<UnitType>UNIT_SIAMESE_WARELEPHANT</UnitType>
@@ -2174,51 +1997,11 @@
 			<UnitType>UNIT_MAIN_BATTLE_TANK</UnitType>
 			<PromotionType>PROMOTION_TANK_COMBAT</PromotionType>
 		</Row>
-	
-
-		<Row>
-			<UnitType>UNIT_ZULU_OLIFANT</UnitType>
-			<PromotionType>PROMOTION_TANK_COMBAT</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_ZULU_OLIFANT</UnitType>
-			<PromotionType>PROMOTION_RESTLESSNESS</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_ZULU_OLIFANT</UnitType>
-			<PromotionType>PROMOTION_EXTRA_SIGHT_I</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_ZULU_OLIFANT</UnitType>
-			<PromotionType>PROMOTION_IGNORE_TERRAIN_COST</PromotionType>
-		</Row>
-		
 		
 		<Row>
 			<UnitType>UNIT_MODERN_ARMOR</UnitType>
 			<PromotionType>PROMOTION_TANK_COMBAT</PromotionType>
 		</Row>
-		
-		<!--<Row>
-			<UnitType>UNIT_CHINESE_TYPE99</UnitType>
-			<PromotionType>PROMOTION_TANK_COMBAT</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_CHINESE_TYPE99</UnitType>
-			<PromotionType>PROMOTION_LASER_SUPPRESSION</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_CHINESE_TYPE99</UnitType>
-			<PromotionType>PROMOTION_HEAVY_SHOCK_1</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_CHINESE_TYPE99</UnitType>
-			<PromotionType>PROMOTION_HEAVY_SHOCK_2</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_CHINESE_TYPE99</UnitType>
-			<PromotionType>PROMOTION_HEAVY_SHOCK_3</PromotionType>
-		</Row>-->
 
 		<!--Hit and Run-->
 		<Row>
@@ -2621,15 +2404,6 @@
 			<UnitAIType>UNITAI_FAST_ATTACK</UnitAIType>
 		</Row>
 		
-		<!--<Row>
-			<UnitType>UNIT_PERSIAN_CATAPHRACT</UnitType>
-			<UnitAIType>UNITAI_ATTACK</UnitAIType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_PERSIAN_CATAPHRACT</UnitType>
-			<UnitAIType>UNITAI_FAST_ATTACK</UnitAIType>
-		</Row>-->
-		
 		<Row>
 			<UnitType>UNIT_SONGHAI_MUSLIMCAVALRY</UnitType>
 			<UnitAIType>UNITAI_ATTACK</UnitAIType>
@@ -2647,14 +2421,6 @@
 			<UnitType>UNIT_LANCER</UnitType>
 			<UnitAIType>UNITAI_FAST_ATTACK</UnitAIType>
 		</Row>
-		<!--<Row>
-			<UnitType>UNIT_SWEDISH_HAKKAPELIITTA</UnitType>
-			<UnitAIType>UNITAI_ATTACK</UnitAIType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_SWEDISH_HAKKAPELIITTA</UnitType>
-			<UnitAIType>UNITAI_FAST_ATTACK</UnitAIType>
-		</Row>-->
 		<Row>
 			<UnitType>UNIT_POLISH_WINGED_HUSSAR</UnitType>
 			<UnitAIType>UNITAI_ATTACK</UnitAIType>
@@ -2713,14 +2479,6 @@
 		</Row>
 		<Row>
 			<UnitType>UNIT_MAIN_BATTLE_TANK</UnitType>
-			<UnitAIType>UNITAI_FAST_ATTACK</UnitAIType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_ZULU_OLIFANT</UnitType>
-			<UnitAIType>UNITAI_ATTACK</UnitAIType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_ZULU_OLIFANT</UnitType>
 			<UnitAIType>UNITAI_FAST_ATTACK</UnitAIType>
 		</Row>
 	
@@ -2732,15 +2490,6 @@
 			<UnitType>UNIT_MODERN_ARMOR</UnitType>
 			<UnitAIType>UNITAI_FAST_ATTACK</UnitAIType>
 		</Row>
-		
-		<!--<Row>
-			<UnitType>UNIT_CHINESE_TYPE99</UnitType>
-			<UnitAIType>UNITAI_ATTACK</UnitAIType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_CHINESE_TYPE99</UnitType>
-			<UnitAIType>UNITAI_FAST_ATTACK</UnitAIType>
-		</Row>-->
 
 		<Row>
 			<UnitType>UNIT_CHARIOT_ARCHER</UnitType>
@@ -3013,27 +2762,15 @@
 			<UnitType>UNIT_OTTOMAN_SIPAHI</UnitType>
 			<ResourceType>RESOURCE_HORSE</ResourceType>
 		</Row>
-		<!--<Row>
-			<UnitType>UNIT_PERSIAN_CATAPHRACT</UnitType>
-			<ResourceType>RESOURCE_HORSE</ResourceType>
-		</Row>-->
 		<Row>
 			<UnitType>UNIT_SONGHAI_MUSLIMCAVALRY</UnitType>
 			<ResourceType>RESOURCE_HORSE</ResourceType>
 		</Row>
-		<!--<Row>
-			<UnitType>UNIT_SIAMESE_WARELEPHANT</UnitType>
-			<ResourceType>RESOURCE_HORSE</ResourceType>
-		</Row>-->
 
 		<Row>
 			<UnitType>UNIT_LANCER</UnitType>
 			<ResourceType>RESOURCE_HORSE</ResourceType>
 		</Row>
-		<!--<Row>
-			<UnitType>UNIT_SWEDISH_HAKKAPELIITTA</UnitType>
-			<ResourceType>RESOURCE_HORSE</ResourceType>
-		</Row>-->
 		<Row>
 			<UnitType>UNIT_POLISH_WINGED_HUSSAR</UnitType>
 			<ResourceType>RESOURCE_HORSE</ResourceType>
@@ -3061,20 +2798,12 @@
 			<UnitType>UNIT_MAIN_BATTLE_TANK</UnitType>
 			<ResourceType>RESOURCE_OIL</ResourceType>
 		</Row>
-		<Row>
-			<UnitType>UNIT_ZULU_OLIFANT</UnitType>
-			<ResourceType>RESOURCE_OIL</ResourceType>
-		</Row>
 		
 		<Row>
 			<UnitType>UNIT_MODERN_ARMOR</UnitType>
 			<ResourceType>RESOURCE_OIL</ResourceType>
 		</Row>
-		<!--<Row>
-			<UnitType>UNIT_CHINESE_TYPE99</UnitType>
-			<ResourceType>RESOURCE_OIL</ResourceType>
-		</Row>-->
-
+		
 		<Row>
 			<UnitType>UNIT_HORSEMAN</UnitType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
@@ -3122,11 +2851,6 @@
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 			<Cost>3</Cost>
 		</Row>
-		<!--<Row>
-			<UnitType>UNIT_PERSIAN_CATAPHRACT</UnitType>
-			<ResourceType>RESOURCE_MANPOWER</ResourceType>
-			<Cost>3</Cost>
-		</Row>-->
 		<Row>
 			<UnitType>UNIT_SONGHAI_MUSLIMCAVALRY</UnitType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
@@ -3138,11 +2862,6 @@
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 			<Cost>3</Cost>
 		</Row>
-		<!--<Row>
-			<UnitType>UNIT_SWEDISH_HAKKAPELIITTA</UnitType>
-			<ResourceType>RESOURCE_MANPOWER</ResourceType>
-			<Cost>3</Cost>
-		</Row>-->
 		<Row>
 			<UnitType>UNIT_POLISH_WINGED_HUSSAR</UnitType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
@@ -3182,22 +2901,12 @@
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 			<Cost>4</Cost>
 		</Row>
-		<Row>
-			<UnitType>UNIT_ZULU_OLIFANT</UnitType>
-			<ResourceType>RESOURCE_MANPOWER</ResourceType>
-			<Cost>4</Cost>
-		</Row>
 
 		<Row>
 			<UnitType>UNIT_MODERN_ARMOR</UnitType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 			<Cost>4</Cost>
 		</Row>
-		<!--<Row>
-			<UnitType>UNIT_CHINESE_TYPE99</UnitType>
-			<ResourceType>RESOURCE_MANPOWER</ResourceType>
-			<Cost>4</Cost>
-		</Row>-->
 
 <!--Hit and Run-->
 
@@ -3555,16 +3264,6 @@
 			<FlavorType>FLAVOR_OFFENSE</FlavorType>
 			<Flavor>40</Flavor>
 		</Row>
-		<!--<Row>
-			<UnitType>UNIT_PERSIAN_CATAPHRACT</UnitType>
-			<FlavorType>FLAVOR_MOBILE</FlavorType>
-			<Flavor>50</Flavor>
-		</Row>
-		<Row>
-			<UnitType>UNIT_PERSIAN_CATAPHRACT</UnitType>
-			<FlavorType>FLAVOR_OFFENSE</FlavorType>
-			<Flavor>40</Flavor>
-		</Row>-->
 		<Row>
 			<UnitType>UNIT_SIAMESE_WARELEPHANT</UnitType>
 			<FlavorType>FLAVOR_MOBILE</FlavorType>
@@ -3597,16 +3296,6 @@
 			<FlavorType>FLAVOR_OFFENSE</FlavorType>
 			<Flavor>30</Flavor>
 		</Row>
-		<!--<Row>
-			<UnitType>UNIT_SWEDISH_HAKKAPELIITTA</UnitType>
-			<FlavorType>FLAVOR_MOBILE</FlavorType>
-			<Flavor>60</Flavor>
-		</Row>
-		<Row>
-			<UnitType>UNIT_SWEDISH_HAKKAPELIITTA</UnitType>
-			<FlavorType>FLAVOR_OFFENSE</FlavorType>
-			<Flavor>40</Flavor>
-		</Row>-->
 		<Row>
 			<UnitType>UNIT_POLISH_WINGED_HUSSAR</UnitType>
 			<FlavorType>FLAVOR_MOBILE</FlavorType>
@@ -3682,23 +3371,6 @@
 			<FlavorType>FLAVOR_OFFENSE</FlavorType>
 			<Flavor>80</Flavor>
 		</Row>
-	
-		<Row>
-			<UnitType>UNIT_ZULU_OLIFANT</UnitType>
-			<FlavorType>FLAVOR_MOBILE</FlavorType>
-			<Flavor>200</Flavor>
-		</Row>
-		<Row>
-			<UnitType>UNIT_ZULU_OLIFANT</UnitType>
-			<FlavorType>FLAVOR_OFFENSE</FlavorType>
-			<Flavor>220</Flavor>
-		</Row>
-		<Row>
-			<UnitType>UNIT_ZULU_OLIFANT</UnitType>
-			<FlavorType>FLAVOR_DEFENSE</FlavorType>
-			<Flavor>50</Flavor>
-		</Row>
-		
 		
 		<Row>
 			<UnitType>UNIT_MODERN_ARMOR</UnitType>
@@ -3710,22 +3382,6 @@
 			<FlavorType>FLAVOR_OFFENSE</FlavorType>
 			<Flavor>180</Flavor>
 		</Row>
-
-		<!--<Row>
-			<UnitType>UNIT_CHINESE_TYPE99</UnitType>
-			<FlavorType>FLAVOR_MOBILE</FlavorType>
-			<Flavor>180</Flavor>
-		</Row>
-		<Row>
-			<UnitType>UNIT_CHINESE_TYPE99</UnitType>
-			<FlavorType>FLAVOR_OFFENSE</FlavorType>
-			<Flavor>100</Flavor>
-		</Row>
-		<Row>
-			<UnitType>UNIT_CHINESE_TYPE99</UnitType>
-			<FlavorType>FLAVOR_DEFENSE</FlavorType>
-			<Flavor>150</Flavor>
-		</Row>-->
 
 		<Row>
 			<UnitType>UNIT_CHARIOT_ARCHER</UnitType>

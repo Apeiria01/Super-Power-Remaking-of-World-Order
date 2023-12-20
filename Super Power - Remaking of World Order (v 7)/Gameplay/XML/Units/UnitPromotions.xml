@@ -777,18 +777,6 @@
 			<RemoveAfterXTurns>1</RemoveAfterXTurns>
 		</Row>
 
-		<!--<Row>
-			<Type>PROMOTION_MISSILE_UNIT</Type>
-			<Description>TXT_KEY_PROMOTION_MISSILE_UNIT</Description>
-			<Help>TXT_KEY_PROMOTION_MISSILE_UNIT_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PortraitIndex>4</PortraitIndex>
-			<OrderPriority>11</OrderPriority>
-			<PediaEntry>TXT_KEY_PROMOTION_MISSILE_UNIT</PediaEntry>
-			<CannotBeChosen>true</CannotBeChosen>
-		</Row>-->
 		<Row>
 			<Type>PROMOTION_DRONE_UNIT</Type>
 			<Description>TXT_KEY_PROMOTION_DRONE_UNIT</Description>
