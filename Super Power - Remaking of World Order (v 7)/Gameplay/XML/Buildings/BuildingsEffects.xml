@@ -1359,16 +1359,6 @@
 			<Yield>2</Yield>
 		</Row>
 		<Row>
-			<BuildingType>BUILDING_INQUISITION</BuildingType>
-			<YieldType>YIELD_FAITH</YieldType>
-			<Yield>-3</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_INQUISITION</BuildingType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>-2</Yield>
-		</Row>
-		<Row>
 			<BuildingType>BUILDING_MUD_PYRAMID_MOSQUE</BuildingType>
 			<YieldType>YIELD_FAITH</YieldType>
 			<Yield>1</Yield>
@@ -3428,7 +3418,7 @@
 		<Row>
 			<BuildingType>BUILDING_INQUISITION</BuildingType>
 			<YieldType>YIELD_FAITH</YieldType>
-			<Yield>300</Yield>
+			<Yield>200</Yield>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_INQUISITION</BuildingType>
@@ -6001,17 +5991,22 @@
 		<Row>
 			<BuildingType>BUILDING_MONASTERY</BuildingType>
 			<FlavorType>FLAVOR_RELIGION</FlavorType>
-			<Flavor>5</Flavor>
+			<Flavor>4</Flavor>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_MONASTERY</BuildingType>
 			<FlavorType>FLAVOR_CULTURE</FlavorType>
-			<Flavor>5</Flavor>
+			<Flavor>4</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_MONASTERY</BuildingType>
+			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
+			<Flavor>2</Flavor>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_MONASTERY</BuildingType>
 			<FlavorType>FLAVOR_GREAT_PEOPLE</FlavorType>
-			<Flavor>5</Flavor>
+			<Flavor>6</Flavor>
 		</Row>
 
 
@@ -6216,32 +6211,32 @@
 		<Row>
 			<BuildingType>BUILDING_MOSQUE</BuildingType>
 			<FlavorType>FLAVOR_RELIGION</FlavorType>
-			<Flavor>4</Flavor>
+			<Flavor>6</Flavor>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_MOSQUE</BuildingType>
 			<FlavorType>FLAVOR_CULTURE</FlavorType>
-			<Flavor>2</Flavor>
+			<Flavor>4</Flavor>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_MOSQUE</BuildingType>
 			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
-			<Flavor>4</Flavor>
+			<Flavor>2</Flavor>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_PAGODA</BuildingType>
 			<FlavorType>FLAVOR_RELIGION</FlavorType>
-			<Flavor>2</Flavor>
+			<Flavor>4</Flavor>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_PAGODA</BuildingType>
 			<FlavorType>FLAVOR_CULTURE</FlavorType>
-			<Flavor>2</Flavor>
+			<Flavor>4</Flavor>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_PAGODA</BuildingType>
 			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
-			<Flavor>6</Flavor>
+			<Flavor>4</Flavor>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_LEANING_TOWER</BuildingType>
@@ -6910,11 +6905,31 @@
 		<Row>
 			<BuildingType>BUILDING_CATHEDRAL</BuildingType>
 			<FlavorType>FLAVOR_RELIGION</FlavorType>
-			<Flavor>3</Flavor>
+			<Flavor>2</Flavor>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_CATHEDRAL</BuildingType>
 			<FlavorType>FLAVOR_CULTURE</FlavorType>
+			<Flavor>4</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CATHEDRAL</BuildingType>
+			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
+			<Flavor>4</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CATHEDRAL</BuildingType>
+			<FlavorType>FLAVOR_GREAT_PEOPLE</FlavorType>
+			<Flavor>2</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_INQUISITION</BuildingType>
+			<FlavorType>FLAVOR_RELIGION</FlavorType>
+			<Flavor>4</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_INQUISITION</BuildingType>
+			<FlavorType>FLAVOR_GOLD</FlavorType>
 			<Flavor>4</Flavor>
 		</Row>
 

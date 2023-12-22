@@ -1107,7 +1107,7 @@
 			<Text>本城市+25%[ICON_GREAT_PEOPLE]伟人点数积累。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_INQUISITION_HELP">
-			<Text>城中的每种异教+3[ICON_PEACE]信仰、+2[ICON_GOLD]金钱。+1[ICON_HAPPINESS_1]快乐。只能在存在非主流异教的城市中建造。</Text>
+			<Text>城中的每种宗教+2[ICON_PEACE]信仰、+2[ICON_GOLD]金钱。城市+1[ICON_HAPPINESS_1]快乐。只能在存在非主流异教的城市中建造。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_CIV5_BUILDINGS_INQUISITION_TEXT">
 			<Text>宗教裁判所是13～19世纪基督教会侦察和审判异端的机构。又译宗教裁判所审判所、宗教法庭。旨在消灭一切反教会的异端以及有异端思想的人。[NEWLINE][NEWLINE]宗教裁判所是从13世纪上半叶建立的。教皇英诺森三世为镇压法国南部阿尔比派异端，曾建立教会的侦察和审判机构，是为宗教裁判所的发端。</Text>
@@ -8057,7 +8057,7 @@
 			<Text>异端审判</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_INQUISITION">
-			<Text>允许宗教单位消耗自身在其所在城市中建立[COLOR_POSITIVE_TEXT]宗教裁判所[ENDCOLOR]（城中的每种异教+3[ICON_PEACE]信仰、+2[ICON_GOLD]金钱、+1[ICON_HAPPINESS_1]快乐。只能在存在非主流异教的城市中建造）</Text>
+			<Text>允许使用[ICON_PEACE]信仰购买宗教裁判所（+1[ICON_HAPPINESS_1]快乐，城市中的每种宗教+2[ICON_PEACE]信仰、+2[ICON_GOLD]金钱。只能在存在非主流异教的城市中购买）</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_RELIGION_PRESSURE_SHORT">
 			<Text>神圣殿堂</Text>
@@ -9110,10 +9110,10 @@
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_IMPROVEMENT_MAYA_ALTAR_HELP">
 			<Text>
-				只能建在丛林或森林。
-				[NEWLINE][NEWLINE]不能同时在相邻的地块建造玛雅祭坛。
-				[NEWLINE][NEWLINE]玛雅祭坛每邻近一处丛林+1[ICON_RESEARCH]科研产出。
-				[NEWLINE][NEWLINE]玛雅祭坛上的每一位大先知提供+2[ICON_RESEARCH][ICON_PEACE][ICON_GOLDEN_AGE]产出。
+				[ICON_BULLET]只能建在丛林或森林。
+				[NEWLINE][ICON_BULLET]不能同时在相邻的地块建造玛雅祭坛。
+				[NEWLINE][ICON_BULLET]玛雅祭坛每邻近一处丛林和森林+1[ICON_RESEARCH]科研产出。
+				[NEWLINE][ICON_BULLET]玛雅祭坛上的每一位大先知提供+2[ICON_RESEARCH][ICON_PEACE][ICON_GOLDEN_AGE]产出。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_IMPROVEMENT_MAYA_ALTAR_TEXT">

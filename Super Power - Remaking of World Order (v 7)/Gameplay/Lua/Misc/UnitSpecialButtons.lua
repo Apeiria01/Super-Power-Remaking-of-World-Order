@@ -1300,58 +1300,6 @@ BuildMilitaryAcademyButton = {
 };
 LuaEvents.UnitPanelActionAddin(BuildMilitaryAcademyButton);
 
--- Religious Unit Establish Inquisition
-EstablishInquisition = {
-    Name = "EstablishInquisition",
-    Title = "TXT_KEY_BUILD_INQUISITION", -- or a TXT_KEY
-    OrderPriority = 300, -- default is 200
-    IconAtlas = "SP_BUILDING_ATLAS_DLC_07", -- 45 and 64 variations required
-    PortraitIndex = 5,
-    ToolTip = "TXT_KEY_BUILDING_INQUISITION_HELP", -- or a TXT_KEY_ or a function
-    Condition = function(action, unit)
-        local bIsCondition = false;
-        if (
-			(unit:GetSpreadsLeft() > 0 and unit:GetSpreadsLeft() >= GameInfo.Units[unit:GetUnitType()].ReligionSpreads) 
-			or GameInfo.Units[unit:GetUnitType()].ProhibitsSpread) and unit:GetPlot() and unit:GetOwner() == unit:GetPlot():GetOwner() 
-			and (unit:GetPlot():IsCity() or unit:GetPlot():GetWorkingCity() ~= nil) 
-		then
-            local player = Players[unit:GetOwner()];
-            local city = unit:GetPlot():GetPlotCity() or unit:GetPlot():GetWorkingCity();
-            if city and city:GetReligiousMajority() == unit:GetReligion() 
-			and city:IsCanPurchase(false, false, -1, GameInfoTypes["BUILDING_INQUISITION"], -1, YieldTypes.YIELD_FAITH) then
-                bIsCondition = true;
-            end
-        end
-        return bIsCondition and unit:CanMove();
-    end, -- or nil or a boolean, default is true
-    Disabled = function(action, unit)
-        local bIsDisabled = true;
-        local numReligion = 0;
-        local city = unit:GetPlot():GetPlotCity() or unit:GetPlot():GetWorkingCity();
-        for religion in GameInfo.Religions("Type <> 'RELIGION_PANTHEON'") do
-            if city == nil then
-                break
-            elseif city:GetNumFollowers(religion.ID) > 0 then
-                numReligion = numReligion + 1;
-            end
-            if numReligion > 1 then
-                bIsDisabled = false;
-                break
-            end
-        end
-        return bIsDisabled;
-    end, -- or nil or a boolean, default is false
-
-    Action = function(action, unit, eClick)
-        local city = unit:GetPlot():GetPlotCity() or unit:GetPlot():GetWorkingCity();
-        if city then
-            city:SetNumRealBuilding(GameInfoTypes["BUILDING_INQUISITION"], 1);
-            unit:Kill();
-        end
-    end
-};
-LuaEvents.UnitPanelActionAddin(EstablishInquisition);
-
 ----Satellite Launching
 SatelliteLaunchingButton = {
     Name = "Satellite Launching",
