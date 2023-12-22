@@ -2185,6 +2185,9 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 	if building.AnyWater==1 then
 		insert( terrains, L"TXT_KEY_BUILDING_NEED_ANY_WATER" )
 	end
+	if building.RiverOrCoastal==1 then
+		insert( terrains, L"TXT_KEY_BUILDING_NEED_RIVER_OR_COASTAL" )
+	end
 
 	if building.NearbyMountainRequired then
 		insert( terrains, L"TXT_KEY_TERRAIN_MOUNTAIN" .. "[ICON_RANGE_STRENGTH]2" )

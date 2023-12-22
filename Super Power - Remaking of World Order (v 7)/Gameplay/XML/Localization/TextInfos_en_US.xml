@@ -5791,7 +5791,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_NUCLEAR_PLANT_EXTEND_HELP">
 			<Text>
-			The city must have a Nuclear Plant and near Water.
+			The city must have a Nuclear Plant and near River or Coastal.
 			[NEWLINE][NEWLINE]Must be built in Medium Cities.
 			</Text>
 		</Row>
@@ -16930,6 +16930,9 @@
 		</Replace>
 		<Row Tag="TXT_KEY_BUILDING_NEED_ANY_WATER">
 			<Text>Water</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_NEED_RIVER_OR_COASTAL">
+			<Text>River or Coastal</Text>
 		</Row>
 		<Row Tag="TXT_KEY_MAP_XY">
 			<Text>Coord</Text>

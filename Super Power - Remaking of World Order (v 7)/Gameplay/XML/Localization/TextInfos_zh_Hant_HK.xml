@@ -2948,7 +2948,7 @@
 			<Text>[ICON_RES_ELECTRICITY]核電擴容機組</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_NUCLEAR_PLANT_EXTEND_HELP">
-			<Text>只能建造於擁有核電站且臨近淡水或沿海的城市。[NEWLINE][NEWLINE]只能在中型城市（15人口）建造。</Text>
+			<Text>只能建造於擁有核電站且臨近河流或沿海的城市。[NEWLINE][NEWLINE]只能在中型城市（15人口）建造。</Text>
 		</Row>
 		
 		
@@ -14929,6 +14929,9 @@
     	</Replace>
 		<Row Tag="TXT_KEY_BUILDING_NEED_ANY_WATER">
 			<Text>水源</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_NEED_RIVER_OR_COASTAL">
+			<Text>沿河或沿海</Text>
 		</Row>
 		<Row Tag="TXT_KEY_MAP_XY">
 			<Text>坐標</Text>

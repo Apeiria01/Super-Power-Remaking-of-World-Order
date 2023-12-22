@@ -296,7 +296,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HYDRO_PLANT</ArtDefineTag>
 			<MinAreaSize>10</MinAreaSize>
 			<NeverCapture>true</NeverCapture>
-			<AnyWater>true</AnyWater>
+			<RiverOrCoastal>true</RiverOrCoastal>
 			<HurryCostModifier>50</HurryCostModifier>
 			<IconAtlas>SPBuildings_ATLAS</IconAtlas>
 			<PortraitIndex>42</PortraitIndex>
