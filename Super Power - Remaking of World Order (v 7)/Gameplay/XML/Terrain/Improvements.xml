@@ -1250,6 +1250,12 @@
 			<YieldType>YIELD_SCIENCE</YieldType>
 			<Yield>1</Yield>
 		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_MAYA_ALTAR</ImprovementType>
+			<FeatureType>FEATURE_FOREST</FeatureType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>1</Yield>
+		</Row>
 	</Improvement_AdjacentFeatureYieldChanges>
 	<Improvement_YieldChangesPerUnit>
 		<Row>

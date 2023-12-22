@@ -3535,7 +3535,7 @@
 			<Text>+25% [ICON_GREAT_PEOPLE] Great People generation in this City. +2 [ICON_PEACE] Faith, +2 [ICON_CULTURE] Culture and +1 [ICON_HAPPINESS_1] Local Happiness. </Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_INQUISITION_HELP">
-			<Text>+3 [ICON_PEACE] Faith and +2 [ICON_GOLD] Gold for each minority religion. +1 [ICON_HAPPINESS_1] Happiness. Can only be built in cities with minority religions. </Text>
+			<Text>+2 [ICON_PEACE] Faith and +2 [ICON_GOLD] Gold for each religion. +1 [ICON_HAPPINESS_1] Happiness. Can only be built in cities with minority religions. </Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_CIV5_BUILDINGS_INQUISITION_TEXT">
 			<Text>The Inquisition, in historical ecclesiastical terminology also referred to as the "Holy Inquisition", was a group of institutions within the Catholic Church whose aim was to combat heresy. Torture and violence were used by the Inquisition for eliciting confessions from heretics. The Inquisition started in 12th-century France to combat religious dissent, particularly among the Cathars and the Waldensians. The inquisitorial courts from this time until the mid-15th century are together known as the Medieval Inquisition. Other groups investigated during the Medieval Inquisition, which primarily took place in France and Italy, including the Spiritual Franciscans, the Hussites (followers of Jan Hus), and the Beguines. Beginning in the 1250s, inquisitors were generally chosen from members of the Dominican Order, replacing the earlier practice of using local clergy as judges.[NEWLINE][NEWLINE]During the Late Middle Ages and the early Renaissance, the scope of the Inquisition grew significantly in response to the Protestant Reformation and the Catholic Counter-Reformation. It expanded to other European countries, resulting in the Spanish Inquisition and the Portuguese Inquisition. The Spanish and Portuguese Inquisitions focused particularly on the anusim (people who were forced to abandon Judaism against their will) and on Muslim converts to Catholicism. The scale of the persecution of converted Muslims and converted Jews in Spain and Portugal was the result of suspicions that they had secretly reverted to their previous religions, although both minority groups were also more numerous on the Iberian Peninsula than in other parts of Europe.[NEWLINE][NEWLINE]During this time, Spain and Portugal operated inquisitorial courts not only in Europe, but also throughout their empires in Africa, Asia, and the Americas. This resulted in the Goa Inquisition, the Peruvian Inquisition, and the Mexican Inquisition, among others.[NEWLINE][NEWLINE]With the exception of the Papal States, the institution of the Inquisition was abolished in the early 19th century, after the Napoleonic Wars in Europe and the Spanish American wars of independence in the Americas. The institution survived as part of the Roman Curia, but in 1908 it was renamed the "Supreme Sacred Congregation of the Holy Office". In 1965 it became the Congregation for the Doctrine of the Faith. </Text>
@@ -8999,7 +8999,7 @@
 			<Text>Inquisition</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_INQUISITION">
-			<Text>Allow Religious Units in cities consuming themself to establish [COLOR_POSITIVE_TEXT]Inquisition[ENDCOLOR] (+3 [ICON_PEACE] Faith and +2 [ICON_GOLD] Gold for each minority religion. +1 [ICON_HAPPINESS_1] Happiness. Can only be built in cities with minority religions) </Text>
+			<Text>Use [ICON_PEACE] Faith to purchase Inquisition (+1 [ICON_HAPPINESS_1] Local Happiness, +2 [ICON_PEACE] Faith and +2 [ICON_GOLD] Gold for each Religion, Can only be purchased in cities with minority religions)</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_RELIGION_PRESSURE_SHORT">
 			<Text>The Sacred Palace</Text>
@@ -10039,10 +10039,10 @@
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_IMPROVEMENT_MAYA_ALTAR_HELP">
 			<Text>
-				Can only be built in Jungle or Forest.
-				[NEWLINE][NEWLINE]May not be constructed adjacent to another Altar.
-				[NEWLINE][NEWLINE]Each adjacent Jungle will provides +1 [ICON_RESEARCH] Science output for the Altar.
-				[NEWLINE][NEWLINE]Each Prophet in Altar provide +2 [ICON_RESEARCH][ICON_PEACE][ICON_GOLDEN_AGE] Output.
+				[ICON_BULLET]Can only be built in Jungle or Forest.
+				[NEWLINE][ICON_BULLET]May not be constructed adjacent to another Altar.
+				[NEWLINE][ICON_BULLET]Each adjacent Jungle and Forest will provides +1 [ICON_RESEARCH] Science output for the Altar.
+				[NEWLINE][ICON_BULLET]Each Prophet in Altar provide +2 [ICON_RESEARCH][ICON_PEACE][ICON_GOLDEN_AGE] Output.
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_IMPROVEMENT_MAYA_ALTAR_TEXT">

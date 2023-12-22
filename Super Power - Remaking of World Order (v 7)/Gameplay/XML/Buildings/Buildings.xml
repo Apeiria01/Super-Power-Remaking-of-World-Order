@@ -2003,7 +2003,7 @@
 			<Type>BUILDING_INQUISITION</Type>
 			<BuildingClass>BUILDINGCLASS_INQUISITION</BuildingClass>
 			<Cost>-1</Cost>
-			<FaithCost>1000000</FaithCost>
+			<FaithCost>150</FaithCost>
 			<UnlockedByBelief>true</UnlockedByBelief>
 			<Description>TXT_KEY_BUILDING_INQUISITION_DESC</Description>
 			<Civilopedia>TXT_KEY_CIV5_BUILDINGS_INQUISITION_TEXT</Civilopedia>
@@ -2015,6 +2015,7 @@
 			<PortraitIndex>5</PortraitIndex>
 			<Happiness>1</Happiness>
 			<ConquestProb>100</ConquestProb>
+			<MinNumReligions>2</MinNumReligions>
 		</Row>
 	</Buildings>
 

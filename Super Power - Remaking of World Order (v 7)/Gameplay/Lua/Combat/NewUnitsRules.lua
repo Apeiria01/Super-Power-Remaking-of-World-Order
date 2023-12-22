@@ -28,8 +28,8 @@ local CitadelID = GameInfo.UnitPromotions["PROMOTION_CITADEL_DEFENSE"].ID
 function NewUnitCreationRules(playerID)
 
 	local player = Players[playerID]
-	if player == nil 
-	or not player:IsMajorCiv()
+	if player == nil or not player:IsAlive()
+	or player:IsMinorCiv()
 	then
 		return
 	end
@@ -42,7 +42,6 @@ function NewUnitCreationRules(playerID)
 		player:SetEmbarkedGraphicOverride("ART_DEF_UNIT_TRANSPORT");
 	end
 
-	-- Troops count - Total
 	local CapCity = player:GetCapitalCity();
 
 	-------------Units Processing!
@@ -181,24 +180,6 @@ function NewUnitCreationRules(playerID)
 					and not unit:IsHasPromotion(ForeignLandsID) and unit:IsHasPromotion(MilitiaID)
 				then
 					unit:SetHasPromotion(ForeignLandsID, true);
-				end
-				-- Establish Inquisition for AI
-			elseif ((unit:GetSpreadsLeft() > 0 and unit:GetSpreadsLeft() >= GameInfo.Units[unit:GetUnitType()].ReligionSpreads) or GameInfo.Units[unit:GetUnitType()].ProhibitsSpread) and not GameInfo.Units[unit:GetUnitType()].FoundReligion
-				and unit:GetPlot() and unit:GetOwner() == unit:GetPlot():GetOwner() and (unit:GetPlot():IsCity() or unit:GetPlot():GetWorkingCity() ~= nil)
-			then
-				local city = unit:GetPlot():GetPlotCity() or unit:GetPlot():GetWorkingCity();
-				if city and city:GetReligiousMajority() == unit:GetReligion() and city:IsCanPurchase(false, false, -1, GameInfoTypes["BUILDING_INQUISITION"], -1, YieldTypes.YIELD_FAITH) then
-					local numReligion = 0;
-					for religion in GameInfo.Religions("Type <> 'RELIGION_PANTHEON'") do
-						if city:GetNumFollowers(religion.ID) > 0 then
-							numReligion = numReligion + 1;
-						end
-						if numReligion > 1 then
-							city:SetNumRealBuilding(GameInfoTypes["BUILDING_INQUISITION"], 1);
-							unit:Kill();
-							break;
-						end
-					end
 				end
 			end
 			-- MOD End   by CaptainCWB
