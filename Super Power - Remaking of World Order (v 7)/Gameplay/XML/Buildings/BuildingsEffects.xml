@@ -1662,7 +1662,7 @@
 		<Row>
 			<BuildingType>BUILDING_BASILICA_CISTERN</BuildingType>
 			<YieldType>YIELD_FOOD</YieldType>
-			<Yield>4</Yield>
+			<Yield>2</Yield>
 		</Row>
 
 		<Row>
@@ -6660,7 +6660,11 @@
 	
 
 
-	
+		<Row>
+			<BuildingType>BUILDING_CISTERN</BuildingType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>40</Flavor>
+		</Row>
 		<Row>
 			<BuildingType>BUILDING_BASILICA_CISTERN</BuildingType>
 			<FlavorType>FLAVOR_GROWTH</FlavorType>
@@ -6668,7 +6672,7 @@
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_BASILICA_CISTERN</BuildingType>
-			<FlavorType>FLAVOR_RELIGION</FlavorType>
+			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
 			<Flavor>60</Flavor>
 		</Row>
 		<Row>

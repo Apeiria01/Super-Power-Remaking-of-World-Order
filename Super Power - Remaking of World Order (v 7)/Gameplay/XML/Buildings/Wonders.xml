@@ -2032,7 +2032,7 @@
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
 			<ConquestProb>100</ConquestProb>
-			<IconAtlas>SP8_EXTRA_ATLAS</IconAtlas>
+			<IconAtlas>SP10_EXTRA_ATLAS</IconAtlas>
 			<PortraitIndex>11</PortraitIndex>
 			<WonderSplashImage>WonderRuhrIndustrialBase.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,T</WonderSplashAnchor>

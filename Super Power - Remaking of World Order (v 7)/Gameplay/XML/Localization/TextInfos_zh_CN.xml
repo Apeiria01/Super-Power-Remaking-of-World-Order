@@ -146,6 +146,21 @@
 		<Replace Tag="TXT_KEY_BUILDING_WINDMILL">
 			<Text>[ICON_FOOD]风车</Text>
 		</Replace>
+		<Row Tag="TXT_KEY_BUILDING_CISTERN_SP">
+			<Text>[ICON_FOOD]蓄水池</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_CISTERN_SP_HELP">
+			<Text>
+				[ICON_BULLET]为与城市相邻的所有单元格提供淡水。
+				[NEWLINE][ICON_BULLET]城市增加新的[ICON_CITIZEN]市民后保留10%[ICON_FOOD]食物储备以加速成长。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_CISTERN_SP_TEXT">
+			<Text>
+				蓄水池是用人工材料修建、具有防渗作用的蓄水设施。根据其地形和土质条件可以修建在地上或地下，即分为开敝式和封闭式两大类，按形状特点又可分为圆形和矩形两种，因建筑材料不同可分为:砖池、浆砌石池、混凝土池等。蓄水池布置原则和水窖基本相同。
+				[NEWLINE]古罗马蓄水池的遗迹是罗马建造工程中令人印象深刻的例子。La Malga蓄水池由罗马人于公元2世纪初建造，用于将来自Zaghouan山的水储存在132公里长的渡槽中。原来的24个蓄水池现在只剩下15个，每个长95m，宽12.5m，高11.50m。
+			</Text>
+		</Row>
 		<Replace Tag="TXT_KEY_BUILDING_AQUEDUCT">
 			<Text>[ICON_FOOD]引水渠</Text>
 		</Replace>
@@ -3084,7 +3099,7 @@
 		<!--************************Citysize-required Buildings Texts*********************-->
 
 		<Replace Tag="TXT_KEY_BUILDING_AQUEDUCT_HELP">
-			<Text>城市增加新的[ICON_CITIZEN]市民后保留40%[ICON_FOOD]食物储备以加速成长。[NEWLINE][NEWLINE]只能在小型城市（6人口）建造，中型城市需要有引水渠或自来水系统才能继续增长人口。[NEWLINE][NEWLINE]每5[ICON_CITIZEN]人口+1[ICON_GOLD]维护费。[NEWLINE][NEWLINE]研发城市化科技后，该建筑[COLOR_NEGATIVE_TEXT]过期[ENDCOLOR]（不再提供产出且不能建造）。[NEWLINE][NEWLINE]研发互联网科技后+2[ICON_TOURISM]魅力产出。</Text>
+			<Text>城市增加新的[ICON_CITIZEN]市民后保留30%[ICON_FOOD]食物储备以加速成长。[NEWLINE][NEWLINE]只能在小型城市（6人口）建造，中型城市需要有引水渠或自来水系统才能继续增长人口。[NEWLINE][NEWLINE]每5[ICON_CITIZEN]人口+1[ICON_GOLD]维护费。[NEWLINE][NEWLINE]研发城市化科技后，该建筑[COLOR_NEGATIVE_TEXT]过期[ENDCOLOR]（不再提供产出且不能建造）。[NEWLINE][NEWLINE]研发互联网科技后+2[ICON_TOURISM]魅力产出。</Text>
 		</Replace>
 
 		<!--<Row Tag="TXT_KEY_BUILDING_CHINESE_SHUILIQU">
@@ -3108,13 +3123,10 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_BASILICA_CISTERN_HELP</Tag>
 			<Text>
-				+4[ICON_FOOD]食物。+2[ICON_HAPPINESS_1]本地快乐。[NEWLINE]
-				城市增加新的[ICON_CITIZEN]市民后保留40%[ICON_FOOD]食物储备以加速成长。[NEWLINE][NEWLINE]只能在小型城市（6人口）建造，中型城市需要有引水渠或自来水系统才能继续增长人口。[NEWLINE][NEWLINE]每5[ICON_CITIZEN]人口+1[ICON_GOLD]维护费。
+				[ICON_BULLET]+2[ICON_FOOD]食物。+2[ICON_HAPPINESS_1]本地快乐。
+				[NEWLINE][ICON_BULLET]为与城市相邻的所有单元格提供淡水。
+				[NEWLINE][ICON_BULLET]城市增加新的[ICON_CITIZEN]市民后保留20%[ICON_FOOD]食物储备以加速成长。
 			</Text>
-		</Row>
-		<Row>
-			<Tag>TXT_KEY_BUILDING_BASILICA_CISTERN_STRATEGY</Tag>
-			<Text>地下水宫殿是拜占庭的特殊建筑，替代引水渠。引水渠可使城市人口增长所需[ICON_FOOD]食物减少40%。同时，它还可以增加城市[ICON_HAPPINESS_1]快乐。如果希望城市不断成长请及时建造地下水宫殿。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_BUILDING_TAP_WATER_SUPPLY">
