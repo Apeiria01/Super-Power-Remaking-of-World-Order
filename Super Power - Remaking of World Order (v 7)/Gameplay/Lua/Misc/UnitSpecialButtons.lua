@@ -1189,7 +1189,9 @@ EstablishCorpsButton = {
         end
     end
 };
-LuaEvents.UnitPanelActionAddin(EstablishCorpsButton);
+if PreGame.GetGameOption("GAMEOPTION_SP_CORPS_MODE_DISABLE") == 0 then
+    LuaEvents.UnitPanelActionAddin(EstablishCorpsButton);
+end
 
 ----------remove Debuff
 MoralBoostButton = {
