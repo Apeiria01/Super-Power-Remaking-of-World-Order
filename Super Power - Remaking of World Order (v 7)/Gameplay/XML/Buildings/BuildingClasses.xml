@@ -53,6 +53,12 @@
 				<DefaultBuilding>BUILDING_WINDMILL</DefaultBuilding>
 				<Description>TXT_KEY_BUILDING_WINDMILL</Description>
 			</Row>
+
+			<Row>
+				<Type>BUILDINGCLASS_CISTERN</Type>
+				<DefaultBuilding>BUILDING_CISTERN</DefaultBuilding>
+				<Description>TXT_KEY_BUILDING_CISTERN</Description>
+			</Row>
 		
 			<Row>
 				<Type>BUILDINGCLASS_MINT</Type>

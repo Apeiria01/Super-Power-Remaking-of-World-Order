@@ -389,7 +389,7 @@
 
 		<Row>
 			<CivilizationType>CIVILIZATION_BYZANTIUM</CivilizationType>
-			<BuildingClassType>BUILDINGCLASS_AQUEDUCT</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_CISTERN</BuildingClassType>
 			<BuildingType>BUILDING_BASILICA_CISTERN</BuildingType>
 		</Row>
 		<Row>

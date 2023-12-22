@@ -404,7 +404,7 @@
 		<Row>
 			<Type>BUILDING_AQUEDUCT</Type>
 			<BuildingClass>BUILDINGCLASS_AQUEDUCT</BuildingClass>
-			<Cost>80</Cost>
+			<Cost>60</Cost>
 			<GoldMaintenance>3</GoldMaintenance>
 			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
 			<Help>TXT_KEY_BUILDING_AQUEDUCT_HELP</Help>
@@ -412,7 +412,7 @@
 			<Civilopedia>TXT_KEY_CIV5_BUILDINGS_AQUEDUCT_TEXT</Civilopedia>
 			<Strategy>TXT_KEY_SP_PUBLIC_HEALTH_BUILDINGS_STRATEGY</Strategy>
 			<ArtDefineTag>ART_DEF_BUILDING_HOSPITAL</ArtDefineTag>
-			<FoodKept>40</FoodKept>
+			<FoodKept>30</FoodKept>
 			<MinAreaSize>-1</MinAreaSize>
 			<NeverCapture>true</NeverCapture>
 			<HurryCostModifier>50</HurryCostModifier>
@@ -421,26 +421,6 @@
 			<ObsoleteTech>TECH_URBANLIZATION</ObsoleteTech>
 			<EnhancedYieldTech>TECH_INTERNET</EnhancedYieldTech>
 			<TechEnhancedTourism>2</TechEnhancedTourism>
-			<EnableCityScaleGrowth>CITYSCALE_MEDIUM</EnableCityScaleGrowth>
-		</Row>
-		<Row>
-			<Type>BUILDING_BASILICA_CISTERN</Type>
-			<BuildingClass>BUILDINGCLASS_AQUEDUCT</BuildingClass>
-			<Cost>80</Cost>
-			<GoldMaintenance>3</GoldMaintenance>
-			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
-			<Help>TXT_KEY_BUILDING_BASILICA_CISTERN_HELP</Help>
-			<Description>TXT_KEY_BUILDING_BASILICA_CISTERN</Description>
-			<Civilopedia>TXT_KEY_CIV5_BUILDINGS_BASILICA_CISTERN_TEXT</Civilopedia>
-			<Strategy>TXT_KEY_SP_PUBLIC_HEALTH_BUILDINGS_STRATEGY</Strategy>
-			<MinAreaSize>-1</MinAreaSize>
-			<Happiness>2</Happiness>
-			<NeverCapture>true</NeverCapture>
-			<FoodKept>40</FoodKept>
-			<!--<ReligiousPressureModifier>50</ReligiousPressureModifier>-->
-			<HurryCostModifier>50</HurryCostModifier>
-			<IconAtlas>EXPANSION2_BUILDING_ATLAS</IconAtlas>
-			<PortraitIndex>11</PortraitIndex>
 			<EnableCityScaleGrowth>CITYSCALE_MEDIUM</EnableCityScaleGrowth>
 		</Row>
 		
@@ -1559,10 +1539,6 @@
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_SMALL</BuildingClassType>
 		</Row>-->
 		<Row>
-			<BuildingType>BUILDING_BASILICA_CISTERN</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_SMALL</BuildingClassType>
-		</Row>
-		<Row>
 			<BuildingType>BUILDING_TAP_WATER_SUPPLY</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_SMALL</BuildingClassType>
 		</Row>
@@ -2222,11 +2198,6 @@
 		
 		<Row>
 			<BuildingType>BUILDING_AQUEDUCT</BuildingType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>-20</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_BASILICA_CISTERN</BuildingType>
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>-20</Yield>
 		</Row>

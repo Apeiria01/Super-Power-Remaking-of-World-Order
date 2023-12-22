@@ -2396,6 +2396,22 @@
 			<Text>[ICON_FOOD] Windmill</Text>
 		</Replace>
 
+		<Row Tag="TXT_KEY_BUILDING_CISTERN_SP">
+			<Text>[ICON_FOOD] Cistern</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_CISTERN_SP_HELP">
+			<Text>
+				[ICON_BULLET]Provide fresh water to all Plots adjacent to the city. 
+				[NEWLINE][ICON_BULLET]10% of [ICON_FOOD] Food is carried over after a new [ICON_CITIZEN] Citizen is born.
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_CISTERN_SP_TEXT">
+			<Text>
+				A Cistern is a water storage facility built with artificial materials and has the function of preventing seepage. According to the terrain and soil conditions it can be built on the ground or underground and divided into open and closed two categories, according to the shape characteristics it can be divided into circular and rectangular two, from different building materials it can be also divided into: brick pool, masonry pool, concrete pool, etc. The arrangement principle of the reservoir is basically the same as that of the water cellar.
+				[NEWLINE] The remains of ancient Roman Cisterns are an impressive example of Roman construction. The La Malga reservoir was built by the Romans in the early 2nd century AD to store water from the Zaghouan mountains in a 132-kilometre-long aquift. Of the original 24 reservoirs, only 15 remain, each measuring 95m long, 12.5m wide and 11.50m high.
+			</Text>
+		</Row>
+
 		<Replace Tag="TXT_KEY_BUILDING_AQUEDUCT">
 			<Text>[ICON_CITIZEN] Aqueduct</Text>
 		</Replace>
@@ -5879,7 +5895,7 @@
 		
 	<!--************************Citysize-required Buildings Texts*********************-->
 		<Replace Tag="TXT_KEY_BUILDING_AQUEDUCT_HELP">
-			<Text>40% of [ICON_FOOD] Food is carried over after a new [ICON_CITIZEN] Citizen is born.[NEWLINE][NEWLINE]Must be built in Small Cities.
+			<Text>30% of [ICON_FOOD] Food is carried over after a new [ICON_CITIZEN] Citizen is born.[NEWLINE][NEWLINE]Must be built in Small Cities.
 			[NEWLINE][NEWLINE]Pay extra 1 [ICON_GOLD] Gold for every 5 [ICON_CITIZEN] Citizen.
 			[NEWLINE][NEWLINE]Upon discovering Urbanization, this kind of building becomes [COLOR_NEGATIVE_TEXT]obsolete[ENDCOLOR] (it is no longer allowed to build and its bonuses are lost). 
 			[NEWLINE][NEWLINE]+2 [ICON_TOURISM] Tourism after discovering Internet.</Text>
@@ -5908,13 +5924,11 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_BASILICA_CISTERN_HELP</Tag>
 			<Text>
-				+4[ICON_FOOD] food and +2 [ICON_HAPPINESS_1] local happiness. 40% of [ICON_FOOD] Food is carried over after a new [ICON_CITIZEN] Citizen is born.
-				[NEWLINE][NEWLINE]Can only be built in Small Cities.
-				[NEWLINE][NEWLINE][COLOR_YELLOW]Public Health and Sanitary Service Buildings[ENDCOLOR] for Large Cities to continue its [ICON_CITIZEN] Population Growth.
-				[NEWLINE][NEWLINE]Pay extra 1 [ICON_GOLD] Gold for every 5 [ICON_CITIZEN] Citizen.
+				[ICON_BULLET]+2[ICON_FOOD] food and +2 [ICON_HAPPINESS_1] local happiness.
+				[NEWLINE][ICON_BULLET]Provide fresh water to all Plots adjacent to the city.
+				[NEWLINE][ICON_BULLET]20% of [ICON_FOOD] Food is carried over after a new [ICON_CITIZEN] Citizen is born.
 			</Text>
 		</Row>
-
 
 		<Row Tag="TXT_KEY_BUILDING_TAP_WATER_SUPPLY">
 			<Text>[ICON_CITIZEN] Tap Water System</Text>
