@@ -7679,7 +7679,7 @@
 			<Text>燧明天火</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_DANCE_AURORA">
-			<Text>城市+1[ICON_PRODUCTION]產能、+1[ICON_PEACE]信仰、+1[ICON_GREAT_PEOPLE]大工程師點數</Text>
+			<Text>城市+1[ICON_PRODUCTION]產能、+1[ICON_PEACE]信仰、+2[ICON_GREAT_PEOPLE]大工程師點數</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_ANCESTOR_WORSHIP">
 			<Text>神祠+1[ICON_PEACE]信仰、+1[ICON_CULTURE]文化，建造奇觀+10%[ICON_PRODUCTION]產能</Text>
@@ -7691,7 +7691,7 @@
 			<Text>荒漠+1[ICON_PEACE]信仰，綠洲額外+1[ICON_CULTURE]文化、+1[ICON_PEACE]信仰</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GOD_KING">
-			<Text>宮殿+3[ICON_PEACE]信仰、+1[ICON_FOOD]食物、[ICON_PRODUCTION]產能，[ICON_CITYBANNER_CITY_LV1]一級城市+1[ICON_FOOD]食物、[ICON_PRODUCTION]產能、[ICON_PEACE]信仰</Text>
+			<Text>宮殿+2[ICON_PEACE]信仰、+1[ICON_FOOD]食物、[ICON_PRODUCTION]產能，[ICON_CITYBANNER_CITY_LV1]一級城市+1[ICON_FOOD]食物、[ICON_PRODUCTION]產能、[ICON_PEACE]信仰</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GODDESS_HUNT">
 			<Text>獵場+1[ICON_FOOD]食物、+1[ICON_PEACE]信仰，[ICON_RES_BISON]野牛、[ICON_RES_DEER]野鹿+1[ICON_CULTURE]文化</Text>
@@ -7751,10 +7751,10 @@
 			<Text>商賈信使</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_GOD_OF_COMMERCE">
-			<Text>[ICON_RES_IVORY]象牙、[ICON_RES_TRUFFLES]松露、[ICON_RES_FUR]毛皮+3[ICON_GOLD]金錢、+3[ICON_GOLDEN_AGE]黃金時代點數</Text>
+			<Text>[ICON_RES_IVORY]象牙、[ICON_RES_TRUFFLES]松露、[ICON_RES_FUR]毛皮+3[ICON_GOLD]金錢、+5[ICON_GOLDEN_AGE]黃金時代點數</Text>
 		</Row>
 		<Replace Tag="TXT_KEY_BELIEF_GURUSHIP">
-			<Text>城市有專業人員時+2[ICON_PEACE]信仰，+1[ICON_CULTURE]文化、[ICON_PRODUCTION]產能、[ICON_RESEARCH]科研</Text>
+			<Text>城市有專業人員時+2[ICON_PEACE]信仰、[ICON_CULTURE]文化，+1[ICON_PRODUCTION]產能、[ICON_RESEARCH]科研</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_PILGRIMAGE">
 			<Text>其他文明每個信仰該宗教的城市為此宗教+4[ICON_PEACE]信仰</Text>
