@@ -8719,7 +8719,7 @@
 			<Text>Prometheus</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_DANCE_AURORA">
-			<Text>+1 [ICON_PRODUCTION] Produciton, +1 [ICON_PEACE] Faith and +1 [ICON_GREAT_PEOPLE] Great Engineer Points in cities</Text>
+			<Text>+1 [ICON_PRODUCTION] Produciton, +1 [ICON_PEACE] Faith and +2 [ICON_GREAT_PEOPLE] Great Engineer Points in cities</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_DESERT_FOLKLORE">
 			<Text>+1 [ICON_PEACE] Faith from Desert tiles, +1 [ICON_CULTURE] Culture and +1 [ICON_PEACE] Faith from Oasis</Text>
@@ -8767,7 +8767,7 @@
 			<Text>+1 [ICON_FOOD] Food and +1 [ICON_PEACE] Faith from Camps, +1 [ICON_CULTURE] Culture from [ICON_RES_BISON] and [ICON_RES_DEER]</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GURUSHIP">
-			<Text>+2 [ICON_PEACE] Faith, +1 [ICON_CULTURE] Culture, +1 [ICON_PRODUCTION] Production and +1 [ICON_RESEARCH] Science if city has a Specialist</Text>
+			<Text>+2 [ICON_PEACE] Faith, +2 [ICON_CULTURE] Culture, +1 [ICON_PRODUCTION] Production and +1 [ICON_RESEARCH] Science if city has a Specialist</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_SETTLEMENTS_SHORT">
 			<Text>Land Mania</Text>
@@ -8850,7 +8850,7 @@
 			<Text>+2 [ICON_PEACE] Faith and +2 [ICON_CULTURE] Culture for every Gem and Pearl</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GOD_KING">
-			<Text>Palace provides +3 [ICON_PEACE] Faith, +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production, +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production and +1 [ICON_PEACE] Faith from each [ICON_CITYBANNER_CITY_LV1] City Hall [COLOR_NEGATIVE_TEXT](Lv1)[ENDCOLOR]</Text>
+			<Text>Palace provides +2 [ICON_PEACE] Faith, +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production, +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production and +1 [ICON_PEACE] Faith from each [ICON_CITYBANNER_CITY_LV1] City Hall [COLOR_NEGATIVE_TEXT](Lv1)[ENDCOLOR]</Text>
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_BELIEF_PAPAL_PRIMACY">
@@ -8969,7 +8969,7 @@
 			<Text>God of Commerce</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_GOD_OF_COMMERCE">
-			<Text>+3 [ICON_GOLD] Gold, +3 [ICON_GOLDEN_AGE] Golden Age Point from [ICON_RES_IVORY] Ivory, [ICON_RES_TRUFFLES] Truffles and [ICON_RES_FUR] Fur.</Text>
+			<Text>+3 [ICON_GOLD] Gold, +5 [ICON_GOLDEN_AGE] Golden Age Point from [ICON_RES_IVORY] Ivory, [ICON_RES_TRUFFLES] Truffles and [ICON_RES_FUR] Fur.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_RIVER_CRAFTSMAN_SHORT">
 			<Text>Sudoku</Text>
