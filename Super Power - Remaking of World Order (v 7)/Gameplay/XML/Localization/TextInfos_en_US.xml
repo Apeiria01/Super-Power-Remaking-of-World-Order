@@ -2824,7 +2824,7 @@
 			<Text>
 				[ICON_BULLET]+1[ICON_HAPPINESS_1]Happiness.
 				[NEWLINE][ICON_BULLET]+1 [ICON_PRODUCTION] Production from each worked [COLOR_POSITIVE_TEXT]Forest[ENDCOLOR] Tile and +1 [ICON_FOOD] Food from each worked [COLOR_POSITIVE_TEXT]Jungle[ENDCOLOR] Tile in this city.
-				[NEWLINE][ICON_BULLET]City gain +2% [ICON_PRODUCTION] Production output from each worked Lumber Mill.
+				[NEWLINE][ICON_BULLET]City gain +1% [ICON_PRODUCTION] Production output from each worked Forest or Jungle.
 			</Text>
 		</Replace>
 
