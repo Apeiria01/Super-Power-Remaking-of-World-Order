@@ -14735,6 +14735,19 @@
 			<Text>[ICON_BULLET]+50% [ICON_STRENGTH] Combat Strength when performing an [COLOR_POSITIVE_TEXT]Air Sweep[ENDCOLOR]. [NEWLINE][ICON_BULLET]+1 [COLOR_POSITIVE_TEXT]Air Sweep[ENDCOLOR] chance per turn.</Text>
 		</Replace>
 
+		<Replace Tag="TXT_KEY_PROMOTION_AIRRECON_1">
+			<Text>Air Recon I</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_AIRRECON_1_HELP">
+			<Text>+1 [ICON_MOVES] Movement, +1 Reveal Range when performing an [COLOR_POSITIVE_TEXT]Air Sweep[ENDCOLOR].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_AIRRECON_2">
+			<Text>Air Recon II</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_AIRRECON_2_HELP">
+			<Text>+1 [ICON_MOVES] Movement, +1 Reveal Range when performing an [COLOR_POSITIVE_TEXT]Air Sweep[ENDCOLOR].</Text>
+		</Replace>
+
 		
 		
 		<Row Tag="TXT_KEY_PROMOTION_AIR_ATTACK">

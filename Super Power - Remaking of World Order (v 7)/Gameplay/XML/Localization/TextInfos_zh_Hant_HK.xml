@@ -12619,6 +12619,19 @@
 			<Text>+50%[ICON_STRENGTH]戰鬥力（進行[COLOR_POSITIVE_TEXT]空中游獵[ENDCOLOR]時）。[NEWLINE]每回合+1[COLOR_POSITIVE_TEXT]遊獵次數[ENDCOLOR]。</Text>
 		</Replace>
 
+		<Replace Tag="TXT_KEY_PROMOTION_AIRRECON_1">
+			<Text>偵察一級</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_AIRRECON_1_HELP">
+			<Text>+1[ICON_MOVES]移動力，進行[COLOR_POSITIVE_TEXT]空中游獵[ENDCOLOR]時揭示視野範圍+1。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_AIRRECON_2">
+			<Text>偵察二級</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_AIRRECON_2_HELP">
+			<Text>+1[ICON_MOVES]移動力，進行[COLOR_POSITIVE_TEXT]空中游獵[ENDCOLOR]時揭示視野範圍+1。</Text>
+		</Replace>
+
 		<Row Tag="TXT_KEY_PROMOTION_AIR_ATTACK">
 			<Text>攻擊機</Text>
 		</Row>

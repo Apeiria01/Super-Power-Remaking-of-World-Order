@@ -12779,6 +12779,19 @@
 			<Text>+50%[ICON_STRENGTH]战斗力（进行[COLOR_POSITIVE_TEXT]空中游猎[ENDCOLOR]时）。[NEWLINE]每回合+1[COLOR_POSITIVE_TEXT]游猎次数[ENDCOLOR]。</Text>
 		</Replace>
 
+		<Replace Tag="TXT_KEY_PROMOTION_AIRRECON_1">
+			<Text>侦察一级</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_AIRRECON_1_HELP">
+			<Text>+1[ICON_MOVES]移动力，进行[COLOR_POSITIVE_TEXT]空中游猎[ENDCOLOR]时揭示视野范围+1。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_AIRRECON_2">
+			<Text>侦察二级</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_AIRRECON_2_HELP">
+			<Text>+1[ICON_MOVES]移动力，进行[COLOR_POSITIVE_TEXT]空中游猎[ENDCOLOR]时揭示视野范围+1。</Text>
+		</Replace>
+
 		<Row Tag="TXT_KEY_PROMOTION_AIR_ATTACK">
 			<Text>攻击机</Text>
 		</Row>
