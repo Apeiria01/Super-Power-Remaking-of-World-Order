@@ -4033,6 +4033,36 @@
 			<PediaType>PEDIA_AIR</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_DOGFIGHTING_3</PediaEntry>
 		</Row>
+
+		<Row>
+			<Type>PROMOTION_AIRRECON_1</Type>
+			<Description>TXT_KEY_PROMOTION_AIRRECON_1</Description>
+			<Help>TXT_KEY_PROMOTION_AIRRECON_1_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<OrderPriority>2</OrderPriority>
+			<PromotionPrereqOr1>PROMOTION_ANTI_AIR_II</PromotionPrereqOr1>
+			<PortraitIndex>39</PortraitIndex>
+			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_AIR</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_AIRRECON_1</PediaEntry>
+			<MovesChange>1</MovesChange>
+			<GetGroundAttackRange>1</GetGroundAttackRange>
+		</Row>
+		<Row>
+			<Type>PROMOTION_AIRRECON_2</Type>
+			<Description>TXT_KEY_PROMOTION_AIRRECON_2</Description>
+			<Help>TXT_KEY_PROMOTION_AIRRECON_2_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereqOr1>PROMOTION_AIRRECON_1</PromotionPrereqOr1>
+			<OrderPriority>2</OrderPriority>
+			<PortraitIndex>40</PortraitIndex>
+			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_AIR</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_DOGFIGHTING_2</PediaEntry>
+			<MovesChange>1</MovesChange>
+			<GetGroundAttackRange>1</GetGroundAttackRange>
+		</Row>
+		
 	</UnitPromotions>
 
 
@@ -4061,7 +4091,19 @@
 		<Row>
 			<PromotionType>PROMOTION_DOGFIGHTING_3</PromotionType>
 			<UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType>
-		</Row>	
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_AIRRECON_1</PromotionType>
+			<UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_AIRRECON_2</PromotionType>
+			<UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_AIR_RANGE</PromotionType>
+			<UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType>
+		</Row>
 	</UnitPromotions_UnitCombats>
 
 	
@@ -5139,7 +5181,7 @@
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_SHARED</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_AIR_RANGE</PediaEntry>
-			<CannotBeChosen>true</CannotBeChosen>
+			<PromotionPrereqOr1>PROMOTION_AIRRECON_2</PromotionPrereqOr1>
 		</Row>
 
 
