@@ -14541,13 +14541,20 @@
 			<Text>Passive Skills I - Sabotage Supply Lines</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SP_FORCE_1_HELP">
-			<Text>The Target Enemy Unit will suffer -20 Hp if Ends Turn outside of Friendly Territory, no matter how much damage dealt, the Target Enemy Unit won't recover until its HP is full.</Text>
+			<Text>
+				[ICON_BULLET]The Target Enemy Unit will suffer -20 Hp if Ends Turn outside of Friendly Territory, the Target Enemy Unit won't recover until its HP is full.
+				[NEWLINE][ICON_BULLET]+33% [ICON_STRENGTH] Combat Strength when fighting [COLOR_POSITIVE_TEXT]Outside[ENDCOLOR] of Friendly Territory.
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SP_FORCE_2">
 			<Text>Passive Skills II - Sabotage Cities</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SP_FORCE_2_HELP">
-			<Text>[ICON_BULLET]When attacking an enemy [COLOR_POSITIVE_TEXT]City[ENDCOLOR], no matter how much damage dealt, all units (including Aircrafts and Nukes) stationed in the target city lose all their [ICON_MOVES] Movement for the next turn. </Text>
+			<Text>
+				[ICON_BULLET]When attacking an enemy [COLOR_POSITIVE_TEXT]City[ENDCOLOR], all units (including Aircrafts and Nukes) stationed in the target city lose all their [ICON_MOVES] Movement for the next turn. 
+				[NEWLINE][ICON_BULLET]+50 Combat Strength VS [COLOR_POSITIVE_TEXT]Cities[ENDCOLOR].
+				[NEWLINE][ICON_BULLET]Restore all Moves and HitPoint after capturing a city.
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SP_FORCE_3">
 			<Text>Passive Skills III - Shock and Awe</Text>
@@ -14555,7 +14562,7 @@
 		<Row Tag="TXT_KEY_PROMOTION_SP_FORCE_3_HELP">
 			<Text>
 				[ICON_BULLET]May [COLOR_POSITIVE_TEXT]Capture[ENDCOLOR] the defeated Enemy Unit.
-				[NEWLINE][ICON_BULLET]+33% [ICON_STRENGTH] Combat Strength when fighting [COLOR_POSITIVE_TEXT]Outside[ENDCOLOR] of Friendly Territory.
+				[NEWLINE][ICON_BULLET]+20% for capture Ememy probability limit, +50% for capture Ememy probability (will not exceed the limit).
 			</Text>
 		</Row>
 

@@ -12624,19 +12624,29 @@
 			<Text>技能一级——破交</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SP_FORCE_1_HELP">
-			<Text>攻击目标单位如果处于友方地域之外，每回合会因为缺乏补给-20HP。</Text>
+			<Text>
+				[ICON_BULLET]攻击目标单位如果处于友方地域之外，每回合会因为缺乏补给-20HP。
+				[NEWLINE][ICON_BULLET]境外作战+33%[ICON_STRENGTH]战斗力
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SP_FORCE_2">
 			<Text>技能二级——袭扰</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SP_FORCE_2_HELP">
-			<Text>攻击敌方城市时使其陷入一回合混乱状态（可叠加）。[NEWLINE]同时会使城市内的全部守军（包括飞机和核武器）下回合开始时无法行动。[NEWLINE]攻城加50%战斗力</Text>
+			<Text>
+				[ICON_BULLET]攻击敌方城市时使其陷入一回合混乱状态（可叠加），城市内的全部守军（包括飞机和核武器）下回合开始时无法行动。
+				[NEWLINE][ICON_BULLET]攻城加50%战斗力。
+				[NEWLINE][ICON_BULLET]攻占城市后恢复所有移动力和生命值
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SP_FORCE_3">
 			<Text>技能三级——心战</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SP_FORCE_3_HELP">
-			<Text>一定几率俘虏击败的单位，境外作战+33%[ICON_STRENGTH]战斗力。</Text>
+			<Text>
+				[ICON_BULLET]一定几率俘虏击败的单位。
+				[NEWLINE][ICON_BULLET]俘虏单位概率上限+20%，俘虏单位概率+50%（不会超出上限）
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_SP_FORCE_I">

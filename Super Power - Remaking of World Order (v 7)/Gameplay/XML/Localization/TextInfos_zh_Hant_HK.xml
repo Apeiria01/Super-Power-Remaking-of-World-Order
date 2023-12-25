@@ -12466,19 +12466,29 @@
 			<Text>技能一級——破交</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SP_FORCE_1_HELP">
-			<Text>攻擊目標單位如果處於友方地域之外，每回合會因為缺乏補給-20HP。</Text>
+			<Text>
+				[ICON_BULLET]攻擊目標單位如果處於友方地域之外，每回合會因為缺乏補給-20HP。
+				[NEWLINE][ICON_BULLET]境外作戰+33%[ICON_STRENGTH]戰鬥力
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SP_FORCE_2">
 			<Text>技能二級——襲擾</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SP_FORCE_2_HELP">
-			<Text>攻擊敵方城市時使其陷入一回合混亂狀態（可疊加）。[NEWLINE]同時會使城市內的全部守軍（包括飛機和核武器）下回合開始時無法行動。[NEWLINE]攻城加50%战斗力</Text>
+			<Text>
+				[ICON_BULLET]攻擊敵方城市時使其陷入一回合混亂狀態（可疊加），城市內的全部守軍（包括飛機和核武器）下回合開始時無法行動。
+				[NEWLINE][ICON_BULLET]攻城加50%戰鬥力。
+				[NEWLINE][ICON_BULLET]攻占城市後恢復所有移動力和生命值
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SP_FORCE_3">
 			<Text>技能三級——心戰</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SP_FORCE_3_HELP">
-			<Text>一定幾率俘虜擊敗的單位，境外作戰+33%[ICON_STRENGTH]戰鬥力。</Text>
+			<Text>
+				[ICON_BULLET]一定幾率俘虜擊敗的單位。
+				[NEWLINE][ICON_BULLET]俘虜單位概率上限+20%，俘虜單位概率+50%（不會超出上限）
+			</Text>
 		</Row>
 		
 		<Row Tag="TXT_KEY_PROMOTION_SP_FORCE_I">
