@@ -343,10 +343,12 @@ function UpdateDisplay()
             	if( iOtherTeam == g_iTeam ) then
             	    -- team mate
             		local currentTech = pOtherPlayer:GetCurrentResearch();
-                    if( currentTech ~= -1 and 
-                        GameInfo.Technologies[currentTech] ~= nil and
-                        not Game.IsOption(GameOptionTypes.GAMEOPTION_NO_SCIENCE)) then
+                    if currentTech ~= -1 
+					and GameInfo.Technologies[currentTech] ~= nil 
+					and not Game.IsOption(GameOptionTypes.GAMEOPTION_NO_SCIENCE) 
+					then
                 	    statusString = "[ICON_RESEARCH] " .. Locale.ConvertTextKey( GameInfo.Technologies[currentTech].Description );
+						controlTable.DiploState:SetToolTipString(GetMoodInfo(iPlayerLoop));
                     end
                     
             	else
