@@ -13548,13 +13548,8 @@
 		
 		<Row Tag="TXT_KEY_UNIT_ENTERPRISE_HELP">
 			<Text>
-			The Enterprise can only been generated if you finish the Grey Ghost Project and then you declared or were declared war.
-			[NEWLINE]Everyturn after your War State Change as above, every aircraft carrier of yours have a chance to transfer to the Enterprise and keep all the promotions until one transfered successfully or your capital was occupied. 
-			[NEWLINE]Only one may ever been generated in the world. 
-			</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_ENTERPRISE_STRATEGY">
-			<Text>Not only a powerful 4-cargo carrier with extra promotions which supremes the Nuclear Carrier of next generation, but also a legendary carrier which buffs probably the aircrafts. She can also transfer as her sister carrier the Hornet(CV-8) to be available for Land-Based-Aircrafts.
+				Not only a powerful 4-cargo carrier with extra promotions which supremes the Nuclear Carrier of next generation, but also a legendary carrier which buffs probably the aircrafts. She can also transfer as her sister carrier the Hornet(CV-8) to be available for Land-Based-Aircrafts.
+				[NEWLINE][NEWLINE]Requires the Grey Ghost Project and only one can exist in the world.
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_ENTERPRISE_HEADING">

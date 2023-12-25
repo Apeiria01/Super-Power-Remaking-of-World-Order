@@ -2887,7 +2887,7 @@
 			<DefaultUnitAI>UNITAI_CARRIER_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ENTERPRISE</Description>
 			<Civilopedia>TXT_KEY_CIV5_UNIT_ENTERPRISE_TEXT</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ENTERPRISE_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_SP_UNITS_AIRCRAFT_CARRIERS_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_ENTERPRISE_HELP</Help>
 			<MilitarySupport>true</MilitarySupport>
 			<MilitaryProduction>true</MilitaryProduction>
@@ -2924,7 +2924,7 @@
 			<DefaultUnitAI>UNITAI_CARRIER_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_HORNET</Description>
 			<Civilopedia>TXT_KEY_UNIT_HORNET_TXT</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ENTERPRISE_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_SP_UNITS_AIRCRAFT_CARRIERS_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_ENTERPRISE_HELP</Help>
 			<MilitarySupport>true</MilitarySupport>
 			<MilitaryProduction>true</MilitaryProduction>
