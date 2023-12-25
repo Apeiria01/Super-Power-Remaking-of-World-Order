@@ -536,7 +536,7 @@
 			<Text>
 				[ICON_BULLET]+1[ICON_HAPPINESS_1]本地快乐。
 				[NEWLINE][ICON_BULLET]城市内所有的[COLOR_POSITIVE_TEXT]森林[ENDCOLOR]区块+1[ICON_PRODUCTION]产能、[COLOR_POSITIVE_TEXT]丛林[ENDCOLOR]区块+1[ICON_FOOD]食物。
-				[NEWLINE][ICON_BULLET]本城范围内的每一处有市民工作的锯木厂为城市+2%[ICON_PRODUCTION]产能产出。
+				[NEWLINE][ICON_BULLET]本城范围内的每一处有市民工作的森林或丛林为城市+1%[ICON_PRODUCTION]产能产出。
 			</Text>
 		</Replace>
 

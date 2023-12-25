@@ -3022,13 +3022,23 @@
 	</Building_FeatureYieldChanges>
 
 	<Building_ImprovementYieldModifiers>
+	</Building_ImprovementYieldModifiers>
+	<Building_FeatureYieldModifiers>
 		<Row>
 			<BuildingType>BUILDING_LONGHOUSE</BuildingType>
-			<ImprovementType>IMPROVEMENT_LUMBERMILL</ImprovementType>
+			<FeatureType>FEATURE_FOREST</FeatureType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>2</Yield>
+			<Yield>1</Yield>
 		</Row>
-	</Building_ImprovementYieldModifiers>
+		<Row>
+			<BuildingType>BUILDING_LONGHOUSE</BuildingType>
+			<FeatureType>FEATURE_JUNGLE</FeatureType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	</Building_FeatureYieldModifiers>
+	<Building_ResourceYieldModifiers>
+	</Building_ResourceYieldModifiers>
 	
 
 	<Building_TerrainYieldChanges>
