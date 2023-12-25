@@ -9740,7 +9740,6 @@
 			<Text>
 				[COLOR_UNIT_TEXT]作用：[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]核心
-				[NEWLINE][ICON_BULLET]破坏敌方力
 				[NEWLINE][ICON_BULLET]战线推进
 				[NEWLINE][ICON_BULLET]战略性武器
 				[NEWLINE][ICON_BULLET]威慑
@@ -11781,13 +11780,9 @@
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_ENTERPRISE_HELP">
 			<Text>
-				只有在完成灰色幽灵工程并在之后宣战或被宣战后随机产生。
-				[NEWLINE]战争状态如上改变后的每回合，完成计划者的每艘航母都有一定几率转为企业号，直到成功转化或者其首都被攻陷。
-				[NEWLINE]只能有一艘企业号出现过。
+				不仅具有超越次世代的核动力航母的晋升，还能作为传奇航母给空军一定概率的加成。必要时她也能转换为姐妹舰大黄蜂号以装载陆基飞机。
+				[NEWLINE][NEWLINE]需要灰色幽灵工程解锁，你只能建造一个。
 			</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_ENTERPRISE_STRATEGY">
-			<Text>不仅具有超越次世代的核动力航母的晋升，还能作为传奇航母给空军一定概率的加成。必要时她也能转换为姐妹舰大黄蜂号以装载陆基飞机。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_ENTERPRISE_HEADING">
 			<Text>[COLOR_YELLOW]企业号(CV-6)[ENDCOLOR]</Text>
