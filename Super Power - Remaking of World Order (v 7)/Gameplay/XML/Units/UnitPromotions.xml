@@ -1259,6 +1259,7 @@
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_SCOUTING</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_SP_FORCE_1</PediaEntry>
+			<OutsideFriendlyLandsModifier>33</OutsideFriendlyLandsModifier>
 		</Row>
 		<Row>
 			<Type>PROMOTION_SP_FORCE_2</Type>
@@ -1272,6 +1273,8 @@
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_SCOUTING</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_SP_FORCE_2</PediaEntry>
+			<MovePercentCaptureCity>100</MovePercentCaptureCity>
+			<HealPercentCaptureCity>100</HealPercentCaptureCity>
 		</Row>
 		<Row>
 			<Type>PROMOTION_SP_FORCE_3</Type>
@@ -1281,11 +1284,12 @@
 			<OrderPriority>8</OrderPriority>
 			<PromotionPrereqOr1>PROMOTION_SP_FORCE_2</PromotionPrereqOr1>
 			<CaptureDefeatedEnemy>true</CaptureDefeatedEnemy>
-			<OutsideFriendlyLandsModifier>33</OutsideFriendlyLandsModifier>
 			<PortraitIndex>18</PortraitIndex>
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_SCOUTING</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_SP_FORCE_3</PediaEntry>
+			<CaptureEmenyPercent>50</CaptureEmenyPercent>
+			<CaptureEmenyExtraMax>20</CaptureEmenyExtraMax>
 		</Row>
 
 		<Row>
