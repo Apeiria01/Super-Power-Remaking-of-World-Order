@@ -2500,12 +2500,12 @@
 		<Row>
 			<UnitType>UNIT_ARTILLERY</UnitType>
 			<FlavorType>FLAVOR_RANGED</FlavorType>
-			<Flavor>115</Flavor>
+			<Flavor>85</Flavor>
 		</Row>
 		<Row>
 			<UnitType>UNIT_ARTILLERY</UnitType>
 			<FlavorType>FLAVOR_OFFENSE</FlavorType>
-			<Flavor>165</Flavor>
+			<Flavor>115</Flavor>
 		</Row>
 		<Row>
 			<UnitType>UNIT_ARTILLERY</UnitType>
