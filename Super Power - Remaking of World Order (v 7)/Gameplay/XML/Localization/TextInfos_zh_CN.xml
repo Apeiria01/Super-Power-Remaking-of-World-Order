@@ -352,7 +352,14 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_FISH_FARM_HELP</Tag>
-			<Text>本城市+5%[ICON_FOOD]食物产出。[NEWLINE][NEWLINE]海滨和大洋区块+1[ICON_FOOD]食物。[NEWLINE][NEWLINE]允许在本国的商路之间输送[ICON_FOOD]食物。[NEWLINE][NEWLINE]城市必须沿海。[NEWLINE][NEWLINE]研发化肥之后[COLOR_NEGATIVE_TEXT]过期[ENDCOLOR]（不再提供产出且不能建造）。[NEWLINE][NEWLINE]研发大众传媒后+1[ICON_TOURISM]魅力。</Text>
+			<Text>
+				[ICON_BULLET]本城市+5%[ICON_FOOD]食物产出。
+				[NEWLINE][ICON_BULLET]渔船、捕捞船+1[ICON_FOOD]食物。
+				[NEWLINE][ICON_BULLET]允许在本国的商路之间输送[ICON_FOOD]食物。
+				[NEWLINE][ICON_BULLET]城市必须沿海。
+				[NEWLINE][ICON_BULLET]研发化肥之后[COLOR_NEGATIVE_TEXT]过期[ENDCOLOR]（不再提供产出且不能建造）。
+				[NEWLINE][ICON_BULLET]研发大众传媒后+1[ICON_TOURISM]魅力。
+			</Text>
 		</Row>
 
 		<Row>
@@ -422,10 +429,10 @@
 		</Row>
 
 		<Replace Tag="TXT_KEY_BUILDING_WATERMILL_HELP">
-			<Text>本城市+5%[ICON_FOOD]食物产出，每处已开发的湖泊区块+1[ICON_FOOD]食物。城市必须沿河或沿湖。[NEWLINE][NEWLINE]研发生物学之后[COLOR_NEGATIVE_TEXT]过期[ENDCOLOR]（不再提供产出且不能建造）。[NEWLINE][NEWLINE]研发大众传媒后+1[ICON_TOURISM]魅力。</Text>
+			<Text>本城市+5%[ICON_FOOD]食物产出。城市必须沿河。[NEWLINE][NEWLINE]研发工业化之后[COLOR_NEGATIVE_TEXT]过期[ENDCOLOR]（不再提供产出且不能建造）。[NEWLINE][NEWLINE]研发大众传媒后+1[ICON_TOURISM]魅力。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_WINDMILL_HELP">
-			<Text>本城市+15%[ICON_FOOD]食物产出，城市不能位于丘陵。[NEWLINE][NEWLINE]研发工业化之后[COLOR_NEGATIVE_TEXT]过期[ENDCOLOR]（不再提供产出且不能建造）。[NEWLINE][NEWLINE]研发大众传媒后+1[ICON_TOURISM]魅力。</Text>
+			<Text>本城市+15%[ICON_FOOD]食物产出。[NEWLINE][NEWLINE]研发工业化之后[COLOR_NEGATIVE_TEXT]过期[ENDCOLOR]（不再提供产出且不能建造）。[NEWLINE][NEWLINE]研发大众传媒后+1[ICON_TOURISM]魅力。</Text>
 		</Replace>
 
 		<Row>
@@ -440,7 +447,11 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_GRAIN_DEPOT_HELP</Tag>
-			<Text>本城市+10%[ICON_FOOD]食物产出。[NEWLINE][NEWLINE]本城所有海滨和大洋区块+1[ICON_FOOD]食物。已开发的每处[ICON_RES_WHEAT]小麦、[ICON_RES_BANANA]香蕉、[ICON_RES_DEER]野鹿、[ICON_RES_BISON]野牛、[ICON_RES_FISH]鱼群和[ICON_RES_CRAB]螃蟹资源+1[ICON_FOOD]食物。[NEWLINE][NEWLINE]允许在本国的商路之间输送[ICON_FOOD]食物。</Text>
+			<Text>
+				本城市+10%[ICON_FOOD]食物产出。
+				[NEWLINE][NEWLINE]本城所有海滨和大洋区块+1[ICON_FOOD]食物。已开发的每处[ICON_RES_WHEAT]小麦、[ICON_RES_BANANA]香蕉、[ICON_RES_DEER]野鹿、[ICON_RES_BISON]野牛、[ICON_RES_FISH]鱼群和[ICON_RES_CRAB]螃蟹资源+1[ICON_FOOD]食物。
+				[NEWLINE][NEWLINE]允许在本国的商路之间输送[ICON_FOOD]食物。
+			</Text>
 		</Row>
 
 		<Row>
@@ -3099,7 +3110,14 @@
 		<!--************************Citysize-required Buildings Texts*********************-->
 
 		<Replace Tag="TXT_KEY_BUILDING_AQUEDUCT_HELP">
-			<Text>城市增加新的[ICON_CITIZEN]市民后保留30%[ICON_FOOD]食物储备以加速成长。[NEWLINE][NEWLINE]只能在小型城市（6人口）建造，中型城市需要有引水渠或自来水系统才能继续增长人口。[NEWLINE][NEWLINE]每5[ICON_CITIZEN]人口+1[ICON_GOLD]维护费。[NEWLINE][NEWLINE]研发城市化科技后，该建筑[COLOR_NEGATIVE_TEXT]过期[ENDCOLOR]（不再提供产出且不能建造）。[NEWLINE][NEWLINE]研发互联网科技后+2[ICON_TOURISM]魅力产出。</Text>
+			<Text>
+				[ICON_BULLET]城市每处已开发的湖泊区块+1[ICON_FOOD]食物。
+				[NEWLINE][ICON_BULLET]城市增加新的[ICON_CITIZEN]市民后保留30%[ICON_FOOD]食物储备以加速成长。
+				[NEWLINE][ICON_BULLET]只能在小型城市（6人口）建造，中型城市需要有引水渠或自来水系统才能继续增长人口。
+				[NEWLINE][ICON_BULLET]每5[ICON_CITIZEN]人口+1[ICON_GOLD]维护费。
+				[NEWLINE][ICON_BULLET]研发城市化科技后，该建筑[COLOR_NEGATIVE_TEXT]过期[ENDCOLOR]（不再提供产出且不能建造）。
+				[NEWLINE][ICON_BULLET]研发互联网科技后+2[ICON_TOURISM]魅力产出。
+			</Text>
 		</Replace>
 
 		<!--<Row Tag="TXT_KEY_BUILDING_CHINESE_SHUILIQU">
@@ -3133,7 +3151,12 @@
 			<Text>[ICON_FOOD]自来水系统</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_TAP_WATER_SUPPLY_HELP">
-			<Text>城市增加新的[ICON_CITIZEN]市民后保留40%[ICON_FOOD]食物储备以加速成长。[NEWLINE][NEWLINE]只能在小型城市（6人口）建造，中型城市需要有引水渠或自来水系统才能继续增长人口。[NEWLINE][NEWLINE]每5[ICON_CITIZEN]人口+1[ICON_GOLD]维护费。</Text>
+			<Text>
+				[ICON_BULLET]城市每处已开发的湖泊区块+1[ICON_FOOD]食物。
+				[NEWLINE][ICON_BULLET]城市增加新的[ICON_CITIZEN]市民后保留40%[ICON_FOOD]食物储备以加速成长。
+				[NEWLINE][ICON_BULLET]只能在小型城市（6人口）建造，中型城市需要有引水渠或自来水系统才能继续增长人口。
+				[NEWLINE][ICON_BULLET]每5[ICON_CITIZEN]人口+1[ICON_GOLD]维护费。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_BUILDINGS_TAP_WATER_SUPPLY_TEXT">
 			<Text>自来水是指通过自来水处理厂净化、消毒后生产出来的符合相应标准的供人们生活、生产使用的水。生活用水主要通过水厂的取水泵站汲取江河湖泊及地下水，地表水，由自来水厂按照相关卫生标准，经过沉淀、消毒、过滤等工艺流程的处理，最后通过配水泵站输送到各个用户</Text>
@@ -13782,7 +13805,7 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_FLOATING_GARDENS_HELP">
 			<Text>
-				湖泊+3[ICON_FOOD]食物。
+				湖泊+2[ICON_FOOD]食物。
 				[NEWLINE]+2[ICON_FOOD]食物，+1[ICON_PRODUCTION]产能。
 				[NEWLINE]+10%[ICON_FOOD]粮食。
 				[NEWLINE]无地形限制。

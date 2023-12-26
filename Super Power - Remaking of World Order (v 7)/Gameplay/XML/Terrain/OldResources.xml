@@ -3,6 +3,12 @@
 <GameData>
 	<Resource_YieldChanges>
 		<Update>
+			<Where ResourceType="RESOURCE_FISH" YieldType="YIELD_FOOD"/>
+			<Set>
+				<Yield>0</Yield>
+			</Set>
+		</Update>
+		<Update>
 			<Where ResourceType="RESOURCE_CITRUS" YieldType="YIELD_FOOD"/>
 			<Set>
 				<Yield>2</Yield>

@@ -350,7 +350,14 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_FISH_FARM_HELP</Tag>
-			<Text>本城市+5%[ICON_FOOD]食物產出。[NEWLINE][NEWLINE]海濱和大洋區塊+1[ICON_FOOD]食物。[NEWLINE][NEWLINE]允許在本國的商路之間輸送[ICON_FOOD]食物。[NEWLINE][NEWLINE]城市必須沿海。[NEWLINE][NEWLINE]研發化肥之後[COLOR_NEGATIVE_TEXT]過期[ENDCOLOR]（不再提供產出且不能建造）。[NEWLINE][NEWLINE]研發大眾傳媒後+1[ICON_TOURISM]旅遊業績。</Text>
+			<Text>
+				[ICON_BULLET]本城市+5%[ICON_FOOD]食物產出。
+				[NEWLINE][ICON_BULLET]漁船、捕撈船+1[ICON_FOOD]食物。
+				[NEWLINE][ICON_BULLET]允許在本國的商路之間輸送[ICON_FOOD]食物。
+				[NEWLINE][ICON_BULLET]城市必須沿海。
+				[NEWLINE][ICON_BULLET]研發化肥之後[COLOR_NEGATIVE_TEXT]過期[ENDCOLOR]（不再提供產出且不能建造）。
+				[NEWLINE][ICON_BULLET]研發大眾傳媒後+1[ICON_TOURISM]旅遊業績。
+			</Text>
 		</Row>
 		
 		<Row>
@@ -413,10 +420,10 @@
 		</Row>
 		
 		<Replace Tag="TXT_KEY_BUILDING_WATERMILL_HELP">
-			<Text>本城市+5%[ICON_FOOD]食物產出，每處已開發的湖泊區塊+1[ICON_FOOD]食物。城市必須沿河或沿湖。[NEWLINE][NEWLINE]研發生物學之後[COLOR_NEGATIVE_TEXT]過期[ENDCOLOR]（不再提供產出且不能建造）。[NEWLINE][NEWLINE]研發大眾傳媒後+1[ICON_TOURISM]旅遊業績。</Text>
+			<Text>本城市+5%[ICON_FOOD]食物產出。城市必須沿河。[NEWLINE][NEWLINE]研發工業化之後[COLOR_NEGATIVE_TEXT]過期[ENDCOLOR]（不再提供產出且不能建造）。[NEWLINE][NEWLINE]研發大眾傳媒後+1[ICON_TOURISM]旅遊業績。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_WINDMILL_HELP">
-			<Text>本城市+15%[ICON_FOOD]食物產出，城市不能位於丘陵。[NEWLINE][NEWLINE]研發工業化之後[COLOR_NEGATIVE_TEXT]過期[ENDCOLOR]（不再提供產出且不能建造）。[NEWLINE][NEWLINE]研發大眾傳媒後+1[ICON_TOURISM]旅遊業績。</Text>
+			<Text>本城市+15%[ICON_FOOD]食物產出。[NEWLINE][NEWLINE]研發工業化之後[COLOR_NEGATIVE_TEXT]過期[ENDCOLOR]（不再提供產出且不能建造）。[NEWLINE][NEWLINE]研發大眾傳媒後+1[ICON_TOURISM]旅遊業績。</Text>
 		</Replace>
 		
 		<Row>
@@ -430,7 +437,11 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_GRAIN_DEPOT_HELP</Tag>
-			<Text>本城市+10%[ICON_FOOD]食物產出。[NEWLINE][NEWLINE]本城所有海濱和大洋區塊+1[ICON_FOOD]食物。已開發的每處[ICON_RES_WHEAT]小麥、[ICON_RES_BANANA]香蕉、[ICON_RES_DEER]野鹿、[ICON_RES_BISON]野牛、[ICON_RES_FISH]魚群和[ICON_RES_CRAB]螃蟹資源+1[ICON_FOOD]食物。[NEWLINE][NEWLINE]允許在本國的商路之間輸送[ICON_FOOD]食物。</Text>
+			<Text>
+				本城市+10%[ICON_FOOD]食物產出。
+				[NEWLINE][NEWLINE]本城所有海濱和大洋區塊+1[ICON_FOOD]食物。已開發的每處[ICON_RES_WHEAT]小麥、[ICON_RES_BANANA]香蕉、[ICON_RES_DEER]野鹿、[ICON_RES_BISON]野牛、[ICON_RES_FISH]魚群和[ICON_RES_CRAB]螃蟹資源+1[ICON_FOOD]食物。
+				[NEWLINE][NEWLINE]允許在本國的商路之間輸送[ICON_FOOD]食物。
+			</Text>
 		</Row>
 		
 		<Row>
@@ -3036,7 +3047,14 @@
 	<!--************************Citysize-required Buildings Texts*********************-->
 		
 		<Replace Tag="TXT_KEY_BUILDING_AQUEDUCT_HELP">
-			<Text>城市增加新的[ICON_CITIZEN]市民後保留30%[ICON_FOOD]食物儲備以加速成長。[NEWLINE][NEWLINE]只能在小型城市（6人口）建造，中型城市需要有引水渠或自來水系統才能繼續增長人口。[NEWLINE][NEWLINE]每5[ICON_CITIZEN]人口+1[ICON_GOLD]維護費。[NEWLINE][NEWLINE]研發城市化科技後，該建築[COLOR_NEGATIVE_TEXT]過期[ENDCOLOR]（不再提供產出且不能建造）。[NEWLINE][NEWLINE]研發互聯網科技後+2[ICON_TOURISM]旅遊業績產出。</Text>
+			<Text>
+				[ICON_BULLET]城市每處已開發的湖泊區塊+1[ICON_FOOD]食物。
+				[NEWLINE][ICON_BULLET]城市增加新的[ICON_CITIZEN]市民後保留30%[ICON_FOOD]食物儲備以加速成長。
+				[NEWLINE][ICON_BULLET]只能在小型城市（6人口）建造，中型城市需要有引水渠或自來水系統才能繼續增長人口。
+				[NEWLINE][ICON_BULLET]每5[ICON_CITIZEN]人口+1[ICON_GOLD]維護費。
+				[NEWLINE][ICON_BULLET]研發城市化科技後，該建築[COLOR_NEGATIVE_TEXT]過期[ENDCOLOR]（不再提供產出且不能建造）。
+				[NEWLINE][ICON_BULLET]研發互聯網科技後+2[ICON_TOURISM]旅遊業績產出。
+			</Text>
 		</Replace>
 		
 		<!--<Row Tag="TXT_KEY_BUILDING_CHINESE_SHUILIQU">
@@ -3070,7 +3088,12 @@
 			<Text>[ICON_FOOD]自來水系統</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_TAP_WATER_SUPPLY_HELP">
-			<Text>城市增加新的[ICON_CITIZEN]市民後保留40%[ICON_FOOD]食物儲備以加速成長。[NEWLINE][NEWLINE]只能在小型城市（6人口）建造，中型城市需要有引水渠或自來水系統才能繼續增長人口。[NEWLINE][NEWLINE]每5[ICON_CITIZEN]人口+1[ICON_GOLD]維護費。</Text>
+			<Text>
+				[ICON_BULLET]城市每處已開發的湖泊區塊+1[ICON_FOOD]食物。
+				[NEWLINE][ICON_BULLET]城市增加新的[ICON_CITIZEN]市民後保留40%[ICON_FOOD]食物儲備以加速成長。
+				[NEWLINE][ICON_BULLET]只能在小型城市（6人口）建造，中型城市需要有引水渠或自來水系統才能繼續增長人口。
+				[NEWLINE][ICON_BULLET]每5[ICON_CITIZEN]人口+1[ICON_GOLD]維護費。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_BUILDINGS_TAP_WATER_SUPPLY_TEXT">
 			<Text>自來水是指通過自來水處理廠淨化、消毒後生產出來的符合相應標準的供人們生活、生產使用的水。生活用水主要通過水廠的取水泵站汲取江河湖泊及地下水，地表水，由自來水廠按照相關衛生標準，經過沉澱、消毒、過濾等工藝流程的處理，最後通過配水泵站輸送到各個用戶</Text>
@@ -13608,10 +13631,12 @@
 			[NEWLINE][ICON_BULLET]劫掠不消耗[ICON_MOVES]移動力。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_FLOATING_GARDENS_HELP">
-			<Text>湖泊+3[ICON_FOOD]食物。
-			[NEWLINE]+2[ICON_FOOD]食物，+1[ICON_PRODUCTION]生產力。
-			[NEWLINE]+10%[ICON_FOOD]粮食。
-			[NEWLINE]無地形限制。</Text>
+			<Text>
+				湖泊+2[ICON_FOOD]食物。
+				[NEWLINE]+2[ICON_FOOD]食物，+1[ICON_PRODUCTION]生產力。
+				[NEWLINE]+10%[ICON_FOOD]粮食。
+				[NEWLINE]無地形限制。
+			</Text>
 		</Replace>
 		
 		<Row Tag="TXT_KEY_UNIT_ENTERPRISE">
