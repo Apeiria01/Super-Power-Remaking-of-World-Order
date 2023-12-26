@@ -7903,7 +7903,7 @@
 			<Text>城市有专业人员时+2[ICON_PEACE]信仰、[ICON_CULTURE]文化、+1[ICON_PRODUCTION]产能、[ICON_RESEARCH]科研</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_PILGRIMAGE">
-			<Text>其他文明每个信仰该宗教的城市为此宗教+4[ICON_PEACE]信仰</Text>
+			<Text>为圣城提供其他文明本宗教信徒数量20%的[ICON_PEACE]信仰，其他文明每个信仰该宗教的城市为此宗教+3[ICON_PEACE]信仰</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_HOLY_WARRIORS">
 			<Text>允许使用[ICON_PEACE]信仰购买[COLOR_POSITIVE_TEXT]圣殿骑士[ENDCOLOR]，该单位能够通过击杀单位获得信仰</Text>
@@ -8053,10 +8053,10 @@
 			<Text>普世宗教</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_FAITH_WITHOUT_BORDERS">
-			<Text>其他文明的城市中每3个信徒+1[ICON_PEACE]信仰</Text>
+			<Text>城市+2信仰[ICON_PEACE]，城市中每个其他宗教+1信仰[ICON_PEACE]</Text>
 		</Row>
 		<Replace Tag="TXT_KEY_BELIEF_WORLD_CHURCH">
-			<Text>其他文明的城市中每3个信徒+1[ICON_CULTURE]文化</Text>
+			<Text>为圣城提供其他文明本宗教信徒数量34%的[ICON_CULTURE]文化，其他文明每个信仰该宗教的城市为此宗教+3[ICON_CULTURE]文化</Text>
 		</Replace>
 		<Row Tag="TXT_KEY_BELIEF_MARSH_BELIEF_SHORT">
 			<Text>河童传说</Text>

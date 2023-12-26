@@ -8799,7 +8799,7 @@
 			<Text>+2 [ICON_CULTURE] Culture in cities, +50% faster border growth</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_PILGRIMAGE">
-			<Text>+4 [ICON_PEACE] Faith for each foreign city following this religion</Text>
+			<Text>+20% num of followers for this Religion in other civilizations [ICON_PEACE] Faith in HolyCity, +3 [ICON_PEACE] Faith for each foreign city following this religion</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_HOLY_WARRIORS">
 			<Text>Use [ICON_PEACE] Faith to purchase [COLOR_POSITIVE_TEXT]Knights Templar[ENDCOLOR], a unit who can gain [ICON_PEACE] Faith by killing enemy units</Text>
@@ -8969,11 +8969,11 @@
 			<Text>Faith Without Borders</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_FAITH_WITHOUT_BORDERS">
-			<Text>+1 [ICON_PEACE] Faith for every 3 followers of this religion in other civilizations</Text>
+			<Text>+2 [ICON_PEACE] Faith in Cities, +1 [ICON_PEACE] Faith from each other Religion in Cities</Text>
 		</Row>
 
 		<Replace Tag="TXT_KEY_BELIEF_WORLD_CHURCH">
-			<Text>+1 [ICON_CULTURE] Culture for every 3 followers of this religion in other civilizations</Text>
+			<Text>+20% num of followers for this Religion in other civilizations [ICON_CULTURE] Culture in HolyCity, +3 [ICON_CULTURE] Culture for each foreign city following this religion</Text>
 		</Replace>
 
 		<Row Tag="TXT_KEY_BELIEF_MARSH_BELIEF_SHORT">
