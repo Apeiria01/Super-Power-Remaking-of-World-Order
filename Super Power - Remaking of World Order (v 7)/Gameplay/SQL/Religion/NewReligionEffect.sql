@@ -203,13 +203,18 @@ SELECT 'BELIEF_ANCESTOR_WORSHIP','BUILDINGCLASS_SHRINE','YIELD_FAITH',1;
 --Founder
 --***********************************************************************************************--
 DELETE FROM Belief_YieldChangePerForeignCity WHERE BeliefType = 'BELIEF_PILGRIMAGE';
+INSERT INTO Belief_HolyCityYieldPerForeignFollowers (BeliefType,YieldType,PerForeignFollowers)
+SELECT 'BELIEF_PILGRIMAGE','YIELD_FAITH',20;
 INSERT INTO Belief_YieldChangePerForeignCity (BeliefType,YieldType,Yield)
-SELECT 'BELIEF_PILGRIMAGE','YIELD_FAITH',4;
+SELECT 'BELIEF_PILGRIMAGE','YIELD_FAITH',3;
+
 
 UPDATE Beliefs SET GoldPerFollowingCity = '6' WHERE Type = 'BELIEF_CHURCH_PROPERTY';
 
-INSERT INTO Belief_YieldChangePerXForeignFollowers (BeliefType,YieldType,ForeignFollowers)
-SELECT 'BELIEF_FAITH_WITHOUT_BORDERS','YIELD_FAITH',3;
+INSERT INTO Belief_CityYieldChanges (BeliefType,YieldType,Yield)
+SELECT 'BELIEF_FAITH_WITHOUT_BORDERS','YIELD_FAITH',2;
+INSERT INTO Belief_CityYieldPerOtherReligion (BeliefType,YieldType,Yield)
+SELECT 'BELIEF_FAITH_WITHOUT_BORDERS','YIELD_FAITH',1;
 
 UPDATE Beliefs SET HappinessPerXPeacefulForeignFollowers = '6' WHERE Type = 'BELIEF_PEACE_LOVING';
 
@@ -218,7 +223,9 @@ UPDATE Beliefs SET GoldPerFirstCityConversion = '180' WHERE Type = 'BELIEF_INITI
 UPDATE Beliefs SET GoldPerXFollowers = '2' WHERE Type = 'BELIEF_TITHE';
 
 DELETE FROM Belief_YieldChangePerXForeignFollowers WHERE BeliefType = 'BELIEF_WORLD_CHURCH';
-INSERT INTO Belief_YieldChangePerXForeignFollowers (BeliefType,YieldType,ForeignFollowers)
+INSERT INTO Belief_HolyCityYieldPerForeignFollowers (BeliefType,YieldType,PerForeignFollowers)
+SELECT 'BELIEF_WORLD_CHURCH','YIELD_CULTURE',20;
+INSERT INTO Belief_YieldChangePerForeignCity (BeliefType,YieldType,Yield)
 SELECT 'BELIEF_WORLD_CHURCH','YIELD_CULTURE',3;
 
 --BELIEF_INTERFAITH_DIALOGUE
