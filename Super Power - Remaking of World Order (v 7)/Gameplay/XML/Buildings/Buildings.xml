@@ -155,7 +155,7 @@
 			<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_WATERMILL_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_WATERMILL</ArtDefineTag>
-			<FreshWater>true</FreshWater>
+			<River>true</River>
 			<MinAreaSize>-1</MinAreaSize>
 			<NeverCapture>true</NeverCapture>
 			<HurryCostModifier>25</HurryCostModifier>
@@ -194,7 +194,6 @@
 			<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_WINDMILL_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_FORGE</ArtDefineTag>
-			<Flat>true</Flat>
 			<MinAreaSize>-1</MinAreaSize>
 			<NeverCapture>true</NeverCapture>
 			<HurryCostModifier>50</HurryCostModifier>
