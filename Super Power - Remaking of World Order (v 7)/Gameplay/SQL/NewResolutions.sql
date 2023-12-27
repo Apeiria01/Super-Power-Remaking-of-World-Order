@@ -1,3 +1,7 @@
 --Cold War
 INSERT INTO Resolutions(Type, Description, Help, EmbargoIdeology, VoterDecision, ProposerDecision, TechPrereqAnyMember)
 SELECT 'RESOLUTION_COLD_WAR', 'TXT_KEY_RESOLUTION_COLD_WAR', 'TXT_KEY_RESOLUTION_COLD_WAR_HELP', 1, 'RESOLUTION_DECISION_YES_OR_NO', 'RESOLUTION_DECISION_NONE', 'TECH_ATOMIC_THEORY';
+
+--War Convention
+INSERT INTO Resolutions(Type, Description, Help, VoterDecision, ProposerDecision, TechPrereqAnyMember, GlobalAttackModifier, GlobalWarCasualtiesChanges)
+SELECT 'RESOLUTION_WAR_CONVENTION', 'TXT_KEY_RESOLUTION_WAR_CONVENTION', 'TXT_KEY_RESOLUTION_WAR_CONVENTION_HELP', 'RESOLUTION_DECISION_YES_OR_NO', 'RESOLUTION_DECISION_NONE', 'TECH_ATOMIC_THEORY', -10, -20;

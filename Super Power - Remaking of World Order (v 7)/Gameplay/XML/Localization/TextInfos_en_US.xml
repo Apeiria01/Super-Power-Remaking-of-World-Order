@@ -17221,6 +17221,9 @@
 		<Row Tag="TXT_KEY_EUPANEL_DEATH_ATTACK_MODIFIER">
 			<Text>Death Unit Bonus</Text>
 		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_WORLD_CONGRESS_MODIFIER">
+			<Text>World Congress Modifier</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_CO_SP_MOVE_TEAMMATE_STOPPED">
 			<Text>No Immigration because we are in the same team.</Text>
