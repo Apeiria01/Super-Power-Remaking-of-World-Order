@@ -643,6 +643,14 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
 			end
 
+			--Bonus from World Congress
+			iModifier = pMyUnit:GetAttackModifierFromWorldCongress();
+			if (iModifier ~= 0) then
+				controlTable = g_MyCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_WORLD_CONGRESS_MODIFIER" );
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+			end
+
 			-- City Attack bonus
 			local iModifier = pMyUnit:CityAttackModifier();
 			if (iModifier ~= 0) then
@@ -1383,6 +1391,14 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			if (iModifier ~= 0) then
 				controlTable = g_MyCombatDataIM:GetInstance();
 				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_DEATH_ATTACK_MODIFIER" );
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+			end
+
+			--Bonus from World Congress
+			iModifier = pMyUnit:GetAttackModifierFromWorldCongress();
+			if (iModifier ~= 0) then
+				controlTable = g_MyCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_WORLD_CONGRESS_MODIFIER" );
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
 			end
 
