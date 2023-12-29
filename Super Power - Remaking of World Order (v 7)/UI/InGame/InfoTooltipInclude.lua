@@ -1645,6 +1645,11 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 	if tip ~= "" then
 		insert( tips, L"TXT_KEY_SV_ICONS_GLOBAL_SP" .. ":" .. tip )
 	end
+	-- Local Total Yields enhanced by Building
+	tip = GetYieldStringSpecial( "Yield", "%s %+i%%%s", GameInfo.Building_YieldMultiplier( thisBuildingType ) )
+	if tip ~= "" then
+		insert( tips, L"TXT_KEY_SV_ICONS_LOCAL_SP" .." ".. L"TXT_KEY_YIELD_MULTIPLIER" .. ":" .. tip )
+	end
 
 	-- victory requisite
 	item = building.VictoryPrereq and GameInfo.Victories[ building.VictoryPrereq ]
