@@ -7455,23 +7455,6 @@
 			<FlavorType>FLAVOR_NAVAL</FlavorType>
 			<Flavor>80</Flavor>
 		</Row>
-
-
-		<Row>
-			<BuildingType>BUILDING_COAL_TO_OIL</BuildingType>
-			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-			<Flavor>170</Flavor>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_COAL_TO_OIL</BuildingType>
-			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
-			<Flavor>170</Flavor>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_COAL_TO_URANIUM</BuildingType>
-			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-			<Flavor>180</Flavor>
-		</Row>
 		<Row>
 			<BuildingType>BUILDING_COAL_TO_URANIUM</BuildingType>
 			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
