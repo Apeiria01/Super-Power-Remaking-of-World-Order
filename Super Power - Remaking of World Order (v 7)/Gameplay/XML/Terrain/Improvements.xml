@@ -389,7 +389,7 @@
 		<Row>
 			<ImprovementType>IMPROVEMENT_MAYA_ALTAR</ImprovementType>
 			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>2</Yield>
+			<Yield>1</Yield>
 		</Row>
 
 		<Row>
