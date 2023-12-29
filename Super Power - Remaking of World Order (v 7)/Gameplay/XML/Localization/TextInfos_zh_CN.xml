@@ -2299,7 +2299,10 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_MONGOL_SECRETARIATS_HELP</Tag>
-			<Text>消除来自[ICON_OCCUPIED]被佔领城市的额外[ICON_HAPPINESS_4]不满，并提供2点本地[ICON_HAPPINESS_1]快乐。[NEWLINE][NEWLINE]没有[ICON_GOLD]维护费。城市每有4[ICON_CITIZEN]人口+1[ICON_GOLD]税金。</Text>
+			<Text>
+				[ICON_BULLET]消除来自[ICON_OCCUPIED]被佔领城市的额外[ICON_HAPPINESS_4]不满，并提供2点本地[ICON_HAPPINESS_1]快乐。
+				[NEWLINE][ICON_BULLET]没有[ICON_GOLD]维护费。城市每有4[ICON_CITIZEN]人口+1[ICON_GOLD]税金。
+			</Text>
 		</Row>
 
 		<Row>
@@ -2710,7 +2713,12 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_CITY_HALL_LV1_HELP</Tag>
-			<Text>[ICON_BULLET]本城市的管理效率为[COLOR_NEGATIVE_TEXT]极高[ENDCOLOR]。[NEWLINE][ICON_BULLET]+4[ICON_RES_MANPOWER]人力。[NEWLINE][ICON_BULLET]维护费：2[ICON_GOLD]金。[NEWLINE][ICON_BULLET]2点额外的全国[ICON_HAPPINESS_4]不满。[NEWLINE][ICON_BULLET]消耗2[ICON_RES_CONSUMER]商品。[NEWLINE][NEWLINE]如果你将市政厅出售，本城市将转化为傀儡城市，但会有一定的[COLOR_NEGATIVE_TEXT]无政府时间[ENDCOLOR]（回合数等于人口的一半）。</Text>
+			<Text>
+				[ICON_BULLET]本城市的管理效率为[COLOR_NEGATIVE_TEXT]极高[ENDCOLOR]。
+				[NEWLINE][ICON_BULLET]+4[ICON_RES_MANPOWER]人力。[NEWLINE][ICON_BULLET]维护费：2[ICON_GOLD]金。
+				[NEWLINE][ICON_BULLET]2点额外的[ICON_HAPPINESS_4]不满。[NEWLINE][ICON_BULLET]消耗2[ICON_RES_CONSUMER]商品。
+				[NEWLINE][NEWLINE]如果你将市政厅出售，本城市将转化为傀儡城市，但会有一定的[COLOR_NEGATIVE_TEXT]无政府时间[ENDCOLOR]（回合数等于人口的一半）。
+			</Text>
 		</Row>
 		<Replace Tag="TXT_KEY_BUILDING_SATRAPS_COURT_DESC">
 			<Text>#总督府</Text>
@@ -2718,8 +2726,8 @@
 		<Replace Tag="TXT_KEY_BUILDING_SATRAPS_COURT_HELP">
 			<Text>
 				替代#市政厅[COLOR_NEGATIVE_TEXT]（一级）[ENDCOLOR]，和普通[COLOR_NEGATIVE_TEXT]一级[ENDCOLOR]市政厅相比，
-				无维护费，不消耗额外消费品且不会造成额外政策阈值上涨，没有额外红脸。
-				另外，每座总督府+2[ICON_HAPPINESS_1]全局快乐，+4%[ICON_GOLDEN_AGE]黄金时代长度。
+				[NEWLINE][ICON_BULLET]无维护费，不消耗额外消费品且不会造成额外政策阈值上涨，没有额外[ICON_HAPPINESS_4]不满。
+				[NEWLINE][ICON_BULLET]每座总督府+2[ICON_HAPPINESS_1]全局快乐，+4%[ICON_GOLDEN_AGE]黄金时代长度。
 			</Text>
 		</Replace>
 
@@ -2729,7 +2737,15 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_CITY_HALL_LV2_HELP</Tag>
-			<Text>[ICON_BULLET]本城市的管理效率为[COLOR_PLAYER_DARK_PINK_TEXT]较高[ENDCOLOR]。[NEWLINE][ICON_BULLET]+3[ICON_RES_MANPOWER]人力。[NEWLINE][ICON_BULLET]维护费：4[ICON_GOLD]金。[NEWLINE][ICON_BULLET]4点额外的全国[ICON_HAPPINESS_4]不满。[NEWLINE][ICON_BULLET]因低效率管理全国[ICON_HAPPINESS_4]不满增加2%。[NEWLINE][ICON_BULLET]消耗4[ICON_RES_CONSUMER]商品。[NEWLINE][NEWLINE]如果你将市政厅出售，本城市将转化为傀儡城市，但会有一定的[COLOR_NEGATIVE_TEXT]无政府时间[ENDCOLOR]（回合数等于人口的一半）。</Text>
+			<Text>
+				[ICON_BULLET]本城市的管理效率为[COLOR_PLAYER_DARK_PINK_TEXT]较高[ENDCOLOR]。
+				[NEWLINE][ICON_BULLET]+3[ICON_RES_MANPOWER]人力。
+				[NEWLINE][ICON_BULLET]维护费：4[ICON_GOLD]金。
+				[NEWLINE][ICON_BULLET]4点额外的[ICON_HAPPINESS_4]不满。
+				[NEWLINE][ICON_BULLET]因低效率管理全国[ICON_HAPPINESS_4]不满增加2%。
+				[NEWLINE][ICON_BULLET]消耗4[ICON_RES_CONSUMER]商品。
+				[NEWLINE][NEWLINE]如果你将市政厅出售，本城市将转化为傀儡城市，但会有一定的[COLOR_NEGATIVE_TEXT]无政府时间[ENDCOLOR]（回合数等于人口的一半）。
+			</Text>
 		</Row>
 
 		<Row>
@@ -2738,7 +2754,15 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_CITY_HALL_LV3_HELP</Tag>
-			<Text>[ICON_BULLET]本城市的管理效率为[COLOR_PLAYER_FRANCE_BACKGROUND]中等[ENDCOLOR]。[NEWLINE][ICON_BULLET]+2[ICON_RES_MANPOWER]人力。[NEWLINE][ICON_BULLET]维护费：8[ICON_GOLD]金。[NEWLINE][ICON_BULLET]6点额外的全国[ICON_HAPPINESS_4]不满。[NEWLINE][ICON_BULLET]因低效率管理全国[ICON_HAPPINESS_4]不满增加3%。[NEWLINE][ICON_BULLET]消耗8[ICON_RES_CONSUMER]商品。[NEWLINE][NEWLINE]如果你将市政厅出售，本城市将转化为傀儡城市，但会有一定的[COLOR_NEGATIVE_TEXT]无政府时间[ENDCOLOR]（回合数等于人口的一半）。</Text>
+			<Text>
+				[ICON_BULLET]本城市的管理效率为[COLOR_PLAYER_FRANCE_BACKGROUND]中等[ENDCOLOR]。
+				[NEWLINE][ICON_BULLET]+2[ICON_RES_MANPOWER]人力。
+				[NEWLINE][ICON_BULLET]维护费：8[ICON_GOLD]金。
+				[NEWLINE][ICON_BULLET]6点额外的[ICON_HAPPINESS_4]不满。
+				[NEWLINE][ICON_BULLET]因低效率管理全国[ICON_HAPPINESS_4]不满增加3%。
+				[NEWLINE][ICON_BULLET]消耗8[ICON_RES_CONSUMER]商品。
+				[NEWLINE][NEWLINE]如果你将市政厅出售，本城市将转化为傀儡城市，但会有一定的[COLOR_NEGATIVE_TEXT]无政府时间[ENDCOLOR]（回合数等于人口的一半）。
+			</Text>
 		</Row>
 
 		<Row>
@@ -2747,7 +2771,18 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_CITY_HALL_LV4_HELP</Tag>
-			<Text>[ICON_BULLET]本城市的管理效率为[COLOR_POSITIVE_TEXT]较低[ENDCOLOR]。[NEWLINE][ICON_BULLET]+1[ICON_RES_MANPOWER]人力。[NEWLINE][ICON_BULLET]维护费：16[ICON_GOLD]金。[NEWLINE][ICON_BULLET]8点额外的全国[ICON_HAPPINESS_4]不满。[NEWLINE][ICON_BULLET]因低效率管理全国[ICON_HAPPINESS_4]不满增加4%。[NEWLINE][ICON_BULLET]消耗12[ICON_RES_CONSUMER]商品。[NEWLINE][NEWLINE]如果你将市政厅出售，本城市将转化为傀儡城市，但会有一定的[COLOR_NEGATIVE_TEXT]无政府时间[ENDCOLOR]（回合数等于人口的一半）。</Text>
+			<Text>
+				[ICON_BULLET]本城市的管理效率为[COLOR_POSITIVE_TEXT]较低[ENDCOLOR]。
+				[NEWLINE][ICON_BULLET]+1[ICON_RES_MANPOWER]人力。
+				[NEWLINE][ICON_BULLET]维护费：16[ICON_GOLD]金。
+				[NEWLINE][ICON_BULLET]8点额外的[ICON_HAPPINESS_4]不满。
+				[NEWLINE][ICON_BULLET]因低效率管理全国[ICON_HAPPINESS_4]不满增加4%。
+				[NEWLINE][ICON_BULLET]消耗8[ICON_RES_CONSUMER]商品。
+				[NEWLINE][ICON_BULLET]本城购买建造项目所需的[ICON_GOLD]金钱增加10%。
+				[NEWLINE][ICON_BULLET]本城训练的军事单位的最大经验值为60。
+				[NEWLINE][ICON_BULLET]本城[ICON_FOOD][ICON_PRODUCTION][ICON_GOLD][ICON_RESEARCH][ICON_CULTURE]产出总量降低10%。
+				[NEWLINE][NEWLINE]如果你将市政厅出售，本城市将转化为傀儡城市，但会有一定的[COLOR_NEGATIVE_TEXT]无政府时间[ENDCOLOR]（回合数等于人口的一半）。
+			</Text>
 		</Row>
 
 		<Row>
@@ -2756,7 +2791,18 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_CITY_HALL_LV5_HELP</Tag>
-			<Text>[ICON_BULLET]本城市的管理效率为[COLOR_YIELD_GOLD]极低[ENDCOLOR]。[NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]不提供[ENDCOLOR][ICON_RES_MANPOWER]人力。[NEWLINE][ICON_BULLET]维护费：24[ICON_GOLD]金。[NEWLINE][ICON_BULLET]8点额外的全国[ICON_HAPPINESS_4]不满。[NEWLINE][ICON_BULLET]因低效率管理全国[ICON_HAPPINESS_4]不满增加5%。[NEWLINE][ICON_BULLET]消耗16[ICON_RES_CONSUMER]商品。[NEWLINE][NEWLINE]如果你将市政厅出售，本城市将转化为傀儡城市，但会有一定的[COLOR_NEGATIVE_TEXT]无政府时间[ENDCOLOR]（回合数等于人口的一半）。</Text>
+			<Text>
+				[ICON_BULLET]本城市的管理效率为[COLOR_YIELD_GOLD]极低[ENDCOLOR]。
+				[NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]不提供[ENDCOLOR][ICON_RES_MANPOWER]人力。
+				[NEWLINE][ICON_BULLET]维护费：24[ICON_GOLD]金。
+				[NEWLINE][ICON_BULLET]10点额外的[ICON_HAPPINESS_4]不满。
+				[NEWLINE][ICON_BULLET]因低效率管理全国[ICON_HAPPINESS_4]不满增加5%。
+				[NEWLINE][ICON_BULLET]消耗8[ICON_RES_CONSUMER]商品。
+				[NEWLINE][ICON_BULLET]本城购买建造项目所需的[ICON_GOLD]金钱增加20%。
+				[NEWLINE][ICON_BULLET]本城训练的军事单位的最大经验值为30。
+				[NEWLINE][ICON_BULLET]本城[ICON_FOOD][ICON_PRODUCTION][ICON_GOLD][ICON_RESEARCH][ICON_CULTURE]产出总量降低15%。
+				[NEWLINE][NEWLINE]如果你将市政厅出售，本城市将转化为傀儡城市，但会有一定的[COLOR_NEGATIVE_TEXT]无政府时间[ENDCOLOR]（回合数等于人口的一半）。
+			</Text>
 		</Row>
 
 		<Row>
@@ -2827,14 +2873,21 @@
 			<Text>[ICON_CITY_STATE]法院</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_COURTHOUSE_HELP">
-			<Text>消除来自[ICON_OCCUPIED]被占领城市的额外[ICON_HAPPINESS_4]不满。[NEWLINE][NEWLINE]每3[ICON_CITIZEN]人口+1[ICON_GOLD]维护费。</Text>
+			<Text>
+				[ICON_BULLET]消除来自[ICON_OCCUPIED]被占领城市的额外[ICON_HAPPINESS_4]不满。
+				[NEWLINE][ICON_BULLET]每3[ICON_CITIZEN]人口+1[ICON_GOLD]维护费。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_BUILDING_CONSTABLE">
 			<Text>[ICON_CITYBANNER_CITY_LV2]治安署</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_CONSTABLE_HELP">
-			<Text>只能建造在二级城市。[NEWLINE][NEWLINE]消除因低效率城市管理导致的额外全国[ICON_HAPPINESS_4]不满。[NEWLINE][NEWLINE]每6[ICON_CITIZEN]人口+1[ICON_GOLD]维护费。</Text>
+			<Text>
+				[ICON_BULLET]只能建造在二级城市。
+				[NEWLINE][ICON_BULLET]消除因低效率城市管理导致的全国[ICON_HAPPINESS_4]不满。
+				[NEWLINE][ICON_BULLET]每6[ICON_CITIZEN]人口+1[ICON_GOLD]维护费。
+			</Text>
 		</Replace>
 
 		<Row>
@@ -2847,14 +2900,23 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_ROMAN_SENATE_HELP</Tag>
-			<Text>只能建造在二级城市。[NEWLINE][NEWLINE]消除因低效率城市管理导致的额外全国[ICON_HAPPINESS_4]不满。[NEWLINE][NEWLINE]每6[ICON_CITIZEN]人口+1[ICON_GOLD]维护费。</Text>
+			<Text>
+				[ICON_BULLET]只能建造在二级城市。
+				[NEWLINE][ICON_BULLET]消除因低效率城市管理导致的全国[ICON_HAPPINESS_4]不满。
+				[NEWLINE][ICON_BULLET]每6[ICON_CITIZEN]人口+1[ICON_GOLD]维护费。
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_BUILDING_SHERIFF_OFFICE">
 			<Text>[ICON_CITYBANNER_CITY_LV3]审计署</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_SHERIFF_OFFICE_HELP">
-			<Text>只能建造在三级城市。[NEWLINE][NEWLINE]消除因低效率城市管理导致的额外全国[ICON_HAPPINESS_4]不满。将政策[ICON_CULTURE]文化阈值的增长降低为15%。[NEWLINE][NEWLINE]每5[ICON_CITIZEN]人口+1[ICON_GOLD]维护费。</Text>
+			<Text>
+				[ICON_BULLET]只能建造在三级城市。
+				[NEWLINE][ICON_BULLET]消除因低效率城市管理导致的全国[ICON_HAPPINESS_4]不满。
+				[NEWLINE][ICON_BULLET]将政策[ICON_CULTURE]文化阈值的增长降低为15%。
+				[NEWLINE][ICON_BULLET]每5[ICON_CITIZEN]人口+1[ICON_GOLD]维护费。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_BUILDINGS_SHERIFF_OFFICE_TEXT">
 			<Text>审计作为一种监督机制，其实践活动历史悠久，但人们对审计的定义却众说纷纭。公认具有代表性且被广泛引用的是美国会计学会1972年在其颁布的《基本审计概念公告》中给出的审计定义，即“审计是指为了查明有关经济活动和经济现象的认定与所制定标准之间的一致程度，而客观地收集和评估证据，并将结果传递给有利害关系的使用者的系统过程”。</Text>
@@ -2864,14 +2926,28 @@
 			<Text>[ICON_CITYBANNER_CITY_LV4]警察局</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_POLICE_STATION_HELP">
-			<Text>只能建造在四级城市。[NEWLINE][NEWLINE]消除因低效率城市管理导致的额外全国[ICON_HAPPINESS_4]不满。将政策[ICON_CULTURE]文化阈值的增长降低为25%。[NEWLINE][NEWLINE]每4[ICON_CITIZEN]人口+1[ICON_GOLD]维护费。</Text>
+			<Text>
+				[ICON_BULLET]只能建造在四级城市。
+				[NEWLINE][ICON_BULLET]消除因低效率城市管理导致的全国[ICON_HAPPINESS_4]不满。
+				[NEWLINE][ICON_BULLET]将政策[ICON_CULTURE]文化阈值的增长降低为15%。
+				[NEWLINE][ICON_BULLET]本城训练的军事单位的最大经验值+30。
+				[NEWLINE][ICON_BULLET]腐败带来的产出总量减少降低至5%。
+				[NEWLINE][ICON_BULLET]每4[ICON_CITIZEN]人口+1[ICON_GOLD]维护费。
+			</Text>
 		</Replace>
 
 		<Row Tag="TXT_KEY_BUILDING_PROCURATORATE">
 			<Text>[ICON_CITYBANNER_CITY_LV5]地检署</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_PROCURATORATE_HELP">
-			<Text>只能建造在五级城市。[NEWLINE][NEWLINE]消除因低效率城市管理导致的额外全国[ICON_HAPPINESS_4]不满。将政策[ICON_CULTURE]文化阈值的增长降低为25%。[NEWLINE][NEWLINE]每3[ICON_CITIZEN]人口+1[ICON_GOLD]维护费。</Text>
+			<Text>
+				[ICON_BULLET]只能建造在五级城市。
+				[NEWLINE][ICON_BULLET]消除因低效率城市管理导致的全国[ICON_HAPPINESS_4]不满。
+				[NEWLINE][ICON_BULLET]将政策[ICON_CULTURE]文化阈值的增长降低为15%。
+				[NEWLINE][ICON_BULLET]本城训练的军事单位的最大经验值+30。
+				[NEWLINE][ICON_BULLET]腐败带来的产出总量减少降低至10%。
+				[NEWLINE][ICON_BULLET]每3[ICON_CITIZEN]人口+1[ICON_GOLD]维护费。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_BUILDINGS_PROCURATORATE_TEXT">
 			<Text>检察院通过行使国家检察权来完成自己的任务。它对于危害国家安全案、危害公共安全案、侵犯公民人身权利民主权利案和其他重大犯罪案件，行使检察权；对于公安机关侦查的案件进行审查，决定是否逮捕、起诉或者免于起诉；对于刑事案件提起公诉、支持公诉；对于公安机关、人民法院和监狱、看守所、劳动改造机关的活动是否合法，实行监督。</Text>
@@ -4689,12 +4765,26 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TP_CULTURE_CITY_COST">
-			<Text>所有直辖城市都会增加你推行政策的[ICON_CULTURE]文化阈值。[NEWLINE][NEWLINE][ICON_BULLET]一级城市：+5%；[NEWLINE][ICON_BULLET]二级城市：+10%；[NEWLINE][ICON_BULLET]三级城市：+20%；[NEWLINE][ICON_BULLET]四级城市：+33%；[NEWLINE][ICON_BULLET]五级城市：+33%。[NEWLINE][NEWLINE]建造强化管理设施可以减少[ICON_CULTURE]文化阈值的增加。</Text>
+			<Text>
+				所有直辖城市都会增加你推行政策的[ICON_CULTURE]文化阈值。
+				[NEWLINE][NEWLINE][ICON_BULLET]一级城市：+5%；
+				[NEWLINE][ICON_BULLET]二级城市：+10%；
+				[NEWLINE][ICON_BULLET]三级城市：+20%；
+				[NEWLINE][ICON_BULLET]四级城市：+20%；
+				[NEWLINE][ICON_BULLET]五级城市：+25%。
+				[NEWLINE][NEWLINE]建造强化管理设施可以减少[ICON_CULTURE]文化阈值的增加。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TP_CULTURE_CITY_COST_MOD">
 			<Text>
-				所有直辖城市都会增加你推行政策的[ICON_CULTURE]文化阈值。由于你推行了“代议制度”，文化阈值的增加被缓解了。[NEWLINE][NEWLINE][ICON_BULLET]一级城市：无；[NEWLINE][ICON_BULLET]二级城市：+5%；[NEWLINE][ICON_BULLET]三级城市：+15%；[NEWLINE][ICON_BULLET]四级城市：+28%；[NEWLINE][ICON_BULLET]五级城市：+28%。[NEWLINE][NEWLINE]建造强化管理设施可以减少[ICON_CULTURE]文化阈值的增加。
+				所有直辖城市都会增加你推行政策的[ICON_CULTURE]文化阈值。由于你推行了“代议制度”，文化阈值的增加被缓解了。
+				[NEWLINE][NEWLINE][ICON_BULLET]一级城市：无；
+				[NEWLINE][ICON_BULLET]二级城市：+5%；
+				[NEWLINE][ICON_BULLET]三级城市：+15%；
+				[NEWLINE][ICON_BULLET]四级城市：+15%；
+				[NEWLINE][ICON_BULLET]五级城市：+20%。
+				[NEWLINE][NEWLINE]建造强化管理设施可以减少[ICON_CULTURE]文化阈值的增加。
 			</Text>
 		</Replace>
 
@@ -14113,6 +14203,9 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_SV_ICONS_LOCAL_SP" >
 			<Text>本地</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_YIELD_MULTIPLIER" >
+			<Text>总产出</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PEDIA_REQ_BLDG_LABEL2_SP">
 			<Text>至少拥有下列建筑中的一种:</Text>

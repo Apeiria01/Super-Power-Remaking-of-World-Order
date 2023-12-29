@@ -156,8 +156,9 @@
 			<IconAtlas>SPBalance_ATLAS</IconAtlas>
 			<PortraitIndex>59</PortraitIndex>
 			<Happiness>-8</Happiness>
-			<PolicyCostModifier>33</PolicyCostModifier>
+			<PolicyCostModifier>20</PolicyCostModifier>
 			<UnhappinessModifier>4</UnhappinessModifier>
+			<UnitMaxExperienceLocal>60</UnitMaxExperienceLocal>
 		</Row>
 		<Row>
 			<Type>BUILDING_CITY_HALL_LV5</Type>
@@ -175,8 +176,9 @@
 			<IconAtlas>SPBalance_ATLAS</IconAtlas>
 			<PortraitIndex>60</PortraitIndex>
 			<Happiness>-10</Happiness>
-			<PolicyCostModifier>33</PolicyCostModifier>
+			<PolicyCostModifier>25</PolicyCostModifier>
 			<UnhappinessModifier>5</UnhappinessModifier>
+			<UnitMaxExperienceLocal>30</UnitMaxExperienceLocal>
 		</Row>
 
 		<Row>
@@ -292,8 +294,9 @@
 			<IconAtlas>EXPANSION_BW_ATLAS_1</IconAtlas>
 			<NeverCapture>true</NeverCapture>
 			<PortraitIndex>11</PortraitIndex>
-			<PolicyCostModifier>-8</PolicyCostModifier>
+			<PolicyCostModifier>-5</PolicyCostModifier>
 			<UnhappinessModifier>-4</UnhappinessModifier>
+			<UnitMaxExperienceLocal>30</UnitMaxExperienceLocal>
 		</Row>
 
 		<Row>
@@ -311,8 +314,9 @@
 			<IconAtlas>EXPANSION_BW_ATLAS_2</IconAtlas>
 			<PortraitIndex>12</PortraitIndex>
 			<NeverCapture>true</NeverCapture>
-			<PolicyCostModifier>-8</PolicyCostModifier>
+			<PolicyCostModifier>-10</PolicyCostModifier>
 			<UnhappinessModifier>-5</UnhappinessModifier>
+			<UnitMaxExperienceLocal>30</UnitMaxExperienceLocal>
 		</Row>
 		
 		
@@ -517,20 +521,118 @@
 		<Row>
 			<BuildingType>BUILDING_CITY_HALL_LV4</BuildingType>
 			<ResourceType>RESOURCE_CONSUMER</ResourceType>
-			<Cost>12</Cost>
+			<Cost>8</Cost>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_CITY_HALL_LV5</BuildingType>
 			<ResourceType>RESOURCE_CONSUMER</ResourceType>
-			<Cost>16</Cost>
+			<Cost>8</Cost>
 		</Row>
 	</Building_ResourceQuantityRequirements>
+	<Building_YieldMultiplier>
+		<Row>
+			<BuildingType>BUILDING_CITY_HALL_LV4</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>-10</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CITY_HALL_LV4</BuildingType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>-10</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CITY_HALL_LV4</BuildingType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>-10</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CITY_HALL_LV4</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>-10</Yield>
+		</Row>
 
-  <Civilization_BuildingClassOverrides>
-    <Row>
-      <CivilizationType>CIVILIZATION_VENICE</CivilizationType>
-      <BuildingClassType>BUILDINGCLASS_PUPPET_GOVERNEMENT</BuildingClassType>
-      <BuildingType>BUILDING_PUPPET_GOVERNEMENT_FULL</BuildingType>
-    </Row>
-  </Civilization_BuildingClassOverrides>
+		<Row>
+			<BuildingType>BUILDING_POLICE_STATION</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>5</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_POLICE_STATION</BuildingType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>5</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_POLICE_STATION</BuildingType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>5</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_POLICE_STATION</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>5</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_CITY_HALL_LV5</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>-15</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CITY_HALL_LV5</BuildingType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>-15</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CITY_HALL_LV5</BuildingType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>-15</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CITY_HALL_LV5</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>-15</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_PROCURATORATE</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>5</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_PROCURATORATE</BuildingType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>5</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_PROCURATORATE</BuildingType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>5</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_PROCURATORATE</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>5</Yield>
+		</Row>
+	</Building_YieldMultiplier>
+	<Building_HurryModifiersLocal>
+		<Row>
+			<BuildingType>BUILDING_CITY_HALL_LV4</BuildingType>
+			<HurryType>HURRY_GOLD</HurryType>
+			<HurryCostModifier>10</HurryCostModifier>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_CITY_HALL_LV5</BuildingType>
+			<HurryType>HURRY_GOLD</HurryType>
+			<HurryCostModifier>20</HurryCostModifier>
+		</Row>
+	</Building_HurryModifiersLocal>
+
+	<Civilization_BuildingClassOverrides>
+		<Row>
+			<CivilizationType>CIVILIZATION_VENICE</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_PUPPET_GOVERNEMENT</BuildingClassType>
+			<BuildingType>BUILDING_PUPPET_GOVERNEMENT_FULL</BuildingType>
+		</Row>
+	</Civilization_BuildingClassOverrides>
 </GameData>

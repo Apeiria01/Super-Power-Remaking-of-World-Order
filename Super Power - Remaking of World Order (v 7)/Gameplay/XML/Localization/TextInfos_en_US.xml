@@ -352,6 +352,9 @@
 		<Replace Tag="TXT_KEY_SV_ICONS_LOCAL_SP" >
 			<Text>Local</Text>
 		</Replace>
+		<Replace Tag="TXT_KEY_YIELD_MULTIPLIER" >
+			<Text>Total Output</Text>
+		</Replace>
 		<Replace Tag="TXT_KEY_PEDIA_REQ_BLDG_LABEL2_SP">
 			<Text>Have at least one of the following Buildings:</Text>
 		</Replace>
@@ -1305,8 +1308,8 @@
 				[NEWLINE][NEWLINE][ICON_BULLET]Lv1 City: +5% [ICON_CULTURE] Culture cost.
 				[NEWLINE][ICON_BULLET]Lv2 City: +10% [ICON_CULTURE] Culture cost.
 				[NEWLINE][ICON_BULLET]Lv3 City: +20% [ICON_CULTURE] Culture cost.
-				[NEWLINE][ICON_BULLET]Lv4 City: +33% [ICON_CULTURE] Culture cost.
-				[NEWLINE][ICON_BULLET]Lv5 City: +33% [ICON_CULTURE] Culture cost.
+				[NEWLINE][ICON_BULLET]Lv4 City: +20% [ICON_CULTURE] Culture cost.
+				[NEWLINE][ICON_BULLET]Lv5 City: +25% [ICON_CULTURE] Culture cost.
 				[NEWLINE][NEWLINE]Build Anti-corruption and Public Security Buildings or adopt certain Policies to reduce the increasing [ICON_CULTURE] Culture cost by those cities.
 			</Text>
 		</Replace>
@@ -1318,8 +1321,8 @@
 					[NEWLINE][NEWLINE][ICON_BULLET]Lv1 City: No extra [ICON_CULTURE] Culture cost.
 					[NEWLINE][ICON_BULLET]Lv2 City: +5% [ICON_CULTURE] Culture cost.
 					[NEWLINE][ICON_BULLET]Lv3 City: +15% [ICON_CULTURE] Culture cost.
-					[NEWLINE][ICON_BULLET]Lv4 City: +28% [ICON_CULTURE] Culture cost.
-					[NEWLINE][ICON_BULLET]Lv5 City: +28% [ICON_CULTURE] Culture cost.
+					[NEWLINE][ICON_BULLET]Lv4 City: +15% [ICON_CULTURE] Culture cost.
+					[NEWLINE][ICON_BULLET]Lv5 City: +20% [ICON_CULTURE] Culture cost.
 					[NEWLINE][NEWLINE]Build Anti-corruption and Public Security Buildings to reduce the increasing [ICON_CULTURE] Culture cost by those cities further more.
 				</Text>
 			</Replace>
@@ -4842,9 +4845,11 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_MONGOL_SECRETARIATS_HELP</Tag>
-			<Text>Eliminates extra [ICON_HAPPINESS_4] Unhappiness from an [ICON_OCCUPIED] Occupied City. Lower price.
-			[NEWLINE][NEWLINE]No [ICON_GOLD] Maintenance Cost. +1 [ICON_GOLD] Gold for every 4 [ICON_CITIZEN] Citizens in this city.
-			[NEWLINE][NEWLINE]Provide 2 [ICON_HAPPINESS_1] Local Happiness. </Text>
+			<Text>
+				[ICON_BULLET]Eliminates extra [ICON_HAPPINESS_4] Unhappiness from an [ICON_OCCUPIED] Occupied City. Lower price.
+				[NEWLINE][ICON_BULLET]No [ICON_GOLD] Maintenance Cost. +1 [ICON_GOLD] Gold for every 4 [ICON_CITIZEN] Citizens in this city.
+				[NEWLINE][ICON_BULLET]Provide 2 [ICON_HAPPINESS_1] Local Happiness.
+			</Text>
 		</Row>
 
 
@@ -5487,8 +5492,11 @@
 				City Level: [COLOR_POSITIVE_TEXT]Lv4[ENDCOLOR]
 				[NEWLINE][NEWLINE][ICON_BULLET]+1 [ICON_RES_MANPOWER] Manpower.
 				[NEWLINE][ICON_BULLET]Maintenance Cost: 16 [ICON_GOLD] Gold.
-				[NEWLINE][ICON_BULLET]Consume 12 [ICON_RES_CONSUMER] Consumer Goods.
+				[NEWLINE][ICON_BULLET]Consume 8 [ICON_RES_CONSUMER] Consumer Goods.
 				[NEWLINE][ICON_BULLET]8 extra [ICON_HAPPINESS_4] Unhappiness.
+				[NEWLINE][ICON_BULLET]Cost of [ICON_GOLD] Gold purchasing in this City increased by 10%.
+				[NEWLINE][ICON_BULLET]Experience for Unit trained in this city is limited to 60.
+				[NEWLINE][ICON_BULLET]Total Output of [ICON_PRODUCTION][ICON_GOLD][ICON_RESEARCH][ICON_CULTURE] in this City reduced by 10%.
 				[NEWLINE][NEWLINE]If you sell the City Hall Building, this city will become a puppet but suffer a [COLOR_NEGATIVE_TEXT]Resistance Time[ENDCOLOR] (equals 50% of its Population).
 			</Text>
 		</Row>
@@ -5504,8 +5512,11 @@
 				City Level: [COLOR_YIELD_GOLD]Lv5[ENDCOLOR]
 				[NEWLINE][NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]NO[ENDCOLOR] [ICON_RES_MANPOWER] Manpower is provided.
 				[NEWLINE][ICON_BULLET]Maintenance Cost: 24 [ICON_GOLD] Gold.
-				[NEWLINE][ICON_BULLET]Consume 16 [ICON_RES_CONSUMER] Consumer Goods.
-				[NEWLINE][ICON_BULLET]8 extra [ICON_HAPPINESS_4] Unhappiness.
+				[NEWLINE][ICON_BULLET]Consume 8 [ICON_RES_CONSUMER] Consumer Goods.
+				[NEWLINE][ICON_BULLET]10 extra [ICON_HAPPINESS_4] Unhappiness.
+				[NEWLINE][ICON_BULLET]Cost of [ICON_GOLD] Gold purchasing in this City increased by 20%.
+				[NEWLINE][ICON_BULLET]Experience for Unit trained in this city is limited to 30.
+				[NEWLINE][ICON_BULLET]Total Output of [ICON_PRODUCTION][ICON_GOLD][ICON_RESEARCH][ICON_CULTURE] in this City reduced by 15%.
 				[NEWLINE][NEWLINE]If you sell the City Hall Building, this city will become a puppet but suffer a [COLOR_NEGATIVE_TEXT]Resistance Time[ENDCOLOR] (equals 50% of its Population).
 			</Text>
 		</Row>
@@ -5558,17 +5569,21 @@
 			<Text>[ICON_CITY_STATE] Courthouse</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_COURTHOUSE_HELP">
-			<Text>Eliminates extra [ICON_HAPPINESS_4] Unhappiness from an [ICON_OCCUPIED] Occupied City. 
-			[NEWLINE][NEWLINE]Pay extra 1 [ICON_GOLD] Gold for every 3 [ICON_CITIZEN] Population.</Text>
+			<Text>
+				[ICON_BULLET]Eliminates extra [ICON_HAPPINESS_4] Unhappiness from an [ICON_OCCUPIED] Occupied City. 
+				[NEWLINE][ICON_BULLET]Pay extra 1 [ICON_GOLD] Gold for every 3 [ICON_CITIZEN] Population.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_BUILDING_CONSTABLE">
 			<Text>[ICON_CITYBANNER_CITY_LV2] Constabulary</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_CONSTABLE_HELP">
-			<Text>Can only be built in in Lv2 Cities. 
-			[NEWLINE][NEWLINE]Eliminates extra Nationwide [ICON_HAPPINESS_4] Unhappiness caused by Corruption and Public Security problems. 
-			[NEWLINE][NEWLINE]Pay extra 1 [ICON_GOLD] Gold for every 6 [ICON_CITIZEN] Population. </Text>
+			<Text>
+				[ICON_BULLET]Can only be built in in Lv2 Cities. 
+				[NEWLINE][ICON_BULLET]Eliminates extra Nationwide [ICON_HAPPINESS_4] Unhappiness caused by Corruption and Public Security problems. 
+				[NEWLINE][ICON_BULLET]Pay extra 1 [ICON_GOLD] Gold for every 6 [ICON_CITIZEN] Population.
+			</Text>
 		</Replace>
 
 
@@ -5585,9 +5600,9 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_ROMAN_SENATE_HELP</Tag>
 			<Text>
-				Can only be built in in Lv2 Cities.
-				[NEWLINE][NEWLINE]Elimate the extra [ICON_CULTURE] Culture cost of adopting new Policies created by Lv2 Cities (stacked with the "Representation" Policy effect).
-				[NEWLINE][NEWLINE]Eliminates all extra [ICON_HAPPINESS_4] Unhappiness caused by Corruption and Public Security problems.
+				[ICON_BULLET]Can only be built in in Lv2 Cities.
+				[NEWLINE][ICON_BULLET]Elimate the extra [ICON_CULTURE] Culture cost of adopting new Policies created by Lv2 Cities (stacked with the "Representation" Policy effect).
+				[NEWLINE][ICON_BULLET]Eliminates all extra [ICON_HAPPINESS_4] Unhappiness caused by Corruption and Public Security problems.
 			</Text>
 		</Row>
 
@@ -5596,9 +5611,12 @@
 			<Text>[ICON_CITYBANNER_CITY_LV3] Sheriff Office</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_SHERIFF_OFFICE_HELP">
-			<Text>Can only be built in in Lv3 Cities. 
-			[NEWLINE][NEWLINE]Eliminates extra Nationwide [ICON_HAPPINESS_4] Unhappiness caused by Corruption and Public Security problems. Lower the increasing [ICON_CULTURE] Culture Cost for adopting new Policies by this city to 10%. 
-			[NEWLINE][NEWLINE]Pay extra 1 [ICON_GOLD] Gold for every 5 [ICON_CITIZEN] Population. </Text>
+			<Text>
+				[ICON_BULLET]Can only be built in in Lv3 Cities. 
+				[NEWLINE][ICON_BULLET]Eliminates extra Nationwide [ICON_HAPPINESS_4] Unhappiness caused by Corruption and Public Security problems. 
+				[NEWLINE][ICON_BULLET]Lower the increasing [ICON_CULTURE] Culture Cost for adopting new Policies by this city to 15%.
+				[NEWLINE][ICON_BULLET]Pay extra 1 [ICON_GOLD] Gold for every 5 [ICON_CITIZEN] Population.
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_BUILDINGS_SHERIFF_OFFICE_TEXT">
 			<Text>In principle, a sheriff is a legal official with responsibility for a "shire", i.e. county. In practice, the specific combination of legal, political and ceremonial duties of a sheriff varies greatly from country to country.</Text>
@@ -5609,9 +5627,14 @@
 			<Text>[ICON_CITYBANNER_CITY_LV4] Police Station</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_POLICE_STATION_HELP">
-			<Text>Can only be built in in Lv4 Cities. 
-			[NEWLINE][NEWLINE]Eliminates extra Nationwide [ICON_HAPPINESS_4] Unhappiness caused by Corruption and Public Security problems. Lower the increasing [ICON_CULTURE] Culture Cost for adopting new Policies by this city to 25%. 
-			[NEWLINE][NEWLINE]Pay extra 1 [ICON_GOLD] Gold for every 4 [ICON_CITIZEN] Population. </Text>
+			<Text>
+				[ICON_BULLET]Can only be built in in Lv4 Cities. 
+				[NEWLINE][ICON_BULLET]Eliminates extra Nationwide [ICON_HAPPINESS_4] Unhappiness caused by Corruption and Public Security problems. 
+				[NEWLINE][ICON_BULLET]Lower the increasing [ICON_CULTURE] Culture Cost for adopting new Policies by this city to 15%.
+				[NEWLINE][ICON_BULLET]Increased Max Experience for Unit trained in this city by 30.
+				[NEWLINE][ICON_BULLET]Lower the Total Output reducing from Corruption in this City to 5%.
+				[NEWLINE][ICON_BULLET]Pay extra 1 [ICON_GOLD] Gold for every 4 [ICON_CITIZEN] Population.
+			</Text>
 		</Replace>
 
 
@@ -5619,9 +5642,14 @@
 			<Text>[ICON_CITYBANNER_CITY_LV5] Procuratorate</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_PROCURATORATE_HELP">
-			<Text>Can only be built in in Lv5 Cities. 
-			[NEWLINE][NEWLINE]Eliminates extra Nationwide [ICON_HAPPINESS_4] Unhappiness caused by Corruption and Public Security problems. Lower the increasing [ICON_CULTURE] Culture Cost for adopting new Policies by this city to 25%. 
-			[NEWLINE][NEWLINE]Pay extra 1 [ICON_GOLD] Gold for every 3 [ICON_CITIZEN] Population. </Text>
+			<Text>
+				[ICON_BULLET]Can only be built in in Lv5 Cities. 
+				[NEWLINE][ICON_BULLET]Eliminates extra Nationwide [ICON_HAPPINESS_4] Unhappiness caused by Corruption and Public Security problems.
+				[NEWLINE][ICON_BULLET]Lower the increasing [ICON_CULTURE] Culture Cost for adopting new Policies by this city to 15%.
+				[NEWLINE][ICON_BULLET]Increased Max Experience for Unit trained in this city by 30.
+				[NEWLINE][ICON_BULLET]Lower the Total Output reducing from Corruption in this City to 10%.
+				[NEWLINE][ICON_BULLET]Pay extra 1 [ICON_GOLD] Gold for every 3 [ICON_CITIZEN] Population.
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_BUILDINGS_PROCURATORATE_TEXT">
 			<Text>The judicial branch is one of three branches of government in the People's Republic of China, along with the executive and legislative branches. Strictly speaking, it refers to the activities of the People's Court system. The Chinese court system is based on civil law modeled after the legal systems of Germany and France, but with local characteristics.</Text>

@@ -2250,7 +2250,10 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_MONGOL_SECRETARIATS_HELP</Tag>
-			<Text>消除來自[ICON_OCCUPIED]被佔領城市的額外[ICON_HAPPINESS_4]不滿，并提供2點本地[ICON_HAPPINESS_1]幸福度。[NEWLINE][NEWLINE]沒有[ICON_GOLD]維護費。城市每有4[ICON_CITIZEN]人口+1[ICON_GOLD]稅金。</Text>
+			<Text>
+				[ICON_BULLET]消除來自[ICON_OCCUPIED]被佔領城市的額外[ICON_HAPPINESS_4]不滿，并提供2點本地[ICON_HAPPINESS_1]幸福度。
+				[NEWLINE][ICON_BULLET]沒有[ICON_GOLD]維護費。城市每有4[ICON_CITIZEN]人口+1[ICON_GOLD]稅金。
+			</Text>
 		</Row>
 		
 		<Row>
@@ -2656,13 +2659,22 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_CITY_HALL_LV1_HELP</Tag>
-			<Text>[ICON_BULLET]本城市的管理效率為[COLOR_NEGATIVE_TEXT]極高[ENDCOLOR]。[NEWLINE][ICON_BULLET]+4[ICON_RES_MANPOWER]人力。[NEWLINE][ICON_BULLET]維護費：2[ICON_GOLD]金。[NEWLINE][ICON_BULLET]2點額外的全國[ICON_HAPPINESS_4]不滿。[NEWLINE][ICON_BULLET]消耗2[ICON_RES_CONSUMER]商品。[NEWLINE][NEWLINE]如果你將市政廳出售，本城市將轉化為傀儡城市，但會有一定的[COLOR_NEGATIVE_TEXT]無政府時間[ENDCOLOR]（回合數等於人口的一半）。</Text>
+			<Text>
+				[ICON_BULLET]本城市的管理效率為[COLOR_NEGATIVE_TEXT]極高[ENDCOLOR]。
+				[NEWLINE][ICON_BULLET]+4[ICON_RES_MANPOWER]人力。[NEWLINE][ICON_BULLET]維護費：2[ICON_GOLD]金。
+				[NEWLINE][ICON_BULLET]2點額外的[ICON_HAPPINESS_4]不滿。[NEWLINE][ICON_BULLET]消耗2[ICON_RES_CONSUMER]商品。
+				[NEWLINE][NEWLINE]如果你將市政廳出售，本城市將轉化為傀儡城市，但會有一定的[COLOR_NEGATIVE_TEXT]無政府時間[ENDCOLOR]（回合數等於人口的一半）。
+			</Text>
 		</Row>
 		<Replace Tag="TXT_KEY_BUILDING_SATRAPS_COURT_DESC">
 			<Text>#總督府</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_SATRAPS_COURT_HELP">
-			<Text>替代#市政廳[COLOR_NEGATIVE_TEXT]（一級）[ENDCOLOR]，和普通[COLOR_NEGATIVE_TEXT]一級[ENDCOLOR]市政廳相比，無維護費，不消耗額外消費品且不會造成額外政策閾值上漲，沒有額外紅臉。另外，每座總督府+2[ICON_HAPPINESS_1]全局幸福度，+4%[ICON_GOLDEN_AGE]黃金時代長度。</Text>
+			<Text>
+				替代#市政廳[COLOR_NEGATIVE_TEXT]（壹級）[ENDCOLOR]，和普通[COLOR_NEGATIVE_TEXT]一級[ENDCOLOR]市政廳相比，
+				[NEWLINE][ICON_BULLET]無維護費，不消耗額外消費品且不會造成額外政策閾值上漲，沒有額外[ICON_HAPPINESS_4]不滿。
+				[NEWLINE][ICON_BULLET]每座總督府+2[ICON_HAPPINESS_1]全局快樂，+4%[ICON_GOLDEN_AGE]黃金時代長度。
+			</Text>
 		</Replace>
 
 		<Row>
@@ -2671,7 +2683,15 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_CITY_HALL_LV2_HELP</Tag>
-			<Text>[ICON_BULLET]本城市的管理效率為[COLOR_PLAYER_DARK_PINK_TEXT]較高[ENDCOLOR]。[NEWLINE][ICON_BULLET]+3[ICON_RES_MANPOWER]人力。[NEWLINE][ICON_BULLET]維護費：4[ICON_GOLD]金。[NEWLINE][ICON_BULLET]4點額外的全國[ICON_HAPPINESS_4]不滿。[NEWLINE][ICON_BULLET]因低效率管理全國[ICON_HAPPINESS_4]不滿增加2%。[NEWLINE][ICON_BULLET]消耗4[ICON_RES_CONSUMER]商品。[NEWLINE][NEWLINE]如果你將市政廳出售，本城市將轉化為傀儡城市，但會有一定的[COLOR_NEGATIVE_TEXT]無政府時間[ENDCOLOR]（回合數等於人口的一半）。</Text>
+			<Text>
+				[ICON_BULLET]本城市的管理效率為[COLOR_PLAYER_DARK_PINK_TEXT]較高[ENDCOLOR]。
+				[NEWLINE][ICON_BULLET]+3[ICON_RES_MANPOWER]人力。
+				[NEWLINE][ICON_BULLET]維護費：4[ICON_GOLD]金。
+				[NEWLINE][ICON_BULLET]4點額外的[ICON_HAPPINESS_4]不滿。
+				[NEWLINE][ICON_BULLET]因低效率管理全國[ICON_HAPPINESS_4]不滿增加2%。
+				[NEWLINE][ICON_BULLET]消耗4[ICON_RES_CONSUMER]商品。
+				[NEWLINE][NEWLINE]如果你將市政廳出售，本城市將轉化為傀儡城市，但會有一定的[COLOR_NEGATIVE_TEXT]無政府時間[ENDCOLOR]（回合數等於人口的一半）。
+			</Text>
 		</Row>
 
 		<Row>
@@ -2680,7 +2700,15 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_CITY_HALL_LV3_HELP</Tag>
-			<Text>[ICON_BULLET]本城市的管理效率為[COLOR_PLAYER_FRANCE_BACKGROUND]中等[ENDCOLOR]。[NEWLINE][ICON_BULLET]+2[ICON_RES_MANPOWER]人力。[NEWLINE][ICON_BULLET]維護費：8[ICON_GOLD]金。[NEWLINE][ICON_BULLET]6點額外的全國[ICON_HAPPINESS_4]不滿。[NEWLINE][ICON_BULLET]因低效率管理全國[ICON_HAPPINESS_4]不滿增加3%。[NEWLINE][ICON_BULLET]消耗8[ICON_RES_CONSUMER]商品。[NEWLINE][NEWLINE]如果你將市政廳出售，本城市將轉化為傀儡城市，但會有一定的[COLOR_NEGATIVE_TEXT]無政府時間[ENDCOLOR]（回合數等於人口的一半）。</Text>
+			<Text>
+				[ICON_BULLET]本城市的管理效率為[COLOR_PLAYER_FRANCE_BACKGROUND]中等[ENDCOLOR]。
+				[NEWLINE][ICON_BULLET]+2[ICON_RES_MANPOWER]人力。
+				[NEWLINE][ICON_BULLET]維護費：8[ICON_GOLD]金。
+				[NEWLINE][ICON_BULLET]6點額外的[ICON_HAPPINESS_4]不滿。
+				[NEWLINE][ICON_BULLET]因低效率管理全國[ICON_HAPPINESS_4]不滿增加3%。
+				[NEWLINE][ICON_BULLET]消耗8[ICON_RES_CONSUMER]商品。
+				[NEWLINE][NEWLINE]如果你將市政廳出售，本城市將轉化為傀儡城市，但會有一定的[COLOR_NEGATIVE_TEXT]無政府時間[ENDCOLOR]（回合數等於人口的一半）。
+			</Text>
 		</Row>
 
 		<Row>
@@ -2689,7 +2717,18 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_CITY_HALL_LV4_HELP</Tag>
-			<Text>[ICON_BULLET]本城市的管理效率為[COLOR_POSITIVE_TEXT]較低[ENDCOLOR]。[NEWLINE][ICON_BULLET]+1[ICON_RES_MANPOWER]人力。[NEWLINE][ICON_BULLET]維護費：16[ICON_GOLD]金。[NEWLINE][ICON_BULLET]8點額外的全國[ICON_HAPPINESS_4]不滿。[NEWLINE][ICON_BULLET]因低效率管理全國[ICON_HAPPINESS_4]不滿增加4%。[NEWLINE][ICON_BULLET]消耗12[ICON_RES_CONSUMER]商品。[NEWLINE][NEWLINE]如果你將市政廳出售，本城市將轉化為傀儡城市，但會有一定的[COLOR_NEGATIVE_TEXT]無政府時間[ENDCOLOR]（回合數等於人口的一半）。</Text>
+			<Text>
+				[ICON_BULLET]本城市的管理效率為[COLOR_POSITIVE_TEXT]較低[ENDCOLOR]。
+				[NEWLINE][ICON_BULLET]+1[ICON_RES_MANPOWER]人力。
+				[NEWLINE][ICON_BULLET]維護費：16[ICON_GOLD]金。
+				[NEWLINE][ICON_BULLET]8點額外的[ICON_HAPPINESS_4]不滿。
+				[NEWLINE][ICON_BULLET]因低效率管理全國[ICON_HAPPINESS_4]不滿增加4%。
+				[NEWLINE][ICON_BULLET]消耗8[ICON_RES_CONSUMER]商品。
+				[NEWLINE][ICON_BULLET]本城購買建造項目所需的[ICON_GOLD]金錢增加10%。
+				[NEWLINE][ICON_BULLET]本城訓練的軍事單位的最大經驗值為60。
+				[NEWLINE][ICON_BULLET]本城[ICON_FOOD][ICON_PRODUCTION][ICON_GOLD][ICON_RESEARCH][ICON_CULTURE]產出總量降低10%。
+				[NEWLINE][NEWLINE]如果你將市政廳出售，本城市將轉化為傀儡城市，但會有一定的[COLOR_NEGATIVE_TEXT]無政府時間[ENDCOLOR]（回合數等於人口的一半）。
+			</Text>
 		</Row>
 
 		<Row>
@@ -2698,7 +2737,18 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_CITY_HALL_LV5_HELP</Tag>
-			<Text>[ICON_BULLET]本城市的管理效率為[COLOR_YIELD_GOLD]極低[ENDCOLOR]。[NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]不提供[ENDCOLOR][ICON_RES_MANPOWER]人力。[NEWLINE][ICON_BULLET]維護費：24[ICON_GOLD]金。[NEWLINE][ICON_BULLET]8點額外的全國[ICON_HAPPINESS_4]不滿。[NEWLINE][ICON_BULLET]因低效率管理全國[ICON_HAPPINESS_4]不滿增加5%。[NEWLINE][ICON_BULLET]消耗16[ICON_RES_CONSUMER]商品。[NEWLINE][NEWLINE]如果你將市政廳出售，本城市將轉化為傀儡城市，但會有一定的[COLOR_NEGATIVE_TEXT]無政府時間[ENDCOLOR]（回合數等於人口的一半）。</Text>
+			<Text>
+				[ICON_BULLET]本城市的管理效率為[COLOR_YIELD_GOLD]極低[ENDCOLOR]。
+				[NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]不提供[ENDCOLOR][ICON_RES_MANPOWER]人力。
+				[NEWLINE][ICON_BULLET]維護費：24[ICON_GOLD]金。
+				[NEWLINE][ICON_BULLET]10點額外的[ICON_HAPPINESS_4]不滿。
+				[NEWLINE][ICON_BULLET]因低效率管理全國[ICON_HAPPINESS_4]不滿增加5%。
+				[NEWLINE][ICON_BULLET]消耗8[ICON_RES_CONSUMER]商品。
+				[NEWLINE][ICON_BULLET]本城購買建造項目所需的[ICON_GOLD]金錢增加20%。
+				[NEWLINE][ICON_BULLET]本城訓練的軍事單位的最大經驗值為30。
+				[NEWLINE][ICON_BULLET]本城[ICON_FOOD][ICON_PRODUCTION][ICON_GOLD][ICON_RESEARCH][ICON_CULTURE]產出總量降低15%。
+				[NEWLINE][NEWLINE]如果你將市政廳出售，本城市將轉化為傀儡城市，但會有一定的[COLOR_NEGATIVE_TEXT]無政府時間[ENDCOLOR]（回合數等於人口的一半）。
+			</Text>
 		</Row>
 		
 		<Row>
@@ -2768,51 +2818,81 @@
 			<Text>[ICON_CITY_STATE]法院</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_COURTHOUSE_HELP">
-			<Text>消除來自[ICON_OCCUPIED]被佔領城市的額外[ICON_HAPPINESS_4]不滿。[NEWLINE][NEWLINE]每3[ICON_CITIZEN]人口+1[ICON_GOLD]維護費。</Text>
+			<Text>
+				[ICON_BULLET]消除來自[ICON_OCCUPIED]被佔領城市的額外[ICON_HAPPINESS_4]不滿。
+				[NEWLINE][ICON_BULLET]每3[ICON_CITIZEN]人口+1[ICON_GOLD]維護費。
+			</Text>
 		</Replace>
 	
 		<Replace Tag="TXT_KEY_BUILDING_CONSTABLE">
 			<Text>[ICON_CITYBANNER_CITY_LV2]治安署</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_CONSTABLE_HELP">
-			<Text>只能建造在二級城市。[NEWLINE][NEWLINE]消除因低效率城市管理導致的額外全國[ICON_HAPPINESS_4]不滿。[NEWLINE][NEWLINE]每6[ICON_CITIZEN]人口+1[ICON_GOLD]維護費。</Text>
+			<Text>
+				[ICON_BULLET]只能建造在二級城市。
+				[NEWLINE][ICON_BULLET]消除因低效率城市管理導致的全國[ICON_HAPPINESS_4]不滿。
+				[NEWLINE][ICON_BULLET]每6[ICON_CITIZEN]人口+1[ICON_GOLD]維護費。
+			</Text>
 		</Replace>
-	
+
 		<Row>
 			<Tag>TXT_KEY_BUILDING_ROMAN_SENATE</Tag>
 			<Text>[ICON_CITYBANNER_CITY_LV2]元老院</Text>
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_ROMAN_SENATE_PEDIA</Tag>
-			<Text>在古代羅馬時，元老院兼有立法和管理權的國家機關、最初是氏族長者會議，共和時期前任國家長官等其他大奴隸主也進入元老院。元老院有權批准、認可法律，並通過執政官掌管財政外交，統轄行省和實施重大宗教措施等。帝國時期，政權日益集中於皇帝，元老院實權日削，已失去其原來的地位，但仍然是貴族統治的支柱。</Text>
+			<Text>在古代羅馬時，元老院兼有立法和管理權的國家機關、最初是氏族長者會議，共和時期前任國家長官等其他大奴隸主也進入元老院。元老院有權批準、認可法律，並通過執政官掌管財政外交，統轄行省和實施重大宗教措施等。帝國時期，政權日益集中於皇帝，元老院實權日削，已失去其原來的地位，但仍然是貴族統治的支柱。</Text>
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_ROMAN_SENATE_HELP</Tag>
-			<Text>只能建造在二級城市。[NEWLINE][NEWLINE]消除因低效率城市管理導致的額外全國[ICON_HAPPINESS_4]不滿。[NEWLINE][NEWLINE]每6[ICON_CITIZEN]人口+1[ICON_GOLD]維護費。</Text>
+			<Text>
+				[ICON_BULLET]只能建造在二級城市。
+				[NEWLINE][ICON_BULLET]消除因低效率城市管理導致的全國[ICON_HAPPINESS_4]不滿。
+				[NEWLINE][ICON_BULLET]每6[ICON_CITIZEN]人口+1[ICON_GOLD]維護費。
+			</Text>
 		</Row>
-		
+
 		<Row Tag="TXT_KEY_BUILDING_SHERIFF_OFFICE">
 			<Text>[ICON_CITYBANNER_CITY_LV3]審計署</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_SHERIFF_OFFICE_HELP">
-			<Text>只能建造在三級城市。[NEWLINE][NEWLINE]消除因低效率城市管理導致的額外全國[ICON_HAPPINESS_4]不滿。將政策[ICON_CULTURE]文化值閾值的增長降低為15%。[NEWLINE][NEWLINE]每5[ICON_CITIZEN]人口+1[ICON_GOLD]維護費。</Text>
+			<Text>
+				[ICON_BULLET]只能建造在三級城市。
+				[NEWLINE][ICON_BULLET]消除因低效率城市管理導致的全國[ICON_HAPPINESS_4]不滿。
+				[NEWLINE][ICON_BULLET]將政策[ICON_CULTURE]文化閾值的增長降低為15%。
+				[NEWLINE][ICON_BULLET]每5[ICON_CITIZEN]人口+1[ICON_GOLD]維護費。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_BUILDINGS_SHERIFF_OFFICE_TEXT">
-			<Text>審計作為一種監督機制，其實踐活動歷史悠久，但人們對審計的定義卻眾說紛紜。公認具有代表性且被廣泛引用的是美國會計學會1972年在其頒佈的《基本審計概念公告》中給出的審計定義，即“審計是指為了查明有關經濟活動和經濟現象的認定與所制定標準之間的一致程度，而客觀地收集和評估證據，並將結果傳遞給有利害關係的使用者的系統過程”。</Text>
+			<Text>審計作為壹種監督機制，其實踐活動歷史悠久，但人們對審計的定義卻眾說紛紜。公認具有代表性且被廣泛引用的是美國會計學會1972年在其頒布的《基本審計概念公告》中給出的審計定義，即“審計是指為了查明有關經濟活動和經濟現象的認定與所制定標準之間的壹致程度，而客觀地收集和評估證據，並將結果傳遞給有利害關系的使用者的系統過程”。</Text>
 		</Row>
-		
+
 		<Replace Tag="TXT_KEY_BUILDING_POLICE_STATION">
 			<Text>[ICON_CITYBANNER_CITY_LV4]警察局</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_POLICE_STATION_HELP">
-			<Text>只能建造在四級城市。[NEWLINE][NEWLINE]消除因低效率城市管理導致的額外全國[ICON_HAPPINESS_4]不滿。將政策[ICON_CULTURE]文化值閾值的增長降低為25%。[NEWLINE][NEWLINE]每4[ICON_CITIZEN]人口+1[ICON_GOLD]維護費。</Text>
+			<Text>
+				[ICON_BULLET]只能建造在四級城市。
+				[NEWLINE][ICON_BULLET]消除因低效率城市管理導致的全國[ICON_HAPPINESS_4]不滿。
+				[NEWLINE][ICON_BULLET]將政策[ICON_CULTURE]文化閾值的增長降低為15%。
+				[NEWLINE][ICON_BULLET]本城訓練的軍事單位的最大經驗值+30。
+				[NEWLINE][ICON_BULLET]本城[ICON_FOOD][ICON_PRODUCTION][ICON_GOLD][ICON_RESEARCH][ICON_CULTURE]產出總量降低減少至5%。
+				[NEWLINE][ICON_BULLET]每4[ICON_CITIZEN]人口+1[ICON_GOLD]維護費。
+			</Text>
 		</Replace>
-		
+
 		<Row Tag="TXT_KEY_BUILDING_PROCURATORATE">
 			<Text>[ICON_CITYBANNER_CITY_LV5]地檢署</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_PROCURATORATE_HELP">
-			<Text>只能建造在五級城市。[NEWLINE][NEWLINE]消除因低效率城市管理導致的額外全國[ICON_HAPPINESS_4]不滿。將政策[ICON_CULTURE]文化值閾值的增長降低為25%。[NEWLINE][NEWLINE]每3[ICON_CITIZEN]人口+1[ICON_GOLD]維護費。</Text>
+			<Text>
+				[ICON_BULLET]只能建造在五級城市。
+				[NEWLINE][NEWLINE]消除因低效率城市管理導致的全國[ICON_HAPPINESS_4]不滿。
+				[NEWLINE][ICON_BULLET]將政策[ICON_CULTURE]文化閾值的增長降低為15%。
+				[NEWLINE][ICON_BULLET]本城訓練的軍事單位的最大經驗值+30。
+				[NEWLINE][ICON_BULLET]本城[ICON_FOOD][ICON_PRODUCTION][ICON_GOLD][ICON_RESEARCH][ICON_CULTURE]產出總量降低減少至10%。
+				[NEWLINE][NEWLINE]每3[ICON_CITIZEN]人口+1[ICON_GOLD]維護費。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_BUILDINGS_PROCURATORATE_TEXT">
 			<Text>檢察院通過行使國家檢察權來完成自己的任務。它對於危害國家安全案、危害公共安全案、侵犯公民人身權利民主權利案和其他重大犯罪案件，行使檢察權；對於公安機關偵查的案件進行審查，決定是否逮捕、起訴或者免於起訴；對於刑事案件提起公訴、支持公訴；對於公安機關、人民法院和監獄、看守所、勞動改造機關的活動是否合法，實行監督。</Text>
@@ -4584,138 +4664,153 @@
 	
 	<!--**************************** New UI TopPanel Texts*************************************** -->
 	
-			<Replace Tag="TXT_KEY_CO_PUBLIC_OPINION_CIVIL_RESISTANCE">
-				<Text>
-					[COLOR_YELLOW]和平抗爭[ENDCOLOR]
-				</Text>
-			</Replace>
-			<Replace Tag="TXT_KEY_CO_PUBLIC_OPINION_REVOLUTIONARY_WAVE">
-				<Text>
-					[COLOR_NEGATIVE_TEXT]革命浪潮[ENDCOLOR]
-				</Text>
-			</Replace>
-		
-		<Replace Tag="TXT_KEY_TP_CULTURE_CITY_COST">
-			<Text>所有直轄城市都會增加你推行政策的[ICON_CULTURE]文化值閾值。[NEWLINE][NEWLINE][ICON_BULLET]一級城市：+5%；[NEWLINE][ICON_BULLET]二級城市：+10%；[NEWLINE][ICON_BULLET]三級城市：+20%；[NEWLINE][ICON_BULLET]四級城市：+33%；[NEWLINE][ICON_BULLET]五級城市：+33%。[NEWLINE][NEWLINE]建造強化管理設施可以減少[ICON_CULTURE]文化值閾值的增加。</Text>
+		<Replace Tag="TXT_KEY_CO_PUBLIC_OPINION_CIVIL_RESISTANCE">
+			<Text>
+				[COLOR_YELLOW]和平抗爭[ENDCOLOR]
+			</Text>
 		</Replace>
-		
-			<Replace Tag="TXT_KEY_TP_CULTURE_CITY_COST_MOD">
-				<Text>所有直轄城市都會增加你推行政策的[ICON_CULTURE]文化值閾值。由於你推行了“代議制度”，文化閾值的增加被緩解了。[NEWLINE][NEWLINE][ICON_BULLET]一級城市：無；[NEWLINE][ICON_BULLET]二級城市：+5%；[NEWLINE][ICON_BULLET]三級城市：+15%；[NEWLINE][ICON_BULLET]四級城市：+28%；[NEWLINE][ICON_BULLET]五級城市：+28%。[NEWLINE][NEWLINE]建造強化管理設施可以減少[ICON_CULTURE]文化值閾值的增加。
-				</Text>
-			</Replace>
-		
-			<Row Tag="TXT_KEY_SP_UI_TOURISMBOOST_BY_HAPPINESS">
-				<Text>由你的國家總體[ICON_HAPPINESS_1]滿意度較高，你的[ICON_TOURISM]旅遊業績產出+</Text>
-			</Row>
-			<Row Tag="TXT_KEY_SP_UI_TOURISMBOOST_BY_NUM_GREAT_WORK">
-				<Text>來自傑作數量的加成: {1_num}%</Text>
-			</Row>
-
-			<Row Tag="TXT_KEY_SP_UI_SCIENCE_BY_HAPPINESS_NEW">
-				<Text>你的國家總體[ICON_HAPPINESS_1]滿意度較高，你的[ICON_RESEARCH]科研產出+{1_num}%</Text>
-			</Row>
-		
-			<Row Tag="TXT_KEY_SP_UI_HAPPINESS_CONSUMERGOODS_LOW">
-				<Text>由於你的[ICON_RES_CONSUMER]商品盈餘[COLOR_POSITIVE_TEXT]25[ENDCOLOR]個單位，所有城市-5%[ICON_HAPPINESS_4]不滿。</Text>
-			</Row>
-			<Row Tag="TXT_KEY_SP_UI_HAPPINESS_CONSUMERGOODS_MID">
-				<Text>由於你的[ICON_RES_CONSUMER]商品盈餘[COLOR_POSITIVE_TEXT]60[ENDCOLOR]個單位，所有城市-10%[ICON_HAPPINESS_4]不滿。</Text>
-			</Row>
-			<Row Tag="TXT_KEY_SP_UI_HAPPINESS_CONSUMERGOODS_HIGH">
-				<Text>由於你的[ICON_RES_CONSUMER]商品盈餘[COLOR_POSITIVE_TEXT]100[ENDCOLOR]個單位，所有城市-15%[ICON_HAPPINESS_4]不滿。</Text>
-			</Row>
-
-			<Row Tag="TXT_KEY_SP_UI_UNHAPPINESS_CONSUMERGOODS_LOW">
-				<Text>由於你的[ICON_RES_CONSUMER]商品供應短缺，所有城市+10%[ICON_HAPPINESS_4]不滿。</Text>
-			</Row>
-			<Row Tag="TXT_KEY_SP_UI_UNHAPPINESS_CONSUMERGOODS_MID">
-				<Text>由於你的[ICON_RES_CONSUMER]商品供應匱乏，所有城市+20%[ICON_HAPPINESS_4]不滿。</Text>
-			</Row>
-			<Row Tag="TXT_KEY_SP_UI_UNHAPPINESS_CONSUMERGOODS_HIGH">
-				<Text>由於你的[ICON_RES_CONSUMER]商品供應鏈幾乎崩潰，所有城市+33%[ICON_HAPPINESS_4]不滿！</Text>
-			</Row>
-
-			<Row Tag="TXT_KEY_SP_UI_HAPPINESS_CONSUMERGOODS_BONUS">
-				<Text>[NEWLINE][ICON_RES_CONSUMER]商品供應充足！[ICON_HAPPINESS_4]不滿度[COLOR_POSITIVE_TEXT]減少[ENDCOLOR]了</Text>
-			</Row>
-			<Row Tag="TXT_KEY_POLICY_MERCANTILISM_CONSUMERGOODS_BONUS">
-				<Text>
-					由於你采用了[COLOR_POSITIVE_TEXT]重商主義[ENDCOLOR]，充足[ICON_RES_CONSUMER]商品帶來的增益效果和上限+20%。
-				</Text>
-			</Row>
-			<Row Tag="TXT_KEY_SP_UI_HAPPINESS_CONSUMERGOODS_PENALTY">
-				<Text>[NEWLINE][ICON_RES_CONSUMER]商品供應不足！[COLOR_NEGATIVE_TEXT]不滿度[COLOR_POSITIVE_TEXT]增加[ENDCOLOR]了</Text>
-			</Row>
-
-			<Row Tag="TXT_KEY_SP_UI_FAITH_FROM_RELIGION">
-				<Text>由於[ICON_PEACE]信仰值的產出+{1_Num}全國[ICON_HAPPINESS_1]滿意度。</Text>
-			</Row>
-		
-			<Row Tag="TXT_KEY_SP_UI_ELECTRICITY_EFFECTS_GENERAL">
-				<Text>進入電氣時代後，你的[ICON_RES_ELECTRICITY]電力供應將會影響帝國的[ICON_PRODUCTION]生產力、[ICON_RESEARCH]科技值和[ICON_GOLD]金幣產出。</Text>
-			</Row>
+		<Replace Tag="TXT_KEY_CO_PUBLIC_OPINION_REVOLUTIONARY_WAVE">
+			<Text>
+				[COLOR_NEGATIVE_TEXT]革命浪潮[ENDCOLOR]
+			</Text>
+		</Replace>
 	
-			<Row Tag="TXT_KEY_SP_UI_ELECTRICITY_GOLD_BONUS_25">
-				<Text>由於你的[ICON_RES_ELECTRICITY]電力盈餘[COLOR_POSITIVE_TEXT]60[ENDCOLOR]個單位，你所有城市+25%[ICON_GOLD]金幣產出。</Text>
-			</Row>
-			<Row Tag="TXT_KEY_SP_UI_ELECTRICITY_GOLD_BONUS_10">
-				<Text>由於你的[ICON_RES_ELECTRICITY]電力盈餘[COLOR_POSITIVE_TEXT]25[ENDCOLOR]個單位，你所有城市+10%[ICON_GOLD]金幣產出。</Text>
-			</Row>
-			<Row Tag="TXT_KEY_SP_UI_ELECTRICITY_GOLD_PENALTY_10">
-				<Text>由於你的[ICON_RES_ELECTRICITY]電力供應不足，你所有城市-10%[ICON_GOLD]金幣產出！</Text>
-			</Row>			
-			<Row Tag="TXT_KEY_SP_UI_ELECTRICITY_GOLD_PENALTY_25">
-				<Text>由於你的[ICON_RES_ELECTRICITY]電力供應缺口達到[COLOR_NEGATIVE_TEXT]10[ENDCOLOR]個單位，你所有城市-25%[ICON_GOLD]金幣產出！</Text>
-			</Row>
-			<Row Tag="TXT_KEY_SP_UI_ELECTRICITY_GOLD_PENALTY_50">
-				<Text>由於你的[ICON_RES_ELECTRICITY]電力供應缺口達到[COLOR_NEGATIVE_TEXT]25[ENDCOLOR]個單位，你所有城市-50%[ICON_GOLD]金幣產出！</Text>
-			</Row>
-			<Row Tag="TXT_KEY_SP_UI_ELECTRICITY_GOLD_PENALTY_99">
-				<Text>由於你的[ICON_RES_ELECTRICITY]電力供應缺口達到[COLOR_NEGATIVE_TEXT]60[ENDCOLOR]個單位，你所有城市-99%[ICON_GOLD]金幣產出！</Text>
-			</Row>
-			
-			<Replace Tag="TXT_KEY_TP_SCIENCE_FROM_HAPPINESS">
-				<Text>點[ICON_RESEARCH]科技值值增長（由於全國額外滿意度）。</Text>
-			</Replace>
-			<Row Tag="TXT_KEY_SP_UI_SCIENCE_FROM_ITR_POLICY">
-				<Text>點[ICON_RESEARCH]科技值值增長（由於國際商路）。</Text>
-			</Row>
-			
-			<Row Tag="TXT_KEY_SP_UI_ELECTRICITY_EFFECTS_BONUS">
-				<Text> 點[ICON_RESEARCH]科技值值增長（由於充裕的[ICON_RES_ELECTRICITY]電力供應）。</Text>
-			</Row>
-			<Row Tag="TXT_KEY_SP_UI_ELECTRICITY_EFFECTS_PENALTY">
-				<Text>點[ICON_RESEARCH]科技值值增長（由於充足的[ICON_RES_ELECTRICITY]電力供應）。</Text>
-			</Row>
-			<Row Tag="TXT_KEY_SP_UI_ELECTRICITY_SCIENCE_PENALTY_10">
-				<Text>由於你的[ICON_RES_ELECTRICITY]電力供應不足，你所有城市-10%[ICON_RESEARCH]科技值產出！</Text>
-			</Row>
-			<Row Tag="TXT_KEY_SP_UI_ELECTRICITY_SCIENCE_PENALTY_25">
-				<Text>由於你的[ICON_RES_ELECTRICITY]電力供應缺口達到[COLOR_NEGATIVE_TEXT]10[ENDCOLOR]個單位，你所有城市-25%[ICON_RESEARCH]科技值產出！</Text>
-			</Row>
-			<Row Tag="TXT_KEY_SP_UI_ELECTRICITY_SCIENCE_PENALTY_50">
-				<Text>由於你的[ICON_RES_ELECTRICITY]電力供應缺口達到[COLOR_NEGATIVE_TEXT]25[ENDCOLOR]個單位，你所有城市-50%[ICON_RESEARCH]科技值產出！</Text>
-			</Row>
-			<Row Tag="TXT_KEY_SP_UI_ELECTRICITY_SCIENCE_PENALTY_99">
-				<Text>由於你的[ICON_RES_ELECTRICITY]電力供應缺口達到[COLOR_NEGATIVE_TEXT]60[ENDCOLOR]個單位，你所有城市-99%[ICON_RESEARCH]科技值產出！</Text>
-			</Row>
+		<Replace Tag="TXT_KEY_TP_CULTURE_CITY_COST">
+			<Text>
+				所有直轄城市都會增加你推行政策的[ICON_CULTURE]文化值閾值。
+				[NEWLINE][NEWLINE][ICON_BULLET]一級城市：+5%；
+				[NEWLINE][ICON_BULLET]二級城市：+10%；
+				[NEWLINE][ICON_BULLET]三級城市：+20%；
+				[NEWLINE][ICON_BULLET]四級城市：+20%；
+				[NEWLINE][ICON_BULLET]五級城市：+25%。
+				[NEWLINE][NEWLINE]建造強化管理設施可以減少[ICON_CULTURE]文化值閾值的增加。
+			</Text>
+		</Replace>
 	
-			<Row Tag="TXT_KEY_SP_UI_MANPOWER_DISCOUNT">
-				<Text>[NEWLINE]你擁有充足的[ICON_RES_MANPOWER]人力資源！所有城市購買建築和單位的[ICON_GOLD]價格[COLOR_POSITIVE_TEXT]減少[ENDCOLOR]了</Text>
-			</Row>
+		<Replace Tag="TXT_KEY_TP_CULTURE_CITY_COST_MOD">
+			<Text>
+				所有直轄城市都會增加你推行政策的[ICON_CULTURE]文化值閾值。由於你推行了“代議制度”，文化閾值的增加被緩解了。
+				[NEWLINE][NEWLINE][ICON_BULLET]一級城市：無；
+				[NEWLINE][ICON_BULLET]二級城市：+5%；
+				[NEWLINE][ICON_BULLET]三級城市：+15%；
+				[NEWLINE][ICON_BULLET]四級城市：+15%；
+				[NEWLINE][ICON_BULLET]五級城市：+20%。
+				[NEWLINE][NEWLINE]建造強化管理設施可以減少[ICON_CULTURE]文化值閾值的增加。
+			</Text>
+		</Replace>
+	
+		<Row Tag="TXT_KEY_SP_UI_TOURISMBOOST_BY_HAPPINESS">
+			<Text>由你的國家總體[ICON_HAPPINESS_1]滿意度較高，你的[ICON_TOURISM]旅遊業績產出+</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_UI_TOURISMBOOST_BY_NUM_GREAT_WORK">
+			<Text>來自傑作數量的加成: {1_num}%</Text>
+		</Row>
 
-			<Row Tag="TXT_KEY_SP_UI_DISCOUNT_MANPOWER_BONUS_33">
-				<Text>由於你的[ICON_RES_MANPOWER]人力資源盈餘[COLOR_POSITIVE_TEXT]60[ENDCOLOR]個單位，你購買建築和單位的[ICON_GOLD]價格-33%。</Text>
-			</Row>
-			<Row Tag="TXT_KEY_SP_UI_DISCOUNT_MANPOWER_BONUS_15">
-				<Text>由於你的[ICON_RES_MANPOWER]人力資源盈餘[COLOR_POSITIVE_TEXT]25[ENDCOLOR]個單位，你購買建築和單位的[ICON_GOLD]價格-15%。</Text>
-			</Row>
-			<Row Tag="TXT_KEY_SP_UI_DISCOUNT_MANPOWER_PENALTY_15">
-				<Text>由於你的[ICON_RES_MANPOWER]人力資源供應不足，你購買建築和單位的[ICON_GOLD]價格+15%！</Text>
-			</Row>
-			<Row Tag="TXT_KEY_SP_UI_DISCOUNT_MANPOWER_PENALTY_33">
-				<Text>由於你的[ICON_RES_MANPOWER]人力資源缺口達到[COLOR_NEGATIVE_TEXT]10[ENDCOLOR]個單位，你購買建築和單位的[ICON_GOLD]價格+33%！</Text>
-			</Row>
+		<Row Tag="TXT_KEY_SP_UI_SCIENCE_BY_HAPPINESS_NEW">
+			<Text>你的國家總體[ICON_HAPPINESS_1]滿意度較高，你的[ICON_RESEARCH]科研產出+{1_num}%</Text>
+		</Row>
+	
+		<Row Tag="TXT_KEY_SP_UI_HAPPINESS_CONSUMERGOODS_LOW">
+			<Text>由於你的[ICON_RES_CONSUMER]商品盈餘[COLOR_POSITIVE_TEXT]25[ENDCOLOR]個單位，所有城市-5%[ICON_HAPPINESS_4]不滿。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_UI_HAPPINESS_CONSUMERGOODS_MID">
+			<Text>由於你的[ICON_RES_CONSUMER]商品盈餘[COLOR_POSITIVE_TEXT]60[ENDCOLOR]個單位，所有城市-10%[ICON_HAPPINESS_4]不滿。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_UI_HAPPINESS_CONSUMERGOODS_HIGH">
+			<Text>由於你的[ICON_RES_CONSUMER]商品盈餘[COLOR_POSITIVE_TEXT]100[ENDCOLOR]個單位，所有城市-15%[ICON_HAPPINESS_4]不滿。</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_SP_UI_UNHAPPINESS_CONSUMERGOODS_LOW">
+			<Text>由於你的[ICON_RES_CONSUMER]商品供應短缺，所有城市+10%[ICON_HAPPINESS_4]不滿。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_UI_UNHAPPINESS_CONSUMERGOODS_MID">
+			<Text>由於你的[ICON_RES_CONSUMER]商品供應匱乏，所有城市+20%[ICON_HAPPINESS_4]不滿。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_UI_UNHAPPINESS_CONSUMERGOODS_HIGH">
+			<Text>由於你的[ICON_RES_CONSUMER]商品供應鏈幾乎崩潰，所有城市+33%[ICON_HAPPINESS_4]不滿！</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_SP_UI_HAPPINESS_CONSUMERGOODS_BONUS">
+			<Text>[NEWLINE][ICON_RES_CONSUMER]商品供應充足！[ICON_HAPPINESS_4]不滿度[COLOR_POSITIVE_TEXT]減少[ENDCOLOR]了</Text>
+		</Row>
+		<Row Tag="TXT_KEY_POLICY_MERCANTILISM_CONSUMERGOODS_BONUS">
+			<Text>
+				由於你采用了[COLOR_POSITIVE_TEXT]重商主義[ENDCOLOR]，充足[ICON_RES_CONSUMER]商品帶來的增益效果和上限+20%。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_UI_HAPPINESS_CONSUMERGOODS_PENALTY">
+			<Text>[NEWLINE][ICON_RES_CONSUMER]商品供應不足！[COLOR_NEGATIVE_TEXT]不滿度[COLOR_POSITIVE_TEXT]增加[ENDCOLOR]了</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_SP_UI_FAITH_FROM_RELIGION">
+			<Text>由於[ICON_PEACE]信仰值的產出+{1_Num}全國[ICON_HAPPINESS_1]滿意度。</Text>
+		</Row>
+	
+		<Row Tag="TXT_KEY_SP_UI_ELECTRICITY_EFFECTS_GENERAL">
+			<Text>進入電氣時代後，你的[ICON_RES_ELECTRICITY]電力供應將會影響帝國的[ICON_PRODUCTION]生產力、[ICON_RESEARCH]科技值和[ICON_GOLD]金幣產出。</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_SP_UI_ELECTRICITY_GOLD_BONUS_25">
+			<Text>由於你的[ICON_RES_ELECTRICITY]電力盈餘[COLOR_POSITIVE_TEXT]60[ENDCOLOR]個單位，你所有城市+25%[ICON_GOLD]金幣產出。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_UI_ELECTRICITY_GOLD_BONUS_10">
+			<Text>由於你的[ICON_RES_ELECTRICITY]電力盈餘[COLOR_POSITIVE_TEXT]25[ENDCOLOR]個單位，你所有城市+10%[ICON_GOLD]金幣產出。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_UI_ELECTRICITY_GOLD_PENALTY_10">
+			<Text>由於你的[ICON_RES_ELECTRICITY]電力供應不足，你所有城市-10%[ICON_GOLD]金幣產出！</Text>
+		</Row>			
+		<Row Tag="TXT_KEY_SP_UI_ELECTRICITY_GOLD_PENALTY_25">
+			<Text>由於你的[ICON_RES_ELECTRICITY]電力供應缺口達到[COLOR_NEGATIVE_TEXT]10[ENDCOLOR]個單位，你所有城市-25%[ICON_GOLD]金幣產出！</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_UI_ELECTRICITY_GOLD_PENALTY_50">
+			<Text>由於你的[ICON_RES_ELECTRICITY]電力供應缺口達到[COLOR_NEGATIVE_TEXT]25[ENDCOLOR]個單位，你所有城市-50%[ICON_GOLD]金幣產出！</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_UI_ELECTRICITY_GOLD_PENALTY_99">
+			<Text>由於你的[ICON_RES_ELECTRICITY]電力供應缺口達到[COLOR_NEGATIVE_TEXT]60[ENDCOLOR]個單位，你所有城市-99%[ICON_GOLD]金幣產出！</Text>
+		</Row>
+		
+		<Replace Tag="TXT_KEY_TP_SCIENCE_FROM_HAPPINESS">
+			<Text>點[ICON_RESEARCH]科技值值增長（由於全國額外滿意度）。</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_SP_UI_SCIENCE_FROM_ITR_POLICY">
+			<Text>點[ICON_RESEARCH]科技值值增長（由於國際商路）。</Text>
+		</Row>
+		
+		<Row Tag="TXT_KEY_SP_UI_ELECTRICITY_EFFECTS_BONUS">
+			<Text> 點[ICON_RESEARCH]科技值值增長（由於充裕的[ICON_RES_ELECTRICITY]電力供應）。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_UI_ELECTRICITY_EFFECTS_PENALTY">
+			<Text>點[ICON_RESEARCH]科技值值增長（由於充足的[ICON_RES_ELECTRICITY]電力供應）。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_UI_ELECTRICITY_SCIENCE_PENALTY_10">
+			<Text>由於你的[ICON_RES_ELECTRICITY]電力供應不足，你所有城市-10%[ICON_RESEARCH]科技值產出！</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_UI_ELECTRICITY_SCIENCE_PENALTY_25">
+			<Text>由於你的[ICON_RES_ELECTRICITY]電力供應缺口達到[COLOR_NEGATIVE_TEXT]10[ENDCOLOR]個單位，你所有城市-25%[ICON_RESEARCH]科技值產出！</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_UI_ELECTRICITY_SCIENCE_PENALTY_50">
+			<Text>由於你的[ICON_RES_ELECTRICITY]電力供應缺口達到[COLOR_NEGATIVE_TEXT]25[ENDCOLOR]個單位，你所有城市-50%[ICON_RESEARCH]科技值產出！</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_UI_ELECTRICITY_SCIENCE_PENALTY_99">
+			<Text>由於你的[ICON_RES_ELECTRICITY]電力供應缺口達到[COLOR_NEGATIVE_TEXT]60[ENDCOLOR]個單位，你所有城市-99%[ICON_RESEARCH]科技值產出！</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_SP_UI_MANPOWER_DISCOUNT">
+			<Text>[NEWLINE]你擁有充足的[ICON_RES_MANPOWER]人力資源！所有城市購買建築和單位的[ICON_GOLD]價格[COLOR_POSITIVE_TEXT]減少[ENDCOLOR]了</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_SP_UI_DISCOUNT_MANPOWER_BONUS_33">
+			<Text>由於你的[ICON_RES_MANPOWER]人力資源盈餘[COLOR_POSITIVE_TEXT]60[ENDCOLOR]個單位，你購買建築和單位的[ICON_GOLD]價格-33%。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_UI_DISCOUNT_MANPOWER_BONUS_15">
+			<Text>由於你的[ICON_RES_MANPOWER]人力資源盈餘[COLOR_POSITIVE_TEXT]25[ENDCOLOR]個單位，你購買建築和單位的[ICON_GOLD]價格-15%。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_UI_DISCOUNT_MANPOWER_PENALTY_15">
+			<Text>由於你的[ICON_RES_MANPOWER]人力資源供應不足，你購買建築和單位的[ICON_GOLD]價格+15%！</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_UI_DISCOUNT_MANPOWER_PENALTY_33">
+			<Text>由於你的[ICON_RES_MANPOWER]人力資源缺口達到[COLOR_NEGATIVE_TEXT]10[ENDCOLOR]個單位，你購買建築和單位的[ICON_GOLD]價格+33%！</Text>
+		</Row>
 		
 	<!--********************************************** New Popluation Rules Notifiction Texts ********************************************** -->
 	
@@ -13938,6 +14033,9 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_SV_ICONS_LOCAL_SP" >
 			<Text>本地</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_YIELD_MULTIPLIER" >
+			<Text>總產出</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PEDIA_REQ_BLDG_LABEL2_SP">
 			<Text>至少擁有下列建築中的一種:</Text>
