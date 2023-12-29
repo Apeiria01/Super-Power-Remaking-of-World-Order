@@ -130,9 +130,9 @@
 		<Row Tag="TXT_KEY_BUILDING_POLICY_COST_MODIFIER">
 			<Text>政策阈值上升: </Text>
 		</Row>
-		
-		
-	<!--******************************Specialists Building Titles for Sorting********************************-->
+
+
+		<!--******************************Specialists Building Titles for Sorting********************************-->
 
 		<Replace Tag="TXT_KEY_BUILDING_GRANARY">
 			<Text>[ICON_FOOD]粮仓</Text>
@@ -320,8 +320,6 @@
 		<Replace Tag="TXT_KEY_BUILDING_THEATRE">
 			<Text>[ICON_HAPPINESS_1]动物园</Text>
 		</Replace>
-
-
 
 
 		<!--******************************Buildings Texts********************************-->
@@ -513,10 +511,10 @@
 
 		<Replace Tag="TXT_KEY_BUILDING_STONE_WORKS_HELP">
 			<Text>
-			所在城市每处已开发的[ICON_RES_MARBLE]大理石和[ICON_RES_STONE]花岗岩资源+1[ICON_PRODUCTION]产能。
-			[NEWLINE][NEWLINE]城市必须至少拥有一处已修建采石场的上述资源。
-			[NEWLINE][NEWLINE]研发炸药之后[COLOR_NEGATIVE_TEXT]过期[ENDCOLOR]（不再提供产出且不能建造）。
-			[NEWLINE][NEWLINE]研发因特网后+2[ICON_TOURISM]魅力。
+				所在城市每处已开发的[ICON_RES_MARBLE]大理石和[ICON_RES_STONE]花岗岩资源+1[ICON_PRODUCTION]产能。
+				[NEWLINE][NEWLINE]城市必须至少拥有一处已修建采石场的上述资源。
+				[NEWLINE][NEWLINE]研发炸药之后[COLOR_NEGATIVE_TEXT]过期[ENDCOLOR]（不再提供产出且不能建造）。
+				[NEWLINE][NEWLINE]研发因特网后+2[ICON_TOURISM]魅力。
 			</Text>
 		</Replace>
 
@@ -735,11 +733,11 @@
 		</Row>
 
 		<Replace Tag="TXT_KEY_BUILDING_PAPER_MAKER_HELP">
-      <Text>
-        允许在本国的商路之间输送[ICON_PRODUCTION]产能。该建筑不会过期。
-        [NEWLINE][NEWLINE]每一座造纸坊使全国范围内的单位、建筑和项目的产能花费-2%，这个效果的上限是-30%。
-        [NEWLINE][NEWLINE]研发因特网后+2[ICON_TOURISM]魅力。
-      </Text>
+			<Text>
+				允许在本国的商路之间输送[ICON_PRODUCTION]产能。该建筑不会过期。
+				[NEWLINE][NEWLINE]每一座造纸坊使全国范围内的单位、建筑和项目的产能花费-2%，这个效果的上限是-30%。
+				[NEWLINE][NEWLINE]研发因特网后+2[ICON_TOURISM]魅力。
+			</Text>
 		</Replace>
 
 		<Row>
@@ -1002,8 +1000,8 @@
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_BUILDING_SONGHAI_MARKET_TEXT">
 			<Text>
-			旺加拉人是索宁克人的分支，作为散居在整个西非萨赫勒-苏丹地区的商人阶层专门从事跨撒哈拉和金粉秘密贸易。
-			[NEWLINE][NEWLINE]在桑海帝国时期，旺加拉人主要从事黄金和盐等矿物的贸易。他们在西非各地建立了散居社区，并在他们定居的城市建立了商会和清真寺。
+				旺加拉人是索宁克人的分支，作为散居在整个西非萨赫勒-苏丹地区的商人阶层专门从事跨撒哈拉和金粉秘密贸易。
+				[NEWLINE][NEWLINE]在桑海帝国时期，旺加拉人主要从事黄金和盐等矿物的贸易。他们在西非各地建立了散居社区，并在他们定居的城市建立了商会和清真寺。
 			</Text>
 		</Row>
 
@@ -1315,19 +1313,19 @@
 		<!--******************************World Wonders*********************************-->
 
 		<!-- Description tags -->
-		<Delete Tag="TXT_KEY_BUILDING_MAUSOLEUM_HALICARNASSUS"/>
-		<Delete Tag="TXT_KEY_WONDER_MAUSOLEUM_HALICARNASSUS_HELP"/>
-		<Delete Tag="TXT_KEY_WONDER_MAUSOLEUM_HALICARNASSUS_QUOTE"/>
-		<Delete Tag="TXT_KEY_WONDER_MAUSOLEUM_HALICARNASSUS_DESC"/>
+		<Delete Tag="TXT_KEY_BUILDING_MAUSOLEUM_HALICARNASSUS" />
+		<Delete Tag="TXT_KEY_WONDER_MAUSOLEUM_HALICARNASSUS_HELP" />
+		<Delete Tag="TXT_KEY_WONDER_MAUSOLEUM_HALICARNASSUS_QUOTE" />
+		<Delete Tag="TXT_KEY_WONDER_MAUSOLEUM_HALICARNASSUS_DESC" />
 
-		<Delete Tag="TXT_KEY_BUILDING_TEMPLE_ARTEMIS"/>
-		<Delete Tag="TXT_KEY_WONDER_TEMPLE_ARTEMIS_HELP"/>
-		<Delete Tag="TXT_KEY_WONDER_TEMPLE_ARTEMIS_QUOTE"/>
-		<Delete Tag="TXT_KEY_WONDER_TEMPLE_ARTEMIS_DESC"/>
+		<Delete Tag="TXT_KEY_BUILDING_TEMPLE_ARTEMIS" />
+		<Delete Tag="TXT_KEY_WONDER_TEMPLE_ARTEMIS_HELP" />
+		<Delete Tag="TXT_KEY_WONDER_TEMPLE_ARTEMIS_QUOTE" />
+		<Delete Tag="TXT_KEY_WONDER_TEMPLE_ARTEMIS_DESC" />
 
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_GREAT_LIBRARY_HELP" />
-			<Set Text="所有城市+15%[ICON_RESEARCH]科研产出。向所在城市赠送一个图书馆。拥有2个文学杰作展位。"/>
+			<Set Text="所有城市+15%[ICON_RESEARCH]科研产出。向所在城市赠送一个图书馆。拥有2个文学杰作展位。" />
 		</Update>
 
 		<Update>
@@ -1484,13 +1482,13 @@
 		</Update>
 
 		<Update>
-			<Where Tag="TXT_KEY_WONDER_UFFIZI_HELP"/>
-			<Set Text="获得一位免费的大艺术家。"/>
+			<Where Tag="TXT_KEY_WONDER_UFFIZI_HELP" />
+			<Set Text="获得一位免费的大艺术家。" />
 		</Update>
 
 		<Update>
-			<Where Tag="TXT_KEY_WONDER_LOUVRE_HELP"/>
-			<Set Text="需要开启美学政策树。获得一位免费的大艺术家。"/>
+			<Where Tag="TXT_KEY_WONDER_LOUVRE_HELP" />
+			<Set Text="需要开启美学政策树。获得一位免费的大艺术家。" />
 		</Update>
 
 		<Row Tag="TXT_KEY_BUILDING_MAUSOLEUM_HALICARNASSUS">
@@ -1502,7 +1500,7 @@
 		</Row>
 		<!-- Quote tags -->
 		<Row Tag="TXT_KEY_WONDER_MAUSOLEUM_HALICARNASSUS_QUOTE">
-			<Text>[NEWLINE]“英雄人物是以整个大地作为自己的陵墓的，他们的英名不仅在凿刻在有形的石碑上，也在千万世人的心中留下了无形的印记。”[NEWLINE]        —— 伯里克利[NEWLINE]</Text>
+			<Text>[NEWLINE]“英雄人物是以整个大地作为自己的陵墓的，他们的英名不仅在凿刻在有形的石碑上，也在千万世人的心中留下了无形的印记。”[NEWLINE] —— 伯里克利[NEWLINE]</Text>
 		</Row>
 		<!-- Pedia tags -->
 		<Row Tag="TXT_KEY_WONDER_MAUSOLEUM_HALICARNASSUS_DESC">
@@ -1519,7 +1517,7 @@
 		</Row>
 		<!-- Quote tags -->
 		<Row Tag="TXT_KEY_WONDER_TEMPLE_ARTEMIS_QUOTE">
-			<Text>[NEWLINE]“森林在世人心中享有崇高的地位，并非仅仅因为为它的美丽，还有一些微妙的东西，例如古老树木所散发出来的独特气息，能够如此奇妙地让疲惫的精神重新振奋起来。”[NEWLINE]        —— 罗伯特·路易斯·斯蒂文森[NEWLINE]</Text>
+			<Text>[NEWLINE]“森林在世人心中享有崇高的地位，并非仅仅因为为它的美丽，还有一些微妙的东西，例如古老树木所散发出来的独特气息，能够如此奇妙地让疲惫的精神重新振奋起来。”[NEWLINE] —— 罗伯特·路易斯·斯蒂文森[NEWLINE]</Text>
 		</Row>
 		<!-- Pedia tags -->
 		<Row Tag="TXT_KEY_WONDER_TEMPLE_ARTEMIS_DESC">
@@ -1537,9 +1535,8 @@
 			<Text>所有马戏场，赛马场，动物园，游乐园，主题公园和体育场+1[ICON_HAPPINESS_1]本地快乐。</Text>
 		</Replace>
 		<Row Tag="TXT_KEY_WONDER_COLOSSEUM_QUOTE">
-			<Text>[NEWLINE]“斗兽场矗立，则罗马岿然;斗兽场坍圮，则罗马湮灭。罗马湮灭，则天下乱。”[NEWLINE]        —— 拜伦[NEWLINE]</Text>
+			<Text>[NEWLINE]“斗兽场矗立，则罗马岿然;斗兽场坍圮，则罗马湮灭。罗马湮灭，则天下乱。”[NEWLINE] —— 拜伦[NEWLINE]</Text>
 		</Row>
-
 
 
 		<!-- Description tags -->
@@ -1552,7 +1549,7 @@
 		</Row>
 		<!-- Quote tags -->
 		<Row Tag="TXT_KEY_WONDER_CAIRO_QUOTE">
-			<Text>[NEWLINE]“以此墙我可使两郭连为一体，孤军亦能守双城。”[NEWLINE]        —— 萨拉丁[NEWLINE]</Text>
+			<Text>[NEWLINE]“以此墙我可使两郭连为一体，孤军亦能守双城。”[NEWLINE] —— 萨拉丁[NEWLINE]</Text>
 		</Row>
 		<!-- Pedia tags -->
 		<Row Tag="TXT_KEY_WONDER_CAIRO_PEDIA">
@@ -1569,7 +1566,7 @@
 		</Row>
 		<!-- Quote tags -->
 		<Row Tag="TXT_KEY_WONDER_HANSEATIC_LEAGUE_QUOTE">
-			<Text>[NEWLINE]“夫轻重强弱之形,诸侯合则强,孤则弱。”[NEWLINE]        —— 管子[NEWLINE]</Text>
+			<Text>[NEWLINE]“夫轻重强弱之形,诸侯合则强,孤则弱。”[NEWLINE] —— 管子[NEWLINE]</Text>
 		</Row>
 		<!-- Pedia tags -->
 		<Row Tag="TXT_KEY_WONDER_HANSEATIC_LEAGUE_DESC">
@@ -1585,7 +1582,7 @@
 		</Row>
 		<!-- Quote tags -->
 		<Row Tag="TXT_KEY_WONDER_MOTHERLAND_CALLS_QUOTE">
-			<Text>[NEWLINE]“个人离开社会不可能得到幸福，正如植物离开土地而被扔到荒漠不可能生存一样。”[NEWLINE]        —— 列夫·托尔斯泰[NEWLINE]</Text>
+			<Text>[NEWLINE]“个人离开社会不可能得到幸福，正如植物离开土地而被扔到荒漠不可能生存一样。”[NEWLINE] —— 列夫·托尔斯泰[NEWLINE]</Text>
 		</Row>
 		<!-- Pedia tags -->
 		<Row Tag="TXT_KEY_WONDER_MOTHERLAND_CALLS_DESC">
@@ -1601,7 +1598,7 @@
 		</Row>
 		<!-- Quote tags -->
 		<Row Tag="TXT_KEY_WONDER_HOOVER_DAM_QUOTE">
-			<Text>[NEWLINE]“前路虽有大坝悬崖阻拦，河流终将汇入大海。”[NEWLINE]        —— 埃拉·惠勒·威尔科克斯[NEWLINE]</Text>
+			<Text>[NEWLINE]“前路虽有大坝悬崖阻拦，河流终将汇入大海。”[NEWLINE] —— 埃拉·惠勒·威尔科克斯[NEWLINE]</Text>
 		</Row>
 		<!-- Pedia tags -->
 		<Row Tag="TXT_KEY_WONDER_HOOVER_DAM_DESC">
@@ -1617,7 +1614,7 @@
 		</Row>
 		<!-- Quote tags -->
 		<Row Tag="TXT_KEY_WONDER_ASWAN_DAM_QUOTE">
-			<Text>[NEWLINE]“人了解了自己，便了解了真主。”[NEWLINE]        —— 埃及谚语[NEWLINE]</Text>
+			<Text>[NEWLINE]“人了解了自己，便了解了真主。”[NEWLINE] —— 埃及谚语[NEWLINE]</Text>
 		</Row>
 		<!-- Pedia tags -->
 		<Row Tag="TXT_KEY_WONDER_ASWAN_DAM_DESC">
@@ -1634,7 +1631,7 @@
 		</Row>
 		<!-- Quote tags -->
 		<Row Tag="TXT_KEY_WONDER_POTALA_QUOTE">
-			<Text>[NEWLINE]“住在布达拉宫，我是雪域最大的王；流浪在拉萨街头，我是天下最美的情郎。”[NEWLINE]        —— 第六世达赖喇嘛·仓央嘉措[NEWLINE]</Text>
+			<Text>[NEWLINE]“住在布达拉宫，我是雪域最大的王；流浪在拉萨街头，我是天下最美的情郎。”[NEWLINE] —— 第六世达赖喇嘛·仓央嘉措[NEWLINE]</Text>
 		</Row>
 		<!-- Pedia tags -->
 		<Row Tag="TXT_KEY_WONDER_POTALA_PEDIA">
@@ -1655,12 +1652,12 @@
 		<!-- Help tags -->
 		<Row Tag="TXT_KEY_WONDER_SAN_MARCO_HELP">
 			<Text>
-			[ICON_BULLET]本城市杰作[ICON_TOURISM]魅力产出+50%。
-			[NEWLINE][ICON_BULLET]本城市[ICON_CULTURE]文化产出+50%。
-			[NEWLINE][ICON_BULLET]城市附近出现两位大艺术家。
-			[NEWLINE][ICON_BULLET]拥有4个美术杰作展位。
-			[NEWLINE][ICON_BULLET]本城市工作范围+1。
-			[NEWLINE][NEWLINE]必须在威尼斯拥有博物馆才能建造。
+				[ICON_BULLET]本城市杰作[ICON_TOURISM]魅力产出+50%。
+				[NEWLINE][ICON_BULLET]本城市[ICON_CULTURE]文化产出+50%。
+				[NEWLINE][ICON_BULLET]城市附近出现两位大艺术家。
+				[NEWLINE][ICON_BULLET]拥有4个美术杰作展位。
+				[NEWLINE][ICON_BULLET]本城市工作范围+1。
+				[NEWLINE][NEWLINE]必须在威尼斯拥有博物馆才能建造。
 			</Text>
 		</Row>
 		<!-- Pedia tags -->
@@ -1684,7 +1681,7 @@
 		</Row>
 		<!-- Quote tags -->
 		<Row Tag="TXT_KEY_WONDER_PORT_OF_ROTTERDAM_QUOTE">
-			<Text>[NEWLINE]“人生是海，金钱是船夫。如无船夫，度世维艰。”[NEWLINE]        —— 威克林[NEWLINE]</Text>
+			<Text>[NEWLINE]“人生是海，金钱是船夫。如无船夫，度世维艰。”[NEWLINE] —— 威克林[NEWLINE]</Text>
 		</Row>
 		<!-- Pedia tags -->
 		<Row Tag="TXT_KEY_WONDER_PORT_OF_ROTTERDAM_PEDIA">
@@ -1701,7 +1698,7 @@
 		</Row>
 		<!-- Quote tags -->
 		<Row Tag="TXT_KEY_WONDER_EMPIRE_QUOTE">
-			<Text>[NEWLINE]“纽约是个自来熟的城市，五分钟内就能让你仿佛待过五年。”[NEWLINE]        —— 托马斯·沃尔夫[NEWLINE]</Text>
+			<Text>[NEWLINE]“纽约是个自来熟的城市，五分钟内就能让你仿佛待过五年。”[NEWLINE] —— 托马斯·沃尔夫[NEWLINE]</Text>
 		</Row>
 		<!-- Pedia tags -->
 		<Row Tag="TXT_KEY_WONDER_EMPIRE_PEDIA">
@@ -1718,7 +1715,7 @@
 		</Row>
 		<!-- Quote tags -->
 		<Row Tag="TXT_KEY_WONDER_BAUHAUS_QUOTE">
-			<Text>[NEWLINE]“抽象是真实的，可能比自然还真实。”[NEWLINE]        —— 约瑟夫·亚伯斯[NEWLINE]</Text>
+			<Text>[NEWLINE]“抽象是真实的，可能比自然还真实。”[NEWLINE] —— 约瑟夫·亚伯斯[NEWLINE]</Text>
 		</Row>
 		<!-- Pedia tags -->
 		<Row Tag="TXT_KEY_WONDER_BAUHAUS_PEDIA">
@@ -1736,7 +1733,7 @@
 		<!-- Quote tags -->
 		<Row Tag="TXT_KEY_WONDER_YANGTZE_QUOTE">
 			<Text>
-				[NEWLINE]“更立西江石璧，截断巫山云雨，高峡出平湖。神女应无恙，当惊世界殊。”[NEWLINE]        —— 毛泽东《水调歌头 游泳》[NEWLINE]
+				[NEWLINE]“更立西江石璧，截断巫山云雨，高峡出平湖。神女应无恙，当惊世界殊。”[NEWLINE] —— 毛泽东《水调歌头 游泳》[NEWLINE]
 			</Text>
 		</Row>
 		<!-- Pedia tags -->
@@ -1753,7 +1750,7 @@
 		</Row>
 		<!-- Quote tags -->
 		<Row Tag="TXT_KEY_WONDER_TOKYO_METRO_QUOTE">
-			<Text>[NEWLINE]“民有、民治、民享的政府永世长存。”[NEWLINE]        —— 亚伯拉罕·林肯[NEWLINE]</Text>
+			<Text>[NEWLINE]“民有、民治、民享的政府永世长存。”[NEWLINE] —— 亚伯拉罕·林肯[NEWLINE]</Text>
 		</Row>
 		<!-- Pedia tags -->
 		<Row Tag="TXT_KEY_WONDER_TOKYO_METRO_PEDIA">
@@ -1776,7 +1773,7 @@
 		<!-- Quote tags -->
 		<Row Tag="TXT_KEY_WONDER_PEARL_TOWER_QUOTE">
 			<Text>
-				[NEWLINE]“我并不惧怕明天，因为我已经明白昨天的意义并深爱著今天。”[NEWLINE]         —— 威廉·艾伦·怀特[NEWLINE]
+				[NEWLINE]“我并不惧怕明天，因为我已经明白昨天的意义并深爱著今天。”[NEWLINE] —— 威廉·艾伦·怀特[NEWLINE]
 			</Text>
 		</Row>
 		<!-- Pedia tags -->
@@ -1795,7 +1792,7 @@
 		<!-- Quote tags -->
 		<Row Tag="TXT_KEY_WONDER_PETRONAS_QUOTE">
 			<Text>
-				[NEWLINE]“中空建筑的意义在于它内含的虚的空间，而非它存在的实的墙体。若能将结构设计出通往天空的门户，导往远方的路桥，则有限将与无限相连接。”[NEWLINE]        —— 塞萨尔·佩利[NEWLINE]
+				[NEWLINE]“中空建筑的意义在于它内含的虚的空间，而非它存在的实的墙体。若能将结构设计出通往天空的门户，导往远方的路桥，则有限将与无限相连接。”[NEWLINE] —— 塞萨尔·佩利[NEWLINE]
 			</Text>
 		</Row>
 		<!-- Pedia tags -->
@@ -1824,7 +1821,7 @@
 		</Row>
 		<!-- Quote tags -->
 		<Row Tag="TXT_KEY_WONDER_BURJ_TOWER_QUOTE">
-			<Text>[NEWLINE]“我们拥有的是钱能买到的最好的政府。”[NEWLINE]        —— 马克·吐温[NEWLINE]</Text>
+			<Text>[NEWLINE]“我们拥有的是钱能买到的最好的政府。”[NEWLINE] —— 马克·吐温[NEWLINE]</Text>
 		</Row>
 		<!-- Pedia tags -->
 		<Row Tag="TXT_KEY_WONDER_BURJ_TOWER_PEDIA">
@@ -1841,7 +1838,7 @@
 		</Row>
 		<!-- Quote tags -->
 		<Row Tag="TXT_KEY_WONDER_SPACE_ELEVATOR_QUOTE">
-			<Text>[NEWLINE]“他们说，来吧，我们要建造一座城和一座塔，塔顶通天，为要传扬我们的名，免得我们分散在全地上。”[NEWLINE]        —— 圣经·创世纪11:4[NEWLINE]</Text>
+			<Text>[NEWLINE]“他们说，来吧，我们要建造一座城和一座塔，塔顶通天，为要传扬我们的名，免得我们分散在全地上。”[NEWLINE] —— 圣经·创世纪11:4[NEWLINE]</Text>
 		</Row>
 		<!-- Pedia tags -->
 		<Row Tag="TXT_KEY_WONDER_SPACE_ELEVATOR_PEDIA">
@@ -1857,7 +1854,7 @@
 		</Row>
 		<!-- Quote tags -->
 		<Row Tag="TXT_KEY_WONDER_LARGE_HADRON_COLLIDER_QUOTE">
-			<Text>[NEWLINE]“自然喜欢躲藏起来。”[NEWLINE]        —— 赫拉克利特，《著作残篇》[NEWLINE]</Text>
+			<Text>[NEWLINE]“自然喜欢躲藏起来。”[NEWLINE] —— 赫拉克利特，《著作残篇》[NEWLINE]</Text>
 		</Row>
 		<!-- Pedia tags -->
 		<Row Tag="TXT_KEY_WONDER_LARGE_HADRON_COLLIDER_PEDIA">
@@ -1874,7 +1871,7 @@
 		</Row>
 		<!-- Quote tags -->
 		<Row Tag="TXT_KEY_WONDER_MEGACITY_PYRAMID_QUOTE">
-			<Text>[NEWLINE]“不管你拥有多么惊人的武器，不管你拥有多少可怜的机器人，只要离开土地就没办法生存。”[NEWLINE]        —— 宫崎骏《天空之城》[NEWLINE]</Text>
+			<Text>[NEWLINE]“不管你拥有多么惊人的武器，不管你拥有多少可怜的机器人，只要离开土地就没办法生存。”[NEWLINE] —— 宫崎骏《天空之城》[NEWLINE]</Text>
 		</Row>
 		<!-- Pedia tags -->
 		<Row Tag="TXT_KEY_WONDER_MEGACITY_PYRAMID_PEDIA">
@@ -1976,7 +1973,7 @@
 		</Row>
 		<!-- Quote tags -->
 		<Row Tag="TXT_KEY_WONDER_INDUSTRIAL_ZONE_QUOTE">
-			<Text>[NEWLINE]“没有工业，我们就会灭亡而不成其为独立国家。”[NEWLINE]        —— 列宁[NEWLINE]</Text>
+			<Text>[NEWLINE]“没有工业，我们就会灭亡而不成其为独立国家。”[NEWLINE] —— 列宁[NEWLINE]</Text>
 		</Row>
 
 		<!-- Description tags -->
@@ -2286,7 +2283,6 @@
 		</Row>
 
 
-
 		<!--****************************** New Buildings Texts**********************************-->
 
 		<Row>
@@ -2390,7 +2386,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_UNIT_SATELLITE_SPUTNIK_QUOTE</Tag>
-			<Text>[NEWLINE]“我们相信，当人们走出我们的星球时，他们会把民族间的分歧抛在脑后。”[NEWLINE]        —— 约翰·肯尼迪[NEWLINE]</Text>
+			<Text>[NEWLINE]“我们相信，当人们走出我们的星球时，他们会把民族间的分歧抛在脑后。”[NEWLINE] —— 约翰·肯尼迪[NEWLINE]</Text>
 		</Row>
 
 
@@ -2410,7 +2406,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_UNIT_SATELLITE_RECONNAISSANCE_QUOTE</Tag>
-			<Text>[NEWLINE]“知己知彼，百战不殆。”[NEWLINE]        —— 《孙子·谋攻篇》[NEWLINE]</Text>
+			<Text>[NEWLINE]“知己知彼，百战不殆。”[NEWLINE] —— 《孙子·谋攻篇》[NEWLINE]</Text>
 		</Row>
 
 
@@ -2428,7 +2424,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_UNIT_SATELLITE_GPS_QUOTE</Tag>
-			<Text>[NEWLINE]“跛足而不迷路的人，能赶过虽健步如飞却误入歧途的人。”[NEWLINE]        —— 培根[NEWLINE]</Text>
+			<Text>[NEWLINE]“跛足而不迷路的人，能赶过虽健步如飞却误入歧途的人。”[NEWLINE] —— 培根[NEWLINE]</Text>
 		</Row>
 
 		<Row>
@@ -2447,7 +2443,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_UNIT_SATELLITE_APOLLO11_QUOTE</Tag>
-			<Text>[NEWLINE]“这是我迈出的一小步，却是人类迈出的一大步。”[NEWLINE]        —— 尼尔·阿姆斯特朗[NEWLINE]</Text>
+			<Text>[NEWLINE]“这是我迈出的一小步，却是人类迈出的一大步。”[NEWLINE] —— 尼尔·阿姆斯特朗[NEWLINE]</Text>
 		</Row>
 
 		<Row>
@@ -2479,7 +2475,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_UNIT_SATELLITE_ECCM_QUOTE</Tag>
-			<Text>[NEWLINE]“统一指挥是战争的第一要事。”[NEWLINE]        —— 拿破崙[NEWLINE]</Text>
+			<Text>[NEWLINE]“统一指挥是战争的第一要事。”[NEWLINE] —— 拿破崙[NEWLINE]</Text>
 		</Row>
 
 		<Row>
@@ -2496,7 +2492,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_UNIT_SATELLITE_WEATHER_QUOTE</Tag>
-			<Text>[NEWLINE]“我们不要陶醉于我们对自然界的胜利，对于每一次这样的胜利，自然界都报复了我们。”[NEWLINE]        —— 恩格斯[NEWLINE]</Text>
+			<Text>[NEWLINE]“我们不要陶醉于我们对自然界的胜利，对于每一次这样的胜利，自然界都报复了我们。”[NEWLINE] —— 恩格斯[NEWLINE]</Text>
 		</Row>
 
 		<Row>
@@ -2515,7 +2511,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_UNIT_SATELLITE_TIANGONG_QUOTE</Tag>
-			<Text>[NEWLINE]“知识之树的果实往往把人们驱出天堂。”[NEWLINE]        —— 威廉·拉尔夫[NEWLINE]</Text>
+			<Text>[NEWLINE]“知识之树的果实往往把人们驱出天堂。”[NEWLINE] —— 威廉·拉尔夫[NEWLINE]</Text>
 		</Row>
 
 		<Row>
@@ -2534,7 +2530,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_UNIT_SATELLITE_ENVIRONMENT_QUOTE</Tag>
-			<Text>[NEWLINE]“地球上的任何一点离太阳都同样地过远。”[NEWLINE]        —— 伯顿[NEWLINE]</Text>
+			<Text>[NEWLINE]“地球上的任何一点离太阳都同样地过远。”[NEWLINE] —— 伯顿[NEWLINE]</Text>
 		</Row>
 
 		<Row>
@@ -2551,7 +2547,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_UNIT_SATELLITE_ANTIFALLOUT_QUOTE</Tag>
-			<Text>[NEWLINE]“我不知道第三次世界大战会是怎样，但是第四次世界大战时，人们手中的武器将是木棒和石块。”[NEWLINE]        —— 爱因斯坦[NEWLINE]</Text>
+			<Text>[NEWLINE]“我不知道第三次世界大战会是怎样，但是第四次世界大战时，人们手中的武器将是木棒和石块。”[NEWLINE] —— 爱因斯坦[NEWLINE]</Text>
 		</Row>
 
 
@@ -2571,7 +2567,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_UNIT_SATELLITE_RESOURCEPLUS_QUOTE</Tag>
-			<Text>[NEWLINE]“为了照亮地球深处，在黑暗之中看到蕴藏丰富的矿产资源，科学之灯是必须的。”[NEWLINE]        —— 门捷列夫[NEWLINE]</Text>
+			<Text>[NEWLINE]“为了照亮地球深处，在黑暗之中看到蕴藏丰富的矿产资源，科学之灯是必须的。”[NEWLINE] —— 门捷列夫[NEWLINE]</Text>
 		</Row>
 
 		<!-- ***************************New Buildings for Special Building Effects***************************-->
@@ -2864,7 +2860,6 @@
 		<Row Tag="TXT_KEY_CHANGE_TRADE_UNIT_HOME_CITY_ITEM_CITY_TT">
 			<Text>从{2_CityName}可以建立{1: plural 1?is; other?are;} {1}商路{1: plural 2?s;}。</Text>
 		</Row>
-
 
 
 		<!--***************Anti-Corruption Building Texts*****************-->
@@ -3291,10 +3286,10 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_IRON_PROVIDER_HELP">
 			<Text>
-			提供5单位[ICON_RES_IRON]铁资源。
-			[NEWLINE][ICON_BULLET]本城每处[ICON_RES_IRON]铁资源+1[ICON_PRODUCTION]产能。
-			[NEWLINE][ICON_BULLET]本城必须拥有已开发的[ICON_RES_IRON]铁。
-			[NEWLINE][ICON_BULLET]只能在小型城市（6人口）建造。
+				提供5单位[ICON_RES_IRON]铁资源。
+				[NEWLINE][ICON_BULLET]本城每处[ICON_RES_IRON]铁资源+1[ICON_PRODUCTION]产能。
+				[NEWLINE][ICON_BULLET]本城必须拥有已开发的[ICON_RES_IRON]铁。
+				[NEWLINE][ICON_BULLET]只能在小型城市（6人口）建造。
 			</Text>
 		</Replace>
 
@@ -3997,9 +3992,9 @@
 		</Row>
 		<Row Tag="TXT_KEY_CONCEPT_BUILDING_EXTRA_POPCOST_SUMMARY">
 			<Text>
-			在本MOD中，很多公共设施类的建筑会随著你城市的扩大而收取更多的维护费用，比如公立学校和医院。额外的建筑维护费会直接计算到你城市的金钱产出中，而非分开计算。
-			[NEWLINE][NEWLINE]在中型城市市中这一消耗不彰，但在人口众多的城市中，你所需要支付的额外维护费就显得比较惊人了，有的时候甚至会导致负收入。在建造此类建筑时应当留意你的财政状况，必须确保你有足够的进项来抵消此类支出！如果你无力承担某个城市的公共开支，你可以适当地将该城市的部分人口移民到其他城市去。
-			[NEWLINE][NEWLINE]注意！自SP9.1开始，如果你城市的金钱产出是负数，它不再会受到金钱建筑的加成！
+				在本MOD中，很多公共设施类的建筑会随著你城市的扩大而收取更多的维护费用，比如公立学校和医院。额外的建筑维护费会直接计算到你城市的金钱产出中，而非分开计算。
+				[NEWLINE][NEWLINE]在中型城市市中这一消耗不彰，但在人口众多的城市中，你所需要支付的额外维护费就显得比较惊人了，有的时候甚至会导致负收入。在建造此类建筑时应当留意你的财政状况，必须确保你有足够的进项来抵消此类支出！如果你无力承担某个城市的公共开支，你可以适当地将该城市的部分人口移民到其他城市去。
+				[NEWLINE][NEWLINE]注意！自SP9.1开始，如果你城市的金钱产出是负数，它不再会受到金钱建筑的加成！
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CONCEPT_BUILDING_EXTRA_POPCOST_ADVISOR_QUESTION">
@@ -4929,8 +4924,8 @@
 
 		<!-- New Cultural Influential Dialog -->
 		<Update>
-			<Where Tag="TXT_KEY_GENERIC_INFLUENTIAL_ON_AI_1"/>
-			<Set Text="现在，我们的人民皆服右衽、闻雅乐。我担心世界其他地方，也会屈服于你文化的影响力之下。"/>
+			<Where Tag="TXT_KEY_GENERIC_INFLUENTIAL_ON_AI_1" />
+			<Set Text="现在，我们的人民皆服右衽、闻雅乐。我担心世界其他地方，也会屈服于你文化的影响力之下。" />
 		</Update>
 		<Row Tag="TXT_KEY_CO_IMMIGRATION_COUNTER_HEADER">
 			<Text>[ICON_TEAM_4] / [ICON_TEAM_2]</Text>
@@ -5671,9 +5666,9 @@
 		</Row>
 		<Row Tag="TXT_KEY_SP_UA_CHINA_GOLDENAGE_EFFECTS">
 			<Text>
-			中国进入了一个崭新的[ICON_GOLDEN_AGE][COLOR_POSITIVE_TEXT]盛世[ENDCOLOR]！
-			[NEWLINE][NEWLINE]所有金钱产出的地块额外+1[ICON_GOLD]金钱产出，全国+20%[ICON_PRODUCTION]产能，[ICON_CULTURE]文化。
-			[NEWLINE]所有城市的[ICON_CITIZEN]人口增长所需粮食-20%，消除来自城市数量的[ICON_RESEARCH]科研花费增加。
+				中国进入了一个崭新的[ICON_GOLDEN_AGE][COLOR_POSITIVE_TEXT]盛世[ENDCOLOR]！
+				[NEWLINE][NEWLINE]所有金钱产出的地块额外+1[ICON_GOLD]金钱产出，全国+20%[ICON_PRODUCTION]产能，[ICON_CULTURE]文化。
+				[NEWLINE]所有城市的[ICON_CITIZEN]人口增长所需粮食-20%，消除来自城市数量的[ICON_RESEARCH]科研花费增加。
 			</Text>
 		</Row>
 
@@ -6334,52 +6329,52 @@
 
 		<!-- *******************************Handicap Texts********************************************-->
 
-		<Replace Tag="TXT_KEY_HANDICAP_SETTLER" >
+		<Replace Tag="TXT_KEY_HANDICAP_SETTLER">
 			<Text>弹丸之地</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_HANDICAP_SETTLER_HELP" >
+		<Replace Tag="TXT_KEY_HANDICAP_SETTLER_HELP">
 			<Text>电脑没有任何加成。与“亲王”等级难度相当。 </Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_HANDICAP_CHIEFTAIN" >
+		<Replace Tag="TXT_KEY_HANDICAP_CHIEFTAIN">
 			<Text>蕞尔小邦</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_HANDICAP_CHIEFTAIN_HELP" >
+		<Replace Tag="TXT_KEY_HANDICAP_CHIEFTAIN_HELP">
 			<Text>电脑在人口，产能，金钱和快乐上有少量加成。</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_HANDICAP_WARLORD" >
+		<Replace Tag="TXT_KEY_HANDICAP_WARLORD">
 			<Text>小国寡民</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_HANDICAP_WARLORD_HELP" >
+		<Replace Tag="TXT_KEY_HANDICAP_WARLORD_HELP">
 			<Text>电脑在人口，产能，金钱，快乐和战斗力上有中等加成。</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_HANDICAP_PRINCE" >
+		<Replace Tag="TXT_KEY_HANDICAP_PRINCE">
 			<Text>地区势力</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_HANDICAP_PRINCE_HELP" >
+		<Replace Tag="TXT_KEY_HANDICAP_PRINCE_HELP">
 			<Text>电脑在人口，产能，金钱，快乐和战斗力上有中等加成。你每进入一个新时代，电脑的加成都会增加。</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_HANDICAP_KING" >
+		<Replace Tag="TXT_KEY_HANDICAP_KING">
 			<Text>千乘之国</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_HANDICAP_KING_HELP" >
+		<Replace Tag="TXT_KEY_HANDICAP_KING_HELP">
 			<Text>电脑在人口，产能，金钱，快乐和战斗力上有较大加成。电脑初始拥有2个移民，且你每进入一个新时代，电脑的加成都会增加。与“天神”等级难度相当。</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_HANDICAP_EMPEROR" >
+		<Replace Tag="TXT_KEY_HANDICAP_EMPEROR">
 			<Text>一方霸主</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_HANDICAP_EMPEROR_HELP" >
+		<Replace Tag="TXT_KEY_HANDICAP_EMPEROR_HELP">
 			<Text>电脑在人口，产能，金钱，快乐和战斗力上有很大加成。电脑初始拥有2个移民，且你每进入一个新时代，电脑的加成都会大量增加。</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_HANDICAP_IMMORTAL" >
+		<Replace Tag="TXT_KEY_HANDICAP_IMMORTAL">
 			<Text>世界强权</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_HANDICAP_IMMORTAL_HELP" >
+		<Replace Tag="TXT_KEY_HANDICAP_IMMORTAL_HELP">
 			<Text>电脑在人口，产能，金钱，快乐和战斗力上有极大加成。电脑初始拥有3个移民，且你每进入一个新时代，电脑的加成都会剧增。</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_HANDICAP_DEITY" >
+		<Replace Tag="TXT_KEY_HANDICAP_DEITY">
 			<Text>超级大国</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_HANDICAP_DEITY_HELP" >
+		<Replace Tag="TXT_KEY_HANDICAP_DEITY_HELP">
 			<Text>电脑在人口，产能，金钱，快乐和战斗力上的加成丧心病狂。电脑初始拥有4个移民，且你每进入一个新时代，电脑的加成都会疯涨。 </Text>
 		</Replace>
 
@@ -6434,7 +6429,7 @@
 
 		<!--*************** Tradition******************** -->
 
-		<Replace Tag="TXT_KEY_POLICY_BRANCH_TRADITION_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_BRANCH_TRADITION_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]传统政策[ENDCOLOR]适宜于繁荣精干的帝国。
 				[NEWLINE][NEWLINE]启用传统政策：
@@ -6449,7 +6444,7 @@
 			</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_ARISTOCRACY_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_ARISTOCRACY_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]贵族政治[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]新建城市+1[ICON_CITIZEN]人口(但是每1个移民仍等于1人口)。
@@ -6457,21 +6452,21 @@
 			</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_LANDED_ELITE_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_LANDED_ELITE_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]绅缙阶层[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]每处农田、渔船、梯田、圩田、卡斯巴哈、蹄皮帐篷设施+1[ICON_FOOD]食物产出。
 			</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_LEGALISM_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_LEGALISM_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]律法统治[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]所有城市中每5[ICON_CITIZEN]人口+1[ICON_HAPPINESS_1]快乐。
 			</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_OLIGARCHY_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_OLIGARCHY_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]寡头政体[ENDCOLOR]
 				[NEWLINE]各个不同规模的城市获得相应的额外产能：
@@ -6484,7 +6479,7 @@
 			</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_MONARCHY_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_MONARCHY_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]君主政体[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]城市规模导致的[ICON_HAPPINESS_4]不满减半。
@@ -6495,7 +6490,7 @@
 		<Row Tag="TXT_KEY_POLICY_PREFECTURE">
 			<Text>郡县制度</Text>
 		</Row>
-		<Replace Tag="TXT_KEY_POLICY_PREFECTURE_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_PREFECTURE_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]郡县制度[ENDCOLOR]
 				[NEWLINE]各个不同规模的城市获得相应的额外文化产出：
@@ -6514,7 +6509,7 @@
 		<Row Tag="TXT_KEY_POLICY_FAMILY_REGISTER">
 			<Text>科举考试</Text>
 		</Row>
-		<Row Tag="TXT_KEY_POLICY_FAMILY_REGISTER_HELP" >
+		<Row Tag="TXT_KEY_POLICY_FAMILY_REGISTER_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]科举考试[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]每5[ICON_CITIZEN]人口+1[ICON_RESEARCH]科研。
@@ -6528,7 +6523,7 @@
 		<Row Tag="TXT_KEY_POLICY_CENTRALISATION">
 			<Text>中央集权</Text>
 		</Row>
-		<Row Tag="TXT_KEY_POLICY_CENTRALISATION_HELP" >
+		<Row Tag="TXT_KEY_POLICY_CENTRALISATION_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]中央集权[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]所有新单位+15点经验。
@@ -6556,7 +6551,7 @@
 			</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_COLLECTIVE_RULE_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_COLLECTIVE_RULE_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]集体统治[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]所有城市训练[COLOR_POSITIVE_TEXT]移民[ENDCOLOR]的速度+50%。
@@ -6565,7 +6560,7 @@
 			</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_REPUBLIC_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_REPUBLIC_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]共和政体[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]每座城市+4[ICON_GOLD]金钱、[ICON_FOOD]食物，+2[ICON_RES_CONSUMER]商品。
@@ -6593,7 +6588,7 @@
 		<Row Tag="TXT_KEY_POLICY_BILL_OF_RIGHTS">
 			<Text>权利法案</Text>
 		</Row>
-		<Row Tag="TXT_KEY_POLICY_BILL_OF_RIGHTS_HELP" >
+		<Row Tag="TXT_KEY_POLICY_BILL_OF_RIGHTS_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]权利法案[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]专家建筑的每个专家槽提供1点对应的基础产出（按默认建筑计算）。
@@ -6608,7 +6603,7 @@
 		<Row Tag="TXT_KEY_POLICY_PROVINCE">
 			<Text>行省制度</Text>
 		</Row>
-		<Row Tag="TXT_KEY_POLICY_PROVINCE_HELP" >
+		<Row Tag="TXT_KEY_POLICY_PROVINCE_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]行省制度[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]每座与[ICON_CAPITAL]首都[ICON_CONNECTED]相连的城市+1[ICON_HAPPINESS_1]快乐。
@@ -6622,7 +6617,7 @@
 		<Row Tag="TXT_KEY_POLICY_DECENTRALIZATION">
 			<Text>地方分权</Text>
 		</Row>
-		<Row Tag="TXT_KEY_POLICY_DECENTRALIZATION_HELP" >
+		<Row Tag="TXT_KEY_POLICY_DECENTRALIZATION_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]地方分权[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]所有城市+4[ICON_CULTURE]文化、+1[ICON_HAPPINESS_1]快乐。
@@ -6647,7 +6642,7 @@
 
 		<!--*******************Honor********************* -->
 
-		<Replace Tag="TXT_KEY_POLICY_BRANCH_HONOR_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_BRANCH_HONOR_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]荣誉政策[ENDCOLOR]能增强国家的[ICON_WAR]军事实力。
 				[NEWLINE][NEWLINE]启用荣誉政策：
@@ -6673,7 +6668,7 @@
 			<Text>赵武灵王是中国战国时期一位奋发有为的诸侯国君，他为了抵御北方胡人的侵略，实行了“胡服骑射”的军事改革。改革的中心内容是穿胡人的服装，学习胡人骑马射箭的作战方法。其服上褶下绔，有貂、蝉为饰的武冠，金钩为饰的具带，足上穿靴，便于骑射。为此，他力排众议，带头穿胡服，习骑马，练射箭，亲自训练士兵，使赵国军事力量日益强大，而能西退胡人，北灭中山国，成为“战国七雄”之一。[NEWLINE][NEWLINE]骑术虽然很早在世界各地就已经出现，但在很多地区却迟迟没有发展成为骑兵部队。农耕文明发展初期不具备培养大规模骑兵的物质条件，古典时代“结日定地”的贵族决斗式战争也使得骑兵的机动性无处发挥。随著人类战争日益专业化规模化，以及鞍鞯、马镫等重要骑兵装备的发明，各民族开始向游牧部落学习先进的骑兵作战技术，将其提升为一种重要的战争手段。</Text>
 		</Row>
 
-		<Replace Tag="TXT_KEY_POLICY_WARRIOR_CODE_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_WARRIOR_CODE_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]尚武精神[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]军营，军械所，兵工厂，军事基地+1[ICON_PRODUCTION]产能。[ICON_PUPPET]傀儡城市+6[ICON_GOLD]金钱。
@@ -6683,7 +6678,7 @@
 			</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_DISCIPLINE_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_DISCIPLINE_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]军事纪律[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]每个与本战场相邻的己方单位获得+25%[ICON_STRENGTH]战斗力加成。
@@ -6694,7 +6689,7 @@
 		<Replace Tag="TXT_KEY_POLICY_MILITARY_CASTE">
 			<Text>军事操练</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_POLICY_MILITARY_CASTE_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_MILITARY_CASTE_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]军事操练[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]在[ICON_CAPITAL]首都附近出现一位[ICON_GREAT_GENERAL]陆军统帅。
@@ -6705,14 +6700,14 @@
 			</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_MILITARYCASTE_TEXT" >
+		<Replace Tag="TXT_KEY_POLICY_MILITARYCASTE_TEXT">
 			<Text>操练，是军队平日的活动之一，除了列队、体能训练与军事知识学习之外，也要进行射击、实战训练等。</Text>
 		</Replace>
 
-		<Row Tag="TXT_KEY_PROMOTION_SHOOTING_TRAINING" >
+		<Row Tag="TXT_KEY_PROMOTION_SHOOTING_TRAINING">
 			<Text>熟练射手</Text>
 		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_SHOOTING_TRAINING_HELP" >
+		<Row Tag="TXT_KEY_PROMOTION_SHOOTING_TRAINING_HELP">
 			<Text>
 				[ICON_BULLET]在进行远程打击和受到远程打击时，+15%[ICON_RANGE_STRENGTH]远程战斗力。
 			</Text>
@@ -6720,7 +6715,7 @@
 
 
 
-		<Replace Tag="TXT_KEY_POLICY_MILITARY_TRADITION_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_MILITARY_TRADITION_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]军事传统[ENDCOLOR][NEWLINE]军事单位通过战斗获得经验+50%。
 				[NEWLINE][ICON_BULLET]升级单位所需的[ICON_GOLD]金钱减少60%。
@@ -6731,7 +6726,7 @@
 		<Replace Tag="TXT_KEY_POLICY_PROFESSIONAL_ARMY">
 			<Text>职业军队</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_POLICY_PROFESSIONAL_ARMY_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_PROFESSIONAL_ARMY_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]职业军队[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]新单位+15点经验。
@@ -6812,9 +6807,9 @@
 
 		<!--*******************Patronage********************* -->
 
-		<Replace Tag="TXT_KEY_POLICY_BRANCH_PATRONAGE_HELP" >
-			<Text>	
-				[COLOR_POSITIVE_TEXT]赞助政策[ENDCOLOR]增强城邦关系带来的好处。		
+		<Replace Tag="TXT_KEY_POLICY_BRANCH_PATRONAGE_HELP">
+			<Text>
+				[COLOR_POSITIVE_TEXT]赞助政策[ENDCOLOR]增强城邦关系带来的好处。
 				[NEWLINE][NEWLINE]启用赞助政策：
 				[NEWLINE][ICON_BULLET]对所有城邦[ICON_INFLUENCE]影响力基准值提高20。
 				[NEWLINE][ICON_BULLET]允许建造汉萨同盟和国家情报局。
@@ -6823,7 +6818,7 @@
 			</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_PHILANTHROPY_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_PHILANTHROPY_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]慈善事业[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]赠送城邦[ICON_GOLD]金钱提升的[ICON_INFLUENCE]影响力加100%。
@@ -6831,7 +6826,7 @@
 			</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_MERCHANT_CONFEDERACY_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_MERCHANT_CONFEDERACY_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]商人公会[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]与每条有商路相连的城邦每回合+4[ICON_INFLUENCE]影响力（标准速度下）。
@@ -6909,14 +6904,14 @@
 			</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_CULTURAL_CENTERS_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_CULTURAL_CENTERS_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]文化中心[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]文化建筑（露天剧场、画廊、歌剧院、博物馆、广播塔）+1[ICON_HAPPINESS_1]快乐。
 			</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_ARTISTIC_GENIUS_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_ARTISTIC_GENIUS_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]艺术天才[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]立刻获得一位大艺术家。
@@ -6925,10 +6920,10 @@
 			</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_FLOURISHING_OF_ARTS" >
+		<Replace Tag="TXT_KEY_POLICY_FLOURISHING_OF_ARTS">
 			<Text>艺术伦理</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_POLICY_FLOURISHING_OF_ARTS_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_FLOURISHING_OF_ARTS_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]艺术伦理[ENDCOLOR]
 				[NEWLINE][ICON_BULLET][ICON_CULTURE]新政策的成本-15%。
@@ -6936,7 +6931,7 @@
 			</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_ETHICS_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_ETHICS_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]文化交流[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]相同宗教、连接商路和开放边境所带来的[ICON_TOURISM]魅力输出加成各提升15%。
@@ -6959,7 +6954,7 @@
 
 		<!--*******************Commerce********************* -->
 
-		<Replace Tag="TXT_KEY_POLICY_BRANCH_COMMERCE_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_BRANCH_COMMERCE_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]商业政策[ENDCOLOR]给予国家[ICON_GOLD]金钱方面的奖励。
 				[NEWLINE][NEWLINE]启用商业政策：
@@ -6972,7 +6967,7 @@
 			</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_CARAVANS_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_CARAVANS_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]大篷车队[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]所有陆地商路+4[ICON_GOLD]金钱。
@@ -6981,20 +6976,20 @@
 			</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_TRADE_UNIONS" >
+		<Replace Tag="TXT_KEY_POLICY_TRADE_UNIONS">
 			<Text>联合工会</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_POLICY_TRADE_UNIONS_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_TRADE_UNIONS_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]联合工会
 				[NEWLINE][ICON_BULLET][ENDCOLOR]每处客栈、市场、银行、证券交易所、金融公司+2[ICON_CULTURE]文化。
 			</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_POLICY_TRADEUNIONS_TEXT" >
+		<Replace Tag="TXT_KEY_POLICY_TRADEUNIONS_TEXT">
 			<Text>“联合工会”是将工人团结起来，为工人群体争取更好的工作条件、更多的薪水、更充分医疗保健的组织。联合工会同雇主协商谈判，比起单个雇员的努力而言有希望获得更大收益。如果谈判不成功，联合工会可能会组织罢工，限制或缩减雇主的收入。许多公司极度抵制他们员工的工会化，甚至造成流血事件。美国的工会有时会与公司的打手甚至当地执法部门强烈对立，在某些情况甚至会导致军队介入。在20世纪中期有35%的美国工人隶属于工会，但目前这个数字则下降到了12%。</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_MERCANTILISM_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_MERCANTILISM_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]重商主义[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]购买建筑和单位所需[ICON_GOLD]金钱减少15%。
@@ -7003,7 +6998,7 @@
 			</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_ENTREPRENEURSHIP_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_ENTREPRENEURSHIP_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]创业精神[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]商业家+1[ICON_RESEARCH]科研。
@@ -7012,7 +7007,7 @@
 			</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_PROTECTIONISM_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_PROTECTIONISM_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]贸易保护[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]国内商路额外+50%[ICON_FOOD]食物或[ICON_PRODUCTION]产能。
@@ -7044,7 +7039,7 @@
 			<Text>海事</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_BRANCH_EXPLORATION_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_BRANCH_EXPLORATION_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]海事政策[ENDCOLOR]提高帝国沿海城市的产出以及向海外扩张的能力。
 				[NEWLINE][NEWLINE]启用海事政策:
@@ -7057,7 +7052,7 @@
 			</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_MARITIME_INFRASTRUCTURE_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_MARITIME_INFRASTRUCTURE_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]海上设施[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]沿海城市+3[ICON_PRODUCTION]产能。
@@ -7076,7 +7071,7 @@
 			</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_NAVAL_TRADITION_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_NAVAL_TRADITION_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]海军传统[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]所有沿海城市+3[ICON_CULTURE]文化。
@@ -7099,7 +7094,7 @@
 			<Text>海事管理是研究辖区海事监管特点，贯彻落实海事法规的专业管理部门。对海事业务进行专业研究、指导、监督和管理，具体承担船舶监督、危险品和防污染管理、船员管理、通航管理、航运公司安全管理体系审核管理等海事监管业务的专业管理职能和口岸有关管理职能。海事管理处原则上不直接实施海事具体行政行为。</Text>
 		</Row>
 
-		<Replace Tag="TXT_KEY_POLICY_NAVIGATION_SCHOOL_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_NAVIGATION_SCHOOL_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]航海学校[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]每处灯塔、港口、海运码头和船坞+1本地[ICON_HAPPINESS_1]快乐。建造海上单位时+15%[ICON_PRODUCTION]产能积累。
@@ -7111,7 +7106,7 @@
 		<Replace Tag="TXT_KEY_POLICY_TREASURE_FLEETS">
 			<Text>制海权</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_POLICY_TREASURE_FLEETS_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_TREASURE_FLEETS_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]制海权[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]所有海军单位+1[ICON_MOVES]移动，+1视野并+15%[ICON_STRENGTH]战斗力。
@@ -7123,7 +7118,7 @@
 
 		<!--*******************Rationalism********************* -->
 
-		<Replace Tag="TXT_KEY_POLICY_BRANCH_RATIONALISM_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_BRANCH_RATIONALISM_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]理性政策[ENDCOLOR]能提升国家的[ICON_RESEARCH]科研能力。
 				[NEWLINE][NEWLINE]启用理性政策：
@@ -7149,7 +7144,7 @@
 			<Text>“经世致用”指学问必须有益于国事。由明清之际思想家王夫之、黄宗羲、顾炎武等提出。他们认为学习、征引古人的文章和行事，应以治事、救世为急务，反对理学家不切实际的空虚之学。[NEWLINE][NEWLINE]讽刺的是，他们所批判的“理学”一开始其实是由程朱等儒家学者所提出的“改变世风，挽救国家”的务实之学。历史上，这种扭曲的幽默屡屡发生，“经世致用”最终也没能逃过一劫。</Text>
 		</Row>
 
-		<Replace Tag="TXT_KEY_POLICY_FREE_THOUGHT_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_FREE_THOUGHT_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]思想自由[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]每处贸易站+1[ICON_RESEARCH]科研。
@@ -7157,7 +7152,7 @@
 			</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_HUMANISM_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_HUMANISM_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]人文主义[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]立刻获得一个大科学家。
@@ -7165,7 +7160,7 @@
 			</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_SECULARISM_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_SECULARISM_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]世俗主义[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]每位专业人员+1[ICON_RESEARCH]科研。
@@ -7189,39 +7184,39 @@
 
 		<!--*******************Freedom********************* -->
 
-		<Replace Tag="TXT_KEY_POLICY_COVERT_ACTION_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_COVERT_ACTION_HELP">
 			<Text>[COLOR_POSITIVE_TEXT]隐秘行动[ENDCOLOR][NEWLINE]己方间谍操纵城邦选举的成功率翻倍，阻止敌方窃取科技的概率翻倍。</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_VOLUNTEER_ARMY_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_VOLUNTEER_ARMY_HELP">
 			<Text>[COLOR_POSITIVE_TEXT]志愿军[ENDCOLOR][NEWLINE]允许你训练或雇佣外籍军团。一种拥有境外作战加成且死亡不会造成人口损失的步兵单位。</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_OPEN_SOCIETY_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_OPEN_SOCIETY_HELP">
 			<Text>[COLOR_POSITIVE_TEXT]前卫艺术[ENDCOLOR][NEWLINE]获得[ICON_GREAT_PEOPLE]伟人的速度加快25%，当有伟人诞生时，对所有文明+300[ICON_TOURISM]魅力。</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_CREATIVE_EXPRESSION_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_CREATIVE_EXPRESSION_HELP">
 			<Text>[COLOR_POSITIVE_TEXT]创意表达[ENDCOLOR][NEWLINE]所有杰作+2[ICON_CULTURE]文化产出（但[ICON_TOURISM]魅力产出不变）。每回合增加相当于50%的额外[ICON_HAPPINESS_1]快乐度的[ICON_CULTURE]文化（可与美学政策叠加）。</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_CIVIL_SOCIETY_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_CIVIL_SOCIETY_HELP">
 			<Text>[COLOR_POSITIVE_TEXT]公民社会[ENDCOLOR][NEWLINE]所有专业人员+2[ICON_GOLD]金钱产出。供养专业人员所需[ICON_FOOD]食物减半。</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_CAPITALISM_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_CAPITALISM_HELP">
 			<Text>[COLOR_POSITIVE_TEXT]资本主义[ENDCOLOR][NEWLINE]每条商路为全国+3%[ICON_RESEARCH]科研产出。</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_ECONOMIC_UNION_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_ECONOMIC_UNION_HELP">
 			<Text>[COLOR_POSITIVE_TEXT]经济联盟[ENDCOLOR][NEWLINE]所有城市中的建筑维护费用-30%。</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_URBANIZATION_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_URBANIZATION_HELP">
 			<Text>[COLOR_POSITIVE_TEXT]城市化[ENDCOLOR][NEWLINE]每处自来水系统、污水处理厂、医院、医学实验室、公交汽车、地铁、铸币厂、花园、有线网络、旅馆和机场+1[ICON_HAPPINESS_1]本地快乐。</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_NEW_DEAL_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_NEW_DEAL_HELP">
 			<Text>[COLOR_POSITIVE_TEXT]经济新政[ENDCOLOR][NEWLINE]风景地标和伟人区域设施对应的产出+4，大型及以上城市[ICON_PRODUCTION]产能增加+25%。</Text>
 		</Replace>
 
@@ -7229,17 +7224,17 @@
 			<Text>[COLOR_POSITIVE_TEXT]光辉时刻[ENDCOLOR][NEWLINE][ICON_STRENGTH]城市的战斗力+33%。所有当前拥有的城市获得免费防空洞（但仍需要支付因人口额外产生的维护费）。</Text>
 		</Replace>-->
 
-		<Replace Tag="TXT_KEY_POLICY_ARSENAL_DEMOCRACY" >
+		<Replace Tag="TXT_KEY_POLICY_ARSENAL_DEMOCRACY">
 			<Text>和平演变</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_POLICY_ARSENAL_DEMOCRACY_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_ARSENAL_DEMOCRACY_HELP">
 			<Text>[COLOR_POSITIVE_TEXT]和平演变[ENDCOLOR][NEWLINE]与拥有共同作战中的敌人的友方文明+50%[ICON_TOURISM]魅力。</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_POLICY_ARSENAL_DEMOCRACY_TEXT" >
+		<Replace Tag="TXT_KEY_POLICY_ARSENAL_DEMOCRACY_TEXT">
 			<Text>“和平演变”这个词汇出现于二战后50-60年代的冷战时期，由美国国会议员杜勒斯在20世纪50年代初提出。由于它所进行的过程中并没有发生战争,所以叫"和平演变"。西方国家以贷款、贸易、科技等各种手段诱压东欧国家，促使它们向西方靠拢，向资本主义“和平演变”。</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_MEDIA_CULTURE_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_MEDIA_CULTURE_HELP">
 			<Text>[COLOR_POSITIVE_TEXT]媒体文化[ENDCOLOR][NEWLINE]每处广播塔、电视台和有线网络可以使城市[ICON_TOURISM]魅力产出提高25%。允许平民单位进入未开边国家境内。立刻获得一名大音乐家，大音乐家+3[ICON_MOVES]移动。</Text>
 		</Replace>
 
@@ -7248,9 +7243,9 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_TREATY_ORGANIZATION_HELP">
 			<Text>
-			[COLOR_POSITIVE_TEXT]民主灯塔[ENDCOLOR]
-			[NEWLINE]每25点[ICON_HAPPINESS_1]满意度+5%[ICON_RESEARCH]科研，上限为50%（可同理性政策叠加）。
-			[NEWLINE]其他国家向你移民的速度加快100%。
+				[COLOR_POSITIVE_TEXT]民主灯塔[ENDCOLOR]
+				[NEWLINE]每25点[ICON_HAPPINESS_1]满意度+5%[ICON_RESEARCH]科研，上限为50%（可同理性政策叠加）。
+				[NEWLINE]其他国家向你移民的速度加快100%。
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_TREATY_ORGANIZATION_TEXT">
@@ -7260,7 +7255,7 @@
 		<Replace Tag="TXT_KEY_POLICY_SPACE_PROCUREMENTS">
 			<Text>自由贸易</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_POLICY_SPACE_PROCUREMENTS_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_SPACE_PROCUREMENTS_HELP">
 			<Text>[COLOR_POSITIVE_TEXT]自由贸易[ENDCOLOR][NEWLINE]所有商路+10[ICON_GOLD]金钱。商业家产出的[ICON_RES_CONSUMER]商品数量额外+3。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_SPACE_PROCUREMENTS_TEXT">
@@ -7269,35 +7264,35 @@
 
 		<!--*******************Order********************* -->
 
-		<Replace Tag="TXT_KEY_POLICY_DOUBLE_AGENTS" >
+		<Replace Tag="TXT_KEY_POLICY_DOUBLE_AGENTS">
 			<Text>计划经济</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_POLICY_DOUBLE_AGENTS_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_DOUBLE_AGENTS_HELP">
 			<Text>[COLOR_POSITIVE_TEXT]计划经济[ENDCOLOR][NEWLINE]所有城市+6[ICON_RES_ELECTRICITY]电力、+6[ICON_RES_CONSUMER]商品。</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_POLICY_DOUBLE_AGENTS_TEXT" >
+		<Replace Tag="TXT_KEY_POLICY_DOUBLE_AGENTS_TEXT">
 			<Text>计划经济，或计划经济体制，又称指令型经济，是对生产、资源分配以及产品消费事先进行计划的经济体制。由于几乎所有计划经济体制都依赖于指令性计划，因此计划经济也被称为指令性经济。解决三个基本经济问题的是政府，所谓的三个经济问题是指：生产什么、怎样生产和为谁生产。而其中大部份的资源是由政府所拥有的，并且由政府所指令而分配资源的，不受市场影响。其余的三种经济体系是市场经济体系、传统经济体系和混合经济体系。</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_SOCIALIST_REALISM" >
+		<Replace Tag="TXT_KEY_POLICY_SOCIALIST_REALISM">
 			<Text>农业集体化</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_POLICY_SOCIALIST_REALISM_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_SOCIALIST_REALISM_HELP">
 			<Text>[COLOR_POSITIVE_TEXT]农业集体化[ENDCOLOR][NEWLINE]粮库和机械化农场+2[ICON_HAPPINESS_1]本地快乐。</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_POLICY_SOCIALIST_REALISM_TEXT" >
+		<Replace Tag="TXT_KEY_POLICY_SOCIALIST_REALISM_TEXT">
 			<Text>俄国十月革命胜利以后，列宁依据马克思与恩格斯关于不能用暴力剥夺小农，必须通过示范和提供社会帮助把个体农民的私人生产和私人占有转变为合作的生产和占有的思想，制订了农村社会主义改造和通过合作社吸收农民参加社会主义建设的计划。[NEWLINE][NEWLINE]1927年－1928年，由于苏联国家规定的粮食价格太低，农民并不急于卖粮，使粮食收购出现短缺。斯大林认为造成危机的原因是富农阶层的蓄意破坏，他不顾布哈林等人的反对，一方面采用特殊手段打击富农，强迫他们按指定价格卖出余粮；另一方面推行农业集体化政策。1927年12月，斯大林又提出了“消灭富农”的口号，命令没收富农的财产并将他们放逐，不准他们加入集体公社。由于对“富农”概念缺乏准确界限，集体化开始时国内“富农”占农户总数不到3%，而最后被剥夺的农户却达到农户总数的6%－8%，部分中农和贫农也被当作富农剥夺。1929年11月苏共中央全会通过决议开始全盘集体化，从此集体农庄的规模以惊人的速度增长（两个月内集体农庄的比例从15%增长到59.3%），执行过程中，底层执行者经常采用威胁、恐吓等手段强迫农民入社。1930年3月2日，斯大林在《真理报》发表了《胜利冲昏头脑》一文，批评全盘集体化运动中违反农民自愿原则的过火行为，于是引发了大规模退社的浪潮。1930年6月，集体农庄的比例已经由60%降到了23.4%，斯大林不得不在6月召开的苏共第十六次代表大会上再次改变态度，赞扬全盘集体化的成就并批评反对者是“和共产主义的敌人勾结在一起的人”，又一次掀起了集体化运动的高潮。到1933年底未加入集体农庄的农户仅占0.2%，至此全盘集体化的目标基本实现。[NEWLINE][NEWLINE]农业集体化政策引起了很多农民的不满，他们在入社前屠杀和出售牲畜，到了1933年，苏联的牲畜总量将近损失了50%。部分农民在绝望中毁坏工具、焚烧谷物，还时常参与纵火、暗杀等破坏活动。全盘集体化也没有给农业生产效率带来明显提高，1932年－1934年之间，苏联出现了严重的饥荒，农业总产值下降了23%。而且在1936年－1940年集体化完成后，农业总产值也只是维持在1924年－1928年的水平。</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_HERO_OF_THE_PEOPLE_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_HERO_OF_THE_PEOPLE_HELP">
 			<Text>[COLOR_POSITIVE_TEXT]人民英雄[ENDCOLOR][NEWLINE][ICON_GREAT_PEOPLE]伟人诞生速度+25%，立刻开启一次[ICON_GOLDEN_AGE]黄金时代。</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_PATRIOTIC_WAR_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_PATRIOTIC_WAR_HELP">
 			<Text>[COLOR_POSITIVE_TEXT]卫国战争[ENDCOLOR][NEWLINE]陆军和海军在友方领土上作战+15%战斗力。城市[ICON_STRENGTH]战斗力+15%。</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_YOUNG_PIONEERS_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_YOUNG_PIONEERS_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]少年先锋队[ENDCOLOR][NEWLINE]所有发电站+1[ICON_HAPPINESS_1]本地快乐（不包括扩容机组）。
 				[NEWLINE]这些建筑的维护费-33%[ICON_GOLD]。
@@ -7308,21 +7303,21 @@
 			<Text>[COLOR_POSITIVE_TEXT]航天先驱[ENDCOLOR][NEWLINE]可以用大工程师加速建造太空部件。每位科学家+2[ICON_PRODUCTION]产能、工程师+2[ICON_RESEARCH]科研。[ICON_CAPITAL]首都旁出现一位大科学家。</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_WORKERS_FACULTIES_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_WORKERS_FACULTIES_HELP">
 			<Text>[COLOR_POSITIVE_TEXT]工人社区[ENDCOLOR][NEWLINE]工厂使城市的[ICON_PRODUCTION]产能、[ICON_RESEARCH]科研和[ICON_TOURISM]魅力产出+15%。</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_RESETTLEMENT_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_RESETTLEMENT_HELP">
 			<Text>[COLOR_POSITIVE_TEXT]移民安置[ENDCOLOR][NEWLINE]移民等同于3[ICON_CITIZEN]人口（生产移民城市失去3[ICON_CITIZEN]人口，新建城市直接获得3[ICON_CITIZEN]人口，移民加入新城市也会增加其3[ICON_CITIZEN]人口）。移民不再产生[ICON_HAPPINESS_4]不满。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_ACADEMY_SCIENCES">
 			<Text>科学社会主义</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_POLICY_ACADEMY_SCIENCES_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_ACADEMY_SCIENCES_HELP">
 			<Text>
-			[COLOR_POSITIVE_TEXT]科学社会主义[ENDCOLOR]
-			[NEWLINE]向其他意识形态国家输出的[ICON_TOURISM]魅力+50%，向其他秩序意识形态国家输出的[ICON_TOURISM]魅力+25%。
+				[COLOR_POSITIVE_TEXT]科学社会主义[ENDCOLOR]
+				[NEWLINE]向其他意识形态国家输出的[ICON_TOURISM]魅力+50%，向其他秩序意识形态国家输出的[ICON_TOURISM]魅力+25%。
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_ACADEMY_SCIENCES_TEXT">
@@ -7332,55 +7327,55 @@
 		<Replace Tag="TXT_KEY_POLICY_PARTY_LEADERSHIP">
 			<Text>上山下乡运动</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_POLICY_PARTY_LEADERSHIP_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_PARTY_LEADERSHIP_HELP">
 			<Text>[COLOR_POSITIVE_TEXT]上山下乡运动[ENDCOLOR][NEWLINE]每处矿井、伐木场、农田、圩田、梯田、牧场、贸易站+1[ICON_CULTURE]文化。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_PARTY_LEADERSHIP_TEXT">
 			<Text>上山下乡并非始自文化大革命，它从50年代便被倡导，至60年代而展开。但上山下乡的对象，大多数是城市里政治斗争的失利者。如右派，如文革中文斗武斗的失利者。对当时的知青来说，鼓动他们到农村去，是为了消灭“三大差别”，即工农差别、城乡差别、和体力与脑力劳动差别。</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_FIVE_YEAR_PLAN_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_FIVE_YEAR_PLAN_HELP">
 			<Text>[COLOR_POSITIVE_TEXT]五年计划[ENDCOLOR][NEWLINE]每处矿井、采石场、伐木场、油井、海上钻井平台、捕捞船+1[ICON_PRODUCTION]产能。</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_DICTATORSHIP_PROLETARIAT_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_DICTATORSHIP_PROLETARIAT_HELP">
 			<Text>[COLOR_POSITIVE_TEXT]无产阶级专政[ENDCOLOR][NEWLINE]所有非一级直辖城市管理成本-1级（不能与英国UA叠加）。所有强化管理类建筑会自动变更。</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_IRON_CURTAIN" >
+		<Replace Tag="TXT_KEY_POLICY_IRON_CURTAIN">
 			<Text>国际主义</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_POLICY_IRON_CURTAIN_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_IRON_CURTAIN_HELP">
 			<Text>[COLOR_POSITIVE_TEXT]国际主义[ENDCOLOR][NEWLINE]你向其他国家移民的速度降低50%。[COLOR_POSITIVE_TEXT]傀儡[ENDCOLOR]城市[ICON_PRODUCTION]产能和[ICON_GOLD]金钱产出+33%。抵消自身受到的[ICON_HAPPINESS_4]公共舆论不满，对其他意识形态文明的[ICON_HAPPINESS_4]公共舆论压力翻倍。</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_POLICY_IRON_CURTAIN_TEXT" >
+		<Replace Tag="TXT_KEY_POLICY_IRON_CURTAIN_TEXT">
 			<Text>国际主义是指各国无产阶级在反对剥削制度，争取自身解放斗争中，在政治、经济、道义等方面互相支持，互相援助，坚持国际团结的思想和政治原则。国际主义体现了无产阶级的民族观，是无产阶级处理民族问题的基本原则，也是无产阶级认识和处理各国无产阶级之间、各国无产阶级政党之间以及社会主义国家之间相互关系的行为准则。资本压迫和统治的国际性，决定了无产阶级反对资产阶级的斗争，从形式上看，首先是在一国范围内进行，但从内容上看，从来就是国际性的：无产阶级只有解放全人类，才能最后解放自己。[NEWLINE][NEWLINE]—— “这是最后的斗争，团结起来到明天，英特纳雄耐尔就一定要实现！这是最后的斗争，团结起来到明天，英特纳雄耐尔就一定要实现！”</Text>
 		</Replace>
 
 		<!--*******************Autocracy********************* -->
 
-		<Replace Tag="TXT_KEY_POLICY_FUTURISM_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_FUTURISM_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]未来主义[ENDCOLOR]
 				[NEWLINE]占领一座城市时可以一次性掠夺到该城市在之前20回合内[ICON_CULTURE]文化产出值总和。
 			</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_ELITE_FORCES_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_ELITE_FORCES_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]精英部队[ENDCOLOR]
 				[NEWLINE]所有新单位获得15点经验值。
 			</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_UNITED_FRONT_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_UNITED_FRONT_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]统一战线[ENDCOLOR][NEWLINE]每个军事基地，军事学院和道场为城市+15%[ICON_PRODUCTION]产能和[ICON_RESEARCH]科研产出。
 				[NEWLINE]建有军事基地的城市在卖掉市政府以后仍可保留所有军事建筑。
 			</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_FORTIFIED_BORDERS_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_FORTIFIED_BORDERS_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]边界强化[ENDCOLOR]
 				[NEWLINE]所有的军事建筑和资源建筑+1[ICON_HAPPINESS_1]本地快乐、-50%维护费[ICON_GOLD]，且建造时+100%[ICON_PRODUCTION]产能积累。
@@ -7394,35 +7389,35 @@
 			</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_MILITARISM_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_MILITARISM_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]军国主义[ENDCOLOR]
 				[NEWLINE]占领敌方城市后[COLOR_POSITIVE_TEXT]抵抗时间[ENDCOLOR]减半。如果该城市[ICON_CITIZEN]人口少于6或敌方已失去原始首都则没有抵抗。
 			</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_LIGHTNING_WARFARE_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_LIGHTNING_WARFARE_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]闪电战[ENDCOLOR]
 				[NEWLINE]大军事家+2[ICON_MOVES]移动力。所有非民兵陆军单位+1[ICON_MOVES]移动力，允许使用敌军境内道路。
 			</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_TOTAL_WAR_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_TOTAL_WAR_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]全面战争[ENDCOLOR]
 				[NEWLINE]所有城市+5[ICON_RES_MANPOWER]人力，升级到大城市前，因城市规模造成的[ICON_RES_CONSUMER]商品和[ICON_RES_ELECTRICITY]电力消耗减少一个等级。军事单位训练速度+25%。
 			</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_POLICE_STATE_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_POLICE_STATE_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]警察国家[ENDCOLOR]
 				[NEWLINE]法院、治安署、审计署、警察局和地检署+3[ICON_HAPPINESS_1]本地快乐。建造这些建筑+200%[ICON_PRODUCTION]产能积累。
 			</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_CULT_PERSONALITY_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_CULT_PERSONALITY_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]个人崇拜[ENDCOLOR]
 				[NEWLINE]非占领人口的[ICON_HAPPINESS_4]不满-15%，开启一次[ICON_GOLDEN_AGE]黄金时代。
@@ -7431,97 +7426,97 @@
 			</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_NEW_ORDER" >
+		<Replace Tag="TXT_KEY_POLICY_NEW_ORDER">
 			<Text>威权政府</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_POLICY_NEW_ORDER_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_NEW_ORDER_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]威权政府[ENDCOLOR]
 				[NEWLINE]每占领一个原始首都，军事单位攻击伤害固定+4。
 			</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_POLICY_NEW_ORDER_TEXT" >
+		<Replace Tag="TXT_KEY_POLICY_NEW_ORDER_TEXT">
 			<Text>威权主义是指处于民主政体和极权政体之间的一种非民主、非极权的政体形式。特点是严格遵从政府的权威，而政府常运用压制性手段，用来维持和执行社会控制。[NEWLINE][NEWLINE]威权政府一般指依靠各种行政手段、法令、军警以控制国民言论、结社、集会等自由之政府。一些人或组织寻求将他人置于自己的势力范围之下，并不顾及获取共识，这个政府所控制的国家会是不自由、不民主的。[NEWLINE][NEWLINE]权威主义一词也被用来形容这种人或组织的个性和管理风格。在权威主义的国家中，国家权威渗透到公民生活的各方面，其中很多方面根据其他的政治观来看，都应属于个人自由的范围。权威主义的程度不同，甚至非常民主和自由主义的国家也会在某种程度上表现出权威主义的一面，例如在国家安全问题上。</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_GUNBOAT_DIPLOMACY" >
+		<Replace Tag="TXT_KEY_POLICY_GUNBOAT_DIPLOMACY">
 			<Text>霸权主义</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_POLICY_GUNBOAT_DIPLOMACY_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_GUNBOAT_DIPLOMACY_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]霸权主义[ENDCOLOR]
 				[NEWLINE]每当你生产战略威慑性武器，对所有文明施加一次性[ICON_TOURISM]魅力输出。（无畏舰、战列舰、导弹巡洋舰、战略轰炸机、航母和核动力航母：相当于其[ICON_STRENGTH]战斗力数值一半的[ICON_TOURISM]魅力；原子弹：250[ICON_TOURISM]魅力；核导弹：500[ICON_TOURISM]魅力；洲际核导弹：1000[ICON_TOURISM]魅力）
 			</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_POLICY_GUNBOAT_DIPLOMACY_TEXT" >
+		<Replace Tag="TXT_KEY_POLICY_GUNBOAT_DIPLOMACY_TEXT">
 			<Text>1974年毛泽东接见赞比亚总统卡翁达时，提出霸权主义的概念。这是他一以贯之的民族主义倾向、世界景观和反霸防修思想的体现。具有国内意识形支撑态逻辑框架和外交政策两种既有区别、又有关联的功能。它是指在国际关系上，大国、强国凭借军事和经济实力，超越国际法、国际政治格局现状一味扩张自身势力范围，操纵国际事务，干涉他国内政，甚至进行武装侵略和占领，称霸世界、主宰世界的强权政治、强权政策。冷战时期，主要是指美国和前苏联这两个在核武器和军备竞赛中握有绝对优势的超级大国的对外政策。成了苏美的代名词。与帝国主义、殖民主义等概念并举，带有强烈道德谴责意味。比直指帝国主义在外交礼仪上显得相对委婉一些。与英文Hegemony或Hegemonism指非均衡的政治支配状态，特定政治布局中某一国因其政治和经济实力之优势而具有主导运作的局面不同。</Text>
 		</Replace>
 
 		<!--************************* Policy Effects Texts *************************** -->
 		<!--Promotions-->
-		<Row Tag="TXT_KEY_PROMOTION_SETTLER_POP_3" >
+		<Row Tag="TXT_KEY_PROMOTION_SETTLER_POP_3">
 			<Text>等同于3[ICON_CITIZEN]人口。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_FAST_WORKER" >
+		<Row Tag="TXT_KEY_PROMOTION_FAST_WORKER">
 			<Text>+1[ICON_MOVES]移动。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_FAST_WORKER_TECH" >
+		<Row Tag="TXT_KEY_PROMOTION_FAST_WORKER_TECH">
 			<Text>+1[ICON_MOVES]移动</Text>
 		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_PASSABLE_WORKER_TECH" >
+		<Row Tag="TXT_KEY_PROMOTION_PASSABLE_WORKER_TECH">
 			<Text>能够穿越山脉和进入冰区</Text>
 		</Row>
-		<Replace Tag="TXT_KEY_PROMOTION_NAVAL_TRADITION_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_NAVAL_TRADITION_HELP">
 			<Text>+1[ICON_MOVES]移动。[NEWLINE]+15%[ICON_STRENGTH]战斗力。</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_DISCIPLINE_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_DISCIPLINE_HELP">
 			<Text>+25%[ICON_STRENGTH]战斗力(邻近友军时)。[NEWLINE]夹击加成由10%提升为15%。</Text>
 		</Replace>
 
 		<!--Buildings-->
 
 
-		<Row Tag="TXT_KEY_BUILDING_THEOCRACY_WRITER" >
+		<Row Tag="TXT_KEY_BUILDING_THEOCRACY_WRITER">
 			<Text>[ICON_GREAT_WRITER]神权政治</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_BUILDING_FAMILY_PRODUCTION" >
+		<Row Tag="TXT_KEY_BUILDING_FAMILY_PRODUCTION">
 			<Text>[ICON_RESEARCH]府学</Text>
 		</Row>
-		<Row Tag="TXT_KEY_BUILDING_FAMILY_PRODUCTION_HELP" >
+		<Row Tag="TXT_KEY_BUILDING_FAMILY_PRODUCTION_HELP">
 			<Text>每5[ICON_CITIZEN]人口+1[ICON_RESEARCH]科研。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_TRO_COL_FROM_CULTURE">
-      		<Text>[ICON_ARROW_LEFT][ICON_CULTURE]</Text>
-    	</Row>
+			<Text>[ICON_ARROW_LEFT][ICON_CULTURE]</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_TRO_COL_FROM_CULTURE_TT">
-      		<Text>点击按建立商路的文明通过商路产生的[ICON_CULTURE]文化值数量排序。</Text>
-    	</Row>
+			<Text>点击按建立商路的文明通过商路产生的[ICON_CULTURE]文化值数量排序。</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_TRO_COL_TO_CULTURE">
-      		<Text>[ICON_ARROW_RIGHT][ICON_CULTURE]</Text>
-    	</Row>
+			<Text>[ICON_ARROW_RIGHT][ICON_CULTURE]</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_TRO_COL_TO_CULTURE_TT">
-      		<Text>点击按商路目的地的文明通过商路获得的[ICON_CULTURE]文化数量排序。</Text>
-    	</Row>
+			<Text>点击按商路目的地的文明通过商路获得的[ICON_CULTURE]文化数量排序。</Text>
+		</Row>
 
 
-		<Row Tag="TXT_KEY_BUILDING_AUTOCRACY_FIREWALL" >
+		<Row Tag="TXT_KEY_BUILDING_AUTOCRACY_FIREWALL">
 			<Text>威权主义</Text>
 		</Row>
-		<Row Tag="TXT_KEY_BUILDING_AUTOCRACY_FIREWALL_HELP" >
+		<Row Tag="TXT_KEY_BUILDING_AUTOCRACY_FIREWALL_HELP">
 			<Text>消除来自其他文明掌握科技所带来的魅力加成。</Text>
 		</Row>
 
 		<!--Projects-->
 
-		<Replace Tag="TXT_KEY_PROJECT_APOLLO_PROGRAM_HELP" >
+		<Replace Tag="TXT_KEY_PROJECT_APOLLO_PROGRAM_HELP">
 			<Text>允许你的城市生产[COLOR_POSITIVE_TEXT]轨道单位[ENDCOLOR]，产生全球性的效益。[NEWLINE]同时解锁[COLOR_POSITIVE_TEXT]星舰计划[ENDCOLOR]以开启[COLOR_POSITIVE_TEXT]科学胜利[ENDCOLOR]。（必须开启科技胜利条件才可建造。）</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_PROJECT_APOLLO_PROGRAM_STRATEGY" >
+		<Replace Tag="TXT_KEY_PROJECT_APOLLO_PROGRAM_STRATEGY">
 			<Text>阿波罗计划，是指上世纪七十年代人类的登月计划，又名阿波罗工程。计划始于1961年五月，到1972年十二月第六次登月成功结束，历史11年，耗资225亿美元，在高峰期，参加工程的有2万家企业、200多所大学和80多个科研机构，总人数超过30万人。[NEWLINE][NEWLINE]阿波罗计划由艾森豪威尔提出，作为水星计划的延续，事实上，登月计划也缘起于美苏争霸，由于苏联宇航员尤里•加加林成为进入太空的第一人，加深美国对于太空竞赛落后的恐惧。计划中曾经出现多次的危机，并且葬送三名宇航员的生命，但其取得了巨大的成功，也是人类史上最庞大的太空行动，迄今为止四十多年都未曾有其他载人航天器登陆过月球。[NEWLINE][NEWLINE]有趣的是，这项伟大的计划，在三十多年后，却陷入了一些造假的嫌疑，并且产生了阴谋论的假设。另外有人称当年登上月球的阿姆斯特朗等人，曾经见到过UFO外星人的遗迹，甚至亲身接触过那些未知的生命体。</Text>
 		</Replace>
 
@@ -8250,12 +8245,12 @@
 		</Row>
 		<Row Tag="TXT_KEY_SP_RESOURCE_MANPOWER_HELP">
 			<Text>
-			人力资源是超级大国模组中极为重要的一种资源。
-			[NEWLINE][ICON_BULLET]绝大部分军事单位和世界奇观都会消耗你的人力资源。
-			[NEWLINE][ICON_BULLET]人力资源主要通过城市和人口提供，部分建筑和奇观也可以提供。
-			[NEWLINE]
-			[NEWLINE][ICON_BULLET]人力资源充足时(数量>25)，玩家使用[ICON_GOLD]金钱购买单位和建筑获得打折加成，公式为P= 5*n/c/2，其中为n电力资源数量，c为城市数量。
-			[NEWLINE][ICON_BULLET]人力资源至多带来35%的购买减成。
+				人力资源是超级大国模组中极为重要的一种资源。
+				[NEWLINE][ICON_BULLET]绝大部分军事单位和世界奇观都会消耗你的人力资源。
+				[NEWLINE][ICON_BULLET]人力资源主要通过城市和人口提供，部分建筑和奇观也可以提供。
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]人力资源充足时(数量>25)，玩家使用[ICON_GOLD]金钱购买单位和建筑获得打折加成，公式为P= 5*n/c/2，其中为n电力资源数量，c为城市数量。
+				[NEWLINE][ICON_BULLET]人力资源至多带来35%的购买减成。
 			</Text>
 		</Row>
 
@@ -8267,13 +8262,13 @@
 		</Row>
 		<Row Tag="TXT_KEY_SP_RESOURCE_ELECTRICITY_HELP">
 			<Text>
-			电力资源是超级大国模组后期极为重要的一种资源，玩家进入电气时代且拥有50个科技后电力资源全局效果启用。
-			[NEWLINE][ICON_BULLET]你的城市规模和近现代建筑都需要消耗电力来维持。
-			[NEWLINE][ICON_BULLET]电力只能够通过发电站设施产出。需要注意的是，绝大部分的发电站设施都会产生污染，降低城市的食物累积速率。
-			[NEWLINE]
-			[NEWLINE][ICON_BULLET]电力充足时(数量>25)，国家会获得全局[ICON_RESEARCH]科研加成，公式为P= n/c，其中n为电力资源数量，c为城市数量。
-			[NEWLINE][ICON_BULLET]电力资源不足时，国家获得全局[ICON_RESEARCH]科研[ICON_PRODUCTION]产能减成，公式为P= n*(c/10)，其中n为电力资源数量，c为城市数量。
-			[NEWLINE][ICON_BULLET]电力资源加减成的限制公式为P= (t-50)*5，其中t为玩家拥有科技数，且上限至多为50%，下限至多为-75%。
+				电力资源是超级大国模组后期极为重要的一种资源，玩家进入电气时代且拥有50个科技后电力资源全局效果启用。
+				[NEWLINE][ICON_BULLET]你的城市规模和近现代建筑都需要消耗电力来维持。
+				[NEWLINE][ICON_BULLET]电力只能够通过发电站设施产出。需要注意的是，绝大部分的发电站设施都会产生污染，降低城市的食物累积速率。
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]电力充足时(数量>25)，国家会获得全局[ICON_RESEARCH]科研加成，公式为P= n/c，其中n为电力资源数量，c为城市数量。
+				[NEWLINE][ICON_BULLET]电力资源不足时，国家获得全局[ICON_RESEARCH]科研[ICON_PRODUCTION]产能减成，公式为P= n*(c/10)，其中n为电力资源数量，c为城市数量。
+				[NEWLINE][ICON_BULLET]电力资源加减成的限制公式为P= (t-50)*5，其中t为玩家拥有科技数，且上限至多为50%，下限至多为-75%。
 			</Text>
 		</Row>
 
@@ -8285,13 +8280,13 @@
 		</Row>
 		<Row Tag="TXT_KEY_SP_RESOURCE_CONSUMER_HELP">
 			<Text>
-			商品是超级大国模组中极为重要的一种资源。
-			[NEWLINE][ICON_BULLET]大规模城市会消耗巨量的商品，如果不能满足商品需求，你的人民满意度会急剧降低。
-			[NEWLINE][ICON_BULLET]商品主要通过市场建筑和商业家提供。
-			[NEWLINE]
-			[NEWLINE][ICON_BULLET]商品充足时(数量>25)，国家会获得全局[ICON_CONNECTED]城市连接加成以及[ICON_HAPPINESS_4]不满减成，公式为P= n/c，其中n为商品资源数量，c为城市数量。
-			[NEWLINE][ICON_BULLET]商品资源不足时，国家获得全局[ICON_HAPPINESS_4]不满加成，公式为P= n*(c/10)，其中n为商品资源数量，c为城市数量。
-			[NEWLINE][ICON_BULLET]商品资源的全局不满加减成至多为+-50%。
+				商品是超级大国模组中极为重要的一种资源。
+				[NEWLINE][ICON_BULLET]大规模城市会消耗巨量的商品，如果不能满足商品需求，你的人民满意度会急剧降低。
+				[NEWLINE][ICON_BULLET]商品主要通过市场建筑和商业家提供。
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]商品充足时(数量>25)，国家会获得全局[ICON_CONNECTED]城市连接加成以及[ICON_HAPPINESS_4]不满减成，公式为P= n/c，其中n为商品资源数量，c为城市数量。
+				[NEWLINE][ICON_BULLET]商品资源不足时，国家获得全局[ICON_HAPPINESS_4]不满加成，公式为P= n*(c/10)，其中n为商品资源数量，c为城市数量。
+				[NEWLINE][ICON_BULLET]商品资源的全局不满加减成至多为+-50%。
 			</Text>
 		</Row>
 
@@ -8443,7 +8438,7 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_SPECIALISTS_ARTISTIC_HELP</Tag>
 			<Text>文学家，美术家和音乐家：+2[ICON_CULTURE]文化产出，+2[ICON_GOLD]维护费。
-			[NEWLINE][NEWLINE]文明的城市数量越多建造成本越高。</Text>
+				[NEWLINE][NEWLINE]文明的城市数量越多建造成本越高。</Text>
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_SPECIALISTS_ARTISTIC_LV1</Tag>
@@ -8601,7 +8596,7 @@
 			<Text>自从有人类以来，渔业就已经开始了，渔业在人类历史上一直相当地重要，自从有人类以来，甚至于在有历史之前，鱼肉在世界许多地方都是当地人重要的营养来源，一直到现代社会都是如此，在许多的古文明和里面都可以见到关于渔业的记载。[NEWLINE][NEWLINE]早在旧石器时代中晚期，处于原始社会早期的人类就在居住地附近的水域中捞取鱼、贝类作为维持生活的重要手段。十万年前的人类已捕捞青鱼、草鱼、鲤和螺蚌等。一万年前古人类的捕捞物中，有长达80厘米的草鱼和河蚌，以及可能是通过交换得到的海蚶。距今4000～10000年的新石器时代,人类的捕鱼技术和能力有了相当的发展。从许多古文化遗址出土的这一时期的各种捕鱼工具如骨制的鱼镖、鱼叉、鱼钩和石、陶网坠等,可以推断这一时期已有多种捕鱼方法。除用手摸鱼、用棍棒打鱼和用弓箭射鱼外，已能用鱼镖叉鱼和进行钩钓、网捕等。以兽骨或兽角磨制的鱼镖有多种形式，多具有倒钩，尾可以固定在镖柄上，或拴以绳索，成为带索鱼镖，鱼被刺中挣扎，鱼镖和镖柄脱离，可以持镖柄拉绳取鱼。用鱼钩钓鱼。钓钩有的具倒刺，制作精巧，相当锋利，可与现代钓钩相媲美。用网捕鱼的记载见于《易经·系辞下》：“作结绳而为网罟，以佃以渔。”世界各地出土的许多石、陶网坠也说明当时已经使用渔网捕鱼；而渔网上使用网坠是捕鱼技术上的一大进步。网坠形式的多样化和普遍使用，也大体上反映了多种渔网的存在。此外，新石器时代遗址还出土过具有倒梢的竹制鱼笱，这是利用狩猎陷井的捕鱼方法。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_TECH_FISHERY_QUOTE">
-			<Text>“很多人终生在钓鱼，却不知他们所钓的并不是鱼。”[NEWLINE]        —— 亨利·戴维·梭罗</Text>
+			<Text>“很多人终生在钓鱼，却不知他们所钓的并不是鱼。”[NEWLINE] —— 亨利·戴维·梭罗</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_TECH_HUNTING_TITLE">
@@ -8611,7 +8606,7 @@
 			<Text>英国著名的人类学家爱德华·泰勒在他的《原始文化》第四章中提出：“野蛮人的世界观就是给一切现象凭空加上无所不在的人格化的神灵的任性作用……古代的野蛮人让这些幻想来塞满自己的住宅，周围的环境，广大的地面和天空。”他们不仅虚幻地、歪曲地理解世界，而且在他们和世界之间设置了同样虚幻而歪曲的关系，这便产生了巫术思想。[NEWLINE][NEWLINE]许多原始岩画几乎都带有巫术或祭祀的目的，岩画中的动物图像上都刻画了非同一般属种的小动物，这并非表示大动物已经怀孕，可能与原始巫术观念有关，也许作画者认为在大动物身上刻画小动物，就意味著大动物可以不断繁衍幼仔，可以源源不断地向人类提供食物来源。可见，狩猎时代所产生的狩猎岩画正是巫术思维的产物，它既在客观上反映了原始人狩猎活动和狩猎巫术，又对真实的狩猎发生著巫术的影响力。他们认为，拥有野兽的形象，便意味著会拥有那些野兽；画了受伤野兽的岩画，便能使他们射伤野兽，正如法国史前考古学家的安德列·勒鲁瓦一古昂所说的那样：“伤口的描绘是有关巫术的重要证据，在动物形象上画上伤口，以确保狩猎成功。”内蒙古磴口县阿贵沟第七地点有一组猎羊图，一个猎人的箭镞触到了羚羊的臀部，表示他已经将这头羚羊射中；法国拉斯科洞中画有连中七箭的马，其肋部画有流血的伤口；西班牙冈达莫洞画的一只受伤的鹿，身上中箭后，回首惊望著箭发出的方向，这些都表达了原始狩猎者对狩猎成功的期待。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_TECH_HUNTING_QUOTE">
-			<Text>“没有哪一种狩猎比得上对人的狩猎，当追猎武装著的人类成了经验之后，就只能沉迷于其中了。”[NEWLINE]        —— 欧内斯特·海明威</Text>
+			<Text>“没有哪一种狩猎比得上对人的狩猎，当追猎武装著的人类成了经验之后，就只能沉迷于其中了。”[NEWLINE] —— 欧内斯特·海明威</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_TECH_ART_THEORY_TITLE">
@@ -8621,7 +8616,7 @@
 			<Text>美学是哲学的一个分支，研究艺术，品位和美的本质，以及对美的创造和欣赏。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_TECH_ART_THEORY_QUOTE">
-			<Text>[NEWLINE]“美是一种内心的感觉，并反映在你的眼睛里。美并非是自然存在之物。”[NEWLINE]        —— 索菲亚·罗兰[NEWLINE]</Text>
+			<Text>[NEWLINE]“美是一种内心的感觉，并反映在你的眼睛里。美并非是自然存在之物。”[NEWLINE] —— 索菲亚·罗兰[NEWLINE]</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_TECH_ADMINISTRATION_TITLE">
@@ -8631,7 +8626,7 @@
 			<Text>管理学是研究在现有的条件下，如何通过合理的组织和配置人、财、物等因素，提高生产力的水平；是社会组织中，为了实现预期的目标，以人为中心进行的协调活动调。在一般意义上讲，它是通过采取某些具体的手段和措施，设计、营造、维护一种环境，包括组织内部和外部的环境，使所有管理对象在特定的环境中，做到协调而有序地进行活动。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_TECH_ADMINISTRATION_QUOTE">
-			<Text>“一个人无论多蠢笨，需要会教会他怎么办。”[NEWLINE]        —— 欧里庇得斯</Text>
+			<Text>“一个人无论多蠢笨，需要会教会他怎么办。”[NEWLINE] —— 欧里庇得斯</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_TECH_MARINE_ENGINEERING_TITLE">
@@ -8648,7 +8643,7 @@
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_TECH_MARINE_ENGINEERING_QUOTE">
-			<Text>“小小开支不可随意,小小漏洞会沉大船。”[NEWLINE]        —— 本杰明·富兰克林</Text>
+			<Text>“小小开支不可随意,小小漏洞会沉大船。”[NEWLINE] —— 本杰明·富兰克林</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_TECH_SONAR_TITLE">
@@ -8658,7 +8653,7 @@
 			<Text>声纳（原为声音导航和测距的缩写）是利用声音的传播（通常是水下传播）进行导航与通信，或者检测水面上下诸如船只等物体的技术。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_TECH_SONAR_QUOTE">
-			<Text>[NEWLINE]“先发制人，后发制于人。”[NEWLINE]        —— 班固，《汉书·项籍传》[NEWLINE]</Text>
+			<Text>[NEWLINE]“先发制人，后发制于人。”[NEWLINE] —— 班固，《汉书·项籍传》[NEWLINE]</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_TECH_MILITARY_LOGISTICS_TITLE">
@@ -8668,7 +8663,7 @@
 			<Text>在二战中，围绕战争物资供应，美国军队建立了“后勤”（Logistics）理论。当时的“后勤”是指将战时物资生产、采购、运输、配给等活动作为一个整体进行统一布置，以求战略物资补给的费用更低、速度更快、服务更好。后来，将军事后勤体系被移植到现代经济生活中，逐步演变出物流系统。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_TECH_MILITARY_LOGISTICS_QUOTE">
-			<Text>“先生们，不能像了解自己的战术那样了解自己的通讯和补给的军官都是废物。”[NEWLINE]        —— 小乔治·史密斯·巴顿</Text>
+			<Text>“先生们，不能像了解自己的战术那样了解自己的通讯和补给的军官都是废物。”[NEWLINE] —— 小乔治·史密斯·巴顿</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_TECH_ADV_ENGINEERING_TITLE">
@@ -8678,7 +8673,7 @@
 			<Text>工程学最关键和独特的任务是发现，理解并结合实际的局限来达到满意的结果。很多情况下，产品不仅仅只需符合技术要求，其他条件也必须满足。这些条件包括材料来源，物理或技术的局限，未来改进的可行性和其他因素，诸如成本，可销售性，可生产性及适用性。[NEWLINE][NEWLINE]工程师们应用科学，数学和相应的经验来找到问题的解决办法。他们建立合理的数学模型，对问题进行分析并测试可能的解决方案。可能的解决方案常常有多个，工程师们必须根据它们的本质评价各方案的优劣并选择最能满足要求的最佳方案。折中存在于是各种工程设计的核心之中，最佳设计意味著能达到尽可能多的要求。[NEWLINE][NEWLINE]一般在全面生产过程前，工程师就必须尝试预测他们的设计如何达到规格。他们使用：原型、比例模型、模拟、破坏性试验、非破坏性试验、强度测试。测试保证产品按期望值运行。测试的目的是确保产品能符合预计的要求。专业工程人员会尽量制造符合预计要求的产品，并达到对社会无害。因此工程师往往需要在设计中考虑安全因素来降低意外的故障。不过，考虑的安全因素越高，设计效率也通常会越低。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_TECH_ADV_ENGINEERING_QUOTE">
-			<Text>“一个人眼中的魔法是另一个人实际建造的工程。超自然是一个无意义的词。”[NEWLINE]        —— 罗伯特·海因莱因</Text>
+			<Text>“一个人眼中的魔法是另一个人实际建造的工程。超自然是一个无意义的词。”[NEWLINE] —— 罗伯特·海因莱因</Text>
 		</Row>
 
 		<Replace Tag="TXT_KEY_TECH_REFRIGERATION_TITLE">
@@ -8692,7 +8687,7 @@
 			<Text>大口径火炮系统——拥有不小于100毫米口径，能够对地面单位实施间接火力打击的机关炮、榴弹炮、迫击炮以及多管火箭炮等火炮组成的系统。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_TECH_LARGE_CALIBRE_QUOTE">
-			<Text>[NEWLINE]“炮兵是战争之神。”[NEWLINE]        —— 约瑟夫·斯大林[NEWLINE]</Text>
+			<Text>[NEWLINE]“炮兵是战争之神。”[NEWLINE] —— 约瑟夫·斯大林[NEWLINE]</Text>
 		</Row>
 
 		<!--<Row Tag="TXT_KEY_TECH_ARMOR_TITLE">
@@ -8722,7 +8717,7 @@
 			<Text>军事术语，指把国家或政治集团的武装力量从平时状态转入战时状态，以及把所有的经济部门（工业、农业、运输业等）转入供应战争需要的工作，即统一调动人力、物力、财力为战争服务。“动员”一词迄今最早见于18世纪末的法国。1789年法国发生的资产阶级革命，引起了国内外敌对势力的恐惧和反抗，欧洲君主国家结成同盟，对法国革命进行武装干涉。法国资产阶级为了保卫革命成果，国民公会于1793年8月23日颁布《全国总动员法令》，宣布“从现在起到一切敌人被逐出共和国领土为止，全法国人民始终处于征发状态”。总动员令发布后在很短时间内就组建了一支42万人的军队，还动员生产了大量武器装备，使战争获得了有效的物质保障。法国的这次总动员明确提出了“动员”概念，制定了动员法令，丰富了动员内容，促进了动员的发展，是近代战争动员史上的一个范例。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_TECH_MOBILIZATION_T_QUOTE">
-			<Text>“I want you for U.S. Army”[NEWLINE]        —— 1917年美国征兵海报</Text>
+			<Text>“I want you for U.S. Army”[NEWLINE] —— 1917年美国征兵海报</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_TECH_INTEGRATED_CIRCUIT_TITLE">
@@ -8732,7 +8727,7 @@
 			<Text>集成电路是一种微型电子器件或部件。采用一定的工艺，把一个电路中所需的晶体管、二极管、电阻、电容和电感等元件及布线互连一起，制作在一小块或几小块半导体晶片或介质基片上，然后封装在一个管壳内，成为具有所需电路功能的微型结构；其中所有元件在结构上已组成一个整体，使电子元件向著微小型化、低功耗、智能化和高可靠性方面迈进了一大步。它在电路中用字母“IC”表示。集成电路发明者为杰克·基尔比（基于锗的集成电路）和罗伯特·诺伊思（基于硅的集成电路）。当今半导体工业大多数应用的是基于硅的集成电路。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_TECH_INTEGRATED_CIRCUIT_QUOTE">
-			<Text>“如果在电路中的任何部分都可以显示电流的存在，那么没有理由不能通过电来将人类的思想瞬间传播。”[NEWLINE]        —— 萨缪尔·芬利·布里斯·摩尔斯</Text>
+			<Text>“如果在电路中的任何部分都可以显示电流的存在，那么没有理由不能通过电来将人类的思想瞬间传播。”[NEWLINE] —— 萨缪尔·芬利·布里斯·摩尔斯</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_TECH_COMPOSITE_TITLE">
@@ -8742,7 +8737,7 @@
 			<Text>复合型材料（也称组合型材料，或简称为复合材料）是由两种或更多种具有显著不同的物理或化学性质的材料组合而成的，从而产生与单组份材料不同性质特征的应用材料。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_TECH_COMPOSITE_QUOTE">
-			<Text>[NEWLINE]“整体大于部分的总和。”[NEWLINE]        —— 亚里士多德[NEWLINE]</Text>
+			<Text>[NEWLINE]“整体大于部分的总和。”[NEWLINE] —— 亚里士多德[NEWLINE]</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_TECH_ADV_FLIGHT_TITLE">
@@ -8752,7 +8747,7 @@
 			<Text>莱特兄弟在北卡罗来纳州沙地上试飞他们第一架飞机时，他们很难会想到，不到四十年后，航空工程师们就找到了一种全新的飞行动力——喷气发动机。喷气发动机的发明也为直升机的发明提供了条件。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_TECH_ADV_FLIGHT_QUOTE">
-			<Text>[NEWLINE]“噢！我终于溜出了大地那死板的牢笼，伸手碰到了上帝的面容。”[NEWLINE]        —— 约翰·葛拉斯彼·马吉[NEWLINE]</Text>
+			<Text>[NEWLINE]“噢！我终于溜出了大地那死板的牢笼，伸手碰到了上帝的面容。”[NEWLINE] —— 约翰·葛拉斯彼·马吉[NEWLINE]</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_TECH_ARMOR_TITLE">
@@ -8762,7 +8757,7 @@
 			<Text>现代侦察技术可以分为四个系统：[NEWLINE][NEWLINE]一、地（水）面侦察监视技术。它是指在陆地（水）上进行的侦察与监视。其主要手段除传统的光学侦察外，还有无线电通信侦察、雷达侦察、地面传达侦察等。[NEWLINE][NEWLINE]二、水下侦察监视技术。它是指利用水下侦察设备探测水下各种目标。水下侦察设备分为水声探测设备和非声探测设备。目前，水下激光探测处于探索阶段。[NEWLINE][NEWLINE]三、空中侦察监视技术。它是指利用航空器在环绕地球的大气空间时对敌方军队及其活动、阵地、地形等情况进行的侦察与监视，具有灵活、机动、淮确和针对性强的特点。[NEWLINE][NEWLINE]四、空间侦察监视技术。它是指利用航天器的光电遥感器和无线电接收机等侦察设备获取情报的技术。它的特点是轨道高、发现目标快、侦察范围广。可以长期反复地监视全球，也可定期或连续地监视某一区域。它不受国界和地理条件的限制。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_TECH_ARMOR_QUOTE">
-			<Text>“有好消息从远方来，就如拿凉水给口渴的人喝。”[NEWLINE]        —— 旧约·箴言25:25</Text>
+			<Text>“有好消息从远方来，就如拿凉水给口渴的人喝。”[NEWLINE] —— 旧约·箴言25:25</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_TECH_ARTIFICIAL_INTELLIGENCE_TITLE">
@@ -8772,7 +8767,7 @@
 			<Text>人工智能（AI）是由机器或软件说表现出的智能，是计算机科学中开发智能机器和软件的一个分支。主要的人工智能研究人员和教科书将该领域定义为“智能代理的研究和设计”，其中智能代理是指一种能够感知周边环境，并采取行为进行应对以最大化成功几率的系统。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_TECH_ARTIFICIAL_INTELLIGENCE_QUOTE">
-			<Text>[NEWLINE]“经过适当编程，并恰当地进行输入和输出的电脑可以拥有思想，而且是人类那样的思想。”[NEWLINE]        —— 约翰·瑟尔[NEWLINE]</Text>
+			<Text>[NEWLINE]“经过适当编程，并恰当地进行输入和输出的电脑可以拥有思想，而且是人类那样的思想。”[NEWLINE] —— 约翰·瑟尔[NEWLINE]</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_TECH_GENETIC_ENGEERING_TITLE">
@@ -8782,7 +8777,7 @@
 			<Text>基因工程，又被称为转基因技术，是允许人类对生物有机体的基因组进行直接操作的技术。要将新的DNA插入宿主的基因组中，可将感兴趣的DNA序列隔离后克隆出来，或者直接人工合成，之后植入宿主机体中。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_TECH_GENETIC_ENGEERING_QUOTE">
-			<Text>“基因工程足以提高我们基因的复杂性，将人类进一步完善。但这将是一个缓慢的过程，因为你将不得不等待十八年来观察改编遗传密码的效果。”[NEWLINE]        —— 斯蒂芬·霍金</Text>
+			<Text>“基因工程足以提高我们基因的复杂性，将人类进一步完善。但这将是一个缓慢的过程，因为你将不得不等待十八年来观察改编遗传密码的效果。”[NEWLINE] —— 斯蒂芬·霍金</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_TECH_AUTOMATION_T_TITLE">
@@ -8792,7 +8787,7 @@
 			<Text>自动化（Automation）是指机器设备、系统或过程（生产、管理过程）在没有人或较少人的直接参与下，按照人的要求，经过自动检测、信息处理、分析判断、操纵控制，实现预期的目标的过程。自动化技术广泛用于工业、农业、军事、科学研究、交通运输、商业、医疗、服务和家庭等方面。采用自动化技术不仅可以把人从繁重的体力劳动、部分脑力劳动以及恶劣、危险的工作环境中解放出来，而且能扩展人的器官功能，极大地提高劳动生产率，增强人类认识世界和改造世界的能力。因此，自动化是工业、农业、国防和科学技术现代化的重要条件和显著标志。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_TECH_AUTOMATION_T_QUOTE">
-			<Text>“在生意中使用任何技术都遵循以下两个规律：第一、自动化会使高效率的行为更加高效；第二、自动化会使低效率的行为更加低效。”[NEWLINE]        —— 比尔·盖茨</Text>
+			<Text>“在生意中使用任何技术都遵循以下两个规律：第一、自动化会使高效率的行为更加高效；第二、自动化会使低效率的行为更加低效。”[NEWLINE] —— 比尔·盖茨</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_TECH_IOT_NETWORK_TITLE">
@@ -8802,7 +8797,7 @@
 			<Text>物联网是新一代信息技术的重要组成部分，也是“信息化”时代的重要发展阶段。其英文名称是：“Internet of things（IoT）”。顾名思义，物联网就是物物相连的互联网。这有两层意思：其一，物联网的核心和基础仍然是互联网，是在互联网基础上的延伸和扩展的网络；其二，其用户端延伸和扩展到了任何物品与物品之间，进行信息交换和通信，也就是物物相息。物联网通过智能感知、识别技术与普适计算等通信感知技术，广泛应用于网络的融合中，也因此被称为继计算机、互联网之后世界信息产业发展的第三次浪潮。物联网是互联网的应用拓展，与其说物联网是网络，不如说物联网是业务和应用。因此，应用创新是物联网发展的核心，以用户体验为核心的创新2.0是物联网发展的灵魂。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_TECH_IOT_NETWORK_QUOTE">
-			<Text>“不出户，知天下﹔不窥牖，见天道。”[NEWLINE]        —— 老子</Text>
+			<Text>“不出户，知天下﹔不窥牖，见天道。”[NEWLINE] —— 老子</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_TECH_BVR_COMBAT_TITLE">
@@ -8812,7 +8807,7 @@
 			<Text>超视距导弹（BVR）通常指航程范围达到37公里以上的空对空导弹。要达到这个攻击范围，导弹必须装备双脉冲火箭发动机，或者联合使用冲压自持发动机与增压火箭发动机。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_TECH_BVR_COMBAT_QUOTE">
-			<Text>“在现代战争中，人会象狗一样毫无价值地死掉。”[NEWLINE]        —— 欧内斯特·海明威</Text>
+			<Text>“在现代战争中，人会象狗一样毫无价值地死掉。”[NEWLINE] —— 欧内斯特·海明威</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_TECH_SUPERCONDUCTOR_TITLE">
@@ -8822,7 +8817,7 @@
 			<Text>超导是指导电材料在温度接近绝对零度的时候，物体分子热运动下材料的电阻趋近于0的性质。“超导体”是指能进行超导传输的导电材料。零电阻和抗磁性是超导体的两个重要特性。人类最初发现物体的超导现象是在1911年。当时荷兰科学家海克·卡末林·昂内斯（Heike Kamerlingh Onnes，1853～1926）等人发现，某些材料在极低的温度下，其电阻完全消失，呈超导状态。使超导体电阻为零的温度，叫超导临界温度。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_TECH_SUPERCONDUCTOR_QUOTE">
-			<Text>“为了发明创造,你需要不错的想象力和无数次的失败.”[NEWLINE]        —— 托马斯·爱迪生</Text>
+			<Text>“为了发明创造,你需要不错的想象力和无数次的失败.”[NEWLINE] —— 托马斯·爱迪生</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_TECH_TRANSHUMANISM_TITLE">
@@ -8832,7 +8827,7 @@
 			<Text>超人类主义是一个经常被用来和人类增强类似的术语。它如今是一个国际性的文化智力运动，支持使用科学技术来增强精神和体力能力和资质，并用来克服人类状态不需要或不必要的方面，比如残疾、疾病、痛苦、老化和偶然死亡。超人类主义思考者研究发展和使用人类增强技术以及其他以此目的的新兴技术可能性和后果。这些强大的新技术带来的可能的危险、好处，以及对人类生活状态的完全改变也是超人类主义运动的关心方向。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_TECH_TRANSHUMANISM_QUOTE">
-			<Text>“对那些很快就要获得数码永生的人来说，时间有什么意义呢？”[NEWLINE]        —— 克莱德·德索萨</Text>
+			<Text>“对那些很快就要获得数码永生的人来说，时间有什么意义呢？”[NEWLINE] —— 克莱德·德索萨</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_TECH_SPACE_TECHNOLOGY_TITLE">
@@ -8843,7 +8838,7 @@
 		</Row>
 
 		<Row Tag="TXT_KEY_TECH_SPACE_TECHNOLOGY_QUOTE">
-			<Text>“与人类的野心相比，即使是浩瀚无垠的宇宙都显得渺小了。”[NEWLINE]        —— Lincoln_lyf，超级大国模组作者</Text>
+			<Text>“与人类的野心相比，即使是浩瀚无垠的宇宙都显得渺小了。”[NEWLINE] —— Lincoln_lyf，超级大国模组作者</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_TECH_METAMATERIAL_TITLE">
@@ -8853,7 +8848,7 @@
 			<Text>“超材料”（Metamaterial）是21世纪以来出现的一类新材料，其具备天然材料所不具备的特殊性质，而且这些性质主要来自人工的特殊结构。超材料的设计思想是新颖的，这一思想的基础是通过在多种物理结构上的设计来突破某些表观自然规律的限制，从而获得超常的材料功能。超材料的设计思想昭示人们可以在不违背基本的物理学规律的前提下，人工获得与自然界中的物质具有迥然不同的超常物理性质的“新物质”，把功能材料的设计和开发带入一个崭新的天地。典型的“超材料”有：“左手材料”、光子晶体、“超磁性材料”、“金属水”等等。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_TECH_METAMATERIAL_QUOTE">
-			<Text>“人类从未发明出像他们的精神思维那样具有弹性的材料。”[NEWLINE]        —— 伯纳德·威廉姆斯</Text>
+			<Text>“人类从未发明出像他们的精神思维那样具有弹性的材料。”[NEWLINE] —— 伯纳德·威廉姆斯</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_TECH_PHOTON_COMPUTER_TITLE">
@@ -8863,7 +8858,7 @@
 			<Text>量子计算机（quantum computer）是一类遵循量子力学规律进行高速数学和逻辑运算、存储及处理量子信息的物理装置。当某个装置处理和计算的是量子信息，运行的是量子算法时，它就是量子计算机。量子计算机的概念源于对可逆计算机的研究。研究可逆计算机的目的是为了解决计算机中的能耗问题。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_TECH_PHOTON_COMPUTER_QUOTE">
-			<Text>“领袖和跟风者的区别就在于创新。”[NEWLINE]        —— 史蒂夫·乔布斯</Text>
+			<Text>“领袖和跟风者的区别就在于创新。”[NEWLINE] —— 史蒂夫·乔布斯</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_TECH_INTERSTELLAR_TRAVEL_TITLE">
@@ -8873,7 +8868,7 @@
 			<Text>星际航行是指恒星系之间载人或无人的旅行。通过飞船进行星际航行的概念是科幻小说的主食。星际旅行比行星间的航行要更加困难。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_TECH_INTERSTELLAR_TRAVEL_QUOTE">
-			<Text>[NEWLINE]“旅行会杀死偏见，偏执和狭隘。”[NEWLINE]        —— 马克·吐温[NEWLINE]</Text>
+			<Text>[NEWLINE]“旅行会杀死偏见，偏执和狭隘。”[NEWLINE] —— 马克·吐温[NEWLINE]</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_TECH_INTEGRATED_DEFENSE_TITLE">
@@ -8883,7 +8878,7 @@
 			<Text>战略防御计划（SDI）由美国总统里根于1983年3月23日提出，使用陆基和空基系统以保护美国免受洲际核弹道导弹的攻击。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_TECH_INTEGRATED_DEFENSE_QUOTE">
-			<Text>[NEWLINE]“战争即和平；自由即奴役；无知即力量。”[NEWLINE]        —— 乔治·奥威尔，《1984》[NEWLINE]</Text>
+			<Text>[NEWLINE]“战争即和平；自由即奴役；无知即力量。”[NEWLINE] —— 乔治·奥威尔，《1984》[NEWLINE]</Text>
 		</Row>
 
 		<!--Terrains-->
@@ -8907,10 +8902,10 @@
 
 		<Replace Tag="TXT_KEY_CIV5_IMPROVEMENTS_TRADING_POST_TEXT">
 			<Text>
-			贸易站是一种商业设施，在这里猎人和陷捕者可以拿他们的商品同居民交换食物、武器、威士忌酒、黄金以及市面上的其他物品。贸易站可以为社会产生大量财富。
-			[NEWLINE][ICON_BULLET]建造在河边与海边的贸易站额外+1[ICON_GOLD]金钱，建造在河流入海口处的贸易站则叠加为额外+2[ICON_GOLD]金钱。
-			[NEWLINE][ICON_BULLET]建造在道路上的贸易战额外+1[ICON_GOLD]金钱，铁路上的则额外+2[ICON_GOLD]金钱。
-			[NEWLINE][ICON_BULLET]每处贸易站提供+1[ICON_RES_CONSUMER]商品。
+				贸易站是一种商业设施，在这里猎人和陷捕者可以拿他们的商品同居民交换食物、武器、威士忌酒、黄金以及市面上的其他物品。贸易站可以为社会产生大量财富。
+				[NEWLINE][ICON_BULLET]建造在河边与海边的贸易站额外+1[ICON_GOLD]金钱，建造在河流入海口处的贸易站则叠加为额外+2[ICON_GOLD]金钱。
+				[NEWLINE][ICON_BULLET]建造在道路上的贸易战额外+1[ICON_GOLD]金钱，铁路上的则额外+2[ICON_GOLD]金钱。
+				[NEWLINE][ICON_BULLET]每处贸易站提供+1[ICON_RES_CONSUMER]商品。
 			</Text>
 		</Replace>
 
@@ -9384,7 +9379,7 @@
 
 				[NEWLINE][NEWLINE][COLOR_YIELD_FOOD]特点：[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]固定单位，不能移动。
-				[NEWLINE][ICON_BULLET]在你的工人将军事要塞建造好之后，在该区域就会出现一个固定炮台单位。	[NEWLINE][ICON_BULLET]如果炮台被摧毁，则军事要塞也会消失。	[NEWLINE][ICON_BULLET]如果你的工人将军事要塞改造成其他地块设施，炮台单位也会消失。	[NEWLINE][ICON_BULLET]如果军事要塞所在的城市被敌方攻佔，则炮台单位每回合-50HP且-50%[ICON_STRENGTH]战斗力。
+				[NEWLINE][ICON_BULLET]在你的工人将军事要塞建造好之后，在该区域就会出现一个固定炮台单位。 [NEWLINE][ICON_BULLET]如果炮台被摧毁，则军事要塞也会消失。 [NEWLINE][ICON_BULLET]如果你的工人将军事要塞改造成其他地块设施，炮台单位也会消失。 [NEWLINE][ICON_BULLET]如果军事要塞所在的城市被敌方攻佔，则炮台单位每回合-50HP且-50%[ICON_STRENGTH]战斗力。
 				[NEWLINE][ICON_BULLET]炮台单位不能获得晋升。
 				[NEWLINE][ICON_BULLET]空军单位能够部署在军事要塞中。
 
@@ -9413,7 +9408,7 @@
 				[NEWLINE][ICON_BULLET]补给
 				[NEWLINE][ICON_BULLET]炮灰
 
-				[NEWLINE][NEWLINE][COLOR_YIELD_FOOD]特点：[ENDCOLOR]	[NEWLINE][ICON_BULLET]如果点击“驻守”指令（或按“F”键），则[ICON_STRENGTH]防御力+50%。但如果移动则加成消失。
+				[NEWLINE][NEWLINE][COLOR_YIELD_FOOD]特点：[ENDCOLOR] [NEWLINE][ICON_BULLET]如果点击“驻守”指令（或按“F”键），则[ICON_STRENGTH]防御力+50%。但如果移动则加成消失。
 
 				[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]优势：[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]可以从工人转换，但是不保留经验；
@@ -9446,7 +9441,7 @@
 				[NEWLINE][ICON_BULLET]猎杀
 				[NEWLINE][ICON_BULLET]紧急援助
 
-				[NEWLINE][NEWLINE][COLOR_YIELD_FOOD]特点：[ENDCOLOR]	[NEWLINE][ICON_BULLET]特战部队一般拥有特殊的能力，在左侧面栏了解详细信息。需要注意的是，某些特殊指令会消耗其本回合全部[ICON_MOVES]移动力。
+				[NEWLINE][NEWLINE][COLOR_YIELD_FOOD]特点：[ENDCOLOR] [NEWLINE][ICON_BULLET]特战部队一般拥有特殊的能力，在左侧面栏了解详细信息。需要注意的是，某些特殊指令会消耗其本回合全部[ICON_MOVES]移动力。
 
 				[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]优势：[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]能完成常规部队不能完成的某些任务；
@@ -9476,7 +9471,7 @@
 				[NEWLINE][ICON_BULLET]多用途
 				[NEWLINE][ICON_BULLET]耐用
 
-				[NEWLINE][NEWLINE][COLOR_YIELD_FOOD]特点：[ENDCOLOR]	[NEWLINE][ICON_BULLET]如果点击“驻守”指令（或按“F”键），则[ICON_STRENGTH]防御力+50%。但如果移动则加成消失。
+				[NEWLINE][NEWLINE][COLOR_YIELD_FOOD]特点：[ENDCOLOR] [NEWLINE][ICON_BULLET]如果点击“驻守”指令（或按“F”键），则[ICON_STRENGTH]防御力+50%。但如果移动则加成消失。
 
 
 				[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]优势：[ENDCOLOR]
@@ -9508,7 +9503,7 @@
 				[NEWLINE][ICON_BULLET]炮灰
 				[NEWLINE][ICON_BULLET]掩护
 
-				[NEWLINE][NEWLINE][COLOR_YIELD_FOOD]特点：[ENDCOLOR]	[NEWLINE][ICON_BULLET]如果点击“驻守”指令（或按“F”键），则[ICON_STRENGTH]防御力+50%。但如果移动则加成消失。
+				[NEWLINE][NEWLINE][COLOR_YIELD_FOOD]特点：[ENDCOLOR] [NEWLINE][ICON_BULLET]如果点击“驻守”指令（或按“F”键），则[ICON_STRENGTH]防御力+50%。但如果移动则加成消失。
 
 
 				[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]优势：[ENDCOLOR]
@@ -10124,16 +10119,16 @@
 		<Row Tag="TXT_KEY_CIV5_GERMAN_LONGSWORDSMAN_TEXT">
 			<Text>1503年，普法尔茨选侯鲁佩特（Pfalz Ruprecht，即巴拉丁Palatinate）会同波希米亚国王弗拉迪斯拉夫（Vladislav），与巴伐利亚-慕尼黑公爵阿尔布雷希特（Albrecht）、马克西米利安一世（Maximilian I ）、施瓦本联盟、蒂罗尔公爵西格蒙德（Sigmund）和符腾堡公爵埃伯哈德（Eberhard）等在雷根斯堡（Regensburg）附近的文岑斯巴赫（Wenzensbach）遭遇，“凄惨无望队”在看到敌人骑兵发起攻击以后便立刻后撤至小山坡后的长矛手阵地，敌方骑兵冲至山坡后发现面对的是长矛手已经停不下来，在冲进长矛手阵地后被迫停下来后，双薪剑士在长矛兵的掩护下，挥剑横斩马腿以阻击骑兵，用剑攻击骑士铠甲的缝隙处，并且在近身搏杀时利用对方长矛过长、运转不变的机会加以攻击。最终以帝国军歼灭敌人骑兵1600人而大获全胜。这场战役是著名的以步兵歼灭骑兵战例之一，双薪剑士作为直接杀伤骑兵的主力部队功不可没，以纯步兵的雇佣兵在对抗正规骑兵，可以完全显示出双薪剑士的战斗力并不逊色于任何正规军。</Text>
 		</Row>
-		<Row Tag = "TXT_KEY_PROMOTION_GERMAN_LONGSWORDSMAN">
+		<Row Tag="TXT_KEY_PROMOTION_GERMAN_LONGSWORDSMAN">
 			<Text>德意志双手重剑</Text>
 		</Row>
-		<Row Tag = "TXT_KEY_PROMOTION_GERMAN_LONGSWORDSMAN_HELP">
+		<Row Tag="TXT_KEY_PROMOTION_GERMAN_LONGSWORDSMAN_HELP">
 			<Text>攻击时对同格敌方单位造成100%溅射伤害。</Text>
 		</Row>
-		<Row Tag = "TXT_KEY_PROMOTION_GERMAN_LONGSWORDSMAN_GOLD">
+		<Row Tag="TXT_KEY_PROMOTION_GERMAN_LONGSWORDSMAN_GOLD">
 			<Text>神圣罗马雇佣兵</Text>
 		</Row>
-		<Row Tag = "TXT_KEY_PROMOTION_GERMAN_LONGSWORDSMAN_GOLD_HELP">
+		<Row Tag="TXT_KEY_PROMOTION_GERMAN_LONGSWORDSMAN_GOLD_HELP">
 			<Text>消灭敌人时获得相当于单位[ICON_STRENGTH]战斗力50%的[ICON_GOLD]金钱。</Text>
 		</Row>
 
@@ -10307,7 +10302,7 @@
 			<Text>虎式坦克</Text>
 			<Plurality>2</Plurality>
 		</Replace>
-		
+
 		<!---<Row Tag="TXT_KEY_UNIT_CHINESE_052D">
 			<Text>99A2坦克</Text>
 			<Plurality>2</Plurality>
@@ -10730,7 +10725,7 @@
 			<Text>装甲巡洋舰“乔治·埃夫洛夫”</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_GREEK_ARMORED_CRUISER_PEDIA">
-			<Text>装甲巡洋舰“乔治·埃夫洛夫”是以意大利“比萨”级装甲巡洋舰为蓝本建造的，购买于第一次巴尔干战争前夕，那个时候希腊海军刚刚成长起来，在经历了1897年和土耳其的战争之后，希腊人手里只剩下几艘老旧的鱼雷艇，此刻开始重建海军进程，正在四处求购军舰，中国在美国订购的那艘“飞鸿”号轻巡洋舰，由于辛亥革命爆发无力付款，于是也在1911年被希腊人一并买入，更名“赫拉”（Helli）号。（附带一说，这艘“飞鸿”号快速巡洋舰性能的确不错，在一战中表现活跃，所以一直服役，直到二战爆发后的1940年才被意大利潜艇的暗算击沉，当时意大利尚未对希腊宣战。  真可惜没能加入民国海军序列）。当时这艘装甲巡洋舰的命运也差不多，本来它是意大利海军购买的3艘比萨级的第3艘，但是意大利政府后来决定只购买2艘，第3艘在建的军舰面临着被废弃拆卸的下场，正好四处寻求军舰的希腊人找上门来，愿意出钱买下，于是此舰得以完工并加入希腊皇家海军，并且在原设计上进行了若干修改。</Text>
+			<Text>装甲巡洋舰“乔治·埃夫洛夫”是以意大利“比萨”级装甲巡洋舰为蓝本建造的，购买于第一次巴尔干战争前夕，那个时候希腊海军刚刚成长起来，在经历了1897年和土耳其的战争之后，希腊人手里只剩下几艘老旧的鱼雷艇，此刻开始重建海军进程，正在四处求购军舰，中国在美国订购的那艘“飞鸿”号轻巡洋舰，由于辛亥革命爆发无力付款，于是也在1911年被希腊人一并买入，更名“赫拉”（Helli）号。（附带一说，这艘“飞鸿”号快速巡洋舰性能的确不错，在一战中表现活跃，所以一直服役，直到二战爆发后的1940年才被意大利潜艇的暗算击沉，当时意大利尚未对希腊宣战。 真可惜没能加入民国海军序列）。当时这艘装甲巡洋舰的命运也差不多，本来它是意大利海军购买的3艘比萨级的第3艘，但是意大利政府后来决定只购买2艘，第3艘在建的军舰面临着被废弃拆卸的下场，正好四处寻求军舰的希腊人找上门来，愿意出钱买下，于是此舰得以完工并加入希腊皇家海军，并且在原设计上进行了若干修改。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_UNIT_SPANISH_CANARIAS">
@@ -11514,9 +11509,7 @@
 
 		<Replace Tag="TXT_KEY_UNIT_HELP_LANCER">
 			<Text>以骑枪作为武器的重装骑兵，拥有进攻加成，可以轻松突破对方的步兵防线。</Text>
-		</Replace>ION_EXTRA_SIGHT_
-
-		<Replace Tag="TXT_KEY_UNIT_HELP_ANTI_AIRCRAFT_GUN">
+		</Replace>ION_EXTRA_SIGHT_ <Replace Tag="TXT_KEY_UNIT_HELP_ANTI_AIRCRAFT_GUN">
 			<Text>能够拦截试图轰炸3格内单位的敌方飞机。同时可以平向攻击2格内的地面单位。但是其除了攻击直升机单位外会受到战斗力减成。</Text>
 		</Replace>
 
@@ -11544,16 +11537,16 @@
 		<Replace Tag="TXT_KEY_UNIT_HELP_SAMURAI">
 			<Text>中古时代强大的步兵单位。日本特色单位，替代近卫军。该单位能在城市中建立“道场”。</Text>
 		</Replace>
-		<Row Tag = "TXT_KEY_PROMOTION_JAPANESE_SAMURAI">
+		<Row Tag="TXT_KEY_PROMOTION_JAPANESE_SAMURAI">
 			<Text>刀</Text>
 		</Row>
-		<Row Tag = "TXT_KEY_PROMOTION_JAPANESE_SAMURAI_HELP">
+		<Row Tag="TXT_KEY_PROMOTION_JAPANESE_SAMURAI_HELP">
 			<Text>夹击加成+5%。</Text>
 		</Row>
-		<Row Tag = "TXT_KEY_PROMOTION_JAPANESE_SAMURAI_CULTURE">
+		<Row Tag="TXT_KEY_PROMOTION_JAPANESE_SAMURAI_CULTURE">
 			<Text>菊</Text>
 		</Row>
-		<Row Tag = "TXT_KEY_PROMOTION_JAPANESE_SAMURAI_CULTURE_HELP">
+		<Row Tag="TXT_KEY_PROMOTION_JAPANESE_SAMURAI_CULTURE_HELP">
 			<Text>消灭敌人时获得相当于单位[ICON_STRENGTH]战斗力50%的[ICON_CULTURE]文化，这项能力在升级后不保留。</Text>
 		</Row>
 
@@ -11649,8 +11642,7 @@
 
 		<Replace Tag="TXT_KEY_UNIT_ENGLISH_LONGBOWMAN">
 			<Text>[COLOR_YELLOW]长弓兵[ENDCOLOR]</Text>
-			<Plurality>2</Plurality>wei
-		</Replace>
+			<Plurality>2</Plurality>wei </Replace>
 		<Replace Tag="TXT_KEY_ELITE_NAME_ENGLISH_LONGBOWMAN">
 			<Text>[COLOR_YELLOW]罗宾汉[ENDCOLOR]</Text>
 		</Replace>
@@ -11774,7 +11766,7 @@
 			<Text>[COLOR_YELLOW]鹦鹉螺号[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_PROTOTYPE_SUBMARINE_PEDIA">
-			<Text>“阿龙纳斯先生，下面就是您乘的这只船的形状和容积。船是很长的圆筒形，两端作圆锥状。很明显，它很像一支雪茄烟。这种形式，在伦敦有些船的构造早已采用过了。这个圆筒的长度，从头到尾，正好是七十米，它的横柄，最宽、的地方是八米。所以这船的构造跟普通的远航大汽船不是完全一样的，它的宽是长的十分之一，它从头至尾是够长的，两腰包底又相当圆，因此船行驶时积水容易排走，丝毫不会阻碍它的航行。拿上面宽长两个数量计算一下，就可以得到诺第留斯号的面积和体积。面积共为一千零十一平方米四十五厘米，体积共为一千五百点二立方米——就是说，船完全沉入水中时，它的徘水量或体重为一千五百立方米或一千五百吨。”  ——尼摩船长</Text>
+			<Text>“阿龙纳斯先生，下面就是您乘的这只船的形状和容积。船是很长的圆筒形，两端作圆锥状。很明显，它很像一支雪茄烟。这种形式，在伦敦有些船的构造早已采用过了。这个圆筒的长度，从头到尾，正好是七十米，它的横柄，最宽、的地方是八米。所以这船的构造跟普通的远航大汽船不是完全一样的，它的宽是长的十分之一，它从头至尾是够长的，两腰包底又相当圆，因此船行驶时积水容易排走，丝毫不会阻碍它的航行。拿上面宽长两个数量计算一下，就可以得到诺第留斯号的面积和体积。面积共为一千零十一平方米四十五厘米，体积共为一千五百点二立方米——就是说，船完全沉入水中时，它的徘水量或体重为一千五百立方米或一千五百吨。” ——尼摩船长</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_UNIT_SUPER_HOWITZER">
@@ -11829,10 +11821,10 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_UNIT_HELP_COSSACK">
 			<Text>购买数量无上限的民兵单位。[NEWLINE][NEWLINE]需要哥萨克兵团制解锁。</Text>
-		</Replace >
+		</Replace>
 		<Replace Tag="TXT_KEY_UNIT_RUSSIAN_COSSACK_STRATEGY">
 			<Text>拥有游猎单位能力的民兵单位，拥有低廉的价格和高机动。</Text>
-		</Replace >
+		</Replace>
 
 		<Row Tag="TXT_KEY_UNIT_ELITE_SNIPER">
 			<Text>[COLOR_YELLOW]精英狙击手[ENDCOLOR]</Text>
@@ -11840,9 +11832,9 @@
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_HELP_ELITE_SNIPER">
 			<Text>
-			一个游击型的隐形单位，高机动性及空投能力能让你更快赶往战场或破坏敌人补给线。
-			[NEWLINE]每杀死一名敌军，+3[ICON_RANGE_STRENGTH]远程战斗力。
-			[NEWLINE][NEWLINE]需要猎人训练项目解锁，你只能建造一个。
+				一个游击型的隐形单位，高机动性及空投能力能让你更快赶往战场或破坏敌人补给线。
+				[NEWLINE]每杀死一名敌军，+3[ICON_RANGE_STRENGTH]远程战斗力。
+				[NEWLINE][NEWLINE]需要猎人训练项目解锁，你只能建造一个。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_ELITE_SNIPER_STRATEGY">
@@ -11976,7 +11968,7 @@
 		<Row Tag="TXT_KEY_UNIT_TSAR_BOMBA_STRATEGY">
 			<Text>
 				相当于提前1个时代的ICBM，是非常恐怖的战略核威慑力量。如果玩家不怕核冬天的话，用它来压制boss的效果好极了！
-									[NEWLINE][NEWLINE]克制方法：沙皇炸弹一旦投下，谁也阻止不了它爆炸。不过它的射程并不远，难以威胁到另一大洲的国家。此外它也可以被核不扩散决议所禁止。
+				 [NEWLINE][NEWLINE]克制方法：沙皇炸弹一旦投下，谁也阻止不了它爆炸。不过它的射程并不远，难以威胁到另一大洲的国家。此外它也可以被核不扩散决议所禁止。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_TSAR_BOMBA_TEXT">
@@ -12224,12 +12216,12 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_CITADEL_DEFENSE_HELP">
 			<Text>
-			固定火力点，当建成[COLOR_POSITIVE_TEXT]军事要塞[ENDCOLOR]时产生。
-			[NEWLINE][ICON_BULLET]友方地域内+25%[ICON_STRENGTH]战斗力。
-			[NEWLINE][ICON_BULLET]不受[COLOR_POSITIVE_TEXT]负面效果[ENDCOLOR]影响。
-			[NEWLINE][ICON_BULLET]处于境外每回合会-50HP且-25%[ICON_STRENGTH]战斗力。
-			[NEWLINE][ICON_BULLET]不能[COLOR_NEGATIVE_TEXT]移动[ENDCOLOR]，不能获得[COLOR_NEGATIVE_TEXT]晋升[ENDCOLOR]。
-			[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]攻城单位[ENDCOLOR]克制。
+				固定火力点，当建成[COLOR_POSITIVE_TEXT]军事要塞[ENDCOLOR]时产生。
+				[NEWLINE][ICON_BULLET]友方地域内+25%[ICON_STRENGTH]战斗力。
+				[NEWLINE][ICON_BULLET]不受[COLOR_POSITIVE_TEXT]负面效果[ENDCOLOR]影响。
+				[NEWLINE][ICON_BULLET]处于境外每回合会-50HP且-25%[ICON_STRENGTH]战斗力。
+				[NEWLINE][ICON_BULLET]不能[COLOR_NEGATIVE_TEXT]移动[ENDCOLOR]，不能获得[COLOR_NEGATIVE_TEXT]晋升[ENDCOLOR]。
+				[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]攻城单位[ENDCOLOR]克制。
 			</Text>
 		</Row>
 
@@ -12238,9 +12230,9 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_INFANTRY_COMBAT_HELP">
 			<Text>
-			主力步兵单位，擅长进攻和防守任务。
-			[NEWLINE][ICON_BULLET]面对[COLOR_POSITIVE_TEXT]城市[ENDCOLOR]+50%[ICON_STRENGTH]战斗力。
-			[NEWLINE][ICON_BULLET]防御[COLOR_POSITIVE_TEXT]反骑兵/反坦克单位[ENDCOLOR]以及[COLOR_POSITIVE_TEXT]民兵单位[ENDCOLOR]时+25%[ICON_STRENGTH]战斗力。
+				主力步兵单位，擅长进攻和防守任务。
+				[NEWLINE][ICON_BULLET]面对[COLOR_POSITIVE_TEXT]城市[ENDCOLOR]+50%[ICON_STRENGTH]战斗力。
+				[NEWLINE][ICON_BULLET]防御[COLOR_POSITIVE_TEXT]反骑兵/反坦克单位[ENDCOLOR]以及[COLOR_POSITIVE_TEXT]民兵单位[ENDCOLOR]时+25%[ICON_STRENGTH]战斗力。
 			</Text>
 		</Row>
 
@@ -12249,29 +12241,29 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_GUNPOWDER_INFANTRY_COMBAT_HELP">
 			<Text>
-			主力步兵单位，擅长进攻和防守任务。
-			[NEWLINE][ICON_BULLET]近战开始之前进行一轮[COLOR_POSITIVE_TEXT]远程攻击[ENDCOLOR]。
-			[NEWLINE][ICON_BULLET]进攻[COLOR_POSITIVE_TEXT]城市[ENDCOLOR]+50%[ICON_STRENGTH]战斗力。
-			[NEWLINE][ICON_BULLET]防御[COLOR_POSITIVE_TEXT]反骑兵/反坦克单位[ENDCOLOR]以及[COLOR_POSITIVE_TEXT]民兵单位[ENDCOLOR]时+25%[ICON_STRENGTH]战斗力。
+				主力步兵单位，擅长进攻和防守任务。
+				[NEWLINE][ICON_BULLET]近战开始之前进行一轮[COLOR_POSITIVE_TEXT]远程攻击[ENDCOLOR]。
+				[NEWLINE][ICON_BULLET]进攻[COLOR_POSITIVE_TEXT]城市[ENDCOLOR]+50%[ICON_STRENGTH]战斗力。
+				[NEWLINE][ICON_BULLET]防御[COLOR_POSITIVE_TEXT]反骑兵/反坦克单位[ENDCOLOR]以及[COLOR_POSITIVE_TEXT]民兵单位[ENDCOLOR]时+25%[ICON_STRENGTH]战斗力。
 			</Text>
 		</Row>
 		<!--冲击1级-->
-		<Replace Tag="TXT_KEY_PROMOTION_SHOCK_1_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_SHOCK_1_HELP">
 			<Text>进攻时+15%[ICON_STRENGTH]战斗力。[NEWLINE]消除登陆作战惩罚。</Text>
 		</Replace>
 		<!--冲击2级-->
-		<Replace Tag="TXT_KEY_PROMOTION_SHOCK_2_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_SHOCK_2_HELP">
 			<Text>进攻时+15%[ICON_STRENGTH]战斗力。[NEWLINE]在林地和丘陵地带移动力翻倍。</Text>
 		</Replace>
 		<!--冲击3级-->
-		<Replace Tag="TXT_KEY_PROMOTION_SHOCK_3_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_SHOCK_3_HELP">
 			<Text>进攻[COLOR_POSITIVE_TEXT]城市[ENDCOLOR]+50%[ICON_STRENGTH]战斗力。[NEWLINE]在[COLOR_POSITIVE_TEXT]复杂地形[ENDCOLOR]作战+25%[ICON_STRENGTH]战斗力。</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_PROMOTION_COVER_1_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_COVER_1_HELP">
 			<Text>对[COLOR_POSITIVE_TEXT]远程攻击[ENDCOLOR]+33%[COLOR_POSITIVE_TEXT]防御力[ENDCOLOR]。</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_COVER_2_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_COVER_2_HELP">
 			<Text>对[COLOR_POSITIVE_TEXT]远程攻击[ENDCOLOR]+33%[COLOR_POSITIVE_TEXT]防御力[ENDCOLOR]。[NEWLINE]回复时每回合额外回复10HP。</Text>
 		</Replace>
 		<Row Tag="TXT_KEY_PROMOTION_COVER_3">
@@ -12285,7 +12277,7 @@
 		<Replace Tag="TXT_KEY_PROMOTION_ANTI_MOUNTED">
 			<Text>方阵步兵</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_ANTI_MOUNTED_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_ANTI_MOUNTED_HELP">
 			<Text>克制[COLOR_POSITIVE_TEXT]骑乘[ENDCOLOR]单位，被[COLOR_NEGATIVE_TEXT]远程攻击[ENDCOLOR]克制。[NEWLINE]驻守时每回合额外回复15HP。</Text>
 		</Replace>
 		<!--
@@ -12299,14 +12291,14 @@
 		<Replace Tag="TXT_KEY_PROMOTION_ANTI_TANK">
 			<Text>反装甲单位</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_ANTI_TANK_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_ANTI_TANK_HELP">
 			<Text>克制[COLOR_POSITIVE_TEXT]装甲[ENDCOLOR]单位，被[COLOR_NEGATIVE_TEXT]防空单位[ENDCOLOR]克制。[NEWLINE]驻守时每回合额外回复15HP。</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_PROMOTION_FORMATION_1_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_FORMATION_1_HELP">
 			<Text>对[COLOR_POSITIVE_TEXT]骑乘[ENDCOLOR]单位+25%[ICON_STRENGTH]战斗力。</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_FORMATION_2_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_FORMATION_2_HELP">
 			<Text>对[COLOR_POSITIVE_TEXT]骑乘[ENDCOLOR]单位+25%[ICON_STRENGTH]战斗力。</Text>
 		</Replace>
 
@@ -12367,29 +12359,29 @@
 		<Replace Tag="TXT_KEY_PROMOTION_CHARGE_1">
 			<Text>冲锋一级</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_CHARGE_1_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_CHARGE_1_HELP">
 			<Text>如果目标单位被冲锋击退，该单位本轮+1[ICON_MOVES]移动力。</Text>
 		</Replace>
 		<Row Tag="TXT_KEY_PROMOTION_CHARGE_2">
 			<Text>冲锋二级</Text>
 		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_CHARGE_2_HELP" >
+		<Row Tag="TXT_KEY_PROMOTION_CHARGE_2_HELP">
 			<Text>如果目标单位被冲锋击退，对同一格的另外一个敌方单位造成100%的伤害。[NEWLINE]被击退的单位受到额外10HP伤害。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_CHARGE_3">
 			<Text>冲锋三级</Text>
 		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_CHARGE_3_HELP" >
+		<Row Tag="TXT_KEY_PROMOTION_CHARGE_3_HELP">
 			<Text>如果目标单位被冲锋击退，对同一格的另外一个敌方单位再造成50%的伤害。[NEWLINE]被击退的单位受到额外10HP伤害。</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_PROMOTION_HEAVY_SHOCK_1_HELP" >
+		<Row Tag="TXT_KEY_PROMOTION_HEAVY_SHOCK_1_HELP">
 			<Text>进攻时+25%[ICON_STRENGTH]战斗力。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_HEAVY_SHOCK_2_HELP" >
+		<Row Tag="TXT_KEY_PROMOTION_HEAVY_SHOCK_2_HELP">
 			<Text>进攻时+25%[ICON_STRENGTH]战斗力。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_HEAVY_SHOCK_3_HELP" >
+		<Row Tag="TXT_KEY_PROMOTION_HEAVY_SHOCK_3_HELP">
 			<Text>消灭非野蛮人单位后回复15HP。</Text>
 		</Row>
 
@@ -12398,21 +12390,21 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_ARCHERY_COMBAT_HELP">
 			<Text>
-			[ICON_BULLET]克制[COLOR_POSITIVE_TEXT]方阵步兵[ENDCOLOR]，[COLOR_POSITIVE_TEXT]反装甲[ENDCOLOR]和[COLOR_POSITIVE_TEXT]陆军游猎[ENDCOLOR]单位。
-			[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]近战[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]攻城[ENDCOLOR]单位克制。
-			[NEWLINE][ICON_BULLET]对[COLOR_POSITIVE_TEXT]开阔[ENDCOLOR]地形中的单位+25%[ICON_RANGE_STRENGTH]远程战斗力。
-			[NEWLINE][ICON_BULLET]自身所处[COLOR_POSITIVE_TEXT]高度[ENDCOLOR]大于敌方单位时，每点高度+25%战斗力，上限50%。
-			[NEWLINE][ICON_BULLET]没有地形防御加成。
-			[NEWLINE][ICON_BULLET]当本单位与[COLOR_POSITIVE_TEXT]步兵[ENDCOLOR]、[COLOR_POSITIVE_TEXT]反制[ENDCOLOR]或[COLOR_POSITIVE_TEXT]炮台[ENDCOLOR]单位重叠时，如果被敌方[COLOR_POSITIVE_TEXT]近战[ENDCOLOR]单位攻击，本单位会自动反击。
-			[NEWLINE][ICON_BULLET]每回合反击次数无限。
-			[NEWLINE][ICON_BULLET]如果你的掩护单位被消灭，则不能反击。
+				[ICON_BULLET]克制[COLOR_POSITIVE_TEXT]方阵步兵[ENDCOLOR]，[COLOR_POSITIVE_TEXT]反装甲[ENDCOLOR]和[COLOR_POSITIVE_TEXT]陆军游猎[ENDCOLOR]单位。
+				[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]近战[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]攻城[ENDCOLOR]单位克制。
+				[NEWLINE][ICON_BULLET]对[COLOR_POSITIVE_TEXT]开阔[ENDCOLOR]地形中的单位+25%[ICON_RANGE_STRENGTH]远程战斗力。
+				[NEWLINE][ICON_BULLET]自身所处[COLOR_POSITIVE_TEXT]高度[ENDCOLOR]大于敌方单位时，每点高度+25%战斗力，上限50%。
+				[NEWLINE][ICON_BULLET]没有地形防御加成。
+				[NEWLINE][ICON_BULLET]当本单位与[COLOR_POSITIVE_TEXT]步兵[ENDCOLOR]、[COLOR_POSITIVE_TEXT]反制[ENDCOLOR]或[COLOR_POSITIVE_TEXT]炮台[ENDCOLOR]单位重叠时，如果被敌方[COLOR_POSITIVE_TEXT]近战[ENDCOLOR]单位攻击，本单位会自动反击。
+				[NEWLINE][ICON_BULLET]每回合反击次数无限。
+				[NEWLINE][ICON_BULLET]如果你的掩护单位被消灭，则不能反击。
 			</Text>
 		</Row>
 
-		<Replace Tag="TXT_KEY_PROMOTION_ANTI_AIR" >
+		<Replace Tag="TXT_KEY_PROMOTION_ANTI_AIR">
 			<Text>防空火力</Text>
 		</Replace>
-		<Row Tag="TXT_KEY_PROMOTION_ANTI_AIR_HELP" >
+		<Row Tag="TXT_KEY_PROMOTION_ANTI_AIR_HELP">
 			<Text>每回合能够进行一次对空拦截。对[COLOR_POSITIVE_TEXT]攻击机[ENDCOLOR]和[COLOR_POSITIVE_TEXT]直升机[ENDCOLOR]单位拥有战斗力加成，被[COLOR_NEGATIVE_TEXT]近战[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]攻城[ENDCOLOR]单位克制。[NEWLINE]没有地形防御加成。</Text>
 		</Row>
 
@@ -12430,29 +12422,29 @@
 			<Text>立刻杀死目标单位。[NEWLINE]攻击后本单位被[COLOR_NEGATIVE_TEXT]消耗[ENDCOLOR]。</Text>
 		</Row>
 
-		<Replace Tag="TXT_KEY_PROMOTION_ACCURACY_1_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_ACCURACY_1_HELP">
 			<Text>远程攻击时+10%[ICON_RANGE_STRENGTH]战斗力及对[COLOR_POSITIVE_TEXT]方阵步兵[ENDCOLOR]、[COLOR_POSITIVE_TEXT]反装甲[ENDCOLOR]、[COLOR_POSITIVE_TEXT]陆军游猎[ENDCOLOR]单位额外+45%[ICON_RANGE_STRENGTH]战斗力。</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_ACCURACY_2_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_ACCURACY_2_HELP">
 			<Text>远程攻击时+10%[ICON_RANGE_STRENGTH]战斗力及对[COLOR_POSITIVE_TEXT]方阵步兵[ENDCOLOR]、[COLOR_POSITIVE_TEXT]反装甲[ENDCOLOR]、[COLOR_POSITIVE_TEXT]陆军游猎[ENDCOLOR]单位额外+45%[ICON_RANGE_STRENGTH]战斗力。</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_PROMOTION_BARRAGE_1_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_BARRAGE_1_HELP">
 			<Text>
-			[ICON_BULLET]如果目标单位被攻击后HP小于60%，则其下回合[ICON_MOVES]移动力降低至1并持续-1[ICON_MOVES]移动力。
-			[NEWLINE][ICON_BULLET]再次受到攻击则完全丧失移动并持续失去近战攻击能力，直至其恢复满员该效果才会消失。
+				[ICON_BULLET]如果目标单位被攻击后HP小于60%，则其下回合[ICON_MOVES]移动力降低至1并持续-1[ICON_MOVES]移动力。
+				[NEWLINE][ICON_BULLET]再次受到攻击则完全丧失移动并持续失去近战攻击能力，直至其恢复满员该效果才会消失。
 			</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_BARRAGE_2_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_BARRAGE_2_HELP">
 			<Text>
-			[ICON_BULLET]如果目标单位被攻击后HP小于75%，则其下回合[ICON_MOVES]移动力降低至1并持续-1[ICON_MOVES]移动力。
-			[NEWLINE][ICON_BULLET]再次受到攻击则完全丧失移动并持续失去近战攻击能力，直至其恢复满员该效果才会消失。
+				[ICON_BULLET]如果目标单位被攻击后HP小于75%，则其下回合[ICON_MOVES]移动力降低至1并持续-1[ICON_MOVES]移动力。
+				[NEWLINE][ICON_BULLET]再次受到攻击则完全丧失移动并持续失去近战攻击能力，直至其恢复满员该效果才会消失。
 			</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_BARRAGE_3_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_BARRAGE_3_HELP">
 			<Text>
-			[ICON_BULLET]如果目标单位被攻击后HP小于90%，则其下回合[ICON_MOVES]移动力降低至1并持续-1[ICON_MOVES]移动力。
-			[NEWLINE][ICON_BULLET]再次受到攻击则完全丧失移动并持续失去近战攻击能力，直至其恢复满员该效果才会消失。
+				[ICON_BULLET]如果目标单位被攻击后HP小于90%，则其下回合[ICON_MOVES]移动力降低至1并持续-1[ICON_MOVES]移动力。
+				[NEWLINE][ICON_BULLET]再次受到攻击则完全丧失移动并持续失去近战攻击能力，直至其恢复满员该效果才会消失。
 			</Text>
 		</Replace>
 
@@ -12500,7 +12492,7 @@
 			<Text>每回合额外回复15HP</Text>
 		</Replace>-->
 
-		<Row Tag="TXT_KEY_PROMOTION_CAN_CROSS_MOUNTAINS" >
+		<Row Tag="TXT_KEY_PROMOTION_CAN_CROSS_MOUNTAINS">
 			<Text>允许翻山</Text>
 		</Row>
 
@@ -12553,14 +12545,14 @@
 		<Replace Tag="TXT_KEY_PROMOTION_CITY_SIEGE">
 			<Text>攻城武器</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_CITY_SIEGE_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_CITY_SIEGE_HELP">
 			<Text>攻击[COLOR_POSITIVE_TEXT]城市[ENDCOLOR]+200%[ICON_STRENGTH]战斗力，攻击[COLOR_POSITIVE_TEXT]军事要塞火力点[ENDCOLOR]+200%[ICON_STRENGTH]战斗力，攻击[COLOR_POSITIVE_TEXT]驻扎单位[ENDCOLOR]和[COLOR_POSITIVE_TEXT]陆军远程[ENDCOLOR]+50%[ICON_STRENGTH]战斗力，被[COLOR_NEGATIVE_TEXT]近战[ENDCOLOR]单位克制。[NEWLINE]攻击目标时对同一格单位造成50%伤害。[NEWLINE]攻击木制船只有几率造成[COLOR_NEGATIVE_TEXT]局部损伤[ENDCOLOR]或[COLOR_NEGATIVE_TEXT]严重损伤[ENDCOLOR][NEWLINE]没有地形防御加成。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_PROMOTION_VOLLEY">
 			<Text>攻坚一级</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_VOLLEY_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_VOLLEY_HELP">
 			<Text>对[COLOR_POSITIVE_TEXT]驻防单位[ENDCOLOR]和[COLOR_POSITIVE_TEXT]城市[ENDCOLOR]+100%[ICON_STRENGTH]战斗力。</Text>
 		</Replace>
 		<Row Tag="TXT_KEY_PROMOTION_VOLLEY_2">
@@ -12570,17 +12562,17 @@
 		<Row Tag="TXT_KEY_PROMOTION_COLLATERAL_DAMAGE_1">
 			<Text>重炮一级</Text>
 		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_COLLATERAL_DAMAGE_1_HELP" >
+		<Row Tag="TXT_KEY_PROMOTION_COLLATERAL_DAMAGE_1_HELP">
 			<Text>对目标地格的其他单位+50%的伤害。如果目标单位被攻击后HP小于75%，则其攻击力-25%，-1射程，直至其恢复满员该效果才会消失。（该效果可叠加2次，如果单位射程为0则无法远程攻击，不对受到溅射伤害的单位起效）</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_COLLATERAL_DAMAGE_2">
 			<Text>重炮二级</Text>
 		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_COLLATERAL_DAMAGE_2_HELP" >
+		<Row Tag="TXT_KEY_PROMOTION_COLLATERAL_DAMAGE_2_HELP">
 			<Text>对目标地格的其他单位+50%的伤害。如果目标单位被攻击后HP小于90%，则其攻击力-25%，-1射程，直至其恢复满员该效果才会消失。（该效果可叠加2次，如果单位射程为0则无法远程攻击，不对受到溅射伤害的单位起效）</Text>
 		</Row>
 
-		<Replace Tag="TXT_KEY_PROMOTION_LOGISTICS_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_LOGISTICS_HELP">
 			<Text>每回合增加1次额外攻击次数。</Text>
 		</Replace>
 
@@ -12619,9 +12611,9 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_KOREA_HWACHA_HELP">
 			<Text>
-			对[COLOR_POSITIVE_TEXT]相邻区域[ENDCOLOR]目标伤害+40%，对[COLOR_POSITIVE_TEXT]目标地格[ENDCOLOR]的其他单位+50%的伤害。
-			[NEWLINE]每对一个敌军造成[COLOR_POSITIVE_TEXT]溅射或穿透[ENDCOLOR]伤害+1XP。
-			[NEWLINE]解锁[COLOR_POSITIVE_TEXT]独特[ENDCOLOR]晋升线。
+				对[COLOR_POSITIVE_TEXT]相邻区域[ENDCOLOR]目标伤害+40%，对[COLOR_POSITIVE_TEXT]目标地格[ENDCOLOR]的其他单位+50%的伤害。
+				[NEWLINE]每对一个敌军造成[COLOR_POSITIVE_TEXT]溅射或穿透[ENDCOLOR]伤害+1XP。
+				[NEWLINE]解锁[COLOR_POSITIVE_TEXT]独特[ENDCOLOR]晋升线。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_GUN_BARRER_1">
@@ -12648,8 +12640,8 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_DIVINE_WEAPON_1_HELP">
 			<Text>
-			对[COLOR_POSITIVE_TEXT]目标地格[ENDCOLOR]的其他单位+25%的伤害。
-			[NEWLINE]若目标单位剩余血量小于50%，受到[COLOR_NEGATIVE_TEXT]迟滞/阻碍[ENDCOLOR]效果。
+				对[COLOR_POSITIVE_TEXT]目标地格[ENDCOLOR]的其他单位+25%的伤害。
+				[NEWLINE]若目标单位剩余血量小于50%，受到[COLOR_NEGATIVE_TEXT]迟滞/阻碍[ENDCOLOR]效果。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_DIVINE_WEAPON_2">
@@ -12657,8 +12649,8 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_DIVINE_WEAPON_2_HELP">
 			<Text>
-			对[COLOR_POSITIVE_TEXT]目标地格[ENDCOLOR]的其他单位+25%的伤害。
-			[NEWLINE]若目标单位剩余血量小于50%，受到[COLOR_NEGATIVE_TEXT]阵型破坏[ENDCOLOR]效果。
+				对[COLOR_POSITIVE_TEXT]目标地格[ENDCOLOR]的其他单位+25%的伤害。
+				[NEWLINE]若目标单位剩余血量小于50%，受到[COLOR_NEGATIVE_TEXT]阵型破坏[ENDCOLOR]效果。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_DIVINE_WEAPON_3">
@@ -12666,8 +12658,8 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_DIVINE_WEAPON_3_HELP">
 			<Text>
-			对[COLOR_POSITIVE_TEXT]目标地格[ENDCOLOR]的其他单位+25%的伤害。
-			[NEWLINE]若目标单位剩余血量小于50%，受到[COLOR_NEGATIVE_TEXT]丧失补给[ENDCOLOR]效果。
+				对[COLOR_POSITIVE_TEXT]目标地格[ENDCOLOR]的其他单位+25%的伤害。
+				[NEWLINE]若目标单位剩余血量小于50%，受到[COLOR_NEGATIVE_TEXT]丧失补给[ENDCOLOR]效果。
 			</Text>
 		</Row>
 
@@ -12678,13 +12670,13 @@
 			<Text>对其他单位隐形，能够发现其他伪装单位。[NEWLINE]移动不受地形影响。[NEWLINE]不能掠夺和占领城市。[NEWLINE]没有地形防御加成。</Text>
 		</Row>
 
-		<Replace Tag="TXT_KEY_PROMOTION_SCOUTING_1_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_SCOUTING_1_HELP">
 			<Text>所有临近敌军单位-10%[ICON_STRENGTH]战斗力。</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_SCOUTING_2_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_SCOUTING_2_HELP">
 			<Text>所有临近敌军单位-20%[ICON_STRENGTH]战斗力。</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_SCOUTING_3_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_SCOUTING_3_HELP">
 			<Text>+2[ICON_MOVES]移动力。</Text>
 		</Replace>
 
@@ -12806,7 +12798,7 @@
 		<Row Tag="TXT_KEY_PROMOTION_PARADROP_III_HELP">
 			<Text>能够在[COLOR_POSITIVE_TEXT]友方地域[ENDCOLOR]外24格内空投。</Text>
 		</Row>
-		<Replace Tag="TXT_KEY_PROMOTION_EXTENDED_PARADROP_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_EXTENDED_PARADROP_HELP">
 			<Text>能够在[COLOR_POSITIVE_TEXT]友方地域[ENDCOLOR]外36格内空投。</Text>
 		</Replace>
 
@@ -12827,16 +12819,16 @@
 			</Text>
 		</Row>
 
-		<Replace Tag="TXT_KEY_PROMOTION_MEDIC" >
+		<Replace Tag="TXT_KEY_PROMOTION_MEDIC">
 			<Text>后备一级</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_MEDIC_II" >
+		<Replace Tag="TXT_KEY_PROMOTION_MEDIC_II">
 			<Text>后备二级</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_MEDIC_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_MEDIC_HELP">
 			<Text>相邻的和同格的所有同领域单位每回合额外恢复15HP。</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_MEDIC_II_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_MEDIC_II_HELP">
 			<Text>相邻的和同格的所有同领域单位每回合额外恢复15HP。该单位每回合额外恢复15HP。</Text>
 		</Replace>
 
@@ -12861,10 +12853,10 @@
 		</Row>-->
 
 
-		<Replace Tag="TXT_KEY_PROMOTION_ANTI_AIR_II" >
+		<Replace Tag="TXT_KEY_PROMOTION_ANTI_AIR_II">
 			<Text>空优战机</Text>
 		</Replace>
-		<Row Tag="TXT_KEY_PROMOTION_ANTI_AIR_II_HELP" >
+		<Row Tag="TXT_KEY_PROMOTION_ANTI_AIR_II_HELP">
 			<Text>每回合能够拦截一次。[NEWLINE]每回合能够执行“空中游猎”指令且游猎时+50%战斗力。[NEWLINE]执行游猎后仍然可以执行拦截。[COLOR_POSITIVE_TEXT]攻击机[ENDCOLOR]和[COLOR_POSITIVE_TEXT]轰炸机[ENDCOLOR]单位拥有战斗力加成。[NEWLINE]拥有6格的侦查范围。[NEWLINE]但无法攻击地面和海面单位。[NEWLINE]不能转场到航空母舰上。</Text>
 		</Row>
 
@@ -12931,10 +12923,10 @@
 			<Text>对[COLOR_POSITIVE_TEXT]地面[ENDCOLOR]和[COLOR_POSITIVE_TEXT]海面[ENDCOLOR]单位+50%[ICON_STRENGTH]攻击力。</Text>
 		</Row>
 
-		<Replace Tag="TXT_KEY_PROMOTION_AIR_TARGETING_1_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_AIR_TARGETING_1_HELP">
 			<Text>轰炸城市时，对所有敌方[COLOR_POSITIVE_TEXT]驻军[ENDCOLOR]和[COLOR_POSITIVE_TEXT]驻机[ENDCOLOR]造成20HP伤害。</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_AIR_TARGETING_2_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_AIR_TARGETING_2_HELP">
 			<Text>轰炸城市时，对所有敌方[COLOR_POSITIVE_TEXT]驻军[ENDCOLOR]和[COLOR_POSITIVE_TEXT]驻机[ENDCOLOR]造成40HP伤害。</Text>
 		</Replace>
 		<Row Tag="TXT_KEY_PROMOTION_AIR_TARGETING_3">
@@ -12977,13 +12969,13 @@
 			<Text>杀死目标城市60%的市民（如果城市有防空洞则为15%）。攻城加50%战斗力</Text>
 		</Row>
 
-		<Replace Tag="TXT_KEY_PROMOTION_AIR_SIEGE_1_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_AIR_SIEGE_1_HELP">
 			<Text>按照军事,防御,能源,产能的顺序，摧毁[COLOR_POSITIVE_TEXT]目标城市[ENDCOLOR]的一座军事建筑。前种类型建筑完全摧毁才会摧毁下一类型。攻击固定炮台加100%战斗力。</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_AIR_SIEGE_2_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_AIR_SIEGE_2_HELP">
 			<Text>按照同样顺序，追加摧毁[COLOR_POSITIVE_TEXT]目标城市[ENDCOLOR]的一座建筑。攻击固定炮台加100%战斗力。</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_AIR_SIEGE_3_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_AIR_SIEGE_3_HELP">
 			<Text>按照同样顺序，追加摧毁[COLOR_POSITIVE_TEXT]目标城市[ENDCOLOR]的一座建筑。攻击固定炮台加200%战斗力。</Text>
 		</Replace>
 
@@ -13006,17 +12998,17 @@
 			</Text>
 		</Row>
 
-		<Replace Tag="TXT_KEY_PROMOTION_EVASION_I" >
+		<Replace Tag="TXT_KEY_PROMOTION_EVASION_I">
 			<Text>规避能力(33)</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_EVASION_II" >
+		<Replace Tag="TXT_KEY_PROMOTION_EVASION_II">
 			<Text>规避能力(50)</Text>
 		</Replace>
-		<Row Tag="TXT_KEY_PROMOTION_EVASION_III" >
+		<Row Tag="TXT_KEY_PROMOTION_EVASION_III">
 			<Text>规避能力(100)</Text>
 		</Row>
 
-		<Replace Tag="TXT_KEY_PROMOTION_OCEAN_IMPASSABLE" >
+		<Replace Tag="TXT_KEY_PROMOTION_OCEAN_IMPASSABLE">
 			<Text>不能进入友方区域[COLOR_NEGATIVE_TEXT]之外[ENDCOLOR]的大洋。</Text>
 		</Replace>
 
@@ -13034,22 +13026,22 @@
 			<Text>能够拦截敌方飞机（每回合一次）。[NEWLINE]可以发现潜艇。[NEWLINE]能够攻击后移动。对[COLOR_POSITIVE_TEXT]潜艇[ENDCOLOR]单位有战斗力加成。[NEWLINE]能够击退敌方单位（如果敌方受到的伤害高于你受到的伤害）。</Text>
 		</Row>
 
-		<Replace Tag="TXT_KEY_PROMOTION_BOARDING_PARTY_1" >
+		<Replace Tag="TXT_KEY_PROMOTION_BOARDING_PARTY_1">
 			<Text>海战一级</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_BOARDING_PARTY_1_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_BOARDING_PARTY_1_HELP">
 			<Text>进攻时+25%[ICON_STRENGTH]战斗力。</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_BOARDING_PARTY_2" >
+		<Replace Tag="TXT_KEY_PROMOTION_BOARDING_PARTY_2">
 			<Text>海战二级</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_BOARDING_PARTY_2_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_BOARDING_PARTY_2_HELP">
 			<Text>进攻时+25%[ICON_STRENGTH]战斗力。</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_BOARDING_PARTY_3" >
+		<Replace Tag="TXT_KEY_PROMOTION_BOARDING_PARTY_3">
 			<Text>海战三级</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_BOARDING_PARTY_3_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_BOARDING_PARTY_3_HELP">
 			<Text>一定几率[COLOR_POSITIVE_TEXT]俘虏[ENDCOLOR]击败的敌方单位。</Text>
 		</Replace>
 
@@ -13067,17 +13059,17 @@
 			<Text>能够攻击后移动，无视区域控制。[NEWLINE]隐形但可被驱逐舰发现。可以发现潜艇。[NEWLINE]克制[COLOR_POSITIVE_TEXT]海军单位[ENDCOLOR]但被[COLOR_NEGATIVE_TEXT]驱逐舰[ENDCOLOR]克制。[NEWLINE]无法被岸基空军发现或攻击，但被舰载机克制。</Text>
 		</Row>
 
-		<Replace Tag="TXT_KEY_PROMOTION_NAVAL_RANGED_SHIP" >
+		<Replace Tag="TXT_KEY_PROMOTION_NAVAL_RANGED_SHIP">
 			<Text>远程海军</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_NAVAL_RANGED_SHIP_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_NAVAL_RANGED_SHIP_HELP">
 			<Text>克制[COLOR_POSITIVE_TEXT]海军近战[ENDCOLOR]单位，被[COLOR_NEGATIVE_TEXT]海军游猎[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]潜艇[ENDCOLOR]单位克制。[NEWLINE]能进行远程攻击亦可进行近战攻击。[NEWLINE]攻击目标时对同一格单位造成50%伤害。</Text>
 		</Replace>
 
-		<Row Tag="TXT_KEY_PROMOTION_NAVAL_RANGED_CRUISER" >
+		<Row Tag="TXT_KEY_PROMOTION_NAVAL_RANGED_CRUISER">
 			<Text>巡洋舰单位</Text>
 		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_NAVAL_RANGED_CRUISER_HELP" >
+		<Row Tag="TXT_KEY_PROMOTION_NAVAL_RANGED_CRUISER_HELP">
 			<Text>
 				现代海军远程部队，专用于火力支援和破坏敌军舰队防御，同时提供空中支援。
 				[NEWLINE][ICON_BULLET]可以[COLOR_POSITIVE_TEXT]远程攻击[ENDCOLOR]也可以[COLOR_POSITIVE_TEXT]近战攻击[ENDCOLOR]。
@@ -13089,10 +13081,10 @@
 			</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_PROMOTION_NAVAL_CAPITAL_SHIP" >
+		<Row Tag="TXT_KEY_PROMOTION_NAVAL_CAPITAL_SHIP">
 			<Text>旗舰单位</Text>
 		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_NAVAL_CAPITAL_SHIP_HELP" >
+		<Row Tag="TXT_KEY_PROMOTION_NAVAL_CAPITAL_SHIP_HELP">
 			<Text>同时代[ICON_STRENGTH]战斗力最强的单位。[NEWLINE]攻击目标时对临近单位造成50%伤害。[NEWLINE]进攻[COLOR_POSITIVE_TEXT]军事要塞固定炮台[ENDCOLOR]+350%[ICON_STRENGTH]战斗力。[NEWLINE]被[COLOR_NEGATIVE_TEXT]空军[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]潜艇[ENDCOLOR]单位克制。</Text>
 		</Row>
 
@@ -13143,11 +13135,11 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_CARRIER_UNIT_HELP">
 			<Text>
-			能够装载舰载机。
-			[NEWLINE]舰载机获得的经验会传递给所在航母。
-			[NEWLINE]在友方地域内能够补充舰载机。
-			[NEWLINE]与其在同一格的单位回复时每回合额外+15HP，本单位回复时每回合额外+15HP。
-			[NEWLINE]被[COLOR_NEGATIVE_TEXT]海军游猎[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]潜艇[ENDCOLOR]单位克制。
+				能够装载舰载机。
+				[NEWLINE]舰载机获得的经验会传递给所在航母。
+				[NEWLINE]在友方地域内能够补充舰载机。
+				[NEWLINE]与其在同一格的单位回复时每回合额外+15HP，本单位回复时每回合额外+15HP。
+				[NEWLINE]被[COLOR_NEGATIVE_TEXT]海军游猎[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]潜艇[ENDCOLOR]单位克制。
 			</Text>
 		</Row>
 
@@ -13288,10 +13280,10 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_MORAL_WEAKEN_1_HELP">
 			<Text>
-			[ICON_BULLET][ICON_STRENGTH][COLOR_NEGATIVE_TEXT]攻击力[ENDCOLOR]-25%。
-			[NEWLINE][ICON_BULLET][ICON_RANGE_STRENGTH][COLOR_NEGATIVE_TEXT]射程[ENDCOLOR]-1。
-			[NEWLINE][ICON_BULLET]单位恢复满员后此状态消失。
-			[NEWLINE][ICON_BULLET]可以用大军事家或者提督消除。
+				[ICON_BULLET][ICON_STRENGTH][COLOR_NEGATIVE_TEXT]攻击力[ENDCOLOR]-25%。
+				[NEWLINE][ICON_BULLET][ICON_RANGE_STRENGTH][COLOR_NEGATIVE_TEXT]射程[ENDCOLOR]-1。
+				[NEWLINE][ICON_BULLET]单位恢复满员后此状态消失。
+				[NEWLINE][ICON_BULLET]可以用大军事家或者提督消除。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_NEWLYCAPTURED">
@@ -13310,8 +13302,8 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_MOVEMENT_LOST_1_HELP">
 			<Text>
-			[ICON_BULLET]本轮只有1[ICON_MOVES]移动力，下回合恢复。
-			[NEWLINE][ICON_BULLET]持续损失1[ICON_MOVES]移动力，单位恢复满员后此状态消失。
+				[ICON_BULLET]本轮只有1[ICON_MOVES]移动力，下回合恢复。
+				[NEWLINE][ICON_BULLET]持续损失1[ICON_MOVES]移动力，单位恢复满员后此状态消失。
 			</Text>
 		</Row>
 
@@ -13320,8 +13312,8 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_MOVEMENT_LOST_2_HELP">
 			<Text>
-			[ICON_BULLET]本轮丧失[ICON_MOVES]移动力，下回合恢复。
-			[NEWLINE][ICON_BULLET]不能[COLOR_NEGATIVE_TEXT]近战攻击[ENDCOLOR]，单位恢复满员后此状态消失。
+				[ICON_BULLET]本轮丧失[ICON_MOVES]移动力，下回合恢复。
+				[NEWLINE][ICON_BULLET]不能[COLOR_NEGATIVE_TEXT]近战攻击[ENDCOLOR]，单位恢复满员后此状态消失。
 			</Text>
 		</Row>
 
@@ -13347,32 +13339,32 @@
 			<Text>面对近战攻击50%几率后撤</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_PROMOTION_ARMOR_PLATING_1_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_ARMOR_PLATING_1_HELP">
 			<Text>对所有[COLOR_POSITIVE_TEXT]远程攻击[ENDCOLOR]+33%防御力。</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_ARMOR_PLATING_2_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_ARMOR_PLATING_2_HELP">
 			<Text>对所有[COLOR_POSITIVE_TEXT]远程攻击[ENDCOLOR]+66%防御力。</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_ARMOR_PLATING_3_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_ARMOR_PLATING_3_HELP">
 			<Text>对所有[COLOR_POSITIVE_TEXT]远程攻击[ENDCOLOR]+100%防御力。</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_PROMOTION_ATTACK_BONUS" >
+		<Replace Tag="TXT_KEY_PROMOTION_ATTACK_BONUS">
 			<Text>攻击加成(50)</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_PROMOTION_HEAVY_PAYLOAD" >
+		<Replace Tag="TXT_KEY_PROMOTION_HEAVY_PAYLOAD">
 			<Text>重载荷</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_PROMOTION_HEAVY_PAYLOAD_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_HEAVY_PAYLOAD_HELP">
 			<Text>对[COLOR_POSITIVE_TEXT]城市[ENDCOLOR]和复杂地形的敌人+50%[ICON_STRENGTH]战斗力。</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_PROMOTION_STRONGER_VS_DAMAGED" >
+		<Replace Tag="TXT_KEY_PROMOTION_STRONGER_VS_DAMAGED">
 			<Text>猎杀残敌</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_STRONGER_VS_DAMAGED_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_STRONGER_VS_DAMAGED_HELP">
 			<Text>对受伤单位+50%[ICON_STRENGTH]战斗力。</Text>
 		</Replace>
 
@@ -13380,11 +13372,11 @@
 			<Text>相邻的所有单位每回合额外恢复15生命力。同格的单位额外恢复25生命力。该单位每回合额外恢复25生命力。</Text>
 		</Replace>-->
 
-		<Replace Tag="TXT_KEY_PROMOTION_GREAT_GENERAL_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_GREAT_GENERAL_HELP">
 			<Text>提升邻近两格的陆军单位的战斗效率。[NEWLINE]能够消耗一回合移动力来移除一个陆军单位的所有负面状态。[NEWLINE]免疫溅射和穿透伤害。</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_PROMOTION_GREAT_ADMIRAL_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_GREAT_ADMIRAL_HELP">
 			<Text>提升邻近两格的海军单位的战斗效率。[NEWLINE]能够消耗一回合移动力来移除一个海军单位的所有负面状态。</Text>
 		</Replace>
 
@@ -13444,19 +13436,19 @@
 		<Row Tag="TXT_KEY_PROMOTION_LOSE_HP_OUTSIDE_HELP">
 			<Text>在友方区域外停留会对该单位造成[COLOR_NEGATIVE_TEXT]10点伤害[ENDCOLOR]。</Text>
 		</Row>
-		<Replace Tag="TXT_KEY_PROMOTION_SCURVY_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_SCURVY_HELP">
 			<Text>在己方领土之外停留时有65%几率遭受[COLOR_NEGATIVE_TEXT]20损伤[ENDCOLOR]。</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_PROMOTION_MOON_STRIKER_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_MOON_STRIKER_HELP">
 			<Text>+1[ICON_MOVES]移动力。[NEWLINE]单位升级时花费[ICON_GOLD]金钱减少。</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_PROMOTION_DESERT_WARRIOR_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_DESERT_WARRIOR_HELP">
 			<Text>在[COLOR_POSITIVE_TEXT]荒漠[ENDCOLOR]地形+20%[ICON_STRENGTH]力量。</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_PROMOTION_STATUE_ZEUS_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_STATUE_ZEUS_HELP">
 			<Text>境外作战+15%[ICON_STRENGTH]战斗力。</Text>
 		</Replace>
 
@@ -13612,10 +13604,10 @@
 			<Text>拦截加100%战力，每回合无限游猎次数。</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_PROMOTION_BANTU" >
+		<Row Tag="TXT_KEY_PROMOTION_BANTU">
 			<Text>班图人</Text>
 		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_BANTU_HELP" >
+		<Row Tag="TXT_KEY_PROMOTION_BANTU_HELP">
 			<Text>+50%[ICON_RANGE_STRENGTH]远程攻击力，[NEWLINE]+33%[ICON_RANGE_STRENGTH]远程防御力。[NEWLINE]回复时每回合额外回复10HP。</Text>
 		</Row>
 
@@ -13642,7 +13634,7 @@
 		<Row Tag="TXT_KEY_PROMOTION_LES_GUEUX">
 			<Text>丐军</Text>
 		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_LES_GUEUX_HELP" >
+		<Row Tag="TXT_KEY_PROMOTION_LES_GUEUX_HELP">
 			<Text>
 				[ICON_BULLET]近战攻城获得造成伤害数值两倍的 [ICON_GOLD] 金钱
 				[NEWLINE][ICON_BULLET]劫掠不消耗[ICON_MOVES] 移动力，在友方境外多回复15HP
@@ -13731,8 +13723,8 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_GALLOPING_GHOST_HELP">
 			<Text>
-			+2[ICON_MOVES]移动。能发现潜艇。
-			[NEWLINE]6格范围内可见。
+				+2[ICON_MOVES]移动。能发现潜艇。
+				[NEWLINE]6格范围内可见。
 			</Text>
 		</Row>
 
@@ -13762,8 +13754,8 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_GAIN_MOVES_AFFER_KILLING_HELP">
 			<Text>
-			[ICON_BULLET]每对一支敌方部队造成30以上的伤害，返还1移动力、1攻击次数。
-			[NEWLINE][ICON_BULLET]每击杀一支敌方部队,额外恢复10HP。
+				[ICON_BULLET]每对一支敌方部队造成30以上的伤害，返还1移动力、1攻击次数。
+				[NEWLINE][ICON_BULLET]每击杀一支敌方部队,额外恢复10HP。
 			</Text>
 		</Row>
 
@@ -13886,7 +13878,7 @@
 		<Replace Tag="TXT_KEY_PROMOTION_NAVAL_BONUS_STRONG_HELP">
 			<Text>对海军加成100%。</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_PRIZE_SHIPS_HELP" >
+		<Replace Tag="TXT_KEY_PROMOTION_PRIZE_SHIPS_HELP">
 			<Text>
 				[ICON_BULLET]有一定概率[COLOR_POSITIVE_TEXT]俘获[ENDCOLOR]消灭的敌军。
 				[NEWLINE][ICON_BULLET]攻城可劫掠[ICON_GOLD]金钱，数值等同于造成伤害的200%。
@@ -14159,22 +14151,22 @@
 		<Replace Tag="TXT_KEY_GLOBAL_CITY_RANGED_ATTACK_MOD_SP">
 			<Text>全局城市攻击加成:</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_CITYVIEW_GLOBAL_EACH_SP" >
+		<Replace Tag="TXT_KEY_CITYVIEW_GLOBAL_EACH_SP">
 			<Text>全国每个</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_EVERY_PER_SP" >
+		<Replace Tag="TXT_KEY_EVERY_PER_SP">
 			<Text>本城:每</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_EXPERIENCE_DOMAIN_GLOBAL_SP" >
+		<Replace Tag="TXT_KEY_EXPERIENCE_DOMAIN_GLOBAL_SP">
 			<Text>全国</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_LOCAL_POP_SP" >
+		<Replace Tag="TXT_KEY_LOCAL_POP_SP">
 			<Text>本城</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_PEDIA_NEAR_ENEMY_DAMAGE_SP" >
+		<Replace Tag="TXT_KEY_PEDIA_NEAR_ENEMY_DAMAGE_SP">
 			<Text>临近敌人每回合伤害:{1_Num}</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_PEDIA_NEAR_OUR_HEAL_SP" >
+		<Replace Tag="TXT_KEY_PEDIA_NEAR_OUR_HEAL_SP">
 			<Text>临近己方每回合治疗:{1_Num}</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PEDIA_CONQUESTPROB_SP">
@@ -14189,22 +14181,22 @@
 		<Replace Tag="TXT_KEY_PRODUCTION_BUILDING_DEFENSE_MOD_SP">
 			<Text>[ICON_STRENGTH]全国城防提升:+{1_Num}%</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_LOCAL_IMPROVEMENT_YIELD_SP" >
+		<Replace Tag="TXT_KEY_LOCAL_IMPROVEMENT_YIELD_SP">
 			<Text>本地</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_PEDIA_GLOBAL_RESOURCES_SP" >
+		<Replace Tag="TXT_KEY_PEDIA_GLOBAL_RESOURCES_SP">
 			<Text>全国</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_SV_ICONS_GLOBAL_SP" >
+		<Replace Tag="TXT_KEY_SV_ICONS_GLOBAL_SP">
 			<Text>全国</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_LOCAL_SPECIALIST_SP" >
+		<Replace Tag="TXT_KEY_LOCAL_SPECIALIST_SP">
 			<Text>本地</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_SV_ICONS_LOCAL_SP" >
+		<Replace Tag="TXT_KEY_SV_ICONS_LOCAL_SP">
 			<Text>本地</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_YIELD_MULTIPLIER" >
+		<Replace Tag="TXT_KEY_YIELD_MULTIPLIER">
 			<Text>总产出</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PEDIA_REQ_BLDG_LABEL2_SP">
@@ -14222,10 +14214,10 @@
 		<Replace Tag="TXT_KEY_PEDIA_IMADJCITY_LABEL_SP">
 			<Text>城市相邻地块:</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_ABLTY_RIVER_SIDE_STRING_SP" >
+		<Replace Tag="TXT_KEY_ABLTY_RIVER_SIDE_STRING_SP">
 			<Text>临近河流:</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_ABLTY_COASTALAND_SIDE_STRING_SP" >
+		<Replace Tag="TXT_KEY_ABLTY_COASTALAND_SIDE_STRING_SP">
 			<Text>沿海:</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_GOLD_COST_LABEL_SP">
@@ -14834,7 +14826,7 @@
 			<Text>海军单位+10%战斗力</Text>
 		</Row>
 
-		
+
 		<!-- Promotion - Super Group Manager -->
 		<Replace Tag="TXT_KEY_PROMOTION_GROUP">
 			<Text>[COLOR_YELLOW]集群模式[ENDCOLOR]</Text>
@@ -14977,7 +14969,7 @@
 		<Replace Tag="TXT_KEY_PROMOTION_GROUP_BUILD_HELP">
 			<Text>该单位正在集群建造设施！</Text>
 		</Replace>
-		
+
 		<!-- UI - Super Group Manager -->
 		<Replace Tag="TXT_KEY_AIRCRAFT_ON_TT">
 			<Text>将该单位加入编队。</Text>
@@ -15220,14 +15212,14 @@
 
 		<Replace Tag="TXT_KEY_BUILD_CONSUMED_HELP">
 			<Text>
-			单位将被消耗。
-			[NEWLINE][NEWLINE]伟人所建设施可将该区块的战略资源连入贸易网络。
-			[NEWLINE]伟人所建设施可为周围改良设施提供对应[ICON_RESEARCH][ICON_PRODUCTION][ICON_GOLD][ICON_PEACE]产出。
-			[NEWLINE]每处伟人设施提供以下额外效果：
-			[NEWLINE][ICON_BULLET]学院可在消耗大科学家获取科技的时候额外+5%[ICON_RESEARCH]科研产出。
-			[NEWLINE][ICON_BULLET]制造中心提供额外+10[ICON_RES_MANPOWER]人力，所在城市建造奇观时额外+10%[ICON_PRODUCTION]产能积累。
-			[NEWLINE][ICON_BULLET]海关提供额外+20[ICON_RES_CONSUMER]商品。
-			[NEWLINE][ICON_BULLET]圣地可为停留的单位移除[COLOR_POSITIVE_TEXT]负面状态[ENDCOLOR]并使周围单位恢复5HP。
+				单位将被消耗。
+				[NEWLINE][NEWLINE]伟人所建设施可将该区块的战略资源连入贸易网络。
+				[NEWLINE]伟人所建设施可为周围改良设施提供对应[ICON_RESEARCH][ICON_PRODUCTION][ICON_GOLD][ICON_PEACE]产出。
+				[NEWLINE]每处伟人设施提供以下额外效果：
+				[NEWLINE][ICON_BULLET]学院可在消耗大科学家获取科技的时候额外+5%[ICON_RESEARCH]科研产出。
+				[NEWLINE][ICON_BULLET]制造中心提供额外+10[ICON_RES_MANPOWER]人力，所在城市建造奇观时额外+10%[ICON_PRODUCTION]产能积累。
+				[NEWLINE][ICON_BULLET]海关提供额外+20[ICON_RES_CONSUMER]商品。
+				[NEWLINE][ICON_BULLET]圣地可为停留的单位移除[COLOR_POSITIVE_TEXT]负面状态[ENDCOLOR]并使周围单位恢复5HP。
 			</Text>
 		</Replace>
 
@@ -15240,14 +15232,14 @@
 
 		<Replace Tag="TXT_KEY_PEDIA_HOME_PAGE_HELP_TEXT">
 			<Text>
-			欢迎来到文明百科！在这里您将了解到关于这个游戏各方面的细节。使用“搜索”框可查找特定主题的内容。点击屏幕顶端的选项卡将带您到文明百科的各主要部分。屏幕左边的导航条将会显示当前部分各个条目。点击条目直接查看详细信息。
-			[NEWLINE][NEWLINE]在屏幕左上方区域，您可以看到“前进”和“后退”按钮，它们可以协助您进行页面间的切换。点击右上方“X”将会返回游戏。
-			[NEWLINE][NEWLINE]这里是Super Power超级大国模组，关于本模组更多[COLOR_POSITIVE_TEXT]拓展内容[ENDCOLOR]以及[COLOR_POSITIVE_TEXT]最新消息[ENDCOLOR]，请：
-			[NEWLINE][ICON_BULLET]关注百度贴吧：文明5超级大国模组吧
-			[NEWLINE][ICON_BULLET]关注GitHub页面：github.com/Apeiria01/Super-Power-Remaking-of-World-Order
-			[NEWLINE][ICON_BULLET]加入SP模组的QQ群563095872、水群529905723
-			[NEWLINE][ICON_BULLET]收藏超级大国QQ群发布页面qingyin3545.github.io/Super-Power-Page
-			[NEWLINE][ICON_BULLET]Steam页面steamcommunity.com/sharedfiles/filedetails/?id=2904685641
+				欢迎来到文明百科！在这里您将了解到关于这个游戏各方面的细节。使用“搜索”框可查找特定主题的内容。点击屏幕顶端的选项卡将带您到文明百科的各主要部分。屏幕左边的导航条将会显示当前部分各个条目。点击条目直接查看详细信息。
+				[NEWLINE][NEWLINE]在屏幕左上方区域，您可以看到“前进”和“后退”按钮，它们可以协助您进行页面间的切换。点击右上方“X”将会返回游戏。
+				[NEWLINE][NEWLINE]这里是Super Power超级大国模组，关于本模组更多[COLOR_POSITIVE_TEXT]拓展内容[ENDCOLOR]以及[COLOR_POSITIVE_TEXT]最新消息[ENDCOLOR]，请：
+				[NEWLINE][ICON_BULLET]关注百度贴吧：文明5超级大国模组吧
+				[NEWLINE][ICON_BULLET]关注GitHub页面：github.com/Apeiria01/Super-Power-Remaking-of-World-Order
+				[NEWLINE][ICON_BULLET]加入SP模组的QQ群563095872、水群529905723
+				[NEWLINE][ICON_BULLET]收藏超级大国QQ群发布页面qingyin3545.github.io/Super-Power-Page
+				[NEWLINE][ICON_BULLET]Steam页面steamcommunity.com/sharedfiles/filedetails/?id=2904685641
 			</Text>
 		</Replace>
 
@@ -15314,7 +15306,7 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_CIV5_HUN_HORSE_ARCHER_HELP_TEXT">
-    		<Text>每杀死一名敌军，+2近战和远程战斗力，积累的战斗力升级可继承，但是不能再增加。{TXT_KEY_PROMOTION_HITANDRUN_HELP}</Text>
+			<Text>每杀死一名敌军，+2近战和远程战斗力，积累的战斗力升级可继承，但是不能再增加。{TXT_KEY_PROMOTION_HITANDRUN_HELP}</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_PROMOTION_EXTRA_MOVE_HALF">
@@ -15333,8 +15325,8 @@
 
 		<Replace Tag="TXT_KEY_DIPLO_TO_TRADE_CITY_TT">
 			<Text>
-			交易城市
-			[NEWLINE][NEWLINE][COLOR_NEGATIVE_TEXT]若城市非双方建立且人口小于4或者处于抵抗，交易不可进行[ENDCOLOR]
+				交易城市
+				[NEWLINE][NEWLINE][COLOR_NEGATIVE_TEXT]若城市非双方建立且人口小于4或者处于抵抗，交易不可进行[ENDCOLOR]
 			</Text>
 		</Replace>
 
@@ -15350,8 +15342,8 @@
 		</Row>
 		<Row Tag="TXT_KEY_LACKING_TROOPS_TOOLTIP">
 			<Text>
-			[COLOR_NEGATIVE_TEXT][ICON_RES_TROOPS]兵力不足：你无法建造、从战斗中捕获军事单位，新生军事单位会被强制解散！[ENDCOLOR]
-			[NEWLINE]增大城市规模数量可以提供更多兵力。
+				[COLOR_NEGATIVE_TEXT][ICON_RES_TROOPS]兵力不足：你无法建造、从战斗中捕获军事单位，新生军事单位会被强制解散！[ENDCOLOR]
+				[NEWLINE]增大城市规模数量可以提供更多兵力。
 			</Text>
 		</Row>
 
@@ -15398,8 +15390,8 @@
 			<Text>可使用工人更新全图地块设施(自动建设设施开发资源地块，修复被劫掠地块，但不清除核辐射)</Text>
 		</Row>
 		<Row Tag="TXT_KEY_FREE_PROMOTION_FROM_TECH_SHORT">
-      		<Text>给予特定单位晋升: [COLOR_POSITIVE_TEXT]{@1_PromotionHelp}[ENDCOLOR]</Text>
-    	</Row>
+			<Text>给予特定单位晋升: [COLOR_POSITIVE_TEXT]{@1_PromotionHelp}[ENDCOLOR]</Text>
+		</Row>
 		<Row Tag="TXT_KEY_DOUBLE_TOURISM_PERCENT">
 			<Text>增加{1_Percent}%[ICON_TOURISM]魅力产出</Text>
 		</Row>
@@ -15448,59 +15440,59 @@
 			<Text>[ICON_RESEARCH][ICON_GREAT_PEOPLE][COLOR_CYAN]诺贝尔奖[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_SWEDEN_NOBEL_PRIZE_HELP">
-            <Text>
-                [ICON_BULLET]只需26人口即可建造。
-                [NEWLINE][ICON_BULLET]瑞典或盟友诞生一位大科学家时，为双方带来一次性[ICON_RESEARCH]科研产出，数值相当于该大科学家当前强度的15%。
-            </Text>
+			<Text>
+				[ICON_BULLET]只需26人口即可建造。
+				[NEWLINE][ICON_BULLET]瑞典或盟友诞生一位大科学家时，为双方带来一次性[ICON_RESEARCH]科研产出，数值相当于该大科学家当前强度的15%。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_YIELD_OVERFLOW">
 			<Text>[COLOR_POSITIVE_TEXT]{1_Num}{2_IconString} 溢出[ENDCOLOR]</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_EUPANEL_NO_CAPTURE_SP" >
+		<Row Tag="TXT_KEY_EUPANEL_NO_CAPTURE_SP">
 			<Text>[COLOR_CYAN]不可被俘[ENDCOLOR]</Text>
 		</Row>
-		<Row Tag="TXT_KEY_EUPANEL_CHANGE_DAMAGEVALUE_SUPPORT_SP" >
+		<Row Tag="TXT_KEY_EUPANEL_CHANGE_DAMAGEVALUE_SUPPORT_SP">
 			<Text>[COLOR_CYAN]受到的最终伤害{1_Num}[ENDCOLOR]</Text>
 		</Row>
-		<Row Tag="TXT_KEY_EUPANEL_RANGED_SUPPORT_SP" >
+		<Row Tag="TXT_KEY_EUPANEL_RANGED_SUPPORT_SP">
 			<Text>[COLOR_CYAN]额外远程攻击能力[ENDCOLOR]</Text>
 		</Row>
-		<Row Tag="TXT_KEY_EUPANEL_NO_RS_PSH_SP" >
+		<Row Tag="TXT_KEY_EUPANEL_NO_RS_PSH_SP">
 			<Text>[COLOR_CYAN]无视资源惩罚[ENDCOLOR]</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_EUPANEL_PLAYER_ORIGINAL_CAPITAL_BONUS_SP" >
+		<Row Tag="TXT_KEY_EUPANEL_PLAYER_ORIGINAL_CAPITAL_BONUS_SP">
 			<Text>原始首都数量加成</Text>
 		</Row>
-		<Row Tag="TXT_KEY_EUPANEL_PLAYER_GOLDENAGE_BONUS_SP" >
+		<Row Tag="TXT_KEY_EUPANEL_PLAYER_GOLDENAGE_BONUS_SP">
 			<Text>黄金时代加成</Text>
 		</Row>
-		<Row Tag="TXT_KEY_EUPANEL_MOVES_LEFT_BONUS_SP" >
+		<Row Tag="TXT_KEY_EUPANEL_MOVES_LEFT_BONUS_SP">
 			<Text>剩余移动力加成</Text>
 		</Row>
-		<Row Tag="TXT_KEY_EUPANEL_MOVES_USED_BONUS_SP" >
+		<Row Tag="TXT_KEY_EUPANEL_MOVES_USED_BONUS_SP">
 			<Text>已用移动力加成</Text>
 		</Row>
-		<Row Tag="TXT_KEY_EUPANEL_PLAYER_GREATWORK_BONUS_SP" >
+		<Row Tag="TXT_KEY_EUPANEL_PLAYER_GREATWORK_BONUS_SP">
 			<Text>杰作数量加成</Text>
 		</Row>
-		<Row Tag="TXT_KEY_EUPANEL_NUM_ENARBYENEMY_BONUS_SP" >
+		<Row Tag="TXT_KEY_EUPANEL_NUM_ENARBYENEMY_BONUS_SP">
 			<Text>临近敌军数量加成</Text>
 		</Row>
-		<Row Tag="TXT_KEY_EUPANEL_LEFT_HITPOINT_BONUS_SP" >
+		<Row Tag="TXT_KEY_EUPANEL_LEFT_HITPOINT_BONUS_SP">
 			<Text>损失血量加成</Text>
 		</Row>
-		<Row Tag="TXT_KEY_EUPANEL_PLAYER_WORLDWONDER_BONUS_SP" >
+		<Row Tag="TXT_KEY_EUPANEL_PLAYER_WORLDWONDER_BONUS_SP">
 			<Text>世界奇观数量加成</Text>
 		</Row>
-		<Row Tag="TXT_KEY_EUPANEL_PLAYER_SPY_BONUS_SP" >
+		<Row Tag="TXT_KEY_EUPANEL_PLAYER_SPY_BONUS_SP">
 			<Text>间谍数量加成</Text>
 		</Row>
-		<Row Tag="TXT_KEY_EUPANEL_ATTACK_BUFF_SPY_SP" >
+		<Row Tag="TXT_KEY_EUPANEL_ATTACK_BUFF_SPY_SP">
 			<Text>间谍加成</Text>
 		</Row>
-		<Row Tag="TXT_KEY_EUPANEL_UNIT_PROMOTION_NEAR_SP" >
+		<Row Tag="TXT_KEY_EUPANEL_UNIT_PROMOTION_NEAR_SP">
 			<Text>临近晋升加成</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNITCOMBAT_DAMAGE_MODIFIER_SP">
