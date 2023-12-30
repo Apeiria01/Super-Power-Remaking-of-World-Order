@@ -140,7 +140,6 @@
 			<AfraidMinorPerTurnInfluence>100</AfraidMinorPerTurnInfluence>
 			<CityGrowthMod>15</CityGrowthMod>
 			<UnhappinessMod>-10</UnhappinessMod>
-			<ThemingBonusMultiplier>100</ThemingBonusMultiplier>
 			<BuildingGoldMaintenanceMod>-15</BuildingGoldMaintenanceMod>
 			<UnitGoldMaintenanceMod>-25</UnitGoldMaintenanceMod>
 			<InternalTradeRouteYieldModifier>50</InternalTradeRouteYieldModifier>
@@ -459,11 +458,6 @@
 	<Policy_BuildingClassTourismModifiers>
 		<Row>
 			<PolicyType>POLICY_AI_BONUS_ECONOMY_LV1</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_TOWN</BuildingClassType>
-			<TourismModifier>15</TourismModifier>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_BONUS_ECONOMY_LV1</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_SMALL</BuildingClassType>
 			<TourismModifier>20</TourismModifier>
 		</Row>
@@ -480,13 +474,8 @@
 
 		<Row>
 			<PolicyType>POLICY_AI_BONUS_ECONOMY_LV2</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_TOWN</BuildingClassType>
-			<TourismModifier>15</TourismModifier>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_BONUS_ECONOMY_LV2</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_SMALL</BuildingClassType>
-			<TourismModifier>20</TourismModifier>
+			<TourismModifier>25</TourismModifier>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_AI_BONUS_ECONOMY_LV2</PolicyType>
@@ -502,12 +491,12 @@
 		<Row>
 			<PolicyType>POLICY_AI_BONUS_ECONOMY_LV3</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_TOWN</BuildingClassType>
-			<TourismModifier>15</TourismModifier>
+			<TourismModifier>20</TourismModifier>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_AI_BONUS_ECONOMY_LV3</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_SMALL</BuildingClassType>
-			<TourismModifier>20</TourismModifier>
+			<TourismModifier>25</TourismModifier>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_AI_BONUS_ECONOMY_LV3</PolicyType>
