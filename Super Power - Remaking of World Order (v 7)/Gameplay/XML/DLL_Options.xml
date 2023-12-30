@@ -460,10 +460,6 @@
 		</Row>
 
 		<Update>
-			<Where Type="GAMEOPTION_SP_IMMIGRATION_OFF"/>
-			<Set Default="1"/>
-		</Update>
-		<Update>
 			<Where Type="GAMEOPTION_SP_NUCLEARWINTER_OFF"/>
 			<Set Default="1"/>
 		</Update>

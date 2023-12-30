@@ -366,7 +366,7 @@ UPDATE Beliefs SET ExtraSpies='1' WHERE Type = 'BELIEF_UNDERGROUND_SECT';
 UPDATE Beliefs SET CityExtraMissionarySpreads='1' WHERE Type = 'BELIEF_EVANGELISM';
 --BELIEF_UNITY_OF_PROPHETS
 
-UPDATE Beliefs SET WonderProductionModifier='25',ObsoleteEra='ERA_FUTURE' WHERE Type = 'BELIEF_RELIGIOUS_FERVOR';
+UPDATE Beliefs SET WonderProductionModifier='25' WHERE Type = 'BELIEF_RELIGIOUS_FERVOR';
 INSERT INTO Belief_EraFaithUnitPurchase (BeliefType,EraType)
 SELECT 'BELIEF_RELIGIOUS_FERVOR','ERA_RENAISSANCE';
 INSERT INTO Belief_BuildingClassYieldChanges (BeliefType,BuildingClassType,YieldType,YieldChange)
