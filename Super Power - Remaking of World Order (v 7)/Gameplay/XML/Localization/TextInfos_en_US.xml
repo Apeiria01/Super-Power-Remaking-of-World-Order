@@ -9,10 +9,14 @@
 			<Text>Super Power Modded Game</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_GS_DESC">
-			<Text>[COLOR_YELLOW]Important Notes:[ENDCOLOR][NEWLINE]1. Check the saved file size. [NEWLINE]2. Check the Civilopedia before play (Hotkey [COLOR_POSITIVE_TEXT]F1[ENDCOLOR]). [NEWLINE]3. If always crash or saved files damaged, try Dx9.</Text>
+			<Text>
+				[COLOR_YELLOW]Important Notes:[ENDCOLOR]
+				[NEWLINE]1. Clean the cache and ModUserData folder after installing/updating the Mod. 
+				[NEWLINE]2. Unsubscribe from all Steam mods and do not use uncertified mods.
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_VERSION">
-			<Text>[COLOR_YELLOW]Version 9.5[ENDCOLOR]</Text>
+			<Text>[COLOR_YELLOW]Version 10.0[ENDCOLOR]</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_SP_MOD_SETUP">
@@ -8920,7 +8924,7 @@
 			<Text>Church Artists</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_FERVOR">
-			<Text>Use [ICON_PEACE] Faith to purchase [COLOR_POSITIVE_TEXT]Church Artist[ENDCOLOR], a religious unit who can start a [ICON_GOLDEN_AGE] Golden Age. +2 [ICON_PEACE] Faith from every Amphitheatres, Art Galleries and Opera Houses. +25% [ICON_PRODUCTION] Production of non-Future Wonders</Text>
+			<Text>Use [ICON_PEACE] Faith to purchase [COLOR_POSITIVE_TEXT]Church Artist[ENDCOLOR], a religious unit who can start a [ICON_GOLDEN_AGE] Golden Age. +2 [ICON_PEACE] Faith from every Amphitheatres, Art Galleries and Opera Houses. +25% [ICON_PRODUCTION] Production of Wonders</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_UNITY_OF_PROPHETS">
 			<Text>Inquisitors and Prophets reduce this religion's presence by half (instead of eliminating it). A [ICON_PROPHET] Great Prophet appears in the Holy City</Text>

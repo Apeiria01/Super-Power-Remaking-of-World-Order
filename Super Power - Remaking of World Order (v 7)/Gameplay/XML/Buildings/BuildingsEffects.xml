@@ -6685,7 +6685,7 @@
 		<Row>
 			<BuildingType>BUILDING_CISTERN</BuildingType>
 			<FlavorType>FLAVOR_GROWTH</FlavorType>
-			<Flavor>40</Flavor>
+			<Flavor>80</Flavor>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_BASILICA_CISTERN</BuildingType>
@@ -6700,7 +6700,7 @@
 		<Row>
 			<BuildingType>BUILDING_FISH_FARM</BuildingType>
 			<FlavorType>FLAVOR_GROWTH</FlavorType>
-			<Flavor>15</Flavor>
+			<Flavor>80</Flavor>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_GRAIN_MILL</BuildingType>

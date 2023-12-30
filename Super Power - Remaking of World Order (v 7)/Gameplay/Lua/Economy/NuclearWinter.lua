@@ -1,5 +1,8 @@
 -- Nuclear Winter
-
+if PreGame.GetGameOption("GAMEOPTION_SP_NUCLEARWINTER_OFF") == 1 then
+	print("Nuclear Winter - OFF!");
+	return;
+end
 --------------------------------------------------------------
 function CountFalloutPlots() -------Count the Fallout plots on the map
 	local iFallout = 0
@@ -18,11 +21,6 @@ end
 
 
 function NukeExploded()----------When nuke exploded, start the counter
-	if (PreGame.GetGameOption("GAMEOPTION_SP_NUCLEARWINTER_OFF") == 1) then
-		print("Nuclear Winter - OFF!");
-		return;
-	end
-	
 	 -- get the total number of plots
 	local MapTotalPlots = Map.GetNumPlots() 
 --	local TotallandPlots = Map.GetNumLandAreas()                   -------------get the total number of plots 
