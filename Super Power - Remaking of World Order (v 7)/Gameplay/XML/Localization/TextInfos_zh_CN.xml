@@ -6862,7 +6862,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]炮舰外交[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]对于能够勒索的城邦每回合获得5[ICON_INFLUENCE]影响力（标准速度）。
-				[NEWLINE][ICON_BULLET]勒索城邦的军事分数影响翻倍，勒索城邦消耗的[ICON_INFLUENCE]影响力下降到1/4。
+				[NEWLINE][ICON_BULLET]勒索城邦的本地军事分数影响翻倍，勒索城邦消耗的[ICON_INFLUENCE]影响力下降到1/4。
 				[NEWLINE][ICON_BULLET]勒索城邦可为最近的城市提供城邦一回合的粮食、产能、文化和科研。
 			</Text>
 		</Replace>
@@ -6878,6 +6878,7 @@
 				[COLOR_POSITIVE_TEXT]军事援助[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]当共同对敌作战时军事城邦提供单位的频率加倍。
 				[NEWLINE][ICON_BULLET]送给城邦的军事单位+10[ICON_INFLUENCE]影响力。
+				[NEWLINE][ICON_BULLET]你的军事分数影响可以抵消其他文明对同盟城邦的本地军事分数影响。
 				[NEWLINE][ICON_BULLET]城邦提供电力。
 			</Text>
 		</Row>
