@@ -270,7 +270,7 @@
 			<Where Type="POLICY_SCHOLASTICISM"/>
 		</Update>
 		<Update>
-			<Set  MinorBullyInfluenceLossModifier="-75" MinorBullyScoreModifier="0" MinorLocalBullyScoreModifier="100" MinorResourceBonus="false" AfraidMinorPerTurnInfluence="500" GridX="1" GridY="1" PortraitIndex="1"/>
+			<Set  MinorBullyInfluenceLossModifier="-75" MinorBullyScoreModifier="34" MinorLocalBullyScoreModifier="66" MinorResourceBonus="false" AfraidMinorPerTurnInfluence="500" GridX="1" GridY="1" PortraitIndex="1"/>
 			<Where Type="POLICY_CULTURAL_DIPLOMACY"/>
 		</Update>
 		<Update>

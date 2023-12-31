@@ -7669,7 +7669,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]Gunboat Diplomacy[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]Gain 5 more [ICON_INFLUENCE] Influence (at Standard speed) per turn with City-States you could demand tribute from.
-				[NEWLINE][ICON_BULLET]+100% local military score when you demand tribute from City-States, and cost of [ICON_INFLUENCE] Influence is reduced to 1/4.
+				[NEWLINE][ICON_BULLET]+100% local military score and +34% global military score when you demand tribute from City-States, and cost of [ICON_INFLUENCE] Influence is reduced to 1/4.
 				[NEWLINE][ICON_BULLET]Gain Food, Production, Culture and Science bonus when you demand tribute from City-States.
 			</Text>
 		</Replace>
