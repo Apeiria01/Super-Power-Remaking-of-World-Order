@@ -7685,7 +7685,7 @@
 				[COLOR_POSITIVE_TEXT]Military Aid[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]The frequency of Militaristic City States granting units are 200% faster when you are at war with a common foe.
 				[NEWLINE][ICON_BULLET]+10 [ICON_INFLUENCE] Influence from Military Unit gifts to City-States.
-				[NEWLINE][ICON_BULLET]Your military score can offset the effect of other Civ's local military score to Allied City-States.
+				[NEWLINE][ICON_BULLET]Your military score can offset the effect of other Civ's military score to Allied City-States.
 				[NEWLINE][ICON_BULLET]City States provide electricity.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_MILITARY_AID_TEXT">

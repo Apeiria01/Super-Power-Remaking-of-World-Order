@@ -6772,7 +6772,7 @@
 				[COLOR_POSITIVE_TEXT]軍事援助[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]當共同對敵作戰時軍事城邦提供單位的頻率加倍。
 				[NEWLINE][ICON_BULLET]送給城邦的軍事單位+10[ICON_INFLUENCE]影響力。
-				[NEWLINE][ICON_BULLET]你的軍事分數影響可以抵消其他文明對同盟城邦的本地軍事分數影響。
+				[NEWLINE][ICON_BULLET]你的軍事分數影響可以抵消其他文明對同盟城邦的軍事分數影響。
 				[NEWLINE][ICON_BULLET]城邦提供電力。
 			</Text>
 		</Row>
