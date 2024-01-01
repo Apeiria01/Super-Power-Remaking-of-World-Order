@@ -869,13 +869,6 @@
 			<UnitClassType>UNITCLASS_WARRIOR</UnitClassType>
 			<UnitType>UNIT_BARBARIAN_WARRIOR</UnitType>
 		</Row>
-		<!--
-		<Row>
-			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
-			<UnitClassType>UNITCLASS_MILITIA_ANCIENT</UnitClassType>
-			<UnitType>UNIT_BARBARIAN_SWORDSMAN</UnitType>
-		</Row>
-		-->
 		<Row>
 			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
 			<UnitClassType>UNITCLASS_ARCHER</UnitClassType>
@@ -885,11 +878,6 @@
 			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
 			<UnitClassType>UNITCLASS_SPEARMAN</UnitClassType>
 			<UnitType>UNIT_BARBARIAN_SPEARMAN</UnitType>
-		</Row>
-		<Row>
-			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
-			<UnitClassType>UNITCLASS_SWORDSMAN</UnitClassType>
-			<UnitType/>
 		</Row>
 		<Row>
 			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
@@ -906,13 +894,6 @@
 			<UnitClassType>UNITCLASS_NAVAL_MILITIA</UnitClassType>
 			<UnitType>UNIT_BARBARIAN_GALLEY</UnitType>
 		</Row>
-
-
-
-
-
-
-
 	</Civilization_UnitClassOverrides>
   
 </GameData>
