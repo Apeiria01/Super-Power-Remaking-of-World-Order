@@ -43,6 +43,7 @@ function NewUnitCreationRules(playerID)
 	end
 
 	local CapCity = player:GetCapitalCity();
+	local bAutoPurchase = (player:IsHuman() or PlayerAtWarWithHuman(player) or (Players[Game.GetActivePlayer()]:IsObserver() and not Game.IsGameMultiPlayer()));
 
 	-------------Units Processing!
 	-- Initial Cargo List
@@ -119,6 +120,7 @@ function NewUnitCreationRules(playerID)
 					iCost = CarrierRestore(playerID, unit:GetID(), g_CargoSetList[playerID][1]);
 
 				elseif sSpecialCargo == "SPECIALUNIT_MISSILE"
+				and bAutoPurchase
 				and g_CargoSetList[playerID][2] and g_CargoSetList[playerID][2] ~= -1
 				then
 					iCost = CarrierRestore(playerID, unit:GetID(), g_CargoSetList[playerID][2]);

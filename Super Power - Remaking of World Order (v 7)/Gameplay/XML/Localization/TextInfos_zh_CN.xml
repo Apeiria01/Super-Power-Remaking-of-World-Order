@@ -6826,7 +6826,8 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]慈善事业[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]赠送城邦[ICON_GOLD]金钱提升的[ICON_INFLUENCE]影响力加100%。
-				[NEWLINE][ICON_BULLET]所有与城邦的商路+4[ICON_GOLD]金钱。[NEWLINE]城邦提供的资源翻倍。
+				[NEWLINE][ICON_BULLET]所有与城邦的商路+4[ICON_GOLD]金钱。
+				[NEWLINE][ICON_BULLET]城邦提供的资源翻倍。
 			</Text>
 		</Replace>
 
