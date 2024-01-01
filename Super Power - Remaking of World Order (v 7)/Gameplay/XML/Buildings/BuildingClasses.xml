@@ -3,614 +3,610 @@
 <GameData>
 	<!--*********************Civ5 Original Buildings******************************************-->
 	<BuildingClasses>
-			
-			<Row>
-				<ID>0</ID>
-				<Type>BUILDINGCLASS_COURTHOUSE</Type>
-				<DefaultBuilding>BUILDING_COURTHOUSE</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_COURTHOUSE</Description>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_JAPANESE_DOJO</Type>
-				<DefaultBuilding>BUILDING_JAPANESE_DOJO</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_JAPANESE_DOJO</Description>
-			</Row>
+
+		<Row>
+			<ID>0</ID>
+			<Type>BUILDINGCLASS_COURTHOUSE</Type>
+			<DefaultBuilding>BUILDING_COURTHOUSE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_COURTHOUSE</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_JAPANESE_DOJO</Type>
+			<DefaultBuilding>BUILDING_JAPANESE_DOJO</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_JAPANESE_DOJO</Description>
+		</Row>
 
 
-			<Row>
-				<Type>BUILDINGCLASS_MILITARY_ACADEMY</Type>
-				<DefaultBuilding>BUILDING_MILITARY_ACADEMY</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_MILITARY_ACADEMY</Description>
-			</Row>
-		
-			<Row>
-				<Type>BUILDINGCLASS_SEAPORT</Type>
-				<DefaultBuilding>BUILDING_SEAPORT</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_SEAPORT</Description>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_STABLE</Type>
-				<DefaultBuilding>BUILDING_STABLE</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_STABLE</Description>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_WATERMILL</Type>
-				<DefaultBuilding>BUILDING_WATERMILL</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_WATERMILL</Description>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_CIRCUS</Type>
-				<DefaultBuilding>BUILDING_CIRCUS</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_CIRCUS</Description>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_IRON_PROVIDER</Type>
-				<DefaultBuilding>BUILDING_IRON_PROVIDER</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_FORGE</Description>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_WINDMILL</Type>
-				<DefaultBuilding>BUILDING_WINDMILL</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_WINDMILL</Description>
-			</Row>
+		<Row>
+			<Type>BUILDINGCLASS_MILITARY_ACADEMY</Type>
+			<DefaultBuilding>BUILDING_MILITARY_ACADEMY</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_MILITARY_ACADEMY</Description>
+		</Row>
 
-			<Row>
-				<Type>BUILDINGCLASS_CISTERN</Type>
-				<DefaultBuilding>BUILDING_CISTERN</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_CISTERN</Description>
-			</Row>
-		
-			<Row>
-				<Type>BUILDINGCLASS_MINT</Type>
-				<DefaultBuilding>BUILDING_MINT</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_MINT</Description>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_OBSERVATORY</Type>
-				<DefaultBuilding>BUILDING_OBSERVATORY</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_OBSERVATORY</Description>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_MONASTERY</Type>
-				<DefaultBuilding>BUILDING_MONASTERY</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_MONASTERY</Description>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_GARDEN</Type>
-				<DefaultBuilding>BUILDING_GARDEN</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_GARDEN</Description>
-			</Row>
-		
-			<Row>
-				<Type>BUILDINGCLASS_LIGHTHOUSE</Type>
-				<DefaultBuilding>BUILDING_LIGHTHOUSE</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_LIGHTHOUSE</Description>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_HARBOR</Type>
-				<DefaultBuilding>BUILDING_HARBOR</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_HARBOR</Description>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_THEATRE</Type>
-				<DefaultBuilding>BUILDING_THEATRE</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_THEATRE</Description>
-			</Row>
-	
-			<Row>
-				<Type>BUILDINGCLASS_STADIUM</Type>
-				<DefaultBuilding>BUILDING_STADIUM</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_STADIUM</Description>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_MONUMENT</Type>
-				<DefaultBuilding>BUILDING_MONUMENT</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_MONUMENT</Description>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_AMPHITHEATER</Type>
-				<DefaultBuilding>BUILDING_AMPHITHEATER</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_AMPHITHEATER</Description>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_OPERA_HOUSE</Type>
-				<DefaultBuilding>BUILDING_OPERA_HOUSE</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_OPERA_HOUSE</Description>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_MUSEUM</Type>
-				<DefaultBuilding>BUILDING_MUSEUM</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_MUSEUM</Description>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_BROADCAST_TOWER</Type>
-				<DefaultBuilding>BUILDING_BROADCAST_TOWER</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_BROADCAST_TOWER</Description>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_SHRINE</Type>
-				<DefaultBuilding>BUILDING_SHRINE</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_SHRINE</Description>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_TEMPLE</Type>
-				<DefaultBuilding>BUILDING_TEMPLE</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_TEMPLE</Description>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_BARRACKS</Type>
-				<DefaultBuilding>BUILDING_BARRACKS</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_BARRACKS</Description>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_ARMORY</Type>
-				<DefaultBuilding>BUILDING_ARMORY</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_ARMORY</Description>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_ARSENAL</Type>
-				<DefaultBuilding>BUILDING_ARSENAL</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_ARSENAL</Description>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_WALLS</Type>
-				<DefaultBuilding>BUILDING_WALLS</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_WALLS</Description>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_CASTLE</Type>
-				<DefaultBuilding>BUILDING_CASTLE</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_CASTLE</Description>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_MILITARY_BASE</Type>
-				<DefaultBuilding>BUILDING_MILITARY_BASE</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_MILITARY_BASE</Description>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_GRANARY</Type>
-				<DefaultBuilding>BUILDING_GRANARY</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_GRANARY</Description>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_HOSPITAL</Type>
-				<DefaultBuilding>BUILDING_HOSPITAL</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_HOSPITAL</Description>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_MEDICAL_LAB</Type>
-				<DefaultBuilding>BUILDING_MEDICAL_LAB</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_MEDICAL_LAB</Description>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_WORKSHOP</Type>
-				<DefaultBuilding>BUILDING_WORKSHOP</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_WORKSHOP</Description>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_FACTORY</Type>
-				<DefaultBuilding>BUILDING_FACTORY</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_FACTORY</Description>
-			</Row>
-		
-			<Row>
-				<Type>BUILDINGCLASS_SPACESHIP_FACTORY</Type>
-				<DefaultBuilding>BUILDING_SPACESHIP_FACTORY</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_SPACESHIP_FACTORY</Description>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_MARKET</Type>
-				<DefaultBuilding>BUILDING_MARKET</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_MARKET</Description>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_BANK</Type>
-				<DefaultBuilding>BUILDING_BANK</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_BANK</Description>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_STOCK_EXCHANGE</Type>
-				<DefaultBuilding>BUILDING_STOCK_EXCHANGE</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_STOCK_EXCHANGE</Description>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_LIBRARY</Type>
-				<DefaultBuilding>BUILDING_LIBRARY</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_LIBRARY</Description>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_UNIVERSITY</Type>
-				<DefaultBuilding>BUILDING_UNIVERSITY</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_UNIVERSITY</Description>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_PUBLIC_SCHOOL</Type>
-				<DefaultBuilding>BUILDING_PUBLIC_SCHOOL</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_PUBLIC_SCHOOL</Description>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_LABORATORY</Type>
-				<DefaultBuilding>BUILDING_LABORATORY</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_LABORATORY</Description>
-			</Row>
-			
-			<Row>
-				<Type>BUILDINGCLASS_PALACE</Type>
-				<DefaultBuilding>BUILDING_PALACE</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_PALACE</Description>
-				<MaxPlayerInstances>1</MaxPlayerInstances>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_HEROIC_EPIC</Type>
-				<DefaultBuilding>BUILDING_HEROIC_EPIC</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_HEROIC_EPIC</Description>
-				<MaxPlayerInstances>1</MaxPlayerInstances>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_NATIONAL_CARAVANSARY</Type>
-				<DefaultBuilding>BUILDING_NATIONAL_CARAVANSARY</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_NATIONAL_CARAVANSARY</Description>
-				<MaxPlayerInstances>1</MaxPlayerInstances>
-			</Row>		
-			<Row>
-				<Type>BUILDINGCLASS_NATIONAL_TREASURY</Type>
-				<DefaultBuilding>BUILDING_NATIONAL_TREASURY</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_NATIONAL_TREASURY</Description>
-				<MaxPlayerInstances>1</MaxPlayerInstances>
-			</Row>
+		<Row>
+			<Type>BUILDINGCLASS_SEAPORT</Type>
+			<DefaultBuilding>BUILDING_SEAPORT</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_SEAPORT</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_STABLE</Type>
+			<DefaultBuilding>BUILDING_STABLE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_STABLE</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_WATERMILL</Type>
+			<DefaultBuilding>BUILDING_WATERMILL</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_WATERMILL</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_CIRCUS</Type>
+			<DefaultBuilding>BUILDING_CIRCUS</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_CIRCUS</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_IRON_PROVIDER</Type>
+			<DefaultBuilding>BUILDING_IRON_PROVIDER</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_FORGE</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_WINDMILL</Type>
+			<DefaultBuilding>BUILDING_WINDMILL</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_WINDMILL</Description>
+		</Row>
+
+		<Row>
+			<Type>BUILDINGCLASS_CISTERN</Type>
+			<DefaultBuilding>BUILDING_CISTERN</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_CISTERN</Description>
+		</Row>
+
+		<Row>
+			<Type>BUILDINGCLASS_MINT</Type>
+			<DefaultBuilding>BUILDING_MINT</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_MINT</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_OBSERVATORY</Type>
+			<DefaultBuilding>BUILDING_OBSERVATORY</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_OBSERVATORY</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_MONASTERY</Type>
+			<DefaultBuilding>BUILDING_MONASTERY</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_MONASTERY</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_GARDEN</Type>
+			<DefaultBuilding>BUILDING_GARDEN</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_GARDEN</Description>
+		</Row>
+
+		<Row>
+			<Type>BUILDINGCLASS_LIGHTHOUSE</Type>
+			<DefaultBuilding>BUILDING_LIGHTHOUSE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_LIGHTHOUSE</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_HARBOR</Type>
+			<DefaultBuilding>BUILDING_HARBOR</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_HARBOR</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_THEATRE</Type>
+			<DefaultBuilding>BUILDING_THEATRE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_THEATRE</Description>
+		</Row>
+
+		<Row>
+			<Type>BUILDINGCLASS_STADIUM</Type>
+			<DefaultBuilding>BUILDING_STADIUM</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_STADIUM</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_MONUMENT</Type>
+			<DefaultBuilding>BUILDING_MONUMENT</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_MONUMENT</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_AMPHITHEATER</Type>
+			<DefaultBuilding>BUILDING_AMPHITHEATER</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_AMPHITHEATER</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_OPERA_HOUSE</Type>
+			<DefaultBuilding>BUILDING_OPERA_HOUSE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_OPERA_HOUSE</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_MUSEUM</Type>
+			<DefaultBuilding>BUILDING_MUSEUM</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_MUSEUM</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_BROADCAST_TOWER</Type>
+			<DefaultBuilding>BUILDING_BROADCAST_TOWER</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_BROADCAST_TOWER</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_SHRINE</Type>
+			<DefaultBuilding>BUILDING_SHRINE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_SHRINE</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_TEMPLE</Type>
+			<DefaultBuilding>BUILDING_TEMPLE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_TEMPLE</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_BARRACKS</Type>
+			<DefaultBuilding>BUILDING_BARRACKS</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_BARRACKS</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_ARMORY</Type>
+			<DefaultBuilding>BUILDING_ARMORY</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_ARMORY</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_ARSENAL</Type>
+			<DefaultBuilding>BUILDING_ARSENAL</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_ARSENAL</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_WALLS</Type>
+			<DefaultBuilding>BUILDING_WALLS</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_WALLS</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_CASTLE</Type>
+			<DefaultBuilding>BUILDING_CASTLE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_CASTLE</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_MILITARY_BASE</Type>
+			<DefaultBuilding>BUILDING_MILITARY_BASE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_MILITARY_BASE</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_GRANARY</Type>
+			<DefaultBuilding>BUILDING_GRANARY</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_GRANARY</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_HOSPITAL</Type>
+			<DefaultBuilding>BUILDING_HOSPITAL</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_HOSPITAL</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_MEDICAL_LAB</Type>
+			<DefaultBuilding>BUILDING_MEDICAL_LAB</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_MEDICAL_LAB</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_WORKSHOP</Type>
+			<DefaultBuilding>BUILDING_WORKSHOP</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_WORKSHOP</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_FACTORY</Type>
+			<DefaultBuilding>BUILDING_FACTORY</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_FACTORY</Description>
+		</Row>
+
+		<Row>
+			<Type>BUILDINGCLASS_SPACESHIP_FACTORY</Type>
+			<DefaultBuilding>BUILDING_SPACESHIP_FACTORY</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_SPACESHIP_FACTORY</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_MARKET</Type>
+			<DefaultBuilding>BUILDING_MARKET</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_MARKET</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_BANK</Type>
+			<DefaultBuilding>BUILDING_BANK</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_BANK</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_STOCK_EXCHANGE</Type>
+			<DefaultBuilding>BUILDING_STOCK_EXCHANGE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_STOCK_EXCHANGE</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_LIBRARY</Type>
+			<DefaultBuilding>BUILDING_LIBRARY</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_LIBRARY</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_UNIVERSITY</Type>
+			<DefaultBuilding>BUILDING_UNIVERSITY</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_UNIVERSITY</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_PUBLIC_SCHOOL</Type>
+			<DefaultBuilding>BUILDING_PUBLIC_SCHOOL</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_PUBLIC_SCHOOL</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_LABORATORY</Type>
+			<DefaultBuilding>BUILDING_LABORATORY</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_LABORATORY</Description>
+		</Row>
+
+		<Row>
+			<Type>BUILDINGCLASS_PALACE</Type>
+			<DefaultBuilding>BUILDING_PALACE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_PALACE</Description>
+			<MaxPlayerInstances>1</MaxPlayerInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_HEROIC_EPIC</Type>
+			<DefaultBuilding>BUILDING_HEROIC_EPIC</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_HEROIC_EPIC</Description>
+			<MaxPlayerInstances>1</MaxPlayerInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_NATIONAL_CARAVANSARY</Type>
+			<DefaultBuilding>BUILDING_NATIONAL_CARAVANSARY</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_NATIONAL_CARAVANSARY</Description>
+			<MaxPlayerInstances>1</MaxPlayerInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_NATIONAL_TREASURY</Type>
+			<DefaultBuilding>BUILDING_NATIONAL_TREASURY</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_NATIONAL_TREASURY</Description>
+			<MaxPlayerInstances>1</MaxPlayerInstances>
+		</Row>
 		<Row>
 			<Type>BUILDINGCLASS_NATIONAL_TREASURY_II</Type>
 			<DefaultBuilding>BUILDING_NATIONAL_TREASURY_II</DefaultBuilding>
 			<Description>TXT_KEY_BUILDING_NATIONAL_TREASURY_II</Description>
 			<MaxPlayerInstances>1</MaxPlayerInstances>
 		</Row>
-			<Row>
-				<Type>BUILDINGCLASS_NATIONAL_COLLEGE</Type>
-				<DefaultBuilding>BUILDING_NATIONAL_COLLEGE</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_NATIONAL_COLLEGE</Description>
-				<MaxPlayerInstances>1</MaxPlayerInstances>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_NATIONAL_SHRINE</Type>
-				<DefaultBuilding>BUILDING_NATIONAL_SHRINE</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_NATIONAL_SHRINE</Description>
-				<MaxPlayerInstances>1</MaxPlayerInstances>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_OXFORD_UNIVERSITY</Type>
-				<DefaultBuilding>BUILDING_OXFORD_UNIVERSITY</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_OXFORD_UNIVERSITY</Description>
-				<MaxPlayerInstances>1</MaxPlayerInstances>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_HERMITAGE</Type>
-				<DefaultBuilding>BUILDING_HERMITAGE</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_HERMITAGE</Description>
-				<MaxPlayerInstances>1</MaxPlayerInstances>
-			</Row>
-			
-			<Row>
-				<Type>BUILDINGCLASS_PYRAMID</Type>
-				<DefaultBuilding>BUILDING_PYRAMID</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_PYRAMID</Description>
-				<MaxGlobalInstances>1</MaxGlobalInstances>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_GREAT_LIBRARY</Type>
-				<DefaultBuilding>BUILDING_GREAT_LIBRARY</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_GREAT_LIBRARY</Description>
-				<MaxGlobalInstances>1</MaxGlobalInstances>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_STONEHENGE</Type>
-				<DefaultBuilding>BUILDING_STONEHENGE</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_STONEHENGE</Description>
-				<MaxGlobalInstances>1</MaxGlobalInstances>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_HANGING_GARDEN</Type>
-				<DefaultBuilding>BUILDING_HANGING_GARDEN</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_HANGING_GARDEN</Description>
-				<MaxGlobalInstances>1</MaxGlobalInstances>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_COLOSSUS</Type>
-				<DefaultBuilding>BUILDING_COLOSSUS</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_COLOSSUS</Description>
-				<MaxGlobalInstances>1</MaxGlobalInstances>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_GREAT_LIGHTHOUSE</Type>
-				<DefaultBuilding>BUILDING_GREAT_LIGHTHOUSE</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_GREAT_LIGHTHOUSE</Description>
-				<MaxGlobalInstances>1</MaxGlobalInstances>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_ORACLE</Type>
-				<DefaultBuilding>BUILDING_ORACLE</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_ORACLE</Description>
-				<MaxGlobalInstances>1</MaxGlobalInstances>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_GREAT_WALL</Type>
-				<DefaultBuilding>BUILDING_GREAT_WALL</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_GREAT_WALL</Description>
-				<MaxGlobalInstances>1</MaxGlobalInstances>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_HAGIA_SOPHIA</Type>
-				<DefaultBuilding>BUILDING_HAGIA_SOPHIA</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_HAGIA_SOPHIA</Description>
-				<MaxGlobalInstances>1</MaxGlobalInstances>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_ANGKOR_WAT</Type>
-				<DefaultBuilding>BUILDING_ANGKOR_WAT</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_ANGKOR_WAT</Description>
-				<MaxGlobalInstances>1</MaxGlobalInstances>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_NOTRE_DAME</Type>
-				<DefaultBuilding>BUILDING_NOTRE_DAME</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_NOTRE_DAME</Description>
-				<MaxGlobalInstances>1</MaxGlobalInstances>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_MACHU_PICHU</Type>
-				<DefaultBuilding>BUILDING_MACHU_PICHU</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_MACHU_PICHU</Description>
-				<MaxGlobalInstances>1</MaxGlobalInstances>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_CHICHEN_ITZA</Type>
-				<DefaultBuilding>BUILDING_CHICHEN_ITZA</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_CHICHEN_ITZA</Description>
-				<MaxGlobalInstances>1</MaxGlobalInstances>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_KREMLIN</Type>
-				<DefaultBuilding>BUILDING_KREMLIN</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_KREMLIN</Description>
-				<MaxGlobalInstances>1</MaxGlobalInstances>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_FORBIDDEN_PALACE</Type>
-				<DefaultBuilding>BUILDING_FORBIDDEN_PALACE</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_FORBIDDEN_PALACE</Description>
-				<MaxGlobalInstances>1</MaxGlobalInstances>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_SISTINE_CHAPEL</Type>
-				<DefaultBuilding>BUILDING_SISTINE_CHAPEL</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_SISTINE_CHAPEL</Description>
-				<MaxGlobalInstances>1</MaxGlobalInstances>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_HIMEJI_CASTLE</Type>
-				<DefaultBuilding>BUILDING_HIMEJI_CASTLE</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_HIMEJI_CASTLE</Description>
-				<MaxGlobalInstances>1</MaxGlobalInstances>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_PORCELAIN_TOWER</Type>
-				<DefaultBuilding>BUILDING_PORCELAIN_TOWER</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_PORCELAIN_TOWER</Description>
-				<MaxGlobalInstances>1</MaxGlobalInstances>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_TAJ_MAHAL</Type>
-				<DefaultBuilding>BUILDING_TAJ_MAHAL</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_TAJ_MAHAL</Description>
-				<MaxGlobalInstances>1</MaxGlobalInstances>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_BIG_BEN</Type>
-				<DefaultBuilding>BUILDING_BIG_BEN</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_BIG_BEN</Description>
-				<MaxGlobalInstances>1</MaxGlobalInstances>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_BRANDENBURG_GATE</Type>
-				<DefaultBuilding>BUILDING_BRANDENBURG_GATE</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_BRANDENBURG_GATE</Description>
-				<MaxGlobalInstances>1</MaxGlobalInstances>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_LOUVRE</Type>
-				<DefaultBuilding>BUILDING_LOUVRE</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_LOUVRE</Description>
-				<MaxGlobalInstances>1</MaxGlobalInstances>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_EIFFEL_TOWER</Type>
-				<DefaultBuilding>BUILDING_EIFFEL_TOWER</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_EIFFEL_TOWER</Description>
-				<MaxGlobalInstances>1</MaxGlobalInstances>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_STATUE_OF_LIBERTY</Type>
-				<DefaultBuilding>BUILDING_STATUE_OF_LIBERTY</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_STATUE_OF_LIBERTY</Description>
-				<MaxGlobalInstances>1</MaxGlobalInstances>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_CRISTO_REDENTOR</Type>
-				<DefaultBuilding>BUILDING_CRISTO_REDENTOR</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_CRISTO_REDENTOR</Description>
-				<MaxGlobalInstances>1</MaxGlobalInstances>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_PENTAGON</Type>
-				<DefaultBuilding>BUILDING_PENTAGON</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_PENTAGON</Description>
-				<MaxGlobalInstances>1</MaxGlobalInstances>
-			</Row>		
-			<Row>
-				<Type>BUILDINGCLASS_SYDNEY_OPERA_HOUSE</Type>
-				<DefaultBuilding>BUILDING_SYDNEY_OPERA_HOUSE</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_SYDNEY_OPERA_HOUSE</Description>
-				<MaxGlobalInstances>1</MaxGlobalInstances>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_AQUEDUCT</Type>
-				<DefaultBuilding>BUILDING_AQUEDUCT</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_AQUEDUCT</Description>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_STONE_WORKS</Type>
-				<DefaultBuilding>BUILDING_STONE_WORKS</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_STONE_WORKS</Description>
-			</Row>
+		<Row>
+			<Type>BUILDINGCLASS_NATIONAL_COLLEGE</Type>
+			<DefaultBuilding>BUILDING_NATIONAL_COLLEGE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_NATIONAL_COLLEGE</Description>
+			<MaxPlayerInstances>1</MaxPlayerInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_NATIONAL_SHRINE</Type>
+			<DefaultBuilding>BUILDING_NATIONAL_SHRINE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_NATIONAL_SHRINE</Description>
+			<MaxPlayerInstances>1</MaxPlayerInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_OXFORD_UNIVERSITY</Type>
+			<DefaultBuilding>BUILDING_OXFORD_UNIVERSITY</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_OXFORD_UNIVERSITY</Description>
+			<MaxPlayerInstances>1</MaxPlayerInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_HERMITAGE</Type>
+			<DefaultBuilding>BUILDING_HERMITAGE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_HERMITAGE</Description>
+			<MaxPlayerInstances>1</MaxPlayerInstances>
+		</Row>
+
+		<Row>
+			<Type>BUILDINGCLASS_PYRAMID</Type>
+			<DefaultBuilding>BUILDING_PYRAMID</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_PYRAMID</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_GREAT_LIBRARY</Type>
+			<DefaultBuilding>BUILDING_GREAT_LIBRARY</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_GREAT_LIBRARY</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_STONEHENGE</Type>
+			<DefaultBuilding>BUILDING_STONEHENGE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_STONEHENGE</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_HANGING_GARDEN</Type>
+			<DefaultBuilding>BUILDING_HANGING_GARDEN</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_HANGING_GARDEN</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_COLOSSUS</Type>
+			<DefaultBuilding>BUILDING_COLOSSUS</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_COLOSSUS</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_GREAT_LIGHTHOUSE</Type>
+			<DefaultBuilding>BUILDING_GREAT_LIGHTHOUSE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_GREAT_LIGHTHOUSE</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_ORACLE</Type>
+			<DefaultBuilding>BUILDING_ORACLE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_ORACLE</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_GREAT_WALL</Type>
+			<DefaultBuilding>BUILDING_GREAT_WALL</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_GREAT_WALL</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_HAGIA_SOPHIA</Type>
+			<DefaultBuilding>BUILDING_HAGIA_SOPHIA</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_HAGIA_SOPHIA</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_ANGKOR_WAT</Type>
+			<DefaultBuilding>BUILDING_ANGKOR_WAT</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_ANGKOR_WAT</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_NOTRE_DAME</Type>
+			<DefaultBuilding>BUILDING_NOTRE_DAME</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_NOTRE_DAME</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_MACHU_PICHU</Type>
+			<DefaultBuilding>BUILDING_MACHU_PICHU</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_MACHU_PICHU</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_CHICHEN_ITZA</Type>
+			<DefaultBuilding>BUILDING_CHICHEN_ITZA</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_CHICHEN_ITZA</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_KREMLIN</Type>
+			<DefaultBuilding>BUILDING_KREMLIN</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_KREMLIN</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_FORBIDDEN_PALACE</Type>
+			<DefaultBuilding>BUILDING_FORBIDDEN_PALACE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_FORBIDDEN_PALACE</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_SISTINE_CHAPEL</Type>
+			<DefaultBuilding>BUILDING_SISTINE_CHAPEL</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_SISTINE_CHAPEL</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_HIMEJI_CASTLE</Type>
+			<DefaultBuilding>BUILDING_HIMEJI_CASTLE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_HIMEJI_CASTLE</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_PORCELAIN_TOWER</Type>
+			<DefaultBuilding>BUILDING_PORCELAIN_TOWER</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_PORCELAIN_TOWER</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_TAJ_MAHAL</Type>
+			<DefaultBuilding>BUILDING_TAJ_MAHAL</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_TAJ_MAHAL</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_BIG_BEN</Type>
+			<DefaultBuilding>BUILDING_BIG_BEN</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_BIG_BEN</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_BRANDENBURG_GATE</Type>
+			<DefaultBuilding>BUILDING_BRANDENBURG_GATE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_BRANDENBURG_GATE</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_LOUVRE</Type>
+			<DefaultBuilding>BUILDING_LOUVRE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_LOUVRE</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_EIFFEL_TOWER</Type>
+			<DefaultBuilding>BUILDING_EIFFEL_TOWER</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_EIFFEL_TOWER</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_STATUE_OF_LIBERTY</Type>
+			<DefaultBuilding>BUILDING_STATUE_OF_LIBERTY</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_STATUE_OF_LIBERTY</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_CRISTO_REDENTOR</Type>
+			<DefaultBuilding>BUILDING_CRISTO_REDENTOR</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_CRISTO_REDENTOR</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_PENTAGON</Type>
+			<DefaultBuilding>BUILDING_PENTAGON</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_PENTAGON</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_SYDNEY_OPERA_HOUSE</Type>
+			<DefaultBuilding>BUILDING_SYDNEY_OPERA_HOUSE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_SYDNEY_OPERA_HOUSE</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_AQUEDUCT</Type>
+			<DefaultBuilding>BUILDING_AQUEDUCT</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_AQUEDUCT</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_STONE_WORKS</Type>
+			<DefaultBuilding>BUILDING_STONE_WORKS</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_STONE_WORKS</Description>
+		</Row>
 
 
-			
-			<Row>
-				<Type>BUILDINGCLASS_ART_GALLERY</Type>
-				<DefaultBuilding>BUILDING_ART_GALLERY</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_ART_GALLERY</Description>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_MOSQUE</Type>
-				<DefaultBuilding>BUILDING_MOSQUE</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_MOSQUE</Description>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_PAGODA</Type>
-				<DefaultBuilding>BUILDING_PAGODA</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_PAGODA</Description>
-			</Row>
-			
-			<Row>
-				<Type>BUILDINGCLASS_ALUMINUM_PROVIDER</Type>
-				<DefaultBuilding>BUILDING_ALUMINUM_PROVIDER</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_RECYCLING_CENTER</Description>
-			</Row>
-		
-		
-			<Row>
-				<Type>BUILDINGCLASS_BOMB_SHELTER</Type>
-				<DefaultBuilding>BUILDING_BOMB_SHELTER</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_BOMB_SHELTER</Description>
-			</Row>
+		<Row>
+			<Type>BUILDINGCLASS_ART_GALLERY</Type>
+			<DefaultBuilding>BUILDING_ART_GALLERY</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_ART_GALLERY</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_MOSQUE</Type>
+			<DefaultBuilding>BUILDING_MOSQUE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_MOSQUE</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_PAGODA</Type>
+			<DefaultBuilding>BUILDING_PAGODA</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_PAGODA</Description>
+		</Row>
 
-				
-			<Row>
-				<Type>BUILDINGCLASS_GRAND_TEMPLE</Type>
-				<DefaultBuilding>BUILDING_GRAND_TEMPLE</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_GRAND_TEMPLE</Description>
-				<MaxPlayerInstances>1</MaxPlayerInstances>
-			</Row>
-			
-			<Row>
-				<Type>BUILDINGCLASS_ALHAMBRA</Type>
-				<DefaultBuilding>BUILDING_ALHAMBRA</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_ALHAMBRA</Description>
-				<MaxGlobalInstances>1</MaxGlobalInstances>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_CN_TOWER</Type>
-				<DefaultBuilding>BUILDING_CN_TOWER</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_CN_TOWER</Description>
-				<MaxGlobalInstances>1</MaxGlobalInstances>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_LEANING_TOWER</Type>
-				<DefaultBuilding>BUILDING_LEANING_TOWER</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_LEANING_TOWER</Description>
-				<MaxGlobalInstances>1</MaxGlobalInstances>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_MOSQUE_OF_DJENNE</Type>
-				<DefaultBuilding>BUILDING_MOSQUE_OF_DJENNE</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_MOSQUE_OF_DJENNE</Description>
-				<MaxGlobalInstances>1</MaxGlobalInstances>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_NEUSCHWANSTEIN</Type>
-				<DefaultBuilding>BUILDING_NEUSCHWANSTEIN</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_NEUSCHWANSTEIN</Description>
-				<MaxGlobalInstances>1</MaxGlobalInstances>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_PETRA</Type>
-				<DefaultBuilding>BUILDING_PETRA</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_PETRA</Description>
-				<MaxGlobalInstances>1</MaxGlobalInstances>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_TERRACOTTA_ARMY</Type>
-				<DefaultBuilding>BUILDING_TERRACOTTA_ARMY</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_TERRACOTTA_ARMY</Description>
-				<MaxGlobalInstances>1</MaxGlobalInstances>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_GREAT_FIREWALL</Type>
-				<DefaultBuilding>BUILDING_GREAT_FIREWALL</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_GREAT_FIREWALL</Description>
-				<MaxGlobalInstances>1</MaxGlobalInstances>
-			</Row>
+		<Row>
+			<Type>BUILDINGCLASS_ALUMINUM_PROVIDER</Type>
+			<DefaultBuilding>BUILDING_ALUMINUM_PROVIDER</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_RECYCLING_CENTER</Description>
+		</Row>
 
 
-			
-		
-			<Row>
-				<Type>BUILDINGCLASS_HOTEL</Type>
-				<DefaultBuilding>BUILDING_HOTEL</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_HOTEL</Description>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_CARAVANSARY</Type>
-				<DefaultBuilding>BUILDING_CARAVANSARY</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_CARAVANSARY</Description>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_AIRPORT</Type>
-				<DefaultBuilding>BUILDING_AIRPORT</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_AIRPORT</Description>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_UFFIZI</Type>
-				<DefaultBuilding>BUILDING_UFFIZI</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_UFFIZI</Description>
-				<MaxGlobalInstances>1</MaxGlobalInstances>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_GLOBE_THEATER</Type>
-				<DefaultBuilding>BUILDING_GLOBE_THEATER</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_GLOBE_THEATER</Description>
-				<MaxGlobalInstances>1</MaxGlobalInstances>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_BROADWAY</Type>
-				<DefaultBuilding>BUILDING_BROADWAY</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_BROADWAY</Description>
-				<MaxGlobalInstances>1</MaxGlobalInstances>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_RED_FORT</Type>
-				<DefaultBuilding>BUILDING_RED_FORT</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_RED_FORT</Description>
-				<MaxGlobalInstances>1</MaxGlobalInstances>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_PRORA_RESORT</Type>
-				<DefaultBuilding>BUILDING_PRORA_RESORT</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_PRORA_RESORT</Description>
-				<MaxGlobalInstances>1</MaxGlobalInstances>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_BOROBUDUR</Type>
-				<DefaultBuilding>BUILDING_BOROBUDUR</DefaultBuilding>
-				<Description>TXT_KEY_BUILDING_BOROBUDUR</Description>
-				<MaxGlobalInstances>1</MaxGlobalInstances>
-			</Row>
-			<Row>
-				<Type>BUILDINGCLASS_PARTHENON</Type>
-				<DefaultBuilding>BUILDING_PARTHENON</DefaultBuilding>
-				<Description>TXT_KEY_PARTHENON</Description>
-				<MaxGlobalInstances>1</MaxGlobalInstances>
-			</Row>
+		<Row>
+			<Type>BUILDINGCLASS_BOMB_SHELTER</Type>
+			<DefaultBuilding>BUILDING_BOMB_SHELTER</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_BOMB_SHELTER</Description>
+		</Row>
 
+
+		<Row>
+			<Type>BUILDINGCLASS_GRAND_TEMPLE</Type>
+			<DefaultBuilding>BUILDING_GRAND_TEMPLE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_GRAND_TEMPLE</Description>
+			<MaxPlayerInstances>1</MaxPlayerInstances>
+		</Row>
+
+		<Row>
+			<Type>BUILDINGCLASS_ALHAMBRA</Type>
+			<DefaultBuilding>BUILDING_ALHAMBRA</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_ALHAMBRA</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_CN_TOWER</Type>
+			<DefaultBuilding>BUILDING_CN_TOWER</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_CN_TOWER</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_LEANING_TOWER</Type>
+			<DefaultBuilding>BUILDING_LEANING_TOWER</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_LEANING_TOWER</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_MOSQUE_OF_DJENNE</Type>
+			<DefaultBuilding>BUILDING_MOSQUE_OF_DJENNE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_MOSQUE_OF_DJENNE</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_NEUSCHWANSTEIN</Type>
+			<DefaultBuilding>BUILDING_NEUSCHWANSTEIN</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_NEUSCHWANSTEIN</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_PETRA</Type>
+			<DefaultBuilding>BUILDING_PETRA</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_PETRA</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_TERRACOTTA_ARMY</Type>
+			<DefaultBuilding>BUILDING_TERRACOTTA_ARMY</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_TERRACOTTA_ARMY</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_GREAT_FIREWALL</Type>
+			<DefaultBuilding>BUILDING_GREAT_FIREWALL</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_GREAT_FIREWALL</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+
+		<Row>
+			<Type>BUILDINGCLASS_HOTEL</Type>
+			<DefaultBuilding>BUILDING_HOTEL</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_HOTEL</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_CARAVANSARY</Type>
+			<DefaultBuilding>BUILDING_CARAVANSARY</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_CARAVANSARY</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_AIRPORT</Type>
+			<DefaultBuilding>BUILDING_AIRPORT</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_AIRPORT</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_UFFIZI</Type>
+			<DefaultBuilding>BUILDING_UFFIZI</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_UFFIZI</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_GLOBE_THEATER</Type>
+			<DefaultBuilding>BUILDING_GLOBE_THEATER</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_GLOBE_THEATER</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_BROADWAY</Type>
+			<DefaultBuilding>BUILDING_BROADWAY</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_BROADWAY</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_RED_FORT</Type>
+			<DefaultBuilding>BUILDING_RED_FORT</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_RED_FORT</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_PRORA_RESORT</Type>
+			<DefaultBuilding>BUILDING_PRORA_RESORT</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_PRORA_RESORT</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_BOROBUDUR</Type>
+			<DefaultBuilding>BUILDING_BOROBUDUR</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_BOROBUDUR</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_PARTHENON</Type>
+			<DefaultBuilding>BUILDING_PARTHENON</DefaultBuilding>
+			<Description>TXT_KEY_PARTHENON</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
 
 
 		<Row>
@@ -620,24 +616,10 @@
 			<MaxGlobalInstances>1</MaxGlobalInstances>
 		</Row>
 
-		<Row>
-			<Type>BUILDINGCLASS_SATELLITE_RECONNAISSANCE_SMALL</Type>
-			<DefaultBuilding>BUILDING_SATELLITE_RECONNAISSANCE_SMALL</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_SATELLITEEFFECTS</Description>
-			<MaxPlayerInstances>1</MaxPlayerInstances>
-		</Row>
-		<Row>
-			<Type>BUILDINGCLASS_BUILDING_SATELLITE_GPS_SMALL</Type>
-			<DefaultBuilding>BUILDING_SATELLITE_GPS</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_SATELLITEEFFECTS</Description>
-			<MaxPlayerInstances>1</MaxPlayerInstances>
-		</Row>
-		
 	</BuildingClasses>
-		
 
 
-<!--*********************SP New Buildings******************************************-->
+	<!--*********************SP New Buildings******************************************-->
 	<BuildingClasses>
 		<Row>
 			<Type>BUILDINGCLASS_WOOD_DOCK</Type>
@@ -656,8 +638,8 @@
 			<DefaultBuilding>BUILDING_FINANCE_COMPANY</DefaultBuilding>
 			<Description>TXT_KEY_BUILDING_FINANCE_COMPANY</Description>
 		</Row>
-		
-		
+
+
 		<Row>
 			<Type>BUILDINGCLASS_TAP_WATER_SUPPLY</Type>
 			<DefaultBuilding>BUILDING_TAP_WATER_SUPPLY</DefaultBuilding>
@@ -668,7 +650,7 @@
 			<DefaultBuilding>BUILDING_WATER_TREATMENT_FACTORY</DefaultBuilding>
 			<Description>TXT_KEY_BUILDING_WATER_TREATMENT_FACTORY</Description>
 		</Row>
-		
+
 		<Row>
 			<Type>BUILDINGCLASS_STAGECOACH</Type>
 			<DefaultBuilding>BUILDING_STAGECOACH</DefaultBuilding>
@@ -689,8 +671,8 @@
 			<DefaultBuilding>BUILDING_MAGLEV</DefaultBuilding>
 			<Description>TXT_KEY_BUILDING_MAGLEV</Description>
 		</Row>
-		
-		
+
+
 		<Row>
 			<Type>BUILDINGCLASS_CITY_CBD</Type>
 			<DefaultBuilding>BUILDING_CITY_CBD</DefaultBuilding>
@@ -711,7 +693,7 @@
 			<DefaultBuilding>BUILDING_VIDEO_GAME_COMPANY</DefaultBuilding>
 			<Description>TXT_KEY_BUILDING_VIDEO_GAME_COMPANY</Description>
 		</Row>
-		
+
 		<Row>
 			<Type>BUILDINGCLASS_GENE_LAB</Type>
 			<DefaultBuilding>BUILDING_GENE_LAB</DefaultBuilding>
@@ -722,7 +704,6 @@
 			<DefaultBuilding>BUILDING_INTERNATIONAL_TRADE_COMPANY</DefaultBuilding>
 			<Description>TXT_KEY_BUILDING_INTERNATIONAL_TRADE_COMPANY</Description>
 		</Row>
-
 
 
 		<Row>
@@ -740,7 +721,7 @@
 			<DefaultBuilding>BUILDING_LOGISTICS_COMPANY</DefaultBuilding>
 			<Description>TXT_KEY_BUILDING_LOGISTICS_COMPANY</Description>
 		</Row>
-		
+
 		<Row>
 			<Type>BUILDINGCLASS_AMUSEMENT_PARK</Type>
 			<DefaultBuilding>BUILDING_AMUSEMENT_PARK</DefaultBuilding>
@@ -787,13 +768,12 @@
 			<Type>BUILDINGCLASS_JEWELER</Type>
 			<DefaultBuilding>BUILDING_JEWELER</DefaultBuilding>
 			<Description>TXT_KEY_BUILDING_JEWELER</Description>
-		</Row>	
+		</Row>
 		<Row>
 			<Type>BUILDINGCLASS_TV_STATION</Type>
 			<DefaultBuilding>BUILDING_TV_STATION</DefaultBuilding>
 			<Description>TXT_KEY_BUILDING_TV_STATION</Description>
 		</Row>
-
 
 
 		<Row>
@@ -826,7 +806,7 @@
 			<DefaultBuilding>BUILDING_COAL_TO_URANIUM</DefaultBuilding>
 			<Description>TXT_KEY_BUILDING_COAL_TO_URANIUM</Description>
 		</Row>
-		
+
 		<Row>
 			<Type>BUILDINGCLASS_BEVERAGE_FACTORY</Type>
 			<DefaultBuilding>BUILDING_BEVERAGE_FACTORY</DefaultBuilding>
@@ -858,7 +838,6 @@
 			<DefaultBuilding>BUILDING_FUTURE_FACTORY</DefaultBuilding>
 			<Description>TXT_KEY_BUILDING_FUTURE_FACTORY</Description>
 		</Row>
-
 
 
 		<Row>
@@ -932,9 +911,7 @@
 			<MaxGlobalInstances>1</MaxGlobalInstances>
 		</Row>
 
-		
-		
-		
+
 		<Row>
 			<Type>BUILDINGCLASS_COLOSSEUM</Type>
 			<DefaultBuilding>BUILDING_COLOSSEUM</DefaultBuilding>
@@ -956,7 +933,7 @@
 			<Description>TXT_KEY_BUILDING_PORT_OF_ROTTERDAM</Description>
 			<MaxGlobalInstances>1</MaxGlobalInstances>
 		</Row>
-		
+
 		<!--<Row>
 			<Type>BUILDINGCLASS_TRIUMPHAL_ARCH</Type>
 			<DefaultBuilding>BUILDING_TRIUMPHAL_ARCH</DefaultBuilding>
@@ -983,21 +960,21 @@
 			<Description>TXT_KEY_BUILDING_ASWAN_DAM</Description>
 			<MaxGlobalInstances>1</MaxGlobalInstances>
 		</Row>
-		
+
 		<Row>
 			<Type>BUILDINGCLASS_LARGE_HADRON_COLLIDER</Type>
 			<DefaultBuilding>BUILDING_LARGE_HADRON_COLLIDER</DefaultBuilding>
 			<Description>TXT_KEY_BUILDING_LARGE_HADRON_COLLIDER</Description>
 			<MaxGlobalInstances>1</MaxGlobalInstances>
 		</Row>
-		
+
 		<Row>
 			<Type>BUILDINGCLASS_NEW_PALACE</Type>
 			<DefaultBuilding>BUILDING_NEW_PALACE</DefaultBuilding>
 			<Description>TXT_KEY_BUILDING_NEW_PALACE</Description>
 			<MaxPlayerInstances>1</MaxPlayerInstances>
 		</Row>
-		
+
 
 		<Row>
 			<Type>BUILDINGCLASS_CAIRO</Type>
@@ -1188,8 +1165,6 @@
 		</Row>
 
 
-
-
 	</BuildingClasses>
 
 
@@ -1207,15 +1182,15 @@
 			<DefaultBuilding>BUILDING_ARABIA_ISIAMIC_UNIVERSITY_ALLAH_AKBAR</DefaultBuilding>
 			<Description>TXT_KEY_BUILDING_ARABIA_ISIAMIC_UNIVERSITY_ALLAH_AKBAR</Description>
 		</Row>
-		
-		
+
+
 		<Row>
 			<Type>BUILDINGCLASS_OLD_CAPITAL_OF_CITYSTATE</Type>
 			<DefaultBuilding>BUILDING_OLD_CAPITAL_OF_CITYSTATE</DefaultBuilding>
 			<Description>TXT_KEY_BUILDING_OLD_CAPITAL_OF_CITYSTATE</Description>
 		</Row>
-		
-		
+
+
 		<Row>
 			<Type>BUILDINGCLASS_CIV_S_P_MAN_RESOURCES</Type>
 			<DefaultBuilding>BUILDING_CIV_S_P_MAN_RESOURCES</DefaultBuilding>
@@ -1231,7 +1206,7 @@
 			<DefaultBuilding>BUILDING_CIV_S_P_ELE_RESOURCES</DefaultBuilding>
 			<Description>TXT_KEY_BUILDING_CIV_S_P_ELE_RESOURCES</Description>
 		</Row>
-		
+
 		<!--New Build-->
 		<Row>
 			<Type>BUILDINGCLASS_GREEK_OLYMPICS_DUMMY</Type>
@@ -1240,9 +1215,6 @@
 		</Row>
 
 	</BuildingClasses>
-	
-	
-	
-	
-	
+
+
 </GameData>
