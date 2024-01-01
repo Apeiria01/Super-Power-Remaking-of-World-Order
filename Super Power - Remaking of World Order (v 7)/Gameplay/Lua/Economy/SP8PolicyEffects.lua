@@ -78,8 +78,7 @@ function SPEPolicyCitizenshipHelper(pPlayer, pCity)
 	local bonus = math.floor(GameInfo.GameSpeeds[Game.GetGameSpeedType()].ConstructPercent * 25 / 100)
 	pCity:SetOverflowProduction(pCity:GetOverflowProduction() + bonus)
 	if pPlayer:IsHuman() then
-		Events.GameplayAlertMessage(Locale.ConvertTextKey("TXT_KEY_MESSAGE_POLICY_CITIZENSHIP_ALERT", pCity:GetName(),
-		bonus))
+		Events.GameplayAlertMessage(Locale.ConvertTextKey("TXT_KEY_MESSAGE_POLICY_CITIZENSHIP_ALERT", pCity:GetName(), bonus))
 	end
 	print("SPEPolicyCitizenshipHelper: ", bonus);
 end

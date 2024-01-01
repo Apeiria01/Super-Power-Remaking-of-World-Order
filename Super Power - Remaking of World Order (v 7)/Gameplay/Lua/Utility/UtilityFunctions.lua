@@ -171,7 +171,6 @@ function SatelliteEffectsGlobal(unit)
 		return
 	end
 
-
 	if unit:GetUnitClassType() == GameInfoTypes.UNITCLASS_SATELLITE_WEATHER then
 		print("Satellite Effects Global:Weather Control!")
 		for plotLoop = 0, Map.GetNumPlots() - 1, 1 do
@@ -189,7 +188,6 @@ function SatelliteEffectsGlobal(unit)
 		print("Satellite Effects Global:Environment Transform!")
 		for plotLoop = 0, Map.GetNumPlots() - 1, 1 do
 			local plot = Map.GetPlotByIndex(plotLoop)
-
 
 			if plot:GetTerrainType() == TerrainTypes.TERRAIN_TUNDRA then
 				if plot:GetFeatureType() == FeatureTypes.NO_FEATURE and not plot:IsHills() and not plot:IsMountain() then
@@ -232,30 +230,42 @@ function SatelliteEffectsGlobal(unit)
 				plot:SetImprovementType(iImprovement)
 			end
 		end
-	elseif unit:GetUnitClassType() == GameInfoTypes.UNITCLASS_SATELLITE_GPS or unit:GetUnitClassType() == GameInfoTypes.UNITCLASS_SATELLITE_RECONNAISSANCE or unit:GetUnitClassType() == GameInfoTypes.UNITCLASS_SATELLITE_APOLLO11 or unit:GetUnitClassType() == GameInfoTypes.UNITCLASS_SATELLITE_HUBBLE or unit:GetUnitClassType() == GameInfoTypes.UNITCLASS_SATELLITE_TIANGONG then
+	elseif unit:GetUnitClassType() == GameInfoTypes.UNITCLASS_SATELLITE_GPS then
 		for playerID, player in pairs(Players) do
-			if player and player:GetNumCities() > 0 and not player:IsMinorCiv() and not player:IsBarbarian() then
-				print("Satellite Effects Global:Effects!")
-				local CapitalCity = player:GetCapitalCity()
-				print("Find Capital")
-				if unit:GetUnitClassType() == GameInfo.UnitClasses.UNITCLASS_SATELLITE_GPS.ID then
-					CapitalCity:SetNumRealBuilding(GameInfoTypes["BUILDING_SATELLITE_GPS_SMALL"], 1)
-				elseif unit:GetUnitClassType() == GameInfo.UnitClasses.UNITCLASS_SATELLITE_RECONNAISSANCE.ID then
-					CapitalCity:SetNumRealBuilding(GameInfoTypes["BUILDING_SATELLITE_RECONNAISSANCE_SMALL"], 1)
-				elseif unit:GetUnitClassType() == GameInfo.UnitClasses.UNITCLASS_SATELLITE_APOLLO11.ID then
-					print("Free Tech for everyone!")
-					player:SetNumFreeTechs(1)
-				elseif unit:GetUnitClassType() == GameInfo.UnitClasses.UNITCLASS_SATELLITE_HUBBLE.ID then
-					local pPlot = CapitalCity
-					local NewUnit = player:InitUnit(GameInfoTypes.UNIT_SCIENTIST, pPlot:GetX(), pPlot:GetY(),
-						UNITAI_SCIENTIST)
-					NewUnit:JumpToNearestValidPlot()
-				elseif unit:GetUnitClassType() == GameInfo.UnitClasses.UNITCLASS_SATELLITE_TIANGONG.ID then
-					local pPlot = CapitalCity
-					local NewUnit = player:InitUnit(GameInfoTypes.UNIT_ENGINEER, pPlot:GetX(), pPlot:GetY(),
-						UNITAI_ENGINEER)
-					NewUnit:JumpToNearestValidPlot()
+			if player and player:GetNumCities() > 0 and player:IsMajorCiv() then
+				if playerID ~= unit:GetOwner() then
+					player:ChangeFreePromotionCount(GameInfo.UnitPromotions.PROMOTION_GPS_MOVEMENT_SMALL.ID, 1)
 				end
+			end
+		end
+	elseif unit:GetUnitClassType() == GameInfoTypes.UNITCLASS_SATELLITE_RECONNAISSANCE then
+		for playerID, player in pairs(Players) do
+			if player and player:GetNumCities() > 0 and player:IsMajorCiv() then
+				if playerID ~= unit:GetOwner() then
+					player:ChangeFreePromotionCount(GameInfo.UnitPromotions.PROMOTION_SATELLITE_RECON_SMALL.ID, 1)
+				end
+			end
+		end
+	elseif unit:GetUnitClassType() == GameInfoTypes.UNITCLASS_SATELLITE_APOLLO11 then
+		for playerID, player in pairs(Players) do
+			if player and player:GetNumCities() > 0 and player:IsMajorCiv() then
+				player:ChooseFreeTechs(1)
+			end
+		end
+	elseif unit:GetUnitClassType() == GameInfoTypes.UNITCLASS_SATELLITE_HUBBLE then
+		for playerID, player in pairs(Players) do
+			if player and player:GetCapitalCity() and player:IsMajorCiv() then
+				local CapitalCity = player:GetCapitalCity()
+				local NewUnit = player:InitUnit(GameInfoTypes.UNIT_SCIENTIST, CapitalCity:GetX(), CapitalCity:GetY(), UNITAI_SCIENTIST)
+				NewUnit:JumpToNearestValidPlot()
+			end
+		end
+	elseif unit:GetUnitClassType() == GameInfoTypes.UNITCLASS_SATELLITE_TIANGONG then
+		for playerID, player in pairs(Players) do
+			if player and player:GetCapitalCity() and player:IsMajorCiv() then
+				local CapitalCity = player:GetCapitalCity()
+				local NewUnit = player:InitUnit(GameInfoTypes.UNIT_ENGINEER, CapitalCity:GetX(), CapitalCity:GetY(), UNITAI_ENGINEER)
+				NewUnit:JumpToNearestValidPlot()
 			end
 		end
 	end
