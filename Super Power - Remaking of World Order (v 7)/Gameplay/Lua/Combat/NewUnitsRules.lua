@@ -110,18 +110,14 @@ function NewUnitCreationRules(playerID)
 				end
 				local iCost = -1;
 
-				if not player:IsHuman() 
-				and not PlayerAtWarWithHuman(player)
-				--Single Observer (Test Mod): All AI should buy aircraft for Cargos
-				and not (Players[Game.GetActivePlayer()]:IsObserver() and not Game.IsGameMultiPlayer())
-				then
-					--Do Nothing
-				elseif sSpecialCargo == "SPECIALUNIT_FIGHTER"
+				--AI auto purchase Fighter
+				if sSpecialCargo == "SPECIALUNIT_FIGHTER"
 				and g_CargoSetList[playerID][1] and g_CargoSetList[playerID][1] ~= -1
 				and g_CargoSetList[playerID][4] and g_CargoSetList[playerID][4] ~= -1
 				and not player:IsHuman()
 				then
 					iCost = CarrierRestore(playerID, unit:GetID(), g_CargoSetList[playerID][1]);
+
 				elseif sSpecialCargo == "SPECIALUNIT_MISSILE"
 				and g_CargoSetList[playerID][2] and g_CargoSetList[playerID][2] ~= -1
 				then
