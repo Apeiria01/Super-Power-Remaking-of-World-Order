@@ -207,12 +207,8 @@
 			<PortraitIndex>11</PortraitIndex>
 			<IconAtlas>SP_IMPROVEMENTS_ATLAS</IconAtlas>
 			<NoTwoAdjacent>true</NoTwoAdjacent>
+			<RequiresFeature>true</RequiresFeature>
 		</Row>
-		
-		
-		
-		
-		
 	</Improvements>
 	
 	<Improvement_ValidTerrains>
@@ -323,7 +319,7 @@
 	</Improvement_ValidTerrains>
 
 
-	<Improvement_ValidFeatures>
+	<Improvement_FeaturesNeeded>
 		<Row>
 			<ImprovementType>IMPROVEMENT_IROQUOIAN_FOREST_FARM</ImprovementType>
 			<FeatureType>FEATURE_FOREST</FeatureType>
@@ -332,6 +328,8 @@
 			<ImprovementType>IMPROVEMENT_IROQUOIAN_FOREST_FARM</ImprovementType>
 			<FeatureType>FEATURE_JUNGLE</FeatureType>
 		</Row>
+	</Improvement_FeaturesNeeded>
+	<Improvement_ValidFeatures>
 		<Row>
 			<ImprovementType>IMPROVEMENT_MAYA_ALTAR</ImprovementType>
 			<FeatureType>FEATURE_FOREST</FeatureType>

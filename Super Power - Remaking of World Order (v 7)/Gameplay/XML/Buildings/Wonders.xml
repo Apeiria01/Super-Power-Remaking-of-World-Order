@@ -2592,6 +2592,22 @@
 			<WonderSplashAnchor>L,T</WonderSplashAnchor>
 		</Row>
 		<Row>
+			<Type>BUILDING_SATELLITE_RECONNAISSANCE_SMALL</Type>
+			<BuildingClass>BUILDINGCLASS_SATELLITE_RECONNAISSANCE_SMALL</BuildingClass>
+			<Cost>-1</Cost>
+			<Description>TXT_KEY_UNIT_SATELLITE_RECONNAISSANCE</Description>
+			<Civilopedia>TXT_KEY_UNIT_SATELLITE_RECONNAISSANCE_PEDIA</Civilopedia>
+			<Help>TXT_KEY_UNIT_SATELLITE_RECONNAISSANCE_HELP</Help>
+			<NukeImmune>true</NukeImmune>
+			<MinAreaSize>-1</MinAreaSize>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<NeverCapture>true</NeverCapture>
+			<PortraitIndex>62</PortraitIndex>
+			<IconAtlas>SPBalance_ATLAS</IconAtlas>
+			<FreePromotion>PROMOTION_SATELLITE_RECON_SMALL</FreePromotion>
+		</Row>
+		
+		<Row>
 			<Type>BUILDING_SATELLITE_GPS</Type>
 			<BuildingClass>BUILDINGCLASS_BUILDING_SATELLITEEFFECTS</BuildingClass>
 			<Cost>-1</Cost>
@@ -2608,6 +2624,21 @@
 			<FreePromotion>PROMOTION_GPS_MOVEMENT</FreePromotion>
 			<WonderSplashImage>GPSSate.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,T</WonderSplashAnchor>
+		</Row>
+		<Row>
+			<Type>BUILDING_SATELLITE_GPS_SMALL</Type>
+			<BuildingClass>BUILDINGCLASS_BUILDING_SATELLITE_GPS_SMALL</BuildingClass>
+			<Cost>-1</Cost>
+			<Description>TXT_KEY_UNIT_SATELLITE_GPS</Description>
+			<Civilopedia>TXT_KEY_UNIT_SATELLITE_GPS_PEDIA</Civilopedia>
+			<Help>TXT_KEY_UNIT_SATELLITE_GPS_HELP</Help>
+			<NukeImmune>true</NukeImmune>
+			<MinAreaSize>-1</MinAreaSize>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<NeverCapture>true</NeverCapture>
+			<PortraitIndex>52</PortraitIndex>
+			<IconAtlas>SPBalance_ATLAS</IconAtlas>
+			<FreePromotion>PROMOTION_GPS_MOVEMENT_SMALL</FreePromotion>
 		</Row>
 		<Row>
 			<Type>BUILDING_SATELLITE_APOLLO11</Type>
