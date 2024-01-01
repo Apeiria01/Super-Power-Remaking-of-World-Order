@@ -6720,7 +6720,8 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]慈善事業[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]贈送城邦[ICON_GOLD]金錢提升的[ICON_INFLUENCE]影響力加100%。
-				[NEWLINE][ICON_BULLET]所有與城邦的商路+4[ICON_GOLD]金錢。[NEWLINE]城邦提供的資源翻倍。
+				[NEWLINE][ICON_BULLET]所有與城邦的商路+4[ICON_GOLD]金錢。
+				[NEWLINE][ICON_BULLET]城邦提供的資源翻倍。
 			</Text>
 		</Replace>
 

@@ -34,6 +34,26 @@ function NewUnitCreationRules(playerID)
 		return
 	end
 
+	if player:IsBarbarian() then
+		-- Auto Upgrade for Barbarian
+		for unit in player:Units() do
+			if unit and unit:GetPlot() and GameInfo.Units[unit:GetUpgradeUnitType()] and GameInfo.Units[unit:GetUpgradeUnitType()].PrereqTech
+			and Teams[player:GetTeam()]:IsHasTech(GameInfoTypes[GameInfo.Units[unit:GetUpgradeUnitType()].PrereqTech])
+			then
+				local plot = unit:GetPlot();
+				local iUnitType = unit:GetUpgradeUnitType();
+				unit:Kill();
+				player:InitUnit(iUnitType, plot:GetX(), plot:GetY(), UNITAI_ATTACK);
+			end
+			if not unit:IsDead() and not unit:IsDelayedDeath()
+				and not unit:IsHasPromotion(ForeignLandsID) and unit:IsHasPromotion(MilitiaID)
+			then
+				unit:SetHasPromotion(ForeignLandsID, true);
+			end
+		end
+		return;
+	end
+
 	-- Fix Embarked Graphic Reoverride for POLYNESIAN & DANISH when they into ERA_INDUSTRIAL
 	if (player:GetEmbarkedGraphicOverride() == "ART_DEF_UNIT_U_POLYNESIAN_WAR_CANOE"
 			or player:GetEmbarkedGraphicOverride() == "ART_DEF_UNIT_U_DANISH_LONGBOAT")
@@ -43,10 +63,12 @@ function NewUnitCreationRules(playerID)
 	end
 
 	local CapCity = player:GetCapitalCity();
+	local bAutoPurchase = (player:IsHuman() or PlayerAtWarWithHuman(player) or (Players[Game.GetActivePlayer()]:IsObserver() and not Game.IsGameMultiPlayer()));
 
 	-------------Units Processing!
 	-- Initial Cargo List
 	g_CargoSetList[playerID] = nil;
+	local iTotalCost = 0;
 	for unit in player:Units() do
 		if unit == nil then
 			-- Remove mis-placed units in city
@@ -119,12 +141,13 @@ function NewUnitCreationRules(playerID)
 					iCost = CarrierRestore(playerID, unit:GetID(), g_CargoSetList[playerID][1]);
 
 				elseif sSpecialCargo == "SPECIALUNIT_MISSILE"
+				and bAutoPurchase
 				and g_CargoSetList[playerID][2] and g_CargoSetList[playerID][2] ~= -1
 				then
 					iCost = CarrierRestore(playerID, unit:GetID(), g_CargoSetList[playerID][2]);
 				end
 				if iCost and iCost > 0 then
-					player:ChangeGold(-iCost);
+					iTotalCost = iTotalCost + iCost
 				end
 			-- Cargos Update
 			elseif unit:IsCargo() and unit:GetTransportUnit()
@@ -141,7 +164,7 @@ function NewUnitCreationRules(playerID)
 				end
 				local iCost = CarrierRestore(playerID, unit:GetID(), unit:GetUpgradeUnitType());
 				if iCost and iCost > 0 then
-					player:ChangeGold(-iCost);
+					iTotalCost = iTotalCost + iCost
 				end
 			end
 
@@ -161,26 +184,12 @@ function NewUnitCreationRules(playerID)
 						print("Promotions Transfer Finished on AAS!")
 					end
 				end
-				--------- Human player special END
-				-- Auto Upgrade for Barbarian
-			elseif player:IsBarbarian() then
-				if unit:GetPlot() and GameInfo.Units[unit:GetUpgradeUnitType()] and GameInfo.Units[unit:GetUpgradeUnitType()].PrereqTech
-					and Teams[Game.GetActiveTeam()]:IsHasTech(GameInfoTypes[GameInfo.Units[unit:GetUpgradeUnitType()].PrereqTech])
-				then
-					local plot = unit:GetPlot();
-					local iUnitType = unit:GetUpgradeUnitType();
-					unit:Kill();
-					player:InitUnit(iUnitType, plot:GetX(), plot:GetY(), UNITAI_ATTACK);
-				end
-				if not unit:IsDead() and not unit:IsDelayedDeath()
-					and not unit:IsHasPromotion(ForeignLandsID) and unit:IsHasPromotion(MilitiaID)
-				then
-					unit:SetHasPromotion(ForeignLandsID, true);
-				end
 			end
+			--------- Human player special END
 			-- MOD End   by CaptainCWB
 		end
 	end -------for units END
+	player:ChangeGold(-iTotalCost);
 end  ------function end
 
 GameEvents.PlayerTurnStart.Add(NewUnitCreationRules)
