@@ -1286,8 +1286,7 @@ BuildMilitaryAcademyButton = {
         end
 
         city:SetNumRealBuilding(GameInfoTypes["BUILDING_MILITARY_ACADEMY"], 1)
-        if GameInfo.Leader_Traits {LeaderType = GameInfo.Leaders[player:GetLeaderType()].Type, TraitType = "TRAIT_TERROR"}() 
-		and (GameInfo.Traits["TRAIT_TERROR"].PrereqPolicy == nil or (GameInfo.Traits["TRAIT_TERROR"].PrereqPolicy and player:HasPolicy(GameInfoTypes[GameInfo.Traits["TRAIT_TERROR"].PrereqPolicy]))) 
+        if player:HasTrait(GameInfoTypes["TRAIT_TERROR"])
 		or (player:HasPolicy(GameInfo.Policies["POLICY_EXPLORATION_FINISHER"].ID) 
 		and unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_GREAT_ADMIRAL"].ID)) 
 		then
@@ -1555,8 +1554,7 @@ RemoveSheepOntheHills = {
         local bIsCondition = false;
         if unit:GetUnitClassType() == GameInfoTypes.UNITCLASS_WORKER 
 		and plot:IsHills() and not plot:IsCity() and plot:GetResourceType(-1) == GameInfoTypes.RESOURCE_SHEEP 
-		and GameInfo.Leader_Traits {LeaderType = GameInfo.Leaders[player:GetLeaderType()].Type, TraitType = "TRAIT_GREAT_ANDEAN_ROAD"}() 
-		and (GameInfo.Traits["TRAIT_GREAT_ANDEAN_ROAD"].PrereqPolicy == nil or (GameInfo.Traits["TRAIT_GREAT_ANDEAN_ROAD"].PrereqPolicy and player:HasPolicy(GameInfoTypes[GameInfo.Traits["TRAIT_GREAT_ANDEAN_ROAD"].PrereqPolicy]))) then
+		and player:HasTrait(GameInfoTypes["TRAIT_GREAT_ANDEAN_ROAD"]) then
             bIsCondition = true;
         end
         return bIsCondition and unit:CanMove();

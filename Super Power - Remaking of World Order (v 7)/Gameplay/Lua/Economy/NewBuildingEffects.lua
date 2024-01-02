@@ -23,10 +23,7 @@ function NewBuildingEffects(iPlayer, iCity, iBuilding, bGold, bFaith)
 			local MAID = GameInfo.Buildings.BUILDING_MILITARY_ACADEMY.ID
 			pCity:SetNumRealBuilding(MAID, 1)
 			print("AI Free Military Academy!")
-			if GameInfo.Leader_Traits { LeaderType = GameInfo.Leaders[player:GetLeaderType()].Type, TraitType =
-				"TRAIT_FIGHT_WELL_DAMAGED" } ()
-				and (GameInfo.Traits["TRAIT_FIGHT_WELL_DAMAGED"].PrereqPolicy == nil or (GameInfo.Traits["TRAIT_FIGHT_WELL_DAMAGED"].PrereqPolicy
-					and player:HasPolicy(GameInfoTypes[GameInfo.Traits["TRAIT_FIGHT_WELL_DAMAGED"].PrereqPolicy])))
+			if player:HasTrait(GameInfoTypes["TRAIT_FIGHT_WELL_DAMAGED"])
 			then
 				local DJID = GameInfo.Buildings.BUILDING_JAPANESE_DOJO.ID
 				pCity:SetNumRealBuilding(DJID, 1)

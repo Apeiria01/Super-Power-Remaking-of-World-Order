@@ -2149,15 +2149,11 @@ function RefreshCultureVictory()
 					end
 					
 					if  activePlayer:GetExcessHappiness() > pPlayer:GetExcessHappiness()
-					and GameInfo.Leader_Traits{ LeaderType = GameInfo.Leaders[activePlayer:GetLeaderType()].Type, TraitType = "TRAIT_RIVER_EXPANSION" }()
-					and(GameInfo.Traits["TRAIT_RIVER_EXPANSION"].PrereqPolicy == nil or (GameInfo.Traits["TRAIT_RIVER_EXPANSION"].PrereqPolicy 
-					and activePlayer:HasPolicy(GameInfoTypes[GameInfo.Traits["TRAIT_RIVER_EXPANSION"].PrereqPolicy])))
+					and activePlayer:HasTrait(GameInfoTypes["TRAIT_RIVER_EXPANSION"])
 					then
 						strInternationalImmigrationToolTip = strInternationalImmigrationToolTip.."[NEWLINE][ICON_BULLET]"..Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_IN_TRAIT_RIVER_EXPANSION")
 					elseif pPlayer:GetExcessHappiness() > activePlayer:GetExcessHappiness()
-					and GameInfo.Leader_Traits{ LeaderType = GameInfo.Leaders[pPlayer:GetLeaderType()].Type, TraitType = "TRAIT_RIVER_EXPANSION" }()
-					and(GameInfo.Traits["TRAIT_RIVER_EXPANSION"].PrereqPolicy == nil or (GameInfo.Traits["TRAIT_RIVER_EXPANSION"].PrereqPolicy 
-					and    pPlayer:HasPolicy(GameInfoTypes[GameInfo.Traits["TRAIT_RIVER_EXPANSION"].PrereqPolicy])))
+					and pPlayer:HasTrait(GameInfoTypes["TRAIT_RIVER_EXPANSION"])
 					then
 						strInternationalImmigrationToolTip = strInternationalImmigrationToolTip.."[NEWLINE][ICON_BULLET]"..Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_OUT_TRAIT_RIVER_EXPANSION")
 					end

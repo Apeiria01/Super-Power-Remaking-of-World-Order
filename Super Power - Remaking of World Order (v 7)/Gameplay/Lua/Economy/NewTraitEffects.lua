@@ -22,10 +22,7 @@ if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_HUNS) then
 	function HunDestroyCity(hexPos, playerID, cityID) --Hun will gain yield after razing a city
 		local player = Players[playerID];
 
-		if player and GameInfo.Leader_Traits { LeaderType = GameInfo.Leaders[player:GetLeaderType()].Type, TraitType =
-			"TRAIT_RAZE_AND_HORSES" } ()
-			and (GameInfo.Traits["TRAIT_RAZE_AND_HORSES"].PrereqPolicy == nil or (GameInfo.Traits["TRAIT_RAZE_AND_HORSES"].PrereqPolicy
-				and player:HasPolicy(GameInfoTypes[GameInfo.Traits["TRAIT_RAZE_AND_HORSES"].PrereqPolicy])))
+		if player and player:HasTrait(GameInfoTypes["TRAIT_RAZE_AND_HORSES"])
 		then
 			print("Hun City Razed!")
 
@@ -85,10 +82,7 @@ if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_ASSYRIA) then
 			return
 		end
 
-		if GameInfo.Leader_Traits { LeaderType = GameInfo.Leaders[NewPlayer:GetLeaderType()].Type, TraitType =
-			"TRAIT_SLAYER_OF_TIAMAT" } ()
-			and (GameInfo.Traits["TRAIT_SLAYER_OF_TIAMAT"].PrereqPolicy == nil or (GameInfo.Traits["TRAIT_SLAYER_OF_TIAMAT"].PrereqPolicy
-				and NewPlayer:HasPolicy(GameInfoTypes[GameInfo.Traits["TRAIT_SLAYER_OF_TIAMAT"].PrereqPolicy])))
+		if NewPlayer:HasTrait(GameInfoTypes["TRAIT_SLAYER_OF_TIAMAT"])
 		then
 			print("Assyria Militarily conquested a city")
 			if pCity:GetPopulation() > 4 and NewPlayer:GetCapitalCity() ~= nil then
@@ -138,10 +132,7 @@ if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_NETHERLANDS) then
 		if player == nil or player:IsMinorCiv() or player:IsBarbarian() then
 			return
 		end
-		if GameInfo.Leader_Traits { LeaderType = GameInfo.Leaders[player:GetLeaderType()].Type, TraitType =
-			"TRAIT_LUXURY_RETENTION" } ()
-			and (GameInfo.Traits["TRAIT_LUXURY_RETENTION"].PrereqPolicy == nil or (GameInfo.Traits["TRAIT_LUXURY_RETENTION"].PrereqPolicy
-				and player:HasPolicy(GameInfoTypes[GameInfo.Traits["TRAIT_LUXURY_RETENTION"].PrereqPolicy])))
+		if player:HasTrait(GameInfoTypes["TRAIT_LUXURY_RETENTION"])
 		then
 			if eTech == GameInfoTypes["TECH_ELECTRONICS"] then
 				for city in player:Cities() do
