@@ -4932,7 +4932,7 @@
 
 		<Row Tag="TXT_KEY_CO_SP_MOVE_IN_TRAIT_RIVER_EXPANSION">
 			<Text>
-				由於你的領袖特性，[COLOR_NEGATIVE_TEXT]+50%[ENDCOLOR]移民[ICON_TEAM_4]遷入速率。
+				由於你的領袖特性，[COLOR_POSITIVE_TEXT]+50%[ENDCOLOR]移民[ICON_TEAM_4]遷入速率。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CO_SP_MOVE_OUT_TRAIT_RIVER_EXPANSION">
@@ -15373,6 +15373,9 @@
 		</Row>
 		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_13">
 			<Text>火廂車升級後將不能再選擇獨特晉升線，但已有的獨特晉升不會移除</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_14">
+			<Text>城市規模增長時若缺少公共衛生醫療設施則會清空余糧積累</Text>
 		</Row>
 	</Language_zh_Hant_HK>
 </GameData>

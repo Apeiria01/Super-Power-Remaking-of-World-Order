@@ -17313,5 +17313,8 @@
 		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_13">
 			<Text>After the upgrade, Hwacha will no longer be able to select unique Promotions, but existing unique Promotions will not be removed</Text>
 		</Row>
+		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_14">
+			<Text>As City Scale changes, not enough [COLOR_YELLOW]Public Health and Sanitary Service Buildings[ENDCOLOR] in the city will empty City's food Kept</Text>
+		</Row>
 	</Language_en_US>
 </GameData>

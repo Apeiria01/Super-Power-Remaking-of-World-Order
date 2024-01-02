@@ -2675,21 +2675,6 @@
 			<Yield>1</Yield>
 		</Row>
 
-		<!--<Row>
-			<BuildingType>BUILDING_FISH_FARM</BuildingType>
-			<ResourceType>RESOURCE_FISH</ResourceType>
-			<YieldType>YIELD_FOOD</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_FISH_FARM</BuildingType>
-			<ResourceType>RESOURCE_CRAB</ResourceType>
-			<YieldType>YIELD_FOOD</YieldType>
-			<Yield>1</Yield>
-		</Row>-->
-
-		
-
 		<Row>
 			<BuildingType>BUILDING_MINGING_FACTORY</BuildingType>
 			<ResourceType>RESOURCE_MARBLE</ResourceType>
