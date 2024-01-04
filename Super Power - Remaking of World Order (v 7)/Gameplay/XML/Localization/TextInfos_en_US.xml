@@ -10380,7 +10380,7 @@
 		<Replace Tag="TXT_KEY_TRAIT_WAYFINDING">
 			<Text>
 				[ICON_BULLET]Can embark and move over Oceans immediately. 
-				[NEWLINE][ICON_BULLET]Settlers can found cities on coast plots. Cities founded on coast plots receive extra [ICON_PRODUTION] prodution and [ICON_CULTURE] culture, which increases with the eras.
+				[NEWLINE][ICON_BULLET]Settlers can found cities on coast plots adjacent to land. Cities founded on coast plots receive extra [ICON_PRODUTION] prodution and [ICON_CULTURE] culture, which increases with the eras.
 				[NEWLINE][ICON_BULLET]City Hall Level is limited to Lv 3 (No Lv 4 and Lv 5 Cities). 
 				[NEWLINE][ICON_BULLET]+10% [ICON_STRENGTH] Combat Strength bonus if within 2 tiles of a Moai.</Text>
 		</Replace>
@@ -17287,7 +17287,7 @@
 			<Text>You can improve all plots in country with one click of Workers after you discover "Automation" technology</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_5">
-			<Text>Polynesian Coastal City and Land City can be separated by as little as 3 plots</Text>
+			<Text>Polynesian Coastal City must be adjacent to land and it can be separated by Land City as little as 3 plots</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_6">
 			<Text>The range between Cities in SP is at least 4, but the intercontinental Cities can be shortened to 3</Text>
