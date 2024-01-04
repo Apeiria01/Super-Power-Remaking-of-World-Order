@@ -5871,7 +5871,7 @@
 		<Replace Tag="TXT_KEY_TRAIT_WAYFINDING">
 			<Text>
 				[ICON_BULLET]单位初始时即能以海运模式进入大洋。
-				[NEWLINE][ICON_BULLET]移民可以在海滨地块建城，海滨城市获得额外的[ICON_PRODUCTION]产能和[ICON_CULTURE]文化，随时代增加。
+				[NEWLINE][ICON_BULLET]移民可以在临近陆地的海滨地块建城，海上城市获得额外的[ICON_PRODUCTION]产能和[ICON_CULTURE]文化，随时代增加。
 				[NEWLINE][ICON_BULLET]市政厅最高等级为3级（无4和5级城市）。
 				[NEWLINE][ICON_BULLET]在摩艾石像群周边2格内单位+10%[ICON_STRENGTH]战斗力。
 			</Text>
@@ -8147,7 +8147,7 @@
 			<Text>城市+2信仰[ICON_PEACE]，城市中每个其他宗教+1信仰[ICON_PEACE]</Text>
 		</Row>
 		<Replace Tag="TXT_KEY_BELIEF_WORLD_CHURCH">
-			<Text>为圣城提供其他文明本宗教信徒数量34%的[ICON_CULTURE]文化，其他文明每个信仰该宗教的城市为此宗教+3[ICON_CULTURE]文化</Text>
+			<Text>为圣城提供其他文明本宗教信徒数量20%的[ICON_CULTURE]文化，其他文明每个信仰该宗教的城市为此宗教+3[ICON_CULTURE]文化</Text>
 		</Replace>
 		<Row Tag="TXT_KEY_BELIEF_MARSH_BELIEF_SHORT">
 			<Text>河童传说</Text>
@@ -15552,7 +15552,7 @@
 			<Text>获得“自动化”后，你可以使用工人一键改良全国地块</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_5">
-			<Text>波利尼西亚的海上城市和陆地城市可以仅相隔3个地块</Text>
+			<Text>波利尼西亚的海上城市必须临近陆地，但其和陆地城市可以仅相隔3个地块</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_6">
 			<Text>SP中城市间隔至少为4，但是异大陆城市可以缩短至3</Text>

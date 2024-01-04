@@ -5768,7 +5768,7 @@
 		<Replace Tag="TXT_KEY_TRAIT_WAYFINDING">
 			<Text>
 				[ICON_BULLET]單位初始時即能以海運模式進入大洋。
-				[NEWLINE][ICON_BULLET]移民可以在海濱地塊建城，海濱城市獲得額外的[ICON_PRODUCTION]產能和[ICON_CULTURE]文化，隨時代增加。
+				[NEWLINE][ICON_BULLET]移民可以在臨近陸地的海濱地塊建城，海上城市獲得額外的[ICON_PRODUCTION]產能和[ICON_CULTURE]文化，隨時代增加。
 				[NEWLINE][ICON_BULLET]市政廳最高等級為3級（無4和5級城市）。
 				[NEWLINE][ICON_BULLET]在摩艾石像群周邊2格內單位+10%[ICON_STRENGTH]戰鬥力。
 			</Text>
@@ -15348,7 +15348,7 @@
 			<Text>獲得“自動化”後，妳可以使用工人壹鍵改良全國地塊</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_5">
-			<Text>波利尼西亞的海上城市和陸地城市可以僅相隔3個地塊</Text>
+			<Text>波利尼西亞的海上城市必須臨近陸地，但其和陸地城市可以僅相隔3個地塊</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_6">
 			<Text>SP中城市間隔至少為4，但是異大陸城市可以縮短至3</Text>
