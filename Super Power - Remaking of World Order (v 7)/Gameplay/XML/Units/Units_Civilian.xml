@@ -569,6 +569,7 @@
 			<IconAtlas>SPUNITS02_ATLAS</IconAtlas>
 			<PortraitIndex>41</PortraitIndex>
 			<MoveRate>GREAT_PERSON</MoveRate>
+			<GivePoliciesWithSpreaded>true</GivePoliciesWithSpreaded>
 		</Row>
 
 

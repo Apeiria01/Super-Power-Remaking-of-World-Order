@@ -796,6 +796,11 @@
 			<Set Value="33"/>
 			<Where Name="MINOR_CIV_SCIENCE_BONUS_MULTIPLIER" />
 		</Update>
+
+		<Update>
+			<Set Value="40"/>
+			<Where Name="BARBARIAN_TECH_PERCENT" />
+		</Update>
 	</Defines>
 	
 	
