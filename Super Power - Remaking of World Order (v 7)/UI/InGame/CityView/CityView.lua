@@ -2927,9 +2927,7 @@ function OnYes( )
 		Network.SendSellBuilding(pCity:GetID(), g_iBuildingToSell);
 		
 		--SP Selling City Hall Create Puppet Start
-		if GameInfo.Buildings[g_iBuildingToSell].BuildingClass == "BUILDINGCLASS_CITY_HALL_LV0" or GameInfo.Buildings[g_iBuildingToSell].BuildingClass == "BUILDINGCLASS_CITY_HALL_LV1"
-		or GameInfo.Buildings[g_iBuildingToSell].BuildingClass == "BUILDINGCLASS_CITY_HALL_LV2" or GameInfo.Buildings[g_iBuildingToSell].BuildingClass == "BUILDINGCLASS_CITY_HALL_LV3"
-		or GameInfo.Buildings[g_iBuildingToSell].BuildingClass == "BUILDINGCLASS_CITY_HALL_LV4" or GameInfo.Buildings[g_iBuildingToSell].BuildingClass == "BUILDINGCLASS_CITY_HALL_LV5"
+		if GameInfo.Buildings[g_iBuildingToSell].BuildingClass:match("_CITY_HALL_LV[0-9]+$")
 		then
 			print("City Hall sold! Set Puppet!")
 			
@@ -2966,11 +2964,9 @@ function OnYes( )
 			pCity:SetPuppet(true)
 			pCity:SetProductionAutomated(true)
 			
---			if not Players[Game.GetActivePlayer()]:HasPolicy(GameInfo.Policies["POLICY_TREATY_ORGANIZATION"].ID)then
-				local CityPop = pCity:GetPopulation()
-				local CityResTime = CityPop * 0.5
-				pCity:ChangeResistanceTurns(CityResTime)
---			end
+			local CityPop = pCity:GetPopulation()
+			local CityResTime = CityPop * 0.5
+			pCity:ChangeResistanceTurns(CityResTime)
 		end
 		--SP Selling City Hall Create Puppet End
 	end
