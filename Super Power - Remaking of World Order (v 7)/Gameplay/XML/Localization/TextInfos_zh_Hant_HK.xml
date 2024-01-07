@@ -10867,6 +10867,21 @@
 		<Row Tag="TXT_KEY_BUILD_CARRIER_FIGHTER_HELP">
 			<Text>您只能在航母上購買艦載機單位，花費為當前可建造空優戰機1/5的價格。</Text>
 		</Row>
+		<Row Tag="TXT_KEY_BUILD_CARRIER_FIGHTER_HELP1">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]航母不能位於城市地塊[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILD_CARRIER_FIGHTER_HELP2">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]航母需要處於友好地塊或擁有“補給三級”晉升[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILD_CARRIER_FIGHTER_HELP3">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]該類型不允許購買，請向管理員報告BUG[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILD_CARRIER_FIGHTER_HELP4">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT][ICON_GOLD]金錢不足[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILD_CARRIER_FIGHTER_HELP5">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]需要有任壹城市可以購買空優戰機[ENDCOLOR]</Text>
+		</Row>
 		<Row Tag="TXT_KEY_UNIT_SUPER_CARRIER">
 			<Text>超級核動力航母</Text>
 		</Row>

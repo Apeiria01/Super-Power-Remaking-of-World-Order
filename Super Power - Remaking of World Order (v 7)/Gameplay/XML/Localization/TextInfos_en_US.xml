@@ -12696,6 +12696,21 @@
 		<Row Tag="TXT_KEY_BUILD_CARRIER_FIGHTER_HELP">
 			<Text>You can only purchase Carrier-Based-Aircrafts on Carriers, the cost is 1/5 of the current buildable Air Superiority Fighter.</Text>
 		</Row>
+		<Row Tag="TXT_KEY_BUILD_CARRIER_FIGHTER_HELP1">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]Carrier should not at a City Plot[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILD_CARRIER_FIGHTER_HELP2">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]Carrier should at friendly Territory or has promotion "Supply III"[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILD_CARRIER_FIGHTER_HELP3">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]This type can not purchase, report this BUG[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILD_CARRIER_FIGHTER_HELP4">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]You don't have enough [ICON_GOLD]Money[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILD_CARRIER_FIGHTER_HELP5">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT][ICON_GOLD]You should able to purchase Air Superiority Fighter in any City[ENDCOLOR]</Text>
+		</Row>
 		<Row Tag="TXT_KEY_UNIT_SUPER_CARRIER">
 			<Text>Super-Carrier</Text>
 		</Row>	
