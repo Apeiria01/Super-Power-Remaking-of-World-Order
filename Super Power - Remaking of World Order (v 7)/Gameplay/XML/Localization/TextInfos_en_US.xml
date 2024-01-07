@@ -3629,60 +3629,73 @@
 			<Text>[ICON_RES_MANPOWER] Military Academy</Text>
 		</Replace>
 		
-		<Update>
-			<Where Tag="TXT_KEY_BUILDING_BARRACKS_HELP" />
-			<Set Text="Allows you to train these [COLOR_POSITIVE_TEXT]Military Units[ENDCOLOR] in this city.
-				 [NEWLINE][ICON_BULLET][COLOR_YELLOW]Infantry Units[ENDCOLOR]
-				 [NEWLINE][ICON_BULLET][COLOR_YELLOW]Anti-mounted Units and Anti-tank Units[ENDCOLOR]
-				 [NEWLINE][ICON_BULLET][COLOR_YELLOW]Archery Units and Anti-air Units[ENDCOLOR]." />
-		</Update>
+		<Replace Tag="TXT_KEY_BUILDING_BARRACKS_HELP">
+			<Text>
+				Allows you to train these [COLOR_POSITIVE_TEXT]Military Units[ENDCOLOR] in this city.
+				[NEWLINE][ICON_BULLET][COLOR_YELLOW]Infantry Units[ENDCOLOR]
+				[NEWLINE][ICON_BULLET][COLOR_YELLOW]Anti-mounted Units and Anti-tank Units[ENDCOLOR]
+				[NEWLINE][ICON_BULLET][COLOR_YELLOW]Archery Units and Anti-air Units[ENDCOLOR].
+				[NEWLINE][NEWLINE][COLOR_NEGATIVE_TEXT]Cannot Build in a Puppet City, lose it after the city Hall was sold[ENDCOLOR].
+			</Text>
+		</Replace>
 	
 
-		<Update>
-			<Where Tag="TXT_KEY_BUILDING_IKANDA_HELP" />
-			<Set Text="Allows you to train these [COLOR_POSITIVE_TEXT]Military Units[ENDCOLOR] in this city.
-				 [NEWLINE][ICON_BULLET][COLOR_YELLOW]Infantry Units[ENDCOLOR]
-				 [NEWLINE][ICON_BULLET][COLOR_YELLOW]Anti-mounted Units and Anti-tank Units[ENDCOLOR]
-				 [NEWLINE][ICON_BULLET][COLOR_YELLOW]Archery Units and Anti-air Units[ENDCOLOR].
-				 [NEWLINE][NEWLINE]Grants unique promotions to all Land Melee Units.
-				 [NEWLINE]+15%[ICON_PRODUCTION]Production building Military Unit.
-				 [NEWLINE]+15 XP for Land Units trained in this city.
-				 [NEWLINE]+1[ICON_HAPPINESS_1]Happiness." />
-		</Update>
+		<Replace Tag="TXT_KEY_BUILDING_IKANDA_HELP">
+			<Text>
+				Allows you to train these [COLOR_POSITIVE_TEXT]Military Units[ENDCOLOR] in this city.
+				[NEWLINE][ICON_BULLET][COLOR_YELLOW]Infantry Units[ENDCOLOR]
+				[NEWLINE][ICON_BULLET][COLOR_YELLOW]Anti-mounted Units and Anti-tank Units[ENDCOLOR]
+				[NEWLINE][ICON_BULLET][COLOR_YELLOW]Archery Units and Anti-air Units[ENDCOLOR].
+				[NEWLINE][NEWLINE]Grants unique promotions to all Land Melee Units.
+				[NEWLINE]+15%[ICON_PRODUCTION]Production building Military Unit.
+				[NEWLINE]+15 XP for Land Units trained in this city.
+				[NEWLINE]+1[ICON_HAPPINESS_1]Happiness.
+				[NEWLINE][NEWLINE][COLOR_NEGATIVE_TEXT]Cannot Build in a Puppet City, lose it after the city Hall was sold[ENDCOLOR].
+			</Text>
+		</Replace>
 
-		<Update>
-			<Where Tag="TXT_KEY_BUILDING_ARMORY_HELP" />
-			<Set Text="Allows you to train these [COLOR_POSITIVE_TEXT]Military Units[ENDCOLOR] in this city.
-				 [NEWLINE][ICON_BULLET][COLOR_YELLOW]Heavy Cavalry Units[ENDCOLOR] 
-				 [NEWLINE][ICON_BULLET][COLOR_YELLOW]Land Hit-and-run Units[ENDCOLOR] 
-				 [NEWLINE][ICON_BULLET][COLOR_YELLOW]Early Siege Units(Catapult - Cannon)[ENDCOLOR]
-				 [NEWLINE][NEWLINE]City must have a Barracks.
-				 [NEWLINE][NEWLINE]Upon discovering Military Logistics, this kind of building becomes [COLOR_NEGATIVE_TEXT]obsolete[ENDCOLOR] (You can no longer build it but its city defense bonus is still effective). 
-				 [NEWLINE][NEWLINE]+2 [ICON_TOURISM] Tourism after discovering Internet. " />
-		</Update>
-		<Update>
-			<Where Tag="TXT_KEY_BUILDING_ARSENAL_HELP" />
-			<Set Text="Allows you to build these [COLOR_POSITIVE_TEXT]Military Units[ENDCOLOR] in this city.
-				 [NEWLINE][ICON_BULLET][COLOR_YELLOW]Tank Units[ENDCOLOR] 
-				 [NEWLINE][ICON_BULLET][COLOR_YELLOW]Modern Siege Units(Howitzer - Mobile Artillery)[ENDCOLOR]
-				 [NEWLINE][ICON_BULLET][COLOR_YELLOW]Heavy Ranged Units (AOE Weapons)[ENDCOLOR] 
-				 [NEWLINE][NEWLINE]City must have an Armory.[NEWLINE][NEWLINE]Requires 1 [ICON_RES_ELECTRICITY] Electricity." />
-		</Update>
-		<Update>
-			<Where Tag="TXT_KEY_BUILDING_MILITARY_BASE_HELP" />
-			<Set Text="Allows you to build these [COLOR_POSITIVE_TEXT]Military Units[ENDCOLOR] in this city. 
-				 [NEWLINE][ICON_BULLET][COLOR_YELLOW]Aircraft Units[ENDCOLOR]
-				 [NEWLINE][ICON_BULLET][COLOR_YELLOW]Helicopter Units[ENDCOLOR].
-				 [NEWLINE][NEWLINE]Allows airlifts to or from this city.
-				 [NEWLINE][NEWLINE]Allows to stack 4 more aircraft units in this city. [NEWLINE][NEWLINE]City must have an Arsenal. 
-				 [NEWLINE][NEWLINE]Requires 3 [ICON_RES_ELECTRICITY] Electricity." />
-		</Update>
-		<Update>
-			<Where Tag="TXT_KEY_BUILDING_MILITARY_ACADEMY_HELP" />
-			<Set Text="+15 XP for each military unit built in the city.
-				 [NEWLINE][NEWLINE]Allows you to train [COLOR_YELLOW]Special Forces Units[ENDCOLOR] in this city. 
-				 [NEWLINE][NEWLINE]Must be built by a Great General or Great Admiral." />
-		</Update>
+		<Replace Tag="TXT_KEY_BUILDING_ARMORY_HELP">
+			<Text>
+				Allows you to train these [COLOR_POSITIVE_TEXT]Military Units[ENDCOLOR] in this city.
+				[NEWLINE][ICON_BULLET][COLOR_YELLOW]Heavy Cavalry Units[ENDCOLOR] 
+				[NEWLINE][ICON_BULLET][COLOR_YELLOW]Land Hit-and-run Units[ENDCOLOR] 
+				[NEWLINE][ICON_BULLET][COLOR_YELLOW]Early Siege Units(Catapult - Cannon)[ENDCOLOR]
+				[NEWLINE][NEWLINE]City must have a Barracks.
+				[NEWLINE][NEWLINE]Upon discovering Military Logistics, this kind of building becomes [COLOR_NEGATIVE_TEXT]obsolete[ENDCOLOR] (You can no longer build it but its city defense bonus is still effective). 
+				[NEWLINE]+2 [ICON_TOURISM] Tourism after discovering Internet.
+				[NEWLINE][NEWLINE][COLOR_NEGATIVE_TEXT]Lose it after the city Hall was sold[ENDCOLOR].
+			</Text>
+			</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_ARSENAL_HELP">
+			<Text>
+				Allows you to build these [COLOR_POSITIVE_TEXT]Military Units[ENDCOLOR] in this city.
+				[NEWLINE][ICON_BULLET][COLOR_YELLOW]Tank Units[ENDCOLOR] 
+				[NEWLINE][ICON_BULLET][COLOR_YELLOW]Modern Siege Units(Howitzer - Mobile Artillery)[ENDCOLOR]
+				[NEWLINE][ICON_BULLET][COLOR_YELLOW]Heavy Ranged Units (AOE Weapons)[ENDCOLOR] 
+				[NEWLINE][NEWLINE]City must have a Barrack.
+				[NEWLINE][NEWLINE]Requires 1 [ICON_RES_ELECTRICITY] Electricity.
+				[NEWLINE][NEWLINE][COLOR_NEGATIVE_TEXT]Lose it after the city Hall was sold[ENDCOLOR].
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_MILITARY_BASE_HELP">
+			<Text>
+				Allows you to build these [COLOR_POSITIVE_TEXT]Military Units[ENDCOLOR] in this city. 
+				[NEWLINE][ICON_BULLET][COLOR_YELLOW]Aircraft Units[ENDCOLOR]
+				[NEWLINE][ICON_BULLET][COLOR_YELLOW]Helicopter Units[ENDCOLOR].
+				[NEWLINE][NEWLINE]Allows airlifts to or from this city.
+				[NEWLINE]Allows to stack 4 more aircraft units in this city. 
+				[NEWLINE][NEWLINE]City must have an Arsenal. 
+				[NEWLINE][NEWLINE]Requires 3 [ICON_RES_ELECTRICITY] Electricity.
+				[NEWLINE][NEWLINE][COLOR_NEGATIVE_TEXT]Lose it after the city Hall was sold[ENDCOLOR].
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_MILITARY_ACADEMY_HELP">
+			<Text>
+				+15 XP for each military unit built in the city.
+				[NEWLINE]Allows you to train [COLOR_YELLOW]Special Forces Units[ENDCOLOR] in this city. 
+				[NEWLINE][NEWLINE]Must be built by a Great General or Great Admiral.
+			</Text>
+		</Replace>
 
 		<Row>
 			<Tag>TXT_KEY_BUILDING_WOOD_DOCK</Tag>
