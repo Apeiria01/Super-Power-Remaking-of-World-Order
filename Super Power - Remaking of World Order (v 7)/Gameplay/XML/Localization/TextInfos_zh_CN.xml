@@ -11021,6 +11021,21 @@
 		<Row Tag="TXT_KEY_BUILD_CARRIER_FIGHTER_HELP">
 			<Text>您只能在航母上购买舰载机单位，花费为当前可建造空优战机1/5的价格。</Text>
 		</Row>
+		<Row Tag="TXT_KEY_BUILD_CARRIER_FIGHTER_HELP1">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]航母不能位于城市地块[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILD_CARRIER_FIGHTER_HELP2">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]航母需要处于友好地块或拥有“补给三级”晋升[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILD_CARRIER_FIGHTER_HELP3">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]该类型不允许购买，请向管理员报告BUG[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILD_CARRIER_FIGHTER_HELP4">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT][ICON_GOLD]金钱不足[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILD_CARRIER_FIGHTER_HELP5">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]需要有任一城市可以购买空优战机[ENDCOLOR]</Text>
+		</Row>
 		<Row Tag="TXT_KEY_UNIT_SUPER_CARRIER">
 			<Text>超级核动力航母</Text>
 		</Row>

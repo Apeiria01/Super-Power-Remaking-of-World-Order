@@ -1468,6 +1468,7 @@ TokyoRaidCancelButton = {
     end
 };
 LuaEvents.UnitPanelActionAddin(TokyoRaidCancelButton);
+---------MOD End By HMS
 
 CarrierRestoreButton = {
     Name = "Carrier Restore Button",
@@ -1478,35 +1479,53 @@ CarrierRestoreButton = {
     ToolTip = "TXT_KEY_BUILD_CARRIER_FIGHTER_HELP", -- or a TXT_KEY_ or a function
 
     Condition = function(action, unit)
-        local PlayerID = unit:GetOwner();
-        if GameInfo.Units[unit:GetUnitType()].SpecialCargo == "SPECIALUNIT_FIGHTER" and g_CargoSetList[PlayerID] == nil then
+        --g_CargoSetList[iPlayerID] = { iCargoBaseAcraft, iMissileU, iCost, iAirSuperiorityAcraft }
+        if not unit or GameInfo.Units[unit:GetUnitType()].SpecialCargo ~= "SPECIALUNIT_FIGHTER" then
+            return false
+        end
+        local PlayerID = unit:GetOwner()
+        if PlayerID < 0 then return false end
+
+        if g_CargoSetList[PlayerID] == nil then
             SPCargoListSetup(PlayerID);
         end
         return 
-            unit:CanMove() 
-            and GameInfo.Units[unit:GetUnitType()].SpecialCargo == "SPECIALUNIT_FIGHTER" 
-            and not unit:IsFull() and g_CargoSetList[PlayerID] and g_CargoSetList[PlayerID][1] ~= -1
+            unit:GetPlot() ~= nil and unit:CanMove() and not unit:IsFull()
+            and g_CargoSetList[PlayerID] and g_CargoSetList[PlayerID][1] ~= -1
     end, -- or nil or a boolean, default is true
 
     Disabled = function(action, unit)
-        return 
-            unit:GetOwner() < 0 
-            or unit:GetPlot() == nil or unit:GetPlot():IsCity() 
-            or (not unit:GetPlot():IsFriendlyTerritory(unit:GetOwner()) 
-            and not unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_CARRIER_SUPPLY_3"].ID)) 
-            or g_CargoSetList[unit:GetOwner()] == nil 
-            or g_CargoSetList[unit:GetOwner()][3] < 0 
-            or g_CargoSetList[unit:GetOwner()][3] > Players[unit:GetOwner()]:GetGold() 
-            or not Players[unit:GetOwner()]:IsCanPurchaseAnyCity(false, true, g_CargoSetList[unit:GetOwner()][4], -1, YieldTypes.YIELD_GOLD)
+        local PlayerID = unit:GetOwner();
+        local iCost = g_CargoSetList[PlayerID][3]
+        CarrierRestoreButton.ToolTip = Locale.ConvertTextKey("TXT_KEY_BUILD_CARRIER_FIGHTER_HELP")
+        CarrierRestoreButton.ToolTip = CarrierRestoreButton.ToolTip .. "([ICON_GOLD]" .. iCost .. ")"
+        if iCost < 0 then
+            CarrierRestoreButton.ToolTip = CarrierRestoreButton.ToolTip .. Locale.ConvertTextKey("TXT_KEY_BUILD_CARRIER_FIGHTER_HELP3")
+            return true
+        end
+        if iCost > Players[PlayerID]:GetGold() then
+            CarrierRestoreButton.ToolTip = CarrierRestoreButton.ToolTip .. Locale.ConvertTextKey("TXT_KEY_BUILD_CARRIER_FIGHTER_HELP4")
+            return true
+        end
+        if unit:GetPlot():IsCity() then
+            CarrierRestoreButton.ToolTip = CarrierRestoreButton.ToolTip .. Locale.ConvertTextKey("TXT_KEY_BUILD_CARRIER_FIGHTER_HELP1")
+            return true
+        end
+        if not unit:GetPlot():IsFriendlyTerritory(PlayerID) 
+        and not unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_CARRIER_SUPPLY_3"].ID)
+        then
+            CarrierRestoreButton.ToolTip = CarrierRestoreButton.ToolTip .. Locale.ConvertTextKey("TXT_KEY_BUILD_CARRIER_FIGHTER_HELP2")
+            return true
+        end
+        if not Players[PlayerID]:IsCanPurchaseAnyCity(false, true, g_CargoSetList[PlayerID][4], -1, YieldTypes.YIELD_GOLD)
+        then
+            CarrierRestoreButton.ToolTip = CarrierRestoreButton.ToolTip .. Locale.ConvertTextKey("TXT_KEY_BUILD_CARRIER_FIGHTER_HELP5")
+            return true
+        end
     end, -- or nil or a boolean, default is false
 
     Action = function(action, unit, eClick)
         local PlayerID = unit:GetOwner();
-        if unit == nil or PlayerID == nil then
-            print("No unit or player to restore aircrafts")
-            return
-        end
-
         local iCost = CarrierRestore(PlayerID, unit:GetID(), g_CargoSetList[PlayerID][1]);
         if iCost and iCost > 0 then
             Players[PlayerID]:ChangeGold(-iCost);
@@ -1514,7 +1533,6 @@ CarrierRestoreButton = {
     end
 };
 LuaEvents.UnitPanelActionAddin(CarrierRestoreButton);
----------MOD End By HMS
 
 -- Explorer Upgrade to Archaeologist
 UpgradetoArchaeologist = {
