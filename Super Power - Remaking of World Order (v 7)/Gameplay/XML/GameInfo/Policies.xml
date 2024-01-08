@@ -565,7 +565,7 @@
 			<Where Type="POLICY_ARSENAL_DEMOCRACY"/>
 		</Update>
 		<Update>
-			<Set ProtectedMinorPerTurnInfluence="0"/>
+			<Set ProtectedMinorPerTurnInfluence="0" ImmigrationInModifier="100"/>
 			<Where Type="POLICY_TREATY_ORGANIZATION"/>
 		</Update>
 		<Update>
@@ -608,7 +608,7 @@
 			<Where Type="POLICY_PARTY_LEADERSHIP"/>
 		</Update>
 		<Update>
-			<Set FreeBuildingOnConquest="NULL" IdeologyUnhappinessModifier="-100" IdeologyPressureModifier="100"/>
+			<Set FreeBuildingOnConquest="NULL" IdeologyUnhappinessModifier="-100" IdeologyPressureModifier="100" ImmigrationOutModifier="-50"/>
 			<Where Type="POLICY_IRON_CURTAIN"/>
 		</Update>
 		

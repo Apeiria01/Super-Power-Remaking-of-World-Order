@@ -53,6 +53,7 @@
 			<Type>TRAIT_RIVER_EXPANSION</Type>
 			<Description>TXT_KEY_TRAIT_RIVER_EXPANSION</Description>
 			<ShortDescription>TXT_KEY_TRAIT_RIVER_EXPANSION_SHORT</ShortDescription>
+			<ExceedingHappinessImmigrationModifier>50</ExceedingHappinessImmigrationModifier>
 		</Row>
 		<Row>
 			<Type>TRAIT_STRATEGIC_RICHES</Type>
