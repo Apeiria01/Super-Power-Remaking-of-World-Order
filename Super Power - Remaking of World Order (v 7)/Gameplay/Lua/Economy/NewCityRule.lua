@@ -1,65 +1,62 @@
 --------------------- International Immigration
 function InternationalImmigration(TargetPlayerID)
-    if CheckMoveOutCounter == nil or (TargetPlayerID == -1 or nil) then
-        return;
-    end
-
     local thisPlayer = Players[TargetPlayerID]
-    if thisPlayer == nil or not thisPlayer:IsHuman() then
-        return;
-    end
+    if thisPlayer == nil or not thisPlayer:IsHuman() then return end
 
+    local iRegressand = Game.GetImmigrationRegressand()
     for playerID, player in pairs(Players) do
-        local OutPlayer = -1;
-        local InPlayer = -1;
+        if player and player:IsAlive() and player:IsMajorCiv() and playerID ~= TargetPlayerID then
+            local OutPlayer = -1;
+            local InPlayer = -1;
+            local ImmigrationRate = thisPlayer:GetImmigrationRate(playerID);
+            local iCount = player:GetImmigrationCounter(TargetPlayerID);
 
-        if player:IsAlive() and player:IsMajorCiv() and playerID ~= TargetPlayerID then
-            local ImmigrationCount = CheckMoveOutCounter(TargetPlayerID, playerID);
-            if ImmigrationCount then
-                if player:GetImmigrationCounter(TargetPlayerID) <= 0 
-                or player:GetImmigrationCounter(TargetPlayerID) >= ImmigrationCount[2] * 2
-                then
-                    --Init ImmigrationCounter, ImmigrationCount[2] is iRegressand, default 30
-                    player:SetImmigrationCounter(TargetPlayerID, ImmigrationCount[2])
-                end
-                local iCount = player:GetImmigrationCounter(TargetPlayerID);
+            if iCount <= 0 or iCount >= iRegressand * 2 then
+                --Init ImmigrationCounter, iRegressand default is 30
+                player:SetImmigrationCounter(TargetPlayerID, iRegressand)
+            end
 
-                if iCount == 0 or iCount == ImmigrationCount[2] * 2 then
-                    --reach Upper and lower limits
+            --Calculate iCount
+            iCount = player:GetImmigrationCounter(TargetPlayerID) + ImmigrationRate;
+            --iCount must in (0, iRegressand * 2)
+            if iCount < 0 then
+                iCount = 0
+            elseif iCount > iRegressand * 2 then
+                iCount = iRegressand * 2
+            end
+            player:SetImmigrationCounter(TargetPlayerID, iCount)
+
+            --Reach Upper or lower limits, do International Immigration
+            if iCount == 0 then
+                OutPlayer = TargetPlayerID;
+                InPlayer = playerID;
+            elseif iCount == iRegressand * 2 then
+                OutPlayer = playerID;
+                InPlayer = TargetPlayerID;
+            end
+            
+            if OutPlayer >= 0 and InPlayer >= 0 then
+                local bIsDoImmigration = DoInternationalImmigration(OutPlayer, InPlayer);
+                if bIsDoImmigration then
+                    --return to iRegressand
+                    player:SetImmigrationCounter(TargetPlayerID, iRegressand)
+                    print("Successful International Immigration: Player " .. OutPlayer .. " to Player " .. InPlayer);
                 else
-                    --ImmigrationCount[1] is MoveoutCounterFinal
-                    iCount = iCount + ImmigrationCount[1];
-                end
-
-                --iCount must in (0, iRegressand * 2)
-                iCount = math.max(0, iCount);
-                iCount = math.min(iCount, ImmigrationCount[2] * 2);
-
-                if iCount == 0 then
-                    OutPlayer = TargetPlayerID;
-                    InPlayer = playerID;
-                elseif iCount == ImmigrationCount[2] * 2 then
-                    OutPlayer = playerID;
-                    InPlayer = TargetPlayerID;
-                end
-                player:SetImmigrationCounter(TargetPlayerID, iCount)
-
-                if OutPlayer >= 0 and InPlayer >= 0 then
-                    local bIsDoImmigration = DoInternationalImmigration(OutPlayer, InPlayer);
-                    if bIsDoImmigration then
-                        --return to iRegressand
-                        player:SetImmigrationCounter(TargetPlayerID, ImmigrationCount[2])
-                        print("Successful International Immigration: Player " .. OutPlayer .. " to Player " .. InPlayer);
-                    else
-                        print("Fail International Immigration: Player " ..
-                            OutPlayer .. " to Player " .. InPlayer);
+                    --keep Progress
+                    if iCount == 0 then
+                        player:ChangeImmigrationCounter(TargetPlayerID, 1) 
+                    elseif iCount == iRegressand * 2 then
+                        player:ChangeImmigrationCounter(TargetPlayerID, -1) 
                     end
+                    print("Fail International Immigration: Player " .. OutPlayer .. " to Player " .. InPlayer);
                 end
             end
         end
     end
 end ---------function end
-GameEvents.PlayerDoTurn.Add(InternationalImmigration)
+if Game.GetImmigrationRegressand() > 0 then
+    GameEvents.PlayerDoTurn.Add(InternationalImmigration)
+end
 
 function DoInternationalImmigration(MoveOutPlayerID, MoveInPlayerID)
     --This nation's population tries to move out
@@ -76,7 +73,7 @@ function DoInternationalImmigration(MoveOutPlayerID, MoveInPlayerID)
     local MoveOutCounter = 0
     for pCity in MoveOutPlayer:Cities() do
         local cityPop = pCity:GetPopulation()
-        if cityPop > 6 then
+        if cityPop > 6 and pCity:IsCanDoImmigration() then
             MoveOutCities[MoveOutCounter] = pCity
             MoveOutCounter = MoveOutCounter + 1
         end
@@ -87,6 +84,7 @@ function DoInternationalImmigration(MoveOutPlayerID, MoveInPlayerID)
         local targetCity = MoveOutCities[iRandChoice];
         local Cityname = targetCity:GetName();
         targetCity:ChangePopulation(-1, true)
+        targetCity:SetCanDoImmigration(false)
         print("Immigrant left this city:" .. Cityname)
 
         ------------Notification-----------
@@ -110,12 +108,14 @@ function DoInternationalImmigration(MoveOutPlayerID, MoveInPlayerID)
     local iCounter = 0
     for pCity in MoveInPlayer:Cities() do
         local cityPop = pCity:GetPopulation()
-        if cityPop > 0 and cityPop < 80 and not pCity:IsPuppet() and
-            not pCity:IsRazing() and not pCity:IsResistance() and
-            not pCity:IsForcedAvoidGrowth() and
-            pCity:CanGrowNormally() and
-            pCity:GetSpecialistCount(GameInfo.Specialists.SPECIALIST_CITIZEN.ID) <=
-            0 then
+        if cityPop > 0 and cityPop < 80 
+        and pCity:IsCanDoImmigration()
+        and not pCity:IsPuppet()
+        and not pCity:IsRazing() and not pCity:IsResistance()
+        and not pCity:IsForcedAvoidGrowth()
+        and pCity:CanGrowNormally()
+        and pCity:GetSpecialistCount(GameInfo.Specialists.SPECIALIST_CITIZEN.ID) <= 0
+        then
             apCities[iCounter] = pCity
             iCounter = iCounter + 1
         end
@@ -126,18 +126,14 @@ function DoInternationalImmigration(MoveOutPlayerID, MoveInPlayerID)
         local targetCity = apCities[iRandChoice]
         local Cityname = targetCity:GetName()
         targetCity:ChangePopulation(1, true)
+        targetCity:SetCanDoImmigration(false)
         print("Immigrant Move into this city:" .. Cityname)
 
         ------------Notification-----------
         if MoveInPlayer:IsHuman() and targetCity ~= nil then
-            local text = Locale.ConvertTextKey(
-                "TXT_KEY_SP_NOTIFICATION_IMMIGRANT_REACHED_CITY",
-                targetCity:GetName())
-            local heading = Locale.ConvertTextKey(
-                "TXT_KEY_SP_NOTIFICATION_IMMIGRANT_REACHED_CITY_SHORT")
-            MoveInPlayer:AddNotification(
-                NotificationTypes.NOTIFICATION_CITY_GROWTH, text, heading,
-                targetCity:GetX(), targetCity:GetY())
+            local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_IMMIGRANT_REACHED_CITY", targetCity:GetName())
+            local heading = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_IMMIGRANT_REACHED_CITY_SHORT")
+            MoveInPlayer:AddNotification(NotificationTypes.NOTIFICATION_CITY_GROWTH, text, heading, targetCity:GetX(), targetCity:GetY())
         end
         return true
     else
