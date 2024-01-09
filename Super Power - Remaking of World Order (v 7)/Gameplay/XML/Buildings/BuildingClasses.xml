@@ -615,20 +615,6 @@
 			<Description>TXT_KEY_BUILDING_SATELLITEEFFECTS</Description>
 			<MaxGlobalInstances>1</MaxGlobalInstances>
 		</Row>
-
-		<Row>
-			<Type>BUILDINGCLASS_SATELLITE_RECONNAISSANCE_SMALL</Type>
-			<DefaultBuilding>BUILDING_SATELLITE_RECONNAISSANCE_SMALL</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_SATELLITEEFFECTS</Description>
-			<MaxPlayerInstances>1</MaxPlayerInstances>
-		</Row>
-		<Row>
-			<Type>BUILDINGCLASS_BUILDING_SATELLITE_GPS_SMALL</Type>
-			<DefaultBuilding>BUILDING_SATELLITE_GPS</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_SATELLITEEFFECTS</Description>
-			<MaxPlayerInstances>1</MaxPlayerInstances>
-		</Row>
-
 	</BuildingClasses>
 
 
