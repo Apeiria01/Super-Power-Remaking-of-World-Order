@@ -7486,7 +7486,8 @@
 				[NEWLINE][ICON_BULLET]Lv 1 City: NO extra [ICON_CULTURE] Culture cost.
 				[NEWLINE][ICON_BULLET]Lv 2 City: Extra [ICON_CULTURE] Culture cost lowered from 10% to 5%.
 				[NEWLINE][ICON_BULLET]Lv 3 City: Extra [ICON_CULTURE] Culture cost lowered from 20% to 15%.
-				[NEWLINE][ICON_BULLET]Lv 4-5 City: Extra [ICON_CULTURE] Culture cost lowered from 33% to 28%.
+				[NEWLINE][ICON_BULLET]Lv 4 City: Extra [ICON_CULTURE] Culture cost lowered from 20% to 15%.
+				[NEWLINE][ICON_BULLET]Lv 5 City: Extra [ICON_CULTURE] Culture cost lowered from 25% to 20%.
 				[NEWLINE][ICON_BULLET]+1% [ICON_CULTURE] Global Culture from each City.
 			</Text>
 		</Replace>

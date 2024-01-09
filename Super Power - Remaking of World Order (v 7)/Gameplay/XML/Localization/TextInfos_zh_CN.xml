@@ -6677,7 +6677,8 @@
 				[NEWLINE][ICON_BULLET]一级城市：没有额外的[ICON_CULTURE]文化阈值增长。
 				[NEWLINE][ICON_BULLET]二级城市：[ICON_CULTURE]文化阈值增长降至5%。
 				[NEWLINE][ICON_BULLET]三级城市：[ICON_CULTURE]文化阈值增长降至15%。
-				[NEWLINE][ICON_BULLET]四五级城市：[ICON_CULTURE]文化阈值增长降至28%。
+				[NEWLINE][ICON_BULLET]四级城市：[ICON_CULTURE]文化阈值增长降至15%。
+				[NEWLINE][ICON_BULLET]五级城市：[ICON_CULTURE]文化阈值增长降至20%。
 				[NEWLINE][ICON_BULLET]每座城市+1%[ICON_CULTURE]全局文化。
 			</Text>
 		</Replace>

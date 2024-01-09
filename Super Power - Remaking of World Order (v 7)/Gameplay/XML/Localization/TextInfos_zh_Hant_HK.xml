@@ -6570,9 +6570,10 @@
 				[COLOR_POSITIVE_TEXT]代議製度[ENDCOLOR]
 				[NEWLINE]減緩一到五級城市造成的政策[ICON_CULTURE]文化閾值增長（能夠與強化管理設施效果疊加）：
 				[NEWLINE][ICON_BULLET]一級城市：沒有額外的[ICON_CULTURE]文化閾值增長。
-				[NEWLINE][ICON_BULLET]二級城市：[ICON_CULTURE]文化閾值增長由10%降低到5%。
-				[NEWLINE][ICON_BULLET]三級城市：[ICON_CULTURE]文化閾值增長由20%降低到15%。
-				[NEWLINE][ICON_BULLET]四五級城市：[ICON_CULTURE]文化閾值增長由33%降低到28%。
+				[NEWLINE][ICON_BULLET]二級城市：[ICON_CULTURE]文化閾值增長降至5%。
+				[NEWLINE][ICON_BULLET]三級城市：[ICON_CULTURE]文化閾值增長降至15%。
+				[NEWLINE][ICON_BULLET]四級城市：[ICON_CULTURE]文化閾值增長降至15%。
+				[NEWLINE][ICON_BULLET]五級城市：[ICON_CULTURE]文化閾值增長降至20%。
 				[NEWLINE][ICON_BULLET]每座城市+1%[ICON_CULTURE]全局文化。
 			</Text>
 		</Replace>
