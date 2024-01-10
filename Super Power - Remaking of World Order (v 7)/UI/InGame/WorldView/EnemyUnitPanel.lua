@@ -526,14 +526,6 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
 			end
 
-			--Golden Age Bonus
-			iModifier = pMyUnit:GoldenAgeMod();
-			if (iModifier ~= 0 and pMyPlayer:IsGoldenAge()) then
-				controlTable = g_MyCombatDataIM:GetInstance();
-				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_PLAYER_GOLDENAGE_BONUS_SP");
-				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
-			end
-
 			--Same Continent Bonus
 			iModifier = pMyUnit:GetOnCapitalLandAttackMod();
 			if pMyPlayer:GetCapitalCity()~=nil then
@@ -682,8 +674,8 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
 			end
 
-			-- Civ Trait Bonus
-			iModifier = pMyPlayer:GetTraitGoldenAgeCombatModifier();
+			--Golden Age Bonus
+			iModifier = pMyUnit:GoldenAgeModTotal();
 			if (iModifier ~= 0 and pMyPlayer:IsGoldenAge()) then
 				controlTable = g_MyCombatDataIM:GetInstance();
 				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_GOLDEN_AGE");
@@ -1476,14 +1468,6 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
 			end
 
-			--Golden Age Bonus
-			iModifier = pMyUnit:GoldenAgeMod();
-			if (iModifier ~= 0 and  pMyPlayer:IsGoldenAge()) then
-				controlTable = g_MyCombatDataIM:GetInstance();		
-				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_PLAYER_GOLDENAGE_BONUS_SP");
-				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
-			end
-
 			--Same Continent Bonus
 			iModifier = pMyUnit:GetOnCapitalLandAttackMod();
 			if pMyPlayer:GetCapitalCity()~=nil then
@@ -1796,8 +1780,8 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				end
 			end
 
-			-- Civ Trait Bonus
-			iModifier = pMyPlayer:GetTraitGoldenAgeCombatModifier();
+			--Golden Age Bonus
+			iModifier = pMyUnit:GoldenAgeModTotal();
 			if (iModifier ~= 0 and pMyPlayer:IsGoldenAge()) then
 				controlTable = g_MyCombatDataIM:GetInstance();
 				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_GOLDEN_AGE");
@@ -1917,14 +1901,6 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 					iModifier = pTheirUnit:GetNumOriginalCapitalDefenseMod() * inum
 					controlTable = g_TheirCombatDataIM:GetInstance();
 					controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_PLAYER_ORIGINAL_CAPITAL_BONUS_SP");
-					controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
-				end
-
-				--Golden Age Bonus
-				iModifier = pTheirUnit:GoldenAgeMod();
-				if (iModifier ~= 0 and pTheirPlayer:IsGoldenAge()) then
-					controlTable = g_TheirCombatDataIM:GetInstance();
-					controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_PLAYER_GOLDENAGE_BONUS_SP");
 					controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
 				end
 
@@ -2358,8 +2334,8 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 					end
 				end
 
-				-- Civ Trait Bonus
-				iModifier = pTheirPlayer:GetTraitGoldenAgeCombatModifier();
+				--Golden Age Bonus
+				iModifier = pTheirUnit:GoldenAgeModTotal();
 				if (iModifier ~= 0 and pTheirPlayer:IsGoldenAge()) then
 					controlTable = g_TheirCombatDataIM:GetInstance();
 					controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_GOLDEN_AGE");
@@ -2519,14 +2495,6 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 			iModifier = theirUnit:GetNumOriginalCapitalDefenseMod() * inum
 			controlTable = g_TheirCombatDataIM:GetInstance();
 			controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_PLAYER_ORIGINAL_CAPITAL_BONUS_SP");
-			controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
-		end
-
-		--Golden Age Bonus
-		iModifier = theirUnit:GoldenAgeMod();
-		if (iModifier ~= 0 and pTheirPlayer:IsGoldenAge()) then
-			controlTable = g_TheirCombatDataIM:GetInstance();
-			controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_PLAYER_GOLDENAGE_BONUS_SP");
 			controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
 		end
 
@@ -2854,8 +2822,8 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 			controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
 		end
 
-		-- Civ Trait Bonus
-		iModifier = theirPlayer:GetTraitGoldenAgeCombatModifier();
+		--Golden Age Bonus
+		iModifier = theirUnit:GoldenAgeModTotal();
 		if (iModifier ~= 0 and theirPlayer:IsGoldenAge()) then
 			controlTable = g_TheirCombatDataIM:GetInstance();
 			controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_GOLDEN_AGE");
