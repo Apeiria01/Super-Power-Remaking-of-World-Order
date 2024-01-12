@@ -140,7 +140,8 @@ function SatelliteLaunchEffects(unit, city, player)
 		city:SetNumRealBuilding(GameInfoTypes["BUILDING_SATELLITE_APOLLO11"], 1)
 	elseif unit:GetUnitClassType() == GameInfoTypes.UNITCLASS_SATELLITE_HUBBLE then
 		city:SetNumRealBuilding(GameInfoTypes["BUILDING_HUBBLE"], 1)
-		player:InitUnit(GameInfoTypes.UNIT_SCIENTIST, city:GetX(), city:GetY(), UNITAI_SCIENTIST):JumpToNearestValidPlot()
+		local NewUnit = player:InitUnit(GameInfoTypes.UNIT_SCIENTIST, city:GetX(), city:GetY(), UNITAI_SCIENTIST)
+		NewUnit:JumpToNearestValidPlot()
 	elseif unit:GetUnitClassType() == GameInfoTypes.UNITCLASS_SATELLITE_WEATHER then
 		city:SetNumRealBuilding(GameInfoTypes["BUILDING_SATELLITE_WEATHER"], 1)
 	elseif unit:GetUnitClassType() == GameInfoTypes.UNITCLASS_SATELLITE_TIANGONG then
@@ -166,10 +167,6 @@ function SatelliteLaunchEffects(unit, city, player)
 end -----------function END
 
 function SatelliteEffectsGlobal(unit)
-	if not unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_SATELLITE_UNIT"].ID) then
-		return
-	end
-
 	if unit:GetUnitClassType() == GameInfoTypes.UNITCLASS_SATELLITE_WEATHER then
 		print("Satellite Effects Global:Weather Control!")
 		for plotLoop = 0, Map.GetNumPlots() - 1, 1 do
