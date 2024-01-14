@@ -1273,7 +1273,7 @@
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_SCOUTING</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_SP_FORCE_2</PediaEntry>
-			<MovePercentCaptureCity>100</MovePercentCaptureCity>
+			<MovePercentCaptureCity>50</MovePercentCaptureCity>
 			<HealPercentCaptureCity>100</HealPercentCaptureCity>
 		</Row>
 		<Row>
@@ -4058,7 +4058,7 @@
 			<PortraitIndex>40</PortraitIndex>
 			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_AIR</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_DOGFIGHTING_2</PediaEntry>
+			<PediaEntry>TXT_KEY_PROMOTION_AIRRECON_2</PediaEntry>
 			<MovesChange>1</MovesChange>
 			<GetGroundAttackRange>1</GetGroundAttackRange>
 		</Row>

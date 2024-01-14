@@ -12801,7 +12801,7 @@
 			<Text>
 				[ICON_BULLET]攻击敌方城市时使其陷入一回合混乱状态（可叠加），城市内的全部守军（包括飞机和核武器）下回合开始时无法行动。
 				[NEWLINE][ICON_BULLET]攻城加50%战斗力。
-				[NEWLINE][ICON_BULLET]攻占城市后恢复所有移动力和生命值
+				[NEWLINE][ICON_BULLET]攻占城市后恢复50%移动力和所有生命值
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SP_FORCE_3">

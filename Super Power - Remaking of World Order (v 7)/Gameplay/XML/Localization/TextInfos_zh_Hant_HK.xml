@@ -12626,7 +12626,7 @@
 			<Text>
 				[ICON_BULLET]攻擊敵方城市時使其陷入一回合混亂狀態（可疊加），城市內的全部守軍（包括飛機和核武器）下回合開始時無法行動。
 				[NEWLINE][ICON_BULLET]攻城加50%戰鬥力。
-				[NEWLINE][ICON_BULLET]攻占城市後恢復所有移動力和生命值
+				[NEWLINE][ICON_BULLET]攻占城市後恢復50%移動力和所有生命值
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SP_FORCE_3">
