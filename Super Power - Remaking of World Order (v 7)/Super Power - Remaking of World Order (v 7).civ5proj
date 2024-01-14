@@ -4971,6 +4971,10 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
+    <Content Include="UI/InGame/UnitList.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
     <Content Include="UI/InGame/PlotHelpManager.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
@@ -5048,6 +5052,14 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="UI/InGame/Popups/ProductionPopup.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI/InGame/Popups/SetUnitName.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI/InGame/Popups/SetCityName.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>

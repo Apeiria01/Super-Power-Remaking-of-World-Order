@@ -1821,7 +1821,7 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 	for row in GameInfo.Policy_BuildingClassYieldModifiers( thisBuildingClassType ) do
 		if row.PolicyType and (row.YieldMod or 0) ~= 0 
 		and GameInfo.Policies[ row.PolicyType].Dummy~=1  --New
-		and row.PolicyType:match("^[POLICY_AI_]+.") == nil
+		and row.PolicyType:match("^POLICY_AI_+.") == nil
 		then
 			items[row.PolicyType] = format( "%s %+i%%%s", items[row.PolicyType] or "", row.YieldMod, YieldIcons[row.YieldType] or "?" )
 		end
@@ -1831,7 +1831,7 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 			for row in GameInfo.Policy_BuildingClassTourismModifiers( thisBuildingClassType ) do
 				if row.PolicyType and (row.TourismModifier or 0) ~= 0
 				and GameInfo.Policies[ row.PolicyType].Dummy~=1  --New
-				and row.PolicyType:match("^[POLICY_AI_]+.") == nil
+				and row.PolicyType:match("^POLICY_AI_+.") == nil
 				then
 					items[row.PolicyType] = format( "%s %+i%%[ICON_TOURISM]", items[row.PolicyType] or "", row.TourismModifier )
 				end

@@ -14624,7 +14624,7 @@
 			<Text>
 				[ICON_BULLET]When attacking an enemy [COLOR_POSITIVE_TEXT]City[ENDCOLOR], all units (including Aircrafts and Nukes) stationed in the target city lose all their [ICON_MOVES] Movement for the next turn. 
 				[NEWLINE][ICON_BULLET]+50 Combat Strength VS [COLOR_POSITIVE_TEXT]Cities[ENDCOLOR].
-				[NEWLINE][ICON_BULLET]Restore all Moves and HitPoint after capturing a city.
+				[NEWLINE][ICON_BULLET]Restore 50% Movements and all HitPoint after capturing a city.
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SP_FORCE_3">
