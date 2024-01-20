@@ -3485,6 +3485,8 @@ if Game then
 				if activePlayer:IsDenouncedPlayer( playerID ) then
 					turnsRemaining = relationshipDuration - activePlayer:GetDenouncedPlayerCounter( playerID );
 				end
+			elseif bnw_be and itemID == TradeableItems.TRADE_ITEM_DIPLOMATIC_MARRIAGE then -- Marriage
+				turnsRemaining = relationshipDuration - activePlayer:GetMarriageCounter( playerID )
 			elseif itemID then
 				local finalTurn = dealsFinalTurn[ itemID ]
 				if finalTurn then
@@ -3719,6 +3721,15 @@ if Game then
 					)
 				end
 
+				isTradeable = ScratchDeal:IsPossibleToTradeItem( playerID, activePlayerID, TradeableItems.TRADE_ITEM_DIPLOMATIC_MARRIAGE, g_dealDuration )
+				isActiveDeal = activePlayer:IsMarriageAccepted(playerID)
+				if isTradeable or isActiveDeal then
+					insert( treaties, negativeOrPositiveTextColor[isActiveDeal] .. "[ICON_FLOWER]"
+							.. L"TXT_KEY_DIPLO_MARRIAGE"
+							.. "[ENDCOLOR]" .. GetDealTurnsRemaining( TradeableItems.TRADE_ITEM_DIPLOMATIC_MARRIAGE )
+					)
+				end
+
 				-- Research Agreement
 	--			isTradeable = (activeTeam:IsResearchAgreementTradingAllowed() or team:IsResearchAgreementTradingAllowed())
 	--				and not activeTeam:GetTeamTechs():HasResearchedAllTechs() and not team:GetTeamTechs():HasResearchedAllTechs()
@@ -3751,18 +3762,6 @@ if Game then
 							.. "[ENDCOLOR]" .. GetDealTurnsRemaining( TradeableItems.TRADE_ITEM_DEFENSIVE_PACT )
 					)
 				end
-
-				-- We've fought before
-				if IsCiv5Vanilla and activePlayer:GetNumWarsFought(playerID) > 0 then
-					-- They don't appear to be mad
-					if visibleApproachID == MajorCivApproachTypes.MAJOR_CIV_APPROACH_FRIENDLY or
-						visibleApproachID == MajorCivApproachTypes.MAJOR_CIV_APPROACH_NEUTRAL then
-						insert( opinions, L"TXT_KEY_DIPLO_PAST_WAR_NEUTRAL" )
-					-- They aren't happy with us
-					else
-						insert( opinions, L"TXT_KEY_DIPLO_PAST_WAR_BAD" )
-					end
-				end
 			end
 
 			if player.GetOpinionTable then
@@ -3788,6 +3787,18 @@ if Game then
 				-- Neutral things
 				if visibleApproachID == MajorCivApproachTypes.MAJOR_CIV_APPROACH_AFRAID then
 					insert( opinions, L"TXT_KEY_DIPLO_AFRAID" )
+				end
+
+				-- We've fought before
+				if IsCiv5Vanilla and activePlayer:GetNumWarsFought(playerID) > 0 then
+					-- They don't appear to be mad
+					if visibleApproachID == MajorCivApproachTypes.MAJOR_CIV_APPROACH_FRIENDLY or
+						visibleApproachID == MajorCivApproachTypes.MAJOR_CIV_APPROACH_NEUTRAL then
+						insert( opinions, L"TXT_KEY_DIPLO_PAST_WAR_NEUTRAL" )
+					-- They aren't happy with us
+					else
+						insert( opinions, L"TXT_KEY_DIPLO_PAST_WAR_BAD" )
+					end
 				end
 
 				-- Bad things

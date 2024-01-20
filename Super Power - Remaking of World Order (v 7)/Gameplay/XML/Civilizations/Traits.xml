@@ -255,10 +255,8 @@
 			<Description>TXT_KEY_TRAIT_ANNEX_CITY_STATE</Description>
 			<ShortDescription>TXT_KEY_TRAIT_ANNEX_CITY_STATE_SHORT</ShortDescription>
 			<AbleToAnnexCityStates>true</AbleToAnnexCityStates>
-			<!--
-			<FreeUnit>UNITCLASS_MUSICIAN</FreeUnit>
-			<FreeUnitPrereqTech>TECH_ACOUSTICS</FreeUnitPrereqTech>
-			-->
+			<!-- FIXME(catgrep): uncomment the next line if everything is ready -->
+			<!-- <CanDiplomaticMarriage>true</CanDiplomaticMarriage> -->
 		</Row>
 		<Row>
 			<Type>TRAIT_CARNIVAL</Type>
