@@ -1528,7 +1528,8 @@
 		<!-- New Cultural Influential Dialog-->
 		<Update>
 			<Where Tag="TXT_KEY_GENERIC_INFLUENTIAL_ON_AI_1" />
-			<Set Text="Our people are now buying your blue jeans and listening to your pop music. I worry the rest of the world will also succumb to the influence of your culture." />
+			<Set
+				Text="Our people are now buying your blue jeans and listening to your pop music. I worry the rest of the world will also succumb to the influence of your culture." />
 		</Update>
 		<Row Tag="TXT_KEY_CO_IMMIGRATION_COUNTER_HEADER">
 			<Text>[ICON_TEAM_4] / [ICON_TEAM_2]</Text>
@@ -3797,73 +3798,85 @@
 
 		
 		<!-- Description tags -->
-		<Delete Tag="TXT_KEY_BUILDING_MAUSOLEUM_HALICARNASSUS"/>
-		<Delete Tag="TXT_KEY_WONDER_MAUSOLEUM_HALICARNASSUS_HELP"/>
-		<Delete Tag="TXT_KEY_WONDER_MAUSOLEUM_HALICARNASSUS_QUOTE"/>
-		<Delete Tag="TXT_KEY_WONDER_MAUSOLEUM_HALICARNASSUS_DESC"/>
+		<Delete Tag="TXT_KEY_BUILDING_MAUSOLEUM_HALICARNASSUS" />
+		<Delete Tag="TXT_KEY_WONDER_MAUSOLEUM_HALICARNASSUS_HELP" />
+		<Delete Tag="TXT_KEY_WONDER_MAUSOLEUM_HALICARNASSUS_QUOTE" />
+		<Delete Tag="TXT_KEY_WONDER_MAUSOLEUM_HALICARNASSUS_DESC" />
 
-		<Delete Tag="TXT_KEY_BUILDING_TEMPLE_ARTEMIS"/>
-		<Delete Tag="TXT_KEY_WONDER_TEMPLE_ARTEMIS_HELP"/>
-		<Delete Tag="TXT_KEY_WONDER_TEMPLE_ARTEMIS_QUOTE"/>
-		<Delete Tag="TXT_KEY_WONDER_TEMPLE_ARTEMIS_DESC"/>
+		<Delete Tag="TXT_KEY_BUILDING_TEMPLE_ARTEMIS" />
+		<Delete Tag="TXT_KEY_WONDER_TEMPLE_ARTEMIS_HELP" />
+		<Delete Tag="TXT_KEY_WONDER_TEMPLE_ARTEMIS_QUOTE" />
+		<Delete Tag="TXT_KEY_WONDER_TEMPLE_ARTEMIS_DESC" />
 
 
 
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_GREAT_LIBRARY_HELP" />
-			<Set Text="+15% [ICON_RESEARCH] Science output in all cities. Provides a free Library in the city which it is built."/>
+			<Set
+				Text="+15% [ICON_RESEARCH] Science output in all cities. Provides a free Library in the city which it is built." />
 		</Update>
 
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_PYRAMIDS_HELP" />
-			<Set Text="The empire immediately enter a [ICON_GOLDEN_AGE] Golden Age. +6 [ICON_TOURISM] Tourism." />
+			<Set
+				Text="The empire immediately enter a [ICON_GOLDEN_AGE] Golden Age. +6 [ICON_TOURISM] Tourism." />
 		</Update>
 		
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_GREAT_WALL_HELP" />
-			<Set Text="Enemy land Units must expend 1 extra [ICON_MOVES] movement per Tile inside your territory. Provides Walls for free in the city in which it is built.[NEWLINE]Upon discovering Dynamite, The Great Wall becomes obsolete, but will +6 [ICON_TOURISM] Tourism instead." />
+			<Set
+				Text="Enemy land Units must expend 1 extra [ICON_MOVES] movement per Tile inside your territory. Provides Walls for free in the city in which it is built.[NEWLINE]Upon discovering Dynamite, The Great Wall becomes obsolete, but will +6 [ICON_TOURISM] Tourism instead." />
 		</Update>
 
 
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_HANGING_GARDEN_HELP" />
-			<Set Text="+10% [ICON_FOOD] Food output in all cities. Provides a free Garden in the city in which it is built." />
+			<Set
+				Text="+10% [ICON_FOOD] Food output in all cities. Provides a free Garden in the city in which it is built." />
 		</Update>
 
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_COLOSSUS_HELP" />
-			<Set Text="Gains an additional trade route slot and a Cargo Ship appears in the city and +50% to the range of trade routes originating from this city. [NEWLINE][NEWLINE]City must be built on the coast." />
+			<Set
+				Text="Gains an additional trade route slot and a Cargo Ship appears in the city and +50% to the range of trade routes originating from this city. [NEWLINE][NEWLINE]City must be built on the coast." />
 		</Update>
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_ORACLE_HELP" />
-			<Set Text="1 Free Social Policy. [NEWLINE][NEWLINE]+6 [ICON_TOURISM] Tourism when Archaeology is discovered. " />
+			<Set
+				Text="1 Free Social Policy. [NEWLINE][NEWLINE]+6 [ICON_TOURISM] Tourism when Archaeology is discovered. " />
 		</Update>
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_BOROBUDUR_HELP" />
-			<Set Text="Requires Piety. One Free Policy. [NEWLINE][NEWLINE]Must be built in a Holy City. [NEWLINE][NEWLINE]+6 [ICON_TOURISM] Tourism when Scientific Theory is discovered. " />
+			<Set
+				Text="Requires Piety. One Free Policy. [NEWLINE][NEWLINE]Must be built in a Holy City. [NEWLINE][NEWLINE]+6 [ICON_TOURISM] Tourism when Scientific Theory is discovered. " />
 		</Update>
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_HAGIA_SOPHIA_HELP" />
-			<Set Text="A [ICON_PROPHET] Great Prophet appears and provides a free Temple in the city. [NEWLINE][NEWLINE]+6 [ICON_TOURISM] Tourism when Scientific Theory is discovered. " />
+			<Set
+				Text="A [ICON_PROPHET] Great Prophet appears and provides a free Temple in the city. [NEWLINE][NEWLINE]+6 [ICON_TOURISM] Tourism when Scientific Theory is discovered. " />
 		</Update>
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_MOSQUE_OF_DJENNE_HELP" />
-			<Set Text="All missionaries from this city may spread a religion 3 times instead of 2. Provides a free Mosque in the city in which it was built. [NEWLINE][NEWLINE]+4 [ICON_TOURISM] Tourism when Scientific Theory is discovered. " />
+			<Set
+				Text="All missionaries from this city may spread a religion 3 times instead of 2. Provides a free Mosque in the city in which it was built. [NEWLINE][NEWLINE]+4 [ICON_TOURISM] Tourism when Scientific Theory is discovered. " />
 		</Update>
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_PARTHENON_HELP" />
-			<Set Text="Contains a prebuilt Great Work of Art in the Great Work Slot. [NEWLINE][NEWLINE]+6 [ICON_TOURISM] Tourism when Archaeology is discovered." />
+			<Set
+				Text="Contains a prebuilt Great Work of Art in the Great Work Slot. [NEWLINE][NEWLINE]+6 [ICON_TOURISM] Tourism when Archaeology is discovered." />
 		</Update>
 		<Row Tag="TXT_KEY_BUILDING_STONEHENGE_HELP">
 			<Text>+9[ICON_PEACE] Faith, +1 [ICON_GREAT_PEOPLE] Great Engineer Points, +6 [ICON_TOURISM] Tourism when Archaeology is discovered. </Text>
 		</Row>
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_ANGKOR_WAT_HELP" />
-			<Set Text="+1 [ICON_HAPPINESS_1] Happiness for every Shrine, Temple and Religious Building purchased with [ICON_PEACE] Faith.[NEWLINE][NEWLINE]+4 [ICON_TOURISM] Tourism when Scientific Theory is discovered. " />
+			<Set
+				Text="+1 [ICON_HAPPINESS_1] Happiness for every Shrine, Temple and Religious Building purchased with [ICON_PEACE] Faith.[NEWLINE][NEWLINE]+4 [ICON_TOURISM] Tourism when Scientific Theory is discovered. " />
 		</Update>
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_CHICHEN_ITZA_HELP" />
-			<Set Text="Requires Liberty. 3 Free Workers appear near this city.
+			<Set
+				Text="Requires Liberty. 3 Free Workers appear near this city.
 			[NEWLINE]+1 [ICON_MOVES] Movement for all Civilian Units. +25% Tile Improvement construction speed. [NEWLINE][NEWLINE]+2 [ICON_TOURISM] Tourism when Archaeology is discovered." />
 		</Update>
 
@@ -3872,7 +3885,8 @@
 		</Row>
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_MACHU_PICHU_HELP" />
-			<Set Text="+25% [ICON_GOLD] Gold from [ICON_CONNECTED] Trade Routes.[NEWLINE][NEWLINE]City must be built within 2 tiles of a Mountain that is inside your territory. " />
+			<Set
+				Text="+25% [ICON_GOLD] Gold from [ICON_CONNECTED] Trade Routes.[NEWLINE][NEWLINE]City must be built within 2 tiles of a Mountain that is inside your territory. " />
 		</Update>
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_SISTINE_CHAPEL_HELP" />
@@ -3880,20 +3894,24 @@
 		</Update>
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_BRANDENBURG_GATE_HELP" />
-			<Set Text="A Great General appears near the City where the Wonder was built and +15 XP for all new Units built in all cities. " />
+			<Set
+				Text="A Great General appears near the City where the Wonder was built and +15 XP for all new Units built in all cities. " />
 		</Update>
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_PENTAGON_HELP" />
-			<Set Text="Provides an additional [ICON_SPY] Spy. Levels up (1 level) all your existing [ICON_SPY] Spies. -25% for enemy spy effectiveness in all cities." />
+			<Set
+				Text="Provides an additional [ICON_SPY] Spy. Levels up (1 level) all your existing [ICON_SPY] Spies. -25% for enemy spy effectiveness in all cities." />
 		</Update>
 
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_TERRA_COTTA_ARMY_HELP" />
-			<Set Text="+25 [ICON_RES_MANPOWER] Manpower. Provides Barracks, Armory and Military Academy in the city in which it is built. [NEWLINE]+2 [ICON_TOURISM] Tourism when Archaeology is discovered. " />
+			<Set
+				Text="+25 [ICON_RES_MANPOWER] Manpower. Provides Barracks, Armory and Military Academy in the city in which it is built. [NEWLINE]+2 [ICON_TOURISM] Tourism when Archaeology is discovered. " />
 		</Update>
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_ALHAMBRA_HELP" />
-			<Set Text="All Infantry Units, Counter Units, Militia Units, Special Forces Units, Naval Melee Units, Fighter Units and Attack Aircrafts Units receive the March promotion." />
+			<Set
+				Text="All Infantry Units, Counter Units, Militia Units, Special Forces Units, Naval Melee Units, Fighter Units and Attack Aircrafts Units receive the March promotion." />
 		</Update>
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_HUBBLE_HELP" />
@@ -3901,23 +3919,27 @@
 		</Update>
 		<Update>
 			<Where Tag="TXT_KEY_BUILDING_INTERNATIONAL_SPACE_STATION_HELP" />
-			<Set Text="Provides a free Spaceship Factory in this city, Double the speed of Spaceship Parts in all cities. May only be built collaboratively through the World Congress. Great Scientists provide 33% more [ICON_RESEARCH] Science when used to discover new technology" />
+			<Set
+				Text="Provides a free Spaceship Factory in this city, Double the speed of Spaceship Parts in all cities. May only be built collaboratively through the World Congress. Great Scientists provide 33% more [ICON_RESEARCH] Science when used to discover new technology" />
 		</Update>
 
 		<Update>
 			<Where Tag="TXT_KEY_BUILDING_TOURIST_CENTER_HELP" />
-			<Set Text="National Wonder. Requires a Hotel in all cities. [NEWLINE][NEWLINE]100% of the [ICON_TOURISM] Culture of Wonders and Improvements is added to the [ICON_TOURISM] Tourism output of the city.+100% [ICON_TOURISM] Tourism output for Great Works in this city. " />
+			<Set
+				Text="National Wonder. Requires a Hotel in all cities. [NEWLINE][NEWLINE]100% of the [ICON_TOURISM] Culture of Wonders and Improvements is added to the [ICON_TOURISM] Tourism output of the city.+100% [ICON_TOURISM] Tourism output for Great Works in this city. " />
 		</Update>
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_CN_TOWER_HELP" />
-			<Set Text="Provides a free Broadcast Tower in all cities and +3 [ICON_GOLD] Gold, +2 [ICON_CULTURE] Culture, +1 [ICON_HAPPINESS_1] Happiness for every Broadcast Tower. [NEWLINE]100% of the [ICON_CULTURE] Culture from World Wonders, Natural Wonders, and Improvements is added to the [ICON_TOURISM] Tourism output of the city. [ICON_TOURISM] Tourism output from Great Works +100%." />
+			<Set
+				Text="Provides a free Broadcast Tower in all cities and +3 [ICON_GOLD] Gold, +2 [ICON_CULTURE] Culture, +1 [ICON_HAPPINESS_1] Happiness for every Broadcast Tower. [NEWLINE]100% of the [ICON_CULTURE] Culture from World Wonders, Natural Wonders, and Improvements is added to the [ICON_TOURISM] Tourism output of the city. [ICON_TOURISM] Tourism output from Great Works +100%." />
 		</Update>
 
 
 
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_NEUSCHWANSTEIN_HELP" />
-			<Set Text="+6 [ICON_TOURISM] Tourism. [ICON_TOURISM] Tourism output from Great Works +50% in all cities. [NEWLINE][NEWLINE]City must be built within 2 tiles of a Mountain that is inside your territory." />
+			<Set
+				Text="+6 [ICON_TOURISM] Tourism. [ICON_TOURISM] Tourism output from Great Works +50% in all cities. [NEWLINE][NEWLINE]City must be built within 2 tiles of a Mountain that is inside your territory." />
 		</Update>
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_KREMLIN_HELP" />
@@ -3925,18 +3947,21 @@
 		</Update>
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_FORBIDDEN_PALACE_HELP" />
-			<Set Text="+2 additional Delegates in the world congress. -50% extra [ICON_HAPPINESS_4] Unhappiness in Lv1-5 Cities. Lv1 Cities will create no extra [ICON_HAPPINESS_4] Unhappiness." />
+			<Set
+				Text="+2 additional Delegates in the world congress. -50% extra [ICON_HAPPINESS_4] Unhappiness in Lv1-5 Cities. Lv1 Cities will create no extra [ICON_HAPPINESS_4] Unhappiness." />
 		</Update>
 		
 		
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_STATUE_OF_LIBERTY_HELP" />
-			<Set Text="Requires Freedom. Each Scientist +1 [ICON_RESEARCH] Science; Engineer +1 [ICON_PRODUCTION] Production; Merchant +1 [ICON_GOLD] Gold; Writer, Artist and Musician +1 [ICON_CULTURE] Culture. 1 Free Social Policy. [NEWLINE][NEWLINE]Must be constructed in a costal city." />
+			<Set
+				Text="Requires Freedom. Each Scientist +1 [ICON_RESEARCH] Science; Engineer +1 [ICON_PRODUCTION] Production; Merchant +1 [ICON_GOLD] Gold; Writer, Artist and Musician +1 [ICON_CULTURE] Culture. 1 Free Social Policy. [NEWLINE][NEWLINE]Must be constructed in a costal city." />
 		</Update>
 		
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_PRORA_RESORT_HELP" />
-			<Set Text="Requires Autocracy. The Prora Resort provides +1 more [ICON_HAPPINESS_1] Happiness for every 2 Policies you have adopted. -10% [ICON_HAPPINESS_4] Unhappiness from [ICON_CITIZEN] Citizens in non-occupied Cities. 1 Free Social Policy. [NEWLINE][NEWLINE]Must be constructed in a coastal city." />
+			<Set
+				Text="Requires Autocracy. The Prora Resort provides +1 more [ICON_HAPPINESS_1] Happiness for every 2 Policies you have adopted. -10% [ICON_HAPPINESS_4] Unhappiness from [ICON_CITIZEN] Citizens in non-occupied Cities. 1 Free Social Policy. [NEWLINE][NEWLINE]Must be constructed in a coastal city." />
 		</Update>
 		
 		<Update>
@@ -3947,7 +3972,8 @@
 
 		<Update>
 			<Where Tag="TXT_KEY_BUILDING_GREAT_FIREWALL_HELP" />
-			<Set Text="99.9% reduction in enemy spy effectiveness in this city. 25% reduction in enemy spy effectiveness for all other cities. Also, negates the [ICON_TOURISM] Tourism bonus from other players' technology (from Printing Press to Internet)." />
+			<Set
+				Text="99.9% reduction in enemy spy effectiveness in this city. 25% reduction in enemy spy effectiveness for all other cities. Also, negates the [ICON_TOURISM] Tourism bonus from other players' technology (from Printing Press to Internet)." />
 		</Update>
 
 
@@ -4392,7 +4418,8 @@
 
 		<Update>
 			<Where Tag="TXT_KEY_BUILDING_HEROIC_EPIC_HELP" />
-			<Set Text="Requires Honor.
+			<Set
+				Text="Requires Honor.
 				 [NEWLINE][NEWLINE]+15 XP for new units built in all cities.
 				 [NEWLINE][NEWLINE]Must be built in Medium Cities. The cost goes up the more cities there are in the empire." />
 		</Update>
@@ -4400,13 +4427,15 @@
 
 		<Update>
 			<Where Tag="TXT_KEY_BUILDING_CIRCUS_MAXIMUS_HELP" />
-			<Set Text="Must have built a Circus in all Cities. The cost goes up the more cities there are in the empire." />
+			<Set
+				Text="Must have built a Circus in all Cities. The cost goes up the more cities there are in the empire." />
 		</Update>
 
 
 		<Update>
 			<Where Tag="TXT_KEY_BUILDING_NATIONAL_COLLEGE_HELP" />
-			<Set Text="+25% [ICON_RESEARCH] Science gained from research agreements. [NEWLINE][NEWLINE]Must have built an Academy in all Cities. The cost goes up the more cities there are in the empire." />
+			<Set
+				Text="+25% [ICON_RESEARCH] Science gained from research agreements. [NEWLINE][NEWLINE]Must have built an Academy in all Cities. The cost goes up the more cities there are in the empire." />
 		</Update>
 
 
@@ -4416,22 +4445,26 @@
 		</Update>
 		<Update>
 			<Where Tag="TXT_KEY_BUILDING_HERMITAGE_HELP" />
-			<Set Text="A Great Artist appears in the city where the building is built. [NEWLINE][NEWLINE]Must have built a Museum in all Cities. The cost goes up the more cities there are in the empire. " />
+			<Set
+				Text="A Great Artist appears in the city where the building is built. [NEWLINE][NEWLINE]Must have built a Museum in all Cities. The cost goes up the more cities there are in the empire. " />
 		</Update>
 		<Update>
 			<Where Tag="TXT_KEY_BUILDING_HERMITAGE_STRATEGY" />
-			<Set Text="The National Museum can greatly improve the [ICON_CULTURE] Culture and [ICON_TOURISM] Tourism output in this city, making it very helpful for Cultural Victory." />
+			<Set
+				Text="The National Museum can greatly improve the [ICON_CULTURE] Culture and [ICON_TOURISM] Tourism output in this city, making it very helpful for Cultural Victory." />
 		</Update>
 
 
 		<Update>
 			<Where Tag="TXT_KEY_BUILDING_INTELLIGENCE_AGENCY_HELP" />
-			<Set Text="Requires Patronage. [NEWLINE][NEWLINE]+1 extra [ICON_SPY] Spy. [NEWLINE][NEWLINE]Must be built in Large Cities. The cost goes up the more cities there are in the empire. " />
+			<Set
+				Text="Requires Patronage. [NEWLINE][NEWLINE]+1 extra [ICON_SPY] Spy. [NEWLINE][NEWLINE]Must be built in Large Cities. The cost goes up the more cities there are in the empire. " />
 		</Update>
 
 		<Update>
 			<Where Tag="TXT_KEY_BUILDING_NATIONAL_TREASURY_HELP" />
-			<Set Text="Gains an additional Trade Route slot. 
+			<Set
+				Text="Gains an additional Trade Route slot. 
 				 [NEWLINE][NEWLINE]Must have a Market in all Cities. The cost goes up the more cities there are in the empire." />
 		</Update>
 
@@ -10449,6 +10482,7 @@
 			<Text>
 				[ICON_BULLET]Can spend [ICON_GOLD] Gold to annex or puppet a City-State that has been your ally for 8 turns. 
 				[NEWLINE][ICON_BULLET]Each old Capital of City-State -2 Lv. at most of City Hall in its City (non-puppet).
+				[NEWLINE][ICON_BULLET] Unlock the special trading options [Diplomatic Marriage] and [Dual Empire Treaty] (see the Encyclopedia Diplomacy page for details).
 			</Text>
 		</Replace>
 
@@ -17344,6 +17378,32 @@
 		</Row>
 		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_14">
 			<Text>As City Scale changes, not enough [COLOR_YELLOW]Public Health and Sanitary Service Buildings[ENDCOLOR] in the city will empty City's food Kept</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_DIPLOMACY_DUAL_EMPIRE_TREATY_TITLE">
+			<Text>Dual Empire Agreement</Text>
+		</Row>
+		<Row Tag="TXT_KEY_DIPLOMACY_DUAL_EMPIRE_TREATY_BODY">
+			<Text>
+				Available only in Austria. [NEWLINE][NEWLINE]
+				1. Prerequisite:
+				[NEWLINE]i. You are stronger than the opponent, and your population and number of
+				cities are greater than or equal to twice that of the opponent.
+				[NEWLINE]ii. A game can only be completed once
+				[NEWLINE]iii. Completed two or more diplomatic marriages in history
+				[NEWLINE][NEWLINE]
+
+				2. After reaching an agreement, the effect will be:
+				[NEWLINE]i. Directly annex all the opponent's cities and treat them as self-built
+				cities.
+				[NEWLINE]ii. The opponent's current capital is considered your second capital, and
+				the centrifugal tendency of cities across the country will be the lower value
+				calculated based on the two capitals.
+				[NEWLINE]iii. Can obtain the other party’s UU UB UI
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_DIPLOMACY_DUAL_EMPIRE_TREATY_ADV_QUEST">
+			<Text>How to build a dual empire with other major civilizations? </Text>
 		</Row>
 	</Language_en_US>
 </GameData>

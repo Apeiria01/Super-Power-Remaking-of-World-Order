@@ -255,8 +255,8 @@
 			<Description>TXT_KEY_TRAIT_ANNEX_CITY_STATE</Description>
 			<ShortDescription>TXT_KEY_TRAIT_ANNEX_CITY_STATE_SHORT</ShortDescription>
 			<AbleToAnnexCityStates>true</AbleToAnnexCityStates>
-			<!-- FIXME(catgrep): uncomment the next line if everything is ready -->
-			<!-- <CanDiplomaticMarriage>true</CanDiplomaticMarriage> -->
+			<CanDiplomaticMarriage>true</CanDiplomaticMarriage>
+			<AbleToDualEmpire>true</AbleToDualEmpire>
 		</Row>
 		<Row>
 			<Type>TRAIT_CARNIVAL</Type>

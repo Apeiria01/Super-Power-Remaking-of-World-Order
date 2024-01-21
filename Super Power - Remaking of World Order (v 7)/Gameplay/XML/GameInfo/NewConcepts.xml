@@ -451,4 +451,26 @@
 			<CivilopediaHeaderType>HEADER_CITYSTATE</CivilopediaHeaderType>
 		</Row>
 	</Concepts>
+
+	<!--************************************ Diplomatic ********************************-->
+	<Concepts>
+		<Row>
+			<Type>CONCEPT_DIPLOMACY_MARRIAGE</Type>
+			<Topic>TXT_KEY_TOPIC_DIPLOMACY</Topic>
+			<Description>TXT_KEY_DIPLOMACY_MARRIAGE_TITLE</Description>
+			<Summary>TXT_KEY_DIPLOMACY_MARRIAGE_BODY</Summary>
+			<AdvisorQuestion>TXT_KEY_DIPLOMACY_MARRIAGE_ADV_QUEST</AdvisorQuestion>
+			<Advisor>FOREIGN</Advisor>
+			<CivilopediaHeaderType>HEADER_DIPLOMACY</CivilopediaHeaderType>
+		</Row>
+		<Row>
+			<Type>CONCEPT_DIPLOMACY_DUAL_EMPIRE_TREATY</Type>
+			<Topic>TXT_KEY_TOPIC_DIPLOMACY</Topic>
+			<Description>TXT_KEY_DIPLOMACY_DUAL_EMPIRE_TREATY_TITLE</Description>
+			<Summary>TXT_KEY_DIPLOMACY_DUAL_EMPIRE_TREATY_BODY</Summary>
+			<AdvisorQuestion>TXT_KEY_DIPLOMACY_DUAL_EMPIRE_TREATY_ADV_QUEST</AdvisorQuestion>
+			<Advisor>FOREIGN</Advisor>
+			<CivilopediaHeaderType>HEADER_DIPLOMACY</CivilopediaHeaderType>
+		</Row>
+	</Concepts>
 </GameData>
