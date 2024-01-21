@@ -5861,6 +5861,7 @@
 			<Text>
 				[ICON_BULLET]可以通過[ICON_GOLD]金錢來購買與奧地利同盟8回合的城邦。
 				[NEWLINE][ICON_BULLET]城邦故都所在城市（非傀儡）的市政廳管理成本最多可-2級。
+				[NEWLINE][ICON_BULLET]解鎖特色交易選項【外交聯姻】和【二元帝國協定】（詳情請見百科外交頁）。
 			</Text>
 		</Replace>
 
@@ -15430,6 +15431,27 @@
 		</Row>
 		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_14">
 			<Text>城市規模增長時若缺少公共衛生醫療設施則會清空余糧積累</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_DIPLOMACY_DUAL_EMPIRE_TREATY_TITLE">
+			<Text>二元帝國協定</Text>
+		</Row>
+		<Row Tag="TXT_KEY_DIPLOMACY_DUAL_EMPIRE_TREATY_BODY">
+			<Text>
+				僅奧地利可用。 [NEWLINE][NEWLINE]
+				1. 前提：
+				[NEWLINE]i. 你比對方強大，人口和城市數量都大於等於對方的兩倍
+				[NEWLINE]ii. 一場比賽只能完成一次
+				[NEWLINE]iii. 歷史上完成過兩次或以上的外交聯姻
+				[NEWLINE][NEWLINE]
+				2. 達成協定後，效果：
+				[NEWLINE]i. 直接吞併對方所有城市，並視為自建城市。
+				[NEWLINE]ii. 對方目前首都被認為你的第二首都，全國城市的離心傾向將取雙首都計算的較低值。
+				[NEWLINE]iii. 可取得對方的UU UB UI
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_DIPLOMACY_DUAL_EMPIRE_TREATY_ADV_QUEST">
+			<Text>如何與其他主要文明建立二元帝國？ </Text>
 		</Row>
 	</Language_zh_Hant_HK>
 </GameData>

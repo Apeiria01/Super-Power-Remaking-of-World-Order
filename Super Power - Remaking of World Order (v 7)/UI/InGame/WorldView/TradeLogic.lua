@@ -982,6 +982,8 @@ function ResetDisplay()
 	Controls.ThemPocketResearchAgreement:SetHide(false);
 	Controls.UsPocketMarriage:SetHide(false);
 	Controls.ThemPocketMarriage:SetHide(false);
+	Controls.UsPocketDualEmpire:SetHide(false);
+	Controls.ThemPocketDualEmpire:SetHide(false);
 	--Controls.UsPocketTradeAgreement:SetHide( false );		Trade agreement disabled for now
 	--Controls.ThemPocketTradeAgreement:SetHide( false );		Trade agreement disabled for now
 	if (Controls.UsPocketDoF ~= nil) then
@@ -1429,6 +1431,31 @@ function ResetDisplay()
 	end
 
 	----------------------------------------------------------------------------------
+	-- pocket Dual Empire
+	----------------------------------------------------------------------------------
+	-- TODO: set the pocket button disabled, color and tooltip
+	-- TODO: add tooltip
+	local bUsDualEmpireAllowed = g_Deal:IsPossibleToTradeItem(g_iUs, g_iThem, TradeableItems
+		.TRADE_ITEM_DUAL_EMPIRE_TREATY, g_iDealDuration);
+	if not bUsDualEmpireAllowed then
+		Controls.UsPocketDualEmpire:SetDisabled(true);
+		Controls.UsPocketDualEmpire:GetTextControl():SetColorByName("Gray_Black");
+	else
+		Controls.UsPocketDualEmpire:SetDisabled(false);
+		Controls.UsPocketDualEmpire:GetTextControl():SetColorByName("Beige_Black");
+	end
+
+	local bThemDualEmpireAllowed = g_Deal:IsPossibleToTradeItem(g_iThem, g_iUs, TradeableItems
+		.TRADE_ITEM_DUAL_EMPIRE_TREATY, g_iDealDuration);
+	if not bThemDualEmpireAllowed then
+		Controls.ThemPocketDualEmpire:SetDisabled(true);
+		Controls.ThemPocketDualEmpire:GetTextControl():SetColorByName("Gray_Black");
+	else
+		Controls.ThemPocketDualEmpire:SetDisabled(false);
+		Controls.ThemPocketDualEmpire:GetTextControl():SetColorByName("Beige_Black");
+	end
+
+	----------------------------------------------------------------------------------
 	-- pocket Trade Agreement
 	----------------------------------------------------------------------------------
 
@@ -1818,12 +1845,14 @@ function ResetDisplay()
 		Controls.UsPocketResearchAgreement:SetHide(true);
 		Controls.UsPocketOtherPlayer:SetHide(true);
 		Controls.UsPocketMarriage:SetHide(true);
+		Controls.UsPocketDualEmpire:SetHide(true);
 		Controls.ThemPocketAllowEmbassy:SetHide(true);
 		Controls.ThemPocketOpenBorders:SetHide(true);
 		Controls.ThemPocketDefensivePact:SetHide(true);
 		Controls.ThemPocketResearchAgreement:SetHide(true);
 		Controls.ThemPocketOtherPlayer:SetHide(true);
 		Controls.ThemPocketMarriage:SetHide(true);
+		Controls.ThemPocketDualEmpire:SetHide(true);
 	else
 		--print("Teams DO NOT match!");
 		Controls.UsPocketAllowEmbassy:SetHide(false);
@@ -1831,11 +1860,13 @@ function ResetDisplay()
 		Controls.UsPocketDefensivePact:SetHide(false);
 		Controls.UsPocketResearchAgreement:SetHide(false);
 		Controls.UsPocketOtherPlayer:SetHide(false);
+		Controls.UsPocketDualEmpire:SetHide(false);
 		Controls.ThemPocketAllowEmbassy:SetHide(false);
 		Controls.ThemPocketOpenBorders:SetHide(false);
 		Controls.ThemPocketDefensivePact:SetHide(false);
 		Controls.ThemPocketResearchAgreement:SetHide(false);
 		Controls.ThemPocketOtherPlayer:SetHide(false);
+		Controls.ThemPocketDualEmpire:SetHide(false);
 	end
 
 
@@ -1866,6 +1897,8 @@ function DoClearTable()
 	Controls.ThemTableResearchAgreement:SetHide(true);
 	Controls.UsTableMarriage:SetHide(true);
 	Controls.ThemTableMarriage:SetHide(true);
+	Controls.UsTableDualEmpire:SetHide(true);
+	Controls.ThemTableDualEmpire:SetHide(true);
 	Controls.UsTableTradeAgreement:SetHide(true);
 	Controls.ThemTableTradeAgreement:SetHide(true);
 	Controls.UsTableCitiesStack:SetHide(true);
@@ -1881,9 +1914,6 @@ function DoClearTable()
 	Controls.ThemTableMakePeaceStack:SetHide(true);
 	Controls.UsTableDeclareWarStack:SetHide(true);
 	Controls.ThemTableDeclareWarStack:SetHide(true);
-
-	Controls.UsTableMarriage:SetHide(true);
-	Controls.ThemTableMarriage:SetHide(true);
 
 	for n, table in pairs(g_OtherPlayersButtons) do
 		table.UsTableWar.Button:SetHide(true);
@@ -2223,6 +2253,11 @@ function DisplayDeal()
 				Controls.UsTableMarriage:SetHide(false);
 				Controls.ThemPocketMarriage:SetHide(true);
 				Controls.ThemTableMarriage:SetHide(false);
+			elseif (TradeableItems.TRADE_ITEM_DUAL_EMPIRE_TREATY == itemType) then
+				Controls.UsPocketDualEmpire:SetHide(true);
+				Controls.UsTableDualEmpire:SetHide(false);
+				Controls.ThemPocketDualEmpire:SetHide(true);
+				Controls.ThemTableDualEmpire:SetHide(false);
 			end
 			itemType, duration, finalTurn, data1, data2, data3, flag1, fromPlayer = g_Deal:GetNextItem();
 		until (itemType == nil)
@@ -2685,6 +2720,34 @@ end
 
 Controls.UsTableMarriage:RegisterCallback(Mouse.eLClick, TableMarriageHandler);
 Controls.ThemTableMarriage:RegisterCallback(Mouse.eLClick, TableMarriageHandler);
+
+-----------------------------------------------------------------------------------------------------------------------
+-- Dual Empire Handlers
+-----------------------------------------------------------------------------------------------------------------------
+function PocketDualEmpireHandler(isUs)
+	-- Note that currently dual empire is required on both sides
+	g_Deal:AddDualEmpireTreaty(g_iUs);
+	g_Deal:AddDualEmpireTreaty(g_iThem);
+	DisplayDeal();
+	DoUIDealChangedByHuman();
+end
+
+Controls.UsPocketDualEmpire:RegisterCallback(Mouse.eLClick, PocketDualEmpireHandler);
+Controls.ThemPocketDualEmpire:RegisterCallback(Mouse.eLClick, PocketDualEmpireHandler);
+Controls.UsPocketDualEmpire:SetVoid1(1);
+Controls.ThemPocketDualEmpire:SetVoid1(0);
+
+function TableDualEmpireHandler()
+	-- Remove from BOTH sides of the table
+	g_Deal:RemoveByType(TradeableItems.TRADE_ITEM_DIPLOMATIC_DUAL_EMPIRE_TREATY, g_iUs);
+	g_Deal:RemoveByType(TradeableItems.TRADE_ITEM_DIPLOMATIC_DUAL_EMPIRE_TREATY, g_iThem);
+	DoClearTable();
+	DisplayDeal();
+	DoUIDealChangedByHuman();
+end
+
+Controls.UsTableDualEmpire:RegisterCallback(Mouse.eLClick, TableDualEmpireHandler);
+Controls.ThemTableDualEmpire:RegisterCallback(Mouse.eLClick, TableDualEmpireHandler);
 
 -----------------------------------------------------------------------------------------------------------------------
 -- Trade Agreement Handlers

@@ -5964,6 +5964,7 @@
 			<Text>
 				[ICON_BULLET]可以通过[ICON_GOLD]金钱来购买与奥地利同盟8回合的城邦。
 				[NEWLINE][ICON_BULLET]城邦故都所在城市（非傀儡）的市政厅管理成本最多可-2级。
+				[NEWLINE][ICON_BULLET]解锁特色交易选项【外交联姻】和【二元帝国协定】（详情见百科外交页）。
 			</Text>
 		</Replace>
 
@@ -15634,6 +15635,38 @@
 		</Row>
 		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_14">
 			<Text>城市规模增长时若缺少公共卫生医疗设施则会清空余粮积累</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_DIPLOMACY_MARRIAGE_TITLE">
+			<Text>外交联姻</Text>
+		</Row>
+		<Row Tag="TXT_KEY_DIPLOMACY_MARRIAGE_BODY">
+			<Text>仅奥地利可用。可大幅度提升同文明的关系和结盟倾向（持续时间同宣布友谊），同一时间仅可同一家玩家联姻。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_DIPLOMACY_MARRIAGE_ADV_QUEST">
+			<Text>如何同其他主要文明联姻？</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_DIPLOMACY_DUAL_EMPIRE_TREATY_TITLE">
+			<Text>二元帝国协定</Text>
+		</Row>
+		<Row Tag="TXT_KEY_DIPLOMACY_DUAL_EMPIRE_TREATY_BODY">
+			<Text>
+				仅奥地利可用。[NEWLINE][NEWLINE]
+				1. 前提：
+					[NEWLINE]i. 你比对方强大，人口和城市数量均大于等于对方的两倍
+					[NEWLINE]ii. 一局游戏仅能完成一次
+					[NEWLINE]iii. 历史上完成过两次或以上的外交联姻
+				[NEWLINE][NEWLINE]
+
+				2. 达成协定后，效果：
+					[NEWLINE]i. 直接吞并对方所有城市，并且视为自建城市。
+					[NEWLINE]ii. 对方当前首都被认为你的第二首都，全国城市的离心倾向将取按双首都计算的较低值。
+					[NEWLINE]iii. 可获取对方的UU UB UI
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_DIPLOMACY_DUAL_EMPIRE_TREATY_ADV_QUEST">
+			<Text>如何同其他主要文明建立二元帝国？</Text>
 		</Row>
 	</Language_zh_CN>
 </GameData>

@@ -180,10 +180,10 @@ function RefreshCityBanner(cityBanner, iActiveTeam, iActivePlayer)
 		local convertedKey = Locale.ToUpper(localizedCityName)
 
 		-- Update capital icon
-		local isCapital = city:IsCapital() or Players[city:GetOriginalOwner()]:IsMinorCiv()
-
 		if city:IsCapital() and not player:IsMinorCiv() then
 			convertedKey = "[ICON_CAPITAL]" .. convertedKey
+		elseif city:IsSecondCapital() then
+			convertedKey = "[ICON_FLOWER]" .. convertedKey
 		end
 
 		if Players[Game.GetActivePlayer()]:IsObserver() then
