@@ -980,13 +980,13 @@ local ArmeeID = GameInfo.UnitPromotions["PROMOTION_CORPS_2"].ID
 local iArsenal = GameInfoTypes["BUILDINGCLASS_ARSENAL"]
 local iMilitaryBase = GameInfoTypes["BUILDINGCLASS_MILITARY_BASE"]
 function bUnitCanEstablishCorps(unit)
+    local sDomainType = GameInfo.Units[unit:GetUnitType()].Domain
     if unit:IsHasPromotion(ArmeeID)
     --only land unit can establish corps SP8.0
-    or unit:GetDomainType() ~= DomainTypes.DOMAIN_LAND
+    or sDomainType ~= "DOMAIN_LAND"
+    or unit:GetPlot():IsWater()
     --CitadelUnits can't establish
     or unit:IsEmbarked() or unit:IsImmobile() or not unit:CanMove()
-    or (unit:GetDomainType() == DomainTypes.DOMAIN_LAND and unit:GetPlot():IsWater())
-    or (unit:GetDomainType() == DomainTypes.DOMAIN_SEA and not unit:GetPlot():IsWater())
     then
         return false
     end
