@@ -13642,7 +13642,7 @@
 			<Text>Provides +100% [ICON_RANGE_STRENGTH] Combat Bonus for aircrafts in the same tile. [NEWLINE][NEWLINE]Requires Project Habu and only one can exist in the world. </Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_SR71_BLACKBIRD_STRATEGY">
-			<Text>SR-71 "Black Bird" is not a fighter but a reconnaissance aircraft. It cannot attack the enemy but can carry out aerial reconnaissance to offer intels for your air force and give you an edge in air combat or air strike. Click the [COLOR_POSITIVE_TEXT]"Perform Long-range Reconnaissance Mission"[ENDCOLOR] on the unit commands panel to offer a temporarily Combat Bonus (+25%) for all of your aircrafts in this turn. SR-71 "Black Bird" flies high in the sky where no fighters can reach, so it is indestructible unless its city is breached. </Text>
+			<Text>SR-71 "Black Bird" is not a fighter but a reconnaissance aircraft. It cannot attack the enemy but can carry out aerial reconnaissance to offer intels for your air force and give you an edge in air combat or air strike. Click the [COLOR_POSITIVE_TEXT]"Perform Long-range Reconnaissance Mission"[ENDCOLOR] on the unit commands panel to offer a temporarily Combat Bonus for your aircrafts at same Plot in this turn. SR-71 "Black Bird" flies high in the sky where no fighters can reach, so it is indestructible unless its city is breached. </Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_SR71_BLACKBIRD_HEADING">
 			<Text>[COLOR_YELLOW]SR-71 "Black Bird"[ENDCOLOR]</Text>
