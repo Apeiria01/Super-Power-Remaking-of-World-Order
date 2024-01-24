@@ -71,7 +71,7 @@
 			<Text>SP-关闭 [COLOR_YELLOW]军团模式[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_CLOSE_HELP">
-			<Text>军团模式：允许建立军团和集团军</Text>
+			<Text>军团模式：允许建立军团和集团军（详情见百科战斗规则页）</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_LOW">
 			<Text>SP-军团模式（低）</Text>

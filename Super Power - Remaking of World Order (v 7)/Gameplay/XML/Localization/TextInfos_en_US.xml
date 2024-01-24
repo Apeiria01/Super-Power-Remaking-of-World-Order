@@ -70,7 +70,7 @@
 			<Text>SP - [COLOR_YELLOW]Corps Mode[ENDCOLOR] - OFF</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_CLOSE_HELP">
-			<Text>Corps Mode: Allow to establish Corps and Armee.</Text>
+			<Text>Corps Mode: Allow to establish Corps and Armee. (see the Encyclopedia Combat Rules page for details)</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_LOW">
 			<Text>SP - Corps Mode (Low)</Text>
