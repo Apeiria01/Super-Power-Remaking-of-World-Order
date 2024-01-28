@@ -13898,10 +13898,6 @@
 			<Text>[ICON_BULLET]对你视野中的所有敌方军事单位造成33%的伤害。</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_PROMOTION_LEGION_GROUP">
-			<Text>集群机动</Text>
-		</Row>
-
 		<Row Tag="TXT_KEY_PROMOTION_SATELLITE_UNIT">
 			<Text>轨道单位</Text>
 		</Row>

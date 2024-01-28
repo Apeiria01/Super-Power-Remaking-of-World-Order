@@ -107,6 +107,8 @@
 							<GridButton ID="ThemPocketResearchAgreement" Hidden="1"/>
 							<GridButton ID="UsPocketMarriage" Hidden="1"/>
 							<GridButton ID="ThemPocketMarriage" Hidden="1"/>
+							<GridButton ID="UsPocketDualEmpire" Hidden="1"/>
+							<GridButton ID="ThemPocketDualEmpire" Hidden="1"/>
 							<Button ID="UsPocketLeaderClose"/>
 							<Button ID="UsPocketCitiesClose"/>
 							<Button ID="UsPocketOtherPlayer"/>

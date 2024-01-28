@@ -1860,6 +1860,7 @@ function ResetDisplay()
 		Controls.UsPocketDefensivePact:SetHide(false);
 		Controls.UsPocketResearchAgreement:SetHide(false);
 		Controls.UsPocketOtherPlayer:SetHide(false);
+		Controls.UsPocketMarriage:SetHide(false);
 		Controls.UsPocketDualEmpire:SetHide(false);
 		Controls.ThemPocketAllowEmbassy:SetHide(false);
 		Controls.ThemPocketOpenBorders:SetHide(false);

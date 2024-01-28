@@ -13712,10 +13712,6 @@
 			<Text>[ICON_BULLET]對你視野中的所有敵方軍事單位造成33%的傷害。</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_PROMOTION_LEGION_GROUP">
-			<Text>集群機動</Text>
-		</Row>
-
 		<Row Tag="TXT_KEY_PROMOTION_SATELLITE_UNIT">
 			<Text>軌道單位</Text>
 		</Row>
