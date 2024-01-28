@@ -186,7 +186,7 @@
 			<Where Name="GOLDEN_AGE_THRESHOLD_CITY_MULTIPLIER" />
 		</Update>
 		<Update>
-			<Set Value="150"/>
+			<Set Value="200"/>
 			<Where Name="GOLDEN_AGE_EACH_GA_ADDITIONAL_HAPPINESS" />
 		</Update>
 		<Update>
