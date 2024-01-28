@@ -88,7 +88,7 @@
 							<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DIPLO_DEF_PACT" ID="UsPocketDefensivePact"/>
 							<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DIPLO_RESCH_AGREEMENT" ID="UsPocketResearchAgreement"/>
 							<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DIPLO_MARRIAGE" ID="UsPocketMarriage"/>
-							<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DUAL_EMPIRE_TREATY" ID="UsTableDualEmpire"/>
+							<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DUAL_EMPIRE_TREATY" ID="UsPocketDualEmpire"/>
 							<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DIPLO_TRADE_AGREEMENT" ID="UsPocketTradeAgreement" Hidden="1"/>
 							<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DIPLO_DECLARATION_OF_FRIENDSHIP" ID="UsPocketDoF"/>
 							<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DIPLO_CITIES" ID="UsPocketCities"/>

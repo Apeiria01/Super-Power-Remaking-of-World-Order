@@ -178,25 +178,8 @@
 			<PediaEntry>TXT_KEY_PROMOTION_SPACECRAFT_PART</PediaEntry>
 		</Row>
 	</UnitPromotions>
-	
-	
-	
-	
 
 	<!--*****************************Legion Numbers*******************************************-->
-	<UnitPromotions>
-		<Row>
-			<Type>PROMOTION_LEGION_GROUP</Type>
-			<Description>TXT_KEY_PROMOTION_LEGION_GROUP</Description>
-			<Help>TXT_KEY_PROMOTION_LEGION_GROUP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>34</PortraitIndex>
-			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_LEGION_GROUP</PediaEntry>
-			<RemoveAfterXTurns>1</RemoveAfterXTurns>
-		</Row>
-	</UnitPromotions>
 	<UnitPromotions>
 		<Row>
 			<Type>PROMOTION_SP_FULL_MOON_STRIKE</Type>

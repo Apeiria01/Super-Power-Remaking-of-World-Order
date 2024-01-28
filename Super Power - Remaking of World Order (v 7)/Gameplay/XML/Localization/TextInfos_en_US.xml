@@ -16011,12 +16011,6 @@
 			<Text>[ICON_BULLET]Cause 33% Damage to all enemy milltary units within your sight regardless of distance. </Text>
 		</Row>
 
-		
-		
-		<Row Tag="TXT_KEY_PROMOTION_LEGION_GROUP">
-			<Text>Group Movement</Text>
-		</Row>
-
 		<Row Tag="TXT_KEY_PROMOTION_SATELLITE_UNIT">
 			<Text>Satellite Unit</Text>
 		</Row>
