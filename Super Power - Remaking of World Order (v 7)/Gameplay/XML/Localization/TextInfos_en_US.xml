@@ -2618,11 +2618,12 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_FISH_FARM_HELP</Tag>
 			<Text>
-				+5%[ICON_FOOD] Food Output for the city. 
-				[NEWLINE][NEWLINE]+1 [ICON_FOOD] Food from each Fishing Net and Workboats worked by this City.
-				[NEWLINE][NEWLINE]Allows for movement of [ICON_FOOD]Food via trade routes.[NEWLINE][NEWLINE]City must be built on the coast.
-				[NEWLINE][NEWLINE]Upon discovering Fertilizer, this kind of building becomes [COLOR_NEGATIVE_TEXT]obsolete[ENDCOLOR] (it is no longer allowed to build and its bonuses are lost). 
-				[NEWLINE][NEWLINE]+1 [ICON_TOURISM] Tourism after discovering Mass Media.
+				[ICON_BULLET]+5%[ICON_FOOD] Food Output for the city. 
+				[NEWLINE][ICON_BULLET]+1 [ICON_FOOD] Food from each Fishing Net and Workboats worked by this City.
+				[NEWLINE][ICON_BULLET]Allows for movement of [ICON_FOOD]Food via trade routes.[NEWLINE][NEWLINE]City must be built on the coast.
+				[NEWLINE][ICON_BULLET]City must built on the coast and have at least an improvement of one of [ICON_RES_FISH] Fish or marine Luxury Resource.
+				[NEWLINE][ICON_BULLET]Upon discovering Fertilizer, this kind of building becomes [COLOR_NEGATIVE_TEXT]obsolete[ENDCOLOR] (it is no longer allowed to build and its bonuses are lost). 
+				[NEWLINE][ICON_BULLET]+1 [ICON_TOURISM] Tourism after discovering Mass Media.
 			</Text>
 		</Row>
 
@@ -3244,7 +3245,7 @@
 
 		<Replace Tag="TXT_KEY_BUILDING_LIGHTHOUSE_HELP">
 			<Text>
-				+1 [ICON_PRODUCTION] Production from every [COLOR_POSITIVE_TEXT]Work Boat[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Atoll[ENDCOLOR] worked by this City.
+				+1 [ICON_PRODUCTION] Production from every [COLOR_POSITIVE_TEXT]marine Luxury Resource[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Atoll[ENDCOLOR] worked by this City.
 				[NEWLINE][NEWLINE]City must be built on the coast.</Text>
 		</Replace>
 

@@ -1000,20 +1000,19 @@
 			<YieldType>YIELD_FOOD</YieldType>
 			<Yield>1</Yield>
 		</Row>
+
 		<Row>
 			<ImprovementType>IMPROVEMENT_FISHFARM_MOD</ImprovementType>
-			<TechType>TECH_FERTILIZER</TechType>
+			<TechType>TECH_COMPASS</TechType>
 			<YieldType>YIELD_FOOD</YieldType>
 			<Yield>1</Yield>
 		</Row>
 		<Row>
 			<ImprovementType>IMPROVEMENT_FISHERY_MOD</ImprovementType>
-			<TechType>TECH_FERTILIZER</TechType>
+			<TechType>TECH_COMPASS</TechType>
 			<YieldType>YIELD_FOOD</YieldType>
 			<Yield>1</Yield>
 		</Row>
-		
-
 
 		<Row>
 			<ImprovementType>IMPROVEMENT_FARM</ImprovementType>

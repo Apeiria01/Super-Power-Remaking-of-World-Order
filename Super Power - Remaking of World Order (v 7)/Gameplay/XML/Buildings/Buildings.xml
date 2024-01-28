@@ -48,7 +48,7 @@
 		<Row>
 			<Type>BUILDING_FISH_FARM</Type>
 			<BuildingClass>BUILDINGCLASS_FISH_FARM</BuildingClass>
-			<Cost>20</Cost>
+			<Cost>10</Cost>
 			<GoldMaintenance>1</GoldMaintenance>
 			<PrereqTech>TECH_FISHERY</PrereqTech>
 			<Description>TXT_KEY_BUILDING_FISH_FARM</Description>

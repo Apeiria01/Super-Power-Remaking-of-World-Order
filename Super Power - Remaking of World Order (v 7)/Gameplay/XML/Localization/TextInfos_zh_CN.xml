@@ -358,7 +358,7 @@
 				[ICON_BULLET]本城市+5%[ICON_FOOD]食物产出。
 				[NEWLINE][ICON_BULLET]渔船、捕捞船+1[ICON_FOOD]食物。
 				[NEWLINE][ICON_BULLET]允许在本国的商路之间输送[ICON_FOOD]食物。
-				[NEWLINE][ICON_BULLET]城市必须沿海。
+				[NEWLINE][ICON_BULLET]城市必须沿海且拥有已开发的[ICON_RES_FISH]鱼群或海上奢侈资源。
 				[NEWLINE][ICON_BULLET]研发化肥之后[COLOR_NEGATIVE_TEXT]过期[ENDCOLOR]（不再提供产出且不能建造）。
 				[NEWLINE][ICON_BULLET]研发大众传媒后+1[ICON_TOURISM]魅力。
 			</Text>
@@ -5224,10 +5224,10 @@
 			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]使用伟人升级集团军需要所在城市拥有兵工厂[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_2">
-			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]组建军团需要所在城市市拥有兵工厂[ENDCOLOR]</Text>
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]组建军团需要所在城市拥有兵工厂[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_3">
-			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]组建集团军需要所在城市市拥有军事基地[ENDCOLOR]</Text>
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]组建集团军需要所在城市拥有军事基地[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_4">
 			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]单位有待选择晋升[ENDCOLOR]</Text>

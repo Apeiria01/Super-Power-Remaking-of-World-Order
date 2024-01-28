@@ -356,9 +356,9 @@
 				[ICON_BULLET]本城市+5%[ICON_FOOD]食物產出。
 				[NEWLINE][ICON_BULLET]漁船、捕撈船+1[ICON_FOOD]食物。
 				[NEWLINE][ICON_BULLET]允許在本國的商路之間輸送[ICON_FOOD]食物。
-				[NEWLINE][ICON_BULLET]城市必須沿海。
+				[NEWLINE][ICON_BULLET]城市必須沿海且擁有已開發的[ICON_RES_FISH]魚群或海上奢侈資源。
 				[NEWLINE][ICON_BULLET]研發化肥之後[COLOR_NEGATIVE_TEXT]過期[ENDCOLOR]（不再提供產出且不能建造）。
-				[NEWLINE][ICON_BULLET]研發大眾傳媒後+1[ICON_TOURISM]旅遊業績。
+				[NEWLINE][ICON_BULLET]研發大眾傳媒後+1[ICON_TOURISM]魅力。
 			</Text>
 		</Row>
 
@@ -5126,10 +5126,10 @@
 			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]使用偉人升級集團軍需要所在城市擁有兵工廠[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_2">
-			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]組建軍團需要所在城市市擁有兵工廠[ENDCOLOR]</Text>
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]組建軍團需要所在城市擁有兵工廠[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_3">
-			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]組建集團軍需要所在城市市擁有軍事基地[ENDCOLOR]</Text>
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]組建集團軍需要所在城市擁有軍事基地[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_4">
 			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]單位有待選擇晉升[ENDCOLOR]</Text>
