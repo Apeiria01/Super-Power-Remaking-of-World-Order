@@ -411,6 +411,27 @@
 		</Row>
 
 		<Row>
+			<BuildingType>BUILDING_FISH_FARM</BuildingType>
+			<ResourceType>RESOURCE_FISH</ResourceType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FISH_FARM</BuildingType>
+			<ResourceType>RESOURCE_CORAL</ResourceType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FISH_FARM</BuildingType>
+			<ResourceType>RESOURCE_CRAB</ResourceType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FISH_FARM</BuildingType>
+			<ResourceType>RESOURCE_WHALE</ResourceType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FISH_FARM</BuildingType>
+			<ResourceType>RESOURCE_PEARLS</ResourceType>
+		</Row>
+
+		<Row>
 			<BuildingType>BUILDING_IRON_PROVIDER</BuildingType>
 			<ResourceType>RESOURCE_IRON</ResourceType>
 		</Row>
@@ -924,6 +945,11 @@
 			<Yield>2</Yield>
 		</Row>-->
 		
+		<Row>
+			<BuildingType>BUILDING_FISH_FARM</BuildingType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
 		<Row>
 			<BuildingType>BUILDING_GRANARY</BuildingType>
 			<YieldType>YIELD_FOOD</YieldType>
@@ -6685,7 +6711,7 @@
 		<Row>
 			<BuildingType>BUILDING_FISH_FARM</BuildingType>
 			<FlavorType>FLAVOR_GROWTH</FlavorType>
-			<Flavor>80</Flavor>
+			<Flavor>100</Flavor>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_GRAIN_MILL</BuildingType>
