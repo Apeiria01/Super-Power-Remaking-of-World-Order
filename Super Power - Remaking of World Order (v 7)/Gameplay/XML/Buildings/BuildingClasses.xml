@@ -1205,15 +1205,6 @@
 			<DefaultBuilding>BUILDING_CIV_S_P_ELE_RESOURCES</DefaultBuilding>
 			<Description>TXT_KEY_BUILDING_CIV_S_P_ELE_RESOURCES</Description>
 		</Row>
-
-		<!--New Build-->
-		<Row>
-			<Type>BUILDINGCLASS_GREEK_OLYMPICS_DUMMY</Type>
-			<DefaultBuilding>BUILDING_GREEK_OLYMPICS_DUMMY</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_GREEK_OLYMPICS</Description>
-		</Row>
-
 	</BuildingClasses>
-
 
 </GameData>

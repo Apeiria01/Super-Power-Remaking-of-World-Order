@@ -3304,16 +3304,9 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_GREEK_OLYMPICS_HELP</Tag>
 			<Text>
-				本城市建造军事单位时+15%[ICON_PRODUCTION]产能。
-				[NEWLINE]新建军事单位+15经验。
-				[NEWLINE]每一个奥林匹克竞技场能使对城邦的基准影响力上升1，最大为20。
-			</Text>
-		</Row>
-
-		<Row>
-			<Tag>TXT_KEY_BUILDING_GREEK_OLYMPICS_DUMMY_HELP</Tag>
-			<Text>
-				对城邦的基准影响力上升1
+				[ICON_BULLET]本城市建造军事单位时+15%[ICON_PRODUCTION]产能。
+				[NEWLINE][ICON_BULLET]新建军事单位+15经验。
+				[NEWLINE][ICON_BULLET]每一个奥林匹克竞技场能使对城邦的基准影响力上升1。
 			</Text>
 		</Row>
 
@@ -14109,6 +14102,9 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_MFC_23">
 			<Text>对所有城邦的[ICON_INFLUENCE]影响力一次性:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_MFAC_23">
+			<Text>对所有城邦的[ICON_INFLUENCE]基准影响力:</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_EMS_5">
 			<Text>传教次数:</Text>

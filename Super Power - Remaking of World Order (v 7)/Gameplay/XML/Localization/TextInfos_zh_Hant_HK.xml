@@ -3240,15 +3240,9 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_GREEK_OLYMPICS_HELP</Tag>
 			<Text>
-				本城市建造軍事單位時+15%[ICON_PRODUCTION]產能。
-				[NEWLINE]新建軍事單位+15經驗。
-				[NEWLINE]每一個奧林匹克競技場能使對城邦的基準影響力上升1，最大為20。
-			</Text>
-		</Row>
-		<Row>
-			<Tag>TXT_KEY_BUILDING_GREEK_OLYMPICS_DUMMY_HELP</Tag>
-			<Text>
-				對城邦的基準影響力上升1。
+				[ICON_BULLET]本城市建造軍事單位時+15%[ICON_PRODUCTION]產能。
+				[NEWLINE][ICON_BULLET]新建軍事單位+15經驗。
+				[NEWLINE][ICON_BULLET]每一個奧林匹克競技場能使對城邦的基準影響力上升1。
 			</Text>
 		</Row>
 
@@ -13919,6 +13913,9 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_MFC_23">
 			<Text>對所有城邦的[ICON_INFLUENCE]影響力一次性:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_MFAC_23">
+			<Text>對所有城邦的[ICON_INFLUENCE]基準影響力:</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_EMS_5">
 			<Text>傳教次數:</Text>

@@ -480,6 +480,7 @@
 			<PortraitIndex>11</PortraitIndex>
 			<IconAtlas>NEWLUXURIES_RESOURCE_ATLAS</IconAtlas>
 			<MilitaryProductionModifier>15</MilitaryProductionModifier>
+			<MinorFriendshipAnchorChange>1</MinorFriendshipAnchorChange>
 		</Row>
 				
 		<Row>
