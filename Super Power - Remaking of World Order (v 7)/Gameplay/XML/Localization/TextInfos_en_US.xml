@@ -180,6 +180,9 @@
 		<Replace Tag="TXT_KEY_PCM22">
 			<Text>Cost of adopting new Policies: </Text>
 		</Replace>
+		<Replace Tag="TXT_KEY_CPCM22">
+			<Text>Cost of adopting new Policies (from Corruption): </Text>
+		</Replace>
 		<Replace Tag="TXT_KEY_PCCM4">
 			<Text>Costs of acquiring new tiles: </Text>
 		</Replace>
@@ -5655,6 +5658,7 @@
 			<Tag>TXT_KEY_BUILDING_ROMAN_SENATE_HELP</Tag>
 			<Text>
 				[ICON_BULLET]Can only be built in in Lv2 Cities.
+				[NEWLINE][ICON_BULLET]-10% Cost of adopting new Policies from Corruption (Cannot be less than 0).
 				[NEWLINE][ICON_BULLET]Elimate the extra [ICON_CULTURE] Culture cost of adopting new Policies created by Lv2 Cities (stacked with the "Representation" Policy effect).
 				[NEWLINE][ICON_BULLET]Eliminates all extra [ICON_HAPPINESS_4] Unhappiness caused by Corruption and Public Security problems.
 			</Text>

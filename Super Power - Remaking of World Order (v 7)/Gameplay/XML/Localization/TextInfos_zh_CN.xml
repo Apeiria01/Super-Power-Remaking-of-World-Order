@@ -2763,7 +2763,7 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_SATRAPS_COURT_HELP">
 			<Text>
-				替代#市政厅[COLOR_NEGATIVE_TEXT]（一级）[ENDCOLOR]，和普通[COLOR_NEGATIVE_TEXT]一级[ENDCOLOR]市政厅相比，
+				替代#市政厅[COLOR_NEGATIVE_TEXT]（一级）[ENDCOLOR]，和普通[COLOR_NEGATIVE_TEXT]一级[ENDCOLOR]市政厅相比：
 				[NEWLINE][ICON_BULLET]无维护费，不消耗额外消费品且不会造成额外政策阈值上涨，没有额外[ICON_HAPPINESS_4]不满。
 				[NEWLINE][ICON_BULLET]每座总督府+2[ICON_HAPPINESS_1]全局快乐，+4%[ICON_GOLDEN_AGE]黄金时代长度。
 			</Text>
@@ -2939,6 +2939,7 @@
 			<Tag>TXT_KEY_BUILDING_ROMAN_SENATE_HELP</Tag>
 			<Text>
 				[ICON_BULLET]只能建造在二级城市。
+				[NEWLINE][ICON_BULLET]来自腐败的新政策花费-10%（该加成不能低于0）。
 				[NEWLINE][ICON_BULLET]消除因低效率城市管理导致的全国[ICON_HAPPINESS_4]不满。
 				[NEWLINE][ICON_BULLET]每6[ICON_CITIZEN]人口+1[ICON_GOLD]维护费。
 			</Text>
@@ -10085,7 +10086,7 @@
 		<!-- **********NUKE Units*******-->
 
 		<Replace Tag="TXT_KEY_UNIT_HELP_ATOMIC_BOMB">
-			<Text>游戏中的第一种核武器，引爆时会杀伤甚至摧毁距离2个区块内的单位核设施，并对城市造成严重破坏，但不能够摧毁城市。原子弹的载机占用三个停机位。不能部署在航空母舰上。</Text>
+			<Text>游戏中的第一种核武器，引爆时会杀伤甚至摧毁距离2个区块内的单位和设施，并对城市造成严重破坏，但不能够摧毁城市。原子弹的载机占用三个停机位。不能部署在航空母舰上。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_UNIT_HELP_NUCLEAR_MISSILE">
@@ -14087,6 +14088,9 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_PCM22">
 			<Text>推行新政策:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CPCM22">
+			<Text>推行新政策（来自腐败）:</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PCCM4">
 			<Text>扩展新区块:</Text>
