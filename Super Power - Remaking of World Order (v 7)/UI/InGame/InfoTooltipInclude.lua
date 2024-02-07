@@ -1140,6 +1140,7 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 	--y	ExtraCityHitPoints = "",
 		GlobalDefenseMod = L"TXT_KEY_GLOBAL1" .. L"TXT_KEY_DM_0" .. "%+i%%[ICON_STRENGTH]",-- TOTO
 		MinorFriendshipChange = L"TXT_KEY_MFC_23" .. "%+i%%",			-- TOTO
+		MinorFriendshipAnchorChange = L"TXT_KEY_MFAC_23" .. "%+i",			-- TOTO
 	--	VictoryPoints = L"TXT_KEY_VP_00",					-- TOTO
 		ExtraMissionarySpreads = L"TXT_KEY_EMS_5" .. " %+i".."[ICON_MISSIONARY]",-- TOTO
 		ReligiousPressureModifier = L"TXT_KEY_RPM_10" .. "%+i%%",		-- TOTO

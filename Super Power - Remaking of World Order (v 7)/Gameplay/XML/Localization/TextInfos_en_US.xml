@@ -201,6 +201,9 @@
 		<Replace Tag="TXT_KEY_MFC_23">
 			<Text>[ICON_INFLUENCE] Influences with all City-States one-time: </Text>
 		</Replace>
+		<Replace Tag="TXT_KEY_MFAC_23">
+			<Text>[ICON_INFLUENCE] Base Influences with all City-States: </Text>
+		</Replace>
 		<Replace Tag="TXT_KEY_EMS_5">
 			<Text>Extra Missionary Spreads: </Text>
 		</Replace>
@@ -6069,20 +6072,11 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_GREEK_OLYMPICS_HELP</Tag>
 			<Text>
-				+15% [ICON_PRODUCTION] Production when building Military Units in this City.
-				[NEWLINE]+15 Experience for Military Unit trained in this city.
-				[NEWLINE]Each Olympic arena can increase the base influence on city-states by 1, up to a maximum of 20.
+				[ICON_BULLET]+15% [ICON_PRODUCTION] Production when building Military Units in this City.
+				[NEWLINE][ICON_BULLET]+15 Experience for Military Unit trained in this city.
+				[NEWLINE][ICON_BULLET]Each Olympic arena can increase the base influence on city-states by 1.
 			</Text>
 		</Row>
-
-		<Row>
-			<Tag>TXT_KEY_BUILDING_GREEK_OLYMPICS_DUMMY_HELP</Tag>
-			<Text>
-				Increase the base influence on city-states by 1.
-			</Text>
-		</Row>
-		
-		
 
 		<Replace Tag="TXT_KEY_BUILDING_MINT">
 			<Text>[ICON_GOLD] Mint</Text>
