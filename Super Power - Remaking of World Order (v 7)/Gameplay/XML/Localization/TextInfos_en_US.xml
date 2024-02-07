@@ -1795,7 +1795,7 @@
 			<Text>[COLOR_POSITIVE_TEXT]Establish Corps[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS">
-			<Text>Combine two same type of Units in this tile into Corps or Consume a Great Prople to Upgrade a Unit: +100% Max. HP, +10% [ICON_STRENGTH] Combat Strength.</Text>
+			<Text>Combine two same type of Units in this tile into Corps or Use a Great Prople to Upgrade a Unit: +100% Max. HP, +10% [ICON_STRENGTH] Combat Strength.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_EXTRA">
 			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]The number of remaining Corps you can Establish : {1_name}[ENDCOLOR]</Text>
@@ -1804,7 +1804,7 @@
 			<Text>[COLOR_POSITIVE_TEXT]Establish Armee[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMEE">
-			<Text>Add one same type Unit in this tile into Corps to become an Armee or Consume a Great Prople to Upgrade a Unit: +100% Max. HP, +15% [ICON_STRENGTH] Combat Strength.</Text>
+			<Text>Add one same type Unit in this tile into Corps to become an Armee or Use a Great Prople to Upgrade a Unit: +100% Max. HP, +15% [ICON_STRENGTH] Combat Strength.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMEE_EXTRA">
 			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]The number of remaining Armee you can Establish : {1_name}[ENDCOLOR]</Text>
@@ -1813,16 +1813,16 @@
 			<Text>[COLOR_POSITIVE_TEXT]Establish Fleet[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_FLEET">
-			<Text>Combine two same type of Units in this tile into Fleet or Consume a Great Prople to Upgrade a Unit: +100% Max. HP, +10% [ICON_STRENGTH] Combat Strength.</Text>
+			<Text>Combine two same type of Units in this tile into Fleet or Use a Great Prople to Upgrade a Unit: +100% Max. HP, +10% [ICON_STRENGTH] Combat Strength.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMADA_SHORT">
 			<Text>[COLOR_POSITIVE_TEXT]Establish Armada[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_ARMADA">
-			<Text>Add one same type Unit in this tile into Fleet to become an Armada or Consume a Great Prople to Upgrade a Unit: +100% Max. HP, +15% [ICON_STRENGTH] Combat Strength.</Text>
+			<Text>Add one same type Unit in this tile into Fleet to become an Armada or Use a Great Prople to Upgrade a Unit: +100% Max. HP, +15% [ICON_STRENGTH] Combat Strength.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_1">
-			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]Consume a Great Prople to Upgrade a Unit need Arsenal in this City[ENDCOLOR]</Text>
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]Use a Great Prople to Upgrade a Unit need Arsenal in this City[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_2">
 			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]Combine two same type of Units in this tile into Corps need Arsenal in this City[ENDCOLOR]</Text>
@@ -1832,6 +1832,9 @@
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_4">
 			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]Unit has Promotions to be selected[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_UNIT_CAN_ESTABLISH_CORPS_OR_ARMEE">
+			<Text>[NEWLINE][COLOR_POSITIVE_TEXT]Can Establish Corps or Armee for Land Unit (Only once) in Corps Mode[ENDCOLOR]</Text>
 		</Row>
 		
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_FULLATTACK_ON_SHORT">
@@ -15449,15 +15452,21 @@
 		
 
 		<Replace Tag="TXT_KEY_PROMOTION_GREAT_GENERAL_HELP" >
-			<Text>[ICON_BULLET]Improve [ICON_STRENGTH] Combat Strength to all [COLOR_POSITIVE_TEXT]land Units[ENDCOLOR] within 2 tiles.
-			[NEWLINE][ICON_BULLET]Can [COLOR_POSITIVE_TEXT]Encourage[ENDCOLOR] an unit to remove all its Debuff conditions by consuming all [ICON_MOVES] MPs of the Great General.
-			[NEWLINE][ICON_BULLET]Immune to Collateral Damage and Splash Damage.</Text>
+			<Text>
+				[ICON_BULLET]Improve [ICON_STRENGTH] Combat Strength to all [COLOR_POSITIVE_TEXT]land Units[ENDCOLOR] within 2 tiles.
+				[NEWLINE][ICON_BULLET]Can [COLOR_POSITIVE_TEXT]Encourage[ENDCOLOR] an unit to remove all its Debuff conditions by consuming all [ICON_MOVES] MPs of the Great General.
+				[NEWLINE][ICON_BULLET]Immune to Collateral Damage and Splash Damage.
+				[NEWLINE][ICON_BULLET]Can Establish Corps or Armee for Land Unit (Only once) in Corps Mode.
+			</Text>
 		</Replace>
 		
 		
 		<Replace Tag="TXT_KEY_PROMOTION_GREAT_ADMIRAL_HELP" >
-			<Text>[ICON_BULLET]Improve [ICON_STRENGTH] Combat Strength to all [COLOR_POSITIVE_TEXT]Naval Units[ENDCOLOR] within 2 tiles.
-			[NEWLINE][ICON_BULLET]Can [COLOR_POSITIVE_TEXT]Encourage[ENDCOLOR] an unit to remove all its Debuff conditions by consuming all [ICON_MOVES] MPs of the Great Admiral.</Text>
+			<Text>
+				[ICON_BULLET]Improve [ICON_STRENGTH] Combat Strength to all [COLOR_POSITIVE_TEXT]Naval Units[ENDCOLOR] within 2 tiles.
+				[NEWLINE][ICON_BULLET]Can [COLOR_POSITIVE_TEXT]Encourage[ENDCOLOR] an unit to remove all its Debuff conditions by consuming all [ICON_MOVES] MPs of the Great Admiral.
+				[NEWLINE][ICON_BULLET]Immune to Collateral Damage and Splash Damage.
+			</Text>
 		</Replace>
 
 
