@@ -2707,7 +2707,7 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_SATRAPS_COURT_HELP">
 			<Text>
-				替代#市政廳[COLOR_NEGATIVE_TEXT]（壹級）[ENDCOLOR]，和普通[COLOR_NEGATIVE_TEXT]一級[ENDCOLOR]市政廳相比，
+				替代#市政廳[COLOR_NEGATIVE_TEXT]（壹級）[ENDCOLOR]，和普通[COLOR_NEGATIVE_TEXT]一級[ENDCOLOR]市政廳相比：
 				[NEWLINE][ICON_BULLET]無維護費，不消耗額外消費品且不會造成額外政策閾值上漲，沒有額外[ICON_HAPPINESS_4]不滿。
 				[NEWLINE][ICON_BULLET]每座總督府+2[ICON_HAPPINESS_1]全局快樂，+4%[ICON_GOLDEN_AGE]黃金時代長度。
 			</Text>
@@ -2882,6 +2882,7 @@
 			<Tag>TXT_KEY_BUILDING_ROMAN_SENATE_HELP</Tag>
 			<Text>
 				[ICON_BULLET]只能建造在二級城市。
+				[NEWLINE][ICON_BULLET]來自腐敗的新政策花費-10%（該加成不能低於0）。
 				[NEWLINE][ICON_BULLET]消除因低效率城市管理導致的全國[ICON_HAPPINESS_4]不滿。
 				[NEWLINE][ICON_BULLET]每6[ICON_CITIZEN]人口+1[ICON_GOLD]維護費。
 			</Text>
@@ -9951,7 +9952,7 @@
 		<!-- **********NUKE Units*******-->
 
 		<Replace Tag="TXT_KEY_UNIT_HELP_ATOMIC_BOMB">
-			<Text>遊戲中的第一種核武器，引爆時會殺傷甚至摧毀距離2個區塊內的單位核設施，並對城市造成嚴重破壞，但不能夠摧毀城市。原子彈的載機佔用三個停機位。不能部署在航空母艦上。</Text>
+			<Text>遊戲中的第一種核武器，引爆時會殺傷甚至摧毀距離2個區塊內的單位和設施，並對城市造成嚴重破壞，但不能夠摧毀城市。原子彈的載機佔用三個停機位。不能部署在航空母艦上。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_UNIT_HELP_NUCLEAR_MISSILE">
@@ -13897,6 +13898,9 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_PCM22">
 			<Text>推行新政策:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CPCM22">
+			<Text>推行新政策（來自腐敗）:</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PCCM4">
 			<Text>擴展新區塊:</Text>

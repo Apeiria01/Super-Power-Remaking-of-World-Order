@@ -1123,6 +1123,7 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		CityConnectionTradeRouteModifier = L"TXT_KEY_CCTRM22" .. "%+i%%[ICON_GOLD]",-- TOTO
 		CapturePlunderModifier = L"TXT_KEY_CPM3" .. "%+i%%[ICON_GOLD]",		-- TOTO
 		PolicyCostModifier = L"TXT_KEY_PCM22" .. "%+i%%[ICON_CULTURE]",		-- TOTO
+		CorruptionPolicyCostModifier = L"TXT_KEY_CPCM22" .. "%+i%%[ICON_CULTURE]",		-- TOTO
 		PlotCultureCostModifier = L"TXT_KEY_PCCM4" .. "%+i%%[ICON_CULTURE]",	-- TOTO
 		GlobalPlotCultureCostModifier = L"TXT_KEY_GLOBAL1" .. L"TXT_KEY_PCCM4" .. "%+i%%[ICON_CULTURE]",-- TOTO
 		PlotBuyCostModifier = L"TXT_KEY_PBCM5" .. "%+i%%[ICON_GOLD]",		-- TOTO

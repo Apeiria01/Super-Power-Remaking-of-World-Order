@@ -80,7 +80,6 @@
 			<IconAtlas>BW_ATLAS_1</IconAtlas>
 			<GoldenAgeModifier>4</GoldenAgeModifier>
 			<PortraitIndex>53</PortraitIndex>
-			<!--<PolicyCostModifier>5</PolicyCostModifier>-->
 		</Row>
 		
 		
@@ -100,7 +99,7 @@
 			<IconAtlas>SPBalance_ATLAS</IconAtlas>
 			<PortraitIndex>56</PortraitIndex>
 			<Happiness>-2</Happiness>
-			<PolicyCostModifier>5</PolicyCostModifier>
+			<CorruptionPolicyCostModifier>5</CorruptionPolicyCostModifier>
 		</Row>
 		<Row>
 			<Type>BUILDING_CITY_HALL_LV2</Type>
@@ -118,7 +117,7 @@
 			<IconAtlas>SPBalance_ATLAS</IconAtlas>
 			<PortraitIndex>57</PortraitIndex>
 			<Happiness>-4</Happiness>
-			<PolicyCostModifier>10</PolicyCostModifier>
+			<CorruptionPolicyCostModifier>10</CorruptionPolicyCostModifier>
 			<UnhappinessModifier>2</UnhappinessModifier>
 		</Row>
 		<Row>
@@ -137,7 +136,7 @@
 			<IconAtlas>SPBalance_ATLAS</IconAtlas>
 			<PortraitIndex>58</PortraitIndex>
 			<Happiness>-6</Happiness>
-			<PolicyCostModifier>20</PolicyCostModifier>
+			<CorruptionPolicyCostModifier>20</CorruptionPolicyCostModifier>
 			<UnhappinessModifier>3</UnhappinessModifier>
 		</Row>
 		<Row>
@@ -156,7 +155,7 @@
 			<IconAtlas>SPBalance_ATLAS</IconAtlas>
 			<PortraitIndex>59</PortraitIndex>
 			<Happiness>-8</Happiness>
-			<PolicyCostModifier>20</PolicyCostModifier>
+			<CorruptionPolicyCostModifier>20</CorruptionPolicyCostModifier>
 			<UnhappinessModifier>4</UnhappinessModifier>
 			<UnitMaxExperienceLocal>60</UnitMaxExperienceLocal>
 		</Row>
@@ -176,7 +175,7 @@
 			<IconAtlas>SPBalance_ATLAS</IconAtlas>
 			<PortraitIndex>60</PortraitIndex>
 			<Happiness>-10</Happiness>
-			<PolicyCostModifier>25</PolicyCostModifier>
+			<CorruptionPolicyCostModifier>25</CorruptionPolicyCostModifier>
 			<UnhappinessModifier>5</UnhappinessModifier>
 			<UnitMaxExperienceLocal>30</UnitMaxExperienceLocal>
 		</Row>
@@ -256,7 +255,7 @@
 			<IconAtlas>SPWondersUB_ATLAS</IconAtlas>
 			<PortraitIndex>38</PortraitIndex>
 			<!--<Happiness>4</Happiness>-->
-			<PolicyCostModifier>-10</PolicyCostModifier>
+			<CorruptionPolicyCostModifier>-10</CorruptionPolicyCostModifier>
 			<UnhappinessModifier>-2</UnhappinessModifier>
 		</Row>
 		
@@ -275,7 +274,7 @@
 			<IconAtlas>SPBuildings_ATLAS</IconAtlas>
 			<PortraitIndex>49</PortraitIndex>
 			<NeverCapture>true</NeverCapture>
-			<PolicyCostModifier>-5</PolicyCostModifier>
+			<CorruptionPolicyCostModifier>-5</CorruptionPolicyCostModifier>
 			<UnhappinessModifier>-3</UnhappinessModifier>
 		</Row>
 		<Row>
@@ -294,7 +293,7 @@
 			<IconAtlas>EXPANSION_BW_ATLAS_1</IconAtlas>
 			<NeverCapture>true</NeverCapture>
 			<PortraitIndex>11</PortraitIndex>
-			<PolicyCostModifier>-5</PolicyCostModifier>
+			<CorruptionPolicyCostModifier>-5</CorruptionPolicyCostModifier>
 			<UnhappinessModifier>-4</UnhappinessModifier>
 			<UnitMaxExperienceLocal>30</UnitMaxExperienceLocal>
 		</Row>
@@ -314,7 +313,7 @@
 			<IconAtlas>EXPANSION_BW_ATLAS_2</IconAtlas>
 			<PortraitIndex>12</PortraitIndex>
 			<NeverCapture>true</NeverCapture>
-			<PolicyCostModifier>-10</PolicyCostModifier>
+			<CorruptionPolicyCostModifier>-10</CorruptionPolicyCostModifier>
 			<UnhappinessModifier>-5</UnhappinessModifier>
 			<UnitMaxExperienceLocal>30</UnitMaxExperienceLocal>
 		</Row>
