@@ -979,19 +979,6 @@ local CorpsID = GameInfo.UnitPromotions["PROMOTION_CORPS_1"].ID
 local ArmeeID = GameInfo.UnitPromotions["PROMOTION_CORPS_2"].ID
 local iArsenal = GameInfoTypes["BUILDINGCLASS_ARSENAL"]
 local iMilitaryBase = GameInfoTypes["BUILDINGCLASS_MILITARY_BASE"]
-function bUnitCanEstablishCorps(unit)
-    local sDomainType = GameInfo.Units[unit:GetUnitType()].Domain
-    if unit:IsHasPromotion(ArmeeID)
-    --only land unit can establish corps SP8.0
-    or sDomainType ~= "DOMAIN_LAND"
-    or unit:GetPlot():IsWater()
-    --CitadelUnits can't establish
-    or unit:IsEmbarked() or unit:IsImmobile() or not unit:CanMove()
-    then
-        return false
-    end
-    return true
-end
 local tUnit = nil;
 local nUnit = nil;
 -- Establish Corps & Armee
@@ -1009,9 +996,9 @@ EstablishCorpsButton = {
 		local city = plot:GetPlotCity() or plot:GetWorkingCity();
 
 		if player:GetDomainTroopsActive() <= 0
-        or plot:GetNumUnits() ~= 2
+        or plot:GetNumUnits() ~= 2 or plot:IsWater()
 		or city == nil or city:GetOwner() ~= playerID
-		or not bUnitCanEstablishCorps(unit)
+		or not (unit:IsCanEstablishCorps() or unit:IsCanBeEstablishedCorps())
 		then
 			return false
 		end
@@ -1019,19 +1006,16 @@ EstablishCorpsButton = {
 		tUnit = nil;
 		nUnit = nil;
 
-		if unit:GetUnitClassType() == GameInfo.UnitClasses.UNITCLASS_GREAT_GENERAL.ID 
-		or unit:GetUnitClassType() == GameInfo.UnitClasses.UNITCLASS_GREAT_ADMIRAL.ID 
-		then
+        --Great People
+		if unit:IsCanEstablishCorps() then
 			nUnit = unit;
-		elseif unit:IsCombatUnit() then
+        --Combat Unit
+        else
+            tUnit = unit;
             if player:GetBuildingClassCount(iArsenal) <= 0 then
                 return false
             end
-			tUnit = unit;
-		else
-            --Other civilians don't need it
-			return false
-		end
+        end
 		
 		for i = 0, plot:GetNumUnits() - 1, 1 do
 			local iUnit = plot:GetUnit(i)
@@ -1042,7 +1026,7 @@ EstablishCorpsButton = {
                 end
                 --unit is Great Person
                 if tUnit == nil then
-                    if not bUnitCanEstablishCorps(iUnit) then
+                    if not iUnit:IsCanBeEstablishedCorps() then
                         return false
                     end
                     tUnit = iUnit
@@ -1096,13 +1080,13 @@ EstablishCorpsButton = {
 		local playerID = unit:GetOwner()
         local player = Players[playerID]
 
-		if unit:GetUnitClassType() == GameInfo.UnitClasses.UNITCLASS_GREAT_GENERAL.ID 
-		or unit:GetUnitClassType() == GameInfo.UnitClasses.UNITCLASS_GREAT_ADMIRAL.ID 
+		if unit:IsCanEstablishCorps()
 		then
 			for i = 0, plot:GetNumUnits() - 1, 1 do
 				local iUnit = plot:GetUnit(i)
 				if iUnit:IsCombatUnit()
-				and not iUnit:IsHasPromotion(ArmeeID) 
+				and not iUnit:IsHasPromotion(ArmeeID)
+                and iUnit ~= unit
 				then
 					if iUnit:IsHasPromotion(CorpsID) and not city:IsHasBuildingClass(iArsenal) then
                         --Use a Great Prople to Upgrade a Unit need Arsenal in this City
@@ -1184,7 +1168,8 @@ EstablishCorpsButton = {
             end
             --kill Great People
             if tUnit ~= unit and nUnit ~= unit then
-                unit:Kill();
+                unit:ChangeNumEstablishCorps(-1);
+                unit:SetMoves(0);
             end
         end
     end

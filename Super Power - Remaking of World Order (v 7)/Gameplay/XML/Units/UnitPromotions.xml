@@ -58,6 +58,7 @@
 			<PediaEntry>TXT_KEY_PROMOTION_CORPS_2</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
 			<IsArmee>true</IsArmee>
+			<CannotBeEstablishedCorps>true</CannotBeEstablishedCorps>
 		</Row>
 
 		<Row>
@@ -718,6 +719,7 @@
 			<PediaEntry>TXT_KEY_PROMOTION_CITADEL_DEFENSE</PediaEntry>
 			<FriendlyLandsModifier>25</FriendlyLandsModifier>
 			<OutsideFriendlyLandsModifier>-25</OutsideFriendlyLandsModifier>
+			<CannotBeEstablishedCorps>true</CannotBeEstablishedCorps>
 		</Row>
 
 		<Row>
@@ -4667,6 +4669,7 @@
 			<NeutralHealChange>25</NeutralHealChange>
 			<CollateralDamageImmune>true</CollateralDamageImmune>
 			<SplashDamageImmune>true</SplashDamageImmune>
+			<NumEstablishCorps>1</NumEstablishCorps>
 		</Row>
 
 	</UnitPromotions>
