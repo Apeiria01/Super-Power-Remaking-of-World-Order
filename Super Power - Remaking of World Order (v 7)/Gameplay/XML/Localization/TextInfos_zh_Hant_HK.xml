@@ -715,7 +715,7 @@
 		<Replace Tag="TXT_KEY_BUILDING_PAPER_MAKER_HELP">
 			<Text>
 				允許在本國的商路之間輸送[ICON_PRODUCTION]生產力。該建築不會過期。
-				[NEWLINE][NEWLINE]每一座造紙坊使全國範圍內的單位、建築和項目產能花費-2%，這個效果的上限是-30%。
+				[NEWLINE][NEWLINE]每一座造紙坊使全國範圍內的建築和項目產能花費-2%，這個效果的上限是-30%。
 				[NEWLINE][NEWLINE]研發因特網後+2[ICON_TOURISM]旅遊業績。
 			</Text>
 		</Replace>
