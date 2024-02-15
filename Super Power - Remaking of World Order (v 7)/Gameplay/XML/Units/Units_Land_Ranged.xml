@@ -1275,10 +1275,6 @@
 		</Row>
 		<Row>
 			<UnitType>UNIT_CHINESE_CHUKONU</UnitType>
-			<PromotionType>PROMOTION_SECOND_ATTACK</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_CHINESE_CHUKONU</UnitType>
 			<PromotionType>PROMOTION_ACCURACY_1</PromotionType>
 		</Row>
 		<Row>

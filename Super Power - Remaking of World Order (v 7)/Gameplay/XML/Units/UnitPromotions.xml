@@ -79,15 +79,17 @@
 		<Row>
 			<Type>PROMOTION_ATTACK_COST_HALF</Type>
 			<Description>TXT_KEY_PROMOTION_ATTACK_COST_HALF</Description>
-			<Help>TXT_KEY_PROMOTION_ATTACK_COST_HALF</Help>
+			<Help>TXT_KEY_PROMOTION_ATTACK_COST_HALF_HELP_TEXT</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OrderPriority>1</OrderPriority>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PortraitIndex>42</PortraitIndex>
+			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_ATTACK_COST_HALF</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
 			<RangeAttackCostModifier>-50</RangeAttackCostModifier>
+			<CanMoveAfterAttacking>true</CanMoveAfterAttacking>
+			<ExtraAttacks>1</ExtraAttacks>
 		</Row>
 		
 		<!--*****************************Heroic Carrier*******************************************-->
