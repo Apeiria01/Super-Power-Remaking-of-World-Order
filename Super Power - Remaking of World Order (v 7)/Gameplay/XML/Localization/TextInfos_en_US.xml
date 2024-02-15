@@ -17115,8 +17115,8 @@
 		<Replace Tag="TXT_KEY_CIV5_HUN_HORSE_ARCHER_HELP_TEXT">
 			<Text>Every time you kill an enemy, +2 melee and long-range combat strength. The accumulated combat strength upgrade can be inherited, but cannot be increased. {TXT_KEY_PROMOTION_HITANDRUN_HELP}</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_EXTRA_MOVE_HALF">
-			<Text>+0.25 Moves</Text>
+		<Replace Tag="TXT_KEY_PROMOTION_ATTACK_COST_HALF">
+			<Text>Only consume half Moves when Range Attack.</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_PRODUCTION_NEEDED_UNIT_MODIFIER">

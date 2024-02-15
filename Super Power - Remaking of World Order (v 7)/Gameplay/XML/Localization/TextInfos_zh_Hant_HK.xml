@@ -15176,8 +15176,8 @@
 			<Text>每殺死一名敵軍，+2近戰和遠程戰鬥力，積累的戰鬥力升級可繼承，但是不能再增加。 {TXT_KEY_PROMOTION_HITANDRUN_HELP}</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_PROMOTION_EXTRA_MOVE_HALF">
-			<Text>移動力+0.25</Text>
+		<Replace Tag="TXT_KEY_PROMOTION_ATTACK_COST_HALF">
+			<Text>遠程攻擊只消耗一半移動力</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_PRODUCTION_NEEDED_UNIT_MODIFIER">

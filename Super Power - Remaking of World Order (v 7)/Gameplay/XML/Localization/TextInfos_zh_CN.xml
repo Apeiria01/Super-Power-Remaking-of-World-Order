@@ -15377,8 +15377,8 @@
 			<Text>每杀死一名敌军，+2近战和远程战斗力，积累的战斗力升级可继承，但是不能再增加。{TXT_KEY_PROMOTION_HITANDRUN_HELP}</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_PROMOTION_EXTRA_MOVE_HALF">
-			<Text>移动力+0.25</Text>
+		<Replace Tag="TXT_KEY_PROMOTION_ATTACK_COST_HALF">
+			<Text>远程攻击只消耗一半移动力</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_PRODUCTION_NEEDED_UNIT_MODIFIER">

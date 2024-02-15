@@ -1287,15 +1287,7 @@
 		</Row>
 		<Row>
 			<UnitType>UNIT_CHINESE_CHUKONU</UnitType>
-			<PromotionType>PROMOTION_SPAWN_GENERALS_II</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_CHINESE_CHUKONU</UnitType>
-			<PromotionType>PROMOTION_GENERAL_STACKING</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_CHINESE_CHUKONU</UnitType>
-			<PromotionType>PROMOTION_EXTRA_MOVE_HALF</PromotionType>
+			<PromotionType>PROMOTION_ATTACK_COST_HALF</PromotionType>
 		</Row>
 
 		<Row>
