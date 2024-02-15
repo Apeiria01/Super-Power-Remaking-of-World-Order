@@ -15378,7 +15378,13 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_PROMOTION_ATTACK_COST_HALF">
-			<Text>远程攻击只消耗一半移动力</Text>
+			<Text>连弩</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_ATTACK_COST_HALF_HELP_TEXT">
+			<Text>
+				[ICON_BULLET]+1额外攻击次数。
+				[NEWLINE][ICON_BULLET]远程攻击只消耗一半移动力。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_PRODUCTION_NEEDED_UNIT_MODIFIER">

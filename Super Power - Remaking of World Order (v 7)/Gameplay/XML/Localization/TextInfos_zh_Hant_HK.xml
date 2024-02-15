@@ -15177,7 +15177,13 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_PROMOTION_ATTACK_COST_HALF">
-			<Text>遠程攻擊只消耗一半移動力</Text>
+			<Text>連弩</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_ATTACK_COST_HALF_HELP_TEXT">
+			<Text>
+				[ICON_BULLET]+1額外攻擊次數。
+				[NEWLINE][ICON_BULLET]遠程攻擊只消耗一半移動力。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_PRODUCTION_NEEDED_UNIT_MODIFIER">
