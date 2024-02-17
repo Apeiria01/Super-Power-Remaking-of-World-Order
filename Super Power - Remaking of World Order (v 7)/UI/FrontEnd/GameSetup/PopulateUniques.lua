@@ -185,20 +185,6 @@ if not EUI then
 					elseif bnw_mode and id == TradeableItems.TRADE_ITEM_VOTE_COMMITMENT then
 						g_deal:AddVoteCommitment( fromPlayerID, item[4], item[5], item[6], item[7] )
 					end
-				else -- civ be
-					if     id == TradeableItems.TRADE_ITEM_ENERGY then
-						g_deal:AddGoldTrade( fromPlayerID, item[4] )
-					elseif id == TradeableItems.TRADE_ITEM_ENERGY_PER_TURN then
-						g_deal:AddGoldPerTurnTrade( fromPlayerID, item[4], item[2] )
-					elseif id == TradeableItems.TRADE_ITEM_ALLIANCE then
-						g_deal:AddAlliance( fromPlayerID, item[2] )
-					elseif id == TradeableItems.TRADE_ITEM_COOPERATION_AGREEMENT then
-						g_deal:AddCooperationAgreement( fromPlayerID )
-					elseif id == TradeableItems.TRADE_ITEM_FAVOR then
-						g_deal:AddFavorTrade( fromPlayerID, item[4] )
-					elseif id == TradeableItems.TRADE_ITEM_RESEARCH_PER_TURN then
-						g_deal:AddResearchPerTurnTrade( fromPlayerID, item[4], item[2] )
-					end
 				end
 			end
 			--print( "Restored deal#", #g_savedDealStack ) g_deal:ResetIterator() repeat local item = { g_deal:GetNextItem() } print( unpack(item) ) until #item < 1

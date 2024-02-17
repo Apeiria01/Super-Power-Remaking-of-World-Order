@@ -83,9 +83,9 @@
 					<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DIPLO_DEF_PACT" ID="UsPocketDefensivePact"/>
 					<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DIPLO_RESCH_AGREEMENT" ID="UsPocketResearchAgreement"/>
 					<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DIPLO_TRADE_AGREEMENT" ID="UsPocketTradeAgreement" Hidden="1"/>
-					<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DIPLO_CITIES" ID="UsPocketCities"/>
 					<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DIPLO_MARRIAGE" ID="UsPocketMarriage"/>
 					<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DUAL_EMPIRE_TREATY" ID="UsPocketDualEmpire"/>
+					<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DIPLO_CITIES" ID="UsPocketCities"/>
 					<Button Style="TradeItemButton" Anchor="L,C" String="[ICON_MINUS] TXT_KEY_DIPLO_OTHER_PLAYERS" ID="UsPocketOtherPlayer"/>
 					<Stack Anchor="L,T" Offset="0,0" Size="128,0" StackGrowth="Bottom" Padding="0" Hidden="0" ID="UsPocketOtherPlayerStack">
 						<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DIPLO_MAKE_PEACE_WITH" TextOffset="30,0" ID="UsPocketOtherPlayerPeace"/>
@@ -131,9 +131,9 @@
 					<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DIPLO_DEF_PACT" ID="ThemPocketDefensivePact"/>
 					<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DIPLO_RESCH_AGREEMENT" ID="ThemPocketResearchAgreement"/>
 					<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DIPLO_TRADE_AGREEMENT" ID="ThemPocketTradeAgreement" Hidden="1"/>
-					<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DIPLO_CITIES" ID="ThemPocketCities"/>
 					<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DIPLO_MARRIAGE" ID="ThemPocketMarriage"/>
 					<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DUAL_EMPIRE_TREATY" ID="ThemPocketDualEmpire"/>
+					<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DIPLO_CITIES" ID="ThemPocketCities"/>
 					<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DIPLO_OTHER_PLAYERS" ID="ThemPocketOtherPlayer"/>
 					<Stack Anchor="L,T" Offset="0,0" Size="128,0" StackGrowth="Bottom" Padding="0" Hidden="0" ID="ThemPocketOtherPlayerStack">
 						<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DIPLO_MAKE_PEACE_WITH" TextOffset="30,0" ID="ThemPocketOtherPlayerPeace"/>

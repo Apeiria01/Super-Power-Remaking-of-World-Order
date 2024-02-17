@@ -17394,21 +17394,15 @@
 		</Row>
 		<Row Tag="TXT_KEY_DIPLOMACY_DUAL_EMPIRE_TREATY_BODY">
 			<Text>
-				Available only in Austria. [NEWLINE][NEWLINE]
-				1. Prerequisite:
-				[NEWLINE]i. You are stronger than the opponent, and your population and number of
-				cities are greater than or equal to twice that of the opponent.
-				[NEWLINE]ii. A game can only be completed once
-				[NEWLINE]iii. Completed two or more diplomatic marriages in history
-				[NEWLINE][NEWLINE]
-
-				2. After reaching an agreement, the effect will be:
-				[NEWLINE]i. Directly annex all the opponent's cities and treat them as self-built
-				cities.
-				[NEWLINE]ii. The opponent's current capital is considered your second capital, and
-				the centrifugal tendency of cities across the country will be the lower value
-				calculated based on the two capitals.
-				[NEWLINE]iii. Can obtain the other party’s UU UB UI
+				Available only in Austria. 
+				[NEWLINE][NEWLINE]1. Prerequisite:
+				[NEWLINE][ICON_BULLET]You are stronger than the opponent, and your population and number of cities are greater than or equal to twice that of the opponent.
+				[NEWLINE][ICON_BULLET]A game can only be completed once.
+				[NEWLINE][ICON_BULLET]Completed two or more diplomatic marriages in history.
+				[NEWLINE][NEWLINE]2. After reaching an agreement, the effect will be:
+				[NEWLINE][ICON_BULLET]Directly annex all the opponent's cities and treat them as self-built cities.
+				[NEWLINE][ICON_BULLET]The opponent's current capital is considered your second capital, and the centrifugal tendency of cities across the country will be the lower value calculated based on the two capitals.
+				[NEWLINE][ICON_BULLET]Can obtain the other party’s UU UB UI.
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_DIPLOMACY_DUAL_EMPIRE_TREATY_ADV_QUEST">

@@ -2779,6 +2779,12 @@ if Game then
 			[ TradeableItems.TRADE_ITEM_RESEARCH_AGREEMENT or-1] = function( from, item )
 				return ScratchDeal:AddResearchAgreement( from, item[2] )
 			end,
+			[ TradeableItems.TRADE_ITEM_DIPLOMATIC_MARRIAGE or-1] = function( from, item )
+				return ScratchDeal:AddDiplomaticMarriage( from, item[2] )
+			end,
+			[ TradeableItems.TRADE_ITEM_DUAL_EMPIRE_TREATY or-1] = function( from, item )
+				return ScratchDeal:AddDualEmpireTreaty( from )
+			end,
 			[ TradeableItems.TRADE_ITEM_ALLOW_EMBASSY or-1] = function( from )
 				return ScratchDeal:AddAllowEmbassy( from )
 			end,
@@ -2787,25 +2793,6 @@ if Game then
 			end,
 			[ TradeableItems.TRADE_ITEM_VOTE_COMMITMENT or-1] = function( from, item )
 				return ScratchDeal:AddVoteCommitment( from, item[4], item[5], item[6], item[7] )
-			end,
-			-- civ be
-			[ TradeableItems.TRADE_ITEM_ENERGY or-1] = function( from, item )
-				return ScratchDeal:AddGoldTrade( from, item[4] )
-			end,
-			[ TradeableItems.TRADE_ITEM_ENERGY_PER_TURN or-1] = function( from, item )
-				return ScratchDeal:AddGoldPerTurnTrade( from, item[4], item[2] )
-			end,
-			[ TradeableItems.TRADE_ITEM_ALLIANCE or-1] = function( from, item )
-				return ScratchDeal:AddAlliance( from, item[2] )
-			end,
-			[ TradeableItems.TRADE_ITEM_COOPERATION_AGREEMENT or-1] = function( from )
-				return ScratchDeal:AddCooperationAgreement( from )
-			end,
-			[ TradeableItems.TRADE_ITEM_FAVOR or-1] = function( from, item )
-				return ScratchDeal:AddFavorTrade( from, item[4] )
-			end,
-			[ TradeableItems.TRADE_ITEM_RESEARCH_PER_TURN or-1] = function( from, item )
-				return ScratchDeal:AddResearchPerTurnTrade( from, item[4], item[2] )
 			end,
 			-- cdf / cp / cbp
 			[ TradeableItems.TRADE_ITEM_VASSALAGE or-1] = function( from )
@@ -2863,7 +2850,7 @@ if Game then
 						print( "Cannot restore deal trade", unpack(item) )
 					end
 				end
-		--print( "Restored deal#", #g_savedDealStack ) ScratchDeal:ResetIterator() repeat local item = { ScratchDeal:GetNextItem() } print( unpack(item) ) until #item < 1
+			--print( "Restored deal#", #g_savedDealStack ) ScratchDeal:ResetIterator() repeat local item = { ScratchDeal:GetNextItem() } print( unpack(item) ) until #item < 1
 			else
 				print( "Cannot pop scratch deal" )
 			end
@@ -3749,7 +3736,7 @@ if Game then
 				isTradeable = ScratchDeal:IsPossibleToTradeItem( playerID, activePlayerID, TradeableItems.TRADE_ITEM_TRADE_AGREEMENT, g_dealDuration )
 				isActiveDeal = activeTeam:IsHasTradeAgreement(teamID)
 				if isTradeable or isActiveDeal then
-					insert( treaties, negativeOrPositiveTextColor[isActiveDeal] .. "[ICON_RESEARCH]"
+					insert( treaties, negativeOrPositiveTextColor[isActiveDeal] .. "[ICON_GOLD]"
 							.. L"TXT_KEY_DIPLO_TRADE_AGREEMENT":lower()
 							.. "[ENDCOLOR]" .. GetDealTurnsRemaining( TradeableItems.TRADE_ITEM_TRADE_AGREEMENT )
 					)

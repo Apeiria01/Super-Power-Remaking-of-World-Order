@@ -395,6 +395,7 @@
 			<AudioIntro>AS2D_TECH_CURRENCY</AudioIntro>
 			<AudioIntroHeader>AS2D_HEADING_TECH_CURRENCY</AudioIntroHeader>
 			<!--<InternationalTradeRoutesChange>1</InternationalTradeRoutesChange>-->
+			<!--<TradeAgreementTradingAllowed>true</TradeAgreementTradingAllowed>-->
 		</Row>
 		<Row>
 			<Type>TECH_ENGINEERING</Type>

@@ -15454,16 +15454,15 @@
 		</Row>
 		<Row Tag="TXT_KEY_DIPLOMACY_DUAL_EMPIRE_TREATY_BODY">
 			<Text>
-				僅奧地利可用。 [NEWLINE][NEWLINE]
-				1. 前提：
-				[NEWLINE]i. 你比對方強大，人口和城市數量都大於等於對方的兩倍
-				[NEWLINE]ii. 一場比賽只能完成一次
-				[NEWLINE]iii. 歷史上完成過兩次或以上的外交聯姻
-				[NEWLINE][NEWLINE]
-				2. 達成協定後，效果：
-				[NEWLINE]i. 直接吞併對方所有城市，並視為自建城市。
-				[NEWLINE]ii. 對方目前首都被認為你的第二首都，全國城市的離心傾向將取雙首都計算的較低值。
-				[NEWLINE]iii. 可取得對方的UU UB UI
+				僅奧地利可用。
+				[NEWLINE][NEWLINE]前提條件：
+				[NEWLINE][ICON_BULLET]妳比對方強大，人口和城市數量均大於等於對方的兩倍
+				[NEWLINE][ICON_BULLET]歷史上完成過兩次或以上的外交聯姻
+				[NEWLINE][ICON_BULLET]壹局遊戲僅能完成壹次
+				[NEWLINE][NEWLINE]達成協定後：
+				[NEWLINE][ICON_BULLET]吞並對方所有城市，並且視為自建城市
+				[NEWLINE][ICON_BULLET]對方當前首都被認為妳的第二首都，全國城市的離心傾向將取按雙首都計算的較低值
+				[NEWLINE][ICON_BULLET]能夠建造對方的獨特單位、建築和設施
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_DIPLOMACY_DUAL_EMPIRE_TREATY_ADV_QUEST">
