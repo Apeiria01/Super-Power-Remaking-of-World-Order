@@ -745,8 +745,11 @@ function onBuyFood()
 
 	local pCapitalCity = pActivePlayer:GetCapitalCity();
 	local iFood = pCapitalCity:GrowthThreshold() * iFoodGrowthRate / 100;
-	pCapitalCity:ChangeFood(iFood);
-	pActivePlayer:ChangeGold(-iFood * iFoodPrice);
+	--pCapitalCity:ChangeFood(iFood);
+	pCapitalCity:SendAndExecuteLuaFunction("CvLuaCity::lChangeFood", iFood)
+	--pActivePlayer:ChangeGold(-iFood * iFoodPrice);
+	pActivePlayer:SendAndExecuteLuaFunction("CvLuaPlayer::lChangeGold", -iFood * iFoodPrice)
+
 	save(pActivePlayer, "iLastBuyFoodTurn", Game.GetGameTurn());
 	Controls.VeniceBuyFoodButton:SetHide(true);
 
