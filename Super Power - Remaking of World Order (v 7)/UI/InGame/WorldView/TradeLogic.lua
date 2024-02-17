@@ -1,8 +1,32 @@
-----------------------------------------------------------------
-----------------------------------------------------------------
+--==========================================================
+-- Modified by bc1 from 1.0.3.276 code using Notepad++
+-- code is common using IsCiv5notVanilla and IsCiv5BNW switches
+-- show missing cash for trade agreements
+--==========================================================
 include("IconSupport");
 include("InstanceManager");
 include("SupportFunctions");
+
+--==========================================================
+-- Minor lua optimizations
+--==========================================================
+
+local IsCiv5 = InStrategicView ~= nil
+local IsCiv5BNW = Game.GetActiveLeague ~= nil
+local IsCiv5notVanilla = Game.GetReligionName ~= nil
+local IsLeagues = IsCiv5BNW and not Game.IsOption("GAMEOPTION_NO_LEAGUES")
+
+local ipairs = ipairs
+local huge = math.huge
+local min = math.min
+local pairs = pairs
+local print = print
+local insert = table.insert
+local tonumber = tonumber
+local L = Locale.ConvertTextKey
+
+Controls.UsGlass = Controls.UsPanel
+Controls.ThemGlass = Controls.ThemPanel
 
 local g_UsTableCitiesIM                  = InstanceManager:new("CityInstance", "Button", Controls.UsTableCitiesStack);
 local g_UsPocketCitiesIM                 = InstanceManager:new("CityInstance", "Button", Controls.UsPocketCitiesStack);
@@ -20,3638 +44,2166 @@ local g_bNoChangeWar                     = Game.IsOption(GameOptionTypes.GAMEOPT
 ----------------------------------------------------------------
 -- local storage
 ----------------------------------------------------------------
-local g_Deal                             = UI.GetScratchDeal();
-local g_iDiploUIState;
-local g_bPVPTrade;
-local g_bTradeReview                     = false;
-local g_iNumOthers;
-local g_bEnableThirdParty                = true;
+local g_Deal = UI.GetScratchDeal()
+local g_diploUIStateID
+local g_PVPTrade
+local g_bTradeReview = false
+local g_iNumOthers
+local g_OfferIsFixed = false	-- Is the human allowed to change the offer?  Set to true when the AI is demanding or making a request
+local g_bEnableThirdParty = not( Game.IsOption( GameOptionTypes.GAMEOPTION_ALWAYS_WAR ) or Game.IsOption( GameOptionTypes.GAMEOPTION_ALWAYS_PEACE ) or Game.IsOption( GameOptionTypes.GAMEOPTION_NO_CHANGING_WAR_PEACE ) )
 
-local g_iConcessionsPreviousDiploUIState = -1;
-local g_bHumanOfferingConcessions        = false;
+local g_iConcessionsPreviousDiploUIState = -1
+local g_bHumanOfferingConcessions = false
 
-local g_iDealDuration                    = Game.GetDealDuration();
-local g_iPeaceDuration                   = Game.GetPeaceDuration();
+local g_bMessageFromDiploAI = false
+local g_bAIMakingOffer = false
 
-local g_iUs                              = -1; --Game.GetActivePlayer();
-local g_iThem                            = -1;
-local g_pUs                              = -1;
-local g_pThem                            = -1;
-local g_iUsTeam                          = -1;
-local g_iThemTeam                        = -1;
-local g_pUsTeam                          = -1;
-local g_pThemTeam                        = -1;
-local g_UsPocketResources                = {};
-local g_ThemPocketResources              = {};
-local g_UsTableResources                 = {};
-local g_ThemTableResources               = {};
-local g_LuxuryList                       = {};
-local g_LeagueVoteList                   = {};
+local g_iDealDuration = Game.GetDealDuration()
+local g_iPeaceDuration = Game.GetPeaceDuration and Game.GetPeaceDuration() or GameDefines.PEACE_TREATY_LENGTH or 10
 
-local g_bMessageFromDiploAI              = false;
-local g_bAIMakingOffer                   = false;
+local g_iUs = -1 --Game.GetActivePlayer()
+local g_iThem = -1
+local g_UsPocketResources = {}
+local g_ThemPocketResources = {}
+local g_UsTableResources = {}
+local g_ThemTableResources = {}
+local g_TableLeaderButtons = {}
+local g_PocketLeaderButtons = {}
+local g_LeagueVoteList = {}
 
-local g_UsOtherPlayerMode                = -1;
-local g_ThemOtherPlayerMode              = -1;
+local g_OtherPlayersButtons = {}
 
-local g_OtherPlayersButtons              = {};
+local offsetOfString = 32
+local bonusPadding = 16
+local innerFrameWidth = 524
+local outerFrameWidth = 520
+local offsetsBetweenFrames = 4
 
-local g_bNewDeal                         = true;
+local oldCursor = 0
+local DiploUIStateTypes = DiploUIStateTypes
 
-local WAR                                = 0;
-local PEACE                              = 1;
+local g_usPocketPeaceButtons, g_usPocketWarButtons, g_themPocketPeaceButtons, g_themPocketWarButtons, g_usTablePeaceButtons, g_usTableWarButtons, g_themTablePeaceButtons, g_themTableWarButtons
 
-local PROPOSE_TYPE                       = 1; -- player is making a proposal
-local WITHDRAW_TYPE                      = 2; -- player is withdrawing their offer
-local ACCEPT_TYPE                        = 3; -- player is accepting someone else's proposal
+local g_borderTooltip = L("TXT_KEY_DIPLO_OPEN_BORDERS_TT", g_iDealDuration )
+local g_embassyTooltip = L("TXT_KEY_DIPLO_ALLOW_EMBASSY_TT", g_iDealDuration)
+local g_defensivePactToolTip = L( "TXT_KEY_DIPLO_DEF_PACT_TT", g_iDealDuration )
 
-local CANCEL_TYPE                        = 0; -- player is canceling their draft
-local REFUSE_TYPE                        = 1; -- player is refusing someone else's deal
+local g_SubStacks = {
+	UsPocketOtherPlayer = Controls.UsPocketOtherPlayerStack,
+	ThemPocketOtherPlayer = Controls.ThemPocketOtherPlayerStack,
+	UsPocketLeaderClose = Controls.UsPocketLeaderStack,
+	ThemPocketLeaderClose = Controls.ThemPocketLeaderStack,
 
-local offsetOfString                     = 32;
-local bonusPadding                       = 16
-local innerFrameWidth                    = 524;
-local outerFrameWidth                    = 520;
-local offsetsBetweenFrames               = 4;
+	UsPocketStrategic = Controls.UsPocketStrategicStack,
+	ThemPocketStrategic = Controls.ThemPocketStrategicStack,
+	UsPocketLuxury = Controls.UsPocketLuxuryStack,
+	ThemPocketLuxury = Controls.ThemPocketLuxuryStack,
+	UsPocketCities = Controls.UsPocketCitiesStack,
+	ThemPocketCities = Controls.ThemPocketCitiesStack,
 
-local oldCursor                          = 0;
+	UsPocketVote = Controls.UsPocketVoteStack,
+	ThemPocketVote = Controls.ThemPocketVoteStack,
+}
 
+local g_SubLabels = {
+	UsPocketOtherPlayer = L"TXT_KEY_DIPLO_MAKE_PEACE_WITH",
+	ThemPocketOtherPlayer = L"TXT_KEY_DIPLO_MAKE_PEACE_WITH",
+	UsPocketLeaderClose = L"TXT_KEY_DIPLO_DECLARE_WAR_ON",
+	ThemPocketLeaderClose = L"TXT_KEY_DIPLO_DECLARE_WAR_ON",
 
--- Initialize Resource Deals' Start Turn
-local g_ResDealsStartTurn = {};
-local g_ResDealsPToUpdate = {};
-if Game.GetActivePlayer() ~= -1 and g_Deal:GetNumItems() == 0 and UI.GetNumCurrentDeals(Game.GetActivePlayer()) > 0 then
-	for i = 0, UI.GetNumCurrentDeals(Game.GetActivePlayer()) - 1 do
-		UI.LoadCurrentDeal(Game.GetActivePlayer(), i);
-		g_Deal:ResetIterator();
-		if g_Deal:GetStartTurn() == Game.GetGameTurn() then
-			local itemType, duration, finalTurn, data1, data2, data3, flag1, fromPlayer = g_Deal:GetNextItem();
-			if (itemType ~= nil) then
-				repeat
-					local otherPlayer = g_Deal:GetOtherPlayer(Game.GetActivePlayer());
+	UsPocketStrategic = L"TXT_KEY_DIPLO_ITEMS_STRATEGIC_RESOURCES",
+	ThemPocketStrategic = L"TXT_KEY_DIPLO_ITEMS_STRATEGIC_RESOURCES",
+	UsPocketLuxury = L"TXT_KEY_DIPLO_ITEMS_LUXURY_RESOURCES",
+	ThemPocketLuxury = L"TXT_KEY_DIPLO_ITEMS_LUXURY_RESOURCES",
+	UsPocketCities = L"TXT_KEY_DIPLO_CITIES",
+	ThemPocketCities = L"TXT_KEY_DIPLO_CITIES",
 
-					if fromPlayer > -1 and otherPlayer > -1 and itemType == TradeableItems.TRADE_ITEM_RESOURCES
-						and data1 and GameInfo.Resources[data1] and GameInfo.Resources[data1].ResourceUsage == 1
-					then
-						if fromPlayer == Game.GetActivePlayer() then
-							if g_ResDealsStartTurn[0] == nil then
-								g_ResDealsStartTurn[0] = {};
-							end
-							if g_ResDealsStartTurn[0][otherPlayer] == nil then
-								g_ResDealsStartTurn[0][otherPlayer] = {};
-							end
-							g_ResDealsStartTurn[0][otherPlayer][data1] = Game.GetGameTurn();
-						else
-							if g_ResDealsStartTurn[1] == nil then
-								g_ResDealsStartTurn[1] = {};
-							end
-							if g_ResDealsStartTurn[1][otherPlayer] == nil then
-								g_ResDealsStartTurn[1][otherPlayer] = {};
-							end
-							g_ResDealsStartTurn[1][otherPlayer][data1] = Game.GetGameTurn();
-						end
-					end
-					itemType, duration, finalTurn, data1, data2, data3, flag1, fromPlayer = g_Deal:GetNextItem();
-				until (itemType == nil)
-			end
-		end
-	end
-	g_Deal:ClearItems();
+	UsPocketVote = L"TXT_KEY_TRADE_ITEM_VOTES",
+	ThemPocketVote = L"TXT_KEY_TRADE_ITEM_VOTES",
+}
+
+local g_SubTooltipsYes = {
+--	UsPocketOtherPlayer = L"TXT_KEY_DIPLO_MAKE_PEACE_WITH",
+--	ThemPocketOtherPlayer = L"TXT_KEY_DIPLO_MAKE_PEACE_WITH",
+--	UsPocketLeaderClose = L"TXT_KEY_DIPLO_DECLARE_WAR_ON",
+--	ThemPocketLeaderClose = L"TXT_KEY_DIPLO_DECLARE_WAR_ON",
+
+	UsPocketStrategic = L"TXT_KEY_DIPLO_STRAT_RESCR_TRADE_YES",
+	ThemPocketStrategic = L"TXT_KEY_DIPLO_STRAT_RESCR_TRADE_YES_THEM",
+	UsPocketLuxury = L"TXT_KEY_DIPLO_LUX_RESCR_TRADE_YES",
+	ThemPocketLuxury = L"TXT_KEY_DIPLO_LUX_RESCR_TRADE_YES_THEM",
+	UsPocketCities = L"TXT_KEY_DIPLO_TO_TRADE_CITY_TT",
+	ThemPocketCities = L"TXT_KEY_DIPLO_TO_TRADE_CITY_TT",
+
+	UsPocketVote = L"TXT_KEY_DIPLO_VOTE_TRADE_YES",
+	ThemPocketVote = L"TXT_KEY_DIPLO_VOTE_TRADE_YES_THEM",
+}
+
+local g_SubTooltipsNo = {
+--	UsPocketOtherPlayer = L"TXT_KEY_DIPLO_OTHER_PLAYERS_NO_PLAYERS",
+--	ThemPocketOtherPlayer = L"TXT_KEY_DIPLO_OTHER_PLAYERS_NO_PLAYERS_THEM",
+--	UsPocketLeaderClose = L"TXT_KEY_DIPLO_OTHER_PLAYERS_NO_PLAYERS",
+--	ThemPocketLeaderClose = L"TXT_KEY_DIPLO_OTHER_PLAYERS_NO_PLAYERS_THEM",
+
+--	UsPocketStrategic = L"TXT_KEY_DIPLO_STRAT_RESCR_TRADE_NO",
+--	ThemPocketStrategic = L"TXT_KEY_DIPLO_STRAT_RESCR_TRADE_NO_THEM",
+--	UsPocketLuxury = L"TXT_KEY_DIPLO_LUX_RESCR_TRADE_NO",
+--	ThemPocketLuxury = L"TXT_KEY_DIPLO_LUX_RESCR_TRADE_NO_THEM",
+--	UsPocketCities = L"TXT_KEY_DIPLO_TO_TRADE_CITY_NO_TT",
+--	ThemPocketCities = L"TXT_KEY_DIPLO_TO_TRADE_CITY_NO_TT",
+
+	UsPocketVote = L"TXT_KEY_DIPLO_VOTE_TRADE_NO",
+	ThemPocketVote = L"TXT_KEY_DIPLO_VOTE_TRADE_NO_THEM",
+}
+for k, v in pairs(g_SubTooltipsNo) do g_SubTooltipsNo[k] = "[COLOR_WARNING_TEXT]" .. v .. "[ENDCOLOR]" end
+
+local g_itemControls = {
+[ TradeableItems.TRADE_ITEM_PEACE_TREATY or false ] = { Controls.UsPocketPeaceTreaty, Controls.UsTablePeaceTreaty, Controls.ThemPocketPeaceTreaty, Controls.ThemTablePeaceTreaty },
+[ TradeableItems.TRADE_ITEM_ALLOW_EMBASSY or false ] = { Controls.UsPocketAllowEmbassy, Controls.UsTableAllowEmbassy, Controls.ThemPocketAllowEmbassy, Controls.ThemTableAllowEmbassy },
+[ TradeableItems.TRADE_ITEM_OPEN_BORDERS or false ] = { Controls.UsPocketOpenBorders, Controls.UsTableOpenBorders, Controls.ThemPocketOpenBorders, Controls.ThemTableOpenBorders },
+[ TradeableItems.TRADE_ITEM_DEFENSIVE_PACT or false ] = { Controls.UsPocketDefensivePact, Controls.UsTableDefensivePact, Controls.ThemPocketDefensivePact, Controls.ThemTableDefensivePact },
+[ TradeableItems.TRADE_ITEM_RESEARCH_AGREEMENT or false ] = { Controls.UsPocketResearchAgreement, Controls.UsTableResearchAgreement, Controls.ThemPocketResearchAgreement, Controls.ThemTableResearchAgreement },
+[ TradeableItems.TRADE_ITEM_DIPLOMATIC_MARRIAGE or false ] = { Controls.UsPocketMarriage, Controls.UsTableMarriage, Controls.ThemPocketMarriage, Controls.ThemTableMarriage },
+[ TradeableItems.TRADE_ITEM_DUAL_EMPIRE_TREATY or false ] = { Controls.UsPocketDualEmpire, Controls.UsTableDualEmpire, Controls.ThemPocketDualEmpire, Controls.ThemTableDualEmpire },
+[ TradeableItems.TRADE_ITEM_TRADE_AGREEMENT or false ] = { Controls.UsPocketTradeAgreement, Controls.UsTableTradeAgreement, Controls.ThemPocketTradeAgreement, Controls.ThemTableTradeAgreement },
+[ TradeableItems.TRADE_ITEM_DECLARATION_OF_FRIENDSHIP or false ] = { Controls.UsPocketDoF, Controls.UsTableDoF, Controls.ThemPocketDoF, Controls.ThemTableDoF, Controls.ThemTableDoF },
+}
+g_itemControls[ false ] = nil
+
+local g_pocketControls = {
+	Controls.UsPocketStack,
+	Controls.ThemPocketStack,
+	Controls.UsPocketGold,
+	Controls.ThemPocketGold,
+	Controls.UsPocketGoldPerTurn,
+	Controls.ThemPocketGoldPerTurn,
+	Controls.UsPocketOpenBorders,
+	Controls.ThemPocketOpenBorders,
+	Controls.UsPocketDefensivePact,
+	Controls.ThemPocketDefensivePact,
+	Controls.UsPocketResearchAgreement,
+	Controls.ThemPocketResearchAgreement,
+	Controls.UsPocketMarriage,
+	Controls.ThemPocketMarriage,
+	Controls.UsPocketDualEmpire,
+	Controls.ThemPocketDualEmpire,
+--	Controls.UsPocketTradeAgreement, --Trade agreement disabled for now
+--	Controls.ThemPocketTradeAgreement, --Trade agreement disabled for now
+	Controls.UsPocketAllowEmbassy,
+	Controls.ThemPocketAllowEmbassy,
+	Controls.UsPocketDoF,
+	Controls.ThemPocketDoF,
+}
+
+local g_tableControls = {
+	Controls.UsTableVoteStack,
+	Controls.ThemTableVoteStack,
+	Controls.UsTableGold,
+	Controls.ThemTableGold,
+	Controls.UsTableGoldPerTurn,
+	Controls.ThemTableGoldPerTurn,
+	Controls.UsTableStrategicStack,
+	Controls.ThemTableStrategicStack,
+	Controls.UsTableLuxuryStack,
+	Controls.ThemTableLuxuryStack,
+	Controls.UsTableMakePeaceStack,
+	Controls.ThemTableMakePeaceStack,
+	Controls.UsTableDeclareWarStack,
+	Controls.ThemTableDeclareWarStack,
+}
+
+local g_stacks = {
+	Controls.UsPocketStrategicStack,
+	Controls.ThemPocketStrategicStack,
+	Controls.UsTableStrategicStack,
+	Controls.ThemTableStrategicStack,
+	Controls.UsPocketLuxuryStack,
+	Controls.ThemPocketLuxuryStack,
+	Controls.UsTableLuxuryStack,
+	Controls.ThemTableLuxuryStack,
+	Controls.UsPocketVoteStack,
+	Controls.ThemPocketVoteStack,
+	Controls.UsTableVoteStack,
+	Controls.ThemTableVoteStack,
+	Controls.UsTableCitiesStack,
+	Controls.ThemTableCitiesStack,
+	Controls.UsPocketLeaderStack,
+	Controls.ThemPocketLeaderStack,
+	Controls.UsTableMakePeaceStack,
+	Controls.UsTableDeclareWarStack,
+	Controls.ThemTableMakePeaceStack,
+	Controls.ThemTableDeclareWarStack,
+	Controls.UsPocketStack,
+	Controls.ThemPocketStack,
+	Controls.UsTableStack,
+	Controls.ThemTableStack,
+}
+
+g_panels = {
+	Controls.UsPocketPanel,
+	Controls.ThemPocketPanel,
+	Controls.UsTablePanel,
+	Controls.ThemTablePanel,
+}
+
+Controls.UsPocketOtherPlayer:SetVoid1( 1 )
+Controls.UsPocketLeaderClose:SetVoid1( 1 )
+Controls.UsPocketStrategic:SetVoid1( 1 )
+Controls.UsPocketLuxury:SetVoid1( 1 )
+
+Controls.UsPocketCities:SetVoid1( 1 )
+
+Controls.UsPocketOtherPlayerStack:SetHide( true )
+Controls.ThemPocketOtherPlayerStack:SetHide( true )
+Controls.UsPocketLeaderStack:SetHide( true )
+Controls.ThemPocketLeaderStack:SetHide( true )
+Controls.UsPocketCitiesStack:SetHide( true )
+Controls.ThemPocketCitiesStack:SetHide( true )
+
+local function SetEnabled( control, isEnabled )
+	control:SetDisabled( not isEnabled )
+	control:GetTextControl():SetColorByName( isEnabled and "Beige_Black" or "Gray_Black" )
+end
+local function SetEnabledAndToolTip( control, isEnabled, toolTipString )
+	SetEnabled( control, isEnabled )
+	control:SetToolTipString( toolTipString )
+end
+local function SetEnabledAndTextAndToolTip( control, isEnabled, text, toolTipString )
+	control:SetText( text )
+	SetEnabledAndToolTip( control, isEnabled, toolTipString )
+end
+local function SetEnabledAndText( control, isEnabled, text )
+	control:SetText( text )
+	SetEnabled( control, isEnabled )
 end
 
+function ResizeStacks()
+	for k, stack in pairs( g_stacks ) do
+		stack:CalculateSize()
+	end
+	for k, panel in pairs( g_panels ) do
+		panel:CalculateInternalSize()
+		panel:ReprocessAnchoring()
+	end
+end
+local ResizeStacks = ResizeStacks
 
 ---------------------------------------------------------
--- LEADER MESSAGE HANDLER
+-- stacks management
 ---------------------------------------------------------
-function LeaderMessageHandler(iPlayer, iDiploUIState, szLeaderMessage, iAnimationAction, iData1)
-	g_bPVPTrade = false;
+-- hack existing XML
+Controls.UsPocketCitiesStack:ChangeParent( Controls.UsPocketStack )
+Controls.UsPocketCitiesStack:SetOffsetVal( 0, 0 )
+Controls.UsPocketCitiesClose:SetHide( true )
+Controls.UsPocketOtherPlayer:ChangeParent( Controls.UsPocketStack )
+Controls.UsPocketOtherPlayerStack:ChangeParent( Controls.UsPocketStack )
+Controls.UsPocketLeaderClose:ChangeParent( Controls.UsPocketStack )
+Controls.UsPocketLeaderStack:ChangeParent( Controls.UsPocketStack )
+Controls.UsPocketLeaderStack:SetOffsetVal( 0, 0 )
+Controls.UsPocketOtherPlayerPeace:SetHide( true ) -- UsPocketOtherPlayer
+Controls.UsPocketOtherPlayerWar:SetHide( true ) -- UsPocketLeaderClose
 
-	-- If we were just in discussion mode and the human offered to make concessions, make a note of that
-	if (iDiploUIState == DiploUIStateTypes.DIPLO_UI_STATE_TRADE_HUMAN_OFFERS_CONCESSIONS) then
-		if (g_iDiploUIState == DiploUIStateTypes.DIPLO_UI_STATE_DISCUSS_YOU_KILLED_MINOR_CIV) then
-			--print("Human offers concessions for killing Minor Civ");
-			g_iConcessionsPreviousDiploUIState = g_iDiploUIState;
-		elseif (g_iDiploUIState == DiploUIStateTypes.DIPLO_UI_STATE_DISCUSS_YOU_EXPANSION_SERIOUS_WARNING) then
-			--print("Human offers concessions for expansion");
-			g_iConcessionsPreviousDiploUIState = g_iDiploUIState;
-		elseif (g_iDiploUIState == DiploUIStateTypes.DIPLO_UI_STATE_DISCUSS_YOU_PLOT_BUYING_SERIOUS_WARNING) then
-			--print("Human offers concessions for plot buying");
-			g_iConcessionsPreviousDiploUIState = g_iDiploUIState;
-		end
-	end
+Controls.ThemPocketCitiesStack:ChangeParent( Controls.ThemPocketStack )
+Controls.ThemPocketCitiesStack:SetOffsetVal( 0, 0 )
+Controls.ThemPocketCitiesClose:SetHide( true )
+Controls.ThemPocketOtherPlayer:ChangeParent( Controls.ThemPocketStack )
+Controls.ThemPocketOtherPlayerStack:ChangeParent( Controls.ThemPocketStack )
+Controls.ThemPocketLeaderClose:ChangeParent( Controls.ThemPocketStack )
+Controls.ThemPocketLeaderStack:ChangeParent( Controls.ThemPocketStack )
+Controls.ThemPocketLeaderStack:SetOffsetVal( 0, 0 )
+Controls.ThemPocketOtherPlayerPeace:SetHide( true ) -- ThemPocketOtherPlayer
+Controls.ThemPocketOtherPlayerWar:SetHide( true ) -- ThemPocketLeaderClose
 
-	g_iDiploUIState = iDiploUIState;
-
-	g_iUs = Game.GetActivePlayer();
-	g_pUs = Players[g_iUs];
-
-	g_iUsTeam = g_pUs:GetTeam();
-	g_pUsTeam = Teams[g_iUsTeam];
-
-	g_iThem = iPlayer;
-	g_pThem = Players[g_iThem];
-	g_iThemTeam = g_pThem:GetTeam();
-	g_pThemTeam = Teams[g_iThemTeam];
-
-	local bMyMode = false;
-
-	-- Are we in Trade Mode?
-	if (iDiploUIState == DiploUIStateTypes.DIPLO_UI_STATE_TRADE) then
-		bMyMode = true;
-	elseif (iDiploUIState == DiploUIStateTypes.DIPLO_UI_STATE_TRADE_AI_MAKES_DEMAND) then
-		bMyMode = true;
-	elseif (iDiploUIState == DiploUIStateTypes.DIPLO_UI_STATE_TRADE_AI_MAKES_REQUEST) then
-		bMyMode = true;
-	elseif (iDiploUIState == DiploUIStateTypes.DIPLO_UI_STATE_TRADE_HUMAN_OFFERS_CONCESSIONS) then
-		bMyMode = true;
-	elseif (iDiploUIState == DiploUIStateTypes.DIPLO_UI_STATE_TRADE_AI_MAKES_OFFER) then
-		bMyMode = true;
-	elseif (iDiploUIState == DiploUIStateTypes.DIPLO_UI_STATE_TRADE_AI_ACCEPTS_OFFER) then
-		bMyMode = true;
-	elseif (iDiploUIState == DiploUIStateTypes.DIPLO_UI_STATE_TRADE_AI_REJECTS_OFFER) then
-		bMyMode = true;
-	elseif (iDiploUIState == DiploUIStateTypes.DIPLO_UI_STATE_HUMAN_DEMAND) then
-		bMyMode = true;
-	end
-
-	if (bMyMode) then
-		--print("TradeScreen: It's MY mode!");
-
-		if (ContextPtr:IsHidden()) then
-			UIManager:QueuePopup(ContextPtr, PopupPriority.LeaderTrade);
-		end
-
-		--print("Handling LeaderMessage: " .. iDiploUIState .. ", ".. szLeaderMessage);
-
-		g_Deal:SetFromPlayer(g_iUs);
-		g_Deal:SetToPlayer(g_iThem);
-
-		-- Unhide our pocket, in case the last thing we were doing in this screen was a human demand
-		Controls.UsPanel:SetHide(false);
-		Controls.UsGlass:SetHide(false);
-
-		local bClearTableAndDisplayDeal = false;
-
-		-- Is this a UI State where we should be displaying a deal?
-		if (g_iDiploUIState == DiploUIStateTypes.DIPLO_UI_STATE_TRADE) then
-			--print("DiploUIState: Default Trade");
-			bClearTableAndDisplayDeal = true;
-		elseif (g_iDiploUIState == DiploUIStateTypes.DIPLO_UI_STATE_TRADE_AI_MAKES_DEMAND) then
-			--print("DiploUIState: AI making demand");
-			bClearTableAndDisplayDeal = true;
-
-			DoDemandState(true);
-		elseif (g_iDiploUIState == DiploUIStateTypes.DIPLO_UI_STATE_TRADE_AI_MAKES_REQUEST) then
-			--print("DiploUIState: AI making Request");
-			bClearTableAndDisplayDeal = true;
-
-			DoDemandState(true);
-		elseif (g_iDiploUIState == DiploUIStateTypes.DIPLO_UI_STATE_HUMAN_DEMAND) then
-			--print("DiploUIState: Human Demand");
-			bClearTableAndDisplayDeal = true;
-			-- If we're demanding something, there's no need to show OUR items
-			Controls.UsPanel:SetHide(true);
-			Controls.UsGlass:SetHide(true);
-		elseif (g_iDiploUIState == DiploUIStateTypes.DIPLO_UI_STATE_TRADE_HUMAN_OFFERS_CONCESSIONS) then
-			--print("DiploUIState: Human offers concessions");
-			bClearTableAndDisplayDeal = true;
-		elseif (g_iDiploUIState == DiploUIStateTypes.DIPLO_UI_STATE_TRADE_AI_MAKES_OFFER) then
-			--print("DiploUIState: AI making offer");
-			bClearTableAndDisplayDeal = true;
-			g_bAIMakingOffer = true;
-		elseif (g_iDiploUIState == DiploUIStateTypes.DIPLO_UI_STATE_TRADE_AI_ACCEPTS_OFFER) then
-			--print("DiploUIState: AI accepted offer");
-			g_iConcessionsPreviousDiploUIState = -1; -- Clear out the fact that we were offering concessions if the AI has agreed to a deal
-			bClearTableAndDisplayDeal = true;
-
-			-- If the AI rejects a deal, don't clear the table: keep the items where they are in case the human wants to change things
-		elseif (g_iDiploUIState == DiploUIStateTypes.DIPLO_UI_STATE_TRADE_AI_REJECTS_OFFER) then
-			--print("DiploUIState: AI rejects offer");
-			bClearTableAndDisplayDeal = false;
+local function SubStackToggle( button, isToggle )
+	local buttonID = button:GetID()
+	local stack = g_SubStacks[ buttonID ]
+	stack:CalculateSize()
+	if stack:GetSizeY() == 0 then
+		local tip = g_SubTooltipsNo[ buttonID ]
+		if tip then
+			button:SetDisabled( true )
+			button:GetTextControl():SetColorByName("Gray_Black")
+			button:SetToolTipString( g_SubTooltipsNo[ buttonID ] )
+			button:SetText( g_SubLabels[ buttonID ] )
 		else
-			--print("DiploUIState: ?????");
+			button:SetHide( true )
 		end
-
-		-- Clear table and display the deal currently stored in InterfaceBuddy
-		if (bClearTableAndDisplayDeal) then
-			g_bMessageFromDiploAI = true;
-
-			Controls.DiscussionText:SetText(szLeaderMessage);
-
-			DoClearTable();
-			DisplayDeal();
-
-			-- Don't clear the table, leave things as they are
-		else
-			--print("NOT clearing table");
-
-			g_bMessageFromDiploAI = true;
-
-			Controls.DiscussionText:SetText(szLeaderMessage);
-		end
-
-		-- Resize the height of the box to fit the text
-		local contentSize = Controls.DiscussionText:GetSize().y + offsetOfString + bonusPadding;
-		local frameSize = {};
-		frameSize.x = innerFrameWidth;
-		frameSize.y = contentSize;
-		Controls.LeaderSpeechBorderFrame:SetSize(frameSize);
-		frameSize.x = outerFrameWidth;
-		frameSize.y = contentSize - offsetsBetweenFrames;
-		Controls.LeaderSpeechFrame:SetSize(frameSize);
-
-		DoUpdateButtons();
-
-		-- Not in trade mode
 	else
-		--print("TradeScreen: NOT my mode! Hiding!");
-		--print("iDiploUIState: " .. iDiploUIState);
-
-		g_Deal:ClearItems();
-
-		if (not ContextPtr:IsHidden()) then
-			ContextPtr:SetHide(true);
-		end
-	end
-end
-
---Events.AILeaderMessage.Add( LeaderMessageHandler );
-
-
-----------------------------------------------------------------
--- Used by SimpleDiploTrade to display pvp deals
-----------------------------------------------------------------
-function OnOpenPlayerDealScreen(iOtherPlayer)
-	--print( "OpenPlayerDealScreen: " .. iOtherPlayer );
-
-	-- open a new deal with iThem
-	g_iUs = Game.GetActivePlayer();
-	g_pUs = Players[g_iUs];
-	g_iUsTeam = g_pUs:GetTeam();
-	g_pUsTeam = Teams[g_iUsTeam];
-
-	g_iThem = iOtherPlayer;
-	g_pThem = Players[g_iThem];
-	g_iThemTeam = g_pThem:GetTeam();
-	g_pThemTeam = Teams[g_iThemTeam];
-
-	-- if someone is trying to open the deal screen when they are not allowed to negotiate peace
-	-- or they already have an outgoing deal, stop them here rather than at all the places we send this event
-
-	local iProposalTo = UI.HasMadeProposal(g_iUs);
-	--print( "proposal: " .. iProposalTo );
-	--print( "war: " .. tostring( g_pUsTeam:IsAtWar( g_iThemTeam ) ) );
-	--print( "war: " .. tostring( g_bAlwaysWar or g_bNoChangeWar ) );
-
-
-	-- this logic should match OnOpenPlayerDealScreen in TradeLogic.lua, DiploCorner.lua, and DiploList.lua
-	if ((g_pUsTeam:IsAtWar(g_iThemTeam) and (g_bAlwaysWar or g_bNoChangeWar)) or                                   -- Always at War
-			(iProposalTo ~= -1 and iProposalTo ~= iOtherPlayer and not UI.ProposedDealExists(iOtherPlayer, g_iUs))) then -- Only allow one proposal from us at a time.
-		-- do nothing
-		return;
-	end
-
-	--print( "where?" );
-	if (g_iUs == g_iThem) then
-		print("ERROR: OpenPlayerDealScreen called with local player");
-	end
-
-	if (UI.ProposedDealExists(g_iUs, g_iThem)) then    -- this is our proposal
-		g_bNewDeal = false;
-		UI.LoadProposedDeal(g_iUs, g_iThem);
-		DoUpdateButtons();
-	elseif (UI.ProposedDealExists(g_iThem, g_iUs)) then    -- this is their proposal
-		g_bNewDeal = false;
-		UI.LoadProposedDeal(g_iThem, g_iUs);
-		DoUpdateButtons();
-	else
-		g_bNewDeal = true;
-		g_Deal:ClearItems();
-		g_Deal:SetFromPlayer(g_iUs);
-		g_Deal:SetToPlayer(g_iThem);
-
-		if (g_pUsTeam:IsAtWar(g_iThemTeam)) then
-			g_Deal:AddPeaceTreaty(g_iUs, GameDefines.PEACE_TREATY_LENGTH);
-			g_Deal:AddPeaceTreaty(g_iThem, GameDefines.PEACE_TREATY_LENGTH);
-		end
-
-		DoUpdateButtons();
-	end
-
-	g_bPVPTrade = true;
-
-	ContextPtr:SetHide(false);
-
-	DoClearTable();
-	DisplayDeal();
-end
-
-----------------------------------------------------------------
--- used by DiploOverview to display active deals
-----------------------------------------------------------------
-function OpenDealReview()
-	--print( "OpenDealReview" );
-
-	g_iUs = Game:GetActivePlayer();
-	g_pUs = Players[g_iUs];
-	g_iUsTeam = g_pUs:GetTeam();
-	g_pUsTeam = Teams[g_iUsTeam];
-
-	g_iThem = g_Deal:GetOtherPlayer(g_iUs);
-	g_pThem = Players[g_iThem];
-	g_iThemTeam = g_pThem:GetTeam();
-	g_pThemTeam = Teams[g_iThemTeam];
-
-	if (g_iUs == g_iThem) then
-		print("ERROR: OpenDealReview called with local player");
-	end
-
-	g_bPVPTrade = false;
-	g_bTradeReview = true;
-
-	DoClearTable();
-	DisplayDeal();
-end
-
-----------------------------------------------------------------
--- BACK
-----------------------------------------------------------------
-function OnBack(iType)
-	if (g_bPVPTrade or g_bTradeReview) then
-		if (iType == CANCEL_TYPE) then
-			g_Deal:ClearItems();
-		elseif (iType == REFUSE_TYPE) then
-			UI.DoFinalizePlayerDeal(g_iThem, g_iUs, false);
-		end
-
-		ContextPtr:SetHide(true);
-		ContextPtr:CallParentShowHideHandler(false);
-	else
-		g_Deal:ClearItems();
-
-		-- Human refused to give into an AI demand - this button doubles as the Demand "Refuse" option
-		if (g_iDiploUIState == DiploUIStateTypes.DIPLO_UI_STATE_TRADE_AI_MAKES_DEMAND or
-				g_iDiploUIState == DiploUIStateTypes.DIPLO_UI_STATE_TRADE_AI_MAKES_REQUEST) then
-			--print("Human refused demand!");
-
-			DoDemandState(false);
-
-			DoClearTable();
-			ResetDisplay();
-
-			if (g_iDiploUIState == DiploUIStateTypes.DIPLO_UI_STATE_TRADE_AI_MAKES_DEMAND) then
-				Game.DoFromUIDiploEvent(FromUIDiploEventTypes.FROM_UI_DIPLO_EVENT_DEMAND_HUMAN_REFUSAL, g_iThem, 0, 0);
-			elseif (g_iDiploUIState == DiploUIStateTypes.DIPLO_UI_STATE_TRADE_AI_MAKES_REQUEST) then
-				local iDealValue = 0;
-				if (g_Deal) then
-					iDealValue = g_pUs:GetDealMyValue(g_Deal);
-				end
-				Game.DoFromUIDiploEvent(FromUIDiploEventTypes.FROM_UI_DIPLO_EVENT_REQUEST_HUMAN_REFUSAL, g_iThem,
-					iDealValue, 0);
-			end
-
-			g_iDiploUIState = DiploUIStateTypes.DIPLO_UI_STATE_TRADE;
-
-			-- Exit screen normally
+		button:SetDisabled( false )
+		button:SetHide( false )
+		button:GetTextControl():SetColorByName("Beige_Black")
+		button:SetToolTipString( g_SubTooltipsYes[ buttonID ] )
+		if isToggle == stack:IsHidden() then
+			stack:SetHide( false )
+			button:SetText( "[ICON_MINUS]" .. g_SubLabels[ buttonID ] )
 		else
-			if (g_iThem ~= -1) then
-				Players[g_iThem]:DoTradeScreenClosed(g_bAIMakingOffer);
-			end
-
-			-- Don't assume we have a message from the AI leader any more
-			g_bMessageFromDiploAI = false;
-
-			-- If the AI opened the screen to make an offer, clear that status
-			g_bAIMakingOffer = false;
-
-			-- Reset value that keeps track of how many times we offered a bad deal (for dialogue purposes)
-			UI.SetOfferTradeRepeatCount(0);
-
-			-- If the human was offering concessions, he backed out
-			if (g_iConcessionsPreviousDiploUIState ~= -1) then
-				--print("Human backing out of Concessions Offer.  Reseting DiploUIState to trade.");
-
-				iButtonID = 1; -- This corresponds with the buttons in DiscussionDialog.lua
-
-				-- AI scolded us for killing a Minor - we tell him to go away
-				if (g_iConcessionsPreviousDiploUIState == DiploUIStateTypes.DIPLO_UI_STATE_DISCUSS_YOU_KILLED_MINOR_CIV) then
-					Game.DoFromUIDiploEvent(FromUIDiploEventTypes.FROM_UI_DIPLO_EVENT_KILLED_MINOR_RESPONSE, g_iThem,
-						iButtonID, 0);
-					-- AI seriously warning us about expansion - we tell him to go away
-				elseif (g_iConcessionsPreviousDiploUIState == DiploUIStateTypes.DIPLO_UI_STATE_DISCUSS_YOU_EXPANSION_SERIOUS_WARNING) then
-					Game.DoFromUIDiploEvent(FromUIDiploEventTypes.FROM_UI_DIPLO_EVENT_EXPANSION_SERIOUS_WARNING_RESPONSE,
-						g_iThem, iButtonID, 0);
-					-- AI seriously warning us about plot buying - we tell him to go away
-				elseif (g_iConcessionsPreviousDiploUIState == DiploUIStateTypes.DIPLO_UI_STATE_DISCUSS_YOU_PLOT_BUYING_SERIOUS_WARNING) then
-					Game.DoFromUIDiploEvent(
-					FromUIDiploEventTypes.FROM_UI_DIPLO_EVENT_PLOT_BUYING_SERIOUS_WARNING_RESPONSE, g_iThem, iButtonID, 0);
-				end
-
-				g_iConcessionsPreviousDiploUIState = -1;
-			end
-
-			-- Exiting human demand mode, unhide his items
-			if (g_iDiploUIState == DiploUIStateTypes.DIPLO_UI_STATE_HUMAN_DEMAND) then
-				Controls.UsPanel:SetHide(false);
-				Controls.UsGlass:SetHide(false);
-			end
-
-
-			UIManager:DequeuePopup(ContextPtr);
-			UI.RequestLeaveLeader();
+			stack:SetHide( true )
+			button:SetText( "[ICON_PLUS]" .. g_SubLabels[ buttonID ] )
 		end
 	end
 end
 
-Controls.CancelButton:RegisterCallback(Mouse.eLClick, OnBack);
+local function SubStackHandler( bIsUs, none, control )
+	SubStackToggle( control, true )
 
+	if bIsUs == 1 then
+		Controls.UsPocketStack:CalculateSize()
+		Controls.UsPocketPanel:CalculateInternalSize()
+		Controls.UsPocketPanel:ReprocessAnchoring()
+	else
+		Controls.ThemPocketStack:CalculateSize()
+		Controls.ThemPocketPanel:CalculateInternalSize()
+		Controls.ThemPocketPanel:ReprocessAnchoring()
+	end
+end
+for k,v in pairs( g_SubStacks ) do
+	Controls[ k ]:RegisterCallback( Mouse.eLClick, SubStackHandler )
+end
 
-----------------------------------------------------------------
--- SHOW/HIDE
-----------------------------------------------------------------
-function OnShowHide(isHide, bIsInit)
-	-- WARNING: Don't put anything important in here related to gameplay. This function may be called when you don't expect it
+if IsCiv5BNW then
+	Controls.UsPocketVote:SetVoid1( 1 )
+	Controls.UsPocketVoteStack:SetHide( true )
+	Controls.ThemPocketVoteStack:SetHide( true )
 
-	if (not bIsInit) then
-		-- Showing screen
-		if (not isHide) then
-			oldCursor = UIManager:SetUICursor(0); -- make sure we start with the default cursor
-
-			if (g_iUs ~= -1) then g_Deal:SetFromPlayer(g_iUs); end
-			if (g_iThem ~= -1) then g_Deal:SetToPlayer(g_iThem); end
-
-			-- reset all the controls on show
-			Controls.UsPocketCitiesStack:SetHide(true);
-			Controls.ThemPocketCitiesStack:SetHide(true);
-			Controls.UsPocketOtherPlayerStack:SetHide(true);
-			Controls.ThemPocketOtherPlayerStack:SetHide(true);
-			Controls.UsPocketStrategicStack:SetHide(true);
-			Controls.ThemPocketStrategicStack:SetHide(true);
-			Controls.UsPocketLuxuryStack:SetHide(true);
-			Controls.ThemPocketLuxuryStack:SetHide(true);
-			Controls.UsPocketVoteStack:SetHide(true);
-			Controls.ThemPocketVoteStack:SetHide(true);
-
-			Controls.UsPocketPanel:SetScrollValue(0);
-			Controls.UsTablePanel:SetScrollValue(0);
-			Controls.ThemPocketPanel:SetScrollValue(0);
-			Controls.ThemTablePanel:SetScrollValue(0);
-
-			-- hide unmet players
-			if (g_bEnableThirdParty) then
-				g_iNumOthers = 0;
-				for iLoopPlayer = 0, GameDefines.MAX_CIV_PLAYERS - 1, 1 do
-					pLoopPlayer = Players[iLoopPlayer];
-					iLoopTeam = pLoopPlayer:GetTeam();
-
-					--print("iLoopPlayer: " .. iLoopPlayer);
-
-					if (pLoopPlayer:IsEverAlive()) then
-						if (g_iUs ~= iLoopPlayer and g_iThem ~= iLoopPlayer and
-								g_pUsTeam:IsHasMet(iLoopTeam) and g_pThemTeam:IsHasMet(iLoopTeam) and
-								pLoopPlayer:IsAlive()) then
-							g_OtherPlayersButtons[iLoopPlayer].UsPocket.Button:SetHide(false);
-							g_OtherPlayersButtons[iLoopPlayer].ThemPocket.Button:SetHide(false);
-							g_iNumOthers = g_iNumOthers + 1;
-						else
-							g_OtherPlayersButtons[iLoopPlayer].UsPocket.Button:SetHide(true);
-							g_OtherPlayersButtons[iLoopPlayer].ThemPocket.Button:SetHide(true);
-						end
-					end
-				end
-			end
-
-			ResetDisplay();
-
-			-- Deal can already have items in it if, say, we're at war.  In this case every time we open the trade screen there's already Peace Treaty on both sides of the table
-			if (g_Deal:GetNumItems() > 0) then
-				DisplayDeal();
-			end
-
-			LuaEvents.TryQueueTutorial("DIPLO_TRADE_SCREEN", true);
-
-			-- Hiding screen
-		else
-			UIManager:SetUICursor(oldCursor); -- make sure we retrun the cursor to the previous state
-			LuaEvents.TryDismissTutorial("DIPLO_TRADE_SCREEN");
+	if IsLeagues then
+		local function VoteStackHandler( bIsUs, ... )
+			RefreshPocketVotes( bIsUs )
+			SubStackHandler( bIsUs, ... )
 		end
+		Controls.ThemPocketVote:RegisterCallback( Mouse.eLClick, VoteStackHandler )
+		Controls.UsPocketVote:RegisterCallback( Mouse.eLClick, VoteStackHandler )
 	end
 end
 
-ContextPtr:SetShowHideHandler(OnShowHide);
-
-
-----------------------------------------------------------------
--- Key Down Processing
-----------------------------------------------------------------
-function InputHandler(uiMsg, wParam, lParam)
-	if (uiMsg == KeyEvents.KeyDown)
-	then
-		if (wParam == Keys.VK_ESCAPE) then
-			-- Don't allow any keys to exit screen when AI is asking for something - want to make sure the human has to click something
-			if (g_iDiploUIState ~= DiploUIStateTypes.DIPLO_UI_STATE_TRADE_AI_MAKES_DEMAND and
-					g_iDiploUIState ~= DiploUIStateTypes.DIPLO_UI_STATE_TRADE_AI_MAKES_REQUEST) then
-				OnBack();
-			end
-
-			return true;
-		end
-	end
-	return false;
-end
 
 ---------------------------------------------------------
--- UI Deal was modified somehow
+-- Clear all items off the table (both UI and CvDeal)
 ---------------------------------------------------------
-function DoUIDealChangedByHuman()
-	--print("UI Deal Changed");
 
-	-- Set state to the default so that it doesn't cause any funny behavior later
-	if (g_iDiploUIState ~= DiploUIStateTypes.DIPLO_UI_STATE_HUMAN_DEMAND) then
-		g_iDiploUIState = DiploUIStateTypes.DIPLO_UI_STATE_TRADE;
+function DoClearTable()
+	g_UsTableCitiesIM:ResetInstances()
+	g_ThemTableCitiesIM:ResetInstances()
+	if IsCiv5BNW then
+		g_UsTableVoteIM:ResetInstances()
+		g_ThemTableVoteIM:ResetInstances()
 	end
-
-	DoUpdateButtons();
+	for k, control in pairs( g_tableControls ) do
+		control:SetHide( true )
+	end
+	ResizeStacks()
 end
+local DoClearTable = DoClearTable
+
+function DoClearDeal()
+
+	--print("Clearing Table")
+	g_Deal:ClearItems()
+	DoClearTable()
+end
+local DoClearDeal = DoClearDeal
+Events.ClearDiplomacyTradeTable.Add( DoClearDeal )
 
 ---------------------------------------------------------
 -- Update buttons at the bottom
 ---------------------------------------------------------
-function DoUpdateButtons()
-	-- Dealing with a human in a MP game
-	if (g_bPVPTrade) then
-		--print( "PVP Updating ProposeButton" );
+function DoUpdateButtons( diploMessage )
 
-		if (g_bNewDeal) then
-			Controls.ProposeButton:SetText(Locale.ConvertTextKey("TXT_KEY_DIPLO_PROPOSE"));
-			Controls.ProposeButton:SetVoid1(PROPOSE_TYPE);
-			Controls.CancelButton:SetHide(true);
+	local ourPlayer = Players[ g_iUs ]
+	local ourTeam = ourPlayer and Teams[ ourPlayer:GetTeam() ]
+	local theirPlayer = Players[ g_iThem ]
+	local theirTeamID = theirPlayer and theirPlayer:GetTeam()
+	if g_bTradeReview then
+	elseif g_PVPTrade then -- Dealing with a human in a MP game
+		--print( "PVP Updating ProposeButton" )
+		local propose
+		if g_PVPTrade == 2 then -- this is their proposal
+			Controls.ProposeButton:LocalizeAndSetText( "TXT_KEY_DIPLO_ACCEPT" )
+			Controls.CancelButton:SetHide( false )
+			Controls.ModifyButton:SetHide( false )
+			Controls.Pockets:SetHide( true )
+			Controls.ModificationBlock:SetHide( false )
 
-			Controls.ModifyButton:SetHide(true);
-			Controls.Pockets:SetHide(false);
-			Controls.ModificationBlock:SetHide(true);
-		elseif (UI.HasMadeProposal(g_iUs) == g_iThem) then
-			Controls.ProposeButton:SetText(Locale.ConvertTextKey("TXT_KEY_DIPLO_WITHDRAW"));
-			Controls.ProposeButton:SetVoid1(WITHDRAW_TYPE);
-			Controls.CancelButton:SetHide(true);
+		elseif g_PVPTrade == 1 then -- this is our proposal
+			Controls.ProposeButton:LocalizeAndSetText( "TXT_KEY_DIPLO_WITHDRAW" )
+			Controls.CancelButton:SetHide( true )
+			Controls.ModifyButton:SetHide( true )
+			Controls.Pockets:SetHide( true )
+			Controls.ModificationBlock:SetHide( false )
 
-			Controls.ModifyButton:SetHide(true);
-			Controls.Pockets:SetHide(true);
-			Controls.ModificationBlock:SetHide(false);
-		else
-			Controls.ProposeButton:SetVoid1(ACCEPT_TYPE);
-			Controls.ProposeButton:SetText(Locale.ConvertTextKey("TXT_KEY_DIPLO_ACCEPT"));
-			Controls.CancelButton:SetVoid1(REFUSE_TYPE);
-			Controls.CancelButton:SetHide(false);
+		else -- this is a new deal
+			propose = g_Deal:GetNumItems() == 0
+			Controls.ProposeButton:LocalizeAndSetText( propose and "TXT_KEY_DIPLO_DECLARE_WAR" or "TXT_KEY_DIPLO_PROPOSE" )
+			propose = propose and ourTeam and theirTeamID and not ( IsCiv5BNW and ourTeam:CanChangeWarPeace( theirTeamID ) and not ourTeam:IsAtWar( theirTeamID ) and ourTeam:CanDeclareWar( theirTeamID ) )
+			Controls.CancelButton:SetHide( true )
+			Controls.ModifyButton:SetHide( true )
+			Controls.Pockets:SetHide( false )
+			Controls.ModificationBlock:SetHide( true )
 
-			Controls.ModifyButton:SetHide(false);
-			Controls.Pockets:SetHide(true);
-			Controls.ModificationBlock:SetHide(false);
 		end
+		Controls.ProposeButton:SetHide( propose )
+		Controls.MainStack:CalculateSize()
+		Controls.MainGrid:DoAutoSize()
 
-		Controls.MainStack:CalculateSize();
-		Controls.MainGrid:DoAutoSize();
+	else -- Dealing with an AI
 
-		-- Dealing with an AI
-	elseif (g_bPVPTrade == false and g_bTradeReview == false) then
+		if diploMessage then
+			-- Resize the height of the box to fit the text
+			Controls.DiscussionText:SetText( diploMessage )
+			local contentSize = Controls.DiscussionText:GetSize().y + offsetOfString + bonusPadding
+			Controls.LeaderSpeechBorderFrame:SetSizeVal( innerFrameWidth, contentSize )
+			Controls.LeaderSpeechFrame:SetSizeVal( outerFrameWidth, contentSize - offsetsBetweenFrames )
+		end
+		local numItemsFromUs = 0
+		local numItemsFromThem = 0
+		local isAtWar = ourTeam and theirTeamID and ourTeam:IsAtWar( theirTeamID )
+		local isAIRequestingConcessions = not isAtWar and UI.IsAIRequestingConcessions()
+
+		-- Table is empty
+		if g_Deal:GetNumItems() == 0 then
+			Controls.ProposeButton:LocalizeAndSetText( "TXT_KEY_GOODBYE_BUTTON" )
+			Controls.CancelButton:LocalizeAndSetText( "TXT_KEY_BACK_BUTTON" )
+
 		-- Human is making a demand
-		if (g_iDiploUIState == DiploUIStateTypes.DIPLO_UI_STATE_HUMAN_DEMAND) then
-			Controls.ProposeButton:SetText(Locale.ToUpper(Locale.ConvertTextKey("TXT_KEY_DIPLO_DEMAND_BUTTON")));
-			Controls.CancelButton:SetText(Locale.ConvertTextKey("TXT_KEY_DIPLO_CANCEL"));
+		elseif g_diploUIStateID == DiploUIStateTypes.DIPLO_UI_STATE_HUMAN_DEMAND then
+			Controls.ProposeButton:LocalizeAndSetText( "TXT_KEY_DIPLO_DEMAND_BUTTON" )
+			Controls.CancelButton:LocalizeAndSetText( "TXT_KEY_BACK_BUTTON" )
 
-			-- If the AI made an offer change what buttons are visible for the human to respond with
-		elseif (g_iDiploUIState == DiploUIStateTypes.DIPLO_UI_STATE_TRADE_AI_MAKES_OFFER) then
-			Controls.ProposeButton:SetText(Locale.ConvertTextKey("TXT_KEY_DIPLO_ACCEPT"));
-			Controls.CancelButton:SetText(Locale.ConvertTextKey("TXT_KEY_DIPLO_REFUSE"));
+		-- AI is making a demand or Request, or the AI made an offer for the human to respond with
+		elseif isAtWar or g_diploUIStateID == DiploUIStateTypes.DIPLO_UI_STATE_TRADE_AI_MAKES_OFFER
+			or g_diploUIStateID == DiploUIStateTypes.DIPLO_UI_STATE_TRADE_AI_MAKES_DEMAND
+			or g_diploUIStateID == DiploUIStateTypes.DIPLO_UI_STATE_TRADE_AI_MAKES_REQUEST
+		then
+			Controls.ProposeButton:LocalizeAndSetText( "TXT_KEY_DIPLO_ACCEPT" )
+			Controls.CancelButton:LocalizeAndSetText( "TXT_KEY_DIPLO_REFUSE" )
 
-			-- AI is making a demand or Request
-		elseif (g_iDiploUIState == DiploUIStateTypes.DIPLO_UI_STATE_TRADE_AI_MAKES_DEMAND or
-				g_iDiploUIState == DiploUIStateTypes.DIPLO_UI_STATE_TRADE_AI_MAKES_REQUEST) then
-			Controls.ProposeButton:SetText(Locale.ConvertTextKey("TXT_KEY_DIPLO_ACCEPT"));
-			Controls.CancelButton:SetText(Locale.ConvertTextKey("TXT_KEY_DIPLO_REFUSE"));
 		else
-			Controls.ProposeButton:SetText(Locale.ConvertTextKey("TXT_KEY_DIPLO_PROPOSE"));
-			Controls.CancelButton:SetText(Locale.ConvertTextKey("TXT_KEY_DIPLO_CANCEL"));
-		end
+			Controls.ProposeButton:LocalizeAndSetText( "TXT_KEY_DIPLO_PROPOSE" )
+			Controls.CancelButton:LocalizeAndSetText( IsCiv5BNW and "TXT_KEY_CLEAR_BUTTON" or "TXT_KEY_CANCEL_BUTTON" )
+			if not isAtWar and not isAIRequestingConcessions then
 
-		Controls.WhatDoYouWantButton:SetHide(true);
-		Controls.WhatWillYouGiveMeButton:SetHide(true);
-		Controls.WhatWillMakeThisWorkButton:SetHide(true);
-		Controls.WhatWillEndThisWarButton:SetHide(true);
-		Controls.WhatConcessionsButton:SetHide(true);
-
-		-- At War: show the "what will end this war button
-		if (g_iUsTeam >= 0 and g_iThemTeam >= 0 and Teams[g_iUsTeam]:IsAtWar(g_iThemTeam)) then
-			Controls.WhatWillEndThisWarButton:SetHide(false);
-			-- Not at war
-		else
-			-- AI asking player for concessions
-			if (UI.IsAIRequestingConcessions()) then
-				Controls.WhatConcessionsButton:SetHide(false);
-
-				-- Is the someone making a demand?
-			elseif (g_iDiploUIState ~= DiploUIStateTypes.DIPLO_UI_STATE_TRADE_AI_MAKES_DEMAND and
-					g_iDiploUIState ~= DiploUIStateTypes.DIPLO_UI_STATE_TRADE_AI_MAKES_REQUEST and
-					g_iDiploUIState ~= DiploUIStateTypes.DIPLO_UI_STATE_HUMAN_DEMAND and
-					g_iDiploUIState ~= DiploUIStateTypes.DIPLO_UI_STATE_TRADE_AI_MAKES_OFFER) then
 				-- Loop through deal items to see what the situation is
-				local iNumItemsFromUs = 0;
-				local iNumItemsFromThem = 0;
-
-				local itemType;
-				local duration;
-				local finalTurn;
-				local data1;
-				local data2;
-				local data3;
-				local flag1;
-				local fromPlayer;
-
-				g_Deal:ResetIterator();
-				itemType, duration, finalTurn, data1, data2, data3, flag1, fromPlayer = g_Deal:GetNextItem();
-
-				if (itemType ~= nil) then
-					repeat
-						local bFromUs = false;
-
-						if (fromPlayer == Game.GetActivePlayer()) then
-							bFromUs = true;
-							iNumItemsFromUs = iNumItemsFromUs + 1;
-						else
-							iNumItemsFromThem = iNumItemsFromThem + 1;
-						end
-
-						itemType, duration, finalTurn, data1, data2, data3, flag1, fromPlayer = g_Deal:GetNextItem();
-					until (itemType == nil)
-				end
-
-				-- Depending on what's on the table we can ask the other player about what they think of the deal
-				if (iNumItemsFromUs > 0 and iNumItemsFromThem == 0) then
-					Controls.WhatWillYouGiveMeButton:SetHide(false);
-				elseif (iNumItemsFromUs == 0 and iNumItemsFromThem > 0) then
-					Controls.WhatDoYouWantButton:SetHide(false);
-				elseif (iNumItemsFromUs > 0 and iNumItemsFromThem > 0) then
-					Controls.WhatWillMakeThisWorkButton:SetHide(false);
-				end
+				g_Deal:ResetIterator()
+				repeat
+					local deal = { g_Deal:GetNextItem() }
+					local n = #deal
+					if n < 1 then
+						break
+					elseif deal[n] == g_iUs then
+						numItemsFromUs = numItemsFromUs + 1
+					else
+						numItemsFromThem = numItemsFromThem + 1
+					end
+				until false
 			end
 		end
 
-		-- If they're making a demand and there's nothing on our side of the table then we can't propose anything
-		if (UI.IsAIRequestingConcessions() and iNumItemsFromUs == 0) then
-			Controls.ProposeButton:SetHide(true);
-		else
-			Controls.ProposeButton:SetHide(false);
-		end
+		-- Depending on what's on the table we can ask the other player about what they think of the deal
+		Controls.WhatDoYouWantButton:SetHide( numItemsFromUs > 0 or numItemsFromThem == 0 )
+		Controls.WhatWillYouGiveMeButton:SetHide( numItemsFromUs == 0 or numItemsFromThem > 0 )
+		Controls.WhatWillMakeThisWorkButton:SetHide( numItemsFromUs == 0 or numItemsFromThem == 0 )
+		Controls.WhatWillEndThisWarButton:SetHide( not isAtWar )
+		Controls.WhatConcessionsButton:SetHide( not isAIRequestingConcessions )
+		Controls.CancelButton:SetHide( false )
+		Controls.ProposeButton:SetHide( false )
 	end
+
 end
+local DoUpdateButtons = DoUpdateButtons
 
 ---------------------------------------------------------
 -- AI is making a demand of the human
 ---------------------------------------------------------
 function DoDemandState(bDemandOn)
+
 	-- AI is demanding something, hide options that are not useful
-	if (bDemandOn) then
-		Controls.UsPanel:SetHide(true);
-		Controls.UsGlass:SetHide(true);
-		Controls.ThemPanel:SetHide(true);
-		Controls.ThemGlass:SetHide(true);
-		Controls.UsTableCover:SetHide(false);
-		Controls.ThemTableCover:SetHide(false);
+	Controls.UsPanel:SetHide( bDemandOn )
+	Controls.UsGlass:SetHide( bDemandOn )
+	Controls.ThemPanel:SetHide( bDemandOn )
+	Controls.ThemGlass:SetHide( bDemandOn )
+	Controls.UsTableCover:SetHide( not bDemandOn )
+	Controls.ThemTableCover:SetHide( not bDemandOn )
 
-		-- Exiting demand mode, unhide stuff
+end
+local DoDemandState = DoDemandState
+
+local DoUIDealChangedByHuman -- Cross references
+
+----------------------------------------------------------------------------------
+-- Pocket Cities
+----------------------------------------------------------------------------------
+local function AddCityTrade( playerID, cityID )
+	local player = Players[ playerID ]
+	if player and player:GetCityByID( cityID ) then
+		g_Deal:AddCityTrade( playerID, cityID )
+		return DoUIDealChangedByHuman()
 	else
-		Controls.UsPanel:SetHide(false);
-		Controls.UsGlass:SetHide(false);
-		Controls.ThemPanel:SetHide(false);
-		Controls.ThemGlass:SetHide(false);
-		Controls.UsTableCover:SetHide(true);
-		Controls.ThemTableCover:SetHide(true);
-
-		UIManager:DequeuePopup(ContextPtr);
+		print( "Error - city not found", playerID, cityID )
 	end
 end
 
----------------------------------------------------------
--- Clear all items off the table (both UI and CvDeal)
----------------------------------------------------------
-function DoClearDeal()
-	--print("Clearing Table");
+local function RemoveCityTrade( playerID, cityID )
+	local player = Players[ playerID ]
+	if player and player:GetCityByID( cityID ) then
+		g_Deal:RemoveCityTrade( playerID, cityID )
+		return DoUIDealChangedByHuman( true )
+	else
+		print( "Error - city not found", playerID, cityID )
+	end
+end
 
-	g_Deal:ClearItems();
+local function SetPocketCities( instanceManager, fromPlayer, fromPlayerID, toPlayerID )
+	instanceManager:ResetInstances()
+	if fromPlayer then
+		for city in fromPlayer:Cities() do
+			if g_Deal:IsPossibleToTradeItem( fromPlayerID, toPlayerID, TradeableItems.TRADE_ITEM_CITIES, city:GetX(), city:GetY() ) then
+				local instance = instanceManager:GetInstance()
+				local cityID = city:GetID()
+				instance.CityName:SetText( city:GetName() )
+				instance.CityPop:SetText( city:GetPopulation().."[ICON_CITIZEN]" )
+				local button = instance.Button
+				button:SetVoids( fromPlayerID, cityID )
+				button:RegisterCallback( Mouse.eLClick, AddCityTrade )
 
-	print("UpdateResDeals: " .. g_iThem .. " - " .. tostring(g_iDiploUIState))
-	if g_iThem == -1 or g_iDiploUIState == nil then
-	elseif (g_iDiploUIState == DiploUIStateTypes.DIPLO_UI_STATE_TRADE
-			or g_iDiploUIState == DiploUIStateTypes.DIPLO_UI_STATE_TRADE_AI_MAKES_OFFER)
-		and ((g_ResDealsPToUpdate[0] and g_ResDealsPToUpdate[0][g_iThem] ~= nil)
-			or (g_ResDealsPToUpdate[1] and g_ResDealsPToUpdate[1][g_iThem] ~= nil))
-	then
-		if g_ResDealsPToUpdate[0] and g_ResDealsPToUpdate[0][g_iThem] then
-			for iResID, iGameTurn in pairs(g_ResDealsPToUpdate[0][g_iThem]) do
-				if iGameTurn and iGameTurn >= 0 and GameInfo.Resources[iResID] and GameInfo.Resources[iResID].ResourceUsage == 1 then
-					if g_ResDealsStartTurn[0] == nil then
-						g_ResDealsStartTurn[0] = {};
+				--SP Special Rule: Trade a City needs the city Founded by either side or has 4+ Population and not in Resistance
+				if (city:GetPopulation() < 4 or city:IsResistance()) 
+				and (city:GetOriginalOwner() ~= fromPlayerID and city:GetOriginalOwner() ~= toPlayerID) 
+				then
+					instance.Button:SetDisabled(true);
+				else
+					instance.Button:SetDisabled(false);
+				end
+
+			end
+		end
+	end
+end
+
+local function SetPocketCivs( tradeType, isPeace, pocketButtonList, fromPlayerID, fromPlayer, fromTeamID, fromTeam, toPlayerID, toPlayer, toTeamID, toTeam )
+	for playerID, button in pairs( pocketButtonList ) do
+		local player = Players[ playerID ]
+		if player then
+			local teamID = player:GetTeam()
+			local strToolTip
+			if player:IsAlive() and toTeamID ~= teamID and fromTeamID ~= teamID and toTeam:IsHasMet( teamID ) and fromTeam:IsHasMet( teamID ) and fromTeam:IsAtWar( teamID ) == isPeace then
+				if g_Deal:IsPossibleToTradeItem( fromPlayerID, toPlayerID, tradeType, teamID ) then
+					button:SetDisabled( false )
+					button:SetAlpha( 1 )
+					button:SetHide( false )
+				else
+					-- Why won't they make peace?
+					if isPeace then
+
+						-- Not at war
+--						if not fromTeam:IsAtWar( teamID ) then
+--							strToolTip = L"TXT_KEY_DIPLO_NOT_AT_WAR"
+
+						-- Minor that won't make peace
+						if player:IsMinorCiv() then
+
+							local ally = Players[ player:GetAlly() ]
+							if player:IsMinorPermanentWar( fromTeamID ) then
+								strToolTip = L"TXT_KEY_DIPLO_MINOR_PERMANENT_WAR"
+							elseif ally and fromTeam:IsAtWar( ally:GetTeam() ) then
+								strToolTip = L"TXT_KEY_DIPLO_MINOR_ALLY_AT_WAR"
+							end
+
+						-- Major that won't make peace
+						else
+							-- AI don't want no peace!
+							if not fromPlayer:IsWillAcceptPeaceWithPlayer( playerID ) then
+								strToolTip = L"TXT_KEY_DIPLO_MINOR_THIS_GUY_WANTS_WAR"
+							-- Other AI don't want no peace!
+							elseif not player:IsWillAcceptPeaceWithPlayer( fromPlayerID ) then
+								strToolTip = L"TXT_KEY_DIPLO_MINOR_OTHER_GUY_WANTS_WAR"
+							end
+						end
+
+					-- Why won't they make war?
+					else
+						-- Already at war
+--						if fromTeam:IsAtWar( teamID ) then
+--							strToolTip = L"TXT_KEY_DIPLO_ALREADY_AT_WAR"
+
+						-- Locked in to peace
+						if fromTeam:IsForcePeace( teamID ) then
+							strToolTip = L"TXT_KEY_DIPLO_FORCE_PEACE"
+
+						-- City-State ally
+--						elseif player:IsMinorCiv() and player:GetAlly() == fromPlayerID then
+--							strToolTip = L"TXT_KEY_DIPLO_NO_WAR_ALLIES"
+						end
 					end
-					if g_ResDealsStartTurn[0][g_iThem] == nil then
-						g_ResDealsStartTurn[0][g_iThem] = {};
-					end
-					g_ResDealsStartTurn[0][g_iThem][iResID] = iGameTurn;
+					button:SetDisabled( true )
+					button:SetAlpha( 0.5 )
+					button:SetHide( not strToolTip )
+				end
+				button:SetToolTipString( strToolTip )
+			else
+				button:SetHide( true )
+			end
+		end
+	end
+end
+
+local function ShowTableCiv( tableButtonList, pocketButtonList, teamID )
+	for playerID, button in pairs( tableButtonList ) do
+		local player = Players[ playerID ]
+		if player and player:IsAlive() and player:GetTeam() == teamID then
+			button:SetHide( false )
+			tableButtonList.Parent:SetHide( false )
+			pocketButtonList[ playerID ]:SetHide( true )
+		end
+	end
+end
+
+----------------------------------------------------------------
+----------------------------------------------------------------
+
+function ResetDisplay( diploMessage )
+
+	--print("ResetDisplay")
+	local ourPlayerID = g_iUs
+	local theirPlayerID = g_iThem
+	local ourPlayer = Players[ ourPlayerID ]
+	local theirPlayer = Players[ theirPlayerID ]
+	if ourPlayer and theirPlayer then
+		local Controls = Controls
+		local TradeableItems = TradeableItems
+		local deal = g_Deal
+
+		local ourTeamID = ourPlayer:GetTeam()
+		local ourTeam = Teams[ ourTeamID ]
+		local theirTeamID = theirPlayer:GetTeam()
+		local theirTeam = Teams[ theirTeamID ]
+
+		for _, control in pairs( g_pocketControls ) do
+			control:SetHide( false )
+		end
+
+		if not g_bMessageFromDiploAI then
+			DoClearTable()
+		end
+
+		-- Research Agreement cost
+		local strRAString = L( "TXT_KEY_DIPLO_RESCH_AGREEMENT_US", Game.GetResearchAgreementCost( ourPlayerID, theirPlayerID ) )
+		Controls.UsTableResearchAgreement:SetText( strRAString )
+		Controls.ThemTableResearchAgreement:SetText( strRAString )
+
+
+		if g_bTradeReview then
+			-- review mode
+
+			Controls.TradeDetails:SetHide( false )
+
+			CivIconHookup( ourPlayerID, 64, Controls.UsSymbolShadow, Controls.UsCivIconBG, Controls.UsCivIconShadow, false, true )
+			CivIconHookup( theirPlayerID, 64, Controls.ThemSymbolShadow, Controls.ThemCivIconBG, Controls.ThemCivIconShadow, false, true )
+
+			Controls.UsText:LocalizeAndSetText( "TXT_KEY_DIPLO_ITEMS_LABEL", ourPlayer:GetNameKey() )
+
+			if m_bIsMulitplayer and pOtherPlayer:IsHuman() then
+				Controls.ThemText:LocalizeAndSetText( "TXT_KEY_DIPLO_ITEMS_LABEL", theirPlayer:GetNickName() )
+			else
+				Controls.ThemText:LocalizeAndSetText( "TXT_KEY_DIPLO_ITEMS_LABEL", theirPlayer:GetName() )
+			end
+
+		elseif g_PVPTrade then
+			-- PvP mode
+
+			CivIconHookup( ourPlayerID, 64, Controls.UsSymbolShadow, Controls.UsCivIconBG, Controls.UsCivIconShadow, false, true )
+			CivIconHookup( theirPlayerID, 64, Controls.ThemSymbolShadow, Controls.ThemCivIconBG, Controls.ThemCivIconShadow, false, true )
+
+			Controls.ThemName:SetTruncateWidth( Controls.ThemTablePanel:GetSizeX() - Controls.ThemTablePanel:GetOffsetX() - 20 )
+			Controls.ThemName:LocalizeAndSetText( "TXT_KEY_DIPLO_ITEMS_LABEL", theirPlayer:GetNickName() )
+			Controls.ThemCiv:SetText( "(" .. theirPlayer:GetCivilizationShortDescription() .. ")" )
+
+		else
+			Controls.NameText:LocalizeAndSetText( "TXT_KEY_DIPLO_LEADER_SAYS", theirPlayer:GetName() )
+
+			if not g_bMessageFromDiploAI then
+				diploMessage = L"TXT_KEY_DIPLO_HERE_OFFER"
+			end
+
+			-- Set Civ Icon
+			CivIconHookup( theirPlayerID, 64, Controls.ThemSymbolShadow, Controls.ThemCivIconBG, Controls.ThemCivIconShadow, false, true )
+
+			Controls.LeaderNameItems:LocalizeAndSetText( "TXT_KEY_DIPLO_ITEMS_LABEL", theirPlayer:GetName() )
+
+			-- set up their portrait
+			local themLeaderInfo = GameInfo.Leaders[ theirPlayer:GetLeaderType() ]
+			IconHookup( themLeaderInfo.PortraitIndex, 128, themLeaderInfo.IconAtlas, Controls.ThemPortrait )
+
+			-- Is the AI is making demand?
+			Controls.WhatConcessionsButton:SetHide( not UI.IsAIRequestingConcessions() )
+
+			-- If we're at war with the other guy then show the "what will end this war" button
+			Controls.WhatWillEndThisWarButton:SetHide( not ourTeam:IsAtWar( theirTeamID ) )
+
+		end
+
+
+		local toolTip, isEnabled
+		local isSameTeam = ourTeamID == theirTeamID
+		----------------------------------------------------------------------------------
+		-- pocket Gold
+		----------------------------------------------------------------------------------
+
+		-- Us pocket Gold
+		isEnabled = deal:IsPossibleToTradeItem( ourPlayerID, theirPlayerID, TradeableItems.TRADE_ITEM_GOLD, 1 ) -- 1 here is 1 Gold, which is the minimum possible
+		SetEnabledAndTextAndToolTip( Controls.UsPocketGold, isEnabled,
+									deal:GetGoldAvailable( ourPlayerID, -1 ) .. " " .. L"TXT_KEY_DIPLO_GOLD", -- This is -1 because we're not changing anything right now
+									IsCiv5BNW and not isEnabled and "[COLOR_WARNING_TEXT]"..L"TXT_KEY_DIPLO_NEED_DOF_TT_ONE_LINE".."[ENDCOLOR]" )
+
+		-- Them pocket Gold
+		isEnabled = deal:IsPossibleToTradeItem( theirPlayerID, ourPlayerID, TradeableItems.TRADE_ITEM_GOLD, 1 ) -- 1 here is 1 Gold, which is the minimum possible
+		SetEnabledAndTextAndToolTip( Controls.ThemPocketGold, isEnabled,
+									deal:GetGoldAvailable( theirPlayerID, -1 ) .. " " .. L"TXT_KEY_DIPLO_GOLD", -- This is -1 because we're not changing anything right now
+									IsCiv5BNW and not isEnabled and "[COLOR_WARNING_TEXT]"..L"TXT_KEY_DIPLO_NEED_DOF_TT_ONE_LINE".."[ENDCOLOR]" )
+
+		-- Us pocket Gold Per Turn
+		SetEnabledAndText( Controls.UsPocketGoldPerTurn,
+							deal:IsPossibleToTradeItem( ourPlayerID, theirPlayerID, TradeableItems.TRADE_ITEM_GOLD_PER_TURN, 1, g_iDealDuration ), -- 1 here is 1 GPT, which is the minimum possible
+							ourPlayer:CalculateGoldRate() .. " " .. L"TXT_KEY_DIPLO_GOLD_PER_TURN" )
+
+		-- Them pocket Gold Per Turn
+		SetEnabledAndText( Controls.ThemPocketGoldPerTurn,
+							deal:IsPossibleToTradeItem( theirPlayerID, ourPlayerID, TradeableItems.TRADE_ITEM_GOLD_PER_TURN, 1, g_iDealDuration ), -- 1 here is 1 GPT, which is the minimum possible
+							theirPlayer:CalculateGoldRate() .. " " .. L"TXT_KEY_DIPLO_GOLD_PER_TURN" )
+
+
+		----------------------------------------------------------------------------------
+		-- pocket Allow Embassy
+		----------------------------------------------------------------------------------
+		if IsCiv5notVanilla then
+			-- Us
+			toolTip = g_embassyTooltip
+	--			toolTip = toolTip .. L"TXT_KEY_DIPLO_ALLOW_EMBASSY_THEY_HAVE":gsub("%[COLOR_NEGATIVE_TEXT%]","[COLOR_POSITIVE_TEXT]")
+			if not theirTeam:IsAllowEmbassyTradingAllowed() then
+				toolTip = toolTip .. "[COLOR_WARNING_TEXT]" .. L"TXT_KEY_DIPLO_ALLOW_EMBASSY_NO_TECH_OTHER_PLAYER" .. "[ENDCOLOR]"
+			end
+			SetEnabledAndToolTip( Controls.UsPocketAllowEmbassy, deal:IsPossibleToTradeItem( ourPlayerID, theirPlayerID, TradeableItems.TRADE_ITEM_ALLOW_EMBASSY, g_iDealDuration ), toolTip )
+			Controls.UsPocketAllowEmbassy:SetHide( isSameTeam or theirTeam:HasEmbassyAtTeam( ourTeamID ) )
+
+			-- Them
+			toolTip = g_embassyTooltip
+	--			toolTip = toolTip .. L"TXT_KEY_DIPLO_ALLOW_EMBASSY_HAVE":gsub("%[COLOR_NEGATIVE_TEXT%]","[COLOR_POSITIVE_TEXT]")
+			if not ourTeam:IsAllowEmbassyTradingAllowed() then
+				toolTip = toolTip .. "[COLOR_WARNING_TEXT]" .. L"TXT_KEY_DIPLO_ALLOW_EMBASSY_NO_TECH_PLAYER" .. "[ENDCOLOR]"
+			end
+			SetEnabledAndToolTip( Controls.ThemPocketAllowEmbassy, deal:IsPossibleToTradeItem( theirPlayerID, ourPlayerID, TradeableItems.TRADE_ITEM_ALLOW_EMBASSY, g_iDealDuration ), toolTip )
+			Controls.ThemPocketAllowEmbassy:SetHide( isSameTeam or ourTeam:HasEmbassyAtTeam( theirTeamID ) )
+		end -- IsCiv5notVanilla
+		----------------------------------------------------------------------------------
+		-- pocket Open Borders
+		----------------------------------------------------------------------------------
+
+		-- Are we not allowed to give OB?
+		toolTip = g_borderTooltip
+	--		toolTip = toolTip .. L"TXT_KEY_DIPLO_OPEN_BORDERS_HAVE":gsub("%[COLOR_NEGATIVE_TEXT%]","[COLOR_POSITIVE_TEXT]")
+		if not theirTeam:IsOpenBordersTradingAllowed() then
+			toolTip = toolTip .. "[COLOR_WARNING_TEXT]" .. L(IsCiv5notVanilla and "TXT_KEY_DIPLO_OPEN_BORDERS_NO_TECH" or "TXT_KEY_DIPLO_NEED_WRITING_TT") .. "[ENDCOLOR]"
+		elseif IsCiv5notVanilla and not ourTeam:HasEmbassyAtTeam( theirTeamID ) then
+			toolTip = toolTip .. "[COLOR_WARNING_TEXT]" .. L"TXT_KEY_DIPLO_YOU_NEED_EMBASSY_TT" .. "[ENDCOLOR]"
+		end
+		SetEnabledAndToolTip( Controls.UsPocketOpenBorders, deal:IsPossibleToTradeItem( ourPlayerID, theirPlayerID, TradeableItems.TRADE_ITEM_OPEN_BORDERS, g_iDealDuration ), toolTip )
+		Controls.UsPocketOpenBorders:SetHide( isSameTeam or ourTeam:IsAllowsOpenBordersToTeam( theirTeamID ) )
+
+		-- Are they not allowed to give OB?
+		toolTip = g_borderTooltip
+	--		toolTip = toolTip .. L"TXT_KEY_DIPLO_OPEN_BORDERS_THEY_HAVE":gsub("%[COLOR_NEGATIVE_TEXT%]","[COLOR_POSITIVE_TEXT]")
+		if not ourTeam:IsOpenBordersTradingAllowed() then
+			toolTip = toolTip .. "[COLOR_WARNING_TEXT]" .. L(IsCiv5notVanilla and "TXT_KEY_DIPLO_OPEN_BORDERS_NO_TECH" or "TXT_KEY_DIPLO_NEED_WRITING_TT") .. "[ENDCOLOR]"
+		elseif IsCiv5notVanilla and not theirTeam:HasEmbassyAtTeam( ourTeamID ) then
+			toolTip = toolTip .. "[COLOR_WARNING_TEXT]" .. L"TXT_KEY_DIPLO_THEY_NEED_EMBASSY_TT" .. "[ENDCOLOR]"
+		end
+		SetEnabledAndToolTip( Controls.ThemPocketOpenBorders, deal:IsPossibleToTradeItem( theirPlayerID, ourPlayerID, TradeableItems.TRADE_ITEM_OPEN_BORDERS, g_iDealDuration ), toolTip )
+		Controls.ThemPocketOpenBorders:SetHide( isSameTeam or theirTeam:IsAllowsOpenBordersToTeam( ourTeamID ) )
+
+		----------------------------------------------------------------------------------
+		-- pocket Defensive Pact
+		----------------------------------------------------------------------------------
+
+
+		toolTip = g_defensivePactToolTip
+	--		toolTip = toolTip .. "[COLOR_POSITIVE_TEXT]" .. L"TXT_KEY_DIPLO_DEF_PACT_EXISTS" .. "[ENDCOLOR]"
+		if not ourTeam:IsDefensivePactTradingAllowed() and not theirTeam:IsDefensivePactTradingAllowed() then
+			toolTip = toolTip .. "[COLOR_WARNING_TEXT]" .. L"TXT_KEY_DIPLO_DEF_PACT_NO_TECH" .. "[ENDCOLOR]"
+		elseif IsCiv5notVanilla and ( not ourTeam:HasEmbassyAtTeam( theirTeamID ) or not theirTeam:HasEmbassyAtTeam( ourTeamID ) ) then
+			toolTip = toolTip .. "[COLOR_WARNING_TEXT]" .. L"TXT_KEY_DIPLO_BOTH_NEED_EMBASSY_TT" .. "[ENDCOLOR]"
+	--	else
+	--		toolTip = toolTip .. "[COLOR_WARNING_TEXT]" .. L"TXT_KEY_DIPLO_DEF_PACT_NO_AGREEMENT" .. "[ENDCOLOR]"
+		end
+		SetEnabledAndToolTip( Controls.UsPocketDefensivePact, deal:IsPossibleToTradeItem( ourPlayerID, theirPlayerID, TradeableItems.TRADE_ITEM_DEFENSIVE_PACT, g_iDealDuration ), toolTip )
+		SetEnabledAndToolTip( Controls.ThemPocketDefensivePact, deal:IsPossibleToTradeItem( theirPlayerID, ourPlayerID, TradeableItems.TRADE_ITEM_DEFENSIVE_PACT, g_iDealDuration ), toolTip )
+		Controls.UsPocketDefensivePact:SetHide( isSameTeam or ourTeam:IsDefensivePact( theirTeamID ) )
+		Controls.ThemPocketDefensivePact:SetHide( isSameTeam or theirTeam:IsDefensivePact( ourTeamID ) )
+
+		----------------------------------------------------------------------------------
+		-- pocket Research Agreement
+		----------------------------------------------------------------------------------
+
+		local researchAgreementCost = Game.GetResearchAgreementCost(theirPlayerID, ourPlayerID)
+
+		toolTip = ""
+
+
+		if Game.IsOption(GameOptionTypes.GAMEOPTION_NO_SCIENCE) then
+			toolTip = L"TXT_KEY_DIPLO_RESCH_AGREEMENT_SCIENCE_OFF"
+		elseif ourTeam:GetTeamTechs():HasResearchedAllTechs() or theirTeam:GetTeamTechs():HasResearchedAllTechs() then
+			toolTip = L"TXT_KEY_DIPLO_RESCH_AGREEMENT_ALL_TECHS_RESEARCHED"
+		elseif ourTeam:IsHasResearchAgreement( theirTeamID ) then
+			toolTip = "[COLOR_POSITIVE_TEXT]" .. L"TXT_KEY_DIPLO_RESCH_AGREEMENT_EXISTS"
+		else
+			if not ourTeam:IsResearchAgreementTradingAllowed() and not theirTeam:IsResearchAgreementTradingAllowed() then
+				toolTip = toolTip .. L"TXT_KEY_DIPLO_RESCH_AGREEMENT_NO_TECH"
+			end
+			if IsCiv5notVanilla then
+				if not ourTeam:HasEmbassyAtTeam( theirTeamID ) or not theirTeam:HasEmbassyAtTeam( ourTeamID ) then
+					toolTip = toolTip .. L"TXT_KEY_DIPLO_BOTH_NEED_EMBASSY_TT"
+				end
+				if not ourPlayer:IsDoF(theirPlayerID) or not theirPlayer:IsDoF(ourPlayerID) then
+					toolTip = toolTip .. L"TXT_KEY_DIPLO_NEED_DOF_TT"
 				end
 			end
-			g_ResDealsPToUpdate[0][g_iThem] = nil;
-		end
-		if g_ResDealsPToUpdate[1] and g_ResDealsPToUpdate[1][g_iThem] then
-			for iResID, iGameTurn in pairs(g_ResDealsPToUpdate[1][g_iThem]) do
-				if iGameTurn and iGameTurn >= 0 and GameInfo.Resources[iResID] and GameInfo.Resources[iResID].ResourceUsage == 1 then
-					if g_ResDealsStartTurn[1] == nil then
-						g_ResDealsStartTurn[1] = {};
-					end
-					if g_ResDealsStartTurn[1][g_iThem] == nil then
-						g_ResDealsStartTurn[1][g_iThem] = {};
-					end
-					g_ResDealsStartTurn[1][g_iThem][iResID] = iGameTurn;
+			local ourCash = ourPlayer:GetGold() - researchAgreementCost
+			local theirCach = theirPlayer:GetGold() - researchAgreementCost
+			if ourCash < 0 or theirCach < 0 then
+				toolTip = toolTip .. L"TXT_KEY_DIPLO_RESCH_AGREEMENT_NO_AGREEMENT"
+				local spacer = " "
+				if theirCach < 0 then
+					toolTip = toolTip .. spacer .. theirPlayer:GetName() ..": " .. theirCach
+					spacer = ", "
+				end
+				if ourCash < 0 then
+					toolTip = toolTip .. spacer .. L"TXT_KEY_YOU" ..": " .. ourCash
 				end
 			end
-			g_ResDealsPToUpdate[1][g_iThem] = nil;
 		end
-	else
-		if g_ResDealsPToUpdate[0] and g_ResDealsPToUpdate[0][g_iThem] then
-			g_ResDealsPToUpdate[0][g_iThem] = nil;
+		toolTip = L( "TXT_KEY_DIPLO_RESCH_AGREEMENT_TT", researchAgreementCost, g_iDealDuration ) .. "[COLOR_WARNING_TEXT]" .. toolTip .. "[ENDCOLOR]"
+		SetEnabledAndToolTip( Controls.UsPocketResearchAgreement, deal:IsPossibleToTradeItem( ourPlayerID, theirPlayerID, TradeableItems.TRADE_ITEM_RESEARCH_AGREEMENT, g_iDealDuration ), toolTip )
+		SetEnabledAndToolTip( Controls.ThemPocketResearchAgreement, deal:IsPossibleToTradeItem( theirPlayerID, ourPlayerID, TradeableItems.TRADE_ITEM_RESEARCH_AGREEMENT, g_iDealDuration ), toolTip )
+		Controls.UsPocketResearchAgreement:SetHide( isSameTeam or ourTeam:IsHasResearchAgreement( theirTeamID ) )
+		Controls.ThemPocketResearchAgreement:SetHide( isSameTeam or theirTeam:IsHasResearchAgreement( ourTeamID ) )
+
+		----------------------------------------------------------------------------------
+		-- pocket Marriage
+		----------------------------------------------------------------------------------
+		toolTip = L"TXT_KEY_DIPLOMACY_MARRIAGE_BODY"
+		SetEnabledAndToolTip( Controls.UsPocketMarriage, deal:IsPossibleToTradeItem( ourPlayerID, theirPlayerID, TradeableItems.TRADE_ITEM_DIPLOMATIC_MARRIAGE, g_iDealDuration ), toolTip )
+		SetEnabledAndToolTip( Controls.ThemPocketMarriage, deal:IsPossibleToTradeItem( theirPlayerID, ourPlayerID, TradeableItems.TRADE_ITEM_DIPLOMATIC_MARRIAGE, g_iDealDuration ), toolTip )
+		local bShowPocketMarriage = ourPlayer:IsCanDiplomaticMarriage() or theirPlayer:IsCanDiplomaticMarriage()
+		Controls.UsPocketMarriage:SetHide( isSameTeam or not bShowPocketMarriage )
+		Controls.ThemPocketMarriage:SetHide( isSameTeam or not bShowPocketMarriage )
+		
+
+		----------------------------------------------------------------------------------
+		-- pocket Dual Empire
+		----------------------------------------------------------------------------------
+		toolTip = L"TXT_KEY_DIPLOMACY_DUAL_EMPIRE_TREATY_BODY"
+		SetEnabledAndToolTip( Controls.UsPocketDualEmpire, deal:IsPossibleToTradeItem( ourPlayerID, theirPlayerID, TradeableItems.TRADE_ITEM_DUAL_EMPIRE_TREATY, g_iDealDuration ), toolTip )
+		SetEnabledAndToolTip( Controls.ThemPocketDualEmpire, deal:IsPossibleToTradeItem( theirPlayerID, ourPlayerID, TradeableItems.TRADE_ITEM_DUAL_EMPIRE_TREATY, g_iDealDuration ), toolTip )
+		local bShowPocketDualEmpire = ourPlayer:IsAbleToDualEmpire() or theirPlayer:IsAbleToDualEmpire()
+		Controls.UsPocketDualEmpire:SetHide( isSameTeam or not bShowPocketDualEmpire )
+		Controls.ThemPocketDualEmpire:SetHide( isSameTeam or not bShowPocketDualEmpire )
+		
+		----------------------------------------------------------------------------------
+		-- pocket Trade Agreement
+		----------------------------------------------------------------------------------
+
+		-- Are we not allowed to give TA? (don't have tech, or are already providing it to them)
+
+		toolTip = L"TXT_KEY_DIPLO_TRADE_AGREEMENT_TT"
+		if ourTeam:IsHasTradeAgreement( theirTeamID ) then
+			toolTip = toolTip .. "[COLOR_POSITIVE_TEXT]" .. L"TXT_KEY_DIPLO_TRADE_AGREEMENT_EXISTS" .. "[ENDCOLOR]"
+		elseif not ourTeam:IsTradeAgreementTradingAllowed() and not theirTeam:IsTradeAgreementTradingAllowed() then
+			toolTip = toolTip .. "[COLOR_WARNING_TEXT]" .. L"TXT_KEY_DIPLO_TRADE_AGREEMENT_NO_TECH" .. "[ENDCOLOR]"
+		else
+			toolTip = L"TXT_KEY_DIPLO_TRADE_AGREEMENT_NO_AGREEMENT"
 		end
-		if g_ResDealsPToUpdate[1] and g_ResDealsPToUpdate[1][g_iThem] then
-			g_ResDealsPToUpdate[1][g_iThem] = nil;
+		SetEnabledAndToolTip( Controls.UsPocketTradeAgreement, deal:IsPossibleToTradeItem( ourPlayerID, theirPlayerID, TradeableItems.TRADE_ITEM_TRADE_AGREEMENT, g_iDealDuration ), toolTip )
+		SetEnabledAndToolTip( Controls.ThemPocketTradeAgreement, deal:IsPossibleToTradeItem( theirPlayerID, ourPlayerID, TradeableItems.TRADE_ITEM_TRADE_AGREEMENT, g_iDealDuration ), toolTip )
+		--Controls.UsPocketTradeAgreement:SetHide( isSameTeam or ourTeam:IsHasTradeAgreement( theirTeamID ) )
+		--Controls.ThemPocketTradeAgreement:SetHide( isSameTeam or theirTeam:IsHasTradeAgreement( ourTeamID ) )
+
+		----------------------------------------------------------------------------------
+		-- Pocket Declaration of Friendship
+		----------------------------------------------------------------------------------
+
+		if IsCiv5notVanilla and Controls.UsPocketDoF and Controls.ThemPocketDoF then
+			Controls.UsPocketDoF:SetHide( not g_PVPTrade )
+			Controls.ThemPocketDoF:SetHide( not g_PVPTrade )
+			if g_PVPTrade then	-- Only PvP trade, with the AI there is a dedicated interface for this trade.
+
+				toolTip = L"TXT_KEY_DIPLO_DISCUSS_MESSAGE_DEC_FRIENDSHIP_TT"
+				if ourPlayer:IsDoF(theirPlayerID) or theirPlayer:IsDoF(ourPlayerID) then
+					toolTip = toolTip .. "[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]" .. L"TXT_KEY_DIPLO_DECLARATION_OF_FRIENDSHIP_ALREADY_EXISTS".. "[ENDCOLOR]"
+				elseif ourTeam:IsAtWar( theirTeamID ) then
+					toolTip = toolTip .. "[NEWLINE][NEWLINE][COLOR_WARNING_TEXT]" .. L"TXT_KEY_DIPLO_DECLARATION_OF_FRIENDSHIP_AT_WAR" .. "[ENDCOLOR]"
+				end
+				SetEnabledAndToolTip( Controls.UsPocketDoF, deal:IsPossibleToTradeItem( ourPlayerID, theirPlayerID, TradeableItems.TRADE_ITEM_DECLARATION_OF_FRIENDSHIP, g_iDealDuration ), toolTip )
+				SetEnabledAndToolTip( Controls.ThemPocketDoF, deal:IsPossibleToTradeItem( theirPlayerID, ourPlayerID, TradeableItems.TRADE_ITEM_DECLARATION_OF_FRIENDSHIP, g_iDealDuration ), toolTip )
+			end
+		end
+
+		-- Pocket Cities
+		SetPocketCities( g_UsPocketCitiesIM, ourPlayer, ourPlayerID, theirPlayerID )
+		SetPocketCities( g_ThemPocketCitiesIM, theirPlayer, theirPlayerID, ourPlayerID )
+
+		-- pocket other civs
+		if g_bEnableThirdParty then
+			SetPocketCivs( TradeableItems.TRADE_ITEM_THIRD_PARTY_PEACE, true, g_usPocketPeaceButtons, ourPlayerID, ourPlayer, ourTeamID, ourTeam, theirPlayerID, theirPlayer, theirTeamID, theirTeam )
+			SetPocketCivs( TradeableItems.TRADE_ITEM_THIRD_PARTY_PEACE, true, g_themPocketPeaceButtons, theirPlayerID, theirPlayer, theirTeamID, theirTeam, ourPlayerID, ourPlayer, ourTeamID, ourTeam )
+			SetPocketCivs( TradeableItems.TRADE_ITEM_THIRD_PARTY_WAR, false, g_usPocketWarButtons, ourPlayerID, ourPlayer, ourTeamID, ourTeam, theirPlayerID, theirPlayer, theirTeamID, theirTeam )
+			SetPocketCivs( TradeableItems.TRADE_ITEM_THIRD_PARTY_WAR, false, g_themPocketWarButtons, theirPlayerID, theirPlayer, theirTeamID, theirTeam, ourPlayerID, ourPlayer, ourTeamID, ourTeam, TradeableItems.TRADE_ITEM_THIRD_PARTY_WAR )
+		end
+
+		----------------------------------------------------------------------------------
+		-- pocket resources for us
+		----------------------------------------------------------------------------------
+		for resourceID, instance in pairs( g_UsPocketResources ) do
+
+			if deal:IsPossibleToTradeItem( ourPlayerID, theirPlayerID, TradeableItems.TRADE_ITEM_RESOURCES, resourceID, 1 ) then	-- 1 here is 1 quanity of the Resource, which is the minimum possible
+				instance.Button:SetHide( false )
+				local resource = GameInfo.Resources[resourceID]
+				instance.Button:SetText( resource.IconString .. L(resource.Description) .. " (" .. ourPlayer:GetNumResourceAvailable( resourceID, false ) .. ")" )
+			else
+				instance.Button:SetHide( true )
+			end
+		end
+
+		----------------------------------------------------------------------------------
+		-- pocket resources for them
+		----------------------------------------------------------------------------------
+		for resourceID, instance in pairs( g_ThemPocketResources ) do
+			if deal:IsPossibleToTradeItem( theirPlayerID, ourPlayerID, TradeableItems.TRADE_ITEM_RESOURCES, resourceID, 1 ) then -- 1 here is 1 quanity of the Resource, which is the minimum possible
+				instance.Button:SetHide( false )
+				local resource = GameInfo.Resources[resourceID]
+
+				instance.Button:SetText( resource.IconString .. " " .. L(resource.Description) .. " (" .. theirPlayer:GetNumResourceAvailable( resourceID, false ) .. ")" )
+			else
+				instance.Button:SetHide( true )
+			end
+		end
+
+		----------------------------------------------------------------------------------
+		-- Votes
+		----------------------------------------------------------------------------------
+		if IsCiv5BNW then
+			Controls.UsPocketVote:SetHide( not IsLeagues )
+			Controls.ThemPocketVote:SetHide( not IsLeagues )
+			if IsLeagues then
+
+				RefreshPocketVotes(1)
+
+				RefreshPocketVotes(0)
+			end
+		end --IsCiv5BNW
+
+		ResizeStacks()
+		-- Propose button could have had its text changed to "ACCEPT" if the AI made an offer to the human
+		return DoUpdateButtons( diploMessage )
+	end
+end
+local ResetDisplay = ResetDisplay
+
+----------------------------------------------------------------
+----------------------------------------------------------------
+function DisplayDeal(...)
+	ResetDisplay(...)
+	g_UsTableCitiesIM:ResetInstances()
+	g_ThemTableCitiesIM:ResetInstances()
+	if IsCiv5BNW then
+		g_UsTableVoteIM:ResetInstances()
+		g_ThemTableVoteIM:ResetInstances()
+	end
+	local ourPlayer = Players[ g_iUs ]
+	local theirPlayer = Players[ g_iThem ]
+	if ourPlayer and theirPlayer then
+
+		--print("Displaying Deal")
+
+		local itemType, duration, finalTurn, data1, data2, data3, flag1, fromPlayerID, toPlayerID
+
+		local toolTip
+
+		local numItemsFromUs = 0
+		local numItemsFromThem = 0
+		local deal = g_Deal
+		local Controls = Controls
+
+		deal:ResetIterator()
+
+		--print("Going through check")
+		repeat
+			if IsCiv5BNW then
+				itemType, duration, finalTurn, data1, data2, data3, flag1, fromPlayerID = deal:GetNextItem()
+			else
+				itemType, duration, finalTurn, data1, data2, fromPlayerID = deal:GetNextItem()
+			end
+			if not itemType then break end
+			local isFromUs = fromPlayerID == g_iUs
+
+			--print("Adding trade item to active deal: " .. itemType)
+
+			if isFromUs then
+				toPlayerID = g_iThem
+				numItemsFromUs = numItemsFromUs + 1
+			else
+				toPlayerID = g_iUs
+				numItemsFromThem = numItemsFromThem + 1
+			end
+
+			local itemControls = g_itemControls[ itemType ]
+			if itemControls then
+				local pocketControl = itemControls[ isFromUs and 1 or 3 ]
+				local tableControl = itemControls[ isFromUs and 2 or 4 ]
+				if pocketControl then
+					pocketControl:SetHide( true )
+				end
+				if tableControl then
+					tableControl:SetHide( false )
+				end
+
+			elseif TradeableItems.TRADE_ITEM_GOLD == itemType then
+
+				Controls.UsPocketGold:SetHide( true )
+				Controls.ThemPocketGold:SetHide( true )
+				Controls.UsTableGold:SetHide( not isFromUs )
+				Controls.ThemTableGold:SetHide( isFromUs )
+
+				-- update quantity
+				;(isFromUs and Controls.UsGoldAmount or Controls.ThemGoldAmount):SetText( data1 )
+				;(isFromUs and Controls.UsTableGold or Controls.ThemTableGold):LocalizeAndSetToolTip( "TXT_KEY_DIPLO_CURRENT_GOLD", deal:GetGoldAvailable(fromPlayerID, -1) ) -- This is -1 because we're not changing anything right now
+
+			elseif TradeableItems.TRADE_ITEM_GOLD_PER_TURN == itemType then
+
+				Controls.UsPocketGoldPerTurn:SetHide( true )
+				Controls.ThemPocketGoldPerTurn:SetHide( true )
+
+				if isFromUs then
+					Controls.UsTableGoldPerTurn:SetHide( false )
+					Controls.UsGoldPerTurnTurns:LocalizeAndSetText( "TXT_KEY_DIPLO_TURNS", duration )
+					Controls.UsGoldPerTurnAmount:SetText( data1 )
+					Controls.UsTableGoldPerTurn:LocalizeAndSetToolTip( "TXT_KEY_DIPLO_CURRENT_GPT", ourPlayer:CalculateGoldRate() - data1 )
+				else
+					Controls.ThemTableGoldPerTurn:SetHide( false )
+					Controls.ThemGoldPerTurnTurns:LocalizeAndSetText( "TXT_KEY_DIPLO_TURNS", duration )
+					Controls.ThemGoldPerTurnAmount:SetText( data1 )
+					Controls.ThemTableGoldPerTurn:LocalizeAndSetToolTip( "TXT_KEY_DIPLO_CURRENT_GPT", theirPlayer:CalculateGoldRate() - data1 )
+				end
+
+			elseif TradeableItems.TRADE_ITEM_CITIES == itemType then
+
+				local plot = Map.GetPlot( data1, data2 )
+				local city = plot and plot:GetPlotCity()
+				local instance = (isFromUs and g_UsTableCitiesIM or g_ThemTableCitiesIM):GetInstance()
+				if city then
+					instance.Button:SetVoids( fromPlayerID, city:GetID() )
+					instance.Button:RegisterCallback( Mouse.eLClick, RemoveCityTrade )
+					instance.CityName:SetText( city:GetName() )
+					instance.CityPop:SetText( city:GetPopulation().."[ICON_CITIZEN]" )
+				else
+					instance.Button:SetVoids( -1, -1 )
+					instance.Button:ClearCallback( Mouse.eLClick )
+					instance.CityName:LocalizeAndSetText( "TXT_KEY_RAZED_CITY" )
+					instance.CityPop:SetText()
+				end
+
+			elseif TradeableItems.TRADE_ITEM_THIRD_PARTY_PEACE == itemType then
+				if isFromUs then
+					ShowTableCiv( g_usTablePeaceButtons, g_usPocketPeaceButtons, data1 )
+				else
+					ShowTableCiv( g_themTablePeaceButtons, g_themPocketPeaceButtons, data1 )
+				end
+
+			elseif TradeableItems.TRADE_ITEM_THIRD_PARTY_WAR == itemType then
+				if isFromUs then
+					ShowTableCiv( g_usTableWarButtons, g_usPocketWarButtons, data1 )
+				else
+					ShowTableCiv( g_themTableWarButtons, g_themPocketWarButtons, data1 )
+				end
+
+			elseif TradeableItems.TRADE_ITEM_RESOURCES == itemType then
+
+				local instance = ( isFromUs and g_UsTableResources or g_ThemTableResources )[ data1 ]
+				if instance then
+
+					instance.Container:SetHide( false )
+					instance.DurationEdit:LocalizeAndSetText( "TXT_KEY_DIPLO_TURNS", duration )
+					if instance.AmountEdit then -- is strategic
+						( isFromUs and Controls.UsTableStrategicStack or Controls.ThemTableStrategicStack ):SetHide( false )
+						instance.AmountEdit:SetText( data2 )
+					else
+						( isFromUs and Controls.UsTableLuxuryStack or Controls.ThemTableLuxuryStack ):SetHide( false )
+					end
+					g_UsPocketResources[ data1 ].Button:SetHide( true )
+					g_ThemPocketResources[ data1 ].Button:SetHide( true )
+				end
+
+			elseif IsCiv5BNW and TradeableItems.TRADE_ITEM_VOTE_COMMITMENT == itemType then
+				--print("==debug== VOTE_COMMITMENT found in DisplayDeal")
+
+				local activeLeague = Game.GetNumActiveLeagues() > 0 and Game.GetActiveLeague()
+				if activeLeague then
+					local voteIndex = GetLeagueVoteIndexFromData(data1, data2, flag1)
+					local resolution = g_LeagueVoteList[voteIndex]
+					if resolution then
+						local instance = (isFromUs and g_UsTableVoteIM or g_ThemTableVoteIM):GetInstance()
+						instance.ProposalLabel:SetText( GetVoteText(activeLeague, voteIndex, flag1, data3) )
+						instance.VoteLabel:SetText( activeLeague:GetTextForChoice(resolution.VoteDecision, resolution.VoteChoice) )
+						instance.Button:SetToolTipString( GetVoteTooltip(activeLeague, voteIndex, flag1, data3) )
+						instance.Button:SetVoids( fromPlayerID, voteIndex )
+						instance.Button:RegisterCallback( Mouse.eLClick, OnChooseTableVote )
+						;(isFromUs and Controls.UsTableVoteStack or Controls.ThemTableVoteStack):SetHide( false )
+					end
+				end
+			end
+		until false
+
+		for k in pairs( g_SubStacks ) do
+			SubStackToggle( Controls[k], false ) -- false = no state change
+		end
+
+		ResizeStacks()
+	end
+end
+local DisplayDeal = DisplayDeal
+
+---------------------------------------------------------
+-- LEADER MESSAGE HANDLER
+---------------------------------------------------------
+function LeaderMessageHandler( theirPlayerID, diploUIstateID, diploMessage, animationActionID, diploData )
+--local dps, pdpsfor k,v in pairs(DiploUIStateTypes) do if v==diploUIstateID then dps=k end if v==g_diploUIStateID then pdps=k end end diploMessage = "Previous: "..tostring(pdps).."[NEWLINE]Current: "..tostring(dps)..tostring(diploData).."[NEWLINE]"..diploMessage
+	g_PVPTrade = false
+	g_bTradeReview = false
+
+	g_iUs = Game.GetActivePlayer()
+	g_iThem = theirPlayerID
+
+	-- skip trade deal discussion blurb
+	if UI.GetLeaderHeadRootUp() and diploUIstateID == DiploUIStateTypes.DIPLO_UI_STATE_BLANK_DISCUSSION and
+			( g_diploUIStateID == DiploUIStateTypes.DIPLO_UI_STATE_TRADE_AI_MAKES_OFFER
+				or g_diploUIStateID == DiploUIStateTypes.DIPLO_UI_STATE_TRADE ) then
+--		g_Deal:ClearItems()
+--		diploMessage = diploMessage .. "[NEWLINE]" .. L"TXT_KEY_DIPLOMACY_ANYTHING_ELSE"
+		diploUIstateID = DiploUIStateTypes.DIPLO_UI_STATE_TRADE
+	-- If we were just in discussion mode and the human offered to make concessions, make a note of that
+	elseif diploUIstateID == DiploUIStateTypes.DIPLO_UI_STATE_TRADE_HUMAN_OFFERS_CONCESSIONS then
+		if g_diploUIStateID == DiploUIStateTypes.DIPLO_UI_STATE_DISCUSS_YOU_KILLED_MINOR_CIV then
+			--print("Human offers concessions for killing Minor Civ")
+			g_iConcessionsPreviousDiploUIState = g_diploUIStateID
+		elseif g_diploUIStateID == DiploUIStateTypes.DIPLO_UI_STATE_DISCUSS_YOU_EXPANSION_SERIOUS_WARNING then
+			--print("Human offers concessions for expansion")
+			g_iConcessionsPreviousDiploUIState = g_diploUIStateID
+		elseif g_diploUIStateID == DiploUIStateTypes.DIPLO_UI_STATE_DISCUSS_YOU_PLOT_BUYING_SERIOUS_WARNING then
+			--print("Human offers concessions for plot buying")
+			g_iConcessionsPreviousDiploUIState = g_diploUIStateID
 		end
 	end
 
-	DoClearTable();
-end
+	g_diploUIStateID = diploUIstateID
 
-Events.ClearDiplomacyTradeTable.Add(DoClearDeal);
-
-
-
----------------------------------------------------------
--- stack open/close handlers
----------------------------------------------------------
-local g_SubStacks = {};
-g_SubStacks[tostring(Controls.UsPocketOtherPlayer)] = Controls.UsPocketOtherPlayerStack;
-g_SubStacks[tostring(Controls.ThemPocketOtherPlayer)] = Controls.ThemPocketOtherPlayerStack;
-g_SubStacks[tostring(Controls.UsPocketStrategic)] = Controls.UsPocketStrategicStack;
-g_SubStacks[tostring(Controls.ThemPocketStrategic)] = Controls.ThemPocketStrategicStack;
-g_SubStacks[tostring(Controls.UsPocketLuxury)] = Controls.UsPocketLuxuryStack;
-g_SubStacks[tostring(Controls.ThemPocketLuxury)] = Controls.ThemPocketLuxuryStack;
-
-local g_SubLabels = {};
-g_SubLabels[tostring(Controls.UsPocketOtherPlayer)] = Locale.ConvertTextKey("TXT_KEY_DIPLO_ITEMS_OTHER_PLAYERS");
-g_SubLabels[tostring(Controls.ThemPocketOtherPlayer)] = Locale.ConvertTextKey("TXT_KEY_DIPLO_ITEMS_OTHER_PLAYERS");
-g_SubLabels[tostring(Controls.UsPocketStrategic)] = Locale.ConvertTextKey("TXT_KEY_DIPLO_ITEMS_STRATEGIC_RESOURCES");
-g_SubLabels[tostring(Controls.ThemPocketStrategic)] = Locale.ConvertTextKey("TXT_KEY_DIPLO_ITEMS_STRATEGIC_RESOURCES");
-g_SubLabels[tostring(Controls.UsPocketLuxury)] = Locale.ConvertTextKey("TXT_KEY_DIPLO_ITEMS_LUXURY_RESOURCES");
-g_SubLabels[tostring(Controls.ThemPocketLuxury)] = Locale.ConvertTextKey("TXT_KEY_DIPLO_ITEMS_LUXURY_RESOURCES");
-
-Controls.UsPocketOtherPlayer:SetVoid1(1);
-Controls.UsPocketStrategic:SetVoid1(1);
-Controls.UsPocketLuxury:SetVoid1(1);
-
-if (not Game.IsOption("GAMEOPTION_NO_LEAGUES")) then
-	g_SubStacks[tostring(Controls.UsPocketVote)] = Controls.UsPocketVoteStack;
-	g_SubStacks[tostring(Controls.ThemPocketVote)] = Controls.ThemPocketVoteStack;
-	g_SubLabels[tostring(Controls.UsPocketVote)] = Locale.ConvertTextKey("TXT_KEY_TRADE_ITEM_VOTES");
-	g_SubLabels[tostring(Controls.ThemPocketVote)] = Locale.ConvertTextKey("TXT_KEY_TRADE_ITEM_VOTES");
-
-	Controls.UsPocketVote:SetVoid1(1);
-end
-
-function SubStackHandler(bIsUs, none, control)
-	local stack = g_SubStacks[tostring(control)];
-	local label = g_SubLabels[tostring(control)];
-
-	if (stack:IsHidden()) then
-		stack:SetHide(false);
-		control:SetText("[ICON_MINUS]" .. Locale.ConvertTextKey(label));
-	else
-		stack:SetHide(true);
-		control:SetText("[ICON_PLUS]" .. Locale.ConvertTextKey(label));
-	end
-
-	if (bIsUs == 1)
+	-- Are we in Trade Mode?
+	if diploUIstateID == DiploUIStateTypes.DIPLO_UI_STATE_TRADE
+		or diploUIstateID == DiploUIStateTypes.DIPLO_UI_STATE_TRADE_AI_MAKES_DEMAND
+		or diploUIstateID == DiploUIStateTypes.DIPLO_UI_STATE_TRADE_AI_MAKES_REQUEST
+		or diploUIstateID == DiploUIStateTypes.DIPLO_UI_STATE_TRADE_HUMAN_OFFERS_CONCESSIONS
+		or diploUIstateID == DiploUIStateTypes.DIPLO_UI_STATE_TRADE_AI_MAKES_OFFER
+		or diploUIstateID == DiploUIStateTypes.DIPLO_UI_STATE_TRADE_AI_ACCEPTS_OFFER
+		or diploUIstateID == DiploUIStateTypes.DIPLO_UI_STATE_TRADE_AI_REJECTS_OFFER
+		or diploUIstateID == DiploUIStateTypes.DIPLO_UI_STATE_HUMAN_DEMAND
 	then
-		Controls.UsPocketStack:CalculateSize();
-		Controls.UsPocketPanel:CalculateInternalSize();
-		Controls.UsPocketPanel:ReprocessAnchoring();
+
+		--print("TradeScreen: It's MY mode!")
+
+		if ContextPtr:IsHidden() then
+			UIManager:QueuePopup( ContextPtr, PopupPriority.LeaderTrade )
+		end
+
+print("Handling LeaderMessage: " .. diploUIstateID .. ", ".. diploMessage)
+
+		g_Deal:SetFromPlayer(g_iUs)
+		g_Deal:SetToPlayer(theirPlayerID)
+
+		-- Unhide our pocket, in case the last thing we were doing in this screen was a human demand
+		Controls.UsPanel:SetHide(false)
+		Controls.UsGlass:SetHide(false)
+
+		local bClearTableAndDisplayDeal = false
+
+		-- Is this a UI State where we should be displaying a deal?
+		if g_diploUIStateID == DiploUIStateTypes.DIPLO_UI_STATE_TRADE then
+			--print("DiploUIState: Default Trade")
+			bClearTableAndDisplayDeal = true
+		elseif g_diploUIStateID == DiploUIStateTypes.DIPLO_UI_STATE_TRADE_AI_MAKES_DEMAND then
+			--print("DiploUIState: AI making demand")
+			bClearTableAndDisplayDeal = true
+
+			DoDemandState(true)
+
+		elseif g_diploUIStateID == DiploUIStateTypes.DIPLO_UI_STATE_TRADE_AI_MAKES_REQUEST then
+			--print("DiploUIState: AI making Request")
+			bClearTableAndDisplayDeal = true
+
+			DoDemandState(true)
+
+		elseif g_diploUIStateID == DiploUIStateTypes.DIPLO_UI_STATE_HUMAN_DEMAND then
+			--print("DiploUIState: Human Demand")
+			bClearTableAndDisplayDeal = true
+			-- If we're demanding something, there's no need to show OUR items
+			Controls.UsPanel:SetHide(true)
+			Controls.UsGlass:SetHide(true)
+
+		elseif g_diploUIStateID == DiploUIStateTypes.DIPLO_UI_STATE_TRADE_HUMAN_OFFERS_CONCESSIONS then
+			--print("DiploUIState: Human offers concessions")
+			bClearTableAndDisplayDeal = true
+		elseif g_diploUIStateID == DiploUIStateTypes.DIPLO_UI_STATE_TRADE_AI_MAKES_OFFER then
+			--print("DiploUIState: AI making offer")
+			bClearTableAndDisplayDeal = true
+			g_bAIMakingOffer = true
+		elseif g_diploUIStateID == DiploUIStateTypes.DIPLO_UI_STATE_TRADE_AI_ACCEPTS_OFFER then
+			--print("DiploUIState: AI accepted offer")
+			g_iConcessionsPreviousDiploUIState = -1		-- Clear out the fact that we were offering concessions if the AI has agreed to a deal
+			bClearTableAndDisplayDeal = true
+
+		-- If the AI rejects a deal, don't clear the table: keep the items where they are in case the human wants to change things
+		elseif g_diploUIStateID == DiploUIStateTypes.DIPLO_UI_STATE_TRADE_AI_REJECTS_OFFER then
+			--print("DiploUIState: AI rejects offer")
+			bClearTableAndDisplayDeal = false
+		else
+			--print("DiploUIState: ?????")
+		end
+
+		-- Clear table and display the deal currently stored in InterfaceBuddy
+		if bClearTableAndDisplayDeal then
+			g_bMessageFromDiploAI = true
+			DoClearTable()
+			DisplayDeal()
+
+		-- Don't clear the table, leave things as they are
+		else
+
+			--print("NOT clearing table")
+
+			g_bMessageFromDiploAI = true
+
+		end
+
+		DoUpdateButtons( diploMessage )
+
+	-- Not in trade mode
 	else
-		Controls.ThemPocketStack:CalculateSize();
-		Controls.ThemPocketPanel:CalculateInternalSize();
-		Controls.ThemPocketPanel:ReprocessAnchoring();
+
+		--print("TradeScreen: NOT my mode! Hiding!")
+		--print("diploUIstateID: " .. diploUIstateID)
+
+		g_Deal:ClearItems()
+
+		if not ContextPtr:IsHidden() then
+			ContextPtr:SetHide( true )
+		end
+
+	end
+
+end
+--Events.AILeaderMessage.Add( LeaderMessageHandler )
+--Events.LeavingLeaderViewMode.Add(
+--function()
+--	g_isHumanInitiatedTrade = false
+--	g_iConcessionsPreviousDiploUIState = -1
+--	g_diploUIStateID = -1
+--end)
+
+----------------------------------------------------------------
+-- Used by SimpleDiploTrade to display pvp deals
+----------------------------------------------------------------
+function OnOpenPlayerDealScreen( theirPlayerID )
+	local ourPlayerID = Game.GetActivePlayer()
+	local ourPlayer = Players[ ourPlayerID ]
+	local theirPlayer = Players[ theirPlayerID ]
+	g_iUs = ourPlayerID
+	g_iThem = theirPlayerID
+	if ourPlayer and theirPlayer then
+		local isAtWar = Teams[ ourPlayer:GetTeam() ]:IsAtWar( theirPlayer:GetTeam() )
+
+		if ourPlayerID == theirPlayerID then
+			return print( "ERROR: OpenPlayerDealScreen called with local player" ) -- cannot deal with ourselves
+		
+		elseif isAtWar and (g_bAlwaysWar or g_bNoChangeWar) then
+			return -- someone is trying to open the deal screen when they are not allowed to negotiate peace
+
+		elseif UI.ProposedDealExists( theirPlayerID, ourPlayerID ) then
+			g_PVPTrade = 2 -- is this is their proposal
+			DoClearTable()
+			UI.LoadProposedDeal( theirPlayerID, ourPlayerID )
+
+		elseif UI.ProposedDealExists( ourPlayerID, theirPlayerID ) then
+			g_PVPTrade = 1 -- this is our proposal
+			DoClearTable()
+			UI.LoadProposedDeal( ourPlayerID, theirPlayerID )
+		else
+			g_PVPTrade = 0 -- setup a new deal...
+			DoClearDeal()
+			g_Deal:SetFromPlayer( ourPlayerID )
+			g_Deal:SetToPlayer( theirPlayerID )
+			if isAtWar then
+				g_Deal:AddPeaceTreaty( ourPlayerID, g_iPeaceDuration )
+				g_Deal:AddPeaceTreaty( theirPlayerID, g_iPeaceDuration )
+			end
+		end
+
+		ContextPtr:SetHide( false )
+		return DisplayDeal()
 	end
 end
 
-Controls.UsPocketOtherPlayer:RegisterCallback(Mouse.eLClick, SubStackHandler);
-Controls.ThemPocketOtherPlayer:RegisterCallback(Mouse.eLClick, SubStackHandler);
-Controls.UsPocketStrategic:RegisterCallback(Mouse.eLClick, SubStackHandler);
-Controls.ThemPocketStrategic:RegisterCallback(Mouse.eLClick, SubStackHandler);
-Controls.UsPocketLuxury:RegisterCallback(Mouse.eLClick, SubStackHandler);
-Controls.ThemPocketLuxury:RegisterCallback(Mouse.eLClick, SubStackHandler);
 
-if (not Game.IsOption("GAMEOPTION_NO_LEAGUES")) then
-	function VoteStackHandler(bIsUs, none, control)
-		RefreshPocketVotes(bIsUs);
-		SubStackHandler(bIsUs, none, control);
+----------------------------------------------------------------
+-- used by DiploOverview to display active deals
+----------------------------------------------------------------
+function OpenDealReview()
+
+	--print( "OpenDealReview" )
+
+	g_iUs = Game:GetActivePlayer()
+	g_iThem = g_Deal:GetOtherPlayer( g_iUs )
+
+	if g_iUs == g_iThem then
+		print( "ERROR: OpenDealReview called with local player" )
 	end
 
-	Controls.ThemPocketVote:RegisterCallback(Mouse.eLClick, VoteStackHandler);
-	Controls.UsPocketVote:RegisterCallback(Mouse.eLClick, VoteStackHandler);
+	g_PVPTrade = false
+	g_bTradeReview = true
+
+	DoClearTable()
+	return DisplayDeal()
 end
 
+
+----------------------------------------------------------------
+-- BACK
+----------------------------------------------------------------
+function OnBack( flag )
+
+	if g_bTradeReview or g_PVPTrade then
+
+		if g_PVPTrade and flag then
+			if g_PVPTrade == 2 then -- refuse their proposal
+				UI.DoFinalizePlayerDeal( g_iThem, g_iUs, false )
+
+			elseif g_PVPTrade == 1 then -- withdraw our proposal
+				UI.DoFinalizePlayerDeal( g_iUs, g_iThem, false )
+
+			else -- new deal
+				g_Deal:ClearItems()
+			end
+		end
+
+		ContextPtr:SetHide( true )
+		ContextPtr:CallParentShowHideHandler( false )
+	else
+		-- Human refused to give into an AI demand - this button doubles as the Demand "Refuse" option
+		local ourPlayer = Players[ g_iUs ]
+		local ourTeam = ourPlayer and Teams[ ourPlayer:GetTeam() ]
+		local theirPlayer = Players[ g_iThem ]
+		local theirTeamID = theirPlayer and theirPlayer:GetTeam()
+
+		if g_diploUIStateID == DiploUIStateTypes.DIPLO_UI_STATE_TRADE_AI_MAKES_DEMAND then
+			DoDemandState(false)
+			DoClearDeal()
+			DisplayDeal()
+			Game.DoFromUIDiploEvent( FromUIDiploEventTypes.FROM_UI_DIPLO_EVENT_DEMAND_HUMAN_REFUSAL, g_iThem, 0, 0 )
+
+		elseif g_diploUIStateID == DiploUIStateTypes.DIPLO_UI_STATE_TRADE_AI_MAKES_REQUEST then
+			DoDemandState(false)
+			DoClearDeal()
+			DisplayDeal()
+			Game.DoFromUIDiploEvent( FromUIDiploEventTypes.FROM_UI_DIPLO_EVENT_REQUEST_HUMAN_REFUSAL, g_iThem, IsCiv5notVanilla and g_Deal and ourPlayer and ourPlayer:GetDealMyValue(g_Deal) or 0, 0 )
+
+		elseif g_Deal:GetNumItems() ~= 0 and ourTeam and theirTeamID and not ourTeam:IsAtWar( theirTeamID ) and UI.GetLeaderHeadRootUp() then
+			DoDemandState(false)
+			DoClearDeal()
+			return DisplayDeal( L"TXT_KEY_DIPLOMACY_ANYTHING_ELSE" )
+
+		else -- Exit screen normally
+
+			g_Deal:ClearItems()
+			if theirPlayer then
+				theirPlayer:DoTradeScreenClosed(g_bAIMakingOffer)
+			end
+
+			-- Don't assume we have a message from the AI leader any more
+			g_bMessageFromDiploAI = false
+
+			-- If the AI opened the screen to make an offer, clear that status
+			g_bAIMakingOffer = false
+
+			-- Reset value that keeps track of how many times we offered a bad deal (for dialogue purposes)
+			UI.SetOfferTradeRepeatCount(0)
+
+			-- If the human was offering concessions, he backed out
+			if g_iConcessionsPreviousDiploUIState ~= -1 then
+				--print("Human backing out of Concessions Offer. Reseting DiploUIState to trade.")
+
+				iButtonID = 1		-- This corresponds with the buttons in DiscussionDialog.lua
+
+				-- AI scolded us for killing a Minor - we tell him to go away
+				if g_iConcessionsPreviousDiploUIState == DiploUIStateTypes.DIPLO_UI_STATE_DISCUSS_YOU_KILLED_MINOR_CIV then
+					Game.DoFromUIDiploEvent( FromUIDiploEventTypes.FROM_UI_DIPLO_EVENT_KILLED_MINOR_RESPONSE, g_iThem, iButtonID, 0 )
+				-- AI seriously warning us about expansion - we tell him to go away
+				elseif g_iConcessionsPreviousDiploUIState == DiploUIStateTypes.DIPLO_UI_STATE_DISCUSS_YOU_EXPANSION_SERIOUS_WARNING then
+					Game.DoFromUIDiploEvent( FromUIDiploEventTypes.FROM_UI_DIPLO_EVENT_EXPANSION_SERIOUS_WARNING_RESPONSE, g_iThem, iButtonID, 0 )
+				-- AI seriously warning us about plot buying - we tell him to go away
+				elseif g_iConcessionsPreviousDiploUIState == DiploUIStateTypes.DIPLO_UI_STATE_DISCUSS_YOU_PLOT_BUYING_SERIOUS_WARNING then
+					Game.DoFromUIDiploEvent( FromUIDiploEventTypes.FROM_UI_DIPLO_EVENT_PLOT_BUYING_SERIOUS_WARNING_RESPONSE, g_iThem, iButtonID, 0 )
+				end
+
+				g_iConcessionsPreviousDiploUIState = -1
+			end
+
+			-- Exiting human demand mode, unhide his items
+			if g_diploUIStateID == DiploUIStateTypes.DIPLO_UI_STATE_HUMAN_DEMAND then
+				Controls.UsPanel:SetHide(false)
+				Controls.UsGlass:SetHide(false)
+			end
+			UI.RequestLeaveLeader()
+		end
+		UIManager:DequeuePopup( ContextPtr )
+	end
+	g_diploUIStateID = false
+end
+local OnBack = OnBack
+Controls.CancelButton:RegisterCallback( Mouse.eLClick, OnBack )
+
+----------------------------------------------------------------
+-- SHOW/HIDE
+----------------------------------------------------------------
+function OnShowHide( isHide, bIsInit )
+
+	-- WARNING: Don't put anything important in here related to gameplay. This function may be called when you don't expect it
+
+	if not bIsInit then
+		-- Showing screen
+		if not isHide then
+			oldCursor = UIManager:SetUICursor(0) -- make sure we start with the default cursor
+
+			DoClearTable()
+			DisplayDeal()
+			LuaEvents.TryQueueTutorial("DIPLO_TRADE_SCREEN", true)
+
+		-- Hiding screen
+		else
+			UIManager:SetUICursor(oldCursor) -- make sure we retrun the cursor to the previous state
+			LuaEvents.TryDismissTutorial("DIPLO_TRADE_SCREEN")
+
+		end
+	end
+
+end
+ContextPtr:SetShowHideHandler( OnShowHide )
+
+----------------------------------------------------------------
+-- Key Down Processing
+do
+	local VK_RETURN = Keys.VK_RETURN
+	local VK_ESCAPE = Keys.VK_ESCAPE
+	local KeyDown = KeyEvents.KeyDown
+	function InputHandler( uiMsg, wParam )
+		if uiMsg == KeyDown then
+			if wParam == VK_ESCAPE then
+				-- Don't allow any keys to exit screen when AI is asking for something - want to make sure the human has to click something
+				if (g_diploUIStateID ~= DiploUIStateTypes.DIPLO_UI_STATE_TRADE_AI_MAKES_DEMAND and
+					g_diploUIStateID ~= DiploUIStateTypes.DIPLO_UI_STATE_TRADE_AI_MAKES_REQUEST) then
+
+					OnBack()
+				end
+				return true
+			-- Consume enter here otherwise it may be
+			-- interpretted as dismissing the dialog.
+			elseif wParam == VK_RETURN then
+				return true
+			end
+		end
+	end
+end
+
+---------------------------------------------------------
+-- UI Deal was modified somehow
+---------------------------------------------------------
+function DoUIDealChangedByHuman( isClearTable )
+
+	-- Set state to the default so that it doesn't cause any funny behavior later
+	if g_diploUIStateID ~= DiploUIStateTypes.DIPLO_UI_STATE_HUMAN_DEMAND then
+		g_diploUIStateID = DiploUIStateTypes.DIPLO_UI_STATE_TRADE
+	end
+
+	if isClearTable then
+		DoClearTable()
+	end
+	return DisplayDeal()
+end
 
 ----------------------------------------------------------------
 -- Proposal and Negotiate functions
 ----------------------------------------------------------------
 
 function OnModify()
-	g_bNewDeal = true;
-	DoUpdateButtons();
+	g_PVPTrade = 0 -- this is now a new deal
+	DoUpdateButtons()
 end
 
-----------------------------------------------------------------
-----------------------------------------------------------------
-function OnPropose(iType)
-	if (g_Deal:GetNumItems() == 0) then
-		return;
-	end
 
-	--print( "OnPropose: " .. tostring( g_bPVPTrade ) .. " " .. iType );
+----------------------------------------------------------------
+----------------------------------------------------------------
+Controls.ProposeButton:RegisterCallback( Mouse.eLClick,
+function()
 
 	-- Trade between humans
-	if (g_bPVPTrade) then
-		if (iType == PROPOSE_TYPE) then
-			-- Set the from/to players in the deal.  We do this because we might have not done this already.
-			g_Deal:SetFromPlayer(g_iUs);
-			g_Deal:SetToPlayer(g_iThem);
-			UI.DoProposeDeal();
-		elseif (iType == WITHDRAW_TYPE) then
-			UI.DoFinalizePlayerDeal(g_iUs, g_iThem, false);
-		elseif (iType == ACCEPT_TYPE) then
-			UI.DoFinalizePlayerDeal(g_iThem, g_iUs, true);
-		else
-			print("invalid ProposalType");
+	if g_PVPTrade then
+
+		if g_PVPTrade == 2 then -- accept their proposal
+			UI.DoFinalizePlayerDeal( g_iThem, g_iUs, true )
+
+		elseif g_PVPTrade == 1 then -- withdraw our proposal
+			UI.DoFinalizePlayerDeal( g_iUs, g_iThem, false )
+
+		else -- this is a new deal
+			if g_Deal:GetNumItems() == 0 then
+				local ourPlayer = Players[ g_iUs ]
+				local ourTeam = ourPlayer and Teams[ ourPlayer:GetTeam() ]
+				local theirPlayer = Players[ g_iThem ]
+				local theirTeamID = theirPlayer and theirPlayer:GetTeam()
+				if ourTeam and theirTeamID and IsCiv5BNW and ourTeam:CanChangeWarPeace( theirTeamID ) and not ourTeam:IsAtWar( theirTeamID ) and ourTeam:CanDeclareWar( theirTeamID ) then
+					-- Declaring War - bring up the BNW popup
+					UI.AddPopup{ Type = ButtonPopupTypes.BUTTONPOPUP_DECLAREWARMOVE, Data1 = theirTeamID, Option1 = true }
+				end
+				return
+			else
+				-- Set the from/to players in the deal.  We do this because we might have not done this already.
+				g_Deal:SetFromPlayer( g_iUs )
+				g_Deal:SetToPlayer( g_iThem )
+				UI.DoProposeDeal()
+			end
 		end
 
-		ContextPtr:SetHide(true);
-		ContextPtr:CallParentShowHideHandler(false);
+		ContextPtr:SetHide( true )
+		ContextPtr:CallParentShowHideHandler( false )
 
-		-- Trade between a human & an AI
+	-- Trade between a human & an AI
 	else
-		-- Human Demanding something
-		if (g_iDiploUIState == DiploUIStateTypes.DIPLO_UI_STATE_HUMAN_DEMAND) then
-			UI.DoDemand();
+		if g_Deal:GetNumItems() == 0 then
+			UI.SetLeaderHeadRootUp( false )
+			UI.RequestLeaveLeader()
+		else
+	    	-- Set the from/to players in the deal.  We do this because we might have not done this already.
+			g_Deal:SetFromPlayer( g_iUs )
+			g_Deal:SetToPlayer( g_iThem )
+			-- Human Demanding something
+			if g_diploUIStateID == DiploUIStateTypes.DIPLO_UI_STATE_HUMAN_DEMAND then
+				UI.DoDemand()
 
 			-- Trade offer
-		else
-			-- Set the from/to players in the deal.  We do this because we might have not done this already.
-			g_Deal:SetFromPlayer(g_iUs);
-			g_Deal:SetToPlayer(g_iThem);
-			UI.DoProposeDeal();
+			else
+				UI.DoProposeDeal()
+			end
+
+			-- Don't assume we have a message from the AI leader any more
+			g_bMessageFromDiploAI = false
+
+			-- If the AI was demanding something, we're not in that state any more
+			DoDemandState( false )
 		end
-
-		-- Don't assume we have a message from the AI leader any more
-		g_bMessageFromDiploAI = false;
-
-		-- If the AI was demanding something, we're not in that state any more
-		DoDemandState(false);
+		UIManager:DequeuePopup( ContextPtr )
 	end
-end
-
-Controls.ProposeButton:RegisterCallback(Mouse.eLClick, OnPropose);
+	--Keep UI in Transaction screen
+ 	--g_diploUIStateID = false
+end)
 
 
 ----------------------------------------------------------------
 ----------------------------------------------------------------
 function OnEqualizeDeal()
-	UI.DoEqualizeDealWithHuman();
+
+	UI.DoEqualizeDealWithHuman()
 
 	-- Don't assume we have a message from the AI leader any more
-	g_bMessageFromDiploAI = false;
+	g_bMessageFromDiploAI = false
+
 end
+
 
 ----------------------------------------------------------------
 ----------------------------------------------------------------
 function OnWhatDoesAIWant()
-	UI.DoWhatDoesAIWant();
+
+	UI.DoWhatDoesAIWant()
 
 	-- Don't assume we have a message from the AI leader any more
-	g_bMessageFromDiploAI = false;
+	g_bMessageFromDiploAI = false
+
 end
+
 
 ----------------------------------------------------------------
 ----------------------------------------------------------------
 function OnWhatWillAIGive()
-	UI.DoWhatWillAIGive();
+
+	UI.DoWhatWillAIGive()
 
 	-- Don't assume we have a message from the AI leader any more
-	g_bMessageFromDiploAI = false;
+	g_bMessageFromDiploAI = false
+
 end
 
-----------------------------------------------------------------
-----------------------------------------------------------------
-function ResetDisplay()
-	--print("ResetDisplay");
-
-	if g_iUs == -1 or g_iThem == -1 then
-		return;
-	end
-
-	Controls.UsPocketStack:SetHide(false);
-	Controls.ThemPocketStack:SetHide(false);
-	Controls.UsPocketLeaderStack:SetHide(true);
-	Controls.ThemPocketLeaderStack:SetHide(true);
-	Controls.UsPocketCitiesStack:SetHide(true);
-	Controls.ThemPocketCitiesStack:SetHide(true);
-
-	Controls.UsPocketGold:SetHide(false);
-	Controls.ThemPocketGold:SetHide(false);
-	Controls.UsPocketGoldPerTurn:SetHide(false);
-	Controls.ThemPocketGoldPerTurn:SetHide(false);
-	Controls.UsPocketAllowEmbassy:SetHide(false);
-	Controls.ThemPocketAllowEmbassy:SetHide(false);
-	Controls.UsPocketOpenBorders:SetHide(false);
-	Controls.ThemPocketOpenBorders:SetHide(false);
-	Controls.UsPocketDefensivePact:SetHide(false);
-	Controls.ThemPocketDefensivePact:SetHide(false);
-	Controls.UsPocketResearchAgreement:SetHide(false);
-	Controls.ThemPocketResearchAgreement:SetHide(false);
-	Controls.UsPocketMarriage:SetHide(false);
-	Controls.ThemPocketMarriage:SetHide(false);
-	Controls.UsPocketDualEmpire:SetHide(false);
-	Controls.ThemPocketDualEmpire:SetHide(false);
-	--Controls.UsPocketTradeAgreement:SetHide( false );		Trade agreement disabled for now
-	--Controls.ThemPocketTradeAgreement:SetHide( false );		Trade agreement disabled for now
-	if (Controls.UsPocketDoF ~= nil) then
-		Controls.UsPocketDoF:SetHide(false);
-		Controls.UsPocketDoF:RegisterCallback(Mouse.eLClick, PocketDoFHandler);
-		Controls.UsPocketDoF:SetVoid1(1);
-	end
-	if (Controls.ThemPocketDoF ~= nil) then
-		Controls.ThemPocketDoF:SetHide(false);
-		Controls.ThemPocketDoF:RegisterCallback(Mouse.eLClick, PocketDoFHandler);
-		Controls.ThemPocketDoF:SetVoid1(0);
-	end
-
-	-- Propose button could have had its text changed to "ACCEPT" if the AI made an offer to the human
-	DoUpdateButtons();
-
-	if (not g_bMessageFromDiploAI) then
-		DoClearTable();
-	end
-
-	-- Research Agreement cost
-	local iRACost = Game.GetResearchAgreementCost(g_iUs, g_iThem);
-	local strRAString = Locale.ConvertTextKey("TXT_KEY_DIPLO_RESCH_AGREEMENT_US", iRACost);
-	Controls.UsTableResearchAgreement:SetText(strRAString);
-	Controls.ThemTableResearchAgreement:SetText(strRAString);
-
-
-	if (g_bTradeReview) then
-		-- review mode
-
-		Controls.TradeDetails:SetHide(false);
-
-		CivIconHookup(g_iUs, 64, Controls.UsSymbolShadow, Controls.UsCivIconBG, Controls.UsCivIconShadow, false, true);
-		CivIconHookup(g_iThem, 64, Controls.ThemSymbolShadow, Controls.ThemCivIconBG, Controls.ThemCivIconShadow, false,
-			true);
-
-		Controls.UsText:SetText(Locale.ConvertTextKey("TXT_KEY_DIPLO_ITEMS_LABEL",
-			Locale.ConvertTextKey(g_pUs:GetNameKey())));
-
-		if (m_bIsMulitplayer and pOtherPlayer:IsHuman()) then
-			Controls.ThemText:SetText(Locale.ConvertTextKey("TXT_KEY_DIPLO_ITEMS_LABEL",
-				Locale.ConvertTextKey(g_pThem:GetNickName())));
-		else
-			Controls.ThemText:SetText(Locale.ConvertTextKey("TXT_KEY_DIPLO_ITEMS_LABEL",
-				Locale.ConvertTextKey(g_pThem:GetName())));
-		end
-	elseif (g_bPVPTrade == false) then
-		-- ai mode
-		Controls.WhatDoYouWantButton:SetHide(true);
-		Controls.WhatWillYouGiveMeButton:SetHide(true);
-		Controls.WhatWillMakeThisWorkButton:SetHide(true);
-
-
-		local strString = Locale.ConvertTextKey("TXT_KEY_DIPLO_LEADER_SAYS", g_pThem:GetName());
-		Controls.NameText:SetText(strString);
-
-		if (not g_bMessageFromDiploAI) then
-			Controls.DiscussionText:SetText(Locale.ConvertTextKey("TXT_KEY_DIPLO_HERE_OFFER"));
-		end
-
-		-- Set Civ Icon
-		CivIconHookup(g_iThem, 64, Controls.ThemSymbolShadow, Controls.ThemCivIconBG, Controls.ThemCivIconShadow, false,
-			true);
-
-		Controls.LeaderNameItems:SetText(Locale.ConvertTextKey("TXT_KEY_DIPLO_ITEMS_LABEL",
-			Locale.ConvertTextKey(g_pThem:GetNameKey())));
-
-		-- set up their portrait
-		local themCivType = g_pThem:GetCivilizationType();
-		local themCivInfo = GameInfo.Civilizations[themCivType];
-
-		local themLeaderType = g_pThem:GetLeaderType();
-		local themLeaderInfo = GameInfo.Leaders[themLeaderType];
-
-		IconHookup(themLeaderInfo.PortraitIndex, 128, themLeaderInfo.IconAtlas, Controls.ThemPortrait);
-
-		-- Is the AI is making demand?
-		if (UI.IsAIRequestingConcessions()) then
-			Controls.WhatConcessionsButton:SetHide(false);
-		else
-			Controls.WhatConcessionsButton:SetHide(true);
-		end
-
-		-- If we're at war with the other guy then show the "what will end this war" button
-		if (g_iUsTeam >= 0 and g_iThemTeam >= 0 and Teams[g_iUsTeam]:IsAtWar(g_iThemTeam)) then
-			Controls.WhatWillEndThisWarButton:SetHide(false);
-		else
-			Controls.WhatWillEndThisWarButton:SetHide(true);
-		end
-	elseif (g_bTradeReview == false) then
-		-- PvP mode
-
-		CivIconHookup(g_iUs, 64, Controls.UsSymbolShadow, Controls.UsCivIconBG, Controls.UsCivIconShadow, false, true);
-		CivIconHookup(g_iThem, 64, Controls.ThemSymbolShadow, Controls.ThemCivIconBG, Controls.ThemCivIconShadow, false,
-			true);
-
-		TruncateString(Controls.ThemName, Controls.ThemTablePanel:GetSizeX() - Controls.ThemTablePanel:GetOffsetX(),
-			Locale.ConvertTextKey("TXT_KEY_DIPLO_ITEMS_LABEL", g_pThem:GetNickName()));
-		Controls.ThemCiv:SetText("(" ..
-		Locale.ConvertTextKey(GameInfo.Civilizations[g_pThem:GetCivilizationType()].ShortDescription) .. ")");
-	end
-
-
-	local strTooltip;
-	----------------------------------------------------------------------------------
-	-- pocket Gold
-	----------------------------------------------------------------------------------
-
-	local iItemToBeChanged = -1; -- This is -1 because we're not changing anything right now
-
-	-- Us
-	local iGold = g_Deal:GetGoldAvailable(g_iUs, iItemToBeChanged);
-	local strGoldString = iGold .. " " .. Locale.ConvertTextKey("TXT_KEY_DIPLO_GOLD");
-	Controls.UsPocketGold:SetText(strGoldString);
-
-	local bGoldTradeAllowed = g_Deal:IsPossibleToTradeItem(g_iUs, g_iThem, TradeableItems.TRADE_ITEM_GOLD, 1); -- 1 here is 1 Gold, which is the minimum possible
-
-	if (not bGoldTradeAllowed) then
-		Controls.UsPocketGold:SetDisabled(true);
-		Controls.UsPocketGold:GetTextControl():SetColorByName("Gray_Black");
-		Controls.UsPocketGold:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_DIPLO_NEED_DOF_TT_ONE_LINE"));
-	else
-		Controls.UsPocketGold:SetDisabled(false);
-		Controls.UsPocketGold:GetTextControl():SetColorByName("Beige_Black");
-		Controls.UsPocketGold:SetToolTipString(nil);
-	end
-
-	-- Them
-	iGold = g_Deal:GetGoldAvailable(g_iThem, iItemToBeChanged);
-	strGoldString = iGold .. " " .. Locale.ConvertTextKey("TXT_KEY_DIPLO_GOLD");
-	Controls.ThemPocketGold:SetText(strGoldString);
-
-	bGoldTradeAllowed = g_Deal:IsPossibleToTradeItem(g_iThem, g_iUs, TradeableItems.TRADE_ITEM_GOLD, 1); -- 1 here is 1 Gold, which is the minimum possible
-
-	if (not bGoldTradeAllowed) then
-		Controls.ThemPocketGold:SetDisabled(true);
-		Controls.ThemPocketGold:GetTextControl():SetColorByName("Gray_Black");
-		Controls.ThemPocketGold:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_DIPLO_NEED_DOF_TT_ONE_LINE"));
-	else
-		Controls.ThemPocketGold:SetDisabled(false);
-		Controls.ThemPocketGold:GetTextControl():SetColorByName("Beige_Black");
-		Controls.ThemPocketGold:SetToolTipString(nil);
-	end
-
-	----------------------------------------------------------------------------------
-	-- pocket Gold Per Turn
-	----------------------------------------------------------------------------------
-
-	-- Us
-	local iGoldPerTurn = g_pUs:CalculateGoldRate();
-	strGoldString = iGoldPerTurn .. " " .. Locale.ConvertTextKey("TXT_KEY_DIPLO_GOLD_PER_TURN");
-	Controls.UsPocketGoldPerTurn:SetText(strGoldString);
-
-	local bGPTAllowed = g_Deal:IsPossibleToTradeItem(g_iUs, g_iThem, TradeableItems.TRADE_ITEM_GOLD_PER_TURN, 1,
-		g_iDealDuration);                                                                                                          -- 1 here is 1 GPT, which is the minimum possible
-
-	if (not bGPTAllowed) then
-		Controls.UsPocketGoldPerTurn:SetDisabled(true);
-		Controls.UsPocketGoldPerTurn:GetTextControl():SetColorByName("Gray_Black");
-	else
-		Controls.UsPocketGoldPerTurn:SetDisabled(false);
-		Controls.UsPocketGoldPerTurn:GetTextControl():SetColorByName("Beige_Black");
-	end
-
-	-- Them
-	iGoldPerTurn = g_pThem:CalculateGoldRate();
-	strGoldString = iGoldPerTurn .. " " .. Locale.ConvertTextKey("TXT_KEY_DIPLO_GOLD_PER_TURN");
-	Controls.ThemPocketGoldPerTurn:SetText(strGoldString);
-
-	bGPTAllowed = g_Deal:IsPossibleToTradeItem(g_iThem, g_iUs, TradeableItems.TRADE_ITEM_GOLD_PER_TURN, 1,
-		g_iDealDuration);                                                                                                    -- 1 here is 1 GPT, which is the minimum possible
-
-	if (not bGPTAllowed) then
-		Controls.ThemPocketGoldPerTurn:SetDisabled(true);
-		Controls.ThemPocketGoldPerTurn:GetTextControl():SetColorByName("Gray_Black");
-	else
-		Controls.ThemPocketGoldPerTurn:SetDisabled(false);
-		Controls.ThemPocketGoldPerTurn:GetTextControl():SetColorByName("Beige_Black");
-	end
-
-	----------------------------------------------------------------------------------
-	-- pocket Allow Embassy
-	----------------------------------------------------------------------------------
-
-	local bAllowEmbassyAllowed = g_Deal:IsPossibleToTradeItem(g_iUs, g_iThem, TradeableItems.TRADE_ITEM_ALLOW_EMBASSY,
-		g_iDealDuration);
-
-	-- Are we not allowed to give Allow Embassy? (already providing it to them?)
-	strTooltip = Locale.ConvertTextKey("TXT_KEY_DIPLO_ALLOW_EMBASSY_TT", g_iDealDuration);
-
-	local strOurTooltip = strTooltip;
-	local strTheirTooltip = strTooltip;
-
-	if (not bAllowEmbassyAllowed) then
-		if (not g_pThemTeam:IsAllowEmbassyTradingAllowed()) then
-			strOurTooltip = strOurTooltip ..
-			" [COLOR_WARNING_TEXT]" ..
-			Locale.ConvertTextKey("TXT_KEY_DIPLO_ALLOW_EMBASSY_NO_TECH_OTHER_PLAYER") .. "[ENDCOLOR]";
-		end
-	end
-
-	-- Are we not allowed to give Allow Embassy? (already providing it to them?)
-	if (not bAllowEmbassyAllowed) then
-		Controls.UsPocketAllowEmbassy:SetDisabled(true);
-		Controls.UsPocketAllowEmbassy:GetTextControl():SetColorByName("Gray_Black");
-
-		if (g_pThemTeam:HasEmbassyAtTeam(g_iUsTeam)) then
-			strOurTooltip = strOurTooltip .. " " .. Locale.ConvertTextKey("TXT_KEY_DIPLO_ALLOW_EMBASSY_THEY_HAVE");
-		end
-	else
-		Controls.UsPocketAllowEmbassy:SetDisabled(false);
-		Controls.UsPocketAllowEmbassy:GetTextControl():SetColorByName("Beige_Black");
-	end
-
-	Controls.UsPocketAllowEmbassy:SetToolTipString(strOurTooltip);
-
-	bEmbassyAllowed = g_Deal:IsPossibleToTradeItem(g_iThem, g_iUs, TradeableItems.TRADE_ITEM_ALLOW_EMBASSY,
-		g_iDealDuration);
-
-	if (not bAllowEmbassyAllowed) then
-		if (not g_pUsTeam:IsAllowEmbassyTradingAllowed()) then
-			strTheirTooltip = strTheirTooltip ..
-			" [COLOR_WARNING_TEXT]" ..
-			Locale.ConvertTextKey("TXT_KEY_DIPLO_ALLOW_EMBASSY_NO_TECH_PLAYER") .. "[ENDCOLOR]";
-		end
-	end
-
-	-- Are they not allowed to have an embassy? (perhaps they already have one established)
-	if (not bEmbassyAllowed) then
-		Controls.ThemPocketAllowEmbassy:SetDisabled(true);
-		Controls.ThemPocketAllowEmbassy:GetTextControl():SetColorByName("Gray_Black");
-
-		if (g_pUsTeam:HasEmbassyAtTeam(g_iThemTeam)) then
-			strTheirTooltip = strTheirTooltip .. " " .. Locale.ConvertTextKey("TXT_KEY_DIPLO_ALLOW_EMBASSY_HAVE");
-		end
-	else
-		Controls.ThemPocketAllowEmbassy:SetDisabled(false);
-		Controls.ThemPocketAllowEmbassy:GetTextControl():SetColorByName("Beige_Black");
-	end
-
-	Controls.ThemPocketAllowEmbassy:SetToolTipString(strTheirTooltip);
-
-	----------------------------------------------------------------------------------
-	-- pocket Open Borders
-	----------------------------------------------------------------------------------
-
-	local bOpenBordersAllowed = g_Deal:IsPossibleToTradeItem(g_iUs, g_iThem, TradeableItems.TRADE_ITEM_OPEN_BORDERS,
-		g_iDealDuration);
-
-	-- Are we not allowed to give Open Borders? (don't have tech)
-	strTooltip = Locale.ConvertTextKey("TXT_KEY_DIPLO_OPEN_BORDERS_TT", g_iDealDuration);
-	if (not bOpenBordersAllowed) then
-		if (not g_pUsTeam:IsOpenBordersTradingAllowed() and not g_pThemTeam:IsOpenBordersTradingAllowed()) then
-			strTooltip = strTooltip ..
-			" [COLOR_WARNING_TEXT]" .. Locale.ConvertTextKey("TXT_KEY_DIPLO_OPEN_BORDERS_NO_TECH") .. "[ENDCOLOR]";
-		end
-	end
-
-	local strOurTooltip = strTooltip;
-	local strTheirTooltip = strTooltip;
-
-	-- Are we not allowed to give OB? (don't have tech, or are already providing it to them)
-	if (not bOpenBordersAllowed) then
-		Controls.UsPocketOpenBorders:SetDisabled(true);
-		Controls.UsPocketOpenBorders:GetTextControl():SetColorByName("Gray_Black");
-
-		if (g_pUsTeam:IsAllowsOpenBordersToTeam(g_iThemTeam)) then
-			strOurTooltip = strOurTooltip .. " " .. Locale.ConvertTextKey("TXT_KEY_DIPLO_OPEN_BORDERS_HAVE");
-		elseif (not g_pUsTeam:HasEmbassyAtTeam(g_iThemTeam)) then
-			strOurTooltip = strOurTooltip ..
-			" [COLOR_WARNING_TEXT]" .. Locale.ConvertTextKey("TXT_KEY_DIPLO_YOU_NEED_EMBASSY_TT") .. "[ENDCOLOR]";
-		end
-	else
-		Controls.UsPocketOpenBorders:SetDisabled(false);
-		Controls.UsPocketOpenBorders:GetTextControl():SetColorByName("Beige_Black");
-	end
-
-	Controls.UsPocketOpenBorders:SetToolTipString(strOurTooltip);
-
-	bOpenBordersAllowed = g_Deal:IsPossibleToTradeItem(g_iThem, g_iUs, TradeableItems.TRADE_ITEM_OPEN_BORDERS,
-		g_iDealDuration);
-
-	-- Are they not allowed to give OB? (don't have tech, or are already providing it to us)
-	if (not bOpenBordersAllowed) then
-		Controls.ThemPocketOpenBorders:SetDisabled(true);
-		Controls.ThemPocketOpenBorders:GetTextControl():SetColorByName("Gray_Black");
-
-		if (g_pUsTeam:IsAllowsOpenBordersToTeam(g_iThemTeam)) then
-			strTheirTooltip = strTheirTooltip .. " " .. Locale.ConvertTextKey("TXT_KEY_DIPLO_OPEN_BORDERS_THEY_HAVE");
-		elseif (not g_pThemTeam:HasEmbassyAtTeam(g_iUsTeam)) then
-			strTheirTooltip = strTheirTooltip ..
-			" [COLOR_WARNING_TEXT]" .. Locale.ConvertTextKey("TXT_KEY_DIPLO_THEY_NEED_EMBASSY_TT") .. "[ENDCOLOR]";
-		end
-	else
-		Controls.ThemPocketOpenBorders:SetDisabled(false);
-		Controls.ThemPocketOpenBorders:GetTextControl():SetColorByName("Beige_Black");
-	end
-
-	Controls.ThemPocketOpenBorders:SetToolTipString(strTheirTooltip);
-
-	----------------------------------------------------------------------------------
-	-- pocket Defensive Pact
-	----------------------------------------------------------------------------------
-
-	local bDefensivePactAllowed = g_Deal:IsPossibleToTradeItem(g_iUs, g_iThem, TradeableItems.TRADE_ITEM_DEFENSIVE_PACT,
-		g_iDealDuration);
-
-	-- Are we not allowed to give DP? (don't have tech, or are already providing it to them)
-	strTooltip = Locale.ConvertTextKey("TXT_KEY_DIPLO_DEF_PACT_TT", g_iDealDuration);
-	if (not bDefensivePactAllowed) then
-		local strDisabledTT = "";
-
-		if (not g_pUsTeam:IsDefensivePactTradingAllowed() and not g_pThemTeam:IsDefensivePactTradingAllowed()) then
-			strDisabledTT = " " .. Locale.ConvertTextKey("TXT_KEY_DIPLO_DEF_PACT_NO_TECH");
-		elseif (not g_pUsTeam:HasEmbassyAtTeam(g_iThemTeam) or not g_pThemTeam:HasEmbassyAtTeam(g_iUsTeam)) then
-			strDisabledTT = " " .. Locale.ConvertTextKey("TXT_KEY_DIPLO_BOTH_NEED_EMBASSY_TT");
-		elseif (g_pUsTeam:IsDefensivePact(g_iThemTeam)) then
-			strDisabledTT = " " .. Locale.ConvertTextKey("TXT_KEY_DIPLO_DEF_PACT_EXISTS");
-		else
-			strDisabledTT = " " .. Locale.ConvertTextKey("TXT_KEY_DIPLO_DEF_PACT_NO_AGREEMENT");
-		end
-
-		strDisabledTT = "[COLOR_WARNING_TEXT]" .. strDisabledTT .. "[ENDCOLOR]";
-		strTooltip = strTooltip .. strDisabledTT;
-	end
-
-	Controls.UsPocketDefensivePact:SetToolTipString(strTooltip);
-	Controls.ThemPocketDefensivePact:SetToolTipString(strTooltip);
-
-	-- Are we not allowed to give DP? (don't have tech, or are already providing it to them)
-	if (not bDefensivePactAllowed) then
-		Controls.UsPocketDefensivePact:SetDisabled(true);
-		Controls.UsPocketDefensivePact:GetTextControl():SetColorByName("Gray_Black");
-	else
-		Controls.UsPocketDefensivePact:SetDisabled(false);
-		Controls.UsPocketDefensivePact:GetTextControl():SetColorByName("Beige_Black");
-	end
-
-	bDefensivePactAllowed = g_Deal:IsPossibleToTradeItem(g_iThem, g_iUs, TradeableItems.TRADE_ITEM_DEFENSIVE_PACT,
-		g_iDealDuration);
-
-	-- Are they not allowed to give DP? (don't have tech, or are already providing it to us)
-	if (not bDefensivePactAllowed) then
-		Controls.ThemPocketDefensivePact:SetDisabled(true);
-		Controls.ThemPocketDefensivePact:GetTextControl():SetColorByName("Gray_Black");
-	else
-		Controls.ThemPocketDefensivePact:SetDisabled(false);
-		Controls.ThemPocketDefensivePact:GetTextControl():SetColorByName("Beige_Black");
-	end
-
-	----------------------------------------------------------------------------------
-	-- pocket Research Agreement
-	----------------------------------------------------------------------------------
-
-	local bResearchAgreementAllowed = g_Deal:IsPossibleToTradeItem(g_iUs, g_iThem,
-		TradeableItems.TRADE_ITEM_RESEARCH_AGREEMENT, g_iDealDuration);
-
-	local iCost = Game.GetResearchAgreementCost(g_iThem, g_iUs);
-
-	-- Are we not allowed to give RA? (don't have tech, or are already providing it to them)
-	strTooltip = Locale.ConvertTextKey("TXT_KEY_DIPLO_RESCH_AGREEMENT_TT", iCost, g_iDealDuration);
-	if (not bResearchAgreementAllowed) then
-		local strDisabledTT = "";
-
-		local pUsTeamTechs = g_pUsTeam:GetTeamTechs();
-		local pTheirTeam = Teams[g_iThem];
-		local pTheirTeamTechs = pTheirTeam:GetTeamTechs();
-
-		if (Game.IsOption(GameOptionTypes.GAMEOPTION_NO_SCIENCE)) then
-			strDisabledTT = strDisabledTT .. Locale.ConvertTextKey("TXT_KEY_DIPLO_RESCH_AGREEMENT_SCIENCE_OFF");
-		elseif (pUsTeamTechs:HasResearchedAllTechs() or pTheirTeamTechs:HasResearchedAllTechs()) then
-			strDisabledTT = strDisabledTT ..
-			Locale.ConvertTextKey("TXT_KEY_DIPLO_RESCH_AGREEMENT_ALL_TECHS_RESEARCHED");
-		elseif (g_pUsTeam:IsHasResearchAgreement(g_iThemTeam)) then
-			strDisabledTT = strDisabledTT .. Locale.ConvertTextKey("TXT_KEY_DIPLO_RESCH_AGREEMENT_EXISTS");
-		else
-			local bEmptyTT = true;
-			if (not g_pUsTeam:IsResearchAgreementTradingAllowed() and not g_pThemTeam:IsResearchAgreementTradingAllowed()) then
-				strDisabledTT = strDisabledTT .. Locale.ConvertTextKey("TXT_KEY_DIPLO_RESCH_AGREEMENT_NO_TECH");
-				bEmptyTT = false;
-			end
-			if (not g_pUsTeam:HasEmbassyAtTeam(g_iThemTeam) or not g_pThemTeam:HasEmbassyAtTeam(g_iUsTeam)) then
-				strDisabledTT = strDisabledTT .. Locale.ConvertTextKey("TXT_KEY_DIPLO_BOTH_NEED_EMBASSY_TT");
-				bEmptyTT = false;
-			end
-			if (not g_pUs:IsDoF(g_iThem) or not g_pThem:IsDoF(g_iUs)) then
-				strDisabledTT = strDisabledTT .. Locale.ConvertTextKey("TXT_KEY_DIPLO_NEED_DOF_TT");
-				bEmptyTT = false;
-			end
-			if (Players[g_iUs]:GetGold() < iCost or Players[g_iThem]:GetGold() < iCost or bEmptyTT) then
-				strDisabledTT = strDisabledTT .. Locale.ConvertTextKey("TXT_KEY_DIPLO_RESCH_AGREEMENT_NO_AGREEMENT");
-			end
-		end
-
-		strDisabledTT = "[COLOR_WARNING_TEXT]" .. strDisabledTT .. "[ENDCOLOR]";
-		strTooltip = strTooltip .. strDisabledTT;
-	end
-
-	Controls.UsPocketResearchAgreement:SetToolTipString(strTooltip);
-	Controls.ThemPocketResearchAgreement:SetToolTipString(strTooltip);
-
-	if (not bResearchAgreementAllowed) then
-		Controls.UsPocketResearchAgreement:SetDisabled(true);
-		Controls.UsPocketResearchAgreement:GetTextControl():SetColorByName("Gray_Black");
-	else
-		Controls.UsPocketResearchAgreement:SetDisabled(false);
-		Controls.UsPocketResearchAgreement:GetTextControl():SetColorByName("Beige_Black");
-	end
-
-	bResearchAgreementAllowed = g_Deal:IsPossibleToTradeItem(g_iThem, g_iUs, TradeableItems
-	.TRADE_ITEM_RESEARCH_AGREEMENT, g_iDealDuration);
-
-	-- Are they not allowed to give RA? (don't have tech, or are already providing it to us)
-	if (not bResearchAgreementAllowed) then
-		Controls.ThemPocketResearchAgreement:SetDisabled(true);
-		Controls.ThemPocketResearchAgreement:GetTextControl():SetColorByName("Gray_Black");
-	else
-		Controls.ThemPocketResearchAgreement:SetDisabled(false);
-		Controls.ThemPocketResearchAgreement:GetTextControl():SetColorByName("Beige_Black");
-	end
-
-	----------------------------------------------------------------------------------
-	-- pocket Marriage
-	----------------------------------------------------------------------------------
-	-- TODO: set the pocket button disabled, color and tooltip
-	-- TODO: add tooltip
-	local bUsDiplomaticMarriageAllowed = g_Deal:IsPossibleToTradeItem(g_iUs, g_iThem, TradeableItems
-		.TRADE_ITEM_DIPLOMATIC_MARRIAGE, g_iDealDuration);
-	if not bUsDiplomaticMarriageAllowed then
-		Controls.UsPocketMarriage:SetDisabled(true);
-		Controls.UsPocketMarriage:GetTextControl():SetColorByName("Gray_Black");
-	else
-		Controls.UsPocketMarriage:SetDisabled(false);
-		Controls.UsPocketMarriage:GetTextControl():SetColorByName("Beige_Black");
-	end
-
-	local bThemDiplomaticMarriageAllowed = g_Deal:IsPossibleToTradeItem(g_iThem, g_iUs, TradeableItems
-		.TRADE_ITEM_DIPLOMATIC_MARRIAGE, g_iDealDuration);
-	if not bThemDiplomaticMarriageAllowed then
-		Controls.ThemPocketMarriage:SetDisabled(true);
-		Controls.ThemPocketMarriage:GetTextControl():SetColorByName("Gray_Black");
-	else
-		Controls.ThemPocketMarriage:SetDisabled(false);
-		Controls.ThemPocketMarriage:GetTextControl():SetColorByName("Beige_Black");
-	end
-
-	----------------------------------------------------------------------------------
-	-- pocket Dual Empire
-	----------------------------------------------------------------------------------
-	-- TODO: set the pocket button disabled, color and tooltip
-	-- TODO: add tooltip
-	local bUsDualEmpireAllowed = g_Deal:IsPossibleToTradeItem(g_iUs, g_iThem, TradeableItems
-		.TRADE_ITEM_DUAL_EMPIRE_TREATY, g_iDealDuration);
-	if not bUsDualEmpireAllowed then
-		Controls.UsPocketDualEmpire:SetDisabled(true);
-		Controls.UsPocketDualEmpire:GetTextControl():SetColorByName("Gray_Black");
-	else
-		Controls.UsPocketDualEmpire:SetDisabled(false);
-		Controls.UsPocketDualEmpire:GetTextControl():SetColorByName("Beige_Black");
-	end
-
-	local bThemDualEmpireAllowed = g_Deal:IsPossibleToTradeItem(g_iThem, g_iUs, TradeableItems
-		.TRADE_ITEM_DUAL_EMPIRE_TREATY, g_iDealDuration);
-	if not bThemDualEmpireAllowed then
-		Controls.ThemPocketDualEmpire:SetDisabled(true);
-		Controls.ThemPocketDualEmpire:GetTextControl():SetColorByName("Gray_Black");
-	else
-		Controls.ThemPocketDualEmpire:SetDisabled(false);
-		Controls.ThemPocketDualEmpire:GetTextControl():SetColorByName("Beige_Black");
-	end
-
-	----------------------------------------------------------------------------------
-	-- pocket Trade Agreement
-	----------------------------------------------------------------------------------
-
-	local bTradeAgreementAllowed = g_Deal:IsPossibleToTradeItem(g_iUs, g_iThem, TradeableItems
-	.TRADE_ITEM_TRADE_AGREEMENT, g_iDealDuration);
-
-	-- Are we not allowed to give TA? (don't have tech, or are already providing it to them)
-	strTooltip = Locale.ConvertTextKey("TXT_KEY_DIPLO_TRADE_AGREEMENT_TT");
-	if (not bTradeAgreementAllowed) then
-		local strDisabledTT = "";
-
-		if (not g_pUsTeam:IsTradeAgreementTradingAllowed() and not g_pThemTeam:IsTradeAgreementTradingAllowed()) then
-			strDisabledTT = " " .. Locale.ConvertTextKey("TXT_KEY_DIPLO_TRADE_AGREEMENT_NO_TECH");
-		elseif (g_pUsTeam:IsHasTradeAgreement(g_iThemTeam)) then
-			strDisabledTT = " " .. Locale.ConvertTextKey("TXT_KEY_DIPLO_TRADE_AGREEMENT_EXISTS");
-		else
-			strDisabledTT = " " .. Locale.ConvertTextKey("TXT_KEY_DIPLO_TRADE_AGREEMENT_NO_AGREEMENT");
-		end
-
-		strDisabledTT = "[COLOR_WARNING_TEXT]" .. strDisabledTT .. "[ENDCOLOR]";
-		strTooltip = strTooltip .. strDisabledTT;
-	end
-
-	Controls.UsPocketTradeAgreement:SetToolTipString(strTooltip);
-	Controls.ThemPocketTradeAgreement:SetToolTipString(strTooltip);
-
-	-- Are we not allowed to give RA? (don't have tech, or are already providing it to them)
-	if (not bTradeAgreementAllowed) then
-		Controls.UsPocketTradeAgreement:SetDisabled(true);
-		Controls.UsPocketTradeAgreement:GetTextControl():SetColorByName("Gray_Black");
-	else
-		Controls.UsPocketTradeAgreement:SetDisabled(false);
-		Controls.UsPocketTradeAgreement:GetTextControl():SetColorByName("Beige_Black");
-	end
-
-	bTradeAgreementAllowed = g_Deal:IsPossibleToTradeItem(g_iThem, g_iUs, TradeableItems.TRADE_ITEM_TRADE_AGREEMENT,
-		g_iDealDuration);
-
-	-- Are they not allowed to give RA? (don't have tech, or are already providing it to us)
-	if (not bTradeAgreementAllowed) then
-		Controls.ThemPocketTradeAgreement:SetDisabled(true);
-		Controls.ThemPocketTradeAgreement:GetTextControl():SetColorByName("Gray_Black");
-	else
-		Controls.ThemPocketTradeAgreement:SetDisabled(false);
-		Controls.ThemPocketTradeAgreement:GetTextControl():SetColorByName("Beige_Black");
-	end
-
-	----------------------------------------------------------------------------------
-	-- Pocket Declaration of Friendship
-	----------------------------------------------------------------------------------
-
-	if (Controls.UsPocketDoF ~= nil and Controls.ThemPocketDoF ~= nil) then
-		if (g_bPVPTrade) then -- Only PvP trade, with the AI there is a dedicated interface for this trade.
-			strTooltip = Locale.ConvertTextKey("TXT_KEY_DIPLO_DISCUSS_MESSAGE_DEC_FRIENDSHIP_TT");
-
-			local bDoFAllowed = g_Deal:IsPossibleToTradeItem(g_iUs, g_iThem,
-				TradeableItems.TRADE_ITEM_DECLARATION_OF_FRIENDSHIP, g_iDealDuration);
-
-			Controls.UsPocketDoF:SetHide(false);
-			Controls.ThemPocketDoF:SetHide(false);
-
-			if (not bDoFAllowed) then
-				Controls.UsPocketDoF:SetDisabled(true);
-				Controls.UsPocketDoF:GetTextControl():SetColorByName("Gray_Black");
-				Controls.ThemPocketDoF:SetDisabled(true);
-				Controls.ThemPocketDoF:GetTextControl():SetColorByName("Gray_Black");
-
-				if (g_pUsTeam:IsAtWar(g_iThemTeam)) then
-					strTooltip = strTooltip ..
-					"[NEWLINE][NEWLINE] [COLOR_WARNING_TEXT]" ..
-					Locale.ConvertTextKey("TXT_KEY_DIPLO_DECLARATION_OF_FRIENDSHIP_AT_WAR") .. "[ENDCOLOR]";
-				else
-					strTooltip = strTooltip ..
-					"[NEWLINE][NEWLINE]" ..
-					Locale.ConvertTextKey("TXT_KEY_DIPLO_DECLARATION_OF_FRIENDSHIP_ALREADY_EXISTS");
-				end
-			else
-				Controls.UsPocketDoF:SetDisabled(false);
-				Controls.UsPocketDoF:GetTextControl():SetColorByName("Beige_Black");
-				Controls.ThemPocketDoF:SetDisabled(false);
-				Controls.ThemPocketDoF:GetTextControl():SetColorByName("Beige_Black");
-			end
-
-			Controls.UsPocketDoF:SetToolTipString(strTooltip);
-			Controls.ThemPocketDoF:SetToolTipString(strTooltip);
-		else
-			Controls.UsPocketDoF:SetHide(true);
-			Controls.ThemPocketDoF:SetHide(true);
-		end
-	end
-
-	----------------------------------------------------------------------------------
-	-- Pocket Cities
-	----------------------------------------------------------------------------------
-	local bFound = false;
-	for pCity in g_pUs:Cities() do
-		if (g_Deal:IsPossibleToTradeItem(g_iUs, g_iThem, TradeableItems.TRADE_ITEM_CITIES, pCity:GetX(), pCity:GetY())) then
-			bFound = true;
-			break;
-		end
-	end
-	if (bFound) then
-		Controls.UsPocketCities:SetDisabled(false);
-		Controls.UsPocketCities:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_DIPLO_TO_TRADE_CITY_TT"));
-		Controls.UsPocketCities:GetTextControl():SetColorByName("Beige_Black");
-	else
-		Controls.UsPocketCities:SetDisabled(true);
-		Controls.UsPocketCities:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_DIPLO_TO_TRADE_CITY_NO_TT"));
-		Controls.UsPocketCities:GetTextControl():SetColorByName("Gray_Black");
-	end
-
-
-	bFound = false;
-	for pCity in g_pThem:Cities() do
-		if (g_Deal:IsPossibleToTradeItem(g_iThem, g_iUs, TradeableItems.TRADE_ITEM_CITIES, pCity:GetX(), pCity:GetY())) then
-			bFound = true;
-			break;
-		end
-	end
-	if (bFound) then
-		Controls.ThemPocketCities:SetDisabled(false);
-		Controls.ThemPocketCities:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_DIPLO_TO_TRADE_CITY_TT"));
-		Controls.ThemPocketCities:GetTextControl():SetColorByName("Beige_Black");
-	else
-		Controls.ThemPocketCities:SetDisabled(true);
-		Controls.ThemPocketCities:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_DIPLO_TO_TRADE_CITY_NO_THEM"));
-		Controls.ThemPocketCities:GetTextControl():SetColorByName("Gray_Black");
-	end
-
-
-	----------------------------------------------------------------------------------
-	-- enable/disable pocket other civs
-	----------------------------------------------------------------------------------
-	if (g_iNumOthers == 0) then
-		Controls.UsPocketOtherPlayer:SetDisabled(true);
-		Controls.UsPocketOtherPlayer:GetTextControl():SetColorByName("Gray_Black");
-		Controls.UsPocketOtherPlayer:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_DIPLO_OTHER_PLAYERS_NO_PLAYERS"));
-		Controls.UsPocketOtherPlayer:SetText(Locale.ConvertTextKey("TXT_KEY_TRADE_ITEM_OTHER_PLAYERS"));
-
-		Controls.ThemPocketOtherPlayer:SetDisabled(true);
-		Controls.ThemPocketOtherPlayer:GetTextControl():SetColorByName("Gray_Black");
-		Controls.ThemPocketOtherPlayer:SetToolTipString(Locale.ConvertTextKey(
-		"TXT_KEY_DIPLO_OTHER_PLAYERS_NO_PLAYERS_THEM"));
-		Controls.ThemPocketOtherPlayer:SetText(Locale.ConvertTextKey("TXT_KEY_TRADE_ITEM_OTHER_PLAYERS"));
-	else
-		Controls.UsPocketOtherPlayer:SetDisabled(false);
-		Controls.UsPocketOtherPlayer:GetTextControl():SetColorByName("Beige_Black");
-		Controls.UsPocketOtherPlayer:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_DIPLO_OTHER_PLAYERS_OPEN"));
-		Controls.UsPocketOtherPlayer:SetText("[ICON_PLUS]" .. Locale.ConvertTextKey("TXT_KEY_TRADE_ITEM_OTHER_PLAYERS"));
-
-		Controls.ThemPocketOtherPlayer:SetDisabled(false);
-		Controls.ThemPocketOtherPlayer:GetTextControl():SetColorByName("Beige_Black");
-		Controls.ThemPocketOtherPlayer:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_DIPLO_OTHER_PLAYERS_OPEN"));
-		Controls.ThemPocketOtherPlayer:SetText("[ICON_PLUS]" ..
-		Locale.ConvertTextKey("TXT_KEY_TRADE_ITEM_OTHER_PLAYERS"));
-	end
-
-
-
-	----------------------------------------------------------------------------------
-	-- pocket resources for us
-	----------------------------------------------------------------------------------
-	local bFoundLux = false;
-	local bFoundStrat = false;
-	local count;
-
-	local iResourceCount;
-	--local iOurResourceCount;
-	--local iTheirResourceCount;
-	local pResource;
-	local strString;
-
-	-- loop over resources
-	for resType, instance in pairs(g_UsPocketResources) do
-		instance.Button:SetDisabled(false);
-		instance.Button:GetTextControl():SetColorByName("Beige_Black");
-		instance.Button:SetToolTipString("");
-		if g_ResDealsStartTurn[0] and g_ResDealsStartTurn[0][g_iThem] and g_ResDealsStartTurn[0][g_iThem][resType]
-			and g_ResDealsStartTurn[0][g_iThem][resType] == Game.GetGameTurn()
-		then
-			instance.Button:SetDisabled(true);
-			instance.Button:GetTextControl():SetColorByName("Gray_Black");
-			instance.Button:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_DIPLO_RESCR_HAS_BEEN_TRADED_THIS_TURN"));
-		end
-		if (g_iUs == -1) then
-			instance.Button:SetHide(false);
-			bFoundLux = true;
-			bFoundStrat = true;
-		else
-			local bCanTradeResource;
-
-
-			bCanTradeResource = g_Deal:IsPossibleToTradeItem(g_iUs, g_iThem, TradeableItems.TRADE_ITEM_RESOURCES, resType,
-				1);                                                                                                   -- 1 here is 1 quanity of the Resource, which is the minimum possible
-
-			if (bCanTradeResource) then
-				if (g_LuxuryList[resType] == true) then
-					bFoundLux = true;
-				else
-					bFoundStrat = true;
-				end
-				instance.Button:SetHide(false);
-
-				pResource = GameInfo.Resources[resType];
-				iResourceCount = g_Deal:GetNumResource(g_iUs, resType);
-				strString = pResource.IconString ..
-				" " .. Locale.ConvertTextKey(pResource.Description) .. " (" .. iResourceCount .. ")";
-				instance.Button:SetText(strString);
-			else
-				instance.Button:SetHide(true);
-			end
-		end
-	end
-	Controls.UsPocketLuxury:SetDisabled(not bFoundLux);
-	if (bFoundLux) then
-		Controls.UsPocketLuxury:GetTextControl():SetColorByName("Beige_Black");
-		Controls.UsPocketLuxury:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_DIPLO_LUX_RESCR_TRADE_YES"));
-		if (Controls.UsPocketLuxuryStack:IsHidden()) then
-			Controls.UsPocketLuxury:SetText("[ICON_PLUS]" ..
-			Locale.ConvertTextKey("TXT_KEY_TRADE_ITEM_LUXURY_RESOURCES"));
-		else
-			Controls.UsPocketLuxury:SetText("[ICON_MINUS]" ..
-			Locale.ConvertTextKey("TXT_KEY_TRADE_ITEM_LUXURY_RESOURCES"));
-		end
-	else
-		Controls.UsPocketLuxury:GetTextControl():SetColorByName("Gray_Black");
-		Controls.UsPocketLuxury:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_DIPLO_LUX_RESCR_TRADE_NO"));
-		Controls.UsPocketLuxury:SetText(Locale.ConvertTextKey("TXT_KEY_TRADE_ITEM_LUXURY_RESOURCES"));
-	end
-
-	Controls.UsPocketStrategic:SetDisabled(not bFoundStrat);
-	if (bFoundStrat) then
-		Controls.UsPocketStrategic:GetTextControl():SetColorByName("Beige_Black");
-		Controls.UsPocketStrategic:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_DIPLO_STRAT_RESCR_TRADE_YES"));
-		if (Controls.UsPocketStrategicStack:IsHidden()) then
-			Controls.UsPocketStrategic:SetText("[ICON_PLUS]" ..
-			Locale.ConvertTextKey("TXT_KEY_TRADE_ITEM_STRATEGIC_RESOURCES"));
-		else
-			Controls.UsPocketStrategic:SetText("[ICON_MINUS]" ..
-			Locale.ConvertTextKey("TXT_KEY_TRADE_ITEM_STRATEGIC_RESOURCES"));
-		end
-	else
-		Controls.UsPocketStrategic:GetTextControl():SetColorByName("Gray_Black");
-		Controls.UsPocketStrategic:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_DIPLO_STRAT_RESCR_TRADE_NO"));
-		Controls.UsPocketStrategic:SetText(Locale.ConvertTextKey("TXT_KEY_TRADE_ITEM_STRATEGIC_RESOURCES"));
-	end
-
-
-	----------------------------------------------------------------------------------
-	-- pocket resources for them
-	----------------------------------------------------------------------------------
-	bFoundLux = false;
-	bFoundStrat = false;
-	for resType, instance in pairs(g_ThemPocketResources) do
-		instance.Button:SetDisabled(false);
-		instance.Button:GetTextControl():SetColorByName("Beige_Black");
-		instance.Button:SetToolTipString("");
-		if g_ResDealsStartTurn[1] and g_ResDealsStartTurn[1][g_iThem] and g_ResDealsStartTurn[1][g_iThem][resType]
-			and g_ResDealsStartTurn[1][g_iThem][resType] == Game.GetGameTurn()
-		then
-			instance.Button:SetDisabled(true);
-			instance.Button:GetTextControl():SetColorByName("Gray_Black");
-			instance.Button:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_DIPLO_RESCR_HAS_BEEN_TRADED_THIS_TURN"));
-		end
-		if (g_iThem == -1) then
-			instance.Button:SetHide(false);
-			bFoundLux = true;
-			bFoundStrat = true;
-		else
-			local bCanTradeResource;
-
-
-			bCanTradeResource = g_Deal:IsPossibleToTradeItem(g_iThem, g_iUs, TradeableItems.TRADE_ITEM_RESOURCES, resType,
-				1);                                                                                                   -- 1 here is 1 quanity of the Resource, which is the minimum possible
-
-			if (bCanTradeResource) then
-				if (g_LuxuryList[resType] == true) then
-					bFoundLux = true;
-				else
-					bFoundStrat = true;
-				end
-				instance.Button:SetHide(false);
-
-				pResource = GameInfo.Resources[resType];
-				iResourceCount = g_Deal:GetNumResource(g_iThem, resType);
-				strString = pResource.IconString ..
-				" " .. Locale.ConvertTextKey(pResource.Description) .. " (" .. iResourceCount .. ")";
-				instance.Button:SetText(strString);
-			else
-				instance.Button:SetHide(true);
-			end
-		end
-	end
-	Controls.ThemPocketLuxury:SetDisabled(not bFoundLux);
-	if (bFoundLux) then
-		Controls.ThemPocketLuxury:GetTextControl():SetColorByName("Beige_Black");
-		Controls.ThemPocketLuxury:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_DIPLO_LUX_RESCR_TRADE_YES_THEM"));
-		if (Controls.ThemPocketLuxuryStack:IsHidden()) then
-			Controls.ThemPocketLuxury:SetText("[ICON_PLUS]" ..
-			Locale.ConvertTextKey("TXT_KEY_TRADE_ITEM_LUXURY_RESOURCES"));
-		else
-			Controls.ThemPocketLuxury:SetText("[ICON_MINUS]" ..
-			Locale.ConvertTextKey("TXT_KEY_TRADE_ITEM_LUXURY_RESOURCES"));
-		end
-	else
-		Controls.ThemPocketLuxury:GetTextControl():SetColorByName("Gray_Black");
-		Controls.ThemPocketLuxury:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_DIPLO_LUX_RESCR_TRADE_NO_THEM"));
-		Controls.ThemPocketLuxury:SetText(Locale.ConvertTextKey("TXT_KEY_TRADE_ITEM_LUXURY_RESOURCES"));
-	end
-
-	Controls.ThemPocketStrategic:SetDisabled(not bFoundStrat);
-	if (bFoundStrat) then
-		Controls.ThemPocketStrategic:GetTextControl():SetColorByName("Beige_Black");
-		Controls.ThemPocketStrategic:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_DIPLO_STRAT_RESCR_TRADE_YES_THEM"));
-		if (Controls.ThemPocketStrategicStack:IsHidden()) then
-			Controls.ThemPocketStrategic:SetText("[ICON_PLUS]" ..
-			Locale.ConvertTextKey("TXT_KEY_TRADE_ITEM_STRATEGIC_RESOURCES"));
-		else
-			Controls.ThemPocketStrategic:SetText("[ICON_MINUS]" ..
-			Locale.ConvertTextKey("TXT_KEY_TRADE_ITEM_STRATEGIC_RESOURCES"));
-		end
-	else
-		Controls.ThemPocketStrategic:GetTextControl():SetColorByName("Gray_Black");
-		Controls.ThemPocketStrategic:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_DIPLO_STRAT_RESCR_TRADE_NO_THEM"));
-		Controls.ThemPocketStrategic:SetText(Locale.ConvertTextKey("TXT_KEY_TRADE_ITEM_STRATEGIC_RESOURCES"));
-	end
-
-
-	----------------------------------------------------------------------------------
-	-- Votes
-	----------------------------------------------------------------------------------
-	if (not Game.IsOption("GAMEOPTION_NO_LEAGUES")) then
-		Controls.UsPocketVote:SetHide(false);
-		Controls.ThemPocketVote:SetHide(false);
-
-		RefreshPocketVotes(1);
-		local bCanSellVote = g_pUs:CanCommitVote(g_pThem:GetID());
-		local sTooltipDetails = g_pUs:GetCommitVoteDetails(g_pThem:GetID());
-		Controls.UsPocketVote:SetDisabled(not bCanSellVote);
-		if (bCanSellVote) then
-			Controls.UsPocketVote:GetTextControl():SetColorByName("Beige_Black");
-			Controls.UsPocketVote:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_DIPLO_VOTE_TRADE_YES") ..
-			sTooltipDetails);
-			if (Controls.UsPocketVoteStack:IsHidden()) then
-				Controls.UsPocketVote:SetText("[ICON_PLUS]" .. Locale.ConvertTextKey("TXT_KEY_TRADE_ITEM_VOTES"));
-			else
-				Controls.UsPocketVote:SetText("[ICON_MINUS]" .. Locale.ConvertTextKey("TXT_KEY_TRADE_ITEM_VOTES"));
-			end
-		else
-			Controls.UsPocketVote:GetTextControl():SetColorByName("Gray_Black");
-			Controls.UsPocketVote:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_DIPLO_VOTE_TRADE_NO") ..
-			sTooltipDetails);
-			Controls.UsPocketVote:SetText(Locale.ConvertTextKey("TXT_KEY_TRADE_ITEM_VOTES"));
-		end
-
-		RefreshPocketVotes(0);
-		local bCanBuyVote = g_pThem:CanCommitVote(g_pUs:GetID());
-		local sTooltipDetails = g_pThem:GetCommitVoteDetails(g_pUs:GetID());
-		Controls.ThemPocketVote:SetDisabled(not bCanBuyVote);
-		if (bCanBuyVote) then
-			Controls.ThemPocketVote:GetTextControl():SetColorByName("Beige_Black");
-			Controls.ThemPocketVote:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_DIPLO_VOTE_TRADE_YES_THEM") ..
-			sTooltipDetails);
-			if (Controls.ThemPocketVoteStack:IsHidden()) then
-				Controls.ThemPocketVote:SetText("[ICON_PLUS]" .. Locale.ConvertTextKey("TXT_KEY_TRADE_ITEM_VOTES"));
-			else
-				Controls.ThemPocketVote:SetText("[ICON_MINUS]" .. Locale.ConvertTextKey("TXT_KEY_TRADE_ITEM_VOTES"));
-			end
-		else
-			Controls.ThemPocketVote:GetTextControl():SetColorByName("Gray_Black");
-			Controls.ThemPocketVote:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_DIPLO_VOTE_TRADE_NO_THEM") ..
-			sTooltipDetails);
-			Controls.ThemPocketVote:SetText(Locale.ConvertTextKey("TXT_KEY_TRADE_ITEM_VOTES"));
-		end
-	else
-		Controls.UsPocketVote:SetHide(true);
-		Controls.ThemPocketVote:SetHide(true);
-	end
-
-
-	-- Hide things inappropriate for teammates
-	if (g_iUsTeam == g_iThemTeam) then
-		--print("Teams match!");
-		Controls.UsPocketAllowEmbassy:SetHide(true);
-		Controls.UsPocketOpenBorders:SetHide(true);
-		Controls.UsPocketDefensivePact:SetHide(true);
-		Controls.UsPocketResearchAgreement:SetHide(true);
-		Controls.UsPocketOtherPlayer:SetHide(true);
-		Controls.UsPocketMarriage:SetHide(true);
-		Controls.UsPocketDualEmpire:SetHide(true);
-		Controls.ThemPocketAllowEmbassy:SetHide(true);
-		Controls.ThemPocketOpenBorders:SetHide(true);
-		Controls.ThemPocketDefensivePact:SetHide(true);
-		Controls.ThemPocketResearchAgreement:SetHide(true);
-		Controls.ThemPocketOtherPlayer:SetHide(true);
-		Controls.ThemPocketMarriage:SetHide(true);
-		Controls.ThemPocketDualEmpire:SetHide(true);
-	else
-		--print("Teams DO NOT match!");
-		Controls.UsPocketAllowEmbassy:SetHide(false);
-		Controls.UsPocketOpenBorders:SetHide(false);
-		Controls.UsPocketDefensivePact:SetHide(false);
-		Controls.UsPocketResearchAgreement:SetHide(false);
-		Controls.UsPocketOtherPlayer:SetHide(false);
-		Controls.UsPocketMarriage:SetHide(false);
-		Controls.UsPocketDualEmpire:SetHide(false);
-		Controls.ThemPocketAllowEmbassy:SetHide(false);
-		Controls.ThemPocketOpenBorders:SetHide(false);
-		Controls.ThemPocketDefensivePact:SetHide(false);
-		Controls.ThemPocketResearchAgreement:SetHide(false);
-		Controls.ThemPocketOtherPlayer:SetHide(false);
-		Controls.ThemPocketDualEmpire:SetHide(false);
-	end
-
-
-	ResizeStacks();
-end
-
-----------------------------------------------------------------
-----------------------------------------------------------------
-function DoClearTable()
-	g_UsTableCitiesIM:ResetInstances();
-	g_ThemTableCitiesIM:ResetInstances();
-	g_UsTableVoteIM:ResetInstances();
-	g_ThemTableVoteIM:ResetInstances();
-
-	Controls.UsTablePeaceTreaty:SetHide(true);
-	Controls.ThemTablePeaceTreaty:SetHide(true);
-	Controls.UsTableGold:SetHide(true);
-	Controls.ThemTableGold:SetHide(true);
-	Controls.UsTableGoldPerTurn:SetHide(true);
-	Controls.ThemTableGoldPerTurn:SetHide(true);
-	Controls.UsTableAllowEmbassy:SetHide(true);
-	Controls.ThemTableAllowEmbassy:SetHide(true);
-	Controls.UsTableOpenBorders:SetHide(true);
-	Controls.ThemTableOpenBorders:SetHide(true);
-	Controls.UsTableDefensivePact:SetHide(true);
-	Controls.ThemTableDefensivePact:SetHide(true);
-	Controls.UsTableResearchAgreement:SetHide(true);
-	Controls.ThemTableResearchAgreement:SetHide(true);
-	Controls.UsTableMarriage:SetHide(true);
-	Controls.ThemTableMarriage:SetHide(true);
-	Controls.UsTableDualEmpire:SetHide(true);
-	Controls.ThemTableDualEmpire:SetHide(true);
-	Controls.UsTableTradeAgreement:SetHide(true);
-	Controls.ThemTableTradeAgreement:SetHide(true);
-	Controls.UsTableCitiesStack:SetHide(true);
-	Controls.ThemTableCitiesStack:SetHide(true);
-	Controls.UsTableStrategicStack:SetHide(true);
-	Controls.ThemTableStrategicStack:SetHide(true);
-	Controls.UsTableLuxuryStack:SetHide(true);
-	Controls.ThemTableLuxuryStack:SetHide(true);
-	Controls.UsTableVoteStack:SetHide(true);
-	Controls.ThemTableVoteStack:SetHide(true);
-
-	Controls.UsTableMakePeaceStack:SetHide(true);
-	Controls.ThemTableMakePeaceStack:SetHide(true);
-	Controls.UsTableDeclareWarStack:SetHide(true);
-	Controls.ThemTableDeclareWarStack:SetHide(true);
-
-	for n, table in pairs(g_OtherPlayersButtons) do
-		table.UsTableWar.Button:SetHide(true);
-		table.UsTablePeace.Button:SetHide(true);
-		table.ThemTableWar.Button:SetHide(true);
-		table.ThemTablePeace.Button:SetHide(true);
-	end
-
-	-- loop over resources
-	for n, instance in pairs(g_UsTableResources) do
-		instance.Container:SetHide(true);
-	end
-	for n, instance in pairs(g_ThemTableResources) do
-		instance.Container:SetHide(true);
-	end
-
-	if (Controls.UsTableDoF ~= nil) then
-		Controls.UsTableDoF:SetHide(true);
-		Controls.UsTableDoF:RegisterCallback(Mouse.eLClick, TableDoFHandler);
-		Controls.UsTableDoF:SetVoid1(1);
-	end
-	if (Controls.ThemTableDoF ~= nil) then
-		Controls.ThemTableDoF:SetHide(true);
-		Controls.ThemTableDoF:RegisterCallback(Mouse.eLClick, TableDoFHandler);
-		Controls.ThemTableDoF:SetVoid1(0);
-	end
-
-	ResizeStacks();
-end
-
-----------------------------------------------------------------
-----------------------------------------------------------------
-function ResizeStacks()
-	Controls.UsPocketStrategicStack:CalculateSize();
-	Controls.ThemPocketStrategicStack:CalculateSize();
-	Controls.UsTableStrategicStack:CalculateSize();
-	Controls.ThemTableStrategicStack:CalculateSize();
-
-	Controls.UsPocketLuxuryStack:CalculateSize();
-	Controls.ThemPocketLuxuryStack:CalculateSize();
-	Controls.UsTableLuxuryStack:CalculateSize();
-	Controls.ThemTableLuxuryStack:CalculateSize();
-
-	Controls.UsPocketVoteStack:CalculateSize();
-	Controls.ThemPocketVoteStack:CalculateSize();
-	Controls.UsTableVoteStack:CalculateSize();
-	Controls.ThemTableVoteStack:CalculateSize();
-
-	Controls.UsTableCitiesStack:CalculateSize();
-	Controls.ThemTableCitiesStack:CalculateSize();
-	Controls.UsPocketLeaderStack:CalculateSize();
-	Controls.ThemPocketLeaderStack:CalculateSize();
-
-	Controls.UsTableMakePeaceStack:CalculateSize();
-	Controls.UsTableDeclareWarStack:CalculateSize();
-	Controls.ThemTableMakePeaceStack:CalculateSize();
-	Controls.ThemTableDeclareWarStack:CalculateSize();
-
-
-	Controls.UsPocketStack:CalculateSize();
-	Controls.ThemPocketStack:CalculateSize();
-	Controls.UsTableStack:CalculateSize();
-	Controls.ThemTableStack:CalculateSize();
-
-	Controls.UsPocketPanel:CalculateInternalSize();
-	Controls.UsPocketPanel:ReprocessAnchoring();
-	Controls.ThemPocketPanel:CalculateInternalSize();
-	Controls.ThemPocketPanel:ReprocessAnchoring();
-	Controls.UsTablePanel:CalculateInternalSize();
-	Controls.UsTablePanel:ReprocessAnchoring();
-	Controls.ThemTablePanel:CalculateInternalSize();
-	Controls.ThemTablePanel:ReprocessAnchoring();
-end
-
-----------------------------------------------------------------
-----------------------------------------------------------------
-function DisplayDeal()
-	g_UsTableCitiesIM:ResetInstances();
-	g_ThemTableCitiesIM:ResetInstances();
-	g_UsTableVoteIM:ResetInstances();
-	g_ThemTableVoteIM:ResetInstances();
-
-	if g_iUs == -1 or g_iThem == -1 then
-		return;
-	end
-
-	--print("Displaying Deal");
-
-	local itemType;
-	local duration;
-	local finalTurn;
-	local data1;
-	local data2;
-	local data3;
-	local flag1;
-	local fromPlayer;
-
-	local strString;
-	local strTooltip;
-
-	ResetDisplay();
-
-	local iNumItemsFromUs = 0;
-	local iNumItemsFromThem = 0;
-
-	g_Deal:ResetIterator();
-	itemType, duration, finalTurn, data1, data2, data3, flag1, fromPlayer = g_Deal:GetNextItem();
-
-	local iItemToBeChanged = -1; -- This is -1 because we're not changing anything right now
-
-	--print("Going through check");
-	if (itemType ~= nil) then
-		repeat
-			local bFromUs = false;
-
-			--print("Adding trade item to active deal: " .. itemType);
-
-			if (fromPlayer == Game.GetActivePlayer()) then
-				bFromUs = true;
-				iNumItemsFromUs = iNumItemsFromUs + 1;
-			else
-				iNumItemsFromThem = iNumItemsFromThem + 1;
-			end
-
-			if (TradeableItems.TRADE_ITEM_PEACE_TREATY == itemType) then
-				local str = Locale.ConvertTextKey("TXT_KEY_DIPLO_PEACE_TREATY", g_iPeaceDuration);
-				if (bFromUs) then
-					Controls.UsTablePeaceTreaty:SetText(str);
-					Controls.UsTablePeaceTreaty:SetHide(false);
-				else
-					Controls.ThemTablePeaceTreaty:SetText(str);
-					Controls.ThemTablePeaceTreaty:SetHide(false);
-				end
-			elseif (TradeableItems.TRADE_ITEM_GOLD == itemType) then
-				Controls.UsPocketGold:SetHide(true);
-				Controls.ThemPocketGold:SetHide(true);
-
-				Controls.UsTableGold:SetHide(not bFromUs);
-				Controls.ThemTableGold:SetHide(bFromUs);
-
-				-- update quantity
-				if (bFromUs) then
-					Controls.UsGoldAmount:SetText(data1);
-
-					strString = Locale.ConvertTextKey("TXT_KEY_DIPLO_GOLD");
-					Controls.UsTableGold:SetText(strString);
-					strTooltip = Locale.ConvertTextKey("TXT_KEY_DIPLO_CURRENT_GOLD",
-						g_Deal:GetGoldAvailable(g_iUs, iItemToBeChanged));
-					Controls.UsTableGold:SetToolTipString(strTooltip);
-				else
-					Controls.ThemGoldAmount:SetText(data1);
-
-					strString = Locale.ConvertTextKey("TXT_KEY_DIPLO_GOLD");
-					Controls.ThemTableGold:SetText(strString);
-					strTooltip = Locale.ConvertTextKey("TXT_KEY_DIPLO_CURRENT_GOLD",
-						g_Deal:GetGoldAvailable(g_iThem, iItemToBeChanged));
-					Controls.ThemTableGold:SetToolTipString(strTooltip);
-				end
-			elseif (TradeableItems.TRADE_ITEM_GOLD_PER_TURN == itemType) then
-				Controls.UsPocketGoldPerTurn:SetHide(true);
-				Controls.ThemPocketGoldPerTurn:SetHide(true);
-
-				if (bFromUs) then
-					Controls.UsTableGoldPerTurn:SetHide(false);
-					Controls.UsGoldPerTurnTurns:LocalizeAndSetText("TXT_KEY_DIPLO_TURNS", duration);
-					Controls.UsGoldPerTurnAmount:SetText(data1);
-
-					strString = Locale.ConvertTextKey("TXT_KEY_DIPLO_GOLD_PER_TURN");
-					Controls.UsTableGoldPerTurnButton:SetText(strString);
-					strTooltip = Locale.ConvertTextKey("TXT_KEY_DIPLO_CURRENT_GPT", g_pUs:CalculateGoldRate() - data1);
-					Controls.UsTableGoldPerTurn:SetToolTipString(strTooltip);
-				else
-					Controls.ThemTableGoldPerTurn:SetHide(false);
-					Controls.ThemGoldPerTurnTurns:LocalizeAndSetText("TXT_KEY_DIPLO_TURNS", duration);
-					Controls.ThemGoldPerTurnAmount:SetText(data1);
-
-					strString = Locale.ConvertTextKey("TXT_KEY_DIPLO_GOLD_PER_TURN");
-					Controls.ThemTableGoldPerTurnButton:SetText(strString);
-					strTooltip = Locale.ConvertTextKey("TXT_KEY_DIPLO_CURRENT_GPT", g_pThem:CalculateGoldRate() - data1);
-					Controls.ThemTableGoldPerTurn:SetToolTipString(strTooltip);
-				end
-			elseif (TradeableItems.TRADE_ITEM_CITIES == itemType) then
-				local pCity = nil;
-				local instance = nil;
-				local pPlot = Map.GetPlot(data1, data2);
-				if (pPlot ~= nil) then
-					pCity = pPlot:GetPlotCity();
-				end
-
-				if (pCity ~= nil) then
-					if (bFromUs) then
-						instance = g_UsTableCitiesIM:GetInstance();
-						instance.Button:SetVoids(g_iUs, pCity:GetID());
-						instance.Button:RegisterCallback(Mouse.eLClick, TableCityHandler);
-						Controls.UsTableCitiesStack:SetHide(false);
-					else
-						instance = g_ThemTableCitiesIM:GetInstance();
-						instance.Button:SetVoids(g_iThem, pCity:GetID());
-						instance.Button:RegisterCallback(Mouse.eLClick, TableCityHandler);
-						Controls.ThemTableCitiesStack:SetHide(false);
-					end
-
-					instance.CityName:SetText(pCity:GetName());
-					instance.CityPop:SetText(pCity:GetPopulation());
-				else
-					if (bFromUs) then
-						instance = g_UsTableCitiesIM:GetInstance();
-						Controls.UsTableCitiesStack:SetHide(false);
-					else
-						instance = g_ThemTableCitiesIM:GetInstance();
-						Controls.ThemTableCitiesStack:SetHide(false);
-					end
-					instance.CityName:LocalizeAndSetText("TXT_KEY_RAZED_CITY");
-					instance.CityPop:SetText("");
-				end
-			elseif (TradeableItems.TRADE_ITEM_THIRD_PARTY_PEACE == itemType) then
-				DisplayOtherPlayerItem(bFromUs, itemType, duration, data1);
-			elseif (TradeableItems.TRADE_ITEM_THIRD_PARTY_WAR == itemType) then
-				DisplayOtherPlayerItem(bFromUs, itemType, duration, data1);
-			elseif (TradeableItems.TRADE_ITEM_ALLOW_EMBASSY == itemType) then
-				if (bFromUs) then
-					Controls.UsPocketAllowEmbassy:SetHide(true);
-					Controls.UsTableAllowEmbassy:SetHide(false);
-				else
-					Controls.ThemPocketAllowEmbassy:SetHide(true);
-					Controls.ThemTableAllowEmbassy:SetHide(false);
-				end
-			elseif (TradeableItems.TRADE_ITEM_OPEN_BORDERS == itemType) then
-				if (bFromUs) then
-					Controls.UsPocketOpenBorders:SetHide(true);
-					Controls.UsTableOpenBorders:SetHide(false);
-				else
-					Controls.ThemPocketOpenBorders:SetHide(true);
-					Controls.ThemTableOpenBorders:SetHide(false);
-				end
-			elseif (TradeableItems.TRADE_ITEM_DEFENSIVE_PACT == itemType) then
-				if (bFromUs) then
-					Controls.UsPocketDefensivePact:SetHide(true);
-					Controls.UsTableDefensivePact:SetHide(false);
-				else
-					Controls.ThemPocketDefensivePact:SetHide(true);
-					Controls.ThemTableDefensivePact:SetHide(false);
-				end
-			elseif (TradeableItems.TRADE_ITEM_RESEARCH_AGREEMENT == itemType) then
-				if (bFromUs) then
-					Controls.UsPocketResearchAgreement:SetHide(true);
-					Controls.UsTableResearchAgreement:SetHide(false);
-				else
-					Controls.ThemPocketResearchAgreement:SetHide(true);
-					Controls.ThemTableResearchAgreement:SetHide(false);
-				end
-			elseif (TradeableItems.TRADE_ITEM_TRADE_AGREEMENT == itemType) then
-				if (bFromUs) then
-					Controls.UsPocketTradeAgreement:SetHide(true);
-					Controls.UsTableTradeAgreement:SetHide(false);
-				else
-					Controls.ThemPocketTradeAgreement:SetHide(true);
-					Controls.ThemTableTradeAgreement:SetHide(false);
-				end
-			elseif (TradeableItems.TRADE_ITEM_RESOURCES == itemType) then
-				if (bFromUs) then
-					g_UsTableResources[data1].Container:SetHide(false);
-					g_UsTableResources[data1].DurationEdit:LocalizeAndSetText("TXT_KEY_DIPLO_TURNS", duration);
-
-					if (GameInfo.Resources[data1].ResourceUsage == 1) then -- is strategic
-						Controls.UsTableStrategicStack:SetHide(false);
-						g_UsTableResources[data1].AmountEdit:SetText(data2);
-					else
-						Controls.UsTableLuxuryStack:SetHide(false);
-					end
-				else
-					g_ThemTableResources[data1].Container:SetHide(false);
-					g_ThemTableResources[data1].DurationEdit:LocalizeAndSetText("TXT_KEY_DIPLO_TURNS", duration);
-
-					if (GameInfo.Resources[data1].ResourceUsage == 1) then -- is strategic
-						Controls.ThemTableStrategicStack:SetHide(false);
-						g_ThemTableResources[data1].AmountEdit:SetText(data2);
-					else
-						Controls.ThemTableLuxuryStack:SetHide(false);
-					end
-				end
-
-				g_UsPocketResources[data1].Button:SetHide(true);
-				g_ThemPocketResources[data1].Button:SetHide(true);
-			elseif (TradeableItems.TRADE_ITEM_DECLARATION_OF_FRIENDSHIP == itemType) then
-				-- Declaration of Friendship must be mutual
-				if (Controls.UsPocketDoF ~= nil) then
-					Controls.UsPocketDoF:SetHide(true);
-				end
-				if (Controls.UsTableDoF ~= nil) then
-					Controls.UsTableDoF:SetHide(false);
-				end
-				if (Controls.ThemPocketDoF ~= nil) then
-					Controls.ThemPocketDoF:SetHide(true);
-				end
-				if (Controls.ThemTableDoF ~= nil) then
-					Controls.ThemTableDoF:SetHide(false);
-				end
-			elseif (TradeableItems.TRADE_ITEM_VOTE_COMMITMENT == itemType) then
-				print("==debug== VOTE_COMMITMENT found in DisplayDeal");
-				local iVoteIndex = GetLeagueVoteIndexFromData(data1, data2, flag1);
-
-				if (Game.GetNumActiveLeagues() > 0) then
-					local pLeague = Game.GetActiveLeague();
-					if (pLeague ~= nil) then
-						if (iVoteIndex ~= nil and g_LeagueVoteList[iVoteIndex] ~= nil) then
-							local tVote = g_LeagueVoteList[iVoteIndex];
-							local sProposalText = GetVoteText(pLeague, iVoteIndex, flag1, data3);
-							local sChoiceText = pLeague:GetTextForChoice(tVote.VoteDecision, tVote.VoteChoice);
-							local sTooltip = GetVoteTooltip(pLeague, iVoteIndex, flag1, data3);
-
-							if (bFromUs) then
-								local cInstance = g_UsTableVoteIM:GetInstance();
-								cInstance.ProposalLabel:SetText(sProposalText);
-								cInstance.VoteLabel:SetText(sChoiceText);
-								cInstance.Button:SetToolTipString(sTooltip);
-								cInstance.Button:SetVoids(g_iUs, iVoteIndex);
-								cInstance.Button:RegisterCallback(Mouse.eLClick, OnChooseTableVote);
-								Controls.UsTableVoteStack:SetHide(false);
-							else
-								local cInstance = g_ThemTableVoteIM:GetInstance();
-								cInstance.ProposalLabel:SetText(sProposalText);
-								cInstance.VoteLabel:SetText(sChoiceText);
-								cInstance.Button:SetToolTipString(sTooltip);
-								cInstance.Button:SetVoids(g_iThem, iVoteIndex);
-								cInstance.Button:RegisterCallback(Mouse.eLClick, OnChooseTableVote);
-								Controls.ThemTableVoteStack:SetHide(false);
-							end
-						end
-					else
-						print(
-						"SCRIPTING ERROR: Could not find League when displaying a trade deal with a Vote Commitment");
-					end
-				end
-			elseif (TradeableItems.TRADE_ITEM_DIPLOMATIC_MARRIAGE == itemType) then
-				Controls.UsPocketMarriage:SetHide(true);
-				Controls.UsTableMarriage:SetHide(false);
-				Controls.ThemPocketMarriage:SetHide(true);
-				Controls.ThemTableMarriage:SetHide(false);
-			elseif (TradeableItems.TRADE_ITEM_DUAL_EMPIRE_TREATY == itemType) then
-				Controls.UsPocketDualEmpire:SetHide(true);
-				Controls.UsTableDualEmpire:SetHide(false);
-				Controls.ThemPocketDualEmpire:SetHide(true);
-				Controls.ThemTableDualEmpire:SetHide(false);
-			end
-			itemType, duration, finalTurn, data1, data2, data3, flag1, fromPlayer = g_Deal:GetNextItem();
-		until (itemType == nil)
-	end
-
-	DoUpdateButtons();
-
-	ResizeStacks();
-end
-
------------------------------------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------------------------------------
-function DisplayOtherPlayerItem(bFromUs, itemType, duration, iOtherTeam)
-	--print("iOtherTeam: " .. iOtherTeam);
-
-	local iOtherPlayer = -1;
-	for i = 0, GameDefines.MAX_CIV_PLAYERS - 1 do
-		local player = Players[i];
-		local iTeam = player:GetTeam();
-		--print("iTeam: " .. iTeam);
-		if (player:GetTeam() == iOtherTeam and player:IsAlive()) then
-			--print("iOtherPlayer: " .. i);
-			iOtherPlayer = i;
-			break;
-		end
-	end
-
-	--print("iOtherPlayer: " .. iOtherPlayer);
-
-	if (TradeableItems.TRADE_ITEM_THIRD_PARTY_PEACE == itemType) then
-		--print( "Displaying Peace" );
-
-		if (bFromUs) then
-			--print( "    from us" );
-			g_OtherPlayersButtons[iOtherPlayer].UsTablePeace.Button:SetHide(false);
-			Controls.UsTableMakePeaceStack:SetHide(false);
-			Controls.UsTableMakePeaceStack:CalculateSize();
-			Controls.UsTableMakePeaceStack:ReprocessAnchoring();
-		else
-			--print( "    from them" );
-			g_OtherPlayersButtons[iOtherPlayer].ThemTablePeace.Button:SetHide(false);
-			Controls.ThemTableMakePeaceStack:SetHide(false);
-			Controls.ThemTableMakePeaceStack:CalculateSize();
-			Controls.ThemTableMakePeaceStack:ReprocessAnchoring();
-		end
-	elseif (TradeableItems.TRADE_ITEM_THIRD_PARTY_WAR == itemType) then
-		--print( "Displaying War" );
-
-		if (bFromUs) then
-			--print( "    from us" );
-			g_OtherPlayersButtons[iOtherPlayer].UsTableWar.Button:SetHide(false);
-			Controls.UsTableDeclareWarStack:SetHide(false);
-			Controls.UsTableDeclareWarStack:CalculateSize();
-			Controls.UsTableDeclareWarStack:ReprocessAnchoring();
-		else
-			--print( "    from them" );
-			g_OtherPlayersButtons[iOtherPlayer].ThemTableWar.Button:SetHide(false);
-			Controls.ThemTableDeclareWarStack:SetHide(false);
-			Controls.ThemTableDeclareWarStack:CalculateSize();
-			Controls.ThemTableDeclareWarStack:ReprocessAnchoring();
-		end
-	end
+function RemoveByType( tradeType, playerID )
+	g_Deal:RemoveByType( tradeType, playerID )
+	return DoUIDealChangedByHuman( true )
 end
 
 -----------------------------------------------------------------------------------------------------------------------
 -- Gold Handlers
 -----------------------------------------------------------------------------------------------------------------------
-function PocketGoldHandler(isUs)
-	local iAmount = 30;
-
-	local iAmountAvailable;
-
-	local iItemToBeChanged = -1; -- This is -1 because we're not changing anything right now
-
-	if (isUs == 1) then
-		iAmountAvailable = g_Deal:GetGoldAvailable(g_iUs, iItemToBeChanged);
-		if (iAmount > iAmountAvailable) then
-			iAmount = iAmountAvailable;
-		end
-		g_Deal:AddGoldTrade(g_iUs, iAmount);
-	else
-		iAmountAvailable = g_Deal:GetGoldAvailable(g_iThem, iItemToBeChanged);
-		if (iAmount > iAmountAvailable) then
-			iAmount = iAmountAvailable;
-		end
-		g_Deal:AddGoldTrade(g_iThem, iAmount);
+do
+	local function AddGoldTrade( control, playerID, gold )
+		g_Deal:AddGoldTrade( playerID, min( UI.ShiftKeyDown() and huge or gold, g_Deal:GetGoldAvailable( playerID, -1 ) ) ) -- This is -1 because we're not changing anything right now
+		control:TakeFocus()
+		return DoUIDealChangedByHuman()
 	end
-	DisplayDeal();
-	DoUIDealChangedByHuman();
+	Controls.UsPocketGold:RegisterCallback( Mouse.eLClick, function() AddGoldTrade( Controls.UsGoldAmount, g_iUs, 30 ) end )
+	Controls.ThemPocketGold:RegisterCallback( Mouse.eLClick, function() AddGoldTrade( Controls.ThemGoldAmount, g_iThem, 30 ) end )
+
+	Controls.UsTableGold:RegisterCallback( Mouse.eLClick, function( tradeType ) RemoveByType( tradeType, g_iUs ) end )
+	Controls.ThemTableGold:RegisterCallback( Mouse.eLClick, function( tradeType ) RemoveByType( tradeType, g_iThem ) end )
+	Controls.UsTableGold:SetVoid1( TradeableItems.TRADE_ITEM_GOLD )
+	Controls.ThemTableGold:SetVoid1( TradeableItems.TRADE_ITEM_GOLD )
+
+	local function ChangeGoldTrade( string, control, playerID, parentControl )
+		local gold = min( tonumber( string ) or 0, g_Deal:GetGoldAvailable( playerID, TradeableItems.TRADE_ITEM_GOLD ) )
+		control:SetText( gold )
+		g_Deal:ChangeGoldTrade( playerID, gold )
+		parentControl:LocalizeAndSetToolTip( "TXT_KEY_DIPLO_CURRENT_GOLD", g_Deal:GetGoldAvailable( playerID, -1) )
+	end
+	Controls.UsGoldAmount:RegisterCallback( function( string, control ) ChangeGoldTrade( string, control, g_iUs, Controls.UsTableGold ) end )
+	Controls.ThemGoldAmount:RegisterCallback( function( string, control ) ChangeGoldTrade( string, control, g_iThem, Controls.ThemTableGold ) end )
 end
-
-Controls.UsPocketGold:RegisterCallback(Mouse.eLClick, PocketGoldHandler);
-Controls.ThemPocketGold:RegisterCallback(Mouse.eLClick, PocketGoldHandler);
-Controls.UsPocketGold:SetVoid1(1);
-Controls.ThemPocketGold:SetVoid1(0);
-
-function TableGoldHandler(isUs)
-	if (isUs == 1) then
-		g_Deal:RemoveByType(TradeableItems.TRADE_ITEM_GOLD, g_iUs);
-	else
-		g_Deal:RemoveByType(TradeableItems.TRADE_ITEM_GOLD, g_iThem);
-	end
-	DoClearTable();
-	DisplayDeal();
-	DoUIDealChangedByHuman();
-end
-
-Controls.UsTableGold:RegisterCallback(Mouse.eLClick, TableGoldHandler);
-Controls.ThemTableGold:RegisterCallback(Mouse.eLClick, TableGoldHandler);
-Controls.UsTableGold:SetVoid1(1);
-Controls.ThemTableGold:SetVoid1(0);
-
-function ChangeGoldAmount(string, control)
-	local iGold = 0;
-	if (string ~= nil and string ~= "") then
-		iGold = tonumber(string);
-	else
-		control:SetText(0);
-	end
-
-	local iAmountAvailable;
-
-	-- Gold from us
-	if (control:GetVoid1() == 1) then
-		iAmountAvailable = g_Deal:GetGoldAvailable(g_iUs, TradeableItems.TRADE_ITEM_GOLD);
-		if (iGold > iAmountAvailable) then
-			iGold = iAmountAvailable;
-			Controls.UsGoldAmount:SetText(iGold);
-		end
-
-		g_Deal:ChangeGoldTrade(g_iUs, iGold);
-
-		local iItemToBeChanged = -1;
-		local strTooltip = Locale.ConvertTextKey("TXT_KEY_DIPLO_CURRENT_GOLD",
-			g_Deal:GetGoldAvailable(g_iUs, iItemToBeChanged));
-		Controls.UsTableGold:SetToolTipString(strTooltip);
-
-		-- Gold from them
-	else
-		iAmountAvailable = g_Deal:GetGoldAvailable(g_iThem, TradeableItems.TRADE_ITEM_GOLD);
-		if (iGold > iAmountAvailable) then
-			iGold = iAmountAvailable;
-			Controls.ThemGoldAmount:SetText(iGold);
-		end
-
-		g_Deal:ChangeGoldTrade(g_iThem, iGold);
-
-		local iItemToBeChanged = -1;
-		local strTooltip = Locale.ConvertTextKey("TXT_KEY_DIPLO_CURRENT_GOLD",
-			g_Deal:GetGoldAvailable(g_iThem, iItemToBeChanged));
-		Controls.ThemTableGold:SetToolTipString(strTooltip);
-	end
-end
-
-Controls.UsGoldAmount:RegisterCallback(ChangeGoldAmount);
-Controls.UsGoldAmount:SetVoid1(1);
-Controls.ThemGoldAmount:RegisterCallback(ChangeGoldAmount);
-Controls.ThemGoldAmount:SetVoid1(0);
-
------------------------------------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------------------------------------
-
-
-
-
 
 -----------------------------------------------------------------------------------------------------------------------
 -- Gold Per Turn Handlers
 -----------------------------------------------------------------------------------------------------------------------
-function PocketGoldPerTurnHandler(isUs)
-	--print("PocketGoldPerTurnHandler")
-
-	local iGoldPerTurn = 5;
-
-	if (isUs == 1) then
-		if (iGoldPerTurn > g_pUs:CalculateGoldRate()) then
-			iGoldPerTurn = g_pUs:CalculateGoldRate();
+do
+	local function AddGoldPerTurnTrade( control, playerID, goldPerTurn )
+		local player = Players[ playerID ]
+		if player then
+			g_Deal:AddGoldPerTurnTrade( playerID, min( UI.ShiftKeyDown() and huge or goldPerTurn, player:CalculateGoldRate() ), g_iDealDuration )
+			control:TakeFocus()
+			return DoUIDealChangedByHuman()
 		end
-
-		g_Deal:AddGoldPerTurnTrade(g_iUs, iGoldPerTurn, g_iDealDuration);
-	else
-		if (iGoldPerTurn > g_pThem:CalculateGoldRate()) then
-			iGoldPerTurn = g_pThem:CalculateGoldRate();
-		end
-
-		g_Deal:AddGoldPerTurnTrade(g_iThem, iGoldPerTurn, g_iDealDuration);
 	end
-	DisplayDeal();
-	DoUIDealChangedByHuman();
+	--SP Special Rule: Keep default 5
+	Controls.UsPocketGoldPerTurn:RegisterCallback( Mouse.eLClick, function() AddGoldPerTurnTrade( Controls.UsGoldPerTurnAmount, g_iUs, 5 ) end )
+	Controls.ThemPocketGoldPerTurn:RegisterCallback( Mouse.eLClick, function() AddGoldPerTurnTrade( Controls.ThemGoldPerTurnAmount, g_iThem, 5 ) end )
+
+	Controls.UsTableGoldPerTurnButton:RegisterCallback( Mouse.eLClick, function( tradeType ) RemoveByType( tradeType, g_iUs ) end )
+	Controls.ThemTableGoldPerTurnButton:RegisterCallback( Mouse.eLClick, function( tradeType ) RemoveByType( tradeType, g_iThem ) end )
+	Controls.UsTableGoldPerTurnButton:SetVoid1( TradeableItems.TRADE_ITEM_GOLD_PER_TURN )
+	Controls.ThemTableGoldPerTurnButton:SetVoid1( TradeableItems.TRADE_ITEM_GOLD_PER_TURN )
+
+	local function ChangeGoldPerTurnTrade( string, control, playerID, parentControl )
+		local player = Players[ playerID ]
+		if player then
+			local goldRate = player:CalculateGoldRate()
+			local goldPerTurn = min( tonumber( string ) or 0, goldRate )
+			control:SetText( goldPerTurn )
+			g_Deal:ChangeGoldPerTurnTrade( playerID, goldPerTurn, g_iDealDuration )
+			parentControl:LocalizeAndSetToolTip( "TXT_KEY_DIPLO_CURRENT_GPT", goldRate - goldPerTurn )
+		end
+	end
+	Controls.UsGoldPerTurnAmount:RegisterCallback( function( string, control ) ChangeGoldPerTurnTrade( string, control, g_iUs, Controls.UsTableGoldPerTurn ) end )
+	Controls.ThemGoldPerTurnAmount:RegisterCallback( function( string, control ) ChangeGoldPerTurnTrade( string, control, g_iThem, Controls.ThemTableGoldPerTurn ) end )
 end
-
-Controls.UsPocketGoldPerTurn:RegisterCallback(Mouse.eLClick, PocketGoldPerTurnHandler);
-Controls.ThemPocketGoldPerTurn:RegisterCallback(Mouse.eLClick, PocketGoldPerTurnHandler);
-Controls.UsPocketGoldPerTurn:SetVoid1(1);
-Controls.ThemPocketGoldPerTurn:SetVoid1(0);
-
-function TableGoldPerTurnHandler(isUs)
-	--print("TableGoldPerTurnHandler")
-	if (isUs == 1) then
-		g_Deal:RemoveByType(TradeableItems.TRADE_ITEM_GOLD_PER_TURN, g_iUs);
-	else
-		g_Deal:RemoveByType(TradeableItems.TRADE_ITEM_GOLD_PER_TURN, g_iThem);
-	end
-	DoClearTable();
-	DisplayDeal();
-	DoUIDealChangedByHuman();
-end
-
-Controls.UsTableGoldPerTurnButton:RegisterCallback(Mouse.eLClick, TableGoldPerTurnHandler);
-Controls.ThemTableGoldPerTurnButton:RegisterCallback(Mouse.eLClick, TableGoldPerTurnHandler);
-Controls.UsTableGoldPerTurnButton:SetVoid1(1);
-Controls.ThemTableGoldPerTurnButton:SetVoid1(0);
-
------------------------------------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------------------------------------
-function ChangeGoldPerTurnAmount(string, control)
-	--print("ChangeGoldPerTurnAmount")
-
-	local g_pUs = Players[g_iUs];
-	local g_pThem = Players[g_iThem];
-
-	local iGoldPerTurn = 0;
-	if (string ~= nil and string ~= "") then
-		iGoldPerTurn = tonumber(string);
-	else
-		control:SetText(0);
-	end
-
-	-- GPT from us
-	if (control:GetVoid1() == 1) then
-		if (iGoldPerTurn > g_pUs:CalculateGoldRate()) then
-			iGoldPerTurn = g_pUs:CalculateGoldRate();
-			Controls.UsGoldPerTurnAmount:SetText(iGoldPerTurn);
-		end
-
-		g_Deal:ChangeGoldPerTurnTrade(g_iUs, iGoldPerTurn, g_iDealDuration);
-
-		local strTooltip = Locale.ConvertTextKey("TXT_KEY_DIPLO_CURRENT_GPT", g_pUs:CalculateGoldRate() - iGoldPerTurn);
-		Controls.UsTableGoldPerTurn:SetToolTipString(strTooltip);
-
-		-- GPT from them
-	else
-		if (iGoldPerTurn > g_pThem:CalculateGoldRate()) then
-			iGoldPerTurn = g_pThem:CalculateGoldRate();
-			Controls.ThemGoldPerTurnAmount:SetText(iGoldPerTurn);
-		end
-
-		g_Deal:ChangeGoldPerTurnTrade(g_iThem, iGoldPerTurn, g_iDealDuration);
-
-		local strTooltip = Locale.ConvertTextKey("TXT_KEY_DIPLO_CURRENT_GPT", g_pThem:CalculateGoldRate() - iGoldPerTurn);
-		Controls.ThemTableGoldPerTurn:SetToolTipString(strTooltip);
-	end
-end
-
-Controls.UsGoldPerTurnAmount:RegisterCallback(ChangeGoldPerTurnAmount);
-Controls.UsGoldPerTurnAmount:SetVoid1(1);
-Controls.ThemGoldPerTurnAmount:RegisterCallback(ChangeGoldPerTurnAmount);
-Controls.ThemGoldPerTurnAmount:SetVoid1(0);
-
 -----------------------------------------------------------------------------------------------------------------------
 -- Allow Embassy Handlers
 -----------------------------------------------------------------------------------------------------------------------
-function PocketAllowEmbassyHandler(isUs)
-	print("PocketAllowEmbassyHandler");
-	if (isUs == 1) then
-		g_Deal:AddAllowEmbassy(g_iUs);
-	else
-		g_Deal:AddAllowEmbassy(g_iThem);
+if IsCiv5notVanilla then
+	local function AddAllowEmbassy( playerID )
+		g_Deal:AddAllowEmbassy( playerID )
+		return DoUIDealChangedByHuman()
 	end
-	DisplayDeal();
-	DoUIDealChangedByHuman();
-end
+	Controls.UsPocketAllowEmbassy:RegisterCallback( Mouse.eLClick, function() AddAllowEmbassy( g_iUs ) end )
+	Controls.ThemPocketAllowEmbassy:RegisterCallback( Mouse.eLClick, function() AddAllowEmbassy( g_iThem ) end )
 
-Controls.UsPocketAllowEmbassy:RegisterCallback(Mouse.eLClick, PocketAllowEmbassyHandler);
-Controls.ThemPocketAllowEmbassy:RegisterCallback(Mouse.eLClick, PocketAllowEmbassyHandler);
-Controls.UsPocketAllowEmbassy:SetVoid1(1);
-Controls.ThemPocketAllowEmbassy:SetVoid1(0);
-
-function TableAllowEmbassyHandler(isUs)
-	print("TableAllowEmbassyHandler");
-	if (isUs == 1) then
-		print("remove: us " .. g_iUs);
-		g_Deal:RemoveByType(TradeableItems.TRADE_ITEM_ALLOW_EMBASSY, g_iUs);
-	else
-		print("remove: them " .. g_iThem);
-		g_Deal:RemoveByType(TradeableItems.TRADE_ITEM_ALLOW_EMBASSY, g_iThem);
+	local function RemoveAllowEmbassy( playerID )
+		g_Deal:RemoveByType( TradeableItems.TRADE_ITEM_ALLOW_EMBASSY, playerID )
+		return DoUIDealChangedByHuman( true )
 	end
+	Controls.UsTableAllowEmbassy:RegisterCallback( Mouse.eLClick, function() RemoveAllowEmbassy( g_iUs ) end )
+	Controls.ThemTableAllowEmbassy:RegisterCallback( Mouse.eLClick, function() RemoveAllowEmbassy( g_iThem ) end )
 
-	DoClearTable();
-	DisplayDeal();
-	DoUIDealChangedByHuman();
 end
-
-Controls.UsTableAllowEmbassy:RegisterCallback(Mouse.eLClick, TableAllowEmbassyHandler);
-Controls.ThemTableAllowEmbassy:RegisterCallback(Mouse.eLClick, TableAllowEmbassyHandler);
-Controls.UsTableAllowEmbassy:SetVoid1(1);
-Controls.ThemTableAllowEmbassy:SetVoid1(0);
 
 -----------------------------------------------------------------------------------------------------------------------
 -- Declaration of Friendship Handlers
 -----------------------------------------------------------------------------------------------------------------------
-function PocketDoFHandler(isUs)
-	print("PocketDoFHandler");
-	-- The Declaration of Friendship must be on both sides of the deal
-	g_Deal:AddDeclarationOfFriendship(g_iUs);
-	g_Deal:AddDeclarationOfFriendship(g_iThem);
+if Controls.UsTableDoF and Controls.ThemTableDoF and Controls.UsPocketDoF and Controls.ThemPocketDoF then
+	local function AddDeclarationOfFriendship()
+		-- The Declaration of Friendship must be on both sides of the deal
+		g_Deal:AddDeclarationOfFriendship( g_iUs )
+		g_Deal:AddDeclarationOfFriendship( g_iThem )
+		return DoUIDealChangedByHuman()
+	end
+	Controls.UsPocketDoF:RegisterCallback( Mouse.eLClick, AddDeclarationOfFriendship )
+	Controls.ThemPocketDoF:RegisterCallback( Mouse.eLClick, AddDeclarationOfFriendship )
 
-	DisplayDeal();
-	DoUIDealChangedByHuman();
-end
-
-----------------------------------------------------
-function TableDoFHandler(isUs)
-	print("TableDoFHandler");
-	-- If removing the Declaration of Friendship, it must be removed from both sides
-	g_Deal:RemoveByType(TradeableItems.TRADE_ITEM_DECLARATION_OF_FRIENDSHIP, g_iUs);
-	g_Deal:RemoveByType(TradeableItems.TRADE_ITEM_DECLARATION_OF_FRIENDSHIP, g_iThem);
-
-	DoClearTable();
-	DisplayDeal();
-	DoUIDealChangedByHuman();
+	local function RemoveDeclarationOfFriendship()
+		-- If removing the Declaration of Friendship, it must be removed from both sides
+		g_Deal:RemoveByType( TradeableItems.TRADE_ITEM_DECLARATION_OF_FRIENDSHIP, g_iUs )
+		g_Deal:RemoveByType( TradeableItems.TRADE_ITEM_DECLARATION_OF_FRIENDSHIP, g_iThem )
+		return DoUIDealChangedByHuman( true )
+	end
+	Controls.UsTableDoF:RegisterCallback( Mouse.eLClick, RemoveDeclarationOfFriendship )
+	Controls.ThemTableDoF:RegisterCallback( Mouse.eLClick, RemoveDeclarationOfFriendship )
 end
 
 -----------------------------------------------------------------------------------------------------------------------
 -- Open Borders Handlers
 -----------------------------------------------------------------------------------------------------------------------
-function PocketOpenBordersHandler(isUs)
-	if (isUs == 1) then
-		g_Deal:AddOpenBorders(g_iUs, g_iDealDuration);
-	else
-		g_Deal:AddOpenBorders(g_iThem, g_iDealDuration);
+do
+	local function AddOpenBorders( playerID )
+
+		g_Deal:AddOpenBorders( playerID, g_iDealDuration )
+		return DoUIDealChangedByHuman()
 	end
-	DisplayDeal();
-	DoUIDealChangedByHuman();
-end
+	Controls.UsPocketOpenBorders:RegisterCallback( Mouse.eLClick, function() AddOpenBorders( g_iUs ) end )
+	Controls.ThemPocketOpenBorders:RegisterCallback( Mouse.eLClick, function() AddOpenBorders( g_iThem ) end )
 
-Controls.UsPocketOpenBorders:RegisterCallback(Mouse.eLClick, PocketOpenBordersHandler);
-Controls.ThemPocketOpenBorders:RegisterCallback(Mouse.eLClick, PocketOpenBordersHandler);
-Controls.UsPocketOpenBorders:SetVoid1(1);
-Controls.ThemPocketOpenBorders:SetVoid1(0);
+	local function RemoveOpenBorders( playerID )
 
-function TableOpenBordersHandler(isUs)
-	if (isUs == 1) then
-		print("remove: us " .. g_iUs);
-		g_Deal:RemoveByType(TradeableItems.TRADE_ITEM_OPEN_BORDERS, g_iUs);
-	else
-		print("remove: them " .. g_iThem);
-		g_Deal:RemoveByType(TradeableItems.TRADE_ITEM_OPEN_BORDERS, g_iThem);
+		g_Deal:RemoveByType( TradeableItems.TRADE_ITEM_OPEN_BORDERS, playerID )
+		return DoUIDealChangedByHuman( true )
 	end
-
-
-	DoClearTable();
-	DisplayDeal();
-	DoUIDealChangedByHuman();
+	Controls.UsTableOpenBorders:RegisterCallback( Mouse.eLClick, function() RemoveOpenBorders( g_iUs ) end )
+	Controls.ThemTableOpenBorders:RegisterCallback( Mouse.eLClick, function() RemoveOpenBorders( g_iThem ) end )
 end
-
-Controls.UsTableOpenBorders:RegisterCallback(Mouse.eLClick, TableOpenBordersHandler);
-Controls.ThemTableOpenBorders:RegisterCallback(Mouse.eLClick, TableOpenBordersHandler);
-Controls.UsTableOpenBorders:SetVoid1(1);
-Controls.ThemTableOpenBorders:SetVoid1(0);
-
-
-
 
 -----------------------------------------------------------------------------------------------------------------------
 -- Defensive Pact Handlers
 -----------------------------------------------------------------------------------------------------------------------
-function PocketDefensivePactHandler(isUs)
-	-- Note that currently Defensive Pact is required on both sides
+do
+	local function AddDefensivePact()
 
-	if (isUs == 1) then
-		g_Deal:AddDefensivePact(g_iUs, g_iDealDuration);
-		g_Deal:AddDefensivePact(g_iThem, g_iDealDuration);
-	else
-		g_Deal:AddDefensivePact(g_iUs, g_iDealDuration);
-		g_Deal:AddDefensivePact(g_iThem, g_iDealDuration);
+		-- Defensive Pact is required on both sides
+
+		g_Deal:AddDefensivePact( g_iUs, g_iDealDuration )
+		g_Deal:AddDefensivePact( g_iThem, g_iDealDuration )
+		return DoUIDealChangedByHuman()
 	end
-	DisplayDeal();
-	DoUIDealChangedByHuman();
+	Controls.UsPocketDefensivePact:RegisterCallback( Mouse.eLClick, AddDefensivePact )
+	Controls.ThemPocketDefensivePact:RegisterCallback( Mouse.eLClick, AddDefensivePact )
+
+	local function RemoveDefensivePact()
+		-- Remove from BOTH sides of the table
+		g_Deal:RemoveByType( TradeableItems.TRADE_ITEM_DEFENSIVE_PACT, g_iUs )
+		g_Deal:RemoveByType( TradeableItems.TRADE_ITEM_DEFENSIVE_PACT, g_iThem )
+		return DoUIDealChangedByHuman( true )
+	end
+	Controls.UsTableDefensivePact:RegisterCallback( Mouse.eLClick, RemoveDefensivePact )
+	Controls.ThemTableDefensivePact:RegisterCallback( Mouse.eLClick, RemoveDefensivePact )
 end
-
-Controls.UsPocketDefensivePact:RegisterCallback(Mouse.eLClick, PocketDefensivePactHandler);
-Controls.ThemPocketDefensivePact:RegisterCallback(Mouse.eLClick, PocketDefensivePactHandler);
-Controls.UsPocketDefensivePact:SetVoid1(1);
-Controls.ThemPocketDefensivePact:SetVoid1(0);
-
-function TableDefensivePactHandler()
-	-- Remove from BOTH sides of the table
-	g_Deal:RemoveByType(TradeableItems.TRADE_ITEM_DEFENSIVE_PACT, g_iUs);
-	g_Deal:RemoveByType(TradeableItems.TRADE_ITEM_DEFENSIVE_PACT, g_iThem);
-	DoClearTable();
-	DisplayDeal();
-	DoUIDealChangedByHuman();
-end
-
-Controls.UsTableDefensivePact:RegisterCallback(Mouse.eLClick, TableDefensivePactHandler);
-Controls.ThemTableDefensivePact:RegisterCallback(Mouse.eLClick, TableDefensivePactHandler);
-
-
-
 
 -----------------------------------------------------------------------------------------------------------------------
 -- Research Agreement Handlers
 -----------------------------------------------------------------------------------------------------------------------
-function PocketResearchAgreementHandler(isUs)
-	-- Note that currently Research Agreement is required on both sides
+do
+	local function AddResearchAgreement()
 
-	if (isUs == 1) then
-		g_Deal:AddResearchAgreement(g_iUs, g_iDealDuration);
-		g_Deal:AddResearchAgreement(g_iThem, g_iDealDuration);
-	else
-		g_Deal:AddResearchAgreement(g_iUs, g_iDealDuration);
-		g_Deal:AddResearchAgreement(g_iThem, g_iDealDuration);
+		-- Research Agreement is required on both sides
+		g_Deal:AddResearchAgreement( g_iUs, g_iDealDuration )
+		g_Deal:AddResearchAgreement( g_iThem, g_iDealDuration )
+		return DoUIDealChangedByHuman()
 	end
-	DisplayDeal();
-	DoUIDealChangedByHuman();
+	Controls.UsPocketResearchAgreement:RegisterCallback( Mouse.eLClick, AddResearchAgreement )
+	Controls.ThemPocketResearchAgreement:RegisterCallback( Mouse.eLClick, AddResearchAgreement )
+
+	local function RemoveResearchAgreement()
+		-- Remove from BOTH sides of the table
+		g_Deal:RemoveByType( TradeableItems.TRADE_ITEM_RESEARCH_AGREEMENT, g_iUs )
+		g_Deal:RemoveByType( TradeableItems.TRADE_ITEM_RESEARCH_AGREEMENT, g_iThem )
+		return DoUIDealChangedByHuman( true )
+	end
+	Controls.UsTableResearchAgreement:RegisterCallback( Mouse.eLClick, RemoveResearchAgreement )
+	Controls.ThemTableResearchAgreement:RegisterCallback( Mouse.eLClick, RemoveResearchAgreement )
 end
-
-Controls.UsPocketResearchAgreement:RegisterCallback(Mouse.eLClick, PocketResearchAgreementHandler);
-Controls.ThemPocketResearchAgreement:RegisterCallback(Mouse.eLClick, PocketResearchAgreementHandler);
-Controls.UsPocketResearchAgreement:SetVoid1(1);
-Controls.ThemPocketResearchAgreement:SetVoid1(0);
-
-function TableResearchAgreementHandler()
-	-- Remove from BOTH sides of the table
-	g_Deal:RemoveByType(TradeableItems.TRADE_ITEM_RESEARCH_AGREEMENT, g_iUs);
-	g_Deal:RemoveByType(TradeableItems.TRADE_ITEM_RESEARCH_AGREEMENT, g_iThem);
-	DoClearTable();
-	DisplayDeal();
-	DoUIDealChangedByHuman();
-end
-
-Controls.UsTableResearchAgreement:RegisterCallback(Mouse.eLClick, TableResearchAgreementHandler);
-Controls.ThemTableResearchAgreement:RegisterCallback(Mouse.eLClick, TableResearchAgreementHandler);
 
 -----------------------------------------------------------------------------------------------------------------------
--- Marriage Handlers
+-- pocket Marriage
 -----------------------------------------------------------------------------------------------------------------------
-function PocketMarriageHandler(isUs)
-	-- Note that currently diplomatic marriage is required on both sides
-	g_Deal:AddDiplomaticMarriage(g_iUs, g_iDealDuration);
-	g_Deal:AddDiplomaticMarriage(g_iThem, g_iDealDuration);
-	DisplayDeal();
-	DoUIDealChangedByHuman();
+do
+	local function AddMarriageAgreement()
+		g_Deal:AddDiplomaticMarriage( g_iUs, g_iDealDuration )
+		g_Deal:AddDiplomaticMarriage( g_iThem, g_iDealDuration )
+		return DoUIDealChangedByHuman()
+	end
+	Controls.UsPocketMarriage:RegisterCallback( Mouse.eLClick, AddMarriageAgreement )
+	Controls.ThemPocketMarriage:RegisterCallback( Mouse.eLClick, AddMarriageAgreement )
+
+	local function RemoveMarriageAgreement()
+		-- Remove from BOTH sides of the table
+		g_Deal:RemoveByType( TradeableItems.TRADE_ITEM_DIPLOMATIC_MARRIAGE, g_iUs )
+		g_Deal:RemoveByType( TradeableItems.TRADE_ITEM_DIPLOMATIC_MARRIAGE, g_iThem )
+		return DoUIDealChangedByHuman( true )
+	end
+	Controls.UsTableMarriage:RegisterCallback( Mouse.eLClick, RemoveMarriageAgreement )
+	Controls.ThemTableMarriage:RegisterCallback( Mouse.eLClick, RemoveMarriageAgreement )
 end
-
-Controls.UsPocketMarriage:RegisterCallback(Mouse.eLClick, PocketMarriageHandler);
-Controls.ThemPocketMarriage:RegisterCallback(Mouse.eLClick, PocketMarriageHandler);
-Controls.UsPocketMarriage:SetVoid1(1);
-Controls.ThemPocketMarriage:SetVoid1(0);
-
-function TableMarriageHandler()
-	-- Remove from BOTH sides of the table
-	g_Deal:RemoveByType(TradeableItems.TRADE_ITEM_DIPLOMATIC_MARRIAGE, g_iUs);
-	g_Deal:RemoveByType(TradeableItems.TRADE_ITEM_DIPLOMATIC_MARRIAGE, g_iThem);
-	DoClearTable();
-	DisplayDeal();
-	DoUIDealChangedByHuman();
-end
-
-Controls.UsTableMarriage:RegisterCallback(Mouse.eLClick, TableMarriageHandler);
-Controls.ThemTableMarriage:RegisterCallback(Mouse.eLClick, TableMarriageHandler);
 
 -----------------------------------------------------------------------------------------------------------------------
--- Dual Empire Handlers
+-- pocket Dual Empire
 -----------------------------------------------------------------------------------------------------------------------
-function PocketDualEmpireHandler(isUs)
-	-- Note that currently dual empire is required on both sides
-	g_Deal:AddDualEmpireTreaty(g_iUs);
-	g_Deal:AddDualEmpireTreaty(g_iThem);
-	DisplayDeal();
-	DoUIDealChangedByHuman();
+do
+	local function AddDualEmpireAgreement()
+		g_Deal:AddDualEmpireTreaty( g_iUs )
+		g_Deal:AddDualEmpireTreaty( g_iThem )
+		return DoUIDealChangedByHuman()
+	end
+	Controls.UsPocketDualEmpire:RegisterCallback( Mouse.eLClick, AddDualEmpireAgreement )
+	Controls.ThemPocketDualEmpire:RegisterCallback( Mouse.eLClick, AddDualEmpireAgreement )
+
+	local function RemoveDualEmpireAgreement()
+		-- Remove from BOTH sides of the table
+		g_Deal:RemoveByType( TradeableItems.TRADE_ITEM_DUAL_EMPIRE_TREATY, g_iUs )
+		g_Deal:RemoveByType( TradeableItems.TRADE_ITEM_DUAL_EMPIRE_TREATY, g_iThem )
+		return DoUIDealChangedByHuman( true )
+	end
+	Controls.UsTableDualEmpire:RegisterCallback( Mouse.eLClick, RemoveDualEmpireAgreement )
+	Controls.ThemTableDualEmpire:RegisterCallback( Mouse.eLClick, RemoveDualEmpireAgreement )
 end
-
-Controls.UsPocketDualEmpire:RegisterCallback(Mouse.eLClick, PocketDualEmpireHandler);
-Controls.ThemPocketDualEmpire:RegisterCallback(Mouse.eLClick, PocketDualEmpireHandler);
-Controls.UsPocketDualEmpire:SetVoid1(1);
-Controls.ThemPocketDualEmpire:SetVoid1(0);
-
-function TableDualEmpireHandler()
-	-- Remove from BOTH sides of the table
-	g_Deal:RemoveByType(TradeableItems.TRADE_ITEM_DIPLOMATIC_DUAL_EMPIRE_TREATY, g_iUs);
-	g_Deal:RemoveByType(TradeableItems.TRADE_ITEM_DIPLOMATIC_DUAL_EMPIRE_TREATY, g_iThem);
-	DoClearTable();
-	DisplayDeal();
-	DoUIDealChangedByHuman();
-end
-
-Controls.UsTableDualEmpire:RegisterCallback(Mouse.eLClick, TableDualEmpireHandler);
-Controls.ThemTableDualEmpire:RegisterCallback(Mouse.eLClick, TableDualEmpireHandler);
 
 -----------------------------------------------------------------------------------------------------------------------
 -- Trade Agreement Handlers
 -----------------------------------------------------------------------------------------------------------------------
-function PocketTradeAgreementHandler(isUs)
-	-- Note that currently Trade Agreement is required on both sides
+do
+	local function AddTradeAgreement()
 
-	if (isUs == 1) then
-		g_Deal:AddTradeAgreement(g_iUs, g_iDealDuration);
-		g_Deal:AddTradeAgreement(g_iThem, g_iDealDuration);
-	else
-		g_Deal:AddTradeAgreement(g_iUs, g_iDealDuration);
-		g_Deal:AddTradeAgreement(g_iThem, g_iDealDuration);
+		-- Trade Agreement is required on both sides
+
+		g_Deal:AddTradeAgreement( g_iUs, g_iDealDuration )
+		g_Deal:AddTradeAgreement( g_iThem, g_iDealDuration )
+		return DoUIDealChangedByHuman()
 	end
-	DisplayDeal();
-	DoUIDealChangedByHuman();
+	Controls.UsPocketTradeAgreement:RegisterCallback( Mouse.eLClick, AddTradeAgreement )
+	Controls.ThemPocketTradeAgreement:RegisterCallback( Mouse.eLClick, AddTradeAgreement )
+
+	local function RemoveTradeAgreement()
+		-- Remove from BOTH sides of the table
+		g_Deal:RemoveByType( TradeableItems.TRADE_ITEM_TRADE_AGREEMENT, g_iUs )
+		g_Deal:RemoveByType( TradeableItems.TRADE_ITEM_TRADE_AGREEMENT, g_iThem )
+		return DoUIDealChangedByHuman( true )
+	end
+	Controls.UsTableTradeAgreement:RegisterCallback( Mouse.eLClick, RemoveTradeAgreement )
+	Controls.ThemTableTradeAgreement:RegisterCallback( Mouse.eLClick, RemoveTradeAgreement )
 end
-
-Controls.UsPocketTradeAgreement:RegisterCallback(Mouse.eLClick, PocketTradeAgreementHandler);
-Controls.ThemPocketTradeAgreement:RegisterCallback(Mouse.eLClick, PocketTradeAgreementHandler);
-Controls.UsPocketTradeAgreement:SetVoid1(1);
-Controls.ThemPocketTradeAgreement:SetVoid1(0);
-
-function TableTradeAgreementHandler()
-	-- Remove from BOTH sides of the table
-	g_Deal:RemoveByType(TradeableItems.TRADE_ITEM_TRADE_AGREEMENT, g_iUs);
-	g_Deal:RemoveByType(TradeableItems.TRADE_ITEM_TRADE_AGREEMENT, g_iThem);
-	DoClearTable();
-	DisplayDeal();
-	DoUIDealChangedByHuman();
-end
-
-Controls.UsTableTradeAgreement:RegisterCallback(Mouse.eLClick, TableTradeAgreementHandler);
-Controls.ThemTableTradeAgreement:RegisterCallback(Mouse.eLClick, TableTradeAgreementHandler);
-
-
-
-
 
 -----------------------------------------------------------------------------------------------------------------------
 -- Handle the strategic and luxury resources
 -----------------------------------------------------------------------------------------------------------------------
-function PocketResourceHandler(isUs, resourceId)
-	local iAmount = 5;
-
-	if (GameInfo.Resources[resourceId].ResourceUsage == 2) then  -- is a luxury resource
-		iAmount = 1;
-	end
-
-	if (isUs == 1) then
-		if (iAmount > g_Deal:GetNumResource(g_iUs, resourceId)) then
-			iAmount = g_Deal:GetNumResource(g_iUs, resourceId);
-		end
-		g_Deal:AddResourceTrade(g_iUs, resourceId, iAmount, g_iDealDuration);
-		if g_ResDealsPToUpdate[0] == nil then
-			g_ResDealsPToUpdate[0] = {};
-		end
-		if g_ResDealsPToUpdate[0][g_iThem] == nil then
-			g_ResDealsPToUpdate[0][g_iThem] = {};
-		end
-		g_ResDealsPToUpdate[0][g_iThem][resourceId] = Game.GetGameTurn();
-	else
-		if (iAmount > g_Deal:GetNumResource(g_iThem, resourceId)) then
-			iAmount = g_Deal:GetNumResource(g_iThem, resourceId);
-		end
-		g_Deal:AddResourceTrade(g_iThem, resourceId, iAmount, g_iDealDuration);
-		if g_ResDealsPToUpdate[1] == nil then
-			g_ResDealsPToUpdate[1] = {};
-		end
-		if g_ResDealsPToUpdate[1][g_iThem] == nil then
-			g_ResDealsPToUpdate[1][g_iThem] = {};
-		end
-		g_ResDealsPToUpdate[1][g_iThem][resourceId] = Game.GetGameTurn();
-	end
-
-	DisplayDeal();
-	DoUIDealChangedByHuman();
-end
-
-function TableResourceHandler(isUs, resourceId)
-	g_Deal:RemoveResourceTrade(resourceId);
-	if (isUs == 1) then
-		if g_ResDealsPToUpdate[0] and g_ResDealsPToUpdate[0][g_iThem] then
-			g_ResDealsPToUpdate[0][g_iThem][resourceId] = nil;
-		end
-	else
-		if g_ResDealsPToUpdate[1] and g_ResDealsPToUpdate[1][g_iThem] then
-			g_ResDealsPToUpdate[1][g_iThem][resourceId] = nil;
-		end
-	end
-	DoClearTable();
-	DisplayDeal();
-	DoUIDealChangedByHuman();
-end
-
-function AddPocketResource(row, isUs, stack)
-	local controlTable = {};
-	ContextPtr:BuildInstanceForControl("PocketResource", controlTable, stack);
-
-	controlTable.Button:SetText("");   -- Text and quantity will be set for the specific player when the UI comes up
-	controlTable.Button:SetVoids(isUs, row.ID);
-	controlTable.Button:RegisterCallback(Mouse.eLClick, PocketResourceHandler);
-
-	if (isUs == 1) then
-		g_UsPocketResources[row.ID] = controlTable;
-	else
-		g_ThemPocketResources[row.ID] = controlTable;
-	end
-end
-
-function AddTableStrategic(row, isUs, stack)
-	local controlTable = {};
-	ContextPtr:BuildInstanceForControl("TableStrategic", controlTable, stack);
-
-	local strString = row.IconString .. " " .. Locale.ConvertTextKey(row.Description);
-	controlTable.Button:SetText(strString);
-	controlTable.Button:SetVoids(isUs, row.ID);
-	controlTable.Button:RegisterCallback(Mouse.eLClick, TableResourceHandler);
-	controlTable.AmountEdit:RegisterCallback(ChangeResourceAmount);
-
-	if (isUs == 1) then
-		controlTable.AmountEdit:SetVoid1(1);
-		g_UsTableResources[row.ID] = controlTable;
-	else
-		controlTable.AmountEdit:SetVoid1(0);
-		g_ThemTableResources[row.ID] = controlTable;
-	end
-
-	controlTable.AmountEdit:SetVoid2(row.ID);
-
-	g_LuxuryList[row.ID] = false;
-end
-
-function AddTableLuxury(row, isUs, stack)
-	local controlTable = {};
-	ContextPtr:BuildInstanceForControl("TableLuxury", controlTable, stack);
-
-	local strString = row.IconString .. " " .. Locale.ConvertTextKey(row.Description);
-	controlTable.Button:SetText(strString);
-	controlTable.Button:SetVoids(isUs, row.ID);
-	controlTable.Button:RegisterCallback(Mouse.eLClick, TableResourceHandler);
-
-	if (isUs == 1) then
-		g_UsTableResources[row.ID] = controlTable;
-	else
-		g_ThemTableResources[row.ID] = controlTable;
-	end
-
-	g_LuxuryList[row.ID] = true;
-end
-
--------------------------------------------------------------------
--------------------------------------------------------------------
-function ChangeResourceAmount(string, control)
-	local bIsUs = control:GetVoid1() == 1;
-	local iResourceID = control:GetVoid2();
-
-	local pPlayer;
-	local iPlayer;
-	if (bIsUs) then
-		iPlayer = g_iUs;
-	else
-		iPlayer = g_iThem;
-	end
-	pPlayer = Players[iPlayer];
-
-	local iNumResource = 0;
-	if (string ~= nil and string ~= "") then
-		iNumResource = tonumber(string);
-	else
-		control:SetText(0);
-	end
-
-	-- Can't offer more than someone has
-	if (iNumResource > g_Deal:GetNumResource(iPlayer, iResourceID)) then
-		iNumResource = g_Deal:GetNumResource(iPlayer, iResourceID);
-		control:SetText(iNumResource);
-	end
-
-	if (bIsUs) then
-		g_Deal:ChangeResourceTrade(g_iUs, iResourceID, iNumResource, g_iDealDuration);
-	else
-		g_Deal:ChangeResourceTrade(g_iThem, iResourceID, iNumResource, g_iDealDuration);
-	end
-end
-
--------------------------------------------------------------------
--- Populate the lists
--------------------------------------------------------------------
-for row in GameInfo.Resources("ResourceUsage = 1")
 do
-	--print( "adding strat: " .. row.Type );
-	AddPocketResource(row, 1, Controls.UsPocketStrategicStack);
-	AddPocketResource(row, 0, Controls.ThemPocketStrategicStack);
-	AddTableStrategic(row, 1, Controls.UsTableStrategicStack);
-	AddTableStrategic(row, 0, Controls.ThemTableStrategicStack);
-end
-
-for row in GameInfo.Resources("ResourceUsage = 2")
-do
-	--print( "adding lux: " .. row.Type );
-	AddPocketResource(row, 1, Controls.UsPocketLuxuryStack);
-	AddPocketResource(row, 0, Controls.ThemPocketLuxuryStack);
-	AddTableLuxury(row, 1, Controls.UsTableLuxuryStack);
-	AddTableLuxury(row, 0, Controls.ThemTableLuxuryStack);
-end
-
-
------------------------------------------------------------------------------------------------------------------------
--- Handle votes
------------------------------------------------------------------------------------------------------------------------
-
--- Update a global table, refer to proposal and vote pair as a single integer index because of SetVoids limit
-function UpdateLeagueVotes()
-	g_LeagueVoteList = {};
-
-	local pLeague = nil;
-	if (Game.GetNumActiveLeagues() > 0) then
-		pLeague = Game.GetActiveLeague();
-	end
-
-	if (pLeague ~= nil) then
-		local tEnactProposals = pLeague:GetEnactProposals();
-		for i, t in ipairs(tEnactProposals) do
-			local iVoterDecision = GameInfo.ResolutionDecisions[GameInfo.Resolutions[t.Type].VoterDecision].ID;
-			local tVoterChoices = pLeague:GetChoicesForDecision(iVoterDecision);
-			for i, iChoice in ipairs(tVoterChoices) do
-				local tLeagueVote = { Type = t.Type, VoteDecision = iVoterDecision, ID = t.ID, ProposerChoice = t
-				.ProposerDecision, VoteChoice = iChoice, Repeal = false };
-				table.insert(g_LeagueVoteList, tLeagueVote);
-			end
-		end
-
-		local tRepealProposals = pLeague:GetRepealProposals();
-		for i, t in ipairs(tRepealProposals) do
-			local iVoterDecision = GameInfo.ResolutionDecisions["RESOLUTION_DECISION_REPEAL"].ID; --antonjs: temp
-			local tVoterChoices = pLeague:GetChoicesForDecision(iVoterDecision);
-			for i, iChoice in ipairs(tVoterChoices) do
-				local tLeagueVote = { Type = t.Type, VoteDecision = iVoterDecision, ID = t.ID, ProposerChoice = t
-				.ProposerDecision, VoteChoice = iChoice, Repeal = true };
-				table.insert(g_LeagueVoteList, tLeagueVote);
-			end
+	local function AddResourceTrade( playerID, resourceID )
+		local player = Players[ playerID ]
+		if player then
+			--SP Special Rule: default amount 5
+			g_Deal:AddResourceTrade( playerID, resourceID, min( player:GetNumResourceAvailable( resourceID, false ), Game.GetResourceUsageType(resourceID) == ResourceUsageTypes.RESOURCEUSAGE_STRATEGIC and UI.ShiftKeyDown() and huge or 5 ), g_iDealDuration )
+			return DoUIDealChangedByHuman()
 		end
 	end
-end
 
-function GetLeagueVoteIndexFromData(iID, iVoteChoice, bRepeal)
-	local iFound = nil;
-	for iIndex, tVote in ipairs(g_LeagueVoteList) do
-		if (tVote.ID == iID and tVote.VoteChoice == iVoteChoice and tVote.Repeal == bRepeal) then
-			iFound = iIndex;
-			break;
+	local function AddResourceTradeUs( resourceID )
+		AddResourceTrade( g_iUs, resourceID )
+		local a = g_UsTableResources[ resourceID ].AmountEdit
+		if a then a:TakeFocus() end
+	end
+
+	local function AddResourceTradeThem( resourceID )
+		AddResourceTrade( g_iThem, resourceID )
+		local a = g_ThemTableResources[ resourceID ].AmountEdit
+		if a then a:TakeFocus() end
+	end
+
+	local function RemoveResourceTrade( resourceID )
+		g_Deal:RemoveResourceTrade( resourceID )
+		return DoUIDealChangedByHuman( true )
+	end
+
+	local function AddResourceInstance( resource, instanceName, stack, list, clickAction, changeAction )
+		local instance = {}
+		ContextPtr:BuildInstanceForControl( instanceName, instance, stack )
+		local button = instance.Button
+		button:SetText( resource.IconString .. L(resource.Description) )
+		button:SetVoid1( resource.ID )
+		button:RegisterCallback( Mouse.eLClick, clickAction )
+		local sToolTip = ""
+		local resourceHappiness = resource.Happiness or 0
+		if resourceHappiness > 0 then
+			sToolTip = sToolTip .. resourceHappiness .. "[ICON_HAPPINESS_1]"
+		end
+		button:SetToolTipString( sToolTip );
+		list[ resource.ID ] = instance
+		if changeAction then
+			instance.AmountEdit:SetVoid1( resource.ID )
+			instance.AmountEdit:RegisterCallback( changeAction )
 		end
 	end
-	return iFound;
+
+	local function ChangeResourceAmount( string, control, playerID )
+		local resourceID = control:GetVoid1()
+		-- Can't offer more than someone has, excluding imports (=>false)
+		local player = Players[ playerID ]
+		if player then
+			local resourceQuantity = min( player:GetNumResourceAvailable( resourceID, false ), tonumber(string) or 0 )
+			control:SetText( resourceQuantity )
+			g_Deal:ChangeResourceTrade( playerID, resourceID, resourceQuantity, g_iDealDuration )
+		end
+	end
+
+	local function ChangeResourceAmountUs( string, control )
+		ChangeResourceAmount( string, control, g_iUs )
+	end
+
+	local function ChangeResourceAmountThem( string, control )
+		ChangeResourceAmount( string, control, g_iThem )
+	end
+
+	--print( "adding strategic resources" )
+	for row in GameInfo.Resources{ ResourceUsage = 1 } do
+		AddResourceInstance( row, "PocketResource", Controls.UsPocketStrategicStack, g_UsPocketResources, AddResourceTradeUs )
+		AddResourceInstance( row, "PocketResource", Controls.ThemPocketStrategicStack, g_ThemPocketResources, AddResourceTradeThem )
+		AddResourceInstance( row, "TableStrategic", Controls.UsTableStrategicStack, g_UsTableResources, RemoveResourceTrade, ChangeResourceAmountUs )
+		AddResourceInstance( row, "TableStrategic", Controls.ThemTableStrategicStack, g_ThemTableResources, RemoveResourceTrade, ChangeResourceAmountThem )
+	end
+	--print( "adding luxuries" )
+	for row in GameInfo.Resources{ ResourceUsage = 2 } do
+		AddResourceInstance( row, "PocketResource", Controls.UsPocketLuxuryStack, g_UsPocketResources, AddResourceTradeUs )
+		AddResourceInstance( row, "PocketResource", Controls.ThemPocketLuxuryStack, g_ThemPocketResources, AddResourceTradeThem )
+		AddResourceInstance( row, "TableLuxury", Controls.UsTableLuxuryStack, g_UsTableResources, RemoveResourceTrade )
+		AddResourceInstance( row, "TableLuxury", Controls.ThemTableLuxuryStack, g_ThemTableResources, RemoveResourceTrade )
+	end
 end
 
-function OnChoosePocketVote(iFromPlayer, iVoteIndex)
-	local pLeague = nil;
-	if (Game.GetNumActiveLeagues() > 0) then
-		pLeague = Game.GetActiveLeague();
-	end
+if IsCiv5BNW then
+	-----------------------------------------------------------------------------------------------------------------------
+	-- Handle votes
+	-----------------------------------------------------------------------------------------------------------------------
 
-	if (pLeague ~= nil and g_LeagueVoteList[iVoteIndex] ~= nil) then
-		local iResolutionID = g_LeagueVoteList[iVoteIndex].ID;
-		local iVoteChoice = g_LeagueVoteList[iVoteIndex].VoteChoice;
-		local iNumVotes = pLeague:GetCoreVotesForMember(iFromPlayer);
-		local bRepeal = g_LeagueVoteList[iVoteIndex].Repeal;
-		print("==debug== Vote added to deal, ID=" ..
-		iResolutionID .. ", VoteChoice=" .. iVoteChoice .. ", NumVotes=" .. iNumVotes);
-		g_Deal:AddVoteCommitment(iFromPlayer, iResolutionID, iVoteChoice, iNumVotes, bRepeal);
+	-- Update a global table, refer to proposal and vote pair as a single integer index because of SetVoids limit
+	local function UpdateLeagueVotes()
+		g_LeagueVoteList = {}
 
-		DisplayDeal();
-		DoUIDealChangedByHuman();
-	else
-		print("SCRIPTING ERROR: Could not find valid vote when pocket vote was selected");
-	end
-end
-
-function RefreshPocketVotes(iIsUs)
-	UpdateLeagueVotes();
-	if (iIsUs == 1) then
-		g_UsPocketVoteIM:ResetInstances();
-	else
-		g_ThemPocketVoteIM:ResetInstances();
-	end
-
-	local pLeague = nil;
-	if (Game.GetNumActiveLeagues() > 0) then
-		pLeague = Game.GetActiveLeague();
-	end
-
-	if (pLeague ~= nil) then
-		for i, tVote in ipairs(g_LeagueVoteList) do
-			-- Us to them?
-			if (iIsUs == 1) then
-				local iNumVotes = pLeague:GetCoreVotesForMember(g_iUs);
-				local sProposalText = GetVoteText(pLeague, i, tVote.Repeal, iNumVotes);
-				local sChoiceText = pLeague:GetTextForChoice(tVote.VoteDecision, tVote.VoteChoice);
-				local sTooltip = GetVoteTooltip(pLeague, i, tVote.Repeal, iNumVotes);
-				if (g_Deal:IsPossibleToTradeItem(g_iUs, g_iThem, TradeableItems.TRADE_ITEM_VOTE_COMMITMENT, tVote.ID, tVote.VoteChoice, iNumVotes, tVote.Repeal)) then
-					local cInstance = g_UsPocketVoteIM:GetInstance();
-					cInstance.ProposalLabel:SetText(sProposalText);
-					cInstance.VoteLabel:SetText(sChoiceText);
-					cInstance.Button:SetToolTipString(sTooltip);
-					cInstance.Button:SetVoids(g_iUs, i);
-					cInstance.Button:RegisterCallback(Mouse.eLClick, OnChoosePocketVote);
+		local activeLeague = Game.GetNumActiveLeagues() > 0 and Game.GetActiveLeague()
+		if activeLeague then
+			local tEnactProposals = activeLeague:GetEnactProposals()
+			for i,t in ipairs(tEnactProposals) do
+				local iVoterDecision = GameInfo.ResolutionDecisions[GameInfo.Resolutions[t.Type].VoterDecision].ID
+				local tVoterChoices = activeLeague:GetChoicesForDecision(iVoterDecision)
+				for i,iChoice in ipairs(tVoterChoices) do
+					local tLeagueVote = { Type = t.Type, VoteDecision = iVoterDecision, ID = t.ID, ProposerChoice = t.ProposerDecision, VoteChoice = iChoice, Repeal = false }
+					insert(g_LeagueVoteList, tLeagueVote)
 				end
-				-- Them to us?
-			else
-				local iNumVotes = pLeague:GetCoreVotesForMember(g_iThem);
-				local sProposalText = GetVoteText(pLeague, i, tVote.Repeal, iNumVotes);
-				local sChoiceText = pLeague:GetTextForChoice(tVote.VoteDecision, tVote.VoteChoice);
-				local sTooltip = GetVoteTooltip(pLeague, i, tVote.Repeal, iNumVotes);
-				if (g_Deal:IsPossibleToTradeItem(g_iThem, g_iUs, TradeableItems.TRADE_ITEM_VOTE_COMMITMENT, tVote.ID, tVote.VoteChoice, iNumVotes, tVote.Repeal)) then
-					local cInstance = g_ThemPocketVoteIM:GetInstance();
-					cInstance.ProposalLabel:SetText(sProposalText);
-					cInstance.VoteLabel:SetText(sChoiceText);
-					cInstance.Button:SetToolTipString(sTooltip);
-					cInstance.Button:SetVoids(g_iThem, i);
-					cInstance.Button:RegisterCallback(Mouse.eLClick, OnChoosePocketVote);
+			end
+
+			local tRepealProposals = activeLeague:GetRepealProposals()
+			for i,t in ipairs(tRepealProposals) do
+				local iVoterDecision = GameInfo.ResolutionDecisions["RESOLUTION_DECISION_REPEAL"].ID --antonjs: temp
+				local tVoterChoices = activeLeague:GetChoicesForDecision(iVoterDecision)
+				for i,iChoice in ipairs(tVoterChoices) do
+					local tLeagueVote = { Type = t.Type, VoteDecision = iVoterDecision, ID = t.ID, ProposerChoice = t.ProposerDecision, VoteChoice = iChoice, Repeal = true }
+					insert(g_LeagueVoteList, tLeagueVote)
 				end
 			end
 		end
 	end
-end
 
-function OnChooseTableVote(iFromPlayer, iVoteIndex)
-	local pLeague = nil;
-	if (Game.GetNumActiveLeagues() > 0) then
-		pLeague = Game.GetActiveLeague();
-	end
-
-	if (pLeague ~= nil and g_LeagueVoteList[iVoteIndex] ~= nil) then
-		local iResolutionID = g_LeagueVoteList[iVoteIndex].ID;
-		local iVoteChoice = g_LeagueVoteList[iVoteIndex].VoteChoice;
-		local iNumVotes = pLeague:GetCoreVotesForMember(iFromPlayer);
-		local bRepeal = g_LeagueVoteList[iVoteIndex].Repeal;
-		print("==debug== Vote removed from deal, ID=" ..
-		iResolutionID .. ", VoteChoice=" .. iVoteChoice .. ", NumVotes=" .. iNumVotes);
-		g_Deal:RemoveVoteCommitment(iFromPlayer, iResolutionID, iVoteChoice, iNumVotes, bRepeal);
-
-		DoClearTable();
-		DisplayDeal();
-		DoUIDealChangedByHuman();
-	else
-		print("SCRIPTING ERROR: Could not find valid vote when pocket vote was selected");
-	end
-end
-
-function GetVoteText(pLeague, iVoteIndex, bRepeal, iNumVotes)
-	local s = "";
-	if (pLeague ~= nil and iVoteIndex ~= nil) then
-		if (g_LeagueVoteList[iVoteIndex] ~= nil) then
-			local tVote = g_LeagueVoteList[iVoteIndex];
-			s = pLeague:GetResolutionName(tVote.Type, tVote.ID, tVote.ProposerChoice, false);
-			if (tVote.Repeal) then
-				s = "[COLOR_WARNING_TEXT]" .. s .. "[ENDCOLOR]";
-			else
-				s = "[COLOR_POSITIVE_TEXT]" .. s .. "[ENDCOLOR]";
+	function GetLeagueVoteIndexFromData( voteID, voteChoice, bRepeal)
+		for index, resolution in ipairs(g_LeagueVoteList) do
+			if resolution.ID == voteID and resolution.VoteChoice == voteChoice and resolution.Repeal == bRepeal then
+				return index
 			end
 		end
 	end
 
-	return s;
-end
+	function OnChoosePocketVote( fromPlayerID, voteIndex )
+		local activeLeague = Game.GetNumActiveLeagues() > 0 and Game.GetActiveLeague()
+		local resolution = g_LeagueVoteList[voteIndex]
 
-function GetVoteTooltip(pLeague, iVoteIndex, bRepeal, iNumVotes)
-	local s = "";
-	if (pLeague ~= nil and iVoteIndex ~= nil) then
-		if (g_LeagueVoteList[iVoteIndex] ~= nil) then
-			local tVote = g_LeagueVoteList[iVoteIndex];
-			local sVoteChoice = pLeague:GetTextForChoice(tVote.VoteDecision, tVote.VoteChoice);
-			local sProposalInfo = "";
-			if (GameInfo.Resolutions[tVote.Type] ~= nil and GameInfo.Resolutions[tVote.Type].Help ~= nil) then
-				sProposalInfo = sProposalInfo .. Locale.Lookup(GameInfo.Resolutions[tVote.Type].Help);
-			end
-
-			if (bRepeal) then
-				s = Locale.Lookup("TXT_KEY_DIPLO_VOTE_TRADE_REPEAL_TT", iNumVotes, sVoteChoice, sProposalInfo);
-			else
-				s = Locale.Lookup("TXT_KEY_DIPLO_VOTE_TRADE_ENACT_TT", iNumVotes, sVoteChoice, sProposalInfo);
-			end
-		end
-	end
-
-	return s;
-end
-
------------------------------------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------------------------------------
-
-
------------------------------------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------------------------------------
-function OnChooseCity(playerID, cityID)
-	g_Deal:AddCityTrade(playerID, cityID);
-
-	if (playerID == g_iUs) then
-		CityClose(0, 1);
-	else
-		CityClose(0, 0);
-	end
-
-	DisplayDeal();
-	DoUIDealChangedByHuman();
-end
-
-----------------------------------------------------
-----------------------------------------------------
-function CityClose(_, isUs)
-	if (isUs == 1) then
-		Controls.UsPocketCitiesStack:SetHide(true);
-		Controls.UsPocketCitiesStack:CalculateSize();
-
-		Controls.UsPocketStack:SetHide(false);
-		Controls.UsPocketStack:CalculateSize();
-
-		Controls.UsPocketPanel:CalculateInternalSize();
-		Controls.UsPocketPanel:SetScrollValue(0);
-	else
-		Controls.ThemPocketCitiesStack:SetHide(true);
-		Controls.ThemPocketCitiesStack:CalculateSize();
-
-		Controls.ThemPocketStack:SetHide(false);
-		Controls.ThemPocketStack:CalculateSize();
-
-		Controls.ThemPocketPanel:CalculateInternalSize();
-		Controls.ThemPocketPanel:SetScrollValue(0);
-	end
-end
-
-Controls.UsPocketCitiesClose:RegisterCallback(Mouse.eLClick, CityClose);
-Controls.UsPocketCitiesClose:SetVoid2(1);
-Controls.ThemPocketCitiesClose:RegisterCallback(Mouse.eLClick, CityClose);
-Controls.ThemPocketCitiesClose:SetVoid2(0);
-
-
--------------------------------------------------------------
-function TableCityHandler(playerID, cityID)
-	g_Deal:RemoveCityTrade(playerID, cityID);
-
-	DoClearTable();
-	DisplayDeal();
-	DoUIDealChangedByHuman();
-end
-
--------------------------------------------------------------
-function ShowCityChooser(isUs)
-	--print( "ShowCityChooser" );
-	local m_pTo;
-	local m_pFrom;
-	local m_iTo;
-	local m_iFrom;
-	local m_pIM;
-	local m_pocketStack;
-	local m_citiesStack;
-	local m_panel;
-
-	if (isUs == 1) then
-		m_pocketStack = Controls.UsPocketStack;
-		m_citiesStack = Controls.UsPocketCitiesStack;
-		m_panel       = Controls.UsPocketPanel;
-		m_pIM         = g_UsPocketCitiesIM;
-		m_iTo         = g_iThem;
-		m_iFrom       = g_iUs;
-		m_pTo         = g_pThem;
-		m_pFrom       = g_pUs;
-	else
-		m_pocketStack = Controls.ThemPocketStack;
-		m_citiesStack = Controls.ThemPocketCitiesStack;
-		m_panel       = Controls.ThemPocketPanel;
-		m_pIM         = g_ThemPocketCitiesIM;
-		m_iTo         = g_iUs;
-		m_iFrom       = g_iThem;
-		m_pTo         = g_pUs;
-		m_pFrom       = g_pThem;
-	end
-
-	m_pIM:ResetInstances();
-	m_pocketStack:SetHide(true);
-	m_citiesStack:SetHide(false);
-
-	local instance;
-	local bFound = false;
-	for pCity in m_pFrom:Cities() do
-		local iCityID = pCity:GetID();
-
-		if (g_Deal:IsPossibleToTradeItem(m_iFrom, m_iTo, TradeableItems.TRADE_ITEM_CITIES, pCity:GetX(), pCity:GetY())) then
-			local instance = m_pIM:GetInstance();
-
-			instance.CityName:SetText(pCity:GetName());
-			instance.CityPop:SetText(pCity:GetPopulation());
-			instance.Button:SetVoids(m_iFrom, iCityID);
-			instance.Button:RegisterCallback(Mouse.eLClick, OnChooseCity);
-			if (pCity:GetPopulation() < 4 or pCity:IsResistance()) and (pCity:GetOriginalOwner() ~= m_iTo and pCity:GetOriginalOwner() ~= m_iFrom) and isUs == 1 then
-				instance.Button:SetDisabled(true);
-			else
-				instance.Button:SetDisabled(false);
-			end
-
-			bFound = true;
-		end
-	end
-
-	if (not bFound) then
-		m_pocketStack:SetHide(false);
-		m_citiesStack:SetHide(true);
-
-		if (isUs == 1) then
-			Controls.UsPocketCities:SetDisabled(false);
-			Controls.UsPocketCities:LocalizeAndSetToolTip("TXT_KEY_DIPLO_TO_TRADE_CITY_NO_TT");
-			Controls.UsPocketCities:GetTextControl():SetColorByName("Gray_Black");
+		if activeLeague and resolution then
+			g_Deal:AddVoteCommitment(fromPlayerID, resolution.ID, resolution.VoteChoice, activeLeague:GetCoreVotesForMember(fromPlayerID), resolution.Repeal)
+			return DoUIDealChangedByHuman()
 		else
-			Controls.ThemPocketCities:SetDisabled(true);
-			Controls.ThemPocketCities:LocalizeAndSetToolTip("TXT_KEY_DIPLO_TO_TRADE_CITY_NO_THEM");
-			Controls.ThemPocketCities:GetTextControl():SetColorByName("Gray_Black");
+			print("SCRIPTING ERROR: Could not find valid vote when pocket vote was selected")
 		end
 	end
 
-	m_citiesStack:CalculateSize();
-	m_pocketStack:CalculateSize();
-	m_panel:CalculateInternalSize();
-	m_panel:SetScrollValue(0);
-end
+	local function RefreshPocketVotesRaw( IM, fromID, toID )
+		UpdateLeagueVotes()
+		IM:ResetInstances()
 
-Controls.UsPocketCities:SetVoid1(1);
-Controls.UsPocketCities:RegisterCallback(Mouse.eLClick, ShowCityChooser);
+		local activeLeague = Game.GetNumActiveLeagues() > 0 and Game.GetActiveLeague()
 
-Controls.ThemPocketCities:SetVoid1(0);
-Controls.ThemPocketCities:RegisterCallback(Mouse.eLClick, ShowCityChooser);
------------------------------------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------------------------------------
-
-
------------------------------------------------------------------------------------------------------------------------
--- OtherPlayer leader lists
------------------------------------------------------------------------------------------------------------------------
-function ShowOtherPlayerChooser(isUs, type)
-	--print( "ShowOtherPlayerChooser" );
-	local SubTableName;
-	local iFromPlayer;
-	local tradeType;
-	local iToPlayer;
-
-	if (type == WAR) then
-		tradeType = TradeableItems.TRADE_ITEM_THIRD_PARTY_WAR;
-	elseif (type == PEACE) then
-		tradeType = TradeableItems.TRADE_ITEM_THIRD_PARTY_PEACE;
-	end
-
-	local pocketStack;
-	local leaderStack;
-	local panel;
-
-	-- disable invalid players
-	if (isUs == 1) then
-		g_UsOtherPlayerMode = type;
-		pocketStack         = Controls.UsPocketStack;
-		leaderStack         = Controls.UsPocketLeaderStack;
-		panel               = Controls.UsPocketPanel;
-		SubTableName        = "UsPocket";
-		iFromPlayer         = g_iUs;
-		iToPlayer           = g_iThem;
-	else
-		g_ThemOtherPlayerMode = type;
-		pocketStack = Controls.ThemPocketStack;
-		leaderStack = Controls.ThemPocketLeaderStack;
-		panel = Controls.ThemPocketPanel;
-		SubTableName = "ThemPocket";
-		iFromPlayer = g_iThem;
-		iToPlayer = g_iUs;
-	end
-
-	for iLoopPlayer = 0, GameDefines.MAX_CIV_PLAYERS - 1, 1 do
-		pLoopPlayer = Players[iLoopPlayer];
-		iLoopTeam = pLoopPlayer:GetTeam();
-
-		local otherPlayerButton = g_OtherPlayersButtons[iLoopPlayer];
-
-		-- they're alive, not us, not them, we both know, and we can trade....
-		if (pLoopPlayer:IsAlive() and otherPlayerButton ~= nil) then
-			local otherPlayerButtonSubTableNameButton = otherPlayerButton[SubTableName].Button;
-
-			local strToolTip = "";
-			local iFromTeam = Players[iFromPlayer]:GetTeam();
-
-			if (g_iUsTeam == iLoopTeam or g_iThemTeam == iLoopTeam or
-					not g_pUsTeam:IsHasMet(iLoopTeam) or not g_pThemTeam:IsHasMet(iLoopTeam)) then
-				otherPlayerButtonSubTableNameButton:SetHide(true);
-			elseif (g_Deal:IsPossibleToTradeItem(iFromPlayer, iToPlayer, tradeType, iLoopTeam)) then
-				otherPlayerButtonSubTableNameButton:SetHide(false);
-				otherPlayerButtonSubTableNameButton:SetDisabled(false);
-				otherPlayerButtonSubTableNameButton:SetAlpha(1);
-			else
-				otherPlayerButtonSubTableNameButton:SetHide(false);
-				otherPlayerButtonSubTableNameButton:SetDisabled(true);
-				otherPlayerButtonSubTableNameButton:SetAlpha(0.5);
-
-				-- Why won't they make peace?
-				if (type == PEACE) then
-					-- Not at war
-					if (not Teams[iLoopTeam]:IsAtWar(iFromTeam)) then
-						strToolTip = Locale.ConvertTextKey("TXT_KEY_DIPLO_NOT_AT_WAR");
-
-						-- Minor that won't make peace
-					elseif (pLoopPlayer:IsMinorCiv()) then
-						local pMinorTeam = Teams[iLoopTeam];
-						local iAlly = pLoopPlayer:GetAlly();
-
-						-- Minor in permanent war with this guy
-						if (pLoopPlayer:IsMinorPermanentWar(iFromPlayer)) then
-							strToolTip = Locale.ConvertTextKey("TXT_KEY_DIPLO_MINOR_PERMANENT_WAR");
-							-- Minor allied to a player
-						elseif (pMinorTeam:IsAtWar(iFromTeam) and iAlly ~= -1 and Teams[Players[iAlly]:GetTeam()]:IsAtWar(iFromTeam)) then
-							strToolTip = Locale.ConvertTextKey("TXT_KEY_DIPLO_MINOR_ALLY_AT_WAR");
-						end
-
-						-- Major that won't make peace
-					else
-						-- AI don't want no peace!
-						if (not Players[iFromPlayer]:IsWillAcceptPeaceWithPlayer(iLoopPlayer)) then
-							strToolTip = Locale.ConvertTextKey("TXT_KEY_DIPLO_MINOR_THIS_GUY_WANTS_WAR");
-							-- Other AI don't want no peace!
-						elseif (not pLoopPlayer:IsWillAcceptPeaceWithPlayer(iFromPlayer)) then
-							strToolTip = Locale.ConvertTextKey("TXT_KEY_DIPLO_MINOR_OTHER_GUY_WANTS_WAR");
-						end
-					end
-
-					-- Why won't they make war?
-				else
-					-- Already at war
-					if (Teams[iLoopTeam]:IsAtWar(iFromTeam)) then
-						strToolTip = Locale.ConvertTextKey("TXT_KEY_DIPLO_ALREADY_AT_WAR");
-
-						-- Locked in to peace
-					elseif (Teams[iFromTeam]:IsForcePeace(iLoopTeam)) then
-						strToolTip = Locale.ConvertTextKey("TXT_KEY_DIPLO_FORCE_PEACE");
-
-						-- City-State ally
-					elseif (pLoopPlayer:IsMinorCiv() and pLoopPlayer:GetAlly() == iFromPlayer) then
-						strToolTip = Locale.ConvertTextKey("TXT_KEY_DIPLO_NO_WAR_ALLIES");
-					end
+		if activeLeague then
+			for i,resolution in ipairs(g_LeagueVoteList) do
+				local voteCount = activeLeague:GetCoreVotesForMember( fromID )
+				if g_Deal:IsPossibleToTradeItem( fromID, toID, TradeableItems.TRADE_ITEM_VOTE_COMMITMENT, resolution.ID, resolution.VoteChoice, voteCount, resolution.Repeal ) then
+					local instance = IM:GetInstance()
+					instance.ProposalLabel:SetText( GetVoteText(activeLeague, i, resolution.Repeal, voteCount) )
+					instance.VoteLabel:SetText( activeLeague:GetTextForChoice(resolution.VoteDecision, resolution.VoteChoice) )
+					instance.Button:SetToolTipString( GetVoteTooltip(activeLeague, i, resolution.Repeal, voteCount) )
+					instance.Button:SetVoids( fromID, i )
+					instance.Button:RegisterCallback( Mouse.eLClick, OnChoosePocketVote )
 				end
 			end
-
-			-- Tooltip
-			otherPlayerButtonSubTableNameButton:SetToolTipString(strToolTip);
 		end
 	end
 
-	pocketStack:SetHide(true);
-	pocketStack:CalculateSize();
-	leaderStack:SetHide(false);
-	leaderStack:CalculateSize();
-
-	panel:CalculateInternalSize();
-	panel:SetScrollValue(0);
-end
-
-Controls.UsPocketOtherPlayerWar:SetVoids(1, WAR);
-Controls.UsPocketOtherPlayerWar:RegisterCallback(Mouse.eLClick, ShowOtherPlayerChooser);
-
-Controls.ThemPocketOtherPlayerWar:SetVoids(0, WAR);
-Controls.ThemPocketOtherPlayerWar:RegisterCallback(Mouse.eLClick, ShowOtherPlayerChooser);
-
-Controls.UsPocketOtherPlayerPeace:SetVoids(1, PEACE);
-Controls.UsPocketOtherPlayerPeace:RegisterCallback(Mouse.eLClick, ShowOtherPlayerChooser);
-
-Controls.ThemPocketOtherPlayerPeace:SetVoids(0, PEACE);
-Controls.ThemPocketOtherPlayerPeace:RegisterCallback(Mouse.eLClick, ShowOtherPlayerChooser);
-
-
-----------------------------------------------------
-----------------------------------------------------
-function LeaderClose(_, isUs)
-	if (isUs == 1) then
-		Controls.UsPocketLeaderStack:SetHide(true);
-		Controls.UsPocketLeaderStack:CalculateSize();
-
-		Controls.UsPocketStack:SetHide(false);
-		Controls.UsPocketStack:CalculateSize();
-
-		Controls.UsPocketPanel:CalculateInternalSize();
-		Controls.UsPocketPanel:SetScrollValue(0);
-	else
-		Controls.ThemPocketLeaderStack:SetHide(true);
-		Controls.ThemPocketLeaderStack:CalculateSize();
-
-		Controls.ThemPocketStack:SetHide(false);
-		Controls.ThemPocketStack:CalculateSize();
-
-		Controls.ThemPocketPanel:CalculateInternalSize();
-		Controls.ThemPocketPanel:SetScrollValue(0);
-	end
-end
-
-Controls.UsPocketLeaderClose:RegisterCallback(Mouse.eLClick, LeaderClose);
-Controls.UsPocketLeaderClose:SetVoid2(1);
-Controls.ThemPocketLeaderClose:RegisterCallback(Mouse.eLClick, LeaderClose);
-Controls.ThemPocketLeaderClose:SetVoid2(0);
-
-
-----------------------------------------------------
--- handler for when the leader is actually clicked
-----------------------------------------------------
-function LeaderSelected(iOtherPlayer, isUs)
-	local iWho;
-	local mode;
-
-	LeaderClose(0, isUs);
-	if (isUs == 1) then
-		iWho = g_iUs;
-		mode = g_UsOtherPlayerMode;
-	else
-		iWho = g_iThem;
-		mode = g_ThemOtherPlayerMode;
-	end
-
-	local pOtherPlayer = Players[iOtherPlayer];
-	local iOtherTeam = pOtherPlayer:GetTeam();
-
-	if (mode == WAR) then
-		g_Deal:AddThirdPartyWar(iWho, iOtherTeam);
-	else
-		g_Deal:AddThirdPartyPeace(iWho, iOtherTeam, GameDefines.PEACE_TREATY_LENGTH);
-	end
-
-	DisplayDeal();
-	DoUIDealChangedByHuman();
-end
-
------------------------------------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------------------------------------
-function OnOtherPlayerTablePeace(iOtherPlayer, isUs)
-	local firstParty;
-	if (isUs == 1) then
-		firstParty = g_iUs;
-	else
-		firstParty = g_iThem;
-	end
-
-	local bRemoveDeal = true;
-	local iOtherTeam = Players[iOtherPlayer]:GetTeam();
-
-	--print("iOtherPlayer: " .. iOtherPlayer);
-
-	-- if this is a peace negotiation
-	if (g_pUsTeam:IsAtWar(g_iThemTeam)) then
-		--print("Peace negotiation");
-		-- if the player is a minor
-		if (Players[iOtherPlayer]:IsMinorCiv()) then
-			--print("Other civ is a minor civ");
-			local iAlly = Players[iOtherPlayer]:GetAlly();
-			--print("iAlly: " .. iAlly);
-			--print("g_iUs: " .. g_iUs);
-			--print("g_iThem: " .. g_iThem);
-			-- if the minor is allied with either us or them
-			if (iAlly == g_iUs or iAlly == g_iThem) then
-				-- don't allow the third party peace deal to be removed
-				--print("Don't allow removal because they are a third-party ally");
-				bRemoveDeal = false;
-			end
+	function RefreshPocketVotes(iIsUs)
+		if iIsUs == 1 then
+			RefreshPocketVotesRaw( g_UsPocketVoteIM, g_iUs, g_iThem )
+		else
+			RefreshPocketVotesRaw( g_ThemPocketVoteIM, g_iThem, g_iUs )
 		end
 	end
 
-	if (bRemoveDeal) then
-		--print("Removing deal");
-		g_Deal:RemoveThirdPartyPeace(firstParty, iOtherTeam);
+	function OnChooseTableVote(fromPlayerID, voteIndex)
+		local activeLeague = Game.GetNumActiveLeagues() > 0 and Game.GetActiveLeague()
+		local resolution = g_LeagueVoteList[voteIndex]
+		if activeLeague and resolution then
+			g_Deal:RemoveVoteCommitment(fromPlayerID, resolution.ID, resolution.VoteChoice, activeLeague:GetCoreVotesForMember(fromPlayerID), resolution.Repeal)
 
-		DoClearTable();
-		DisplayDeal();
-		DoUIDealChangedByHuman();
+			return DoUIDealChangedByHuman( true )
+		else
+			print("SCRIPTING ERROR: Could not find valid vote when pocket vote was selected")
+		end
+	end
+
+	function GetVoteText(activeLeague, voteIndex, bRepeal, voteCount)
+		local resolution = g_LeagueVoteList[voteIndex]
+		return activeLeague and resolution and (resolution.Repeal and "[COLOR_WARNING_TEXT]" or "[COLOR_POSITIVE_TEXT]") .. activeLeague:GetResolutionName(resolution.Type, resolution.ID, resolution.ProposerChoice, false) .. "[ENDCOLOR]" or ""
+	end
+
+	function GetVoteTooltip(activeLeague, voteIndex, bRepeal, voteCount)
+		local resolution = g_LeagueVoteList[voteIndex]
+		return activeLeague and resolution and L(bRepeal and "TXT_KEY_DIPLO_VOTE_TRADE_REPEAL_TT" or "TXT_KEY_DIPLO_VOTE_TRADE_ENACT_TT", voteCount, activeLeague:GetTextForChoice(resolution.VoteDecision, resolution.VoteChoice), (GameInfo.Resolutions[resolution.Type] or {}).Help or "") or ""
+
+	end
+end --IsCiv5BNW
+
+----------------------------------------------------
+-- handlers for when a leader is clicked
+----------------------------------------------------
+local function AddThirdPartyPeace( firstPartyID, playerID )
+	local player = Players[ playerID ]
+	if player then
+		g_Deal:AddThirdPartyPeace( firstPartyID, player:GetTeam(), g_iPeaceDuration )
+		return DoUIDealChangedByHuman()
 	end
 end
 
------------------------------------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------------------------------------
-function OnOtherPlayerTableWar(iOtherPlayer, isUs)
-	local firstParty;
-	if (isUs == 1) then
-		firstParty = g_iUs;
-	else
-		firstParty = g_iThem;
+local function AddThirdPartyWar( firstPartyID, playerID )
+	local player = Players[ playerID ]
+	if player then
+		g_Deal:AddThirdPartyWar( firstPartyID, player:GetTeam() )
+		return DoUIDealChangedByHuman()
 	end
-
-	local pOtherPlayer = Players[iOtherPlayer];
-	local iOtherTeam = pOtherPlayer:GetTeam();
-	g_Deal:RemoveThirdPartyWar(firstParty, iOtherTeam);
-
-	DoClearTable();
-	DisplayDeal();
-	DoUIDealChangedByHuman();
 end
+
+local function RemoveThirdPartyPeace( firstPartyID, playerID )
+
+	local player = Players[ playerID ]
+	if player then
+		-- if this is a peace negotiation
+		local ourPlayer = Players[ g_iUs ]
+		local ourTeam = ourPlayer and Teams[ ourPlayer:GetTeam() ]
+		local theirPlayer = Players[ g_iThem ]
+		local theirTeamID = theirPlayer and theirPlayer:GetTeam()
+		local allyID = ourTeam and theirTeamID and ourTeam:IsAtWar( theirTeamID ) and player:IsMinorCiv() and player:GetAlly()
+		if allyID ~= g_iUs and allyID ~= g_iThem then
+			--print("Removing peace deal")
+			g_Deal:RemoveThirdPartyPeace( firstPartyID, player:GetTeam() )
+			return DoUIDealChangedByHuman( true )
+		end
+	end
+end
+
+local function RemoveThirdPartyWar( firstPartyID, playerID )
+	local player = Players[ playerID ]
+	if player then
+		g_Deal:RemoveThirdPartyWar( firstPartyID, player:GetTeam() )
+		return DoUIDealChangedByHuman( true )
+	end
+end
+
 
 -----------------------------------------------------------------------------------------------------------------------
 -- Build the THIRD_PARTY lists. These are also know as thirdparty if you're doing a text search
 -- the only thing we trade in third party mode is war/peace, so make sure those aren't disabled
 -----------------------------------------------------------------------------------------------------------------------
-if (Game.IsOption(GameOptionTypes.GAMEOPTION_ALWAYS_WAR) or
-		Game.IsOption(GameOptionTypes.GAMEOPTION_ALWAYS_PEACE) or
-		Game.IsOption(GameOptionTypes.GAMEOPTION_NO_CHANGING_WAR_PEACE)) then
-	Controls.UsPocketOtherPlayer:SetHide(true);
-	Controls.UsPocketOtherPlayerStack:SetHide(true);
-	Controls.ThemPocketOtherPlayer:SetHide(true);
-	Controls.ThemPocketOtherPlayerStack:SetHide(true);
 
-	g_bEnableThirdParty = false;
-else
-	g_bEnableThirdParty = true;
-	for iLoopPlayer = 0, GameDefines.MAX_CIV_PLAYERS - 1, 1 do
-		local pLoopPlayer = Players[iLoopPlayer];
-		local iLoopTeam = pLoopPlayer:GetTeam();
+if g_bEnableThirdParty then
+	local function InitLeaderStack( stack, onButtonClick, masterButtonList )
+		local buttonList = {Parent = stack}
+		--print("init leader stack", stack:GetID(), onButtonClick )
+		for playerID = 0, GameDefines.MAX_CIV_PLAYERS-1 do
 
-		if (pLoopPlayer:IsAlive()) then
-			local newButtonsTable = {};
-			g_OtherPlayersButtons[iLoopPlayer] = newButtonsTable;
+			local player = Players[ playerID ]
 
-			local szName;
-			if (pLoopPlayer:IsHuman()) then
-				szName = pLoopPlayer:GetNickName();
-			else
-				szName = pLoopPlayer:GetName();
+			if player and player:IsEverAlive() then
+
+				local leaderName
+				if player:IsHuman() then
+					leaderName = player:GetNickName()
+				else
+					leaderName = player:GetName()
+				end
+				leaderName = leaderName .. " (" .. player:GetCivilizationShortDescription() .. ")"
+
+				local instance = {}
+				ContextPtr:BuildInstanceForControl( "OtherPlayerEntry", instance, stack )
+				CivIconHookup( playerID, 32, instance.CivSymbol, instance.CivIconBG, instance.CivIconShadow, false, true )
+				instance.Name:SetTruncateWidth( instance.ButtonSize:GetSizeX() - instance.Name:GetOffsetX() - 20 )
+				instance.Name:SetText( leaderName )
+				local button = instance.Button
+				button:SetVoid1( playerID )
+				button:RegisterCallback( Mouse.eLClick, onButtonClick )
+				buttonList[ playerID ] = button
+				insert( masterButtonList, button )
 			end
-			szName = szName ..
-			" (" ..
-			Locale.ConvertTextKey(GameInfo.Civilizations[Players[iLoopPlayer]:GetCivilizationType()].ShortDescription) ..
-			")";
-
-			-- Us Pocket
-			local controlTable = {};
-			ContextPtr:BuildInstanceForControl("OtherPlayerEntry", controlTable, Controls.UsPocketLeaderStack);
-			CivIconHookup(iLoopPlayer, 32, controlTable.CivSymbol, controlTable.CivIconBG, controlTable.CivIconShadow,
-				false, true);
-			TruncateString(controlTable.Name, controlTable.ButtonSize:GetSizeX() - controlTable.Name:GetOffsetX(), szName);
-			controlTable.Button:SetVoids(iLoopPlayer, 1);
-			controlTable.Button:RegisterCallback(Mouse.eLClick, LeaderSelected);
-			newButtonsTable.UsPocket = controlTable;
-
-
-			-- Them Pocket
-			controlTable = {};
-			ContextPtr:BuildInstanceForControl("OtherPlayerEntry", controlTable, Controls.ThemPocketLeaderStack);
-			CivIconHookup(iLoopPlayer, 32, controlTable.CivSymbol, controlTable.CivIconBG, controlTable.CivIconShadow,
-				false, true);
-			TruncateString(controlTable.Name, controlTable.ButtonSize:GetSizeX() - controlTable.Name:GetOffsetX(), szName);
-			controlTable.Button:SetVoids(iLoopPlayer, 0);
-			controlTable.Button:RegisterCallback(Mouse.eLClick, LeaderSelected);
-			newButtonsTable.ThemPocket = controlTable;
-
-
-			-- Us Table Peace
-			controlTable = {};
-			ContextPtr:BuildInstanceForControl("OtherPlayerEntry", controlTable, Controls.UsTableMakePeaceStack);
-			CivIconHookup(iLoopPlayer, 32, controlTable.CivSymbol, controlTable.CivIconBG, controlTable.CivIconShadow,
-				false, true);
-			TruncateString(controlTable.Name, controlTable.ButtonSize:GetSizeX() - controlTable.Name:GetOffsetX(), szName);
-			controlTable.Button:SetVoids(iLoopPlayer, 1);
-			controlTable.Button:RegisterCallback(Mouse.eLClick, OnOtherPlayerTablePeace);
-			newButtonsTable.UsTablePeace = controlTable;
-
-
-			-- Us Table War
-			controlTable = {};
-			ContextPtr:BuildInstanceForControl("OtherPlayerEntry", controlTable, Controls.UsTableDeclareWarStack);
-			CivIconHookup(iLoopPlayer, 32, controlTable.CivSymbol, controlTable.CivIconBG, controlTable.CivIconShadow,
-				false, true);
-			TruncateString(controlTable.Name, controlTable.ButtonSize:GetSizeX() - controlTable.Name:GetOffsetX(), szName);
-			controlTable.Button:SetVoids(iLoopPlayer, 1);
-			controlTable.Button:RegisterCallback(Mouse.eLClick, OnOtherPlayerTableWar);
-			newButtonsTable.UsTableWar = controlTable;
-
-
-			-- Them Table Peace
-			controlTable = {};
-			ContextPtr:BuildInstanceForControl("OtherPlayerEntry", controlTable, Controls.ThemTableMakePeaceStack);
-			CivIconHookup(iLoopPlayer, 32, controlTable.CivSymbol, controlTable.CivIconBG, controlTable.CivIconShadow,
-				false, true);
-			TruncateString(controlTable.Name, controlTable.ButtonSize:GetSizeX() - controlTable.Name:GetOffsetX(), szName);
-			controlTable.Button:SetVoids(iLoopPlayer, 0);
-			controlTable.Button:RegisterCallback(Mouse.eLClick, OnOtherPlayerTablePeace);
-			newButtonsTable.ThemTablePeace = controlTable;
-
-
-			-- Them Table War
-			controlTable = {};
-			ContextPtr:BuildInstanceForControl("OtherPlayerEntry", controlTable, Controls.ThemTableDeclareWarStack);
-			CivIconHookup(iLoopPlayer, 32, controlTable.CivSymbol, controlTable.CivIconBG, controlTable.CivIconShadow,
-				false, true);
-			TruncateString(controlTable.Name, controlTable.ButtonSize:GetSizeX() - controlTable.Name:GetOffsetX(), szName);
-			controlTable.Button:SetVoids(iLoopPlayer, 0);
-			controlTable.Button:RegisterCallback(Mouse.eLClick, OnOtherPlayerTableWar);
-			newButtonsTable.ThemTableWar = controlTable;
 		end
+		return buttonList
 	end
+	g_usPocketPeaceButtons = InitLeaderStack( Controls.UsPocketOtherPlayerStack, function( playerID ) AddThirdPartyPeace( g_iUs, playerID, g_usPocketPeaceButtons ) end, g_PocketLeaderButtons )
+	g_usPocketWarButtons = InitLeaderStack( Controls.UsPocketLeaderStack, function( playerID ) AddThirdPartyWar( g_iUs, playerID, g_usPocketWarButtons ) end, g_PocketLeaderButtons )
+	g_themPocketPeaceButtons = InitLeaderStack( Controls.ThemPocketOtherPlayerStack, function( playerID ) AddThirdPartyPeace( g_iThem, playerID, g_themPocketPeaceButtons ) end, g_PocketLeaderButtons )
+	g_themPocketWarButtons = InitLeaderStack( Controls.ThemPocketLeaderStack, function( playerID ) AddThirdPartyWar( g_iThem, playerID, g_themPocketWarButtons ) end, g_PocketLeaderButtons )
+	g_usTablePeaceButtons = InitLeaderStack( Controls.UsTableMakePeaceStack, function( playerID ) RemoveThirdPartyPeace( g_iUs, playerID, g_usPocketPeaceButtons ) end, g_TableLeaderButtons )
+	g_usTableWarButtons = InitLeaderStack( Controls.UsTableDeclareWarStack, function( playerID ) RemoveThirdPartyWar( g_iUs, playerID, g_usPocketWarButtons ) end, g_TableLeaderButtons )
+	g_themTablePeaceButtons = InitLeaderStack( Controls.ThemTableMakePeaceStack, function( playerID ) RemoveThirdPartyPeace( g_iThem, playerID, g_themPocketPeaceButtons ) end, g_TableLeaderButtons )
+	g_themTableWarButtons = InitLeaderStack( Controls.ThemTableDeclareWarStack, function( playerID ) RemoveThirdPartyWar( g_iThem, playerID, g_themPocketWarButtons ) end, g_TableLeaderButtons )
 end
------------------------------------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------------------------------------
+for i, button in pairs( g_TableLeaderButtons ) do
+	insert( g_tableControls, button )
+end
+for n, instance in pairs( g_UsTableResources ) do
+	insert( g_tableControls, instance.Container )
+end
+for n, instance in pairs( g_ThemTableResources ) do
+	insert( g_tableControls, instance.Container )
+end
+for tradeableItem, controls in pairs( g_itemControls ) do
+	insert( g_tableControls, controls[2] )
+	insert( g_tableControls, controls[4] )
+end
 
-Controls.UsMakePeaceDuration:LocalizeAndSetText("TXT_KEY_DIPLO_TURNS", 10);
-Controls.UsDeclareWarDuration:LocalizeAndSetText("TXT_KEY_DIPLO_TURNS", 10);
-Controls.ThemMakePeaceDuration:LocalizeAndSetText("TXT_KEY_DIPLO_TURNS", 10);
-Controls.ThemDeclareWarDuration:LocalizeAndSetText("TXT_KEY_DIPLO_TURNS", 10);
+Controls.UsMakePeaceDuration:LocalizeAndSetText( "TXT_KEY_DIPLO_TURNS", g_iPeaceDuration )
+Controls.UsDeclareWarDuration:LocalizeAndSetText( "TXT_KEY_DIPLO_TURNS", g_iPeaceDuration )
+Controls.ThemMakePeaceDuration:LocalizeAndSetText( "TXT_KEY_DIPLO_TURNS", g_iPeaceDuration )
+Controls.ThemDeclareWarDuration:LocalizeAndSetText( "TXT_KEY_DIPLO_TURNS", g_iPeaceDuration )
+Controls.UsTablePeaceTreaty:LocalizeAndSetText( "TXT_KEY_DIPLO_PEACE_TREATY", g_iPeaceDuration )
+Controls.ThemTablePeaceTreaty:LocalizeAndSetText( "TXT_KEY_DIPLO_PEACE_TREATY", g_iPeaceDuration )
 
-ResetDisplay();
-DisplayDeal();
+DisplayDeal()

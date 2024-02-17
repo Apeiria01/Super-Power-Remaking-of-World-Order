@@ -15665,17 +15665,15 @@
 		</Row>
 		<Row Tag="TXT_KEY_DIPLOMACY_DUAL_EMPIRE_TREATY_BODY">
 			<Text>
-				仅奥地利可用。[NEWLINE][NEWLINE]
-				1. 前提：
-					[NEWLINE]i. 你比对方强大，人口和城市数量均大于等于对方的两倍
-					[NEWLINE]ii. 一局游戏仅能完成一次
-					[NEWLINE]iii. 历史上完成过两次或以上的外交联姻
-				[NEWLINE][NEWLINE]
-
-				2. 达成协定后，效果：
-					[NEWLINE]i. 直接吞并对方所有城市，并且视为自建城市。
-					[NEWLINE]ii. 对方当前首都被认为你的第二首都，全国城市的离心倾向将取按双首都计算的较低值。
-					[NEWLINE]iii. 可获取对方的UU UB UI
+				仅奥地利可用。
+				[NEWLINE][NEWLINE]前提条件：
+				[NEWLINE][ICON_BULLET]你比对方强大，人口和城市数量均大于等于对方的两倍
+				[NEWLINE][ICON_BULLET]历史上完成过两次或以上的外交联姻
+				[NEWLINE][ICON_BULLET]一局游戏仅能完成一次
+				[NEWLINE][NEWLINE]达成协定后：
+				[NEWLINE][ICON_BULLET]吞并对方所有城市，并且视为自建城市
+				[NEWLINE][ICON_BULLET]对方当前首都被认为你的第二首都，全国城市的离心倾向将取按双首都计算的较低值
+				[NEWLINE][ICON_BULLET]能够建造对方的独特单位、建筑和设施
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_DIPLOMACY_DUAL_EMPIRE_TREATY_ADV_QUEST">
