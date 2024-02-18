@@ -1910,7 +1910,13 @@ do
 		local player = Players[ playerID ]
 		if player then
 			--SP Special Rule: default amount 5
-			g_Deal:AddResourceTrade( playerID, resourceID, min( player:GetNumResourceAvailable( resourceID, false ), Game.GetResourceUsageType(resourceID) == ResourceUsageTypes.RESOURCEUSAGE_STRATEGIC and UI.ShiftKeyDown() and huge or 5 ), g_iDealDuration )
+			local RESOURCE_NUM = 1
+			if(Game.GetResourceUsageType(resourceID) == ResourceUsageTypes.RESOURCEUSAGE_STRATEGIC) then
+				RESOURCE_NUM = UI.ShiftKeyDown() and huge or 5
+			else
+				RESOURCE_NUM = UI.ShiftKeyDown() and huge or 1
+			end
+			g_Deal:AddResourceTrade( playerID, resourceID, min( player:GetNumResourceAvailable( resourceID, false ), RESOURCE_NUM), g_iDealDuration )
 			return DoUIDealChangedByHuman()
 		end
 	end
