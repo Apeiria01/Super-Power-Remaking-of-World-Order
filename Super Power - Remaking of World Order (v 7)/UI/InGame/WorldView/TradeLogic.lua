@@ -17,7 +17,6 @@ local IsCiv5notVanilla = Game.GetReligionName ~= nil
 local IsLeagues = IsCiv5BNW and not Game.IsOption("GAMEOPTION_NO_LEAGUES")
 
 local ipairs = ipairs
-local huge = math.huge
 local min = math.min
 local pairs = pairs
 local print = print
@@ -1664,7 +1663,7 @@ end
 -----------------------------------------------------------------------------------------------------------------------
 do
 	local function AddGoldTrade( control, playerID, gold )
-		g_Deal:AddGoldTrade( playerID, min( UI.ShiftKeyDown() and huge or gold, g_Deal:GetGoldAvailable( playerID, -1 ) ) ) -- This is -1 because we're not changing anything right now
+		g_Deal:AddGoldTrade( playerID, min( UI.ShiftKeyDown() and 9999 or gold, g_Deal:GetGoldAvailable( playerID, -1 ) ) ) -- This is -1 because we're not changing anything right now
 		control:TakeFocus()
 		return DoUIDealChangedByHuman()
 	end
@@ -1693,7 +1692,7 @@ do
 	local function AddGoldPerTurnTrade( control, playerID, goldPerTurn )
 		local player = Players[ playerID ]
 		if player then
-			g_Deal:AddGoldPerTurnTrade( playerID, min( UI.ShiftKeyDown() and huge or goldPerTurn, player:CalculateGoldRate() ), g_iDealDuration )
+			g_Deal:AddGoldPerTurnTrade( playerID, min( goldPerTurn, player:CalculateGoldRate() ), g_iDealDuration )
 			control:TakeFocus()
 			return DoUIDealChangedByHuman()
 		end
@@ -1912,9 +1911,9 @@ do
 			--SP Special Rule: default amount 5
 			local RESOURCE_NUM = 1
 			if(Game.GetResourceUsageType(resourceID) == ResourceUsageTypes.RESOURCEUSAGE_STRATEGIC) then
-				RESOURCE_NUM = UI.ShiftKeyDown() and huge or 5
+				RESOURCE_NUM = UI.ShiftKeyDown() and 100 or 5
 			else
-				RESOURCE_NUM = UI.ShiftKeyDown() and huge or 1
+				RESOURCE_NUM = 1
 			end
 			g_Deal:AddResourceTrade( playerID, resourceID, min( player:GetNumResourceAvailable( resourceID, false ), RESOURCE_NUM), g_iDealDuration )
 			return DoUIDealChangedByHuman()
