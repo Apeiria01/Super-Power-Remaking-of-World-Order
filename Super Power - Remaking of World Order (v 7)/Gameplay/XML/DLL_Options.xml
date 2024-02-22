@@ -284,6 +284,11 @@
 		</Update>
 
 		<Update>
+			<Where Name="GLOBAL_CORRUPTION_POLICY_COST_MIN_ZERO"/>
+			<Set Value="1"/>
+		</Update>
+
+		<Update>
 			<Where Name="UNIT_COST_DONOT_INCTEASE_WITH_TURN"/>
 			<Set Value="1"/>
 		</Update>
