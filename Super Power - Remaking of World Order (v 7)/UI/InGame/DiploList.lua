@@ -535,8 +535,8 @@ function InitMinorCivList()
 	
 	for iPlayerLoop = GameDefines.MAX_MAJOR_CIVS, GameDefines.MAX_CIV_PLAYERS-1, 1 do
 		
-		pOtherPlayer = Players[iPlayerLoop];
-		iOtherTeam = pOtherPlayer:GetTeam();
+		local pOtherPlayer = Players[iPlayerLoop];
+		local iOtherTeam = pOtherPlayer:GetTeam();
 		
 		if( pOtherPlayer:IsMinorCiv() and 
 		    g_iTeam ~= iOtherTeam     and 
@@ -568,20 +568,23 @@ function InitMinorCivList()
 			controlTable.StatusText:SetText( strDiploState);
 			
         	local iTrait = pOtherPlayer:GetMinorCivTrait();
+			local sTraitTip = ""
         	if( iTrait == MinorCivTraitTypes.MINOR_CIV_TRAIT_CULTURED ) then
-        		controlTable.MinorType:LocalizeAndSetText( "TXT_KEY_CITY_STATE_CULTURED_ADJECTIVE" );
+				sTraitTip = Locale.ConvertTextKey( "TXT_KEY_CITY_STATE_CULTURED_ADJECTIVE" )
         	elseif( iTrait == MinorCivTraitTypes.MINOR_CIV_TRAIT_MILITARISTIC ) then
-        		controlTable.MinorType:LocalizeAndSetText( "TXT_KEY_CITY_STATE_MILITARISTIC_ADJECTIVE" );
+				sTraitTip = Locale.ConvertTextKey( "TXT_KEY_CITY_STATE_MILITARISTIC_ADJECTIVE" )
         	elseif( iTrait == MinorCivTraitTypes.MINOR_CIV_TRAIT_MARITIME ) then
-        		controlTable.MinorType:LocalizeAndSetText( "TXT_KEY_CITY_STATE_MARITIME_ADJECTIVE" );
+				sTraitTip = Locale.ConvertTextKey( "TXT_KEY_CITY_STATE_MARITIME_ADJECTIVE" )
         	elseif(iTrait == MinorCivTraitTypes.MINOR_CIV_TRAIT_MERCANTILE) then
-        		controlTable.MinorType:LocalizeAndSetText( "TXT_KEY_CITY_STATE_MERCANTILE_ADJECTIVE" );
+				sTraitTip = Locale.ConvertTextKey( "TXT_KEY_CITY_STATE_MERCANTILE_ADJECTIVE" )
         	elseif(iTrait == MinorCivTraitTypes.MINOR_CIV_TRAIT_RELIGIOUS) then
-        		controlTable.MinorType:LocalizeAndSetText( "TXT_KEY_CITY_STATE_RELIGIOUS_ADJECTIVE" );
+				sTraitTip = Locale.ConvertTextKey( "TXT_KEY_CITY_STATE_RELIGIOUS_ADJECTIVE" )
         	end
+			local iFriendshipWithUs = pOtherPlayer:GetMinorCivFriendshipWithMajor(g_iPlayer)
+			if iFriendshipWithUs ~= 0 then sTraitTip = sTraitTip .. "(" .. iFriendshipWithUs .. ")" end
+			controlTable.MinorType:SetText(sTraitTip);
 
-			civType = pOtherPlayer:GetCivilizationType();
-			civInfo = GameInfo.Civilizations[civType];
+			civInfo = GameInfo.Civilizations[pOtherPlayer:GetCivilizationType()];
 
 			IconHookup( civInfo.PortraitIndex, 32, civInfo.AlphaIconAtlas, controlTable.LeaderPortrait );
 			controlTable.LeaderPortrait:SetColor( color );
