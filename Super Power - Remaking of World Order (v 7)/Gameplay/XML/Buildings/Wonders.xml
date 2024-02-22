@@ -1233,8 +1233,8 @@
 			<ConquestProb>100</ConquestProb>
 			<DisplayPosition>2</DisplayPosition>
 			<ArtInfoCulturalVariation>true</ArtInfoCulturalVariation>
-			<IconAtlas>BW_ATLAS_1</IconAtlas>
-			<PortraitIndex>23</PortraitIndex>
+			<IconAtlas>SP10_EXTRA_ATLAS</IconAtlas>
+			<PortraitIndex>13</PortraitIndex>
 			<UnmoddedHappiness>2</UnmoddedHappiness>
 			<WonderSplashImage>ColosseumW_splash.dds</WonderSplashImage>
 			<WonderSplashAnchor>R,B</WonderSplashAnchor>
