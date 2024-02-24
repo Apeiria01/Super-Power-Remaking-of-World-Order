@@ -8820,11 +8820,8 @@
 		<Replace Tag="TXT_KEY_BELIEF_ANCESTOR_WORSHIP">
 			<Text>+1 [ICON_PEACE] Faith and +1 [ICON_CULTURE] Culture from every Shrine, +10% [ICON_PRODUCTION] Production for Wonders</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_DANCE_AURORA_SHORT">
-			<Text>Prometheus</Text>
-		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_DANCE_AURORA">
-			<Text>+1 [ICON_PRODUCTION] Produciton, +1 [ICON_PEACE] Faith and +2 [ICON_GREAT_PEOPLE] Great Engineer Points in cities</Text>
+			<Text>+2 [ICON_PEACE] Faith from Tundra tiles, City in Tundra tiles +1 [ICON_FOOD] Food</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_DESERT_FOLKLORE">
 			<Text>+1 [ICON_PEACE] Faith from Desert tiles, +1 [ICON_CULTURE] Culture and +1 [ICON_PEACE] Faith from Oasis</Text>
@@ -8852,6 +8849,12 @@
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_GODDESS_OF_WISDOM">
 			<Text>+2 [ICON_RESEARCH] Science and +2 [ICON_GREAT_PEOPLE] Great Scientist Points in Capital, +1 [ICON_RESEARCH] Science and +1 [ICON_GREAT_PEOPLE] Great Scientist Points in other cities.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_GOD_OF_FIRE_SHORT">
+			<Text>Prometheus</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_GOD_OF_FIRE">
+			<Text>+1 [ICON_PRODUCTION] Produciton, +1 [ICON_PEACE] Faith and +2 [ICON_GREAT_PEOPLE] Great Engineer Points in cities</Text>
 		</Row>
 		<Replace Tag="TXT_KEY_BELIEF_ASCETISM">
 			<Text>Shrines provide +1 [ICON_HAPPINESS_1] Happiness in cities</Text>
@@ -9068,7 +9071,7 @@
 			<Text>Snow Spirit</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SNOW_BELIEF">
-			<Text>+1 [ICON_PEACE] Faith from Tundra tiles without Forest, +2 [ICON_PEACE] Faith and +1 [ICON_FOOD] Food from tiles covered with Snow</Text>
+			<Text>+2 [ICON_PEACE] Faith and +1 [ICON_FOOD] Food from tiles covered with Snow</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_GOD_OF_COMMERCE_SHORT">
 			<Text>God of Commerce</Text>
