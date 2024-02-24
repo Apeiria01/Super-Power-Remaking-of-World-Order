@@ -8839,9 +8839,8 @@
 			<Text>Goddess of Purity</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_GODDESS_OF_PURITY">
-			<Text>
-				+4 [ICON_FOOD] Food, +4[ICON_PEACE] Faith, +2 [ICON_PRODUCTION] Production and +2 [ICON_RESEARCH] Science from Fountain of Youth , 
-				+4 [ICON_CULTURE] Culrure, +4[ICON_PEACE] Faith, +2 [ICON_PRODUCTION] Production and +2 [ICON_RESEARCH] Science from Lake Victoria
+			<Text> 
+				+1 [ICON_FOOD] Food, +2[ICON_PEACE] Faith from Lake and Lake Victoria
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_GODDESS_OF_WISDOM_SHORT">
