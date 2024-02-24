@@ -1986,10 +1986,6 @@
 			<PromotionType>PROMOTION_NEW_ORDER</PromotionType>
 		</Row>
 		<Row>
-			<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
-			<PromotionType>PROMOTION_NEW_ORDER</PromotionType>
-		</Row>
-		<Row>
 			<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
 			<PromotionType>PROMOTION_NEW_ORDER</PromotionType>
 		</Row>
