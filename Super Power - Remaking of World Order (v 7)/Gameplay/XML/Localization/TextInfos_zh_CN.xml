@@ -7475,7 +7475,7 @@
 		<Replace Tag="TXT_KEY_POLICY_NEW_ORDER_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]威权政府[ENDCOLOR]
-				[NEWLINE]每占领一个原始首都，军事单位攻击伤害固定+4。
+				[NEWLINE]每占领一个原始首都，正规军单位攻击伤害固定+4。
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_NEW_ORDER_TEXT">
