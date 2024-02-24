@@ -17394,6 +17394,18 @@
 		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_14">
 			<Text>As City Scale changes, not enough [COLOR_YELLOW]Public Health and Sanitary Service Buildings[ENDCOLOR] in the city will empty City's food Kept</Text>
 		</Row>
+		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_15">
+			<Text>In SP game, +1 [ICON_FOOD] Food Output from Cities in Flat tile, +1 [ICON_PRODUCTION] Produciton Output from Cities in Hill tile</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_16">
+			<Text>After annexing the city of another Civ, you can choose to destroy it at any time in the City panel (if it can be destroyed)</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_17">
+			<Text>In Crops Mode, each of your Great Generals has a chance to give a "Crop" Promotion to a land military Unit or upgrade it to a "Armee"</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_18">
+			<Text>If your Capital is coastal, -200 Administrative cost for other coastal Cities</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_DIPLOMACY_DUAL_EMPIRE_TREATY_TITLE">
 			<Text>Dual Empire Agreement</Text>
