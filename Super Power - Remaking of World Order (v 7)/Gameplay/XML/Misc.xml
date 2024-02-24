@@ -23,6 +23,18 @@
 			<Where Type="YIELD_PRODUCTION"/>
 		</Update>
 	</Yields>
+	<Plot_CityYields>
+		<Row>
+			<PlotType>PLOT_HILLS</PlotType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<PlotType>PLOT_LAND</PlotType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	</Plot_CityYields>
 
 	<!--**********************************Worlds Size Mods**********************-->
 	<Worlds>
