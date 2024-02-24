@@ -15655,6 +15655,18 @@
 		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_14">
 			<Text>城市规模增长时若缺少公共卫生医疗设施则会清空余粮积累</Text>
 		</Row>
+		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_15">
+			<Text>在SP中，城市地块位于平地时+1[ICON_FOOD]食物产出，位于丘陵时+1[ICON_PRODUCTION]产能产出</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_16">
+			<Text>吞并其他文明的城市后，你随时可以在城市面板中选择摧毁它（如果它允许被摧毁）</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_17">
+			<Text>军团模式下，你的每一个大军事家都有一次为陆军单位赋予“军团”晋升或将其升级为“集团军”的机会</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_18">
+			<Text>首都沿海时，你的其他沿海城市-200管理成本</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_DIPLOMACY_MARRIAGE_TITLE">
 			<Text>外交联姻</Text>
