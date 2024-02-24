@@ -7839,11 +7839,8 @@
 		<Replace Tag="TXT_KEY_BELIEF_GOD_CRAFTSMEN">
 			<Text>玉石、琥珀、珊瑚和天青石+1[ICON_PEACE]信仰、+1[ICON_PRODUCTION]產能</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_DANCE_AURORA_SHORT">
-			<Text>燧明天火</Text>
-		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_DANCE_AURORA">
-			<Text>城市+1[ICON_PRODUCTION]產能、+1[ICON_PEACE]信仰、+2[ICON_GREAT_PEOPLE]大工程師點數</Text>
+			<Text>凍土地塊+2[ICON_PEACE]信仰，位於凍土地塊的城市+1[ICON_FOOD]食物</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_ANCESTOR_WORSHIP">
 			<Text>神祠+1[ICON_PEACE]信仰、+1[ICON_CULTURE]文化，建造奇觀+10%[ICON_PRODUCTION]產能</Text>
@@ -7899,6 +7896,12 @@
 		<Row Tag="TXT_KEY_BELIEF_GODDESS_OF_WISDOM">
 			<Text>城市+1[ICON_RESEARCH]科研、+1[ICON_GREAT_PEOPLE]大科學家點數，首都加成翻倍</Text>
 		</Row>
+		<Row Tag="TXT_KEY_BELIEF_GOD_OF_FIRE_SHORT">
+			<Text>燧明天火</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_GOD_OF_FIRE">
+			<Text>城市+1[ICON_PRODUCTION]產能、+1[ICON_PEACE]信仰、+2[ICON_GREAT_PEOPLE]大工程師點數</Text>
+		</Row>
 		<Replace Tag="TXT_KEY_BELIEF_ASCETISM">
 			<Text>神祠+1[ICON_HAPPINESS_1]快樂</Text>
 		</Replace>
@@ -7909,7 +7912,7 @@
 			<Text>風暴之神</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SNOW_BELIEF">
-			<Text>無森林的凍土地塊+2[ICON_PEACE]信仰,雪地+1[ICON_FOOD]食物、+2[ICON_PEACE]信仰</Text>
+			<Text>雪地+1[ICON_FOOD]食物、+2[ICON_PEACE]信仰</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_GOD_OF_COMMERCE_SHORT">
 			<Text>商賈信使</Text>

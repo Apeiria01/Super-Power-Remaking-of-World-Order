@@ -36,6 +36,13 @@
 			<ShortDescription>TXT_KEY_BELIEF_GOD_OF_COMMERCE_SHORT</ShortDescription>
 			<Pantheon>true</Pantheon>
 		</Row>
+
+		<Row>
+			<Type>BELIEF_GOD_OF_FIRE</Type>
+			<Description>TXT_KEY_BELIEF_GOD_OF_FIRE</Description>
+			<ShortDescription>TXT_KEY_BELIEF_GOD_OF_FIRE_SHORT</ShortDescription>
+			<Pantheon>true</Pantheon>
+		</Row>
 		
 		<Row>
 			<Type>BELIEF_RELIGIOUS_COLONIZATION</Type>
