@@ -9071,7 +9071,7 @@
 			<Text>Snow Spirit</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SNOW_BELIEF">
-			<Text>+2 [ICON_PEACE] Faith and +1 [ICON_FOOD] Food from tiles covered with Snow</Text>
+			<Text>+1 [ICON_FOOD] Food from tiles covered with Snow, City in Snow tiles +4 [ICON_PEACE] Faith and -25% [ICON_FOOD] Food consumption</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_GOD_OF_COMMERCE_SHORT">
 			<Text>God of Commerce</Text>
