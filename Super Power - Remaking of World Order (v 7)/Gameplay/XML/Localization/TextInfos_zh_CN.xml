@@ -8022,7 +8022,7 @@
 			<Text>风暴之神</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SNOW_BELIEF">
-			<Text>雪地+1[ICON_FOOD]食物、+2[ICON_PEACE]信仰</Text>
+			<Text>雪地+1[ICON_FOOD]食物，位于雪地的城市+4[ICON_PEACE]信仰且-25%[ICON_FOOD]食物消耗</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_GOD_OF_COMMERCE_SHORT">
 			<Text>商贾信使</Text>

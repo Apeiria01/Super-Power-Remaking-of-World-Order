@@ -54,8 +54,11 @@ INSERT INTO Belief_ResourceYieldChanges (BeliefType,ResourceType,YieldType,Yield
 SELECT 'BELIEF_FERTILITY_RITES','RESOURCE_WHEAT','YIELD_FAITH',1;
 
 INSERT INTO Belief_TerrainYieldChanges (BeliefType,TerrainType,YieldType,Yield)
-SELECT 'BELIEF_SNOW_BELIEF','TERRAIN_SNOW','YIELD_FOOD',1 UNION ALL
-SELECT 'BELIEF_SNOW_BELIEF','TERRAIN_SNOW','YIELD_FAITH',2;
+SELECT 'BELIEF_SNOW_BELIEF','TERRAIN_SNOW','YIELD_FOOD',1;
+INSERT INTO Belief_TerrainCityYieldChanges (BeliefType,TerrainType,YieldType,Yield)
+SELECT 'BELIEF_SNOW_BELIEF','TERRAIN_SNOW','YIELD_FAITH',4;
+INSERT INTO Belief_TerrainCityFoodConsumption (BeliefType,TerrainType,Modifier)
+SELECT 'BELIEF_SNOW_BELIEF','TERRAIN_SNOW',-25;
 
 UPDATE Beliefs SET MinPopulation = '0' WHERE Type = 'BELIEF_GOD_CRAFTSMEN';
 DELETE FROM Belief_CityYieldChanges WHERE BeliefType = 'BELIEF_GOD_CRAFTSMEN';
