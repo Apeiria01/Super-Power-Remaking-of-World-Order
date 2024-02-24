@@ -7995,9 +7995,13 @@
 			<Text>纯洁女神</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_GODDESS_OF_PURITY">
-			<Text>
-				湖泊、维多利亚湖+1[ICON_FOOD]食物、+2[ICON_PEACE]信仰
-			</Text>
+			<Text>湖泊、维多利亚湖+1[ICON_FOOD]食物、+2[ICON_PEACE]信仰</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_SONE_OF_SIREN_SHORT">
+			<Text>塞壬之歌</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_SONE_OF_SIREN">
+			<Text>来自环礁的基础产出翻倍，沿海城市+2[ICON_PEACE]信仰</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_GODDESS_OF_WISDOM_SHORT">
 			<Text>智慧女神</Text>

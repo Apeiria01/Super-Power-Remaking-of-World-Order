@@ -8839,9 +8839,13 @@
 			<Text>Goddess of Purity</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_GODDESS_OF_PURITY">
-			<Text> 
-				+1 [ICON_FOOD] Food, +2[ICON_PEACE] Faith from Lake and Lake Victoria
-			</Text>
+			<Text>+1 [ICON_FOOD] Food, +2 [ICON_PEACE] Faith from Lake and Lake Victoria</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_SONE_OF_SIREN_SHORT">
+			<Text>Song of Siren</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_SONE_OF_SIREN">
+			<Text>Basic tile yields from Atolls are doubled, +2 [ICON_PEACE] Faith in coastal cities</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_GODDESS_OF_WISDOM_SHORT">
 			<Text>Goddess of Wisdom</Text>
