@@ -10336,7 +10336,7 @@
 
 		<Replace Tag="TXT_KEY_TRAIT_VIKING_FURY">
 			<Text>
-				[ICON_BULLET]Land Melee units and Naval Melee units pay no Movement [ICON_MOVES] to pillage and pillage Gold equal to 200% of the damage inflicted on a city. 
+				[ICON_BULLET]Land Melee units and Naval Melee units pay no Movement [ICON_MOVES] to pillage and pillage [ICON_GOLD] Gold equal to 200% of the damage inflicted on a city. 
 				[NEWLINE][ICON_BULLET]Receive triple [ICON_GOLD] Gold from barbarian encampments or pillaging cities.
 				[NEWLINE][ICON_BULLET]+1 [ICON_CULTURE] Culture output for every Fishing Net, Workboats and Offshore Platform.
 			</Text>
@@ -15812,13 +15812,21 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_CITY_PILLAGE_FREE_HELP">
 			<Text>
-				[ICON_BULLET]Steal [ICON_GOLD] Gold equal to 200% of the damage inflicted on a city.
+				[ICON_BULLET]Steal [ICON_GOLD] Gold equal to 300% of the damage inflicted on a city.
 				[NEWLINE][ICON_BULLET]Cost No [ICON_MOVES] Movement to pillage.
 				[NEWLINE][ICON_BULLET]Heavy Mounted Unit will NOT lose the rest movement after attacking city.
 			</Text>
 		</Row>
 
-
+		<Row Tag="TXT_KEY_PROMOTION_VIKING_FURY">
+			<Text>Viking</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_VIKING_FURY_HELP">
+			<Text>
+				[ICON_BULLET]Steal [ICON_GOLD] Gold equal to 200% of the damage inflicted on a city.
+				[NEWLINE][ICON_BULLET]Cost No [ICON_MOVES] Movement to pillage.
+			</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_ANTI_AIR_SHIP">
 			<Text>Close-In Weapon System</Text>

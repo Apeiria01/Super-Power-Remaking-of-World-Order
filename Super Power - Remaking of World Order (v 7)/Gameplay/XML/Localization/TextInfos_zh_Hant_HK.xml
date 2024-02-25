@@ -5706,7 +5706,7 @@
 
 		<Replace Tag="TXT_KEY_TRAIT_VIKING_FURY">
 			<Text>
-				[ICON_BULLET]所有陸軍近戰單位和海軍近戰單位劫掠均不消耗[ICON_MOVES]移動力，並具有攻城時將對城市造成傷害的200%數值轉化為金錢的能力。
+				[ICON_BULLET]所有陸軍近戰單位和海軍近戰單位劫掠均不消耗[ICON_MOVES]移動力，並具有攻城時將對城市造成傷害的200%數值轉化為[ICON_GOLD]金錢的能力。
 				[NEWLINE][ICON_BULLET]攻占城市或攻占營寨所獲得2倍的[ICON_GOLD]金錢。
 				[NEWLINE][ICON_BULLET]每處海上設施+1[ICON_CULTURE]文化產出。
 			</Text>
@@ -13527,10 +13527,10 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_LES_GUEUX_HELP">
 			<Text>
-				[ICON_BULLET]近战攻城获得造成伤害数值两倍的 [ICON_GOLD] 金钱
-				[NEWLINE][ICON_BULLET]劫掠不消耗[ICON_MOVES] 移动力，在友方境外多回复15HP
-				[NEWLINE][ICON_BULLET]近战攻城+200%[ICON_STRENGTH] 战斗力.远程攻城+50%[ICON_STRENGTH] 战斗力.
-				[NEWLINE] 海上乞丐杀敵能获得[ICON_CULTURE]文化值，数值等同於敵军[ICON_STRENGTH]战斗力，但是这项能力在升级后不保留。
+				[ICON_BULLET]近战攻城获得造成伤害数值两倍的[ICON_GOLD]金钱。
+				[NEWLINE][ICON_BULLET]劫掠不消耗[ICON_MOVES]移动力，在友方境外多回复15HP。
+				[NEWLINE][ICON_BULLET]近战攻城+200%[ICON_STRENGTH]战斗力，远程攻城+50%[ICON_STRENGTH]战斗力。
+				[NEWLINE]海上乞丐杀敵能获得[ICON_CULTURE]文化值，数值等同於敵军[ICON_STRENGTH]战斗力，这项能力在升级后不保留。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_MULTIPURPOSE_DESTROYER">
@@ -13550,7 +13550,20 @@
 			<Text>授權私掠</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_CITY_PILLAGE_FREE_HELP">
-			<Text>攻擊城市[ICON_BULLET]獲取相當於對城市損害200%的[ICON_GOLD]金幣。[NEWLINE][ICON_BULLET]骑兵攻擊城市後不會失去所有移動力。[NEWLINE][ICON_BULLET]劫掠不消耗[ICON_MOVES]移動力。
+			<Text>
+				[ICON_BULLET]攻城獲取相當於對城市損害300%的[ICON_GOLD]金幣。
+				[NEWLINE][ICON_BULLET]骑兵攻擊城市後不會失去所有移動力。
+				[NEWLINE][ICON_BULLET]劫掠不消耗[ICON_MOVES]移動力。
+			</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_VIKING_FURY">
+			<Text>維京人</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_VIKING_FURY_HELP">
+			<Text>
+				[ICON_BULLET]攻城獲取相當於對城市損害200%的[ICON_GOLD]金錢。
+				[NEWLINE][ICON_BULLET]劫掠不消耗[ICON_MOVES]移動力。
 			</Text>
 		</Row>
 

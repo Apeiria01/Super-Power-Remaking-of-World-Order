@@ -555,32 +555,32 @@
 		<Row>
 			<TraitType>TRAIT_VIKING_FURY</TraitType>
 			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-			<PromotionType>PROMOTION_CITY_PILLAGE_FREE</PromotionType>
+			<PromotionType>PROMOTION_VIKING_FURY</PromotionType>
 		</Row>
 		<Row>
 			<TraitType>TRAIT_VIKING_FURY</TraitType>
 			<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
-			<PromotionType>PROMOTION_CITY_PILLAGE_FREE</PromotionType>
+			<PromotionType>PROMOTION_VIKING_FURY</PromotionType>
 		</Row>
 		<Row>
 			<TraitType>TRAIT_VIKING_FURY</TraitType>
 			<UnitCombatType>UNITCOMBAT_ARMOR</UnitCombatType>
-			<PromotionType>PROMOTION_CITY_PILLAGE_FREE</PromotionType>
+			<PromotionType>PROMOTION_VIKING_FURY</PromotionType>
 		</Row>
 		<Row>
 			<TraitType>TRAIT_VIKING_FURY</TraitType>
 			<UnitCombatType>UNITCOMBAT_NAVALMELEE</UnitCombatType>
-			<PromotionType>PROMOTION_CITY_PILLAGE_FREE</PromotionType>
+			<PromotionType>PROMOTION_VIKING_FURY</PromotionType>
 		</Row>
 		<Row>
 			<TraitType>TRAIT_VIKING_FURY</TraitType>
 			<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
-			<PromotionType>PROMOTION_CITY_PILLAGE_FREE</PromotionType>
+			<PromotionType>PROMOTION_VIKING_FURY</PromotionType>
 		</Row>
 		<Row>
 			<TraitType>TRAIT_VIKING_FURY</TraitType>
 			<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
-			<PromotionType>PROMOTION_CITY_PILLAGE_FREE</PromotionType>
+			<PromotionType>PROMOTION_VIKING_FURY</PromotionType>
 		</Row>
 
 
