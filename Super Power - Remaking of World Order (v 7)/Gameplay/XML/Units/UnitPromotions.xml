@@ -5403,13 +5403,26 @@
 			<CannotBeChosen>true</CannotBeChosen>
 			<PortraitIndex>6</PortraitIndex>
 			<FreePillageMoves>true</FreePillageMoves>
-			<CityAttackPlunderModifier>200</CityAttackPlunderModifier>
+			<CityAttackPlunderModifier>300</CityAttackPlunderModifier>
 			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_CITY_PILLAGE_FREE</PediaEntry>
 			<LostAllMovesAttackCity>-1</LostAllMovesAttackCity>
 		</Row>
 
+		<Row>
+			<Type>PROMOTION_VIKING_FURY</Type>
+			<Description>TXT_KEY_PROMOTION_VIKING_FURY</Description>
+			<Help>TXT_KEY_PROMOTION_VIKING_FURY_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<FreePillageMoves>true</FreePillageMoves>
+			<CityAttackPlunderModifier>200</CityAttackPlunderModifier>
+			<PortraitIndex>43</PortraitIndex>
+			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_VIKING_FURY</PediaEntry>
+		</Row>
 
 		<Row>
 			<Type>PROMOTION_SPN_MAMLUK_COMBAT_FAITH</Type>
