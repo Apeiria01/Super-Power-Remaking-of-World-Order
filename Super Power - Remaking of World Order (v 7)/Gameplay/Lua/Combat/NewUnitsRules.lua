@@ -12,8 +12,6 @@ local CarrierSupply3ID = GameInfo.UnitPromotions["PROMOTION_CARRIER_SUPPLY_3"].I
 
 local SatelliteID = GameInfo.UnitPromotions["PROMOTION_SATELLITE_UNIT"].ID
 
-local OceanImpassableID = GameInfo.UnitPromotions["PROMOTION_OCEAN_IMPASSABLE"].ID
-
 local LuckyCarrierID = GameInfo.UnitPromotions["PROMOTION_LUCKY_CARRIER"].ID
 
 local ForeignLandsID = GameInfo.UnitPromotions["PROMOTION_FOREIGN_LANDS"].ID
@@ -87,12 +85,6 @@ function NewUnitCreationRules(playerID)
 			unit:Kill();
 			print("AI has built a Satellite Unit!");
 		else
-			-- Remove "PROMOTION_OCEAN_IMPASSABLE" for Great Admiral after having "TECH_NAVIGATION"
-			if unit:GetUnitClassType() == GameInfo.UnitClasses.UNITCLASS_GREAT_ADMIRAL.ID and unit:IsHasPromotion(OceanImpassableID)
-				and Teams[player:GetTeam()]:IsHasTech(GameInfoTypes["TECH_NAVIGATION"])
-			then
-				unit:SetHasPromotion(OceanImpassableID, false);
-			end
 			-- MOD Begin by CaptainCWB
 
 			-- Enterprise upgrade to become the most powerful carrier

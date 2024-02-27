@@ -5109,7 +5109,7 @@
 			<Text>惨重的战争伤亡！</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_NOTIFICATION_CITY_POPULATION_LOST_BY_RANGEDFIRE">
-			<Text>{2_CityName:textkey}的防御工事已经被摧毁殆尽，你的市民失去了庇护！一个单位的人口被敌方{1_UnitName}的远程火力杀死。[NEWLINE]（如果该城市人口降低至1，则可能被敌方远程单位攻克）。</Text>
+			<Text>{2_CityName:textkey}的防御工事已经被摧毁殆尽，你的市民失去了庇护！一个单位的人口被敌方{1_UnitName}的远程火力杀死。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_NOTIFICATION_CITY_POPULATION_LOST_BY_RANGEDFIRE_SHORT">
 			<Text>城市遭到轰炸！</Text>
@@ -7086,7 +7086,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]海事政策[ENDCOLOR]提高帝国沿海城市的产出以及向海外扩张的能力。
 				[NEWLINE][NEWLINE]启用海事政策:
-				[NEWLINE][ICON_BULLET]你的移民在境外不会损耗，工人、移民、考古学家、传教士以及大先知+1[ICON_MOVES]移动。
+				[NEWLINE][ICON_BULLET]新训练的移民在境外不会损耗，工人、移民、考古学家、传教士以及大先知+1[ICON_MOVES]移动。
 				[NEWLINE][ICON_BULLET]所有的海运单位+1[ICON_MOVES]移动，海军统帅+3[ICON_MOVES]移动，所有海军单位可以进入大洋。
 				[NEWLINE][ICON_BULLET]解锁奇观鹿特丹港和大铁厂。
 				[NEWLINE][NEWLINE]推行所有海事政策：
@@ -15477,6 +15477,9 @@
 		</Row>
 		<Row Tag="TXT_KEY_TECH_HELP_RAZE_SPEED_MODIFIER_SP">
 			<Text>夷平城市的速度增加{1_Percent}%</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TECH_HELP_ALL_CIVILIANS_CROSS_OCEAN_SP">
+			<Text>允许平民单位跨越大洋</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_TECH_AUTOMATION_T_HELP_SHORT">
 			<Text>可使用工人更新全图地块设施(自动建设设施开发资源地块，修复被劫掠地块，但不清除核辐射)</Text>

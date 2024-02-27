@@ -594,6 +594,7 @@
 			<IconAtlas>TECH_ATLAS_1</IconAtlas>
 			<AudioIntro>AS2D_TECH_NAVIGATION</AudioIntro>
 			<AudioIntroHeader>AS2D_HEADING_TECH_NAVIGATION</AudioIntroHeader>
+			<RemoveOceanImpassableCivilian>true</RemoveOceanImpassableCivilian>
 		</Row>
 		<Row>
 			<Type>TECH_ACOUSTICS</Type>

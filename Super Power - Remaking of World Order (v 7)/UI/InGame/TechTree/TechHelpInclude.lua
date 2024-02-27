@@ -401,6 +401,14 @@ function GetBaseHelpTextForTech( iTechID )
 		numAbilities = numAbilities + 1;
 	end
 
+	if thisTech.RemoveOceanImpassableCivilian then
+		if numAbilities > 0 then
+			abilitiesString = abilitiesString .. "[NEWLINE] [ICON_BULLET] ";
+		end
+		abilitiesString = abilitiesString .. Locale.ConvertTextKey( "TXT_KEY_TECH_HELP_ALL_CIVILIANS_CROSS_OCEAN_SP");
+		numAbilities = numAbilities + 1;
+	end
+
 	if iTechID == GameInfo.Technologies["TECH_AUTOMATION_T"].ID then
 		if numAbilities > 0 then
 			abilitiesString = abilitiesString .. "[NEWLINE] [ICON_BULLET] ";

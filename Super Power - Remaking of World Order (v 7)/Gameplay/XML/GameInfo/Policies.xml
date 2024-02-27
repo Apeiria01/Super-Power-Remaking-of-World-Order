@@ -400,7 +400,7 @@
 	
 	<Policies>
 		<Update>
-			<Set EmbarkedExtraMoves="1" FreeBuildingClass="BUILDINGCLASS_EXPLORATION_REMOVE_DEBUFF"/>
+			<Set EmbarkedExtraMoves="1" FreePromotionRemoved="PROMOTION_LOSE_HP_OUTSIDE" RemoveOceanImpassableCombatUnit = "True"/>
 			<Where Type="POLICY_EXPLORATION"/>
 		</Update>
 		<Update>
