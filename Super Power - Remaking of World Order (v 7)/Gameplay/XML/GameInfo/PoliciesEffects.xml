@@ -2364,34 +2364,12 @@
 		</Row>
 
 		<Row>
-			<Type>BUILDINGCLASS_EXPLORATION_REMOVE_DEBUFF</Type>
-			<DefaultBuilding>BUILDING_EXPLORATION_REMOVE_DEBUFF</DefaultBuilding>
-			<Description>TXT_KEY_POLICY_BRANCH_EXPLORATION</Description>
-		</Row>
-
-		<Row>
 			<Type>BUILDINGCLASS_POLICY_MERCHANT_NAVY_FREE</Type>
 			<DefaultBuilding>BUILDING_POLICY_MERCHANT_NAVY_FREE</DefaultBuilding>
 			<Description>TXT_KEY_POLICY_MERCHANT_NAVY</Description>
 		</Row>
 	</BuildingClasses>
 	<Buildings>
-		<Row>
-			<Type>BUILDING_EXPLORATION_REMOVE_DEBUFF</Type>
-			<BuildingClass>BUILDINGCLASS_EXPLORATION_REMOVE_DEBUFF</BuildingClass>
-			<Cost>-1</Cost>
-			<NeverCapture>true</NeverCapture>
-			<NukeImmune>true</NukeImmune>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<PortraitIndex>21</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<Description>TXT_KEY_POLICY_BRANCH_EXPLORATION</Description>
-			<Help>TXT_KEY_POLICY_BRANCH_EXPLORATION_HELP</Help>
-			<FreePromotionRemoved>PROMOTION_LOSE_HP_OUTSIDE</FreePromotionRemoved>
-			<GreatWorkCount>-1</GreatWorkCount>
-			<DummyBuilding>true</DummyBuilding>
-		</Row>
-
 		<Row>
 			<Type>BUILDING_THEOCRACY_WRITER</Type>
 			<BuildingClass>BUILDINGCLASS_THEOCRACY_WRITER</BuildingClass>

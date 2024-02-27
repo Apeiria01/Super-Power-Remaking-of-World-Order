@@ -7912,7 +7912,7 @@
 				[COLOR_POSITIVE_TEXT]Maritime[ENDCOLOR] provides bonuses to coastal states and enhance the navy.
 
 				[NEWLINE][NEWLINE]Opening Effect:
-				[NEWLINE][ICON_BULLET]Settlers will no longer lose HP if ends turns outside friendly territory.
+				[NEWLINE][ICON_BULLET]Newly-trained Settlers will no longer lose HP if ends turns outside friendly territory.
 				[NEWLINE][ICON_BULLET]+1 [ICON_MOVES] Movement for Embarked Units, Workers, Settlers, Archaeologists, Great Prophet and Missionaries,all of your navies can enter ocean.
 				[NEWLINE][ICON_BULLET]+3 [ICON_MOVES] Movement for Great Admirals.
 				[NEWLINE][ICON_BULLET]World Wonder Unlocked: Port of Rotterdam.
@@ -17212,6 +17212,9 @@
 		</Row>
 		<Row Tag="TXT_KEY_TECH_HELP_RAZE_SPEED_MODIFIER_SP">
 			<Text>Raze Cities speed increased by {1_Percent}%</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TECH_HELP_ALL_CIVILIANS_CROSS_OCEAN_SP">
+			<Text>Allows Civilians to cross oceans</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_TECH_AUTOMATION_T_HELP_SHORT">
 			<Text>All pillaged improvements will be repaired and unimproved resources can be improved when you use a worker to do "Automation"</Text>
