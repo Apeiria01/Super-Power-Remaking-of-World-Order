@@ -12676,7 +12676,6 @@
 			<Text>
 				[ICON_BULLET]隱形，只能被反隱單位偵測到。
 				[NEWLINE][ICON_BULLET]反隱單位。
-				[NEWLINE][ICON_BULLET]即使在執行行動時也能[COLOR_POSITIVE_TEXT]每回合回復傷害[ENDCOLOR]。
 				[NEWLINE][ICON_BULLET]能夠在[COLOR_POSITIVE_TEXT]境外友方地域[ENDCOLOR]恢復且恢復時額外+99點生命值。
 			</Text>
 		</Row>

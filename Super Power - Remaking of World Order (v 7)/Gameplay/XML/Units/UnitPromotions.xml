@@ -1328,7 +1328,6 @@
 			<NeutralHealChange>99</NeutralHealChange>
 			<FriendlyHealChange>99</FriendlyHealChange>
 			<HealOutsideFriendly>true</HealOutsideFriendly>
-			<AlwaysHeal>true</AlwaysHeal>
 			<PortraitIndex>37</PortraitIndex>
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_HEAL</PediaType>

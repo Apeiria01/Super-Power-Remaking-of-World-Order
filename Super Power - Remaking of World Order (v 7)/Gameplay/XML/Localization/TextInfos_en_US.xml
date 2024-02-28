@@ -14715,7 +14715,6 @@
 			<Text>
 				[ICON_BULLET]Invisible to other units except which can see stealth units.
 				[NEWLINE][ICON_BULLET]Can see other stealth units.
-				[NEWLINE][ICON_BULLET][COLOR_POSITIVE_TEXT]Heal Every Turn[ENDCOLOR], even if it performs an action.
 				[NEWLINE][ICON_BULLET]Heal +99 HP per turn and may heal damage [COLOR_POSITIVE_TEXT]Outside of Friendly Territory[ENDCOLOR].
 			</Text>
 		</Row>
