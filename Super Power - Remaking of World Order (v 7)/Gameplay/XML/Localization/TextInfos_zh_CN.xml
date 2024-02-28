@@ -12848,7 +12848,6 @@
 			<Text>
 				[ICON_BULLET]隐形，只能被反隐单位侦测到。
 				[NEWLINE][ICON_BULLET]反隐单位。
-				[NEWLINE][ICON_BULLET]能够[COLOR_POSITIVE_TEXT]每回合恢复[ENDCOLOR] (包括执行任务时)。
 				[NEWLINE][ICON_BULLET]能够在[COLOR_POSITIVE_TEXT]境外友方地域[ENDCOLOR]恢复且恢复时额外+99点生命值。
 			</Text>
 		</Row>

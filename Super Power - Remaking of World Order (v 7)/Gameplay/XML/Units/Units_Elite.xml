@@ -1730,6 +1730,10 @@
 			<UnitType>UNIT_STEALTH_HELICOPTER</UnitType>
 			<PromotionType>PROMOTION_MARCH</PromotionType>
 		</Row>
+		<Row>
+			<UnitType>UNIT_STEALTH_HELICOPTER</UnitType>
+			<PromotionType>PROMOTION_HALF_CASUALTIES</PromotionType>
+		</Row>
 		
 
 
