@@ -1712,7 +1712,7 @@
 		</Row>
 		<Row>
 			<UnitType>UNIT_STEALTH_HELICOPTER</UnitType>
-			<PromotionType>PROMOTION_RECON_UNIT</PromotionType>
+			<PromotionType>PROMOTION_STEALTH_OPERATION</PromotionType>
 		</Row>
 		<Row>
 			<UnitType>UNIT_STEALTH_HELICOPTER</UnitType>

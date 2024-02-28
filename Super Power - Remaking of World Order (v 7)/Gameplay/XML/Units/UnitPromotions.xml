@@ -1327,8 +1327,10 @@
 			<EnemyHealChange>99</EnemyHealChange>
 			<NeutralHealChange>99</NeutralHealChange>
 			<FriendlyHealChange>99</FriendlyHealChange>
-			<PortraitIndex>58</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<HealOutsideFriendly>true</HealOutsideFriendly>
+			<AlwaysHeal>true</AlwaysHeal>
+			<PortraitIndex>37</PortraitIndex>
+			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_HEAL</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_STEALTH_OPERATION</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>

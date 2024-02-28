@@ -11935,7 +11935,7 @@
 			<Plurality>2</Plurality>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_STEALTH_HELICOPTER_HELP">
-			<Text>隱形的偵查型輕武直，能夠發現隱形單位。該單位擁有“火力引導”的能力，能夠使友方炮火攻擊和空襲的威力更強。[NEWLINE][NEWLINE]需要輕型武直實驗項目解鎖，你只能組建一支編隊。</Text>
+			<Text>隱形的偵查型輕武直，能夠發現隱形單位，且擁有強大恢復力。該單位擁有“火力引導”的能力，能夠使友方炮火攻擊和空襲的威力更強。[NEWLINE][NEWLINE]需要輕型武直實驗項目解鎖，你只能組建一支編隊。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_STEALTH_HELICOPTER_STRATEGY">
 			<Text>此型號輕型武直能夠隱形移動，在兩格外攻擊敵方單位。但這還不是該武直最有效率的使用方式。恰當地使用其火力引導的能力，為你的陸海軍火炮和空襲指示目標可以造成更好的戰術效果。需要注意的是，火力引導會消耗2移動力，這一點需要你仔細規劃飛行路線，提前準備好退出通道。儘管該單位隱形，但如果被防空單位發現攻擊依然非常脆弱。</Text>
@@ -12558,7 +12558,12 @@
 			<Text>偽裝偵查</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_RECON_UNIT_HELP">
-			<Text>對其他單位隱形，能夠發現其他偽裝單位。[NEWLINE]移動不受地形影響。[NEWLINE]不能掠奪和佔領城市。[NEWLINE]沒有地形防禦加成。</Text>
+			<Text>
+				[ICON_BULLET]對其他單位隱形，能夠發現其他偽裝單位。
+				[NEWLINE][ICON_BULLET]不能掠奪和佔領城市。
+				[NEWLINE][ICON_BULLET]沒有地形防禦加成。
+				[NEWLINE][ICON_BULLET]能夠在[COLOR_POSITIVE_TEXT]境外友方地域[ENDCOLOR]恢復且恢復時額外+15點生命值。
+			</Text>
 		</Row>
 
 		<Replace Tag="TXT_KEY_PROMOTION_SCOUTING_1_HELP">
@@ -12665,10 +12670,15 @@
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_STEALTH_OPERATION">
-			<Text>小型單位</Text>
+			<Text>隱形偵察</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_STEALTH_OPERATION_HELP">
-			<Text>[ICON_BULLET]隱形，只能被反隱單位偵測到。[NEWLINE][ICON_BULLET]反隱單位。[NEWLINE][ICON_BULLET]一回合恢復99點生命值。</Text>
+			<Text>
+				[ICON_BULLET]隱形，只能被反隱單位偵測到。
+				[NEWLINE][ICON_BULLET]反隱單位。
+				[NEWLINE][ICON_BULLET]即使在執行行動時也能[COLOR_POSITIVE_TEXT]每回合回復傷害[ENDCOLOR]。
+				[NEWLINE][ICON_BULLET]能夠在[COLOR_POSITIVE_TEXT]境外友方地域[ENDCOLOR]恢復且恢復時額外+99點生命值。
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_PARADROP_I">

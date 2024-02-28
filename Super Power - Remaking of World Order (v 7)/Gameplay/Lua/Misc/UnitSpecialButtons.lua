@@ -746,64 +746,7 @@ ReconTargetGuideButton = {
 
 LuaEvents.UnitPanelActionAddin(ReconTargetGuideButton);
 
---------Stealth Operation Switch
--- UnitStealthOnButton = {
---  Name = "Stealth Operation on",
---  Title = "TXT_KEY_SP_BTNNOTE_UNIT_STEALTH_ON_SHORT", -- or a TXT_KEY
---  OrderPriority = 200, -- default is 200
---  IconAtlas = "SP_UNIT_ACTION_ATLAS", -- 45 and 64 variations required
---  PortraitIndex = 20,
---  ToolTip = "TXT_KEY_SP_BTNNOTE_UNIT_STEALTH_ON", -- or a TXT_KEY_ or a function
---  
--- 
---  
---  Condition = function(action, unit)
---    return unit:CanMove() and not unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_STEALTH_OPERATION"].ID) and unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_SP_FORCE_X_2"].ID) 
---  end, -- or nil or a boolean, default is true
---  
--- Disabled = function(action, unit)  
---   
---    return unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_STEALTH_OPERATION"].ID)
---  end, -- or nil or a boolean, default is false
---  
---  Action = function(action, unit, eClick) 	
---    unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_STEALTH_OPERATION"].ID, true)  
---   	print ("Stealth On!")	
---  end
--- };
---
--- LuaEvents.UnitPanelActionAddin(UnitStealthOnButton);
---
---
---
--- UnitStealthOffButton = {
---  Name = "Stealth Operation off",
---  Title = "TXT_KEY_SP_BTNNOTE_UNIT_STEALTH_OFF_SHORT", -- or a TXT_KEY
---  OrderPriority = 200, -- default is 200
---  IconAtlas = "SP_UNIT_ACTION_ATLAS", -- 45 and 64 variations required
---  PortraitIndex = 21,
---  ToolTip = "TXT_KEY_SP_BTNNOTE_UNIT_STEALTH_OFF", -- or a TXT_KEY_ or a function
---  
---  
--- Condition = function(action, unit)
---    return unit:CanMove() and unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_STEALTH_OPERATION"].ID);
---  end, -- or nil or a boolean, default is true
---  
---  Disabled = function(action, unit)     
---    return not unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_STEALTH_OPERATION"].ID) ;
---  end, -- or nil or a boolean, default is false
---  
---  Action = function(action, unit, eClick) 	
---    unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_STEALTH_OPERATION"].ID, false)  
---    unit:SetMoves(0)
---   	print ("Stealth Off!")	
---  end
--- };
---
--- LuaEvents.UnitPanelActionAddin(UnitStealthOffButton);
-
 ----------Emergency Heal
-
 EmergencyHealButton = {
     Name = "Emergency Heal",
     Title = "TXT_KEY_SP_BTNNOTE_UNIT_EMERGENCY_HEAL_SHORT", -- or a TXT_KEY
