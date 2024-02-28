@@ -13853,7 +13853,7 @@
 			<Plurality>2</Plurality>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_STEALTH_HELICOPTER_HELP">
-			<Text>A Stealth Helicopter which can move invisible to most of the enemy units and spot enemy stealthy units. It has the skill of "Target Marking", which will make nearby enemy units vulnerable to your artillery fire and airstrikes. [NEWLINE][NEWLINE]Requires Light Helicopter Experimental Program and only one can exist in the world.</Text>
+			<Text>A Stealth Helicopter which has a strong ability to recover, can move invisible to most of the enemy units and spot enemy stealthy units. It has the skill of "Target Marking", which will make nearby enemy units vulnerable to your artillery fire and airstrikes. [NEWLINE][NEWLINE]Requires Light Helicopter Experimental Program and only one can exist in the world.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_STEALTH_HELICOPTER_STRATEGY">
 			<Text>This stealth helicopter can move stealthily and attack enemy units within 2-hex range. However this is not the best way to use it. The wise commander will use its ability to mark the enemy units, then call artillery bombardment or airstrike to destroy them easily. However you should be aware that it will cost extra movement to mark targets. You need to plan its flight route to avoid running out of MP in the enemy territory. Alouth it is stealthy, it is still weak against enemy anti-air weapons if being spotted. (Yeah I know this model is not RAH-66 Comanche but I just cannot find the right model)</Text>
@@ -14556,9 +14556,9 @@
 		<Row Tag="TXT_KEY_PROMOTION_RECON_UNIT_HELP">
 			<Text>
 				Recon Unit. Excellent at reconnaissance and exploring the map.
-				[NEWLINE][NEWLINE][ICON_BULLET][COLOR_POSITIVE_TEXT]Invisible[ENDCOLOR] to units which cannot see Stealth Units.[NEWLINE][ICON_BULLET]Can see [COLOR_POSITIVE_TEXT]Stealth Units[ENDCOLOR].
-				[NEWLINE]Move ignoring terrian costs.
-				[NEWLINE]Heals 15 Additional HP per turn when [COLOR_POSITIVE_TEXT]Outside[ENDCOLOR] of Friendly Territory.
+				[NEWLINE][NEWLINE][ICON_BULLET][COLOR_POSITIVE_TEXT]Invisible[ENDCOLOR] to units which cannot see Stealth Units.
+				[NEWLINE][ICON_BULLET]Can see [COLOR_POSITIVE_TEXT]Stealth Units[ENDCOLOR].
+				[NEWLINE][ICON_BULLET]Heals 15 Additional HP per turn when [COLOR_POSITIVE_TEXT]Outside[ENDCOLOR] of Friendly Territory.
 				[NEWLINE][ICON_BULLET]Cannot [COLOR_NEGATIVE_TEXT]Pillage[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]Cannot [COLOR_NEGATIVE_TEXT]Capture[ENDCOLOR] Cities.
 				[NEWLINE][ICON_BULLET]Cannot receive [COLOR_NEGATIVE_TEXT]Terrain Bonus[ENDCOLOR].</Text>
@@ -14709,13 +14709,14 @@
 		
 
 		<Row Tag="TXT_KEY_PROMOTION_STEALTH_OPERATION">
-			<Text>Small Size Unit</Text>
+			<Text>Stealth Recon</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_STEALTH_OPERATION_HELP">
 			<Text>
 				[ICON_BULLET]Invisible to other units except which can see stealth units.
 				[NEWLINE][ICON_BULLET]Can see other stealth units.
-				[NEWLINE][ICON_BULLET]Can recover its full health in one turn.
+				[NEWLINE][ICON_BULLET][COLOR_POSITIVE_TEXT]Heal Every Turn[ENDCOLOR], even if it performs an action.
+				[NEWLINE][ICON_BULLET]Heal +99 HP per turn and may heal damage [COLOR_POSITIVE_TEXT]Outside of Friendly Territory[ENDCOLOR].
 			</Text>
 		</Row>
 		
