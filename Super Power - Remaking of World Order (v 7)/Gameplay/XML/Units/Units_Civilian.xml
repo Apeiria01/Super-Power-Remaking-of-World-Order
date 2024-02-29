@@ -615,8 +615,8 @@
 			<!--<RequiresEnhancedReligion>true</RequiresEnhancedReligion>-->
 			<AdvancedStartCost>-1</AdvancedStartCost>
 			<CombatLimit>0</CombatLimit>
-			<!--<ReligiousStrength>1500</ReligiousStrength>-->
-			<!--<RemoveHeresy>true</RemoveHeresy>-->
+			<ReligiousStrength>1500</ReligiousStrength>
+			<RemoveHeresy>true</RemoveHeresy>
 			<ProhibitsSpread>true</ProhibitsSpread>
 			<UnitArtInfo>ART_DEF_UNIT_INQUISITOR</UnitArtInfo>
 			<UnitFlagIconOffset>109</UnitFlagIconOffset>
