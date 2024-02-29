@@ -1354,8 +1354,11 @@ function TipHandler(control)
 				elseif (not bFirstEntry) then
 					strDisabledString = strDisabledString .. "[NEWLINE][NEWLINE]";
 				end
-
-				strDisabledString = strDisabledString .. Locale.ConvertTextKey("TXT_KEY_UPGRADE_HELP_DISABLED_CITY");
+				if unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_CARRIER_FIGHTER"].ID) then
+					strDisabledString = strDisabledString .. "[COLOR_NEGATIVE_TEXT]" .. Locale.ConvertTextKey("TXT_KEY_SP_SETUP_SCREEN_HELP_12") .. "[ENDCOLOR]";
+				else
+					strDisabledString = strDisabledString .. Locale.ConvertTextKey("TXT_KEY_UPGRADE_HELP_DISABLED_CITY");
+				end
 			end
 
 			-- Can't upgrade because we lack the Gold
