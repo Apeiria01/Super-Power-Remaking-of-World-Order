@@ -8821,7 +8821,7 @@
 			<Text>+1 [ICON_PEACE] Faith and +1 [ICON_CULTURE] Culture from every Shrine, +10% [ICON_PRODUCTION] Production for Wonders</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_DANCE_AURORA">
-			<Text>+2 [ICON_PEACE] Faith from Tundra tiles, City in Tundra tiles +1 [ICON_FOOD] Food</Text>
+			<Text>+1 [ICON_PEACE] Faith from Tundra tiles, City in Tundra tiles +2 [ICON_FOOD] Food</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_DESERT_FOLKLORE">
 			<Text>+1 [ICON_PEACE] Faith from Desert tiles, +1 [ICON_CULTURE] Culture and +1 [ICON_PEACE] Faith from Oasis</Text>

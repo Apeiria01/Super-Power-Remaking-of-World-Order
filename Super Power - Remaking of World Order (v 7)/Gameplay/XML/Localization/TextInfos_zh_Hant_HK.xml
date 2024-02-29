@@ -7840,7 +7840,7 @@
 			<Text>玉石、琥珀、珊瑚和天青石+1[ICON_PEACE]信仰、+1[ICON_PRODUCTION]產能</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_DANCE_AURORA">
-			<Text>凍土地塊+2[ICON_PEACE]信仰，位於凍土地塊的城市+1[ICON_FOOD]食物</Text>
+			<Text>凍土地塊+1[ICON_PEACE]信仰，位於凍土地塊的城市+2[ICON_FOOD]食物</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_ANCESTOR_WORSHIP">
 			<Text>神祠+1[ICON_PEACE]信仰、+1[ICON_CULTURE]文化，建造奇觀+10%[ICON_PRODUCTION]產能</Text>
