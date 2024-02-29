@@ -15233,7 +15233,7 @@
 			<Text>
 				[ICON_BULLET]替代露天剧场，造价更低。
 				[NEWLINE][ICON_BULLET]本城[ICON_WAR]军事单位训练速度+15%。
-				[NEWLINE][ICON_BULLET]军事单位升级时，每个伊扎卡使你获得当前时代/2的[ICON_CULTURE]文化（至少为1）。
+				[NEWLINE][ICON_BULLET]军事单位晋升时，每个伊扎卡使你获得当前时代/2的[ICON_CULTURE]文化（至少为1）。
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_ZULU_IZIKO_TEXT">

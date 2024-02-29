@@ -15042,7 +15042,7 @@
 			<Text>
 				[ICON_BULLET]替代露天劇場，造價更低。
 				[NEWLINE][ICON_BULLET]本城[ICON_WAR]軍事單位訓練速度+15%。
-				[NEWLINE][ICON_BULLET]軍事單位升級時，每個伊紮卡使你獲得當前時代/2的[ICON_CULTURE]文化（至少為1）。
+				[NEWLINE][ICON_BULLET]軍事單位晉升時，每個伊紮卡使你獲得當前時代/2的[ICON_CULTURE]文化（至少為1）。
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_ZULU_IZIKO_TEXT">

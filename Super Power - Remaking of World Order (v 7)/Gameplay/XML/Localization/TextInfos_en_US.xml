@@ -16980,8 +16980,8 @@
 		<Replace Tag="TXT_KEY_BUILDING_ZULU_IZIKO_HELP">
 			<Text>
 			[ICON_BULLET]Alternative to the amphitheater, cheaper to build.
-			[NEWLINE][ICON_BULLET] +15% training speed of [ICON_WAR]military units in this city.
-			[NEWLINE][ICON_BULLET] When a military unit is upgraded, get a one-time [ICON_CULTURE]culture boost with half of Current Era (at least 1) from each Ithaca.
+			[NEWLINE][ICON_BULLET]+15% training speed of [ICON_WAR]military units in this city.
+			[NEWLINE][ICON_BULLET]When a military unit is promoted, get a one-time [ICON_CULTURE]culture boost with half of Current Era (at least 1) from each Ithaca.
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_ZULU_IZIKO_TEXT">
