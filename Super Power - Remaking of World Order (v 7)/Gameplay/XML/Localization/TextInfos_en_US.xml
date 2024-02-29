@@ -12329,7 +12329,7 @@
 			<Text>Shaman</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_HUN_SHAMAN_HELP">
-			<Text>Shaman is the unique unit of Hun, replacing the Inquisitor. It can betrained or be purchased with faith in cities. However it is not a religious unit and cannot remove other religions from cities. It can use mysterious sorcery to remove any debuffs of your units and make units around it healing +30HP per turn.</Text>
+			<Text>Shaman is the unique unit of Hun, replacing the Inquisitor. It can betrained or be purchased with faith in cities. It can use mysterious sorcery to remove any debuffs of your units and make units around it healing +30HP per turn.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_HUN_SHAMAN_TEXT">
 			<Text>The word "shaman" probably originates from the Tungusic Evenki language of North Asia. According to ethnolinguist Juha Janhunen, "the word is attested in all of the Tungusic idioms" such as Negidal, Lamut, Udehe/Orochi, Nanai, Ilcha, Orok, Manchu and Ulcha, and "nothing seems to contradict the assumption that the meaning 'shaman' also derives from Proto-Tungusic" and may have roots that extend back in time at least two millennia. </Text>
