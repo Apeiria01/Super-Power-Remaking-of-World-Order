@@ -17123,7 +17123,21 @@
 			<Text>Rolling Stone</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_ROLLING_STONE_HELP">
-			<Text>Cause extra 15% Damage to all enemy units [COLOR_POSITIVE_TEXT]Adjacent[ENDCOLOR] to the target unit.</Text>
+			<Text>Cause extra 20% Damage to all enemy units [COLOR_POSITIVE_TEXT]Adjacent[ENDCOLOR] to the target unit.</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_PROMOTION_RAIN_OF_SPEAR">
+			<Text>Rain of Spear</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_RAIN_OF_SPEAR_HELP">
+			<Text>+50% Damage to other units in the target plot.</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_PROMOTION_WAR_SEIENCE">
+			<Text>Warfare Technology</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_WAR_SEIENCE_HELP">
+			<Text>Can earn [ICON_RESEARCH] Science for each enemy killed (50% of its [ICON_STRENGTH] Combat Strength).</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_CIV5_HUN_HORSE_ARCHER_HELP_TEXT">
@@ -17136,7 +17150,7 @@
 		<Replace Tag="TXT_KEY_PROMOTION_ATTACK_COST_HALF_HELP_TEXT">
 			<Text>
 				[ICON_BULLET]+1 additional attack per turn.
-				[NEWLINE][ICON_BULLET]Only consume half Moves when Range Attack.
+				[NEWLINE][ICON_BULLET]Moves consume of Range Attack -33%.
 			</Text>
 		</Replace>
 

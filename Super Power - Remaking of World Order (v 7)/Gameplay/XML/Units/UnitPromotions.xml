@@ -87,7 +87,7 @@
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_ATTACK_COST_HALF</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
-			<RangeAttackCostModifier>-50</RangeAttackCostModifier>
+			<RangeAttackCostModifier>-33</RangeAttackCostModifier>
 			<CanMoveAfterAttacking>true</CanMoveAfterAttacking>
 			<ExtraAttacks>1</ExtraAttacks>
 		</Row>
@@ -2162,21 +2162,44 @@
 			<Description>TXT_KEY_PROMOTION_ROLLING_STONE</Description>
 			<Help>TXT_KEY_PROMOTION_ROLLING_STONE_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionPrereqOr1>PROMOTION_ARCHERY_COMBAT</PromotionPrereqOr1>
 			<OrderPriority>1</OrderPriority>
-			<RangedAttackModifier>10</RangedAttackModifier>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PortraitIndex>44</PortraitIndex>
+			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_RANGED</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_ROLLING_STONE</PediaEntry>
-			<SplashDamagePercent>15</SplashDamagePercent>
+			<SplashDamagePercent>20</SplashDamagePercent>
 			<SplashDamageRadius>1</SplashDamageRadius>
 			<SplashDamagePlotUnitLimit>1</SplashDamagePlotUnitLimit>
 			<CannotBeChosen>true</CannotBeChosen>
 		</Row>
-		
-	
-		
+
+		<Row>
+			<Type>PROMOTION_RAIN_OF_SPEAR</Type>
+			<Description>TXT_KEY_PROMOTION_RAIN_OF_SPEAR</Description>
+			<Help>TXT_KEY_PROMOTION_RAIN_OF_SPEAR_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<OrderPriority>1</OrderPriority>
+			<PortraitIndex>45</PortraitIndex>
+			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_RANGED</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_RAIN_OF_SPEAR</PediaEntry>
+			<CollateralDamagePercent>50</CollateralDamagePercent>
+			<CollateralDamagePlotUnitLimit>4</CollateralDamagePlotUnitLimit>
+			<CannotBeChosen>true</CannotBeChosen>
+		</Row>
+
+		<Row>
+			<Type>PROMOTION_WAR_SEIENCE</Type>
+			<Description>TXT_KEY_PROMOTION_WAR_SEIENCE</Description>
+			<Help>TXT_KEY_PROMOTION_WAR_SEIENCE_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<OrderPriority>1</OrderPriority>
+			<PortraitIndex>46</PortraitIndex>
+			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_RANGED</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_WAR_SEIENCE</PediaEntry>
+			<CannotBeChosen>true</CannotBeChosen>
+		</Row>
 	</UnitPromotions>
 
 
@@ -7135,7 +7158,11 @@
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>50</Yield>
 		</Row>
-		
+		<Row>
+			<PromotionType>PROMOTION_WAR_SEIENCE</PromotionType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>50</Yield>
+		</Row>
 	</UnitPromotions_YieldFromKills>
 	
 </GameData>

@@ -15197,7 +15197,21 @@
 			<Text>滾滾落石</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_ROLLING_STONE_HELP">
-			<Text>對[COLOR_POSITIVE_TEXT]相鄰區域[ENDCOLOR]目標傷害+15%。</Text>
+			<Text>對[COLOR_POSITIVE_TEXT]相鄰區域[ENDCOLOR]目標傷害+20%。</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_PROMOTION_RAIN_OF_SPEAR">
+			<Text>擲矛化雨</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_RAIN_OF_SPEAR_HELP">
+			<Text>對目標地格的其他單位+50%的傷害。</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_PROMOTION_WAR_SEIENCE">
+			<Text>戰爭工藝學</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_WAR_SEIENCE_HELP">
+			<Text>消滅敵人時獲得相當於單位[ICON_STRENGTH]戰鬥力50%的[ICON_RESEARCH]科研。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_CIV5_HUN_HORSE_ARCHER_HELP_TEXT">
@@ -15210,7 +15224,7 @@
 		<Replace Tag="TXT_KEY_PROMOTION_ATTACK_COST_HALF_HELP_TEXT">
 			<Text>
 				[ICON_BULLET]+1額外攻擊次數。
-				[NEWLINE][ICON_BULLET]遠程攻擊只消耗一半移動力。
+				[NEWLINE][ICON_BULLET]遠程攻擊消耗移動力-33%。
 			</Text>
 		</Replace>
 
