@@ -1258,6 +1258,10 @@
 			<UnitType>UNIT_BABYLONIAN_BOWMAN</UnitType>
 			<PromotionType>PROMOTION_GAIN_EXPERIENCE</PromotionType>
 		</Row>
+		<Row>
+			<UnitType>UNIT_BABYLONIAN_BOWMAN</UnitType>
+			<PromotionType>PROMOTION_WAR_SEIENCE</PromotionType>
+		</Row>
 		
 
 		<Row>
@@ -1301,6 +1305,10 @@
 		<Row>
 			<UnitType>UNIT_MAYAN_ATLATLIST</UnitType>
 			<PromotionType>PROMOTION_BARRAGE_3</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_MAYAN_ATLATLIST</UnitType>
+			<PromotionType>PROMOTION_RAIN_OF_SPEAR</PromotionType>
 		</Row>
 
 
