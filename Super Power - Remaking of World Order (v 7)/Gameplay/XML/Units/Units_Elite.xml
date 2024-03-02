@@ -67,7 +67,7 @@
 			<Combat>26</Combat>
 			<RangedCombat>24</RangedCombat>
 			<Range>1</Range>
-			<Cost>150</Cost>
+			<Cost>100</Cost>
 			<Moves>6</Moves>
 			<HurryCostModifier>-1</HurryCostModifier>
 			<CombatClass>UNITCOMBAT_HELICOPTER</CombatClass>
@@ -1103,7 +1103,7 @@
 			<BaseSightRange>5</BaseSightRange>
 			<Combat>150</Combat>
 			<RangedCombat>130</RangedCombat>
-			<Cost>1050</Cost>
+			<Cost>720</Cost>
 			<Moves>12</Moves>
 			<Range>2</Range>
 			<CombatClass>UNITCOMBAT_HELICOPTER</CombatClass>

@@ -14527,7 +14527,7 @@
 		<Row Tag="TXT_KEY_PROMOTION_DIVINE_WEAPON_1_HELP">
 			<Text>
 			[ICON_BULLET]+25% Damage to other units in the [COLOR_POSITIVE_TEXT]target[ENDCOLOR] plot.
-			[NEWLINE][ICON_BULLET]If the Target Unit's HP is less than 50 after this attack, the target unit suffers [COLOR_NEGATIVE_TEXT]Pinned Down / Move alone the Routes only[ENDCOLOR].
+			[NEWLINE][ICON_BULLET]If the Target Unit's HP is less than 50% after this attack, the target unit suffers [COLOR_NEGATIVE_TEXT]Pinned Down / Move alone the Routes only[ENDCOLOR].
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_DIVINE_WEAPON_2">
@@ -14536,7 +14536,7 @@
 		<Row Tag="TXT_KEY_PROMOTION_DIVINE_WEAPON_2_HELP">
 			<Text>
 			[ICON_BULLET]+25% Damage to other units in the [COLOR_POSITIVE_TEXT]target[ENDCOLOR] plot.
-			[NEWLINE][ICON_BULLET]If the Target Unit's HP is less than 50 after this attack, the target unit suffers [COLOR_NEGATIVE_TEXT]Armor Damaged[ENDCOLOR].
+			[NEWLINE][ICON_BULLET]If the Target Unit's HP is less than 50% after this attack, the target unit suffers [COLOR_NEGATIVE_TEXT]Armor Damaged[ENDCOLOR].
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_DIVINE_WEAPON_3">
@@ -14545,7 +14545,7 @@
 		<Row Tag="TXT_KEY_PROMOTION_DIVINE_WEAPON_3_HELP">
 			<Text>
 			[ICON_BULLET]+25% Damage to other units in the [COLOR_POSITIVE_TEXT]target[ENDCOLOR] plot.
-			[NEWLINE][ICON_BULLET]If the Target Unit's HP is less than 50 after this attack, the target unit suffers [COLOR_NEGATIVE_TEXT]Supply Destroyed[ENDCOLOR].
+			[NEWLINE][ICON_BULLET]If the Target Unit's HP is less than 50% after this attack, the target unit suffers [COLOR_NEGATIVE_TEXT]Supply Destroyed[ENDCOLOR].
 			</Text>
 		</Row>
 
@@ -15791,9 +15791,10 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_MULTIPURPOSE_DESTROYER_HELP">
 			<Text>
-				[ICON_BULLET]+1 Attack Chance per turn (can multiply)
+				[ICON_BULLET]+1 Attack Chance per turn (can multiply).
 				[NEWLINE][ICON_BULLET]+2 [ICON_MOVES] Movement.
-				[NEWLINE][ICON_BULLET]+100% [ICON_STRENGTH] Combat Strength vs [COLOR_POSITIVE_TEXT]Submarines[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Aircrafts[ENDCOLOR].</Text>
+				[NEWLINE][ICON_BULLET]+100% [ICON_STRENGTH] Combat Strength vs [COLOR_POSITIVE_TEXT]Submarines[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Aircrafts[ENDCOLOR].
+			</Text>
 		</Row>
 		
 		<Row Tag="TXT_KEY_PROMOTION_SP_FULL_MOON_STRIKE">
@@ -15801,9 +15802,21 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SP_FULL_MOON_STRIKE_HELP">
 			<Text>
-				[ICON_BULLET]+1 Movement (can multiply)
+				[ICON_BULLET]+1 Movement (can multiply).
 				[NEWLINE][ICON_BULLET]+100% [ICON_STRENGTH] Attack vs [COLOR_POSITIVE_TEXT]Siege Units, Archery, Anti Aircraft Units and Land AoE weapons[ENDCOLOR].
-				</Text>
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_HUSSAR">
+			<Text>Brave and Fearless</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_HUSSAR_HELP">
+			<Text>Receive a [ICON_STRENGTH] Combat bonus when damaged.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_ROARING_ELEPHANT">
+			<Text>Roar</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_ROARING_ELEPHANT_HELP">
+			<Text>If the Target Unit's HP is less than 80% after this attack, the target unit suffers [COLOR_NEGATIVE_TEXT]Morale Weakened[ENDCOLOR].</Text>
 		</Row>
 
 

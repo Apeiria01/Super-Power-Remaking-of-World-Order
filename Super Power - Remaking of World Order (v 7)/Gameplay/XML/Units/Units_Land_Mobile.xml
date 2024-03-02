@@ -809,9 +809,9 @@
 			<Type>UNIT_CHARIOT_ARCHER</Type>
 			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
 			<BaseSightRange>3</BaseSightRange>
-			<Combat>20</Combat>
+			<Combat>18</Combat>
 			<RangedCombat>10</RangedCombat>
-			<Cost>85</Cost>
+			<Cost>55</Cost>
 			<Moves>5</Moves>
 			<Range>1</Range>
 			<HurryCostModifier>25</HurryCostModifier>
@@ -842,9 +842,9 @@
 			<Type>UNIT_EGYPTIAN_WARCHARIOT</Type>
 			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
 			<BaseSightRange>3</BaseSightRange>
-			<Combat>24</Combat>
+			<Combat>22</Combat>
 			<RangedCombat>12</RangedCombat>
-			<Cost>75</Cost>
+			<Cost>50</Cost>
 			<Moves>6</Moves>
 			<Range>1</Range>
 			<HurryCostModifier>25</HurryCostModifier>
@@ -875,9 +875,9 @@
 			<Type>UNIT_HUN_HORSE_ARCHER</Type>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
 			<BaseSightRange>3</BaseSightRange>
-			<Combat>20</Combat>
+			<Combat>18</Combat>
 			<RangedCombat>10</RangedCombat>
-			<Cost>60</Cost>
+			<Cost>40</Cost>
 			<Moves>6</Moves>
 			<Range>1</Range>
 			<HurryCostModifier>25</HurryCostModifier>
@@ -914,7 +914,7 @@
 			<BaseSightRange>2</BaseSightRange>
 			<Combat>15</Combat>
 			<RangedCombat>15</RangedCombat>
-			<Cost>55</Cost>
+			<Cost>40</Cost>
 			<Moves>2</Moves>
 			<CombatClass>UNITCOMBAT_HELICOPTER</CombatClass>
 			<Range>1</Range>
@@ -949,7 +949,7 @@
 			<BaseSightRange>3</BaseSightRange>
 			<Combat>25</Combat>
 			<RangedCombat>15</RangedCombat>
-			<Cost>125</Cost>
+			<Cost>85</Cost>
 			<Moves>6</Moves>
 			<Range>1</Range>
 			<HurryCostModifier>33</HurryCostModifier>
@@ -983,7 +983,7 @@
 			<BaseSightRange>3</BaseSightRange>
 			<Combat>25</Combat>
 			<RangedCombat>15</RangedCombat>
-			<Cost>125</Cost>
+			<Cost>85</Cost>
 			<Moves>6</Moves>
 			<Range>1</Range>
 			<HurryCostModifier>33</HurryCostModifier>
@@ -1016,7 +1016,7 @@
 			<BaseSightRange>3</BaseSightRange>
 			<Combat>25</Combat>
 			<RangedCombat>15</RangedCombat>
-			<Cost>110</Cost>
+			<Cost>75</Cost>
 			<Moves>5</Moves>
 			<Range>1</Range>
 			<HurryCostModifier>33</HurryCostModifier>
@@ -1052,7 +1052,7 @@
 			<BaseSightRange>3</BaseSightRange>
 			<Combat>35</Combat>
 			<RangedCombat>20</RangedCombat>
-			<Cost>185</Cost>
+			<Cost>125</Cost>
 			<Moves>7</Moves>
 			<Range>1</Range>
 			<HurryCostModifier>33</HurryCostModifier>
@@ -1085,7 +1085,7 @@
 			<BaseSightRange>3</BaseSightRange>
 			<Combat>35</Combat>
 			<RangedCombat>20</RangedCombat>
-			<Cost>165</Cost>
+			<Cost>125</Cost>
 			<Moves>7</Moves>
 			<Range>1</Range>
 			<HurryCostModifier>33</HurryCostModifier>
@@ -1118,7 +1118,7 @@
 			<BaseSightRange>3</BaseSightRange>
 			<Combat>35</Combat>
 			<RangedCombat>20</RangedCombat>
-			<Cost>185</Cost>
+			<Cost>115</Cost>
 			<Moves>7</Moves>
 			<Range>1</Range>
 			<HurryCostModifier>33</HurryCostModifier>
@@ -1153,7 +1153,7 @@
 			<BaseSightRange>4</BaseSightRange>
 			<Combat>55</Combat>
 			<RangedCombat>40</RangedCombat>
-			<Cost>265</Cost>
+			<Cost>185</Cost>
 			<Range>1</Range>
 			<Moves>8</Moves>
 			<HurryCostModifier>50</HurryCostModifier>
@@ -1187,7 +1187,7 @@
 			<BaseSightRange>4</BaseSightRange>
 			<Combat>55</Combat>
 			<RangedCombat>40</RangedCombat>
-			<Cost>265</Cost>
+			<Cost>185</Cost>
 			<Range>1</Range>
 			<Moves>8</Moves>
 			<HurryCostModifier>50</HurryCostModifier>
@@ -1223,7 +1223,7 @@
 			<BaseSightRange>4</BaseSightRange>
 			<Combat>55</Combat>
 			<RangedCombat>40</RangedCombat>
-			<Cost>230</Cost>
+			<Cost>160</Cost>
 			<Range>1</Range>
 			<Moves>8</Moves>
 			<HurryCostModifier>50</HurryCostModifier>
@@ -1260,7 +1260,7 @@
 			<BaseSightRange>4</BaseSightRange>
 			<Combat>80</Combat>
 			<RangedCombat>60</RangedCombat>
-			<Cost>445</Cost>
+			<Cost>300</Cost>
 			<Range>1</Range>
 			<Moves>9</Moves>
 			<HurryCostModifier>75</HurryCostModifier>
@@ -1295,7 +1295,7 @@
 			<BaseSightRange>4</BaseSightRange>
 			<Combat>80</Combat>
 			<RangedCombat>60</RangedCombat>
-			<Cost>445</Cost>
+			<Cost>300</Cost>
 			<Range>1</Range>
 			<Moves>9</Moves>
 			<HurryCostModifier>75</HurryCostModifier>
@@ -1334,7 +1334,7 @@
 			<Combat>100</Combat>
 			<RangedCombat>90</RangedCombat>
 			<Range>1</Range>
-			<Cost>720</Cost>
+			<Cost>500</Cost>
 			<Moves>10</Moves>
 			<HurryCostModifier>100</HurryCostModifier>
 			<CombatClass>UNITCOMBAT_HELICOPTER</CombatClass>
@@ -1369,7 +1369,7 @@
 			<Combat>100</Combat>
 			<RangedCombat>90</RangedCombat>
 			<Range>1</Range>
-			<Cost>720</Cost>
+			<Cost>500</Cost>
 			<Moves>10</Moves>
 			<HurryCostModifier>100</HurryCostModifier>
 			<CombatClass>UNITCOMBAT_HELICOPTER</CombatClass>
@@ -1404,7 +1404,7 @@
 			<BaseSightRange>5</BaseSightRange>
 			<Combat>150</Combat>
 			<RangedCombat>130</RangedCombat>
-			<Cost>1030</Cost>
+			<Cost>720</Cost>
 			<Moves>11</Moves>
 			<Range>1</Range>
 			<HurryCostModifier>100</HurryCostModifier>
@@ -1436,7 +1436,7 @@
 			<BaseSightRange>5</BaseSightRange>
 			<Combat>150</Combat>
 			<RangedCombat>130</RangedCombat>
-			<Cost>1030</Cost>
+			<Cost>720</Cost>
 			<Moves>11</Moves>
 			<Range>2</Range>
 			<CombatClass>UNITCOMBAT_HELICOPTER</CombatClass>
@@ -2083,12 +2083,14 @@
 			<UnitType>UNIT_MONGOLIAN_KESHIK</UnitType>
 			<PromotionType>PROMOTION_SUNDER_1</PromotionType>
 		</Row>
-		<!--
 		<Row>
 			<UnitType>UNIT_MONGOLIAN_KESHIK</UnitType>
 			<PromotionType>PROMOTION_SUNDER_2</PromotionType>
 		</Row>
-		-->
+		<Row>
+			<UnitType>UNIT_MONGOLIAN_KESHIK</UnitType>
+			<PromotionType>PROMOTION_MOBILITY</PromotionType>
+		</Row>
 		
 		<Row>
 			<UnitType>UNIT_INDIAN_WARELEPHANT</UnitType>
@@ -2101,6 +2103,10 @@
 		<Row>
 			<UnitType>UNIT_INDIAN_WARELEPHANT</UnitType>
 			<PromotionType>PROMOTION_RANGE</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_INDIAN_WARELEPHANT</UnitType>
+			<PromotionType>PROMOTION_ROARING_ELEPHANT</PromotionType>
 		</Row>
 		
 
@@ -2140,6 +2146,10 @@
 		<Row>
 			<UnitType>UNIT_AUSTRIAN_HUSSAR</UnitType>
 			<PromotionType>PROMOTION_ATTACK_BONUS</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_AUSTRIAN_HUSSAR</UnitType>
+			<PromotionType>PROMOTION_HUSSAR</PromotionType>
 		</Row>
 		
 	
