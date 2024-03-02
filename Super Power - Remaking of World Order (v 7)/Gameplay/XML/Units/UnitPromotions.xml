@@ -182,7 +182,7 @@
 		</Row>
 	</UnitPromotions>
 
-	<!--*****************************Legion Numbers*******************************************-->
+	<!--*****************************Unique Promotions*******************************************-->
 	<UnitPromotions>
 		<Row>
 			<Type>PROMOTION_SP_FULL_MOON_STRIKE</Type>
@@ -195,6 +195,29 @@
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_SP_FULL_MOON_STRIKE</PediaEntry>
 			<MovesChange>1</MovesChange>
+		</Row>
+		<Row>
+			<Type>PROMOTION_HUSSAR</Type>
+			<Description>TXT_KEY_PROMOTION_HUSSAR</Description>
+			<Help>TXT_KEY_PROMOTION_HUSSAR_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PortraitIndex>59</PortraitIndex>
+			<CannotBeChosen>true</CannotBeChosen>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_HUSSAR</PediaEntry>
+			<StrongerDamaged>true</StrongerDamaged>
+		</Row>
+		<Row>
+			<Type>PROMOTION_ROARING_ELEPHANT</Type>
+			<Description>TXT_KEY_PROMOTION_ROARING_ELEPHANT</Description>
+			<Help>TXT_KEY_PROMOTION_ROARING_ELEPHANT_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PortraitIndex>59</PortraitIndex>
+			<CannotBeChosen>true</CannotBeChosen>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_ROARING_ELEPHANT</PediaEntry>
 		</Row>
 	</UnitPromotions>
 
