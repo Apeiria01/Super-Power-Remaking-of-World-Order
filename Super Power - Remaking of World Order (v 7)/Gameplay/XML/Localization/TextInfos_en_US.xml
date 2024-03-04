@@ -15810,7 +15810,7 @@
 			<Text>Brave and Fearless</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_HUSSAR_HELP">
-			<Text>Receive a [ICON_STRENGTH] Combat bonus when damaged.</Text>
+			<Text>Fight as though it was at full strength even when damaged, +1% Attack Strength from each Hit Point lost.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_ROARING_ELEPHANT">
 			<Text>Roar</Text>

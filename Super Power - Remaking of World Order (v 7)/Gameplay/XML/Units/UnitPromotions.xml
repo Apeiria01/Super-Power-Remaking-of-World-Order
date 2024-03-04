@@ -206,7 +206,8 @@
 			<IconAtlas>ABILITY_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_HUSSAR</PediaEntry>
-			<StrongerDamaged>true</StrongerDamaged>
+			<FightWellDamaged>true</FightWellDamaged>
+			<CurrentHitPointAttackMod>1</CurrentHitPointAttackMod>
 		</Row>
 		<Row>
 			<Type>PROMOTION_ROARING_ELEPHANT</Type>

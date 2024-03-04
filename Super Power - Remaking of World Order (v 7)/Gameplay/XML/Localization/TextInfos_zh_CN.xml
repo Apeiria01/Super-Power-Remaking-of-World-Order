@@ -5792,7 +5792,7 @@
 
 		<Replace Tag="TXT_KEY_TRAIT_FIGHT_WELL_DAMAGED">
 			<Text>
-				[ICON_BULLET]受伤单位攻击力不减。
+				[ICON_BULLET]受伤单位战斗力不减。
 				[NEWLINE][ICON_BULLET]单位在战斗中死亡时临近单位获得10%攻击加成（该数值每回合减少10%）。
 				[NEWLINE][ICON_BULLET]当你训练或购买了军事单位时，获得数值相当于单位[ICON_STRENGTH]战斗力的[ICON_CULTURE]文化产出。
 			</Text>
@@ -13739,7 +13739,7 @@
 			<Text>英勇无畏</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_HUSSAR_HELP">
-			<Text>受伤时受到[ICON_STRENGTH]战斗力加成。</Text>
+			<Text>受伤时战斗力不减，每一点损失生命值+1%攻击力。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_ROARING_ELEPHANT">
 			<Text>咆哮战吼</Text>
