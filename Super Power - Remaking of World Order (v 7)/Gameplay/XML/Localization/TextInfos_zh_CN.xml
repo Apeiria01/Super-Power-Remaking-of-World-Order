@@ -13088,14 +13088,30 @@
 			<Text>近战海军</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_NAVALMELEE_COMBAT_HELP">
-			<Text>克制[COLOR_POSITIVE_TEXT]海军游猎[ENDCOLOR]单位。[NEWLINE]能够攻击后移动。[NEWLINE]能够击退敌方单位（如果敌方受到的伤害高于你受到的伤害）。</Text>
+			<Text>
+				海军近战单位，擅长攻击和护送单位。
+				[NEWLINE][ICON_BULLET]能够攻击后移动。
+				[NEWLINE][ICON_BULLET]能够击退敌方单位（如果敌方受到的伤害高于你受到的伤害）。
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]克制[COLOR_POSITIVE_TEXT]海军游猎[ENDCOLOR]单位。
+				[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]海军远程[ENDCOLOR]单位克制。
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_DESTROYER_COMBAT">
 			<Text>驱逐舰</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_DESTROYER_COMBAT_HELP">
-			<Text>能够拦截敌方飞机（每回合一次）。[NEWLINE]可以发现潜艇。[NEWLINE]能够攻击后移动。对[COLOR_POSITIVE_TEXT]潜艇[ENDCOLOR]单位有战斗力加成。[NEWLINE]能够击退敌方单位（如果敌方受到的伤害高于你受到的伤害）。</Text>
+			<Text>
+				现代海军近战单位，擅长攻击和护送单位，以及对抗敌方潜艇和提供有限的防空支援。
+				[NEWLINE][ICON_BULLET]能够攻击后移动。
+				[NEWLINE][ICON_BULLET]能够击退敌方单位（如果敌方受到的伤害高于你受到的伤害）。
+				[NEWLINE][ICON_BULLET]能够拦截敌方飞机（每回合一次）。
+				[NEWLINE][ICON_BULLET]可以发现潜艇。
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]克制[COLOR_POSITIVE_TEXT]海军游猎[ENDCOLOR]单位和[COLOR_POSITIVE_TEXT]潜艇[ENDCOLOR]单位。
+				[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]海军远程[ENDCOLOR]单位克制。
+			</Text>
 		</Row>
 
 		<Replace Tag="TXT_KEY_PROMOTION_BOARDING_PARTY_1">
@@ -13121,21 +13137,49 @@
 			<Text>游猎海军</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_NAVAL_HIT_AND_RUN_HELP">
-			<Text>能够攻击后移动，无视区域控制。[NEWLINE]克制[COLOR_POSITIVE_TEXT]海军远程[ENDCOLOR]和[COLOR_POSITIVE_TEXT]海军旗舰[ENDCOLOR]单位，被[COLOR_NEGATIVE_TEXT]海军近战[ENDCOLOR]单位克制。</Text>
+			<Text>
+				海军游猎部队，擅长与敌方大型舰艇作战。
+				[NEWLINE][ICON_BULLET]可以[COLOR_POSITIVE_TEXT]远程攻击[ENDCOLOR]也可以[COLOR_POSITIVE_TEXT]近战攻击[ENDCOLOR]。
+				[NEWLINE][ICON_BULLET]能够攻击后移动。
+				[NEWLINE][ICON_BULLET]无视区域控制。
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]攻击[COLOR_NEGATIVE_TEXT]城市[ENDCOLOR]战斗力减成。
+				[NEWLINE][ICON_BULLET]克制[COLOR_POSITIVE_TEXT]海军远程[ENDCOLOR]单位和[COLOR_POSITIVE_TEXT]海军旗舰[ENDCOLOR]单位。
+				[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]海军近战[ENDCOLOR]单位克制。
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_SUBMARINE_COMBAT">
 			<Text>潜艇单位</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SUBMARINE_COMBAT_HELP">
-			<Text>能够攻击后移动，无视区域控制。[NEWLINE]隐形但可被驱逐舰发现。可以发现潜艇。[NEWLINE]克制[COLOR_POSITIVE_TEXT]海军单位[ENDCOLOR]但被[COLOR_NEGATIVE_TEXT]驱逐舰[ENDCOLOR]克制。[NEWLINE]无法被岸基空军发现或攻击，但被舰载机克制。</Text>
+			<Text>
+				具有隐形能力的潜艇部队，擅长与敌方大型舰艇作战。
+				[NEWLINE][ICON_BULLET]能够攻击后移动。
+				[NEWLINE][ICON_BULLET]无视区域控制。
+				[NEWLINE][ICON_BULLET][COLOR_POSITIVE_TEXT]隐形[ENDCOLOR]但可被[COLOR_NEGATIVE_TEXT]驱逐舰[ENDCOLOR]发现。
+				[NEWLINE][ICON_BULLET]可以发现潜艇。
+				[NEWLINE][ICON_BULLET]可以进入冰区。
+				[NEWLINE][ICON_BULLET]无法被岸基空军发现或攻击。
+				[NEWLINE][ICON_BULLET]无法攻击[COLOR_NEGATIVE_TEXT]陆地目标[ENDCOLOR]。
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]克制[COLOR_POSITIVE_TEXT]海军远程[ENDCOLOR]单位、[COLOR_POSITIVE_TEXT]海军旗舰[ENDCOLOR]单位和[COLOR_POSITIVE_TEXT]航母[ENDCOLOR]单位。
+				[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]驱逐舰[ENDCOLOR]单位克制。
+			</Text>
 		</Row>
 
 		<Replace Tag="TXT_KEY_PROMOTION_NAVAL_RANGED_SHIP">
 			<Text>远程海军</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_NAVAL_RANGED_SHIP_HELP">
-			<Text>克制[COLOR_POSITIVE_TEXT]海军近战[ENDCOLOR]单位，被[COLOR_NEGATIVE_TEXT]海军游猎[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]潜艇[ENDCOLOR]单位克制。[NEWLINE]能进行远程攻击亦可进行近战攻击。[NEWLINE]攻击目标时对同一格单位造成50%伤害。</Text>
+			<Text>
+				海军远程单位，专用于火力支援和破坏敌军舰队防御。
+				[NEWLINE][ICON_BULLET]可以[COLOR_POSITIVE_TEXT]远程攻击[ENDCOLOR]也可以[COLOR_POSITIVE_TEXT]近战攻击[ENDCOLOR]。
+				[NEWLINE][ICON_BULLET]攻击目标时对同一格单位造成50%伤害。
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]克制[COLOR_POSITIVE_TEXT]海军近战[ENDCOLOR]单位和[COLOR_POSITIVE_TEXT]堡垒[ENDCOLOR]单位。
+				[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]海军游猎[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]潜艇[ENDCOLOR]单位克制。
+				</Text>
 		</Replace>
 
 		<Row Tag="TXT_KEY_PROMOTION_NAVAL_RANGED_CRUISER">
@@ -13145,11 +13189,14 @@
 			<Text>
 				现代海军远程部队，专用于火力支援和破坏敌军舰队防御，同时提供空中支援。
 				[NEWLINE][ICON_BULLET]可以[COLOR_POSITIVE_TEXT]远程攻击[ENDCOLOR]也可以[COLOR_POSITIVE_TEXT]近战攻击[ENDCOLOR]。
-				[NEWLINE][ICON_BULLET]每回合可以执行2次拦截（3格内）。
 				[NEWLINE][ICON_BULLET]对目标同一地格的单位造成50%的伤害。
-				[NEWLINE][NEWLINE][ICON_BULLET]克制[COLOR_POSITIVE_TEXT]海军近战单位[ENDCOLOR]和[COLOR_POSITIVE_TEXT]导弹单位[ENDCOLOR]。
-				[NEWLINE][NEWLINE][ICON_BULLET]克制[COLOR_POSITIVE_TEXT]战斗机[ENDCOLOR]和[COLOR_POSITIVE_TEXT]直升机[ENDCOLOR]。
-				[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]海军游猎单位[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]潜艇[ENDCOLOR]克制。
+				[NEWLINE][ICON_BULLET]每回合可以执行2次拦截（3格内）。
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]面对[COLOR_POSITIVE_TEXT]空中游猎[ENDCOLOR]战斗力加成
+				[NEWLINE][ICON_BULLET]克制[COLOR_POSITIVE_TEXT]堡垒[ENDCOLOR]单位。
+				[NEWLINE][ICON_BULLET]克制[COLOR_POSITIVE_TEXT]海军近战[ENDCOLOR]单位和[COLOR_POSITIVE_TEXT]导弹[ENDCOLOR]单位。
+				[NEWLINE][ICON_BULLET]克制[COLOR_POSITIVE_TEXT]战斗机[ENDCOLOR]单位和[COLOR_POSITIVE_TEXT]直升机[ENDCOLOR]单位。
+				[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]海军游猎单位[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]潜艇[ENDCOLOR]单位克制。
 			</Text>
 		</Row>
 
@@ -13157,7 +13204,13 @@
 			<Text>旗舰单位</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_NAVAL_CAPITAL_SHIP_HELP">
-			<Text>同时代[ICON_STRENGTH]战斗力最强的单位。[NEWLINE]攻击目标时对临近单位造成50%伤害。[NEWLINE]进攻[COLOR_POSITIVE_TEXT]军事要塞固定炮台[ENDCOLOR]+350%[ICON_STRENGTH]战斗力。[NEWLINE]被[COLOR_NEGATIVE_TEXT]空军[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]潜艇[ENDCOLOR]单位克制。</Text>
+			<Text>
+				同时代[ICON_STRENGTH]战斗力最强的单位。
+				[NEWLINE][ICON_BULLET]攻击目标时对临近单位造成50%伤害。
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]克制[COLOR_POSITIVE_TEXT]堡垒[ENDCOLOR]单位。
+				[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]空军[ENDCOLOR]单位和[COLOR_NEGATIVE_TEXT]潜艇[ENDCOLOR]单位克制。
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_ARMOR_BATTLESHIP_1">
@@ -13207,11 +13260,14 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_CARRIER_UNIT_HELP">
 			<Text>
-				能够装载舰载机。
-				[NEWLINE]舰载机获得的经验会传递给所在航母。
-				[NEWLINE]在友方地域内能够补充舰载机。
-				[NEWLINE]与其在同一格的单位回复时每回合额外+15HP，本单位回复时每回合额外+15HP。
-				[NEWLINE]被[COLOR_NEGATIVE_TEXT]海军游猎[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]潜艇[ENDCOLOR]单位克制。
+				一个移动的武器平台，携带多用途舰载机，控制天空和海洋，甚至陆地。
+				[NEWLINE][ICON_BULLET]能够装载舰载机。
+				[NEWLINE][ICON_BULLET]舰载机获得的经验会传递给所在航母。
+				[NEWLINE][ICON_BULLET]在友方地域内能够补充舰载机。
+				[NEWLINE][ICON_BULLET]同一格的单位每回合回复时额外+15HP。
+				[NEWLINE][ICON_BULLET]本单位每回合回复时额外+15HP。
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]海军游猎[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]潜艇[ENDCOLOR]单位克制。
 			</Text>
 		</Row>
 
@@ -13735,7 +13791,7 @@
 		<Row Tag="TXT_KEY_PROMOTION_SP_FULL_MOON_STRIKE_HELP">
 			<Text>
 				[ICON_BULLET]+1[ICON_MOVES]移动力（可叠加）。
-				[NEWLINE][ICON_BULLET]对陆军远程，防空单位，攻城单位和陆地AOE武器+100%[ICON_STRENGTH]攻击力。
+				[NEWLINE][ICON_BULLET]对陆军远程，防空单位，攻城单位和陆地AOE武器+50%[ICON_STRENGTH]攻击力。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_HUSSAR">
@@ -13748,7 +13804,10 @@
 			<Text>咆哮战吼</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_ROARING_ELEPHANT_HELP">
-			<Text>目标单位受到[COLOR_NEGATIVE_TEXT]士气低落[ENDCOLOR]效果。</Text>
+			<Text>
+				[ICON_BULLET]攻击使目标单位受到[COLOR_NEGATIVE_TEXT]士气低落[ENDCOLOR]效果。
+				[NEWLINE][ICON_BULLET]对重装骑兵、骑射单位+100%[ICON_STRENGTH]攻击力。
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_CITY_PILLAGE_FREE">
