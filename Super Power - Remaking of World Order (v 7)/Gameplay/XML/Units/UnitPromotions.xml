@@ -2371,6 +2371,16 @@
 			<OtherPromotionType>PROMOTION_NUCLEAR_ARTILLERY</OtherPromotionType>
 			<Attack>50</Attack>
 		</Row>
+		<Row>
+			<PromotionType>PROMOTION_ROARING_ELEPHANT</PromotionType>
+			<OtherPromotionType>PROMOTION_HITANDRUN</OtherPromotionType>
+			<Attack>100</Attack>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_ROARING_ELEPHANT</PromotionType>
+			<OtherPromotionType>PROMOTION_KNIGHT_COMBAT</OtherPromotionType>
+			<Attack>100</Attack>
+		</Row>
 	</UnitPromotions_PromotionModifiers>
 
 
@@ -2844,26 +2854,6 @@
 			<UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
 			<Modifier>75</Modifier>
 		</Row>
-		<Row>
-			<PromotionType>PROMOTION_NAVALMELEE_COMBAT</PromotionType>
-			<UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType>
-			<Modifier>-25</Modifier>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_NAVALMELEE_COMBAT</PromotionType>
-			<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-			<Modifier>-25</Modifier>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_DESTROYER_COMBAT</PromotionType>
-			<UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType>
-			<Modifier>-25</Modifier>
-		</Row>
-		<!--<Row>
-			<PromotionType>PROMOTION_DESTROYER_COMBAT</PromotionType>
-			<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-			<Modifier>50</Modifier>
-		</Row>-->
 	</UnitPromotions_UnitCombatMods>
 
 
@@ -2944,7 +2934,6 @@
 			<HealOutsideFriendly>true</HealOutsideFriendly>
 			<CanMoveAfterAttacking>true</CanMoveAfterAttacking>
 			<LostWithUpgrade>true</LostWithUpgrade>
-			<OnlyDefensive>true</OnlyDefensive>
 			<IgnoreZOC>true</IgnoreZOC>
 			<CityAttack>-50</CityAttack>
 			<CannotBeChosen>true</CannotBeChosen>
@@ -7121,7 +7110,7 @@
 		<Row>
 			<PromotionType>PROMOTION_AIR_ATTACK</PromotionType>
 			<DomainType>DOMAIN_SEA</DomainType>
-			<Modifier>100</Modifier>
+			<Modifier>125</Modifier>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_CARRIER_FIGHTER</PromotionType>
@@ -7131,7 +7120,7 @@
 		<Row>
 			<PromotionType>PROMOTION_CARRIER_FIGHTER</PromotionType>
 			<DomainType>DOMAIN_SEA</DomainType>
-			<Modifier>100</Modifier>
+			<Modifier>125</Modifier>
 		</Row>
 		
 		<Row>

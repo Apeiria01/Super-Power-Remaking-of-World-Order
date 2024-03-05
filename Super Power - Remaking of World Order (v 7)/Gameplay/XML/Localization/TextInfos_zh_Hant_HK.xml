@@ -12910,14 +12910,30 @@
 			<Text>近戰海軍</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_NAVALMELEE_COMBAT_HELP">
-			<Text>克制[COLOR_POSITIVE_TEXT]海軍遊獵[ENDCOLOR]單位。[NEWLINE]能夠攻擊後移動。[NEWLINE]能夠擊退敵方單位（如果敵方受到的傷害高於你受到的傷害）。</Text>
+			<Text>
+				海軍近戰單位，擅長攻擊和護送單位。
+				[NEWLINE][ICON_BULLET]能夠攻擊後移動。
+				[NEWLINE][ICON_BULLET]能夠擊退敵方單位（如果敵方受到的傷害高於妳受到的傷害）。
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]克制[COLOR_POSITIVE_TEXT]海軍遊獵[ENDCOLOR]單位。
+				[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]海軍遠程[ENDCOLOR]單位克制。
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_DESTROYER_COMBAT">
 			<Text>驅逐艦</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_DESTROYER_COMBAT_HELP">
-			<Text>能夠攔截敵方飛機（每回合一次）。[NEWLINE]可以發現潛艇。[NEWLINE]能夠攻擊後移動。對[COLOR_POSITIVE_TEXT]潛艇[ENDCOLOR]單位有戰鬥力加成。[NEWLINE]能夠擊退敵方單位（如果敵方受到的傷害高於你受到的傷害）。</Text>
+			<Text>
+				現代海軍近戰單位，擅長攻擊和護送單位，以及對抗敵方潛艇和提供有限的防空支援。
+				[NEWLINE][ICON_BULLET]能夠攻擊後移動。
+				[NEWLINE][ICON_BULLET]能夠擊退敵方單位（如果敵方受到的傷害高於妳受到的傷害）。
+				[NEWLINE][ICON_BULLET]能夠攔截敵方飛機（每回合壹次）。
+				[NEWLINE][ICON_BULLET]可以發現潛艇。
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]克制[COLOR_POSITIVE_TEXT]海軍遊獵[ENDCOLOR]單位和[COLOR_POSITIVE_TEXT]潛艇[ENDCOLOR]單位。
+				[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]海軍遠程[ENDCOLOR]單位克制。
+			</Text>
 		</Row>
 
 		<Replace Tag="TXT_KEY_PROMOTION_BOARDING_PARTY_1">
@@ -12940,24 +12956,52 @@
 		</Replace>
 
 		<Row Tag="TXT_KEY_PROMOTION_NAVAL_HIT_AND_RUN">
-			<Text>游獵海軍</Text>
+			<Text>遊獵海軍</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_NAVAL_HIT_AND_RUN_HELP">
-			<Text>能夠攻擊後移動，無視區域控制。[NEWLINE]克制[COLOR_POSITIVE_TEXT]海軍遠程[ENDCOLOR]和[COLOR_POSITIVE_TEXT]海軍旗艦[ENDCOLOR]單位，被[COLOR_NEGATIVE_TEXT]海軍近戰[ENDCOLOR]單位克制。</Text>
+			<Text>
+				海軍遊獵部隊，擅長與敵方大型艦艇作戰。
+				[NEWLINE][ICON_BULLET]可以[COLOR_POSITIVE_TEXT]遠程攻擊[ENDCOLOR]也可以[COLOR_POSITIVE_TEXT]近戰攻擊[ENDCOLOR]。
+				[NEWLINE][ICON_BULLET]能夠攻擊後移動。
+				[NEWLINE][ICON_BULLET]無視區域控制。
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]攻擊[COLOR_NEGATIVE_TEXT]城市[ENDCOLOR]戰鬥力減成。
+				[NEWLINE][ICON_BULLET]克制[COLOR_POSITIVE_TEXT]海軍遠程[ENDCOLOR]單位和[COLOR_POSITIVE_TEXT]海軍旗艦[ENDCOLOR]單位。
+				[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]海軍近戰[ENDCOLOR]單位克制。
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_SUBMARINE_COMBAT">
 			<Text>潛艇單位</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SUBMARINE_COMBAT_HELP">
-			<Text>能夠攻擊後移動，無視區域控制。[NEWLINE]隱形但可被驅逐艦發現。可以發現潛艇。[NEWLINE]克制[COLOR_POSITIVE_TEXT]海軍單位[ENDCOLOR]但被[COLOR_NEGATIVE_TEXT]驅逐艦[ENDCOLOR]克制。[NEWLINE]無法被岸基空軍發現或攻擊，但被艦載機克制。</Text>
+			<Text>
+				具有隱形能力的潛艇部隊，擅長與敵方大型艦艇作戰。
+				[NEWLINE][ICON_BULLET]能夠攻擊後移動。
+				[NEWLINE][ICON_BULLET]無視區域控制。
+				[NEWLINE][ICON_BULLET][COLOR_POSITIVE_TEXT]隱形[ENDCOLOR]但可被[COLOR_NEGATIVE_TEXT]驅逐艦[ENDCOLOR]發現。
+				[NEWLINE][ICON_BULLET]可以發現潛艇。
+				[NEWLINE][ICON_BULLET]可以進入冰區。
+				[NEWLINE][ICON_BULLET]無法被岸基空軍發現或攻擊。
+				[NEWLINE][ICON_BULLET]無法攻擊[COLOR_NEGATIVE_TEXT]陸地目標[ENDCOLOR]。
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]克制[COLOR_POSITIVE_TEXT]海軍遠程[ENDCOLOR]單位、[COLOR_POSITIVE_TEXT]海軍旗艦[ENDCOLOR]單位和[COLOR_POSITIVE_TEXT]航母[ENDCOLOR]單位。
+				[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]驅逐艦[ENDCOLOR]單位克制。
+			</Text>
 		</Row>
 
 		<Replace Tag="TXT_KEY_PROMOTION_NAVAL_RANGED_SHIP">
 			<Text>遠程海軍</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_NAVAL_RANGED_SHIP_HELP">
-			<Text>克制[COLOR_POSITIVE_TEXT]海軍近戰[ENDCOLOR]單位，被[COLOR_NEGATIVE_TEXT]海軍遊獵[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]潛艇[ENDCOLOR]單位克制。[NEWLINE]能進行遠程攻擊亦可進行近戰攻擊。[NEWLINE]攻擊目標時對同一格單位造成50%傷害。</Text>
+			<Text>
+				海軍遠程單位，專用於火力支援和破壞敵軍艦隊防禦。
+				[NEWLINE][ICON_BULLET]可以[COLOR_POSITIVE_TEXT]遠程攻擊[ENDCOLOR]也可以[COLOR_POSITIVE_TEXT]近戰攻擊[ENDCOLOR]。
+				[NEWLINE][ICON_BULLET]攻擊目標時對同壹格單位造成50%傷害。
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]克制[COLOR_POSITIVE_TEXT]海軍近戰[ENDCOLOR]單位和[COLOR_POSITIVE_TEXT]堡壘[ENDCOLOR]單位。
+				[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]海軍遊獵[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]潛艇[ENDCOLOR]單位克制。
+				</Text>
 		</Replace>
 
 		<Row Tag="TXT_KEY_PROMOTION_NAVAL_RANGED_CRUISER">
@@ -12967,11 +13011,14 @@
 			<Text>
 				現代海軍遠程部隊，專用於火力支援和破壞敵軍艦隊防禦，同時提供空中支援。
 				[NEWLINE][ICON_BULLET]可以[COLOR_POSITIVE_TEXT]遠程攻擊[ENDCOLOR]也可以[COLOR_POSITIVE_TEXT]近戰攻擊[ENDCOLOR]。
+				[NEWLINE][ICON_BULLET]對目標同壹地格的單位造成50%的傷害。
 				[NEWLINE][ICON_BULLET]每回合可以執行2次攔截（3格內）。
-				[NEWLINE][ICON_BULLET]對目標同一地格的單位造成50%的傷害。
-				[NEWLINE][NEWLINE][ICON_BULLET]克制[COLOR_POSITIVE_TEXT]海軍近戰單位[ENDCOLOR]和[COLOR_POSITIVE_TEXT]導彈單位[ENDCOLOR]。
-				[NEWLINE][NEWLINE][ICON_BULLET]克制[COLOR_POSITIVE_TEXT]戰鬥機[ENDCOLOR]和[COLOR_POSITIVE_TEXT]直升機[ENDCOLOR]。
-				[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]海軍遊獵單位[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]潛艇[ENDCOLOR]克制。
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]面對[COLOR_POSITIVE_TEXT]空中遊獵[ENDCOLOR]戰鬥力加成
+				[NEWLINE][ICON_BULLET]克制[COLOR_POSITIVE_TEXT]堡壘[ENDCOLOR]單位。
+				[NEWLINE][ICON_BULLET]克制[COLOR_POSITIVE_TEXT]海軍近戰[ENDCOLOR]單位和[COLOR_POSITIVE_TEXT]導彈[ENDCOLOR]單位。
+				[NEWLINE][ICON_BULLET]克制[COLOR_POSITIVE_TEXT]戰鬥機[ENDCOLOR]單位和[COLOR_POSITIVE_TEXT]直升機[ENDCOLOR]單位。
+				[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]海軍遊獵單位[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]潛艇[ENDCOLOR]單位克制。
 			</Text>
 		</Row>
 
@@ -12979,7 +13026,13 @@
 			<Text>旗艦單位</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_NAVAL_CAPITAL_SHIP_HELP">
-			<Text>同時代[ICON_STRENGTH]戰鬥力最強的單位。[NEWLINE]攻擊目標時對臨近單位造成50%傷害。[NEWLINE]進攻[COLOR_POSITIVE_TEXT]軍事要塞固定炮臺[ENDCOLOR]+350%[ICON_STRENGTH]戰鬥力。[NEWLINE]被[COLOR_NEGATIVE_TEXT]空軍[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]潛艇[ENDCOLOR]單位克制。</Text>
+			<Text>
+				同時代[ICON_STRENGTH]戰鬥力最強的單位。
+				[NEWLINE][ICON_BULLET]攻擊目標時對臨近單位造成50%傷害。
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]克制[COLOR_POSITIVE_TEXT]堡壘[ENDCOLOR]單位。
+				[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]空軍[ENDCOLOR]單位和[COLOR_NEGATIVE_TEXT]潛艇[ENDCOLOR]單位克制。
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_ARMOR_BATTLESHIP_1">
@@ -13027,11 +13080,14 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_CARRIER_UNIT_HELP">
 			<Text>
-				能夠裝載艦載機。
-				[NEWLINE]艦載機獲得的經驗會傳遞給所在航母。
-				[NEWLINE]在友方地域內能夠補充艦載機。
-				[NEWLINE]與其在同一格的單位回復時每回合額外+15HP，本單位回復時每回合額外+15HP。
-				[NEWLINE]被[COLOR_NEGATIVE_TEXT]海軍遊獵[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]潛艇[ENDCOLOR]單位克制。
+				一個移動的武器平臺，攜帶多用途艦載機，控制天空和海洋，甚至陸地。
+				[NEWLINE][ICON_BULLET]能夠裝載艦載機。
+				[NEWLINE][ICON_BULLET]艦載機獲得的經驗會傳遞給所在航母。
+				[NEWLINE][ICON_BULLET]在友方地域內能夠補充艦載機。
+				[NEWLINE][ICON_BULLET]同壹格的單位每回合回復時額外+15HP。
+				[NEWLINE][ICON_BULLET]本單位每回合回復時額外+15HP。
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]海軍遊獵[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]潛艇[ENDCOLOR]單位克制。
 			</Text>
 		</Row>
 
@@ -13554,7 +13610,7 @@
 		<Row Tag="TXT_KEY_PROMOTION_SP_FULL_MOON_STRIKE_HELP">
 			<Text>
 				[ICON_BULLET]+1[ICON_MOVES]移動力（可疊加）。
-				[NEWLINE][ICON_BULLET]對陸軍遠程，防空單位，攻城單位和陸地AOE武器+100%[ICON_STRENGTH]攻擊力。
+				[NEWLINE][ICON_BULLET]對陸軍遠程，防空單位，攻城單位和陸地AOE武器+50%[ICON_STRENGTH]攻擊力。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_HUSSAR">
@@ -13567,7 +13623,10 @@
 			<Text>咆哮戰吼</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_ROARING_ELEPHANT_HELP">
-			<Text>目標單位受到[COLOR_NEGATIVE_TEXT]士氣低落[ENDCOLOR]效果。</Text>
+			<Text>
+				[ICON_BULLET]攻擊使目標單位受到[COLOR_NEGATIVE_TEXT]士氣低落[ENDCOLOR]效果。
+				[NEWLINE][ICON_BULLET]對重裝騎兵、騎射單位+100%[ICON_STRENGTH]攻擊力。
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_CITY_PILLAGE_FREE">

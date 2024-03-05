@@ -15000,9 +15000,12 @@
 		<Row Tag="TXT_KEY_PROMOTION_NAVALMELEE_COMBAT_HELP">
 			<Text>
 				Versatile Naval Melee Unit, good at both attacking and escorting.
-				[NEWLINE][NEWLINE][ICON_BULLET]Strong vs [COLOR_POSITIVE_TEXT]Naval Hit-and-Run Units[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Militia Units[ENDCOLOR].
 				[NEWLINE][ICON_BULLET]Can move after attacking.
-				[ENDCOLOR][NEWLINE][ICON_BULLET]Can force the enemy to withdraw when it inflicts more damage to the enemy than it receives.</Text>
+				[NEWLINE][ICON_BULLET]Can force the enemy to withdraw when it inflicts more damage to the enemy than it receives.
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]Strong vs [COLOR_POSITIVE_TEXT]Naval Hit-and-Run Units[ENDCOLOR].
+				[NEWLINE][ICON_BULLET]Weak vs [COLOR_NEGATIVE_TEXT]Naval Ranged Units[ENDCOLOR].
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_DESTROYER_COMBAT">
@@ -15011,12 +15014,13 @@
 		<Row Tag="TXT_KEY_PROMOTION_DESTROYER_COMBAT_HELP">
 			<Text>
 				Versatile Naval Melee Unit, good at both attacking and escorting. Also designed to fight against enemy Submarines and porvide limited anti-air support.
-				[NEWLINE][ICON_BULLET]Can See Submarines.
 				[NEWLINE][ICON_BULLET]Can move after attacking.
-				[NEWLINE][NEWLINE][ICON_BULLET]Can [COLOR_POSITIVE_TEXT]Intercept[ENDCOLOR] enemy aircrafts and missiles within 1 hex once per turn.
-				[NEWLINE][ICON_BULLET]Strong vs [COLOR_POSITIVE_TEXT]Submarines[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Militia[ENDCOLOR] Units.
 				[NEWLINE][ICON_BULLET]Can force the enemy to withdraw when it inflicts more damage to the enemy than it receives.
-				[NEWLINE][NEWLINE][ICON_BULLET]Weak during enemy's [COLOR_NEGATIVE_TEXT]Airsweep[ENDCOLOR].
+				[NEWLINE][ICON_BULLET]Can [COLOR_POSITIVE_TEXT]Intercept[ENDCOLOR] enemy aircrafts and missiles within 1 hex once per turn.
+				[NEWLINE][ICON_BULLET]Can see Submarines.
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]Strong vs [COLOR_POSITIVE_TEXT]Submarines[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Naval Hit-and-Run Units[ENDCOLOR].
+				[NEWLINE][ICON_BULLET]Weak vs [COLOR_NEGATIVE_TEXT]Naval Ranged Units[ENDCOLOR].
 			</Text>
 		</Row>
 
@@ -15047,10 +15051,14 @@
 		<Row Tag="TXT_KEY_PROMOTION_NAVAL_HIT_AND_RUN_HELP">
 			<Text>
 				Naval Hit-and-run Unit, good at naval combat against enemy large ships.
+				[NEWLINE][ICON_BULLET]Can perform both [COLOR_POSITIVE_TEXT]Ranged Attacks[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Melee Attacks[ENDCOLOR].
 				[NEWLINE][ICON_BULLET]Can move after attacking.
 				[NEWLINE][ICON_BULLET]Ignore enemy Zones of Control (ZOC).
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]Weak attacking [COLOR_NEGATIVE_TEXT]Cities[ENDCOLOR].
 				[NEWLINE][ICON_BULLET]Strong vs [COLOR_POSITIVE_TEXT]Naval Ranged Units[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Capital Ship Units[ENDCOLOR].
-				[NEWLINE][ICON_BULLET]Weak vs [COLOR_NEGATIVE_TEXT]Naval Melee Units[ENDCOLOR] and [COLOR_NEGATIVE_TEXT]Cities[ENDCOLOR].</Text>
+				[NEWLINE][ICON_BULLET]Weak vs [COLOR_NEGATIVE_TEXT]Naval Melee Units[ENDCOLOR] and [COLOR_NEGATIVE_TEXT]Cities[ENDCOLOR].
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_SUBMARINE_COMBAT">
@@ -15058,14 +15066,18 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SUBMARINE_COMBAT_HELP">
 			<Text>
-				Naval Hit-and-run Unit with stealth ability, good at naval combat against enemy large ships.
+				Naval Submarine Unit with stealth ability, good at naval combat against enemy large ships.
 				[NEWLINE][ICON_BULLET]Can move after attacking.
 				[NEWLINE][ICON_BULLET]Ignore enemy Zones of Control (ZOC).
-				[NEWLINE][NEWLINE][ICON_BULLET][COLOR_POSITIVE_TEXT]Invisible[ENDCOLOR] to other units except [COLOR_NEGATIVE_TEXT]Destroyers[ENDCOLOR].
+				[NEWLINE][ICON_BULLET][COLOR_POSITIVE_TEXT]Invisible[ENDCOLOR] to other units except [COLOR_NEGATIVE_TEXT]Destroyers[ENDCOLOR].
 				[NEWLINE][ICON_BULLET]Can see Submarines.
-				[NEWLINE][ICON_BULLET]Strong vs [COLOR_POSITIVE_TEXT]Naval Ranged Units[ENDCOLOR] [COLOR_POSITIVE_TEXT]Capital Ship Units[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Carriers[ENDCOLOR].
+				[NEWLINE][ICON_BULLET]Can move into Ice.
 				[NEWLINE][ICON_BULLET]Land-based Aircraft cannot detect nor attack them (but vulnerable to carrier-based fighters' attack)
-				[NEWLINE][ICON_BULLET]Weak vs [COLOR_NEGATIVE_TEXT]Destroyers[ENDCOLOR].</Text>
+				[NEWLINE][ICON_BULLET]Can not attack [COLOR_NEGATIVE_TEXT]Land Target[ENDCOLOR].
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]Strong vs [COLOR_POSITIVE_TEXT]Naval Ranged Units[ENDCOLOR], [COLOR_POSITIVE_TEXT]Capital Ship Units[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Carriers[ENDCOLOR].
+				[NEWLINE][ICON_BULLET]Weak vs [COLOR_NEGATIVE_TEXT]Destroyers[ENDCOLOR].
+			</Text>
 		</Row>
 
 
@@ -15079,9 +15091,11 @@
 				Naval Ranged Unit, designed for fire support and soften the enemy fleet.
 				[NEWLINE][ICON_BULLET]Can perform both [COLOR_POSITIVE_TEXT]Ranged Attacks[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Melee Attacks[ENDCOLOR].
 				[NEWLINE][ICON_BULLET]Cause 50% Damage to other units in the Target Tile.
+				[NEWLINE]
 				[NEWLINE][ICON_BULLET]Strong vs [COLOR_POSITIVE_TEXT]Citadels[ENDCOLOR].
 				[NEWLINE][NEWLINE][ICON_BULLET]Strong vs [COLOR_POSITIVE_TEXT]Naval Melee Units[ENDCOLOR].
-				[NEWLINE][ICON_BULLET]Weak vs [COLOR_NEGATIVE_TEXT]Naval Hit-and-run Units[ENDCOLOR] and [COLOR_NEGATIVE_TEXT]Submarines[ENDCOLOR].</Text>
+				[NEWLINE][ICON_BULLET]Weak vs [COLOR_NEGATIVE_TEXT]Naval Hit-and-run Units[ENDCOLOR] and [COLOR_NEGATIVE_TEXT]Submarines[ENDCOLOR].
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_NAVAL_RANGED_CRUISER" >
@@ -15091,8 +15105,9 @@
 			<Text>
 				Modern Naval Ranged Unit, designed for fire support and soften the enemy fleet, also provides anti-air support.
 				[NEWLINE][ICON_BULLET]Can perform both [COLOR_POSITIVE_TEXT]Ranged Attacks[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Melee Attacks[ENDCOLOR].
-				[NEWLINE][ICON_BULLET]Can intercept enemy aircrafts and missiles within 3 hexes twice per turn.
 				[NEWLINE][ICON_BULLET]Cause 50% Damage to other units in the Target Tile.
+				[NEWLINE][ICON_BULLET]Can intercept enemy aircrafts and missiles within 3 hexes twice per turn.
+				[NEWLINE]
 				[NEWLINE][ICON_BULLET]Strong vs [COLOR_POSITIVE_TEXT]Citadels[ENDCOLOR].
 				[NEWLINE][ICON_BULLET]Strong vs [COLOR_POSITIVE_TEXT]Naval Melee Units[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Guided Missiles[ENDCOLOR].
 				[NEWLINE][ICON_BULLET]Strong vs [COLOR_POSITIVE_TEXT]Fighter[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Helicopter[ENDCOLOR] Units.
@@ -15108,10 +15123,11 @@
 		<Row Tag="TXT_KEY_PROMOTION_NAVAL_CAPITAL_SHIP_HELP" >
 			<Text>
 				Most powerful Unit of its era able to deal or receive massive damage. Its devasting firepower can deal Area of Effects (AoE) damge.
-				[NEWLINE][NEWLINE][ICON_BULLET]Boast the [COLOR_POSITIVE_TEXT]Strongest[ENDCOLOR] [ICON_STRENGTH] Combat Strength of all units in its Era.
 				[NEWLINE][ICON_BULLET]Cause 50% Damage to all enemy units [COLOR_POSITIVE_TEXT]Adjacent[ENDCOLOR] to the target unit. But cause No Collateral Damage.
+				[NEWLINE]
 				[NEWLINE][ICON_BULLET]Strong vs [COLOR_POSITIVE_TEXT]Citadels[ENDCOLOR].
-				[NEWLINE][ICON_BULLET]Weak vs [COLOR_NEGATIVE_TEXT]Aircrafts[ENDCOLOR] and [COLOR_NEGATIVE_TEXT]Submarines[ENDCOLOR].</Text>
+				[NEWLINE][ICON_BULLET]Weak vs [COLOR_NEGATIVE_TEXT]Aircrafts[ENDCOLOR] and [COLOR_NEGATIVE_TEXT]Submarines[ENDCOLOR].
+			</Text>
 		</Row>
 	
 
@@ -15179,6 +15195,7 @@
 				[NEWLINE][ICON_BULLET]Can [COLOR_POSITIVE_TEXT]Resupply[ENDCOLOR] its Carrier-based Aircrafts when inside Friendly Territory.
 				[NEWLINE][ICON_BULLET]All units in the same tile Heal +15 HP per turn.
 				[NEWLINE][ICON_BULLET]This unit Heals +15 HP per turn.
+				[NEWLINE]
 				[NEWLINE][ICON_BULLET]Weak vs [COLOR_NEGATIVE_TEXT]Naval Hit-and-run Units[ENDCOLOR] and [COLOR_NEGATIVE_TEXT]Submarines[ENDCOLOR].
 			</Text>
 		</Row>
@@ -15803,7 +15820,7 @@
 		<Row Tag="TXT_KEY_PROMOTION_SP_FULL_MOON_STRIKE_HELP">
 			<Text>
 				[ICON_BULLET]+1 [ICON_MOVES] Movement (can multiply).
-				[NEWLINE][ICON_BULLET]+100% [ICON_STRENGTH] Attack vs [COLOR_POSITIVE_TEXT]Siege Units, Archery, Anti Aircraft Units and Land AOE weapons[ENDCOLOR].
+				[NEWLINE][ICON_BULLET]+50% [ICON_STRENGTH] Attack vs [COLOR_POSITIVE_TEXT]Siege Units, Archery, Anti Aircraft Units and Land AOE weapons[ENDCOLOR].
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_HUSSAR">
@@ -15816,7 +15833,10 @@
 			<Text>Roar</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_ROARING_ELEPHANT_HELP">
-			<Text>The target Unit suffers [COLOR_NEGATIVE_TEXT]Morale Weakened[ENDCOLOR].</Text>
+			<Text>
+				[ICON_BULLET]The target Unit suffers [COLOR_NEGATIVE_TEXT]Morale Weakened[ENDCOLOR].
+				[NEWLINE][ICON_BULLET]+100% [ICON_STRENGTH] Attack vs [COLOR_POSITIVE_TEXT]Mounted Archery Units and Heavy Mounted Unit[ENDCOLOR].
+			</Text>
 		</Row>
 
 

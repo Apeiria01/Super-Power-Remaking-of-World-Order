@@ -1118,8 +1118,8 @@
 			<BaseSightRange>3</BaseSightRange>
 			<Combat>35</Combat>
 			<RangedCombat>20</RangedCombat>
-			<Cost>115</Cost>
-			<Moves>7</Moves>
+			<Cost>110</Cost>
+			<Moves>6</Moves>
 			<Range>1</Range>
 			<HurryCostModifier>33</HurryCostModifier>
 			<CombatClass>UNITCOMBAT_HELICOPTER</CombatClass>
