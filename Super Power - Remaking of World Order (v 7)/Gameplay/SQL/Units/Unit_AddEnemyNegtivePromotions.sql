@@ -77,5 +77,5 @@ insert into PromotionCollections_Entries(CollectionType, PromotionIndex, Promoti
 ('PROMOTION_COLLECTION_DESTROY_SUPPLY', 1, 'PROMOTION_DIVINE_WEAPON_3', 1, 50, 1);
 
 --Roar
-insert into PromotionCollections_Entries(CollectionType, PromotionIndex, PromotionType, TriggerRangedAttack, TriggerHPPercent, TriggerLuaHook) values
-('PROMOTION_COLLECTION_COLLATERAL_DAMAGE', 1, 'PROMOTION_ROARING_ELEPHANT', 1, 80, 1);
+insert into PromotionCollections_Entries(CollectionType, PromotionIndex, PromotionType, TriggerRangedAttack, TriggerMeleeAttack, TriggerHPPercent, TriggerLuaHook) values
+('PROMOTION_COLLECTION_COLLATERAL_DAMAGE', 1, 'PROMOTION_ROARING_ELEPHANT', 1, 1, 100, 1);

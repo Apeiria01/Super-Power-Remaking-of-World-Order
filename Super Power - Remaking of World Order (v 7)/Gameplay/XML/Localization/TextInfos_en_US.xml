@@ -15802,8 +15802,8 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SP_FULL_MOON_STRIKE_HELP">
 			<Text>
-				[ICON_BULLET]+1 Movement (can multiply).
-				[NEWLINE][ICON_BULLET]+100% [ICON_STRENGTH] Attack vs [COLOR_POSITIVE_TEXT]Siege Units, Archery, Anti Aircraft Units and Land AoE weapons[ENDCOLOR].
+				[ICON_BULLET]+1 [ICON_MOVES] Movement (can multiply).
+				[NEWLINE][ICON_BULLET]+100% [ICON_STRENGTH] Attack vs [COLOR_POSITIVE_TEXT]Siege Units, Archery, Anti Aircraft Units and Land AOE weapons[ENDCOLOR].
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_HUSSAR">
@@ -15816,7 +15816,7 @@
 			<Text>Roar</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_ROARING_ELEPHANT_HELP">
-			<Text>If the Target Unit's HP is less than 80% after this attack, the target unit suffers [COLOR_NEGATIVE_TEXT]Morale Weakened[ENDCOLOR].</Text>
+			<Text>The target Unit suffers [COLOR_NEGATIVE_TEXT]Morale Weakened[ENDCOLOR].</Text>
 		</Row>
 
 

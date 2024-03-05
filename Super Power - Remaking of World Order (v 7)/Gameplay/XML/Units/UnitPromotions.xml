@@ -189,21 +189,22 @@
 			<Description>TXT_KEY_PROMOTION_SP_FULL_MOON_STRIKE</Description>
 			<Help>TXT_KEY_PROMOTION_SP_FULL_MOON_STRIKE_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>59</PortraitIndex>
 			<CannotBeChosen>true</CannotBeChosen>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PortraitIndex>49</PortraitIndex>
+			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_SP_FULL_MOON_STRIKE</PediaEntry>
 			<MovesChange>1</MovesChange>
 		</Row>
+
 		<Row>
 			<Type>PROMOTION_HUSSAR</Type>
 			<Description>TXT_KEY_PROMOTION_HUSSAR</Description>
 			<Help>TXT_KEY_PROMOTION_HUSSAR_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>59</PortraitIndex>
 			<CannotBeChosen>true</CannotBeChosen>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PortraitIndex>48</PortraitIndex>
+			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_HUSSAR</PediaEntry>
 			<FightWellDamaged>true</FightWellDamaged>
@@ -214,9 +215,9 @@
 			<Description>TXT_KEY_PROMOTION_ROARING_ELEPHANT</Description>
 			<Help>TXT_KEY_PROMOTION_ROARING_ELEPHANT_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>59</PortraitIndex>
 			<CannotBeChosen>true</CannotBeChosen>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PortraitIndex>47</PortraitIndex>
+			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_ROARING_ELEPHANT</PediaEntry>
 		</Row>
