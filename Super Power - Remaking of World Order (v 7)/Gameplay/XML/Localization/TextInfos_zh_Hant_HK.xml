@@ -13552,7 +13552,10 @@
 			<Text>滿月突擊</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SP_FULL_MOON_STRIKE_HELP">
-			<Text>[ICON_BULLET]+1移動（可疊加）。[NEWLINE][ICON_BULLET]對陸軍遠程，防空單位，攻城單位和陸地AoE武器+100%[ICON_STRENGTH]攻擊力。</Text>
+			<Text>
+				[ICON_BULLET]+1[ICON_MOVES]移動力（可疊加）。
+				[NEWLINE][ICON_BULLET]對陸軍遠程，防空單位，攻城單位和陸地AOE武器+100%[ICON_STRENGTH]攻擊力。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_HUSSAR">
 			<Text>英勇無畏</Text>
@@ -13564,7 +13567,7 @@
 			<Text>咆哮戰吼</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_ROARING_ELEPHANT_HELP">
-			<Text>若目標單位剩余血量小於80%，受到[COLOR_NEGATIVE_TEXT]士氣低落[ENDCOLOR]效果。</Text>
+			<Text>目標單位受到[COLOR_NEGATIVE_TEXT]士氣低落[ENDCOLOR]效果。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_CITY_PILLAGE_FREE">
