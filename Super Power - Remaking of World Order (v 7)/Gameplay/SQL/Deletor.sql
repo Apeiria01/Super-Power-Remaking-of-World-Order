@@ -138,6 +138,7 @@ INSERT INTO SPTriggerControler(TriggerType,Enabled)
 SELECT 'SPNRligionDeleteEffect',0 UNION ALL
 SELECT 'SPNDeleteALLUnitStrategicFlag',0 UNION ALL
 SELECT 'Policy_Bill_Of_Right_Trigger',0 UNION ALL
+SELECT 'Minor_Units_Overrides_Trigger',0 UNION ALL
 SELECT 'Minor_Building_Overrides_Trigger',0;
 
 --DROP TRIGGER SPNRligionDeleteEffect;

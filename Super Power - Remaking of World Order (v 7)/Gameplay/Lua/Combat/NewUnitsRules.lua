@@ -43,11 +43,6 @@ function NewUnitCreationRules(playerID)
 				unit:Kill();
 				player:InitUnit(iUnitType, plot:GetX(), plot:GetY(), UNITAI_ATTACK);
 			end
-			if not unit:IsDead() and not unit:IsDelayedDeath()
-				and not unit:IsHasPromotion(ForeignLandsID) and unit:IsHasPromotion(MilitiaID)
-			then
-				unit:SetHasPromotion(ForeignLandsID, true);
-			end
 		end
 		return;
 	end

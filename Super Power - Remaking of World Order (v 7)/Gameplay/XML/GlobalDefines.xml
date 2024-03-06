@@ -793,7 +793,7 @@
 		</Update>
 
 		<Update>
-			<Set Value="40"/>
+			<Set Value="60"/>
 			<Where Name="BARBARIAN_TECH_PERCENT" />
 		</Update>
 	</Defines>

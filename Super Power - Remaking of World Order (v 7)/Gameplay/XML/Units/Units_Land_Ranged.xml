@@ -105,6 +105,7 @@
 			<IconAtlas>UNIT_ATLAS_1</IconAtlas>
 			<PortraitIndex>6</PortraitIndex>
 			<ExtraMaintenanceCost>2</ExtraMaintenanceCost>
+			<ObsoleteTech>TECH_PHYSICS</ObsoleteTech>
 		</Row>
 
 
