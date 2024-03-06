@@ -66,6 +66,7 @@
 			<IconAtlas>UNIT_ATLAS_1</IconAtlas>
 			<PortraitIndex>23</PortraitIndex>
 			<MoveRate>WOODEN_BOAT</MoveRate>
+			<ObsoleteTech>TECH_STEAM_POWER</ObsoleteTech>
 		</Row>
 
 

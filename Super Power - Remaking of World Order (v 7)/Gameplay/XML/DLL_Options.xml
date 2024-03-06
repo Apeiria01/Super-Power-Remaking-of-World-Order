@@ -289,6 +289,11 @@
 		</Update>
 
 		<Update>
+			<Where Name="GLOBAL_UNIT_BARBARIAN_CAN_TRAIN"/>
+			<Set Value="1"/>
+		</Update>
+
+		<Update>
 			<Where Name="UNIT_COST_DONOT_INCTEASE_WITH_TURN"/>
 			<Set Value="1"/>
 		</Update>

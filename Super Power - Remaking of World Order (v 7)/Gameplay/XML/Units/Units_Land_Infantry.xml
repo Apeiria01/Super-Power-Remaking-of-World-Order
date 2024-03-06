@@ -73,6 +73,7 @@
 			<PortraitIndex>25</PortraitIndex>
 			<MoveRate>HEAVY_BIPED</MoveRate>
 			<ExtraMaintenanceCost>1</ExtraMaintenanceCost>
+			<ObsoleteTech>TECH_METALLURGY</ObsoleteTech>
 		</Row>
 
 
