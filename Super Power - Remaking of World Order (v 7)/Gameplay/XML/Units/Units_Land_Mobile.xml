@@ -268,39 +268,7 @@
 			<MoveRate>QUADRUPED</MoveRate>
 			<ExtraMaintenanceCost>5</ExtraMaintenanceCost>
 		</Row>
-		<Row>
-			<Class>UNITCLASS_HORSEMAN</Class>
-			<Type>UNIT_BARBARIAN_HORSEMAN</Type>
-			<PrereqTech>TECH_HORSEBACK_RIDING</PrereqTech>
-			<Combat>26</Combat>
-			<Cost>110</Cost>
-			<Moves>4</Moves>
-			<CombatClass>UNITCOMBAT_MOUNTED</CombatClass>
-			<Domain>DOMAIN_LAND</Domain>
-			<DefaultUnitAI>UNITAI_FAST_ATTACK</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_HORSEMAN</Description>
-			<Help>TXT_KEY_PROMOTION_KNIGHT_COMBAT_HELP</Help>
-			<ShowInPedia>false</ShowInPedia>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
-			<Pillage>true</Pillage>
-			<ObsoleteTech>TECH_CHIVALRY</ObsoleteTech>
-			<GoodyHutUpgradeUnitClass>UNITCLASS_KNIGHT</GoodyHutUpgradeUnitClass>
-			<AdvancedStartCost>20</AdvancedStartCost>
-			<XPValueAttack>3</XPValueAttack>
-			<XPValueDefense>3</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_U_SWEDISH_HAKKAPELITTA</UnitArtInfo>
-			<UnitFlagAtlas>EXPANSION_UNIT_FLAG_ATLAS</UnitFlagAtlas>
-			<UnitFlagIconOffset>6</UnitFlagIconOffset>
-			<IconAtlas>EXPANSION_UNIT_ATLAS_1</IconAtlas>
-			<PortraitIndex>6</PortraitIndex>
-			<MoveRate>QUADRUPED</MoveRate>
-			<ExtraMaintenanceCost>5</ExtraMaintenanceCost>
-		</Row>
-
-
-
-
+		
 		<Row>
 			<Class>UNITCLASS_KNIGHT</Class>
 			<Type>UNIT_KNIGHT</Type>
@@ -1523,11 +1491,6 @@
 			<UnitType>UNIT_GREEK_COMPANIONCAVALRY</UnitType>
 			<UnitClassType>UNITCLASS_KNIGHT</UnitClassType>
 		</Row>
-		<Row>
-			<UnitType>UNIT_BARBARIAN_HORSEMAN</UnitType>
-			<UnitClassType>UNITCLASS_KNIGHT</UnitClassType>
-		</Row>
-
 
 		<Row>
 			<UnitType>UNIT_KNIGHT</UnitType>
@@ -1801,10 +1764,6 @@
 		
 
 		<!--Heavy Mounted - Tank-->
-		<Row>
-			<UnitType>UNIT_BARBARIAN_HORSEMAN</UnitType>
-			<PromotionType>PROMOTION_KNIGHT_COMBAT</PromotionType>
-		</Row>
 		<Row>
 			<UnitType>UNIT_HORSEMAN</UnitType>
 			<PromotionType>PROMOTION_KNIGHT_COMBAT</PromotionType>
@@ -2380,14 +2339,6 @@
 			<UnitType>UNIT_SPANISH_CONQUISTADOR</UnitType>
 			<UnitAIType>UNITAI_SETTLE</UnitAIType>
 		</Row>
-		<Row>
-			<UnitType>UNIT_BARBARIAN_HORSEMAN</UnitType>
-			<UnitAIType>UNITAI_ATTACK</UnitAIType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_BARBARIAN_HORSEMAN</UnitType>
-			<UnitAIType>UNITAI_FAST_ATTACK</UnitAIType>
-		</Row>
 		
 		<Row>
 			<UnitType>UNIT_KNIGHT</UnitType>
@@ -2745,10 +2696,6 @@
 			<ResourceType>RESOURCE_HORSE</ResourceType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_BARBARIAN_HORSEMAN</UnitType>
-			<ResourceType>RESOURCE_HORSE</ResourceType>
-		</Row>
-		<Row>
 			<UnitType>UNIT_BYZANTINE_CATAPHRACT</UnitType>
 			<ResourceType>RESOURCE_HORSE</ResourceType>
 		</Row>
@@ -2826,11 +2773,6 @@
 		</Row>
 		<Row>
 			<UnitType>UNIT_GREEK_COMPANIONCAVALRY</UnitType>
-			<ResourceType>RESOURCE_MANPOWER</ResourceType>
-			<Cost>3</Cost>
-		</Row>
-		<Row>
-			<UnitType>UNIT_BARBARIAN_HORSEMAN</UnitType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 			<Cost>3</Cost>
 		</Row>
@@ -3232,16 +3174,6 @@
 			<UnitType>UNIT_SPANISH_CONQUISTADOR</UnitType>
 			<FlavorType>FLAVOR_MOBILE</FlavorType>
 			<Flavor>48</Flavor>
-		</Row>
-		<Row>
-			<UnitType>UNIT_BARBARIAN_HORSEMAN</UnitType>
-			<FlavorType>FLAVOR_MOBILE</FlavorType>
-			<Flavor>20</Flavor>
-		</Row>
-		<Row>
-			<UnitType>UNIT_BARBARIAN_HORSEMAN</UnitType>
-			<FlavorType>FLAVOR_OFFENSE</FlavorType>
-			<Flavor>10</Flavor>
 		</Row>
 
 		<Row>

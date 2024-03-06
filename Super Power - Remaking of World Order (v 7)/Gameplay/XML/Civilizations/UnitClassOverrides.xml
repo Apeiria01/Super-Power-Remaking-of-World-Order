@@ -876,16 +876,6 @@
 		</Row>
 		<Row>
 			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
-			<UnitClassType>UNITCLASS_SPEARMAN</UnitClassType>
-			<UnitType>UNIT_BARBARIAN_SPEARMAN</UnitType>
-		</Row>
-		<Row>
-			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
-			<UnitClassType>UNITCLASS_HORSEMAN</UnitClassType>
-			<UnitType>UNIT_BARBARIAN_HORSEMAN</UnitType>
-		</Row>
-		<Row>
-			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
 			<UnitClassType>UNITCLASS_CHARIOT_ARCHER</UnitClassType>
 			<UnitType>UNIT_BARBARIAN_AXMAN</UnitType>
 		</Row>

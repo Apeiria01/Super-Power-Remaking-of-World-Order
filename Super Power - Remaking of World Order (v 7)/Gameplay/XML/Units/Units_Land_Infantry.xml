@@ -1411,37 +1411,6 @@
 			<PortraitIndex>10</PortraitIndex>
 			<ExtraMaintenanceCost>1</ExtraMaintenanceCost>
 		</Row>
-		
-
-		<Row>
-			<Class>UNITCLASS_SPEARMAN</Class>
-			<Type>UNIT_BARBARIAN_SPEARMAN</Type>
-			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
-			<BaseSightRange>2</BaseSightRange>
-			<Combat>18</Combat>
-			<Cost>25</Cost>
-			<Moves>2</Moves>
-			<CombatClass>UNITCOMBAT_MELEE</CombatClass>
-			<Domain>DOMAIN_LAND</Domain>
-			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_SPEARMAN</Description>
-			<ShowInPedia>false</ShowInPedia>
-			<Help>TXT_KEY_PROMOTION_ANTI_MOUNTED_HELP</Help>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
-			<Pillage>true</Pillage>
-			<ObsoleteTech>TECH_STEEL</ObsoleteTech>
-			<GoodyHutUpgradeUnitClass>UNITCLASS_PIKEMAN</GoodyHutUpgradeUnitClass>
-			<AdvancedStartCost>15</AdvancedStartCost>
-			<XPValueAttack>3</XPValueAttack>
-			<XPValueDefense>3</XPValueDefense>
-			<Conscription>2</Conscription>
-			<UnitArtInfo>ART_DEF_UNIT_BARBARIAN_SPEARMAN</UnitArtInfo>
-			<UnitFlagIconOffset>9</UnitFlagIconOffset>
-			<IconAtlas>UNIT_ATLAS_1</IconAtlas>
-			<PortraitIndex>9</PortraitIndex>
-			<ExtraMaintenanceCost>1</ExtraMaintenanceCost>
-		</Row>
 
 		<Row>
 			<Class>UNITCLASS_PIKEMAN</Class>
@@ -1833,10 +1802,6 @@
 		</Row>
 		<Row>
 			<UnitType>UNIT_CELT_PICTISH_WARRIOR</UnitType>
-			<UnitClassType>UNITCLASS_PIKEMAN</UnitClassType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_BARBARIAN_SPEARMAN</UnitType>
 			<UnitClassType>UNITCLASS_PIKEMAN</UnitClassType>
 		</Row>
 		
@@ -2324,19 +2289,6 @@
 			<PromotionType>PROMOTION_GUNPOWDER_INFANTRY_COMBAT</PromotionType>
 		</Row>
 		
-
-
-		<Row>
-			<UnitType>UNIT_BARBARIAN_SPEARMAN</UnitType>
-			<PromotionType>PROMOTION_ANTI_MOUNTED</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_BARBARIAN_SPEARMAN</UnitType>
-			<PromotionType>PROMOTION_HALF_CASUALTIES</PromotionType>
-		</Row>
-
-
-
 		<Row>
 			<UnitType>UNIT_SPEARMAN</UnitType>
 			<PromotionType>PROMOTION_ANTI_MOUNTED</PromotionType>
@@ -2731,10 +2683,6 @@
 
 		<Row>
 			<UnitType>UNIT_SPEARMAN</UnitType>
-			<ResourceType>RESOURCE_MANPOWER</ResourceType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_BARBARIAN_SPEARMAN</UnitType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 		</Row>
 		<Row>
@@ -3158,15 +3106,6 @@
 			<UnitAIType>UNITAI_DEFENSE</UnitAIType>
 		</Row>
 		
-		<Row>
-			<UnitType>UNIT_BARBARIAN_SPEARMAN</UnitType>
-			<UnitAIType>UNITAI_DEFENSE</UnitAIType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_BARBARIAN_SPEARMAN</UnitType>
-			<UnitAIType>UNITAI_COUNTER</UnitAIType>
-		</Row>
-
 		<Row>
 			<UnitType>UNIT_PIKEMAN</UnitType>
 			<UnitAIType>UNITAI_DEFENSE</UnitAIType>
@@ -3698,19 +3637,12 @@
 			<FlavorType>FLAVOR_DEFENSE</FlavorType>
 			<Flavor>25</Flavor>
 		</Row>
-		
-		<Row>
-			<UnitType>UNIT_BARBARIAN_SPEARMAN</UnitType>
-				<FlavorType>FLAVOR_DEFENSE</FlavorType>
-				<Flavor>6</Flavor>
-		</Row>
 
 		<Row>
 			<UnitType>UNIT_PIKEMAN</UnitType>
 			<FlavorType>FLAVOR_DEFENSE</FlavorType>
 			<Flavor>40</Flavor>
 		</Row>
-
 
 		<Row>
 			<UnitType>UNIT_SPANISH_TERCIO</UnitType>

@@ -10,6 +10,7 @@
 
 		<Delete UnitType="UNIT_BARBARIAN_HORSEMAN"/>
 		<Delete UnitType="UNIT_BARBARIAN_SWORDSMAN"/>
+		<Delete UnitType="UNIT_BARBARIAN_SPEARMAN"/>
 		<Delete UnitType="UNIT_WORKBOAT"/>
 		<Delete UnitType="UNIT_PRIVATEER"/>
 		<Delete UnitType="UNIT_GALLEY"/>
@@ -531,11 +532,6 @@
 			<UnitType>UNIT_EXPLORERX</UnitType>
 			<SelectionSound>AS2D_SELECT_SCOUT</SelectionSound>
 			<FirstSelectionSound>AS2D_BIRTH_SCOUT</FirstSelectionSound>
-		</Row>
-		<Row>
-			<UnitType>UNIT_BARBARIAN_HORSEMAN</UnitType>
-			<SelectionSound>AS2D_SELECT_CHARIOT_ARCHER</SelectionSound>
-			<FirstSelectionSound>AS2D_BIRTH_CHARIOT_ARCHER</FirstSelectionSound>
 		</Row>
 		<Row>
 			<UnitType>UNIT_BARBARIAN_GALLEY</UnitType>
