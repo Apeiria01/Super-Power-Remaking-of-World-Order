@@ -138,39 +138,6 @@
 			<ExtraMaintenanceCost>1</ExtraMaintenanceCost>
 			<WorkRate>100</WorkRate>
 		</Row>
-		<!--
-		<Row>
-			<Class>UNITCLASS_MILITIA_ANCIENT</Class>
-			<Type>UNIT_BARBARIAN_SWORDSMAN</Type>
-			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
-			<BaseSightRange>2</BaseSightRange>
-			<Combat>15</Combat>
-			<Cost>18</Cost>
-			<Moves>2</Moves>
-			<CombatClass>UNITCOMBAT_RECON</CombatClass>
-			<Domain>DOMAIN_LAND</Domain>
-			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_SWORDSMAN</Description>
-			<Strategy>TXT_KEY_SP_UNITS_LAND_INFANTRY_STRATEGY</Strategy>
-			<Help>TXT_KEY_PROMOTION_INFANTRY_COMBAT_HELP</Help>
-			<ShowInPedia>false</ShowInPedia>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
-			<Pillage>true</Pillage>
-			<ObsoleteTech>TECH_METALLURGY</ObsoleteTech>
-			<GoodyHutUpgradeUnitClass>UNITCLASS_MINUTEMAN</GoodyHutUpgradeUnitClass>
-			<AdvancedStartCost>20</AdvancedStartCost>
-			<XPValueAttack>3</XPValueAttack>
-			<XPValueDefense>3</XPValueDefense>
-			<Conscription>1</Conscription>
-			<UnitArtInfo>ART_DEF_UNIT_U_IROQUOIAN_MOHAWKWARRIOR</UnitArtInfo>
-			<UnitFlagIconOffset>16</UnitFlagIconOffset>
-			<IconAtlas>UNIT_ATLAS_1</IconAtlas>
-			<PortraitIndex>16</PortraitIndex>
-			<MoveRate>HEAVY_BIPED</MoveRate>
-			<ExtraMaintenanceCost>3</ExtraMaintenanceCost>
-		</Row>
-		-->
 		
 		<Row>
 			<Class>UNITCLASS_MINUTEMAN</Class>
@@ -1634,12 +1601,6 @@
 			<UnitType>UNIT_MILITIA_ANCIENT</UnitType>
 			<UnitClassType>UNITCLASS_MINUTEMAN</UnitClassType>
 		</Row>
-		<!--
-		<Row>
-			<UnitType>UNIT_BARBARIAN_SWORDSMAN</UnitType>
-			<UnitClassType>UNITCLASS_MINUTEMAN</UnitClassType>
-		</Row>
-		-->
 
 		<Row>
 			<UnitType>UNIT_AMERICAN_MINUTEMAN</UnitType>
@@ -1860,14 +1821,6 @@
 			<UnitType>UNIT_MILITIA_ANCIENT</UnitType>
 			<PromotionType>PROMOTION_HALF_CASUALTIES</PromotionType>
 		</Row>
-		<!--<Row>
-			<UnitType>UNIT_BARBARIAN_SWORDSMAN</UnitType>
-			<PromotionType>PROMOTION_MILITIA_COMBAT</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_BARBARIAN_SWORDSMAN</UnitType>
-			<PromotionType>PROMOTION_HALF_CASUALTIES</PromotionType>
-		</Row>-->
 		
 		<Row>
 			<UnitType>UNIT_AMERICAN_MINUTEMAN</UnitType>
@@ -2898,17 +2851,6 @@
 			<UnitType>UNIT_CELT_PICTISH_WARRIOR</UnitType>
 			<UnitAIType>UNITAI_DEFENSE</UnitAIType>
 		</Row>
-		<!--
-		<Row>
-			<UnitType>UNIT_BARBARIAN_SWORDSMAN</UnitType>
-			<UnitAIType>UNITAI_ATTACK</UnitAIType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_BARBARIAN_SWORDSMAN</UnitType>
-			<UnitAIType>UNITAI_DEFENSE</UnitAIType>
-		</Row>
-		-->
-
 
 		<Row>
 			<UnitType>UNIT_LONGSWORDSMAN</UnitType>
@@ -3391,20 +3333,6 @@
 			<FlavorType>FLAVOR_DEFENSE</FlavorType>
 			<Flavor>25</Flavor>
 		</Row>
-		<!--
-		<Row>
-			<UnitType>UNIT_BARBARIAN_SWORDSMAN</UnitType>
-			<FlavorType>FLAVOR_OFFENSE</FlavorType>
-			<Flavor>6</Flavor>
-		</Row>
-		<Row>
-			<UnitType>UNIT_BARBARIAN_SWORDSMAN</UnitType>
-			<FlavorType>FLAVOR_DEFENSE</FlavorType>
-			<Flavor>6</Flavor>
-		</Row>
-		-->
-
-
 
 		<Row>
 			<UnitType>UNIT_LONGSWORDSMAN</UnitType>

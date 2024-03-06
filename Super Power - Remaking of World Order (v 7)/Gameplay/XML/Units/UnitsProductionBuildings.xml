@@ -30,12 +30,6 @@
 			<UnitType>UNIT_GREEK_HOPLITE</UnitType>
 			<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
 		</Row>
-		<!--
-		<Row>
-			<UnitType>UNIT_BARBARIAN_SWORDSMAN</UnitType>
-			<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
-		</Row>
-		-->
 		<Row>
 			<UnitType>UNIT_ROMAN_LEGION</UnitType>
 			<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
