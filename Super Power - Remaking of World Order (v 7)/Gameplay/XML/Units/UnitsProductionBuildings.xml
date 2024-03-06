@@ -285,12 +285,6 @@
 			<UnitType>UNIT_GREEK_COMPANIONCAVALRY</UnitType>
 			<BuildingClassType>BUILDINGCLASS_ARMORY</BuildingClassType>
 		</Row>
-		<!--
-		<Row>
-			<UnitType>UNIT_BARBARIAN_HORSEMAN</UnitType>
-			<BuildingClassType>BUILDINGCLASS_ARMORY</BuildingClassType>
-		</Row>
-		-->
 		<Row>
 			<UnitType>UNIT_KNIGHT</UnitType>
 			<BuildingClassType>BUILDINGCLASS_ARMORY</BuildingClassType>
