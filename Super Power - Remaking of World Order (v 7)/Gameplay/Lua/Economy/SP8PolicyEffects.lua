@@ -181,7 +181,9 @@ function SPEPlayerCompletedMinorCivQuest(iMajor, iMinor, iQuestType, iStartTurn,
 	if pPlayer == nil or civPlayer == nil or pPlayer:IsMinorCiv() or pPlayer:IsBarbarian() then
 	 	return
 	end
-	if pPlayer:HasPolicy(GameInfo.Policies["POLICY_CONSULATES"].ID) then
+	if pPlayer:HasPolicy(GameInfo.Policies["POLICY_CONSULATES"].ID)
+	and iNewInfluence - iOldInfluence > 0
+	then
 		local eEra = pPlayer:GetCurrentEra()
 		local bonus =( (iNewInfluence - iOldInfluence) * (2 + eEra) /200 )
 		pPlayer:ChangeJONSCulture(bonus)
