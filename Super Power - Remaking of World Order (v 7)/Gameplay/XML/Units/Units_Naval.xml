@@ -339,7 +339,7 @@
 			<Description>TXT_KEY_UNIT_DANISH_DRAGONSHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_DANISH_DRAGONSHIP_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_SP_UNITS_NAVALMELEE_SHIPS_STRATEGY</Strategy>
-			<Help>TXT_KEY_PROMOTION_NAVALMELEE_COMBAT_HELP</Help>
+			<Help>TXT_KEY_UNIT_HELP_UNIT_DANISH_DRAGONSHIP</Help>
 			<GoodyHutUpgradeUnitClass>UNITCLASS_FRIGATE</GoodyHutUpgradeUnitClass>
 			<MilitarySupport>true</MilitarySupport>
 			<MilitaryProduction>true</MilitaryProduction>
@@ -443,7 +443,7 @@
 			<Description>TXT_KEY_UNIT_SPANISH_ARMADA</Description>
 			<Civilopedia>TXT_KEY_UNIT_SPANISH_ARMADA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_SP_UNITS_NAVALMELEE_SHIPS_STRATEGY</Strategy>
-			<Help>TXT_KEY_PROMOTION_NAVALMELEE_COMBAT_HELP</Help>
+			<Help>TXT_KEY_UNIT_HELP_SPANISH_ARMADA</Help>
 			<MilitarySupport>true</MilitarySupport>
 			<MilitaryProduction>true</MilitaryProduction>
 			<Pillage>true</Pillage>
@@ -781,7 +781,7 @@
 			<Description>TXT_KEY_UNIT_SEA_BEGGAR</Description>
 			<Civilopedia>TXT_KEY_CIV5_SEA_BEGGAR_TEXT</Civilopedia>
 			<Strategy>TXT_KEY_SP_UNITS_NAVAL_HIT_AND_RUN_SHIPS_STRATEGY</Strategy>
-			<Help>TXT_KEY_PROMOTION_NAVAL_HIT_AND_RUN_HELP</Help>
+			<Help>TXT_KEY_UNIT_HELP_SEA_BEGGAR</Help>
 			<MilitarySupport>true</MilitarySupport>
 			<MilitaryProduction>true</MilitaryProduction>
 			<Pillage>true</Pillage>
