@@ -2371,6 +2371,10 @@
 			<UnitType>UNIT_CELT_PICTISH_WARRIOR</UnitType>
 			<PromotionType>PROMOTION_HALF_CASUALTIES</PromotionType>
 		</Row>
+		<Row>
+			<UnitType>UNIT_CELT_PICTISH_WARRIOR</UnitType>
+			<PromotionType>PROMOTION_WAR_FAITH</PromotionType>
+		</Row>
 		
 		<Row>
 			<UnitType>UNIT_GREEK_HOPLITE</UnitType>
@@ -3754,13 +3758,4 @@
 		</Row>
 		
 	</Unit_Flavors>
-
-
-	<Unit_YieldFromKills>
-		<Row>
-			<UnitType>UNIT_CELT_PICTISH_WARRIOR</UnitType>
-			<YieldType>YIELD_FAITH</YieldType>
-			<Yield>50</Yield>
-		</Row>
-	</Unit_YieldFromKills>
 </GameData>

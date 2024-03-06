@@ -444,8 +444,8 @@
 			<DefaultUnitAI>UNITAI_FAST_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SPANISH_CONQUISTADOR</Description>
 			<Civilopedia>TXT_KEY_CIV5_SPAIN_CONQUISTADOR_TEXT</Civilopedia>
-			<Strategy>TXT_KEY_CIV5_SPAIN_CONQUISTADOR_STRATEGY</Strategy>
-			<Help>TXT_KEY_PROMOTION_KNIGHT_COMBAT_HELP</Help>
+			<Strategy>TXT_KEY_SP_UNITS_HEAVY_MOBILE_UNITS_STRATEGY</Strategy>
+			<Help>TXT_KEY_CIV5_SPAIN_CONQUISTADOR_HELP</Help>
 			<FoundAbroad>true</FoundAbroad>
 			<MilitarySupport>true</MilitarySupport>
 			<MilitaryProduction>true</MilitaryProduction>

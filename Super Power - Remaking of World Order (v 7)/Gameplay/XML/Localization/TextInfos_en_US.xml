@@ -12413,6 +12413,9 @@
 			<Text>A privateer (sometimes called corsair or buccaneer) was a private person or ship authorized by a government by letters of marque to attack foreign vessels during wartime, and take them as prizes. Captured ships were subject to condemnation and sale under prize law, with the proceeds divided between the privateer shipowners and crew. Privateering was a way of mobilizing armed ships and sailors as naval auxiliaries.</Text>
 		</Row>
 
+		<Replace Tag="TXT_KEY_UNIT_HELP_SEA_BEGGAR">
+			<Text>Naval Hit-and-run Unit, is the Sloop of War replacement, specializes in attacking coastal cities to earn gold and pillaging. Only the Dutch can build it. The Sea Beggar gains [ICON_CULTURE] Culture equals[ICON_STRENGTH] Strength of the Enemy defeated. But the last ability would lose with upgrades.</Text>
+		</Replace>
 
 		<Row Tag="TXT_KEY_UNIT_PROTECTED_CRUISER">
 			<Text>Protected Cruiser</Text>
@@ -12693,12 +12696,10 @@
 		<Text>La Armada Invincible</Text>
 	</Row>
 	<Row Tag="TXT_KEY_UNIT_HELP_SPANISH_ARMADA">
-		<Text>La Armada Invincible is a heavy combat vessel that can also be used to gain some gold uppon defeat enermy naval units. Only the Spanish civilization can build it. 
-		</Text>
+		<Text>La Armada Invincible is a heavy combat vessel. Only the Spanish civilization can build it. It gains [ICON_GOLD] Gold equals to the [ICON_STRENGTH] Strength of the enemy it destorys.(Not inheritable)</Text>
 	</Row>
 	<Row Tag="TXT_KEY_UNIT_SPANISH_ARMADA_PEDIA">
-		<Text>The Spanish Armada (Spanish: Grande y Felicísima Armada or Armada Invencible, literally "Great and Most Fortunate Navy" or "Invincible Fleet") was a Spanish fleet of 130 ships that sailed from A Coruña in August 1588 under the command of the Duke of Medina Sidonia with the purpose of escorting an army from Flanders to invade England. 
-		[NEWLINE][NEWLINE]It gains [ICON_GOLD] Gold equals to the [ICON_STRENGTH] Strength of the enemy it destorys.(Not inheritable)</Text>
+		<Text>The Spanish Armada (Spanish: Grande y Felicísima Armada or Armada Invencible, literally "Great and Most Fortunate Navy" or "Invincible Fleet") was a Spanish fleet of 130 ships that sailed from A Coruña in August 1588 under the command of the Duke of Medina Sidonia with the purpose of escorting an army from Flanders to invade England. </Text>
 	</Row>
 
 	<Replace Tag="TXT_KEY_UNIT_BYZANTINE_DROMON">
@@ -12735,15 +12736,13 @@
 			<Plurality>2</Plurality>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_HELP_UNIT_DANISH_DRAGONSHIP">
-			<Text>WIP</Text>
+			<Text>The Dragonship is the Galeasse replacement, and only Denmark may build it. It gains [ICON_GOLD] Gold twice as the [ICON_STRENGTH] Strength of the enemy it destorys.(Not inheritable)</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_DANISH_DRAGONSHIP_HEADING">
 			<Text>Dragonship</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_DANISH_DRAGONSHIP_PEDIA">
-			<Text>Viking ships were marine vessels of particular designs, used and built by the Vikings during the Viking Age. The boat-types were quite varied, depending on what the ship was intended for, but they were generally characterized as being slender and flexible boats, with symmetrical ends with true keel. 
-			[NEWLINE][NEWLINE]It gains [ICON_GOLD] Gold twice as the [ICON_STRENGTH] Strength of the enemy it destorys.(Not inheritable)
-			</Text>
+			<Text>Viking ships were marine vessels of particular designs, used and built by the Vikings during the Viking Age. The boat-types were quite varied, depending on what the ship was intended for, but they were generally characterized as being slender and flexible boats, with symmetrical ends with true keel. </Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_BUILD_CARRIER_FIGHTER">
@@ -13323,7 +13322,7 @@
 			<Text>Unique Hunnic early hit-and-run unit. Replaces the Chariot Archer. It is stronger but cheaper than the generic chariot.</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_CIV5_SPAIN_CONQUISTADOR_STRATEGY">
+		<Replace Tag="TXT_KEY_CIV5_SPAIN_CONQUISTADOR_HELP">
 			<Text>The Conquistador is a multi-purpose unit that is strong both on land and at sea. Replacing the Knight, it is a great scout with extra visibility on land and can move faster when embarking in the water. It has stronger combat and also has the ability to found new cities, but only on a foreign continent that does not contain the Spanish capital. Earns 50% of opponents' strength as [ICON_GOLD] Gold for kills(Not inheritable).</Text>
 		</Replace>
 
@@ -15800,7 +15799,6 @@
 				[ICON_BULLET]Steal [ICON_GOLD] Gold equals to 200% of the damage inflicted on a city by Melee Attack.
 				[NEWLINE][ICON_BULLET]Cost No [ICON_MOVES] Movement to pillage. Restore 15 more Hit Points when healing outside friendly land.
 				[NEWLINE][ICON_BULLET]+200%[ICON_STRENGTH] Strength Melee Attacking City.+50%[ICON_STRENGTH] Strength Range Attacking City.
-				[NEWLINE]The Sea Beggar gains [ICON_CULTURE] Culture equals[ICON_STRENGTH] Strength of the Enemy defeated. But the last ability would lose with upgrades.
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_MULTIPURPOSE_DESTROYER">
@@ -17171,6 +17169,13 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_WAR_SEIENCE_HELP">
 			<Text>Can earn [ICON_RESEARCH] Science for each enemy killed (50% of its [ICON_STRENGTH] Combat Strength).</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_PROMOTION_WAR_FAITH">
+			<Text>Warrior of Faith</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_WAR_FAITH_HELP">
+			<Text>Can earn [ICON_PEACE] Faith for each enemy killed (100% of its [ICON_STRENGTH] Combat Strength).</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_CIV5_HUN_HORSE_ARCHER_HELP_TEXT">

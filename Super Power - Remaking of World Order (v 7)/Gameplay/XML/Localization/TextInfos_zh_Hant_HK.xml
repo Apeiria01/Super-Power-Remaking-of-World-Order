@@ -10554,8 +10554,12 @@
 			<Text>奧斯曼私掠艦</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_OTTOMAN_PRIVATEER_PEDIA">
-			<Text>替代巡航艦，自帶可繼承的對負傷單位+50%戰鬥力晉升和“私掠”晉升：可俘獲被擊敗的敵船，攻擊城市時將其對城市的傷害的200%數值轉化為金幣，劫掠不消耗移動力。</Text>
+			<Text>私掠是一種動員武裝船只和水手作為海軍輔助力量的方式。在戰時私掠艦可以攻擊外國船只，並將其作為戰利品。根據戰利品法，被俘的船只將被沒收並出售，所得款項由私人船主和船員平分。</Text>
 		</Row>
+
+		<Replace Tag="TXT_KEY_UNIT_HELP_SEA_BEGGAR">
+			<Text>遊獵海軍單位，替代單桅戰船，擅長攻擊海岸城市掠取金錢以及劫掠。只有荷蘭能夠建造。海上乞丐殺敵能獲得[ICON_CULTURE]文化，數值等同於敵軍[ICON_STRENGTH]戰鬥力，但是這項能力在升級後不保留。</Text>
+		</Replace>
 
 		<Row Tag="TXT_KEY_UNIT_PROTECTED_CRUISER">
 			<Text>裝甲巡洋艦</Text>
@@ -10853,8 +10857,7 @@
 			<Text>無敵艦隊是強大的海軍近戰部隊，取代巡航艦，和巡航艦的戰鬥力相同，只有西班牙文明才能建造。無敵艦隊擅長海戰，對海軍單位+33%[ICON_STRENGTH]戰鬥力，如果敵艦被擊沉，那麼它可以利用敵艦的殘骸進行維修，回復50HP，並且掠奪到與敵人[ICON_STRENGTH]戰鬥力相等的[ICON_GOLD]金幣（该掠奪不可繼承）。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_SPANISH_ARMADA_PEDIA">
-			<Text>西班牙艦隊（英語：Spanish Armada，西班牙語：Grande y Felicísima Armada或Armada Invencible，即最幸運的艦隊或不可擊敗的艦隊、無敵艦隊）為16世紀後期著名的海上艦隊，是由西班牙國王肺力二世在1588年所派出，意圖征服英格蘭卻失敗的艦隊。
-				[NEWLINE][NEWLINE]殺敵掠奪到與敵人[ICON_STRENGTH]戰鬥力相等的[ICON_GOLD]金幣（該掠奪不可繼承）</Text>
+			<Text>西班牙艦隊（英語：Spanish Armada，西班牙語：Grande y Felicísima Armada或Armada Invencible，即最幸運的艦隊或不可擊敗的艦隊、無敵艦隊）為16世紀後期著名的海上艦隊，是由西班牙國王肺力二世在1588年所派出，意圖征服英格蘭卻失敗的艦隊。</Text>
 		</Row>
 
 		<Replace Tag="TXT_KEY_UNIT_BYZANTINE_DROMON">
@@ -10894,14 +10897,13 @@
 			<Plurality>2</Plurality>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_HELP_UNIT_DANISH_DRAGONSHIP">
-			<Text>替代槳帆戰艦，出生即可進入深海，自帶可繼承的對負傷單位+50%戰鬥力的晉升。殺敵後獲得相當於敵人戰鬥力數值兩倍的金幣（不可繼承）。</Text>
+			<Text>替代槳帆戰艦，出生即可進入深海，自帶可繼承的對負傷單位+50%戰鬥力的晉升。殺敵後獲得相當於敵人戰鬥力數值兩倍的[ICON_GOLD]金幣（不可繼承）。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_DANISH_DRAGONSHIP_HEADING">
 			<Text>龍頭戰船</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_DANISH_DRAGONSHIP_PEDIA">
-			<Text>維京戰船統稱維京龍頭戰艦。早在8世紀末之前，船就成為維京精神的重要象徵。維京人的海船一般長70－100英尺，製作精良，可說是一件藝術品，是維京造船師精湛技藝的完美體現。
-				[NEWLINE][NEWLINE]殺敵掠奪到敵人[ICON_STRENGTH]戰鬥力兩倍的[ICON_GOLD]金幣</Text>
+			<Text>維京戰船統稱維京龍頭戰艦。早在8世紀末之前，船就成為維京精神的重要象徵。維京人的海船一般長70－100英尺，製作精良，可說是一件藝術品，是維京造船師精湛技藝的完美體現。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_BUILD_CARRIER_FIGHTER">
@@ -11480,7 +11482,7 @@
 			<Text>一種替代戰車，移動迅捷的遠程單位，只有匈人能夠訓練。比戰車便宜且戰鬥力更強。</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_CIV5_SPAIN_CONQUISTADOR_STRATEGY">
+		<Replace Tag="TXT_KEY_CIV5_SPAIN_CONQUISTADOR_HELP">
 			<Text>征服者是西班牙特色單位，替代騎士。征服者在陸上擁有額外的視野，在海運狀態下有更高的移動力，適於進行偵察。該單位在西班牙首都所在大陸以外的地方有更強的戰力並能建立城市。同時，在消滅敵方單位時，可以獲得其戰鬥力50%的[ICON_GOLD]金幣（該能力不繼承）。</Text>
 		</Replace>
 
@@ -13595,7 +13597,6 @@
 				[ICON_BULLET]近战攻城获得造成伤害数值两倍的[ICON_GOLD]金钱。
 				[NEWLINE][ICON_BULLET]劫掠不消耗[ICON_MOVES]移动力，在友方境外多回复15HP。
 				[NEWLINE][ICON_BULLET]近战攻城+200%[ICON_STRENGTH]战斗力，远程攻城+50%[ICON_STRENGTH]战斗力。
-				[NEWLINE]海上乞丐杀敵能获得[ICON_CULTURE]文化值，数值等同於敵军[ICON_STRENGTH]战斗力，这项能力在升级后不保留。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_MULTIPURPOSE_DESTROYER">
@@ -15286,6 +15287,13 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_WAR_SEIENCE_HELP">
 			<Text>消滅敵人時獲得相當於單位[ICON_STRENGTH]戰鬥力50%的[ICON_RESEARCH]科研。</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_PROMOTION_WAR_FAITH">
+			<Text>信仰戰士</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_WAR_FAITH_HELP">
+			<Text>消滅敵人時獲得相當於單位[ICON_STRENGTH]戰鬥力100%的[ICON_PEACE]信仰。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_CIV5_HUN_HORSE_ARCHER_HELP_TEXT">

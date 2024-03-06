@@ -221,6 +221,18 @@
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_ROARING_ELEPHANT</PediaEntry>
 		</Row>
+
+		<Row>
+			<Type>PROMOTION_WAR_FAITH</Type>
+			<Description>TXT_KEY_PROMOTION_WAR_FAITH</Description>
+			<Help>TXT_KEY_PROMOTION_WAR_FAITH_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_WAR_FAITH</PediaEntry>
+		</Row>
 	</UnitPromotions>
 
 	<!--*****************************Quick Speed*******************************************-->
@@ -7176,6 +7188,11 @@
 			<PromotionType>PROMOTION_WAR_SEIENCE</PromotionType>
 			<YieldType>YIELD_SCIENCE</YieldType>
 			<Yield>50</Yield>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_WAR_FAITH</PromotionType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>100</Yield>
 		</Row>
 	</UnitPromotions_YieldFromKills>
 	
