@@ -2040,7 +2040,7 @@
 			<Type>BUILDING_INQUISITION</Type>
 			<BuildingClass>BUILDINGCLASS_INQUISITION</BuildingClass>
 			<Cost>-1</Cost>
-			<FaithCost>150</FaithCost>
+			<FaithCost>200</FaithCost>
 			<UnlockedByBelief>true</UnlockedByBelief>
 			<Description>TXT_KEY_BUILDING_INQUISITION_DESC</Description>
 			<Civilopedia>TXT_KEY_CIV5_BUILDINGS_INQUISITION_TEXT</Civilopedia>
