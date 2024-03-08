@@ -92,7 +92,7 @@
 			<StealTechFasterModifier>100</StealTechFasterModifier>
 			<ThemingBonusMultiplier>800</ThemingBonusMultiplier>
 			<InternalTradeRouteYieldModifier>200</InternalTradeRouteYieldModifier>
-			<StrategicResourceMod>150</StrategicResourceMod>
+			<StrategicResourceMod>40</StrategicResourceMod>
 			<FreeExperience>50</FreeExperience>
 			<PolicyCostModifier>3</PolicyCostModifier>
 		</Row>
@@ -110,7 +110,7 @@
 			<StealTechFasterModifier>50</StealTechFasterModifier>
 			<ThemingBonusMultiplier>400</ThemingBonusMultiplier>
 			<InternalTradeRouteYieldModifier>100</InternalTradeRouteYieldModifier>
-			<StrategicResourceMod>135</StrategicResourceMod>
+			<StrategicResourceMod>30</StrategicResourceMod>
 			<FreeExperience>30</FreeExperience>
 			<PolicyCostModifier>3</PolicyCostModifier>
 		</Row>
@@ -129,7 +129,7 @@
 			<UnitGoldMaintenanceMod>-15</UnitGoldMaintenanceMod>
 			<InternalTradeRouteYieldModifier>100</InternalTradeRouteYieldModifier>
 			<RiggingElectionModifier>50</RiggingElectionModifier>
-			<StrategicResourceMod>120</StrategicResourceMod>
+			<StrategicResourceMod>20</StrategicResourceMod>
 			<FreeExperience>20</FreeExperience>
 			<PolicyCostModifier>3</PolicyCostModifier>
 		</Row>
