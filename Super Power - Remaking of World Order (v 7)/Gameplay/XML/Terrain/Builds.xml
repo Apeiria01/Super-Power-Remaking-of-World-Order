@@ -57,7 +57,7 @@
 		</Update>
 		
 		<Update>
-			<Set PrereqTech="TECH_HUNTING" OrderPriority="140"/>
+			<Set PrereqTech="TECH_HUNTING" OrderPriority="140" Time="500"/>
 			<Where Type="BUILD_CAMP"/>
 		</Update>
 		<Update>
