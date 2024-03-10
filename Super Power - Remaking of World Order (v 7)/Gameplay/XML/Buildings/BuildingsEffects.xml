@@ -3686,7 +3686,7 @@
 		</Row>
 		<Row>
 			<Type>PROMOTION_GPS_MOVEMENT_SMALL</Type>
-			<Description>TXT_KEY_UNIT_SATELLITE_GPS</Description>
+			<Description>TXT_KEY_PROMOTION_GPS_MOVEMENT_SMALL</Description>
 			<Help>TXT_KEY_PROMOTION_GPS_MOVEMENT_SMALL</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<RivalTerritory>true</RivalTerritory>
