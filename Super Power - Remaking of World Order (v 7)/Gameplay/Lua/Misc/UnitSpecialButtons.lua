@@ -812,12 +812,17 @@ MilitiaResupplyButton = {
         local unitCount = plot:GetNumUnits()
         for i = 0, unitCount - 1, 1 do
             local pFoundUnit = plot:GetUnit(i)
-            if pFoundUnit == nil or pFoundUnit:GetID() == unit:GetID() or not pFoundUnit:IsCombatUnit() or pFoundUnit:GetCurrHitPoints() == pFoundUnit:GetMaxHitPoints() or not pFoundUnit:CanMove() then
-                return true
-            else
+            if pFoundUnit 
+            and pFoundUnit:GetID() ~= unit:GetID() 
+            and pFoundUnit:IsCombatUnit() 
+            and pFoundUnit:GetCurrHitPoints() < pFoundUnit:GetMaxHitPoints() 
+            and pFoundUnit:CanMove() 
+            then
                 return false
             end
         end
+        --don't find a valid Unit
+        return true
     end, -- or nil or a boolean, default is false
 
     Action = function(action, unit, eClick)
