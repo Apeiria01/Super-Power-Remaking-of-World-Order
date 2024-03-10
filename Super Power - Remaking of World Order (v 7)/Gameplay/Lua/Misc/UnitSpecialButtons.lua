@@ -904,10 +904,9 @@ HackingMissionButton = {
 
     Disabled = function(action, unit)
         local plotOwner = Players[unit:GetPlot():GetOwner()]
-        if plotOwner == nil or not plotOwner:IsAtWar(unit:GetOwner())  then
+        if plotOwner == nil or not plotOwner:IsAtWarWith(unit:GetOwner())  then
             return true
         end
-
     end, -- or nil or a boolean, default is false
 
     Action = function(action, unit, eClick)
