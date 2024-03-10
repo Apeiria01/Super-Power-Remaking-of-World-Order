@@ -2787,6 +2787,13 @@
 			</Text>
 		</Row>
 
+		<Row Tag="TXT_KEY_SELL_BUILDING_CITY_HALL">
+			<Text>你確定要出售市政廳嗎？你將花費{1_Num}[ICON_GOLD]金錢用於扶持傀儡並將其轉化為傀儡城市，你可省去{2_Num}[ICON_GOLD]金錢/回合的維護費以及直轄城市帶來的政策閾值、不滿等，此外城市將進入壹定回合的[COLOR_NEGATIVE_TEXT]無政府時間[ENDCOLOR]（回合數等於人口的壹半）。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SELL_CITY_HALL_DIABLE">
+			<Text>[COLOR_NEGATIVE_TEXT][ICON_GOLD]金錢不足[ENDCOLOR]</Text>
+		</Row>
+
 		<Row>
 			<Tag>TXT_KEY_BUILDING_PUPPET_GOVERNEMENT</Tag>
 			<Text>#市政廳[COLOR_GREY]（傀儡）[ENDCOLOR]</Text>
