@@ -4435,12 +4435,12 @@
 		</Update>
 
 
-		<Update>
-			<Where Tag="TXT_KEY_BUILDING_CIRCUS_MAXIMUS_HELP" />
-			<Set
-				Text="Must have built a Circus in all Cities. The cost goes up the more cities there are in the empire." />
-		</Update>
-
+		<Replace Tag="TXT_KEY_BUILDING_CIRCUS_MAXIMUS_HELP">
+			<Text>+10 [ICON_HAPPINESS_1]Global Happiness, Must have built a Circus in all Cities. The cost goes up the more cities there are in the empire.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_CIRCUS_MAXIMUS_STRATEGY">
+			<Text>This National Wonder increases [ICON_HAPPINESS_1] Happiness in the empire. It also provides +1 [ICON_CULTURE] Culture. A civilization must have a Colosseum in all cities before it can construct a Circus Maximus.</Text>
+		</Replace>
 
 		<Update>
 			<Where Tag="TXT_KEY_BUILDING_NATIONAL_COLLEGE_HELP" />
@@ -4492,8 +4492,9 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_CARTHAGINIAN_AGORA_HELP</Tag>
 			<Text>
-				-15% [ICON_GOLD] Gold cost for purchasing units or buildings in all cities.
-				[NEWLINE][NEWLINE]This city must have built a circus. The cost goes up the more cities there are in the empire.
+				Replace Circus Maximus, only need this city have a circus. The cost goes up the more cities there are in the empire.
+				[NEWLINE][ICON_BULLET]+10 [ICON_HAPPINESS_1]Global Happiness.
+				[NEWLINE][ICON_BULLET]-15% [ICON_GOLD] Gold cost for purchasing units or buildings in all cities.
 				[NEWLINE][ICON_BULLET]If commercial policy branch is adopted, -5% [ICON_GOLD] Gold cost for purchasing units or buildings in all cities..
 				[NEWLINE][ICON_BULLET]If maritime policy branch is adopted, +10% combat strength for naval units.
 			</Text>
@@ -4678,7 +4679,7 @@
 		</Row>
 		<!-- Pedia tags -->
 		<Row Tag="TXT_KEY_BUILDING_NATIONAL_SCULPTURE_PEDIA">
-			<Text>All hail great emperor! This sclpture is for you! </Text>
+			<Text>The artists are glad to have enough places to put their works, so they build this for you! [NEWLINE][NEWLINE]All hail great emperor! This sclpture is for you! </Text>
 		</Row>
 
 		

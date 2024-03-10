@@ -132,7 +132,6 @@
 			<Help>TXT_KEY_BUILDING_NATIONAL_CARAVANSARY_HELP</Help>
 			<Description>TXT_KEY_BUILDING_NATIONAL_CARAVANSARY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_CARAVANSARY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NATIONAL_CARAVANSARY_STRATEGY</Strategy>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_CARAVANSARY</ArtDefineTag>
 			<NukeImmune>true</NukeImmune>
 			<NumCityCostMod>30</NumCityCostMod>
@@ -146,7 +145,6 @@
 			<NumTradeRouteBonus>1</NumTradeRouteBonus>
 		</Row>
 
-
 		<Row>
 			<Type>BUILDING_NATIONAL_TREASURY</Type>
 			<BuildingClass>BUILDINGCLASS_NATIONAL_TREASURY</BuildingClass>
@@ -155,7 +153,6 @@
 			<Help>TXT_KEY_BUILDING_NATIONAL_TREASURY_HELP</Help>
 			<Description>TXT_KEY_BUILDING_EAST_INDIA</Description>
 			<Civilopedia>TXT_KEY_CIV5_BUILDINGS_EAST_INDIA_TEXT</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_EAST_INDIA_STRATEGY</Strategy>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_TREASURY</ArtDefineTag>
 			<NukeImmune>true</NukeImmune>
 			<NumCityCostMod>30</NumCityCostMod>
@@ -167,8 +164,6 @@
 			<NumTradeRouteBonus>1</NumTradeRouteBonus>
 		</Row>
 
-
-
 		<Row>
 			<Type>BUILDING_NATIONAL_CIRCUS</Type>
 			<BuildingClass>BUILDINGCLASS_NATIONAL_CIRCUS</BuildingClass>
@@ -177,7 +172,6 @@
 			<Help>TXT_KEY_BUILDING_CIRCUS_MAXIMUS_HELP</Help>
 			<Description>TXT_KEY_BUILDING_CIRCUS_MAXIMUS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CIRCUS_MAXIMUS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CIRCUS_MAXIMUS_STRATEGY</Strategy>
 			<ArtDefineTag>ART_DEF_BUILDING_CIRCUS_MAXIMUS</ArtDefineTag>
 			<NukeImmune>true</NukeImmune>
 			<NumCityCostMod>30</NumCityCostMod>
@@ -196,7 +190,6 @@
 			<Help>TXT_KEY_BUILDING_CARTHAGINIAN_AGORA_HELP</Help>
 			<Description>TXT_KEY_BUILDING_CARTHAGINIAN_AGORA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CARTHAGINIAN_AGORA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CIRCUS_MAXIMUS_STRATEGY</Strategy>
 			<ArtDefineTag>ART_DEF_BUILDING_CIRCUS_MAXIMUS</ArtDefineTag>
 			<NukeImmune>true</NukeImmune>
 			<NumCityCostMod>30</NumCityCostMod>
@@ -217,7 +210,6 @@
 			<Help>TXT_KEY_BUILDING_NATIONAL_EPIC_HELP</Help>
 			<Description>TXT_KEY_BUILDING_NATIONAL_EPIC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_EPIC_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NATIONAL_EPIC_STRATEGY</Strategy>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_EPIC</ArtDefineTag>
 			<GreatPeopleRateModifier>33</GreatPeopleRateModifier>
 			<NukeImmune>true</NukeImmune>
@@ -263,7 +255,6 @@
 			<Help>TXT_KEY_BUILDING_IRONWORKS_HELP</Help>
 			<Description>TXT_KEY_BUILDING_IRONWORKS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_IRONWORKS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_IRONWORKS_STRATEGY</Strategy>
 			<ArtDefineTag>ART_DEF_BUILDING_IRONWORKS</ArtDefineTag>
 			<NukeImmune>true</NukeImmune>
 			<NumCityCostMod>20</NumCityCostMod>
@@ -303,7 +294,6 @@
 			<Help>TXT_KEY_BUILDING_INTELLIGENCE_AGENCY_HELP</Help>
 			<Description>TXT_KEY_BUILDING_INTELLIGENCE_AGENCY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INTELLIGENCE_AGENCY_TEXT</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_INTELLIGENCE_AGENCY_STRATEGY</Strategy>
 			<ArtDefineTag>ART_DEF_BUILDING_INTELLIGENCE_AGENCY</ArtDefineTag>
 			<NukeImmune>true</NukeImmune>
 			<NumCityCostMod>20</NumCityCostMod>
@@ -327,7 +317,6 @@
 			<ThemingBonusHelp>TXT_KEY_NATIONAL_LIBRARY_THEMING_BONUS_HELP</ThemingBonusHelp>
 			<Description>TXT_KEY_BUILDING_NATIONAL_LIBRARY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_LIBRARY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NATIONAL_LIBRARY_STRATEGY</Strategy>
 			<NukeImmune>true</NukeImmune>
 			<NumCityCostMod>20</NumCityCostMod>
 			<GreatWorkSlotType>GREAT_WORK_SLOT_LITERATURE</GreatWorkSlotType>
@@ -351,7 +340,6 @@
 			<Help>TXT_KEY_BUILDING_NATIONAL_LABORATORY_HELP</Help>
 			<Description>TXT_KEY_BUILDING_NATIONAL_LABORATORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_LABORATORY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NATIONAL_LABORATORY_STRATEGY</Strategy>
 			<NukeImmune>true</NukeImmune>
 			<NumCityCostMod>20</NumCityCostMod>
 			<HurryCostModifier>-1</HurryCostModifier>
@@ -369,7 +357,6 @@
 			<ThemingBonusHelp>TXT_KEY_NATIONAL_THEATRE_THEMING_BONUS_HELP</ThemingBonusHelp>
 			<Description>TXT_KEY_BUILDING_NATIONAL_THEATRE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_THEATRE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NATIONAL_THEATRE_STRATEGY</Strategy>
 			<NukeImmune>true</NukeImmune>
 			<NumCityCostMod>30</NumCityCostMod>
 			<HurryCostModifier>-1</HurryCostModifier>
@@ -389,7 +376,6 @@
 			<Help>TXT_KEY_BUILDING_NATIONAL_SCULPTURE_HELP</Help>
 			<Description>TXT_KEY_BUILDING_NATIONAL_SCULPTURE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_SCULPTURE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NATIONAL_SCULPTURE_STRATEGY</Strategy>
 			<NukeImmune>true</NukeImmune>
 			<NumCityCostMod>30</NumCityCostMod>
 			<HurryCostModifier>-1</HurryCostModifier>
@@ -408,7 +394,6 @@
 			<Help>TXT_KEY_BUILDING_ETHIOPIA_ROCKHEWN_HELP</Help>
 			<Description>TXT_KEY_BUILDING_ETHIOPIA_ROCKHEWN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ETHIOPIA_ROCKHEWN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NATIONAL_SCULPTURE_STRATEGY</Strategy>
 			<NukeImmune>true</NukeImmune>
 			<LandmarksTourismPercent>50</LandmarksTourismPercent>
 			<GreatWorksTourismModifier>50</GreatWorksTourismModifier>
@@ -430,7 +415,6 @@
 			<Help>TXT_KEY_BUILDING_NATIONAL_OPERA_HOUSE_HELP</Help>
 			<Description>TXT_KEY_BUILDING_NATIONAL_OPERA_HOUSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_OPERA_HOUSE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NATIONAL_OPERA_HOUSE_STRATEGY</Strategy>
 			<ThemingBonusHelp>TXT_KEY_NATIONAL_OPERA_HOUSE_BONUS_HELP</ThemingBonusHelp>
 			<GreatWorkSlotType>GREAT_WORK_SLOT_MUSIC</GreatWorkSlotType>
 			<GreatWorkCount>2</GreatWorkCount>
@@ -451,7 +435,6 @@
 			<ThemingBonusHelp>TXT_KEY_HERMITAGE_THEMING_BONUS_HELP</ThemingBonusHelp>
 			<Description>TXT_KEY_BUILDING_HERMITAGE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HERMITAGE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HERMITAGE_STRATEGY</Strategy>
 			<ArtDefineTag>ART_DEF_BUILDING_HERMITAGE</ArtDefineTag>
 			<NukeImmune>true</NukeImmune>
 			<NumCityCostMod>30</NumCityCostMod>
@@ -495,7 +478,6 @@
 			<Help>TXT_KEY_BUILDING_NATIONAL_EXHIBITION_HELP</Help>
 			<Description>TXT_KEY_BUILDING_NATIONAL_EXHIBITION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_EXHIBITION_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NATIONAL_EXHIBITION_STRATEGY</Strategy>
 			<NukeImmune>true</NukeImmune>
 			<NumCityCostMod>30</NumCityCostMod>
 			<HurryCostModifier>-1</HurryCostModifier>
@@ -506,10 +488,6 @@
 			<GreatWorksTourismModifierGlobal>50</GreatWorksTourismModifierGlobal>
 		</Row>
 
-
-
-		
-
 		<Row>
 			<Type>BUILDING_NATIONAL_COLLEGE</Type>
 			<BuildingClass>BUILDINGCLASS_NATIONAL_COLLEGE</BuildingClass>
@@ -519,7 +497,6 @@
 			<ThemingBonusHelp>TXT_KEY_NATIONAL_COLLEGE_THEMING_BONUS_HELP</ThemingBonusHelp>
 			<Description>TXT_KEY_BUILDING_NATIONAL_COLLEGE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_COLLEGE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NATIONAL_COLLEGE_STRATEGY</Strategy>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_COLLEGE</ArtDefineTag>
 			<GreatWorkSlotType>GREAT_WORK_SLOT_LITERATURE</GreatWorkSlotType>
 			<GreatWorkCount>2</GreatWorkCount>
@@ -585,7 +562,6 @@
 			<Help>TXT_KEY_BUILDING_HARVARD_HELP</Help>
 			<Description>TXT_KEY_BUILDING_HARVARD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HARVARD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HARVARD_STRATEGY</Strategy>
 			<NukeImmune>true</NukeImmune>
 			<NumCityCostMod>30</NumCityCostMod>
 			<HurryCostModifier>-1</HurryCostModifier>
@@ -595,7 +571,6 @@
 			<PortraitIndex>53</PortraitIndex>
 		</Row>
 
-
 		<Row>
 			<Type>BUILDING_NATIONAL_BANK</Type>
 			<BuildingClass>BUILDINGCLASS_NATIONAL_BANK</BuildingClass>
@@ -604,7 +579,6 @@
 			<Help>TXT_KEY_BUILDING_NATIONAL_BANK_HELP</Help>
 			<Description>TXT_KEY_BUILDING_NATIONAL_BANK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_BANK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NATIONAL_BANK_STRATEGY</Strategy>
 			<NukeImmune>true</NukeImmune>
 			<NumCityCostMod>30</NumCityCostMod>
 			<HurryCostModifier>-1</HurryCostModifier>
@@ -622,7 +596,6 @@
 			<Help>TXT_KEY_BUILDING_NATIONAL_STOCK_EXCHANGE_HELP</Help>
 			<Description>TXT_KEY_BUILDING_NATIONAL_STOCK_EXCHANGE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_STOCK_EXCHANGE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NATIONAL_STOCK_EXCHANGE_STRATEGY</Strategy>
 			<NukeImmune>true</NukeImmune>
 			<NumCityCostMod>30</NumCityCostMod>
 			<HurryCostModifier>-1</HurryCostModifier>
@@ -640,7 +613,6 @@
 			<Help>TXT_KEY_BUILDING_NATIONAL_FINANCE_HELP</Help>
 			<Description>TXT_KEY_BUILDING_NATIONAL_FINANCE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_FINANCE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NATIONAL_FINANCE_STRATEGY</Strategy>
 			<NukeImmune>true</NukeImmune>
 			<NumCityCostMod>30</NumCityCostMod>
 			<HurryCostModifier>-1</HurryCostModifier>
@@ -650,9 +622,6 @@
 			<PortraitIndex>51</PortraitIndex>
 			<NumTradeRouteBonus>1</NumTradeRouteBonus>
 		</Row>
-
-
-
 
 		<Row>
 			<Type>BUILDING_NATIONAL_AUTOCRACY</Type>
@@ -714,8 +683,6 @@
 			<IconAtlas>SPWondersUB_ATLAS</IconAtlas>
 			<PortraitIndex>58</PortraitIndex>
 		</Row>
-
-
 	</Buildings>
 
 	<Building_ClassesNeededInCity>
