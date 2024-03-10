@@ -549,7 +549,7 @@
 			<Recommendation>TXT_KEY_BUILD_FISHFARM_MOD_REC</Recommendation>
 			<CanBeEmbarked>true</CanBeEmbarked>
 			<Water>true</Water>
-			<Time>400</Time>
+			<Time>350</Time>			
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_L</HotKey>
 			<OrderPriority>50</OrderPriority>
