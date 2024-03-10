@@ -2909,7 +2909,20 @@ function OnBuildingClicked(iBuildingID)
 	local iRefund = pCity:GetSellBuildingRefund(iBuildingID);
 	local iMaintenance = pBuilding.GoldMaintenance;
 	
-	local localizedLabel = Locale.ConvertTextKey( "TXT_KEY_SELL_BUILDING_INFO", iRefund, iMaintenance );
+	local localizedLabel = "";
+	if pBuilding.BuildingClass:match("^BUILDINGCLASS_CITY_HALL_+.") ~= nil and iRefund < 0 then
+		localizedLabel = Locale.ConvertTextKey( "TXT_KEY_SELL_BUILDING_CITY_HALL", -iRefund, iMaintenance );
+		Controls.YesButton:SetDisabled(false)
+		Controls.YesButton:LocalizeAndSetToolTip("");
+		if iRefund < 0 and Players[Game.GetActivePlayer()]:GetGold() < -iRefund then
+			Controls.YesButton:SetDisabled(true)
+			Controls.YesButton:LocalizeAndSetToolTip("TXT_KEY_SELL_CITY_HALL_DIABLE");
+		end
+	else
+		Controls.YesButton:SetDisabled(false)
+		Controls.YesButton:LocalizeAndSetToolTip("");
+		localizedLabel = Locale.ConvertTextKey( "TXT_KEY_SELL_BUILDING_INFO", iRefund, iMaintenance );
+	end
 	Controls.SellBuildingPopupText:SetText(localizedLabel);
 	
 	g_iBuildingToSell = iBuildingID;

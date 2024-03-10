@@ -100,6 +100,8 @@
 			<PortraitIndex>56</PortraitIndex>
 			<Happiness>-2</Happiness>
 			<CorruptionPolicyCostModifier>5</CorruptionPolicyCostModifier>
+			<ExtraSellRefund>-200</ExtraSellRefund>
+			<ExtraSellRefundModifierPerEra>-5</ExtraSellRefundModifierPerEra>
 		</Row>
 		<Row>
 			<Type>BUILDING_CITY_HALL_LV2</Type>
@@ -119,6 +121,8 @@
 			<Happiness>-4</Happiness>
 			<CorruptionPolicyCostModifier>10</CorruptionPolicyCostModifier>
 			<UnhappinessModifier>2</UnhappinessModifier>
+			<ExtraSellRefund>-500</ExtraSellRefund>
+			<ExtraSellRefundModifierPerEra>-5</ExtraSellRefundModifierPerEra>
 		</Row>
 		<Row>
 			<Type>BUILDING_CITY_HALL_LV3</Type>
@@ -138,6 +142,8 @@
 			<Happiness>-6</Happiness>
 			<CorruptionPolicyCostModifier>20</CorruptionPolicyCostModifier>
 			<UnhappinessModifier>3</UnhappinessModifier>
+			<ExtraSellRefund>-800</ExtraSellRefund>
+			<ExtraSellRefundModifierPerEra>-5</ExtraSellRefundModifierPerEra>
 		</Row>
 		<Row>
 			<Type>BUILDING_CITY_HALL_LV4</Type>
@@ -158,6 +164,8 @@
 			<CorruptionPolicyCostModifier>20</CorruptionPolicyCostModifier>
 			<UnhappinessModifier>4</UnhappinessModifier>
 			<UnitMaxExperienceLocal>60</UnitMaxExperienceLocal>
+			<ExtraSellRefund>-1500</ExtraSellRefund>
+			<ExtraSellRefundModifierPerEra>-5</ExtraSellRefundModifierPerEra>
 		</Row>
 		<Row>
 			<Type>BUILDING_CITY_HALL_LV5</Type>
@@ -178,6 +186,8 @@
 			<CorruptionPolicyCostModifier>25</CorruptionPolicyCostModifier>
 			<UnhappinessModifier>5</UnhappinessModifier>
 			<UnitMaxExperienceLocal>30</UnitMaxExperienceLocal>
+			<ExtraSellRefund>-2500</ExtraSellRefund>
+			<ExtraSellRefundModifierPerEra>-5</ExtraSellRefundModifierPerEra>
 		</Row>
 
 		<Row>

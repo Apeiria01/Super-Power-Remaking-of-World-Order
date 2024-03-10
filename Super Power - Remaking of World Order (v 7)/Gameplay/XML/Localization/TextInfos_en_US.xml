@@ -5580,6 +5580,13 @@
 				[NEWLINE][NEWLINE]If you sell the City Hall Building, this city will become a puppet but suffer a [COLOR_NEGATIVE_TEXT]Resistance Time[ENDCOLOR] (equals 50% of its Population).
 			</Text>
 		</Row>
+
+		<Row Tag="TXT_KEY_SELL_BUILDING_CITY_HALL">
+			<Text>Are you sure you want to sell the City Hall? You will spend {1_Num} [ICON_GOLD] Gold to support the puppet and turn it into a puppet city, it will save you {2_Num} [ICON_GOLD] Gold per turn in maintenance, reduce the Policy threshold, [ICON_HAPPINESS_4] Unhappiness ... from non-puppet Cities, the City will suffer a [COLOR_NEGATIVE_TEXT]Resistance Time[ENDCOLOR] (equals 50% of its Population). </Text>
+		</Row>
+		<Row Tag="TXT_KEY_SELL_CITY_HALL_DIABLE">
+			<Text>[COLOR_NEGATIVE_TEXT]You don't have enough [ICON_GOLD]Gold[ENDCOLOR]</Text>
+		</Row>
 		
 		<Row>
 			<Tag>TXT_KEY_BUILDING_PUPPET_GOVERNEMENT</Tag>
@@ -12761,7 +12768,7 @@
 			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]This type can not purchase, report this BUG[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILD_CARRIER_FIGHTER_HELP4">
-			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]You don't have enough [ICON_GOLD]Money[ENDCOLOR]</Text>
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]You don't have enough [ICON_GOLD]Gold[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILD_CARRIER_FIGHTER_HELP5">
 			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT][ICON_GOLD]You should able to purchase Air Superiority Fighter in any City[ENDCOLOR]</Text>
