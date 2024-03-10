@@ -8979,7 +8979,7 @@
 			<Text>Influence boosts from [ICON_GOLD] Gold gifts to City-States are increased by 50%. +30 to [ICON_INFLUENCE] Influence resting point with City-States following this religion</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_JESUIT_EDUCATION">
-			<Text>May build Universities, Public Schools, and Research Labs with [ICON_PEACE] Faith. +2 [ICON_PEACE] Faith from every Universities, Public Schools, and Research Labs</Text>
+			<Text>May build Academy, Universities, Public Schools, and Research Labs with [ICON_PEACE] Faith. +2 [ICON_PEACE] Faith from every Academy, Universities, Public Schools, and Research Labs</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_SACRED_SITES">
 			<Text>All buildings purchased with [ICON_PEACE] Faith provide 2 [ICON_TOURISM] Tourism each. +5 [ICON_CULTURE] Culture from Academies, Customs Houses, Manufactories and Holy Sites</Text>
