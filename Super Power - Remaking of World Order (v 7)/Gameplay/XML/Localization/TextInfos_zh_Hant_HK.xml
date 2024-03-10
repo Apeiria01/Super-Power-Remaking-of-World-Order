@@ -1881,10 +1881,12 @@
 			<Set Text="需要開啟榮譽政策樹。[NEWLINE][NEWLINE]所有城市新訓練的單位+15經驗。擁有一個文學傑作展位。[NEWLINE][NEWLINE]只能在中型城市（15人口）建造。建造價格隨城市數量增加。" />
 		</Update>
 
-		<Update>
-			<Where Tag="TXT_KEY_BUILDING_CIRCUS_MAXIMUS_HELP" />
-			<Set Text="[NEWLINE][NEWLINE]必須先在所有城市建造馬戲團。建造價格隨城市數量增加。" />
-		</Update>
+		<Replace Tag="TXT_KEY_BUILDING_CIRCUS_MAXIMUS_HELP">
+			<Text>+10[ICON_HAPPINESS_1]全局快樂，必須先在所有城市建造馬戲團。建造價格隨城市數量增加。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_CIRCUS_MAXIMUS_STRATEGY">
+			<Text>這個國家奇觀能使帝國增加大量[ICON_HAPPINESS_1]快樂。文明建造大競技場前必須先在所有城市建造競技場。</Text>
+		</Replace>
 
 		<Update>
 			<Where Tag="TXT_KEY_BUILDING_NATIONAL_COLLEGE_HELP" />
@@ -1926,9 +1928,9 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_CARTHAGINIAN_AGORA_HELP</Tag>
 			<Text>
-				全國城市內購買單位或建築-15%[ICON_GOLD]金幣。
-				全國城市內購買單位或建築-15%[ICON_GOLD]金錢。
-				[NEWLINE][ICON_BULLET]本城擁有馬戲團後即可建造。建造成本隨城市數量增加。
+				替代大競技場，本城擁有馬戲團後即可建造，建造成本隨城市數量增加。
+				[NEWLINE][ICON_BULLET]+10[ICON_HAPPINESS_1]全局快樂。
+				[NEWLINE][ICON_BULLET]全國城市內購買單位或建築-15%[ICON_GOLD]金錢。
 				[NEWLINE][ICON_BULLET]若開啟商業政策，全國城市內購買單位或建築額外-5%[ICON_GOLD]金錢。
 				[NEWLINE][ICON_BULLET]若開啟海事政策，海軍單位+10%戰鬥力。
 			</Text>
@@ -2081,7 +2083,7 @@
 		</Row>
 		<!-- Pedia tags -->
 		<Row Tag="TXT_KEY_BUILDING_NATIONAL_SCULPTURE_PEDIA">
-			<Text>萬歲！萬歲！</Text>
+			<Text>藝術家們感謝您為推廣藝術所作的不懈努力，他們為您塑造了這座雕像！[NEWLINE][NEWLINE]萬歲！萬歲！</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_BUILDING_ETHIOPIA_ROCKHEWN">

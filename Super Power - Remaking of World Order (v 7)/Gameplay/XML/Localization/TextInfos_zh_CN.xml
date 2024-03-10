@@ -1927,10 +1927,12 @@
 			<Set Text="需要开启荣誉政策树。[NEWLINE][NEWLINE]所有城市新训练的单位+15经验。拥有一个文学杰作展位。[NEWLINE][NEWLINE]只能在中型城市（15人口）建造。建造价格随城市数量增加。" />
 		</Update>
 
-		<Update>
-			<Where Tag="TXT_KEY_BUILDING_CIRCUS_MAXIMUS_HELP" />
-			<Set Text="[NEWLINE][NEWLINE]必须先在所有城市建造马戏团。建造价格随城市数量增加。" />
-		</Update>
+		<Replace Tag="TXT_KEY_BUILDING_CIRCUS_MAXIMUS_HELP">
+			<Text>+10[ICON_HAPPINESS_1]全局快乐，必须先在所有城市建造马戏团。建造价格随城市数量增加。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_CIRCUS_MAXIMUS_STRATEGY">
+			<Text>这个国家奇观能使帝国增加大量[ICON_HAPPINESS_1]快乐。文明建造大竞技场前必须先在所有城市建造竞技场。</Text>
+		</Replace>
 
 		<Update>
 			<Where Tag="TXT_KEY_BUILDING_NATIONAL_COLLEGE_HELP" />
@@ -1973,8 +1975,9 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_CARTHAGINIAN_AGORA_HELP</Tag>
 			<Text>
-				全国城市内购买单位或建筑-15%[ICON_GOLD]金钱。
-				[NEWLINE][ICON_BULLET]本城拥有马戏团后即可建造。建造成本随城市数量增加。
+				替代大竞技场，本城拥有马戏团后即可建造，建造成本随城市数量增加。
+				[NEWLINE][ICON_BULLET]+10[ICON_HAPPINESS_1]全局快乐。
+				[NEWLINE][ICON_BULLET]全国城市内购买单位或建筑-15%[ICON_GOLD]金钱。
 				[NEWLINE][ICON_BULLET]若开启商业政策，全国城市内购买单位或建筑额外-5%[ICON_GOLD]金钱。
 				[NEWLINE][ICON_BULLET]若开启海事政策，海军单位+10%战斗力。
 			</Text>
@@ -2129,7 +2132,7 @@
 		</Row>
 		<!-- Pedia tags -->
 		<Row Tag="TXT_KEY_BUILDING_NATIONAL_SCULPTURE_PEDIA">
-			<Text>万岁！万岁！</Text>
+			<Text>艺术家们感谢您为推广艺术所作的不懈努力，他们为您塑造了这座雕像！[NEWLINE][NEWLINE]万岁！万岁！</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_BUILDING_ETHIOPIA_ROCKHEWN">
