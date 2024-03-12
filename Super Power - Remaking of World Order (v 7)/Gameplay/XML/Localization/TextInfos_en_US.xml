@@ -15807,7 +15807,7 @@
 		<Row Tag="TXT_KEY_PROMOTION_LES_GUEUX_HELP" >
 			<Text>
 				[ICON_BULLET]Steal [ICON_GOLD] Gold equals to 200% of the damage inflicted on a city by Melee Attack.
-				[NEWLINE][ICON_BULLET]Cost No [ICON_MOVES] Movement to pillage. Restore 15 more Hit Points when healing outside friendly land.
+				[NEWLINE][ICON_BULLET]Cost No [ICON_MOVES] Movement and heal extra 15 Hp to pillage.
 				[NEWLINE][ICON_BULLET]+150%[ICON_STRENGTH] Strength Melee Attacking.
 				[NEWLINE][ICON_BULLET]+50%[ICON_STRENGTH] Strength Attacking City.
 			</Text>

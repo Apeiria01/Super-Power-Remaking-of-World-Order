@@ -10567,7 +10567,7 @@
 		</Row>
 
 		<Replace Tag="TXT_KEY_UNIT_HELP_SEA_BEGGAR">
-			<Text>遊獵海軍單位，替代單桅戰船，擅長攻擊海岸城市掠取金錢以及劫掠。只有荷蘭能夠建造。海上乞丐殺敵能獲得[ICON_CULTURE]文化，數值等同於敵軍[ICON_STRENGTH]戰鬥力，但是這項能力在升級後不保留。</Text>
+			<Text>遊獵海軍單位，替代單桅戰船，擅長攻擊海岸城市掠取金錢以及劫掠，只有荷蘭能夠建造。海上乞丐殺敵能獲得[ICON_CULTURE]文化，數值等同於敵軍[ICON_STRENGTH]戰鬥力，但是這項能力在升級後不保留。</Text>
 		</Replace>
 
 		<Row Tag="TXT_KEY_UNIT_PROTECTED_CRUISER">
@@ -13603,7 +13603,7 @@
 		<Row Tag="TXT_KEY_PROMOTION_LES_GUEUX_HELP">
 			<Text>
 				[ICON_BULLET]近战攻城获得造成伤害数值两倍的[ICON_GOLD]金钱。
-				[NEWLINE][ICON_BULLET]劫掠不消耗[ICON_MOVES]移动力，在友方境外多回复15HP。
+				[NEWLINE][ICON_BULLET]劫掠不消耗[ICON_MOVES]移动力，且額外回复15HP。
 				[NEWLINE][ICON_BULLET]近战+150%[ICON_STRENGTH]战斗力。
 				[NEWLINE][ICON_BULLET]攻城+50%[ICON_STRENGTH]战斗力。
 			</Text>

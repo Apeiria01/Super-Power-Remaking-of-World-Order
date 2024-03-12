@@ -5644,8 +5644,7 @@
 			<MeleeAttackModifier>150</MeleeAttackModifier>
 			<CityAttackPlunderModifier>200</CityAttackPlunderModifier>
 			<FreePillageMoves>true</FreePillageMoves>
-			<EnemyHealChange>15</EnemyHealChange>
-			<NeutralHealChange>15</NeutralHealChange>
+			<PillageReplenishHealth>15</PillageReplenishHealth>
 			<PortraitIndex>4</PortraitIndex>
 			<IconAtlas>EXPANSION_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
