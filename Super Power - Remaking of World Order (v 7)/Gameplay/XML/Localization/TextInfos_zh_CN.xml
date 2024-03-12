@@ -5869,7 +5869,7 @@
 
 		<Replace Tag="TXT_KEY_TRAIT_LUXURY_RETENTION">
 			<Text>
-				[ICON_BULLET]每种奢侈资源即使全部交易出去也只减少2[ICON_HAPPINESS_1]快乐。
+				[ICON_BULLET]每种奢侈资源即使全部交易出去也只减少50%的基础[ICON_HAPPINESS_1]快乐奖励。
 				[NEWLINE][ICON_BULLET]所有城市免费获得市场。
 				[NEWLINE][ICON_BULLET]研发完成相应科技时，有前置建筑的城市获得对应经济建筑。
 			</Text>
@@ -13149,7 +13149,6 @@
 		<Row Tag="TXT_KEY_PROMOTION_NAVAL_HIT_AND_RUN_HELP">
 			<Text>
 				海军游猎部队，擅长与敌方大型舰艇作战。
-				[NEWLINE][ICON_BULLET]可以[COLOR_POSITIVE_TEXT]远程攻击[ENDCOLOR]也可以[COLOR_POSITIVE_TEXT]近战攻击[ENDCOLOR]。
 				[NEWLINE][ICON_BULLET]能够攻击后移动。
 				[NEWLINE][ICON_BULLET]无视区域控制。
 				[NEWLINE]
@@ -13785,7 +13784,8 @@
 			<Text>
 				[ICON_BULLET]近战攻城获得造成伤害数值两倍的[ICON_GOLD]金钱。
 				[NEWLINE][ICON_BULLET]劫掠不消耗[ICON_MOVES]移动力，在友方境外多回复15HP。
-				[NEWLINE][ICON_BULLET]近战攻城+200%[ICON_STRENGTH]战斗力，远程攻城+50%[ICON_STRENGTH]战斗力。
+				[NEWLINE][ICON_BULLET]近战+150%[ICON_STRENGTH]战斗力。
+				[NEWLINE][ICON_BULLET]攻城+50%[ICON_STRENGTH]战斗力。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_MULTIPURPOSE_DESTROYER">
@@ -14206,6 +14206,9 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_MTPC_444">
 			<Text>合作研究产出:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_EXIST_CITY">
+			<Text>现有城市</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_DM_0">
 			<Text>防御建筑效率:</Text>
@@ -15537,6 +15540,9 @@
 
 		<Row Tag="TXT_KEY_EUPANEL_BONUS_HEIGHT">
 			<Text>高度加成</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_BONUS_MELEE">
+			<Text>近战攻击加成</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_LUXURIES_SHORT">

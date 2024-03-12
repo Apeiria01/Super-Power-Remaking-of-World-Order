@@ -5766,7 +5766,7 @@
 
 		<Replace Tag="TXT_KEY_TRAIT_LUXURY_RETENTION">
 			<Text>
-				[ICON_BULLET]每種奢侈資源即使全部交易出去也只減少2[ICON_HAPPINESS_1]快樂。
+				[ICON_BULLET]即使將奢侈品資源全部交易，也只减少50%的基礎[ICON_HAPPINESS_1]幸福度。
 				[NEWLINE][ICON_BULLET]所有城市免費獲得市場。
 				[NEWLINE][ICON_BULLET]研發完成相應科技時，有前置建築的城市獲得對應經濟建築。
 			</Text>
@@ -12972,7 +12972,6 @@
 		<Row Tag="TXT_KEY_PROMOTION_NAVAL_HIT_AND_RUN_HELP">
 			<Text>
 				海軍遊獵部隊，擅長與敵方大型艦艇作戰。
-				[NEWLINE][ICON_BULLET]可以[COLOR_POSITIVE_TEXT]遠程攻擊[ENDCOLOR]也可以[COLOR_POSITIVE_TEXT]近戰攻擊[ENDCOLOR]。
 				[NEWLINE][ICON_BULLET]能夠攻擊後移動。
 				[NEWLINE][ICON_BULLET]無視區域控制。
 				[NEWLINE]
@@ -13605,7 +13604,8 @@
 			<Text>
 				[ICON_BULLET]近战攻城获得造成伤害数值两倍的[ICON_GOLD]金钱。
 				[NEWLINE][ICON_BULLET]劫掠不消耗[ICON_MOVES]移动力，在友方境外多回复15HP。
-				[NEWLINE][ICON_BULLET]近战攻城+200%[ICON_STRENGTH]战斗力，远程攻城+50%[ICON_STRENGTH]战斗力。
+				[NEWLINE][ICON_BULLET]近战+150%[ICON_STRENGTH]战斗力。
+				[NEWLINE][ICON_BULLET]攻城+50%[ICON_STRENGTH]战斗力。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_MULTIPURPOSE_DESTROYER">
@@ -14019,6 +14019,9 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_MTPC_444">
 			<Text>合作研究產出:</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_EXIST_CITY">
+			<Text>現有城市</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_DM_0">
 			<Text>防禦建築效率:</Text>
@@ -15338,6 +15341,9 @@
 
 		<Row Tag="TXT_KEY_EUPANEL_BONUS_HEIGHT">
 			<Text>高度加成</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_BONUS_MELEE">
+			<Text>近戰攻擊加成</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_LUXURIES_SHORT">

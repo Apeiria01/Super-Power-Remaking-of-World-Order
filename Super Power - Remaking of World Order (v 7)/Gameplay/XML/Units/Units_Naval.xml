@@ -2426,6 +2426,10 @@
 			<UnitType>UNIT_BYZANTINE_DROMON</UnitType>
 			<PromotionType>PROMOTION_OCEAN_IMPASSABLE</PromotionType>
 		</Row>
+		<Row>
+			<UnitType>UNIT_BYZANTINE_DROMON</UnitType>
+			<PromotionType>PROMOTION_ONLY_DEFENSIVE</PromotionType>
+		</Row>
 
 		<Row>
 			<UnitType>UNIT_SLOOP_OF_WAR</UnitType>

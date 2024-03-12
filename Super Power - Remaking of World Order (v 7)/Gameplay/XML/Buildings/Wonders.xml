@@ -18,7 +18,7 @@
 			<NukeImmune>true</NukeImmune>
 			<MinAreaSize>-1</MinAreaSize>
 			<Defense>500</Defense>
-			<GlobalDefenseMod>15</GlobalDefenseMod>
+			<CityDefenseModifierGlobal>15</CityDefenseModifierGlobal>
 			<GlobalGreatPeopleRateModifier>-99</GlobalGreatPeopleRateModifier>
 			<WonderProductionModifier>-99</WonderProductionModifier>
 			<FoodKept>-40</FoodKept>
@@ -1623,7 +1623,7 @@
 			<MinAreaSize>-1</MinAreaSize>
 			<ConquestProb>100</ConquestProb>
 			<Defense>7500</Defense>
-			<GlobalDefenseMod>25</GlobalDefenseMod>
+			<CityDefenseModifierGlobal>25</CityDefenseModifierGlobal>
 			<DisplayPosition>4</DisplayPosition>
 			<IconAtlas>EXPANSION2_WONDER_ATLAS</IconAtlas>
 			<PortraitIndex>9</PortraitIndex>
@@ -2665,7 +2665,7 @@
 			<MinAreaSize>-1</MinAreaSize>
 			<HurryCostModifier>-1</HurryCostModifier>
 			<NeverCapture>true</NeverCapture>
-			<GlobalDefenseMod>75</GlobalDefenseMod>
+			<GlobalCityStrengthMod>75</GlobalCityStrengthMod>
 			<PortraitIndex>51</PortraitIndex>
 			<IconAtlas>SPBalance_ATLAS</IconAtlas>
 			<BorderObstacle>true</BorderObstacle>
@@ -2688,7 +2688,6 @@
 			<IconAtlas>SPBalance_ATLAS</IconAtlas>
 			<WonderSplashImage>Environmental.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,T</WonderSplashAnchor>
-			<GlobalDefenseMod>75</GlobalDefenseMod>
 		</Row>
 		<Row>
 			<Type>BUILDING_SATELLITE_ANTIFALLOUT</Type>
