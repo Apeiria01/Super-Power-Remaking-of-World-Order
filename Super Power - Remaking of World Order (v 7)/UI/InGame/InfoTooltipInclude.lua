@@ -1138,7 +1138,8 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		Gold = L"TXT_KEY_PEDIA_GOLD_LABEL" .. " %i",				-- TOTO
 	--y	Defense = "",
 	--y	ExtraCityHitPoints = "",
-		GlobalDefenseMod = L"TXT_KEY_GLOBAL1" .. L"TXT_KEY_DM_0" .. "%+i%%[ICON_STRENGTH]",-- TOTO
+		GlobalDefenseMod = L"TXT_KEY_EXIST_CITY" .. L"TXT_KEY_DM_0" .. "%+i%%[ICON_STRENGTH]",-- TOTO
+		CityDefenseModifierGlobal = L"TXT_KEY_GLOBAL1" .. L"TXT_KEY_DM_0" .. "%+i%%[ICON_STRENGTH]",-- TOTO
 		MinorFriendshipChange = L"TXT_KEY_MFC_23" .. "%+i%%",			-- TOTO
 		MinorFriendshipAnchorChange = L"TXT_KEY_MFAC_23" .. "%+i",			-- TOTO
 	--	VictoryPoints = L"TXT_KEY_VP_00",					-- TOTO

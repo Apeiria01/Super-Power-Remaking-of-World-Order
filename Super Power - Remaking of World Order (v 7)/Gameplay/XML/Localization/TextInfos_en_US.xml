@@ -195,6 +195,9 @@
 		<Replace Tag="TXT_KEY_MTPC_444">
 			<Text>Science Output from Research Agreement: </Text>
 		</Replace>
+		<Replace Tag="TXT_KEY_EXIST_CITY">
+			<Text>Existing Cities</Text>
+		</Replace>
 		<Replace Tag="TXT_KEY_DM_0">
 			<Text>Defensive Buildings Modifier: </Text>
 		</Replace>
@@ -10396,7 +10399,7 @@
 
 		<Replace Tag="TXT_KEY_TRAIT_LUXURY_RETENTION">
 			<Text>
-				[ICON_BULLET]Only lose 2 [ICON_HAPPINESS_1] Happiness from a Luxury Resource if your last copy of it is traded away. 
+				[ICON_BULLET]Only lose 50% of the basic [ICON_HAPPINESS_1] Happiness benefits from a Luxury Resource if your last copy of it is traded away.
 				[NEWLINE][ICON_BULLET]All cities receive free Markets. Economic Building will be gained to the city with Prerequisite Building after researching the corresponding technology.
 			</Text>
 		</Replace>
@@ -15058,7 +15061,6 @@
 		<Row Tag="TXT_KEY_PROMOTION_NAVAL_HIT_AND_RUN_HELP">
 			<Text>
 				Naval Hit-and-run Unit, good at naval combat against enemy large ships.
-				[NEWLINE][ICON_BULLET]Can perform both [COLOR_POSITIVE_TEXT]Ranged Attacks[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Melee Attacks[ENDCOLOR].
 				[NEWLINE][ICON_BULLET]Can move after attacking.
 				[NEWLINE][ICON_BULLET]Ignore enemy Zones of Control (ZOC).
 				[NEWLINE]
@@ -15806,7 +15808,8 @@
 			<Text>
 				[ICON_BULLET]Steal [ICON_GOLD] Gold equals to 200% of the damage inflicted on a city by Melee Attack.
 				[NEWLINE][ICON_BULLET]Cost No [ICON_MOVES] Movement to pillage. Restore 15 more Hit Points when healing outside friendly land.
-				[NEWLINE][ICON_BULLET]+200%[ICON_STRENGTH] Strength Melee Attacking City.+50%[ICON_STRENGTH] Strength Range Attacking City.
+				[NEWLINE][ICON_BULLET]+150%[ICON_STRENGTH] Strength Melee Attacking.
+				[NEWLINE][ICON_BULLET]+50%[ICON_STRENGTH] Strength Attacking City.
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_MULTIPURPOSE_DESTROYER">
@@ -17219,6 +17222,9 @@
 
 		<Row Tag="TXT_KEY_EUPANEL_BONUS_HEIGHT">
 			<Text>Height Bouns</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_BONUS_MELEE">
+			<Text>Melee Attack Bouns</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_LUXURIES_SHORT">

@@ -498,6 +498,15 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_ATTACK_MOD_BONUS");
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
 			end
+			--Melee Attack Bouns
+			if (not bRanged) then
+				iModifier = pMyUnit:GetMeleeAttackModifier();
+				if (iModifier ~= 0) then
+					controlTable = g_MyCombatDataIM:GetInstance();
+					controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_MELEE");
+					controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
+				end
+			end
 
 			--Extra Resouce and Happiness Bonus
 			iModifier = pMyUnit:GetStrengthModifierFromExtraResource();
@@ -1431,6 +1440,15 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				controlTable = g_MyCombatDataIM:GetInstance();
 				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_ATTACK_MOD_BONUS");
 				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
+			end
+			--Melee Attack Bouns
+			if (not bRanged) then
+				iModifier = pMyUnit:GetMeleeAttackModifier();
+				if (iModifier ~= 0) then
+					controlTable = g_MyCombatDataIM:GetInstance();
+					controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_MELEE");
+					controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
+				end
 			end
 
 			--Extra Resouce and Happiness Bonus

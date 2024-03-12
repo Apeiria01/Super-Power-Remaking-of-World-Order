@@ -5640,9 +5640,8 @@
 			<Description>TXT_KEY_PROMOTION_LES_GUEUX</Description>
 			<Help>TXT_KEY_PROMOTION_LES_GUEUX_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<AttackMod>150</AttackMod>
-			<RangedAttackModifier>-150</RangedAttackModifier>
 			<CityAttack>50</CityAttack>
+			<MeleeAttackModifier>150</MeleeAttackModifier>
 			<CityAttackPlunderModifier>200</CityAttackPlunderModifier>
 			<FreePillageMoves>true</FreePillageMoves>
 			<EnemyHealChange>15</EnemyHealChange>
