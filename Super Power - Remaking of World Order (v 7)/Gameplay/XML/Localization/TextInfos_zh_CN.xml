@@ -4836,6 +4836,9 @@
 		<Row Tag="TXT_KEY_SP_UI_TOURISMBOOST_BY_NUM_GREAT_WORK">
 			<Text>来自杰作数量的加成: {1_num}%</Text>
 		</Row>
+		<Row Tag="TXT_KEY_SP_UI_TOURISMBOOST_BY_NUM_ARTIFACT">
+			<Text>来自文物数量的加成: {1_num}%</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_SP_UI_SCIENCE_BY_HAPPINESS_NEW">
 			<Text>你的国家总体[ICON_HAPPINESS_1]满意度较高，你的[ICON_RESEARCH]科研产出+{1_num}%</Text>
@@ -5089,7 +5092,26 @@
 			</Text>
 		</Row>
 
-
+		<Row Tag="TXT_KEY_CO_SP_MOVE_IN_POLICY_YOU">
+			<Text>
+				由于你采用的政策，增加[COLOR_POSITIVE_TEXT]{1_num}%[ENDCOLOR]移民[ICON_TEAM_4]迁入速率。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CO_SP_MOVE_OUT_POLICY_YOU">
+			<Text>
+				由于你采用的政策，减少[COLOR_POSITIVE_TEXT]{1_num}%[ENDCOLOR]移民[ICON_TEAM_2]移出速率。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CO_SP_MOVE_IN_POLICY_THEM">
+			<Text>
+				由于该国采用的政策，增加[COLOR_NEGATIVE_TEXT]{1_num}%[ENDCOLOR]移民[ICON_TEAM_4]迁入速率。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CO_SP_MOVE_OUT_POLICY_THEM">
+			<Text>
+				由于该国采用的政策，减少[COLOR_NEGATIVE_TEXT]{1_num}%[ENDCOLOR]移民[ICON_TEAM_2]移出速率。
+			</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_SP_NOTIFICATION_AUTO_BUILDING_REPLACEMENT">
 			<Text>新科技使{@1_CityName}市内的古建筑{@2_BuildingName}自动升级为：</Text>
@@ -6953,7 +6975,8 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]美学理论[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]博物馆和奇观中杰作主题展示的奖励效果翻倍。
-				[NEWLINE][ICON_BULLET]所有杰作+2[ICON_CULTURE]文化。
+				[NEWLINE][ICON_BULLET]所有杰作以及文物+2[ICON_CULTURE]文化。
+				[NEWLINE][ICON_BULLET]每拥有一个文物，+1%的全局[ICON_CULTURE]文化和[ICON_TOURISM]魅力。
 			</Text>
 		</Replace>
 
@@ -6969,7 +6992,7 @@
 				[COLOR_POSITIVE_TEXT]艺术天才[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]立刻获得一位大艺术家。
 				[NEWLINE][ICON_BULLET]大音乐家、大艺术家和大文学家的获得速度+25%。
-				[NEWLINE][ICON_BULLET]建造奇观时+25%[ICON_PRODUCTION]产能积累速率。
+				[NEWLINE][ICON_BULLET]你所拥有的每个杰作使大文学家、大音乐家的一次性产出增加4%。
 			</Text>
 		</Replace>
 
@@ -6999,6 +7022,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]文化渗透[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]对所有[ICON_HAPPINESS_1]快乐度低于我方的文明+33%[ICON_TOURISM]魅力。
+				[NEWLINE][ICON_BULLET]其他国家向你移民的速度加快33%。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_CULTURAL_INFILTRATION_TEXT">
@@ -15425,7 +15449,7 @@
 		</Replace>
 
 		<Row Tag="TXT_KEY_GREAT_WRITER_GW_BOUNS">
-			<Text>你所拥有的每个杰作/文物可以提供[COLOR_POSITIVE_TEXT]额外[ENDCOLOR]{1_Num}%产出加成，目前共计{2_Num}%</Text>
+			<Text>+{1_Num}%来自[COLOR_POSITIVE_TEXT]杰作[ENDCOLOR]的额外加成</Text>
 		</Row>
 		<Replace Tag="TXT_KEY_WONDER_PORCELAIN_TOWER_HELP">
 			<Text>需要开启理性政策树。建成奇观的城市附近出现一位大科学家。合作研究产出的[ICON_RESEARCH]科研+25%。</Text>
@@ -15801,6 +15825,9 @@
 		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_18">
 			<Text>首都沿海时，你的其他沿海城市-200管理成本</Text>
 		</Row>
+		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_19">
+			<Text>每拥有一个杰作，你可以获得2%的全局[ICON_CULTURE]文化和[ICON_TOURISM]魅力加成</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_DIPLOMACY_MARRIAGE_TITLE">
 			<Text>外交联姻</Text>
@@ -15831,5 +15858,15 @@
 		<Row Tag="TXT_KEY_DIPLOMACY_DUAL_EMPIRE_TREATY_ADV_QUEST">
 			<Text>如何同其他主要文明建立二元帝国？</Text>
 		</Row>
+
+		<Replace Tag="TXT_KEY_SPECIALISTSANDGP_LANDMARK_HEADING4_BODY">
+			<Text>风景地标为城市产生许多文化和魅力。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CIV5_IMPROVEMENTS_LANDMARK_TEXT">
+			<Text>风景地标是任何具有伟大的手工艺品、建筑、艺术品或者自然奇观，可以吸引参观者前往的地方。伦敦的纳尔逊纪念柱或是美国的拉什莫尔山都可以称得上是风景地标。但并不是每一个超大的物体都能被称为风景地标，比如说世界上最大的线球就无法达到如此的高度（即便它或许值得一看）。相比风景地标本身的时代，每跨越一个时代，它额外提供+1[ICON_CULTURE]文化、+1[ICON_TOURISM]魅力。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CHOOSE_ARCH_LANDMARK_RESULT">
+			<Text>当完成时，风景地标会根据它的建成时间提供[ICON_CULTURE]文化和[ICON_TOURISM]魅力。遗迹时间与所在文明的当前时代相比，每早一个时代就+1[ICON_CULTURE]文化、+1[ICON_TOURISM]魅力。修建风景地标会消耗掉考古学家。</Text>
+		</Replace>
 	</Language_zh_CN>
 </GameData>

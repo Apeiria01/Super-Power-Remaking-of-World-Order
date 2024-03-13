@@ -316,7 +316,7 @@
 			<Where Type="POLICY_FLOURISHING_OF_ARTS"/>
 		</Update>
 		<Update>
-			<Set GreatWriterRateModifier="25" GreatArtistRateModifier="25" GreatMusicianRateModifier="25" GridX="5" WonderProductionModifier="25"/>
+			<Set GreatWriterRateModifier="25" GreatArtistRateModifier="25" GreatMusicianRateModifier="25" GridX="5"/>
 			<Where Type="POLICY_ARTISTIC_GENIUS"/>
 		</Update>
 		<Update>
@@ -342,6 +342,7 @@
 			<PortraitIndex>16</PortraitIndex>
 			<IconAtlas>POLICY_ATLAS</IconAtlas>
 			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<ImmigrationInModifier>33</ImmigrationInModifier>
 		</Row>
 		
 	</Policies>

@@ -1363,7 +1363,10 @@
 			</Row>
 
 			<Row Tag="TXT_KEY_SP_UI_TOURISMBOOST_BY_NUM_GREAT_WORK">
-				<Text>Bonus from the number of greak work: {1_num}%</Text>
+				<Text>Bonus from the number of Great Works: {1_num}%</Text>
+			</Row>
+			<Row Tag="TXT_KEY_SP_UI_TOURISMBOOST_BY_NUM_ARTIFACT">
+				<Text>Bonus from the number of Artifacts: {1_num}%</Text>
 			</Row>
 		
 			<Row Tag="TXT_KEY_SP_UI_SCIENCE_BY_HAPPINESS_NEW">
@@ -1653,7 +1656,28 @@
 				[COLOR_NEGATIVE_TEXT]+50%[ENDCOLOR] [ICON_TEAM_2] Move-out Rate for their Trait.
 			</Text>
 		</Row>
-		
+
+		<Row Tag="TXT_KEY_CO_SP_MOVE_IN_POLICY_YOU">
+			<Text>
+				Increase [COLOR_POSITIVE_TEXT]{1_num}%[ENDCOLOR] [ICON_TEAM_4] Move-in Rate for you adopted Policies.
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CO_SP_MOVE_OUT_POLICY_YOU">
+			<Text>
+				Decrease [COLOR_POSITIVE_TEXT]{1_num}%[ENDCOLOR] [ICON_TEAM_2] Move-out Rate for you adopted Policies.
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CO_SP_MOVE_IN_POLICY_THEM">
+			<Text>
+				Increase [COLOR_NEGATIVE_TEXT]{1_num}%[ENDCOLOR] [ICON_TEAM_4] Move-in Rate for they adopted Policies.
+			</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_CO_SP_MOVE_OUT_POLICY_THEM">
+			<Text>
+				Decrease [COLOR_NEGATIVE_TEXT]{1_num}%[ENDCOLOR] [ICON_TEAM_2] Move-out Rate for they adopted Policies.
+			</Text>
+		</Row>
 		
 		<Row Tag="TXT_KEY_CO_SP_MOVE_WAR_STOPPED">
 			<Text>
@@ -7774,8 +7798,9 @@
 		<Replace Tag="TXT_KEY_POLICY_FINE_ARTS_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]Fine Arts[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]+2 [ICON_CULTURE] Culture from each Great Work.
+				[NEWLINE][ICON_BULLET]+2 [ICON_CULTURE] Culture from each Great Work and Artifacts.
 				[NEWLINE][ICON_BULLET]Doubles the Theming Bonus of all Wonders and Museums.
+				[NEWLINE][ICON_BULLET]+1% global [ICON_CULTURE] Culture and [ICON_TOURISM] Tourism from each Artifact. 
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_CULTURAL_CENTERS_HELP" >
@@ -7788,7 +7813,7 @@
 				[COLOR_POSITIVE_TEXT]Artistic Genius[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]One Great Artist appears.
 				[NEWLINE][ICON_BULLET]Earn Great Writers, Artists, and Musicians 25% faster.
-				[NEWLINE][ICON_BULLET]+25% [ICON_PRODUCTION] Production towards Wonder construction.
+				[NEWLINE][ICON_BULLET]+4% bonus from each Great Works When your Great Writer or Great Musician makes a one-time output.
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_FLOURISHING_OF_ARTS" >
@@ -7817,7 +7842,9 @@
 		<Row Tag="TXT_KEY_POLICY_CULTURAL_INFILTRATION_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]Cultural Infiltration[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]+33% [ICON_TOURISM] Tourism to Civilizations with less [ICON_HAPPINESS_1] Happiness.</Text>
+				[NEWLINE][ICON_BULLET]+33% [ICON_TOURISM] Tourism to Civilizations with less [ICON_HAPPINESS_1] Happiness.
+				[NEWLINE][ICON_BULLET]+33% [ICON_TEAM_4] International Immigration Rate from other civlizations to Your Nation.
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_CULTURAL_INFILTRATION_TEXT">
 			<Text>The cultural invasion is the invasion of the enemy on any nation with various means and methods in order to destroy its internal strength and its morals. </Text>
@@ -17115,7 +17142,7 @@
 		</Replace>
 
 		<Row Tag="TXT_KEY_GREAT_WRITER_GW_BOUNS">
-			<Text>Each Great Works or Artefacts you have can take [COLOR_POSITIVE_TEXT]additional[ENDCOLOR] {1_Num}% output boost, Total {2_Num}% so far</Text>
+			<Text>+{1_Num}% output boost from [COLOR_POSITIVE_TEXT]Great Works[ENDCOLOR]</Text>
 		</Row>
 		<Replace Tag="TXT_KEY_WONDER_PORCELAIN_TOWER_HELP">
 			<Text>Requires Rationalism. A Great Scientist appears near the City where the Wonder was built. 25% more [ICON_RESEARCH] Science generated from Research Agreements.</Text>
@@ -17483,6 +17510,9 @@
 		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_18">
 			<Text>If your Capital is coastal, -200 Administrative cost for other coastal Cities</Text>
 		</Row>
+		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_19">
+			<Text>For every Great Works you own, you get 2% global [ICON_CULTURE] Culture and [ICON_TOURISM] Tourism output bonus</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_DIPLOMACY_DUAL_EMPIRE_TREATY_TITLE">
 			<Text>Dual Empire Agreement</Text>
@@ -17503,5 +17533,14 @@
 		<Row Tag="TXT_KEY_DIPLOMACY_DUAL_EMPIRE_TREATY_ADV_QUEST">
 			<Text>How to build a dual empire with other major civilizations? </Text>
 		</Row>
+		<Replace Tag="TXT_KEY_SPECIALISTSANDGP_LANDMARK_HEADING4_BODY">
+			<Text>A Landmark Improvement provides loads of culture and tourism to the city.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CIV5_IMPROVEMENTS_LANDMARK_TEXT">
+			<Text>A Landmark is any magnificent artifact, structure, work of art, or wonder of nature that draws visitors to a location. Nelson's Column in London is a landmark, as is Mount Rushmore in the United States. Not every significantly sized object, however, is a landmark: the World's Largest Ball of Twine may never rise to that stature (though it might well be worth a visit). Landmarks provide +1 [ICON_CULTURE] Culture and +1 [ICON_TOURISM] Tourism for each additional Era that has passed in comparison to the original Era of the Artifact.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CHOOSE_ARCH_LANDMARK_RESULT">
+			<Text>When worked, a Landmark provides [ICON_CULTURE] Culture and [ICON_TOURISM] Tourism based on its age. +1 [ICON_CULTURE] Culture and +1 [ICON_TOURISM] Tourism per Era older than this civ's current Era. Archaeologist will be consumed.</Text>
+		</Replace>
 	</Language_en_US>
 </GameData>

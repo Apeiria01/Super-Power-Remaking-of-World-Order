@@ -6,8 +6,6 @@
 
 		<Delete Type="IMPROVEMENT_FEITORIA"/>
 
-
-		
 		<Row>
 			<Type>IMPROVEMENT_PONTOON_BRIDGE_MOD</Type>
 			<Description>TXT_KEY_IMPROVEMENT_PONTOON_BRIDGE_MOD</Description>
@@ -399,6 +397,16 @@
 			<ImprovementType>IMPROVEMENT_TUNNEL</ImprovementType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_LANDMARK</ImprovementType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_LANDMARK</ImprovementType>
+			<YieldType>YIELD_TOURISM</YieldType>
+			<Yield>1</Yield>
 		</Row>
 	</Improvement_Yields>
 	
@@ -1356,9 +1364,11 @@
 			<Yield>2</Yield>
 		</Row>
 	</Improvement_TechYieldChanges>
-
-
-
-
-
-	</GameData>
+	<Improvement_YieldPerEra>
+		<Row>
+			<ImprovementType>IMPROVEMENT_LANDMARK</ImprovementType>
+			<YieldType>YIELD_TOURISM</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	</Improvement_YieldPerEra>
+</GameData>

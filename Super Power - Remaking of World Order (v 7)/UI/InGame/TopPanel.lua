@@ -1287,6 +1287,12 @@ function TourismTipHandler( control )
 		if iBonusFromNumGreakWork ~= 0 then
 			strText = strText .. "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_SP_UI_TOURISMBOOST_BY_NUM_GREAT_WORK", iBonusFromNumGreakWork) 
 		end
+
+		local iBonusFromNumArtifact = pPlayer:GetYieldModifierFromNumArtifact(GameInfoTypes["YIELD_TOURISM"])
+		if iBonusFromNumArtifact ~= 0 then
+			strText = strText .. "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_SP_UI_TOURISMBOOST_BY_NUM_ARTIFACT", iBonusFromNumArtifact) 
+		end
+
 		strText = strText .. pPlayer:GetInternationalTourismTooltip();
 		
 	--------------------------------------SP Additional Tourism boost by Extra Happiness END-----------------------------

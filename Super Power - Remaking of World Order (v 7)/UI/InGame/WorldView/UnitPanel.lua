@@ -1560,9 +1560,9 @@ function TipHandler(control)
 			end
 
 			strToolTip = strToolTip .. "[NEWLINE]" .. Locale.Lookup("TXT_KEY_MISSION_GIVE_POLICIES_HELP");
-			local GWBouns = GameInfo.Units[unit:GetUnitType()].ScaleFromNumGWs;
+			local GWBouns = unit:GetGreatPersonOutputModifierFromGWs();
 			if GWBouns > 0 then
-				strToolTip = strToolTip .. "[NEWLINE]" .. Locale.Lookup("TXT_KEY_GREAT_WRITER_GW_BOUNS", GWBouns, pActivePlayer:GetNumGreatWorks() * GWBouns);
+				strToolTip = strToolTip .. "[NEWLINE]" .. Locale.Lookup("TXT_KEY_GREAT_WRITER_GW_BOUNS", GWBouns);
 			end
 
 			if (not bDisabled) then
@@ -1580,6 +1580,10 @@ function TipHandler(control)
 			end
 
 			strToolTip = strToolTip .. "[NEWLINE]" .. Locale.Lookup("TXT_KEY_MISSION_ONE_SHOT_TOURISM_HELP");
+			local GWBouns = unit:GetGreatPersonOutputModifierFromGWs();
+			if GWBouns > 0 then
+				strToolTip = strToolTip .. "[NEWLINE]" .. Locale.Lookup("TXT_KEY_GREAT_WRITER_GW_BOUNS", GWBouns);
+			end
 
 			if (not bDisabled) then
 				strToolTip = strToolTip .. "[NEWLINE]----------------[NEWLINE]";

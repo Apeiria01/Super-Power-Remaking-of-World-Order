@@ -4742,6 +4742,9 @@
 		<Row Tag="TXT_KEY_SP_UI_TOURISMBOOST_BY_NUM_GREAT_WORK">
 			<Text>來自傑作數量的加成: {1_num}%</Text>
 		</Row>
+		<Row Tag="TXT_KEY_SP_UI_TOURISMBOOST_BY_NUM_ARTIFACT">
+			<Text>來自文物數量的加成: {1_num}%</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_SP_UI_SCIENCE_BY_HAPPINESS_NEW">
 			<Text>你的國家總體[ICON_HAPPINESS_1]滿意度較高，你的[ICON_RESEARCH]科研產出+{1_num}%</Text>
@@ -4983,6 +4986,26 @@
 			</Text>
 		</Row>
 
+		<Row Tag="TXT_KEY_CO_SP_MOVE_IN_POLICY_YOU">
+			<Text>
+				由於你采用的政策，增加[COLOR_POSITIVE_TEXT]{1_num}%[ENDCOLOR]移民[ICON_TEAM_4]遷入速率。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CO_SP_MOVE_OUT_POLICY_YOU">
+			<Text>
+				由於你采用的政策，減少[COLOR_POSITIVE_TEXT]{1_num}%[ENDCOLOR]移民[ICON_TEAM_2]移出速率。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CO_SP_MOVE_IN_POLICY_THEM">
+			<Text>
+				由於該國采用的政策，增加[COLOR_NEGATIVE_TEXT]{1_num}%[ENDCOLOR]移民[ICON_TEAM_4]遷入速率。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CO_SP_MOVE_OUT_POLICY_THEM">
+			<Text>
+				由於該國采用的政策，減少[COLOR_NEGATIVE_TEXT]{1_num}%[ENDCOLOR]移民[ICON_TEAM_2]移出速率。
+			</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_CO_SP_MOVE_WAR_STOPPED">
 			<Text>
@@ -6847,7 +6870,8 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]美學理論[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]博物館和奇觀中傑作主題展示的獎勵效果翻倍。
-				[NEWLINE][ICON_BULLET]所有傑作+2[ICON_CULTURE]文化。
+				[NEWLINE][ICON_BULLET]所有傑作以及文物+2[ICON_CULTURE]文化。
+				[NEWLINE][ICON_BULLET]每擁有一個文物，+1%的全局[ICON_CULTURE]文化和[ICON_TOURISM]魅力。
 			</Text>
 		</Replace>
 
@@ -6863,7 +6887,7 @@
 				[COLOR_POSITIVE_TEXT]藝術天才[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]立刻獲得一位大藝術家。
 				[NEWLINE][ICON_BULLET]大音樂家、大藝術家和大文學家的獲得速度+25%。
-				[NEWLINE][ICON_BULLET]建造奇觀時+25%[ICON_PRODUCTION]產能積累速率。
+				[NEWLINE][ICON_BULLET]你所擁有的每個傑作使大文學家、大音樂家的一次性產出增加4%。
 			</Text>
 		</Replace>
 
@@ -6893,6 +6917,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]文化滲透[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]對所有[ICON_HAPPINESS_1]快樂度低於我方的文明+33%[ICON_TOURISM]魅力。
+				[NEWLINE][ICON_BULLET]其他國家向你移民的速度加快33%。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_CULTURAL_INFILTRATION_TEXT">
@@ -15234,7 +15259,7 @@
 		</Replace>
 
 		<Row Tag="TXT_KEY_GREAT_WRITER_GW_BOUNS">
-			<Text>你所擁有的每個傑作/文物可以提供[COLOR_POSITIVE_TEXT]額外[ENDCOLOR]{1_Num}%產出加成，目前共計{2_Num}%</Text>
+			<Text>+{1_Num}%來自[COLOR_POSITIVE_TEXT]傑作[ENDCOLOR]的額外加成</Text>
 		</Row>
 		<Replace Tag="TXT_KEY_WONDER_PORCELAIN_TOWER_HELP">
 			<Text>要求理性政策分支。當該奇跡建成時城市附近出現一位大科學家。從研究協定中獲得的[ICON_RESEARCH]科技值增加25%。</Text>
@@ -15602,6 +15627,9 @@
 		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_18">
 			<Text>首都沿海時，你的其他沿海城市-200管理成本</Text>
 		</Row>
+		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_19">
+			<Text>每擁有一個傑作，你可以獲得2%的全局[ICON_CULTURE]文化和[ICON_TOURISM]魅力加成</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_DIPLOMACY_DUAL_EMPIRE_TREATY_TITLE">
 			<Text>二元帝國協定</Text>
@@ -15622,5 +15650,14 @@
 		<Row Tag="TXT_KEY_DIPLOMACY_DUAL_EMPIRE_TREATY_ADV_QUEST">
 			<Text>如何與其他主要文明建立二元帝國？ </Text>
 		</Row>
+		<Replace Tag="TXT_KEY_SPECIALISTSANDGP_LANDMARK_HEADING4_BODY">
+			<Text>風景地標為城市產生許多文化和魅力。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CIV5_IMPROVEMENTS_LANDMARK_TEXT">
+			<Text>地標是任何一種華麗的文物、建築物、藝術品或可吸引遊客的自然奇觀。英國倫敦的納爾遜紀念碑是處地標，而美國的拉什莫爾山也是處地標。但並不是所有巨型物體都是地標：儘管世界上最大的籐球值得一看，但層次還不夠。自最初的手工藝時代後，每額外經過一個時代，地標可提供+1[ICON_CULTURE]文化值、+1[ICON_TOURISM]魅力值。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CHOOSE_ARCH_LANDMARK_RESULT">
+			<Text>當完成時，風景地標會根據它的建成時間提供[ICON_CULTURE]文化和[ICON_TOURISM]魅力。遺跡時間與所在文明的當前時代相比，每早壹個時代就+1[ICON_CULTURE]文化、+1[ICON_TOURISM]魅力。修建風景地標會消耗掉考古學家。</Text>
+		</Replace>
 	</Language_zh_Hant_HK>
 </GameData>
