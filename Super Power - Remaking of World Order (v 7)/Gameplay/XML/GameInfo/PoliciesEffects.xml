@@ -51,6 +51,31 @@
 		</Row>
 	</Policy_GreatWorkYieldChanges>
 
+	<Policy_YieldModifierPerArtifacts>
+		<Row>
+			<PolicyType>POLICY_FINE_ARTS</PolicyType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_FINE_ARTS</PolicyType>
+			<YieldType>YIELD_TOURISM</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	</Policy_YieldModifierPerArtifacts>
+
+	<Policy_GreatPersonOutputModifierPerGWs>
+		<Row>
+			<PolicyType>POLICY_ARTISTIC_GENIUS</PolicyType>
+			<GreatPersonType>GREATPERSON_WRITER</GreatPersonType>
+			<Modifier>4</Modifier>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_ARTISTIC_GENIUS</PolicyType>
+			<GreatPersonType>GREATPERSON_MUSICIAN</GreatPersonType>
+			<Modifier>4</Modifier>
+		</Row>
+	</Policy_GreatPersonOutputModifierPerGWs>
 
 	<Policy_SpecialistExtraYields>
 		<Row>
