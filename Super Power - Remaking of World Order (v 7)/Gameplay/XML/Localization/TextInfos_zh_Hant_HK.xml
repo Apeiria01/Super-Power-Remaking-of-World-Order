@@ -6616,7 +6616,8 @@
 				[COLOR_POSITIVE_TEXT]榮譽政策[ENDCOLOR]能增強國家的[ICON_WAR]軍事實力。
 				[NEWLINE][NEWLINE]啟用榮譽政策：
 				[NEWLINE][ICON_BULLET]消滅敵方單位時可獲得[ICON_GOLD]金錢獎勵（相當於敵方50%的戰鬥力）
-				[NEWLINE][ICON_BULLET]已探索區域內產生新的蠻族營地時會出現提示消息。允許建造宙斯神像和英雄史詩。
+				[NEWLINE][ICON_BULLET]已探索區域內產生新的蠻族營地時會出現提示消息。
+				[NEWLINE][ICON_BULLET]允許建造宙斯神像和英雄史詩。
 				[NEWLINE][NEWLINE]推行所有榮譽政策：
 				[NEWLINE][ICON_BULLET]消滅敵方單位時可獲得[ICON_CULTURE]文化獎勵（相當於敵方50%的戰鬥力）。
 				[NEWLINE][ICON_BULLET]獲得[ICON_GREAT_GENERAL]陸軍統帥的速度+50%。
@@ -7047,7 +7048,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]海軍傳統[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]所有沿海城市+3[ICON_CULTURE]文化。
-				[NEWLINE][ICON_BULLET]每處燈塔、港口和海運碼頭+2[ICON_CULTURE]文化。
+				[NEWLINE][ICON_BULLET]每處燈塔、港口、海運碼頭、碼頭、船塢+2[ICON_CULTURE]文化。
 			</Text>
 		</Replace>
 
@@ -7059,7 +7060,7 @@
 				[COLOR_POSITIVE_TEXT]海事管理[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]燈塔、港口、碼頭使所在城市的[ICON_PRODUCTION]產能和[ICON_RESEARCH]科研產出提高3%。
 				[NEWLINE][ICON_BULLET]海運碼頭、船塢使所在城市的[ICON_PRODUCTION]產能和[ICON_RESEARCH]科研產出提高5%。
-				[NEWLINE][ICON_BULLET]燈塔、港口、碼頭、海運碼頭、船塢+4[ICON_GOLD]金錢。
+				[NEWLINE][ICON_BULLET]燈塔、港口、海運碼頭、碼頭、船塢+2[ICON_PRODUCTION]產能。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_COASTAL_ADMINISTRATION_TEXT">

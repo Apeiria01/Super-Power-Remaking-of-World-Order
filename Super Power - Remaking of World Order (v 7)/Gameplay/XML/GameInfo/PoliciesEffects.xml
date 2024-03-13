@@ -238,6 +238,11 @@
 		</Row>
 		<Row>
 			<PolicyType>POLICY_NAVAL_TRADITION</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_SHIPYARD</BuildingClassType>
+			<CultureChange>2</CultureChange>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_NAVAL_TRADITION</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_HARBOR</BuildingClassType>
 			<CultureChange>2</CultureChange>
 		</Row>

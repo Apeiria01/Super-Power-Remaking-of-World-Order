@@ -6720,7 +6720,8 @@
 				[COLOR_POSITIVE_TEXT]荣誉政策[ENDCOLOR]能增强国家的[ICON_WAR]军事实力。
 				[NEWLINE][NEWLINE]启用荣誉政策：
 				[NEWLINE][ICON_BULLET]消灭敌方单位时可获得[ICON_GOLD]金钱奖励（相当于敌方50%的战斗力）。
-				[NEWLINE][ICON_BULLET]已探索区域内产生新的蛮族营地时会出现提示消息。允许建造宙斯神像和英雄史诗。
+				[NEWLINE][ICON_BULLET]已探索区域内产生新的蛮族营地时会出现提示消息。
+				[NEWLINE][ICON_BULLET]允许建造宙斯神像和英雄史诗。
 				[NEWLINE][NEWLINE]推行所有荣誉政策：
 				[NEWLINE][ICON_BULLET]消灭敌方单位时可获得[ICON_CULTURE]文化奖励（相当于敌方50%的战斗力）。
 				[NEWLINE][ICON_BULLET]获得[ICON_GREAT_GENERAL]陆军统帅的速度+50%。
@@ -7152,7 +7153,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]海军传统[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]所有沿海城市+3[ICON_CULTURE]文化。
-				[NEWLINE][ICON_BULLET]每处灯塔、港口和海运码头+2[ICON_CULTURE]文化。
+				[NEWLINE][ICON_BULLET]每处灯塔、港口、海运码头、码头、船坞+2[ICON_CULTURE]文化。
 			</Text>
 		</Replace>
 
@@ -7164,7 +7165,7 @@
 				[COLOR_POSITIVE_TEXT]海事管理[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]灯塔、港口、码头使所在城市的[ICON_PRODUCTION]产能和[ICON_RESEARCH]科研产出提高3%。
 				[NEWLINE][ICON_BULLET]海运码头、船坞使所在城市的[ICON_PRODUCTION]产能和[ICON_RESEARCH]科研产出提高5%。
-				[NEWLINE][ICON_BULLET]灯塔、港口、码头、海运码头、船坞+4[ICON_GOLD]金钱。
+				[NEWLINE][ICON_BULLET]灯塔、港口、海运码头、码头、船坞+2[ICON_PRODUCTION]产能。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_COASTAL_ADMINISTRATION_TEXT">
