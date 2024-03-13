@@ -7991,7 +7991,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]Naval Tradition[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]+3 [ICON_CULTURE] Culture in all coastal Cities.
-				[NEWLINE][ICON_BULLET]+2 [ICON_CULTURE] Culture for every Lighthouse, Harbor and Seaport.
+				[NEWLINE][ICON_BULLET]+2 [ICON_CULTURE] Culture for every Lighthouse, Harbor, Seaport, Wood Dock and Shipyard.
 			</Text>
 		</Replace>
 
@@ -8004,7 +8004,7 @@
 				[COLOR_POSITIVE_TEXT]Maritime Administration[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]+5% [ICON_RESEARCH] Science and +5% [ICON_PRODUCTION] Production output from every Shipyard and Seaport.
 				[NEWLINE][ICON_BULLET]+3% [ICON_RESEARCH] Science and +3% [ICON_PRODUCTION] Production output from every Lighthouse , harbor and Wood Dock.
-				[NEWLINE][ICON_BULLET]Lighthouse , harbor , Wood Dock , Shipyard and Seaport +4 [ICON_GOLD] Gold.
+				[NEWLINE][ICON_BULLET]Lighthouse, Harbor, Seaport, Wood Dock and Shipyard +2 [ICON_PRODUCTION] Production.
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_COASTAL_ADMINISTRATION_TEXT">
