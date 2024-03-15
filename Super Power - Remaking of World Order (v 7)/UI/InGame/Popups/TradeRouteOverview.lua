@@ -441,7 +441,6 @@ function LookAtOrRecall(instance, v)
 ---------------SP end trade early will remove the unit
  		if pUnit:IsTrade() then
 		  pUnit:EndTrader()
---		  pUnit:Kill()
 		  print ("Trade Canceled!")
 		  instance.TurnsLeft:LocalizeAndSetText("[ICON_ARROW_LEFT]")
 		  instance.TurnsLeft:SetToolTipString (Locale.Lookup("TXT_KEY_TRO_RECALLED"))
