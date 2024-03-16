@@ -17514,6 +17514,16 @@
 			<Text>For every Great Works you own, you get 2% global [ICON_CULTURE] Culture and [ICON_TOURISM] Tourism output bonus</Text>
 		</Row>
 
+		<Row Tag="TXT_KEY_DIPLOMACY_MARRIAGE_TITLE">
+			<Text>Diplomatic marriage</Text>
+		</Row>
+		<Row Tag="TXT_KEY_DIPLOMACY_MARRIAGE_BODY">
+			<Text>Available only in Austria. It can greatly improve the relationship and alliance tendency with the civilization (the duration is the same as declaring friendship), and only players from the same family can be married at the same time. </Text>
+		</Row>
+		<Row Tag="TXT_KEY_DIPLOMACY_MARRIAGE_ADV_QUEST">
+			<Text>How to marry with other major civilizations? </Text>
+		</Row>
+
 		<Row Tag="TXT_KEY_DIPLOMACY_DUAL_EMPIRE_TREATY_TITLE">
 			<Text>Dual Empire Agreement</Text>
 		</Row>
