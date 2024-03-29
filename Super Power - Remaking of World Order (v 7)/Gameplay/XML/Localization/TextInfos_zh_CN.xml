@@ -14969,6 +14969,17 @@
 			</Text>
 		</Row>
 
+		<Row Tag="TXT_KEY_GAME_OPTION_BARBARIAN_KING">
+			<Text>
+				SP-开启 [COLOR_YELLOW]蛮族之王[ENDCOLOR]
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GAME_OPTION_BARBARIAN_KING_HELP">
+			<Text>
+				<!-- TODO(catgrep) -->
+			</Text>
+		</Row>
+
 		<Row Tag="TXT_KEY_GAME_OPTION_ABLE_GIFT_MILITIA">
 			<Text>
 				SP-开启 [COLOR_YELLOW]赠送民兵单位[ENDCOLOR]

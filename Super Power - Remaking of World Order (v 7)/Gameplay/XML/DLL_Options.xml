@@ -469,6 +469,12 @@
 			<Help>TXT_KEY_GAME_OPTION_PROJECT_CAPTURE_HELP</Help>
 		</Row>
 
+		<Row>
+			<Type>GAMEOPTION_BARBARIAN_KING</Type>
+			<Description>TXT_KEY_GAME_OPTION_BARBARIAN_KING</Description>
+			<Help>TXT_KEY_GAME_OPTION_BARBARIAN_KING_HELP</Help>
+		</Row>
+
 		<Update>
 			<Where Type="GAMEOPTION_SP_NUCLEARWINTER_OFF"/>
 			<Set Default="1"/>

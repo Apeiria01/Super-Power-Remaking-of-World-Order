@@ -206,6 +206,7 @@
 			<IconAtlas>SP_IMPROVEMENTS_ATLAS</IconAtlas>
 			<NoTwoAdjacent>true</NoTwoAdjacent>
 			<RequiresFeature>true</RequiresFeature>
+			<RequiredAdjacentCity>true</RequiredAdjacentCity>
 		</Row>
 	</Improvements>
 	
