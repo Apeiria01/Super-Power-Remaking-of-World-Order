@@ -3746,12 +3746,12 @@
 			<Description>TXT_KEY_PROMOTION_STATUE_ZEUS</Description>
 			<Help>TXT_KEY_PROMOTION_STATUE_ZEUS_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<OutsideFriendlyLandsModifier>15</OutsideFriendlyLandsModifier>
 			<CannotBeChosen>true</CannotBeChosen>
 			<PortraitIndex>23</PortraitIndex>
 			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_SHARED</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_STATUE_ZEUS</PediaEntry>
+			<OutsideFriendlyLandsInflictDamageChange>5</OutsideFriendlyLandsInflictDamageChange>
 		</Row>
 		<Row>
 			<Type>PROMOTION_HIMEJI_CASTLE</Type>

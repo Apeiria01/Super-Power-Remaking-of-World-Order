@@ -4064,7 +4064,7 @@
 
 		<!-- Help tags -->
 		<Replace Tag="TXT_KEY_WONDER_STATUE_ZEUS_HELP">
-			<Text>Requires Honor. +15% [ICON_STRENGTH] Combat Strength for units fighting outside friendly territory. </Text>
+			<Text>Requires Honor. +5 [ICON_WAR] Inflict Damage for all combat units when fighting outside of Friendly Territory. </Text>
 		</Replace>
 
 
@@ -15611,7 +15611,7 @@
 
 
 		<Replace Tag="TXT_KEY_PROMOTION_STATUE_ZEUS_HELP" >
-			<Text>+15% [ICON_STRENGTH] Combat Strength when fighting outside of Friendly Territory.</Text>
+			<Text>+5 [ICON_WAR] Inflict Damage when fighting outside of Friendly Territory.</Text>
 		</Replace>
 		
 		

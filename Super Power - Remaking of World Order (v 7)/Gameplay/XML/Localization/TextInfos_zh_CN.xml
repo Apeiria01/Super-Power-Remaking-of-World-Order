@@ -1568,7 +1568,7 @@
 
 		<!-- Help tags -->
 		<Replace Tag="TXT_KEY_WONDER_STATUE_ZEUS_HELP">
-			<Text>需要开启荣誉政策树。所有单位在境外作战+15%战斗力。</Text>
+			<Text>需要开启荣誉政策树。境外作战+5[ICON_WAR]固定伤害。</Text>
 		</Replace>
 
 
@@ -13620,7 +13620,7 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_PROMOTION_STATUE_ZEUS_HELP">
-			<Text>境外作战+15%[ICON_STRENGTH]战斗力。</Text>
+			<Text>境外作战+5[ICON_WAR]固定伤害。</Text>
 		</Replace>
 
 		<Row Tag="TXT_KEY_PEDIA_PROMOTION_SPACE_ELEVATOR">
