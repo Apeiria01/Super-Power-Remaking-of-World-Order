@@ -3299,7 +3299,11 @@
 			<Yield>20</Yield>
 		</Row>-->
 
-
+		<Row>
+			<BuildingType>BUILDING_PARTHENON</BuildingType>
+			<YieldType>YIELD_TOURISM</YieldType>
+			<Yield>25</Yield>
+		</Row>
 
 		<Row>
 			<BuildingType>BUILDING_CARTHAGINIAN_COTHON</BuildingType>

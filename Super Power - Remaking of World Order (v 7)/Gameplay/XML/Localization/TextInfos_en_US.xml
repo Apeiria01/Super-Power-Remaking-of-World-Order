@@ -3900,7 +3900,7 @@
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_PARTHENON_HELP" />
 			<Set
-				Text="Contains a prebuilt Great Work of Art in the Great Work Slot. [NEWLINE][NEWLINE]+6 [ICON_TOURISM] Tourism when Archaeology is discovered." />
+				Text="Contains a prebuilt Great Work of Art in the Great Work Slot. [NEWLINE][NEWLINE]+6 [ICON_TOURISM] Tourism when Archaeology is discovered. [NEWLINE][NEWLINE]+1 [ICON_TOURISM] Tourism for every 4 [ICON_CITIZEN] Citizens in this City." />
 		</Update>
 		<Row Tag="TXT_KEY_BUILDING_STONEHENGE_HELP">
 			<Text>+9[ICON_PEACE] Faith, +1 [ICON_GREAT_PEOPLE] Great Engineer Points, +6 [ICON_TOURISM] Tourism when Archaeology is discovered. </Text>

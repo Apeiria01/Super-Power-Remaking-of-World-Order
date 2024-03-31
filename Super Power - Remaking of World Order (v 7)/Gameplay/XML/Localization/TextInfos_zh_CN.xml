@@ -1412,7 +1412,7 @@
 
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_PARTHENON_HELP" />
-			<Set Text="在其杰作展位中已经收藏有一件美术杰作。研究考古学科技后+6[ICON_TOURISM]魅力产出。" />
+			<Set Text="在其杰作展位中已经收藏有一件美术杰作。研究考古学科技后+6[ICON_TOURISM]魅力产出。每4[ICON_CITIZEN]人口提供+1[ICON_TOURISM]魅力产出" />
 		</Update>
 
 		<Row Tag="TXT_KEY_BUILDING_STONEHENGE_HELP">
