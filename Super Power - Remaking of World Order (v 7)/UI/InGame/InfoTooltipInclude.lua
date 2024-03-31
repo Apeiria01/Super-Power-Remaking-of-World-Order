@@ -1799,6 +1799,14 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		end
 	end
 
+	for row in GameInfo.Building_TradeRouteFromTheCityYields(thisBuildingType) do
+		local yieldInfo = GameInfo.Yields[row.YieldType]
+		local value = row.YieldValue or 0
+		if yieldInfo and (value or 0) > 0 then
+			insert(tips,
+				("[ICON_INTERNATIONAL_TRADE]" .. L("TXT_KEY_TRADE_TO_OTHER_CITY_BONUS") .. " +" .. value .. L(yieldInfo.IconString) .. " [ICON_ARROW_LEFT]"))
+		end
+	end
 
 	-- Yields enhanced by Technology
 	if techFilter( enhancedYieldTech ) then
