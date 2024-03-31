@@ -15674,5 +15674,9 @@
 		<Replace Tag="TXT_KEY_CHOOSE_ARCH_LANDMARK_RESULT">
 			<Text>當完成時，風景地標會根據它的建成時間提供[ICON_CULTURE]文化和[ICON_TOURISM]魅力。遺跡時間與所在文明的當前時代相比，每早壹個時代就+1[ICON_CULTURE]文化、+1[ICON_TOURISM]魅力。修建風景地標會消耗掉考古學家。</Text>
 		</Replace>
+		
+		<Replace Tag="TXT_KEY_WONDER_GREAT_LIGHTHOUSE_HELP">
+			<Text>所有海上軍事單位+1[ICON_MOVES]移動力，+1視野，無視ZOC。所在城市免費獲得一座燈塔。 [NEWLINE][NEWLINE]城市必須沿海。 </Text>
+		</Replace>
 	</Language_zh_Hant_HK>
 </GameData>
