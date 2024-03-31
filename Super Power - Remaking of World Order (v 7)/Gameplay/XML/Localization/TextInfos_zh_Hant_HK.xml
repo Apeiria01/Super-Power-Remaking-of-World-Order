@@ -1525,7 +1525,7 @@
 
 		<!-- Help tags -->
 		<Replace Tag="TXT_KEY_WONDER_STATUE_ZEUS_HELP">
-			<Text>需要開啟榮譽政策樹。所有單位在境外作戰+15%戰鬥力。</Text>
+			<Text>需要開啟榮譽政策樹。所有單位境外作戰+5[ICON_WAR]固定傷害。</Text>
 		</Replace>
 
 
@@ -13442,7 +13442,7 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_PROMOTION_STATUE_ZEUS_HELP">
-			<Text>境外作戰+15%[ICON_STRENGTH]戰鬥力。</Text>
+			<Text>境外作戰+5[ICON_WAR]固定傷害。</Text>
 		</Replace>
 
 		<Row Tag="TXT_KEY_PEDIA_PROMOTION_SPACE_ELEVATOR">
