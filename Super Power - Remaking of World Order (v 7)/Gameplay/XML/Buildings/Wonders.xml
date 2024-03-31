@@ -1411,6 +1411,7 @@
 			<WonderSplashAudio>AS2D_WONDER_SPEECH_GREAT_MOSQUE_OF_DJENNE</WonderSplashAudio>
 			<EnhancedYieldTech>TECH_SCIENTIFIC_THEORY</EnhancedYieldTech>
 			<TechEnhancedTourism>4</TechEnhancedTourism>
+			<FreePromotion>PROMOTION_MOSQUE_OF_DJENNE</FreePromotion>
 		</Row>
 		<Row>
 			<Type>BUILDING_PETRA</Type>

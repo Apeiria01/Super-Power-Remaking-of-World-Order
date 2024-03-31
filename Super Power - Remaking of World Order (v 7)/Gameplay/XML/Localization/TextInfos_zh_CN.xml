@@ -1407,7 +1407,7 @@
 
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_MOSQUE_OF_DJENNE_HELP" />
-			<Set Text="所在城市诞生的传教士能有三次传教机会。向所在城市赠送一个清真寺。研究科学理论后+4[ICON_TOURISM]魅力产出。" />
+			<Set Text="所在城市诞生的传教士能有三次传教机会。传教士和大先知+1[ICON_MOVES]移动力，传播宗教时可获得[ICON_PEACE]信仰和[ICON_GOLDEN_AGE]黄金时代点数。向所在城市赠送一个清真寺。研究科学理论后+4[ICON_TOURISM]魅力产出。" />
 		</Update>
 
 		<Update>
@@ -15877,5 +15877,12 @@
 		<Replace Tag="TXT_KEY_WONDER_GREAT_LIGHTHOUSE_HELP">
 			<Text>所有海上军事单位+1[ICON_MOVES]移动力，+1视野，无视ZOC。所在城市免费获得一座灯塔。[NEWLINE][NEWLINE]城市必须沿海。</Text>
 		</Replace>
+
+		<Row Tag="TXT_KEY_PROMOTION_MOSQUE_OF_DJENNE">
+			<Text>布道者的远行</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_MOSQUE_OF_DJENNE_HELP">
+			<Text>+1移动力，实施传教行动时，每转换一个[ICON_CITIZEN]信徒，获得+5[ICON_PEACE]信仰和+5[ICON_GOLDEN_AGE]黄金时代点</Text>
+		</Row>
 	</Language_zh_CN>
 </GameData>
