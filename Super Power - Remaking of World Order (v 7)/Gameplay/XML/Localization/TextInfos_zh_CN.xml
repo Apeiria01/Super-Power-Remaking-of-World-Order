@@ -15873,5 +15873,9 @@
 		<Replace Tag="TXT_KEY_CHOOSE_ARCH_LANDMARK_RESULT">
 			<Text>当完成时，风景地标会根据它的建成时间提供[ICON_CULTURE]文化和[ICON_TOURISM]魅力。遗迹时间与所在文明的当前时代相比，每早一个时代就+1[ICON_CULTURE]文化、+1[ICON_TOURISM]魅力。修建风景地标会消耗掉考古学家。</Text>
 		</Replace>
+
+		<Replace Tag="TXT_KEY_WONDER_GREAT_LIGHTHOUSE_HELP">
+			<Text>所有海上军事单位+1[ICON_MOVES]移动力，+1视野，无视ZOC。所在城市免费获得一座灯塔。[NEWLINE][NEWLINE]城市必须沿海。</Text>
+		</Replace>
 	</Language_zh_CN>
 </GameData>

@@ -17556,5 +17556,9 @@
 		<Replace Tag="TXT_KEY_CHOOSE_ARCH_LANDMARK_RESULT">
 			<Text>When worked, a Landmark provides [ICON_CULTURE] Culture and [ICON_TOURISM] Tourism based on its age. +1 [ICON_CULTURE] Culture and +1 [ICON_TOURISM] Tourism per Era older than this civ's current Era. Archaeologist will be consumed.</Text>
 		</Replace>
+
+		<Replace Tag="TXT_KEY_WONDER_GREAT_LIGHTHOUSE_HELP">
+			<Text>All military naval units receive +1 [ICON_MOVES] movement, ignore ZOC, and +1 sight. Provides a free Lighthouse in the city in which it is built.[NEWLINE][NEWLINE]City must be built on the coast.</Text>
+		</Replace>
 	</Language_en_US>
 </GameData>
