@@ -3890,7 +3890,7 @@
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_HAGIA_SOPHIA_HELP" />
 			<Set
-				Text="A [ICON_PROPHET] Great Prophet appears and provides a free Temple in the city. [NEWLINE][NEWLINE]+6 [ICON_TOURISM] Tourism when Scientific Theory is discovered. " />
+				Text="A [ICON_PROPHET] Great Prophet appears and provides a free Temple in the city. [NEWLINE][NEWLINE] +4[ICON_PEACE] Faith for all Holy Sites. [NEWLINE][NEWLINE]+6 [ICON_TOURISM] Tourism when Scientific Theory is discovered. " />
 		</Update>
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_MOSQUE_OF_DJENNE_HELP" />

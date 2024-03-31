@@ -1402,7 +1402,7 @@
 
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_HAGIA_SOPHIA_HELP" />
-			<Set Text="诞生一位[ICON_PROPHET]大先知。所在城市赠送一座神庙。研究科学理论后+6[ICON_TOURISM]魅力产出。" />
+			<Set Text="诞生一位[ICON_PROPHET]大先知。所在城市赠送一座神庙。全国所有圣地+4[ICON_PEACE]信仰。研究科学理论后+6[ICON_TOURISM]魅力产出。" />
 		</Update>
 
 		<Update>
