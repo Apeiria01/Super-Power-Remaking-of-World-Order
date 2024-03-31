@@ -4034,7 +4034,7 @@
 		</Row>
 		<!-- Help tags -->
 		<Row Tag="TXT_KEY_WONDER_MAUSOLEUM_HALICARNASSUS_HELP">
-			<Text>+10% [ICON_PRODUCTION] Production when constructing Buildings. Each source of [ICON_RES_MARBLE] Marble and [ICON_RES_STONE] Stone worked for this city produces +2 [ICON_GOLD] Gold and +1[ICON_PRODUCTION] Production.[NEWLINE][NEWLINE]City must have at least one of these resources improved with a Quarry. </Text>
+			<Text>The production required to build buildings [ICON_PRODUCTION] -15% (the upper limit of stacking with the Chinese paper maker is -30%). Each source of [ICON_RES_MARBLE] Marble and [ICON_RES_STONE] Stone worked for this city produces +2 [ICON_GOLD] Gold and +1[ICON_PRODUCTION] Production.[NEWLINE][NEWLINE]City must have at least one of these resources improved with a Quarry. </Text>
 		</Row>
 		<!-- Quote tags -->
 		<Row Tag="TXT_KEY_WONDER_MAUSOLEUM_HALICARNASSUS_QUOTE">
