@@ -1538,7 +1538,7 @@
 		</Row>
 		<!-- Help tags -->
 		<Row Tag="TXT_KEY_WONDER_MAUSOLEUM_HALICARNASSUS_HELP">
-			<Text>建造建筑时+10%[ICON_PRODUCTION]产能积累。所在城市开发的每处[ICON_RES_MARBLE]大理石和[ICON_RES_STONE]花岗岩资源额外+2[ICON_GOLD]金钱和+1[ICON_PRODUCTION]产能。[NEWLINE][NEWLINE]城市必须至少拥有一处已修建采石场的上述资源。</Text>
+			<Text>建造建築所需產能[ICON_PRODUCTION]-15%（同造紙坊疊加上限為-30%）。所在城市开发的每处[ICON_RES_MARBLE]大理石和[ICON_RES_STONE]花岗岩资源额外+2[ICON_GOLD]金钱和+1[ICON_PRODUCTION]产能。[NEWLINE][NEWLINE]城市必须至少拥有一处已修建采石场的上述资源。</Text>
 		</Row>
 		<!-- Quote tags -->
 		<Row Tag="TXT_KEY_WONDER_MAUSOLEUM_HALICARNASSUS_QUOTE">

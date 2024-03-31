@@ -1070,7 +1070,7 @@
 			<MinAreaSize>-1</MinAreaSize>
 			<ConquestProb>100</ConquestProb>
 			<GreatPeopleRateChange>1</GreatPeopleRateChange>
-			<BuildingProductionModifier>10</BuildingProductionModifier>
+			<GlobalProductionNeededBuildingModifier>-15</GlobalProductionNeededBuildingModifier>
 			<DisplayPosition>4</DisplayPosition>
 			<IconAtlas>WONDERS_DLC_ATLAS</IconAtlas>
 			<PortraitIndex>1</PortraitIndex>
