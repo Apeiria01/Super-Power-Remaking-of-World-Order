@@ -3271,4 +3271,17 @@
 		</Row>
 
 	</Building_ResourceQuantityRequirements>
+
+	<Building_TradeRouteFromTheCityYields>
+		<Row>
+			<BuildingType>BUILDING_COLOSSUS</BuildingType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<YieldValue>2</YieldValue>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_COLOSSUS</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<YieldValue>2</YieldValue>
+		</Row>
+	</Building_TradeRouteFromTheCityYields>
 </GameData>

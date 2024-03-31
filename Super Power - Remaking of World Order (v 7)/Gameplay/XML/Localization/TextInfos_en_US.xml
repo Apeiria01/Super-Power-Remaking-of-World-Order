@@ -3875,7 +3875,7 @@
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_COLOSSUS_HELP" />
 			<Set
-				Text="Gains an additional trade route slot and a Cargo Ship appears in the city and +50% to the range of trade routes originating from this city. [NEWLINE][NEWLINE]City must be built on the coast." />
+				Text="Gains an additional trade route slot and a Cargo Ship appears in the city and +50% to the range of trade routes originating from this city. [NEWLINE][NEWLINE]City must be built on the coast. [NEWLINE][NEWLINE] Trade routes from this city +2 Science [ICON_RESEARCH], +2 Culture [ICON_CULTURE]" />
 		</Update>
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_ORACLE_HELP" />
