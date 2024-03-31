@@ -1781,6 +1781,8 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 	insertLocalizedIfNonZero( tips, "TXT_KEY_PRODUCTION_NEEDED_BUILDING_MODIFIER", building.GlobalProductionNeededBuildingModifier or 0 )
 	insertLocalizedIfNonZero( tips, "TXT_KEY_PRODUCTION_NEEDED_PROJECT_MODIFIER", building.GlobalProductionNeededProjectModifier or 0 )
 
+	insertLocalizedIfNonZero( tips, "TXT_KEY_GLOBAL_GROWTH_FOOD_NEEDED_MODIFIER", building.GlobalGrowthFoodNeededModifier or 0 )
+
 	if PreGame.GetGameOption("GAMEOPTION_SP_CORPS_MODE_DISABLE") == 0 then
 		local TroopRow = GameInfo.Building_DomainTroops{BuildingType = buildingType, DomainType = "DOMAIN_SEA"}()
 		if TroopRow then

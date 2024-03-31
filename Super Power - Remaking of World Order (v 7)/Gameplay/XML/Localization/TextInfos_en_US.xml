@@ -3869,7 +3869,7 @@
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_HANGING_GARDEN_HELP" />
 			<Set
-				Text="+10% [ICON_FOOD] Food output in all cities. Provides a free Garden in the city in which it is built." />
+				Text="-10%[ICON_CITIZEN] population growth threshold for all cities. Provides a free Garden in the city in which it is built." />
 		</Update>
 
 		<Update>
@@ -17238,6 +17238,10 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_PRODUCTION_NEEDED_PROJECT_MODIFIER">
 			<Text>Global Project [ICON_PRODUCTION] Cost:{1_Num}%</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_GLOBAL_GROWTH_FOOD_NEEDED_MODIFIER">
+			<Text>National population growth [ICON_CITIZEN] threshold: {1_Num}%</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_DIPLO_TO_TRADE_CITY_TT">
