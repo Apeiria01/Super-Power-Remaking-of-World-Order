@@ -7497,4 +7497,12 @@
 			<Yield>3</Yield>
 		</Row>
 	</Building_SpecialistYieldChangesLocal>
+	<Building_ImprovementYieldChangesGlobal>
+		<Row>
+			<ImprovementType>IMPROVEMENT_HOLY_SITE</ImprovementType>
+			<BuildingType>BUILDING_HAGIA_SOPHIA</BuildingType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>4</Yield>
+		</Row>
+	</Building_ImprovementYieldChangesGlobal>
 </GameData>

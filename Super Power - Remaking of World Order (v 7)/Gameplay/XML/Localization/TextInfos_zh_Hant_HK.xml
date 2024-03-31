@@ -1359,7 +1359,7 @@
 
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_HAGIA_SOPHIA_HELP" />
-			<Set Text="誕生一位[ICON_PROPHET]預言家。所在城市贈送一座神廟。研究科學理論後+6[ICON_TOURISM]旅遊業績產出。" />
+			<Set Text="誕生一位[ICON_PROPHET]預言家。所在城市贈送一座神廟。全國所有聖地+4[ICON_PEACE]信仰。研究科學理論後+6[ICON_TOURISM]旅遊業績產出。" />
 		</Update>
 
 		<Update>
