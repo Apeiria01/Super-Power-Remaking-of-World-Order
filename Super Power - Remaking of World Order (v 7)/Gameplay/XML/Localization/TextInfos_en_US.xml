@@ -3895,7 +3895,7 @@
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_MOSQUE_OF_DJENNE_HELP" />
 			<Set
-				Text="All missionaries from this city may spread a religion 3 times instead of 2. Provides a free Mosque in the city in which it was built. [NEWLINE][NEWLINE]+4 [ICON_TOURISM] Tourism when Scientific Theory is discovered. " />
+				Text="All missionaries from this city may spread a religion 3 times instead of 2. Missionaries and great prophets have the ability of +1 [ICON_MOVES] movement, and gaining [ICON_PEACE] faith and [ICON_GOLDEN_AGE] golden age points when spreading religion. Provides a free Mosque in the city in which it was built. [NEWLINE][NEWLINE]+4 [ICON_TOURISM] Tourism when Scientific Theory is discovered. " />
 		</Update>
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_PARTHENON_HELP" />
@@ -17560,5 +17560,11 @@
 		<Replace Tag="TXT_KEY_WONDER_GREAT_LIGHTHOUSE_HELP">
 			<Text>All military naval units receive +1 [ICON_MOVES] movement, ignore ZOC, and +1 sight. Provides a free Lighthouse in the city in which it is built.[NEWLINE][NEWLINE]City must be built on the coast.</Text>
 		</Replace>
+		<Row Tag="TXT_KEY_PROMOTION_MOSQUE_OF_DJENNE">
+			<Text>The Preacher’s Journey</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_MOSQUE_OF_DJENNE_HELP">
+			<Text>+1 [ICON_MOVES]movement, when spreading religion, for each [ICON_CITIZEN] follower converted, gain +5[ICON_PEACE] faith and +5[ICON_GOLDEN_AGE] golden age points</Text>
+		</Row>
 	</Language_en_US>
 </GameData>
