@@ -1180,26 +1180,6 @@
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>5</Yield>
 		</Row>
-		<!--<Row>
-			<BuildingType>BUILDING_HANGING_GARDEN</BuildingType>
-			<YieldType>YIELD_FOOD</YieldType>
-			<Yield>2</Yield>
-		</Row>-->
-		<!--<Row>
-			<BuildingType>BUILDING_MUGHAL_FORT</BuildingType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_MUGHAL_FORT</BuildingType>
-			<YieldType>YIELD_FAITH</YieldType>
-			<Yield>2</Yield>
-		</Row>-->
-		<!--<Row>
-			<BuildingType>BUILDING_WAT</BuildingType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>1</Yield>
-		</Row>-->
 	
 		<Row>
 			<BuildingType>BUILDING_MONUMENT</BuildingType>
@@ -2167,11 +2147,6 @@
 
 
 	<Building_GlobalYieldModifiers>
-		<Row>
-			<BuildingType>BUILDING_HANGING_GARDEN</BuildingType>
-			<YieldType>YIELD_FOOD</YieldType>
-			<Yield>10</Yield>
-		</Row>
 
 		<Row>
 			<BuildingType>BUILDING_SATELLITE_WEATHER</BuildingType>

@@ -1339,7 +1339,7 @@
 
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_HANGING_GARDEN_HELP" />
-			<Set Text="所有城市+10%[ICON_FOOD]食物產出。向所在城市贈送一個花園。" />
+			<Set Text="所有城市-10%[ICON_CITIZEN]人口成長閾值。向所在城市贈送一個花園。" />
 		</Update>
 
 		<Update>
@@ -15356,6 +15356,10 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_PRODUCTION_NEEDED_PROJECT_MODIFIER">
 			<Text>全國項目[ICON_PRODUCTION]花費:{1_Num}%</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_GLOBAL_GROWTH_FOOD_NEEDED_MODIFIER">
+			<Text>全國人口成長[ICON_CITIZEN]門檻:{1_Num}%</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_DIPLO_TO_TRADE_CITY_TT">

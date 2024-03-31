@@ -1181,6 +1181,7 @@
 			<PortraitIndex>3</PortraitIndex>
 			<WonderSplashImage>WonderConceptHangingGardens.dds</WonderSplashImage>
 			<WonderSplashAudio>AS2D_WONDER_SPEECH_THE_HANGING_GARDENS_01</WonderSplashAudio>
+			<GlobalGrowthFoodNeededModifier>-10</GlobalGrowthFoodNeededModifier>
 		</Row>
 		<Row>
 			<Type>BUILDING_COLOSSEUM</Type>
