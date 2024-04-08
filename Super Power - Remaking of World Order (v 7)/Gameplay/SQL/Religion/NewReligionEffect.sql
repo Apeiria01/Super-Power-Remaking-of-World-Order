@@ -2,7 +2,7 @@
 --Pantheon
 --***********************************************************************************************--
 INSERT INTO Belief_ResourceYieldChanges (BeliefType,ResourceType,YieldType,Yield)
-SELECT 'BELIEF_OPEN_SKY','RESOURCE_COW','YIELD_FAITH',1 UNION ALL
+SELECT 'BELIEF_OPEN_SKY','RESOURCE_COW','YIELD_FAITH',2 UNION ALL
 SELECT 'BELIEF_OPEN_SKY','RESOURCE_SHEEP','YIELD_FOOD',1 UNION ALL
 SELECT 'BELIEF_OPEN_SKY','RESOURCE_HORSE','YIELD_PRODUCTION',1;
 
@@ -62,7 +62,7 @@ SELECT 'BELIEF_SNOW_BELIEF','TERRAIN_SNOW','YIELD_FOOD',1;
 INSERT INTO Belief_TerrainCityYieldChanges (BeliefType,TerrainType,YieldType,Yield)
 SELECT 'BELIEF_SNOW_BELIEF','TERRAIN_SNOW','YIELD_FAITH',4;
 INSERT INTO Belief_TerrainCityFoodConsumption (BeliefType,TerrainType,Modifier)
-SELECT 'BELIEF_SNOW_BELIEF','TERRAIN_SNOW',-25;
+SELECT 'BELIEF_SNOW_BELIEF','TERRAIN_SNOW',-40;
 
 UPDATE Beliefs SET MinPopulation = '0' WHERE Type = 'BELIEF_GOD_CRAFTSMEN';
 DELETE FROM Belief_CityYieldChanges WHERE BeliefType = 'BELIEF_GOD_CRAFTSMEN';

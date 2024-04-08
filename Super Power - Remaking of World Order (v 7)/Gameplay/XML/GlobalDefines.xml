@@ -796,6 +796,11 @@
 			<Set Value="60"/>
 			<Where Name="BARBARIAN_TECH_PERCENT" />
 		</Update>
+
+		<Update>
+			<Set Value="200"/>
+			<Where Name="BUILDER_TASKING_BASELINE_BUILD_ROUTES" />
+		</Update>
 	</Defines>
 	
 	

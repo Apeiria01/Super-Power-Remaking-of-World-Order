@@ -1940,20 +1940,7 @@ function TipHandler(control)
 					strBuildYieldString = strBuildYieldString .. "[COLOR_NEGATIVE_TEXT]";
 				end
 
-				if (iYield == YieldTypes.YIELD_FOOD) then
-					strBuildYieldString = strBuildYieldString .. Locale.ConvertTextKey("TXT_KEY_BUILD_FOOD_STRING", iYieldChange);
-				elseif (iYield == YieldTypes.YIELD_PRODUCTION) then
-					strBuildYieldString = strBuildYieldString .. Locale.ConvertTextKey("TXT_KEY_BUILD_PRODUCTION_STRING", iYieldChange);
-				elseif (iYield == YieldTypes.YIELD_GOLD) then
-					strBuildYieldString = strBuildYieldString .. Locale.ConvertTextKey("TXT_KEY_BUILD_GOLD_STRING", iYieldChange);
-				elseif (iYield == YieldTypes.YIELD_SCIENCE) then
-					strBuildYieldString = strBuildYieldString .. Locale.ConvertTextKey("TXT_KEY_BUILD_SCIENCE_STRING", iYieldChange);
-				elseif (iYield == YieldTypes.YIELD_CULTURE) then
-					strBuildYieldString = strBuildYieldString .. Locale.ConvertTextKey("TXT_KEY_BUILD_CULTURE_STRING", iYieldChange);
-				elseif (iYield == YieldTypes.YIELD_FAITH) then
-					strBuildYieldString = strBuildYieldString .. Locale.ConvertTextKey("TXT_KEY_BUILD_FAITH_STRING", iYieldChange);
-				end
-
+				strBuildYieldString = strBuildYieldString .. iYieldChange .. "[ENDCOLOR]" .. GameInfo.Yields[iYield].IconString .. Locale.ConvertTextKey(GameInfo.Yields[iYield].Description);
 				bFirstYield = false;
 			end
 		end
