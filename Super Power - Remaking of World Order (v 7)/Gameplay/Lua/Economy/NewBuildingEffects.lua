@@ -33,9 +33,9 @@ function NewBuildingEffects(iPlayer, iCity, iBuilding, bGold, bFaith)
 
 		-- Terracotta Army provides Barracks, Armory and Military Academy
 	elseif iBuilding == GameInfo.Buildings.BUILDING_TERRACOTTA_ARMY.ID then
-		pCity:SetNumRealBuildingClass(GameInfo.BuildingClasses.BUILDINGCLASS_BARRACKS.ID, 1);
-		pCity:SetNumRealBuildingClass(GameInfo.BuildingClasses.BUILDINGCLASS_ARMORY.ID, 1);
-		pCity:SetNumRealBuildingClass(GameInfo.BuildingClasses.BUILDINGCLASS_MILITARY_ACADEMY.ID, 1);
+		pCity:SetNumFreeBuilding(player:GetCivBuilding(GameInfo.BuildingClasses.BUILDINGCLASS_BARRACKS.ID), 1);
+		pCity:SetNumFreeBuilding(player:GetCivBuilding(GameInfo.BuildingClasses.BUILDINGCLASS_ARMORY.ID), 1);
+		pCity:SetNumFreeBuilding(player:GetCivBuilding(GameInfo.BuildingClasses.BUILDINGCLASS_MILITARY_ACADEMY.ID), 1);
 
 		-- Move Captial
 	elseif iBuilding == GameInfo.Buildings.BUILDING_NEW_PALACE.ID then

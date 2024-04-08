@@ -6554,7 +6554,6 @@
 			<CannotBeChosen>true</CannotBeChosen>
 			<AttackChanceFromAttackDamage>FORMULA_ATTACK_CHANCE_FROM_ATTACK_DAMAGE</AttackChanceFromAttackDamage>
 			<MovementFromAttackDamage>FORMULA_MOVEMENT_FROM_ATTACK_DAMAGE</MovementFromAttackDamage>
-			<HealPercentFromAttackDamage>FORMULA_HEAL_PERCENT_FROM_ATTACK_DAMAGE</HealPercentFromAttackDamage>
 		</Row>
 		<Row>
 			<Type>PROMOTION_FULL_FIRE</Type>

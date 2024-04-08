@@ -279,6 +279,11 @@
 		</Update>
 
 		<Update>
+			<Where Name="UNITS_LOCAL_WORKERS"/>
+			<Set Value="1"/>
+		</Update>
+
+		<Update>
 			<Where Name="GLOBAL_CORRUPTION"/>
 			<Set Value="1"/>
 		</Update>

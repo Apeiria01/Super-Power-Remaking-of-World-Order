@@ -1359,7 +1359,7 @@
 
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_HAGIA_SOPHIA_HELP" />
-			<Set Text="誕生一位[ICON_PROPHET]預言家。所在城市贈送一座神廟。全國所有聖地+4[ICON_PEACE]信仰。研究科學理論後+6[ICON_TOURISM]旅遊業績產出。" />
+			<Set Text="誕生一位[ICON_PROPHET]預言家。所在城市贈送一座大教堂。全國所有聖地+4[ICON_PEACE]信仰。研究科學理論後+6[ICON_TOURISM]旅遊業績產出。" />
 		</Update>
 
 		<Update>
@@ -1412,7 +1412,7 @@
 
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_TERRA_COTTA_ARMY_HELP" />
-			<Set Text="+25[ICON_RES_MANPOWER]人力。所在城市獲得兵營、軍械所和軍事學院。[NEWLINE][NEWLINE]研究考古學後+2[ICON_TOURISM]旅遊業績產出。" />
+			<Set Text="+25[ICON_RES_MANPOWER]人力。所在城市獲得免費兵營、軍械所和軍事學院。[NEWLINE][NEWLINE]研究考古學後+2[ICON_TOURISM]旅遊業績產出。" />
 		</Update>
 
 		<Update>
@@ -7863,7 +7863,7 @@
 			<Text>城市+1[ICON_HAPPINESS_1]快樂，城市[ICON_CITIZEN]人口增長時獲得6點[ICON_PEACE]信仰（標準速度下）</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_OPEN_SKY">
-			<Text>牧場+1[ICON_CULTURE]文化,[ICON_RES_COW]牛+1[ICON_PEACE]信仰、[ICON_RES_SHEEP]羊+1[ICON_FOOD]食物、[ICON_RES_HORSE]馬+1[ICON_PRODUCTION]產能</Text>
+			<Text>牧場+1[ICON_CULTURE]文化,[ICON_RES_COW]牛+2[ICON_PEACE]信仰、[ICON_RES_SHEEP]羊+1[ICON_FOOD]食物、[ICON_RES_HORSE]馬+1[ICON_PRODUCTION]產能</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_EARTH_MOTHER">
 			<Text>香料、柑橘、香蕉和棉花+1[ICON_PEACE]信仰、+1[ICON_FOOD]食物</Text>
@@ -7950,7 +7950,7 @@
 			<Text>風暴之神</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SNOW_BELIEF">
-			<Text>雪地+1[ICON_FOOD]食物，位於雪地的城市+4[ICON_PEACE]信仰且-20%[ICON_FOOD]食物消耗</Text>
+			<Text>雪地+1[ICON_FOOD]食物，位於雪地的城市+4[ICON_PEACE]信仰且-40%[ICON_FOOD]食物消耗</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_GOD_OF_COMMERCE_SHORT">
 			<Text>商賈信使</Text>
@@ -13774,7 +13774,6 @@
 		<Row Tag="TXT_KEY_PROMOTION_GAIN_MOVES_AFFER_KILLING_HELP">
 			<Text>
 				[ICON_BULLET]每對一支敵方部隊造成30以上的傷害，返還1移動力、1攻擊次數。
-				[NEWLINE][ICON_BULLET]每擊殺一支敵方部隊,額外恢復10HP。
 			</Text>
 		</Row>
 
