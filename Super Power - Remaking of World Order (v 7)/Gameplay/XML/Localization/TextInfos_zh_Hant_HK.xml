@@ -9016,10 +9016,10 @@
 			<Text>建造一座[LINK=IMPROVEMENT_CHATEAU]酒莊[\LINK]</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILD_CHATEAU_REC">
-			<Text>增加本地塊的[ICON_CULTURE]文化值和[ICON_GOLD]金幣產出。建造在河濱或海濱會有額外加成。</Text>
+			<Text>增加本地塊的[ICON_CULTURE]文化和[ICON_GOLD]金錢產出。建造鄰近淡水或海濱會有額外加成。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILD_CHATEAU_HELP">
-			<Text>酒莊必須建造在奢侈品資源的附近地格。[NEWLINE][ICON_BULLET]如果建造在河濱或海濱則額外+1[ICON_CULTURE]文化值和[ICON_GOLD]金幣產出。</Text>
+			<Text>酒莊必須建造在奢侈品資源的附近地格。[NEWLINE][ICON_BULLET]如果建造在淡水或海濱則額外+1[ICON_CULTURE]文化和[ICON_GOLD]金錢產出（可疊加）。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_CIV5_IMPROVEMENTS_TERRACE_FARM_HELP">
@@ -9063,13 +9063,13 @@
 
 		<Replace Tag="TXT_KEY_CIV5_IMPROVEMENTS_CHATEAU_TEXT">
 			<Text>
-				美學解鎖，必須建在奢侈品旁邊。建造會清除地貌，基礎產出+2[ICON_GOLD]金幣+2[ICON_CULTURE]文化值，建在沿河沿湖地塊再+2[ICON_GOLD]金幣+2[ICON_CULTURE]文化值。研究航空後+2[ICON_GOLD]金幣+1[ICON_CULTURE]文化值。
+				美學解鎖，必須建在奢侈品旁邊。建造會清除地貌，基礎產出+2[ICON_GOLD]金錢+2[ICON_CULTURE]文化，鄰近淡水+1[ICON_GOLD]金錢+1[ICON_CULTURE]文化，鄰近海濱再+1[ICON_GOLD]金錢+1[ICON_CULTURE]文化。研究航空後+2[ICON_GOLD]金錢+1[ICON_CULTURE]文化。
 			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_CIV5_IMPROVEMENTS_CHATEAU_HELP">
 			<Text>
-				美學解鎖，必須建在奢侈品旁邊。建造會清除地貌，基礎產出+2[ICON_GOLD]金幣+2[ICON_CULTURE]文化值，建在沿河沿湖地塊再+2[ICON_GOLD]金幣+2[ICON_CULTURE]文化值。研究航空後+2[ICON_GOLD]金幣+1[ICON_CULTURE]文化值。
+				美學解鎖，必須建在奢侈品旁邊。建造會清除地貌，基礎產出+2[ICON_GOLD]金錢+2[ICON_CULTURE]文化，鄰近淡水+1[ICON_GOLD]金錢+1[ICON_CULTURE]文化，鄰近海濱再+1[ICON_GOLD]金錢+1[ICON_CULTURE]文化。研究航空後+2[ICON_GOLD]金錢+1[ICON_CULTURE]文化。
 			</Text>
 		</Replace>
 

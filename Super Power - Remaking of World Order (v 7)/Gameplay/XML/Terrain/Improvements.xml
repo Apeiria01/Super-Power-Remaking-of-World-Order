@@ -1223,7 +1223,8 @@
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>1</Yield>
 		</Row>
-
+	</Improvement_RiverSideYields>
+	<Improvement_FreshWaterYields>
 		<Row>
 			<ImprovementType>IMPROVEMENT_CHATEAU</ImprovementType>
 			<YieldType>YIELD_GOLD</YieldType>
@@ -1234,7 +1235,7 @@
 			<YieldType>YIELD_CULTURE</YieldType>
 			<Yield>1</Yield>
 		</Row>
-	</Improvement_RiverSideYields>
+	</Improvement_FreshWaterYields>
 
 	<Improvement_AdjacentMountainYieldChanges>
 		<Row>

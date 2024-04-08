@@ -9978,17 +9978,22 @@
 				Portuguese wine is the result of traditions introduced to the region by ancient civilizations, such as the Phoenicians, Carthaginians, Greeks, and mostly the Romans. Portugal started to export its wines to Rome during the Roman Empire. Modern exports developed with trade to England after the Methuen Treaty in 1703. From this commerce a wide variety of wines started to be grown in Portugal. And, in 1758, one of the first wine-producing region of the world, the Região Demarcada do Douro was created under the orientation of Marquis of Pombal, in the Douro Valley. Portugal has two wine producing regions protected by UNESCO as World Heritage: the Douro Valley Wine Region (Douro Vinhateiro) and Pico Island Wine Region (Ilha do Pico Vinhateira). Portugal has a big variety of local kinds, producing a very wide variety of different wines with distinctive personality.
 			</Text>
 		</Replace>
+		<Replace Tag="TXT_KEY_CIV5_IMPROVEMENTS_CHATEAU_HELP">
+			<Text>
+				A Portuguese wine must be built adjacent to a Luxury resource. It provides +2 [ICON_GOLD] GOLD and +2[ICON_CULTURE] Culture. When it was adjacent to Fresh Water or Coastal, it get extra +1 [ICON_GOLD] GOLD and +1 [ICON_CULTURE] Culture (can multiply). When Flight is researched its [ICON_CULTURE] Culture yield increases by 1 and its [ICON_GOLD] Gold output rises by 2.
+			</Text>
+		</Replace>
 
 		<Replace Tag="TXT_KEY_BUILD_CHATEAU">
 			<Text>Construct a [LINK=IMPROVEMENT_CHATEAU]Winery[\LINK]</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILD_CHATEAU_REC">
-			<Text>It will increase the amount of [ICON_CULTURE] Culture and [ICON_GOLD] Gold provided by this tile. Receive bonus output if built on a Riverside or Coastal Tile. </Text>
+			<Text>It will increase the amount of [ICON_CULTURE] Culture and [ICON_GOLD] Gold provided by this tile. Receive bonus output if built on a Fresh water side or Coastal Tile. </Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILD_CHATEAU_HELP">
 			<Text>
 				The Winery must be built adjacent to a luxury resource.
-				[NEWLINE][ICON_BULLET]+1 [ICON_CULTURE] Culture and +1 [ICON_GOLD] Gold if built on a Riverside or Coastal tile.
+				[NEWLINE][ICON_BULLET]+1 [ICON_CULTURE] Culture and +1 [ICON_GOLD] Gold if built on a Fresh water side or Coastal tile.
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_CIV5_IMPROVEMENTS_POLDER_HELP">
