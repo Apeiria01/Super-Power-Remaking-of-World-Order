@@ -5409,7 +5409,7 @@
 		<Row>
 			<BuildingType>BUILDING_TEMPLE</BuildingType>
 			<FlavorType>FLAVOR_RELIGION</FlavorType>
-			<Flavor>80</Flavor>
+			<Flavor>50</Flavor>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_ASSUR_TEMPLE</BuildingType>
