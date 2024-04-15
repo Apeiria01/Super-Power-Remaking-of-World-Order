@@ -548,13 +548,6 @@ function AIPromotion(iPlayer, iCity, iUnit, bGold, bFaith)
         return
     end
 
-    if unit:GetUnitClassType() == GameInfoTypes.UNITCLASS_WORKER then
-        if player:GetUnitClassCount(ThisUnitClass) > AICityCount * 2 or player:GetUnitClassCount(ThisUnitClass) > 20 then
-            unit:Kill()
-            print("Major Civ removed too many workers to let the turn goes faster!")
-        end
-    end
-
     if unit:IsHasPromotion(MilitiaUnitID) and not PlayerAtWarWithHuman(player) then
         if player:GetUnitClassCount(ThisUnitClass) > AICityCount / 5 then
             unit:Kill()
