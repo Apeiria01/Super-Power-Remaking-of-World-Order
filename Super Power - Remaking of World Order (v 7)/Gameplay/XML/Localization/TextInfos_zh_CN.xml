@@ -1387,7 +1387,7 @@
 
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_COLOSSUS_HELP" />
-			<Set Text="获得一条额外的商路和一艘免费的货船。[NEWLINE][NEWLINE]所有由此城市出发的商路+50%距离。城市必须沿海。[NEWLINE][NEWLINE] 本城出发的商路+2[ICON_RESEARCH]科研、+2[ICON_CULTURE]文化" />
+			<Set Text="获得一条额外的商路和一艘免费的货船。[NEWLINE][NEWLINE]所有由此城市出发的商路+50%距离。城市必须沿海。[NEWLINE][NEWLINE]本城出发的商路+2[ICON_RESEARCH]科研、+2[ICON_CULTURE]文化。" />
 		</Update>
 
 		<Update>

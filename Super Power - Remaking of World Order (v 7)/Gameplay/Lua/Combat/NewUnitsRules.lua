@@ -90,7 +90,11 @@ function NewUnitCreationRules(playerID)
 			end
 
 			-- Fix mis-placed Citadel Units
-			if unit:IsImmobile() and unit:GetBaseCombatStrength() > 0 and unit:GetPlot() ~= nil then
+			if unit:IsImmobile() 
+			and unit:GetBaseCombatStrength() > 0 
+			and unit:GetPlot() ~= nil 
+			and unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_CITADEL_DEFENSE"].ID) 
+			then
 				local plot = unit:GetPlot();
 				if plot:GetImprovementType() ~= GameInfo.Improvements["IMPROVEMENT_CITADEL"].ID
 					and plot:GetImprovementType() ~= GameInfo.Improvements["IMPROVEMENT_COASTAL_FORT"].ID
