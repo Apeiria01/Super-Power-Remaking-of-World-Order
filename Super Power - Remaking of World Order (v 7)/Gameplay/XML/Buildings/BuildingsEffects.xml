@@ -5409,7 +5409,7 @@
 		<Row>
 			<BuildingType>BUILDING_TEMPLE</BuildingType>
 			<FlavorType>FLAVOR_RELIGION</FlavorType>
-			<Flavor>50</Flavor>
+			<Flavor>60</Flavor>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_ASSUR_TEMPLE</BuildingType>
@@ -6092,7 +6092,7 @@
 		<Row>
 			<BuildingType>BUILDING_SHRINE</BuildingType>
 			<FlavorType>FLAVOR_RELIGION</FlavorType>
-			<Flavor>25</Flavor>
+			<Flavor>35</Flavor>
 		</Row>
 	
 		<Row>

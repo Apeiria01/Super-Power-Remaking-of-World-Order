@@ -801,6 +801,11 @@
 			<Set Value="200"/>
 			<Where Name="BUILDER_TASKING_BASELINE_BUILD_ROUTES" />
 		</Update>
+
+		<Update>
+			<Set Value="100"/>
+			<Where Name="AI_HOMELAND_MOVE_PRIORITY_UPGRADE" />
+		</Update>
 	</Defines>
 	
 	

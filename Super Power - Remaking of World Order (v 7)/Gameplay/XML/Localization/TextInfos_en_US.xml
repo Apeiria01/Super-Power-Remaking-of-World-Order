@@ -7474,7 +7474,7 @@
 		<Replace Tag="TXT_KEY_POLICY_REPUBLIC_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]Republic[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]+4 [ICON_FOOD] Food and +4 [ICON_GOLD] Gold in every city.
+				[NEWLINE][ICON_BULLET]+2 [ICON_FOOD] Food and +2 [ICON_GOLD] Gold in every city.
 				[NEWLINE][ICON_BULLET]+2 [ICON_RES_CONSUMER] Consumer Goods per city.
 				[NEWLINE][ICON_BULLET]+1% [ICON_FOOD] Global Food and [ICON_PRODUCTION] Global Production from each City.
 			</Text>
@@ -7507,8 +7507,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]Bill of Rights[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]Each Specialist slot in the building provides 1 point corresponding base output (According to default building).
-				[NEWLINE][ICON_BULLET]-50% [ICON_GOLD] Maintenance Cost for All City Halls.
-				[NEWLINE][ICON_BULLET]+1% [ICON_RESEARCH] Global Science and [ICON_GOLD] Global Gold from each City.
+				[NEWLINE][ICON_BULLET]+1% [ICON_RESEARCH] Global Science from each City.
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_BILL_OF_RIGHTS_TEXT">
@@ -7539,7 +7538,7 @@
 		<Row Tag="TXT_KEY_POLICY_DECENTRALIZATION_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]Decentralization[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]+4 [ICON_CULTURE] Culture, +1 [ICON_HAPPINESS_1] Happiness in Cities.
+				[NEWLINE][ICON_BULLET]+2 [ICON_CULTURE] Culture, +1 [ICON_HAPPINESS_1] Happiness in Cities.
 				[NEWLINE][ICON_BULLET]Garrisoned units cost no maintenance.
 			</Text>
 		</Row>
