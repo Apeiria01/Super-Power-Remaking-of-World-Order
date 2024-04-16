@@ -312,37 +312,6 @@
 	<Policy_BuildingClassYieldChanges>
 <!--***********************BILL OF RIGHTS reduce the maintainance of City Halls-->
 		<Row>
-			<PolicyType>POLICY_BILL_OF_RIGHTS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_CITY_HALL_LV1</BuildingClassType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<YieldChange>1</YieldChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_BILL_OF_RIGHTS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_CITY_HALL_LV2</BuildingClassType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<YieldChange>2</YieldChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_BILL_OF_RIGHTS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_CITY_HALL_LV3</BuildingClassType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<YieldChange>4</YieldChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_BILL_OF_RIGHTS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_CITY_HALL_LV4</BuildingClassType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<YieldChange>8</YieldChange>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_BILL_OF_RIGHTS</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_CITY_HALL_LV5</BuildingClassType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<YieldChange>12</YieldChange>
-		</Row>
-
-		<Row>
 			<PolicyType>POLICY_OLIGARCHY</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_SMALL</BuildingClassType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
@@ -506,12 +475,12 @@
 		<Row>
 			<PolicyType>POLICY_REPUBLIC</PolicyType>
 			<YieldType>YIELD_FOOD</YieldType>
-			<Yield>4</Yield>
+			<Yield>2</Yield>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_REPUBLIC</PolicyType>
 			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>4</Yield>
+			<Yield>2</Yield>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_LIBERTY</PolicyType>
@@ -526,7 +495,7 @@
 		<Row>
 			<PolicyType>POLICY_DECENTRALIZATION</PolicyType>
 			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>4</Yield>
+			<Yield>2</Yield>
 		</Row>
 	</Policy_CityYieldChanges>
 
@@ -2492,11 +2461,6 @@
 		<Row>
 			<PolicyType>POLICY_REPRESENTATION</PolicyType>
 			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_BILL_OF_RIGHTS</PolicyType>
-			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>1</Yield>
 		</Row>
 		<Row>
