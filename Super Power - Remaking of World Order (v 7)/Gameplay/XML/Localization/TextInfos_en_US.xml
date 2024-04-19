@@ -4469,12 +4469,12 @@
 			<Text>This National Wonder increases [ICON_HAPPINESS_1] Happiness in the empire. It also provides +1 [ICON_CULTURE] Culture. A civilization must have a Colosseum in all cities before it can construct a Circus Maximus.</Text>
 		</Replace>
 
-		<Update>
-			<Where Tag="TXT_KEY_BUILDING_NATIONAL_COLLEGE_HELP" />
-			<Set
-				Text="+25% [ICON_RESEARCH] Science gained from research agreements. [NEWLINE][NEWLINE]Must have built an Academy in all Cities. The cost goes up the more cities there are in the empire." />
-		</Update>
-
+		<Replace Tag="TXT_KEY_BUILDING_NATIONAL_COLLEGE_HELP">
+			<Text>
+				+1 [ICON_RESEARCH] Science for each local Scientist.
+				[NEWLINE][NEWLINE]Must have built an Academy in all Cities. The cost goes up the more cities there are in the empire.
+			</Text>
+		</Replace>
 
 		<Update>
 			<Where Tag="TXT_KEY_BUILDING_HERMITAGE" />

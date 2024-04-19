@@ -1934,10 +1934,12 @@
 			<Text>这个国家奇观能使帝国增加大量[ICON_HAPPINESS_1]快乐。文明建造大竞技场前必须先在所有城市建造竞技场。</Text>
 		</Replace>
 
-		<Update>
-			<Where Tag="TXT_KEY_BUILDING_NATIONAL_COLLEGE_HELP" />
-			<Set Text="合作研究产出的[ICON_RESEARCH]科研+25%。[NEWLINE][NEWLINE]所有城市都需要有学院。文明的城市数量越多建造成本越高。" />
-		</Update>
+		<Replace Tag="TXT_KEY_BUILDING_NATIONAL_COLLEGE_HELP">
+			<Text>
+				本地科学家+1[ICON_RESEARCH]科研。
+				[NEWLINE][NEWLINE]所有城市都需要有学院。文明的城市数量越多建造成本越高。
+			</Text>
+		</Replace>
 
 		<Update>
 			<Where Tag="TXT_KEY_BUILDING_HERMITAGE" />

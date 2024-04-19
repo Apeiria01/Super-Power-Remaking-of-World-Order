@@ -491,7 +491,7 @@
 		<Row>
 			<Type>BUILDING_NATIONAL_COLLEGE</Type>
 			<BuildingClass>BUILDINGCLASS_NATIONAL_COLLEGE</BuildingClass>
-			<Cost>175</Cost>
+			<Cost>125</Cost>
 			<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
 			<Help>TXT_KEY_BUILDING_NATIONAL_COLLEGE_HELP</Help>
 			<ThemingBonusHelp>TXT_KEY_NATIONAL_COLLEGE_THEMING_BONUS_HELP</ThemingBonusHelp>
@@ -500,14 +500,15 @@
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_COLLEGE</ArtDefineTag>
 			<GreatWorkSlotType>GREAT_WORK_SLOT_LITERATURE</GreatWorkSlotType>
 			<GreatWorkCount>2</GreatWorkCount>
-			<MedianTechPercentChange>25</MedianTechPercentChange>
 			<NukeImmune>true</NukeImmune>
-			<NumCityCostMod>30</NumCityCostMod>
+			<NumCityCostMod>25</NumCityCostMod>
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
 			<NeverCapture>true</NeverCapture>
 			<IconAtlas>BW_ATLAS_1</IconAtlas>
 			<PortraitIndex>46</PortraitIndex>
+			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+			<SpecialistCount>2</SpecialistCount>
 		</Row>
 		<Row>
 			<Type>BUILDING_OXFORD_UNIVERSITY</Type>

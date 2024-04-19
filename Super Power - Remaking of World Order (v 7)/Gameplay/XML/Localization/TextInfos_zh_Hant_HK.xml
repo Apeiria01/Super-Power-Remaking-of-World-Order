@@ -1888,10 +1888,12 @@
 			<Text>這個國家奇觀能使帝國增加大量[ICON_HAPPINESS_1]快樂。文明建造大競技場前必須先在所有城市建造競技場。</Text>
 		</Replace>
 
-		<Update>
-			<Where Tag="TXT_KEY_BUILDING_NATIONAL_COLLEGE_HELP" />
-			<Set Text="合作研究產出的[ICON_RESEARCH]科技值+25%。[NEWLINE][NEWLINE]所有城市都需要有學院。文明的城市數量越多建造成本越高。" />
-		</Update>
+		<Replace Tag="TXT_KEY_BUILDING_NATIONAL_COLLEGE_HELP">
+			<Text>
+				本地科學家+1[ICON_RESEARCH]科研。
+				[NEWLINE][NEWLINE]所有城市都需要有學院。文明的城市數量越多建造成本越高。
+			</Text>
+		</Replace>
 
 		<Update>
 			<Where Tag="TXT_KEY_BUILDING_HERMITAGE" />
