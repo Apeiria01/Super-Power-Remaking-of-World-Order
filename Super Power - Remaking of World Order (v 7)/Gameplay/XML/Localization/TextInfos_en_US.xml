@@ -3943,7 +3943,7 @@
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_TERRA_COTTA_ARMY_HELP" />
 			<Set
-				Text="+25 [ICON_RES_MANPOWER] Manpower. Provides free Barracks, Armory and Military Academy in the city in which it is built. [NEWLINE]+2 [ICON_TOURISM] Tourism when Archaeology is discovered. " />
+				Text="+25 [ICON_RES_MANPOWER] Manpower. Provides free Military Academy in the city in which it is built. [NEWLINE]+2 [ICON_TOURISM] Tourism when Archaeology is discovered. " />
 		</Update>
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_ALHAMBRA_HELP" />

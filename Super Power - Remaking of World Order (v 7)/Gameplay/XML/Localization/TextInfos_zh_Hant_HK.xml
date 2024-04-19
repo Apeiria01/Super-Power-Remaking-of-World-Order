@@ -1412,7 +1412,7 @@
 
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_TERRA_COTTA_ARMY_HELP" />
-			<Set Text="+25[ICON_RES_MANPOWER]人力。所在城市獲得免費兵營、軍械所和軍事學院。[NEWLINE][NEWLINE]研究考古學後+2[ICON_TOURISM]旅遊業績產出。" />
+			<Set Text="+25[ICON_RES_MANPOWER]人力。所在城市獲得免費軍事學院。[NEWLINE][NEWLINE]研究考古學後+2[ICON_TOURISM]旅遊業績產出。" />
 		</Update>
 
 		<Update>

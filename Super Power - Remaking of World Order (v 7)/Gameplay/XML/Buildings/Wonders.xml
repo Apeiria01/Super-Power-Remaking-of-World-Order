@@ -1129,6 +1129,7 @@
 			<WonderSplashAudio>AS2D_WONDER_SPEECH_TERRACOTTA_ARMY</WonderSplashAudio>
 			<EnhancedYieldTech>TECH_ARCHAEOLOGY</EnhancedYieldTech>
 			<TechEnhancedTourism>2</TechEnhancedTourism>
+			<FreeBuildingThisCity>BUILDINGCLASS_MILITARY_ACADEMY</FreeBuildingThisCity>
 		</Row>
 		
 

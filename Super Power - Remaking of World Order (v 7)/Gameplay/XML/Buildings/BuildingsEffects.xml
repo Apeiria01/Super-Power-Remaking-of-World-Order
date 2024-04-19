@@ -137,21 +137,6 @@
 
 
 	<Building_DomainProductionModifiers>
-		<!--<Row>
-			<BuildingType>BUILDING_TERRACOTTA_ARMY_FREE</BuildingType>
-			<DomainType>DOMAIN_LAND</DomainType>
-			<Modifier>20</Modifier>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_TERRACOTTA_ARMY_FREE</BuildingType>
-			<DomainType>DOMAIN_AIR</DomainType>
-			<Modifier>20</Modifier>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_TERRACOTTA_ARMY_FREE</BuildingType>
-			<DomainType>DOMAIN_SEA</DomainType>
-			<Modifier>20</Modifier>
-		</Row>-->
 		<!-- modified in other files
 		<Row>
 			<BuildingType>BUILDING_JAPANESE_TENSHU</BuildingType>
