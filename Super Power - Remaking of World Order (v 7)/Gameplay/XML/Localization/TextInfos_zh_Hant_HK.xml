@@ -7653,7 +7653,7 @@
 			<Text>灰色幽靈工程</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROJECT_HEROIC_CARRIER_HELP">
-			<Text>只有[COLOR_POSITIVE_TEXT]首個[ENDCOLOR]完成該工程的文明有機會生成英雄航空母艦：[COLOR_YIELD_GOLD]企業號(CV-6)[ENDCOLOR]。</Text>
+			<Text>只有[COLOR_POSITIVE_TEXT]首個[ENDCOLOR]完成該工程的文明可以建造英雄航空母艦：[COLOR_YIELD_GOLD]企業號(CV-6)[ENDCOLOR]。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROJECT_HEROIC_CARRIER_PEDIA">
 			<Text>企業號航空母艦（英語：USS Enterprise，舷號CV-6，綽號大E或幸運E（Big E或Lucky E）），是一艘隸屬於美國海軍的航空母艦，為約克城級航空母艦的二號艦。[NEWLINE]1941年12月7日，日本海軍偷襲珍珠港。企業號原定在前一日進入港口，但因風浪而有所延誤，僥幸避過一劫。此後企業號參與了美國海軍在太平洋戰爭的大部分重要戰鬥，由早期的空襲東京、中途島海戰及瓜達爾卡納爾島戰役，到美軍反攻的吉爾伯特及馬紹爾群島戰事、馬裏亞納群島及帕勞戰事、菲律賓戰役及萊特灣海戰，以及晚期的硫磺及琉球群島戰事。1945年5月沖繩戰役期間，企業號接連被神風特攻隊自殺飛機擊傷，被迫返回美國維修，使之錯過日本投降前最後三個月的戰鬥。</Text>
