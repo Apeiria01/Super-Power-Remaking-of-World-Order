@@ -8628,7 +8628,7 @@
 			<Text>The Grey Ghost Project</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROJECT_HEROIC_CARRIER_HELP">
-			<Text>Only the [COLOR_POSITIVE_TEXT]First[ENDCOLOR] civilization finishing this project has the chance to generate the Heroic Carrier unit: [COLOR_YIELD_GOLD]Enterprise(CV-6)[ENDCOLOR]. </Text>
+			<Text>Only the [COLOR_POSITIVE_TEXT]First[ENDCOLOR] civilization finishing this project is allowed to build the Heroic Carrier unit: [COLOR_YIELD_GOLD]Enterprise(CV-6)[ENDCOLOR]. </Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROJECT_HEROIC_CARRIER_PEDIA">
 			<Text>USS Enterprise (CV-6) was the seventh U.S. Navy vessel to bear the name. Colloquially called "the Big E". A Yorktown-class carrier, she was launched in 1936 and was one of only three American carriers commissioned before World War II to survive the war. She participated in more major actions of the war against Japan than any other United States ship. These actions included the Attack on Pearl Harbor, the Battle of Midway, the Battle of the Eastern Solomons, the Battle of the Santa Cruz Islands, various other air-sea engagements during the Guadalcanal Campaign, the Battle of the Philippine Sea, and the Battle of Leyte Gulf. Enterprise earned 20 battle stars, the most for any U.S. warship in World War II, and was the most decorated U.S. ship of World War II. On three occasions during the Pacific War, the Japanese announced that she had been sunk in battle, inspiring her nickname "The Grey Ghost".
