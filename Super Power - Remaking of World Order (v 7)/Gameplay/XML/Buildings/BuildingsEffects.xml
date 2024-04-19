@@ -7502,6 +7502,12 @@
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>3</Yield>
 		</Row>
+		<Row>
+			<BuildingType>BUILDING_NATIONAL_COLLEGE</BuildingType>
+			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>1</Yield>
+		</Row>
 	</Building_SpecialistYieldChangesLocal>
 	<Building_ImprovementYieldChangesGlobal>
 		<Row>
