@@ -61,6 +61,7 @@
 			<UnhappinessMod>-20</UnhappinessMod>
 			<FreeExperience>45</FreeExperience>
 			<PolicyCostModifier>3</PolicyCostModifier>
+			<CatchSpiesModifier>30</CatchSpiesModifier>
 		</Row>
 		<Row>
 			<Type>POLICY_AI_ATOMIC</Type>
@@ -71,6 +72,7 @@
 			<ThemingBonusMultiplier>600</ThemingBonusMultiplier>
 			<FreeExperience>45</FreeExperience>
 			<PolicyCostModifier>3</PolicyCostModifier>
+			<CatchSpiesModifier>60</CatchSpiesModifier>
 		</Row>
 
 

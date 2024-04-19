@@ -2215,7 +2215,7 @@
 		<Row>
 			<Type>BUILDING_BARRACKS</Type>
 			<BuildingClass>BUILDINGCLASS_BARRACKS</BuildingClass>
-			<Cost>45</Cost>
+			<Cost>25</Cost>
 			<GoldMaintenance>2</GoldMaintenance>
 			<!--<PrereqTech>TECH_HUNTING</PrereqTech>-->
 			<Help>TXT_KEY_BUILDING_BARRACKS_HELP</Help>
@@ -2236,7 +2236,7 @@
 			<Type>BUILDING_IKANDA</Type>
 			<BuildingClass>BUILDINGCLASS_BARRACKS</BuildingClass>
 			<TrainedFreePromotion>PROMOTION_BUFFALO_HORNS</TrainedFreePromotion>
-			<Cost>23</Cost>
+			<Cost>20</Cost>
 			<GoldMaintenance>2</GoldMaintenance>
 			<!--<PrereqTech>TECH_HUNTING</PrereqTech>-->
 			<Help>TXT_KEY_BUILDING_IKANDA_HELP</Help>
@@ -2259,7 +2259,7 @@
 		<Row>
 			<Type>BUILDING_ARMORY</Type>
 			<BuildingClass>BUILDINGCLASS_ARMORY</BuildingClass>
-			<Cost>90</Cost>
+			<Cost>50</Cost>
 			<GoldMaintenance>4</GoldMaintenance>
 			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
 			<Help>TXT_KEY_BUILDING_ARMORY_HELP</Help>
