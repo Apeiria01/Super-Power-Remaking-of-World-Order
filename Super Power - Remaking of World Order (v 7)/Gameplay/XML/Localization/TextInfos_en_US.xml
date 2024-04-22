@@ -8041,7 +8041,6 @@
 
 				[NEWLINE][NEWLINE]Opening Effect:
 				[NEWLINE][ICON_BULLET]Every 25 [ICON_HAPPINESS_1] excess Happiness provide +5% [ICON_RESEARCH] Science nationwide. (Maximum to +50%)
-				[NEWLINE][ICON_BULLET]+50% [ICON_RESEARCH] Science gained from Research Agreements.
 				[NEWLINE][ICON_BULLET]World Wonder Unlocked: The Porcelain Tower.
 				[NEWLINE][ICON_BULLET]National Wonder Unlocked: National Laboratory.
 				[NEWLINE][NEWLINE]Finishing Bonus:
@@ -8105,7 +8104,7 @@
 
 
 		<Replace Tag="TXT_KEY_POLICY_COVERT_ACTION_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]Covert Action[ENDCOLOR][NEWLINE]Spies have double the chance to successfully rig City-State elections and to capture an enemy spy stealing a technology.</Text>
+			<Text>[COLOR_POSITIVE_TEXT]Covert Action[ENDCOLOR][NEWLINE]Spies have +150% the chance to successfully rig City-State elections and to capture an enemy spy stealing a technology.</Text>
 		</Replace>
 		
 
@@ -8114,7 +8113,7 @@
 		</Replace>
 				
 		<Replace Tag="TXT_KEY_POLICY_OPEN_SOCIETY_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]Avant Garde[ENDCOLOR][NEWLINE]The rate at which [ICON_GREAT_PEOPLE] Great People are born is increased by 25%. +300 [ICON_TOURISM] Tourism to all Civilizations when any Great Person is born.</Text>
+			<Text>[COLOR_POSITIVE_TEXT]Avant Garde[ENDCOLOR][NEWLINE]The rate at which [ICON_GREAT_PEOPLE] Great People are born is increased by 25%. +3% [ICON_TOURISM] Tourism to whole country when any new Great Person is born.</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_CREATIVE_EXPRESSION_HELP" >
