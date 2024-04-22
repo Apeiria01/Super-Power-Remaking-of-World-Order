@@ -7097,7 +7097,6 @@
 				[COLOR_POSITIVE_TEXT]理性政策[ENDCOLOR]能提升國家的[ICON_RESEARCH]科研能力。
 				[NEWLINE][NEWLINE]啟用理性政策：
 				[NEWLINE][ICON_BULLET]在文明保持[ICON_HAPPINESS_1]快樂狀態時，每25點[ICON_HAPPINESS_1]滿意度+5%[ICON_RESEARCH]科研（上限50%）。
-				[NEWLINE][ICON_BULLET]科研協定+50%產出。
 				[NEWLINE][ICON_BULLET]允許建造大報恩寺塔和國家實驗室。
 				[NEWLINE][NEWLINE]推行所有理性政策：
 				[NEWLINE][ICON_BULLET]免費獲得一項科技，
@@ -7159,7 +7158,7 @@
 		<!--*******************Freedom********************* -->
 
 		<Replace Tag="TXT_KEY_POLICY_COVERT_ACTION_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]隱秘行動[ENDCOLOR][NEWLINE]己方間諜操縱城邦選舉的成功率翻倍，阻止敵方竊取科技的概率翻倍。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]隱秘行動[ENDCOLOR][NEWLINE]己方間諜操縱城邦選舉的成功率+150%，阻止敵方竊取科技的概率翻倍。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_VOLUNTEER_ARMY_HELP">
@@ -7167,7 +7166,7 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_OPEN_SOCIETY_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]前衛藝術[ENDCOLOR][NEWLINE]獲得[ICON_GREAT_PEOPLE]偉人的速度加快25%，當有偉人誕生時，對所有文明+300[ICON_TOURISM]旅遊業績。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]前衛藝術[ENDCOLOR][NEWLINE]獲得[ICON_GREAT_PEOPLE]偉人的速度加快25%，當有新偉人誕生時，全國永久+3%[ICON_TOURISM]魅力。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_CREATIVE_EXPRESSION_HELP">
