@@ -9262,12 +9262,14 @@
 			[NEWLINE][NEWLINE]Since they are National Wonders, you can only build one of each in your empire and the building cost goes up the more cities there are in the empire. You don't have to build the lower level Specialists Foundation Buildings in the city before building the upper level one.</Text>
 		</Row>
 		
-		
-		
-			<Row>
-				<Tag>TXT_KEY_BUILDING_SPECIALISTS_SCIENTIFIC_HELP</Tag>
-				<Text>Scientists: +2 [ICON_RESEARCH] Science, -2 [ICON_GOLD] Gold for research funds. [NEWLINE][NEWLINE]The cost goes up the more cities there are in the empire.</Text>
-			</Row>
+		<Row>
+			<Tag>TXT_KEY_BUILDING_SPECIALISTS_SCIENTIFIC_LV1_HELP</Tag>
+			<Text>Scientists: +1 [ICON_RESEARCH] Science, -1 [ICON_GOLD] Gold for research funds. [NEWLINE][NEWLINE]The cost goes up the more cities there are in the empire.</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_BUILDING_SPECIALISTS_SCIENTIFIC_HELP</Tag>
+			<Text>Scientists: +2 [ICON_RESEARCH] Science, -2 [ICON_GOLD] Gold for research funds. [NEWLINE][NEWLINE]The cost goes up the more cities there are in the empire.</Text>
+		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_SPECIALISTS_SCIENTIFIC_LV1</Tag>
 			<Text>[COLOR_CYAN]Science Foundation (Lv1)[ENDCOLOR]</Text>
@@ -9320,6 +9322,10 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_SPECIALISTS_MERCHANT_LV1_HELP</Tag>
 			<Text>Merchants: +2 [ICON_GOLD] Gold. [NEWLINE][NEWLINE]The cost goes up the more cities there are in the empire.</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_BUILDING_SPECIALISTS_MERCHANT_LV2_HELP</Tag>
+			<Text>Merchants: +1 [ICON_FOOD] Food. (Stacks with the effect of Civil Society) [NEWLINE][NEWLINE]The cost goes up the more cities there are in the empire.</Text>
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_SPECIALISTS_MERCHANT_LV3_HELP</Tag>

@@ -8483,6 +8483,10 @@
 		</Row>
 
 		<Row>
+			<Tag>TXT_KEY_BUILDING_SPECIALISTS_SCIENTIFIC_LV1_HELP</Tag>
+			<Text>科学家：+1[ICON_RESEARCH]科研，+1[ICON_GOLD]维护费。[NEWLINE][NEWLINE]文明的城市数量越多建造成本越高。</Text>
+		</Row>
+		<Row>
 			<Tag>TXT_KEY_BUILDING_SPECIALISTS_SCIENTIFIC_HELP</Tag>
 			<Text>科学家：+2[ICON_RESEARCH]科研，+2[ICON_GOLD]维护费。[NEWLINE][NEWLINE]文明的城市数量越多建造成本越高。</Text>
 		</Row>
@@ -8539,6 +8543,10 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_SPECIALISTS_MERCHANT_LV1_HELP</Tag>
 			<Text>商业家：+2[ICON_GOLD]金钱产出。[NEWLINE][NEWLINE]文明的城市数量越多建造成本越高。</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_BUILDING_SPECIALISTS_MERCHANT_LV2_HELP</Tag>
+			<Text>商业家：+1[ICON_FOOD]食物产出。[NEWLINE][NEWLINE]文明的城市数量越多建造成本越高。</Text>
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_SPECIALISTS_MERCHANT_LV3_HELP</Tag>

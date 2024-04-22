@@ -8375,6 +8375,10 @@
 		</Row>
 
 		<Row>
+			<Tag>TXT_KEY_BUILDING_SPECIALISTS_SCIENTIFIC_LV1_HELP</Tag>
+			<Text>科學家：+1[ICON_RESEARCH]科技值，+1[ICON_GOLD]維護費。[NEWLINE][NEWLINE]文明的城市數量越多建造成本越高。</Text>
+		</Row>
+		<Row>
 			<Tag>TXT_KEY_BUILDING_SPECIALISTS_SCIENTIFIC_HELP</Tag>
 			<Text>科學家：+2[ICON_RESEARCH]科技值，+2[ICON_GOLD]維護費。[NEWLINE][NEWLINE]文明的城市數量越多建造成本越高。</Text>
 		</Row>
@@ -8431,6 +8435,10 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_SPECIALISTS_MERCHANT_LV1_HELP</Tag>
 			<Text>商業家：+2[ICON_GOLD]金幣產出。[NEWLINE][NEWLINE]文明的城市數量越多建造成本越高。</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_BUILDING_SPECIALISTS_MERCHANT_LV2_HELP</Tag>
+			<Text>商業家：+1[ICON_FOOD]食物產出。[NEWLINE][NEWLINE]文明的城市數量越多建造成本越高。</Text>
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_SPECIALISTS_MERCHANT_LV3_HELP</Tag>
