@@ -12302,6 +12302,12 @@
 		<Row Tag="TXT_KEY_PROMOTION_CORPS_2_HELP">
 			<Text>+100%最大生命值，+15%[ICON_STRENGTH]战斗力。</Text>
 		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_CANNOT_BE_CORPS">
+			<Text>无法组建军团</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_CANNOT_BE_CORPS_HELP">
+			<Text>拥有该晋升无法组建军团，升级后不保留。</Text>
+		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_CORPS_1_FLEET">
 			<Text>舰队</Text>
 		</Row>

@@ -1218,7 +1218,10 @@
 			<UnitType>UNIT_SPARTAN300</UnitType>
 			<PromotionType>PROMOTION_ELITE_DEFENSE</PromotionType>
 		</Row>
-
+		<Row>
+			<UnitType>UNIT_SPARTAN300</UnitType>
+			<PromotionType>PROMOTION_CANNOT_BE_CORPS</PromotionType>
+		</Row>
 
 		<Row>
 			<UnitType>UNIT_NUMIDIAN</UnitType>
@@ -1255,10 +1258,10 @@
 			<UnitType>UNIT_ELITE_RIDER</UnitType>
 			<PromotionType>PROMOTION_GAIN_MOVES_AFFER_KILLING</PromotionType>
 		</Row>
-		<!--<Row>
+		<Row>
 			<UnitType>UNIT_ELITE_RIDER</UnitType>
-			<PromotionType>PROMOTION_ARMOR_PLATING_I</PromotionType>
-		</Row>-->
+			<PromotionType>PROMOTION_CANNOT_BE_CORPS</PromotionType>
+		</Row>
 
 		<Row>
 			<UnitType>UNIT_ENGLISH_LONGBOWMAN</UnitType>
