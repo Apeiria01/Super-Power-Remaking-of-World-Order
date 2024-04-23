@@ -11820,12 +11820,12 @@
 		
 		<!-- **********NUKE Units*******-->
 		<Replace Tag="TXT_KEY_UNIT_HELP_ATOMIC_BOMB">
-			<Text>[ICON_BULLET]First nuclear weapon in the game. [NEWLINE][NEWLINE][ICON_BULLET]Can damage enemy City, Improvements and Units within the range of 2 tiles. [NEWLINE][ICON_BULLET]Cannot destroy enemy city. [NEWLINE][ICON_BULLET]Consumes 3 Air Unit Capacity in a city.[NEWLINE][ICON_BULLET]Cannot be deployed on [COLOR_NEGATIVE_TEXT]Aircraft Carriers[ENDCOLOR].</Text>
+			<Text>[ICON_BULLET]First nuclear weapon in the game. [NEWLINE][NEWLINE][ICON_BULLET]Can damage enemy City, Improvements and Units within the range of 2 tiles. [NEWLINE][ICON_BULLET]Cannot destroy enemy city.[NEWLINE][ICON_BULLET]Cannot be deployed on [COLOR_NEGATIVE_TEXT]Aircraft Carriers[ENDCOLOR].</Text>
 		</Replace>
 
 
 		<Replace Tag="TXT_KEY_UNIT_HELP_NUCLEAR_MISSILE">
-			<Text>[ICON_BULLET]Advanced nuclear weapon.[NEWLINE][NEWLINE][ICON_BULLET]Can damage enemy City and destroy Improvements and Units within the range of 2 tiles. [NEWLINE][ICON_BULLET]Can destroy enemy city which Population is less than 5. [NEWLINE][ICON_BULLET]Consumes 3 Air Unit Capacity in a city.[NEWLINE][ICON_BULLET]Can be loaded on [COLOR_POSITIVE_TEXT]SSBNs[ENDCOLOR].</Text>
+			<Text>[ICON_BULLET]Advanced nuclear weapon.[NEWLINE][NEWLINE][ICON_BULLET]Can damage enemy City and destroy Improvements and Units within the range of 2 tiles. [NEWLINE][ICON_BULLET]Can destroy enemy city which Population is less than 5.[NEWLINE][ICON_BULLET]Can be loaded on [COLOR_POSITIVE_TEXT]SSBNs[ENDCOLOR].</Text>
 		</Replace>
 
 
@@ -11834,7 +11834,7 @@
 			<Plurality>2</Plurality>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_ICBM_MISSILE_HELP">
-			<Text>[ICON_BULLET]The most powerful nuclear weapon in the game. [NEWLINE][NEWLINE][ICON_BULLET]One single ICBM can utterly destroy a non-Capital city and everything within the range of 2 tiles.[NEWLINE][ICON_BULLET]Consumes 3 Air Unit Capacity in a city.[NEWLINE][ICON_BULLET]Can be loaded on [COLOR_POSITIVE_TEXT]SSBNs[ENDCOLOR].</Text>
+			<Text>[ICON_BULLET]The most powerful nuclear weapon in the game. [NEWLINE][NEWLINE][ICON_BULLET]One single ICBM can utterly destroy a non-Capital city and everything within the range of 2 tiles.[NEWLINE][ICON_BULLET]Can be loaded on [COLOR_POSITIVE_TEXT]SSBNs[ENDCOLOR].</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_ICBM_MISSILE_HEADING">
 			<Text>Intercontinental Ballistic Missile (ICBM) </Text>
@@ -12996,7 +12996,7 @@
 
 
 	<Replace Tag="TXT_KEY_UNIT_HELP_STEALTH_BOMBER">
-		<Text>Advanced Strategic Bomber for attacking Cities. Can kill population or destroy buildings in enemy City. This unit consumes 4 Air Unit Capacity in your City and cannot be deployed on Carriers.</Text>
+		<Text>Advanced Strategic Bomber for attacking Cities. Can kill population or destroy buildings in enemy City. This unit cannot be deployed on Carriers.</Text>
 	</Replace>
 
 

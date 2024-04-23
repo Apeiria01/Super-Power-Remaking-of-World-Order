@@ -9995,11 +9995,11 @@
 		<!-- **********NUKE Units*******-->
 
 		<Replace Tag="TXT_KEY_UNIT_HELP_ATOMIC_BOMB">
-			<Text>遊戲中的第一種核武器，引爆時會殺傷甚至摧毀距離2個區塊內的單位和設施，並對城市造成嚴重破壞，但不能夠摧毀城市。原子彈的載機佔用三個停機位。不能部署在航空母艦上。</Text>
+			<Text>遊戲中的第一種核武器，引爆時會殺傷甚至摧毀距離2個區塊內的單位和設施，並對城市造成嚴重破壞，但不能夠摧毀城市。不能部署在航空母艦上。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_UNIT_HELP_NUCLEAR_MISSILE">
-			<Text>比空投式原子彈更為先進的核武器，引爆時會摧毀距離2個區塊內的單位和設施，並對城市造成嚴重破壞，能夠摧毀少於5人口的城市。核導彈佔用三個停機位。能夠部署在彈道導彈核潛艇上。</Text>
+			<Text>比空投式原子彈更為先進的核武器，引爆時會摧毀距離2個區塊內的單位和設施，並對城市造成嚴重破壞，能夠摧毀少於5人口的城市。能夠部署在彈道導彈核潛艇上。</Text>
 		</Replace>
 
 		<Row Tag="TXT_KEY_UNIT_ICBM_MISSILE">
@@ -10007,7 +10007,7 @@
 			<Plurality>2</Plurality>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_ICBM_MISSILE_HELP">
-			<Text>噩夢般恐怖的核武器。洲際核彈道導彈是遊戲中最強大的武器，引爆時會摧毀距離2個區塊內的單位和設施，並將非首都城市完全摧毀。洲際核彈道導彈佔用三個停機位。能夠部署在彈道導彈核潛艇上。</Text>
+			<Text>噩夢般恐怖的核武器。洲際核彈道導彈是遊戲中最強大的武器，引爆時會摧毀距離2個區塊內的單位和設施，並將非首都城市完全摧毀。能夠部署在彈道導彈核潛艇上。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_ICBM_MISSILE_HEADING">
 			<Text>洲際核彈道導彈</Text>
@@ -11147,10 +11147,10 @@
 		</Row>
 
 		<!--<Replace Tag="TXT_KEY_UNIT_HELP_BOMBER">
-			<Text>攻擊城市的戰略轟炸單位。能夠殺傷敵方城市人口或摧毀城市建築。該單位佔用3個停機位，不能部署在航空母艦上。</Text>
+			<Text>攻擊城市的戰略轟炸單位。能夠殺傷敵方城市人口或摧毀城市建築。該單位不能部署在航空母艦上。</Text>
 		</Replace>-->
 		<Replace Tag="TXT_KEY_UNIT_HELP_STEALTH_BOMBER">
-			<Text>最先進的戰略轟炸單位。能夠殺傷敵方城市人口或摧毀城市建築。該單位佔用4個停機位，不能部署在航空母艦上。</Text>
+			<Text>最先進的戰略轟炸單位。能夠殺傷敵方城市人口或摧毀城市建築。該單位不能部署在航空母艦上。</Text>
 		</Replace>
 
 
@@ -11188,7 +11188,7 @@
 			<Plurality>2</Plurality>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_JET_BOMBER_HELP">
-			<Text>戰略轟炸機可以攻擊敵方的城市，並造成人口損失和摧毀特定建築. 佔用3個停機位，因此無法部署在航母上。</Text>
+			<Text>戰略轟炸機可以攻擊敵方的城市，並造成人口損失和摧毀特定建築。無法部署在航母上。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_JET_BOMBER_HEADING">
 			<Text>戰略轟炸機</Text>
@@ -11891,7 +11891,7 @@
 			<Text>[COLOR_YELLOW]霍頓H.IX戰機[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_HELP_PROTOTYPE_BOMBER">
-			<Text>一種試驗性的隱形攻擊機。航程遠且能夠躲避敵方攔截。[NEWLINE][NEWLINE]該單位佔據4個機位，不能部署在航空母艦上。[NEWLINE][NEWLINE]需要飛翼戰鬥機工程解鎖，你只能組建一支編隊。</Text>
+			<Text>一種試驗性的隱形攻擊機。航程遠且能夠躲避敵方攔截。[NEWLINE][NEWLINE]該單位不能部署在航空母艦上。[NEWLINE][NEWLINE]需要飛翼戰鬥機工程解鎖，你只能組建一支編隊。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_PROTOTYPE_BOMBER_STRATEGY">
 			<Text>能夠躲避敵方攔截的劃時代單位，且航程足以達到下一代轟炸機的標準。然而它的規避幾率只有50%而非100%。如果你的臉不好，還是多派戰鬥機給它打前站吧，這架飛機可是很昂貴的！</Text>
