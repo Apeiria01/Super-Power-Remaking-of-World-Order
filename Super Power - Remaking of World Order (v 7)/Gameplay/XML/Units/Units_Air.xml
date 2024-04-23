@@ -1243,7 +1243,7 @@
 		</Row>
 		<Row>
 			<UnitType>UNIT_FRANCE_MIRRAGE2000</UnitType>
-			<PromotionType>PROMOTION_UNLIMITED_ATTACK</PromotionType>
+			<PromotionType>PROMOTION_LOGISTICS</PromotionType>
 		</Row>
 		<Row>
 			<UnitType>UNIT_FRANCE_MIRRAGE2000</UnitType>

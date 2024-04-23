@@ -3225,7 +3225,7 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_SWEDISH_LABORATORY_SERVICES_HELP</Tag>
 			<Text>
-				+33% [ICON_RESEARCH] Science output and +25% [ICON_GREAT_PEOPLE] Great People generation rate in the city. 
+				+25% [ICON_RESEARCH] Science output and +25% [ICON_GREAT_PEOPLE] Great People generation rate in the city. 
 			</Text>
 		</Row>
 
@@ -4034,7 +4034,7 @@
 		</Row>
 		<!-- Help tags -->
 		<Row Tag="TXT_KEY_WONDER_MAUSOLEUM_HALICARNASSUS_HELP">
-			<Text>The [ICON_PRODUCTION] production required to build buildings -15% (the upper limit of stacking with the Chinese paper maker is -30%). Each source of [ICON_RES_MARBLE] Marble and [ICON_RES_STONE] Stone worked for this city produces +2 [ICON_GOLD] Gold and +1[ICON_PRODUCTION] Production.[NEWLINE][NEWLINE]City must have at least one of these resources improved with a Quarry. </Text>
+			<Text>The [ICON_PRODUCTION] production required to build buildings -10% (the upper limit of stacking with the Chinese paper maker is -30%). Each source of [ICON_RES_MARBLE] Marble and [ICON_RES_STONE] Stone worked for this city produces +2 [ICON_GOLD] Gold and +1[ICON_PRODUCTION] Production.[NEWLINE][NEWLINE]City must have at least one of these resources improved with a Quarry.</Text>
 		</Row>
 		<!-- Quote tags -->
 		<Row Tag="TXT_KEY_WONDER_MAUSOLEUM_HALICARNASSUS_QUOTE">
@@ -10563,7 +10563,7 @@
 		<Replace Tag="TXT_KEY_TRAIT_DIPLOMACY_GREAT_PEOPLE">
 			<Text>
 				[ICON_BULLET]When declaring friendship, Sweden and their friend gain a +10% boost to [ICON_GREAT_PEOPLE] Great Person generation and +10% of the other's [ICON_RESEARCH] research.
-				[NEWLINE][ICON_BULLET]Every 2 [ICON_CITIZEN] Citizens in Small Cities (6+ Population) provide +1 [ICON_RESEARCH] Science Output. 
+				[NEWLINE][ICON_BULLET]Every 4 [ICON_CITIZEN] Citizens in Small Cities (6+ Population) provide +1 [ICON_RESEARCH] Science Output. 
 			</Text>
 		</Replace>
 		

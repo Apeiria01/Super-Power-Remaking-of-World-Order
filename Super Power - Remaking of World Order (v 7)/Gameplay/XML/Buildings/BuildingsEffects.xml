@@ -2091,7 +2091,7 @@
 		<Row>
 			<BuildingType>BUILDING_SWEDISH_LABORATORY_SERVICES</BuildingType>
 			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>33</Yield>
+			<Yield>25</Yield>
 		</Row>
 
 		<Row>

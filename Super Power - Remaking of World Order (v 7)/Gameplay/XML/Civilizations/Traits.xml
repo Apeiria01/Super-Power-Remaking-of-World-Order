@@ -1216,7 +1216,7 @@
 		<Row>
 			<BuildingType>BUILDING_TB_DIPLOMACY_GREAT_PEOPLE</BuildingType>
 			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>50</Yield>
+			<Yield>25</Yield>
 		</Row>
 	</Building_YieldChangesPerPop>
 
