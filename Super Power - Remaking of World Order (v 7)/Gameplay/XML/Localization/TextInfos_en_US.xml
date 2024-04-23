@@ -14062,6 +14062,12 @@
 		<Row Tag="TXT_KEY_PROMOTION_CORPS_2_HELP">
 			<Text>+100% Max. HP, +15% [ICON_STRENGTH] Combat Strength.</Text>
 		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_CANNOT_BE_CORPS">
+			<Text>Unable to establish Corps</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_CANNOT_BE_CORPS_HELP">
+			<Text>Unable to establish Corps, this ability would lose with upgrades.</Text>
+		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_CORPS_1_FLEET">
 			<Text>Fleet</Text>
 		</Row>

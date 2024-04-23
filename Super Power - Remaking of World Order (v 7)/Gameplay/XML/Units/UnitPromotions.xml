@@ -60,6 +60,20 @@
 			<IsArmee>true</IsArmee>
 			<CannotBeEstablishedCorps>true</CannotBeEstablishedCorps>
 		</Row>
+		<Row>
+			<Type>PROMOTION_CANNOT_BE_CORPS</Type>
+			<Description>TXT_KEY_PROMOTION_CANNOT_BE_CORPS</Description>
+			<Help>TXT_KEY_PROMOTION_CANNOT_BE_CORPS_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<OrderPriority>11</OrderPriority>
+			<PortraitIndex>57</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_CANNOT_BE_CORPS</PediaEntry>
+			<CannotBeChosen>true</CannotBeChosen>
+			<LostWithUpgrade>true</LostWithUpgrade>
+			<CannotBeEstablishedCorps>true</CannotBeEstablishedCorps>
+		</Row>
 
 		<Row>
 			<Type>PROMOTION_AZTEC_HUEY_TEOCALLI</Type>
@@ -7020,17 +7034,6 @@
 			<PediaEntry>TXT_KEY_PROMOTION_HALF_CASUALTIES</PediaEntry>
 			<WarCasualtiesModifier>-50</WarCasualtiesModifier>
 		</Row>
-		<!--<Row>
-			<Type>PROMOTION_DOUBLE_CASUALTIES</Type>
-			<Description>TXT_KEY_PROMOTION_DOUBLE_CASUALTIES</Description>
-			<Help>TXT_KEY_PROMOTION_DOUBLE_CASUALTIES_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>58</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_DOUBLE_CASUALTIES</PediaEntry>
-			<LostWithUpgrade>true</LostWithUpgrade>
-		</Row>-->
 	</UnitPromotions>
 	
 		<!--For Aircrafts*****************************-->
