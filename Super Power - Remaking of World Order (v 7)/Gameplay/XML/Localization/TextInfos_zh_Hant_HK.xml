@@ -806,7 +806,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_SWEDISH_LABORATORY_SERVICES_HELP</Tag>
-			<Text>本城市+33%[ICON_RESEARCH]科技值產出，+25%[ICON_GREAT_PEOPLE]偉人點數累積。</Text>
+			<Text>本城市+25%[ICON_RESEARCH]科技值產出，+25%[ICON_GREAT_PEOPLE]偉人點數累積。</Text>
 		</Row>
 
 		<Row>
@@ -1495,7 +1495,7 @@
 		</Row>
 		<!-- Help tags -->
 		<Row Tag="TXT_KEY_WONDER_MAUSOLEUM_HALICARNASSUS_HELP">
-			<Text>建造建築所需[ICON_PRODUCTION]產能-15%（同造紙坊疊加上限為-30%）。所在城市開發的每處[ICON_RES_MARBLE]大理石和[ICON_RES_STONE]花崗岩資源額外+2[ICON_GOLD]金幣和+1[ICON_PRODUCTION]生產力。[NEWLINE][NEWLINE]城市必須至少擁有一處已修建採石場的上述資源。</Text>
+			<Text>建造建築所需[ICON_PRODUCTION]產能-10%（同造紙坊疊加上限為-30%）。所在城市開發的每處[ICON_RES_MARBLE]大理石和[ICON_RES_STONE]花崗岩資源額外+2[ICON_GOLD]金幣和+1[ICON_PRODUCTION]生產力。[NEWLINE][NEWLINE]城市必須至少擁有一處已修建採石場的上述資源。</Text>
 		</Row>
 		<!-- Quote tags -->
 		<Row Tag="TXT_KEY_WONDER_MAUSOLEUM_HALICARNASSUS_QUOTE">
@@ -5914,7 +5914,7 @@
 
 		<Replace Tag="TXT_KEY_TRAIT_DIPLOMACY_GREAT_PEOPLE">
 			<Text>
-				[ICON_BULLET]所有達到小型城市（6[ICON_CITIZEN]人口）規模的城市中每2[ICON_CITIZEN]人口+1[ICON_RESEARCH]科研。
+				[ICON_BULLET]所有達到小型城市（6[ICON_CITIZEN]人口）規模的城市中每4[ICON_CITIZEN]人口+1[ICON_RESEARCH]科研。
 				[NEWLINE][ICON_BULLET]當宣友時，瑞典和他的盟友得到+10%的[ICON_GREAT_PEOPLE]偉人點數，+10%對方的[ICON_RESEARCH]科研。
 			</Text>
 		</Replace>
