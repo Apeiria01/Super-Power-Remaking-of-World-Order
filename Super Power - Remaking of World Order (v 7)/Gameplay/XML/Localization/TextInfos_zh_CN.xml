@@ -10128,11 +10128,11 @@
 		<!-- **********NUKE Units*******-->
 
 		<Replace Tag="TXT_KEY_UNIT_HELP_ATOMIC_BOMB">
-			<Text>游戏中的第一种核武器，引爆时会杀伤甚至摧毁距离2个区块内的单位和设施，并对城市造成严重破坏，但不能够摧毁城市。原子弹的载机占用三个停机位。不能部署在航空母舰上。</Text>
+			<Text>游戏中的第一种核武器，引爆时会杀伤甚至摧毁距离2个区块内的单位和设施，并对城市造成严重破坏，但不能够摧毁城市。不能部署在航空母舰上。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_UNIT_HELP_NUCLEAR_MISSILE">
-			<Text>比空投式原子弹更为先进的核武器，引爆时会摧毁距离2个区块内的单位和设施，并对城市造成严重破坏，能够摧毁少于5人口的城市。核导弹占用三个停机位。能够部署在弹道导弹核潜艇上。</Text>
+			<Text>比空投式原子弹更为先进的核武器，引爆时会摧毁距离2个区块内的单位和设施，并对城市造成严重破坏，能够摧毁少于5人口的城市。能够部署在弹道导弹核潜艇上。</Text>
 		</Replace>
 
 		<Row Tag="TXT_KEY_UNIT_ICBM_MISSILE">
@@ -10140,7 +10140,7 @@
 			<Plurality>2</Plurality>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_ICBM_MISSILE_HELP">
-			<Text>噩梦般恐怖的核武器。洲际核弹道导弹是游戏中最强大的武器，引爆时会摧毁距离2个区块内的单位和设施，并将非首都城市完全摧毁。洲际核弹道导弹占用三个停机位。能够部署在弹道导弹核潜艇上。</Text>
+			<Text>噩梦般恐怖的核武器。洲际核弹道导弹是游戏中最强大的武器，引爆时会摧毁距离2个区块内的单位和设施，并将非首都城市完全摧毁。能够部署在弹道导弹核潜艇上。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_ICBM_MISSILE_HEADING">
 			<Text>洲际核弹道导弹</Text>
@@ -11303,10 +11303,10 @@
 		</Row>
 
 		<!--<Replace Tag="TXT_KEY_UNIT_HELP_BOMBER">
-			<Text>攻击城市的战略轰炸单位。能够杀伤敌方城市人口或摧毁城市建筑。该单位占用3个停机位，不能部署在航空母舰上。</Text>
+			<Text>攻击城市的战略轰炸单位。能够杀伤敌方城市人口或摧毁城市建筑。该单位不能部署在航空母舰上。</Text>
 		</Replace>-->
 		<Replace Tag="TXT_KEY_UNIT_HELP_STEALTH_BOMBER">
-			<Text>最先进的战略轰炸单位。能够杀伤敌方城市人口或摧毁城市建筑。该单位占用4个停机位，不能部署在航空母舰上。</Text>
+			<Text>最先进的战略轰炸单位。能够杀伤敌方城市人口或摧毁城市建筑。该单位不能部署在航空母舰上。</Text>
 		</Replace>
 
 
@@ -11344,7 +11344,7 @@
 			<Plurality>2</Plurality>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_JET_BOMBER_HELP">
-			<Text>战略轰炸机可以攻击敌方的城市，并造成人口损失和摧毁特定建筑. 占用3个停机位，因此无法部署在航母上。</Text>
+			<Text>战略轰炸机可以攻击敌方的城市，并造成人口损失和摧毁特定建筑。无法部署在航母上。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_JET_BOMBER_HEADING">
 			<Text>战略轰炸机</Text>
@@ -12052,7 +12052,7 @@
 			<Text>[COLOR_YELLOW]霍顿H.IX战机[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_HELP_PROTOTYPE_BOMBER">
-			<Text>一种试验性的隐形攻击机。航程远且能够躲避敌方拦截。[NEWLINE][NEWLINE]该单位占据4个机位，不能部署在航空母舰上。[NEWLINE][NEWLINE]需要飞翼战斗机工程解锁，你只能组建一支编队。</Text>
+			<Text>一种试验性的隐形攻击机。航程远且能够躲避敌方拦截。[NEWLINE][NEWLINE]该单位不能部署在航空母舰上。[NEWLINE][NEWLINE]需要飞翼战斗机工程解锁，你只能组建一支编队。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_PROTOTYPE_BOMBER_STRATEGY">
 			<Text>能够躲避敌方拦截的划时代单位，且航程足以达到下一代轰炸机的标准。然而它的规避几率只有50%而非100%。如果你的脸不好，还是多派战斗机给它打前站吧，这架飞机可是很昂贵的！</Text>
