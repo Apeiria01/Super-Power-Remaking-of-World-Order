@@ -1209,6 +1209,7 @@ function OnCityViewUpdate()
 							pWorldCongress = Game.GetActiveLeague();
 						end
 						local iCityMod = pCity:GetGreatPeopleRateModifier();
+						iCityMod = iCityMod + pCity:GetSpecialistCityModifier(iSpecialistIndex);
 						local iGoldenAgeMod = 0;
 						local bGoldenAge = (pPlayer:GetGoldenAgeTurns() > 0);
 						

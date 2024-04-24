@@ -983,7 +983,7 @@
 		<Row>
 			<BuildingType>BUILDING_GREAT_LIBRARY</BuildingType>
 			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>2</Yield>
+			<Yield>1</Yield>
 		</Row>
 		<Row><!-- new yield for national shrine and grand temple -->
 			<BuildingType>BUILDING_GRAND_TEMPLE</BuildingType>
@@ -1740,6 +1740,13 @@
 
 	<Building_BuildingClassYieldChanges>
 		<Row>
+			<BuildingType>BUILDING_GREAT_LIBRARY</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_LIBRARY</BuildingClassType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<YieldChange>3</YieldChange>
+		</Row>
+
+		<Row>
 			<BuildingType>BUILDING_INDUSTRIAL_ZONE</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_METAL_FACTORY</BuildingClassType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
@@ -1838,12 +1845,13 @@
 			<YieldChange>24</YieldChange>
 		</Row>
 
-		<!--<Row>
+		<Row>
 			<BuildingType>BUILDING_NATIONAL_LIBRARY</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_LIBRARY</BuildingClassType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<YieldChange>2</YieldChange>
-		</Row>-->
+			<YieldType>YIELD_CULTURE</YieldType>
+			<YieldChange>3</YieldChange>
+		</Row>
+
 		<!--<Row>
 			<BuildingType>BUILDING_NATIONAL_CARAVANSARY</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_CARAVANSARY</BuildingClassType>
@@ -2161,12 +2169,6 @@
 			<Yield>20</Yield>
 		</Row>
 
-		<Row>
-			<BuildingType>BUILDING_GREAT_LIBRARY</BuildingType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>15</Yield>
-		</Row>
-		
 		<!--<Row>
 			<BuildingType>BUILDING_CHINESE_SHUILIQU</BuildingType>
 			<YieldType>YIELD_FOOD</YieldType>
@@ -3389,6 +3391,19 @@
 			<HurryCostModifier>-15</HurryCostModifier>
 		</Row>
 	</Building_HurryModifiers>
+
+	<Building_SpecificGreatPersonRateModifier>
+		<Row>
+			<BuildingType>BUILDING_GREAT_LIBRARY</BuildingType>
+			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+			<Modifier>15</Modifier>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_GREAT_LIBRARY</BuildingType>
+			<SpecialistType>SPECIALIST_WRITER</SpecialistType>
+			<Modifier>15</Modifier>
+		</Row>
+	</Building_SpecificGreatPersonRateModifier>
 
 
 	<Building_YieldChangesPerReligion>

@@ -1322,10 +1322,14 @@
 		<Delete Tag="TXT_KEY_WONDER_TEMPLE_ARTEMIS_QUOTE" />
 		<Delete Tag="TXT_KEY_WONDER_TEMPLE_ARTEMIS_DESC" />
 
-		<Update>
-			<Where Tag="TXT_KEY_WONDER_GREAT_LIBRARY_HELP" />
-			<Set Text="所有城市+15%[ICON_RESEARCH]科技值產出。向所在城市贈送一個圖書館。擁有2個文學傑作展位。" />
-		</Update>
+		<Replace Tag="TXT_KEY_WONDER_GREAT_LIBRARY_HELP">
+			<Text>
+				[ICON_BULLET]向所在城市贈送一個圖書館。
+				[NEWLINE][ICON_BULLET]所有圖書館+3[ICON_RESEARCH]科研。
+				[NEWLINE][ICON_BULLET]+15%本地大科學家、大文學家點數積累。
+				[NEWLINE][ICON_BULLET]擁有2個文學傑作展位。
+			</Text>
+		</Replace>
 
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_PYRAMIDS_HELP" />
@@ -2025,7 +2029,12 @@
 		</Row>
 		<!-- Help tags -->
 		<Row Tag="TXT_KEY_BUILDING_NATIONAL_LIBRARY_HELP">
-			<Text>需要開啟美學政策樹。[NEWLINE][NEWLINE]本城市[ICON_CULTURE]文化值產出+25%。[NEWLINE][NEWLINE]只能在大型城市（26人口）建造。建造成本隨城市數量增加。</Text>
+			<Text>
+				需要開啟美學政策樹。
+				[NEWLINE][ICON_BULLET]本城市[ICON_CULTURE]文化產出+25%。
+				[NEWLINE][ICON_BULLET]所有圖書館+3[ICON_CULTURE]文化。
+				[NEWLINE][ICON_NEGATIVE_BULLET]只能在大型城市（26人口）建造。建造成本隨城市數量增加。
+			</Text>
 		</Row>
 
 		<Row>
@@ -6404,6 +6413,7 @@
 				[COLOR_POSITIVE_TEXT]傳統政策[ENDCOLOR]適宜於繁榮精幹的帝國。
 				[NEWLINE][NEWLINE]啟用傳統政策：
 				[NEWLINE][ICON_BULLET]使[ICON_CAPITAL]首都+3[ICON_CULTURE]文化，+3[ICON_RESEARCH]科研。
+				[NEWLINE][ICON_BULLET]首都出發的商路+3距離基數、+3[ICON_GOLD]金錢。
 				[NEWLINE][ICON_BULLET]城市地塊擴張所需文化成本-25%。
 				[NEWLINE][ICON_BULLET]允許建造空中花園。
 				[NEWLINE][NEWLINE]推行所有傳統政策：
