@@ -268,6 +268,7 @@ function getRateOfChange(city, specialistInfo, player)
 		-- Generic GP mods
 		local iPlayerMod = player:GetGreatPeopleRateModifier();
 		local iCityMod = city:GetGreatPeopleRateModifier();
+		iCityMod = iCityMod + city:GetSpecialistCityModifier(specialistInfo.ID);
 		local iGoldenAgeMod = 0;
 		local bGoldenAge = (player:GetGoldenAgeTurns() > 0);
 		

@@ -3846,11 +3846,17 @@
 		<Delete Tag="TXT_KEY_WONDER_TEMPLE_ARTEMIS_DESC" />
 
 
-
+		<Replace Tag="TXT_KEY_WONDER_GREAT_LIBRARY_HELP">
+			<Text>
+				[ICON_BULLET]Provides a free Library in the city which it is built.
+				[NEWLINE][ICON_BULLET]+3 [ICON_RESEARCH] Science for every Library.
+				[NEWLINE][ICON_BULLET]Earn Great Scientists and Great Writer 15% faster for local City.
+			</Text>
+		</Replace>
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_GREAT_LIBRARY_HELP" />
 			<Set
-				Text="+15% [ICON_RESEARCH] Science output in all cities. Provides a free Library in the city which it is built." />
+				Text="+15% [ICON_RESEARCH] Science output in all cities. " />
 		</Update>
 
 		<Update>
@@ -4640,8 +4646,10 @@
 		<Row Tag="TXT_KEY_BUILDING_NATIONAL_LIBRARY_HELP">
 			<Text>
 				Requires Aesthetics.
-				[NEWLINE][NEWLINE]+25% [ICON_CULTURE] Culture output in the city.
-				[NEWLINE][NEWLINE]Must be built in the Large Cities. The cost goes up the more cities there are in the empire.</Text>
+				[NEWLINE][ICON_BULLET]+25% [ICON_CULTURE] Culture output in the city.
+				[NEWLINE][ICON_BULLET]+3 [ICON_CULTURE] Culture for Library.
+				[NEWLINE][ICON_NEGATIVE_BULLET]Must be built in the Large Cities. The cost goes up the more cities there are in the empire.
+			</Text>
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_NATIONAL_LIBRARY_STRATEGY</Tag>
@@ -7335,6 +7343,7 @@
 				[COLOR_POSITIVE_TEXT]Tradition[ENDCOLOR] is best for "tall" empires.
 				[NEWLINE][NEWLINE]Opening Effect:
 				[NEWLINE][ICON_BULLET]+3 [ICON_CULTURE] and +3 [ICON_RESEARCH] Science in the [ICON_CAPITAL] Capital.
+				[NEWLINE][ICON_BULLET]International trade routes from your Capital City +3 basic range and +3 [ICON_GOLD] Gold.
 				[NEWLINE][ICON_BULLET]-25% [ICON_CULTURE] Culture Exponent cost for acquiring new plots in all cities.
 				[NEWLINE][ICON_BULLET]Wonder Unlocked: Hanging Gardens.
 				[NEWLINE][NEWLINE]Finishing Bonus:
