@@ -16,7 +16,7 @@
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_VERSION">
-			<Text>[COLOR_YELLOW]版本號 10.5[ENDCOLOR]</Text>
+			<Text>[COLOR_YELLOW]版本號 10.6[ENDCOLOR]</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_SP_MOD_SETUP">
@@ -15676,11 +15676,12 @@
 			<Text>
 				僅奧地利可用。
 				[NEWLINE][NEWLINE]前提條件：
+				[NEWLINE][ICON_BULLET]雙方不處於敵對關系
 				[NEWLINE][ICON_BULLET]妳比對方強大，人口和城市數量均大於等於對方的兩倍
 				[NEWLINE][ICON_BULLET]歷史上完成過兩次或以上的外交聯姻
 				[NEWLINE][ICON_BULLET]壹局遊戲僅能完成壹次
 				[NEWLINE][NEWLINE]達成協定後：
-				[NEWLINE][ICON_BULLET]吞並對方所有城市，並且視為自建城市
+				[NEWLINE][ICON_BULLET]吞並對方自建城市並視為自建城市，占領對方其余城市且沒有抵抗
 				[NEWLINE][ICON_BULLET]對方當前首都被認為妳的第二首都，全國城市的離心傾向將取按雙首都計算的較低值
 				[NEWLINE][ICON_BULLET]能夠建造對方的獨特單位、建築和設施
 			</Text>
