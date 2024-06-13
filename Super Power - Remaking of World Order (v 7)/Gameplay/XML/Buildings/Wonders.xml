@@ -3280,12 +3280,12 @@
 		<Row>
 			<BuildingType>BUILDING_COLOSSUS</BuildingType>
 			<YieldType>YIELD_SCIENCE</YieldType>
-			<YieldValue>2</YieldValue>
+			<YieldValue>1</YieldValue>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_COLOSSUS</BuildingType>
 			<YieldType>YIELD_CULTURE</YieldType>
-			<YieldValue>2</YieldValue>
+			<YieldValue>1</YieldValue>
 		</Row>
 	</Building_TradeRouteFromTheCityYields>
 </GameData>
