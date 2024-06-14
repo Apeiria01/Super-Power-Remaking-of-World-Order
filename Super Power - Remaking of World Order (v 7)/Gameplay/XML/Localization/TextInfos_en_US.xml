@@ -7379,10 +7379,10 @@
 				[NEWLINE][ICON_BULLET]Gain additional [ICON_PRODUCTION] Production in cities reached certain Population Size:
 				[NEWLINE][ICON_BULLET]Small City: +4 [ICON_PRODUCTION] Production.
 				[NEWLINE][ICON_BULLET]Medium City: +8 [ICON_PRODUCTION] Production.
-				[NEWLINE][ICON_BULLET]Large City: +12 [ICON_PRODUCTION] Production.
-				[NEWLINE][ICON_BULLET]XL City: +16 [ICON_PRODUCTION] Production.
-				[NEWLINE][ICON_BULLET]XXL City: +20 [ICON_PRODUCTION] Production.
-				[NEWLINE][ICON_BULLET]Global City: +24 [ICON_PRODUCTION] Production.
+				[NEWLINE][ICON_BULLET]Large City: +14 [ICON_PRODUCTION] Production.
+				[NEWLINE][ICON_BULLET]XL City: +20 [ICON_PRODUCTION] Production.
+				[NEWLINE][ICON_BULLET]XXL City: +28 [ICON_PRODUCTION] Production.
+				[NEWLINE][ICON_BULLET]Global City: +36 [ICON_PRODUCTION] Production.
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_MONARCHY_HELP" >
@@ -7408,10 +7408,10 @@
 				[NEWLINE][ICON_BULLET]Gain additional [ICON_CULTURE] Culture in cities reached certain Population Size:
 				[NEWLINE][ICON_BULLET]Small City: +4 [ICON_CULTURE] Culture.
 				[NEWLINE][ICON_BULLET]Medium City: +8 [ICON_CULTURE] Culture.
-				[NEWLINE][ICON_BULLET]Large City: +12 [ICON_CULTURE] Culture.
-				[NEWLINE][ICON_BULLET]XL City: +16 [ICON_CULTURE] Culture.
-				[NEWLINE][ICON_BULLET]XXL City: +20 [ICON_CULTURE] Culture.
-				[NEWLINE][ICON_BULLET]Global City: +24 [ICON_CULTURE] Culture.
+				[NEWLINE][ICON_BULLET]Large City: +14 [ICON_CULTURE] Culture.
+				[NEWLINE][ICON_BULLET]XL City: +20 [ICON_CULTURE] Culture.
+				[NEWLINE][ICON_BULLET]XXL City: +28 [ICON_CULTURE] Culture.
+				[NEWLINE][ICON_BULLET]Global City: +36 [ICON_CULTURE] Culture.
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_PREFECTURE_TEXT">
