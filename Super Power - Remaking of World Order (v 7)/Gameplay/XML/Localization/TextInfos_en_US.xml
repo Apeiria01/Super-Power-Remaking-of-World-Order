@@ -17585,6 +17585,10 @@
 		<Replace Tag="TXT_KEY_WONDER_GREAT_LIGHTHOUSE_HELP">
 			<Text>All military naval units receive +1 [ICON_MOVES] movement, ignore ZOC, and +1 sight. Provides a free Lighthouse in the city in which it is built.[NEWLINE][NEWLINE]City must be built on the coast.</Text>
 		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GREAT_LIGHTHOUSE_HELP">
+			<Text>+1 [ICON_MOVES] Movement and +1 Sight, ignore ZOC.</Text>
+		</Replace>
+
 		<Row Tag="TXT_KEY_PROMOTION_MOSQUE_OF_DJENNE">
 			<Text>The Preacher’s Journey</Text>
 		</Row>
