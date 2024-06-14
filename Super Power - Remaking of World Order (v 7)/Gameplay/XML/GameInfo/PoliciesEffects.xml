@@ -187,22 +187,22 @@
 		<Row>
 			<PolicyType>POLICY_PREFECTURE</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_LARGE</BuildingClassType>
-			<CultureChange>4</CultureChange>
+			<CultureChange>6</CultureChange>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_PREFECTURE</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_XL</BuildingClassType>
-			<CultureChange>4</CultureChange>
+			<CultureChange>6</CultureChange>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_PREFECTURE</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_XXL</BuildingClassType>
-			<CultureChange>4</CultureChange>
+			<CultureChange>8</CultureChange>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_PREFECTURE</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_GLOBAL</BuildingClassType>
-			<CultureChange>4</CultureChange>
+			<CultureChange>8</CultureChange>
 		</Row>
 
 		<Row>
@@ -327,25 +327,25 @@
 			<PolicyType>POLICY_OLIGARCHY</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_LARGE</BuildingClassType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
-			<YieldChange>4</YieldChange>
+			<YieldChange>6</YieldChange>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_OLIGARCHY</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_XL</BuildingClassType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
-			<YieldChange>4</YieldChange>
+			<YieldChange>6</YieldChange>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_OLIGARCHY</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_XXL</BuildingClassType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
-			<YieldChange>4</YieldChange>
+			<YieldChange>8</YieldChange>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_OLIGARCHY</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_GLOBAL</BuildingClassType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
-			<YieldChange>4</YieldChange>
+			<YieldChange>8</YieldChange>
 		</Row>
 
 
