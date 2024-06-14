@@ -15901,6 +15901,9 @@
 		<Replace Tag="TXT_KEY_WONDER_GREAT_LIGHTHOUSE_HELP">
 			<Text>所有海上军事单位+1[ICON_MOVES]移动力，+1视野，无视ZOC。所在城市免费获得一座灯塔。[NEWLINE][NEWLINE]城市必须沿海。</Text>
 		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_GREAT_LIGHTHOUSE_HELP">
+			<Text>+1[ICON_MOVES]移动力 +1视野，无视ZOC</Text>
+		</Replace>
 
 		<Row Tag="TXT_KEY_PROMOTION_MOSQUE_OF_DJENNE">
 			<Text>布道者的远行</Text>
