@@ -308,11 +308,6 @@
 			<Yield>1</Yield>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_AI_RENAISSANCE</PolicyType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
 			<PolicyType>POLICY_AI_INDUSTRY</PolicyType>
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>1</Yield>
@@ -339,6 +334,20 @@
 		</Row>
 	</Policy_SpecialistExtraYields>
 
+	<Policy_SpecialistYieldChanges>
+		<Row>
+			<PolicyType>POLICY_AI_RENAISSANCE</PolicyType>
+			<SpecialistType>SPECIALIST_WRITER</SpecialistType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_AI_RENAISSANCE</PolicyType>
+			<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	</Policy_SpecialistYieldChanges>
 
 	
 	<Policy_BuildingClassYieldModifiers>
