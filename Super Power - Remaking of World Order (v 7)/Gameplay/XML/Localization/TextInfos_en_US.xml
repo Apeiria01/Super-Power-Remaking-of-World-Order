@@ -8137,7 +8137,12 @@
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_POLICY_CAPITALISM_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]Capitalism[ENDCOLOR][NEWLINE]+3% [ICON_RESEARCH] Science nationwide for every Trade Routes in use.</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]Capitalism[ENDCOLOR]
+				[NEWLINE]+3% [ICON_RESEARCH] Science nationwide for every Trade Routes in use.
+				[NEWLINE]+10 [ICON_GOLD] Gold from all your trade routes. 
+				[NEWLINE]+3 extra [ICON_RES_CONSUMER] Consumer Goods produced by Merchants.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_ECONOMIC_UNION_HELP" >
@@ -8186,14 +8191,11 @@
 			<Text>Not like the brazen giant of Greek fame, with conquering limbs astride from land to land; Here at our sea-washed, sunset gates shall stand a mighty woman with a torch whose flame is imprisoned lightning, and her name Mother of Exiles. From her beacon-hand glows world-wide welcome; her mild eyes command the air-bridged harbor that twin cities. "Keep ancient lands your storied pomp!" cries she with silent lips. "Give me your tired your poor, your huddled masses yearning to breathe free, the wretched refuse of your teeming shore. Send these, the homeless, tempest-tossed to me, I lift my lamp beside the golden door!"</Text>
 		</Replace>
 		
-		<Replace Tag="TXT_KEY_POLICY_SPACE_PROCUREMENTS">
-			<Text>Free Trade</Text>
-		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_SPACE_PROCUREMENTS_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]Free Trade[ENDCOLOR][NEWLINE]+10 [ICON_GOLD] Gold from all your trade routes. +3 extra [ICON_RES_CONSUMER] Consumer Goods produced by Merchants.</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_POLICY_SPACE_PROCUREMENTS_TEXT">
-			<Text>Free trade is a policy in international markets in which governments do not restrict imports or exports. Free trade is exemplified by the European Union / European Economic Area and the North American Free Trade Agreement, which have established open markets.</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]Space Procurements[ENDCOLOR]
+				[NEWLINE]May buy Spaceship parts with [ICON_GOLD] Gold (The price will increase significantly with each purchase and is not affected by discounts).
+			</Text>
 		</Replace>
 
 

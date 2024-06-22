@@ -235,11 +235,11 @@
 			<Set Value="1"/>
 		</Update>
 		<Update>
-			<Where Name="GLOBAL_PROMOTIONS_REMOVAL"/>
+			<Where Name="GLOBAL_INCREASE_SS_PART_PURCHASE_COST"/>
 			<Set Value="1"/>
 		</Update>
 		<Update>
-			<Where Name="GLOBAL_UNIT_MOVES_AFTER_DISEMBARK"/>
+			<Where Name="GLOBAL_PROMOTIONS_REMOVAL"/>
 			<Set Value="1"/>
 		</Update>
 		<Update>
