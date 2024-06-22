@@ -8113,7 +8113,10 @@
 
 
 		<Replace Tag="TXT_KEY_POLICY_COVERT_ACTION_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]Covert Action[ENDCOLOR][NEWLINE]Spies have +150% the chance to successfully rig City-State elections and to capture an enemy spy stealing a technology.</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]Covert Action[ENDCOLOR]
+				[NEWLINE]Spies have +150% the chance to successfully rig City-State elections, get double [ICON_INFLUENCE] Influence and Level Up Spy when successfully rig City-State elections.
+			</Text>
 		</Replace>
 		
 

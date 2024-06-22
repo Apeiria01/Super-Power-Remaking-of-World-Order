@@ -7168,7 +7168,10 @@
 		<!--*******************Freedom********************* -->
 
 		<Replace Tag="TXT_KEY_POLICY_COVERT_ACTION_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]隱秘行動[ENDCOLOR][NEWLINE]己方間諜操縱城邦選舉的成功率+150%，阻止敵方竊取科技的概率翻倍。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]隱秘行動[ENDCOLOR]
+				[NEWLINE]己方間諜操縱城邦選舉的成功率+150%，操縱選舉成功後獲得[ICON_INFLUENCE]影響力翻倍並提升間諜等級。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_VOLUNTEER_ARMY_HELP">

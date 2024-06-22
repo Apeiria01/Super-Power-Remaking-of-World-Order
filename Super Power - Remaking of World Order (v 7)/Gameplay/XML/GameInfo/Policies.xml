@@ -527,7 +527,7 @@
 		
 		<!--Freedom-->
 		<Update>
-			<Set CatchSpiesModifier="100" RiggingElectionModifier="150"/>
+			<Set RiggingElectionModifier="150" RiggingElectionInfluenceModifier="100" SpyLevelUpWhenRigging="true"/>
 			<Where Type="POLICY_COVERT_ACTION"/>
 		</Update>
 		
