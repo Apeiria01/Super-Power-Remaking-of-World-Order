@@ -535,11 +535,11 @@
 			<Set GreatPeopleRateModifier="25" TourismModifierPerGPCreation="3"/>
 			<Where Type="POLICY_OPEN_SOCIETY"/>
 		</Update>
-		<!--<Update>
-			<Set HalfSpecialistFood="true"/>
+		<Update>
+			<Set LandTradeRouteGoldChange="1000" SeaTradeRouteGoldChange="1000"/>
 			<Where Type="POLICY_CAPITALISM"/>
 		</Update>
-		<Update>
+		<!--<Update>
 			<Set HalfSpecialistFood="false"/>
 			<Where Type="POLICY_CIVIL_SOCIETY"/>
 		</Update>-->
@@ -570,7 +570,7 @@
 			<Where Type="POLICY_TREATY_ORGANIZATION"/>
 		</Update>
 		<Update>
-			<Set EnablesSSPartPurchase="false" LandTradeRouteGoldChange="1000" SeaTradeRouteGoldChange="1000"/>
+			<Set EnablesSSPartPurchase="true"/>
 			<Where Type="POLICY_SPACE_PROCUREMENTS"/>
 		</Update>
 		<Update>

@@ -7296,7 +7296,11 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_CAPITALISM_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]资本主义[ENDCOLOR][NEWLINE]每条商路为全国+3%[ICON_RESEARCH]科研产出。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]资本主义[ENDCOLOR]
+				[NEWLINE]每条商路+10[ICON_GOLD]金钱，为全国+3%[ICON_RESEARCH]科研产出。
+				[NEWLINE]商业家产出的[ICON_RES_CONSUMER]商品数量额外+3。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_ECONOMIC_UNION_HELP">
@@ -7345,14 +7349,11 @@
 			<Text>不似希腊伟岸铜塑雕像那样拥有征服疆域的臂膀，红霞落波之门您巍然屹立，高举灯盏喷薄光芒，您凝聚流光的名字 —— 放逐者之母。把广袤大地照亮，凝视中宽柔撒满长桥海港。“扼守你们旷古虚华的土地与功勋吧！”她呼喊，颤栗着缄默双唇：“把你们疲惫的人、你们贫穷的人、你们渴望呼吸自由空气的挤在一堆的人，都给我，把那些无家可归、饱经风浪的人，都送来，在这金色的大门旁，我要为他们把灯举起！”</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_SPACE_PROCUREMENTS">
-			<Text>自由贸易</Text>
-		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_SPACE_PROCUREMENTS_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]自由贸易[ENDCOLOR][NEWLINE]所有商路+10[ICON_GOLD]金钱。商业家产出的[ICON_RES_CONSUMER]商品数量额外+3。</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_POLICY_SPACE_PROCUREMENTS_TEXT">
-			<Text>自由贸易是指国家取消对进出口贸易的限制和障碍，取消本国进出口商品各种优待和特权，对进出口商品不加干涉和限制，使商品自由进出口，在国内市场上自由竞争的贸易政策。它是“保护贸易”的对称。这并不意味著完全放弃对进出口贸易的管理和关税制度，而是根据外贸法规即有关贸易条约与协定，使国内外产品在市场上处于平等地位，展开自由竞争与交易，在关税制度上，只是不采用保护关税，但为了增加财政收入，仍可征收财政关税。如欧盟/欧洲经济区，北美自由贸易协定区等就是典型的实行自由贸易的开放市场。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]航天采购[ENDCOLOR]
+				[NEWLINE]允许用[ICON_GOLD]金钱购买太空飞船组件（价格在每一次购买后会大幅增加，且不受折扣影响）。
+			</Text>
 		</Replace>
 
 		<!--*******************Order********************* -->

@@ -7191,7 +7191,11 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_CAPITALISM_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]資本主義[ENDCOLOR][NEWLINE]每條商路為全國+3%[ICON_RESEARCH]科技值產出。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]資本主義[ENDCOLOR]
+				[NEWLINE]每條商路+10[ICON_GOLD]金幣，為全國+3%[ICON_RESEARCH]科技值產出。
+				[NEWLINE]商業家產出的[ICON_RES_CONSUMER]商品數量額外+3。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_ECONOMIC_UNION_HELP">
@@ -7238,14 +7242,11 @@
 			<Text>不似希臘偉岸銅塑雕像那樣擁有征服疆域的臂膀，紅霞落波之門您巍然屹立，高舉燈盞噴薄光芒，您凝聚流光的名字 —— 放逐者之母。把廣袤大地照亮，凝視中寬柔撒滿長橋海港。“扼守你們曠古虛華的土地與功勛吧！”她呼喊，顫栗著緘默雙唇：“把你們疲憊的人、你們貧窮的人、你們渴望呼吸自由空氣的擠在一堆的人，都給我，把那些無家可歸、飽經風浪的人，都送來，在這金色的大門旁，我要為他們把燈舉起！”</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_SPACE_PROCUREMENTS">
-			<Text>自由貿易</Text>
-		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_SPACE_PROCUREMENTS_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]自由貿易[ENDCOLOR][NEWLINE]所有商路+10[ICON_GOLD]金幣。商業家產出的[ICON_RES_CONSUMER]商品數量額外+3。</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_POLICY_SPACE_PROCUREMENTS_TEXT">
-			<Text>自由貿易是指國家取消對進出口貿易的限制和障礙，取消本國進出口商品各種優待和特權，對進出口商品不加干涉和限制，使商品自由進出口，在國內市場上自由競爭的貿易政策。它是“保護貿易”的對稱。這並不意味著完全放棄對進出口貿易的管理和關稅制度，而是根據外貿法規即有關貿易條約與協定，使國內外產品在市場上處於平等地位，展開自由競爭與交易，在關稅制度上，只是不採用保護關稅，但為了增加財政收入，仍可徵收財政關稅。如歐盟/歐洲經濟區，北美自由貿易協定區等就是典型的實行自由貿易的開放市場。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]太空計畫採購案[ENDCOLOR]
+				[NEWLINE]可用[ICON_GOLD]金幣購買太空船部件（價格在每一次購買後會大幅增加，且不受折扣影响）。
+			</Text>
 		</Replace>
 
 		<!--*******************Order********************* -->
