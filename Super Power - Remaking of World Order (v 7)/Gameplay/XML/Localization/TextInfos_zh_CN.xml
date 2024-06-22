@@ -7273,7 +7273,10 @@
 		<!--*******************Freedom********************* -->
 
 		<Replace Tag="TXT_KEY_POLICY_COVERT_ACTION_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]隐秘行动[ENDCOLOR][NEWLINE]己方间谍操纵城邦选举的成功率+150%，阻止敌方窃取科技的概率翻倍。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]隐秘行动[ENDCOLOR]
+				[NEWLINE]己方间谍操纵城邦选举的成功率+150%，操纵选举成功后获得[ICON_INFLUENCE]影响力翻倍并提升间谍等级。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_VOLUNTEER_ARMY_HELP">
@@ -7316,7 +7319,9 @@
 			<Text>和平演变</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_ARSENAL_DEMOCRACY_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]和平演变[ENDCOLOR][NEWLINE]与拥有共同作战中的敌人的友方文明+50%[ICON_TOURISM]魅力。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]和平演变[ENDCOLOR][NEWLINE]与拥有共同作战中的敌人的友方文明+50%[ICON_TOURISM]魅力。
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_ARSENAL_DEMOCRACY_TEXT">
 			<Text>“和平演变”这个词汇出现于二战后50-60年代的冷战时期，由美国国会议员杜勒斯在20世纪50年代初提出。由于它所进行的过程中并没有发生战争,所以叫"和平演变"。西方国家以贷款、贸易、科技等各种手段诱压东欧国家，促使它们向西方靠拢，向资本主义“和平演变”。</Text>
