@@ -7204,7 +7204,7 @@
 		<Replace Tag="TXT_KEY_POLICY_ECONOMIC_UNION_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]聯合研究[ENDCOLOR]
-				[NEWLINE]合作研究產出的[ICON_RESEARCH]科研+50%，每壹個合作研究為全國+10%[ICON_RESEARCH]科研產出。
+				[NEWLINE]合作研究產出的[ICON_RESEARCH]科研+100%，每壹個合作研究為全國+10%[ICON_RESEARCH]科研產出。
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_ECONOMIC_UNION_TEXT">
@@ -15308,7 +15308,7 @@
 			<Text>+{1_Num}%來自[COLOR_POSITIVE_TEXT]傑作[ENDCOLOR]的額外加成</Text>
 		</Row>
 		<Replace Tag="TXT_KEY_WONDER_PORCELAIN_TOWER_HELP">
-			<Text>要求理性政策分支。當該奇跡建成時城市附近出現一位大科學家。從研究協定中獲得的[ICON_RESEARCH]科技值增加25%。</Text>
+			<Text>要求理性政策分支。當該奇跡建成時城市附近出現一位大科學家。從研究協定中獲得的[ICON_RESEARCH]科技值增加50%。</Text>
 		</Replace>
 		<Row Tag="TXT_KEY_BUILDING_NEED_ANY_WATER">
 			<Text>水源</Text>
