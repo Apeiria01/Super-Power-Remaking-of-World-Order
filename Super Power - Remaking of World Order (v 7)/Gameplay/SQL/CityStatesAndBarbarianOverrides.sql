@@ -1,4 +1,4 @@
-CREATE TRIGGER Minor_Building_Overrides_Trigger
+CREATE TRIGGER IF NOT EXISTS Minor_Building_Overrides_Trigger
 AFTER UPDATE ON SPTriggerControler
 WHEN NEW.TriggerType = 'Minor_Building_Overrides_Trigger' AND NEW.Enabled = 1
 BEGIN
@@ -107,7 +107,7 @@ UPDATE Units SET BarbarianCanTrait = 1 WHERE Type = 'UNIT_LITTORAL_COMBAT_SHIP';
 UPDATE Units SET BarbarianTraitTechObsolete = 1 WHERE Type = 'UNIT_LITTORAL_COMBAT_SHIP';
 
 
-CREATE TRIGGER Minor_Units_Overrides_Trigger
+CREATE TRIGGER IF NOT EXISTS Minor_Units_Overrides_Trigger
 AFTER UPDATE ON SPTriggerControler
 WHEN NEW.TriggerType = 'Minor_Units_Overrides_Trigger' AND NEW.Enabled = 1
 BEGIN
