@@ -7324,7 +7324,9 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_ARSENAL_DEMOCRACY_HELP">
 			<Text>
-				[COLOR_POSITIVE_TEXT]和平演变[ENDCOLOR][NEWLINE]与拥有共同作战中的敌人的友方文明+50%[ICON_TOURISM]魅力。
+				[COLOR_POSITIVE_TEXT]和平演变[ENDCOLOR]
+				[NEWLINE]与拥有共同作战中的敌人的友方文明+50%[ICON_TOURISM]魅力。
+				[NEWLINE]外交官在不同意识形态国家的宣传效果翻倍。
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_ARSENAL_DEMOCRACY_TEXT">

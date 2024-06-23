@@ -7218,7 +7218,11 @@
 			<Text>和平演變</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_ARSENAL_DEMOCRACY_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]和平演變[ENDCOLOR][NEWLINE]與擁有共同作戰中的敵人的友方文明+50%[ICON_TOURISM]旅遊業績。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]和平演變[ENDCOLOR]
+				[NEWLINE]與擁有共同作戰中的敵人的友方文明+50%[ICON_TOURISM]旅遊業績。
+				[NEWLINE]外交官在不同意識形態國家的宣傳效果翻倍。
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_ARSENAL_DEMOCRACY_TEXT">
 			<Text>“和平演變”這個詞匯出現於二戰後50-60年代的冷戰時期，由美國國會議員杜勒斯在20世紀50年代初提出。由於它所進行的過程中並沒有發生戰爭,所以叫"和平演變"。西方國家以貸款、貿易、科技等各種手段誘壓東歐國家，促使它們向西方靠攏，向資本主義“和平演變”。</Text>

@@ -562,7 +562,7 @@
 			<Where Type="POLICY_CREATIVE_EXPRESSION"/>
 		</Update>
 		<Update>
-			<Set CommonFoeTourismModifier="50" MilitaryProductionModifier="0" MilitaryUnitGiftExtraInfluence="0"/>
+			<Set CommonFoeTourismModifier="50" MilitaryProductionModifier="0" MilitaryUnitGiftExtraInfluence="0" DiplomatPropagandaModifier="25"/>
 			<Where Type="POLICY_ARSENAL_DEMOCRACY"/>
 		</Update>
 		<Update>

@@ -8167,7 +8167,11 @@
 			<Text>Peaceful Evolution</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_ARSENAL_DEMOCRACY_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]Peaceful Evolution [ENDCOLOR][NEWLINE] +50% [ICON_TOURISM] Tourism to the civilizations fighting against the common foe.</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]Peaceful Evolution [ENDCOLOR]
+				[NEWLINE]+50% [ICON_TOURISM] Tourism to the civilizations fighting against the common foe.
+				[NEWLINE]The propaganda effectiveness of Diplomat in countries with different ideologies is doubled.
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_ARSENAL_DEMOCRACY_TEXT" >
 			<Text>The "Peaceful Evolution" theory in international political thought refers to the alleged attempt to effect a political transformation. </Text>
