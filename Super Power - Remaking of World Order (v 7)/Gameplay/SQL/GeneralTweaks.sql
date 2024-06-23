@@ -14,7 +14,7 @@ BEGIN
 	INSERT INTO UnitPromotions_CivilianUnitType (UnitType, PromotionType) SELECT Type, NEW.PromotionType FROM Units WHERE Class = (SELECT Type FROM UnitClasses WHERE DefaultUnit = NEW.UnitType) AND Type != NEW.UnitType;
 END;
 
-CREATE TRIGGER SPFix
+CREATE TRIGGER IF NOT EXISTS SPFix
 AFTER INSERT ON ArtDefine_StrategicView WHEN NEW.StrategicViewType = 'ART_DEF_UNIT_ZULU_BOER_COMMANDO'
 BEGIN
 	--Faster Aircraft Animation
