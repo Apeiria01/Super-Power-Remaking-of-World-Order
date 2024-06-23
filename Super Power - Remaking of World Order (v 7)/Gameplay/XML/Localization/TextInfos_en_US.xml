@@ -8151,7 +8151,7 @@
 		<Replace Tag="TXT_KEY_POLICY_ECONOMIC_UNION_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]Joint Research[ENDCOLOR]
-				[NEWLINE]Boosts [ICON_RESEARCH] Science gained from research agreements by 50%, +10% [ICON_RESEARCH] Science nationwide for every research agreement.
+				[NEWLINE]Boosts [ICON_RESEARCH] Science gained from research agreements by 100%, +10% [ICON_RESEARCH] Science nationwide for every research agreement.
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_ECONOMIC_UNION_TEXT">
@@ -17193,7 +17193,7 @@
 			<Text>+{1_Num}% output boost from [COLOR_POSITIVE_TEXT]Great Works[ENDCOLOR]</Text>
 		</Row>
 		<Replace Tag="TXT_KEY_WONDER_PORCELAIN_TOWER_HELP">
-			<Text>Requires Rationalism. A Great Scientist appears near the City where the Wonder was built. 25% more [ICON_RESEARCH] Science generated from Research Agreements.</Text>
+			<Text>Requires Rationalism. A Great Scientist appears near the City where the Wonder was built. 50% more [ICON_RESEARCH] Science generated from Research Agreements.</Text>
 		</Replace>
 		<Row Tag="TXT_KEY_BUILDING_NEED_ANY_WATER">
 			<Text>Water</Text>

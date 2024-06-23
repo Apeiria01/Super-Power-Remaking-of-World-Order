@@ -1134,7 +1134,7 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		FreeTechs = L"TXT_KEY_FREE_TECHS" .. "%i",				-- TOTO
 		FreePolicies = L"TXT_KEY_FREE_POLICIES" .. "%i",			-- TOTO
 		FreeGreatPeople = L"TXT_KEY_GP111" .. "%i",				-- TOTO
-		MedianTechPercentChange = L"TXT_KEY_MTPC_444" .. "+i%%[ICON_RESEARCH]",-- TOTO
+		MedianTechPercentChange = L"TXT_KEY_MTPC_444" .. "2*%+i%%[ICON_RESEARCH]",-- TOTO
 		Gold = L"TXT_KEY_PEDIA_GOLD_LABEL" .. " %i",				-- TOTO
 	--y	Defense = "",
 	--y	ExtraCityHitPoints = "",
