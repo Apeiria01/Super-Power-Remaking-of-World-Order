@@ -1190,6 +1190,18 @@
 			<YieldType>YIELD_FAITH</YieldType>
 			<Yield>4</Yield>
 		</Row>
+		<Row>
+			<PolicyType>POLICY_NEW_DEAL</PolicyType>
+			<ImprovementType>IMPROVEMENT_LANDMARK</ImprovementType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>4</Yield>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_NEW_DEAL</PolicyType>
+			<ImprovementType>IMPROVEMENT_LANDMARK</ImprovementType>
+			<YieldType>YIELD_TOURISM</YieldType>
+			<Yield>4</Yield>
+		</Row>
 		
 		<Row>
 			<PolicyType>POLICY_FIVE_YEAR_PLAN</PolicyType>
@@ -1241,11 +1253,6 @@
 			<ImprovementType>IMPROVEMENT_HOLY_SITE</ImprovementType>
 			<CultureChange>4</CultureChange>
 		</Row>-->
-		<Row>
-			<PolicyType>POLICY_NEW_DEAL</PolicyType>
-			<ImprovementType>IMPROVEMENT_LANDMARK</ImprovementType>
-			<CultureChange>4</CultureChange>
-		</Row>
 		<Row>
 			<PolicyType>POLICY_PARTY_LEADERSHIP</PolicyType>
 			<ImprovementType>IMPROVEMENT_MINE</ImprovementType>

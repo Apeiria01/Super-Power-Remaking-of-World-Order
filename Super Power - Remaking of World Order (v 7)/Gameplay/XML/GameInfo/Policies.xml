@@ -544,7 +544,7 @@
 			<Where Type="POLICY_CIVIL_SOCIETY"/>
 		</Update>-->
 		<Update>
-			<Set BuildingGoldMaintenanceMod="-30"/>
+			<Set ScienceModifierFromRANum="10" MedianTechPercentChange="50"/>
 			<Where Type="POLICY_ECONOMIC_UNION"/>
 		</Update>
 		<Update>
@@ -552,10 +552,10 @@
 			<Where Type="POLICY_VOLUNTEER_ARMY"/>
 		</Update>
 		
-		<!--<Update>
-			<Set WonderProductionModifier="15"/>
+		<Update>
+			<Set BuildingGoldMaintenanceMod="-30"/>
 			<Where Type="POLICY_NEW_DEAL"/>
-		</Update>-->
+		</Update>
 	
 		<Update>
 			<Set HappinessToCulture="50"/>
@@ -1696,7 +1696,7 @@
 		<Row>
 			<PolicyType>POLICY_COVERT_ACTION</PolicyType>
 			<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
-			<Flavor>20</Flavor>
+			<Flavor>40</Flavor>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_COVERT_ACTION</PolicyType>
@@ -1715,7 +1715,7 @@
 		</Row>
 		<Row>
 			<PolicyType>POLICY_CAPITALISM</PolicyType>
-			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<FlavorType>FLAVOR_GOLD</FlavorType>
 			<Flavor>25</Flavor>
 		</Row>
 		<Row>
@@ -1725,7 +1725,7 @@
 		</Row>
 		<Row>
 			<PolicyType>POLICY_ECONOMIC_UNION</PolicyType>
-			<FlavorType>FLAVOR_GOLD</FlavorType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
 			<Flavor>44</Flavor>
 		</Row>
 		<!--<Row>
@@ -1766,7 +1766,7 @@
 		<Row>
 			<PolicyType>POLICY_NEW_DEAL</PolicyType>
 			<FlavorType>FLAVOR_GOLD</FlavorType>
-			<Flavor>9</Flavor>
+			<Flavor>19</Flavor>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_NEW_DEAL</PolicyType>
@@ -1805,7 +1805,7 @@
 		</Row>
 		<Row>
 			<PolicyType>POLICY_SPACE_PROCUREMENTS</PolicyType>
-			<FlavorType>FLAVOR_GOLD</FlavorType>
+			<FlavorType>FLAVOR_SPACESHIP</FlavorType>
 			<Flavor>66</Flavor>
 		</Row>
 		

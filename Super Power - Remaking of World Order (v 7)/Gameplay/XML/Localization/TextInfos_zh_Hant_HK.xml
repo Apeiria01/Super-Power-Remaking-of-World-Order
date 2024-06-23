@@ -7198,16 +7198,32 @@
 			</Text>
 		</Replace>
 
+		<Replace Tag="TXT_KEY_POLICY_ECONOMIC_UNION">
+			<Text>聯合研究</Text>
+		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_ECONOMIC_UNION_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]經濟聯盟[ENDCOLOR][NEWLINE]所有城市中的建築維護費用-30%。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]聯合研究[ENDCOLOR]
+				[NEWLINE]合作研究產出的[ICON_RESEARCH]科研+50%，每壹個合作研究為全國+10%[ICON_RESEARCH]科研產出。
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_POLICY_ECONOMIC_UNION_TEXT">
+			<Text>“聯合研究”強調國家間合作與知識分享的重要性。其鼓勵跨國合作研究項目，通過共享科技和資源來促進科學進步以及各國之間的友好合作與互信，增強國家在全球科技領域的影響力與競爭力。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_URBANIZATION_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]城市化[ENDCOLOR][NEWLINE]每處自來水系統、汙水處理廠、醫院、醫學實驗室、公交汽車、地鐵、鑄幣廠、花園、有線網絡、旅館和機場+1[ICON_HAPPINESS_1]本地幸福度。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]城市化[ENDCOLOR]
+				[NEWLINE]自來水系統、汙水處理廠、醫院、醫學實驗室、公交汽車、地鐵、鑄幣廠、花園、有線網絡、旅館和機場+1[ICON_HAPPINESS_1]本地幸福度。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_NEW_DEAL_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]經濟新政[ENDCOLOR][NEWLINE]風景地標和偉人區域設施對應的產出+4，大型及以上城市[ICON_PRODUCTION]生產力增加+25%。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]經濟新政[ENDCOLOR]
+				[NEWLINE]風景地標和偉人區域設施對應的產出+4，大型及以上城市[ICON_PRODUCTION]生產力增加+25%。
+				[NEWLINE]所有城市中的建築維護費用-30%。
+			</Text>
 		</Replace>
 
 		<!--<Replace Tag="TXT_KEY_POLICY_THEIR_FINEST_HOUR_HELP">
