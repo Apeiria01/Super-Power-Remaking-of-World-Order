@@ -7303,16 +7303,32 @@
 			</Text>
 		</Replace>
 
+		<Replace Tag="TXT_KEY_POLICY_ECONOMIC_UNION">
+			<Text>联合研究</Text>
+		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_ECONOMIC_UNION_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]经济联盟[ENDCOLOR][NEWLINE]所有城市中的建筑维护费用-30%。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]联合研究[ENDCOLOR]
+				[NEWLINE]合作研究产出的[ICON_RESEARCH]科研+50%，每一个合作研究为全国+10%[ICON_RESEARCH]科研产出。
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_POLICY_ECONOMIC_UNION_TEXT">
+			<Text>“联合研究”强调国家间合作与知识分享的重要性。其鼓励跨国合作研究项目，通过共享科技和资源来促进科学进步以及各国之间的友好合作与互信，增强国家在全球科技领域的影响力与竞争力。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_URBANIZATION_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]城市化[ENDCOLOR][NEWLINE]每处自来水系统、污水处理厂、医院、医学实验室、公交汽车、地铁、铸币厂、花园、有线网络、旅馆和机场+1[ICON_HAPPINESS_1]本地快乐。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]城市化[ENDCOLOR]
+				[NEWLINE]自来水系统、污水处理厂、医院、医学实验室、公交汽车、地铁、铸币厂、花园、有线网络、旅馆和机场+1[ICON_HAPPINESS_1]本地快乐。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_NEW_DEAL_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]经济新政[ENDCOLOR][NEWLINE]风景地标和伟人区域设施对应的产出+4，大型及以上城市[ICON_PRODUCTION]产能增加+25%。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]经济新政[ENDCOLOR]
+				[NEWLINE]风景地标和伟人区域设施对应的产出+4，大型及以上城市[ICON_PRODUCTION]产能增加+25%。
+				[NEWLINE]所有城市中的建筑维护费用-30%。
+			</Text>
 		</Replace>
 
 		<!--<Replace Tag="TXT_KEY_POLICY_THEIR_FINEST_HOUR_HELP">

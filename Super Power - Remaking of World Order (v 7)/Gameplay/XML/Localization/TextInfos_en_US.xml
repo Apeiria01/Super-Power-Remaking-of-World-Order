@@ -8145,18 +8145,34 @@
 			</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_ECONOMIC_UNION_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]Economic Union[ENDCOLOR][NEWLINE]Building maintenance cost reduced by 30% in all cities.</Text>
+		<Replace Tag="TXT_KEY_POLICY_ECONOMIC_UNION">
+			<Text>Joint Research</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_POLICY_ECONOMIC_UNION_HELP">
+			<Text>
+				[COLOR_POSITIVE_TEXT]Joint Research[ENDCOLOR]
+				[NEWLINE]Boosts [ICON_RESEARCH] Science gained from research agreements by 50%, +10% [ICON_RESEARCH] Science nationwide for every research agreement.
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_POLICY_ECONOMIC_UNION_TEXT">
+			<Text>"Joint Research" emphasizes the importance of cooperation and knowledge sharing between nations. It encourages multinational collaborative research projects to promote scientific advancement, foster friendly cooperation and mutual trust among countries through the sharing of technology and resources, and enhance national influence and competitiveness in the global technology arena.</Text>
 		</Replace>
 		
 		
 		
 		<Replace Tag="TXT_KEY_POLICY_URBANIZATION_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]Urbanization[ENDCOLOR][NEWLINE]+1 [ICON_HAPPINESS_1] Happiness from every Tap Water System, Water Treatment Factory, Hospital, Medical Lab, Bus Station, Subway Station, Mint, Garden, Cable Network, Hotel and Airport. </Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]Urbanization[ENDCOLOR]
+				[NEWLINE]+1 [ICON_HAPPINESS_1] Happiness from every Tap Water System, Water Treatment Factory, Hospital, Medical Lab, Bus Station, Subway Station, Mint, Garden, Cable Network, Hotel and Airport. 
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_NEW_DEAL_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]New Deal[ENDCOLOR][NEWLINE]Landmarks and Great Person improvements produce +4 of the appropriate yield. +25% [ICON_PRODUCTION] Production for cities of or beyond the size of "Large City".</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]New Deal[ENDCOLOR]
+				[NEWLINE]Landmarks and Great Person improvements produce +4 of the appropriate yield. +25% [ICON_PRODUCTION] Production for cities of or beyond the size of "Large City".
+				[NEWLINE]Building maintenance cost reduced by 30% in all cities.
+			</Text>
 		</Replace>
 
 		<!--<Replace Tag="TXT_KEY_POLICY_THEIR_FINEST_HOUR_HELP">
