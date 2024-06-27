@@ -412,41 +412,15 @@ function RefreshCityBanner(cityBanner, iActiveTeam, iActivePlayer)
 				local sCityLevelIconTT = nil
 
 				local iCityLevel = city:GetCorruptionLevel()
-				local iAntiCorruptionBuildingID = getAntiCorruptionBuildingID(player, iCityLevel)
-				local sCityLevelIconString = getCorruptionLevelIconString(iCityLevel)
-				if city:IsCapital() or city:IsPuppet() then
-				elseif iCityLevel == GameInfoTypes["CORRUPTION_LV1"] then
+				local iTureLevel = iCityLevel - GameInfoTypes["CORRUPTION_LV0"]
+				if iTureLevel > 0 then
+					local iAntiCorruptionBuildingID = getAntiCorruptionBuildingID(player, iCityLevel)
+					local sCityLevelIconString = getCorruptionLevelIconString(iCityLevel)
 					sCityLevelIcon = sCityLevelIconString
-					sCityLevelIconTT = Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_HALL_LV1_HELP")
-				elseif iCityLevel == GameInfoTypes["CORRUPTION_LV2"] then
-					sCityLevelIcon = sCityLevelIconString
-					sCityLevelIcon = "[ICON_CITYBANNER_CITY_LV2]"
-					sCityLevelIconTT = Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_HALL_LV2_HELP")
+					sCityLevelIconTT = getCorruptionScoreReport(player, city) .. Locale.ConvertTextKey(string.format("TXT_KEY_BUILDING_CITY_HALL_LV%d_HELP", iTureLevel))
 					if iAntiCorruptionBuildingID ~= -1 and not city:IsHasBuilding(iAntiCorruptionBuildingID) then
 						sCityLevelIcon = sCityLevelIcon .. "[ICON_HAPPINESS_3] "
 					end
-				elseif iCityLevel == GameInfoTypes["CORRUPTION_LV3"] then
-					sCityLevelIcon = sCityLevelIconString
-					sCityLevelIconTT = Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_HALL_LV3_HELP")
-					if iAntiCorruptionBuildingID ~= -1 and not city:IsHasBuilding(iAntiCorruptionBuildingID) then
-						sCityLevelIcon = sCityLevelIcon .. "[ICON_HAPPINESS_3] "
-					end
-				elseif iCityLevel == GameInfoTypes["CORRUPTION_LV4"] then
-					sCityLevelIcon = sCityLevelIconString
-					sCityLevelIconTT = Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_HALL_LV4_HELP")
-					if iAntiCorruptionBuildingID ~= -1 and not city:IsHasBuilding(iAntiCorruptionBuildingID) then
-						sCityLevelIcon = sCityLevelIcon .. "[ICON_HAPPINESS_3] "
-					end
-				elseif iCityLevel == GameInfoTypes["CORRUPTION_LV5"] then
-					sCityLevelIcon = sCityLevelIconString
-					sCityLevelIconTT = Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_HALL_LV5_HELP")
-					if iAntiCorruptionBuildingID ~= -1 and not city:IsHasBuilding(iAntiCorruptionBuildingID) then
-						sCityLevelIcon = sCityLevelIcon .. "[ICON_HAPPINESS_3] "
-					end
-				end
-
-				if sCityLevelIconTT ~= nil then
-					sCityLevelIconTT = getCorruptionScoreReport(player, city) .. sCityLevelIconTT
 					controls.CityLevelIcon:SetHide(false)
 					controls.CityLevelIcon:SetText(sCityLevelIcon)
 					controls.CityLevelIcon:SetToolTipString(sCityLevelIconTT)

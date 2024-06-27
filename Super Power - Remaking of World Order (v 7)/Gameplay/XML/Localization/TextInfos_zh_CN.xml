@@ -16261,5 +16261,24 @@
 		<Replace Tag="TXT_KEY_DO_RELATIONTOOLTIP_RCLICK">
 			<Text>[COLOR_YELLOW]右击[ENDCOLOR] 进行会晤</Text>
 		</Replace>
+
+		<!-- New ToolTip in EconomicGeneralInfo -->
+		<Replace Tag="TXT_KEY_EO_CITY_TT">
+			<Text>左击打开该城市的[COLOR_YELLOW]城市界面[ENDCOLOR]；[NEWLINE]右击更改该城市的[COLOR_YELLOW]名称[ENDCOLOR]。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_EO_FOCUS_TT">
+			<Text>左击切换该城市的[COLOR_YELLOW]发展侧重[ENDCOLOR]：{1_Focus}/默认；[NEWLINE]右击将该城市的[COLOR_YELLOW]发展侧重[ENDCOLOR]应用到所有城市。[NEWLINE]（非{1_Focus}则为默认，[ICON_PUPPET]傀儡城除外）</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_EO_FOCUS_AVOID_GROWTH_TT">
+			<Text>左击设置该城市是否[COLOR_NEGATIVE_TEXT]避免增长[ENDCOLOR]；[NEWLINE]右击将该城市的[COLOR_NEGATIVE_TEXT]避免增长[ENDCOLOR]状态应用到所有城市。[NEWLINE]（[ICON_PUPPET]傀儡城除外）</Text>
+		</Replace>
+
+		<!-- Economic GeneralInfo Enhanced - CS&CL -->
+		<Replace Tag="TXT_KEY_EO_SORT_CITYSCALE" >
+			<Text>按城市规模排序</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_EO_SORT_CITYLEVEL" >
+			<Text>按城市等级排序</Text>
+		</Replace>
 	</Language_zh_CN>
 </GameData>

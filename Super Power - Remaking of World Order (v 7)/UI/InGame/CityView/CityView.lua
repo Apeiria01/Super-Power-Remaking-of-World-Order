@@ -3082,7 +3082,7 @@ function OnCopyCapitalOrder()
 			print ("Current Unit"..CapitalUnitProduction )
 			
 			for city in player:Cities() do
-				if not city:IsPuppet() and not city:IsResistance() then
+				if not city:IsPuppet() and not city:IsResistance() and city ~= CurrentCity then
 			
 					if CapitalUnitProduction ~= -1 then 
 						if city:CanTrain(CapitalUnitProduction) then
