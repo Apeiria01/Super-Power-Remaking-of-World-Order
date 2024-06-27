@@ -17948,5 +17948,24 @@
 		<Replace Tag="TXT_KEY_DO_RELATIONTOOLTIP_RCLICK">
 			<Text>[COLOR_YELLOW]Right-Click[ENDCOLOR] to Meet with</Text>
 		</Replace>
+
+		<!-- New ToolTip in EconomicGeneralInfo -->
+		<Replace Tag="TXT_KEY_EO_CITY_TT">
+			<Text>Left-Click to enter this City's [COLOR_YELLOW]City Screen[ENDCOLOR]; [NEWLINE]Right-Click to [COLOR_YELLOW]Rename[ENDCOLOR] this City.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_EO_FOCUS_TT">
+			<Text>Left-Click to Change this City's [COLOR_YELLOW]Focus[ENDCOLOR]: {1_Focus} / Default; [NEWLINE]Right-Click to apply this City's [COLOR_YELLOW]Focus[ENDCOLOR] to All your Cities. [NEWLINE](Default if not {1_Focus}, except [ICON_PUPPET] Puppet Cities)</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_EO_FOCUS_AVOID_GROWTH_TT">
+			<Text>Left-Click to [COLOR_NEGATIVE_TEXT]Avoid Growth or not[ENDCOLOR] in this City; [NEWLINE]Right-Click to apply this City's [COLOR_NEGATIVE_TEXT]Avoid Growth[ENDCOLOR] state to All your Cities. [NEWLINE](except [ICON_PUPPET] Puppet Cities)</Text>
+		</Replace>
+
+		<!-- Economic GeneralInfo Enhanced - CS&CL  - SP -->
+		<Replace Tag="TXT_KEY_EO_SORT_CITYSCALE" >
+			<Text>Sort By City Scale</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_EO_SORT_CITYLEVEL" >
+			<Text>Sort By City Level</Text>
+		</Replace>
 	</Language_en_US>
 </GameData>

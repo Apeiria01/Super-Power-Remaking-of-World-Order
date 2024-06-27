@@ -5114,6 +5114,14 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
+    <Content Include="UI/InGame/Popups/OverviewAddendum/EconomicGeneralInfo.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI/InGame/Popups/OverviewAddendum/EconomicGeneralInfo.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
     <Content Include="UI/InGame/Popups/VictoryProgress.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>

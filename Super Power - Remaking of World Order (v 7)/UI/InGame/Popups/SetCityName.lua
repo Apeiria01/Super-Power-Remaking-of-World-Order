@@ -152,6 +152,13 @@ function OnPopup(popupInfo)
     m_PopupInfo = popupInfo;
 
     local pCity = UI.GetHeadSelectedCity();
+
+    if m_PopupInfo.Data1 ~= -1 and Players[Game.GetActivePlayer()] and Players[Game.GetActivePlayer()]:GetCityByID(m_PopupInfo.Data1)
+	and (pCity == nil or m_PopupInfo.Data1 ~= pCity:GetID())
+	then
+		pCity = Players[Game.GetActivePlayer()]:GetCityByID(m_PopupInfo.Data1);
+	end
+
     if pCity then
         local cityName = pCity:GetNameKey();
         local convertedKey = Locale.ConvertTextKey(cityName);
@@ -159,7 +166,7 @@ function OnPopup(popupInfo)
         Controls.EditCityName:SetText(convertedKey);
         Controls.AcceptButton:SetDisabled(true);
 
-        UIManager:QueuePopup(ContextPtr, PopupPriority.Priority_GreatPersonReward);
+        UIManager:QueuePopup(ContextPtr, PopupPriority.InGameUtmost);
     end
 end
 Events.SerialEventGameMessagePopup.Add(OnPopup);
