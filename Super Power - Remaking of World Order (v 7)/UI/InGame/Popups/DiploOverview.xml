@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Context Color0="Beige" Color1="Black,256" Font="TwCenMT16" FontStyle="Shadow" >
+
+  <Box Style="BGBlock_ClearTopBar" />
+
+  <Grid Size="990,677" Anchor="C,C" Offset="0,30" Style="Grid9DetailFive140" ConsumeMouse="1">
+
+    <!-- Panel Header Text -->
+    <Label Style="MenuTitleCaption" String="TXT_KEY_DIPLOMACY_OVERVIEW" ID="TitleLabel" />
+
+    <!-- Side treatments -->
+    <Box Style="MenuLeftSideTreatment"/>
+    <Box Style="MenuRightSideTreatment"/>
+
+    <Image Anchor="C,T" AnchorSide="I.O" Size="256,64" Offset="0,-14"  Texture="assets\UI\Art\Icons\Top512IconTrim.dds" >
+      <Image ID="CivIconBG" Size="64.64" Anchor="C,C" Offset="-1,-1" TextureOffset="77,0" Texture="CivIconBGSizes.dds" />
+      <Image ID="CivIconShadow" Size="48.48" Anchor="C,C" Offset="0,0" Texture="CivSymbolAtlas48.dds" Color="Black.128"/>
+      <Image ID="Icon" Size="48,48" Offset="-1,-1"  Anchor="C,C" Texture="CivSymbolsColor512.dds" />
+    </Image>
+
+
+    <!-- Top Panel  -->     
+    <Box Anchor="C,T" Size="971,56" Offset="0,44" Color="0.0.0.128" >
+
+      <Stack Anchor="C,T" Size="971,32" Offset="0,0" Padding="0" StackGrowth="Right">
+
+        <Button  Anchor="L,T" Size="150,24" Offset="0,0" String="TXT_KEY_DO_YOUR_RELATIONS" ID="RelationsButton" >
+          <ShowOnMouseOver>
+            <AlphaAnim Anchor="L,C" Size="150,27" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="2" AlphaEnd="1"  >
+              <Grid   Size="150,27" Offset="0,2" Padding="0,0" Style="Grid9FrameTurnsHL" />
+            </AlphaAnim>
+          </ShowOnMouseOver>
+          <!-- Selected State  -->
+          <Grid Anchor="C,C" Offset="0,1" Size="150,26"  Style="Grid9FrameTurns" Hidden="1" ID="RelationsSelectHighlight" />
+        </Button>
+
+        <Box  Anchor="L,T" Size="150,24" Offset="0,0" Color="0.0.0.128" />
+
+        <Button  Anchor="L,T" Size="150,24" Offset="0,0" String="TXT_KEY_DO_DEAL_HISTORY" ID="DealsButton" >
+          <ShowOnMouseOver>
+            <AlphaAnim Anchor="L,C" Size="150,27" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="2" AlphaEnd="1"  >
+              <Grid   Size="150,27" Offset="0,2" Padding="0,0" Style="Grid9FrameTurnsHL" />
+            </AlphaAnim>
+          </ShowOnMouseOver>
+          <!-- Selected State  -->
+          <Grid Anchor="C,C" Offset="0,1" Size="150,26"  Style="Grid9FrameTurns" Hidden="1" ID="DealsSelectHighlight" />
+        </Button>
+
+        <Box  Anchor="L,T" Size="150,24" Offset="0,0" Color="0.0.0.128" />
+
+        <Button  Anchor="L,T" Size="150,24" Offset="0,0" String="TXT_KEY_DO_GLOBAL_RELATIONS" ID="GlobalPoliticsButton" >
+          <ShowOnMouseOver>
+            <AlphaAnim Anchor="L,C" Size="150,27" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="2" AlphaEnd="1"  >
+              <Grid   Size="150,27" Offset="0,2" Padding="0,0" Style="Grid9FrameTurnsHL" />
+            </AlphaAnim>
+          </ShowOnMouseOver>
+          <!-- Selected State  -->
+          <Grid Anchor="C,C" Offset="0,1" Size="150,26"  Style="Grid9FrameTurns" Hidden="1" ID="GlobalSelectHighlight" />
+        </Button>
+
+        <Box  Anchor="L,T" Size="150,24" Offset="0,0" Color="0.0.0.128" />
+        
+      </Stack>
+
+      <Stack Anchor="C,T" Size="971,32" Offset="0,25" Padding="0" StackGrowth="Right">
+
+        <Box  Anchor="L,T" Size="150,24" Offset="0,0" Color="0.0.0.128" />
+
+        <Button  Anchor="L,T" Size="150,24" Offset="0,0" String="TXT_KEY_DO_TRADE_STATUS" ID="TradesButton" >
+          <ShowOnMouseOver>
+            <AlphaAnim Anchor="L,C" Size="150,27" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="2" AlphaEnd="1"  >
+              <Grid   Size="150,27" Offset="0,2" Padding="0,0" Style="Grid9FrameTurnsHL" />
+            </AlphaAnim>
+          </ShowOnMouseOver>
+          <!-- Selected State  -->
+          <Grid Anchor="C,C" Offset="0,1" Size="150,26"  Style="Grid9FrameTurns" Hidden="1" ID="TradesSelectHighlight" />
+        </Button>
+
+        <Box  Anchor="L,T" Size="150,24" Offset="0,0" Color="0.0.0.128" />
+
+        <Button  Anchor="L,T" Size="150,24" Offset="0,0" String="TXT_KEY_DO_CS_STATUS" ID="CityStatesButton" >
+          <ShowOnMouseOver>
+            <AlphaAnim Anchor="L,C" Size="150,27" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="2" AlphaEnd="1"  >
+              <Grid   Size="150,27" Offset="0,2" Padding="0,0" Style="Grid9FrameTurnsHL" />
+            </AlphaAnim>
+          </ShowOnMouseOver>
+          <!-- Selected State  -->
+          <Grid Anchor="C,C" Offset="0,1" Size="150,26"  Style="Grid9FrameTurns" Hidden="1" ID="CityStatesSelectHighlight" />
+        </Button>
+
+        <Box  Anchor="L,T" Size="150,24" Offset="0,0" Color="0.0.0.128" />
+
+        <!-- Button for civ relationships -->
+        <Button  Anchor="L,T" Size="150,24" Offset="0,0" String="TXT_KEY_DO_GLOBALRELATIONS_TITLE" ID="CivRelationsButton" >
+          <ShowOnMouseOver>
+            <AlphaAnim Anchor="L,C" Size="150,27" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="2" AlphaEnd="1"  >
+              <Grid   Size="150,27" Offset="0,2" Padding="0,0" Style="Grid9FrameTurnsHL" />
+            </AlphaAnim>
+          </ShowOnMouseOver>
+          <!-- Selected State  -->
+          <Grid Anchor="C,C" Offset="0,1" Size="150,26"  Style="Grid9FrameTurns" Hidden="1" ID="CivRelationsSelectHighlight" />
+        </Button>
+
+      </Stack>
+      <Image Anchor="C,B" Offset="0,0" Texture="HorizontalTrim.dds" Size="971.5" />
+
+    </Box>
+
+
+    <!-- The box at the bottom along with the close button -->
+    <Button Anchor="R,T" Size="32,32" Offset="14.10" TextureOffset="32,0" Texture="CloseMinButtons.dds"  ToolTip="TXT_KEY_ESC_TO_EXIT" ID="CloseButton" Hidden="0"/>
+
+  </Grid>
+
+  <LuaContext FileName="Assets/UI/InGame/Popups/DiploCurrentDeals" ID="DealsPanel" Hidden="1" />
+  <LuaContext FileName="Assets/UI/InGame/Popups/DiploRelationships" ID="RelationsPanel" Hidden="0" />
+  <LuaContext FileName="Assets/UI/InGame/Popups/DiploGlobalRelationships" ID="GlobalPanel" Hidden="1" />
+  <LuaContext FileName="Assets/UI/InGame/Popups/DiploTradesStatus" ID="TradesPanel" Hidden="1" />
+  <LuaContext FileName="Assets/UI/InGame/Popups/DiploCityStatesStatus" ID="CityStatesPanel" Hidden="1" />
+  <LuaContext FileName="Assets/UI/InGame/Popups/DiploCivRelations" ID="CivRelationsPanel" Hidden="1" />
+
+</Context>
