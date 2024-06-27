@@ -17620,5 +17620,333 @@
 		<Row Tag="TXT_KEY_PROMOTION_MOSQUE_OF_DJENNE_HELP">
 			<Text>+1 [ICON_MOVES]movement, when spreading religion, for each [ICON_CITIZEN] follower converted, gain +5[ICON_PEACE] faith and +5[ICON_GOLDEN_AGE] golden age points</Text>
 		</Row>
+
+		<!-- Trade Opportunities -->
+		<Replace Tag="TXT_KEY_DO_TRADE_STATUS" >
+			<Text>International Trade</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_CIV_STATUS" >
+			<Text>{1}{2} ({3_Num})</Text>
+		</Replace>
+		
+		<Replace Tag="TXT_KEY_DO_TRADE_STATUS_CLICK_TO" >
+			<Text>[COLOR_POSITIVE_TEXT]Click to[ENDCOLOR]</Text>
+		</Replace>
+		
+		<Replace Tag="TXT_KEY_DO_TRADE_PTP_DISABLE" >
+			<Text>[COLOR_WARNING_TEXT]Currently can't "Pledging to Protect" or "Revoke Protection" on this City-State![ENDCOLOR]</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_TRADE_STATUS_RESOURCES" >
+			<Text>Resource Deals</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_TRADE_STATUS_RESOURCES_TT" >
+			<Text>Resources can be traded[NEWLINE][ICON_ARROW_RIGHT]Import Resources[NEWLINE][ICON_ARROW_LEFT]Export Resources[NEWLINE]([COLOR_POSITIVE_TEXT]Strategy[ENDCOLOR][ICON_TURNS_REMAINING][COLOR_YELLOW]Luxury[ENDCOLOR] [ICON_INVEST][COLOR_WARNING_TEXT]Demand[ENDCOLOR])</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_TRADE_STATUS_OTHERS" >
+			<Text>Other Agreements</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_TRADE_STATUS_OTHERS_TT" >
+			<Text>[ICON_CITY_STATE], [ICON_RESEARCH], [ICON_TRADE] and ...</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_TRADE_STATUS_WAR" >
+			<Text>[COLOR_WARNING_TEXT]- - - WAR - - -[ENDCOLOR]</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_TRADE_STATUS_RA_TT" >
+			<Text>[ICON_RESEARCH] Can form Research Agreement[NEWLINE][ICON_INFLUENCE] agreement is already in place</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_TRADE_STATUS_RA_YES_TT" >
+			<Text>Can form Research Agreement</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_TRADE_STATUS_RA_NO_TT" >
+			<Text>Research Agreement is already in place</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_TRADE_STATUS_EMBASSY_TT" >
+			<Text>[ICON_CITY_STATE] Can form mutual Embassy Agreement[NEWLINE][ICON_INFLUENCE] agreement is already in place</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_TRADE_STATUS_EMBASSY_YES_TT" >
+			<Text>Can form mutual Embassy Agreement</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_TRADE_STATUS_EMBASSY_NO_TT" >
+			<Text>Mutual Embassy agreement is already in place</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_TRADE_STATUS_EMBASSY_US_TT" >
+			<Text>We already have an Embassy in their Capital</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_TRADE_STATUS_EMBASSY_THEM_TT" >
+			<Text>They already have an Embassy in our Capital</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_TRADE_STATUS_BORDERS_TT" >
+			<Text>[ICON_TRADE] Can form mutual Open Borders Agreement[NEWLINE][ICON_TRADE_WHITE] agreement is already in place</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_TRADE_STATUS_BORDERS_YES_TT" >
+			<Text>Can form mutual Open Borders Agreement</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_TRADE_STATUS_BORDERS_NO_TT" >
+			<Text>Mutual Open Borders is already in place</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_TRADE_STATUS_BORDERS_US_TT" >
+			<Text>We can already cross their borders</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_TRADE_STATUS_BORDERS_THEM_TT" >
+			<Text>They can already cross our borders</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_TRADE_STATUS_GOLD_TT" >
+			<Text>In Bank / GPT</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_TRADE_STATUS_CITY_STATES_TT" >
+			<Text>[COLOR_POSITIVE_TEXT]Strategy[ENDCOLOR][ICON_TURNS_REMAINING][COLOR_YELLOW]Luxury[ENDCOLOR] [COLOR_WARNING_TEXT](Untapped)[ENDCOLOR]</Text>
+		</Replace>
+
+		<!-- City States Relations -->
+		<Replace Tag="TXT_KEY_DO_CS_STATUS" >
+			<Text>City States</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_CS_SORT_TRAIT_TT" >
+			<Text>Sort by Trait</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_CS_SORT_NAME_TT" >
+			<Text>Sort by City State Name</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_CS_SORT_ALLY_TT" >
+			<Text>Sort by City State Ally</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_CS_SORT_INFLUENCE_TT" >
+			<Text>Sort by Influence (right-click to sort by Influence needed)</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_CITY_STATE" >
+			<Text>City State</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_ALLIED_WITH" >
+			<Text>Allied With</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_PROTECTED_BY" >
+			<Text>Protected By</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_QUESTS" >
+			<Text>Quest(s)</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_INFLUENCE" >
+			<Text>Influence</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_WAR" >
+			<Text>War</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_GIFT_GOLD" >
+			<Text>Gift Gold</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_PROTECT_TT" >
+			<Text>{1} is protected by[NEWLINE]{2}</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_NO_PROTECT_TT" >
+			<Text>{1} is protected by nobody</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_QUEST_TT" >
+			<Text>{1} has requested you to[NEWLINE]{2}</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_NO_QUEST_TT" >
+			<Text>{1} currently has no requests</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_QUEST_WAR_WITH_PLAYERS">
+			<Text>Fight {1_PlayerNames}</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_QUEST_BARBARIANS">
+			<Text>Kill Barbarians</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_QUEST_ROUTE">
+			<Text>Construct Road</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_QUEST_KILL_CAMP">
+			<Text>Clear Encampment</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_QUEST_CONNECT_RESOURCE">
+			<Text>Connect {1_ResourceName:textkey}</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_QUEST_CONSTRUCT_WONDER">
+			<Text>Build {1_WonderName:textkey}</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_QUEST_GREAT_PERSON">
+			<Text>Attract {1_UnitName:textkey}</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_QUEST_KILL_CITY_STATE">
+			<Text>[COLOR_GREY]Destroy {1_CityStateName:textkey}[ENDCOLOR]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_QUEST_FIND_PLAYER">
+			<Text>Find {1_CivName:textkey}</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_QUEST_FIND_NATURAL_WONDER">
+			<Text>Find Natural Wonder</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_PEACE_TT" >
+			<Text>At war, may make peace</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_WAR_TT" >
+			<Text>At war, peace blocked</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_GIFT_INFLUENCE_TT" >
+			<Text>{1_Num}[ICON_GOLD] for [COLOR_POSITIVE_TEXT]+{2_Num} Influence[ENDCOLOR]</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_RESOURCE_DYNAMIC_TT" >
+			<Text>Other Luxury Resources</Text>
+		</Replace>
+		
+		<!-- GlobalRelationsText -->
+		<Replace Tag="TXT_KEY_DO_GLOBALRELATIONS_TITLE">
+			<Text>International Relations</Text>
+		</Replace>
+
+		<!-- This is text for the reset selections button in the graph screens-->
+		<Replace Tag="TXT_KEY_DO_RESET_SELECTIONS">
+			<Text>Reset Selections</Text>
+		</Replace>
+
+		<!-- "of the" used when building a leader title, as in "Bismark of the German Empire" -->
+		<Replace Tag="TXT_KEY_DO_OF_THE">
+			<Text>of the</Text>
+		</Replace>
+		
+		<!-- Relationship view titles -->
+		<Replace Tag="TXT_KEY_DO_RELATIONVIEW_ECONOMIC">
+			<Text>Economic</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONVIEW_POLITICAL">
+			<Text>Political</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONVIEW_ATTITUDE">
+			<Text>Attitude</Text>
+		</Replace>
+
+		<!-- Relationship view key (bottom right) -->
+		<Replace Tag="TXT_KEY_DO_RELATIONKEY_WAR">
+			<Text>War</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONKEY_OPEN_BORDERS">
+			<Text>Open Borders</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONKEY_DECLARATION_OF_FRIENDSHIP">
+			<Text>Declaration of Friendship</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONKEY_DENOUNCEMENT">
+			<Text>Denouncing</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONKEY_DEFENSIVE_PACT">
+			<Text>Defensive Pact</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONKEY_RESEARCH_AGREEMENT">
+			<Text>Research Agreement</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONKEY_GPT">
+			<Text>Gold per Turn</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONKEY_RESOURCE">
+			<Text>Resource</Text>
+		</Replace>
+		
+		<Replace Tag="TXT_KEY_DO_RELATIONKEY_TRADEROUTE">
+			<Text>Trade Route</Text>
+		</Replace>
+		
+		<Replace Tag="TXT_KEY_DO_RELATIONKEY_HOSTILE">
+			<Text>Hostile</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONKEY_GUARDED">
+			<Text>Guarded</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONKEY_AFRAID">
+			<Text>Afraid</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONKEY_FRIENDLY">
+			<Text>Friendly</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONKEY_NEUTRAL">
+			<Text>Neutral</Text>
+		</Replace>
+
+		<!-- Tooltip text fragments for the relationship graphs -->
+		<Replace Tag="TXT_KEY_DO_RELATIONTOOLTIP_GPT_TO">
+			<Text>gold per turn to</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONTOOLTIP_GPT_FROM">
+			<Text>gold per turn from</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONTOOLTIP_RESEARCH_WITH">
+			<Text>Research agreement with</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONTOOLTIP_TO">
+			<Text>to</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONTOOLTIP_FROM">
+			<Text>from</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONTOOLTIP_EXPORTS">
+			<Text>Exports</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONTOOLTIP_IMPORTS">
+			<Text>Imports</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONTOOLTIP_TRADEROUTES">
+			<Text>Trade Routes</Text>
+		</Replace>
+		
+		<Replace Tag="TXT_KEY_DO_RELATIONTOOLTIP_RESEARCH_AGREEMENTS">
+			<Text>Research Agreements</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONTOOLTIP_HOSTILE">
+			<Text>Hostile toward</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONTOOLTIP_GUARDED">
+			<Text>Guarded toward</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONTOOLTIP_AFRAID">
+			<Text>Afraid of</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONTOOLTIP_FRIENDLY">
+			<Text>Friendly with</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONTOOLTIP_NEUTRAL">
+			<Text>Neutral toward</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONTOOLTIP_RCLICK">
+			<Text>[COLOR_YELLOW]Right-Click[ENDCOLOR] to Meet with</Text>
+		</Replace>
 	</Language_en_US>
 </GameData>

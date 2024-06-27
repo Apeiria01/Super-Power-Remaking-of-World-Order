@@ -15734,5 +15734,332 @@
 		<Row Tag="TXT_KEY_PROMOTION_MOSQUE_OF_DJENNE_HELP">
 			<Text>+1移動力，實施傳教行動時，每轉換一個[ICON_CITIZEN]信徒，獲得+5[ICON_PEACE]信仰和+5[ICON_GOLDEN_AGE]黃金時代點</Text>
 		</Row>
+
+		<!-- Trade Opportunities -->
+		<Replace Tag="TXT_KEY_DO_TRADE_STATUS" >
+			<Text>國際貿易</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_CIV_STATUS" >
+			<Text>{1} {2} - ({3_Num})</Text>
+		</Replace>
+		
+		<Replace Tag="TXT_KEY_DO_TRADE_STATUS_CLICK_TO" >
+			<Text>[COLOR_POSITIVE_TEXT]點擊[ENDCOLOR]</Text>
+		</Replace>
+		
+		<Replace Tag="TXT_KEY_DO_TRADE_PTP_DISABLE" >
+			<Text>[COLOR_WARNING_TEXT]目前不能「承諾保護」或「撤銷保護」該城邦！[ENDCOLOR]</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_TRADE_STATUS_RESOURCES" >
+			<Text>資源交易</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_TRADE_STATUS_RESOURCES_TT" >
+			<Text>可供交易的資源[NEWLINE][ICON_ARROW_RIGHT]進口資源[NEWLINE][ICON_ARROW_LEFT]出口資源[NEWLINE]（[COLOR_POSITIVE_TEXT]戰略[ENDCOLOR] [ICON_TURNS_REMAINING] [COLOR_YELLOW]奢侈[ENDCOLOR] [ICON_INVEST][COLOR_WARNING_TEXT]需求[ENDCOLOR]）</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_TRADE_STATUS_OTHERS" >
+			<Text>其他協議</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_TRADE_STATUS_OTHERS_TT" >
+			<Text>[ICON_CITY_STATE]、[ICON_RESEARCH]、[ICON_TRADE] 等等...</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_TRADE_STATUS_WAR" >
+			<Text>[COLOR_WARNING_TEXT]- - - 交戰中 - - -[ENDCOLOR]</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_TRADE_STATUS_RA_TT" >
+			<Text>[ICON_RESEARCH]可簽署科研協定[NEWLINE][ICON_INFLUENCE]已簽署科研協定</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_TRADE_STATUS_RA_YES_TT" >
+			<Text>可簽署科研協定</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_TRADE_STATUS_RA_NO_TT" >
+			<Text>已簽署科研協定</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_TRADE_STATUS_EMBASSY_TT" >
+			<Text>[ICON_CITY_STATE]可派遣外交大使[NEWLINE][ICON_INFLUENCE]已派駐外交大使</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_TRADE_STATUS_EMBASSY_YES_TT" >
+			<Text>可派遣外交大使</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_TRADE_STATUS_EMBASSY_NO_TT" >
+			<Text>已派駐外交大使</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_TRADE_STATUS_EMBASSY_US_TT" >
+			<Text>他們的首都已有我們的大使館</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_TRADE_STATUS_EMBASSY_THEM_TT" >
+			<Text>我們的首都已有他們的大使館</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_TRADE_STATUS_BORDERS_TT" >
+			<Text>[ICON_TRADE]可開放邊境[NEWLINE][ICON_TRADE_WHITE]已開放邊境</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_TRADE_STATUS_BORDERS_YES_TT" >
+			<Text>可開放邊境</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_TRADE_STATUS_BORDERS_NO_TT" >
+			<Text>已開放邊境</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_TRADE_STATUS_BORDERS_US_TT" >
+			<Text>我們能通過他們的國境</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_TRADE_STATUS_BORDERS_THEM_TT" >
+			<Text>他們能通過我們的國境</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_TRADE_STATUS_GOLD_TT" >
+			<Text>總收入 / 回合金</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_TRADE_STATUS_CITY_STATES_TT" >
+			<Text>[COLOR_POSITIVE_TEXT]戰略[ENDCOLOR][ICON_TURNS_REMAINING][COLOR_YELLOW]奢侈[ENDCOLOR][COLOR_WARNING_TEXT](未開發)[ENDCOLOR]</Text>
+		</Replace>
+		<!-- City States Relations -->
+		<Replace Tag="TXT_KEY_DO_CS_STATUS" >
+			<Text>城邦關系</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_CS_SORT_TRAIT_TT" >
+			<Text>按類型排序</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_CS_SORT_NAME_TT" >
+			<Text>按名稱排序</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_CS_SORT_ALLY_TT" >
+			<Text>按同盟排序</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_CS_SORT_INFLUENCE_TT" >
+			<Text>按影響排序（右鍵按所需影響排序）</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_CITY_STATE" >
+			<Text>城邦</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_ALLIED_WITH" >
+			<Text>同盟國</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_PROTECTED_BY" >
+			<Text>保護者</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_QUESTS" >
+			<Text>需求</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_INFLUENCE" >
+			<Text>影響</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_WAR" >
+			<Text>交戰</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_GIFT_GOLD" >
+			<Text>捐資</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_PROTECT_TT" >
+			<Text>{1}的保護者爲[NEWLINE]{2}</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_NO_PROTECT_TT" >
+			<Text>{1}還沒有保護者</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_QUEST_TT" >
+			<Text>{1}向你要求[NEWLINE]{2}</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_NO_QUEST_TT" >
+			<Text>{1}目前沒有要求</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_QUEST_WAR_WITH_PLAYERS">
+			<Text>正在與{1_PlayerNames}交戰</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_QUEST_BARBARIANS">
+			<Text>消滅蠻族</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_QUEST_ROUTE">
+			<Text>建立道路</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_QUEST_KILL_CAMP">
+			<Text>剿滅蠻族營地</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_QUEST_CONNECT_RESOURCE">
+			<Text>將{1_ResourceName:textkey}連接到貿易網</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_QUEST_CONSTRUCT_WONDER">
+			<Text>建造{1_WonderName:textkey}</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_QUEST_GREAT_PERSON">
+			<Text>誕生一位{1_UnitName:textkey}</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_QUEST_KILL_CITY_STATE">
+			<Text>[COLOR_GREY]摧毀城邦{1_CityStateName:textkey}[ENDCOLOR]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_QUEST_FIND_PLAYER">
+			<Text>找到{1_CivName:textkey}</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_QUEST_FIND_NATURAL_WONDER">
+			<Text>進行自然奇觀探索</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_PEACE_TT" >
+			<Text>交戰中，可以議和</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_WAR_TT" >
+			<Text>交戰中，無法議和</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_CS_STATUS_GIFT_INFLUENCE_TT" >
+			<Text>捐資{1_Num}[ICON_GOLD]以[COLOR_POSITIVE_TEXT]+{2_Num}點影響[ENDCOLOR]</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_RESOURCE_DYNAMIC_TT" >
+			<Text>其他奢侈品</Text>
+		</Replace>
+		
+		<!-- GlobalRelationsText -->
+		<Replace Tag="TXT_KEY_DO_GLOBALRELATIONS_TITLE">
+			<Text>國際關系</Text>
+		</Replace>
+
+		<!-- This is text for the reset selections button in the graph screens-->
+		<Replace Tag="TXT_KEY_DO_RESET_SELECTIONS">
+			<Text>選項重置</Text>
+		</Replace>
+
+		<!-- "of the" used when building a leader title, as in "Bismark of the German Empire" -->
+		<Replace Tag="TXT_KEY_DO_OF_THE">
+			<Text>來自</Text>
+		</Replace>
+		
+		<!-- Relationship view titles -->
+		<Replace Tag="TXT_KEY_DO_RELATIONVIEW_ECONOMIC">
+			<Text>經濟</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONVIEW_POLITICAL">
+			<Text>政治</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONVIEW_ATTITUDE">
+			<Text>意識</Text>
+		</Replace>
+
+		<!-- Relationship view key (bottom right) -->
+		<Replace Tag="TXT_KEY_DO_RELATIONKEY_WAR">
+			<Text>戰爭</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONKEY_OPEN_BORDERS">
+			<Text>開放邊境</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONKEY_DECLARATION_OF_FRIENDSHIP">
+			<Text>友誼申明</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONKEY_DENOUNCEMENT">
+			<Text>譴責</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONKEY_DEFENSIVE_PACT">
+			<Text>防禦條約</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONKEY_RESEARCH_AGREEMENT">
+			<Text>科研合作</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONKEY_GPT">
+			<Text>每回合金幣</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONKEY_RESOURCE">
+			<Text>資源</Text>
+		</Replace>
+		
+		<Replace Tag="TXT_KEY_DO_RELATIONKEY_TRADEROUTE">
+			<Text>商路</Text>
+		</Replace>
+		
+		<Replace Tag="TXT_KEY_DO_RELATIONKEY_HOSTILE">
+			<Text>敵對</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONKEY_GUARDED">
+			<Text>戒備</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONKEY_AFRAID">
+			<Text>恐懼</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONKEY_FRIENDLY">
+			<Text>友好</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONKEY_NEUTRAL">
+			<Text>中立</Text>
+		</Replace>
+
+		<!-- Tooltip text fragments for the relationship graphs -->
+		<Replace Tag="TXT_KEY_DO_RELATIONTOOLTIP_GPT_TO">
+			<Text>金錢每回合給予</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONTOOLTIP_GPT_FROM">
+			<Text>金錢每回合來自</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONTOOLTIP_RESEARCH_WITH">
+			<Text>合作研究物件</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONTOOLTIP_TO">
+			<Text>給予</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONTOOLTIP_FROM">
+			<Text>來自</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONTOOLTIP_EXPORTS">
+			<Text>出口</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONTOOLTIP_IMPORTS">
+			<Text>進口</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONTOOLTIP_TRADEROUTES">
+			<Text>商路</Text>
+		</Replace>
+		
+		<Replace Tag="TXT_KEY_DO_RELATIONTOOLTIP_RESEARCH_AGREEMENTS">
+			<Text>合作研究</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONTOOLTIP_HOSTILE">
+			<Text>敵對對象</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONTOOLTIP_GUARDED">
+			<Text>提防對象</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONTOOLTIP_AFRAID">
+			<Text>畏懼對象</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONTOOLTIP_FRIENDLY">
+			<Text>友好對象</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONTOOLTIP_NEUTRAL">
+			<Text>中立對象</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_DO_RELATIONTOOLTIP_RCLICK">
+			<Text>[COLOR_YELLOW]右擊[ENDCOLOR] 進行會晤</Text>
+		</Replace>
 	</Language_zh_Hant_HK>
 </GameData>
