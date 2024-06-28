@@ -8378,7 +8378,10 @@
 			<Text>Authoritarianism</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_NEW_ORDER_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]Authoritarianism[ENDCOLOR][NEWLINE]+4 attack demage for regular army Unit from each occupied original capital city.</Text>
+			<Text>
+			[COLOR_POSITIVE_TEXT]Authoritarianism[ENDCOLOR]
+			[NEWLINE]+4 fixed damage for regular army Unit from each occupied Major's original Capital when attacking Land Unit or City  (Half effect when attacking Sea Unit and Air Unit, half damage from Minor's Capital).
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_NEW_ORDER_TEXT" >
 			<Text>Authoritarianism is a form of government characterized by absolute or blind obedience to authority, as against individual freedom and related to the expectation of unquestioning obedience.</Text>
@@ -15620,7 +15623,7 @@
 			<Text>Authoritarianism</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_NEW_ORDER_HELP">
-			<Text>+4 attack demage for each occupied original capital city.</Text>
+			<Text>+4 fixed damage from each occupied Major's original Capital when attacking Land Unit or City  (Half effect when attacking Sea Unit and Air Unit, half damage from Minor's Capital).</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_EMP_ATTACK">
