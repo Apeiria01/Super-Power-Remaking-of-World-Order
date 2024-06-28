@@ -227,7 +227,7 @@
 			<Type>TRAIT_FAITH_FROM_NATURE</Type>
 			<Description>TXT_KEY_TRAIT_FAITH_FROM_NATURE</Description>
 			<ShortDescription>TXT_KEY_TRAIT_FAITH_FROM_NATURE_SHORT</ShortDescription>
-			<FaithFromUnimprovedForest>true</FaithFromUnimprovedForest>
+			<FaithFromUnimprovedForest>false</FaithFromUnimprovedForest>
 		</Row>
 		<Row>
 			<Type>TRAIT_LAND_TRADE_GOLD</Type>
@@ -1244,5 +1244,13 @@
 			<Yield>1</Yield>
 		</Row>
 	</Trait_PerMajorReligionFollowerYieldModifier>
-
+		
+	<Trait_CityYieldPerAdjacentFeature>
+		<Row>
+			<TraitType>TRAIT_FAITH_FROM_NATURE</TraitType>
+			<FeatureType>FEATURE_FOREST</FeatureType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<MaxValue>3</MaxValue>
+		</Row>
+	</Trait_CityYieldPerAdjacentFeature>
 </GameData>

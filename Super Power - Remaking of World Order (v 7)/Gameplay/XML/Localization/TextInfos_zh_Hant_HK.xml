@@ -5892,8 +5892,7 @@
 
 		<Replace Tag="TXT_KEY_TRAIT_FAITH_FROM_NATURE">
 			<Text>
-				[ICON_BULLET]鄰近未開發森林地塊的城市+1[ICON_PEACE]信仰。
-				[NEWLINE][ICON_BULLET]鄰近3處以上未開發森林地塊的城市+2[ICON_PEACE]信仰。
+				[ICON_BULLET]每一處鄰近的森林地塊使城市+1[ICON_PEACE]信仰（至多+3）。
 				[NEWLINE][ICON_BULLET]每處獵場+1[ICON_PRODUCTION]產能，+1[ICON_PEACE]信仰。
 			</Text>
 		</Replace>

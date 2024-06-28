@@ -10564,8 +10564,7 @@
 
 		<Replace Tag="TXT_KEY_TRAIT_FAITH_FROM_NATURE">
 			<Text>
-				[ICON_BULLET]+1 [ICON_PEACE] Faith per city with an adjacent unimproved Forest. 
-				[NEWLINE][ICON_BULLET]Bonus increases to +2 [ICON_PEACE] Faith in Cities with 3 or more adjacent unimproved Forest tiles. 
+				[ICON_BULLET]Each adjacent Forest provide +1 [ICON_PEACE] Faith to City (+3 at most). 
 				[NEWLINE][ICON_BULLET]+1 [ICON_PRODUCTION] Production and +1 [ICON_PEACE] Faith for every Camp. 
 			</Text>
 		</Replace>
