@@ -2,6 +2,7 @@
 -- Select City Names
 -------------------------------------------------
 local m_PopupInfo = nil;
+local m_pCity = nil;
 
 -------------------------------------------------
 -------------------------------------------------
@@ -13,7 +14,7 @@ Controls.CancelButton:RegisterCallback(Mouse.eLClick, OnCancel);
 -------------------------------------------------
 -------------------------------------------------
 function OnAccept()
-    local pCity = UI.GetHeadSelectedCity();
+    local pCity = m_pCity or UI.GetHeadSelectedCity();
     if pCity then
         local sNewName = Controls.EditCityName:GetText();
 
@@ -151,16 +152,16 @@ function OnPopup(popupInfo)
 
     m_PopupInfo = popupInfo;
 
-    local pCity = UI.GetHeadSelectedCity();
+    m_pCity = UI.GetHeadSelectedCity();
 
     if m_PopupInfo.Data1 ~= -1 and Players[Game.GetActivePlayer()] and Players[Game.GetActivePlayer()]:GetCityByID(m_PopupInfo.Data1)
-	and (pCity == nil or m_PopupInfo.Data1 ~= pCity:GetID())
+	and (m_pCity == nil or m_PopupInfo.Data1 ~= m_pCity:GetID())
 	then
-		pCity = Players[Game.GetActivePlayer()]:GetCityByID(m_PopupInfo.Data1);
+		m_pCity = Players[Game.GetActivePlayer()]:GetCityByID(m_PopupInfo.Data1);
 	end
 
-    if pCity then
-        local cityName = pCity:GetNameKey();
+    if m_pCity then
+        local cityName = m_pCity:GetNameKey();
         local convertedKey = Locale.ConvertTextKey(cityName);
 
         Controls.EditCityName:SetText(convertedKey);

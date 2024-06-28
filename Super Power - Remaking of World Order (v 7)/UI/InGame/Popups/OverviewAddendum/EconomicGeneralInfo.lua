@@ -189,8 +189,8 @@ function UpdateDisplay()
         -- hookup city popup to cityname button
         instance.CityButton:RegisterCallback( Mouse.eLClick, OnCityClick);
         instance.CityButton:RegisterCallback( Mouse.eRClick, OnCityRename);
-	instance.CityButton:SetVoid1( pCity:GetID() );
-	-- MOD End
+		instance.CityButton:SetVoid1( pCity:GetID() );
+		-- MOD End
         
     	local pct = 1 - (pCity:GetDamage() / pCity:GetMaxHitPoints());
     	if( pct ~= 1 ) then
