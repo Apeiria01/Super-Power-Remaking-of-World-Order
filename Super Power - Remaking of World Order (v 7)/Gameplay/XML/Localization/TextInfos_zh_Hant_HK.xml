@@ -7437,7 +7437,7 @@
 		<Replace Tag="TXT_KEY_POLICY_NEW_ORDER_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]威權政府[ENDCOLOR]
-				[NEWLINE]每占領一個原始首都，正規軍單位攻擊傷害固定+4。
+				[NEWLINE]每占領一個文明的原始首都，正規軍單位攻擊陸軍和城市目標時傷害固定+4（對海軍和空軍效果減半，城邦首都提供效果減半）。
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_NEW_ORDER_TEXT">
@@ -13456,7 +13456,7 @@
 			<Text>威權</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_NEW_ORDER_HELP">
-			<Text>每占領一個原始首都，軍事單位攻擊傷害固定+4。</Text>
+			<Text>每占領一個文明的原始首都，攻擊陸軍和城市目標時傷害固定+4（對海軍和空軍效果減半，城邦首都提供效果減半）</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_EMP_ATTACK">

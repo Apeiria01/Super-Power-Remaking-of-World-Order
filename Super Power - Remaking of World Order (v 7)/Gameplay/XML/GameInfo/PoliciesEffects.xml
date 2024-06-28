@@ -1718,7 +1718,7 @@
 			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_SHARED</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_NEW_ORDER</PediaEntry>
-			<OriginalCapitalDamageFix>4</OriginalCapitalDamageFix>
+			<OriginalCapitalSpecialDamageFix>4</OriginalCapitalSpecialDamageFix>
 		</Row>
 
 		<Row>
