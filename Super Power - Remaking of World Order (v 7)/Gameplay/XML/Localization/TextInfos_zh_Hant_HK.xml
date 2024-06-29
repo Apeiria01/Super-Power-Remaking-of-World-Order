@@ -7372,6 +7372,13 @@
 			</Text>
 		</Replace>
 
+		<Replace Tag="TXT_KEY_POLICY_INDUSTRIAL_ESPIONAGE_HELP">
+			<Text>
+				[COLOR_POSITIVE_TEXT]工業間諜[ENDCOLOR]
+				[NEWLINE]間諜竊取科技的速度翻倍，獲得一名額外的[ICON_SPY]間諜。
+			</Text>
+		</Replace>
+
 		<Replace Tag="TXT_KEY_POLICY_UNITED_FRONT_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]統一戰線[ENDCOLOR][NEWLINE]每個軍事基地，軍事學院和道場為城市+15%[ICON_PRODUCTION]產能和[ICON_RESEARCH]科研產出。
