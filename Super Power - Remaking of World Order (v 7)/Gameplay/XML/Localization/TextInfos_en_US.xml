@@ -7621,7 +7621,6 @@
 		<Replace Tag="TXT_KEY_POLICY_MILITARY_CASTE_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]Military Training[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]A [ICON_GREAT_GENERAL] Great General appears outside the [ICON_CAPITAL] Capital. [ICON_GREAT_GENERAL] Great Generals are earned 50% faster. 
 				[NEWLINE][ICON_BULLET]Land Hit-and-Run Units, Land Ranged Units, Anti-air Units and Siege Units +15% [ICON_RANGE_STRENGTH] Strength when performing Ranged Attack and being Ranged Striked.
 				[NEWLINE][ICON_BULLET]Land Hit-and-Run Units and Land Ranged Units' final damage +5 .
 				[NEWLINE][ICON_BULLET]Anti-air Units and Siege Units +10% extra damage from city max hit point.
@@ -7641,8 +7640,12 @@
 			<Text>Professional Army</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_PROFESSIONAL_ARMY_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]Professional Army[ENDCOLOR]
-			[NEWLINE][ICON_BULLET]New Units receive +15 XP. </Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]Professional Army[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]New Units receive +15 XP. 
+				[NEWLINE][ICON_BULLET]A [ICON_GREAT_GENERAL] Great General appears outside the [ICON_CAPITAL] Capital.
+				[NEWLINE][ICON_BULLET][ICON_GREAT_GENERAL] Great Generals are earned 50% faster. 
+		</Text>
 		</Replace>
 		<!--<Replace Tag="TXT_KEY_POLICY_PROFESSIONALARMY_TEXT" >
 			<Text>In a society with a military caste, all members of the military are from a specific tribe, nationality, religion, or other socio-economic subgroup. Citizens who are not part of the caste are forbidden from joining the military and often from carrying any weapons at all, often because the military caste fears that the citizens might use the weapons against them. Much of feudal Japan was under a military caste system, as was ancient Sparta.</Text>
