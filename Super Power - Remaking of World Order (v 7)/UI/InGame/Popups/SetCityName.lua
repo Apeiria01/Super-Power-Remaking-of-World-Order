@@ -3,6 +3,7 @@
 -------------------------------------------------
 local m_PopupInfo = nil;
 local m_pCity = nil;
+local m_bRefresh = false;
 
 -------------------------------------------------
 -------------------------------------------------
@@ -63,6 +64,9 @@ function OnAccept()
     end
 
     UIManager:DequeuePopup(ContextPtr);
+    if m_bRefresh then
+        UI.SetDirty(InterfaceDirtyBits.CityInfo_DIRTY_BIT, true);
+    end
 end
 Controls.AcceptButton:RegisterCallback(Mouse.eLClick, OnAccept);
 
@@ -153,6 +157,7 @@ function OnPopup(popupInfo)
     m_PopupInfo = popupInfo;
 
     m_pCity = UI.GetHeadSelectedCity();
+    m_bRefresh = m_PopupInfo.Data2
 
     if m_PopupInfo.Data1 ~= -1 and Players[Game.GetActivePlayer()] and Players[Game.GetActivePlayer()]:GetCityByID(m_PopupInfo.Data1)
 	and (m_pCity == nil or m_PopupInfo.Data1 ~= m_pCity:GetID())
