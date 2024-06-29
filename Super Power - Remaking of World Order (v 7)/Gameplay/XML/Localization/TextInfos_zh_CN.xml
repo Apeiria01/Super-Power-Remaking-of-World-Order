@@ -7479,6 +7479,13 @@
 			</Text>
 		</Replace>
 
+		<Replace Tag="TXT_KEY_POLICY_INDUSTRIAL_ESPIONAGE_HELP">
+			<Text>
+				[COLOR_POSITIVE_TEXT]工业间谍[ENDCOLOR]
+				[NEWLINE]间谍窃取科技的速度翻倍，获得一名额外的[ICON_SPY]间谍。
+			</Text>
+		</Replace>
+
 		<Replace Tag="TXT_KEY_POLICY_UNITED_FRONT_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]统一战线[ENDCOLOR][NEWLINE]每个军事基地，军事学院和道场为城市+15%[ICON_PRODUCTION]产能和[ICON_RESEARCH]科研产出。
