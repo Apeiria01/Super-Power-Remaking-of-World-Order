@@ -6801,7 +6801,7 @@
 
 		<Replace Tag="TXT_KEY_POLICY_MILITARY_TRADITION_HELP">
 			<Text>
-				[COLOR_POSITIVE_TEXT]军事传统[ENDCOLOR][NEWLINE]军事单位通过战斗获得经验+50%。
+				[COLOR_POSITIVE_TEXT]军事传统[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]升级单位所需的[ICON_GOLD]金钱减少60%。
 				[NEWLINE][ICON_BULLET]军营，军械所，城墙，城堡,马厩和军事学院+1[ICON_HAPPINESS_1]快乐.
 			</Text>
@@ -7475,7 +7475,7 @@
 		<Replace Tag="TXT_KEY_POLICY_ELITE_FORCES_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]精英部队[ENDCOLOR]
-				[NEWLINE]所有新单位获得15点经验值。
+				[NEWLINE]所有新单位获得15点经验值，军事单位通过战斗获得经验+50%。。
 			</Text>
 		</Replace>
 

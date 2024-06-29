@@ -7633,7 +7633,6 @@
 		<Replace Tag="TXT_KEY_POLICY_MILITARY_TRADITION_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]Military Tradition[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]Military Units gain 50% more Experience from combat.
 				[NEWLINE][ICON_BULLET]-60% [ICON_GOLD] Gold Cost for Unit Upgrade.
 				[NEWLINE][ICON_BULLET]+1 [ICON_HAPPINESS_1] for every Barracks, Armory, Walls, Castle, Stable and Military Academy.
 			</Text>
@@ -8318,7 +8317,7 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_ELITE_FORCES_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]Elite Forces[ENDCOLOR][NEWLINE]New Units receive +15 XP.</Text>
+			<Text>[COLOR_POSITIVE_TEXT]Elite Forces[ENDCOLOR][NEWLINE]New Units receive +15 XP, Military Units gain 50% more Experience from combat.</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_INDUSTRIAL_ESPIONAGE_HELP">
