@@ -7543,7 +7543,7 @@
 		<Replace Tag="TXT_KEY_POLICY_NEW_ORDER_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]威权政府[ENDCOLOR]
-				[NEWLINE]每占领一个文明的原始首都，正规军单位攻击陆军和城市目标时伤害固定+4（对海军和空军效果减半，城邦首都提供效果减半）。
+				[NEWLINE]每占领一个文明的原始首都，正规军单位攻击陆军目标时伤害固定+4（对城市、海军和空军效果减半，城邦首都提供效果减半）。
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_NEW_ORDER_TEXT">
@@ -13633,7 +13633,7 @@
 			<Text>威权</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_NEW_ORDER_HELP">
-			<Text>每占领一个文明的原始首都，攻击陆军和城市目标时伤害固定+4（对海军和空军效果减半，城邦首都提供效果减半）。</Text>
+			<Text>每占领一个文明的原始首都，攻击陆军目标时伤害固定+4（对城市、海军和空军效果减半，城邦首都提供效果减半）。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_EMP_ATTACK">
@@ -15740,7 +15740,10 @@
 			<Text>[COLOR_CYAN]不可被俘[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_EUPANEL_CHANGE_DAMAGEVALUE_SUPPORT_SP">
-			<Text>[COLOR_CYAN]受到的最终伤害{1_Num}[ENDCOLOR]</Text>
+			<Text>[COLOR_CYAN]受到的最终伤害[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_FIXVALUE_SP">
+			<Text>[COLOR_CYAN]额外造成的伤害[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_EUPANEL_RANGED_SUPPORT_SP">
 			<Text>[COLOR_CYAN]额外远程攻击能力[ENDCOLOR]</Text>

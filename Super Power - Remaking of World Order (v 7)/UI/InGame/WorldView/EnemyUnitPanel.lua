@@ -474,21 +474,28 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 			Controls.TheirDamageValue:SetText("[COLOR_RED]" .. iTheirDamageInflicted .. "[ENDCOLOR]");
 
 			--Forced damage reduction
-			if pCity:GetChangeDamageValue() ~= 0 then
-				local ChangeDamageValue= pCity:GetChangeDamageValue()
+			local ChangeDamageValue= pCity:GetChangeDamageValue()
+			if ChangeDamageValue ~= 0 then
 				controlTable = g_TheirCombatDataIM:GetInstance();
-				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_CHANGE_DAMAGEVALUE_SUPPORT_SP",ChangeDamageValue);
-				controlTable.Value:SetText("");
+				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_CHANGE_DAMAGEVALUE_SUPPORT_SP");
+				controlTable.Value:SetText(ChangeDamageValue .. " :[COLOR_CYAN]".. "[ENDCOLOR]");
             end
 
 			-- Their Strength
 			Controls.TheirStrengthValue:SetText(Locale.ToNumber(iTheirStrength / 100, "#.##"));
 
+			local UnitFixDamageValue = pMyUnit:GetDamageFixValueToCity(pCity)
+            if UnitFixDamageValue ~= 0 then
+                controlTable = g_MyCombatDataIM:GetInstance();
+                controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_FIXVALUE_SP");
+                controlTable.Value:SetText(": [COLOR_CYAN]".. UnitFixDamageValue .. "[ENDCOLOR]");
+            end
+
 			local UnitChangeDamageValue = pMyUnit:GetChangeDamageValue()
             if UnitChangeDamageValue ~= 0 and pMyUnit:GetDomainType() ~= DomainTypes.DOMAIN_AIR then
                 controlTable = g_MyCombatDataIM:GetInstance();
-                controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_CHANGE_DAMAGEVALUE_SUPPORT_SP", UnitChangeDamageValue);
-                controlTable.Value:SetText("");
+				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_CHANGE_DAMAGEVALUE_SUPPORT_SP");
+				controlTable.Value:SetText(": [COLOR_CYAN]".. ChangeDamageValue .. "[ENDCOLOR]");
             end
 
 			-- Attack Modifier
@@ -1124,11 +1131,18 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			-------------------------
 			-- force damage --
 			-------------------------
+			local UnitFixDamageValue = pMyUnit:GetDamageFixValueToUnit(pTheirUnit)
+            if UnitFixDamageValue ~= 0 then
+                controlTable = g_MyCombatDataIM:GetInstance();
+                controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_FIXVALUE_SP");
+                controlTable.Value:SetText(": [COLOR_CYAN]".. UnitFixDamageValue .. "[ENDCOLOR]");
+            end
+
 			if(pMyUnit:GetChangeDamageValue() < 0 and pMyUnit:GetDomainType() ~= DomainTypes.DOMAIN_AIR) then
 			    local ChangeDamageValue=pMyUnit:GetChangeDamageValue()
 				controlTable = g_MyCombatDataIM:GetInstance();
-				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_CHANGE_DAMAGEVALUE_SUPPORT_SP",ChangeDamageValue);
-				controlTable.Value:SetText("");
+				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_CHANGE_DAMAGEVALUE_SUPPORT_SP");
+				controlTable.Value:SetText(": [COLOR_CYAN]".. ChangeDamageValue .. "[ENDCOLOR]");
 			end
 			-------------------------
 			-- Ranged Support Fire --
@@ -1827,11 +1841,18 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			-------------------------
 			-- force damage --
 			-------------------------
+			local UnitFixDamageValue = pTheirUnit:GetDamageFixValueToUnit(pMyUnit, false)
+			if UnitFixDamageValue ~= 0 then
+				controlTable = g_TheirCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_FIXVALUE_SP");
+                controlTable.Value:SetText(UnitFixDamageValue .." :[COLOR_CYAN]"..  "[ENDCOLOR]");
+			end
+
 			if(pTheirUnit:GetChangeDamageValue() < 0 and pTheirUnit:GetDomainType() ~= DomainTypes.DOMAIN_AIR) then
 			    local ChangeDamageValue=pTheirUnit:GetChangeDamageValue()
 				controlTable = g_TheirCombatDataIM:GetInstance();
-				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_CHANGE_DAMAGEVALUE_SUPPORT_SP",ChangeDamageValue);
-				controlTable.Value:SetText("");
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_CHANGE_DAMAGEVALUE_SUPPORT_SP");
+				controlTable.Value:SetText(ChangeDamageValue .. " :[COLOR_CYAN]".. "[ENDCOLOR]");
 			end
 			-------------------------
 			-- Ranged Support Fire --
@@ -2474,8 +2495,8 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
     if theirUnit:GetChangeDamageValue() < 0 and theirUnit:GetDomainType() ~= DomainTypes.DOMAIN_AIR then
         local ChangeDamageValue = theirUnit:GetChangeDamageValue()
         controlTable = g_TheirCombatDataIM:GetInstance();
-        controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_CHANGE_DAMAGEVALUE_SUPPORT_SP", ChangeDamageValue);
-        controlTable.Value:SetText("");
+		controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_CHANGE_DAMAGEVALUE_SUPPORT_SP");
+		controlTable.Value:SetText(ChangeDamageValue .. " :[COLOR_CYAN]" .. "[ENDCOLOR]");
     end
 
 	-- Show some bonuses
