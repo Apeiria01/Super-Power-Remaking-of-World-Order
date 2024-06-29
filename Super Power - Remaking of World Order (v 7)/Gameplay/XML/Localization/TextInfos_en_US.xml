@@ -8380,7 +8380,7 @@
 		<Replace Tag="TXT_KEY_POLICY_NEW_ORDER_HELP" >
 			<Text>
 			[COLOR_POSITIVE_TEXT]Authoritarianism[ENDCOLOR]
-			[NEWLINE]+4 fixed damage for regular army Unit from each occupied Major's original Capital when attacking Land Unit or City  (Half effect when attacking Sea Unit and Air Unit, half damage from Minor's Capital).
+			[NEWLINE]+4 fixed damage for regular army Unit from each occupied Major's original Capital when attacking Land Unit (Half effect when attacking City, Sea Unit and Air Unit, half damage from Minor's Capital).
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_NEW_ORDER_TEXT" >
@@ -15622,7 +15622,7 @@
 			<Text>Authoritarianism</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_NEW_ORDER_HELP">
-			<Text>+4 fixed damage from each occupied Major's original Capital when attacking Land Unit or City  (Half effect when attacking Sea Unit and Air Unit, half damage from Minor's Capital).</Text>
+			<Text>+4 fixed damage from each occupied Major's original Capital when attacking Land Unit (Half effect when attacking City, Sea Unit and Air Unit, half damage from Minor's Capital).</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_EMP_ATTACK">
@@ -17430,7 +17430,10 @@
 			<Text>[COLOR_CYAN]Cannot be Captured [ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_EUPANEL_CHANGE_DAMAGEVALUE_SUPPORT_SP">
-			<Text>[COLOR_CYAN]Change Final Damage {1_Num}[ENDCOLOR]</Text>
+			<Text>[COLOR_CYAN]Change Final Damage[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_FIXVALUE_SP">
+			<Text>[COLOR_CYAN]Extra Fix Damage[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_EUPANEL_RANGED_SUPPORT_SP">
 			<Text>[COLOR_CYAN]Additional Range Attack[ENDCOLOR]</Text>
