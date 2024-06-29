@@ -69,7 +69,7 @@ function OnCityRename( cityID )
 		local popupInfo = {
 				Type = ButtonPopupTypes.BUTTONPOPUP_RENAME_CITY,
 				Data1 = cityID,
-				Data2 = -1,
+				Data2 = true,
 				Priority = PopupPriority.Current
 			}
 		Events.SerialEventGameMessagePopup(popupInfo);
