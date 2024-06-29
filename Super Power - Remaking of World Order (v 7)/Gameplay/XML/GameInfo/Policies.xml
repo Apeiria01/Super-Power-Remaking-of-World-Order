@@ -166,8 +166,7 @@
 			<Where Type="POLICY_HONOR"/>
 		</Update>
 		<Update>
-			<Set HappinessPerGarrisonedUnit="0" CulturePerGarrisonedUnit="0" PortraitIndex="19" GridX="3" GridY="2" 
-			IncludesOneShotFreeUnits="true" GreatGeneralRateModifier="50" />
+			<Set HappinessPerGarrisonedUnit="0" CulturePerGarrisonedUnit="0" PortraitIndex="19" GridX="3" GridY="2"/>
 			<Where Type="POLICY_MILITARY_CASTE"/>
 		</Update>
 		<Update>
@@ -179,7 +178,7 @@
 			<Where Type="POLICY_MILITARY_TRADITION"/>
 		</Update>
 		<Update>
-			<Set GridX="1" GridY="2" PortraitIndex="22" UnitUpgradeCostMod="0" FreeExperience="15"/>
+			<Set GridX="1" GridY="2" PortraitIndex="22" UnitUpgradeCostMod="0" FreeExperience="15" IncludesOneShotFreeUnits="true" GreatGeneralRateModifier="50"/>
 			<Where Type="POLICY_PROFESSIONAL_ARMY"/>
 		</Update>
 		<Update>

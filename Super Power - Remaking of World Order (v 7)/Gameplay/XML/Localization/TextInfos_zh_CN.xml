@@ -6776,8 +6776,6 @@
 		<Replace Tag="TXT_KEY_POLICY_MILITARY_CASTE_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]军事操练[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]在[ICON_CAPITAL]首都附近出现一位[ICON_GREAT_GENERAL]陆军统帅。
-				[NEWLINE][ICON_BULLET]获得[ICON_GREAT_GENERAL]陆军统帅的速度+50%。
 				[NEWLINE][ICON_BULLET]陆军远程单位(投射单位、攻城武器、游猎单位)远程攻击以及遭到远程攻击时+15%战斗力。
 				[NEWLINE][ICON_BULLET]投射单位与游猎单位攻击造成伤害固定+5。
 				[NEWLINE][ICON_BULLET]攻城单位和空军单位对城市额外造成相当于10%城市最大生命值的伤害。
@@ -6814,6 +6812,8 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]职业军队[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]新单位+15点经验。
+				[NEWLINE][ICON_BULLET]在[ICON_CAPITAL]首都附近出现一位[ICON_GREAT_GENERAL]陆军统帅。
+				[NEWLINE][ICON_BULLET]获得[ICON_GREAT_GENERAL]陆军统帅的速度+50%。
 			</Text>
 		</Replace>
 

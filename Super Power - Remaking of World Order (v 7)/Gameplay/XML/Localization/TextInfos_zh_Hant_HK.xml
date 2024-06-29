@@ -6672,8 +6672,6 @@
 		<Replace Tag="TXT_KEY_POLICY_MILITARY_CASTE_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]軍事操練[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]在[ICON_CAPITAL]首都附近出現一位[ICON_GREAT_GENERAL]陸軍統帥。
-				[NEWLINE][ICON_BULLET]獲得[ICON_GREAT_GENERAL]陸軍統帥的速度+50%。
 				[NEWLINE][ICON_BULLET]陸軍遠程單位（投射單位、攻城武器、遊獵單位）遠程攻擊以及遭到遠程攻擊時+15%戰鬥力。
 				[NEWLINE][ICON_BULLET]投射單位與遊獵單位對攻擊造成傷害固定+5。
 				[NEWLINE][ICON_BULLET]攻城單位和空軍單位對城市額外造成相當於10%城市最大生命值的傷害。
@@ -6709,6 +6707,8 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]職業軍隊[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]新單位+15點經驗。
+				[NEWLINE][ICON_BULLET]在[ICON_CAPITAL]首都附近出現一位[ICON_GREAT_GENERAL]陸軍統帥。
+				[NEWLINE][ICON_BULLET]獲得[ICON_GREAT_GENERAL]陸軍統帥的速度+50%。
 			</Text>
 		</Replace>
 
