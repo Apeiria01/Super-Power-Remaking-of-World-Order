@@ -6696,7 +6696,7 @@
 
 		<Replace Tag="TXT_KEY_POLICY_MILITARY_TRADITION_HELP">
 			<Text>
-				[COLOR_POSITIVE_TEXT]軍事傳統[ENDCOLOR][NEWLINE]軍事單位通過戰鬥獲得經驗+50%。
+				[COLOR_POSITIVE_TEXT]軍事傳統[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]升級單位所需的[ICON_GOLD]金錢減少60%。
 				[NEWLINE][ICON_BULLET]軍營，軍械所，城墻，城堡,馬廄和軍事學院+1[ICON_HAPPINESS_1]快樂.
 			</Text>
@@ -7368,7 +7368,7 @@
 		<Replace Tag="TXT_KEY_POLICY_ELITE_FORCES_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]精英部隊[ENDCOLOR]
-				[NEWLINE]所有新單位獲得15點經驗值。
+				[NEWLINE]所有新單位獲得15點經驗值，軍事單位通過戰鬥獲得經驗+50%。
 			</Text>
 		</Replace>
 
