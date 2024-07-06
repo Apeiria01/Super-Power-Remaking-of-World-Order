@@ -2932,7 +2932,7 @@ if Game then
 		-- Food eaten by pop
 		if yieldID == YieldTypes.YIELD_FOOD then
 			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_FOOD_FROM_TRADE_ROUTES", city:GetYieldRate( yieldID, false ) - city:GetYieldRate( yieldID, true ) )
-			strModifiersString = "[NEWLINE][ICON_BULLET]" .. L( "TXT_KEY_YIELD_EATEN_BY_POP", city:FoodConsumption( true, 0 ), yieldIconString ) .. strModifiersString
+			strModifiersString = "[NEWLINE][ICON_BULLET]" .. L( "TXT_KEY_YIELD_EATEN_BY_POP_PULS", city:FoodConsumption( true, 0 ), yieldIconString, city:GetFoodConsumptionPerPopTimes100() / 100) .. strModifiersString
 		end
 
 		-- Modifiers
