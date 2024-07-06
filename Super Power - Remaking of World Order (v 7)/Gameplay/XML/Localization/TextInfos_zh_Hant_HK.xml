@@ -16089,5 +16089,9 @@
 		<Replace Tag="TXT_KEY_EO_SORT_CITYLEVEL" >
 			<Text>按城市等級排序</Text>
 		</Replace>
+
+		<Row Tag="TXT_KEY_YIELD_EATEN_BY_POP_PULS">
+			<Text>-{1_Num}{2_IconString} 市民消耗（{3_Num}/[ICON_CITIZEN]）</Text>
+		</Row>
 	</Language_zh_Hant_HK>
 </GameData>

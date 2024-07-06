@@ -17980,5 +17980,9 @@
 		<Replace Tag="TXT_KEY_EO_SORT_CITYLEVEL" >
 			<Text>Sort By City Level</Text>
 		</Replace>
+
+		<Row Tag="TXT_KEY_YIELD_EATEN_BY_POP_PULS">
+			<Text>-{1_Num} {2_IconString} eaten by Citizens ({3_Num} per [ICON_CITIZEN])</Text>
+		</Row>
 	</Language_en_US>
 </GameData>
