@@ -2467,12 +2467,12 @@
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>1</Yield>
 		</Row>
-		<!--<Row>
+		<Row>
 			<BuildingType>BUILDING_FOOD_MARKET</BuildingType>
 			<ResourceType>RESOURCE_FISH</ResourceType>
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>1</Yield>
-		</Row>-->
+		</Row>
 		<Row>
 			<BuildingType>BUILDING_FOOD_MARKET</BuildingType>
 			<ResourceType>RESOURCE_INCENSE</ResourceType>
@@ -2530,12 +2530,12 @@
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>1</Yield>
 		</Row>
-		<!--<Row>
+		<Row>
 			<BuildingType>BUILDING_PORTUGAL_AVENIDA</BuildingType>
 			<ResourceType>RESOURCE_FISH</ResourceType>
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>1</Yield>
-		</Row>-->
+		</Row>
 		<Row>
 			<BuildingType>BUILDING_PORTUGAL_AVENIDA</BuildingType>
 			<ResourceType>RESOURCE_INCENSE</ResourceType>

@@ -743,7 +743,6 @@ function ImproveTiles(bIsHuman)
 					plot:SetImprovementType(GameInfo.Improvements.IMPROVEMENT_TRADING_POST.ID);
 				end
 			elseif plot:CanHaveImprovement(GameInfo.Improvements.IMPROVEMENT_FISHERY_MOD.ID, player:GetTeam()) and Teams[player:GetTeam()]:IsHasTech(GameInfoTypes[GameInfo.Builds["BUILD_FISHERY_MOD"].PrereqTech]) then
-				plot:SetResourceType(GameInfoTypes.RESOURCE_FISH, 1)
 				plot:SetImprovementType(GameInfo.Improvements.IMPROVEMENT_FISHFARM_MOD.ID)
 			elseif plot:CanHaveImprovement(GameInfo.Improvements.IMPROVEMENT_GAS_RIG_MOD.ID, player:GetTeam()) and Teams[player:GetTeam()]:IsHasTech(GameInfoTypes[GameInfo.Builds["BUILD_GAS_RIG_MOD"].PrereqTech]) then
 				plot:SetImprovementType(GameInfo.Improvements.IMPROVEMENT_OFFSHORE_PLATFORM.ID)

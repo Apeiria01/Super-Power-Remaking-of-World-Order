@@ -31,9 +31,6 @@ function ImprovementBuilt(iPlayer, x, y, eImprovement)
 			and not PlotIsVisibleToHuman(pPlot) 
 			and player:GetUnitCountFromHasPromotion(iCitadelPromotion) < (player:GetNumCities() * 2 + player:GetTotalPopulation() / 20)
 			then
-				if pPlot:GetResourceType(-1) == GameInfoTypes.RESOURCE_FISH then
-					pPlot:SetResourceType(-1);
-				end
 				SetCitadelUnits(iPlayer, x, y)
 				print ("This is a good location for building a Coastal Fort! AI built a Coastal Fort!")
 			end
@@ -45,15 +42,6 @@ function ImprovementBuilt(iPlayer, x, y, eImprovement)
 	or eImprovement == GameInfo.Improvements["IMPROVEMENT_COASTAL_FORT"].ID
 	then		
 		SetCitadelUnits(iPlayer, x, y)
-		if pPlot:GetResourceType(-1) == GameInfoTypes.RESOURCE_FISH then
-			pPlot:SetResourceType(-1);
-			print ("Fish removed!");
-		end
-	elseif eImprovement == GameInfo.Improvements["IMPROVEMENT_PONTOON_BRIDGE_MOD"].ID then
-		if pPlot:GetResourceType(-1) == GameInfoTypes.RESOURCE_FISH then
-			pPlot:SetResourceType(-1);
-			print ("Fish removed!");
-		end	
 	elseif eImprovement == GameInfo.Improvements["IMPROVEMENT_TUNNEL"].ID then
 		pPlot:SetRouteType(GameInfoTypes.ROUTE_RAILROAD);
 	end

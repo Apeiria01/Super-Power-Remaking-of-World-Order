@@ -343,6 +343,11 @@
 	<Improvement_Yields>
 		<Delete ImprovementType="IMPROVEMENT_FISHING_BOATS"/>
 		<Delete ImprovementType="IMPROVEMENT_POLDER"/>
+		<Row>
+			<ImprovementType>IMPROVEMENT_FISHFARM_MOD</ImprovementType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
 
 		<Row>
 			<ImprovementType>IMPROVEMENT_FISHERY_MOD</ImprovementType>

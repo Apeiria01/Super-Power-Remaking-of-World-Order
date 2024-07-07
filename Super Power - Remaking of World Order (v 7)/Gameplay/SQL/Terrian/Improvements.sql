@@ -53,7 +53,7 @@ VALUES	('UNIT_WORKER',		'BUILD_SHOSHONE_WILDDOME');
 -- Improvements_Create_Collection
 --==========================================================================================================================	
 INSERT INTO Improvements_Create_Collection(ImprovementType,TerrainType,TerrainOnly,FeatureType,FeatureOnly,ResourceType)
-SELECT 'IMPROVEMENT_FISHERY_MOD',NULL,0,NULL,0,'RESOURCE_FISH' UNION ALL
+SELECT 'IMPROVEMENT_FISHERY_MOD',NULL,0,NULL,0, NULL UNION ALL
 SELECT 'IMPROVEMENT_GAS_RIG_MOD',NULL,0,NULL,0, NULL UNION ALL
 
 SELECT 'IMPROVEMENT_ETHIOPIA_COFFEE','TERRAIN_GRASS',1,NULL,0,'RESOURCE_COFFEE' UNION ALL
