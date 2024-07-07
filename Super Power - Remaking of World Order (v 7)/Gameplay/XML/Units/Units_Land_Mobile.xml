@@ -878,7 +878,7 @@
 		<Row>
 			<Class>UNITCLASS_CHARIOT_ARCHER</Class>
 			<Type>UNIT_BARBARIAN_AXMAN</Type>
-			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
+			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<BaseSightRange>2</BaseSightRange>
 			<Combat>15</Combat>
 			<RangedCombat>15</RangedCombat>

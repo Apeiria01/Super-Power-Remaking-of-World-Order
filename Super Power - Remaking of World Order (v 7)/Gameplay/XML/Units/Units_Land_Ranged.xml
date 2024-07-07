@@ -81,7 +81,6 @@
 		<Row>
 			<Class>UNITCLASS_ARCHER</Class>
 			<Type>UNIT_BARBARIAN_ARCHER</Type>
-			<PrereqTech>TECH_HUNTING</PrereqTech>
 			<BaseSightRange>1</BaseSightRange>
 			<Combat>6</Combat>
 			<RangedCombat>10</RangedCombat>
