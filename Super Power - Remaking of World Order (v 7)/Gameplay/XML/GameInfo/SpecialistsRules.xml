@@ -124,9 +124,9 @@
 		<Row>
 			<Type>BUILDING_SPECIALISTS_SCIENTIFIC_LV1</Type>
 			<BuildingClass>BUILDINGCLASS_SPECIALISTS_SCIENTIFIC_LV1</BuildingClass>
-			<Cost>30</Cost>
+			<Cost>20</Cost>
 			<GoldMaintenance>2</GoldMaintenance>
-			<NumCityCostMod>30</NumCityCostMod>
+			<NumCityCostMod>20</NumCityCostMod>
 			<Help>TXT_KEY_BUILDING_SPECIALISTS_SCIENTIFIC_LV1_HELP</Help>
 			<Description>TXT_KEY_BUILDING_SPECIALISTS_SCIENTIFIC_LV1</Description>
 			<Strategy>TXT_KEY_SP_SPECIALISTS_UPGRADE_STRATEGY</Strategy>

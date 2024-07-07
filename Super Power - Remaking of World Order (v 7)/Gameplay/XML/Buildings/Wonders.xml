@@ -491,7 +491,7 @@
 		<Row>
 			<Type>BUILDING_NATIONAL_COLLEGE</Type>
 			<BuildingClass>BUILDINGCLASS_NATIONAL_COLLEGE</BuildingClass>
-			<Cost>125</Cost>
+			<Cost>75</Cost>
 			<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
 			<Help>TXT_KEY_BUILDING_NATIONAL_COLLEGE_HELP</Help>
 			<ThemingBonusHelp>TXT_KEY_NATIONAL_COLLEGE_THEMING_BONUS_HELP</ThemingBonusHelp>
