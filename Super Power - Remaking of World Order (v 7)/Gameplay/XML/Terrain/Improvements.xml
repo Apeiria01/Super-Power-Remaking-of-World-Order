@@ -408,10 +408,16 @@
 			<YieldType>YIELD_TOURISM</YieldType>
 			<Yield>1</Yield>
 		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_OFFSHORE_PLATFORM</ImprovementType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>4</Yield>
+		</Row>
 	</Improvement_Yields>
 	
 	
 	<Improvement_ResourceType_Yields>
+		<Delete ImprovementType="IMPROVEMENT_OFFSHORE_PLATFORM" ResourceType="RESOURCE_OIL"/>
 		<Row>
 			<ImprovementType>IMPROVEMENT_FISHING_BOATS</ImprovementType>
 			<ResourceType>RESOURCE_WHALE</ResourceType>
@@ -435,12 +441,6 @@
 			<ResourceType>RESOURCE_CORAL</ResourceType>
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>2</Yield>
-		</Row>
-		<Row>
-			<ImprovementType>IMPROVEMENT_OFFSHORE_PLATFORM</ImprovementType>
-			<ResourceType>RESOURCE_NATRUALGAS</ResourceType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>4</Yield>
 		</Row>
 	</Improvement_ResourceType_Yields>
 

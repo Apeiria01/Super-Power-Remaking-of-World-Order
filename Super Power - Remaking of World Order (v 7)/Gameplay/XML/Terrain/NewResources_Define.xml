@@ -85,19 +85,6 @@
 		</Row>
 
 		<!--*****************Naval Improvement Resources *****************-->
-
-		<Row>
-			<Type>RESOURCE_NATRUALGAS</Type>
-			<Description>TXT_KEY_SP_RESOURCE_NATRUALGAS</Description>
-			<ResourceClassType>RESOURCECLASS_BONUS</ResourceClassType>
-			<Civilopedia>TXT_KEY_SP_RESOURCE_NATRUALGAS_TEXT</Civilopedia>
-			<Help>TXT_KEY_SP_RESOURCE_NATRUALGAS_HELP</Help>
-			<ArtDefineTag>ART_DEF_RESOURCE_OIL_WATER</ArtDefineTag>
-			<IconString>[ICON_RES_NATRUALGAS]</IconString>
-			<PortraitIndex>27</PortraitIndex>
-			<IconAtlas>SPBalance_ATLAS</IconAtlas>
-		</Row>
-		
 		<!--<Row>
 			<Type>RESOURCE_FISHFARM</Type>
 			<Description>TXT_KEY_SP_RESOURCE_FISHFARM</Description>
@@ -698,12 +685,6 @@
 			<ImprovementType>IMPROVEMENT_MINE</ImprovementType>
 			<ResourceType>RESOURCE_LAPIS</ResourceType>
 		</Row>
-
-		<Row>
-			<ImprovementType>IMPROVEMENT_OFFSHORE_PLATFORM</ImprovementType>
-			<ResourceType>RESOURCE_NATRUALGAS</ResourceType>
-		</Row>
-		
 	</Improvement_ResourceTypes>
 
 	<Improvement_ResourceType_Yields>
@@ -741,14 +722,6 @@
 			<ImprovementType>IMPROVEMENT_PLANTATION</ImprovementType>
 			<ResourceType>RESOURCE_TOBACCO</ResourceType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>1</Yield>
-		</Row>-->
-
-
-		<!--<Row>
-			<ImprovementType>IMPROVEMENT_OFFSHORE_PLATFORM</ImprovementType>
-			<ResourceType>RESOURCE_NATRUALGAS</ResourceType>
-			<YieldType>YIELD_SCIENCE</YieldType>
 			<Yield>1</Yield>
 		</Row>-->
 	</Improvement_ResourceType_Yields>

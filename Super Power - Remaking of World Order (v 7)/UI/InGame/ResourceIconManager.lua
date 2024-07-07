@@ -81,14 +81,6 @@ function OnResourceAdded( hexPosX, hexPosY, ImprovementType, ResourceType )
 	if ResourceType ~= -1 then -- UR
 		local gridX, gridY  = ToGridFromHex( hexPosX, hexPosY );
 		local plot = Map.GetPlot( gridX, gridY );
-		-- SP Hide fish and natrual gas icon, there are too many!!!!!! Begin-------- 
-		if plot:GetImprovementType() ~= -1
-		and (ResourceType == GameInfoTypes.RESOURCE_FISH
-		or   ResourceType == GameInfoTypes.RESOURCE_NATRUALGAS)
-		then
-			return;
-		end	
-		-- SP Hide fish and natrual gas icon, there are too many!!!!!!  END -------- 
 
 		-- Because we will get this message at load time as well as while the game is
 		-- in progress, if this is a hotseat game, add the resource icons for all players
@@ -141,7 +133,7 @@ Events.SerialEventRawResourceIconCreated.Add( OnResourceAdded )
 
 -------------------------------------------------
 -------------------------------------------------
-function OnResourceRemoved( hexPosX, hexPosY, iContinent1, iContinent2, iPlayerID, iCreateImprovementType )
+function OnResourceRemoved( hexPosX, hexPosY )
 	local gridX, gridY  = ToGridFromHex( hexPosX, hexPosY );
 	local plot = Map.GetPlot( gridX, gridY );
 
@@ -151,12 +143,6 @@ function OnResourceRemoved( hexPosX, hexPosY, iContinent1, iContinent2, iPlayerI
 
 	-- Remove the icon
 	local index = IndexFromGrid( gridX, gridY )
-	if iCreateImprovementType and ( g_ActiveSet[ index ] == nil or ( g_ActiveSet[ index ]
-	and (plot:GetResourceType(-1) ~= GameInfoTypes.RESOURCE_FISH 
-	and  plot:GetResourceType(-1) ~= GameInfoTypes.RESOURCE_NATRUALGAS) ) )
-	then
-		return;
-	end
 	DestroyResource(index);
 	
 	-- Remove the resource from the current player
@@ -168,7 +154,6 @@ function OnResourceRemoved( hexPosX, hexPosY, iContinent1, iContinent2, iPlayerI
 	end
 end
 Events.SerialEventRawResourceIconDestroyed.Add( OnResourceRemoved )
-Events.SerialEventImprovementCreated.Add( OnResourceRemoved )
 
 -------------------------------------------------
 -------------------------------------------------

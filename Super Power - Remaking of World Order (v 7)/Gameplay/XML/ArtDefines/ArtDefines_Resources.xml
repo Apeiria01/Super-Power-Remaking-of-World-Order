@@ -7,6 +7,37 @@
 			<Set LayoutHandler="RANDOM"/>
 			<Where LayoutHandler="SPECIAL"/>
 		</Update>
+		<!-- Allows fishing boat and offshore platfrom's model show in no resource plot -->
+		<Row>
+			<Era>Ancient</Era>
+			<State>Any</State>
+			<Scale>0.0700000002980232</Scale>
+			<ImprovementType>ART_DEF_IMPROVEMENT_FISHING_BOATS</ImprovementType>
+			<LayoutHandler>ANIMATED</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_NONE</ResourceType>
+			<Model>Assets/Buildings/Resources/Fish.fxsxml</Model>
+			<TerrainContour>1</TerrainContour>
+		</Row>
+		<Row>
+			<Era>Industrial</Era>
+			<State>Any</State>
+			<Scale>0.0700000002980232</Scale>
+			<ImprovementType>ART_DEF_IMPROVEMENT_FISHING_BOATS</ImprovementType>
+			<LayoutHandler>ANIMATED</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_NONE</ResourceType>
+			<Model>Assets/Buildings/Resources/Fish_Industrial.fxsxml</Model>
+			<TerrainContour>1</TerrainContour>
+		</Row>
+		<Row>
+			<Era>Any</Era>
+			<State>Any</State>
+			<Scale>1.0</Scale>
+			<ImprovementType>ART_DEF_IMPROVEMENT_OFFSHORE_PLATFORM</ImprovementType>
+			<LayoutHandler>SNAPSHOT</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_NONE</ResourceType>
+			<Model>Assets/Buildings/Improvements/Oil_Rig/Water/Oil_Platform.fxsxml</Model>
+			<TerrainContour>1</TerrainContour>
+		</Row>
 		
 		<!-- COFFEE - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<Row>

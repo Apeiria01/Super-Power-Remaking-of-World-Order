@@ -2752,7 +2752,7 @@
 			<BuildingType>BUILDING_OIL_REFINERY</BuildingType>
 			<ResourceType>RESOURCE_OIL</ResourceType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>3</Yield>
+			<Yield>2</Yield>
 		</Row>
 		
 		<Row>
