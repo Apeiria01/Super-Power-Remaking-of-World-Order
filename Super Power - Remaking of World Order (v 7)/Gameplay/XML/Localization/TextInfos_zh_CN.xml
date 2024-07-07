@@ -1321,7 +1321,7 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_JAPANESE_TENSHU_HELP</Tag>
 			<Text>
-				本城市组建军事单位时+15%[ICON_PRODUCTION]产能累积。[NEWLINE][NEWLINE]本城市所有海洋资源和战略资源+1[ICON_PRODUCTION]产能。[NEWLINE][NEWLINE]该建筑不会过期。[NEWLINE][NEWLINE]研发互联网科技后+2[ICON_TOURISM]魅力产出。
+				本城市组建军事单位时+15%[ICON_PRODUCTION]产能累积。[NEWLINE][NEWLINE]本城市所有海上设施和战略资源+1[ICON_PRODUCTION]产能。[NEWLINE][NEWLINE]该建筑不会过期。[NEWLINE][NEWLINE]研发互联网科技后+2[ICON_TOURISM]魅力产出。
 			</Text>
 		</Row>
 

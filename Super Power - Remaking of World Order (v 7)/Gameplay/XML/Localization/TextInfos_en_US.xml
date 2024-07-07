@@ -3794,7 +3794,7 @@
 			<Tag>TXT_KEY_BUILDING_JAPANESE_TENSHU_HELP</Tag>
 			<Text>
 				+15% [ICON_PRODUCTION] Production when building Military Units in this City.
-				[NEWLINE][NEWLINE]+1 [ICON_PRODUCTION] Production for every Sea Resources worked by this City.
+				[NEWLINE][NEWLINE]+1 [ICON_PRODUCTION] Production for every Sea Improvements worked by this City.
 				[NEWLINE][NEWLINE]+1 [ICON_PRODUCTION] Production for every Strategic Resources worked by this City.
 				[NEWLINE][NEWLINE]No terrain requirement.
 				[NEWLINE][NEWLINE]This building will NOT become obsolete.
