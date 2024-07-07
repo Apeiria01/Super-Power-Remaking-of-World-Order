@@ -642,7 +642,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_OIL_REFINERY_HELP</Tag>
-			<Text>提供5單位額外[ICON_RES_OIL]石油資源。[NEWLINE]本城每處有市民工作的[ICON_RES_OIL]石油資源+3[ICON_PRODUCTION]生產力。[NEWLINE]本城附近必須有已開發的石油資源。[NEWLINE][NEWLINE][COLOR_NEGATIVE_TEXT]污染[ENDCOLOR]將會導致[ICON_FOOD]食物累積-5%。[NEWLINE][NEWLINE]需要1單位[ICON_RES_ELECTRICITY]電力。</Text>
+			<Text>提供5單位額外[ICON_RES_OIL]石油資源。[NEWLINE]本城每處有市民工作的[ICON_RES_OIL]石油資源+2[ICON_PRODUCTION]生產力。[NEWLINE]本城附近必須有已開發的石油資源。[NEWLINE][NEWLINE][COLOR_NEGATIVE_TEXT]污染[ENDCOLOR]將會導致[ICON_FOOD]食物累積-5%。[NEWLINE][NEWLINE]需要1單位[ICON_RES_ELECTRICITY]電力。</Text>
 		</Row>
 
 		<Row>
@@ -9017,7 +9017,8 @@
 			<Text>鑽探[LINK=IMPROVEMENT_GAS_RIG_MOD]天然氣[\LINK]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILD_GAS_RIG_MOD_HELP">
-			<Text>在沒有資源的大洋區塊鑽探天然氣。之後可以在區塊上建造[COLOR_POSITIVE_TEXT]海上平臺[ENDCOLOR]來提升[ICON_PRODUCTION]生產力。[NEWLINE][NEWLINE]只能建造在沒有資源產出的大洋區塊。[NEWLINE][NEWLINE]相鄰的格子不能同時建造。
+			<Text>
+				在沒有資源的大洋區塊鉆探天然氣。完成後在地塊上生成一個[COLOR_POSITIVE_TEXT]海上平臺[ENDCOLOR]來提升[ICON_PRODUCTION]產能。[NEWLINE][NEWLINE]只能建造在沒有資源產出的大洋區塊。[NEWLINE][NEWLINE]相鄰的格子不能同時建造。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILD_GAS_RIG_MOD_REC">
@@ -16093,5 +16094,18 @@
 		<Row Tag="TXT_KEY_YIELD_EATEN_BY_POP_PULS">
 			<Text>-{1_Num}{2_IconString} 市民消耗（{3_Num}/[ICON_CITIZEN]）</Text>
 		</Row>
+
+		<Replace Tag="TXT_KEY_IMPROVEMENT_OFFSHORE_PLATFORM">
+			<Text>海上平臺</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CIV5_IMPROVEMENTS_OFFSHOREPLATFORM_TEXT">
+			<Text>海上平臺是遊戲後期壹種重要的區域設施，因為它能大幅提高你的海濱城市的[ICON_PRODUCTION]產能。當你將其建立在石油資源上時，它能為妳開發這種高價值資源，但註意僅當其在大洋中時才能在其上建造海上平臺（工人可以在陸地上建造油井來提供石油）。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILD_OFFSHORE_PLATFORM">
+			<Text>建造[LINK=IMPROVEMENT_OFFSHORE_PLATFORM]海上平臺[\LINK]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CIV5_IMPROVEMENTS_WELL_TEXT">
+			<Text>海上平臺的陸地版－油井是遊戲進程後期的改良設施，通過它您可以獲得至關重要的石油資源。</Text>
+		</Replace>
 	</Language_zh_Hant_HK>
 </GameData>

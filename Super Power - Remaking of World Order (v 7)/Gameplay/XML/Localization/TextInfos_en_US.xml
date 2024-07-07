@@ -3027,7 +3027,7 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_OIL_REFINERY_HELP</Tag>
 			<Text>+5 additional [ICON_RES_OIL] Oil. 
-			[NEWLINE][NEWLINE]+3 [ICON_PRODUCTION] Production for every [ICON_RES_OIL] Oil resource worked by this city. 
+			[NEWLINE][NEWLINE]+2 [ICON_PRODUCTION] Production for every [ICON_RES_OIL] Oil resource worked by this city. 
 			[NEWLINE][NEWLINE]City must have an improved [ICON_RES_OIL] Oil resources nearby.
 			[NEWLINE][NEWLINE][COLOR_NEGATIVE_TEXT]Pollution[ENDCOLOR] will cause -5% [ICON_FOOD] Food Growth.
 			[NEWLINE][NEWLINE]Requires 1 [ICON_RES_ELECTRICITY] Electricity.</Text>
@@ -9964,7 +9964,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILD_GAS_RIG_MOD_HELP">
 			<Text>
-				Drill out a natural  gas resource on ocean tiles without resources. Then the worker will automatically build an [COLOR_POSITIVE_TEXT]Offshore Platform[ENDCOLOR] to improve it and increase the city's [ICON_PRODUCTION]Production output.
+				Drill out a natural gas resource on ocean tiles without resources. Then the worker will automatically build an [COLOR_POSITIVE_TEXT]Offshore Platform[ENDCOLOR] to improve it and increase the city's [ICON_PRODUCTION]Production output.
 				[NEWLINE][NEWLINE]Must be built on Ocean Tiles without resources.
 				[NEWLINE][NEWLINE]May not be constructed adjacent to another tile is currently under natural gas drilling.
 			</Text>
@@ -17984,5 +17984,9 @@
 		<Row Tag="TXT_KEY_YIELD_EATEN_BY_POP_PULS">
 			<Text>-{1_Num} {2_IconString} eaten by Citizens ({3_Num} per [ICON_CITIZEN])</Text>
 		</Row>
+
+		<Replace Tag="TXT_KEY_CIV5_IMPROVEMENTS_OFFSHOREPLATFORM_TEXT">
+			<Text>The offshore platform is an important late-game improvement as it can provide additional [ICON_PRODUCTION] Production output of the Ocean plot. It can also provides access to the highly-prized oil resource when you built it on the oil, but only when that resource is in the ocean (workers construct wells to access oil that is on land). </Text>
+		</Replace>
 	</Language_en_US>
 </GameData>

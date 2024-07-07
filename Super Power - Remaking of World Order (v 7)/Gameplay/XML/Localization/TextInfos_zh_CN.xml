@@ -663,7 +663,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_OIL_REFINERY_HELP</Tag>
-			<Text>提供5单位额外[ICON_RES_OIL]石油资源。[NEWLINE]本城每处有市民工作的[ICON_RES_OIL]石油资源+3[ICON_PRODUCTION]产能。[NEWLINE]本城附近必须有已开发的石油资源。[NEWLINE][NEWLINE][COLOR_NEGATIVE_TEXT]污染[ENDCOLOR]将会导致[ICON_FOOD]食物累积-5%。[NEWLINE][NEWLINE]需要1单位[ICON_RES_ELECTRICITY]电力。</Text>
+			<Text>提供5单位额外[ICON_RES_OIL]石油资源。[NEWLINE]本城每处有市民工作的[ICON_RES_OIL]石油资源+2[ICON_PRODUCTION]产能。[NEWLINE]本城附近必须有已开发的石油资源。[NEWLINE][NEWLINE][COLOR_NEGATIVE_TEXT]污染[ENDCOLOR]将会导致[ICON_FOOD]食物累积-5%。[NEWLINE][NEWLINE]需要1单位[ICON_RES_ELECTRICITY]电力。</Text>
 		</Row>
 
 		<Row>
@@ -9124,7 +9124,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILD_GAS_RIG_MOD_HELP">
 			<Text>
-				在没有资源的大洋区块钻探天然气。之后可以在区块上建造[COLOR_POSITIVE_TEXT]海上平台[ENDCOLOR]来提升[ICON_PRODUCTION]产能。[NEWLINE][NEWLINE]只能建造在没有资源产出的大洋区块。[NEWLINE][NEWLINE]相邻的格子不能同时建造。
+				在没有资源的大洋区块钻探天然气。完成后在地块上生成一个[COLOR_POSITIVE_TEXT]海上平台[ENDCOLOR]来提升[ICON_PRODUCTION]产能。[NEWLINE][NEWLINE]只能建造在没有资源产出的大洋区块。[NEWLINE][NEWLINE]相邻的格子不能同时建造。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILD_GAS_RIG_MOD_REC">
@@ -16293,5 +16293,9 @@
 		<Row Tag="TXT_KEY_YIELD_EATEN_BY_POP_PULS">
 			<Text>-{1_Num}{2_IconString} 市民消耗（{3_Num}/[ICON_CITIZEN]）</Text>
 		</Row>
+
+		<Replace Tag="TXT_KEY_CIV5_IMPROVEMENTS_OFFSHOREPLATFORM_TEXT">
+			<Text>海上平台是游戏后期一种重要的区域设施，因为它能大幅提高你的海滨城市的[ICON_PRODUCTION]产能。当你将其建立在石油资源上时，它能为你开发这种高价值资源，但注意仅当其在大洋中时才能在其上建造海上平台（工人可以在陆地上建造油井来提供石油）。</Text>
+		</Replace>
 	</Language_zh_CN>
 </GameData>

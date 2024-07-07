@@ -746,7 +746,6 @@ function ImproveTiles(bIsHuman)
 				plot:SetResourceType(GameInfoTypes.RESOURCE_FISH, 1)
 				plot:SetImprovementType(GameInfo.Improvements.IMPROVEMENT_FISHFARM_MOD.ID)
 			elseif plot:CanHaveImprovement(GameInfo.Improvements.IMPROVEMENT_GAS_RIG_MOD.ID, player:GetTeam()) and Teams[player:GetTeam()]:IsHasTech(GameInfoTypes[GameInfo.Builds["BUILD_GAS_RIG_MOD"].PrereqTech]) then
-				plot:SetResourceType(GameInfoTypes.RESOURCE_NATRUALGAS, 1)
 				plot:SetImprovementType(GameInfo.Improvements.IMPROVEMENT_OFFSHORE_PLATFORM.ID)
 			end
 			if plot:IsImprovementPillaged() then
