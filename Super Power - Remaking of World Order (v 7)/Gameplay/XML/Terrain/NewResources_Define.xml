@@ -86,16 +86,6 @@
 
 		<!--*****************Naval Improvement Resources *****************-->
 		<!--<Row>
-			<Type>RESOURCE_FISHFARM</Type>
-			<Description>TXT_KEY_SP_RESOURCE_FISHFARM</Description>
-			<ResourceClassType>RESOURCECLASS_BONUS</ResourceClassType>
-			<ArtDefineTag>ART_DEF_RESOURCE_FISH</ArtDefineTag>	
-			<IconString>[ICON_RES_FISH]</IconString>
-			<PortraitIndex>24</PortraitIndex>
-			<IconAtlas>SPBalance_ATLAS</IconAtlas>
-		</Row>
-		
-		<Row>
 			<Type>RESOURCE_SAND_DREDGE</Type>
 			<Description>TXT_KEY_SP_RESOURCE_SAND_DREDGE</Description>
 			<ResourceClassType>RESOURCECLASS_BONUS</ResourceClassType>

@@ -2657,7 +2657,7 @@
 				[ICON_BULLET]+5%[ICON_FOOD] Food Output for the city. 
 				[NEWLINE][ICON_BULLET]+1 [ICON_FOOD] Food from each Fishing Net and Workboats worked by this City.
 				[NEWLINE][ICON_BULLET]Allows for movement of [ICON_FOOD]Food via trade routes.[NEWLINE][NEWLINE]City must be built on the coast.
-				[NEWLINE][ICON_BULLET]City must built on the coast and have at least an improvement of one of [ICON_RES_FISH] Fish or marine Luxury Resource.
+				[NEWLINE][ICON_BULLET]City must built on the coast.
 				[NEWLINE][ICON_BULLET]Upon discovering Fertilizer, this kind of building becomes [COLOR_NEGATIVE_TEXT]obsolete[ENDCOLOR] (it is no longer allowed to build and its bonuses are lost). 
 				[NEWLINE][ICON_BULLET]+1 [ICON_TOURISM] Tourism after discovering Mass Media.
 			</Text>
@@ -2761,10 +2761,13 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_GRAIN_DEPOT_HELP</Tag>
-			<Text>+10% [ICON_FOOD] Food output for the city.
-			[NEWLINE][NEWLINE]+1 [ICON_FOOD] Food from Coast and Ocean Tiles.
-			+1 [ICON_FOOD] Food from each source of [ICON_RES_WHEAT] Wheat, [ICON_RES_BANANA] Banana, [ICON_RES_DEER] Deer and [ICON_RES_BISON] Bison, [ICON_RES_FISH] Fish and [ICON_RES_CRAB] Crab worked by this City.
-			[NEWLINE][NEWLINE]Allows [ICON_FOOD] Food to be moved from this city along trade routes inside your civilization.</Text>
+			<Text>
+				[ICON_BULLET]+10% [ICON_FOOD] Food output for the city.
+				[NEWLINE][ICON_BULLET]+1 [ICON_FOOD] Food from Coast and Ocean Tiles.
+				[NEWLINE][ICON_BULLET]+1 [ICON_FOOD] Food from each source of [ICON_RES_WHEAT] Wheat, [ICON_RES_BANANA] Banana, [ICON_RES_DEER] Deer and [ICON_RES_BISON] Bison and [ICON_RES_CRAB] Crab worked by this City.
+				[NEWLINE][ICON_BULLET]+1 [ICON_FOOD] Food from each Fishing Net.
+				[NEWLINE][ICON_BULLET]Allows [ICON_FOOD] Food to be moved from this city along trade routes inside your civilization.
+			</Text>
 		</Row>
 
 		<Row>
@@ -2780,9 +2783,10 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_MOROCCO_IRRIGATION_HELP</Tag>
 			<Text>
-				+10% [ICON_FOOD] Food output for the city.
-				[NEWLINE][NEWLINE]+2 [ICON_FOOD] Food from [COLOR_POSITIVE_TEXT]Desert[ENDCOLOR], Coast and Ocean Tiles.
-				+2 [ICON_FOOD] Food from each source of [ICON_RES_WHEAT] Wheat, [ICON_RES_BANANA] Banana, [ICON_RES_DEER] Deer and [ICON_RES_BISON] Bison, [ICON_RES_FISH] Fish and [ICON_RES_CRAB] Crab worked by this City.
+				[ICON_BULLET]+10% [ICON_FOOD] Food output for the city.
+				[NEWLINE][ICON_BULLET]+2 [ICON_FOOD] Food from [COLOR_POSITIVE_TEXT]Desert[ENDCOLOR], +1 [ICON_FOOD] Food from Coast and Ocean Tiles.
+				[NEWLINE][ICON_BULLET]+2 [ICON_FOOD] Food from each source of [ICON_RES_WHEAT] Wheat, [ICON_RES_BANANA] Banana, [ICON_RES_DEER] Deer and [ICON_RES_BISON] Bison and [ICON_RES_CRAB] Crab worked by this City.
+				[NEWLINE][ICON_BULLET]+1 [ICON_FOOD] Food from each Fishing Net, +1 [ICON_FOOD] Food and +1 [ICON_PRODUCTION] Production from each Kasbah.
 				[NEWLINE][NEWLINE]Allows [ICON_FOOD] Food to be moved from this city along trade routes inside your civilization.
 			</Text>
 		</Row>
@@ -3281,7 +3285,7 @@
 
 		<Replace Tag="TXT_KEY_BUILDING_LIGHTHOUSE_HELP">
 			<Text>
-				+1 [ICON_PRODUCTION] Production from every [COLOR_POSITIVE_TEXT]marine Luxury Resource[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Atoll[ENDCOLOR] worked by this City.
+				+1 [ICON_PRODUCTION] Production from every [ICON_RES_FISH] [COLOR_POSITIVE_TEXT]Fish[ENDCOLOR], [COLOR_POSITIVE_TEXT]marine Luxury Resource[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Atoll[ENDCOLOR] worked by this City.
 				[NEWLINE][NEWLINE]City must be built on the coast.</Text>
 		</Replace>
 
@@ -6208,7 +6212,7 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_FOOD_MARKET_HELP</Tag>
 			<Text>
-				+1 [ICON_GOLD] Gold from each source of [ICON_RES_WHEAT] Wheat, [ICON_RES_SPICES] Spices, [ICON_RES_CITRUS] Citrus, [ICON_RES_BANANA] Banana, [ICON_RES_SALT] Salt, [ICON_RES_SUGAR] Sugar, [ICON_RES_COW] Cattle, [ICON_RES_SHEEP] Sheep and [ICON_RES_INCENSE] Incense worked by this City.
+				+1 [ICON_GOLD] Gold from each source of [ICON_RES_WHEAT] Wheat, [ICON_RES_SPICES] Spices, [ICON_RES_CITRUS] Citrus, [ICON_RES_BANANA] Banana, [ICON_RES_SALT] Salt, [ICON_RES_SUGAR] Sugar, [ICON_RES_COW] Cattle, [ICON_RES_SHEEP] Sheep, [ICON_RES_FISH] Fish and [ICON_RES_INCENSE] Incense worked by this City.
 				[NEWLINE][NEWLINE]Must be built in Large Cities.
 			</Text>
 		</Row>
@@ -6227,7 +6231,7 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_PORTUGAL_AVENIDA_HELP</Tag>
 			<Text>
-				+1 [ICON_GOLD] Gold from each source of [ICON_RES_WHEAT] Wheat, [ICON_RES_SPICES] Spices, [ICON_RES_CITRUS] Citrus, [ICON_RES_BANANA] Banana, [ICON_RES_SALT] Salt, [ICON_RES_SUGAR] Sugar, [ICON_RES_COW] Cattle, [ICON_RES_SHEEP] Sheep and [ICON_RES_INCENSE] Incense worked by this City.
+				+1 [ICON_GOLD] Gold from each source of [ICON_RES_WHEAT] Wheat, [ICON_RES_SPICES] Spices, [ICON_RES_CITRUS] Citrus, [ICON_RES_BANANA] Banana, [ICON_RES_SALT] Salt, [ICON_RES_SUGAR] Sugar, [ICON_RES_COW] Cattle, [ICON_RES_SHEEP] Sheep, [ICON_RES_FISH] Fish and [ICON_RES_INCENSE] Incense worked by this City.
 				[NEWLINE][NEWLINE]100% from [ICON_CULTURE] Culture of Wonders and improvements in the city added to its [ICON_TOURISM] Tourism output.
 			</Text>
 		</Row>
@@ -7253,21 +7257,6 @@
 			<Text>Natural gas is a naturally occurring hydrocarbon gas mixture consisting primarily of methane, but commonly including varying amounts of other higher alkanes, and sometimes a small percentage of carbon dioxide, nitrogen, hydrogen sulfide, or helium.</Text>
 		</Row>
 
-		<!--<Row Tag="TXT_KEY_SP_RESOURCE_FISHFARM">
-			<Text>Fish Farm</Text>
-		</Row>
-		<Row Tag="TXT_KEY_SP_RESOURCE_SAND_DREDGE">
-			<Text>Sand Dredge</Text>
-		</Row>-->
-
-		<!--
-		<Replace Tag="TXT_KEY_RESOURCE_COCOA">
-			<Text>Cocoa</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_CIV5_RESOURCE_COCOA_TEXT">
-			<Text>Cocoa is produced from the seeds of the tropical cacao tree, which are fermented, roasted, peeled, and then ground into cocoa mass or liquified into chocolate liquor. This pure chocolate was used originally in Mesoamerica, both as a beverage and as an ingredient in foods, and played a special role in both Maya and Aztec royal and religious events. Eventually, once Europeans obtained this luxury, they sweetened and fattened it to create the types of chocolate we know today.</Text>
-		</Replace>
-		-->
 		<Replace Tag="TXT_KEY_RESOURCE_COFFEE">
 			<Text>Coffee</Text>
 		</Replace>
@@ -9902,17 +9891,17 @@
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_IMPROVEMENTS_FISHERY_MOD_HELP">
 			<Text>
-				In SuperPower Mod, the coast plot without any resources can also be improved by breeding a fish resource. It will provide additional [ICON_FOOD] Food output of the plot.
+				In SuperPower Mod, the coast plot without any resources can also be improved by breeding fish. It will provide additional [ICON_FOOD] Food output of the plot.
 			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_BUILD_FISHERY_MOD">
-			<Text>Create a [LINK=IMPROVEMENT_FISHERY_MOD]Fish Resurce[\LINK]</Text>
+			<Text>Create a [LINK=IMPROVEMENT_FISHERY_MOD]Fishing Boat Improvement[\LINK]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILD_FISHERY_MOD_HELP">
 			<Text>
 				Breed a fish resource on costal tiles without resources. Then the worker will automatically build [COLOR_POSITIVE_TEXT]Fishing Net[ENDCOLOR] to improve it and increase the city's [ICON_FOOD] Food output.
-				[NEWLINE][NEWLINE]May only be constructed in a coastal tile without resources .
+				[NEWLINE][NEWLINE]May only be constructed in a coastal tile without resources.
 				[NEWLINE][NEWLINE]May not be constructed adjacent to another tile is currently under fish farming.
 			</Text>
 		</Row>

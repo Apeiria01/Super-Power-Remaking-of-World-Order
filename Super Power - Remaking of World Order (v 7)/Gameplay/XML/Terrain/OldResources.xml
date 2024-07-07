@@ -5,7 +5,7 @@
 		<Delete ResourceType="RESOURCE_FISH"/>
 		<Row>
 			<ResourceType>RESOURCE_FISH</ResourceType>
-			<YieldType>YIELD_GOLD</YieldType>
+			<YieldType>YIELD_FOOD</YieldType>
 			<Yield>1</Yield>
 		</Row>
 		<Update>

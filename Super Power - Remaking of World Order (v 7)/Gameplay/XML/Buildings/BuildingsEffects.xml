@@ -396,27 +396,6 @@
 		</Row>
 
 		<Row>
-			<BuildingType>BUILDING_FISH_FARM</BuildingType>
-			<ResourceType>RESOURCE_FISH</ResourceType>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_FISH_FARM</BuildingType>
-			<ResourceType>RESOURCE_CORAL</ResourceType>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_FISH_FARM</BuildingType>
-			<ResourceType>RESOURCE_CRAB</ResourceType>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_FISH_FARM</BuildingType>
-			<ResourceType>RESOURCE_WHALE</ResourceType>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_FISH_FARM</BuildingType>
-			<ResourceType>RESOURCE_PEARLS</ResourceType>
-		</Row>
-
-		<Row>
 			<BuildingType>BUILDING_IRON_PROVIDER</BuildingType>
 			<ResourceType>RESOURCE_IRON</ResourceType>
 		</Row>
@@ -2274,7 +2253,7 @@
 		<Row>
 			<BuildingType>BUILDING_MOROCCO_IRRIGATION</BuildingType>
 			<YieldType>YIELD_FOOD</YieldType>
-			<Yield>2</Yield>
+			<Yield>1</Yield>
 		</Row>
 
 		<Row>
@@ -2338,12 +2317,12 @@
 
 
 	<Building_ResourceYieldChanges>
-		<!--<Row>
+		<Row>
 			<BuildingType>BUILDING_LIGHTHOUSE</BuildingType>
 			<ResourceType>RESOURCE_FISH</ResourceType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<Yield>1</Yield>
-		</Row>-->
+		</Row>
 		<Row>
 			<BuildingType>BUILDING_LIGHTHOUSE</BuildingType>
 			<ResourceType>RESOURCE_CORAL</ResourceType>
@@ -2369,69 +2348,6 @@
 			<Yield>1</Yield>
 		</Row>
 
-		<Row>
-			<BuildingType>BUILDING_SEAPORT</BuildingType>
-			<ResourceType>RESOURCE_FISH</ResourceType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_SEAPORT</BuildingType>
-			<ResourceType>RESOURCE_CORAL</ResourceType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_SEAPORT</BuildingType>
-			<ResourceType>RESOURCE_CRAB</ResourceType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_SEAPORT</BuildingType>
-			<ResourceType>RESOURCE_WHALE</ResourceType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_SEAPORT</BuildingType>
-			<ResourceType>RESOURCE_PEARLS</ResourceType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		
-		<Row>
-			<BuildingType>BUILDING_OTTOMAN_EMPIRE_PORT</BuildingType>
-			<ResourceType>RESOURCE_FISH</ResourceType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_OTTOMAN_EMPIRE_PORT</BuildingType>
-			<ResourceType>RESOURCE_CORAL</ResourceType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_OTTOMAN_EMPIRE_PORT</BuildingType>
-			<ResourceType>RESOURCE_CRAB</ResourceType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_OTTOMAN_EMPIRE_PORT</BuildingType>
-			<ResourceType>RESOURCE_WHALE</ResourceType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_OTTOMAN_EMPIRE_PORT</BuildingType>
-			<ResourceType>RESOURCE_PEARLS</ResourceType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		
-		
 		<Row>
 			<BuildingType>BUILDING_GRANARY</BuildingType>
 			<ResourceType>RESOURCE_WHEAT</ResourceType>
@@ -2821,12 +2737,6 @@
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_GRAIN_DEPOT</BuildingType>
-			<ResourceType>RESOURCE_FISH</ResourceType>
-			<YieldType>YIELD_FOOD</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_GRAIN_DEPOT</BuildingType>
 			<ResourceType>RESOURCE_CRAB</ResourceType>
 			<YieldType>YIELD_FOOD</YieldType>
 			<Yield>1</Yield>
@@ -2858,12 +2768,6 @@
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_MOROCCO_IRRIGATION</BuildingType>
-			<ResourceType>RESOURCE_FISH</ResourceType>
-			<YieldType>YIELD_FOOD</YieldType>
-			<Yield>2</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_MOROCCO_IRRIGATION</BuildingType>
 			<ResourceType>RESOURCE_CRAB</ResourceType>
 			<YieldType>YIELD_FOOD</YieldType>
 			<Yield>2</Yield>
@@ -2887,6 +2791,55 @@
 			<BuildingType>BUILDING_FISH_FARM</BuildingType>
 			<ImprovementType>IMPROVEMENT_FISHING_BOATS</ImprovementType>
 			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_GRAIN_DEPOT</BuildingType>
+			<ImprovementType>IMPROVEMENT_FISHFARM_MOD</ImprovementType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_MOROCCO_IRRIGATION</BuildingType>
+			<ImprovementType>IMPROVEMENT_FISHFARM_MOD</ImprovementType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_MOROCCO_IRRIGATION</BuildingType>
+			<ImprovementType>IMPROVEMENT_KASBAH</ImprovementType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_MOROCCO_IRRIGATION</BuildingType>
+			<ImprovementType>IMPROVEMENT_KASBAH</ImprovementType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		
+		<Row>
+			<BuildingType>BUILDING_SEAPORT</BuildingType>
+			<ImprovementType>IMPROVEMENT_FISHFARM_MOD</ImprovementType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_SEAPORT</BuildingType>
+			<ImprovementType>IMPROVEMENT_FISHING_BOATS</ImprovementType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_OTTOMAN_EMPIRE_PORT</BuildingType>
+			<ImprovementType>IMPROVEMENT_FISHFARM_MOD</ImprovementType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_OTTOMAN_EMPIRE_PORT</BuildingType>
+			<ImprovementType>IMPROVEMENT_FISHING_BOATS</ImprovementType>
+			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>1</Yield>
 		</Row>
 	</Building_ImprovementYieldChanges>
