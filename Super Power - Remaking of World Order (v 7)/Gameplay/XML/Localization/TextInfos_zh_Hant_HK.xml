@@ -1281,7 +1281,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_JAPANESE_TENSHU_HELP</Tag>
-			<Text>本城市組建軍事單位時+15%[ICON_PRODUCTION]生產力累積。[NEWLINE][NEWLINE]本城市所有海洋資源和戰略資源+1[ICON_PRODUCTION]生產力。[NEWLINE][NEWLINE]該建築不會過期。[NEWLINE][NEWLINE]研發互聯網科技後+2[ICON_TOURISM]旅遊業績產出。
+			<Text>本城市組建軍事單位時+15%[ICON_PRODUCTION]生產力累積。[NEWLINE][NEWLINE]本城市所有海上設施和戰略資源+1[ICON_PRODUCTION]生產力。[NEWLINE][NEWLINE]該建築不會過期。[NEWLINE][NEWLINE]研發互聯網科技後+2[ICON_TOURISM]旅遊業績產出。
 			</Text>
 		</Row>
 
