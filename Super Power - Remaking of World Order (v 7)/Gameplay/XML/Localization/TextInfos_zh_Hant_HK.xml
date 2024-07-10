@@ -5855,8 +5855,6 @@
 			<Text>
 				[ICON_BULLET]單位初始時即能以海運模式進入大洋。
 				[NEWLINE][ICON_BULLET]移民可以在臨近陸地的海濱地塊建城，海上城市獲得額外的[ICON_PRODUCTION]產能和[ICON_CULTURE]文化，隨時代增加。
-				[NEWLINE][ICON_BULLET]市政廳最高等級為3級（無4和5級城市）。
-				[NEWLINE][ICON_BULLET]在摩艾石像群周邊2格內單位+10%[ICON_STRENGTH]戰鬥力。
 			</Text>
 		</Replace>
 
@@ -13679,7 +13677,10 @@
 
 		<!--哈卡戰舞-->
 		<Replace Tag="TXT_KEY_PROMOTION_HAKA_WAR_DANCE_HELP">
-			<Text>所有[COLOR_POSITIVE_TEXT]臨近[ENDCOLOR]敵方單位-33% [ICON_STRENGTH]戰鬥力。</Text>
+			<Text>
+				[ICON_BULLET]所有[COLOR_POSITIVE_TEXT]臨近[ENDCOLOR]敵方單位-33% [ICON_STRENGTH]戰鬥力。
+				[NEWLINE][ICON_BULLET]在摩艾石像群周邊2格內+20%[ICON_STRENGTH]戰鬥力。
+			</Text>
 		</Replace>
 		<Row Tag="TXT_KEY_PROMOTION_LES_GUEUX">
 			<Text>丐军</Text>

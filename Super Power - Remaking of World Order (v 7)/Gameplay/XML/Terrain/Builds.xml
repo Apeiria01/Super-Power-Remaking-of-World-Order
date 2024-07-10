@@ -34,7 +34,7 @@
 
 
 		<Update>
-			<Set PrereqTech="TECH_COMPASS"  Time="500" />
+			<Set PrereqTech="TECH_SAILING" Time="500" />
 			<Where Type="BUILD_MOAI"/>
 		</Update>
 		<!--**********************************Tweaks for Old Builds******************************-->
