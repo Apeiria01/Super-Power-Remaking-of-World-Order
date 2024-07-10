@@ -10517,8 +10517,7 @@
 			<Text>
 				[ICON_BULLET]Can embark and move over Oceans immediately. 
 				[NEWLINE][ICON_BULLET]Settlers can found cities on coast plots adjacent to land. Cities founded on coast plots receive extra [ICON_PRODUTION] prodution and [ICON_CULTURE] culture, which increases with the eras.
-				[NEWLINE][ICON_BULLET]City Hall Level is limited to Lv 3 (No Lv 4 and Lv 5 Cities). 
-				[NEWLINE][ICON_BULLET]+10% [ICON_STRENGTH] Combat Strength bonus if within 2 tiles of a Moai.</Text>
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_CULTURE_FROM_KILLS">
@@ -15874,7 +15873,10 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_PROMOTION_HAKA_WAR_DANCE_HELP">
-			<Text>All [COLOR_POSITIVE_TEXT]Adjacent[ENDCOLOR] Enemy Untis -33% [ICON_STRENGTH] Combat Strength. </Text>
+			<Text>
+				[ICON_BULLET]All [COLOR_POSITIVE_TEXT]Adjacent[ENDCOLOR] Enemy Untis -33% [ICON_STRENGTH] Combat Strength. 
+				[NEWLINE][ICON_BULLET]+20% [ICON_STRENGTH] Combat Strength bonus if within 2 tiles of a Moai.
+			</Text>
 		</Replace>
 		<Row Tag="TXT_KEY_PROMOTION_LES_GUEUX">
 			<Text>Les Gueux</Text>
