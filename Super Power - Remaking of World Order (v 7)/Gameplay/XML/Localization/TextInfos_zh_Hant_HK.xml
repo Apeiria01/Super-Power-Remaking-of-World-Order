@@ -16112,5 +16112,8 @@
 		<Replace Tag="TXT_KEY_CIV5_IMPROVEMENTS_WELL_TEXT">
 			<Text>海上平臺的陸地版－油井是遊戲進程後期的改良設施，通過它您可以獲得至關重要的石油資源。</Text>
 		</Replace>
+		<Row Tag="TXT_KEY_AFC_COMBAT_BONUS">
+			<Text>遠征加成</Text>
+		</Row>
 	</Language_zh_Hant_HK>
 </GameData>
