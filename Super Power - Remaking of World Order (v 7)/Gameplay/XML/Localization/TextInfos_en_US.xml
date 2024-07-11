@@ -17977,5 +17977,8 @@
 		<Replace Tag="TXT_KEY_CIV5_IMPROVEMENTS_OFFSHOREPLATFORM_TEXT">
 			<Text>The offshore platform is an important late-game improvement as it can provide additional [ICON_PRODUCTION] Production output of the Ocean plot. It can also provides access to the highly-prized oil resource when you built it on the oil, but only when that resource is in the ocean (workers construct wells to access oil that is on land). </Text>
 		</Replace>
+		<Row Tag="TXT_KEY_AFC_COMBAT_BONUS">
+			<Text>Away From Capital Bonus</Text>
+		</Row>
 	</Language_en_US>
 </GameData>

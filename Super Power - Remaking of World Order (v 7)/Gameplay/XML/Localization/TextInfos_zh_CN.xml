@@ -16303,5 +16303,8 @@
 		<Replace Tag="TXT_KEY_CIV5_IMPROVEMENTS_OFFSHOREPLATFORM_TEXT">
 			<Text>海上平台是游戏后期一种重要的区域设施，因为它能大幅提高你的海滨城市的[ICON_PRODUCTION]产能。当你将其建立在石油资源上时，它能为你开发这种高价值资源，但注意仅当其在大洋中时才能在其上建造海上平台（工人可以在陆地上建造油井来提供石油）。</Text>
 		</Replace>
+		<Row Tag="TXT_KEY_AFC_COMBAT_BONUS">
+			<Text>远征加成</Text>
+		</Row>
 	</Language_zh_CN>
 </GameData>
