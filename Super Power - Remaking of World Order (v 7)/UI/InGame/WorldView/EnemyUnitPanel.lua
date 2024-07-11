@@ -376,6 +376,9 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 
 			end
 
+			--Fixed damage increase
+			iMyDamageInflicted = iMyDamageInflicted + pMyUnit:GetDamageFixValueToCity(pCity)
+
 			--Forced damage reduction
 			if pCity:GetChangeDamageValue() ~= 0 then
 				iMyDamageInflicted = iMyDamageInflicted + pCity:GetChangeDamageValue()
@@ -983,6 +986,10 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				iTheirDamageInflicted = pTheirUnit:GetCombatDamage(iTheirStrength, iMyStrength, pTheirUnit:GetDamage(), false, false, false);
 				iTheirDamageInflicted = iTheirDamageInflicted + iTheirFireSupportCombatDamage;
 			end
+
+			--Fixed damage increase
+			iMyDamageInflicted = iMyDamageInflicted + pMyUnit:GetDamageFixValueToUnit(pTheirUnit)
+			iTheirDamageInflicted = iTheirDamageInflicted + pTheirUnit:GetDamageFixValueToUnit(pMyUnit, false)
 
 			if pTheirUnit:GetForcedDamageValue() ~= 0 then
 				if pTheirUnit:GetForcedDamageValue() > 0 then
