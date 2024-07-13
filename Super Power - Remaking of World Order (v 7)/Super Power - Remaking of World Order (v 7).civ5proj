@@ -4870,11 +4870,11 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="UI/Civlopedia/CivilopediaScreen.lua">
+    <Content Include="UI/Civilopedia/CivilopediaScreen.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="UI/Civlopedia/CivilopediaScreen.xml">
+    <Content Include="UI/Civilopedia/CivilopediaScreen.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
