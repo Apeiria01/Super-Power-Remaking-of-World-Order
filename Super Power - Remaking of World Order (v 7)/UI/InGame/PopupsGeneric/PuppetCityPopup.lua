@@ -13,6 +13,15 @@ PopupLayouts[ButtonPopupTypes.BUTTONPOPUP_CITY_CAPTURED] = function(popupInfo)
 	
 	local activePlayer	= Players[Game.GetActivePlayer()];
 	local newCity		= activePlayer:GetCityByID(cityID);
+	local bCanAnnex = not activePlayer:MayNotAnnex();
+	local bRaze = activePlayer:CanRaze(newCity);
+
+	-- Players can at least Create a Puppet or View the City
+	local iNumOfButton = 2
+	if iLiberatedPlayer ~= -1 then iNumOfButton = iNumOfButton + 1 end
+	if bCanAnnex then iNumOfButton = iNumOfButton + 1 end
+	if bRaze then iNumOfButton = iNumOfButton + 1 end
+
 	
 	if newCity == nil then
 		return false;
@@ -62,22 +71,49 @@ PopupLayouts[ButtonPopupTypes.BUTTONPOPUP_CITY_CAPTURED] = function(popupInfo)
 		AddButton(buttonText, OnLiberateClicked, strToolTip);
 	end
 	
-	-- Initialize 'Annex' button.
+	-- Initialize 'Annex' button and 'Raze' button.
 	local OnCaptureClicked = function()
-		Network.SendDoTask(cityID, TaskTypes.TASK_ANNEX_PUPPET, -1, -1, false, false, false, false);
-		----------------------------------------------------------------------SP Annexing city build a City Hall Start--------------------------
-	    print ("New City Hall built!")
-	 	----------------------------------------------------------------------SP Annexing city build a City Hall End--------------------------	
+		Network.SendDoTask(cityID, TaskTypes.TASK_ANNEX_PUPPET, -1, -1, false, false, false, false);	
 	end
-	
-	if (not activePlayer:MayNotAnnex()) then
-		local buttonText = Locale.ConvertTextKey("TXT_KEY_POPUP_ANNEX_CITY");
-		local strToolTip = Locale.ConvertTextKey("TXT_KEY_POPUP_CITY_CAPTURE_INFO_ANNEX", iUnhappinessForAnnexing);
+	local OnRazeClicked = function()
+		Network.SendDoTask(cityID, TaskTypes.TASK_RAZE, -1, -1, false, false, false, false);
+	end
+
+	-- if the Popup UI can't put all the content, merge one
+	if iNumOfButton > 4 and bCanAnnex and bRaze then
+		local buttonText = Locale.ConvertTextKey("TXT_KEY_POPUP_ANNEX_CITY") .. " | " .. Locale.ConvertTextKey("TXT_KEY_POPUP_RAZE_CAPTURED_CITY");
+		local strToolTip = Locale.ConvertTextKey("TXT_KEY_POPUP_ON_LEFT_CLICK") 
+							.. "[NEWLINE]" 
+							.. Locale.ConvertTextKey("TXT_KEY_POPUP_CITY_CAPTURE_INFO_ANNEX", iUnhappinessForAnnexing)
+							.. "[NEWLINE]------------------------[NEWLINE]"
+							.. Locale.ConvertTextKey("TXT_KEY_POPUP_ON_RIGHT_CLICK")
+							.. "[NEWLINE]" 
+							.. Locale.ConvertTextKey("TXT_KEY_POPUP_CITY_CAPTURE_INFO_RAZE", iUnhappinessForAnnexing);			
 		if (newCity:GetOriginalOwner() ~= Game.GetActivePlayer() and bConquest == true) then
 			strToolTip = strToolTip .. "[NEWLINE][NEWLINE]"
 			strToolTip = strToolTip .. activePlayer:GetWarmongerPreviewString(iPreviousOwner);
 		end
-		AddButton(buttonText, OnCaptureClicked, strToolTip);
+		AddButton(buttonText, OnCaptureClicked, strToolTip, false, OnRazeClicked);
+	else
+		if bCanAnnex then
+			local buttonText = Locale.ConvertTextKey("TXT_KEY_POPUP_ANNEX_CITY");
+			local strToolTip = Locale.ConvertTextKey("TXT_KEY_POPUP_CITY_CAPTURE_INFO_ANNEX", iUnhappinessForAnnexing);
+			if (newCity:GetOriginalOwner() ~= Game.GetActivePlayer() and bConquest == true) then
+				strToolTip = strToolTip .. "[NEWLINE][NEWLINE]"
+				strToolTip = strToolTip .. activePlayer:GetWarmongerPreviewString(iPreviousOwner);
+			end
+			AddButton(buttonText, OnCaptureClicked, strToolTip);
+		end
+	
+		if bRaze then
+			local buttonText = Locale.ConvertTextKey("TXT_KEY_POPUP_RAZE_CAPTURED_CITY");
+			local strToolTip = Locale.ConvertTextKey("TXT_KEY_POPUP_CITY_CAPTURE_INFO_RAZE", iUnhappinessForAnnexing);
+			if (newCity:GetOriginalOwner() ~= Game.GetActivePlayer() and bConquest == true) then
+				strToolTip = strToolTip .. "[NEWLINE][NEWLINE]"
+				strToolTip = strToolTip .. activePlayer:GetWarmongerPreviewString(iPreviousOwner);
+			end
+			AddButton(buttonText, OnRazeClicked, strToolTip);
+		end
 	end
 		
 	-- Initialize 'Puppet' button.
@@ -112,20 +148,4 @@ PopupLayouts[ButtonPopupTypes.BUTTONPOPUP_CITY_CAPTURED] = function(popupInfo)
 	buttonText = Locale.ConvertTextKey("TXT_KEY_POPUP_VIEW_CITY");
 	strToolTip = Locale.ConvertTextKey("TXT_KEY_POPUP_VIEW_CITY_DETAILS");
 	AddButton(buttonText, OnViewCityClicked, strToolTip, true);	-- true is bPreventClose
-	
-	-- Initialize 'Raze' button.
-	local bRaze = activePlayer:CanRaze(newCity);
-	if (bRaze) then
-		local OnRazeClicked = function()
-			Network.SendDoTask(cityID, TaskTypes.TASK_RAZE, -1, -1, false, false, false, false);
-		end
-		
-		buttonText = Locale.ConvertTextKey("TXT_KEY_POPUP_RAZE_CAPTURED_CITY");
-		strToolTip = Locale.ConvertTextKey("TXT_KEY_POPUP_CITY_CAPTURE_INFO_RAZE", iUnhappinessForAnnexing);
-		if (newCity:GetOriginalOwner() ~= Game.GetActivePlayer() and bConquest == true) then
-			strToolTip = strToolTip .. "[NEWLINE][NEWLINE]"
-			strToolTip = strToolTip .. activePlayer:GetWarmongerPreviewString(iPreviousOwner);
-		end
-		AddButton(buttonText, OnRazeClicked, strToolTip);
-	end
 end
