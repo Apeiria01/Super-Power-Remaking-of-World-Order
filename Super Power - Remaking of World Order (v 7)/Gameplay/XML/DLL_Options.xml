@@ -350,6 +350,10 @@
 			<Where Name="IMPROVEMENT_FUNCTION"/>
 			<Set Value="1"/>
 		</Update>
+		<Update>
+			<Where Name="PROMOTIONS_IMPROVEMENT_BONUS"/>
+			<Set Value="1"/>
+		</Update>
 		
 	</CustomModOptions>
 

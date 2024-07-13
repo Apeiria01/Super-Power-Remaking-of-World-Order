@@ -376,6 +376,9 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 
 			end
 
+			--Fixed damage increase
+			iMyDamageInflicted = iMyDamageInflicted + pMyUnit:GetDamageFixValueToCity(pCity)
+
 			--Forced damage reduction
 			if pCity:GetChangeDamageValue() ~= 0 then
 				iMyDamageInflicted = iMyDamageInflicted + pCity:GetChangeDamageValue()
@@ -873,7 +876,7 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 				iModifier = pMyPlayer:GetAwayFromCapitalCombatModifier();
 				local AFCmax = pMyPlayer:GetAwayFromCapitalCombatModifierMax();
 				local pCapital = pMyPlayer:GetCapitalCity();
-				local plotDistance = Map.PlotDistance(pMyUnit:GetX(), pMyUnit:GetY(), pCapital:GetX(), pCapital:GetY())+1
+				local plotDistance = Map.PlotDistance(pMyUnit:GetX(), pMyUnit:GetY(), pCapital:GetX(), pCapital:GetY())
 				iModifier = iModifier * plotDistance
 				if (iModifier > AFCmax) then
 					iModifier = AFCmax
@@ -983,6 +986,10 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				iTheirDamageInflicted = pTheirUnit:GetCombatDamage(iTheirStrength, iMyStrength, pTheirUnit:GetDamage(), false, false, false);
 				iTheirDamageInflicted = iTheirDamageInflicted + iTheirFireSupportCombatDamage;
 			end
+
+			--Fixed damage increase
+			iMyDamageInflicted = iMyDamageInflicted + pMyUnit:GetDamageFixValueToUnit(pTheirUnit)
+			iTheirDamageInflicted = iTheirDamageInflicted + pTheirUnit:GetDamageFixValueToUnit(pMyUnit, false)
 
 			if pTheirUnit:GetForcedDamageValue() ~= 0 then
 				if pTheirUnit:GetForcedDamageValue() > 0 then
@@ -1375,7 +1382,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				iModifier = pMyPlayer:GetAwayFromCapitalCombatModifier();
 				local AFCmax = pMyPlayer:GetAwayFromCapitalCombatModifierMax();
 				local pCapital = pMyPlayer:GetCapitalCity();
-				local plotDistance = Map.PlotDistance(pMyUnit:GetX(), pMyUnit:GetY(), pCapital:GetX(), pCapital:GetY())+1
+				local plotDistance = Map.PlotDistance(pMyUnit:GetX(), pMyUnit:GetY(), pCapital:GetX(), pCapital:GetY())
 				iModifier = iModifier * plotDistance
 				if (iModifier > AFCmax) then
 					iModifier = AFCmax
@@ -2351,7 +2358,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 					iModifier = pTheirPlayer:GetAwayFromCapitalCombatModifier();
 					local AFCmax = pTheirPlayer:GetAwayFromCapitalCombatModifierMax();
 					local pCapital = pTheirPlayer:GetCapitalCity();
-					local plotDistance = Map.PlotDistance(pTheirUnit:GetX(), pTheirUnit:GetY(), pCapital:GetX(), pCapital:GetY())+1
+					local plotDistance = Map.PlotDistance(pTheirUnit:GetX(), pTheirUnit:GetY(), pCapital:GetX(), pCapital:GetY())
 					iModifier = iModifier * plotDistance
 					if (iModifier > AFCmax) then
 						iModifier = AFCmax
@@ -2627,7 +2634,7 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 			iModifier = pTheirPlayer:GetAwayFromCapitalCombatModifier();
 			local AFCmax = pTheirPlayer:GetAwayFromCapitalCombatModifierMax();
 			local pCapital = pTheirPlayer:GetCapitalCity();
-			local plotDistance = Map.PlotDistance(pTheirUnit:GetX(), pTheirUnit:GetY(), pCapital:GetX(), pCapital:GetY())+1
+			local plotDistance = Map.PlotDistance(pTheirUnit:GetX(), pTheirUnit:GetY(), pCapital:GetX(), pCapital:GetY())
 			iModifier = iModifier * plotDistance
 			if (iModifier > AFCmax) then
 				iModifier = AFCmax
@@ -2941,22 +2948,6 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 			controlTable = g_TheirCombatDataIM:GetInstance();
 			controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_CITY_STATE_FRENDSHIP");
 			controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
-		end
-		-- Away From Capital Combat Modifier
-		if (theirPlayer:GetAwayFromCapitalCombatModifier() >0) then
-			iModifier = theirPlayer:GetAwayFromCapitalCombatModifier();
-			local AFCmax = theirPlayer:GetAwayFromCapitalCombatModifierMax();
-			local pCapital = theirPlayer:GetCapitalCity();
-			local plotDistance = Map.PlotDistance(theirUnit:GetX(), theirUnit:GetY(), pCapital:GetX(), pCapital:GetY())+1
-			iModifier = iModifier * plotDistance
-			if (iModifier > AFCmax) then
-				iModifier = AFCmax
-			end
-			if (iModifier ~= 0) then
-				controlTable = g_MyCombatDataIM:GetInstance();
-				controlTable.Text:LocalizeAndSetText("TXT_KEY_AFC_COMBAT_BONUS");
-				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
-			end
 		end
 	end
 

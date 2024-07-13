@@ -398,11 +398,7 @@
 			<Description>TXT_KEY_TRAIT_WAYFINDING</Description>
 			<ShortDescription>TXT_KEY_TRAIT_WAYFINDING_SHORT</ShortDescription>
 			<EmbarkedAllWater>true</EmbarkedAllWater>
-			<NearbyImprovementCombatBonus>10</NearbyImprovementCombatBonus>
-			<NearbyImprovementBonusRange>2</NearbyImprovementBonusRange>
-			<CombatBonusImprovement>IMPROVEMENT_MOAI</CombatBonusImprovement>
 			<CanFoundCoastCity>true</CanFoundCoastCity>
-      		<MaxCorruptionLevel>3</MaxCorruptionLevel>
 		</Row>
 		<Row>
 			<Type>TRAIT_GREAT_EXPANSE</Type>
