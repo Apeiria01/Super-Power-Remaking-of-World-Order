@@ -6915,6 +6915,76 @@ CivilopediaCategory[CategoryImprovements].SelectArticle = function( improvementI
 				end
 			end
 			UpdateWideButtonFrame( buttonAdded, Controls.SupportingPolicyInnerFrame, Controls.SupportingPolicyFrame );
+
+			-- MOD - update supporting buildings
+			g_SupportingBuildingManager:ResetInstances();
+			buttonAdded = 0;
+			
+			local supportingBuilding = {};
+			-- for modifired rate, though it is not being used
+			debugTable = {};
+			iDebug = 0;
+			for row in GameInfo.Building_ImprovementYieldChanges( condition ) do
+				local building = GameInfo.Buildings[row.BuildingType];
+				if (building) and (building.Civilopedia ~= nil) then
+					local iAlready = -1;
+					local bDebug = false;
+					for i = 0, buttonAdded-1, 1 do
+						if supportingBuilding[i] then
+							if (supportingBuilding[i].ID == building.ID) then
+								for j = 0, iDebug-1, 1 do
+									if ( (debugTable[j].ID == building.ID) and (debugTable[j].Yield == row.YieldType) ) then
+										bDebug = true;
+										break;
+									end
+								end
+								if (not bDebug) then
+									iAlready = i;
+								end
+								break;
+							end
+						end
+					end
+					if (not bDebug) then
+						if (iAlready ~= -1) then
+							local description = "";
+							if (row.Yield > 0) then
+								description = supportingBuilding[iAlready].Text .. ", +" .. tostring(row.Yield) .. GameInfo.Yields[row.YieldType].IconString;
+							else
+								description = supportingBuilding[iAlready].Text .. ", [COLOR_NEGATIVE_TEXT]" .. tostring(row.Yield) .. "[ENDCOLOR]" .. GameInfo.Yields[row.YieldType].IconString;
+							end
+							supportingBuilding[iAlready].Text = description;
+							debugTable[iDebug] = { ID=building.ID, Yield=row.YieldType };
+							iDebug = iDebug + 1;
+						else
+							local thisBuildingInstance = g_SupportingBuildingManager:GetInstance();
+							if thisBuildingInstance then
+								local textureOffset, textureSheet = IconLookup( building.PortraitIndex, buttonSize, building.IconAtlas );
+								if textureOffset == nil then
+									textureSheet = defaultErrorTextureSheet;
+									textureOffset = nullOffset;
+								end
+								local description = "";
+								if (row.Yield > 0) then
+									description = Locale.ConvertTextKey( building.Description ) .. ": +" .. tostring(row.Yield) .. GameInfo.Yields[row.YieldType].IconString;
+								else
+									description = Locale.ConvertTextKey( building.Description ) .. ": [COLOR_NEGATIVE_TEXT]" .. tostring(row.Yield) .. "[ENDCOLOR]" .. GameInfo.Yields[row.YieldType].IconString;
+								end
+								supportingBuilding[buttonAdded] = { Num=buttonAdded, Image=thisBuildingInstance.SupportingBuildingImage, Button=thisBuildingInstance.SupportingBuildingButton, Icon=textureSheet, Offset=textureOffset, Category=CategoryBuildings, Text=description, ID=building.ID};
+								debugTable[iDebug] = { ID=building.ID, Yield=row.YieldType };
+								buttonAdded = buttonAdded + 1;
+								iDebug = iDebug + 1;
+							end
+						end
+					end
+				end
+			end
+			if (buttonAdded ~= 0) then
+				for i = 0, buttonAdded-1, 1 do
+					UpdateSmallButtonWide( supportingBuilding[i].Num, supportingBuilding[i].Image, supportingBuilding[i].Button, supportingBuilding[i].Icon, supportingBuilding[i].Offset, supportingBuilding[i].Category, supportingBuilding[i].Text, supportingBuilding[i].ID );
+				end
+			end
+			UpdateWideButtonFrame( buttonAdded, Controls.SupportingBuildingInnerFrame, Controls.SupportingBuildingFrame );
 			
 			-- update the related images
 			Controls.RelatedImagesFrame:SetHide( true );
@@ -6973,6 +7043,7 @@ CivilopediaCategory[CategoryImprovements].SelectArticle = function( improvementI
 			Controls.RelatedImagesFrame:SetHide( true );
 		end
 	end
+
 
 	ResizeEtc();
 end
