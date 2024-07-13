@@ -16307,5 +16307,12 @@
 		<Row Tag="TXT_KEY_AFC_COMBAT_BONUS">
 			<Text>远征加成</Text>
 		</Row>
+
+		<Row Tag="TXT_KEY_POPUP_ON_LEFT_CLICK">
+			<Text>[COLOR_YELLOW]左键点击[ENDCOLOR]：</Text>
+		</Row>
+		<Row Tag="TXT_KEY_POPUP_ON_RIGHT_CLICK">
+			<Text>[COLOR_YELLOW]右键点击[ENDCOLOR]：</Text>
+		</Row>
 	</Language_zh_CN>
 </GameData>

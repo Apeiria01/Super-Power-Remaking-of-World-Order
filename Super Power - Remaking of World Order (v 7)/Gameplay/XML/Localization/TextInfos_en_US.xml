@@ -17982,5 +17982,12 @@
 		<Row Tag="TXT_KEY_AFC_COMBAT_BONUS">
 			<Text>Away From Capital Bonus</Text>
 		</Row>
+
+		<Row Tag="TXT_KEY_POPUP_ON_LEFT_CLICK">
+			<Text>[COLOR_YELLOW]Left Click[ENDCOLOR]: </Text>
+		</Row>
+		<Row Tag="TXT_KEY_POPUP_ON_RIGHT_CLICK">
+			<Text>[COLOR_YELLOW]Right Click[ENDCOLOR]: </Text>
+		</Row>
 	</Language_en_US>
 </GameData>
