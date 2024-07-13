@@ -61,37 +61,23 @@ function AddButton(buttonText, buttonClickFunc, strToolTip, bPreventClose, butto
 			
 			button:SetToolTipString(strToolTip);
 
-			--By default, button clicks will hide the popup window after
-			--executing the click function
-			local clickHandler = function()
-				if buttonClickFunc ~= nil then
-					buttonClickFunc();
-				end
-				
-				HideWindow();
-			end
-			local clickHandlerPreventClose = function()
-				if buttonClickFunc ~= nil then
-					buttonClickFunc();
-				end
-			end
-			
-			-- This is only used in one case, when viewing a captured city (PuppetCityPopup)
-			if (bPreventClose) then
-				button:RegisterCallback(Mouse.eLClick, clickHandlerPreventClose);
+			-- By default, button clicks will hide the popup window after
+			-- bPreventClose is only used in one case, when viewing a captured city (PuppetCityPopup)
+			-- executing the click function
+			if not buttonClickFunc then
+				button:RegisterCallback(Mouse.eLClick, function() end)
+			elseif bPreventClose then
+				button:RegisterCallback(Mouse.eLClick, buttonClickFunc);
 			else
-				button:RegisterCallback(Mouse.eLClick, clickHandler);
+				button:RegisterCallback(Mouse.eLClick, function() buttonClickFunc() return HideWindow() end)
 			end
-
-			-- if has Right Func and not Prevent Close, add Right Func
-			local clickHandlerR = function()
-				if buttonClickFuncRight ~= nil then
-					buttonClickFuncRight();
-				end
-				HideWindow();
-			end
-			if (not bPreventClose) and clickHandlerR ~= nil then
-				button:RegisterCallback(Mouse.eRClick, clickHandlerR);
+			-- if has Right Func, add Right Func
+			if not buttonClickFuncRight then
+				button:RegisterCallback(Mouse.eRClick, function() end)
+			elseif bPreventClose then
+				button:RegisterCallback(Mouse.eRClick, buttonClickFuncRight);
+			else
+				button:RegisterCallback(Mouse.eRClick, function() buttonClickFuncRight() return HideWindow() end)
 			end
 			
 			button:SetHide(false);
@@ -156,5 +142,3 @@ function InputHandler( uiMsg, wParam, lParam )
 	end
 end
 ContextPtr:SetInputHandler( InputHandler );
-
-
