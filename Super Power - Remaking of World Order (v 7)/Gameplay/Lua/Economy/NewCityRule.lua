@@ -79,7 +79,26 @@ function DoInternationalImmigration(MoveOutPlayerID, MoveInPlayerID)
         end
     end
 
-    if MoveOutCounter > 0 then
+    ---------------------------------Immigrant Moving In--------------------
+    local apCities = {}
+    local iCounter = 0
+    for pCity in MoveInPlayer:Cities() do
+        local cityPop = pCity:GetPopulation()
+        if cityPop > 0 and cityPop < 80 
+        and pCity:IsCanDoImmigration()
+        and not pCity:IsPuppet()
+        and not pCity:IsRazing() and not pCity:IsResistance()
+        and not pCity:IsForcedAvoidGrowth()
+        and pCity:CanGrowNormally()
+        and pCity:GetSpecialistCount(GameInfo.Specialists.SPECIALIST_CITIZEN.ID) <= 0
+        then
+            apCities[iCounter] = pCity
+            iCounter = iCounter + 1
+        end
+    end
+
+    if MoveOutCounter > 0 and iCounter > 0 then
+        ---------------------------------Immigrant Moving out--------------------
         local iRandChoice = Game.Rand(MoveOutCounter, "Choosing random city");
         local targetCity = MoveOutCities[iRandChoice];
         local Cityname = targetCity:GetName();
@@ -99,32 +118,11 @@ function DoInternationalImmigration(MoveOutPlayerID, MoveInPlayerID)
             targetCity:SetFocusType(5)
             print("Shit human is stealing people from us! AI need more culture!")
         end
-    else
-        return false
-    end
 
-    ---------------------------------Immigrant Moving In--------------------
-    local apCities = {}
-    local iCounter = 0
-    for pCity in MoveInPlayer:Cities() do
-        local cityPop = pCity:GetPopulation()
-        if cityPop > 0 and cityPop < 80 
-        and pCity:IsCanDoImmigration()
-        and not pCity:IsPuppet()
-        and not pCity:IsRazing() and not pCity:IsResistance()
-        and not pCity:IsForcedAvoidGrowth()
-        and pCity:CanGrowNormally()
-        and pCity:GetSpecialistCount(GameInfo.Specialists.SPECIALIST_CITIZEN.ID) <= 0
-        then
-            apCities[iCounter] = pCity
-            iCounter = iCounter + 1
-        end
-    end
-
-    if iCounter > 0 then
-        local iRandChoice = Game.Rand(iCounter, "Choosing random city")
-        local targetCity = apCities[iRandChoice]
-        local Cityname = targetCity:GetName()
+        ---------------------------------Immigrant Moving In--------------------
+        iRandChoice = Game.Rand(iCounter, "Choosing random city")
+        targetCity = apCities[iRandChoice]
+        Cityname = targetCity:GetName()
         targetCity:ChangePopulation(1, true)
         targetCity:SetCanDoImmigration(false)
         print("Immigrant Move into this city:" .. Cityname)
