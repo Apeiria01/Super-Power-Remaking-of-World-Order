@@ -68,7 +68,7 @@
 			<DestroyedWhenPillaged>true</DestroyedWhenPillaged>
 			<PortraitIndex>0</PortraitIndex>
 			<IconAtlas>SP_IMPROVEMENTS_ATLAS</IconAtlas>
-			<CreatedItemMod>3</CreatedItemMod>
+			<CreatedItemMod>1</CreatedItemMod>
 			<CreatedResourceQuantity>1</CreatedResourceQuantity>
 			<SetNewImprovement>IMPROVEMENT_FISHFARM_MOD</SetNewImprovement>
 
@@ -98,7 +98,7 @@
 			<DestroyedWhenPillaged>true</DestroyedWhenPillaged>
 			<PortraitIndex>2</PortraitIndex>
 			<IconAtlas>SP_IMPROVEMENTS_ATLAS</IconAtlas>
-			<CreatedItemMod>3</CreatedItemMod>
+			<CreatedItemMod>1</CreatedItemMod>
 			<CreatedResourceQuantity>1</CreatedResourceQuantity>
 			<SetNewImprovement>IMPROVEMENT_OFFSHORE_PLATFORM</SetNewImprovement>
 		</Row>
