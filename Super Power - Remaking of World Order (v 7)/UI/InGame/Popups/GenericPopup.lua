@@ -65,7 +65,7 @@ function AddButton(buttonText, buttonClickFunc, strToolTip, bPreventClose, butto
 			-- bPreventClose is only used in one case, when viewing a captured city (PuppetCityPopup)
 			-- executing the click function
 			if not buttonClickFunc then
-				button:RegisterCallback(Mouse.eLClick, function() end)
+				button:RegisterCallback(Mouse.eLClick, function() HideWindow() end)
 			elseif bPreventClose then
 				button:RegisterCallback(Mouse.eLClick, buttonClickFunc);
 			else
