@@ -1701,7 +1701,13 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			-- AttackWoundedMod
 			if (pTheirUnit:GetDamage() > 0) then
 				iModifier = pMyUnit:AttackWoundedModifier();
+				if (iModifier ~= 0) then
+					controlTable = g_MyCombatDataIM:GetInstance();
+					controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_ATTACK_WOUND_UNITS");
+					controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
+				end
 
+				iModifier = pMyUnit:GetExtraWoundedMod();
 				if (iModifier ~= 0) then
 					controlTable = g_MyCombatDataIM:GetInstance();
 					controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_VS_WOUND_UNITS");
@@ -2067,9 +2073,9 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
                     controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
                 end
 
-                -- AttackWoundedMod
+                -- WoundedMod
                 if (pMyUnit:GetDamage() > 0) then
-                    iModifier = pTheirUnit:AttackWoundedModifier();
+                    iModifier = pTheirUnit:GetExtraWoundedMod();
                     if (iModifier ~= 0) then
                         controlTable = g_TheirCombatDataIM:GetInstance();
                         controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_VS_WOUND_UNITS");
