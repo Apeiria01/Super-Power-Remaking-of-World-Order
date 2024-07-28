@@ -12511,19 +12511,19 @@
 			<Text>獵殺一級</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_HUNTDOWN_1_HELP">
-			<Text>對[COLOR_POSITIVE_TEXT]受傷[ENDCOLOR]單位+50%[ICON_STRENGTH]戰鬥力。</Text>
+			<Text>對[COLOR_POSITIVE_TEXT]受傷[ENDCOLOR]單位+50%[ICON_STRENGTH]攻擊力。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_HUNTDOWN_2">
 			<Text>獵殺二級</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_HUNTDOWN_2_HELP">
-			<Text>對[COLOR_POSITIVE_TEXT]受傷[ENDCOLOR]單位+50%[ICON_STRENGTH]戰鬥力。</Text>
+			<Text>對[COLOR_POSITIVE_TEXT]受傷[ENDCOLOR]單位+50%[ICON_STRENGTH]攻擊力。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_HUNTDOWN_3">
 			<Text>獵殺三級</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_HUNTDOWN_3_HELP">
-			<Text>對[COLOR_POSITIVE_TEXT]受傷[ENDCOLOR]單位+50%[ICON_STRENGTH]戰鬥力。</Text>
+			<Text>對[COLOR_POSITIVE_TEXT]受傷[ENDCOLOR]單位+50%[ICON_STRENGTH]攻擊力。</Text>
 		</Row>
 
 		<Replace Tag="TXT_KEY_PROMOTION_CITY_SIEGE">
@@ -13405,7 +13405,7 @@
 			<Text>獵殺殘敵</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_STRONGER_VS_DAMAGED_HELP">
-			<Text>對受傷單位+50%[ICON_STRENGTH]戰鬥力。</Text>
+			<Text>對受傷單位+50%[ICON_STRENGTH]攻擊力。</Text>
 		</Replace>
 
 		<!--<Replace Tag="TXT_KEY_PROMOTION_SUPPLY_HELP" >
@@ -16122,6 +16122,10 @@
 		</Row>
 		<Row Tag="TXT_KEY_POPUP_ON_RIGHT_CLICK">
 			<Text>[COLOR_YELLOW]右鍵點擊[ENDCOLOR]：</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_EUPANEL_BONUS_ATTACK_WOUND_UNITS">
+			<Text>攻擊受損單位加成</Text>
 		</Row>
 	</Language_zh_Hant_HK>
 </GameData>
