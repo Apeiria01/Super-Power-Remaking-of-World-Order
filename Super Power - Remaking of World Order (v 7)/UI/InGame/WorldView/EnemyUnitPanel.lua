@@ -2640,7 +2640,7 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 			iModifier = pTheirPlayer:GetAwayFromCapitalCombatModifier();
 			local AFCmax = pTheirPlayer:GetAwayFromCapitalCombatModifierMax();
 			local pCapital = pTheirPlayer:GetCapitalCity();
-			local plotDistance = Map.PlotDistance(pTheirUnit:GetX(), pTheirUnit:GetY(), pCapital:GetX(), pCapital:GetY())
+			local plotDistance = Map.PlotDistance(theirUnit:GetX(), theirUnit:GetY(), pCapital:GetX(), pCapital:GetY())
 			iModifier = iModifier * plotDistance
 			if (iModifier > AFCmax) then
 				iModifier = AFCmax
