@@ -10569,7 +10569,7 @@
 			<Text>
 				[ICON_BULLET]Can spend [ICON_GOLD] Gold to annex or puppet a City-State that has been your ally for 8 turns. 
 				[NEWLINE][ICON_BULLET]Each old Capital of City-State -2 Lv. at most of City Hall in its City (non-puppet).
-				[NEWLINE][ICON_BULLET] Unlock the special trading options [Diplomatic Marriage] and [Dual Empire Treaty] (see the Encyclopedia Diplomacy page for details).
+				[NEWLINE][ICON_BULLET]Unlock the special trading options [Diplomatic Marriage] and [Dual Empire Treaty] (see the Encyclopedia Diplomacy page for details).
 			</Text>
 		</Replace>
 
@@ -14483,19 +14483,19 @@
 			<Text>Hunt Down I</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_HUNTDOWN_1_HELP">
-			<Text>+50% [ICON_STRENGTH] Combat Strength VS [COLOR_POSITIVE_TEXT]Wounded Units[ENDCOLOR].</Text>
+			<Text>+50% [ICON_STRENGTH] Combat Strength Attacking [COLOR_POSITIVE_TEXT]Wounded Units[ENDCOLOR].</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_HUNTDOWN_2">
 			<Text>Hunt Down II</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_HUNTDOWN_2_HELP">
-			<Text>+50% [ICON_STRENGTH] Combat Strength VS [COLOR_POSITIVE_TEXT]Wounded Units[ENDCOLOR].</Text>
+			<Text>+50% [ICON_STRENGTH] Combat Strength Attacking [COLOR_POSITIVE_TEXT]Wounded Units[ENDCOLOR].</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_HUNTDOWN_3">
 			<Text>Hunt Down III</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_HUNTDOWN_3_HELP">
-			<Text>+50% [ICON_STRENGTH] Combat Strength VS [COLOR_POSITIVE_TEXT]Wounded Units[ENDCOLOR].</Text>
+			<Text>+50% [ICON_STRENGTH] Combat Strength Attacking [COLOR_POSITIVE_TEXT]Wounded Units[ENDCOLOR].</Text>
 		</Row>
 
 		
@@ -15544,7 +15544,7 @@
 			<Text>Damaged Enemy Bonus</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_STRONGER_VS_DAMAGED_HELP" >
-			<Text>+50% [ICON_STRENGTH] Combat Strength VS Wounded Units.</Text>
+			<Text>+50% [ICON_STRENGTH] Combat Strength Attacking Wounded Units.</Text>
 		</Replace>
 		
 		<!--<Replace Tag="TXT_KEY_PROMOTION_SUPPLY_HELP" >
@@ -17988,6 +17988,10 @@
 		</Row>
 		<Row Tag="TXT_KEY_POPUP_ON_RIGHT_CLICK">
 			<Text>[COLOR_YELLOW]Right Click[ENDCOLOR]: </Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_EUPANEL_BONUS_ATTACK_WOUND_UNITS">
+			<Text>Bonus Attacking Wounded Units</Text>
 		</Row>
 	</Language_en_US>
 </GameData>

@@ -354,6 +354,10 @@
 			<Where Name="PROMOTIONS_IMPROVEMENT_BONUS"/>
 			<Set Value="1"/>
 		</Update>
+		<Update>
+			<Where Name="BUILDINGS_NW_EXCLUDE_RAZING"/>
+			<Set Value="1"/>
+		</Update>
 		
 	</CustomModOptions>
 
