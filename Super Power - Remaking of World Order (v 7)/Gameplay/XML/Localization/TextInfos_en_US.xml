@@ -10569,7 +10569,7 @@
 			<Text>
 				[ICON_BULLET]Can spend [ICON_GOLD] Gold to annex or puppet a City-State that has been your ally for 8 turns. 
 				[NEWLINE][ICON_BULLET]Each old Capital of City-State -2 Lv. at most of City Hall in its City (non-puppet).
-				[NEWLINE][ICON_BULLET] Unlock the special trading options [Diplomatic Marriage] and [Dual Empire Treaty] (see the Encyclopedia Diplomacy page for details).
+				[NEWLINE][ICON_BULLET]Unlock the special trading options [Diplomatic Marriage] and [Dual Empire Treaty] (see the Encyclopedia Diplomacy page for details).
 			</Text>
 		</Replace>
 
