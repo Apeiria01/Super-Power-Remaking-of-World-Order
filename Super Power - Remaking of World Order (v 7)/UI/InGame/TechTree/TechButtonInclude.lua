@@ -634,7 +634,11 @@ end
 
 function AdjustArtOnGrantedActionButton( thisButton, thisBuildInfo, textureSize )
 	if thisButton then
-		thisButton:SetToolTipString( Locale.ConvertTextKey( thisBuildInfo.Description ) );
+		if thisBuildInfo.ImprovementType then
+			thisButton:SetToolTipString( GetHelpTextForImprovement( thisBuildInfo.ImprovementType ) );
+		else
+			thisButton:SetToolTipString( Locale.ConvertTextKey( thisBuildInfo.Description ) );
+		end
 		local textureOffset, textureSheet = IconLookup( thisBuildInfo.IconIndex, textureSize, thisBuildInfo.IconAtlas );				
 		if textureOffset == nil then
 			textureSheet = defaultErrorTextureSheet;

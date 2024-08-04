@@ -2558,6 +2558,24 @@ function GetHelpTextForImprovement( improvementID )
 
 	end
 
+	-- Building yield changes
+	items = {}
+	condition = { ImprovementType = improvement.Type }
+	for row in GameInfo.Building_ImprovementYieldChanges( thisImprovementType ) do
+		SetKey( items, row.BuildingType )
+	end
+	for buildingType in pairs( items ) do
+		item = GameInfo.Buildings[ buildingType ]
+		if item then
+			tip = ""
+			condition.BuildingType = buildingType
+			tip = GetYieldString( GameInfo.Building_ImprovementYieldChanges( condition ) )
+			if tip~="" then
+				insert( tips, "[ICON_BULLET]" .. BuildingColor( L(item.Description) ) .. tip )
+			end
+		end
+	end
+
 	-- Resource Yields
 	local thisImprovementAndResourceTypes = { ImprovementType = improvement.Type or -1 }
 	for resource in GameInfo.Resources() do
