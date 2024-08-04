@@ -1140,20 +1140,6 @@
 		</Row>
 
 		<Row>
-			<PolicyType>POLICY_MARITIME_INFRASTRUCTURE</PolicyType>
-			<ImprovementType>IMPROVEMENT_FISHERY_MOD</ImprovementType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_MARITIME_INFRASTRUCTURE</PolicyType>
-			<ImprovementType>IMPROVEMENT_GAS_RIG_MOD</ImprovementType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		
-		
-		<Row>
 			<PolicyType>POLICY_FREE_THOUGHT</PolicyType>
 			<ImprovementType>IMPROVEMENT_TRADING_POST</ImprovementType>
 			<YieldType>YIELD_SCIENCE</YieldType>
@@ -1236,12 +1222,6 @@
 		<Row>
 			<PolicyType>POLICY_FIVE_YEAR_PLAN</PolicyType>
 			<ImprovementType>IMPROVEMENT_FISHING_BOATS</ImprovementType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_FIVE_YEAR_PLAN</PolicyType>
-			<ImprovementType>IMPROVEMENT_GAS_RIG_MOD</ImprovementType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<Yield>1</Yield>
 		</Row>
