@@ -53,9 +53,6 @@ VALUES	('UNIT_WORKER',		'BUILD_SHOSHONE_WILDDOME');
 -- Improvements_Create_Collection
 --==========================================================================================================================	
 INSERT INTO Improvements_Create_Collection(ImprovementType,TerrainType,TerrainOnly,FeatureType,FeatureOnly,ResourceType)
-SELECT 'IMPROVEMENT_FISHERY_MOD',NULL,0,NULL,0, NULL UNION ALL
-SELECT 'IMPROVEMENT_GAS_RIG_MOD',NULL,0,NULL,0, NULL UNION ALL
-
 SELECT 'IMPROVEMENT_ETHIOPIA_COFFEE','TERRAIN_GRASS',1,NULL,0,'RESOURCE_COFFEE' UNION ALL
 SELECT 'IMPROVEMENT_ETHIOPIA_COFFEE','TERRAIN_PLAINS',1,NULL,0,'RESOURCE_COCOA' UNION ALL
 
@@ -70,10 +67,10 @@ UPDATE Improvements Set ExtraScore = -100 WHERE Type = 'IMPROVEMENT_TRADING_POST
 UPDATE Improvements Set ExtraScore = 100 WHERE Type = 'IMPROVEMENT_BYZANTIUM_ANGELOKASTRO';
 UPDATE Improvements Set ExtraScore = 100 WHERE Type = 'IMPROVEMENT_BRAZILWOOD_CAMP';
 UPDATE Improvements Set ExtraScore = 100 WHERE Type = 'IMPROVEMENT_CHATEAU';
+UPDATE Improvements Set ExtraScore = 100 WHERE Type = 'IMPROVEMENT_IROQUOIAN_FOREST_FARM';
 UPDATE Improvements Set ExtraScore = 200 WHERE Type = 'IMPROVEMENT_TERRACE_FARM';
 UPDATE Improvements Set ExtraScore = 250 WHERE Type = 'IMPROVEMENT_MOAI';
 UPDATE Improvements Set ExtraScore = 300 WHERE Type = 'IMPROVEMENT_MAYA_ALTAR';
-UPDATE Improvements Set ExtraScore = 350 WHERE Type = 'IMPROVEMENT_IROQUOIAN_FOREST_FARM';
 UPDATE Improvements Set ExtraScore = 700 WHERE Type = 'IMPROVEMENT_ETHIOPIA_COFFEE';
 UPDATE Improvements Set ExtraScore = 900 WHERE Type = 'IMPROVEMENT_SHOSHONE_WILDDOME';
 UPDATE Improvements Set ExtraScore = 300 WHERE Type = 'IMPROVEMENT_CREATE_FOREST_MOD';

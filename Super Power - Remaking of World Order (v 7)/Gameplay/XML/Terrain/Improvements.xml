@@ -69,9 +69,7 @@
 			<PortraitIndex>0</PortraitIndex>
 			<IconAtlas>SP_IMPROVEMENTS_ATLAS</IconAtlas>
 			<CreatedItemMod>1</CreatedItemMod>
-			<CreatedResourceQuantity>1</CreatedResourceQuantity>
 			<SetNewImprovement>IMPROVEMENT_FISHFARM_MOD</SetNewImprovement>
-
 		</Row>
 
 
@@ -99,7 +97,6 @@
 			<PortraitIndex>2</PortraitIndex>
 			<IconAtlas>SP_IMPROVEMENTS_ATLAS</IconAtlas>
 			<CreatedItemMod>1</CreatedItemMod>
-			<CreatedResourceQuantity>1</CreatedResourceQuantity>
 			<SetNewImprovement>IMPROVEMENT_OFFSHORE_PLATFORM</SetNewImprovement>
 		</Row>
 
@@ -348,32 +345,20 @@
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>1</Yield>
 		</Row>
-
-		<Row>
-			<ImprovementType>IMPROVEMENT_FISHERY_MOD</ImprovementType>
-			<YieldType>YIELD_FOOD</YieldType>
-			<Yield>2</Yield>
-		</Row>
-		<Row>
-			<ImprovementType>IMPROVEMENT_POLDER</ImprovementType>
-			<YieldType>YIELD_FOOD</YieldType>
-			<Yield>2</Yield>
-		</Row>
-		<Row>
-			<ImprovementType>IMPROVEMENT_POLDER</ImprovementType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>2</Yield>
-		</Row>
-		<Row>
-			<ImprovementType>IMPROVEMENT_GAS_RIG_MOD</ImprovementType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>4</Yield>
-		</Row>
-		
 		<Row>
 			<ImprovementType>IMPROVEMENT_FISHFARM_MOD</ImprovementType>
 			<YieldType>YIELD_FOOD</YieldType>
 			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_POLDER</ImprovementType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_POLDER</ImprovementType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>2</Yield>
 		</Row>
 
 		<Row>
@@ -1020,12 +1005,6 @@
 			<YieldType>YIELD_FOOD</YieldType>
 			<Yield>1</Yield>
 		</Row>
-		<Row>
-			<ImprovementType>IMPROVEMENT_FISHERY_MOD</ImprovementType>
-			<TechType>TECH_COMPASS</TechType>
-			<YieldType>YIELD_FOOD</YieldType>
-			<Yield>1</Yield>
-		</Row>
 
 		<Row>
 			<ImprovementType>IMPROVEMENT_FARM</ImprovementType>
@@ -1053,12 +1032,6 @@
 		</Row>
 		<Row>
 			<ImprovementType>IMPROVEMENT_FISHFARM_MOD</ImprovementType>
-			<TechType>TECH_GENETIC_ENGEERING</TechType>
-			<YieldType>YIELD_FOOD</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<ImprovementType>IMPROVEMENT_FISHERY_MOD</ImprovementType>
 			<TechType>TECH_GENETIC_ENGEERING</TechType>
 			<YieldType>YIELD_FOOD</YieldType>
 			<Yield>1</Yield>
