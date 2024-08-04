@@ -108,14 +108,16 @@ function AutoBuildingReplace(ePlayer, iTech, bAdopted)
 			print("tech: DYNAMITE")
 			for city in player:Cities() do
 				bIsDoAddNBuilding = false;
-				iOldBuilding = player:GetCivBuilding(GameInfoTypes["BUILDINGCLASS_STONE_WORKS"])
-				if city:IsHasBuilding(iOldBuilding) then
+				iOldBuilding = GameInfoTypes["BUILDINGCLASS_STONE_WORKS"]
+				if city:IsHasBuildingClass(iOldBuilding) then
 					bIsDoAddNBuilding = true;
+					iOldBuilding = player:GetCivBuilding(iOldBuilding)
 				end
 				if not bIsDoAddNBuilding then
-					iOldBuilding = player:GetCivBuilding(GameInfoTypes["BUILDINGCLASS_SAWMILL"])
-					if city:IsHasBuilding(iOldBuilding) then
+					iOldBuilding = GameInfoTypes["BUILDINGCLASS_SAWMILL"]
+					if city:IsHasBuildingClass(iOldBuilding) then
 						bIsDoAddNBuilding = true;
+						iOldBuilding = player:GetCivBuilding(iOldBuilding)
 					end
 				end
 
@@ -133,9 +135,10 @@ function AutoBuildingReplace(ePlayer, iTech, bAdopted)
 			print("tech: INDUSTRIALIZATION")
 			for city in player:Cities() do
 				bIsDoAddNBuilding = false;
-				iOldBuilding = player:GetCivBuilding(GameInfoTypes["BUILDINGCLASS_WORKSHOP"])
-				if city:IsHasBuilding(iOldBuilding) then
+				iOldBuilding = GameInfoTypes["BUILDINGCLASS_WORKSHOP"]
+				if city:IsHasBuildingClass(iOldBuilding) then
 					bIsDoAddNBuilding = true;
+					iOldBuilding = player:GetCivBuilding(iOldBuilding)
 				end
 
 				if bIsDoAddNBuilding then
@@ -149,26 +152,30 @@ function AutoBuildingReplace(ePlayer, iTech, bAdopted)
 				end
 
 				bIsDoAddNBuilding = false;
-				iOldBuilding = player:GetCivBuilding(GameInfoTypes["BUILDINGCLASS_GRAIN_MILL"])
-				if city:IsHasBuilding(iOldBuilding) then
+				iOldBuilding = GameInfoTypes["BUILDINGCLASS_GRAIN_MILL"]
+				if city:IsHasBuildingClass(iOldBuilding) then
 					bIsDoAddNBuilding = true;
+					iOldBuilding = player:GetCivBuilding(iOldBuilding)
 				end
 				if not bIsDoAddNBuilding then
-					iOldBuilding = player:GetCivBuilding(GameInfoTypes["BUILDINGCLASS_WATERMILL"])
-					if city:IsHasBuilding(iOldBuilding) then
+					iOldBuilding = GameInfoTypes["BUILDINGCLASS_WATERMILL"]
+					if city:IsHasBuildingClass(iOldBuilding) then
 						bIsDoAddNBuilding = true;
+						iOldBuilding = player:GetCivBuilding(iOldBuilding)
 					end
 				end
 				if not bIsDoAddNBuilding then
-					iOldBuilding = player:GetCivBuilding(GameInfoTypes["BUILDINGCLASS_STABLE"])
-					if city:IsHasBuilding(iOldBuilding) then
+					iOldBuilding = GameInfoTypes["BUILDINGCLASS_STABLE"]
+					if city:IsHasBuildingClass(iOldBuilding) then
 						bIsDoAddNBuilding = true;
+						iOldBuilding = player:GetCivBuilding(iOldBuilding)
 					end
 				end
 				if not bIsDoAddNBuilding then
-					iOldBuilding = player:GetCivBuilding(GameInfoTypes["BUILDINGCLASS_WINDMILL"])
-					if city:IsHasBuilding(iOldBuilding) then
+					iOldBuilding = GameInfoTypes["BUILDINGCLASS_WINDMILL"]
+					if city:IsHasBuildingClass(iOldBuilding) then
 						bIsDoAddNBuilding = true;
+						iOldBuilding = player:GetCivBuilding(iOldBuilding)
 					end
 				end
 
@@ -186,14 +193,16 @@ function AutoBuildingReplace(ePlayer, iTech, bAdopted)
 			print("tech: FERTILIZER")
 			for city in player:Cities() do
 				bIsDoAddNBuilding = false;
-				iOldBuilding = player:GetCivBuilding(GameInfoTypes["BUILDINGCLASS_FISH_FARM"])
-				if city:IsHasBuilding(iOldBuilding) then
+				iOldBuilding = GameInfoTypes["BUILDINGCLASS_FISH_FARM"]
+				if city:IsHasBuildingClass(iOldBuilding) then
 					bIsDoAddNBuilding = true;
+					iOldBuilding = player:GetCivBuilding(iOldBuilding)
 				end
 				if not bIsDoAddNBuilding then
-					iOldBuilding = player:GetCivBuilding(GameInfoTypes["BUILDINGCLASS_GRANARY"])
-					if city:IsHasBuilding(iOldBuilding) then
+					iOldBuilding = GameInfoTypes["BUILDINGCLASS_GRANARY"]
+					if city:IsHasBuildingClass(iOldBuilding) then
 						bIsDoAddNBuilding = true;
+						iOldBuilding = player:GetCivBuilding(iOldBuilding)
 					end
 				end
 
@@ -211,9 +220,10 @@ function AutoBuildingReplace(ePlayer, iTech, bAdopted)
 			print("tech: URBANLIZATION")
 			for city in player:Cities() do
 				bIsDoAddNBuilding = false;
-				iOldBuilding = player:GetCivBuilding(GameInfoTypes["BUILDINGCLASS_AQUEDUCT"])
-				if city:IsHasBuilding(iOldBuilding) then
+				iOldBuilding = GameInfoTypes["BUILDINGCLASS_AQUEDUCT"]
+				if city:IsHasBuildingClass(iOldBuilding) then
 					bIsDoAddNBuilding = true;
+					iOldBuilding = player:GetCivBuilding(iOldBuilding)
 				end
 
 				if bIsDoAddNBuilding then
@@ -230,9 +240,10 @@ function AutoBuildingReplace(ePlayer, iTech, bAdopted)
 			print("tech: COMBUSTION")
 			for city in player:Cities() do
 				bIsDoAddNBuilding = false;
-				iOldBuilding = player:GetCivBuilding(GameInfoTypes["BUILDINGCLASS_STAGECOACH"])
-				if city:IsHasBuilding(iOldBuilding) then
+				iOldBuilding = GameInfoTypes["BUILDINGCLASS_STAGECOACH"]
+				if city:IsHasBuildingClass(iOldBuilding) then
 					bIsDoAddNBuilding = true;
+					iOldBuilding = player:GetCivBuilding(iOldBuilding)
 				end
 
 				if bIsDoAddNBuilding then
