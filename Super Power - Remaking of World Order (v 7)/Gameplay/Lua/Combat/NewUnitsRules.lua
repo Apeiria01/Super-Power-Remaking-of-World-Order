@@ -192,7 +192,6 @@ GameEvents.PlayerTurnStart.Add(NewUnitCreationRules)
 function OnCorpsArmeeSP(iPlayerID, iUnitID)
 	local pPlayer = Players[iPlayerID];
 	if pPlayer == nil or pPlayer:GetCapitalCity() == nil
-		or PreGame.GetGameOption("GAMEOPTION_SP_CORPS_MODE_DISABLE") == 1
 		or pPlayer:GetUnitByID(iUnitID) == nil
 		or pPlayer:GetUnitByID(iUnitID):GetPlot() == nil
 		or pPlayer:GetUnitByID(iUnitID):IsImmobile()
@@ -324,8 +323,9 @@ function OnCorpsArmeeSP(iPlayerID, iUnitID)
 		pUnit:Kill(true);
 	end
 end
-
-GameEvents.UnitCreated.Add(OnCorpsArmeeSP)
+if PreGame.GetGameOption("GAMEOPTION_SP_CORPS_MODE_DISABLE") == 0 then
+    GameEvents.UnitCreated.Add(OnCorpsArmeeSP)
+end
 
 function CarrierPromotionTransfer(player, unit)
 	local AntiAir1ID = GameInfo.UnitPromotions["PROMOTION_CARRIER_FIGHTER_ANTI_AIR_1"].ID
