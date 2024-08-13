@@ -83,13 +83,13 @@
 			<BuildingType>BUILDING_BELIEF_RELIGIOUS_COLONIZATION</BuildingType>
 			<UnitClassType>UNITCLASS_SETTLER</UnitClassType>
 			<YieldType>YIELD_FAITH</YieldType>
-			<CostModifier>320</CostModifier>
+			<CostModifier>300</CostModifier>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_BELIEF_RELIGIOUS_COLONIZATION_2</BuildingType>
 			<UnitClassType>UNITCLASS_SETTLER</UnitClassType>
 			<YieldType>YIELD_FAITH</YieldType>
-			<CostModifier>160</CostModifier>
+			<CostModifier>200</CostModifier>
 		</Row>
 	</Building_EnableUnitPurchase>
 
