@@ -6417,7 +6417,7 @@
 				[COLOR_POSITIVE_TEXT]傳統政策[ENDCOLOR]適宜於繁榮精幹的帝國。
 				[NEWLINE][NEWLINE]啟用傳統政策：
 				[NEWLINE][ICON_BULLET]使[ICON_CAPITAL]首都+3[ICON_CULTURE]文化，+3[ICON_RESEARCH]科研。
-				[NEWLINE][ICON_BULLET]首都出發的商路+3距離基數、+3[ICON_GOLD]金錢。
+				[NEWLINE][ICON_BULLET]首都出發的商路+5距離基數、+5[ICON_GOLD]金錢。
 				[NEWLINE][ICON_BULLET]城市地塊擴張所需文化成本-25%。
 				[NEWLINE][ICON_BULLET]允許建造空中花園。
 				[NEWLINE][NEWLINE]推行所有傳統政策：

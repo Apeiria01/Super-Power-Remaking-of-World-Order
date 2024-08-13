@@ -11,7 +11,7 @@
 		
 		<Update>
 			<Set PlotCultureExponentModifier="-25" GreatGeneralRateModifier="25" GreatAdmiralRateModifier="25" RiggingElectionModifier="50"
-			StealTechFasterModifier="50" CapitalTradeRouteGoldChange="300" CapitalTradeRouteRangeChange="3"/>
+			StealTechFasterModifier="50" CapitalTradeRouteGoldChange="500" CapitalTradeRouteRangeChange="5"/>
 			<Where Type="POLICY_TRADITION"/>
 		</Update>
 		<Update>
