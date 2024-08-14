@@ -1,3 +1,4 @@
+local bIsAllUBActive = PreGame.GetGameOption("GAMEOPTION_HUMAN_ALL_UC") == 1 or GameInfo.SPNewEffectControler.SP_ALL_UB_ACTIVE.Enabled
 function NromanCampBouns(iPlayer)
     local pPlayer = Players[iPlayer]
     if not pPlayer:IsMajorCiv() then
@@ -41,7 +42,7 @@ function NromanCampBouns(iPlayer)
     end
 end
 
-if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_DENMARK) then
+if bIsAllUBActive or Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_DENMARK) then
     function SPNNromanCampConquestedCity(oldOwnerID, isCapital, cityX, cityY, newOwnerID, numPop, isConquest)
         if not isConquest then return end
         NromanCampBouns(newOwnerID)
@@ -57,7 +58,7 @@ if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_DENMARK) then
 end
 
 ------------------ Portugal UB BEGIN ------------------
-if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_PORTUGAL) then
+if bIsAllUBActive or Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_PORTUGAL) then
 	GameEvents.TradeRouteMove.Add(function(iX, iY, iUnit, iOwner, iOriginalPlayer, iOriginalCity, iDestPlayer, iDestCity)
 		local pOnwer = Players[iOwner];
 		if pOnwer == nil or not pOnwer:IsAlive() then
@@ -100,7 +101,7 @@ end
 
 ------------------ CARTHAGINIAN_AGORA BEGIN   ------------------
 
-if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_CARTHAGE) then
+if bIsAllUBActive or Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_CARTHAGE) then
 	local CarthaginianAgoraDummyPolicyCommerce = GameInfoTypes["POLICY_BUILDING_CARTHAGINIAN_AGORA_COMMERCE"];
 	local CarthaginianAgoraDummyPolicyExploration = GameInfoTypes["POLICY_BUILDING_CARTHAGINIAN_AGORA_EXPLORATION"];
 	local CarthaginianAgoraBuildingID = GameInfoTypes["BUILDING_CARTHAGINIAN_AGORA"];
@@ -133,11 +134,11 @@ if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_CARTHAGE) then
 	end
 
 	GameEvents.PlayerDoTurn.Add(UpdateCarthaginanUWEffect);
-	GameEvents.PlayerAdoptPolicy.Add(function(iPlayerID, iPolicyID) UpdateCarthaginanUWEffect(iPlayerID); end);
+	GameEvents.PlayerAdoptPolicyBranch.Add(UpdateCarthaginanUWEffect);
 end
 ------------------ CARTHAGINIAN_AGORA END   ------------------
 
-if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_ASSYRIA) then
+if bIsAllUBActive or Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_ASSYRIA) then
 	local assurTemple = GameInfoTypes["BUILDING_ASSUR_TEMPLE"]
 	function ASHUR_TEMPLEGetFoodAndFaith(iPlayer, iKilledPlayer, iUnitType, iKillingUnit, iKilledUnit)
 		if iPlayer == iKilledPlayer or iPlayer == -1 then return end
@@ -175,7 +176,7 @@ if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_ASSYRIA) then
 	GameEvents.UnitKilledInCombat.Add(ASHUR_TEMPLEGetFoodAndFaith)
 end
 
-if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_ZULU) then
+if bIsAllUBActive or Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_ZULU) then
 	GameEvents.UnitPromoted.Add(function(iPlayer, iUnit, iPromotionType)
 		local pPlayer = Players[iPlayer];
 		if pPlayer == nil then return end
@@ -199,7 +200,7 @@ if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_ZULU) then
 	end)
 end
 
-if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_ARABIA) then
+if bIsAllUBActive or Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_ARABIA) then
 	local iIsiamicFactor = GameDefines["ARABIA_ISIAMIC_UNIVERSITY_FACTOR"] or 7;
 	local eIsiamicSchool = GameInfoTypes["BUILDING_ARABIA_ISIAMIC_UNIVERSITY"]
 	local eIsiamicUniversityAllahAkbar = GameInfoTypes["BUILDING_ARABIA_ISIAMIC_UNIVERSITY_ALLAH_AKBAR"]
@@ -258,11 +259,9 @@ if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_ARABIA) then
 		if pPlayer == nil or not pPlayer:IsAlive() then
 			return
 		end
-		if pPlayer:GetCivilizationType() ~= GameInfoTypes.CIVILIZATION_ARABIA then
-			return
-		end
-
 		local iNumIsiamicSchool = pPlayer:CountNumBuildings(eIsiamicSchool)
+		if iNumIsiamicSchool <= 0 then return end
+		
 		local iNumBonusFactor = math.floor(iNumIsiamicSchool / iIsiamicFactor)
 
 		for city in pPlayer:Cities() do
