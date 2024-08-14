@@ -20,7 +20,6 @@ include("NewCombatEffects_SP10");
 include("NewBuildingEffects");
 include("NewCityRule");
 include("NewPolicyEffects");
-include("SP8PolicyEffects");
 include("NewReligionRule.lua");
 include("NewTraitEffects");
 include("NuclearWinter");
