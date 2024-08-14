@@ -5916,8 +5916,8 @@
 
 		<Replace Tag="TXT_KEY_TRAIT_PHOENICIAN_HERITAGE">
 			<Text>
-				[ICON_BULLET]每位专家+2[ICON_PRODUCTION]产能。
-				[NEWLINE][ICON_BULLET]每条海上商路+4[ICON_GOLD]金钱并且+25%商路距离。
+				[ICON_BULLET]海上商路为出发城市+2[ICON_PRODUCTION]产能（随时代增加）并且+25%商路距离。
+				[NEWLINE][ICON_BULLET]研发帆船后获得一位移民。
 			</Text>
 		</Replace>	
 
