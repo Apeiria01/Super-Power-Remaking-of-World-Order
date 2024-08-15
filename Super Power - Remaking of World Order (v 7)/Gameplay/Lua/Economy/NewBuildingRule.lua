@@ -61,7 +61,8 @@ end
 if bIsAllUBActive or Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_PORTUGAL) then
 	GameEvents.TradeRouteMove.Add(function(iX, iY, iUnit, iOwner, iOriginalPlayer, iOriginalCity, iDestPlayer, iDestCity)
 		local pOnwer = Players[iOwner];
-		if pOnwer == nil or not pOnwer:IsAlive() then
+		if pOnwer == nil or not pOnwer:IsAlive()
+		or (iOriginalPlayer == iDestPlayer and iOriginalPlayer == iOwner) then
 			return;
 		end
 

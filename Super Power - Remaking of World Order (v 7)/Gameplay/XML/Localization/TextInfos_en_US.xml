@@ -3299,7 +3299,7 @@
 				[ICON_BULLET]+1 [ICON_GOLD] Gold and +1 [ICON_PRODUCTION] for every [COLOR_POSITIVE_TEXT]Luxury Resource[ENDCOLOR] on water tiles worked by this City.
 				[NEWLINE][ICON_BULLET]+1 [ICON_PRODUCTION] for every [COLOR_POSITIVE_TEXT]Atoll[ENDCOLOR] worked by this City.
 				[NEWLINE][ICON_BULLET]+3 [ICON_CONSUMER] Consumer.
-				[NEWLINE][ICON_BULLET]Gain [ICON_GOLD] when a Cargo ship passes through city plots and the city has Feitoria.
+				[NEWLINE][ICON_BULLET]Gain [ICON_GOLD] when a International Cargo ship passes through city plots and the city has Feitoria.
 			</Text>
 		</Row>
 		<Row>
