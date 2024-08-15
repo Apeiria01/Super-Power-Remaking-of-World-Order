@@ -7208,7 +7208,7 @@
 		<Replace Tag="TXT_KEY_POLICY_ECONOMIC_UNION_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]聯合研究[ENDCOLOR]
-				[NEWLINE]合作研究產出的[ICON_RESEARCH]科研+100%，每壹個合作研究為全國+10%[ICON_RESEARCH]科研產出。
+				[NEWLINE]合作研究產出的[ICON_RESEARCH]科研+100%，每個合作研究為全國+5%[ICON_RESEARCH]科研總產出。
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_ECONOMIC_UNION_TEXT">

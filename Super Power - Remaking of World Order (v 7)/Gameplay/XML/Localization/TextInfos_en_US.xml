@@ -8142,7 +8142,7 @@
 		<Replace Tag="TXT_KEY_POLICY_ECONOMIC_UNION_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]Joint Research[ENDCOLOR]
-				[NEWLINE]Boosts [ICON_RESEARCH] Science gained from research agreements by 100%, +10% [ICON_RESEARCH] Science nationwide for every research agreement.
+				[NEWLINE]Boosts [ICON_RESEARCH] Science gained from research agreements by 100%, +5% [ICON_RESEARCH] total Science nationwide for every research agreement.
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_ECONOMIC_UNION_TEXT">

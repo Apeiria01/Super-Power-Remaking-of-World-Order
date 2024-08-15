@@ -7312,7 +7312,7 @@
 		<Replace Tag="TXT_KEY_POLICY_ECONOMIC_UNION_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]联合研究[ENDCOLOR]
-				[NEWLINE]合作研究产出的[ICON_RESEARCH]科研+100%，每一个合作研究为全国+10%[ICON_RESEARCH]科研产出。
+				[NEWLINE]合作研究产出的[ICON_RESEARCH]科研+100%，每个合作研究为全国+5%[ICON_RESEARCH]科研总产出。
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_ECONOMIC_UNION_TEXT">
