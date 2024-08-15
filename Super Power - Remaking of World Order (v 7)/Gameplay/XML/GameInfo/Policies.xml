@@ -543,7 +543,7 @@
 			<Where Type="POLICY_CIVIL_SOCIETY"/>
 		</Update>-->
 		<Update>
-			<Set ScienceModifierFromRANum="10" MedianTechPercentChange="50"/>
+			<Set ScienceModifierFromRANum="5" MedianTechPercentChange="50"/>
 			<Where Type="POLICY_ECONOMIC_UNION"/>
 		</Update>
 		<Update>
