@@ -28,7 +28,7 @@
 			<IconAtlas>BW_ATLAS_1</IconAtlas>
 			<PortraitIndex>19</PortraitIndex>
 			<PolicyCostModifier>50</PolicyCostModifier>
-			<Happiness>20</Happiness>
+			<Happiness>30</Happiness>
 		</Row>
 
 		<Row>
@@ -3288,4 +3288,11 @@
 			<YieldValue>1</YieldValue>
 		</Row>
 	</Building_TradeRouteFromTheCityYields>
+	<Building_YieldMultiplier>
+		<Row>
+			<BuildingType>BUILDING_CITYSTATE_RESOURCE</BuildingType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>-20</Yield>
+		</Row>
+	</Building_YieldMultiplier>
 </GameData>
