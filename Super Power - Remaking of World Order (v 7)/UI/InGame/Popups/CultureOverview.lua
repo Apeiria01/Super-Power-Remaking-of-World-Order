@@ -574,6 +574,29 @@ end
 -- Cache these to avoid constant DB queries (also sorting).
 g_GreatWorkBuildings = getBuildings();
 
+function OnGreatWorkBuildingsChanges(NewBuildingType)
+    local t = {}
+    t.Id = GameInfo.Buildings[NewBuildingType].ID
+    t.BuildingClass = GameInfo.Buildings[NewBuildingType].BuildingClass
+    t.BuildingType = NewBuildingType
+    t.GreatWorkCount = GameInfo.Buildings[NewBuildingType].GreatWorkCount
+    local row = GameInfo.Civilization_BuildingClassOverrides{BuildingType = t.BuildingType, BuildingClassType = t.BuildingClass}()
+    t.CivilizationType = row and row.CivilizationType or nil
+    if GameInfo.Buildings[NewBuildingType].PrereqTech then
+        t.GridX = GameInfo.Technologies[GameInfo.Buildings[NewBuildingType].PrereqTech].GridX
+        t.GridY = GameInfo.Technologies[GameInfo.Buildings[NewBuildingType].PrereqTech].GridY
+    else
+        t.GridX = 0
+        t.GridY = 0
+    end
+    for k, v in pairs(g_GreatWorkBuildings) do
+        if v.BuildingClass == t.BuildingClass then
+            g_GreatWorkBuildings[k] = t
+        end
+    end
+end
+LuaEvents.GreatWorkBuildingsChanges.Add(OnGreatWorkBuildingsChanges)
+
 print("Non-Wonder Great Work buildings");
 for _, v in pairs(g_GreatWorkBuildings) do
     print(v.Id .. ":" .. v.BuildingClass .. "/" .. v.BuildingType .. ": " .. v.GreatWorkCount .. "x GW" .. (v.HasThemeBonusInt == 1 and "+T" or "") .. " / " .. (v.CivilizationType ~= nil and v.CivilizationType or "Generic") .. (v.GridX ~= nil and " (" .. v.GridX .. "," .. v.GridY .. ")" or " (no tech)"));
