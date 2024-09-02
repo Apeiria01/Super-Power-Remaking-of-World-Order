@@ -22,7 +22,6 @@ include("NewCityRule");
 include("NewPolicyEffects");
 include("NewReligionRule.lua");
 include("NewTraitEffects");
-include("NuclearWinter");
 include("NewBuildingRule");
 -- Misc
 include("TerrainTransform");

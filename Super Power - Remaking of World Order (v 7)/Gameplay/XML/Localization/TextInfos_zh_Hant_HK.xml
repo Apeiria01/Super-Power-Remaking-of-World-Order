@@ -2550,7 +2550,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_UNIT_SATELLITE_ANTIFALLOUT_HELP</Tag>
-			<Text>該衛星擁有如下效果：[NEWLINE][ICON_BULLET]一次性移除全球所有輻射地塊。該衛星只能發射一次。</Text>
+			<Text>該衛星擁有如下效果：[NEWLINE][ICON_BULLET]一次性移除全球所有輻射地塊、減少至多150點核冬天進程并強制刷新核冬天階段。該衛星只能發射一次。</Text>
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_UNIT_SATELLITE_ANTIFALLOUT_QUOTE</Tag>
@@ -4497,7 +4497,14 @@
 			<Text>{TXT_KEY_CONCEPT_SP_NUCLEAR_WINTER_DETAILS_TOPIC}</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CONCEPT_SP_NUCLEAR_WINTER_DETAILS_SUMMARY">
-			<Text>觸發條件：核爆炸會在地圖上產生核輻射。如果地圖上0.5%的地塊被輻射塵覆蓋，核冬天的扳機將被摳動。[NEWLINE][NEWLINE]效果：核冬天擁有四個階段，如果有更多核爆炸，核冬天就會進入下一個階段。[NEWLINE][NEWLINE]1，凜冬將至——核輻射區域：0.5%-1%。你在發生核爆炸時會收到核冬天即將降臨的警告。[NEWLINE]2，災變夜——核輻射區域：1%-5%。輻射煙雲遮蔽了太陽，地球開始了長夜。所有食物產出高於3的地塊，每發生一次核爆炸會減1產出。這將會減慢各個城市的人口增長。[NEWLINE]3，末世——核輻射區域：5%-10%。大量的輻射塵覆蓋了土壤，所有食物產出高於1的地塊，每發生一次核爆炸會減1產出。這會導致全球性的饑荒。[NEWLINE]4，滅——核輻射區域：>10%。地球徹底暗無天日，所有地塊的食物和產能隨著新的核爆炸都會降低至0，核戰中的倖存者大部分也將飽受饑餒而死。所有城市將倒退回石器時代。</Text>
+			<Text>
+				觸發條件：核爆炸會增加全球核冬天進程。當核冬天進程達到閾值時，核冬天的扳機將被摳動。
+				[NEWLINE][NEWLINE]效果：核冬天擁有四個階段，如果有更多核爆炸，核冬天就會進入下壹個階段。
+				[NEWLINE][NEWLINE]1，凜冬將至——核冬天進程達到50。你在發生核爆炸時會收到核冬天即將降臨的警告。
+				[NEWLINE]2，災變夜——核冬天進程達到75。輻射煙雲遮蔽了太陽，地球開始了長夜，各個城市的人口增長減慢。
+				[NEWLINE]3，末世——核冬天進程達到225。大量的輻射塵覆蓋了土壤，全球性的饑荒開始。
+				[NEWLINE]4，滅——核冬天進程達到500。地球徹底暗無天日，核戰中的幸存者大部分將飽受饑餒而死。所有城市將倒退回石器時代。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CONCEPT_SP_NUCLEAR_WINTER_DETAILS_ADVISOR_QUESTION">
 			<Text>核冬天的觸發條件和效果是什麼?</Text>
@@ -4510,7 +4517,13 @@
 			<Text>{TXT_KEY_CONCEPT_SP_NUCLEAR_WINTER_RESULT_TOPIC}</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CONCEPT_SP_NUCLEAR_WINTER_RESULT_SUMMARY">
-			<Text>核冬天是一個不可逆的過程，一旦發生，氣候將發生永久性的變化。因此應當儘量不要讓其發生。[NEWLINE][NEWLINE]1，一次核爆炸不會導致核冬天，只有一場大規模核戰爭足以觸發它。由於這個過程是通過計算地圖上輻射地塊的總量來觸發的，在同一塊區域內進行的多次核爆炸（類似於核試驗）不會觸發嚴重的後果。[NEWLINE]2，通過清理輻射地塊，你可以減緩核冬天的進程。這會阻止它進入下一個階段，但不會使其返回到上個階段。[NEWLINE]3，最好的阻止核冬天的方法當然是不使用核武器，因此核不擴散條約非常重要。[NEWLINE]4，如果核冬天到達了其最嚴重的階段，它將會毀滅人類文明。但你依然還有最後一點希望——趁你的城市還未衰落前以最快的速度製造出星際飛船、最後一次外交勝利的嘗試、用你殘存的兵力攻克最後一個頑敵的首都、在10年內達成文化或時間勝利等。無論你的打算是什麼，請儘快做吧，末日的鐘聲正在敲響！</Text>
+			<Text>
+				核冬天是一個宏觀不可逆的過程，一旦發生，全球氣候將發生半永久性的變化（恢復十分緩慢）。因此應當盡量不要讓其發生。
+				[NEWLINE][NEWLINE]1，一次核爆炸不會導致核冬天，只有一場大規模核戰爭足以觸發它。
+				[NEWLINE]2，發生輻射清理衛星可以大幅減少全球核冬天進程，甚至能夠逆轉氣候變化，但是一局遊戲只能使用一次。
+				[NEWLINE]3，最好的阻止核冬天的方法當然是不使用核武器，因此核不擴散條約非常重要。
+				[NEWLINE]4，如果核冬天到達了其最嚴重的階段，它將會毀滅人類文明。但你依然還有最後一點希望——趁你的城市還未衰落前以最快的速度製造出星際飛船、最後一次外交勝利的嘗試、用你殘存的兵力攻克最後一個頑敵的首都、在10年內達成文化或時間勝利等。無論你的打算是什麼，請儘快做吧，末日的鐘聲正在敲響！
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CONCEPT_SP_NUCLEAR_WINTER_RESULT_ADVISOR_QUESTION">
 			<Text>怎樣阻止核冬天?</Text>
@@ -5180,7 +5193,7 @@
 			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]單位有待選擇晉升[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_UNIT_CAN_ESTABLISH_CORPS_OR_ARMEE">
-			<Text>[NEWLINE][COLOR_POSITIVE_TEXT]在軍團模式下允許將同地塊陸軍單位升級為軍團或集團軍（僅一次）[ENDCOLOR]</Text>
+			<Text>[NEWLINE][COLOR_POSITIVE_TEXT]軍團模式：允許將同地塊陸軍單位升級為軍團或集團軍（僅一次）[ENDCOLOR]</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_FULLATTACK_ON_SHORT">
@@ -5370,6 +5383,30 @@
 			<Text>滅</Text>
 		</Row>
 
+		<Row Tag="TXT_KEY_NUCLEAR_WINTER_ALARM">
+			<Text>凜冬將至</Text>
+		</Row>
+		<Row Tag="TXT_KEY_NUCLEAR_WINTER_ALARM_HELP">
+			<Text>目前全球產出暫未受到影響，但核爆炸所造成的影響已經需要引起註意！</Text>
+		</Row>
+		<Row Tag="TXT_KEY_NUCLEAR_WINTER_LEVEL_1">
+			<Text>災變夜</Text>
+		</Row>
+		<Row Tag="TXT_KEY_NUCLEAR_WINTER_LEVEL_1_HELP">
+			<Text>輻射煙雲遮蔽了太陽，地球開始了長夜，各個城市的人口增長減慢!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_NUCLEAR_WINTER_LEVEL_2">
+			<Text>末世</Text>
+		</Row>
+		<Row Tag="TXT_KEY_NUCLEAR_WINTER_LEVEL_2_HELP">
+			<Text>大量的輻射塵覆蓋了土壤，全球性的饑荒開始了！</Text>
+		</Row>
+		<Row Tag="TXT_KEY_NUCLEAR_WINTER_LEVEL_3">
+			<Text>滅</Text>
+		</Row>
+		<Row Tag="TXT_KEY_NUCLEAR_WINTER_LEVEL_3_HELP">
+			<Text>地球徹底暗無天日，無盡的核戰爭終結了人類的命運！</Text>
+		</Row>
 
 		<!-- *************************New Attack Effect Notifications****************************-->
 		<!--袭扰提示-->
@@ -11953,8 +11990,10 @@
 			<Text>威力相當於洲際導彈，一擊滅城的存在！[NEWLINE][NEWLINE]需要炸彈之王工程和曼哈頓工程解鎖。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_TSAR_BOMBA_STRATEGY">
-			<Text>相當於提前1個時代的ICBM，是非常恐怖的戰略核威懾力量。如果玩家不怕核冬天的話，用它來壓制boss的效果好極了！
-				 [NEWLINE][NEWLINE]克制方法：沙皇炸彈一旦投下，誰也阻止不了它爆炸。不過它的射程並不遠，難以威脅到另一大洲的國家。此外它也可以被核不擴散決議所禁止。</Text>
+			<Text>
+				相當於提前1個時代的ICBM，是非常恐怖的戰略核威懾力量。如果玩家不怕核冬天的話，用它來壓制boss的效果好極了！
+				[NEWLINE][NEWLINE]克制方法：沙皇炸彈一旦投下，誰也阻止不了它爆炸。不過它的射程並不遠，難以威脅到另一大洲的國家。此外它也可以被核不擴散決議所禁止。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_TSAR_BOMBA_TEXT">
 			<Text>AN602，別稱“沙皇炸彈”(俄語Царь-бомба)，是冷戰期間蘇聯所制造的氫彈，總共制造兩枚，其中一枚於1961年10月30日在新地島試爆，另一枚作為研究與備用。它是人類至今所引爆過所有種類的炸彈中，體積、重量和威力上均為最強大的炸彈。[NEWLINE][NEWLINE]它的爆炸當量本來相當於1.7億噸的TNT炸藥，不過蘇聯當局憂心試爆後的核子落塵對環境的嚴重影響，會導致內政難題與外交風波，因此將核彈減半為6000萬噸的爆炸威力。盡管被削減了一半的威力，沙皇炸彈的威力依舊是第二次世界大戰末期投擲於廣島和長崎的“小男孩”原子彈的3864倍，“胖子”原子彈的2300倍。雖然蘇聯成功完成試爆，沙皇炸彈仍然從未列入現役武器，蘇聯軍方僅想要將沙皇炸彈作為蘇聯在軍力上的象征與展示。[NEWLINE][NEWLINE]“沙皇”一詞慣用於描述俄羅斯的巨型事物，如沙皇鐘、沙皇炮等。AN602擁有諸多別稱，例如RDS-220（РДС-220）、RDS-202（РДС-202）、RN202、PH202、AH602、大伊凡、大伊萬等，其中情局代號為“JOE 111”。</Text>
@@ -13417,7 +13456,7 @@
 				[ICON_BULLET]提升鄰近兩格的陸軍單位的戰鬥效率。
 				[NEWLINE][ICON_BULLET]能夠消耗一回合移動力來移除一個陸軍單位的所有負面狀態。
 				[NEWLINE][ICON_BULLET]免疫濺射和穿透傷害。
-				[NEWLINE][ICON_BULLET]在軍團模式下允許將同地塊陸軍單位升級為軍團或集團軍（僅一次）。
+				[NEWLINE][ICON_BULLET]軍團模式：允許將同地塊陸軍單位升級為軍團或集團軍（僅一次）。
 			</Text>
 		</Replace>
 
@@ -16126,6 +16165,10 @@
 
 		<Row Tag="TXT_KEY_EUPANEL_BONUS_ATTACK_WOUND_UNITS">
 			<Text>攻擊受損單位加成</Text>
+		</Row>
+		
+		<Row Tag="TXT_KEY_SP_UNIT_NUCLEAR_WINTER_PROCESS">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]核冬天：核冬天進程增加{1_Num}點[ENDCOLOR]</Text>
 		</Row>
 	</Language_zh_Hant_HK>
 </GameData>
