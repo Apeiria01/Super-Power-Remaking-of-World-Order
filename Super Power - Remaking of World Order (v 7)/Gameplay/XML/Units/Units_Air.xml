@@ -1004,6 +1004,7 @@
 			<MoveRate>AIR_REBASE</MoveRate>
 			<ObsoleteTech>TECH_ADVANCED_BALLISTICS</ObsoleteTech>
 			<ExtraMaintenanceCost>50</ExtraMaintenanceCost>
+			<NuclearWinterProcess>10</NuclearWinterProcess>
 		</Row>
 
 		<Row>
@@ -1040,6 +1041,7 @@
 			<PortraitIndex>35</PortraitIndex>
 			<MoveRate>AIR_REBASE</MoveRate>
 			<ExtraMaintenanceCost>75</ExtraMaintenanceCost>
+			<NuclearWinterProcess>8</NuclearWinterProcess>
 		</Row>
 
 		<Row>
@@ -1077,6 +1079,7 @@
 			<PortraitIndex>30</PortraitIndex>
 			<MoveRate>AIR_REBASE</MoveRate>
 			<ExtraMaintenanceCost>100</ExtraMaintenanceCost>
+			<NuclearWinterProcess>5</NuclearWinterProcess>
 		</Row>
 		
 	</Units>
