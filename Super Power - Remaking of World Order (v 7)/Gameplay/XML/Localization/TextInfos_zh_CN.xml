@@ -2605,7 +2605,12 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_UNIT_SATELLITE_ANTIFALLOUT_HELP</Tag>
-			<Text>该卫星拥有如下效果：[NEWLINE][ICON_BULLET]一次性移除全球所有辐射地块、减少至多150点核冬天进程并强制刷新核冬天阶段。该卫星只能发射一次。</Text>
+			<Text>
+				该卫星只能发射一次，拥有如下效果：
+				[NEWLINE][ICON_BULLET]一次性移除全球所有辐射地块。
+				[NEWLINE][ICON_BULLET]+200%核冬天自然恢复速度。
+				[NEWLINE][ICON_BULLET]减少至多150点核冬天进程并强制刷新核冬天阶段。
+			</Text>
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_UNIT_SATELLITE_ANTIFALLOUT_QUOTE</Tag>
@@ -16357,7 +16362,7 @@
 		</Row>
 		
 		<Row Tag="TXT_KEY_SP_UNIT_NUCLEAR_WINTER_PROCESS">
-			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]核冬天：核冬天进程增加{1_Num}点[ENDCOLOR]</Text>
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]核冬天：核冬天进程增加{1_Num}点[ENDCOLOR]（当前核冬天进程为{2_Num}）</Text>
 		</Row>
 	</Language_zh_CN>
 </GameData>

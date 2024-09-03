@@ -2550,7 +2550,12 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_UNIT_SATELLITE_ANTIFALLOUT_HELP</Tag>
-			<Text>該衛星擁有如下效果：[NEWLINE][ICON_BULLET]一次性移除全球所有輻射地塊、減少至多150點核冬天進程并強制刷新核冬天階段。該衛星只能發射一次。</Text>
+			<Text>
+				該衛星只能發射一次，擁有如下效果：
+				[NEWLINE][ICON_BULLET]一次性移除全球所有輻射地塊。
+				[NEWLINE][ICON_BULLET]+200%核冬天自然恢復速度。
+				[NEWLINE][ICON_BULLET]減少至多150點核冬天進程並強制刷新核冬天階段。
+			</Text>
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_UNIT_SATELLITE_ANTIFALLOUT_QUOTE</Tag>
@@ -16168,7 +16173,7 @@
 		</Row>
 		
 		<Row Tag="TXT_KEY_SP_UNIT_NUCLEAR_WINTER_PROCESS">
-			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]核冬天：核冬天進程增加{1_Num}點[ENDCOLOR]</Text>
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]核冬天：核冬天進程增加{1_Num}點[ENDCOLOR]（當前核冬天進程為{2_Num}）</Text>
 		</Row>
 	</Language_zh_Hant_HK>
 </GameData>
