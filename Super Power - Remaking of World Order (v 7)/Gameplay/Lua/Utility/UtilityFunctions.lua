@@ -807,18 +807,19 @@ function SPCargoListSetup(iPlayerID)
 		overrideMis = pPlayer:GetCivUnit(GameInfoTypes[pMissile_Unit.Class]);
 	end
 
-	if overrideCBA and GameInfo.Units[overrideCBA.UnitType].Special == "SPECIALUNIT_FIGHTER" then
-		iCBAcraft = GameInfoTypes[overrideCBA.UnitType];
-	elseif iCBAcraft == GameInfoTypes["UNIT_CARRIER_FIGHTER_ADV"] and (pPlayer:HasTrait(GameInfoTypes["TRAIT_OCEAN_MOVEMENT"]) or (pPlayer:GetUUFromExtra(GameInfoTypes["UNIT_CARRIER_FIGHTER_ENGLISH_HARRIER_ADV"]) > 0))
+	if iCBAcraft == GameInfoTypes["UNIT_CARRIER_FIGHTER_ADV"] 
+	and (pPlayer:HasTrait(GameInfoTypes["TRAIT_OCEAN_MOVEMENT"]) or pPlayer:GetUUFromExtra(GameInfoTypes["UNIT_CARRIER_FIGHTER_ENGLISH_HARRIER_ADV"]) > 0)
 	then
 		iCBAcraft = GameInfoTypes["UNIT_CARRIER_FIGHTER_ENGLISH_HARRIER_ADV"];
 		print("English Unique Adv CF!")
+	elseif overrideCBA and GameInfo.Units[overrideCBA].Special == "SPECIALUNIT_FIGHTER" then
+		iCBAcraft = overrideCBA;
 	end
-	if overrideASA and GameInfo.Units[overrideASA.UnitType].Special == "SPECIALUNIT_STEALTH" then
-		iASAcraft = GameInfoTypes[overrideASA.UnitType];
+	if overrideASA and GameInfo.Units[overrideASA].Special == "SPECIALUNIT_STEALTH" then
+		iASAcraft = overrideASA;
 	end
-	if overrideMis and GameInfo.Units[overrideMis.UnitType].Special == "SPECIALUNIT_MISSILE" then
-		iMissileU = GameInfoTypes[overrideMis.UnitType];
+	if overrideMis and GameInfo.Units[overrideMis].Special == "SPECIALUNIT_MISSILE" then
+		iMissileU = overrideMis;
 	end
 	if iASAcraft and iASAcraft ~= -1 then
 		for pCity in pPlayer:Cities() do
@@ -932,7 +933,7 @@ function CarrierRestore(iPlayerID, iUnitID, iCargoUnit)
 		if iCost == nil or iCost < 0 or iCost > pPlayer:GetGold() then
 			return;
 		end
-		if (pPlayer:HasTrait(GameInfoTypes["TRAIT_OCEAN_MOVEMENT"]) and iCargoUnit == GameInfoTypes["UNIT_CARRIER_FIGHTER_ADV"])
+		if (iCargoUnit == GameInfoTypes["UNIT_CARRIER_FIGHTER_ADV"] and (pPlayer:HasTrait(GameInfoTypes["TRAIT_OCEAN_MOVEMENT"]) or pPlayer:GetUUFromExtra(GameInfoTypes["UNIT_CARRIER_FIGHTER_ENGLISH_HARRIER_ADV"]) > 0))
 		or pUnit:GetUnitType() == GameInfoTypes["UNIT_CARRIER_FIGHTER_ENGLISH_HARRIER"]
 		then
 			iCargoUnit = GameInfoTypes["UNIT_CARRIER_FIGHTER_ENGLISH_HARRIER_ADV"];
