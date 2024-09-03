@@ -797,21 +797,18 @@ function SPCargoListSetup(iPlayerID)
 		end
 	end
 	if pCBAcraftUnit then
-		overrideCBA = GameInfo.Civilization_UnitClassOverrides { UnitClassType = pCBAcraftUnit.Class, CivilizationType =
-			GameInfo.Civilizations[pPlayer:GetCivilizationType()].Type } ();
+		overrideCBA = pPlayer:GetCivUnit(GameInfoTypes[pCBAcraftUnit.Class]);
 	end
 	if pASAcraftUnit then
-		overrideASA = GameInfo.Civilization_UnitClassOverrides { UnitClassType = pASAcraftUnit.Class, CivilizationType =
-			GameInfo.Civilizations[pPlayer:GetCivilizationType()].Type } ();
+		overrideASA = pPlayer:GetCivUnit(GameInfoTypes[pASAcraftUnit.Class]);
 	end
 	if pMissile_Unit then
-		overrideMis = GameInfo.Civilization_UnitClassOverrides { UnitClassType = pMissile_Unit.Class, CivilizationType =
-			GameInfo.Civilizations[pPlayer:GetCivilizationType()].Type } ();
+		overrideMis = pPlayer:GetCivUnit(GameInfoTypes[pMissile_Unit.Class]);
 	end
 
 	if overrideCBA and GameInfo.Units[overrideCBA.UnitType].Special == "SPECIALUNIT_FIGHTER" then
 		iCBAcraft = GameInfoTypes[overrideCBA.UnitType];
-	elseif iCBAcraft == GameInfoTypes["UNIT_CARRIER_FIGHTER_ADV"] and pPlayer:HasTrait(GameInfoTypes["TRAIT_OCEAN_MOVEMENT"])
+	elseif iCBAcraft == GameInfoTypes["UNIT_CARRIER_FIGHTER_ADV"] and (pPlayer:HasTrait(GameInfoTypes["TRAIT_OCEAN_MOVEMENT"]) or (pPlayer:GetUUFromExtra(GameInfoTypes["UNIT_CARRIER_FIGHTER_ENGLISH_HARRIER_ADV"]) > 0))
 	then
 		iCBAcraft = GameInfoTypes["UNIT_CARRIER_FIGHTER_ENGLISH_HARRIER_ADV"];
 		print("English Unique Adv CF!")
