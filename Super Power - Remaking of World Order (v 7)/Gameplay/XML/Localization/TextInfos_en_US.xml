@@ -5285,7 +5285,10 @@
 		<Row>
 			<Tag>TXT_KEY_UNIT_SATELLITE_ANTIFALLOUT_HELP</Tag>
 			<Text>
-				Satellite Unit with Global Effect:[NEWLINE][ICON_BULLET]Remove all Fallout caused by nuclear explosion on the Map, reduce the Nuclear Winter progression by up to 150 points, and force a refresh of the Nuclear Winter Level. This effect is one-time and can only be used once in a game.
+				Satellite Unit with Global Effect (One-time and can only be used once in a game):
+				[NEWLINE][ICON_BULLET]Remove all Fallout caused by nuclear explosion on the Map.
+				[NEWLINE][ICON_BULLET]+200% natural recovery speed of Nuclear Winter.
+				[NEWLINE][ICON_BULLET]reduce the Nuclear Winter progression by up to 150 points, and force a refresh of the Nuclear Winter Level. 
 			</Text>
 		</Row>
 		<Row>
@@ -18033,7 +18036,7 @@
 		</Row>
 		
 		<Row Tag="TXT_KEY_SP_UNIT_NUCLEAR_WINTER_PROCESS">
-			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]Nuclear Winter: Nuclear Winter process increase by {1_Num} point[ENDCOLOR]</Text>
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]Nuclear Winter: Nuclear Winter process increase by {1_Num} point[ENDCOLOR] (Now is {2_Num} point)</Text>
 		</Row>
 	</Language_en_US>
 </GameData>

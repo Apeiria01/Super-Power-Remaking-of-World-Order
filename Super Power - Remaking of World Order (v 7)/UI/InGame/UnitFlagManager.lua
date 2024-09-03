@@ -2080,7 +2080,8 @@ function TipHandler(Button)
         if bIsNuclearWinter then
             local iNuclearWinterProcess = GameInfo.Units[unit:GetUnitType()].NuclearWinterProcess
             if iNuclearWinterProcess > 0 then
-                toolTipString = toolTipString .. Locale.ConvertTextKey("TXT_KEY_SP_UNIT_NUCLEAR_WINTER_PROCESS", iNuclearWinterProcess)
+                local iNuclearWinterTotalProcess = Game.GetNuclearWinterProcess();
+                toolTipString = toolTipString .. Locale.ConvertTextKey("TXT_KEY_SP_UNIT_NUCLEAR_WINTER_PROCESS", iNuclearWinterProcess, iNuclearWinterTotalProcess)
             end
         end
 
