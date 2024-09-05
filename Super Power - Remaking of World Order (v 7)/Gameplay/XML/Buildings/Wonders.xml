@@ -2516,6 +2516,7 @@
 			<WonderSplashAnchor>L,T</WonderSplashAnchor>
 			<UnmoddedHappiness>30</UnmoddedHappiness>
 			<PopulationChange>30</PopulationChange>
+			<NoNuclearWinterLocal>true</NoNuclearWinterLocal>
 		</Row>
 
 	</Buildings>

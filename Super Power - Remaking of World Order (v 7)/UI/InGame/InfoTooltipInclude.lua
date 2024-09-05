@@ -1070,6 +1070,8 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		AllowsFoodTradeRoutes = "[ICON_INTERNATIONAL_TRADE][ICON_FOOD]" .. L"TXT_KEY_TRADE_ROUTES_HEADING2_TITLE", --TXT_KEY_DECLARE_WAR_TRADE_ROUTES_HEADER
 		AllowsProductionTradeRoutes = "[ICON_INTERNATIONAL_TRADE][ICON_PRODUCTION]" .. L"TXT_KEY_TRADE_ROUTES_HEADING2_TITLE", --TXT_KEY_DECLARE_WAR_TRADE_ROUTES_HEADER
 		InstantMilitaryIncrease = L"TXT_KEY_IMI11",				-- TOTO
+		EnableAlwaysImmigrantIn = L"TXT_KEY_IMMIGRANT_ALL_SCALE",
+		NoNuclearWinterLocal = L"TXT_KEY_NO_NUCLEAR_WINTER_LOCAL"
 	--n	CityWall = "",
 	--n	ArtInfoCulturalVariation = "",
 	--n	ArtInfoEraVariation = "",
