@@ -872,6 +872,7 @@
 			<Text>
 				[ICON_BULLET]从本城市出发的海陆商队范围增加50%。
 				[NEWLINE][ICON_BULLET]城市人口增长不受缺少卫生设施的影响。
+				[NEWLINE][ICON_BULLET]国际移民进入城市不受城市规模的影响。
 			</Text>
 		</Row>
 
