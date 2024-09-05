@@ -72,8 +72,7 @@ function DoInternationalImmigration(MoveOutPlayerID, MoveInPlayerID)
     local MoveOutCities = {}
     local MoveOutCounter = 0
     for pCity in MoveOutPlayer:Cities() do
-        local cityPop = pCity:GetPopulation()
-        if cityPop > 6 and pCity:IsCanDoImmigration() then
+        if pCity:CanImmigrantOut() then
             MoveOutCities[MoveOutCounter] = pCity
             MoveOutCounter = MoveOutCounter + 1
         end
@@ -83,15 +82,7 @@ function DoInternationalImmigration(MoveOutPlayerID, MoveInPlayerID)
     local apCities = {}
     local iCounter = 0
     for pCity in MoveInPlayer:Cities() do
-        local cityPop = pCity:GetPopulation()
-        if cityPop > 0 and cityPop < 80 
-        and pCity:IsCanDoImmigration()
-        and not pCity:IsPuppet()
-        and not pCity:IsRazing() and not pCity:IsResistance()
-        and not pCity:IsForcedAvoidGrowth()
-        and pCity:CanGrowNormally()
-        and pCity:GetSpecialistCount(GameInfo.Specialists.SPECIALIST_CITIZEN.ID) <= 0
-        then
+        if pCity:CanImmigrantIn() then
             apCities[iCounter] = pCity
             iCounter = iCounter + 1
         end

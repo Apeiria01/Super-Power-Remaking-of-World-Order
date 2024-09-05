@@ -1200,6 +1200,7 @@
 			<TradeRouteLandDistanceModifier>50</TradeRouteLandDistanceModifier>
 			<TradeRouteSeaDistanceModifier>50</TradeRouteSeaDistanceModifier>
 			<EnableAllCityScaleGrowth>1</EnableAllCityScaleGrowth>
+			<EnableAlwaysImmigrantIn>1</EnableAlwaysImmigrantIn>
 		</Row>
 
 

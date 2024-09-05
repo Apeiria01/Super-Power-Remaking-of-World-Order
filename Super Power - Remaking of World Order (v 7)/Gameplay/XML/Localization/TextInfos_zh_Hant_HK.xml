@@ -846,6 +846,7 @@
 			<Text>
 				[ICON_BULLET][ICON_BULLET]從本城市出發的海陸商隊範圍增加50%。
 				[NEWLINE][ICON_BULLET]城市人口增長不受缺少衛生設施的影響。
+				[NEWLINE][ICON_BULLET]國際移民進入城市不受城市規模的影響。
 			</Text>
 		</Row>
 
