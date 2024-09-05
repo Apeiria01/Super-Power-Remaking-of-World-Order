@@ -1875,7 +1875,10 @@
 		</Row>
 		<!-- Help tags -->
 		<Row Tag="TXT_KEY_WONDER_MEGACITY_PYRAMID_HELP">
-			<Text>建成奇跡的城市一次性增加30[ICON_CITIZEN]人口。</Text>
+			<Text>
+				[ICON_BULLET]建成奇跡的城市一次性增加30[ICON_CITIZEN]人口。
+				[NEWLINE][ICON_BULLET]本城不受核冬天效果影響。
+			</Text>
 		</Row>
 		<!-- Quote tags -->
 		<Row Tag="TXT_KEY_WONDER_MEGACITY_PYRAMID_QUOTE">
@@ -16175,6 +16178,12 @@
 		
 		<Row Tag="TXT_KEY_SP_UNIT_NUCLEAR_WINTER_PROCESS">
 			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]核冬天：核冬天進程增加{1_Num}點[ENDCOLOR]（當前核冬天進程為{2_Num}）</Text>
+		</Row>
+		<Row Tag="TXT_KEY_NO_NUCLEAR_WINTER_LOCAL">
+			<Text>本城不受核冬天影響</Text>
+		</Row>
+		<Row Tag="TXT_KEY_IMMIGRANT_ALL_SCALE">
+			<Text>本城接收國際移民不受城市規模影響</Text>
 		</Row>
 	</Language_zh_Hant_HK>
 </GameData>
