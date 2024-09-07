@@ -41,8 +41,8 @@ VALUES	('BUILD_SHOSHONE_WILDDOME',	'TECH_GUNPOWDER',	'IMPROVEMENT_SHOSHONE_WILDD
 --==========================================================================================================================	
 INSERT INTO BuildFeatures
 		(BuildType,						FeatureType,		PrereqTech,				Time,	Remove)
-VALUES	('BUILD_SHOSHONE_WILDDOME',		'FEATURE_JUNGLE',	'TECH_GUNPOWDER',	    100,	0),
-		('BUILD_SHOSHONE_WILDDOME',		'FEATURE_FOREST',	'TECH_GUNPOWDER',	    100,	0);
+VALUES	('BUILD_SHOSHONE_WILDDOME',		'FEATURE_JUNGLE',	'TECH_BRONZE_WORKING',	700,	0),
+		('BUILD_SHOSHONE_WILDDOME',		'FEATURE_FOREST',	NULL,	    			400,	0);
 --==========================================================================================================================	
 -- Unit_Builds
 --==========================================================================================================================	
@@ -62,6 +62,9 @@ SELECT 'IMPROVEMENT_SHOSHONE_WILDDOME',NULL,0,NULL,0,'RESOURCE_BISON' UNION ALL
 SELECT 'IMPROVEMENT_SHOSHONE_WILDDOME',NULL,0,NULL,0,'RESOURCE_DEER' UNION ALL
 SELECT 'IMPROVEMENT_SHOSHONE_WILDDOME',NULL,0,NULL,0,'RESOURCE_IVORY';
 
+--==========================================================================================================================	
+-- Misc Changes
+--==========================================================================================================================	
 UPDATE Improvements Set ExtraScore = -2000 WHERE Type = 'IMPROVEMENT_CUSTOMS_HOUSE';
 UPDATE Improvements Set ExtraScore = -100 WHERE Type = 'IMPROVEMENT_TRADING_POST';
 UPDATE Improvements Set ExtraScore = 100 WHERE Type = 'IMPROVEMENT_BYZANTIUM_ANGELOKASTRO';
@@ -80,3 +83,5 @@ UPDATE Improvements Set ExtraScore = 300 WHERE Type = 'IMPROVEMENT_CREATE_JUNGLE
 
 --BUG fix: Superfluous Archaeologist may cause some problems
 UPDATE Improvements Set ForbidSameBuildUnitClasses = 'UNITCLASS_ARCHAEOLOGIST' WHERE Type = 'IMPROVEMENT_LANDMARK';
+
+UPDATE Improvements Set NumWaterPlotMakesValid = 3, RequiresFlatlands = 1 WHERE Type = 'IMPROVEMENT_POLDER';
