@@ -18048,5 +18048,8 @@
 		<Row Tag="TXT_KEY_IMMIGRANT_ALL_SCALE">
 			<Text>Immigrants enter this City with all City Scales</Text>
 		</Row>
+		<Replace Tag="TXT_KEY_CIV5_IMPROVEMENTS_POLDER_HELP">
+			<Text>A Polder can only be built on Flood Plains, Marsh or a Flat land near at least three Water plots. It provide extra [ICON_FOOD] Food and [ICON_PRODUCTION] Production.</Text>
+		</Replace>
 	</Language_en_US>
 </GameData>
