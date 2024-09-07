@@ -84,4 +84,4 @@ UPDATE Improvements Set ExtraScore = 300 WHERE Type = 'IMPROVEMENT_CREATE_JUNGLE
 --BUG fix: Superfluous Archaeologist may cause some problems
 UPDATE Improvements Set ForbidSameBuildUnitClasses = 'UNITCLASS_ARCHAEOLOGIST' WHERE Type = 'IMPROVEMENT_LANDMARK';
 
-UPDATE Improvements Set NumWaterPlotMakesValid = 3, RequiresFlatlands = 1 WHERE Type = 'IMPROVEMENT_POLDER';
+UPDATE Improvements Set RequiresFeature = 0, RemoveWhenSetNoFuture = 1, NumWaterPlotMakesValid = 3, RequiresFlatlands = 1 WHERE Type = 'IMPROVEMENT_POLDER';
