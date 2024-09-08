@@ -246,6 +246,26 @@
 			</Button>
 		</Image>
 	</Box>
+
+	<Image Anchor="R,T" Size="45,45" Offset="292, 32" Texture="WonderAtlas360.dds" ID="CityScaleFrame1" Hidden="1">
+		<Image Anchor="C,C" Size="45,45" ID="CityScaleImage1" />
+	</Image>
+	<Image Anchor="R,T" Size="45,45" Offset="292, 64" Texture="WonderAtlas360.dds" ID="CityScaleFrame2" Hidden="1">
+		<Image Anchor="C,C" Size="45,45" ID="CityScaleImage2" />
+	</Image>
+	<Image Anchor="R,T" Size="45,45" Offset="292, 96" Texture="WonderAtlas360.dds" ID="CityScaleFrame3" Hidden="1">
+		<Image Anchor="C,C" Size="45,45" ID="CityScaleImage3" />
+	</Image>
+	<Image Anchor="R,T" Size="45,45" Offset="292, 128" Texture="WonderAtlas360.dds" ID="CityScaleFrame4" Hidden="1">
+		<Image Anchor="C,C" Size="45,45" ID="CityScaleImage4" />
+	</Image>
+	<Image Anchor="R,T" Size="45,45" Offset="292, 160" Texture="WonderAtlas360.dds" ID="CityScaleFrame5" Hidden="1">
+		<Image Anchor="C,C" Size="45,45" ID="CityScaleImage5" />
+	</Image>
+	<Image Anchor="R,T" Size="45,45" Offset="292, 192" Texture="WonderAtlas360.dds" ID="CityScaleFrame6" Hidden="1">
+		<Image Anchor="C,C" Size="45,45" ID="CityScaleImage6" />
+	</Image>
+
 	<!-- City Name Panel  -->
 	<Image ID="TitlePanel" Anchor="C,T" Offset="0,36" Texture="assets\UI\Art\WorldView\CityNamePanel.dds" Size="512.128" ConsumeMouse="1">
 		<!-- City Health Bar -->
