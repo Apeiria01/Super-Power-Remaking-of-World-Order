@@ -3705,43 +3705,23 @@
 		
 	</Building_FeatureYieldChanges>
 
-
-
-
-
-	<Policy_BuildingClassTourismModifiers>
+	<Building_YieldModifiers>
 		<Row>
-			<PolicyType>POLICY_TRADITION</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_XL</BuildingClassType>
-			<TourismModifier>25</TourismModifier>
+			<BuildingType>BUILDING_CITY_SIZE_XL</BuildingType>
+			<YieldType>YIELD_TOURISM</YieldType>
+			<Yield>25</Yield>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_TRADITION</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_XXL</BuildingClassType>
-			<TourismModifier>25</TourismModifier>
+			<BuildingType>BUILDING_CITY_SIZE_XXL</BuildingType>
+			<YieldType>YIELD_TOURISM</YieldType>
+			<Yield>25</Yield>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_TRADITION</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_GLOBAL</BuildingClassType>
-			<TourismModifier>50</TourismModifier>
+			<BuildingType>BUILDING_CITY_SIZE_GLOBAL</BuildingType>
+			<YieldType>YIELD_TOURISM</YieldType>
+			<Yield>50</Yield>
 		</Row>
-		<Row>
-			<PolicyType>POLICY_LIBERTY</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_XL</BuildingClassType>
-			<TourismModifier>25</TourismModifier>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_LIBERTY</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_XXL</BuildingClassType>
-			<TourismModifier>25</TourismModifier>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_LIBERTY</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_GLOBAL</BuildingClassType>
-			<TourismModifier>50</TourismModifier>
-		</Row>
-	</Policy_BuildingClassTourismModifiers>
-	
+	</Building_YieldModifiers>
 
 	<Building_Flavors>
 		<Row>
@@ -4070,12 +4050,4 @@
 			<Flavor>155</Flavor>
 		</Row>
 	</Building_Flavors>
-
-
-
-
-	
-	
-	
-
 </GameData>
