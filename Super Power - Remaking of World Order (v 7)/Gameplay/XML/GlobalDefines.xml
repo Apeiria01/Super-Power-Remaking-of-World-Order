@@ -806,6 +806,15 @@
 			<Set Value="100"/>
 			<Where Name="AI_HOMELAND_MOVE_PRIORITY_UPGRADE" />
 		</Update>
+
+		<Update>
+			<Set Value="-2500"/>
+			<Where Name="MINOR_FRIENDSHIP_DROP_BULLY_WORKER_SUCCESS" />
+		</Update>
+		<Update>
+			<Set Value="100"/>
+			<Where Name="MINOR_BULLY_GOLD" />
+		</Update>
 	</Defines>
 	
 	
