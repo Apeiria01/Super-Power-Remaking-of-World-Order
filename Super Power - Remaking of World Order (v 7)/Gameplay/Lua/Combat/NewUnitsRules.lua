@@ -247,9 +247,6 @@ function OnCorpsArmeeSP(iPlayerID, iUnitID)
 	local DoCombine          = false;
 	local otherUnit          = nil;
 	local CorpsUnit          = nil;
-	local Heal1Unit          = nil;
-	local Heal2Unit          = nil;
-	local Heal3Unit          = nil;
 	local corpsRandNum       = Game.Rand(10, "At NewUnitsRule.lua OnCorpsArmeeSP(), AI spawning corps & armee") + 1
 	if (Game:GetHandicapType() == 7 and corpsRandNum > 3)
 		or (Game:GetHandicapType() == 6 and corpsRandNum > 4)
@@ -262,7 +259,7 @@ function OnCorpsArmeeSP(iPlayerID, iUnitID)
 		DoCombine = true;
 	end
 
-	if pPlayer:GetUnitClassCount(class) > 1
+	if pPlayer:GetUnitClassCount(class) > 5
 	and pPlayer:GetBuildingClassCount(iArsenalClass) > 0
 	and not pPlayer:IsHuman() 
 	and DoCombine 
