@@ -265,6 +265,25 @@
 			<SpecialistCount>2</SpecialistCount>
 		</Row>
 
+		<Row>
+			<Type>BUILDING_VENICE_ARMORY</Type>
+			<BuildingClass>BUILDINGCLASS_VENICE_ARMORY</BuildingClass>
+			<Description>TXT_KEY_BUILDING_VENICE_ARMORY</Description>
+			<Help>TXT_KEY_WONDER_VENICE_ARMORY_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_VENICE_ARMORY_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_VENICE_ARMORY_QUOTE</Quote>
+			<PolicyBranchType>POLICY_BRANCH_EXPLORATION</PolicyBranchType>
+			<Cost>50</Cost>
+			<NukeImmune>true</NukeImmune>
+			<MinAreaSize>19</MinAreaSize>
+			<Water>true</Water>
+			<IconAtlas>SP10_EXTRA_ATLAS</IconAtlas>
+			<PortraitIndex>14</PortraitIndex>
+			<NumCityCostMod>20</NumCityCostMod>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<NeverCapture>true</NeverCapture>
+			<GoldMaintenance>8</GoldMaintenance>
+		</Row>
 
 		<Row>
 			<Type>BUILDING_NATIONAL_TREASURY_II</Type>
@@ -810,7 +829,10 @@
 			<BuildingType>BUILDING_NATIONAL_LIBRARY</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_LARGE</BuildingClassType>
 		</Row>
-
+		<Row>
+			<BuildingType>BUILDING_VENICE_ARMORY</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_LARGE</BuildingClassType>
+		</Row>
 		<Row>
 			<BuildingType>BUILDING_INTELLIGENCE_AGENCY</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_LARGE</BuildingClassType>

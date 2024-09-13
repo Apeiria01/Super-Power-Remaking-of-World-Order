@@ -7253,6 +7253,28 @@
 			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
 			<Flavor>200</Flavor>
 		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_VENICE_ARMORY</BuildingType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>200</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_VENICE_ARMORY</BuildingType>
+			<FlavorType>FLAVOR_GREAT_PEOPLE</FlavorType>
+			<Flavor>50</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_VENICE_ARMORY</BuildingType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>75</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_VENICE_ARMORY</BuildingType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>75</Flavor>
+		</Row>
+
 		<Row>
 			<BuildingType>BUILDING_INTELLIGENCE_AGENCY</BuildingType>
 			<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
@@ -7513,4 +7535,12 @@
 			<Yield>5</Yield>
 		</Row>
 	</UnitPromotions_InstantYieldPerReligionFollowerConverted>
+
+	<Building_DomainProductionModifiers>
+		<Row>
+			<BuildingType>BUILDING_VENICE_ARMORY</BuildingType>
+			<DomainType>DOMAIN_SEA</DomainType>
+			<Modifier>20</Modifier>
+		</Row>
+	</Building_DomainProductionModifiers>
 </GameData>
