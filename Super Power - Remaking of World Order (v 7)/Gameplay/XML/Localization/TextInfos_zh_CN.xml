@@ -644,7 +644,8 @@
 				[NEWLINE][ICON_BULLET]建造军事单位+15%[ICON_PRODUCTION]产能累积。
 				[NEWLINE][ICON_BULLET]城市附近必须拥有上述资源的一种或多种。
 				[NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]污染[ENDCOLOR]将会导致[ICON_FOOD]食物累积-5%。
-				[NEWLINE][ICON_BULLET]需要1单位[ICON_RES_ELECTRICITY]电力。</Text>
+				[NEWLINE][ICON_BULLET]需要1单位[ICON_RES_ELECTRICITY]电力。
+			</Text>
 		</Row>
 
 		<Replace Tag="TXT_KEY_BUILDING_STABLE_HELP">
@@ -2076,7 +2077,12 @@
 		</Row>
 
 		<Replace Tag="TXT_KEY_BUILDING_IRONWORKS_HELP">
-			<Text>需要开启海事政策树。[NEWLINE][NEWLINE]本城市+25%[ICON_PRODUCTION]产能。[NEWLINE][NEWLINE]只能在沿海大型城市（26人口）建造。建造成本随城市数量增加。</Text>
+			<Text>
+				[ICON_BULLET]+5[ICON_RES_MANPOWER]人力、+5[ICON_RES_IRON]铁资源。
+				[NEWLINE][ICON_BULLET]本城市有市民工作的矿井+1[ICON_PRODUCTION]产能。
+				[NEWLINE][NEWLINE][ICON_BULLET]需要所有城市拥有工坊，且本城必须拥有已开发的[ICON_RES_IRON]铁。
+				[NEWLINE][ICON_BULLET]只能在中型城市（15人口）建造。建造成本随城市数量增加。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_BUILDING_NATIONAL_EPIC_HELP">

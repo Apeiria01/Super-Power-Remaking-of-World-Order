@@ -399,6 +399,10 @@
 			<BuildingType>BUILDING_IRON_PROVIDER</BuildingType>
 			<ResourceType>RESOURCE_IRON</ResourceType>
 		</Row>
+		<Row>
+			<BuildingType>BUILDING_IRONWORKS</BuildingType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+		</Row>
 	</Building_LocalResourceOrs>
 
 	
@@ -677,12 +681,16 @@
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 			<Quantity>25</Quantity>
 		</Row>
-		<!--
 		<Row>
 			<BuildingType>BUILDING_IRONWORKS</BuildingType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
-			<Quantity>15</Quantity>
-		</Row>-->
+			<Quantity>5</Quantity>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_IRONWORKS</BuildingType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+			<Quantity>5</Quantity>
+		</Row>
 		<Row>
 			<BuildingType>BUILDING_NATIONAL_ORDER</BuildingType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
@@ -2091,12 +2099,6 @@
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>33</Yield>
 		</Row>
-		<Row>
-			<BuildingType>BUILDING_IRONWORKS</BuildingType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>25</Yield>
-		</Row>
-		
 
 		<Row>
 			<BuildingType>BUILDING_CITYSTATE_RESOURCE</BuildingType>
@@ -2777,6 +2779,12 @@
 			<Yield>1</Yield>
 		</Row>
 		<Row>
+			<BuildingType>BUILDING_IRONWORKS</BuildingType>
+			<ImprovementType>IMPROVEMENT_MINE</ImprovementType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
 			<BuildingType>BUILDING_FISH_FARM</BuildingType>
 			<ImprovementType>IMPROVEMENT_FISHFARM_MOD</ImprovementType>
 			<YieldType>YIELD_FOOD</YieldType>
@@ -3090,13 +3098,6 @@
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>2</Yield>
 		</Row>-->
-		<!--<Row>
-			<BuildingType>BUILDING_IRONWORKS</BuildingType>
-			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>1</Yield>
-		</Row>-->
-		
 
 		<Row>
 			<BuildingType>BUILDING_NATIONAL_FINANCE</BuildingType>
