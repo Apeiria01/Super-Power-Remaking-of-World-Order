@@ -3028,7 +3028,7 @@
 			<Text>
 				[ICON_BULLET]+5 [ICON_RES_MANPOWER] Manpower.
 				[NEWLINE][ICON_BULLET]+1 [ICON_PRODUCTION] Production from each source of [ICON_RES_IRON] Iron, [ICON_RES_COPPER] Copper, [ICON_RES_COAL] Coal, [ICON_RES_ALUMINUM] Aluminum and [ICON_RES_URANIUM] Uranium.
-				[NEWLINE][ICON_BULLET]+1 [ICON_PRODUCTION] Production from each Mine.
+				[NEWLINE][ICON_BULLET]+1 [ICON_PRODUCTION] Production from each Mine local.
 				[NEWLINE][ICON_BULLET]+15% [ICON_PRODUCTION] Production when building Military Units.
 				[NEWLINE][ICON_BULLET]City must have an improved source of at least one of these resources nearby.
 				[NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]Pollution[ENDCOLOR] will cause -5% [ICON_FOOD] Food Growth.
@@ -4675,8 +4675,11 @@
 
 		<Replace Tag="TXT_KEY_BUILDING_IRONWORKS_HELP">
 			<Text>
-				Requires Maritime.
-				[NEWLINE][NEWLINE]+25% [ICON_PRODUCTION] Production output in the city. [NEWLINE][NEWLINE]Must be built in the Coastal Large Cities. The cost goes up the more cities there are in the empire.</Text>
+				[ICON_BULLET]+5 [ICON_RES_MANPOWER] Manpower, +5 additional [ICON_RES_IRON] Iron.
+				[NEWLINE][ICON_BULLET]+1 [ICON_PRODUCTION] Production from each Mine local.
+				[NEWLINE][NEWLINE][ICON_BULLET]Must have built a WorkShop in all Cities, City must have at least an improvement of [ICON_RES_IRON] Iron.
+				[NEWLINE][ICON_BULLET]Must be built in the Medium City Cities. The cost goes up the more cities there are in the empire.
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_NATIONAL_EPIC_HELP">
 			<Text>

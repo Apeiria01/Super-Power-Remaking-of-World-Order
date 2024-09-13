@@ -624,7 +624,8 @@
 				[NEWLINE][ICON_BULLET]建造軍事單位+15%[ICON_PRODUCTION]產能累積。
 				[NEWLINE][ICON_BULLET]城市附近必須擁有上述資源的壹種或多種。
 				[NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]汙染[ENDCOLOR]將會導致[ICON_FOOD]食物累積-5%。
-				[NEWLINE][ICON_BULLET]需要1單位[ICON_RES_ELECTRICITY]電力。</Text>
+				[NEWLINE][ICON_BULLET]需要1單位[ICON_RES_ELECTRICITY]電力。
+			</Text>
 		</Row>
 
 		<Replace Tag="TXT_KEY_BUILDING_STABLE_HELP">
@@ -2028,7 +2029,12 @@
 		</Row>
 
 		<Replace Tag="TXT_KEY_BUILDING_IRONWORKS_HELP">
-			<Text>需要開啟海事政策樹。[NEWLINE][NEWLINE]本城市+25%[ICON_PRODUCTION]生產力。[NEWLINE][NEWLINE]只能在沿海大型城市（26人口）建造。建造成本隨城市數量增加。</Text>
+			<Text>
+				[ICON_BULLET]+5[ICON_RES_MANPOWER]人力、+5[ICON_RES_IRON]鐵資源。
+				[NEWLINE][ICON_BULLET]本城市有市民工作的礦井+1[ICON_PRODUCTION]產能。
+				[NEWLINE][NEWLINE][ICON_BULLET]需要所有城市擁有工坊，且本城必須擁有已開發的[ICON_RES_IRON]鐵。
+				[NEWLINE][ICON_BULLET]只能在中型城市（15人口）建造。建造成本隨城市數量增加。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_BUILDING_NATIONAL_EPIC_HELP">
