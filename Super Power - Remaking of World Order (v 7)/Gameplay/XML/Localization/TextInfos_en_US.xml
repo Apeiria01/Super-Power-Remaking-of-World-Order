@@ -8001,7 +8001,7 @@
 				[NEWLINE][ICON_BULLET]+1 [ICON_MOVES] Movement for Embarked Units, Workers, Settlers, Archaeologists, Great Prophet and Missionaries,all of your navies can enter ocean.
 				[NEWLINE][ICON_BULLET]+3 [ICON_MOVES] Movement for Great Admirals.
 				[NEWLINE][ICON_BULLET]World Wonder Unlocked: Port of Rotterdam.
-				[NEWLINE][ICON_BULLET]National Wonder Unlocked: Ironworks.
+				[NEWLINE][ICON_BULLET]National Wonder Unlocked: Venice Armory.
 				[NEWLINE][NEWLINE]Finishing Bonus:
 				[NEWLINE][ICON_BULLET]A Great Admiral appears.
 				[NEWLINE][ICON_BULLET]Great Admirals are earned 50% faster.
@@ -18054,5 +18054,25 @@
 		<Replace Tag="TXT_KEY_CIV5_IMPROVEMENTS_POLDER_HELP">
 			<Text>A Polder can only be built on Flood Plains, Marsh or a Flat land near at least three Water plots. It provide extra [ICON_FOOD] Food and [ICON_PRODUCTION] Production.</Text>
 		</Replace>
+
+		<Row Tag="TXT_KEY_BUILDING_VENICE_ARMORY">
+			<Text>Venice Armory</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_VENICE_ARMORY_PEDIA">
+			<Text>
+				The Venice Armory was established in 1104 and eventually evolved into a massive complex that included shipyards, armories, and weapon shops. Its purpose was to meet the needs of the Venetian Navy, enabling the Venetian Republic to maintain its independence and protect its lucrative maritime trade routes. Thus, it is considered a significant example of a large-scale production complex from the pre-industrial era. The arsenal produced prefabricated ship components, armaments, ropes, sails, and all necessary items, allowing for the construction of a warship within a single day if needed. The state-owned forests on Monte Lungo provided timber and pitch. Around 1460, the Porta Magna (“Great Door”) leading to the arsenal was constructed, designed by the artist Jacopo Bellini, making it the first classical Renaissance building constructed in Venice. In 1687, two stone lions acquired from Greece were placed at the entrance to intimidate visitors. Before dispatching warships to defeat challengers in the Mediterranean, the arsenal also produced the majority of Venetian merchant vessels, bringing wealth back to the city-state... to build more ships.
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_VENICE_ARMORY_QUOTE">
+			<Text>[NEWLINE]"The Venice Armory bears this inscription: "Happiness is the city's remembrance of the pain of war during times of peace"[NEWLINE]        — Robert Burton[NEWLINE]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_VENICE_ARMORY_HELP">
+			<Text>
+				Requires Maritime.
+				[NEWLINE][ICON_BULLET]+20% [ICON_PRODUCTION] Production when building Naval Units this City.
+				[NEWLINE][ICON_BULLET]Each adopted Maritime Policy +2 [ICON_RESEARCH] Science and [ICON_PRODUCTION] Production, Completing the Maritime Policy Branch +3 [ICON_RESEARCH] Science and [ICON_PRODUCTION] Production.
+				[NEWLINE][ICON_BULLET]Must be built in the Coastal Large Cities. The cost goes up the more cities there are in the empire.			
+			</Text>
+		</Row>
 	</Language_en_US>
 </GameData>

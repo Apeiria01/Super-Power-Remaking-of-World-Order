@@ -7085,7 +7085,7 @@
 				[NEWLINE][NEWLINE]啟用海事政策:
 				[NEWLINE][ICON_BULLET]新訓練的移民在境外不會損耗，工人、移民、考古學家、傳教士以及大先知+1[ICON_MOVES]移動。
 				[NEWLINE][ICON_BULLET]所有的海運單位+1[ICON_MOVES]移動，海軍統帥+3[ICON_MOVES]移動，所有海軍單位可以進入大洋。
-				[NEWLINE][ICON_BULLET]解鎖奇觀鹿特丹港和大鐵廠。
+				[NEWLINE][ICON_BULLET]解鎖奇觀鹿特丹港和威尼斯軍械庫。
 				[NEWLINE][NEWLINE]推行所有海事政策：
 				[NEWLINE][ICON_BULLET]立即獲得一個海軍統帥，海軍統帥的產生速率+50%。
 				[NEWLINE][ICON_BULLET]允許在工業時代以後使用[ICON_PEACE]信仰購買海軍統帥。此後海軍統帥可以無消耗建造軍事學院。
@@ -16194,5 +16194,25 @@
 		<Replace Tag="TXT_KEY_CIV5_IMPROVEMENTS_POLDER_HELP">
 			<Text>圩田只能建立在沖積平原、沼澤，或者臨近3塊以上水域的平地上。圩田額外增加[ICON_FOOD]食物和[ICON_PRODUCTION]產能產出。</Text>
 		</Replace>
+
+		<Row Tag="TXT_KEY_BUILDING_VENICE_ARMORY">
+			<Text>威尼斯軍械庫</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_VENICE_ARMORY_PEDIA">
+			<Text>
+				威尼斯軍械庫始建於1104年，最終形成了涵蓋造船廠、兵工廠和武器商店的龐大建築群。其目的是為了滿足威尼斯海軍的需求，依靠兵工廠，威尼斯共和國才能維護其自身獨立，以及利潤豐厚的海上貿易航線，因此它被認為是“前工業文明時期集中式結構的大型生產綜合體的重要範例”。兵工廠在不同地方生產預制的船部件、軍備、繩索、風帆以及壹切需要的東西，如有必要，可以在壹天之內制造出壹艘軍艦。蒙特洛山上的國有林場可提供木材和瀝青。約1460年新建了通往兵工廠的波爾圖麥格納（“大門”），此設計出自藝術家雅格布·貝利尼之手，這是在威尼斯建造的第壹個古典復興建築；1687年，兩只在希臘獲得的石獅子被放置在入口處以震懾訪客。在派遣軍艦於地中海打敗威尼斯的挑戰者之前，兵工廠還生產了絕大部分的威尼斯商船，從而將財富帶回城邦…以便建造更多船只。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_VENICE_ARMORY_QUOTE">
+			<Text>[NEWLINE]"威尼斯聯邦的軍械庫上有這樣壹段題詞：快樂是城市在和平時期想起戰爭的痛苦。"[NEWLINE]        ——羅伯特·伯頓[NEWLINE]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_VENICE_ARMORY_HELP">
+			<Text>
+				需要開啟海事政策樹。
+				[NEWLINE][ICON_BULLET]城市建造海上單位時+20%[ICON_PRODUCTION]產能積累。
+				[NEWLINE][ICON_BULLET]每項已采用的海事政策+2[ICON_RESEARCH]科研、[ICON_PRODUCTION]產能，完成海事政策樹+3[ICON_RESEARCH]科研、[ICON_PRODUCTION]產能
+				[NEWLINE][ICON_BULLET]只能在沿海大型城市（26人口）建造。建造成本隨城市數量增加。
+			</Text>
+		</Row>
 	</Language_zh_Hant_HK>
 </GameData>
