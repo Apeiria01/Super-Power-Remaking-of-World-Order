@@ -790,22 +790,6 @@
 			<Happiness>5</Happiness>
 		</Row>
 		
-		
-		
-		
-
-
-		<Row>
-			<PolicyType>POLICY_FREE_RELIGION</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_SHRINE</BuildingClassType>
-			<Happiness>1</Happiness>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_FREE_RELIGION</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_TEMPLE</BuildingClassType>
-			<Happiness>1</Happiness>
-		</Row>
-
 		<!--<Row>
 			<PolicyType>POLICY_PROFESSIONAL_ARMY</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>

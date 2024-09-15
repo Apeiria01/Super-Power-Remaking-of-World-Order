@@ -7712,11 +7712,11 @@
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_POLICY_ORGANIZED_RELIGION">
-			<Text>Tao Te Ching</Text>
+			<Text>Organized Religion</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_ORGANIZED_RELIGION_HELP">
 			<Text>
-				[COLOR_POSITIVE_TEXT]Tao Te Ching[ENDCOLOR]
+				[COLOR_POSITIVE_TEXT]Organized Religion[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]+1 [ICON_CULTURE] Culture from every Shrine, Temple and Religious Building purchased with [ICON_PEACE] Faith.
 				[NEWLINE][ICON_BULLET]+4 [ICON_CULTURE] Culture from every Religious Wonder.</Text>
 		</Replace>
@@ -7730,7 +7730,7 @@
 		<Replace Tag="TXT_KEY_POLICY_FREE_RELIGION_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]Religious Tolerance[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]+1 [ICON_HAPPINESS_1] Happiness from every Shrine and Temple.
+				[NEWLINE][ICON_BULLET]+1 [ICON_HAPPINESS_1] Happiness from every Religion in City.
 				[NEWLINE][ICON_BULLET]The empire immediately enters a [ICON_GOLDEN_AGE] Golden Age.</Text>
 		</Replace>
 		
@@ -7740,7 +7740,7 @@
 		<Row Tag="TXT_KEY_POLICY_RELIGIOUS_POLITICS_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]Dependent Origination[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]20% of the total [ICON_PEACE] Faith output each turn added to the amount of Global [ICON_HAPPINESS_1] Happiness. (At least +2 [ICON_HAPPINESS_1] Happiness, no upper limit)
+				[NEWLINE][ICON_BULLET]15% of the total [ICON_PEACE] Faith output each turn added to the amount of Global [ICON_HAPPINESS_1] Happiness. (At least +2 [ICON_HAPPINESS_1] Happiness, no upper limit)
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_RELIGIOUS_POLITICS_TEXT">
