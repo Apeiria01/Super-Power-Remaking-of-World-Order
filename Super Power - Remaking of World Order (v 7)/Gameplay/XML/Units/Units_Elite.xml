@@ -1259,10 +1259,6 @@
 			<UnitType>UNIT_ELITE_RIDER</UnitType>
 			<PromotionType>PROMOTION_GAIN_MOVES_AFFER_KILLING</PromotionType>
 		</Row>
-		<Row>
-			<UnitType>UNIT_ELITE_RIDER</UnitType>
-			<PromotionType>PROMOTION_CANNOT_BE_CORPS</PromotionType>
-		</Row>
 
 		<Row>
 			<UnitType>UNIT_ENGLISH_LONGBOWMAN</UnitType>
