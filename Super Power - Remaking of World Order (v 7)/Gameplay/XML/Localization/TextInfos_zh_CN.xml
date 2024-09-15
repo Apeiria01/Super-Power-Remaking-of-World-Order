@@ -6896,11 +6896,11 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_ORGANIZED_RELIGION">
-			<Text>道德经</Text>
+			<Text>教会组织</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_ORGANIZED_RELIGION_HELP">
 			<Text>
-				[COLOR_POSITIVE_TEXT]道德经[ENDCOLOR]
+				[COLOR_POSITIVE_TEXT]教会组织[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]所有神祠、神庙和[ICON_PEACE]信仰购买建筑+1[ICON_CULTURE]文化产出。
 				[NEWLINE][ICON_BULLET]所有宗教奇观+4[ICON_CULTURE]文化产出。
 			</Text>
@@ -6920,7 +6920,7 @@
 		<Replace Tag="TXT_KEY_POLICY_FREE_RELIGION_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]宗教宽容[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]所有神祠和神庙+1[ICON_HAPPINESS_1]本地快乐。
+				[NEWLINE][ICON_BULLET]城市中每种宗教+1[ICON_HAPPINESS_1]本地快乐。
 				[NEWLINE][ICON_BULLET]立刻开启一次黄金时代。
 			</Text>
 		</Replace>
@@ -6931,7 +6931,7 @@
 		<Row Tag="TXT_KEY_POLICY_RELIGIOUS_POLITICS_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]教法社会[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]将[ICON_PEACE]信仰产出的20%转化为全局[ICON_HAPPINESS_1]快乐度。
+				[NEWLINE][ICON_BULLET]将[ICON_PEACE]信仰产出的15%转化为全局[ICON_HAPPINESS_1]快乐度。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_RELIGIOUS_POLITICS_TEXT">
