@@ -1845,7 +1845,19 @@
 			<YieldType>YIELD_GOLD</YieldType>
 			<YieldChange>2</YieldChange>
 		</Row>-->
-		
+
+		<Row>
+			<BuildingType>BUILDING_PUPPET_GOVERNEMENT</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_NATIONAL_TREASURY_II</BuildingClassType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<YieldChange>5</YieldChange>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_PUPPET_GOVERNEMENT_FULL</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_NATIONAL_TREASURY_II</BuildingClassType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<YieldChange>5</YieldChange>
+		</Row>
 	</Building_BuildingClassYieldChanges>
 	
 	
@@ -2092,11 +2104,6 @@
 		<Row>
 			<BuildingType>BUILDING_NATIONAL_LABORATORY</BuildingType>
 			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>33</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_NATIONAL_TREASURY_II</BuildingType>
-			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>33</Yield>
 		</Row>
 
@@ -3091,13 +3098,6 @@
 			<Yield>1</Yield>
 		</Row>-->
 		<!---->
-
-		<!--<Row>
-			<BuildingType>BUILDING_NATIONAL_TREASURY_II</BuildingType>
-			<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>2</Yield>
-		</Row>-->
 
 		<Row>
 			<BuildingType>BUILDING_NATIONAL_FINANCE</BuildingType>
@@ -7543,4 +7543,67 @@
 			<Modifier>20</Modifier>
 		</Row>
 	</Building_DomainProductionModifiers>
+
+	<Building_ResourceYieldChangesGlobal>
+		<Row>
+			<BuildingType>BUILDING_NATIONAL_TREASURY_II</BuildingType>
+			<ResourceType>RESOURCE_GOLD</ResourceType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_NATIONAL_TREASURY_II</BuildingType>
+			<ResourceType>RESOURCE_SILVER</ResourceType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_NATIONAL_TREASURY_II</BuildingType>
+			<ResourceType>RESOURCE_COPPER</ResourceType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_NATIONAL_TREASURY_II</BuildingType>
+			<ResourceType>RESOURCE_TOBACCO</ResourceType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_NATIONAL_TREASURY_II</BuildingType>
+			<ResourceType>RESOURCE_SUGAR</ResourceType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_NATIONAL_TREASURY_II</BuildingType>
+			<ResourceType>RESOURCE_GOLD</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_NATIONAL_TREASURY_II</BuildingType>
+			<ResourceType>RESOURCE_SILVER</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_NATIONAL_TREASURY_II</BuildingType>
+			<ResourceType>RESOURCE_COPPER</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_NATIONAL_TREASURY_II</BuildingType>
+			<ResourceType>RESOURCE_TOBACCO</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_NATIONAL_TREASURY_II</BuildingType>
+			<ResourceType>RESOURCE_SUGAR</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	</Building_ResourceYieldChangesGlobal>
 </GameData>

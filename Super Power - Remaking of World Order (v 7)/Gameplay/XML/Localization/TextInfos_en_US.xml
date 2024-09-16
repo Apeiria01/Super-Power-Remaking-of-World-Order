@@ -4594,8 +4594,9 @@
 			<Tag>TXT_KEY_BUILDING_NATIONAL_TREASURY_II_HELP</Tag>
 			<Text>
 				Requires Commerce.
-				[NEWLINE][NEWLINE]+33% [ICON_GOLD] Gold output in the city.
-				[NEWLINE][NEWLINE]Must be built in Large Cities. The cost goes up the more cities there are in the empire.
+				[NEWLINE][ICON_BULLET]Each puppet City proveide +5 [ICON_GOLD] Gold output in the city.
+				[NEWLINE][ICON_BULLET]Each source of [ICON_RES_GOLD] Gold, [ICON_RES_SILVER] Silver, [ICON_RES_COPPER] Copper, [ICON_RES_TOBACCO] Tobacco, [ICON_RES_SUGAR] Sugar nationwide +1 [ICON_PRODUCTION] Production, +1 [ICON_GOLD] Gold.
+				[NEWLINE]Must be built in Large Cities. The cost goes up the more cities there are in the empire.
 			</Text>
 		</Row>
 
@@ -18071,7 +18072,7 @@
 				Requires Maritime.
 				[NEWLINE][ICON_BULLET]+20% [ICON_PRODUCTION] Production when building Naval Units this City.
 				[NEWLINE][ICON_BULLET]Each adopted Maritime Policy +2 [ICON_RESEARCH] Science and [ICON_PRODUCTION] Production, Completing the Maritime Policy Branch +3 [ICON_RESEARCH] Science and [ICON_PRODUCTION] Production.
-				[NEWLINE][ICON_BULLET]Must be built in the Coastal Large Cities. The cost goes up the more cities there are in the empire.			
+				[NEWLINE]Must be built in the Coastal Large Cities. The cost goes up the more cities there are in the empire.			
 			</Text>
 		</Row>
 	</Language_en_US>
