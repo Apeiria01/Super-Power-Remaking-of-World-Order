@@ -1965,7 +1965,11 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_NATIONAL_TREASURY_II_HELP</Tag>
-			<Text>需要開啟商業政策樹。[NEWLINE][NEWLINE]本城市+33%[ICON_GOLD]金幣產出。[NEWLINE][NEWLINE]只能在大型城市（26人口）建造。文明的城市數量越多建造成本越高。
+			<Text>
+				需要開啟商業政策樹。
+				[NEWLINE][ICON_BULLET]每一座傀儡城市使本城+5[ICON_GOLD]金錢產出。
+				[NEWLINE][ICON_BULLET]全國範圍內[ICON_RES_GOLD]黃金、[ICON_RES_SILVER]白銀、[ICON_RES_COPPER]赤銅、[ICON_RES_TOBACCO]煙草、[ICON_RES_SUGAR]蔗糖+1[ICON_PRODUCTION]產能、+1[ICON_GOLD]金錢。
+				[NEWLINE]只能在大型城市（26人口）建造。文明的城市數量越多建造成本越高。
 			</Text>
 		</Row>
 
@@ -16210,8 +16214,8 @@
 			<Text>
 				需要開啟海事政策樹。
 				[NEWLINE][ICON_BULLET]城市建造海上單位時+20%[ICON_PRODUCTION]產能積累。
-				[NEWLINE][ICON_BULLET]每項已采用的海事政策+2[ICON_RESEARCH]科研、[ICON_PRODUCTION]產能，完成海事政策樹+3[ICON_RESEARCH]科研、[ICON_PRODUCTION]產能
-				[NEWLINE][ICON_BULLET]只能在沿海大型城市（26人口）建造。建造成本隨城市數量增加。
+				[NEWLINE][ICON_BULLET]每項已采用的海事政策+2[ICON_RESEARCH]科研、[ICON_PRODUCTION]產能，完成海事政策樹+3[ICON_RESEARCH]科研、[ICON_PRODUCTION]產能。
+				[NEWLINE]只能在沿海大型城市（26人口）建造。建造成本隨城市數量增加。
 			</Text>
 		</Row>
 	</Language_zh_Hant_HK>

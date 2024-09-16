@@ -2013,7 +2013,10 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_NATIONAL_TREASURY_II_HELP</Tag>
 			<Text>
-				需要开启商业政策树。[NEWLINE][NEWLINE]本城市+33%[ICON_GOLD]金钱产出。[NEWLINE][NEWLINE]只能在大型城市（26人口）建造。文明的城市数量越多建造成本越高。
+				需要开启商业政策树。
+				[NEWLINE][ICON_BULLET]每一座傀儡城市使本城+5[ICON_GOLD]金钱产出。
+				[NEWLINE][ICON_BULLET]全国范围内[ICON_RES_GOLD]黄金、[ICON_RES_SILVER]白银、[ICON_RES_COPPER]赤铜、[ICON_RES_TOBACCO]烟草、[ICON_RES_SUGAR]蔗糖+1[ICON_PRODUCTION]产能、+1[ICON_GOLD]金钱。
+				[NEWLINE]只能在大型城市（26人口）建造。文明的城市数量越多建造成本越高。
 			</Text>
 		</Row>
 
@@ -16400,8 +16403,8 @@
 			<Text>
 				需要开启海事政策树。
 				[NEWLINE][ICON_BULLET]城市建造海上单位时+20%[ICON_PRODUCTION]产能积累。
-				[NEWLINE][ICON_BULLET]每项已采用的海事政策+2[ICON_RESEARCH]科研、[ICON_PRODUCTION]产能，完成海事政策树+3[ICON_RESEARCH]科研、[ICON_PRODUCTION]产能
-				[NEWLINE][ICON_BULLET]只能在沿海大型城市（26人口）建造。建造成本随城市数量增加。
+				[NEWLINE][ICON_BULLET]每项已采用的海事政策+2[ICON_RESEARCH]科研、[ICON_PRODUCTION]产能，完成海事政策树+3[ICON_RESEARCH]科研、[ICON_PRODUCTION]产能。
+				[NEWLINE]只能在沿海大型城市（26人口）建造。建造成本随城市数量增加。
 			</Text>
 		</Row>
 	</Language_zh_CN>
