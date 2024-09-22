@@ -375,6 +375,7 @@ UPDATE Beliefs SET ExtraSpies='1' WHERE Type = 'BELIEF_UNDERGROUND_SECT';
 --BELIEF_EVANGELISM
 UPDATE Beliefs SET CityExtraMissionarySpreads='1' WHERE Type = 'BELIEF_EVANGELISM';
 --BELIEF_UNITY_OF_PROPHETS
+UPDATE Beliefs SET InquisitionFervorTimeModifier=-50 WHERE Type = 'BELIEF_UNITY_OF_PROPHETS';
 
 UPDATE Beliefs SET WonderProductionModifier='25' WHERE Type = 'BELIEF_RELIGIOUS_FERVOR';
 INSERT INTO Belief_EraFaithUnitPurchase (BeliefType,EraType)

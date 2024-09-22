@@ -1884,10 +1884,13 @@ function TipHandler(control)
 				local unitX = unit:GetX()
 				local unitY = unit:GetY()
 				local iCityDefendedAgainstSpreadUntilTurn
-				for thisDirection = 0, (DirectionTypes.NUM_DIRECTION_TYPES-1), 1 do
-					local adjacentPlot = Map.PlotDirection(unitX, unitY, thisDirection)
-					if (adjacentPlot and adjacentPlot:GetPlotCity()) then
-						iCityDefendedAgainstSpreadUntilTurn = adjacentPlot:GetPlotCity():GetDefendedAgainstSpreadUntilTurn()
+				local iRange = 1
+				for dx = -iRange, iRange, 1 do
+					for dy = -iRange, iRange, 1 do
+						local adjacentPlot = Map.PlotXYWithRangeCheck(unitX, unitY, dx, dy, iRange);
+						if (adjacentPlot and adjacentPlot:GetPlotCity()) then
+							iCityDefendedAgainstSpreadUntilTurn = adjacentPlot:GetPlotCity():GetDefendedAgainstSpreadUntilTurn()
+						end
 					end
 				end
 				if iCityDefendedAgainstSpreadUntilTurn then
