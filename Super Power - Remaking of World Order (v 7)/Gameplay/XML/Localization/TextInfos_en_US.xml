@@ -18075,5 +18075,15 @@
 				[NEWLINE]Must be built in the Coastal Large Cities. The cost goes up the more cities there are in the empire.			
 			</Text>
 		</Row>
+
+		<Row Tag="TXT_KEY_MISSION_SPREAD_RELIGION_DISABLED_CITY_NO_SPREAD">
+			<Text>The City is in a state of judicial fervor, and [COLOR_NEGATIVE_TEXT] it is impossible to Spread there until {1_num} Turn[ENDCOLOR].</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_MISSION_REMOVE_HERESY_HELP">
+			<Text>
+				[ICON_BULLET]This order will remove the presence of other religions from the nearby, friendly-controlled city. An inquisitor is consumed by this action.
+				[NEWLINE][ICON_BULLET]City will enter a state of judicial fervor and [COLOR_NEGATIVE_TEXT] it is impossible to Spread Religion here [ENDCOLOR] (The base time equals 5% of City's [ICON_CITIZEN] Population).
+			</Text>
+		</Replace>
 	</Language_en_US>
 </GameData>
