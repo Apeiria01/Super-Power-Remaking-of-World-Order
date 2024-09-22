@@ -1456,7 +1456,13 @@ function TipHandler(control)
 
 		-- Spread Religion has special help text
 	elseif (action.Type == "MISSION_SPREAD_RELIGION") then
-
+		-- Add spacing for all entries after the first
+		if (bFirstEntry) then
+			bFirstEntry = false;
+		elseif (not bFirstEntry) then
+			strToolTip = strToolTip .. "[NEWLINE]";
+		end
+		
 		local iNumFollowers = unit:GetNumFollowersAfterSpread();
 		local religionName = Game.GetReligionName(unit:GetReligion());
 
@@ -1866,6 +1872,27 @@ function TipHandler(control)
 				end
 
 				strDisabledString = strDisabledString .. Locale.ConvertTextKey("TXT_KEY_MISSION_BUILD_CITY_DISABLED_UNHAPPY");
+			
+			elseif (action.Type == "MISSION_SPREAD_RELIGION") then
+				-- Add spacing for all entries after the first
+				if (bFirstEntry) then
+					bFirstEntry = false;
+				elseif (not bFirstEntry) then
+					strDisabledString = strDisabledString .. "[NEWLINE][NEWLINE]";
+				end
+
+				local unitX = unit:GetX()
+				local unitY = unit:GetY()
+				local iCityDefendedAgainstSpreadUntilTurn
+				for thisDirection = 0, (DirectionTypes.NUM_DIRECTION_TYPES-1), 1 do
+					local adjacentPlot = Map.PlotDirection(unitX, unitY, thisDirection)
+					if (adjacentPlot and adjacentPlot:GetPlotCity()) then
+						iCityDefendedAgainstSpreadUntilTurn = adjacentPlot:GetPlotCity():GetDefendedAgainstSpreadUntilTurn()
+					end
+				end
+				if iCityDefendedAgainstSpreadUntilTurn then
+					strDisabledString = strDisabledString .. Locale.ConvertTextKey("TXT_KEY_MISSION_SPREAD_RELIGION_DISABLED_CITY_NO_SPREAD", iCityDefendedAgainstSpreadUntilTurn);
+				end
 
 			elseif (action.Type == "MISSION_CULTURE_BOMB" and pActivePlayer:GetCultureBombTimer() > 0) then
 				-- Add spacing for all entries after the first

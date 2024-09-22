@@ -16407,5 +16407,15 @@
 				[NEWLINE]只能在沿海大型城市（26人口）建造。建造成本随城市数量增加。
 			</Text>
 		</Row>
+
+		<Row Tag="TXT_KEY_MISSION_SPREAD_RELIGION_DISABLED_CITY_NO_SPREAD">
+			<Text>目标城市处于审判狂热状态，第{1_num}回合前[COLOR_NEGATIVE_TEXT]无法进行传教[ENDCOLOR]。</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_MISSION_REMOVE_HERESY_HELP">
+			<Text>
+				[ICON_BULLET]这项指令将移走该己方城市中的其余宗教。宗教裁判官将被消耗掉。
+				[NEWLINE][ICON_BULLET]城市将进入一定回合的审判狂热状态，该状态下城市[COLOR_NEGATIVE_TEXT]无法被传教[ENDCOLOR]（基础回合数为城市[ICON_CITIZEN]人口的5%）。
+			</Text>
+		</Replace>
 	</Language_zh_CN>
 </GameData>
