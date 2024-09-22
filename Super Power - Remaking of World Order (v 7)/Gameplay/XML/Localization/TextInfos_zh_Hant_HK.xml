@@ -8143,7 +8143,7 @@
 			<Text>允許使用[ICON_PEACE]信仰購買[COLOR_POSITIVE_TEXT]宗教藝術師[ENDCOLOR]，該單位能夠開啟黃金時代。露天劇場、畫廊和歌劇院+2[ICON_PEACE]信仰。建造奇觀時+25%[ICON_PRODUCTION]產能積累</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_UNITY_OF_PROPHETS">
-			<Text>宗教裁判官和先知只能將此宗教的信眾減少一半（而非全部清除）。聖城中誕生一位[ICON_PROPHET]大先知</Text>
+			<Text>宗教裁判官和先知只能將此宗教的信眾減少一半（而非全部清除）。城市審判狂熱時間減半。聖城中誕生一位[ICON_PROPHET]大先知</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_TO_GLORY_OF_GOD">
 			<Text>進入工業時代之後可以使用[ICON_PEACE]信仰購買任意類型的[ICON_GREAT_PEOPLE]偉人。所有城市每位專業人員+1[ICON_PEACE]信仰</Text>
