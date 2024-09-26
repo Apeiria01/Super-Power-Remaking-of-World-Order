@@ -79,7 +79,6 @@ SELECT 'BELIEF_GOD_CRAFTSMEN','RESOURCE_LAPIS','YIELD_FAITH',1;
 Delete FROM Belief_ImprovementYieldChanges WHERE BeliefType = 'BELIEF_GOD_SEA';
 INSERT INTO Belief_ImprovementYieldChanges (BeliefType,ImprovementType,YieldType,Yield)
 SELECT 'BELIEF_GOD_SEA','IMPROVEMENT_FISHFARM_MOD','YIELD_CULTURE',1 UNION ALL
-SELECT 'BELIEF_GOD_SEA','IMPROVEMENT_FISHERY_MOD','YIELD_CULTURE',1 UNION ALL
 SELECT 'BELIEF_GOD_SEA','IMPROVEMENT_FISHING_BOATS','YIELD_FAITH',1 UNION ALL
 SELECT 'BELIEF_GOD_SEA','IMPROVEMENT_FISHING_BOATS','YIELD_CULTURE',1;
 
@@ -245,7 +244,7 @@ UPDATE Beliefs SET HappinessPerFollowingCity = '1' WHERE Type = 'BELIEF_CEREMONI
 INSERT INTO Belief_CityYieldChanges (BeliefType,YieldType,Yield)
 SELECT 'BELIEF_CEREMONIAL_BURIAL','YIELD_GOLDEN_AGE_POINTS',3;
 
-UPDATE Beliefs SET CityStateMinimumInfluence = '35', SameReligionMinorRecoveryModifier = '300' WHERE Type = 'BELIEF_PAPAL_PRIMACY';
+UPDATE Beliefs SET CityStateMinimumInfluence = '35', SameReligionMinorRecoveryModifier = '300', InquisitorProhibitSpreadInAlly = 1 WHERE Type = 'BELIEF_PAPAL_PRIMACY';
 
 UPDATE Beliefs SET GreatPersonPointsHolyCity = 1 WHERE Type='BELIEF_RELIGIOUS_SCIENCE';
 INSERT INTO Belief_GreatPersonPoints (BeliefType, GreatPersonType, Value)
@@ -376,6 +375,7 @@ UPDATE Beliefs SET ExtraSpies='1' WHERE Type = 'BELIEF_UNDERGROUND_SECT';
 --BELIEF_EVANGELISM
 UPDATE Beliefs SET CityExtraMissionarySpreads='1' WHERE Type = 'BELIEF_EVANGELISM';
 --BELIEF_UNITY_OF_PROPHETS
+UPDATE Beliefs SET InquisitionFervorTimeModifier=-50 WHERE Type = 'BELIEF_UNITY_OF_PROPHETS';
 
 UPDATE Beliefs SET WonderProductionModifier='25' WHERE Type = 'BELIEF_RELIGIOUS_FERVOR';
 INSERT INTO Belief_EraFaithUnitPurchase (BeliefType,EraType)

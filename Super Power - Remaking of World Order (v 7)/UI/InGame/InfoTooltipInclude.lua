@@ -1070,6 +1070,8 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		AllowsFoodTradeRoutes = "[ICON_INTERNATIONAL_TRADE][ICON_FOOD]" .. L"TXT_KEY_TRADE_ROUTES_HEADING2_TITLE", --TXT_KEY_DECLARE_WAR_TRADE_ROUTES_HEADER
 		AllowsProductionTradeRoutes = "[ICON_INTERNATIONAL_TRADE][ICON_PRODUCTION]" .. L"TXT_KEY_TRADE_ROUTES_HEADING2_TITLE", --TXT_KEY_DECLARE_WAR_TRADE_ROUTES_HEADER
 		InstantMilitaryIncrease = L"TXT_KEY_IMI11",				-- TOTO
+		EnableAlwaysImmigrantIn = L"TXT_KEY_IMMIGRANT_ALL_SCALE",
+		NoNuclearWinterLocal = L"TXT_KEY_NO_NUCLEAR_WINTER_LOCAL"
 	--n	CityWall = "",
 	--n	ArtInfoCulturalVariation = "",
 	--n	ArtInfoEraVariation = "",
@@ -2556,6 +2558,24 @@ function GetHelpTextForImprovement( improvementID )
 			end
 		end
 
+	end
+
+	-- Building yield changes
+	items = {}
+	condition = { ImprovementType = improvement.Type }
+	for row in GameInfo.Building_ImprovementYieldChanges( thisImprovementType ) do
+		SetKey( items, row.BuildingType )
+	end
+	for buildingType in pairs( items ) do
+		item = GameInfo.Buildings[ buildingType ]
+		if item then
+			tip = ""
+			condition.BuildingType = buildingType
+			tip = GetYieldString( GameInfo.Building_ImprovementYieldChanges( condition ) )
+			if tip~="" then
+				insert( tips, "[ICON_BULLET]" .. BuildingColor( L(item.Description) ) .. tip )
+			end
+		end
 	end
 
 	-- Resource Yields

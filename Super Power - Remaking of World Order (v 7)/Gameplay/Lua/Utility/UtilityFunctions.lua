@@ -152,6 +152,8 @@ function SatelliteLaunchEffects(unit, city, player)
 		city:SetNumRealBuilding(GameInfoTypes["BUILDING_SATELLITE_ENVIRONMENT"], 1)
 	elseif unit:GetUnitClassType() == GameInfoTypes.UNITCLASS_SATELLITE_ANTIFALLOUT then
 		city:SetNumRealBuilding(GameInfoTypes["BUILDING_SATELLITE_ANTIFALLOUT"], 1)
+		Game.ChangeNuclearWinterProcess(-math.min(Game.GetNuclearWinterProcess(), 150), true, true)
+		Game.ChangeNuclearWinterNaturalReduction(2);
 	elseif unit:GetUnitClassType() == GameInfoTypes.UNITCLASS_SATELLITE_RESOURCEPLUS then
 		city:SetNumRealBuilding(GameInfoTypes["BUILDING_SATELLITE_RESOURCEPLUS"], 1)
 	elseif unit:GetUnitClassType() == GameInfoTypes.UNITCLASS_SATELLITE_SPACE_ELEVATOR then
@@ -796,30 +798,28 @@ function SPCargoListSetup(iPlayerID)
 		end
 	end
 	if pCBAcraftUnit then
-		overrideCBA = GameInfo.Civilization_UnitClassOverrides { UnitClassType = pCBAcraftUnit.Class, CivilizationType =
-			GameInfo.Civilizations[pPlayer:GetCivilizationType()].Type } ();
+		overrideCBA = pPlayer:GetCivUnit(GameInfoTypes[pCBAcraftUnit.Class]);
 	end
 	if pASAcraftUnit then
-		overrideASA = GameInfo.Civilization_UnitClassOverrides { UnitClassType = pASAcraftUnit.Class, CivilizationType =
-			GameInfo.Civilizations[pPlayer:GetCivilizationType()].Type } ();
+		overrideASA = pPlayer:GetCivUnit(GameInfoTypes[pASAcraftUnit.Class]);
 	end
 	if pMissile_Unit then
-		overrideMis = GameInfo.Civilization_UnitClassOverrides { UnitClassType = pMissile_Unit.Class, CivilizationType =
-			GameInfo.Civilizations[pPlayer:GetCivilizationType()].Type } ();
+		overrideMis = pPlayer:GetCivUnit(GameInfoTypes[pMissile_Unit.Class]);
 	end
 
-	if overrideCBA and GameInfo.Units[overrideCBA.UnitType].Special == "SPECIALUNIT_FIGHTER" then
-		iCBAcraft = GameInfoTypes[overrideCBA.UnitType];
-	elseif iCBAcraft == GameInfoTypes["UNIT_CARRIER_FIGHTER_ADV"] and pPlayer:HasTrait(GameInfoTypes["TRAIT_OCEAN_MOVEMENT"])
+	if iCBAcraft == GameInfoTypes["UNIT_CARRIER_FIGHTER_ADV"] 
+	and (pPlayer:HasTrait(GameInfoTypes["TRAIT_OCEAN_MOVEMENT"]) or pPlayer:GetUUFromExtra(GameInfoTypes["UNIT_CARRIER_FIGHTER_ENGLISH_HARRIER_ADV"]) > 0)
 	then
 		iCBAcraft = GameInfoTypes["UNIT_CARRIER_FIGHTER_ENGLISH_HARRIER_ADV"];
 		print("English Unique Adv CF!")
+	elseif overrideCBA and GameInfo.Units[overrideCBA].Special == "SPECIALUNIT_FIGHTER" then
+		iCBAcraft = overrideCBA;
 	end
-	if overrideASA and GameInfo.Units[overrideASA.UnitType].Special == "SPECIALUNIT_STEALTH" then
-		iASAcraft = GameInfoTypes[overrideASA.UnitType];
+	if overrideASA and GameInfo.Units[overrideASA].Special == "SPECIALUNIT_STEALTH" then
+		iASAcraft = overrideASA;
 	end
-	if overrideMis and GameInfo.Units[overrideMis.UnitType].Special == "SPECIALUNIT_MISSILE" then
-		iMissileU = GameInfoTypes[overrideMis.UnitType];
+	if overrideMis and GameInfo.Units[overrideMis].Special == "SPECIALUNIT_MISSILE" then
+		iMissileU = overrideMis;
 	end
 	if iASAcraft and iASAcraft ~= -1 then
 		for pCity in pPlayer:Cities() do
@@ -933,7 +933,7 @@ function CarrierRestore(iPlayerID, iUnitID, iCargoUnit)
 		if iCost == nil or iCost < 0 or iCost > pPlayer:GetGold() then
 			return;
 		end
-		if (pPlayer:HasTrait(GameInfoTypes["TRAIT_OCEAN_MOVEMENT"]) and iCargoUnit == GameInfoTypes["UNIT_CARRIER_FIGHTER_ADV"])
+		if (iCargoUnit == GameInfoTypes["UNIT_CARRIER_FIGHTER_ADV"] and (pPlayer:HasTrait(GameInfoTypes["TRAIT_OCEAN_MOVEMENT"]) or pPlayer:GetUUFromExtra(GameInfoTypes["UNIT_CARRIER_FIGHTER_ENGLISH_HARRIER_ADV"]) > 0))
 		or pUnit:GetUnitType() == GameInfoTypes["UNIT_CARRIER_FIGHTER_ENGLISH_HARRIER"]
 		then
 			iCargoUnit = GameInfoTypes["UNIT_CARRIER_FIGHTER_ENGLISH_HARRIER_ADV"];

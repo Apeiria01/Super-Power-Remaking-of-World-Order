@@ -1609,16 +1609,10 @@ function OnCityViewUpdate()
 				local buildingID = building.ID;
 				if     (not pCity:IsHasBuilding(buildingID)) then
 				-- MOD Begin: City Scale & City Level Buildings shall not display here! by TOKATA
-				elseif (building.PortraitIndex >= 56 and building.PortraitIndex <= 62 and building.IconAtlas == "SPBuildings_ATLAS") then
-					tCityScale = building;
-				elseif (building.BuildingClass == "BUILDINGCLASS_CITY_HALL_LV0"
-				or      building.BuildingClass == "BUILDINGCLASS_CITY_HALL_LV1"
-				or      building.BuildingClass == "BUILDINGCLASS_CITY_HALL_LV2"
-				or      building.BuildingClass == "BUILDINGCLASS_CITY_HALL_LV3"
-				or      building.BuildingClass == "BUILDINGCLASS_CITY_HALL_LV4"
-				or      building.BuildingClass == "BUILDINGCLASS_CITY_HALL_LV5"
-				or      building.BuildingClass == "BUILDINGCLASS_PUPPET_GOVERNEMENT"
-				or      building.BuildingClass == "BUILDINGCLASS_PUPPET_GOVERNEMENT_FULL")
+				elseif building.BuildingClass:match("^BUILDINGCLASS_CITY_SIZE_+.") then
+					-- do nothing
+				elseif building.BuildingClass:match("^BUILDINGCLASS_CITY_HALL_+.")
+					or building.BuildingClass:match("^BUILDINGCLASS_PUPPET_+.")
 				then
 					tCityLevel = building;
 				-- MOD End
@@ -1667,6 +1661,8 @@ function OnCityViewUpdate()
 		--  MOD - SPCity Icons Switch by CaptainCWB
 		-------------------------------------------
 		Controls.SPCityFrame:SetHide(true);
+		local iNowScale = pCity:GetScale()
+		tCityScale = GameInfo.Buildings[GameInfo.CitySizeBuildings[iNowScale].BuildingType];
 		if tCityScale ~= nil or tCityLevel ~= nil then
 			Controls.SPCityFrame:SetHide(false);
 			-------------------------------------------
@@ -1677,6 +1673,19 @@ function OnCityViewUpdate()
 				IconHookup( tCityScale.PortraitIndex, 128, tCityScale.IconAtlas, Controls.CityScaleImage );
 				local strToolTip = GetHelpTextForBuilding(tCityScale.ID, false, false, false, pCity);
 				Controls.CityScaleImage:SetToolTipString(strToolTip);
+
+				-- show all City Scale the city has by Qingyin
+				for iScale = 1, 6, 1 do
+					if iScale < iNowScale then
+						local CityScale = GameInfo.Buildings[GameInfo.CitySizeBuildings[iScale].BuildingType];
+						Controls["CityScaleFrame" .. iScale]:SetHide(false);
+						IconHookup( CityScale.PortraitIndex, 45, CityScale.IconAtlas, Controls["CityScaleImage" .. iScale]);
+						local strToolTip = GetHelpTextForBuilding(CityScale.ID, false, false, false, pCity);
+						Controls["CityScaleImage" .. iScale]:SetToolTipString(strToolTip);
+					else
+						Controls["CityScaleFrame" .. iScale]:SetHide(true);
+					end
+				end
 			else
 				Controls.CityScaleFrame:SetHide(true);
 			end

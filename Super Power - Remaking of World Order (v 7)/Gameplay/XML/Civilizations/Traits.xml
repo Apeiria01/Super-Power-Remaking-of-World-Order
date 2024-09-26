@@ -307,7 +307,8 @@
 			<ShortDescription>TXT_KEY_TRAIT_PHOENICIAN_HERITAGE_SHORT</ShortDescription>
 			<!--<CrossesMountainsAfterGreatGeneral>true</CrossesMountainsAfterGreatGeneral>-->
 			<SeaTradeRouteRangeBonus>5</SeaTradeRouteRangeBonus>
-			<TradeRouteSeaGoldBonus>400</TradeRouteSeaGoldBonus>
+			<FreeUnit>UNITCLASS_SETTLER</FreeUnit>
+			<FreeUnitPrereqTech>TECH_SAILING</FreeUnitPrereqTech>
 		</Row>
 		<Row>
 			<Type>TRAIT_SUPER_CITY_STATE</Type>
@@ -888,47 +889,6 @@
 			<Yield>1</Yield>
 		</Row>
 
-
-
-		<Row>
-			<TraitType>TRAIT_PHOENICIAN_HERITAGE</TraitType>
-			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>2</Yield>
-		</Row>
-		<Row>
-			<TraitType>TRAIT_PHOENICIAN_HERITAGE</TraitType>
-			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>2</Yield>
-		</Row>
-		<Row>
-			<TraitType>TRAIT_PHOENICIAN_HERITAGE</TraitType>
-			<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>2</Yield>
-		</Row>
-		<Row>
-			<TraitType>TRAIT_PHOENICIAN_HERITAGE</TraitType>
-			<SpecialistType>SPECIALIST_WRITER</SpecialistType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>2</Yield>
-		</Row>
-		<Row>
-			<TraitType>TRAIT_PHOENICIAN_HERITAGE</TraitType>
-			<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>2</Yield>
-		</Row>
-		<Row>
-			<TraitType>TRAIT_PHOENICIAN_HERITAGE</TraitType>
-			<SpecialistType>SPECIALIST_MUSICIAN</SpecialistType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>2</Yield>
-		</Row>
-
-
-
 		<Row>
 			<TraitType>TRAIT_BONUS_AGAINST_TECH</TraitType>
 			<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
@@ -1249,4 +1209,18 @@
 			<MaxValue>3</MaxValue>
 		</Row>
 	</Trait_CityYieldPerAdjacentFeature>
+	<Trait_SeaTradeRouteYieldPerEraTimes100>
+		<Row>
+			<TraitType>TRAIT_PHOENICIAN_HERITAGE</TraitType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>100</Yield>
+		</Row>
+	</Trait_SeaTradeRouteYieldPerEraTimes100>
+	<Trait_SeaTradeRouteYieldTimes100>
+		<Row>
+			<TraitType>TRAIT_PHOENICIAN_HERITAGE</TraitType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>100</Yield>
+		</Row>
+	</Trait_SeaTradeRouteYieldTimes100>
 </GameData>

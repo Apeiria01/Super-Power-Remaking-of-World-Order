@@ -725,6 +725,7 @@
 			<PortraitIndex>26</PortraitIndex>
 			<MoveRate>AIR_REBASE</MoveRate>
 			<ExtraMaintenanceCost>80</ExtraMaintenanceCost>
+			<NuclearWinterProcess>20</NuclearWinterProcess>
 		</Row>
 
 
@@ -1257,10 +1258,6 @@
 		<Row>
 			<UnitType>UNIT_ELITE_RIDER</UnitType>
 			<PromotionType>PROMOTION_GAIN_MOVES_AFFER_KILLING</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_ELITE_RIDER</UnitType>
-			<PromotionType>PROMOTION_CANNOT_BE_CORPS</PromotionType>
 		</Row>
 
 		<Row>

@@ -2,6 +2,27 @@ if Game.IsOption(GameOptionTypes.GAMEOPTION_NO_RELIGION) then return end
 
 local policyCollectionRuleID = GameInfo.Policies["POLICY_COLLECTIVE_RULE"].ID
 
+function SPReformeBeliefs(iPlayer, iReligion, iBelief)
+	if iPlayer == -1 or not Players[iPlayer]:HasCreatedReligion() or Game.GetHolyCityForReligion(iReligion, iPlayer) == nil
+	then
+		return;
+	end
+
+	local pPlayer  = Players[iPlayer];
+	local holyCity = Game.GetHolyCityForReligion(iReligion, iPlayer);
+	if GameInfo.Beliefs[iBelief].Type == "BELIEF_UNITY_OF_PROPHETS" then
+		local iProphetID = GameInfoTypes.UNIT_PROPHET;
+		local overrideUnit = GameInfo.Civilization_UnitClassOverrides { UnitClassType = "UNITCLASS_PROPHET", CivilizationType =
+		GameInfo.Civilizations[pPlayer:GetCivilizationType()].Type } ();
+		if overrideUnit and overrideUnit.UnitType then
+			iProphetID = GameInfoTypes[overrideUnit.UnitType];
+		end
+		pPlayer:InitUnit(iProphetID, holyCity:GetX(), holyCity:GetY(), UNITAI_PROPHET)
+	end
+end
+
+GameEvents.ReligionReformed.Add(SPReformeBeliefs)
+
 function SPEReligionAdopt(pPlayer,iBelief,pHolyCity)
     if iBelief == -1 then return end
     --Founded

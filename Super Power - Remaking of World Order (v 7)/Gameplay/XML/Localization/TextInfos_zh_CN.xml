@@ -644,7 +644,8 @@
 				[NEWLINE][ICON_BULLET]建造军事单位+15%[ICON_PRODUCTION]产能累积。
 				[NEWLINE][ICON_BULLET]城市附近必须拥有上述资源的一种或多种。
 				[NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]污染[ENDCOLOR]将会导致[ICON_FOOD]食物累积-5%。
-				[NEWLINE][ICON_BULLET]需要1单位[ICON_RES_ELECTRICITY]电力。</Text>
+				[NEWLINE][ICON_BULLET]需要1单位[ICON_RES_ELECTRICITY]电力。
+			</Text>
 		</Row>
 
 		<Replace Tag="TXT_KEY_BUILDING_STABLE_HELP">
@@ -872,6 +873,7 @@
 			<Text>
 				[ICON_BULLET]从本城市出发的海陆商队范围增加50%。
 				[NEWLINE][ICON_BULLET]城市人口增长不受缺少卫生设施的影响。
+				[NEWLINE][ICON_BULLET]国际移民进入城市不受城市规模的影响。
 			</Text>
 		</Row>
 
@@ -896,7 +898,7 @@
 			<Text>
 				[ICON_BULLET]本城拥有的海上[COLOR_POSITIVE_TEXT]奢侈资源[ENDCOLOR]+1[ICON_GOLD]金钱。
 				[NEWLINE][ICON_BULLET]本城拥有的海上[COLOR_POSITIVE_TEXT]奢侈资源[ENDCOLOR]和[COLOR_POSITIVE_TEXT]环礁[ENDCOLOR]+1[ICON_PRODUCTION]产能。
-				[NEWLINE][ICON_BULLET]商船经过拥有商站的城市地块时，获得[ICON_GOLD]金钱。
+				[NEWLINE][ICON_BULLET]国际商船经过拥有商站的城市地块时，获得[ICON_GOLD]金钱。
 				[NEWLINE][NEWLINE]城市必须沿海。
 			</Text>
 		</Row>
@@ -1919,7 +1921,10 @@
 		</Row>
 		<!-- Help tags -->
 		<Row Tag="TXT_KEY_WONDER_MEGACITY_PYRAMID_HELP">
-			<Text>建成奇观的城市一次性增加30[ICON_CITIZEN]人口。</Text>
+			<Text>
+				[ICON_BULLET]建成奇观的城市一次性增加30[ICON_CITIZEN]人口。
+				[NEWLINE][ICON_BULLET]本城不受核冬天效果影响。
+			</Text>
 		</Row>
 		<!-- Quote tags -->
 		<Row Tag="TXT_KEY_WONDER_MEGACITY_PYRAMID_QUOTE">
@@ -2008,7 +2013,10 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_NATIONAL_TREASURY_II_HELP</Tag>
 			<Text>
-				需要开启商业政策树。[NEWLINE][NEWLINE]本城市+33%[ICON_GOLD]金钱产出。[NEWLINE][NEWLINE]只能在大型城市（26人口）建造。文明的城市数量越多建造成本越高。
+				需要开启商业政策树。
+				[NEWLINE][ICON_BULLET]每一座傀儡城市使本城+5[ICON_GOLD]金钱产出。
+				[NEWLINE][ICON_BULLET]全国范围内[ICON_RES_GOLD]黄金、[ICON_RES_SILVER]白银、[ICON_RES_COPPER]赤铜、[ICON_RES_TOBACCO]烟草、[ICON_RES_SUGAR]蔗糖+1[ICON_PRODUCTION]产能、+1[ICON_GOLD]金钱。
+				[NEWLINE]只能在大型城市（26人口）建造。文明的城市数量越多建造成本越高。
 			</Text>
 		</Row>
 
@@ -2072,7 +2080,12 @@
 		</Row>
 
 		<Replace Tag="TXT_KEY_BUILDING_IRONWORKS_HELP">
-			<Text>需要开启海事政策树。[NEWLINE][NEWLINE]本城市+25%[ICON_PRODUCTION]产能。[NEWLINE][NEWLINE]只能在沿海大型城市（26人口）建造。建造成本随城市数量增加。</Text>
+			<Text>
+				[ICON_BULLET]+5[ICON_RES_MANPOWER]人力、+5[ICON_RES_IRON]铁资源。
+				[NEWLINE][ICON_BULLET]本城市有市民工作的矿井+1[ICON_PRODUCTION]产能。
+				[NEWLINE][NEWLINE][ICON_BULLET]需要所有城市拥有工坊，且本城必须拥有已开发的[ICON_RES_IRON]铁。
+				[NEWLINE][ICON_BULLET]只能在中型城市（15人口）建造。建造成本随城市数量增加。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_BUILDING_NATIONAL_EPIC_HELP">
@@ -2605,7 +2618,12 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_UNIT_SATELLITE_ANTIFALLOUT_HELP</Tag>
-			<Text>该卫星拥有如下效果：[NEWLINE][ICON_BULLET]一次性移除全球所有辐射地块。该卫星只能发射一次。</Text>
+			<Text>
+				该卫星只能发射一次，拥有如下效果：
+				[NEWLINE][ICON_BULLET]一次性移除全球所有辐射地块。
+				[NEWLINE][ICON_BULLET]+200%核冬天自然恢复速度。
+				[NEWLINE][ICON_BULLET]减少至多150点核冬天进程并强制刷新核冬天阶段。
+			</Text>
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_UNIT_SATELLITE_ANTIFALLOUT_QUOTE</Tag>
@@ -2753,7 +2771,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_CITY_SIZE_XXL_HELP</Tag>
-			<Text>[ICON_BULLET][ICON_CITIZEN]市民工作范围：5格。[NEWLINE][NEWLINE][ICON_BULLET][ICON_TOURISM]魅力产出+50%。[NEWLINE][ICON_BULLET]+54[ICON_RES_MANPOWER]人力。[NEWLINE][ICON_BULLET]消耗54[ICON_RES_ELECTRICITY]电力。[NEWLINE][ICON_BULLET]消耗54[ICON_RES_CONSUMER]商品。[NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]交通和污染问题[ENDCOLOR]导致[ICON_FOOD]食物累积-20%以及10点额外[ICON_HAPPINESS_4]不满。[NEWLINE][ICON_BULLET]+5%解锁政策所需的[ICON_CULTURE] 文化值。[NEWLINE][ICON_BULLET][COLOR_POSITIVE_TEXT]巨型城市[ENDCOLOR]需要有醫學實驗室才能继续增长人口。[NEWLINE][ICON_BULLET]当人口达到80时升级为[COLOR_POSITIVE_TEXT]大都会[ENDCOLOR]。</Text>
+			<Text>[ICON_BULLET][ICON_CITIZEN]市民工作范围：5格。[NEWLINE][NEWLINE][ICON_BULLET][ICON_TOURISM]魅力产出+50%。[NEWLINE][ICON_BULLET]+54[ICON_RES_MANPOWER]人力。[NEWLINE][ICON_BULLET]消耗54[ICON_RES_ELECTRICITY]电力。[NEWLINE][ICON_BULLET]消耗54[ICON_RES_CONSUMER]商品。[NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]交通和污染问题[ENDCOLOR]导致[ICON_FOOD]食物累积-20%以及10点额外[ICON_HAPPINESS_4]不满。[NEWLINE][ICON_BULLET]+5%解锁政策所需的[ICON_CULTURE] 文化值。[NEWLINE][ICON_BULLET][COLOR_POSITIVE_TEXT]巨型城市[ENDCOLOR]需要有医学实验室才能继续增长人口。[NEWLINE][ICON_BULLET]当人口达到80时升级为[COLOR_POSITIVE_TEXT]大都会[ENDCOLOR]。</Text>
 		</Row>
 
 		<Row>
@@ -4583,7 +4601,14 @@
 			<Text>{TXT_KEY_CONCEPT_SP_NUCLEAR_WINTER_DETAILS_TOPIC}</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CONCEPT_SP_NUCLEAR_WINTER_DETAILS_SUMMARY">
-			<Text>触发条件：核爆炸会在地图上产生核辐射。如果地图上0.5%的地块被辐射尘覆盖，核冬天的扳机将被抠动。[NEWLINE][NEWLINE]效果：核冬天拥有四个阶段，如果有更多核爆炸，核冬天就会进入下一个阶段。[NEWLINE][NEWLINE]1，凛冬将至——核辐射区域：0.5%-1%。你在发生核爆炸时会收到核冬天即将降临的警告。[NEWLINE]2，灾变夜——核辐射区域：1%-5%。辐射烟云遮蔽了太阳，地球开始了长夜。所有食物产出高于3的地块，每发生一次核爆炸会减1产出。这将会减慢各个城市的人口增长。[NEWLINE]3，末世——核辐射区域：5%-10%。大量的辐射尘覆盖了土壤，所有食物产出高于1的地块，每发生一次核爆炸会减1产出。这会导致全球性的饥荒。[NEWLINE]4，灭——核辐射区域：>10%。地球彻底暗无天日，所有地块的食物和产能随著新的核爆炸都会降低至0，核战中的幸存者大部分也将饱受饥馁而死。所有城市将倒退回石器时代。</Text>
+			<Text>
+				触发条件：核爆炸会增加全球核冬天进程。当核冬天进程达到阈值时，核冬天的扳机将被抠动。
+				[NEWLINE][NEWLINE]效果：核冬天拥有四个阶段，如果有更多核爆炸，核冬天就会进入下一个阶段。
+				[NEWLINE][NEWLINE]1，凛冬将至——核冬天进程达到50。你在发生核爆炸时会收到核冬天即将降临的警告。
+				[NEWLINE]2，灾变夜——核冬天进程达到75。辐射烟云遮蔽了太阳，地球开始了长夜，各个城市的人口增长减慢。
+				[NEWLINE]3，末世——核冬天进程达到300。大量的辐射尘覆盖了土壤，全球性的饥荒开始。
+				[NEWLINE]4，灭——核冬天进程达到500。地球彻底暗无天日，核战中的幸存者大部分将饱受饥馁而死。所有城市将倒退回石器时代。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CONCEPT_SP_NUCLEAR_WINTER_DETAILS_ADVISOR_QUESTION">
 			<Text>核冬天的触发条件和效果是什么?</Text>
@@ -4596,7 +4621,13 @@
 			<Text>{TXT_KEY_CONCEPT_SP_NUCLEAR_WINTER_RESULT_TOPIC}</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CONCEPT_SP_NUCLEAR_WINTER_RESULT_SUMMARY">
-			<Text>核冬天是一个不可逆的过程，一旦发生，气候将发生永久性的变化。因此应当尽量不要让其发生。[NEWLINE][NEWLINE]1，一次核爆炸不会导致核冬天，只有一场大规模核战争足以触发它。由于这个过程是通过计算地图上辐射地块的总量来触发的，在同一块区域内进行的多次核爆炸（类似于核试验）不会触发严重的后果。[NEWLINE]2，通过清理辐射地块，你可以减缓核冬天的进程。这会阻止它进入下一个阶段，但不会使其返回到上个阶段。[NEWLINE]3，最好的阻止核冬天的方法当然是不使用核武器，因此核不扩散条约非常重要。[NEWLINE]4，如果核冬天到达了其最严重的阶段，它将会毁灭人类文明。但你依然还有最后一点希望——趁你的城市还未衰落前以最快的速度制造出星际飞船、最后一次外交胜利的尝试、用你残存的兵力攻克最后一个顽敌的首都、在10年内达成文化或时间胜利等。无论你的打算是什么，请尽快做吧，末日的钟声正在敲响！</Text>
+			<Text>
+				核冬天是一个宏观不可逆的过程，一旦发生，全球气候将发生半永久性的变化（恢复十分缓慢）。因此应当尽量不要让其发生。
+				[NEWLINE][NEWLINE]1，一次核爆炸不会导致核冬天，只有一场大规模核战争足以触发它。
+				[NEWLINE]2，发生辐射清理卫星可以大幅减少全球核冬天进程，甚至能够逆转气候变化，但是一局游戏只能使用一次。
+				[NEWLINE]3，最好的阻止核冬天的方法当然是不使用核武器，因此核不扩散条约非常重要。
+				[NEWLINE]4，如果核冬天到达了其最严重的阶段，它将会毁灭人类文明。但你依然还有最后一点希望——趁你的城市还未衰落前以最快的速度制造出星际飞船、最后一次外交胜利的尝试、用你残存的兵力攻克最后一个顽敌的首都、在10年内达成文化或时间胜利等。无论你的打算是什么，请尽快做吧，末日的钟声正在敲响！
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CONCEPT_SP_NUCLEAR_WINTER_RESULT_ADVISOR_QUESTION">
 			<Text>怎样阻止核冬天?</Text>
@@ -5276,7 +5307,7 @@
 			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]单位有待选择晋升[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_UNIT_CAN_ESTABLISH_CORPS_OR_ARMEE">
-			<Text>[NEWLINE][COLOR_POSITIVE_TEXT]在军团模式下允许将同地块陆军单位升级为军团或集团军（仅一次）[ENDCOLOR]</Text>
+			<Text>[NEWLINE][COLOR_POSITIVE_TEXT]军团模式：允许将同地块陆军单位升级为军团或集团军（仅一次）[ENDCOLOR]</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_FULLATTACK_ON_SHORT">
@@ -5466,6 +5497,30 @@
 			<Text>灭</Text>
 		</Row>
 
+		<Row Tag="TXT_KEY_NUCLEAR_WINTER_ALARM">
+			<Text>凛冬将至</Text>
+		</Row>
+		<Row Tag="TXT_KEY_NUCLEAR_WINTER_ALARM_HELP">
+			<Text>目前全球产出暂未受到影响，但核爆炸所造成的影响已经需要引起注意！</Text>
+		</Row>
+		<Row Tag="TXT_KEY_NUCLEAR_WINTER_LEVEL_1">
+			<Text>灾变夜</Text>
+		</Row>
+		<Row Tag="TXT_KEY_NUCLEAR_WINTER_LEVEL_1_HELP">
+			<Text>辐射烟云遮蔽了太阳，地球开始了长夜，各个城市的人口增长减慢!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_NUCLEAR_WINTER_LEVEL_2">
+			<Text>末世</Text>
+		</Row>
+		<Row Tag="TXT_KEY_NUCLEAR_WINTER_LEVEL_2_HELP">
+			<Text>大量的辐射尘覆盖了土壤，全球性的饥荒开始了！</Text>
+		</Row>
+		<Row Tag="TXT_KEY_NUCLEAR_WINTER_LEVEL_3">
+			<Text>灭</Text>
+		</Row>
+		<Row Tag="TXT_KEY_NUCLEAR_WINTER_LEVEL_3_HELP">
+			<Text>地球彻底暗无天日，无尽的核战争终结了人类的命运！</Text>
+		</Row>
 
 		<!-- *************************New Attack Effect Notifications****************************-->
 		<!--袭扰提示-->
@@ -5916,8 +5971,8 @@
 
 		<Replace Tag="TXT_KEY_TRAIT_PHOENICIAN_HERITAGE">
 			<Text>
-				[ICON_BULLET]每位专家+2[ICON_PRODUCTION]产能。
-				[NEWLINE][ICON_BULLET]每条海上商路+4[ICON_GOLD]金钱并且+25%商路距离。
+				[ICON_BULLET]海上商路为出发城市+2[ICON_PRODUCTION]产能（随时代增加）并且+25%商路距离。
+				[NEWLINE][ICON_BULLET]研发帆船后获得一位移民。
 			</Text>
 		</Replace>	
 
@@ -6520,7 +6575,7 @@
 				[COLOR_POSITIVE_TEXT]传统政策[ENDCOLOR]适宜于繁荣精干的帝国。
 				[NEWLINE][NEWLINE]启用传统政策：
 				[NEWLINE][ICON_BULLET]使[ICON_CAPITAL]首都+3[ICON_CULTURE]文化，+3[ICON_RESEARCH]科研。
-				[NEWLINE][ICON_BULLET]首都出发的商路+3距离基数、+3[ICON_GOLD]金钱。
+				[NEWLINE][ICON_BULLET]首都出发的商路+5距离基数、+5[ICON_GOLD]金钱。
 				[NEWLINE][ICON_BULLET]城市地块扩张所需文化成本-25%。
 				[NEWLINE][ICON_BULLET]允许建造空中花园。
 				[NEWLINE][NEWLINE]推行所有传统政策：
@@ -6844,11 +6899,11 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_ORGANIZED_RELIGION">
-			<Text>道德经</Text>
+			<Text>教会组织</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_ORGANIZED_RELIGION_HELP">
 			<Text>
-				[COLOR_POSITIVE_TEXT]道德经[ENDCOLOR]
+				[COLOR_POSITIVE_TEXT]教会组织[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]所有神祠、神庙和[ICON_PEACE]信仰购买建筑+1[ICON_CULTURE]文化产出。
 				[NEWLINE][ICON_BULLET]所有宗教奇观+4[ICON_CULTURE]文化产出。
 			</Text>
@@ -6868,7 +6923,7 @@
 		<Replace Tag="TXT_KEY_POLICY_FREE_RELIGION_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]宗教宽容[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]所有神祠和神庙+1[ICON_HAPPINESS_1]本地快乐。
+				[NEWLINE][ICON_BULLET]城市中每种宗教+1[ICON_HAPPINESS_1]本地快乐。
 				[NEWLINE][ICON_BULLET]立刻开启一次黄金时代。
 			</Text>
 		</Replace>
@@ -6879,7 +6934,7 @@
 		<Row Tag="TXT_KEY_POLICY_RELIGIOUS_POLITICS_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]教法社会[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]将[ICON_PEACE]信仰产出的20%转化为全局[ICON_HAPPINESS_1]快乐度。
+				[NEWLINE][ICON_BULLET]将[ICON_PEACE]信仰产出的15%转化为全局[ICON_HAPPINESS_1]快乐度。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_RELIGIOUS_POLITICS_TEXT">
@@ -7137,7 +7192,7 @@
 				[NEWLINE][NEWLINE]启用海事政策:
 				[NEWLINE][ICON_BULLET]新训练的移民在境外不会损耗，工人、移民、考古学家、传教士以及大先知+1[ICON_MOVES]移动。
 				[NEWLINE][ICON_BULLET]所有的海运单位+1[ICON_MOVES]移动，海军统帅+3[ICON_MOVES]移动，所有海军单位可以进入大洋。
-				[NEWLINE][ICON_BULLET]解锁奇观鹿特丹港和大铁厂。
+				[NEWLINE][ICON_BULLET]解锁奇观鹿特丹港和威尼斯军械库。
 				[NEWLINE][NEWLINE]推行所有海事政策：
 				[NEWLINE][ICON_BULLET]立即获得一个海军统帅，海军统帅的产生速率+50%。
 				[NEWLINE][ICON_BULLET]允许在工业时代以后使用[ICON_PEACE]信仰购买海军统帅。此后海军统帅可以无消耗建造军事学院。
@@ -7312,7 +7367,7 @@
 		<Replace Tag="TXT_KEY_POLICY_ECONOMIC_UNION_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]联合研究[ENDCOLOR]
-				[NEWLINE]合作研究产出的[ICON_RESEARCH]科研+100%，每一个合作研究为全国+10%[ICON_RESEARCH]科研产出。
+				[NEWLINE]合作研究产出的[ICON_RESEARCH]科研+100%，每个合作研究为全国+5%[ICON_RESEARCH]科研总产出。
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_ECONOMIC_UNION_TEXT">
@@ -8176,7 +8231,7 @@
 			<Text>每一处钻石和珍珠+2[ICON_PEACE]信仰、+2[ICON_CULTURE]文化</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_PAPAL_PRIMACY">
-			<Text>对信仰此宗教的城邦的[ICON_INFLUENCE]影响力下限值+35且[ICON_INFLUENCE]影响力恢复速率+300%</Text>
+			<Text>对信仰此宗教的城邦的[ICON_INFLUENCE]影响力下限值+35且[ICON_INFLUENCE]影响力恢复速率+300%，宗教裁判官位于同盟城邦附近可以阻止其被其他文明传教</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_CHARITABLE_MISSIONS">
 			<Text>向城邦赠送[ICON_GOLD]金钱增加影响力的效果提升50%。对信仰此宗教的城邦的[ICON_INFLUENCE]影响力下限值+30</Text>
@@ -8194,7 +8249,7 @@
 			<Text>允许使用[ICON_PEACE]信仰购买[COLOR_POSITIVE_TEXT]宗教艺术师[ENDCOLOR]，该单位能够开启黄金时代。露天剧场、画廊和歌剧院+2[ICON_PEACE]信仰。建造奇观时+25%[ICON_PRODUCTION]产能积累</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_UNITY_OF_PROPHETS">
-			<Text>宗教裁判官和先知只能将此宗教的信众减少一半（而非全部清除）。圣城中诞生一位[ICON_PROPHET]大先知</Text>
+			<Text>宗教裁判官和先知只能将此宗教的信众减少一半（而非全部清除）。城市审判狂热时间减半。圣城中诞生一位[ICON_PROPHET]大先知</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_TO_GLORY_OF_GOD">
 			<Text>进入工业时代之后可以使用[ICON_PEACE]信仰购买任意类型的[ICON_GREAT_PEOPLE]伟人。所有城市每位专业人员+1[ICON_PEACE]信仰</Text>
@@ -12116,7 +12171,7 @@
 		<Row Tag="TXT_KEY_UNIT_TSAR_BOMBA_STRATEGY">
 			<Text>
 				相当于提前1个时代的ICBM，是非常恐怖的战略核威慑力量。如果玩家不怕核冬天的话，用它来压制boss的效果好极了！
-				 [NEWLINE][NEWLINE]克制方法：沙皇炸弹一旦投下，谁也阻止不了它爆炸。不过它的射程并不远，难以威胁到另一大洲的国家。此外它也可以被核不扩散决议所禁止。
+				[NEWLINE][NEWLINE]克制方法：沙皇炸弹一旦投下，谁也阻止不了它爆炸。不过它的射程并不远，难以威胁到另一大洲的国家。此外它也可以被核不扩散决议所禁止。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_TSAR_BOMBA_TEXT">
@@ -13595,7 +13650,7 @@
 				[ICON_BULLET]提升邻近两格的陆军单位的战斗效率。
 				[NEWLINE][ICON_BULLET]能够消耗一回合移动力来移除一个陆军单位的所有负面状态。
 				[NEWLINE][ICON_BULLET]免疫溅射和穿透伤害。
-				[NEWLINE][ICON_BULLET]在军团模式下允许将同地块陆军单位升级为军团或集团军（仅一次）。
+				[NEWLINE][ICON_BULLET]军团模式：允许将同地块陆军单位升级为军团或集团军（仅一次）。
 			</Text>
 		</Replace>
 
@@ -13854,7 +13909,6 @@
 			<Text>+9航程。</Text>
 		</Replace>
 
-		<!--哈卡战舞-->
 		<Replace Tag="TXT_KEY_PROMOTION_HAKA_WAR_DANCE_HELP">
 			<Text>
 				[ICON_BULLET]所有[COLOR_POSITIVE_TEXT]临近[ENDCOLOR]敌方单位-33% [ICON_STRENGTH]战斗力。
@@ -15591,7 +15645,7 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_CIV5_HUN_HORSE_ARCHER_HELP_TEXT">
-			<Text>每杀死一名敌军，+2近战和远程战斗力，积累的战斗力升级可继承，但是不能再增加。{TXT_KEY_PROMOTION_HITANDRUN_HELP}</Text>
+			<Text>每杀死一名敌军，+1近战和+2远程战斗力，积累的战斗力升级可继承，但是不能再增加。{TXT_KEY_PROMOTION_HITANDRUN_HELP}</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_PROMOTION_ATTACK_COST_HALF">
@@ -16318,5 +16372,49 @@
 		<Row Tag="TXT_KEY_EUPANEL_BONUS_ATTACK_WOUND_UNITS">
 			<Text>攻击受损单位加成</Text>
 		</Row>
+		
+		<Row Tag="TXT_KEY_SP_UNIT_NUCLEAR_WINTER_PROCESS">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]核冬天：核冬天进程增加{1_Num}点[ENDCOLOR]（当前核冬天进程为{2_Num}）</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_NO_NUCLEAR_WINTER_LOCAL">
+			<Text>本城不受核冬天影响</Text>
+		</Row>
+		<Row Tag="TXT_KEY_IMMIGRANT_ALL_SCALE">
+			<Text>本城接收国际移民不受城市规模影响</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_CIV5_IMPROVEMENTS_POLDER_HELP">
+			<Text>圩田只能建立在冲积平原、沼泽，或者临近3块以上水域的平地上。圩田额外增加[ICON_FOOD]食物和[ICON_PRODUCTION]产能产出。</Text>
+		</Replace>
+
+		<Row Tag="TXT_KEY_BUILDING_VENICE_ARMORY">
+			<Text>威尼斯军械库</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_VENICE_ARMORY_PEDIA">
+			<Text>
+				威尼斯军械库始建于1104年，最终形成了涵盖造船厂、兵工厂和武器商店的庞大建筑群。其目的是为了满足威尼斯海军的需求，依靠兵工厂，威尼斯共和国才能维护其自身独立，以及利润丰厚的海上贸易航线，因此它被认为是“前工业文明时期集中式结构的大型生产综合体的重要范例”。兵工厂在不同地方生产预制的船部件、军备、绳索、风帆以及一切需要的东西，如有必要，可以在一天之内制造出一艘军舰。蒙特洛山上的国有林场可提供木材和沥青。约1460年新建了通往兵工厂的波尔图麦格纳（“大门”），此设计出自艺术家雅格布·贝利尼之手，这是在威尼斯建造的第一个古典复兴建筑；1687年，两只在希腊获得的石狮子被放置在入口处以震慑访客。在派遣军舰于地中海打败威尼斯的挑战者之前，兵工厂还生产了绝大部分的威尼斯商船，从而将财富带回城邦…以便建造更多船只。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_VENICE_ARMORY_QUOTE">
+			<Text>[NEWLINE]"威尼斯联邦的军械库上有这样一段题词：快乐是城市在和平时期想起战争的痛苦。"[NEWLINE]        ——罗伯特·伯顿[NEWLINE]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_VENICE_ARMORY_HELP">
+			<Text>
+				需要开启海事政策树。
+				[NEWLINE][ICON_BULLET]城市建造海上单位时+20%[ICON_PRODUCTION]产能积累。
+				[NEWLINE][ICON_BULLET]每项已采用的海事政策+2[ICON_RESEARCH]科研、[ICON_PRODUCTION]产能，完成海事政策树+3[ICON_RESEARCH]科研、[ICON_PRODUCTION]产能。
+				[NEWLINE]只能在沿海大型城市（26人口）建造。建造成本随城市数量增加。
+			</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_MISSION_SPREAD_RELIGION_DISABLED_CITY_NO_SPREAD">
+			<Text>目标城市处于审判狂热状态，第{1_num}回合前[COLOR_NEGATIVE_TEXT]无法进行传教[ENDCOLOR]。</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_MISSION_REMOVE_HERESY_HELP">
+			<Text>
+				[ICON_BULLET]这项指令将移走该己方城市中的其余宗教。宗教裁判官将被消耗掉。
+				[NEWLINE][ICON_BULLET]城市将进入一定回合的审判狂热状态，该状态下城市[COLOR_NEGATIVE_TEXT]无法被传教[ENDCOLOR]（基础回合数为城市[ICON_CITIZEN]人口的5%）。
+			</Text>
+		</Replace>
 	</Language_zh_CN>
 </GameData>

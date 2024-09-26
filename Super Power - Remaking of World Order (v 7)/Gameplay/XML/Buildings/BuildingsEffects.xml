@@ -399,6 +399,10 @@
 			<BuildingType>BUILDING_IRON_PROVIDER</BuildingType>
 			<ResourceType>RESOURCE_IRON</ResourceType>
 		</Row>
+		<Row>
+			<BuildingType>BUILDING_IRONWORKS</BuildingType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+		</Row>
 	</Building_LocalResourceOrs>
 
 	
@@ -677,12 +681,16 @@
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 			<Quantity>25</Quantity>
 		</Row>
-		<!--
 		<Row>
 			<BuildingType>BUILDING_IRONWORKS</BuildingType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
-			<Quantity>15</Quantity>
-		</Row>-->
+			<Quantity>5</Quantity>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_IRONWORKS</BuildingType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+			<Quantity>5</Quantity>
+		</Row>
 		<Row>
 			<BuildingType>BUILDING_NATIONAL_ORDER</BuildingType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
@@ -1837,7 +1845,19 @@
 			<YieldType>YIELD_GOLD</YieldType>
 			<YieldChange>2</YieldChange>
 		</Row>-->
-		
+
+		<Row>
+			<BuildingType>BUILDING_PUPPET_GOVERNEMENT</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_NATIONAL_TREASURY_II</BuildingClassType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<YieldChange>5</YieldChange>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_PUPPET_GOVERNEMENT_FULL</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_NATIONAL_TREASURY_II</BuildingClassType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<YieldChange>5</YieldChange>
+		</Row>
 	</Building_BuildingClassYieldChanges>
 	
 	
@@ -2086,17 +2106,6 @@
 			<YieldType>YIELD_SCIENCE</YieldType>
 			<Yield>33</Yield>
 		</Row>
-		<Row>
-			<BuildingType>BUILDING_NATIONAL_TREASURY_II</BuildingType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>33</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_IRONWORKS</BuildingType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>25</Yield>
-		</Row>
-		
 
 		<Row>
 			<BuildingType>BUILDING_CITYSTATE_RESOURCE</BuildingType>
@@ -2777,6 +2786,12 @@
 			<Yield>1</Yield>
 		</Row>
 		<Row>
+			<BuildingType>BUILDING_IRONWORKS</BuildingType>
+			<ImprovementType>IMPROVEMENT_MINE</ImprovementType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
 			<BuildingType>BUILDING_FISH_FARM</BuildingType>
 			<ImprovementType>IMPROVEMENT_FISHFARM_MOD</ImprovementType>
 			<YieldType>YIELD_FOOD</YieldType>
@@ -3083,20 +3098,6 @@
 			<Yield>1</Yield>
 		</Row>-->
 		<!---->
-
-		<!--<Row>
-			<BuildingType>BUILDING_NATIONAL_TREASURY_II</BuildingType>
-			<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>2</Yield>
-		</Row>-->
-		<!--<Row>
-			<BuildingType>BUILDING_IRONWORKS</BuildingType>
-			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>1</Yield>
-		</Row>-->
-		
 
 		<Row>
 			<BuildingType>BUILDING_NATIONAL_FINANCE</BuildingType>
@@ -7252,6 +7253,28 @@
 			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
 			<Flavor>200</Flavor>
 		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_VENICE_ARMORY</BuildingType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>200</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_VENICE_ARMORY</BuildingType>
+			<FlavorType>FLAVOR_GREAT_PEOPLE</FlavorType>
+			<Flavor>50</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_VENICE_ARMORY</BuildingType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>75</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_VENICE_ARMORY</BuildingType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>75</Flavor>
+		</Row>
+
 		<Row>
 			<BuildingType>BUILDING_INTELLIGENCE_AGENCY</BuildingType>
 			<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
@@ -7512,4 +7535,75 @@
 			<Yield>5</Yield>
 		</Row>
 	</UnitPromotions_InstantYieldPerReligionFollowerConverted>
+
+	<Building_DomainProductionModifiers>
+		<Row>
+			<BuildingType>BUILDING_VENICE_ARMORY</BuildingType>
+			<DomainType>DOMAIN_SEA</DomainType>
+			<Modifier>20</Modifier>
+		</Row>
+	</Building_DomainProductionModifiers>
+
+	<Building_ResourceYieldChangesGlobal>
+		<Row>
+			<BuildingType>BUILDING_NATIONAL_TREASURY_II</BuildingType>
+			<ResourceType>RESOURCE_GOLD</ResourceType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_NATIONAL_TREASURY_II</BuildingType>
+			<ResourceType>RESOURCE_SILVER</ResourceType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_NATIONAL_TREASURY_II</BuildingType>
+			<ResourceType>RESOURCE_COPPER</ResourceType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_NATIONAL_TREASURY_II</BuildingType>
+			<ResourceType>RESOURCE_TOBACCO</ResourceType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_NATIONAL_TREASURY_II</BuildingType>
+			<ResourceType>RESOURCE_SUGAR</ResourceType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_NATIONAL_TREASURY_II</BuildingType>
+			<ResourceType>RESOURCE_GOLD</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_NATIONAL_TREASURY_II</BuildingType>
+			<ResourceType>RESOURCE_SILVER</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_NATIONAL_TREASURY_II</BuildingType>
+			<ResourceType>RESOURCE_COPPER</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_NATIONAL_TREASURY_II</BuildingType>
+			<ResourceType>RESOURCE_TOBACCO</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_NATIONAL_TREASURY_II</BuildingType>
+			<ResourceType>RESOURCE_SUGAR</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	</Building_ResourceYieldChangesGlobal>
 </GameData>

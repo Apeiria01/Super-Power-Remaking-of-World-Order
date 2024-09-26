@@ -11,7 +11,7 @@
 		
 		<Update>
 			<Set PlotCultureExponentModifier="-25" GreatGeneralRateModifier="25" GreatAdmiralRateModifier="25" RiggingElectionModifier="50"
-			StealTechFasterModifier="50" CapitalTradeRouteGoldChange="300" CapitalTradeRouteRangeChange="3"/>
+			StealTechFasterModifier="50" CapitalTradeRouteGoldChange="500" CapitalTradeRouteRangeChange="5"/>
 			<Where Type="POLICY_TRADITION"/>
 		</Update>
 		<Update>
@@ -226,7 +226,7 @@
 			<Where Type="POLICY_PIETY_FINISHER"/>
 		</Update>
 		<Update>
-			<Set SecondReligionPantheon="false" PortraitIndex="25" GridX="2" GridY="3" GoldenAgeTurns="10" />
+			<Set SecondReligionPantheon="false" PortraitIndex="25" GridX="2" GridY="3" GoldenAgeTurns="10" HappinessPerReligionInCity="1" />
 			<Where Type="POLICY_FREE_RELIGION"/>
 		</Update>
 		<Update>
@@ -245,7 +245,7 @@
 			<PortraitIndex>37</PortraitIndex>
 			<IconAtlas>POLICY_ATLAS</IconAtlas>
 			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
-			<GlobalHappinessFromFaithPercent>20</GlobalHappinessFromFaithPercent>
+			<GlobalHappinessFromFaithPercent>15</GlobalHappinessFromFaithPercent>
 		</Row>
 	</Policies>
 
@@ -543,7 +543,7 @@
 			<Where Type="POLICY_CIVIL_SOCIETY"/>
 		</Update>-->
 		<Update>
-			<Set ScienceModifierFromRANum="10" MedianTechPercentChange="50"/>
+			<Set ScienceModifierFromRANum="5" MedianTechPercentChange="50"/>
 			<Where Type="POLICY_ECONOMIC_UNION"/>
 		</Update>
 		<Update>
@@ -1295,7 +1295,7 @@
 		</Row>
 		<Row>
 			<PolicyType>POLICY_FREE_RELIGION</PolicyType>
-			<FlavorType>FLAVOR_RELIGION</FlavorType>
+			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
 			<Flavor>20</Flavor>
 		</Row>
 		<Row>

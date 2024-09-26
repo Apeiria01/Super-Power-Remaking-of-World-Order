@@ -790,22 +790,6 @@
 			<Happiness>5</Happiness>
 		</Row>
 		
-		
-		
-		
-
-
-		<Row>
-			<PolicyType>POLICY_FREE_RELIGION</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_SHRINE</BuildingClassType>
-			<Happiness>1</Happiness>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_FREE_RELIGION</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_TEMPLE</BuildingClassType>
-			<Happiness>1</Happiness>
-		</Row>
-
 		<!--<Row>
 			<PolicyType>POLICY_PROFESSIONAL_ARMY</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
@@ -1140,20 +1124,6 @@
 		</Row>
 
 		<Row>
-			<PolicyType>POLICY_MARITIME_INFRASTRUCTURE</PolicyType>
-			<ImprovementType>IMPROVEMENT_FISHERY_MOD</ImprovementType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_MARITIME_INFRASTRUCTURE</PolicyType>
-			<ImprovementType>IMPROVEMENT_GAS_RIG_MOD</ImprovementType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		
-		
-		<Row>
 			<PolicyType>POLICY_FREE_THOUGHT</PolicyType>
 			<ImprovementType>IMPROVEMENT_TRADING_POST</ImprovementType>
 			<YieldType>YIELD_SCIENCE</YieldType>
@@ -1236,12 +1206,6 @@
 		<Row>
 			<PolicyType>POLICY_FIVE_YEAR_PLAN</PolicyType>
 			<ImprovementType>IMPROVEMENT_FISHING_BOATS</ImprovementType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_FIVE_YEAR_PLAN</PolicyType>
-			<ImprovementType>IMPROVEMENT_GAS_RIG_MOD</ImprovementType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<Yield>1</Yield>
 		</Row>
@@ -2387,7 +2351,7 @@
 			<BuildingType>BUILDING_POLICY_MERCHANT_NAVY_FREE</BuildingType>
 			<UnitClassType>UNITCLASS_CARGO_SHIP</UnitClassType>
 			<YieldType>YIELD_FAITH</YieldType>
-			<CostModifier>500</CostModifier>
+			<CostModifier>300</CostModifier>
 		</Row>
 	</Building_EnableUnitPurchase>
 

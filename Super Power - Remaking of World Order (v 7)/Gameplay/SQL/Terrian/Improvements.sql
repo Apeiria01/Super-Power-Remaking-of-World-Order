@@ -41,8 +41,8 @@ VALUES	('BUILD_SHOSHONE_WILDDOME',	'TECH_GUNPOWDER',	'IMPROVEMENT_SHOSHONE_WILDD
 --==========================================================================================================================	
 INSERT INTO BuildFeatures
 		(BuildType,						FeatureType,		PrereqTech,				Time,	Remove)
-VALUES	('BUILD_SHOSHONE_WILDDOME',		'FEATURE_JUNGLE',	'TECH_GUNPOWDER',	    100,	0),
-		('BUILD_SHOSHONE_WILDDOME',		'FEATURE_FOREST',	'TECH_GUNPOWDER',	    100,	0);
+VALUES	('BUILD_SHOSHONE_WILDDOME',		'FEATURE_JUNGLE',	'TECH_BRONZE_WORKING',	700,	0),
+		('BUILD_SHOSHONE_WILDDOME',		'FEATURE_FOREST',	NULL,	    			400,	0);
 --==========================================================================================================================	
 -- Unit_Builds
 --==========================================================================================================================	
@@ -53,9 +53,6 @@ VALUES	('UNIT_WORKER',		'BUILD_SHOSHONE_WILDDOME');
 -- Improvements_Create_Collection
 --==========================================================================================================================	
 INSERT INTO Improvements_Create_Collection(ImprovementType,TerrainType,TerrainOnly,FeatureType,FeatureOnly,ResourceType)
-SELECT 'IMPROVEMENT_FISHERY_MOD',NULL,0,NULL,0, NULL UNION ALL
-SELECT 'IMPROVEMENT_GAS_RIG_MOD',NULL,0,NULL,0, NULL UNION ALL
-
 SELECT 'IMPROVEMENT_ETHIOPIA_COFFEE','TERRAIN_GRASS',1,NULL,0,'RESOURCE_COFFEE' UNION ALL
 SELECT 'IMPROVEMENT_ETHIOPIA_COFFEE','TERRAIN_PLAINS',1,NULL,0,'RESOURCE_COCOA' UNION ALL
 
@@ -65,15 +62,18 @@ SELECT 'IMPROVEMENT_SHOSHONE_WILDDOME',NULL,0,NULL,0,'RESOURCE_BISON' UNION ALL
 SELECT 'IMPROVEMENT_SHOSHONE_WILDDOME',NULL,0,NULL,0,'RESOURCE_DEER' UNION ALL
 SELECT 'IMPROVEMENT_SHOSHONE_WILDDOME',NULL,0,NULL,0,'RESOURCE_IVORY';
 
+--==========================================================================================================================	
+-- Misc Changes
+--==========================================================================================================================	
 UPDATE Improvements Set ExtraScore = -2000 WHERE Type = 'IMPROVEMENT_CUSTOMS_HOUSE';
 UPDATE Improvements Set ExtraScore = -100 WHERE Type = 'IMPROVEMENT_TRADING_POST';
 UPDATE Improvements Set ExtraScore = 100 WHERE Type = 'IMPROVEMENT_BYZANTIUM_ANGELOKASTRO';
 UPDATE Improvements Set ExtraScore = 100 WHERE Type = 'IMPROVEMENT_BRAZILWOOD_CAMP';
 UPDATE Improvements Set ExtraScore = 100 WHERE Type = 'IMPROVEMENT_CHATEAU';
+UPDATE Improvements Set ExtraScore = 200 WHERE Type = 'IMPROVEMENT_IROQUOIAN_FOREST_FARM';
 UPDATE Improvements Set ExtraScore = 200 WHERE Type = 'IMPROVEMENT_TERRACE_FARM';
 UPDATE Improvements Set ExtraScore = 250 WHERE Type = 'IMPROVEMENT_MOAI';
 UPDATE Improvements Set ExtraScore = 300 WHERE Type = 'IMPROVEMENT_MAYA_ALTAR';
-UPDATE Improvements Set ExtraScore = 350 WHERE Type = 'IMPROVEMENT_IROQUOIAN_FOREST_FARM';
 UPDATE Improvements Set ExtraScore = 700 WHERE Type = 'IMPROVEMENT_ETHIOPIA_COFFEE';
 UPDATE Improvements Set ExtraScore = 900 WHERE Type = 'IMPROVEMENT_SHOSHONE_WILDDOME';
 UPDATE Improvements Set ExtraScore = 300 WHERE Type = 'IMPROVEMENT_CREATE_FOREST_MOD';
@@ -83,3 +83,5 @@ UPDATE Improvements Set ExtraScore = 300 WHERE Type = 'IMPROVEMENT_CREATE_JUNGLE
 
 --BUG fix: Superfluous Archaeologist may cause some problems
 UPDATE Improvements Set ForbidSameBuildUnitClasses = 'UNITCLASS_ARCHAEOLOGIST' WHERE Type = 'IMPROVEMENT_LANDMARK';
+
+UPDATE Improvements Set RequiresFeature = 0, RemoveWhenSetNoFuture = 1, NumWaterPlotMakesValid = 3, RequiresFlatlands = 1 WHERE Type = 'IMPROVEMENT_POLDER';

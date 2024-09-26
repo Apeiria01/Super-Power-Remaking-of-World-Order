@@ -1070,6 +1070,13 @@
 		</Row>
 
 		<Row>
+			<Type>BUILDINGCLASS_VENICE_ARMORY</Type>
+			<DefaultBuilding>BUILDING_VENICE_ARMORY</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_VENICE_ARMORY</Description>
+			<MaxPlayerInstances>1</MaxPlayerInstances>
+		</Row>
+
+		<Row>
 			<Type>BUILDINGCLASS_NATIONAL_THEATRE</Type>
 			<DefaultBuilding>BUILDING_NATIONAL_THEATRE</DefaultBuilding>
 			<Description>TXT_KEY_BUILDING_NATIONAL_THEATRE</Description>

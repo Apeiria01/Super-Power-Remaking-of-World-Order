@@ -28,7 +28,7 @@
 			<IconAtlas>BW_ATLAS_1</IconAtlas>
 			<PortraitIndex>19</PortraitIndex>
 			<PolicyCostModifier>50</PolicyCostModifier>
-			<Happiness>20</Happiness>
+			<Happiness>30</Happiness>
 		</Row>
 
 		<Row>
@@ -250,22 +250,40 @@
 			<BuildingClass>BUILDINGCLASS_IRONWORKS</BuildingClass>
 			<GoldMaintenance>6</GoldMaintenance>
 			<Cost>30</Cost>
-			<!--<PrereqTech>TECH_MACHINERY</PrereqTech>-->
-			<PolicyBranchType>POLICY_BRANCH_EXPLORATION</PolicyBranchType>
+			<PrereqTech>TECH_MACHINERY</PrereqTech>
 			<Help>TXT_KEY_BUILDING_IRONWORKS_HELP</Help>
 			<Description>TXT_KEY_BUILDING_IRONWORKS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_IRONWORKS_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_BUILDING_IRONWORKS</ArtDefineTag>
 			<NukeImmune>true</NukeImmune>
-			<NumCityCostMod>20</NumCityCostMod>
+			<NumCityCostMod>15</NumCityCostMod>
 			<HurryCostModifier>-1</HurryCostModifier>
 			<NeverCapture>true</NeverCapture>
 			<IconAtlas>BW_ATLAS_1</IconAtlas>
 			<PortraitIndex>47</PortraitIndex>
-			<Water>true</Water>
-			<MinAreaSize>19</MinAreaSize>
+			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+			<SpecialistCount>2</SpecialistCount>
 		</Row>
 
+		<Row>
+			<Type>BUILDING_VENICE_ARMORY</Type>
+			<BuildingClass>BUILDINGCLASS_VENICE_ARMORY</BuildingClass>
+			<Description>TXT_KEY_BUILDING_VENICE_ARMORY</Description>
+			<Help>TXT_KEY_WONDER_VENICE_ARMORY_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_VENICE_ARMORY_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_VENICE_ARMORY_QUOTE</Quote>
+			<PolicyBranchType>POLICY_BRANCH_EXPLORATION</PolicyBranchType>
+			<Cost>50</Cost>
+			<NukeImmune>true</NukeImmune>
+			<MinAreaSize>19</MinAreaSize>
+			<Water>true</Water>
+			<IconAtlas>SP10_EXTRA_ATLAS</IconAtlas>
+			<PortraitIndex>14</PortraitIndex>
+			<NumCityCostMod>20</NumCityCostMod>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<NeverCapture>true</NeverCapture>
+			<GoldMaintenance>8</GoldMaintenance>
+		</Row>
 
 		<Row>
 			<Type>BUILDING_NATIONAL_TREASURY_II</Type>
@@ -705,6 +723,11 @@
 			<BuildingClassType>BUILDINGCLASS_CIRCUS</BuildingClassType>
 		</Row>
 
+		<Row>
+			<BuildingType>BUILDING_IRONWORKS</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_WORKSHOP</BuildingClassType>
+		</Row>
+
 		<!--<Row>
 			<BuildingType>BUILDING_NATIONAL_LIBRARY</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_LIBRARY</BuildingClassType>
@@ -797,13 +820,17 @@
 			<BuildingType>BUILDING_NATIONAL_EPIC</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_MEDIUM</BuildingClassType>
 		</Row>
+		<Row>
+			<BuildingType>BUILDING_IRONWORKS</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_MEDIUM</BuildingClassType>
+		</Row>
 		
 		<Row>
 			<BuildingType>BUILDING_NATIONAL_LIBRARY</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_LARGE</BuildingClassType>
 		</Row>
 		<Row>
-			<BuildingType>BUILDING_IRONWORKS</BuildingType>
+			<BuildingType>BUILDING_VENICE_ARMORY</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_LARGE</BuildingClassType>
 		</Row>
 		<Row>
@@ -834,6 +861,11 @@
 		<Row>
 			<BuildingType>BUILDING_NATIONAL_CARAVANSARY</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_CARAVANSARY</BuildingClassType>
+			<NumBuildingNeeded>-1</NumBuildingNeeded>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_IRONWORKS</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_WORKSHOP</BuildingClassType>
 			<NumBuildingNeeded>-1</NumBuildingNeeded>
 		</Row>
 		<Row>
@@ -2516,6 +2548,7 @@
 			<WonderSplashAnchor>L,T</WonderSplashAnchor>
 			<UnmoddedHappiness>30</UnmoddedHappiness>
 			<PopulationChange>30</PopulationChange>
+			<NoNuclearWinterLocal>true</NoNuclearWinterLocal>
 		</Row>
 
 	</Buildings>
@@ -3288,4 +3321,11 @@
 			<YieldValue>1</YieldValue>
 		</Row>
 	</Building_TradeRouteFromTheCityYields>
+	<Building_YieldMultiplier>
+		<Row>
+			<BuildingType>BUILDING_CITYSTATE_RESOURCE</BuildingType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>-20</Yield>
+		</Row>
+	</Building_YieldMultiplier>
 </GameData>

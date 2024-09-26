@@ -62,8 +62,7 @@ function BuildTradeRouteGoldToolTipString (pOriginCity, pTargetCity, eDomain)
 
 	local strTraitValue = "";
 	local iTraitBonus = pPlayer:GetInternationalTradeRouteTraitBonus(pOriginCity, pTargetCity, eDomain, true);
-	--if (iTraitBonus ~= 0) then
-	if (true) then
+	if (iTraitBonus ~= 0) then
 		strTraitValue = Locale.ConvertTextKey("TXT_KEY_CHOOSE_INTERNATIONAL_TRADE_ROUTE_ITEM_TT_OTHER_TRAIT", pPlayer:GetCivilizationAdjectiveKey(), iTraitBonus / 100);
 	end
 

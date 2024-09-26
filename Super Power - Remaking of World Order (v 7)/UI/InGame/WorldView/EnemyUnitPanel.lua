@@ -20,6 +20,15 @@ local g_iPortraitSize = Controls.UnitPortrait:GetSize().x;
 local g_bWorldMouseOver = true;
 local g_bShowPanel = false;
 
+-- preload of UnitPromotions_PromotionModifiers
+g_OtherPromotionsTabel = {};
+for row in GameInfo.UnitPromotions_PromotionModifiers() do
+	if not g_OtherPromotionsTabel[row.OtherPromotionType] then
+		g_OtherPromotionsTabel[row.OtherPromotionType] = {}
+		g_OtherPromotionsTabel[row.OtherPromotionType].ID = GameInfoTypes[row.OtherPromotionType]
+		g_OtherPromotionsTabel[row.OtherPromotionType].Description = Locale.ConvertTextKey(GameInfo.UnitPromotions[row.OtherPromotionType].Description)
+	end
+end
 
 function SetName(name)
 
@@ -1111,20 +1120,20 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			----------------------------------------------------------------------------
 			-- BONUSES FROM UnitPromotions_PromotionModifiers
 			----------------------------------------------------------------------------
-			for row in GameInfo.UnitPromotions() do
+			for key, row in pairs(g_OtherPromotionsTabel) do
 				if pTheirUnit:IsHasPromotion(row.ID) then
 					local mod = pMyUnit:OtherPromotionModifier(row.ID);
 					local attackMod = pMyUnit:OtherPromotionAttackModifier(row.ID);
 
 					if (mod ~= 0) then
 						controlTable = g_MyCombatDataIM:GetInstance();
-						controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_PROMOTION_PROMOTION_GENERIC", Locale.ConvertTextKey(row.Description));
+						controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_PROMOTION_PROMOTION_GENERIC", row.Description);
 						controlTable.Value:SetText(GetFormattedText(strText, mod, true, true));
 					end
 
 					if (attackMod ~= 0) then
 						controlTable = g_MyCombatDataIM:GetInstance();
-						controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_PROMOTION_PROMOTION_ATTACK", Locale.ConvertTextKey(row.Description));
+						controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_PROMOTION_PROMOTION_ATTACK", row.Description);
 						controlTable.Value:SetText(GetFormattedText(strText, attackMod, true, true));
 					end
 				end
@@ -1135,13 +1144,13 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 
 					if (mod ~= 0) then
 						controlTable = g_TheirCombatDataIM:GetInstance();
-						controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_PROMOTION_PROMOTION_GENERIC", Locale.ConvertTextKey(row.Description));
+						controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_PROMOTION_PROMOTION_GENERIC", row.Description);
 						controlTable.Value:SetText(GetFormattedText(strText, mod, false, true));
 					end
 
 					if (defenseMod ~= 0) then
 						controlTable = g_TheirCombatDataIM:GetInstance();
-						controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_PROMOTION_PROMOTION_DEFENSE", Locale.ConvertTextKey(row.Description));
+						controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_PROMOTION_PROMOTION_DEFENSE", row.Description);
 						controlTable.Value:SetText(GetFormattedText(strText, defenseMod, false, true));
 					end
 				end

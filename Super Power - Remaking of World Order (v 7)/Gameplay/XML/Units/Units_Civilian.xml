@@ -597,6 +597,7 @@
 			<UnitFlagIconOffset>17</UnitFlagIconOffset>
 			<IconAtlas>EXPANSION_UNIT_ATLAS_1</IconAtlas>
 			<PortraitIndex>17</PortraitIndex>
+			<NoSpreadTurnPopModifierAfterRemovingHeresy>5</NoSpreadTurnPopModifierAfterRemovingHeresy>
 		</Row>
 
 		<Row>
@@ -623,6 +624,7 @@
 			<UnitFlagAtlas>SPUnitFlags_FLAG</UnitFlagAtlas>
 			<IconAtlas>SPUNITS02_ATLAS</IconAtlas>
 			<PortraitIndex>56</PortraitIndex>
+			<NoSpreadTurnPopModifierAfterRemovingHeresy>5</NoSpreadTurnPopModifierAfterRemovingHeresy>
 		</Row>
 		
 		<Row>

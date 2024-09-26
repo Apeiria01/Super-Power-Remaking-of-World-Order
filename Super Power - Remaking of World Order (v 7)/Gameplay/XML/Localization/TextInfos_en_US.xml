@@ -996,7 +996,14 @@
 			<Text>{TXT_KEY_CONCEPT_SP_NUCLEAR_WINTER_DETAILS_TOPIC}</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CONCEPT_SP_NUCLEAR_WINTER_DETAILS_SUMMARY">
-			<Text>Cause: Nuclear detonations will spread fallout over tiles on the map. After 0.5% of the tiles of the whole map are covered by fallout, the nuclear winter event will be triggered. [NEWLINE][NEWLINE]Effect: There are four stages in the nuclear winter. It will get to the next stage if more nuclear weapons are launched. [NEWLINE][NEWLINE]1, Nuclear Winter Warning - The proportion of Fallout tiles: 0.5%- 1%. You will receive a warning if more nuclear weapons are detonated. [NEWLINE]2, Nuclear Winter Strikes - The proportion of Fallout tiles: 1%- 5%. All tiles with Food Output larger than 3 will reduce by 1 for every new nuclear detonation, until it reaches 3. This will slow down the population growth in all cities. [NEWLINE]3, Nuclear Winter Deteriorates - The proportion of Fallout tiles: 5%- 10%. All tiles with Food Output will reduce by 1 for every new nuclear detonation, until it reaches 1. This will leads to global famine. [NEWLINE]4, Nuclear Winter Apocalypse - The proportion of Fallout tiles > 10%. All tiles' Food and Production output will reduce to 0 with new nuclear detonations. All survivors will starve to death. The global productivity is backed to the Stone Age.</Text>
+			<Text>
+				Cause: Nuclear detonations will spread fallout over tiles on the map and increase the global nuclear winter progression. When the nuclear winter progression reaches the threshold, the nuclear winter event will be triggered. 
+				[NEWLINE][NEWLINE]Effect: There are four stages in the nuclear winter. It will get to the next stage if more nuclear weapons are launched. 
+				[NEWLINE][NEWLINE]1, Nuclear Winter Warning - Nuclear winter progression reaches 50. You will receive a warning if more nuclear weapons are detonated. 
+				[NEWLINE]2, Nuclear Winter Strikes - Nuclear winter progression reaches 75. Radiation smoke obscures the sun, the Earth enters a long night, and population growth in cities slows down. 
+				[NEWLINE]3, Nuclear Winter Deteriorates - Nuclear winter progression reaches 225. A massive layer of radioactive dust covers the soil, leads to global famine.
+				[NEWLINE]4, Nuclear Winter Apocalypse - Nuclear winter progression reaches 500. The Earth is plunged into complete darkness, and most survivors of the nuclear war will die from starvation. The global productivity is backed to the Stone Age.
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CONCEPT_SP_NUCLEAR_WINTER_DETAILS_ADVISOR_QUESTION">
 			<Text>What is the cause and the effect of the nuclear winter?</Text>
@@ -1009,7 +1016,13 @@
 			<Text>{TXT_KEY_CONCEPT_SP_NUCLEAR_WINTER_RESULT_TOPIC}</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CONCEPT_SP_NUCLEAR_WINTER_RESULT_SUMMARY">
-			<Text> Unfortunately, the nuclear winter is an irreversible process. Once happened, the climate can never be restored. However, there is still ways to prevent it. [NEWLINE][NEWLINE]1, One nuclear explosion cannot cause the nuclear winter, only a global nuclear war can be strong enough to make it happen. Since the event is triggered by calculating the total number of fallout tiles of the map, many nuclear detonations within a limited area (kinds of nuclear tests) won’t cause the nuclear winter. [NEWLINE]2, You can slow down the nuclear winter process by scrubbing out the fallout tiles. This will stop it from entering to the next stage but cannot restore it to its previous condition. [NEWLINE]3, The best way to prevent the nuclear winter is to stop the nuclear warfare - the Nuclear Non-Proliferation is very important. [NEWLINE]4, If the nuclear winter gets to its worst condition, it will be the end of the human civilizations. However, you still have a little chance to win: waiting for a cultural or diplomatic, or even time victory and it should be less than 10 years. </Text>
+			<Text>
+				Unfortunately, the Nuclear Winter is a macro, irreversible process. Once happened, the climate will undergo semi-permanent changes (recovery is very slow), there is still ways to prevent it. 
+				[NEWLINE][NEWLINE]1, One nuclear explosion cannot cause the nuclear winter, only a global nuclear war can be strong enough to make it happen. 
+				[NEWLINE]2, Launch a radiation-cleaning satellites can significantly reduce the global nuclear winter progression and even reverse climate change, but this can only be done once per game.
+				[NEWLINE]3, The best way to prevent the nuclear winter is to stop the nuclear warfare - the Nuclear Non-Proliferation is very important. 
+				[NEWLINE]4, If the nuclear winter gets to its worst condition, it will be the end of the human civilizations. However, you still have a little chance to win: waiting for a cultural or diplomatic, or even time victory and it should be less than 10 years. 
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CONCEPT_SP_NUCLEAR_WINTER_RESULT_ADVISOR_QUESTION">
 			<Text>How to stop the nuclear winter process?</Text>
@@ -1867,7 +1880,7 @@
 			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]Unit has Promotions to be selected[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_UNIT_CAN_ESTABLISH_CORPS_OR_ARMEE">
-			<Text>[NEWLINE][COLOR_POSITIVE_TEXT]Can Establish Corps or Armee for Land Unit (Only once) in Corps Mode[ENDCOLOR]</Text>
+			<Text>[NEWLINE][COLOR_POSITIVE_TEXT]Corps Mode: Can Establish Corps or Armee for Land Unit (Only once)[ENDCOLOR]</Text>
 		</Row>
 		
 		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_FULLATTACK_ON_SHORT">
@@ -2125,6 +2138,31 @@
 		</Row>
 		<Row Tag="TXT_KEY_SP_NOTIFICATION_NUCLEAR_WINTER_LV3_SHORT">
 			<Text>Apocalypse!</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_NUCLEAR_WINTER_ALARM">
+			<Text>Nuclear Winter Warning!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_NUCLEAR_WINTER_ALARM_HELP">
+			<Text>Global output is currently unaffected, but the impacts of nuclear explosions now require attention!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_NUCLEAR_WINTER_LEVEL_1">
+			<Text>Nuclear Winter Strikes!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_NUCLEAR_WINTER_LEVEL_1_HELP">
+			<Text>Radiation smoke obscures the sun, and the Earth enters a long night, slowing population growth in Cities!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_NUCLEAR_WINTER_LEVEL_2">
+			<Text>Nuclear Winter Deteriorates!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_NUCLEAR_WINTER_LEVEL_2_HELP">
+			<Text>A massive layer of radioactive dust covers the soil, triggering global famine!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_NUCLEAR_WINTER_LEVEL_3">
+			<Text>Apocalypse!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_NUCLEAR_WINTER_LEVEL_3_HELP">
+			<Text>The Earth is plunged into complete darkness, and endless nuclear war seals humanity's fate!</Text>
 		</Row>
 
 	<!-- *************************New Attack Effect Notifications****************************-->
@@ -2990,7 +3028,7 @@
 			<Text>
 				[ICON_BULLET]+5 [ICON_RES_MANPOWER] Manpower.
 				[NEWLINE][ICON_BULLET]+1 [ICON_PRODUCTION] Production from each source of [ICON_RES_IRON] Iron, [ICON_RES_COPPER] Copper, [ICON_RES_COAL] Coal, [ICON_RES_ALUMINUM] Aluminum and [ICON_RES_URANIUM] Uranium.
-				[NEWLINE][ICON_BULLET]+1 [ICON_PRODUCTION] Production from each Mine.
+				[NEWLINE][ICON_BULLET]+1 [ICON_PRODUCTION] Production from each Mine local.
 				[NEWLINE][ICON_BULLET]+15% [ICON_PRODUCTION] Production when building Military Units.
 				[NEWLINE][ICON_BULLET]City must have an improved source of at least one of these resources nearby.
 				[NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]Pollution[ENDCOLOR] will cause -5% [ICON_FOOD] Food Growth.
@@ -3269,6 +3307,7 @@
 			<Text>
 				Sea and land trade routes originating from this city have a 50% increase in range. 
 				[NEWLINE][ICON_BULLET]Serve as a [COLOR_YELLOW]Public Health and Sanitary Service Building[ENDCOLOR] for cities to continue its [ICON_CITIZEN] Population Growth.
+				[NEWLINE][ICON_BULLET]The entry of international migrants into City is not affected by the City Scale.
 			</Text>
 		</Row>
 		
@@ -3299,7 +3338,7 @@
 				[ICON_BULLET]+1 [ICON_GOLD] Gold and +1 [ICON_PRODUCTION] for every [COLOR_POSITIVE_TEXT]Luxury Resource[ENDCOLOR] on water tiles worked by this City.
 				[NEWLINE][ICON_BULLET]+1 [ICON_PRODUCTION] for every [COLOR_POSITIVE_TEXT]Atoll[ENDCOLOR] worked by this City.
 				[NEWLINE][ICON_BULLET]+3 [ICON_CONSUMER] Consumer.
-				[NEWLINE][ICON_BULLET]Gain [ICON_GOLD] when a Cargo ship passes through city plots and the city has Feitoria.
+				[NEWLINE][ICON_BULLET]Gain [ICON_GOLD] when a International Cargo ship passes through city plots and the city has Feitoria.
 			</Text>
 		</Row>
 		<Row>
@@ -4450,7 +4489,10 @@
 		</Row>
 		<!-- Help tags -->
 		<Row Tag="TXT_KEY_WONDER_MEGACITY_PYRAMID_HELP">
-			<Text>+30 [ICON_CITIZEN] Population in the city where it is built (one-time effect).</Text>
+			<Text>
+				[ICON_BULLET]+30 [ICON_CITIZEN] Population in the city where it is built (one-time effect).
+				[NEWLINE][ICON_BULLET]No Nuclear Winter effect this City.
+			</Text>
 		</Row>
 		<!-- Quote tags -->
 		<Row Tag="TXT_KEY_WONDER_MEGACITY_PYRAMID_QUOTE">
@@ -4552,8 +4594,9 @@
 			<Tag>TXT_KEY_BUILDING_NATIONAL_TREASURY_II_HELP</Tag>
 			<Text>
 				Requires Commerce.
-				[NEWLINE][NEWLINE]+33% [ICON_GOLD] Gold output in the city.
-				[NEWLINE][NEWLINE]Must be built in Large Cities. The cost goes up the more cities there are in the empire.
+				[NEWLINE][ICON_BULLET]Each puppet City proveide +5 [ICON_GOLD] Gold output in the city.
+				[NEWLINE][ICON_BULLET]Each source of [ICON_RES_GOLD] Gold, [ICON_RES_SILVER] Silver, [ICON_RES_COPPER] Copper, [ICON_RES_TOBACCO] Tobacco, [ICON_RES_SUGAR] Sugar nationwide +1 [ICON_PRODUCTION] Production, +1 [ICON_GOLD] Gold.
+				[NEWLINE]Must be built in Large Cities. The cost goes up the more cities there are in the empire.
 			</Text>
 		</Row>
 
@@ -4633,8 +4676,11 @@
 
 		<Replace Tag="TXT_KEY_BUILDING_IRONWORKS_HELP">
 			<Text>
-				Requires Maritime.
-				[NEWLINE][NEWLINE]+25% [ICON_PRODUCTION] Production output in the city. [NEWLINE][NEWLINE]Must be built in the Coastal Large Cities. The cost goes up the more cities there are in the empire.</Text>
+				[ICON_BULLET]+5 [ICON_RES_MANPOWER] Manpower, +5 additional [ICON_RES_IRON] Iron.
+				[NEWLINE][ICON_BULLET]+1 [ICON_PRODUCTION] Production from each Mine local.
+				[NEWLINE][NEWLINE][ICON_BULLET]Must have built a WorkShop in all Cities, City must have at least an improvement of [ICON_RES_IRON] Iron.
+				[NEWLINE][ICON_BULLET]Must be built in the Medium City Cities. The cost goes up the more cities there are in the empire.
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_NATIONAL_EPIC_HELP">
 			<Text>
@@ -5247,7 +5293,10 @@
 		<Row>
 			<Tag>TXT_KEY_UNIT_SATELLITE_ANTIFALLOUT_HELP</Tag>
 			<Text>
-				Satellite Unit with Global Effect:[NEWLINE][ICON_BULLET]Remove all Fallout caused by nuclear explosion on the Map. This effect is one-time and can only be used once in a game.
+				Satellite Unit with Global Effect (One-time and can only be used once in a game):
+				[NEWLINE][ICON_BULLET]Remove all Fallout caused by nuclear explosion on the Map.
+				[NEWLINE][ICON_BULLET]+200% natural recovery speed of Nuclear Winter.
+				[NEWLINE][ICON_BULLET]reduce the Nuclear Winter progression by up to 150 points, and force a refresh of the Nuclear Winter Level. 
 			</Text>
 		</Row>
 		<Row>
@@ -7331,7 +7380,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]Tradition[ENDCOLOR] is best for "tall" empires.
 				[NEWLINE][NEWLINE]Opening Effect:
-				[NEWLINE][ICON_BULLET]+3 [ICON_CULTURE] and +3 [ICON_RESEARCH] Science in the [ICON_CAPITAL] Capital.
+				[NEWLINE][ICON_BULLET]+5 [ICON_CULTURE] and +5 [ICON_RESEARCH] Science in the [ICON_CAPITAL] Capital.
 				[NEWLINE][ICON_BULLET]International trade routes from your Capital City +3 basic range and +3 [ICON_GOLD] Gold.
 				[NEWLINE][ICON_BULLET]-25% [ICON_CULTURE] Culture Exponent cost for acquiring new plots in all cities.
 				[NEWLINE][ICON_BULLET]Wonder Unlocked: Hanging Gardens.
@@ -7664,11 +7713,11 @@
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_POLICY_ORGANIZED_RELIGION">
-			<Text>Tao Te Ching</Text>
+			<Text>Organized Religion</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_ORGANIZED_RELIGION_HELP">
 			<Text>
-				[COLOR_POSITIVE_TEXT]Tao Te Ching[ENDCOLOR]
+				[COLOR_POSITIVE_TEXT]Organized Religion[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]+1 [ICON_CULTURE] Culture from every Shrine, Temple and Religious Building purchased with [ICON_PEACE] Faith.
 				[NEWLINE][ICON_BULLET]+4 [ICON_CULTURE] Culture from every Religious Wonder.</Text>
 		</Replace>
@@ -7682,7 +7731,7 @@
 		<Replace Tag="TXT_KEY_POLICY_FREE_RELIGION_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]Religious Tolerance[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]+1 [ICON_HAPPINESS_1] Happiness from every Shrine and Temple.
+				[NEWLINE][ICON_BULLET]+1 [ICON_HAPPINESS_1] Happiness from every Religion in City.
 				[NEWLINE][ICON_BULLET]The empire immediately enters a [ICON_GOLDEN_AGE] Golden Age.</Text>
 		</Replace>
 		
@@ -7692,7 +7741,7 @@
 		<Row Tag="TXT_KEY_POLICY_RELIGIOUS_POLITICS_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]Dependent Origination[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]20% of the total [ICON_PEACE] Faith output each turn added to the amount of Global [ICON_HAPPINESS_1] Happiness. (At least +2 [ICON_HAPPINESS_1] Happiness, no upper limit)
+				[NEWLINE][ICON_BULLET]15% of the total [ICON_PEACE] Faith output each turn added to the amount of Global [ICON_HAPPINESS_1] Happiness. (At least +2 [ICON_HAPPINESS_1] Happiness, no upper limit)
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_RELIGIOUS_POLITICS_TEXT">
@@ -7953,7 +8002,7 @@
 				[NEWLINE][ICON_BULLET]+1 [ICON_MOVES] Movement for Embarked Units, Workers, Settlers, Archaeologists, Great Prophet and Missionaries,all of your navies can enter ocean.
 				[NEWLINE][ICON_BULLET]+3 [ICON_MOVES] Movement for Great Admirals.
 				[NEWLINE][ICON_BULLET]World Wonder Unlocked: Port of Rotterdam.
-				[NEWLINE][ICON_BULLET]National Wonder Unlocked: Ironworks.
+				[NEWLINE][ICON_BULLET]National Wonder Unlocked: Venice Armory.
 				[NEWLINE][NEWLINE]Finishing Bonus:
 				[NEWLINE][ICON_BULLET]A Great Admiral appears.
 				[NEWLINE][ICON_BULLET]Great Admirals are earned 50% faster.
@@ -8142,7 +8191,7 @@
 		<Replace Tag="TXT_KEY_POLICY_ECONOMIC_UNION_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]Joint Research[ENDCOLOR]
-				[NEWLINE]Boosts [ICON_RESEARCH] Science gained from research agreements by 100%, +10% [ICON_RESEARCH] Science nationwide for every research agreement.
+				[NEWLINE]Boosts [ICON_RESEARCH] Science gained from research agreements by 100%, +5% [ICON_RESEARCH] total Science nationwide for every research agreement.
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_ECONOMIC_UNION_TEXT">
@@ -9035,7 +9084,7 @@
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_BELIEF_PAPAL_PRIMACY">
-			<Text>+35 to [ICON_INFLUENCE] Influence resting point with City-States following this religion, +300% for City-State[ICON_INFLUENCE]Influence recovers rate</Text>
+			<Text>+35 to [ICON_INFLUENCE] Influence resting point with City-States following this religion, +300% for City-State[ICON_INFLUENCE]Influence recovers rate, Inquisitors prohibit other Religions Spread to the Ally City-States when near it.</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_CHARITABLE_MISSIONS">
 			<Text>Influence boosts from [ICON_GOLD] Gold gifts to City-States are increased by 50%. +30 to [ICON_INFLUENCE] Influence resting point with City-States following this religion</Text>
@@ -9053,7 +9102,7 @@
 			<Text>Use [ICON_PEACE] Faith to purchase [COLOR_POSITIVE_TEXT]Church Artist[ENDCOLOR], a religious unit who can start a [ICON_GOLDEN_AGE] Golden Age. +2 [ICON_PEACE] Faith from every Amphitheatres, Art Galleries and Opera Houses. +25% [ICON_PRODUCTION] Production of Wonders</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_UNITY_OF_PROPHETS">
-			<Text>Inquisitors and Prophets reduce this religion's presence by half (instead of eliminating it). A [ICON_PROPHET] Great Prophet appears in the Holy City</Text>
+			<Text>Inquisitors and Prophets reduce this religion's presence by half (instead of eliminating it). Turns of Inquisition fervor -50%. A [ICON_PROPHET] Great Prophet appears in the Holy City</Text>
 		</Replace>		
 		<Replace Tag="TXT_KEY_BELIEF_TO_GLORY_OF_GOD">
 			<Text>Use [ICON_PEACE] Faith to purchase any type of [ICON_GREAT_PEOPLE] Great Person starting in Industrial Era. +1 [ICON_PEACE] Faith from Specialists in every city</Text>
@@ -10476,8 +10525,8 @@
 
 		<Replace Tag="TXT_KEY_TRAIT_PHOENICIAN_HERITAGE">
 			<Text>
-				[ICON_BULLET]+2 [ICON_PRODUCTION] Production for every Specialists. 
-				[NEWLINE][ICON_BULLET]+4 [ICON_GOLD] Base Gold for every Sea International Trade Route and +25% Range for Cargoships.
+				[ICON_BULLET]Sea Trade Route +2 [ICON_PRODUCTION] Production for original City (increase with Era), +25% Range for Cargoships.
+				[NEWLINE][ICON_BULLET]A Settler appears after researching Sailing.
 			</Text>
 		</Replace>
 
@@ -10569,7 +10618,7 @@
 			<Text>
 				[ICON_BULLET]Can spend [ICON_GOLD] Gold to annex or puppet a City-State that has been your ally for 8 turns. 
 				[NEWLINE][ICON_BULLET]Each old Capital of City-State -2 Lv. at most of City Hall in its City (non-puppet).
-				[NEWLINE][ICON_BULLET] Unlock the special trading options [Diplomatic Marriage] and [Dual Empire Treaty] (see the Encyclopedia Diplomacy page for details).
+				[NEWLINE][ICON_BULLET]Unlock the special trading options [Diplomatic Marriage] and [Dual Empire Treaty] (see the Encyclopedia Diplomacy page for details).
 			</Text>
 		</Replace>
 
@@ -15560,7 +15609,7 @@
 				[ICON_BULLET]Improve [ICON_STRENGTH] Combat Strength to all [COLOR_POSITIVE_TEXT]land Units[ENDCOLOR] within 2 tiles.
 				[NEWLINE][ICON_BULLET]Can [COLOR_POSITIVE_TEXT]Encourage[ENDCOLOR] an unit to remove all its Debuff conditions by consuming all [ICON_MOVES] MPs of the Great General.
 				[NEWLINE][ICON_BULLET]Immune to Collateral Damage and Splash Damage.
-				[NEWLINE][ICON_BULLET]Can Establish Corps or Armee for Land Unit (Only once) in Corps Mode.
+				[NEWLINE][ICON_BULLET]Corps Mode: Can Establish Corps or Armee for Land Unit (Only once).
 			</Text>
 		</Replace>
 		
@@ -17266,7 +17315,7 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_CIV5_HUN_HORSE_ARCHER_HELP_TEXT">
-			<Text>Every time you kill an enemy, +2 melee and long-range combat strength. The accumulated combat strength upgrade can be inherited, but cannot be increased. {TXT_KEY_PROMOTION_HITANDRUN_HELP}</Text>
+			<Text>Every time you kill an enemy, +1 melee and +2 range combat strength. The accumulated combat strength upgrade can be inherited, but cannot be increased. {TXT_KEY_PROMOTION_HITANDRUN_HELP}</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_PROMOTION_ATTACK_COST_HALF">
@@ -17993,5 +18042,48 @@
 		<Row Tag="TXT_KEY_EUPANEL_BONUS_ATTACK_WOUND_UNITS">
 			<Text>Bonus Attacking Wounded Units</Text>
 		</Row>
+		
+		<Row Tag="TXT_KEY_SP_UNIT_NUCLEAR_WINTER_PROCESS">
+			<Text>[NEWLINE][COLOR_NEGATIVE_TEXT]Nuclear Winter: Nuclear Winter process increase by {1_Num} point[ENDCOLOR] (Now is {2_Num} point)</Text>
+		</Row>
+		<Row Tag="TXT_KEY_NO_NUCLEAR_WINTER_LOCAL">
+			<Text>No Nuclear Winter this City</Text>
+		</Row>
+		<Row Tag="TXT_KEY_IMMIGRANT_ALL_SCALE">
+			<Text>Immigrants enter this City with all City Scales</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_CIV5_IMPROVEMENTS_POLDER_HELP">
+			<Text>A Polder can only be built on Flood Plains, Marsh or a Flat land near at least three Water plots. It provide extra [ICON_FOOD] Food and [ICON_PRODUCTION] Production.</Text>
+		</Replace>
+
+		<Row Tag="TXT_KEY_BUILDING_VENICE_ARMORY">
+			<Text>Venice Armory</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_VENICE_ARMORY_PEDIA">
+			<Text>
+				The Venice Armory was established in 1104 and eventually evolved into a massive complex that included shipyards, armories, and weapon shops. Its purpose was to meet the needs of the Venetian Navy, enabling the Venetian Republic to maintain its independence and protect its lucrative maritime trade routes. Thus, it is considered a significant example of a large-scale production complex from the pre-industrial era. The arsenal produced prefabricated ship components, armaments, ropes, sails, and all necessary items, allowing for the construction of a warship within a single day if needed. The state-owned forests on Monte Lungo provided timber and pitch. Around 1460, the Porta Magna (“Great Door”) leading to the arsenal was constructed, designed by the artist Jacopo Bellini, making it the first classical Renaissance building constructed in Venice. In 1687, two stone lions acquired from Greece were placed at the entrance to intimidate visitors. Before dispatching warships to defeat challengers in the Mediterranean, the arsenal also produced the majority of Venetian merchant vessels, bringing wealth back to the city-state... to build more ships.
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_VENICE_ARMORY_QUOTE">
+			<Text>[NEWLINE]"The Venice Armory bears this inscription: "Happiness is the city's remembrance of the pain of war during times of peace"[NEWLINE]        — Robert Burton[NEWLINE]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_VENICE_ARMORY_HELP">
+			<Text>
+				Requires Maritime.
+				[NEWLINE][ICON_BULLET]+20% [ICON_PRODUCTION] Production when building Naval Units this City.
+				[NEWLINE][ICON_BULLET]Each adopted Maritime Policy +2 [ICON_RESEARCH] Science and [ICON_PRODUCTION] Production, Completing the Maritime Policy Branch +3 [ICON_RESEARCH] Science and [ICON_PRODUCTION] Production.
+				[NEWLINE]Must be built in the Coastal Large Cities. The cost goes up the more cities there are in the empire.			
+			</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_MISSION_SPREAD_RELIGION_DISABLED_CITY_NO_SPREAD">
+			<Text>The City is in a state of Inquisition fervor, and [COLOR_NEGATIVE_TEXT] it is impossible to Spread there until {1_num} Turn[ENDCOLOR].</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_MISSION_REMOVE_HERESY_HELP">
+			<Text>
+				[ICON_BULLET]This order will remove the presence of other religions from the nearby, friendly-controlled city. An inquisitor is consumed by this action.
+				[NEWLINE][ICON_BULLET]City will enter a state of Inquisition fervor and [COLOR_NEGATIVE_TEXT] it is impossible to Spread Religion here [ENDCOLOR] (The base time equals 5% of City's [ICON_CITIZEN] Population).
+			</Text>
+		</Replace>
 	</Language_en_US>
 </GameData>

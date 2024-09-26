@@ -1,10 +1,4 @@
 -- NewBuildingEffects
-
---------------------------------------------------------------
-include("FLuaVector.lua");
-include("UtilityFunctions.lua");
-include("PlotIterators.lua");
-
 -----------New building effects when it is built
 function NewBuildingEffects(iPlayer, iCity, iBuilding, bGold, bFaith)
 	local player = Players[iPlayer];
@@ -46,10 +40,11 @@ function NewBuildingEffects(iPlayer, iCity, iBuilding, bGold, bFaith)
 				pCity:SetName("TXT_KEY_CITY_NAME_SHENDU");
 			end
 
+			-- MoveMark
+			oCity:SetNumRealBuilding(GameInfoTypes["BUILDING_CAPITAL_MOVEMARK"], 0)
+			pCity:SetNumRealBuilding(GameInfoTypes["BUILDING_CAPITAL_MOVEMARK"], 1)
+
 			for building in GameInfo.Buildings() do
-				-- MoveMark
-				oCity:SetNumRealBuilding(GameInfoTypes["BUILDING_CAPITAL_MOVEMARK"], 0)
-				pCity:SetNumRealBuilding(GameInfoTypes["BUILDING_CAPITAL_MOVEMARK"], 1)
 				-- Palace
 				if oCity:IsHasBuilding(building.ID) and building.Capital then
 					local i = oCity:GetNumBuilding(building.ID);
@@ -108,14 +103,16 @@ function AutoBuildingReplace(ePlayer, iTech, bAdopted)
 			print("tech: DYNAMITE")
 			for city in player:Cities() do
 				bIsDoAddNBuilding = false;
-				iOldBuilding = player:GetCivBuilding(GameInfoTypes["BUILDINGCLASS_STONE_WORKS"])
-				if city:IsHasBuilding(iOldBuilding) then
+				iOldBuilding = GameInfoTypes["BUILDINGCLASS_STONE_WORKS"]
+				if city:IsHasBuildingClass(iOldBuilding) then
 					bIsDoAddNBuilding = true;
+					iOldBuilding = player:GetCivBuilding(iOldBuilding)
 				end
 				if not bIsDoAddNBuilding then
-					iOldBuilding = player:GetCivBuilding(GameInfoTypes["BUILDINGCLASS_SAWMILL"])
-					if city:IsHasBuilding(iOldBuilding) then
+					iOldBuilding = GameInfoTypes["BUILDINGCLASS_SAWMILL"]
+					if city:IsHasBuildingClass(iOldBuilding) then
 						bIsDoAddNBuilding = true;
+						iOldBuilding = player:GetCivBuilding(iOldBuilding)
 					end
 				end
 
@@ -133,9 +130,10 @@ function AutoBuildingReplace(ePlayer, iTech, bAdopted)
 			print("tech: INDUSTRIALIZATION")
 			for city in player:Cities() do
 				bIsDoAddNBuilding = false;
-				iOldBuilding = player:GetCivBuilding(GameInfoTypes["BUILDINGCLASS_WORKSHOP"])
-				if city:IsHasBuilding(iOldBuilding) then
+				iOldBuilding = GameInfoTypes["BUILDINGCLASS_WORKSHOP"]
+				if city:IsHasBuildingClass(iOldBuilding) then
 					bIsDoAddNBuilding = true;
+					iOldBuilding = player:GetCivBuilding(iOldBuilding)
 				end
 
 				if bIsDoAddNBuilding then
@@ -149,26 +147,30 @@ function AutoBuildingReplace(ePlayer, iTech, bAdopted)
 				end
 
 				bIsDoAddNBuilding = false;
-				iOldBuilding = player:GetCivBuilding(GameInfoTypes["BUILDINGCLASS_GRAIN_MILL"])
-				if city:IsHasBuilding(iOldBuilding) then
+				iOldBuilding = GameInfoTypes["BUILDINGCLASS_GRAIN_MILL"]
+				if city:IsHasBuildingClass(iOldBuilding) then
 					bIsDoAddNBuilding = true;
+					iOldBuilding = player:GetCivBuilding(iOldBuilding)
 				end
 				if not bIsDoAddNBuilding then
-					iOldBuilding = player:GetCivBuilding(GameInfoTypes["BUILDINGCLASS_WATERMILL"])
-					if city:IsHasBuilding(iOldBuilding) then
+					iOldBuilding = GameInfoTypes["BUILDINGCLASS_WATERMILL"]
+					if city:IsHasBuildingClass(iOldBuilding) then
 						bIsDoAddNBuilding = true;
+						iOldBuilding = player:GetCivBuilding(iOldBuilding)
 					end
 				end
 				if not bIsDoAddNBuilding then
-					iOldBuilding = player:GetCivBuilding(GameInfoTypes["BUILDINGCLASS_STABLE"])
-					if city:IsHasBuilding(iOldBuilding) then
+					iOldBuilding = GameInfoTypes["BUILDINGCLASS_STABLE"]
+					if city:IsHasBuildingClass(iOldBuilding) then
 						bIsDoAddNBuilding = true;
+						iOldBuilding = player:GetCivBuilding(iOldBuilding)
 					end
 				end
 				if not bIsDoAddNBuilding then
-					iOldBuilding = player:GetCivBuilding(GameInfoTypes["BUILDINGCLASS_WINDMILL"])
-					if city:IsHasBuilding(iOldBuilding) then
+					iOldBuilding = GameInfoTypes["BUILDINGCLASS_WINDMILL"]
+					if city:IsHasBuildingClass(iOldBuilding) then
 						bIsDoAddNBuilding = true;
+						iOldBuilding = player:GetCivBuilding(iOldBuilding)
 					end
 				end
 
@@ -186,14 +188,16 @@ function AutoBuildingReplace(ePlayer, iTech, bAdopted)
 			print("tech: FERTILIZER")
 			for city in player:Cities() do
 				bIsDoAddNBuilding = false;
-				iOldBuilding = player:GetCivBuilding(GameInfoTypes["BUILDINGCLASS_FISH_FARM"])
-				if city:IsHasBuilding(iOldBuilding) then
+				iOldBuilding = GameInfoTypes["BUILDINGCLASS_FISH_FARM"]
+				if city:IsHasBuildingClass(iOldBuilding) then
 					bIsDoAddNBuilding = true;
+					iOldBuilding = player:GetCivBuilding(iOldBuilding)
 				end
 				if not bIsDoAddNBuilding then
-					iOldBuilding = player:GetCivBuilding(GameInfoTypes["BUILDINGCLASS_GRANARY"])
-					if city:IsHasBuilding(iOldBuilding) then
+					iOldBuilding = GameInfoTypes["BUILDINGCLASS_GRANARY"]
+					if city:IsHasBuildingClass(iOldBuilding) then
 						bIsDoAddNBuilding = true;
+						iOldBuilding = player:GetCivBuilding(iOldBuilding)
 					end
 				end
 
@@ -211,9 +215,10 @@ function AutoBuildingReplace(ePlayer, iTech, bAdopted)
 			print("tech: URBANLIZATION")
 			for city in player:Cities() do
 				bIsDoAddNBuilding = false;
-				iOldBuilding = player:GetCivBuilding(GameInfoTypes["BUILDINGCLASS_AQUEDUCT"])
-				if city:IsHasBuilding(iOldBuilding) then
+				iOldBuilding = GameInfoTypes["BUILDINGCLASS_AQUEDUCT"]
+				if city:IsHasBuildingClass(iOldBuilding) then
 					bIsDoAddNBuilding = true;
+					iOldBuilding = player:GetCivBuilding(iOldBuilding)
 				end
 
 				if bIsDoAddNBuilding then
@@ -230,9 +235,10 @@ function AutoBuildingReplace(ePlayer, iTech, bAdopted)
 			print("tech: COMBUSTION")
 			for city in player:Cities() do
 				bIsDoAddNBuilding = false;
-				iOldBuilding = player:GetCivBuilding(GameInfoTypes["BUILDINGCLASS_STAGECOACH"])
-				if city:IsHasBuilding(iOldBuilding) then
+				iOldBuilding = GameInfoTypes["BUILDINGCLASS_STAGECOACH"]
+				if city:IsHasBuildingClass(iOldBuilding) then
 					bIsDoAddNBuilding = true;
+					iOldBuilding = player:GetCivBuilding(iOldBuilding)
 				end
 
 				if bIsDoAddNBuilding then
@@ -310,222 +316,4 @@ function MinorProvideRes(iPlayerID)
 end
 GameEvents.PlayerDoTurn.Add(MinorProvideRes)
 
------------------- Portugal UB BEGIN ------------------
-if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_PORTUGAL) then
-	GameEvents.TradeRouteMove.Add(function(iX, iY, iUnit, iOwner, iOriginalPlayer, iOriginalCity, iDestPlayer, iDestCity)
-		local pOnwer = Players[iOwner];
-		if pOnwer == nil or not pOnwer:IsAlive() then
-			return;
-		end
-
-		local plot = Map.GetPlot(iX, iY);
-		if plot == nil then
-			return;
-		end
-
-		if not plot:IsWater() and not plot:IsCity() then
-			return;
-		end
-
-		local pCity = plot:GetWorkingCity();
-		if pCity == nil then
-			-- print("TradeRouteMove-Portugal-UB: pCity == nil");
-			return;
-		end
-
-		if not pCity:IsHasBuilding(GameInfoTypes["BUILDING_PORTUGAL_PORT"]) then
-			-- print("TradeRouteMove-Portugal-UB: do not have BUILDING_PORTUGAL_PORT");
-			return;
-		end
-
-		local pCityOwner = Players[pCity:GetOwner()];
-		local iGold = 5 * (2 + pCityOwner:GetCurrentEra());
-		pCityOwner:ChangeGold(iGold);
-
-		if pCityOwner:IsHuman() then
-			local hex = ToHexFromGrid(Vector2(iX, iY));
-			Events.AddPopupTextEvent(HexToWorld(hex), Locale.ConvertTextKey("+{1_Num}[ICON_GOLD]", iGold));
-		end
-		print("TradeRouteMove-Portugal-UB: gain ", iGold);
-	end
-	)
-end
------------------- Portugal UB END   ------------------
-
------------------- CARTHAGINIAN_AGORA BEGIN   ------------------
-
-if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_CARTHAGE) then
-	local CarthaginianAgoraDummyPolicyCommerce = GameInfoTypes["POLICY_BUILDING_CARTHAGINIAN_AGORA_COMMERCE"];
-	local CarthaginianAgoraDummyPolicyExploration = GameInfoTypes["POLICY_BUILDING_CARTHAGINIAN_AGORA_EXPLORATION"];
-	local CarthaginianAgoraBuildingID = GameInfoTypes["BUILDING_CARTHAGINIAN_AGORA"];
-	function UpdateCarthaginanUWEffect(iPlayerID)
-		local pPlayer = Players[iPlayerID];
-		if pPlayer == nil or not pPlayer:IsMajorCiv() then
-			return;
-		end
-
-		local bHaveUW = pPlayer:CountNumBuildings(CarthaginianAgoraBuildingID) > 0;
-
-		local bAdoptCommerce = pPlayer:HasPolicyBranch(GameInfoTypes["POLICY_BRANCH_COMMERCE"]);
-		local bHaveDummyCommerce = pPlayer:HasPolicy(CarthaginianAgoraDummyPolicyCommerce) and
-		not pPlayer:IsPolicyBlocked(CarthaginianAgoraDummyPolicyCommerce);
-		local bShouldHaveDummyCommerce = bAdoptCommerce and bHaveUW;
-		if bShouldHaveDummyCommerce ~= bHaveDummyCommerce then
-			print("CARTHAGINIAN_AGORA: commerce: ", bShouldHaveDummyCommerce);
-			pPlayer:SetHasPolicy(CarthaginianAgoraDummyPolicyCommerce, bShouldHaveDummyCommerce, true);
-		end
-
-
-		local bAdoptExploration = pPlayer:HasPolicyBranch(GameInfoTypes["POLICY_BRANCH_EXPLORATION"]);
-		local bHaveDummyExploration = pPlayer:HasPolicy(CarthaginianAgoraDummyPolicyExploration) and
-		not pPlayer:IsPolicyBlocked(CarthaginianAgoraDummyPolicyExploration);
-		local bShouldHaveDummyExploration = bAdoptExploration and bHaveUW;
-		if bShouldHaveDummyExploration ~= bHaveDummyExploration then
-			print("CARTHAGINIAN_AGORA: exploration: ", bShouldHaveDummyExploration);
-			pPlayer:SetHasPolicy(CarthaginianAgoraDummyPolicyExploration, bShouldHaveDummyExploration, true);
-		end
-	end
-
-	GameEvents.PlayerDoTurn.Add(UpdateCarthaginanUWEffect);
-	GameEvents.PlayerAdoptPolicy.Add(function(iPlayerID, iPolicyID) UpdateCarthaginanUWEffect(iPlayerID); end);
-end
------------------- CARTHAGINIAN_AGORA END   ------------------
-
-if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_ASSYRIA) then
-	local assurTemple = GameInfoTypes["BUILDING_ASSUR_TEMPLE"]
-	function ASHUR_TEMPLEGetFoodAndFaith(iPlayer, iKilledPlayer, iUnitType, iKillingUnit, iKilledUnit)
-		if iPlayer == iKilledPlayer or iPlayer == -1 then return end
-		local pPlayer = Players[iKilledPlayer]
-		local ByPlayer = Players[iPlayer]
-		if ByPlayer == nil or pPlayer == nil then return end
-		if ByPlayer:CountNumBuildings(assurTemple) == 0 then return end
-
-		local pUnit = pPlayer:GetUnitByID(iKilledUnit)
-		local plot = pUnit:GetPlot()
-		if pUnit == nil or plot == nil then return end
-		local iX = plot:GetX()
-		local iY = plot:GetY()
-		
-		local iStrength = pUnit:GetBaseCombatStrength()
-		if iStrength <= 0 then return end
-
-		local iFoodBoost = iStrength * 0.5
-		local iFaithdBoost = iStrength * 0.5
-		
-		for iCity in ByPlayer:Cities() do
-			if iCity:IsHasBuilding(assurTemple)
-			and Map.PlotDistance(iX, iY, iCity:GetX(), iCity:GetY()) <= 6
-			then
-				ByPlayer:ChangeFaith(iFaithdBoost)
-				iCity:ChangeFood(iFoodBoost)
-				if ByPlayer:IsHuman() then
-					local hex = ToHexFromGrid(Vector2(iCity:GetX(), iCity:GetY()));
-					Events.AddPopupTextEvent(HexToWorld(hex),
-					Locale.ConvertTextKey("+{1_Num}[ICON_PEACE] +{2_Num}[ICON_FOOD]", iFaithdBoost,iFoodBoost))
-				end
-			end
-		end
-	end
-	GameEvents.UnitKilledInCombat.Add(ASHUR_TEMPLEGetFoodAndFaith)
-end
-
-if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_ZULU) then
-	GameEvents.UnitPromoted.Add(function(iPlayer, iUnit, iPromotionType)
-		local pPlayer = Players[iPlayer];
-		if pPlayer == nil then return end
-
-		local iNumIzako = pPlayer:CountNumBuildings(GameInfoTypes["BUILDING_ZULU_IZIKO"])
-		if iNumIzako == 0 then
-			return;
-		end
-
-		local pUnit = pPlayer:GetUnitByID(iUnit)
-		if pUnit == nil then return end
-
-		local iBonus = pPlayer:GetCurrentEra() / 2 + 1;
-		iBonus = math.floor(iBonus * iNumIzako);
-	
-		pPlayer:ChangeJONSCulture(iBonus);
-		if pPlayer:IsHuman() and pPlayer:IsTurnActive() then
-			local hex = ToHexFromGrid(Vector2(pUnit:GetX(), pUnit:GetY()));
-			Events.AddPopupTextEvent(HexToWorld(hex), Locale.ConvertTextKey("[COLOR_MAGENTA]+{1_Num}[ICON_CULTURE][ENDCOLOR]", iBonus));
-		end
-	end)
-end
-
-if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_ARABIA) then
-	local iIsiamicFactor = GameDefines["ARABIA_ISIAMIC_UNIVERSITY_FACTOR"] or 7;
-	local eIsiamicSchool = GameInfoTypes["BUILDING_ARABIA_ISIAMIC_UNIVERSITY"]
-	local eIsiamicUniversityAllahAkbar = GameInfoTypes["BUILDING_ARABIA_ISIAMIC_UNIVERSITY_ALLAH_AKBAR"]
-
-	local faithBuildingCollection1 = {}
-	local faithBuildingCollection2 = {}
-	for building in GameInfo.Buildings() do
-		if building.Type ~= "BUILDING_ARABIA_ISIAMIC_UNIVERSITY_ALLAH_AKBAR" then
-			if (building.FaithCost > 0 and building.Cost == -1) or
-				building.BuildingClass == "BUILDINGCLASS_SHRINE" or
-				building.BuildingClass == "BUILDINGCLASS_TEMPLE" then
-				faithBuildingCollection1[building.ID] = true
-			elseif GameInfo.Building_YieldChanges {
-					BuildingType = building.Type,
-					YieldType = "YIELD_FAITH",
-				} () then
-				faithBuildingCollection2[building.ID] = true
-			end
-		end
-	end
-
-	function setIsiamSchoolEffect(pCity, iNumBonusFactor)
-		if pCity == nil then
-			return
-		end
-		if pCity:IsPuppet() then
-			pCity:SetNumRealBuilding(eIsiamicUniversityAllahAkbar, 0)
-			return
-		end
-
-		local iNumBonus = 0;
-		local iNumFaithBuildingInCollection1 = 0
-		for i, v in pairs(faithBuildingCollection1) do
-			if v == true and pCity:IsHasBuilding(i) then
-				iNumFaithBuildingInCollection1 = iNumFaithBuildingInCollection1 + 1
-			end
-		end
-		iNumBonus = iNumBonus + iNumFaithBuildingInCollection1 * iNumBonusFactor
-
-		local bHasLab = pCity:IsHasBuilding(GameInfoTypes["BUILDING_LABORATORY"])
-		if bHasLab then
-			local iNumFaithBuildingInCollection2 = 0
-			for i, v in pairs(faithBuildingCollection2) do
-				if v == true and pCity:IsHasBuilding(i) then
-					iNumFaithBuildingInCollection2 = iNumFaithBuildingInCollection2 + 1
-				end
-			end
-			iNumBonus = iNumBonus + iNumFaithBuildingInCollection2 * iNumBonusFactor
-		end
-
-		pCity:SetNumRealBuilding(eIsiamicUniversityAllahAkbar, iNumBonus)
-	end
-
-	GameEvents.PlayerDoTurn.Add(function(iPlayer)
-		local pPlayer = Players[iPlayer]
-		if pPlayer == nil or not pPlayer:IsAlive() then
-			return
-		end
-		if pPlayer:GetCivilizationType() ~= GameInfoTypes.CIVILIZATION_ARABIA then
-			return
-		end
-
-		local iNumIsiamicSchool = pPlayer:CountNumBuildings(eIsiamicSchool)
-		local iNumBonusFactor = math.floor(iNumIsiamicSchool / iIsiamicFactor)
-
-		for city in pPlayer:Cities() do
-			setIsiamSchoolEffect(city, iNumBonusFactor)
-		end
-	end)
-end
-
 print("New Building Effects Check Pass!")
-
-
----------------------------------------------------------Utilities---------------------------------------------------------

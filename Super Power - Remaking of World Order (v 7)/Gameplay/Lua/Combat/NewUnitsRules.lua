@@ -192,7 +192,6 @@ GameEvents.PlayerTurnStart.Add(NewUnitCreationRules)
 function OnCorpsArmeeSP(iPlayerID, iUnitID)
 	local pPlayer = Players[iPlayerID];
 	if pPlayer == nil or pPlayer:GetCapitalCity() == nil
-		or PreGame.GetGameOption("GAMEOPTION_SP_CORPS_MODE_DISABLE") == 1
 		or pPlayer:GetUnitByID(iUnitID) == nil
 		or pPlayer:GetUnitByID(iUnitID):GetPlot() == nil
 		or pPlayer:GetUnitByID(iUnitID):IsImmobile()
@@ -248,65 +247,40 @@ function OnCorpsArmeeSP(iPlayerID, iUnitID)
 	local DoCombine          = false;
 	local otherUnit          = nil;
 	local CorpsUnit          = nil;
-	local Heal1Unit          = nil;
-	local Heal2Unit          = nil;
-	local Heal3Unit          = nil;
 	local corpsRandNum       = Game.Rand(10, "At NewUnitsRule.lua OnCorpsArmeeSP(), AI spawning corps & armee") + 1
-	if (Game:GetHandicapType() == 7)
-		or (Game:GetHandicapType() == 6 and corpsRandNum > 1)
-		or (Game:GetHandicapType() == 5 and corpsRandNum > 2)
-		or (Game:GetHandicapType() == 4 and corpsRandNum > 3)
-		or (Game:GetHandicapType() == 3 and corpsRandNum > 5)
-		or (Game:GetHandicapType() == 2 and corpsRandNum > 7)
+	if (Game:GetHandicapType() == 7 and corpsRandNum > 3)
+		or (Game:GetHandicapType() == 6 and corpsRandNum > 4)
+		or (Game:GetHandicapType() == 5 and corpsRandNum > 5)
+		or (Game:GetHandicapType() == 4 and corpsRandNum > 6)
+		or (Game:GetHandicapType() == 3 and corpsRandNum > 7)
+		or (Game:GetHandicapType() == 2 and corpsRandNum > 8)
 		or (Game:GetHandicapType() == 1 and corpsRandNum > 9)
 	then
 		DoCombine = true;
 	end
 
-	if pPlayer:GetUnitClassCount(class) > 1 and not pPlayer:IsHuman() and DoCombine then
+	if pPlayer:GetUnitClassCount(class) > 5
+	and pPlayer:GetBuildingClassCount(iArsenalClass) > 0
+	and not pPlayer:IsHuman() 
+	and DoCombine 
+	then
 		for unit in pPlayer:Units() do
 			-- Armee | Corps
-			if unit == nil or unit:IsHasPromotion(ArmeeID) or unit:GetUnitClassType() ~= pUnit:GetUnitClassType() then
-			elseif unit:IsHasPromotion(CorpsID) and unit:GetDomainType() == DomainTypes.DOMAIN_LAND then
-				if pPlayer:GetBuildingClassCount(iMilitaryBaseClass) > 0 then
-					CorpsUnit = unit;
-				end
-			elseif pPlayer:GetBuildingClassCount(iArsenalClass) > 0 and unit:GetDomainType() == DomainTypes.DOMAIN_LAND then
+			if unit == nil 
+			or unit:IsHasPromotion(ArmeeID) 
+			or unit:GetUnitClassType() ~= pUnit:GetUnitClassType() 
+			or unit:GetDomainType() ~= DomainTypes.DOMAIN_LAND 
+			then
+				--jump
+			elseif unit:IsHasPromotion(CorpsID) and pPlayer:GetBuildingClassCount(iMilitaryBaseClass) > 0 then
+				CorpsUnit = unit;
+			else
 				otherUnit = unit;
-			end
-			-- Heal
-			if unit and unit:GetDamage() >= 30 and unit:GetUnitClassType() == pUnit:GetUnitClassType() and not unit:IsImmobile() and unit:CanMove() then
-				if Heal2Unit then
-					Heal3Unit = unit;
-					break;
-				elseif Heal1Unit then
-					Heal2Unit = unit;
-				else
-					Heal1Unit = unit;
-				end
 			end
 		end
 	end
 
-	if Heal2Unit or (Heal1Unit and pPlayer:IsLackingTroops()) then
-		if Heal1Unit then
-			Heal1Unit:ChangeDamage(-30);
-			Heal1Unit:SetMoves(math.floor(Heal1Unit:MovesLeft() / (2 * GameDefines["MOVE_DENOMINATOR"])) *
-			GameDefines["MOVE_DENOMINATOR"]);
-		end
-		if Heal2Unit then
-			Heal2Unit:ChangeDamage(-30);
-			Heal2Unit:SetMoves(math.floor(Heal2Unit:MovesLeft() / (2 * GameDefines["MOVE_DENOMINATOR"])) *
-			GameDefines["MOVE_DENOMINATOR"]);
-		end
-		if Heal3Unit then
-			Heal3Unit:ChangeDamage(-30);
-			Heal3Unit:SetMoves(math.floor(Heal3Unit:MovesLeft() / (2 * GameDefines["MOVE_DENOMINATOR"])) *
-			GameDefines["MOVE_DENOMINATOR"]);
-		end
-		pUnit:Kill(true);
-		return;
-	elseif CorpsUnit then
+	if CorpsUnit then
 		CorpsUnit:SetHasPromotion(ArmeeID, true);
 		pUnit:Kill(true);
 		return;
@@ -324,8 +298,9 @@ function OnCorpsArmeeSP(iPlayerID, iUnitID)
 		pUnit:Kill(true);
 	end
 end
-
-GameEvents.UnitCreated.Add(OnCorpsArmeeSP)
+if PreGame.GetGameOption("GAMEOPTION_SP_CORPS_MODE_DISABLE") == 0 then
+    GameEvents.UnitCreated.Add(OnCorpsArmeeSP)
+end
 
 function CarrierPromotionTransfer(player, unit)
 	local AntiAir1ID = GameInfo.UnitPromotions["PROMOTION_CARRIER_FIGHTER_ANTI_AIR_1"].ID

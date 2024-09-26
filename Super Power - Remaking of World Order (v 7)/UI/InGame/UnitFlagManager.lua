@@ -1949,6 +1949,7 @@ local function BeliefColor( s )
 end
 
 local tipControlTable = {};
+local bIsNuclearWinter = PreGame.GetGameOption("GAMEOPTION_SP_NUCLEARWINTER_OFF") == 0;
 TTManager:GetTypeControlTable("UnitTooltip", tipControlTable);
 function TipHandler(Button)
     local iPlayer = Button:GetVoid1();
@@ -2074,6 +2075,14 @@ function TipHandler(Button)
         --can Establish Corps
         if unit:IsCanEstablishCorps() then
             toolTipString = toolTipString .. Locale.ConvertTextKey("TXT_KEY_SP_UNIT_CAN_ESTABLISH_CORPS_OR_ARMEE")
+        end
+
+        if bIsNuclearWinter then
+            local iNuclearWinterProcess = GameInfo.Units[unit:GetUnitType()].NuclearWinterProcess
+            if iNuclearWinterProcess > 0 then
+                local iNuclearWinterTotalProcess = Game.GetNuclearWinterProcess();
+                toolTipString = toolTipString .. Locale.ConvertTextKey("TXT_KEY_SP_UNIT_NUCLEAR_WINTER_PROCESS", iNuclearWinterProcess, iNuclearWinterTotalProcess)
+            end
         end
 
         -- Level, Experience for ActivePlayer
