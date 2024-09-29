@@ -2597,7 +2597,8 @@
 			<SplashXP>1</SplashXP>
 			<CollateralDamagePercent>50</CollateralDamagePercent>
 			<CollateralDamagePlotUnitLimit>8</CollateralDamagePlotUnitLimit>
-			<CollateralXP>1</CollateralXP>		
+			<CollateralXP>1</CollateralXP>
+			<MilitaryMightMod>300</MilitaryMightMod>
 		</Row>
 		<Row>
 			<Type>PROMOTION_GUN_BARRER_1</Type>
@@ -6366,6 +6367,7 @@
 			<EnemyHealChange>10</EnemyHealChange>
 			<NeutralHealChange>10</NeutralHealChange>
 			<FriendlyHealChange>10</FriendlyHealChange>
+			<MilitaryMightMod>400</MilitaryMightMod>
 		</Row>
 
 		<Row>
@@ -6571,6 +6573,7 @@
 			<CannotBeChosen>true</CannotBeChosen>
 			<AttackChanceFromAttackDamage>FORMULA_ATTACK_CHANCE_FROM_ATTACK_DAMAGE</AttackChanceFromAttackDamage>
 			<MovementFromAttackDamage>FORMULA_MOVEMENT_FROM_ATTACK_DAMAGE</MovementFromAttackDamage>
+			<MilitaryMightMod>500</MilitaryMightMod>
 		</Row>
 		<Row>
 			<Type>PROMOTION_FULL_FIRE</Type>
