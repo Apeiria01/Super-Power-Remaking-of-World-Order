@@ -73,27 +73,27 @@ function CheckHumanResearch(ePlayer)
     local player = Players[ePlayer]
     if player == nil or not player:IsHuman() then return end
     local HumanResearchPerTurn = player:GetScience()
-    local HumanCurrentEra = player:GetCurrentEra()
+    local HumanCurrentTech = player:GetNumTechsKnown()
 
     if Game.IsGameMultiPlayer() then
         for pID, iPlayer in pairs(Players) do
             if pID ~= ePlayer and iPlayer and iPlayer:IsHuman() then
                 local iResearch = iPlayer:GetScience()
-                local iCurrentEra = iPlayer:GetCurrentEra()
+                local iCurrentTech = iPlayer:GetNumTechsKnown()
                 if iResearch > HumanResearchPerTurn then
                     HumanResearchPerTurn = iResearch
                 end
-                if iCurrentEra > HumanCurrentEra then
-                    HumanCurrentEra = iCurrentEra
+                if iCurrentTech > HumanCurrentTech then
+                    HumanCurrentTech = iCurrentTech
                 end
             end
         end
     end
 
-    if HumanCurrentEra >= 4 and HumanResearchPerTurn > 0 then
+    if HumanCurrentTech >= 40 and HumanResearchPerTurn > 0 then
         for playerID, AIplayer in pairs(Players) do
             if AIplayer ~= nil and AIplayer:GetNumCities() >= 1 and not AIplayer:IsMinorCiv() and not AIplayer:IsBarbarian() and not AIplayer:IsHuman() then
-                AIResearchCatchUp(HumanResearchPerTurn, HumanCurrentEra, AIplayer)
+                AIResearchCatchUp(HumanResearchPerTurn, HumanCurrentTech, AIplayer)
             end
         end
     end
@@ -799,13 +799,13 @@ end
 ------------------------------------------------------------------AI bonus by Human's strength----------------------------------------------------
 
 ----------AI Science Bonus
-function AIResearchCatchUp(HumanResearchPerTurn, HumanCurrentEra, AIplayer)
+function AIResearchCatchUp(HumanResearchPerTurn, HumanCurrentTech, AIplayer)
 
     if AIplayer == nil then
         return
     end
 
-    local AICurrentEra = AIplayer:GetCurrentEra()
+    local AICurrentTech = AIplayer:GetNumTechsKnown()
     local AIResearchPerTurn = AIplayer:GetScience()
     print("Human science Output:" .. HumanResearchPerTurn)
     print("AI science Output:" .. AIResearchPerTurn)
@@ -814,26 +814,26 @@ function AIResearchCatchUp(HumanResearchPerTurn, HumanCurrentEra, AIplayer)
         AIResearchPerTurn = AIResearchPerTurn * 0.75;
     end
 
-    if AICurrentEra >= 3 and AIResearchPerTurn > 1 then
-        if HumanCurrentEra - AICurrentEra >= 2 then -- HumanResearchPerTurn > AIResearchPerTurn * 2 or 
+    if AICurrentTech >= 30 and AIResearchPerTurn > 1 then
+        if HumanCurrentTech - AICurrentTech >= 15 then -- HumanResearchPerTurn > AIResearchPerTurn * 2 or 
             AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BONUS_RESEARCH_LV1"].ID, true, true)
             AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BONUS_RESEARCH_LV2"].ID, true, true)
             AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BONUS_RESEARCH_LV3"].ID, true, true)
             print("Human's research is too fast -2X, AI needs to catch up sooner!")
 
-        elseif HumanCurrentEra - AICurrentEra == 1 then -- HumanResearchPerTurn > AIResearchPerTurn * 1.5 or 
+        elseif HumanCurrentTech - AICurrentTech >= 7 then -- HumanResearchPerTurn > AIResearchPerTurn * 1.5 or 
             AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BONUS_RESEARCH_LV1"].ID, true, true)
             AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BONUS_RESEARCH_LV2"].ID, true, true)
             AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BONUS_RESEARCH_LV3"].ID, false)
             print("Human's research is fast -1.5X, AI needs to catch up!")
 
-        elseif HumanResearchPerTurn > AIResearchPerTurn and HumanCurrentEra == AICurrentEra then
+        elseif HumanResearchPerTurn > AIResearchPerTurn then
             AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BONUS_RESEARCH_LV1"].ID, true, true)
             AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BONUS_RESEARCH_LV2"].ID, false)
             AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BONUS_RESEARCH_LV3"].ID, false)
             print("Human's research is not so fast!")
 
-        elseif HumanResearchPerTurn <= AIResearchPerTurn or HumanCurrentEra < AICurrentEra then
+        elseif HumanCurrentTech < AICurrentTech - 3 then
             AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BONUS_RESEARCH_LV1"].ID, false)
             AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BONUS_RESEARCH_LV2"].ID, false)
             AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BONUS_RESEARCH_LV3"].ID, false)
@@ -842,7 +842,7 @@ function AIResearchCatchUp(HumanResearchPerTurn, HumanCurrentEra, AIplayer)
     end
 
     -- Special AI Research Bonus for 8 Handicap
-    if Game:GetHandicapType() == 7 and HumanCurrentEra >= 5 then
+    if Game:GetHandicapType() == 7 and HumanCurrentTech >= 50 then
         AIplayer:SetHasPolicy(GameInfo.Policies["POLICY_AI_BONUS_RESEARCH_DEITY"].ID, true);
         print("Special AI Research Bonus for Super Power Players!")
     end
