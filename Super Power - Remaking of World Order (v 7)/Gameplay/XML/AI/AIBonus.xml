@@ -348,9 +348,33 @@
 			<Yield>1</Yield>
 		</Row>
 	</Policy_SpecialistYieldChanges>
+		
+	<Policy_YieldPerPopChanges>
+		<Row>
+			<PolicyType>POLICY_AI_BONUS_RESEARCH_LV2</PolicyType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>10</Yield>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_AI_BONUS_RESEARCH_LV3</PolicyType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>20</Yield>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_AI_BONUS_RESEARCH_DEITY</PolicyType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>5</Yield>
+		</Row>
+	</Policy_YieldPerPopChanges>
 
 	
 	<Policy_BuildingClassYieldModifiers>
+		<Row>
+			<PolicyType>POLICY_AI_BONUS_RESEARCH_LV1</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_TOWN</BuildingClassType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<YieldMod>5</YieldMod>
+		</Row>
 		<Row>
 			<PolicyType>POLICY_AI_BONUS_RESEARCH_LV1</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_SMALL</BuildingClassType>
