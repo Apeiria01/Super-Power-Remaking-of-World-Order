@@ -23,10 +23,10 @@ local g_bShowPanel = false;
 -- preload of UnitPromotions_PromotionModifiers
 g_OtherPromotionsTabel = {};
 for row in GameInfo.UnitPromotions_PromotionModifiers() do
-	if not g_OtherPromotionsTabel[row.OtherPromotionType] then
+	if not g_OtherPromotionsTabel[row.OtherPromotionType] and GameInfo.UnitPromotions[row.PromotionType] and GameInfo.UnitPromotions[row.OtherPromotionType] then
 		g_OtherPromotionsTabel[row.OtherPromotionType] = {}
 		g_OtherPromotionsTabel[row.OtherPromotionType].ID = GameInfoTypes[row.OtherPromotionType]
-		g_OtherPromotionsTabel[row.OtherPromotionType].Description = Locale.ConvertTextKey(GameInfo.UnitPromotions[row.OtherPromotionType].Description)
+		g_OtherPromotionsTabel[row.OtherPromotionType].Description = Locale.ConvertTextKey(GameInfo.UnitPromotions[row.OtherPromotionType].Description) or ""
 	end
 end
 
