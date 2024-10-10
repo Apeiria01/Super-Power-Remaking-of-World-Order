@@ -1705,6 +1705,10 @@
 			<UnitType>UNIT_TASKFORCE_141</UnitType>
 			<PromotionType>PROMOTION_NO_CASUALTIES</PromotionType>
 		</Row>
+		<Row>
+			<UnitType>UNIT_TASKFORCE_141</UnitType>
+			<PromotionType>PROMOTION_ANTI_RIOT_BONUS</PromotionType>
+		</Row>
 
 		<Row>
 			<UnitType>UNIT_STEALTH_HELICOPTER</UnitType>
