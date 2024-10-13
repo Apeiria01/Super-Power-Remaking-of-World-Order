@@ -2962,7 +2962,7 @@ function OnYes( )
 		then
 			print("City Hall sold! Set Puppet!")
 			
-			pCity:SetNumRealBuilding(GameInfoTypes["BUILDING_PUPPET_GOVERNEMENT"],1);
+			pCity:SendAndExecuteLuaFunction(pCity.SetNumRealBuilding, GameInfoTypes["BUILDING_PUPPET_GOVERNEMENT"], 1)
 			--Policy United Front effect:if city has Military Base, donnot sell Military Buildings
 			local pPlayer = Players[pCity:GetOwner()]
 			if pPlayer == nil then return end
@@ -2988,16 +2988,16 @@ function OnYes( )
 				or  building.BuildingClass == "BUILDINGCLASS_ARSENAL"
 				or  building.BuildingClass == "BUILDINGCLASS_MILITARY_BASE") and not isHasUnitedFront))
 				then
-					pCity:SetNumRealBuilding(building.ID, 0);
+					pCity:SendAndExecuteLuaFunction(pCity.SetNumRealBuilding, building.ID, 0)
 				end
 			end
 			
-			pCity:SetPuppet(true)
-			pCity:SetProductionAutomated(true)
+			pCity:SendAndExecuteLuaFunction(pCity.SetPuppet, true)
+			pCity:SendAndExecuteLuaFunction(pCity.SetProductionAutomated, true)
 			
 			local CityPop = pCity:GetPopulation()
 			local CityResTime = CityPop * 0.5
-			pCity:ChangeResistanceTurns(CityResTime)
+			pCity:SendAndExecuteLuaFunction(pCity.ChangeResistanceTurns, CityResTime)
 		end
 		--SP Selling City Hall Create Puppet End
 	end

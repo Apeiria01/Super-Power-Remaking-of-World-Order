@@ -23,17 +23,23 @@ AllUnitsSleepButton = {
         for pUnit in pPlayer:Units() do
             if not pUnit:CanMove() or pUnit:GetActivityType() ~= 0 then
             elseif pUnit:CanDoCommand(CommandTypes.COMMAND_AUTOMATE, 0) and not pUnit:IsCombatUnit() then
-                pUnit:DoCommand(CommandTypes.COMMAND_AUTOMATE, 0);
+                --pUnit:DoCommand(CommandTypes.COMMAND_AUTOMATE, 0);
+                pUnit:SendAndExecuteLuaFunction("CvLuaUnit::lDoCommand", CommandTypes.COMMAND_AUTOMATE, 0)
             elseif (GameInfo.Units[pUnit:GetUnitType()].DefaultUnitAI == "UNITAI_EXPLORE" or GameInfo.Units[pUnit:GetUnitType()].DefaultUnitAI == "UNITAI_EXPLORE_SEA") and pUnit:CanDoCommand(CommandTypes.COMMAND_AUTOMATE, 1) then
-                pUnit:DoCommand(CommandTypes.COMMAND_AUTOMATE, 1);
+                --pUnit:DoCommand(CommandTypes.COMMAND_AUTOMATE, 1);
+                pUnit:SendAndExecuteLuaFunction("CvLuaUnit::lDoCommand", CommandTypes.COMMAND_AUTOMATE, 1)
             elseif pUnit:CanStartMission(GameInfoTypes.MISSION_AIRPATROL) and pUnit:GetCurrHitPoints() > 30 then
-                pUnit:PushMission(GameInfoTypes.MISSION_AIRPATROL);
+                -- pUnit:PushMission(GameInfoTypes.MISSION_AIRPATROL);
+                pUnit:SendAndExecuteLuaFunction("CvLuaUnit::lPushMission", GameInfoTypes.MISSION_AIRPATROL)
             elseif pUnit:CanStartMission(GameInfoTypes.MISSION_HEAL) then
-                pUnit:PushMission(GameInfoTypes.MISSION_HEAL);
+                -- pUnit:PushMission(GameInfoTypes.MISSION_HEAL);
+                pUnit:SendAndExecuteLuaFunction("CvLuaUnit::lPushMission", GameInfoTypes.MISSION_HEAL)
             elseif pUnit:CanStartMission(GameInfoTypes.MISSION_ALERT) then
-                pUnit:PushMission(GameInfoTypes.MISSION_ALERT);
+                -- pUnit:PushMission(GameInfoTypes.MISSION_ALERT);
+                pUnit:SendAndExecuteLuaFunction("CvLuaUnit::lPushMission", GameInfoTypes.MISSION_ALERT)
             elseif pUnit:CanStartMission(GameInfoTypes.MISSION_SLEEP) then
-                pUnit:PushMission(GameInfoTypes.MISSION_SLEEP);
+                -- pUnit:PushMission(GameInfoTypes.MISSION_SLEEP);
+                pUnit:SendAndExecuteLuaFunction("CvLuaUnit::lPushMission", GameInfoTypes.MISSION_SLEEP)
             end
         end
 
@@ -63,11 +69,14 @@ AllUnitsWakeButton = {
 
         for pUnit in pPlayer:Units() do
             if pUnit:CanDoCommand(CommandTypes.COMMAND_WAKE) then
-                pUnit:DoCommand(CommandTypes.COMMAND_WAKE);
+                -- pUnit:DoCommand(CommandTypes.COMMAND_WAKE);
+                pUnit:SendAndExecuteLuaFunction(pUnit.DoCommand, CommandTypes.COMMAND_WAKE)
             elseif pUnit:IsAutomated() then
-                pUnit:DoCommand(CommandTypes.COMMAND_STOP_AUTOMATION);
+                -- pUnit:DoCommand(CommandTypes.COMMAND_STOP_AUTOMATION);
+                pUnit:SendAndExecuteLuaFunction(pUnit.DoCommand, CommandTypes.COMMAND_STOP_AUTOMATION)
             elseif pUnit:CanDoCommand(CommandTypes.COMMAND_CANCEL) then
-                pUnit:DoCommand(CommandTypes.COMMAND_CANCEL);
+                -- pUnit:DoCommand(CommandTypes.COMMAND_CANCEL);
+                pUnit:SendAndExecuteLuaFunction(pUnit.DoCommand, CommandTypes.COMMAND_CANCEL)
             end
         end
 
@@ -97,7 +106,8 @@ AllUnitsUpgradeButton = {
 
         for pUnit in pPlayer:Units() do
             if pUnit:CanUpgradeRightNow() and pUnit:CanMove() then
-                pUnit:DoCommand(CommandTypes["COMMAND_UPGRADE"]);
+                -- pUnit:DoCommand(CommandTypes["COMMAND_UPGRADE"]);
+                pUnit:SendAndExecuteLuaFunction("CvLuaUnit::lDoCommand", CommandTypes["COMMAND_UPGRADE"])
             end
         end
 
@@ -128,17 +138,23 @@ SameCombatClassSleepButton = {
         for pUnit in pPlayer:Units() do
             if pUnit:GetUnitCombatType() ~= unit:GetUnitCombatType() or GameInfo.Units[pUnit:GetUnitType()].DefaultUnitAI ~= GameInfo.Units[unit:GetUnitType()].DefaultUnitAI or not pUnit:CanMove() or pUnit:GetActivityType() ~= 0 then
             elseif pUnit:CanStartMission(GameInfoTypes.MISSION_SLEEP) and not pUnit:IsCombatUnit() then
-                pUnit:PushMission(GameInfoTypes.MISSION_SLEEP);
+                -- pUnit:PushMission(GameInfoTypes.MISSION_SLEEP);
+                pUnit:SendAndExecuteLuaFunction(pUnit.PushMission, GameInfoTypes.MISSION_SLEEP)
             elseif (GameInfo.Units[pUnit:GetUnitType()].DefaultUnitAI == "UNITAI_EXPLORE" or GameInfo.Units[pUnit:GetUnitType()].DefaultUnitAI == "UNITAI_EXPLORE_SEA") and pUnit:CanDoCommand(CommandTypes.COMMAND_AUTOMATE, 1) then
-                pUnit:DoCommand(CommandTypes.COMMAND_AUTOMATE, 1);
+                -- pUnit:DoCommand(CommandTypes.COMMAND_AUTOMATE,1);
+                pUnit:SendAndExecuteLuaFunction(pUnit.DoCommand, CommandTypes.COMMAND_AUTOMATE, 1)
             elseif pUnit:CanStartMission(GameInfoTypes.MISSION_AIRPATROL) and pUnit:GetCurrHitPoints() > 30 then
-                pUnit:PushMission(GameInfoTypes.MISSION_AIRPATROL);
+                -- pUnit:PushMission(GameInfoTypes.MISSION_AIRPATROL);
+                pUnit:SendAndExecuteLuaFunction(pUnit.PushMission, GameInfoTypes.MISSION_AIRPATROL)
             elseif pUnit:CanStartMission(GameInfoTypes.MISSION_HEAL) then
-                pUnit:PushMission(GameInfoTypes.MISSION_HEAL);
+                -- pUnit:PushMission(GameInfoTypes.MISSION_HEAL);
+                pUnit:SendAndExecuteLuaFunction(pUnit.PushMission, GameInfoTypes.MISSION_HEAL)
             elseif pUnit:CanStartMission(GameInfoTypes.MISSION_ALERT) then
-                pUnit:PushMission(GameInfoTypes.MISSION_ALERT);
+                -- pUnit:PushMission(GameInfoTypes.MISSION_ALERT);
+                pUnit:SendAndExecuteLuaFunction(pUnit.PushMission, GameInfoTypes.MISSION_ALERT)
             elseif pUnit:CanStartMission(GameInfoTypes.MISSION_SLEEP) then
-                pUnit:PushMission(GameInfoTypes.MISSION_SLEEP);
+                -- pUnit:PushMission(GameInfoTypes.MISSION_SLEEP);
+                pUnit:SendAndExecuteLuaFunction(pUnit.PushMission, GameInfoTypes.MISSION_SLEEP)
             end
         end
 
@@ -169,11 +185,14 @@ SameCombatClassWakeButton = {
         for pUnit in pPlayer:Units() do
             if pUnit:GetUnitCombatType() ~= unit:GetUnitCombatType() or GameInfo.Units[pUnit:GetUnitType()].DefaultUnitAI ~= GameInfo.Units[unit:GetUnitType()].DefaultUnitAI then
             elseif pUnit:CanDoCommand(CommandTypes.COMMAND_WAKE) then
-                pUnit:DoCommand(CommandTypes.COMMAND_WAKE);
+                -- pUnit:DoCommand(CommandTypes.COMMAND_WAKE);
+                pUnit:SendAndExecuteLuaFunction(pUnit.DoCommand, CommandTypes.COMMAND_AUTOMATE, 0)
             elseif pUnit:IsAutomated() then
-                pUnit:DoCommand(CommandTypes.COMMAND_STOP_AUTOMATION);
+                -- pUnit:DoCommand(CommandTypes.COMMAND_STOP_AUTOMATION);
+                pUnit:SendAndExecuteLuaFunction(pUnit.DoCommand, CommandTypes.COMMAND_STOP_AUTOMATION)
             elseif pUnit:CanDoCommand(CommandTypes.COMMAND_CANCEL) then
-                pUnit:DoCommand(CommandTypes.COMMAND_CANCEL);
+                -- pUnit:DoCommand(CommandTypes.COMMAND_CANCEL);
+                pUnit:SendAndExecuteLuaFunction(pUnit.DoCommand, CommandTypes.COMMAND_CANCEL)
             end
         end
 
@@ -203,7 +222,8 @@ SameCombatClassUpgradeButton = {
 
         for pUnit in pPlayer:Units() do
             if pUnit:GetUnitCombatType() == unit:GetUnitCombatType() and GameInfo.Units[pUnit:GetUnitType()].DefaultUnitAI == GameInfo.Units[unit:GetUnitType()].DefaultUnitAI and pUnit:CanUpgradeRightNow() and pUnit:CanMove() then
-                pUnit:DoCommand(CommandTypes["COMMAND_UPGRADE"]);
+                -- pUnit:DoCommand(CommandTypes["COMMAND_UPGRADE"]);
+                pUnit:SendAndExecuteLuaFunction("CvLuaUnit::lDoCommand", CommandTypes["COMMAND_UPGRADE"])
             end
         end
 
@@ -250,13 +270,16 @@ SettlerMissionButton = {
         local city = plot:GetPlotCity()
         local player = Players[unit:GetOwner()]
 
-        city:ChangePopulation(unit:GetExtraPopConsume(), true);
+        --city:ChangePopulation(unit:GetExtraPopConsume(), true);
+        city:SendAndExecuteLuaFunction("CvLuaCity::lChangePopulation", unit:GetExtraPopConsume(), true)
         local iPolicyCollectiveRule = GameInfo.Policies["POLICY_COLLECTIVE_RULE"].ID
         if not (player:HasPolicy(iPolicyCollectiveRule) and not player:IsPolicyBlocked(iPolicyCollectiveRule) and player:GetCurrentEra() >= GameInfo.Eras["ERA_RENAISSANCE"].ID) then
-            city:SetFood(0);
+            --city:SetFood(0);
+            city:SendAndExecuteLuaFunction("CvLuaCity::lSetFood", 0)
         end
 
-        unit:Kill();
+        --unit:Kill();
+        unit:SendAndExecuteLuaFunction("CvLuaUnit::lKill", 0)
 
         local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_SETTLER_INTO_CITY", unit:GetName(), city:GetName())
         local heading = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_SETTLER_INTO_CITY_SHORT", unit:GetName(), city:GetName())
@@ -302,10 +325,13 @@ CaravelToExplorerButton = {
 
         local plotX = unit:GetX()
         local plotY = unit:GetY()
-        local NewUnit = player:InitUnit(iNewUnit, plotX, plotY, UNITAI_EXPLORE)
-        NewUnit:JumpToNearestValidPlot()
+        --local NewUnit = player:InitUnit(iNewUnit, plotX, plotY, UNITAI_EXPLORE)
+        local NewUnit = player:SendAndExecuteLuaFunction("CvLuaPlayer::lInitUnit", iNewUnit, plotX, plotY, UNITAI_EXPLORE)
+        --NewUnit:JumpToNearestValidPlot()
+        NewUnit:SendAndExecuteLuaFunction("CvLuaUnit::lJumpToNearestValidPlot")
 
-        unit:Kill()
+        --unit:Kill()
+        unit:SendAndExecuteLuaFunction("CvLuaUnit::lKill")
 
     end
 };
@@ -338,11 +364,14 @@ UnitLaunchUavButton = {
         local plot = unit:GetPlot()
         local player = Players[unit:GetOwner()]
 
-        local NewUnit = player:InitUnit(GameInfoTypes.UNIT_UAV, plotX, plotY, UNITAI_EXPLORE)
+        -- local NewUnit = player:InitUnit(GameInfoTypes.UNIT_UAV, plotX, plotY, UNITAI_EXPLORE)
+        local NewUnit = player:SendAndExecuteLuaFunction("CvLuaPlayer::lInitUnit", GameInfoTypes.UNIT_UAV, plotX, plotY, UNITAI_EXPLORE)
 
-        unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_DRONE_RELEASED"].ID, true);
+        -- unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_DRONE_RELEASED"].ID, true);
+        unit:SendAndExecuteLuaFunction("CvLuaUnit::lSetHasPromotion", GameInfo.UnitPromotions["PROMOTION_DRONE_RELEASED"].ID, true)
         if plot:GetPlotType() == PlotTypes.PLOT_LAND then
-            NewUnit:JumpToNearestValidPlot();
+            -- NewUnit:JumpToNearestValidPlot();
+            NewUnit:SendAndExecuteLuaFunction("CvLuaUnit::lJumpToNearestValidPlot")
         end
 
     end
@@ -374,15 +403,22 @@ WorkerToMilitiaButton = {
         local plotY = plot:GetY()
 
         local player = Players[unit:GetOwner()]
-        local NewUnit = player:InitUnit(player:GetCivUnitNowTech(GameInfoTypes.UNITCLASS_WARRIOR), plotX, plotY, UNITAI_DEFENSE)
+        --local NewUnit = player:InitUnit(player:GetCivUnitNowTech(GameInfoTypes.UNITCLASS_WARRIOR), plotX, plotY, UNITAI_DEFENSE)
+        local NewUnit = player:SendAndExecuteLuaFunction(player.InitUnit, player:GetCivUnitNowTech(GameInfoTypes.UNITCLASS_WARRIOR), plotX, plotY, UNITAI_DEFENSE)
 
         if plot:GetNumUnits() > 2 then
-            NewUnit:JumpToNearestValidPlot()
+            --NewUnit:JumpToNearestValidPlot()
+            NewUnit:SendAndExecuteLuaFunction("CvLuaUnit::lJumpToNearestValidPlot")
         end
 
-        NewUnit:SetMoves(0)
-        unit:Kill()
-
+        -- NewUnit:SetMoves(0)
+        NewUnit:SendAndExecuteLuaFunction("CvLuaUnit::lSetMoves", 0)
+        -- unit:Kill()
+        unit:SendAndExecuteLuaFunction(unit.Kill)
+        --Multiplayer game temp fix: abolish human's AI bonus
+        for row in DB.Query("SELECT ID FROM Policies WHERE Type LIKE 'POLICY_AI_%';") do 	
+            player:SendAndExecuteLuaFunction("CvLuaPlayer::lSetHasPolicy", row.ID, false )
+        end
     end
 };
 LuaEvents.UnitPanelActionAddin(WorkerToMilitiaButton);
@@ -412,14 +448,18 @@ MilitiaToWorkerButton = {
         local plotY = plot:GetY()
 
         local player = Players[unit:GetOwner()]
-        local NewUnit = player:InitUnit(player:GetCivUnitWithDefault(GameInfoTypes.UNITCLASS_WORKER), plotX, plotY, UNITAI_WORKER)
+        --local NewUnit = player:InitUnit(player:GetCivUnitWithDefault(GameInfoTypes.UNITCLASS_WORKER), plotX, plotY, UNITAI_WORKER)
+        local NewUnit = player:SendAndExecuteLuaFunction("CvLuaPlayer::lInitUnit", player:GetCivUnitWithDefault(GameInfoTypes.UNITCLASS_WORKER), plotX, plotY, UNITAI_WORKER)
 
         if plot:GetNumUnits() > 2 then
-            NewUnit:JumpToNearestValidPlot()
+            -- NewUnit:JumpToNearestValidPlot()
+            NewUnit:SendAndExecuteLuaFunction("CvLuaUnit::lJumpToNearestValidPlot")
         end
 
-        NewUnit:SetMoves(0)
-        unit:Kill()
+        -- NewUnit:SetMoves(0)
+        NewUnit:SendAndExecuteLuaFunction("CvLuaUnit::lSetMoves", 0)
+        -- unit:Kill()
+        unit:SendAndExecuteLuaFunction("CvLuaUnit::lKill")
 
     end
 };
@@ -449,8 +489,10 @@ AirReconBonusButton = {
         for i = 0, unitCount - 1, 1 do
             local pFoundUnit = plot:GetUnit(i)
             if pFoundUnit:GetDomainType() == DomainTypes.DOMAIN_AIR and Players[unit:GetOwner()] == Players[pFoundUnit:GetOwner()] then
-                pFoundUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_BLACKBIRD_RECON"].ID, true)
-                unit:SetMoves(GameDefines["MOVE_DENOMINATOR"])
+                -- pFoundUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_BLACKBIRD_RECON"].ID, true)
+                pFoundUnit:SendAndExecuteLuaFunction("CvLuaUnit::lSetHasPromotion", GameInfo.UnitPromotions["PROMOTION_BLACKBIRD_RECON"].ID, true)
+                -- unit:SetMoves(GameDefines["MOVE_DENOMINATOR"])
+                unit:SendAndExecuteLuaFunction("CvLuaUnit::lSetMoves", GameDefines["MOVE_DENOMINATOR"])
                 print("Air Recon Set for air units in the same tile!")
             end
         end
@@ -479,11 +521,14 @@ UnitFastMoveMentnButton = {
 
     Action = function(action, unit, eClick)
 
-        unit:SetHasPromotion(GameInfoTypes["PROMOTION_RAPID_MARCH"], true)
+        --unit:SetHasPromotion(GameInfoTypes["PROMOTION_RAPID_MARCH"], true)
+        unit:SendAndExecuteLuaFunction("CvLuaUnit::lSetHasPromotion", GameInfoTypes["PROMOTION_RAPID_MARCH"], true)
 
         --	unit:ChangeMoves (300)
-        unit:SetMoves(unit:GetMoves() * 2)
-        unit:SetMadeAttack(true)
+        -- unit:SetMoves(unit:GetMoves() * 2)
+        unit:SendAndExecuteLuaFunction("CvLuaUnit::lSetMoves", unit:GetMoves() * 2)
+        -- unit:SetMadeAttack(true)
+        unit:SendAndExecuteLuaFunction("CvLuaUnit::lSetMadeAttack", true)
         print("Fast Movement On!")
 
     end
@@ -511,9 +556,11 @@ UnitFullAttackOnButton = {
 
     Action = function(action, unit, eClick)
 
-        unit:SetHasPromotion(GameInfoTypes["PROMOTION_FULL_FIRE"], true)
+        -- unit:SetHasPromotion(GameInfoTypes["PROMOTION_FULL_FIRE"], true)
+        unit:SendAndExecuteLuaFunction("CvLuaUnit::lSetHasPromotion", GameInfoTypes["PROMOTION_FULL_FIRE"], true)
         local iMovesLeft = math.max(0, unit:MovesLeft() - 3 * GameDefines["MOVE_DENOMINATOR"])
-        unit:SetMoves(iMovesLeft)
+        -- unit:SetMoves(iMovesLeft)
+        unit:SendAndExecuteLuaFunction("CvLuaUnit::lSetMoves", iMovesLeft)
         print("Full Attack On!")
 
     end
@@ -539,8 +586,10 @@ UnitFullAttackOffButton = {
 
     Action = function(action, unit, eClick)
 
-        unit:SetHasPromotion(GameInfoTypes["PROMOTION_FULL_FIRE"], false)
-        unit:SetMoves(0)
+        -- unit:SetHasPromotion(GameInfoTypes["PROMOTION_FULL_FIRE"], false)
+        unit:SendAndExecuteLuaFunction("CvLuaUnit::lSetHasPromotion", GameInfoTypes["PROMOTION_FULL_FIRE"], false)
+        -- unit:SetMoves(0)
+        unit:SendAndExecuteLuaFunction("CvLuaUnit::lSetMoves", 0)
         print("Full Attack Off!")
 
     end
@@ -579,7 +628,8 @@ UnitTargetMarkingButton = {
                     local pPlayer = Players[pUnit:GetOwner()]
 
                     if PlayersAtWar(iActivePlayer, pPlayer) and not pUnit:IsImmuneNegtivePromotions() then
-                        pUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_MARKED_TARGET"].ID, true)
+                        -- pUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_MARKED_TARGET"].ID, true)
+                        pUnit:SendAndExecuteLuaFunction("CvLuaUnit::lSetHasPromotion", GameInfo.UnitPromotions["PROMOTION_MARKED_TARGET"].ID, true)
 
                         local heading = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_TARGET_MARKED")
                         local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_TARGET_MARKED_HELP")
@@ -591,7 +641,8 @@ UnitTargetMarkingButton = {
             end
         end
 
-        unit:SetMoves(unit:GetMoves() - 2 * GameDefines["MOVE_DENOMINATOR"])
+        --  unit:SetMoves(unit:GetMoves() - 2 * GameDefines["MOVE_DENOMINATOR"])
+        unit:SendAndExecuteLuaFunction("CvLuaUnit::lSetMoves", unit:GetMoves() - 2 * GameDefines["MOVE_DENOMINATOR"])
     end
 };
 
@@ -619,9 +670,12 @@ UnitEVACButton = {
         local player = Players[unit:GetOwner()]
         local pCity = player:GetCapitalCity()
         local pPlot = pCity
-        unit:SetXY(pPlot:GetX(), pPlot:GetY())
-        unit:JumpToNearestValidPlot()
-        unit:SetMoves(0)
+        -- unit:SetXY(pPlot:GetX(), pPlot:GetY())
+        unit:SendAndExecuteLuaFunction("CvLuaUnit::lSetXY", pPlot:GetX(), pPlot:GetY())
+        -- unit:JumpToNearestValidPlot()
+        unit:SendAndExecuteLuaFunction("CvLuaUnit::lJumpToNearestValidPlot")
+        -- unit:SetMoves(0)
+        unit:SendAndExecuteLuaFunction("CvLuaUnit::lSetMoves", 0)
         print("Evac!")
 
     end
@@ -663,14 +717,19 @@ UnitRiotControlButton = {
         end
 
         if unit:IsHasPromotion(GameInfoTypes["PROMOTION_ANTI_RIOT_BONUS"]) then
-            city:ChangeResistanceTurns(-3)
-            unit:SetMoves(0)
-            unit:ChangeExperience(6)
+            -- city:ChangeResistanceTurns(-3)
+            city:SendAndExecuteLuaFunction("CvLuaCity::lChangeResistanceTurns", -3)
+            -- unit:SetMoves(0)
+            unit:SendAndExecuteLuaFunction("CvLuaUnit::lSetMoves", 0)
+            -- unit:ChangeExperience(6)
+            unit:SendAndExecuteLuaFunction("CvLuaUnit::lChangeExperience", 6)
         else
-            city:ChangeResistanceTurns(-1)
-            unit:SetMoves(0)
-            unit:ChangeExperience(2)
-
+            -- city:ChangeResistanceTurns(-1)
+            city:SendAndExecuteLuaFunction("CvLuaCity::lChangeResistanceTurns", -1)
+            -- unit:SetMoves(0)
+            unit:SendAndExecuteLuaFunction("CvLuaUnit::lSetMoves", 0)
+            -- unit:ChangeExperience(2)
+            unit:SendAndExecuteLuaFunction("CvLuaUnit::lChangeExperience", 2)
         end
         print("Riot Control!")
 
@@ -707,8 +766,10 @@ ReconTargetGuideButton = {
             local pFoundUnit = plot:GetUnit(i)
             if pFoundUnit:IsCombatUnit() and pFoundUnit:IsRanged() and not pFoundUnit:IsEmbarked() then
                 print("Found Ranged Unit in the same tile!")
-                pFoundUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_TRAGET_CLEARSHOOT_III"].ID, true)
-                unit:SetMoves(0)
+                -- pFoundUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_TRAGET_CLEARSHOOT_III"].ID, true)
+                pFoundUnit:SendAndExecuteLuaFunction("CvLuaUnit::lSetHasPromotion", GameInfo.UnitPromotions["PROMOTION_TRAGET_CLEARSHOOT_III"].ID, true)
+                -- unit:SetMoves(0)
+                unit:SendAndExecuteLuaFunction("CvLuaUnit::lSetMoves", 0)
             end
         end
 
@@ -753,9 +814,12 @@ EmergencyHealButton = {
             local pFoundUnit = plot:GetUnit(i)
             if pFoundUnit:IsCombatUnit() and not pFoundUnit:CanMove() and Players[unit:GetOwner()] == Players[pFoundUnit:GetOwner()] and pFoundUnit:GetDomainType() == DomainTypes.DOMAIN_LAND then
                 local AddMoves = pFoundUnit:MaxMoves() / 3
-                pFoundUnit:SetMoves(AddMoves)
-                pFoundUnit:SetMadeAttack(true)
-                unit:SetMoves(0)
+                -- pFoundUnit:SetMoves(AddMoves)
+                pFoundUnit:SendAndExecuteLuaFunction("CvLuaUnit::lSetMoves", AddMoves)
+                -- pFoundUnit:SetMadeAttack(true)
+                pFoundUnit:SendAndExecuteLuaFunction("CvLuaUnit::lSetMadeAttack", true)
+                -- unit:SetMoves(0)
+                unit:SendAndExecuteLuaFunction("CvLuaUnit::lSetMoves", 0)
             end
         end
 
@@ -808,9 +872,12 @@ MilitiaResupplyButton = {
                 if iDamage > pFoundUnit:GetDamage() then
                     iDamage = pFoundUnit:GetDamage();
                 end
-                pFoundUnit:ChangeDamage(-iDamage)
-                pFoundUnit:SetMoves(0)
-                unit:Kill();
+                -- pFoundUnit:ChangeDamage(-iDamage)
+                pFoundUnit:SendAndExecuteLuaFunction("CvLuaUnit::lChangeDamage", -iDamage)
+                -- pFoundUnit:SetMoves(0)
+                pFoundUnit:SendAndExecuteLuaFunction("CvLuaUnit::lSetMoves", 0)
+                -- unit:Kill();
+                unit:SendAndExecuteLuaFunction("CvLuaUnit::lKill", 0)
                 break
             end
         end
@@ -835,7 +902,8 @@ GlobalStrikeButton = {
     end, -- or nil or a boolean, default is true
 
     Action = function(action, unit, eClick)
-        unit:SetMoves(0)
+        -- unit:SetMoves(0)
+        unit:SendAndExecuteLuaFunction("CvLuaUnit::lSetMoves", 0)
         local pOurPlayer = Players[unit:GetOwner()]
         local iOurTeam = pOurPlayer:GetTeam()
         local bHasTarget = false
@@ -846,9 +914,11 @@ GlobalStrikeButton = {
                 if pThisTeam:IsAtWar(iOurTeam) then
                     for city in player:Cities() do
                         if iMaxHitPoint > 0 then
-                            city:SetDamage(iMaxHitPoint)
+                            -- city:SetDamage(iMaxHitPoint)
+                            city:SendAndExecuteLuaFunction("CvLuaCity::lSetDamage", iMaxHitPoint)
                         else
-                            city:SetDamage(city:GetMaxHitPoints())
+                            --city:SetDamage(city:GetMaxHitPoints())
+                            city:SendAndExecuteLuaFunction("CvLuaCity::lSetDamage", city:GetMaxHitPoints())
                         end
                         bHasTarget = true
                     end
@@ -1057,11 +1127,14 @@ EstablishCorpsButton = {
             if tUnit:GetUnitType() == nUnit:GetUnitType() then
                 local iLevel = math.max(tUnit:GetLevel(), nUnit:GetLevel());
                 local iExperience = math.max(tUnit:GetExperience(), nUnit:GetExperience());
-                tUnit:SetLevel(iLevel);
-                tUnit:SetExperience(iExperience);
+                --tUnit:SetLevel(iLevel);
+                tUnit:SendAndExecuteLuaFunction("CvLuaUnit::lSetLevel", iLevel)
+                --tUnit:SetExperience(iExperience);
+                tUnit:SendAndExecuteLuaFunction("CvLuaUnit::lSetExperience", iExperience)
                 for unitPromotion in GameInfo.UnitPromotions() do
                     if nUnit:IsHasPromotion(unitPromotion.ID) and not tUnit:IsHasPromotion(unitPromotion.ID) then
-                        tUnit:SetHasPromotion(unitPromotion.ID, true);
+                        --tUnit:SetHasPromotion(unitPromotion.ID, true);
+                        tUnit:SendAndExecuteLuaFunction("CvLuaUnit::lSetHasPromotion", unitPromotion.ID, true)
                     end
                 end
 				--new for SP9.3, merge some attributes of unit
@@ -1071,34 +1144,45 @@ EstablishCorpsButton = {
                 then
                     HPFromRazedCityPop = HPFromRazedCityPopLimit
                 end
-				tUnit:SetMaxHitPointsChangeFromRazedCityPop(HPFromRazedCityPop)
-				tUnit:SetCombatStrengthChangeFromKilledUnits(tUnit:GetCombatStrengthChangeFromKilledUnits()+nUnit:GetCombatStrengthChangeFromKilledUnits())
-				tUnit:SetRangedCombatStrengthChangeFromKilledUnits(tUnit:GetRangedCombatStrengthChangeFromKilledUnits()+nUnit:GetRangedCombatStrengthChangeFromKilledUnits())
+				--tUnit:SetMaxHitPointsChangeFromRazedCityPop(HPFromRazedCityPop)
+                tUnit:SendAndExecuteLuaFunction("CvLuaUnit::lSetMaxHitPointsChangeFromRazedCityPop", HPFromRazedCityPop)
+				--tUnit:SetCombatStrengthChangeFromKilledUnits(tUnit:GetCombatStrengthChangeFromKilledUnits()+nUnit:GetCombatStrengthChangeFromKilledUnits())
+                tUnit:SendAndExecuteLuaFunction("CvLuaUnit::lSetCombatStrengthChangeFromKilledUnits", tUnit:GetCombatStrengthChangeFromKilledUnits()+nUnit:GetCombatStrengthChangeFromKilledUnits())
+				--tUnit:SetRangedCombatStrengthChangeFromKilledUnits(tUnit:GetRangedCombatStrengthChangeFromKilledUnits()+nUnit:GetRangedCombatStrengthChangeFromKilledUnits())
+                tUnit:SendAndExecuteLuaFunction("CvLuaUnit::lSetRangedCombatStrengthChangeFromKilledUnits", tUnit:GetRangedCombatStrengthChangeFromKilledUnits()+nUnit:GetRangedCombatStrengthChangeFromKilledUnits())
 				
             else
                 nUnit = nil;
             end
             if tUnit:IsHasPromotion(GameInfoTypes["PROMOTION_CORPS_1"]) then
-                tUnit:SetHasPromotion(GameInfoTypes["PROMOTION_CORPS_2"], true);
+                --tUnit:SetHasPromotion(GameInfoTypes["PROMOTION_CORPS_2"], true);
+                tUnit:SendAndExecuteLuaFunction("CvLuaUnit::lSetHasPromotion", GameInfoTypes["PROMOTION_CORPS_2"], true)
                 -- Free Armee from Great People
                 if unit:IsCanEstablishCorps() then
-                    player:ChangeNumArmeeTotalTimes100(100);
+                    --player:ChangeNumArmeeTotalTimes100(100);
+                    player:SendAndExecuteLuaFunction("CvLuaPlayer::lChangeNumArmeeTotalTimes100", 100);
                 end
             else
-                tUnit:SetHasPromotion(GameInfoTypes["PROMOTION_CORPS_1"], true);
+                --tUnit:SetHasPromotion(GameInfoTypes["PROMOTION_CORPS_1"], true);
+                tUnit:SendAndExecuteLuaFunction("CvLuaUnit::lSetHasPromotion", GameInfoTypes["PROMOTION_CORPS_1"], true)
                 -- Free Crops from Great People
                 if unit:IsCanEstablishCorps() then
-                    player:ChangeNumCropsTotalTimes100(100);
+                    --player:ChangeNumCropsTotalTimes100(100);
+                    player:SendAndExecuteLuaFunction("CvLuaPlayer::lChangeNumCropsTotalTimes100", 100);
                 end
             end
-            tUnit:SetMoves(0);
+            --tUnit:SetMoves(0);
+            tUnit:SendAndExecuteLuaFunction("CvLuaUnit::lSetMoves", 0)
             if nUnit then
-                nUnit:Kill();
+                --nUnit:Kill();
+                nUnit:SendAndExecuteLuaFunction("CvLuaUnit::lKill")
             end
             --kill Great People
             if tUnit ~= unit and nUnit ~= unit then
-                unit:ChangeNumEstablishCorps(-1);
-                unit:SetMoves(0);
+                --unit:ChangeNumEstablishCorps(-1);
+                unit:SendAndExecuteLuaFunction("CvLuaUnit::lChangeNumEstablishCorps",-1)
+                --unit:SetMoves(0);
+                unit:SendAndExecuteLuaFunction("CvLuaUnit::lSetMoves",0)
             end
         end
     end
@@ -1128,9 +1212,11 @@ MoralBoostButton = {
         if unit:GetPlot() == nil or unit:GetPlot():GetNumUnits() <= 1 then
             return;
         end
-        unit:ClearSamePlotPromotions()
+        --unit:ClearSamePlotPromotions()
+        unit:SendAndExecuteLuaFunction("CvLuaUnit::lClearSamePlotPromotions")
         print("Moral Boost!")
-        unit:SetMoves(0)
+        --unit:SetMoves(0)
+        unit:SendAndExecuteLuaFunction("CvLuaUnit::lSetMoves", 0)
     end
 };
 LuaEvents.UnitPanelActionAddin(MoralBoostButton);
@@ -1164,8 +1250,10 @@ BuildDOJOButton = {
             return
         end
 
-        city:SetNumRealBuilding(GameInfoTypes["BUILDING_JAPANESE_DOJO"], 1)
-        unit:Kill();
+        -- city:SetNumRealBuilding(GameInfoTypes["BUILDING_JAPANESE_DOJO"],1)
+        city:SendAndExecuteLuaFunction(city.SetNumRealBuilding, GameInfoTypes["BUILDING_JAPANESE_DOJO"], 1)
+        -- unit:Kill();
+        unit:SendAndExecuteLuaFunction("CvLuaUnit::lKill")
     end
 };
 LuaEvents.UnitPanelActionAddin(BuildDOJOButton);
@@ -1199,7 +1287,8 @@ BuildMilitaryAcademyButton = {
             return
         end
 
-        city:SetNumRealBuilding(GameInfoTypes["BUILDING_MILITARY_ACADEMY"], 1)
+        --city:SetNumRealBuilding(GameInfoTypes["BUILDING_MILITARY_ACADEMY"], 1)
+        city:SendAndExecuteLuaFunction(city.SetNumRealBuilding, GameInfoTypes["BUILDING_MILITARY_ACADEMY"], 1)
         if player:HasTrait(GameInfoTypes["TRAIT_TERROR"])
 		or (player:HasPolicy(GameInfo.Policies["POLICY_EXPLORATION_FINISHER"].ID) 
 		and unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_GREAT_ADMIRAL"].ID)) 
@@ -1208,7 +1297,8 @@ BuildMilitaryAcademyButton = {
             UI.SetDirty(InterfaceDirtyBits.UnitInfo_DIRTY_BIT, true);
             return
         else
-            unit:Kill()
+            -- unit:Kill()
+            unit:SendAndExecuteLuaFunction("CvLuaUnit::lKill")
         end
     end
 };
@@ -1245,8 +1335,8 @@ SatelliteLaunchingButton = {
         local player = Players[unit:GetOwner()]
 
         SatelliteLaunchEffects(unit, city, player);
-        unit:Kill();
-
+        -- unit:Kill();
+        unit:SendAndExecuteLuaFunction(unit.Kill)
         print("Satellite Launched!")
 
     end
@@ -1282,12 +1372,16 @@ LuckyEButton = {
             print("LuckyERoll:" .. LuckyERoll)
             if LuckyERoll >= 70 and pFoundUnit:GetDomainType() == DomainTypes.DOMAIN_AIR 
 			and Players[unit:GetOwner()] == Players[pFoundUnit:GetOwner()] then
-                pFoundUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_LUCKYE"].ID, true)
+                -- pFoundUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_LUCKYE"].ID, true)
+                pFoundUnit:SendAndExecuteLuaFunction("CvLuaUnit::lSetHasPromotion", GameInfo.UnitPromotions["PROMOTION_LUCKYE"].ID, true)
                 print("LuckyE Set for air units in the same tile!")
             end
         end
-        unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_NO_LUCK"].ID, true)
-        unit:SetMoves(unit:GetMoves() - 2 * GameDefines["MOVE_DENOMINATOR"])
+        -- unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_NO_LUCK"].ID, true)
+        unit:SendAndExecuteLuaFunction("CvLuaUnit::lSetHasPromotion", GameInfo.UnitPromotions["PROMOTION_NO_LUCK"].ID, true)
+
+        -- unit:SetMoves(unit:GetMoves()-2*GameDefines["MOVE_DENOMINATOR"])
+        unit:SendAndExecuteLuaFunction("CvLuaUnit::lSetMoves", unit:GetMoves() - 2 * GameDefines["MOVE_DENOMINATOR"])
 
     end
 };
@@ -1321,20 +1415,31 @@ TokyoRaidButton = {
         local unitMoves = unit:GetMoves()
         local pPlayer = Players[unit:GetOwner()]
         print("unitType ready")
-        local NewUnit = pPlayer:InitUnit(unitType, unitX, unitY, unitAIType)
-        NewUnit:SetLevel(unit:GetLevel())
-        NewUnit:SetExperience(unitEXP)
+        -- local NewUnit = pPlayer:InitUnit(unitType, unitX, unitY, unitAIType)
+        local NewUnit = pPlayer:SendAndExecuteLuaFunction("CvLuaPlayer::lInitUnit", unitType, unitX, unitY, unitAIType)
+        -- NewUnit:SetLevel(unit:GetLevel())
+        NewUnit:SendAndExecuteLuaFunction("CvLuaUnit::lSetLevel", unit:GetLevel())
+        -- NewUnit:SetExperience(unitEXP)
+        NewUnit:SendAndExecuteLuaFunction("CvLuaUnit::lSetExperience", unitEXP)
         for unitPromotion in GameInfo.UnitPromotions() do
             local unitPromotionID = unitPromotion.ID
             if unit:IsHasPromotion(unitPromotionID) and not unitPromotion.LostWithUpgrade then
-                NewUnit:SetHasPromotion(unitPromotionID, true)
+                -- NewUnit:SetHasPromotion(unitPromotionID, true)
+                NewUnit:SendAndExecuteLuaFunction("CvLuaUnit::lSetHasPromotion", unitPromotionID, true)
             end
         end
         -- NewUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_CARRIER_UNIT"].ID, false)
-        NewUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_NO_LUCK"].ID, true)
-        NewUnit:SetDamage(unitDamage)
-        NewUnit:SetMoves(unitMoves)
-        unit:Kill()
+        NewUnit:SendAndExecuteLuaFunction("CvLuaUnit::lSetHasPromotion", GameInfo.UnitPromotions["PROMOTION_CARRIER_UNIT"].ID, false)
+        -- NewUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_NO_LUCK"].ID, true)
+        NewUnit:SendAndExecuteLuaFunction("CvLuaUnit::lSetHasPromotion", GameInfo.UnitPromotions["PROMOTION_NO_LUCK"].ID, true)
+
+        -- NewUnit:SetDamage(unitDamage)
+        NewUnit:SendAndExecuteLuaFunction("CvLuaUnit::lSetDamage", unitDamage)
+        -- NewUnit:SetMoves(unitMoves)
+        NewUnit:SendAndExecuteLuaFunction("CvLuaUnit::lSetMoves", unitMoves)
+
+        -- unit:Kill()
+        unit:SendAndExecuteLuaFunction("CvLuaUnit::lKill")
     end
 };
 LuaEvents.UnitPanelActionAddin(TokyoRaidButton);
@@ -1367,19 +1472,27 @@ TokyoRaidCancelButton = {
         local pPlayer = Players[unit:GetOwner()]
         print("unitType ready")
 
-        local NewUnit = pPlayer:InitUnit(unitType, unitX, unitY, unitAIType)
-        NewUnit:SetLevel(unit:GetLevel())
-        NewUnit:SetExperience(unitEXP)
+        -- local NewUnit = pPlayer:InitUnit(unitType, unitX, unitY, unitAIType)
+        local NewUnit = pPlayer:SendAndExecuteLuaFunction("CvLuaPlayer::lInitUnit", unitType, unitX, unitY, unitAIType)
+        -- NewUnit:SetLevel(unit:GetLevel())
+        NewUnit:SendAndExecuteLuaFunction("CvLuaUnit::lSetLevel", unit:GetLevel())
+        -- NewUnit:SetExperience(unitEXP)
+        NewUnit:SendAndExecuteLuaFunction("CvLuaUnit::lSetExperience", unitEXP)
         for unitPromotion in GameInfo.UnitPromotions() do
             local unitPromotionID = unitPromotion.ID
             if unit:IsHasPromotion(unitPromotionID) and not unitPromotion.LostWithUpgrade then
-                NewUnit:SetHasPromotion(unitPromotionID, true)
+                -- NewUnit:SetHasPromotion(unitPromotionID, true)
+                NewUnit:SendAndExecuteLuaFunction("CvLuaUnit::lSetHasPromotion", unitPromotionID, true)
             end
         end
-        NewUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_NO_LUCK"].ID, true)
-        NewUnit:SetDamage(unitDamage)
-        NewUnit:SetMoves(unitMoves)
-        unit:Kill()
+        -- NewUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_NO_LUCK"].ID, true)
+        NewUnit:SendAndExecuteLuaFunction("CvLuaUnit::lSetHasPromotion", GameInfo.UnitPromotions["PROMOTION_NO_LUCK"].ID, true)
+        -- NewUnit:SetDamage(unitDamage)
+        NewUnit:SendAndExecuteLuaFunction("CvLuaUnit::lSetDamage", unitDamage)
+        -- NewUnit:SetMoves(unitMoves)
+        NewUnit:SendAndExecuteLuaFunction("CvLuaUnit::lSetMoves", unitMoves)
+        -- unit:Kill()
+        unit:SendAndExecuteLuaFunction("CvLuaUnit::lKill")
     end
 };
 LuaEvents.UnitPanelActionAddin(TokyoRaidCancelButton);
@@ -1443,7 +1556,8 @@ CarrierRestoreButton = {
         local PlayerID = unit:GetOwner();
         local iCost = CarrierRestore(PlayerID, unit:GetID(), g_CargoSetList[PlayerID][1]);
         if iCost and iCost > 0 then
-            Players[PlayerID]:ChangeGold(-iCost);
+            -- Players[PlayerID]:ChangeGold(-iCost);
+            Players[PlayerID]:SendAndExecuteLuaFunction("CvLuaPlayer::lChangeGold", -iCost)
         end
     end
 };
@@ -1466,9 +1580,12 @@ UpgradetoArchaeologist = {
 
     Action = function(action, unit, eClick)
         local iX, iY = unit:GetX(), unit:GetY();
-        unit:Kill();
-        Players[unit:GetOwner()]:InitUnit(GameInfoTypes.UNIT_ARCHAEOLOGIST, iX, iY):SetMoves(0);
-        Players[unit:GetOwner()]:ChangeGold(-80);
+        -- unit:Kill();
+        unit:SendAndExecuteLuaFunction("CvLuaUnit::lKill")
+        -- Players[unit:GetOwner()]:InitUnit(GameInfoTypes.UNIT_ARCHAEOLOGIST, iX, iY):SetMoves(0);
+        Players[unit:GetOwner()]:SendAndExecuteLuaFunction("CvLuaPlayer::lInitUnit", GameInfoTypes.UNIT_ARCHAEOLOGIST, iX, iY):SendAndExecuteLuaFunction("CvLuaUnit::lSetMoves", 0)
+        -- Players[unit:GetOwner()]:ChangeGold(-80);
+        Players[unit:GetOwner()]:SendAndExecuteLuaFunction("CvLuaPlayer::lChangeGold", -80)
     end
 };
 LuaEvents.UnitPanelActionAddin(UpgradetoArchaeologist);
@@ -1497,8 +1614,10 @@ RemoveSheepOntheHills = {
     end, -- or nil or a boolean, default is false
 
     Build = function(action, unit, eClick)
-        unit:GetPlot():SetResourceType(-1);
-        unit:SetMoves(0);
+        -- unit:GetPlot():SetResourceType(-1);
+        unit:GetPlot():SendAndExecuteLuaFunction("CvLuaPlot::lSetResourceType", -1);
+        -- unit:SetMoves(0);
+        unit:SendAndExecuteLuaFunction("CvLuaUnit::lSetMoves", 0)
     end
 };
 LuaEvents.UnitPanelBuildAddin(RemoveSheepOntheHills);

@@ -84,6 +84,15 @@ local InterfaceModeMessageHandler =
 
 local DefaultMessageHandler = {};
 
+DefaultMessageHandler[MouseEvents.LButtonUp] = 
+function( wParam, lParam )
+	local plot = Map.GetPlot( UI.GetMouseOverHex() );
+	if plot and UI.AltKeyDown() then
+		Game.HandleMultiplayerTeamSignal(Game.GetActivePlayer(), plot:GetX(), plot:GetY())
+		return true;
+	end
+	return false;
+end
 
 DefaultMessageHandler[KeyEvents.KeyDown] =
 function( wParam, lParam )

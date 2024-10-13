@@ -34,18 +34,23 @@ SacrificeMissionButton = {
         local strength = math.max(unit:GetBaseCombatStrength(), unit:GetBaseRangedCombatStrength())
         local cultureBonus = strength * SacrificeMissionCultureRate / 100
         local faithBonus = strength * SacrificeMissionFaithRate / 100
-        player:ChangeJONSCulture(cultureBonus);
-        player:ChangeFaith(faithBonus);
+        --player:ChangeJONSCulture(cultureBonus);
+        player:SendAndExecuteLuaFunction("CvLuaPlayer::lChangeJONSCulture", cultureBonus)
+        --player:ChangeFaith(faithBonus);
+        player:SendAndExecuteLuaFunction("CvLuaPlayer::lChangeFaith", faithBonus)
         --local iRand = math.random(1, 100);
         local iRand = Game.Rand(100, "At UnitSpecialButtons_SP8.lua SacrificeMissionButton, result for sacrifice") + 1
         if iRand <= SacrificeMissionPromotionProbability then
-            unit:SetHasPromotion(GameInfoTypes["PROMOTION_AZTEC_HUEY_TEOCALLI"], true);
-            unit:SetMoves(0);
+            --unit:SetHasPromotion(GameInfoTypes["PROMOTION_AZTEC_HUEY_TEOCALLI"], true);
+            unit:SendAndExecuteLuaFunction("CvLuaUnit::lSetHasPromotion", GameInfoTypes["PROMOTION_AZTEC_HUEY_TEOCALLI"], true)
+            --unit:SetMoves(0);
+            unit:SendAndExecuteLuaFunction("CvLuaUnit::lSetMoves", 0)
             if player:IsHuman() then
                 Events.GameplayAlertMessage(Locale.ConvertTextKey("TXT_KEY_MESSAGE_AZTEC_HUEY_ALERT_2", unit:GetName(),cultureBonus,faithBonus) )
             end
         else
-            unit:Kill();
+            --unit:Kill();
+            unit:SendAndExecuteLuaFunction("CvLuaUnit::lKill")
             if player:IsHuman() then
                 Events.GameplayAlertMessage(Locale.ConvertTextKey("TXT_KEY_MESSAGE_AZTEC_HUEY_ALERT_1", unit:GetName(),cultureBonus,faithBonus) )
             end
@@ -76,8 +81,10 @@ SupplyExoticGoodsMissionButton = {
 
     Action = function(action, unit, eClick)
         if eClick == Mouse.eLClick then
-            unit:ChangeNumExoticGoods(1);
-            unit:SetMoves(0);
+            --unit:ChangeNumExoticGoods(1);
+            unit:SendAndExecuteLuaFunction("CvLuaUnit::lChangeNumExoticGoods", 1)
+            --unit:SetMoves(0);
+            unit:SendAndExecuteLuaFunction("CvLuaUnit::lSetMoves", 0)
         else
             local pPlayer = Players[unit:GetOwner()];
             for pUnit in pPlayer:Units() do
@@ -87,8 +94,10 @@ SupplyExoticGoodsMissionButton = {
                 and pUnit:GetPlot():IsCity()
                 and pUnit:GetPlot():GetPlotCity():IsHasBuilding(GameInfoTypes["BUILDING_PORTUGAL_PORT"])
                 then
-                    pUnit:ChangeNumExoticGoods(1);
-                    pUnit:SetMoves(0);
+                    --pUnit:ChangeNumExoticGoods(1);
+                    pUnit:SendAndExecuteLuaFunction("CvLuaUnit::lChangeNumExoticGoods", 1)
+                    --pUnit:SetMoves(0);
+                    pUnit:SendAndExecuteLuaFunction("CvLuaUnit::lSetMoves", 0)
                 end
             end
         end
@@ -113,7 +122,8 @@ BatchMoveMissionButton = {
     end, -- or nil or a boolean, default is false
 
     Action = function(action, unit, eClick)
-        unit:SetIsBatchMark(not unit:IsBatchMark());
+        --unit:SetIsBatchMark(not unit:IsBatchMark());
+        unit:SendAndExecuteLuaFunction("CvLuaUnit::lSetIsBatchMark", not unit:IsBatchMark())
         if unit:IsHuman() then
 			local hex = ToHexFromGrid(Vector2(unit:GetX(), unit:GetY()));
             local message = ""

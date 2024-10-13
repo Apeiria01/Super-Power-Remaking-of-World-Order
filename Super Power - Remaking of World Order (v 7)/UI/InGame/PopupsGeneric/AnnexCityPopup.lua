@@ -21,8 +21,8 @@ PopupLayouts[ButtonPopupTypes.BUTTONPOPUP_ANNEX_CITY] = function(popupInfo)
 		Network.SendDoTask(cityID, TaskTypes.TASK_ANNEX_PUPPET, -1, -1, false, false, false, false);
 		
 		----------------------------------------------------------------------SP Annexing city build a City Hall Start--------------------------
-		newCity:SetPuppet (false)
-		newCity:SetProductionAutomated (false)
+		newCity:SendAndExecuteLuaFunction(newCity.SetPuppet, false)
+		newCity:SendAndExecuteLuaFunction(newCity.SetProductionAutomated, false)	
 
 	    
 	    print ("New City Hall built!")
