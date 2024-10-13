@@ -6,7 +6,7 @@ include("PlotIterators.lua");
 -------------------------------------------------------------------------New Trait Effects-----------------------------------------------------------------------
 if Game.GetGameSpeedType() == 3 then
 	local QuickGameSpeedID = GameInfo.UnitPromotions["PROMOTION_GAME_QUICKSPEED"].ID
-	Events.SerialEventUnitCreated.Add(
+	GameEvents.UnitCreated.Add(
 		function(iPlayerID, iUnitID)
 			local pPlayer = Players[iPlayerID]
 			if pPlayer == nil then return end
