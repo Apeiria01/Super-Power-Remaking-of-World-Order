@@ -4,19 +4,6 @@ include("FLuaVector.lua");
 include("UtilityFunctions.lua");
 include("PlotIterators.lua");
 -------------------------------------------------------------------------New Trait Effects-----------------------------------------------------------------------
-if Game.GetGameSpeedType() == 3 then
-	local QuickGameSpeedID = GameInfo.UnitPromotions["PROMOTION_GAME_QUICKSPEED"].ID
-	GameEvents.UnitCreated.Add(
-		function(iPlayerID, iUnitID)
-			local pPlayer = Players[iPlayerID]
-			if pPlayer == nil then return end
-			local pUnit = pPlayer:GetUnitByID(iUnitID)
-			if pUnit == nil then return end
-			pUnit:SetHasPromotion(QuickGameSpeedID, true)
-		end
-	)
-end
-
 -- Hun UA effects
 if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_HUNS) then
 	function HunDestroyCity(hexPos, playerID, cityID) --Hun will gain yield after razing a city
