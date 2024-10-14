@@ -27,7 +27,7 @@
 			<Set DealDuration="20" GrowthPercent="67" TrainPercent="50" ConstructPercent="50" CreatePercent="67" ResearchPercent="75"
 				 GoldPercent="67" ImprovementPercent="45" GreatPeoplePercent="67" CulturePercent="75" FaithPercent="67" BarbPercent="67"
 			 FeatureProductionPercent="40" UnitHurryPercent="67" UnitTradePercent="67" GoldenAgePercent="67" MinorCivElectionFreqMod="67"
-				 OpinionDurationPercent="50" SpyRatePercent="67" RelationshipDuration="25" LeaguePercent="67"  ReligiousPressureAdjacentCity="200"/>
+				 OpinionDurationPercent="50" SpyRatePercent="67" RelationshipDuration="25" LeaguePercent="67"  ReligiousPressureAdjacentCity="200" FreePromotion="PROMOTION_GAME_QUICKSPEED"/>
 			<Where Type="GAMESPEED_QUICK"/>
 		</Update>
 	</GameSpeeds>
