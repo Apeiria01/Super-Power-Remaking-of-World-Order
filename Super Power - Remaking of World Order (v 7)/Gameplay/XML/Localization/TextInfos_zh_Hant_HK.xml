@@ -1362,7 +1362,7 @@
 
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_ORACLE_HELP" />
-			<Set Text="免費獲得一項社會政策。研究考古學科技後+4[ICON_TOURISM]旅遊業績產出。" />
+			<Set Text="免費獲得一項社會政策。研究考古學科技後+6[ICON_TOURISM]旅遊業績產出。" />
 		</Update>
 
 		<Update>

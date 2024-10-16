@@ -746,7 +746,7 @@ CivilopediaCategory[CategoryBuildings].PopulateList = function()
 		--Add Faith Buildings first
 		sortedList[CategoryBuildings][sectionID] = {};
 		local tableid = 1;
-		for building in DB.Query("SELECT Buildings.ID, Buildings.Description, Buildings.PortraitIndex, Buildings.IconAtlas from Buildings inner join  BuildingClasses on Buildings.BuildingClass = BuildingClasses.Type where Buildings.FaithCost > 0 and Buildings.Cost == -1 and BuildingClasses.MaxGlobalInstances < 0 and (BuildingClasses.MaxPlayerInstances <> 1 or Buildings.SpecialistCount > 0) and BuildingClasses.MaxTeamInstances < 0 and Buildings.GreatWorkCount >= 0") do
+		for building in DB.Query("SELECT Buildings.ID, Buildings.Description, Buildings.PortraitIndex, Buildings.IconAtlas from Buildings inner join  BuildingClasses on Buildings.BuildingClass = BuildingClasses.Type where Buildings.FaithCost > 0 and Buildings.Cost == -1 and BuildingClasses.MaxGlobalInstances < 0 and BuildingClasses.MaxPlayerInstances <> 1 and BuildingClasses.MaxTeamInstances < 0 and Buildings.GreatWorkCount >= 0") do
 			AddArticle(0, tableid, building);
 			tableid = tableid + 1;
 		end
@@ -758,7 +758,7 @@ CivilopediaCategory[CategoryBuildings].PopulateList = function()
 		FROM Buildings 
 		INNER JOIN BuildingClasses ON Buildings.BuildingClass = BuildingClasses.Type 
 		INNER JOIN Technologies ON Buildings.PrereqTech = Technologies.Type 
-		WHERE (FaithCost == 0 or Buildings.Cost >= 0) AND BuildingClasses.MaxGlobalInstances < 0 AND (BuildingClasses.MaxPlayerInstances <> 1 or Buildings.SpecialistCount > 0) AND BuildingClasses.MaxTeamInstances < 0 AND Buildings.GreatWorkCount >= 0 AND Technologies.Era = ?;]];
+		WHERE (FaithCost == 0 or Buildings.Cost >= 0) AND BuildingClasses.MaxGlobalInstances < 0 AND BuildingClasses.MaxPlayerInstances <> 1 AND BuildingClasses.MaxTeamInstances < 0 AND Buildings.GreatWorkCount >= 0 AND Technologies.Era = ?;]];
 	
 	local BuildingsByEra = DB.CreateQuery(sql);
 	
@@ -783,7 +783,7 @@ CivilopediaCategory[CategoryBuildings].PopulateList = function()
 				SELECT Buildings.ID, Buildings.Description, Buildings.PortraitIndex, Buildings.IconAtlas 
 				FROM Buildings 
 				INNER JOIN BuildingClasses ON Buildings.BuildingClass = BuildingClasses.Type 
-				WHERE Buildings.PrereqTech IS NULL AND (Buildings.FaithCost == 0 or Buildings.Cost >= 0) AND BuildingClasses.MaxGlobalInstances < 0 AND (BuildingClasses.MaxPlayerInstances <> 1 or Buildings.SpecialistCount > 0) AND BuildingClasses.MaxTeamInstances < 0 AND Buildings.GreatWorkCount >= 0;]];
+				WHERE Buildings.PrereqTech IS NULL AND (Buildings.FaithCost == 0 or Buildings.Cost >= 0) AND BuildingClasses.MaxGlobalInstances < 0 AND BuildingClasses.MaxPlayerInstances <> 1 AND BuildingClasses.MaxTeamInstances < 0 AND Buildings.GreatWorkCount >= 0;]];
 		
 			for building in DB.Query(sql) do
 				AddArticle(eraID, tableid, building);
@@ -843,7 +843,7 @@ CivilopediaCategory[CategoryWonders].PopulateList = function()
 
 	for building in GameInfo.Buildings() do	
 		local thisBuildingClass = GameInfo.BuildingClasses[building.BuildingClass];
-		if thisBuildingClass.MaxPlayerInstances == 1 and building.SpecialistCount == 0 then
+		if thisBuildingClass.MaxPlayerInstances == 1 then
 			local article = {};
 			local name = Locale.ConvertTextKey( building.Description )
 			article.entryName = name;
@@ -2405,7 +2405,7 @@ CivilopediaCategory[CategoryTech].SelectArticle = function( techID, shouldAddToL
 				thisBuildingInstance.UnlockedBuildingButton:SetToolTipString( Locale.ConvertTextKey( thisBuildingInfo.Description ) );
 				thisBuildingInstance.UnlockedBuildingButton:SetVoids( thisBuildingInfo.ID, addToList );
 				local thisBuildingClass = GameInfo.BuildingClasses[thisBuildingInfo.BuildingClass];
-				if thisBuildingClass.MaxGlobalInstances > 0 or (thisBuildingClass.MaxPlayerInstances == 1 and thisBuildingInfo.SpecialistCount == 0) or thisBuildingClass.MaxTeamInstances > 0 then
+				if thisBuildingClass.MaxGlobalInstances > 0 or thisBuildingClass.MaxPlayerInstances == 1 or thisBuildingClass.MaxTeamInstances > 0 then
 					thisBuildingInstance.UnlockedBuildingButton:RegisterCallback( Mouse.eLClick, CivilopediaCategory[CategoryWonders].SelectArticle );
 				else
 					thisBuildingInstance.UnlockedBuildingButton:RegisterCallback( Mouse.eLClick, CivilopediaCategory[CategoryBuildings].SelectArticle );
@@ -3969,7 +3969,7 @@ function SelectBuildingOrWonderArticle( buildingID )
 						thisBuildingInstance.RequiredBuildingButton:SetToolTipString( Locale.ConvertTextKey( thisBuildingInfo.Description ) );
 						thisBuildingInstance.RequiredBuildingButton:SetVoids( thisBuildingInfo.ID, addToList );
 						local thisBuildingClass = GameInfo.BuildingClasses[thisBuildingInfo.BuildingClass];
-						if thisBuildingClass.MaxGlobalInstances > 0 or (thisBuildingClass.MaxPlayerInstances == 1 and thisBuildingInfo.SpecialistCount == 0) or thisBuildingClass.MaxTeamInstances > 0 then
+						if thisBuildingClass.MaxGlobalInstances > 0 or thisBuildingClass.MaxPlayerInstances == 1 or thisBuildingClass.MaxTeamInstances > 0 then
 							thisBuildingInstance.RequiredBuildingButton:RegisterCallback( Mouse.eLClick, CivilopediaCategory[CategoryWonders].SelectArticle );
 						else
 							thisBuildingInstance.RequiredBuildingButton:RegisterCallback( Mouse.eLClick, CivilopediaCategory[CategoryBuildings].SelectArticle );
@@ -4290,7 +4290,7 @@ CivilopediaCategory[CategoryWonders].SelectArticle = function( wonderID, shouldA
 							thisBuildingInstance.RequiredBuildingButton:SetToolTipString( Locale.ConvertTextKey( thisBuildingInfo.Description ) );
 							thisBuildingInstance.RequiredBuildingButton:SetVoids( thisBuildingInfo.ID, addToList );
 							local thisBuildingClass = GameInfo.BuildingClasses[thisBuildingInfo.BuildingClass];
-							if thisBuildingClass.MaxGlobalInstances > 0 or (thisBuildingClass.MaxPlayerInstances == 1 and thisBuildingInfo.SpecialistCount == 0) or thisBuildingClass.MaxTeamInstances > 0 then
+							if thisBuildingClass.MaxGlobalInstances > 0 or thisBuildingClass.MaxPlayerInstances == 1 or thisBuildingClass.MaxTeamInstances > 0 then
 								thisBuildingInstance.RequiredBuildingButton:RegisterCallback( Mouse.eLClick, CivilopediaCategory[CategoryWonders].SelectArticle );
 							else
 								thisBuildingInstance.RequiredBuildingButton:RegisterCallback( Mouse.eLClick, CivilopediaCategory[CategoryBuildings].SelectArticle );
@@ -4756,7 +4756,7 @@ CivilopediaCategory[CategoryCivilizations].SelectArticle = function( rawCivID, s
 								thisBuildingInstance.UniqueBuildingButton:SetToolTipString( Locale.ConvertTextKey( thisBuildingInfo.Description ) );
 								thisBuildingInstance.UniqueBuildingButton:SetVoids( thisBuildingInfo.ID, addToList );
 								local thisBuildingClass = GameInfo.BuildingClasses[thisBuildingInfo.BuildingClass];
-								if thisBuildingClass.MaxGlobalInstances > 0 or (thisBuildingClass.MaxPlayerInstances == 1 and thisBuildingInfo.SpecialistCount == 0) or thisBuildingClass.MaxTeamInstances > 0 then
+								if thisBuildingClass.MaxGlobalInstances > 0 or thisBuildingClass.MaxPlayerInstances == 1 or thisBuildingClass.MaxTeamInstances > 0 then
 									thisBuildingInstance.UniqueBuildingButton:RegisterCallback( Mouse.eLClick, CivilopediaCategory[CategoryWonders].SelectArticle );
 								else
 									thisBuildingInstance.UniqueBuildingButton:RegisterCallback( Mouse.eLClick, CivilopediaCategory[CategoryBuildings].SelectArticle );
