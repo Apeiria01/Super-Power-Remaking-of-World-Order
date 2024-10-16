@@ -2083,7 +2083,7 @@
 			<Text>
 				[ICON_BULLET]+5[ICON_RES_MANPOWER]人力、+5[ICON_RES_IRON]铁资源。
 				[NEWLINE][ICON_BULLET]本城市有市民工作的矿井+1[ICON_PRODUCTION]产能。
-				[NEWLINE][NEWLINE][ICON_BULLET]需要所有城市拥有工坊，且本城必须拥有已开发的[ICON_RES_IRON]铁。
+				[NEWLINE][NEWLINE][ICON_BULLET]本城必须拥有已开发的[ICON_RES_IRON]铁，获得工业化前需要所有城市拥有工坊。
 				[NEWLINE][ICON_BULLET]只能在中型城市（15人口）建造。建造成本随城市数量增加。
 			</Text>
 		</Replace>

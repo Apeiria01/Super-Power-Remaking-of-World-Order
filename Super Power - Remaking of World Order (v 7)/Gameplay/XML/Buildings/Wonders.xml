@@ -263,6 +263,7 @@
 			<PortraitIndex>47</PortraitIndex>
 			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
 			<SpecialistCount>2</SpecialistCount>
+			<TechNoPrereqClasses>TECH_INDUSTRIALIZATION</TechNoPrereqClasses>
 		</Row>
 
 		<Row>
@@ -721,11 +722,6 @@
 		<Row>
 			<BuildingType>BUILDING_CARTHAGINIAN_AGORA</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_CIRCUS</BuildingClassType>
-		</Row>
-
-		<Row>
-			<BuildingType>BUILDING_IRONWORKS</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_WORKSHOP</BuildingClassType>
 		</Row>
 
 		<!--<Row>

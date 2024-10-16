@@ -4678,7 +4678,7 @@
 			<Text>
 				[ICON_BULLET]+5 [ICON_RES_MANPOWER] Manpower, +5 additional [ICON_RES_IRON] Iron.
 				[NEWLINE][ICON_BULLET]+1 [ICON_PRODUCTION] Production from each Mine local.
-				[NEWLINE][NEWLINE][ICON_BULLET]Must have built a WorkShop in all Cities, City must have at least an improvement of [ICON_RES_IRON] Iron.
+				[NEWLINE][NEWLINE][ICON_BULLET]City must have at least an improvement of [ICON_RES_IRON] Iron, Must have built a WorkShop in all Cities before discovering Industrialization.
 				[NEWLINE][ICON_BULLET]Must be built in the Medium City Cities. The cost goes up the more cities there are in the empire.
 			</Text>
 		</Replace>
