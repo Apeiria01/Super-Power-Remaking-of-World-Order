@@ -1414,7 +1414,7 @@ function TipHandler(control)
 			end
 
 			-- if we can't upgrade due to stacking
-			if (pPlot:GetNumFriendlyUnitsOfType(unit) > 1) then
+			if (pPlot:GetNumFriendlyUnitsOfType(unit) > 2) then
 				-- Add spacing for all entries after the first
 				if (bFirstEntry) then
 					bFirstEntry = false;
@@ -1424,6 +1424,17 @@ function TipHandler(control)
 
 				strDisabledString = strDisabledString .. Locale.ConvertTextKey("TXT_KEY_UPGRADE_HELP_DISABLED_STACKING");
 
+			end
+
+			if (pActivePlayer:IsLackingTroops()) then
+				-- Add spacing for all entries after the first
+				if (bFirstEntry) then
+					bFirstEntry = false;
+				elseif (not bFirstEntry) then
+					strDisabledString = strDisabledString .. "[NEWLINE][NEWLINE]";
+				end
+
+				strDisabledString = strDisabledString .. Locale.ConvertTextKey("TXT_KEY_NO_ACTION_LACKING_TROOPS");
 			end
 
 			strDisabledString = "[COLOR_WARNING_TEXT]" .. strDisabledString .. "[ENDCOLOR]";
