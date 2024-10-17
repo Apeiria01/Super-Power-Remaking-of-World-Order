@@ -32,7 +32,10 @@
 			<Set Value="900"/>
 		</Update>-->
 
-		
+		<Update>
+			<Where Name="BARBARIAN_CITY_SPAWN_PROBABLITY"/>
+			<Set Value="50"/>
+		</Update>
 		
 		<Update>
 			<Where Name="RELIGION_BASE_CHANCE_PROPHET_SPAWN"/>
