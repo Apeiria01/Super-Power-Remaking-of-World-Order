@@ -4012,7 +4012,7 @@
 		<Update>
 			<Where Tag="TXT_KEY_BUILDING_TOURIST_CENTER_HELP" />
 			<Set
-				Text="National Wonder. Requires a Hotel in all cities. [NEWLINE][NEWLINE]100% of the [ICON_TOURISM] Culture of Wonders and Improvements is added to the [ICON_TOURISM] Tourism output of the city.+100% [ICON_TOURISM] Tourism output for Great Works in this city. " />
+				Text="National Wonder. Requires a Hotel in all cities. [NEWLINE][NEWLINE]100% of the [ICON_CULTURE] Culture of Wonders and Improvements is added to the [ICON_TOURISM] Tourism output of the city.+100% [ICON_TOURISM] Tourism output for Great Works in this city. " />
 		</Update>
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_CN_TOWER_HELP" />
