@@ -2584,7 +2584,13 @@
 			<ResourceType>RESOURCE_PERFUME</ResourceType>
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>2</Yield>
-		</Row>	
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_COUNTRY_CLUB</BuildingType>
+			<ResourceType>RESOURCE_WINE</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>2</Yield>
+		</Row>
 		<Row>
 			<BuildingType>BUILDING_COUNTRY_CLUB</BuildingType>
 			<ResourceType>RESOURCE_INCENSE</ResourceType>
@@ -2630,6 +2636,12 @@
 		</Row>	
 		<Row>
 			<BuildingType>BUILDING_COUNTRY_CLUB</BuildingType>
+			<ResourceType>RESOURCE_WINE</ResourceType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>1</Yield>
+		</Row>	
+		<Row>
+			<BuildingType>BUILDING_COUNTRY_CLUB</BuildingType>
 			<ResourceType>RESOURCE_INCENSE</ResourceType>
 			<YieldType>YIELD_CULTURE</YieldType>
 			<Yield>1</Yield>
@@ -2679,6 +2691,12 @@
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_BYZANTIUM_RESORT</BuildingType>
+			<ResourceType>RESOURCE_WINE</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_BYZANTIUM_RESORT</BuildingType>
 			<ResourceType>RESOURCE_INCENSE</ResourceType>
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>2</Yield>
@@ -2717,6 +2735,12 @@
 		<Row>
 			<BuildingType>BUILDING_BYZANTIUM_RESORT</BuildingType>
 			<ResourceType>RESOURCE_PERFUME</ResourceType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_BYZANTIUM_RESORT</BuildingType>
+			<ResourceType>RESOURCE_WINE</ResourceType>
 			<YieldType>YIELD_CULTURE</YieldType>
 			<Yield>1</Yield>
 		</Row>

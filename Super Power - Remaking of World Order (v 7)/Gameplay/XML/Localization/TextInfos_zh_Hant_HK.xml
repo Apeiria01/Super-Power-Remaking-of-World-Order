@@ -936,7 +936,10 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_OTTOMAN_EMPIRE_PORT_HELP">
 			<Text>
-				本城市海上商路的範圍+50%。[NEWLINE][NEWLINE]本城擁有的[COLOR_POSITIVE_TEXT]漁船[ENDCOLOR],[COLOR_POSITIVE_TEXT]捕撈船[ENDCOLOR]和[COLOR_POSITIVE_TEXT]環礁[ENDCOLOR]+1[ICON_GOLD]金幣產出。[NEWLINE][NEWLINE]城市必須擁有港口。
+				本城市海上商路的範圍+50%。
+				[NEWLINE][NEWLINE]本城擁有的[COLOR_POSITIVE_TEXT]漁船[ENDCOLOR]，[COLOR_POSITIVE_TEXT]捕撈船[ENDCOLOR]和[COLOR_POSITIVE_TEXT]環礁[ENDCOLOR]+1[ICON_GOLD]金幣產出。
+				[NEWLINE]本城市+7[ICON_RES_CONSUMER]商品，+15%產能[ICON_PRODUCTION]。
+				[NEWLINE][NEWLINE]城市必須擁有港口。
 			</Text>
 		</Row>
 		<Row>
@@ -1768,9 +1771,11 @@
 		</Row>
 
 		<Replace Tag="TXT_KEY_WONDER_SYDNEY_OPERA_HOUSE_HELP">
-			<Text>所有文學家、藝術家、音樂家+1[ICON_CULTURE]文化值產出，本城市+50%[ICON_TOURISM]旅遊業績產出。[NEWLINE][NEWLINE]擁有2個音樂傑作展位。必須在沿海城市建造。</Text>
+			<Text>
+				所有文學家、藝術家、音樂家+1[ICON_CULTURE]文化產出，本城市傑作+50%[ICON_TOURISM]魅力產出，50%來自於世界奇觀、自然奇觀和地面設施（風景地標、摩艾石像群、葡萄酒莊園等）的[ICON_TOURISM]文化產出增加到該城市的[ICON_TOURISM]魅力產出中。
+				[NEWLINE][NEWLINE]擁有2個音樂傑作展位。必須在沿海城市建造。
+			</Text>
 		</Replace>
-
 
 		<!-- Description tags -->
 		<Row Tag="TXT_KEY_BUILDING_PEARL_TOWER">
@@ -3472,7 +3477,7 @@
 		</Row>
 
 		<Replace Tag="TXT_KEY_BUILDING_BOMB_SHELTER_HELP">
-			<Text>減少75%由戰略轟炸造成的人口損失，50%由核攻擊造成的人口損失。[NEWLINE][NEWLINE]每3[ICON_CITIZEN]市民+1[ICON_GOLD]維護費。[NEWLINE][NEWLINE]只能在中型城市（15人口）建造。</Text>
+			<Text>減少75%由戰略轟炸以及核攻擊造成的人口損失。[NEWLINE][NEWLINE]每3[ICON_CITIZEN]市民+1[ICON_GOLD]維護費。[NEWLINE][NEWLINE]只能在中型城市（15人口）建造。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_BUILDING_HOSPITAL_HELP">
@@ -3532,7 +3537,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_VENICE_GRAND_CANAL_HELP</Tag>
-			<Text>本城市+25%[ICON_PRODUCTION]生產力。[NEWLINE][NEWLINE]每5[ICON_CITIZEN]市民+1[ICON_GOLD]金幣產出。[NEWLINE][NEWLINE]本城市所有沿河地塊+1[ICON_PRODUCTION]生產力+1[ICON_CULTURE]文化值。[NEWLINE][NEWLINE]只能在中型城市（15人口）建造。
+			<Text>本城市+25%[ICON_PRODUCTION]生產力。[NEWLINE][NEWLINE]每5[ICON_CITIZEN]市民+1[ICON_GOLD]金幣產出。[NEWLINE][NEWLINE]本城市所有沿河地塊+1[ICON_PRODUCTION]生產力+1[ICON_CULTURE]文化值。[NEWLINE][NEWLINE]只能在大型城市（26人口）建造。
 			</Text>
 		</Row>
 
@@ -3773,7 +3778,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_KOREAN_ENTERTAINMENT_HELP</Tag>
-			<Text>本城+33%[ICON_CULTURE]文化值產出。[NEWLINE]提供全域[ICON_HAPPINESS_1]幸福度![NEWLINE]每一座韓國媒體產業公司的建成，都會城市附近出現一個大音樂家。[NEWLINE][NEWLINE]只能在巨型城市（60人口）建造。
+			<Text>本城+33%[ICON_CULTURE]文化值產出。[NEWLINE]提供全域[ICON_HAPPINESS_1]幸福度![NEWLINE]每一座韓國媒體產業公司的建成，城市附近都會出現一個大音樂家。[NEWLINE][NEWLINE]只能在巨型城市（60人口）建造。
 			</Text>
 		</Row>
 		<Row>
@@ -3885,7 +3890,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_INTERNATIONAL_SEAPORT_HELP</Tag>
-			<Text>[NEWLINE][NEWLINE]本城市所有海濱區塊+1[ICON_GOLD]金幣+1[ICON_PRODUCTION]生產力。[NEWLINE][NEWLINE]從本城市出發的陸上和海上商路+50基礎[ICON_GOLD]金。[NEWLINE][NEWLINE]從本城市出發的海上商路增加50%距離。[NEWLINE][NEWLINE]只能在大都會（80人口）建造。</Text>
+			<Text>[NEWLINE][NEWLINE]本城市所有海洋區塊+1[ICON_GOLD]金幣+1[ICON_PRODUCTION]生產力。[NEWLINE][NEWLINE]從本城市出發的陸上和海上商路+50基礎[ICON_GOLD]金。[NEWLINE][NEWLINE]從本城市出發的海上商路增加50%距離。[NEWLINE][NEWLINE]只能在大都會（80人口）建造。</Text>
 		</Row>
 
 		<Row>

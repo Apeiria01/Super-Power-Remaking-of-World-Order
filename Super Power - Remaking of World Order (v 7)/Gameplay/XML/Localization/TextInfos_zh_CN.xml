@@ -966,7 +966,10 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_OTTOMAN_EMPIRE_PORT_HELP">
 			<Text>
-				本城市海上商路的范围+50%。[NEWLINE][NEWLINE]本城拥有的[COLOR_POSITIVE_TEXT]渔船[ENDCOLOR],[COLOR_POSITIVE_TEXT]捕捞船[ENDCOLOR]和[COLOR_POSITIVE_TEXT]环礁[ENDCOLOR]+1[ICON_GOLD]金钱产出。[NEWLINE][NEWLINE]城市必须拥有港口。
+				本城市海上商路的范围+50%。
+				[NEWLINE][NEWLINE]本城拥有的[COLOR_POSITIVE_TEXT]渔船[ENDCOLOR]，[COLOR_POSITIVE_TEXT]捕捞船[ENDCOLOR]和[COLOR_POSITIVE_TEXT]环礁[ENDCOLOR]+1[ICON_GOLD]金钱产出。
+				[NEWLINE]本城市+7[ICON_RES_CONSUMER]商品，+15%产能[ICON_PRODUCTION]。
+				[NEWLINE][NEWLINE]城市必须拥有港口。
 			</Text>
 		</Row>
 		<Row>
@@ -1323,7 +1326,7 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_JAPANESE_TENSHU_HELP</Tag>
 			<Text>
-				本城市组建军事单位时+15%[ICON_PRODUCTION]产能累积。[NEWLINE][NEWLINE]本城市所有海上设施和战略资源+1[ICON_PRODUCTION]产能。[NEWLINE][NEWLINE]该建筑不会过期。[NEWLINE][NEWLINE]研发互联网科技后+2[ICON_TOURISM]魅力产出。
+				本城市组建军事单位时+15%[ICON_PRODUCTION]产能累积。[NEWLINE][NEWLINE]本城市所有海上设施和战略资源+1[ICON_PRODUCTION]产能。[NEWLINE][NEWLINE]该建筑不会过期。[NEWLINE][NEWLINE]研发因特网科技后+2[ICON_TOURISM]魅力产出。
 			</Text>
 		</Row>
 
@@ -1812,9 +1815,11 @@
 		</Row>
 
 		<Replace Tag="TXT_KEY_WONDER_SYDNEY_OPERA_HOUSE_HELP">
-			<Text>所有文学家、艺术家、音乐家+1[ICON_CULTURE]文化产出，本城市+50%[ICON_TOURISM]魅力产出。[NEWLINE][NEWLINE]拥有2个音乐杰作展位。必须在沿海城市建造。</Text>
+			<Text>
+				所有文学家、艺术家、音乐家+1[ICON_CULTURE]文化产出，本城市杰作+50%[ICON_TOURISM]魅力产出，50%来自于世界奇观、自然奇观和地面设施（风景地标、摩艾石像群、葡萄酒庄园等）的[ICON_TOURISM]文化产出增加到该城市的[ICON_TOURISM]魅力产出中。
+				[NEWLINE][NEWLINE]拥有2个音乐杰作展位。必须在沿海城市建造。
+			</Text>
 		</Replace>
-
 
 		<!-- Description tags -->
 		<Row Tag="TXT_KEY_BUILDING_PEARL_TOWER">
@@ -3275,7 +3280,7 @@
 				[NEWLINE][ICON_BULLET]只能在小型城市（6人口）建造，中型城市需要有引水渠或自来水系统才能继续增长人口。
 				[NEWLINE][ICON_BULLET]每5[ICON_CITIZEN]人口+1[ICON_GOLD]维护费。
 				[NEWLINE][ICON_BULLET]研发城市化科技后，该建筑[COLOR_NEGATIVE_TEXT]过期[ENDCOLOR]（不再提供产出且不能建造）。
-				[NEWLINE][ICON_BULLET]研发互联网科技后+2[ICON_TOURISM]魅力产出。
+				[NEWLINE][ICON_BULLET]研发因特网科技后+2[ICON_TOURISM]魅力产出。
 			</Text>
 		</Replace>
 
@@ -3539,7 +3544,7 @@
 		</Row>
 
 		<Replace Tag="TXT_KEY_BUILDING_BOMB_SHELTER_HELP">
-			<Text>减少75%由战略轰炸造成的人口损失，50%由核攻击造成的人口损失。[NEWLINE][NEWLINE]每3[ICON_CITIZEN]市民+1[ICON_GOLD]维护费。[NEWLINE][NEWLINE]只能在中型城市（15人口）建造。</Text>
+			<Text>减少75%由战略轰炸以及核攻击造成的人口损失。[NEWLINE][NEWLINE]每3[ICON_CITIZEN]市民+1[ICON_GOLD]维护费。[NEWLINE][NEWLINE]只能在中型城市（15人口）建造。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_BUILDING_HOSPITAL_HELP">
@@ -3558,7 +3563,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_STAGECOACH_HELP</Tag>
-			<Text>本城市+25%[ICON_PRODUCTION]产能。[NEWLINE][NEWLINE]每5[ICON_CITIZEN]市民+1[ICON_GOLD]金钱产出。[NEWLINE][NEWLINE]只能在大型城市（26人口）建造。[NEWLINE][NEWLINE]研发内燃机后该建筑[COLOR_NEGATIVE_TEXT]过期[ENDCOLOR]（不再提供产出且不能建造）。[NEWLINE][NEWLINE]研发互联网科技后+2[ICON_TOURISM]魅力产出。</Text>
+			<Text>本城市+25%[ICON_PRODUCTION]产能。[NEWLINE][NEWLINE]每5[ICON_CITIZEN]市民+1[ICON_GOLD]金钱产出。[NEWLINE][NEWLINE]只能在大型城市（26人口）建造。[NEWLINE][NEWLINE]研发内燃机后该建筑[COLOR_NEGATIVE_TEXT]过期[ENDCOLOR]（不再提供产出且不能建造）。[NEWLINE][NEWLINE]研发因特网科技后+2[ICON_TOURISM]魅力产出。</Text>
 		</Row>
 
 		<Row>
@@ -3604,7 +3609,7 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_VENICE_GRAND_CANAL_HELP</Tag>
 			<Text>
-				本城市+25%[ICON_PRODUCTION]产能。[NEWLINE][NEWLINE]每5[ICON_CITIZEN]市民+1[ICON_GOLD]金钱产出。[NEWLINE][NEWLINE]本城市所有沿河地块+1[ICON_PRODUCTION]产能+1[ICON_CULTURE]文化。[NEWLINE][NEWLINE]只能在中型城市（15人口）建造。
+				本城市+25%[ICON_PRODUCTION]产能。[NEWLINE][NEWLINE]每5[ICON_CITIZEN]市民+1[ICON_GOLD]金钱产出。[NEWLINE][NEWLINE]本城市所有沿河地块+1[ICON_PRODUCTION]产能+1[ICON_CULTURE]文化。[NEWLINE][NEWLINE]只能在大型城市（26人口）建造。
 			</Text>
 		</Row>
 
@@ -3854,7 +3859,7 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_KOREAN_ENTERTAINMENT_HELP</Tag>
 			<Text>
-				本城+33%[ICON_CULTURE]文化产出。[NEWLINE]提供全局[ICON_HAPPINESS_1]快乐![NEWLINE]每一座韩国媒体产业公司的建成，都会城市附近出现一个大音乐家。[NEWLINE][NEWLINE]只能在巨型城市（60人口）建造。
+				本城+33%[ICON_CULTURE]文化产出。[NEWLINE]提供全局[ICON_HAPPINESS_1]快乐![NEWLINE]每一座韩国媒体产业公司的建成，城市附近都会出现一个大音乐家。[NEWLINE][NEWLINE]只能在巨型城市（60人口）建造。
 			</Text>
 		</Row>
 		<Row>
@@ -3969,7 +3974,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_INTERNATIONAL_SEAPORT_HELP</Tag>
-			<Text>[NEWLINE][NEWLINE]本城市所有海滨区块+1[ICON_GOLD]金钱+1[ICON_PRODUCTION]产能。[NEWLINE][NEWLINE]从本城市出发的陆上和海上商路+50基础[ICON_GOLD]金。[NEWLINE][NEWLINE]从本城市出发的海上商路增加50%距离。[NEWLINE][NEWLINE]只能在大都会（80人口）建造。</Text>
+			<Text>[NEWLINE][NEWLINE]本城市所有海洋区块+1[ICON_GOLD]金钱+1[ICON_PRODUCTION]产能。[NEWLINE][NEWLINE]从本城市出发的陆上和海上商路+50基础[ICON_GOLD]金。[NEWLINE][NEWLINE]从本城市出发的海上商路增加50%距离。[NEWLINE][NEWLINE]只能在大都会（80人口）建造。</Text>
 		</Row>
 
 		<Row>
@@ -16415,6 +16420,10 @@
 				[ICON_BULLET]这项指令将移走该己方城市中的其余宗教。宗教裁判官将被消耗掉。
 				[NEWLINE][ICON_BULLET]城市将进入一定回合的审判狂热状态，该状态下城市[COLOR_NEGATIVE_TEXT]无法被传教[ENDCOLOR]（基础回合数为城市[ICON_CITIZEN]人口的5%）。
 			</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_PLOTROLL_OCEAN">
+			<Text>海洋</Text>
 		</Replace>
 	</Language_zh_CN>
 </GameData>

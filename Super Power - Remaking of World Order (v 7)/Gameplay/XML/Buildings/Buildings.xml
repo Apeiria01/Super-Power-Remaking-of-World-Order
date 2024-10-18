@@ -1873,6 +1873,7 @@
 			<BuildingClass>BUILDINGCLASS_SHRINE</BuildingClass>
 			<FreeStartEra>ERA_MEDIEVAL</FreeStartEra>
 			<Cost>20</Cost>
+			<GoldMaintenance>1</GoldMaintenance>
 			<Description>TXT_KEY_BUILDING_MAYA_PYRAMID</Description>
 			<Civilopedia>TXT_KEY_CIV5_BUILDINGS_MAYA_PYRAMID_TEXT</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
@@ -1888,6 +1889,7 @@
 			<BuildingClass>BUILDINGCLASS_SHRINE</BuildingClass>
 			<FreeStartEra>ERA_MEDIEVAL</FreeStartEra>
 			<Cost>20</Cost>
+			<GoldMaintenance>1</GoldMaintenance>
 			<!--<Help>TXT_KEY_BUILDING_CANDI_HELP</Help>-->
 			<Description>TXT_KEY_BUILDING_CANDI_DESC</Description>
 			<Civilopedia>TXT_KEY_CIV5_BUILDINGS_CANDI_TEXT</Civilopedia>
@@ -2099,7 +2101,7 @@
 			<IconAtlas>BW_ATLAS_1</IconAtlas>
 			<NeverCapture>true</NeverCapture>
 			<PortraitIndex>32</PortraitIndex>
-			<EnhancedYieldTech>TECH_MASS_MEDIA</EnhancedYieldTech>
+			<EnhancedYieldTech>TECH_INTERNET</EnhancedYieldTech>
 			<TechEnhancedTourism>2</TechEnhancedTourism>
 		</Row>
 		<Row>
@@ -2166,7 +2168,7 @@
 			<DisplayPosition>1</DisplayPosition>
 			<NeverCapture>true</NeverCapture>
 			<PortraitIndex>33</PortraitIndex>
-			<EnhancedYieldTech>TECH_MASS_MEDIA</EnhancedYieldTech>
+			<EnhancedYieldTech>TECH_INTERNET</EnhancedYieldTech>
 			<TechEnhancedTourism>2</TechEnhancedTourism>
 		</Row>
 
@@ -2191,7 +2193,7 @@
 			<NeverCapture>true</NeverCapture>
 			<IconAtlas>SPWondersUB_ATLAS</IconAtlas>
 			<PortraitIndex>30</PortraitIndex>
-			<EnhancedYieldTech>TECH_MASS_MEDIA</EnhancedYieldTech>
+			<EnhancedYieldTech>TECH_INTERNET</EnhancedYieldTech>
 			<TechEnhancedTourism>2</TechEnhancedTourism>
 			<MilitaryProductionModifier>15</MilitaryProductionModifier>
 		</Row>
