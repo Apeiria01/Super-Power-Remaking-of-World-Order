@@ -624,6 +624,8 @@
 			<IconAtlas>SPWondersUB_ATLAS</IconAtlas>
 			<PortraitIndex>54</PortraitIndex>
 			<NumTradeRouteBonus>1</NumTradeRouteBonus>
+			<TradeRouteRecipientBonus>6</TradeRouteRecipientBonus>
+			<TradeRouteTargetBonus>4</TradeRouteTargetBonus>
 		</Row>
 		<Row>
 			<Type>BUILDING_NATIONAL_FINANCE</Type>
