@@ -1490,12 +1490,12 @@
 
 		<Update>
 			<Where Tag="TXT_KEY_BUILDING_TOURIST_CENTER_HELP" />
-			<Set Text="国家奇观，所有城市都需要有旅馆。文明的城市数量越多建造成本越高。[NEWLINE][NEWLINE]100%来自于世界奇观、自然奇观和地面设施（风景地标、摩艾石像群、葡萄酒庄园等）的[ICON_TOURISM]文化产出增加到该城市的[ICON_TOURISM]魅力产出中。来自杰作的[ICON_TOURISM]魅力产出+100%。" />
+			<Set Text="国家奇观，所有城市都需要有旅馆。文明的城市数量越多建造成本越高。[NEWLINE][NEWLINE]100%来自于世界奇观、自然奇观和地面设施（风景地标、摩艾石像群、葡萄酒庄园等）的[ICON_CULTURE]文化产出增加到该城市的[ICON_TOURISM]魅力产出中。来自杰作的[ICON_TOURISM]魅力产出+100%。" />
 		</Update>
 
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_CN_TOWER_HELP" />
-			<Set Text="所有城市赠送一座广播塔，每座广播塔+3[ICON_GOLD]金钱，+2[ICON_CULTURE]文化，+1[ICON_HAPPINESS_1]笑脸。[NEWLINE]100%来自于世界奇观、自然奇观和地面设施（风景地标、摩艾石像群、葡萄酒庄园等）的[ICON_TOURISM]文化产出增加到该城市的[ICON_TOURISM]魅力产出中。杰作产出的[ICON_TOURISM]魅力+100%。" />
+			<Set Text="所有城市赠送一座广播塔，每座广播塔+3[ICON_GOLD]金钱，+2[ICON_CULTURE]文化，+1[ICON_HAPPINESS_1]笑脸。[NEWLINE]100%来自于世界奇观、自然奇观和地面设施（风景地标、摩艾石像群、葡萄酒庄园等）的[ICON_CULTURE]文化产出增加到该城市的[ICON_TOURISM]魅力产出中。杰作产出的[ICON_TOURISM]魅力+100%。" />
 		</Update>
 
 		<Update>
@@ -1816,7 +1816,7 @@
 
 		<Replace Tag="TXT_KEY_WONDER_SYDNEY_OPERA_HOUSE_HELP">
 			<Text>
-				所有文学家、艺术家、音乐家+1[ICON_CULTURE]文化产出，本城市杰作+50%[ICON_TOURISM]魅力产出，50%来自于世界奇观、自然奇观和地面设施（风景地标、摩艾石像群、葡萄酒庄园等）的[ICON_TOURISM]文化产出增加到该城市的[ICON_TOURISM]魅力产出中。
+				所有文学家、艺术家、音乐家+1[ICON_CULTURE]文化产出，本城市杰作+50%[ICON_TOURISM]魅力产出，50%来自于世界奇观、自然奇观和地面设施（风景地标、摩艾石像群、葡萄酒庄园等）的[ICON_CULTURE]文化产出增加到该城市的[ICON_TOURISM]魅力产出中。
 				[NEWLINE][NEWLINE]拥有2个音乐杰作展位。必须在沿海城市建造。
 			</Text>
 		</Replace>
@@ -2177,7 +2177,7 @@
 		<Row Tag="TXT_KEY_BUILDING_ETHIOPIA_ROCKHEWN_HELP">
 			<Text>
 				免费获得一项政策。[NEWLINE][NEWLINE]所有城市+20%[ICON_CULTURE]文化产出。
-				[NEWLINE]城市50%的地块和奇观文化产出转化为[ICON_TOURISM]魅力产出，且杰作[ICON_TOURISM]魅力产出+50%。
+				[NEWLINE]城市50%的地块和奇观[ICON_CULTURE]文化产出转化为[ICON_TOURISM]魅力产出，且杰作[ICON_TOURISM]魅力产出+50%。
 				[NEWLINE][NEWLINE]必须在文明的所有城市中建造画廊。建造价格随城市数量增加。
 			</Text>
 		</Row>
@@ -3682,7 +3682,7 @@
 			<Text>[ICON_TOURISM]旅馆</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_HOTEL_HELP">
-			<Text>本城市所有自然奇观、环礁和绿洲+4[ICON_GOLD]金钱+4[ICON_CULTURE]文化。[NEWLINE][NEWLINE]城市50%的地块和奇观文化产出转化为[ICON_TOURISM]魅力产出，且杰作[ICON_TOURISM]魅力产出+50%。[NEWLINE][NEWLINE]只能在大型城市（26人口）建造。</Text>
+			<Text>本城市所有自然奇观、环礁和绿洲+4[ICON_GOLD]金钱+4[ICON_CULTURE]文化。[NEWLINE][NEWLINE]城市50%的地块和奇观[ICON_CULTURE]文化产出转化为[ICON_TOURISM]魅力产出，且杰作[ICON_TOURISM]魅力产出+50%。[NEWLINE][NEWLINE]只能在大型城市（26人口）建造。</Text>
 		</Replace>
 
 		<Row>
@@ -3696,7 +3696,7 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_POLYNESIA_HAWAIIAN_HOTEL_HELP</Tag>
 			<Text>
-				本城市所有自然奇观、环礁和绿洲+4[ICON_GOLD]金钱+4[ICON_CULTURE]文化。[NEWLINE][NEWLINE]城市100%的地块和奇观文化产出转化为[ICON_TOURISM]魅力产出，且杰作[ICON_TOURISM]魅力产出+100%。
+				本城市所有自然奇观、环礁和绿洲+4[ICON_GOLD]金钱+4[ICON_CULTURE]文化。[NEWLINE][NEWLINE]城市100%的地块和奇观[ICON_CULTURE]文化产出转化为[ICON_TOURISM]魅力产出，且杰作[ICON_TOURISM]魅力产出+100%。
 			</Text>
 		</Row>
 
@@ -3704,7 +3704,7 @@
 			<Text>[ICON_TOURISM]机场</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_AIRPORT_HELP">
-			<Text>允许从这个城市空运单位。[NEWLINE][NEWLINE]从本城市出发的陆上和海上商路+5基础[ICON_GOLD]金。[NEWLINE][NEWLINE]城市可容纳的空军单位数量增加4。[NEWLINE][NEWLINE]城市50%的地块和奇观文化产出转化为[ICON_TOURISM]魅力产出，且杰作[ICON_TOURISM]魅力产出+50%。[NEWLINE][NEWLINE]只能在特大城市（40人口）建造。</Text>
+			<Text>允许从这个城市空运单位。[NEWLINE][NEWLINE]从本城市出发的陆上和海上商路+5基础[ICON_GOLD]金。[NEWLINE][NEWLINE]城市可容纳的空军单位数量增加4。[NEWLINE][NEWLINE]城市50%的地块和奇观[ICON_CULTURE]文化产出转化为[ICON_TOURISM]魅力产出，且杰作[ICON_TOURISM]魅力产出+50%。[NEWLINE][NEWLINE]只能在特大城市（40人口）建造。</Text>
 		</Replace>
 
 		<Row>
@@ -3719,7 +3719,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_INDONESIA_AIRPORT_HELP</Tag>
-			<Text>允许从这个城市空运单位。[NEWLINE][NEWLINE]从本城市出发的陆上和海上商路+20基础[ICON_GOLD]金。[NEWLINE][NEWLINE]城市可容纳的空军单位数量增加4。[NEWLINE][NEWLINE]城市50%的地块和奇观文化产出转化为[ICON_TOURISM]魅力产出，且杰作[ICON_TOURISM]魅力产出+50%。[NEWLINE][NEWLINE]每一座群岛机场都能使全地图与印尼见过面的城邦一次性提高10%[ICON_INFLUENCE]关系。[NEWLINE][NEWLINE]群岛机场不需要维护费,建造无城市人口限制。</Text>
+			<Text>允许从这个城市空运单位。[NEWLINE][NEWLINE]从本城市出发的陆上和海上商路+20基础[ICON_GOLD]金。[NEWLINE][NEWLINE]城市可容纳的空军单位数量增加4。[NEWLINE][NEWLINE]城市50%的地块和奇观[ICON_CULTURE]文化产出转化为[ICON_TOURISM]魅力产出，且杰作[ICON_TOURISM]魅力产出+50%。[NEWLINE][NEWLINE]每一座群岛机场都能使全地图与印尼见过面的城邦一次性提高10%[ICON_INFLUENCE]关系。[NEWLINE][NEWLINE]群岛机场不需要维护费,建造无城市人口限制。</Text>
 		</Row>
 
 		<Row>
@@ -3961,7 +3961,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_INTERNATIONAL_AIRPORT_HELP</Tag>
-			<Text>允许从这个城市空运单位。[NEWLINE][NEWLINE]从本城市出发的陆上和海上商路+25基础[ICON_GOLD]金。[NEWLINE][NEWLINE]城市可容纳的空军单位数量增加4。[NEWLINE][NEWLINE]城市50%的地块和奇观文化产出转化为[ICON_TOURISM]魅力产出，且杰作[ICON_TOURISM]魅力产出+50%。[NEWLINE][NEWLINE]只能在大都会（80人口）建造。</Text>
+			<Text>允许从这个城市空运单位。[NEWLINE][NEWLINE]从本城市出发的陆上和海上商路+25基础[ICON_GOLD]金。[NEWLINE][NEWLINE]城市可容纳的空军单位数量增加4。[NEWLINE][NEWLINE]城市50%的地块和奇观[ICON_CULTURE]文化产出转化为[ICON_TOURISM]魅力产出，且杰作[ICON_TOURISM]魅力产出+50%。[NEWLINE][NEWLINE]只能在大都会（80人口）建造。</Text>
 		</Row>
 
 		<Row>
