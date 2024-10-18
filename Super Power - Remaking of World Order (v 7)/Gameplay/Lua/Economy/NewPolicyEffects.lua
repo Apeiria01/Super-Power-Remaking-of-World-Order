@@ -3,16 +3,12 @@
 -- Citizenship offer free Worker when new city founded
 -- ******************************************************** 
 local PolicyLiberty = GameInfo.Policies["POLICY_CITIZENSHIP"].ID
-local WorkerID = GameInfoTypes.UNIT_WORKER
+local WorkerClassID = GameInfoTypes.UNITCLASS_WORKER
 function FreeUnitNewCity(iPlayerID, iX, iY)
 	local pPlayer = Players[iPlayerID]
 	if pPlayer:HasPolicy(PolicyLiberty) then
-		--		print ("Free Policy Unit!")
-		local overrideUnit = GameInfo.Civilization_UnitClassOverrides { UnitClassType = "UNITCLASS_WORKER", CivilizationType =
-		GameInfo.Civilizations[pPlayer:GetCivilizationType()].Type } ();
-		if overrideUnit and overrideUnit.UnitType then
-			WorkerID = GameInfoTypes[overrideUnit.UnitType];
-		end
+		local WorkerID = pPlayer:GetCivUnit(WorkerClassID)
+		if WorkerID < 0 then return end
 		local NewUnit = pPlayer:InitUnit(WorkerID, iX, iY, UNITAI_WORKER)
 		NewUnit:JumpToNearestValidPlot()
 	end
