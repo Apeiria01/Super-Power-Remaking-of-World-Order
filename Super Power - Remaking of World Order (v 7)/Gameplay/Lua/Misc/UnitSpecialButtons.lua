@@ -1035,7 +1035,7 @@ EstablishCorpsButton = {
 				and not iUnit:IsHasPromotion(ArmeeID)
                 and iUnit ~= unit
 				then
-					if iUnit:IsHasPromotion(CorpsID) and not city:IsEnableCrops() then
+					if iUnit:IsHasPromotion(CorpsID) and not city:HasEnableCrops() then
                         --Use a Great Prople to Upgrade a Unit need Arsenal in this City
 						EstablishCorpsButton.ToolTip = EstablishCorpsButton.ToolTip .. Locale.ConvertTextKey("TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_1")
 						return true
@@ -1044,7 +1044,7 @@ EstablishCorpsButton = {
 			end
 		elseif unit:IsCombatUnit() then
 			if not unit:IsHasPromotion(CorpsID) then
-				if not city:IsEnableCrops() then
+				if not city:HasEnableCrops() then
                     --Combine two same type of Units in this tile into Corps need Arsenal in this City
 					EstablishCorpsButton.ToolTip = EstablishCorpsButton.ToolTip .. Locale.ConvertTextKey("TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_2")
 					return true
@@ -1053,7 +1053,7 @@ EstablishCorpsButton = {
 					return true
 				end
 			else
-				if not city:IsEnableArmee() then
+				if not city:HasEnableArmee() then
                     --Add a same type Unit in this tile into Corps to become an Armee need MilitaryBase in this City
 					EstablishCorpsButton.ToolTip = EstablishCorpsButton.ToolTip .. Locale.ConvertTextKey("TXT_KEY_SP_BTNNOTE_UNIT_ESTABLISH_CORPS_OR_ARMEE_TIP_3")
 					return true

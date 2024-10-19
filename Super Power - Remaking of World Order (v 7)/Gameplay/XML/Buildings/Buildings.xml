@@ -2298,7 +2298,7 @@
 			<NeverCapture>true</NeverCapture>
 			<PortraitIndex>9</PortraitIndex>
 			<NumCrops>2</NumCrops>
-			<EnableCrops>true</EnableCrops>
+			<EnableCrops>1</EnableCrops>
 		</Row>
 		<Row>
 			<Type>BUILDING_MILITARY_BASE</Type>
@@ -2323,7 +2323,7 @@
 			<PortraitIndex>10</PortraitIndex>
 			<NumCrops>2</NumCrops>
 			<NumArmee>2</NumArmee>
-			<EnableArmee>true</EnableArmee>
+			<EnableArmee>1</EnableArmee>
 		</Row>
 
 		
