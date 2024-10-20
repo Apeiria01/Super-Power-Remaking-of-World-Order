@@ -16200,10 +16200,10 @@
 			<Text>本城接收國際移民不受城市規模影響</Text>
 		</Row>
 		<Row Tag="TXT_KEY_ENABLE_CROPS">
-			<Text>允许城市建立军团</Text>
+			<Text>允许城市建立[ICON_PROMOTION_ELITE]军团</Text>
 		</Row>
 		<Row Tag="TXT_KEY_ENABLE_ARMEE">
-			<Text>允许城市建立集团军</Text>
+			<Text>允许城市建立[ICON_PROMOTION_GROUP]集团军</Text>
 		</Row>
 		<Replace Tag="TXT_KEY_CIV5_IMPROVEMENTS_POLDER_HELP">
 			<Text>圩田只能建立在沖積平原、沼澤，或者臨近3塊以上水域的平地上。圩田額外增加[ICON_FOOD]食物和[ICON_PRODUCTION]產能產出。</Text>
