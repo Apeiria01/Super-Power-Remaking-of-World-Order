@@ -16388,6 +16388,12 @@
 		<Row Tag="TXT_KEY_IMMIGRANT_ALL_SCALE">
 			<Text>本城接收国际移民不受城市规模影响</Text>
 		</Row>
+		<Row Tag="TXT_KEY_ENABLE_CROPS">
+			<Text>允许城市建立军团</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ENABLE_ARMEE">
+			<Text>允许城市建立集团军</Text>
+		</Row>
 		<Replace Tag="TXT_KEY_CIV5_IMPROVEMENTS_POLDER_HELP">
 			<Text>圩田只能建立在冲积平原、沼泽，或者临近3块以上水域的平地上。圩田额外增加[ICON_FOOD]食物和[ICON_PRODUCTION]产能产出。</Text>
 		</Replace>

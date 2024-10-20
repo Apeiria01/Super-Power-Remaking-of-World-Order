@@ -18052,6 +18052,12 @@
 		<Row Tag="TXT_KEY_IMMIGRANT_ALL_SCALE">
 			<Text>Immigrants enter this City with all City Scales</Text>
 		</Row>
+		<Row Tag="TXT_KEY_ENABLE_CROPS">
+			<Text>Enable establish Corps in this City</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ENABLE_ARMEE">
+			<Text>Enable establish Armee in this City</Text>
+		</Row>
 		<Replace Tag="TXT_KEY_CIV5_IMPROVEMENTS_POLDER_HELP">
 			<Text>A Polder can only be built on Flood Plains, Marsh or a Flat land near at least three Water plots. It provide extra [ICON_FOOD] Food and [ICON_PRODUCTION] Production.</Text>
 		</Replace>
