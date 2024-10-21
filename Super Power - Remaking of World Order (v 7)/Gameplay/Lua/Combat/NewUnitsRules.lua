@@ -209,11 +209,8 @@ function OnCorpsArmeeSP(iPlayerID, iUnitID)
 		local eUnitList = {};
 		local pCUnit = nil;
 		for pEUnit in pPlayer:Units() do
-			if pEUnit and pEUnit:GetDomainType() == pUnit:GetDomainType()
+			if pEUnit:IsCanBeEstablishedCorps()
 				and pEUnit:GetUnitCombatType() ~= GameInfoTypes.UNITCOMBAT_RECON
-				and pEUnit:IsCombatUnit() and not pEUnit:IsImmobile()
-				and not pEUnit:IsHasPromotion(ArmeeID)
-				and pEUnit:GetDomainType() == DomainTypes.DOMAIN_LAND -- SP8.0: Corps & Armee only for land units
 			then
 				table.insert(eUnitList, pEUnit);
 			end
@@ -240,9 +237,6 @@ function OnCorpsArmeeSP(iPlayerID, iUnitID)
 	local iType              = pUnit:GetUnitType();
 	local class              = pUnit:GetUnitClassType();
 
-	local iArsenalClass      = GameInfoTypes["BUILDINGCLASS_ARSENAL"];
-	local iMilitaryBaseClass = GameInfoTypes["BUILDINGCLASS_MILITARY_BASE"];
-
 	-- Establish Corps & Armee for AI
 	local DoCombine          = false;
 	local otherUnit          = nil;
@@ -260,7 +254,7 @@ function OnCorpsArmeeSP(iPlayerID, iUnitID)
 	end
 
 	if pPlayer:GetUnitClassCount(class) > 5
-	and pPlayer:GetBuildingClassCount(iArsenalClass) > 0
+	and pPlayer:GetNumCropsTotal() > 0
 	and not pPlayer:IsHuman() 
 	and DoCombine 
 	then
@@ -272,7 +266,7 @@ function OnCorpsArmeeSP(iPlayerID, iUnitID)
 			or unit:GetDomainType() ~= DomainTypes.DOMAIN_LAND 
 			then
 				--jump
-			elseif unit:IsHasPromotion(CorpsID) and pPlayer:GetBuildingClassCount(iMilitaryBaseClass) > 0 then
+			elseif unit:IsHasPromotion(CorpsID) and pPlayer:GetNumArmeeTotal() > 0 then
 				CorpsUnit = unit;
 			else
 				otherUnit = unit;
