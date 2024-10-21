@@ -61,7 +61,7 @@ LuaEvents.UnitPanelActionAddin.Add(OnUnitPanelActionAddin)
 
 function OnUnitPanelActionRemove(action)
 	for key, value in pairs(addinActions) do
-		if value == action then
+		if value.Name == action.Name then
 			table.remove(addinActions, key)
 		end
 	end
@@ -76,7 +76,7 @@ LuaEvents.UnitPanelBuildAddin.Add(OnUnitPanelBuildAddin)
 
 function OnUnitPanelBuildRemove(build)
 	for key, value in pairs(addinBuilds) do
-		if build == action then
+		if value.Name == build.Name then
 			table.remove(addinBuilds, key)
 		end
 	end
