@@ -1549,6 +1549,14 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
 			end
 
+			--Range Suppression Bouns
+			iModifier = pMyUnit:GetUnitRangeSuppressModifier(pTheirUnit);
+			if (iModifier ~= 0) then
+				controlTable = g_MyCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_RANGE_SUPPRESS");
+				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
+			end
+
 			--Same Continent Bonus
 			iModifier = pMyUnit:GetOnCapitalLandAttackMod();
 			if pMyPlayer:GetCapitalCity()~=nil then
@@ -1995,6 +2003,14 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 					iModifier = pTheirUnit:GetNumOriginalCapitalDefenseMod() * inum
 					controlTable = g_TheirCombatDataIM:GetInstance();
 					controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_PLAYER_ORIGINAL_CAPITAL_BONUS_SP");
+					controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
+				end
+
+				--Range Suppression Bouns
+				iModifier = pTheirUnit:GetUnitRangeSuppressModifier(pMyUnit);
+				if (iModifier ~= 0) then
+					controlTable = g_TheirCombatDataIM:GetInstance();		
+					controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_RANGE_SUPPRESS");
 					controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
 				end
 

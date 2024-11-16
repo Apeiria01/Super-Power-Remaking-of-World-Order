@@ -17352,6 +17352,9 @@
 		<Row Tag="TXT_KEY_EUPANEL_BONUS_HEIGHT">
 			<Text>Height Bouns</Text>
 		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_RANGE_SUPPRESS">
+			<Text>Range Suppression Bouns</Text>
+		</Row>
 		<Row Tag="TXT_KEY_EUPANEL_BONUS_MELEE">
 			<Text>Melee Attack Bouns</Text>
 		</Row>

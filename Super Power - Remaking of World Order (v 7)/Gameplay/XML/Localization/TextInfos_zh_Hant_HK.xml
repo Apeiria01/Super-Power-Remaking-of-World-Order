@@ -15492,6 +15492,9 @@
 		<Row Tag="TXT_KEY_EUPANEL_BONUS_HEIGHT">
 			<Text>高度加成</Text>
 		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_RANGE_SUPPRESS">
+			<Text>射程壓制</Text>
+		</Row>
 		<Row Tag="TXT_KEY_EUPANEL_BONUS_MELEE">
 			<Text>近戰攻擊加成</Text>
 		</Row>
