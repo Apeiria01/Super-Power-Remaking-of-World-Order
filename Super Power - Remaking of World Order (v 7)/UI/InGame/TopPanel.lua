@@ -125,13 +125,9 @@ function UpdateData()
 				strGoldenAgeStr = Locale.ConvertTextKey("TXT_KEY_TOP_PANEL_GOLDEN_AGES_OFF");
 			else
 				if (pPlayer:GetGoldenAgeTurns() > 0) then
-					if (pPlayer:GetGoldenAgeTourismModifier() > 0) then
-						strGoldenAgeStr = string.format(Locale.ToUpper(Locale.ConvertTextKey("TXT_KEY_UNIQUE_GOLDEN_AGE_ANNOUNCE")) .. " (%i)", pPlayer:GetGoldenAgeTurns());
-						
-					--SP Chinese Pax Sinica
-					elseif pPlayer:HasTrait(GameInfoTypes["TRAIT_ART_OF_WAR"])
-					then
-						strGoldenAgeStr = string.format(Locale.ToUpper(Locale.ConvertTextKey("TXT_KEY_SP_UA_CHINA_GOLDENAGE_ANNOUNCE")) .. " (%i)", pPlayer:GetGoldenAgeTurns());	
+					strGoldenAgeStr = GameInfo.Civilizations[pPlayer:GetCivilizationType()].SpecialGAText
+					if strGoldenAgeStr then
+						strGoldenAgeStr = string.format(Locale.ToUpper(Locale.ConvertTextKey(strGoldenAgeStr)) .. " (%i)", pPlayer:GetGoldenAgeTurns());
 					else
 						strGoldenAgeStr = string.format(Locale.ToUpper(Locale.ConvertTextKey("TXT_KEY_GOLDEN_AGE_ANNOUNCE")) .. " (%i)", pPlayer:GetGoldenAgeTurns());
 					end
@@ -1039,22 +1035,15 @@ function GoldenAgeTipHandler( control )
 		end
 	
 		strText = strText .. "[NEWLINE][NEWLINE]";
+		local strGoldenAgeHelp;
+		strGoldenAgeHelp = GameInfo.Civilizations[pPlayer:GetCivilizationType()].SpecialGAHelpText
 		if (pPlayer:IsGoldenAgeCultureBonusDisabled()) then
 			strText = strText ..  Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_EFFECT_NO_CULTURE");
 		
-		---SP China Pax Sinica
-		elseif pPlayer:GetGoldenAgeTurns() > 0
-		and pPlayer:HasTrait(GameInfoTypes["TRAIT_ART_OF_WAR"])
-		then
-			strText = strText ..  Locale.ConvertTextKey("TXT_KEY_SP_UA_CHINA_GOLDENAGE_EFFECTS");
-	
+		elseif (pPlayer:GetGoldenAgeTurns() > 0 and strGoldenAgeHelp )then
+			strText = strText ..  Locale.ConvertTextKey(strGoldenAgeHelp);
 		else
 			strText = strText ..  Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_EFFECT");		
-		end
-
-		if (pPlayer:GetGoldenAgeTurns() > 0 and pPlayer:GetGoldenAgeTourismModifier() > 0) then
-			strText = strText .. "[NEWLINE][NEWLINE]";
-			strText = strText ..  Locale.ConvertTextKey("TXT_KEY_TP_CARNIVAL_EFFECT");			
 		end
 	end
 	

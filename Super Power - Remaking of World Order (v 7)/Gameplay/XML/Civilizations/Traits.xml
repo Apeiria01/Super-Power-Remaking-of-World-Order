@@ -1223,4 +1223,22 @@
 			<Yield>100</Yield>
 		</Row>
 	</Trait_SeaTradeRouteYieldTimes100>
+	<Civilizations>  
+		<Update>  
+			<Set SpecialGAText='TXT_KEY_SP_UA_CHINA_GOLDENAGE_ANNOUNCE'/>   
+			<Where Type='CIVILIZATION_CHINA'/>  
+		</Update>
+		<Update>  
+			<Set SpecialGAHelpText='TXT_KEY_SP_UA_CHINA_GOLDENAGE_EFFECTS'/>  
+			<Where Type='CIVILIZATION_CHINA'/>  
+		</Update>  
+		<Update>  
+			<Set SpecialGAHelpText='TXT_KEY_TP_CARNIVAL_EFFECT'/>
+			<Where Type='CIVILIZATION_BRAZIL'/>  
+		</Update>
+		<Update>  
+			<Set SpecialGAText='TXT_KEY_UNIQUE_GOLDEN_AGE_ANNOUNCE'/>
+			<Where Type='CIVILIZATION_BRAZIL'/>  
+		</Update>
+	</Civilizations>
 </GameData>
