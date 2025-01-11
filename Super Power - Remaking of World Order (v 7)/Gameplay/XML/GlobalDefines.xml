@@ -823,5 +823,10 @@
 			<Set Key="PROJECT_STARSHIP_PROGRAM"/>
 			<Where Name="SPACE_RACE_TRIGGER_PROJECT" />
 		</Update>
+		<Replace>	
+			<Name>PROMOTION_NEW_UNIT_CAPTURED</Name>
+			<Key>PROMOTION_NEWLYCAPTURED</Key>
+			<Table>UnitPromotions</Table>
+		</Replace>
 	</PostDefines>
 </GameData>

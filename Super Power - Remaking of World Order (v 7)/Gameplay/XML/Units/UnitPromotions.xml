@@ -499,12 +499,13 @@
 			<LostWithUpgrade>true</LostWithUpgrade>
 			<CannotBeChosen>true</CannotBeChosen>
 			<OnlyDefensive>true</OnlyDefensive>
-			<RangeChange>-10</RangeChange>
+			<RangeChange>-99</RangeChange>
 			<PortraitIndex>20</PortraitIndex>
 			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_SHARED</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_NEWLYCAPTURED</PediaEntry>
 			<RemoveAfterXTurns>1</RemoveAfterXTurns>
+			<WarCasualtiesModifier>-100</WarCasualtiesModifier>
 		</Row>
 		<Row>
 			<Type>PROMOTION_MOVEMENT_LOST_1</Type>

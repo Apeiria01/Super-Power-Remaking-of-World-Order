@@ -125,16 +125,8 @@ function UpdateData()
 				strGoldenAgeStr = Locale.ConvertTextKey("TXT_KEY_TOP_PANEL_GOLDEN_AGES_OFF");
 			else
 				if (pPlayer:GetGoldenAgeTurns() > 0) then
-					if (pPlayer:GetGoldenAgeTourismModifier() > 0) then
-						strGoldenAgeStr = string.format(Locale.ToUpper(Locale.ConvertTextKey("TXT_KEY_UNIQUE_GOLDEN_AGE_ANNOUNCE")) .. " (%i)", pPlayer:GetGoldenAgeTurns());
-						
-					--SP Chinese Pax Sinica
-					elseif pPlayer:HasTrait(GameInfoTypes["TRAIT_ART_OF_WAR"])
-					then
-						strGoldenAgeStr = string.format(Locale.ToUpper(Locale.ConvertTextKey("TXT_KEY_SP_UA_CHINA_GOLDENAGE_ANNOUNCE")) .. " (%i)", pPlayer:GetGoldenAgeTurns());	
-					else
-						strGoldenAgeStr = string.format(Locale.ToUpper(Locale.ConvertTextKey("TXT_KEY_GOLDEN_AGE_ANNOUNCE")) .. " (%i)", pPlayer:GetGoldenAgeTurns());
-					end
+					local xmlGoldenAgeStr = GameInfo.Civilizations[pPlayer:GetCivilizationType()].SpecialGAText or "TXT_KEY_GOLDEN_AGE_ANNOUNCE"
+					strGoldenAgeStr = string.format(Locale.ToUpper(Locale.ConvertTextKey(xmlGoldenAgeStr)) .. " (%i)", pPlayer:GetGoldenAgeTurns());
 				else
 					strGoldenAgeStr = string.format("%i/%i", pPlayer:GetGoldenAgeProgressMeter(), pPlayer:GetGoldenAgeProgressThreshold());
 				end
@@ -1041,20 +1033,9 @@ function GoldenAgeTipHandler( control )
 		strText = strText .. "[NEWLINE][NEWLINE]";
 		if (pPlayer:IsGoldenAgeCultureBonusDisabled()) then
 			strText = strText ..  Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_EFFECT_NO_CULTURE");
-		
-		---SP China Pax Sinica
-		elseif pPlayer:GetGoldenAgeTurns() > 0
-		and pPlayer:HasTrait(GameInfoTypes["TRAIT_ART_OF_WAR"])
-		then
-			strText = strText ..  Locale.ConvertTextKey("TXT_KEY_SP_UA_CHINA_GOLDENAGE_EFFECTS");
-	
-		else
-			strText = strText ..  Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_EFFECT");		
-		end
-
-		if (pPlayer:GetGoldenAgeTurns() > 0 and pPlayer:GetGoldenAgeTourismModifier() > 0) then
-			strText = strText .. "[NEWLINE][NEWLINE]";
-			strText = strText ..  Locale.ConvertTextKey("TXT_KEY_TP_CARNIVAL_EFFECT");			
+		elseif pPlayer:GetGoldenAgeTurns() > 0 then
+			local strGoldenAgeHelp = GameInfo.Civilizations[pPlayer:GetCivilizationType()].SpecialGAHelpText or "TXT_KEY_TP_GOLDEN_AGE_EFFECT";
+			strText = strText ..  Locale.ConvertTextKey(strGoldenAgeHelp);	
 		end
 	end
 	
