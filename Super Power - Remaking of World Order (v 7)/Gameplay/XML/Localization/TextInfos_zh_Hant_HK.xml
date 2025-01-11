@@ -13396,7 +13396,7 @@
 			<Text>
 				[ICON_BULLET]这个单位是刚刚俘获的，他保留攻击方1/4的经验，但是仅有少量HP剩余。
 				[NEWLINE][ICON_BULLET]本回合仅剩少量 [ICON_MOVES] 移动力，但是下回合恢复。
-				[NEWLINE][ICON_BULLET]本回合不能[COLOR_NEGATIVE_TEXT]攻击[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]本回合不能[COLOR_NEGATIVE_TEXT]攻击[ENDCOLOR]，陣亡不會導致本國人口損失。
 				[NEWLINE][ICON_BULLET]这一状态不能被大军事家或者提督消除，但是下回合自动去除，那时你也可以为他选择晋升。
 			</Text>
 		</Row>
@@ -16240,6 +16240,17 @@
 				[ICON_BULLET]這項指令將移走該己方城市中的其余宗教。宗教裁判官將被消耗掉。
 				[NEWLINE][ICON_BULLET]城市將進入一定回合的審判狂熱狀態，該狀態下城市[COLOR_NEGATIVE_TEXT]無法被傳教[ENDCOLOR]（基礎回合數為城市[ICON_CITIZEN]人口的5%）。
 			</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_TP_CARNIVAL_EFFECT">
+			<Text>
+				在[ICON_GOLDEN_AGE]黃金時代期間，帝國內所有可產出[ICON_GOLD]金幣的單元格都將產出額外1金幣。城市獲得+20%的[ICON_PRODUCTION]生產力，且帝國全境的[ICON_CULTURE]文化值也將增加20%。
+				[NEWLINE][NEWLINE]
+				因為您獨特的嘉年華會加成，所有文明當前旅遊業績產出+100%；您獲得大作家、大藝術家與大音樂家的速度+50%。
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CIV5_FEATURES_KILIMANJARO_HELP">
+			<Text>與其鄰接的所有單位在之後的遊戲中可獲得在丘陵的上戰鬥加成。</Text>
 		</Replace>
 	</Language_zh_Hant_HK>
 </GameData>

@@ -13571,7 +13571,7 @@
 			<Text>
 				[ICON_BULLET]这个单位是刚刚俘获的，他保留攻击方1/4的经验，但是仅有少量HP剩余。
 				[NEWLINE][ICON_BULLET]本回合仅剩少量 [ICON_MOVES] 移动力，但是下回合恢复。
-				[NEWLINE][ICON_BULLET]本回合不能[COLOR_NEGATIVE_TEXT]攻击[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]本回合不能[COLOR_NEGATIVE_TEXT]攻击[ENDCOLOR]，阵亡不会导致本国人口损失。
 				[NEWLINE][ICON_BULLET]这一状态不能被大军事家或者提督消除，但是下回合自动去除，那时你也可以为他选择晋升。
 			</Text>
 		</Row>
@@ -16433,6 +16433,17 @@
 
 		<Replace Tag="TXT_KEY_PLOTROLL_OCEAN">
 			<Text>海洋</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_TP_CARNIVAL_EFFECT">
+			<Text>
+				当处于[ICON_GOLDEN_AGE]黄金时代之中，你的国家每个至少产出1[ICON_GOLD]金钱的区块将额外产出1金钱。所有城市+20%[ICON_PRODUCTION]产能，全国范围内[ICON_CULTURE]文化产出增长20%。
+				[NEWLINE][NEWLINE]
+				由于特有的嘉年华会加成，当前你对所有文明的魅力输出+100%，并且大文学家、大美术家和大音乐家的产生速率+50%。
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CIV5_FEATURES_KILIMANJARO_HELP">
+			<Text>所有经过邻接区块的单位均获可永久晋升，该晋升为单位在丘陵作战时提供战斗力加成。</Text>
 		</Replace>
 	</Language_zh_CN>
 </GameData>

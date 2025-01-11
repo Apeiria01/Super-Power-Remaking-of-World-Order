@@ -15504,6 +15504,7 @@
 				[ICON_BULLET]This unit is Newly Captured in this turn. It inherits 1/4 of the experience from the Attacking Unit but remains few Hit Points.
 				[NEWLINE][ICON_BULLET]It has only few [ICON_MOVES] Movements left for this turn but would recover in the next turn.
 				[NEWLINE][ICON_BULLET]It cannot perform [COLOR_NEGATIVE_TEXT]Attack[ENDCOLOR] in this turn.
+				[NEWLINE][ICON_BULLET]In this turn, if this unit is destroyed, it won't be added to the casualties which will cause population loss.
 				[NEWLINE][ICON_BULLET]Great General or Admiral may not remove this debuff, but it would be removed automaticly in the next turn, when you may also chose promotions.
 			</Text>
 		</Row>
@@ -18097,6 +18098,17 @@
 
 		<Replace Tag="TXT_KEY_PLOTROLL_OCEAN">
 			<Text>Coast and Ocean</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_TP_CARNIVAL_EFFECT">
+			<Text>
+				While in a [ICON_GOLDEN_AGE] Golden Age, every tile in your empire that produces at least 1 [ICON_GOLD] Gold produces 1 extra. Cities gain +20% [ICON_PRODUCTION] Production and empire-wide [ICON_CULTURE] Culture is increased by 20%.
+				[NEWLINE][NEWLINE]
+				Because of your unique Carnival bonus, Tourism output is currently +100% with all civilizations and you are earning Great Writers, Artists, and Musicians 50% faster.
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_CIV5_FEATURES_KILIMANJARO_HELP">
+			<Text>All units that are next to it receive a combat bonus on Hills for the rest of the game.</Text>
 		</Replace>
 	</Language_en_US>
 </GameData>
