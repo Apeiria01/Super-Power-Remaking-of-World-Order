@@ -45,7 +45,7 @@ insert into PromotionCollections_AddEnemyPromotions(CollectionType, OtherCollect
 -- PROMOTION_COLLECTION_SP_FORCE/PROMOTION_COLLECTION_DESTROY_SUPPLY -> PROMOTION_COLLECTION_LOSE_SUPPLY
 insert into PromotionCollections(Type) values ('PROMOTION_COLLECTION_SP_FORCE');
 insert into PromotionCollections_Entries(CollectionType, PromotionIndex, PromotionType, TriggerRangedAttack, TriggerMeleeAttack, TriggerHPPercent, TriggerLuaHook) values
-('PROMOTION_COLLECTION_SP_FORCE', 1, 'PROMOTION_SP_FORCE_1', 1, 1, 100, 0);
+('PROMOTION_COLLECTION_SP_FORCE', 1, 'PROMOTION_SP_FORCE_1', 1, 1, 100, 1);
 insert into PromotionCollections(Type) values ('PROMOTION_COLLECTION_DESTROY_SUPPLY');
 insert into PromotionCollections_Entries(CollectionType, PromotionIndex, PromotionType, TriggerRangedAttack, TriggerMeleeAttack, TriggerHPPercent, TriggerLuaHook) values
 ('PROMOTION_COLLECTION_DESTROY_SUPPLY', 1, 'PROMOTION_DESTROY_SUPPLY_1', 1, 1, 100, 1),
@@ -79,3 +79,10 @@ insert into PromotionCollections_Entries(CollectionType, PromotionIndex, Promoti
 --Roar
 insert into PromotionCollections_Entries(CollectionType, PromotionIndex, PromotionType, TriggerRangedAttack, TriggerMeleeAttack, TriggerHPPercent, TriggerLuaHook) values
 ('PROMOTION_COLLECTION_COLLATERAL_DAMAGE', 1, 'PROMOTION_ROARING_ELEPHANT', 1, 1, 100, 1);
+
+--Air Siege I
+insert into PromotionCollections(Type) values ('PROMOTION_COLLECTION_SP_AIR_SIEGE');
+insert into PromotionCollections_Entries(CollectionType, PromotionIndex, PromotionType, TriggerRangedAttack, TriggerMeleeAttack, TriggerHPPercent, TriggerLuaHook) values
+('PROMOTION_COLLECTION_SP_AIR_SIEGE', 1, 'PROMOTION_CARRIER_FIGHTER_SIEGE_1', 1, 0, 100, 1);
+insert into PromotionCollections_AddEnemyPromotions(CollectionType, OtherCollectionType) values
+('PROMOTION_COLLECTION_SP_AIR_SIEGE', 'PROMOTION_COLLECTION_LOSE_SUPPLY');

@@ -5818,7 +5818,7 @@
 		<Replace Tag="TXT_KEY_TRAIT_VIKING_FURY">
 			<Text>
 				[ICON_BULLET]所有陸軍近戰單位和海軍近戰單位劫掠均不消耗[ICON_MOVES]移動力，並具有攻城時將對城市造成傷害的200%數值轉化為[ICON_GOLD]金錢的能力。
-				[NEWLINE][ICON_BULLET]攻占城市或攻占營寨所獲得2倍的[ICON_GOLD]金錢。
+				[NEWLINE][ICON_BULLET]攻占城市或攻占營寨獲得2倍的[ICON_GOLD]金錢。
 				[NEWLINE][ICON_BULLET]每處海上設施+1[ICON_CULTURE]文化產出。
 			</Text>
 		</Replace>
@@ -12978,16 +12978,16 @@
 		</Row>
 
 		<Replace Tag="TXT_KEY_PROMOTION_AIR_TARGETING_1_HELP">
-			<Text>轟炸城市時，對所有敵方[COLOR_POSITIVE_TEXT]駐軍[ENDCOLOR]和[COLOR_POSITIVE_TEXT]駐機[ENDCOLOR]造成20HP傷害。</Text>
+			<Text>轟炸城市時，對至多5個敵方[COLOR_POSITIVE_TEXT]駐軍[ENDCOLOR]和[COLOR_POSITIVE_TEXT]駐機[ENDCOLOR]造成20HP傷害。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_AIR_TARGETING_2_HELP">
-			<Text>轟炸城市時，對所有敵方[COLOR_POSITIVE_TEXT]駐軍[ENDCOLOR]和[COLOR_POSITIVE_TEXT]駐機[ENDCOLOR]造成40HP傷害。</Text>
+			<Text>轟炸城市時，對至多5個敵方[COLOR_POSITIVE_TEXT]駐軍[ENDCOLOR]和[COLOR_POSITIVE_TEXT]駐機[ENDCOLOR]造成40HP傷害。</Text>
 		</Replace>
 		<Row Tag="TXT_KEY_PROMOTION_AIR_TARGETING_3">
 			<Text>定位三級</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_AIR_TARGETING_3_HELP">
-			<Text>轟炸城市時，對所有敵方[COLOR_POSITIVE_TEXT]駐軍[ENDCOLOR]和[COLOR_POSITIVE_TEXT]駐機[ENDCOLOR]造成60HP傷害。</Text>
+			<Text>轟炸城市時，對至多5個敵方[COLOR_POSITIVE_TEXT]駐軍[ENDCOLOR]和[COLOR_POSITIVE_TEXT]駐機[ENDCOLOR]造成60HP傷害。</Text>
 		</Row>
 
 		<!--<Replace Tag="TXT_KEY_PROMOTION_AIR_AMBUSH_1_HELP" >
@@ -13333,7 +13333,7 @@
 			<Text>轟炸二級</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_CARRIER_FIGHTER_SIEGE_2_HELP">
-			<Text>轟炸城市時，所有駐軍和駐機受到20HP的傷害。</Text>
+			<Text>轟炸城市時，至多5個駐軍和駐機受到20HP的傷害。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_CARRIER_FIGHTER_SORTIE">
