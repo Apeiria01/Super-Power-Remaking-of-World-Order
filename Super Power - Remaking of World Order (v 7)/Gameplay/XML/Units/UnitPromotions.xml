@@ -3901,6 +3901,10 @@
 			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_AIR</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_CARRIER_FIGHTER_SIEGE_2</PediaEntry>
+			<CollateralDamageFixed>20</CollateralDamageFixed>
+			<CollateralDamagePlotUnitLimit>5</CollateralDamagePlotUnitLimit>
+			<CollateralOnlyCity>1</CollateralOnlyCity>
+			<CollateralOnlyUnit>0</CollateralOnlyUnit>
 		</Row>
 
 
@@ -4233,7 +4237,7 @@
 			<PediaType>PEDIA_AIR</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_AIR_TARGETING_1</PediaEntry>
 			<CollateralDamageFixed>20</CollateralDamageFixed>
-			<CollateralDamagePlotUnitLimit>4</CollateralDamagePlotUnitLimit>
+			<CollateralDamagePlotUnitLimit>5</CollateralDamagePlotUnitLimit>
 			<CollateralOnlyCity>1</CollateralOnlyCity>
 			<CollateralOnlyUnit>0</CollateralOnlyUnit>
 		</Row>
@@ -4249,7 +4253,7 @@
 			<PediaType>PEDIA_AIR</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_AIR_TARGETING_2</PediaEntry>
 			<CollateralDamageFixed>20</CollateralDamageFixed>
-			<CollateralDamagePlotUnitLimit>4</CollateralDamagePlotUnitLimit>
+			<CollateralDamagePlotUnitLimit>5</CollateralDamagePlotUnitLimit>
 			<CollateralOnlyCity>1</CollateralOnlyCity>
 			<CollateralOnlyUnit>0</CollateralOnlyUnit>
 		</Row>
@@ -4265,7 +4269,7 @@
 			<PediaType>PEDIA_AIR</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_AIR_TARGETING_3</PediaEntry>
 			<CollateralDamageFixed>20</CollateralDamageFixed>
-			<CollateralDamagePlotUnitLimit>4</CollateralDamagePlotUnitLimit>
+			<CollateralDamagePlotUnitLimit>5</CollateralDamagePlotUnitLimit>
 			<CollateralOnlyCity>1</CollateralOnlyCity>
 			<CollateralOnlyUnit>0</CollateralOnlyUnit>
 		</Row>

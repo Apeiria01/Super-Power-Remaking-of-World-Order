@@ -15033,19 +15033,19 @@
 			<Text>Surgical Strike I</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_AIR_TARGETING_1_HELP" >
-			<Text>When attacking a city. Cause 20 Hp Damage to all enemy [COLOR_POSITIVE_TEXT]Garrisoned Units[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Aircrafts[ENDCOLOR] inside the Target City.</Text>
+			<Text>When attacking a city. Cause 20 Hp Damage to at most 5 enemies [COLOR_POSITIVE_TEXT]Garrisoned Units[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Aircrafts[ENDCOLOR] inside the Target City.</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_AIR_TARGETING_2" >
 			<Text>Surgical Strike II</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_AIR_TARGETING_2_HELP" >
-			<Text>When attacking a city. Cause 40 Hp Damage to all enemy [COLOR_POSITIVE_TEXT]Garrisoned Units[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Aircrafts[ENDCOLOR] inside the Target City.</Text>
+			<Text>When attacking a city. Cause 40 Hp Damage to at most 5 enemies [COLOR_POSITIVE_TEXT]Garrisoned Units[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Aircrafts[ENDCOLOR] inside the Target City.</Text>
 		</Replace>
 		<Row Tag="TXT_KEY_PROMOTION_AIR_TARGETING_3">
 			<Text>Surgical Strike III</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_AIR_TARGETING_3_HELP">
-			<Text>When attacking a city. Cause 60 Hp Damage to all enemy [COLOR_POSITIVE_TEXT]Garrisoned Units[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Aircrafts[ENDCOLOR] inside the Target City.</Text>
+			<Text>When attacking a city. Cause 60 Hp Damage to at most 5 enemies [COLOR_POSITIVE_TEXT]Garrisoned Units[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Aircrafts[ENDCOLOR] inside the Target City.</Text>
 		</Row>
 
 		<!--<Replace Tag="TXT_KEY_PROMOTION_AIR_AMBUSH_1_HELP" >
@@ -15422,7 +15422,7 @@
 			<Text>Air Siege II</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_CARRIER_FIGHTER_SIEGE_2_HELP">
-			<Text>When attacking a city. Cause 20 Hp Damage to all enemy [COLOR_POSITIVE_TEXT]Garrisoned Units[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Aircrafts[ENDCOLOR] inside the Target City.</Text>
+			<Text>When attacking a city. Cause 20 Hp Damage to at most 5 enemies [COLOR_POSITIVE_TEXT]Garrisoned Units[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Aircrafts[ENDCOLOR] inside the Target City.</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_CARRIER_FIGHTER_SORTIE">

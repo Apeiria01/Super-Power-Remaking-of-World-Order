@@ -37,9 +37,10 @@ GameEvents.OnTriggerAddEnemyPromotion.Add(function(eThisPromotionType, eThisProm
         message = 0;
     end
 
+    local iActivePlayer = Game.GetActivePlayer();
     local thisUnitName = pThisUnit:GetName();
     local thatUnitName = pThatUnit:GetName();
-    if pThisPlayer:IsHuman() then
+    if iThisPlayer == iActivePlayer then
         if message == 0 then
             local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_ENEMY_SLOWED", thisUnitName, thatUnitName);
             Events.GameplayAlertMessage(text);
@@ -47,8 +48,7 @@ GameEvents.OnTriggerAddEnemyPromotion.Add(function(eThisPromotionType, eThisProm
             local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_ENEMY_STOPPED", thisUnitName, thatUnitName);
             Events.GameplayAlertMessage(text);
         end
-    end
-    if pThatPlayer:IsHuman() then
+    elseif iThatPlayer == iActivePlayer then
         if message == 0 then
             local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_US_SLOWED", thisUnitName, thatUnitName);
             Events.GameplayAlertMessage(text);
@@ -84,13 +84,13 @@ GameEvents.OnTriggerAddEnemyPromotion.Add(function(eThisPromotionType, eThisProm
         return;
     end
 
+    local iActivePlayer = Game.GetActivePlayer();
     local thisUnitName = pThisUnit:GetName();
     local thatUnitName = pThatUnit:GetName();
-    if pThisPlayer:IsHuman() then
+    if iThisPlayer == iActivePlayer then
         local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_ENEMY_SUNDERED", thisUnitName, thatUnitName);
         Events.GameplayAlertMessage(text);
-    end
-    if pThatPlayer:IsHuman() then
+    elseif iThatPlayer == iActivePlayer then
         local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_US_SUNDERED", thisUnitName, thatUnitName);
         Events.GameplayAlertMessage(text);
     end
@@ -121,26 +121,25 @@ GameEvents.OnTriggerAddEnemyPromotion.Add(function(eThisPromotionType, eThisProm
         return;
     end
 
+    local iActivePlayer = Game.GetActivePlayer();
     local thisUnitName = pThisUnit:GetName();
     local thatUnitName = pThatUnit:GetName();
-    if pThisPlayer:IsHuman() then
+    if iThisPlayer == iActivePlayer then
         local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_ENEMY_MORAL_WEAKEN", thisUnitName, thatUnitName);
         Events.GameplayAlertMessage(text);
-    end
-    if pThatPlayer:IsHuman() then
+    elseif iThatPlayer == iActivePlayer then
         local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_US_MORAL_WEAKEN", thisUnitName, thatUnitName);
         Events.GameplayAlertMessage(text);
     end
 end);
 
-local iDestroySupplyCollectionID = GameInfoTypes["PROMOTION_COLLECTION_DESTROY_SUPPLY"];
 local iLoseSupplyCollectionID = GameInfoTypes["PROMOTION_COLLECTION_LOSE_SUPPLY"];
 local DestroySupply2ID = GameInfoTypes["PROMOTION_DESTROY_SUPPLY_2"]
 local LoseSupplyID = GameInfoTypes["PROMOTION_LOSE_SUPPLY"]
 GameEvents.OnTriggerAddEnemyPromotion.Add(function(eThisPromotionType, eThisPromotionCollection, eThisBattleType, iThisPlayer,
                                                    iThisUnit, iThisUnitType, eThatPromotionType,
                                                    eThatPromotionCollection, iThatPlayer, iThatUnit, iThatUnitType)
-    if eThisPromotionCollection ~= iDestroySupplyCollectionID or eThatPromotionCollection ~= iLoseSupplyCollectionID then
+    if eThatPromotionCollection ~= iLoseSupplyCollectionID then
         return;
     end
 
@@ -156,6 +155,8 @@ GameEvents.OnTriggerAddEnemyPromotion.Add(function(eThisPromotionType, eThisProm
         return;
     end
 
+    local iActivePlayer = Game.GetActivePlayer();
+
     -- TODO: will implement in DLL later
     if pThisUnit:IsHasPromotion(DestroySupply2ID) then
         local plotX = pThatUnit:GetX();
@@ -164,30 +165,30 @@ GameEvents.OnTriggerAddEnemyPromotion.Add(function(eThisPromotionType, eThisProm
             local adjPlot = Map.PlotDirection(plotX, plotY, i)
             if (adjPlot ~= nil) then
                 local pUnit = adjPlot:GetUnit(0)
-                if pUnit and pUnit:GetOwner() ~= pThisUnit:GetOwner() and not pUnit:IsImmuneNegtivePromotions() then
+                if pUnit and pUnit:GetOwner() ~= pThisUnit:GetOwner()
+                and not pUnit:IsHasPromotion(LoseSupplyID)
+                and not pUnit:IsImmuneNegtivePromotions() 
+                then
                     pUnit:SetHasPromotion(LoseSupplyID, true);
-                    if pThisPlayer:IsHuman() then
-                        local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_ENEMY_SUPPLY_DESTROYED", Locale.ConvertTextKey("TXT_KEY_PROMOTION_LOSE_SUPPLY"), pThisUnit:GetName(), "[COLOR_NEGATIVE_TEXT]" .. -20 .. "[ENDCOLOR]");
+                    if iActivePlayer == iThisPlayer then
+                        local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_ENEMY_SUPPLY_DESTROYED", Locale.ConvertTextKey("TXT_KEY_PROMOTION_LOSE_SUPPLY"), pUnit:GetName(), "[COLOR_NEGATIVE_TEXT]" .. -20 .. "[ENDCOLOR]");
                         Events.GameplayAlertMessage(text);
-                    end
-                    if pThatPlayer:IsHuman() then
-                        local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_ENEMY_SUPPLY_DESTROYED", Locale.ConvertTextKey("TXT_KEY_PROMOTION_LOSE_SUPPLY"), pThatUnit:GetName(), "[COLOR_NEGATIVE_TEXT]" .. -20 .. "[ENDCOLOR]");
+                    elseif iActivePlayer == iThatPlayer then
+                        local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_US_SUPPLY_DESTROYED", Locale.ConvertTextKey("TXT_KEY_PROMOTION_LOSE_SUPPLY"), pUnit:GetName(), "[COLOR_NEGATIVE_TEXT]" .. -20 .. "[ENDCOLOR]");
                         Events.GameplayAlertMessage(text);
                     end
                 end
             end
         end
-    else
-        if pThatUnit and pThatUnit:GetOwner() ~= pThisUnit:GetOwner() and not pThatUnit:IsImmuneNegtivePromotions() then
-            if pThisPlayer:IsHuman() then
-                local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_ENEMY_SUPPLY_DESTROYED", Locale.ConvertTextKey("TXT_KEY_PROMOTION_LOSE_SUPPLY"), pThatUnit:GetName(), "[COLOR_NEGATIVE_TEXT]" .. -20 .. "[ENDCOLOR]");
-                Events.GameplayAlertMessage(text);
-            end
-            if pThatPlayer:IsHuman() then
-                local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_ENEMY_SUPPLY_DESTROYED", Locale.ConvertTextKey("TXT_KEY_PROMOTION_LOSE_SUPPLY"), pThatUnit:GetName(), "[COLOR_NEGATIVE_TEXT]" .. -20 .. "[ENDCOLOR]");
-                Events.GameplayAlertMessage(text);
-            end
-        end
+    end
+
+    if eThatPromotionType == -1 then return end
+    if iActivePlayer == iThisPlayer then
+        local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_ENEMY_SUPPLY_DESTROYED", Locale.ConvertTextKey("TXT_KEY_PROMOTION_LOSE_SUPPLY"), pThatUnit:GetName(), "[COLOR_NEGATIVE_TEXT]" .. -20 .. "[ENDCOLOR]");
+        Events.GameplayAlertMessage(text);
+    elseif iActivePlayer == iThatPlayer then
+        local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_US_SUPPLY_DESTROYED", Locale.ConvertTextKey("TXT_KEY_PROMOTION_LOSE_SUPPLY"), pThatUnit:GetName(), "[COLOR_NEGATIVE_TEXT]" .. -20 .. "[ENDCOLOR]");
+        Events.GameplayAlertMessage(text);
     end
 end);
 
@@ -217,6 +218,7 @@ GameEvents.CanAddEnemyPromotion.Add(function(eThisPromotionType, iThisPromotionC
     end
 
     local result = false;
+    local tdebuff, tlostHP
     if pThatUnit:IsCombatUnit() and
     pThatUnit:GetDomainType() == DomainTypes.DOMAIN_SEA and GameInfo.Units[pThatUnit:GetUnitType()].MoveRate == "WOODEN_BOAT" then
         local combatRoll = Game.Rand(100, "At NewCombatRules.lua NewAttackEffect()");
@@ -232,14 +234,14 @@ GameEvents.CanAddEnemyPromotion.Add(function(eThisPromotionType, iThisPromotionC
     end
 
     if result then
-        if pThisUnit:IsHuman() then
-            text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_ENEMY_SUPPLY_DESTROYED", tdebuff, pThatUnit:GetName(), tlostHP);
+        local iActivePlayer = Game.GetActivePlayer()
+        if iThisPlayer == iActivePlayer then
+            local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_ENEMY_SUPPLY_DESTROYED", tdebuff, pThatUnit:GetName(), tlostHP);
             Events.GameplayAlertMessage(text);
-        end
-        if pThatUnit:IsHuman() then
+        elseif iThatPlayer == iActivePlayer then
             local heading = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_US_SUPPLY_DESTROYED_SHORT", tdebuff);
-            text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_US_SUPPLY_DESTROYED", tdebuff, pThatUnit:GetName(), tlostHP);
-            pThatPlayer:AddNotification(NotificationTypes.NOTIFICATION_GENERIC, text, heading, pThisUnit:GetX(), pThisUnit:GetY());
+            local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_US_SUPPLY_DESTROYED", tdebuff, pThatUnit:GetName(), tlostHP);
+            pThatPlayer:AddNotification(NotificationTypes.NOTIFICATION_GENERIC, text, heading, pThatUnit:GetX(), pThatUnit:GetY());
         end
     end
 
