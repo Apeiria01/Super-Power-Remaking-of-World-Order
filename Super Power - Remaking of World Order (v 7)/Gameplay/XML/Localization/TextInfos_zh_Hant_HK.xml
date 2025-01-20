@@ -14263,6 +14263,13 @@
 		<Replace Tag="TXT_KEY_PEDIA_DEFENSE_HITPOINTS">
 			<Text>+{1_DefenseHP}生命值</Text>
 		</Replace>
+		<Replace Tag="TXT_KEY_PEDIA_DEFENSE_EXTRA_HEAL">
+			<Text>+{1_Heal}生命值回復</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PEDIA_DEFENSE_EXTRA_HEAL_PERCENT">
+			<Text>+{1_Heal}%最大生命值回復</Text>
+		</Replace>
+
 		<Replace Tag="TXT_KEY_FREEPROMOTIONS">
 			<Text>[COLOR_CYAN]免費晉升:[ENDCOLOR]</Text>
 		</Replace>
