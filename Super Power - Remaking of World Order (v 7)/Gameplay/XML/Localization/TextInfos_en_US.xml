@@ -292,6 +292,13 @@
 		<Replace Tag="TXT_KEY_PEDIA_DEFENSE_HITPOINTS">
 			<Text>+{1_DefenseHP} HitPoints</Text>
 		</Replace>
+		<Replace Tag="TXT_KEY_PEDIA_DEFENSE_EXTRA_HEAL">
+			<Text>+{1_Heal} HitPoints Heal</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PEDIA_DEFENSE_EXTRA_HEAL_PERCENT">
+			<Text>+{1_Heal}% Max HitPoints Heal</Text>
+		</Replace>
+
 		<Replace Tag="TXT_KEY_FREEPROMOTIONS">
 			<Text>[COLOR_CYAN]Free Promotions:[ENDCOLOR]</Text>
 		</Replace>

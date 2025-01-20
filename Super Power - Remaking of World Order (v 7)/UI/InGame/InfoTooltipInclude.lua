@@ -1002,6 +1002,8 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 	local happinessChange = (tonumber(building.Happiness) or 0)
 	local defenseChange = tonumber(building.Defense) or 0
 	local hitPointChange = tonumber(building.ExtraCityHitPoints) or 0
+	local hitPointHeal = tonumber(building.ExtraDamageHeal) or 0
+	local hitPointHealPercent = tonumber(building.ExtraDamageHealPercent) or 0
 	local cultureChange = IsCiv5Vanilla and tonumber(building.Culture) or 0
 	local cultureModifier = tonumber(building.CultureRateModifier) or 0
 
@@ -1385,6 +1387,12 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 	end
 	if hitPointChange ~=0 then
 		tip = tip .. " " .. L( "TXT_KEY_PEDIA_DEFENSE_HITPOINTS", hitPointChange )
+	end
+	if hitPointHeal ~=0 then
+		tip = tip .. " " .. L( "TXT_KEY_PEDIA_DEFENSE_EXTRA_HEAL", hitPointHeal )
+	end
+	if hitPointHealPercent ~=0 then
+		tip = tip .. " " .. L( "TXT_KEY_PEDIA_DEFENSE_EXTRA_HEAL_PERCENT", hitPointHealPercent )
 	end
 
 
