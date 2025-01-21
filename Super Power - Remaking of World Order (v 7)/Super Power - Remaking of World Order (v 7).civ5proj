@@ -103,6 +103,11 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
+        <FileName>Gameplay/XML/Barbarian/SPBarbarianKing.sql</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
         <FileName>Gameplay/XML/Misc.xml</FileName>
       </Action>
       <Action>
@@ -585,6 +590,7 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
     <Folder Include="Gameplay\XML\Buildings" />
     <Folder Include="Gameplay\XML\Civilizations" />
     <Folder Include="Gameplay\XML\GameInfo" />
+    <Folder Include="Gameplay\XML\Barbarian" />
     <Folder Include="Gameplay\XML\Leaders" />
     <Folder Include="Gameplay\XML\Localization" />
     <Folder Include="Gameplay\XML\Units" />
@@ -816,6 +822,10 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="Gameplay/XML/DLL_Options.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="Gameplay/XML/Barbarian/SPBarbarianKing.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
