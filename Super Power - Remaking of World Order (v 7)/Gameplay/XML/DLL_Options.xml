@@ -359,6 +359,26 @@
 			<Set Value="1"/>
 		</Update>
 		
+		<Update>
+			<Where Name="GLOBAL_INTERNAL_TRADE_ROUTE_BONUS_FROM_ORIGIN_CITY"/>
+			<Set Value="1"/>
+		</Update>
+		<Update>
+			<Where Name="GLOBAL_SEPARATE_GP_COUNTERS"/>
+			<Set Value="1"/>
+		</Update>
+		<Update>
+			<Where Name="DIPLOMACY_BY_NUMBERS"/>
+			<Set Value="1"/>
+		</Update>
+		<Update>
+			<Where Name="CHANGE_RESOURCE_LINK_AFTER_ALTER_PLOT"/>
+			<Set Value="1"/>
+		</Update>
+		<Update>
+			<Where Name="GLOBAL_CAPTURE_UNIT_CANNOT_MAX_OUT"/>
+			<Set Value="1"/>
+		</Update>
 	</CustomModOptions>
 
 
