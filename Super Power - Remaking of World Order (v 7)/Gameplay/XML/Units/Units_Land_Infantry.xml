@@ -654,7 +654,7 @@
 			<UnitArtInfo>ART_DEF_UNIT_GERMAN_LONGSWORDSMAN</UnitArtInfo>
 			<UnitFlagAtlas>UNITS_GERMAN_DOPPE_FLAG_ATLAS</UnitFlagAtlas>
 			<UnitFlagIconOffset>0</UnitFlagIconOffset>
-			<IconAtlas>SP8_EXTRA_ATLAS</IconAtlas>
+			<IconAtlas>SPUNITS03_ATLAS</IconAtlas>
 			<PortraitIndex>0</PortraitIndex>
 			<ExtraMaintenanceCost>4</ExtraMaintenanceCost>
 		</Row>

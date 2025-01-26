@@ -1831,6 +1831,30 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
+    <Content Include="UI/Art/IconAtlases/Units/SPUnits03Atlas128.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI/Art/IconAtlases/Units/SPUnits03Atlas256.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI/Art/IconAtlases/Units/SPUnits03Atlas32.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI/Art/IconAtlases/Units/SPUnits03Atlas45.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI/Art/IconAtlases/Units/SPUnits03Atlas64.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI/Art/IconAtlases/Units/SPUnits03Atlas80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
     <Content Include="UI/Art/IconAtlases/Units/SP_Promotion_Atlas256.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
@@ -5331,35 +5355,35 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="UI\Art\IconAtlases\Extra\SP8Units_BuildingsAtlas016.dds">
+    <Content Include="UI\Art\IconAtlases\Extra\SPImprovementAtlas016.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="UI\Art\IconAtlases\Extra\SP8Units_BuildingsAtlas032.dds">
+    <Content Include="UI\Art\IconAtlases\Extra\SPImprovementAtlas032.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="UI\Art\IconAtlases\Extra\SP8Units_BuildingsAtlas045.dds">
+    <Content Include="UI\Art\IconAtlases\Extra\SPImprovementAtlas045.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="UI\Art\IconAtlases\Extra\SP8Units_BuildingsAtlas048.dds">
+    <Content Include="UI\Art\IconAtlases\Extra\SPImprovementAtlas048.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="UI\Art\IconAtlases\Extra\SP8Units_BuildingsAtlas064.dds">
+    <Content Include="UI\Art\IconAtlases\Extra\SPImprovementAtlas064.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="UI\Art\IconAtlases\Extra\SP8Units_BuildingsAtlas080.dds">
+    <Content Include="UI\Art\IconAtlases\Extra\SPImprovementAtlas080.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="UI\Art\IconAtlases\Extra\SP8Units_BuildingsAtlas128.dds">
+    <Content Include="UI\Art\IconAtlases\Extra\SPImprovementAtlas128.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="UI\Art\IconAtlases\Extra\SP8Units_BuildingsAtlas256.dds">
+    <Content Include="UI\Art\IconAtlases\Extra\SPImprovementAtlas256.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
