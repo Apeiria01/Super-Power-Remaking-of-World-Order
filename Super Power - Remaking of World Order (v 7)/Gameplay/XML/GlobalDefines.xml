@@ -757,6 +757,12 @@
 			<Value>20</Value>
 		</Row>
 
+		<!-- -1 Means MaxHitPoints -->
+		<Row>
+			<Name>SATELLITE_CANNON_MAX_DEMAGE</Name>
+			<Value>-1</Value>
+		</Row>
+
 		<Row>
 			<Name>POLICY_BRANCH_LIBERTY_CITY_LEVEL_DISTANCE_LV1</Name>
 			<Value>1</Value>

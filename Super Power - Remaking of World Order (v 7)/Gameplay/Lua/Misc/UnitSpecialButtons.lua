@@ -861,31 +861,33 @@ GlobalStrikeButton = {
         return unit:CanMove() and unit:GetUnitType() == GameInfoTypes.UNIT_ORBITAL_STRIKE;
     end, -- or nil or a boolean, default is true
 
-    --  Disabled = function(action, unit) 
-    --    
-    --    return 
-    --  end, -- or nil or a boolean, default is false
-
     Action = function(action, unit, eClick)
-
         unit:SetMoves(0)
-
+        local pOurPlayer = Players[unit:GetOwner()]
+        local iOurTeam = pOurPlayer:GetTeam()
+        local bHasTarget = false
+        local iMaxHitPoint = GameDefines["SATELLITE_CANNON_MAX_DEMAGE"]
         for playerID, player in pairs(Players) do
             if player and player:IsAlive() and player:GetNumCities() >= 1 then
-                if not player:IsHuman() then
-                    if PlayerAtWarWithHuman(player) then
-                        for city in player:Cities() do
-                            local CityMaxHP = city:GetMaxHitPoints()
-                            city:SetDamage(CityMaxHP)
-                            print("Global Strike!")
+                local pThisTeam = Teams[player:GetTeam()]
+                if pThisTeam:IsAtWar(iOurTeam) then
+                    for city in player:Cities() do
+                        if iMaxHitPoint > 0 then
+                            city:SetDamage(iMaxHitPoint)
+                        else
+                            city:SetDamage(city:GetMaxHitPoints())
                         end
+                        bHasTarget = true
                     end
                 end
             end
         end
-
+        if bHasTarget then
+            Events.AudioPlay2DSound("AS2D_SATELLITE_CANNON_SP")
+            Events.GameplayAlertMessage(Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_SATELLITE_CANNON_SP"))
+            print("SP Global Strike!") 
+        end
     end
-
 };
 LuaEvents.UnitPanelActionAddin(GlobalStrikeButton);
 

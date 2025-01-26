@@ -2411,9 +2411,11 @@
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_GLOBAL_STRIKE">
-			<Text>Order the satellites loaded with tungsten rods to attack enemy's cities. Once the tungsten rods launched, every enemy city's health will immediately drop to 0.</Text>
+			<Text>Order the satellites loaded with tungsten rods to attack enemy's cities. Once the tungsten rods launched, every enemy city will take huge damage to its health.</Text>
 		</Row>
-
+		<Row Tag="TXT_KEY_SP_NOTIFICATION_SATELLITE_CANNON_SP">
+			<Text>[COLOR_NEGATIVE_TEXT]Launches an orbital strike that hits all enemy cities hard! [ENDCOLOR]</Text>
+		</Row>
 
 
 		<Row Tag="TXT_KEY_CITY_NO_UTILITY_HELP">

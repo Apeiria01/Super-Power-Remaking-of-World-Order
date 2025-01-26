@@ -5632,7 +5632,10 @@
 			<Text>啟動全球軌道打擊</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_GLOBAL_STRIKE">
-			<Text>上帝之杖將從天際對敵人的城市發起進攻。一旦發射，每一個敵人的城市血量立即降為0！</Text>
+			<Text>上帝之杖將從天際對敵人的城市發起進攻。一旦發射，對每一個敵人的城市造成大量傷害！</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_NOTIFICATION_SATELLITE_CANNON_SP">
+			<Text>[COLOR_NEGATIVE_TEXT]發動軌道打擊，所有敵方城市遭受沈重打擊！[ENDCOLOR]</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_NOTIFICATION_CS_GIFT_RETURNED_SUMMARY">

@@ -5731,7 +5731,10 @@
 			<Text>启动全球轨道打击</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_BTNNOTE_GLOBAL_STRIKE">
-			<Text>上帝之杖将从天际对敌人的城市发起进攻。一旦发射，每一个敌人的城市血量立即降为0！</Text>
+			<Text>上帝之杖将从天际对敌人的城市发起进攻。一旦发射，对每一个敌人的城市造成大量伤害！</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_NOTIFICATION_SATELLITE_CANNON_SP">
+			<Text>[COLOR_NEGATIVE_TEXT]发动轨道打击，所有敌方城市遭受沉重打击！[ENDCOLOR]</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_NOTIFICATION_CS_GIFT_RETURNED_SUMMARY">
