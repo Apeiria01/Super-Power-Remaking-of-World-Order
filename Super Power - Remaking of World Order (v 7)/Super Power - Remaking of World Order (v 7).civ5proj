@@ -54,6 +54,7 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
     <ReloadLandmarkSystem>true</ReloadLandmarkSystem>
     <ReloadStrategicViewSystem>true</ReloadStrategicViewSystem>
     <ReloadUnitSystem>true</ReloadUnitSystem>
+    <ReloadAudioSystem>true</ReloadAudioSystem>
     <ModActions>
       <Action>
         <Set>OnModActivated</Set>
@@ -428,7 +429,7 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>Gameplay/SQL/Units/NewUnitPromotionsEffectsSP.sql</FileName>
+        <FileName>Gameplay/SQL/Units/NewUnitSound.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
@@ -646,6 +647,7 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
     <Folder Include="UI\Art\Models\Units Infantry" />
     <Folder Include="UI\Art\Models\Units Air" />
     <Folder Include="UI\Art\Models\Unit Elite" />
+    <Folder Include="UI\Art\Models\Unit Satelite" />
     <Folder Include="UI\Art\Models\Resources" />
     <Folder Include="UI\Art\Units" />
     <Folder Include="UI\Art\_Edited_Animations" />
@@ -661,6 +663,7 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
     <Folder Include="UI\InGame\WorldView" />
     <Folder Include="UI\InGame\PopupsGeneric" />
     <Folder Include="UI\InGame\Popups" />
+    <Folder Include="UI\Audio" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Gameplay/Lua/SPInit.lua">
@@ -732,6 +735,10 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="Gameplay/SQL/Deletor.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="Gameplay\SQL\Units\NewUnitSound.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
@@ -1048,10 +1055,6 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="Gameplay\SQL\Terrian\HandicapInfo_Goodies.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="Gameplay\SQL\Units\NewUnitPromotionsEffectsSP.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
@@ -5876,6 +5879,26 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="UI\Art\Models\Units Land\Mamluk\Mamluk_Horse_Gloss.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Unit Satelite\satellite_diff.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Unit Satelite\satellite_sref.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Unit Satelite\satellite.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\Models\Unit Satelite\satellite.gr2">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Audio\SatelliteCannon.wav">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>

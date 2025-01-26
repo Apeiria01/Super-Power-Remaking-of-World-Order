@@ -1195,7 +1195,7 @@
 			<RangedCombatLimit>100</RangedCombatLimit>
 			<CombatLimit>0</CombatLimit>
 			<XPValueDefense>2</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_GUIDED_MISSILE</UnitArtInfo>
+			<UnitArtInfo>ART_DEF_UNIT_SATELITE_SP_NEXUS</UnitArtInfo>
 			<UnitFlagIconOffset>24</UnitFlagIconOffset>
 			<UnitFlagAtlas>SPUnitFlags_FLAG</UnitFlagAtlas>
 			<IconAtlas>SPUNITS02_ATLAS</IconAtlas>
