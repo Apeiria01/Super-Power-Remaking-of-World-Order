@@ -1135,8 +1135,8 @@
 			<UnitArtInfo>ART_DEF_UNIT_COG</UnitArtInfo>
 			<UnitFlagIconOffset>99</UnitFlagIconOffset>
 			<UnitFlagAtlas>SPUnitFlags_FLAG</UnitFlagAtlas>
-			<IconAtlas>SPUNITS02_ATLAS</IconAtlas>
-			<PortraitIndex>44</PortraitIndex>
+			<IconAtlas>SPUNITS03_ATLAS</IconAtlas>
+			<PortraitIndex>2</PortraitIndex>
 			<MoveRate>WOODEN_BOAT</MoveRate>
 			<ProjectPrereq>PROJECT_NAVAL_EXPLORATION</ProjectPrereq>
 			<ExtraMaintenanceCost>24</ExtraMaintenanceCost>

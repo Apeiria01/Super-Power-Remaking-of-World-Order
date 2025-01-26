@@ -3,14 +3,14 @@
 --==========================================================================================================================
 INSERT OR REPLACE INTO IconTextureAtlases 
 			(Atlas, 							IconSize, 	Filename, 								        IconsPerRow, 	IconsPerColumn)
-VALUES		('SP8_EXTRA_ATLAS', 				256, 		'SP8Units_BuildingsAtlas256.dds',				8, 				2),
-			('SP8_EXTRA_ATLAS', 				128, 		'SP8Units_BuildingsAtlas128.dds',				8, 				2),
-			('SP8_EXTRA_ATLAS', 				080, 		'SP8Units_BuildingsAtlas080.dds',				8, 				2),
-			('SP8_EXTRA_ATLAS', 				064, 		'SP8Units_BuildingsAtlas064.dds',				8, 				2),
-            ('SP8_EXTRA_ATLAS', 				048, 		'SP8Units_BuildingsAtlas048.dds',				8, 				2),
-			('SP8_EXTRA_ATLAS', 				045, 		'SP8Units_BuildingsAtlas045.dds',				8, 				2),
-			('SP8_EXTRA_ATLAS', 				016, 		'SP8Units_BuildingsAtlas016.dds',				8, 				2),
-			('SP8_EXTRA_ATLAS', 				032, 		'SP8Units_BuildingsAtlas032.dds',				8, 				2),
+VALUES		('SP_IMPROVEMENT_ATLAS', 				256, 		'SPImprovementAtlas256.dds',					8, 				1),
+			('SP_IMPROVEMENT_ATLAS', 				128, 		'SPImprovementAtlas128.dds',					8, 				1),
+			('SP_IMPROVEMENT_ATLAS', 				080, 		'SPImprovementAtlas080.dds',					8, 				1),
+			('SP_IMPROVEMENT_ATLAS', 				064, 		'SPImprovementAtlas064.dds',					8, 				1),
+            ('SP_IMPROVEMENT_ATLAS', 				048, 		'SPImprovementAtlas048.dds',					8, 				1),
+			('SP_IMPROVEMENT_ATLAS', 				045, 		'SPImprovementAtlas045.dds',					8, 				1),
+			('SP_IMPROVEMENT_ATLAS', 				016, 		'SPImprovementAtlas016.dds',					8, 				1),
+			('SP_IMPROVEMENT_ATLAS', 				032, 		'SPImprovementAtlas032.dds',					8, 				1),
 			('SP10_EXTRA_ATLAS', 				256, 		'SP10BuildingsAtlas256.dds',					8, 				2),
 			('SP10_EXTRA_ATLAS', 				128, 		'SP10BuildingsAtlas128.dds',					8, 				2),
 			('SP10_EXTRA_ATLAS', 				080, 		'SP10BuildingsAtlas80.dds',						8, 				2),

@@ -213,7 +213,6 @@
 		</Row>
 
 		
-		
 		<Row>
 			<Atlas>SPUNITS02_ATLAS</Atlas>
 			<IconSize>32</IconSize>
@@ -255,6 +254,50 @@
 			<Filename>SPUnits02Atlas256.dds</Filename>
 			<IconsPerRow>8</IconsPerRow>
 			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+
+
+		<Row>
+			<Atlas>SPUNITS03_ATLAS</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>SPUnits02Atlas32.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SPUNITS03_ATLAS</Atlas>
+			<IconSize>45</IconSize>
+			<Filename>SPUnits03Atlas45.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SPUNITS03_ATLAS</Atlas>
+			<IconSize>64</IconSize>
+			<Filename>SPUnits03Atlas64.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SPUNITS03_ATLAS</Atlas>
+			<IconSize>80</IconSize>
+			<Filename>SPUnits03Atlas80.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SPUNITS03_ATLAS</Atlas>
+			<IconSize>128</IconSize>
+			<Filename>SPUnits03Atlas128.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>SPUNITS03_ATLAS</Atlas>
+			<IconSize>256</IconSize>
+			<Filename>SPUnits03Atlas256.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
 		</Row>
 
 

@@ -328,8 +328,8 @@
 			<UnitArtInfo>ART_DEF_UNIT_KNIGHT_EGYPT</UnitArtInfo>
 			<UnitFlagIconOffset>0</UnitFlagIconOffset>
 			<UnitFlagAtlas>UNIT_EGYPT_FLAG_ATLAS</UnitFlagAtlas>			
-			<IconAtlas>SP8_EXTRA_ATLAS</IconAtlas>
-			<PortraitIndex>10</PortraitIndex>
+			<IconAtlas>SPUNITS03_ATLAS</IconAtlas>
+			<PortraitIndex>1</PortraitIndex>
 			<MoveRate>QUADRUPED</MoveRate>
 			<ExtraMaintenanceCost>6</ExtraMaintenanceCost>
 			<ProhibitsSpread>true</ProhibitsSpread>
