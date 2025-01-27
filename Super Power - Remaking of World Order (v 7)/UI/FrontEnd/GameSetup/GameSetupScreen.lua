@@ -2,11 +2,13 @@
 -- GameSetup Screen
 -------------------------------------------------
 include( "IconSupport" );
+include( "SP_PreGameManager" )
 
 -------------------------------------------------
 -- Back Button Handler
 -------------------------------------------------
 function OnBack()
+	SPData:SaveData()
     UIManager:DequeuePopup( ContextPtr );
     ContextPtr:SetHide( true );
 	Controls.LargeMapImage:UnloadTexture();    
@@ -16,7 +18,7 @@ Controls.BackButton:RegisterCallback( Mouse.eLClick, OnBack );
 -------------------------------------------------
 -------------------------------------------------
 function OnStart()
-  
+	SPData:SaveData()
 	if( IsWBMap(PreGame.GetMapScript()) ) then
 		PreGame.SetRandomMapScript(false);
 		PreGame.SetLoadWBScenario(PreGame.GetLoadWBScenario());
@@ -34,6 +36,7 @@ Controls.StartButton:RegisterCallback( Mouse.eLClick, OnStart );
 -------------------------------------------------
 -------------------------------------------------
 function OnAdvanced()
+	SPData:SaveData()
     Controls.AdvancedSetup:SetHide( not Controls.AdvancedSetup:IsHidden() );
     --UIManager:QueuePopup(Controls.AdvancedSetup, PopupPriority.HallOfFame);
     
@@ -603,6 +606,7 @@ for row in DB.Query("SELECT COUNT(*) AS COUNT FROM Language_ZH_HANT_HK WHERE Tag
 end
 function ShowHideHandler( isHide, isInit )
 	if ( isInit == true) then
+		SPData:LoadData()
 		SetSPAtlas( string.format("SP_Atlas_%d.dds", math.random(0, 9)) );
 		Controls.SPLogo:SetTexture( string.format("SP_Logo_%d.dds", math.random(2)) );
 		Controls.SPHelpFrame:SetHide( false );

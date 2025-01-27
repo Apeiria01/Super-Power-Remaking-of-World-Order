@@ -1377,7 +1377,7 @@ function OnDefaultsClicked()
 	end
 	
 	-- Default Map Size
-	local worldSize = GameInfo.Worlds["WORLDSIZE_SMALL"];
+	local worldSize = GameInfo.Worlds["WORLDSIZE_HUGE"];
 	if(worldSize == nil) then
 		worldSize = GameInfo.Worlds()(); -- Get first world size found.
 	end
@@ -1397,7 +1397,7 @@ function OnDefaultsClicked()
 	end
 	
 	-- Default Game Pace
-	local gameSpeed = GameInfo.GameSpeeds["GAMESPEED_STANDARD"];
+	local gameSpeed = GameInfo.GameSpeeds["GAMESPEED_EPIC"];
 	if(gameSpeed == nil) then
 		gameSpeed = GameInfo.GameSpeeds()();
 	end
@@ -1411,7 +1411,7 @@ function OnDefaultsClicked()
 	PreGame.SetEra(era.ID);
 	
 	--Default Difficulty to Chieftain
-	local handicap = GameInfo.HandicapInfos["HANDICAP_PRINCE"];
+	local handicap = GameInfo.HandicapInfos["HANDICAP_DEITY"];
 	if(handicap == nil) then
 		handicap = GameInfo.HandicapInfos()(); --Get first handicap info found.
 	end
