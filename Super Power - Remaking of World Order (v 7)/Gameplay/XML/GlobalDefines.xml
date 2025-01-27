@@ -1,46 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Created by ModBuddy on 11/21/2013 11:32:03 AM -->
 <GameData>
-	
 	<Defines>
+		<Row>
+			<Name>SP_SAVE_PREGAME_OPTION</Name>
+			<Value>1</Value>
+		</Row>
 
-		<!--<Replace>
-			--><!-- Default City Working Distance --><!--	
-			<Name>MAXIMUM_WORK_PLOT_DISTANCE</Name>
-			<Value>2</Value>
-		</Replace>-->
-
-		<!--<Update>
-			<Where Name="CITY_ZOOM_LEVEL_1"/>
-			<Set Value="200"/>
-		</Update>
-
-		<Update>
-			<Where Name="CITY_ZOOM_LEVEL_2"/>
-			<Set Value="1000"/>
-		</Update>
-
-
-		<Update>
-			<Where Name="CITY_ZOOM_LEVEL_3"/>
-			<Set Value="9000"/>
-		</Update>
-
-
-		<Update>
-			<Where Name="CITY_ZOOM_OFFSET"/>
-			<Set Value="900"/>
-		</Update>-->
-
-		
-		
 		<Update>
 			<Where Name="RELIGION_BASE_CHANCE_PROPHET_SPAWN"/>
 			<Set Value="100"/>
 		</Update>
-
-
-
 
 		<!--Global Units per Plot and City Range-->
 		<Update>
