@@ -296,21 +296,17 @@ if PreGame.GetGameOption("GAMEOPTION_SP_CORPS_MODE_DISABLE") == 0 then
     GameEvents.UnitCreated.Add(OnCorpsArmeeSP)
 end
 
+g_SPCarrierTransferPromotions = {}
+for row in GameInfo.SPCarrierTransferPromotions() do
+	local CarrierPromotion = GameInfo.UnitPromotions[row.CarrierPromotionType]
+	local FighterPromotion = GameInfo.UnitPromotions[row.FighterPromotionType]
+	if CarrierPromotion and FighterPromotion then
+		g_SPCarrierTransferPromotions[CarrierPromotion.ID] = FighterPromotion.ID
+	else
+		print("Carrier Transfer Promotion load err:", row.CarrierPromotionType, row.FighterPromotionType)
+	end
+end
 function CarrierPromotionTransfer(player, unit)
-	local AntiAir1ID = GameInfo.UnitPromotions["PROMOTION_CARRIER_FIGHTER_ANTI_AIR_1"].ID
-	local AntiAir2ID = GameInfo.UnitPromotions["PROMOTION_CARRIER_FIGHTER_ANTI_AIR_2"].ID
-
-	local AirFight1ID = GameInfo.UnitPromotions["PROMOTION_CARRIER_FIGHTER_AIRFIGHT_1"].ID
-	local AirFight2ID = GameInfo.UnitPromotions["PROMOTION_CARRIER_FIGHTER_AIRFIGHT_2"].ID
-	local Attack1ID = GameInfo.UnitPromotions["PROMOTION_CARRIER_FIGHTER_ATTACK_1"].ID
-	local Attack2ID = GameInfo.UnitPromotions["PROMOTION_CARRIER_FIGHTER_ATTACK_2"].ID
-	local Siege1ID = GameInfo.UnitPromotions["PROMOTION_CARRIER_FIGHTER_SIEGE_1"].ID
-	local Siege2ID = GameInfo.UnitPromotions["PROMOTION_CARRIER_FIGHTER_SIEGE_2"].ID
-	local SupplyID = GameInfo.UnitPromotions["PROMOTION_CARRIER_SUPPLY_2"].ID
-	local SortieID = GameInfo.UnitPromotions["PROMOTION_CARRIER_FIGHTER_SORTIE"].ID
-
-	local GainExpID = GameInfo.UnitPromotions["PROMOTION_GAIN_EXPERIENCE"].ID
-
 	local plot = unit:GetPlot();
 	if plot and unit:IsHasPromotion(AirCraftCarrierID) and unit:HasCargo() then
 		print("Found the carrier!")
@@ -320,17 +316,9 @@ function CarrierPromotionTransfer(player, unit)
 			local pCargoUnit = plot:GetUnit(i);
 			if pCargoUnit:IsCargo() and pCargoUnit:GetTransportUnit() == unit then
 				print("Found the aircraft on the carrier!")
-				pCargoUnit:SetHasPromotion(AirFight1ID, unit:IsHasPromotion(AntiAir1ID));
-				pCargoUnit:SetHasPromotion(AirFight2ID, unit:IsHasPromotion(AntiAir2ID));
-				pCargoUnit:SetHasPromotion(Attack1ID, unit:IsHasPromotion(Attack1ID));
-				pCargoUnit:SetHasPromotion(Attack2ID, unit:IsHasPromotion(Attack2ID));
-				pCargoUnit:SetHasPromotion(Siege1ID, unit:IsHasPromotion(Siege1ID));
-				pCargoUnit:SetHasPromotion(Siege2ID, unit:IsHasPromotion(Siege2ID));
-				pCargoUnit:SetHasPromotion(SupplyID, unit:IsHasPromotion(SupplyID));
-				pCargoUnit:SetHasPromotion(SortieID, unit:IsHasPromotion(SortieID));
-				pCargoUnit:SetHasPromotion(GainExpID, unit:IsHasPromotion(GainExpID));
-				pCargoUnit:SetHasPromotion(CorpsID, unit:IsHasPromotion(CorpsID));
-				pCargoUnit:SetHasPromotion(ArmeeID, unit:IsHasPromotion(ArmeeID));
+				for CarrierPromotionID, FighterPromotionID in pairs(g_SPCarrierTransferPromotions) do
+					pCargoUnit:SetHasPromotion(FighterPromotionID, unit:IsHasPromotion(CarrierPromotionID));
+				end
 			end
 		end
 	end

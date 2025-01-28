@@ -379,7 +379,7 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>Gameplay/SQL/Units/Units_Land_Infantry.sql</FileName>
+        <FileName>Gameplay/SQL/Units/Units_New_Effect.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
@@ -1074,7 +1074,7 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Gameplay\SQL\Units\Units_Land_Infantry.sql">
+    <Content Include="Gameplay\SQL\Units\Units_New_Effect.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
