@@ -652,6 +652,7 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
     <Folder Include="UI\Art\Units" />
     <Folder Include="UI\Art\_Edited_Animations" />
     <Folder Include="UI\Atlas" />
+    <Folder Include="UI\Civilopedia\" />
     <Folder Include="UI\Civlopedia" />
     <Folder Include="UI\FrontEnd" />
     <Folder Include="UI\FrontEnd\GameSetup" />
@@ -659,6 +660,7 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
     <Folder Include="UI\InGame" />
     <Folder Include="UI\InGame\CityView" />
     <Folder Include="UI\InGame\LeaderHead\" />
+    <Folder Include="UI\InGame\Popups\OverviewAddendum\" />
     <Folder Include="UI\InGame\TechTree\" />
     <Folder Include="UI\InGame\WorldView" />
     <Folder Include="UI\InGame\PopupsGeneric" />

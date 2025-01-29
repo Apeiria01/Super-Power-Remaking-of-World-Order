@@ -38,3 +38,5 @@ UPDATE GameSpeeds SET TradeRouteSpeedMod=900 WHERE Type='GAMESPEED_QUICK';
 UPDATE GameSpeeds SET TradeRouteSpeedMod=1000 WHERE Type='GAMESPEED_STANDARD';
 UPDATE GameSpeeds SET TradeRouteSpeedMod=1200 WHERE Type='GAMESPEED_EPIC';
 UPDATE GameSpeeds SET TradeRouteSpeedMod=1200 WHERE Type='GAMESPEED_MARATHON';
+
+ALTER TABLE Projects ADD COLUMN 'CivilizationType' TEXT DEFAULT NULL REFERENCES Civilizations(Type);
