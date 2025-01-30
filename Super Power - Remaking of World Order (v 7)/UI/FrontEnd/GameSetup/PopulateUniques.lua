@@ -718,6 +718,7 @@ if not bIsUsedPopulateUniques then
 	local GetHelpTextForUnit = GetHelpTextForUnit
 	local GetHelpTextForBuilding = GetHelpTextForBuilding
 	local GetHelpTextForImprovement = GetHelpTextForImprovement
+	local GetHelpTextForProject = GetHelpTextForProject
 	--[[
 	Assumptions:
 	CivilopediaControl is set before include statement with string of popup control
@@ -738,7 +739,7 @@ if not bIsUsedPopulateUniques then
 	--]]
 
 	local bnw_mode = ContentManager.IsActive("6DA07636-4123-4018-B643-6575B4EC336B", ContentType.GAMEPLAY);
-	local g_traitsQuery, g_uniqueUnitsQuery, g_uniqueBuildingsQuery, g_uniqueImprovementsQuery;
+	local g_traitsQuery, g_uniqueUnitsQuery, g_uniqueBuildingsQuery, g_uniqueImprovementsQuery, g_uniqueProjectsQuery;
 	local g_questionMark =	{ PortraitIndex = 23, IconAtlas = "CIV_COLOR_ATLAS" };
 	local g_questionMarkTip = Locale.ConvertTextKey( "TXT_KEY_MISC_UNKNOWN" );
 	local g_randomTrait =	{ Description = "TXT_KEY_RANDOM_LEADER_HELP", ShortDescription = "TXT_KEY_MISC_RANDOMIZE" };
@@ -769,6 +770,9 @@ if not bIsUsedPopulateUniques then
 
 
 		g_uniqueImprovementsQuery = DB.CreateQuery([[SELECT ID, Description, PortraitIndex, IconAtlas from Improvements
+						WHERE CivilizationType = ?]]);
+
+		g_uniqueProjectsQuery = DB.CreateQuery([[SELECT ID, Description, PortraitIndex, IconAtlas from Projects
 						WHERE CivilizationType = ?]]);
 	end
 
@@ -839,6 +843,10 @@ if not bIsUsedPopulateUniques then
 		for improvement in g_uniqueImprovementsQuery( civType ) do
 			newItemIcon( parentControl, improvement, pcall( GetHelpTextForImprovement, improvement.ID ) );
 		end
+		-- UP icons
+		for project in g_uniqueProjectsQuery( civType ) do
+			newItemIcon( parentControl, project, pcall( GetHelpTextForProject, project.ID ) );
+		end
 	end
 
 	-----------------
@@ -854,7 +862,7 @@ if not bIsUsedPopulateUniques then
 			for k, v in pairs(civKeys) do
 				civ[k] = v;
 			end
-			-- UU, UB, UI icons
+			-- UU, UB, UI, UP icons
 			populateUniques( iconParentControl, civ.Type )
 			-- Civ icon
 	--		newItemIcon( iconParentControl, civ, nil, nil, civ.Pedia or civ.ShortDescription );
