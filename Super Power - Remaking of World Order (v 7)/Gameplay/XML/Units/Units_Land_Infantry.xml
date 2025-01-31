@@ -1449,8 +1449,8 @@
 			<Type>UNIT_ZULU_IMPI</Type>
 			<PrereqTech>TECH_METALLURGY</PrereqTech>
 			<BaseSightRange>2</BaseSightRange>
-			<Combat>38</Combat>
-			<RangedCombat>38</RangedCombat>
+			<Combat>42</Combat>
+			<RangedCombat>42</RangedCombat>
 			<Cost>60</Cost>
 			<Moves>2</Moves>
 			<Range>1</Range>

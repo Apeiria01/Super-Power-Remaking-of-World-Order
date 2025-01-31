@@ -2758,7 +2758,7 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_BABYLON_WATER_PUMP_HELP</Tag>
 			<Text>
-				+5% [ICON_FOOD] Food output for the city and +1 [ICON_FOOD] Food in every tile next to a River. 
+				+10% [ICON_FOOD] Food output for the city and +1 [ICON_FOOD] Food in every tile next to a River. 
 			</Text>
 		</Row>
 

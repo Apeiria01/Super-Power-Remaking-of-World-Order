@@ -409,7 +409,7 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_BABYLON_WATER_PUMP_HELP</Tag>
 			<Text>
-				本城+5%[ICON_FOOD]粮食产出，所有沿河地块+1[ICON_FOOD]粮食产出。
+				本城+10%[ICON_FOOD]粮食产出，所有沿河地块+1[ICON_FOOD]粮食产出。
 			</Text>
 		</Row>
 
