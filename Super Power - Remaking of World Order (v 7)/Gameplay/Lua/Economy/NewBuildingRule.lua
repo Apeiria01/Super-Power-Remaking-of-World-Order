@@ -1,5 +1,5 @@
 local bIsAllUBActive = PreGame.GetGameOption("GAMEOPTION_HUMAN_ALL_UC") == 1 or GameInfo.SPNewEffectControler.SP_ALL_UB_ACTIVE.Enabled
-function NromanCampBouns(iPlayer)
+function NromanCampBouns(iPlayer, bIsDestroyed, iCity)
     local pPlayer = Players[iPlayer]
     if not pPlayer:IsMajorCiv() then
         return
@@ -9,8 +9,17 @@ function NromanCampBouns(iPlayer)
         return
     end
     local NromanCampRandom = Game.Rand(4, "Set NormanCamp Random!") --rand=0-3
-    local eEra = pPlayer:GetCurrentEra()
-    local iNromanCampBonus = (eEra + 1) * NumOfNromanCamp
+
+    local iNromanCampBonus = 0
+	if bIsDestroyed then
+		local eEra = pPlayer:GetCurrentEra()
+		iNromanCampBonus = (eEra + 1) * NumOfNromanCamp
+	else
+		local pCity = pPlayer:GetCityByID(iCity)
+		if not pCity then return end
+		iNromanCampBonus = math.floor(pCity:GetPopulation() / 5 + 1) * NumOfNromanCamp;
+	end
+	
     print("NormanCamp Random", NromanCampRandom, iNromanCampBonus)
     if pPlayer:IsHuman() then
         local hex
@@ -43,17 +52,15 @@ function NromanCampBouns(iPlayer)
 end
 
 if bIsAllUBActive or Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_DENMARK) then
-    function SPNNromanCampConquestedCity(oldOwnerID, isCapital, cityX, cityY, newOwnerID, numPop, isConquest)
+    function SPNNromanCampConquestedCity(oldOwnerID, isCapital, cityX, cityY, newOwnerID, numPop, isConquest, GWSolts, numGW, iNewID)
         if not isConquest then return end
-        NromanCampBouns(newOwnerID)
+        NromanCampBouns(newOwnerID, false, iNewID)
     end
-
     GameEvents.CityCaptureComplete.Add(SPNNromanCampConquestedCity)
 
     function SPNNromanCampDestroyCity(hexPos, iPlayer, iCity)
-        NromanCampBouns(iPlayer)
+        NromanCampBouns(iPlayer, true, iCity)
     end
-
     Events.SerialEventCityDestroyed.Add(SPNNromanCampDestroyCity)
 end
 
