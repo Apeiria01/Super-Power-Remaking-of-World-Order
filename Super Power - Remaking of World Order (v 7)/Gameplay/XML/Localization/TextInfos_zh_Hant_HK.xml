@@ -402,7 +402,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_BABYLON_WATER_PUMP_HELP</Tag>
-			<Text>本城+5%[ICON_FOOD]糧食產出，所有沿河地塊+1[ICON_FOOD]糧食產出。
+			<Text>本城+10%[ICON_FOOD]食物產出，所有沿河地塊+1[ICON_FOOD]食物產出。
 			</Text>
 		</Row>
 

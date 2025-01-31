@@ -2072,7 +2072,7 @@
 		<Row>
 			<BuildingType>BUILDING_BABYLON_WATER_PUMP</BuildingType>
 			<YieldType>YIELD_FOOD</YieldType>
-			<Yield>5</Yield>
+			<Yield>10</Yield>
 		</Row>
 
 		<Row>
