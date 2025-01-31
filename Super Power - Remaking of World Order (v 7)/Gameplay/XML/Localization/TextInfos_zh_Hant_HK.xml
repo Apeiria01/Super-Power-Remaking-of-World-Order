@@ -5820,8 +5820,9 @@
 
 		<Replace Tag="TXT_KEY_TRAIT_VIKING_FURY">
 			<Text>
-				[ICON_BULLET]所有陸軍近戰單位和海軍近戰單位劫掠均不消耗[ICON_MOVES]移動力，並具有攻城時將對城市造成傷害的200%數值轉化為[ICON_GOLD]金錢的能力。
+				[ICON_BULLET]近戰單位劫掠不消耗[ICON_MOVES]移動力，攻城時其對城市傷害的200%轉化為[ICON_GOLD]金錢。
 				[NEWLINE][ICON_BULLET]攻占城市或攻占營寨獲得2倍的[ICON_GOLD]金錢。
+				[NEWLINE][ICON_BULLET]單位登陸僅消耗1[ICON_MOVES]移動力。
 				[NEWLINE][ICON_BULLET]每處海上設施+1[ICON_CULTURE]文化產出。
 			</Text>
 		</Replace>
@@ -6005,8 +6006,9 @@
 
 		<Replace Tag="TXT_KEY_TRAIT_LONG_COUNT">
 			<Text>
-				[ICON_BULLET]若你已研發神學科技，啟用每個長紀歷，首都每次完成科研建築時獲得一次性科研獎勵
-				[NEWLINE][ICON_BULLET]啟用長紀歷後，每個長紀歷(394年，遊戲需要!這不是真實的周期時長!)周期獲得一位自選偉人，首輪每種偉人僅能選擇一次。
+				[ICON_BULLET]研發神學科技後啟用長紀歷，首都每次完成科研建築時獲得一次性[ICON_RESEARCH]科研獎勵
+				[NEWLINE][ICON_BULLET]每個長紀歷(394年)周期獲得一位自選偉人，首輪每種偉人僅能選擇一次。
+				[NEWLINE][ICON_BULLET]你不能進行遷都。
 			</Text>
 		</Replace>
 
