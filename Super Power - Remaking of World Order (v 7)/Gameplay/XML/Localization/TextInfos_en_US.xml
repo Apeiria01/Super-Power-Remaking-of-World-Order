@@ -10476,8 +10476,9 @@
 
 		<Replace Tag="TXT_KEY_TRAIT_VIKING_FURY">
 			<Text>
-				[ICON_BULLET]Land Melee units and Naval Melee units pay no Movement [ICON_MOVES] to pillage and pillage [ICON_GOLD] Gold equal to 200% of the damage inflicted on a city. 
+				[ICON_BULLET]Melee units pay no Movement [ICON_MOVES] to pillage and pillage [ICON_GOLD] Gold equal to 200% of the damage inflicted on a city. 
 				[NEWLINE][ICON_BULLET]Receive triple [ICON_GOLD] Gold from barbarian encampments or pillaging cities.
+				[NEWLINE][ICON_BULLET]Embarked units pay just 1 Movement [ICON_MOVES] to move from sea to land.
 				[NEWLINE][ICON_BULLET]+1 [ICON_CULTURE] Culture output for every Fishing Net, Workboats and Offshore Platform.
 			</Text>
 		</Replace>
@@ -10668,7 +10669,10 @@
 
 		<Replace Tag="TXT_KEY_TRAIT_LONG_COUNT">
 			<Text>
-				After researching Theology, receive a [ICON_RESEARCH] tech boost each time a scientific building / Wonder is built in the [ICON_CAPITAL] Capital. Also receive a bonus Great Person at the end of every Maya Long Count calendar cycle (every 394 years in game, not true!). Each bonus person can only be chosen once for the first round.</Text>
+				[ICON_BULLET]After researching Theology, receive a [ICON_RESEARCH] tech boost each time a scientific building / Wonder is built in the [ICON_CAPITAL] Capital.
+				[NEWLINE][ICON_BULLET]Receive a bonus Great Person at the end of every Maya Long Count calendar cycle (every 394 years). Each bonus person can only be chosen once for the first round.
+				[NEWLINE][ICON_BULLET]You cannot move your Capital.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_TRAIT_IGNORE_TERRAIN_IN_FOREST">
