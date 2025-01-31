@@ -746,7 +746,7 @@
 		<Replace Tag="TXT_KEY_BUILDING_PAPER_MAKER_HELP">
 			<Text>
 				允许在本国的商路之间输送[ICON_PRODUCTION]产能。该建筑不会过期。
-				[NEWLINE][NEWLINE]每一座造纸坊使全国范围内的建筑和项目的产能花费-2%，这个效果的上限是-30%。
+				[NEWLINE][NEWLINE]每一座造纸坊使全国范围内的建筑和项目的产能花费-2%，上限-20%。
 				[NEWLINE][NEWLINE]研发因特网后+2[ICON_TOURISM]魅力。
 			</Text>
 		</Replace>
