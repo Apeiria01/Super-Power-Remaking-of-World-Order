@@ -3334,8 +3334,9 @@
 
 		<Replace Tag="TXT_KEY_BUILDING_LIGHTHOUSE_HELP">
 			<Text>
-				+1 [ICON_PRODUCTION] Production from every [ICON_RES_FISH] [COLOR_POSITIVE_TEXT]Fish[ENDCOLOR], [COLOR_POSITIVE_TEXT]marine Luxury Resource[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Atoll[ENDCOLOR] worked by this City.
-				[NEWLINE][NEWLINE]City must be built on the coast.</Text>
+				+1 [ICON_PRODUCTION] Production from every [ICON_RES_FISH] [COLOR_POSITIVE_TEXT]Fish[ENDCOLOR], marine [COLOR_POSITIVE_TEXT]Luxury Resource[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Atoll[ENDCOLOR] worked by this City.
+				[NEWLINE][NEWLINE]City must be built on the coast.
+			</Text>
 		</Replace>
 
 
@@ -3345,7 +3346,8 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_PORTUGAL_PORT_HELP">
 			<Text>
-				[ICON_BULLET]+1 [ICON_GOLD] Gold and +1 [ICON_PRODUCTION] for every [COLOR_POSITIVE_TEXT]Luxury Resource[ENDCOLOR] on water tiles worked by this City.
+				[ICON_BULLET]+1 [ICON_GOLD] Gold for every [COLOR_POSITIVE_TEXT]Luxury Resource[ENDCOLOR] on water tiles worked by this City.
+				[NEWLINE][ICON_BULLET]+1 [ICON_PRODUCTION] Production from every [ICON_RES_FISH] [COLOR_POSITIVE_TEXT]Fish[ENDCOLOR], marine [COLOR_POSITIVE_TEXT]Luxury Resource[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Atoll[ENDCOLOR] worked by this City.
 				[NEWLINE][ICON_BULLET]+1 [ICON_PRODUCTION] for every [COLOR_POSITIVE_TEXT]Atoll[ENDCOLOR] worked by this City.
 				[NEWLINE][ICON_BULLET]+3 [ICON_RES_CONSUMER] Consumer.
 				[NEWLINE][ICON_BULLET]Gain [ICON_GOLD] when a International Cargo ship passes through city plots and the city has Feitoria.

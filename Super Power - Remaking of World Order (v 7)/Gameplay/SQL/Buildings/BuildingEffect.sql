@@ -15,10 +15,11 @@ SELECT 'BUILDING_PORTUGAL_PORT',t1.Type,'YIELD_PRODUCTION',1
 FROM Resources t1 LEFT JOIN Resource_TerrainBooleans t2
 ON t1.Type = t2.ResourceType
 WHERE t1.ResourceClassType = 'RESOURCECLASS_LUXURY' AND t2.TerrainType = 'TERRAIN_COAST' UNION ALL
+SELECT 'BUILDING_PORTUGAL_PORT','RESOURCE_FISH','YIELD_PRODUCTION',1 UNION ALL
 SELECT 'BUILDING_PORTUGAL_PORT',t1.Type,'YIELD_GOLD',1
 FROM Resources t1 LEFT JOIN Resource_TerrainBooleans t2
 ON t1.Type = t2.ResourceType
-WHERE t1.ResourceClassType = 'RESOURCECLASS_LUXURY' AND t2.TerrainType = 'TERRAIN_COAST' ;
+WHERE t1.ResourceClassType = 'RESOURCECLASS_LUXURY' AND t2.TerrainType = 'TERRAIN_COAST';
 
 -- BUILDING_CARTHAGINIAN_AGORA Effect
 insert into Policies (`Type`, `Description`, Help, PortraitIndex, IconAtlas, IconAtlasAchieved, Dummy) values
