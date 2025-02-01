@@ -3931,22 +3931,22 @@
 		<Row>
 			<UnitType>UNIT_NAVAL_MILITIA</UnitType>
 			<FlavorType>FLAVOR_NAVAL</FlavorType>
-			<Flavor>12</Flavor>
+			<Flavor>10</Flavor>
 		</Row>
 		<Row>
 			<UnitType>UNIT_MONITOR_SHIP</UnitType>
 			<FlavorType>FLAVOR_NAVAL</FlavorType>
-			<Flavor>30</Flavor>
+			<Flavor>20</Flavor>
 		</Row>
 		<Row>
 			<UnitType>UNIT_CORVETTE</UnitType>
 			<FlavorType>FLAVOR_NAVAL</FlavorType>
-			<Flavor>65</Flavor>
+			<Flavor>30</Flavor>
 		</Row>
 		<Row>
 			<UnitType>UNIT_LITTORAL_COMBAT_SHIP</UnitType>
 			<FlavorType>FLAVOR_NAVAL</FlavorType>
-			<Flavor>100</Flavor>
+			<Flavor>40</Flavor>
 		</Row>
 
 		<Row>
@@ -3957,17 +3957,17 @@
 		<Row>
 			<UnitType>UNIT_MONITOR_SHIP</UnitType>
 			<FlavorType>FLAVOR_DEFENSE</FlavorType>
-			<Flavor>25</Flavor>
+			<Flavor>20</Flavor>
 		</Row>
 		<Row>
 			<UnitType>UNIT_CORVETTE</UnitType>
 			<FlavorType>FLAVOR_DEFENSE</FlavorType>
-			<Flavor>55</Flavor>
+			<Flavor>30</Flavor>
 		</Row>
 		<Row>
 			<UnitType>UNIT_LITTORAL_COMBAT_SHIP</UnitType>
 			<FlavorType>FLAVOR_DEFENSE</FlavorType>
-			<Flavor>65</Flavor>
+			<Flavor>40</Flavor>
 		</Row>
 
 
