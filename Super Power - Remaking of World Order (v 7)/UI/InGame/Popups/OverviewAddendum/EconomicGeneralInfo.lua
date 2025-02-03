@@ -27,8 +27,6 @@ local m_SortMode = ePopulation;
 local m_bSortReverse = false;
 local m_bdoSort = false;
 
-local m_bHidden = false;
-
 local pediaSearchStrings = {};
 
 
@@ -131,7 +129,7 @@ end
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 function OnFlashEG()
-	if not m_bHidden then
+	if not ContextPtr:IsHidden() and UI.IsPopupUp(ContextPtr) then
 		UpdateDisplay()
 	end
 end
@@ -968,6 +966,5 @@ function ShowHideHandler( bIsHide, bInitState )
     if( not bIsHide ) then
     	UpdateDisplay();
 	end
-	m_bHidden = bIsHide;
 end
 ContextPtr:SetShowHideHandler( ShowHideHandler );
