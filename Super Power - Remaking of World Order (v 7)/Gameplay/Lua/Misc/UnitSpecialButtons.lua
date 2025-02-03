@@ -279,14 +279,15 @@ CaravelToExplorerButton = {
     ToolTip = "TXT_KEY_SP_BTNNOTE_UNIT_CARAVELTOEXPLORER", -- or a TXT_KEY_ or a function
 
     Condition = function(action, unit)
-        return unit:CanMove() and unit:GetUnitClassType() == GameInfo.UnitClasses.UNITCLASS_CARAVEL.ID and unit:GetPlot():IsAdjacentToLand() and Players[unit:GetOwner()]:GetCapitalCity() ~= nil;
+        return unit:CanMove() and unit:GetUnitClassType() == GameInfoTypes.UNITCLASS_CARAVEL and unit:GetPlot():IsAdjacentToLand() and Players[unit:GetOwner()]:GetCapitalCity() ~= nil;
     end, -- or nil or a boolean, default is true
 
     Disabled = function(action, unit)
         local bIsDisabled = true;
+        local iCapitalArea = Players[unit:GetOwner()]:GetCapitalCity():Plot():GetArea()
         for i = 0, 5 do
             local adjPlot = Map.PlotDirection(unit:GetX(), unit:GetY(), i)
-            if adjPlot ~= nil and adjPlot:IsCoastalLand() and adjPlot:GetArea() ~= Players[unit:GetOwner()]:GetCapitalCity():Plot():GetArea() then
+            if adjPlot ~= nil and adjPlot:IsCoastalLand() and adjPlot:GetArea() ~= iCapitalArea then
                 bIsDisabled = false;
                 break
             end
@@ -295,18 +296,12 @@ CaravelToExplorerButton = {
     end, -- or nil or a boolean, default is false
 
     Action = function(action, unit, eClick)
+        local player = Players[unit:GetOwner()]
+        local iNewUnit = player:GetCivUnit(GameInfoTypes.UNITCLASS_EXPLORERX);
+        if iNewUnit < 0 then return end;
+
         local plotX = unit:GetX()
         local plotY = unit:GetY()
-        local player = Players[unit:GetOwner()]
-        local iNewUnit = GameInfoTypes.UNIT_EXPLORERX;
-        local overrideUnit = GameInfo.Civilization_UnitClassOverrides {
-            UnitClassType = "UNITCLASS_EXPLORERX",
-            CivilizationType = GameInfo.Civilizations[player:GetCivilizationType()].Type
-        }();
-        if overrideUnit and overrideUnit.UnitType then
-            iNewUnit = GameInfoTypes[overrideUnit.UnitType];
-        end
-
         local NewUnit = player:InitUnit(iNewUnit, plotX, plotY, UNITAI_EXPLORE)
         NewUnit:JumpToNearestValidPlot()
 
@@ -330,11 +325,11 @@ UnitLaunchUavButton = {
         local player = Players[unit:GetOwner()]
         local pTeam = Teams[player:GetTeam()]
 
-        return unit:CanMove() and unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_DRONE_CARRIER"].ID) and pTeam:IsHasTech(GameInfoTypes["TECH_ARTIFICIAL_INTELLIGENCE"]);
+        return unit:CanMove() and unit:IsHasPromotion(GameInfoTypes["PROMOTION_DRONE_CARRIER"]) and pTeam:IsHasTech(GameInfoTypes["TECH_ARTIFICIAL_INTELLIGENCE"]);
     end, -- or nil or a boolean, default is true
 
     Disabled = function(action, unit)
-        return unit:GetPlot() == nil or unit:GetPlot():GetTerrainType() == GameInfo.Terrains.TERRAIN_OCEAN.ID or unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_DRONE_RELEASED"].ID);
+        return unit:GetPlot() == nil or unit:GetPlot():GetTerrainType() == GameInfoTypes.TERRAIN_OCEAN or unit:IsHasPromotion(GameInfoTypes["PROMOTION_DRONE_RELEASED"]);
     end, -- or nil or a boolean, default is false
 
     Action = function(action, unit, eClick)
@@ -365,7 +360,7 @@ WorkerToMilitiaButton = {
     ToolTip = "TXT_KEY_SP_BTNNOTE_UNIT_WORKERTOMILITIA", -- or a TXT_KEY_ or a function
 
     Condition = function(action, unit)
-        return unit:CanMove() and unit:GetUnitClassType() == GameInfo.UnitClasses.UNITCLASS_WORKER.ID;
+        return unit:CanMove() and unit:GetUnitClassType() == GameInfoTypes.UNITCLASS_WORKER;
     end, -- or nil or a boolean, default is true
 
     Disabled = function(action, unit)
@@ -412,7 +407,7 @@ MilitiaToWorkerButton = {
     ToolTip = "TXT_KEY_SP_BTNNOTE_UNIT_MILITIATOWORKER", -- or a TXT_KEY_ or a function
 
     Condition = function(action, unit)
-        return unit:CanMove() and unit:GetDomainType() == DomainTypes.DOMAIN_LAND and unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_MILITIA_COMBAT"].ID);
+        return unit:CanMove() and unit:GetDomainType() == DomainTypes.DOMAIN_LAND and unit:IsHasPromotion(GameInfoTypes["PROMOTION_MILITIA_COMBAT"]);
     end, -- or nil or a boolean, default is true
 
     Disabled = function(action, unit)
@@ -487,16 +482,16 @@ UnitFastMoveMentnButton = {
     ToolTip = "TXT_KEY_SP_BTNNOTE_UNIT_FASTMOVEMENT", -- or a TXT_KEY_ or a function
 
     Condition = function(action, unit)
-        return unit:CanMove() and unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_NUMIDIAN_MARCH"].ID) and not unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_RAPID_MARCH"].ID);
+        return unit:CanMove() and unit:IsHasPromotion(GameInfoTypes["PROMOTION_NUMIDIAN_MARCH"]) and not unit:IsHasPromotion(GameInfoTypes["PROMOTION_RAPID_MARCH"]);
     end, -- or nil or a boolean, default is true
 
     Disabled = function(action, unit)
-        return unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_RAPID_MARCH"].ID);
+        return unit:IsHasPromotion(GameInfoTypes["PROMOTION_RAPID_MARCH"]);
     end, -- or nil or a boolean, default is false
 
     Action = function(action, unit, eClick)
 
-        unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_RAPID_MARCH"].ID, true)
+        unit:SetHasPromotion(GameInfoTypes["PROMOTION_RAPID_MARCH"], true)
 
         --	unit:ChangeMoves (300)
         unit:SetMoves(unit:GetMoves() * 2)
@@ -519,7 +514,7 @@ UnitFullAttackOnButton = {
     ToolTip = "TXT_KEY_SP_BTNNOTE_UNIT_FULLATTACK_ON", -- or a TXT_KEY_ or a function
 
     Condition = function(action, unit)
-        return unit:CanMove() and unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_CAN_FULL_FIRE"].ID) and not unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_FULL_FIRE"].ID);
+        return unit:CanMove() and unit:IsHasPromotion(GameInfoTypes["PROMOTION_CAN_FULL_FIRE"]) and not unit:IsHasPromotion(GameInfoTypes["PROMOTION_FULL_FIRE"]);
     end, -- or nil or a boolean, default is true
 
     Disabled = function(action, unit)
@@ -528,7 +523,7 @@ UnitFullAttackOnButton = {
 
     Action = function(action, unit, eClick)
 
-        unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_FULL_FIRE"].ID, true)
+        unit:SetHasPromotion(GameInfoTypes["PROMOTION_FULL_FIRE"], true)
         local iMovesLeft = math.max(0, unit:MovesLeft() - 3 * GameDefines["MOVE_DENOMINATOR"])
         unit:SetMoves(iMovesLeft)
         print("Full Attack On!")
@@ -547,16 +542,16 @@ UnitFullAttackOffButton = {
     ToolTip = "TXT_KEY_SP_BTNNOTE_UNIT_FULLATTACK_OFF", -- or a TXT_KEY_ or a function
 
     Condition = function(action, unit)
-        return unit:CanMove() and unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_FULL_FIRE"].ID);
+        return unit:CanMove() and unit:IsHasPromotion(GameInfoTypes["PROMOTION_FULL_FIRE"]);
     end, -- or nil or a boolean, default is true
 
     Disabled = function(action, unit)
-        return not unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_FULL_FIRE"].ID);
+        return not unit:IsHasPromotion(GameInfoTypes["PROMOTION_FULL_FIRE"]);
     end, -- or nil or a boolean, default is false
 
     Action = function(action, unit, eClick)
 
-        unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_FULL_FIRE"].ID, false)
+        unit:SetHasPromotion(GameInfoTypes["PROMOTION_FULL_FIRE"], false)
         unit:SetMoves(0)
         print("Full Attack Off!")
 
@@ -659,7 +654,7 @@ UnitRiotControlButton = {
     ToolTip = "TXT_KEY_SP_BTNNOTE_UNIT_RIOT_CONTROL", -- or a TXT_KEY_ or a function
 
     Condition = function(action, unit)
-        return unit:CanMove() and unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_SP_FORCE_X_1"].ID)
+        return unit:CanMove() and unit:IsHasPromotion(GameInfoTypes["PROMOTION_SP_FORCE_X_1"])
     end, -- or nil or a boolean, default is true
 
     Disabled = function(action, unit)
@@ -668,7 +663,7 @@ UnitRiotControlButton = {
             return true
         end
         local city = plot:GetPlotCity()
-        return not city or city:GetOwner() ~= unit:GetOwner() or not city:IsResistance() or (city:GetResistanceTurns() < 3 and not unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_ANTI_RIOT_BONUS"].ID));
+        return not city or city:GetOwner() ~= unit:GetOwner() or not city:IsResistance() or (city:GetResistanceTurns() < 3 and not unit:IsHasPromotion(GameInfoTypes["PROMOTION_ANTI_RIOT_BONUS"]));
     end, -- or nil or a boolean, default is false
 
     Action = function(action, unit, eClick)
@@ -679,7 +674,7 @@ UnitRiotControlButton = {
             return
         end
 
-        if unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_ANTI_RIOT_BONUS"].ID) then
+        if unit:IsHasPromotion(GameInfoTypes["PROMOTION_ANTI_RIOT_BONUS"]) then
             city:ChangeResistanceTurns(-3)
             unit:SetMoves(0)
             unit:ChangeExperience(6)
@@ -705,7 +700,7 @@ ReconTargetGuideButton = {
     ToolTip = "TXT_KEY_SP_BTNNOTE_UNIT_RECON_TARGET_GUIDE", -- or a TXT_KEY_ or a function
 
     Condition = function(action, unit)
-        return unit:CanMove() and (unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_SP_FORCE_X_2"].ID) or unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_GREAT_ADMIRAL"].ID));
+        return unit:CanMove() and (unit:IsHasPromotion(GameInfoTypes["PROMOTION_SP_FORCE_X_2"]) or unit:IsHasPromotion(GameInfoTypes["PROMOTION_GREAT_ADMIRAL"]));
     end, -- or nil or a boolean, default is true
 
     Disabled = function(action, unit)
@@ -715,16 +710,6 @@ ReconTargetGuideButton = {
         if unitCount <= 1 then
             return true
         end
-
-        --   	for i = 0, unitCount-1, 1 do  
-        --  		local pFoundUnit = plot:GetUnit(i)
-        --  		if pFoundUnit:GetID() ~= pDefendingUnit:GetID() then
-        --	  		if not pFoundUnit:IsRanged() then
-        --	  			return true 
-        --	  		end
-        --  		end
-        --	end
-
     end, -- or nil or a boolean, default is false
 
     Action = function(action, unit, eClick)
@@ -756,7 +741,7 @@ EmergencyHealButton = {
     ToolTip = "TXT_KEY_SP_BTNNOTE_UNIT_EMERGENCY_HEAL", -- or a TXT_KEY_ or a function
 
     Condition = function(action, unit)
-        return unit:CanMove() and unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_SP_FORCE_X_3"].ID);
+        return unit:CanMove() and unit:IsHasPromotion(GameInfoTypes["PROMOTION_SP_FORCE_X_3"]);
     end, -- or nil or a boolean, default is true
 
     Disabled = function(action, unit)
@@ -804,7 +789,7 @@ MilitiaResupplyButton = {
     ToolTip = "TXT_KEY_SP_BTNNOTE_UNIT_MILITIA_RESUPPLY", -- or a TXT_KEY_ or a function
 
     Condition = function(action, unit)
-        return unit:CanMove() and unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_MILITIA_COMBAT"].ID);
+        return unit:CanMove() and unit:IsHasPromotion(GameInfoTypes["PROMOTION_MILITIA_COMBAT"]);
     end, -- or nil or a boolean, default is true
 
     Disabled = function(action, unit)
@@ -1135,7 +1120,7 @@ MoralBoostButton = {
     ToolTip = "TXT_KEY_SP_BTNNOTE_UNIT_MORAL_BOOST", -- or a TXT_KEY_ or a function
 
     Condition = function(action, unit)
-        return unit:CanMove() and (unit:GetUnitClassType() == GameInfo.UnitClasses.UNITCLASS_GREAT_GENERAL.ID or unit:GetUnitClassType() == GameInfo.UnitClasses.UNITCLASS_GREAT_ADMIRAL.ID or unit:GetUnitType() == GameInfoTypes["UNIT_POLISH_PZLW3_HELICOPTER"] or unit:GetUnitType() == GameInfoTypes["UNIT_HUN_SHAMAN"]);
+        return unit:CanMove() and (unit:GetUnitClassType() == GameInfoTypes.UNITCLASS_GREAT_GENERAL or unit:GetUnitClassType() == GameInfoTypes.UNITCLASS_GREAT_ADMIRAL or unit:GetUnitType() == GameInfoTypes["UNIT_POLISH_PZLW3_HELICOPTER"] or unit:GetUnitType() == GameInfoTypes["UNIT_HUN_SHAMAN"]);
     end, -- or nil or a boolean, default is true
 
     Disabled = function(action, unit)
@@ -1240,7 +1225,7 @@ SatelliteLaunchingButton = {
     PortraitIndex = 49,
     ToolTip = "TXT_KEY_SP_BTNNOTE_SATELLITE_LAUNCHING", -- or a TXT_KEY_ or a function
     Condition = function(action, unit)
-        return unit:CanMove() and unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_SATELLITE_UNIT"].ID);
+        return unit:CanMove() and unit:IsHasPromotion(GameInfoTypes["PROMOTION_SATELLITE_UNIT"]);
     end, -- or nil or a boolean, default is true
 
     Disabled = function(action, unit)
@@ -1281,7 +1266,7 @@ LuckyEButton = {
     ToolTip = "TXT_KEY_LUCKYE", -- or a TXT_KEY_ or a function
 
     Condition = function(action, unit)
-        return unit:CanMove() and unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_LUCKY_CARRIER"].ID) and not unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_NO_LUCK"].ID)
+        return unit:CanMove() and unit:IsHasPromotion(GameInfoTypes["PROMOTION_LUCKY_CARRIER"]) and not unit:IsHasPromotion(GameInfoTypes["PROMOTION_NO_LUCK"])
     end, -- or nil or a boolean, default is true
 
     Disabled = function(action, unit)
@@ -1473,9 +1458,9 @@ UpgradetoArchaeologist = {
     OrderPriority = 200, -- default is 200
     IconAtlas = "EXPANSION2_UNIT_ATLAS", -- 45 and 64 variations required
     PortraitIndex = 0,
-    ToolTip = Locale.ConvertTextKey("TXT_KEY_UPGRADE_HELP", GameInfo.Units["UNIT_ARCHAEOLOGIST"].Description, 80), -- or a TXT_KEY_ or a function
+    ToolTip = Locale.ConvertTextKey("TXT_KEY_UPGRADE_HELP", "TXT_KEY_UNIT_ARCHAEOLOGIST", 80), -- or a TXT_KEY_ or a function
     Condition = function(action, unit)
-        return unit:CanMove() and unit:GetUnitClassType() == GameInfoTypes["UNITCLASS_EXPLORERX"] and Teams[Players[unit:GetOwner()]:GetTeam()]:IsHasTech(GameInfoTypes["TECH_ARCHAEOLOGY"]);
+        return unit:CanMove() and unit:GetUnitClassType() == GameInfoTypes["UNITCLASS_EXPLORERX"] and Players[unit:GetOwner()]:HasTech(GameInfoTypes["TECH_ARCHAEOLOGY"]);
     end, -- or nil or a boolean, default is true
     Disabled = function(action, unit)
         return unit:GetPlot():GetOwner() ~= unit:GetOwner() or Players[unit:GetOwner()]:GetUnitClassCount(GameInfoTypes.UNITCLASS_ARCHAEOLOGIST) >= GameInfo.UnitClasses["UNITCLASS_ARCHAEOLOGIST"].MaxPlayerInstances or Players[unit:GetOwner()]:GetGold() < 80;
@@ -1528,7 +1513,7 @@ AutomationTButton = {
     PortraitIndex = 36,
     ToolTip = "TXT_KEY_SP_NOTIFICATION_AUTOMATION_ACTIVE", -- or a TXT_KEY_ or a function
     Condition = function(build, unit)
-        return unit:CanMove() and unit:WorkRate() > 0 and Teams[Players[unit:GetOwner()]:GetTeam()]:IsHasTech(GameInfoTypes["TECH_AUTOMATION_T"]);
+        return unit:CanMove() and unit:WorkRate() > 0 and Players[unit:GetOwner()]:HasTech(GameInfoTypes["TECH_AUTOMATION_T"]);
     end, -- or nil or a boolean, default is true
     Disabled = function(build, unit)
         return false;
