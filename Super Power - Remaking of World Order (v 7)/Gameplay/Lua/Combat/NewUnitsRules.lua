@@ -22,6 +22,17 @@ local ArmeeID = GameInfo.UnitPromotions["PROMOTION_CORPS_2"].ID
 local CitadelID = GameInfo.UnitPromotions["PROMOTION_CITADEL_DEFENSE"].ID
 
 
+function DoUnitForceUpgrade(player, unit)
+	if not unit or not unit:GetPlot() then return end
+	local unitInfo = GameInfo.Units[unit:GetUpgradeUnitType()];
+	if not unitInfo or not unitInfo.PrereqTech then return end
+	if not player:HasTech(GameInfoTypes[unitInfo.PrereqTech]) then return end
+	
+	local plot = unit:GetPlot();
+	local iUnitType = unit:GetUpgradeUnitType();
+	unit:Kill();
+	player:InitUnit(iUnitType, plot:GetX(), plot:GetY(), UNITAI_ATTACK);
+end
 -- Human Player's units rule & AI units assistance
 function NewUnitCreationRules(playerID)
 
@@ -35,14 +46,7 @@ function NewUnitCreationRules(playerID)
 	if player:IsBarbarian() then
 		-- Auto Upgrade for Barbarian
 		for unit in player:Units() do
-			if unit and unit:GetPlot() and GameInfo.Units[unit:GetUpgradeUnitType()] and GameInfo.Units[unit:GetUpgradeUnitType()].PrereqTech
-			and Teams[player:GetTeam()]:IsHasTech(GameInfoTypes[GameInfo.Units[unit:GetUpgradeUnitType()].PrereqTech])
-			then
-				local plot = unit:GetPlot();
-				local iUnitType = unit:GetUpgradeUnitType();
-				unit:Kill();
-				player:InitUnit(iUnitType, plot:GetX(), plot:GetY(), UNITAI_ATTACK);
-			end
+			DoUnitForceUpgrade(player, unit)
 		end
 		return;
 	end
@@ -50,7 +54,7 @@ function NewUnitCreationRules(playerID)
 	-- Fix Embarked Graphic Reoverride for POLYNESIAN & DANISH when they into ERA_INDUSTRIAL
 	if (player:GetEmbarkedGraphicOverride() == "ART_DEF_UNIT_U_POLYNESIAN_WAR_CANOE"
 			or player:GetEmbarkedGraphicOverride() == "ART_DEF_UNIT_U_DANISH_LONGBOAT")
-		and player:GetCurrentEra() >= GameInfo.Eras["ERA_INDUSTRIAL"].ID
+		and player:GetCurrentEra() >= GameInfoTypes["ERA_INDUSTRIAL"]
 	then
 		player:SetEmbarkedGraphicOverride("ART_DEF_UNIT_TRANSPORT");
 	end
@@ -65,8 +69,8 @@ function NewUnitCreationRules(playerID)
 	for unit in player:Units() do
 		if unit == nil then
 			-- Remove mis-placed units in city
-		elseif (unit:GetSpecialUnitType() == GameInfo.SpecialUnits.SPECIALUNIT_MISSILE.ID
-				or unit:GetSpecialUnitType() == GameInfo.SpecialUnits.SPECIALUNIT_FIGHTER.ID)
+		elseif (unit:GetSpecialUnitType() == GameInfoTypes.SPECIALUNIT_MISSILE
+				or unit:GetSpecialUnitType() == GameInfoTypes.SPECIALUNIT_FIGHTER)
 		and not unit:IsCargo() then
 			unit:Kill();
 			print("This unit shoudln't be put without Carrier, so it is removed!");
@@ -84,25 +88,25 @@ function NewUnitCreationRules(playerID)
 
 			-- Enterprise upgrade to become the most powerful carrier
 			if unit:GetUnitClassType() == GameInfoTypes["UNITCLASS_SUPER_CARRIER"] and unit:IsHasPromotion(LuckyCarrierID)
-				and not unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_ADDITIONAL_CARGO_II"].ID)
+				and not unit:IsHasPromotion(GameInfoTypes["PROMOTION_ADDITIONAL_CARGO_II"])
 			then
-				unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_ADDITIONAL_CARGO_II"].ID, true)
+				unit:SetHasPromotion(GameInfoTypes["PROMOTION_ADDITIONAL_CARGO_II"], true)
 			end
 
 			-- Fix mis-placed Citadel Units
 			if unit:IsImmobile() 
 			and unit:GetBaseCombatStrength() > 0 
 			and unit:GetPlot() ~= nil 
-			and unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_CITADEL_DEFENSE"].ID) 
+			and unit:IsHasPromotion(GameInfoTypes["PROMOTION_CITADEL_DEFENSE"]) 
 			then
 				local plot = unit:GetPlot();
-				if plot:GetImprovementType() ~= GameInfo.Improvements["IMPROVEMENT_CITADEL"].ID
-					and plot:GetImprovementType() ~= GameInfo.Improvements["IMPROVEMENT_COASTAL_FORT"].ID
+				if plot:GetImprovementType() ~= GameInfoTypes["IMPROVEMENT_CITADEL"]
+					and plot:GetImprovementType() ~= GameInfoTypes["IMPROVEMENT_COASTAL_FORT"]
 				then
 					if not plot:IsWater() then
-						plot:SetImprovementType(GameInfo.Improvements["IMPROVEMENT_CITADEL"].ID);
+						plot:SetImprovementType(GameInfoTypes["IMPROVEMENT_CITADEL"]);
 					else
-						plot:SetImprovementType(GameInfo.Improvements["IMPROVEMENT_COASTAL_FORT"].ID);
+						plot:SetImprovementType(GameInfoTypes["IMPROVEMENT_COASTAL_FORT"]);
 					end
 					print("Miss-placed Citidal units Fixed!")
 				end
@@ -142,13 +146,13 @@ function NewUnitCreationRules(playerID)
 				end
 			-- Cargos Update
 			elseif unit:IsCargo() and unit:GetTransportUnit()
-			and GameInfo.Units[unit:GetUpgradeUnitType()] and GameInfo.Units[unit:GetUpgradeUnitType()].PrereqTech
-			and Teams[player:GetTeam()]:IsHasTech(GameInfoTypes[GameInfo.Units[unit:GetUpgradeUnitType()].PrereqTech])
+			-- not for AI
+			and player:IsHuman()
 			and ((unit:GetTransportUnit():GetUnitType() == GameInfoTypes["UNIT_HORNET"] and creationRandNum < 34)
 				or sSpecial == "SPECIALUNIT_FIGHTER" or sSpecial == "SPECIALUNIT_MISSILE")
 			and (unit:GetPlot():IsFriendlyTerritory(playerID) or unit:GetTransportUnit():IsHasPromotion(CarrierSupply3ID))
-			-- not for AI
-			and player:IsHuman()
+			and GameInfo.Units[unit:GetUpgradeUnitType()] and GameInfo.Units[unit:GetUpgradeUnitType()].PrereqTech
+			and Teams[player:GetTeam()]:IsHasTech(GameInfoTypes[GameInfo.Units[unit:GetUpgradeUnitType()].PrereqTech])
 			then
 				if g_CargoSetList[playerID] == nil then
 					SPCargoListSetup(playerID);
@@ -325,12 +329,12 @@ function CarrierPromotionTransfer(player, unit)
 end
 
 function AASPromotionTransfer(player, unit)
-	local Sunder1ID = GameInfo.UnitPromotions["PROMOTION_SUNDER_1"].ID
-	local Sunder2ID = GameInfo.UnitPromotions["PROMOTION_SUNDER_2"].ID
-	local CollDamageLV1ID = GameInfo.UnitPromotions["PROMOTION_COLLATERAL_DAMAGE_1"].ID
-	local CollDamageLV2ID = GameInfo.UnitPromotions["PROMOTION_COLLATERAL_DAMAGE_2"].ID
+	local Sunder1ID = GameInfoTypes["PROMOTION_SUNDER_1"]
+	local Sunder2ID = GameInfoTypes["PROMOTION_SUNDER_2"]
+	local CollDamageLV1ID = GameInfoTypes["PROMOTION_COLLATERAL_DAMAGE_1"]
+	local CollDamageLV2ID = GameInfoTypes["PROMOTION_COLLATERAL_DAMAGE_2"]
 
-	local LogisticsID = GameInfo.UnitPromotions["PROMOTION_LOGISTICS"].ID
+	local LogisticsID = GameInfoTypes["PROMOTION_LOGISTICS"]
 
 	local plot = unit:GetPlot();
 	if plot and unit:GetUnitType() == GameInfoTypes.UNIT_FRANCE_MISTRAL and unit:HasCargo() then
@@ -375,15 +379,15 @@ function SetEliteUnitsName(iPlayerID, iUnitID)
 		return;
 	end
 	local pUnit = Players[iPlayerID]:GetUnitByID(iUnitID);
-	if pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_ELITE_DEFENSE"].ID) then
+	if pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_ELITE_DEFENSE"]) then
 		pUnit:SetName("TXT_KEY_ELITE_NAME_SPARTAN300");   -- Locale.ConvertTextKey("TXT_KEY_ELITE_NAME_SPARTAN300")
-	elseif pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_NUMIDIAN_MARCH"].ID) and pUnit:GetUnitCombatType() == GameInfoTypes.UNITCOMBAT_HELICOPTER then
+	elseif pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_NUMIDIAN_MARCH"]) and pUnit:GetUnitCombatType() == GameInfoTypes.UNITCOMBAT_HELICOPTER then
 		pUnit:SetName("TXT_KEY_ELITE_NAME_NUMIDIAN");     -- Locale.ConvertTextKey("TXT_KEY_ELITE_NAME_NUMIDIAN")
-	elseif pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_GAIN_MOVES_AFFER_KILLING"].ID) then
+	elseif pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_GAIN_MOVES_AFFER_KILLING"]) then
 		pUnit:SetName("TXT_KEY_ELITE_NAME_ELITE_RIDER");  -- Locale.ConvertTextKey("TXT_KEY_ELITE_NAME_ELITE_RIDER")
-	elseif pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_RANGE_SPECIAL"].ID) then
+	elseif pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_RANGE_SPECIAL"]) then
 		pUnit:SetName("TXT_KEY_ELITE_NAME_ENGLISH_LONGBOWMAN"); -- Locale.ConvertTextKey("TXT_KEY_ELITE_NAME_ENGLISH_LONGBOWMAN")
-	elseif pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_SKI_INFANTRY"].ID) and pUnit:GetUnitClassType() ~= GameInfoTypes.UNITCLASS_MUSKETEER then
+	elseif pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_SKI_INFANTRY"]) and pUnit:GetUnitClassType() ~= GameInfoTypes.UNITCLASS_MUSKETEER then
 		pUnit:SetName("TXT_KEY_ELITE_NAME_DANISH_SKI_INFANTRY"); -- Locale.ConvertTextKey("TXT_KEY_ELITE_NAME_DANISH_SKI_INFANTRY")
 	elseif pUnit:GetUnitClassType() == GameInfoTypes.UNITCLASS_PROTOTYPE_HWACHA then
 		pUnit:SetName("TXT_KEY_ELITE_NAME_KOREA_HWACHA");  -- Locale.ConvertTextKey("TXT_KEY_ELITE_NAME_KOREA_HWACHA")
@@ -419,14 +423,14 @@ function FixWorkerBridge(iPlayerID, iUnitID)
 	if pUnit:IsEmbarked() then
 		if not pPlot:IsWater() then
 			pUnit:SetEmbarked(false);
-		elseif pPlot:GetImprovementType() == GameInfo.Improvements["IMPROVEMENT_PONTOON_BRIDGE_MOD"].ID then
+		elseif pPlot:GetImprovementType() == GameInfoTypes["IMPROVEMENT_PONTOON_BRIDGE_MOD"] then
 			for i = 0, pPlot:GetNumUnits() - 1, 1 do
 				if pPlot:GetUnit(i) and pPlot:GetUnit(i):GetDomainType() == DomainTypes.DOMAIN_LAND and pPlot:GetUnit(i):IsEmbarked() then
 					pPlot:GetUnit(i):SetEmbarked(false);
 				end
 			end
 		end
-	elseif pPlot:IsWater() and pPlot:GetImprovementType() ~= GameInfo.Improvements["IMPROVEMENT_PONTOON_BRIDGE_MOD"].ID then
+	elseif pPlot:IsWater() and pPlot:GetImprovementType() ~= GameInfoTypes["IMPROVEMENT_PONTOON_BRIDGE_MOD"] then
 		if pPlot:IsRoute() then
 			pPlot:SetRouteType(-1);
 		end
@@ -438,6 +442,6 @@ function FixWorkerBridge(iPlayerID, iUnitID)
 	end
 end
 
-Events.UnitShouldDimFlag.Add(FixWorkerBridge)
+--Events.UnitShouldDimFlag.Add(FixWorkerBridge)
 
 print("NewUnitRules Check success!")
