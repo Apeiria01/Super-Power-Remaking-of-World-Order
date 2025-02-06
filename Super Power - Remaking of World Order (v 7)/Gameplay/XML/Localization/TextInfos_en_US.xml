@@ -3908,11 +3908,6 @@
 				[NEWLINE][ICON_BULLET]Earn Great Scientists and Great Writer 15% faster for local City.
 			</Text>
 		</Replace>
-		<Update>
-			<Where Tag="TXT_KEY_WONDER_GREAT_LIBRARY_HELP" />
-			<Set
-				Text="+15% [ICON_RESEARCH] Science output in all cities. " />
-		</Update>
 
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_PYRAMIDS_HELP" />
