@@ -24,6 +24,7 @@
 include( "IconSupport" );
 include( "UniqueBonuses" );
 include( "InstanceManager" );
+include( "SP_PreGameManager" )
 
 -------------------------------------------------
 -- Globals
@@ -1351,6 +1352,7 @@ Controls.BackButton:RegisterCallback(Mouse.eLClick, OnBackClicked);
 -- Start Button Handler
 ---------------------------------------------------------------- 
 function OnStartClicked()
+	SPData:SaveData()
 	PreGame.SetPersistSettings(true);
 	
 	Events.SerialEventStartGame();
