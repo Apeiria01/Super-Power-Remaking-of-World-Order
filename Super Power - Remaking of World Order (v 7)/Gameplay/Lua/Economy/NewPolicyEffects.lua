@@ -26,7 +26,7 @@ function SPEConquestedCity(oldOwnerID, isCapital, cityX, cityY, newOwnerID, numP
 	 	return
 	end
 
-	if pPlayer:HasPolicy(GameInfo.Policies["POLICY_WARRIOR_CODE"].ID) then  
+	if pPlayer:HasPolicy(GameInfoTypes["POLICY_WARRIOR_CODE"]) then  
 		local conquestedCityPlot = Map.GetPlot(cityX, cityY)
 		local pCity = conquestedCityPlot:GetPlotCity()
 		if pCity == nil then return end
@@ -34,7 +34,7 @@ function SPEConquestedCity(oldOwnerID, isCapital, cityX, cityY, newOwnerID, numP
 		local pTeam = Teams[pPlayer:GetTeam()]
 		if pTeam == nil then return end
 
-		if pTeam:IsHasTech(GameInfo.Technologies["TECH_MATHEMATICS"].ID)
+		if pTeam:IsHasTech(GameInfoTypes["TECH_MATHEMATICS"])
 		and isConquest
 		and newOwnerID ~= pCity:GetOriginalOwner()
 		then 
@@ -55,7 +55,7 @@ function SPEPolicyCitizenshipHelper(pPlayer, pCity)
 	if pPlayer:IsHuman() then
 		Events.GameplayAlertMessage(Locale.ConvertTextKey("TXT_KEY_MESSAGE_POLICY_CITIZENSHIP_ALERT", pCity:GetName(), bonus))
 	end
-	print("SPEPolicyCitizenshipHelper: ", bonus);
+	--print("SPEPolicyCitizenshipHelper: ", bonus);
 end
 
 function SPEPlayerAdoptPolicy(playerID, policyID)
@@ -96,8 +96,8 @@ function SPECityBuildingCompleted(iPlayer, iCity, iBuilding, bGold, bFaithOrCult
 	end
 	local iBuildingClass = GameInfo.Buildings[iBuilding].BuildingClass
 	local isWonder = GameInfo.BuildingClasses[iBuildingClass].MaxGlobalInstances
-	if pPlayer:HasPolicy(GameInfo.Policies["POLICY_MERITOCRACY"].ID) 
-	and not pPlayer:IsPolicyBlocked(GameInfo.Policies["POLICY_MERITOCRACY"].ID)
+	if pPlayer:HasPolicy(GameInfoTypes["POLICY_MERITOCRACY"]) 
+	and not pPlayer:IsPolicyBlocked(GameInfoTypes["POLICY_MERITOCRACY"])
 	and bGold == false
 	and bFaithOrCulture == false
 	and isWonder  == -1
@@ -124,11 +124,11 @@ function SPECityTrainCompleted(iPlayer, iCity, iUnit, bGold, bFaithOrCulture)
 	end
 	local pUnit = pPlayer:GetUnitByID(iUnit)
 
-	if not pUnit or not (pUnit:GetUnitClassType() == GameInfo.UnitClasses.UNITCLASS_SETTLER.ID) then
+	if not pUnit or not (pUnit:GetUnitClassType() == GameInfoTypes.UNITCLASS_SETTLER) then
 		return
 	end
-	if pPlayer:HasPolicy(GameInfo.Policies["POLICY_MERITOCRACY"].ID) 
-	and not pPlayer:IsPolicyBlocked(GameInfo.Policies["POLICY_MERITOCRACY"].ID)
+	if pPlayer:HasPolicy(GameInfoTypes["POLICY_MERITOCRACY"]) 
+	and not pPlayer:IsPolicyBlocked(GameInfoTypes["POLICY_MERITOCRACY"])
 	and bGold == false
 	and bFaithOrCulture == false
 	then 
@@ -159,7 +159,7 @@ function SPEPlayerBulliedMinorCiv(iCS, iPlayer, iGold, iUnitType, iPlotX, iPlotY
 	end
 	if( iGold == -1 ) and ( iUnitType == -1 ) then return end
 
-	if pPlayer:HasPolicy(GameInfo.Policies["POLICY_CULTURAL_DIPLOMACY"].ID) then
+	if pPlayer:HasPolicy(GameInfoTypes["POLICY_CULTURAL_DIPLOMACY"]) then
 		local minorCity = civPlayer:GetCapitalCity()
 		if minorCity == nil then return end
 		--get nearest city from wp
@@ -201,7 +201,7 @@ function SPEPlayerCompletedMinorCivQuest(iMajor, iMinor, iQuestType, iStartTurn,
 	if pPlayer == nil or civPlayer == nil or pPlayer:IsMinorCiv() or pPlayer:IsBarbarian() then
 	 	return
 	end
-	if pPlayer:HasPolicy(GameInfo.Policies["POLICY_CONSULATES"].ID)
+	if pPlayer:HasPolicy(GameInfoTypes["POLICY_CONSULATES"])
 	and iNewInfluence - iOldInfluence > 0
 	then
 		local eEra = pPlayer:GetCurrentEra()

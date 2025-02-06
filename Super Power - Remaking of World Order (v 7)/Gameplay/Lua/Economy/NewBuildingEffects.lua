@@ -12,21 +12,21 @@ function NewBuildingEffects(iPlayer, iCity, iBuilding, bGold, bFaith)
 	local iBuildingClass = GameInfoTypes[GameInfo.Buildings[iBuilding].BuildingClass];
 
 	-- AI Bonus
-	if iBuildingClass == GameInfo.BuildingClasses.BUILDINGCLASS_ARMORY.ID or iBuildingClass == GameInfo.BuildingClasses.BUILDINGCLASS_ARSENAL.ID then
+	if iBuildingClass == GameInfoTypes.BUILDINGCLASS_ARMORY or iBuildingClass == GameInfoTypes.BUILDINGCLASS_ARSENAL then
 		if not player:IsHuman() then
-			local MAID = GameInfo.Buildings.BUILDING_MILITARY_ACADEMY.ID
+			local MAID = GameInfoTypes.BUILDING_MILITARY_ACADEMY
 			pCity:SetNumRealBuilding(MAID, 1)
 			print("AI Free Military Academy!")
 			if player:HasTrait(GameInfoTypes["TRAIT_FIGHT_WELL_DAMAGED"])
 			then
-				local DJID = GameInfo.Buildings.BUILDING_JAPANESE_DOJO.ID
+				local DJID = GameInfoTypes.BUILDING_JAPANESE_DOJO
 				pCity:SetNumRealBuilding(DJID, 1)
 				print("Japan AI free Dojo!")
 			end
 		end
 
 		-- Move Captial
-	elseif iBuilding == GameInfo.Buildings.BUILDING_NEW_PALACE.ID then
+	elseif iBuilding == GameInfoTypes.BUILDING_NEW_PALACE then
 		print("New Captial Built!")
 		local oCity = player:GetCapitalCity();
 		pCity:SetNumRealBuilding(GameInfoTypes["BUILDING_NEW_PALACE"], 0);

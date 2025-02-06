@@ -176,7 +176,7 @@ function NewAttackEffect()
 		-- Special Forces sabotage city
 		if not attUnit:IsDead() and attUnit:IsHasPromotion(SPForce2ID) then
 			print("Special Forces attacking City!")
-			if not (attPlayer:HasPolicy(GameInfo.Policies['POLICY_FUTURISM']) and defCity:IsOriginalCapital()) then ---Avoid 0 culture when sabotage a capital city--by HMS
+			if not (attPlayer:HasPolicy(GameInfoTypes['POLICY_FUTURISM']) and defCity:IsOriginalCapital()) then ---Avoid 0 culture when sabotage a capital city--by HMS
 				defCity:ChangeResistanceTurns(1)
 			end
 			local unitCount = batPlot:GetNumUnits()
@@ -205,22 +205,22 @@ function NewAttackEffect()
 			-- This AA unit is exempted from Air-sweep damage!
 			print("Airsweep and the defender is an AA unit!")
 
-			local attDamageInflicted = defUnit:GetRangeCombatDamage(defUnit, nil, false) * 0.5
+			local attDamageInflicted = defUnit:GetRangeCombatDamage(attUnit, nil, false) * 0.5
 			local defDamageInflicted = attUnit:GetRangeCombatDamage(defUnit, nil, false)
 
 			------------Defender exempt/reduced from damage
-			if defUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_ANTI_HELICOPTER"].ID) then
+			if defUnit:IsHasPromotion(GameInfoTypes["PROMOTION_ANTI_HELICOPTER"]) then
 				defDamageInflicted = 0
 				print("This AA unit is exempted from Air-sweep damage!")
 			end
-			if defUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_FLANK_GUN_1"].ID) then
+			if defUnit:IsHasPromotion(GameInfoTypes["PROMOTION_FLANK_GUN_1"]) then
 				defDamageInflicted = 0.5 * defDamageInflicted
 				print("This AA unit is reduced (-50%) from Air-sweep damage!")
 			end
 
 			------------In case of the AA unit is a melee unit
 			if not defUnit:IsRanged() then
-				attDamageInflicted = defDamageInflicted * 0.25;
+				attDamageInflicted = attDamageInflicted * 0.25;
 			end
 
 			---------------fix embarked unit bug
@@ -240,6 +240,8 @@ function NewAttackEffect()
 			local attUnitName = attUnit:GetName();
 			local defUnitName = defUnit:GetName();
 
+			local bAttUnitrDead = false;
+			local bDefUnitrDead = false;
 			if attDamageInflicted >= attUnit:GetCurrHitPoints() then
 				attDamageInflicted = attUnit:GetCurrHitPoints();
 				local eUnitType = attUnit:GetUnitType();
@@ -250,15 +252,8 @@ function NewAttackEffect()
 				elseif attPlayerID == Game.GetActivePlayer() then
 					text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_AIRSWEEP_KILLED_BY_ENEMY", attUnitName, defUnitName);
 				end
-			elseif attDamageInflicted > 0 then
-				attDamageInflicted = math.floor(attDamageInflicted);
-				attUnit:ChangeExperience(4)
-				if attPlayerID == Game.GetActivePlayer() then
-					text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_AIRSWEEP_TO_ENEMY", attUnitName, defUnitName,
-						tostring(attDamageInflicted));
-				end
+				bAttUnitrDead = true;
 			end
-
 			if defDamageInflicted >= defUnit:GetCurrHitPoints() then
 				defDamageInflicted = defUnit:GetCurrHitPoints();
 				local eUnitType = defUnit:GetUnitType();
@@ -269,12 +264,21 @@ function NewAttackEffect()
 				elseif attPlayerID == Game.GetActivePlayer() then
 					text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_AIRSWEEP_KILLED_ENEMY_AA", attUnitName, defUnitName);
 				end
-			elseif defDamageInflicted > 0 then
-				defDamageInflicted = math.floor(defDamageInflicted);
+				bDefUnitrDead = true;
+			end
+
+			attDamageInflicted = math.floor(attDamageInflicted);
+			defDamageInflicted = math.floor(defDamageInflicted);
+			if not bAttUnitrDead and attDamageInflicted > 0 then
+				attUnit:ChangeExperience(4)
+				if attPlayerID == Game.GetActivePlayer() then
+					text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_AIRSWEEP_TO_ENEMY", attUnitName, defUnitName, tostring(defDamageInflicted));
+				end
+			end
+			if not bDefUnitrDead and defDamageInflicted > 0 then
 				defUnit:ChangeExperience(2);
 				if defPlayerID == Game.GetActivePlayer() then
-					text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_AIRSWEEP_BY_ENEMY", attUnitName, defUnitName,
-						tostring(attDamageInflicted));
+					text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_AIRSWEEP_BY_ENEMY", attUnitName, defUnitName, tostring(defDamageInflicted));
 				end
 			end
 
