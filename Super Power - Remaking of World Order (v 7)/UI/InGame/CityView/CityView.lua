@@ -44,6 +44,12 @@ local InterfaceModeMessageHandler =
 	--[InterfaceModeTypes.INTERFACEMODE_CITY_PLOT_SELECTION] = {},
 	[InterfaceModeTypes.INTERFACEMODE_PURCHASE_PLOT] = {}
 }
+
+local g_CitySizeBuildingsInfo = {}
+for row in GameInfo.CitySizeBuildings() do
+	local info = GameInfo.Buildings[row.BuildingType]
+	if info then g_CitySizeBuildingsInfo[row.CitySize] = info end
+end
 -------------------------------------------------
 -- Clear out the UI so that when a player changes
 -- the next update doesn't show the previous player's
@@ -1662,7 +1668,7 @@ function OnCityViewUpdate()
 		-------------------------------------------
 		Controls.SPCityFrame:SetHide(true);
 		local iNowScale = pCity:GetScale()
-		tCityScale = GameInfo.Buildings[GameInfo.CitySizeBuildings[iNowScale].BuildingType];
+		tCityScale = g_CitySizeBuildingsInfo[iNowScale];
 		if tCityScale ~= nil or tCityLevel ~= nil then
 			Controls.SPCityFrame:SetHide(false);
 			-------------------------------------------
@@ -1675,9 +1681,9 @@ function OnCityViewUpdate()
 				Controls.CityScaleImage:SetToolTipString(strToolTip);
 
 				-- show all City Scale the city has by Qingyin
-				for iScale = 1, 6, 1 do
+				for iScale = 1, #g_CitySizeBuildingsInfo - 1, 1 do
 					if iScale < iNowScale then
-						local CityScale = GameInfo.Buildings[GameInfo.CitySizeBuildings[iScale].BuildingType];
+						local CityScale = g_CitySizeBuildingsInfo[iScale];
 						Controls["CityScaleFrame" .. iScale]:SetHide(false);
 						IconHookup( CityScale.PortraitIndex, 45, CityScale.IconAtlas, Controls["CityScaleImage" .. iScale]);
 						local strToolTip = GetHelpTextForBuilding(CityScale.ID, false, false, false, pCity);
@@ -3134,5 +3140,3 @@ function OnClearAllOrder()
 	end	
 end
 Controls.BTNClearAllProduction:RegisterCallback( Mouse.eLClick, OnClearAllOrder);
-
-
