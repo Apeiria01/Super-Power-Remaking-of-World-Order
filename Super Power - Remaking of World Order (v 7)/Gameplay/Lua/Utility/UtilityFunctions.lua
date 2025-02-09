@@ -94,19 +94,7 @@ end
 ------------------------------------------------Military/Unit Functions------------------------------------------------------
 
 function GetCivSpecificUnit(player, sUnitClass)
-	local sUnitType = -1
-	local sCivType = GameInfo.Civilizations[player:GetCivilizationType()].Type
-
-	for pOverride in GameInfo.Civilization_UnitClassOverrides { CivilizationType = sCivType, UnitClassType = sUnitClass } do
-		sUnitType = pOverride.UnitType
-		break
-	end
-
-	if sUnitType == -1 or sUnitType == nil then
-		sUnitType = GameInfo.UnitClasses[sUnitClass].DefaultUnit
-	end
-
-	return sUnitType
+	return GameInfo.Units[player:GetCivUnitWithDefault(GameInfoTypes[sUnitClass])].Type
 end
 
 function GetUpgradeUnit(player, sUnitType)
@@ -115,7 +103,7 @@ function GetUpgradeUnit(player, sUnitType)
 	if (sNewUnitClass ~= nil) then
 		local sUpgradeUnitType = GetCivSpecificUnit(player, sNewUnitClass)
 
-		if (sUpgradeUnitType ~= nil and Teams[player:GetTeam()]:IsHasTech(GameInfoTypes[GameInfo.Units[sUpgradeUnitType].PrereqTech])) then
+		if (sUpgradeUnitType ~= nil and player:HasTech(GameInfoTypes[GameInfo.Units[sUpgradeUnitType].PrereqTech])) then
 			return sUpgradeUnitType
 		end
 	end
@@ -349,25 +337,15 @@ function AIForceBuildAirEscortUnits(unitX, unitY, player)
 		return
 	end
 
-	local sUnitType = GetCivSpecificUnit(player, "UNITCLASS_TRIPLANE")
-	local sUpgradeUnitType = GetUpgradeUnit(player, sUnitType)
-
-	while (sUpgradeUnitType ~= nil) do
-		sUnitType = sUpgradeUnitType
-		sUpgradeUnitType = GetUpgradeUnit(player, sUnitType)
-	end
-
 	local PlayerEra = player:GetCurrentEra()
 	local NewUnitEXP = PlayerEra * 15
 	if player:GetCapitalCity() ~= nil then
 		NewUnitEXP = NewUnitEXP + player:GetCapitalCity():GetProductionExperience()
 	end
 
-	local NewUnit = player:InitUnit(GameInfoTypes[sUnitType], unitX, unitY, UNITAI_DEFENSE_AIR)
-
+	local NewUnit = player:InitUnit(player:GetCivUnitNowTech(GameInfoTypes.UNITCLASS_TRIPLANE), unitX, unitY, UNITAI_DEFENSE_AIR)
 	AINewUnitSetUp(NewUnit, NewUnitEXP)
 	NewUnit:PushMission(GameInfoTypes.MISSION_AIRPATROL)
-
 	print("Stupid AI need more Fighters! Now they are set intercepting!")
 end
 
@@ -382,26 +360,14 @@ function AIForceBuildNavalEscortUnits(unitX, unitY, player)
 		return
 	end
 
-
-	local sUnitType = GetCivSpecificUnit(player, "UNITCLASS_GALLEASS")
-	local sUpgradeUnitType = GetUpgradeUnit(player, sUnitType)
-
-	while (sUpgradeUnitType ~= nil) do
-		sUnitType = sUpgradeUnitType
-		sUpgradeUnitType = GetUpgradeUnit(player, sUnitType)
-	end
-
-
 	local PlayerEra = player:GetCurrentEra()
 	local NewUnitEXP = PlayerEra * 5
 	if player:GetCapitalCity() ~= nil then
 		NewUnitEXP = NewUnitEXP + player:GetCapitalCity():GetProductionExperience()
 	end
 
-	local NewUnit = player:InitUnit(GameInfoTypes[sUnitType], unitX, unitY, UNITAI_ATTACK_SEA)
-
+	local NewUnit = player:InitUnit(player:GetCivUnitNowTech(GameInfoTypes.UNITCLASS_GALLEASS), unitX, unitY, UNITAI_ATTACK_SEA)
 	AINewUnitSetUp(NewUnit, NewUnitEXP)
-
 	print("Stupid AI need more Naval Melee Ships!")
 end
 
@@ -415,22 +381,13 @@ function AIForceBuildNavalHRUnits(unitX, unitY, player)
 		return
 	end
 
-	local sUnitType = GetCivSpecificUnit(player, "UNITCLASS_FIRE_SHIP")
-	local sUpgradeUnitType = GetUpgradeUnit(player, sUnitType)
-
-	while (sUpgradeUnitType ~= nil) do
-		sUnitType = sUpgradeUnitType
-		sUpgradeUnitType = GetUpgradeUnit(player, sUnitType)
-	end
-
 	local PlayerEra = player:GetCurrentEra()
 	local NewUnitEXP = PlayerEra * 10
 	if player:GetCapitalCity() ~= nil then
 		NewUnitEXP = NewUnitEXP + player:GetCapitalCity():GetProductionExperience()
 	end
 
-	local NewUnit = player:InitUnit(GameInfoTypes[sUnitType], unitX, unitY, UNITAI_ASSAULT_SEA)
-
+	local NewUnit = player:InitUnit(player:GetCivUnitNowTech(GameInfoTypes.UNITCLASS_FIRE_SHIP), unitX, unitY, UNITAI_ASSAULT_SEA)
 	AINewUnitSetUp(NewUnit, NewUnitEXP)
 	print("Stupid AI need more Naval Hit and Run Ships!")
 end
@@ -452,25 +409,14 @@ function AIForceBuildNavalRangedUnits(unitX, unitY, player)
 		return
 	end
 
-
-	local sUnitType = GetCivSpecificUnit(player, "UNITCLASS_GREAT_GALLEASS")
-	local sUpgradeUnitType = GetUpgradeUnit(player, sUnitType)
-
-	while (sUpgradeUnitType ~= nil) do
-		sUnitType = sUpgradeUnitType
-		sUpgradeUnitType = GetUpgradeUnit(player, sUnitType)
-	end
-
 	local PlayerEra = player:GetCurrentEra()
 	local NewUnitEXP = PlayerEra * 10
 	if player:GetCapitalCity() ~= nil then
 		NewUnitEXP = NewUnitEXP + player:GetCapitalCity():GetProductionExperience()
 	end
 
-	local NewUnit = player:InitUnit(GameInfoTypes[sUnitType], unitX, unitY, UNITAI_ASSAULT_SEA)
-
+	local NewUnit = player:InitUnit(player:GetCivUnitNowTech(GameInfoTypes.UNITCLASS_GREAT_GALLEASS), unitX, unitY, UNITAI_ASSAULT_SEA)
 	AINewUnitSetUp(NewUnit, NewUnitEXP)
-
 	print("Stupid AI need more Naval Ranged Ships!")
 end
 
@@ -485,26 +431,14 @@ function AIForceBuildInfantryUnits(unitX, unitY, player)
 		return
 	end
 
-	local sUnitType = GetCivSpecificUnit(player, "UNITCLASS_SWORDSMAN")
-	local sUpgradeUnitType = GetUpgradeUnit(player, sUnitType)
-
-	while (sUpgradeUnitType ~= nil) do
-		sUnitType = sUpgradeUnitType
-		sUpgradeUnitType = GetUpgradeUnit(player, sUnitType)
-	end
-
 	local PlayerEra = player:GetCurrentEra()
 	local NewUnitEXP = PlayerEra * 5
 	if player:GetCapitalCity() ~= nil then
 		NewUnitEXP = NewUnitEXP + player:GetCapitalCity():GetProductionExperience()
 	end
 
-
-	local NewUnit = player:InitUnit(GameInfoTypes[sUnitType], unitX, unitY, UNITAI_ATTACK)
-
-
+	local NewUnit = player:InitUnit(player:GetCivUnitNowTech(GameInfoTypes.UNITCLASS_SWORDSMAN), unitX, unitY, UNITAI_ATTACK)
 	AINewUnitSetUp(NewUnit, NewUnitEXP)
-
 	print("Stupid AI need more Infantry!")
 end
 
@@ -517,24 +451,13 @@ function AIForceBuildLandCounterUnits(unitX, unitY, player)
 		return
 	end
 
-	local sUnitType = GetCivSpecificUnit(player, "UNITCLASS_SPEARMAN")
-	local sUpgradeUnitType = GetUpgradeUnit(player, sUnitType)
-
-	while (sUpgradeUnitType ~= nil) do
-		sUnitType = sUpgradeUnitType
-		sUpgradeUnitType = GetUpgradeUnit(player, sUnitType)
-	end
-
 	local PlayerEra = player:GetCurrentEra()
 	local NewUnitEXP = PlayerEra * 5
 	if player:GetCapitalCity() ~= nil then
 		NewUnitEXP = NewUnitEXP + player:GetCapitalCity():GetProductionExperience()
 	end
 
-
-	local NewUnit = player:InitUnit(GameInfoTypes[sUnitType], unitX, unitY, UNITAI_ATTACK)
-
-
+	local NewUnit = player:InitUnit(player:GetCivUnitNowTech(GameInfoTypes.UNITCLASS_SPEARMAN), unitX, unitY, UNITAI_ATTACK)
 	AINewUnitSetUp(NewUnit, NewUnitEXP)
 	print("Stupid AI need more Counter Units!")
 end
@@ -556,22 +479,13 @@ function AIForceBuildMobileUnits(unitX, unitY, player)
 		return
 	end
 
-	local sUnitType = GetCivSpecificUnit(player, "UNITCLASS_HORSEMAN")
-	local sUpgradeUnitType = GetUpgradeUnit(player, sUnitType)
-
-	while (sUpgradeUnitType ~= nil) do
-		sUnitType = sUpgradeUnitType
-		sUpgradeUnitType = GetUpgradeUnit(player, sUnitType)
-	end
-
 	local PlayerEra = player:GetCurrentEra()
 	local NewUnitEXP = PlayerEra * 10
 	if player:GetCapitalCity() ~= nil then
 		NewUnitEXP = NewUnitEXP + player:GetCapitalCity():GetProductionExperience()
 	end
 
-	local NewUnit = player:InitUnit(GameInfoTypes[sUnitType], unitX, unitY, UNITAI_FAST_ATTACK)
-
+	local NewUnit = player:InitUnit(player:GetCivUnitNowTech(GameInfoTypes.UNITCLASS_HORSEMAN), unitX, unitY, UNITAI_FAST_ATTACK)
 	AINewUnitSetUp(NewUnit, NewUnitEXP)
 	print("Stupid AI need more Mobile Units!")
 end
@@ -594,35 +508,14 @@ function AIForceBuildLandHRUnits(unitX, unitY, player)
 		return
 	end
 
-	local sUnitType = GetCivSpecificUnit(player, "UNITCLASS_MEDIEVAL_CHARIOT")
-	local sUpgradeUnitType = GetUpgradeUnit(player, sUnitType)
-
-	while (sUpgradeUnitType ~= nil) do
-		sUnitType = sUpgradeUnitType
-		sUpgradeUnitType = GetUpgradeUnit(player, sUnitType)
-	end
-
 	local PlayerEra = player:GetCurrentEra()
 	local NewUnitEXP = PlayerEra * 20
 	if player:GetCapitalCity() ~= nil then
 		NewUnitEXP = NewUnitEXP + player:GetCapitalCity():GetProductionExperience()
 	end
 
-	local NewUnit = player:InitUnit(GameInfoTypes[sUnitType], unitX, unitY, UNITAI_FAST_ATTACK)
-
-	NewUnit:SetExperience(NewUnitEXP)
-
-	local plot = NewUnit:GetPlot()
-	local unitCount = plot:GetNumUnits()
-
-	if unitCount >= 3 then
-		if NewUnit:GetDomainType() == DomainTypes.DOMAIN_LAND then
-			NewUnit:JumpToNearestValidPlot()
-			print("Jump out AI stacking units!")
-		else
-			NewUnit:Kill()
-		end
-	end
+	local NewUnit = player:InitUnit(player:GetCivUnitNowTech(GameInfoTypes.UNITCLASS_MEDIEVAL_CHARIOT), unitX, unitY, UNITAI_FAST_ATTACK)
+	AINewUnitSetUp(NewUnit, NewUnitEXP)
 	print("Stupid AI need more Land Hit and Run Units!")
 end
 
@@ -631,15 +524,7 @@ function AIConscriptMilitiaUnits(unitX, unitY, player)
 		return
 	end
 
-	local sUnitType = GetCivSpecificUnit(player, "UNITCLASS_WARRIOR")
-	local sUpgradeUnitType = GetUpgradeUnit(player, sUnitType)
-
-	while (sUpgradeUnitType ~= nil) do
-		sUnitType = sUpgradeUnitType
-		sUpgradeUnitType = GetUpgradeUnit(player, sUnitType)
-	end
-
-	local NewUnit = player:InitUnit(GameInfoTypes[sUnitType], unitX, unitY, UNITAI_DEFENSE)
+	local NewUnit = player:InitUnit(player:GetCivUnitNowTech(GameInfoTypes.UNITCLASS_WARRIOR), unitX, unitY, UNITAI_DEFENSE)
 	if player:GetCapitalCity() ~= nil then
 		NewUnit:SetExperience(player:GetCapitalCity():GetProductionExperience())
 	end
@@ -653,15 +538,7 @@ function AIConscriptMilitiaNavy(unitX, unitY, player)
 		return
 	end
 
-	local sUnitType = GetCivSpecificUnit(player, "UNITCLASS_NAVAL_MILITIA")
-	local sUpgradeUnitType = GetUpgradeUnit(player, sUnitType)
-
-	while (sUpgradeUnitType ~= nil) do
-		sUnitType = sUpgradeUnitType
-		sUpgradeUnitType = GetUpgradeUnit(player, sUnitType)
-	end
-
-	local NewUnit = player:InitUnit(GameInfoTypes[sUnitType], unitX, unitY, UNITAI_ESCORT_SEA)
+	local NewUnit = player:InitUnit(player:GetCivUnitNowTech(GameInfoTypes.UNITCLASS_NAVAL_MILITIA), unitX, unitY, UNITAI_ESCORT_SEA)
 	if player:GetCapitalCity() ~= nil then
 		NewUnit:SetExperience(player:GetCapitalCity():GetProductionExperience())
 	end

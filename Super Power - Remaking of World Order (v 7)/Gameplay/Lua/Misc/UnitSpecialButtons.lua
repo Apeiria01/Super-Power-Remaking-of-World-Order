@@ -374,16 +374,7 @@ WorkerToMilitiaButton = {
         local plotY = plot:GetY()
 
         local player = Players[unit:GetOwner()]
-
-        local sUnitType = GetCivSpecificUnit(player, "UNITCLASS_WARRIOR")
-        local sUpgradeUnitType = GetUpgradeUnit(player, sUnitType)
-
-        while (sUpgradeUnitType ~= nil) do
-            sUnitType = sUpgradeUnitType
-            sUpgradeUnitType = GetUpgradeUnit(player, sUnitType)
-        end
-
-        local NewUnit = player:InitUnit(GameInfoTypes[sUnitType], plotX, plotY, UNITAI_DEFENSE)
+        local NewUnit = player:InitUnit(player:GetCivUnitNowTech(GameInfoTypes.UNITCLASS_WARRIOR), plotX, plotY, UNITAI_DEFENSE)
 
         if plot:GetNumUnits() > 2 then
             NewUnit:JumpToNearestValidPlot()
@@ -421,10 +412,7 @@ MilitiaToWorkerButton = {
         local plotY = plot:GetY()
 
         local player = Players[unit:GetOwner()]
-
-        local sUnitType = GetCivSpecificUnit(player, "UNITCLASS_WORKER")
-
-        local NewUnit = player:InitUnit(GameInfoTypes[sUnitType], plotX, plotY, UNITAI_WORKER)
+        local NewUnit = player:InitUnit(player:GetCivUnitWithDefault(GameInfoTypes.UNITCLASS_WORKER), plotX, plotY, UNITAI_WORKER)
 
         if plot:GetNumUnits() > 2 then
             NewUnit:JumpToNearestValidPlot()

@@ -112,7 +112,7 @@ function SPECityBuildingCompleted(iPlayer, iCity, iBuilding, bGold, bFaithOrCult
 			Events.AddPopupTextEvent(HexToWorld(hex), Locale.ConvertTextKey("+{1_Num}[ICON_RESEARCH],+{1_Num}[ICON_CULTURE]", bonus))
 			Events.GameplayFX(hex.x, hex.y, -1)
 		end
-		print("SPECityBuildingCompleted:",bonus)
+		--print("SPECityBuildingCompleted:",bonus)
 	end
 end
 GameEvents.CityConstructed.Add(SPECityBuildingCompleted)
