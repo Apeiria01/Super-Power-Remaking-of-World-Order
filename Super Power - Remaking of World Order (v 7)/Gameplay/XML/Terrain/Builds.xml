@@ -1034,5 +1034,34 @@
 			<Remove>true</Remove> 
 			<RemoveOnly>0</RemoveOnly> 
 		</Row>
+
+		<Row> 
+			<BuildType>BUILD_ETHIOPIA_COFFEE</BuildType> 
+			<FeatureType>FEATURE_JUNGLE</FeatureType> 
+			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech> 
+			<Time>400</Time> 
+			<Production>20</Production> 
+			<Cost>0</Cost> 
+			<Remove>true</Remove> 
+			<RemoveOnly>0</RemoveOnly> 
+		</Row>
+		<Row> 
+			<BuildType>BUILD_ETHIOPIA_COFFEE</BuildType> 
+			<FeatureType>FEATURE_FOREST</FeatureType> 
+			<Time>50</Time> 
+			<Production>30</Production> 
+			<Cost>0</Cost> 
+			<Remove>true</Remove> 
+			<RemoveOnly>0</RemoveOnly> 
+		</Row>
+		<Row>
+			<BuildType>BUILD_ETHIOPIA_COFFEE</BuildType> 
+			<FeatureType>FEATURE_MARSH</FeatureType> 
+			<Time>600</Time> 
+			<Production>0</Production> 
+			<Cost>0</Cost> 
+			<Remove>true</Remove> 
+			<RemoveOnly>0</RemoveOnly> 
+		</Row>
 	</BuildFeatures> 
 </GameData>
