@@ -1075,7 +1075,9 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		EnableAlwaysImmigrantIn = L"TXT_KEY_IMMIGRANT_ALL_SCALE",
 		NoNuclearWinterLocal = L"TXT_KEY_NO_NUCLEAR_WINTER_LOCAL",
 		EnableCrops = L"TXT_KEY_ENABLE_CROPS",
-		EnableArmee = L"TXT_KEY_ENABLE_ARMEE"
+		EnableArmee = L"TXT_KEY_ENABLE_ARMEE",
+		CapitalOnly = L"TXT_KEY_CAPITAL_ONLY",
+		OriginalCapitalOnly = L"TXT_KEY_ORIGINAL_CAPITAL_ONLY"
 	--n	CityWall = "",
 	--n	ArtInfoCulturalVariation = "",
 	--n	ArtInfoEraVariation = "",

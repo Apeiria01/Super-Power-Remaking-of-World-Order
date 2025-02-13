@@ -16267,5 +16267,11 @@
 		<Replace Tag="TXT_KEY_CIV5_FEATURES_KILIMANJARO_HELP">
 			<Text>與其鄰接的所有單位在之後的遊戲中可獲得在丘陵的上戰鬥加成。</Text>
 		</Replace>
+		<Row Tag="TXT_KEY_CAPITAL_ONLY">
+			<Text>只能在[ICON_CAPITAL]首都建造</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ORIGINAL_CAPITAL_ONLY">
+			<Text>只能在原始首都城市建造</Text>
+		</Row>
 	</Language_zh_Hant_HK>
 </GameData>

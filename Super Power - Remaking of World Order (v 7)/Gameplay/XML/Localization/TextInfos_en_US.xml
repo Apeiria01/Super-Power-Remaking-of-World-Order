@@ -18121,5 +18121,11 @@
 		<Replace Tag="TXT_KEY_CIV5_FEATURES_KILIMANJARO_HELP">
 			<Text>All units that are next to it receive a combat bonus on Hills for the rest of the game.</Text>
 		</Replace>
+		<Row Tag="TXT_KEY_CAPITAL_ONLY">
+			<Text>Must in [ICON_CAPITAL] Capital</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ORIGINAL_CAPITAL_ONLY">
+			<Text>Must in Original Capital</Text>
+		</Row>
 	</Language_en_US>
 </GameData>
