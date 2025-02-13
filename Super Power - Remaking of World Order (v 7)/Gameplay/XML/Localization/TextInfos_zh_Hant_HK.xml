@@ -16286,5 +16286,11 @@
 		<Row Tag="TXT_KEY_BUILD_CAIRN_SP_REC">
 			<Text>該改良設施可以增加地塊的[ICON_PEACE]信仰產出。</Text>
 		</Row>
+		<Row Tag="TXT_KEY_CAPITAL_ONLY">
+			<Text>只能在[ICON_CAPITAL]首都建造</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ORIGINAL_CAPITAL_ONLY">
+			<Text>只能在原始首都城市建造</Text>
+		</Row>
 	</Language_zh_Hant_HK>
 </GameData>

@@ -18140,5 +18140,11 @@
 		<Row Tag="TXT_KEY_BUILD_CAIRN_SP_REC">
 			<Text>This Improvement can increase the [ICON_PEACE] Faith output of the plot.</Text>
 		</Row>
+		<Row Tag="TXT_KEY_CAPITAL_ONLY">
+			<Text>Must in [ICON_CAPITAL] Capital</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ORIGINAL_CAPITAL_ONLY">
+			<Text>Must in Original Capital</Text>
+		</Row>
 	</Language_en_US>
 </GameData>
