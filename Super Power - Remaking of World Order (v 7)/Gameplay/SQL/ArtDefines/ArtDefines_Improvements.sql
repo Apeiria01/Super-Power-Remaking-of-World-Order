@@ -2,7 +2,8 @@
 --ArtDefine_LandmarkTypes
 --==========================================================================================================================	
 INSERT INTO ArtDefine_LandmarkTypes(Type, 	         LandmarkType, 	FriendlyName)
-SELECT 'ART_DEF_IMPROVEMENT_SHOSHONE_WILDDOME', 	'Improvement', 	'SHOSHONE_WILDDOME';
+SELECT 'ART_DEF_IMPROVEMENT_SHOSHONE_WILDDOME', 	'Improvement', 	'SHOSHONE_WILDDOME' UNION ALL
+SELECT 'ART_DEF_IMPROVEMENT_STONE_ALTAR',			'Improvement', 	'STONE_ALTAR';
 
 INSERT INTO ArtDefine_LandmarkTypes(Type,		LandmarkType,	FriendlyName)
 SELECT 'ART_DEF_IMPROVEMENT_INCA_CITY', 		'Improvement',	'INCA_CITY'			UNION ALL 
@@ -24,6 +25,10 @@ VALUES 	('Any', 'UnderConstruction', 	1.0,  	'ART_DEF_IMPROVEMENT_SHOSHONE_WILDD
 		('Any', 'Constructed',		 	1.0, 	'ART_DEF_IMPROVEMENT_SHOSHONE_WILDDOME',   'SNAPSHOT', 		'ART_DEF_RESOURCE_ALL', 'North American Encampment 1 B.fxsxml', 	1),
 		('Any', 'Pillaged',				1.0,  	'ART_DEF_IMPROVEMENT_SHOSHONE_WILDDOME',   'SNAPSHOT', 		'ART_DEF_RESOURCE_ALL', 'North American Encampment 1 PL.fxsxml', 	1),
 
+		('Any', 'UnderConstruction', 	1.0,  	'ART_DEF_IMPROVEMENT_STONE_ALTAR',  		'SNAPSHOT', 	'ART_DEF_RESOURCE_ALL', 'Silumgar_Necropolis.fxsxml', 				1),
+		('Any', 'Constructed',		 	1.0, 	'ART_DEF_IMPROVEMENT_STONE_ALTAR',  		'SNAPSHOT', 	'ART_DEF_RESOURCE_ALL', 'Silumgar_Necropolis.fxsxml', 				1),
+		('Any', 'Pillaged',				1.0,  	'ART_DEF_IMPROVEMENT_STONE_ALTAR',  		'SNAPSHOT', 	'ART_DEF_RESOURCE_ALL', 'holy_site_pil.fxsxml', 					1),
+
 		('Any', 'Constructed',			1.4,  	'ART_DEF_IMPROVEMENT_INCA_CITY',   			'SNAPSHOT', 	'ART_DEF_RESOURCE_ALL', 'MachuPicchu.fxsxml',					 0.75),
 		('Any', 'Constructed',			0.25,  	'ART_DEF_IMPROVEMENT_POLYNESIA_CITY_E',   	'SNAPSHOT', 	'ART_DEF_RESOURCE_ALL', 'PolyWaterCity_E.fxsxml', 				 	1),
 		('Any', 'Constructed',			0.25,  	'ART_DEF_IMPROVEMENT_POLYNESIA_CITY_SE',   	'SNAPSHOT', 	'ART_DEF_RESOURCE_ALL', 'PolyWaterCity_SE.fxsxml', 				 	1),
@@ -40,6 +45,7 @@ VALUES 	('Any', 'UnderConstruction', 	1.0,  	'ART_DEF_IMPROVEMENT_SHOSHONE_WILDD
 --==========================================================================================================================
 INSERT INTO ArtDefine_StrategicView
             (StrategicViewType,								TileType,		Asset)
-VALUES      ('ART_DEF_IMPROVEMENT_SHOSHONE_WILDDOME',		'Improvement',	'SV_BeastDome.dds');
+VALUES      ('ART_DEF_IMPROVEMENT_SHOSHONE_WILDDOME',		'Improvement',	'SV_BeastDome.dds'),
+			('ART_DEF_IMPROVEMENT_STONE_ALTAR',				'Improvement',	'sv_Obelisk.dds');
 --==========================================================================================================================
 --==========================================================================================================================

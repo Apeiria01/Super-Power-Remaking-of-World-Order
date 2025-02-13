@@ -16267,5 +16267,24 @@
 		<Replace Tag="TXT_KEY_CIV5_FEATURES_KILIMANJARO_HELP">
 			<Text>與其鄰接的所有單位在之後的遊戲中可獲得在丘陵的上戰鬥加成。</Text>
 		</Replace>
+
+		<Row Tag="TXT_KEY_IMPROVEMENT_CAIRN_SP">
+			<Text>石祭壇</Text>
+		</Row>
+		<Row Tag="TXT_KEY_IMPROVEMENT_CAIRN_SP_TEXT">
+			<Text>石祭壇指的是人造的石堆。石祭壇遍布世界各地，分布在高地、高沼地、山頂、水路附近和海上懸崖，也在貧瘠的沙漠和苔原地區。它們大小不壹，從小的石頭標記到整個人造山，復雜程度從松散的圓錐形石堆到微妙平衡的雕塑和精心制作的巨石工程。石祭壇可能被粉刷或裝飾，例如為了增加能見度或出於宗教原因。[NEWLINE][NEWLINE]在現代，石祭壇經常作為地標，自古以來就有這種用途。從史前開始，它們也被建造為墳墓紀念碑，或用於防禦、狩獵、儀式、天文和其他目的。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_IMPROVEMENT_CAIRN_SP_HELP">
+			<Text>該改良設施為所建成地塊提供1[ICON_PEACE]信仰。教育學後過時，無法再建造。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILD_CAIRN_SP">
+			<Text>石祭壇</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILD_CAIRN_SP_HELP">
+			<Text>建造一個石祭壇，提高地塊的[ICON_PEACE]信仰產出。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILD_CAIRN_SP_REC">
+			<Text>該改良設施可以增加地塊的[ICON_PEACE]信仰產出。</Text>
+		</Row>
 	</Language_zh_Hant_HK>
 </GameData>
