@@ -6,6 +6,10 @@ INSERT INTO Improvements
 		(Type,							    SpecificCivRequired,	CivilizationType,		    NoTwoAdjacent,  DestroyedWhenPillaged,  Description,							    Help,										    Civilopedia,								    ArtDefineTag,						        PortraitIndex,	IconAtlas,				CreatedItemMod, CreatedResourceQuantity, IsFreshWater)
 VALUES	('IMPROVEMENT_SHOSHONE_WILDDOME',	1,						'CIVILIZATION_SHOSHONE',    1,              1,                      'TXT_KEY_IMPROVEMENT_SHOSHONE_WILDDOME',	'TXT_KEY_IMPROVEMENT_SHOSHONE_WILDDOME_HELP',	'TXT_KEY_IMPROVEMENT_SHOSHONE_WILDDOME_HELP',	'ART_DEF_IMPROVEMENT_SHOSHONE_WILDDOME', 	0,				'SP_IMPROVEMENT_ATLAS',	3,				1,						 1);
 
+INSERT INTO Improvements
+		(Type,					Description,					Civilopedia,							Help,									ArtDefineTag,						PortraitIndex,	IconAtlas,				NoTwoAdjacent,	OutsideBorders,	BuildableOnResources,	RequiresFlatlands,	DestroyedWhenPillaged)
+VALUES	('IMPROVEMENT_CAIRN',	'TXT_KEY_IMPROVEMENT_CAIRN_SP',	'TXT_KEY_IMPROVEMENT_CAIRN_SP_TEXT',	'TXT_KEY_IMPROVEMENT_CAIRN_SP_HELP',	'ART_DEF_IMPROVEMENT_STONE_ALTAR',	2,				'SP_IMPROVEMENT_ATLAS',	1,				0,				0,						0,					1);
+
 INSERT OR REPLACE INTO Improvements
 		(Type,								Description,							ArtDefineTag,							GraphicalOnly,	Water,	AllowsWalkWater)
 SELECT	'IMPROVEMENT_INCA_CITY',			'TXT_KEY_IMPROVEMENT_INCA_CITY',		'ART_DEF_IMPROVEMENT_INCA_CITY',	 	1, 				0,		0	UNION ALL
@@ -22,20 +26,30 @@ INSERT INTO Improvement_ValidTerrains
 		(ImprovementType,					TerrainType)
 VALUES	('IMPROVEMENT_SHOSHONE_WILDDOME',	'TERRAIN_GRASS'),
 		('IMPROVEMENT_SHOSHONE_WILDDOME',	'TERRAIN_TUNDRA'),
-		('IMPROVEMENT_SHOSHONE_WILDDOME',	'TERRAIN_PLAINS');
+		('IMPROVEMENT_SHOSHONE_WILDDOME',	'TERRAIN_PLAINS'),
+		('IMPROVEMENT_CAIRN',				'TERRAIN_GRASS'),
+		('IMPROVEMENT_CAIRN',				'TERRAIN_PLAINS'),
+		('IMPROVEMENT_CAIRN',				'TERRAIN_TUNDRA'),
+		('IMPROVEMENT_CAIRN',				'TERRAIN_SNOW'),
+		('IMPROVEMENT_CAIRN',				'TERRAIN_DESERT');
 --==========================================================================================================================	
 -- Improvement_Flavors
 --==========================================================================================================================	
 INSERT INTO Improvement_Flavors
 		(ImprovementType,					FlavorType,					Flavor)
 VALUES	('IMPROVEMENT_SHOSHONE_WILDDOME',	'FLAVOR_TILE_IMPROVEMENT',	40),
-		('IMPROVEMENT_SHOSHONE_WILDDOME',	'FLAVOR_GROWTH',			20);
+		('IMPROVEMENT_SHOSHONE_WILDDOME',	'FLAVOR_GROWTH',			20),
+		('IMPROVEMENT_CAIRN',				'FLAVOR_RELIGION',			5);
 --==========================================================================================================================	
 -- Builds
 --==========================================================================================================================	
 INSERT INTO Builds
 		(Type,						PrereqTech,			ImprovementType, 				    Time, 	Recommendation,						    Description,					    Help,										    OrderPriority,	AltDown,    IconIndex,	IconAtlas,				EntityEvent,            HotKey)
 VALUES	('BUILD_SHOSHONE_WILDDOME',	'TECH_GUNPOWDER',	'IMPROVEMENT_SHOSHONE_WILDDOME',	1300,  'TXT_KEY_BUILD_SHOSHONE_WILDDOME_REC', 	'TXT_KEY_BUILD_SHOSHONE_WILDDOME',	'TXT_KEY_IMPROVEMENT_SHOSHONE_WILDDOME_HELP',	1,				1,          1,			'SP_IMPROVEMENT_ATLAS',	'ENTITY_EVENT_CHOP',    'KB_C');
+
+INSERT INTO Builds
+		(Type,			Time,	PrereqTech,			ObsoleteTech,		ImprovementType,		Description,				Help,							Recommendation,					EntityEvent,			HotKey,		OrderPriority,		IconIndex,	IconAtlas)
+VALUES	('BUILD_CAIRN',	400,	'TECH_POTTERY',		'TECH_EDUCATION',	'IMPROVEMENT_CAIRN',	'TXT_KEY_BUILD_CAIRN_SP', 	'TXT_KEY_BUILD_CAIRN_SP_HELP',	'TXT_KEY_BUILD_CAIRN_SP_REC',	'ENTITY_EVENT_BUILD',	'KB_M',		98,          		3,			'SP_IMPROVEMENT_ATLAS');
 --==========================================================================================================================	
 -- BuildFeatures
 --==========================================================================================================================	
@@ -48,7 +62,8 @@ VALUES	('BUILD_SHOSHONE_WILDDOME',		'FEATURE_JUNGLE',	'TECH_BRONZE_WORKING',	700
 --==========================================================================================================================	
 INSERT INTO Unit_Builds
 		(UnitType,			BuildType)
-VALUES	('UNIT_WORKER',		'BUILD_SHOSHONE_WILDDOME');
+VALUES	('UNIT_WORKER',		'BUILD_SHOSHONE_WILDDOME'),
+		('UNIT_WORKER',		'BUILD_CAIRN');
 --==========================================================================================================================	
 -- Improvements_Create_Collection
 --==========================================================================================================================	
@@ -85,3 +100,6 @@ UPDATE Improvements Set ExtraScore = 300 WHERE Type = 'IMPROVEMENT_CREATE_JUNGLE
 UPDATE Improvements Set ForbidSameBuildUnitClasses = 'UNITCLASS_ARCHAEOLOGIST' WHERE Type = 'IMPROVEMENT_LANDMARK';
 
 UPDATE Improvements Set RequiresFeature = 0, RemoveWhenSetNoFuture = 1, NumWaterPlotMakesValid = 3, RequiresFlatlands = 1 WHERE Type = 'IMPROVEMENT_POLDER';
+-- IMPROVEMENT_CAIRN
+INSERT INTO Improvement_Yields (ImprovementType,		YieldType,		Yield)
+SELECT 							'IMPROVEMENT_CAIRN',	'YIELD_FAITH',	1;

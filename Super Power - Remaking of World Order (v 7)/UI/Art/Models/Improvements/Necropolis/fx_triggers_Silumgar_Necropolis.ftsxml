@@ -1,0 +1,12 @@
+<trigger_system type="FGrannyTimedTriggerSystem">
+  <event_tracks>
+    <event_track ec="1000">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+    </event_track>
+  </event_tracks>
+  <triggers>
+   
+  </triggers>
+</trigger_system>
