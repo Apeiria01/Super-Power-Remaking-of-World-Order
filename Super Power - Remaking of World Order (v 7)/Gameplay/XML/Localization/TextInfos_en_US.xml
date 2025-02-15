@@ -18146,5 +18146,11 @@
 		<Row Tag="TXT_KEY_ORIGINAL_CAPITAL_ONLY">
 			<Text>Must in Original Capital</Text>
 		</Row>
+		<Replace Tag="TXT_KEY_RO_WR_FOUNDER">
+			<Text>Religion Leader</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_RO_STATUS_FOUNDER">
+			<Text>Religion Leader of {1_ReligionName}</Text>
+		</Replace>
 	</Language_en_US>
 </GameData>

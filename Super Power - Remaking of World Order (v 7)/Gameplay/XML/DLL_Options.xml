@@ -379,6 +379,10 @@
 			<Where Name="GLOBAL_CAPTURE_UNIT_CANNOT_MAX_OUT"/>
 			<Set Value="1"/>
 		</Update>
+		<Update>
+			<Where Name="GLOBAL_HOLY_CITY_FOUNDER_CHANGE"/>
+			<Set Value="1"/>
+		</Update>
 	</CustomModOptions>
 
 
