@@ -16485,5 +16485,11 @@
 		<Row Tag="TXT_KEY_ORIGINAL_CAPITAL_ONLY">
 			<Text>只能在原始首都城市建造</Text>
 		</Row>
+		<Replace Tag="TXT_KEY_RO_WR_FOUNDER">
+			<Text>宗教领袖</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_RO_STATUS_FOUNDER">
+			<Text>{1_ReligionName}宗教领袖</Text>
+		</Replace>
 	</Language_zh_CN>
 </GameData>
