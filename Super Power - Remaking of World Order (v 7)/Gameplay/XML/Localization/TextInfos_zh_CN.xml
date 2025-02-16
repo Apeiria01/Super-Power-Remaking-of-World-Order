@@ -784,7 +784,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_ARABIA_ISIAMIC_UNIVERSITY_HELP</Tag>
-			<Text>境内的每7座[ICON_RESEARCH][ICON_CULTURE]伊斯兰学校为本城（非傀儡）的每座神祠、神庙和[ICON_PEACE]宗教建筑+1[ICON_RESEARCH]科研、+1[ICON_CULTURE]文化。[NEWLINE]当本城有[ICON_RESEARCH]研发实验室时，为本城（非傀儡）所有有基础[ICON_PEACE]信仰产出的建筑+1[ICON_RESEARCH]科研、+1[ICON_CULTURE]文化。[NEWLINE][NEWLINE]城市必须拥有学院。</Text>
+			<Text>境内的每7座[ICON_RESEARCH][ICON_CULTURE]伊斯兰学校为本城（非傀儡）的每座神祠、神庙和[ICON_PEACE]宗教建筑+1[ICON_RESEARCH]科研、+1[ICON_CULTURE]文化。[NEWLINE]当本城有[ICON_RESEARCH]研发实验室时，为本城（非傀儡）其他有基础[ICON_PEACE]信仰产出的建筑+1[ICON_RESEARCH]科研、+1[ICON_CULTURE]文化。[NEWLINE][NEWLINE]城市必须拥有学院。</Text>
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_ARABIA_ISIAMIC_UNIVERSITY_ALLAH_AKBAR</Tag>

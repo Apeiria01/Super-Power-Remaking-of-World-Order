@@ -3214,7 +3214,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_ARABIA_ISIAMIC_UNIVERSITY_HELP</Tag>
-			<Text>Each 7 [ICON_RESEARCH][ICON_CULTURE] Islamic Universities in your cities +1 [ICON_RESEARCH] Science and +1 [ICON_CULTURE] Culture from every Shrine, Temple and Religious Building in this City (non-puppet).[NEWLINE]Further, +1 [ICON_RESEARCH] Science and +1 [ICON_CULTURE] Culture from every Building with Basic [ICON_PEACE] Faith output if the City (non-puppet) has a [ICON_RESEARCH] Laboratory. [NEWLINE][NEWLINE]City must have a Academy.</Text>
+			<Text>Each 7 [ICON_RESEARCH][ICON_CULTURE] Islamic Universities in your cities +1 [ICON_RESEARCH] Science and +1 [ICON_CULTURE] Culture from every Shrine, Temple and Religious Building in this City (non-puppet).[NEWLINE]Further, +1 [ICON_RESEARCH] Science and +1 [ICON_CULTURE] Culture from other Buildings with Basic [ICON_PEACE] Faith output if the City (non-puppet) has a [ICON_RESEARCH] Laboratory. [NEWLINE][NEWLINE]City must have a Academy.</Text>
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_ARABIA_ISIAMIC_UNIVERSITY_ALLAH_AKBAR</Tag>
