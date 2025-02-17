@@ -734,12 +734,16 @@
 			<Where Name="OPINION_WEIGHT_COMMON_FOE_MAX" />
 		</Update>
 		<Update>
-			<Set Value="-1600"/>
+			<Set Value="-160"/>
 			<Where Name="OPINION_WEIGHT_LIBERATED_CAPITAL" />
 		</Update>
 		<Update>
-			<Set Value="1600"/>
+			<Set Value="160"/>
 			<Where Name="OPINION_WEIGHT_CAPTURED_CAPITAL" />
+		</Update>
+		<Update>
+			<Set Value="160"/>
+			<Where Name="OPINION_WEIGHT_CAPTURED_RELIGION" />
 		</Update>
 		<Update>
 			<Set Value="-50"/>

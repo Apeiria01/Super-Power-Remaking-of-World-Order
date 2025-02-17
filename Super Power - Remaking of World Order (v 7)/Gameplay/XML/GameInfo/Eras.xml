@@ -333,7 +333,7 @@
 			<SpiesGrantedForEveryone>0</SpiesGrantedForEveryone>
 			<FaithCostMultiplier>250</FaithCostMultiplier>
 			<DiploEmphasisReligion>0</DiploEmphasisReligion>
-			<DiploEmphasisLatePolicies>9000</DiploEmphasisLatePolicies>
+			<DiploEmphasisLatePolicies>900</DiploEmphasisLatePolicies>
 			<LeaguePercent>200</LeaguePercent>
 			<WarmongerPercent>9000</WarmongerPercent>
 			<SoundtrackSpace>80</SoundtrackSpace>
@@ -383,7 +383,7 @@
 			<SpiesGrantedForEveryone>0</SpiesGrantedForEveryone>
 			<FaithCostMultiplier>300</FaithCostMultiplier>
 			<DiploEmphasisReligion>0</DiploEmphasisReligion>
-			<DiploEmphasisLatePolicies>1500</DiploEmphasisLatePolicies>
+			<DiploEmphasisLatePolicies>150</DiploEmphasisLatePolicies>
 			<LeaguePercent>100</LeaguePercent>
 			<WarmongerPercent>2000</WarmongerPercent>
 			<SoundtrackSpace>80</SoundtrackSpace>
