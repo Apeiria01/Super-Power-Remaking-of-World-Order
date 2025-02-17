@@ -16468,16 +16468,16 @@
 			<Text>石祭坛指的是人造的石堆。石祭坛遍布世界各地，分布在高地、高沼地、山顶、水路附近和海上悬崖，也在贫瘠的沙漠和苔原地区。它们大小不一，从小的石头标记到整个人造山，复杂程度从松散的圆锥形石堆到微妙平衡的雕塑和精心制作的巨石工程。石祭坛可能被粉刷或装饰，例如为了增加能见度或出于宗教原因。[NEWLINE][NEWLINE]在现代，石祭坛经常作为地标，自古以来就有这种用途。从史前开始，它们也被建造为坟墓纪念碑，或用于防御、狩猎、仪式、天文和其他目的。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_IMPROVEMENT_CAIRN_SP_HELP">
-			<Text>该改良设施为所建成地块提供1[ICON_PEACE]信仰。教育学后过时，无法再建造。</Text>
+			<Text>该改良设施为所建成地块提供1[ICON_PEACE]信仰、1[ICON_GOLDEN_AGE]黄金时代点数。教育学后过时，无法再建造。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILD_CAIRN_SP">
 			<Text>石祭坛</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILD_CAIRN_SP_HELP">
-			<Text>建造一个石祭坛，提高地块的[ICON_PEACE]信仰产出。</Text>
+			<Text>建造一个石祭坛，提高地块的[ICON_PEACE]信仰、[ICON_GOLDEN_AGE]黄金时代点数产出。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILD_CAIRN_SP_REC">
-			<Text>该改良设施可以增加地块的[ICON_PEACE]信仰产出。</Text>
+			<Text>该改良设施可以增加地块的[ICON_PEACE]信仰、[ICON_GOLDEN_AGE]黄金时代点数产出。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CAPITAL_ONLY">
 			<Text>只能在[ICON_CAPITAL]首都建造</Text>

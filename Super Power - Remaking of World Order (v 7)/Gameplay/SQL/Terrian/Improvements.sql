@@ -101,5 +101,6 @@ UPDATE Improvements Set ForbidSameBuildUnitClasses = 'UNITCLASS_ARCHAEOLOGIST' W
 
 UPDATE Improvements Set RequiresFeature = 0, RemoveWhenSetNoFuture = 1, NumWaterPlotMakesValid = 3, RequiresFlatlands = 1 WHERE Type = 'IMPROVEMENT_POLDER';
 -- IMPROVEMENT_CAIRN
-INSERT INTO Improvement_Yields (ImprovementType,		YieldType,		Yield)
-SELECT 							'IMPROVEMENT_CAIRN',	'YIELD_FAITH',	1;
+INSERT INTO Improvement_Yields (ImprovementType,		YieldType,					Yield)
+SELECT 							'IMPROVEMENT_CAIRN',	'YIELD_FAITH',				1 UNION ALL
+SELECT 							'IMPROVEMENT_CAIRN',	'YIELD_GOLDEN_AGE_POINTS',	1;
