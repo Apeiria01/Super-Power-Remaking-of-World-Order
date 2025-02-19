@@ -246,21 +246,16 @@ function OnCorpsArmeeSP(iPlayerID, iUnitID)
 	local otherUnit          = nil;
 	local CorpsUnit          = nil;
 	local corpsRandNum       = Game.Rand(10, "At NewUnitsRule.lua OnCorpsArmeeSP(), AI spawning corps & armee") + 1
-	if (Game:GetHandicapType() == 7 and corpsRandNum > 3)
-		or (Game:GetHandicapType() == 6 and corpsRandNum > 4)
-		or (Game:GetHandicapType() == 5 and corpsRandNum > 5)
-		or (Game:GetHandicapType() == 4 and corpsRandNum > 6)
-		or (Game:GetHandicapType() == 3 and corpsRandNum > 7)
-		or (Game:GetHandicapType() == 2 and corpsRandNum > 8)
-		or (Game:GetHandicapType() == 1 and corpsRandNum > 9)
+	local iCombineNum 		 = 10 - Game:GetHandicapType()
+	if corpsRandNum > iCombineNum
 	then
 		DoCombine = true;
 	end
 
 	if pPlayer:GetUnitClassCount(class) > 5
 	and pPlayer:GetNumCropsTotal() > 0
-	and not pPlayer:IsHuman() 
-	and DoCombine 
+	and not pPlayer:IsHuman()
+	and DoCombine
 	then
 		for unit in pPlayer:Units() do
 			-- Armee | Corps
@@ -278,13 +273,18 @@ function OnCorpsArmeeSP(iPlayerID, iUnitID)
 		end
 	end
 
+	local iKillRandNum = Game.Rand(5, "At NewUnitsRule.lua OnCorpsArmeeSP(), AI kill this Unit") + 1
 	if CorpsUnit then
 		CorpsUnit:SetHasPromotion(ArmeeID, true);
-		pUnit:Kill(true);
+		if iKillRandNum <= iCombineNum then
+			pUnit:Kill(true);
+		end
 		return;
 	elseif otherUnit then
 		otherUnit:SetHasPromotion(CorpsID, true);
-		pUnit:Kill(true);
+		if iKillRandNum <= iCombineNum then
+			pUnit:Kill(true);
+		end
 		return;
 	end
 
