@@ -90,7 +90,7 @@
 			<SpiesGrantedForPlayer>0</SpiesGrantedForPlayer>
 			<SpiesGrantedForEveryone>0</SpiesGrantedForEveryone>
 			<FaithCostMultiplier>100</FaithCostMultiplier>
-			<DiploEmphasisReligion>100</DiploEmphasisReligion>
+			<DiploEmphasisReligion>40</DiploEmphasisReligion>
 			<DiploEmphasisLatePolicies>0</DiploEmphasisLatePolicies>
 			<LeaguePercent>300</LeaguePercent>
 			<WarmongerPercent>33</WarmongerPercent>
@@ -138,7 +138,7 @@
 			<SpiesGrantedForPlayer>0</SpiesGrantedForPlayer>
 			<SpiesGrantedForEveryone>0</SpiesGrantedForEveryone>
 			<FaithCostMultiplier>100</FaithCostMultiplier>
-			<DiploEmphasisReligion>100</DiploEmphasisReligion>
+			<DiploEmphasisReligion>40</DiploEmphasisReligion>
 			<DiploEmphasisLatePolicies>0</DiploEmphasisLatePolicies>
 			<LeaguePercent>300</LeaguePercent>
 			<WarmongerPercent>50</WarmongerPercent>
@@ -186,7 +186,7 @@
 			<SpiesGrantedForPlayer>0</SpiesGrantedForPlayer>
 			<SpiesGrantedForEveryone>1</SpiesGrantedForEveryone>
 			<FaithCostMultiplier>100</FaithCostMultiplier>
-			<DiploEmphasisReligion>50</DiploEmphasisReligion>
+			<DiploEmphasisReligion>20</DiploEmphasisReligion>
 			<DiploEmphasisLatePolicies>0</DiploEmphasisLatePolicies>
 			<LeaguePercent>300</LeaguePercent>
 			<WarmongerPercent>75</WarmongerPercent>
