@@ -537,20 +537,6 @@
 	</Defines>
 	<!--***************************************AI Opinions************************************************-->
 	<Defines>
-		<!--<Update>
-			<Set Value="5"/>
-			<Where Name="AI_BUY_PLOT_TEST_PROBES" />
-		</Update>
-		<Update>
-			<Set Value="5000"/>
-			<Where Name="AI_GOLD_PRIORITY_MINIMUM_PLOT_BUY_VALUE" />
-		</Update>
-		<Update>
-			<Set Value="5000"/>
-			<Where Name="AI_GOLD_BALANCE_TO_HALVE_PLOT_BUY_MINIMUM" />
-		</Update>-->
-
-
 		<Update>
 			<Set Value="500"/>
 			<Where Name="MC_GIFT_WEIGHT_ALMOST_NOT_ALLIES" />
@@ -582,11 +568,11 @@
 		</Update>
 		
 		<Update>
-			<Set Value="9999"/>
+			<Set Value="1000"/>
 			<Where Name="OPINION_WEIGHT_VICTORY_FIERCE" />
 		</Update>
 		<Update>
-			<Set Value="2000"/>
+			<Set Value="200"/>
 			<Where Name="OPINION_WEIGHT_VICTORY_STRONG" />
 		</Update>
 		<Update>
@@ -614,31 +600,11 @@
 			<Where Name="OPINION_WEIGHT_MINOR_CIV_STRONG" />
 		</Update>
 		<Update>
-			<Set Value="9999"/>
-			<Where Name="OPINION_WEIGHT_WARMONGER_CRITICAL" />
-		</Update>
-		<Update>
-			<Set Value="3500"/>
-			<Where Name="OPINION_WEIGHT_WARMONGER_SEVERE" />
-		</Update>
-		<Update>
-			<Set Value="1000"/>
-			<Where Name="OPINION_WEIGHT_WARMONGER_MAJOR" />
-		</Update>
-		<Update>
-			<Set Value="50"/>
-			<Where Name="OPINION_WEIGHT_WARMONGER_MINOR" />
-		</Update>
-		<Update>
-			<Set Value="-50"/>
-			<Where Name="OPINION_WEIGHT_WARMONGER_NONE" />
-		</Update>
-		<Update>
 			<Set Value="-50"/>
 			<Where Name="OPINION_WEIGHT_RETURNED_CIVILIAN" />
 		</Update>
 		<Update>
-			<Set Value="-2000"/>
+			<Set Value="-400"/>
 			<Where Name="OPINION_WEIGHT_RESURRECTED" />
 		</Update>
 		<Update>
@@ -646,11 +612,11 @@
 			<Where Name="OPINION_WEIGHT_EMBASSY"/>
 		</Update>
 		<Update>
-			<Set Value="-45"/>
+			<Set Value="-10"/>
 			<Where Name="OPINION_WEIGHT_ADOPTING_HIS_RELIGION"/>
 		</Update>
 		<Update>
-			<Set Value="-80"/>
+			<Set Value="-15"/>
 			<Where Name="OPINION_WEIGHT_ADOPTING_MY_RELIGION"/>
 		</Update>
 		<Update>
@@ -706,11 +672,11 @@
 			<Where Name="OPINION_WEIGHT_MARRIAGE" />
 		</Update>
 		<Update>
-			<Set Value="250"/>
+			<Set Value="150"/>
 			<Where Name="OPINION_WEIGHT_DENOUNCED_ME_FRIENDS" />
 		</Update>
 		<Update>
-			<Set Value="600"/>
+			<Set Value="300"/>
 			<Where Name="OPINION_WEIGHT_WAR_ME_FRIENDS" />
 		</Update>
 		<Update>
@@ -770,7 +736,7 @@
 			<Where Name="OPINION_WEIGHT_THEY_SUPPORTED_OUR_PROPOSAL_NUM_TURNS" />
 		</Update>		
 		<Update>
-			<Set Value="500"/>
+			<Set Value="200"/>
 			<Where Name="OPINION_WEIGHT_THEY_FOILED_OUR_PROPOSAL" />
 		</Update>
 		<Update>
@@ -926,63 +892,6 @@
 		<Update>
 			<Set Value="180"/>
 			<Where Name="MINOR_APPROACH_WAR_CONQUEST_GRAND_STRATEGY_NEIGHBORS" />
-		</Update>
-
-		<Update>
-			<Set Value="300"/>
-			<Where Name="EVALUATE_WAR_PLAYER_THRESHOLD" />
-		</Update>
-		<Update>
-			<Set Value="350"/>
-			<Where Name="EVALUATE_WAR_CONQUEST_GRAND_STRATEGY" />
-		</Update>
-		<Update>
-			<Set Value="-50"/>
-			<Where Name="EVALUATE_WAR_NOT_PREPARED" />
-		</Update>
-		<Update>
-			<Set Value="-300"/>
-			<Where Name="EVALUATE_WAR_ALREADY_FIGHTING" />
-		</Update>
-		<Update>
-			<Set Value="9000"/>
-			<Where Name="EVALUATE_WAR_GAME_THREAT_CRITICAL" />
-		</Update>
-		<Update>
-			<Set Value="5000"/>
-			<Where Name="EVALUATE_WAR_GAME_THREAT_SEVERE" />
-		</Update>
-		<Update>
-			<Set Value="1000"/>
-			<Where Name="EVALUATE_WAR_GAME_THREAT_MAJOR" />
-		</Update>
-		<Update>
-			<Set Value="-25"/>
-			<Where Name="EVALUATE_WAR_GAME_THREAT_MINOR" />
-		</Update>
-		<Update>
-			<Set Value="-300"/>
-			<Where Name="EVALUATE_WAR_GAME_THREAT_NONE" />
-		</Update>
-		<Update>
-			<Set Value="500"/>
-			<Where Name="EVALUATE_WAR_SOFT_TARGET" />
-		</Update>
-		<Update>
-			<Set Value="250"/>
-			<Where Name="EVALUATE_WAR_FAVORABLE_TARGET" />
-		</Update>
-		<Update>
-			<Set Value="50"/>
-			<Where Name="EVALUATE_WAR_AVERAGE_TARGET" />
-		</Update>
-		<Update>
-			<Set Value="-5"/>
-			<Where Name="EVALUATE_WAR_BAD_TARGET" />
-		</Update>
-		<Update>
-			<Set Value="-50"/>
-			<Where Name="EVALUATE_WAR_IMPOSSIBLE_TARGET" />
 		</Update>
 		<Update>
 			<Set Value="-10"/>
