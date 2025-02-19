@@ -1271,13 +1271,13 @@
 			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
 			<SpecialistCount>1</SpecialistCount>
 			<Water>true</Water>
-			<MinAreaSize>20</MinAreaSize>
 			<HurryCostModifier>25</HurryCostModifier>
 			<ArtInfoEraVariation>true</ArtInfoEraVariation>
 			<DisplayPosition>16</DisplayPosition>
 			<AllowsWaterRoutes>true</AllowsWaterRoutes>
 			<IconAtlas>SPUNITS02_ATLAS</IconAtlas>
 			<PortraitIndex>63</PortraitIndex>
+			<MinAreaSize>19</MinAreaSize>
 		</Row>
 
 
@@ -2350,7 +2350,7 @@
 			<EnhancedYieldTech>TECH_INTERNET</EnhancedYieldTech>
 			<TechEnhancedTourism>2</TechEnhancedTourism>
 			<Water>true</Water>
-			<MinAreaSize>30</MinAreaSize>
+			<MinAreaSize>19</MinAreaSize>
 		</Row>
 
 
@@ -2372,7 +2372,7 @@
 			<Defense>1500</Defense>
 			<ExtraCityHitPoints>50</ExtraCityHitPoints>
 			<Water>true</Water>
-			<MinAreaSize>30</MinAreaSize>
+			<MinAreaSize>19</MinAreaSize>
 		</Row>
 		
 
