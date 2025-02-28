@@ -3925,7 +3925,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_3DPRINTING_HELP</Tag>
-			<Text>本城市每个[ICON_CITIZEN]市民+1[ICON_GOLD]金钱产出。[NEWLINE][NEWLINE]消耗3单位[ICON_RES_ELECTRICITY]电力。[NEWLINE][NEWLINE]只能在巨型城市（60人口）建造。</Text>
+			<Text>本城市每个[ICON_CITIZEN]市民+1[ICON_GOLD]金钱产出。[NEWLINE][NEWLINE]消耗2单位[ICON_RES_ELECTRICITY]电力。[NEWLINE][NEWLINE]只能在巨型城市（60人口）建造。</Text>
 		</Row>
 
 		<Row>
@@ -8385,7 +8385,7 @@
 			<Text>文庙私塾</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SCIENCE_RELIGION">
-			<Text>每个信徒增加本城+1%[ICON_RESEARCH]科研产出(最大+30%)</Text>
+			<Text>每个信徒增加本城+2%[ICON_RESEARCH]科研产出(最大+30%)</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_EXTRA_RELIGION_SPREADS_2">

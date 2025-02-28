@@ -6938,7 +6938,7 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_3DPRINTING_HELP</Tag>
 			<Text>+1 [ICON_GOLD] Gold for every [ICON_CITIZEN] Citizen in the city. 
-			[NEWLINE][NEWLINE]Requires 3 [ICON_RES_ELECTRICITY] Electricity. [NEWLINE][NEWLINE]Must be built in XXL Cities.</Text>
+			[NEWLINE][NEWLINE]Requires 2 [ICON_RES_ELECTRICITY] Electricity. [NEWLINE][NEWLINE]Must be built in XXL Cities.</Text>
 		</Row>
 
 		
@@ -9248,7 +9248,7 @@
 			<Text>Juku</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SCIENCE_RELIGION">
-			<Text>+1% [ICON_RESEARCH] Science for each follower (max +30%)</Text>
+			<Text>+2% [ICON_RESEARCH] Science for each follower (max +30%)</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_EXTRA_RELIGION_SPREADS_2">
