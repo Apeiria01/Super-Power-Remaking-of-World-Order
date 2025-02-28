@@ -918,6 +918,7 @@ EstablishCorpsButton = {
 		if player:GetDomainTroopsActive() <= 0
         or plot:GetNumUnits() ~= 2 or plot:IsWater()
 		or city == nil or city:GetOwner() ~= playerID
+        or not unit:CanMove()
 		or not (unit:IsCanEstablishCorps() or unit:IsCanBeEstablishedCorps())
 		then
 			return false

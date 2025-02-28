@@ -228,21 +228,6 @@ local improvementPolyCity = {
     [5] = GameInfoTypes["IMPROVEMENT_POLYNESIA_CITY_NW"]
 }
 
-local incaID = GameInfoTypes["CIVILIZATION_INCA"]
-local polyID = GameInfoTypes["CIVILIZATION_POLYNESIA"]
-
-function SPNIsCivilisationActive(civilizationID)
-    for iSlot = 0, GameDefines.MAX_MAJOR_CIVS - 1, 1 do
-        local slotStatus = PreGame.GetSlotStatus(iSlot)
-        if (slotStatus == SlotStatus.SS_TAKEN or slotStatus == SlotStatus.SS_COMPUTER) then
-            if PreGame.GetCivilization(iSlot) == civilizationID then
-                return true
-            end
-        end
-    end
-    return false
-end
-
 function chooseCoastalCityDirection(plotX, plotY)
     if Map.GetPlot(plotX, plotY):GetPlotCity() == nil then return end
     local improvementPolyCityID = 0
@@ -305,7 +290,7 @@ function SPNConquestedSpecialTerrianCity(oldOwnerID, isCapital, cityX, cityY, ne
     SPNCityFoundedInSpecialTerrain(newOwnerID, cityX, cityY)
 end
 
-if SPNIsCivilisationActive(incaID) or SPNIsCivilisationActive(polyID) then
+if Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_INCA) or Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_POLYNESIA) then
     GameEvents.PlayerCityFounded.Add(SPNCityFoundedInSpecialTerrain)
     Events.SerialEventCityDestroyed.Add(SPNDestroySpecialTerrainCity)
     GameEvents.CityCaptureComplete.Add(SPNConquestedSpecialTerrianCity)

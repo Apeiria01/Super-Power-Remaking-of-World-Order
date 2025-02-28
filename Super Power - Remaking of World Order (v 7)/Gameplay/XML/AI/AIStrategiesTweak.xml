@@ -592,7 +592,7 @@
 			<Where Name="OPINION_WEIGHT_WONDER_STRONG" />
 		</Update>
 		<Update>
-			<Set Value="150"/>
+			<Set Value="100"/>
 			<Where Name="OPINION_WEIGHT_MINOR_CIV_FIERCE" />
 		</Update>
 		<Update>
@@ -728,7 +728,7 @@
 			<Where Name="OPINION_WEIGHT_WE_DISLIKED_THEIR_PROPOSAL_NUM_TURNS" />
 		</Update>
 		<Update>
-			<Set Value="-80"/>
+			<Set Value="-40"/>
 			<Where Name="OPINION_WEIGHT_THEY_SUPPORTED_OUR_PROPOSAL" />
 		</Update>
 		<Update>
@@ -736,7 +736,7 @@
 			<Where Name="OPINION_WEIGHT_THEY_SUPPORTED_OUR_PROPOSAL_NUM_TURNS" />
 		</Update>		
 		<Update>
-			<Set Value="200"/>
+			<Set Value="100"/>
 			<Where Name="OPINION_WEIGHT_THEY_FOILED_OUR_PROPOSAL" />
 		</Update>
 		<Update>
