@@ -787,6 +787,12 @@ function GetHelpTextForUnit( unitID ) -- isIncludeRequirementsInfo )
 		insert( tips, L"TXT_KEY_PEDIA_PREREQ_POLICY_LABEL" .. " " .. PolicyColor( L(item.Description) ) )
 	end
 
+	-- Required Social Policy:
+	item = unit.PolicyBranchType and GameInfo.PolicyBranchTypes[ unit.PolicyBranchType ]
+	if item then
+		insert( tips, L"TXT_KEY_PEDIA_PREREQ_POLICY_LABEL" .. " " .. PolicyColor( L(item.Description) ) )
+	end
+
 	-- Required Buildings:
 	local buildings = {}
 	for row in GameInfo.Unit_BuildingClassRequireds( thisUnitType ) do
