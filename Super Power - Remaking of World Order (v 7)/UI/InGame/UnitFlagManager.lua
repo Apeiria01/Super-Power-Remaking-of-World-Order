@@ -451,6 +451,21 @@ local g_UnitFlagClass         =
     end,
     ------------------------------------------------------------------
     ------------------------------------------------------------------
+    UpdateUnitType = function(self)
+        local pUnit = Players[self.m_PlayerID]:GetUnitByID(self.m_UnitID);
+        if pUnit == nil then
+            return;
+        end
+        if pUnit:GetUnitCombatType() == GameInfoTypes.UNITCOMBAT_RECON then
+            self.m_SPUnitType = 0;
+        elseif pUnit:GetBaseCombatStrength() > 0 and not pUnit:IsCargo() and pUnit:IsImmobile() then
+            self.m_SPUnitType = 1;
+        else
+            self.m_SPUnitType = -1;
+        end
+    end,
+    ------------------------------------------------------------------
+    ------------------------------------------------------------------
     UpdateFlagType = function(self)
         local textureName;
         local maskName;
@@ -1079,7 +1094,7 @@ function OnUnitMoveQueueChanged(playerID, unitID, bRemainingMoves)
             if flag.m_Escort ~= pPlot then
                 -- Moved Citadel Unit will be destroyed!
                 if flag.m_SPUnitType == 1 then
-                    thisUnit:Kill();
+                    --thisUnit:Kill();
                     return;
                 end
                 flag.m_Escort = pPlot;
@@ -1583,6 +1598,12 @@ function OnDimEvent(playerID, unitID, bDim)
                 flag:SetDim(bDim);
             end
             if pUnit:IsMustSetUpToRangedAttack() then
+                flag:UpdateFlagType();
+            end
+            if (flag.m_SPUnitType == 1 and not pUnit:IsImmobile())
+            or (pUnit:IsImmobile() and flag.m_SPUnitType ~= 1)
+            then
+                flag:UpdateUnitType();
                 flag:UpdateFlagType();
             end
         end
