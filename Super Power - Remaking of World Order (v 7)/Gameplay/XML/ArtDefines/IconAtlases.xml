@@ -1642,6 +1642,16 @@
 				<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS</IconFontTexture>
 				<IconMapping>67</IconMapping>
 			</InsertOrAbort>
+			<InsertOrAbort>
+				<IconName>ICON_PROMOTION_SIGHT_SP</IconName>
+				<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS</IconFontTexture>
+				<IconMapping>68</IconMapping>
+			</InsertOrAbort>
+			<InsertOrAbort>
+				<IconName>ICON_HP_SP</IconName>
+				<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS</IconFontTexture>
+				<IconMapping>69</IconMapping>
+			</InsertOrAbort>
 		</IconFontMapping>
 
 

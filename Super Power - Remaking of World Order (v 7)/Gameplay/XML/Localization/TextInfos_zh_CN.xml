@@ -5949,7 +5949,7 @@
 			<Text>
 				[ICON_BULLET]击败蛮族营寨中的单位会加入匈人军队，城市名从其他文明借用。
 				[NEWLINE][ICON_BULLET]夷平城市后获得当前回合数*10的[ICON_GOLD][ICON_RESEARCH][ICON_CULTURE][ICON_PEACE]一次性产出，上限1000点。
-				[NEWLINE][ICON_BULLET]夷平城市时，每减少一人口，所有位于该城市工作地块上的战斗单位+2最大[ICON_SILVER_FIST]生命值，上限150。
+				[NEWLINE][ICON_BULLET]夷平城市时，每减少一人口，所有位于该城市工作地块上的战斗单位+2最大[ICON_HP_SP]生命值，上限150。
 			</Text>
 		</Replace>
 
@@ -16498,5 +16498,9 @@
 		<Replace Tag="TXT_KEY_RO_STATUS_FOUNDER">
 			<Text>{1_ReligionName}宗教领袖</Text>
 		</Replace>
+
+		<Row Tag="TXT_KEY_EUPANEL_CAPTURE_CHANCE_SP">
+			<Text>[COLOR_CYAN]战胜时俘获敌军的几率[ENDCOLOR]</Text>
+		</Row>
 	</Language_zh_CN>
 </GameData>

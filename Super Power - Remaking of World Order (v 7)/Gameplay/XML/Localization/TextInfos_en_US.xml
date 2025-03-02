@@ -10499,7 +10499,7 @@
 			<Text>
 				[ICON_BULLET]Defeated Barbarian unit in encampments will join you. Borrow City names from other in-game Civs.
 				[NEWLINE][ICON_BULLET]Receive [ICON_CULTURE] Culture, [ICON_RESEARCH] Science, [ICON_GOLD] Gold and [ICON_PEACE] Faith after destroying a city (amount = 10*turn, 1,000 maximum). 
-       			[NEWLINE][ICON_BULLET]When razing a city, for every one population reduction, all combat units located on the city's work plot will have +2 maximum [ICON_SILVER_FIST] HP, and the upper limit of this effect is 150.
+       			[NEWLINE][ICON_BULLET]When razing a city, for every one population reduction, all combat units located on the city's work plot will have +2 maximum [ICON_HP_SP] HP, and the upper limit of this effect is 150.
 			</Text>
 		</Replace>
 
@@ -18156,5 +18156,8 @@
 		<Replace Tag="TXT_KEY_RO_STATUS_FOUNDER">
 			<Text>Religion Leader of {1_ReligionName}</Text>
 		</Replace>
+		<Row Tag="TXT_KEY_EUPANEL_CAPTURE_CHANCE_SP">
+			<Text>[COLOR_CYAN]Capture Chance if Sunk[ENDCOLOR]</Text>
+		</Row>
 	</Language_en_US>
 </GameData>
