@@ -66,6 +66,7 @@
 			<IconAtlas>UNIT_ATLAS_1</IconAtlas>
 			<PortraitIndex>5</PortraitIndex>
 			<ExtraMaintenanceCost>1</ExtraMaintenanceCost>
+			<NoAggressive>true</NoAggressive>
 		</Row>
 
 		<Row>
@@ -97,6 +98,7 @@
 			<IconAtlas>SPUNITS02_ATLAS</IconAtlas>
 			<PortraitIndex>45</PortraitIndex>
 			<ExtraMaintenanceCost>1</ExtraMaintenanceCost>
+			<NoAggressive>true</NoAggressive>
 		</Row>
 
 		
@@ -132,6 +134,7 @@
 			<ExtraMaintenanceCost>1</ExtraMaintenanceCost>
 			<ProjectPrereq>PROJECT_NAVAL_EXPLORATION</ProjectPrereq>
 			<ObsoleteTech>TECH_ARCHAEOLOGY</ObsoleteTech>
+			<NoAggressive>true</NoAggressive>
 		</Row>
 
 
