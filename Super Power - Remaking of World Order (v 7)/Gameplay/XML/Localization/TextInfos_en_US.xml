@@ -17637,6 +17637,9 @@
 		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_19">
 			<Text>For every Great Works you own, you get 2% global [ICON_CULTURE] Culture and [ICON_TOURISM] Tourism output bonus</Text>
 		</Row>
+		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_20">
+			<Text>Buying in bulk from one Player may lead to price hikes, trade with multiple Majors to secure your resources.</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_DIPLOMACY_MARRIAGE_TITLE">
 			<Text>Diplomatic marriage</Text>

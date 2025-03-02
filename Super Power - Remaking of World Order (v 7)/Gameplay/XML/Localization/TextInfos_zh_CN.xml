@@ -7257,8 +7257,8 @@
 		<Replace Tag="TXT_KEY_POLICY_NAVIGATION_SCHOOL_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]航海学校[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]每处灯塔、港口、海运码头和船坞+1本地[ICON_HAPPINESS_1]快乐。建造海上单位时+15%[ICON_PRODUCTION]产能积累。
-				[NEWLINE][ICON_BULLET]新训练的海军单位+15点经验。
+				[NEWLINE][ICON_BULLET]每处灯塔、港口、海运码头和船坞+1本地[ICON_HAPPINESS_1]快乐。
+				[NEWLINE][ICON_BULLET]建造海上单位时+15%[ICON_PRODUCTION]产能积累，新训练的海军单位+15点经验。
 				[NEWLINE][ICON_BULLET]当你训练或购买了一个远洋海军单位时，获得一次性的[ICON_CULTURE]文化加成(其数值相当于单位的100%[ICON_STRENGTH]战斗力)。
 			</Text>
 		</Replace>
@@ -15017,7 +15017,7 @@
 			<Text>
 				[ICON_BULLET]获得两个传教士，所有城市获得免费神庙。
 				[NEWLINE][ICON_BULLET]本城新建陆军单位+15经验。
-				[NEWLINE][ICON_BULLET]允许使用信仰购买美洲狮战士和雄鹰战士。
+				[NEWLINE][ICON_BULLET]允许使用信仰购买美洲虎战士和雄鹰战士。
 				[NEWLINE][ICON_BULLET]可将陆军正规军单位移至本城进行活人献祭，获得相当于军事单位战斗力300%的[ICON_CULTURE]文化和[ICON_PEACE]信仰。
 				该单位有20%的概率存活，并且获得晋升【战神齐洛波奇特利之力】，+50生命值上限，战斗力+10%。
 			</Text>
@@ -15977,6 +15977,9 @@
 		</Row>
 		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_19">
 			<Text>每拥有一个杰作，你可以获得2%的全局[ICON_CULTURE]文化和[ICON_TOURISM]魅力加成</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_20">
+			<Text>向同一个AI购买大量资源后对方会坐地起价，请和多个AI交易保证自己的资源安全。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_DIPLOMACY_MARRIAGE_TITLE">
