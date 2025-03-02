@@ -740,7 +740,7 @@ function AIPromotion(iPlayer, iCity, iUnit, bGold, bFaith)
 
     ------------------------AI with many coastal cities will build more naval units other than land units
     local iUnitClassCount = player:GetUnitClassCount(ThisUnitClass)
-    if unit:IsCombatUnit() and unitBuiltCity:IsCoastal(GameDefines["MIN_WATER_SIZE_FOR_OCEAN"]) and iUnitClassCount > AICityCount / 2 then
+    if handicap >= 3 and unit:IsCombatUnit() and unitBuiltCity:IsCoastal(GameDefines["MIN_WATER_SIZE_FOR_OCEAN"]) and iUnitClassCount > AICityCount / 2 then
 
         ---------------------------------Count the ratio of coastal cities
         local AICoastalCitiesCount = 0
@@ -752,23 +752,19 @@ function AIPromotion(iPlayer, iCity, iUnit, bGold, bFaith)
         print("AI coastal cities count:" .. AICoastalCitiesCount)
 
         if AICoastalCitiesCount > AICityCount / 1.5 then
-
-            if unit:IsRanged() then
-                if player:GetCurrentEra() >= 2 then
+            if player:GetCurrentEra() >= 2 then
+                if unit:IsRanged() then
                     AIForceBuildNavalHRUnits(unitX, unitY, player)
-                end
-            else
-                if player:GetCurrentEra() >= 2 then
+                else
                     AIForceBuildNavalEscortUnits(unitX, unitY, player)
                 end
+                print("Coastal AI build more naval units other than land units!")
             end
 
             if iUnitClassCount > 15 and iUnitClassCount > AICityCount * 2 and not PlayerAtWarWithHuman(player) then
                 unit:Kill()
                 print("AI has too many this type of land units! So remove it!")
             end
-            print("Coastal AI build more naval units other than land units!")
-
         end
     end
 

@@ -5849,7 +5849,7 @@
 			<Text>
 				[ICON_BULLET]擊敗蠻族營寨中的單位會加入匈人軍隊，城市名從其他文明借用。
 				[NEWLINE][ICON_BULLET]夷平城市後獲得當前回合數*10的[ICON_GOLD][ICON_RESEARCH][ICON_CULTURE][ICON_PEACE]一次性產出，上限1000點。
-				[NEWLINE][ICON_BULLET]夷平城市時，每減少一人口，所有位於該城市工作地塊上的戰鬥單位+2最大[ICON_SILVER_FIST]生命值，上限150。
+				[NEWLINE][ICON_BULLET]夷平城市時，每減少一人口，所有位於該城市工作地塊上的戰鬥單位+2最大[ICON_HP_SP]生命值，上限150。
 			</Text>
 		</Replace>
 
@@ -16305,5 +16305,8 @@
 		<Replace Tag="TXT_KEY_RO_STATUS_FOUNDER">
 			<Text>{1_ReligionName}宗教領袖</Text>
 		</Replace>
+		<Row Tag="TXT_KEY_EUPANEL_CAPTURE_CHANCE_SP">
+			<Text>[COLOR_CYAN]擊沉後的俘虜幾率[ENDCOLOR]</Text>
+		</Row>
 	</Language_zh_Hant_HK>
 </GameData>

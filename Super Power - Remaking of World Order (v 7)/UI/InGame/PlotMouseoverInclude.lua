@@ -361,7 +361,7 @@ function GetUnitsString(plot)
 			if not unit:IsTrade() then
 				hp = unit:GetCurrHitPoints() .. "/" .. hp;
 			end
-			strUnitText = strUnitText .. ", " .. hp .. "[ICON_SILVER_FIST]";
+			strUnitText = strUnitText .. ", " .. hp .. "[ICON_HP_SP]";
 			
 			-- Embarked?
 			if (unit:IsEmbarked()) then

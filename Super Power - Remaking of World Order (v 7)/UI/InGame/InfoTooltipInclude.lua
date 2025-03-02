@@ -521,11 +521,11 @@ function GetHelpTextForUnit( unitID ) -- isIncludeRequirementsInfo )
 	--new for maxhp:
 	if unit.MaxHitPoints~=nil then
         if HitModifier==0 then
-            maxhp = unit.MaxHitPoints + HitChange
-            insert( tips, L"TXT_KEY_PEDIA_MAXHP_LABEL_SP".. " " .. maxhp .. "[ICON_SILVER_FIST]")
+            local maxhp = unit.MaxHitPoints + HitChange
+            insert( tips, L"TXT_KEY_PEDIA_MAXHP_LABEL_SP".. " " .. maxhp .. "[ICON_HP_SP]")
         else
-            maxhp = ((unit.MaxHitPoints)*HitModifier/100)+ HitChange
-            insert( tips, L"TXT_KEY_PEDIA_MAXHP_LABEL_SP".. " " .. maxhp .. "[ICON_SILVER_FIST]")
+            local maxhp = ((unit.MaxHitPoints)*HitModifier/100)+ HitChange
+            insert( tips, L"TXT_KEY_PEDIA_MAXHP_LABEL_SP".. " " .. maxhp .. "[ICON_HP_SP]")
         end
 	end
 
@@ -537,7 +537,7 @@ function GetHelpTextForUnit( unitID ) -- isIncludeRequirementsInfo )
 
 	--new for Sight:
 	if unitSight > 0 then
-		insert( tips, L"TXT_KEY_PEDIA_SIGHT_LABEL_SP" .. " " .. unitSight .. "[ICON_PROMOTION_SIGHT_1]" )
+		insert( tips, L"TXT_KEY_PEDIA_SIGHT_LABEL_SP" .. " " .. unitSight .. "[ICON_PROMOTION_SIGHT_SP]" )
 	end
 
 	-- new for Abilities:	--TXT_KEY_PEDIA_FREEPROMOTIONS_LABEL

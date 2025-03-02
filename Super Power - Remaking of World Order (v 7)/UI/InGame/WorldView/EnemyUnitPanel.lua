@@ -202,7 +202,7 @@ function UpdateCityStats(pCity)
 
 	Controls.UnitMovementBox:SetHide(false);
 	Controls.UnitStatMovement:SetText(hp);
-	Controls.UnitStatNameMovement:SetText("[ICON_SILVER_FIST]");
+	Controls.UnitStatNameMovement:SetText("[ICON_HP_SP]");
 
 	Controls.UnitRangedAttackBox:SetHide(true);	
 	
@@ -1216,9 +1216,9 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				local iChance;
 				iChance = pMyUnit:GetCaptureChance(pTheirUnit);
 				if (iChance > 0) then
-						controlTable = g_MyCombatDataIM:GetInstance();
-						controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_CAPTURE_CHANCE", iChance);
-						controlTable.Value:SetText("");
+					controlTable = g_MyCombatDataIM:GetInstance();
+					controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_CAPTURE_CHANCE_SP");
+					controlTable.Value:SetText(": [COLOR_CYAN]".. iChance .. "%[ENDCOLOR]");
 				end
 			end
 
@@ -1518,14 +1518,22 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			iModifier = pMyUnit:GetStrengthModifierFromExtraResource();
 			if (iModifier ~= 0) then
 				controlTable = g_MyCombatDataIM:GetInstance();		
-				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_RESOURCE_MODIFIER");
+				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_RESOURCE_MODIFIER");
 				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
 			end
 			iModifier = pMyUnit:GetStrengthModifierFromExtraHappiness();
 			if (iModifier ~= 0) then
 				controlTable = g_MyCombatDataIM:GetInstance();		
-				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_EXCESS_HAPINESS_MODIFIER");
+				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_EXCESS_HAPINESS_MODIFIER");
 				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
+			end
+
+			-- Multiple Attack Bonus
+			iModifier = pMyUnit:GetMultiAttackBonus(pTheirUnit);
+			if (iModifier ~= 0) then
+				controlTable = g_MyCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_MULTI_ATTACK_BONUS_SP" );
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
 			end
 
 			--Num Of Origin City
