@@ -5939,6 +5939,7 @@
 			<!--<AdjacentMod>50</AdjacentMod>-->
 			<CannotBeChosen>true</CannotBeChosen>
 			<VisibilityChange>1</VisibilityChange>
+			<MultiAttackBonus>25</MultiAttackBonus>
 		</Row>
 		
 		<Row>

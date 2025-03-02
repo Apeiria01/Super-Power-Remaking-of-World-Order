@@ -2401,7 +2401,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_TOKYO_RAID_CANCEL">
 			<Text>This order will remove all the Land-Based-Aircrafts in the Hornet and make her available for Carrier-Based-Aircrafts(the Enterprise), it costs no movement but you can not bless a good luck until your next turn. 
-			[NEWLINE]She would automatically restore her cargo like before and transfer her promotions as well.</Text>
+			[NEWLINE]She would restore her cargo like before and transfer her promotions as well.</Text>
 		</Row>
 
 
@@ -15794,8 +15794,9 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_WOLFPACK_HELP">
 			<Text>
-				[ICON_BULLET]+1 [ICON_RANGE_STRENGTH] Range(May be extended to 4 [ICON_RANGE_STRENGTH]range).+1 Sights.
+				[ICON_BULLET]+1 [ICON_RANGE_STRENGTH] Range, +1 [ICON_PROMOTION_SIGHT_SP]Sights.
 				[NEWLINE][ICON_BULLET]+50% [ICON_STRENGTH] Combat Strength for both defence and ranged attack.
+				[NEWLINE][ICON_BULLET]+25% [ICON_STRENGTH] Combat Strength for ranged attack each time an enemy is attacked this Turn.
 			</Text>
 		</Row>
 		
@@ -17546,6 +17547,9 @@
 		</Row>
 		<Row Tag="TXT_KEY_EUPANEL_EXCESS_HAPINESS_MODIFIER">
 			<Text>Extra Happiness Bonus</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_BONUS_MULTI_ATTACK_BONUS_SP">
+			<Text>Multiple Attack Bonus</Text>
 		</Row>
 		<Row Tag="TXT_KEY_TECH_HELP_PROGRESS_WITH_OVERFLOW">
 			<Text>[ICON_BULLET]Progress: {1_Num} of {2_Num} [ICON_RESEARCH] Science (Overflow: {3_Num})</Text>
