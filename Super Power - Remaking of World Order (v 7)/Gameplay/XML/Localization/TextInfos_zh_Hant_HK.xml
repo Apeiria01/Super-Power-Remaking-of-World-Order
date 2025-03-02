@@ -5618,7 +5618,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_TOKYO_RAID">
 			<Text>移除所有企业号的舰载机使她成为陆基飞机母舰（大黄蜂号），这样做以后直到下回合都不能使用传奇航母加成。
-				[NEWLINE]大黄蜂号不能自动补充舰载机，即使有空位。
+				[NEWLINE]大黄蜂号不能补充舰载机，即使有空位。
 				[NEWLINE]大黄蜂号保留所有企业号的晋升，但这些晋升不能传递给陆基飞机。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_TOKYO_RAID_CANCEL_SHORT">
@@ -5628,7 +5628,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_TOKYO_RAID_CANCEL">
 			<Text>移除所有大黄蜂号的舰载机使她恢复为企业号，这样做以后直到下回合都不能使用传奇航母加成。
-				[NEWLINE]企业号像往常一样能自动补充舰载机并传递晋升给他们。</Text>
+				[NEWLINE]企业号像往常一样能补充舰载机并传递晋升给他们。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_SP_BTNNOTE_GLOBAL_STRIKE_SHORT">
@@ -13619,7 +13619,11 @@
 			<Text>狼群戰術</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_WOLFPACK_HELP">
-			<Text>+1[ICON_RANGE_STRENGTH]射程；[NEWLINE]+50%[ICON_STRENGTH]防禦力和遠程戰鬥力。</Text>
+			<Text>
+				[ICON_BULLET]+1[ICON_RANGE_STRENGTH]射程，+1[ICON_PROMOTION_SIGHT_SP]視野。
+				[NEWLINE][ICON_BULLET]+50%[ICON_STRENGTH]防禦力和遠程戰鬥力。
+				[NEWLINE][ICON_BULLET]回合內敵軍每遭受一次攻擊，對其+25%攻擊力。
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_SP_ATTACK_25">
@@ -13854,10 +13858,10 @@
 		<Row Tag="TXT_KEY_PROMOTION_TOKYO_RAID_HELP">
 			<Text>可以转为陆基飞机载体（大黄蜂号）或者反过来
 				[NEWLINE]移除所有企业号的舰载机使她成为陆基飞机母舰（大黄蜂号），这样做以后直到下回合都不能使用传奇航母加成。
-				[NEWLINE]大黄蜂号不能自动补充舰载机，即使有空位。
+				[NEWLINE]大黄蜂号不能补充舰载机，即使有空位。
 				[NEWLINE]大黄蜂号保留所有企业号的晋升，但这些晋升不能传递给陆基飞机。
 				[NEWLINE]移除所有大黄蜂号的舰载机使她恢复为企业号，这样做以后直到下回合都不能使用传奇航母加成。
-				[NEWLINE]企业号像往常一样能自动补充舰载机并传递晋升给他们。
+				[NEWLINE]企业号像往常一样能补充舰载机并传递晋升给他们。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_NO_LUCK">
@@ -15689,6 +15693,9 @@
 		</Row>
 		<Row Tag="TXT_KEY_EUPANEL_EXCESS_HAPINESS_MODIFIER">
 			<Text>額外快樂度加成</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_BONUS_MULTI_ATTACK_BONUS_SP">
+			<Text>多重攻擊加成</Text>
 		</Row>
 		<Row Tag="TXT_KEY_TECH_HELP_PROGRESS_WITH_OVERFLOW">
 			<Text>[ICON_BULLET]進度: {1_Num}/{2_Num}[ICON_RESEARCH]科研（溢出：{3_Num}）</Text>
