@@ -1875,6 +1875,7 @@
 			<PortraitIndex>43</PortraitIndex>
 			<MoveRate>WOODEN_BOAT</MoveRate>
 			<ExtraMaintenanceCost>1</ExtraMaintenanceCost>
+			<NoAggressive>true</NoAggressive>
 		</Row>
 		<Row>
 			<Class>UNITCLASS_CARAVEL</Class>
@@ -1909,6 +1910,7 @@
 			<PortraitIndex>13</PortraitIndex>
 			<MoveRate>WOODEN_BOAT</MoveRate>
 			<NoMaintenance>true</NoMaintenance>
+			<NoAggressive>true</NoAggressive>
 		</Row>
 		
 
