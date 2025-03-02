@@ -7154,8 +7154,8 @@
 		<Replace Tag="TXT_KEY_POLICY_NAVIGATION_SCHOOL_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]航海學校[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]每處燈塔、港口、海運碼頭和船塢+1本地[ICON_HAPPINESS_1]快樂。建造海上單位時+15%[ICON_PRODUCTION]產能積累。
-				[NEWLINE][ICON_BULLET]新訓練的海軍單位+15點經驗。
+				[NEWLINE][ICON_BULLET]每處燈塔、港口、海運碼頭和船塢+1本地[ICON_HAPPINESS_1]快樂。
+				[NEWLINE][ICON_BULLET]建造海上單位時+15%[ICON_PRODUCTION]產能積累，新訓練的海軍單位+15點經驗。
 				[NEWLINE][ICON_BULLET]當你訓練或購買了一個遠洋海軍單位時，獲得一次性的[ICON_CULTURE]文化加成(其數值相當於單位的100%[ICON_STRENGTH]戰鬥力)。
 			</Text>
 		</Replace>
@@ -14833,7 +14833,7 @@
 			<Text>
 				[ICON_BULLET]獲得兩個傳教士，所有城市獲得免費神廟。
 				[NEWLINE][ICON_BULLET]本城新建陸軍單位+15經驗。
-				[NEWLINE][ICON_BULLET]允許使用信仰購買美洲獅戰士和雄鷹戰士。
+				[NEWLINE][ICON_BULLET]允許使用信仰購買美洲虎戰士和雄鷹戰士。
 				[NEWLINE][ICON_BULLET]可將陸軍正規軍單位移至本城進行活人獻祭，獲得相當於軍事單位戰鬥力300%的[ICON_CULTURE]文化和[ICON_PEACE]信仰。
 				該單位有20%的概率存活，並且獲得晉升【戰神齊洛波奇特利之力】，+50生命值上限，戰鬥力+10%。
 			</Text>
@@ -15782,6 +15782,9 @@
 		</Row>
 		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_19">
 			<Text>每擁有一個傑作，你可以獲得2%的全局[ICON_CULTURE]文化和[ICON_TOURISM]魅力加成</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_20">
+			<Text>向同一個AI購買大量資源後對方會坐地起價，請和多個AI交易保證自己的資源安全。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_DIPLOMACY_MARRIAGE_TITLE">
