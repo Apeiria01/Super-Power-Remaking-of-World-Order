@@ -5,10 +5,11 @@ InGame.xml.]]
 -- InGame New Effect
 
 -- DLL-VMC -- STFU
-include( "Stfu" )
+include("Stfu")
+include("DllVersionCheck");
 
 -- SP - All
-include( "UtilityFunctions" )
+include("UtilityFunctions")
 -- AI
 include("NewHandicap");
 -- Combat
