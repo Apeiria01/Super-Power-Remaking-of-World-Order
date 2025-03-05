@@ -639,13 +639,13 @@
 			<YieldMod>33</YieldMod>
 		</Row>-->
 		<Row>
-			<PolicyType>POLICY_IRON_CURTAIN</PolicyType>
+			<PolicyType>POLICY_ACADEMY_SCIENCES</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_PUPPET_GOVERNEMENT</BuildingClassType>
 			<YieldType>YIELD_GOLD</YieldType>
 			<YieldMod>33</YieldMod>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_IRON_CURTAIN</PolicyType>
+			<PolicyType>POLICY_ACADEMY_SCIENCES</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_PUPPET_GOVERNEMENT</BuildingClassType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<YieldMod>33</YieldMod>
