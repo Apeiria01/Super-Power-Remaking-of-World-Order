@@ -596,7 +596,7 @@
 			<Where Type="POLICY_RESETTLEMENT"/>
 		</Update>
 		<Update>
-			<Set SharedIdeologyTourismModifier="25" DifferentIdeologyTourismModifier="50" Level="3"/>
+			<Set CityExtraProductionCount="1" Level="3"/>
 			<Where Type="POLICY_ACADEMY_SCIENCES"/>
 		</Update>
 		<Update>
@@ -608,7 +608,7 @@
 			<Where Type="POLICY_PARTY_LEADERSHIP"/>
 		</Update>
 		<Update>
-			<Set FreeBuildingOnConquest="NULL" IdeologyUnhappinessModifier="-100" IdeologyPressureModifier="100" ImmigrationOutModifier="-50"/>
+			<Set FreeBuildingOnConquest="NULL" IdeologyUnhappinessModifier="-100" IdeologyPressureModifier="100" ImmigrationOutModifier="-50" SharedIdeologyTourismModifier="25" DifferentIdeologyTourismModifier="50"/>
 			<Where Type="POLICY_IRON_CURTAIN"/>
 		</Update>
 		
@@ -1862,16 +1862,6 @@
 			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
 			<Flavor>8</Flavor>
 		</Row>
-		<!--<Row>
-			<PolicyType>POLICY_ACADEMY_SCIENCES</PolicyType>
-			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
-			<Flavor>33</Flavor>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_ACADEMY_SCIENCES</PolicyType>
-			<FlavorType>FLAVOR_SCIENCE</FlavorType>
-			<Flavor>11</Flavor>
-		</Row>-->
 		<Row>
 			<PolicyType>POLICY_PARTY_LEADERSHIP</PolicyType>
 			<FlavorType>FLAVOR_GROWTH</FlavorType>
@@ -1904,8 +1894,13 @@
 		</Row>
 		<Row>
 			<PolicyType>POLICY_ACADEMY_SCIENCES</PolicyType>
-			<FlavorType>FLAVOR_CULTURE</FlavorType>
-			<Flavor>44</Flavor>
+			<FlavorType>FLAVOR_GOLD</FlavorType>
+			<Flavor>33</Flavor>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_ACADEMY_SCIENCES</PolicyType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>99</Flavor>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_WORKERS_FACULTIES</PolicyType>
@@ -1934,7 +1929,7 @@
 		</Row>
 		<Row>
 			<PolicyType>POLICY_IRON_CURTAIN</PolicyType>
-			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<FlavorType>FLAVOR_CULTURE</FlavorType>
 			<Flavor>66</Flavor>
 		</Row>
 		<Row>
