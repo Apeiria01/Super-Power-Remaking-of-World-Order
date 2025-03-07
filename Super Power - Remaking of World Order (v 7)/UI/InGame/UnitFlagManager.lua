@@ -2179,8 +2179,8 @@ function TipHandler(Button)
                 " " .. (costTip or Locale.ConvertTextKey("TXT_KEY_FREE"))
         end
 
-        if unit2.ExtraMaintenanceCost > 0 then -- ExtraMaintenanceCost cost
-            ExtraMaintenanceCost = unit2.ExtraMaintenanceCost
+        if unit2.ExtraMaintenanceCost > 0 or unit:GetPromotionMaintenanceCost() >0 then -- ExtraMaintenanceCost cost
+            ExtraMaintenanceCost = unit2.ExtraMaintenanceCost + unit:GetPromotionMaintenanceCost()
             toolTipString = toolTipString ..
                 " " .. Locale.ConvertTextKey("TXT_KEY_PEDIA_MAINT_LABEL") .. -ExtraMaintenanceCost .. "[ICON_GOLD]"
         end
