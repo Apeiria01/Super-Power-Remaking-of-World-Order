@@ -7395,7 +7395,8 @@
 		<Replace Tag="TXT_KEY_POLICY_ACADEMY_SCIENCES_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]科學社會主義[ENDCOLOR]
-				[NEWLINE]向其他意识形态国家输出的[ICON_TOURISM]旅遊業績+50%，向其他秩序意识形态国家输出的[ICON_TOURISM]旅遊業績+25%。
+				[NEWLINE][COLOR_POSITIVE_TEXT]傀儡[ENDCOLOR]城市[ICON_PRODUCTION]產能和[ICON_GOLD]金錢產出+33%。
+				[NEWLINE]城市每回合可以完成的建造項目[COLOR_POSITIVE_TEXT]上限[ENDCOLOR]+1（需將項目添加至建造隊列）。
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_ACADEMY_SCIENCES_TEXT">
@@ -7424,7 +7425,11 @@
 			<Text>國際主義</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_IRON_CURTAIN_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]國際主義[ENDCOLOR][NEWLINE]你向其他國家移民的速度降低50%。[COLOR_POSITIVE_TEXT]傀儡[ENDCOLOR]城市[ICON_PRODUCTION]生產力和[ICON_GOLD]金幣產出+33%。抵消自身受到的[ICON_HAPPINESS_4]公共輿論不滿，對其他意識形態文明的[ICON_HAPPINESS_4]公共輿論壓力翻倍。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]國際主義[ENDCOLOR]
+				[NEWLINE]你向其他國家移民的速度降低50%。抵消自身受到的[ICON_HAPPINESS_4]公共輿論不滿，對其他意識形態文明的[ICON_HAPPINESS_4]公共輿論壓力翻倍。
+				[NEWLINE]向其他意識形態國家輸出的[ICON_TOURISM]魅力+50%，向其他秩序意識形態國家輸出的[ICON_TOURISM]魅力+25%。
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_IRON_CURTAIN_TEXT">
 			<Text>國際主義是指各國無產階級在反對剝削製度，爭取自身解放鬥爭中，在政治、經濟、道義等方面互相支持，互相援助，堅持國際團結的思想和政治原則。國際主義體現了無產階級的民族觀，是無產階級處理民族問題的基本原則，也是無產階級認識和處理各國無產階級之間、各國無產階級政黨之間以及社會主義國家之間相互關系的行為準則。資本壓迫和統治的國際性，決定了無產階級反對資產階級的鬥爭，從形式上看，首先是在一國範圍內進行，但從內容上看，從來就是國際性的：無產階級只有解放全人類，才能最後解放自己。[NEWLINE][NEWLINE]—— “這是最後的鬥爭，團結起來到明天，英特納雄耐爾就一定要實現！這是最後的鬥爭，團結起來到明天，英特納雄耐爾就一定要實現！”</Text>

@@ -8320,8 +8320,9 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_ACADEMY_SCIENCES_HELP" >
 			<Text>
-			[COLOR_POSITIVE_TEXT]Scientific Socialism[ENDCOLOR]
-			[NEWLINE]+50% Tourism [ICON_TOURISM] to other Ideology Civilizations, +25% Tourism [ICON_TOURISM] to other Order civilizations.
+				[COLOR_POSITIVE_TEXT]Scientific Socialism[ENDCOLOR]
+				[NEWLINE]+33% [ICON_GOLD] Gold and [ICON_PRODUCTION] Production output in [COLOR_POSITIVE_TEXT]Puppet[ENDCOLOR] cities.
+				[NEWLINE][COLOR_POSITIVE_TEXT]Max number[ENDCOLOR] of items a city can complete per Turn +1 (items need to be added to the production queue).
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_ACADEMY_SCIENCES_TEXT">
@@ -8350,7 +8351,11 @@
 			<Text>Internationalism</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_IRON_CURTAIN_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]Internationalism[ENDCOLOR][NEWLINE]-50% [ICON_TEAM_2] International Immigration Rate from Your Nation to other civlizations. +33% [ICON_GOLD] Gold and [ICON_PRODUCTION] Production output in [COLOR_POSITIVE_TEXT]Puppet[ENDCOLOR] cities. Counteract the [ICON_HAPPINESS_4] Unhappiness from Public Opinion in your Civilization, and double [ICON_HAPPINESS_4] public opinion pressure for other ideological civilizations.</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]Internationalism[ENDCOLOR]
+				[NEWLINE]-50% [ICON_TEAM_2] International Immigration Rate from Your Nation to other civlizations. Counteract the [ICON_HAPPINESS_4] Unhappiness from Public Opinion in your Civilization, and double [ICON_HAPPINESS_4] public opinion pressure for other ideological civilizations.
+				[NEWLINE]+50% Tourism [ICON_TOURISM] to other Ideology Civilizations, +25% Tourism [ICON_TOURISM] to other Order civilizations.
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_IRON_CURTAIN_TEXT" >
 			<Text>Internationalism is a political principle that advocates greater political or economic cooperation among states and nations. It is associated with other political movements and ideologies, but can also reflect a doctrine, belief system, or movement in itself. [NEWLINE]Supporters of internationalism are known as internationalists and generally believe that humans should unite across national, political, cultural, racial, or class boundaries to advance their common interests, or that governments should cooperate because their mutual long-term interests are of greater importance than their short-term disputes.[NEWLINE][NEWLINE]—— "C’est la lutte finale Groupons nous et demain L’Internationale Sera le genre humain!"</Text>

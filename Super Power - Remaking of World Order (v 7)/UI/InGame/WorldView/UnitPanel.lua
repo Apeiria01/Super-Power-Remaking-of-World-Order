@@ -564,9 +564,13 @@ function UpdateUnitActions(unit)
 	end
 	if (numSecondaryActions == 0) then
 		Controls.SecondaryStack:SetHide(true);
+	elseif (numSecondaryActions > 0 and g_SecondaryOpen) then
+		Controls.SecondaryStack:SetHide(false);
 	end
 	if (numSecondaryAActions == 0) then
 		Controls.SecondaryAStack:SetHide(true)
+	elseif (numSecondaryAActions > 0 and g_SecondaryOpen) then
+		Controls.SecondaryAStack:SetHide(false)
 	end
 
 	Controls.SecondaryStack:CalculateSize();
