@@ -3127,14 +3127,14 @@
 			<Text>[ICON_RES_ELECTRICITY]燃煤发电扩容机组</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_COAL_PLANT_EXTEND_HELP">
-			<Text> [COLOR_NEGATIVE_TEXT]污染[ENDCOLOR]会导致[ICON_FOOD]食物累积-3%。[NEWLINE][NEWLINE]城市必须拥有燃煤发电站。</Text>
+			<Text>[COLOR_NEGATIVE_TEXT]污染[ENDCOLOR]会导致[ICON_FOOD]食物累积-2%。[NEWLINE][NEWLINE]城市必须拥有燃煤发电站。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_BUILDING_COAL_PLANT_EXTEND_IZ">
 			<Text>[ICON_RES_ELECTRICITY]燃煤发电扩容2级机组</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_COAL_PLANT_EXTEND_IZ_HELP">
-			<Text>拥有鲁尔工业区后解锁，城市必须拥有燃煤发电扩容机组。</Text>
+			<Text>[COLOR_NEGATIVE_TEXT]污染[ENDCOLOR]会导致[ICON_FOOD]食物累积-2%。[NEWLINE][NEWLINE]拥有鲁尔工业区后解锁，城市必须拥有燃煤发电扩容机组。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_BUILDING_DANISH_WIND_TURBINE">
@@ -3320,7 +3320,7 @@
 		<Row Tag="TXT_KEY_BUILDING_TAP_WATER_SUPPLY_HELP">
 			<Text>
 				[ICON_BULLET]城市每处已开发的湖泊区块+1[ICON_FOOD]食物。
-				[NEWLINE][ICON_BULLET]城市增加新的[ICON_CITIZEN]市民后保留40%[ICON_FOOD]食物储备以加速成长。
+				[NEWLINE][ICON_BULLET]城市增加新的[ICON_CITIZEN]市民后保留30%[ICON_FOOD]食物储备以加速成长。
 				[NEWLINE][ICON_BULLET]只能在小型城市（6人口）建造，中型城市需要有引水渠或自来水系统才能继续增长人口。
 				[NEWLINE][ICON_BULLET]每5[ICON_CITIZEN]人口+1[ICON_GOLD]维护费。
 			</Text>
@@ -3551,7 +3551,7 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_BUILDING_HOSPITAL_HELP">
-			<Text>[NEWLINE][NEWLINE]减少25%因污染导致的[ICON_FOOD]食物累积损失。[NEWLINE][NEWLINE]大型城市需要有医院才能继续增长人口。[NEWLINE][NEWLINE]每4[ICON_CITIZEN]市民+1[ICON_GOLD]维护费。</Text>
+			<Text>减少25%因污染导致的[ICON_FOOD]食物累积损失（不会超过0%）。[NEWLINE][NEWLINE]大型城市需要有医院才能继续增长人口。[NEWLINE][NEWLINE]每4[ICON_CITIZEN]市民+1[ICON_GOLD]维护费。</Text>
 		</Replace>
 
 		<Row>
@@ -3814,7 +3814,7 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_MEDICAL_LAB_HELP">
 			<Text>
-				减少25%因污染导致的[ICON_FOOD]食物累积损失。
+				减少25%因污染导致的[ICON_FOOD]食物累积损失（不会超过0%）。
 				[NEWLINE][NEWLINE]巨型城市需要有医学实验室才能继续增长人口。
 				[NEWLINE][NEWLINE]每4[ICON_CITIZEN]市民+1[ICON_GOLD]维护费。
 			</Text>
@@ -16509,6 +16509,13 @@
 
 		<Row Tag="TXT_KEY_EUPANEL_CAPTURE_CHANCE_SP">
 			<Text>[COLOR_CYAN]战胜时俘获敌军的几率[ENDCOLOR]</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_POPULATION_GROWTH_POLLUTION_SHORT">
+			<Text>人口增长（污染）</Text>
+		</Row>
+		<Row Tag="TXT_KEY_FOOD_MAX_KEPT">
+			<Text>人口增长后，最多可以保留{1_Percent}%[ICON_FOOD]食物</Text>
 		</Row>
 	</Language_zh_CN>
 </GameData>

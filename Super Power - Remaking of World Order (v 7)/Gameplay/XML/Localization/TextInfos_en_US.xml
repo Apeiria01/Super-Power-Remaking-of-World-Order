@@ -5915,14 +5915,14 @@
 			<Text>[ICON_RES_ELECTRICITY] Coal Plant Additional Unit</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_COAL_PLANT_EXTEND_HELP">
-			<Text> [COLOR_NEGATIVE_TEXT]Pollution[ENDCOLOR] will cause -3% [ICON_FOOD] Food Growth.[NEWLINE][NEWLINE]City must have a Coal Plant.</Text>
+			<Text>[COLOR_NEGATIVE_TEXT]Pollution[ENDCOLOR] will cause -2% [ICON_FOOD] Food Growth.[NEWLINE][NEWLINE]City must have a Coal Plant.</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_BUILDING_COAL_PLANT_EXTEND_IZ">
 			<Text>[ICON_RES_ELECTRICITY] Coal Plant Additional Unit II</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_COAL_PLANT_EXTEND_IZ_HELP">
-			<Text>Unlock when you own the Ruhr Industrial Base, City must have a Coal Plant Additional Unit.</Text>
+			<Text>[COLOR_NEGATIVE_TEXT]Pollution[ENDCOLOR] will cause -2% [ICON_FOOD] Food Growth.[NEWLINE][NEWLINE]Unlock when you own the Ruhr Industrial Base, City must have a Coal Plant Additional Unit.</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_BUILDING_DANISH_WIND_TURBINE">
@@ -6135,7 +6135,7 @@
 		<Row Tag="TXT_KEY_BUILDING_TAP_WATER_SUPPLY_HELP">
 			<Text>
 				[ICON_BULLET]+1 [ICON_FOOD] Food for worked lake tiles. 
-				[NEWLINE][ICON_BULLET]40% of [ICON_FOOD] Food is carried over after a new [ICON_CITIZEN] Citizen is born.
+				[NEWLINE][ICON_BULLET]30% of [ICON_FOOD] Food is carried over after a new [ICON_CITIZEN] Citizen is born.
 				[NEWLINE][ICON_BULLET]Must be built in Small Cities.
 				[NEWLINE][ICON_BULLET][COLOR_YELLOW]Public Health and Sanitary Service Buildings[ENDCOLOR] for Large Cities to continue its [ICON_CITIZEN] Population Growth.
 				[NEWLINE][ICON_BULLET]Pay extra 1 [ICON_GOLD] Gold for every 5 [ICON_CITIZEN] Citizen.
@@ -6440,7 +6440,7 @@
 
 		<Replace Tag="TXT_KEY_BUILDING_HOSPITAL_HELP">
 			<Text>
-				Reduces the [ICON_FOOD] Food Growth loss due to the Pollution by 25%.
+				Reduces the [ICON_FOOD] Food Growth loss due to the Pollution by 25% (cannot exceed 0%).
 				[NEWLINE][NEWLINE]Must be built in Medium Cities.
 				[NEWLINE][NEWLINE][COLOR_YELLOW]Public Health and Sanitary Service Buildings[ENDCOLOR] for Large Cities to continue its [ICON_CITIZEN] Population Growth.
 				[NEWLINE][NEWLINE]Pay extra 1 [ICON_GOLD] Gold for every 4 [ICON_CITIZEN] Citizen.
@@ -6792,7 +6792,7 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_MEDICAL_LAB_HELP">
 			<Text>
-				Reduces the [ICON_FOOD] Food Growth loss due to the Pollution by 25%.
+				Reduces the [ICON_FOOD] Food Growth loss due to the Pollution by 25% (cannot exceed 0%).
 				[NEWLINE][NEWLINE]Must be built in XL Cities.
 				[NEWLINE][NEWLINE][COLOR_YELLOW]Public Health and Sanitary Service Buildings[ENDCOLOR] for XXL Cities to continue its [ICON_CITIZEN] Population Growth.
 				[NEWLINE][NEWLINE]Pay extra 1 [ICON_GOLD] Gold for every 4 [ICON_CITIZEN] Citizen.
@@ -18166,6 +18166,13 @@
 		</Replace>
 		<Row Tag="TXT_KEY_EUPANEL_CAPTURE_CHANCE_SP">
 			<Text>[COLOR_CYAN]Capture Chance if Sunk[ENDCOLOR]</Text>
+		</Row>
+		
+		<Row Tag="TXT_KEY_POPULATION_GROWTH_POLLUTION_SHORT">
+			<Text>Population Growth (From pollution)</Text>
+		</Row>
+		<Row Tag="TXT_KEY_FOOD_MAX_KEPT">
+			<Text>After population growth, up to {1_Percent}% of [ICON_FOOD] Food can be retained.</Text>
 		</Row>
 	</Language_en_US>
 </GameData>

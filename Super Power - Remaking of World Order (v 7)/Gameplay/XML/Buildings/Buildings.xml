@@ -532,7 +532,7 @@
 			<AllowsProductionTradeRoutes>true</AllowsProductionTradeRoutes>
 			<IconAtlas>BW_ATLAS_1</IconAtlas>
 			<PortraitIndex>3</PortraitIndex>
-			<FoodKept>-5</FoodKept>
+			<FoodKeptFromPollution>-5</FoodKeptFromPollution>
 		</Row>
 
 
@@ -553,7 +553,7 @@
 			<HurryCostModifier>25</HurryCostModifier>
 			<IconAtlas>SPBuildings_ATLAS</IconAtlas>
 			<PortraitIndex>20</PortraitIndex>
-			<FoodKept>-5</FoodKept>
+			<FoodKeptFromPollution>-5</FoodKeptFromPollution>
 		</Row>
 		
 		<Row>
@@ -573,7 +573,7 @@
 			<PortraitIndex>52</PortraitIndex>
 			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
 			<SpecialistCount>2</SpecialistCount>
-			<FoodKept>-5</FoodKept>
+			<FoodKeptFromPollution>-5</FoodKeptFromPollution>
 		</Row>
 
 		<Row>
@@ -593,7 +593,7 @@
 			<PortraitIndex>29</PortraitIndex>
 			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
 			<SpecialistCount>1</SpecialistCount>
-			<FoodKept>-5</FoodKept>
+			<FoodKeptFromPollution>-5</FoodKeptFromPollution>
 		</Row>
 		<Row>
 			<Type>BUILDING_DUTCH_GRACHTENGORDEL</Type>
@@ -612,7 +612,7 @@
 			<PortraitIndex>41</PortraitIndex>
 			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
 			<SpecialistCount>1</SpecialistCount>
-			<FoodKept>-5</FoodKept>
+			<FoodKeptFromPollution>-5</FoodKeptFromPollution>
 		</Row>
 		
 		
@@ -634,7 +634,7 @@
 			<HurryCostModifier>25</HurryCostModifier>
 			<PortraitIndex>14</PortraitIndex>
 			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<FoodKept>-5</FoodKept>
+			<FoodKeptFromPollution>-5</FoodKeptFromPollution>
 			<MilitaryProductionModifier>15</MilitaryProductionModifier>
 		</Row>
 
@@ -694,7 +694,7 @@
 			<HurryCostModifier>50</HurryCostModifier>
 			<IconAtlas>SPBuildings_ATLAS</IconAtlas>
 			<PortraitIndex>24</PortraitIndex>
-			<FoodKept>-5</FoodKept>
+			<FoodKeptFromPollution>-5</FoodKeptFromPollution>
 		</Row>
 
 		<Row>
@@ -712,7 +712,7 @@
 			<HurryCostModifier>75</HurryCostModifier>
 			<IconAtlas>SPBuildings_ATLAS</IconAtlas>
 			<PortraitIndex>34</PortraitIndex>
-			<FoodKept>-5</FoodKept>
+			<FoodKeptFromPollution>-5</FoodKeptFromPollution>
 		</Row>
 
 		<Row>

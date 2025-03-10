@@ -121,7 +121,7 @@
 			<PortraitIndex>59</PortraitIndex>
 			<Defense>1000</Defense>
 			<ExtraCityHitPoints>50</ExtraCityHitPoints>
-			<FoodKept>-5</FoodKept>
+			<FoodKeptFromPollution>-5</FoodKeptFromPollution>
 			<Happiness>-2</Happiness>
 			<TradeRouteSeaGoldBonus>400</TradeRouteSeaGoldBonus>
 			<TradeRouteLandGoldBonus>400</TradeRouteLandGoldBonus>
@@ -143,7 +143,7 @@
 			<PortraitIndex>60</PortraitIndex>
 			<Defense>1500</Defense>
 			<ExtraCityHitPoints>50</ExtraCityHitPoints>
-			<FoodKept>-5</FoodKept>
+			<FoodKeptFromPollution>-5</FoodKeptFromPollution>
 			<Happiness>-2</Happiness>
 			<CityWorkingChange>1</CityWorkingChange>
 			<TradeRouteSeaGoldBonus>800</TradeRouteSeaGoldBonus>
@@ -166,7 +166,7 @@
 			<PortraitIndex>61</PortraitIndex>
 			<Defense>2500</Defense>
 			<ExtraCityHitPoints>100</ExtraCityHitPoints>
-			<FoodKept>-10</FoodKept>
+			<FoodKeptFromPollution>-10</FoodKeptFromPollution>
 			<Happiness>-4</Happiness>
 			<TradeRouteSeaGoldBonus>1200</TradeRouteSeaGoldBonus>
 			<TradeRouteLandGoldBonus>1200</TradeRouteLandGoldBonus>
@@ -189,7 +189,7 @@
 			<PortraitIndex>62</PortraitIndex>
 			<Defense>5000</Defense>
 			<ExtraCityHitPoints>100</ExtraCityHitPoints>
-			<FoodKept>-13</FoodKept>
+			<FoodKeptFromPollution>-13</FoodKeptFromPollution>
 			<Happiness>-6</Happiness>
 			<TradeRouteSeaGoldBonus>1600</TradeRouteSeaGoldBonus>
 			<TradeRouteLandGoldBonus>1600</TradeRouteLandGoldBonus>
@@ -438,7 +438,7 @@
 			<Strategy>TXT_KEY_SP_PUBLIC_HEALTH_BUILDINGS_STRATEGY</Strategy>
 			<MinAreaSize>-1</MinAreaSize>
 			<ConquestProb>100</ConquestProb>
-			<FoodKept>40</FoodKept>
+			<FoodKept>30</FoodKept>
 			<HurryCostModifier>100</HurryCostModifier>
 			<IconAtlas>SPBuildings_ATLAS</IconAtlas>
 			<PortraitIndex>3</PortraitIndex>
@@ -761,7 +761,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_HOSPITAL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_SP_PUBLIC_HEALTH_BUILDINGS_STRATEGY</Strategy>
 			<ArtDefineTag>ART_DEF_BUILDING_HOSPITAL</ArtDefineTag>
-			<FoodKept>25</FoodKept>
+			<FoodKeptFromPollution>25</FoodKeptFromPollution>
 			<MinAreaSize>-1</MinAreaSize>
 			<ConquestProb>100</ConquestProb>
 			<HurryCostModifier>125</HurryCostModifier>
@@ -1244,7 +1244,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MEDICAL_LAB_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_SP_PUBLIC_HEALTH_BUILDINGS_STRATEGY</Strategy>
 			<ArtDefineTag>ART_DEF_BUILDING_MEDICAL_LAB</ArtDefineTag>
-			<FoodKept>25</FoodKept>
+			<FoodKeptFromPollution>25</FoodKeptFromPollution>
 			<MinAreaSize>-1</MinAreaSize>
 			<ConquestProb>100</ConquestProb>
 			<HurryCostModifier>150</HurryCostModifier>
