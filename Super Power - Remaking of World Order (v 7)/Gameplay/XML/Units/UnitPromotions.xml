@@ -3336,6 +3336,7 @@
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_AIR</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_FLANK_GUN_1</PediaEntry>
+			<InterceptionDamageMod>-50</InterceptionDamageMod>
 		</Row>
 		<Row>
 			<Type>PROMOTION_FLANK_GUN_2</Type>
@@ -5740,6 +5741,7 @@
 			<CannotBeChosen>true</CannotBeChosen>
 			<InterceptChanceChange>100</InterceptChanceChange>
 			<NumInterceptionChange>1</NumInterceptionChange>
+			<InterceptionDamageMod>-100</InterceptionDamageMod>
 		</Row>
 
 		<Row>
