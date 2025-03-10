@@ -207,16 +207,33 @@ function NewAttackEffect()
 
 			local attDamageInflicted = defUnit:GetRangeCombatDamage(attUnit, nil, false) * 0.5
 			local defDamageInflicted = attUnit:GetRangeCombatDamage(defUnit, nil, false)
+			local attDamageMod = attUnit:GetAirSweepDamageMod()
+			local defDamageMod = defUnit:GetInterceptionDamageMod()
 
 			------------Defender exempt/reduced from damage
-			if defUnit:IsHasPromotion(GameInfoTypes["PROMOTION_ANTI_HELICOPTER"]) then
+			-- if defUnit:IsHasPromotion(GameInfoTypes["PROMOTION_ANTI_HELICOPTER"]) then
+			-- 	defDamageInflicted = 0
+			-- 	print("This AA unit is exempted from Air-sweep damage!")
+			-- end
+			-- if defUnit:IsHasPromotion(GameInfoTypes["PROMOTION_FLANK_GUN_1"]) then
+			-- 	defDamageInflicted = 0.5 * defDamageInflicted
+			-- 	print("This AA unit is reduced (-50%) from Air-sweep damage!")
+			-- end
+			if attDamageMod <= -100 then
+				attDamageInflicted = 0
+				print("This Airsweep unit is exempted from Interception damage!")
+			else
+				attDamageInflicted = attDamageInflicted*(100 + attDamageMod)/100
+			end
+			if defDamageMod <= -100 then
 				defDamageInflicted = 0
 				print("This AA unit is exempted from Air-sweep damage!")
+			else
+				defDamageInflicted = defDamageInflicted*(100 + defDamageMod)/100
 			end
-			if defUnit:IsHasPromotion(GameInfoTypes["PROMOTION_FLANK_GUN_1"]) then
-				defDamageInflicted = 0.5 * defDamageInflicted
-				print("This AA unit is reduced (-50%) from Air-sweep damage!")
-			end
+			
+			
+			
 
 			------------In case of the AA unit is a melee unit
 			if not defUnit:IsRanged() then
@@ -270,13 +287,15 @@ function NewAttackEffect()
 			attDamageInflicted = math.floor(attDamageInflicted);
 			defDamageInflicted = math.floor(defDamageInflicted);
 			if not bAttUnitrDead and attDamageInflicted > 0 then
-				attUnit:ChangeExperience(4)
+				local attExp = 4*(100+attUnit:GetExperiencePercent())/100
+				attUnit:ChangeExperience(attExp)
 				if attPlayerID == Game.GetActivePlayer() then
 					text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_AIRSWEEP_TO_ENEMY", attUnitName, defUnitName, tostring(defDamageInflicted));
 				end
 			end
 			if not bDefUnitrDead and defDamageInflicted > 0 then
-				defUnit:ChangeExperience(2);
+				local defExp = 2*(100+defUnit:GetExperiencePercent())/100
+				defUnit:ChangeExperience(defExp);
 				if defPlayerID == Game.GetActivePlayer() then
 					text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_AIRSWEEP_BY_ENEMY", attUnitName, defUnitName, tostring(defDamageInflicted));
 				end
