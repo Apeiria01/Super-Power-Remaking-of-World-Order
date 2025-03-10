@@ -11813,7 +11813,7 @@
 			<Text>[COLOR_YELLOW]雪橇步兵[ENDCOLOR]</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_CIV5_DENMARK_SKI_INFANTRY_HELP">
-			<Text>擅長在雪原、凍土和丘陵地形作戰的精英陸軍近戰單位。 [NEWLINE][NEWLINE]需要冬季兩項運動解鎖。你最多只能組建十隊雪橇步兵，且無法通過金錢購買。</Text>
+			<Text>擅長在雪原、凍土和丘陵地形作戰的精英陸軍近戰單位。 [NEWLINE][NEWLINE]需要冬季兩項運動解鎖。你最多只能組建十隊雪橇步兵。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_CIV5_DENMARK_SKI_INFANTRY_STRATEGY">
 			<Text>雪撬步兵正如他的名字所描述的，非常擅長在雪原、凍土和丘陵地形中作戰。在這些地形上，他們不但有戰鬥力加成，且移動力加倍，甚至坦克都無法追上他們。</Text>
