@@ -277,7 +277,7 @@
 			<Class>UNITCLASS_MUSKETEER</Class>
 			<Type>UNIT_DANISH_SKI_INFANTRY</Type>
 			<PrereqTech>TECH_METALLURGY</PrereqTech>
-			<HurryCostModifier>-1</HurryCostModifier>
+			<HurryCostModifier>40</HurryCostModifier>
 			<BaseSightRange>3</BaseSightRange>
 			<Combat>50</Combat>
 			<Cost>180</Cost>
@@ -352,7 +352,7 @@
 			<HurryCostModifier>50</HurryCostModifier>
 			<BaseSightRange>2</BaseSightRange>
 			<Combat>70</Combat>
-			<Cost>400</Cost>
+			<Cost>350</Cost>
 			<Moves>5</Moves>
 			<CombatClass>UNITCOMBAT_ARMOR</CombatClass>
 			<Domain>DOMAIN_LAND</Domain>
@@ -2401,7 +2401,7 @@
 		</Row>
 		<Row>
 			<UnitType>UNIT_DANISH_SKI_INFANTRY</UnitType>
-			<UnitClassType>UNITCLASS_GREAT_WAR_INFANTRY</UnitClassType>
+			<UnitClassType>UNITCLASS_INFANTRY</UnitClassType>
 		</Row>
 		<Row>
 			<UnitType>UNIT_PROTOTYPE_SUBMARINE</UnitType>

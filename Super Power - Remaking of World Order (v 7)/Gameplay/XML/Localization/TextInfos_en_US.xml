@@ -13648,7 +13648,7 @@
 			<Text>[COLOR_YELLOW]Ski Infantry[ENDCOLOR]</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_CIV5_DENMARK_SKI_INFANTRY_HELP">
-			<Text>Elite Infantry Unit which has great bonus fighting in snow, tundra, or hills. [NEWLINE][NEWLINE]Requires Ski Infantry Training Project. You can only build up to 10 of this unit at one time. Cannot be purchased.</Text>
+			<Text>Elite Infantry Unit which has great bonus fighting in snow, tundra, or hills. [NEWLINE][NEWLINE]Requires Ski Infantry Training Project. You can only build up to 10 of this unit at one time.</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_CIV5_DENMARK_SKI_INFANTRY_STRATEGY">
 			<Text>The Ski Infantry, as their name suggests, are true masters when fighting in snow, tundra, or hills. They not only receive a combat bonus there, but also move at double speed. Even tanks cannot match these elite units on such terrains. </Text>
