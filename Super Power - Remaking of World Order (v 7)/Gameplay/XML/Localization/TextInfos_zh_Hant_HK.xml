@@ -11033,8 +11033,11 @@
 			<Text>攻擊核潛艇</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_UNIT_HUN_BATTERING_RAM_STRATEGY">
-			<Text>攻城錘是匈人的特色單位，替代投石機，用於突破敵軍城市的防禦。它們擁有“隱蔽一級”晉升，在遠程單位的打擊下仍安然無恙。只有近戰單位的攻擊能夠摧毀它們。</Text>
+		<Replace Tag="TXT_KEY_UNIT_HELP_HUN_BATTERING_RAM">
+			<Text>攻城錘是匈人的特色單位，替代投石機，用於突破敵軍城市的防禦。它們擁有高額的攻城加成，且僅需兵營即可建造，但對近戰攻擊毫無反抗能力。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_HELP_ASSYRIAN_SIEGE_TOWER">
+			<Text>攻城錘是亞述的特色單位，替代投石機，強大且便宜的近程壓制單位，可以給周邊的所有單位提供攻城加成。</Text>
 		</Replace>
 
 		<Row Tag="TXT_KEY_UNIT_SLOOP_OF_WAR">
