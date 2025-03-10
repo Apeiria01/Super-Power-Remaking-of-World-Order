@@ -12854,12 +12854,18 @@
 	</Replace>
 
 
-		<Replace Tag="TXT_KEY_UNIT_NUCLEAR_SUBMARINE">
-			<Text>Nuclear-powered Attack Submarine</Text>
-		</Replace>
+	<Replace Tag="TXT_KEY_UNIT_NUCLEAR_SUBMARINE">
+		<Text>Nuclear-powered Attack Submarine</Text>
+	</Replace>
 
+	<Replace Tag="TXT_KEY_UNIT_HELP_HUN_BATTERING_RAM">
+		<Text>The Battering Ram is a Hunnic unique unit that replaces the Catapult, designed to break through the defenses of enemy cities. It has a high bonus against cities and only requires a Barracks to be built, but it is defenseless against melee attacks.</Text>
+	</Replace>
+	<Replace Tag="TXT_KEY_UNIT_HELP_ASSYRIAN_SIEGE_TOWER">
+		<Text>Powerful and cheap melee siege unit that replaces the Catapult. It grants a city attack bonus to all nearby units. May only be built by the Assyrians.</Text>
+	</Replace>
 
-		<Replace Tag="TXT_KEY_UNIT_HUN_BATTERING_RAM_STRATEGY">
+	<Replace Tag="TXT_KEY_UNIT_HUN_BATTERING_RAM_STRATEGY">
 		<Text>Battering Rams are a Hunnic unique unit replacing the Catapult. Use Battering Rams to knock down the defenses of a city. They have the Cover I promotion to keep them safe from ranged units; attack them with melee units to defeat them.</Text>
 	</Replace>
 

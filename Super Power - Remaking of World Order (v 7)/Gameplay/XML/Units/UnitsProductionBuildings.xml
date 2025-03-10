@@ -9,6 +9,10 @@
 	<!--*****Barracks****-->
 
 	<Unit_BuildingClassRequireds>
+		<Row>
+			<UnitType>UNIT_HUN_BATTERING_RAM</UnitType>
+			<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
+		</Row>
 		<!--<Row>
 			<UnitType>UNIT_AZTEC_JAGUAR</UnitType>
 			<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
@@ -374,11 +378,6 @@
 			<UnitType>UNIT_ROMAN_BALLISTA</UnitType>
 			<BuildingClassType>BUILDINGCLASS_ARMORY</BuildingClassType>
 		</Row>
-		<Row>
-			<UnitType>UNIT_HUN_BATTERING_RAM</UnitType>
-			<BuildingClassType>BUILDINGCLASS_ARMORY</BuildingClassType>
-		</Row>
-		
 
 		<Row>
 			<UnitType>UNIT_TREBUCHET</UnitType>

@@ -556,7 +556,7 @@
 			<BaseSightRange>1</BaseSightRange>
 			<Combat>7</Combat>
 			<RangedCombat>20</RangedCombat>
-			<Cost>90</Cost>
+			<Cost>80</Cost>
 			<Moves>2</Moves>
 			<Range>2</Range>
 			<HurryCostModifier>25</HurryCostModifier>
@@ -597,7 +597,7 @@
 			<Description>TXT_KEY_UNIT_HUN_BATTERING_RAM</Description>
 			<Civilopedia>TXT_KEY_CIV5_HUN_BATTERING_RAM_TEXT</Civilopedia>
 			<Strategy>TXT_KEY_SP_UNITS_SIEGE_UNITS_STRATEGY</Strategy>
-			<Help>TXT_KEY_PROMOTION_CITY_SIEGE_HELP</Help>
+			<Help>TXT_KEY_UNIT_HELP_HUN_BATTERING_RAM</Help>
 			<MilitarySupport>true</MilitarySupport>
 			<MilitaryProduction>true</MilitaryProduction>
 			<Pillage>true</Pillage>
@@ -627,7 +627,7 @@
 			<Description>TXT_KEY_UNIT_ASSYRIAN_SIEGE_TOWER</Description>
 			<Civilopedia>TXT_KEY_CIV5_ASSYRIAN_SIEGE_TOWER_TEXT</Civilopedia>
 			<Strategy>TXT_KEY_SP_UNITS_SIEGE_UNITS_STRATEGY</Strategy>
-			<Help>TXT_KEY_PROMOTION_CITY_SIEGE_HELP</Help>
+			<Help>TXT_KEY_UNIT_HELP_ASSYRIAN_SIEGE_TOWER</Help>
 			<MilitarySupport>true</MilitarySupport>
 			<MilitaryProduction>true</MilitaryProduction>
 			<Pillage>true</Pillage>
