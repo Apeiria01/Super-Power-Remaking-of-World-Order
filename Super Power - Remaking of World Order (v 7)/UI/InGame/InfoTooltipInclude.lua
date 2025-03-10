@@ -1112,6 +1112,7 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		Experience = L("TXT_KEY_EXPERIENCE_POPUP", "%i"),			-- TOTO
 		GlobalExperience = L"TXT_KEY_GLOBAL1" .. L("TXT_KEY_EXPERIENCE_POPUP", "%i"),-- TOTO
 		FoodKept = "%+i%%[ICON_FOOD] " .. L"TXT_KEY_TRAIT_POPULATION_GROWTH_SHORT",-- granary effect
+		FoodKeptFromPollution = "%+i%%[ICON_FOOD] " .. L"TXT_KEY_POPULATION_GROWTH_POLLUTION_SHORT",
 		AirModifier = L"TXT_KEY_AIR_MODIFIER11" .. "%+i[ICON_PROMOTION_SPACE_ELEVATOR]",-- TOTO
 		NukeModifier = L"TXT_KEY_NUKE_MODIFIER11" .. "%i%%",			-- TOTO
 		NukeInterceptionChance = L"TXT_KEY_NUKE_INTERCEPTION11_SP" .. "%i%%",			-- TOTO
@@ -3045,6 +3046,11 @@ if Game then
 				tipText = format( "%s%s %+g[ICON_FOOD]  ", tipText, L( "TXT_KEY_STR_TURNS", turnsToCityGrowth -1 ), ( foodOverflowTimes100 - foodPerTurnTimes100 ) / 100 )
 			end
 			tipText =  format( "%s%s%s[ENDCOLOR] %+g[ICON_FOOD]", tipText, foodPerTurnTimes100 < 0 and "[COLOR_WARNING_TEXT]" or "[COLOR_POSITIVE_TEXT]", Locale_ToUpper( L( "TXT_KEY_STR_TURNS", turnsToCityGrowth ) ), foodOverflowTimes100 / 100 )
+			local foodMaxKept = city:GetMaxFoodKeptPercent()
+			if foodMaxKept > 0 and foodPerTurnTimes100 > 0 then
+				if foodMaxKept > 100 then foodMaxKept = 100 end
+				tipText = tipText .. "[NEWLINE]" .. L( "TXT_KEY_FOOD_MAX_KEPT", foodMaxKept)
+			end
 		end
 
 		if isNoob then

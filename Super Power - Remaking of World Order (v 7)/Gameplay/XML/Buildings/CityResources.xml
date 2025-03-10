@@ -139,7 +139,7 @@
 			<HurryCostModifier>25</HurryCostModifier>
 			<IconAtlas>SPBuildings_ATLAS</IconAtlas>
 			<PortraitIndex>40</PortraitIndex>
-			<FoodKept>-8</FoodKept>
+			<FoodKeptFromPollution>-8</FoodKeptFromPollution>
 		</Row>
 		<Row>
 			<Type>BUILDING_COAL_PLANT_EXTEND</Type>
@@ -156,7 +156,7 @@
 			<HurryCostModifier>25</HurryCostModifier>
 			<IconAtlas>SPBuildings_ATLAS</IconAtlas>
 			<PortraitIndex>41</PortraitIndex>
-			<FoodKept>-3</FoodKept>
+			<FoodKeptFromPollution>-2</FoodKeptFromPollution>
 		</Row>
 		<Row>
 			<Type>BUILDING_COAL_PLANT_EXTEND_IZ</Type>
@@ -172,6 +172,7 @@
 			<HurryCostModifier>25</HurryCostModifier>
 			<IconAtlas>SPBuildings_ATLAS</IconAtlas>
 			<PortraitIndex>41</PortraitIndex>
+			<FoodKeptFromPollution>-2</FoodKeptFromPollution>
 		</Row>
 
 		<Row>
@@ -242,7 +243,7 @@
 			<HurryCostModifier>50</HurryCostModifier>
 			<IconAtlas>SPBuildings_ATLAS</IconAtlas>
 			<PortraitIndex>43</PortraitIndex>
-			<FoodKept>-5</FoodKept>
+			<FoodKeptFromPollution>-5</FoodKeptFromPollution>
 		</Row>
 		<Row>
 			<Type>BUILDING_GAS_PLANT</Type>
@@ -260,7 +261,7 @@
 			<HurryCostModifier>50</HurryCostModifier>
 			<IconAtlas>SPBuildings_ATLAS</IconAtlas>
 			<PortraitIndex>44</PortraitIndex>
-			<FoodKept>-5</FoodKept>
+			<FoodKeptFromPollution>-5</FoodKeptFromPollution>
 		</Row>
 
 
@@ -281,7 +282,7 @@
 			<HurryCostModifier>100</HurryCostModifier>
 			<IconAtlas>BW_ATLAS_1</IconAtlas>
 			<PortraitIndex>43</PortraitIndex>
-			<FoodKept>-2</FoodKept>
+			<FoodKeptFromPollution>-2</FoodKeptFromPollution>
 		</Row>
 		<Row>
 			<Type>BUILDING_NUCLEAR_PLANT_EXTEND</Type>
