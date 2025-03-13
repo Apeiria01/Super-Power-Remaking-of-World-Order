@@ -8979,6 +8979,12 @@
 		<Row Tag="TXT_KEY_BELIEF_SONE_OF_SIREN">
 			<Text>Basic tile yields from Atolls are doubled, +2 [ICON_PEACE] Faith in coastal cities</Text>
 		</Row>
+		<Row Tag="TXT_KEY_BELIEF_SLASH_AND_BURN_SHORT">
+			<Text>Slash and Burn</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_SLASH_AND_BURN">
+			<Text>When Chopping down Woodland, the city gains a one-time [ICON_PEACE] Faith and [ICON_FOOD] Food yield equal to 33% of the [ICON_PRODUCTION] Production from the Chopping.</Text>
+		</Row>
 		<Row Tag="TXT_KEY_BELIEF_GODDESS_OF_WISDOM_SHORT">
 			<Text>Goddess of Wisdom</Text>
 		</Row>

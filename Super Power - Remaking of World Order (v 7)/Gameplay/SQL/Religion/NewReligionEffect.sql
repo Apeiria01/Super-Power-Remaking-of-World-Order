@@ -23,6 +23,9 @@ WHERE FeatureType = 'FEATURE_ATOLL';
 INSERT INTO Belief_CoastalCityYieldChanges (BeliefType,YieldType,Yield)
 SELECT 'BELIEF_SONE_OF_SIREN','YIELD_FAITH',2;
 
+INSERT INTO Belief_CuttingInstantYieldModifier(BeliefType,YieldType,Modifier)
+SELECT 'BELIEF_SLASH_AND_BURN','YIELD_FAITH',33 UNION ALL
+SELECT 'BELIEF_SLASH_AND_BURN','YIELD_FOOD',33;
 
 UPDATE Beliefs SET GreatPersonPointsPerCity = 1, GreatPersonPointsCapital = 1 WHERE Type = 'BELIEF_GODDESS_OF_WISDOM';
 INSERT INTO Belief_GreatPersonPoints (BeliefType, GreatPersonType, Value)

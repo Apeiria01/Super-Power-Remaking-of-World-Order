@@ -31,6 +31,13 @@
 		</Row>
 
 		<Row>
+			<Type>BELIEF_SLASH_AND_BURN</Type>
+			<Description>TXT_KEY_BELIEF_SLASH_AND_BURN</Description>
+			<ShortDescription>TXT_KEY_BELIEF_SLASH_AND_BURN_SHORT</ShortDescription>
+			<Pantheon>true</Pantheon>
+		</Row>
+
+		<Row>
 			<Type>BELIEF_GODDESS_OF_WISDOM</Type>
 			<Description>TXT_KEY_BELIEF_GODDESS_OF_WISDOM</Description>
 			<ShortDescription>TXT_KEY_BELIEF_GODDESS_OF_WISDOM_SHORT</ShortDescription>
