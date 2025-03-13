@@ -618,7 +618,7 @@
 			<Type>UNIT_ASSYRIAN_SIEGE_TOWER</Type>
 			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
 			<Combat>30</Combat>
-			<Cost>50</Cost>
+			<Cost>60</Cost>
 			<Moves>2</Moves>
 			<HurryCostModifier>25</HurryCostModifier>
 			<CombatClass>UNITCOMBAT_SIEGE</CombatClass>
