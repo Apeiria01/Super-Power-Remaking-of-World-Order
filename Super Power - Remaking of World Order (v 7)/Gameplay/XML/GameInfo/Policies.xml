@@ -19,7 +19,7 @@
 			<Where Type="POLICY_ARISTOCRACY"/>
 		</Update>
 		<Update>
-			<Set NumCitiesFreeCultureBuilding="0" HappinessPerXPopulation="5" OneShot="false" GridX="3" GridY="1"/>
+			<Set NumCitiesFreeCultureBuilding="0" HappinessPerXPopulation="5" NationalWonderCityCostModifier="-33" OneShot="false" GridX="3" GridY="1"/>
 			<Where Type="POLICY_LEGALISM"/>
 		</Update>
 		<Update>

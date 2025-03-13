@@ -378,6 +378,10 @@
 			<Where Name="GLOBAL_HOLY_CITY_FOUNDER_CHANGE"/>
 			<Set Value="1"/>
 		</Update>
+		<Update>
+			<Where Name="CITY_NO_DECAY"/>
+			<Set Value="1"/>
+		</Update>
 	</CustomModOptions>
 
 

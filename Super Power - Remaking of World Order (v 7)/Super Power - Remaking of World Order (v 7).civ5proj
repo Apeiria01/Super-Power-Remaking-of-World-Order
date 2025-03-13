@@ -533,7 +533,7 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
         <Type>Mod</Type>
         <Name>(1)CIV5MPDLL</Name>
         <Id>a2969a0a-e4da-41cc-9e0b-19b29aa971d8</Id>
-        <MinVersion>42</MinVersion>
+        <MinVersion>43</MinVersion>
         <MaxVersion>999</MaxVersion>
       </Association>
     </ModDependencies>
