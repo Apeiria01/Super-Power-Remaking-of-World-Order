@@ -7416,6 +7416,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]Legalism[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]+1 [ICON_HAPPINESS_1] Hapiness for every 5 [ICON_CITIZEN] Citizens in cities directly under the central government.
+				[NEWLINE][ICON_BULLET]The increase in construction cost for National Wonders due to the number of cities is reduced by 33%.
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_OLIGARCHY_HELP" >

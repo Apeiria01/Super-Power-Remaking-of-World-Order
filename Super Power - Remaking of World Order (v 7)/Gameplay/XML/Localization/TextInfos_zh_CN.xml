@@ -6618,6 +6618,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]律法统治[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]所有城市中每5[ICON_CITIZEN]人口+1[ICON_HAPPINESS_1]快乐。
+				[NEWLINE][ICON_BULLET]城市数量为国家奇观带来的建造成本增加量-33%。
 			</Text>
 		</Replace>
 
