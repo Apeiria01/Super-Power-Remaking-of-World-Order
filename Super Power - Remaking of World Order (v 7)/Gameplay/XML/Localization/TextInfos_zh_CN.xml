@@ -16520,12 +16520,17 @@
 		<Row Tag="TXT_KEY_EUPANEL_CAPTURE_CHANCE_SP">
 			<Text>[COLOR_CYAN]战胜时俘获敌军的几率[ENDCOLOR]</Text>
 		</Row>
-
 		<Row Tag="TXT_KEY_POPULATION_GROWTH_POLLUTION_SHORT">
 			<Text>人口增长（污染）</Text>
 		</Row>
 		<Row Tag="TXT_KEY_FOOD_MAX_KEPT">
 			<Text>人口增长后，最多可以保留{1_Percent}%[ICON_FOOD]食物</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TRADE_BONUS_PER_ERA">
+			<Text>/每个时代</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CHOOSE_INTERNATIONAL_TRADE_ROUTE_ITEM_TT_ERA">
+			<Text>从{1_CityName}得到的时代金钱奖励: {2_Num}</Text>
 		</Row>
 	</Language_zh_CN>
 </GameData>

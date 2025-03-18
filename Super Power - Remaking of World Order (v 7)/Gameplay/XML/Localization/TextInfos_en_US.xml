@@ -18180,12 +18180,17 @@
 		<Row Tag="TXT_KEY_EUPANEL_CAPTURE_CHANCE_SP">
 			<Text>[COLOR_CYAN]Capture Chance if Sunk[ENDCOLOR]</Text>
 		</Row>
-		
 		<Row Tag="TXT_KEY_POPULATION_GROWTH_POLLUTION_SHORT">
 			<Text>Population Growth (From pollution)</Text>
 		</Row>
 		<Row Tag="TXT_KEY_FOOD_MAX_KEPT">
 			<Text>After population growth, up to {1_Percent}% of [ICON_FOOD] Food can be retained.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TRADE_BONUS_PER_ERA">
+			<Text>/Per Era</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CHOOSE_INTERNATIONAL_TRADE_ROUTE_ITEM_TT_ERA">
+			<Text>Era gold bonus from {1_CityName}: {2_Num}</Text>
 		</Row>
 	</Language_en_US>
 </GameData>
