@@ -35,6 +35,14 @@ function BuildTradeRouteGoldToolTipString (pOriginCity, pTargetCity, eDomain)
 	if (iTheirBuildingBonus ~= 0) then
 		strTheirBuildingValue = Locale.ConvertTextKey("TXT_KEY_CHOOSE_INTERNATIONAL_TRADE_ROUTE_ITEM_TT_BUILDING", pTargetCity:GetNameKey(), iTheirBuildingBonus / 100);
 	end
+
+	local strYourEraValue = "";
+	local iEraBonus = pOriginCity:GetTradeRouteFromTheCityYieldsPerEra(YieldTypes.YIELD_GOLD);
+	local iEra = pPlayer:GetCurrentEra();
+	iEraBonus = iEraBonus * (iEra + 1) * 100;
+	if (iEraBonus ~= 0) then
+		strYourEraValue = Locale.ConvertTextKey("TXT_KEY_CHOOSE_INTERNATIONAL_TRADE_ROUTE_ITEM_TT_ERA", pOriginCity:GetNameKey(), iEraBonus / 100);
+	end
 	
 	local strResourceList = "";
 	local strResourceHeader = Locale.ConvertTextKey("TXT_KEY_CHOOSE_INTERNATIONAL_TRADE_ROUTE_ITEM_TT_RESOURCE_HEADER");
@@ -181,6 +189,12 @@ function BuildTradeRouteGoldToolTipString (pOriginCity, pTargetCity, eDomain)
 	if (strDomainModifier ~= "") then
 		strResult = strResult .. strDomainModifier;
 	end
+
+	if (strYourEraValue ~= "") then
+		strResult = strResult .. "[NEWLINE]";
+		strResult = strResult .. strYourEraValue;
+	end
+
 	strResult = strResult .. "[NEWLINE]";
 	strResult = strResult .. strTotal;
 	strResult = strResult .. "[NEWLINE]";

@@ -618,6 +618,7 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
     <Folder Include="UI\Art\Models\Improvements\MountainCity" />
     <Folder Include="UI\Art\Models\Improvements\CoastalCity" />
     <Folder Include="UI\Art\Models\Improvements\Kuna" />
+    <Folder Include="UI\Art\Models\Improvements\Necropolis\" />
     <Folder Include="UI\Art\Models\Units Extra" />
     <Folder Include="UI\Art\Models\Resources\Luxury Amber" />
     <Folder Include="UI\Art\Models\Resources\Luxury Coffee" />
