@@ -1846,6 +1846,14 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 				( " +" .. value .. L(yieldInfo.IconString) ..L("TXT_KEY_TRADE_BONUS_PER_ERA")))
 		end
 	end
+	for row in GameInfo.Building_YieldModifiersChangesPerEra(thisBuildingType) do
+		local yieldInfo = GameInfo.Yields[row.YieldType]
+		local value = row.Yield or 0
+		if yieldInfo and (value or 0) > 0 then
+			insert(tips,
+				( " +" .. value .."%" ..L(yieldInfo.IconString) ..L("TXT_KEY_Building_PER_ERA")))
+		end
+	end
 
 	-- Yields enhanced by Technology
 	if techFilter( enhancedYieldTech ) then
