@@ -68,7 +68,7 @@
 			<StartingUnitMultiplier>1</StartingUnitMultiplier>
 			<StartingDefenseUnits>1</StartingDefenseUnits>
 			<StartingWorkerUnits>1</StartingWorkerUnits>
-			<StartingExploreUnits>1</StartingExploreUnits>
+			<StartingExploreUnits>0</StartingExploreUnits>
 			<StartingGold>10</StartingGold>
 			<StartingCulture>100</StartingCulture>
 			<FreePopulation>0</FreePopulation>
@@ -116,7 +116,7 @@
 			<StartingUnitMultiplier>2</StartingUnitMultiplier>
 			<StartingDefenseUnits>2</StartingDefenseUnits>
 			<StartingWorkerUnits>1</StartingWorkerUnits>
-			<StartingExploreUnits>1</StartingExploreUnits>
+			<StartingExploreUnits>0</StartingExploreUnits>
 			<StartingGold>25</StartingGold>
 			<StartingCulture>200</StartingCulture>
 			<FreePopulation>0</FreePopulation>
@@ -164,7 +164,7 @@
 			<StartingUnitMultiplier>2</StartingUnitMultiplier>
 			<StartingDefenseUnits>2</StartingDefenseUnits>
 			<StartingWorkerUnits>1</StartingWorkerUnits>
-			<StartingExploreUnits>1</StartingExploreUnits>
+			<StartingExploreUnits>0</StartingExploreUnits>
 			<StartingGold>50</StartingGold>
 			<StartingCulture>300</StartingCulture>
 			<FreePopulation>1</FreePopulation>
@@ -212,7 +212,7 @@
 			<StartingUnitMultiplier>3</StartingUnitMultiplier>
 			<StartingDefenseUnits>3</StartingDefenseUnits>
 			<StartingWorkerUnits>2</StartingWorkerUnits>
-			<StartingExploreUnits>2</StartingExploreUnits>
+			<StartingExploreUnits>0</StartingExploreUnits>
 			<StartingGold>100</StartingGold>
 			<StartingCulture>400</StartingCulture>
 			<FreePopulation>2</FreePopulation>
@@ -260,7 +260,7 @@
 			<StartingUnitMultiplier>3</StartingUnitMultiplier>
 			<StartingDefenseUnits>3</StartingDefenseUnits>
 			<StartingWorkerUnits>2</StartingWorkerUnits>
-			<StartingExploreUnits>2</StartingExploreUnits>
+			<StartingExploreUnits>0</StartingExploreUnits>
 			<StartingGold>200</StartingGold>
 			<StartingCulture>500</StartingCulture>
 			<FreePopulation>3</FreePopulation>
@@ -310,7 +310,7 @@
 			<StartingUnitMultiplier>3</StartingUnitMultiplier>
 			<StartingDefenseUnits>3</StartingDefenseUnits>
 			<StartingWorkerUnits>2</StartingWorkerUnits>
-			<StartingExploreUnits>2</StartingExploreUnits>
+			<StartingExploreUnits>0</StartingExploreUnits>
 			<StartingGold>200</StartingGold>
 			<StartingCulture>500</StartingCulture>
 			<FreePopulation>3</FreePopulation>
@@ -360,7 +360,7 @@
 			<StartingUnitMultiplier>3</StartingUnitMultiplier>
 			<StartingDefenseUnits>3</StartingDefenseUnits>
 			<StartingWorkerUnits>2</StartingWorkerUnits>
-			<StartingExploreUnits>2</StartingExploreUnits>
+			<StartingExploreUnits>0</StartingExploreUnits>
 			<StartingGold>200</StartingGold>
 			<StartingCulture>500</StartingCulture>
 			<FreePopulation>3</FreePopulation>
@@ -410,7 +410,7 @@
 			<StartingUnitMultiplier>3</StartingUnitMultiplier>
 			<StartingDefenseUnits>3</StartingDefenseUnits>
 			<StartingWorkerUnits>2</StartingWorkerUnits>
-			<StartingExploreUnits>2</StartingExploreUnits>
+			<StartingExploreUnits>0</StartingExploreUnits>
 			<StartingGold>200</StartingGold>
 			<StartingCulture>500</StartingCulture>
 			<FreePopulation>3</FreePopulation>
@@ -463,7 +463,7 @@
 			<StartingUnitMultiplier>3</StartingUnitMultiplier>
 			<StartingDefenseUnits>3</StartingDefenseUnits>
 			<StartingWorkerUnits>3</StartingWorkerUnits>
-			<StartingExploreUnits>2</StartingExploreUnits>
+			<StartingExploreUnits>0</StartingExploreUnits>
 			<StartingGold>400</StartingGold>
 			<StartingCulture>600</StartingCulture>
 			<FreePopulation>4</FreePopulation>
