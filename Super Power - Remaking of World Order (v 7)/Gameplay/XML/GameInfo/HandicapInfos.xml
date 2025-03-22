@@ -145,7 +145,7 @@
 				<BarbarianLandTargetRange>5</BarbarianLandTargetRange>
 				<BarbarianSeaTargetRange>10</BarbarianSeaTargetRange>
 				<AIStartingDefenseUnits>1</AIStartingDefenseUnits>
-				<AIStartingExploreUnits>1</AIStartingExploreUnits>
+				<AIStartingExploreUnits>0</AIStartingExploreUnits>
 				<AIStartingWorkerUnits>1</AIStartingWorkerUnits>
 				<AIDeclareWarProb>100</AIDeclareWarProb>
 				<AIWorkRateModifier>250</AIWorkRateModifier>
@@ -204,7 +204,7 @@
 				<BarbarianLandTargetRange>5</BarbarianLandTargetRange>
 				<BarbarianSeaTargetRange>10</BarbarianSeaTargetRange>
 				<AIStartingDefenseUnits>1</AIStartingDefenseUnits>
-				<AIStartingExploreUnits>1</AIStartingExploreUnits>
+				<AIStartingExploreUnits>0</AIStartingExploreUnits>
 				<AIStartingWorkerUnits>2</AIStartingWorkerUnits>
 				<AIDeclareWarProb>100</AIDeclareWarProb>
 				<AIWorkRateModifier>300</AIWorkRateModifier>
@@ -263,7 +263,7 @@
 				<BarbarianLandTargetRange>5</BarbarianLandTargetRange>
 				<BarbarianSeaTargetRange>10</BarbarianSeaTargetRange>
 				<AIStartingDefenseUnits>2</AIStartingDefenseUnits>
-				<AIStartingExploreUnits>1</AIStartingExploreUnits>
+				<AIStartingExploreUnits>0</AIStartingExploreUnits>
 				<AIStartingWorkerUnits>2</AIStartingWorkerUnits>
 				<AIStartingUnitMultiplier>1</AIStartingUnitMultiplier>
 				<AIDeclareWarProb>100</AIDeclareWarProb>
@@ -324,7 +324,7 @@
 				<BarbarianLandTargetRange>5</BarbarianLandTargetRange>
 				<BarbarianSeaTargetRange>10</BarbarianSeaTargetRange>
 				<AIStartingDefenseUnits>2</AIStartingDefenseUnits>
-				<AIStartingExploreUnits>1</AIStartingExploreUnits>
+				<AIStartingExploreUnits>0</AIStartingExploreUnits>
 				<AIStartingWorkerUnits>2</AIStartingWorkerUnits>
 				<AIStartingUnitMultiplier>1</AIStartingUnitMultiplier>
 				<AIDeclareWarProb>100</AIDeclareWarProb>
@@ -385,7 +385,7 @@
 				<BarbarianLandTargetRange>5</BarbarianLandTargetRange>
 				<BarbarianSeaTargetRange>10</BarbarianSeaTargetRange>
 				<AIStartingDefenseUnits>3</AIStartingDefenseUnits>
-				<AIStartingExploreUnits>1</AIStartingExploreUnits>
+				<AIStartingExploreUnits>0</AIStartingExploreUnits>
 				<AIStartingWorkerUnits>2</AIStartingWorkerUnits>
 				<AIStartingUnitMultiplier>2</AIStartingUnitMultiplier>
 				<AIDeclareWarProb>200</AIDeclareWarProb>
@@ -446,7 +446,7 @@
 				<BarbarianLandTargetRange>5</BarbarianLandTargetRange>
 				<BarbarianSeaTargetRange>10</BarbarianSeaTargetRange>
 				<AIStartingDefenseUnits>5</AIStartingDefenseUnits>
-				<AIStartingExploreUnits>1</AIStartingExploreUnits>
+				<AIStartingExploreUnits>0</AIStartingExploreUnits>
 				<AIStartingWorkerUnits>2</AIStartingWorkerUnits>
 				<AIStartingUnitMultiplier>3</AIStartingUnitMultiplier>
 				<AIDeclareWarProb>200</AIDeclareWarProb>
