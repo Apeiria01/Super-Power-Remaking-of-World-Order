@@ -731,36 +731,36 @@
 			<PolicyType>POLICY_LEGALISM</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
 			<Happiness>4</Happiness>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_MONARCHY</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_SMALL</BuildingClassType>
-			<Happiness>1</Happiness>
 		</Row>-->
 		<Row>
-			<PolicyType>POLICY_MONARCHY</PolicyType>
+			<PolicyType>POLICY_LEGALISM</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_SMALL</BuildingClassType>
+			<Happiness>1</Happiness>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_LEGALISM</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_MEDIUM</BuildingClassType>
 			<Happiness>1</Happiness>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_MONARCHY</PolicyType>
+			<PolicyType>POLICY_LEGALISM</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_LARGE</BuildingClassType>
 			<Happiness>1</Happiness>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_MONARCHY</PolicyType>
+			<PolicyType>POLICY_LEGALISM</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_XL</BuildingClassType>
 			<Happiness>1</Happiness>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_MONARCHY</PolicyType>
+			<PolicyType>POLICY_LEGALISM</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_XXL</BuildingClassType>
-			<Happiness>2</Happiness>
+			<Happiness>1</Happiness>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_MONARCHY</PolicyType>
+			<PolicyType>POLICY_LEGALISM</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_GLOBAL</BuildingClassType>
-			<Happiness>3</Happiness>
+			<Happiness>1</Happiness>
 		</Row>
 
 

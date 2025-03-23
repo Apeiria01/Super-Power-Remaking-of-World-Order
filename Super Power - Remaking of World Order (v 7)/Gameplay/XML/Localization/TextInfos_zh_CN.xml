@@ -6618,7 +6618,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]律法统治[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]所有城市中每5[ICON_CITIZEN]人口+1[ICON_HAPPINESS_1]快乐。
-				[NEWLINE][ICON_BULLET]城市数量为国家奇观带来的建造成本增加量-33%。
+				[NEWLINE][ICON_BULLET]小镇以上每一级城市规模+1[ICON_HAPPINESS_1]快乐。
 			</Text>
 		</Replace>
 
@@ -6638,7 +6638,7 @@
 		<Replace Tag="TXT_KEY_POLICY_MONARCHY_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]君主政体[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]城市规模导致的[ICON_HAPPINESS_4]不满减半。
+				[NEWLINE][ICON_BULLET]城市数量为国家奇观带来的建造成本增加量减半。
 				[NEWLINE][ICON_BULLET][ICON_CAPITAL]首都每个[ICON_CITIZEN]人口+1[ICON_GOLD]金钱，每3个[ICON_CITIZEN]人口+1[ICON_FOOD]食物、[ICON_CULTURE]文化、[ICON_PRODUCTION]产能、[ICON_RESEARCH]科研。
 			</Text>
 		</Replace>

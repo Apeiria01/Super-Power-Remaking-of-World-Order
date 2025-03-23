@@ -19,7 +19,7 @@
 			<Where Type="POLICY_ARISTOCRACY"/>
 		</Update>
 		<Update>
-			<Set NumCitiesFreeCultureBuilding="0" HappinessPerXPopulation="5" NationalWonderCityCostModifier="-33" OneShot="false" GridX="3" GridY="1"/>
+			<Set NumCitiesFreeCultureBuilding="0" HappinessPerXPopulation="5" OneShot="false" GridX="3" GridY="1"/>
 			<Where Type="POLICY_LEGALISM"/>
 		</Update>
 		<Update>
@@ -31,7 +31,7 @@
 			<Where Type="POLICY_LANDED_ELITE"/>
 		</Update>
 		<Update>
-			<Set CapitalUnhappinessMod="0" GridX="4" GridY="3"/>
+			<Set CapitalUnhappinessMod="0" NationalWonderCityCostModifier="-50"  GridX="4" GridY="3"/>
 			<Where Type="POLICY_MONARCHY"/>
 		</Update>
 		<Update>
@@ -1087,22 +1087,12 @@
 		</Row>
 		<Row>
 			<PolicyType>POLICY_LEGALISM</PolicyType>
-			<FlavorType>FLAVOR_CULTURE</FlavorType>
-			<Flavor>10</Flavor>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_LEGALISM</PolicyType>
 			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
-			<Flavor>20</Flavor>
+			<Flavor>30</Flavor>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_LANDED_ELITE</PolicyType>
 			<FlavorType>FLAVOR_GROWTH</FlavorType>
-			<Flavor>20</Flavor>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_MONARCHY</PolicyType>
-			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
 			<Flavor>20</Flavor>
 		</Row>
 		<Row>
@@ -1123,7 +1113,7 @@
 		<Row>
 			<PolicyType>POLICY_MONARCHY</PolicyType>
 			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-			<Flavor>20</Flavor>
+			<Flavor>30</Flavor>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_MONARCHY</PolicyType>
