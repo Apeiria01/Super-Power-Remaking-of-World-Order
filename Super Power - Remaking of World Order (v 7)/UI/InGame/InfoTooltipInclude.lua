@@ -1495,7 +1495,36 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		for row in GameInfo.Building_DomainFreeExperiencePerGreatWork( thisBuildingType ) do
 			item = GameInfo.Domains[ row.DomainType ]
 			if item and (row.Experience or 0) > 0 then
-				insert( tips, XPcolor(L(item.Description)).." "..L( "TXT_KEY_EXPERIENCE_POPUP", row.Experience ).."/ "..L"TXT_KEY_VP_GREAT_WORKS" )
+				insert( tips, UnitColor(L(item.Description))..XPcolor(L( "TXT_KEY_EXPERIENCE_POPUP", row.Experience )).." ".."/ "..L"TXT_KEY_VP_GREAT_WORKS" )
+			end
+		end
+		Modifier = 0;
+		for row in GameInfo.Building_DomainFreeExperiencesPerPop( thisBuildingType ) do
+			item = GameInfo.Domains[ row.DomainType ]
+			if item and (row.Modifier or 0) > 0 then
+				Modifier = (row.Modifier)/100
+				insert( tips, UnitColor(L(item.Description)).." "..XPcolor(L( "TXT_KEY_EXPERIENCE_POPUP", Modifier )).."/ "..L"TXT_KEY_CITYVIEW_EACH"..L"TXT_KEY_LOCAL_POP_SP".."[ICON_CITIZEN]")
+			end
+		end
+		for row in GameInfo.Building_DomainFreeExperiencesPerPopGlobal( thisBuildingType ) do
+			item = GameInfo.Domains[ row.DomainType ]
+			if item and (row.Modifier or 0) > 0 then
+				Modifier = (row.Modifier)/100
+				insert( tips,UnitColor(L'TXT_KEY_EXPERIENCE_DOMAIN_GLOBAL_SP'..L(item.Description)) ..XPcolor(L( "TXT_KEY_EXPERIENCE_POPUP", Modifier )).."/ "..L"TXT_KEY_CITYVIEW_EACH"..L"TXT_KEY_LOCAL_POP_SP".."[ICON_CITIZEN]")
+			end
+		end
+		for row in GameInfo.Building_DomainFreeExperiencesPerTurn( thisBuildingType ) do
+			item = GameInfo.Domains[ row.DomainType ]
+			if item and (row.Value or 0) > 0 then
+				Modifier = (row.Value)
+				insert( tips, UnitColor(L"TXT_KEY_LOCAL_POP_SP"..L(item.Description)).." "..L"TXT_KEY_GOLD_PERTURN_HEADING4_TITLE"..XPcolor(L( "TXT_KEY_EXPERIENCE_POPUP", Modifier )))
+			end
+		end
+		for row in GameInfo.Building_DomainFreeExperiencesPerTurnGlobal( thisBuildingType ) do
+			item = GameInfo.Domains[ row.DomainType ]
+			if item and (row.Value or 0) > 0 then
+				Modifier = (row.Value)
+				insert( tips,UnitColor(L'TXT_KEY_EXPERIENCE_DOMAIN_GLOBAL_SP'..L(item.Description)) .." "..L"TXT_KEY_GOLD_PERTURN_HEADING4_TITLE"..XPcolor(L( "TXT_KEY_EXPERIENCE_POPUP", Modifier )))
 			end
 		end
 		-- Theming Bonus
@@ -1637,7 +1666,11 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		insert( tips, L"TXT_KEY_PLOTROLL_RIVER" .. ":" .. tip )
 	end
 
-
+	-- Global River Yields enhanced by Building
+	tip = GetYieldString( GameInfo.Building_RiverPlotYieldChangesGlobal( thisBuildingType ) )
+	if tip ~= "" then
+		insert( tips,L'TXT_KEY_EXPERIENCE_DOMAIN_GLOBAL_SP'.. L"TXT_KEY_PLOTROLL_RIVER" .. ":" .. tip )
+	end
 
 
 	-- Lake Yields enhanced by Building
@@ -1828,6 +1861,30 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		if yieldInfo and (value or 0) > 0 then
 			insert(tips,
 				("[ICON_INTERNATIONAL_TRADE]" .. L("TXT_KEY_TRADE_TO_OTHER_CITY_BONUS") .. " +" .. value .. L(yieldInfo.IconString) .. " [ICON_ARROW_LEFT]"))
+		end
+	end
+	for row in GameInfo.Building_TradeRouteFromTheCityYieldsPerEra(thisBuildingType) do
+		local yieldInfo = GameInfo.Yields[row.YieldType]
+		local value = row.YieldValue or 0
+		if yieldInfo and (value or 0) > 0 then
+			insert(tips,
+				("[ICON_INTERNATIONAL_TRADE]" .. L("TXT_KEY_TRADE_TO_OTHER_CITY_BONUS") .. " +" .. value .. L(yieldInfo.IconString) ..L("TXT_KEY_TRADE_BONUS_PER_ERA").. " [ICON_ARROW_LEFT]"))
+		end
+	end
+	for row in GameInfo.Building_YieldChangesPerEra(thisBuildingType) do
+		local yieldInfo = GameInfo.Yields[row.YieldType]
+		local value = row.Yield or 0
+		if yieldInfo and (value or 0) > 0 then
+			insert(tips,
+				( " +" .. value .. L(yieldInfo.IconString) ..L("TXT_KEY_TRADE_BONUS_PER_ERA")))
+		end
+	end
+	for row in GameInfo.Building_YieldModifiersChangesPerEra(thisBuildingType) do
+		local yieldInfo = GameInfo.Yields[row.YieldType]
+		local value = row.Yield or 0
+		if yieldInfo and (value or 0) > 0 then
+			insert(tips,
+				( " +" .. value .."%" ..L(yieldInfo.IconString) ..L("TXT_KEY_Building_PER_ERA")))
 		end
 	end
 
