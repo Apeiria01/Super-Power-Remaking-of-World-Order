@@ -382,6 +382,14 @@
 			<Where Name="CITY_NO_DECAY"/>
 			<Set Value="1"/>
 		</Update>
+		<Update>
+			<Where Name="GLOBAL_BREAK_CIVILIAN_1UPT"/>
+			<Set Value="1"/>
+		</Update>
+		<Update>
+			<Where Name="GLOBAL_BREAK_CIVILIAN_RESTRICTIONS"/>
+			<Set Value="1"/>
+		</Update>
 	</CustomModOptions>
 
 
