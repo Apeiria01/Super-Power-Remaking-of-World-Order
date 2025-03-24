@@ -1527,6 +1527,42 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 				insert( tips,UnitColor(L'TXT_KEY_EXPERIENCE_DOMAIN_GLOBAL_SP'..L(item.Description)) .." "..L"TXT_KEY_GOLD_PERTURN_HEADING4_TITLE"..XPcolor(L( "TXT_KEY_EXPERIENCE_POPUP", Modifier )))
 			end
 		end
+		for row in GameInfo.Building_DomainEnemyCombatModifier( thisBuildingType ) do
+			item = GameInfo.Domains[ row.DomainType ]
+			if item and row.Modifier ~= 0 then
+				Modifier = (row.Modifier)
+				if Modifier > 0 then
+					tempstring = "+"
+				else
+					tempstring = ""
+				end
+				insert( tips, UnitColor(L"TXT_KEY_LOCAL_POP_SP"..L"TXT_KEY_WITHIN_BORDERS"..L"TXT_KEY_ENEMY"..L(item.Description)).." "..tempstring..Modifier.."%"..L"TXT_KEY_COMBAT")
+			end
+		end
+		for row in GameInfo.Building_DomainEnemyCombatModifierGlobal( thisBuildingType ) do
+			item = GameInfo.Domains[ row.DomainType ]
+			if item and row.Modifier ~= 0 then
+				Modifier = (row.Modifier)
+				if Modifier > 0 then
+					tempstring = "+"
+				else
+					tempstring = ""
+				end
+				insert( tips, UnitColor(L"TXT_KEY_EXPERIENCE_DOMAIN_GLOBAL_SP"..L"TXT_KEY_WITHIN_BORDERS"..L"TXT_KEY_ENEMY"..L(item.Description)).." "..tempstring..Modifier.."%"..L"TXT_KEY_COMBAT")
+			end
+		end
+		for row in GameInfo.Building_DomainFriendsCombatModifierLocal( thisBuildingType ) do
+			item = GameInfo.Domains[ row.DomainType ]
+			if item and row.Modifier ~= 0 then
+				Modifier = (row.Modifier)
+				if Modifier > 0 then
+					tempstring = "+"
+				else
+					tempstring = ""
+				end
+				insert( tips, UnitColor(L"TXT_KEY_LOCAL_POP_SP"..L"TXT_KEY_WITHIN_BORDERS"..L"TXT_KEY_ALLY"..L(item.Description)).." "..tempstring..Modifier.."%"..L"TXT_KEY_COMBAT")
+			end
+		end
 		-- Theming Bonus
 -- TODO Building_ThemingBonuses
 --		if building.ThemingBonusHelp then insert( tips, L( building.ThemingBonusHelp ) ) end

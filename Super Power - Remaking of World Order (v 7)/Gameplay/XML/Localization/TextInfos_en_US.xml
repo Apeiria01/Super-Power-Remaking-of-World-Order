@@ -18199,5 +18199,20 @@
 		<Row Tag="TXT_KEY_CHOOSE_INTERNATIONAL_TRADE_ROUTE_ITEM_TT_ERA">
 			<Text>Era gold bonus from {1_CityName}: {2_Num}</Text>
 		</Row>
+		<Row Tag="TXT_KEY_STRATEGIC_ENVIRONMENT_COMBAT_MOD">
+			<Text>Strategic Environment Bonus</Text>
+		</Row>
+		<Row Tag="TXT_KEY_COMBAT">
+			<Text>[ICON_STRENGTH]Combat Strength</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WITHIN_BORDERS">
+			<Text>within borders</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ENEMY">
+			<Text>Enemy</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ALLY">
+			<Text>Ally</Text>
+		</Row>
 	</Language_en_US>
 </GameData>

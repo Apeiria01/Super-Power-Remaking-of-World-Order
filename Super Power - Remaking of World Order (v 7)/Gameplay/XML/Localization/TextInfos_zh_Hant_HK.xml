@@ -16345,5 +16345,20 @@
 		<Row Tag="TXT_KEY_CHOOSE_INTERNATIONAL_TRADE_ROUTE_ITEM_TT_ERA">
 			<Text>从{1_CityName}得到的時代金幣獎勵數: {2_Num}</Text>
 		</Row>
+		<Row Tag="TXT_KEY_STRATEGIC_ENVIRONMENT_COMBAT_MOD">
+			<Text>戦争領域加成</Text>
+		</Row>
+		<Row Tag="TXT_KEY_COMBAT">
+			<Text>[ICON_STRENGTH]戰鬥力</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WITHIN_BORDERS">
+			<Text>境內</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ENEMY">
+			<Text>敵軍</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ALLY">
+			<Text>友軍</Text>
+		</Row>
 	</Language_zh_Hant_HK>
 </GameData>
