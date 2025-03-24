@@ -16543,5 +16543,20 @@
 		<Row Tag="TXT_KEY_CHOOSE_INTERNATIONAL_TRADE_ROUTE_ITEM_TT_ERA">
 			<Text>从{1_CityName}得到的时代金钱奖励: {2_Num}</Text>
 		</Row>
+		<Row Tag="TXT_KEY_STRATEGIC_ENVIRONMENT_COMBAT_MOD">
+			<Text>战争领域修正</Text>
+		</Row>
+		<Row Tag="TXT_KEY_COMBAT">
+			<Text>[ICON_STRENGTH]战斗力</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WITHIN_BORDERS">
+			<Text>境内</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ENEMY">
+			<Text>敌方</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ALLY">
+			<Text>友方</Text>
+		</Row>
 	</Language_zh_CN>
 </GameData>

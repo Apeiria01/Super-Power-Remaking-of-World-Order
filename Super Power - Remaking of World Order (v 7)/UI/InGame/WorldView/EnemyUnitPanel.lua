@@ -687,6 +687,21 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
 			end
 
+			-- Extra Combat Percent
+			iModifier = pMyUnit:GetExtraCombatPercent();
+			if (iModifier ~= 0) then
+				controlTable = g_MyCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_EXTRA_PERCENT");
+				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
+			end
+			-- Extra Combat Percent From Building
+			iModifier = pMyUnit:GetCombatModifierFromBuilding();
+			if (iModifier ~= 0) then
+				controlTable = g_MyCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText("TXT_KEY_STRATEGIC_ENVIRONMENT_COMBAT_MOD");
+				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
+			end
+
 			iModifier = pMyPlayer:GetFoundedReligionEnemyCityCombatMod(pPlot);
 			if (iModifier ~= 0) then
 				controlTable = g_MyCombatDataIM:GetInstance();
@@ -1345,6 +1360,13 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			if (iModifier ~= 0) then
 				controlTable = g_MyCombatDataIM:GetInstance();
 				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_EXTRA_PERCENT");
+				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
+			end
+			-- Extra Combat Percent From Building
+			iModifier = pMyUnit:GetCombatModifierFromBuilding();
+			if (iModifier ~= 0) then
+				controlTable = g_MyCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText("TXT_KEY_STRATEGIC_ENVIRONMENT_COMBAT_MOD");
 				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
 			end
 
@@ -2275,6 +2297,15 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 					--				strString.append(GetLocalizedText("TXT_KEY_COMBAT_PLOT_EXTRA_STRENGTH", iModifier));
 				end
 
+				-- Extra Combat Percent From Building
+				iModifier = pTheirUnit:GetCombatModifierFromBuilding();
+				if (iModifier ~= 0) then
+					controlTable = g_TheirCombatDataIM:GetInstance();
+					controlTable.Text:LocalizeAndSetText("TXT_KEY_STRATEGIC_ENVIRONMENT_COMBAT_MOD");
+					controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
+					--				strString.append(GetLocalizedText("TXT_KEY_COMBAT_PLOT_EXTRA_STRENGTH", iModifier));
+				end
+
 				-- Bonus for fighting in one's lands
 				if (pToPlot:IsFriendlyTerritory(iTheirPlayer)) then
 					iModifier = pTheirUnit:GetFriendlyLandsModifier();
@@ -2817,6 +2848,14 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 		if (iModifier ~= 0) then
 			controlTable = g_TheirCombatDataIM:GetInstance();
 			controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_EXTRA_PERCENT");
+			controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
+			--				strString.append(GetLocalizedText("TXT_KEY_COMBAT_PLOT_EXTRA_STRENGTH", iModifier));
+		end
+		-- Extra Combat Percent From Building
+		iModifier = theirUnit:GetCombatModifierFromBuilding();
+		if (iModifier ~= 0) then
+			controlTable = g_TheirCombatDataIM:GetInstance();
+			controlTable.Text:LocalizeAndSetText("TXT_KEY_STRATEGIC_ENVIRONMENT_COMBAT_MOD");
 			controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
 			--				strString.append(GetLocalizedText("TXT_KEY_COMBAT_PLOT_EXTRA_STRENGTH", iModifier));
 		end
