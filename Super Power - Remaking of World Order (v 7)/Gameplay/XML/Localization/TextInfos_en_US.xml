@@ -18132,6 +18132,10 @@
 			</Text>
 		</Replace>
 
+		<Row Tag="TXT_KEY_BUILD_BLOCKED_MAX_BUILD_NUM">
+			<Text>The Plot exceeds the max number of builds allowed in this turn.</Text>
+		</Row>
+
 		<Replace Tag="TXT_KEY_PLOTROLL_OCEAN">
 			<Text>Coast and Ocean</Text>
 		</Replace>

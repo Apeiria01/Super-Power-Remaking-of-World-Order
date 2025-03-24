@@ -762,6 +762,10 @@
 			<Set Value="1"/>
 			<Where Name="MAXIMUM_WORK_PLOT_DISTANCE_MINOR_REDUCE" />
 		</Update>
+		<Update>
+			<Set Value="1"/>
+			<Where Name="NUM_OUTSIZE_PLOT_MAX_BUILD" />
+		</Update>
 
 		<Update>
 			<Set Value="33"/>

@@ -16471,6 +16471,10 @@
 			</Text>
 		</Replace>
 
+		<Row Tag="TXT_KEY_BUILD_BLOCKED_MAX_BUILD_NUM">
+			<Text>地块超出本回合最大可改良次数。</Text>
+		</Row>
+
 		<Replace Tag="TXT_KEY_PLOTROLL_OCEAN">
 			<Text>海洋</Text>
 		</Replace>

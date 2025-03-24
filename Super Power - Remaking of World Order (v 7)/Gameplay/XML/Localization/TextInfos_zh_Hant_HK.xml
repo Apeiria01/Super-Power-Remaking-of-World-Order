@@ -16282,6 +16282,10 @@
 			</Text>
 		</Replace>
 
+		<Row Tag="TXT_KEY_BUILD_BLOCKED_MAX_BUILD_NUM">
+			<Text>地塊超出本回合最大可改良次數。</Text>
+		</Row>
+
 		<Replace Tag="TXT_KEY_TP_CARNIVAL_EFFECT">
 			<Text>
 				在[ICON_GOLDEN_AGE]黃金時代期間，帝國內所有可產出[ICON_GOLD]金幣的單元格都將產出額外1金幣。城市獲得+20%的[ICON_PRODUCTION]生產力，且帝國全境的[ICON_CULTURE]文化值也將增加20%。
