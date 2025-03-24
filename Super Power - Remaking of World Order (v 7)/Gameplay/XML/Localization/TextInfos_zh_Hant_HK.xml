@@ -5775,7 +5775,7 @@
 
 		<Replace Tag="TXT_KEY_TRAIT_CAPITAL_BUILDINGS_CHEAPER">
 			<Text>
-				[ICON_BULLET]所有城市+2[ICON_PRODUCTION]產能。
+				[ICON_BULLET]所有城市+2[ICON_PRODUCTION]產能（隨時代增加）。
 				[NEWLINE][ICON_BULLET]城市建造建築時+15%[ICON_PRODUCTION]產能。
 			</Text>
 		</Replace>
