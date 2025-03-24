@@ -1124,7 +1124,7 @@
 		<Row>
 			<BuildingType>BUILDING_TB_CAPITAL_BUILDINGS_CHEAPER</BuildingType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>2</Yield>
+			<Yield>1</Yield>
 		</Row>
 
 		<Row>
@@ -1134,6 +1134,13 @@
 		</Row>
 	</Building_YieldChanges>
 
+	<Building_YieldChangesPerEra>
+		<Row>
+			<BuildingType>BUILDING_TB_CAPITAL_BUILDINGS_CHEAPER</BuildingType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	</Building_YieldChangesPerEra>
 
 	<Building_RiverPlotYieldChanges>
 		<Row>

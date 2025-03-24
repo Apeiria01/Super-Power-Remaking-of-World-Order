@@ -10425,7 +10425,7 @@
 			<Text>
 				[ICON_BULLET]+3 [ICON_CULTURE] Culture for all cities and it never expires.
 				[NEWLINE][ICON_BULLET]+1 [ICON_TOURISM] Tourism output for all Great Works.
-        [NEWLINE][ICON_BULLET]Earns a free [ICON_CULTURE] social policy upon first conquering the original capital of a major civ and spreads a one-time [ICON_TOURISM] tourism yield to all civs they have met.
+				[NEWLINE][ICON_BULLET]Earns a free [ICON_CULTURE] social policy upon first conquering the original capital of a major civ and spreads a one-time [ICON_TOURISM] tourism yield to all civs they have met.
 			</Text>
 		</Replace>
 
@@ -10440,7 +10440,7 @@
 
 		<Replace Tag="TXT_KEY_TRAIT_CAPITAL_BUILDINGS_CHEAPER">
 			<Text>
-				[ICON_BULLET]+2 [ICON_PRODUCTION] Production for all cities and it never expires. 
+				[ICON_BULLET]+2 [ICON_PRODUCTION] Production for all cities(increase with Era). 
 				[NEWLINE][ICON_BULLET]+15% [ICON_PRODUCTION] Production towards any buildings in all cities.
 			</Text>
 		</Replace>
