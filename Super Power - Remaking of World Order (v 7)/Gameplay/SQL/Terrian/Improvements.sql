@@ -81,8 +81,8 @@ SELECT 'IMPROVEMENT_SHOSHONE_WILDDOME',NULL,0,NULL,0,'RESOURCE_IVORY';
 -- Misc Changes
 --==========================================================================================================================	
 UPDATE Improvements Set ExtraScore = -2000 WHERE Type = 'IMPROVEMENT_CUSTOMS_HOUSE';
+UPDATE Improvements Set ExtraScore = -150 WHERE Type = 'IMPROVEMENT_CAIRN_SP';
 UPDATE Improvements Set ExtraScore = -100 WHERE Type = 'IMPROVEMENT_TRADING_POST';
-UPDATE Improvements Set ExtraScore = -100 WHERE Type = 'IMPROVEMENT_CAIRN_SP';
 UPDATE Improvements Set ExtraScore = 100 WHERE Type = 'IMPROVEMENT_BYZANTIUM_ANGELOKASTRO';
 UPDATE Improvements Set ExtraScore = 100 WHERE Type = 'IMPROVEMENT_BRAZILWOOD_CAMP';
 UPDATE Improvements Set ExtraScore = 100 WHERE Type = 'IMPROVEMENT_CHATEAU';

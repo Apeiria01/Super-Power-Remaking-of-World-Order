@@ -574,7 +574,7 @@
 			<Where Name="RELIGION_MIN_FAITH_FIRST_PANTHEON" />
 		</Update>
 		<Update>
-			<Set Value="2"/>
+			<Set Value="0"/>
 			<Where Name="RELIGION_GAME_FAITH_DELTA_NEXT_PANTHEON" />
 		</Update>
 		<Update>
