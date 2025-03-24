@@ -258,7 +258,7 @@
 			<Help>TXT_KEY_BUILDING_ROMAN_SENATE_HELP</Help>
 			<Description>TXT_KEY_BUILDING_ROMAN_SENATE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ROMAN_SENATE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_COURTHOUSE_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_SP_ANTI_CORRUPTION_BUILDINGS_STRATEGY</Strategy>
 			<MinAreaSize>-1</MinAreaSize>
 			<NeverCapture>true</NeverCapture>
 			<HurryCostModifier>15</HurryCostModifier>
