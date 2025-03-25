@@ -7403,6 +7403,7 @@
 				[COLOR_POSITIVE_TEXT]Aristocracy[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]New Cities start with an extra 1 [ICON_CITIZEN] Citizen. (But one Settler Unit still equals one Population)
 				[NEWLINE][ICON_BULLET]100% [ICON_FOOD] is carried over after a new [ICON_CITIZEN] Citizen is born for every Town (Cities with a [ICON_CITIZEN] Population less than 6). It won't be effective instantly but after the next new [ICON_CITIZEN] Citizen is born.
+				[NEWLINE][ICON_BULLET]The accumulation of food kept in all city immediately filled up.
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_LANDED_ELITE_HELP" >
@@ -18189,6 +18190,9 @@
 		</Row>
 		<Row Tag="TXT_KEY_FOOD_MAX_KEPT">
 			<Text>After population growth, up to {1_Percent}% of [ICON_FOOD] Food can be retained.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_FOOD_KEPT_NOW">
+			<Text>[ICON_BULLET]The accumulation of [ICON_FOOD] Food Kept in city is: {1_Num}.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_TRADE_BONUS_PER_ERA">
 			<Text>/Per Era</Text>

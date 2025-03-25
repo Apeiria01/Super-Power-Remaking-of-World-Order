@@ -6502,6 +6502,7 @@
 				[COLOR_POSITIVE_TEXT]貴族政治[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]新建城市+1[ICON_CITIZEN]人口(但是每1個移民仍等於1人口)。
 				[NEWLINE][ICON_BULLET]小鎮（即6人口以下的城市）新增人口時會保留100%的余糧（在增長下一個人口後生效）。
+				[NEWLINE][ICON_BULLET]所有城市的余糧積累值立即充滿。
 			</Text>
 		</Replace>
 
@@ -16335,6 +16336,9 @@
 		</Row>
 		<Row Tag="TXT_KEY_FOOD_MAX_KEPT">
 			<Text>人口增長後，最多可以保留{1_Percent}%[ICON_FOOD]食物</Text>
+		</Row>
+		<Row Tag="TXT_KEY_FOOD_KEPT_NOW">
+			<Text>[ICON_BULLET]城市当前的[ICON_FOOD]余粮积累值为: {1_Num}</Text>
 		</Row>
 		<Row Tag="TXT_KEY_TRADE_BONUS_PER_ERA">
 			<Text>/每個時代</Text>
