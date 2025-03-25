@@ -18196,6 +18196,9 @@
 		<Row Tag="TXT_KEY_Building_PER_ERA">
 			<Text>/Per Era</Text>
 		</Row>
+		<Row Tag="TXT_KEY_Building_Ally_Or_Friend">
+			<Text>/Every ally or friend city-state Minor Trade global</Text>
+		</Row>
 		<Row Tag="TXT_KEY_CHOOSE_INTERNATIONAL_TRADE_ROUTE_ITEM_TT_ERA">
 			<Text>Era gold bonus from {1_CityName}: {2_Num}</Text>
 		</Row>

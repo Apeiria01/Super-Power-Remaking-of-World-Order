@@ -16342,6 +16342,9 @@
 		<Row Tag="TXT_KEY_Building_PER_ERA">
 			<Text>/每個時代</Text>
 		</Row>
+		<Row Tag="TXT_KEY_Building_Ally_Or_Friend">
+			<Text>/每個盟友或朋友城邦商路</Text>
+		</Row>
 		<Row Tag="TXT_KEY_CHOOSE_INTERNATIONAL_TRADE_ROUTE_ITEM_TT_ERA">
 			<Text>从{1_CityName}得到的時代金幣獎勵數: {2_Num}</Text>
 		</Row>
