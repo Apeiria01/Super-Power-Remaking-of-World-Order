@@ -15,7 +15,7 @@
 			<Where Type="POLICY_TRADITION"/>
 		</Update>
 		<Update>
-			<Set HappinessPerXPopulation="0" WonderProductionModifier="0" NewCityExtraPopulation="1" PortraitIndex="28"/>
+			<Set HappinessPerXPopulation="0" WonderProductionModifier="0" NewCityExtraPopulation="1" InstantFoodKeptPercent="100" PortraitIndex="28"/>
 			<Where Type="POLICY_ARISTOCRACY"/>
 		</Update>
 		<Update>

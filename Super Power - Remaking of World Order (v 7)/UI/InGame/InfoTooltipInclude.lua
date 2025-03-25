@@ -3107,6 +3107,7 @@ if Game then
 			if foodMaxKept > 0 and foodPerTurnTimes100 > 0 then
 				if foodMaxKept > 100 then foodMaxKept = 100 end
 				tipText = tipText .. "[NEWLINE]" .. L( "TXT_KEY_FOOD_MAX_KEPT", foodMaxKept)
+				tipText = tipText .. "[NEWLINE]" .. L( "TXT_KEY_FOOD_KEPT_NOW", city:GetFoodKept())
 			end
 		end
 
