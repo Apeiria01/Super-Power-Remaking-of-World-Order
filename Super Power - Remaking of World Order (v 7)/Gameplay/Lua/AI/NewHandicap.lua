@@ -811,19 +811,19 @@ function AIResearchCatchUp(HumanResearchPerTurn, HumanCurrentTech, AIplayer)
     end
 
     if AICurrentTech >= 30 and AIResearchPerTurn > 1 then
-        if HumanCurrentTech - AICurrentTech >= 15 then -- HumanResearchPerTurn > AIResearchPerTurn * 2 or 
+        if HumanCurrentTech - AICurrentTech >= 15 then
             AIplayer:SetHasPolicy(GameInfoTypes["POLICY_AI_BONUS_RESEARCH_LV1"], true, true)
             AIplayer:SetHasPolicy(GameInfoTypes["POLICY_AI_BONUS_RESEARCH_LV2"], true, true)
             AIplayer:SetHasPolicy(GameInfoTypes["POLICY_AI_BONUS_RESEARCH_LV3"], true, true)
             print("Human's research is too fast -2X, AI needs to catch up sooner!")
 
-        elseif HumanCurrentTech - AICurrentTech >= 7 then -- HumanResearchPerTurn > AIResearchPerTurn * 1.5 or 
+        elseif HumanCurrentTech - AICurrentTech >= 7 then
             AIplayer:SetHasPolicy(GameInfoTypes["POLICY_AI_BONUS_RESEARCH_LV1"], true, true)
             AIplayer:SetHasPolicy(GameInfoTypes["POLICY_AI_BONUS_RESEARCH_LV2"], true, true)
             AIplayer:SetHasPolicy(GameInfoTypes["POLICY_AI_BONUS_RESEARCH_LV3"], false)
             print("Human's research is fast -1.5X, AI needs to catch up!")
 
-        elseif HumanResearchPerTurn > AIResearchPerTurn then
+        elseif HumanCurrentTech > AICurrentTech then
             AIplayer:SetHasPolicy(GameInfoTypes["POLICY_AI_BONUS_RESEARCH_LV1"], true, true)
             AIplayer:SetHasPolicy(GameInfoTypes["POLICY_AI_BONUS_RESEARCH_LV2"], false)
             AIplayer:SetHasPolicy(GameInfoTypes["POLICY_AI_BONUS_RESEARCH_LV3"], false)
