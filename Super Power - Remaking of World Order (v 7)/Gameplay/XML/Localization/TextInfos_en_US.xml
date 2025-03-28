@@ -7417,7 +7417,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]Legalism[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]+1 [ICON_HAPPINESS_1] Hapiness for every 5 [ICON_CITIZEN] Citizens in cities directly under the central government.
-				[NEWLINE][ICON_BULLET]+1 [ICON_HAPPINESS_1] to every city's Population Size above Town.
+				[NEWLINE][ICON_BULLET]+1 [ICON_HAPPINESS_1] to every city's Population Size in all cities.
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_OLIGARCHY_HELP" >

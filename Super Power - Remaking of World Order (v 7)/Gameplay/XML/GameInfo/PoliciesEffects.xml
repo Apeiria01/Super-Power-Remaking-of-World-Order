@@ -734,6 +734,11 @@
 		</Row>-->
 		<Row>
 			<PolicyType>POLICY_LEGALISM</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_TOWN</BuildingClassType>
+			<Happiness>1</Happiness>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_LEGALISM</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_SMALL</BuildingClassType>
 			<Happiness>1</Happiness>
 		</Row>

@@ -6619,7 +6619,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]律法统治[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]所有城市中每5[ICON_CITIZEN]人口+1[ICON_HAPPINESS_1]快乐。
-				[NEWLINE][ICON_BULLET]小镇以上每一级城市规模+1[ICON_HAPPINESS_1]快乐。
+				[NEWLINE][ICON_BULLET]所有城市每一级城市规模+1[ICON_HAPPINESS_1]快乐。
 			</Text>
 		</Replace>
 
