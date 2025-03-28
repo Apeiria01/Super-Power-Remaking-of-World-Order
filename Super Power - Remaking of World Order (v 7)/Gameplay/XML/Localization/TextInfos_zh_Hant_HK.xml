@@ -6517,7 +6517,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]律法統治[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]所有城市中每5[ICON_CITIZEN]人口+1[ICON_HAPPINESS_1]快樂。
-				[NEWLINE][ICON_BULLET]小鎮以上每一級城市規模+1[ICON_HAPPINESS_1]快樂。
+				[NEWLINE][ICON_BULLET]所有城市每一級城市規模+1[ICON_HAPPINESS_1]快樂。
 			</Text>
 		</Replace>
 
