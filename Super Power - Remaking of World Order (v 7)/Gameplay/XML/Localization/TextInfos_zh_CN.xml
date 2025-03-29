@@ -8254,7 +8254,7 @@
 			<Text>和平时期[ICON_FOOD]食物积累速率提高25%</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_TEARS_OF_GODS">
-			<Text>每一处钻石和珍珠+2[ICON_PEACE]信仰、+2[ICON_CULTURE]文化</Text>
+			<Text>每一处宝石和珍珠+2[ICON_PEACE]信仰、+2[ICON_CULTURE]文化</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_PAPAL_PRIMACY">
 			<Text>对信仰此宗教的城邦的[ICON_INFLUENCE]影响力下限值+35且[ICON_INFLUENCE]影响力恢复速率+300%，宗教裁判官位于同盟城邦附近可以阻止其被其他文明传教</Text>

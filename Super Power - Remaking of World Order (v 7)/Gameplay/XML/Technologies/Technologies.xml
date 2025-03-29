@@ -40,6 +40,7 @@
 			<IconAtlas>SPBalance_ATLAS</IconAtlas>
 			<AudioIntro>AS2D_TECH_FISHERY</AudioIntro>
 			<AudioIntroHeader>AS2D_HEADING_TECH_FISHERY</AudioIntroHeader>
+			<InternationalTradeRoutesChange>1</InternationalTradeRoutesChange>
 		</Row>
 		<Row>
 			<Type>TECH_HUNTING</Type>
@@ -70,13 +71,12 @@
 			<Trade>true</Trade>
 			<GoodyTech>true</GoodyTech>
 			<GridX>1</GridX>
-			<GridY>1</GridY>
+			<GridY>2</GridY>
 			<Quote>TXT_KEY_TECH_CALENDAR_QUOTE</Quote>
 			<PortraitIndex>9</PortraitIndex>
 			<IconAtlas>TECH_ATLAS_1</IconAtlas>
 			<AudioIntro>AS2D_TECH_CALENDAR</AudioIntro>
 			<AudioIntroHeader>AS2D_HEADING_TECH_CALENDAR</AudioIntroHeader>
-			<InternationalTradeRoutesChange>1</InternationalTradeRoutesChange>
 		</Row>
 		<Row>
 			<Type>TECH_POTTERY</Type>

@@ -24,7 +24,7 @@
 	<Technology_PrereqTechs>
 		<Row>
 			<TechType>TECH_CALENDAR</TechType>
-			<PrereqTech>TECH_FISHERY</PrereqTech>
+			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
 		</Row>
 		<Row>
 			<TechType>TECH_POTTERY</TechType>
@@ -37,6 +37,10 @@
 
 		<Row>
 			<TechType>TECH_SAILING</TechType>
+			<PrereqTech>TECH_FISHERY</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_WRITING</TechType>
 			<PrereqTech>TECH_CALENDAR</PrereqTech>
 		</Row>
 		<Row>
