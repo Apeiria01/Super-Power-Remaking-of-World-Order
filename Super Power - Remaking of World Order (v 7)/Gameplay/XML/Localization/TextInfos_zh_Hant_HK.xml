@@ -8146,7 +8146,7 @@
 			<Text>和平時期[ICON_FOOD]食物積累速率提高25%</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_TEARS_OF_GODS">
-			<Text>每一處鉆石和珍珠+2[ICON_PEACE]信仰、+2[ICON_CULTURE]文化</Text>
+			<Text>每一處寶石和珍珠+2[ICON_PEACE]信仰、+2[ICON_CULTURE]文化</Text>
 		</Replace>
 
 
