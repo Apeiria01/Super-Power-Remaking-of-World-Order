@@ -18218,5 +18218,30 @@
 		<Row Tag="TXT_KEY_ALLY">
 			<Text>Ally</Text>
 		</Row>
+
+		<Row Tag="TXT_KEY_CITY_STATE_GIFT_CULTURE_FIRST">
+			<Text>They present you with long-lost epic tomes, awarding you [COLOR_POSITIVE_TEXT] {1_NumCulture} [ICON_CULTURE] Culture[ENDCOLOR].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GIFT_CULTURE_OTHER">
+			<Text>Their bards sing ancient ballads for you, giving you [COLOR_POSITIVE_TEXT] {1_NumCulture} [ICON_CULTURE] Culture[ENDCOLOR].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GIFT_GOLD_FIRST">
+			<Text>They offer you a chest filled with exotic coins, awarding you [COLOR_POSITIVE_TEXT] {1_NumGold} [ICON_GOLD] Gold[ENDCOLOR].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GIFT_GOLD_OTHER">
+			<Text>They gift you a pouch of trade surplus coins, providing you [COLOR_POSITIVE_TEXT] {1_NumGold} [ICON_GOLD] Gold[ENDCOLOR].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GIFT_MILITARY_FIRST">
+			<Text>Their war chief forms a blood pact with you, increasing your [COLOR_POSITIVE_TEXT] {1_NumInfluence} [ICON_INFLUENCE] Influence with them[ENDCOLOR].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GIFT_MILITARY_OTHER">
+			<Text>They present an ancient battle standard as a token of friendship, raising your [COLOR_POSITIVE_TEXT] {1_NumInfluence} [ICON_INFLUENCE] Influence  with them[ENDCOLOR].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GIFT_FOOD_FIRST">
+			<Text>They deliver rare deep-sea catches to you, providing [COLOR_POSITIVE_TEXT]{1_NumFood} [ICON_FOOD] Food in your Capital[ENDCOLOR].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GIFT_FOOD_OTHER">
+			<Text>They share the harvest from coastal fisheries, adding [COLOR_POSITIVE_TEXT]{1_NumFood} [ICON_FOOD] Food to your Capital[ENDCOLOR].</Text>
+		</Row>
 	</Language_en_US>
 </GameData>

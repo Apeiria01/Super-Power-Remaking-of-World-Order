@@ -16558,5 +16558,30 @@
 		<Row Tag="TXT_KEY_ALLY">
 			<Text>友方</Text>
 		</Row>
+
+		<Row Tag="TXT_KEY_CITY_STATE_GIFT_CULTURE_FIRST">
+			<Text>他们赠予你失传的史诗典籍，你获得[COLOR_POSITIVE_TEXT]{1_NumCulture}[ICON_CULTURE]文化[ENDCOLOR]。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GIFT_CULTURE_OTHER">
+			<Text>他们的吟游诗人为你演唱古老歌谣，你获得[COLOR_POSITIVE_TEXT]{1_NumCulture}[ICON_CULTURE]文化[ENDCOLOR]。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GIFT_GOLD_FIRST">
+			<Text>他们为你献上装满异国钱币的宝箱，你额外获得[COLOR_POSITIVE_TEXT]{1_NumGold}[ICON_GOLD]金钱[ENDCOLOR]。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GIFT_GOLD_OTHER">
+			<Text>他们赠送你一袋贸易盈余的金币，你额外获得[COLOR_POSITIVE_TEXT]{1_NumGold}[ICON_GOLD]金钱[ENDCOLOR]。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GIFT_MILITARY_FIRST">
+			<Text>他们的战争酋长与你歃血为盟，你对他们提升[COLOR_POSITIVE_TEXT]{1_NumInfluence}[ICON_INFLUENCE]影响力[ENDCOLOR]。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GIFT_MILITARY_OTHER">
+			<Text>他们以古老战旗作为友谊见证，你对他们提升[COLOR_POSITIVE_TEXT]{1_NumInfluence}[ICON_INFLUENCE]影响力[ENDCOLOR]。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GIFT_FOOD_FIRST">
+			<Text>他们给你送来稀有的深海渔获，首都获得[COLOR_POSITIVE_TEXT]{1_NumFood}[ICON_FOOD]粮食[ENDCOLOR]。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GIFT_FOOD_OTHER">
+			<Text>他们向你分享了近海渔场的收获，首都获得[COLOR_POSITIVE_TEXT]{1_NumFood}[ICON_FOOD]粮食[ENDCOLOR]。</Text>
+		</Row>
 	</Language_zh_CN>
 </GameData>
