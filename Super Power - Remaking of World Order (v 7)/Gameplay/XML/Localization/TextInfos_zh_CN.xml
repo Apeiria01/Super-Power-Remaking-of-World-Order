@@ -16540,6 +16540,9 @@
 		<Row Tag="TXT_KEY_Building_PER_ERA">
 			<Text>/每个时代</Text>
 		</Row>
+		<Row Tag="TXT_KEY_BUILDING_MINOR_CITYSTATE_TRADE">
+			<Text>/每条城邦商路</Text>
+		</Row>
 		<Row Tag="TXT_KEY_CHOOSE_INTERNATIONAL_TRADE_ROUTE_ITEM_TT_ERA">
 			<Text>从{1_CityName}得到的时代金钱奖励: {2_Num}</Text>
 		</Row>
