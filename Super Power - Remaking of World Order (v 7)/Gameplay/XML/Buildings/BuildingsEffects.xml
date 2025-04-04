@@ -5563,22 +5563,17 @@
 		<Row>
 			<BuildingType>BUILDING_STONEHENGE</BuildingType>
 			<FlavorType>FLAVOR_WONDER</FlavorType>
-			<Flavor>25</Flavor>
+			<Flavor>5</Flavor>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_STONEHENGE</BuildingType>
 			<FlavorType>FLAVOR_RELIGION</FlavorType>
-			<Flavor>90</Flavor>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_STONEHENGE</BuildingType>
-			<FlavorType>FLAVOR_EXPANSION</FlavorType>
-			<Flavor>25</Flavor>
+			<Flavor>20</Flavor>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_STONEHENGE</BuildingType>
 			<FlavorType>FLAVOR_GREAT_PEOPLE</FlavorType>
-			<Flavor>25</Flavor>
+			<Flavor>5</Flavor>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_HANGING_GARDEN</BuildingType>
