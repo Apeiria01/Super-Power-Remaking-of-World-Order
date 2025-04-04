@@ -1197,6 +1197,7 @@ BuildMilitaryAcademyButton = {
 		and unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_GREAT_ADMIRAL"].ID)) 
 		then
             print("Mongolian Khan cannot be consumed!")
+            UI.SetDirty(InterfaceDirtyBits.UnitInfo_DIRTY_BIT, true);
             return
         else
             unit:Kill()
