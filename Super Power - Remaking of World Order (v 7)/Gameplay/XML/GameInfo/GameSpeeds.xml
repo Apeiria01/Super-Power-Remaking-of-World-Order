@@ -3,14 +3,14 @@
 <GameData>
 	<GameSpeeds>
 		<Update>
-			<Set DealDuration="30" GrowthPercent="200" TrainPercent="150" ConstructPercent="150" CreatePercent="200" ResearchPercent="250"
+			<Set DealDuration="30" GrowthPercent="200" SetterExtraPercent="-50" TrainPercent="150" ConstructPercent="150" CreatePercent="200" ResearchPercent="250"
 				 GoldPercent="200" BuildPercent="175" ImprovementPercent="125" GreatPeoplePercent="200" CulturePercent="250" FaithPercent="150" BarbPercent="150"
 			 FeatureProductionPercent="85" UnitHurryPercent="200" UnitTradePercent="200" GoldenAgePercent="200" MinorCivElectionFreqMod="120"
 				 OpinionDurationPercent="50" SpyRatePercent="125" RelationshipDuration="25" LeaguePercent="150" ReligiousPressureAdjacentCity="80"/>
 			<Where Type="GAMESPEED_MARATHON"/>
 		</Update>
 		<Update>
-			<Set DealDuration="30" GrowthPercent="150" TrainPercent="115" ConstructPercent="115" CreatePercent="150" ResearchPercent="150"
+			<Set DealDuration="30" GrowthPercent="150" SetterExtraPercent="-35" TrainPercent="115" ConstructPercent="115" CreatePercent="150" ResearchPercent="150"
 				 GoldPercent="150" BuildPercent="125" ImprovementPercent="100" GreatPeoplePercent="150" CulturePercent="150" FaithPercent="125" BarbPercent="100"
 			 FeatureProductionPercent="75" UnitHurryPercent="150" UnitTradePercent="150" GoldenAgePercent="150" MinorCivElectionFreqMod="100"
 				 OpinionDurationPercent="50" SpyRatePercent="100" RelationshipDuration="25" LeaguePercent="100" ReligiousPressureAdjacentCity="100"/>
@@ -24,7 +24,7 @@
 			<Where Type="GAMESPEED_STANDARD"/>
 		</Update>
 		<Update>
-			<Set DealDuration="20" GrowthPercent="67" TrainPercent="50" ConstructPercent="50" CreatePercent="67" ResearchPercent="75"
+			<Set DealDuration="20" GrowthPercent="67" SetterExtraPercent="-17" TrainPercent="50" ConstructPercent="50" CreatePercent="67" ResearchPercent="75"
 				 GoldPercent="67" ImprovementPercent="45" GreatPeoplePercent="67" CulturePercent="75" FaithPercent="67" BarbPercent="67"
 			 FeatureProductionPercent="40" UnitHurryPercent="67" UnitTradePercent="67" GoldenAgePercent="67" MinorCivElectionFreqMod="67"
 				 OpinionDurationPercent="50" SpyRatePercent="67" RelationshipDuration="25" LeaguePercent="67"  ReligiousPressureAdjacentCity="200" FreePromotion="PROMOTION_GAME_QUICKSPEED"/>
