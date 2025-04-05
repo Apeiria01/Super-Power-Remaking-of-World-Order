@@ -256,6 +256,7 @@ local AIEraBonus = {
     GameInfo.Policies["POLICY_AI_MODERN"].ID,
     GameInfo.Policies["POLICY_AI_WORLDWAR"].ID,
     GameInfo.Policies["POLICY_AI_ATOMIC"].ID,
+    GameInfo.Policies["POLICY_AI_INFORMATION"].ID,
 }
 function PlayerIntoNewEra(playerID, era) -- AI will get bonus when Human Player entering new Eras
     local handicap = Game:GetHandicapType();
@@ -740,7 +741,7 @@ function AIPromotion(iPlayer, iCity, iUnit, bGold, bFaith)
 
     ------------------------AI with many coastal cities will build more naval units other than land units
     local iUnitClassCount = player:GetUnitClassCount(ThisUnitClass)
-    if handicap >= 3 and unit:IsCombatUnit() and unitBuiltCity:IsCoastal(GameDefines["MIN_WATER_SIZE_FOR_OCEAN"]) and iUnitClassCount > AICityCount / 2 then
+    if handicap >= 4 and unit:IsCombatUnit() and unitBuiltCity:IsCoastal(GameDefines["MIN_WATER_SIZE_FOR_OCEAN"]) and iUnitClassCount > AICityCount / 2 then
 
         ---------------------------------Count the ratio of coastal cities
         local AICoastalCitiesCount = 0
@@ -761,7 +762,7 @@ function AIPromotion(iPlayer, iCity, iUnit, bGold, bFaith)
                 print("Coastal AI build more naval units other than land units!")
             end
 
-            if iUnitClassCount > 15 and iUnitClassCount > AICityCount * 2 and not PlayerAtWarWithHuman(player) then
+            if iUnitClassCount > 5 and iUnitClassCount > AICityCount * 2 and not PlayerAtWarWithHuman(player) then
                 unit:Kill()
                 print("AI has too many this type of land units! So remove it!")
             end

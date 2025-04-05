@@ -16583,5 +16583,9 @@
 		<Row Tag="TXT_KEY_CITY_STATE_GIFT_FOOD_OTHER">
 			<Text>他们向你分享了近海渔场的收获，首都获得[COLOR_POSITIVE_TEXT]{1_NumFood}[ICON_FOOD]粮食[ENDCOLOR]。</Text>
 		</Row>
+
+		<Row Tag="TXT_KEY_POLICY_AIBONUS">
+			<Text>励精图治</Text>
+		</Row>
 	</Language_zh_CN>
 </GameData>
