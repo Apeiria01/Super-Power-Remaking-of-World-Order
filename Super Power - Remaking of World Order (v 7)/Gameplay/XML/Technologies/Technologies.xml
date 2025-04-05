@@ -9,7 +9,7 @@
 		<Row>
 			<Type>TECH_AGRICULTURE</Type>
 			<ID>0</ID>
-			<Cost>7</Cost>
+			<Cost>6</Cost>
 			<Description>TXT_KEY_TECH_AGRICULTURE_TITLE</Description>
 			<Civilopedia>TXT_KEY_TECH_AGRICULTURE_DESC</Civilopedia>
 			<Help>TXT_KEY_SP_TECH_GENERAL_HELP</Help>
@@ -1214,7 +1214,7 @@
 			<Era>ERA_WORLDWAR</Era>
 			<Trade>true</Trade>
 			<GridX>14</GridX>
-			<GridY>3</GridY>
+			<GridY>2</GridY>
 			<Quote>TXT_KEY_TECH_ELECTRONICS_QUOTE</Quote>
 			<PortraitIndex>60</PortraitIndex>
 			<IconAtlas>TECH_ATLAS_1</IconAtlas>
@@ -1230,7 +1230,7 @@
 			<Era>ERA_WORLDWAR</Era>
 			<Trade>true</Trade>
 			<GridX>14</GridX>
-			<GridY>5</GridY>
+			<GridY>4</GridY>
 			<Quote>TXT_KEY_TECH_ATOMIC_THEORY_QUOTE</Quote>
 			<PortraitIndex>52</PortraitIndex>
 			<IconAtlas>TECH_ATLAS_1</IconAtlas>
@@ -1490,7 +1490,7 @@
 			<Era>ERA_INFORMATION</Era>
 			<Trade>true</Trade>
 			<GridX>17</GridX>
-			<GridY>6</GridY>
+			<GridY>5</GridY>
 			<Quote>TXT_KEY_TECH_SATELLITES_QUOTE</Quote>
 			<PortraitIndex>2</PortraitIndex>
 			<IconAtlas>TECH_ATLAS_2</IconAtlas>
