@@ -6505,31 +6505,31 @@
 			<Text>地区势力</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_HANDICAP_PRINCE_HELP">
-			<Text>电脑在人口，产能，金钱，快乐和战斗力上有中等加成。你每进入一个新时代，电脑的加成都会增加。</Text>
+			<Text>电脑在人口，产能，金钱，快乐和战斗力上有中等加成。每进入一个新时代，电脑的加成都会增加。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_HANDICAP_KING">
 			<Text>千乘之国</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_HANDICAP_KING_HELP">
-			<Text>电脑在人口，产能，金钱，快乐和战斗力上有较大加成。电脑初始拥有2个移民，且你每进入一个新时代，电脑的加成都会增加。与“天神”等级难度相当。</Text>
+			<Text>电脑在人口，产能，金钱，快乐和战斗力上有较大加成。电脑初始拥有2个移民，且每进入一个新时代，电脑的加成都会增加。与“天神”等级难度相当。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_HANDICAP_EMPEROR">
 			<Text>一方霸主</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_HANDICAP_EMPEROR_HELP">
-			<Text>电脑在人口，产能，金钱，快乐和战斗力上有很大加成。电脑初始拥有2个移民，且你每进入一个新时代，电脑的加成都会大量增加。</Text>
+			<Text>电脑在人口，产能，金钱，快乐和战斗力上有很大加成。电脑初始拥有2个移民，且每进入一个新时代，电脑的加成都会大量增加。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_HANDICAP_IMMORTAL">
 			<Text>世界强权</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_HANDICAP_IMMORTAL_HELP">
-			<Text>电脑在人口，产能，金钱，快乐和战斗力上有极大加成。电脑初始拥有3个移民，且你每进入一个新时代，电脑的加成都会剧增。</Text>
+			<Text>电脑在人口，产能，金钱，快乐和战斗力上有极大加成。电脑初始拥有3个移民，且每进入一个新时代，电脑的加成都会剧增。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_HANDICAP_DEITY">
 			<Text>超级大国</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_HANDICAP_DEITY_HELP">
-			<Text>电脑在人口，产能，金钱，快乐和战斗力上的加成丧心病狂。电脑初始拥有4个移民，且你每进入一个新时代，电脑的加成都会疯涨。 </Text>
+			<Text>电脑在人口，产能，金钱，快乐和战斗力上的加成丧心病狂。电脑初始拥有4个移民，且每进入一个新时代，电脑的加成都会疯涨。 </Text>
 		</Replace>
 
 		<!-- *******************************New Resoultions Texts********************************************-->
