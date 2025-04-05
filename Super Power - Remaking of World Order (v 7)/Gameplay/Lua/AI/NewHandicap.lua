@@ -284,14 +284,12 @@ function PlayerIntoNewEra(playerID, era) -- AI will get bonus when Human Player 
     end
     
     -- AI will get bouns when entering new Eras
-    local MaxLength = era;
-    if MaxLength > #AIEraBonus then
-        MaxLength = #AIEraBonus
-    end
+    local MaxLength = math.min(#AIEraBonus, handicap + 1, era);
+
     for i = 1, MaxLength, 1 do
         player:SetHasPolicy(AIEraBonus[i], true, true)
     end
-    print("AI Player Enter New Era: " .. era .." ".. MaxLength)
+    print("AI Player Enter New Era: " .. era .." MaxIndex=".. MaxLength)
 end
 GameEvents.PlayerSetEra.Add(PlayerIntoNewEra)
 
