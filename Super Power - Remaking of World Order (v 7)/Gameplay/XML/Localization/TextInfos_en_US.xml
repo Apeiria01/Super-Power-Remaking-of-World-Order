@@ -18243,5 +18243,9 @@
 		<Row Tag="TXT_KEY_CITY_STATE_GIFT_FOOD_OTHER">
 			<Text>They share the harvest from coastal fisheries, adding [COLOR_POSITIVE_TEXT]{1_NumFood} [ICON_FOOD] Food to your Capital[ENDCOLOR].</Text>
 		</Row>
+
+		<Row Tag="TXT_KEY_POLICY_AIBONUS">
+			<Text>Strive for excellence</Text>
+		</Row>
 	</Language_en_US>
 </GameData>
