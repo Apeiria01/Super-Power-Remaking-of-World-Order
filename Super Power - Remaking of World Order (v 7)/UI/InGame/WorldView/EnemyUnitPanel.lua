@@ -1938,14 +1938,14 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			if UnitFixDamageValue ~= 0 then
 				controlTable = g_TheirCombatDataIM:GetInstance();
 				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_FIXVALUE_SP");
-                controlTable.Value:SetText(UnitFixDamageValue .." :[COLOR_CYAN]"..  "[ENDCOLOR]");
+                controlTable.Value:SetText("[COLOR_CYAN]" .. UnitFixDamageValue .. "[ENDCOLOR] :");
 			end
 
 			if(pTheirUnit:GetChangeDamageValue() < 0 and pTheirUnit:GetDomainType() ~= DomainTypes.DOMAIN_AIR) then
 			    local ChangeDamageValue=pTheirUnit:GetChangeDamageValue()
 				controlTable = g_TheirCombatDataIM:GetInstance();
 				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_CHANGE_DAMAGEVALUE_SUPPORT_SP");
-				controlTable.Value:SetText(ChangeDamageValue .. " :[COLOR_CYAN]".. "[ENDCOLOR]");
+				controlTable.Value:SetText("[COLOR_CYAN]" .. ChangeDamageValue .. "[ENDCOLOR] :");
 			end
 			-------------------------
 			-- Ranged Support Fire --
