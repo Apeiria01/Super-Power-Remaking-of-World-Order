@@ -12684,7 +12684,7 @@
 			<Text>
 				對[COLOR_POSITIVE_TEXT]相鄰區域[ENDCOLOR]目標傷害+40%，對[COLOR_POSITIVE_TEXT]目標地格[ENDCOLOR]的其他單位+50%的傷害。
 				[NEWLINE]每對一個敵軍造成[COLOR_POSITIVE_TEXT]濺射或穿透[ENDCOLOR]傷害+1XP。
-				[NEWLINE]解鎖[COLOR_POSITIVE_TEXT]獨特[ENDCOLOR]晉升線。
+				[NEWLINE]解鎖[COLOR_POSITIVE_TEXT]獨特[ENDCOLOR]晉升線（單位升級後將無法選擇獨特晉升）。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_GUN_BARRER_1">

@@ -390,7 +390,7 @@
 		<Row>
 			<Type>BUILDING_NATIONAL_SCULPTURE</Type>
 			<BuildingClass>BUILDINGCLASS_NATIONAL_SCULPTURE</BuildingClass>
-			<Cost>180</Cost>
+			<Cost>120</Cost>
 			<PrereqTech>TECH_ART_THEORY</PrereqTech>
 			<Help>TXT_KEY_BUILDING_NATIONAL_SCULPTURE_HELP</Help>
 			<Description>TXT_KEY_BUILDING_NATIONAL_SCULPTURE</Description>
@@ -408,7 +408,7 @@
 		<Row>
 			<Type>BUILDING_ETHIOPIA_ROCKHEWN</Type>
 			<BuildingClass>BUILDINGCLASS_NATIONAL_SCULPTURE</BuildingClass>
-			<Cost>180</Cost>
+			<Cost>120</Cost>
 			<PrereqTech>TECH_ART_THEORY</PrereqTech>
 			<Help>TXT_KEY_BUILDING_ETHIOPIA_ROCKHEWN_HELP</Help>
 			<Description>TXT_KEY_BUILDING_ETHIOPIA_ROCKHEWN</Description>
