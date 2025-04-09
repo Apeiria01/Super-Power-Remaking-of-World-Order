@@ -14662,7 +14662,7 @@
 			[ICON_BULLET]Cause 40% Damage to all enemy units [COLOR_POSITIVE_TEXT]Adjacent[ENDCOLOR] to the target unit.
 			[NEWLINE][ICON_BULLET]Cause 50% Damage to other units in the [COLOR_POSITIVE_TEXT]target[ENDCOLOR] plot.
 			[NEWLINE][ICON_BULLET]+1XP when Cause Splash Damage or Collateral Damage to an enemy unit.
-			[NEWLINE]Unlock Unique follow-up Promotions
+			[NEWLINE]Unlock Unique follow-up Promotions (It will no longer be available after unit upgrade).
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_GUN_BARRER_1">

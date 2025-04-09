@@ -12851,7 +12851,7 @@
 			<Text>
 				对[COLOR_POSITIVE_TEXT]相邻区域[ENDCOLOR]目标伤害+40%，对[COLOR_POSITIVE_TEXT]目标地格[ENDCOLOR]的其他单位+50%的伤害。
 				[NEWLINE]每对一个敌军造成[COLOR_POSITIVE_TEXT]溅射或穿透[ENDCOLOR]伤害+1XP。
-				[NEWLINE]解锁[COLOR_POSITIVE_TEXT]独特[ENDCOLOR]晋升线。
+				[NEWLINE]解锁[COLOR_POSITIVE_TEXT]独特[ENDCOLOR]晋升线（单位升级后将无法选择独特晋升）。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_GUN_BARRER_1">
