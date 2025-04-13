@@ -18247,5 +18247,9 @@
 		<Row Tag="TXT_KEY_POLICY_AIBONUS">
 			<Text>Strive for excellence</Text>
 		</Row>
+		<Row Tag="TXT_KEY_POLICY_BRANCH_CANNOT_UNLOCK_CIVILIZATION">
+			<Text>[COLOR_WARNING_TEXT]Your Civilization cannot adopt this Branch.[ENDCOLOR]</Text>
+		</Row>
+		
 	</Language_en_US>
 </GameData>

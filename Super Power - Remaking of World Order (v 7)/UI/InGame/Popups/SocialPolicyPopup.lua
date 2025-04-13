@@ -221,6 +221,7 @@ Events.SerialEventGameMessagePopup.Add( OnPopupMessage );
 function UpdateDisplay()
 
     local player = Players[Game.GetActivePlayer()];
+	local civType = GameInfo.Civilizations[player:GetCivilizationType()].Type;
    	CivIconHookup( player:GetID(), 64, Controls.CivIcon, Controls.CivIconBG, Controls.CivIconShadow, false, true );
 
 	print ("In UpdateDisplay()");
@@ -330,6 +331,11 @@ function UpdateDisplay()
 		if (iEraPrereq ~= nil and pTeam:GetCurrentEra() < iEraPrereq) then
 			bEraLock = true;
 		end
+
+		local bCivilizationLock = false;
+		if GameInfo.PolicyBranch_CivilizationLocked{ PolicyBranchType = policyBranchInfo.Type, CivilizationType = civType }() then
+			bCivilizationLock = true;
+		end
 		
 		local lockName = "Lock"..numString;
 		local thisLock = Controls[lockName];
@@ -353,6 +359,11 @@ function UpdateDisplay()
 					local strEraTitle = Locale.ConvertTextKey(strEra);
 					thisButton:SetText( strEraTitle );
 					
+				-- This Civilization should never Unclock it
+				elseif bCivilizationLock then
+					strToolTip = strToolTip .. " " .. Locale.ConvertTextKey("TXT_KEY_POLICY_BRANCH_CANNOT_UNLOCK_CIVILIZATION");
+					thisButton:SetHide( false );
+					thisButton:SetText( Locale.ConvertTextKey( "TXT_KEY_POP_ADOPT_BUTTON" ) );
 				-- Don't have enough Culture Yet
 				else
 					strToolTip = strToolTip .. " " .. Locale.ConvertTextKey("TXT_KEY_POLICY_BRANCH_CANNOT_UNLOCK_CULTURE", player:GetNextPolicyCost());
@@ -404,7 +415,7 @@ function UpdateDisplay()
 		thisButton:SetToolTipString(strToolTip);
 		
 		-- If the player doesn't have the era prereq, then dim out the branch
-		if (bEraLock) then
+		if (bEraLock or bCivilizationLock) then
 			thisDisabledBox:SetHide(false);
 			thisLockedBox:SetHide(true);
 		else
