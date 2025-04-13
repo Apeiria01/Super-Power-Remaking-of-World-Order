@@ -16587,5 +16587,8 @@
 		<Row Tag="TXT_KEY_POLICY_AIBONUS">
 			<Text>励精图治</Text>
 		</Row>
+		<Row Tag="TXT_KEY_POLICY_BRANCH_CANNOT_UNLOCK_CIVILIZATION">
+			<Text>[COLOR_WARNING_TEXT]所属文明不能采用该政策树。[ENDCOLOR]</Text>
+		</Row>
 	</Language_zh_CN>
 </GameData>

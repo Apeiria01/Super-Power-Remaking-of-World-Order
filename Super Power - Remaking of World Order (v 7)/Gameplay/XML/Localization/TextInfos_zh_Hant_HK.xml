@@ -16393,5 +16393,8 @@
 		<Row Tag="TXT_KEY_POLICY_AIBONUS">
 			<Text>勵精圖治</Text>
 		</Row>
+		<Row Tag="TXT_KEY_POLICY_BRANCH_CANNOT_UNLOCK_CIVILIZATION">
+			<Text>[COLOR_WARNING_TEXT]所屬文明不能採用該政策樹。[ENDCOLOR]</Text>
+		</Row>
 	</Language_zh_Hant_HK>
 </GameData>
