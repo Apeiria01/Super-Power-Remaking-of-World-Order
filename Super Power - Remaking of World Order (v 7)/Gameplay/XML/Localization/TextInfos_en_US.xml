@@ -9905,7 +9905,7 @@
 			<Text>Clear the Ice on this tile to allow other naval units to pass (Unfortunately due to the limitation of the game, it will NOT change the terrian [COLOR_NEGATIVE_TEXT]Graphic[ENDCOLOR] until reloading the game). </Text>
 		</Row>
 		<Replace Tag="TXT_KEY_CIV5_SPECIALTERRAIN_MOUNTAINS_TEXT">
-			<Text>Mountains are impassable, except to air units. They provide nothing to cities. However, after researching the Advanced Engineering, workers can quarry the mountain to transform the Mountain to a Hill and produce a Stone resource</Text>
+			<Text>Mountains are impassable, except to air units, Inca's civilians and Chasqui. However, after researching the Advanced Engineering, all workers can quarry the mountain. workers building roads or railways in mountain can make the terrain accessible to other ground units.</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_CIV5_IMPROVEMENTS_TRADING_POST_TEXT">
@@ -10328,7 +10328,8 @@
 		<Row Tag="TXT_KEY_IMPROVEMENT_TUNNEL_HELP">
 			<Text>
 				Can only be built on Mountain plots. Tunnels permit a way through mountains. 
-				[NEWLINE][NEWLINE][COLOR_NEGATIVE_TEXT]Can't build this Improvement on a snow or National Wonder plot![ENDCOLOR]
+				[NEWLINE][NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]Can't build this Improvement on a National Wonder plot![ENDCOLOR]
+				[NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]building Tunnels in snowy mountains will not increase plot output![ENDCOLOR]
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILD_TUNNEL">

@@ -1,5 +1,17 @@
 --Build Improvements Effects
-local iCitadelPromotion = GameInfo.UnitPromotions["PROMOTION_CITADEL_DEFENSE"].ID
+local iCitadelPromotion = GameInfoTypes["PROMOTION_CITADEL_DEFENSE"]
+local iImprovementFarm = GameInfoTypes["IMPROVEMENT_FARM"]
+local iImprovementTradingPost = GameInfoTypes["IMPROVEMENT_TRADING_POST"]
+local iImprovementLumberMill = GameInfoTypes["IMPROVEMENT_LUMBERMILL"]
+local iImprovementFishFarm = GameInfoTypes["IMPROVEMENT_FISHFARM_MOD"]
+local iImprovementCitadel = GameInfoTypes["IMPROVEMENT_CITADEL"]
+local iImprovementCoastalCitadel = GameInfoTypes["IMPROVEMENT_COASTAL_FORT"]
+local iImprovementTunnel = GameInfoTypes["IMPROVEMENT_TUNNEL"]
+local iImprovementRail = GameInfoTypes["ROUTE_RAILROAD"]
+local iBuiltCitadel = GameInfoTypes["BUILD_CITADEL"]
+local iBuiltCoastalCitadel = GameInfoTypes["BUILD_COASTAL_FORT"]
+
+
 function ImprovementBuilt(iPlayer, x, y, eImprovement)
 	local player = Players[iPlayer]
 	if player == nil then return end
@@ -9,25 +21,25 @@ function ImprovementBuilt(iPlayer, x, y, eImprovement)
 
 	if not player:IsHuman() then
 		--AI build Citadels
-		if eImprovement == GameInfo.Improvements["IMPROVEMENT_FARM"].ID 
-		or eImprovement == GameInfo.Improvements["IMPROVEMENT_TRADING_POST"].ID 
-		or eImprovement == GameInfo.Improvements["IMPROVEMENT_LUMBERMILL"].ID 
+		if eImprovement == iImprovementFarm
+		or eImprovement == iImprovementTradingPost
+		or eImprovement == iImprovementLumberMill
 		then
 			if (pPlot:IsRoute() or pPlot:IsFreshWater())
-			and player:CanBuild(pPlot, GameInfo.Builds.BUILD_CITADEL.ID) 
+			and player:CanBuild(pPlot, iBuiltCitadel) 
 			and not PlotIsVisibleToHuman(pPlot)
 			and player:GetUnitCountFromHasPromotion(iCitadelPromotion) < (player:GetNumCities() * 2 + player:GetTotalPopulation() / 20)
 			then
-				if pPlot:IsBuildRemovesFeature(GameInfo.Builds.BUILD_CITADEL.ID) then
+				if pPlot:IsBuildRemovesFeature(iBuiltCitadel) then
 					pPlot:SetFeatureType(-1)
 				end
 				SetCitadelUnits(iPlayer, x, y)
 				print ("This is a good location for building a Citadel! AI built a Citadel!")
 			end
 		--AI build Coastal Fort
-		elseif eImprovement  == GameInfo.Improvements["IMPROVEMENT_FISHFARM_MOD"].ID then
+		elseif eImprovement == iImprovementFishFarm then
 			if pPlot:IsAdjacentToLand()
-			and player:CanBuild(pPlot, GameInfo.Builds.BUILD_COASTAL_FORT.ID)
+			and player:CanBuild(pPlot, iBuiltCoastalCitadel)
 			and not PlotIsVisibleToHuman(pPlot) 
 			and player:GetUnitCountFromHasPromotion(iCitadelPromotion) < (player:GetNumCities() * 2 + player:GetTotalPopulation() / 20)
 			then
@@ -38,54 +50,15 @@ function ImprovementBuilt(iPlayer, x, y, eImprovement)
 	end
 	
 	
-	if eImprovement == GameInfo.Improvements["IMPROVEMENT_CITADEL"].ID
-	or eImprovement == GameInfo.Improvements["IMPROVEMENT_COASTAL_FORT"].ID
+	if eImprovement == iImprovementCitadel
+	or eImprovement == iImprovementCoastalCitadel
 	then		
 		SetCitadelUnits(iPlayer, x, y)
-	elseif eImprovement == GameInfo.Improvements["IMPROVEMENT_TUNNEL"].ID then
-		pPlot:SetRouteType(GameInfoTypes.ROUTE_RAILROAD);
+	elseif eImprovement == iImprovementTunnel then
+		pPlot:SetRouteType(iImprovementRail)
 	end
 
 end
 GameEvents.BuildFinished.Add(ImprovementBuilt) 
-
--------------------------------------------------------------------------------------
--- Fix Error Forest Planting & Citadel Removing & Forbid Build Tunnel on special Plot
--------------------------------------------------------------------------------------
-function ImprovementAvailableSP(iX, iY, iImprovement)
-	if Map.GetPlot(iX, iY) == nil then
-		return;
-	end
-	local pPlot = Map.GetPlot(iX, iY);
-	
-	if ((iImprovement == GameInfo.Improvements["IMPROVEMENT_CREATE_FOREST_MOD"].ID
-	or   iImprovement == GameInfo.Improvements["IMPROVEMENT_CREATE_JUNGLE_MOD"].ID)
-	and pPlot:GetFeatureType() ~= FeatureTypes.NO_FEATURE)
-	
-	or (pPlot:GetImprovementType() == GameInfo.Improvements["IMPROVEMENT_CITADEL"].ID
-	or pPlot:GetImprovementType() == GameInfo.Improvements["IMPROVEMENT_COASTAL_FORT"].ID)
-	then
-		return false;
-	else
-		return true;
-	end
-end
-GameEvents.PlotCanImprove.Add(ImprovementAvailableSP)
-function BuildAvailableSP(iPlayer, iUnit, iX, iY, iBuild)
-	if Map.GetPlot(iX, iY) == nil then
-		return;
-	end
-	local pPlot = Map.GetPlot(iX, iY);
-	
-	if iBuild == GameInfo.Builds["BUILD_TUNNEL"].ID and (not pPlot:IsMountain()
-	or pPlot:GetFeatureType() ~= FeatureTypes.NO_FEATURE
-	or pPlot:GetTerrainType() == TerrainTypes.TERRAIN_SNOW)
-	then
-		return false;
-	else
-		return true;
-	end
-end
-GameEvents.PlayerCanBuild.Add(BuildAvailableSP)
 
 print("TerrainTransform Check Pass!")
