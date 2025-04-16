@@ -40,6 +40,7 @@
 			<PortraitIndex>24</PortraitIndex>
 			<IconAtlas>TERRAIN_ATLAS</IconAtlas>
 			<NoLake>true</NoLake>
+			<NoRemove>true</NoRemove>
 		</Row>
 
 
@@ -51,6 +52,7 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_FORT</ArtDefineTag>
 			<Permanent>true</Permanent>
 			<MountainsMakesValid>true</MountainsMakesValid>
+			<NoFeature>true</NoFeature>
 			<NegatesTerrainDamage>true</NegatesTerrainDamage>
 			<PortraitIndex>17</PortraitIndex>
 			<IconAtlas>SP_IMPROVEMENTS_ATLAS</IconAtlas>
@@ -111,6 +113,7 @@
 			<IconAtlas>SP_IMPROVEMENTS_ATLAS</IconAtlas>
 			<CreatedItemMod>2</CreatedItemMod>
 			<SetNewFeature>FEATURE_FOREST</SetNewFeature>
+			<NoFeature>true</NoFeature>
 		</Row>
 		<Row>
 			<Type>IMPROVEMENT_CREATE_JUNGLE_MOD</Type>
@@ -122,6 +125,7 @@
 			<IconAtlas>SP_IMPROVEMENTS_ATLAS</IconAtlas>
 			<CreatedItemMod>2</CreatedItemMod>
 			<SetNewFeature>FEATURE_JUNGLE</SetNewFeature>
+			<NoFeature>true</NoFeature>
 		</Row>
 
 
@@ -706,6 +710,7 @@
 				<AdditionalUnits>1</AdditionalUnits>
 				<!--<PortraitIndex>24</PortraitIndex>-->
 				<IconAtlas>TERRAIN_ATLAS</IconAtlas>
+				<NoRemove>true</NoRemove>
 			</Set>
 			<Where Type="IMPROVEMENT_CITADEL"/>
 		</Update>
@@ -1286,6 +1291,21 @@
 		</Row>-->
 		
 	</Improvement_Yields>
+
+	<Improvement_TerrainYieldChanges>
+		<Row>
+			<ImprovementType>IMPROVEMENT_TUNNEL</ImprovementType>
+			<TerrainType>TERRAIN_SNOW</TerrainType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>-2</Yield>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_TUNNEL</ImprovementType>
+			<TerrainType>TERRAIN_SNOW</TerrainType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>-2</Yield>
+		</Row>
+	</Improvement_TerrainYieldChanges>
 
 	<Improvement_TechYieldChanges>
 		<Row>

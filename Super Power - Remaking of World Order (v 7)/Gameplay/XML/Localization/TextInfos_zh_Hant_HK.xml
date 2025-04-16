@@ -9011,7 +9011,7 @@
 			<Text>在這片冰區開闢航道以允許其他海軍單位通過（但地形貼圖的改變效果需要重新讀檔載入才能生效）。</Text>
 		</Row>
 		<Replace Tag="TXT_KEY_CIV5_SPECIALTERRAIN_MOUNTAINS_TEXT">
-			<Text>山脈在早期是不可通行的，除非是飛行單位或者迦太基的單位（得到一個陸軍統帥之後）。它們不會為城市提供任何東西。但是，研發高級工程學後，工人可以開山採石，使得該地形能夠通過其他地面單位並允許城市市民駐紮工作。</Text>
+			<Text>山脈在早期是不可通行的，除非是飛行單位或者印加的平民單位以及海螺信使。當你獲得高級工程學之後，印加以外的文明的工人也可以進入山脈。工人在山脈修建道路或者鐵路後可以使得該地形能夠通過其他地面單位。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_CIV5_IMPROVEMENTS_TRADING_POST_TEXT">
@@ -9355,7 +9355,10 @@
 			<Text>隧道</Text>
 		</Row>
 		<Row Tag="TXT_KEY_IMPROVEMENT_TUNNEL_HELP">
-			<Text>只能在山脈地形建造，隧道可以使山脈通行單位。[NEWLINE][NEWLINE][COLOR_NEGATIVE_TEXT]不能在雪地或自然奇跡上進行該指令！[ENDCOLOR]
+			<Text>
+				只能在山脈地形建造，隧道可以使山脈通行單位。
+				[NEWLINE][NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]不能在自然奇跡上進行該指令！[ENDCOLOR]
+				[NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]在雪地山脈上挖掘隧道將不會增加地塊産出！[ENDCOLOR]
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILD_TUNNEL">
