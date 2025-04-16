@@ -257,11 +257,13 @@ function AutoBuildingReplace(ePlayer, iTech, bAdopted)
 			text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_AUTO_RAILROAD_REPLACEMENT")
 			Events.GameplayAlertMessage(text)
 
+			local iRoadID = GameInfoTypes.ROUTE_ROAD
+			local iRailID = GameInfoTypes.ROUTE_RAILROAD
 			for plotLoop = 0, Map.GetNumPlots() - 1, 1 do
 				local plot = Map.GetPlotByIndex(plotLoop)
 				--Update All route
-				if plot:GetRouteType() == GameInfo.Routes.ROUTE_ROAD.ID then
-					plot:SetRouteType(GameInfo.Routes.ROUTE_RAILROAD.ID)
+				if plot:GetRouteType() == iRoadID then
+					plot:SetRouteType(iRailID)
 				end
 			end
 		else

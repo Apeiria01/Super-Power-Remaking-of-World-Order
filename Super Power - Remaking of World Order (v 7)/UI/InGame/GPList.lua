@@ -129,7 +129,7 @@ function UpdateDisplay()
 						sortEntry.name = cityName;
 						TruncateString( instance.CityName, 74, sortEntry.name );
 
-						local iUnitClass = GameInfo.UnitClasses[pSpecialistInfo.GreatPeopleUnitClass].ID
+						local iUnitClass = GameInfoTypes[pSpecialistInfo.GreatPeopleUnitClass]
 						iThreshold = pCity:GetSpecialistUpgradeThreshold(iUnitClass);
 						iRate = getRateOfChange(pCity, pSpecialistInfo, pPlayer)
 
