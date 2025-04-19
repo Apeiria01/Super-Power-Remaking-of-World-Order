@@ -16592,5 +16592,9 @@
 		<Row Tag="TXT_KEY_POLICY_BRANCH_CANNOT_UNLOCK_CIVILIZATION">
 			<Text>[COLOR_WARNING_TEXT]所属文明不能采用该政策树。[ENDCOLOR]</Text>
 		</Row>
+
+		<Row Tag="TXT_KEY_MILITARY_PROMISE">
+			<Text>承诺撤军</Text>
+		</Row>
 	</Language_zh_CN>
 </GameData>
