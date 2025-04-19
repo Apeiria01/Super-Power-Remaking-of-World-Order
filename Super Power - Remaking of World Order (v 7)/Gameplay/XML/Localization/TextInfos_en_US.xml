@@ -18252,5 +18252,8 @@
 			<Text>[COLOR_WARNING_TEXT]Your Civilization cannot adopt this Branch.[ENDCOLOR]</Text>
 		</Row>
 		
+		<Row Tag="TXT_KEY_MILITARY_PROMISE">
+			<Text>Promise withdraw Military</Text>
+		</Row>
 	</Language_en_US>
 </GameData>

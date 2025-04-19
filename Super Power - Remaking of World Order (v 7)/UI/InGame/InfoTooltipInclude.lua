@@ -3902,6 +3902,15 @@ if Game then
 							.. "[ENDCOLOR]" .. GetDealTurnsRemaining( TradeableItems.TRADE_ITEM_DEFENSIVE_PACT )
 					)
 				end
+
+				-- Military Promise
+				local iMilitaryPromiseTurnLeft = Players[playerID]:GetMilitaryPromiseTurnLeft(activePlayerID)
+				if iMilitaryPromiseTurnLeft >= 0 then
+					insert( treaties, negativeOrPositiveTextColor[isActiveDeal] .. "[ICON_CITY_STATE]"
+							.. L"TXT_KEY_MILITARY_PROMISE"
+							.. "[ENDCOLOR]" .. inParentheses(iMilitaryPromiseTurnLeft)
+					)
+				end
 			end
 
 			if player.GetOpinionTable then
