@@ -1295,6 +1295,10 @@
 			<UnitType>UNIT_KOREAN_HWACHA</UnitType>
 			<PromotionType>PROMOTION_INDIRECT_FIRE</PromotionType>
 		</Row>
+		<Row>
+			<UnitType>UNIT_KOREAN_HWACHA</UnitType>
+			<PromotionType>PROMOTION_ONLY_DEFENSIVE</PromotionType>
+		</Row>
 
 		<Row>
 			<UnitType>UNIT_ZHENGHE_FLEET</UnitType>
