@@ -139,6 +139,37 @@
 			<ExtraMaintenanceCost>1</ExtraMaintenanceCost>
 			<WorkRate>100</WorkRate>
 		</Row>
+		<Row>
+			<Class>UNITCLASS_MILITIA_ANCIENT</Class>
+			<Type>UNIT_IROQUOIAN_MOHAWKWARRIOR</Type>
+			<PrereqTech>TECH_ENGINEERING</PrereqTech>
+			<BaseSightRange>2</BaseSightRange>
+			<Combat>18</Combat>
+			<Cost>18</Cost>
+			<Moves>2</Moves>
+			<CombatClass>UNITCOMBAT_RECON</CombatClass>
+			<Domain>DOMAIN_LAND</Domain>
+			<DefaultUnitAI>UNITAI_DEFENSE</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_IROQUOIAN_MOHAWKWARRIOR</Description>
+			<Civilopedia>TXT_KEY_CIV5_ANTIQUITY_MOHAWKWARRIOR_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_SP_UNITS_MILITIA_STRATEGY</Strategy>
+			<Help>TXT_KEY_PROMOTION_MILITIA_COMBAT_HELP</Help>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<Pillage>true</Pillage>
+			<ObsoleteTech>TECH_MOBILIZATION_T</ObsoleteTech>
+			<GoodyHutUpgradeUnitClass>UNITCLASS_CONSCRIPTMAN</GoodyHutUpgradeUnitClass>
+			<AdvancedStartCost>5</AdvancedStartCost>
+			<XPValueAttack>1</XPValueAttack>
+			<XPValueDefense>1</XPValueDefense>
+			<Conscription>1</Conscription>
+			<UnitArtInfo>ART_DEF_UNIT_U_IROQUOIAN_MOHAWKWARRIOR</UnitArtInfo>
+			<UnitFlagIconOffset>16</UnitFlagIconOffset>
+			<IconAtlas>UNIT_ATLAS_1</IconAtlas>
+			<PortraitIndex>16</PortraitIndex>
+			<ExtraMaintenanceCost>1</ExtraMaintenanceCost>
+			<WorkRate>100</WorkRate>
+		</Row>
 		
 		<Row>
 			<Class>UNITCLASS_MINUTEMAN</Class>
@@ -169,37 +200,6 @@
 			<UnitFlagIconOffset>38</UnitFlagIconOffset>
 			<IconAtlas>UNIT_ATLAS_1</IconAtlas>
 			<PortraitIndex>39</PortraitIndex>
-			<ExtraMaintenanceCost>1</ExtraMaintenanceCost>
-			<WorkRate>100</WorkRate>
-		</Row>
-		<Row>
-			<Class>UNITCLASS_MINUTEMAN</Class>
-			<Type>UNIT_IROQUOIAN_MOHAWKWARRIOR</Type>
-			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
-			<BaseSightRange>2</BaseSightRange>
-			<Combat>24</Combat>
-			<Cost>32</Cost>
-			<Moves>2</Moves>
-			<CombatClass>UNITCOMBAT_RECON</CombatClass>
-			<Domain>DOMAIN_LAND</Domain>
-			<DefaultUnitAI>UNITAI_DEFENSE</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_IROQUOIAN_MOHAWKWARRIOR</Description>
-			<Civilopedia>TXT_KEY_CIV5_ANTIQUITY_MOHAWKWARRIOR_TEXT</Civilopedia>
-			<Strategy>TXT_KEY_SP_UNITS_MILITIA_STRATEGY</Strategy>
-			<Help>TXT_KEY_PROMOTION_MILITIA_COMBAT_HELP</Help>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
-			<Pillage>true</Pillage>
-			<ObsoleteTech>TECH_MOBILIZATION_T</ObsoleteTech>
-			<GoodyHutUpgradeUnitClass>UNITCLASS_CONSCRIPTMAN</GoodyHutUpgradeUnitClass>
-			<AdvancedStartCost>5</AdvancedStartCost>
-			<XPValueAttack>1</XPValueAttack>
-			<XPValueDefense>1</XPValueDefense>
-			<Conscription>1</Conscription>
-			<UnitArtInfo>ART_DEF_UNIT_U_IROQUOIAN_MOHAWKWARRIOR</UnitArtInfo>
-			<UnitFlagIconOffset>16</UnitFlagIconOffset>
-			<IconAtlas>UNIT_ATLAS_1</IconAtlas>
-			<PortraitIndex>16</PortraitIndex>
 			<ExtraMaintenanceCost>1</ExtraMaintenanceCost>
 			<WorkRate>100</WorkRate>
 		</Row>
@@ -1602,13 +1602,13 @@
 			<UnitType>UNIT_MILITIA_ANCIENT</UnitType>
 			<UnitClassType>UNITCLASS_MINUTEMAN</UnitClassType>
 		</Row>
+		<Row>
+			<UnitType>UNIT_IROQUOIAN_MOHAWKWARRIOR</UnitType>
+			<UnitClassType>UNITCLASS_MINUTEMAN</UnitClassType>
+		</Row>
 
 		<Row>
 			<UnitType>UNIT_AMERICAN_MINUTEMAN</UnitType>
-			<UnitClassType>UNITCLASS_CONSCRIPTMAN</UnitClassType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_IROQUOIAN_MOHAWKWARRIOR</UnitType>
 			<UnitClassType>UNITCLASS_CONSCRIPTMAN</UnitClassType>
 		</Row>
 	
@@ -1852,18 +1852,6 @@
 			<UnitType>UNIT_IROQUOIAN_MOHAWKWARRIOR</UnitType>
 			<PromotionType>PROMOTION_INVISIBLE_FOREST</PromotionType>
 		</Row>
-		<!--<Row>
-			<UnitType>UNIT_IROQUOIAN_MOHAWKWARRIOR</UnitType>
-			<PromotionType>PROMOTION_COVER_1</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_IROQUOIAN_MOHAWKWARRIOR</UnitType>
-			<PromotionType>PROMOTION_COVER_2</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_IROQUOIAN_MOHAWKWARRIOR</UnitType>
-			<PromotionType>PROMOTION_COVER_3</PromotionType>
-		</Row>-->
 		
 		<Row>
 			<UnitType>UNIT_CONSCRIPTMAN</UnitType>
