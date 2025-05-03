@@ -516,7 +516,7 @@
 		
 		<Row>
 			<CivilizationType>CIVILIZATION_IROQUOIS</CivilizationType>
-			<UnitClassType>UNITCLASS_MINUTEMAN</UnitClassType>
+			<UnitClassType>UNITCLASS_MILITIA_ANCIENT</UnitClassType>
 			<UnitType>UNIT_IROQUOIAN_MOHAWKWARRIOR</UnitType>
 		</Row>
 		<Row>
