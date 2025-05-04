@@ -35,7 +35,7 @@
 			<Where Type="POLICY_MONARCHY"/>
 		</Update>
 		<Update>
-			<Set CityGrowthMod="0" NumCitiesFreeFoodBuilding="0" GoldenAgeMeterMod="-25"/>
+			<Set CityGrowthMod="0" NumCitiesFreeFoodBuilding="0"/>
 			<Where Type="POLICY_TRADITION_FINISHER"/>
 		</Update>
 		<Row>
@@ -79,6 +79,7 @@
 			<IconAtlas>POLICY_ATLAS</IconAtlas>
 			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
 			<WarCasualtiesModifier>-33</WarCasualtiesModifier>
+			<GoldenAgeMeterMod>-25</GoldenAgeMeterMod>
 		</Row>
 	</Policies>
 	
