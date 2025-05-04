@@ -1382,8 +1382,8 @@
 		<Replace Tag="TXT_KEY_WONDER_GREAT_LIBRARY_HELP">
 			<Text>
 				[ICON_BULLET]向所在城市赠送一个图书馆。
-				[NEWLINE][ICON_BULLET]所有图书馆+3[ICON_RESEARCH]科研。
-				[NEWLINE][ICON_BULLET]+15%本地大科学家、大文学家点数积累。
+				[NEWLINE][ICON_BULLET]本城市中每2[ICON_CITIZEN]市民+1[ICON_RESEARCH]科研。
+				[NEWLINE][ICON_BULLET]+20%本地大科学家、大文学家点数积累。
 				[NEWLINE][ICON_BULLET]拥有2个文学杰作展位。
 			</Text>
 		</Replace>

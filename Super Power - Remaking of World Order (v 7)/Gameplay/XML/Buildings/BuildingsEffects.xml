@@ -1727,13 +1727,6 @@
 
 	<Building_BuildingClassYieldChanges>
 		<Row>
-			<BuildingType>BUILDING_GREAT_LIBRARY</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_LIBRARY</BuildingClassType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<YieldChange>3</YieldChange>
-		</Row>
-
-		<Row>
 			<BuildingType>BUILDING_INDUSTRIAL_ZONE</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_METAL_FACTORY</BuildingClassType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
@@ -3200,6 +3193,11 @@
 
 	<Building_YieldChangesPerPop>
 		<Row>
+			<BuildingType>BUILDING_GREAT_LIBRARY</BuildingType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>50</Yield>
+		</Row>
+		<Row>
 			<BuildingType>BUILDING_LIBRARY</BuildingType>
 			<YieldType>YIELD_SCIENCE</YieldType>
 			<Yield>50</Yield>
@@ -3364,12 +3362,12 @@
 		<Row>
 			<BuildingType>BUILDING_GREAT_LIBRARY</BuildingType>
 			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
-			<Modifier>15</Modifier>
+			<Modifier>20</Modifier>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_GREAT_LIBRARY</BuildingType>
 			<SpecialistType>SPECIALIST_WRITER</SpecialistType>
-			<Modifier>15</Modifier>
+			<Modifier>20</Modifier>
 		</Row>
 	</Building_SpecificGreatPersonRateModifier>
 
