@@ -8,15 +8,13 @@
 			<Type>POLICY_AI_CLASSICAL</Type>
 			<Description>TXT_KEY_POLICY_AIBONUS</Description>
 			<UnhappinessMod>-5</UnhappinessMod>
-			<SettlerProductionModifier>100</SettlerProductionModifier>
-			<CityGrowthMod>5</CityGrowthMod>
+			<SettlerProductionModifier>50</SettlerProductionModifier>
 			<FreeExperience>10</FreeExperience>
 			<PolicyCostModifier>3</PolicyCostModifier>
 		</Row>
 		<Row>
 			<Type>POLICY_AI_MEDIEVAL</Type>
 			<Description>TXT_KEY_POLICY_AIBONUS</Description>
-			<CityGrowthMod>5</CityGrowthMod>
 			<IncludesOneShotFreeUnits>true</IncludesOneShotFreeUnits>
 			<SettlerProductionModifier>100</SettlerProductionModifier>
 			<UnhappinessMod>-5</UnhappinessMod>
@@ -211,7 +209,7 @@
 		<Row>
 			<Type>POLICY_AI_BONUS_RESEARCH_DEITY</Type>
 			<Description>TXT_KEY_POLICY_AIBONUS</Description>
-			<HappinessToScience>15</HappinessToScience>
+			<HappinessToScience>10</HappinessToScience>
 			<PolicyCostModifier>3</PolicyCostModifier>
 		</Row>
 
