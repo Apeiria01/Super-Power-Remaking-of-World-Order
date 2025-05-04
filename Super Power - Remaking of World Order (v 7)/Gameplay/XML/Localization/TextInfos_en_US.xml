@@ -3904,8 +3904,8 @@
 		<Replace Tag="TXT_KEY_WONDER_GREAT_LIBRARY_HELP">
 			<Text>
 				[ICON_BULLET]Provides a free Library in the city which it is built.
-				[NEWLINE][ICON_BULLET]+3 [ICON_RESEARCH] Science for every Library.
-				[NEWLINE][ICON_BULLET]Earn Great Scientists and Great Writer 15% faster for local City.
+				[NEWLINE][NEWLINE]+1 [ICON_RESEARCH] Science for every 2 [ICON_CITIZEN] Citizens in this City.
+				[NEWLINE][ICON_BULLET]Earn Great Scientists and Great Writer 20% faster for local City.
 			</Text>
 		</Replace>
 

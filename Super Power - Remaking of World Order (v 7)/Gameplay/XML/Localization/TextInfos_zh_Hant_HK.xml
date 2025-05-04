@@ -1340,8 +1340,8 @@
 		<Replace Tag="TXT_KEY_WONDER_GREAT_LIBRARY_HELP">
 			<Text>
 				[ICON_BULLET]向所在城市贈送一個圖書館。
-				[NEWLINE][ICON_BULLET]所有圖書館+3[ICON_RESEARCH]科研。
-				[NEWLINE][ICON_BULLET]+15%本地大科學家、大文學家點數積累。
+				[NEWLINE][ICON_BULLET]本城市中每2[ICON_CITIZEN]市民+1[ICON_RESEARCH]科技值。
+				[NEWLINE][ICON_BULLET]+20%本地大科學家、大文學家點數積累。
 				[NEWLINE][ICON_BULLET]擁有2個文學傑作展位。
 			</Text>
 		</Replace>
