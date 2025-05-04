@@ -7388,12 +7388,13 @@
 				[COLOR_POSITIVE_TEXT]Tradition[ENDCOLOR] is best for "tall" empires.
 				[NEWLINE][NEWLINE]Opening Effect:
 				[NEWLINE][ICON_BULLET]+5 [ICON_CULTURE] and +5 [ICON_RESEARCH] Science in the [ICON_CAPITAL] Capital.
-				[NEWLINE][ICON_BULLET]International trade routes from your Capital City +3 basic range and +3 [ICON_GOLD] Gold.
+				[NEWLINE][ICON_BULLET]International trade routes from your Capital City +5 range and +5 [ICON_GOLD] Gold.
 				[NEWLINE][ICON_BULLET]-25% [ICON_CULTURE] Culture Exponent cost for acquiring new plots in all cities.
 				[NEWLINE][ICON_BULLET]Wonder Unlocked: Hanging Gardens.
+				[NEWLINE][NEWLINE]Adopting Tradition grants:
+				[NEWLINE][ICON_BULLET]+1 [ICON_FOOD] Food and +1 [ICON_PRODUCTION] Production in the [ICON_CAPITAL] Capital.
 				[NEWLINE][NEWLINE]Finishing Bonus:
 				[NEWLINE][ICON_BULLET]+15% [ICON_CULTURE] Culture, [ICON_RESEARCH] Science and [ICON_PRODUCTION] Production output in all cities.
-				[NEWLINE][ICON_BULLET]Amount of [ICON_HAPPINESS_1] Happiness required to start a [ICON_GOLDEN_AGE] Golden Age reduced by 25%.
 				[NEWLINE][ICON_BULLET]Allows the purchase of Great Engineers with [ICON_PEACE] Faith starting in the Industrial Era. [NEWLINE][NEWLINE][COLOR_WARNING_TEXT]This branch CANNOT be active at the same time as Liberty.[ENDCOLOR]</Text>
 		</Replace>
 		
@@ -7490,7 +7491,9 @@
 		<Row Tag="TXT_KEY_POLICY_CENTRALISATION_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]Centralisation[ENDCOLOR][NEWLINE][ICON_BULLET]New Units receive +15 XP.
-				[NEWLINE][ICON_BULLET][ICON_PIRATE] Population Loss from Unit Casualties reduced by 33%.</Text>
+				[NEWLINE][ICON_BULLET][ICON_PIRATE] Population Loss from Unit Casualties reduced by 33%.
+				[NEWLINE][ICON_BULLET]Amount of [ICON_HAPPINESS_1] Happiness required to start a [ICON_GOLDEN_AGE] Golden Age reduced by 25%.
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_CENTRALISATION_TEXT">
 			<Text>
