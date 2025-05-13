@@ -48,8 +48,8 @@ INSERT INTO Builds
 VALUES	('BUILD_SHOSHONE_WILDDOME',	'TECH_GUNPOWDER',	'IMPROVEMENT_SHOSHONE_WILDDOME',	1300,  'TXT_KEY_BUILD_SHOSHONE_WILDDOME_REC', 	'TXT_KEY_BUILD_SHOSHONE_WILDDOME',	'TXT_KEY_IMPROVEMENT_SHOSHONE_WILDDOME_HELP',	1,				1,          1,			'SP_IMPROVEMENT_ATLAS',	'ENTITY_EVENT_CHOP',    'KB_C');
 
 INSERT INTO Builds
-		(Type,			Time,	PrereqTech,			ObsoleteTech,		ImprovementType,		Description,				Help,							Recommendation,					EntityEvent,			HotKey,		OrderPriority,		IconIndex,	IconAtlas)
-VALUES	('BUILD_CAIRN',	400,	'TECH_POTTERY',		'TECH_EDUCATION',	'IMPROVEMENT_CAIRN',	'TXT_KEY_BUILD_CAIRN_SP', 	'TXT_KEY_BUILD_CAIRN_SP_HELP',	'TXT_KEY_BUILD_CAIRN_SP_REC',	'ENTITY_EVENT_BUILD',	'KB_M',		98,          		3,			'SP_IMPROVEMENT_ATLAS');
+		(Type,			Time,	PrereqTech,		ObsoleteTech,		ImprovementType,		Description,				Help,							Recommendation,					EntityEvent,			HotKey,		OrderPriority,		IconIndex,	IconAtlas)
+VALUES	('BUILD_CAIRN',	400,	NULL,			'TECH_EDUCATION',	'IMPROVEMENT_CAIRN',	'TXT_KEY_BUILD_CAIRN_SP', 	'TXT_KEY_BUILD_CAIRN_SP_HELP',	'TXT_KEY_BUILD_CAIRN_SP_REC',	'ENTITY_EVENT_BUILD',	'KB_M',		98,          		3,			'SP_IMPROVEMENT_ATLAS');
 --==========================================================================================================================	
 -- BuildFeatures
 --==========================================================================================================================	
