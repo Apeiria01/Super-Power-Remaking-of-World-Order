@@ -1923,6 +1923,20 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 				( " +" .. value .."%" ..L(yieldInfo.IconString) ..L("TXT_KEY_Building_PER_ERA")))
 		end
 	end
+	for row in GameInfo.Building_CityStateTradeRouteYieldModifiers(thisBuildingType) do
+		local yieldInfo = GameInfo.Yields[row.YieldType]
+		local value = row.Yield or 0
+		if yieldInfo and value > 0 then
+			insert(tips, L("TXT_KEY_CSTRPM1111") .. " +" .. value .. "%" .. L(yieldInfo.IconString))
+		end
+	end
+	for row in GameInfo.Building_CityStateTradeRouteYieldModifiersGlobal(thisBuildingType) do
+		local yieldInfo = GameInfo.Yields[row.YieldType]
+		local value = row.Yield or 0
+		if yieldInfo and value > 0 then
+			insert(tips, L("TXT_KEY_CSTRPMG") .. " +" .. value .. "%" .. L(yieldInfo.IconString))
+		end
+	end
 
 	-- Yields enhanced by Technology
 	if techFilter( enhancedYieldTech ) then
