@@ -1816,28 +1816,24 @@
 
 	<Building_ClassesNeededInCity>
 		<Row>
-			<BuildingType>BUILDING_ART_GALLERY</BuildingType>
+			<BuildingType>BUILDING_MUSEUM</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_AMPHITHEATER</BuildingClassType>
 		</Row>
 		<Row>
-			<BuildingType>BUILDING_FRENCH_SALON</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_AMPHITHEATER</BuildingClassType>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_OPERA_HOUSE</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_ART_GALLERY</BuildingClassType>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_AUSTRIA_MUSIC_SCHOOL</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_ART_GALLERY</BuildingClassType>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_CEILIDH_HALL</BuildingType>
+			<BuildingType>BUILDING_MUSEUM</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_ART_GALLERY</BuildingClassType>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_MUSEUM</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_OPERA_HOUSE</BuildingClassType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_SIAM_PHRAKAEW</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_AMPHITHEATER</BuildingClassType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_SIAM_PHRAKAEW</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_ART_GALLERY</BuildingClassType>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_SIAM_PHRAKAEW</BuildingType>

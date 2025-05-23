@@ -3551,7 +3551,7 @@
 
 
 		<Row Tag="TXT_KEY_BUILDING_CEILIDH_HALL_HELP">
-			<Text>+1 [ICON_CULTURE] Culture for each worked [COLOR_POSITIVE_TEXT]Forest[ENDCOLOR] Tiles in this city. [NEWLINE][NEWLINE]City must have an Amphitheater.</Text>
+			<Text>+1 [ICON_CULTURE] Culture for each worked [COLOR_POSITIVE_TEXT]Forest[ENDCOLOR] Tiles in this city.</Text>
 		</Row>
 
 
@@ -3585,7 +3585,7 @@
 			<Text>
 				+25% [ICON_GREAT_PEOPLE] Generation of Great People.
 				[NEWLINE][NEWLINE]Receive one-time 500 [ICON_GOLD] Gold (at Normal Game Speed) after a Music Academy is built.
-				[NEWLINE][NEWLINE]City must have an Art Gallery.</Text>
+			</Text>
 		</Row>
 		
 
@@ -3601,8 +3601,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_FRENCH_SALON_HELP</Tag>
-			<Text>+5% [ICON_GREAT_PEOPLE] Generation of Great People in all Cities.
-			[NEWLINE][NEWLINE]City must have an Amphitheater.</Text>
+			<Text>+5% [ICON_GREAT_PEOPLE] Generation of Great People in all Cities.</Text>
 		</Row>
 
 
@@ -3620,7 +3619,7 @@
 			<Tag>TXT_KEY_BUILDING_SIAM_PHRAKAEW_HELP</Tag>
 			<Text>
 				+9 [ICON_CULTURE] Culture +6 [ICON_PEACE] Faith for each World Religion that has at least 1 follower in the city. No maintenance.
-				[NEWLINE][NEWLINE]City must have an Opera House.
+				[NEWLINE][NEWLINE]City must have an Amphitheater, an Art Gallery and an Opera House.
 			</Text>
 		</Row>
 
@@ -5045,9 +5044,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_ART_GALLERY_HELP</Tag>
-			<Text>
-				City must have an Amphitheater.
-			</Text>
+			<Text>Provide two artist slot and contains 1 slots for Great Works of Art.</Text>
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_ART_GALLERY_STRATEGY</Tag>
@@ -5061,7 +5058,7 @@
 
 		
 		<Replace Tag="TXT_KEY_BELIEF_CATHEDRALS">
-			<Text> Use [ICON_PEACE] Faith to purchase Cathedrals (+1 [ICON_PEACE] Faith, +2 [ICON_CULTURE] Culture, +2 [ICON_HAPPINESS_1] Happiness. One artist slot.</Text>
+			<Text>Use [ICON_PEACE] Faith to purchase Cathedrals (+1 [ICON_PEACE] Faith, +2 [ICON_CULTURE] Culture, +2 [ICON_HAPPINESS_1] Happiness. One artist slot).</Text>
 		</Replace>
 
 		
