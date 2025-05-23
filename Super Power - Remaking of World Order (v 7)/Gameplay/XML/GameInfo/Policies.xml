@@ -6,7 +6,7 @@
 	
 	
 	<!-- **********************Policies Change*************************** -->
-	<!--*************** Tradition******************** -->
+	<!--***************Tradition******************** -->
 	<Policies>
 		
 		<Update>
@@ -15,11 +15,11 @@
 			<Where Type="POLICY_TRADITION"/>
 		</Update>
 		<Update>
-			<Set HappinessPerXPopulation="0" WonderProductionModifier="0" NewCityExtraPopulation="1" InstantFoodKeptPercent="100" PortraitIndex="28"/>
+			<Set HappinessPerXPopulation="0" WonderProductionModifier="0" NewCityExtraPopulation="1" InstantFoodThresholdPercent="100" InstantFoodKeptPercent="100" PortraitIndex="28"/>
 			<Where Type="POLICY_ARISTOCRACY"/>
 		</Update>
 		<Update>
-			<Set NumCitiesFreeCultureBuilding="0" HappinessPerXPopulation="5" OneShot="false" GridX="3" GridY="1"/>
+			<Set NumCitiesFreeCultureBuilding="0" OneShot="false" GridX="3" GridY="1"/>
 			<Where Type="POLICY_LEGALISM"/>
 		</Update>
 		<Update>
@@ -31,7 +31,7 @@
 			<Where Type="POLICY_LANDED_ELITE"/>
 		</Update>
 		<Update>
-			<Set CapitalUnhappinessMod="0" NationalWonderCityCostModifier="-50"  GridX="4" GridY="3"/>
+			<Set CapitalUnhappinessMod="0" GoldenAgeMeterMod="-25" GridX="4" GridY="3"/>
 			<Where Type="POLICY_MONARCHY"/>
 		</Update>
 		<Update>
@@ -50,6 +50,8 @@
 			<PortraitIndex>55</PortraitIndex>
 			<IconAtlas>POLICY_ATLAS</IconAtlas>
 			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<FreeExperience>15</FreeExperience>
+			<HappinessPerXPopulation>5</HappinessPerXPopulation>
 		</Row>
 		<Row>
 			<Type>POLICY_FAMILY_REGISTER</Type>
@@ -75,11 +77,10 @@
 			<GridX>2</GridX>
 			<GridY>3</GridY>
 			<PortraitIndex>3</PortraitIndex>
-			<FreeExperience>15</FreeExperience>
 			<IconAtlas>POLICY_ATLAS</IconAtlas>
 			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
 			<WarCasualtiesModifier>-33</WarCasualtiesModifier>
-			<GoldenAgeMeterMod>-25</GoldenAgeMeterMod>
+			<NationalWonderCityCostModifier>-50</NationalWonderCityCostModifier>
 		</Row>
 	</Policies>
 	
@@ -1088,7 +1089,7 @@
 		</Row>
 		<Row>
 			<PolicyType>POLICY_LEGALISM</PolicyType>
-			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
+			<FlavorType>FLAVOR_CULTURE</FlavorType>
 			<Flavor>30</Flavor>
 		</Row>
 		<Row>
@@ -1123,8 +1124,13 @@
 		</Row>
 		<Row>
 			<PolicyType>POLICY_PREFECTURE</PolicyType>
-			<FlavorType>FLAVOR_SCIENCE</FlavorType>
-			<Flavor>30</Flavor>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_PREFECTURE</PolicyType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>20</Flavor>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_PREFECTURE</PolicyType>
@@ -1138,8 +1144,18 @@
 		</Row>
 		<Row>
 			<PolicyType>POLICY_CENTRALISATION</PolicyType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>2</Flavor>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_CENTRALISATION</PolicyType>
 			<FlavorType>FLAVOR_DEFENSE</FlavorType>
 			<Flavor>2</Flavor>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_CENTRALISATION</PolicyType>
+			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
+			<Flavor>10</Flavor>
 		</Row>
 
 		
