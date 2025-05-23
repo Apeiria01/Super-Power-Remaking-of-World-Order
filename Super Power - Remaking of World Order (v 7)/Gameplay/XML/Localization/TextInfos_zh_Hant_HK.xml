@@ -1040,7 +1040,7 @@
 		</Row>
 
 		<Row Tag="TXT_KEY_BUILDING_CEILIDH_HALL_HELP">
-			<Text>本城市所有已開發的森林地塊+1[ICON_CULTURE]文化值。[NEWLINE][NEWLINE]城市必須擁有畫廊。</Text>
+			<Text>本城市所有已開發的森林地塊+1[ICON_CULTURE]文化值。</Text>
 		</Row>
 
 		<Row>
@@ -1067,7 +1067,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_AUSTRIA_MUSIC_SCHOOL_HELP</Tag>
-			<Text>本城+25%[ICON_GREAT_PEOPLE]偉人點數累積。[NEWLINE][NEWLINE]每座音樂學院建立時獲得一次性的500[ICON_GOLD]金幣獎勵。（標準速度）[NEWLINE][NEWLINE]城市必須擁有畫廊。</Text>
+			<Text>本城+25%[ICON_GREAT_PEOPLE]偉人點數累積。[NEWLINE][NEWLINE]每座音樂學院建立時獲得一次性的500[ICON_GOLD]金幣獎勵（標準速度）。</Text>
 		</Row>
 
 		<Row>
@@ -1094,7 +1094,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_SIAM_PHRAKAEW_HELP</Tag>
-			<Text>有玉佛寺的城市中每支至少有一個信眾的宗教為本城+9[ICON_CULTURE]文化值+6[ICON_PEACE]信仰值。[NEWLINE][NEWLINE]城市必須擁有歌劇院。
+			<Text>有玉佛寺的城市中每支至少有一個信眾的宗教為本城+9[ICON_CULTURE]文化值+6[ICON_PEACE]信仰值。[NEWLINE][NEWLINE]城市必須擁有露天劇場、畫廊、歌劇院。
 			</Text>
 		</Row>
 
@@ -2362,11 +2362,11 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_ART_GALLERY_HELP</Tag>
-			<Text>城市必須擁有露天劇場。</Text>
+			<Text>提供兩個藝術家席位而且擁有一個美術傑作展位。</Text>
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_ART_GALLERY_STRATEGY</Tag>
-			<Text>畫廊可以增加城市的文化產出而且擁有一個美術傑作展位。[NEWLINE][NEWLINE]城市必須擁有露天劇場。</Text>
+			<Text>畫廊可以增加城市的文化產出而且擁有一個美術傑作展位。</Text>
 		</Row>
 
 		<!-- Culture Buildings Change -->
