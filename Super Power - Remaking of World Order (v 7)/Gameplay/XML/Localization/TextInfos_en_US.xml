@@ -7391,8 +7391,6 @@
 				[NEWLINE][ICON_BULLET]International trade routes from your Capital City +5 range and +5 [ICON_GOLD] Gold.
 				[NEWLINE][ICON_BULLET]-25% [ICON_CULTURE] Culture Exponent cost for acquiring new plots in all cities.
 				[NEWLINE][ICON_BULLET]Wonder Unlocked: Hanging Gardens.
-				[NEWLINE][NEWLINE]Adopting Tradition grants:
-				[NEWLINE][ICON_BULLET]+1 [ICON_FOOD] Food and +1 [ICON_PRODUCTION] Production in the [ICON_CAPITAL] Capital.
 				[NEWLINE][NEWLINE]Finishing Bonus:
 				[NEWLINE][ICON_BULLET]+15% [ICON_CULTURE] Culture, [ICON_RESEARCH] Science and [ICON_PRODUCTION] Production output in all cities.
 				[NEWLINE][ICON_BULLET]Allows the purchase of Great Engineers with [ICON_PEACE] Faith starting in the Industrial Era. [NEWLINE][NEWLINE][COLOR_WARNING_TEXT]This branch CANNOT be active at the same time as Liberty.[ENDCOLOR]</Text>
@@ -7404,7 +7402,7 @@
 				[COLOR_POSITIVE_TEXT]Aristocracy[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]New Cities start with an extra 1 [ICON_CITIZEN] Citizen. (But one Settler Unit still equals one Population)
 				[NEWLINE][ICON_BULLET]100% [ICON_FOOD] is carried over after a new [ICON_CITIZEN] Citizen is born for every Town (Cities with a [ICON_CITIZEN] Population less than 6). It won't be effective instantly but after the next new [ICON_CITIZEN] Citizen is born.
-				[NEWLINE][ICON_BULLET]The accumulation of food kept in all city immediately filled up.
+				[NEWLINE][ICON_BULLET]The accumulation of Food Kept and the accumulation of [ICON_FOOD] Food in all city immediately filled up.
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_LANDED_ELITE_HELP" >
@@ -7417,8 +7415,13 @@
 		<Replace Tag="TXT_KEY_POLICY_LEGALISM_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]Legalism[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]+1 [ICON_HAPPINESS_1] Hapiness for every 5 [ICON_CITIZEN] Citizens in cities directly under the central government.
-				[NEWLINE][ICON_BULLET]+1 [ICON_HAPPINESS_1] to every city's Population Size in all cities.
+				[NEWLINE][ICON_BULLET]Gain additional [ICON_CULTURE] Culture in cities reached certain Population Size:
+				[NEWLINE][ICON_BULLET]Small City: +4 [ICON_CULTURE] Culture.
+				[NEWLINE][ICON_BULLET]Medium City: +8 [ICON_CULTURE] Culture.
+				[NEWLINE][ICON_BULLET]Large City: +14 [ICON_CULTURE] Culture.
+				[NEWLINE][ICON_BULLET]XL City: +20 [ICON_CULTURE] Culture.
+				[NEWLINE][ICON_BULLET]XXL City: +28 [ICON_CULTURE] Culture.
+				[NEWLINE][ICON_BULLET]Global City: +36 [ICON_CULTURE] Culture.
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_OLIGARCHY_HELP" >
@@ -7436,30 +7439,19 @@
 		<Replace Tag="TXT_KEY_POLICY_MONARCHY_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]Monarchy[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]The increase in construction cost for National Wonders due to the number of cities is reduced by 50%.
+				[NEWLINE][ICON_BULLET]Amount of [ICON_HAPPINESS_1] Happiness required to start a [ICON_GOLDEN_AGE] Golden Age reduced by 25%.
 				[NEWLINE][ICON_BULLET]+1 [ICON_GOLD] Gold for every [ICON_CITIZEN] Citizens and +1 [ICON_FOOD] Food, [ICON_CULTURE] Culture, [ICON_PRODUCTION] Production, [ICON_RESEARCH] Science for every 3 [ICON_CITIZEN] Citizens in the [ICON_CAPITAL] Capital.
 			</Text>
 		</Replace>
 
-		
-		
-		
-		
-		
-		
 		<Row Tag="TXT_KEY_POLICY_PREFECTURE">
 			<Text>Prefeture</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_PREFECTURE_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]Prefeture[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]Gain additional [ICON_CULTURE] Culture in cities reached certain Population Size:
-				[NEWLINE][ICON_BULLET]Small City: +4 [ICON_CULTURE] Culture.
-				[NEWLINE][ICON_BULLET]Medium City: +8 [ICON_CULTURE] Culture.
-				[NEWLINE][ICON_BULLET]Large City: +14 [ICON_CULTURE] Culture.
-				[NEWLINE][ICON_BULLET]XL City: +20 [ICON_CULTURE] Culture.
-				[NEWLINE][ICON_BULLET]XXL City: +28 [ICON_CULTURE] Culture.
-				[NEWLINE][ICON_BULLET]Global City: +36 [ICON_CULTURE] Culture.
+				[NEWLINE][ICON_BULLET]New Units receive +15 XP.
+				[NEWLINE][ICON_BULLET]+1 [ICON_HAPPINESS_1] Hapiness for every 5 [ICON_CITIZEN] Citizens in cities directly under the central government.
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_PREFECTURE_TEXT">
@@ -7490,9 +7482,10 @@
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_CENTRALISATION_HELP" >
 			<Text>
-				[COLOR_POSITIVE_TEXT]Centralisation[ENDCOLOR][NEWLINE][ICON_BULLET]New Units receive +15 XP.
+				[COLOR_POSITIVE_TEXT]Centralisation[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]+1 [ICON_HAPPINESS_1] to every city's Population Size in all cities.
 				[NEWLINE][ICON_BULLET][ICON_PIRATE] Population Loss from Unit Casualties reduced by 33%.
-				[NEWLINE][ICON_BULLET]Amount of [ICON_HAPPINESS_1] Happiness required to start a [ICON_GOLDEN_AGE] Golden Age reduced by 25%.
+				[NEWLINE][ICON_BULLET]The increase in construction cost for National Wonders due to the number of cities is reduced by 50%.
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_CENTRALISATION_TEXT">
