@@ -175,32 +175,32 @@
 		</Row>
 
 		<Row>
-			<PolicyType>POLICY_PREFECTURE</PolicyType>
+			<PolicyType>POLICY_LEGALISM</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_SMALL</BuildingClassType>
 			<CultureChange>4</CultureChange>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_PREFECTURE</PolicyType>
+			<PolicyType>POLICY_LEGALISM</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_MEDIUM</BuildingClassType>
 			<CultureChange>4</CultureChange>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_PREFECTURE</PolicyType>
+			<PolicyType>POLICY_LEGALISM</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_LARGE</BuildingClassType>
 			<CultureChange>6</CultureChange>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_PREFECTURE</PolicyType>
+			<PolicyType>POLICY_LEGALISM</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_XL</BuildingClassType>
 			<CultureChange>6</CultureChange>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_PREFECTURE</PolicyType>
+			<PolicyType>POLICY_LEGALISM</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_XXL</BuildingClassType>
 			<CultureChange>8</CultureChange>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_PREFECTURE</PolicyType>
+			<PolicyType>POLICY_LEGALISM</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_GLOBAL</BuildingClassType>
 			<CultureChange>8</CultureChange>
 		</Row>
@@ -733,37 +733,37 @@
 			<Happiness>4</Happiness>
 		</Row>-->
 		<Row>
-			<PolicyType>POLICY_LEGALISM</PolicyType>
+			<PolicyType>POLICY_CENTRALISATION</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_TOWN</BuildingClassType>
 			<Happiness>1</Happiness>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_LEGALISM</PolicyType>
+			<PolicyType>POLICY_CENTRALISATION</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_SMALL</BuildingClassType>
 			<Happiness>1</Happiness>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_LEGALISM</PolicyType>
+			<PolicyType>POLICY_CENTRALISATION</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_MEDIUM</BuildingClassType>
 			<Happiness>1</Happiness>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_LEGALISM</PolicyType>
+			<PolicyType>POLICY_CENTRALISATION</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_LARGE</BuildingClassType>
 			<Happiness>1</Happiness>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_LEGALISM</PolicyType>
+			<PolicyType>POLICY_CENTRALISATION</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_XL</BuildingClassType>
 			<Happiness>1</Happiness>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_LEGALISM</PolicyType>
+			<PolicyType>POLICY_CENTRALISATION</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_XXL</BuildingClassType>
 			<Happiness>1</Happiness>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_LEGALISM</PolicyType>
+			<PolicyType>POLICY_CENTRALISATION</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_GLOBAL</BuildingClassType>
 			<Happiness>1</Happiness>
 		</Row>
