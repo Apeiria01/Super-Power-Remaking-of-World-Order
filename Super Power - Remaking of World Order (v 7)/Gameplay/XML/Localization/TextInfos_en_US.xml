@@ -17576,6 +17576,21 @@
 		<Row Tag="TXT_KEY_EUPANEL_WORLD_CONGRESS_MODIFIER">
 			<Text>World Congress Modifier</Text>
 		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_ATTACK_VS_DOMAIN_SP">
+			<Text>Attack Penalty VS Domain</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_DEFENSE_VS_DOMAIN_SP" >
+			<Text>Defense Bonus VS Domain</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_BONUS_VS_FULLY_HEALED_UNITS_SP">
+			<Text>Bonus VS Fully-Healed Units</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_BONUS_VS_MORE_50_HP_UNITS_SP">
+			<Text>Target above 50% HP</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_BONUS_VS_LESS_50_HP_UNITS_SP">
+			<Text>Target below/at 50% HP</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_CO_SP_MOVE_TEAMMATE_STOPPED">
 			<Text>No Immigration because we are in the same team.</Text>

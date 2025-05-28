@@ -1730,7 +1730,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			iModifier = pMyUnit:DomainAttack(pTheirUnit:GetDomainType());
 			if (iModifier ~= 0) then
 				controlTable = g_MyCombatDataIM:GetInstance();
-				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_ATTACK_VS_DOMAIN");
+				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_ATTACK_VS_DOMAIN_SP");
 				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
 			end
 
@@ -1765,7 +1765,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 
 				if (iModifier ~= 0)  then
 					controlTable = g_MyCombatDataIM:GetInstance();
-					controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_BONUS_VS_FULLY_HEALED_UNITS" );
+					controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_BONUS_VS_FULLY_HEALED_UNITS_SP" );
 					controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
 				end
 			end
@@ -1775,7 +1775,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 
 				if (iModifier ~= 0 ) then
 					controlTable = g_MyCombatDataIM:GetInstance();
-					controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_BONUS_VS_MORE_50_HP_UNITS" );
+					controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_BONUS_VS_MORE_50_HP_UNITS_SP" );
 					controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );	
 				end
 			else
@@ -1783,7 +1783,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 
 				if (iModifier ~= 0 ) then
 					controlTable = g_MyCombatDataIM:GetInstance();
-					controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_BONUS_VS_LESS_50_HP_UNITS" );
+					controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_BONUS_VS_LESS_50_HP_UNITS_SP" );
 					controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
 				end
 			end
@@ -2140,7 +2140,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
                     iModifier = pTheirUnit:AttackFullyHealedModifier();
                     if (iModifier ~= 0) then
                         controlTable = g_TheirCombatDataIM:GetInstance();
-                        controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_VS_FULLY_HEALED_UNITS");
+                        controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_VS_FULLY_HEALED_UNITS_SP");
                         controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
                     end
                 end
@@ -2151,7 +2151,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 
                     if (iModifier ~= 0) then
                         controlTable = g_TheirCombatDataIM:GetInstance();
-                        controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_VS_MORE_50_HP_UNITS");
+                        controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_VS_MORE_50_HP_UNITS_SP");
                         controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
                     end
                 else
@@ -2159,7 +2159,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 
                     if (iModifier ~= 0) then
                         controlTable = g_TheirCombatDataIM:GetInstance();
-                        controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_VS_LESS_50_HP_UNITS");
+                        controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_VS_LESS_50_HP_UNITS_SP");
                         controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
                     end
 
@@ -2375,7 +2375,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
                 iModifier = pTheirUnit:DomainDefense(pMyUnit:GetDomainType());
                 if (iModifier ~= 0) then
                     controlTable = g_TheirCombatDataIM:GetInstance();
-                    controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_DEFENSE_VS_DOMAIN");
+                    controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_DEFENSE_VS_DOMAIN_SP");
                     controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
                 end
 
