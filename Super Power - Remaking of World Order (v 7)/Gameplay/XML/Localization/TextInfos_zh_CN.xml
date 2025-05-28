@@ -15922,6 +15922,21 @@
 		<Row Tag="TXT_KEY_EUPANEL_WORLD_CONGRESS_MODIFIER">
 			<Text>世界议会加成</Text>
 		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_ATTACK_VS_DOMAIN_SP">
+			<Text>对领域攻击加成</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_DEFENSE_VS_DOMAIN_SP" >
+			<Text>对领域防御加成</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_BONUS_VS_FULLY_HEALED_UNITS_SP">
+			<Text>对抗满血单位加成</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_BONUS_VS_MORE_50_HP_UNITS_SP">
+			<Text>目标高于50%HP</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_BONUS_VS_LESS_50_HP_UNITS_SP">
+			<Text>目标不高于50%HP</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_CO_SP_MOVE_TEAMMATE_STOPPED">
 			<Text>由于该国与你是队友，两国间没有移民。</Text>
