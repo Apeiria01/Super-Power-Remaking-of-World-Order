@@ -7506,6 +7506,12 @@
 			<YieldType>YIELD_SCIENCE</YieldType>
 			<Yield>1</Yield>
 		</Row>
+		<Row>
+			<BuildingType>BUILDING_CEILIDH_HALL</BuildingType>
+			<SpecialistType>SPECIALIST_MUSICIAN</SpecialistType>
+			<YieldType>YIELD_TOURISM</YieldType>
+			<Yield>1</Yield>
+		</Row>
 	</Building_SpecialistYieldChangesLocal>
 	<Building_ImprovementYieldChangesGlobal>
 		<Row>
@@ -7599,4 +7605,13 @@
 			<Yield>1</Yield>
 		</Row>
 	</Building_ResourceYieldChangesGlobal>
+
+	<Building_SpecialistYieldModifiers>
+		<Row>
+			<BuildingType>BUILDING_CEILIDH_HALL</BuildingType>
+			<SpecialistType>SPECIALIST_MUSICIAN</SpecialistType>
+			<YieldType>YIELD_TOURISM</YieldType>
+			<Yield>5</Yield>
+		</Row>
+	</Building_SpecialistYieldModifiers>
 </GameData>

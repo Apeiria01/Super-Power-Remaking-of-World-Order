@@ -1693,7 +1693,19 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		end
 	end
 
+	for specialist in GameInfo.Specialists() do
+		tip = GetYieldStringSpecial( "Yield", "%s%+i%%%s", GameInfo.Building_SpecialistYieldModifiersGlobal{ BuildingType = buildingType, SpecialistType = specialist.Type } )
+		if tip ~= "" then
+			insert( tips, UnitColor( L(specialist.Description) ) .. ":" .. tip )
+		end
+	end
 
+	for specialist in GameInfo.Specialists() do
+		tip =GetYieldStringSpecial( "Yield", "%s%+i%%%s", GameInfo.Building_SpecialistYieldModifiers{ BuildingType = buildingType, SpecialistType = specialist.Type } )
+		if tip ~= "" then
+			insert( tips, L"TXT_KEY_LOCAL_SPECIALIST_SP" .. UnitColor( L(specialist.Description) ) .. ":" .. tip )
+		end
+	end
 
 
 	-- River Yields enhanced by Building

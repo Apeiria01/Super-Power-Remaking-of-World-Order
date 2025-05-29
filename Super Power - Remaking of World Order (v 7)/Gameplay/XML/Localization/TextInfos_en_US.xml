@@ -3551,7 +3551,10 @@
 
 
 		<Row Tag="TXT_KEY_BUILDING_CEILIDH_HALL_HELP">
-			<Text>+1 [ICON_CULTURE] Culture for each worked [COLOR_POSITIVE_TEXT]Forest[ENDCOLOR] Tiles in this city.</Text>
+			<Text>
+				[ICON_BULLET]+1 [ICON_CULTURE] Culture for each worked [COLOR_POSITIVE_TEXT]Forest[ENDCOLOR] Tiles in this city.
+				[NEWLINE][ICON_BULLET]+1 [ICON_TOURISM] Tourism and +5% [ICON_TOURISM] Tourism output per Musican Specialist this City.
+			</Text>
 		</Row>
 
 
