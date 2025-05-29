@@ -1040,7 +1040,10 @@
 		</Row>
 
 		<Row Tag="TXT_KEY_BUILDING_CEILIDH_HALL_HELP">
-			<Text>本城市所有已開發的森林地塊+1[ICON_CULTURE]文化值。</Text>
+			<Text>
+				[ICON_BULLET]本城有市民工作的森林地塊+1[ICON_CULTURE]文化。
+				[NEWLINE][ICON_BULLET]每一位音樂家爲城市+1[ICON_TOURISM]魅力並+5%[ICON_TOURISM]魅力産出。
+			</Text>
 		</Row>
 
 		<Row>
