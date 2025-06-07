@@ -9001,13 +9001,13 @@
 			<Text>+1 [ICON_HAPPINESS_1] Happiness from cities onrivers, +1 [ICON_PEACE] Faith from Lake and Coast</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GOD_CRAFTSMEN">
-			<Text>+1 [ICON_PEACE] Faith and +1[ICON_PRODUCTION] Production for each Amber, Jade, Coral and Lapis Lazuli resource</Text>
+			<Text>+1 [ICON_PEACE] Faith and +1[ICON_PRODUCTION] Production for each [ICON_RES_AMBER]Amber, [ICON_RES_JADE]Jade, [ICON_RES_CORAL]Coral and [ICON_RES_LAPIS]Lapis Lazuli resource</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_SUN_GOD">
-			<Text>+1 [ICON_PEACE] Faith and +1 [ICON_RESEARCH] Science for each Olive, Sugar, Perfume and Tobacco resource</Text>
+			<Text>+1 [ICON_PEACE] Faith and +1 [ICON_RESEARCH] Science for each [ICON_RES_OLIVE]Olive, [ICON_RES_SUGAR]Sugar, [ICON_RES_PERFUME]Perfume and [ICON_RES_TOBACCO]Tobacco resource</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_EARTH_MOTHER">
-			<Text>+1 [ICON_PEACE] Faith and +1 [ICON_FOOD] Food for each Spices, Citrus, Banana and Cotton resource</Text>
+			<Text>+1 [ICON_PEACE] Faith and +1 [ICON_FOOD] Food for each [ICON_RES_SPICES]Spices, [ICON_RES_CITRUS]Citrus, [ICON_RES_BANANA]Banana and [ICON_RES_COTTON]Cotton resource</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GODDESS_HUNT">
 			<Text>+1 [ICON_FOOD] Food and +1 [ICON_PEACE] Faith from Camps, +1 [ICON_CULTURE] Culture from [ICON_RES_BISON] and [ICON_RES_DEER]</Text>
@@ -9072,7 +9072,7 @@
 			<Text>+5 [ICON_PEACE] Faith from Landmarks, Academies, Customs Houses, Manufactories and Holy Sites</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_FORMAL_LITURGY">
-			<Text>+1 [ICON_PEACE] Faith and +1 [ICON_CULTURE] Culture for each Gold, Silver, Copper, Iron and Salt</Text>
+			<Text>+1 [ICON_PEACE] Faith and +1 [ICON_CULTURE] Culture for each [ICON_RES_GOLD]Gold, [ICON_RES_SILVER]Silver, [ICON_RES_COPPER]Copper, [ICON_RES_IRON]Iron and [ICON_RES_SALT]Salt</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GOD_FESTIVALS">
 			<Text>+2 [ICON_PEACE] Faith and +2 [ICON_CULTURE] Culture for each Wine and Incense</Text>
@@ -9093,7 +9093,7 @@
 			<Text>+1 [ICON_CULTURE] Culture for every Fishing Net, +1 [ICON_PEACE] Faith and +1 [ICON_CULTURE] Culture for every Fishing Boat</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_TEARS_OF_GODS">
-			<Text>+2 [ICON_PEACE] Faith and +2 [ICON_CULTURE] Culture for every Gem and Pearl</Text>
+			<Text>+2 [ICON_PEACE] Faith and +2 [ICON_CULTURE] Culture for every [ICON_RES_GEMS]Gem and [ICON_RES_PEARLS]Pearl</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GOD_KING">
 			<Text>Palace provides +2 [ICON_PEACE] Faith, +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production, +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production and +1 [ICON_PEACE] Faith from each [ICON_CITYBANNER_CITY_LV1] City Hall [COLOR_NEGATIVE_TEXT](Lv1)[ENDCOLOR]</Text>

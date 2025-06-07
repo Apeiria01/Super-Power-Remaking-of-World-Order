@@ -8098,13 +8098,13 @@
 			<Text>牧场+1[ICON_CULTURE]文化,[ICON_RES_COW]牛+2[ICON_PEACE]信仰、[ICON_RES_SHEEP]羊+1[ICON_FOOD]食物、[ICON_RES_HORSE]马+1[ICON_PRODUCTION]产能</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_EARTH_MOTHER">
-			<Text>香料、柑橘、香蕉和棉花+1[ICON_PEACE]信仰、+1[ICON_FOOD]食物</Text>
+			<Text>[ICON_RES_SPICES]香料、[ICON_RES_CITRUS]柑橘、[ICON_RES_BANANA]香蕉和[ICON_RES_COTTON]棉花+1[ICON_PEACE]信仰、+1[ICON_FOOD]食物</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_FERTILITY_RITES">
 			<Text>粮仓+2[ICON_PEACE]信仰，[ICON_RES_WHEAT]小麦+1[ICON_PEACE]信仰</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GOD_CRAFTSMEN">
-			<Text>玉石、琥珀、珊瑚和天青石+1[ICON_PEACE]信仰、+1[ICON_PRODUCTION]产能</Text>
+			<Text>[ICON_RES_JADE]玉石、[ICON_RES_AMBER]琥珀、[ICON_RES_CORAL]珊瑚和[ICON_RES_LAPIS]天青石+1[ICON_PEACE]信仰、+1[ICON_PRODUCTION]产能</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_DANCE_AURORA">
 			<Text>冻土地块+1[ICON_PEACE]信仰，位于冻土地块的城市+2[ICON_FOOD]食物</Text>
@@ -8134,7 +8134,7 @@
 			<Text>种植园+1[ICON_CULTURE]文化、+1[ICON_GOLD]金钱，[ICON_RES_SILK]丝绸、[ICON_RES_TEA]茶叶、[ICON_RES_DYE]染料+1[ICON_CULTURE]文化</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_SUN_GOD">
-			<Text>橄榄、蔗糖、香水和烟草+1[ICON_PEACE]信仰、+1[ICON_RESEARCH]科研</Text>
+			<Text>[ICON_RES_OLIVE]橄榄、[ICON_RES_SUGAR]蔗糖、[ICON_RES_PERFUME]香水和[ICON_RES_TOBACCO]烟草+1[ICON_PEACE]信仰、+1[ICON_RESEARCH]科研</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GOD_WAR">
 			<Text>在你的城市6格以内战斗胜利时获得[ICON_PEACE]信仰，兵营、军械所+2[ICON_PEACE]信仰</Text>
@@ -8239,7 +8239,7 @@
 			<Text>风景地标、学园、海关、制造中心、宗教圣地+5[ICON_PEACE]信仰</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_FORMAL_LITURGY">
-			<Text>每一处黄金、白银、赤铜、铁矿、盐资源+1[ICON_PEACE]信仰、+1[ICON_CULTURE]文化</Text>
+			<Text>每一处[ICON_RES_GOLD]黄金、[ICON_RES_SILVER]白银、[ICON_RES_COPPER]赤铜、[ICON_RES_IRON]铁矿、[ICON_RES_SALT]盐资源+1[ICON_PEACE]信仰、+1[ICON_CULTURE]文化</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GOD_FESTIVALS">
 			<Text>每一处红酒和熏香+2[ICON_PEACE]信仰、+2[ICON_CULTURE]文化</Text>
@@ -8256,8 +8256,8 @@
 		<Replace Tag="TXT_KEY_BELIEF_SWORD_PLOWSHARES">
 			<Text>和平时期[ICON_FOOD]食物积累速率提高25%</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_TEARS_OF_GODS">
-			<Text>每一处宝石和珍珠+2[ICON_PEACE]信仰、+2[ICON_CULTURE]文化</Text>
+		<Replace Tag="TXT_KEY_BELIEF_TEARS_OF_GODS">钻石和
+			<Text>每一处[ICON_RES_GEMS]宝石和[ICON_RES_PEARLS]珍珠+2[ICON_PEACE]信仰、+2[ICON_CULTURE]文化</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_PAPAL_PRIMACY">
 			<Text>对信仰此宗教的城邦的[ICON_INFLUENCE]影响力下限值+35且[ICON_INFLUENCE]影响力恢复速率+300%，宗教裁判官位于同盟城邦附近可以阻止其被其他文明传教</Text>
