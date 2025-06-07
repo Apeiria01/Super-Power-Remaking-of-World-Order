@@ -578,7 +578,7 @@ UnitTargetMarkingButton = {
                     local iActivePlayer = Players[unit:GetOwner()]
                     local pPlayer = Players[pUnit:GetOwner()]
 
-                    if PlayersAtWar(iActivePlayer, pPlayer) and not pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_ANTI_DEBUFF"].ID) then
+                    if PlayersAtWar(iActivePlayer, pPlayer) and not pUnit:IsImmuneNegtivePromotions() then
                         pUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_MARKED_TARGET"].ID, true)
 
                         local heading = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_TARGET_MARKED")
