@@ -205,13 +205,13 @@
 			<Type>BUILDING_NATIONAL_EPIC</Type>
 			<BuildingClass>BUILDINGCLASS_NATIONAL_EPIC</BuildingClass>
 			<GoldMaintenance>4</GoldMaintenance>
-			<Cost>15</Cost>
+			<Cost>40</Cost>
 			<PolicyBranchType>POLICY_BRANCH_PIETY</PolicyBranchType>
 			<Help>TXT_KEY_BUILDING_NATIONAL_EPIC_HELP</Help>
 			<Description>TXT_KEY_BUILDING_NATIONAL_EPIC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_EPIC_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_EPIC</ArtDefineTag>
-			<GreatPeopleRateModifier>33</GreatPeopleRateModifier>
+			<GreatPeopleRateModifier>20</GreatPeopleRateModifier>
 			<NukeImmune>true</NukeImmune>
 			<NumCityCostMod>10</NumCityCostMod>
 			<HurryCostModifier>-1</HurryCostModifier>
@@ -812,11 +812,11 @@
 
 		<Row>
 			<BuildingType>BUILDING_HEROIC_EPIC</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_MEDIUM</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_SMALL</BuildingClassType>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_NATIONAL_EPIC</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_MEDIUM</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_SMALL</BuildingClassType>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_IRONWORKS</BuildingType>

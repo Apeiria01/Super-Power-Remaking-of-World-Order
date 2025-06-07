@@ -1903,10 +1903,13 @@
 
 		<!--****************************National Wonders*************************************-->
 
-		<Update>
-			<Where Tag="TXT_KEY_BUILDING_HEROIC_EPIC_HELP" />
-			<Set Text="需要開啟榮譽政策樹。[NEWLINE][NEWLINE]所有城市新訓練的單位+15經驗。擁有一個文學傑作展位。[NEWLINE][NEWLINE]只能在中型城市（15人口）建造。建造價格隨城市數量增加。" />
-		</Update>
+		<Replace Tag="TXT_KEY_BUILDING_HEROIC_EPIC_HELP">
+			<Text>
+				需要開啟榮譽政策樹。
+				[NEWLINE][NEWLINE]所有城市新訓練的單位+15經驗。擁有一個文學傑作展位。
+				[NEWLINE][NEWLINE]只能在小型城市（6人口）建造。建造價格隨城市數量增加。
+			</Text>
+		</Replace>
 
 		<Replace Tag="TXT_KEY_BUILDING_CIRCUS_MAXIMUS_HELP">
 			<Text>+10[ICON_HAPPINESS_1]全局快樂，必須先在所有城市建造馬戲團。建造價格隨城市數量增加。</Text>
@@ -2053,7 +2056,11 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_BUILDING_NATIONAL_EPIC_HELP">
-			<Text>需要開啟虔信政策樹。[NEWLINE][NEWLINE]本城市[ICON_GREAT_PEOPLE]偉人點數累積+33%。[NEWLINE][NEWLINE]只能在中型城市（15人口）建造。建造成本隨城市數量增加。</Text>
+			<Text>
+				需要開啟虔信政策樹。
+				[NEWLINE][NEWLINE]本城市[ICON_GREAT_PEOPLE]偉人點數累積+20%。
+				[NEWLINE][NEWLINE]只能在小型城市（6人口）建造。建造成本隨城市數量增加。
+			</Text>
 		</Replace>
 
 		<Row Tag="TXT_KEY_BUILDING_NATIONAL_LIBRARY">
