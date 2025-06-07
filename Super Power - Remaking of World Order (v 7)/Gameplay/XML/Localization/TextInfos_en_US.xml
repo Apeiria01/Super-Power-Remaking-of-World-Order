@@ -4514,13 +4514,13 @@
 		
 	<!--****************************National Wonders*************************************-->
 
-		<Update>
-			<Where Tag="TXT_KEY_BUILDING_HEROIC_EPIC_HELP" />
-			<Set
-				Text="Requires Honor.
-				 [NEWLINE][NEWLINE]+15 XP for new units built in all cities.
-				 [NEWLINE][NEWLINE]Must be built in Medium Cities. The cost goes up the more cities there are in the empire." />
-		</Update>
+		<Replace Tag="TXT_KEY_BUILDING_HEROIC_EPIC_HELP">
+			<Text>
+				Requires Honor.
+				[NEWLINE][NEWLINE]+15 XP for new units built in all cities.
+				[NEWLINE][NEWLINE]Must be built in Small Cities. The cost goes up the more cities there are in the empire.
+			</Text>
+		</Replace>
 
 
 		<Replace Tag="TXT_KEY_BUILDING_CIRCUS_MAXIMUS_HELP">
@@ -4694,7 +4694,8 @@
 		<Replace Tag="TXT_KEY_BUILDING_NATIONAL_EPIC_HELP">
 			<Text>
 				Requires Piety.
-				[NEWLINE][NEWLINE]+33% [ICON_GREAT_PEOPLE] generation of Great People in the city.  [NEWLINE][NEWLINE]Must be built in Medium Cities. The cost goes up the more cities there are in the empire.</Text>
+				[NEWLINE][NEWLINE]+20% [ICON_GREAT_PEOPLE] generation of Great People in the city.  
+				[NEWLINE][NEWLINE]Must be built in Small Cities. The cost goes up the more cities there are in the empire.</Text>
 		</Replace>
 
 		<!-- Description tags -->
