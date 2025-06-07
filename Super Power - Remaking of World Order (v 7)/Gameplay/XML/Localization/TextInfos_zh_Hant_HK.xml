@@ -7997,13 +7997,13 @@
 			<Text>牧場+1[ICON_CULTURE]文化,[ICON_RES_COW]牛+2[ICON_PEACE]信仰、[ICON_RES_SHEEP]羊+1[ICON_FOOD]食物、[ICON_RES_HORSE]馬+1[ICON_PRODUCTION]產能</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_EARTH_MOTHER">
-			<Text>香料、柑橘、香蕉和棉花+1[ICON_PEACE]信仰、+1[ICON_FOOD]食物</Text>
+			<Text>[ICON_RES_SPICES]香料、[ICON_RES_CITRUS]柑橘、[ICON_RES_BANANA]香蕉和[ICON_RES_COTTON]棉花+1[ICON_PEACE]信仰、+1[ICON_FOOD]食物</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_FERTILITY_RITES">
 			<Text>糧倉+2[ICON_PEACE]信仰，[ICON_RES_WHEAT]小麥+1[ICON_PEACE]信仰</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GOD_CRAFTSMEN">
-			<Text>玉石、琥珀、珊瑚和天青石+1[ICON_PEACE]信仰、+1[ICON_PRODUCTION]產能</Text>
+			<Text>[ICON_RES_JADE]玉石、[ICON_RES_AMBER]琥珀、[ICON_RES_CORAL]珊瑚和[ICON_RES_LAPIS]天青石+1[ICON_PEACE]信仰、+1[ICON_PRODUCTION]產能</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_DANCE_AURORA">
 			<Text>凍土地塊+1[ICON_PEACE]信仰，位於凍土地塊的城市+2[ICON_FOOD]食物</Text>
@@ -8033,7 +8033,7 @@
 			<Text>種植園+1[ICON_CULTURE]文化、+1[ICON_GOLD]金錢，[ICON_RES_SILK]絲綢、[ICON_RES_TEA]茶葉、[ICON_RES_DYE]染料+1[ICON_CULTURE]文化</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_SUN_GOD">
-			<Text>橄欖、蔗糖、香水和煙草+1[ICON_PEACE]信仰、+1[ICON_RESEARCH]科研</Text>
+			<Text>[ICON_RES_OLIVE]橄欖、[ICON_RES_SUGAR]蔗糖、[ICON_RES_PERFUME]香水和[ICON_RES_TOBACCO]煙草+1[ICON_PEACE]信仰、+1[ICON_RESEARCH]科研</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GOD_WAR">
 			<Text>在你的城市6格以內戰鬥勝利時獲得[ICON_PEACE]信仰，兵營、軍械所+2[ICON_PEACE]信仰</Text>
@@ -8138,7 +8138,7 @@
 			<Text>風景地標、學園、海關、製造中心、宗教聖地+5[ICON_PEACE]信仰</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_FORMAL_LITURGY">
-			<Text>每一處黃金、白銀、赤銅、鐵礦、鹽資源+1[ICON_PEACE]信仰、+1[ICON_CULTURE]文化</Text>
+			<Text>每一處[ICON_RES_GOLD]黃金、[ICON_RES_SILVER]白銀、[ICON_RES_COPPER]赤銅、[ICON_RES_IRON]鐵礦、[ICON_RES_SALT]鹽資源+1[ICON_PEACE]信仰、+1[ICON_CULTURE]文化</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GOD_FESTIVALS">
 			<Text>每一處紅酒和熏香+2[ICON_PEACE]信仰、+2[ICON_CULTURE]文化</Text>
@@ -8156,7 +8156,7 @@
 			<Text>和平時期[ICON_FOOD]食物積累速率提高25%</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_TEARS_OF_GODS">
-			<Text>每一處寶石和珍珠+2[ICON_PEACE]信仰、+2[ICON_CULTURE]文化</Text>
+			<Text>每一處[ICON_RES_GEMS]寶石和[ICON_RES_PEARLS]珍珠+2[ICON_PEACE]信仰、+2[ICON_CULTURE]文化</Text>
 		</Replace>
 
 
