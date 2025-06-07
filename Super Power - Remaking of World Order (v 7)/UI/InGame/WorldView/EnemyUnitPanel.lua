@@ -527,17 +527,30 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 				end
 			end
 
+			iModifier = pMyPlayer:GetTraitCityStateFriendshipModifier() + pMyUnit:GetAllyCityStateCombatModifier();
+			if (iModifier ~= 0) then
+				controlTable = g_MyCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_CITY_STATE_FRENDSHIP");
+				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
+			end
 			--Extra Resouce and Happiness Bonus
-			iModifier = pMyUnit:GetStrengthModifierFromExtraResource();
+			iModifier = pMyUnit:GetResourceCombatModifier();
 			if (iModifier ~= 0) then
 				controlTable = g_MyCombatDataIM:GetInstance();		
 				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_RESOURCE_MODIFIER");
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
 			end
-			iModifier = pMyUnit:GetStrengthModifierFromExtraHappiness();
+			iModifier = pMyUnit:GetHappinessCombatModifier();
 			if (iModifier ~= 0) then
 				controlTable = g_MyCombatDataIM:GetInstance();		
 				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_EXCESS_HAPINESS_MODIFIER");
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+			end
+			-- Nearby Unit Promotion modifier
+			iModifier = pMyUnit:GetNearbyUnitPromotionBonus()
+			if (iModifier ~= 0) then
+				controlTable = g_MyCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_UNIT_PROMOTION_NEAR_SP" );
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
 			end
 
@@ -732,13 +745,6 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
 			end
 
-			iModifier = pMyPlayer:GetTraitCityStateFriendshipModifier();
-			if (iModifier ~= 0) then
-				controlTable = g_MyCombatDataIM:GetInstance();
-				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_CITY_STATE_FRENDSHIP");
-				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
-			end
-
 			if (not bRanged) then
 
 				-- Crossing a River
@@ -819,14 +825,6 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 				controlTable = g_MyCombatDataIM:GetInstance();
 				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_IMPROVEMENT_NEAR");
 				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
-			end
-
-			-- Nearby Unit Promotion modifier
-			if (pMyUnit:GetNearbyUnitPromotionModifierFromUnitPromotion() ~= 0) then
-				iModifier = pMyUnit:GetNearbyUnitPromotionModifierFromUnitPromotion();
-				controlTable = g_MyCombatDataIM:GetInstance();
-				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_UNIT_PROMOTION_NEAR_SP" );
-				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
 			end
 
 			-- Damaged unit
@@ -1313,14 +1311,6 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
 			end
 
-			-- Nearby Unit Promotion modifier
-			if (pMyUnit:GetNearbyUnitPromotionModifierFromUnitPromotion() ~= 0) then
-				iModifier = pMyUnit:GetNearbyUnitPromotionModifierFromUnitPromotion();
-				controlTable = g_MyCombatDataIM:GetInstance();
-				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_UNIT_PROMOTION_NEAR_SP" );
-				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
-			end
-
 			-- Damaged unit
 			iModifier = pMyUnit:GetDamageCombatModifier();
 			if (iModifier ~= 0 ) then
@@ -1536,18 +1526,31 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				end
 			end
 
+			iModifier = pMyPlayer:GetTraitCityStateFriendshipModifier() + pMyUnit:GetAllyCityStateCombatModifier();
+			if (iModifier ~= 0) then
+				controlTable = g_MyCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_CITY_STATE_FRENDSHIP");
+				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
+			end
 			--Extra Resouce and Happiness Bonus
-			iModifier = pMyUnit:GetStrengthModifierFromExtraResource();
+			iModifier = pMyUnit:GetResourceCombatModifier();
 			if (iModifier ~= 0) then
 				controlTable = g_MyCombatDataIM:GetInstance();		
 				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_RESOURCE_MODIFIER");
 				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
 			end
-			iModifier = pMyUnit:GetStrengthModifierFromExtraHappiness();
+			iModifier = pMyUnit:GetHappinessCombatModifier();
 			if (iModifier ~= 0) then
 				controlTable = g_MyCombatDataIM:GetInstance();		
 				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_EXCESS_HAPINESS_MODIFIER");
 				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
+			end
+			-- Nearby Unit Promotion modifier
+			iModifier = pMyUnit:GetNearbyUnitPromotionBonus()
+			if (iModifier ~= 0) then
+				controlTable = g_MyCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_UNIT_PROMOTION_NEAR_SP" );
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
 			end
 
 			-- Multiple Attack Bonus
@@ -1920,13 +1923,6 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
 			end
 
-			iModifier = pMyPlayer:GetTraitCityStateFriendshipModifier();
-			if (iModifier ~= 0) then
-				controlTable = g_MyCombatDataIM:GetInstance();
-				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_CITY_STATE_FRENDSHIP");
-				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
-			end
-
 			----------------------------------------------------------------------------
 			-- BONUSES THEIR UNIT GETS
 			----------------------------------------------------------------------------
@@ -2009,19 +2005,32 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 					end
 				end
 
+				iModifier = pTheirPlayer:GetTraitCityStateFriendshipModifier() + pTheirUnit:GetAllyCityStateCombatModifier();
+				if (iModifier ~= 0) then
+					controlTable = g_TheirCombatDataIM:GetInstance();
+					controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_CITY_STATE_FRENDSHIP");
+					controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
+				end
 				--Extra Resouce and Happiness Bonus
-				iModifier = pTheirUnit:GetStrengthModifierFromExtraResource();
+				iModifier = pTheirUnit:GetResourceCombatModifier();
 				if (iModifier ~= 0) then
 					controlTable = g_TheirCombatDataIM:GetInstance();	
 					controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_RESOURCE_MODIFIER");
 					controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
 				end
-				iModifier = pTheirUnit:GetStrengthModifierFromExtraHappiness();
+				iModifier = pTheirUnit:GetHappinessCombatModifier();
 				if (iModifier ~= 0) then
 					controlTable = g_TheirCombatDataIM:GetInstance();		
 					controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_EXCESS_HAPINESS_MODIFIER");
 					controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
 				end
+				-- Nearby Unit Promotion modifier
+				iModifier = pTheirUnit:GetNearbyUnitPromotionBonus();
+                if (iModifier ~= 0) then
+                    controlTable = g_TheirCombatDataIM:GetInstance();
+                    controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_UNIT_PROMOTION_NEAR_SP");
+                    controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
+                end
 
 				--Num Of Origin City
 				iModifier = pTheirUnit:GetNumOriginalCapitalAttackMod();
@@ -2269,14 +2278,6 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 					controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
 				end
 
-				-- Nearby Unit Promotion modifier
-                if (pTheirUnit:GetNearbyUnitPromotionModifierFromUnitPromotion() ~= 0) then
-                    iModifier = pTheirUnit:GetNearbyUnitPromotionModifierFromUnitPromotion();
-                    controlTable = g_TheirCombatDataIM:GetInstance();
-                    controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_UNIT_PROMOTION_NEAR_SP");
-                    controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
-                end
-
 				-- Flanking bonus
 				if (not bRanged) then
 					local iNumAdjacentFriends = pMyUnit:GetNumEnemyUnitsAdjacent(pTheirUnit);
@@ -2507,14 +2508,6 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 					controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_GOLDEN_AGE");
 					controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
 				end
-
-				iModifier = pTheirPlayer:GetTraitCityStateFriendshipModifier();
-				if (iModifier ~= 0) then
-					controlTable = g_TheirCombatDataIM:GetInstance();
-					controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_CITY_STATE_FRENDSHIP");
-					controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
-				end
-
 			end
 
 			--------------------------
@@ -2636,18 +2629,32 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 		local theirPlayer = Players[theirPlayerID];
 
 		local theirPlot = theirUnit:GetPlot();
+		local controlTable
 
+		local iModifier = theirPlayer:GetTraitCityStateFriendshipModifier() + theirUnit:GetAllyCityStateCombatModifier();
+		if (iModifier ~= 0) then
+			controlTable = g_TheirCombatDataIM:GetInstance();
+			controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_CITY_STATE_FRENDSHIP");
+			controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
+		end
 		--Extra Resouce and Happiness Bonus
-		local iModifier = theirUnit:GetStrengthModifierFromExtraResource();
+		local iModifier = theirUnit:GetResourceCombatModifier();
 		if (iModifier ~= 0) then
 			controlTable = g_TheirCombatDataIM:GetInstance();	
 			controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_RESOURCE_MODIFIER");
 			controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
 		end
-		iModifier = theirUnit:GetStrengthModifierFromExtraHappiness();
+		iModifier = theirUnit:GetHappinessCombatModifier();
 		if (iModifier ~= 0) then
 			controlTable = g_TheirCombatDataIM:GetInstance();		
 			controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_EXCESS_HAPINESS_MODIFIER");
+			controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
+		end
+		-- Nearby Unit Promotion modifier
+		iModifier = theirUnit:GetNearbyUnitPromotionBonus();
+		if (iModifier ~= 0) then
+			controlTable = g_TheirCombatDataIM:GetInstance();
+			controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_UNIT_PROMOTION_NEAR_SP");
 			controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
 		end
 
@@ -3018,13 +3025,6 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 		if (iModifier ~= 0 and theirPlayer:IsGoldenAge()) then
 			controlTable = g_TheirCombatDataIM:GetInstance();
 			controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_GOLDEN_AGE");
-			controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
-		end
-
-		iModifier = theirPlayer:GetTraitCityStateFriendshipModifier();
-		if (iModifier ~= 0) then
-			controlTable = g_TheirCombatDataIM:GetInstance();
-			controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_CITY_STATE_FRENDSHIP");
 			controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
 		end
 	end
