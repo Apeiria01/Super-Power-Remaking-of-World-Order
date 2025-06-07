@@ -8256,7 +8256,7 @@
 		<Replace Tag="TXT_KEY_BELIEF_SWORD_PLOWSHARES">
 			<Text>和平时期[ICON_FOOD]食物积累速率提高25%</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_BELIEF_TEARS_OF_GODS">钻石和
+		<Replace Tag="TXT_KEY_BELIEF_TEARS_OF_GODS">
 			<Text>每一处[ICON_RES_GEMS]宝石和[ICON_RES_PEARLS]珍珠+2[ICON_PEACE]信仰、+2[ICON_CULTURE]文化</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_PAPAL_PRIMACY">
