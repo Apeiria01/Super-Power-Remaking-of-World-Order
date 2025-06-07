@@ -4,6 +4,9 @@ SELECT Type , 'YIELD_CULTURE',4
 FROM Specialists WHERE CulturePerTurn > 0;
 UPDATE Specialists Set CulturePerTurn = 0;
 
+Update Specialists Set PortraitIndex = "14" Where Type="SPECIALIST_WRITER";
+Update Specialists Set PortraitIndex = "15" Where Type="SPECIALIST_MUSICIAN";
+
 --GreatPeopleImprovement provide surrounding output
 INSERT INTO Improvement_AdjacentImprovementYieldChanges(ImprovementType,OtherImprovementType,YieldType,Yield)
 SELECT	'IMPROVEMENT_ACADEMY',Type,  'YIELD_SCIENCE', 1 FROM Improvements UNION ALL

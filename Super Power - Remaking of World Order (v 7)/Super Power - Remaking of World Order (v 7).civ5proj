@@ -604,6 +604,7 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
     <Folder Include="UI\Art\IconAtlases\Buildings\Sweden" />
     <Folder Include="UI\Art\IconAtlases\Buildings\Persia" />
     <Folder Include="UI\Art\IconAtlases\Extra" />
+    <Folder Include="UI\Art\IconAtlases\Override" />
     <Folder Include="UI\Art\IconAtlases\Buildings\Aztecs" />
     <Folder Include="UI\Art\IconAtlases\Units" />
     <Folder Include="UI\Art\IconAtlases\Technologies" />
@@ -5381,6 +5382,38 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="UI\Art\IconAtlases\Extra\TroopsTop.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\IconAtlases\Override\citizenWriter.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\IconAtlases\Override\citizenArtist.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\IconAtlases\Override\citizenMusician.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\IconAtlases\Override\CitizenIcons1024.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\IconAtlases\Override\CitizenIcons512.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\IconAtlases\Override\CitizenIcons256.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\IconAtlases\Override\CitizenIcons180.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\Art\IconAtlases\Override\CitizenIcons128.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>

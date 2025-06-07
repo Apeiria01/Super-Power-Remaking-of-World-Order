@@ -202,7 +202,9 @@ ContextPtr:SetInputHandler( InputHandler );
 local defaultErrorTextureSheet = "ProductionAtlas.dds";
 local nullOffset = Vector2( 0, 0 );
 
+local writerTexture = "citizenWriter.dds";
 local artistTexture = "citizenArtist.dds";
+local musicianTexture = "citizenMusician.dds";
 local engineerTexture = "citizenEngineer.dds";
 local merchantTexture = "citizenMerchant.dds";
 local scientistTexture = "citizenScientist.dds";
@@ -484,14 +486,14 @@ function AddBuildingButton( pCity, building )
 				BToolTipString = BToolTipString .. Locale.ConvertTextKey("TXT_KEY_CITYVIEW_SPECIALIST_TOOLTIP", GameInfo.Specialists[iSpecialistID].Description);
 				
 				if iSpecialistID == 1 then	-- SPECIALIST_WRITER
-					controlTable.SlotTexture:SetTexture(artistTexture);
-					controlTable.BuildingSpecialistSlot:SetTexture(artistTexture);
+					controlTable.SlotTexture:SetTexture(writerTexture);
+					controlTable.BuildingSpecialistSlot:SetTexture(writerTexture);
 				elseif iSpecialistID == 2 then	-- SPECIALIST_ARTIST
 					controlTable.SlotTexture:SetTexture(artistTexture);
 					controlTable.BuildingSpecialistSlot:SetTexture(artistTexture);
 				elseif iSpecialistID == 3 then	-- SPECIALIST_MUSICIAN
-					controlTable.SlotTexture:SetTexture(artistTexture);
-					controlTable.BuildingSpecialistSlot:SetTexture(artistTexture);
+					controlTable.SlotTexture:SetTexture(musicianTexture);
+					controlTable.BuildingSpecialistSlot:SetTexture(musicianTexture);
 				elseif iSpecialistID == 4 then	-- SPECIALIST_SCIENTIST
 					controlTable.SlotTexture:SetTexture(scientistTexture);
 					controlTable.BuildingSpecialistSlot:SetTexture(scientistTexture);
@@ -610,13 +612,13 @@ function AddSpecialistButton( pCity, iSpecialistID, specialistsNum, specialistsA
 				if iSpecialistID ~= 0 then		-- SPECIALIST_CITIZEN
 					if     iSpecialistID == 1 then	-- SPECIALIST_WRITER
 						controlTable = g_WriterIM:GetInstance();
-						controlTable.FilledSpecialistSlot:SetTexture(artistTexture);
+						controlTable.FilledSpecialistSlot:SetTexture(writerTexture);
 					elseif iSpecialistID == 2 then	-- SPECIALIST_ARTIST
 						controlTable = g_ArtistIM:GetInstance();
 						controlTable.FilledSpecialistSlot:SetTexture(artistTexture);
 					elseif iSpecialistID == 3 then	-- SPECIALIST_MUSICIAN
 						controlTable = g_MusicianIM:GetInstance();
-						controlTable.FilledSpecialistSlot:SetTexture(artistTexture);
+						controlTable.FilledSpecialistSlot:SetTexture(musicianTexture);
 					elseif iSpecialistID == 4 then	-- SPECIALIST_SCIENTIST
 						controlTable = g_ScientistIM:GetInstance();
 						controlTable.FilledSpecialistSlot:SetTexture(scientistTexture);
