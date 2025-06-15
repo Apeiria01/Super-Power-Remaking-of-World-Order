@@ -4083,7 +4083,10 @@
 			<Set Text="1 free Great Artist appears near the City where the Wonder was built." />
 		</Update>	
 
-
+		<Update>
+			<Where Tag="TXT_KEY_WONDER_LOUVRE_HELP" />
+			<Set Text="Requires Aesthetics. 1 free Great Artist appears near the City where the Wonder was built." />
+		</Update>
 
 
 
