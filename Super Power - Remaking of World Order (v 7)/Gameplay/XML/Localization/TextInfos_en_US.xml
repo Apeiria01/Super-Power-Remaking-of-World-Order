@@ -9131,7 +9131,7 @@
 			<Text>Your spies exert religious pressure on the cities they occupy. Provides an additional [ICON_SPY] Spy</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_EVANGELISM">
-			<Text>Missionaries' Spread Religion action erodes existing pressure from other religions. +1 Extra Religion Spread for each Religious Unit</Text>
+			<Text>Missionaries' Spread Religion action erodes existing pressure from other religions and +1 Extra Religion Spread</Text>
 		</Replace>
 		
 
