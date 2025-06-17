@@ -990,7 +990,7 @@ function UpdateUnitStats(unit)
 		Controls.UnitStatRangedAttack:SetToolTipString(rangeStrengthTT);
 		Controls.UnitStatNameRangedAttack:SetToolTipString(rangeStrengthTT);
 		-- Religious unit
-	elseif (unit:GetSpreadsLeft() > 0) then
+	elseif (unit:GetSpreadsLeft() > 0 and GameInfo.Units[unit:GetUnitType()].SpreadReligion) then
 		iRangedStrength = unit:GetSpreadsLeft() .. "      ";
 		Controls.UnitRangedAttackBox:SetHide(false);
 		local rangeStrengthStr = Locale.ConvertTextKey("TXT_KEY_UPANEL_SPREAD_RELIGION_USES");
