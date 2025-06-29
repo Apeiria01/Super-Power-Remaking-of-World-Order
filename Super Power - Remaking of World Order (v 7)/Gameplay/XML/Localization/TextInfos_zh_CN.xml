@@ -11201,10 +11201,10 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_UNIT_HELP_HUN_BATTERING_RAM">
-			<Text>攻城锤是匈人的特色单位，替代投石机，用于突破敌军城市的防御。它们拥有高额的攻城加成，且仅需兵营即可建造，但对近战攻击毫无反抗能力。</Text>
+			<Text>攻城锤是匈人的特色单位，替代投石机，用于突破敌军城市的防御。它们拥有高额的攻城加成，且攻击时可以额外获得4经验（不可继承），仅需兵营即可建造，但对近战攻击毫无反抗能力。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_UNIT_HELP_ASSYRIAN_SIEGE_TOWER">
-			<Text>攻城锤是亚述的特色单位，替代投石机，强大的近程压制单位，可以给周边的所有单位提供攻城加成。</Text>
+			<Text>攻城塔是亚述的特色单位，替代投石机，强大的近程压制单位，可以给周边的所有单位提供攻城加成。</Text>
 		</Replace>
 
 		<Row Tag="TXT_KEY_UNIT_SLOOP_OF_WAR">
