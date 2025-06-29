@@ -13802,6 +13802,14 @@
 		<Row Tag="TXT_KEY_PROMOTION_MULTIPURPOSE_DESTROYER_HELP">
 			<Text>+1攻擊次數（可疊加）。[NEWLINE]對潛艇和空軍單位+100%[ICON_STRENGTH]戰鬥力。+2[ICON_MOVES]移動力</Text>
 		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_GOLDEN_PERSONAL_GUARD">
+			<Text>黃金親衛</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_GOLDEN_PERSONAL_GUARD_HELP">
+			<Text>
+				[ICON_BULLET]兩環內每一個大軍事家為自身+25%戰鬥力（上限50%）。
+			</Text>
+		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SP_FULL_MOON_STRIKE">
 			<Text>滿月突擊</Text>
 		</Row>

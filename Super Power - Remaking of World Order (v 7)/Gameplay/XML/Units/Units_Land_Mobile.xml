@@ -2039,7 +2039,7 @@
 		</Row>
 		<Row>
 			<UnitType>UNIT_MONGOLIAN_KESHIK</UnitType>
-			<PromotionType>PROMOTION_GENERAL_STACKING</PromotionType>
+			<PromotionType>PROMOTION_GOLDEN_PERSONAL_GUARD</PromotionType>
 		</Row>
 		<Row>
 			<UnitType>UNIT_MONGOLIAN_KESHIK</UnitType>

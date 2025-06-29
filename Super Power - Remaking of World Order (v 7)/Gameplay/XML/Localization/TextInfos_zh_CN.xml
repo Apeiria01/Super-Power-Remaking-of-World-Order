@@ -13977,6 +13977,14 @@
 		<Row Tag="TXT_KEY_PROMOTION_MULTIPURPOSE_DESTROYER_HELP">
 			<Text>+1攻击次数（可叠加）。[NEWLINE]对潜艇和空军单位+100%[ICON_STRENGTH]战斗力。+2[ICON_MOVES]移动力。</Text>
 		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_GOLDEN_PERSONAL_GUARD">
+			<Text>黄金亲卫</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_GOLDEN_PERSONAL_GUARD_HELP">
+			<Text>
+				[ICON_BULLET]两环内每一个大军事家为自身+25%战斗力（上限50%）。
+			</Text>
+		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SP_FULL_MOON_STRIKE">
 			<Text>满月突击</Text>
 		</Row>
