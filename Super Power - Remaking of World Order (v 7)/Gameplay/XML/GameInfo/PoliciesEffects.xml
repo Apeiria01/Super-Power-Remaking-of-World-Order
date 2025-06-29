@@ -2356,7 +2356,7 @@
 			<BuildingType>BUILDING_POLICY_MERCHANT_NAVY_FREE</BuildingType>
 			<UnitClassType>UNITCLASS_CARGO_SHIP</UnitClassType>
 			<YieldType>YIELD_FAITH</YieldType>
-			<CostModifier>200</CostModifier>
+			<CostModifier>150</CostModifier>
 		</Row>
 	</Building_EnableUnitPurchase>
 
