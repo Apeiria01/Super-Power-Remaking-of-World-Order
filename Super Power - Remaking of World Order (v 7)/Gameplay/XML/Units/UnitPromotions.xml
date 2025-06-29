@@ -199,6 +199,22 @@
 	<!--*****************************Unique Promotions*******************************************-->
 	<UnitPromotions>
 		<Row>
+			<Type>PROMOTION_GOLDEN_PERSONAL_GUARD</Type>
+			<Description>TXT_KEY_PROMOTION_GOLDEN_PERSONAL_GUARD</Description>
+			<Help>TXT_KEY_PROMOTION_GOLDEN_PERSONAL_GUARD_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<PortraitIndex>32</PortraitIndex>
+			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_GOLDEN_PERSONAL_GUARD</PediaEntry>
+			<CombatBonusFromNearbyUnitPromotion>PROMOTION_GREAT_GENERAL</CombatBonusFromNearbyUnitPromotion>
+			<NearbyUnitPromotionBonus>25</NearbyUnitPromotionBonus>
+			<NearbyUnitPromotionBonusRange>2</NearbyUnitPromotionBonusRange>
+			<NearbyUnitPromotionBonusMax>50</NearbyUnitPromotionBonusMax>
+		</Row>
+		
+		<Row>
 			<Type>PROMOTION_SP_FULL_MOON_STRIKE</Type>
 			<Description>TXT_KEY_PROMOTION_SP_FULL_MOON_STRIKE</Description>
 			<Help>TXT_KEY_PROMOTION_SP_FULL_MOON_STRIKE_HELP</Help>
@@ -224,6 +240,7 @@
 			<FightWellDamaged>true</FightWellDamaged>
 			<CurrentHitPointAttackMod>1</CurrentHitPointAttackMod>
 		</Row>
+
 		<Row>
 			<Type>PROMOTION_ROARING_ELEPHANT</Type>
 			<Description>TXT_KEY_PROMOTION_ROARING_ELEPHANT</Description>

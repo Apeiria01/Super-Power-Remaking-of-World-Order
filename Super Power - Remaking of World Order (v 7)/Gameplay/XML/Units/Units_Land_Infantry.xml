@@ -2098,23 +2098,7 @@
 			<UnitType>UNIT_SWEDISH_CAROLEAN</UnitType>
 			<PromotionType>PROMOTION_SUNDER_1</PromotionType>
 		</Row>
-		<!--
-		<Row>
-			<UnitType>UNIT_SWEDISH_CAROLEAN</UnitType>
-			<PromotionType>PROMOTION_SUNDER_2</PromotionType>
-		</Row>
-		-->
-		<!--sunder 1 replace !
-		<Row>
-			<UnitType>UNIT_SWEDISH_CAROLEAN</UnitType>
-			<PromotionType>PROMOTION_GENERAL_STACKING</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_SWEDISH_CAROLEAN</UnitType>
-			<PromotionType>PROMOTION_MOBILITY</PromotionType>
-		</Row>-->
-		
-		
+
 		<Row>
 			<UnitType>UNIT_CELT_BLACKWATCH</UnitType>
 			<PromotionType>PROMOTION_GUNPOWDER_INFANTRY_COMBAT</PromotionType>

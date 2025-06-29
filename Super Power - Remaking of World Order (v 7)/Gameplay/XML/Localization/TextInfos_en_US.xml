@@ -15982,6 +15982,14 @@
 			</Text>
 		</Row>
 		
+		<Row Tag="TXT_KEY_PROMOTION_GOLDEN_PERSONAL_GUARD">
+			<Text>Golden Personal Guard</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_GOLDEN_PERSONAL_GUARD_HELP">
+			<Text>
+				[ICON_BULLET]+25% Combat Strength for each Great General within 2 ring plots (maximum +50%).
+			</Text>
+		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SP_FULL_MOON_STRIKE">
 			<Text>Full Moon Strike</Text>
 		</Row>
