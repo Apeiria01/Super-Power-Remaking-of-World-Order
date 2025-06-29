@@ -612,6 +612,7 @@
 			<IconAtlas>EXPANSION_UNIT_ATLAS_1</IconAtlas>
 			<PortraitIndex>2</PortraitIndex>
 			<ExtraMaintenanceCost>4</ExtraMaintenanceCost>
+			<ExtraXPValueAttack>4</ExtraXPValueAttack>
 		</Row>
 		<Row>
 			<Class>UNITCLASS_CATAPULT</Class>

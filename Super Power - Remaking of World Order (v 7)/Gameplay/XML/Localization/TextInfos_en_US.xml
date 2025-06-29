@@ -12868,7 +12868,7 @@
 	</Replace>
 
 	<Replace Tag="TXT_KEY_UNIT_HELP_HUN_BATTERING_RAM">
-		<Text>The Battering Ram is a Hunnic unique unit that replaces the Catapult, designed to break through the defenses of enemy cities. It has a high bonus against cities and only requires a Barracks to be built, but it is defenseless against melee attacks.</Text>
+		<Text>The Battering Ram is a Hunnic unique unit that replaces the Catapult, designed to break through the defenses of enemy cities. It has a high bonus against cities, can gain an additional 4 xp when attacking (Not inheritable). and only requires a Barracks to be built, but it is defenseless against melee attacks.</Text>
 	</Replace>
 	<Replace Tag="TXT_KEY_UNIT_HELP_ASSYRIAN_SIEGE_TOWER">
 		<Text>Powerful melee siege unit that replaces the Catapult. It grants a city attack bonus to all nearby units. May only be built by the Assyrians.</Text>
