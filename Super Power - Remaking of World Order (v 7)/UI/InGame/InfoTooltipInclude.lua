@@ -2377,16 +2377,16 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		local buildingUnlocked = GameInfo.Buildings[ row.BuildingType ]
 		SetKey( buildingsUnlocked, buildingUnlocked and buildingUnlocked.BuildingClass )
 	end
-	for row in GameInfo.Building_BuildingsNeededInCity{ PreBuildingType = buildingType } do
-		local buildingUnlocked = GameInfo.Buildings[ row.BuildingType ]
-		SetKey( buildingsUnlocked, buildingUnlocked and buildingUnlocked.BuildingClass )
-	end
 	items = {}
 	for buildingUnlocked in pairs(buildingsUnlocked) do
 		buildingUnlocked = GetCivBuilding( activeCivilizationType, buildingUnlocked )
-		if buildingUnlocked then
+		if buildingUnlocked and GameInfo.Building_ClassesNeededInCity{ BuildingType = buildingUnlocked.Type, BuildingClassType = buildingClassType }() then
 			insert( items, BuildingColor( L(buildingUnlocked.Description) ) )
 		end
+	end
+	for row in GameInfo.Building_BuildingsNeededInCity{ PreBuildingType = buildingType } do
+		local buildingUnlocked = GameInfo.Buildings[ row.BuildingType ]
+		insert( items, BuildingColor( L(buildingUnlocked.Description) ) )
 	end
 	if #items > 0 then
 		insert( tips, L"TXT_KEY_PEDIA_BLDG_UNLOCK_LABEL" .. " " .. concat( items, ", ") )
@@ -2398,16 +2398,16 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		local buildingUnlocked = GameInfo.Buildings[ row.BuildingType ]
 		SetKey( buildingsUnlockedGlobal, buildingUnlocked and buildingUnlocked.BuildingClass )
 	end
-	for row in GameInfo.Building_BuildingsNeededGlobal{ PreBuildingType = buildingType } do
-		local buildingUnlocked = GameInfo.Buildings[ row.BuildingType ]
-		SetKey( buildingsUnlockedGlobal, buildingUnlocked and buildingUnlocked.BuildingClass )
-	end
 	items = {}
 	for buildingUnlocked in pairs(buildingsUnlockedGlobal) do
 		buildingUnlocked = GetCivBuilding( activeCivilizationType, buildingUnlocked )
-		if buildingUnlocked then
+		if buildingUnlocked and GameInfo.Building_ClassesNeededGlobal{ BuildingType = buildingUnlocked.Type, BuildingClassType = buildingClassType }() then
 			insert( items, BuildingColor( L(buildingUnlocked.Description) ) )
 		end
+	end
+	for row in GameInfo.Building_BuildingsNeededGlobal{ PreBuildingType = buildingType } do
+		local buildingUnlocked = GameInfo.Buildings[ row.BuildingType ]
+		insert( items, BuildingColor( L(buildingUnlocked.Description) ) )
 	end
 	if #items > 0 then
 		insert( tips, L"TXT_KEY_BUILDIND_UNLOCKED_GLOBAL_SP" .. " " .. concat( items, ", ") )
