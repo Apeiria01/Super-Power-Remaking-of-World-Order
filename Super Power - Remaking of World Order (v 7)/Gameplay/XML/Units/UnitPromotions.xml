@@ -204,8 +204,8 @@
 			<Help>TXT_KEY_PROMOTION_GOLDEN_PERSONAL_GUARD_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<CannotBeChosen>true</CannotBeChosen>
-			<PortraitIndex>32</PortraitIndex>
-			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
+			<PortraitIndex>51</PortraitIndex>
+			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_GOLDEN_PERSONAL_GUARD</PediaEntry>
 			<CombatBonusFromNearbyUnitPromotion>PROMOTION_GREAT_GENERAL</CombatBonusFromNearbyUnitPromotion>
