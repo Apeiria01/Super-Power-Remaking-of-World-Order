@@ -1993,6 +1993,8 @@
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_MELEE</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_SHOCK_1</PediaEntry>
+			<PromotionPrereqOr1>PROMOTION_KNIGHT_COMBAT</PromotionPrereqOr1>
+			<PromotionPrereqOr2>PROMOTION_TANK_COMBAT</PromotionPrereqOr2>
 		</Row>
 		<Row>
 			<Type>PROMOTION_HEAVY_SHOCK_2</Type>
@@ -2033,6 +2035,8 @@
 			<PediaType>PEDIA_MELEE</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_CHARGE_1</PediaEntry>
 			<HeavyChargeAddMoves>1</HeavyChargeAddMoves>
+			<PromotionPrereqOr1>PROMOTION_KNIGHT_COMBAT</PromotionPrereqOr1>
+			<PromotionPrereqOr2>PROMOTION_TANK_COMBAT</PromotionPrereqOr2>
 		</Row>
 		<Row>
 			<Type>PROMOTION_CHARGE_2</Type>
@@ -2783,6 +2787,8 @@
 			<IconAtlas>EXPANSION_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_NAVAL</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_BOARDING_PARTY_1</PediaEntry>
+			<PromotionPrereqOr1>PROMOTION_NAVALMELEE_COMBAT</PromotionPrereqOr1>
+			<PromotionPrereqOr2>PROMOTION_DESTROYER_COMBAT</PromotionPrereqOr2>
 		</Row>
 		<Row>
 			<Type>PROMOTION_BOARDING_PARTY_2</Type>
@@ -3746,6 +3752,7 @@
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_NAVAL</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_CARRIER_SUPPLY_1</PediaEntry>
+			<PromotionPrereqOr1>PROMOTION_CARRIER_UNIT</PromotionPrereqOr1>
 		</Row>
 		<Row>
 			<Type>PROMOTION_CARRIER_SUPPLY_2</Type>
@@ -3814,6 +3821,7 @@
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_AIR</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_CARRIER_FIGHTER_ANTI_AIR_1</PediaEntry>
+			<PromotionPrereqOr1>PROMOTION_CARRIER_UNIT</PromotionPrereqOr1>
 		</Row>
 		<Row>
 			<Type>PROMOTION_CARRIER_FIGHTER_ANTI_AIR_2</Type>
@@ -3871,6 +3879,7 @@
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_AIR</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_CARRIER_FIGHTER_ATTACK_1</PediaEntry>
+			<PromotionPrereqOr1>PROMOTION_CARRIER_UNIT</PromotionPrereqOr1>
 		</Row>
 		<Row>
 			<Type>PROMOTION_CARRIER_FIGHTER_ATTACK_2</Type>
@@ -3896,6 +3905,7 @@
 			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_AIR</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_CARRIER_FIGHTER_SIEGE_1</PediaEntry>
+			<PromotionPrereqOr1>PROMOTION_CARRIER_UNIT</PromotionPrereqOr1>
 		</Row>
 		<Row>
 			<Type>PROMOTION_CARRIER_FIGHTER_SIEGE_2</Type>
