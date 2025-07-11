@@ -570,7 +570,7 @@
 
 		
 		<Update>
-			<Set Value="6"/>
+			<Set Value="8"/>
 			<Where Name="RELIGION_MIN_FAITH_FIRST_PANTHEON" />
 		</Update>
 		<Update>
