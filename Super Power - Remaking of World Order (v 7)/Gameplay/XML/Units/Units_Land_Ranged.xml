@@ -1440,11 +1440,7 @@
 		</Row>
 		<Row>
 			<UnitType>UNIT_ASSYRIAN_SIEGE_TOWER</UnitType>
-			<PromotionType>PROMOTION_ARMOR_BATTLESHIP_1</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_ASSYRIAN_SIEGE_TOWER</UnitType>
-			<PromotionType>PROMOTION_ARMOR_BATTLESHIP_2</PromotionType>
+			<PromotionType>PROMOTION_HEAVY_ARMOR</PromotionType>
 		</Row>
 		<Row>
 			<UnitType>UNIT_ASSYRIAN_SIEGE_TOWER</UnitType>

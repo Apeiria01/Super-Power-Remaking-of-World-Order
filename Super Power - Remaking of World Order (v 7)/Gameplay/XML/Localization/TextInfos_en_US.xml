@@ -15308,9 +15308,15 @@
 			<Text>+33% [ICON_STRENGTH] Combat Strength when [COLOR_POSITIVE_TEXT]Defending[ENDCOLOR].</Text>
 		</Row>
 
-
-
-
+		<Row Tag="TXT_KEY_PROMOTION_HEAVY_ARMOR">
+			<Text>Heavy Armor</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_HEAVY_ARMOR_HELP">
+			<Text>
+				[ICON_BULLET]+33% [ICON_STRENGTH] Combat Strength when [COLOR_POSITIVE_TEXT]Defending[ENDCOLOR].
+				[NEWLINE][ICON_BULLET]Final damage taken reduced by 5.
+			</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_DRONE_CARRIER">
 			<Text>UAV Carrier</Text>

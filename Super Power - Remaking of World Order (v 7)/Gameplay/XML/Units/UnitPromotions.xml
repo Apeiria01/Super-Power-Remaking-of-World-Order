@@ -3553,28 +3553,17 @@
 			<DefenseMod>33</DefenseMod>
 		</Row>
 		<Row>
-			<Type>PROMOTION_ARMOR_TURTLESHIP_1</Type>
-			<Description>TXT_KEY_PROMOTION_ARMOR_BATTLESHIP_1</Description>
-			<Help>TXT_KEY_PROMOTION_ARMOR_BATTLESHIP_1_HELP</Help>
+			<Type>PROMOTION_HEAVY_ARMOR</Type>
+			<Description>TXT_KEY_PROMOTION_HEAVY_ARMOR</Description>
+			<Help>TXT_KEY_PROMOTION_HEAVY_ARMOR_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>12</PortraitIndex>
-			<PromotionPrereqOr1>PROMOTION_NAVAL_CAPITAL_SHIP</PromotionPrereqOr1>
-			<IconAtlas>EXPANSION2_PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_NAVAL</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_ARMOR_BATTLESHIP_1</PediaEntry>
+			<PortraitIndex>52</PortraitIndex>
+			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_HEAVY_ARMOR</PediaEntry>
 			<DefenseMod>33</DefenseMod>
-		</Row>
-		<Row>
-			<Type>PROMOTION_ARMOR_TURTLESHIP_2</Type>
-			<Description>TXT_KEY_PROMOTION_ARMOR_BATTLESHIP_2</Description>
-			<Help>TXT_KEY_PROMOTION_ARMOR_BATTLESHIP_2_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>13</PortraitIndex>
-			<PromotionPrereqOr1>PROMOTION_ARMOR_BATTLESHIP_1</PromotionPrereqOr1>
-			<IconAtlas>EXPANSION2_PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_NAVAL</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_ARMOR_BATTLESHIP_2</PediaEntry>
-			<DefenseMod>33</DefenseMod>
+			<ChangeDamageValue>-5</ChangeDamageValue>
+			<CannotBeChosen>true</CannotBeChosen>
 		</Row>
 
 
