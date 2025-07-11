@@ -507,7 +507,7 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
             if UnitChangeDamageValue ~= 0 and pMyUnit:GetDomainType() ~= DomainTypes.DOMAIN_AIR then
                 controlTable = g_MyCombatDataIM:GetInstance();
 				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_CHANGE_DAMAGEVALUE_SUPPORT_SP");
-				controlTable.Value:SetText(": [COLOR_CYAN]".. ChangeDamageValue .. "[ENDCOLOR]");
+				controlTable.Value:SetText(": [COLOR_CYAN]".. UnitChangeDamageValue .. "[ENDCOLOR]");
             end
 
 			-- Attack Modifier

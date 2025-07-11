@@ -2509,11 +2509,7 @@
 		</Row>
 		<Row>
 			<UnitType>UNIT_KOREAN_TURTLE_SHIP</UnitType>
-			<PromotionType>PROMOTION_ARMOR_TURTLESHIP_1</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_KOREAN_TURTLE_SHIP</UnitType>
-			<PromotionType>PROMOTION_ARMOR_TURTLESHIP_2</PromotionType>
+			<PromotionType>PROMOTION_HEAVY_ARMOR</PromotionType>
 		</Row>
 		
 		

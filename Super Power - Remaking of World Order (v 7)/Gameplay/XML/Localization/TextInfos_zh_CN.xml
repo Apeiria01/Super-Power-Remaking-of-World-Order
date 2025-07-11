@@ -13412,6 +13412,16 @@
 			<Text>+33%[ICON_STRENGTH]防御力。</Text>
 		</Row>
 
+		<Row Tag="TXT_KEY_PROMOTION_HEAVY_ARMOR">
+			<Text>重装防御</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_HEAVY_ARMOR_HELP">
+			<Text>
+				[ICON_BULLET]+33%[ICON_STRENGTH]防御力。
+				[NEWLINE][ICON_BULLET]受到的最终伤害-5。
+			</Text>
+		</Row>
+
 		<Row Tag="TXT_KEY_PROMOTION_DRONE_CARRIER">
 			<Text>无人机载体</Text>
 		</Row>

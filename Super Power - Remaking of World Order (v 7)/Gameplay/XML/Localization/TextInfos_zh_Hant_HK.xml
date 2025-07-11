@@ -13239,6 +13239,17 @@
 		<Row Tag="TXT_KEY_PROMOTION_ARMOR_BATTLESHIP_2_HELP">
 			<Text>+33%[ICON_STRENGTH]防禦力。</Text>
 		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_HEAVY_ARMOR">
+			<Text>重裝防禦</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_HEAVY_ARMOR_HELP">
+			<Text>
+				[ICON_BULLET]+33%[ICON_STRENGTH]防禦力。
+				[NEWLINE][ICON_BULLET]受到的最終傷害-5。
+			</Text>
+		</Row>
+
 		<Row Tag="TXT_KEY_PROMOTION_DRONE_CARRIER">
 			<Text>無人機載體</Text>
 		</Row>
