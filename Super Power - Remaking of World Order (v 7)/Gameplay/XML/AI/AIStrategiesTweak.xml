@@ -498,7 +498,7 @@
 			<Where Name="MINOR_CIV_GLOBAL_QUEST_MIN_TURNS_BETWEEN" />
 		</Update>
 		<Update>
-			<Set Value="10"/>
+			<Set Value="5"/>
 			<Where Name="MINOR_CIV_GLOBAL_QUEST_RAND_TURNS_BETWEEN" />
 		</Update>
 		<Update>
@@ -508,6 +508,10 @@
 		<Update>
 			<Set Value="300"/>
 			<Where Name="MINOR_LIBERATION_FRIENDSHIP" />
+		</Update>
+		<Update>
+			<Set Value="20"/>
+			<Where Name="MINOR_QUEST_STANDARD_CONTEST_LENGTH" />
 		</Update>
 		
 	</Defines>
