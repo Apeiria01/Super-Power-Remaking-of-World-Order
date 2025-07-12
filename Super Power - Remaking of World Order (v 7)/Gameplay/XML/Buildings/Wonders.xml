@@ -1068,7 +1068,7 @@
 			<ArtDefineTag>THE GREAT LIBRARY</ArtDefineTag>
 			<MaxStartEra>ERA_CLASSICAL</MaxStartEra>
 			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
-			<GreatPeopleRateChange>1</GreatPeopleRateChange>
+			<GreatPeopleRateChange>2</GreatPeopleRateChange>
 			<NukeImmune>true</NukeImmune>
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
