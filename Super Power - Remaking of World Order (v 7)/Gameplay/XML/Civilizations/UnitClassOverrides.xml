@@ -544,6 +544,11 @@
 
 		<Row>
 			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<UnitClassType>UNITCLASS_SCOUT</UnitClassType>
+			<UnitType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
 			<UnitClassType>UNITCLASS_CARGO_SHIP</UnitClassType>
 			<UnitType/>
 		</Row>
