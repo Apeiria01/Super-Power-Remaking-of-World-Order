@@ -2160,7 +2160,7 @@ function TipHandler(Button)
 
         local unitClassText;
 
-        toolTipString = toolTipString .. "[NEWLINE]" .. "------------------------" .. "[NEWLINE]" --ÐÞ¸Ä
+        toolTipString = toolTipString .. "[NEWLINE]------------------------[NEWLINE]"
 
         if activePlayer then
             productionCost = activePlayer:GetUnitProductionNeeded(unit:GetUnitType())
@@ -2181,8 +2181,7 @@ function TipHandler(Button)
 
         local iExtraMaintenanceCost = unit2.ExtraMaintenanceCost + unit:GetPromotionMaintenanceCost()
         if iExtraMaintenanceCost ~= 0 then -- ExtraMaintenanceCost cost
-            toolTipString = toolTipString ..
-                " " .. Locale.ConvertTextKey("TXT_KEY_PEDIA_MAINT_LABEL") .. -iExtraMaintenanceCost .. "[ICON_GOLD]"
+            toolTipString = toolTipString .. " " .. Locale.ConvertTextKey("TXT_KEY_PEDIA_MAINT_LABEL") .. " ".. -iExtraMaintenanceCost .. "[ICON_GOLD]"
         end
 
         -- Resources required:

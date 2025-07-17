@@ -14511,10 +14511,6 @@
 			<Text>+{1_Heal}%最大生命值回复</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_FREEPROMOTIONS">
-			<Text>[COLOR_CYAN]免费晋升:[ENDCOLOR]</Text>
-		</Replace>
-
 		<Replace Tag="TXT_KEY_PEDIA_MAXHP_LABEL_SP">
 			<Text>生命值上限:</Text>
 		</Replace>

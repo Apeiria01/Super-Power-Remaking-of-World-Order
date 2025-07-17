@@ -299,10 +299,6 @@
 			<Text>+{1_Heal}% Max HitPoints Heal</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_FREEPROMOTIONS">
-			<Text>[COLOR_CYAN]Free Promotions:[ENDCOLOR]</Text>
-		</Replace>
-
 		<Replace Tag="TXT_KEY_PEDIA_MAXHP_LABEL_SP">
 			<Text>Max Hitpoints:</Text>
 		</Replace>
@@ -17093,7 +17089,7 @@
 		<Replace Tag="TXT_KEY_PEDIA_RESOURCES_NEED">
 			<Text>Resource:</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_FREE PROMOTIONS">
+		<Replace Tag="TXT_KEY_FREEPROMOTIONS">
 			<Text>[COLOR_CYAN]unit promotions: [ENDCOLOR]</Text>
 		</Replace>
 

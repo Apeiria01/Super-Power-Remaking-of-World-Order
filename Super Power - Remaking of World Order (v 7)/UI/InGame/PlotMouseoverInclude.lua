@@ -334,6 +334,7 @@ function GetUnitsString(plot)
 			if (pPlayer:GetNickName() ~= nil and pPlayer:GetNickName() ~= "") then
 				curUnitText = Locale.ConvertTextKey("TXT_KEY_PLOTROLL_UNIT_DESCRIPTION_PLAYER", pPlayer:GetNickName(), curUnitText);
 			end
+			--if unit:IsCheat() then curUnitText = curUnitText .. " " end
 			
 			local unitTeam = unit:GetTeam();
 			if iActiveTeam == unitTeam then
