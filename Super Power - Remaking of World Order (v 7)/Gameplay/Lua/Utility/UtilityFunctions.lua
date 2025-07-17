@@ -549,6 +549,7 @@ end
 
 function AINewUnitSetUp(NewUnit, NewUnitEXP)
 	NewUnit:SetExperience(NewUnitEXP)
+	NewUnit:SetIsCheat(true)
 
 	if NewUnit == nil then
 		return
