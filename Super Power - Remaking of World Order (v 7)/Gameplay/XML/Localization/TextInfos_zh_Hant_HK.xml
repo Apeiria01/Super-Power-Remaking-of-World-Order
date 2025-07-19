@@ -8060,6 +8060,12 @@
 		<Row Tag="TXT_KEY_BELIEF_SONE_OF_SIREN">
 			<Text>來自環礁的基礎產出翻倍，沿海城市+2[ICON_PEACE]信仰</Text>
 		</Row>
+		<Row Tag="TXT_KEY_BELIEF_SACRED_RITES_SHORT">
+			<Text>聖禋</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_SACRED_RITES">
+			<Text>臨近城市的石祭壇+1[ICON_PEACE]信仰</Text>
+		</Row>
 		<Row Tag="TXT_KEY_BELIEF_SLASH_AND_BURN_SHORT">
 			<Text>刀耕火種</Text>
 		</Row>
