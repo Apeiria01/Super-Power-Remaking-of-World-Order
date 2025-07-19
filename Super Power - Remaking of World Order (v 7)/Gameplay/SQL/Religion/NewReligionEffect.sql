@@ -23,6 +23,9 @@ WHERE FeatureType = 'FEATURE_ATOLL';
 INSERT INTO Belief_CoastalCityYieldChanges (BeliefType,YieldType,Yield)
 SELECT 'BELIEF_SONE_OF_SIREN','YIELD_FAITH',2;
 
+INSERT INTO Belief_ImprovementAdjacentCityYieldChanges (BeliefType,ImprovementType,YieldType,Yield)
+SELECT 'BELIEF_SACRED_RITES','IMPROVEMENT_CAIRN','YIELD_FAITH',1;
+
 INSERT INTO Belief_CuttingInstantYieldModifier(BeliefType,YieldType,Modifier)
 SELECT 'BELIEF_SLASH_AND_BURN','YIELD_FAITH',33 UNION ALL
 SELECT 'BELIEF_SLASH_AND_BURN','YIELD_FOOD',33;
