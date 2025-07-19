@@ -17,35 +17,6 @@ end
 GameEvents.PlayerCityFounded.Add(FreeUnitNewCity)
 
 -- ********************************************************
--- POLICY_WARRIOR_CODE
--- ******************************************************** 
-function SPEConquestedCity(oldOwnerID, isCapital, cityX, cityY, newOwnerID, numPop, isConquest)
-    local pPlayer = Players[newOwnerID]
-    local capturedPlayer = Players[oldOwnerID]
-	if pPlayer == nil or capturedPlayer == nil then
-	 	return
-	end
-
-	if pPlayer:HasPolicy(GameInfoTypes["POLICY_WARRIOR_CODE"]) then  
-		local conquestedCityPlot = Map.GetPlot(cityX, cityY)
-		local pCity = conquestedCityPlot:GetPlotCity()
-		if pCity == nil then return end
-
-		local pTeam = Teams[pPlayer:GetTeam()]
-		if pTeam == nil then return end
-
-		if pTeam:IsHasTech(GameInfoTypes["TECH_MATHEMATICS"])
-		and isConquest
-		and newOwnerID ~= pCity:GetOriginalOwner()
-		then 
-			pCity:SetNumRealBuildingClass(GameInfo.BuildingClasses.BUILDINGCLASS_COURTHOUSE.ID,1)
-		end 				
-	end
-
-end
-GameEvents.CityCaptureComplete.Add(SPEConquestedCity) 
-
--- ********************************************************
 -- POLICY_CITIZENSHIP
 -- ******************************************************** 
 local iPolicyCitizenship = GameInfo.Policies["POLICY_CITIZENSHIP"].ID;

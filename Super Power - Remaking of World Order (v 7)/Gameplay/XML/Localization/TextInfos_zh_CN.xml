@@ -6839,10 +6839,10 @@
 		<Replace Tag="TXT_KEY_POLICY_WARRIOR_CODE_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]尚武精神[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]军营，军械所，兵工厂，军事基地+1[ICON_PRODUCTION]产能。[ICON_PUPPET]傀儡城市+6[ICON_GOLD]金钱。
-				[NEWLINE][ICON_BULLET]马厩，冶铁坊，城墙，城堡+2[ICON_CULTURE]文化。
+				[NEWLINE][ICON_BULLET]军营、军械所+1[ICON_PRODUCTION]产能，兵工厂、军事基地+2[ICON_PRODUCTION]产能。
+				[NEWLINE][ICON_BULLET]马厩、冶铁坊、城墙、城堡+2[ICON_CULTURE]文化。
 				[NEWLINE][ICON_BULLET]建造军事单位时+15%[ICON_PRODUCTION]产能。
-				[NEWLINE][ICON_BULLET]研发数学后，攻占敌方城市赠送法院
+				[NEWLINE][ICON_BULLET]驻军可以消除来自[ICON_OCCUPIED]被占领城市的额外[ICON_HAPPINESS_4]不满。
 			</Text>
 		</Replace>
 
@@ -6885,7 +6885,8 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]军事传统[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]升级单位所需的[ICON_GOLD]金钱减少60%。
-				[NEWLINE][ICON_BULLET]军营，军械所，城墙，城堡,马厩和军事学院+1[ICON_HAPPINESS_1]快乐.
+				[NEWLINE][ICON_BULLET]军营、军械所、城墙、城堡、马厩和军事学院+1[ICON_HAPPINESS_1]快乐。
+				[NEWLINE][ICON_BULLET]城市规模达到[ICON_CITYBANNER_CITY_SMALL]小型城市及以上时+5[ICON_RES_MANPOWER]人力。
 			</Text>
 		</Replace>
 

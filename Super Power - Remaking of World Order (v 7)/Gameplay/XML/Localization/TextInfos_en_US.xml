@@ -7645,10 +7645,10 @@
 		<Replace Tag="TXT_KEY_POLICY_WARRIOR_CODE_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]Warrior Code[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]+1 [ICON_PRODUCTION] Production for every Barracks, Armory, Arsenal and Military Base. +6 [ICON_GOLD] Gold in [ICON_PUPPET] Puppet cities. 
+				[NEWLINE][ICON_BULLET]+1 [ICON_PRODUCTION] Production for every Barracks, Armory, +2 [ICON_PRODUCTION] Production for every Arsenal and Military Base.
 				[NEWLINE][ICON_BULLET]+2 [ICON_CULTURE] Culture for every Stable, Steal Mill, Walls and Castle. 
 				[NEWLINE][ICON_BULLET]+15% [ICON_PRODUCTION] Production when building Military Units. 
-				[NEWLINE][ICON_BULLET]get free Counthouse when you capture an enemy city (need Mathematics).
+				[NEWLINE][ICON_BULLET]Garrisoned Units can eliminate extra [ICON_HAPPINESS_4] Unhappiness from [ICON_OCCUPIED] Occupied City.
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_DISCIPLINE_HELP" >
@@ -7677,6 +7677,7 @@
 				[COLOR_POSITIVE_TEXT]Military Tradition[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]-60% [ICON_GOLD] Gold Cost for Unit Upgrade.
 				[NEWLINE][ICON_BULLET]+1 [ICON_HAPPINESS_1] for every Barracks, Armory, Walls, Castle, Stable and Military Academy.
+				[NEWLINE][ICON_BULLET]+5 [ICON_RES_MANPOWER] Manpower in the city reaches Population Size [ICON_CITYBANNER_CITY_SMALL] Small City.
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_PROFESSIONAL_ARMY">

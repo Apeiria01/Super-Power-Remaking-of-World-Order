@@ -172,7 +172,7 @@
 			<Where Type="POLICY_MILITARY_CASTE"/>
 		</Update>
 		<Update>
-			<Set GridX="5" GridY="2" GreatGeneralRateModifier="0" IncludesOneShotFreeUnits="false" PortraitIndex="4" MilitaryProductionModifier="15" />
+			<Set GridX="5" GridY="2" GreatGeneralRateModifier="0" IncludesOneShotFreeUnits="false" NoOccupiedUnhappinessGarrisonedCity="true" PortraitIndex="4" MilitaryProductionModifier="15" />
 			<Where Type="POLICY_WARRIOR_CODE"/>
 		</Update>
 		<Update>
