@@ -149,6 +149,9 @@ insert into Policy_CityResources (PolicyType, ResourceType, Quantity) values
 insert into Policy_CityResources (PolicyType, ResourceType, Quantity) values
 ('POLICY_REPUBLIC', 'RESOURCE_CONSUMER', 2);
 
+insert into Policy_CityResources (PolicyType, ResourceType, Quantity, CityScaleType, LargerScaleValid) values
+('POLICY_MILITARY_TRADITION', 'RESOURCE_MANPOWER', 5, 'CITYSCALE_SMALL', 1);
+
 insert into Policy_CityResources (PolicyType, ResourceType, Quantity, MustCoastal) values
 ('POLICY_MERCHANT_NAVY', 'RESOURCE_CONSUMER', 3, 1);
 
