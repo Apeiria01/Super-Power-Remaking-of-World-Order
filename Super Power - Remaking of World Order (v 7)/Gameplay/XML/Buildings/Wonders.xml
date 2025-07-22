@@ -1065,7 +1065,7 @@
 			<ArtDefineTag>THE GREAT LIBRARY</ArtDefineTag>
 			<MaxStartEra>ERA_CLASSICAL</MaxStartEra>
 			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
-			<GreatPeopleRateChange>2</GreatPeopleRateChange>
+			<GreatPeopleRateChange>3</GreatPeopleRateChange>
 			<NukeImmune>true</NukeImmune>
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
@@ -1105,7 +1105,6 @@
 			<PortraitIndex>1</PortraitIndex>
 			<WonderSplashImage>WonderMosuleumHalicarnassus.dds</WonderSplashImage>
 			<WonderSplashAudio>AS2D_WONDER_SPEECH_MAUSOLEUM_OF_HALICARNASSUS</WonderSplashAudio>
-			<UnmoddedHappiness>2</UnmoddedHappiness>
 		</Row>
 		<Row>
 			<Type>BUILDING_PYRAMID</Type>
