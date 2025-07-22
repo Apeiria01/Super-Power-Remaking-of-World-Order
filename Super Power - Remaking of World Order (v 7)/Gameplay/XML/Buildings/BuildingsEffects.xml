@@ -1147,11 +1147,6 @@
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>5</Yield>
 		</Row>
-		<Row>
-			<BuildingType>BUILDING_COLOSSUS</BuildingType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>5</Yield>
-		</Row>
 	
 		<Row>
 			<BuildingType>BUILDING_MONUMENT</BuildingType>
@@ -1232,11 +1227,6 @@
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_PYRAMID</BuildingType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_COLOSSUS</BuildingType>
 			<YieldType>YIELD_CULTURE</YieldType>
 			<Yield>1</Yield>
 		</Row>

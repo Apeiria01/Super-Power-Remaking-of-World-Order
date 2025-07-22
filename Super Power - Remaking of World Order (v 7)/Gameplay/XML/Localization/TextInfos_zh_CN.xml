@@ -1406,10 +1406,14 @@
 			<Set Text="所有城市-10%[ICON_CITIZEN]人口增长阈值。向所在城市赠送一个花园。" />
 		</Update>
 
-		<Update>
-			<Where Tag="TXT_KEY_WONDER_COLOSSUS_HELP" />
-			<Set Text="获得一条额外的商路和一艘免费的货船。[NEWLINE][NEWLINE]所有由此城市出发的商路+50%距离。城市必须沿海。[NEWLINE][NEWLINE]本城出发的商路+1[ICON_RESEARCH]科研、+1[ICON_CULTURE]文化。" />
-		</Update>
+		<Replace Tag="TXT_KEY_WONDER_COLOSSUS_HELP">
+			<Text>
+				[ICON_BULLET]获得一条额外的商路和一艘免费的货船。
+				[NEWLINE][ICON_BULLET]所有由此城市出发的海上商路+50%距离。
+				[NEWLINE][ICON_BULLET]本城出发的商路+1[ICON_RESEARCH]科研、+1[ICON_CULTURE]文化。
+				[NEWLINE][NEWLINE]城市必须沿海。
+			</Text>
+		</Replace>
 
 		<Update>
 			<Where Tag="TXT_KEY_WONDER_ORACLE_HELP" />
@@ -6597,7 +6601,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]传统政策[ENDCOLOR]适宜于繁荣精干的帝国。
 				[NEWLINE][NEWLINE]启用传统政策：
-				[NEWLINE][ICON_BULLET]使[ICON_CAPITAL]首都+3[ICON_CULTURE]文化，+3[ICON_RESEARCH]科研。
+				[NEWLINE][ICON_BULLET]使[ICON_CAPITAL]首都+3[ICON_CULTURE]文化、+3[ICON_RESEARCH]科研。
 				[NEWLINE][ICON_BULLET]首都出发的商路+3距离、+3[ICON_GOLD]金钱。
 				[NEWLINE][ICON_BULLET]城市地块扩张所需文化成本-25%。
 				[NEWLINE][ICON_BULLET]允许建造空中花园。
