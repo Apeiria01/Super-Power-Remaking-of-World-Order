@@ -1045,15 +1045,12 @@
 			<MinAreaSize>19</MinAreaSize>
 			<ConquestProb>100</ConquestProb>
 			<DisplayPosition>8</DisplayPosition>
-			<TradeRouteRecipientBonus>2</TradeRouteRecipientBonus>
-			<TradeRouteTargetBonus>2</TradeRouteTargetBonus>
 			<NumTradeRouteBonus>1</NumTradeRouteBonus>
 			<IconAtlas>BW_ATLAS_2</IconAtlas>
 			<PortraitIndex>4</PortraitIndex>
 			<WonderSplashImage>WonderConceptColossus.dds</WonderSplashImage>
 			<WonderSplashAudio>AS2D_WONDER_SPEECH_THE_COLOSSUS</WonderSplashAudio>
 			<TradeRouteSeaDistanceModifier>50</TradeRouteSeaDistanceModifier>
-			<TradeRouteLandDistanceModifier>50</TradeRouteLandDistanceModifier>
 		</Row>
 		<Row>
 			<Type>BUILDING_GREAT_LIBRARY</Type>
