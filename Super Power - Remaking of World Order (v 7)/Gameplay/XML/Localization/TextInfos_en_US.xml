@@ -3311,20 +3311,23 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_VENICE_FONDACO_HELP</Tag>
 			<Text>
-				Sea and land trade routes originating from this city have a 50% increase in range. 
+				[ICON_BULLET]Sea and land trade routes originating from this city have a 50% increase in range. 
 				[NEWLINE][ICON_BULLET]Serve as a [COLOR_YELLOW]Public Health and Sanitary Service Building[ENDCOLOR] for cities to continue its [ICON_CITIZEN] Population Growth.
 				[NEWLINE][ICON_BULLET]The entry of international migrants into City is not affected by the City Scale.
 			</Text>
 		</Row>
-		
-		
-		
+
 		<Replace Tag="TXT_KEY_BUILDING_CARAVANSARY_HELP">
-			<Text>Land International Trade Route from this city produces +6 [ICON_GOLD] Base Gold.</Text>
+			<Text>
+				[ICON_BULLET]Land trade routes originating from this city have a 20% increase in range. 
+				[NEWLINE][ICON_BULLET]Land International Trade Route from this city produces +6 [ICON_GOLD] Base Gold.
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_BAZAAR_HELP">
-			<Text>+2 [ICON_GOLD] Gold for every [ICON_RES_OIL] Oil and Oasis worked by this city.
-				[NEWLINE][NEWLINE]Land International Trade Route from this city produces +6 [ICON_GOLD] Base Gold.
+			<Text>
+				[ICON_BULLET]Land trade routes originating from this city have a 20% increase in range. 
+				[NEWLINE][ICON_BULLET]+2 [ICON_GOLD] Gold for every [ICON_RES_OIL] Oil and Oasis worked by this city.
+				[NEWLINE][ICON_BULLET]Land International Trade Route from this city produces +6 [ICON_GOLD] Base Gold.
 			</Text>
 		</Replace>
 

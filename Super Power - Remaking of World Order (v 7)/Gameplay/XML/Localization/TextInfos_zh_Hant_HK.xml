@@ -845,17 +845,23 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_VENICE_FONDACO_HELP</Tag>
 			<Text>
-				[ICON_BULLET][ICON_BULLET]從本城市出發的海陸商隊範圍增加50%。
+				[ICON_BULLET]從本城市出發的海陸商隊範圍增加50%。
 				[NEWLINE][ICON_BULLET]城市人口增長不受缺少衛生設施的影響。
 				[NEWLINE][ICON_BULLET]國際移民進入城市不受城市規模的影響。
 			</Text>
 		</Row>
 
 		<Replace Tag="TXT_KEY_BUILDING_CARAVANSARY_HELP">
-			<Text>通向其他文明的陸地商路額外+6基礎[ICON_GOLD]金幣。</Text>
+			<Text>
+				[ICON_BULLET]從本城市出發的陸地商隊範圍增加20%。
+				[NEWLINE][ICON_BULLET]通向其他文明的陸地商路+6基礎[ICON_GOLD]金幣。
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_BAZAAR_HELP">
-			<Text>本城市的每處[ICON_RES_OIL]石油和綠洲+2[ICON_GOLD]金幣產出。[NEWLINE][NEWLINE]通向其他文明的陸地商路額外+6基礎[ICON_GOLD]金幣。
+			<Text>
+				[ICON_BULLET]從本城市出發的陸地商隊範圍增加20%。
+				[NEWLINE][ICON_BULLET]本城每處[ICON_RES_OIL]石油和綠洲+2[ICON_GOLD]金幣產出。
+				[NEWLINE][ICON_BULLET]通向其他文明的陸地商路+6基礎[ICON_GOLD]金幣。
 			</Text>
 		</Replace>
 
