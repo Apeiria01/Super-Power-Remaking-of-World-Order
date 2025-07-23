@@ -166,7 +166,6 @@
 				<AIAdvancedStartPercent>135</AIAdvancedStartPercent>
 				<AIFreeXP>5</AIFreeXP>
 				<AIFreeXPPercent>100</AIFreeXPPercent>
-		
 			</Set>
 		</Update>
 
@@ -348,6 +347,7 @@
 				<AIFreeXPPercent>100</AIFreeXPPercent>
 				<StrategicResourceMod>100</StrategicResourceMod>
 				<StrategicResourceModPerEra>8</StrategicResourceModPerEra>
+				<AIFirstProphetPercent>100</AIFirstProphetPercent>
 			</Set>
 		</Update>
 
@@ -408,7 +408,8 @@
 				<AIFreeXP>5</AIFreeXP>
 				<AIFreeXPPercent>100</AIFreeXPPercent>
 				<StrategicResourceMod>100</StrategicResourceMod>
-				<StrategicResourceModPerEra>10</StrategicResourceModPerEra>			
+				<StrategicResourceModPerEra>10</StrategicResourceModPerEra>
+				<AIFirstProphetPercent>90</AIFirstProphetPercent>
 			</Set>
 		</Update>
 
@@ -470,6 +471,7 @@
 				<AIFreeXPPercent>100</AIFreeXPPercent>
 				<StrategicResourceMod>120</StrategicResourceMod>
 				<StrategicResourceModPerEra>10</StrategicResourceModPerEra>
+				<AIFirstProphetPercent>80</AIFirstProphetPercent>
 			</Set>
 		</Update>
 	</HandicapInfos>
