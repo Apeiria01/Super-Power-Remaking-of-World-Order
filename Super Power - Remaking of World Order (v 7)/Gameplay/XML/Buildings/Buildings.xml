@@ -1154,6 +1154,7 @@
 			<TradeRouteLandGoldBonus>600</TradeRouteLandGoldBonus>
 			<TradeRouteRecipientBonus>6</TradeRouteRecipientBonus>
 			<TradeRouteTargetBonus>6</TradeRouteTargetBonus>
+			<TradeRouteLandDistanceModifier>20</TradeRouteLandDistanceModifier>
 			<IconAtlas>EXPANSION2_BUILDING_ATLAS</IconAtlas>
 			<PortraitIndex>8</PortraitIndex>
 		</Row>
@@ -1176,6 +1177,7 @@
 			<TradeRouteLandGoldBonus>600</TradeRouteLandGoldBonus>
 			<TradeRouteRecipientBonus>6</TradeRouteRecipientBonus>
 			<TradeRouteTargetBonus>6</TradeRouteTargetBonus>
+			<TradeRouteLandDistanceModifier>20</TradeRouteLandDistanceModifier>
 			<IconAtlas>BW_ATLAS_1</IconAtlas>
 			<PortraitIndex>50</PortraitIndex>
 		</Row>

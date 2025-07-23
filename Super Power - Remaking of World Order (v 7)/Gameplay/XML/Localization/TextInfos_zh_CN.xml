@@ -878,11 +878,16 @@
 		</Row>
 
 		<Replace Tag="TXT_KEY_BUILDING_CARAVANSARY_HELP">
-			<Text>通向其他文明的陆地商路额外+6基础[ICON_GOLD]金钱。</Text>
+			<Text>
+				[ICON_BULLET]从本城市出发的陆地商队范围增加20%。
+				[NEWLINE][ICON_BULLET]通向其他文明的陆地商路+6基础[ICON_GOLD]金钱。
+			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_BAZAAR_HELP">
 			<Text>
-				本城市的每处[ICON_RES_OIL]石油和绿洲+2[ICON_GOLD]金钱产出。[NEWLINE][NEWLINE]通向其他文明的陆地商路额外+6基础[ICON_GOLD]金钱。
+				[ICON_BULLET]从本城市出发的陆地商队范围增加20%。
+				[NEWLINE][ICON_BULLET]本城每处[ICON_RES_OIL]石油和绿洲+2[ICON_GOLD]金钱产出。
+				[NEWLINE][ICON_BULLET]通向其他文明的陆地商路+6基础[ICON_GOLD]金钱。
 			</Text>
 		</Replace>
 
