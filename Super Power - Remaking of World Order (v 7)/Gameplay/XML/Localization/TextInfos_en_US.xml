@@ -10389,7 +10389,7 @@
 		<Replace Tag="TXT_KEY_TRAIT_ART_OF_WAR">
 			<Text>
 			[ICON_BULLET]All Land Units can earn points toward a [ICON_GOLDEN_AGE] Golden Age for each enemy killed (50% of its [ICON_STRENGTH] Combat Strength).
-			[NEWLINE][ICON_BULLET]In the Golden Age, the [ICON_CITIZEN] population growth of all cities requires -20% food, eliminates the [ICON_RESEARCH] increase in Research expenditures from the number of cities.
+			[NEWLINE][ICON_BULLET]In the Golden Age, the [ICON_CITIZEN] population growth of all cities requires -20% food, the [ICON_RESEARCH] increase in Research expenditures from the number of cities -80%.
 			</Text>
 		</Replace>
 
@@ -10400,7 +10400,7 @@
 			<Text>
 			China has entered a new [ICON_GOLDEN_AGE][COLOR_POSITIVE_TEXT]prosperity[ENDCOLOR]! 
 			[NEWLINE][NEWLINE]All gold-producing plots have an additional +1[ICON_GOLD] gold production, +20% national [ICON_PRODUCTION] production capacity, and [ICON_CULTURE] culture. 
-			[NEWLINE]The [ICON_CITIZEN] population growth of all cities requires -20% food, eliminates the increase in [ICON_RESEARCH] Research expenditure from the number of cities.
+			[NEWLINE]The [ICON_CITIZEN] population growth of all cities requires -20% food, the increase in [ICON_RESEARCH] Research expenditure from the number of cities -80%.
 			</Text>
 		</Row>
 
