@@ -8346,7 +8346,10 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_FIVE_YEAR_PLAN_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]Five-Year Plan[ENDCOLOR][NEWLINE]+1 [ICON_PRODUCTION] Production for every Mine, Quarry, Lumber Mill, Oil Well, Offshore Platform and Workboats.</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]Five-Year Plan[ENDCOLOR]
+				[NEWLINE]+1 [ICON_PRODUCTION] Production and +100% construction speed for every Mine, Quarry, Lumber Mill, Oil Well, Offshore Platform and Workboats.
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_DICTATORSHIP_PROLETARIAT_HELP" >
