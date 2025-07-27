@@ -7437,7 +7437,10 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_FIVE_YEAR_PLAN_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]五年計劃[ENDCOLOR][NEWLINE]每處礦井、採石場、伐木場、油井、海上鑽井平臺、捕撈船+1[ICON_PRODUCTION]生產力。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]五年計劃[ENDCOLOR]
+				[NEWLINE]每處礦井、採石場、伐木場、油井、海上鑽井平臺、捕撈船+1[ICON_PRODUCTION]生產力，+100%建造速度。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_DICTATORSHIP_PROLETARIAT_HELP">

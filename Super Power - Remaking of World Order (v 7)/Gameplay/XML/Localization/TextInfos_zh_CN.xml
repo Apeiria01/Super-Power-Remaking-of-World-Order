@@ -7541,7 +7541,10 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_FIVE_YEAR_PLAN_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]五年计划[ENDCOLOR][NEWLINE]每处矿井、采石场、伐木场、油井、海上钻井平台、捕捞船+1[ICON_PRODUCTION]产能。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]五年计划[ENDCOLOR]
+				[NEWLINE]每处矿井、采石场、伐木场、油井、海上钻井平台、捕捞船+1[ICON_PRODUCTION]产能，+100%建造速度。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_DICTATORSHIP_PROLETARIAT_HELP">

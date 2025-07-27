@@ -2392,4 +2392,42 @@
 			<Yield>1</Yield>
 		</Row>
 	</Policy_CityNumberCityYieldModifier>
+
+	<Policy_BuildSpeedModifier>
+		<Row>
+			<PolicyType>POLICY_FIVE_YEAR_PLAN</PolicyType>
+			<BuildType>BUILD_MINE</BuildType>
+			<Modifier>100</Modifier>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_FIVE_YEAR_PLAN</PolicyType>
+			<BuildType>BUILD_QUARRY</BuildType>
+			<Modifier>100</Modifier>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_FIVE_YEAR_PLAN</PolicyType>
+			<BuildType>BUILD_LUMBERMILL</BuildType>
+			<Modifier>100</Modifier>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_FIVE_YEAR_PLAN</PolicyType>
+			<BuildType>BUILD_WELL</BuildType>
+			<Modifier>100</Modifier>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_FIVE_YEAR_PLAN</PolicyType>
+			<BuildType>BUILD_OFFSHORE_PLATFORM</BuildType>
+			<Modifier>100</Modifier>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_FIVE_YEAR_PLAN</PolicyType>
+			<BuildType>BUILD_GAS_RIG_MOD</BuildType>
+			<Modifier>100</Modifier>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_FIVE_YEAR_PLAN</PolicyType>
+			<BuildType>BUILD_FISHING_BOATS</BuildType>
+			<Modifier>100</Modifier>
+		</Row>
+	</Policy_BuildSpeedModifier>
 </GameData>
