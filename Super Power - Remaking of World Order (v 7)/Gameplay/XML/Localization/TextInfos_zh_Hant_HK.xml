@@ -16463,5 +16463,21 @@
 		<Row Tag="TXT_KEY_MILITARY_PROMISE">
 			<Text>承諾撤軍</Text>
 		</Row>
+
+		<Replace Tag="TXT_KEY_FOODMOD_PLAYER">
+			<Text>[NEWLINE][ICON_BULLET]帝國修正值（余糧）：{1_Num}%</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOODMOD_CAPITAL">
+			<Text>[NEWLINE][ICON_BULLET][ICON_CAPITAL]首都修正值（余糧）：{1_Num}%</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOODMOD_RELIGION">
+			<Text>[NEWLINE][ICON_BULLET]宗教信條修正值（余糧）：{1_Num}%</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOODMOD_UNHAPPY">
+			<Text>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT][ICON_HAPPINESS_4]不滿度修正值（余糧）：{1_Num}%[ENDCOLOR]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOODMOD_WLTKD">
+			<Text>[NEWLINE][ICON_BULLET]王之日修正值（余糧）：{1_Num}%</Text>
+		</Replace>
 	</Language_zh_Hant_HK>
 </GameData>

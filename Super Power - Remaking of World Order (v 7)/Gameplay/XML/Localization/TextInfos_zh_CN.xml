@@ -16654,5 +16654,21 @@
 		<Row Tag="TXT_KEY_MILITARY_PROMISE">
 			<Text>承诺撤军</Text>
 		</Row>
+
+		<Replace Tag="TXT_KEY_FOODMOD_PLAYER">
+			<Text>[NEWLINE][ICON_BULLET]全文明修正（余粮）: {1_Num}%</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOODMOD_CAPITAL">
+			<Text>[NEWLINE][ICON_BULLET][ICON_CAPITAL]首都修正（余粮）: {1_Num}%</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOODMOD_RELIGION">
+			<Text>[NEWLINE][ICON_BULLET]宗教信条修正（余粮）: {1_Num}%</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOODMOD_UNHAPPY">
+			<Text>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT][ICON_HAPPINESS_4]不满修正（余粮）: {1_Num}%[ENDCOLOR]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOODMOD_WLTKD">
+			<Text>[NEWLINE][ICON_BULLET]我们爱领袖日修正（余粮）: {1_Num}%</Text>
+		</Replace>
 	</Language_zh_CN>
 </GameData>

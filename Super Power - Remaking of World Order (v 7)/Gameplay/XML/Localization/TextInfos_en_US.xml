@@ -7394,7 +7394,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]Tradition[ENDCOLOR] is best for "tall" empires.
 				[NEWLINE][NEWLINE]Opening Effect:
-				[NEWLINE][ICON_BULLET]+3 [ICON_CULTURE] and +3 [ICON_RESEARCH] Science in the [ICON_CAPITAL] Capital.
+				[NEWLINE][ICON_BULLET]+3 [ICON_CULTURE] Culture and +3 [ICON_RESEARCH] Science in the [ICON_CAPITAL] Capital.
 				[NEWLINE][ICON_BULLET]International trade routes from your Capital City +3 range and +3 [ICON_GOLD] Gold.
 				[NEWLINE][ICON_BULLET]-25% [ICON_CULTURE] Culture Exponent cost for acquiring new plots in all cities.
 				[NEWLINE][ICON_BULLET]Wonder Unlocked: Hanging Gardens.
@@ -7408,7 +7408,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]Aristocracy[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]New Cities start with an extra 1 [ICON_CITIZEN] Citizen. (But one Settler Unit still equals one Population)
-				[NEWLINE][ICON_BULLET]100% [ICON_FOOD] is carried over after a new [ICON_CITIZEN] Citizen is born for every Town (Cities with a [ICON_CITIZEN] Population less than 6). It won't be effective instantly but after the next new [ICON_CITIZEN] Citizen is born.
+				[NEWLINE][ICON_BULLET]100% [ICON_FOOD] Food is carried over after a new [ICON_CITIZEN] Citizen is born for every Town (Cities with a [ICON_CITIZEN] Population less than 6). It won't be effective instantly but after the next new [ICON_CITIZEN] Citizen is born.
 				[NEWLINE][ICON_BULLET]The accumulation of Food Kept and the accumulation of [ICON_FOOD] Food in all city immediately filled up.
 			</Text>
 		</Replace>
@@ -18297,5 +18297,21 @@
 		<Row Tag="TXT_KEY_MILITARY_PROMISE">
 			<Text>Promise withdraw Military</Text>
 		</Row>
+
+		<Replace Tag="TXT_KEY_FOODMOD_PLAYER">
+			<Text>[NEWLINE][ICON_BULLET]Empire Modifier (Difference): {1_Num}%</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOODMOD_CAPITAL">
+			<Text>[NEWLINE][ICON_BULLET][ICON_CAPITAL] Capital Modifier (Difference): {1_Num}%</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOODMOD_RELIGION">
+			<Text>[NEWLINE][ICON_BULLET]Religious Belief Modifier (Difference): {1_Num}%</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOODMOD_UNHAPPY">
+			<Text>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT][ICON_HAPPINESS_4] Unhappiness Modifier (Difference): {1_Num}%[ENDCOLOR]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOODMOD_WLTKD">
+			<Text>[NEWLINE][ICON_BULLET]We Love the King Day Modifier (Difference): {1_Num}%</Text>
+		</Replace>
 	</Language_en_US>
 </GameData>
