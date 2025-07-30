@@ -1074,7 +1074,7 @@
 			<BaseSightRange>2</BaseSightRange>
 			<Combat>160</Combat>
 			<RangedCombat>120</RangedCombat>
-			<Cost>380</Cost>
+			<Cost>450</Cost>
 			<Moves>6</Moves>
 			<Range>3</Range>
 			<HurryCostModifier>50</HurryCostModifier>
@@ -1102,7 +1102,7 @@
 			<PortraitIndex>24</PortraitIndex>
 			<MoveRate>WOODEN_BOAT</MoveRate>
 			<ProjectPrereq>PROJECT_NAVAL_EXPLORATION</ProjectPrereq>
-			<ExtraMaintenanceCost>22</ExtraMaintenanceCost>
+			<ExtraMaintenanceCost>24</ExtraMaintenanceCost>
 		</Row>
 		<Row>
 			<Class>UNITCLASS_SHIP_OF_THE_LINE</Class>
@@ -1111,7 +1111,7 @@
 			<BaseSightRange>2</BaseSightRange>
 			<Combat>140</Combat>
 			<RangedCombat>80</RangedCombat>
-			<Cost>450</Cost>
+			<Cost>360</Cost>
 			<Moves>8</Moves>
 			<Range>3</Range>
 			<HurryCostModifier>50</HurryCostModifier>
@@ -1139,7 +1139,7 @@
 			<PortraitIndex>2</PortraitIndex>
 			<MoveRate>WOODEN_BOAT</MoveRate>
 			<ProjectPrereq>PROJECT_NAVAL_EXPLORATION</ProjectPrereq>
-			<ExtraMaintenanceCost>24</ExtraMaintenanceCost>
+			<ExtraMaintenanceCost>18</ExtraMaintenanceCost>
 		</Row>
 
 

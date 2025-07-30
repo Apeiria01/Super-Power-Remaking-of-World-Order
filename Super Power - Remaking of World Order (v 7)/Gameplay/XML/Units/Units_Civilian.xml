@@ -545,8 +545,6 @@
 			<Type>UNIT_ARABIAN_PROPHET</Type>
 			<Cost>-1</Cost>
 			<Moves>4</Moves>
-			<!--<BaseGold>1000</BaseGold>
-			<NumGoldPerEra>400</NumGoldPerEra>-->
 			<BaseCultureTurnsToCount>4</BaseCultureTurnsToCount>
 			<Capture>UNITCLASS_PROPHET</Capture>
 			<CivilianAttackPriority>CIVILIAN_ATTACK_PRIORITY_HIGH</CivilianAttackPriority>

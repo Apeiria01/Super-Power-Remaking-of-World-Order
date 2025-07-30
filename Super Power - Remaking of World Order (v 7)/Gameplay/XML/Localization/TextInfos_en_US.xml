@@ -3325,7 +3325,8 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_BAZAAR_HELP">
 			<Text>
-				[ICON_BULLET]Land trade routes originating from this city have a 20% increase in range. 
+				[ICON_BULLET]+2 [ICON_PEACE] Faith.
+				[NEWLINE][ICON_BULLET]Land trade routes originating from this city have a 20% increase in range. 
 				[NEWLINE][ICON_BULLET]+2 [ICON_GOLD] Gold for every [ICON_RES_OIL] Oil and Oasis worked by this city.
 				[NEWLINE][ICON_BULLET]Land International Trade Route from this city produces +6 [ICON_GOLD] Base Gold.
 			</Text>
@@ -8420,7 +8421,7 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_LIGHTNING_WARFARE_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]Lightning Warfare[ENDCOLOR][NEWLINE]+2 [ICON_MOVES] Movement for Great Generals.  +1 [ICON_MOVES] Movement for All Land Non-militia Units. The use of roads in enemy territory is permitted.</Text>
+			<Text>[COLOR_POSITIVE_TEXT]Lightning Warfare[ENDCOLOR][NEWLINE]+2 [ICON_MOVES] Movement for Great Generals. +1 [ICON_MOVES] Movement for All Land Non-militia Units. The use of roads in enemy territory is permitted.</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_TOTAL_WAR_HELP" >
@@ -10392,7 +10393,7 @@
 		<Replace Tag="TXT_KEY_TRAIT_ART_OF_WAR">
 			<Text>
 			[ICON_BULLET]All Land Units can earn points toward a [ICON_GOLDEN_AGE] Golden Age for each enemy killed (50% of its [ICON_STRENGTH] Combat Strength).
-			[NEWLINE][ICON_BULLET]In the Golden Age, the [ICON_CITIZEN] population growth of all cities requires -20% food, the [ICON_RESEARCH] increase in Research expenditures from the number of cities -80%.
+			[NEWLINE][ICON_BULLET]In the Golden Age, the [ICON_CITIZEN] population growth of all cities requires -20% food, halved the [ICON_RESEARCH] increase in Research expenditures from the number of cities.
 			</Text>
 		</Replace>
 
@@ -10403,7 +10404,7 @@
 			<Text>
 			China has entered a new [ICON_GOLDEN_AGE][COLOR_POSITIVE_TEXT]prosperity[ENDCOLOR]! 
 			[NEWLINE][NEWLINE]All gold-producing plots have an additional +1[ICON_GOLD] gold production, +20% national [ICON_PRODUCTION] production capacity, and [ICON_CULTURE] culture. 
-			[NEWLINE]The [ICON_CITIZEN] population growth of all cities requires -20% food, the increase in [ICON_RESEARCH] Research expenditure from the number of cities -80%.
+			[NEWLINE]The [ICON_CITIZEN] population growth of all cities requires -20% food, halved  the increase in [ICON_RESEARCH] Research expenditure from the number of cities.
 			</Text>
 		</Row>
 
@@ -10492,7 +10493,7 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_TRAIT_BUFFALO_HORNS">
 			<Text>
-				[ICON_BULLET]-50% experience needed to earn their next promotion for all units and pay 15% less for land unit maintenance.
+				[ICON_BULLET]All units -50% experience needed to earn their next promotion and will not disband due to deficit.
 				[NEWLINE][ICON_BULLET]Each source of [ICON_RES_GOLD] Gold, [ICON_RES_SILVER] Silver and [ICON_RES_GEMS] Gems worked by Zulu Cities produces +5 [ICON_GOLD] Gold. 
 			</Text>
 		</Replace>
@@ -10615,7 +10616,6 @@
 			<Text>
 				[ICON_BULLET]Rivers and adjacent difficult terrain count as clear terrain for [ICON_MOVES] Movement. 
 				[NEWLINE][ICON_BULLET]Rivers extend length of land trade routes as if they were roads. 
-				[NEWLINE][ICON_BULLET]+1 [ICON_GOLD] Gold for every Trading Post.
 				[NEWLINE][ICON_BULLET]-200 Administrative cost for City onrivers.
 			</Text>
 		</Replace>
@@ -10678,8 +10678,8 @@
 
 		<Replace Tag="TXT_KEY_TRAIT_DIPLOMACY_GREAT_PEOPLE">
 			<Text>
-				[ICON_BULLET]When declaring friendship, Sweden and their friend gain a +10% boost to [ICON_GREAT_PEOPLE] Great Person generation and +10% of the other's [ICON_RESEARCH] research.
-				[NEWLINE][ICON_BULLET]Every 4 [ICON_CITIZEN] Citizens in Small Cities (6+ Population) provide +1 [ICON_RESEARCH] Science Output. 
+				[ICON_BULLET]Every 4 [ICON_CITIZEN] Citizens in Small Cities (6+ Population) provide +1 [ICON_RESEARCH] Science Output. 
+				[NEWLINE][ICON_BULLET]When declaring friendship, Sweden and their friend gain a +10% boost to [ICON_GREAT_PEOPLE] Great Person generation and +10% of the other's [ICON_RESEARCH] research.
 			</Text>
 		</Replace>
 		
@@ -11059,7 +11059,7 @@
 			<Text>Islamic Prophet</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_ARABIAN_PROPHET_HELP">
-			<Text>Islamic Prophet is the unique prophet unit for Arabia. He can found or enhance a religion, construct the special Holy Site improvement and spread religion one more time than the normal prophet unit (5 times in total). He can also write Quran to generate one-time amount of [ICON_CULTURE] Culture like Great Writers, and even stronger(This ability would be available even if he has only 1 time to spread the religion).</Text>
+			<Text>Islamic Prophet is the unique prophet unit for Arabia. He can found or enhance a religion, construct the special Holy Site improvement and spread religion one more time than the normal prophet unit (5 times in total). He can also write Quran to generate one-time amount of [ICON_CULTURE] Culture like Great Writers(This ability would be available even if he has only 1 time to spread the religion).</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_ARABIAN_PROPHET_TEXT">
 			<Text>Prophets in Islam include "messengers", bringers of a divine revelation via an angel; and "prophets", lawbringers that Muslims believe were sent by God to every people, bringing God's message in a language they can understand. Belief in Islamic prophets is one of the six articles of the Islamic faith, and specifically mentioned in the Quran.</Text>
@@ -17208,7 +17208,7 @@
 			<Text>
 			[ICON_BULLET]Alternative to the amphitheater, cheaper to build.
 			[NEWLINE][ICON_BULLET]+15% training speed of [ICON_WAR]military units in this city.
-			[NEWLINE][ICON_BULLET]When a military unit is promoted, get a one-time [ICON_CULTURE]culture boost with half of Current Era (at least 1) from each Ithaca.
+			[NEWLINE][ICON_BULLET]When a military unit (Non-militia) is promoted, get a one-time [ICON_CULTURE]culture boost with half of Current Era (at least 1) from each Ithaca.
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_ZULU_IZIKO_TEXT">
@@ -17529,8 +17529,9 @@
         </Row>
         <Row Tag="TXT_KEY_BUILDING_SWEDEN_NOBEL_PRIZE_HELP">
             <Text>
-                [ICON_BULLET] Requires only 26 people to build.
-                [NEWLINE][ICON_BULLET] When a great scientist is born in Sweden or an ally, it will bring one-time [ICON_RESEARCH] scientific research output to both parties, equivalent to 15% of the great scientist's current strength.
+				[ICON_BULLET]Scientists: +2 [ICON_RESEARCH] Science, -2 [ICON_GOLD] Gold for research funds.
+                [NEWLINE][ICON_BULLET]When a great scientist is born in Sweden or an ally, it will bring one-time [ICON_RESEARCH] scientific research output to both parties, equivalent to 20% of the great scientist's current strength.
+				[NEWLINE][NEWLINE]The cost goes up the more cities there are in the empire.
             </Text>
         </Row>
 		<Row Tag="TXT_KEY_YIELD_OVERFLOW">
