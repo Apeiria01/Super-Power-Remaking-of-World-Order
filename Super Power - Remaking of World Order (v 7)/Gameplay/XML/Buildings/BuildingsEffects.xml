@@ -1669,11 +1669,6 @@
 			<YieldType>YIELD_SCIENCE</YieldType>
 			<Yield>3</Yield>
 		</Row>
-		<Row>
-			<BuildingType>BUILDING_WAT</BuildingType>
-			<YieldType>YIELD_FAITH</YieldType>
-			<Yield>3</Yield>
-		</Row>
 
 
 		<Row>

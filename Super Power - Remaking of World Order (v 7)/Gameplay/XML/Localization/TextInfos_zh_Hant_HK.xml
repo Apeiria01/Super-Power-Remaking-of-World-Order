@@ -859,7 +859,8 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_BAZAAR_HELP">
 			<Text>
-				[ICON_BULLET]從本城市出發的陸地商隊範圍增加20%。
+				[ICON_BULLET]+2[ICON_PEACE]信仰。
+				[NEWLINE][ICON_BULLET]從本城市出發的陸地商隊範圍增加20%。
 				[NEWLINE][ICON_BULLET]本城每處[ICON_RES_OIL]石油和綠洲+2[ICON_GOLD]金幣產出。
 				[NEWLINE][ICON_BULLET]通向其他文明的陸地商路+6基礎[ICON_GOLD]金幣。
 			</Text>
@@ -5733,7 +5734,7 @@
 		<Replace Tag="TXT_KEY_TRAIT_ART_OF_WAR">
 			<Text>
 				[ICON_BULLET]所有陸軍單位都自帶消滅敵人後，獲得相當於敵單位戰鬥力數值50%的[ICON_GOLDEN_AGE]黃金時代點數的晉升。
-				[NEWLINE][ICON_BULLET]黃金時代中，所有城市的[ICON_CITIZEN]人口增長所需糧食-20%，來自城市數量的[ICON_RESEARCH]科研阈值-80%。
+				[NEWLINE][ICON_BULLET]黃金時代中，所有城市的[ICON_CITIZEN]人口增長所需糧食-20%，來自城市數量的[ICON_RESEARCH]科研阈值減半。
 			</Text>
 		</Replace>
 		<Row Tag="TXT_KEY_SP_UA_CHINA_GOLDENAGE_ANNOUNCE">
@@ -5743,7 +5744,7 @@
 			<Text>
 				中國進入了一個嶄新的[ICON_GOLDEN_AGE][COLOR_POSITIVE_TEXT]盛世[ENDCOLOR]！
 				[NEWLINE][NEWLINE]所有金錢產出的地塊額外+1[ICON_GOLD]金錢產出，全國+20%[ICON_PRODUCTION]產能，[ICON_CULTURE]文化。
-				[NEWLINE]所有城市的[ICON_CITIZEN]人口成長所需糧食-20%，來自城市數量的[ICON_RESEARCH]科研阈值-80%。
+				[NEWLINE]所有城市的[ICON_CITIZEN]人口成長所需糧食-20%，來自城市數量的[ICON_RESEARCH]科研阈值減半。
 			</Text>
 		</Row>
 
@@ -5836,7 +5837,7 @@
 
 		<Replace Tag="TXT_KEY_TRAIT_BUFFALO_HORNS">
 			<Text>
-				[ICON_BULLET]所有軍事單位獲得晉升所需經驗值-50%，陸上單位維護費-15%。
+				[ICON_BULLET]所有軍事單位獲得晉升所需經驗值-50%，且不會因爲赤字被解散。
 				[NEWLINE][ICON_BULLET]境內有市民工作的每處[ICON_RES_GOLD]黃金、[ICON_RES_SILVER]白銀和[ICON_RES_GEMS]寶石資源+5[ICON_GOLD]金錢。
 			</Text>
 		</Replace>
@@ -5957,7 +5958,6 @@
 			<Text>
 				[ICON_BULLET]河流及其相鄰區塊不會阻礙己方單位[ICON_MOVES]移動。
 				[NEWLINE][ICON_BULLET]陸地商路能夠通過河流線延長（視為道路）。
-				[NEWLINE][ICON_BULLET]所有貿易站+1[ICON_GOLD]金錢產出。
 				[NEWLINE][ICON_BULLET]沿河城市减少200点离心倾向。
 			</Text>
 		</Replace>
@@ -6385,7 +6385,7 @@
 			<Text>伊斯蘭先知</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_ARABIAN_PROPHET_HELP">
-			<Text>伊斯蘭先知是阿拉伯文明的特殊單位，替代預言家。該單位能夠創建或強化宗教，建造聖地，傳教5次（比普通預言家多一次）等，同時還可以消耗他一次性產出大量[ICON_CULTURE]文化值（即使僅剩1次傳教次數也可使用該能力，產出數值同大文學家）。</Text>
+			<Text>伊斯蘭先知是阿拉伯文明的特殊單位，替代預言家。該單位能夠創建或強化宗教，建造聖地，傳教5次（比普通預言家多一次）等，同時還可以消耗他一次性產出大量[ICON_CULTURE]文化值（即使僅剩1次傳教次數也可使用該能力）。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_ARABIAN_PROPHET_TEXT">
 			<Text>穆斯林認為先知（阿拉伯語：نبي）是凡人，是真主派遣的。每位先知都帶來了伊斯蘭式的基本信息，包括獨一造物主的信仰，避免偶像崇拜與罪惡。他們都向大眾傳播伊斯蘭教，並告知將出現見證律法的最後先知，他是真主所派遣的最後使者：穆罕默德。他們都向不同人群傳播同一個訊息，並教導互有細微差異的律法。這些細微差異構成了伊斯蘭教，然而主流穆斯林不認為這些差異是伊斯蘭教支離破碎的版本。伊斯蘭傳統認為真主向萬國萬邦派遣使者。在伊斯蘭教裡，惟獨穆罕默德是真主派來教化全世界的使者，其他使者只向特定民族或國家宣教。[NEWLINE][NEWLINE]不像猶太教和基督教，伊斯蘭教還區分了使者（rasul，رسول）和先知（nabi，نبی）。這兩種身分都是真主啟示的。不同的是，「使者」還帶來了真主啟示的經典。每位「使者」都是「先知」，但並不是每位「先知」都是「使者」。[NEWLINE][NEWLINE]穆斯林認為阿丹（亞當）是第一位先知，而穆罕默德則是最後一位；因此穆罕默德的頭銜是「眾先知的封印」。在伊斯蘭教裡，爾撒（耶穌）是先知（並非每個人都如此認為）也是使者，因為他接受真主的「啟示」並帶來了《引支勒》。穆斯林相信，真主派遣了超過124,000位使者，這在權威的聖訓中就提及了。根據聖訓記載，其中有五位使者是最勞苦功高的，他們分別是努哈（挪亞）、易蔔拉欣（亞伯拉罕）、穆薩（摩西）、爾撒（耶穌）以及穆罕默德。 </Text>
@@ -15358,7 +15358,7 @@
 			<Text>
 				[ICON_BULLET]替代露天劇場，造價更低。
 				[NEWLINE][ICON_BULLET]本城[ICON_WAR]軍事單位訓練速度+15%。
-				[NEWLINE][ICON_BULLET]軍事單位晉升時，每個伊紮卡使你獲得當前時代/2的[ICON_CULTURE]文化（至少為1）。
+				[NEWLINE][ICON_BULLET]非民兵單位晉升時，每個伊紮卡使你獲得當前時代/2的[ICON_CULTURE]文化（至少為1）。
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_ZULU_IZIKO_TEXT">
@@ -15692,8 +15692,9 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_SWEDEN_NOBEL_PRIZE_HELP">
 			<Text>
-				[ICON_BULLET]只需26人口即可建造。
-				[NEWLINE][ICON_BULLET]瑞典或盟友誕生一位大科學家時，為雙方帶來一次性[ICON_RESEARCH]科研產出，數值相當於該大科學家當前強度的15%。
+				[ICON_BULLET]科學家：+2[ICON_RESEARCH]科技值，+2[ICON_GOLD]維護費。
+				[NEWLINE][ICON_BULLET]瑞典或盟友誕生一位大科學家時，為雙方帶來一次性[ICON_RESEARCH]科研產出，數值相當於該大科學家當前強度的20%。
+				[NEWLINE][NEWLINE]文明的城市數量越多建造成本越高。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_YIELD_OVERFLOW">
@@ -16463,5 +16464,21 @@
 		<Row Tag="TXT_KEY_MILITARY_PROMISE">
 			<Text>承諾撤軍</Text>
 		</Row>
+
+		<Replace Tag="TXT_KEY_FOODMOD_PLAYER">
+			<Text>[NEWLINE][ICON_BULLET]帝國修正值（余糧）：{1_Num}%</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOODMOD_CAPITAL">
+			<Text>[NEWLINE][ICON_BULLET][ICON_CAPITAL]首都修正值（余糧）：{1_Num}%</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOODMOD_RELIGION">
+			<Text>[NEWLINE][ICON_BULLET]宗教信條修正值（余糧）：{1_Num}%</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOODMOD_UNHAPPY">
+			<Text>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT][ICON_HAPPINESS_4]不滿度修正值（余糧）：{1_Num}%[ENDCOLOR]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOODMOD_WLTKD">
+			<Text>[NEWLINE][ICON_BULLET]王之日修正值（余糧）：{1_Num}%</Text>
+		</Replace>
 	</Language_zh_Hant_HK>
 </GameData>

@@ -251,12 +251,12 @@
 
 	<Policy_FreeUnitClasses>
 		<Row>
-			<PolicyType>POLICY_AI_MEDIEVAL</PolicyType>
+			<PolicyType>POLICY_AI_CLASSICAL</PolicyType>
 			<UnitClassType>UNITCLASS_SETTLER</UnitClassType>
 			<Count>1</Count>
 		</Row>
 		<Row>
-			<PolicyType>POLICY_AI_RENAISSANCE</PolicyType>
+			<PolicyType>POLICY_AI_MEDIEVAL</PolicyType>
 			<UnitClassType>UNITCLASS_SETTLER</UnitClassType>
 			<Count>1</Count>
 		</Row>

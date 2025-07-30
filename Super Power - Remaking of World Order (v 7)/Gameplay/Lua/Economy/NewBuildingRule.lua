@@ -195,7 +195,7 @@ if bIsAllUBActive or Game.IsCivEverActive(GameInfoTypes.CIVILIZATION_ZULU) then
 		end
 
 		local pUnit = pPlayer:GetUnitByID(iUnit)
-		if pUnit == nil then return end
+		if pUnit == nil or pUnit:GetUnitCombatType() == GameInfoTypes["UNITCOMBAT_RECON"] then return end
 
 		local iBonus = pPlayer:GetCurrentEra() / 2 + 1;
 		iBonus = math.floor(iBonus * iNumIzako);

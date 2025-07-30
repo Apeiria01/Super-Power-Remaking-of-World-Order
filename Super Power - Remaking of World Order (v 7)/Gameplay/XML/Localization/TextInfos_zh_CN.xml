@@ -885,7 +885,8 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_BAZAAR_HELP">
 			<Text>
-				[ICON_BULLET]从本城市出发的陆地商队范围增加20%。
+				[ICON_BULLET]+2[ICON_PEACE]信仰。
+				[NEWLINE][ICON_BULLET]从本城市出发的陆地商队范围增加20%。
 				[NEWLINE][ICON_BULLET]本城每处[ICON_RES_OIL]石油和绿洲+2[ICON_GOLD]金钱产出。
 				[NEWLINE][ICON_BULLET]通向其他文明的陆地商路+6基础[ICON_GOLD]金钱。
 			</Text>
@@ -5831,7 +5832,7 @@
 		<Replace Tag="TXT_KEY_TRAIT_ART_OF_WAR">
 			<Text>
 				[ICON_BULLET]所有陆军单位都自带消灭敌人后，获得相当于敌单位战斗力数值50%的[ICON_GOLDEN_AGE]黄金时代点数的晋升。
-				[NEWLINE][ICON_BULLET]黄金时代中，所有城市的[ICON_CITIZEN]人口增长所需粮食-20%，来自城市数量的[ICON_RESEARCH]科研阈值-80%。
+				[NEWLINE][ICON_BULLET]黄金时代中，所有城市的[ICON_CITIZEN]人口增长所需粮食-20%，来自城市数量的[ICON_RESEARCH]科研阈值减半。
 			</Text>
 		</Replace>
 		<Row Tag="TXT_KEY_SP_UA_CHINA_GOLDENAGE_ANNOUNCE">
@@ -5841,7 +5842,7 @@
 			<Text>
 				中国进入了一个崭新的[ICON_GOLDEN_AGE][COLOR_POSITIVE_TEXT]盛世[ENDCOLOR]！
 				[NEWLINE][NEWLINE]所有金钱产出的地块额外+1[ICON_GOLD]金钱产出，全国+20%[ICON_PRODUCTION]产能，[ICON_CULTURE]文化。
-				[NEWLINE]所有城市的[ICON_CITIZEN]人口增长所需粮食-20%，来自城市数量的[ICON_RESEARCH]科研阈值-80%。
+				[NEWLINE]所有城市的[ICON_CITIZEN]人口增长所需粮食-20%，来自城市数量的[ICON_RESEARCH]科研阈值减半。
 			</Text>
 		</Row>
 
@@ -5934,7 +5935,7 @@
 
 		<Replace Tag="TXT_KEY_TRAIT_BUFFALO_HORNS">
 			<Text>
-				[ICON_BULLET]所有军事单位获得晋升所需经验值-50%，陆上单位维护费-15%。
+				[ICON_BULLET]所有军事单位获得晋升所需经验值-50%，且不会因为赤字被解散。
 				[NEWLINE][ICON_BULLET]境内有市民工作的每处[ICON_RES_GOLD]黄金、[ICON_RES_SILVER]白银和[ICON_RES_GEMS]宝石资源+5[ICON_GOLD]金钱。
 			</Text>
 		</Replace>
@@ -6056,7 +6057,6 @@
 			<Text>
 				[ICON_BULLET]河流及其相邻区块不会阻碍己方单位[ICON_MOVES]移动。
 				[NEWLINE][ICON_BULLET]陆地商路能够通过河流线延长（视为道路）。
-				[NEWLINE][ICON_BULLET]所有贸易站+1[ICON_GOLD]金钱产出。
 				[NEWLINE][ICON_BULLET]沿河城市减少200点离心倾向。
 			</Text>
 		</Replace>
@@ -6485,7 +6485,7 @@
 			<Text>伊斯兰先知</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_ARABIAN_PROPHET_HELP">
-			<Text>伊斯兰先知是阿拉伯文明的特殊单位，替代大先知。该单位能够创建或强化宗教，建造圣地，传教5次（比普通大先知多一次）等，同时还可以消耗他一次性产出大量[ICON_CULTURE]文化（即使仅剩1次传教次数也可使用该能力，产出数值同大文学家）。</Text>
+			<Text>伊斯兰先知是阿拉伯文明的特殊单位，替代大先知。该单位能够创建或强化宗教，建造圣地，传教5次（比普通大先知多一次）等，同时还可以消耗他一次性产出大量[ICON_CULTURE]文化（即使仅剩1次传教次数也可使用该能力）。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_ARABIAN_PROPHET_TEXT">
 			<Text>穆斯林认为先知（阿拉伯语：نبي）是凡人，是真主派遣的。每位先知都带来了伊斯兰式的基本信息，包括独一造物主的信仰，避免偶像崇拜与罪恶。他们都向大众传播伊斯兰教，并告知将出现见证律法的最后先知，他是真主所派遣的最后使者：穆罕默德。他们都向不同人群传播同一个讯息，并教导互有细微差异的律法。这些细微差异构成了伊斯兰教，然而主流穆斯林不认为这些差异是伊斯兰教支离破碎的版本。伊斯兰传统认为真主向万国万邦派遣使者。在伊斯兰教里，惟独穆罕默德是真主派来教化全世界的使者，其他使者只向特定民族或国家宣教。[NEWLINE][NEWLINE]不像犹太教和基督教，伊斯兰教还区分了使者（rasul，رسول）和先知（nabi，نبی）。这两种身分都是真主启示的。不同的是，「使者」还带来了真主启示的经典。每位「使者」都是「先知」，但并不是每位「先知」都是「使者」。[NEWLINE][NEWLINE]穆斯林认为阿丹（亚当）是第一位先知，而穆罕默德则是最后一位；因此穆罕默德的头衔是「众先知的封印」。在伊斯兰教里，尔撒（耶稣）是先知（并非每个人都如此认为）也是使者，因为他接受真主的「启示」并带来了《引支勒》。穆斯林相信，真主派遣了超过124,000位使者，这在权威的圣训中就提及了。根据圣训记载，其中有五位使者是最劳苦功高的，他们分别是努哈（挪亚）、易卜拉欣（亚伯拉罕）、穆萨（摩西）、尔撒（耶稣）以及穆罕默德。 </Text>
@@ -15541,7 +15541,7 @@
 			<Text>
 				[ICON_BULLET]替代露天剧场，造价更低。
 				[NEWLINE][ICON_BULLET]本城[ICON_WAR]军事单位训练速度+15%。
-				[NEWLINE][ICON_BULLET]军事单位晋升时，每个伊扎卡使你获得当前时代/2的[ICON_CULTURE]文化（至少为1）。
+				[NEWLINE][ICON_BULLET]非民兵单位晋升时，每个伊扎卡使你获得当前时代/2的[ICON_CULTURE]文化（至少为1）。
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_ZULU_IZIKO_TEXT">
@@ -15884,8 +15884,9 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_SWEDEN_NOBEL_PRIZE_HELP">
 			<Text>
-				[ICON_BULLET]只需26人口即可建造。
-				[NEWLINE][ICON_BULLET]瑞典或盟友诞生一位大科学家时，为双方带来一次性[ICON_RESEARCH]科研产出，数值相当于该大科学家当前强度的15%。
+				[ICON_BULLET]科学家：+2[ICON_RESEARCH]科研，+2[ICON_GOLD]维护费。
+				[NEWLINE][ICON_BULLET]瑞典或盟友诞生一位大科学家时，为双方带来一次性[ICON_RESEARCH]科研产出，数值相当于该大科学家当前强度的20%。
+				[NEWLINE][NEWLINE]文明的城市数量越多建造成本越高。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_YIELD_OVERFLOW">
@@ -16654,5 +16655,21 @@
 		<Row Tag="TXT_KEY_MILITARY_PROMISE">
 			<Text>承诺撤军</Text>
 		</Row>
+
+		<Replace Tag="TXT_KEY_FOODMOD_PLAYER">
+			<Text>[NEWLINE][ICON_BULLET]全文明修正（余粮）: {1_Num}%</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOODMOD_CAPITAL">
+			<Text>[NEWLINE][ICON_BULLET][ICON_CAPITAL]首都修正（余粮）: {1_Num}%</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOODMOD_RELIGION">
+			<Text>[NEWLINE][ICON_BULLET]宗教信条修正（余粮）: {1_Num}%</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOODMOD_UNHAPPY">
+			<Text>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT][ICON_HAPPINESS_4]不满修正（余粮）: {1_Num}%[ENDCOLOR]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOODMOD_WLTKD">
+			<Text>[NEWLINE][ICON_BULLET]我们爱领袖日修正（余粮）: {1_Num}%</Text>
+		</Replace>
 	</Language_zh_CN>
 </GameData>

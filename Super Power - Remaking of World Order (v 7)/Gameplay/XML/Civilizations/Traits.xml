@@ -45,7 +45,7 @@
 			<ShortDescription>TXT_KEY_TRAIT_ART_OF_WAR_SHORT</ShortDescription>
 			<!--<GreatGeneralRateModifier>50</GreatGeneralRateModifier>-->
 			<GoldenAgeResearchTotalCostModifier>0</GoldenAgeResearchTotalCostModifier>
-			<GoldenAgeResearchCityCountCostModifier>-80</GoldenAgeResearchCityCountCostModifier>
+			<GoldenAgeResearchCityCountCostModifier>-50</GoldenAgeResearchCityCountCostModifier>
 			<GoldenAgeGrowThresholdModifier>-20</GoldenAgeGrowThresholdModifier>
 		</Row>
 		
@@ -132,7 +132,7 @@
 			<Description>TXT_KEY_TRAIT_BUFFALO_HORNS</Description>
 			<ShortDescription>TXT_KEY_TRAIT_BUFFALO_HORNS_SHORT</ShortDescription>
 			<LevelExperienceModifier>-50</LevelExperienceModifier>
-			<LandUnitMaintenanceModifier>-15</LandUnitMaintenanceModifier>
+			<NoDoDeficit>true</NoDoDeficit>
 		</Row>
 		
 		
@@ -460,13 +460,6 @@
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<Yield>1</Yield>
 		</Row>
-		<Row>
-			<TraitType>TRAIT_AMPHIB_WARLORD</TraitType>
-			<ImprovementType>IMPROVEMENT_TRADING_POST</ImprovementType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>1</Yield>
-		</Row>
-
 
 		<Row>
 			<TraitType>TRAIT_CONVERTS_SEA_BARBARIANS</TraitType>
