@@ -6000,7 +6000,7 @@
 
 		<Replace Tag="TXT_KEY_TRAIT_CITY_STATE_BONUSES">
 			<Text>
-				[ICON_BULLET]友好城邦提供的[ICON_FOOD]食物,[ICON_CULTURE]文化,[ICON_PEACE]信仰增加50%。
+				[ICON_BULLET]友好城邦提供的[ICON_FOOD]食物，[ICON_CULTURE]文化，[ICON_PEACE]信仰增加50%。
 				[NEWLINE][ICON_BULLET]軍事城邦贈送的單位獲得免費20經驗。
 				[NEWLINE][ICON_BULLET]可以把偉人作為禮物單位送給城邦並獲得150點[ICON_INFLUENCE]影響力。
 			</Text>
@@ -6010,6 +6010,7 @@
 			<Text>
 				[ICON_BULLET]陸上商隊+50%距離，商隊傳輸宗教壓力提高3倍。
 				[NEWLINE][ICON_BULLET]每處綠洲+2[ICON_CULTURE]文化和+2[ICON_PEACE]信仰。
+				[NEWLINE][ICON_BULLET]信仰你創立的宗教的伊斯蘭先知産出的[ICON_CULTURE]文化翻倍。
 			</Text>
 		</Replace>
 

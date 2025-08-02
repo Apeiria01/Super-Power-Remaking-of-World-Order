@@ -6099,7 +6099,7 @@
 
 		<Replace Tag="TXT_KEY_TRAIT_CITY_STATE_BONUSES">
 			<Text>
-				[ICON_BULLET]友好城邦提供的[ICON_FOOD]食物,[ICON_CULTURE]文化,[ICON_PEACE]信仰增加50%。
+				[ICON_BULLET]友好城邦提供的[ICON_FOOD]食物，[ICON_CULTURE]文化，[ICON_PEACE]信仰增加50%。
 				[NEWLINE][ICON_BULLET]军事城邦赠送的单位获得免费20经验。
 				[NEWLINE][ICON_BULLET]可以把伟人作为礼物单位送给城邦并获得150点[ICON_INFLUENCE]影响力。
 			</Text>
@@ -6109,6 +6109,7 @@
 			<Text>
 				[ICON_BULLET]陆上商队+50%距离，商队传输宗教压力提高3倍。
 				[NEWLINE][ICON_BULLET]每处绿洲+2[ICON_CULTURE]文化和+2[ICON_PEACE]信仰。
+				[NEWLINE][ICON_BULLET]信仰你创立的宗教的伊斯兰先知产出的[ICON_CULTURE]文化翻倍。
 			</Text>
 		</Replace>
 

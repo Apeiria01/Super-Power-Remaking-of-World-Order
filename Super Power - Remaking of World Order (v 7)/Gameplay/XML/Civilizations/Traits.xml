@@ -235,6 +235,7 @@
 			<ShortDescription>TXT_KEY_TRAIT_LAND_TRADE_GOLD2_SHORT</ShortDescription>
 			<LandTradeRouteRangeBonus>5</LandTradeRouteRangeBonus>
 			<TradeReligionModifier>200</TradeReligionModifier>
+			<OwnedReligionUnitCultureExtraTurns>2</OwnedReligionUnitCultureExtraTurns>
 		</Row>
 		<Row>
 			<Type>TRAIT_EXTRA_BELIEF</Type>
