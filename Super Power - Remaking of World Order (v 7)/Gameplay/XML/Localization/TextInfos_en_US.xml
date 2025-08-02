@@ -10664,15 +10664,12 @@
 				[NEWLINE][ICON_BULLET]+150 [ICON_INFLUENCE] Influence with a Great Person gift to a City-State. 
 			</Text>
 		</Replace>
-		
-		
-		
-		
 
 		<Replace Tag="TXT_KEY_TRAIT_LAND_TRADE_GOLD2">
 			<Text>
 				[ICON_BULLET]+50% Range for Caravans. +300% for the efficiency of your trade routes spread the home city's religion.
 				[NEWLINE][ICON_BULLET]+2 [ICON_CULTURE] Culture and +2 [ICON_PEACE] Faith from every Oasis.
+				[NEWLINE][ICON_BULLET]Islamic Prophets following the Religion you founded can generate double [ICON_CULTURE] Culture.
 			</Text>
 		</Replace>
 
