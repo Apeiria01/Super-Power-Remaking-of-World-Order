@@ -379,7 +379,7 @@
 		<Row>
 			<ImprovementType>IMPROVEMENT_MAYA_ALTAR</ImprovementType>
 			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>1</Yield>
+			<Yield>3</Yield>
 		</Row>
 
 		<Row>
@@ -1232,40 +1232,36 @@
 			<Yield>1</Yield>
 		</Row>
 	</Improvement_AdjacentMountainYieldChanges>
-	<Improvement_AdjacentFeatureYieldChanges>
+
+	<Improvement_AdjacentImprovementYieldChanges>
 		<Row>
-			<ImprovementType>IMPROVEMENT_MAYA_ALTAR</ImprovementType>
-			<FeatureType>FEATURE_JUNGLE</FeatureType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<ImprovementType>IMPROVEMENT_MAYA_ALTAR</ImprovementType>
-			<FeatureType>FEATURE_FOREST</FeatureType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>1</Yield>
-		</Row>
-	</Improvement_AdjacentFeatureYieldChanges>
-	<Improvement_YieldChangesPerUnit>
-		<Row>
-			<ImprovementType>IMPROVEMENT_MAYA_ALTAR</ImprovementType>
+			<ImprovementType>IMPROVEMENT_ACADEMY</ImprovementType>
+			<OtherImprovementType>IMPROVEMENT_MAYA_ALTAR</OtherImprovementType>
 			<YieldType>YIELD_SCIENCE</YieldType>
 			<Yield>2</Yield>
-			<UnitType>UNIT_PROPHET</UnitType>
 		</Row>
 		<Row>
-			<ImprovementType>IMPROVEMENT_MAYA_ALTAR</ImprovementType>
-			<YieldType>YIELD_FAITH</YieldType>
+			<ImprovementType>IMPROVEMENT_CUSTOMS_HOUSE</ImprovementType>
+			<OtherImprovementType>IMPROVEMENT_MAYA_ALTAR</OtherImprovementType>
+			<YieldType>YIELD_SCIENCE</YieldType>
 			<Yield>2</Yield>
-			<UnitType>UNIT_PROPHET</UnitType>
 		</Row>
 		<Row>
-			<ImprovementType>IMPROVEMENT_MAYA_ALTAR</ImprovementType>
-			<YieldType>YIELD_GOLDEN_AGE_POINTS</YieldType>
+			<ImprovementType>IMPROVEMENT_MANUFACTORY</ImprovementType>
+			<OtherImprovementType>IMPROVEMENT_MAYA_ALTAR</OtherImprovementType>
+			<YieldType>YIELD_SCIENCE</YieldType>
 			<Yield>2</Yield>
-			<UnitType>UNIT_PROPHET</UnitType>
 		</Row>
-	</Improvement_YieldChangesPerUnit>
+		<Row>
+			<ImprovementType>IMPROVEMENT_HOLY_SITE</ImprovementType>
+			<OtherImprovementType>IMPROVEMENT_MAYA_ALTAR</OtherImprovementType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>2</Yield>
+		</Row>
+	</Improvement_AdjacentImprovementYieldChanges>
+
+	<Improvement_YieldChangesPerUnit />
+	<Improvement_AdjacentFeatureYieldChanges />
 
 
 	<!-- ************************UI Tweaks********************************************-->

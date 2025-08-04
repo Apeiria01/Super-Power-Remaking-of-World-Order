@@ -10316,8 +10316,7 @@
 			<Text>
 				[ICON_BULLET]Can only be built in Jungle or Forest.
 				[NEWLINE][ICON_BULLET]May not be constructed adjacent to another Altar.
-				[NEWLINE][ICON_BULLET]Each adjacent Jungle and Forest will provides +1 [ICON_RESEARCH] Science output for the Altar.
-				[NEWLINE][ICON_BULLET]Each Prophet in Altar provide +2 [ICON_RESEARCH][ICON_PEACE][ICON_GOLDEN_AGE] Output.
+				[NEWLINE][ICON_BULLET]Each adjacent Great Tile Improvements provides +2 [ICON_RESEARCH] Science output.
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_IMPROVEMENT_MAYA_ALTAR_TEXT">
@@ -18197,7 +18196,7 @@
 			<Text>Cairn Altar</Text>
 		</Row>
 		<Row Tag="TXT_KEY_IMPROVEMENT_CAIRN_SP_TEXT">
-			<Text>A Cairn Altar refers to a man-made pile of stones. Cairn Altars are found all over the world, distributed across highlands, moors, mountain tops, near waterways, and on sea cliffs, as well as in barren deserts and tundra regions. They vary in size from small stone markers to entire artificial mountains, and in complexity from loose conical piles to delicately balanced sculptures and elaborate megalithic engineering. Cairn Altars may be painted or decorated, for example to increase visibility or for religious reasons.[NEWLINE][NEWLINE]In modern times, Cairn Altars are often used as landmarks, a purpose they have served since ancient times. Since prehistoric times, they have also been built as burial monuments, or for defense, hunting, rituals, astronomy, and other purposes.</Text>
+			<Text>Cairn Altars are found all over the world, distributed across highlands, moors, mountain tops, near waterways, and on sea cliffs, as well as in barren deserts and tundra regions. They vary in size from small stone markers to entire artificial mountains, and in complexity from loose conical piles to delicately balanced sculptures and elaborate megalithic engineering. Cairn Altars may be painted or decorated, for example to increase visibility or for religious reasons.[NEWLINE][NEWLINE]In modern times, Cairn Altars are often used as landmarks, a purpose they have served since ancient times. Since prehistoric times, they have also been built as burial monuments, or for defense, hunting, rituals, astronomy, and other purposes.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_IMPROVEMENT_CAIRN_SP_HELP">
 			<Text>This Improvement provides +1 [ICON_PEACE] Faith, +1 [ICON_GOLDEN_AGE] Golden Age points to the plot. It becomes obsolete after Education and can no longer be built.</Text>
