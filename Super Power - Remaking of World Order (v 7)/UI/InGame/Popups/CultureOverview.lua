@@ -28,6 +28,8 @@ function dprint(...)
 end
 -- Kyte end
 
+local format = string.format
+
 -------------------------------------------------
 -- Global Constants
 -------------------------------------------------
@@ -2052,6 +2054,7 @@ function RefreshCultureVictory()
                 
 				local strImmigrationRate = tostring(ImmigrationRate);
 				local strImmigrationIcon = "[ICON_TEAM_1]";
+                local iImmigrationCounter = pPlayer:GetImmigrationCounter(Game.GetActivePlayer());
 				if ImmigrationRate > 0 then
 					strImmigrationRate = Locale.ConvertTextKey("TXT_KEY_CO_SP_GREEN", ImmigrationRate);
 					strImmigrationIcon = "[ICON_TEAM_4]";
@@ -2061,7 +2064,7 @@ function RefreshCultureVictory()
 				end
 
 				row.iExcessHappiness = ImmigrationRate;
-				row.strExcessHappiness = strImmigrationRate .. " (" .. 2 * iImmigrationRegressand .. "/" .. pPlayer:GetImmigrationCounter(Game.GetActivePlayer()) .. ")";
+                row.strExcessHappiness = format("%s ([COLOR_NEGATIVE_TEXT]0[ENDCOLOR]|%i|[COLOR_POSITIVE_TEXT]%i[ENDCOLOR])", strImmigrationRate, iImmigrationCounter, iImmigrationRegressand * 2);
 				strInternationalImmigrationToolTip = Locale.ConvertTextKey("TXT_KEY_CO_SP_IMMIGRATION_RATE_BASE", activePlayer:GetInfluenceLevel(iPlayer) - pPlayer:GetInfluenceLevel(Game.GetActivePlayer()), strImmigrationIcon)
 
 				if PlayerTeam:IsAllowsOpenBordersToTeam(pPlayer:GetTeam()) then

@@ -4962,16 +4962,14 @@
 			<Set Text="現在，我們的人民皆服右衽、聞雅樂。我擔心世界其他地方，也會屈服於你文化的影響力之下。" />
 		</Update>
 		<Row Tag="TXT_KEY_CO_IMMIGRATION_COUNTER_HEADER">
-			<Text>[ICON_TEAM_4] / [ICON_TEAM_2]</Text>
+			<Text>[ICON_TEAM_2][ICON_TEAM_1][ICON_TEAM_4]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CO_IMMIGRATION_COUNTER_HEADER_TT">
 			<Text>
-				左側：當前[ICON_TEAM_4]國際移民遷入速率。
-				[NEWLINE][ICON_BULLET]遷入速率體現了本文明對該國人民的吸引力。
-				[NEWLINE][ICON_BULLET]如果你的遷入速率大於等於4且比移出速率更高，則該國每回合會[ICON_TEAM_4]移民到你的國家一單位[ICON_CITIZEN]人口。
-				[NEWLINE][NEWLINE][NEWLINE]右側：當前[ICON_TEAM_2]國際移民移出速率。
-				[NEWLINE][ICON_BULLET]移出速率體現了該文明對你的國民的吸引力。
-				[NEWLINE][ICON_BULLET]如果你的移出速率大於等於4且比遷入速率更高，則本國每回合會[ICON_TEAM_4]移民到目標國家一單位[ICON_CITIZEN]人口。
+				移民綜合速率 ([ICON_TEAM_2][COLOR_NEGATIVE_TEXT]移出閾值[ENDCOLOR] - 國際移民進度 - [COLOR_POSITIVE_TEXT]遷入閾值[ENDCOLOR][ICON_TEAM_4])。
+				[NEWLINE][ICON_BULLET]移民綜合速率基於遷入速率和移出速率的差值。遷入速率體現了本文明對該國人民的吸引力，移出速率則體現了該文明對你的國民的吸引力。
+				[NEWLINE][ICON_BULLET]如果國際移民進度達到[COLOR_POSITIVE_TEXT]遷入閾值[ENDCOLOR]，則該國會[ICON_TEAM_4]移民到你的國家一單位[ICON_CITIZEN]人口。
+				[NEWLINE][ICON_BULLET]如果國際移民進度達到[COLOR_NEGATIVE_TEXT]移出閾值[ENDCOLOR]，則本國會[ICON_TEAM_2]移民到目標國家一單位[ICON_CITIZEN]人口。
 				[NEWLINE][NEWLINE]基礎[ICON_TEAM_4]遷移速率由文化影響度決定（默默無聞：0，初具風情：1，口耳相傳：2，廣受稱譽：3，無遠弗屆：4，絕對支配：5）。但遷移速率也會受到兩國間外交關係的影響。
 			</Text>
 		</Row>

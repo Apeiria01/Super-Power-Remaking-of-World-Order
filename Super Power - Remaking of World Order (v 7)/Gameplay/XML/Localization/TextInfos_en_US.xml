@@ -1560,16 +1560,14 @@
 				Text="Our people are now buying your blue jeans and listening to your pop music. I worry the rest of the world will also succumb to the influence of your culture." />
 		</Update>
 		<Row Tag="TXT_KEY_CO_IMMIGRATION_COUNTER_HEADER">
-			<Text>[ICON_TEAM_4] / [ICON_TEAM_2]</Text>
+			<Text>[ICON_TEAM_2][ICON_TEAM_1][ICON_TEAM_4]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CO_IMMIGRATION_COUNTER_HEADER_TT">
 			<Text>
-				Left: Current [ICON_TEAM_4] International Immigration Move-in Rate.
-				[NEWLINE][ICON_BULLET]The Move-in Rate represents how attractive your country is to their people.
-				[NEWLINE][ICON_BULLET]If the Move-in Rate is 4 or above and is larger than the Move-out Rate, the people in this country will [ICON_TEAM_4] migrate to your country by 1 [ICON_CITIZEN] per turn.
-				[NEWLINE][NEWLINE][NEWLINE]Right: Current [ICON_TEAM_2] International Immigration Move-out Rate.
-				[NEWLINE][ICON_BULLET]The Move-out Rate represents how attractive this country is to your people.
-				[NEWLINE][ICON_BULLET]If the Move-out Rate is 4 or above and is larger than the Move-in Rate, your people will [ICON_TEAM_2] migrate to this country by 1 [ICON_CITIZEN] per turn.
+				Immigration Composite Rate ([ICON_TEAM_2][COLOR_NEGATIVE_TEXT]Move-out Threshold[ENDCOLOR] - International Immigration Progress - [COLOR_POSITIVE_TEXT]Move-in Threshold[ENDCOLOR][ICON_TEAM_4]).
+				[NEWLINE][ICON_BULLET]The Immigration Composite Rate is based on the difference between Move-in Rate and Move-out Rate.The Move-in Rate represents how attractive your country is to their people. The Move-out Rate represents how attractive this country is to your people.
+				[NEWLINE][ICON_BULLET]If International Immigration Progress reaches the [COLOR_POSITIVE_TEXT]Move-in Threshold[ENDCOLOR], the people in this country will [ICON_TEAM_4] migrate to your country by 1 [ICON_CITIZEN].
+				[NEWLINE][ICON_BULLET]If International Immigration Progress reaches the [COLOR_NEGATIVE_TEXT]Move-out Threshold[ENDCOLOR], your people will [ICON_TEAM_2] migrate to this country by 1 [ICON_CITIZEN].
 				[NEWLINE][NEWLINE]The base [ICON_TEAM_4]Move-in rate is decided by your current [ICON_TOURISM] influence level on the target nation (Unknown:0, Exotic:1, Familiar:2, Popular:3, Influential:4, Dominant:5). So does the base [ICON_TEAM_2]Move-in rate. However they are also greatly affected by the diplomacy condition between two nations.
 			</Text>
 		</Row>
