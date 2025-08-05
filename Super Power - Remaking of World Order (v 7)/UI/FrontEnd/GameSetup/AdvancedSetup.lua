@@ -24,7 +24,11 @@
 include( "IconSupport" );
 include( "UniqueBonuses" );
 include( "InstanceManager" );
+
 include( "SP_PreGameManager" )
+SPData = SPData or {}
+SPData.SaveData = SPData.SaveData or function() end
+SPData.LoadData = SPData.LoadData or function() end
 
 -------------------------------------------------
 -- Globals
