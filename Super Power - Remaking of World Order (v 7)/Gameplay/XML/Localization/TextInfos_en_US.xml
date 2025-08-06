@@ -8191,7 +8191,7 @@
 		<Replace Tag="TXT_KEY_POLICY_CAPITALISM_HELP" >
 			<Text>
 				[COLOR_POSITIVE_TEXT]Capitalism[ENDCOLOR]
-				[NEWLINE]+3% [ICON_RESEARCH] Science nationwide for every Trade Routes in use.
+				[NEWLINE]+2% [ICON_RESEARCH] Science nationwide for every Trade Routes in use.
 				[NEWLINE]+10 [ICON_GOLD] Gold from all your trade routes. 
 				[NEWLINE]+3 extra [ICON_RES_CONSUMER] Consumer Goods produced by Merchants.
 			</Text>

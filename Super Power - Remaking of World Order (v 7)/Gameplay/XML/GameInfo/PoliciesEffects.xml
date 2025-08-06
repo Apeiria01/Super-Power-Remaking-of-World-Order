@@ -609,23 +609,6 @@
 			<YieldMod>25</YieldMod>
 		</Row>
 
-
-
-		<!--<Row>
-			<PolicyType>POLICY_CAPITALISM</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_STOCK_EXCHANGE</BuildingClassType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<YieldMod>15</YieldMod>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_CAPITALISM</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_FINANCE_COMPANY</BuildingClassType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<YieldMod>15</YieldMod>
-		</Row>-->
-		
-
-		
 		<!--<Row>
 			<PolicyType>POLICY_DICTATORSHIP_PROLETARIAT</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_PUPPET_GOVERNEMENT</BuildingClassType>
@@ -2366,7 +2349,7 @@
 		<Row>
 			<PolicyType>POLICY_CAPITALISM</PolicyType>
 			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>3</Yield>
+			<Yield>2</Yield>
 		</Row>
 	</Policy_TradeRouteCityYieldModifier>
 
