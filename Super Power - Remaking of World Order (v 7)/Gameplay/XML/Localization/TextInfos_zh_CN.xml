@@ -7390,7 +7390,7 @@
 		<Replace Tag="TXT_KEY_POLICY_CAPITALISM_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]资本主义[ENDCOLOR]
-				[NEWLINE]每条商路+10[ICON_GOLD]金钱，为全国+3%[ICON_RESEARCH]科研产出。
+				[NEWLINE]每条商路+10[ICON_GOLD]金钱，为全国+2%[ICON_RESEARCH]科研产出。
 				[NEWLINE]商业家产出的[ICON_RES_CONSUMER]商品数量额外+3。
 			</Text>
 		</Replace>

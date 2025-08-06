@@ -7288,7 +7288,7 @@
 		<Replace Tag="TXT_KEY_POLICY_CAPITALISM_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]資本主義[ENDCOLOR]
-				[NEWLINE]每條商路+10[ICON_GOLD]金幣，為全國+3%[ICON_RESEARCH]科技值產出。
+				[NEWLINE]每條商路+10[ICON_GOLD]金幣，為全國+2%[ICON_RESEARCH]科技值產出。
 				[NEWLINE]商業家產出的[ICON_RES_CONSUMER]商品數量額外+3。
 			</Text>
 		</Replace>
