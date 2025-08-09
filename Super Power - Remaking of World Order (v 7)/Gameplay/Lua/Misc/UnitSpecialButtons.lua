@@ -1080,8 +1080,16 @@ EstablishCorpsButton = {
             end
             if tUnit:IsHasPromotion(GameInfoTypes["PROMOTION_CORPS_1"]) then
                 tUnit:SetHasPromotion(GameInfoTypes["PROMOTION_CORPS_2"], true);
+                -- Free Armee from Great People
+                if unit:IsCanEstablishCorps() then
+                    player:ChangeNumArmeeTotalTimes100(100);
+                end
             else
                 tUnit:SetHasPromotion(GameInfoTypes["PROMOTION_CORPS_1"], true);
+                -- Free Crops from Great People
+                if unit:IsCanEstablishCorps() then
+                    player:ChangeNumCropsTotalTimes100(100);
+                end
             end
             tUnit:SetMoves(0);
             if nUnit then
