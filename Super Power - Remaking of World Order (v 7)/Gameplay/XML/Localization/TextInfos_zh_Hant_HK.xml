@@ -2895,8 +2895,7 @@
 		<Row Tag="TXT_KEY_TRO_LOCATE_RECALL_TT">
 			<Text>
 				單擊[COLOR_WARNING_TEXT]取消[ENDCOLOR]並[COLOR_WARNING_TEXT]召回[ENDCOLOR]此貿易單位。
-				[NEWLINE][NEWLINE][ICON_BULLET]如果這是國內商路，您可以立即重新分配貿易路線。
-				[NEWLINE][NEWLINE][ICON_BULLET]如果這是國際商路，貿易路線立即取消。然而，你必須等到這個貿易單位回到它的家鄉才可以重新分配它。
+				[NEWLINE][ICON_BULLET]下回合，您可以重新分配此貿易路線。
 			</Text>
 		</Row>
 
