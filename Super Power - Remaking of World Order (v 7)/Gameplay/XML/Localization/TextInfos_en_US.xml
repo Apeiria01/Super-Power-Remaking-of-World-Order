@@ -2429,8 +2429,7 @@
 		<Row Tag="TXT_KEY_TRO_LOCATE_RECALL_TT">
 			<Text>
 				Click to [COLOR_WARNING_TEXT]Cancel[ENDCOLOR] this Trade Route and recall this trade Unit.
-				[NEWLINE][NEWLINE][ICON_BULLET]If this is an Internal Trade Route, you can re-assign this Trade Unit immediately.
-				[NEWLINE][NEWLINE][ICON_BULLET]If this is an International Trade Route, the trade route is cancelled immediately. However, you have to wait until this Trade Unit return to its home city to re-assign it.
+				[NEWLINE][NEWLINE][ICON_BULLET]Next Turn, you can re-assign this Trade Unit.
 			</Text>
 		</Row>
 
