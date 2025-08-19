@@ -14996,6 +14996,7 @@
 		<Row Tag="TXT_KEY_SP_MISSION_SUPPLY_EXOTIC_GOODS_TOOLTIP">
 			<Text>
 				滿移動力時，可在擁有商站的城市中補充商品。
+				[NEWLINE][COLOR_POSITIVE_TEXT]右鍵點擊[ENDCOLOR]，對所有符合條件的單位執行該操作。
 			</Text>
 		</Row>
 

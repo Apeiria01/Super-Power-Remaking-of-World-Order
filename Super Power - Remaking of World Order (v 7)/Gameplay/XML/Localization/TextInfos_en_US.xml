@@ -16842,6 +16842,7 @@
 		<Row Tag="TXT_KEY_SP_MISSION_SUPPLY_EXOTIC_GOODS_TOOLTIP">
 			<Text>
 				When the unit's movement is full, goods can be replenished in cities with Feitoria.
+				[COLOR_POSITIVE_TEXT]Right-click[ENDCOLOR] to perform the action on all applicable units.
 			</Text>
 			</Row>
 			

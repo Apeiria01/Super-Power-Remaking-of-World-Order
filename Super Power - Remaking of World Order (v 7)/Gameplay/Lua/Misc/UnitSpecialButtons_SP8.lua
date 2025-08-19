@@ -75,8 +75,23 @@ SupplyExoticGoodsMissionButton = {
     end, -- or nil or a boolean, default is false
 
     Action = function(action, unit, eClick)
-        unit:ChangeNumExoticGoods(1);
-        unit:SetMoves(0);
+        if eClick == Mouse.eLClick then
+            unit:ChangeNumExoticGoods(1);
+            unit:SetMoves(0);
+        else
+            local pPlayer = Players[unit:GetOwner()];
+            for pUnit in pPlayer:Units() do
+                if pUnit:GetUnitType() == GameInfoTypes["UNIT_PORTUGUESE_NAU"]
+                and pUnit:MovesLeft() >= pUnit:MaxMoves()
+                and pUnit:GetNumExoticGoodsMax() > pUnit:GetNumExoticGoods()
+                and pUnit:GetPlot():IsCity()
+                and pUnit:GetPlot():GetPlotCity():IsHasBuilding(GameInfoTypes["BUILDING_PORTUGAL_PORT"])
+                then
+                    pUnit:ChangeNumExoticGoods(1);
+                    pUnit:SetMoves(0);
+                end
+            end
+        end
     end,
 };
 LuaEvents.UnitPanelActionAddin(SupplyExoticGoodsMissionButton);
