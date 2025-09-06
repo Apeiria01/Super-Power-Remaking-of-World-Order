@@ -6058,10 +6058,13 @@
 			</Text>
 		</Replace>
 
+		<Replace Tag="TXT_KEY_TRAIT_BONUS_AGAINST_TECH_SHORT">
+			<Text>所罗门王</Text>
+		</Replace>
 		<Replace Tag="TXT_KEY_TRAIT_BONUS_AGAINST_TECH">
 			<Text>
-				[ICON_BULLET]与拥有更多城市的文明的单位作战时获得25%战斗力加成。
-				[NEWLINE][ICON_BULLET]所有专家+2[ICON_CULTURE]文化产出。
+				[ICON_BULLET]所有专家+2[ICON_CULTURE]文化产出。
+				[NEWLINE][ICON_BULLET]允许使用[ICON_PEACE]信仰购买露天剧场、画廊、歌剧院。
 			</Text>
 		</Replace>
 
