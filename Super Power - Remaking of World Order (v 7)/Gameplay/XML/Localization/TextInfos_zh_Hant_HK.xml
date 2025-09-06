@@ -8188,7 +8188,7 @@
 			<Text>向城邦贈送[ICON_GOLD]金錢增加影響力的效果提升50%。對信仰此宗教的城邦的[ICON_INFLUENCE]影響力下限值+30</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_JESUIT_EDUCATION">
-			<Text>可以使用[ICON_PEACE]信仰購買學院、大學、公立學校和研發實驗室。學院、大學、公立學校和研發實驗室+2[ICON_PEACE]信仰</Text>
+			<Text>可以使用[ICON_PEACE]信仰購買學院、大學、公立學校和研發實驗室。學院、大學、公立學校和研發實驗室+1[ICON_PEACE]信仰</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_SACRED_SITES">
 			<Text>每座使用[ICON_PEACE]信仰購買的建築+2[ICON_TOURISM]魅力。學園、海關、製造中心、宗教聖地+5[ICON_CULTURE]文化</Text>
