@@ -8293,7 +8293,7 @@
 			<Text>向城邦赠送[ICON_GOLD]金钱增加影响力的效果提升50%。对信仰此宗教的城邦的[ICON_INFLUENCE]影响力下限值+30</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_JESUIT_EDUCATION">
-			<Text>可以使用[ICON_PEACE]信仰购买学院、大学、公立学校和研发实验室。学院、大学、公立学校和研发实验室+2[ICON_PEACE]信仰</Text>
+			<Text>可以使用[ICON_PEACE]信仰购买学院、大学、公立学校和研发实验室。学院、大学、公立学校和研发实验室+1[ICON_PEACE]信仰</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_SACRED_SITES">
 			<Text>每座使用[ICON_PEACE]信仰购买的建筑+2[ICON_TOURISM]魅力。学园、海关、制造中心、宗教圣地+5[ICON_CULTURE]文化</Text>
