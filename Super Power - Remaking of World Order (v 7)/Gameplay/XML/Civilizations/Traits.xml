@@ -921,6 +921,24 @@
 		</Row>
 	</Trait_SpecialistYieldChanges>
 
+	<Trait_BuildingClassFaithCost>
+		<Row>
+			<TraitType>TRAIT_BONUS_AGAINST_TECH</TraitType>
+			<BuildingClassType>BUILDINGCLASS_AMPHITHEATER</BuildingClassType>
+			<Cost>80</Cost>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_BONUS_AGAINST_TECH</TraitType>
+			<BuildingClassType>BUILDINGCLASS_ART_GALLERY</BuildingClassType>
+			<Cost>100</Cost>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_BONUS_AGAINST_TECH</TraitType>
+			<BuildingClassType>BUILDINGCLASS_OPERA_HOUSE</BuildingClassType>
+			<Cost>120</Cost>
+		</Row>
+	</Trait_BuildingClassFaithCost>
+
 	<Trait_YieldChangesPerTradePartner>
 		<Row>
 			<TraitType>TRAIT_GATEWAY_AFRICA</TraitType>
