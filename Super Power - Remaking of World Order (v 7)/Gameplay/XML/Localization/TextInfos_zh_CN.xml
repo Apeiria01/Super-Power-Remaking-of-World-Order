@@ -6071,7 +6071,7 @@
 		<Replace Tag="TXT_KEY_TRAIT_POPULATION_GROWTH">
 			<Text>
 				[ICON_BULLET]城市[ICON_CITIZEN]人口带来的[ICON_HAPPINESS_4]不满-20%。
-				[NEWLINE][ICON_BULLET]城市中每个主流宗教信徒+1%[ICON_FOOD]粮食产出。
+				[NEWLINE][ICON_BULLET]城市中每2个主流宗教信徒+1%[ICON_FOOD]粮食产出。
 			</Text>
 		</Replace>
 
