@@ -10629,7 +10629,7 @@
 		<Replace Tag="TXT_KEY_TRAIT_POPULATION_GROWTH">
 			<Text>
 				[ICON_BULLET]-20% [ICON_HAPPINESS_4] Unhappiness from number of [ICON_CITIZEN] Citizens.
-				[NEWLINE][ICON_BULLET]+1%[ICON_FOOD]food for each [ICON_CITIZEN]major religion follower.
+				[NEWLINE][ICON_BULLET]+1%[ICON_FOOD]food for each 2 [ICON_CITIZEN]major religion follower.
 			</Text>
 		</Replace>
 
