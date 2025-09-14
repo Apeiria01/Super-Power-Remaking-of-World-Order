@@ -1216,9 +1216,16 @@
 		<Row>
 			<TraitType>TRAIT_POPULATION_GROWTH</TraitType>
 			<YieldType>YIELD_FOOD</YieldType>
-			<Yield>50</Yield>
+			<Yield>100</Yield>
 		</Row>
 	</Trait_PerMajorReligionFollowerYieldModifierTimes100>
+	<Trait_PerMajorReligionFollowerYieldModifierMax>
+		<Row>
+			<TraitType>TRAIT_POPULATION_GROWTH</TraitType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Max>25</Max>
+		</Row>
+	</Trait_PerMajorReligionFollowerYieldModifierMax>
 		
 	<Trait_CityYieldPerAdjacentFeature>
 		<Row>
