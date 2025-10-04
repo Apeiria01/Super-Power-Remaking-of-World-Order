@@ -8488,7 +8488,7 @@
 				[NEWLINE][ICON_BULLET]绝大部分军事单位和世界奇观都会消耗你的人力资源。
 				[NEWLINE][ICON_BULLET]人力资源主要通过城市和人口提供，部分建筑和奇观也可以提供。
 				[NEWLINE]
-				[NEWLINE][ICON_BULLET]人力资源充足时(数量>25)，玩家使用[ICON_GOLD]金钱购买单位和建筑获得打折加成，公式为P= 5*n/c/2，其中为n电力资源数量，c为城市数量。
+				[NEWLINE][ICON_BULLET]人力资源充足时(数量>25)，玩家使用[ICON_GOLD]金钱购买单位和建筑获得打折加成，公式为P= 5*n/c/2，其中为n人力资源数量，c为城市数量。
 				[NEWLINE][ICON_BULLET]人力资源至多带来35%的购买减成。
 			</Text>
 		</Row>
