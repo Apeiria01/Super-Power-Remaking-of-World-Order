@@ -15867,6 +15867,9 @@
 		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_20">
 			<Text>向同一個AI購買大量資源後對方會坐地起價，請和多個AI交易保證自己的資源安全。</Text>
 		</Row>
+		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_21">
+			<Text>SP的额外選項並非遊戲主線，請根據自身實際需求進行選擇。</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_DIPLOMACY_MARRIAGE_TITLE">
 			<Text>外交聯姻</Text>

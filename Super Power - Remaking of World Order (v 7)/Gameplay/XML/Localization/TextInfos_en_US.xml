@@ -17698,6 +17698,9 @@
 		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_20">
 			<Text>Buying in bulk from one Player may lead to price hikes, trade with multiple Majors to secure your resources.</Text>
 		</Row>
+		<Row Tag="TXT_KEY_SP_SETUP_SCREEN_HELP_21">
+			<Text>The SP expansion options are supplementary content, not core to the main game. Please choose based on your personal preferences.</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_DIPLOMACY_MARRIAGE_TITLE">
 			<Text>Diplomatic marriage</Text>
