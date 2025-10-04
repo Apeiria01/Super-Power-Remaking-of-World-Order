@@ -8383,7 +8383,7 @@
 				[NEWLINE][ICON_BULLET]絕大部分軍事單位和世界奇觀都會消耗你的人力資源。
 				[NEWLINE][ICON_BULLET]人力資源主要通過城市和人口提供，部分建築和奇觀也可以提供。
 				[NEWLINE]
-				[NEWLINE][ICON_BULLET]人力資源充足時(數量>25)，玩家使用[ICON_GOLD]金錢購買單位和建築獲得打折加成，公式為P= 5*n/c/2，其中為n電力資源數量，c為城市數量。
+				[NEWLINE][ICON_BULLET]人力資源充足時(數量>25)，玩家使用[ICON_GOLD]金錢購買單位和建築獲得打折加成，公式為P= 5*n/c/2，其中為n人力資源數量，c為城市數量。
 				[NEWLINE][ICON_BULLET]人力資源至多帶來35%的購買減成。
 			</Text>
 		</Row>
