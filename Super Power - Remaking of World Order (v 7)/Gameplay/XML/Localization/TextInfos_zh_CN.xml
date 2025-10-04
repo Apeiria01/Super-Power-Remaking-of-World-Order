@@ -44,16 +44,16 @@
 			<Text>[COLOR_YELLOW]全部[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_IMMIGRATION">
-			<Text>SP-关闭 [COLOR_YELLOW]国际移民[ENDCOLOR]</Text>
+			<Text>SP-禁用 [COLOR_YELLOW]国际移民[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_IMMIGRATION_HELP">
-			<Text>国际移民：允许人口跨境流动。</Text>
+			<Text>国际移民：允许人口跨境流动。勾选后禁用此功能。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_NUCLEARWINTER">
-			<Text>SP-关闭 [COLOR_YELLOW]核冬天[ENDCOLOR]</Text>
+			<Text>SP-禁用 [COLOR_YELLOW]核冬天[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_NUCLEARWINTER_HELP">
-			<Text>核冬天：核战争将会引发灾难性的全球气候变化。</Text>
+			<Text>核冬天：核战争将会引发灾难性的全球气候变化。勾选后禁用此功能。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_RECORD_MODE">
 			<Text>SP-记录模式</Text>
@@ -62,22 +62,22 @@
 			<Text>记录使用额外模组数量及记录读档次数。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_HIGH">
-			<Text>SP-军团模式（高）</Text>
+			<Text>SP-拓展 [COLOR_GREY]军团模式（高）[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_HIGH_HELP">
-			<Text>允许建立军团和集团军，兵力规模等级高(150%)。</Text>
+			<Text>勾选后在军团模式下全局兵力产出变更为150%。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_CLOSE">
-			<Text>SP-关闭 [COLOR_YELLOW]军团模式[ENDCOLOR]</Text>
+			<Text>SP-禁用 [COLOR_YELLOW]军团模式[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_CLOSE_HELP">
-			<Text>军团模式：允许建立军团和集团军（详情见百科战斗规则页）</Text>
+			<Text>军团模式：允许建立军团和集团军（详情见百科战斗规则页）。勾选后禁用此功能。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_LOW">
-			<Text>SP-军团模式（低）</Text>
+			<Text>SP-拓展 [COLOR_GREY]军团模式（低）[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_LOW_HELP">
-			<Text>允许建立军团和集团军，兵力规模等级低(50%)。</Text>
+			<Text>勾选后在军团模式下全局兵力产出变更为50%。</Text>
 		</Row>
 
 
@@ -8140,7 +8140,7 @@
 			<Text>荒漠+1[ICON_PEACE]信仰，绿洲额外+1[ICON_CULTURE]文化、+1[ICON_PEACE]信仰</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GOD_KING">
-			<Text>宫殿+2[ICON_PEACE]信仰、+1[ICON_FOOD]食物、[ICON_PRODUCTION]产能，[ICON_CITYBANNER_CITY_LV1]一级城市+1[ICON_FOOD]食物、[ICON_PRODUCTION]产能、[ICON_PEACE]信仰</Text>
+			<Text>宫殿+2[ICON_PEACE]信仰、+1[ICON_FOOD]食物、[ICON_PRODUCTION]产能，[ICON_CITYBANNER_CITY_LV1]一级城市+1[ICON_PEACE]信仰、[ICON_FOOD]食物、[ICON_PRODUCTION]产能</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GODDESS_HUNT">
 			<Text>猎场+1[ICON_FOOD]食物、+1[ICON_PEACE]信仰，[ICON_RES_BISON]野牛、[ICON_RES_DEER]野鹿+1[ICON_CULTURE]文化</Text>
@@ -15132,49 +15132,49 @@
 
 		<Row Tag="TXT_KEY_GAME_OPTION_HUMAN_ALL_UC">
 			<Text>
-				SP-开启 [COLOR_YELLOW]人类玩家全UC[ENDCOLOR]
+				SP-拓展 [COLOR_GREY]人类玩家全UC[ENDCOLOR]
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_HUMAN_ALL_UC_HELP">
 			<Text>
-				开启后，允许人类玩家建造或训练所有文明的特殊建筑、改良设施和单位。
+				勾选后，允许人类玩家建造或训练所有文明的特殊建筑、改良设施和单位。
 				[NEWLINE][COLOR_YELLOW]注[ENDCOLOR]：部分建筑特效生效的前提是该文明在场，如伊斯兰大学和诺曼营地等，若文明不在场，玩家只能获取其基础产出。
 			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_GAME_OPTION_CIV_CONQUER">
 			<Text>
-				SP-开启 [COLOR_YELLOW]文明征服[ENDCOLOR]
+				SP-拓展 [COLOR_GREY]文明征服[ENDCOLOR]
 			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_GAME_OPTION_CIV_CONQUER_HELP">
 			<Text>
-				开启后，占领文明的原始首都后，解锁该文明的特殊建筑、改良设施和单位。
+				勾选后，占领文明的原始首都后，解锁该文明的特殊建筑、改良设施和单位。
 			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_GAME_OPTION_PROJECT_CAPTURE">
 			<Text>
-				SP-开启 [COLOR_YELLOW]精英工程获取[ENDCOLOR]
+				SP-拓展 [COLOR_GREY]精英工程获取[ENDCOLOR]
 			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_GAME_OPTION_PROJECT_CAPTURE_HELP">
 			<Text>
-				开启后允许玩家在攻占拥有精英工程的城市后在自己首都得到相同的精英工程（原拥有者不会失去工程）。
+				勾选后允许玩家在攻占拥有精英工程的城市后在自己首都得到相同的精英工程（原拥有者不会失去工程）。
 			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_GAME_OPTION_ABLE_GIFT_MILITIA">
 			<Text>
-				SP-开启 [COLOR_YELLOW]赠送民兵单位[ENDCOLOR]
+				SP-拓展 [COLOR_GREY]赠送民兵单位[ENDCOLOR]
 			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_GAME_OPTION_ABLE_GIFT_MILITIA_HELP">
 			<Text>
-				开启后允许向城邦赠送民兵单位以获取影响力。
+				勾选后允许向城邦赠送民兵单位以获取影响力。
 			</Text>
 		</Row>
 
