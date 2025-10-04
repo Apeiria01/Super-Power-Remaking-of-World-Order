@@ -46,13 +46,13 @@
 			<Text>SP - [COLOR_YELLOW]Immigration[ENDCOLOR] - OFF</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_IMMIGRATION_HELP">
-			<Text>International Immigration: Allow Population movement across borders.</Text>
+			<Text>International Immigration: Allow Population movement across borders. Disable when checked.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_NUCLEARWINTER">
 			<Text>SP - [COLOR_YELLOW]Nuclear Winter[ENDCOLOR] - OFF</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_NUCLEARWINTER_HELP">
-			<Text>Nuclear Winter: A terrible effect of global climate will be caused by nuclear wars.</Text>
+			<Text>Nuclear Winter: A terrible effect of global climate will be caused by nuclear wars. Disable when checked.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_RECORD_MODE">
 			<Text>SP - Record Mode</Text>
@@ -61,22 +61,22 @@
 			<Text>Record Mode: Record the count of Other MODs Used and the times of Game Loading.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_HIGH">
-			<Text>SP - Corps Mode (High)</Text>
+			<Text>SP - [COLOR_GREY]Corps Mode (High)[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_HIGH_HELP">
-			<Text>Corps Mode - High:   Allow to establish Corps and Armee. The Troops Level is High (150%). Please refer to wiki page of troops.</Text>
+			<Text>Once activated, the global Troops point output in Corps Mode is changed to 150%.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_CLOSE">
 			<Text>SP - [COLOR_YELLOW]Corps Mode[ENDCOLOR] - OFF</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_CLOSE_HELP">
-			<Text>Corps Mode: Allow to establish Corps and Armee. (see the Encyclopedia Combat Rules page for details)</Text>
+			<Text>Corps Mode: Allow to establish Corps and Armee (see the Encyclopedia Combat Rules page for details). Disable when checked.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_LOW">
-			<Text>SP - Corps Mode (Low)</Text>
+			<Text>SP - [COLOR_GREY]Corps Mode (Low)[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_SP_CORPS_MODE_LOW_HELP">
-			<Text>Corps Mode - Low:    Allow to establish Corps and Armee. The Troops Level is Low (50%). Please refer to wiki page of troops.</Text>
+			<Text>Once activated, the global Troops point output in Corps Mode is changed to 50%.</Text>
 		</Row>
 
 
@@ -9111,7 +9111,7 @@
 			<Text>+2 [ICON_PEACE] Faith and +2 [ICON_CULTURE] Culture for every [ICON_RES_GEMS]Gem and [ICON_RES_PEARLS]Pearl</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_BELIEF_GOD_KING">
-			<Text>Palace provides +2 [ICON_PEACE] Faith, +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production, +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production and +1 [ICON_PEACE] Faith from each [ICON_CITYBANNER_CITY_LV1] City Hall [COLOR_NEGATIVE_TEXT](Lv1)[ENDCOLOR]</Text>
+			<Text>Palace provides +2 [ICON_PEACE] Faith, +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production, +1 [ICON_PEACE] Faith, +1 [ICON_FOOD] Food and +1 [ICON_PRODUCTION] Production from each [ICON_CITYBANNER_CITY_LV1] City Hall [COLOR_NEGATIVE_TEXT](Lv1)[ENDCOLOR]</Text>
 		</Replace>
 		
 		<Replace Tag="TXT_KEY_BELIEF_PAPAL_PRIMACY">
@@ -16797,19 +16797,19 @@
 
 		<Row Tag="TXT_KEY_GAME_OPTION_HUMAN_ALL_UC">
 			<Text>
-				SP - [COLOR_YELLOW]All human players are UC[ENDCOLOR]
+				SP - [COLOR_GREY]Human players get all UC[ENDCOLOR]
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_HUMAN_ALL_UC_HELP">
 			<Text>
-				When turned on, human players are allowed to build or train special buildings, improvements, and units for all civilizations.
+				Once activated, human players are allowed to build or train special buildings, improvements, and units for all civilizations.
 				[NEWLINE][COLOR_YELLOW]Note[ENDCOLOR]: Some building special effects require the presence of the civilization, such as Islamic University and Norman Camp. If the civilization is not present, players can only obtain its basic output.
 			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_GAME_OPTION_CIV_CONQUER">
 			<Text>
-				SP - [COLOR_YELLOW]Civilization Conquest[ENDCOLOR]
+				SP - [COLOR_GREY]Civilization Conquest[ENDCOLOR]
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GAME_OPTION_CIV_CONQUER_HELP">
@@ -16820,25 +16820,25 @@
 
 		<Row Tag="TXT_KEY_GAME_OPTION_PROJECT_CAPTURE">
 			<Text>
-			SP - [COLOR_YELLOW]Elite Project Capture[ENDCOLOR]
+				SP - [COLOR_GREY]Elite Project Capture[ENDCOLOR]
 			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_GAME_OPTION_PROJECT_CAPTURE_HELP">
 			<Text>
-			Once activated, allows the player to get a same Elite project in their own capital after capturing the city with the Elite Project (the original owner will not lose the project).
+				Once activated, allows the player to get a same Elite project in their own capital after capturing the city with the Elite Project (the original owner will not lose the project).
 			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_GAME_OPTION_ABLE_GIFT_MILITIA">
 			<Text>
-				SP - [COLOR_YELLOW]Enable giving militia units [ENDCOLOR]
+				SP - [COLOR_GREY]Giving Minor militia units[ENDCOLOR]
 			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_GAME_OPTION_ABLE_GIFT_MILITIA_HELP">
 			<Text>
-				Check to allow giving militia units to city states to gain influence.
+				Once activated, allow giving militia units to city states to gain influence.
 			</Text>
 		</Row>
 
@@ -16847,7 +16847,7 @@
 				When the unit's movement is full, goods can be replenished in cities with Feitoria.
 				[COLOR_POSITIVE_TEXT]Right-click[ENDCOLOR] to perform the action on all applicable units.
 			</Text>
-			</Row>
+		</Row>
 			
 		<Row Tag="TXT_KEY_SP_MISSION_SUPPLY_EXOTIC_GOODS_TITLE">
 			<Text>
