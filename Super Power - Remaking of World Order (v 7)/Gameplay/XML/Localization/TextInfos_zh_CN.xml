@@ -12057,10 +12057,10 @@
 			<Plurality>2</Plurality>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_PROTOTYPE_AIRSHIP_HELP">
-			<Text>能够装载4架飞机的巨型飞艇。可跨越山脉和水域。[NEWLINE][NEWLINE]需要巨型飞艇工程解锁，你只能建造一艘。</Text>
+			<Text>能够装载6架飞机的巨型飞艇。可跨越山脉和水域。[NEWLINE][NEWLINE]需要巨型飞艇工程解锁，你只能建造一艘。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_PROTOTYPE_AIRSHIP_STRATEGY">
-			<Text>这艘巨型飞艇能够装载4架飞机，通过晋升还可以继续增加。她能够作为移动载机平台，保证你的敌人始终处于你空军轰炸机的航程之内，航程较短的早期飞机尤其需要她。飞艇本身没有攻击能力，但其防御力很强。建议尽早建造此项目，后期喷气式飞机航程大幅度提升，恐怕就不需要这艘老古董的支援了。</Text>
+			<Text>这艘巨型飞艇能够装载6架飞机。她能够作为移动载机平台，保证你的敌人始终处于你空军轰炸机的航程之内，航程较短的早期飞机尤其需要她。飞艇本身没有攻击能力，但其防御力很强。建议尽早建造此项目，后期喷气式飞机航程大幅度提升，恐怕就不需要这艘老古董的支援了。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_PROTOTYPE_AIRSHIP_HEADING">
 			<Text>[COLOR_YELLOW]齐柏林号飞艇[ENDCOLOR]</Text>

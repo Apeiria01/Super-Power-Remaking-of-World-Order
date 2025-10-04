@@ -11905,10 +11905,10 @@
 			<Plurality>2</Plurality>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_PROTOTYPE_AIRSHIP_HELP">
-			<Text>能夠裝載4架飛機的巨型飛艇。可跨越山脈和水域。[NEWLINE][NEWLINE]需要巨型飛艇工程解鎖，你只能建造一艘。</Text>
+			<Text>能夠裝載6架飛機的巨型飛艇。可跨越山脈和水域。[NEWLINE][NEWLINE]需要巨型飛艇工程解鎖，你只能建造一艘。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_PROTOTYPE_AIRSHIP_STRATEGY">
-			<Text>這艘巨型飛艇能夠裝載4架飛機，通過晉升還可以繼續增加。她能夠作為移動載機平臺，保證你的敵人始終處於你空軍轟炸機的航程之內，航程較短的早期飛機尤其需要她。飛艇本身沒有攻擊能力，但其防禦力很強。建議儘早建造此項目，後期噴氣式飛機航程大幅度提升，恐怕就不需要這艘老古董的支援了。</Text>
+			<Text>這艘巨型飛艇能夠裝載6架飛機。她能夠作為移動載機平臺，保證你的敵人始終處於你空軍轟炸機的航程之內，航程較短的早期飛機尤其需要她。飛艇本身沒有攻擊能力，但其防禦力很強。建議儘早建造此項目，後期噴氣式飛機航程大幅度提升，恐怕就不需要這艘老古董的支援了。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_PROTOTYPE_AIRSHIP_HEADING">
 			<Text>[COLOR_YELLOW]齊柏林號飛艇[ENDCOLOR]</Text>
