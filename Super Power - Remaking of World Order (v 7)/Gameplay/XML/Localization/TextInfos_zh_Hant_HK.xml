@@ -541,7 +541,7 @@
 			<Text>
 				[ICON_BULLET]+1[ICON_HAPPINESS_1]本地快樂。
 				[NEWLINE][ICON_BULLET]城市內所有的[COLOR_POSITIVE_TEXT]森林[ENDCOLOR]區塊+1[ICON_PRODUCTION]產能、[COLOR_POSITIVE_TEXT]叢林[ENDCOLOR]區塊+1[ICON_FOOD]食物。
-				[NEWLINE][ICON_BULLET]本城範圍內的每壹處有市民工作的森林或叢林為城市+1%[ICON_PRODUCTION]產能產出。
+				[NEWLINE][ICON_BULLET]本城範圍內的每一處有市民工作的森林或叢林為城市+1%[ICON_PRODUCTION]產能產出。
 			</Text>
 		</Replace>
 
@@ -622,7 +622,7 @@
 				[NEWLINE][ICON_BULLET]本城有市民工作的[ICON_RES_IRON]鐵、[ICON_RES_COPPER]銅、[ICON_RES_COAL]煤、[ICON_RES_ALUMINUM]鋁和[ICON_RES_URANIUM]鈾資源+1[ICON_PRODUCTION]產能。
 				[NEWLINE][ICON_BULLET]本城有市民工作的礦井+1[ICON_PRODUCTION]產能。
 				[NEWLINE][ICON_BULLET]建造軍事單位+15%[ICON_PRODUCTION]產能累積。
-				[NEWLINE][ICON_BULLET]城市附近必須擁有上述資源的壹種或多種。
+				[NEWLINE][ICON_BULLET]城市附近必須擁有上述資源的一種或多種。
 				[NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]汙染[ENDCOLOR]將會導致[ICON_FOOD]食物累積-5%。
 				[NEWLINE][ICON_BULLET]需要1單位[ICON_RES_ELECTRICITY]電力。
 			</Text>
@@ -2775,7 +2775,7 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_BUILDING_SATRAPS_COURT_HELP">
 			<Text>
-				替代#市政廳[COLOR_NEGATIVE_TEXT]（壹級）[ENDCOLOR]，和普通[COLOR_NEGATIVE_TEXT]一級[ENDCOLOR]市政廳相比：
+				替代#市政廳[COLOR_NEGATIVE_TEXT]（一級）[ENDCOLOR]，和普通[COLOR_NEGATIVE_TEXT]一級[ENDCOLOR]市政廳相比：
 				[NEWLINE][ICON_BULLET]無維護費，不消耗額外消費品且不會造成額外政策閾值上漲，沒有額外[ICON_HAPPINESS_4]不滿。
 				[NEWLINE][ICON_BULLET]每座總督府+2[ICON_HAPPINESS_1]全局快樂，+4%[ICON_GOLDEN_AGE]黃金時代長度。
 			</Text>
@@ -2856,7 +2856,7 @@
 		</Row>
 
 		<Row Tag="TXT_KEY_SELL_BUILDING_CITY_HALL">
-			<Text>你確定要出售市政廳嗎？你將花費{1_Num}[ICON_GOLD]金錢用於扶持傀儡並將其轉化為傀儡城市，你可省去{2_Num}[ICON_GOLD]金錢/回合的維護費以及直轄城市帶來的政策閾值、不滿等，此外城市將進入壹定回合的[COLOR_NEGATIVE_TEXT]無政府時間[ENDCOLOR]（回合數等於人口的壹半）。</Text>
+			<Text>你確定要出售市政廳嗎？你將花費{1_Num}[ICON_GOLD]金錢用於扶持傀儡並將其轉化為傀儡城市，你可省去{2_Num}[ICON_GOLD]金錢/回合的維護費以及直轄城市帶來的政策閾值、不滿等，此外城市將進入一定回合的[COLOR_NEGATIVE_TEXT]無政府時間[ENDCOLOR]（回合數等於人口的一半）。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SELL_CITY_HALL_DIABLE">
 			<Text>[COLOR_NEGATIVE_TEXT][ICON_GOLD]金錢不足[ENDCOLOR]</Text>
@@ -4546,7 +4546,7 @@
 		<Row Tag="TXT_KEY_CONCEPT_SP_NUCLEAR_WINTER_DETAILS_SUMMARY">
 			<Text>
 				觸發條件：核爆炸會增加全球核冬天進程。當核冬天進程達到閾值時，核冬天的扳機將被摳動。
-				[NEWLINE][NEWLINE]效果：核冬天擁有四個階段，如果有更多核爆炸，核冬天就會進入下壹個階段。
+				[NEWLINE][NEWLINE]效果：核冬天擁有四個階段，如果有更多核爆炸，核冬天就會進入下一個階段。
 				[NEWLINE][NEWLINE]1，凜冬將至——核冬天進程達到50。你在發生核爆炸時會收到核冬天即將降臨的警告。
 				[NEWLINE]2，災變夜——核冬天進程達到75。輻射煙雲遮蔽了太陽，地球開始了長夜，各個城市的人口增長減慢。
 				[NEWLINE]3，末世——核冬天進程達到225。大量的輻射塵覆蓋了土壤，全球性的饑荒開始。
@@ -8437,7 +8437,7 @@
 				[ICON_BULLET]城市擁有兵工廠後允許使用兩個相同單位組建“軍團”，[ICON_STRENGTH]戰鬥力+10%，血量上限+100%；[NEWLINE]
 				[ICON_BULLET]城市擁有軍事基地後允許使用軍團單位和壹個同類普通單位組建“集團軍”，[ICON_STRENGTH]戰鬥力再+15%，血量上限再+100%；[NEWLINE]
 				[ICON_BULLET]AI新造/新刷單位優先補充舊單位的損失，其次在條件滿足的情況下合入舊單位（根據遊戲難度合入概率有浮動變化）；[NEWLINE]
-				使用相同單位合成軍團可以同時合並兩個單位的晉升，並由此得到壹個強力單位；[NEWLINE]
+				使用相同單位合成軍團可以同時合並兩個單位的晉升，並由此得到一個強力單位；[NEWLINE]
 				消耗陸軍統帥可以無視軍團/集團軍組建上限為單位直接賦予“軍團”或“集團軍”晉升（賦予“集團軍”晉升需要城市擁有兵工廠，每個陸軍統帥僅能進行一次）；[NEWLINE][NEWLINE]
 				引入“兵力”設定，兵力決定妳總共能擁有的軍事單位數量，兵力為0後不能建造軍事單位，新獲得的軍事單位也會被清除，AI兵力為0後也將停止刷出單位：[NEWLINE]
 				[ICON_BULLET]默認情況下除小鎮以外的每個城市規模等級提供4兵力點，初始24點，每個兵工廠提供2點軍團上限，軍事基地提供2點軍團和集團軍組建上限；[NEWLINE]
@@ -12323,6 +12323,7 @@
 				[NEWLINE][ICON_BULLET]不受[COLOR_POSITIVE_TEXT]負面效果[ENDCOLOR]影響。
 				[NEWLINE][ICON_BULLET]處於境外每回合會-50HP且-25%[ICON_STRENGTH]戰鬥力。
 				[NEWLINE][ICON_BULLET]不能[COLOR_NEGATIVE_TEXT]移動[ENDCOLOR]，不能獲得[COLOR_NEGATIVE_TEXT]晉升[ENDCOLOR]。
+				[NEWLINE]
 				[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]攻城單位[ENDCOLOR]克製。
 			</Text>
 		</Row>
@@ -12381,21 +12382,24 @@
 			<Text>方陣步兵</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_ANTI_MOUNTED_HELP">
-			<Text>克制[COLOR_POSITIVE_TEXT]騎乘[ENDCOLOR]單位，被[COLOR_NEGATIVE_TEXT]遠程攻擊[ENDCOLOR]克制。[NEWLINE]駐守時每回合額外回復15HP。</Text>
+			<Text>
+				造價低廉、專門對抗重裝騎兵的單位。
+				[NEWLINE][ICON_BULLET]駐守時每回合額外回複15HP。
+				[NEWLINE][NEWLINE][ICON_BULLET]克制[COLOR_POSITIVE_TEXT]重裝騎兵[ENDCOLOR]單位。
+				[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]陸軍遠程[ENDCOLOR]單位克制。
+			</Text>
 		</Replace>
-		<!--
-		<Replace Tag="TXT_KEY_PROMOTION_ANTI_MOUNTED_II">
-			<Text>長槍武器</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_ANTI_MOUNTED_II_HELP" >
-			<Text>面對[COLOR_POSITIVE_TEXT]騎乘[ENDCOLOR]單位戰鬥力加成。</Text>
-		</Replace>
-		-->
+
 		<Replace Tag="TXT_KEY_PROMOTION_ANTI_TANK">
 			<Text>反裝甲單位</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_ANTI_TANK_HELP">
-			<Text>克制[COLOR_POSITIVE_TEXT]裝甲[ENDCOLOR]單位，被[COLOR_NEGATIVE_TEXT]防空單位[ENDCOLOR]克制。[NEWLINE]駐守時每回合額外回復15HP。</Text>
+			<Text>
+				造價低廉、專門對抗裝甲的單位。
+				[NEWLINE][ICON_BULLET]駐守時每回合額外回複15HP。
+				[NEWLINE][NEWLINE][ICON_BULLET]克制[COLOR_POSITIVE_TEXT]裝甲[ENDCOLOR]單位。
+				[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]陸軍遠程[ENDCOLOR]單位克制。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_PROMOTION_FORMATION_1_HELP">
@@ -12442,7 +12446,16 @@
 			<Text>重裝騎兵</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_KNIGHT_COMBAT_HELP">
-			<Text>克制[COLOR_POSITIVE_TEXT]攻城[ENDCOLOR]單位，被[COLOR_NEGATIVE_TEXT]方陣步兵[ENDCOLOR]克制。[COLOR_POSITIVE_TEXT]攻擊[ENDCOLOR]時+50%戰鬥力。能夠衝鋒擊退敵方單位，並對其同格單位造成50%的[COLOR_POSITIVE_TEXT]踐踏[ENDCOLOR]傷害。[NEWLINE]可攻擊後移動。[NEWLINE]攻擊[COLOR_NEGATIVE_TEXT]城市[ENDCOLOR]失去所有[ICON_MOVES]移動力。[NEWLINE]沒有地形防禦加成。</Text>
+			<Text>
+				快速且強力的單位，專用于突破敵軍防線及消滅敵方遠程單位。
+				[NEWLINE][ICON_BULLET][COLOR_POSITIVE_TEXT]攻擊[ENDCOLOR]時+50%戰鬥力。
+				[NEWLINE][ICON_BULLET]能夠衝鋒擊退敵方單位，並對其同格單位造成50%的[COLOR_POSITIVE_TEXT]踐踏[ENDCOLOR]傷害。
+				[NEWLINE][ICON_BULLET]可攻擊後移動。
+				[NEWLINE][ICON_BULLET]沒有地形防禦加成。
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]方陣步兵[ENDCOLOR]克制。
+				[NEWLINE][ICON_BULLET]攻擊[COLOR_NEGATIVE_TEXT]城市[ENDCOLOR]失去所有[ICON_MOVES]移動力。
+			</Text>
 		</Row>
 
 		<!--<Row Tag="TXT_KEY_PROMOTION_LANDIRONCLAD">
@@ -12456,7 +12469,16 @@
 			<Text>裝甲單位</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_TANK_COMBAT_HELP">
-			<Text>克制[COLOR_POSITIVE_TEXT]炮兵[ENDCOLOR]單位，被[COLOR_NEGATIVE_TEXT]反裝甲和直升機[ENDCOLOR]單位克制。[COLOR_POSITIVE_TEXT]攻擊[ENDCOLOR]時+50%戰鬥力。能夠衝鋒擊退敵方單位，並對其同格單位造成50%的[COLOR_POSITIVE_TEXT]碾壓[ENDCOLOR]傷害。[NEWLINE]可攻擊後移動。[NEWLINE]攻擊[COLOR_NEGATIVE_TEXT]城市[ENDCOLOR]失去所有[ICON_MOVES]移動力。[NEWLINE]沒有地形防禦加成。</Text>
+			<Text>
+				快速且強力的單位，專用于突破敵軍防線及消滅敵方遠程單位。
+				[NEWLINE][ICON_BULLET][COLOR_POSITIVE_TEXT]攻擊[ENDCOLOR]時+50%戰鬥力。
+				[NEWLINE][ICON_BULLET]能夠衝鋒擊退敵方單位，並對其同格單位造成50%的[COLOR_POSITIVE_TEXT]碾壓[ENDCOLOR]傷害。
+				[NEWLINE][ICON_BULLET]可攻擊後移動。
+				[NEWLINE][ICON_BULLET]沒有地形防禦加成。
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]反裝甲[ENDCOLOR]單位克制。
+				[NEWLINE][ICON_BULLET]攻擊[COLOR_NEGATIVE_TEXT]城市[ENDCOLOR]失去所有[ICON_MOVES]移動力。
+			</Text>
 		</Row>
 
 		<Replace Tag="TXT_KEY_PROMOTION_CHARGE_1">
@@ -12493,14 +12515,16 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_ARCHERY_COMBAT_HELP">
 			<Text>
-				[ICON_BULLET]克製[COLOR_POSITIVE_TEXT]方陣步兵[ENDCOLOR]，[COLOR_POSITIVE_TEXT]反裝甲[ENDCOLOR]和[COLOR_POSITIVE_TEXT]陸軍遊獵[ENDCOLOR]單位。
-				[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]近戰[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]攻城[ENDCOLOR]單位克製。
+				遠程單位，具有遠程打擊與遲滯敵人效果。
 				[NEWLINE][ICON_BULLET]對[COLOR_POSITIVE_TEXT]開闊[ENDCOLOR]地形中的單位+25%[ICON_RANGE_STRENGTH]遠程戰鬥力。
 				[NEWLINE][ICON_BULLET]自身所處[COLOR_POSITIVE_TEXT]高度[ENDCOLOR]大於敵方單位時，每點高度+25%戰鬥力，上限50%。
 				[NEWLINE][ICON_BULLET]沒有地形防禦加成。
 				[NEWLINE][ICON_BULLET]當本單位與[COLOR_POSITIVE_TEXT]步兵[ENDCOLOR]、[COLOR_POSITIVE_TEXT]反製[ENDCOLOR]或[COLOR_POSITIVE_TEXT]炮臺[ENDCOLOR]單位重疊時，如果被敵方[COLOR_POSITIVE_TEXT]近戰[ENDCOLOR]單位攻擊，本單位會自動反擊。
 				[NEWLINE][ICON_BULLET]每回合反擊次數無限。
 				[NEWLINE][ICON_BULLET]如果你的掩護單位被消滅，則不能反擊。
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]克制[COLOR_POSITIVE_TEXT]方陣步兵[ENDCOLOR]，[COLOR_POSITIVE_TEXT]反裝甲[ENDCOLOR]和[COLOR_POSITIVE_TEXT]陸軍遊獵[ENDCOLOR]單位。
+				[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]近戰[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]攻城[ENDCOLOR]單位克制。
 			</Text>
 		</Row>
 
@@ -12508,7 +12532,13 @@
 			<Text>防空火力</Text>
 		</Replace>
 		<Row Tag="TXT_KEY_PROMOTION_ANTI_AIR_HELP">
-			<Text>每回合能夠進行一次對空攔截。對[COLOR_POSITIVE_TEXT]攻擊機[ENDCOLOR]和[COLOR_POSITIVE_TEXT]直升機[ENDCOLOR]單位擁有戰鬥力加成，被[COLOR_NEGATIVE_TEXT]近戰[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]攻城[ENDCOLOR]單位克制。[NEWLINE]沒有地形防禦加成。</Text>
+			<Text>
+				可以攔截試圖轟炸附近單位的敵軍飛機。
+				[NEWLINE][ICON_BULLET]每回合能夠進行一次對空攔截。
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]對[COLOR_POSITIVE_TEXT]攻擊機[ENDCOLOR]和[COLOR_POSITIVE_TEXT]直升機[ENDCOLOR]單位擁有戰鬥力加成。
+				[NEWLINE][ICON_BULLET]攔截[COLOR_NEGATIVE_TEXT]戰略轟炸機[ENDCOLOR]時效果不佳。
+			</Text>
 		</Row>
 
 		<!--<Row Tag="TXT_KEY_PROMOTION_ANTI_INFANTRY">
@@ -12604,14 +12634,35 @@
 			<Text>騎射單位</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_HITANDRUN_HELP">
-			<Text>可進行遠程攻擊亦可近戰攻擊。[NEWLINE]可攻擊後移動。[NEWLINE]攻擊[COLOR_NEGATIVE_TEXT]城市[ENDCOLOR]戰鬥力減成。[NEWLINE]沒有地形防禦加成。</Text>
+			<Text>
+				遊擊作戰單位，專用于削弱敵方堅固防線或追擊受傷敵軍，同時擅長執行偵察任務。
+				[NEWLINE][ICON_BULLET]可[COLOR_POSITIVE_TEXT]遠程攻擊[ENDCOLOR]亦可[COLOR_POSITIVE_TEXT]近戰攻擊[ENDCOLOR]。
+				[NEWLINE][ICON_BULLET]可以攻擊後移動。
+				[NEWLINE][ICON_BULLET]不受敵方控制區域（ZOC）阻礙。
+				[NEWLINE][ICON_BULLET]沒有地形防禦加成。
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]克制[COLOR_POSITIVE_TEXT]民兵[ENDCOLOR]單位及[COLOR_POSITIVE_TEXT]特戰[ENDCOLOR]單位。
+				[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]陸軍遠程[ENDCOLOR]單位克制。
+				[NEWLINE][ICON_BULLET]攻擊[COLOR_NEGATIVE_TEXT]城市[ENDCOLOR]以及[COLOR_NEGATIVE_TEXT]海軍正規軍[ENDCOLOR]獲得戰鬥力減成。
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_HELI_ATTACK">
 			<Text>直升機單位</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_HELI_ATTACK_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]懸浮[ENDCOLOR]移動。[NEWLINE]可進行遠程攻擊亦可近戰攻擊。[NEWLINE]可攻擊後移動。[NEWLINE]克制[COLOR_POSITIVE_TEXT]攻城[ENDCOLOR]單位，被[COLOR_NEGATIVE_TEXT]防空[ENDCOLOR]單位克制。[NEWLINE]攻擊[COLOR_NEGATIVE_TEXT]城市[ENDCOLOR]戰鬥力減成。[NEWLINE]沒有地形防禦加成。</Text>
+			<Text>
+				懸浮單位，專用于削弱敵方堅固防線或追擊受傷敵軍，同時擅長執行偵察任務。
+				[NEWLINE][ICON_BULLET][COLOR_POSITIVE_TEXT]懸浮[ENDCOLOR]移動。
+				[NEWLINE][ICON_BULLET]可[COLOR_POSITIVE_TEXT]遠程攻擊[ENDCOLOR]亦可[COLOR_POSITIVE_TEXT]近戰攻擊[ENDCOLOR]。
+				[NEWLINE][ICON_BULLET]可以攻擊後移動。
+				[NEWLINE][ICON_BULLET]不受敵方控制區域（ZOC）阻礙。
+				[NEWLINE][ICON_BULLET]沒有地形防禦加成。
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]克制[COLOR_POSITIVE_TEXT]民兵[ENDCOLOR]單位及[COLOR_POSITIVE_TEXT]特戰[ENDCOLOR]單位。
+				[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]防空[ENDCOLOR]單位克制。
+				[NEWLINE][ICON_BULLET]攻擊[COLOR_NEGATIVE_TEXT]城市[ENDCOLOR]獲得戰鬥力減成。
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_SUNDER_1">
@@ -12650,7 +12701,16 @@
 			<Text>攻城武器</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_CITY_SIEGE_HELP">
-			<Text>攻擊[COLOR_POSITIVE_TEXT]城市[ENDCOLOR]+200%[ICON_STRENGTH]戰鬥力，攻擊[COLOR_POSITIVE_TEXT]軍事要塞火力點[ENDCOLOR]+200%[ICON_STRENGTH]戰鬥力，攻擊[COLOR_POSITIVE_TEXT]駐紮單位[ENDCOLOR]和[COLOR_POSITIVE_TEXT]陸軍遠程[ENDCOLOR]+50%[ICON_STRENGTH]戰鬥力，被[COLOR_NEGATIVE_TEXT]近戰[ENDCOLOR]單位克制。[NEWLINE]攻擊目標時對同一格單位造成50%傷害。[NEWLINE]攻擊木制船只有幾率造成[COLOR_NEGATIVE_TEXT]局部損傷[ENDCOLOR]或[COLOR_NEGATIVE_TEXT]嚴重損傷[ENDCOLOR][NEWLINE]沒有地形防禦加成。</Text>
+			<Text>
+				攻城武器，用于攻擊敵方城市與要塞，能造成穿透傷害並打擊敵軍士氣。
+				[NEWLINE][ICON_BULLET]攻擊目標時對同一格單位造成50%傷害。
+				[NEWLINE][ICON_BULLET]攻擊木制船只有幾率造成[COLOR_NEGATIVE_TEXT]局部損傷[ENDCOLOR]或[COLOR_NEGATIVE_TEXT]嚴重損傷[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]沒有地形防禦加成。
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]攻擊[COLOR_POSITIVE_TEXT]城市[ENDCOLOR]、[COLOR_POSITIVE_TEXT]固定炮台[ENDCOLOR]+200%[ICON_STRENGTH]戰鬥力。
+				[NEWLINE][ICON_BULLET]攻擊[COLOR_POSITIVE_TEXT]駐紮單位[ENDCOLOR]和[COLOR_POSITIVE_TEXT]陸軍遠程[ENDCOLOR]+50%[ICON_STRENGTH]戰鬥力。
+				[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]近戰[ENDCOLOR]單位克制。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_PROMOTION_VOLLEY">
@@ -12684,7 +12744,15 @@
 			<Text>覆蓋火力</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SPLASH_DAMAGE_HELP">
-			<Text>對目標相鄰區域造成50%傷害，攻擊[COLOR_NEGATIVE_TEXT]城市[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]駐防單位[ENDCOLOR]攻擊力較弱，被[COLOR_NEGATIVE_TEXT]近戰[ENDCOLOR]單位克制。[NEWLINE]沒有地形防禦加成。</Text>
+			<Text>
+				重型強力武器，可對敵軍單位造成範圍傷害。
+				[NEWLINE][ICON_BULLET]對目標單位每一個[COLOR_POSITIVE_TEXT]相鄰地塊[ENDCOLOR]的一個敵軍造成50%傷害。
+				[NEWLINE][ICON_BULLET]攻擊[COLOR_NEGATIVE_TEXT]城市[ENDCOLOR]不會對其中的單位造成傷害。
+				[NEWLINE][ICON_BULLET]沒有地形防禦加成。
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]攻擊[COLOR_NEGATIVE_TEXT]駐紮單位[ENDCOLOR]獲得戰鬥力減成。
+				[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]近戰[ENDCOLOR]單位克制。
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_CLUSTER_ROCKET_1">
@@ -12772,10 +12840,11 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_RECON_UNIT_HELP">
 			<Text>
-				[ICON_BULLET]對其他單位隱形，能夠發現其他偽裝單位。
-				[NEWLINE][ICON_BULLET]不能掠奪和佔領城市。
+				偵察單位，專精于偵察與地圖探索。
+				[NEWLINE][ICON_BULLET]對其他單位隱形，能夠發現其他偽裝單位。
+				[NEWLINE][ICON_BULLET]能夠在[COLOR_POSITIVE_TEXT]境外友方地域[ENDCOLOR]恢複且恢複時額外+15點生命值。
 				[NEWLINE][ICON_BULLET]沒有地形防禦加成。
-				[NEWLINE][ICON_BULLET]能夠在[COLOR_POSITIVE_TEXT]境外友方地域[ENDCOLOR]恢復且恢復時額外+15點生命值。
+				[NEWLINE][ICON_BULLET]不能[COLOR_NEGATIVE_TEXT]掠奪[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]占領[ENDCOLOR]城市。
 			</Text>
 		</Row>
 
@@ -12831,7 +12900,19 @@
 			<Text>特戰單位</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SPECIAL_FORCES_COMBAT_HELP">
-			<Text>對其他單位隱形，能夠發現其他偽裝單位。[NEWLINE]在友方地域之外回復時額外+15HP。[NEWLINE]能夠攻擊後移動。[NEWLINE][ICON_BULLET]能夠使用敵方道路。[NEWLINE]劫掠不消耗移動力。[NEWLINE][ICON_BULLET]空軍單位無法發現或攻擊此類單位。[NEWLINE]克制[COLOR_POSITIVE_TEXT]民兵[ENDCOLOR]單位，被[COLOR_NEGATIVE_TEXT]常規部隊[ENDCOLOR]克制。[NEWLINE]不能通過[ICON_GOLD]金幣[COLOR_NEGATIVE_TEXT]購買[ENDCOLOR]。</Text>
+			<Text>
+				具有多種獨特能力的特種部隊單位，可執行常規軍隊無法完成的特殊任務。
+				[NEWLINE][ICON_BULLET]對其他單位隱形，能夠發現其他僞裝單位。
+				[NEWLINE][ICON_BULLET]回複時額外+30HP。
+				[NEWLINE][ICON_BULLET]能夠攻擊後移動。
+				[NEWLINE][ICON_BULLET]能夠使用敵方道路。
+				[NEWLINE][ICON_BULLET]劫掠不消耗移動力。
+				[NEWLINE][ICON_BULLET]路基飛機無法發現或攻擊此類單位。
+				[NEWLINE][ICON_BULLET]不能通過[ICON_GOLD]金錢[COLOR_NEGATIVE_TEXT]購買[ENDCOLOR]。
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]克制[COLOR_POSITIVE_TEXT]民兵[ENDCOLOR]單位
+				[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]常規部隊[ENDCOLOR]尤其是[COLOR_NEGATIVE_TEXT]陸軍遊獵[ENDCOLOR]單位克制。
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_SP_FORCE_1">
@@ -12839,7 +12920,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SP_FORCE_1_HELP">
 			<Text>
-				[ICON_BULLET]攻擊目標單位如果處於友方地域之外，每回合會因為缺乏補給-20HP。
+				[ICON_BULLET]攻擊目標單位如果處于友方地域之外，每回合會因爲缺乏補給-20HP。
 				[NEWLINE][ICON_BULLET]境外作戰+33%[ICON_STRENGTH]戰鬥力
 			</Text>
 		</Row>
@@ -12920,14 +13001,28 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_MILITIA_COMBAT_HELP">
 			<Text>
-				廉價的民兵單位，適合駐防城市或者打遊擊戰。它可以做後勤單位來加速周圍其他單位HP恢復速度，因為便宜，也可以當炮灰使用。
-				[NEWLINE][ICON_BULLET]每回合額外恢復15HP。[NEWLINE][ICON_BULLET]可以轉職為工人單位。[NEWLINE][ICON_BULLET]友方地域內+25%[ICON_STRENGTH]戰鬥力。[NEWLINE][ICON_BULLET]攻擊[COLOR_POSITIVE_TEXT]城市[ENDCOLOR]時+50% [ICON_STRENGTH]戰鬥力。[NEWLINE][ICON_BULLET]境外作戰-25%[ICON_STRENGTH]戰鬥力。[NEWLINE]被[COLOR_NEGATIVE_TEXT]正規軍[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]特戰[ENDCOLOR]單位克制。</Text>
+				廉價的民兵單位，適合駐防城市或者打遊擊戰。它可以做後勤單位來加速周圍其他單位HP恢複速度，因爲便宜，也可以當炮灰使用。
+				[NEWLINE][ICON_BULLET]每回合額外恢複15HP。
+				[NEWLINE][ICON_BULLET]可以轉職爲工人單位。
+				[NEWLINE][ICON_BULLET]友方地域內+25%[ICON_STRENGTH]戰鬥力。
+				[NEWLINE][ICON_BULLET]攻擊[COLOR_POSITIVE_TEXT]城市[ENDCOLOR]時+50% [ICON_STRENGTH]戰鬥力。
+				[NEWLINE][ICON_BULLET]境外作戰-25%[ICON_STRENGTH]戰鬥力。
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]正規軍[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]特戰[ENDCOLOR]單位克制。
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_MILITIA_NAVAL_HELP">
 			<Text>
-				廉價的綠水海軍單位，適合近海防禦。它可以做後勤單位來加速周圍其他單位HP恢復速度，因為便宜，也可以當炮灰使用。
-				[NEWLINE][ICON_BULLET]每回合額外恢復15HP。[NEWLINE][ICON_BULLET]友方地域內+25%[ICON_STRENGTH]戰鬥力。[NEWLINE][ICON_BULLET]攻擊[COLOR_POSITIVE_TEXT]城市[ENDCOLOR]時+50% [ICON_STRENGTH]戰鬥力。[NEWLINE][ICON_BULLET]境外作戰-25%[ICON_STRENGTH]戰鬥力。[NEWLINE]被[COLOR_NEGATIVE_TEXT]正規軍[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]特戰[ENDCOLOR]單位克制。[NEWLINE]不能進入[COLOR_NEGATIVE_TEXT]大洋[ENDCOLOR]。</Text>
+				廉價的綠水海軍單位，適合近海防禦。它可以做後勤單位來加速周圍其他單位HP恢複速度，因爲便宜，也可以當炮灰使用。
+				[NEWLINE][ICON_BULLET]每回合額外恢複15HP。
+				[NEWLINE][ICON_BULLET]友方地域內+25%[ICON_STRENGTH]戰鬥力。
+				[NEWLINE][ICON_BULLET]攻擊[COLOR_POSITIVE_TEXT]城市[ENDCOLOR]時+50% [ICON_STRENGTH]戰鬥力。
+				[NEWLINE][ICON_BULLET]境外作戰-25%[ICON_STRENGTH]戰鬥力。
+				[NEWLINE][ICON_BULLET]不能進入[COLOR_NEGATIVE_TEXT]大洋[ENDCOLOR]。
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]正規軍[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]特戰[ENDCOLOR]單位克制。
+			</Text>
 		</Row>
 
 		<Replace Tag="TXT_KEY_PROMOTION_MEDIC">
@@ -12968,7 +13063,16 @@
 			<Text>空優戰機</Text>
 		</Replace>
 		<Row Tag="TXT_KEY_PROMOTION_ANTI_AIR_II_HELP">
-			<Text>每回合能夠攔截一次。[NEWLINE]每回合能夠執行“空中游獵”指令且游獵時+50%戰鬥力。[NEWLINE]執行遊獵後仍然可以執行攔截。[COLOR_POSITIVE_TEXT]攻擊機[ENDCOLOR]和[COLOR_POSITIVE_TEXT]轟炸機[ENDCOLOR]單位擁有戰鬥力加成。[NEWLINE]擁有6格的偵查範圍。[NEWLINE]但無法攻擊地面和海面單位。[NEWLINE]不能轉場到航空母艦上。</Text>
+			<Text>
+				制空戰鬥機，專爲奪取戰場制空權與攔截敵方空中目標而設計。
+				[NEWLINE][ICON_BULLET]每回合能夠攔截一次。
+				[NEWLINE][ICON_BULLET]每回合能夠執行“空中遊獵”指令且遊獵時+75%戰鬥力。
+				[NEWLINE][ICON_BULLET]執行遊獵後仍然可以執行攔截。
+				[NEWLINE][ICON_BULLET]不能轉場到航空母艦上。
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]對[COLOR_POSITIVE_TEXT]攻擊機[ENDCOLOR]和[COLOR_POSITIVE_TEXT]轟炸機[ENDCOLOR]單位擁有戰鬥力加成。
+				[NEWLINE][ICON_BULLET]無法攻擊[COLOR_NEGATIVE_TEXT]地面[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]海面[ENDCOLOR]單位。
+			</Text>
 		</Row>
 
 		<!--<Replace Tag="TXT_KEY_PROMOTION_ANTI_FIGHTER" >
@@ -13012,7 +13116,15 @@
 			<Text>攻擊機</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_AIR_ATTACK_HELP">
-			<Text>對所有[COLOR_POSITIVE_TEXT]陸軍單位[ENDCOLOR]有戰鬥力加成，被[COLOR_NEGATIVE_TEXT]戰鬥機[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]防空[ENDCOLOR]單位克制。[NEWLINE]不能攻擊隱形單位。[NEWLINE]不能轉場到航空母艦上。</Text>
+			<Text>
+				攻擊機，專用于打擊戰場或城內的敵軍地面及海軍單位。
+				[NEWLINE][ICON_BULLET]每回合可進行[COLOR_POSITIVE_TEXT]兩次[ENDCOLOR]攻擊。
+				[NEWLINE][ICON_BULLET]無法攻擊[COLOR_NEGATIVE_TEXT]隱形單位[ENDCOLOR]。
+				[NEWLINE][ICON_BULLET]不能轉場到航空母艦上。
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]對[COLOR_POSITIVE_TEXT]地面[ENDCOLOR]和[COLOR_POSITIVE_TEXT]海面[ENDCOLOR]單位擁有戰鬥力加成。
+				[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]戰鬥機[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]防空[ENDCOLOR]單位克制。
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_AIR_BOMBARDMENT_1">
@@ -13058,7 +13170,14 @@
 			<Text>戰略轟炸機</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_STRATEGIC_BOMBER_HELP">
-			<Text>能對[COLOR_POSITIVE_TEXT]城市和固定炮台[ENDCOLOR]造成巨大傷害，被[COLOR_NEGATIVE_TEXT]戰鬥機[ENDCOLOR]單位克制。[NEWLINE]不能攻擊隱形單位。[NEWLINE]不能轉場到航空母艦上。</Text>
+			<Text>
+				戰略轟炸機，專爲攻擊敵方城市、摧毀敵國戰爭潛力而設計的戰略武器。
+				[NEWLINE][ICON_BULLET]能對[COLOR_POSITIVE_TEXT]城市和固定炮台[ENDCOLOR]造成巨大傷害。
+				[NEWLINE][ICON_BULLET]不能轉場到航空母艦上。
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]戰鬥機[ENDCOLOR]單位克制。
+				[NEWLINE][ICON_BULLET]不能攻擊[COLOR_NEGATIVE_TEXT]隱形[ENDCOLOR]單位。
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_NAPALMBOMB_1">
@@ -13141,7 +13260,7 @@
 				現代海軍近戰單位，擅長攻擊和護送單位，以及對抗敵方潛艇和提供有限的防空支援。
 				[NEWLINE][ICON_BULLET]能夠攻擊後移動。
 				[NEWLINE][ICON_BULLET]能夠擊退敵方單位（如果敵方受到的傷害高於妳受到的傷害）。
-				[NEWLINE][ICON_BULLET]能夠攔截敵方飛機（每回合壹次）。
+				[NEWLINE][ICON_BULLET]能夠攔截敵方飛機（每回合一次）。
 				[NEWLINE][ICON_BULLET]可以發現潛艇。
 				[NEWLINE]
 				[NEWLINE][ICON_BULLET]克制[COLOR_POSITIVE_TEXT]海軍遊獵[ENDCOLOR]單位和[COLOR_POSITIVE_TEXT]潛艇[ENDCOLOR]單位。
@@ -13209,7 +13328,7 @@
 			<Text>
 				海軍遠程單位，專用於火力支援和破壞敵軍艦隊防禦。
 				[NEWLINE][ICON_BULLET]可以[COLOR_POSITIVE_TEXT]遠程攻擊[ENDCOLOR]也可以[COLOR_POSITIVE_TEXT]近戰攻擊[ENDCOLOR]。
-				[NEWLINE][ICON_BULLET]攻擊目標時對同壹格單位造成50%傷害。
+				[NEWLINE][ICON_BULLET]攻擊目標時對同一格單位造成50%傷害。
 				[NEWLINE]
 				[NEWLINE][ICON_BULLET]克制[COLOR_POSITIVE_TEXT]海軍近戰[ENDCOLOR]單位和[COLOR_POSITIVE_TEXT]堡壘[ENDCOLOR]單位。
 				[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]海軍遊獵[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]潛艇[ENDCOLOR]單位克制。
@@ -13223,10 +13342,10 @@
 			<Text>
 				現代海軍遠程部隊，專用於火力支援和破壞敵軍艦隊防禦，同時提供空中支援。
 				[NEWLINE][ICON_BULLET]可以[COLOR_POSITIVE_TEXT]遠程攻擊[ENDCOLOR]也可以[COLOR_POSITIVE_TEXT]近戰攻擊[ENDCOLOR]。
-				[NEWLINE][ICON_BULLET]對目標同壹地格的單位造成50%的傷害。
+				[NEWLINE][ICON_BULLET]對目標同一地格的單位造成50%的傷害。
 				[NEWLINE][ICON_BULLET]每回合可以執行2次攔截（3格內）。
 				[NEWLINE]
-				[NEWLINE][ICON_BULLET]面對[COLOR_POSITIVE_TEXT]空中遊獵[ENDCOLOR]戰鬥力加成
+				[NEWLINE][ICON_BULLET]面對[COLOR_POSITIVE_TEXT]空中遊獵[ENDCOLOR]獲得戰鬥力加成。
 				[NEWLINE][ICON_BULLET]克制[COLOR_POSITIVE_TEXT]堡壘[ENDCOLOR]單位。
 				[NEWLINE][ICON_BULLET]克制[COLOR_POSITIVE_TEXT]海軍近戰[ENDCOLOR]單位和[COLOR_POSITIVE_TEXT]導彈[ENDCOLOR]單位。
 				[NEWLINE][ICON_BULLET]克制[COLOR_POSITIVE_TEXT]戰鬥機[ENDCOLOR]單位和[COLOR_POSITIVE_TEXT]直升機[ENDCOLOR]單位。
@@ -13307,7 +13426,7 @@
 				[NEWLINE][ICON_BULLET]能夠裝載艦載機。
 				[NEWLINE][ICON_BULLET]艦載機獲得的經驗會傳遞給所在航母。
 				[NEWLINE][ICON_BULLET]在友方地域內能夠補充艦載機。
-				[NEWLINE][ICON_BULLET]同壹格的單位每回合回復時額外+15HP。
+				[NEWLINE][ICON_BULLET]同一格的單位每回合回復時額外+15HP。
 				[NEWLINE][ICON_BULLET]本單位每回合回復時額外+15HP。
 				[NEWLINE]
 				[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]海軍遊獵[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]潛艇[ENDCOLOR]單位克制。
@@ -13854,7 +13973,7 @@
 			<Text>英勇無畏</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_HUSSAR_HELP">
-			<Text>受傷時戰鬥力不減，每壹點損失生命值+1%攻擊力。</Text>
+			<Text>受傷時戰鬥力不減，每一點損失生命值+1%攻擊力。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_ROARING_ELEPHANT">
 			<Text>咆哮戰吼</Text>
