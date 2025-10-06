@@ -14203,13 +14203,15 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_CITADEL_DEFENSE_HELP">
 			<Text>
-			Fixed Firebase, created when a [COLOR_POSITIVE_TEXT]Citadel[ENDCOLOR] is built.
-			[NEWLINE][ICON_BULLET]+25% [ICON_STRENGTH] Combat Strength when fighting inside [COLOR_POSITIVE_TEXT]Friendly Territory[ENDCOLOR].
-			[NEWLINE][ICON_BULLET]Immune to all [COLOR_POSITIVE_TEXT]Debuff Effects[ENDCOLOR].
-			[NEWLINE][ICON_BULLET]If its Tile is captured by the enemy, it suffer -50 HP per turn and -25% [ICON_STRENGTH]Combat Strength due to lack of supply.
-			[NEWLINE][ICON_BULLET]Can NOT [COLOR_NEGATIVE_TEXT]Move[ENDCOLOR].
-			[NEWLINE][ICON_BULLET]Can NOT earn [COLOR_NEGATIVE_TEXT]Promotions[ENDCOLOR].
-			[NEWLINE][ICON_BULLET]Weak vs [COLOR_NEGATIVE_TEXT]Siege Units[ENDCOLOR].</Text>
+				Fixed Firebase, created when a [COLOR_POSITIVE_TEXT]Citadel[ENDCOLOR] is built.
+				[NEWLINE][ICON_BULLET]+25% [ICON_STRENGTH] Combat Strength when fighting inside [COLOR_POSITIVE_TEXT]Friendly Territory[ENDCOLOR].
+				[NEWLINE][ICON_BULLET]Immune to all [COLOR_POSITIVE_TEXT]Debuff Effects[ENDCOLOR].
+				[NEWLINE][ICON_BULLET]If its Tile is captured by the enemy, it suffer -50 HP per turn and -25% [ICON_STRENGTH]Combat Strength due to lack of supply.
+				[NEWLINE][ICON_BULLET]Can NOT [COLOR_NEGATIVE_TEXT]Move[ENDCOLOR].
+				[NEWLINE][ICON_BULLET]Can NOT earn [COLOR_NEGATIVE_TEXT]Promotions[ENDCOLOR].
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]Weak vs [COLOR_NEGATIVE_TEXT]Siege Units[ENDCOLOR].
+			</Text>
 		</Row>
 		
 		<Row Tag="TXT_KEY_PROMOTION_INFANTRY_COMBAT">
@@ -14229,7 +14231,7 @@
 		<Row Tag="TXT_KEY_PROMOTION_GUNPOWDER_INFANTRY_COMBAT_HELP">
 			<Text>
 				Front Line Infantry Unit. Good at both offensive and defensive tasks.
-				[NEWLINE][NEWLINE][ICON_BULLET]Perform a [COLOR_POSITIVE_TEXT]Ranged Attack[ENDCOLOR] before melee attacking. 
+				[NEWLINE][ICON_BULLET]Perform a [COLOR_POSITIVE_TEXT]Ranged Attack[ENDCOLOR] before melee attacking. 
 				[NEWLINE][ICON_BULLET]+50% Strong attacking [COLOR_POSITIVE_TEXT]Cities[ENDCOLOR].
 				[NEWLINE][ICON_BULLET]+25% Strong when defending attacks from [COLOR_POSITIVE_TEXT]Anti-Tank Units[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Militia Units[ENDCOLOR].
 			</Text>
@@ -14266,29 +14268,24 @@
 		<Replace Tag="TXT_KEY_PROMOTION_ANTI_MOUNTED_HELP" >
 			<Text>
 				Relatively cheap Unit specialized in fighting Heavy Mounted Units.
-				[NEWLINE][NEWLINE][ICON_BULLET]This unit Heals 15 Additional HP per turn when Fortified.
-				[NEWLINE][NEWLINE][ICON_BULLET]Strong vs [COLOR_POSITIVE_TEXT]Mounted[ENDCOLOR] units.
+				[NEWLINE][ICON_BULLET]This unit Heals 15 Additional HP per turn when Fortified.
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]Strong vs [COLOR_POSITIVE_TEXT]Mounted[ENDCOLOR] units.
 				[NEWLINE][ICON_BULLET]Weak when attacked by [COLOR_NEGATIVE_TEXT]Archery Units[ENDCOLOR].
 				[NEWLINE][ICON_BULLET]Weak when attacking [COLOR_NEGATIVE_TEXT]Infantry Units[ENDCOLOR].
 			</Text>
 		</Replace>
-		<!--
-		<Replace Tag="TXT_KEY_PROMOTION_ANTI_MOUNTED_II">
-			<Text>Anti-Mounted Unit II</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_ANTI_MOUNTED_II_HELP" >
-			<Text>Strong vs [COLOR_POSITIVE_TEXT]Mounted[ENDCOLOR] units.</Text>
-		</Replace>
-		-->
+
 		<Replace Tag="TXT_KEY_PROMOTION_ANTI_TANK">
 			<Text>Anti-Tank Unit</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_ANTI_TANK_HELP" >
 			<Text>
 				Relatively cheap Unit specialized in fighting Tanks.
-				[NEWLINE][NEWLINE][ICON_BULLET]This unit Heals 15 Additional HP per turn when Fortified.
-				[NEWLINE][NEWLINE][ICON_BULLET]Strong vs [COLOR_POSITIVE_TEXT]Tanks[ENDCOLOR].
-				[NEWLINE][ICON_BULLET]Weak when attacked by [COLOR_NEGATIVE_TEXT]Anti-Air Units[ENDCOLOR].
+				[NEWLINE][ICON_BULLET]This unit Heals 15 Additional HP per turn when Fortified.
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]Strong vs [COLOR_POSITIVE_TEXT]Tanks[ENDCOLOR].
+				[NEWLINE][ICON_BULLET]Weak when attacked by [COLOR_NEGATIVE_TEXT]Archery Units[ENDCOLOR].
 				[NEWLINE][ICON_BULLET]Weak when attacking [COLOR_NEGATIVE_TEXT]Infantry Units[ENDCOLOR].
 			</Text>
 		</Replace>
@@ -14342,12 +14339,16 @@
 			<Text>Heavy Mounted Unit</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_KNIGHT_COMBAT_HELP">
-			<Text>Fast and powerful Unit specialized in blowing holes in enemy lines and eliminate enemy Ranged Units.
-			[NEWLINE][NEWLINE][ICON_BULLET]+50% [ICON_STRENGTH] Combat Strength when [COLOR_POSITIVE_TEXT]Attacking[ENDCOLOR]. 
-			[NEWLINE][ICON_BULLET]Can force the enemy to withdraw and cause 50% Damage to the another unit in the same tile. [NEWLINE][ICON_BULLET]Can move after attacking. 
-			[NEWLINE][ICON_BULLET]Lose all its [ICON_MOVES] MP if attacking [COLOR_NEGATIVE_TEXT]Cities[ENDCOLOR].
-			[NEWLINE][ICON_BULLET]Cannot receive [COLOR_NEGATIVE_TEXT]Terrain Bonus[ENDCOLOR].
-			[NEWLINE][ICON_BULLET]Weak vs [COLOR_NEGATIVE_TEXT]Anti-Mounted Units[ENDCOLOR]. </Text>
+			<Text>
+				Fast and powerful Unit specialized in blowing holes in enemy lines and eliminate enemy Ranged Units.
+				[NEWLINE][ICON_BULLET]+50% [ICON_STRENGTH] Combat Strength when [COLOR_POSITIVE_TEXT]Attacking[ENDCOLOR]. 
+				[NEWLINE][ICON_BULLET]Can force the enemy to withdraw and cause 50% Damage to the another unit in the same tile. 
+				[NEWLINE][ICON_BULLET]Can move after attacking. 
+				[NEWLINE][ICON_BULLET]Cannot receive [COLOR_NEGATIVE_TEXT]Terrain Bonus[ENDCOLOR].
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]Weak vs [COLOR_NEGATIVE_TEXT]Anti-Mounted Units[ENDCOLOR]. 
+				[NEWLINE][ICON_BULLET]Lose all its [ICON_MOVES] MP if attacking [COLOR_NEGATIVE_TEXT]Cities[ENDCOLOR].
+			</Text>
 		</Row>
 
 		<!--<Row Tag="TXT_KEY_PROMOTION_LANDIRONCLAD">
@@ -14361,12 +14362,16 @@
 			<Text>Tank Unit</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_TANK_COMBAT_HELP">
-			<Text>Fast and powerful Unit specialized in blowing holes in enemy lines and eliminate enemy Ranged Units.
-			[NEWLINE][NEWLINE][ICON_BULLET]+50% [ICON_STRENGTH] Combat Strength when [COLOR_POSITIVE_TEXT]Attacking[ENDCOLOR].
-			[NEWLINE][ICON_BULLET]Can force the enemy to withdraw and cause 50% Damage to the another unit in the same tile. [NEWLINE][ICON_BULLET]Can move after attacking. 
-			[NEWLINE][ICON_BULLET]Lose all its [ICON_MOVES] MP if attacking [COLOR_NEGATIVE_TEXT]Cities[ENDCOLOR].
-			[NEWLINE][ICON_BULLET]Cannot receive [COLOR_NEGATIVE_TEXT]Terrain Bonus[ENDCOLOR].
-			[NEWLINE][ICON_BULLET]Weak vs [COLOR_NEGATIVE_TEXT]Anti-Tank Units[ENDCOLOR].</Text>
+			<Text>
+				Fast and powerful Unit specialized in blowing holes in enemy lines and eliminate enemy Ranged Units.
+				[NEWLINE][ICON_BULLET]+50% [ICON_STRENGTH] Combat Strength when [COLOR_POSITIVE_TEXT]Attacking[ENDCOLOR].
+				[NEWLINE][ICON_BULLET]Can force the enemy to withdraw and cause 50% Damage to the another unit in the same tile. 
+				[NEWLINE][ICON_BULLET]Can move after attacking. 
+				[NEWLINE][ICON_BULLET]Cannot receive [COLOR_NEGATIVE_TEXT]Terrain Bonus[ENDCOLOR].
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]Weak vs [COLOR_NEGATIVE_TEXT]Anti-Tank Units[ENDCOLOR].
+				[NEWLINE][ICON_BULLET]Lose all its [ICON_MOVES] MP if attacking [COLOR_NEGATIVE_TEXT]Cities[ENDCOLOR].
+			</Text>
 		</Row>
 
 		<Replace Tag="TXT_KEY_PROMOTION_CHARGE_1">
@@ -14406,15 +14411,17 @@
 			<Text>Land Ranged Unit</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_ARCHERY_COMBAT_HELP">
-			<Text>Ranged Unit, can strike foes from afar and slow them down.
-			[NEWLINE][NEWLINE][ICON_BULLET]Strong when attacking [COLOR_POSITIVE_TEXT]Anti-Mounted Units[ENDCOLOR], [COLOR_POSITIVE_TEXT]Anti-Tank Units[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Land Hit-and-run Units[ENDCOLOR].
-			[NEWLINE][ICON_BULLET]Weak when engaged in [COLOR_NEGATIVE_TEXT]Melee Combat[ENDCOLOR] or attacked by [COLOR_NEGATIVE_TEXT]Siege Weapons[ENDCOLOR].
-			[NEWLINE][ICON_BULLET]+25% [ICON_RANGE_STRENGTH] Ranged Combat Strength against Units in [COLOR_POSITIVE_TEXT]OPEN[ENDCOLOR] Terrain.
-			[NEWLINE][ICON_BULLET]+25% [ICON_RANGE_STRENGTH] Combat Strength per point height against Units in low Land, maximum 50%.
-			[NEWLINE][ICON_BULLET]Cannot receive [COLOR_NEGATIVE_TEXT]Terrain Bonus[ENDCOLOR].
-			[NEWLINE][ICON_BULLET]When Stacking with an [COLOR_POSITIVE_TEXT]Infantry Unit[ENDCOLOR], [COLOR_POSITIVE_TEXT]Counter Unit[ENDCOLOR] or [COLOR_POSITIVE_TEXT]Citadel Unit[ENDCOLOR], this unit will automatically launch a Counter-attack at the enemy unit when this Tile is attacked by an enemy [COLOR_POSITIVE_TEXT]Melee[ENDCOLOR] Unit. 
-			[NEWLINE][ICON_BULLET]Times of Counter-attack in one turn is Unlimited.
-			[NEWLINE][ICON_BULLET]If your stacked unit is killed in the combat, the Counter-attack cannot be performed.
+			<Text>
+				Ranged Unit, can strike foes from afar and slow them down.
+				[NEWLINE][ICON_BULLET]+25% [ICON_RANGE_STRENGTH] Ranged Combat Strength against Units in [COLOR_POSITIVE_TEXT]OPEN[ENDCOLOR] Terrain.
+				[NEWLINE][ICON_BULLET]+25% [ICON_RANGE_STRENGTH] Combat Strength per point height against Units in low Land, maximum 50%.
+				[NEWLINE][ICON_BULLET]Cannot receive [COLOR_NEGATIVE_TEXT]Terrain Bonus[ENDCOLOR].
+				[NEWLINE][ICON_BULLET]When Stacking with an [COLOR_POSITIVE_TEXT]Infantry Unit[ENDCOLOR], [COLOR_POSITIVE_TEXT]Counter Unit[ENDCOLOR] or [COLOR_POSITIVE_TEXT]Citadel Unit[ENDCOLOR], this unit will automatically launch a Counter-attack at the enemy unit when this Tile is attacked by an enemy [COLOR_POSITIVE_TEXT]Melee[ENDCOLOR] Unit. 
+				[NEWLINE][ICON_BULLET]Times of Counter-attack in one turn is Unlimited.
+				[NEWLINE][ICON_BULLET]If your stacked unit is killed in the combat, the Counter-attack cannot be performed.
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]Strong when attacking [COLOR_POSITIVE_TEXT]Anti-Mounted Units[ENDCOLOR], [COLOR_POSITIVE_TEXT]Anti-Tank Units[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Land Hit-and-run Units[ENDCOLOR].
+				[NEWLINE][ICON_BULLET]Weak when engaged in [COLOR_NEGATIVE_TEXT]Melee Combat[ENDCOLOR] or attacked by [COLOR_NEGATIVE_TEXT]Siege Weapons[ENDCOLOR].
 			</Text>
 		</Row>
 
@@ -14424,11 +14431,10 @@
 		</Replace>
 		<Row Tag="TXT_KEY_PROMOTION_ANTI_AIR_HELP" >
 			<Text>
-				Will intercept enemy aircraft which try to bomb nearby Units. Can also attack land targets and slow them down. [NEWLINE][NEWLINE][ICON_BULLET]Can intercept enemy aircrafts once per turn.
-				[NEWLINE][NEWLINE][ICON_BULLET]Strong vs [COLOR_POSITIVE_TEXT]Helicopter[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Attack Aircrafts[ENDCOLOR].
-				[NEWLINE][ICON_BULLET]Weak vs [COLOR_NEGATIVE_TEXT]Siege Weapons[ENDCOLOR] or engaged in [COLOR_NEGATIVE_TEXT]Melee Combat[ENDCOLOR].
+				Will intercept enemy aircraft which try to bomb nearby Units.
+				[NEWLINE][ICON_BULLET]Can intercept enemy aircrafts once per turn.
+				[NEWLINE][ICON_BULLET]Strong vs [COLOR_POSITIVE_TEXT]Helicopter[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Attack Aircrafts[ENDCOLOR].
 				[NEWLINE][ICON_BULLET]NOT effective for intercepting [COLOR_NEGATIVE_TEXT]Strategic Bombers[ENDCOLOR].
-				[NEWLINE][ICON_BULLET]Cannot receive [COLOR_NEGATIVE_TEXT]Terrain Bonus[ENDCOLOR].
 			</Text>
 		</Row>
 
@@ -14526,13 +14532,15 @@
 		<Row Tag="TXT_KEY_PROMOTION_HITANDRUN_HELP">
 			<Text>
 				Hit-and-Run Unit designed to soften strong enemy defense or hunt down wounded enemies. Also good at reconnaissance.
-				[NEWLINE][NEWLINE][ICON_BULLET]Can perform both [COLOR_POSITIVE_TEXT]Ranged Attacks[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Melee Attacks[ENDCOLOR].
+				[NEWLINE][ICON_BULLET]Can perform both [COLOR_POSITIVE_TEXT]Ranged Attacks[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Melee Attacks[ENDCOLOR].
 				[NEWLINE][ICON_BULLET]Can move after attacking.
 				[NEWLINE][ICON_BULLET]Ignore enemy Zones of Control (ZOC).
+				[NEWLINE][ICON_BULLET]Cannot receive [COLOR_NEGATIVE_TEXT]Terrain Bonus[ENDCOLOR].
+				[NEWLINE]
 				[NEWLINE][ICON_BULLET]Strong vs [COLOR_POSITIVE_TEXT]Militia Units[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Special Forces Units[ENDCOLOR].
 				[NEWLINE][ICON_BULLET]Weak when attacked by [COLOR_NEGATIVE_TEXT]Archery Units[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]Weak attacking [COLOR_NEGATIVE_TEXT]Cities[ENDCOLOR].
-				[NEWLINE][ICON_BULLET]Cannot receive [COLOR_NEGATIVE_TEXT]Terrain Bonus[ENDCOLOR].</Text>
+				[NEWLINE][ICON_BULLET]Weak attacking [COLOR_NEGATIVE_TEXT]Cities[ENDCOLOR] and [COLOR_NEGATIVE_TEXT]Naval Regular Army[ENDCOLOR].
+			</Text>
 		</Row>
 
 
@@ -14542,15 +14550,16 @@
 		<Row Tag="TXT_KEY_PROMOTION_HELI_ATTACK_HELP">
 			<Text>
 				Hovering Unit designed to soften strong enemy defense or hunt down wounded enemies. Also good at reconnaissance.
-				[NEWLINE][NEWLINE][ICON_BULLET][COLOR_POSITIVE_TEXT]Hovering Movement[ENDCOLOR].
+				[NEWLINE][ICON_BULLET][COLOR_POSITIVE_TEXT]Hovering Movement[ENDCOLOR].
 				[NEWLINE][ICON_BULLET]Can perform both [COLOR_POSITIVE_TEXT]Ranged Attacks[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Melee Attacks[ENDCOLOR].
-				[NEWLINE][ICON_BULLET]Strong vs [COLOR_POSITIVE_TEXT]Militia Units[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Special Forces Units[ENDCOLOR].
 				[NEWLINE][ICON_BULLET]Can move after attacking.
 				[NEWLINE][ICON_BULLET]Ignore enemy Zones of Control (ZOC).
+				[NEWLINE][ICON_BULLET]Cannot receive [COLOR_NEGATIVE_TEXT]Terrain Bonus[ENDCOLOR].
+				[NEWLINE]
 				[NEWLINE][ICON_BULLET]Strong vs [COLOR_POSITIVE_TEXT]Militia Units[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Special Forces Units[ENDCOLOR].
 				[NEWLINE][ICON_BULLET]Weak vs [COLOR_NEGATIVE_TEXT]Anti-Air Units[ENDCOLOR].
-				[NEWLINE][ICON_BULLET]Weak vs [COLOR_NEGATIVE_TEXT]Cities[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]Cannot receive [COLOR_NEGATIVE_TEXT]Terrain Bonus[ENDCOLOR].</Text>
+				[NEWLINE][ICON_BULLET]Weak vs [COLOR_NEGATIVE_TEXT]Cities[ENDCOLOR].
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_SUNDER_1">
@@ -14593,11 +14602,13 @@
 		<Replace Tag="TXT_KEY_PROMOTION_CITY_SIEGE_HELP" >
 			<Text>
 				Siege weapon for assaulting enemy cities and strongholds. Also capable of dealing Collateral Damage and damage enemy's moral.
-				[NEWLINE][NEWLINE][ICON_BULLET]Strong vs [COLOR_POSITIVE_TEXT]Cities[ENDCOLOR], [COLOR_POSITIVE_TEXT]Citadels[ENDCOLOR], [COLOR_POSITIVE_TEXT]Anti-Air Units[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Fortified Units[ENDCOLOR].
 				[NEWLINE][ICON_BULLET]Cause 50% Damage to other units in the target plot.
 				[NEWLINE][ICON_BULLET]Cause [COLOR_NEGATIVE_TEXT]Local Damage[ENDCOLOR] or [COLOR_NEGATIVE_TEXT]Heavy Damage[ENDCOLOR] to Wooden Boats by chance.
+				[NEWLINE][ICON_BULLET]Cannot receive [COLOR_NEGATIVE_TEXT]Terrain Bonus[ENDCOLOR].
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]Strong vs [COLOR_POSITIVE_TEXT]Cities[ENDCOLOR], [COLOR_POSITIVE_TEXT]Citadels[ENDCOLOR], [COLOR_POSITIVE_TEXT]Anti-Air Units[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Fortified Units[ENDCOLOR].
 				[NEWLINE][ICON_BULLET]Weak when engaged in [COLOR_NEGATIVE_TEXT]Melee Combat[ENDCOLOR].
-				[NEWLINE][ICON_BULLET]Cannot receive [COLOR_NEGATIVE_TEXT]Terrain Bonus[ENDCOLOR].</Text>
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_PROMOTION_VOLLEY">
@@ -14633,9 +14644,13 @@
 		<Row Tag="TXT_KEY_PROMOTION_SPLASH_DAMAGE_HELP">
 			<Text>
 				Powerful heavy Weapons can cause Area of Effect damage to mutiple enemy units.
-				[NEWLINE][NEWLINE][ICON_BULLET]Cause 50% Damage to all enemy units [COLOR_POSITIVE_TEXT]Adjacent[ENDCOLOR] to the target unit. But cause No [COLOR_NEGATIVE_TEXT]Collateral Damage[ENDCOLOR].
-				[NEWLINE][ICON_BULLET]The Area of Effect is not effective when attacking [COLOR_NEGATIVE_TEXT]Cities[ENDCOLOR]. But the Area of Effect will still affect unit inside the city nearby the target tile.
-				[NEWLINE][ICON_BULLET]Weak when engaged in [COLOR_NEGATIVE_TEXT]Melee Combat[ENDCOLOR]</Text>
+				[NEWLINE][ICON_BULLET]Cause 50% Damage to all enemy units [COLOR_POSITIVE_TEXT]Adjacent[ENDCOLOR] to the target unit. But cause No [COLOR_NEGATIVE_TEXT]Collateral Damage[ENDCOLOR].
+				[NEWLINE][ICON_BULLET]When attacking Cities, the Area of Effect will still affect unit nearby the target tile.
+				[NEWLINE][ICON_BULLET]Cannot receive [COLOR_NEGATIVE_TEXT]Terrain Bonus[ENDCOLOR].
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]Weak vs [COLOR_NEGATIVE_TEXT]Fortified Units[ENDCOLOR].
+				[NEWLINE][ICON_BULLET]Weak when engaged in [COLOR_NEGATIVE_TEXT]Melee Combat[ENDCOLOR].
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_CLUSTER_ROCKET_1">
@@ -14727,12 +14742,13 @@
 		<Row Tag="TXT_KEY_PROMOTION_RECON_UNIT_HELP">
 			<Text>
 				Recon Unit. Excellent at reconnaissance and exploring the map.
-				[NEWLINE][NEWLINE][ICON_BULLET][COLOR_POSITIVE_TEXT]Invisible[ENDCOLOR] to units which cannot see Stealth Units.
+				[NEWLINE][ICON_BULLET][COLOR_POSITIVE_TEXT]Invisible[ENDCOLOR] to units which cannot see Stealth Units.
 				[NEWLINE][ICON_BULLET]Can see [COLOR_POSITIVE_TEXT]Stealth Units[ENDCOLOR].
 				[NEWLINE][ICON_BULLET]Heals 15 Additional HP per turn when [COLOR_POSITIVE_TEXT]Outside[ENDCOLOR] of Friendly Territory.
+				[NEWLINE][ICON_BULLET]Cannot receive [COLOR_NEGATIVE_TEXT]Terrain Bonus[ENDCOLOR].
 				[NEWLINE][ICON_BULLET]Cannot [COLOR_NEGATIVE_TEXT]Pillage[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]Cannot [COLOR_NEGATIVE_TEXT]Capture[ENDCOLOR] Cities.
-				[NEWLINE][ICON_BULLET]Cannot receive [COLOR_NEGATIVE_TEXT]Terrain Bonus[ENDCOLOR].</Text>
+			</Text>
 		</Row>
 
 
@@ -14808,16 +14824,17 @@
 		<Row Tag="TXT_KEY_PROMOTION_SPECIAL_FORCES_COMBAT_HELP">
 			<Text>
 				Special Forces Unit with many unique abilities. Can perform special missions that regular army can't.
-				[NEWLINE][NEWLINE][ICON_BULLET][COLOR_POSITIVE_TEXT]Invisible[ENDCOLOR] to units which cannot see Stealth Units.
+				[NEWLINE][ICON_BULLET][COLOR_POSITIVE_TEXT]Invisible[ENDCOLOR] to units which cannot see Stealth Units.
 				[NEWLINE][ICON_BULLET]Can see [COLOR_POSITIVE_TEXT]Stealth Units[ENDCOLOR].
-				[NEWLINE][ICON_BULLET]Heals 15 Additional HP per turn when [COLOR_POSITIVE_TEXT]Outside[ENDCOLOR] of Friendly Territory.
+				[NEWLINE][ICON_BULLET]Heals 30 Additional HP per turn when [COLOR_POSITIVE_TEXT]Outside[ENDCOLOR] of Friendly Territory.
 				[NEWLINE][ICON_BULLET]Can move after attacking.
 				[NEWLINE][ICON_BULLET]Can use [COLOR_POSITIVE_TEXT]Enemy Route[ENDCOLOR] when at war.
 				[NEWLINE][ICON_BULLET]No Movement cost to pillage.
 				[NEWLINE][ICON_BULLET]Land-based Aircraft cannot detect nor attack them.
+				[NEWLINE][ICON_BULLET]Can NOT be [COLOR_NEGATIVE_TEXT]purchased[ENDCOLOR] with [ICON_GOLD] Gold.
+				[NEWLINE]
 				[NEWLINE][ICON_BULLET]Strong vs [COLOR_POSITIVE_TEXT]Militia Units[ENDCOLOR].
 				[NEWLINE][ICON_BULLET]Weak vs [COLOR_NEGATIVE_TEXT]Regular Army[ENDCOLOR], especially [COLOR_NEGATIVE_TEXT]Hit-and-run Units and Helicopter Units[ENDCOLOR].
-				[NEWLINE][ICON_BULLET]Can NOT be [COLOR_NEGATIVE_TEXT]purchased[ENDCOLOR] with [ICON_GOLD] Gold.
 			</Text>
 		</Row>
 
@@ -14926,7 +14943,9 @@
 				[NEWLINE][ICON_BULLET]+25% [ICON_STRENGTH] Combat Strength when fighting inside [COLOR_POSITIVE_TEXT]Friendly Territory[ENDCOLOR].
 				[NEWLINE][ICON_BULLET]+50% [ICON_STRENGTH] Combat Strength when attacking [COLOR_POSITIVE_TEXT]Cities[ENDCOLOR].
 				[NEWLINE][ICON_BULLET]-25% [ICON_STRENGTH] Combat Strength when fighting outside [COLOR_NEGATIVE_TEXT]Friendly Territory[ENDCOLOR].
-				[NEWLINE][ICON_BULLET]Weak vs [COLOR_NEGATIVE_TEXT]Regular Army[ENDCOLOR] and [COLOR_NEGATIVE_TEXT]Special Forces[ENDCOLOR].</Text>
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]Weak vs [COLOR_NEGATIVE_TEXT]Regular Army[ENDCOLOR] and [COLOR_NEGATIVE_TEXT]Special Forces[ENDCOLOR].
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_MILITIA_NAVAL_HELP">
@@ -14937,8 +14956,9 @@
 				[NEWLINE][ICON_BULLET]Can build Coastal Defences and Pontoon Bridges.
 				[NEWLINE][ICON_BULLET]+25% [ICON_STRENGTH] Combat Strength when fighting inside [COLOR_POSITIVE_TEXT]Friendly Territory[ENDCOLOR].
 				[NEWLINE][ICON_BULLET]-25% [ICON_STRENGTH] Combat Strength when fighting outside [COLOR_NEGATIVE_TEXT]Friendly Territory[ENDCOLOR].
-				[NEWLINE][ICON_BULLET]Weak vs [COLOR_NEGATIVE_TEXT]Regular Army[ENDCOLOR] and [COLOR_NEGATIVE_TEXT]Special Forces[ENDCOLOR].
 				[NEWLINE][ICON_BULLET]Cannot enter [COLOR_NEGATIVE_TEXT]Ocean[ENDCOLOR] tiles outside YOUR Territory.
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]Weak vs [COLOR_NEGATIVE_TEXT]Regular Army[ENDCOLOR] and [COLOR_NEGATIVE_TEXT]Special Forces[ENDCOLOR].
 			</Text>
 		</Row>
 
@@ -14985,13 +15005,14 @@
 		<Row Tag="TXT_KEY_PROMOTION_ANTI_AIR_II_HELP" >
 			<Text>
 				Air Superiority Fighter designed to wrest control of the skies and intercept incoming enemy aircraft.
-				[NEWLINE][NEWLINE][ICON_BULLET]Can [COLOR_POSITIVE_TEXT]Intercept[ENDCOLOR] enemy aircrafts and missiles once per turn within its operational range.
+				[NEWLINE][ICON_BULLET]Can [COLOR_POSITIVE_TEXT]Intercept[ENDCOLOR] enemy aircrafts and missiles once per turn within its operational range.
 				[NEWLINE][ICON_BULLET]Can Perform [COLOR_POSITIVE_TEXT]Air Sweep[ENDCOLOR] once per turn and +75% [ICON_STRENGTH] Combat Strength when Attacking.
 				[NEWLINE][ICON_BULLET]Can still Intercept after performing an Air Sweep.
+				[NEWLINE][ICON_BULLET]This is a Land-based Aircraft so it cannot land on [COLOR_NEGATIVE_TEXT]Aircraft Carriers[ENDCOLOR].
+				[NEWLINE]
 				[NEWLINE][ICON_BULLET]Strong vs [COLOR_POSITIVE_TEXT]Attack Aircrafts[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Strategic Bombers[ENDCOLOR].
-				[NEWLINE][ICON_BULLET]6 tiles in every direction from the unit's base of operation is always visible.
 				[NEWLINE][ICON_BULLET]Cannot attack [COLOR_NEGATIVE_TEXT]Land Units nor Naval Units[ENDCOLOR].
-				[NEWLINE][ICON_BULLET]This is a Land-based Aircraft so it cannot land on [COLOR_NEGATIVE_TEXT]Aircraft Carriers[ENDCOLOR].</Text>
+			</Text>
 		</Row>
 
 		<!--<Replace Tag="TXT_KEY_PROMOTION_ANTI_FIGHTER" >
@@ -15040,11 +15061,13 @@
 		<Row Tag="TXT_KEY_PROMOTION_AIR_ATTACK_HELP">
 			<Text>
 				Attack Aircraft designed to attack enemy Land and Naval Units in the open filed or even inside the city.
-				[NEWLINE][NEWLINE][ICON_BULLET]May attack [COLOR_POSITIVE_TEXT]Twice[ENDCOLOR] per turn.
-				[NEWLINE][ICON_BULLET]Strong vs [COLOR_POSITIVE_TEXT]Infantry Units[ENDCOLOR].
-				[NEWLINE][ICON_BULLET]Weak vs [COLOR_NEGATIVE_TEXT]Fighters[ENDCOLOR] and [COLOR_NEGATIVE_TEXT]Anit-Air Units[ENDCOLOR].
+				[NEWLINE][ICON_BULLET]May attack [COLOR_POSITIVE_TEXT]Twice[ENDCOLOR] per turn.
 				[NEWLINE][ICON_BULLET]Cannot attack [COLOR_NEGATIVE_TEXT]Stealth Units[ENDCOLOR].
-				[NEWLINE][ICON_BULLET]This is a Land-based Aircraft so it cannot land on [COLOR_NEGATIVE_TEXT]Aircraft Carriers[ENDCOLOR].</Text>
+				[NEWLINE][ICON_BULLET]This is a Land-based Aircraft so it cannot land on [COLOR_NEGATIVE_TEXT]Aircraft Carriers[ENDCOLOR].
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]Strong vs [COLOR_POSITIVE_TEXT]Infantry Units[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Naval Units[ENDCOLOR].
+				[NEWLINE][ICON_BULLET]Weak vs [COLOR_NEGATIVE_TEXT]Fighters[ENDCOLOR] and [COLOR_NEGATIVE_TEXT]Anit-Air Units[ENDCOLOR].
+			</Text>
 		</Row>
 
 		
@@ -15098,10 +15121,13 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_STRATEGIC_BOMBER_HELP">
 			<Text>
-				Strategic Bomber, a strategic weapon designed for attacking enemy cities to destroy the enemy nation's war capability.[NEWLINE][NEWLINE][ICON_BULLET]Strong attacking [COLOR_POSITIVE_TEXT]Cities[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Citadels[ENDCOLOR].
+				Strategic Bomber, a strategic weapon designed for attacking enemy cities to destroy the enemy nation's war capability.
+				[NEWLINE][ICON_BULLET]Strong attacking [COLOR_POSITIVE_TEXT]Cities[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Citadels[ENDCOLOR].
+				[NEWLINE][ICON_BULLET]This Aircraft is too large to land on [COLOR_NEGATIVE_TEXT]Aircraft Carriers[ENDCOLOR].
+				[NEWLINE]
 				[NEWLINE][ICON_BULLET]Weak vs [COLOR_NEGATIVE_TEXT]Fighters[ENDCOLOR].
 				[NEWLINE][ICON_BULLET]Cannot attack [COLOR_NEGATIVE_TEXT]Stealth Units[ENDCOLOR].
-				[NEWLINE][ICON_BULLET]This Aircraft is too large to land on [COLOR_NEGATIVE_TEXT]Aircraft Carriers[ENDCOLOR].</Text>
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_NAPALMBOMB_1">
