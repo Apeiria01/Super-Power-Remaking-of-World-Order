@@ -15438,7 +15438,16 @@
 			<Text>Carrier-based Aircraft</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_CARRIER_FIGHTER_HELP">
-			<Text>Multirole Combat Aircraft based on Aircraft Carriers. [NEWLINE][NEWLINE][ICON_BULLET]Can land on Aircraft Carriers.[NEWLINE][ICON_BULLET]Transfer XP earned in combat to its Carrier Unit and will Inherit all available Promotions from its Carrier Unit. [NEWLINE][ICON_BULLET]May [COLOR_POSITIVE_TEXT]Attack[ENDCOLOR] twice per turn. [NEWLINE][ICON_BULLET]Have 2 [COLOR_POSITIVE_TEXT]Intercept[ENDCOLOR] or [COLOR_POSITIVE_TEXT]Air Sweep[ENDCOLOR] chances per turn.[NEWLINE][ICON_BULLET]Can still Intercept after performing an Air Sweep.</Text>
+			<Text>
+				Multirole Combat Aircraft based on Aircraft Carriers. 
+				[NEWLINE][ICON_BULLET]Can land on Aircraft Carriers.
+				[NEWLINE][ICON_BULLET]Transfer XP earned in combat to its Carrier Unit and will Inherit all available Promotions from its Carrier Unit. 
+				[NEWLINE][ICON_BULLET]May [COLOR_POSITIVE_TEXT]Attack[ENDCOLOR] twice per turn. 
+				[NEWLINE][ICON_BULLET]Have 2 [COLOR_POSITIVE_TEXT]Intercept[ENDCOLOR] or [COLOR_POSITIVE_TEXT]Air Sweep[ENDCOLOR] chances per turn.
+				[NEWLINE][ICON_BULLET]Can still Intercept after performing an Air Sweep.
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]Strong vs [COLOR_POSITIVE_TEXT]Infantry Units[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Naval Units[ENDCOLOR].
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_CARRIER_FIGHTER_ANTI_AIR_1">

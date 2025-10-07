@@ -13636,7 +13636,16 @@
 			<Text>舰载战机</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_CARRIER_FIGHTER_HELP">
-			<Text>只能部署在航空母舰上。[NEWLINE]能够与航空母舰共享经验和晋升。[NEWLINE]每回合能够攻击两次。[NEWLINE]每回合拥有两次[COLOR_POSITIVE_TEXT]拦截[ENDCOLOR]或[COLOR_POSITIVE_TEXT]游猎[ENDCOLOR]的机会。[NEWLINE]能够在游猎后继续拦截。</Text>
+			<Text>
+				航空母舰携带的多用途战斗机
+				[NEWLINE][ICON_BULLET]只能部署在航空母舰上。
+				[NEWLINE][ICON_BULLET]能够与航空母舰共享经验和晋升。
+				[NEWLINE][ICON_BULLET]每回合能够攻击两次。
+				[NEWLINE][ICON_BULLET]每回合拥有两次[COLOR_POSITIVE_TEXT]拦截[ENDCOLOR]或[COLOR_POSITIVE_TEXT]游猎[ENDCOLOR]的机会。
+				[NEWLINE][ICON_BULLET]能够在游猎后继续拦截。
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]对[COLOR_POSITIVE_TEXT]地面[ENDCOLOR]和[COLOR_POSITIVE_TEXT]海面[ENDCOLOR]单位拥有战斗力加成。
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_CARRIER_FIGHTER_ANTI_AIR_1">

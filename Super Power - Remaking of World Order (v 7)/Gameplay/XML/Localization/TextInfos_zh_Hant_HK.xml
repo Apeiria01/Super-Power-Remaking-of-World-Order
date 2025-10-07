@@ -13466,7 +13466,16 @@
 			<Text>艦載戰機</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_CARRIER_FIGHTER_HELP">
-			<Text>只能部署在航空母艦上。[NEWLINE]能夠與航空母艦共享經驗和晉升。[NEWLINE]每回合能夠攻擊兩次。[NEWLINE]每回合擁有兩次[COLOR_POSITIVE_TEXT]攔截[ENDCOLOR]或[COLOR_POSITIVE_TEXT]遊獵[ENDCOLOR]的機會。[NEWLINE]能夠在遊獵後繼續攔截。</Text>
+			<Text>
+				航空母艦攜帶的多用途戰鬥機
+				[NEWLINE][ICON_BULLET]只能部署在航空母艦上。
+				[NEWLINE][ICON_BULLET]能夠與航空母艦共享經驗和晉升。
+				[NEWLINE][ICON_BULLET]每回合能夠攻擊兩次。
+				[NEWLINE][ICON_BULLET]每回合擁有兩次[COLOR_POSITIVE_TEXT]攔截[ENDCOLOR]或[COLOR_POSITIVE_TEXT]遊獵[ENDCOLOR]的機會。
+				[NEWLINE][ICON_BULLET]能夠在遊獵後繼續攔截。
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]對[COLOR_POSITIVE_TEXT]地面[ENDCOLOR]和[COLOR_POSITIVE_TEXT]海面[ENDCOLOR]單位擁有戰鬥力加成。
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_CARRIER_FIGHTER_ANTI_AIR_1">
