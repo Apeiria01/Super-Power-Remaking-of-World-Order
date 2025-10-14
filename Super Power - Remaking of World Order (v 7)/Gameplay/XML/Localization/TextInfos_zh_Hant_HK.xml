@@ -5966,6 +5966,7 @@
 			<Text>
 				[ICON_BULLET]所有專家+2[ICON_CULTURE]文化産出。
 				[NEWLINE][ICON_BULLET]允許使用[ICON_PEACE]信仰購買露天劇場、畫廊、歌劇院。
+				[NEWLINE][ICON_BULLET]與擁有更多城市的文明的單位作戰時獲得25%戰鬥力加成。
 			</Text>
 		</Replace>
 

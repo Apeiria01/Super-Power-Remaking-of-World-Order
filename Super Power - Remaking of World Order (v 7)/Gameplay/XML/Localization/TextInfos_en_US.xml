@@ -10623,6 +10623,7 @@
 			<Text>
 				[ICON_BULLET]+2 [ICON_CULTURE] Culture for all Specialists. 
 				[NEWLINE][ICON_BULLET]Allows purchasing Amphitheater, Art Gallery, and Opera House with [ICON_PEACE] Faith.
+				[NEWLINE][ICON_BULLET]All Units receive a [ICON_STRENGTH] Combat bonus (+25%)  when fighting units from a Civilization with more Cities than Ethiopia. 
 			</Text>
 		</Replace>
 
