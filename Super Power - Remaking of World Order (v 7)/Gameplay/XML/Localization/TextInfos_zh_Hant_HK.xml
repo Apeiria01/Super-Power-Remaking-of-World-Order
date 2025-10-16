@@ -3734,7 +3734,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_BIO_LAB_HELP</Tag>
-			<Text>只能在特大城市（40人口）建造。</Text>
+			<Text>+33%[ICON_RESEARCH]科技值產出。[NEWLINE][NEWLINE]只能在特大城市（40人口）建造。</Text>
 		</Row>
 
 		<Row>
@@ -3747,7 +3747,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_LOGISTICS_COMPANY_HELP</Tag>
-			<Text>只能在特大城市（40人口）建造。</Text>
+			<Text>+33%[ICON_GOLD]金幣產出。[NEWLINE][NEWLINE]只能在特大城市（40人口）建造。</Text>
 		</Row>
 
 		<Replace Tag="TXT_KEY_BUILDING_MEDICAL_LAB">
@@ -3820,7 +3820,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_GENE_LAB_HELP</Tag>
-			<Text>只能在巨型城市（60人口）建造。</Text>
+			<Text>+33%[ICON_RESEARCH]科技值產出。[NEWLINE][NEWLINE]只能在巨型城市（60人口）建造。</Text>
 		</Row>
 
 		<Row>
@@ -3834,7 +3834,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_INTERNATIONAL_TRADE_COMPANY_HELP</Tag>
-			<Text>只能在巨型城市（60人口）建造。</Text>
+			<Text>+33%[ICON_GOLD]金幣產出。[NEWLINE][NEWLINE]只能在巨型城市（60人口）建造。</Text>
 		</Row>
 
 		<Row>
