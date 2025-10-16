@@ -6770,7 +6770,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_BIO_LAB_HELP</Tag>
-			<Text>Must be built in XL Cities.</Text>
+			<Text>+33% [ICON_RESEARCH] Science. [NEWLINE][NEWLINE]Must be built in XL Cities.</Text>
 		</Row>
 
 	
@@ -6787,7 +6787,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_LOGISTICS_COMPANY_HELP</Tag>
-			<Text>Must be built in XL Cities.</Text>
+			<Text>+33% [ICON_GOLD] Gold. [NEWLINE][NEWLINE]Must be built in XL Cities.</Text>
 		</Row>
 
 
@@ -6894,7 +6894,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_GENE_LAB_HELP</Tag>
-			<Text>Must be built in XXL Cities.</Text>
+			<Text>+33% [ICON_RESEARCH] Science. [NEWLINE][NEWLINE]Must be built in XXL Cities.</Text>
 		</Row>
 
 		<Row>
@@ -6909,7 +6909,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_INTERNATIONAL_TRADE_COMPANY_HELP</Tag>
-			<Text>Must be built in XXL Cities.</Text>
+			<Text>+33% [ICON_GOLD] Gold. [NEWLINE][NEWLINE]Must be built in XXL Cities.</Text>
 		</Row>
 		
 		<Row>
