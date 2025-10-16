@@ -8368,6 +8368,12 @@
 		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_TEXTS">
 			<Text>宗教傳播速度+25%(研發印刷機後+50%)，聖城每3點[ICON_PEACE]信仰提供1點基礎[ICON_CULTURE]文化產出</Text>
 		</Replace>
+		<Row Tag="TXT_KEY_BELIEF_CURSADER_SHORT">
+			<Text>十字軍</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_CURSADER">
+			<Text>在聖城征召6名擁有60點經驗的聖殿騎士</Text>
+		</Row>
 
 
 		<!--Resources-->

@@ -8473,6 +8473,12 @@
 		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_TEXTS">
 			<Text>宗教传播速度+25%(研发印刷机后+50%)，圣城每3点[ICON_PEACE]信仰提供1点基础[ICON_CULTURE]文化产出</Text>
 		</Replace>
+		<Row Tag="TXT_KEY_BELIEF_CURSADER_SHORT">
+			<Text>十字军</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_CURSADER">
+			<Text>在圣城征召6名拥有60点经验的圣殿骑士</Text>
+		</Row>
 
 
 		<!--Resources-->
