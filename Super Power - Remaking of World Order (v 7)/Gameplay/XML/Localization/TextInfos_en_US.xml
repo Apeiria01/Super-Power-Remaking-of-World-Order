@@ -9319,6 +9319,12 @@
 		<Replace Tag="TXT_KEY_BELIEF_RELIGIOUS_TEXTS">
 			<Text>Religion spreads 25% faster (50% with Printing Press), every 3 [ICON_PEACE] Faith output in Holy City offer additional +1 basic [ICON_CULTURE] Culture output</Text>
 		</Replace>
+		<Row Tag="TXT_KEY_BELIEF_CURSADER_SHORT">
+			<Text>Crusader</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_CURSADER">
+			<Text>Recruits 6 Knights Templar with 60 experience in the Holy City</Text>
+		</Row>
 
 
 

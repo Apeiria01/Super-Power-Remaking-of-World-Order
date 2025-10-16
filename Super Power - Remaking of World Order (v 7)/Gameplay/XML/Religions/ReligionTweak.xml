@@ -143,6 +143,13 @@
 		</Row>
 
 		<Row>
+			<Type>BELIEF_BELIEF_CURSADER</Type>
+			<Description>TXT_KEY_BELIEF_CURSADER</Description>
+			<ShortDescription>TXT_KEY_BELIEF_CURSADER_SHORT</ShortDescription>
+			<Reformation>true</Reformation>
+		</Row>
+
+		<Row>
 			<Type>BELIEF_SCIENCE_RELIGION</Type>
 			<Description>TXT_KEY_BELIEF_SCIENCE_RELIGION</Description>
 			<ShortDescription>TXT_KEY_BELIEF_SCIENCE_RELIGION_SHORT</ShortDescription>

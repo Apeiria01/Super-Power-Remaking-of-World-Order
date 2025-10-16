@@ -9,11 +9,21 @@ function SPReformeBeliefs(iPlayer, iReligion, iBelief)
 	end
 
 	local pPlayer  = Players[iPlayer];
-	local holyCity = Game.GetHolyCityForReligion(iReligion, iPlayer);
+    local pCity = Game.GetHolyCityForReligion(iReligion, iPlayer)
+    if pCity:GetOwner() ~= iPlayer then
+        pCity = pPlayer:GetCapitalCity()
+    end
 	if iBelief == GameInfoTypes["BELIEF_UNITY_OF_PROPHETS"] then
 		local iProphetID = pPlayer:GetCivUnit(GameInfoTypes.UNITCLASS_PROPHET);
         if iProphetID < 0 then return end
-		pPlayer:InitUnit(iProphetID, holyCity:GetX(), holyCity:GetY(), UNITAI_PROPHET)
+		pPlayer:InitUnit(iProphetID, pCity:GetX(), pCity:GetY())
+	elseif iBelief == GameInfoTypes["BELIEF_BELIEF_CURSADER"] then
+        local iCurasderUnitType = pPlayer:GetCivUnit(GameInfoTypes.UNITCLASS_TEUTONIC_KNIGHT)
+        for i = 1, 6, 1 do
+            local pUnit = pPlayer:InitUnit(iCurasderUnitType, pCity:GetX(), pCity:GetY())
+			pUnit:ChangeExperience(60)
+            pUnit:JumpToNearestValidPlot()
+        end
 	end
 end
 
