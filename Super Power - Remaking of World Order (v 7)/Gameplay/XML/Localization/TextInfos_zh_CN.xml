@@ -16,7 +16,7 @@
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_VERSION">
-			<Text>[COLOR_YELLOW]版本号 10.94[ENDCOLOR]</Text>
+			<Text>[COLOR_YELLOW]版本号 10 Final[ENDCOLOR]</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_SP_MOD_SETUP">
@@ -6615,7 +6615,7 @@
 				[COLOR_POSITIVE_TEXT]传统政策[ENDCOLOR]适宜于繁荣精干的帝国。
 				[NEWLINE][NEWLINE]启用传统政策：
 				[NEWLINE][ICON_BULLET]使[ICON_CAPITAL]首都+3[ICON_CULTURE]文化、+3[ICON_RESEARCH]科研。
-				[NEWLINE][ICON_BULLET]首都出发的商路+3距离、+3[ICON_GOLD]金钱。
+				[NEWLINE][ICON_BULLET]首都出发的商路+3[ICON_GOLD]金钱、+3距离基数。
 				[NEWLINE][ICON_BULLET]城市地块扩张所需文化成本-25%。
 				[NEWLINE][ICON_BULLET]允许建造空中花园。
 				[NEWLINE][NEWLINE]推行所有传统政策：
