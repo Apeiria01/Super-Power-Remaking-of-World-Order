@@ -594,6 +594,7 @@
 			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
 			<SpecialistCount>1</SpecialistCount>
 			<FoodKeptFromPollution>-5</FoodKeptFromPollution>
+			<TradeRouteRiverBonusModifier>20</TradeRouteRiverBonusModifier>
 		</Row>
 		<Row>
 			<Type>BUILDING_DUTCH_GRACHTENGORDEL</Type>
@@ -613,6 +614,7 @@
 			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
 			<SpecialistCount>1</SpecialistCount>
 			<FoodKeptFromPollution>-5</FoodKeptFromPollution>
+			<TradeRouteRiverBonusModifier>40</TradeRouteRiverBonusModifier>
 		</Row>
 		
 		

@@ -605,7 +605,11 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_INLAND_CANAL_HELP</Tag>
-			<Text>本城所有沿河地块+1[ICON_PRODUCTION]产能。[NEWLINE][NEWLINE][COLOR_NEGATIVE_TEXT]污染[ENDCOLOR]将会导致[ICON_FOOD]食物累积-5%。[NEWLINE][NEWLINE]需要1单位[ICON_RES_ELECTRICITY]电力。</Text>
+			<Text>
+				本城所有沿河地块+1[ICON_PRODUCTION]产能，河流对商路增益效果+20%。
+				[NEWLINE][NEWLINE][COLOR_NEGATIVE_TEXT]污染[ENDCOLOR]将会导致[ICON_FOOD]食物累积-5%。
+				[NEWLINE][NEWLINE]需要1单位[ICON_RES_ELECTRICITY]电力。
+			</Text>
 		</Row>
 
 		<Row>
@@ -621,7 +625,9 @@
 		<Row>
 			<Tag>TXT_KEY_BUILDING_DUTCH_GRACHTENGORDEL_HELP</Tag>
 			<Text>
-				本城所有沿河地块和水域+1[ICON_PRODUCTION]产能，+1[ICON_GOLD]金钱产出。[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]污染[ENDCOLOR]将会导致[ICON_FOOD]食物累积-5%。[NEWLINE][NEWLINE]不需要[ICON_RES_ELECTRICITY]电力。
+				本城所有沿河地块和水域+1[ICON_PRODUCTION]产能，+1[ICON_GOLD]金钱产出，河流对商路增益效果+40%。
+				[NEWLINE][NEWLINE][COLOR_POSITIVE_TEXT]污染[ENDCOLOR]将会导致[ICON_FOOD]食物累积-5%。
+				[NEWLINE][NEWLINE]不需要[ICON_RES_ELECTRICITY]电力。
 			</Text>
 		</Row>
 
@@ -14612,6 +14618,9 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_TRLGB1">
 			<Text>陆地商路</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_TR_RIVER_BONUS">
+			<Text>商路河流增益</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_CSTRPM1111">
 			<Text>每条城邦商路使城市:</Text>
