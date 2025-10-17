@@ -249,6 +249,9 @@
 		<Replace Tag="TXT_KEY_TRLGB1">
 			<Text>Land Trade Route </Text>
 		</Replace>
+		<Replace Tag="TXT_KEY_TR_RIVER_BONUS">
+			<Text>Trade Route River bonus </Text>
+		</Replace>
 		<Replace Tag="TXT_KEY_CSTRPM1111">
 			<Text>Each Trade Route to City States Makes Cities: </Text>
 		</Replace>
@@ -2986,6 +2989,7 @@
 			<Tag>TXT_KEY_BUILDING_INLAND_CANAL_HELP</Tag>
 			<Text>
 				+1 [ICON_PRODUCTION] Production in every tile next to a River.
+				[NEWLINE]+20% River bonus to the trade.
 				[NEWLINE][NEWLINE][COLOR_NEGATIVE_TEXT]Pollution[ENDCOLOR] will cause -5% [ICON_FOOD] Food Growth.
 				[NEWLINE][NEWLINE]Requires 1 [ICON_RES_ELECTRICITY] Electricity.</Text>
 		</Row>
@@ -3006,6 +3010,7 @@
 			<Text>
 				+1 [ICON_PRODUCTION] Production and +1 [ICON_GOLD] Gold in every tile next to a River.
 				[NEWLINE]+1 [ICON_PRODUCTION] Production and +1 [ICON_GOLD] Gold for every water tiles worked by the city.
+				[NEWLINE]+40% River bonus to the trade.
 				[NEWLINE][NEWLINE][COLOR_NEGATIVE_TEXT]Pollution[ENDCOLOR] will cause -5% [ICON_FOOD] Food Growth.
 				[NEWLINE][NEWLINE]Not require [ICON_RES_ELECTRICITY] Electricity.
 			</Text>
