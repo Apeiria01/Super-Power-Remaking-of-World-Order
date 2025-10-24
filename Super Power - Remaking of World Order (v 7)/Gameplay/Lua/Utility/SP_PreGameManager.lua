@@ -184,7 +184,9 @@ function SPPreGameInitialize()
 			end
 		end
 		for option in GameInfo.GameOptions{Visible = 1} do
-			PreGame.SetGameOption(option.Type, SPData.SPGameOptions[option.Type]);
+			if option.Type ~= "GAMEOPTION_QUICK_COMBAT" and option.Type ~= "GAMEOPTION_QUICK_MOVEMENT" then
+				PreGame.SetGameOption(option.Type, SPData.SPGameOptions[option.Type]);
+			end
 		end
 	end
 end
