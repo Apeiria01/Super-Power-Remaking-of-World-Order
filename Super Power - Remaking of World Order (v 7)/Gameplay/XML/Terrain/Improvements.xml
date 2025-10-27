@@ -49,7 +49,7 @@
 			<Type>IMPROVEMENT_TUNNEL</Type>
 			<Description>TXT_KEY_IMPROVEMENT_TUNNEL</Description>
 			<Help>TXT_KEY_IMPROVEMENT_TUNNEL_HELP</Help>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_FORT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_TUNNEL</ArtDefineTag>
 			<Permanent>true</Permanent>
 			<MountainsMakesValid>true</MountainsMakesValid>
 			<NoFeature>true</NoFeature>
