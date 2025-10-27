@@ -7529,7 +7529,7 @@
 				[COLOR_POSITIVE_TEXT]Collective Rule[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]+50% [ICON_PRODUCTION] Production for training [COLOR_POSITIVE_TEXT]Settlers[ENDCOLOR].
 				[NEWLINE][ICON_BULLET]One free Settler appears near the [ICON_CAPITAL] Capital. (Venice receives a Merchant of Venice instead of a Settler.)
-				[NEWLINE][ICON_BULLET]When enter Renaissance Era , +50% [ICON_PRODUCTION] Production for training [COLOR_POSITIVE_TEXT]Settlers[ENDCOLOR] again ,Settlers Into City will not emptying the city food any more.
+				[NEWLINE][ICON_BULLET]Gain an additional +50% [ICON_PRODUCTION] Production for training Settlers when entering the Renaissance Era, Settlers Move into the City will no longer clear the city's stacked [ICON_FOOD] Food.
 				</Text>
 		</Replace>
 		
