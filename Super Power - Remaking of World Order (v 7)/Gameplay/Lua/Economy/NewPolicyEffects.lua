@@ -20,11 +20,11 @@ GameEvents.PlayerCityFounded.Add(FreeUnitNewCity)
 -- POLICY_CITIZENSHIP
 -- ******************************************************** 
 local iPolicyCitizenship = GameInfo.Policies["POLICY_CITIZENSHIP"].ID;
+local iCitizenshipBonus = math.floor(GameInfo.GameSpeeds[Game.GetGameSpeedType()].ConstructPercent * 25 / 100)
 function SPEPolicyCitizenshipHelper(pPlayer, pCity)
-	local bonus = math.floor(GameInfo.GameSpeeds[Game.GetGameSpeedType()].ConstructPercent * 25 / 100)
-	pCity:SetOverflowProduction(pCity:GetOverflowProduction() + bonus)
+	pCity:SetOverflowProduction(pCity:GetOverflowProduction() + iCitizenshipBonus)
 	if pPlayer:IsHuman() then
-		Events.GameplayAlertMessage(Locale.ConvertTextKey("TXT_KEY_MESSAGE_POLICY_CITIZENSHIP_ALERT", pCity:GetName(), bonus))
+		Events.GameplayAlertMessage(Locale.ConvertTextKey("TXT_KEY_MESSAGE_POLICY_CITIZENSHIP_ALERT", pCity:GetName(), iCitizenshipBonus))
 	end
 	--print("SPEPolicyCitizenshipHelper: ", bonus);
 end
@@ -65,13 +65,12 @@ function SPECityBuildingCompleted(iPlayer, iCity, iBuilding, bGold, bFaithOrCult
 	if pPlayer == nil or pPlayer:IsMinorCiv() or pPlayer:IsBarbarian() then
 	 	return
 	end
-	local iBuildingClass = GameInfo.Buildings[iBuilding].BuildingClass
-	local isWonder = GameInfo.BuildingClasses[iBuildingClass].MaxGlobalInstances
+
 	if pPlayer:HasPolicy(GameInfoTypes["POLICY_MERITOCRACY"]) 
 	and not pPlayer:IsPolicyBlocked(GameInfoTypes["POLICY_MERITOCRACY"])
 	and bGold == false
 	and bFaithOrCulture == false
-	and isWonder  == -1
+	and GameInfo.BuildingClasses[GameInfo.Buildings[iBuilding].BuildingClass].MaxGlobalInstances  == -1
 	then 
 		local iCost = pPlayer:GetBuildingProductionNeeded(iBuilding)
 		local bonus = math.floor(iCost * 0.1)

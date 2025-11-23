@@ -826,55 +826,22 @@ function UpdateUnitPromotions(unit)
 
 	--For each avail promotion, display the icon
 	for unitPromotion in GameInfo.UnitPromotions() do
-
-		if bIsBNW == true then
-
-			local unitPromotionID = unitPromotion.ID;
-
+		local unitPromotionID = unitPromotion.ID;
+		if (unit:IsHasPromotion(unitPromotionID) and not unit:IsTrade()  and unitPromotion.ShowInUnitPanel ~= 0  ) then
 			-------------------------SP Two Rows of Promotions-----------------------------------------------
-			--	        local index = 1;
-
-
-			if (unit:IsHasPromotion(unitPromotionID) and not unit:IsTrade()  and unitPromotion.ShowInUnitPanel ~= 0  ) then
-
-
-				if unitPromotion.PediaType == "PEDIA_ATTRIBUTES" or unitPromotion.PediaType == "PEDIA_SHARED"
-
-
-				then
-					controlTable = g_EarnedPromotionIM:GetInstance();
-				else
-					controlTable = g_EarnedPromotionIM2:GetInstance();
-				end
-				IconHookup(unitPromotion.PortraitIndex, 32, unitPromotion.IconAtlas, controlTable.UnitPromotionImage);
-
-				-- Tooltip
-				local strToolTip = Locale.ConvertTextKey(unitPromotion.Description);
-				strToolTip = strToolTip .. "[NEWLINE][NEWLINE]" .. Locale.ConvertTextKey(unitPromotion.Help)
-				controlTable.UnitPromotionImage:SetToolTipString(strToolTip);
-				--	         index = index + 1;
+			if unitPromotion.PediaType == "PEDIA_ATTRIBUTES" or unitPromotion.PediaType == "PEDIA_SHARED"
+			then
+				controlTable = g_EarnedPromotionIM:GetInstance();
+			else
+				controlTable = g_EarnedPromotionIM2:GetInstance();
 			end
+			-------------------------SP Two Rows of Promotions END-------------------------------------------
+			IconHookup(unitPromotion.PortraitIndex, 32, unitPromotion.IconAtlas, controlTable.UnitPromotionImage);
 
-
-
-		else
-			if (unit:IsHasPromotion(unitPromotionID)  and unitPromotion.ShowInUnitPanel ~= 0  ) then
-
-				if index % 2 == 1 then
-					controlTable = g_EarnedPromotionIM:GetInstance();
-				else
-					controlTable = g_EarnedPromotionIM2:GetInstance();
-				end
-				IconHookup(unitPromotion.PortraitIndex, 32, unitPromotion.IconAtlas, controlTable.UnitPromotionImage);
-
-				-- Tooltip
-				local strToolTip = Locale.ConvertTextKey(unitPromotion.Description);
-				strToolTip = strToolTip .. "[NEWLINE][NEWLINE]" .. Locale.ConvertTextKey(unitPromotion.Help)
-				controlTable.UnitPromotionImage:SetToolTipString(strToolTip);
-				index = index + 1;
-			end
-
-			-------------------------SP Two Rows of Promotions END-----------------------------------------------
+			-- Tooltip
+			local strToolTip = Locale.ConvertTextKey(unitPromotion.Description);
+			strToolTip = strToolTip .. "[NEWLINE][NEWLINE]" .. Locale.ConvertTextKey(unitPromotion.Help)
+			controlTable.UnitPromotionImage:SetToolTipString(strToolTip);
 		end
 	end
 end

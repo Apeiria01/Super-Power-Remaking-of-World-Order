@@ -34,6 +34,12 @@ function DoUnitForceUpgrade(player, unit)
 	player:InitUnit(iUnitType, plot:GetX(), plot:GetY(), UNITAI_ATTACK);
 end
 -- Human Player's units rule & AI units assistance
+local SpecialCargoQuery = DB.CreateQuery("SELECT ID, SpecialCargo FROM Units WHERE SpecialCargo = 'SPECIALUNIT_FIGHTER' OR SpecialCargo = 'SPECIALUNIT_MISSILE';");
+local SpecialCargoTable = {}
+for row in SpecialCargoQuery() do SpecialCargoTable[row.ID] = row.SpecialCargo end
+local SpecialQuery = DB.CreateQuery("SELECT ID, Special FROM Units WHERE Special = 'SPECIALUNIT_FIGHTER' OR Special = 'SPECIALUNIT_MISSILE';");
+local SpecialTable = {}
+for row in SpecialQuery() do SpecialTable[row.ID] = row.Special end
 function NewUnitCreationRules(playerID)
 
 	local player = Players[playerID]
@@ -113,9 +119,8 @@ function NewUnitCreationRules(playerID)
 			end
 
 			-- Carriers & Cargos Setting System
-			local sSpecialCargo   = GameInfo.Units[unit:GetUnitType()].SpecialCargo;
-			local sSpecial        = GameInfo.Units[unit:GetUnitType()].Special;
-			local creationRandNum = Game.Rand(100,"At NewUnitCreationRules.lua NewUnitCreationRules(), percentage") + 1
+			local sSpecialCargo   = SpecialCargoTable[unit:GetUnitType()];
+			local sSpecial        = SpecialTable[unit:GetUnitType()]
 			if unit:GetPlot() == nil or not unit:CanMove() then
 			-- Cargos Add for AI (Human use Button) & Missile for all
 			elseif unit:CargoSpace() > 0 and not unit:IsFull()
@@ -148,7 +153,7 @@ function NewUnitCreationRules(playerID)
 			elseif unit:IsCargo() and unit:GetTransportUnit()
 			-- not for AI
 			and player:IsHuman()
-			and ((unit:GetTransportUnit():GetUnitType() == GameInfoTypes["UNIT_HORNET"] and creationRandNum < 34)
+			and ((unit:GetTransportUnit():GetUnitType() == GameInfoTypes["UNIT_HORNET"] and (Game.Rand(100, "At NewUnitCreationRules.lua NewUnitCreationRules(), percentage") + 1) < 34)
 				or sSpecial == "SPECIALUNIT_FIGHTER" or sSpecial == "SPECIALUNIT_MISSILE")
 			and (unit:GetPlot():IsFriendlyTerritory(playerID) or unit:GetTransportUnit():IsHasPromotion(CarrierSupply3ID))
 			and GameInfo.Units[unit:GetUpgradeUnitType()] and GameInfo.Units[unit:GetUpgradeUnitType()].PrereqTech
