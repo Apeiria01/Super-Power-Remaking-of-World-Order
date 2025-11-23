@@ -195,6 +195,9 @@ end);
 local iSiegeWoodenBoatCollectionID = GameInfoTypes["PROMOTION_COLLECTION_SIEGE_WOODEN_BOAT"];
 local iPromotionDamage1 = GameInfoTypes["PROMOTION_DAMAGE_1"];
 local iPromotionDamage2 = GameInfoTypes["PROMOTION_DAMAGE_2"];
+local WoodensQuery = DB.CreateQuery("SELECT ID FROM Units WHERE MoveRate = 'WOODEN_BOAT';");
+local WoodenTable = {}
+for row in WoodensQuery() do WoodenTable[row.ID] = true end
 GameEvents.CanAddEnemyPromotion.Add(function(eThisPromotionType, iThisPromotionCollectionType, eThisBattleRole,
                                               iThisPlayer, iThisUnit, iThatPlayer, iThatUnit)
     if iThisPromotionCollectionType ~= iSiegeWoodenBoatCollectionID then
@@ -219,8 +222,9 @@ GameEvents.CanAddEnemyPromotion.Add(function(eThisPromotionType, iThisPromotionC
 
     local result = false;
     local tdebuff, tlostHP
-    if pThatUnit:IsCombatUnit() and
-    pThatUnit:GetDomainType() == DomainTypes.DOMAIN_SEA and GameInfo.Units[pThatUnit:GetUnitType()].MoveRate == "WOODEN_BOAT" then
+    if pThatUnit:IsCombatUnit()
+    and pThatUnit:GetDomainType() == DomainTypes.DOMAIN_SEA
+    and WoodenTable[pThatUnit:GetUnitType()] then
         local combatRoll = Game.Rand(100, "At NewCombatRules.lua NewAttackEffect()");
         if pThatUnit:IsHasPromotion(iPromotionDamage1) then
             result = combatRoll <= 80;

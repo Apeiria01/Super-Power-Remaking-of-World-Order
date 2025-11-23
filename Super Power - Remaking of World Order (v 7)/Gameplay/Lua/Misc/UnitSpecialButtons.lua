@@ -1401,7 +1401,7 @@ CarrierRestoreButton = {
         local PlayerID = unit:GetOwner()
         if PlayerID < 0 then return false end
 
-        if g_CargoSetList[PlayerID] == nil then
+        if g_CargoSetList[PlayerID] == nil or Players[PlayerID]:IsUnitObsolete(g_CargoSetList[PlayerID][4]) then
             SPCargoListSetup(PlayerID);
         end
         return 

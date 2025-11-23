@@ -62,6 +62,9 @@ local CarrierSupply2ID = GameInfo.UnitPromotions["PROMOTION_CARRIER_SUPPLY_2"].I
 local CarrierSupply3ID = GameInfo.UnitPromotions["PROMOTION_CARRIER_SUPPLY_3"].ID
 local CarrierAntiAir1ID = GameInfo.UnitPromotions["PROMOTION_CARRIER_FIGHTER_ANTI_AIR_1"].ID
 local CarrierAntiAir2ID = GameInfo.UnitPromotions["PROMOTION_CARRIER_FIGHTER_ANTI_AIR_2"].ID
+
+--local DEBUG = false
+--local print = function(message) if DEBUG then print(message) end end
 ---------------------------------------------Help AI to catch up with human----------------------------------------------------
 -----------Research Check
 function CheckHumanResearch(ePlayer)
@@ -344,7 +347,9 @@ end
 Events.SerialEventCityPopulationChanged.Add(AIAutoAnnexCity)
 
 -------------------------------------AI Units Assistance help AI to get required Promotions ----------------------------------------------------
-
+local CarriersQuery = DB.CreateQuery("SELECT ID FROM Units WHERE SpecialCargo = 'SPECIALUNIT_FIGHTER';");
+local CarrierTable = {}
+for row in CarriersQuery() do CarrierTable[row.ID] = true end
 function AIUnitsAssist(playerID)
     local player = Players[playerID]
     if player == nil then return end
@@ -361,7 +366,7 @@ function AIUnitsAssist(playerID)
     if player:GetNumCities() > 1 and PlayerAtWarWithHuman(player) then
         for unit in player:Units() do
             -- Add Escort Ships for AI carriers!
-            if GameInfo.Units[unit:GetUnitType()].SpecialCargo == "SPECIALUNIT_FIGHTER" and not unit:IsFriendlyUnitAdjacent(true) then
+            if CarrierTable[unit:GetUnitType()] and not unit:IsFriendlyUnitAdjacent(true) then
                 local plot = unit:GetPlot()
                 if plot and not plot:IsCity() and not PlotIsVisibleToHuman(plot) then
                     AIForceBuildNavalEscortUnits(plot:GetX(), plot:GetY(), player)
@@ -748,7 +753,7 @@ function AIPromotion(iPlayer, iCity, iUnit, bGold, bFaith)
                 AICoastalCitiesCount = AICoastalCitiesCount + 1
             end
         end
-        print("AI coastal cities count:" .. AICoastalCitiesCount)
+        --print("AI coastal cities count:" .. AICoastalCitiesCount)
 
         if AICoastalCitiesCount > AICityCount / 1.5 then
             if player:GetCurrentEra() >= 2 then

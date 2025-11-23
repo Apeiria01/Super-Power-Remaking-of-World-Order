@@ -1,5 +1,8 @@
 -- NewBuildingEffects
 -----------New building effects when it is built
+local AIBonusQuery = DB.CreateQuery("SELECT ID FROM Buildings WHERE BuildingClass = 'BUILDINGCLASS_ARMORY' OR BuildingClass = 'BUILDINGCLASS_ARSENAL';");
+local AIBonusQueryTable = {}
+for row in AIBonusQuery() do AIBonusQueryTable[row.ID] = true end
 function NewBuildingEffects(iPlayer, iCity, iBuilding, bGold, bFaith)
 	local player = Players[iPlayer];
 	if player == nil or player:IsBarbarian() or player:IsMinorCiv() or player:GetNumCities() <= 0 then
@@ -9,10 +12,9 @@ function NewBuildingEffects(iPlayer, iCity, iBuilding, bGold, bFaith)
 	if pCity == nil then
 		return;
 	end
-	local iBuildingClass = GameInfoTypes[GameInfo.Buildings[iBuilding].BuildingClass];
 
 	-- AI Bonus
-	if iBuildingClass == GameInfoTypes.BUILDINGCLASS_ARMORY or iBuildingClass == GameInfoTypes.BUILDINGCLASS_ARSENAL then
+	if AIBonusQueryTable[iBuilding] then
 		if not player:IsHuman() then
 			local MAID = GameInfoTypes.BUILDING_MILITARY_ACADEMY
 			pCity:SetNumRealBuilding(MAID, 1)
