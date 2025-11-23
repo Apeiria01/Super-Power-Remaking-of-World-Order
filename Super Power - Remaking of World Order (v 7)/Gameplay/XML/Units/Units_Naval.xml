@@ -1441,6 +1441,7 @@
 			<MoveRate>AIR_REBASE</MoveRate>
 			<ExtraMaintenanceCost>4</ExtraMaintenanceCost>
 			<ShowInPedia>false</ShowInPedia>
+			<ForbidRebase>true</ForbidRebase>
 		</Row>
 
 

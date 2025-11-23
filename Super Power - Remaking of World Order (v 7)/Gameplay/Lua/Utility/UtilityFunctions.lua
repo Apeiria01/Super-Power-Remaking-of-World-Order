@@ -771,7 +771,9 @@ function CarrierRestore(iPlayerID, iUnitID, iCargoUnit)
 				print("French Eurotiger Unique!");
 			end
 			while not pUnit:IsFull() do
-				pPlayer:InitUnit(iCargoUnit, pPlot:GetX(), pPlot:GetY(), UNITAI_MISSILE_AIR):SetMoves(0);
+				local Missile = pPlayer:InitUnit(iCargoUnit, pPlot:GetX(), pPlot:GetY(), UNITAI_MISSILE_AIR);
+				Missile:LoadUnit(pUnit);
+				Missile:SetMoves(0);
 				print("Missile restored!");
 			end
 		elseif sSpecialCargo == "SPECIALUNIT_FIGHTER" and iCost and iCost >= 0 and iCost <= pPlayer:GetGold() then
@@ -780,11 +782,13 @@ function CarrierRestore(iPlayerID, iUnitID, iCargoUnit)
 			if not pPlayer:IsHuman() then
 				pNewCargoUnit:PushMission(GameInfoTypes.MISSION_AIRPATROL);
 			end
+			pNewCargoUnit:LoadUnit(pUnit);
 			pNewCargoUnit:SetMoves(0);
 			if not pPlayer:IsHuman() and not pUnit:IsFull() and 2 * iCost <= pPlayer:GetGold() then
 				iCost = 2 * iCost;
 				pNewCargoUnit = pPlayer:InitUnit(iCargoUnit, pPlot:GetX(), pPlot:GetY(), UNITAI_ATTACK_AIR);
 				pNewCargoUnit:PushMission(GameInfoTypes.MISSION_AIRPATROL);
+				pNewCargoUnit:LoadUnit(pUnit);
 				pNewCargoUnit:SetMoves(0);
 				print("New Aircraft restored on Carrier twice for AI! Total Cost: " .. iCost);
 			end
@@ -846,7 +850,7 @@ function CarrierRestore(iPlayerID, iUnitID, iCargoUnit)
 			for _, unitPromotionID in ipairs(tUnitPromotions) do
 				pNewCargoUnit:SetHasPromotion(unitPromotionID, true);
 			end
-
+			pNewCargoUnit:LoadUnit(pUnit);
 			pNewCargoUnit:SetMoves(0);
 			return iCost;
 		end

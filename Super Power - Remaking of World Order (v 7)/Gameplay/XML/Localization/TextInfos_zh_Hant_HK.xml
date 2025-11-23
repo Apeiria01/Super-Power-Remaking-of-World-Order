@@ -10949,7 +10949,7 @@
 			<Text>虎式武直</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_HELP_FRANCE_EUROCOPTER_TIGER">
-			<Text>替代武裝直升機，自帶長途行軍晉升和雙擊晉升，裝備了毒刺導彈，每回合可以攔截2次（範圍為4格），對直升機單位和空軍單位+200%戰鬥力。</Text>
+			<Text>替代武裝直升機，自帶長途行軍晉升和雙擊晉升，裝備了毒刺導彈，每回合可以攔截2次（範圍為4格），對直升機單位和空軍單位+200%戰鬥力，該單位不可轉場。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_FRANCE_EUROCOPTER_TIGER_PEDIA">
 			<Text>歐洲虎式（英語：Eurocopter Tiger，法語：L'Eurocopter Tigre，歐直編號EC-665）是法國和德國聯合研製，德國戴姆勒宇航和法國馬特拉宇航（1992年合併為歐洲直升機公司）生產的四旋翼、雙發多任務武裝直升機，是世界上第一種將制空作戰納入設計思想並付諸實施的武裝直升機。

@@ -11089,7 +11089,7 @@
 			<Text>虎式武直</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_HELP_FRANCE_EUROCOPTER_TIGER">
-			<Text>替代武装直升机，自带长途行军晋升和双击晋升，装备了毒刺导弹，每回合可以拦截2次（范围为4格），对直升机单位和空军单位+200%战斗力。</Text>
+			<Text>替代武装直升机，自带长途行军晋升和双击晋升，装备了毒刺导弹，每回合可以拦截2次（范围为4格），对直升机单位和空军单位+200%战斗力，该单位不可转场。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_FRANCE_EUROCOPTER_TIGER_PEDIA">
 			<Text>

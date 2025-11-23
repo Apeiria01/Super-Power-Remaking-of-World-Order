@@ -12749,7 +12749,7 @@
 			<Text>Eurocopter EC665 Tigre</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_HELP_FRANCE_EUROCOPTER_TIGER">
-			<Text>Eurocopter EC665 Tigre is a carrier-based attack helicopter. It can be automatically resupplied on a Mistral-class Amphibious Assault Ship. It is more powerful and has a longer flight range than the guided missile. It will transfer EXPs earned in battle and inherit all promotions of its carrier like other carrier-based aircrafts. </Text>
+			<Text>Eurocopter EC665 Tigre is a carrier-based attack helicopter. It can be automatically resupplied on a Mistral-class Amphibious Assault Ship. It is more powerful and has a longer flight range than the guided missile. It will transfer EXPs earned in battle and inherit all promotions of its carrier like other carrier-based aircrafts, this Unit cannot Rebase.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_FRANCE_EUROCOPTER_TIGER_PEDIA">
 			<Text>The Airbus Helicopters Tiger, formerly known as the Eurocopter Tiger, is a four-bladed, twin-engined attack helicopter which first entered service in 2003. It is manufactured by Eurocopter (now Airbus Helicopters), the successor company to Aérospatiale's and DASA's respective helicopter divisions, which designate it as the EC665. In Germany it is known as the Tiger; in France and Spain it is called the Tigre.</Text>
