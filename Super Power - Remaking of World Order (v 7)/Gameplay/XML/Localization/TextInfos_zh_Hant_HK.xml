@@ -10589,7 +10589,7 @@
 			<Plurality>2</Plurality>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_FRANCE_BATTERY_HELP">
-			<Text>快速且強大的攻城單位。法國特色單位，替代加農炮。具有間接火力，並且在攻擊前不需要進行遠程攻擊準備。自帶破陣1-2級晉升。</Text>
+			<Text>快速且強大的攻城單位。法國特色單位，替代加農炮。具有間接火力，並且進行遠程攻擊準備不消耗移動力。自帶破陣1-2級晉升。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_FRANCE_BATTERY_HEADING">
 			<Text>大炮兵連</Text>
@@ -15690,10 +15690,19 @@
 		<Replace Tag="TXT_KEY_PROMOTION_ATTACK_COST_HALF">
 			<Text>連弩</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_ATTACK_COST_HALF_HELP_TEXT">
+		<Replace Tag="TXT_KEY_PROMOTION_ATTACK_COST_HALF_HELP">
 			<Text>
 				[ICON_BULLET]+1額外攻擊次數。
 				[NEWLINE][ICON_BULLET]遠程攻擊消耗移動力-33%。
+			</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_FAST_SET_UP">
+			<Text>快速部署</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FAST_SET_UP_HELP">
+			<Text>
+				[ICON_BULLET]架設不消耗移動力。
 			</Text>
 		</Replace>
 

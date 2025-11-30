@@ -12414,7 +12414,7 @@
 		<Plurality>2</Plurality>
 	</Row>
 	<Row Tag="TXT_KEY_UNIT_FRANCE_BATTERY_HELP">
-		<Text>Fast and Powerful Sige Unit. Only the France may build it. It has indirect fire and doesn't need to set up before attacking. It has the promotion of Sunder I-II</Text>
+		<Text>Fast and Powerful Sige Unit. Only the France may build it. It has indirect fire and Set Up requires no Movement. It has the promotion of Sunder I-II</Text>
 	</Row>
 	<Row Tag="TXT_KEY_UNIT_FRANCE_BATTERY_HEADING">
 		<Text>Grand Battery</Text>
@@ -17423,10 +17423,19 @@
 		<Replace Tag="TXT_KEY_PROMOTION_ATTACK_COST_HALF">
 			<Text>Repeating Crossbow</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_ATTACK_COST_HALF_HELP_TEXT">
+		<Replace Tag="TXT_KEY_PROMOTION_ATTACK_COST_HALF_HELP">
 			<Text>
 				[ICON_BULLET]+1 additional attack per turn.
-				[NEWLINE][ICON_BULLET]Moves consume of Range Attack -33%.
+				[NEWLINE][ICON_BULLET]Movement cost of range attack reduced by 33%.
+			</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_FAST_SET_UP">
+			<Text>Fast Set Up</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FAST_SET_UP_HELP">
+			<Text>
+				[ICON_BULLET]Movement cost of Set Up reduced by 100%.
 			</Text>
 		</Replace>
 
