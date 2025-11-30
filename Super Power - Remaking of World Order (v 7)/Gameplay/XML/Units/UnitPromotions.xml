@@ -93,7 +93,7 @@
 		<Row>
 			<Type>PROMOTION_ATTACK_COST_HALF</Type>
 			<Description>TXT_KEY_PROMOTION_ATTACK_COST_HALF</Description>
-			<Help>TXT_KEY_PROMOTION_ATTACK_COST_HALF_HELP_TEXT</Help>
+			<Help>TXT_KEY_PROMOTION_ATTACK_COST_HALF_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OrderPriority>1</OrderPriority>
 			<PortraitIndex>42</PortraitIndex>
@@ -104,6 +104,19 @@
 			<RangeAttackCostModifier>-33</RangeAttackCostModifier>
 			<CanMoveAfterAttacking>true</CanMoveAfterAttacking>
 			<ExtraAttacks>1</ExtraAttacks>
+		</Row>
+
+		<Row>
+			<Type>PROMOTION_FAST_SET_UP</Type>
+			<Description>TXT_KEY_FAST_SET_UP</Description>
+			<Help>TXT_KEY_FAST_SET_UP_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_FAST_SET_UP</PediaEntry>
+			<CannotBeChosen>true</CannotBeChosen>
+			<SetUpCostModifier>-100</SetUpCostModifier>
 		</Row>
 		
 		<!--*****************************Heroic Carrier*******************************************-->
@@ -5632,7 +5645,6 @@
 			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_GENERAL_STACKING</PediaEntry>
-			<RemovePromotionUpgrade>PROMOTION_MUST_SET_UP</RemovePromotionUpgrade>
 		</Row>
 		<Row>
 			<Type>PROMOTION_ONLY_ATTACKS_CITIES</Type>

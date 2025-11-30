@@ -10722,7 +10722,7 @@
 			<Plurality>2</Plurality>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_FRANCE_BATTERY_HELP">
-			<Text>快速且强大的攻城单位。法国特色单位，替代加农炮。具有间接火力，并且在攻击前不需要进行远程攻击准备。自带破阵1-2级晋升。</Text>
+			<Text>快速且强大的攻城单位。法国特色单位，替代加农炮。具有间接火力，并且进行远程攻击准备不消耗移动力。自带破阵1-2级晋升。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_FRANCE_BATTERY_HEADING">
 			<Text>大炮兵连</Text>
@@ -15879,10 +15879,19 @@
 		<Replace Tag="TXT_KEY_PROMOTION_ATTACK_COST_HALF">
 			<Text>连弩</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_ATTACK_COST_HALF_HELP_TEXT">
+		<Replace Tag="TXT_KEY_PROMOTION_ATTACK_COST_HALF_HELP">
 			<Text>
 				[ICON_BULLET]+1额外攻击次数。
 				[NEWLINE][ICON_BULLET]远程攻击消耗移动力-33%。
+			</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_FAST_SET_UP">
+			<Text>快速部署</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FAST_SET_UP_HELP">
+			<Text>
+				[ICON_BULLET]架设不消耗移动力。
 			</Text>
 		</Replace>
 

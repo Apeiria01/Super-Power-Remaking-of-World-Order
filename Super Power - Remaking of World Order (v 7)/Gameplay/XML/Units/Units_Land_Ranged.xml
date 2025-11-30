@@ -1512,10 +1512,6 @@
 		</Row>
 		<!--<Row>
 			<UnitType>UNIT_FRANCE_BATTERY</UnitType>
-			<PromotionType>PROMOTION_MUST_SET_UP</PromotionType>
-		</Row>-->
-		<!--<Row>
-			<UnitType>UNIT_FRANCE_BATTERY</UnitType>
 			<PromotionType>PROMOTION_ADJACENT_BONUS</PromotionType>
 		</Row>-->
 		<Row>
@@ -1533,6 +1529,14 @@
 		<Row>
 			<UnitType>UNIT_FRANCE_BATTERY</UnitType>
 			<PromotionType>PROMOTION_SUNDER_2</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FRANCE_BATTERY</UnitType>
+			<PromotionType>PROMOTION_MUST_SET_UP</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FRANCE_BATTERY</UnitType>
+			<PromotionType>PROMOTION_FAST_SET_UP</PromotionType>
 		</Row>
 
 		<Row>
