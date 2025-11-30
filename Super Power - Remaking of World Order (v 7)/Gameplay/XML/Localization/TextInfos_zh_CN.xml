@@ -11817,7 +11817,7 @@
 			<Text>刀</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_JAPANESE_SAMURAI_HELP">
-			<Text>夹击加成+5%。</Text>
+			<Text>夹击加成+50%。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_JAPANESE_SAMURAI_CULTURE">
 			<Text>菊</Text>

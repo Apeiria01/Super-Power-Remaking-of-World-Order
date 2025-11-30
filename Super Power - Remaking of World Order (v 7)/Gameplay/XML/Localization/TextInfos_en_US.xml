@@ -13452,7 +13452,7 @@
 		<Text>The Sword</Text>
 	</Row>
 	<Row Tag = "TXT_KEY_PROMOTION_JAPANESE_SAMURAI_HELP">
-		<Text>Flank Attack bonus +5%.</Text>
+		<Text>Flank Attack bonus +50%.</Text>
 	</Row>
 	<Row Tag = "TXT_KEY_PROMOTION_JAPANESE_SAMURAI_CULTURE">
 		<Text>The Chrysanthemum</Text>
