@@ -18274,6 +18274,9 @@
 		<Row Tag="TXT_KEY_ORIGINAL_CAPITAL_ONLY">
 			<Text>Must in Original Capital</Text>
 		</Row>
+		<Row Tag="TXT_KEY_ALLOW_SS_LAUCH">
+			<Text>Allow [COLOR:0:204:255:255]Spaceship Lauch[ENDCOLOR]</Text>
+		</Row>
 		<Replace Tag="TXT_KEY_RO_WR_FOUNDER">
 			<Text>Religion Leader</Text>
 		</Replace>

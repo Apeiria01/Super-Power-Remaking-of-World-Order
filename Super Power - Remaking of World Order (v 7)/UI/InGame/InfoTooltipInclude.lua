@@ -1083,7 +1083,8 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		EnableCrops = L"TXT_KEY_ENABLE_CROPS",
 		EnableArmee = L"TXT_KEY_ENABLE_ARMEE",
 		CapitalOnly = L"TXT_KEY_CAPITAL_ONLY",
-		OriginalCapitalOnly = L"TXT_KEY_ORIGINAL_CAPITAL_ONLY"
+		OriginalCapitalOnly = L"TXT_KEY_ORIGINAL_CAPITAL_ONLY",
+		AllowSpaceshipLaunch = L"TXT_KEY_ALLOW_SS_LAUCH"
 	--n	CityWall = "",
 	--n	ArtInfoCulturalVariation = "",
 	--n	ArtInfoEraVariation = "",

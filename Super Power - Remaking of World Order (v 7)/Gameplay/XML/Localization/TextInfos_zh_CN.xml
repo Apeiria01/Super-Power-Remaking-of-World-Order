@@ -16731,6 +16731,9 @@
 		<Row Tag="TXT_KEY_ORIGINAL_CAPITAL_ONLY">
 			<Text>只能在原始首都城市建造</Text>
 		</Row>
+		<Row Tag="TXT_KEY_ALLOW_SS_LAUCH">
+			<Text>允许[COLOR:0:204:255:255]发射飞船组件[ENDCOLOR]</Text>
+		</Row>
 		<Replace Tag="TXT_KEY_RO_WR_FOUNDER">
 			<Text>宗教领袖</Text>
 		</Replace>
