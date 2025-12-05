@@ -1232,7 +1232,7 @@ SatelliteLaunchingButton = {
             return true
         end
         local city = plot:GetPlotCity()
-        return not city or city:GetOwner() ~= unit:GetOwner() or not city:IsCapital();
+        return not city or city:GetOwner() ~= unit:GetOwner() or not city:IsAllowSpaceshipLaunch();
     end, -- or nil or a boolean, default is false
 
     Action = function(action, unit, eClick)
