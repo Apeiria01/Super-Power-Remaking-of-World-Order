@@ -4957,12 +4957,12 @@
 		<Row>
 			<BuildingType>BUILDING_SPACESHIP_FACTORY</BuildingType>
 			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-			<Flavor>20</Flavor>
+			<Flavor>70</Flavor>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_SPACESHIP_FACTORY</BuildingType>
 			<FlavorType>FLAVOR_SPACESHIP</FlavorType>
-			<Flavor>150</Flavor>
+			<Flavor>200</Flavor>
 		</Row>
 		
 		<Row>
