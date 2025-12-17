@@ -7442,20 +7442,20 @@
 		</Row>
 	</Building_Flavors>
 
-	<Building_EnableUnitPurchase>
+	<UnitClass_PurchaseCollections>
 		<Row>
-			<BuildingType>BUILDING_AZTEC_HUEY_TEOCALLI_SP</BuildingType>
 			<UnitClassType>UNITCLASS_LONGSWORDSMAN</UnitClassType>
+			<BuildingType>BUILDING_AZTEC_HUEY_TEOCALLI_SP</BuildingType>
 			<YieldType>YIELD_FAITH</YieldType>
 			<CostModifier>190</CostModifier>
 		</Row>
 		<Row>
-			<BuildingType>BUILDING_AZTEC_HUEY_TEOCALLI_SP</BuildingType>
 			<UnitClassType>UNITCLASS_BOMBARD</UnitClassType>
+			<BuildingType>BUILDING_AZTEC_HUEY_TEOCALLI_SP</BuildingType>
 			<YieldType>YIELD_FAITH</YieldType>
 			<CostModifier>440</CostModifier>
 		</Row>
-	</Building_EnableUnitPurchase>
+	</UnitClass_PurchaseCollections>
 	<Building_InstantYield>
 		<Row>
 			<BuildingType>BUILDING_BURJ_TOWER</BuildingType>
