@@ -6439,25 +6439,25 @@
 			<Text>千乘之國</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_HANDICAP_KING_HELP">
-			<Text>電腦在人口，產能，金幣，幸福度和戰鬥力上有較大加成。電腦初始擁有2個移民，且每進入一個新時代，電腦的加成都會增加。與“天神”等級難度相當。</Text>
+			<Text>電腦在人口，產能，金幣，幸福度和戰鬥力上有較大加成。電腦每進入一個新時代，加成都會增加。與“天神”等級難度相當。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_HANDICAP_EMPEROR">
 			<Text>一方霸主</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_HANDICAP_EMPEROR_HELP">
-			<Text>電腦在人口，產能，金幣，幸福度和戰鬥力上有很大加成。電腦初始擁有2個移民，且每進入一個新時代，電腦的加成都會大量增加。</Text>
+			<Text>電腦在人口，產能，金幣，幸福度和戰鬥力上有很大加成。電腦每進入一個新時代，加成都會大量增加。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_HANDICAP_IMMORTAL">
 			<Text>世界強權</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_HANDICAP_IMMORTAL_HELP">
-			<Text>電腦在人口，產能，金幣，幸福度和戰鬥力上有極大加成。電腦初始擁有3個移民，且每進入一個新時代，電腦的加成都會劇增。</Text>
+			<Text>電腦在人口，產能，金幣，幸福度和戰鬥力上有極大加成。電腦每進入一個新時代，加成都會劇增。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_HANDICAP_DEITY">
 			<Text>超級大國</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_HANDICAP_DEITY_HELP">
-			<Text>電腦在人口，產能，金幣，幸福度和戰鬥力上的加成喪心病狂。電腦初始擁有4個移民，且每進入一個新時代，電腦的加成都會瘋漲。 </Text>
+			<Text>電腦在人口，產能，金幣，幸福度和戰鬥力上的加成喪心病狂。電腦每進入一個新時代，加成都會瘋漲。 </Text>
 		</Replace>
 
 		<!-- *******************************New Resoultions Texts********************************************-->
@@ -16640,6 +16640,15 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_FOODMOD_WLTKD">
 			<Text>[NEWLINE][ICON_BULLET]王之日修正值（余糧）：{1_Num}%</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_MISSION_BUILD_CITY_DISABLED_HELP">
+			<Text>
+				其他城市X格範圍內不能建立城市
+				[NEWLINE][ICON_BULLET]標準以上地圖：X = 4。
+				[NEWLINE][ICON_BULLET]標準及以下地圖：X = 3。
+				[NEWLINE][ICON_BULLET]異大陸城市：X = X - 1。
+			</Text>
 		</Replace>
 	</Language_zh_Hant_HK>
 </GameData>
