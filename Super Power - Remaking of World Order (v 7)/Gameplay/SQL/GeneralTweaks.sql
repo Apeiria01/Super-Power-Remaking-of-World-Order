@@ -41,3 +41,4 @@ UPDATE GameSpeeds SET TradeRouteSpeedMod=1200 WHERE Type='GAMESPEED_MARATHON';
 
 -- only for UI
 ALTER TABLE Projects ADD COLUMN 'CivilizationType' TEXT DEFAULT NULL REFERENCES Civilizations(Type);
+ALTER TABLE UnitPromotions ADD COLUMN 'ShowInFlag' INTEGER DEFAULT -1;

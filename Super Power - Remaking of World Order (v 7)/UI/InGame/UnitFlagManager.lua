@@ -2291,3 +2291,94 @@ function TipHandler(Button)
         Controls.UnitTooltipTimer:Reverse();
     end
 end
+
+-- ak/FlagPromotions
+local isPromotionFlagsEUI = true
+local PromotionFlagsSettings_MaxPromosToShow = 13
+local PromotionFlagQuery = DB.CreateQuery([[
+	SELECT UnitPromotions.ID, UnitPromotions.Type, UnitPromotions.PortraitIndex, UnitPromotions.IconAtlas, UnitPromotions.Description, UnitPromotions.Help, UnitPromotions.ShowInFlag
+	FROM UnitPromotions
+	WHERE UnitPromotions.ShowInFlag > -1;
+]]);
+local PromotionFlagTable = {}
+for row in PromotionFlagQuery() do PromotionFlagTable[row.ID] = row end
+local function AddPromotionIcon(flag, promoID, iconPositionID)
+	local button = flag.m_Instance['Promotion'..iconPositionID]
+	local promo = PromotionFlagTable[promoID]
+	
+	if not IconHookup( promo.PortraitIndex, 16, promo.IconAtlas, button ) then
+		print("No 16x16 icon for ".. promo.Type .. " failing back to the yellow triangle")
+		IconHookup( 59, 16, "PROMOTION_ATLAS", button )
+	end
+	
+	local hoverText = string.format("[COLOR_YELLOW]%s[ENDCOLOR][NEWLINE]%s",
+        Locale.ConvertTextKey(promo.Description),
+        Locale.ConvertTextKey(promo.Help)
+    )
+	button:SetToolTipString(hoverText)
+end
+local function UpdatePromotions(playerID, unitID)
+	local flag = g_MasterList[playerID][unitID]
+	if flag == nil then
+		-- DebugPrint("UpdatePromotions, No flag! playerID:" .. tostring(playerID) .. ", unitID:" .. tostring(unitID))
+		return
+	end
+
+	local player = Players[playerID]
+	local unit = player:GetUnitByID(unitID)
+	if unit == nil then 
+		--that's weird, ah well nevermind!
+		-- DebugPrint("UpdatePromotions, flag exists but, unit appears to be nil, bailing out... playerID:" .. tostring(playerID) ..  ", unitID:".. tostring(unitID))
+		return
+	end
+
+	local iconPositionID	= 1
+	local promos			= {}	
+
+    for _, promo in pairs(PromotionFlagTable) do
+		local promoID = promo.ID
+		if unit:IsHasPromotion(promoID)then
+			table.insert(promos, promoID)
+		end
+	end
+
+    -- Min ID First
+	table.sort(promos, function(a, b)
+		return PromotionFlagTable[a].ShowInFlag < PromotionFlagTable[b].ShowInFlag
+	end)
+
+	local iPromotionsStackMax = math.min(13, (PromotionFlagsSettings_MaxPromosToShow or 13))
+	for iconPositionID = 1, iPromotionsStackMax do
+		local button = flag.m_Instance['Promotion'..iconPositionID]
+		button:UnloadTexture()
+		if promos[iconPositionID] then
+			AddPromotionIcon(flag, promos[iconPositionID], iconPositionID)
+			button:SetHide(false)
+		else
+			button:SetHide(true)
+		end
+	end	
+
+	flag.m_Instance.EarnedPromotionStack1:CalculateSize()
+	flag.m_Instance.EarnedPromotionStack1:ReprocessAnchoring()
+	
+	flag.m_Instance.EarnedPromotionStack2:CalculateSize()
+	flag.m_Instance.EarnedPromotionStack2:ReprocessAnchoring()
+end
+local function RefreshUnitPromotionsGlobally()
+	local swStart = os.clock()
+	local unitCount = 0
+	for playerID, unitList in pairs(g_MasterList) do
+		for unitID, flag in pairs(unitList) do
+			UpdatePromotions(playerID, unitID)
+			unitCount = unitCount + 1
+		end
+	end
+	print(string.format("RefreshUnitPromotionsGlobally processed %i units in %.3f seconds", unitCount, os.clock()-swStart))
+end
+if isPromotionFlagsEUI then
+	Events.SerialEventUnitCreated.Add(UpdatePromotions);
+	GameEvents.UnitPromoted.Add(function(playerID, unitID, promoType) UpdatePromotions(playerID, unitID) end);
+    Events.UnitSelectionChanged.Add(function(playerID, unitID) UpdatePromotions(playerID, unitID) end);
+    Events.ActivePlayerTurnStart.Add(RefreshUnitPromotionsGlobally);
+end
