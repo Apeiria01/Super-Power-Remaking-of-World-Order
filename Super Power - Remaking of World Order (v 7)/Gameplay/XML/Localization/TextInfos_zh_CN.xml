@@ -6538,25 +6538,25 @@
 			<Text>千乘之国</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_HANDICAP_KING_HELP">
-			<Text>电脑在人口，产能，金钱，快乐和战斗力上有较大加成。电脑初始拥有2个移民，且每进入一个新时代，电脑的加成都会增加。与“天神”等级难度相当。</Text>
+			<Text>电脑在人口，产能，金钱，快乐和战斗力上有较大加成。电脑每进入一个新时代，加成都会增加。与“天神”等级难度相当。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_HANDICAP_EMPEROR">
 			<Text>一方霸主</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_HANDICAP_EMPEROR_HELP">
-			<Text>电脑在人口，产能，金钱，快乐和战斗力上有很大加成。电脑初始拥有2个移民，且每进入一个新时代，电脑的加成都会大量增加。</Text>
+			<Text>电脑在人口，产能，金钱，快乐和战斗力上有很大加成。电脑进入一个新时代，加成都会大量增加。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_HANDICAP_IMMORTAL">
 			<Text>世界强权</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_HANDICAP_IMMORTAL_HELP">
-			<Text>电脑在人口，产能，金钱，快乐和战斗力上有极大加成。电脑初始拥有3个移民，且每进入一个新时代，电脑的加成都会剧增。</Text>
+			<Text>电脑在人口，产能，金钱，快乐和战斗力上有极大加成。电脑每进入一个新时代，加成都会剧增。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_HANDICAP_DEITY">
 			<Text>超级大国</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_HANDICAP_DEITY_HELP">
-			<Text>电脑在人口，产能，金钱，快乐和战斗力上的加成丧心病狂。电脑初始拥有4个移民，且每进入一个新时代，电脑的加成都会疯涨。 </Text>
+			<Text>电脑在人口，产能，金钱，快乐和战斗力上的加成丧心病狂。电脑每进入一个新时代，加成都会疯涨。 </Text>
 		</Replace>
 
 		<!-- *******************************New Resoultions Texts********************************************-->
@@ -16828,6 +16828,15 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_FOODMOD_WLTKD">
 			<Text>[NEWLINE][ICON_BULLET]我们爱领袖日修正（余粮）: {1_Num}%</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_MISSION_BUILD_CITY_DISABLED_HELP">
+			<Text>
+				其他城市X格范围内不能建立城市
+				[NEWLINE][ICON_BULLET]标准以上地图：X = 4。
+				[NEWLINE][ICON_BULLET]标准及以下地图：X = 3。
+				[NEWLINE][ICON_BULLET]异大陆城市：X = X - 1。
+			</Text>
 		</Replace>
 	</Language_zh_CN>
 </GameData>

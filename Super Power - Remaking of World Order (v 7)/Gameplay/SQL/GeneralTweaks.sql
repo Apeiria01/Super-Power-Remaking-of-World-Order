@@ -33,6 +33,17 @@ UPDATE Worlds SET TradeRouteDistanceMod=70 WHERE Type='WORLDSIZE_SMALL';
 UPDATE Worlds SET TradeRouteDistanceMod=80 WHERE Type='WORLDSIZE_STANDARD';
 UPDATE Worlds SET TradeRouteDistanceMod=100 WHERE Type='WORLDSIZE_LARGE';
 UPDATE Worlds SET TradeRouteDistanceMod=120 WHERE Type='WORLDSIZE_HUGE';
+--Small Map Compatibility
+UPDATE Worlds SET ExtraCityDistance = -1 WHERE Worlds.ID < (SELECT ID FROM Worlds WHERE Type = 'WORLDSIZE_LARGE');
+INSERT INTO World_HandicapExtraAIStartingUnit(WorldType, HandicapType, ExtraAIStartingUnit)
+SELECT Worlds.Type, 'HANDICAP_KING', -1 FROM Worlds
+WHERE Worlds.ID < (SELECT ID FROM Worlds WHERE Type = 'WORLDSIZE_LARGE') UNION ALL
+SELECT Worlds.Type, 'HANDICAP_EMPEROR', -1 FROM Worlds
+WHERE Worlds.ID < (SELECT ID FROM Worlds WHERE Type = 'WORLDSIZE_LARGE') UNION ALL
+SELECT Worlds.Type, 'HANDICAP_IMMORTAL', -1 FROM Worlds
+WHERE Worlds.ID < (SELECT ID FROM Worlds WHERE Type = 'WORLDSIZE_LARGE') UNION ALL
+SELECT Worlds.Type, 'HANDICAP_DEITY', -1 FROM Worlds
+WHERE Worlds.ID < (SELECT ID FROM Worlds WHERE Type = 'WORLDSIZE_LARGE');
 
 UPDATE GameSpeeds SET TradeRouteSpeedMod=900 WHERE Type='GAMESPEED_QUICK';
 UPDATE GameSpeeds SET TradeRouteSpeedMod=1000 WHERE Type='GAMESPEED_STANDARD';

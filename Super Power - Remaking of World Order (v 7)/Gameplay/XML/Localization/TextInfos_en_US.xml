@@ -7135,25 +7135,25 @@
 			<Text>Regional Powers</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_HANDICAP_KING_HELP" >
-			<Text>Aggressive AI with large bonuses on Growth, Production, Gold, Happiness and Combat. AI start with 2 settlers and AI will get stronger when enter a new era. Equals "Deity".</Text>
+			<Text>Aggressive AI with large bonuses on Growth, Production, Gold, Happiness and Combat. AI will get stronger when enter a new era. Equals "Deity".</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_HANDICAP_EMPEROR" >
 			<Text>Great Powers</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_HANDICAP_EMPEROR_HELP" >
-			<Text>Ferocious AI with great bonuses on Growth, Production, Gold, Happiness and Combat. AI start with 2 settlers and AI will get even stronger when enter a new era. </Text>
+			<Text>Ferocious AI with great bonuses on Growth, Production, Gold, Happiness and Combat. AI will get even stronger when enter a new era. </Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_HANDICAP_IMMORTAL" >
 			<Text>Potential Superpowers</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_HANDICAP_IMMORTAL_HELP" >
-			<Text>Crazy AI with huge bonuses on Growth, Production, Gold, Happiness and Combat. AI start with 3 settlers and AI will get much more stronger when enter a new era. </Text>
+			<Text>Crazy AI with huge bonuses on Growth, Production, Gold, Happiness and Combat. AI will get much more stronger when enter a new era. </Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_HANDICAP_DEITY" >
 			<Text>Superpowers</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_HANDICAP_DEITY_HELP" >
-			<Text>Insane AI with insane bonuses on Growth, Production, Gold, Happiness and Combat. AI start with 4 settlers and AI will get on steroids when enter a new era. </Text>
+			<Text>Insane AI with insane bonuses on Growth, Production, Gold, Happiness and Combat. AI will get on steroids when enter a new era. </Text>
 		</Replace>
 
 
@@ -18370,6 +18370,15 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_FOODMOD_WLTKD">
 			<Text>[NEWLINE][ICON_BULLET]We Love the King Day Modifier (Difference): {1_Num}%</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_MISSION_BUILD_CITY_DISABLED_HELP">
+			<Text>
+				Cannot found a City within X Tiles of another City.
+				[NEWLINE][ICON_BULLET]Standard+ maps: X = 4.
+				[NEWLINE][ICON_BULLET]Standard(-) maps: X = 3.
+				[NEWLINE][ICON_BULLET]foreign continent: X = X - 1.
+			</Text>
 		</Replace>
 	</Language_en_US>
 </GameData>
