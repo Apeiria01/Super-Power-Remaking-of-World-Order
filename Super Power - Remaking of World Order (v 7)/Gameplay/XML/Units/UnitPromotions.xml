@@ -43,6 +43,7 @@
 			<PediaEntry>TXT_KEY_PROMOTION_CORPS_1</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
 			<IsCrops>true</IsCrops>
+			<ShowInFlag>1</ShowInFlag>
 		</Row>
 		<Row>
 			<Type>PROMOTION_CORPS_2</Type>
@@ -59,6 +60,7 @@
 			<CannotBeChosen>true</CannotBeChosen>
 			<IsArmee>true</IsArmee>
 			<CannotBeEstablishedCorps>true</CannotBeEstablishedCorps>
+			<ShowInFlag>2</ShowInFlag>
 		</Row>
 		<Row>
 			<Type>PROMOTION_CANNOT_BE_CORPS</Type>
@@ -88,6 +90,7 @@
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_AZTEC_HUEY_TEOCALLI</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
+			<ShowInFlag>100</ShowInFlag>
 		</Row>
 
 		<Row>
@@ -168,6 +171,7 @@
 			<MovesChange>2</MovesChange>
 			<SeeInvisible>INVISIBLE_SUBMARINE</SeeInvisible>
 			<Recon>true</Recon>
+			<ShowInFlag>10</ShowInFlag>
 		</Row>
 		<Row>
 			<Type>PROMOTION_LUCKYE</Type>
@@ -2635,6 +2639,7 @@
 			<CollateralDamagePlotUnitLimit>8</CollateralDamagePlotUnitLimit>
 			<CollateralXP>1</CollateralXP>
 			<MilitaryMightMod>300</MilitaryMightMod>
+			<ShowInFlag>10</ShowInFlag>
 		</Row>
 		<Row>
 			<Type>PROMOTION_GUN_BARRER_1</Type>
@@ -6406,6 +6411,7 @@
 			<NeutralHealChange>10</NeutralHealChange>
 			<FriendlyHealChange>10</FriendlyHealChange>
 			<MilitaryMightMod>400</MilitaryMightMod>
+			<ShowInFlag>10</ShowInFlag>
 		</Row>
 
 		<Row>
@@ -6418,6 +6424,7 @@
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_NUMIDIAN_MARCH</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
+			<ShowInFlag>10</ShowInFlag>
 		</Row>
 
 
@@ -6433,6 +6440,7 @@
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_RANGED</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_RANGE</PediaEntry>
+			<ShowInFlag>10</ShowInFlag>
 		</Row>
 
 
@@ -6612,6 +6620,7 @@
 			<AttackChanceFromAttackDamage>FORMULA_ATTACK_CHANCE_FROM_ATTACK_DAMAGE</AttackChanceFromAttackDamage>
 			<MovementFromAttackDamage>FORMULA_MOVEMENT_FROM_ATTACK_DAMAGE</MovementFromAttackDamage>
 			<MilitaryMightMod>500</MilitaryMightMod>
+			<ShowInFlag>10</ShowInFlag>
 		</Row>
 		<Row>
 			<Type>PROMOTION_FULL_FIRE</Type>
