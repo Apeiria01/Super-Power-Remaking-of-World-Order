@@ -16246,7 +16246,7 @@
 		</Row>
 
 		<Replace Tag="TXT_KEY_SPECIALISTSANDGP_LANDMARK_HEADING4_BODY">
-			<Text>风景地标为城市产生许多文化和魅力。</Text>
+			<Text>风景地标为城市产生大量文化和魅力。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_CIV5_IMPROVEMENTS_LANDMARK_TEXT">
 			<Text>风景地标是任何具有伟大的手工艺品、建筑、艺术品或者自然奇观，可以吸引参观者前往的地方。伦敦的纳尔逊纪念柱或是美国的拉什莫尔山都可以称得上是风景地标。但并不是每一个超大的物体都能被称为风景地标，比如说世界上最大的线球就无法达到如此的高度（即便它或许值得一看）。相比风景地标本身的时代，每跨越一个时代，它额外提供+1[ICON_CULTURE]文化、+1[ICON_TOURISM]魅力。</Text>
