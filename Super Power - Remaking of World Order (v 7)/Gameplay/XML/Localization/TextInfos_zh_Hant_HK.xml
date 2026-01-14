@@ -16056,7 +16056,7 @@
 			<Text>如何與其他主要文明建立二元帝國？ </Text>
 		</Row>
 		<Replace Tag="TXT_KEY_SPECIALISTSANDGP_LANDMARK_HEADING4_BODY">
-			<Text>風景地標為城市產生許多文化和魅力。</Text>
+			<Text>風景地標為城市產生大量文化和魅力。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_CIV5_IMPROVEMENTS_LANDMARK_TEXT">
 			<Text>地標是任何一種華麗的文物、建築物、藝術品或可吸引遊客的自然奇觀。英國倫敦的納爾遜紀念碑是處地標，而美國的拉什莫爾山也是處地標。但並不是所有巨型物體都是地標：儘管世界上最大的籐球值得一看，但層次還不夠。自最初的手工藝時代後，每額外經過一個時代，地標可提供+1[ICON_CULTURE]文化值、+1[ICON_TOURISM]魅力值。</Text>
