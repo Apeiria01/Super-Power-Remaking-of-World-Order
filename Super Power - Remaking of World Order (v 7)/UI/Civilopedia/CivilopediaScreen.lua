@@ -3329,6 +3329,22 @@ CivilopediaCategory[CategoryPromotions].SelectArticle = function( promotionID, s
 			end
 		end	
 		end
+		for row in GameInfo.Promotion_PromotionPrereqOrs{PromotionType = thisPromotion.Type} do
+				local thisReq = GameInfo.UnitPromotions[row.PrereqPromotionType];
+				if thisReq then
+					local thisRequiredPromotionInstance = g_RequiredPromotionsManager:GetInstance();
+					if thisRequiredPromotionInstance then
+						local textureOffset, textureSheet = IconLookup( thisReq.PortraitIndex, buttonSize, thisReq.IconAtlas );				
+						if textureOffset == nil then
+							textureSheet = defaultErrorTextureSheet;
+							textureOffset = nullOffset;
+						end				
+						UpdateSmallButton( buttonAdded, thisRequiredPromotionInstance.RequiredPromotionImage, thisRequiredPromotionInstance.RequiredPromotionButton, textureSheet, textureOffset, CategoryPromotions, Locale.ConvertTextKey( thisReq.Description ), thisReq.ID );
+						buttonAdded = buttonAdded + 1;
+					end	
+				end
+			end
+		end
 		UpdateButtonFrame( buttonAdded, Controls.RequiredPromotionsInnerFrame, Controls.RequiredPromotionsFrame );
 
 		-- MOD - Advanced Civilopedia
@@ -3473,6 +3489,21 @@ CivilopediaCategory[CategoryPromotions].SelectArticle = function( promotionID, s
 		end
 		for row in GameInfo.UnitPromotions{PromotionPrereqOr9 = thisPromotion.Type} do
 			local unlocked = GameInfo.UnitPromotions[row.Type];
+			if unlocked then
+				local thisUnlockedInstance = g_UnlockedPromotionsManager:GetInstance();
+				if thisUnlockedInstance then
+					local textureOffset, textureSheet = IconLookup( unlocked.PortraitIndex, buttonSize, unlocked.IconAtlas );				
+					if textureOffset == nil then
+						textureSheet = defaultErrorTextureSheet;
+						textureOffset = nullOffset;
+					end				
+					UpdateSmallButton( buttonAdded, thisUnlockedInstance.UnlockedPromotionImage, thisUnlockedInstance.UnlockedPromotionButton, textureSheet, textureOffset, CategoryPromotions, Locale.ConvertTextKey( unlocked.Description ), unlocked.ID );
+					buttonAdded = buttonAdded + 1;
+				end	
+			end
+		end
+		for row in GameInfo.Promotion_PromotionPrereqOrs{PrereqPromotionType = thisPromotion.Type} do
+			local unlocked = GameInfo.UnitPromotions[row.PromotionType];
 			if unlocked then
 				local thisUnlockedInstance = g_UnlockedPromotionsManager:GetInstance();
 				if thisUnlockedInstance then
