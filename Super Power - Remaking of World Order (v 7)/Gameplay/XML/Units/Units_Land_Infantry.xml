@@ -3355,12 +3355,12 @@
 		<Row>
 			<UnitType>UNIT_MUSKETMAN</UnitType>
 			<FlavorType>FLAVOR_OFFENSE</FlavorType>
-			<Flavor>20</Flavor>
+			<Flavor>25</Flavor>
 		</Row>
 		<Row>
 			<UnitType>UNIT_MUSKETMAN</UnitType>
 			<FlavorType>FLAVOR_DEFENSE</FlavorType>
-			<Flavor>20</Flavor>
+			<Flavor>35</Flavor>
 		</Row>
 		<Row>
 			<UnitType>UNIT_OTTOMAN_JANISSARY</UnitType>

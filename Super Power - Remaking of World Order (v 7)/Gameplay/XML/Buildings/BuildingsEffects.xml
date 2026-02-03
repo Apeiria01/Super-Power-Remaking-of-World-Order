@@ -6815,19 +6815,24 @@
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_JEWELER</BuildingType>
+			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_JEWELER</BuildingType>
 			<FlavorType>FLAVOR_CULTURE</FlavorType>
-			<Flavor>30</Flavor>
+			<Flavor>10</Flavor>
 		</Row>
 
 		<Row>
 			<BuildingType>BUILDING_BEVERAGE_FACTORY</BuildingType>
 			<FlavorType>FLAVOR_GOLD</FlavorType>
-			<Flavor>30</Flavor>
+			<Flavor>10</Flavor>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_BEVERAGE_FACTORY</BuildingType>
 			<FlavorType>FLAVOR_CULTURE</FlavorType>
-			<Flavor>30</Flavor>
+			<Flavor>10</Flavor>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_CELTS_IRISHPUB</BuildingType>
@@ -6848,13 +6853,18 @@
 		<Row>
 			<BuildingType>BUILDING_FOOD_MARKET</BuildingType>
 			<FlavorType>FLAVOR_GOLD</FlavorType>
-			<Flavor>30</Flavor>
+			<Flavor>15</Flavor>
 		</Row>
 		
 		<Row>
 			<BuildingType>BUILDING_WILDLIFE_PRESERVE</BuildingType>
+			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_WILDLIFE_PRESERVE</BuildingType>
 			<FlavorType>FLAVOR_CULTURE</FlavorType>
-			<Flavor>55</Flavor>
+			<Flavor>10</Flavor>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_TV_STATION</BuildingType>
@@ -6864,6 +6874,11 @@
 		<Row>
 			<BuildingType>BUILDING_COUNTRY_CLUB</BuildingType>
 			<FlavorType>FLAVOR_GOLD</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_COUNTRY_CLUB</BuildingType>
+			<FlavorType>FLAVOR_CULTURE</FlavorType>
 			<Flavor>10</Flavor>
 		</Row>
 		<Row>
