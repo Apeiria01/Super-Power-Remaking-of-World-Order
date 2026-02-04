@@ -18400,5 +18400,17 @@
 				[NEWLINE][ICON_BULLET]foreign continent: X = X - 1.
 			</Text>
 		</Replace>
+		<Row Tag="TXT_KEY_PEDIA_REQ_PROMOTIONS_AND_LABEL">
+			<Text>Required Prereqs:</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PEDIA_REQ_PROMOTIONS_OR_LABEL">
+			<Text>Optional Prereqs:</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PEDIA_EXCLUSION_PROMOTIONS_LABEL">
+			<Text>Conflicts With:</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PEDIA_FREE_FROM_PROJECT_LABEL">
+			<Text>Free From Project:</Text>
+		</Row>
 	</Language_en_US>
 </GameData>

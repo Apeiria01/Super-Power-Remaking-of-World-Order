@@ -106,6 +106,9 @@ local g_SpecialistsManager = InstanceManager:new( "SpecialistInstance", "Special
 local g_RequiredBuildingsManager = InstanceManager:new( "RequiredBuildingInstance", "RequiredBuildingButton", Controls.RequiredBuildingsInnerFrame );
 local g_LocalResourcesManager = InstanceManager:new( "LocalResourceInstance", "LocalResourceButton", Controls.LocalResourcesInnerFrame );
 local g_RequiredPromotionsManager = InstanceManager:new( "RequiredPromotionInstance", "RequiredPromotionButton", Controls.RequiredPromotionsInnerFrame );
+local g_RequiredPromotionsOrManager = InstanceManager:new( "RequiredPromotionInstance", "RequiredPromotionButton", Controls.RequiredPromotionsOrInnerFrame);
+local g_ExclusionPromotionsManager = InstanceManager:new( "RequiredPromotionInstance", "RequiredPromotionButton", Controls.ExclusionPromotionsInnerFrame);
+local g_RequiredProjectManager = InstanceManager:new( "PrereqProjectInstance", "PrereqProjectButton", Controls.RequiredProjectInnerFrame);
 local g_RequiredPoliciesManager = InstanceManager:new( "RequiredPolicyInstance", "RequiredPolicyButton", Controls.RequiredPoliciesInnerFrame );
 local g_FreeFormTextManager = InstanceManager:new( "FreeFormTextInstance", "FFTextFrame", Controls.FFTextStack );
 local g_BBTextManager = InstanceManager:new( "BBTextInstance", "BBTextFrame", Controls.BBTextStack );
@@ -535,183 +538,53 @@ CivilopediaCategory[CategoryUnits].PopulateList = function()
 end
 
 
+-- MOD - Advanced Civilopedia
+local g_PediaTypeConfig = nil
+local function InitPediaTypeConfig()
+    if g_PediaTypeConfig then return end
+    g_PediaTypeConfig = {}
+    for pedia in GameInfo.Pedias() do
+        table.insert(g_PediaTypeConfig, {
+            PediaType = pedia.Type,
+            SectionId = #g_PediaTypeConfig + 1,
+            SectionTextKey = pedia.Description 
+        })
+    end
+end
 CivilopediaCategory[CategoryPromotions].PopulateList = function()
+    InitPediaTypeConfig()
 	-- add the instances of the promotion entries
 	sortedList[CategoryPromotions] = {};
-	
-	sortedList[CategoryPromotions][1] = {}; 
-	local tableid = 1;
-	
-	-- for each promotion
-	for thisPromotion in GameInfo.UnitPromotions() do
-		if thisPromotion.PediaType == "PEDIA_MELEE"  and thisPromotion.ShowInPedia ~= 0  then
-			-- add an article to the list (localized name, unit tag, etc.)
-			local article = {};
-			local name = Locale.ConvertTextKey( thisPromotion.PediaEntry )
-			article.entryName = name;
-			article.entryID = thisPromotion.ID;
-			article.entryCategory = CategoryPromotions;
 
-			sortedList[CategoryPromotions][1][tableid] = article;
-			tableid = tableid + 1;
+    for _, config in ipairs(g_PediaTypeConfig) do
+		local sectionId = config.SectionId;
+        local targetPediaType = config.PediaType;
+		sortedList[CategoryPromotions][sectionId] = {}; 
+		local tableid = 1;
+		-- for each promotion
+		for thisPromotion in GameInfo.UnitPromotions() do
+			if thisPromotion.PediaType == targetPediaType and thisPromotion.ShowInPedia ~= 0 then
+				-- add an article to the list (localized name, unit tag, etc.)
+				local article = {};
+				local name = Locale.ConvertTextKey(thisPromotion.PediaEntry)
+				article.entryName = name;
+				article.entryID = thisPromotion.ID;
+				article.entryCategory = CategoryPromotions;
+				sortedList[CategoryPromotions][sectionId][tableid] = article;
+				tableid = tableid + 1;
 			
-			-- index by various keys
-			searchableList[Locale.ToLower(name)] = article;
-			searchableTextKeyList[thisPromotion.Description] = article;
-			categorizedList[(CategoryPromotions * absurdlyLargeNumTopicsInCategory) + thisPromotion.ID] = article;
+				-- index by various keys
+				searchableList[Locale.ToLower(name)] = article;
+				searchableTextKeyList[thisPromotion.Description] = article;
+				categorizedList[(CategoryPromotions * absurdlyLargeNumTopicsInCategory) + thisPromotion.ID] = article;
+			end
 		end
 	end
-	
-	sortedList[CategoryPromotions][2] = {}; 
-	local tableid = 1;
-	for thisPromotion in GameInfo.UnitPromotions() do
-		if thisPromotion.PediaType == "PEDIA_RANGED"   and thisPromotion.ShowInPedia ~= 0   then
-			-- add an article to the list (localized name, unit tag, etc.)
-			local article = {};
-			local name = Locale.ConvertTextKey( thisPromotion.PediaEntry )
-			article.entryName = name;
-			article.entryID = thisPromotion.ID;
-			article.entryCategory = CategoryPromotions;
-
-			sortedList[CategoryPromotions][2][tableid] = article;
-			tableid = tableid + 1;
-			
-			-- index by various keys
-			searchableList[Locale.ToLower(name)] = article;
-			searchableTextKeyList[thisPromotion.Description] = article;
-			categorizedList[(CategoryPromotions * absurdlyLargeNumTopicsInCategory) + thisPromotion.ID] = article;
+	for sectionId = 1, #g_PediaTypeConfig do
+		if sortedList[CategoryPromotions][sectionId] then
+			table.sort(sortedList[CategoryPromotions][sectionId], Alphabetically)
 		end
 	end
-	
-	sortedList[CategoryPromotions][3] = {}; 
-	local tableid = 1;
-	for thisPromotion in GameInfo.UnitPromotions() do
-		if thisPromotion.PediaType == "PEDIA_NAVAL"   and thisPromotion.ShowInPedia ~= 0  then
-			-- add an article to the list (localized name, unit tag, etc.)
-			local article = {};
-			local name = Locale.ConvertTextKey( thisPromotion.PediaEntry )
-			article.entryName = name;
-			article.entryID = thisPromotion.ID;
-			article.entryCategory = CategoryPromotions;
-
-			sortedList[CategoryPromotions][3][tableid] = article;
-			tableid = tableid + 1;
-			
-			-- index by various keys
-			searchableList[Locale.ToLower(name)] = article;
-			searchableTextKeyList[thisPromotion.Description] = article;
-			categorizedList[(CategoryPromotions * absurdlyLargeNumTopicsInCategory) + thisPromotion.ID] = article;
-		end
-	end
-		
-	sortedList[CategoryPromotions][4] = {}; 
-	local tableid = 1;
-	for thisPromotion in GameInfo.UnitPromotions() do
-		if thisPromotion.PediaType == "PEDIA_HEAL"   and thisPromotion.ShowInPedia ~= 0  then
-			-- add an article to the list (localized name, unit tag, etc.)
-			local article = {};
-			local name = Locale.ConvertTextKey( thisPromotion.PediaEntry )
-			article.entryName = name;
-			article.entryID = thisPromotion.ID;
-			article.entryCategory = CategoryPromotions;
-
-			sortedList[CategoryPromotions][4][tableid] = article;
-			tableid = tableid + 1;
-			
-			-- index by various keys
-			searchableList[Locale.ToLower(name)] = article;
-			searchableTextKeyList[thisPromotion.Description] = article;
-			categorizedList[(CategoryPromotions * absurdlyLargeNumTopicsInCategory) + thisPromotion.ID] = article;
-		end
-	end
-	
-	sortedList[CategoryPromotions][5] = {}; 
-	local tableid = 1;
-	for thisPromotion in GameInfo.UnitPromotions() do
-		if thisPromotion.PediaType == "PEDIA_SCOUTING"   and thisPromotion.ShowInPedia ~= 0  then
-			-- add an article to the list (localized name, unit tag, etc.)
-			local article = {};
-			local name = Locale.ConvertTextKey( thisPromotion.PediaEntry )
-			article.entryName = name;
-			article.entryID = thisPromotion.ID;
-			article.entryCategory = CategoryPromotions;
-
-			sortedList[CategoryPromotions][5][tableid] = article;
-			tableid = tableid + 1;
-			
-			-- index by various keys
-			searchableList[Locale.ToLower(name)] = article;
-			searchableTextKeyList[thisPromotion.Description] = article;
-			categorizedList[(CategoryPromotions * absurdlyLargeNumTopicsInCategory) + thisPromotion.ID] = article;
-		end
-	end
-	
-	sortedList[CategoryPromotions][6] = {}; 
-	local tableid = 1;
-	for thisPromotion in GameInfo.UnitPromotions() do
-		if thisPromotion.PediaType == "PEDIA_AIR"   and thisPromotion.ShowInPedia ~= 0  then
-			-- add an article to the list (localized name, unit tag, etc.)
-			local article = {};
-			local name = Locale.ConvertTextKey( thisPromotion.PediaEntry )
-			article.entryName = name;
-			article.entryID = thisPromotion.ID;
-			article.entryCategory = CategoryPromotions;
-
-			sortedList[CategoryPromotions][6][tableid] = article;
-			tableid = tableid + 1;
-			
-			-- index by various keys
-			searchableList[Locale.ToLower(name)] = article;
-			searchableTextKeyList[thisPromotion.Description] = article;
-			categorizedList[(CategoryPromotions * absurdlyLargeNumTopicsInCategory) + thisPromotion.ID] = article;
-		end
-	end
-
-	sortedList[CategoryPromotions][7] = {}; 
-	local tableid = 1;
-	for thisPromotion in GameInfo.UnitPromotions() do
-		if thisPromotion.PediaType == "PEDIA_SHARED"   and thisPromotion.ShowInPedia ~= 0  then
-			-- add an article to the list (localized name, unit tag, etc.)
-			local article = {};
-			local name = Locale.ConvertTextKey( thisPromotion.PediaEntry )
-			article.entryName = name;
-			article.entryID = thisPromotion.ID;
-			article.entryCategory = CategoryPromotions;
-
-			sortedList[CategoryPromotions][7][tableid] = article;
-			tableid = tableid + 1;
-			
-			-- index by various keys
-			searchableList[Locale.ToLower(name)] = article;
-			searchableTextKeyList[thisPromotion.Description] = article;
-			categorizedList[(CategoryPromotions * absurdlyLargeNumTopicsInCategory) + thisPromotion.ID] = article;
-		end
-	end
-	
-	sortedList[CategoryPromotions][8] = {}; 
-	local tableid = 1;
-	for thisPromotion in GameInfo.UnitPromotions() do
-		if thisPromotion.PediaType == "PEDIA_ATTRIBUTES"   and thisPromotion.ShowInPedia ~= 0  then
-			-- add an article to the list (localized name, unit tag, etc.)
-			local article = {};
-			local name = Locale.ConvertTextKey( thisPromotion.PediaEntry )
-			article.entryName = name;
-			article.entryID = thisPromotion.ID;
-			article.entryCategory = CategoryPromotions;
-
-			sortedList[CategoryPromotions][8][tableid] = article;
-			tableid = tableid + 1;
-			
-			-- index by various keys
-			searchableList[Locale.ToLower(name)] = article;
-			searchableTextKeyList[thisPromotion.Description] = article;
-			categorizedList[(CategoryPromotions * absurdlyLargeNumTopicsInCategory) + thisPromotion.ID] = article;
-		end
-	end
-	-- sort this list alphabetically by localized name
-	for section = 1,8,1 do
-		table.sort(sortedList[CategoryPromotions][section], Alphabetically);
-	end		
 end
 
 
@@ -3175,7 +3048,7 @@ CivilopediaCategory[CategoryPromotions].SelectArticle = function( promotionID, s
  		local frameSize = {};
 		local buttonAdded = 0;
  		
- 		-- required promotions
+ 		-- Must required promotions
 		g_RequiredPromotionsManager:ResetInstances();
 		
 		if thisPromotion.PromotionPrereq then
@@ -3192,129 +3065,9 @@ CivilopediaCategory[CategoryPromotions].SelectArticle = function( promotionID, s
 					buttonAdded = buttonAdded + 1;
 				end	
 			end
-		else
-			if thisPromotion.PromotionPrereqOr1 then
-				local thisReq = GameInfo.UnitPromotions[thisPromotion.PromotionPrereqOr1];
-				if thisReq then
-					local thisRequiredPromotionInstance = g_RequiredPromotionsManager:GetInstance();
-					if thisRequiredPromotionInstance then
-						local textureOffset, textureSheet = IconLookup( thisReq.PortraitIndex, buttonSize, thisReq.IconAtlas );				
-						if textureOffset == nil then
-							textureSheet = defaultErrorTextureSheet;
-							textureOffset = nullOffset;
-						end				
-						UpdateSmallButton( buttonAdded, thisRequiredPromotionInstance.RequiredPromotionImage, thisRequiredPromotionInstance.RequiredPromotionButton, textureSheet, textureOffset, CategoryPromotions, Locale.ConvertTextKey( thisReq.Description ), thisReq.ID );
-						buttonAdded = buttonAdded + 1;
-					end	
-				end
-			end	
-			if thisPromotion.PromotionPrereqOr2 then
-				local thisReq = GameInfo.UnitPromotions[thisPromotion.PromotionPrereqOr2];
-				if thisReq then
-					local thisRequiredPromotionInstance = g_RequiredPromotionsManager:GetInstance();
-					if thisRequiredPromotionInstance then
-						local textureOffset, textureSheet = IconLookup( thisReq.PortraitIndex, buttonSize, thisReq.IconAtlas );				
-						if textureOffset == nil then
-							textureSheet = defaultErrorTextureSheet;
-							textureOffset = nullOffset;
-						end				
-						UpdateSmallButton( buttonAdded, thisRequiredPromotionInstance.RequiredPromotionImage, thisRequiredPromotionInstance.RequiredPromotionButton, textureSheet, textureOffset, CategoryPromotions, Locale.ConvertTextKey( thisReq.Description ), thisReq.ID );
-						buttonAdded = buttonAdded + 1;
-					end	
-				end
-			end	
-			if thisPromotion.PromotionPrereqOr3 then
-				local thisReq = GameInfo.UnitPromotions[thisPromotion.PromotionPrereqOr3];
-				if thisReq then
-					local thisRequiredPromotionInstance = g_RequiredPromotionsManager:GetInstance();
-					if thisRequiredPromotionInstance then
-						local textureOffset, textureSheet = IconLookup( thisReq.PortraitIndex, buttonSize, thisReq.IconAtlas );				
-						if textureOffset == nil then
-							textureSheet = defaultErrorTextureSheet;
-							textureOffset = nullOffset;
-						end				
-						UpdateSmallButton( buttonAdded, thisRequiredPromotionInstance.RequiredPromotionImage, thisRequiredPromotionInstance.RequiredPromotionButton, textureSheet, textureOffset, CategoryPromotions, Locale.ConvertTextKey( thisReq.Description ), thisReq.ID );
-						buttonAdded = buttonAdded + 1;
-					end	
-				end
-			end
-			if thisPromotion.PromotionPrereqOr4 then
-				local thisReq = GameInfo.UnitPromotions[thisPromotion.PromotionPrereqOr4];
-				if thisReq then
-					local thisRequiredPromotionInstance = g_RequiredPromotionsManager:GetInstance();
-					if thisRequiredPromotionInstance then
-						local textureOffset, textureSheet = IconLookup( thisReq.PortraitIndex, buttonSize, thisReq.IconAtlas );				
-						if textureOffset == nil then
-							textureSheet = defaultErrorTextureSheet;
-							textureOffset = nullOffset;
-						end				
-						UpdateSmallButton( buttonAdded, thisRequiredPromotionInstance.RequiredPromotionImage, thisRequiredPromotionInstance.RequiredPromotionButton, textureSheet, textureOffset, CategoryPromotions, Locale.ConvertTextKey( thisReq.Description ), thisReq.ID );
-						buttonAdded = buttonAdded + 1;
-					end	
-				end
-			end		
-			if thisPromotion.PromotionPrereqOr5 then
-				local thisReq = GameInfo.UnitPromotions[thisPromotion.PromotionPrereqOr5];
-				if thisReq then
-					local thisRequiredPromotionInstance = g_RequiredPromotionsManager:GetInstance();
-					if thisRequiredPromotionInstance then
-						local textureOffset, textureSheet = IconLookup( thisReq.PortraitIndex, buttonSize, thisReq.IconAtlas );				
-						if textureOffset == nil then
-							textureSheet = defaultErrorTextureSheet;
-							textureOffset = nullOffset;
-						end				
-						UpdateSmallButton( buttonAdded, thisRequiredPromotionInstance.RequiredPromotionImage, thisRequiredPromotionInstance.RequiredPromotionButton, textureSheet, textureOffset, CategoryPromotions, Locale.ConvertTextKey( thisReq.Description ), thisReq.ID );
-						buttonAdded = buttonAdded + 1;
-					end	
-				end
-			end	
-			if thisPromotion.PromotionPrereqOr6 then
-				local thisReq = GameInfo.UnitPromotions[thisPromotion.PromotionPrereqOr6];
-				if thisReq then
-					local thisRequiredPromotionInstance = g_RequiredPromotionsManager:GetInstance();
-					if thisRequiredPromotionInstance then
-						local textureOffset, textureSheet = IconLookup( thisReq.PortraitIndex, buttonSize, thisReq.IconAtlas );				
-						if textureOffset == nil then
-							textureSheet = defaultErrorTextureSheet;
-							textureOffset = nullOffset;
-						end				
-						UpdateSmallButton( buttonAdded, thisRequiredPromotionInstance.RequiredPromotionImage, thisRequiredPromotionInstance.RequiredPromotionButton, textureSheet, textureOffset, CategoryPromotions, Locale.ConvertTextKey( thisReq.Description ), thisReq.ID );
-						buttonAdded = buttonAdded + 1;
-					end	
-				end
-			end	
-			if thisPromotion.PromotionPrereqOr7 then
-				local thisReq = GameInfo.UnitPromotions[thisPromotion.PromotionPrereqOr7];
-				if thisReq then
-					local thisRequiredPromotionInstance = g_RequiredPromotionsManager:GetInstance();
-					if thisRequiredPromotionInstance then
-						local textureOffset, textureSheet = IconLookup( thisReq.PortraitIndex, buttonSize, thisReq.IconAtlas );				
-						if textureOffset == nil then
-							textureSheet = defaultErrorTextureSheet;
-							textureOffset = nullOffset;
-						end				
-						UpdateSmallButton( buttonAdded, thisRequiredPromotionInstance.RequiredPromotionImage, thisRequiredPromotionInstance.RequiredPromotionButton, textureSheet, textureOffset, CategoryPromotions, Locale.ConvertTextKey( thisReq.Description ), thisReq.ID );
-						buttonAdded = buttonAdded + 1;
-					end	
-				end
-			end	
-			if thisPromotion.PromotionPrereqOr8 then
-				local thisReq = GameInfo.UnitPromotions[thisPromotion.PromotionPrereqOr8];
-				if thisReq then
-					local thisRequiredPromotionInstance = g_RequiredPromotionsManager:GetInstance();
-					if thisRequiredPromotionInstance then
-						local textureOffset, textureSheet = IconLookup( thisReq.PortraitIndex, buttonSize, thisReq.IconAtlas );				
-						if textureOffset == nil then
-							textureSheet = defaultErrorTextureSheet;
-							textureOffset = nullOffset;
-						end				
-						UpdateSmallButton( buttonAdded, thisRequiredPromotionInstance.RequiredPromotionImage, thisRequiredPromotionInstance.RequiredPromotionButton, textureSheet, textureOffset, CategoryPromotions, Locale.ConvertTextKey( thisReq.Description ), thisReq.ID );
-						buttonAdded = buttonAdded + 1;
-					end	
-				end
-			end	
-			if thisPromotion.PromotionPrereqOr9 then
-			local thisReq = GameInfo.UnitPromotions[thisPromotion.PromotionPrereqOr9];
+		end
+		for row in GameInfo.Promotion_PromotionPrereqAnds{PromotionType = thisPromotion.Type} do
+			local thisReq = GameInfo.UnitPromotions[row.PrereqPromotionType];
 			if thisReq then
 				local thisRequiredPromotionInstance = g_RequiredPromotionsManager:GetInstance();
 				if thisRequiredPromotionInstance then
@@ -3327,25 +3080,88 @@ CivilopediaCategory[CategoryPromotions].SelectArticle = function( promotionID, s
 					buttonAdded = buttonAdded + 1;
 				end	
 			end
-		end	
 		end
-		for row in GameInfo.Promotion_PromotionPrereqOrs{PromotionType = thisPromotion.Type} do
-				local thisReq = GameInfo.UnitPromotions[row.PrereqPromotionType];
+		UpdateButtonFrame( buttonAdded, Controls.RequiredPromotionsInnerFrame, Controls.RequiredPromotionsFrame );
+
+		--PromotionPrereqOrs & Promotion_PromotionPrereqOrs
+		-- any required promotions 
+		g_RequiredPromotionsOrManager:ResetInstances();
+		buttonAdded = 0;
+		local orPrereqFields = {"PromotionPrereqOr1", "PromotionPrereqOr2", "PromotionPrereqOr3", "PromotionPrereqOr4", "PromotionPrereqOr5", "PromotionPrereqOr6", "PromotionPrereqOr7", "PromotionPrereqOr8", "PromotionPrereqOr9"};
+		for _, field in ipairs(orPrereqFields) do
+			if thisPromotion[field] then
+				local thisReq = GameInfo.UnitPromotions[thisPromotion[field]];
 				if thisReq then
-					local thisRequiredPromotionInstance = g_RequiredPromotionsManager:GetInstance();
-					if thisRequiredPromotionInstance then
+					local thisInstance = g_RequiredPromotionsOrManager:GetInstance();
+					if thisInstance then
 						local textureOffset, textureSheet = IconLookup( thisReq.PortraitIndex, buttonSize, thisReq.IconAtlas );				
 						if textureOffset == nil then
 							textureSheet = defaultErrorTextureSheet;
 							textureOffset = nullOffset;
 						end				
-						UpdateSmallButton( buttonAdded, thisRequiredPromotionInstance.RequiredPromotionImage, thisRequiredPromotionInstance.RequiredPromotionButton, textureSheet, textureOffset, CategoryPromotions, Locale.ConvertTextKey( thisReq.Description ), thisReq.ID );
+						UpdateSmallButton( buttonAdded, thisInstance.RequiredPromotionImage, thisInstance.RequiredPromotionButton, textureSheet, textureOffset, CategoryPromotions, Locale.ConvertTextKey( thisReq.Description ), thisReq.ID );
 						buttonAdded = buttonAdded + 1;
 					end	
 				end
 			end
 		end
-		UpdateButtonFrame( buttonAdded, Controls.RequiredPromotionsInnerFrame, Controls.RequiredPromotionsFrame );
+		for row in GameInfo.Promotion_PromotionPrereqOrs{PromotionType = thisPromotion.Type} do
+			local thisReq = GameInfo.UnitPromotions[row.PrereqPromotionType];
+			if thisReq then
+				local thisInstance = g_RequiredPromotionsOrManager:GetInstance();
+				if thisInstance then
+					local textureOffset, textureSheet = IconLookup( thisReq.PortraitIndex, buttonSize, thisReq.IconAtlas );				
+					if textureOffset == nil then
+						textureSheet = defaultErrorTextureSheet;
+						textureOffset = nullOffset;
+					end				
+					UpdateSmallButton( buttonAdded, thisInstance.RequiredPromotionImage, thisInstance.RequiredPromotionButton, textureSheet, textureOffset, CategoryPromotions, Locale.ConvertTextKey( thisReq.Description ), thisReq.ID );
+					buttonAdded = buttonAdded + 1;
+				end	
+			end
+		end
+		UpdateButtonFrame( buttonAdded, Controls.RequiredPromotionsOrInnerFrame, Controls.RequiredPromotionsOrFrame );
+
+		--ExclusionPromotions
+		g_ExclusionPromotionsManager:ResetInstances();
+		buttonAdded = 0;
+		for row in GameInfo.Promotion_PromotionExclusionAny{PromotionType = thisPromotion.Type} do
+			local thisExcl = GameInfo.UnitPromotions[row.ExclusionPromotionType];
+			if thisExcl then
+				local thisInstance = g_ExclusionPromotionsManager:GetInstance();
+				if thisInstance then
+					local textureOffset, textureSheet = IconLookup( thisExcl.PortraitIndex, buttonSize, thisExcl.IconAtlas );				
+					if textureOffset == nil then
+						textureSheet = defaultErrorTextureSheet;
+						textureOffset = nullOffset;
+					end				
+					UpdateSmallButton( buttonAdded, thisInstance.RequiredPromotionImage, thisInstance.RequiredPromotionButton, textureSheet, textureOffset, CategoryPromotions, Locale.ConvertTextKey( thisExcl.Description ), thisExcl.ID );
+					buttonAdded = buttonAdded + 1;
+				end	
+			end
+		end
+		UpdateButtonFrame( buttonAdded, Controls.ExclusionPromotionsInnerFrame, Controls.ExclusionPromotionsFrame );
+
+
+		--RequiredProject
+		g_RequiredProjectManager:ResetInstances();
+		buttonAdded = 0;
+		for row in GameInfo.Projects{FreePromotion = thisPromotion.Type} do
+			local RequiredProject = GameInfo.Projects[row.Type];
+			if RequiredProject then
+				local thisInstance = g_RequiredProjectManager:GetInstance();
+				if thisInstance then
+					local textureOffset, textureSheet = IconLookup( RequiredProject.PortraitIndex, buttonSize, RequiredProject.IconAtlas );				
+					if textureOffset == nil then
+						textureSheet = defaultErrorTextureSheet;
+						textureOffset = nullOffset;
+					end				
+					UpdateSmallButton( buttonAdded, thisInstance.PrereqProjectImage, thisInstance.PrereqProjectButton, textureSheet, textureOffset, CategoryWonders, Locale.ConvertTextKey( RequiredProject.Description ), RequiredProject.ID + 1000 );
+					buttonAdded = buttonAdded + 1;
+				end	
+			end
+		end
+		UpdateButtonFrame( buttonAdded, Controls.RequiredProjectInnerFrame, Controls.RequiredProjectFrame );
 
 		-- MOD - Advanced Civilopedia
 		-- unlocked promotions
@@ -3367,147 +3183,50 @@ CivilopediaCategory[CategoryPromotions].SelectArticle = function( promotionID, s
 				end	
 			end
 		end
-		for row in GameInfo.UnitPromotions{PromotionPrereqOr1 = thisPromotion.Type} do
-			local unlocked = GameInfo.UnitPromotions[row.Type];
-			if unlocked then
-				local thisUnlockedInstance = g_UnlockedPromotionsManager:GetInstance();
-				if thisUnlockedInstance then
-					local textureOffset, textureSheet = IconLookup( unlocked.PortraitIndex, buttonSize, unlocked.IconAtlas );				
-					if textureOffset == nil then
-						textureSheet = defaultErrorTextureSheet;
-						textureOffset = nullOffset;
-					end				
-					UpdateSmallButton( buttonAdded, thisUnlockedInstance.UnlockedPromotionImage, thisUnlockedInstance.UnlockedPromotionButton, textureSheet, textureOffset, CategoryPromotions, Locale.ConvertTextKey( unlocked.Description ), unlocked.ID );
-					buttonAdded = buttonAdded + 1;
-				end	
-			end
-		end
-		for row in GameInfo.UnitPromotions{PromotionPrereqOr2 = thisPromotion.Type} do
-			local unlocked = GameInfo.UnitPromotions[row.Type];
-			if unlocked then
-				local thisUnlockedInstance = g_UnlockedPromotionsManager:GetInstance();
-				if thisUnlockedInstance then
-					local textureOffset, textureSheet = IconLookup( unlocked.PortraitIndex, buttonSize, unlocked.IconAtlas );				
-					if textureOffset == nil then
-						textureSheet = defaultErrorTextureSheet;
-						textureOffset = nullOffset;
-					end				
-					UpdateSmallButton( buttonAdded, thisUnlockedInstance.UnlockedPromotionImage, thisUnlockedInstance.UnlockedPromotionButton, textureSheet, textureOffset, CategoryPromotions, Locale.ConvertTextKey( unlocked.Description ), unlocked.ID );
-					buttonAdded = buttonAdded + 1;
-				end	
-			end
-		end
-		for row in GameInfo.UnitPromotions{PromotionPrereqOr3 = thisPromotion.Type} do
-			local unlocked = GameInfo.UnitPromotions[row.Type];
-			if unlocked then
-				local thisUnlockedInstance = g_UnlockedPromotionsManager:GetInstance();
-				if thisUnlockedInstance then
-					local textureOffset, textureSheet = IconLookup( unlocked.PortraitIndex, buttonSize, unlocked.IconAtlas );				
-					if textureOffset == nil then
-						textureSheet = defaultErrorTextureSheet;
-						textureOffset = nullOffset;
-					end				
-					UpdateSmallButton( buttonAdded, thisUnlockedInstance.UnlockedPromotionImage, thisUnlockedInstance.UnlockedPromotionButton, textureSheet, textureOffset, CategoryPromotions, Locale.ConvertTextKey( unlocked.Description ), unlocked.ID );
-					buttonAdded = buttonAdded + 1;
-				end	
-			end
-		end
-		for row in GameInfo.UnitPromotions{PromotionPrereqOr4 = thisPromotion.Type} do
-			local unlocked = GameInfo.UnitPromotions[row.Type];
-			if unlocked then
-				local thisUnlockedInstance = g_UnlockedPromotionsManager:GetInstance();
-				if thisUnlockedInstance then
-					local textureOffset, textureSheet = IconLookup( unlocked.PortraitIndex, buttonSize, unlocked.IconAtlas );				
-					if textureOffset == nil then
-						textureSheet = defaultErrorTextureSheet;
-						textureOffset = nullOffset;
-					end				
-					UpdateSmallButton( buttonAdded, thisUnlockedInstance.UnlockedPromotionImage, thisUnlockedInstance.UnlockedPromotionButton, textureSheet, textureOffset, CategoryPromotions, Locale.ConvertTextKey( unlocked.Description ), unlocked.ID );
-					buttonAdded = buttonAdded + 1;
-				end	
-			end
-		end
-		for row in GameInfo.UnitPromotions{PromotionPrereqOr5 = thisPromotion.Type} do
-			local unlocked = GameInfo.UnitPromotions[row.Type];
-			if unlocked then
-				local thisUnlockedInstance = g_UnlockedPromotionsManager:GetInstance();
-				if thisUnlockedInstance then
-					local textureOffset, textureSheet = IconLookup( unlocked.PortraitIndex, buttonSize, unlocked.IconAtlas );				
-					if textureOffset == nil then
-						textureSheet = defaultErrorTextureSheet;
-						textureOffset = nullOffset;
-					end				
-					UpdateSmallButton( buttonAdded, thisUnlockedInstance.UnlockedPromotionImage, thisUnlockedInstance.UnlockedPromotionButton, textureSheet, textureOffset, CategoryPromotions, Locale.ConvertTextKey( unlocked.Description ), unlocked.ID );
-					buttonAdded = buttonAdded + 1;
-				end	
-			end
-		end
-		for row in GameInfo.UnitPromotions{PromotionPrereqOr6 = thisPromotion.Type} do
-			local unlocked = GameInfo.UnitPromotions[row.Type];
-			if unlocked then
-				local thisUnlockedInstance = g_UnlockedPromotionsManager:GetInstance();
-				if thisUnlockedInstance then
-					local textureOffset, textureSheet = IconLookup( unlocked.PortraitIndex, buttonSize, unlocked.IconAtlas );				
-					if textureOffset == nil then
-						textureSheet = defaultErrorTextureSheet;
-						textureOffset = nullOffset;
-					end				
-					UpdateSmallButton( buttonAdded, thisUnlockedInstance.UnlockedPromotionImage, thisUnlockedInstance.UnlockedPromotionButton, textureSheet, textureOffset, CategoryPromotions, Locale.ConvertTextKey( unlocked.Description ), unlocked.ID );
-					buttonAdded = buttonAdded + 1;
-				end	
-			end
-		end
-		for row in GameInfo.UnitPromotions{PromotionPrereqOr7 = thisPromotion.Type} do
-			local unlocked = GameInfo.UnitPromotions[row.Type];
-			if unlocked then
-				local thisUnlockedInstance = g_UnlockedPromotionsManager:GetInstance();
-				if thisUnlockedInstance then
-					local textureOffset, textureSheet = IconLookup( unlocked.PortraitIndex, buttonSize, unlocked.IconAtlas );				
-					if textureOffset == nil then
-						textureSheet = defaultErrorTextureSheet;
-						textureOffset = nullOffset;
-					end				
-					UpdateSmallButton( buttonAdded, thisUnlockedInstance.UnlockedPromotionImage, thisUnlockedInstance.UnlockedPromotionButton, textureSheet, textureOffset, CategoryPromotions, Locale.ConvertTextKey( unlocked.Description ), unlocked.ID );
-					buttonAdded = buttonAdded + 1;
-				end	
-			end
-		end
-		for row in GameInfo.UnitPromotions{PromotionPrereqOr8 = thisPromotion.Type} do
-			local unlocked = GameInfo.UnitPromotions[row.Type];
-			if unlocked then
-				local thisUnlockedInstance = g_UnlockedPromotionsManager:GetInstance();
-				if thisUnlockedInstance then
-					local textureOffset, textureSheet = IconLookup( unlocked.PortraitIndex, buttonSize, unlocked.IconAtlas );				
-					if textureOffset == nil then
-						textureSheet = defaultErrorTextureSheet;
-						textureOffset = nullOffset;
-					end				
-					UpdateSmallButton( buttonAdded, thisUnlockedInstance.UnlockedPromotionImage, thisUnlockedInstance.UnlockedPromotionButton, textureSheet, textureOffset, CategoryPromotions, Locale.ConvertTextKey( unlocked.Description ), unlocked.ID );
-					buttonAdded = buttonAdded + 1;
-				end	
-			end
-		end
-		for row in GameInfo.UnitPromotions{PromotionPrereqOr9 = thisPromotion.Type} do
-			local unlocked = GameInfo.UnitPromotions[row.Type];
-			if unlocked then
-				local thisUnlockedInstance = g_UnlockedPromotionsManager:GetInstance();
-				if thisUnlockedInstance then
-					local textureOffset, textureSheet = IconLookup( unlocked.PortraitIndex, buttonSize, unlocked.IconAtlas );				
-					if textureOffset == nil then
-						textureSheet = defaultErrorTextureSheet;
-						textureOffset = nullOffset;
-					end				
-					UpdateSmallButton( buttonAdded, thisUnlockedInstance.UnlockedPromotionImage, thisUnlockedInstance.UnlockedPromotionButton, textureSheet, textureOffset, CategoryPromotions, Locale.ConvertTextKey( unlocked.Description ), unlocked.ID );
-					buttonAdded = buttonAdded + 1;
-				end	
-			end
-		end
-		for row in GameInfo.Promotion_PromotionPrereqOrs{PrereqPromotionType = thisPromotion.Type} do
+
+        --PromotionPrereqOr1-9
+        local orUnlockedFields = {"PromotionPrereqOr1", "PromotionPrereqOr2", "PromotionPrereqOr3", "PromotionPrereqOr4", "PromotionPrereqOr5", "PromotionPrereqOr6", "PromotionPrereqOr7", "PromotionPrereqOr8", "PromotionPrereqOr9"};
+        for _, field in ipairs(orUnlockedFields) do
+            for row in GameInfo.UnitPromotions{[field] = thisPromotion.Type} do
+                local unlocked = GameInfo.UnitPromotions[row.Type];
+                if unlocked then
+                    local thisUnlockedInstance = g_UnlockedPromotionsManager:GetInstance();
+                    if thisUnlockedInstance then
+                        local textureOffset, textureSheet = IconLookup( unlocked.PortraitIndex, buttonSize, unlocked.IconAtlas );             
+                        if textureOffset == nil then
+                            textureSheet = defaultErrorTextureSheet;
+                            textureOffset = nullOffset;
+                        end             
+                        UpdateSmallButton( buttonAdded, thisUnlockedInstance.UnlockedPromotionImage, thisUnlockedInstance.UnlockedPromotionButton, textureSheet, textureOffset, CategoryPromotions, Locale.ConvertTextKey( unlocked.Description ), unlocked.ID );
+                        buttonAdded = buttonAdded + 1;
+                    end   
+                end
+            end
+        end
+
+        --Promotion_PromotionPrereqOrs
+        for row in GameInfo.Promotion_PromotionPrereqOrs{PrereqPromotionType = thisPromotion.Type} do
+            local unlocked = GameInfo.UnitPromotions[row.PromotionType];
+            if unlocked then
+                local thisUnlockedInstance = g_UnlockedPromotionsManager:GetInstance();
+                if thisUnlockedInstance then
+                    local textureOffset, textureSheet = IconLookup( unlocked.PortraitIndex, buttonSize, unlocked.IconAtlas );             
+                    if textureOffset == nil then
+                        textureSheet = defaultErrorTextureSheet;
+                        textureOffset = nullOffset;
+                    end             
+                    UpdateSmallButton( buttonAdded, thisUnlockedInstance.UnlockedPromotionImage, thisUnlockedInstance.UnlockedPromotionButton, textureSheet, textureOffset, CategoryPromotions, Locale.ConvertTextKey( unlocked.Description ), unlocked.ID );
+                    buttonAdded = buttonAdded + 1;
+                end   
+            end
+        end
+		--Promotion_PromotionPrereqAnds
+		for row in GameInfo.Promotion_PromotionPrereqAnds{PrereqPromotionType = thisPromotion.Type} do
 			local unlocked = GameInfo.UnitPromotions[row.PromotionType];
 			if unlocked then
 				local thisUnlockedInstance = g_UnlockedPromotionsManager:GetInstance();
 				if thisUnlockedInstance then
-					local textureOffset, textureSheet = IconLookup( unlocked.PortraitIndex, buttonSize, unlocked.IconAtlas );				
+					local textureOffset, textureSheet = IconLookup( unlocked.PortraitIndex, buttonSize, unlocked.IconAtlas );             
 					if textureOffset == nil then
 						textureSheet = defaultErrorTextureSheet;
 						textureOffset = nullOffset;
@@ -4355,6 +4074,24 @@ CivilopediaCategory[CategoryWonders].SelectArticle = function( wonderID, shouldA
 			end
 			UpdateButtonFrame( buttonAdded, Controls.UnlockedUnitsInnerFrame, Controls.UnlockedUnitsFrame );
 			
+			--update the promotions unlocked
+			g_UnlockedPromotionsManager:ResetInstances();
+			buttonAdded = 0;
+			local UnlockPromotion = GameInfo.UnitPromotions[thisProject.FreePromotion]
+				if UnlockPromotion then
+					local thisInstance = g_UnlockedPromotionsManager:GetInstance();
+					if thisInstance then
+						local textureOffset, textureSheet = IconLookup( UnlockPromotion.PortraitIndex, buttonSize, UnlockPromotion.IconAtlas );				
+						if textureOffset == nil then
+							textureSheet = defaultErrorTextureSheet;
+							textureOffset = nullOffset;
+						end				
+						UpdateSmallButton( buttonAdded, thisInstance.UnlockedPromotionImage, thisInstance.UnlockedPromotionButton, textureSheet, textureOffset, CategoryPromotions, Locale.ConvertTextKey( UnlockPromotion.Description ), UnlockPromotion.ID );
+						buttonAdded = buttonAdded + 1;
+					end	
+				end
+			UpdateButtonFrame( buttonAdded, Controls.UnlockedPromotionsInnerFrame, Controls.UnlockedPromotionsFrame );
+
 			-- MOD - Advanced Civilopedia
 			local thisCondition = "PrereqProjectType = '" .. thisProject.Type .. "'";
 			
@@ -7505,6 +7242,7 @@ CivilopediaCategory[CategoryPromotions].SelectHeading = function( selectedSectio
 	print("CivilopediaCategory[CategoryPromotions].SelectHeading");
 	g_ListHeadingManager:ResetInstances();
 	g_ListItemManager:ResetInstances();
+	InitPediaTypeConfig()
 
 	sortedList[CategoryPromotions][selectedSection].headingOpen = not sortedList[CategoryPromotions][selectedSection].headingOpen; -- ain't lua great
 
@@ -7521,36 +7259,33 @@ CivilopediaCategory[CategoryPromotions].SelectHeading = function( selectedSectio
 		thisListInstance.ListItemButton:SetToolTipCallback( TipHandler );
 		otherSortedList[tostring( thisListInstance.ListItemButton )] = sortOrder;
 	end
-	
-	for section = 1, 8, 1 do	
-		-- add a section header
-		local thisHeaderInstance = g_ListHeadingManager:GetInstance();
-		if thisHeaderInstance then
+    
+    --VISIT EACH SECTION FROM CONFIG
+    for _, config in ipairs(g_PediaTypeConfig) do
+        local sectionId = config.SectionId;
+        local sectionTextKey = config.SectionTextKey;
+        local sectionData = sortedList[CategoryPromotions][sectionId];
+        local thisHeaderInstance = g_ListHeadingManager:GetInstance();
+        if thisHeaderInstance and sectionData then
 			sortOrder = sortOrder + 1;
-			if sortedList[CategoryPromotions][section].headingOpen then
-				local textString = "TXT_KEY_PROMOTIONS_SECTION_"..tostring( section );
-				local localizedLabel = "[ICON_MINUS] "..Locale.ConvertTextKey( textString );
-				thisHeaderInstance.ListHeadingLabel:SetText( localizedLabel );
-			else
-				local textString = "TXT_KEY_PROMOTIONS_SECTION_"..tostring( section );
-				local localizedLabel = "[ICON_PLUS] "..Locale.ConvertTextKey( textString );
-				thisHeaderInstance.ListHeadingLabel:SetText( localizedLabel );
-			end
-			thisHeaderInstance.ListHeadingButton:SetVoids( section, 0 );
-			thisHeaderInstance.ListHeadingButton:RegisterCallback( Mouse.eLClick, CivilopediaCategory[CategoryPromotions].SelectHeading );
-			otherSortedList[tostring( thisHeaderInstance.ListHeadingButton )] = sortOrder;
+			local icon = sectionData.headingOpen and "[ICON_MINUS]" or "[ICON_PLUS]";
+            local localizedLabel = icon .. Locale.ConvertTextKey(sectionTextKey);
+            thisHeaderInstance.ListHeadingLabel:SetText(localizedLabel);
+            thisHeaderInstance.ListHeadingButton:SetVoids(sectionId, 0);
+            thisHeaderInstance.ListHeadingButton:RegisterCallback(Mouse.eLClick, CivilopediaCategory[CategoryPromotions].SelectHeading );
+            otherSortedList[tostring( thisHeaderInstance.ListHeadingButton )] = sortOrder;
 		end	
 		
 		-- for each element of the sorted list		
-		if sortedList[CategoryPromotions][section].headingOpen then
-			for i, v in ipairs(sortedList[CategoryPromotions][section]) do
+        if sectionData and sectionData.headingOpen then
+            for i, v in ipairs(sectionData) do
 				local thisListInstance = g_ListItemManager:GetInstance();
 				if thisListInstance then
 					sortOrder = sortOrder + 1;
 					thisListInstance.ListItemLabel:SetText( v.entryName );
 					thisListInstance.ListItemButton:SetVoids( v.entryID, addToList );
 					thisListInstance.ListItemButton:RegisterCallback( Mouse.eLClick, CivilopediaCategory[CategoryPromotions].SelectArticle );
-					thisListInstance.ListItemButton:SetToolTipCallback( TipHandler )
+					thisListInstance.ListItemButton:SetToolTipCallback( TipHandler );
 					otherSortedList[tostring( thisListInstance.ListItemButton )] = sortOrder;
 				end
 			end
@@ -9110,6 +8845,9 @@ function ClearArticle()
 	Controls.RevealedResourcesFrame:SetHide( true );
 	Controls.RequiredResourcesFrame:SetHide( true );
 	Controls.RequiredPromotionsFrame:SetHide( true );
+	Controls.RequiredPromotionsOrFrame:SetHide( true );
+	Controls.ExclusionPromotionsFrame:SetHide( true );
+	Controls.RequiredProjectFrame:SetHide( true );
 	Controls.LocalResourcesFrame:SetHide( true );
 	Controls.WorkerActionsFrame:SetHide( true );
 	Controls.UnlockedProjectsFrame:SetHide( true );

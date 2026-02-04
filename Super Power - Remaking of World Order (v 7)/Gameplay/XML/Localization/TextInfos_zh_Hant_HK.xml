@@ -16670,5 +16670,17 @@
 				[NEWLINE][ICON_BULLET]異大陸城市：X = X - 1。
 			</Text>
 		</Replace>
+		<Row Tag="TXT_KEY_PEDIA_REQ_PROMOTIONS_AND_LABEL">
+			<Text>必要前置:</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PEDIA_REQ_PROMOTIONS_OR_LABEL">
+			<Text>選擇性前置:</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PEDIA_EXCLUSION_PROMOTIONS_LABEL">
+			<Text>衝突强化:</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PEDIA_FREE_FROM_PROJECT_LABEL">
+			<Text>獲得自項目:</Text>
+		</Row>
 	</Language_zh_Hant_HK>
 </GameData>

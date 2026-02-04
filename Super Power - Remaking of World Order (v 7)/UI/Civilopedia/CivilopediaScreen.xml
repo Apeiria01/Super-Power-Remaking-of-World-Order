@@ -1097,16 +1097,38 @@
 							<Label Anchor="L,T" Offset="4,-16" Anchorside="I.O" WrapWidth="600" LeadingOffset="0" Font="TwCenMT20" FontStyle="Shadow" Color0="Beige" Color1="0.0.0.160" String="TXT_KEY_PEDIA_FREEPROMOTIONS_LABEL"/>
 						</Grid>
 					</Grid>
-					<!-- Required Promotions -->
+					<!-- Must Required Promotions -->
 					<Grid Anchor="L,T" Offset="0,24" Size="204,136" Padding="0,0" Style="GridBlackIndent8" Hidden="0" ID="RequiredPromotionsFrame">
 						<Grid Anchor="C,C" Offset="0,0" Size="208,140" Padding="0,0" Style="Grid9Frame" Hidden="0" ID="RequiredPromotionsInnerFrame">
-							<Label Anchor="L,T" Offset="4,-16" Anchorside="I.O" WrapWidth="600" LeadingOffset="0" Font="TwCenMT20" FontStyle="Shadow" Color0="Beige" Color1="0.0.0.160" String="TXT_KEY_PEDIA_REQ_PROMOTIONS_LABEL"/>
+							<Label Anchor="L,T" Offset="4,-16" Anchorside="I.O" WrapWidth="600" LeadingOffset="0" Font="TwCenMT20" FontStyle="Shadow" Color0="Beige" Color1="0.0.0.160" String="TXT_KEY_PEDIA_REQ_PROMOTIONS_AND_LABEL"/>
 						</Grid>
 					</Grid>
+
+					<!-- Either/Or Required Promotions -->
+					<Grid Anchor="L,T" Offset="0,24" Size="204,136" Padding="0,0" Style="GridBlackIndent8" Hidden="0" ID="RequiredPromotionsOrFrame">
+						<Grid Anchor="C,C" Offset="0,0" Size="208,140" Padding="0,0" Style="Grid9Frame" Hidden="0" ID="RequiredPromotionsOrInnerFrame">
+							<Label Anchor="L,T" Offset="4,-16" Anchorside="I.O" WrapWidth="600" LeadingOffset="0" Font="TwCenMT20" FontStyle="Shadow" Color0="Beige" Color1="0.0.0.160" String="TXT_KEY_PEDIA_REQ_PROMOTIONS_OR_LABEL"/>
+						</Grid>
+					</Grid>
+
 					<!-- MOD - Unlocked Promotions -->
 					<Grid Anchor="L,T" Offset="0,24" Size="204,136" Padding="0,0" Style="GridBlackIndent8" Hidden="0" ID="UnlockedPromotionsFrame">
 						<Grid Anchor="C,C" Offset="0,0" Size="208,140" Padding="0,0" Style="Grid9Frame" Hidden="0" ID="UnlockedPromotionsInnerFrame">
 							<Label Anchor="L,T" Offset="4,-16" Anchorside="I.O" WrapWidth="600" LeadingOffset="0" Font="TwCenMT20" FontStyle="Shadow" Color0="Beige" Color1="0.0.0.160" String="TXT_KEY_PEDIA_UNLOCK_PROMOTIONS_LABEL"/>
+						</Grid>
+					</Grid>
+
+					<!-- ExclusionPromotions -->
+					<Grid Anchor="L,T" Offset="0,24" Size="204,136" Padding="0,0" Style="GridBlackIndent8" Hidden="0" ID="ExclusionPromotionsFrame">
+						<Grid Anchor="C,C" Offset="0,0" Size="208,140" Padding="0,0" Style="Grid9Frame" Hidden="0" ID="ExclusionPromotionsInnerFrame">
+							<Label Anchor="L,T" Offset="4,-16" Anchorside="I.O" WrapWidth="600" LeadingOffset="0" Font="TwCenMT20" FontStyle="Shadow" Color0="Beige" Color1="0.0.0.160" String="TXT_KEY_PEDIA_EXCLUSION_PROMOTIONS_LABEL"/>
+						</Grid>
+					</Grid>
+
+					<!-- RequiredProject -->
+					<Grid Anchor="L,T" Offset="0,24" Size="204,136" Padding="0,0" Style="GridBlackIndent8" Hidden="0" ID="RequiredProjectFrame">
+						<Grid Anchor="C,C" Offset="0,0" Size="208,140" Padding="0,0" Style="Grid9Frame" Hidden="0" ID="RequiredProjectInnerFrame">
+							<Label Anchor="L,T" Offset="4,-16" Anchorside="I.O" WrapWidth="600" LeadingOffset="0" Font="TwCenMT20" FontStyle="Shadow" Color0="Beige" Color1="0.0.0.160" String="TXT_KEY_PEDIA_FREE_FROM_PROJECT_LABEL"/>
 						</Grid>
 					</Grid>
 					<!-- Resources Required -->
