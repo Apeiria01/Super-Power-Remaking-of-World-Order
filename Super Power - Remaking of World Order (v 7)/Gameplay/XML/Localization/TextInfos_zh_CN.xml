@@ -16860,16 +16860,16 @@
 			</Text>
 		</Replace>
 		<Row Tag="TXT_KEY_PEDIA_REQ_PROMOTIONS_AND_LABEL">
-			<Text>必需前置:</Text>
+			<Text>前提晋升(所有):</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PEDIA_REQ_PROMOTIONS_OR_LABEL">
-			<Text>可选前置:</Text>
+			<Text>前提晋升(其一):</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PEDIA_EXCLUSION_PROMOTIONS_LABEL">
 			<Text>冲突晋升:</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PEDIA_FREE_FROM_PROJECT_LABEL">
-			<Text>来自工程：</Text>
+			<Text>来自工程:</Text>
 		</Row>
 	</Language_zh_CN>
 </GameData>

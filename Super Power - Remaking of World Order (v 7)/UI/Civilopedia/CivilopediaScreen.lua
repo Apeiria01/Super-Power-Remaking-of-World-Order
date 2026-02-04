@@ -184,6 +184,21 @@ function SetSelectedCategory( thisCategory )
 	Controls.LeftScrollPanel:CalculateInternalSize();
 end
 
+local g_PediaTypeConfig = nil
+local function InitPediaTypeConfig()
+    if g_PediaTypeConfig then return end
+    g_PediaTypeConfig = {}
+	
+	g_PediaTypeConfig[CategoryPromotions] = {}
+    for pedia in GameInfo.PromotionPedias() do
+        table.insert(g_PediaTypeConfig[CategoryPromotions], {
+            PediaType = pedia.Type,
+            SectionId = #g_PediaTypeConfig[CategoryPromotions] + 1,
+            SectionTextKey = pedia.Description 
+        })
+    end
+end
+
 -------------------------------------------------------------------------------
 -- setup generic stuff for each category
 -------------------------------------------------------------------------------
@@ -539,24 +554,12 @@ end
 
 
 -- MOD - Advanced Civilopedia
-local g_PediaTypeConfig = nil
-local function InitPediaTypeConfig()
-    if g_PediaTypeConfig then return end
-    g_PediaTypeConfig = {}
-    for pedia in GameInfo.Pedias() do
-        table.insert(g_PediaTypeConfig, {
-            PediaType = pedia.Type,
-            SectionId = #g_PediaTypeConfig + 1,
-            SectionTextKey = pedia.Description 
-        })
-    end
-end
 CivilopediaCategory[CategoryPromotions].PopulateList = function()
     InitPediaTypeConfig()
 	-- add the instances of the promotion entries
 	sortedList[CategoryPromotions] = {};
 
-    for _, config in ipairs(g_PediaTypeConfig) do
+    for _, config in ipairs(g_PediaTypeConfig[CategoryPromotions]) do
 		local sectionId = config.SectionId;
         local targetPediaType = config.PediaType;
 		sortedList[CategoryPromotions][sectionId] = {}; 
@@ -580,7 +583,7 @@ CivilopediaCategory[CategoryPromotions].PopulateList = function()
 			end
 		end
 	end
-	for sectionId = 1, #g_PediaTypeConfig do
+	for sectionId = 1, #g_PediaTypeConfig[CategoryPromotions] do
 		if sortedList[CategoryPromotions][sectionId] then
 			table.sort(sortedList[CategoryPromotions][sectionId], Alphabetically)
 		end
@@ -7261,7 +7264,7 @@ CivilopediaCategory[CategoryPromotions].SelectHeading = function( selectedSectio
 	end
     
     --VISIT EACH SECTION FROM CONFIG
-    for _, config in ipairs(g_PediaTypeConfig) do
+    for _, config in ipairs(g_PediaTypeConfig[CategoryPromotions]) do
         local sectionId = config.SectionId;
         local sectionTextKey = config.SectionTextKey;
         local sectionData = sortedList[CategoryPromotions][sectionId];

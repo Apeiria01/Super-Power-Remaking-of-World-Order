@@ -16671,10 +16671,10 @@
 			</Text>
 		</Replace>
 		<Row Tag="TXT_KEY_PEDIA_REQ_PROMOTIONS_AND_LABEL">
-			<Text>必要前置:</Text>
+			<Text>所需強化(所有):</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PEDIA_REQ_PROMOTIONS_OR_LABEL">
-			<Text>選擇性前置:</Text>
+			<Text>所需強化(其一):</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PEDIA_EXCLUSION_PROMOTIONS_LABEL">
 			<Text>衝突强化:</Text>

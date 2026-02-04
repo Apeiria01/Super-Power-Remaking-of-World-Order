@@ -18401,13 +18401,13 @@
 			</Text>
 		</Replace>
 		<Row Tag="TXT_KEY_PEDIA_REQ_PROMOTIONS_AND_LABEL">
-			<Text>Required Prereqs:</Text>
+			<Text>Required Promotions (All):</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PEDIA_REQ_PROMOTIONS_OR_LABEL">
-			<Text>Optional Prereqs:</Text>
+			<Text>Required Promotions (Any):</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PEDIA_EXCLUSION_PROMOTIONS_LABEL">
-			<Text>Conflicts With:</Text>
+			<Text>Mutually Exclusive Promotions:</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PEDIA_FREE_FROM_PROJECT_LABEL">
 			<Text>Free From Project:</Text>
