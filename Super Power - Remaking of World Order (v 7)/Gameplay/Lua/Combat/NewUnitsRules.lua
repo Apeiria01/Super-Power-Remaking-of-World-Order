@@ -168,24 +168,20 @@ function NewUnitCreationRules(playerID)
 				end
 			end
 
-			---------- Human player special Begin
-			if player:IsHuman() then
-				--Cargo Promotions Transfer
-				if unit:GetPlot() ~= nil
-					and (sSpecialCargo == "SPECIALUNIT_MISSILE" or sSpecialCargo == "SPECIALUNIT_FIGHTER")
-				then
-					if unit:IsHasPromotion(AirCraftCarrierID) then
-						CarrierPromotionTransfer(player, unit)
-						print("Promotions Transfer Finished!")
-					end
+			--Cargo Promotions Transfer
+			if unit:GetPlot() ~= nil
+				and (sSpecialCargo == "SPECIALUNIT_MISSILE" or sSpecialCargo == "SPECIALUNIT_FIGHTER")
+			then
+				if unit:IsHasPromotion(AirCraftCarrierID) then
+					CarrierPromotionTransfer(player, unit)
+					print("Promotions Transfer Finished!")
+				end
 
-					if unit:GetUnitType() == GameInfoTypes.UNIT_FRANCE_MISTRAL then
-						AASPromotionTransfer(player, unit)
-						print("Promotions Transfer Finished on AAS!")
-					end
+				if unit:GetUnitType() == GameInfoTypes.UNIT_FRANCE_MISTRAL then
+					AASPromotionTransfer(player, unit)
+					print("Promotions Transfer Finished on AAS!")
 				end
 			end
-			--------- Human player special END
 			-- MOD End   by CaptainCWB
 		end
 	end -------for units END
@@ -324,7 +320,7 @@ function CarrierPromotionTransfer(player, unit)
 		for i = 0, unitCount - 1, 1 do
 			local pCargoUnit = plot:GetUnit(i);
 			if pCargoUnit:IsCargo() and pCargoUnit:GetTransportUnit() == unit then
-				print("Found the aircraft on the carrier!")
+				--print("Found the aircraft on the carrier!")
 				for CarrierPromotionID, FighterPromotionID in pairs(g_SPCarrierTransferPromotions) do
 					pCargoUnit:SetHasPromotion(FighterPromotionID, unit:IsHasPromotion(CarrierPromotionID));
 				end
@@ -333,14 +329,12 @@ function CarrierPromotionTransfer(player, unit)
 	end
 end
 
+local Sunder1ID = GameInfoTypes["PROMOTION_SUNDER_1"]
+local Sunder2ID = GameInfoTypes["PROMOTION_SUNDER_2"]
+local CollDamageLV1ID = GameInfoTypes["PROMOTION_COLLATERAL_DAMAGE_1"]
+local CollDamageLV2ID = GameInfoTypes["PROMOTION_COLLATERAL_DAMAGE_2"]
+local LogisticsID = GameInfoTypes["PROMOTION_LOGISTICS"]
 function AASPromotionTransfer(player, unit)
-	local Sunder1ID = GameInfoTypes["PROMOTION_SUNDER_1"]
-	local Sunder2ID = GameInfoTypes["PROMOTION_SUNDER_2"]
-	local CollDamageLV1ID = GameInfoTypes["PROMOTION_COLLATERAL_DAMAGE_1"]
-	local CollDamageLV2ID = GameInfoTypes["PROMOTION_COLLATERAL_DAMAGE_2"]
-
-	local LogisticsID = GameInfoTypes["PROMOTION_LOGISTICS"]
-
 	local plot = unit:GetPlot();
 	if plot and unit:GetUnitType() == GameInfoTypes.UNIT_FRANCE_MISTRAL and unit:HasCargo() then
 		print("Found the AAS!")
@@ -348,16 +342,14 @@ function AASPromotionTransfer(player, unit)
 
 		for i = 0, unitCount - 1, 1 do
 			local pFoundUnit = plot:GetUnit(i)
-			print("Found the aircraft on the AAS!")
+			--print("Found the aircraft on the AAS!")
 
 			if pFoundUnit:IsCargo() and pFoundUnit:GetUnitType() == GameInfoTypes.UNIT_FRANCE_EUROCOPTER_TIGER and unit:GetUnitType() == GameInfoTypes.UNIT_FRANCE_MISTRAL then
 				if unit:IsHasPromotion(Sunder1ID) then
 					pFoundUnit:SetHasPromotion(Sunder1ID, true)
-					print("Promotion for aircrafts on the carrier!-AntiAir1")
 				end
 				if unit:IsHasPromotion(Sunder2ID) then
 					pFoundUnit:SetHasPromotion(Sunder2ID, true)
-					print("Promotion for aircrafts on the carrier!-AntiAir2")
 				end
 				if unit:IsHasPromotion(CollDamageLV1ID) then
 					pFoundUnit:SetHasPromotion(CollDamageLV1ID, true)
