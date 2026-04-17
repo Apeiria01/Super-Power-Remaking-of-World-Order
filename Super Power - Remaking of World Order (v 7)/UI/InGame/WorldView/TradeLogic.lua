@@ -164,6 +164,7 @@ local g_itemControls = {
 [ TradeableItems.TRADE_ITEM_RESEARCH_AGREEMENT or false ] = { Controls.UsPocketResearchAgreement, Controls.UsTableResearchAgreement, Controls.ThemPocketResearchAgreement, Controls.ThemTableResearchAgreement },
 [ TradeableItems.TRADE_ITEM_DIPLOMATIC_MARRIAGE or false ] = { Controls.UsPocketMarriage, Controls.UsTableMarriage, Controls.ThemPocketMarriage, Controls.ThemTableMarriage },
 [ TradeableItems.TRADE_ITEM_DUAL_EMPIRE_TREATY or false ] = { Controls.UsPocketDualEmpire, Controls.UsTableDualEmpire, Controls.ThemPocketDualEmpire, Controls.ThemTableDualEmpire },
+[ TradeableItems.TRADE_ITEM_FEUDAL_VASSALAGE or false ] = { Controls.UsPocketFeudalTreaty, Controls.UsTableFeudalTreaty, Controls.ThemPocketFeudalTreaty, Controls.ThemTableFeudalTreaty },
 [ TradeableItems.TRADE_ITEM_TRADE_AGREEMENT or false ] = { Controls.UsPocketTradeAgreement, Controls.UsTableTradeAgreement, Controls.ThemPocketTradeAgreement, Controls.ThemTableTradeAgreement },
 [ TradeableItems.TRADE_ITEM_DECLARATION_OF_FRIENDSHIP or false ] = { Controls.UsPocketDoF, Controls.UsTableDoF, Controls.ThemPocketDoF, Controls.ThemTableDoF, Controls.ThemTableDoF },
 }
@@ -186,6 +187,8 @@ local g_pocketControls = {
 	Controls.ThemPocketMarriage,
 	Controls.UsPocketDualEmpire,
 	Controls.ThemPocketDualEmpire,
+	Controls.UsPocketFeudalTreaty,
+	Controls.ThemPocketFeudalTreaty,
 --	Controls.UsPocketTradeAgreement, --Trade agreement disabled for now
 --	Controls.ThemPocketTradeAgreement, --Trade agreement disabled for now
 	Controls.UsPocketAllowEmbassy,
@@ -906,6 +909,15 @@ function ResetDisplay( diploMessage )
 		Controls.UsPocketDualEmpire:SetHide( isSameTeam or not bShowPocketDualEmpire )
 		Controls.ThemPocketDualEmpire:SetHide( isSameTeam or not bShowPocketDualEmpire )
 		
+		----------------------------------------------------------------------------------
+		-- pocket Establish Vassalage
+		----------------------------------------------------------------------------------
+		toolTip = L"TXT_KEY_DIPLOMACY_FEUDAL_VASSALAGE_BODY"
+		SetEnabledAndToolTip( Controls.UsPocketFeudalTreaty, deal:IsPossibleToTradeItem( ourPlayerID, theirPlayerID, TradeableItems.TRADE_ITEM_FEUDAL_VASSALAGE, g_iDealDuration ), toolTip )
+		SetEnabledAndToolTip( Controls.ThemPocketFeudalTreaty, deal:IsPossibleToTradeItem( theirPlayerID, ourPlayerID, TradeableItems.TRADE_ITEM_FEUDAL_VASSALAGE, g_iDealDuration ), toolTip )
+		local bShowPocketEstablishVassalage = ourPlayer:IsAbleToEstablishVassalage() or theirPlayer:IsAbleToEstablishVassalage()
+		Controls.UsPocketFeudalTreaty:SetHide( isSameTeam or not bShowPocketEstablishVassalage )
+		Controls.ThemPocketFeudalTreaty:SetHide( isSameTeam or not bShowPocketEstablishVassalage )
 		----------------------------------------------------------------------------------
 		-- pocket Trade Agreement
 		----------------------------------------------------------------------------------
@@ -1878,6 +1890,30 @@ do
 	Controls.ThemTableDualEmpire:RegisterCallback( Mouse.eLClick, RemoveDualEmpireAgreement )
 end
 
+-----------------------------------------------------------------------------------------------------------------------
+-- Feudal Vassalage Handlers
+-----------------------------------------------------------------------------------------------------------------------
+do
+	local function AddFeudalVassalageAgreement()
+
+		-- Feudal Vassalage is required on both sides
+
+		g_Deal:AddFeudalVassalageTreaty( g_iUs )
+		g_Deal:AddFeudalVassalageTreaty( g_iThem )
+		return DoUIDealChangedByHuman()
+	end
+	Controls.UsPocketFeudalTreaty:RegisterCallback( Mouse.eLClick, AddFeudalVassalageAgreement )
+	Controls.ThemPocketFeudalTreaty:RegisterCallback( Mouse.eLClick, AddFeudalVassalageAgreement )
+
+	local function RemoveFeudalVassalageAgreement()
+		-- Remove from BOTH sides of the table
+		g_Deal:RemoveByType( TradeableItems.TRADE_ITEM_FEUDAL_VASSALAGE, g_iUs )
+		g_Deal:RemoveByType( TradeableItems.TRADE_ITEM_FEUDAL_VASSALAGE, g_iThem )
+		return DoUIDealChangedByHuman( true )
+	end
+	Controls.UsTableFeudalTreaty:RegisterCallback( Mouse.eLClick, RemoveFeudalVassalageAgreement )
+	Controls.ThemTableFeudalTreaty:RegisterCallback( Mouse.eLClick, RemoveFeudalVassalageAgreement )
+end
 -----------------------------------------------------------------------------------------------------------------------
 -- Trade Agreement Handlers
 -----------------------------------------------------------------------------------------------------------------------

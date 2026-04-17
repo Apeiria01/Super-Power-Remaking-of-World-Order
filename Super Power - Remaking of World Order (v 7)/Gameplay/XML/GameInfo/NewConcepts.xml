@@ -473,4 +473,16 @@
 			<CivilopediaHeaderType>HEADER_DIPLOMACY</CivilopediaHeaderType>
 		</Row>
 	</Concepts>
+	<!--************************************ FEUDAL_VASSALAGE ********************************-->
+	<Concepts>
+		<Row>
+			<Type>CONCEPT_DIPLOMACY_FEUDAL_VASSALAGE</Type>
+			<Topic>TXT_KEY_FEUDAL_VASSALAGE</Topic>
+			<Description>TXT_KEY_DIPLOMACY_FEUDAL_VASSALAGE_TITLE</Description>
+			<Summary>TXT_KEY_DIPLOMACY_FEUDAL_VASSALAGE_BODY</Summary>
+			<AdvisorQuestion>TXT_KEY_DIPLOMACY_FEUDAL_VASSALAGE_ADV_QUEST</AdvisorQuestion>
+			<Advisor>FOREIGN</Advisor>
+			<CivilopediaHeaderType>HEADER_DIPLOMACY</CivilopediaHeaderType>
+		</Row>
+	</Concepts>
 </GameData>

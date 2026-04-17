@@ -17813,6 +17813,27 @@
 		<Row Tag="TXT_KEY_DIPLOMACY_DUAL_EMPIRE_TREATY_ADV_QUEST">
 			<Text>How to build a dual empire with other major civilizations? </Text>
 		</Row>
+		<Row Tag="TXT_KEY_DIPLOMACY_FEUDAL_VASSALAGE_TITLE">
+			<Text>Feudal Vassalage</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_DIPLOMACY_FEUDAL_VASSALAGE_BODY">
+			<Text>
+				Available only to Zhou Dynasty civilizations.[NEWLINE][NEWLINE]
+				Requirements:[NEWLINE]
+				[ICON_BULLET] Both civilizations are not at war or hostile toward each other[NEWLINE]
+				[ICON_BULLET] You are significantly stronger than the other party: your population, number of cities, and military strength are at least twice that of the other side[NEWLINE]
+				[ICON_BULLET] Can be established unlimited times in a single game[NEWLINE][NEWLINE]
+				Upon signing the agreement:[NEWLINE]
+				[ICON_BULLET] Gain all City-State allies of the vassal[NEWLINE]
+				[ICON_BULLET] The vassal may not declare war on their suzerain; for Domination Victory, the suzerain is considered to own all original capitals of the vassal[NEWLINE]
+				[ICON_BULLET] You may train the vassal's Unique Units, Buildings, and Improvements
+			</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_DIPLOMACY_FEUDAL_VASSALAGE_ADV_QUEST">
+			<Text>How can I establish a feudal vassalage relationship with another major civilization?</Text>
+		</Row>
 		<Replace Tag="TXT_KEY_SPECIALISTSANDGP_LANDMARK_HEADING4_BODY">
 			<Text>A Landmark Improvement provides loads of culture and tourism to the city.</Text>
 		</Replace>

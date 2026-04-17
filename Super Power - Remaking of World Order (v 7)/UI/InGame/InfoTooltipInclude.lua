@@ -2968,6 +2968,9 @@ if Game then
 			[ TradeableItems.TRADE_ITEM_DUAL_EMPIRE_TREATY or-1] = function( from, item )
 				return ScratchDeal:AddDualEmpireTreaty( from )
 			end,
+			[ TradeableItems.TRADE_ITEM_FEUDAL_VASSALAGE or-1] = function( from, item )
+				return ScratchDeal:AddFeudalVassalageTreaty( from )
+			end,
 			[ TradeableItems.TRADE_ITEM_ALLOW_EMBASSY or-1] = function( from )
 				return ScratchDeal:AddAllowEmbassy( from )
 			end,

@@ -16079,6 +16079,27 @@
 		<Row Tag="TXT_KEY_DIPLOMACY_DUAL_EMPIRE_TREATY_ADV_QUEST">
 			<Text>如何與其他主要文明建立二元帝國？ </Text>
 		</Row>
+		<Row Tag="TXT_KEY_DIPLOMACY_FEUDAL_VASSALAGE_TITLE">
+			<Text>分封協定</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_DIPLOMACY_FEUDAL_VASSALAGE_BODY">
+			<Text>
+				僅周朝文明可用。[NEWLINE][NEWLINE]
+				前提條件：[NEWLINE]
+				[ICON_BULLET] 雙方不處於敵對或戰爭狀態[NEWLINE]
+				[ICON_BULLET] 你比對方強大：人口、城市數量及軍事評分均為對方的至少兩倍[NEWLINE]
+				[ICON_BULLET] 一局遊戲中不限次數分封諸侯[NEWLINE][NEWLINE]
+				達成協定後：[NEWLINE]
+				[ICON_BULLET] 獲得對方所有的盟友城邦[NEWLINE]
+				[ICON_BULLET] 臣屬國無法對宗主國宣戰；計算征服勝利時，宗主國視為擁有臣屬國全部原始首都[NEWLINE]
+				[ICON_BULLET] 可建造對方的獨特單位、建築與設施
+			</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_DIPLOMACY_FEUDAL_VASSALAGE_ADV_QUEST">
+			<Text>如何與其他主要文明建立分封關係？</Text>
+		</Row>
 		<Replace Tag="TXT_KEY_SPECIALISTSANDGP_LANDMARK_HEADING4_BODY">
 			<Text>風景地標為城市產生大量文化和魅力。</Text>
 		</Replace>
